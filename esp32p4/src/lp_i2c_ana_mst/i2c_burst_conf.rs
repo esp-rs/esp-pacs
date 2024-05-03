@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C_BURST_CONF")
-            .field(
-                "i2c_mst_burst_ctrl",
-                &format_args!("{}", self.i2c_mst_burst_ctrl().bits()),
-            )
+            .field("i2c_mst_burst_ctrl", &self.i2c_mst_burst_ctrl().bits())
             .finish()
     }
 }

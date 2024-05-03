@@ -99,56 +99,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("RD_REPEAT_DATA1")
             .field(
                 "km_huk_gen_state_high",
-                &format_args!("{}", self.km_huk_gen_state_high().bits()),
+                &self.km_huk_gen_state_high().bits(),
             )
-            .field(
-                "km_rnd_switch_cycle",
-                &format_args!("{}", self.km_rnd_switch_cycle().bits()),
-            )
-            .field(
-                "km_deploy_only_once",
-                &format_args!("{}", self.km_deploy_only_once().bits()),
-            )
+            .field("km_rnd_switch_cycle", &self.km_rnd_switch_cycle().bits())
+            .field("km_deploy_only_once", &self.km_deploy_only_once().bits())
             .field(
                 "force_use_key_manager_key",
-                &format_args!("{}", self.force_use_key_manager_key().bits()),
+                &self.force_use_key_manager_key().bits(),
             )
             .field(
                 "force_disable_sw_init_key",
-                &format_args!("{}", self.force_disable_sw_init_key().bit()),
+                &self.force_disable_sw_init_key().bit(),
             )
-            .field(
-                "xts_key_length_256",
-                &format_args!("{}", self.xts_key_length_256().bit()),
-            )
-            .field(
-                "wdt_delay_sel",
-                &format_args!("{}", self.wdt_delay_sel().bits()),
-            )
-            .field(
-                "spi_boot_crypt_cnt",
-                &format_args!("{}", self.spi_boot_crypt_cnt().bits()),
-            )
+            .field("xts_key_length_256", &self.xts_key_length_256().bit())
+            .field("wdt_delay_sel", &self.wdt_delay_sel().bits())
+            .field("spi_boot_crypt_cnt", &self.spi_boot_crypt_cnt().bits())
             .field(
                 "secure_boot_key_revoke0",
-                &format_args!("{}", self.secure_boot_key_revoke0().bit()),
+                &self.secure_boot_key_revoke0().bit(),
             )
             .field(
                 "secure_boot_key_revoke1",
-                &format_args!("{}", self.secure_boot_key_revoke1().bit()),
+                &self.secure_boot_key_revoke1().bit(),
             )
             .field(
                 "secure_boot_key_revoke2",
-                &format_args!("{}", self.secure_boot_key_revoke2().bit()),
+                &self.secure_boot_key_revoke2().bit(),
             )
-            .field(
-                "key_purpose_0",
-                &format_args!("{}", self.key_purpose_0().bits()),
-            )
-            .field(
-                "key_purpose_1",
-                &format_args!("{}", self.key_purpose_1().bits()),
-            )
+            .field("key_purpose_0", &self.key_purpose_0().bits())
+            .field("key_purpose_1", &self.key_purpose_1().bits())
             .finish()
     }
 }

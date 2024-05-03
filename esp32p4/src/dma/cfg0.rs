@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG0")
-            .field("dmac_en", &format_args!("{}", self.dmac_en().bit()))
-            .field("int_en", &format_args!("{}", self.int_en().bit()))
+            .field("dmac_en", &self.dmac_en().bit())
+            .field("int_en", &self.int_en().bit())
             .finish()
     }
 }

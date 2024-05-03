@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CONF1")
-            .field(
-                "rx_tdm_ws_width",
-                &format_args!("{}", self.rx_tdm_ws_width().bits()),
-            )
-            .field(
-                "rx_bck_div_num",
-                &format_args!("{}", self.rx_bck_div_num().bits()),
-            )
-            .field(
-                "rx_bits_mod",
-                &format_args!("{}", self.rx_bits_mod().bits()),
-            )
-            .field(
-                "rx_half_sample_bits",
-                &format_args!("{}", self.rx_half_sample_bits().bits()),
-            )
-            .field(
-                "rx_tdm_chan_bits",
-                &format_args!("{}", self.rx_tdm_chan_bits().bits()),
-            )
-            .field(
-                "rx_msb_shift",
-                &format_args!("{}", self.rx_msb_shift().bit()),
-            )
+            .field("rx_tdm_ws_width", &self.rx_tdm_ws_width().bits())
+            .field("rx_bck_div_num", &self.rx_bck_div_num().bits())
+            .field("rx_bits_mod", &self.rx_bits_mod().bits())
+            .field("rx_half_sample_bits", &self.rx_half_sample_bits().bits())
+            .field("rx_tdm_chan_bits", &self.rx_tdm_chan_bits().bits())
+            .field("rx_msb_shift", &self.rx_msb_shift().bit())
             .finish()
     }
 }

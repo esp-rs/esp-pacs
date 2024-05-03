@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU")
             .field(
                 "lpcore_dbgm_unavailable",
-                &format_args!("{}", self.lpcore_dbgm_unavailable().bit()),
+                &self.lpcore_dbgm_unavailable().bit(),
             )
             .finish()
     }

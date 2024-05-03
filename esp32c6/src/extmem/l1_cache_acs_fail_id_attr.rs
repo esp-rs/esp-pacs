@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_ACS_FAIL_ID_ATTR")
-            .field(
-                "l1_cache_fail_id",
-                &format_args!("{}", self.l1_cache_fail_id().bits()),
-            )
-            .field(
-                "l1_cache_fail_attr",
-                &format_args!("{}", self.l1_cache_fail_attr().bits()),
-            )
+            .field("l1_cache_fail_id", &self.l1_cache_fail_id().bits())
+            .field("l1_cache_fail_attr", &self.l1_cache_fail_attr().bits())
             .finish()
     }
 }

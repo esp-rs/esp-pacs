@@ -48,30 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_OUTSTATUS")
-            .field(
-                "dma_outdscr_addr",
-                &format_args!("{}", self.dma_outdscr_addr().bits()),
-            )
-            .field(
-                "dma_outdscr_state",
-                &format_args!("{}", self.dma_outdscr_state().bits()),
-            )
-            .field(
-                "dma_out_state",
-                &format_args!("{}", self.dma_out_state().bits()),
-            )
-            .field(
-                "dma_outfifo_cnt",
-                &format_args!("{}", self.dma_outfifo_cnt().bits()),
-            )
-            .field(
-                "dma_outfifo_full",
-                &format_args!("{}", self.dma_outfifo_full().bit()),
-            )
-            .field(
-                "dma_outfifo_empty",
-                &format_args!("{}", self.dma_outfifo_empty().bit()),
-            )
+            .field("dma_outdscr_addr", &self.dma_outdscr_addr().bits())
+            .field("dma_outdscr_state", &self.dma_outdscr_state().bits())
+            .field("dma_out_state", &self.dma_out_state().bits())
+            .field("dma_outfifo_cnt", &self.dma_outfifo_cnt().bits())
+            .field("dma_outfifo_full", &self.dma_outfifo_full().bit())
+            .field("dma_outfifo_empty", &self.dma_outfifo_empty().bit())
             .finish()
     }
 }

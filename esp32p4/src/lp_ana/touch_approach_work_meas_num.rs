@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("TOUCH_APPROACH_WORK_MEAS_NUM")
             .field(
                 "touch_approach_meas_num2",
-                &format_args!("{}", self.touch_approach_meas_num2().bits()),
+                &self.touch_approach_meas_num2().bits(),
             )
             .field(
                 "touch_approach_meas_num1",
-                &format_args!("{}", self.touch_approach_meas_num1().bits()),
+                &self.touch_approach_meas_num1().bits(),
             )
             .field(
                 "touch_approach_meas_num0",
-                &format_args!("{}", self.touch_approach_meas_num0().bits()),
+                &self.touch_approach_meas_num0().bits(),
             )
             .finish()
     }

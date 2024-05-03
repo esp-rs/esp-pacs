@@ -296,68 +296,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_RST_EN0")
-            .field("timers_rst", &format_args!("{}", self.timers_rst().bit()))
-            .field("spi01_rst", &format_args!("{}", self.spi01_rst().bit()))
-            .field("uart_rst", &format_args!("{}", self.uart_rst().bit()))
-            .field("wdg_rst", &format_args!("{}", self.wdg_rst().bit()))
-            .field("i2s0_rst", &format_args!("{}", self.i2s0_rst().bit()))
-            .field("uart1_rst", &format_args!("{}", self.uart1_rst().bit()))
-            .field("spi2_rst", &format_args!("{}", self.spi2_rst().bit()))
-            .field(
-                "i2c_ext0_rst",
-                &format_args!("{}", self.i2c_ext0_rst().bit()),
-            )
-            .field("uhci0_rst", &format_args!("{}", self.uhci0_rst().bit()))
-            .field("rmt_rst", &format_args!("{}", self.rmt_rst().bit()))
-            .field("pcnt_rst", &format_args!("{}", self.pcnt_rst().bit()))
-            .field("ledc_rst", &format_args!("{}", self.ledc_rst().bit()))
-            .field("uhci1_rst", &format_args!("{}", self.uhci1_rst().bit()))
-            .field(
-                "timergroup_rst",
-                &format_args!("{}", self.timergroup_rst().bit()),
-            )
-            .field("efuse_rst", &format_args!("{}", self.efuse_rst().bit()))
-            .field(
-                "timergroup1_rst",
-                &format_args!("{}", self.timergroup1_rst().bit()),
-            )
-            .field("spi3_rst", &format_args!("{}", self.spi3_rst().bit()))
-            .field("pwm0_rst", &format_args!("{}", self.pwm0_rst().bit()))
-            .field("ext1_rst", &format_args!("{}", self.ext1_rst().bit()))
-            .field("twai_rst", &format_args!("{}", self.twai_rst().bit()))
-            .field("pwm1_rst", &format_args!("{}", self.pwm1_rst().bit()))
-            .field("i2s1_rst", &format_args!("{}", self.i2s1_rst().bit()))
-            .field(
-                "spi2_dma_rst",
-                &format_args!("{}", self.spi2_dma_rst().bit()),
-            )
-            .field(
-                "usb_device_rst",
-                &format_args!("{}", self.usb_device_rst().bit()),
-            )
-            .field(
-                "uart_mem_rst",
-                &format_args!("{}", self.uart_mem_rst().bit()),
-            )
-            .field("pwm2_rst", &format_args!("{}", self.pwm2_rst().bit()))
-            .field("pwm3_rst", &format_args!("{}", self.pwm3_rst().bit()))
-            .field(
-                "spi3_dma_rst",
-                &format_args!("{}", self.spi3_dma_rst().bit()),
-            )
-            .field(
-                "apb_saradc_rst",
-                &format_args!("{}", self.apb_saradc_rst().bit()),
-            )
-            .field(
-                "systimer_rst",
-                &format_args!("{}", self.systimer_rst().bit()),
-            )
-            .field(
-                "adc2_arb_rst",
-                &format_args!("{}", self.adc2_arb_rst().bit()),
-            )
-            .field("spi4_rst", &format_args!("{}", self.spi4_rst().bit()))
+            .field("timers_rst", &self.timers_rst().bit())
+            .field("spi01_rst", &self.spi01_rst().bit())
+            .field("uart_rst", &self.uart_rst().bit())
+            .field("wdg_rst", &self.wdg_rst().bit())
+            .field("i2s0_rst", &self.i2s0_rst().bit())
+            .field("uart1_rst", &self.uart1_rst().bit())
+            .field("spi2_rst", &self.spi2_rst().bit())
+            .field("i2c_ext0_rst", &self.i2c_ext0_rst().bit())
+            .field("uhci0_rst", &self.uhci0_rst().bit())
+            .field("rmt_rst", &self.rmt_rst().bit())
+            .field("pcnt_rst", &self.pcnt_rst().bit())
+            .field("ledc_rst", &self.ledc_rst().bit())
+            .field("uhci1_rst", &self.uhci1_rst().bit())
+            .field("timergroup_rst", &self.timergroup_rst().bit())
+            .field("efuse_rst", &self.efuse_rst().bit())
+            .field("timergroup1_rst", &self.timergroup1_rst().bit())
+            .field("spi3_rst", &self.spi3_rst().bit())
+            .field("pwm0_rst", &self.pwm0_rst().bit())
+            .field("ext1_rst", &self.ext1_rst().bit())
+            .field("twai_rst", &self.twai_rst().bit())
+            .field("pwm1_rst", &self.pwm1_rst().bit())
+            .field("i2s1_rst", &self.i2s1_rst().bit())
+            .field("spi2_dma_rst", &self.spi2_dma_rst().bit())
+            .field("usb_device_rst", &self.usb_device_rst().bit())
+            .field("uart_mem_rst", &self.uart_mem_rst().bit())
+            .field("pwm2_rst", &self.pwm2_rst().bit())
+            .field("pwm3_rst", &self.pwm3_rst().bit())
+            .field("spi3_dma_rst", &self.spi3_dma_rst().bit())
+            .field("apb_saradc_rst", &self.apb_saradc_rst().bit())
+            .field("systimer_rst", &self.systimer_rst().bit())
+            .field("adc2_arb_rst", &self.adc2_arb_rst().bit())
+            .field("spi4_rst", &self.spi4_rst().bit())
             .finish()
     }
 }

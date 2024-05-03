@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_MONITOR_0")
             .field(
                 "backup_bus_pms_monitor_lock",
-                &format_args!("{}", self.backup_bus_pms_monitor_lock().bit()),
+                &self.backup_bus_pms_monitor_lock().bit(),
             )
             .finish()
     }

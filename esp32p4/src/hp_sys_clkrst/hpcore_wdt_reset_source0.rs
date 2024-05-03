@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("HPCORE_WDT_RESET_SOURCE0")
             .field(
                 "hpcore0_wdt_reset_source_sel",
-                &format_args!("{}", self.hpcore0_wdt_reset_source_sel().bit()),
+                &self.hpcore0_wdt_reset_source_sel().bit(),
             )
             .field(
                 "hpcore1_wdt_reset_source_sel",
-                &format_args!("{}", self.hpcore1_wdt_reset_source_sel().bit()),
+                &self.hpcore1_wdt_reset_source_sel().bit(),
             )
             .finish()
     }

@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBIAS_TIMER")
-            .field(
-                "timer_target",
-                &format_args!("{}", self.timer_target().bits()),
-            )
-            .field("timer_en", &format_args!("{}", self.timer_en().bit()))
+            .field("timer_target", &self.timer_target().bits())
+            .field("timer_en", &self.timer_en().bit())
             .finish()
     }
 }

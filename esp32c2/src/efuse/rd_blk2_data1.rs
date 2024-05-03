@@ -48,29 +48,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_BLK2_DATA1")
-            .field(
-                "mac_id_high",
-                &format_args!("{}", self.mac_id_high().bits()),
-            )
-            .field(
-                "wafer_version",
-                &format_args!("{}", self.wafer_version().bits()),
-            )
-            .field(
-                "pkg_version",
-                &format_args!("{}", self.pkg_version().bits()),
-            )
-            .field(
-                "blk2_efuse_version",
-                &format_args!("{}", self.blk2_efuse_version().bits()),
-            )
-            .field(
-                "rf_ref_i_bias_config",
-                &format_args!("{}", self.rf_ref_i_bias_config().bits()),
-            )
+            .field("mac_id_high", &self.mac_id_high().bits())
+            .field("wafer_version", &self.wafer_version().bits())
+            .field("pkg_version", &self.pkg_version().bits())
+            .field("blk2_efuse_version", &self.blk2_efuse_version().bits())
+            .field("rf_ref_i_bias_config", &self.rf_ref_i_bias_config().bits())
             .field(
                 "ldo_vol_bias_config_low",
-                &format_args!("{}", self.ldo_vol_bias_config_low().bits()),
+                &self.ldo_vol_bias_config_low().bits(),
             )
             .finish()
     }

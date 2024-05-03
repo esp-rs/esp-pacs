@@ -44,19 +44,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMB_PD_SITE0_UNIT3_VT2_CONF1")
             .field(
                 "monitor_en_vt2_pd_site0_unit3",
-                &format_args!("{}", self.monitor_en_vt2_pd_site0_unit3().bit()),
+                &self.monitor_en_vt2_pd_site0_unit3().bit(),
             )
             .field(
                 "delay_limit_vt2_pd_site0_unit3",
-                &format_args!("{}", self.delay_limit_vt2_pd_site0_unit3().bits()),
+                &self.delay_limit_vt2_pd_site0_unit3().bits(),
             )
             .field(
                 "delay_num_o_vt2_pd_site0_unit3",
-                &format_args!("{}", self.delay_num_o_vt2_pd_site0_unit3().bits()),
+                &self.delay_num_o_vt2_pd_site0_unit3().bits(),
             )
             .field(
                 "timing_err_vt2_pd_site0_unit3",
-                &format_args!("{}", self.timing_err_vt2_pd_site0_unit3().bit()),
+                &self.timing_err_vt2_pd_site0_unit3().bit(),
             )
             .finish()
     }

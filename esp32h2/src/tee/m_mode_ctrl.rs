@@ -100,7 +100,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("M_MODE_CTRL")
-            .field("mode", &format_args!("{}", self.mode().bits()))
+            .field("mode", &self.mode().bits())
             .finish()
     }
 }

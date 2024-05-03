@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SYNC_INT_CTRL")
-            .field("st", &format_args!("{}", self.st().bit()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field(
-                "dcache_sync_int_st",
-                &format_args!("{}", self.dcache_sync_int_st().bit()),
-            )
-            .field(
-                "dcache_sync_int_ena",
-                &format_args!("{}", self.dcache_sync_int_ena().bit()),
-            )
+            .field("st", &self.st().bit())
+            .field("ena", &self.ena().bit())
+            .field("dcache_sync_int_st", &self.dcache_sync_int_st().bit())
+            .field("dcache_sync_int_ena", &self.dcache_sync_int_ena().bit())
             .finish()
     }
 }

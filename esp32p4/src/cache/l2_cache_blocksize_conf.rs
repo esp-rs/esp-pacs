@@ -54,29 +54,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_BLOCKSIZE_CONF")
-            .field(
-                "l2_cache_blocksize_8",
-                &format_args!("{}", self.l2_cache_blocksize_8().bit()),
-            )
-            .field(
-                "l2_cache_blocksize_16",
-                &format_args!("{}", self.l2_cache_blocksize_16().bit()),
-            )
-            .field(
-                "l2_cache_blocksize_32",
-                &format_args!("{}", self.l2_cache_blocksize_32().bit()),
-            )
-            .field(
-                "l2_cache_blocksize_64",
-                &format_args!("{}", self.l2_cache_blocksize_64().bit()),
-            )
+            .field("l2_cache_blocksize_8", &self.l2_cache_blocksize_8().bit())
+            .field("l2_cache_blocksize_16", &self.l2_cache_blocksize_16().bit())
+            .field("l2_cache_blocksize_32", &self.l2_cache_blocksize_32().bit())
+            .field("l2_cache_blocksize_64", &self.l2_cache_blocksize_64().bit())
             .field(
                 "l2_cache_blocksize_128",
-                &format_args!("{}", self.l2_cache_blocksize_128().bit()),
+                &self.l2_cache_blocksize_128().bit(),
             )
             .field(
                 "l2_cache_blocksize_256",
-                &format_args!("{}", self.l2_cache_blocksize_256().bit()),
+                &self.l2_cache_blocksize_256().bit(),
             )
             .finish()
     }

@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_START_HOLD")
             .field(
                 "reg_scl_start_hold_time",
-                &format_args!("{}", self.reg_scl_start_hold_time().bits()),
+                &self.reg_scl_start_hold_time().bits(),
             )
             .field(
                 "reg_start_det_hold_time",
-                &format_args!("{}", self.reg_start_det_hold_time().bits()),
+                &self.reg_start_det_hold_time().bits(),
             )
             .finish()
     }

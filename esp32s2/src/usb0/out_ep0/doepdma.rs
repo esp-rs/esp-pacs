@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPDMA")
-            .field("dmaaddr", &format_args!("{}", self.dmaaddr().bits()))
+            .field("dmaaddr", &self.dmaaddr().bits())
             .finish()
     }
 }

@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_DATA_MEM_ACS_CONF")
             .field(
                 "l2_cache_data_mem_rd_en",
-                &format_args!("{}", self.l2_cache_data_mem_rd_en().bit()),
+                &self.l2_cache_data_mem_rd_en().bit(),
             )
             .field(
                 "l2_cache_data_mem_wr_en",
-                &format_args!("{}", self.l2_cache_data_mem_wr_en().bit()),
+                &self.l2_cache_data_mem_wr_en().bit(),
             )
             .finish()
     }

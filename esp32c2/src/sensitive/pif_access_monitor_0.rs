@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIF_ACCESS_MONITOR_0")
             .field(
                 "pif_access_monitor_lock",
-                &format_args!("{}", self.pif_access_monitor_lock().bit()),
+                &self.pif_access_monitor_lock().bit(),
             )
             .finish()
     }

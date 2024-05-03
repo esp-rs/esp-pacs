@@ -26,13 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM4")
-            .field(
-                "param_noise_spe_down",
-                &format_args!("{}", self.param_noise_spe_down().bits()),
-            )
+            .field("param_noise_spe_down", &self.param_noise_spe_down().bits())
             .field(
                 "param_noise_mean_down",
-                &format_args!("{}", self.param_noise_mean_down().bits()),
+                &self.param_noise_mean_down().bits(),
             )
             .finish()
     }

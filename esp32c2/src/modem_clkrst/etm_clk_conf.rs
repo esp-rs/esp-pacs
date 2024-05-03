@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_CLK_CONF")
-            .field("etm_clk_sel", &format_args!("{}", self.etm_clk_sel().bit()))
-            .field(
-                "etm_clk_active",
-                &format_args!("{}", self.etm_clk_active().bit()),
-            )
+            .field("etm_clk_sel", &self.etm_clk_sel().bit())
+            .field("etm_clk_active", &self.etm_clk_active().bit())
             .finish()
     }
 }

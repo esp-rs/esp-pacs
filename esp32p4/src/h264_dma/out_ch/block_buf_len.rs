@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLOCK_BUF_LEN")
-            .field(
-                "out_block_buf_len",
-                &format_args!("{}", self.out_block_buf_len().bits()),
-            )
+            .field("out_block_buf_len", &self.out_block_buf_len().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_VECBASE_SET")
-            .field(
-                "pro_out_vecbase",
-                &format_args!("{}", self.pro_out_vecbase().bits()),
-            )
+            .field("pro_out_vecbase", &self.pro_out_vecbase().bits())
             .finish()
     }
 }

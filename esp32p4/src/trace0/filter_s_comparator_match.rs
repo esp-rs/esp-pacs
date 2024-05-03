@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_S_COMPARATOR_MATCH")
-            .field("s_match", &format_args!("{}", self.s_match().bits()))
+            .field("s_match", &self.s_match().bits())
             .finish()
     }
 }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB6")
-            .field(
-                "threshold_ob",
-                &format_args!("{}", self.threshold_ob().bits()),
-            )
+            .field("threshold_ob", &self.threshold_ob().bits())
             .finish()
     }
 }

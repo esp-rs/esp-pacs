@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_SUBSIZE")
             .field(
                 "reg_l2_mem_sub_blksize",
-                &format_args!("{}", self.reg_l2_mem_sub_blksize().bits()),
+                &self.reg_l2_mem_sub_blksize().bits(),
             )
             .finish()
     }

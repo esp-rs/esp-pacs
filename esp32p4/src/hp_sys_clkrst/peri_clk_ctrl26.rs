@@ -89,39 +89,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL26")
-            .field(
-                "isp_clk_div_num",
-                &format_args!("{}", self.isp_clk_div_num().bits()),
-            )
-            .field(
-                "iomux_clk_src_sel",
-                &format_args!("{}", self.iomux_clk_src_sel().bit()),
-            )
-            .field(
-                "iomux_clk_en",
-                &format_args!("{}", self.iomux_clk_en().bit()),
-            )
-            .field(
-                "iomux_clk_div_num",
-                &format_args!("{}", self.iomux_clk_div_num().bits()),
-            )
-            .field(
-                "h264_clk_src_sel",
-                &format_args!("{}", self.h264_clk_src_sel().bit()),
-            )
-            .field("h264_clk_en", &format_args!("{}", self.h264_clk_en().bit()))
-            .field(
-                "h264_clk_div_num",
-                &format_args!("{}", self.h264_clk_div_num().bits()),
-            )
+            .field("isp_clk_div_num", &self.isp_clk_div_num().bits())
+            .field("iomux_clk_src_sel", &self.iomux_clk_src_sel().bit())
+            .field("iomux_clk_en", &self.iomux_clk_en().bit())
+            .field("iomux_clk_div_num", &self.iomux_clk_div_num().bits())
+            .field("h264_clk_src_sel", &self.h264_clk_src_sel().bit())
+            .field("h264_clk_en", &self.h264_clk_en().bit())
+            .field("h264_clk_div_num", &self.h264_clk_div_num().bits())
             .field(
                 "padbist_rx_clk_src_sel",
-                &format_args!("{}", self.padbist_rx_clk_src_sel().bit()),
+                &self.padbist_rx_clk_src_sel().bit(),
             )
-            .field(
-                "padbist_rx_clk_en",
-                &format_args!("{}", self.padbist_rx_clk_en().bit()),
-            )
+            .field("padbist_rx_clk_en", &self.padbist_rx_clk_en().bit())
             .finish()
     }
 }

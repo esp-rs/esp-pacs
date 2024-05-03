@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_CLK_TO_HP")
             .field(
                 "lp_aonclkrst_icg_hp_xtal32k",
-                &format_args!("{}", self.lp_aonclkrst_icg_hp_xtal32k().bit()),
+                &self.lp_aonclkrst_icg_hp_xtal32k().bit(),
             )
             .field(
                 "lp_aonclkrst_icg_hp_sosc",
-                &format_args!("{}", self.lp_aonclkrst_icg_hp_sosc().bit()),
+                &self.lp_aonclkrst_icg_hp_sosc().bit(),
             )
             .field(
                 "lp_aonclkrst_icg_hp_osc32k",
-                &format_args!("{}", self.lp_aonclkrst_icg_hp_osc32k().bit()),
+                &self.lp_aonclkrst_icg_hp_osc32k().bit(),
             )
             .field(
                 "lp_aonclkrst_icg_hp_fosc",
-                &format_args!("{}", self.lp_aonclkrst_icg_hp_fosc().bit()),
+                &self.lp_aonclkrst_icg_hp_fosc().bit(),
             )
             .finish()
     }

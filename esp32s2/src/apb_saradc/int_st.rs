@@ -34,10 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("adc2_thres", &format_args!("{}", self.adc2_thres().bit()))
-            .field("adc1_thres", &format_args!("{}", self.adc1_thres().bit()))
-            .field("adc2_done", &format_args!("{}", self.adc2_done().bit()))
-            .field("adc1_done", &format_args!("{}", self.adc1_done().bit()))
+            .field("adc2_thres", &self.adc2_thres().bit())
+            .field("adc1_thres", &self.adc1_thres().bit())
+            .field("adc2_done", &self.adc2_done().bit())
+            .field("adc1_done", &self.adc1_done().bit())
             .finish()
     }
 }

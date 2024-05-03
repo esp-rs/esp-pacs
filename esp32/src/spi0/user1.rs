@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER1")
-            .field(
-                "usr_dummy_cyclelen",
-                &format_args!("{}", self.usr_dummy_cyclelen().bits()),
-            )
-            .field(
-                "usr_addr_bitlen",
-                &format_args!("{}", self.usr_addr_bitlen().bits()),
-            )
+            .field("usr_dummy_cyclelen", &self.usr_dummy_cyclelen().bits())
+            .field("usr_addr_bitlen", &self.usr_addr_bitlen().bits())
             .finish()
     }
 }

@@ -22,12 +22,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DATA_BUFFER_STATUS_LEVEL")
             .field(
                 "tx_data_buf_empty_cnt",
-                &format_args!("{}", self.tx_data_buf_empty_cnt().bits()),
+                &self.tx_data_buf_empty_cnt().bits(),
             )
-            .field(
-                "rx_data_buf_cnt",
-                &format_args!("{}", self.rx_data_buf_cnt().bits()),
-            )
+            .field("rx_data_buf_cnt", &self.rx_data_buf_cnt().bits())
             .finish()
     }
 }

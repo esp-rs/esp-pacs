@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_CHECK")
-            .field("md_error", &format_args!("{}", self.md_error().bit()))
-            .field("padding_bad", &format_args!("{}", self.padding_bad().bit()))
+            .field("md_error", &self.md_error().bit())
+            .field("padding_bad", &self.padding_bad().bit())
             .finish()
     }
 }

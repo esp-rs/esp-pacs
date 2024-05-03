@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PWDET_SAR_CLK_CONF")
             .field(
                 "pwdet_sar_clk_div_num",
-                &format_args!("{}", self.pwdet_sar_clk_div_num().bits()),
+                &self.pwdet_sar_clk_div_num().bits(),
             )
-            .field(
-                "pwdet_sar_reader_en",
-                &format_args!("{}", self.pwdet_sar_reader_en().bit()),
-            )
+            .field("pwdet_sar_reader_en", &self.pwdet_sar_reader_en().bit())
             .finish()
     }
 }

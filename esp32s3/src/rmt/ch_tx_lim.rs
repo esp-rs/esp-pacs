@@ -46,19 +46,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_TX_LIM")
-            .field("tx_lim", &format_args!("{}", self.tx_lim().bits()))
-            .field(
-                "tx_loop_num",
-                &format_args!("{}", self.tx_loop_num().bits()),
-            )
-            .field(
-                "tx_loop_cnt_en",
-                &format_args!("{}", self.tx_loop_cnt_en().bit()),
-            )
-            .field(
-                "loop_stop_en",
-                &format_args!("{}", self.loop_stop_en().bit()),
-            )
+            .field("tx_lim", &self.tx_lim().bits())
+            .field("tx_loop_num", &self.tx_loop_num().bits())
+            .field("tx_loop_cnt_en", &self.tx_loop_cnt_en().bit())
+            .field("loop_stop_en", &self.loop_stop_en().bit())
             .finish()
     }
 }

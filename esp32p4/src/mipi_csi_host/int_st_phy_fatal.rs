@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_PHY_FATAL")
-            .field(
-                "st_phy_errsotsynchs_0",
-                &format_args!("{}", self.st_phy_errsotsynchs_0().bit()),
-            )
-            .field(
-                "st_phy_errsotsynchs_1",
-                &format_args!("{}", self.st_phy_errsotsynchs_1().bit()),
-            )
+            .field("st_phy_errsotsynchs_0", &self.st_phy_errsotsynchs_0().bit())
+            .field("st_phy_errsotsynchs_1", &self.st_phy_errsotsynchs_1().bit())
             .finish()
     }
 }

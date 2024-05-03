@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SYNC_MAP")
-            .field(
-                "cache_sync_map",
-                &format_args!("{}", self.cache_sync_map().bits()),
-            )
+            .field("cache_sync_map", &self.cache_sync_map().bits())
             .finish()
     }
 }

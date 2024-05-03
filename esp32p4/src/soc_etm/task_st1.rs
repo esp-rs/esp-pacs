@@ -298,131 +298,131 @@ impl core::fmt::Debug for R {
         f.debug_struct("TASK_ST1")
             .field(
                 "ledc_task_duty_scale_update_ch4_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch4_st().bit()),
+                &self.ledc_task_duty_scale_update_ch4_st().bit(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch5_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch5_st().bit()),
+                &self.ledc_task_duty_scale_update_ch5_st().bit(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch6_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch6_st().bit()),
+                &self.ledc_task_duty_scale_update_ch6_st().bit(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch7_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch7_st().bit()),
+                &self.ledc_task_duty_scale_update_ch7_st().bit(),
             )
             .field(
                 "ledc_task_timer0_cap_st",
-                &format_args!("{}", self.ledc_task_timer0_cap_st().bit()),
+                &self.ledc_task_timer0_cap_st().bit(),
             )
             .field(
                 "ledc_task_timer1_cap_st",
-                &format_args!("{}", self.ledc_task_timer1_cap_st().bit()),
+                &self.ledc_task_timer1_cap_st().bit(),
             )
             .field(
                 "ledc_task_timer2_cap_st",
-                &format_args!("{}", self.ledc_task_timer2_cap_st().bit()),
+                &self.ledc_task_timer2_cap_st().bit(),
             )
             .field(
                 "ledc_task_timer3_cap_st",
-                &format_args!("{}", self.ledc_task_timer3_cap_st().bit()),
+                &self.ledc_task_timer3_cap_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch0_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch0_st().bit()),
+                &self.ledc_task_sig_out_dis_ch0_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch1_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch1_st().bit()),
+                &self.ledc_task_sig_out_dis_ch1_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch2_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch2_st().bit()),
+                &self.ledc_task_sig_out_dis_ch2_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch3_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch3_st().bit()),
+                &self.ledc_task_sig_out_dis_ch3_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch4_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch4_st().bit()),
+                &self.ledc_task_sig_out_dis_ch4_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch5_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch5_st().bit()),
+                &self.ledc_task_sig_out_dis_ch5_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch6_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch6_st().bit()),
+                &self.ledc_task_sig_out_dis_ch6_st().bit(),
             )
             .field(
                 "ledc_task_sig_out_dis_ch7_st",
-                &format_args!("{}", self.ledc_task_sig_out_dis_ch7_st().bit()),
+                &self.ledc_task_sig_out_dis_ch7_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch0_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch0_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch0_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch1_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch1_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch1_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch2_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch2_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch2_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch3_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch3_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch3_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch4_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch4_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch4_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch5_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch5_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch5_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch6_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch6_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch6_st().bit(),
             )
             .field(
                 "ledc_task_ovf_cnt_rst_ch7_st",
-                &format_args!("{}", self.ledc_task_ovf_cnt_rst_ch7_st().bit()),
+                &self.ledc_task_ovf_cnt_rst_ch7_st().bit(),
             )
             .field(
                 "ledc_task_timer0_rst_st",
-                &format_args!("{}", self.ledc_task_timer0_rst_st().bit()),
+                &self.ledc_task_timer0_rst_st().bit(),
             )
             .field(
                 "ledc_task_timer1_rst_st",
-                &format_args!("{}", self.ledc_task_timer1_rst_st().bit()),
+                &self.ledc_task_timer1_rst_st().bit(),
             )
             .field(
                 "ledc_task_timer2_rst_st",
-                &format_args!("{}", self.ledc_task_timer2_rst_st().bit()),
+                &self.ledc_task_timer2_rst_st().bit(),
             )
             .field(
                 "ledc_task_timer3_rst_st",
-                &format_args!("{}", self.ledc_task_timer3_rst_st().bit()),
+                &self.ledc_task_timer3_rst_st().bit(),
             )
             .field(
                 "ledc_task_timer0_resume_st",
-                &format_args!("{}", self.ledc_task_timer0_resume_st().bit()),
+                &self.ledc_task_timer0_resume_st().bit(),
             )
             .field(
                 "ledc_task_timer1_resume_st",
-                &format_args!("{}", self.ledc_task_timer1_resume_st().bit()),
+                &self.ledc_task_timer1_resume_st().bit(),
             )
             .field(
                 "ledc_task_timer2_resume_st",
-                &format_args!("{}", self.ledc_task_timer2_resume_st().bit()),
+                &self.ledc_task_timer2_resume_st().bit(),
             )
             .field(
                 "ledc_task_timer3_resume_st",
-                &format_args!("{}", self.ledc_task_timer3_resume_st().bit()),
+                &self.ledc_task_timer3_resume_st().bit(),
             )
             .finish()
     }

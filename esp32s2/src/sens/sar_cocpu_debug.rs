@@ -41,23 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_COCPU_DEBUG")
-            .field("cocpu_pc", &format_args!("{}", self.cocpu_pc().bits()))
-            .field(
-                "cocpu_mem_vld",
-                &format_args!("{}", self.cocpu_mem_vld().bit()),
-            )
-            .field(
-                "cocpu_mem_rdy",
-                &format_args!("{}", self.cocpu_mem_rdy().bit()),
-            )
-            .field(
-                "cocpu_mem_wen",
-                &format_args!("{}", self.cocpu_mem_wen().bits()),
-            )
-            .field(
-                "cocpu_mem_addr",
-                &format_args!("{}", self.cocpu_mem_addr().bits()),
-            )
+            .field("cocpu_pc", &self.cocpu_pc().bits())
+            .field("cocpu_mem_vld", &self.cocpu_mem_vld().bit())
+            .field("cocpu_mem_rdy", &self.cocpu_mem_rdy().bit())
+            .field("cocpu_mem_wen", &self.cocpu_mem_wen().bits())
+            .field("cocpu_mem_addr", &self.cocpu_mem_addr().bits())
             .finish()
     }
 }

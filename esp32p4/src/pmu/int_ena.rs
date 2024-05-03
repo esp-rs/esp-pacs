@@ -163,60 +163,57 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_ENA")
             .field(
                 "_0p1a_cnt_target0_reach_0_hp",
-                &format_args!("{}", self._0p1a_cnt_target0_reach_0_hp().bit()),
+                &self._0p1a_cnt_target0_reach_0_hp().bit(),
             )
             .field(
                 "_0p1a_cnt_target1_reach_0_hp",
-                &format_args!("{}", self._0p1a_cnt_target1_reach_0_hp().bit()),
+                &self._0p1a_cnt_target1_reach_0_hp().bit(),
             )
             .field(
                 "_0p1a_cnt_target0_reach_1_hp",
-                &format_args!("{}", self._0p1a_cnt_target0_reach_1_hp().bit()),
+                &self._0p1a_cnt_target0_reach_1_hp().bit(),
             )
             .field(
                 "_0p1a_cnt_target1_reach_1_hp",
-                &format_args!("{}", self._0p1a_cnt_target1_reach_1_hp().bit()),
+                &self._0p1a_cnt_target1_reach_1_hp().bit(),
             )
             .field(
                 "_0p2a_cnt_target0_reach_0_hp",
-                &format_args!("{}", self._0p2a_cnt_target0_reach_0_hp().bit()),
+                &self._0p2a_cnt_target0_reach_0_hp().bit(),
             )
             .field(
                 "_0p2a_cnt_target1_reach_0_hp",
-                &format_args!("{}", self._0p2a_cnt_target1_reach_0_hp().bit()),
+                &self._0p2a_cnt_target1_reach_0_hp().bit(),
             )
             .field(
                 "_0p2a_cnt_target0_reach_1_hp",
-                &format_args!("{}", self._0p2a_cnt_target0_reach_1_hp().bit()),
+                &self._0p2a_cnt_target0_reach_1_hp().bit(),
             )
             .field(
                 "_0p2a_cnt_target1_reach_1_hp",
-                &format_args!("{}", self._0p2a_cnt_target1_reach_1_hp().bit()),
+                &self._0p2a_cnt_target1_reach_1_hp().bit(),
             )
             .field(
                 "_0p3a_cnt_target0_reach_0_hp",
-                &format_args!("{}", self._0p3a_cnt_target0_reach_0_hp().bit()),
+                &self._0p3a_cnt_target0_reach_0_hp().bit(),
             )
             .field(
                 "_0p3a_cnt_target1_reach_0_hp",
-                &format_args!("{}", self._0p3a_cnt_target1_reach_0_hp().bit()),
+                &self._0p3a_cnt_target1_reach_0_hp().bit(),
             )
             .field(
                 "_0p3a_cnt_target0_reach_1_hp",
-                &format_args!("{}", self._0p3a_cnt_target0_reach_1_hp().bit()),
+                &self._0p3a_cnt_target0_reach_1_hp().bit(),
             )
             .field(
                 "_0p3a_cnt_target1_reach_1_hp",
-                &format_args!("{}", self._0p3a_cnt_target1_reach_1_hp().bit()),
+                &self._0p3a_cnt_target1_reach_1_hp().bit(),
             )
-            .field("lp_cpu_exc", &format_args!("{}", self.lp_cpu_exc().bit()))
-            .field("sdio_idle", &format_args!("{}", self.sdio_idle().bit()))
-            .field("sw", &format_args!("{}", self.sw().bit()))
-            .field(
-                "soc_sleep_reject",
-                &format_args!("{}", self.soc_sleep_reject().bit()),
-            )
-            .field("soc_wakeup", &format_args!("{}", self.soc_wakeup().bit()))
+            .field("lp_cpu_exc", &self.lp_cpu_exc().bit())
+            .field("sdio_idle", &self.sdio_idle().bit())
+            .field("sw", &self.sw().bit())
+            .field("soc_sleep_reject", &self.soc_sleep_reject().bit())
+            .field("soc_wakeup", &self.soc_wakeup().bit())
             .finish()
     }
 }

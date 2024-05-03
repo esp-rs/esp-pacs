@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_TG_T1_LEVEL_INT_MAP")
             .field(
                 "app_tg_t1_level_int_map",
-                &format_args!("{}", self.app_tg_t1_level_int_map().bits()),
+                &self.app_tg_t1_level_int_map().bits(),
             )
             .finish()
     }

@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("SLICE_HEADER_REMAIN")
             .field(
                 "slice_remain_bitlength",
-                &format_args!("{}", self.slice_remain_bitlength().bits()),
+                &self.slice_remain_bitlength().bits(),
             )
-            .field(
-                "slice_remain_bit",
-                &format_args!("{}", self.slice_remain_bit().bits()),
-            )
+            .field("slice_remain_bit", &self.slice_remain_bit().bits())
             .finish()
     }
 }

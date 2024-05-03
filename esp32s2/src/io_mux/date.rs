@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field("version", &format_args!("{}", self.version().bits()))
+            .field("version", &self.version().bits())
             .finish()
     }
 }

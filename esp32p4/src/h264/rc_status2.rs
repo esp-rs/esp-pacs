@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RC_STATUS2")
-            .field(
-                "frame_qp_sum",
-                &format_args!("{}", self.frame_qp_sum().bits()),
-            )
+            .field("frame_qp_sum", &self.frame_qp_sum().bits())
             .finish()
     }
 }

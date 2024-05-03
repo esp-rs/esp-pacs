@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_MMU_ACCESS_1")
-            .field(
-                "pro_mmu_rd_acs",
-                &format_args!("{}", self.pro_mmu_rd_acs().bit()),
-            )
-            .field(
-                "pro_mmu_wr_acs",
-                &format_args!("{}", self.pro_mmu_wr_acs().bit()),
-            )
+            .field("pro_mmu_rd_acs", &self.pro_mmu_rd_acs().bit())
+            .field("pro_mmu_wr_acs", &self.pro_mmu_wr_acs().bit())
             .finish()
     }
 }

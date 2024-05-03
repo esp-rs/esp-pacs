@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_FORCE_PHY_FATAL")
             .field(
                 "force_phy_errsotsynchs_0",
-                &format_args!("{}", self.force_phy_errsotsynchs_0().bit()),
+                &self.force_phy_errsotsynchs_0().bit(),
             )
             .field(
                 "force_phy_errsotsynchs_1",
-                &format_args!("{}", self.force_phy_errsotsynchs_1().bit()),
+                &self.force_phy_errsotsynchs_1().bit(),
             )
             .finish()
     }

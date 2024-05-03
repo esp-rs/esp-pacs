@@ -91,36 +91,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("EXT_LDO_P1_0P1A")
             .field(
                 "_0p1a_force_tieh_sel_1",
-                &format_args!("{}", self._0p1a_force_tieh_sel_1().bit()),
+                &self._0p1a_force_tieh_sel_1().bit(),
             )
-            .field("_0p1a_xpd_1", &format_args!("{}", self._0p1a_xpd_1().bit()))
-            .field(
-                "_0p1a_tieh_sel_1",
-                &format_args!("{}", self._0p1a_tieh_sel_1().bits()),
-            )
-            .field(
-                "_0p1a_tieh_pos_en_1",
-                &format_args!("{}", self._0p1a_tieh_pos_en_1().bit()),
-            )
-            .field(
-                "_0p1a_tieh_neg_en_1",
-                &format_args!("{}", self._0p1a_tieh_neg_en_1().bit()),
-            )
-            .field(
-                "_0p1a_tieh_1",
-                &format_args!("{}", self._0p1a_tieh_1().bit()),
-            )
-            .field(
-                "_0p1a_target1_1",
-                &format_args!("{}", self._0p1a_target1_1().bits()),
-            )
-            .field(
-                "_0p1a_target0_1",
-                &format_args!("{}", self._0p1a_target0_1().bits()),
-            )
+            .field("_0p1a_xpd_1", &self._0p1a_xpd_1().bit())
+            .field("_0p1a_tieh_sel_1", &self._0p1a_tieh_sel_1().bits())
+            .field("_0p1a_tieh_pos_en_1", &self._0p1a_tieh_pos_en_1().bit())
+            .field("_0p1a_tieh_neg_en_1", &self._0p1a_tieh_neg_en_1().bit())
+            .field("_0p1a_tieh_1", &self._0p1a_tieh_1().bit())
+            .field("_0p1a_target1_1", &self._0p1a_target1_1().bits())
+            .field("_0p1a_target0_1", &self._0p1a_target0_1().bits())
             .field(
                 "_0p1a_ldo_cnt_prescaler_sel_1",
-                &format_args!("{}", self._0p1a_ldo_cnt_prescaler_sel_1().bit()),
+                &self._0p1a_ldo_cnt_prescaler_sel_1().bit(),
             )
             .finish()
     }

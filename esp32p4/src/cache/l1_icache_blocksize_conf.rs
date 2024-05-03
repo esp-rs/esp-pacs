@@ -48,29 +48,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE_BLOCKSIZE_CONF")
-            .field(
-                "l1_icache_blocksize_8",
-                &format_args!("{}", self.l1_icache_blocksize_8().bit()),
-            )
+            .field("l1_icache_blocksize_8", &self.l1_icache_blocksize_8().bit())
             .field(
                 "l1_icache_blocksize_16",
-                &format_args!("{}", self.l1_icache_blocksize_16().bit()),
+                &self.l1_icache_blocksize_16().bit(),
             )
             .field(
                 "l1_icache_blocksize_32",
-                &format_args!("{}", self.l1_icache_blocksize_32().bit()),
+                &self.l1_icache_blocksize_32().bit(),
             )
             .field(
                 "l1_icache_blocksize_64",
-                &format_args!("{}", self.l1_icache_blocksize_64().bit()),
+                &self.l1_icache_blocksize_64().bit(),
             )
             .field(
                 "l1_icache_blocksize_128",
-                &format_args!("{}", self.l1_icache_blocksize_128().bit()),
+                &self.l1_icache_blocksize_128().bit(),
             )
             .field(
                 "l1_icache_blocksize_256",
-                &format_args!("{}", self.l1_icache_blocksize_256().bit()),
+                &self.l1_icache_blocksize_256().bit(),
             )
             .finish()
     }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_PERI_TIMEOUT_UID")
-            .field(
-                "hp_peri_timeout_uid",
-                &format_args!("{}", self.hp_peri_timeout_uid().bits()),
-            )
+            .field("hp_peri_timeout_uid", &self.hp_peri_timeout_uid().bits())
             .finish()
     }
 }

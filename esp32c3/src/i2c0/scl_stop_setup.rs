@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_STOP_SETUP")
-            .field("time", &format_args!("{}", self.time().bits()))
+            .field("time", &self.time().bits())
             .finish()
     }
 }

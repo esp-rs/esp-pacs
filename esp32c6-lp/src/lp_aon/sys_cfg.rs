@@ -19,10 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS_CFG")
-            .field(
-                "force_download_boot",
-                &format_args!("{}", self.force_download_boot().bit()),
-            )
+            .field("force_download_boot", &self.force_download_boot().bit())
             .finish()
     }
 }

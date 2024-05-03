@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TRACE_CONF")
-            .field(
-                "trace_clk_en",
-                &format_args!("{}", self.trace_clk_en().bit()),
-            )
-            .field(
-                "trace_rst_en",
-                &format_args!("{}", self.trace_rst_en().bit()),
-            )
+            .field("trace_clk_en", &self.trace_clk_en().bit())
+            .field("trace_rst_en", &self.trace_rst_en().bit())
             .finish()
     }
 }

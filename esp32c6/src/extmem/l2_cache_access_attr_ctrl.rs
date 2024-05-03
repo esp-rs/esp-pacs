@@ -36,19 +36,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_ACCESS_ATTR_CTRL")
             .field(
                 "l2_cache_access_force_cc",
-                &format_args!("{}", self.l2_cache_access_force_cc().bit()),
+                &self.l2_cache_access_force_cc().bit(),
             )
             .field(
                 "l2_cache_access_force_wb",
-                &format_args!("{}", self.l2_cache_access_force_wb().bit()),
+                &self.l2_cache_access_force_wb().bit(),
             )
             .field(
                 "l2_cache_access_force_wma",
-                &format_args!("{}", self.l2_cache_access_force_wma().bit()),
+                &self.l2_cache_access_force_wma().bit(),
             )
             .field(
                 "l2_cache_access_force_rma",
-                &format_args!("{}", self.l2_cache_access_force_rma().bit()),
+                &self.l2_cache_access_force_rma().bit(),
             )
             .finish()
     }

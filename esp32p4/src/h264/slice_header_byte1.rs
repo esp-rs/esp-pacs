@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLICE_HEADER_BYTE1")
-            .field(
-                "slice_byte_msb",
-                &format_args!("{}", self.slice_byte_msb().bits()),
-            )
+            .field("slice_byte_msb", &self.slice_byte_msb().bits())
             .finish()
     }
 }

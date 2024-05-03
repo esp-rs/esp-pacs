@@ -114,39 +114,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BROWN_OUT")
-            .field(
-                "rtc_mem_pid_conf",
-                &format_args!("{}", self.rtc_mem_pid_conf().bits()),
-            )
-            .field(
-                "rtc_mem_crc_start",
-                &format_args!("{}", self.rtc_mem_crc_start().bit()),
-            )
-            .field(
-                "rtc_mem_crc_addr",
-                &format_args!("{}", self.rtc_mem_crc_addr().bits()),
-            )
-            .field(
-                "close_flash_ena",
-                &format_args!("{}", self.close_flash_ena().bit()),
-            )
-            .field("pd_rf_ena", &format_args!("{}", self.pd_rf_ena().bit()))
-            .field("rst_wait", &format_args!("{}", self.rst_wait().bits()))
-            .field(
-                "rtc_mem_crc_len",
-                &format_args!("{}", self.rtc_mem_crc_len().bits()),
-            )
-            .field("rst_ena", &format_args!("{}", self.rst_ena().bit()))
-            .field(
-                "dbrown_out_thres",
-                &format_args!("{}", self.dbrown_out_thres().bits()),
-            )
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field("det", &format_args!("{}", self.det().bit()))
-            .field(
-                "rtc_mem_crc_finish",
-                &format_args!("{}", self.rtc_mem_crc_finish().bit()),
-            )
+            .field("rtc_mem_pid_conf", &self.rtc_mem_pid_conf().bits())
+            .field("rtc_mem_crc_start", &self.rtc_mem_crc_start().bit())
+            .field("rtc_mem_crc_addr", &self.rtc_mem_crc_addr().bits())
+            .field("close_flash_ena", &self.close_flash_ena().bit())
+            .field("pd_rf_ena", &self.pd_rf_ena().bit())
+            .field("rst_wait", &self.rst_wait().bits())
+            .field("rtc_mem_crc_len", &self.rtc_mem_crc_len().bits())
+            .field("rst_ena", &self.rst_ena().bit())
+            .field("dbrown_out_thres", &self.dbrown_out_thres().bits())
+            .field("ena", &self.ena().bit())
+            .field("det", &self.det().bit())
+            .field("rtc_mem_crc_finish", &self.rtc_mem_crc_finish().bit())
             .finish()
     }
 }

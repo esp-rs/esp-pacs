@@ -34,19 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RS_ERR1")
-            .field(
-                "key5_err_num",
-                &format_args!("{}", self.key5_err_num().bits()),
-            )
-            .field("key5_fail", &format_args!("{}", self.key5_fail().bit()))
-            .field(
-                "sys_part2_err_num",
-                &format_args!("{}", self.sys_part2_err_num().bits()),
-            )
-            .field(
-                "sys_part2_fail",
-                &format_args!("{}", self.sys_part2_fail().bit()),
-            )
+            .field("key5_err_num", &self.key5_err_num().bits())
+            .field("key5_fail", &self.key5_fail().bit())
+            .field("sys_part2_err_num", &self.sys_part2_err_num().bits())
+            .field("sys_part2_fail", &self.sys_part2_fail().bit())
             .finish()
     }
 }

@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_I2C_FM_TIME")
             .field(
                 "reg_i2c_fm_low_period",
-                &format_args!("{}", self.reg_i2c_fm_low_period().bits()),
+                &self.reg_i2c_fm_low_period().bits(),
             )
             .field(
                 "reg_i2c_fm_high_period",
-                &format_args!("{}", self.reg_i2c_fm_high_period().bits()),
+                &self.reg_i2c_fm_high_period().bits(),
             )
             .finish()
     }

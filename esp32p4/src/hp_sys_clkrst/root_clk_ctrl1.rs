@@ -44,22 +44,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROOT_CLK_CTRL1")
-            .field(
-                "mem_clk_div_num",
-                &format_args!("{}", self.mem_clk_div_num().bits()),
-            )
+            .field("mem_clk_div_num", &self.mem_clk_div_num().bits())
             .field(
                 "mem_clk_div_numerator",
-                &format_args!("{}", self.mem_clk_div_numerator().bits()),
+                &self.mem_clk_div_numerator().bits(),
             )
             .field(
                 "mem_clk_div_denominator",
-                &format_args!("{}", self.mem_clk_div_denominator().bits()),
+                &self.mem_clk_div_denominator().bits(),
             )
-            .field(
-                "sys_clk_div_num",
-                &format_args!("{}", self.sys_clk_div_num().bits()),
-            )
+            .field("sys_clk_div_num", &self.sys_clk_div_num().bits())
             .finish()
     }
 }

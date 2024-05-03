@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USB_DEVICE_INT_MAP")
-            .field(
-                "usb_device_int_map",
-                &format_args!("{}", self.usb_device_int_map().bits()),
-            )
+            .field("usb_device_int_map", &self.usb_device_int_map().bits())
             .finish()
     }
 }

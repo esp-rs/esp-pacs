@@ -41,11 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DSTS")
-            .field("suspsts", &format_args!("{}", self.suspsts().bit()))
-            .field("enumspd", &format_args!("{}", self.enumspd().bits()))
-            .field("errticerr", &format_args!("{}", self.errticerr().bit()))
-            .field("soffn", &format_args!("{}", self.soffn().bits()))
-            .field("devlnsts", &format_args!("{}", self.devlnsts().bits()))
+            .field("suspsts", &self.suspsts().bit())
+            .field("enumspd", &self.enumspd().bits())
+            .field("errticerr", &self.errticerr().bit())
+            .field("soffn", &self.soffn().bits())
+            .field("devlnsts", &self.devlnsts().bits())
             .finish()
     }
 }

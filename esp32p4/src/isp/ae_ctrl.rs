@@ -19,7 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_CTRL")
-            .field("ae_select", &format_args!("{}", self.ae_select().bit()))
+            .field("ae_select", &self.ae_select().bit())
             .finish()
     }
 }

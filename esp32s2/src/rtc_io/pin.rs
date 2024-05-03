@@ -35,14 +35,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN")
-            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
-            .field(
-                "gpio_pin_int_type",
-                &format_args!("{}", self.gpio_pin_int_type().bits()),
-            )
+            .field("pad_driver", &self.pad_driver().bit())
+            .field("gpio_pin_int_type", &self.gpio_pin_int_type().bits())
             .field(
                 "gpio_pin_wakeup_enable",
-                &format_args!("{}", self.gpio_pin_wakeup_enable().bit()),
+                &self.gpio_pin_wakeup_enable().bit(),
             )
             .finish()
     }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ASSIST_CONF")
-            .field(
-                "assist_clk_en",
-                &format_args!("{}", self.assist_clk_en().bit()),
-            )
-            .field(
-                "assist_rst_en",
-                &format_args!("{}", self.assist_rst_en().bit()),
-            )
+            .field("assist_clk_en", &self.assist_clk_en().bit())
+            .field("assist_rst_en", &self.assist_rst_en().bit())
             .finish()
     }
 }

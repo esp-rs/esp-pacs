@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "cocpu_tsens_wake",
-                &format_args!("{}", self.cocpu_tsens_wake().bit()),
-            )
+            .field("cocpu_tsens_wake", &self.cocpu_tsens_wake().bit())
             .finish()
     }
 }

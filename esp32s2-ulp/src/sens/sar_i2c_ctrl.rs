@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_I2C_CTRL")
-            .field(
-                "sar_i2c_ctrl",
-                &format_args!("{}", self.sar_i2c_ctrl().bits()),
-            )
-            .field(
-                "sar_i2c_start",
-                &format_args!("{}", self.sar_i2c_start().bit()),
-            )
-            .field(
-                "sar_i2c_start_force",
-                &format_args!("{}", self.sar_i2c_start_force().bit()),
-            )
+            .field("sar_i2c_ctrl", &self.sar_i2c_ctrl().bits())
+            .field("sar_i2c_start", &self.sar_i2c_start().bit())
+            .field("sar_i2c_start_force", &self.sar_i2c_start_force().bit())
             .finish()
     }
 }

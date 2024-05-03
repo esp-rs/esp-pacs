@@ -48,21 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RS_ERR")
-            .field(
-                "blk1_err_num",
-                &format_args!("{}", self.blk1_err_num().bits()),
-            )
-            .field("blk1_fail", &format_args!("{}", self.blk1_fail().bit()))
-            .field(
-                "blk2_err_num",
-                &format_args!("{}", self.blk2_err_num().bits()),
-            )
-            .field("blk2_fail", &format_args!("{}", self.blk2_fail().bit()))
-            .field(
-                "blk3_err_num",
-                &format_args!("{}", self.blk3_err_num().bits()),
-            )
-            .field("blk3_fail", &format_args!("{}", self.blk3_fail().bit()))
+            .field("blk1_err_num", &self.blk1_err_num().bits())
+            .field("blk1_fail", &self.blk1_fail().bit())
+            .field("blk2_err_num", &self.blk2_err_num().bits())
+            .field("blk2_fail", &self.blk2_fail().bit())
+            .field("blk3_err_num", &self.blk3_err_num().bits())
+            .field("blk3_fail", &self.blk3_fail().bit())
             .finish()
     }
 }

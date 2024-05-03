@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWR_UP")
-            .field("shutdownz", &format_args!("{}", self.shutdownz().bit()))
+            .field("shutdownz", &self.shutdownz().bit())
             .finish()
     }
 }

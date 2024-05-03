@@ -38,21 +38,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C_BURST_STATUS")
-            .field(
-                "i2c_mst_burst_done",
-                &format_args!("{}", self.i2c_mst_burst_done().bit()),
-            )
+            .field("i2c_mst_burst_done", &self.i2c_mst_burst_done().bit())
             .field(
                 "i2c_mst0_burst_err_flag",
-                &format_args!("{}", self.i2c_mst0_burst_err_flag().bit()),
+                &self.i2c_mst0_burst_err_flag().bit(),
             )
             .field(
                 "i2c_mst1_burst_err_flag",
-                &format_args!("{}", self.i2c_mst1_burst_err_flag().bit()),
+                &self.i2c_mst1_burst_err_flag().bit(),
             )
             .field(
                 "i2c_mst_burst_timeout_cnt",
-                &format_args!("{}", self.i2c_mst_burst_timeout_cnt().bits()),
+                &self.i2c_mst_burst_timeout_cnt().bits(),
             )
             .finish()
     }

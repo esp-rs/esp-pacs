@@ -125,43 +125,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_DAC1")
-            .field(
-                "pdac1_dac_xpd_force",
-                &format_args!("{}", self.pdac1_dac_xpd_force().bit()),
-            )
-            .field(
-                "pdac1_fun_ie",
-                &format_args!("{}", self.pdac1_fun_ie().bit()),
-            )
-            .field(
-                "pdac1_slp_oe",
-                &format_args!("{}", self.pdac1_slp_oe().bit()),
-            )
-            .field(
-                "pdac1_slp_ie",
-                &format_args!("{}", self.pdac1_slp_ie().bit()),
-            )
-            .field(
-                "pdac1_slp_sel",
-                &format_args!("{}", self.pdac1_slp_sel().bit()),
-            )
-            .field(
-                "pdac1_fun_sel",
-                &format_args!("{}", self.pdac1_fun_sel().bits()),
-            )
-            .field(
-                "pdac1_mux_sel",
-                &format_args!("{}", self.pdac1_mux_sel().bit()),
-            )
-            .field(
-                "pdac1_xpd_dac",
-                &format_args!("{}", self.pdac1_xpd_dac().bit()),
-            )
-            .field("pdac1_dac", &format_args!("{}", self.pdac1_dac().bits()))
-            .field("pdac1_rue", &format_args!("{}", self.pdac1_rue().bit()))
-            .field("pdac1_rde", &format_args!("{}", self.pdac1_rde().bit()))
-            .field("pdac1_hold", &format_args!("{}", self.pdac1_hold().bit()))
-            .field("pdac1_drv", &format_args!("{}", self.pdac1_drv().bits()))
+            .field("pdac1_dac_xpd_force", &self.pdac1_dac_xpd_force().bit())
+            .field("pdac1_fun_ie", &self.pdac1_fun_ie().bit())
+            .field("pdac1_slp_oe", &self.pdac1_slp_oe().bit())
+            .field("pdac1_slp_ie", &self.pdac1_slp_ie().bit())
+            .field("pdac1_slp_sel", &self.pdac1_slp_sel().bit())
+            .field("pdac1_fun_sel", &self.pdac1_fun_sel().bits())
+            .field("pdac1_mux_sel", &self.pdac1_mux_sel().bit())
+            .field("pdac1_xpd_dac", &self.pdac1_xpd_dac().bit())
+            .field("pdac1_dac", &self.pdac1_dac().bits())
+            .field("pdac1_rue", &self.pdac1_rue().bit())
+            .field("pdac1_rde", &self.pdac1_rde().bit())
+            .field("pdac1_hold", &self.pdac1_hold().bit())
+            .field("pdac1_drv", &self.pdac1_drv().bits())
             .finish()
     }
 }

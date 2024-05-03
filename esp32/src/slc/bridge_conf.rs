@@ -62,27 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BRIDGE_CONF")
-            .field("txeof_ena", &format_args!("{}", self.txeof_ena().bits()))
-            .field(
-                "fifo_map_ena",
-                &format_args!("{}", self.fifo_map_ena().bits()),
-            )
-            .field(
-                "slc0_tx_dummy_mode",
-                &format_args!("{}", self.slc0_tx_dummy_mode().bit()),
-            )
-            .field(
-                "hda_map_128k",
-                &format_args!("{}", self.hda_map_128k().bit()),
-            )
-            .field(
-                "slc1_tx_dummy_mode",
-                &format_args!("{}", self.slc1_tx_dummy_mode().bit()),
-            )
-            .field(
-                "tx_push_idle_num",
-                &format_args!("{}", self.tx_push_idle_num().bits()),
-            )
+            .field("txeof_ena", &self.txeof_ena().bits())
+            .field("fifo_map_ena", &self.fifo_map_ena().bits())
+            .field("slc0_tx_dummy_mode", &self.slc0_tx_dummy_mode().bit())
+            .field("hda_map_128k", &self.hda_map_128k().bit())
+            .field("slc1_tx_dummy_mode", &self.slc1_tx_dummy_mode().bit())
+            .field("tx_push_idle_num", &self.tx_push_idle_num().bits())
             .finish()
     }
 }

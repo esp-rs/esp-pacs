@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POSPULSE")
-            .field(
-                "posedge_min_cnt",
-                &format_args!("{}", self.posedge_min_cnt().bits()),
-            )
+            .field("posedge_min_cnt", &self.posedge_min_cnt().bits())
             .finish()
     }
 }

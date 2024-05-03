@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_BITMAP_HIGH2")
-            .field(
-                "pump_bitmap_high2",
-                &format_args!("{}", self.pump_bitmap_high2().bits()),
-            )
+            .field("pump_bitmap_high2", &self.pump_bitmap_high2().bits())
             .finish()
     }
 }

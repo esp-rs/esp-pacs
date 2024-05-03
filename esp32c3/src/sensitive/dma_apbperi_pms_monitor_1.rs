@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_1")
             .field(
                 "dma_apbperi_pms_monitor_violate_clr",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_clr().bit()),
+                &self.dma_apbperi_pms_monitor_violate_clr().bit(),
             )
             .field(
                 "dma_apbperi_pms_monitor_violate_en",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_en().bit()),
+                &self.dma_apbperi_pms_monitor_violate_en().bit(),
             )
             .finish()
     }

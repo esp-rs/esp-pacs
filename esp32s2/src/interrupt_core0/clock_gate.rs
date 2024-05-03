@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLOCK_GATE")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "pro_nmi_mask_hw",
-                &format_args!("{}", self.pro_nmi_mask_hw().bit()),
-            )
+            .field("clk_en", &self.clk_en().bit())
+            .field("pro_nmi_mask_hw", &self.pro_nmi_mask_hw().bit())
             .finish()
     }
 }

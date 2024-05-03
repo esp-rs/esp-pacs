@@ -33,9 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C0_CONF")
-            .field("i2c0_clk_en", &format_args!("{}", self.i2c0_clk_en().bit()))
-            .field("i2c0_rst_en", &format_args!("{}", self.i2c0_rst_en().bit()))
-            .field("i2c0_ready", &format_args!("{}", self.i2c0_ready().bit()))
+            .field("i2c0_clk_en", &self.i2c0_clk_en().bit())
+            .field("i2c0_rst_en", &self.i2c0_rst_en().bit())
+            .field("i2c0_ready", &self.i2c0_ready().bit())
             .finish()
     }
 }

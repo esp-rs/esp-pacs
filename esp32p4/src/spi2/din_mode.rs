@@ -89,18 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIN_MODE")
-            .field("din0_mode", &format_args!("{}", self.din0_mode().bits()))
-            .field("din1_mode", &format_args!("{}", self.din1_mode().bits()))
-            .field("din2_mode", &format_args!("{}", self.din2_mode().bits()))
-            .field("din3_mode", &format_args!("{}", self.din3_mode().bits()))
-            .field("din4_mode", &format_args!("{}", self.din4_mode().bits()))
-            .field("din5_mode", &format_args!("{}", self.din5_mode().bits()))
-            .field("din6_mode", &format_args!("{}", self.din6_mode().bits()))
-            .field("din7_mode", &format_args!("{}", self.din7_mode().bits()))
-            .field(
-                "timing_hclk_active",
-                &format_args!("{}", self.timing_hclk_active().bit()),
-            )
+            .field("din0_mode", &self.din0_mode().bits())
+            .field("din1_mode", &self.din1_mode().bits())
+            .field("din2_mode", &self.din2_mode().bits())
+            .field("din3_mode", &self.din3_mode().bits())
+            .field("din4_mode", &self.din4_mode().bits())
+            .field("din5_mode", &self.din5_mode().bits())
+            .field("din6_mode", &self.din6_mode().bits())
+            .field("din7_mode", &self.din7_mode().bits())
+            .field("timing_hclk_active", &self.timing_hclk_active().bit())
             .finish()
     }
 }

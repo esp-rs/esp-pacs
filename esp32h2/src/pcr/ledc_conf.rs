@@ -33,9 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEDC_CONF")
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field("ledc_rst_en", &format_args!("{}", self.ledc_rst_en().bit()))
-            .field("ledc_ready", &format_args!("{}", self.ledc_ready().bit()))
+            .field("ledc_clk_en", &self.ledc_clk_en().bit())
+            .field("ledc_rst_en", &self.ledc_rst_en().bit())
+            .field("ledc_ready", &self.ledc_ready().bit())
             .finish()
     }
 }

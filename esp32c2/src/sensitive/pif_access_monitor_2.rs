@@ -26,15 +26,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIF_ACCESS_MONITOR_2")
             .field(
                 "pif_access_monitor_nonword_violate_intr",
-                &format_args!("{}", self.pif_access_monitor_nonword_violate_intr().bit()),
+                &self.pif_access_monitor_nonword_violate_intr().bit(),
             )
             .field(
                 "pif_access_monitor_nonword_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.pif_access_monitor_nonword_violate_status_hsize()
-                        .bits()
-                ),
+                &self
+                    .pif_access_monitor_nonword_violate_status_hsize()
+                    .bits(),
             )
             .finish()
     }

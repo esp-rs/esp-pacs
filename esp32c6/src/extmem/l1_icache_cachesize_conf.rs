@@ -99,55 +99,55 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE_CACHESIZE_CONF")
             .field(
                 "l1_icache_cachesize_1k",
-                &format_args!("{}", self.l1_icache_cachesize_1k().bit()),
+                &self.l1_icache_cachesize_1k().bit(),
             )
             .field(
                 "l1_icache_cachesize_2k",
-                &format_args!("{}", self.l1_icache_cachesize_2k().bit()),
+                &self.l1_icache_cachesize_2k().bit(),
             )
             .field(
                 "l1_icache_cachesize_4k",
-                &format_args!("{}", self.l1_icache_cachesize_4k().bit()),
+                &self.l1_icache_cachesize_4k().bit(),
             )
             .field(
                 "l1_icache_cachesize_8k",
-                &format_args!("{}", self.l1_icache_cachesize_8k().bit()),
+                &self.l1_icache_cachesize_8k().bit(),
             )
             .field(
                 "l1_icache_cachesize_16k",
-                &format_args!("{}", self.l1_icache_cachesize_16k().bit()),
+                &self.l1_icache_cachesize_16k().bit(),
             )
             .field(
                 "l1_icache_cachesize_32k",
-                &format_args!("{}", self.l1_icache_cachesize_32k().bit()),
+                &self.l1_icache_cachesize_32k().bit(),
             )
             .field(
                 "l1_icache_cachesize_64k",
-                &format_args!("{}", self.l1_icache_cachesize_64k().bit()),
+                &self.l1_icache_cachesize_64k().bit(),
             )
             .field(
                 "l1_icache_cachesize_128k",
-                &format_args!("{}", self.l1_icache_cachesize_128k().bit()),
+                &self.l1_icache_cachesize_128k().bit(),
             )
             .field(
                 "l1_icache_cachesize_256k",
-                &format_args!("{}", self.l1_icache_cachesize_256k().bit()),
+                &self.l1_icache_cachesize_256k().bit(),
             )
             .field(
                 "l1_icache_cachesize_512k",
-                &format_args!("{}", self.l1_icache_cachesize_512k().bit()),
+                &self.l1_icache_cachesize_512k().bit(),
             )
             .field(
                 "l1_icache_cachesize_1024k",
-                &format_args!("{}", self.l1_icache_cachesize_1024k().bit()),
+                &self.l1_icache_cachesize_1024k().bit(),
             )
             .field(
                 "l1_icache_cachesize_2048k",
-                &format_args!("{}", self.l1_icache_cachesize_2048k().bit()),
+                &self.l1_icache_cachesize_2048k().bit(),
             )
             .field(
                 "l1_icache_cachesize_4096k",
-                &format_args!("{}", self.l1_icache_cachesize_4096k().bit()),
+                &self.l1_icache_cachesize_4096k().bit(),
             )
             .finish()
     }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_GAMMA_RD_DATA")
-            .field(
-                "ch_gamma_rd_data",
-                &format_args!("{}", self.ch_gamma_rd_data().bits()),
-            )
+            .field("ch_gamma_rd_data", &self.ch_gamma_rd_data().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_1_MESSAGE_MAX")
-            .field(
-                "core_1_message_max",
-                &format_args!("{}", self.core_1_message_max().bits()),
-            )
+            .field("core_1_message_max", &self.core_1_message_max().bits())
             .finish()
     }
 }

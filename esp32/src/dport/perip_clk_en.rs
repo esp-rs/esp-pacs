@@ -251,72 +251,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_CLK_EN")
-            .field(
-                "timers_clk_en",
-                &format_args!("{}", self.timers_clk_en().bit()),
-            )
-            .field(
-                "spi01_clk_en",
-                &format_args!("{}", self.spi01_clk_en().bit()),
-            )
-            .field("uart_clk_en", &format_args!("{}", self.uart_clk_en().bit()))
-            .field("wdg_clk_en", &format_args!("{}", self.wdg_clk_en().bit()))
-            .field("i2s0_clk_en", &format_args!("{}", self.i2s0_clk_en().bit()))
-            .field(
-                "uart1_clk_en",
-                &format_args!("{}", self.uart1_clk_en().bit()),
-            )
-            .field("spi2_clk_en", &format_args!("{}", self.spi2_clk_en().bit()))
-            .field(
-                "i2c0_ext0_clk_en",
-                &format_args!("{}", self.i2c0_ext0_clk_en().bit()),
-            )
-            .field(
-                "uhci0_clk_en",
-                &format_args!("{}", self.uhci0_clk_en().bit()),
-            )
-            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
-            .field("pcnt_clk_en", &format_args!("{}", self.pcnt_clk_en().bit()))
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field(
-                "uhci1_clk_en",
-                &format_args!("{}", self.uhci1_clk_en().bit()),
-            )
-            .field(
-                "timergroup_clk_en",
-                &format_args!("{}", self.timergroup_clk_en().bit()),
-            )
-            .field(
-                "efuse_clk_en",
-                &format_args!("{}", self.efuse_clk_en().bit()),
-            )
-            .field(
-                "timergroup1_clk_en",
-                &format_args!("{}", self.timergroup1_clk_en().bit()),
-            )
-            .field("spi3_clk_en", &format_args!("{}", self.spi3_clk_en().bit()))
-            .field("pwm0_clk_en", &format_args!("{}", self.pwm0_clk_en().bit()))
-            .field(
-                "i2c_ext1_clk_en",
-                &format_args!("{}", self.i2c_ext1_clk_en().bit()),
-            )
-            .field("twai_clk_en", &format_args!("{}", self.twai_clk_en().bit()))
-            .field("pwm1_clk_en", &format_args!("{}", self.pwm1_clk_en().bit()))
-            .field("i2s1_clk_en", &format_args!("{}", self.i2s1_clk_en().bit()))
-            .field(
-                "spi_dma_clk_en",
-                &format_args!("{}", self.spi_dma_clk_en().bit()),
-            )
-            .field(
-                "uart2_clk_en",
-                &format_args!("{}", self.uart2_clk_en().bit()),
-            )
-            .field(
-                "uart_mem_clk_en",
-                &format_args!("{}", self.uart_mem_clk_en().bit()),
-            )
-            .field("pwm2_clk_en", &format_args!("{}", self.pwm2_clk_en().bit()))
-            .field("pwm3_clk_en", &format_args!("{}", self.pwm3_clk_en().bit()))
+            .field("timers_clk_en", &self.timers_clk_en().bit())
+            .field("spi01_clk_en", &self.spi01_clk_en().bit())
+            .field("uart_clk_en", &self.uart_clk_en().bit())
+            .field("wdg_clk_en", &self.wdg_clk_en().bit())
+            .field("i2s0_clk_en", &self.i2s0_clk_en().bit())
+            .field("uart1_clk_en", &self.uart1_clk_en().bit())
+            .field("spi2_clk_en", &self.spi2_clk_en().bit())
+            .field("i2c0_ext0_clk_en", &self.i2c0_ext0_clk_en().bit())
+            .field("uhci0_clk_en", &self.uhci0_clk_en().bit())
+            .field("rmt_clk_en", &self.rmt_clk_en().bit())
+            .field("pcnt_clk_en", &self.pcnt_clk_en().bit())
+            .field("ledc_clk_en", &self.ledc_clk_en().bit())
+            .field("uhci1_clk_en", &self.uhci1_clk_en().bit())
+            .field("timergroup_clk_en", &self.timergroup_clk_en().bit())
+            .field("efuse_clk_en", &self.efuse_clk_en().bit())
+            .field("timergroup1_clk_en", &self.timergroup1_clk_en().bit())
+            .field("spi3_clk_en", &self.spi3_clk_en().bit())
+            .field("pwm0_clk_en", &self.pwm0_clk_en().bit())
+            .field("i2c_ext1_clk_en", &self.i2c_ext1_clk_en().bit())
+            .field("twai_clk_en", &self.twai_clk_en().bit())
+            .field("pwm1_clk_en", &self.pwm1_clk_en().bit())
+            .field("i2s1_clk_en", &self.i2s1_clk_en().bit())
+            .field("spi_dma_clk_en", &self.spi_dma_clk_en().bit())
+            .field("uart2_clk_en", &self.uart2_clk_en().bit())
+            .field("uart_mem_clk_en", &self.uart_mem_clk_en().bit())
+            .field("pwm2_clk_en", &self.pwm2_clk_en().bit())
+            .field("pwm3_clk_en", &self.pwm3_clk_en().bit())
             .finish()
     }
 }

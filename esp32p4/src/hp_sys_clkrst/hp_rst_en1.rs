@@ -296,95 +296,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_RST_EN1")
-            .field("rst_en_ppa", &format_args!("{}", self.rst_en_ppa().bit()))
-            .field(
-                "rst_en_ahb_pdma",
-                &format_args!("{}", self.rst_en_ahb_pdma().bit()),
-            )
-            .field(
-                "rst_en_axi_pdma",
-                &format_args!("{}", self.rst_en_axi_pdma().bit()),
-            )
-            .field(
-                "rst_en_iomux",
-                &format_args!("{}", self.rst_en_iomux().bit()),
-            )
-            .field(
-                "rst_en_padbist",
-                &format_args!("{}", self.rst_en_padbist().bit()),
-            )
-            .field(
-                "rst_en_stimer",
-                &format_args!("{}", self.rst_en_stimer().bit()),
-            )
-            .field(
-                "rst_en_timergrp0",
-                &format_args!("{}", self.rst_en_timergrp0().bit()),
-            )
-            .field(
-                "rst_en_timergrp1",
-                &format_args!("{}", self.rst_en_timergrp1().bit()),
-            )
-            .field(
-                "rst_en_uart0_core",
-                &format_args!("{}", self.rst_en_uart0_core().bit()),
-            )
-            .field(
-                "rst_en_uart1_core",
-                &format_args!("{}", self.rst_en_uart1_core().bit()),
-            )
-            .field(
-                "rst_en_uart2_core",
-                &format_args!("{}", self.rst_en_uart2_core().bit()),
-            )
-            .field(
-                "rst_en_uart3_core",
-                &format_args!("{}", self.rst_en_uart3_core().bit()),
-            )
-            .field(
-                "rst_en_uart4_core",
-                &format_args!("{}", self.rst_en_uart4_core().bit()),
-            )
-            .field(
-                "rst_en_uart0_apb",
-                &format_args!("{}", self.rst_en_uart0_apb().bit()),
-            )
-            .field(
-                "rst_en_uart1_apb",
-                &format_args!("{}", self.rst_en_uart1_apb().bit()),
-            )
-            .field(
-                "rst_en_uart2_apb",
-                &format_args!("{}", self.rst_en_uart2_apb().bit()),
-            )
-            .field(
-                "rst_en_uart3_apb",
-                &format_args!("{}", self.rst_en_uart3_apb().bit()),
-            )
-            .field(
-                "rst_en_uart4_apb",
-                &format_args!("{}", self.rst_en_uart4_apb().bit()),
-            )
-            .field("rst_en_uhci", &format_args!("{}", self.rst_en_uhci().bit()))
-            .field(
-                "rst_en_i3cmst",
-                &format_args!("{}", self.rst_en_i3cmst().bit()),
-            )
-            .field(
-                "rst_en_i3cslv",
-                &format_args!("{}", self.rst_en_i3cslv().bit()),
-            )
-            .field("rst_en_i2c1", &format_args!("{}", self.rst_en_i2c1().bit()))
-            .field("rst_en_i2c0", &format_args!("{}", self.rst_en_i2c0().bit()))
-            .field("rst_en_rmt", &format_args!("{}", self.rst_en_rmt().bit()))
-            .field("rst_en_pwm0", &format_args!("{}", self.rst_en_pwm0().bit()))
-            .field("rst_en_pwm1", &format_args!("{}", self.rst_en_pwm1().bit()))
-            .field("rst_en_can0", &format_args!("{}", self.rst_en_can0().bit()))
-            .field("rst_en_can1", &format_args!("{}", self.rst_en_can1().bit()))
-            .field("rst_en_can2", &format_args!("{}", self.rst_en_can2().bit()))
-            .field("rst_en_ledc", &format_args!("{}", self.rst_en_ledc().bit()))
-            .field("rst_en_pcnt", &format_args!("{}", self.rst_en_pcnt().bit()))
-            .field("rst_en_etm", &format_args!("{}", self.rst_en_etm().bit()))
+            .field("rst_en_ppa", &self.rst_en_ppa().bit())
+            .field("rst_en_ahb_pdma", &self.rst_en_ahb_pdma().bit())
+            .field("rst_en_axi_pdma", &self.rst_en_axi_pdma().bit())
+            .field("rst_en_iomux", &self.rst_en_iomux().bit())
+            .field("rst_en_padbist", &self.rst_en_padbist().bit())
+            .field("rst_en_stimer", &self.rst_en_stimer().bit())
+            .field("rst_en_timergrp0", &self.rst_en_timergrp0().bit())
+            .field("rst_en_timergrp1", &self.rst_en_timergrp1().bit())
+            .field("rst_en_uart0_core", &self.rst_en_uart0_core().bit())
+            .field("rst_en_uart1_core", &self.rst_en_uart1_core().bit())
+            .field("rst_en_uart2_core", &self.rst_en_uart2_core().bit())
+            .field("rst_en_uart3_core", &self.rst_en_uart3_core().bit())
+            .field("rst_en_uart4_core", &self.rst_en_uart4_core().bit())
+            .field("rst_en_uart0_apb", &self.rst_en_uart0_apb().bit())
+            .field("rst_en_uart1_apb", &self.rst_en_uart1_apb().bit())
+            .field("rst_en_uart2_apb", &self.rst_en_uart2_apb().bit())
+            .field("rst_en_uart3_apb", &self.rst_en_uart3_apb().bit())
+            .field("rst_en_uart4_apb", &self.rst_en_uart4_apb().bit())
+            .field("rst_en_uhci", &self.rst_en_uhci().bit())
+            .field("rst_en_i3cmst", &self.rst_en_i3cmst().bit())
+            .field("rst_en_i3cslv", &self.rst_en_i3cslv().bit())
+            .field("rst_en_i2c1", &self.rst_en_i2c1().bit())
+            .field("rst_en_i2c0", &self.rst_en_i2c0().bit())
+            .field("rst_en_rmt", &self.rst_en_rmt().bit())
+            .field("rst_en_pwm0", &self.rst_en_pwm0().bit())
+            .field("rst_en_pwm1", &self.rst_en_pwm1().bit())
+            .field("rst_en_can0", &self.rst_en_can0().bit())
+            .field("rst_en_can1", &self.rst_en_can1().bit())
+            .field("rst_en_can2", &self.rst_en_can2().bit())
+            .field("rst_en_ledc", &self.rst_en_ledc().bit())
+            .field("rst_en_pcnt", &self.rst_en_pcnt().bit())
+            .field("rst_en_etm", &self.rst_en_etm().bit())
             .finish()
     }
 }

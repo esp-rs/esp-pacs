@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODE_CFG")
-            .field(
-                "cmd_video_mode",
-                &format_args!("{}", self.cmd_video_mode().bit()),
-            )
+            .field("cmd_video_mode", &self.cmd_video_mode().bit())
             .finish()
     }
 }

@@ -24,11 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_CONF1")
-            .field("ana_conf1", &format_args!("{}", self.ana_conf1().bits()))
-            .field(
-                "ana_status1",
-                &format_args!("{}", self.ana_status1().bits()),
-            )
+            .field("ana_conf1", &self.ana_conf1().bits())
+            .field("ana_status1", &self.ana_status1().bits())
             .finish()
     }
 }

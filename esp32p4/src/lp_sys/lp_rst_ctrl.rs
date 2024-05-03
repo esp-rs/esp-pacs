@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_RST_CTRL")
-            .field(
-                "ana_rst_bypass",
-                &format_args!("{}", self.ana_rst_bypass().bit()),
-            )
-            .field(
-                "sys_rst_bypass",
-                &format_args!("{}", self.sys_rst_bypass().bit()),
-            )
-            .field(
-                "efuse_force_norst",
-                &format_args!("{}", self.efuse_force_norst().bit()),
-            )
+            .field("ana_rst_bypass", &self.ana_rst_bypass().bit())
+            .field("sys_rst_bypass", &self.sys_rst_bypass().bit())
+            .field("efuse_force_norst", &self.efuse_force_norst().bit())
             .finish()
     }
 }

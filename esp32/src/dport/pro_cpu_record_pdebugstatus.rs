@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGSTATUS")
             .field(
                 "record_pro_pdebugstatus",
-                &format_args!("{}", self.record_pro_pdebugstatus().bits()),
+                &self.record_pro_pdebugstatus().bits(),
             )
             .field(
                 "record_pdebugstatus_bbcause",
-                &format_args!("{}", self.record_pdebugstatus_bbcause().bits()),
+                &self.record_pdebugstatus_bbcause().bits(),
             )
             .field(
                 "record_pdebugstatus_insntype",
-                &format_args!("{}", self.record_pdebugstatus_insntype().bits()),
+                &self.record_pdebugstatus_insntype().bits(),
             )
             .finish()
     }

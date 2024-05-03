@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PARL_CLK_RX_CONF")
-            .field(
-                "parl_clk_rx_div_num",
-                &format_args!("{}", self.parl_clk_rx_div_num().bits()),
-            )
-            .field(
-                "parl_clk_rx_sel",
-                &format_args!("{}", self.parl_clk_rx_sel().bits()),
-            )
-            .field(
-                "parl_clk_rx_en",
-                &format_args!("{}", self.parl_clk_rx_en().bit()),
-            )
-            .field(
-                "parl_rx_rst_en",
-                &format_args!("{}", self.parl_rx_rst_en().bit()),
-            )
+            .field("parl_clk_rx_div_num", &self.parl_clk_rx_div_num().bits())
+            .field("parl_clk_rx_sel", &self.parl_clk_rx_sel().bits())
+            .field("parl_clk_rx_en", &self.parl_clk_rx_en().bit())
+            .field("parl_rx_rst_en", &self.parl_rx_rst_en().bit())
             .finish()
     }
 }

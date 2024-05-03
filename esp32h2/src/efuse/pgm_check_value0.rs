@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PGM_CHECK_VALUE0")
-            .field(
-                "pgm_rs_data_0",
-                &format_args!("{}", self.pgm_rs_data_0().bits()),
-            )
+            .field("pgm_rs_data_0", &self.pgm_rs_data_0().bits())
             .finish()
     }
 }

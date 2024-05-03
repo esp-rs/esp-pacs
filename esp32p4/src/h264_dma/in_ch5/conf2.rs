@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CONF2")
             .field(
                 "block_row_length_12line",
-                &format_args!("{}", self.block_row_length_12line().bits()),
+                &self.block_row_length_12line().bits(),
             )
             .field(
                 "block_row_length_4line",
-                &format_args!("{}", self.block_row_length_4line().bits()),
+                &self.block_row_length_4line().bits(),
             )
             .finish()
     }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ANA_CONF1")
             .field(
                 "lp_i2c_ana_mast_ana_conf1",
-                &format_args!("{}", self.lp_i2c_ana_mast_ana_conf1().bits()),
+                &self.lp_i2c_ana_mast_ana_conf1().bits(),
             )
             .finish()
     }

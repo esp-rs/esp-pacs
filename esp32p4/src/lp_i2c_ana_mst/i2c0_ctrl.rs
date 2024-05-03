@@ -24,8 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C0_CTRL")
-            .field("i2c0_ctrl", &format_args!("{}", self.i2c0_ctrl().bits()))
-            .field("i2c0_busy", &format_args!("{}", self.i2c0_busy().bit()))
+            .field("i2c0_ctrl", &self.i2c0_ctrl().bits())
+            .field("i2c0_busy", &self.i2c0_busy().bit())
             .finish()
     }
 }

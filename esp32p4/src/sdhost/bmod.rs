@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BMOD")
-            .field("swr", &format_args!("{}", self.swr().bit()))
-            .field("fb", &format_args!("{}", self.fb().bit()))
-            .field("de", &format_args!("{}", self.de().bit()))
-            .field("pbl", &format_args!("{}", self.pbl().bits()))
+            .field("swr", &self.swr().bit())
+            .field("fb", &self.fb().bit())
+            .field("de", &self.de().bit())
+            .field("pbl", &self.pbl().bits())
             .finish()
     }
 }

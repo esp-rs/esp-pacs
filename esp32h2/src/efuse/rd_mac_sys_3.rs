@@ -69,36 +69,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SYS_3")
-            .field(
-                "dbias_vol_gap_value2",
-                &format_args!("{}", self.dbias_vol_gap_value2().bits()),
-            )
-            .field(
-                "dbias_vol_gap_sign",
-                &format_args!("{}", self.dbias_vol_gap_sign().bit()),
-            )
-            .field(
-                "mac_reserved_2",
-                &format_args!("{}", self.mac_reserved_2().bits()),
-            )
-            .field(
-                "wafer_version_minor",
-                &format_args!("{}", self.wafer_version_minor().bits()),
-            )
-            .field(
-                "wafer_version_major",
-                &format_args!("{}", self.wafer_version_major().bits()),
-            )
+            .field("dbias_vol_gap_value2", &self.dbias_vol_gap_value2().bits())
+            .field("dbias_vol_gap_sign", &self.dbias_vol_gap_sign().bit())
+            .field("mac_reserved_2", &self.mac_reserved_2().bits())
+            .field("wafer_version_minor", &self.wafer_version_minor().bits())
+            .field("wafer_version_major", &self.wafer_version_major().bits())
             .field(
                 "disable_wafer_version_major",
-                &format_args!("{}", self.disable_wafer_version_major().bit()),
+                &self.disable_wafer_version_major().bit(),
             )
-            .field("flash_cap", &format_args!("{}", self.flash_cap().bits()))
-            .field("flash_temp", &format_args!("{}", self.flash_temp().bits()))
-            .field(
-                "flash_vendor",
-                &format_args!("{}", self.flash_vendor().bits()),
-            )
+            .field("flash_cap", &self.flash_cap().bits())
+            .field("flash_temp", &self.flash_temp().bits())
+            .field("flash_vendor", &self.flash_vendor().bits())
             .finish()
     }
 }

@@ -80,35 +80,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_USB_PMS_CONSTRAIN_1")
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_pms_0",
-                &format_args!("{}", self.dma_apbperi_usb_pms_constrain_sram_pms_0().bits()),
+                &self.dma_apbperi_usb_pms_constrain_sram_pms_0().bits(),
             )
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_pms_1",
-                &format_args!("{}", self.dma_apbperi_usb_pms_constrain_sram_pms_1().bits()),
+                &self.dma_apbperi_usb_pms_constrain_sram_pms_1().bits(),
             )
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_pms_2",
-                &format_args!("{}", self.dma_apbperi_usb_pms_constrain_sram_pms_2().bits()),
+                &self.dma_apbperi_usb_pms_constrain_sram_pms_2().bits(),
             )
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_pms_3",
-                &format_args!("{}", self.dma_apbperi_usb_pms_constrain_sram_pms_3().bits()),
+                &self.dma_apbperi_usb_pms_constrain_sram_pms_3().bits(),
             )
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_0",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_0()
-                        .bits()
-                ),
+                &self
+                    .dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_0()
+                    .bits(),
             )
             .field(
                 "dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_1",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_1()
-                        .bits()
-                ),
+                &self
+                    .dma_apbperi_usb_pms_constrain_sram_cachedataarray_pms_1()
+                    .bits(),
             )
             .finish()
     }

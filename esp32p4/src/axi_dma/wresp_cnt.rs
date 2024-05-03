@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WRESP_CNT")
-            .field("wresp_cnt", &format_args!("{}", self.wresp_cnt().bits()))
+            .field("wresp_cnt", &self.wresp_cnt().bits())
             .finish()
     }
 }

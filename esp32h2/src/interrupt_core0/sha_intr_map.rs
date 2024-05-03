@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHA_INTR_MAP")
-            .field(
-                "sha_intr_map",
-                &format_args!("{}", self.sha_intr_map().bits()),
-            )
+            .field("sha_intr_map", &self.sha_intr_map().bits())
             .finish()
     }
 }

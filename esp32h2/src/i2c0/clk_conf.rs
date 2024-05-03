@@ -53,14 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field(
-                "sclk_div_num",
-                &format_args!("{}", self.sclk_div_num().bits()),
-            )
-            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
-            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
-            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bit()))
-            .field("sclk_active", &format_args!("{}", self.sclk_active().bit()))
+            .field("sclk_div_num", &self.sclk_div_num().bits())
+            .field("sclk_div_a", &self.sclk_div_a().bits())
+            .field("sclk_div_b", &self.sclk_div_b().bits())
+            .field("sclk_sel", &self.sclk_sel().bit())
+            .field("sclk_active", &self.sclk_active().bit())
             .finish()
     }
 }

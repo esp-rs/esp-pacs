@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_INTERRUPT")
-            .field("next", &format_args!("{}", self.next().bits()))
+            .field("next", &self.next().bits())
             .finish()
     }
 }

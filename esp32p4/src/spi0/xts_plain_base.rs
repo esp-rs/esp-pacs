@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_PLAIN_BASE")
-            .field(
-                "spi_xts_plain",
-                &format_args!("{}", self.spi_xts_plain().bits()),
-            )
+            .field("spi_xts_plain", &self.spi_xts_plain().bits())
             .finish()
     }
 }

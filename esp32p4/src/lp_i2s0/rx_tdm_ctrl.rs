@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_TDM_CTRL")
-            .field(
-                "rx_tdm_pdm_chan0_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan0_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan1_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan1_en().bit()),
-            )
-            .field(
-                "rx_tdm_tot_chan_num",
-                &format_args!("{}", self.rx_tdm_tot_chan_num().bits()),
-            )
+            .field("rx_tdm_pdm_chan0_en", &self.rx_tdm_pdm_chan0_en().bit())
+            .field("rx_tdm_pdm_chan1_en", &self.rx_tdm_pdm_chan1_en().bit())
+            .field("rx_tdm_tot_chan_num", &self.rx_tdm_tot_chan_num().bits())
             .finish()
     }
 }

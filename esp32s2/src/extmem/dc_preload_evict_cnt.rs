@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DC_PRELOAD_EVICT_CNT")
-            .field(
-                "dc_preload_evict_cnt",
-                &format_args!("{}", self.dc_preload_evict_cnt().bits()),
-            )
+            .field("dc_preload_evict_cnt", &self.dc_preload_evict_cnt().bits())
             .finish()
     }
 }

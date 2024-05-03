@@ -29,16 +29,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("SPI_SMEM_ECC_CTRL")
             .field(
                 "spi_smem_ecc_err_int_en",
-                &format_args!("{}", self.spi_smem_ecc_err_int_en().bit()),
+                &self.spi_smem_ecc_err_int_en().bit(),
             )
-            .field(
-                "spi_smem_page_size",
-                &format_args!("{}", self.spi_smem_page_size().bits()),
-            )
-            .field(
-                "spi_smem_ecc_addr_en",
-                &format_args!("{}", self.spi_smem_ecc_addr_en().bit()),
-            )
+            .field("spi_smem_page_size", &self.spi_smem_page_size().bits())
+            .field("spi_smem_ecc_addr_en", &self.spi_smem_ecc_addr_en().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_STORE13")
-            .field(
-                "lp_scratch13",
-                &format_args!("{}", self.lp_scratch13().bits()),
-            )
+            .field("lp_scratch13", &self.lp_scratch13().bits())
             .finish()
     }
 }

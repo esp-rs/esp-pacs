@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_DBUS_TIMEOUT")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("thres", &format_args!("{}", self.thres().bits()))
+            .field("en", &self.en().bit())
+            .field("thres", &self.thres().bits())
             .finish()
     }
 }

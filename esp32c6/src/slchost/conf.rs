@@ -80,32 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field("frc_sdio11", &format_args!("{}", self.frc_sdio11().bits()))
-            .field("frc_sdio20", &format_args!("{}", self.frc_sdio20().bits()))
-            .field(
-                "frc_neg_samp",
-                &format_args!("{}", self.frc_neg_samp().bits()),
-            )
-            .field(
-                "frc_pos_samp",
-                &format_args!("{}", self.frc_pos_samp().bits()),
-            )
-            .field(
-                "frc_quick_in",
-                &format_args!("{}", self.frc_quick_in().bits()),
-            )
-            .field(
-                "sdio20_int_delay",
-                &format_args!("{}", self.sdio20_int_delay().bit()),
-            )
-            .field(
-                "sdio_pad_pullup",
-                &format_args!("{}", self.sdio_pad_pullup().bit()),
-            )
-            .field(
-                "hspeed_con_en",
-                &format_args!("{}", self.hspeed_con_en().bit()),
-            )
+            .field("frc_sdio11", &self.frc_sdio11().bits())
+            .field("frc_sdio20", &self.frc_sdio20().bits())
+            .field("frc_neg_samp", &self.frc_neg_samp().bits())
+            .field("frc_pos_samp", &self.frc_pos_samp().bits())
+            .field("frc_quick_in", &self.frc_quick_in().bits())
+            .field("sdio20_int_delay", &self.sdio20_int_delay().bit())
+            .field("sdio_pad_pullup", &self.sdio_pad_pullup().bit())
+            .field("hspeed_con_en", &self.hspeed_con_en().bit())
             .finish()
     }
 }

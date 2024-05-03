@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_INTRUSION_STATUS")
-            .field(
-                "app_intrusion_record",
-                &format_args!("{}", self.app_intrusion_record().bits()),
-            )
+            .field("app_intrusion_record", &self.app_intrusion_record().bits())
             .finish()
     }
 }

@@ -24,11 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RND_ECO")
-            .field("redcy_ena", &format_args!("{}", self.redcy_ena().bit()))
-            .field(
-                "redcy_result",
-                &format_args!("{}", self.redcy_result().bit()),
-            )
+            .field("redcy_ena", &self.redcy_ena().bit())
+            .field("redcy_result", &self.redcy_result().bit())
             .finish()
     }
 }

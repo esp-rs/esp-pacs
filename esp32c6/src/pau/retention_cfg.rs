@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CFG")
-            .field(
-                "ret_inv_cfg",
-                &format_args!("{}", self.ret_inv_cfg().bits()),
-            )
+            .field("ret_inv_cfg", &self.ret_inv_cfg().bits())
             .finish()
     }
 }

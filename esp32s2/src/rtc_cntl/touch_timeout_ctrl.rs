@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_TIMEOUT_CTRL")
-            .field(
-                "touch_timeout_num",
-                &format_args!("{}", self.touch_timeout_num().bits()),
-            )
-            .field(
-                "touch_timeout_en",
-                &format_args!("{}", self.touch_timeout_en().bit()),
-            )
+            .field("touch_timeout_num", &self.touch_timeout_num().bits())
+            .field("touch_timeout_en", &self.touch_timeout_en().bit())
             .finish()
     }
 }

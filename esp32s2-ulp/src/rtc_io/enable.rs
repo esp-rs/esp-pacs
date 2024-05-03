@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ENABLE")
             .field(
                 "reg_rtcio_reg_gpio_enable",
-                &format_args!("{}", self.reg_rtcio_reg_gpio_enable().bits()),
+                &self.reg_rtcio_reg_gpio_enable().bits(),
             )
             .finish()
     }

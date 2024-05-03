@@ -47,10 +47,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_EN")
-            .field("m0_apm", &format_args!("{}", self.m0_apm().bit()))
-            .field("m1_apm", &format_args!("{}", self.m1_apm().bit()))
-            .field("m2_apm", &format_args!("{}", self.m2_apm().bit()))
-            .field("m3_apm", &format_args!("{}", self.m3_apm().bit()))
+            .field("m0_apm", &self.m0_apm().bit())
+            .field("m1_apm", &self.m1_apm().bit())
+            .field("m2_apm", &self.m2_apm().bit())
+            .field("m3_apm", &self.m3_apm().bit())
             .finish()
     }
 }

@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ST")
-            .field(
-                "main_timer_overflow",
-                &format_args!("{}", self.main_timer_overflow().bit()),
-            )
-            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
+            .field("main_timer_overflow", &self.main_timer_overflow().bit())
+            .field("main_timer", &self.main_timer().bit())
             .finish()
     }
 }

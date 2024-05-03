@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE1_DBUS_REJECT_ST")
-            .field(
-                "core1_dbus_tag_attr",
-                &format_args!("{}", self.core1_dbus_tag_attr().bits()),
-            )
-            .field(
-                "core1_dbus_attr",
-                &format_args!("{}", self.core1_dbus_attr().bits()),
-            )
-            .field(
-                "core1_dbus_world",
-                &format_args!("{}", self.core1_dbus_world().bit()),
-            )
+            .field("core1_dbus_tag_attr", &self.core1_dbus_tag_attr().bits())
+            .field("core1_dbus_attr", &self.core1_dbus_attr().bits())
+            .field("core1_dbus_world", &self.core1_dbus_world().bit())
             .finish()
     }
 }

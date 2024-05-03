@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB2OTP_BLK0_BACKUP1_W3")
             .field(
                 "apb2otp_block0_backup1_w3",
-                &format_args!("{}", self.apb2otp_block0_backup1_w3().bits()),
+                &self.apb2otp_block0_backup1_w3().bits(),
             )
             .finish()
     }

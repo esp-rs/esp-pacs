@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_DECI_SCORE")
-            .field(
-                "b_c_deci_score",
-                &format_args!("{}", self.b_c_deci_score().bits()),
-            )
-            .field(
-                "b_l_deci_score",
-                &format_args!("{}", self.b_l_deci_score().bits()),
-            )
+            .field("b_c_deci_score", &self.b_c_deci_score().bits())
+            .field("b_l_deci_score", &self.b_l_deci_score().bits())
             .finish()
     }
 }

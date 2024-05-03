@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_MONITOR")
-            .field("tl", &format_args!("{}", self.tl().bits()))
-            .field("th", &format_args!("{}", self.th().bits()))
-            .field("period", &format_args!("{}", self.period().bits()))
+            .field("tl", &self.tl().bits())
+            .field("th", &self.th().bits())
+            .field("period", &self.period().bits())
             .finish()
     }
 }

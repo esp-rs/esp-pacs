@@ -73,31 +73,28 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL03")
             .field(
                 "mipi_dsi_dphy_cfg_clk_en",
-                &format_args!("{}", self.mipi_dsi_dphy_cfg_clk_en().bit()),
+                &self.mipi_dsi_dphy_cfg_clk_en().bit(),
             )
             .field(
                 "mipi_dsi_dphy_pll_refclk_en",
-                &format_args!("{}", self.mipi_dsi_dphy_pll_refclk_en().bit()),
+                &self.mipi_dsi_dphy_pll_refclk_en().bit(),
             )
             .field(
                 "mipi_csi_dphy_clk_src_sel",
-                &format_args!("{}", self.mipi_csi_dphy_clk_src_sel().bits()),
+                &self.mipi_csi_dphy_clk_src_sel().bits(),
             )
             .field(
                 "mipi_csi_dphy_cfg_clk_en",
-                &format_args!("{}", self.mipi_csi_dphy_cfg_clk_en().bit()),
+                &self.mipi_csi_dphy_cfg_clk_en().bit(),
             )
             .field(
                 "mipi_dsi_dpiclk_src_sel",
-                &format_args!("{}", self.mipi_dsi_dpiclk_src_sel().bits()),
+                &self.mipi_dsi_dpiclk_src_sel().bits(),
             )
-            .field(
-                "mipi_dsi_dpiclk_en",
-                &format_args!("{}", self.mipi_dsi_dpiclk_en().bit()),
-            )
+            .field("mipi_dsi_dpiclk_en", &self.mipi_dsi_dpiclk_en().bit())
             .field(
                 "mipi_dsi_dpiclk_div_num",
-                &format_args!("{}", self.mipi_dsi_dpiclk_div_num().bits()),
+                &self.mipi_dsi_dpiclk_div_num().bits(),
             )
             .finish()
     }

@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CACHE_MMU_POWER_CTRL")
             .field(
                 "pro_cache_mmu_mem_force_on",
-                &format_args!("{}", self.pro_cache_mmu_mem_force_on().bit()),
+                &self.pro_cache_mmu_mem_force_on().bit(),
             )
             .field(
                 "pro_cache_mmu_mem_force_pd",
-                &format_args!("{}", self.pro_cache_mmu_mem_force_pd().bit()),
+                &self.pro_cache_mmu_mem_force_pd().bit(),
             )
             .field(
                 "pro_cache_mmu_mem_force_pu",
-                &format_args!("{}", self.pro_cache_mmu_mem_force_pu().bit()),
+                &self.pro_cache_mmu_mem_force_pu().bit(),
             )
             .finish()
     }

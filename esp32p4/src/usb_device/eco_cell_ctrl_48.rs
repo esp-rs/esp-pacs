@@ -24,11 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_CELL_CTRL_48")
-            .field(
-                "rdn_result_48",
-                &format_args!("{}", self.rdn_result_48().bit()),
-            )
-            .field("rdn_ena_48", &format_args!("{}", self.rdn_ena_48().bit()))
+            .field("rdn_result_48", &self.rdn_result_48().bit())
+            .field("rdn_ena_48", &self.rdn_ena_48().bit())
             .finish()
     }
 }

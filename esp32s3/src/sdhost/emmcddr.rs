@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMMCDDR")
-            .field(
-                "halfstartbit",
-                &format_args!("{}", self.halfstartbit().bits()),
-            )
-            .field("hs400_mode", &format_args!("{}", self.hs400_mode().bit()))
+            .field("halfstartbit", &self.halfstartbit().bits())
+            .field("hs400_mode", &self.hs400_mode().bit())
             .finish()
     }
 }

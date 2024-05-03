@@ -55,23 +55,23 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_ACS_FAIL_CTRL")
             .field(
                 "l1_icache0_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache0_acs_fail_check_mode().bit()),
+                &self.l1_icache0_acs_fail_check_mode().bit(),
             )
             .field(
                 "l1_icache1_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache1_acs_fail_check_mode().bit()),
+                &self.l1_icache1_acs_fail_check_mode().bit(),
             )
             .field(
                 "l1_icache2_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache2_acs_fail_check_mode().bit()),
+                &self.l1_icache2_acs_fail_check_mode().bit(),
             )
             .field(
                 "l1_icache3_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache3_acs_fail_check_mode().bit()),
+                &self.l1_icache3_acs_fail_check_mode().bit(),
             )
             .field(
                 "l1_dcache_acs_fail_check_mode",
-                &format_args!("{}", self.l1_dcache_acs_fail_check_mode().bit()),
+                &self.l1_dcache_acs_fail_check_mode().bit(),
             )
             .finish()
     }

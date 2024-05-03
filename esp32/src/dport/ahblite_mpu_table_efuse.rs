@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_EFUSE")
             .field(
                 "efuse_access_grant_config",
-                &format_args!("{}", self.efuse_access_grant_config().bits()),
+                &self.efuse_access_grant_config().bits(),
             )
             .finish()
     }

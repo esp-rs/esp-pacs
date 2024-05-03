@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_DBUS1_ACS_NXTLVL_RD_CNT")
             .field(
                 "l1_dbus1_nxtlvl_rd_cnt",
-                &format_args!("{}", self.l1_dbus1_nxtlvl_rd_cnt().bits()),
+                &self.l1_dbus1_nxtlvl_rd_cnt().bits(),
             )
             .finish()
     }

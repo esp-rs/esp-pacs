@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IBUS_PMS_TBL_ATTR")
-            .field(
-                "ibus_pms_sct1_attr",
-                &format_args!("{}", self.ibus_pms_sct1_attr().bits()),
-            )
-            .field(
-                "ibus_pms_sct2_attr",
-                &format_args!("{}", self.ibus_pms_sct2_attr().bits()),
-            )
+            .field("ibus_pms_sct1_attr", &self.ibus_pms_sct1_attr().bits())
+            .field("ibus_pms_sct2_attr", &self.ibus_pms_sct2_attr().bits())
             .finish()
     }
 }

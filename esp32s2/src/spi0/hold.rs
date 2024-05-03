@@ -53,17 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOLD")
-            .field(
-                "int_hold_ena",
-                &format_args!("{}", self.int_hold_ena().bits()),
-            )
-            .field("val", &format_args!("{}", self.val().bit()))
-            .field("out_en", &format_args!("{}", self.out_en().bit()))
-            .field("out_time", &format_args!("{}", self.out_time().bits()))
-            .field(
-                "dma_seg_trans_done",
-                &format_args!("{}", self.dma_seg_trans_done().bit()),
-            )
+            .field("int_hold_ena", &self.int_hold_ena().bits())
+            .field("val", &self.val().bit())
+            .field("out_en", &self.out_en().bit())
+            .field("out_time", &self.out_time().bits())
+            .field("dma_seg_trans_done", &self.dma_seg_trans_done().bit())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("H264_DMA2D_OUT_CH0_INT_MAP")
             .field(
                 "core0_h264_dma2d_out_ch0_int_map",
-                &format_args!("{}", self.core0_h264_dma2d_out_ch0_int_map().bits()),
+                &self.core0_h264_dma2d_out_ch0_int_map().bits(),
             )
             .finish()
     }

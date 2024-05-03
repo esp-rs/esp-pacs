@@ -71,34 +71,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "lp_addrhole_int_ena",
-                &format_args!("{}", self.lp_addrhole_int_ena().bit()),
-            )
+            .field("lp_addrhole_int_ena", &self.lp_addrhole_int_ena().bit())
             .field(
                 "idbus_addrhole_int_ena",
-                &format_args!("{}", self.idbus_addrhole_int_ena().bit()),
+                &self.idbus_addrhole_int_ena().bit(),
             )
             .field(
                 "lp_core_ahb_timeout_int_ena",
-                &format_args!("{}", self.lp_core_ahb_timeout_int_ena().bit()),
+                &self.lp_core_ahb_timeout_int_ena().bit(),
             )
             .field(
                 "lp_core_ibus_timeout_int_ena",
-                &format_args!("{}", self.lp_core_ibus_timeout_int_ena().bit()),
+                &self.lp_core_ibus_timeout_int_ena().bit(),
             )
             .field(
                 "lp_core_dbus_timeout_int_ena",
-                &format_args!("{}", self.lp_core_dbus_timeout_int_ena().bit()),
+                &self.lp_core_dbus_timeout_int_ena().bit(),
             )
-            .field(
-                "etm_task_ulp_int_ena",
-                &format_args!("{}", self.etm_task_ulp_int_ena().bit()),
-            )
-            .field(
-                "slow_clk_tick_int_ena",
-                &format_args!("{}", self.slow_clk_tick_int_ena().bit()),
-            )
+            .field("etm_task_ulp_int_ena", &self.etm_task_ulp_int_ena().bit())
+            .field("slow_clk_tick_int_ena", &self.slow_clk_tick_int_ena().bit())
             .finish()
     }
 }

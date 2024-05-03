@@ -35,17 +35,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_FILTER2")
-            .field(
-                "touch_outen",
-                &format_args!("{}", self.touch_outen().bits()),
-            )
+            .field("touch_outen", &self.touch_outen().bits())
             .field(
                 "touch_bypass_noise_thres",
-                &format_args!("{}", self.touch_bypass_noise_thres().bit()),
+                &self.touch_bypass_noise_thres().bit(),
             )
             .field(
                 "touch_bypass_neg_noise_thres",
-                &format_args!("{}", self.touch_bypass_neg_noise_thres().bit()),
+                &self.touch_bypass_neg_noise_thres().bit(),
             )
             .finish()
     }

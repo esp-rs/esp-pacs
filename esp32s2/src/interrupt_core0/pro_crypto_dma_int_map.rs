@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CRYPTO_DMA_INT_MAP")
             .field(
                 "pro_crypto_dma_int_map",
-                &format_args!("{}", self.pro_crypto_dma_int_map().bits()),
+                &self.pro_crypto_dma_int_map().bits(),
             )
             .finish()
     }

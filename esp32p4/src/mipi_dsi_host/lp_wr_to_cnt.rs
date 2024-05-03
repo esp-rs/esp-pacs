@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_WR_TO_CNT")
-            .field(
-                "lp_wr_to_cnt",
-                &format_args!("{}", self.lp_wr_to_cnt().bits()),
-            )
+            .field("lp_wr_to_cnt", &self.lp_wr_to_cnt().bits())
             .finish()
     }
 }

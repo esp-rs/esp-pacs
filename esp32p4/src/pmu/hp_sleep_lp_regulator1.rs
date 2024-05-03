@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_LP_REGULATOR1")
             .field(
                 "hp_sleep_lp_regulator_drv_b",
-                &format_args!("{}", self.hp_sleep_lp_regulator_drv_b().bits()),
+                &self.hp_sleep_lp_regulator_drv_b().bits(),
             )
             .finish()
     }

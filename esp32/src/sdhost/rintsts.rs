@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RINTSTS")
-            .field(
-                "int_status_raw",
-                &format_args!("{}", self.int_status_raw().bits()),
-            )
-            .field(
-                "sdio_interrupt_raw",
-                &format_args!("{}", self.sdio_interrupt_raw().bits()),
-            )
+            .field("int_status_raw", &self.int_status_raw().bits())
+            .field("sdio_interrupt_raw", &self.sdio_interrupt_raw().bits())
             .finish()
     }
 }

@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_STATUS")
-            .field(
-                "adc2_filter_data",
-                &format_args!("{}", self.adc2_filter_data().bits()),
-            )
-            .field(
-                "adc1_filter_data",
-                &format_args!("{}", self.adc1_filter_data().bits()),
-            )
+            .field("adc2_filter_data", &self.adc2_filter_data().bits())
+            .field("adc1_filter_data", &self.adc1_filter_data().bits())
             .finish()
     }
 }

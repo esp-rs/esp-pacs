@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTMEM_REJECT_INT_ST")
-            .field(
-                "extmem_reject_int_st",
-                &format_args!("{}", self.extmem_reject_int_st().bit()),
-            )
+            .field("extmem_reject_int_st", &self.extmem_reject_int_st().bit())
             .finish()
     }
 }

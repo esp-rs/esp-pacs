@@ -49,26 +49,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_BYPASS_CACHE_CONF")
-            .field(
-                "bypass_l1_icache0_en",
-                &format_args!("{}", self.bypass_l1_icache0_en().bit()),
-            )
-            .field(
-                "bypass_l1_icache1_en",
-                &format_args!("{}", self.bypass_l1_icache1_en().bit()),
-            )
-            .field(
-                "bypass_l1_icache2_en",
-                &format_args!("{}", self.bypass_l1_icache2_en().bit()),
-            )
-            .field(
-                "bypass_l1_icache3_en",
-                &format_args!("{}", self.bypass_l1_icache3_en().bit()),
-            )
-            .field(
-                "bypass_l1_dcache_en",
-                &format_args!("{}", self.bypass_l1_dcache_en().bit()),
-            )
+            .field("bypass_l1_icache0_en", &self.bypass_l1_icache0_en().bit())
+            .field("bypass_l1_icache1_en", &self.bypass_l1_icache1_en().bit())
+            .field("bypass_l1_icache2_en", &self.bypass_l1_icache2_en().bit())
+            .field("bypass_l1_icache3_en", &self.bypass_l1_icache3_en().bit())
+            .field("bypass_l1_dcache_en", &self.bypass_l1_dcache_en().bit())
             .finish()
     }
 }

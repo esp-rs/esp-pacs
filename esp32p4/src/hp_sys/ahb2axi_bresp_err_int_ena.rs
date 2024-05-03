@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHB2AXI_BRESP_ERR_INT_ENA")
             .field(
                 "cpu_icm_h2x_bresp_err_int_ena",
-                &format_args!("{}", self.cpu_icm_h2x_bresp_err_int_ena().bit()),
+                &self.cpu_icm_h2x_bresp_err_int_ena().bit(),
             )
             .finish()
     }

@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_TX_STATUS")
-            .field(
-                "apb_tx_waddr",
-                &format_args!("{}", self.apb_tx_waddr().bits()),
-            )
-            .field("tx_raddr", &format_args!("{}", self.tx_raddr().bits()))
+            .field("apb_tx_waddr", &self.apb_tx_waddr().bits())
+            .field("tx_raddr", &self.tx_raddr().bits())
             .finish()
     }
 }

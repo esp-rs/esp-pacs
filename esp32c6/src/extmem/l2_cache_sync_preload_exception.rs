@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_EXCEPTION")
             .field(
                 "l2_cache_pld_err_code",
-                &format_args!("{}", self.l2_cache_pld_err_code().bits()),
+                &self.l2_cache_pld_err_code().bits(),
             )
             .finish()
     }

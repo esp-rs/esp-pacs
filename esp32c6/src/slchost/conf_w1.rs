@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF_W1")
-            .field(
-                "slchost_conf4",
-                &format_args!("{}", self.slchost_conf4().bits()),
-            )
-            .field(
-                "slchost_conf5",
-                &format_args!("{}", self.slchost_conf5().bits()),
-            )
-            .field(
-                "slchost_conf6",
-                &format_args!("{}", self.slchost_conf6().bits()),
-            )
-            .field(
-                "slchost_conf7",
-                &format_args!("{}", self.slchost_conf7().bits()),
-            )
+            .field("slchost_conf4", &self.slchost_conf4().bits())
+            .field("slchost_conf5", &self.slchost_conf5().bits())
+            .field("slchost_conf6", &self.slchost_conf6().bits())
+            .field("slchost_conf7", &self.slchost_conf7().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_HSCALE_B")
-            .field(
-                "af_rpoint_b",
-                &format_args!("{}", self.af_rpoint_b().bits()),
-            )
-            .field(
-                "af_lpoint_b",
-                &format_args!("{}", self.af_lpoint_b().bits()),
-            )
+            .field("af_rpoint_b", &self.af_rpoint_b().bits())
+            .field("af_lpoint_b", &self.af_lpoint_b().bits())
             .finish()
     }
 }

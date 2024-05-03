@@ -75,34 +75,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_EN")
-            .field(
-                "lp_ble_timer_reset_en",
-                &format_args!("{}", self.lp_ble_timer_reset_en().bit()),
-            )
-            .field(
-                "otp_dbg_reset_en",
-                &format_args!("{}", self.otp_dbg_reset_en().bit()),
-            )
-            .field(
-                "lp_uart_reset_en",
-                &format_args!("{}", self.lp_uart_reset_en().bit()),
-            )
-            .field(
-                "lp_io_reset_en",
-                &format_args!("{}", self.lp_io_reset_en().bit()),
-            )
-            .field(
-                "lp_ext_i2c_reset_en",
-                &format_args!("{}", self.lp_ext_i2c_reset_en().bit()),
-            )
-            .field(
-                "lp_ana_i2c_reset_en",
-                &format_args!("{}", self.lp_ana_i2c_reset_en().bit()),
-            )
-            .field(
-                "efuse_reset_en",
-                &format_args!("{}", self.efuse_reset_en().bit()),
-            )
+            .field("lp_ble_timer_reset_en", &self.lp_ble_timer_reset_en().bit())
+            .field("otp_dbg_reset_en", &self.otp_dbg_reset_en().bit())
+            .field("lp_uart_reset_en", &self.lp_uart_reset_en().bit())
+            .field("lp_io_reset_en", &self.lp_io_reset_en().bit())
+            .field("lp_ext_i2c_reset_en", &self.lp_ext_i2c_reset_en().bit())
+            .field("lp_ana_i2c_reset_en", &self.lp_ana_i2c_reset_en().bit())
+            .field("efuse_reset_en", &self.efuse_reset_en().bit())
             .finish()
     }
 }

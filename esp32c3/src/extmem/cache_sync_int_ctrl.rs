@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SYNC_INT_CTRL")
-            .field("st", &format_args!("{}", self.st().bit()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
+            .field("st", &self.st().bit())
+            .field("ena", &self.ena().bit())
             .finish()
     }
 }

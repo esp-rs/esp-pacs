@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE0_DBUS_REJECT_VADDR")
-            .field(
-                "core0_dbus_vaddr",
-                &format_args!("{}", self.core0_dbus_vaddr().bits()),
-            )
+            .field("core0_dbus_vaddr", &self.core0_dbus_vaddr().bits())
             .finish()
     }
 }

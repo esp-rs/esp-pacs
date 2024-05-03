@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_RESULT")
-            .field("vad_flag", &format_args!("{}", self.vad_flag().bit()))
-            .field(
-                "energy_enough",
-                &format_args!("{}", self.energy_enough().bit()),
-            )
+            .field("vad_flag", &self.vad_flag().bit())
+            .field("energy_enough", &self.energy_enough().bit())
             .finish()
     }
 }

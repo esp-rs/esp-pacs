@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEDC_INT_MAP")
-            .field(
-                "ledc_int_map",
-                &format_args!("{}", self.ledc_int_map().bits()),
-            )
+            .field("ledc_int_map", &self.ledc_int_map().bits())
             .finish()
     }
 }

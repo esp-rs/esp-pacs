@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_DATAARRAY_CONNECT_0")
             .field(
                 "cache_dataarray_connect_lock",
-                &format_args!("{}", self.cache_dataarray_connect_lock().bit()),
+                &self.cache_dataarray_connect_lock().bit(),
             )
             .finish()
     }

@@ -46,19 +46,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("ROOT_CLK_CTRL2")
             .field(
                 "sys_clk_div_numerator",
-                &format_args!("{}", self.sys_clk_div_numerator().bits()),
+                &self.sys_clk_div_numerator().bits(),
             )
             .field(
                 "sys_clk_div_denominator",
-                &format_args!("{}", self.sys_clk_div_denominator().bits()),
+                &self.sys_clk_div_denominator().bits(),
             )
-            .field(
-                "apb_clk_div_num",
-                &format_args!("{}", self.apb_clk_div_num().bits()),
-            )
+            .field("apb_clk_div_num", &self.apb_clk_div_num().bits())
             .field(
                 "apb_clk_div_numerator",
-                &format_args!("{}", self.apb_clk_div_numerator().bits()),
+                &self.apb_clk_div_numerator().bits(),
             )
             .finish()
     }

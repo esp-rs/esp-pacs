@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_LDO_P1_0P2A_ANA")
-            .field(
-                "ana_0p2a_mul_1",
-                &format_args!("{}", self.ana_0p2a_mul_1().bits()),
-            )
-            .field(
-                "ana_0p2a_en_vdet_1",
-                &format_args!("{}", self.ana_0p2a_en_vdet_1().bit()),
-            )
-            .field(
-                "ana_0p2a_en_cur_lim_1",
-                &format_args!("{}", self.ana_0p2a_en_cur_lim_1().bit()),
-            )
-            .field(
-                "ana_0p2a_dref_1",
-                &format_args!("{}", self.ana_0p2a_dref_1().bits()),
-            )
+            .field("ana_0p2a_mul_1", &self.ana_0p2a_mul_1().bits())
+            .field("ana_0p2a_en_vdet_1", &self.ana_0p2a_en_vdet_1().bit())
+            .field("ana_0p2a_en_cur_lim_1", &self.ana_0p2a_en_cur_lim_1().bit())
+            .field("ana_0p2a_dref_1", &self.ana_0p2a_dref_1().bits())
             .finish()
     }
 }

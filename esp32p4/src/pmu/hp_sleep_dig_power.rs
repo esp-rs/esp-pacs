@@ -55,24 +55,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_DIG_POWER")
             .field(
                 "hp_sleep_dcdc_switch_pd_en",
-                &format_args!("{}", self.hp_sleep_dcdc_switch_pd_en().bit()),
+                &self.hp_sleep_dcdc_switch_pd_en().bit(),
             )
-            .field(
-                "hp_sleep_hp_mem_dslp",
-                &format_args!("{}", self.hp_sleep_hp_mem_dslp().bit()),
-            )
+            .field("hp_sleep_hp_mem_dslp", &self.hp_sleep_hp_mem_dslp().bit())
             .field(
                 "hp_sleep_pd_hp_mem_pd_en",
-                &format_args!("{}", self.hp_sleep_pd_hp_mem_pd_en().bit()),
+                &self.hp_sleep_pd_hp_mem_pd_en().bit(),
             )
             .field(
                 "hp_sleep_pd_cnnt_pd_en",
-                &format_args!("{}", self.hp_sleep_pd_cnnt_pd_en().bit()),
+                &self.hp_sleep_pd_cnnt_pd_en().bit(),
             )
-            .field(
-                "hp_sleep_pd_top_pd_en",
-                &format_args!("{}", self.hp_sleep_pd_top_pd_en().bit()),
-            )
+            .field("hp_sleep_pd_top_pd_en", &self.hp_sleep_pd_top_pd_en().bit())
             .finish()
     }
 }

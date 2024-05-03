@@ -125,71 +125,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA1")
-            .field(
-                "vdd_spi_drefm",
-                &format_args!("{}", self.vdd_spi_drefm().bits()),
-            )
-            .field(
-                "vdd_spi_drefl",
-                &format_args!("{}", self.vdd_spi_drefl().bits()),
-            )
-            .field("vdd_spi_xpd", &format_args!("{}", self.vdd_spi_xpd().bit()))
-            .field(
-                "vdd_spi_tieh",
-                &format_args!("{}", self.vdd_spi_tieh().bit()),
-            )
-            .field(
-                "vdd_spi_force",
-                &format_args!("{}", self.vdd_spi_force().bit()),
-            )
-            .field(
-                "vdd_spi_en_init",
-                &format_args!("{}", self.vdd_spi_en_init().bit()),
-            )
-            .field(
-                "vdd_spi_encurlim",
-                &format_args!("{}", self.vdd_spi_encurlim().bit()),
-            )
-            .field(
-                "vdd_spi_dcurlim",
-                &format_args!("{}", self.vdd_spi_dcurlim().bits()),
-            )
-            .field(
-                "vdd_spi_init",
-                &format_args!("{}", self.vdd_spi_init().bits()),
-            )
-            .field(
-                "vdd_spi_dcap",
-                &format_args!("{}", self.vdd_spi_dcap().bits()),
-            )
-            .field(
-                "wdt_delay_sel",
-                &format_args!("{}", self.wdt_delay_sel().bits()),
-            )
-            .field(
-                "spi_boot_crypt_cnt",
-                &format_args!("{}", self.spi_boot_crypt_cnt().bits()),
-            )
+            .field("vdd_spi_drefm", &self.vdd_spi_drefm().bits())
+            .field("vdd_spi_drefl", &self.vdd_spi_drefl().bits())
+            .field("vdd_spi_xpd", &self.vdd_spi_xpd().bit())
+            .field("vdd_spi_tieh", &self.vdd_spi_tieh().bit())
+            .field("vdd_spi_force", &self.vdd_spi_force().bit())
+            .field("vdd_spi_en_init", &self.vdd_spi_en_init().bit())
+            .field("vdd_spi_encurlim", &self.vdd_spi_encurlim().bit())
+            .field("vdd_spi_dcurlim", &self.vdd_spi_dcurlim().bits())
+            .field("vdd_spi_init", &self.vdd_spi_init().bits())
+            .field("vdd_spi_dcap", &self.vdd_spi_dcap().bits())
+            .field("wdt_delay_sel", &self.wdt_delay_sel().bits())
+            .field("spi_boot_crypt_cnt", &self.spi_boot_crypt_cnt().bits())
             .field(
                 "secure_boot_key_revoke0",
-                &format_args!("{}", self.secure_boot_key_revoke0().bit()),
+                &self.secure_boot_key_revoke0().bit(),
             )
             .field(
                 "secure_boot_key_revoke1",
-                &format_args!("{}", self.secure_boot_key_revoke1().bit()),
+                &self.secure_boot_key_revoke1().bit(),
             )
             .field(
                 "secure_boot_key_revoke2",
-                &format_args!("{}", self.secure_boot_key_revoke2().bit()),
+                &self.secure_boot_key_revoke2().bit(),
             )
-            .field(
-                "key_purpose_0",
-                &format_args!("{}", self.key_purpose_0().bits()),
-            )
-            .field(
-                "key_purpose_1",
-                &format_args!("{}", self.key_purpose_1().bits()),
-            )
+            .field("key_purpose_0", &self.key_purpose_0().bits())
+            .field("key_purpose_1", &self.key_purpose_1().bits())
             .finish()
     }
 }

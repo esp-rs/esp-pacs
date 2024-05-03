@@ -40,22 +40,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_WAITI_CONF")
-            .field(
-                "cpuperiod_sel",
-                &format_args!("{}", self.cpuperiod_sel().bits()),
-            )
-            .field(
-                "pll_freq_sel",
-                &format_args!("{}", self.pll_freq_sel().bit()),
-            )
+            .field("cpuperiod_sel", &self.cpuperiod_sel().bits())
+            .field("pll_freq_sel", &self.pll_freq_sel().bit())
             .field(
                 "cpu_wait_mode_force_on",
-                &format_args!("{}", self.cpu_wait_mode_force_on().bit()),
+                &self.cpu_wait_mode_force_on().bit(),
             )
-            .field(
-                "cpu_waiti_delay_num",
-                &format_args!("{}", self.cpu_waiti_delay_num().bits()),
-            )
+            .field("cpu_waiti_delay_num", &self.cpu_waiti_delay_num().bits())
             .finish()
     }
 }

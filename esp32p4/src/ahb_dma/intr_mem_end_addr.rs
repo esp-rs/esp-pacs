@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTR_MEM_END_ADDR")
             .field(
                 "access_intr_mem_end_addr",
-                &format_args!("{}", self.access_intr_mem_end_addr().bits()),
+                &self.access_intr_mem_end_addr().bits(),
             )
             .finish()
     }

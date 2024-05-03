@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_POWER_UP")
-            .field(
-                "rom_power_up",
-                &format_args!("{}", self.rom_power_up().bits()),
-            )
-            .field(
-                "sram_power_up",
-                &format_args!("{}", self.sram_power_up().bits()),
-            )
+            .field("rom_power_up", &self.rom_power_up().bits())
+            .field("sram_power_up", &self.sram_power_up().bits())
             .finish()
     }
 }

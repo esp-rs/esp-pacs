@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_ENA")
             .field(
                 "reg_l2_mem_ecc_err_int_ena",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_int_ena().bit()),
+                &self.reg_l2_mem_ecc_err_int_ena().bit(),
             )
             .field(
                 "reg_l2_mem_exceed_addr_int_ena",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_ena().bit()),
+                &self.reg_l2_mem_exceed_addr_int_ena().bit(),
             )
             .field(
                 "reg_l2_mem_err_resp_int_ena",
-                &format_args!("{}", self.reg_l2_mem_err_resp_int_ena().bit()),
+                &self.reg_l2_mem_err_resp_int_ena().bit(),
             )
             .finish()
     }

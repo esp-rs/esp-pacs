@@ -131,80 +131,47 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_REGION_PMS_CONSTRAIN_1")
             .field(
                 "core_1_region_pms_constrain_world_0_area_0",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_0().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_0().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_1",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_1().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_1().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_2",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_2().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_2().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_3",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_3().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_3().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_4",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_4().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_4().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_5",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_5().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_5().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_6",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_6().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_6().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_7",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_7().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_7().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_8",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_8().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_8().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_9",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_9().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_9().bits(),
             )
             .field(
                 "core_1_region_pms_constrain_world_0_area_10",
-                &format_args!(
-                    "{}",
-                    self.core_1_region_pms_constrain_world_0_area_10().bits()
-                ),
+                &self.core_1_region_pms_constrain_world_0_area_10().bits(),
             )
             .finish()
     }

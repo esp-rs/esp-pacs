@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_CARRIER_RM")
-            .field(
-                "carrier_low_thres",
-                &format_args!("{}", self.carrier_low_thres().bits()),
-            )
-            .field(
-                "carrier_high_thres",
-                &format_args!("{}", self.carrier_high_thres().bits()),
-            )
+            .field("carrier_low_thres", &self.carrier_low_thres().bits())
+            .field("carrier_high_thres", &self.carrier_high_thres().bits())
             .finish()
     }
 }

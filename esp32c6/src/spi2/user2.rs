@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER2")
-            .field(
-                "usr_command_value",
-                &format_args!("{}", self.usr_command_value().bits()),
-            )
-            .field(
-                "mst_rempty_err_end_en",
-                &format_args!("{}", self.mst_rempty_err_end_en().bit()),
-            )
-            .field(
-                "usr_command_bitlen",
-                &format_args!("{}", self.usr_command_bitlen().bits()),
-            )
+            .field("usr_command_value", &self.usr_command_value().bits())
+            .field("mst_rempty_err_end_en", &self.mst_rempty_err_end_en().bit())
+            .field("usr_command_bitlen", &self.usr_command_bitlen().bits())
             .finish()
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_L2_RAM_ECC")
             .field(
                 "reg_l2_ram_unit0_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit0_ecc_en().bit()),
+                &self.reg_l2_ram_unit0_ecc_en().bit(),
             )
             .field(
                 "reg_l2_ram_unit1_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit1_ecc_en().bit()),
+                &self.reg_l2_ram_unit1_ecc_en().bit(),
             )
             .field(
                 "reg_l2_ram_unit2_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit2_ecc_en().bit()),
+                &self.reg_l2_ram_unit2_ecc_en().bit(),
             )
             .field(
                 "reg_l2_ram_unit3_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit3_ecc_en().bit()),
+                &self.reg_l2_ram_unit3_ecc_en().bit(),
             )
             .field(
                 "reg_l2_ram_unit4_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit4_ecc_en().bit()),
+                &self.reg_l2_ram_unit4_ecc_en().bit(),
             )
             .field(
                 "reg_l2_ram_unit5_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit5_ecc_en().bit()),
+                &self.reg_l2_ram_unit5_ecc_en().bit(),
             )
             .finish()
     }

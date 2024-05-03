@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DVBUSPULSE")
-            .field("dvbuspulse", &format_args!("{}", self.dvbuspulse().bits()))
+            .field("dvbuspulse", &self.dvbuspulse().bits())
             .finish()
     }
 }

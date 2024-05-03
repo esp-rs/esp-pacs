@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CPU_PWR2")
-            .field(
-                "lp_cpu_wakeup_en",
-                &format_args!("{}", self.lp_cpu_wakeup_en().bits()),
-            )
+            .field("lp_cpu_wakeup_en", &self.lp_cpu_wakeup_en().bits())
             .finish()
     }
 }

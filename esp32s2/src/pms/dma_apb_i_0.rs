@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_APB_I_0")
-            .field(
-                "dma_apb_i_lock",
-                &format_args!("{}", self.dma_apb_i_lock().bit()),
-            )
+            .field("dma_apb_i_lock", &self.dma_apb_i_lock().bit())
             .finish()
     }
 }

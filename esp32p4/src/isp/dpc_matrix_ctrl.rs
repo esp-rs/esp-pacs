@@ -46,20 +46,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("DPC_MATRIX_CTRL")
             .field(
                 "dpc_tail_pixen_pulse_tl",
-                &format_args!("{}", self.dpc_tail_pixen_pulse_tl().bits()),
+                &self.dpc_tail_pixen_pulse_tl().bits(),
             )
             .field(
                 "dpc_tail_pixen_pulse_th",
-                &format_args!("{}", self.dpc_tail_pixen_pulse_th().bits()),
+                &self.dpc_tail_pixen_pulse_th().bits(),
             )
-            .field(
-                "dpc_padding_data",
-                &format_args!("{}", self.dpc_padding_data().bits()),
-            )
-            .field(
-                "dpc_padding_mode",
-                &format_args!("{}", self.dpc_padding_mode().bit()),
-            )
+            .field("dpc_padding_data", &self.dpc_padding_data().bits())
+            .field("dpc_padding_mode", &self.dpc_padding_mode().bit())
             .finish()
     }
 }

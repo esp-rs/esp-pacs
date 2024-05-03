@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CRC_WIDTH")
-            .field(
-                "tx_crc_width",
-                &format_args!("{}", self.tx_crc_width().bits()),
-            )
-            .field(
-                "tx_crc_lautch_flga",
-                &format_args!("{}", self.tx_crc_lautch_flga().bit()),
-            )
+            .field("tx_crc_width", &self.tx_crc_width().bits())
+            .field("tx_crc_lautch_flga", &self.tx_crc_lautch_flga().bit())
             .finish()
     }
 }

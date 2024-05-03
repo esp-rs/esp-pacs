@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCO_CONF0")
-            .field(
-                "sco_with_i2s_en",
-                &format_args!("{}", self.sco_with_i2s_en().bit()),
-            )
-            .field(
-                "sco_no_i2s_en",
-                &format_args!("{}", self.sco_no_i2s_en().bit()),
-            )
-            .field(
-                "cvsd_enc_start",
-                &format_args!("{}", self.cvsd_enc_start().bit()),
-            )
-            .field(
-                "cvsd_enc_reset",
-                &format_args!("{}", self.cvsd_enc_reset().bit()),
-            )
+            .field("sco_with_i2s_en", &self.sco_with_i2s_en().bit())
+            .field("sco_no_i2s_en", &self.sco_no_i2s_en().bit())
+            .field("cvsd_enc_start", &self.cvsd_enc_start().bit())
+            .field("cvsd_enc_reset", &self.cvsd_enc_reset().bit())
             .finish()
     }
 }

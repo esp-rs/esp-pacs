@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VERID_FILEDS")
-            .field(
-                "icm_reg_verid",
-                &format_args!("{}", self.icm_reg_verid().bits()),
-            )
+            .field("icm_reg_verid", &self.icm_reg_verid().bits())
             .finish()
     }
 }

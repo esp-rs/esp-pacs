@@ -21,7 +21,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP")
             .field(
                 "dma_apbperi_pms_monitor_violate_intr_map",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_intr_map().bits()),
+                &self.dma_apbperi_pms_monitor_violate_intr_map().bits(),
             )
             .finish()
     }

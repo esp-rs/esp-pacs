@@ -57,31 +57,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE1_AUTOLOAD_CTRL")
             .field(
                 "l1_icache1_autoload_ena",
-                &format_args!("{}", self.l1_icache1_autoload_ena().bit()),
+                &self.l1_icache1_autoload_ena().bit(),
             )
             .field(
                 "l1_icache1_autoload_done",
-                &format_args!("{}", self.l1_icache1_autoload_done().bit()),
+                &self.l1_icache1_autoload_done().bit(),
             )
             .field(
                 "l1_icache1_autoload_order",
-                &format_args!("{}", self.l1_icache1_autoload_order().bit()),
+                &self.l1_icache1_autoload_order().bit(),
             )
             .field(
                 "l1_icache1_autoload_trigger_mode",
-                &format_args!("{}", self.l1_icache1_autoload_trigger_mode().bits()),
+                &self.l1_icache1_autoload_trigger_mode().bits(),
             )
             .field(
                 "l1_icache1_autoload_sct0_ena",
-                &format_args!("{}", self.l1_icache1_autoload_sct0_ena().bit()),
+                &self.l1_icache1_autoload_sct0_ena().bit(),
             )
             .field(
                 "l1_icache1_autoload_sct1_ena",
-                &format_args!("{}", self.l1_icache1_autoload_sct1_ena().bit()),
+                &self.l1_icache1_autoload_sct1_ena().bit(),
             )
             .field(
                 "l1_icache1_autoload_rgid",
-                &format_args!("{}", self.l1_icache1_autoload_rgid().bits()),
+                &self.l1_icache1_autoload_rgid().bits(),
             )
             .finish()
     }

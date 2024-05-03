@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TEST")
-            .field("enable", &format_args!("{}", self.enable().bit()))
-            .field("usb_oe", &format_args!("{}", self.usb_oe().bit()))
-            .field("tx_dp", &format_args!("{}", self.tx_dp().bit()))
-            .field("tx_dm", &format_args!("{}", self.tx_dm().bit()))
+            .field("enable", &self.enable().bit())
+            .field("usb_oe", &self.usb_oe().bit())
+            .field("tx_dp", &self.tx_dp().bit())
+            .field("tx_dm", &self.tx_dm().bit())
             .finish()
     }
 }

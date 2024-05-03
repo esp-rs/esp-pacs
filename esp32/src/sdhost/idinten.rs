@@ -71,13 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDINTEN")
-            .field("ti", &format_args!("{}", self.ti().bit()))
-            .field("ri", &format_args!("{}", self.ri().bit()))
-            .field("fbe", &format_args!("{}", self.fbe().bit()))
-            .field("du", &format_args!("{}", self.du().bit()))
-            .field("ces", &format_args!("{}", self.ces().bit()))
-            .field("ni", &format_args!("{}", self.ni().bit()))
-            .field("ai", &format_args!("{}", self.ai().bit()))
+            .field("ti", &self.ti().bit())
+            .field("ri", &self.ri().bit())
+            .field("fbe", &self.fbe().bit())
+            .field("du", &self.du().bit())
+            .field("ces", &self.ces().bit())
+            .field("ni", &self.ni().bit())
+            .field("ai", &self.ai().bit())
             .finish()
     }
 }

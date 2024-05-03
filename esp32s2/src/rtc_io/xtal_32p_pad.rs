@@ -89,24 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTAL_32P_PAD")
-            .field("x32p_fun_ie", &format_args!("{}", self.x32p_fun_ie().bit()))
-            .field("x32p_slp_oe", &format_args!("{}", self.x32p_slp_oe().bit()))
-            .field("x32p_slp_ie", &format_args!("{}", self.x32p_slp_ie().bit()))
-            .field(
-                "x32p_slp_sel",
-                &format_args!("{}", self.x32p_slp_sel().bit()),
-            )
-            .field(
-                "x32p_fun_sel",
-                &format_args!("{}", self.x32p_fun_sel().bits()),
-            )
-            .field(
-                "x32p_mux_sel",
-                &format_args!("{}", self.x32p_mux_sel().bit()),
-            )
-            .field("x32p_rue", &format_args!("{}", self.x32p_rue().bit()))
-            .field("x32p_rde", &format_args!("{}", self.x32p_rde().bit()))
-            .field("x32p_drv", &format_args!("{}", self.x32p_drv().bits()))
+            .field("x32p_fun_ie", &self.x32p_fun_ie().bit())
+            .field("x32p_slp_oe", &self.x32p_slp_oe().bit())
+            .field("x32p_slp_ie", &self.x32p_slp_ie().bit())
+            .field("x32p_slp_sel", &self.x32p_slp_sel().bit())
+            .field("x32p_fun_sel", &self.x32p_fun_sel().bits())
+            .field("x32p_mux_sel", &self.x32p_mux_sel().bit())
+            .field("x32p_rue", &self.x32p_rue().bit())
+            .field("x32p_rde", &self.x32p_rde().bit())
+            .field("x32p_drv", &self.x32p_drv().bits())
             .finish()
     }
 }

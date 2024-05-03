@@ -49,26 +49,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_SYNC_RST_CTRL")
-            .field(
-                "l1_icache0_sync_rst",
-                &format_args!("{}", self.l1_icache0_sync_rst().bit()),
-            )
-            .field(
-                "l1_icache1_sync_rst",
-                &format_args!("{}", self.l1_icache1_sync_rst().bit()),
-            )
-            .field(
-                "l1_icache2_sync_rst",
-                &format_args!("{}", self.l1_icache2_sync_rst().bit()),
-            )
-            .field(
-                "l1_icache3_sync_rst",
-                &format_args!("{}", self.l1_icache3_sync_rst().bit()),
-            )
-            .field(
-                "l1_dcache_sync_rst",
-                &format_args!("{}", self.l1_dcache_sync_rst().bit()),
-            )
+            .field("l1_icache0_sync_rst", &self.l1_icache0_sync_rst().bit())
+            .field("l1_icache1_sync_rst", &self.l1_icache1_sync_rst().bit())
+            .field("l1_icache2_sync_rst", &self.l1_icache2_sync_rst().bit())
+            .field("l1_icache3_sync_rst", &self.l1_icache3_sync_rst().bit())
+            .field("l1_dcache_sync_rst", &self.l1_dcache_sync_rst().bit())
             .finish()
     }
 }

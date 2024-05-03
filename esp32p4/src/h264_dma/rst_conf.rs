@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RST_CONF")
-            .field(
-                "inter_axim_rd_rst",
-                &format_args!("{}", self.inter_axim_rd_rst().bit()),
-            )
-            .field(
-                "inter_axim_wr_rst",
-                &format_args!("{}", self.inter_axim_wr_rst().bit()),
-            )
-            .field(
-                "exter_axim_rd_rst",
-                &format_args!("{}", self.exter_axim_rd_rst().bit()),
-            )
-            .field(
-                "exter_axim_wr_rst",
-                &format_args!("{}", self.exter_axim_wr_rst().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("inter_axim_rd_rst", &self.inter_axim_rd_rst().bit())
+            .field("inter_axim_wr_rst", &self.inter_axim_wr_rst().bit())
+            .field("exter_axim_rd_rst", &self.exter_axim_rd_rst().bit())
+            .field("exter_axim_wr_rst", &self.exter_axim_wr_rst().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

@@ -69,42 +69,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_STATUS")
-            .field(
-                "outfifo_full_l2",
-                &format_args!("{}", self.outfifo_full_l2().bit()),
-            )
-            .field(
-                "outfifo_empty_l2",
-                &format_args!("{}", self.outfifo_empty_l2().bit()),
-            )
-            .field(
-                "outfifo_cnt_l2",
-                &format_args!("{}", self.outfifo_cnt_l2().bits()),
-            )
-            .field(
-                "outfifo_full_l1",
-                &format_args!("{}", self.outfifo_full_l1().bit()),
-            )
-            .field(
-                "outfifo_empty_l1",
-                &format_args!("{}", self.outfifo_empty_l1().bit()),
-            )
-            .field(
-                "outfifo_cnt_l1",
-                &format_args!("{}", self.outfifo_cnt_l1().bits()),
-            )
-            .field(
-                "outfifo_full_l3",
-                &format_args!("{}", self.outfifo_full_l3().bit()),
-            )
-            .field(
-                "outfifo_empty_l3",
-                &format_args!("{}", self.outfifo_empty_l3().bit()),
-            )
-            .field(
-                "outfifo_cnt_l3",
-                &format_args!("{}", self.outfifo_cnt_l3().bits()),
-            )
+            .field("outfifo_full_l2", &self.outfifo_full_l2().bit())
+            .field("outfifo_empty_l2", &self.outfifo_empty_l2().bit())
+            .field("outfifo_cnt_l2", &self.outfifo_cnt_l2().bits())
+            .field("outfifo_full_l1", &self.outfifo_full_l1().bit())
+            .field("outfifo_empty_l1", &self.outfifo_empty_l1().bit())
+            .field("outfifo_cnt_l1", &self.outfifo_cnt_l1().bits())
+            .field("outfifo_full_l3", &self.outfifo_full_l3().bit())
+            .field("outfifo_empty_l3", &self.outfifo_empty_l3().bit())
+            .field("outfifo_cnt_l3", &self.outfifo_cnt_l3().bits())
             .finish()
     }
 }

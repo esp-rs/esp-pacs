@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("CRYPTO_CTRL")
             .field(
                 "reg_enable_spi_manual_encrypt",
-                &format_args!("{}", self.reg_enable_spi_manual_encrypt().bit()),
+                &self.reg_enable_spi_manual_encrypt().bit(),
             )
             .field(
                 "reg_enable_download_db_encrypt",
-                &format_args!("{}", self.reg_enable_download_db_encrypt().bit()),
+                &self.reg_enable_download_db_encrypt().bit(),
             )
             .field(
                 "reg_enable_download_g0cb_decrypt",
-                &format_args!("{}", self.reg_enable_download_g0cb_decrypt().bit()),
+                &self.reg_enable_download_g0cb_decrypt().bit(),
             )
             .field(
                 "reg_enable_download_manual_encrypt",
-                &format_args!("{}", self.reg_enable_download_manual_encrypt().bit()),
+                &self.reg_enable_download_manual_encrypt().bit(),
             )
             .finish()
     }

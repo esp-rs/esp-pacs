@@ -31,12 +31,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHIP_RST")
-            .field("rts", &format_args!("{}", self.rts().bit()))
-            .field("dtr", &format_args!("{}", self.dtr().bit()))
-            .field(
-                "usb_uart_chip_rst_dis",
-                &format_args!("{}", self.usb_uart_chip_rst_dis().bit()),
-            )
+            .field("rts", &self.rts().bit())
+            .field("dtr", &self.dtr().bit())
+            .field("usb_uart_chip_rst_dis", &self.usb_uart_chip_rst_dis().bit())
             .finish()
     }
 }

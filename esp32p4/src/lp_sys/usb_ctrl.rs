@@ -37,18 +37,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USB_CTRL")
-            .field(
-                "sw_hw_usb_phy_sel",
-                &format_args!("{}", self.sw_hw_usb_phy_sel().bit()),
-            )
-            .field(
-                "sw_usb_phy_sel",
-                &format_args!("{}", self.sw_usb_phy_sel().bit()),
-            )
-            .field(
-                "usbotg20_in_suspend",
-                &format_args!("{}", self.usbotg20_in_suspend().bit()),
-            )
+            .field("sw_hw_usb_phy_sel", &self.sw_hw_usb_phy_sel().bit())
+            .field("sw_usb_phy_sel", &self.sw_usb_phy_sel().bit())
+            .field("usbotg20_in_suspend", &self.usbotg20_in_suspend().bit())
             .finish()
     }
 }

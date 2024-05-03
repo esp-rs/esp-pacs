@@ -53,26 +53,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLC_CONF1")
-            .field(
-                "bad_cef_atten_para",
-                &format_args!("{}", self.bad_cef_atten_para().bits()),
-            )
+            .field("bad_cef_atten_para", &self.bad_cef_atten_para().bits())
             .field(
                 "bad_cef_atten_para_shift",
-                &format_args!("{}", self.bad_cef_atten_para_shift().bits()),
+                &self.bad_cef_atten_para_shift().bits(),
             )
             .field(
                 "bad_ola_win2_para_shift",
-                &format_args!("{}", self.bad_ola_win2_para_shift().bits()),
+                &self.bad_ola_win2_para_shift().bits(),
             )
-            .field(
-                "bad_ola_win2_para",
-                &format_args!("{}", self.bad_ola_win2_para().bits()),
-            )
-            .field(
-                "slide_win_len",
-                &format_args!("{}", self.slide_win_len().bits()),
-            )
+            .field("bad_ola_win2_para", &self.bad_ola_win2_para().bits())
+            .field("slide_win_len", &self.slide_win_len().bits())
             .finish()
     }
 }

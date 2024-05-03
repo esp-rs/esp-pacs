@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_0_TO_EOF_DES_ADDR")
-            .field(
-                "slc0_to_eof_des_addr",
-                &format_args!("{}", self.slc0_to_eof_des_addr().bits()),
-            )
+            .field("slc0_to_eof_des_addr", &self.slc0_to_eof_des_addr().bits())
             .finish()
     }
 }

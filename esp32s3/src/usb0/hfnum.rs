@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HFNUM")
-            .field("frnum", &format_args!("{}", self.frnum().bits()))
-            .field("frrem", &format_args!("{}", self.frrem().bits()))
+            .field("frnum", &self.frnum().bits())
+            .field("frrem", &self.frrem().bits())
             .finish()
     }
 }

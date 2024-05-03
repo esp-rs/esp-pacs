@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_PRELOCK_CONF")
             .field(
                 "l1_cache_prelock_sct0_en",
-                &format_args!("{}", self.l1_cache_prelock_sct0_en().bit()),
+                &self.l1_cache_prelock_sct0_en().bit(),
             )
             .field(
                 "l1_cache_prelock_sct1_en",
-                &format_args!("{}", self.l1_cache_prelock_sct1_en().bit()),
+                &self.l1_cache_prelock_sct1_en().bit(),
             )
             .field(
                 "l1_cache_prelock_rgid",
-                &format_args!("{}", self.l1_cache_prelock_rgid().bits()),
+                &self.l1_cache_prelock_rgid().bits(),
             )
             .finish()
     }

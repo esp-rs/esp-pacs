@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_REJECT_CAUSE")
-            .field(
-                "reject_cause",
-                &format_args!("{}", self.reject_cause().bits()),
-            )
+            .field("reject_cause", &self.reject_cause().bits())
             .finish()
     }
 }

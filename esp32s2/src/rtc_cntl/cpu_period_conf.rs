@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERIOD_CONF")
-            .field("cpusel_conf", &format_args!("{}", self.cpusel_conf().bit()))
-            .field(
-                "cpuperiod_sel",
-                &format_args!("{}", self.cpuperiod_sel().bits()),
-            )
+            .field("cpusel_conf", &self.cpusel_conf().bit())
+            .field("cpuperiod_sel", &self.cpuperiod_sel().bits())
             .finish()
     }
 }

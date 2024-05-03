@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_REJECT_ST")
-            .field(
-                "pro_dcache_tag_attr",
-                &format_args!("{}", self.pro_dcache_tag_attr().bits()),
-            )
-            .field(
-                "pro_dcache_cpu_attr",
-                &format_args!("{}", self.pro_dcache_cpu_attr().bits()),
-            )
+            .field("pro_dcache_tag_attr", &self.pro_dcache_tag_attr().bits())
+            .field("pro_dcache_cpu_attr", &self.pro_dcache_cpu_attr().bits())
             .finish()
     }
 }

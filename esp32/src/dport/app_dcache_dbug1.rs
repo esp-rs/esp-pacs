@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_DCACHE_DBUG1")
-            .field(
-                "app_ctag_ram_rdata",
-                &format_args!("{}", self.app_ctag_ram_rdata().bits()),
-            )
+            .field("app_ctag_ram_rdata", &self.app_ctag_ram_rdata().bits())
             .finish()
     }
 }

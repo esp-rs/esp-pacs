@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_RST_EN1")
-            .field(
-                "crypto_ecc_rst",
-                &format_args!("{}", self.crypto_ecc_rst().bit()),
-            )
-            .field(
-                "crypto_sha_rst",
-                &format_args!("{}", self.crypto_sha_rst().bit()),
-            )
-            .field("dma_rst", &format_args!("{}", self.dma_rst().bit()))
-            .field("tsens_rst", &format_args!("{}", self.tsens_rst().bit()))
+            .field("crypto_ecc_rst", &self.crypto_ecc_rst().bit())
+            .field("crypto_sha_rst", &self.crypto_sha_rst().bit())
+            .field("dma_rst", &self.dma_rst().bit())
+            .field("tsens_rst", &self.tsens_rst().bit())
             .finish()
     }
 }

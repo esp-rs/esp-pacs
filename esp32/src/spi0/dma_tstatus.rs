@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_TSTATUS")
-            .field(
-                "dma_in_status",
-                &format_args!("{}", self.dma_in_status().bits()),
-            )
+            .field("dma_in_status", &self.dma_in_status().bits())
             .finish()
     }
 }

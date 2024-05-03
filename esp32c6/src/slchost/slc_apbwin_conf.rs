@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC_APBWIN_CONF")
-            .field(
-                "slc_apbwin_addr",
-                &format_args!("{}", self.slc_apbwin_addr().bits()),
-            )
-            .field(
-                "slc_apbwin_wr",
-                &format_args!("{}", self.slc_apbwin_wr().bit()),
-            )
-            .field(
-                "slc_apbwin_start",
-                &format_args!("{}", self.slc_apbwin_start().bit()),
-            )
+            .field("slc_apbwin_addr", &self.slc_apbwin_addr().bits())
+            .field("slc_apbwin_wr", &self.slc_apbwin_wr().bit())
+            .field("slc_apbwin_start", &self.slc_apbwin_start().bit())
             .finish()
     }
 }

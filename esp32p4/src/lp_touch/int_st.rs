@@ -48,15 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("scan_done", &format_args!("{}", self.scan_done().bit()))
-            .field("done", &format_args!("{}", self.done().bit()))
-            .field("active", &format_args!("{}", self.active().bit()))
-            .field("inactive", &format_args!("{}", self.inactive().bit()))
-            .field("timeout", &format_args!("{}", self.timeout().bit()))
-            .field(
-                "approach_loop_done",
-                &format_args!("{}", self.approach_loop_done().bit()),
-            )
+            .field("scan_done", &self.scan_done().bit())
+            .field("done", &self.done().bit())
+            .field("active", &self.active().bit())
+            .field("inactive", &self.inactive().bit())
+            .field("timeout", &self.timeout().bit())
+            .field("approach_loop_done", &self.approach_loop_done().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APPCPU_CTRL_A")
-            .field(
-                "appcpu_resetting",
-                &format_args!("{}", self.appcpu_resetting().bit()),
-            )
+            .field("appcpu_resetting", &self.appcpu_resetting().bit())
             .finish()
     }
 }

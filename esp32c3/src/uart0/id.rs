@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ID")
-            .field("id", &format_args!("{}", self.id().bits()))
-            .field("high_speed", &format_args!("{}", self.high_speed().bit()))
-            .field("reg_update", &format_args!("{}", self.reg_update().bit()))
+            .field("id", &self.id().bits())
+            .field("high_speed", &self.high_speed().bit())
+            .field("reg_update", &self.reg_update().bit())
             .finish()
     }
 }

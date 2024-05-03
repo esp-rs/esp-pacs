@@ -50,13 +50,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IMM_HP_CK_POWER")
-            .field(
-                "tie_low_cali_xtal_icg",
-                &format_args!("{}", self.tie_low_cali_xtal_icg().bit()),
-            )
+            .field("tie_low_cali_xtal_icg", &self.tie_low_cali_xtal_icg().bit())
             .field(
                 "tie_high_cali_xtal_icg",
-                &format_args!("{}", self.tie_high_cali_xtal_icg().bit()),
+                &self.tie_high_cali_xtal_icg().bit(),
             )
             .finish()
     }

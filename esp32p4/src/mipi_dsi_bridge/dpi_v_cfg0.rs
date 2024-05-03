@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_V_CFG0")
-            .field("vtotal", &format_args!("{}", self.vtotal().bits()))
-            .field("vdisp", &format_args!("{}", self.vdisp().bits()))
+            .field("vtotal", &self.vtotal().bits())
+            .field("vdisp", &self.vdisp().bits())
             .finish()
     }
 }

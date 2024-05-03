@@ -58,30 +58,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_MEAS2_CTRL2")
-            .field(
-                "meas2_data_sar",
-                &format_args!("{}", self.meas2_data_sar().bits()),
-            )
-            .field(
-                "meas2_done_sar",
-                &format_args!("{}", self.meas2_done_sar().bit()),
-            )
-            .field(
-                "meas2_start_sar",
-                &format_args!("{}", self.meas2_start_sar().bit()),
-            )
-            .field(
-                "meas2_start_force",
-                &format_args!("{}", self.meas2_start_force().bit()),
-            )
-            .field(
-                "sar2_en_pad",
-                &format_args!("{}", self.sar2_en_pad().bits()),
-            )
-            .field(
-                "sar2_en_pad_force",
-                &format_args!("{}", self.sar2_en_pad_force().bit()),
-            )
+            .field("meas2_data_sar", &self.meas2_data_sar().bits())
+            .field("meas2_done_sar", &self.meas2_done_sar().bit())
+            .field("meas2_start_sar", &self.meas2_start_sar().bit())
+            .field("meas2_start_force", &self.meas2_start_force().bit())
+            .field("sar2_en_pad", &self.sar2_en_pad().bits())
+            .field("sar2_en_pad_force", &self.sar2_en_pad_force().bit())
             .finish()
     }
 }

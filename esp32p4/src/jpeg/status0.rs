@@ -36,20 +36,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATUS0")
             .field(
                 "bitstream_eof_vld_cnt",
-                &format_args!("{}", self.bitstream_eof_vld_cnt().bits()),
+                &self.bitstream_eof_vld_cnt().bits(),
             )
-            .field(
-                "dctout_zzscan_addr",
-                &format_args!("{}", self.dctout_zzscan_addr().bits()),
-            )
-            .field(
-                "qnrval_zzscan_addr",
-                &format_args!("{}", self.qnrval_zzscan_addr().bits()),
-            )
-            .field(
-                "reg_state_yuv",
-                &format_args!("{}", self.reg_state_yuv().bits()),
-            )
+            .field("dctout_zzscan_addr", &self.dctout_zzscan_addr().bits())
+            .field("qnrval_zzscan_addr", &self.qnrval_zzscan_addr().bits())
+            .field("reg_state_yuv", &self.reg_state_yuv().bits())
             .finish()
     }
 }

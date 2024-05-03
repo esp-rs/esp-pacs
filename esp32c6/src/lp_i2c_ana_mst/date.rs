@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("DATE")
             .field(
                 "lp_i2c_ana_mast_i2c_mat_date",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mat_date().bits()),
+                &self.lp_i2c_ana_mast_i2c_mat_date().bits(),
             )
             .field(
                 "lp_i2c_ana_mast_i2c_mat_clk_en",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mat_clk_en().bit()),
+                &self.lp_i2c_ana_mast_i2c_mat_clk_en().bit(),
             )
             .finish()
     }

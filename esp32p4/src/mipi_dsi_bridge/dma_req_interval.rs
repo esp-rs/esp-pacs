@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_REQ_INTERVAL")
-            .field(
-                "dma_req_interval",
-                &format_args!("{}", self.dma_req_interval().bits()),
-            )
+            .field("dma_req_interval", &self.dma_req_interval().bits())
             .finish()
     }
 }

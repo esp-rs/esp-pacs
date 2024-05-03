@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("AXI_ID0")
             .field(
                 "ch1_axi_read_id_suffix",
-                &format_args!("{}", self.ch1_axi_read_id_suffix().bit()),
+                &self.ch1_axi_read_id_suffix().bit(),
             )
             .field(
                 "ch1_axi_write_id_suffix",
-                &format_args!("{}", self.ch1_axi_write_id_suffix().bit()),
+                &self.ch1_axi_write_id_suffix().bit(),
             )
             .finish()
     }

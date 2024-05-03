@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_FIX_PIXEL")
-            .field(
-                "blend_tx_fix_pixel",
-                &format_args!("{}", self.blend_tx_fix_pixel().bits()),
-            )
+            .field("blend_tx_fix_pixel", &self.blend_tx_fix_pixel().bits())
             .finish()
     }
 }

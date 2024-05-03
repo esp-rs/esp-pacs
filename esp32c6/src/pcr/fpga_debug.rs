@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FPGA_DEBUG")
-            .field("fpga_debug", &format_args!("{}", self.fpga_debug().bits()))
+            .field("fpga_debug", &self.fpga_debug().bits())
             .finish()
     }
 }

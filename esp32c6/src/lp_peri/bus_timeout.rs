@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("BUS_TIMEOUT")
             .field(
                 "lp_peri_timeout_thres",
-                &format_args!("{}", self.lp_peri_timeout_thres().bits()),
+                &self.lp_peri_timeout_thres().bits(),
             )
             .field(
                 "lp_peri_timeout_protect_en",
-                &format_args!("{}", self.lp_peri_timeout_protect_en().bit()),
+                &self.lp_peri_timeout_protect_en().bit(),
             )
             .finish()
     }

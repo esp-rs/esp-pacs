@@ -26,11 +26,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("I2C0_CONF")
             .field(
                 "lp_i2c_ana_mast_i2c0_conf",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c0_conf().bits()),
+                &self.lp_i2c_ana_mast_i2c0_conf().bits(),
             )
             .field(
                 "lp_i2c_ana_mast_i2c0_status",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c0_status().bits()),
+                &self.lp_i2c_ana_mast_i2c0_status().bits(),
             )
             .finish()
     }

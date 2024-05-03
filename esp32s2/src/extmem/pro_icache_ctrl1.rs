@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_ICACHE_CTRL1")
-            .field(
-                "pro_icache_mask_bus0",
-                &format_args!("{}", self.pro_icache_mask_bus0().bit()),
-            )
-            .field(
-                "pro_icache_mask_bus1",
-                &format_args!("{}", self.pro_icache_mask_bus1().bit()),
-            )
-            .field(
-                "pro_icache_mask_bus2",
-                &format_args!("{}", self.pro_icache_mask_bus2().bit()),
-            )
+            .field("pro_icache_mask_bus0", &self.pro_icache_mask_bus0().bit())
+            .field("pro_icache_mask_bus1", &self.pro_icache_mask_bus1().bit())
+            .field("pro_icache_mask_bus2", &self.pro_icache_mask_bus2().bit())
             .finish()
     }
 }

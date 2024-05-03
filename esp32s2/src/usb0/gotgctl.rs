@@ -174,32 +174,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GOTGCTL")
-            .field("sesreqscs", &format_args!("{}", self.sesreqscs().bit()))
-            .field("sesreq", &format_args!("{}", self.sesreq().bit()))
-            .field("vbvalidoven", &format_args!("{}", self.vbvalidoven().bit()))
-            .field(
-                "vbvalidovval",
-                &format_args!("{}", self.vbvalidovval().bit()),
-            )
-            .field("avalidoven", &format_args!("{}", self.avalidoven().bit()))
-            .field("avalidovval", &format_args!("{}", self.avalidovval().bit()))
-            .field("bvalidoven", &format_args!("{}", self.bvalidoven().bit()))
-            .field("bvalidovval", &format_args!("{}", self.bvalidovval().bit()))
-            .field("hstnegscs", &format_args!("{}", self.hstnegscs().bit()))
-            .field("hnpreq", &format_args!("{}", self.hnpreq().bit()))
-            .field("hstsethnpen", &format_args!("{}", self.hstsethnpen().bit()))
-            .field("devhnpen", &format_args!("{}", self.devhnpen().bit()))
-            .field("ehen", &format_args!("{}", self.ehen().bit()))
-            .field(
-                "dbncefltrbypass",
-                &format_args!("{}", self.dbncefltrbypass().bit()),
-            )
-            .field("conidsts", &format_args!("{}", self.conidsts().bit()))
-            .field("dbnctime", &format_args!("{}", self.dbnctime().bit()))
-            .field("asesvld", &format_args!("{}", self.asesvld().bit()))
-            .field("bsesvld", &format_args!("{}", self.bsesvld().bit()))
-            .field("otgver", &format_args!("{}", self.otgver().bit()))
-            .field("curmod", &format_args!("{}", self.curmod().bit()))
+            .field("sesreqscs", &self.sesreqscs().bit())
+            .field("sesreq", &self.sesreq().bit())
+            .field("vbvalidoven", &self.vbvalidoven().bit())
+            .field("vbvalidovval", &self.vbvalidovval().bit())
+            .field("avalidoven", &self.avalidoven().bit())
+            .field("avalidovval", &self.avalidovval().bit())
+            .field("bvalidoven", &self.bvalidoven().bit())
+            .field("bvalidovval", &self.bvalidovval().bit())
+            .field("hstnegscs", &self.hstnegscs().bit())
+            .field("hnpreq", &self.hnpreq().bit())
+            .field("hstsethnpen", &self.hstsethnpen().bit())
+            .field("devhnpen", &self.devhnpen().bit())
+            .field("ehen", &self.ehen().bit())
+            .field("dbncefltrbypass", &self.dbncefltrbypass().bit())
+            .field("conidsts", &self.conidsts().bit())
+            .field("dbnctime", &self.dbnctime().bit())
+            .field("asesvld", &self.asesvld().bit())
+            .field("bsesvld", &self.bsesvld().bit())
+            .field("otgver", &self.otgver().bit())
+            .field("curmod", &self.curmod().bit())
             .finish()
     }
 }

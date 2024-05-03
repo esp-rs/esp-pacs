@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field(
-                "in_ecc_aes_en",
-                &format_args!("{}", self.in_ecc_aes_en().bit()),
-            )
-            .field(
-                "in_mem_burst_length",
-                &format_args!("{}", self.in_mem_burst_length().bits()),
-            )
-            .field(
-                "in_page_bound_en",
-                &format_args!("{}", self.in_page_bound_en().bit()),
-            )
-            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
-            .field(
-                "in_cmd_disable",
-                &format_args!("{}", self.in_cmd_disable().bit()),
-            )
+            .field("in_ecc_aes_en", &self.in_ecc_aes_en().bit())
+            .field("in_mem_burst_length", &self.in_mem_burst_length().bits())
+            .field("in_page_bound_en", &self.in_page_bound_en().bit())
+            .field("in_rst", &self.in_rst().bit())
+            .field("in_cmd_disable", &self.in_cmd_disable().bit())
             .finish()
     }
 }

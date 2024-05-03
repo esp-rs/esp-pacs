@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_I2C_EXT1_INTR_MAP")
             .field(
                 "pro_i2c_ext1_intr_map",
-                &format_args!("{}", self.pro_i2c_ext1_intr_map().bits()),
+                &self.pro_i2c_ext1_intr_map().bits(),
             )
             .finish()
     }

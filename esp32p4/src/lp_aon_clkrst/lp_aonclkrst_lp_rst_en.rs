@@ -82,35 +82,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LP_RST_EN")
             .field(
                 "lp_aonclkrst_rst_en_lp_huk",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_huk().bit()),
+                &self.lp_aonclkrst_rst_en_lp_huk().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_anaperi",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_anaperi().bit()),
+                &self.lp_aonclkrst_rst_en_lp_anaperi().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_wdt",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_wdt().bit()),
+                &self.lp_aonclkrst_rst_en_lp_wdt().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_timer",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_timer().bit()),
+                &self.lp_aonclkrst_rst_en_lp_timer().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_rtc",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_rtc().bit()),
+                &self.lp_aonclkrst_rst_en_lp_rtc().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_mailbox",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_mailbox().bit()),
+                &self.lp_aonclkrst_rst_en_lp_mailbox().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_aonefusereg",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_aonefusereg().bit()),
+                &self.lp_aonclkrst_rst_en_lp_aonefusereg().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_lp_ram",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_lp_ram().bit()),
+                &self.lp_aonclkrst_rst_en_lp_ram().bit(),
             )
             .finish()
     }

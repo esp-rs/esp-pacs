@@ -73,31 +73,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_3")
             .field(
                 "backup_bus_pms_constrain_spi_2",
-                &format_args!("{}", self.backup_bus_pms_constrain_spi_2().bits()),
+                &self.backup_bus_pms_constrain_spi_2().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_apb_ctrl",
-                &format_args!("{}", self.backup_bus_pms_constrain_apb_ctrl().bits()),
+                &self.backup_bus_pms_constrain_apb_ctrl().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_can",
-                &format_args!("{}", self.backup_bus_pms_constrain_can().bits()),
+                &self.backup_bus_pms_constrain_can().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_i2s1",
-                &format_args!("{}", self.backup_bus_pms_constrain_i2s1().bits()),
+                &self.backup_bus_pms_constrain_i2s1().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_rwbt",
-                &format_args!("{}", self.backup_bus_pms_constrain_rwbt().bits()),
+                &self.backup_bus_pms_constrain_rwbt().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_wifimac",
-                &format_args!("{}", self.backup_bus_pms_constrain_wifimac().bits()),
+                &self.backup_bus_pms_constrain_wifimac().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_pwr",
-                &format_args!("{}", self.backup_bus_pms_constrain_pwr().bits()),
+                &self.backup_bus_pms_constrain_pwr().bits(),
             )
             .finish()
     }

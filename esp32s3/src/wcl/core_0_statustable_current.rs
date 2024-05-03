@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_0_STATUSTABLE_CURRENT")
             .field(
                 "core_0_statustable_current",
-                &format_args!("{}", self.core_0_statustable_current().bits()),
+                &self.core_0_statustable_current().bits(),
             )
             .finish()
     }

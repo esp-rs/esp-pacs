@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("POWER_HP_PAD")
             .field(
                 "force_hp_pad_no_iso_all",
-                &format_args!("{}", self.force_hp_pad_no_iso_all().bit()),
+                &self.force_hp_pad_no_iso_all().bit(),
             )
-            .field(
-                "force_hp_pad_iso_all",
-                &format_args!("{}", self.force_hp_pad_iso_all().bit()),
-            )
+            .field("force_hp_pad_iso_all", &self.force_hp_pad_iso_all().bit())
             .finish()
     }
 }

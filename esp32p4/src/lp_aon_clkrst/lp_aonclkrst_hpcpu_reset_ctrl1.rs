@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPCPU_RESET_CTRL1")
             .field(
                 "lp_aonclkrst_hpcore0_sw_stall_code",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_sw_stall_code().bits()),
+                &self.lp_aonclkrst_hpcore0_sw_stall_code().bits(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_sw_stall_code",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_sw_stall_code().bits()),
+                &self.lp_aonclkrst_hpcore1_sw_stall_code().bits(),
             )
             .finish()
     }

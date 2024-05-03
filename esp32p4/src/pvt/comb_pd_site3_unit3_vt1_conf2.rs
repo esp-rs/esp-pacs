@@ -33,15 +33,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMB_PD_SITE3_UNIT3_VT1_CONF2")
             .field(
                 "monitor_edg_mod_vt1_pd_site3_unit3",
-                &format_args!("{}", self.monitor_edg_mod_vt1_pd_site3_unit3().bits()),
+                &self.monitor_edg_mod_vt1_pd_site3_unit3().bits(),
             )
             .field(
                 "delay_ovf_vt1_pd_site3_unit3",
-                &format_args!("{}", self.delay_ovf_vt1_pd_site3_unit3().bit()),
+                &self.delay_ovf_vt1_pd_site3_unit3().bit(),
             )
             .field(
                 "timing_err_cnt_o_vt1_pd_site3_unit3",
-                &format_args!("{}", self.timing_err_cnt_o_vt1_pd_site3_unit3().bits()),
+                &self.timing_err_cnt_o_vt1_pd_site3_unit3().bits(),
             )
             .finish()
     }

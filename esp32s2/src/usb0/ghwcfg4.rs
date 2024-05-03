@@ -132,63 +132,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GHWCFG4")
-            .field(
-                "g_numdevperioeps",
-                &format_args!("{}", self.g_numdevperioeps().bits()),
-            )
-            .field(
-                "g_partialpwrdn",
-                &format_args!("{}", self.g_partialpwrdn().bit()),
-            )
-            .field("g_ahbfreq", &format_args!("{}", self.g_ahbfreq().bit()))
-            .field(
-                "g_hibernation",
-                &format_args!("{}", self.g_hibernation().bit()),
-            )
-            .field(
-                "g_extendedhibernation",
-                &format_args!("{}", self.g_extendedhibernation().bit()),
-            )
-            .field("g_acgsupt", &format_args!("{}", self.g_acgsupt().bit()))
-            .field(
-                "g_enhancedlpmsupt",
-                &format_args!("{}", self.g_enhancedlpmsupt().bit()),
-            )
-            .field(
-                "g_phydatawidth",
-                &format_args!("{}", self.g_phydatawidth().bits()),
-            )
-            .field(
-                "g_numctleps",
-                &format_args!("{}", self.g_numctleps().bits()),
-            )
-            .field("g_iddqfltr", &format_args!("{}", self.g_iddqfltr().bit()))
-            .field(
-                "g_vbusvalidfltr",
-                &format_args!("{}", self.g_vbusvalidfltr().bit()),
-            )
-            .field(
-                "g_avalidfltr",
-                &format_args!("{}", self.g_avalidfltr().bit()),
-            )
-            .field(
-                "g_bvalidfltr",
-                &format_args!("{}", self.g_bvalidfltr().bit()),
-            )
-            .field(
-                "g_sessendfltr",
-                &format_args!("{}", self.g_sessendfltr().bit()),
-            )
-            .field(
-                "g_dedfifomode",
-                &format_args!("{}", self.g_dedfifomode().bit()),
-            )
-            .field("g_ineps", &format_args!("{}", self.g_ineps().bits()))
-            .field(
-                "g_descdmaenabled",
-                &format_args!("{}", self.g_descdmaenabled().bit()),
-            )
-            .field("g_descdma", &format_args!("{}", self.g_descdma().bit()))
+            .field("g_numdevperioeps", &self.g_numdevperioeps().bits())
+            .field("g_partialpwrdn", &self.g_partialpwrdn().bit())
+            .field("g_ahbfreq", &self.g_ahbfreq().bit())
+            .field("g_hibernation", &self.g_hibernation().bit())
+            .field("g_extendedhibernation", &self.g_extendedhibernation().bit())
+            .field("g_acgsupt", &self.g_acgsupt().bit())
+            .field("g_enhancedlpmsupt", &self.g_enhancedlpmsupt().bit())
+            .field("g_phydatawidth", &self.g_phydatawidth().bits())
+            .field("g_numctleps", &self.g_numctleps().bits())
+            .field("g_iddqfltr", &self.g_iddqfltr().bit())
+            .field("g_vbusvalidfltr", &self.g_vbusvalidfltr().bit())
+            .field("g_avalidfltr", &self.g_avalidfltr().bit())
+            .field("g_bvalidfltr", &self.g_bvalidfltr().bit())
+            .field("g_sessendfltr", &self.g_sessendfltr().bit())
+            .field("g_dedfifomode", &self.g_dedfifomode().bit())
+            .field("g_ineps", &self.g_ineps().bits())
+            .field("g_descdmaenabled", &self.g_descdmaenabled().bit())
+            .field("g_descdma", &self.g_descdma().bit())
             .finish()
     }
 }

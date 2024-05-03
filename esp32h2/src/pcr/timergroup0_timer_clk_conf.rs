@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMERGROUP0_TIMER_CLK_CONF")
-            .field(
-                "tg0_timer_clk_sel",
-                &format_args!("{}", self.tg0_timer_clk_sel().bits()),
-            )
-            .field(
-                "tg0_timer_clk_en",
-                &format_args!("{}", self.tg0_timer_clk_en().bit()),
-            )
+            .field("tg0_timer_clk_sel", &self.tg0_timer_clk_sel().bits())
+            .field("tg0_timer_clk_en", &self.tg0_timer_clk_en().bit())
             .finish()
     }
 }

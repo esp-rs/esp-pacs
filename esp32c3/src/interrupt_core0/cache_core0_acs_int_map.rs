@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_CORE0_ACS_INT_MAP")
             .field(
                 "cache_core0_acs_int_map",
-                &format_args!("{}", self.cache_core0_acs_int_map().bits()),
+                &self.cache_core0_acs_int_map().bits(),
             )
             .finish()
     }

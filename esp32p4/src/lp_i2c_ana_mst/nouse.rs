@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NOUSE")
-            .field(
-                "i2c_mst_nouse",
-                &format_args!("{}", self.i2c_mst_nouse().bits()),
-            )
+            .field("i2c_mst_nouse", &self.i2c_mst_nouse().bits())
             .finish()
     }
 }

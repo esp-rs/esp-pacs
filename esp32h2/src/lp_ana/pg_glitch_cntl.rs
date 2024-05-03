@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PG_GLITCH_CNTL")
             .field(
                 "power_glitch_reset_ena",
-                &format_args!("{}", self.power_glitch_reset_ena().bit()),
+                &self.power_glitch_reset_ena().bit(),
             )
             .finish()
     }

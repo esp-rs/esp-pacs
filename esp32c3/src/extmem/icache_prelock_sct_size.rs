@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_PRELOCK_SCT_SIZE")
             .field(
                 "icache_prelock_sct1_size",
-                &format_args!("{}", self.icache_prelock_sct1_size().bits()),
+                &self.icache_prelock_sct1_size().bits(),
             )
             .field(
                 "icache_prelock_sct0_size",
-                &format_args!("{}", self.icache_prelock_sct0_size().bits()),
+                &self.icache_prelock_sct0_size().bits(),
             )
             .finish()
     }

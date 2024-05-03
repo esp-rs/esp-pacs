@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL8")
-            .field(
-                "lp_lite_wakeup_ena",
-                &format_args!("{}", self.lp_lite_wakeup_ena().bit()),
-            )
+            .field("lp_lite_wakeup_ena", &self.lp_lite_wakeup_ena().bit())
             .finish()
     }
 }

@@ -80,26 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN")
-            .field("cs0_dis", &format_args!("{}", self.cs0_dis().bit()))
-            .field("cs1_dis", &format_args!("{}", self.cs1_dis().bit()))
-            .field("cs2_dis", &format_args!("{}", self.cs2_dis().bit()))
-            .field("ck_dis", &format_args!("{}", self.ck_dis().bit()))
-            .field(
-                "master_cs_pol",
-                &format_args!("{}", self.master_cs_pol().bits()),
-            )
-            .field(
-                "master_ck_sel",
-                &format_args!("{}", self.master_ck_sel().bits()),
-            )
-            .field(
-                "ck_idle_edge",
-                &format_args!("{}", self.ck_idle_edge().bit()),
-            )
-            .field(
-                "cs_keep_active",
-                &format_args!("{}", self.cs_keep_active().bit()),
-            )
+            .field("cs0_dis", &self.cs0_dis().bit())
+            .field("cs1_dis", &self.cs1_dis().bit())
+            .field("cs2_dis", &self.cs2_dis().bit())
+            .field("ck_dis", &self.ck_dis().bit())
+            .field("master_cs_pol", &self.master_cs_pol().bits())
+            .field("master_ck_sel", &self.master_ck_sel().bits())
+            .field("ck_idle_edge", &self.ck_idle_edge().bit())
+            .field("cs_keep_active", &self.cs_keep_active().bit())
             .finish()
     }
 }

@@ -179,79 +179,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_EN")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "clk_blc_force_on",
-                &format_args!("{}", self.clk_blc_force_on().bit()),
-            )
-            .field(
-                "clk_dpc_force_on",
-                &format_args!("{}", self.clk_dpc_force_on().bit()),
-            )
-            .field(
-                "clk_bf_force_on",
-                &format_args!("{}", self.clk_bf_force_on().bit()),
-            )
-            .field(
-                "clk_lsc_force_on",
-                &format_args!("{}", self.clk_lsc_force_on().bit()),
-            )
-            .field(
-                "clk_demosaic_force_on",
-                &format_args!("{}", self.clk_demosaic_force_on().bit()),
-            )
-            .field(
-                "clk_median_force_on",
-                &format_args!("{}", self.clk_median_force_on().bit()),
-            )
-            .field(
-                "clk_ccm_force_on",
-                &format_args!("{}", self.clk_ccm_force_on().bit()),
-            )
-            .field(
-                "clk_gamma_force_on",
-                &format_args!("{}", self.clk_gamma_force_on().bit()),
-            )
-            .field(
-                "clk_rgb2yuv_force_on",
-                &format_args!("{}", self.clk_rgb2yuv_force_on().bit()),
-            )
-            .field(
-                "clk_sharp_force_on",
-                &format_args!("{}", self.clk_sharp_force_on().bit()),
-            )
-            .field(
-                "clk_color_force_on",
-                &format_args!("{}", self.clk_color_force_on().bit()),
-            )
-            .field(
-                "clk_yuv2rgb_force_on",
-                &format_args!("{}", self.clk_yuv2rgb_force_on().bit()),
-            )
-            .field(
-                "clk_ae_force_on",
-                &format_args!("{}", self.clk_ae_force_on().bit()),
-            )
-            .field(
-                "clk_af_force_on",
-                &format_args!("{}", self.clk_af_force_on().bit()),
-            )
-            .field(
-                "clk_awb_force_on",
-                &format_args!("{}", self.clk_awb_force_on().bit()),
-            )
-            .field(
-                "clk_hist_force_on",
-                &format_args!("{}", self.clk_hist_force_on().bit()),
-            )
-            .field(
-                "clk_mipi_idi_force_on",
-                &format_args!("{}", self.clk_mipi_idi_force_on().bit()),
-            )
-            .field(
-                "isp_mem_clk_force_on",
-                &format_args!("{}", self.isp_mem_clk_force_on().bit()),
-            )
+            .field("clk_en", &self.clk_en().bit())
+            .field("clk_blc_force_on", &self.clk_blc_force_on().bit())
+            .field("clk_dpc_force_on", &self.clk_dpc_force_on().bit())
+            .field("clk_bf_force_on", &self.clk_bf_force_on().bit())
+            .field("clk_lsc_force_on", &self.clk_lsc_force_on().bit())
+            .field("clk_demosaic_force_on", &self.clk_demosaic_force_on().bit())
+            .field("clk_median_force_on", &self.clk_median_force_on().bit())
+            .field("clk_ccm_force_on", &self.clk_ccm_force_on().bit())
+            .field("clk_gamma_force_on", &self.clk_gamma_force_on().bit())
+            .field("clk_rgb2yuv_force_on", &self.clk_rgb2yuv_force_on().bit())
+            .field("clk_sharp_force_on", &self.clk_sharp_force_on().bit())
+            .field("clk_color_force_on", &self.clk_color_force_on().bit())
+            .field("clk_yuv2rgb_force_on", &self.clk_yuv2rgb_force_on().bit())
+            .field("clk_ae_force_on", &self.clk_ae_force_on().bit())
+            .field("clk_af_force_on", &self.clk_af_force_on().bit())
+            .field("clk_awb_force_on", &self.clk_awb_force_on().bit())
+            .field("clk_hist_force_on", &self.clk_hist_force_on().bit())
+            .field("clk_mipi_idi_force_on", &self.clk_mipi_idi_force_on().bit())
+            .field("isp_mem_clk_force_on", &self.isp_mem_clk_force_on().bit())
             .finish()
     }
 }

@@ -62,27 +62,24 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGINST")
             .field(
                 "record_pro_pdebuginst",
-                &format_args!("{}", self.record_pro_pdebuginst().bits()),
+                &self.record_pro_pdebuginst().bits(),
             )
-            .field(
-                "record_pdebuginst_sz",
-                &format_args!("{}", self.record_pdebuginst_sz().bits()),
-            )
+            .field("record_pdebuginst_sz", &self.record_pdebuginst_sz().bits())
             .field(
                 "record_pdebuginst_isrc",
-                &format_args!("{}", self.record_pdebuginst_isrc().bits()),
+                &self.record_pdebuginst_isrc().bits(),
             )
             .field(
                 "record_pdebuginst_loop_rep",
-                &format_args!("{}", self.record_pdebuginst_loop_rep().bit()),
+                &self.record_pdebuginst_loop_rep().bit(),
             )
             .field(
                 "record_pdebuginst_loop",
-                &format_args!("{}", self.record_pdebuginst_loop().bit()),
+                &self.record_pdebuginst_loop().bit(),
             )
             .field(
                 "record_pdebuginst_cintl",
-                &format_args!("{}", self.record_pdebuginst_cintl().bits()),
+                &self.record_pdebuginst_cintl().bits(),
             )
             .finish()
     }

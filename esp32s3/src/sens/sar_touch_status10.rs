@@ -20,13 +20,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_STATUS10")
-            .field(
-                "sar_touch_pad10_data",
-                &format_args!("{}", self.sar_touch_pad10_data().bits()),
-            )
+            .field("sar_touch_pad10_data", &self.sar_touch_pad10_data().bits())
             .field(
                 "sar_touch_pad10_debounce",
-                &format_args!("{}", self.sar_touch_pad10_debounce().bits()),
+                &self.sar_touch_pad10_debounce().bits(),
             )
             .finish()
     }

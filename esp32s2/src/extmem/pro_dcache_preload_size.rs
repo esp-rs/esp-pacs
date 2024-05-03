@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_PRELOAD_SIZE")
             .field(
                 "pro_dcache_preload_size",
-                &format_args!("{}", self.pro_dcache_preload_size().bits()),
+                &self.pro_dcache_preload_size().bits(),
             )
             .field(
                 "pro_dcache_preload_order",
-                &format_args!("{}", self.pro_dcache_preload_order().bit()),
+                &self.pro_dcache_preload_order().bit(),
             )
             .finish()
     }

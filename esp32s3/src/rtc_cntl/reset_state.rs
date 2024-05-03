@@ -112,54 +112,36 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_STATE")
-            .field(
-                "reset_cause_procpu",
-                &format_args!("{}", self.reset_cause_procpu().bits()),
-            )
-            .field(
-                "reset_cause_appcpu",
-                &format_args!("{}", self.reset_cause_appcpu().bits()),
-            )
+            .field("reset_cause_procpu", &self.reset_cause_procpu().bits())
+            .field("reset_cause_appcpu", &self.reset_cause_appcpu().bits())
             .field(
                 "appcpu_stat_vector_sel",
-                &format_args!("{}", self.appcpu_stat_vector_sel().bit()),
+                &self.appcpu_stat_vector_sel().bit(),
             )
             .field(
                 "procpu_stat_vector_sel",
-                &format_args!("{}", self.procpu_stat_vector_sel().bit()),
+                &self.procpu_stat_vector_sel().bit(),
             )
-            .field(
-                "reset_flag_procpu",
-                &format_args!("{}", self.reset_flag_procpu().bit()),
-            )
-            .field(
-                "reset_flag_appcpu",
-                &format_args!("{}", self.reset_flag_appcpu().bit()),
-            )
+            .field("reset_flag_procpu", &self.reset_flag_procpu().bit())
+            .field("reset_flag_appcpu", &self.reset_flag_appcpu().bit())
             .field(
                 "appcpu_ocd_halt_on_reset",
-                &format_args!("{}", self.appcpu_ocd_halt_on_reset().bit()),
+                &self.appcpu_ocd_halt_on_reset().bit(),
             )
             .field(
                 "procpu_ocd_halt_on_reset",
-                &format_args!("{}", self.procpu_ocd_halt_on_reset().bit()),
+                &self.procpu_ocd_halt_on_reset().bit(),
             )
             .field(
                 "reset_flag_jtag_procpu",
-                &format_args!("{}", self.reset_flag_jtag_procpu().bit()),
+                &self.reset_flag_jtag_procpu().bit(),
             )
             .field(
                 "reset_flag_jtag_appcpu",
-                &format_args!("{}", self.reset_flag_jtag_appcpu().bit()),
+                &self.reset_flag_jtag_appcpu().bit(),
             )
-            .field(
-                "app_dreset_mask",
-                &format_args!("{}", self.app_dreset_mask().bit()),
-            )
-            .field(
-                "pro_dreset_mask",
-                &format_args!("{}", self.pro_dreset_mask().bit()),
-            )
+            .field("app_dreset_mask", &self.app_dreset_mask().bit())
+            .field("pro_dreset_mask", &self.pro_dreset_mask().bit())
             .finish()
     }
 }

@@ -188,38 +188,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACCONFIG")
-            .field("pltf", &format_args!("{}", self.pltf().bits()))
-            .field("rx", &format_args!("{}", self.rx().bit()))
-            .field("tx", &format_args!("{}", self.tx().bit()))
-            .field(
-                "deferralcheck",
-                &format_args!("{}", self.deferralcheck().bit()),
-            )
-            .field(
-                "backofflimit",
-                &format_args!("{}", self.backofflimit().bits()),
-            )
-            .field("padcrcstrip", &format_args!("{}", self.padcrcstrip().bit()))
-            .field("retry", &format_args!("{}", self.retry().bit()))
-            .field(
-                "rxipcoffload",
-                &format_args!("{}", self.rxipcoffload().bit()),
-            )
-            .field("duplex", &format_args!("{}", self.duplex().bit()))
-            .field("loopback", &format_args!("{}", self.loopback().bit()))
-            .field("rxown", &format_args!("{}", self.rxown().bit()))
-            .field("fespeed", &format_args!("{}", self.fespeed().bit()))
-            .field("mii", &format_args!("{}", self.mii().bit()))
-            .field("disablecrs", &format_args!("{}", self.disablecrs().bit()))
-            .field(
-                "interframegap",
-                &format_args!("{}", self.interframegap().bits()),
-            )
-            .field("jumboframe", &format_args!("{}", self.jumboframe().bit()))
-            .field("jabber", &format_args!("{}", self.jabber().bit()))
-            .field("watchdog", &format_args!("{}", self.watchdog().bit()))
-            .field("ass2kp", &format_args!("{}", self.ass2kp().bit()))
-            .field("sairc", &format_args!("{}", self.sairc().bits()))
+            .field("pltf", &self.pltf().bits())
+            .field("rx", &self.rx().bit())
+            .field("tx", &self.tx().bit())
+            .field("deferralcheck", &self.deferralcheck().bit())
+            .field("backofflimit", &self.backofflimit().bits())
+            .field("padcrcstrip", &self.padcrcstrip().bit())
+            .field("retry", &self.retry().bit())
+            .field("rxipcoffload", &self.rxipcoffload().bit())
+            .field("duplex", &self.duplex().bit())
+            .field("loopback", &self.loopback().bit())
+            .field("rxown", &self.rxown().bit())
+            .field("fespeed", &self.fespeed().bit())
+            .field("mii", &self.mii().bit())
+            .field("disablecrs", &self.disablecrs().bit())
+            .field("interframegap", &self.interframegap().bits())
+            .field("jumboframe", &self.jumboframe().bit())
+            .field("jabber", &self.jabber().bit())
+            .field("watchdog", &self.watchdog().bit())
+            .field("ass2kp", &self.ass2kp().bit())
+            .field("sairc", &self.sairc().bits())
             .finish()
     }
 }

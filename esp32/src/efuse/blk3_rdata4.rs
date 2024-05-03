@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA4")
-            .field(
-                "rd_secure_version",
-                &format_args!("{}", self.rd_secure_version().bits()),
-            )
+            .field("rd_secure_version", &self.rd_secure_version().bits())
             .finish()
     }
 }

@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_CRC_ST0")
-            .field(
-                "dat0_crc_err_cnt",
-                &format_args!("{}", self.dat0_crc_err_cnt().bits()),
-            )
-            .field(
-                "dat1_crc_err_cnt",
-                &format_args!("{}", self.dat1_crc_err_cnt().bits()),
-            )
-            .field(
-                "dat2_crc_err_cnt",
-                &format_args!("{}", self.dat2_crc_err_cnt().bits()),
-            )
-            .field(
-                "dat3_crc_err_cnt",
-                &format_args!("{}", self.dat3_crc_err_cnt().bits()),
-            )
+            .field("dat0_crc_err_cnt", &self.dat0_crc_err_cnt().bits())
+            .field("dat1_crc_err_cnt", &self.dat1_crc_err_cnt().bits())
+            .field("dat2_crc_err_cnt", &self.dat2_crc_err_cnt().bits())
+            .field("dat3_crc_err_cnt", &self.dat3_crc_err_cnt().bits())
             .finish()
     }
 }

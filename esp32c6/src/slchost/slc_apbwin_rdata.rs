@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC_APBWIN_RDATA")
-            .field(
-                "slc_apbwin_rdata",
-                &format_args!("{}", self.slc_apbwin_rdata().bits()),
-            )
+            .field("slc_apbwin_rdata", &self.slc_apbwin_rdata().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field(
-                "usb_wrap_date",
-                &format_args!("{}", self.usb_wrap_date().bits()),
-            )
+            .field("usb_wrap_date", &self.usb_wrap_date().bits())
             .finish()
     }
 }

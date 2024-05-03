@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_TIMER1")
-            .field("slp_val_hi", &format_args!("{}", self.slp_val_hi().bits()))
-            .field(
-                "main_timer_alarm_en",
-                &format_args!("{}", self.main_timer_alarm_en().bit()),
-            )
+            .field("slp_val_hi", &self.slp_val_hi().bits())
+            .field("main_timer_alarm_en", &self.main_timer_alarm_en().bit())
             .finish()
     }
 }

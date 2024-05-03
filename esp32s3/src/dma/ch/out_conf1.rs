@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CONF1")
-            .field(
-                "out_check_owner",
-                &format_args!("{}", self.out_check_owner().bit()),
-            )
-            .field(
-                "out_ext_mem_bk_size",
-                &format_args!("{}", self.out_ext_mem_bk_size().bits()),
-            )
+            .field("out_check_owner", &self.out_check_owner().bit())
+            .field("out_ext_mem_bk_size", &self.out_ext_mem_bk_size().bits())
             .finish()
     }
 }

@@ -85,47 +85,47 @@ impl core::fmt::Debug for R {
         f.debug_struct("HW_CFG")
             .field(
                 "icm_reg_axi_hwcfg_qos_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_qos_support().bit()),
+                &self.icm_reg_axi_hwcfg_qos_support().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_apb3_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_apb3_support().bit()),
+                &self.icm_reg_axi_hwcfg_apb3_support().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi4_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi4_support().bit()),
+                &self.icm_reg_axi_hwcfg_axi4_support().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_lock_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_lock_en().bit()),
+                &self.icm_reg_axi_hwcfg_lock_en().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_trust_zone_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_trust_zone_en().bit()),
+                &self.icm_reg_axi_hwcfg_trust_zone_en().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_decoder_type",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_decoder_type().bit()),
+                &self.icm_reg_axi_hwcfg_decoder_type().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_remap_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_remap_en().bit()),
+                &self.icm_reg_axi_hwcfg_remap_en().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_bi_dir_cmd_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_bi_dir_cmd_en().bit()),
+                &self.icm_reg_axi_hwcfg_bi_dir_cmd_en().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_low_power_inf_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_low_power_inf_en().bit()),
+                &self.icm_reg_axi_hwcfg_low_power_inf_en().bit(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi_num_masters",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi_num_masters().bits()),
+                &self.icm_reg_axi_hwcfg_axi_num_masters().bits(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi_num_slaves",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi_num_slaves().bits()),
+                &self.icm_reg_axi_hwcfg_axi_num_slaves().bits(),
             )
             .finish()
     }

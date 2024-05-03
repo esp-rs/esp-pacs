@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR1_HW_WAKEUP")
-            .field(
-                "adc1_hw_read_en_i",
-                &format_args!("{}", self.adc1_hw_read_en_i().bit()),
-            )
-            .field(
-                "adc1_hw_read_rate_i",
-                &format_args!("{}", self.adc1_hw_read_rate_i().bits()),
-            )
+            .field("adc1_hw_read_en_i", &self.adc1_hw_read_en_i().bit())
+            .field("adc1_hw_read_rate_i", &self.adc1_hw_read_rate_i().bits())
             .finish()
     }
 }

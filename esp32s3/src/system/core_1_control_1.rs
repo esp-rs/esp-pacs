@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_CONTROL_1")
             .field(
                 "control_core_1_message",
-                &format_args!("{}", self.control_core_1_message().bits()),
+                &self.control_core_1_message().bits(),
             )
             .finish()
     }

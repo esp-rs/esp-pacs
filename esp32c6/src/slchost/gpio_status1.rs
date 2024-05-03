@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_STATUS1")
-            .field(
-                "gpio_sdio_int1",
-                &format_args!("{}", self.gpio_sdio_int1().bits()),
-            )
+            .field("gpio_sdio_int1", &self.gpio_sdio_int1().bits())
             .finish()
     }
 }

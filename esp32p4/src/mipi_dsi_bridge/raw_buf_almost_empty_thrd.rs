@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("RAW_BUF_ALMOST_EMPTY_THRD")
             .field(
                 "dsi_raw_buf_almost_empty_thrd",
-                &format_args!("{}", self.dsi_raw_buf_almost_empty_thrd().bits()),
+                &self.dsi_raw_buf_almost_empty_thrd().bits(),
             )
             .finish()
     }

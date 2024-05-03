@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENDIAN_MODE")
-            .field(
-                "byte_endian_order",
-                &format_args!("{}", self.byte_endian_order().bit()),
-            )
-            .field(
-                "bit_endian_order",
-                &format_args!("{}", self.bit_endian_order().bit()),
-            )
+            .field("byte_endian_order", &self.byte_endian_order().bit())
+            .field("bit_endian_order", &self.bit_endian_order().bit())
             .finish()
     }
 }

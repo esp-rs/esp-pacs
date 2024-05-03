@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHYSICAL_ADDRESS")
-            .field(
-                "physical_address",
-                &format_args!("{}", self.physical_address().bits()),
-            )
+            .field("physical_address", &self.physical_address().bits())
             .finish()
     }
 }

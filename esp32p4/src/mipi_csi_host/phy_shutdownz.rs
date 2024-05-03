@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_SHUTDOWNZ")
-            .field(
-                "phy_shutdownz",
-                &format_args!("{}", self.phy_shutdownz().bit()),
-            )
+            .field("phy_shutdownz", &self.phy_shutdownz().bit())
             .finish()
     }
 }

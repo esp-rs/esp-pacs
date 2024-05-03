@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIME_UPDATE")
-            .field("time_valid", &format_args!("{}", self.time_valid().bit()))
+            .field("time_valid", &self.time_valid().bit())
             .finish()
     }
 }

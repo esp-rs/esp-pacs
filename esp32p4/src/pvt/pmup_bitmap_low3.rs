@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_BITMAP_LOW3")
-            .field(
-                "pump_bitmap_low3",
-                &format_args!("{}", self.pump_bitmap_low3().bits()),
-            )
+            .field("pump_bitmap_low3", &self.pump_bitmap_low3().bits())
             .finish()
     }
 }

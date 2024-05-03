@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_SLAVE_ADDR3")
-            .field(
-                "sar_i2c_slave_addr5",
-                &format_args!("{}", self.sar_i2c_slave_addr5().bits()),
-            )
-            .field(
-                "sar_i2c_slave_addr4",
-                &format_args!("{}", self.sar_i2c_slave_addr4().bits()),
-            )
+            .field("sar_i2c_slave_addr5", &self.sar_i2c_slave_addr5().bits())
+            .field("sar_i2c_slave_addr4", &self.sar_i2c_slave_addr4().bits())
             .finish()
     }
 }

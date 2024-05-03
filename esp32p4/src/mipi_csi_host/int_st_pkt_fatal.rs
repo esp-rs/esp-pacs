@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_PKT_FATAL")
-            .field(
-                "st_err_ecc_double",
-                &format_args!("{}", self.st_err_ecc_double().bit()),
-            )
-            .field(
-                "st_shorter_payload",
-                &format_args!("{}", self.st_shorter_payload().bit()),
-            )
+            .field("st_err_ecc_double", &self.st_err_ecc_double().bit())
+            .field("st_shorter_payload", &self.st_shorter_payload().bit())
             .finish()
     }
 }

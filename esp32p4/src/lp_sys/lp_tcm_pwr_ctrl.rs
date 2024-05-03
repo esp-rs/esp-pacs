@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_TCM_PWR_CTRL")
             .field(
                 "lp_tcm_rom_clk_force_on",
-                &format_args!("{}", self.lp_tcm_rom_clk_force_on().bit()),
+                &self.lp_tcm_rom_clk_force_on().bit(),
             )
             .field(
                 "lp_tcm_ram_clk_force_on",
-                &format_args!("{}", self.lp_tcm_ram_clk_force_on().bit()),
+                &self.lp_tcm_ram_clk_force_on().bit(),
             )
             .finish()
     }

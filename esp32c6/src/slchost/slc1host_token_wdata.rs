@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC1HOST_TOKEN_WDATA")
-            .field(
-                "slc1host_token0_wd",
-                &format_args!("{}", self.slc1host_token0_wd().bits()),
-            )
-            .field(
-                "slc1host_token1_wd",
-                &format_args!("{}", self.slc1host_token1_wd().bits()),
-            )
+            .field("slc1host_token0_wd", &self.slc1host_token0_wd().bits())
+            .field("slc1host_token1_wd", &self.slc1host_token1_wd().bits())
             .finish()
     }
 }

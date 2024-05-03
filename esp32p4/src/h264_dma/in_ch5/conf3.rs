@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF3")
-            .field(
-                "block_length_12line",
-                &format_args!("{}", self.block_length_12line().bits()),
-            )
-            .field(
-                "block_length_4line",
-                &format_args!("{}", self.block_length_4line().bits()),
-            )
+            .field("block_length_12line", &self.block_length_12line().bits())
+            .field("block_length_4line", &self.block_length_4line().bits())
             .finish()
     }
 }

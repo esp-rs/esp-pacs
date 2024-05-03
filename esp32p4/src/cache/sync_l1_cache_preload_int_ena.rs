@@ -110,52 +110,46 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYNC_L1_CACHE_PRELOAD_INT_ENA")
             .field(
                 "l1_icache0_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache0_pld_done_int_ena().bit()),
+                &self.l1_icache0_pld_done_int_ena().bit(),
             )
             .field(
                 "l1_icache1_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache1_pld_done_int_ena().bit()),
+                &self.l1_icache1_pld_done_int_ena().bit(),
             )
             .field(
                 "l1_icache2_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache2_pld_done_int_ena().bit()),
+                &self.l1_icache2_pld_done_int_ena().bit(),
             )
             .field(
                 "l1_icache3_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache3_pld_done_int_ena().bit()),
+                &self.l1_icache3_pld_done_int_ena().bit(),
             )
             .field(
                 "l1_dcache_pld_done_int_ena",
-                &format_args!("{}", self.l1_dcache_pld_done_int_ena().bit()),
+                &self.l1_dcache_pld_done_int_ena().bit(),
             )
-            .field(
-                "sync_done_int_ena",
-                &format_args!("{}", self.sync_done_int_ena().bit()),
-            )
+            .field("sync_done_int_ena", &self.sync_done_int_ena().bit())
             .field(
                 "l1_icache0_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache0_pld_err_int_ena().bit()),
+                &self.l1_icache0_pld_err_int_ena().bit(),
             )
             .field(
                 "l1_icache1_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache1_pld_err_int_ena().bit()),
+                &self.l1_icache1_pld_err_int_ena().bit(),
             )
             .field(
                 "l1_icache2_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache2_pld_err_int_ena().bit()),
+                &self.l1_icache2_pld_err_int_ena().bit(),
             )
             .field(
                 "l1_icache3_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache3_pld_err_int_ena().bit()),
+                &self.l1_icache3_pld_err_int_ena().bit(),
             )
             .field(
                 "l1_dcache_pld_err_int_ena",
-                &format_args!("{}", self.l1_dcache_pld_err_int_ena().bit()),
+                &self.l1_dcache_pld_err_int_ena().bit(),
             )
-            .field(
-                "sync_err_int_ena",
-                &format_args!("{}", self.sync_err_int_ena().bit()),
-            )
+            .field("sync_err_int_ena", &self.sync_err_int_ena().bit())
             .finish()
     }
 }

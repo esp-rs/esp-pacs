@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_AES_KEY_UPDATE")
-            .field(
-                "xts_aes_key_update",
-                &format_args!("{}", self.xts_aes_key_update().bit()),
-            )
+            .field("xts_aes_key_update", &self.xts_aes_key_update().bit())
             .finish()
     }
 }

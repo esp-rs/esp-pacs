@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_AREA_DRAM0_0_MAX")
             .field(
                 "core_0_area_dram0_0_max",
-                &format_args!("{}", self.core_0_area_dram0_0_max().bits()),
+                &self.core_0_area_dram0_0_max().bits(),
             )
             .finish()
     }

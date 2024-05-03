@@ -71,19 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_D_MODE")
-            .field("d_dqs_mode", &format_args!("{}", self.d_dqs_mode().bits()))
-            .field("d_cd_mode", &format_args!("{}", self.d_cd_mode().bits()))
-            .field("d_de_mode", &format_args!("{}", self.d_de_mode().bits()))
-            .field(
-                "d_hsync_mode",
-                &format_args!("{}", self.d_hsync_mode().bits()),
-            )
-            .field(
-                "d_vsync_mode",
-                &format_args!("{}", self.d_vsync_mode().bits()),
-            )
-            .field("de_idle_pol", &format_args!("{}", self.de_idle_pol().bit()))
-            .field("hs_blank_en", &format_args!("{}", self.hs_blank_en().bit()))
+            .field("d_dqs_mode", &self.d_dqs_mode().bits())
+            .field("d_cd_mode", &self.d_cd_mode().bits())
+            .field("d_de_mode", &self.d_de_mode().bits())
+            .field("d_hsync_mode", &self.d_hsync_mode().bits())
+            .field("d_vsync_mode", &self.d_vsync_mode().bits())
+            .field("de_idle_pol", &self.de_idle_pol().bit())
+            .field("hs_blank_en", &self.hs_blank_en().bit())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("GPIO_PAD_COMP_INT_MAP")
             .field(
                 "core0_gpio_pad_comp_int_map",
-                &format_args!("{}", self.core0_gpio_pad_comp_int_map().bits()),
+                &self.core0_gpio_pad_comp_int_map().bits(),
             )
             .finish()
     }

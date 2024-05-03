@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATUS1")
             .field(
                 "ch1_data_left_in_fifo",
-                &format_args!("{}", self.ch1_data_left_in_fifo().bits()),
+                &self.ch1_data_left_in_fifo().bits(),
             )
             .finish()
     }

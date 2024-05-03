@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWM_CONF")
-            .field("pwm_clk_en", &format_args!("{}", self.pwm_clk_en().bit()))
-            .field("pwm_rst_en", &format_args!("{}", self.pwm_rst_en().bit()))
+            .field("pwm_clk_en", &self.pwm_clk_en().bit())
+            .field("pwm_rst_en", &self.pwm_rst_en().bit())
             .finish()
     }
 }

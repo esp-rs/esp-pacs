@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_WAY_OBJECT")
-            .field(
-                "l2_cache_way_object",
-                &format_args!("{}", self.l2_cache_way_object().bits()),
-            )
+            .field("l2_cache_way_object", &self.l2_cache_way_object().bits())
             .finish()
     }
 }

@@ -44,31 +44,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTSIGNAL_ENABLE1")
             .field(
                 "ch1_enable_ecc_prot_chmem_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_chmem_correrr_intsignal().bit()
-                ),
+                &self.ch1_enable_ecc_prot_chmem_correrr_intsignal().bit(),
             )
             .field(
                 "ch1_enable_ecc_prot_chmem_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_chmem_uncorrerr_intsignal().bit()
-                ),
+                &self.ch1_enable_ecc_prot_chmem_uncorrerr_intsignal().bit(),
             )
             .field(
                 "ch1_enable_ecc_prot_uidmem_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_uidmem_correrr_intsignal().bit()
-                ),
+                &self.ch1_enable_ecc_prot_uidmem_correrr_intsignal().bit(),
             )
             .field(
                 "ch1_enable_ecc_prot_uidmem_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_uidmem_uncorrerr_intsignal().bit()
-                ),
+                &self.ch1_enable_ecc_prot_uidmem_uncorrerr_intsignal().bit(),
             )
             .finish()
     }

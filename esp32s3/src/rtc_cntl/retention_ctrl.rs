@@ -71,34 +71,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CTRL")
-            .field(
-                "retention_tag_mode",
-                &format_args!("{}", self.retention_tag_mode().bits()),
-            )
-            .field(
-                "retention_target",
-                &format_args!("{}", self.retention_target().bits()),
-            )
-            .field(
-                "retention_clk_sel",
-                &format_args!("{}", self.retention_clk_sel().bit()),
-            )
-            .field(
-                "retention_done_wait",
-                &format_args!("{}", self.retention_done_wait().bits()),
-            )
+            .field("retention_tag_mode", &self.retention_tag_mode().bits())
+            .field("retention_target", &self.retention_target().bits())
+            .field("retention_clk_sel", &self.retention_clk_sel().bit())
+            .field("retention_done_wait", &self.retention_done_wait().bits())
             .field(
                 "retention_clkoff_wait",
-                &format_args!("{}", self.retention_clkoff_wait().bits()),
+                &self.retention_clkoff_wait().bits(),
             )
-            .field(
-                "retention_en",
-                &format_args!("{}", self.retention_en().bit()),
-            )
-            .field(
-                "retention_wait",
-                &format_args!("{}", self.retention_wait().bits()),
-            )
+            .field("retention_en", &self.retention_en().bit())
+            .field("retention_wait", &self.retention_wait().bits())
             .finish()
     }
 }

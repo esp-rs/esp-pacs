@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INT_CLEAR")
-            .field(
-                "cpu_int_clear",
-                &format_args!("{}", self.cpu_int_clear().bits()),
-            )
+            .field("cpu_int_clear", &self.cpu_int_clear().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TMR_RD_CFG")
-            .field(
-                "max_rd_time",
-                &format_args!("{}", self.max_rd_time().bits()),
-            )
+            .field("max_rd_time", &self.max_rd_time().bits())
             .finish()
     }
 }

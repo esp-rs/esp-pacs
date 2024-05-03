@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL1")
-            .field(
-                "sleep_reject_ena",
-                &format_args!("{}", self.sleep_reject_ena().bits()),
-            )
-            .field(
-                "slp_reject_en",
-                &format_args!("{}", self.slp_reject_en().bit()),
-            )
+            .field("sleep_reject_ena", &self.sleep_reject_ena().bits())
+            .field("slp_reject_en", &self.slp_reject_en().bit())
             .finish()
     }
 }

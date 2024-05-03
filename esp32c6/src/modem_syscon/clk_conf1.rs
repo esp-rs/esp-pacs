@@ -224,98 +224,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF1")
-            .field(
-                "clk_wifibb_22m_en",
-                &format_args!("{}", self.clk_wifibb_22m_en().bit()),
-            )
-            .field(
-                "clk_wifibb_40m_en",
-                &format_args!("{}", self.clk_wifibb_40m_en().bit()),
-            )
-            .field(
-                "clk_wifibb_44m_en",
-                &format_args!("{}", self.clk_wifibb_44m_en().bit()),
-            )
-            .field(
-                "clk_wifibb_80m_en",
-                &format_args!("{}", self.clk_wifibb_80m_en().bit()),
-            )
-            .field(
-                "clk_wifibb_40x_en",
-                &format_args!("{}", self.clk_wifibb_40x_en().bit()),
-            )
-            .field(
-                "clk_wifibb_80x_en",
-                &format_args!("{}", self.clk_wifibb_80x_en().bit()),
-            )
-            .field(
-                "clk_wifibb_40x1_en",
-                &format_args!("{}", self.clk_wifibb_40x1_en().bit()),
-            )
-            .field(
-                "clk_wifibb_80x1_en",
-                &format_args!("{}", self.clk_wifibb_80x1_en().bit()),
-            )
-            .field(
-                "clk_wifibb_160x1_en",
-                &format_args!("{}", self.clk_wifibb_160x1_en().bit()),
-            )
-            .field(
-                "clk_wifimac_en",
-                &format_args!("{}", self.clk_wifimac_en().bit()),
-            )
-            .field(
-                "clk_wifi_apb_en",
-                &format_args!("{}", self.clk_wifi_apb_en().bit()),
-            )
-            .field(
-                "clk_fe_20m_en",
-                &format_args!("{}", self.clk_fe_20m_en().bit()),
-            )
-            .field(
-                "clk_fe_40m_en",
-                &format_args!("{}", self.clk_fe_40m_en().bit()),
-            )
-            .field(
-                "clk_fe_80m_en",
-                &format_args!("{}", self.clk_fe_80m_en().bit()),
-            )
-            .field(
-                "clk_fe_160m_en",
-                &format_args!("{}", self.clk_fe_160m_en().bit()),
-            )
-            .field(
-                "clk_fe_cal_160m_en",
-                &format_args!("{}", self.clk_fe_cal_160m_en().bit()),
-            )
-            .field(
-                "clk_fe_apb_en",
-                &format_args!("{}", self.clk_fe_apb_en().bit()),
-            )
-            .field(
-                "clk_bt_apb_en",
-                &format_args!("{}", self.clk_bt_apb_en().bit()),
-            )
-            .field("clk_bt_en", &format_args!("{}", self.clk_bt_en().bit()))
-            .field(
-                "clk_wifibb_480m_en",
-                &format_args!("{}", self.clk_wifibb_480m_en().bit()),
-            )
-            .field(
-                "clk_fe_480m_en",
-                &format_args!("{}", self.clk_fe_480m_en().bit()),
-            )
-            .field(
-                "clk_fe_anamode_40m_en",
-                &format_args!("{}", self.clk_fe_anamode_40m_en().bit()),
-            )
-            .field(
-                "clk_fe_anamode_80m_en",
-                &format_args!("{}", self.clk_fe_anamode_80m_en().bit()),
-            )
+            .field("clk_wifibb_22m_en", &self.clk_wifibb_22m_en().bit())
+            .field("clk_wifibb_40m_en", &self.clk_wifibb_40m_en().bit())
+            .field("clk_wifibb_44m_en", &self.clk_wifibb_44m_en().bit())
+            .field("clk_wifibb_80m_en", &self.clk_wifibb_80m_en().bit())
+            .field("clk_wifibb_40x_en", &self.clk_wifibb_40x_en().bit())
+            .field("clk_wifibb_80x_en", &self.clk_wifibb_80x_en().bit())
+            .field("clk_wifibb_40x1_en", &self.clk_wifibb_40x1_en().bit())
+            .field("clk_wifibb_80x1_en", &self.clk_wifibb_80x1_en().bit())
+            .field("clk_wifibb_160x1_en", &self.clk_wifibb_160x1_en().bit())
+            .field("clk_wifimac_en", &self.clk_wifimac_en().bit())
+            .field("clk_wifi_apb_en", &self.clk_wifi_apb_en().bit())
+            .field("clk_fe_20m_en", &self.clk_fe_20m_en().bit())
+            .field("clk_fe_40m_en", &self.clk_fe_40m_en().bit())
+            .field("clk_fe_80m_en", &self.clk_fe_80m_en().bit())
+            .field("clk_fe_160m_en", &self.clk_fe_160m_en().bit())
+            .field("clk_fe_cal_160m_en", &self.clk_fe_cal_160m_en().bit())
+            .field("clk_fe_apb_en", &self.clk_fe_apb_en().bit())
+            .field("clk_bt_apb_en", &self.clk_bt_apb_en().bit())
+            .field("clk_bt_en", &self.clk_bt_en().bit())
+            .field("clk_wifibb_480m_en", &self.clk_wifibb_480m_en().bit())
+            .field("clk_fe_480m_en", &self.clk_fe_480m_en().bit())
+            .field("clk_fe_anamode_40m_en", &self.clk_fe_anamode_40m_en().bit())
+            .field("clk_fe_anamode_80m_en", &self.clk_fe_anamode_80m_en().bit())
             .field(
                 "clk_fe_anamode_160m_en",
-                &format_args!("{}", self.clk_fe_anamode_160m_en().bit()),
+                &self.clk_fe_anamode_160m_en().bit(),
             )
             .finish()
     }

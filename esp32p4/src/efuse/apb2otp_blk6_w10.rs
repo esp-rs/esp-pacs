@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2OTP_BLK6_W10")
-            .field(
-                "apb2otp_block6_w10",
-                &format_args!("{}", self.apb2otp_block6_w10().bits()),
-            )
+            .field("apb2otp_block6_w10", &self.apb2otp_block6_w10().bits())
             .finish()
     }
 }

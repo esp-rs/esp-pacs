@@ -37,16 +37,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("FILTER_MATCH_CONTROL")
             .field(
                 "match_choice_privilege",
-                &format_args!("{}", self.match_choice_privilege().bit()),
+                &self.match_choice_privilege().bit(),
             )
-            .field(
-                "match_value_interrupt",
-                &format_args!("{}", self.match_value_interrupt().bit()),
-            )
-            .field(
-                "match_choice_ecause",
-                &format_args!("{}", self.match_choice_ecause().bits()),
-            )
+            .field("match_value_interrupt", &self.match_value_interrupt().bit())
+            .field("match_choice_ecause", &self.match_choice_ecause().bits())
             .finish()
     }
 }

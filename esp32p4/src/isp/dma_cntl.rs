@@ -46,19 +46,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_CNTL")
-            .field("dma_update", &format_args!("{}", self.dma_update().bit()))
-            .field(
-                "dma_data_type",
-                &format_args!("{}", self.dma_data_type().bits()),
-            )
-            .field(
-                "dma_burst_len",
-                &format_args!("{}", self.dma_burst_len().bits()),
-            )
-            .field(
-                "dma_interval",
-                &format_args!("{}", self.dma_interval().bits()),
-            )
+            .field("dma_update", &self.dma_update().bit())
+            .field("dma_data_type", &self.dma_data_type().bits())
+            .field("dma_burst_len", &self.dma_burst_len().bits())
+            .field("dma_interval", &self.dma_interval().bits())
             .finish()
     }
 }

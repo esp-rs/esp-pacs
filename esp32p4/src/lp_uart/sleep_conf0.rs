@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLEEP_CONF0")
-            .field("wk_char1", &format_args!("{}", self.wk_char1().bits()))
-            .field("wk_char2", &format_args!("{}", self.wk_char2().bits()))
-            .field("wk_char3", &format_args!("{}", self.wk_char3().bits()))
-            .field("wk_char4", &format_args!("{}", self.wk_char4().bits()))
+            .field("wk_char1", &self.wk_char1().bits())
+            .field("wk_char2", &self.wk_char2().bits())
+            .field("wk_char3", &self.wk_char3().bits())
+            .field("wk_char4", &self.wk_char4().bits())
             .finish()
     }
 }

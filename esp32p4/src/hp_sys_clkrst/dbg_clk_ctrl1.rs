@@ -53,17 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBG_CLK_CTRL1")
-            .field(
-                "dbg_ch1_div_num",
-                &format_args!("{}", self.dbg_ch1_div_num().bits()),
-            )
-            .field(
-                "dbg_ch2_div_num",
-                &format_args!("{}", self.dbg_ch2_div_num().bits()),
-            )
-            .field("dbg_ch0_en", &format_args!("{}", self.dbg_ch0_en().bit()))
-            .field("dbg_ch1_en", &format_args!("{}", self.dbg_ch1_en().bit()))
-            .field("dbg_ch2_en", &format_args!("{}", self.dbg_ch2_en().bit()))
+            .field("dbg_ch1_div_num", &self.dbg_ch1_div_num().bits())
+            .field("dbg_ch2_div_num", &self.dbg_ch2_div_num().bits())
+            .field("dbg_ch0_en", &self.dbg_ch0_en().bit())
+            .field("dbg_ch1_en", &self.dbg_ch1_en().bit())
+            .field("dbg_ch2_en", &self.dbg_ch2_en().bit())
             .finish()
     }
 }

@@ -53,20 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_RC_CONF1")
-            .field(
-                "b_chroma_dc_qp_delta",
-                &format_args!("{}", self.b_chroma_dc_qp_delta().bits()),
-            )
-            .field(
-                "b_chroma_qp_delta",
-                &format_args!("{}", self.b_chroma_qp_delta().bits()),
-            )
-            .field("b_qp_min", &format_args!("{}", self.b_qp_min().bits()))
-            .field("b_qp_max", &format_args!("{}", self.b_qp_max().bits()))
-            .field(
-                "b_mad_frame_pred",
-                &format_args!("{}", self.b_mad_frame_pred().bits()),
-            )
+            .field("b_chroma_dc_qp_delta", &self.b_chroma_dc_qp_delta().bits())
+            .field("b_chroma_qp_delta", &self.b_chroma_qp_delta().bits())
+            .field("b_qp_min", &self.b_qp_min().bits())
+            .field("b_qp_max", &self.b_qp_max().bits())
+            .field("b_mad_frame_pred", &self.b_mad_frame_pred().bits())
             .finish()
     }
 }

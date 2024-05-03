@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_PROBEA_CTRL")
-            .field(
-                "probe_a_mod_sel",
-                &format_args!("{}", self.probe_a_mod_sel().bits()),
-            )
-            .field(
-                "probe_a_top_sel",
-                &format_args!("{}", self.probe_a_top_sel().bits()),
-            )
-            .field(
-                "probe_l_sel",
-                &format_args!("{}", self.probe_l_sel().bits()),
-            )
-            .field(
-                "probe_h_sel",
-                &format_args!("{}", self.probe_h_sel().bits()),
-            )
-            .field(
-                "probe_global_en",
-                &format_args!("{}", self.probe_global_en().bit()),
-            )
+            .field("probe_a_mod_sel", &self.probe_a_mod_sel().bits())
+            .field("probe_a_top_sel", &self.probe_a_top_sel().bits())
+            .field("probe_l_sel", &self.probe_l_sel().bits())
+            .field("probe_h_sel", &self.probe_h_sel().bits())
+            .field("probe_global_en", &self.probe_global_en().bit())
             .finish()
     }
 }

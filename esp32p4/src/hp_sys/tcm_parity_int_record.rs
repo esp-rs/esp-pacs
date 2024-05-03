@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_PARITY_INT_RECORD")
             .field(
                 "tcm_parity_err_int_addr",
-                &format_args!("{}", self.tcm_parity_err_int_addr().bits()),
+                &self.tcm_parity_err_int_addr().bits(),
             )
             .finish()
     }

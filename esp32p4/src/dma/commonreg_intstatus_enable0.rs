@@ -182,99 +182,75 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMMONREG_INTSTATUS_ENABLE0")
             .field(
                 "enable_slvif_commonreg_dec_err_intstat",
-                &format_args!("{}", self.enable_slvif_commonreg_dec_err_intstat().bit()),
+                &self.enable_slvif_commonreg_dec_err_intstat().bit(),
             )
             .field(
                 "enable_slvif_commonreg_wr2ro_err_intstat",
-                &format_args!("{}", self.enable_slvif_commonreg_wr2ro_err_intstat().bit()),
+                &self.enable_slvif_commonreg_wr2ro_err_intstat().bit(),
             )
             .field(
                 "enable_slvif_commonreg_rd2wo_err_intstat",
-                &format_args!("{}", self.enable_slvif_commonreg_rd2wo_err_intstat().bit()),
+                &self.enable_slvif_commonreg_rd2wo_err_intstat().bit(),
             )
             .field(
                 "enable_slvif_commonreg_wronhold_err_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_wronhold_err_intstat().bit()
-                ),
+                &self.enable_slvif_commonreg_wronhold_err_intstat().bit(),
             )
             .field(
                 "enable_slvif_commonreg_wrparity_err_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_wrparity_err_intstat().bit()
-                ),
+                &self.enable_slvif_commonreg_wrparity_err_intstat().bit(),
             )
             .field(
                 "enable_slvif_undefinedreg_dec_err_intstat",
-                &format_args!("{}", self.enable_slvif_undefinedreg_dec_err_intstat().bit()),
+                &self.enable_slvif_undefinedreg_dec_err_intstat().bit(),
             )
             .field(
                 "enable_mxif1_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif1_rch0_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif1_rch0_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif1_rch0_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch0_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif1_rch0_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "enable_mxif1_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif1_rch1_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif1_rch1_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif1_rch1_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch1_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif1_rch1_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "enable_mxif1_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif1_bch_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif1_bch_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif1_bch_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_bch_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif1_bch_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif2_rch0_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif2_rch0_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_rch0_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch0_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif2_rch0_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif2_rch1_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif2_rch1_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_rch1_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch1_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif2_rch1_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.enable_mxif2_bch_eccprot_correrr_intstat().bit()),
+                &self.enable_mxif2_bch_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "enable_mxif2_bch_eccprot_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_bch_eccprot_uncorrerr_intstat().bit()
-                ),
+                &self.enable_mxif2_bch_eccprot_uncorrerr_intstat().bit(),
             )
             .finish()
     }

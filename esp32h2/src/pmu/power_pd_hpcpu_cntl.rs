@@ -80,38 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_HPCPU_CNTL")
-            .field(
-                "force_hp_cpu_reset",
-                &format_args!("{}", self.force_hp_cpu_reset().bit()),
-            )
-            .field(
-                "force_hp_cpu_iso",
-                &format_args!("{}", self.force_hp_cpu_iso().bit()),
-            )
-            .field(
-                "force_hp_cpu_pu",
-                &format_args!("{}", self.force_hp_cpu_pu().bit()),
-            )
-            .field(
-                "force_hp_cpu_no_reset",
-                &format_args!("{}", self.force_hp_cpu_no_reset().bit()),
-            )
-            .field(
-                "force_hp_cpu_no_iso",
-                &format_args!("{}", self.force_hp_cpu_no_iso().bit()),
-            )
-            .field(
-                "force_hp_cpu_pd",
-                &format_args!("{}", self.force_hp_cpu_pd().bit()),
-            )
-            .field(
-                "pd_hp_cpu_mask",
-                &format_args!("{}", self.pd_hp_cpu_mask().bits()),
-            )
-            .field(
-                "pd_hp_cpu_pd_mask",
-                &format_args!("{}", self.pd_hp_cpu_pd_mask().bits()),
-            )
+            .field("force_hp_cpu_reset", &self.force_hp_cpu_reset().bit())
+            .field("force_hp_cpu_iso", &self.force_hp_cpu_iso().bit())
+            .field("force_hp_cpu_pu", &self.force_hp_cpu_pu().bit())
+            .field("force_hp_cpu_no_reset", &self.force_hp_cpu_no_reset().bit())
+            .field("force_hp_cpu_no_iso", &self.force_hp_cpu_no_iso().bit())
+            .field("force_hp_cpu_pd", &self.force_hp_cpu_pd().bit())
+            .field("pd_hp_cpu_mask", &self.pd_hp_cpu_mask().bits())
+            .field("pd_hp_cpu_pd_mask", &self.pd_hp_cpu_pd_mask().bits())
             .finish()
     }
 }

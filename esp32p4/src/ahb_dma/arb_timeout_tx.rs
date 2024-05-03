@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ARB_TIMEOUT_TX")
-            .field(
-                "arb_timeout_tx",
-                &format_args!("{}", self.arb_timeout_tx().bits()),
-            )
+            .field("arb_timeout_tx", &self.arb_timeout_tx().bits())
             .finish()
     }
 }

@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_CLK_SEL")
-            .field(
-                "lp_i2s_tx_clk_sel",
-                &format_args!("{}", self.lp_i2s_tx_clk_sel().bits()),
-            )
-            .field(
-                "lp_i2s_rx_clk_sel",
-                &format_args!("{}", self.lp_i2s_rx_clk_sel().bits()),
-            )
-            .field(
-                "lp_i2c_clk_sel",
-                &format_args!("{}", self.lp_i2c_clk_sel().bits()),
-            )
-            .field(
-                "lp_uart_clk_sel",
-                &format_args!("{}", self.lp_uart_clk_sel().bits()),
-            )
+            .field("lp_i2s_tx_clk_sel", &self.lp_i2s_tx_clk_sel().bits())
+            .field("lp_i2s_rx_clk_sel", &self.lp_i2s_rx_clk_sel().bits())
+            .field("lp_i2c_clk_sel", &self.lp_i2c_clk_sel().bits())
+            .field("lp_uart_clk_sel", &self.lp_uart_clk_sel().bits())
             .finish()
     }
 }

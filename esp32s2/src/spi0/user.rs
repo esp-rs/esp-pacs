@@ -278,75 +278,36 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER")
-            .field("doutdin", &format_args!("{}", self.doutdin().bit()))
-            .field("qpi_mode", &format_args!("{}", self.qpi_mode().bit()))
-            .field("opi_mode", &format_args!("{}", self.opi_mode().bit()))
-            .field("tsck_i_edge", &format_args!("{}", self.tsck_i_edge().bit()))
-            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
-            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
-            .field("rsck_i_edge", &format_args!("{}", self.rsck_i_edge().bit()))
-            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
-            .field(
-                "rd_byte_order",
-                &format_args!("{}", self.rd_byte_order().bit()),
-            )
-            .field(
-                "wr_byte_order",
-                &format_args!("{}", self.wr_byte_order().bit()),
-            )
-            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
-            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
-            .field("fwrite_oct", &format_args!("{}", self.fwrite_oct().bit()))
-            .field(
-                "usr_conf_nxt",
-                &format_args!("{}", self.usr_conf_nxt().bit()),
-            )
-            .field("sio", &format_args!("{}", self.sio().bit()))
-            .field(
-                "usr_hold_pol",
-                &format_args!("{}", self.usr_hold_pol().bit()),
-            )
-            .field(
-                "usr_dout_hold",
-                &format_args!("{}", self.usr_dout_hold().bit()),
-            )
-            .field(
-                "usr_din_hold",
-                &format_args!("{}", self.usr_din_hold().bit()),
-            )
-            .field(
-                "usr_dummy_hold",
-                &format_args!("{}", self.usr_dummy_hold().bit()),
-            )
-            .field(
-                "usr_addr_hold",
-                &format_args!("{}", self.usr_addr_hold().bit()),
-            )
-            .field(
-                "usr_cmd_hold",
-                &format_args!("{}", self.usr_cmd_hold().bit()),
-            )
-            .field(
-                "usr_prep_hold",
-                &format_args!("{}", self.usr_prep_hold().bit()),
-            )
-            .field(
-                "usr_miso_highpart",
-                &format_args!("{}", self.usr_miso_highpart().bit()),
-            )
-            .field(
-                "usr_mosi_highpart",
-                &format_args!("{}", self.usr_mosi_highpart().bit()),
-            )
-            .field(
-                "usr_dummy_idle",
-                &format_args!("{}", self.usr_dummy_idle().bit()),
-            )
-            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
-            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
-            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
-            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
-            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .field("doutdin", &self.doutdin().bit())
+            .field("qpi_mode", &self.qpi_mode().bit())
+            .field("opi_mode", &self.opi_mode().bit())
+            .field("tsck_i_edge", &self.tsck_i_edge().bit())
+            .field("cs_hold", &self.cs_hold().bit())
+            .field("cs_setup", &self.cs_setup().bit())
+            .field("rsck_i_edge", &self.rsck_i_edge().bit())
+            .field("ck_out_edge", &self.ck_out_edge().bit())
+            .field("rd_byte_order", &self.rd_byte_order().bit())
+            .field("wr_byte_order", &self.wr_byte_order().bit())
+            .field("fwrite_dual", &self.fwrite_dual().bit())
+            .field("fwrite_quad", &self.fwrite_quad().bit())
+            .field("fwrite_oct", &self.fwrite_oct().bit())
+            .field("usr_conf_nxt", &self.usr_conf_nxt().bit())
+            .field("sio", &self.sio().bit())
+            .field("usr_hold_pol", &self.usr_hold_pol().bit())
+            .field("usr_dout_hold", &self.usr_dout_hold().bit())
+            .field("usr_din_hold", &self.usr_din_hold().bit())
+            .field("usr_dummy_hold", &self.usr_dummy_hold().bit())
+            .field("usr_addr_hold", &self.usr_addr_hold().bit())
+            .field("usr_cmd_hold", &self.usr_cmd_hold().bit())
+            .field("usr_prep_hold", &self.usr_prep_hold().bit())
+            .field("usr_miso_highpart", &self.usr_miso_highpart().bit())
+            .field("usr_mosi_highpart", &self.usr_mosi_highpart().bit())
+            .field("usr_dummy_idle", &self.usr_dummy_idle().bit())
+            .field("usr_mosi", &self.usr_mosi().bit())
+            .field("usr_miso", &self.usr_miso().bit())
+            .field("usr_dummy", &self.usr_dummy().bit())
+            .field("usr_addr", &self.usr_addr().bit())
+            .field("usr_command", &self.usr_command().bit())
             .finish()
     }
 }

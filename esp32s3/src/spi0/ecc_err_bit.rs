@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_ERR_BIT")
-            .field(
-                "ecc_data_err_bit",
-                &format_args!("{}", self.ecc_data_err_bit().bits()),
-            )
-            .field(
-                "ecc_chk_err_bit",
-                &format_args!("{}", self.ecc_chk_err_bit().bits()),
-            )
-            .field(
-                "ecc_byte_err",
-                &format_args!("{}", self.ecc_byte_err().bit()),
-            )
-            .field(
-                "ecc_err_cnt",
-                &format_args!("{}", self.ecc_err_cnt().bits()),
-            )
+            .field("ecc_data_err_bit", &self.ecc_data_err_bit().bits())
+            .field("ecc_chk_err_bit", &self.ecc_chk_err_bit().bits())
+            .field("ecc_byte_err", &self.ecc_byte_err().bit())
+            .field("ecc_err_cnt", &self.ecc_err_cnt().bits())
             .finish()
     }
 }

@@ -80,29 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTR")
-            .field(
-                "sda_force_out",
-                &format_args!("{}", self.sda_force_out().bit()),
-            )
-            .field(
-                "scl_force_out",
-                &format_args!("{}", self.scl_force_out().bit()),
-            )
-            .field(
-                "sample_scl_level",
-                &format_args!("{}", self.sample_scl_level().bit()),
-            )
-            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
-            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
-            .field(
-                "tx_lsb_first",
-                &format_args!("{}", self.tx_lsb_first().bit()),
-            )
-            .field(
-                "rx_lsb_first",
-                &format_args!("{}", self.rx_lsb_first().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("sda_force_out", &self.sda_force_out().bit())
+            .field("scl_force_out", &self.scl_force_out().bit())
+            .field("sample_scl_level", &self.sample_scl_level().bit())
+            .field("ms_mode", &self.ms_mode().bit())
+            .field("trans_start", &self.trans_start().bit())
+            .field("tx_lsb_first", &self.tx_lsb_first().bit())
+            .field("rx_lsb_first", &self.rx_lsb_first().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

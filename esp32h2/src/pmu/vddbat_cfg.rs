@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VDDBAT_CFG")
-            .field(
-                "vddbat_mode",
-                &format_args!("{}", self.vddbat_mode().bits()),
-            )
+            .field("vddbat_mode", &self.vddbat_mode().bits())
             .finish()
     }
 }

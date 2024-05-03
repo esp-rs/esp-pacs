@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BLK0_BACKUP1_W4")
             .field(
                 "otp_bebug_block0_backup1_w4",
-                &format_args!("{}", self.otp_bebug_block0_backup1_w4().bits()),
+                &self.otp_bebug_block0_backup1_w4().bits(),
             )
             .finish()
     }

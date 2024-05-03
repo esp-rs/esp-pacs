@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_AREA_DRAM0_0_MIN")
             .field(
                 "core_0_area_dram0_0_min",
-                &format_args!("{}", self.core_0_area_dram0_0_min().bits()),
+                &self.core_0_area_dram0_0_min().bits(),
             )
             .finish()
     }

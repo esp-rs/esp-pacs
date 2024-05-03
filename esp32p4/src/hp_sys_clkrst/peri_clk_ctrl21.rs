@@ -100,44 +100,23 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL21")
             .field(
                 "timergrp0_tgrt_clk_src_sel",
-                &format_args!("{}", self.timergrp0_tgrt_clk_src_sel().bits()),
+                &self.timergrp0_tgrt_clk_src_sel().bits(),
             )
             .field(
                 "timergrp0_tgrt_clk_div_num",
-                &format_args!("{}", self.timergrp0_tgrt_clk_div_num().bits()),
+                &self.timergrp0_tgrt_clk_div_num().bits(),
             )
-            .field(
-                "timergrp1_t0_src_sel",
-                &format_args!("{}", self.timergrp1_t0_src_sel().bits()),
-            )
-            .field(
-                "timergrp1_t0_clk_en",
-                &format_args!("{}", self.timergrp1_t0_clk_en().bit()),
-            )
-            .field(
-                "timergrp1_t1_src_sel",
-                &format_args!("{}", self.timergrp1_t1_src_sel().bits()),
-            )
-            .field(
-                "timergrp1_t1_clk_en",
-                &format_args!("{}", self.timergrp1_t1_clk_en().bit()),
-            )
+            .field("timergrp1_t0_src_sel", &self.timergrp1_t0_src_sel().bits())
+            .field("timergrp1_t0_clk_en", &self.timergrp1_t0_clk_en().bit())
+            .field("timergrp1_t1_src_sel", &self.timergrp1_t1_src_sel().bits())
+            .field("timergrp1_t1_clk_en", &self.timergrp1_t1_clk_en().bit())
             .field(
                 "timergrp1_wdt_src_sel",
-                &format_args!("{}", self.timergrp1_wdt_src_sel().bits()),
+                &self.timergrp1_wdt_src_sel().bits(),
             )
-            .field(
-                "timergrp1_wdt_clk_en",
-                &format_args!("{}", self.timergrp1_wdt_clk_en().bit()),
-            )
-            .field(
-                "systimer_clk_src_sel",
-                &format_args!("{}", self.systimer_clk_src_sel().bit()),
-            )
-            .field(
-                "systimer_clk_en",
-                &format_args!("{}", self.systimer_clk_en().bit()),
-            )
+            .field("timergrp1_wdt_clk_en", &self.timergrp1_wdt_clk_en().bit())
+            .field("systimer_clk_src_sel", &self.systimer_clk_src_sel().bit())
+            .field("systimer_clk_en", &self.systimer_clk_en().bit())
             .finish()
     }
 }

@@ -154,34 +154,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_DATA7")
-            .field("pin_state", &format_args!("{}", self.pin_state().bits()))
-            .field("chip_state", &format_args!("{}", self.chip_state().bits()))
-            .field("sdio_rst", &format_args!("{}", self.sdio_rst().bit()))
-            .field(
-                "sdio_ioready0",
-                &format_args!("{}", self.sdio_ioready0().bit()),
-            )
-            .field("sdio_mem_pd", &format_args!("{}", self.sdio_mem_pd().bit()))
-            .field(
-                "esdio_data1_int_en",
-                &format_args!("{}", self.esdio_data1_int_en().bit()),
-            )
-            .field(
-                "sdio_switch_volt_sw",
-                &format_args!("{}", self.sdio_switch_volt_sw().bit()),
-            )
-            .field(
-                "ddr50_blk_len_fix_en",
-                &format_args!("{}", self.ddr50_blk_len_fix_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field("sddr50", &format_args!("{}", self.sddr50().bit()))
-            .field("ssdr104", &format_args!("{}", self.ssdr104().bit()))
-            .field("ssdr50", &format_args!("{}", self.ssdr50().bit()))
-            .field("sdtd", &format_args!("{}", self.sdtd().bit()))
-            .field("sdta", &format_args!("{}", self.sdta().bit()))
-            .field("sdtc", &format_args!("{}", self.sdtc().bit()))
-            .field("sai", &format_args!("{}", self.sai().bit()))
+            .field("pin_state", &self.pin_state().bits())
+            .field("chip_state", &self.chip_state().bits())
+            .field("sdio_rst", &self.sdio_rst().bit())
+            .field("sdio_ioready0", &self.sdio_ioready0().bit())
+            .field("sdio_mem_pd", &self.sdio_mem_pd().bit())
+            .field("esdio_data1_int_en", &self.esdio_data1_int_en().bit())
+            .field("sdio_switch_volt_sw", &self.sdio_switch_volt_sw().bit())
+            .field("ddr50_blk_len_fix_en", &self.ddr50_blk_len_fix_en().bit())
+            .field("clk_en", &self.clk_en().bit())
+            .field("sddr50", &self.sddr50().bit())
+            .field("ssdr104", &self.ssdr104().bit())
+            .field("ssdr50", &self.ssdr50().bit())
+            .field("sdtd", &self.sdtd().bit())
+            .field("sdta", &self.sdta().bit())
+            .field("sdtc", &self.sdtc().bit())
+            .field("sai", &self.sai().bit())
             .finish()
     }
 }

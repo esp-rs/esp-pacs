@@ -75,34 +75,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_RESET_CAUSE")
             .field(
                 "lp_aonclkrst_lpcore_reset_cause",
-                &format_args!("{}", self.lp_aonclkrst_lpcore_reset_cause().bits()),
+                &self.lp_aonclkrst_lpcore_reset_cause().bits(),
             )
             .field(
                 "lp_aonclkrst_lpcore_reset_flag",
-                &format_args!("{}", self.lp_aonclkrst_lpcore_reset_flag().bit()),
+                &self.lp_aonclkrst_lpcore_reset_flag().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_reset_cause",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_reset_cause().bits()),
+                &self.lp_aonclkrst_hpcore0_reset_cause().bits(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_reset_flag",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_reset_flag().bit()),
+                &self.lp_aonclkrst_hpcore0_reset_flag().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_reset_cause",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_reset_cause().bits()),
+                &self.lp_aonclkrst_hpcore1_reset_cause().bits(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_reset_flag",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_reset_flag().bit()),
+                &self.lp_aonclkrst_hpcore1_reset_flag().bit(),
             )
             .field(
                 "lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask",
-                &format_args!(
-                    "{}",
-                    self.lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask().bit()
-                ),
+                &self.lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask().bit(),
             )
             .finish()
     }

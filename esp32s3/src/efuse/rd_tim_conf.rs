@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_TIM_CONF")
-            .field(
-                "read_init_num",
-                &format_args!("{}", self.read_init_num().bits()),
-            )
+            .field("read_init_num", &self.read_init_num().bits())
             .finish()
     }
 }

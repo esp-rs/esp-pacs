@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("FPGA_DEBUG_PROBE")
             .field(
                 "reg_i3c_mst_fpga_debug_probe",
-                &format_args!("{}", self.reg_i3c_mst_fpga_debug_probe().bits()),
+                &self.reg_i3c_mst_fpga_debug_probe().bits(),
             )
             .finish()
     }

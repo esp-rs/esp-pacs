@@ -26,10 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_MISC_CONFIG")
-            .field("dpi_en", &format_args!("{}", self.dpi_en().bit()))
+            .field("dpi_en", &self.dpi_en().bit())
             .field(
                 "fifo_underrun_discard_vcnt",
-                &format_args!("{}", self.fifo_underrun_discard_vcnt().bits()),
+                &self.fifo_underrun_discard_vcnt().bits(),
             )
             .finish()
     }

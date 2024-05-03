@@ -107,44 +107,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EX_PHYINF_CONF")
-            .field(
-                "int_revmii_rx_clk_sel",
-                &format_args!("{}", self.int_revmii_rx_clk_sel().bit()),
-            )
-            .field(
-                "ext_revmii_rx_clk_sel",
-                &format_args!("{}", self.ext_revmii_rx_clk_sel().bit()),
-            )
-            .field(
-                "sbd_flowctrl",
-                &format_args!("{}", self.sbd_flowctrl().bit()),
-            )
-            .field(
-                "core_phy_addr",
-                &format_args!("{}", self.core_phy_addr().bits()),
-            )
-            .field(
-                "revmii_phy_addr",
-                &format_args!("{}", self.revmii_phy_addr().bits()),
-            )
-            .field(
-                "phy_intf_sel",
-                &format_args!("{}", self.phy_intf_sel().bits()),
-            )
-            .field("ss_mode", &format_args!("{}", self.ss_mode().bit()))
-            .field(
-                "sbd_clk_gating_en",
-                &format_args!("{}", self.sbd_clk_gating_en().bit()),
-            )
-            .field("pmt_ctrl_en", &format_args!("{}", self.pmt_ctrl_en().bit()))
-            .field(
-                "scr_smi_dly_rx_sync",
-                &format_args!("{}", self.scr_smi_dly_rx_sync().bit()),
-            )
-            .field(
-                "tx_err_out_en",
-                &format_args!("{}", self.tx_err_out_en().bit()),
-            )
+            .field("int_revmii_rx_clk_sel", &self.int_revmii_rx_clk_sel().bit())
+            .field("ext_revmii_rx_clk_sel", &self.ext_revmii_rx_clk_sel().bit())
+            .field("sbd_flowctrl", &self.sbd_flowctrl().bit())
+            .field("core_phy_addr", &self.core_phy_addr().bits())
+            .field("revmii_phy_addr", &self.revmii_phy_addr().bits())
+            .field("phy_intf_sel", &self.phy_intf_sel().bits())
+            .field("ss_mode", &self.ss_mode().bit())
+            .field("sbd_clk_gating_en", &self.sbd_clk_gating_en().bit())
+            .field("pmt_ctrl_en", &self.pmt_ctrl_en().bit())
+            .field("scr_smi_dly_rx_sync", &self.scr_smi_dly_rx_sync().bit())
+            .field("tx_err_out_en", &self.tx_err_out_en().bit())
             .finish()
     }
 }

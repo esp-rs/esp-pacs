@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EDMA_CTRL")
-            .field("edma_clk_on", &format_args!("{}", self.edma_clk_on().bit()))
-            .field("edma_reset", &format_args!("{}", self.edma_reset().bit()))
+            .field("edma_clk_on", &self.edma_clk_on().bit())
+            .field("edma_reset", &self.edma_reset().bit())
             .finish()
     }
 }

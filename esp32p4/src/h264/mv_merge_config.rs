@@ -51,26 +51,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MV_MERGE_CONFIG")
-            .field(
-                "mv_merge_type",
-                &format_args!("{}", self.mv_merge_type().bits()),
-            )
-            .field(
-                "int_mv_out_en",
-                &format_args!("{}", self.int_mv_out_en().bit()),
-            )
-            .field(
-                "a_mv_merge_en",
-                &format_args!("{}", self.a_mv_merge_en().bit()),
-            )
-            .field(
-                "b_mv_merge_en",
-                &format_args!("{}", self.b_mv_merge_en().bit()),
-            )
-            .field(
-                "mb_valid_num",
-                &format_args!("{}", self.mb_valid_num().bits()),
-            )
+            .field("mv_merge_type", &self.mv_merge_type().bits())
+            .field("int_mv_out_en", &self.int_mv_out_en().bit())
+            .field("a_mv_merge_en", &self.a_mv_merge_en().bit())
+            .field("b_mv_merge_en", &self.b_mv_merge_en().bit())
+            .field("mb_valid_num", &self.mb_valid_num().bits())
             .finish()
     }
 }

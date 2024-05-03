@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATUS_NEXT1")
             .field(
                 "status_interrupt_next1",
-                &format_args!("{}", self.status_interrupt_next1().bits()),
+                &self.status_interrupt_next1().bits(),
             )
             .finish()
     }

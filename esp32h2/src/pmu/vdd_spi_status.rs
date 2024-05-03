@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("VDD_SPI_STATUS")
             .field(
                 "stable_vdd_spi_pwr_drv",
-                &format_args!("{}", self.stable_vdd_spi_pwr_drv().bit()),
+                &self.stable_vdd_spi_pwr_drv().bit(),
             )
             .finish()
     }

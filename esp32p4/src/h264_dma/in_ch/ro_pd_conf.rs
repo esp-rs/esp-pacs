@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RO_PD_CONF")
-            .field(
-                "in_ro_ram_clk_fo",
-                &format_args!("{}", self.in_ro_ram_clk_fo().bit()),
-            )
+            .field("in_ro_ram_clk_fo", &self.in_ro_ram_clk_fo().bit())
             .finish()
     }
 }

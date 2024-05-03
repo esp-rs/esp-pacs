@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER_CNT_CAP")
-            .field(
-                "timer_cnt_cap",
-                &format_args!("{}", self.timer_cnt_cap().bits()),
-            )
+            .field("timer_cnt_cap", &self.timer_cnt_cap().bits())
             .finish()
     }
 }

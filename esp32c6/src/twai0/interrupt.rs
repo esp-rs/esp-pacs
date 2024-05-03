@@ -62,35 +62,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT")
-            .field(
-                "receive_int_st",
-                &format_args!("{}", self.receive_int_st().bit()),
-            )
-            .field(
-                "transmit_int_st",
-                &format_args!("{}", self.transmit_int_st().bit()),
-            )
-            .field(
-                "err_warning_int_st",
-                &format_args!("{}", self.err_warning_int_st().bit()),
-            )
-            .field(
-                "data_overrun_int_st",
-                &format_args!("{}", self.data_overrun_int_st().bit()),
-            )
-            .field(
-                "err_passive_int_st",
-                &format_args!("{}", self.err_passive_int_st().bit()),
-            )
+            .field("receive_int_st", &self.receive_int_st().bit())
+            .field("transmit_int_st", &self.transmit_int_st().bit())
+            .field("err_warning_int_st", &self.err_warning_int_st().bit())
+            .field("data_overrun_int_st", &self.data_overrun_int_st().bit())
+            .field("err_passive_int_st", &self.err_passive_int_st().bit())
             .field(
                 "arbitration_lost_int_st",
-                &format_args!("{}", self.arbitration_lost_int_st().bit()),
+                &self.arbitration_lost_int_st().bit(),
             )
-            .field(
-                "bus_err_int_st",
-                &format_args!("{}", self.bus_err_int_st().bit()),
-            )
-            .field("idle_int_st", &format_args!("{}", self.idle_int_st().bit()))
+            .field("bus_err_int_st", &self.bus_err_int_st().bit())
+            .field("idle_int_st", &self.idle_int_st().bit())
             .finish()
     }
 }

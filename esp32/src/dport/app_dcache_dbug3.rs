@@ -83,41 +83,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_DCACHE_DBUG3")
-            .field(
-                "app_mmu_rdata",
-                &format_args!("{}", self.app_mmu_rdata().bits()),
-            )
+            .field("app_mmu_rdata", &self.app_mmu_rdata().bits())
             .field(
                 "app_cpu_disabled_cache_ia",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia().bits()),
+                &self.app_cpu_disabled_cache_ia().bits(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_opposite",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_opposite().bit()),
+                &self.app_cpu_disabled_cache_ia_opposite().bit(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_dram1",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_dram1().bit()),
+                &self.app_cpu_disabled_cache_ia_dram1().bit(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_irom0",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_irom0().bit()),
+                &self.app_cpu_disabled_cache_ia_irom0().bit(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_iram1",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_iram1().bit()),
+                &self.app_cpu_disabled_cache_ia_iram1().bit(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_iram0",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_iram0().bit()),
+                &self.app_cpu_disabled_cache_ia_iram0().bit(),
             )
             .field(
                 "app_cpu_disabled_cache_ia_drom0",
-                &format_args!("{}", self.app_cpu_disabled_cache_ia_drom0().bit()),
+                &self.app_cpu_disabled_cache_ia_drom0().bit(),
             )
             .field(
                 "app_cache_iram0_pid_error",
-                &format_args!("{}", self.app_cache_iram0_pid_error().bit()),
+                &self.app_cache_iram0_pid_error().bit(),
             )
             .finish()
     }

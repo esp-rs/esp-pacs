@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWC")
-            .field(
-                "pad_force_hold",
-                &format_args!("{}", self.pad_force_hold().bit()),
-            )
+            .field("pad_force_hold", &self.pad_force_hold().bit())
             .finish()
     }
 }

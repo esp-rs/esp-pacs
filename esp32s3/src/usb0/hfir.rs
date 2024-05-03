@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HFIR")
-            .field("frint", &format_args!("{}", self.frint().bits()))
-            .field("hfirrldctrl", &format_args!("{}", self.hfirrldctrl().bit()))
+            .field("frint", &self.frint().bits())
+            .field("hfirrldctrl", &self.hfirrldctrl().bit())
             .finish()
     }
 }

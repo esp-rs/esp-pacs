@@ -53,26 +53,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PG_CTRL")
-            .field(
-                "power_glitch_dsense",
-                &format_args!("{}", self.power_glitch_dsense().bits()),
-            )
-            .field(
-                "power_glitch_force_pd",
-                &format_args!("{}", self.power_glitch_force_pd().bit()),
-            )
-            .field(
-                "power_glitch_force_pu",
-                &format_args!("{}", self.power_glitch_force_pu().bit()),
-            )
+            .field("power_glitch_dsense", &self.power_glitch_dsense().bits())
+            .field("power_glitch_force_pd", &self.power_glitch_force_pd().bit())
+            .field("power_glitch_force_pu", &self.power_glitch_force_pu().bit())
             .field(
                 "power_glitch_efuse_sel",
-                &format_args!("{}", self.power_glitch_efuse_sel().bit()),
+                &self.power_glitch_efuse_sel().bit(),
             )
-            .field(
-                "power_glitch_en",
-                &format_args!("{}", self.power_glitch_en().bit()),
-            )
+            .field("power_glitch_en", &self.power_glitch_en().bit())
             .finish()
     }
 }

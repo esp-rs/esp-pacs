@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SW_CPU_STALL")
-            .field(
-                "sw_stall_procpu_c1",
-                &format_args!("{}", self.sw_stall_procpu_c1().bits()),
-            )
+            .field("sw_stall_procpu_c1", &self.sw_stall_procpu_c1().bits())
             .finish()
     }
 }

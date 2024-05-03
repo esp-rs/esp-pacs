@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_LINK_BASE")
-            .field(
-                "link_base_addr",
-                &format_args!("{}", self.link_base_addr().bits()),
-            )
+            .field("link_base_addr", &self.link_base_addr().bits())
             .finish()
     }
 }

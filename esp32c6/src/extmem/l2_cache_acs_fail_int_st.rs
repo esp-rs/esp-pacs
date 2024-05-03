@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_FAIL_INT_ST")
-            .field(
-                "l2_cache_fail_int_st",
-                &format_args!("{}", self.l2_cache_fail_int_st().bit()),
-            )
+            .field("l2_cache_fail_int_st", &self.l2_cache_fail_int_st().bit())
             .finish()
     }
 }

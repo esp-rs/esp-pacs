@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMEOUT_CONF")
-            .field(
-                "cpu_timeout_rst_en",
-                &format_args!("{}", self.cpu_timeout_rst_en().bit()),
-            )
-            .field(
-                "hp_timeout_rst_en",
-                &format_args!("{}", self.hp_timeout_rst_en().bit()),
-            )
+            .field("cpu_timeout_rst_en", &self.cpu_timeout_rst_en().bit())
+            .field("hp_timeout_rst_en", &self.hp_timeout_rst_en().bit())
             .finish()
     }
 }

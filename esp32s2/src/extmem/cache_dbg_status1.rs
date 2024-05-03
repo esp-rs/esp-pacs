@@ -190,108 +190,84 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_DBG_STATUS1")
             .field(
                 "dbus0_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus0_acs_msk_dcache_st().bit()),
+                &self.dbus0_acs_msk_dcache_st().bit(),
             )
             .field(
                 "dbus1_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus1_acs_msk_dcache_st().bit()),
+                &self.dbus1_acs_msk_dcache_st().bit(),
             )
             .field(
                 "dbus2_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus2_acs_msk_dcache_st().bit()),
+                &self.dbus2_acs_msk_dcache_st().bit(),
             )
-            .field(
-                "dbus0_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus1_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus2_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_cnt_ovf_st().bit()),
-            )
+            .field("dbus0_acs_cnt_ovf_st", &self.dbus0_acs_cnt_ovf_st().bit())
+            .field("dbus1_acs_cnt_ovf_st", &self.dbus1_acs_cnt_ovf_st().bit())
+            .field("dbus2_acs_cnt_ovf_st", &self.dbus2_acs_cnt_ovf_st().bit())
             .field(
                 "dbus0_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus0_acs_miss_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus1_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus1_acs_miss_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus2_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus2_acs_miss_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus0_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_wb_cnt_ovf_st().bit()),
+                &self.dbus0_acs_wb_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus1_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_wb_cnt_ovf_st().bit()),
+                &self.dbus1_acs_wb_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus2_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_wb_cnt_ovf_st().bit()),
+                &self.dbus2_acs_wb_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus0_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_abandon_cnt_ovf_st().bit()),
+                &self.dbus0_abandon_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus1_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_abandon_cnt_ovf_st().bit()),
+                &self.dbus1_abandon_cnt_ovf_st().bit(),
             )
             .field(
                 "dbus2_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_abandon_cnt_ovf_st().bit()),
+                &self.dbus2_abandon_cnt_ovf_st().bit(),
             )
             .field(
                 "dc_preload_miss_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_miss_cnt_ovf_st().bit()),
+                &self.dc_preload_miss_cnt_ovf_st().bit(),
             )
             .field(
                 "dc_preload_evict_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_evict_cnt_ovf_st().bit()),
+                &self.dc_preload_evict_cnt_ovf_st().bit(),
             )
-            .field(
-                "dc_preload_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dc_sync_size_fault_st",
-                &format_args!("{}", self.dc_sync_size_fault_st().bit()),
-            )
+            .field("dc_preload_cnt_ovf_st", &self.dc_preload_cnt_ovf_st().bit())
+            .field("dc_sync_size_fault_st", &self.dc_sync_size_fault_st().bit())
             .field(
                 "dc_preload_size_fault_st",
-                &format_args!("{}", self.dc_preload_size_fault_st().bit()),
+                &self.dc_preload_size_fault_st().bit(),
             )
-            .field(
-                "dcache_write_flash_st",
-                &format_args!("{}", self.dcache_write_flash_st().bit()),
-            )
-            .field(
-                "dcache_reject_st",
-                &format_args!("{}", self.dcache_reject_st().bit()),
-            )
+            .field("dcache_write_flash_st", &self.dcache_write_flash_st().bit())
+            .field("dcache_reject_st", &self.dcache_reject_st().bit())
             .field(
                 "dcache_set_preload_ilg_st",
-                &format_args!("{}", self.dcache_set_preload_ilg_st().bit()),
+                &self.dcache_set_preload_ilg_st().bit(),
             )
             .field(
                 "dcache_set_sync_ilg_st",
-                &format_args!("{}", self.dcache_set_sync_ilg_st().bit()),
+                &self.dcache_set_sync_ilg_st().bit(),
             )
             .field(
                 "dcache_set_lock_ilg_st",
-                &format_args!("{}", self.dcache_set_lock_ilg_st().bit()),
+                &self.dcache_set_lock_ilg_st().bit(),
             )
-            .field(
-                "mmu_entry_fault_st",
-                &format_args!("{}", self.mmu_entry_fault_st().bit()),
-            )
+            .field("mmu_entry_fault_st", &self.mmu_entry_fault_st().bit())
             .finish()
     }
 }

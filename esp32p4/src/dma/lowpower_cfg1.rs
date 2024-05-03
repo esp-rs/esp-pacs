@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOWPOWER_CFG1")
-            .field("glch_lpdly", &format_args!("{}", self.glch_lpdly().bits()))
-            .field("sbiu_lpdly", &format_args!("{}", self.sbiu_lpdly().bits()))
-            .field("mxif_lpdly", &format_args!("{}", self.mxif_lpdly().bits()))
+            .field("glch_lpdly", &self.glch_lpdly().bits())
+            .field("sbiu_lpdly", &self.sbiu_lpdly().bits())
+            .field("mxif_lpdly", &self.mxif_lpdly().bits())
             .finish()
     }
 }

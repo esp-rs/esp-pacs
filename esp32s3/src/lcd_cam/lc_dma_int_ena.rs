@@ -44,22 +44,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LC_DMA_INT_ENA")
-            .field(
-                "lcd_vsync_int_ena",
-                &format_args!("{}", self.lcd_vsync_int_ena().bit()),
-            )
+            .field("lcd_vsync_int_ena", &self.lcd_vsync_int_ena().bit())
             .field(
                 "lcd_trans_done_int_ena",
-                &format_args!("{}", self.lcd_trans_done_int_ena().bit()),
+                &self.lcd_trans_done_int_ena().bit(),
             )
-            .field(
-                "cam_vsync_int_ena",
-                &format_args!("{}", self.cam_vsync_int_ena().bit()),
-            )
-            .field(
-                "cam_hs_int_ena",
-                &format_args!("{}", self.cam_hs_int_ena().bit()),
-            )
+            .field("cam_vsync_int_ena", &self.cam_vsync_int_ena().bit())
+            .field("cam_hs_int_ena", &self.cam_hs_int_ena().bit())
             .finish()
     }
 }

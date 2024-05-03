@@ -42,22 +42,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_SYNC_CTRL")
-            .field(
-                "dcache_invalidate_ena",
-                &format_args!("{}", self.dcache_invalidate_ena().bit()),
-            )
-            .field(
-                "dcache_writeback_ena",
-                &format_args!("{}", self.dcache_writeback_ena().bit()),
-            )
-            .field(
-                "dcache_clean_ena",
-                &format_args!("{}", self.dcache_clean_ena().bit()),
-            )
-            .field(
-                "dcache_sync_done",
-                &format_args!("{}", self.dcache_sync_done().bit()),
-            )
+            .field("dcache_invalidate_ena", &self.dcache_invalidate_ena().bit())
+            .field("dcache_writeback_ena", &self.dcache_writeback_ena().bit())
+            .field("dcache_clean_ena", &self.dcache_clean_ena().bit())
+            .field("dcache_sync_done", &self.dcache_sync_done().bit())
             .finish()
     }
 }

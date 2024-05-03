@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_LUT_CFG0")
-            .field("rx_lut_idx", &format_args!("{}", self.rx_lut_idx().bits()))
-            .field(
-                "rx_lut_mode",
-                &format_args!("{}", self.rx_lut_mode().bits()),
-            )
+            .field("rx_lut_idx", &self.rx_lut_idx().bits())
+            .field("rx_lut_mode", &self.rx_lut_mode().bits())
             .finish()
     }
 }

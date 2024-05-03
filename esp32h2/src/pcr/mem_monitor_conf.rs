@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_MONITOR_CONF")
-            .field(
-                "mem_monitor_clk_en",
-                &format_args!("{}", self.mem_monitor_clk_en().bit()),
-            )
-            .field(
-                "mem_monitor_rst_en",
-                &format_args!("{}", self.mem_monitor_rst_en().bit()),
-            )
-            .field(
-                "mem_monitor_ready",
-                &format_args!("{}", self.mem_monitor_ready().bit()),
-            )
+            .field("mem_monitor_clk_en", &self.mem_monitor_clk_en().bit())
+            .field("mem_monitor_rst_en", &self.mem_monitor_rst_en().bit())
+            .field("mem_monitor_ready", &self.mem_monitor_ready().bit())
             .finish()
     }
 }

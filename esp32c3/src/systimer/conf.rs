@@ -107,47 +107,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field(
-                "systimer_clk_fo",
-                &format_args!("{}", self.systimer_clk_fo().bit()),
-            )
-            .field(
-                "target2_work_en",
-                &format_args!("{}", self.target2_work_en().bit()),
-            )
-            .field(
-                "target1_work_en",
-                &format_args!("{}", self.target1_work_en().bit()),
-            )
-            .field(
-                "target0_work_en",
-                &format_args!("{}", self.target0_work_en().bit()),
-            )
+            .field("systimer_clk_fo", &self.systimer_clk_fo().bit())
+            .field("target2_work_en", &self.target2_work_en().bit())
+            .field("target1_work_en", &self.target1_work_en().bit())
+            .field("target0_work_en", &self.target0_work_en().bit())
             .field(
                 "timer_unit1_core1_stall_en",
-                &format_args!("{}", self.timer_unit1_core1_stall_en().bit()),
+                &self.timer_unit1_core1_stall_en().bit(),
             )
             .field(
                 "timer_unit1_core0_stall_en",
-                &format_args!("{}", self.timer_unit1_core0_stall_en().bit()),
+                &self.timer_unit1_core0_stall_en().bit(),
             )
             .field(
                 "timer_unit0_core1_stall_en",
-                &format_args!("{}", self.timer_unit0_core1_stall_en().bit()),
+                &self.timer_unit0_core1_stall_en().bit(),
             )
             .field(
                 "timer_unit0_core0_stall_en",
-                &format_args!("{}", self.timer_unit0_core0_stall_en().bit()),
+                &self.timer_unit0_core0_stall_en().bit(),
             )
-            .field(
-                "timer_unit1_work_en",
-                &format_args!("{}", self.timer_unit1_work_en().bit()),
-            )
-            .field(
-                "timer_unit0_work_en",
-                &format_args!("{}", self.timer_unit0_work_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("timer_unit1_work_en", &self.timer_unit1_work_en().bit())
+            .field("timer_unit0_work_en", &self.timer_unit0_work_en().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

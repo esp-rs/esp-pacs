@@ -73,32 +73,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_IRAM0_3")
             .field(
                 "pro_iram0_rtcfast_spltaddr",
-                &format_args!("{}", self.pro_iram0_rtcfast_spltaddr().bits()),
+                &self.pro_iram0_rtcfast_spltaddr().bits(),
             )
-            .field(
-                "pro_iram0_rtcfast_l_f",
-                &format_args!("{}", self.pro_iram0_rtcfast_l_f().bit()),
-            )
-            .field(
-                "pro_iram0_rtcfast_l_r",
-                &format_args!("{}", self.pro_iram0_rtcfast_l_r().bit()),
-            )
-            .field(
-                "pro_iram0_rtcfast_l_w",
-                &format_args!("{}", self.pro_iram0_rtcfast_l_w().bit()),
-            )
-            .field(
-                "pro_iram0_rtcfast_h_f",
-                &format_args!("{}", self.pro_iram0_rtcfast_h_f().bit()),
-            )
-            .field(
-                "pro_iram0_rtcfast_h_r",
-                &format_args!("{}", self.pro_iram0_rtcfast_h_r().bit()),
-            )
-            .field(
-                "pro_iram0_rtcfast_h_w",
-                &format_args!("{}", self.pro_iram0_rtcfast_h_w().bit()),
-            )
+            .field("pro_iram0_rtcfast_l_f", &self.pro_iram0_rtcfast_l_f().bit())
+            .field("pro_iram0_rtcfast_l_r", &self.pro_iram0_rtcfast_l_r().bit())
+            .field("pro_iram0_rtcfast_l_w", &self.pro_iram0_rtcfast_l_w().bit())
+            .field("pro_iram0_rtcfast_h_f", &self.pro_iram0_rtcfast_h_f().bit())
+            .field("pro_iram0_rtcfast_h_r", &self.pro_iram0_rtcfast_h_r().bit())
+            .field("pro_iram0_rtcfast_h_w", &self.pro_iram0_rtcfast_h_w().bit())
             .finish()
     }
 }

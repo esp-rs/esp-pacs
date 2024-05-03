@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_DSCR_CONF")
-            .field(
-                "wr_retry_threshold",
-                &format_args!("{}", self.wr_retry_threshold().bits()),
-            )
+            .field("wr_retry_threshold", &self.wr_retry_threshold().bits())
             .finish()
     }
 }

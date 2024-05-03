@@ -188,56 +188,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_INT_RAW")
-            .field(
-                "dma_infifo_full_err",
-                &format_args!("{}", self.dma_infifo_full_err().bit()),
-            )
-            .field(
-                "dma_outfifo_empty_err",
-                &format_args!("{}", self.dma_outfifo_empty_err().bit()),
-            )
-            .field("slv_ex_qpi", &format_args!("{}", self.slv_ex_qpi().bit()))
-            .field("slv_en_qpi", &format_args!("{}", self.slv_en_qpi().bit()))
-            .field("slv_cmd7", &format_args!("{}", self.slv_cmd7().bit()))
-            .field("slv_cmd8", &format_args!("{}", self.slv_cmd8().bit()))
-            .field("slv_cmd9", &format_args!("{}", self.slv_cmd9().bit()))
-            .field("slv_cmda", &format_args!("{}", self.slv_cmda().bit()))
-            .field(
-                "slv_rd_dma_done",
-                &format_args!("{}", self.slv_rd_dma_done().bit()),
-            )
-            .field(
-                "slv_wr_dma_done",
-                &format_args!("{}", self.slv_wr_dma_done().bit()),
-            )
-            .field(
-                "slv_rd_buf_done",
-                &format_args!("{}", self.slv_rd_buf_done().bit()),
-            )
-            .field(
-                "slv_wr_buf_done",
-                &format_args!("{}", self.slv_wr_buf_done().bit()),
-            )
-            .field("trans_done", &format_args!("{}", self.trans_done().bit()))
-            .field(
-                "dma_seg_trans_done",
-                &format_args!("{}", self.dma_seg_trans_done().bit()),
-            )
-            .field(
-                "slv_buf_addr_err",
-                &format_args!("{}", self.slv_buf_addr_err().bit()),
-            )
-            .field("slv_cmd_err", &format_args!("{}", self.slv_cmd_err().bit()))
+            .field("dma_infifo_full_err", &self.dma_infifo_full_err().bit())
+            .field("dma_outfifo_empty_err", &self.dma_outfifo_empty_err().bit())
+            .field("slv_ex_qpi", &self.slv_ex_qpi().bit())
+            .field("slv_en_qpi", &self.slv_en_qpi().bit())
+            .field("slv_cmd7", &self.slv_cmd7().bit())
+            .field("slv_cmd8", &self.slv_cmd8().bit())
+            .field("slv_cmd9", &self.slv_cmd9().bit())
+            .field("slv_cmda", &self.slv_cmda().bit())
+            .field("slv_rd_dma_done", &self.slv_rd_dma_done().bit())
+            .field("slv_wr_dma_done", &self.slv_wr_dma_done().bit())
+            .field("slv_rd_buf_done", &self.slv_rd_buf_done().bit())
+            .field("slv_wr_buf_done", &self.slv_wr_buf_done().bit())
+            .field("trans_done", &self.trans_done().bit())
+            .field("dma_seg_trans_done", &self.dma_seg_trans_done().bit())
+            .field("slv_buf_addr_err", &self.slv_buf_addr_err().bit())
+            .field("slv_cmd_err", &self.slv_cmd_err().bit())
             .field(
                 "mst_rx_afifo_wfull_err",
-                &format_args!("{}", self.mst_rx_afifo_wfull_err().bit()),
+                &self.mst_rx_afifo_wfull_err().bit(),
             )
             .field(
                 "mst_tx_afifo_rempty_err",
-                &format_args!("{}", self.mst_tx_afifo_rempty_err().bit()),
+                &self.mst_tx_afifo_rempty_err().bit(),
             )
-            .field("app2", &format_args!("{}", self.app2().bit()))
-            .field("app1", &format_args!("{}", self.app1().bit()))
+            .field("app2", &self.app2().bit())
+            .field("app1", &self.app1().bit())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AWB_TH_LUM")
-            .field(
-                "awb_min_lum",
-                &format_args!("{}", self.awb_min_lum().bits()),
-            )
-            .field(
-                "awb_max_lum",
-                &format_args!("{}", self.awb_max_lum().bits()),
-            )
+            .field("awb_min_lum", &self.awb_min_lum().bits())
+            .field("awb_max_lum", &self.awb_max_lum().bits())
             .finish()
     }
 }

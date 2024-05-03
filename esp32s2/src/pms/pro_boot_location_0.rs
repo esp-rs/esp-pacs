@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_BOOT_LOCATION_0")
             .field(
                 "pro_boot_location_lock",
-                &format_args!("{}", self.pro_boot_location_lock().bit()),
+                &self.pro_boot_location_lock().bit(),
             )
             .finish()
     }

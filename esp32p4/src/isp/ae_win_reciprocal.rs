@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_WIN_RECIPROCAL")
-            .field(
-                "ae_subwin_recip",
-                &format_args!("{}", self.ae_subwin_recip().bits()),
-            )
+            .field("ae_subwin_recip", &self.ae_subwin_recip().bits())
             .finish()
     }
 }

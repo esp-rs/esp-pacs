@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_PVT")
-            .field(
-                "mem_path_len",
-                &format_args!("{}", self.mem_path_len().bits()),
-            )
-            .field("monitor_en", &format_args!("{}", self.monitor_en().bit()))
-            .field(
-                "mem_timing_err_cnt",
-                &format_args!("{}", self.mem_timing_err_cnt().bits()),
-            )
-            .field("mem_vt_sel", &format_args!("{}", self.mem_vt_sel().bits()))
+            .field("mem_path_len", &self.mem_path_len().bits())
+            .field("monitor_en", &self.monitor_en().bit())
+            .field("mem_timing_err_cnt", &self.mem_timing_err_cnt().bits())
+            .field("mem_vt_sel", &self.mem_vt_sel().bits())
             .finish()
     }
 }

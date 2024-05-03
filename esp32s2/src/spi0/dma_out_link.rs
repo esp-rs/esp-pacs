@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_OUT_LINK")
-            .field(
-                "outlink_addr",
-                &format_args!("{}", self.outlink_addr().bits()),
-            )
-            .field(
-                "outlink_stop",
-                &format_args!("{}", self.outlink_stop().bit()),
-            )
-            .field(
-                "outlink_start",
-                &format_args!("{}", self.outlink_start().bit()),
-            )
-            .field(
-                "outlink_restart",
-                &format_args!("{}", self.outlink_restart().bit()),
-            )
-            .field("dma_tx_ena", &format_args!("{}", self.dma_tx_ena().bit()))
+            .field("outlink_addr", &self.outlink_addr().bits())
+            .field("outlink_stop", &self.outlink_stop().bit())
+            .field("outlink_start", &self.outlink_start().bit())
+            .field("outlink_restart", &self.outlink_restart().bit())
+            .field("dma_tx_ena", &self.dma_tx_ena().bit())
             .finish()
     }
 }

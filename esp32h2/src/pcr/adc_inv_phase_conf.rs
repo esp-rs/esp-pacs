@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC_INV_PHASE_CONF")
-            .field(
-                "clk_adc_inv_phase_ena",
-                &format_args!("{}", self.clk_adc_inv_phase_ena().bit()),
-            )
+            .field("clk_adc_inv_phase_ena", &self.clk_adc_inv_phase_ena().bit())
             .finish()
     }
 }

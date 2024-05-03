@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTAL32K_CONF")
-            .field(
-                "xtal32k_return_wait",
-                &format_args!("{}", self.xtal32k_return_wait().bits()),
-            )
-            .field(
-                "xtal32k_restart_wait",
-                &format_args!("{}", self.xtal32k_restart_wait().bits()),
-            )
-            .field(
-                "xtal32k_wdt_timeout",
-                &format_args!("{}", self.xtal32k_wdt_timeout().bits()),
-            )
-            .field(
-                "xtal32k_stable_thres",
-                &format_args!("{}", self.xtal32k_stable_thres().bits()),
-            )
+            .field("xtal32k_return_wait", &self.xtal32k_return_wait().bits())
+            .field("xtal32k_restart_wait", &self.xtal32k_restart_wait().bits())
+            .field("xtal32k_wdt_timeout", &self.xtal32k_wdt_timeout().bits())
+            .field("xtal32k_stable_thres", &self.xtal32k_stable_thres().bits())
             .finish()
     }
 }

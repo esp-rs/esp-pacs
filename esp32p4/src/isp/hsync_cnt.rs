@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HSYNC_CNT")
-            .field("hsync_cnt", &format_args!("{}", self.hsync_cnt().bits()))
+            .field("hsync_cnt", &self.hsync_cnt().bits())
             .finish()
     }
 }

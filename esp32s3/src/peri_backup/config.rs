@@ -71,19 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field("flow_err", &format_args!("{}", self.flow_err().bits()))
-            .field(
-                "addr_map_mode",
-                &format_args!("{}", self.addr_map_mode().bit()),
-            )
-            .field(
-                "burst_limit",
-                &format_args!("{}", self.burst_limit().bits()),
-            )
-            .field("tout_thres", &format_args!("{}", self.tout_thres().bits()))
-            .field("size", &format_args!("{}", self.size().bits()))
-            .field("to_mem", &format_args!("{}", self.to_mem().bit()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
+            .field("flow_err", &self.flow_err().bits())
+            .field("addr_map_mode", &self.addr_map_mode().bit())
+            .field("burst_limit", &self.burst_limit().bits())
+            .field("tout_thres", &self.tout_thres().bits())
+            .field("size", &self.size().bits())
+            .field("to_mem", &self.to_mem().bit())
+            .field("ena", &self.ena().bit())
             .finish()
     }
 }

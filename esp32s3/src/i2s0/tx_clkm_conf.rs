@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CLKM_CONF")
-            .field(
-                "tx_clkm_div_num",
-                &format_args!("{}", self.tx_clkm_div_num().bits()),
-            )
-            .field(
-                "tx_clk_active",
-                &format_args!("{}", self.tx_clk_active().bit()),
-            )
-            .field("tx_clk_sel", &format_args!("{}", self.tx_clk_sel().bits()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("tx_clkm_div_num", &self.tx_clkm_div_num().bits())
+            .field("tx_clk_active", &self.tx_clk_active().bit())
+            .field("tx_clk_sel", &self.tx_clk_sel().bits())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

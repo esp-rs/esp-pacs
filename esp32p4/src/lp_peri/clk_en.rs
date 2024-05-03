@@ -152,67 +152,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_EN")
-            .field("ck_en_rng", &format_args!("{}", self.ck_en_rng().bit()))
-            .field(
-                "ck_en_lp_tsens",
-                &format_args!("{}", self.ck_en_lp_tsens().bit()),
-            )
-            .field(
-                "ck_en_lp_pms",
-                &format_args!("{}", self.ck_en_lp_pms().bit()),
-            )
-            .field(
-                "ck_en_lp_efuse",
-                &format_args!("{}", self.ck_en_lp_efuse().bit()),
-            )
-            .field(
-                "ck_en_lp_iomux",
-                &format_args!("{}", self.ck_en_lp_iomux().bit()),
-            )
-            .field(
-                "ck_en_lp_touch",
-                &format_args!("{}", self.ck_en_lp_touch().bit()),
-            )
-            .field(
-                "ck_en_lp_spi",
-                &format_args!("{}", self.ck_en_lp_spi().bit()),
-            )
-            .field(
-                "ck_en_lp_adc",
-                &format_args!("{}", self.ck_en_lp_adc().bit()),
-            )
-            .field(
-                "ck_en_lp_i2s_tx",
-                &format_args!("{}", self.ck_en_lp_i2s_tx().bit()),
-            )
-            .field(
-                "ck_en_lp_i2s_rx",
-                &format_args!("{}", self.ck_en_lp_i2s_rx().bit()),
-            )
-            .field(
-                "ck_en_lp_i2s",
-                &format_args!("{}", self.ck_en_lp_i2s().bit()),
-            )
-            .field(
-                "ck_en_lp_i2cmst",
-                &format_args!("{}", self.ck_en_lp_i2cmst().bit()),
-            )
-            .field(
-                "ck_en_lp_i2c",
-                &format_args!("{}", self.ck_en_lp_i2c().bit()),
-            )
-            .field(
-                "ck_en_lp_uart",
-                &format_args!("{}", self.ck_en_lp_uart().bit()),
-            )
-            .field(
-                "ck_en_lp_intr",
-                &format_args!("{}", self.ck_en_lp_intr().bit()),
-            )
-            .field(
-                "ck_en_lp_core",
-                &format_args!("{}", self.ck_en_lp_core().bit()),
-            )
+            .field("ck_en_rng", &self.ck_en_rng().bit())
+            .field("ck_en_lp_tsens", &self.ck_en_lp_tsens().bit())
+            .field("ck_en_lp_pms", &self.ck_en_lp_pms().bit())
+            .field("ck_en_lp_efuse", &self.ck_en_lp_efuse().bit())
+            .field("ck_en_lp_iomux", &self.ck_en_lp_iomux().bit())
+            .field("ck_en_lp_touch", &self.ck_en_lp_touch().bit())
+            .field("ck_en_lp_spi", &self.ck_en_lp_spi().bit())
+            .field("ck_en_lp_adc", &self.ck_en_lp_adc().bit())
+            .field("ck_en_lp_i2s_tx", &self.ck_en_lp_i2s_tx().bit())
+            .field("ck_en_lp_i2s_rx", &self.ck_en_lp_i2s_rx().bit())
+            .field("ck_en_lp_i2s", &self.ck_en_lp_i2s().bit())
+            .field("ck_en_lp_i2cmst", &self.ck_en_lp_i2cmst().bit())
+            .field("ck_en_lp_i2c", &self.ck_en_lp_i2c().bit())
+            .field("ck_en_lp_uart", &self.ck_en_lp_uart().bit())
+            .field("ck_en_lp_intr", &self.ck_en_lp_intr().bit())
+            .field("ck_en_lp_core", &self.ck_en_lp_core().bit())
             .finish()
     }
 }

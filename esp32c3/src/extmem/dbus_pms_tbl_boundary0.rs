@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBUS_PMS_TBL_BOUNDARY0")
-            .field(
-                "dbus_pms_boundary0",
-                &format_args!("{}", self.dbus_pms_boundary0().bits()),
-            )
+            .field("dbus_pms_boundary0", &self.dbus_pms_boundary0().bits())
             .finish()
     }
 }

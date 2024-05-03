@@ -46,19 +46,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("BUFFER_THLD_CTRL")
             .field(
                 "reg_cmd_buf_empty_thld",
-                &format_args!("{}", self.reg_cmd_buf_empty_thld().bits()),
+                &self.reg_cmd_buf_empty_thld().bits(),
             )
-            .field(
-                "reg_resp_buf_thld",
-                &format_args!("{}", self.reg_resp_buf_thld().bits()),
-            )
+            .field("reg_resp_buf_thld", &self.reg_resp_buf_thld().bits())
             .field(
                 "reg_ibi_data_buf_thld",
-                &format_args!("{}", self.reg_ibi_data_buf_thld().bits()),
+                &self.reg_ibi_data_buf_thld().bits(),
             )
             .field(
                 "reg_ibi_status_buf_thld",
-                &format_args!("{}", self.reg_ibi_status_buf_thld().bits()),
+                &self.reg_ibi_status_buf_thld().bits(),
             )
             .finish()
     }

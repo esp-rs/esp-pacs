@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_FREQ_CONF")
-            .field(
-                "apb_decrease_div_num",
-                &format_args!("{}", self.apb_decrease_div_num().bits()),
-            )
-            .field(
-                "apb_div_num",
-                &format_args!("{}", self.apb_div_num().bits()),
-            )
+            .field("apb_decrease_div_num", &self.apb_decrease_div_num().bits())
+            .field("apb_div_num", &self.apb_div_num().bits())
             .finish()
     }
 }

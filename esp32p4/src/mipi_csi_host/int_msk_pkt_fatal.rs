@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK_PKT_FATAL")
-            .field(
-                "mask_err_ecc_double",
-                &format_args!("{}", self.mask_err_ecc_double().bit()),
-            )
-            .field(
-                "mask_shorter_payload",
-                &format_args!("{}", self.mask_shorter_payload().bit()),
-            )
+            .field("mask_err_ecc_double", &self.mask_err_ecc_double().bit())
+            .field("mask_shorter_payload", &self.mask_shorter_payload().bit())
             .finish()
     }
 }

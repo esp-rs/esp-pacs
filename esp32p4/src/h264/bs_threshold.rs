@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BS_THRESHOLD")
-            .field(
-                "bs_buffer_threshold",
-                &format_args!("{}", self.bs_buffer_threshold().bits()),
-            )
+            .field("bs_buffer_threshold", &self.bs_buffer_threshold().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_HBP_TIME")
-            .field(
-                "vid_hbp_time",
-                &format_args!("{}", self.vid_hbp_time().bits()),
-            )
+            .field("vid_hbp_time", &self.vid_hbp_time().bits())
             .finish()
     }
 }

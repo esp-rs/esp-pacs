@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CPU_PWR5")
-            .field(
-                "lp_cpu_reject_cause",
-                &format_args!("{}", self.lp_cpu_reject_cause().bits()),
-            )
+            .field("lp_cpu_reject_cause", &self.lp_cpu_reject_cause().bits())
             .finish()
     }
 }

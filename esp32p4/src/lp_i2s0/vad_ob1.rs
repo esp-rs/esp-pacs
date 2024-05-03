@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB1")
-            .field(
-                "max_signal1_ob",
-                &format_args!("{}", self.max_signal1_ob().bits()),
-            )
-            .field(
-                "max_signal2_ob",
-                &format_args!("{}", self.max_signal2_ob().bits()),
-            )
+            .field("max_signal1_ob", &self.max_signal1_ob().bits())
+            .field("max_signal2_ob", &self.max_signal2_ob().bits())
             .finish()
     }
 }

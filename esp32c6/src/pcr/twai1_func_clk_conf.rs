@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TWAI1_FUNC_CLK_CONF")
-            .field(
-                "twai1_func_clk_sel",
-                &format_args!("{}", self.twai1_func_clk_sel().bit()),
-            )
-            .field(
-                "twai1_func_clk_en",
-                &format_args!("{}", self.twai1_func_clk_en().bit()),
-            )
+            .field("twai1_func_clk_sel", &self.twai1_func_clk_sel().bit())
+            .field("twai1_func_clk_en", &self.twai1_func_clk_en().bit())
             .finish()
     }
 }

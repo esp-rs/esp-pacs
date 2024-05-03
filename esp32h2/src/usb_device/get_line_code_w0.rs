@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GET_LINE_CODE_W0")
-            .field(
-                "get_dw_dte_rate",
-                &format_args!("{}", self.get_dw_dte_rate().bits()),
-            )
+            .field("get_dw_dte_rate", &self.get_dw_dte_rate().bits())
             .finish()
     }
 }

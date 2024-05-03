@@ -45,26 +45,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_WRAP_AROUND_CTRL")
-            .field(
-                "l1_icache0_wrap",
-                &format_args!("{}", self.l1_icache0_wrap().bit()),
-            )
-            .field(
-                "l1_icache1_wrap",
-                &format_args!("{}", self.l1_icache1_wrap().bit()),
-            )
-            .field(
-                "l1_icache2_wrap",
-                &format_args!("{}", self.l1_icache2_wrap().bit()),
-            )
-            .field(
-                "l1_icache3_wrap",
-                &format_args!("{}", self.l1_icache3_wrap().bit()),
-            )
-            .field(
-                "l1_cache_wrap",
-                &format_args!("{}", self.l1_cache_wrap().bit()),
-            )
+            .field("l1_icache0_wrap", &self.l1_icache0_wrap().bit())
+            .field("l1_icache1_wrap", &self.l1_icache1_wrap().bit())
+            .field("l1_icache2_wrap", &self.l1_icache2_wrap().bit())
+            .field("l1_icache3_wrap", &self.l1_icache3_wrap().bit())
+            .field("l1_cache_wrap", &self.l1_cache_wrap().bit())
             .finish()
     }
 }

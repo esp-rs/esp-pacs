@@ -53,14 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("lp_cpu_exc", &format_args!("{}", self.lp_cpu_exc().bit()))
-            .field("sdio_idle", &format_args!("{}", self.sdio_idle().bit()))
-            .field("sw", &format_args!("{}", self.sw().bit()))
-            .field(
-                "soc_sleep_reject",
-                &format_args!("{}", self.soc_sleep_reject().bit()),
-            )
-            .field("soc_wakeup", &format_args!("{}", self.soc_wakeup().bit()))
+            .field("lp_cpu_exc", &self.lp_cpu_exc().bit())
+            .field("sdio_idle", &self.sdio_idle().bit())
+            .field("sw", &self.sw().bit())
+            .field("soc_sleep_reject", &self.soc_sleep_reject().bit())
+            .field("soc_wakeup", &self.soc_wakeup().bit())
             .finish()
     }
 }

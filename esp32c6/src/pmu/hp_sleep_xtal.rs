@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_XTAL")
-            .field(
-                "hp_sleep_xpd_xtal",
-                &format_args!("{}", self.hp_sleep_xpd_xtal().bit()),
-            )
+            .field("hp_sleep_xpd_xtal", &self.hp_sleep_xpd_xtal().bit())
             .finish()
     }
 }

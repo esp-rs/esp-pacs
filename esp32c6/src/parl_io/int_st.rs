@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "tx_fifo_rempty",
-                &format_args!("{}", self.tx_fifo_rempty().bit()),
-            )
-            .field(
-                "rx_fifo_wovf",
-                &format_args!("{}", self.rx_fifo_wovf().bit()),
-            )
-            .field("tx_eof", &format_args!("{}", self.tx_eof().bit()))
+            .field("tx_fifo_rempty", &self.tx_fifo_rempty().bit())
+            .field("rx_fifo_wovf", &self.rx_fifo_wovf().bit())
+            .field("tx_eof", &self.tx_eof().bit())
             .finish()
     }
 }

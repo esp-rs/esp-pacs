@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKMGR_CFG")
-            .field(
-                "tx_esc_clk_division",
-                &format_args!("{}", self.tx_esc_clk_division().bits()),
-            )
-            .field(
-                "to_clk_division",
-                &format_args!("{}", self.to_clk_division().bits()),
-            )
+            .field("tx_esc_clk_division", &self.tx_esc_clk_division().bits())
+            .field("to_clk_division", &self.to_clk_division().bits())
             .finish()
     }
 }

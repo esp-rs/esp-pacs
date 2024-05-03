@@ -42,10 +42,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOCK_CTRL")
-            .field("lock_ena", &format_args!("{}", self.lock_ena().bit()))
-            .field("unlock_ena", &format_args!("{}", self.unlock_ena().bit()))
-            .field("lock_done", &format_args!("{}", self.lock_done().bit()))
-            .field("lock_rgid", &format_args!("{}", self.lock_rgid().bits()))
+            .field("lock_ena", &self.lock_ena().bit())
+            .field("unlock_ena", &self.unlock_ena().bit())
+            .field("lock_done", &self.lock_done().bit())
+            .field("lock_rgid", &self.lock_rgid().bits())
             .finish()
     }
 }

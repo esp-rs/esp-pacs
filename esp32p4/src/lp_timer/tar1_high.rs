@@ -19,10 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TAR1_HIGH")
-            .field(
-                "main_timer_tar_high1",
-                &format_args!("{}", self.main_timer_tar_high1().bits()),
-            )
+            .field("main_timer_tar_high1", &self.main_timer_tar_high1().bits())
             .finish()
     }
 }

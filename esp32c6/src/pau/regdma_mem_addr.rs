@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGDMA_MEM_ADDR")
-            .field("mem_addr", &format_args!("{}", self.mem_addr().bits()))
+            .field("mem_addr", &self.mem_addr().bits())
             .finish()
     }
 }

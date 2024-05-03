@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_ACTIVE_ICG_HP_FUNC")
             .field(
                 "hp_active_dig_icg_func_en",
-                &format_args!("{}", self.hp_active_dig_icg_func_en().bits()),
+                &self.hp_active_dig_icg_func_en().bits(),
             )
             .finish()
     }

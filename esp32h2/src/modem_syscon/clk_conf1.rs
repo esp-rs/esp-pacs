@@ -71,31 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF1")
-            .field(
-                "clk_fe_16m_en",
-                &format_args!("{}", self.clk_fe_16m_en().bit()),
-            )
-            .field(
-                "clk_fe_32m_en",
-                &format_args!("{}", self.clk_fe_32m_en().bit()),
-            )
-            .field(
-                "clk_fe_sdm_en",
-                &format_args!("{}", self.clk_fe_sdm_en().bit()),
-            )
-            .field(
-                "clk_fe_adc_en",
-                &format_args!("{}", self.clk_fe_adc_en().bit()),
-            )
-            .field(
-                "clk_fe_apb_en",
-                &format_args!("{}", self.clk_fe_apb_en().bit()),
-            )
-            .field(
-                "clk_bt_apb_en",
-                &format_args!("{}", self.clk_bt_apb_en().bit()),
-            )
-            .field("clk_bt_en", &format_args!("{}", self.clk_bt_en().bit()))
+            .field("clk_fe_16m_en", &self.clk_fe_16m_en().bit())
+            .field("clk_fe_32m_en", &self.clk_fe_32m_en().bit())
+            .field("clk_fe_sdm_en", &self.clk_fe_sdm_en().bit())
+            .field("clk_fe_adc_en", &self.clk_fe_adc_en().bit())
+            .field("clk_fe_apb_en", &self.clk_fe_apb_en().bit())
+            .field("clk_bt_apb_en", &self.clk_bt_apb_en().bit())
+            .field("clk_bt_en", &self.clk_bt_en().bit())
             .finish()
     }
 }

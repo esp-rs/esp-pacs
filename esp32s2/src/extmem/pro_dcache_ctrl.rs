@@ -165,82 +165,52 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_CTRL")
-            .field(
-                "pro_dcache_enable",
-                &format_args!("{}", self.pro_dcache_enable().bit()),
-            )
+            .field("pro_dcache_enable", &self.pro_dcache_enable().bit())
             .field(
                 "pro_dcache_setsize_mode",
-                &format_args!("{}", self.pro_dcache_setsize_mode().bit()),
+                &self.pro_dcache_setsize_mode().bit(),
             )
             .field(
                 "pro_dcache_blocksize_mode",
-                &format_args!("{}", self.pro_dcache_blocksize_mode().bit()),
+                &self.pro_dcache_blocksize_mode().bit(),
             )
             .field(
                 "pro_dcache_invalidate_ena",
-                &format_args!("{}", self.pro_dcache_invalidate_ena().bit()),
+                &self.pro_dcache_invalidate_ena().bit(),
             )
             .field(
                 "pro_dcache_invalidate_done",
-                &format_args!("{}", self.pro_dcache_invalidate_done().bit()),
+                &self.pro_dcache_invalidate_done().bit(),
             )
-            .field(
-                "pro_dcache_flush_ena",
-                &format_args!("{}", self.pro_dcache_flush_ena().bit()),
-            )
-            .field(
-                "pro_dcache_flush_done",
-                &format_args!("{}", self.pro_dcache_flush_done().bit()),
-            )
-            .field(
-                "pro_dcache_clean_ena",
-                &format_args!("{}", self.pro_dcache_clean_ena().bit()),
-            )
-            .field(
-                "pro_dcache_clean_done",
-                &format_args!("{}", self.pro_dcache_clean_done().bit()),
-            )
-            .field(
-                "pro_dcache_lock0_en",
-                &format_args!("{}", self.pro_dcache_lock0_en().bit()),
-            )
-            .field(
-                "pro_dcache_lock1_en",
-                &format_args!("{}", self.pro_dcache_lock1_en().bit()),
-            )
+            .field("pro_dcache_flush_ena", &self.pro_dcache_flush_ena().bit())
+            .field("pro_dcache_flush_done", &self.pro_dcache_flush_done().bit())
+            .field("pro_dcache_clean_ena", &self.pro_dcache_clean_ena().bit())
+            .field("pro_dcache_clean_done", &self.pro_dcache_clean_done().bit())
+            .field("pro_dcache_lock0_en", &self.pro_dcache_lock0_en().bit())
+            .field("pro_dcache_lock1_en", &self.pro_dcache_lock1_en().bit())
             .field(
                 "pro_dcache_autoload_ena",
-                &format_args!("{}", self.pro_dcache_autoload_ena().bit()),
+                &self.pro_dcache_autoload_ena().bit(),
             )
             .field(
                 "pro_dcache_autoload_done",
-                &format_args!("{}", self.pro_dcache_autoload_done().bit()),
+                &self.pro_dcache_autoload_done().bit(),
             )
             .field(
                 "pro_dcache_preload_ena",
-                &format_args!("{}", self.pro_dcache_preload_ena().bit()),
+                &self.pro_dcache_preload_ena().bit(),
             )
             .field(
                 "pro_dcache_preload_done",
-                &format_args!("{}", self.pro_dcache_preload_done().bit()),
+                &self.pro_dcache_preload_done().bit(),
             )
-            .field(
-                "pro_dcache_unlock_ena",
-                &format_args!("{}", self.pro_dcache_unlock_ena().bit()),
-            )
+            .field("pro_dcache_unlock_ena", &self.pro_dcache_unlock_ena().bit())
             .field(
                 "pro_dcache_unlock_done",
-                &format_args!("{}", self.pro_dcache_unlock_done().bit()),
+                &self.pro_dcache_unlock_done().bit(),
             )
-            .field(
-                "pro_dcache_lock_ena",
-                &format_args!("{}", self.pro_dcache_lock_ena().bit()),
-            )
-            .field(
-                "pro_dcache_lock_done",
-                &format_args!("{}", self.pro_dcache_lock_done().bit()),
-            )
+            .field("pro_dcache_lock_ena", &self.pro_dcache_lock_ena().bit())
+            .field("pro_dcache_lock_done", &self.pro_dcache_lock_done().bit())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CTRL")
-            .field(
-                "retention_link_addr",
-                &format_args!("{}", self.retention_link_addr().bits()),
-            )
-            .field(
-                "nobypass_cpu_iso_rst",
-                &format_args!("{}", self.nobypass_cpu_iso_rst().bit()),
-            )
+            .field("retention_link_addr", &self.retention_link_addr().bits())
+            .field("nobypass_cpu_iso_rst", &self.nobypass_cpu_iso_rst().bit())
             .finish()
     }
 }

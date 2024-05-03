@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_MEM_PMS_LOCK")
-            .field(
-                "ext_mem_pms_lock",
-                &format_args!("{}", self.ext_mem_pms_lock().bit()),
-            )
+            .field("ext_mem_pms_lock", &self.ext_mem_pms_lock().bit())
             .finish()
     }
 }

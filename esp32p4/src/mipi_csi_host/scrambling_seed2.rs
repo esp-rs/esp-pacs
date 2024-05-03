@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCRAMBLING_SEED2")
-            .field(
-                "scramble_seed_lane2",
-                &format_args!("{}", self.scramble_seed_lane2().bits()),
-            )
+            .field("scramble_seed_lane2", &self.scramble_seed_lane2().bits())
             .finish()
     }
 }

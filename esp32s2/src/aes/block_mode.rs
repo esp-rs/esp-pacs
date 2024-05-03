@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLOCK_MODE")
-            .field("block_mode", &format_args!("{}", self.block_mode().bits()))
+            .field("block_mode", &self.block_mode().bits())
             .finish()
     }
 }

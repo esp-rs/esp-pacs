@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_COLOR_CODING")
-            .field(
-                "dpi_color_coding",
-                &format_args!("{}", self.dpi_color_coding().bits()),
-            )
-            .field(
-                "loosely18_en",
-                &format_args!("{}", self.loosely18_en().bit()),
-            )
+            .field("dpi_color_coding", &self.dpi_color_coding().bits())
+            .field("loosely18_en", &self.loosely18_en().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK160M")
-            .field(
-                "clk_i2c_mst_sel_160m",
-                &format_args!("{}", self.clk_i2c_mst_sel_160m().bit()),
-            )
+            .field("clk_i2c_mst_sel_160m", &self.clk_i2c_mst_sel_160m().bit())
             .finish()
     }
 }

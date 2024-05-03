@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_MMU_FAULT_VADDR")
             .field(
                 "cache_mmu_fault_vaddr",
-                &format_args!("{}", self.cache_mmu_fault_vaddr().bits()),
+                &self.cache_mmu_fault_vaddr().bits(),
             )
             .finish()
     }

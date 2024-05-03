@@ -22,12 +22,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTR_RAW")
             .field(
                 "fifo_overflow_intr_raw",
-                &format_args!("{}", self.fifo_overflow_intr_raw().bit()),
+                &self.fifo_overflow_intr_raw().bit(),
             )
-            .field(
-                "mem_full_intr_raw",
-                &format_args!("{}", self.mem_full_intr_raw().bit()),
-            )
+            .field("mem_full_intr_raw", &self.mem_full_intr_raw().bit())
             .finish()
     }
 }

@@ -125,58 +125,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DRAM0_1")
-            .field(
-                "pro_dram0_sram_0_r",
-                &format_args!("{}", self.pro_dram0_sram_0_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_0_w",
-                &format_args!("{}", self.pro_dram0_sram_0_w().bit()),
-            )
-            .field(
-                "pro_dram0_sram_1_r",
-                &format_args!("{}", self.pro_dram0_sram_1_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_1_w",
-                &format_args!("{}", self.pro_dram0_sram_1_w().bit()),
-            )
-            .field(
-                "pro_dram0_sram_2_r",
-                &format_args!("{}", self.pro_dram0_sram_2_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_2_w",
-                &format_args!("{}", self.pro_dram0_sram_2_w().bit()),
-            )
-            .field(
-                "pro_dram0_sram_3_r",
-                &format_args!("{}", self.pro_dram0_sram_3_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_3_w",
-                &format_args!("{}", self.pro_dram0_sram_3_w().bit()),
-            )
+            .field("pro_dram0_sram_0_r", &self.pro_dram0_sram_0_r().bit())
+            .field("pro_dram0_sram_0_w", &self.pro_dram0_sram_0_w().bit())
+            .field("pro_dram0_sram_1_r", &self.pro_dram0_sram_1_r().bit())
+            .field("pro_dram0_sram_1_w", &self.pro_dram0_sram_1_w().bit())
+            .field("pro_dram0_sram_2_r", &self.pro_dram0_sram_2_r().bit())
+            .field("pro_dram0_sram_2_w", &self.pro_dram0_sram_2_w().bit())
+            .field("pro_dram0_sram_3_r", &self.pro_dram0_sram_3_r().bit())
+            .field("pro_dram0_sram_3_w", &self.pro_dram0_sram_3_w().bit())
             .field(
                 "pro_dram0_sram_4_spltaddr",
-                &format_args!("{}", self.pro_dram0_sram_4_spltaddr().bits()),
+                &self.pro_dram0_sram_4_spltaddr().bits(),
             )
-            .field(
-                "pro_dram0_sram_4_l_r",
-                &format_args!("{}", self.pro_dram0_sram_4_l_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_4_l_w",
-                &format_args!("{}", self.pro_dram0_sram_4_l_w().bit()),
-            )
-            .field(
-                "pro_dram0_sram_4_h_r",
-                &format_args!("{}", self.pro_dram0_sram_4_h_r().bit()),
-            )
-            .field(
-                "pro_dram0_sram_4_h_w",
-                &format_args!("{}", self.pro_dram0_sram_4_h_w().bit()),
-            )
+            .field("pro_dram0_sram_4_l_r", &self.pro_dram0_sram_4_l_r().bit())
+            .field("pro_dram0_sram_4_l_w", &self.pro_dram0_sram_4_l_w().bit())
+            .field("pro_dram0_sram_4_h_r", &self.pro_dram0_sram_4_h_r().bit())
+            .field("pro_dram0_sram_4_h_w", &self.pro_dram0_sram_4_h_w().bit())
             .finish()
     }
 }

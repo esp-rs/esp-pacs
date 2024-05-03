@@ -296,134 +296,50 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOC_CLK_CTRL1")
-            .field(
-                "gpspi2_sys_clk_en",
-                &format_args!("{}", self.gpspi2_sys_clk_en().bit()),
-            )
-            .field(
-                "gpspi3_sys_clk_en",
-                &format_args!("{}", self.gpspi3_sys_clk_en().bit()),
-            )
-            .field(
-                "regdma_sys_clk_en",
-                &format_args!("{}", self.regdma_sys_clk_en().bit()),
-            )
-            .field(
-                "ahb_pdma_sys_clk_en",
-                &format_args!("{}", self.ahb_pdma_sys_clk_en().bit()),
-            )
-            .field(
-                "axi_pdma_sys_clk_en",
-                &format_args!("{}", self.axi_pdma_sys_clk_en().bit()),
-            )
-            .field(
-                "gdma_sys_clk_en",
-                &format_args!("{}", self.gdma_sys_clk_en().bit()),
-            )
-            .field(
-                "dma2d_sys_clk_en",
-                &format_args!("{}", self.dma2d_sys_clk_en().bit()),
-            )
-            .field(
-                "vpu_sys_clk_en",
-                &format_args!("{}", self.vpu_sys_clk_en().bit()),
-            )
-            .field(
-                "jpeg_sys_clk_en",
-                &format_args!("{}", self.jpeg_sys_clk_en().bit()),
-            )
-            .field(
-                "ppa_sys_clk_en",
-                &format_args!("{}", self.ppa_sys_clk_en().bit()),
-            )
-            .field(
-                "csi_brg_sys_clk_en",
-                &format_args!("{}", self.csi_brg_sys_clk_en().bit()),
-            )
-            .field(
-                "csi_host_sys_clk_en",
-                &format_args!("{}", self.csi_host_sys_clk_en().bit()),
-            )
-            .field(
-                "dsi_sys_clk_en",
-                &format_args!("{}", self.dsi_sys_clk_en().bit()),
-            )
-            .field(
-                "emac_sys_clk_en",
-                &format_args!("{}", self.emac_sys_clk_en().bit()),
-            )
-            .field(
-                "sdmmc_sys_clk_en",
-                &format_args!("{}", self.sdmmc_sys_clk_en().bit()),
-            )
-            .field(
-                "usb_otg11_sys_clk_en",
-                &format_args!("{}", self.usb_otg11_sys_clk_en().bit()),
-            )
-            .field(
-                "usb_otg20_sys_clk_en",
-                &format_args!("{}", self.usb_otg20_sys_clk_en().bit()),
-            )
-            .field(
-                "uhci_sys_clk_en",
-                &format_args!("{}", self.uhci_sys_clk_en().bit()),
-            )
-            .field(
-                "uart0_sys_clk_en",
-                &format_args!("{}", self.uart0_sys_clk_en().bit()),
-            )
-            .field(
-                "uart1_sys_clk_en",
-                &format_args!("{}", self.uart1_sys_clk_en().bit()),
-            )
-            .field(
-                "uart2_sys_clk_en",
-                &format_args!("{}", self.uart2_sys_clk_en().bit()),
-            )
-            .field(
-                "uart3_sys_clk_en",
-                &format_args!("{}", self.uart3_sys_clk_en().bit()),
-            )
-            .field(
-                "uart4_sys_clk_en",
-                &format_args!("{}", self.uart4_sys_clk_en().bit()),
-            )
-            .field(
-                "parlio_sys_clk_en",
-                &format_args!("{}", self.parlio_sys_clk_en().bit()),
-            )
-            .field(
-                "etm_sys_clk_en",
-                &format_args!("{}", self.etm_sys_clk_en().bit()),
-            )
-            .field(
-                "pvt_sys_clk_en",
-                &format_args!("{}", self.pvt_sys_clk_en().bit()),
-            )
-            .field(
-                "crypto_sys_clk_en",
-                &format_args!("{}", self.crypto_sys_clk_en().bit()),
-            )
+            .field("gpspi2_sys_clk_en", &self.gpspi2_sys_clk_en().bit())
+            .field("gpspi3_sys_clk_en", &self.gpspi3_sys_clk_en().bit())
+            .field("regdma_sys_clk_en", &self.regdma_sys_clk_en().bit())
+            .field("ahb_pdma_sys_clk_en", &self.ahb_pdma_sys_clk_en().bit())
+            .field("axi_pdma_sys_clk_en", &self.axi_pdma_sys_clk_en().bit())
+            .field("gdma_sys_clk_en", &self.gdma_sys_clk_en().bit())
+            .field("dma2d_sys_clk_en", &self.dma2d_sys_clk_en().bit())
+            .field("vpu_sys_clk_en", &self.vpu_sys_clk_en().bit())
+            .field("jpeg_sys_clk_en", &self.jpeg_sys_clk_en().bit())
+            .field("ppa_sys_clk_en", &self.ppa_sys_clk_en().bit())
+            .field("csi_brg_sys_clk_en", &self.csi_brg_sys_clk_en().bit())
+            .field("csi_host_sys_clk_en", &self.csi_host_sys_clk_en().bit())
+            .field("dsi_sys_clk_en", &self.dsi_sys_clk_en().bit())
+            .field("emac_sys_clk_en", &self.emac_sys_clk_en().bit())
+            .field("sdmmc_sys_clk_en", &self.sdmmc_sys_clk_en().bit())
+            .field("usb_otg11_sys_clk_en", &self.usb_otg11_sys_clk_en().bit())
+            .field("usb_otg20_sys_clk_en", &self.usb_otg20_sys_clk_en().bit())
+            .field("uhci_sys_clk_en", &self.uhci_sys_clk_en().bit())
+            .field("uart0_sys_clk_en", &self.uart0_sys_clk_en().bit())
+            .field("uart1_sys_clk_en", &self.uart1_sys_clk_en().bit())
+            .field("uart2_sys_clk_en", &self.uart2_sys_clk_en().bit())
+            .field("uart3_sys_clk_en", &self.uart3_sys_clk_en().bit())
+            .field("uart4_sys_clk_en", &self.uart4_sys_clk_en().bit())
+            .field("parlio_sys_clk_en", &self.parlio_sys_clk_en().bit())
+            .field("etm_sys_clk_en", &self.etm_sys_clk_en().bit())
+            .field("pvt_sys_clk_en", &self.pvt_sys_clk_en().bit())
+            .field("crypto_sys_clk_en", &self.crypto_sys_clk_en().bit())
             .field(
                 "key_manager_sys_clk_en",
-                &format_args!("{}", self.key_manager_sys_clk_en().bit()),
+                &self.key_manager_sys_clk_en().bit(),
             )
             .field(
                 "bitsrambler_sys_clk_en",
-                &format_args!("{}", self.bitsrambler_sys_clk_en().bit()),
+                &self.bitsrambler_sys_clk_en().bit(),
             )
             .field(
                 "bitsrambler_rx_sys_clk_en",
-                &format_args!("{}", self.bitsrambler_rx_sys_clk_en().bit()),
+                &self.bitsrambler_rx_sys_clk_en().bit(),
             )
             .field(
                 "bitsrambler_tx_sys_clk_en",
-                &format_args!("{}", self.bitsrambler_tx_sys_clk_en().bit()),
+                &self.bitsrambler_tx_sys_clk_en().bit(),
             )
-            .field(
-                "h264_sys_clk_en",
-                &format_args!("{}", self.h264_sys_clk_en().bit()),
-            )
+            .field("h264_sys_clk_en", &self.h264_sys_clk_en().bit())
             .finish()
     }
 }

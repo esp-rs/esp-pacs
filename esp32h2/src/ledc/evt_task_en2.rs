@@ -172,75 +172,75 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_TASK_EN2")
             .field(
                 "task_gamma_restart_ch0_en",
-                &format_args!("{}", self.task_gamma_restart_ch0_en().bit()),
+                &self.task_gamma_restart_ch0_en().bit(),
             )
             .field(
                 "task_gamma_restart_ch1_en",
-                &format_args!("{}", self.task_gamma_restart_ch1_en().bit()),
+                &self.task_gamma_restart_ch1_en().bit(),
             )
             .field(
                 "task_gamma_restart_ch2_en",
-                &format_args!("{}", self.task_gamma_restart_ch2_en().bit()),
+                &self.task_gamma_restart_ch2_en().bit(),
             )
             .field(
                 "task_gamma_restart_ch3_en",
-                &format_args!("{}", self.task_gamma_restart_ch3_en().bit()),
+                &self.task_gamma_restart_ch3_en().bit(),
             )
             .field(
                 "task_gamma_restart_ch4_en",
-                &format_args!("{}", self.task_gamma_restart_ch4_en().bit()),
+                &self.task_gamma_restart_ch4_en().bit(),
             )
             .field(
                 "task_gamma_restart_ch5_en",
-                &format_args!("{}", self.task_gamma_restart_ch5_en().bit()),
+                &self.task_gamma_restart_ch5_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch0_en",
-                &format_args!("{}", self.task_gamma_pause_ch0_en().bit()),
+                &self.task_gamma_pause_ch0_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch1_en",
-                &format_args!("{}", self.task_gamma_pause_ch1_en().bit()),
+                &self.task_gamma_pause_ch1_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch2_en",
-                &format_args!("{}", self.task_gamma_pause_ch2_en().bit()),
+                &self.task_gamma_pause_ch2_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch3_en",
-                &format_args!("{}", self.task_gamma_pause_ch3_en().bit()),
+                &self.task_gamma_pause_ch3_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch4_en",
-                &format_args!("{}", self.task_gamma_pause_ch4_en().bit()),
+                &self.task_gamma_pause_ch4_en().bit(),
             )
             .field(
                 "task_gamma_pause_ch5_en",
-                &format_args!("{}", self.task_gamma_pause_ch5_en().bit()),
+                &self.task_gamma_pause_ch5_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch0_en",
-                &format_args!("{}", self.task_gamma_resume_ch0_en().bit()),
+                &self.task_gamma_resume_ch0_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch1_en",
-                &format_args!("{}", self.task_gamma_resume_ch1_en().bit()),
+                &self.task_gamma_resume_ch1_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch2_en",
-                &format_args!("{}", self.task_gamma_resume_ch2_en().bit()),
+                &self.task_gamma_resume_ch2_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch3_en",
-                &format_args!("{}", self.task_gamma_resume_ch3_en().bit()),
+                &self.task_gamma_resume_ch3_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch4_en",
-                &format_args!("{}", self.task_gamma_resume_ch4_en().bit()),
+                &self.task_gamma_resume_ch4_en().bit(),
             )
             .field(
                 "task_gamma_resume_ch5_en",
-                &format_args!("{}", self.task_gamma_resume_ch5_en().bit()),
+                &self.task_gamma_resume_ch5_en().bit(),
             )
             .finish()
     }

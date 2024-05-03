@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AUTOBAUD")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field(
-                "glitch_filt",
-                &format_args!("{}", self.glitch_filt().bits()),
-            )
+            .field("en", &self.en().bit())
+            .field("glitch_filt", &self.glitch_filt().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_CK_POWERON")
-            .field(
-                "i2c_por_wait_target",
-                &format_args!("{}", self.i2c_por_wait_target().bits()),
-            )
+            .field("i2c_por_wait_target", &self.i2c_por_wait_target().bits())
             .finish()
     }
 }

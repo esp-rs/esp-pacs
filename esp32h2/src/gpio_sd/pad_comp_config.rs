@@ -44,13 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_COMP_CONFIG")
-            .field("xpd_comp", &format_args!("{}", self.xpd_comp().bit()))
-            .field("mode_comp", &format_args!("{}", self.mode_comp().bit()))
-            .field("dref_comp", &format_args!("{}", self.dref_comp().bits()))
-            .field(
-                "zero_det_mode",
-                &format_args!("{}", self.zero_det_mode().bits()),
-            )
+            .field("xpd_comp", &self.xpd_comp().bit())
+            .field("mode_comp", &self.mode_comp().bit())
+            .field("dref_comp", &self.dref_comp().bits())
+            .field("zero_det_mode", &self.zero_det_mode().bits())
             .finish()
     }
 }

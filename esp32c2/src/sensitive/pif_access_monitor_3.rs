@@ -17,11 +17,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIF_ACCESS_MONITOR_3")
             .field(
                 "pif_access_monitor_nonword_violate_status_haddr",
-                &format_args!(
-                    "{}",
-                    self.pif_access_monitor_nonword_violate_status_haddr()
-                        .bits()
-                ),
+                &self
+                    .pif_access_monitor_nonword_violate_status_haddr()
+                    .bits(),
             )
             .finish()
     }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WAKEUP_SEL")
-            .field(
-                "sar_wakeup_sel",
-                &format_args!("{}", self.sar_wakeup_sel().bit()),
-            )
+            .field("sar_wakeup_sel", &self.sar_wakeup_sel().bit())
             .finish()
     }
 }

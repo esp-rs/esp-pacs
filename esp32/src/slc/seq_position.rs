@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SEQ_POSITION")
-            .field(
-                "slc0_seq_position",
-                &format_args!("{}", self.slc0_seq_position().bits()),
-            )
-            .field(
-                "slc1_seq_position",
-                &format_args!("{}", self.slc1_seq_position().bits()),
-            )
+            .field("slc0_seq_position", &self.slc0_seq_position().bits())
+            .field("slc1_seq_position", &self.slc1_seq_position().bits())
             .finish()
     }
 }

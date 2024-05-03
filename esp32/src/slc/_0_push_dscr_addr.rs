@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("_0_PUSH_DSCR_ADDR")
             .field(
                 "slc0_rx_push_dscr_addr",
-                &format_args!("{}", self.slc0_rx_push_dscr_addr().bits()),
+                &self.slc0_rx_push_dscr_addr().bits(),
             )
             .finish()
     }

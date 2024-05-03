@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM0")
-            .field(
-                "param_min_energy",
-                &format_args!("{}", self.param_min_energy().bits()),
-            )
-            .field(
-                "param_init_frame_num",
-                &format_args!("{}", self.param_init_frame_num().bits()),
-            )
+            .field("param_min_energy", &self.param_min_energy().bits())
+            .field("param_init_frame_num", &self.param_init_frame_num().bits())
             .finish()
     }
 }

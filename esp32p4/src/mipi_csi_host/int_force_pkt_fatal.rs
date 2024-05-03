@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE_PKT_FATAL")
-            .field(
-                "force_err_ecc_double",
-                &format_args!("{}", self.force_err_ecc_double().bit()),
-            )
-            .field(
-                "force_shorter_payload",
-                &format_args!("{}", self.force_shorter_payload().bit()),
-            )
+            .field("force_err_ecc_double", &self.force_err_ecc_double().bit())
+            .field("force_shorter_payload", &self.force_shorter_payload().bit())
             .finish()
     }
 }

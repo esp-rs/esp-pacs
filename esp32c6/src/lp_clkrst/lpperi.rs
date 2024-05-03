@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPPERI")
-            .field(
-                "lp_i2c_clk_sel",
-                &format_args!("{}", self.lp_i2c_clk_sel().bit()),
-            )
-            .field(
-                "lp_uart_clk_sel",
-                &format_args!("{}", self.lp_uart_clk_sel().bit()),
-            )
+            .field("lp_i2c_clk_sel", &self.lp_i2c_clk_sel().bit())
+            .field("lp_uart_clk_sel", &self.lp_uart_clk_sel().bit())
             .finish()
     }
 }

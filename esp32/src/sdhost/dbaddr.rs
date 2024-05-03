@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBADDR")
-            .field("dbaddr", &format_args!("{}", self.dbaddr().bits()))
+            .field("dbaddr", &self.dbaddr().bits())
             .finish()
     }
 }

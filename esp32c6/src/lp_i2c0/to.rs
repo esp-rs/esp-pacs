@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TO")
-            .field(
-                "time_out_value",
-                &format_args!("{}", self.time_out_value().bits()),
-            )
-            .field("time_out_en", &format_args!("{}", self.time_out_en().bit()))
+            .field("time_out_value", &self.time_out_value().bits())
+            .field("time_out_en", &self.time_out_en().bit())
             .finish()
     }
 }

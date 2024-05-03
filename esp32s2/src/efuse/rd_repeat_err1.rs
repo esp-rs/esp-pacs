@@ -125,74 +125,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR1")
-            .field(
-                "vdd_spi_drefm_err",
-                &format_args!("{}", self.vdd_spi_drefm_err().bits()),
-            )
-            .field(
-                "vdd_spi_drefl_err",
-                &format_args!("{}", self.vdd_spi_drefl_err().bits()),
-            )
-            .field(
-                "vdd_spi_xpd_err",
-                &format_args!("{}", self.vdd_spi_xpd_err().bit()),
-            )
-            .field(
-                "vdd_spi_tieh_err",
-                &format_args!("{}", self.vdd_spi_tieh_err().bit()),
-            )
-            .field(
-                "vdd_spi_force_err",
-                &format_args!("{}", self.vdd_spi_force_err().bit()),
-            )
-            .field(
-                "vdd_spi_en_init_err",
-                &format_args!("{}", self.vdd_spi_en_init_err().bit()),
-            )
-            .field(
-                "vdd_spi_encurlim_err",
-                &format_args!("{}", self.vdd_spi_encurlim_err().bit()),
-            )
-            .field(
-                "vdd_spi_dcurlim_err",
-                &format_args!("{}", self.vdd_spi_dcurlim_err().bits()),
-            )
-            .field(
-                "vdd_spi_init_err",
-                &format_args!("{}", self.vdd_spi_init_err().bits()),
-            )
-            .field(
-                "vdd_spi_dcap_err",
-                &format_args!("{}", self.vdd_spi_dcap_err().bits()),
-            )
-            .field(
-                "wdt_delay_sel_err",
-                &format_args!("{}", self.wdt_delay_sel_err().bits()),
-            )
+            .field("vdd_spi_drefm_err", &self.vdd_spi_drefm_err().bits())
+            .field("vdd_spi_drefl_err", &self.vdd_spi_drefl_err().bits())
+            .field("vdd_spi_xpd_err", &self.vdd_spi_xpd_err().bit())
+            .field("vdd_spi_tieh_err", &self.vdd_spi_tieh_err().bit())
+            .field("vdd_spi_force_err", &self.vdd_spi_force_err().bit())
+            .field("vdd_spi_en_init_err", &self.vdd_spi_en_init_err().bit())
+            .field("vdd_spi_encurlim_err", &self.vdd_spi_encurlim_err().bit())
+            .field("vdd_spi_dcurlim_err", &self.vdd_spi_dcurlim_err().bits())
+            .field("vdd_spi_init_err", &self.vdd_spi_init_err().bits())
+            .field("vdd_spi_dcap_err", &self.vdd_spi_dcap_err().bits())
+            .field("wdt_delay_sel_err", &self.wdt_delay_sel_err().bits())
             .field(
                 "spi_boot_crypt_cnt_err",
-                &format_args!("{}", self.spi_boot_crypt_cnt_err().bits()),
+                &self.spi_boot_crypt_cnt_err().bits(),
             )
             .field(
                 "secure_boot_key_revoke0_err",
-                &format_args!("{}", self.secure_boot_key_revoke0_err().bit()),
+                &self.secure_boot_key_revoke0_err().bit(),
             )
             .field(
                 "secure_boot_key_revoke1_err",
-                &format_args!("{}", self.secure_boot_key_revoke1_err().bit()),
+                &self.secure_boot_key_revoke1_err().bit(),
             )
             .field(
                 "secure_boot_key_revoke2_err",
-                &format_args!("{}", self.secure_boot_key_revoke2_err().bit()),
+                &self.secure_boot_key_revoke2_err().bit(),
             )
-            .field(
-                "key_purpose_0_err",
-                &format_args!("{}", self.key_purpose_0_err().bits()),
-            )
-            .field(
-                "key_purpose_1_err",
-                &format_args!("{}", self.key_purpose_1_err().bits()),
-            )
+            .field("key_purpose_0_err", &self.key_purpose_0_err().bits())
+            .field("key_purpose_1_err", &self.key_purpose_1_err().bits())
             .finish()
     }
 }

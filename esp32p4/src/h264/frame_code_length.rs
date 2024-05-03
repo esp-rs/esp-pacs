@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAME_CODE_LENGTH")
-            .field(
-                "frame_code_length",
-                &format_args!("{}", self.frame_code_length().bits()),
-            )
+            .field("frame_code_length", &self.frame_code_length().bits())
             .finish()
     }
 }

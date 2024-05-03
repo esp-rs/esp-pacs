@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_BT_BUFFER")
             .field(
                 "btbuffer_access_grant_config",
-                &format_args!("{}", self.btbuffer_access_grant_config().bits()),
+                &self.btbuffer_access_grant_config().bits(),
             )
             .finish()
     }

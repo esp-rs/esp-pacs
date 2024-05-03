@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_TAG_WAY_OBJECT")
-            .field(
-                "cache_tag_way_object",
-                &format_args!("{}", self.cache_tag_way_object().bits()),
-            )
+            .field("cache_tag_way_object", &self.cache_tag_way_object().bits())
             .finish()
     }
 }

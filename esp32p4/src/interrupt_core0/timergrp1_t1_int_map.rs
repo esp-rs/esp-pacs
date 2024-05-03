@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TIMERGRP1_T1_INT_MAP")
             .field(
                 "core0_timergrp1_t1_int_map",
-                &format_args!("{}", self.core0_timergrp1_t1_int_map().bits()),
+                &self.core0_timergrp1_t1_int_map().bits(),
             )
             .finish()
     }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHADDR")
-            .field(
-                "apb_mem_addr",
-                &format_args!("{}", self.apb_mem_addr().bits()),
-            )
+            .field("apb_mem_addr", &self.apb_mem_addr().bits())
             .finish()
     }
 }

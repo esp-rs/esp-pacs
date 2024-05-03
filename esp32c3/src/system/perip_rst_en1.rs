@@ -98,34 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_RST_EN1")
-            .field(
-                "crypto_aes_rst",
-                &format_args!("{}", self.crypto_aes_rst().bit()),
-            )
-            .field(
-                "crypto_sha_rst",
-                &format_args!("{}", self.crypto_sha_rst().bit()),
-            )
-            .field(
-                "crypto_rsa_rst",
-                &format_args!("{}", self.crypto_rsa_rst().bit()),
-            )
-            .field(
-                "crypto_ds_rst",
-                &format_args!("{}", self.crypto_ds_rst().bit()),
-            )
-            .field(
-                "crypto_hmac_rst",
-                &format_args!("{}", self.crypto_hmac_rst().bit()),
-            )
-            .field("dma_rst", &format_args!("{}", self.dma_rst().bit()))
-            .field(
-                "sdio_host_rst",
-                &format_args!("{}", self.sdio_host_rst().bit()),
-            )
-            .field("lcd_cam_rst", &format_args!("{}", self.lcd_cam_rst().bit()))
-            .field("uart2_rst", &format_args!("{}", self.uart2_rst().bit()))
-            .field("tsens_rst", &format_args!("{}", self.tsens_rst().bit()))
+            .field("crypto_aes_rst", &self.crypto_aes_rst().bit())
+            .field("crypto_sha_rst", &self.crypto_sha_rst().bit())
+            .field("crypto_rsa_rst", &self.crypto_rsa_rst().bit())
+            .field("crypto_ds_rst", &self.crypto_ds_rst().bit())
+            .field("crypto_hmac_rst", &self.crypto_hmac_rst().bit())
+            .field("dma_rst", &self.dma_rst().bit())
+            .field("sdio_host_rst", &self.sdio_host_rst().bit())
+            .field("lcd_cam_rst", &self.lcd_cam_rst().bit())
+            .field("uart2_rst", &self.uart2_rst().bit())
+            .field("tsens_rst", &self.tsens_rst().bit())
             .finish()
     }
 }

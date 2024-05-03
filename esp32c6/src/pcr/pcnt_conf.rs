@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCNT_CONF")
-            .field("pcnt_clk_en", &format_args!("{}", self.pcnt_clk_en().bit()))
-            .field("pcnt_rst_en", &format_args!("{}", self.pcnt_rst_en().bit()))
+            .field("pcnt_clk_en", &self.pcnt_clk_en().bit())
+            .field("pcnt_rst_en", &self.pcnt_rst_en().bit())
             .finish()
     }
 }

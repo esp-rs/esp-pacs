@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_ATOMIC_OPERATE_ENA")
             .field(
                 "icache_atomic_operate_ena",
-                &format_args!("{}", self.icache_atomic_operate_ena().bit()),
+                &self.icache_atomic_operate_ena().bit(),
             )
             .finish()
     }

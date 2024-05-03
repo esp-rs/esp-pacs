@@ -80,38 +80,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_HPWIFI_CNTL")
-            .field(
-                "force_hp_wifi_reset",
-                &format_args!("{}", self.force_hp_wifi_reset().bit()),
-            )
-            .field(
-                "force_hp_wifi_iso",
-                &format_args!("{}", self.force_hp_wifi_iso().bit()),
-            )
-            .field(
-                "force_hp_wifi_pu",
-                &format_args!("{}", self.force_hp_wifi_pu().bit()),
-            )
+            .field("force_hp_wifi_reset", &self.force_hp_wifi_reset().bit())
+            .field("force_hp_wifi_iso", &self.force_hp_wifi_iso().bit())
+            .field("force_hp_wifi_pu", &self.force_hp_wifi_pu().bit())
             .field(
                 "force_hp_wifi_no_reset",
-                &format_args!("{}", self.force_hp_wifi_no_reset().bit()),
+                &self.force_hp_wifi_no_reset().bit(),
             )
-            .field(
-                "force_hp_wifi_no_iso",
-                &format_args!("{}", self.force_hp_wifi_no_iso().bit()),
-            )
-            .field(
-                "force_hp_wifi_pd",
-                &format_args!("{}", self.force_hp_wifi_pd().bit()),
-            )
-            .field(
-                "pd_hp_wifi_mask",
-                &format_args!("{}", self.pd_hp_wifi_mask().bits()),
-            )
-            .field(
-                "pd_hp_wifi_pd_mask",
-                &format_args!("{}", self.pd_hp_wifi_pd_mask().bits()),
-            )
+            .field("force_hp_wifi_no_iso", &self.force_hp_wifi_no_iso().bit())
+            .field("force_hp_wifi_pd", &self.force_hp_wifi_pd().bit())
+            .field("pd_hp_wifi_mask", &self.pd_hp_wifi_mask().bits())
+            .field("pd_hp_wifi_pd_mask", &self.pd_hp_wifi_pd_mask().bits())
             .finish()
     }
 }

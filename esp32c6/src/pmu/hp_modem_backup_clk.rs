@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_BACKUP_CLK")
             .field(
                 "hp_modem_backup_icg_func_en",
-                &format_args!("{}", self.hp_modem_backup_icg_func_en().bits()),
+                &self.hp_modem_backup_icg_func_en().bits(),
             )
             .finish()
     }

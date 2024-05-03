@@ -80,32 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("start_force", &format_args!("{}", self.start_force().bit()))
-            .field("start", &format_args!("{}", self.start().bit()))
-            .field(
-                "sar_clk_gated",
-                &format_args!("{}", self.sar_clk_gated().bit()),
-            )
-            .field(
-                "sar_clk_div",
-                &format_args!("{}", self.sar_clk_div().bits()),
-            )
-            .field(
-                "sar_patt_len",
-                &format_args!("{}", self.sar_patt_len().bits()),
-            )
-            .field(
-                "sar_patt_p_clear",
-                &format_args!("{}", self.sar_patt_p_clear().bit()),
-            )
-            .field(
-                "xpd_sar_force",
-                &format_args!("{}", self.xpd_sar_force().bits()),
-            )
-            .field(
-                "wait_arb_cycle",
-                &format_args!("{}", self.wait_arb_cycle().bits()),
-            )
+            .field("start_force", &self.start_force().bit())
+            .field("start", &self.start().bit())
+            .field("sar_clk_gated", &self.sar_clk_gated().bit())
+            .field("sar_clk_div", &self.sar_clk_div().bits())
+            .field("sar_patt_len", &self.sar_patt_len().bits())
+            .field("sar_patt_p_clear", &self.sar_patt_p_clear().bit())
+            .field("xpd_sar_force", &self.xpd_sar_force().bits())
+            .field("wait_arb_cycle", &self.wait_arb_cycle().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTXF")
-            .field(
-                "inep1txfstaddr",
-                &format_args!("{}", self.inep1txfstaddr().bits()),
-            )
-            .field(
-                "inep1txfdep",
-                &format_args!("{}", self.inep1txfdep().bits()),
-            )
+            .field("inep1txfstaddr", &self.inep1txfstaddr().bits())
+            .field("inep1txfdep", &self.inep1txfdep().bits())
             .finish()
     }
 }

@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_ROI_REGION4_7_QP")
-            .field(
-                "b_roi_region4_qp",
-                &format_args!("{}", self.b_roi_region4_qp().bits()),
-            )
-            .field(
-                "b_roi_region5_qp",
-                &format_args!("{}", self.b_roi_region5_qp().bits()),
-            )
-            .field(
-                "b_roi_region6_qp",
-                &format_args!("{}", self.b_roi_region6_qp().bits()),
-            )
-            .field(
-                "b_roi_region7_qp",
-                &format_args!("{}", self.b_roi_region7_qp().bits()),
-            )
+            .field("b_roi_region4_qp", &self.b_roi_region4_qp().bits())
+            .field("b_roi_region5_qp", &self.b_roi_region5_qp().bits())
+            .field("b_roi_region6_qp", &self.b_roi_region6_qp().bits())
+            .field("b_roi_region7_qp", &self.b_roi_region7_qp().bits())
             .finish()
     }
 }

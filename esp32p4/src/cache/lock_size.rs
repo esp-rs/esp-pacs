@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOCK_SIZE")
-            .field("lock_size", &format_args!("{}", self.lock_size().bits()))
+            .field("lock_size", &self.lock_size().bits())
             .finish()
     }
 }

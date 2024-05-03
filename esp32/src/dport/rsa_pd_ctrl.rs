@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RSA_PD_CTRL")
-            .field("rsa_pd", &format_args!("{}", self.rsa_pd().bit()))
+            .field("rsa_pd", &self.rsa_pd().bit())
             .finish()
     }
 }

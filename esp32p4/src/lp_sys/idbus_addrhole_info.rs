@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDBUS_ADDRHOLE_INFO")
-            .field(
-                "idbus_addrhole_id",
-                &format_args!("{}", self.idbus_addrhole_id().bits()),
-            )
-            .field(
-                "idbus_addrhole_wr",
-                &format_args!("{}", self.idbus_addrhole_wr().bit()),
-            )
-            .field(
-                "idbus_addrhole_secure",
-                &format_args!("{}", self.idbus_addrhole_secure().bit()),
-            )
+            .field("idbus_addrhole_id", &self.idbus_addrhole_id().bits())
+            .field("idbus_addrhole_wr", &self.idbus_addrhole_wr().bit())
+            .field("idbus_addrhole_secure", &self.idbus_addrhole_secure().bit())
             .finish()
     }
 }

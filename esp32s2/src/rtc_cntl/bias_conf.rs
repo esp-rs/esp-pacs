@@ -152,70 +152,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BIAS_CONF")
-            .field(
-                "bias_buf_idle",
-                &format_args!("{}", self.bias_buf_idle().bit()),
-            )
-            .field(
-                "bias_buf_wake",
-                &format_args!("{}", self.bias_buf_wake().bit()),
-            )
-            .field(
-                "bias_buf_deep_slp",
-                &format_args!("{}", self.bias_buf_deep_slp().bit()),
-            )
-            .field(
-                "bias_buf_monitor",
-                &format_args!("{}", self.bias_buf_monitor().bit()),
-            )
-            .field(
-                "pd_cur_deep_slp",
-                &format_args!("{}", self.pd_cur_deep_slp().bit()),
-            )
-            .field(
-                "pd_cur_monitor",
-                &format_args!("{}", self.pd_cur_monitor().bit()),
-            )
-            .field(
-                "bias_sleep_deep_slp",
-                &format_args!("{}", self.bias_sleep_deep_slp().bit()),
-            )
-            .field(
-                "bias_sleep_monitor",
-                &format_args!("{}", self.bias_sleep_monitor().bit()),
-            )
-            .field(
-                "dbg_atten_deep_slp",
-                &format_args!("{}", self.dbg_atten_deep_slp().bits()),
-            )
-            .field(
-                "dbg_atten_monitor",
-                &format_args!("{}", self.dbg_atten_monitor().bits()),
-            )
-            .field(
-                "enb_sck_xtal",
-                &format_args!("{}", self.enb_sck_xtal().bit()),
-            )
-            .field(
-                "inc_heartbeat_refresh",
-                &format_args!("{}", self.inc_heartbeat_refresh().bit()),
-            )
-            .field(
-                "dec_heartbeat_period",
-                &format_args!("{}", self.dec_heartbeat_period().bit()),
-            )
-            .field(
-                "inc_heartbeat_period",
-                &format_args!("{}", self.inc_heartbeat_period().bit()),
-            )
-            .field(
-                "dec_heartbeat_width",
-                &format_args!("{}", self.dec_heartbeat_width().bit()),
-            )
-            .field(
-                "rst_bias_i2c",
-                &format_args!("{}", self.rst_bias_i2c().bit()),
-            )
+            .field("bias_buf_idle", &self.bias_buf_idle().bit())
+            .field("bias_buf_wake", &self.bias_buf_wake().bit())
+            .field("bias_buf_deep_slp", &self.bias_buf_deep_slp().bit())
+            .field("bias_buf_monitor", &self.bias_buf_monitor().bit())
+            .field("pd_cur_deep_slp", &self.pd_cur_deep_slp().bit())
+            .field("pd_cur_monitor", &self.pd_cur_monitor().bit())
+            .field("bias_sleep_deep_slp", &self.bias_sleep_deep_slp().bit())
+            .field("bias_sleep_monitor", &self.bias_sleep_monitor().bit())
+            .field("dbg_atten_deep_slp", &self.dbg_atten_deep_slp().bits())
+            .field("dbg_atten_monitor", &self.dbg_atten_monitor().bits())
+            .field("enb_sck_xtal", &self.enb_sck_xtal().bit())
+            .field("inc_heartbeat_refresh", &self.inc_heartbeat_refresh().bit())
+            .field("dec_heartbeat_period", &self.dec_heartbeat_period().bit())
+            .field("inc_heartbeat_period", &self.inc_heartbeat_period().bit())
+            .field("dec_heartbeat_width", &self.dec_heartbeat_width().bit())
+            .field("rst_bias_i2c", &self.rst_bias_i2c().bit())
             .finish()
     }
 }

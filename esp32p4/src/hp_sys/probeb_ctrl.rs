@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PROBEB_CTRL")
-            .field(
-                "reg_probe_b_mod_sel",
-                &format_args!("{}", self.reg_probe_b_mod_sel().bits()),
-            )
-            .field(
-                "reg_probe_b_top_sel",
-                &format_args!("{}", self.reg_probe_b_top_sel().bits()),
-            )
-            .field(
-                "reg_probe_b_en",
-                &format_args!("{}", self.reg_probe_b_en().bit()),
-            )
+            .field("reg_probe_b_mod_sel", &self.reg_probe_b_mod_sel().bits())
+            .field("reg_probe_b_top_sel", &self.reg_probe_b_top_sel().bits())
+            .field("reg_probe_b_en", &self.reg_probe_b_en().bit())
             .finish()
     }
 }

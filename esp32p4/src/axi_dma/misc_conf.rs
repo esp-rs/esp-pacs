@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC_CONF")
-            .field(
-                "axim_rst_wr_inter",
-                &format_args!("{}", self.axim_rst_wr_inter().bit()),
-            )
-            .field(
-                "axim_rst_rd_inter",
-                &format_args!("{}", self.axim_rst_rd_inter().bit()),
-            )
-            .field("arb_pri_dis", &format_args!("{}", self.arb_pri_dis().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("axim_rst_wr_inter", &self.axim_rst_wr_inter().bit())
+            .field("axim_rst_rd_inter", &self.axim_rst_rd_inter().bit())
+            .field("arb_pri_dis", &self.arb_pri_dis().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

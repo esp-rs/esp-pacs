@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_EVENT_BYPASS")
-            .field("apm", &format_args!("{}", self.apm().bit()))
-            .field(
-                "reset_event_bypass",
-                &format_args!("{}", self.reset_event_bypass().bit()),
-            )
+            .field("apm", &self.apm().bit())
+            .field("reset_event_bypass", &self.reset_event_bypass().bit())
             .finish()
     }
 }

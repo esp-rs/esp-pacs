@@ -69,30 +69,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "slave_tran_comp",
-                &format_args!("{}", self.slave_tran_comp().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "master_tran_comp",
-                &format_args!("{}", self.master_tran_comp().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("ack_err", &format_args!("{}", self.ack_err().bit()))
-            .field("rx_data", &format_args!("{}", self.rx_data().bit()))
-            .field("tx_data", &format_args!("{}", self.tx_data().bit()))
-            .field(
-                "detect_start",
-                &format_args!("{}", self.detect_start().bit()),
-            )
+            .field("slave_tran_comp", &self.slave_tran_comp().bit())
+            .field("arbitration_lost", &self.arbitration_lost().bit())
+            .field("master_tran_comp", &self.master_tran_comp().bit())
+            .field("trans_complete", &self.trans_complete().bit())
+            .field("time_out", &self.time_out().bit())
+            .field("ack_err", &self.ack_err().bit())
+            .field("rx_data", &self.rx_data().bit())
+            .field("tx_data", &self.tx_data().bit())
+            .field("detect_start", &self.detect_start().bit())
             .finish()
     }
 }

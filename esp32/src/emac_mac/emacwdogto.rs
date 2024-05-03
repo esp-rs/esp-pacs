@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACWDOGTO")
-            .field("wdogto", &format_args!("{}", self.wdogto().bits()))
-            .field("pwdogen", &format_args!("{}", self.pwdogen().bit()))
+            .field("wdogto", &self.wdogto().bits())
+            .field("pwdogen", &self.pwdogen().bit())
             .finish()
     }
 }

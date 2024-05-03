@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_STOPSTATE")
-            .field(
-                "phy_stopstatedata_0",
-                &format_args!("{}", self.phy_stopstatedata_0().bit()),
-            )
-            .field(
-                "phy_stopstatedata_1",
-                &format_args!("{}", self.phy_stopstatedata_1().bit()),
-            )
-            .field(
-                "phy_stopstateclk",
-                &format_args!("{}", self.phy_stopstateclk().bit()),
-            )
+            .field("phy_stopstatedata_0", &self.phy_stopstatedata_0().bit())
+            .field("phy_stopstatedata_1", &self.phy_stopstatedata_1().bit())
+            .field("phy_stopstateclk", &self.phy_stopstateclk().bit())
             .finish()
     }
 }

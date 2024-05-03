@@ -80,14 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_DAC_CTRL2")
-            .field("dac_dc1", &format_args!("{}", self.dac_dc1().bits()))
-            .field("dac_dc2", &format_args!("{}", self.dac_dc2().bits()))
-            .field("dac_scale1", &format_args!("{}", self.dac_scale1().bits()))
-            .field("dac_scale2", &format_args!("{}", self.dac_scale2().bits()))
-            .field("dac_inv1", &format_args!("{}", self.dac_inv1().bits()))
-            .field("dac_inv2", &format_args!("{}", self.dac_inv2().bits()))
-            .field("dac_cw_en1", &format_args!("{}", self.dac_cw_en1().bit()))
-            .field("dac_cw_en2", &format_args!("{}", self.dac_cw_en2().bit()))
+            .field("dac_dc1", &self.dac_dc1().bits())
+            .field("dac_dc2", &self.dac_dc2().bits())
+            .field("dac_scale1", &self.dac_scale1().bits())
+            .field("dac_scale2", &self.dac_scale2().bits())
+            .field("dac_inv1", &self.dac_inv1().bits())
+            .field("dac_inv2", &self.dac_inv2().bits())
+            .field("dac_cw_en1", &self.dac_cw_en1().bit())
+            .field("dac_cw_en2", &self.dac_cw_en2().bit())
             .finish()
     }
 }

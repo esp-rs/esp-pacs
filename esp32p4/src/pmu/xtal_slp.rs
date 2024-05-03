@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTAL_SLP")
-            .field("cnt_target", &format_args!("{}", self.cnt_target().bits()))
+            .field("cnt_target", &self.cnt_target().bits())
             .finish()
     }
 }

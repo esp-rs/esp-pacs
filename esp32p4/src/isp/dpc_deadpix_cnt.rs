@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPC_DEADPIX_CNT")
-            .field(
-                "dpc_deadpix_cnt",
-                &format_args!("{}", self.dpc_deadpix_cnt().bits()),
-            )
+            .field("dpc_deadpix_cnt", &self.dpc_deadpix_cnt().bits())
             .finish()
     }
 }

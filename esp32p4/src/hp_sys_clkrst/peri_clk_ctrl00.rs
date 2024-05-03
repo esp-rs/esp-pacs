@@ -125,58 +125,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL00")
-            .field(
-                "flash_clk_src_sel",
-                &format_args!("{}", self.flash_clk_src_sel().bits()),
-            )
-            .field(
-                "flash_pll_clk_en",
-                &format_args!("{}", self.flash_pll_clk_en().bit()),
-            )
-            .field(
-                "flash_core_clk_en",
-                &format_args!("{}", self.flash_core_clk_en().bit()),
-            )
+            .field("flash_clk_src_sel", &self.flash_clk_src_sel().bits())
+            .field("flash_pll_clk_en", &self.flash_pll_clk_en().bit())
+            .field("flash_core_clk_en", &self.flash_core_clk_en().bit())
             .field(
                 "flash_core_clk_div_num",
-                &format_args!("{}", self.flash_core_clk_div_num().bits()),
+                &self.flash_core_clk_div_num().bits(),
             )
-            .field(
-                "psram_clk_src_sel",
-                &format_args!("{}", self.psram_clk_src_sel().bits()),
-            )
-            .field(
-                "psram_pll_clk_en",
-                &format_args!("{}", self.psram_pll_clk_en().bit()),
-            )
-            .field(
-                "psram_core_clk_en",
-                &format_args!("{}", self.psram_core_clk_en().bit()),
-            )
+            .field("psram_clk_src_sel", &self.psram_clk_src_sel().bits())
+            .field("psram_pll_clk_en", &self.psram_pll_clk_en().bit())
+            .field("psram_core_clk_en", &self.psram_core_clk_en().bit())
             .field(
                 "psram_core_clk_div_num",
-                &format_args!("{}", self.psram_core_clk_div_num().bits()),
+                &self.psram_core_clk_div_num().bits(),
             )
-            .field(
-                "pad_emac_ref_clk_en",
-                &format_args!("{}", self.pad_emac_ref_clk_en().bit()),
-            )
+            .field("pad_emac_ref_clk_en", &self.pad_emac_ref_clk_en().bit())
             .field(
                 "emac_rmii_clk_src_sel",
-                &format_args!("{}", self.emac_rmii_clk_src_sel().bits()),
+                &self.emac_rmii_clk_src_sel().bits(),
             )
-            .field(
-                "emac_rmii_clk_en",
-                &format_args!("{}", self.emac_rmii_clk_en().bit()),
-            )
-            .field(
-                "emac_rx_clk_src_sel",
-                &format_args!("{}", self.emac_rx_clk_src_sel().bit()),
-            )
-            .field(
-                "emac_rx_clk_en",
-                &format_args!("{}", self.emac_rx_clk_en().bit()),
-            )
+            .field("emac_rmii_clk_en", &self.emac_rmii_clk_en().bit())
+            .field("emac_rx_clk_src_sel", &self.emac_rx_clk_src_sel().bit())
+            .field("emac_rx_clk_en", &self.emac_rx_clk_en().bit())
             .finish()
     }
 }

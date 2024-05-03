@@ -98,31 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS_CONF")
-            .field(
-                "apb_fifo_mask",
-                &format_args!("{}", self.apb_fifo_mask().bit()),
-            )
-            .field(
-                "mem_clk_force_on",
-                &format_args!("{}", self.mem_clk_force_on().bit()),
-            )
-            .field(
-                "mem_force_pd",
-                &format_args!("{}", self.mem_force_pd().bit()),
-            )
-            .field(
-                "mem_force_pu",
-                &format_args!("{}", self.mem_force_pu().bit()),
-            )
-            .field(
-                "sclk_div_num",
-                &format_args!("{}", self.sclk_div_num().bits()),
-            )
-            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
-            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
-            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bits()))
-            .field("sclk_active", &format_args!("{}", self.sclk_active().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("apb_fifo_mask", &self.apb_fifo_mask().bit())
+            .field("mem_clk_force_on", &self.mem_clk_force_on().bit())
+            .field("mem_force_pd", &self.mem_force_pd().bit())
+            .field("mem_force_pu", &self.mem_force_pu().bit())
+            .field("sclk_div_num", &self.sclk_div_num().bits())
+            .field("sclk_div_a", &self.sclk_div_a().bits())
+            .field("sclk_div_b", &self.sclk_div_b().bits())
+            .field("sclk_sel", &self.sclk_sel().bits())
+            .field("sclk_active", &self.sclk_active().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_BLOCK_MEAN_5")
-            .field(
-                "ae_b43_mean",
-                &format_args!("{}", self.ae_b43_mean().bits()),
-            )
-            .field(
-                "ae_b42_mean",
-                &format_args!("{}", self.ae_b42_mean().bits()),
-            )
-            .field(
-                "ae_b41_mean",
-                &format_args!("{}", self.ae_b41_mean().bits()),
-            )
-            .field(
-                "ae_b40_mean",
-                &format_args!("{}", self.ae_b40_mean().bits()),
-            )
+            .field("ae_b43_mean", &self.ae_b43_mean().bits())
+            .field("ae_b42_mean", &self.ae_b42_mean().bits())
+            .field("ae_b41_mean", &self.ae_b41_mean().bits())
+            .field("ae_b40_mean", &self.ae_b40_mean().bits())
             .finish()
     }
 }

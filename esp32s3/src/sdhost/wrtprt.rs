@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WRTPRT")
-            .field(
-                "write_protect",
-                &format_args!("{}", self.write_protect().bits()),
-            )
+            .field("write_protect", &self.write_protect().bits())
             .finish()
     }
 }

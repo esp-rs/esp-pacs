@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VERSION")
-            .field(
-                "bitscrambler_ver",
-                &format_args!("{}", self.bitscrambler_ver().bits()),
-            )
+            .field("bitscrambler_ver", &self.bitscrambler_ver().bits())
             .finish()
     }
 }

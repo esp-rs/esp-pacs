@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK")
-            .field(
-                "gate_force_on",
-                &format_args!("{}", self.gate_force_on().bit()),
-            )
+            .field("gate_force_on", &self.gate_force_on().bit())
             .finish()
     }
 }

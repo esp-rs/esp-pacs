@@ -85,18 +85,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("out", &format_args!("{}", self.out().bits()))
-            .field("ready", &format_args!("{}", self.ready().bit()))
-            .field("sample_en", &format_args!("{}", self.sample_en().bit()))
-            .field("wakeup_mask", &format_args!("{}", self.wakeup_mask().bit()))
-            .field("int_en", &format_args!("{}", self.int_en().bit()))
-            .field("in_inv", &format_args!("{}", self.in_inv().bit()))
-            .field("clk_div", &format_args!("{}", self.clk_div().bits()))
-            .field("power_up", &format_args!("{}", self.power_up().bit()))
-            .field(
-                "power_up_force",
-                &format_args!("{}", self.power_up_force().bit()),
-            )
+            .field("out", &self.out().bits())
+            .field("ready", &self.ready().bit())
+            .field("sample_en", &self.sample_en().bit())
+            .field("wakeup_mask", &self.wakeup_mask().bit())
+            .field("int_en", &self.int_en().bit())
+            .field("in_inv", &self.in_inv().bit())
+            .field("clk_div", &self.clk_div().bits())
+            .field("power_up", &self.power_up().bit())
+            .field("power_up_force", &self.power_up_force().bit())
             .finish()
     }
 }

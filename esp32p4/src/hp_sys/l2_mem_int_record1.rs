@@ -43,24 +43,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_RECORD1")
             .field(
                 "reg_l2_mem_ecc_err_int_addr",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_int_addr().bits()),
+                &self.reg_l2_mem_ecc_err_int_addr().bits(),
             )
             .field(
                 "reg_l2_mem_ecc_one_bit_err",
-                &format_args!("{}", self.reg_l2_mem_ecc_one_bit_err().bit()),
+                &self.reg_l2_mem_ecc_one_bit_err().bit(),
             )
             .field(
                 "reg_l2_mem_ecc_two_bit_err",
-                &format_args!("{}", self.reg_l2_mem_ecc_two_bit_err().bit()),
+                &self.reg_l2_mem_ecc_two_bit_err().bit(),
             )
             .field(
                 "reg_l2_mem_ecc_err_bit",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_bit().bits()),
+                &self.reg_l2_mem_ecc_err_bit().bits(),
             )
-            .field(
-                "reg_l2_cache_err_bank",
-                &format_args!("{}", self.reg_l2_cache_err_bank().bit()),
-            )
+            .field("reg_l2_cache_err_bank", &self.reg_l2_cache_err_bank().bit())
             .finish()
     }
 }

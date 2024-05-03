@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("BITSCRAMBLER_PERI_SEL")
             .field(
                 "bitscrambler_peri_rx_sel",
-                &format_args!("{}", self.bitscrambler_peri_rx_sel().bits()),
+                &self.bitscrambler_peri_rx_sel().bits(),
             )
             .field(
                 "bitscrambler_peri_tx_sel",
-                &format_args!("{}", self.bitscrambler_peri_tx_sel().bits()),
+                &self.bitscrambler_peri_tx_sel().bits(),
             )
             .finish()
     }

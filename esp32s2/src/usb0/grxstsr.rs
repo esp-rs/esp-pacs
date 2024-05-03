@@ -41,11 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GRXSTSR")
-            .field("g_chnum", &format_args!("{}", self.g_chnum().bits()))
-            .field("g_bcnt", &format_args!("{}", self.g_bcnt().bits()))
-            .field("g_dpid", &format_args!("{}", self.g_dpid().bits()))
-            .field("g_pktsts", &format_args!("{}", self.g_pktsts().bits()))
-            .field("g_fn", &format_args!("{}", self.g_fn().bits()))
+            .field("g_chnum", &self.g_chnum().bits())
+            .field("g_bcnt", &self.g_bcnt().bits())
+            .field("g_dpid", &self.g_dpid().bits())
+            .field("g_pktsts", &self.g_pktsts().bits())
+            .field("g_fn", &self.g_fn().bits())
             .finish()
     }
 }

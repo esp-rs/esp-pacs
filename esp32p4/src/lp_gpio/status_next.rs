@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATUS_NEXT")
             .field(
                 "reg_gpio_status_interrupt_next",
-                &format_args!("{}", self.reg_gpio_status_interrupt_next().bits()),
+                &self.reg_gpio_status_interrupt_next().bits(),
             )
             .finish()
     }

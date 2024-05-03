@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_I3C_MST_PP_TIME")
             .field(
                 "reg_i3c_mst_pp_low_period",
-                &format_args!("{}", self.reg_i3c_mst_pp_low_period().bits()),
+                &self.reg_i3c_mst_pp_low_period().bits(),
             )
             .field(
                 "reg_i3c_mst_pp_high_period",
-                &format_args!("{}", self.reg_i3c_mst_pp_high_period().bits()),
+                &self.reg_i3c_mst_pp_high_period().bits(),
             )
             .finish()
     }

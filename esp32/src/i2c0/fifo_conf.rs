@@ -80,29 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_CONF")
-            .field(
-                "rxfifo_full_thrhd",
-                &format_args!("{}", self.rxfifo_full_thrhd().bits()),
-            )
-            .field(
-                "txfifo_empty_thrhd",
-                &format_args!("{}", self.txfifo_empty_thrhd().bits()),
-            )
-            .field("nonfifo_en", &format_args!("{}", self.nonfifo_en().bit()))
-            .field(
-                "fifo_addr_cfg_en",
-                &format_args!("{}", self.fifo_addr_cfg_en().bit()),
-            )
-            .field("rx_fifo_rst", &format_args!("{}", self.rx_fifo_rst().bit()))
-            .field("tx_fifo_rst", &format_args!("{}", self.tx_fifo_rst().bit()))
-            .field(
-                "nonfifo_rx_thres",
-                &format_args!("{}", self.nonfifo_rx_thres().bits()),
-            )
-            .field(
-                "nonfifo_tx_thres",
-                &format_args!("{}", self.nonfifo_tx_thres().bits()),
-            )
+            .field("rxfifo_full_thrhd", &self.rxfifo_full_thrhd().bits())
+            .field("txfifo_empty_thrhd", &self.txfifo_empty_thrhd().bits())
+            .field("nonfifo_en", &self.nonfifo_en().bit())
+            .field("fifo_addr_cfg_en", &self.fifo_addr_cfg_en().bit())
+            .field("rx_fifo_rst", &self.rx_fifo_rst().bit())
+            .field("tx_fifo_rst", &self.tx_fifo_rst().bit())
+            .field("nonfifo_rx_thres", &self.nonfifo_rx_thres().bits())
+            .field("nonfifo_tx_thres", &self.nonfifo_tx_thres().bits())
             .finish()
     }
 }

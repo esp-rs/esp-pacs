@@ -73,31 +73,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_HP_SYS_CNTL")
             .field(
                 "hp_sleep_hp_power_det_bypass",
-                &format_args!("{}", self.hp_sleep_hp_power_det_bypass().bit()),
+                &self.hp_sleep_hp_power_det_bypass().bit(),
             )
             .field(
                 "hp_sleep_uart_wakeup_en",
-                &format_args!("{}", self.hp_sleep_uart_wakeup_en().bit()),
+                &self.hp_sleep_uart_wakeup_en().bit(),
             )
             .field(
                 "hp_sleep_lp_pad_hold_all",
-                &format_args!("{}", self.hp_sleep_lp_pad_hold_all().bit()),
+                &self.hp_sleep_lp_pad_hold_all().bit(),
             )
             .field(
                 "hp_sleep_hp_pad_hold_all",
-                &format_args!("{}", self.hp_sleep_hp_pad_hold_all().bit()),
+                &self.hp_sleep_hp_pad_hold_all().bit(),
             )
             .field(
                 "hp_sleep_dig_pad_slp_sel",
-                &format_args!("{}", self.hp_sleep_dig_pad_slp_sel().bit()),
+                &self.hp_sleep_dig_pad_slp_sel().bit(),
             )
             .field(
                 "hp_sleep_dig_pause_wdt",
-                &format_args!("{}", self.hp_sleep_dig_pause_wdt().bit()),
+                &self.hp_sleep_dig_pause_wdt().bit(),
             )
             .field(
                 "hp_sleep_dig_cpu_stall",
-                &format_args!("{}", self.hp_sleep_dig_cpu_stall().bit()),
+                &self.hp_sleep_dig_cpu_stall().bit(),
             )
             .finish()
     }

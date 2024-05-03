@@ -118,70 +118,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_PLD_CRC_FATAL")
-            .field(
-                "st_err_crc_vc0",
-                &format_args!("{}", self.st_err_crc_vc0().bit()),
-            )
-            .field(
-                "st_err_crc_vc1",
-                &format_args!("{}", self.st_err_crc_vc1().bit()),
-            )
-            .field(
-                "st_err_crc_vc2",
-                &format_args!("{}", self.st_err_crc_vc2().bit()),
-            )
-            .field(
-                "st_err_crc_vc3",
-                &format_args!("{}", self.st_err_crc_vc3().bit()),
-            )
-            .field(
-                "st_err_crc_vc4",
-                &format_args!("{}", self.st_err_crc_vc4().bit()),
-            )
-            .field(
-                "st_err_crc_vc5",
-                &format_args!("{}", self.st_err_crc_vc5().bit()),
-            )
-            .field(
-                "st_err_crc_vc6",
-                &format_args!("{}", self.st_err_crc_vc6().bit()),
-            )
-            .field(
-                "st_err_crc_vc7",
-                &format_args!("{}", self.st_err_crc_vc7().bit()),
-            )
-            .field(
-                "st_err_crc_vc8",
-                &format_args!("{}", self.st_err_crc_vc8().bit()),
-            )
-            .field(
-                "st_err_crc_vc9",
-                &format_args!("{}", self.st_err_crc_vc9().bit()),
-            )
-            .field(
-                "st_err_crc_vc10",
-                &format_args!("{}", self.st_err_crc_vc10().bit()),
-            )
-            .field(
-                "st_err_crc_vc11",
-                &format_args!("{}", self.st_err_crc_vc11().bit()),
-            )
-            .field(
-                "st_err_crc_vc12",
-                &format_args!("{}", self.st_err_crc_vc12().bit()),
-            )
-            .field(
-                "st_err_crc_vc13",
-                &format_args!("{}", self.st_err_crc_vc13().bit()),
-            )
-            .field(
-                "st_err_crc_vc14",
-                &format_args!("{}", self.st_err_crc_vc14().bit()),
-            )
-            .field(
-                "st_err_crc_vc15",
-                &format_args!("{}", self.st_err_crc_vc15().bit()),
-            )
+            .field("st_err_crc_vc0", &self.st_err_crc_vc0().bit())
+            .field("st_err_crc_vc1", &self.st_err_crc_vc1().bit())
+            .field("st_err_crc_vc2", &self.st_err_crc_vc2().bit())
+            .field("st_err_crc_vc3", &self.st_err_crc_vc3().bit())
+            .field("st_err_crc_vc4", &self.st_err_crc_vc4().bit())
+            .field("st_err_crc_vc5", &self.st_err_crc_vc5().bit())
+            .field("st_err_crc_vc6", &self.st_err_crc_vc6().bit())
+            .field("st_err_crc_vc7", &self.st_err_crc_vc7().bit())
+            .field("st_err_crc_vc8", &self.st_err_crc_vc8().bit())
+            .field("st_err_crc_vc9", &self.st_err_crc_vc9().bit())
+            .field("st_err_crc_vc10", &self.st_err_crc_vc10().bit())
+            .field("st_err_crc_vc11", &self.st_err_crc_vc11().bit())
+            .field("st_err_crc_vc12", &self.st_err_crc_vc12().bit())
+            .field("st_err_crc_vc13", &self.st_err_crc_vc13().bit())
+            .field("st_err_crc_vc14", &self.st_err_crc_vc14().bit())
+            .field("st_err_crc_vc15", &self.st_err_crc_vc15().bit())
             .finish()
     }
 }

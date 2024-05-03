@@ -150,46 +150,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_CONF")
-            .field(
-                "sdio_timer_target",
-                &format_args!("{}", self.sdio_timer_target().bits()),
-            )
-            .field(
-                "sdio_dthdrv",
-                &format_args!("{}", self.sdio_dthdrv().bits()),
-            )
-            .field("sdio_dcap", &format_args!("{}", self.sdio_dcap().bits()))
-            .field("sdio_initi", &format_args!("{}", self.sdio_initi().bits()))
-            .field(
-                "sdio_en_initi",
-                &format_args!("{}", self.sdio_en_initi().bit()),
-            )
-            .field(
-                "sdio_dcurlim",
-                &format_args!("{}", self.sdio_dcurlim().bits()),
-            )
-            .field(
-                "sdio_modecurlim",
-                &format_args!("{}", self.sdio_modecurlim().bit()),
-            )
-            .field(
-                "sdio_encurlim",
-                &format_args!("{}", self.sdio_encurlim().bit()),
-            )
-            .field(
-                "sdio_reg_pd_en",
-                &format_args!("{}", self.sdio_reg_pd_en().bit()),
-            )
-            .field("sdio_force", &format_args!("{}", self.sdio_force().bit()))
-            .field("sdio_tieh", &format_args!("{}", self.sdio_tieh().bit()))
-            .field(
-                "reg1p8_ready",
-                &format_args!("{}", self.reg1p8_ready().bit()),
-            )
-            .field("drefl_sdio", &format_args!("{}", self.drefl_sdio().bits()))
-            .field("drefm_sdio", &format_args!("{}", self.drefm_sdio().bits()))
-            .field("drefh_sdio", &format_args!("{}", self.drefh_sdio().bits()))
-            .field("xpd_sdio", &format_args!("{}", self.xpd_sdio().bit()))
+            .field("sdio_timer_target", &self.sdio_timer_target().bits())
+            .field("sdio_dthdrv", &self.sdio_dthdrv().bits())
+            .field("sdio_dcap", &self.sdio_dcap().bits())
+            .field("sdio_initi", &self.sdio_initi().bits())
+            .field("sdio_en_initi", &self.sdio_en_initi().bit())
+            .field("sdio_dcurlim", &self.sdio_dcurlim().bits())
+            .field("sdio_modecurlim", &self.sdio_modecurlim().bit())
+            .field("sdio_encurlim", &self.sdio_encurlim().bit())
+            .field("sdio_reg_pd_en", &self.sdio_reg_pd_en().bit())
+            .field("sdio_force", &self.sdio_force().bit())
+            .field("sdio_tieh", &self.sdio_tieh().bit())
+            .field("reg1p8_ready", &self.reg1p8_ready().bit())
+            .field("drefl_sdio", &self.drefl_sdio().bits())
+            .field("drefm_sdio", &self.drefm_sdio().bits())
+            .field("drefh_sdio", &self.drefh_sdio().bits())
+            .field("xpd_sdio", &self.xpd_sdio().bit())
             .finish()
     }
 }

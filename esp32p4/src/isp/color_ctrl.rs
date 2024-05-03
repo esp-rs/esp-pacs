@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COLOR_CTRL")
-            .field(
-                "color_saturation",
-                &format_args!("{}", self.color_saturation().bits()),
-            )
-            .field("color_hue", &format_args!("{}", self.color_hue().bits()))
-            .field(
-                "color_contrast",
-                &format_args!("{}", self.color_contrast().bits()),
-            )
-            .field(
-                "color_brightness",
-                &format_args!("{}", self.color_brightness().bits()),
-            )
+            .field("color_saturation", &self.color_saturation().bits())
+            .field("color_hue", &self.color_hue().bits())
+            .field("color_contrast", &self.color_contrast().bits())
+            .field("color_brightness", &self.color_brightness().bits())
             .finish()
     }
 }

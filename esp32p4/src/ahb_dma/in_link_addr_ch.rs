@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_LINK_ADDR_CH")
-            .field(
-                "inlink_addr",
-                &format_args!("{}", self.inlink_addr().bits()),
-            )
+            .field("inlink_addr", &self.inlink_addr().bits())
             .finish()
     }
 }

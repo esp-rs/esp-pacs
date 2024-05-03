@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2S_RX_CLKM_DIV_CONF")
-            .field(
-                "i2s_rx_clkm_div_z",
-                &format_args!("{}", self.i2s_rx_clkm_div_z().bits()),
-            )
-            .field(
-                "i2s_rx_clkm_div_y",
-                &format_args!("{}", self.i2s_rx_clkm_div_y().bits()),
-            )
-            .field(
-                "i2s_rx_clkm_div_x",
-                &format_args!("{}", self.i2s_rx_clkm_div_x().bits()),
-            )
-            .field(
-                "i2s_rx_clkm_div_yn1",
-                &format_args!("{}", self.i2s_rx_clkm_div_yn1().bit()),
-            )
+            .field("i2s_rx_clkm_div_z", &self.i2s_rx_clkm_div_z().bits())
+            .field("i2s_rx_clkm_div_y", &self.i2s_rx_clkm_div_y().bits())
+            .field("i2s_rx_clkm_div_x", &self.i2s_rx_clkm_div_x().bits())
+            .field("i2s_rx_clkm_div_yn1", &self.i2s_rx_clkm_div_yn1().bit())
             .finish()
     }
 }

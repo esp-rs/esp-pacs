@@ -47,24 +47,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_UNALLOCATE_BUFFER_CLEAR")
             .field(
                 "l1_icache0_unalloc_clr",
-                &format_args!("{}", self.l1_icache0_unalloc_clr().bit()),
+                &self.l1_icache0_unalloc_clr().bit(),
             )
             .field(
                 "l1_icache1_unalloc_clr",
-                &format_args!("{}", self.l1_icache1_unalloc_clr().bit()),
+                &self.l1_icache1_unalloc_clr().bit(),
             )
             .field(
                 "l1_icache2_unalloc_clr",
-                &format_args!("{}", self.l1_icache2_unalloc_clr().bit()),
+                &self.l1_icache2_unalloc_clr().bit(),
             )
             .field(
                 "l1_icache3_unalloc_clr",
-                &format_args!("{}", self.l1_icache3_unalloc_clr().bit()),
+                &self.l1_icache3_unalloc_clr().bit(),
             )
-            .field(
-                "l1_cache_unalloc_clr",
-                &format_args!("{}", self.l1_cache_unalloc_clr().bit()),
-            )
+            .field("l1_cache_unalloc_clr", &self.l1_cache_unalloc_clr().bit())
             .finish()
     }
 }

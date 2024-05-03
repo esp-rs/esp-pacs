@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUSTOEXTMEM_ENA")
-            .field(
-                "bustoextmem_ena",
-                &format_args!("{}", self.bustoextmem_ena().bit()),
-            )
+            .field("bustoextmem_ena", &self.bustoextmem_ena().bit())
             .finish()
     }
 }

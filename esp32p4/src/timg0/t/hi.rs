@@ -12,9 +12,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("HI")
-            .field("hi", &format_args!("{}", self.hi().bits()))
-            .finish()
+        f.debug_struct("HI").field("hi", &self.hi().bits()).finish()
     }
 }
 #[cfg(feature = "impl-register-debug")]

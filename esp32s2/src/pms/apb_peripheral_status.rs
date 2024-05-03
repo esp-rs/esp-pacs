@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB_PERIPHERAL_STATUS")
             .field(
                 "apb_peri_byte_error_addr",
-                &format_args!("{}", self.apb_peri_byte_error_addr().bits()),
+                &self.apb_peri_byte_error_addr().bits(),
             )
             .finish()
     }

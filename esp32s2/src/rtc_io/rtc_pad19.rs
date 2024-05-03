@@ -89,15 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_PAD19")
-            .field("fun_ie", &format_args!("{}", self.fun_ie().bit()))
-            .field("slp_oe", &format_args!("{}", self.slp_oe().bit()))
-            .field("slp_ie", &format_args!("{}", self.slp_ie().bit()))
-            .field("slp_sel", &format_args!("{}", self.slp_sel().bit()))
-            .field("fun_sel", &format_args!("{}", self.fun_sel().bits()))
-            .field("mux_sel", &format_args!("{}", self.mux_sel().bit()))
-            .field("rue", &format_args!("{}", self.rue().bit()))
-            .field("rde", &format_args!("{}", self.rde().bit()))
-            .field("drv", &format_args!("{}", self.drv().bits()))
+            .field("fun_ie", &self.fun_ie().bit())
+            .field("slp_oe", &self.slp_oe().bit())
+            .field("slp_ie", &self.slp_ie().bit())
+            .field("slp_sel", &self.slp_sel().bit())
+            .field("fun_sel", &self.fun_sel().bits())
+            .field("mux_sel", &self.mux_sel().bit())
+            .field("rue", &self.rue().bit())
+            .field("rde", &self.rde().bit())
+            .field("drv", &self.drv().bits())
             .finish()
     }
 }

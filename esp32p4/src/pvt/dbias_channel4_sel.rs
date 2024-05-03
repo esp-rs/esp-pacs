@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBIAS_CHANNEL4_SEL")
-            .field(
-                "dbias_channel4_cfg",
-                &format_args!("{}", self.dbias_channel4_cfg().bits()),
-            )
+            .field("dbias_channel4_cfg", &self.dbias_channel4_cfg().bits())
             .finish()
     }
 }

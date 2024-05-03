@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ARB_LOST_CAP")
-            .field(
-                "arb_lost_cap",
-                &format_args!("{}", self.arb_lost_cap().bits()),
-            )
+            .field("arb_lost_cap", &self.arb_lost_cap().bits())
             .finish()
     }
 }

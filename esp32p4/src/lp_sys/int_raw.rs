@@ -55,34 +55,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "lp_addrhole_int_raw",
-                &format_args!("{}", self.lp_addrhole_int_raw().bit()),
-            )
+            .field("lp_addrhole_int_raw", &self.lp_addrhole_int_raw().bit())
             .field(
                 "idbus_addrhole_int_raw",
-                &format_args!("{}", self.idbus_addrhole_int_raw().bit()),
+                &self.idbus_addrhole_int_raw().bit(),
             )
             .field(
                 "lp_core_ahb_timeout_int_raw",
-                &format_args!("{}", self.lp_core_ahb_timeout_int_raw().bit()),
+                &self.lp_core_ahb_timeout_int_raw().bit(),
             )
             .field(
                 "lp_core_ibus_timeout_int_raw",
-                &format_args!("{}", self.lp_core_ibus_timeout_int_raw().bit()),
+                &self.lp_core_ibus_timeout_int_raw().bit(),
             )
             .field(
                 "lp_core_dbus_timeout_int_raw",
-                &format_args!("{}", self.lp_core_dbus_timeout_int_raw().bit()),
+                &self.lp_core_dbus_timeout_int_raw().bit(),
             )
-            .field(
-                "etm_task_ulp_int_raw",
-                &format_args!("{}", self.etm_task_ulp_int_raw().bit()),
-            )
-            .field(
-                "slow_clk_tick_int_raw",
-                &format_args!("{}", self.slow_clk_tick_int_raw().bit()),
-            )
+            .field("etm_task_ulp_int_raw", &self.etm_task_ulp_int_raw().bit())
+            .field("slow_clk_tick_int_raw", &self.slow_clk_tick_int_raw().bit())
             .finish()
     }
 }

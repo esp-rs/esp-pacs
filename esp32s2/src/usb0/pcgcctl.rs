@@ -67,19 +67,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCGCCTL")
-            .field("stoppclk", &format_args!("{}", self.stoppclk().bit()))
-            .field("gatehclk", &format_args!("{}", self.gatehclk().bit()))
-            .field("pwrclmp", &format_args!("{}", self.pwrclmp().bit()))
-            .field(
-                "rstpdwnmodule",
-                &format_args!("{}", self.rstpdwnmodule().bit()),
-            )
-            .field("physleep", &format_args!("{}", self.physleep().bit()))
-            .field("l1suspended", &format_args!("{}", self.l1suspended().bit()))
-            .field(
-                "resetaftersusp",
-                &format_args!("{}", self.resetaftersusp().bit()),
-            )
+            .field("stoppclk", &self.stoppclk().bit())
+            .field("gatehclk", &self.gatehclk().bit())
+            .field("pwrclmp", &self.pwrclmp().bit())
+            .field("rstpdwnmodule", &self.rstpdwnmodule().bit())
+            .field("physleep", &self.physleep().bit())
+            .field("l1suspended", &self.l1suspended().bit())
+            .field("resetaftersusp", &self.resetaftersusp().bit())
             .finish()
     }
 }

@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_TIMING_0")
-            .field("baud_presc", &format_args!("{}", self.baud_presc().bits()))
-            .field(
-                "sync_jump_width",
-                &format_args!("{}", self.sync_jump_width().bits()),
-            )
+            .field("baud_presc", &self.baud_presc().bits())
+            .field("sync_jump_width", &self.sync_jump_width().bits())
             .finish()
     }
 }

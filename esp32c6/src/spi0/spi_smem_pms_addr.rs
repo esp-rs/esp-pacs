@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_PMS_ADDR")
-            .field("s", &format_args!("{}", self.s().bits()))
+            .field("s", &self.s().bits())
             .finish()
     }
 }

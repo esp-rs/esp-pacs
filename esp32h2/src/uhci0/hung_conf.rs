@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HUNG_CONF")
-            .field(
-                "txfifo_timeout",
-                &format_args!("{}", self.txfifo_timeout().bits()),
-            )
-            .field(
-                "txfifo_timeout_shift",
-                &format_args!("{}", self.txfifo_timeout_shift().bits()),
-            )
-            .field(
-                "txfifo_timeout_ena",
-                &format_args!("{}", self.txfifo_timeout_ena().bit()),
-            )
-            .field(
-                "rxfifo_timeout",
-                &format_args!("{}", self.rxfifo_timeout().bits()),
-            )
-            .field(
-                "rxfifo_timeout_shift",
-                &format_args!("{}", self.rxfifo_timeout_shift().bits()),
-            )
-            .field(
-                "rxfifo_timeout_ena",
-                &format_args!("{}", self.rxfifo_timeout_ena().bit()),
-            )
+            .field("txfifo_timeout", &self.txfifo_timeout().bits())
+            .field("txfifo_timeout_shift", &self.txfifo_timeout_shift().bits())
+            .field("txfifo_timeout_ena", &self.txfifo_timeout_ena().bit())
+            .field("rxfifo_timeout", &self.rxfifo_timeout().bits())
+            .field("rxfifo_timeout_shift", &self.rxfifo_timeout_shift().bits())
+            .field("rxfifo_timeout_ena", &self.rxfifo_timeout_ena().bit())
             .finish()
     }
 }

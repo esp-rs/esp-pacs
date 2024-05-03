@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("VAD_PARAM6")
             .field(
                 "param_noise_std_fs_thsl",
-                &format_args!("{}", self.param_noise_std_fs_thsl().bits()),
+                &self.param_noise_std_fs_thsl().bits(),
             )
             .field(
                 "param_noise_std_fs_thsh",
-                &format_args!("{}", self.param_noise_std_fs_thsh().bits()),
+                &self.param_noise_std_fs_thsh().bits(),
             )
             .finish()
     }

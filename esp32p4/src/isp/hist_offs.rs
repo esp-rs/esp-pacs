@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_OFFS")
-            .field(
-                "hist_y_offs",
-                &format_args!("{}", self.hist_y_offs().bits()),
-            )
-            .field(
-                "hist_x_offs",
-                &format_args!("{}", self.hist_x_offs().bits()),
-            )
+            .field("hist_y_offs", &self.hist_y_offs().bits())
+            .field("hist_x_offs", &self.hist_x_offs().bits())
             .finish()
     }
 }

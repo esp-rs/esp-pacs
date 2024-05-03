@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TICK_CONF")
-            .field(
-                "xtal_tick_num",
-                &format_args!("{}", self.xtal_tick_num().bits()),
-            )
-            .field(
-                "ck8m_tick_num",
-                &format_args!("{}", self.ck8m_tick_num().bits()),
-            )
-            .field("tick_enable", &format_args!("{}", self.tick_enable().bit()))
+            .field("xtal_tick_num", &self.xtal_tick_num().bits())
+            .field("ck8m_tick_num", &self.ck8m_tick_num().bits())
+            .field("tick_enable", &self.tick_enable().bit())
             .finish()
     }
 }

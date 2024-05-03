@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RST_N")
-            .field("card_reset", &format_args!("{}", self.card_reset().bits()))
+            .field("card_reset", &self.card_reset().bits())
             .finish()
     }
 }

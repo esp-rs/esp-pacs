@@ -48,15 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_17")
-            .field("dcap_lpf", &format_args!("{}", self.dcap_lpf().bits()))
-            .field("dres_lpf", &format_args!("{}", self.dres_lpf().bits()))
-            .field("drv_ls", &format_args!("{}", self.drv_ls().bits()))
-            .field("drv_hs", &format_args!("{}", self.drv_hs().bits()))
-            .field("dbias", &format_args!("{}", self.dbias().bits()))
-            .field(
-                "rtc_freq_scan_cnt",
-                &format_args!("{}", self.rtc_freq_scan_cnt().bits()),
-            )
+            .field("dcap_lpf", &self.dcap_lpf().bits())
+            .field("dres_lpf", &self.dres_lpf().bits())
+            .field("drv_ls", &self.drv_ls().bits())
+            .field("drv_hs", &self.drv_hs().bits())
+            .field("dbias", &self.dbias().bits())
+            .field("rtc_freq_scan_cnt", &self.rtc_freq_scan_cnt().bits())
             .finish()
     }
 }

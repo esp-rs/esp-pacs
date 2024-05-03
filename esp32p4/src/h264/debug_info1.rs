@@ -55,34 +55,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_INFO1")
-            .field(
-                "fme_ctrl_debug_state",
-                &format_args!("{}", self.fme_ctrl_debug_state().bits()),
-            )
+            .field("fme_ctrl_debug_state", &self.fme_ctrl_debug_state().bits())
             .field(
                 "deci_calc_debug_state",
-                &format_args!("{}", self.deci_calc_debug_state().bits()),
+                &self.deci_calc_debug_state().bits(),
             )
-            .field(
-                "db_debug_state",
-                &format_args!("{}", self.db_debug_state().bits()),
-            )
+            .field("db_debug_state", &self.db_debug_state().bits())
             .field(
                 "cavlc_enc_debug_state",
-                &format_args!("{}", self.cavlc_enc_debug_state().bits()),
+                &self.cavlc_enc_debug_state().bits(),
             )
             .field(
                 "cavlc_scan_debug_state",
-                &format_args!("{}", self.cavlc_scan_debug_state().bits()),
+                &self.cavlc_scan_debug_state().bits(),
             )
             .field(
                 "cavlc_ctrl_debug_state",
-                &format_args!("{}", self.cavlc_ctrl_debug_state().bits()),
+                &self.cavlc_ctrl_debug_state().bits(),
             )
-            .field(
-                "bs_buffer_debug_state",
-                &format_args!("{}", self.bs_buffer_debug_state().bit()),
-            )
+            .field("bs_buffer_debug_state", &self.bs_buffer_debug_state().bit())
             .finish()
     }
 }

@@ -102,37 +102,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAM_CTRL1")
-            .field(
-                "cam_rec_data_bytelen",
-                &format_args!("{}", self.cam_rec_data_bytelen().bits()),
-            )
-            .field(
-                "cam_line_int_num",
-                &format_args!("{}", self.cam_line_int_num().bits()),
-            )
-            .field("cam_clk_inv", &format_args!("{}", self.cam_clk_inv().bit()))
-            .field(
-                "cam_vsync_filter_en",
-                &format_args!("{}", self.cam_vsync_filter_en().bit()),
-            )
-            .field(
-                "cam_2byte_en",
-                &format_args!("{}", self.cam_2byte_en().bit()),
-            )
-            .field("cam_de_inv", &format_args!("{}", self.cam_de_inv().bit()))
-            .field(
-                "cam_hsync_inv",
-                &format_args!("{}", self.cam_hsync_inv().bit()),
-            )
-            .field(
-                "cam_vsync_inv",
-                &format_args!("{}", self.cam_vsync_inv().bit()),
-            )
-            .field(
-                "cam_vh_de_mode_en",
-                &format_args!("{}", self.cam_vh_de_mode_en().bit()),
-            )
-            .field("cam_start", &format_args!("{}", self.cam_start().bit()))
+            .field("cam_rec_data_bytelen", &self.cam_rec_data_bytelen().bits())
+            .field("cam_line_int_num", &self.cam_line_int_num().bits())
+            .field("cam_clk_inv", &self.cam_clk_inv().bit())
+            .field("cam_vsync_filter_en", &self.cam_vsync_filter_en().bit())
+            .field("cam_2byte_en", &self.cam_2byte_en().bit())
+            .field("cam_de_inv", &self.cam_de_inv().bit())
+            .field("cam_hsync_inv", &self.cam_hsync_inv().bit())
+            .field("cam_vsync_inv", &self.cam_vsync_inv().bit())
+            .field("cam_vh_de_mode_en", &self.cam_vh_de_mode_en().bit())
+            .field("cam_start", &self.cam_start().bit())
             .finish()
     }
 }

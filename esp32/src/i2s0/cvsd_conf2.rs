@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CVSD_CONF2")
-            .field("cvsd_k", &format_args!("{}", self.cvsd_k().bits()))
-            .field("cvsd_j", &format_args!("{}", self.cvsd_j().bits()))
-            .field("cvsd_beta", &format_args!("{}", self.cvsd_beta().bits()))
-            .field("cvsd_h", &format_args!("{}", self.cvsd_h().bits()))
+            .field("cvsd_k", &self.cvsd_k().bits())
+            .field("cvsd_j", &self.cvsd_j().bits())
+            .field("cvsd_beta", &self.cvsd_beta().bits())
+            .field("cvsd_h", &self.cvsd_h().bits())
             .finish()
     }
 }

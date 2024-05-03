@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SET_LINE_CODE_W1")
-            .field(
-                "bchar_format",
-                &format_args!("{}", self.bchar_format().bits()),
-            )
-            .field(
-                "bparity_type",
-                &format_args!("{}", self.bparity_type().bits()),
-            )
-            .field("bdata_bits", &format_args!("{}", self.bdata_bits().bits()))
+            .field("bchar_format", &self.bchar_format().bits())
+            .field("bparity_type", &self.bparity_type().bits())
+            .field("bdata_bits", &self.bdata_bits().bits())
             .finish()
     }
 }

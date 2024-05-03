@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("MODEM_PERI_TIMEOUT_CONF")
             .field(
                 "modem_peri_timeout_thres",
-                &format_args!("{}", self.modem_peri_timeout_thres().bits()),
+                &self.modem_peri_timeout_thres().bits(),
             )
             .field(
                 "modem_peri_timeout_protect_en",
-                &format_args!("{}", self.modem_peri_timeout_protect_en().bit()),
+                &self.modem_peri_timeout_protect_en().bit(),
             )
             .finish()
     }

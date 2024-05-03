@@ -48,30 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_INSTATUS")
-            .field(
-                "dma_indscr_addr",
-                &format_args!("{}", self.dma_indscr_addr().bits()),
-            )
-            .field(
-                "dma_indscr_state",
-                &format_args!("{}", self.dma_indscr_state().bits()),
-            )
-            .field(
-                "dma_in_state",
-                &format_args!("{}", self.dma_in_state().bits()),
-            )
-            .field(
-                "dma_infifo_cnt",
-                &format_args!("{}", self.dma_infifo_cnt().bits()),
-            )
-            .field(
-                "dma_infifo_full",
-                &format_args!("{}", self.dma_infifo_full().bit()),
-            )
-            .field(
-                "dma_infifo_empty",
-                &format_args!("{}", self.dma_infifo_empty().bit()),
-            )
+            .field("dma_indscr_addr", &self.dma_indscr_addr().bits())
+            .field("dma_indscr_state", &self.dma_indscr_state().bits())
+            .field("dma_in_state", &self.dma_in_state().bits())
+            .field("dma_infifo_cnt", &self.dma_infifo_cnt().bits())
+            .field("dma_infifo_full", &self.dma_infifo_full().bit())
+            .field("dma_infifo_empty", &self.dma_infifo_empty().bit())
             .finish()
     }
 }

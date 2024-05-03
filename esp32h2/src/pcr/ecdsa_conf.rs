@@ -33,15 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECDSA_CONF")
-            .field(
-                "ecdsa_clk_en",
-                &format_args!("{}", self.ecdsa_clk_en().bit()),
-            )
-            .field(
-                "ecdsa_rst_en",
-                &format_args!("{}", self.ecdsa_rst_en().bit()),
-            )
-            .field("ecdsa_ready", &format_args!("{}", self.ecdsa_ready().bit()))
+            .field("ecdsa_clk_en", &self.ecdsa_clk_en().bit())
+            .field("ecdsa_rst_en", &self.ecdsa_rst_en().bit())
+            .field("ecdsa_ready", &self.ecdsa_ready().bit())
             .finish()
     }
 }

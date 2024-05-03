@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESULT")
-            .field(
-                "operation_result",
-                &format_args!("{}", self.operation_result().bit()),
-            )
-            .field(
-                "k_value_warning",
-                &format_args!("{}", self.k_value_warning().bit()),
-            )
+            .field("operation_result", &self.operation_result().bit())
+            .field("k_value_warning", &self.k_value_warning().bit())
             .finish()
     }
 }

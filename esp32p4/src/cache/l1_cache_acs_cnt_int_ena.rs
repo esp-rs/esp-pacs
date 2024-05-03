@@ -72,38 +72,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_ACS_CNT_INT_ENA")
-            .field(
-                "l1_ibus0_ovf_int_ena",
-                &format_args!("{}", self.l1_ibus0_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_ibus1_ovf_int_ena",
-                &format_args!("{}", self.l1_ibus1_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_ibus2_ovf_int_ena",
-                &format_args!("{}", self.l1_ibus2_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_ibus3_ovf_int_ena",
-                &format_args!("{}", self.l1_ibus3_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_dbus0_ovf_int_ena",
-                &format_args!("{}", self.l1_dbus0_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_dbus1_ovf_int_ena",
-                &format_args!("{}", self.l1_dbus1_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_dbus2_ovf_int_ena",
-                &format_args!("{}", self.l1_dbus2_ovf_int_ena().bit()),
-            )
-            .field(
-                "l1_dbus3_ovf_int_ena",
-                &format_args!("{}", self.l1_dbus3_ovf_int_ena().bit()),
-            )
+            .field("l1_ibus0_ovf_int_ena", &self.l1_ibus0_ovf_int_ena().bit())
+            .field("l1_ibus1_ovf_int_ena", &self.l1_ibus1_ovf_int_ena().bit())
+            .field("l1_ibus2_ovf_int_ena", &self.l1_ibus2_ovf_int_ena().bit())
+            .field("l1_ibus3_ovf_int_ena", &self.l1_ibus3_ovf_int_ena().bit())
+            .field("l1_dbus0_ovf_int_ena", &self.l1_dbus0_ovf_int_ena().bit())
+            .field("l1_dbus1_ovf_int_ena", &self.l1_dbus1_ovf_int_ena().bit())
+            .field("l1_dbus2_ovf_int_ena", &self.l1_dbus2_ovf_int_ena().bit())
+            .field("l1_dbus3_ovf_int_ena", &self.l1_dbus3_ovf_int_ena().bit())
             .finish()
     }
 }

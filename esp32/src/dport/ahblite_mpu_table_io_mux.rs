@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_IO_MUX")
             .field(
                 "iomux_access_grant_config",
-                &format_args!("{}", self.iomux_access_grant_config().bits()),
+                &self.iomux_access_grant_config().bits(),
             )
             .finish()
     }

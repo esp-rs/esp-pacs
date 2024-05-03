@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_BACKUP_CLK")
             .field(
                 "hp_sleep_backup_icg_func_en",
-                &format_args!("{}", self.hp_sleep_backup_icg_func_en().bits()),
+                &self.hp_sleep_backup_icg_func_en().bits(),
             )
             .finish()
     }

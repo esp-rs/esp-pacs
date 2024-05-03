@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIF_ACCESS_MONITOR_1")
             .field(
                 "pif_access_monitor_nonword_violate_clr",
-                &format_args!("{}", self.pif_access_monitor_nonword_violate_clr().bit()),
+                &self.pif_access_monitor_nonword_violate_clr().bit(),
             )
             .field(
                 "pif_access_monitor_nonword_violate_en",
-                &format_args!("{}", self.pif_access_monitor_nonword_violate_en().bit()),
+                &self.pif_access_monitor_nonword_violate_en().bit(),
             )
             .finish()
     }

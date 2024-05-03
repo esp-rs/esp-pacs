@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_SCAN_CTRL2")
-            .field(
-                "touch_timeout_num",
-                &format_args!("{}", self.touch_timeout_num().bits()),
-            )
-            .field(
-                "touch_timeout_en",
-                &format_args!("{}", self.touch_timeout_en().bit()),
-            )
-            .field(
-                "touch_out_ring",
-                &format_args!("{}", self.touch_out_ring().bits()),
-            )
-            .field(
-                "freq_scan_en",
-                &format_args!("{}", self.freq_scan_en().bit()),
-            )
-            .field(
-                "freq_scan_cnt_limit",
-                &format_args!("{}", self.freq_scan_cnt_limit().bits()),
-            )
+            .field("touch_timeout_num", &self.touch_timeout_num().bits())
+            .field("touch_timeout_en", &self.touch_timeout_en().bit())
+            .field("touch_out_ring", &self.touch_out_ring().bits())
+            .field("freq_scan_en", &self.freq_scan_en().bit())
+            .field("freq_scan_cnt_limit", &self.freq_scan_cnt_limit().bits())
             .finish()
     }
 }

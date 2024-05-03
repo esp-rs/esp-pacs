@@ -89,21 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field("tx_hung", &format_args!("{}", self.tx_hung().bit()))
-            .field(
-                "send_s_reg_q",
-                &format_args!("{}", self.send_s_reg_q().bit()),
-            )
-            .field(
-                "send_a_reg_q",
-                &format_args!("{}", self.send_a_reg_q().bit()),
-            )
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field("app_ctrl0", &format_args!("{}", self.app_ctrl0().bit()))
-            .field("app_ctrl1", &format_args!("{}", self.app_ctrl1().bit()))
+            .field("rx_start", &self.rx_start().bit())
+            .field("tx_start", &self.tx_start().bit())
+            .field("rx_hung", &self.rx_hung().bit())
+            .field("tx_hung", &self.tx_hung().bit())
+            .field("send_s_reg_q", &self.send_s_reg_q().bit())
+            .field("send_a_reg_q", &self.send_a_reg_q().bit())
+            .field("out_eof", &self.out_eof().bit())
+            .field("app_ctrl0", &self.app_ctrl0().bit())
+            .field("app_ctrl1", &self.app_ctrl1().bit())
             .finish()
     }
 }

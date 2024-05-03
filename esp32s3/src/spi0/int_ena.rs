@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "total_trans_end",
-                &format_args!("{}", self.total_trans_end().bit()),
-            )
-            .field("ecc_err", &format_args!("{}", self.ecc_err().bit()))
+            .field("total_trans_end", &self.total_trans_end().bit())
+            .field("ecc_err", &self.ecc_err().bit())
             .finish()
     }
 }

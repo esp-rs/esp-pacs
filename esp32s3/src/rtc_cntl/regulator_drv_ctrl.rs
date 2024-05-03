@@ -46,20 +46,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("REGULATOR_DRV_CTRL")
             .field(
                 "regulator_drv_b_monitor",
-                &format_args!("{}", self.regulator_drv_b_monitor().bits()),
+                &self.regulator_drv_b_monitor().bits(),
             )
-            .field(
-                "regulator_drv_b_slp",
-                &format_args!("{}", self.regulator_drv_b_slp().bits()),
-            )
-            .field(
-                "dg_vdd_drv_b_slp",
-                &format_args!("{}", self.dg_vdd_drv_b_slp().bits()),
-            )
-            .field(
-                "dg_vdd_drv_b_monitor",
-                &format_args!("{}", self.dg_vdd_drv_b_monitor().bits()),
-            )
+            .field("regulator_drv_b_slp", &self.regulator_drv_b_slp().bits())
+            .field("dg_vdd_drv_b_slp", &self.dg_vdd_drv_b_slp().bits())
+            .field("dg_vdd_drv_b_monitor", &self.dg_vdd_drv_b_monitor().bits())
             .finish()
     }
 }

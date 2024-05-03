@@ -76,38 +76,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TSENS_CTRL")
-            .field(
-                "sar_tsens_out",
-                &format_args!("{}", self.sar_tsens_out().bits()),
-            )
-            .field(
-                "sar_tsens_ready",
-                &format_args!("{}", self.sar_tsens_ready().bit()),
-            )
-            .field(
-                "sar_tsens_int_en",
-                &format_args!("{}", self.sar_tsens_int_en().bit()),
-            )
-            .field(
-                "sar_tsens_in_inv",
-                &format_args!("{}", self.sar_tsens_in_inv().bit()),
-            )
-            .field(
-                "sar_tsens_clk_div",
-                &format_args!("{}", self.sar_tsens_clk_div().bits()),
-            )
-            .field(
-                "sar_tsens_power_up",
-                &format_args!("{}", self.sar_tsens_power_up().bit()),
-            )
+            .field("sar_tsens_out", &self.sar_tsens_out().bits())
+            .field("sar_tsens_ready", &self.sar_tsens_ready().bit())
+            .field("sar_tsens_int_en", &self.sar_tsens_int_en().bit())
+            .field("sar_tsens_in_inv", &self.sar_tsens_in_inv().bit())
+            .field("sar_tsens_clk_div", &self.sar_tsens_clk_div().bits())
+            .field("sar_tsens_power_up", &self.sar_tsens_power_up().bit())
             .field(
                 "sar_tsens_power_up_force",
-                &format_args!("{}", self.sar_tsens_power_up_force().bit()),
+                &self.sar_tsens_power_up_force().bit(),
             )
-            .field(
-                "sar_tsens_dump_out",
-                &format_args!("{}", self.sar_tsens_dump_out().bit()),
-            )
+            .field("sar_tsens_dump_out", &self.sar_tsens_dump_out().bit())
             .finish()
     }
 }

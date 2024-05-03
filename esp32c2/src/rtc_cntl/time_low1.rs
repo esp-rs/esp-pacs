@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIME_LOW1")
-            .field(
-                "timer_value1_low",
-                &format_args!("{}", self.timer_value1_low().bits()),
-            )
+            .field("timer_value1_low", &self.timer_value1_low().bits())
             .finish()
     }
 }

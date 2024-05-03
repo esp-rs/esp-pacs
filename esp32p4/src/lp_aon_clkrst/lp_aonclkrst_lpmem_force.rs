@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LPMEM_FORCE")
             .field(
                 "lp_aonclkrst_lpmem_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_lpmem_clk_force_on().bit()),
+                &self.lp_aonclkrst_lpmem_clk_force_on().bit(),
             )
             .finish()
     }

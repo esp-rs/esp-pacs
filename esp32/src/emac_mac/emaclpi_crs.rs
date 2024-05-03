@@ -69,15 +69,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACLPI_CRS")
-            .field("tlpien", &format_args!("{}", self.tlpien().bit()))
-            .field("tlpiex", &format_args!("{}", self.tlpiex().bit()))
-            .field("rlpien", &format_args!("{}", self.rlpien().bit()))
-            .field("rlpiex", &format_args!("{}", self.rlpiex().bit()))
-            .field("tlpist", &format_args!("{}", self.tlpist().bit()))
-            .field("rlpist", &format_args!("{}", self.rlpist().bit()))
-            .field("lpien", &format_args!("{}", self.lpien().bit()))
-            .field("pls", &format_args!("{}", self.pls().bit()))
-            .field("lpitxa", &format_args!("{}", self.lpitxa().bit()))
+            .field("tlpien", &self.tlpien().bit())
+            .field("tlpiex", &self.tlpiex().bit())
+            .field("rlpien", &self.rlpien().bit())
+            .field("rlpiex", &self.rlpiex().bit())
+            .field("tlpist", &self.tlpist().bit())
+            .field("rlpist", &self.rlpist().bit())
+            .field("lpien", &self.lpien().bit())
+            .field("pls", &self.pls().bit())
+            .field("lpitxa", &self.lpitxa().bit())
             .finish()
     }
 }

@@ -296,134 +296,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOC_CLK_CTRL0")
-            .field(
-                "core0_clic_clk_en",
-                &format_args!("{}", self.core0_clic_clk_en().bit()),
-            )
-            .field(
-                "core1_clic_clk_en",
-                &format_args!("{}", self.core1_clic_clk_en().bit()),
-            )
-            .field(
-                "misc_cpu_clk_en",
-                &format_args!("{}", self.misc_cpu_clk_en().bit()),
-            )
-            .field(
-                "core0_cpu_clk_en",
-                &format_args!("{}", self.core0_cpu_clk_en().bit()),
-            )
-            .field(
-                "core1_cpu_clk_en",
-                &format_args!("{}", self.core1_cpu_clk_en().bit()),
-            )
-            .field(
-                "tcm_cpu_clk_en",
-                &format_args!("{}", self.tcm_cpu_clk_en().bit()),
-            )
-            .field(
-                "busmon_cpu_clk_en",
-                &format_args!("{}", self.busmon_cpu_clk_en().bit()),
-            )
-            .field(
-                "l1cache_cpu_clk_en",
-                &format_args!("{}", self.l1cache_cpu_clk_en().bit()),
-            )
-            .field(
-                "l1cache_d_cpu_clk_en",
-                &format_args!("{}", self.l1cache_d_cpu_clk_en().bit()),
-            )
-            .field(
-                "l1cache_i0_cpu_clk_en",
-                &format_args!("{}", self.l1cache_i0_cpu_clk_en().bit()),
-            )
-            .field(
-                "l1cache_i1_cpu_clk_en",
-                &format_args!("{}", self.l1cache_i1_cpu_clk_en().bit()),
-            )
-            .field(
-                "trace_cpu_clk_en",
-                &format_args!("{}", self.trace_cpu_clk_en().bit()),
-            )
-            .field(
-                "icm_cpu_clk_en",
-                &format_args!("{}", self.icm_cpu_clk_en().bit()),
-            )
-            .field(
-                "gdma_cpu_clk_en",
-                &format_args!("{}", self.gdma_cpu_clk_en().bit()),
-            )
-            .field(
-                "vpu_cpu_clk_en",
-                &format_args!("{}", self.vpu_cpu_clk_en().bit()),
-            )
-            .field(
-                "l1cache_mem_clk_en",
-                &format_args!("{}", self.l1cache_mem_clk_en().bit()),
-            )
-            .field(
-                "l1cache_d_mem_clk_en",
-                &format_args!("{}", self.l1cache_d_mem_clk_en().bit()),
-            )
-            .field(
-                "l1cache_i0_mem_clk_en",
-                &format_args!("{}", self.l1cache_i0_mem_clk_en().bit()),
-            )
-            .field(
-                "l1cache_i1_mem_clk_en",
-                &format_args!("{}", self.l1cache_i1_mem_clk_en().bit()),
-            )
-            .field(
-                "l2cache_mem_clk_en",
-                &format_args!("{}", self.l2cache_mem_clk_en().bit()),
-            )
-            .field(
-                "l2mem_mem_clk_en",
-                &format_args!("{}", self.l2mem_mem_clk_en().bit()),
-            )
-            .field(
-                "l2memmon_mem_clk_en",
-                &format_args!("{}", self.l2memmon_mem_clk_en().bit()),
-            )
-            .field(
-                "icm_mem_clk_en",
-                &format_args!("{}", self.icm_mem_clk_en().bit()),
-            )
-            .field(
-                "misc_sys_clk_en",
-                &format_args!("{}", self.misc_sys_clk_en().bit()),
-            )
-            .field(
-                "trace_sys_clk_en",
-                &format_args!("{}", self.trace_sys_clk_en().bit()),
-            )
-            .field(
-                "l2cache_sys_clk_en",
-                &format_args!("{}", self.l2cache_sys_clk_en().bit()),
-            )
-            .field(
-                "l2mem_sys_clk_en",
-                &format_args!("{}", self.l2mem_sys_clk_en().bit()),
-            )
-            .field(
-                "l2memmon_sys_clk_en",
-                &format_args!("{}", self.l2memmon_sys_clk_en().bit()),
-            )
-            .field(
-                "tcmmon_sys_clk_en",
-                &format_args!("{}", self.tcmmon_sys_clk_en().bit()),
-            )
-            .field(
-                "icm_sys_clk_en",
-                &format_args!("{}", self.icm_sys_clk_en().bit()),
-            )
-            .field(
-                "flash_sys_clk_en",
-                &format_args!("{}", self.flash_sys_clk_en().bit()),
-            )
-            .field(
-                "psram_sys_clk_en",
-                &format_args!("{}", self.psram_sys_clk_en().bit()),
-            )
+            .field("core0_clic_clk_en", &self.core0_clic_clk_en().bit())
+            .field("core1_clic_clk_en", &self.core1_clic_clk_en().bit())
+            .field("misc_cpu_clk_en", &self.misc_cpu_clk_en().bit())
+            .field("core0_cpu_clk_en", &self.core0_cpu_clk_en().bit())
+            .field("core1_cpu_clk_en", &self.core1_cpu_clk_en().bit())
+            .field("tcm_cpu_clk_en", &self.tcm_cpu_clk_en().bit())
+            .field("busmon_cpu_clk_en", &self.busmon_cpu_clk_en().bit())
+            .field("l1cache_cpu_clk_en", &self.l1cache_cpu_clk_en().bit())
+            .field("l1cache_d_cpu_clk_en", &self.l1cache_d_cpu_clk_en().bit())
+            .field("l1cache_i0_cpu_clk_en", &self.l1cache_i0_cpu_clk_en().bit())
+            .field("l1cache_i1_cpu_clk_en", &self.l1cache_i1_cpu_clk_en().bit())
+            .field("trace_cpu_clk_en", &self.trace_cpu_clk_en().bit())
+            .field("icm_cpu_clk_en", &self.icm_cpu_clk_en().bit())
+            .field("gdma_cpu_clk_en", &self.gdma_cpu_clk_en().bit())
+            .field("vpu_cpu_clk_en", &self.vpu_cpu_clk_en().bit())
+            .field("l1cache_mem_clk_en", &self.l1cache_mem_clk_en().bit())
+            .field("l1cache_d_mem_clk_en", &self.l1cache_d_mem_clk_en().bit())
+            .field("l1cache_i0_mem_clk_en", &self.l1cache_i0_mem_clk_en().bit())
+            .field("l1cache_i1_mem_clk_en", &self.l1cache_i1_mem_clk_en().bit())
+            .field("l2cache_mem_clk_en", &self.l2cache_mem_clk_en().bit())
+            .field("l2mem_mem_clk_en", &self.l2mem_mem_clk_en().bit())
+            .field("l2memmon_mem_clk_en", &self.l2memmon_mem_clk_en().bit())
+            .field("icm_mem_clk_en", &self.icm_mem_clk_en().bit())
+            .field("misc_sys_clk_en", &self.misc_sys_clk_en().bit())
+            .field("trace_sys_clk_en", &self.trace_sys_clk_en().bit())
+            .field("l2cache_sys_clk_en", &self.l2cache_sys_clk_en().bit())
+            .field("l2mem_sys_clk_en", &self.l2mem_sys_clk_en().bit())
+            .field("l2memmon_sys_clk_en", &self.l2memmon_sys_clk_en().bit())
+            .field("tcmmon_sys_clk_en", &self.tcmmon_sys_clk_en().bit())
+            .field("icm_sys_clk_en", &self.icm_sys_clk_en().bit())
+            .field("flash_sys_clk_en", &self.flash_sys_clk_en().bit())
+            .field("psram_sys_clk_en", &self.psram_sys_clk_en().bit())
             .finish()
     }
 }

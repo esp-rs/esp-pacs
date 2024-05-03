@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INT_THRESH")
-            .field(
-                "cpu_int_thresh",
-                &format_args!("{}", self.cpu_int_thresh().bits()),
-            )
+            .field("cpu_int_thresh", &self.cpu_int_thresh().bits())
             .finish()
     }
 }

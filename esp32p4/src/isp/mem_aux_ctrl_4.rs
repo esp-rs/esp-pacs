@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_AUX_CTRL_4")
             .field(
                 "sharp_matrix_uv_mem_aux_ctrl",
-                &format_args!("{}", self.sharp_matrix_uv_mem_aux_ctrl().bits()),
+                &self.sharp_matrix_uv_mem_aux_ctrl().bits(),
             )
             .finish()
     }

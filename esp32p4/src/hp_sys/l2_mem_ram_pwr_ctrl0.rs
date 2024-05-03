@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_RAM_PWR_CTRL0")
             .field(
                 "reg_l2_mem_clk_force_on",
-                &format_args!("{}", self.reg_l2_mem_clk_force_on().bit()),
+                &self.reg_l2_mem_clk_force_on().bit(),
             )
             .finish()
     }

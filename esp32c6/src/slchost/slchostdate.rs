@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLCHOSTDATE")
-            .field(
-                "slchost_date",
-                &format_args!("{}", self.slchost_date().bits()),
-            )
+            .field("slchost_date", &self.slchost_date().bits())
             .finish()
     }
 }

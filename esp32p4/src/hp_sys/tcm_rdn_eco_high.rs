@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_RDN_ECO_HIGH")
             .field(
                 "reg_hp_tcm_rdn_eco_high",
-                &format_args!("{}", self.reg_hp_tcm_rdn_eco_high().bits()),
+                &self.reg_hp_tcm_rdn_eco_high().bits(),
             )
             .finish()
     }

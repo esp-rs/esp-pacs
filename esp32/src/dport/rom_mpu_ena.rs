@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROM_MPU_ENA")
-            .field(
-                "share_rom_mpu_ena",
-                &format_args!("{}", self.share_rom_mpu_ena().bit()),
-            )
-            .field(
-                "pro_rom_mpu_ena",
-                &format_args!("{}", self.pro_rom_mpu_ena().bit()),
-            )
-            .field(
-                "app_rom_mpu_ena",
-                &format_args!("{}", self.app_rom_mpu_ena().bit()),
-            )
+            .field("share_rom_mpu_ena", &self.share_rom_mpu_ena().bit())
+            .field("pro_rom_mpu_ena", &self.pro_rom_mpu_ena().bit())
+            .field("app_rom_mpu_ena", &self.app_rom_mpu_ena().bit())
             .finish()
     }
 }

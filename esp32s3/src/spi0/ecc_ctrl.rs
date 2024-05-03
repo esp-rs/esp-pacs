@@ -26,13 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_CTRL")
-            .field(
-                "ecc_err_int_num",
-                &format_args!("{}", self.ecc_err_int_num().bits()),
-            )
+            .field("ecc_err_int_num", &self.ecc_err_int_num().bits())
             .field(
                 "spi_fmem_ecc_err_int_en",
-                &format_args!("{}", self.spi_fmem_ecc_err_int_en().bit()),
+                &self.spi_fmem_ecc_err_int_en().bit(),
             )
             .finish()
     }

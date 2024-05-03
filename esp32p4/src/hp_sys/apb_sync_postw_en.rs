@@ -44,21 +44,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_SYNC_POSTW_EN")
-            .field(
-                "gmac_apb_postw_en",
-                &format_args!("{}", self.gmac_apb_postw_en().bit()),
-            )
-            .field(
-                "dsi_host_apb_postw_en",
-                &format_args!("{}", self.dsi_host_apb_postw_en().bit()),
-            )
+            .field("gmac_apb_postw_en", &self.gmac_apb_postw_en().bit())
+            .field("dsi_host_apb_postw_en", &self.dsi_host_apb_postw_en().bit())
             .field(
                 "csi_host_apb_sync_postw_en",
-                &format_args!("{}", self.csi_host_apb_sync_postw_en().bit()),
+                &self.csi_host_apb_sync_postw_en().bit(),
             )
             .field(
                 "csi_host_apb_async_postw_en",
-                &format_args!("{}", self.csi_host_apb_async_postw_en().bit()),
+                &self.csi_host_apb_async_postw_en().bit(),
             )
             .finish()
     }

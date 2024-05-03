@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GMAC_CTRL2")
-            .field(
-                "ptp_timestamp_h",
-                &format_args!("{}", self.ptp_timestamp_h().bits()),
-            )
+            .field("ptp_timestamp_h", &self.ptp_timestamp_h().bits())
             .finish()
     }
 }

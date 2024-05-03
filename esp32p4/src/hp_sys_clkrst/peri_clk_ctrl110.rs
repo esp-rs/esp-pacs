@@ -53,26 +53,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL110")
-            .field(
-                "lcd_clk_div_num",
-                &format_args!("{}", self.lcd_clk_div_num().bits()),
-            )
+            .field("lcd_clk_div_num", &self.lcd_clk_div_num().bits())
             .field(
                 "lcd_clk_div_numerator",
-                &format_args!("{}", self.lcd_clk_div_numerator().bits()),
+                &self.lcd_clk_div_numerator().bits(),
             )
             .field(
                 "lcd_clk_div_denominator",
-                &format_args!("{}", self.lcd_clk_div_denominator().bits()),
+                &self.lcd_clk_div_denominator().bits(),
             )
-            .field(
-                "uart0_clk_src_sel",
-                &format_args!("{}", self.uart0_clk_src_sel().bits()),
-            )
-            .field(
-                "uart0_clk_en",
-                &format_args!("{}", self.uart0_clk_en().bit()),
-            )
+            .field("uart0_clk_src_sel", &self.uart0_clk_src_sel().bits())
+            .field("uart0_clk_en", &self.uart0_clk_en().bit())
             .finish()
     }
 }

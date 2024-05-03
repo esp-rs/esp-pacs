@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CORE_BOOT_ADDR")
-            .field(
-                "lp_cpu_boot_addr",
-                &format_args!("{}", self.lp_cpu_boot_addr().bits()),
-            )
+            .field("lp_cpu_boot_addr", &self.lp_cpu_boot_addr().bits())
             .finish()
     }
 }

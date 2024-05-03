@@ -55,17 +55,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN")
-            .field(
-                "sync_bypass",
-                &format_args!("{}", self.sync_bypass().bits()),
-            )
-            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
-            .field("int_type", &format_args!("{}", self.int_type().bits()))
-            .field(
-                "wakeup_enable",
-                &format_args!("{}", self.wakeup_enable().bit()),
-            )
-            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
+            .field("sync_bypass", &self.sync_bypass().bits())
+            .field("pad_driver", &self.pad_driver().bit())
+            .field("int_type", &self.int_type().bits())
+            .field("wakeup_enable", &self.wakeup_enable().bit())
+            .field("filter_en", &self.filter_en().bit())
             .finish()
     }
 }

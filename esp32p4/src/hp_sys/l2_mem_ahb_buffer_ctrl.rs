@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_AHB_BUFFER_CTRL")
             .field(
                 "l2_mem_ahb_wrbuffer_en",
-                &format_args!("{}", self.l2_mem_ahb_wrbuffer_en().bit()),
+                &self.l2_mem_ahb_wrbuffer_en().bit(),
             )
             .field(
                 "l2_mem_ahb_rdbuffer_en",
-                &format_args!("{}", self.l2_mem_ahb_rdbuffer_en().bit()),
+                &self.l2_mem_ahb_rdbuffer_en().bit(),
             )
             .finish()
     }

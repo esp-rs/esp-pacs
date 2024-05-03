@@ -55,23 +55,20 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL118")
             .field(
                 "parlio_rx_clk_div_numerator",
-                &format_args!("{}", self.parlio_rx_clk_div_numerator().bits()),
+                &self.parlio_rx_clk_div_numerator().bits(),
             )
             .field(
                 "parlio_rx_clk_div_denominator",
-                &format_args!("{}", self.parlio_rx_clk_div_denominator().bits()),
+                &self.parlio_rx_clk_div_denominator().bits(),
             )
             .field(
                 "parlio_tx_clk_src_sel",
-                &format_args!("{}", self.parlio_tx_clk_src_sel().bits()),
+                &self.parlio_tx_clk_src_sel().bits(),
             )
-            .field(
-                "parlio_tx_clk_en",
-                &format_args!("{}", self.parlio_tx_clk_en().bit()),
-            )
+            .field("parlio_tx_clk_en", &self.parlio_tx_clk_en().bit())
             .field(
                 "parlio_tx_clk_div_num",
-                &format_args!("{}", self.parlio_tx_clk_div_num().bits()),
+                &self.parlio_tx_clk_div_num().bits(),
             )
             .finish()
     }

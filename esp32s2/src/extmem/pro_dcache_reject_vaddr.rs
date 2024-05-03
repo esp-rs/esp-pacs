@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_REJECT_VADDR")
-            .field(
-                "pro_dcache_cpu_vaddr",
-                &format_args!("{}", self.pro_dcache_cpu_vaddr().bits()),
-            )
+            .field("pro_dcache_cpu_vaddr", &self.pro_dcache_cpu_vaddr().bits())
             .finish()
     }
 }

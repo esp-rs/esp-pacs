@@ -48,29 +48,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_AXI_ADDR_CTRL")
-            .field(
-                "all_fifo_empty",
-                &format_args!("{}", self.all_fifo_empty().bit()),
-            )
+            .field("all_fifo_empty", &self.all_fifo_empty().bit())
             .field(
                 "spi_rdata_afifo_rempty",
-                &format_args!("{}", self.spi_rdata_afifo_rempty().bit()),
+                &self.spi_rdata_afifo_rempty().bit(),
             )
             .field(
                 "spi_raddr_afifo_rempty",
-                &format_args!("{}", self.spi_raddr_afifo_rempty().bit()),
+                &self.spi_raddr_afifo_rempty().bit(),
             )
             .field(
                 "spi_wdata_afifo_rempty",
-                &format_args!("{}", self.spi_wdata_afifo_rempty().bit()),
+                &self.spi_wdata_afifo_rempty().bit(),
             )
             .field(
                 "spi_wblen_afifo_rempty",
-                &format_args!("{}", self.spi_wblen_afifo_rempty().bit()),
+                &self.spi_wblen_afifo_rempty().bit(),
             )
             .field(
                 "spi_all_axi_trans_afifo_empty",
-                &format_args!("{}", self.spi_all_axi_trans_afifo_empty().bit()),
+                &self.spi_all_axi_trans_afifo_empty().bit(),
             )
             .finish()
     }

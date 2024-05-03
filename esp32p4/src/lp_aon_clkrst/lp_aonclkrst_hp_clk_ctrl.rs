@@ -262,115 +262,115 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_CLK_CTRL")
             .field(
                 "lp_aonclkrst_hp_root_clk_src_sel",
-                &format_args!("{}", self.lp_aonclkrst_hp_root_clk_src_sel().bits()),
+                &self.lp_aonclkrst_hp_root_clk_src_sel().bits(),
             )
             .field(
                 "lp_aonclkrst_hp_root_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_root_clk_en().bit()),
+                &self.lp_aonclkrst_hp_root_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_parlio_tx_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_parlio_tx_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_parlio_tx_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_parlio_rx_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_parlio_rx_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_parlio_rx_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_uart4_slp_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_uart4_slp_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_uart4_slp_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_uart3_slp_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_uart3_slp_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_uart3_slp_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_uart2_slp_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_uart2_slp_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_uart2_slp_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_uart1_slp_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_uart1_slp_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_uart1_slp_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_uart0_slp_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_uart0_slp_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_uart0_slp_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_i2s2_mclk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_i2s2_mclk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_i2s2_mclk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_i2s1_mclk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_i2s1_mclk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_i2s1_mclk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_i2s0_mclk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_i2s0_mclk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_i2s0_mclk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_emac_tx_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_emac_tx_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_emac_tx_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_emac_rx_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_emac_rx_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_emac_rx_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pad_emac_txrx_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pad_emac_txrx_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pad_emac_txrx_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_xtal_32k_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_xtal_32k_clk_en().bit()),
+                &self.lp_aonclkrst_hp_xtal_32k_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_rc_32k_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_rc_32k_clk_en().bit()),
+                &self.lp_aonclkrst_hp_rc_32k_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_sosc_150k_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_sosc_150k_clk_en().bit()),
+                &self.lp_aonclkrst_hp_sosc_150k_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_pll_8m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_pll_8m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_pll_8m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_audio_pll_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_audio_pll_clk_en().bit()),
+                &self.lp_aonclkrst_hp_audio_pll_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_sdio_pll2_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_sdio_pll2_clk_en().bit()),
+                &self.lp_aonclkrst_hp_sdio_pll2_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_sdio_pll1_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_sdio_pll1_clk_en().bit()),
+                &self.lp_aonclkrst_hp_sdio_pll1_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_sdio_pll0_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_sdio_pll0_clk_en().bit()),
+                &self.lp_aonclkrst_hp_sdio_pll0_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_fosc_20m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_fosc_20m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_fosc_20m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_xtal_40m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_xtal_40m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_xtal_40m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_cpll_400m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_cpll_400m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_cpll_400m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_spll_480m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_spll_480m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_spll_480m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hp_mpll_500m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_hp_mpll_500m_clk_en().bit()),
+                &self.lp_aonclkrst_hp_mpll_500m_clk_en().bit(),
             )
             .finish()
     }

@@ -146,71 +146,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA0")
-            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
-            .field(
-                "swap_uart_sdio_en",
-                &format_args!("{}", self.swap_uart_sdio_en().bit()),
-            )
-            .field("dis_icache", &format_args!("{}", self.dis_icache().bit()))
-            .field(
-                "dis_usb_jtag",
-                &format_args!("{}", self.dis_usb_jtag().bit()),
-            )
-            .field(
-                "dis_download_icache",
-                &format_args!("{}", self.dis_download_icache().bit()),
-            )
-            .field(
-                "dis_usb_serial_jtag",
-                &format_args!("{}", self.dis_usb_serial_jtag().bit()),
-            )
-            .field(
-                "dis_force_download",
-                &format_args!("{}", self.dis_force_download().bit()),
-            )
-            .field(
-                "spi_download_mspi_dis",
-                &format_args!("{}", self.spi_download_mspi_dis().bit()),
-            )
-            .field("dis_can", &format_args!("{}", self.dis_can().bit()))
-            .field(
-                "jtag_sel_enable",
-                &format_args!("{}", self.jtag_sel_enable().bit()),
-            )
-            .field(
-                "soft_dis_jtag",
-                &format_args!("{}", self.soft_dis_jtag().bits()),
-            )
-            .field(
-                "dis_pad_jtag",
-                &format_args!("{}", self.dis_pad_jtag().bit()),
-            )
+            .field("rd_dis", &self.rd_dis().bits())
+            .field("swap_uart_sdio_en", &self.swap_uart_sdio_en().bit())
+            .field("dis_icache", &self.dis_icache().bit())
+            .field("dis_usb_jtag", &self.dis_usb_jtag().bit())
+            .field("dis_download_icache", &self.dis_download_icache().bit())
+            .field("dis_usb_serial_jtag", &self.dis_usb_serial_jtag().bit())
+            .field("dis_force_download", &self.dis_force_download().bit())
+            .field("spi_download_mspi_dis", &self.spi_download_mspi_dis().bit())
+            .field("dis_can", &self.dis_can().bit())
+            .field("jtag_sel_enable", &self.jtag_sel_enable().bit())
+            .field("soft_dis_jtag", &self.soft_dis_jtag().bits())
+            .field("dis_pad_jtag", &self.dis_pad_jtag().bit())
             .field(
                 "dis_download_manual_encrypt",
-                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+                &self.dis_download_manual_encrypt().bit(),
             )
-            .field("usb_drefh", &format_args!("{}", self.usb_drefh().bits()))
-            .field("usb_drefl", &format_args!("{}", self.usb_drefl().bits()))
-            .field(
-                "usb_exchg_pins",
-                &format_args!("{}", self.usb_exchg_pins().bit()),
-            )
-            .field(
-                "vdd_spi_as_gpio",
-                &format_args!("{}", self.vdd_spi_as_gpio().bit()),
-            )
-            .field(
-                "rpt4_reserved0_2",
-                &format_args!("{}", self.rpt4_reserved0_2().bits()),
-            )
-            .field(
-                "rpt4_reserved0_1",
-                &format_args!("{}", self.rpt4_reserved0_1().bit()),
-            )
-            .field(
-                "rpt4_reserved0_0",
-                &format_args!("{}", self.rpt4_reserved0_0().bits()),
-            )
+            .field("usb_drefh", &self.usb_drefh().bits())
+            .field("usb_drefl", &self.usb_drefl().bits())
+            .field("usb_exchg_pins", &self.usb_exchg_pins().bit())
+            .field("vdd_spi_as_gpio", &self.vdd_spi_as_gpio().bit())
+            .field("rpt4_reserved0_2", &self.rpt4_reserved0_2().bits())
+            .field("rpt4_reserved0_1", &self.rpt4_reserved0_1().bit())
+            .field("rpt4_reserved0_0", &self.rpt4_reserved0_0().bits())
             .finish()
     }
 }

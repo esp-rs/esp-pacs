@@ -21,10 +21,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP")
             .field(
                 "core_1_pif_pms_monitor_violate_size_intr_map",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_violate_size_intr_map().bits()
-                ),
+                &self.core_1_pif_pms_monitor_violate_size_intr_map().bits(),
             )
             .finish()
     }

@@ -145,51 +145,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_USER")
-            .field(
-                "lcd_dout_cyclelen",
-                &format_args!("{}", self.lcd_dout_cyclelen().bits()),
-            )
-            .field(
-                "lcd_always_out_en",
-                &format_args!("{}", self.lcd_always_out_en().bit()),
-            )
+            .field("lcd_dout_cyclelen", &self.lcd_dout_cyclelen().bits())
+            .field("lcd_always_out_en", &self.lcd_always_out_en().bit())
             .field(
                 "lcd_dout_byte_swizzle_mode",
-                &format_args!("{}", self.lcd_dout_byte_swizzle_mode().bits()),
+                &self.lcd_dout_byte_swizzle_mode().bits(),
             )
             .field(
                 "lcd_dout_byte_swizzle_enable",
-                &format_args!("{}", self.lcd_dout_byte_swizzle_enable().bit()),
+                &self.lcd_dout_byte_swizzle_enable().bit(),
             )
-            .field(
-                "lcd_dout_bit_order",
-                &format_args!("{}", self.lcd_dout_bit_order().bit()),
-            )
-            .field(
-                "lcd_byte_mode",
-                &format_args!("{}", self.lcd_byte_mode().bits()),
-            )
-            .field("lcd_update", &format_args!("{}", self.lcd_update().bit()))
-            .field(
-                "lcd_bit_order",
-                &format_args!("{}", self.lcd_bit_order().bit()),
-            )
-            .field(
-                "lcd_byte_order",
-                &format_args!("{}", self.lcd_byte_order().bit()),
-            )
-            .field("lcd_dout", &format_args!("{}", self.lcd_dout().bit()))
-            .field("lcd_dummy", &format_args!("{}", self.lcd_dummy().bit()))
-            .field("lcd_cmd", &format_args!("{}", self.lcd_cmd().bit()))
-            .field("lcd_start", &format_args!("{}", self.lcd_start().bit()))
-            .field(
-                "lcd_dummy_cyclelen",
-                &format_args!("{}", self.lcd_dummy_cyclelen().bits()),
-            )
-            .field(
-                "lcd_cmd_2_cycle_en",
-                &format_args!("{}", self.lcd_cmd_2_cycle_en().bit()),
-            )
+            .field("lcd_dout_bit_order", &self.lcd_dout_bit_order().bit())
+            .field("lcd_byte_mode", &self.lcd_byte_mode().bits())
+            .field("lcd_update", &self.lcd_update().bit())
+            .field("lcd_bit_order", &self.lcd_bit_order().bit())
+            .field("lcd_byte_order", &self.lcd_byte_order().bit())
+            .field("lcd_dout", &self.lcd_dout().bit())
+            .field("lcd_dummy", &self.lcd_dummy().bit())
+            .field("lcd_cmd", &self.lcd_cmd().bit())
+            .field("lcd_start", &self.lcd_start().bit())
+            .field("lcd_dummy_cyclelen", &self.lcd_dummy_cyclelen().bits())
+            .field("lcd_cmd_2_cycle_en", &self.lcd_cmd_2_cycle_en().bit())
             .finish()
     }
 }

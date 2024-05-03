@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_OUT_STATUS")
-            .field("out_full", &format_args!("{}", self.out_full().bit()))
-            .field("out_empty", &format_args!("{}", self.out_empty().bit()))
+            .field("out_full", &self.out_full().bit())
+            .field("out_empty", &self.out_empty().bit())
             .finish()
     }
 }

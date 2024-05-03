@@ -101,51 +101,39 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_2")
             .field(
                 "core_0_pif_pms_constrain_world_0_bt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_bt().bits()),
+                &self.core_0_pif_pms_constrain_world_0_bt().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_i2c_ext0",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_i2c_ext0().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_i2c_ext0().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_uhci0",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_uhci0().bits()),
+                &self.core_0_pif_pms_constrain_world_0_uhci0().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_rmt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_rmt().bits()),
+                &self.core_0_pif_pms_constrain_world_0_rmt().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_ledc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_ledc().bits()),
+                &self.core_0_pif_pms_constrain_world_0_ledc().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_bb",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_bb().bits()),
+                &self.core_0_pif_pms_constrain_world_0_bb().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_timergroup",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_timergroup().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_timergroup().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_timergroup1",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_timergroup1().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_timergroup1().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_systimer",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_systimer().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_systimer().bits(),
             )
             .finish()
     }

@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GOP_CONF")
-            .field(
-                "dual_stream_mode",
-                &format_args!("{}", self.dual_stream_mode().bit()),
-            )
-            .field("gop_num", &format_args!("{}", self.gop_num().bits()))
+            .field("dual_stream_mode", &self.dual_stream_mode().bit())
+            .field("gop_num", &self.gop_num().bits())
             .finish()
     }
 }

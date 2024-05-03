@@ -104,62 +104,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_STATUS")
-            .field(
-                "infifo_full_l1",
-                &format_args!("{}", self.infifo_full_l1().bit()),
-            )
-            .field(
-                "infifo_empty_l1",
-                &format_args!("{}", self.infifo_empty_l1().bit()),
-            )
-            .field(
-                "infifo_full_l2",
-                &format_args!("{}", self.infifo_full_l2().bit()),
-            )
-            .field(
-                "infifo_empty_l2",
-                &format_args!("{}", self.infifo_empty_l2().bit()),
-            )
-            .field(
-                "infifo_full_l3",
-                &format_args!("{}", self.infifo_full_l3().bit()),
-            )
-            .field(
-                "infifo_empty_l3",
-                &format_args!("{}", self.infifo_empty_l3().bit()),
-            )
-            .field(
-                "infifo_cnt_l1",
-                &format_args!("{}", self.infifo_cnt_l1().bits()),
-            )
-            .field(
-                "infifo_cnt_l2",
-                &format_args!("{}", self.infifo_cnt_l2().bits()),
-            )
-            .field(
-                "infifo_cnt_l3",
-                &format_args!("{}", self.infifo_cnt_l3().bits()),
-            )
-            .field(
-                "in_remain_under_1b_l3",
-                &format_args!("{}", self.in_remain_under_1b_l3().bit()),
-            )
-            .field(
-                "in_remain_under_2b_l3",
-                &format_args!("{}", self.in_remain_under_2b_l3().bit()),
-            )
-            .field(
-                "in_remain_under_3b_l3",
-                &format_args!("{}", self.in_remain_under_3b_l3().bit()),
-            )
-            .field(
-                "in_remain_under_4b_l3",
-                &format_args!("{}", self.in_remain_under_4b_l3().bit()),
-            )
-            .field(
-                "in_buf_hungry",
-                &format_args!("{}", self.in_buf_hungry().bit()),
-            )
+            .field("infifo_full_l1", &self.infifo_full_l1().bit())
+            .field("infifo_empty_l1", &self.infifo_empty_l1().bit())
+            .field("infifo_full_l2", &self.infifo_full_l2().bit())
+            .field("infifo_empty_l2", &self.infifo_empty_l2().bit())
+            .field("infifo_full_l3", &self.infifo_full_l3().bit())
+            .field("infifo_empty_l3", &self.infifo_empty_l3().bit())
+            .field("infifo_cnt_l1", &self.infifo_cnt_l1().bits())
+            .field("infifo_cnt_l2", &self.infifo_cnt_l2().bits())
+            .field("infifo_cnt_l3", &self.infifo_cnt_l3().bits())
+            .field("in_remain_under_1b_l3", &self.in_remain_under_1b_l3().bit())
+            .field("in_remain_under_2b_l3", &self.in_remain_under_2b_l3().bit())
+            .field("in_remain_under_3b_l3", &self.in_remain_under_3b_l3().bit())
+            .field("in_remain_under_4b_l3", &self.in_remain_under_4b_l3().bit())
+            .field("in_buf_hungry", &self.in_buf_hungry().bit())
             .finish()
     }
 }

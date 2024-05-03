@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_SLP_THRES")
-            .field(
-                "touch_slp_th",
-                &format_args!("{}", self.touch_slp_th().bits()),
-            )
-            .field(
-                "touch_slp_approach_en",
-                &format_args!("{}", self.touch_slp_approach_en().bit()),
-            )
-            .field(
-                "touch_slp_pad",
-                &format_args!("{}", self.touch_slp_pad().bits()),
-            )
+            .field("touch_slp_th", &self.touch_slp_th().bits())
+            .field("touch_slp_approach_en", &self.touch_slp_approach_en().bit())
+            .field("touch_slp_pad", &self.touch_slp_pad().bits())
             .finish()
     }
 }

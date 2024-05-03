@@ -61,23 +61,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CHCONF1")
-            .field("rx_en_ch4", &format_args!("{}", self.rx_en_ch4().bit()))
-            .field(
-                "mem_owner_ch4",
-                &format_args!("{}", self.mem_owner_ch4().bit()),
-            )
-            .field(
-                "rx_filter_en_ch4",
-                &format_args!("{}", self.rx_filter_en_ch4().bit()),
-            )
-            .field(
-                "rx_filter_thres_ch4",
-                &format_args!("{}", self.rx_filter_thres_ch4().bits()),
-            )
-            .field(
-                "mem_rx_wrap_en_ch4",
-                &format_args!("{}", self.mem_rx_wrap_en_ch4().bit()),
-            )
+            .field("rx_en_ch4", &self.rx_en_ch4().bit())
+            .field("mem_owner_ch4", &self.mem_owner_ch4().bit())
+            .field("rx_filter_en_ch4", &self.rx_filter_en_ch4().bit())
+            .field("rx_filter_thres_ch4", &self.rx_filter_thres_ch4().bits())
+            .field("mem_rx_wrap_en_ch4", &self.mem_rx_wrap_en_ch4().bit())
             .finish()
     }
 }

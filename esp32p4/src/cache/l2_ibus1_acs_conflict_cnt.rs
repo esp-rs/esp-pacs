@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_IBUS1_ACS_CONFLICT_CNT")
             .field(
                 "l2_ibus1_conflict_cnt",
-                &format_args!("{}", self.l2_ibus1_conflict_cnt().bits()),
+                &self.l2_ibus1_conflict_cnt().bits(),
             )
             .finish()
     }

@@ -109,49 +109,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL02")
-            .field(
-                "sdio_ls_clk_div_num",
-                &format_args!("{}", self.sdio_ls_clk_div_num().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_l",
-                &format_args!("{}", self.sdio_ls_clk_edge_l().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_h",
-                &format_args!("{}", self.sdio_ls_clk_edge_h().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_n",
-                &format_args!("{}", self.sdio_ls_clk_edge_n().bits()),
-            )
+            .field("sdio_ls_clk_div_num", &self.sdio_ls_clk_div_num().bits())
+            .field("sdio_ls_clk_edge_l", &self.sdio_ls_clk_edge_l().bits())
+            .field("sdio_ls_clk_edge_h", &self.sdio_ls_clk_edge_h().bits())
+            .field("sdio_ls_clk_edge_n", &self.sdio_ls_clk_edge_n().bits())
             .field(
                 "sdio_ls_slf_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_slf_clk_edge_sel().bits()),
+                &self.sdio_ls_slf_clk_edge_sel().bits(),
             )
             .field(
                 "sdio_ls_drv_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_drv_clk_edge_sel().bits()),
+                &self.sdio_ls_drv_clk_edge_sel().bits(),
             )
             .field(
                 "sdio_ls_sam_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_sam_clk_edge_sel().bits()),
+                &self.sdio_ls_sam_clk_edge_sel().bits(),
             )
-            .field(
-                "sdio_ls_slf_clk_en",
-                &format_args!("{}", self.sdio_ls_slf_clk_en().bit()),
-            )
-            .field(
-                "sdio_ls_drv_clk_en",
-                &format_args!("{}", self.sdio_ls_drv_clk_en().bit()),
-            )
-            .field(
-                "sdio_ls_sam_clk_en",
-                &format_args!("{}", self.sdio_ls_sam_clk_en().bit()),
-            )
+            .field("sdio_ls_slf_clk_en", &self.sdio_ls_slf_clk_en().bit())
+            .field("sdio_ls_drv_clk_en", &self.sdio_ls_drv_clk_en().bit())
+            .field("sdio_ls_sam_clk_en", &self.sdio_ls_sam_clk_en().bit())
             .field(
                 "mipi_dsi_dphy_clk_src_sel",
-                &format_args!("{}", self.mipi_dsi_dphy_clk_src_sel().bits()),
+                &self.mipi_dsi_dphy_clk_src_sel().bits(),
             )
             .finish()
     }

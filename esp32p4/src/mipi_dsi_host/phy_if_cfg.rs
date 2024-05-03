@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_IF_CFG")
-            .field("n_lanes", &format_args!("{}", self.n_lanes().bits()))
-            .field(
-                "phy_stop_wait_time",
-                &format_args!("{}", self.phy_stop_wait_time().bits()),
-            )
+            .field("n_lanes", &self.n_lanes().bits())
+            .field("phy_stop_wait_time", &self.phy_stop_wait_time().bits())
             .finish()
     }
 }

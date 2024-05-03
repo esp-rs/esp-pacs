@@ -44,21 +44,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CK_DEFAULT")
-            .field(
-                "colorkey_default_b",
-                &format_args!("{}", self.colorkey_default_b().bits()),
-            )
-            .field(
-                "colorkey_default_g",
-                &format_args!("{}", self.colorkey_default_g().bits()),
-            )
-            .field(
-                "colorkey_default_r",
-                &format_args!("{}", self.colorkey_default_r().bits()),
-            )
+            .field("colorkey_default_b", &self.colorkey_default_b().bits())
+            .field("colorkey_default_g", &self.colorkey_default_g().bits())
+            .field("colorkey_default_r", &self.colorkey_default_r().bits())
             .field(
                 "colorkey_fg_bg_reverse",
-                &format_args!("{}", self.colorkey_fg_bg_reverse().bit()),
+                &self.colorkey_fg_bg_reverse().bit(),
             )
             .finish()
     }

@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_PWR_CNTL")
-            .field(
-                "touch_wait_cycles",
-                &format_args!("{}", self.touch_wait_cycles().bits()),
-            )
-            .field(
-                "touch_sleep_cycles",
-                &format_args!("{}", self.touch_sleep_cycles().bits()),
-            )
-            .field(
-                "touch_force_done",
-                &format_args!("{}", self.touch_force_done().bit()),
-            )
-            .field(
-                "touch_sleep_timer_en",
-                &format_args!("{}", self.touch_sleep_timer_en().bit()),
-            )
+            .field("touch_wait_cycles", &self.touch_wait_cycles().bits())
+            .field("touch_sleep_cycles", &self.touch_sleep_cycles().bits())
+            .field("touch_force_done", &self.touch_force_done().bit())
+            .field("touch_sleep_timer_en", &self.touch_sleep_timer_en().bit())
             .finish()
     }
 }

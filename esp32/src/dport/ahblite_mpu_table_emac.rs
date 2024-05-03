@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_EMAC")
             .field(
                 "emac_access_grant_config",
-                &format_args!("{}", self.emac_access_grant_config().bits()),
+                &self.emac_access_grant_config().bits(),
             )
             .finish()
     }

@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("MODEM_PERI_TIMEOUT_UID")
             .field(
                 "modem_peri_timeout_uid",
-                &format_args!("{}", self.modem_peri_timeout_uid().bits()),
+                &self.modem_peri_timeout_uid().bits(),
             )
             .finish()
     }

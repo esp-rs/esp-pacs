@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_PRELOAD_ADDR")
             .field(
                 "pro_dcache_preload_addr",
-                &format_args!("{}", self.pro_dcache_preload_addr().bits()),
+                &self.pro_dcache_preload_addr().bits(),
             )
             .finish()
     }

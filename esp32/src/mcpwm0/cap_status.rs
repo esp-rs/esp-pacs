@@ -27,9 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAP_STATUS")
-            .field("cap0_edge", &format_args!("{}", self.cap0_edge().bit()))
-            .field("cap1_edge", &format_args!("{}", self.cap1_edge().bit()))
-            .field("cap2_edge", &format_args!("{}", self.cap2_edge().bit()))
+            .field("cap0_edge", &self.cap0_edge().bit())
+            .field("cap1_edge", &self.cap1_edge().bit())
+            .field("cap2_edge", &self.cap2_edge().bit())
             .finish()
     }
 }

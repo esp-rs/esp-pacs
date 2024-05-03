@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_PD_CTRL")
-            .field(
-                "ecc_mem_force_pd",
-                &format_args!("{}", self.ecc_mem_force_pd().bit()),
-            )
-            .field(
-                "ecc_mem_force_pu",
-                &format_args!("{}", self.ecc_mem_force_pu().bit()),
-            )
-            .field("ecc_mem_pd", &format_args!("{}", self.ecc_mem_pd().bit()))
+            .field("ecc_mem_force_pd", &self.ecc_mem_force_pd().bit())
+            .field("ecc_mem_force_pu", &self.ecc_mem_force_pu().bit())
+            .field("ecc_mem_pd", &self.ecc_mem_pd().bit())
             .finish()
     }
 }

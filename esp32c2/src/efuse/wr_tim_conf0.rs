@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WR_TIM_CONF0")
-            .field("thp_a", &format_args!("{}", self.thp_a().bits()))
-            .field(
-                "tpgm_inactive",
-                &format_args!("{}", self.tpgm_inactive().bits()),
-            )
-            .field("tpgm", &format_args!("{}", self.tpgm().bits()))
+            .field("thp_a", &self.thp_a().bits())
+            .field("tpgm_inactive", &self.tpgm_inactive().bits())
+            .field("tpgm", &self.tpgm().bits())
             .finish()
     }
 }

@@ -152,28 +152,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("ext_hold_en", &format_args!("{}", self.ext_hold_en().bit()))
-            .field("dummy_out", &format_args!("{}", self.dummy_out().bit()))
-            .field("faddr_dual", &format_args!("{}", self.faddr_dual().bit()))
-            .field("faddr_quad", &format_args!("{}", self.faddr_quad().bit()))
-            .field("faddr_oct", &format_args!("{}", self.faddr_oct().bit()))
-            .field("fcmd_dual", &format_args!("{}", self.fcmd_dual().bit()))
-            .field("fcmd_quad", &format_args!("{}", self.fcmd_quad().bit()))
-            .field("fcmd_oct", &format_args!("{}", self.fcmd_oct().bit()))
-            .field("fread_dual", &format_args!("{}", self.fread_dual().bit()))
-            .field("fread_quad", &format_args!("{}", self.fread_quad().bit()))
-            .field("fread_oct", &format_args!("{}", self.fread_oct().bit()))
-            .field("q_pol", &format_args!("{}", self.q_pol().bit()))
-            .field("d_pol", &format_args!("{}", self.d_pol().bit()))
-            .field("wp", &format_args!("{}", self.wp().bit()))
-            .field(
-                "rd_bit_order",
-                &format_args!("{}", self.rd_bit_order().bit()),
-            )
-            .field(
-                "wr_bit_order",
-                &format_args!("{}", self.wr_bit_order().bit()),
-            )
+            .field("ext_hold_en", &self.ext_hold_en().bit())
+            .field("dummy_out", &self.dummy_out().bit())
+            .field("faddr_dual", &self.faddr_dual().bit())
+            .field("faddr_quad", &self.faddr_quad().bit())
+            .field("faddr_oct", &self.faddr_oct().bit())
+            .field("fcmd_dual", &self.fcmd_dual().bit())
+            .field("fcmd_quad", &self.fcmd_quad().bit())
+            .field("fcmd_oct", &self.fcmd_oct().bit())
+            .field("fread_dual", &self.fread_dual().bit())
+            .field("fread_quad", &self.fread_quad().bit())
+            .field("fread_oct", &self.fread_oct().bit())
+            .field("q_pol", &self.q_pol().bit())
+            .field("d_pol", &self.d_pol().bit())
+            .field("wp", &self.wp().bit())
+            .field("rd_bit_order", &self.rd_bit_order().bit())
+            .field("wr_bit_order", &self.wr_bit_order().bit())
             .finish()
     }
 }

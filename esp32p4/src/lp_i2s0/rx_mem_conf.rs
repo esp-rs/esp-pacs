@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_MEM_CONF")
-            .field(
-                "rx_mem_fifo_cnt",
-                &format_args!("{}", self.rx_mem_fifo_cnt().bits()),
-            )
-            .field(
-                "rx_mem_threshold",
-                &format_args!("{}", self.rx_mem_threshold().bits()),
-            )
+            .field("rx_mem_fifo_cnt", &self.rx_mem_fifo_cnt().bits())
+            .field("rx_mem_threshold", &self.rx_mem_threshold().bits())
             .finish()
     }
 }

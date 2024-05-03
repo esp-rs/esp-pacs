@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_STATUS1_CH")
-            .field(
-                "l1infifo_cnt",
-                &format_args!("{}", self.l1infifo_cnt().bits()),
-            )
-            .field(
-                "l2infifo_cnt",
-                &format_args!("{}", self.l2infifo_cnt().bits()),
-            )
+            .field("l1infifo_cnt", &self.l1infifo_cnt().bits())
+            .field("l2infifo_cnt", &self.l2infifo_cnt().bits())
             .finish()
     }
 }

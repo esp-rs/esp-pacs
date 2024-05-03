@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MS_DLEN")
-            .field(
-                "ms_data_bitlen",
-                &format_args!("{}", self.ms_data_bitlen().bits()),
-            )
+            .field("ms_data_bitlen", &self.ms_data_bitlen().bits())
             .finish()
     }
 }

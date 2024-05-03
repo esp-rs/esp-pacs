@@ -33,21 +33,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_2")
             .field(
                 "dma_apbperi_pms_monitor_violate_intr",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_intr().bit()),
+                &self.dma_apbperi_pms_monitor_violate_intr().bit(),
             )
             .field(
                 "dma_apbperi_pms_monitor_violate_status_world",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_pms_monitor_violate_status_world().bits()
-                ),
+                &self.dma_apbperi_pms_monitor_violate_status_world().bits(),
             )
             .field(
                 "dma_apbperi_pms_monitor_violate_status_addr",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_pms_monitor_violate_status_addr().bits()
-                ),
+                &self.dma_apbperi_pms_monitor_violate_status_addr().bits(),
             )
             .finish()
     }

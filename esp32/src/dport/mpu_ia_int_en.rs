@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MPU_IA_INT_EN")
-            .field(
-                "mpu_ia_int_en",
-                &format_args!("{}", self.mpu_ia_int_en().bits()),
-            )
+            .field("mpu_ia_int_en", &self.mpu_ia_int_en().bits())
             .finish()
     }
 }

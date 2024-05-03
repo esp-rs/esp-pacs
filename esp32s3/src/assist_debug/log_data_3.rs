@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOG_DATA_3")
-            .field("log_data_3", &format_args!("{}", self.log_data_3().bits()))
+            .field("log_data_3", &self.log_data_3().bits())
             .finish()
     }
 }

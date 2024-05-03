@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_SYNC_INT_MAP")
             .field(
                 "pro_dcache_sync_int_map",
-                &format_args!("{}", self.pro_dcache_sync_int_map().bits()),
+                &self.pro_dcache_sync_int_map().bits(),
             )
             .finish()
     }

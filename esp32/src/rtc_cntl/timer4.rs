@@ -44,18 +44,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER4")
-            .field("wait_timer", &format_args!("{}", self.wait_timer().bits()))
-            .field(
-                "powerup_timer",
-                &format_args!("{}", self.powerup_timer().bits()),
-            )
-            .field(
-                "dg_wrap_wait_timer",
-                &format_args!("{}", self.dg_wrap_wait_timer().bits()),
-            )
+            .field("wait_timer", &self.wait_timer().bits())
+            .field("powerup_timer", &self.powerup_timer().bits())
+            .field("dg_wrap_wait_timer", &self.dg_wrap_wait_timer().bits())
             .field(
                 "dg_wrap_powerup_timer",
-                &format_args!("{}", self.dg_wrap_powerup_timer().bits()),
+                &self.dg_wrap_powerup_timer().bits(),
             )
             .finish()
     }

@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BT_LPCK_DIV_FRAC")
-            .field(
-                "lpclk_sel_rtc_slow",
-                &format_args!("{}", self.lpclk_sel_rtc_slow().bit()),
-            )
-            .field(
-                "lpclk_sel_8m",
-                &format_args!("{}", self.lpclk_sel_8m().bit()),
-            )
-            .field(
-                "lpclk_sel_xtal",
-                &format_args!("{}", self.lpclk_sel_xtal().bit()),
-            )
-            .field(
-                "lpclk_sel_xtal32k",
-                &format_args!("{}", self.lpclk_sel_xtal32k().bit()),
-            )
-            .field(
-                "lpclk_rtc_en",
-                &format_args!("{}", self.lpclk_rtc_en().bit()),
-            )
+            .field("lpclk_sel_rtc_slow", &self.lpclk_sel_rtc_slow().bit())
+            .field("lpclk_sel_8m", &self.lpclk_sel_8m().bit())
+            .field("lpclk_sel_xtal", &self.lpclk_sel_xtal().bit())
+            .field("lpclk_sel_xtal32k", &self.lpclk_sel_xtal32k().bit())
+            .field("lpclk_rtc_en", &self.lpclk_rtc_en().bit())
             .finish()
     }
 }

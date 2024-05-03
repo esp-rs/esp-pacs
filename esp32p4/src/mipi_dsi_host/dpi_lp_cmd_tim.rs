@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_LP_CMD_TIM")
-            .field(
-                "invact_lpcmd_time",
-                &format_args!("{}", self.invact_lpcmd_time().bits()),
-            )
-            .field(
-                "outvact_lpcmd_time",
-                &format_args!("{}", self.outvact_lpcmd_time().bits()),
-            )
+            .field("invact_lpcmd_time", &self.invact_lpcmd_time().bits())
+            .field("outvact_lpcmd_time", &self.outvact_lpcmd_time().bits())
             .finish()
     }
 }

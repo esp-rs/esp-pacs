@@ -163,69 +163,36 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL25")
             .field(
                 "pvt_peri_group_clk_div_num",
-                &format_args!("{}", self.pvt_peri_group_clk_div_num().bits()),
+                &self.pvt_peri_group_clk_div_num().bits(),
             )
             .field(
                 "pvt_peri_group1_clk_en",
-                &format_args!("{}", self.pvt_peri_group1_clk_en().bit()),
+                &self.pvt_peri_group1_clk_en().bit(),
             )
             .field(
                 "pvt_peri_group2_clk_en",
-                &format_args!("{}", self.pvt_peri_group2_clk_en().bit()),
+                &self.pvt_peri_group2_clk_en().bit(),
             )
             .field(
                 "pvt_peri_group3_clk_en",
-                &format_args!("{}", self.pvt_peri_group3_clk_en().bit()),
+                &self.pvt_peri_group3_clk_en().bit(),
             )
             .field(
                 "pvt_peri_group4_clk_en",
-                &format_args!("{}", self.pvt_peri_group4_clk_en().bit()),
+                &self.pvt_peri_group4_clk_en().bit(),
             )
-            .field(
-                "crypto_clk_src_sel",
-                &format_args!("{}", self.crypto_clk_src_sel().bits()),
-            )
-            .field(
-                "crypto_aes_clk_en",
-                &format_args!("{}", self.crypto_aes_clk_en().bit()),
-            )
-            .field(
-                "crypto_ds_clk_en",
-                &format_args!("{}", self.crypto_ds_clk_en().bit()),
-            )
-            .field(
-                "crypto_ecc_clk_en",
-                &format_args!("{}", self.crypto_ecc_clk_en().bit()),
-            )
-            .field(
-                "crypto_hmac_clk_en",
-                &format_args!("{}", self.crypto_hmac_clk_en().bit()),
-            )
-            .field(
-                "crypto_rsa_clk_en",
-                &format_args!("{}", self.crypto_rsa_clk_en().bit()),
-            )
-            .field(
-                "crypto_sec_clk_en",
-                &format_args!("{}", self.crypto_sec_clk_en().bit()),
-            )
-            .field(
-                "crypto_sha_clk_en",
-                &format_args!("{}", self.crypto_sha_clk_en().bit()),
-            )
-            .field(
-                "crypto_ecdsa_clk_en",
-                &format_args!("{}", self.crypto_ecdsa_clk_en().bit()),
-            )
-            .field(
-                "crypto_km_clk_en",
-                &format_args!("{}", self.crypto_km_clk_en().bit()),
-            )
-            .field(
-                "isp_clk_src_sel",
-                &format_args!("{}", self.isp_clk_src_sel().bits()),
-            )
-            .field("isp_clk_en", &format_args!("{}", self.isp_clk_en().bit()))
+            .field("crypto_clk_src_sel", &self.crypto_clk_src_sel().bits())
+            .field("crypto_aes_clk_en", &self.crypto_aes_clk_en().bit())
+            .field("crypto_ds_clk_en", &self.crypto_ds_clk_en().bit())
+            .field("crypto_ecc_clk_en", &self.crypto_ecc_clk_en().bit())
+            .field("crypto_hmac_clk_en", &self.crypto_hmac_clk_en().bit())
+            .field("crypto_rsa_clk_en", &self.crypto_rsa_clk_en().bit())
+            .field("crypto_sec_clk_en", &self.crypto_sec_clk_en().bit())
+            .field("crypto_sha_clk_en", &self.crypto_sha_clk_en().bit())
+            .field("crypto_ecdsa_clk_en", &self.crypto_ecdsa_clk_en().bit())
+            .field("crypto_km_clk_en", &self.crypto_km_clk_en().bit())
+            .field("isp_clk_src_sel", &self.isp_clk_src_sel().bits())
+            .field("isp_clk_en", &self.isp_clk_en().bit())
             .finish()
     }
 }

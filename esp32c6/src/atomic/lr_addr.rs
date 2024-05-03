@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LR_ADDR")
-            .field(
-                "gloable_lr_addr",
-                &format_args!("{}", self.gloable_lr_addr().bits()),
-            )
+            .field("gloable_lr_addr", &self.gloable_lr_addr().bits())
             .finish()
     }
 }

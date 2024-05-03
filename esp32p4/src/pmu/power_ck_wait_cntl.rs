@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_CK_WAIT_CNTL")
-            .field(
-                "pmu_wait_xtl_stable",
-                &format_args!("{}", self.pmu_wait_xtl_stable().bits()),
-            )
-            .field(
-                "pmu_wait_pll_stable",
-                &format_args!("{}", self.pmu_wait_pll_stable().bits()),
-            )
+            .field("pmu_wait_xtl_stable", &self.pmu_wait_xtl_stable().bits())
+            .field("pmu_wait_pll_stable", &self.pmu_wait_pll_stable().bits())
             .finish()
     }
 }

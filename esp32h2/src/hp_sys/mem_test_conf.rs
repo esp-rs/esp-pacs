@@ -53,14 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_TEST_CONF")
-            .field(
-                "hp_mem_wpulse",
-                &format_args!("{}", self.hp_mem_wpulse().bits()),
-            )
-            .field("hp_mem_wa", &format_args!("{}", self.hp_mem_wa().bits()))
-            .field("hp_mem_ra", &format_args!("{}", self.hp_mem_ra().bits()))
-            .field("hp_mem_rm", &format_args!("{}", self.hp_mem_rm().bits()))
-            .field("rom_rm", &format_args!("{}", self.rom_rm().bits()))
+            .field("hp_mem_wpulse", &self.hp_mem_wpulse().bits())
+            .field("hp_mem_wa", &self.hp_mem_wa().bits())
+            .field("hp_mem_ra", &self.hp_mem_ra().bits())
+            .field("hp_mem_rm", &self.hp_mem_rm().bits())
+            .field("rom_rm", &self.rom_rm().bits())
             .finish()
     }
 }

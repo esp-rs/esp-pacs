@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIN_CMD")
-            .field(
-                "slchost_win_cmd",
-                &format_args!("{}", self.slchost_win_cmd().bits()),
-            )
+            .field("slchost_win_cmd", &self.slchost_win_cmd().bits())
             .finish()
     }
 }

@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CACHE_MMU_FAULT_CONTENT")
             .field(
                 "pro_cache_mmu_fault_content",
-                &format_args!("{}", self.pro_cache_mmu_fault_content().bits()),
+                &self.pro_cache_mmu_fault_content().bits(),
             )
             .field(
                 "pro_cache_mmu_fault_code",
-                &format_args!("{}", self.pro_cache_mmu_fault_code().bits()),
+                &self.pro_cache_mmu_fault_code().bits(),
             )
             .finish()
     }

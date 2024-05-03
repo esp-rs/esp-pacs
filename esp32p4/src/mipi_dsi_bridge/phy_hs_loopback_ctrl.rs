@@ -96,46 +96,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_HS_LOOPBACK_CTRL")
-            .field(
-                "phy_hs_txdatahs_1",
-                &format_args!("{}", self.phy_hs_txdatahs_1().bits()),
-            )
+            .field("phy_hs_txdatahs_1", &self.phy_hs_txdatahs_1().bits())
             .field(
                 "phy_hs_txrequestdatahs_1",
-                &format_args!("{}", self.phy_hs_txrequestdatahs_1().bit()),
+                &self.phy_hs_txrequestdatahs_1().bit(),
             )
-            .field(
-                "phy_hs_basedir_1",
-                &format_args!("{}", self.phy_hs_basedir_1().bit()),
-            )
-            .field(
-                "phy_hs_txdatahs_0",
-                &format_args!("{}", self.phy_hs_txdatahs_0().bits()),
-            )
+            .field("phy_hs_basedir_1", &self.phy_hs_basedir_1().bit())
+            .field("phy_hs_txdatahs_0", &self.phy_hs_txdatahs_0().bits())
             .field(
                 "phy_hs_txrequestdatahs_0",
-                &format_args!("{}", self.phy_hs_txrequestdatahs_0().bit()),
+                &self.phy_hs_txrequestdatahs_0().bit(),
             )
-            .field(
-                "phy_hs_basedir_0",
-                &format_args!("{}", self.phy_hs_basedir_0().bit()),
-            )
-            .field(
-                "phy_hs_txrequesthsclk",
-                &format_args!("{}", self.phy_hs_txrequesthsclk().bit()),
-            )
+            .field("phy_hs_basedir_0", &self.phy_hs_basedir_0().bit())
+            .field("phy_hs_txrequesthsclk", &self.phy_hs_txrequesthsclk().bit())
             .field(
                 "phy_hs_loopback_check_done",
-                &format_args!("{}", self.phy_hs_loopback_check_done().bit()),
+                &self.phy_hs_loopback_check_done().bit(),
             )
-            .field(
-                "phy_hs_loopback_en",
-                &format_args!("{}", self.phy_hs_loopback_en().bit()),
-            )
-            .field(
-                "phy_hs_loopback_ok",
-                &format_args!("{}", self.phy_hs_loopback_ok().bit()),
-            )
+            .field("phy_hs_loopback_en", &self.phy_hs_loopback_en().bit())
+            .field("phy_hs_loopback_ok", &self.phy_hs_loopback_ok().bit())
             .finish()
     }
 }

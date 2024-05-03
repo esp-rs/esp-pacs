@@ -60,12 +60,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATACTRL")
-            .field("txtrig", &format_args!("{}", self.txtrig().bits()))
-            .field("rxtrig", &format_args!("{}", self.rxtrig().bits()))
-            .field("txcount", &format_args!("{}", self.txcount().bits()))
-            .field("rxcount", &format_args!("{}", self.rxcount().bits()))
-            .field("txfull", &format_args!("{}", self.txfull().bit()))
-            .field("rxempty", &format_args!("{}", self.rxempty().bit()))
+            .field("txtrig", &self.txtrig().bits())
+            .field("rxtrig", &self.rxtrig().bits())
+            .field("txcount", &self.txcount().bits())
+            .field("rxcount", &self.rxcount().bits())
+            .field("txfull", &self.txfull().bit())
+            .field("rxempty", &self.rxempty().bit())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PDM_FREQ_CONF")
-            .field("tx_pdm_fs", &format_args!("{}", self.tx_pdm_fs().bits()))
-            .field("tx_pdm_fp", &format_args!("{}", self.tx_pdm_fp().bits()))
+            .field("tx_pdm_fs", &self.tx_pdm_fs().bits())
+            .field("tx_pdm_fp", &self.tx_pdm_fp().bits())
             .finish()
     }
 }

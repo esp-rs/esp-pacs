@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("overflow", &format_args!("{}", self.overflow().bit()))
-            .field("soc_wakeup", &format_args!("{}", self.soc_wakeup().bit()))
+            .field("overflow", &self.overflow().bit())
+            .field("soc_wakeup", &self.soc_wakeup().bit())
             .finish()
     }
 }

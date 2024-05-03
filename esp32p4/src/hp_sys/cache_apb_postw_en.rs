@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_APB_POSTW_EN")
             .field(
                 "reg_cache_apb_postw_en",
-                &format_args!("{}", self.reg_cache_apb_postw_en().bit()),
+                &self.reg_cache_apb_postw_en().bit(),
             )
             .finish()
     }

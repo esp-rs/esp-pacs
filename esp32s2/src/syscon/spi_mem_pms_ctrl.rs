@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_MEM_PMS_CTRL")
-            .field(
-                "spi_mem_reject_int",
-                &format_args!("{}", self.spi_mem_reject_int().bit()),
-            )
-            .field(
-                "spi_mem_reject_cde",
-                &format_args!("{}", self.spi_mem_reject_cde().bits()),
-            )
+            .field("spi_mem_reject_int", &self.spi_mem_reject_int().bit())
+            .field("spi_mem_reject_cde", &self.spi_mem_reject_cde().bits())
             .finish()
     }
 }

@@ -69,38 +69,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_STATUS")
-            .field("phy_lock", &format_args!("{}", self.phy_lock().bit()))
-            .field(
-                "phy_direction",
-                &format_args!("{}", self.phy_direction().bit()),
-            )
-            .field(
-                "phy_stopstateclklane",
-                &format_args!("{}", self.phy_stopstateclklane().bit()),
-            )
-            .field(
-                "phy_ulpsactivenotclk",
-                &format_args!("{}", self.phy_ulpsactivenotclk().bit()),
-            )
-            .field(
-                "phy_stopstate0lane",
-                &format_args!("{}", self.phy_stopstate0lane().bit()),
-            )
+            .field("phy_lock", &self.phy_lock().bit())
+            .field("phy_direction", &self.phy_direction().bit())
+            .field("phy_stopstateclklane", &self.phy_stopstateclklane().bit())
+            .field("phy_ulpsactivenotclk", &self.phy_ulpsactivenotclk().bit())
+            .field("phy_stopstate0lane", &self.phy_stopstate0lane().bit())
             .field(
                 "phy_ulpsactivenot0lane",
-                &format_args!("{}", self.phy_ulpsactivenot0lane().bit()),
+                &self.phy_ulpsactivenot0lane().bit(),
             )
-            .field(
-                "phy_rxulpsesc0lane",
-                &format_args!("{}", self.phy_rxulpsesc0lane().bit()),
-            )
-            .field(
-                "phy_stopstate1lane",
-                &format_args!("{}", self.phy_stopstate1lane().bit()),
-            )
+            .field("phy_rxulpsesc0lane", &self.phy_rxulpsesc0lane().bit())
+            .field("phy_stopstate1lane", &self.phy_stopstate1lane().bit())
             .field(
                 "phy_ulpsactivenot1lane",
-                &format_args!("{}", self.phy_ulpsactivenot1lane().bit()),
+                &self.phy_ulpsactivenot1lane().bit(),
             )
             .finish()
     }

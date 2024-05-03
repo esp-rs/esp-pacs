@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_ACS_FAIL_CTRL")
             .field(
                 "l2_cache_acs_fail_check_mode",
-                &format_args!("{}", self.l2_cache_acs_fail_check_mode().bit()),
+                &self.l2_cache_acs_fail_check_mode().bit(),
             )
             .finish()
     }

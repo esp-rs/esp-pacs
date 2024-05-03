@@ -34,10 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rx_done", &format_args!("{}", self.rx_done().bit()))
-            .field("tx_done", &format_args!("{}", self.tx_done().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field("tx_hung", &format_args!("{}", self.tx_hung().bit()))
+            .field("rx_done", &self.rx_done().bit())
+            .field("tx_done", &self.tx_done().bit())
+            .field("rx_hung", &self.rx_hung().bit())
+            .field("tx_hung", &self.tx_hung().bit())
             .finish()
     }
 }

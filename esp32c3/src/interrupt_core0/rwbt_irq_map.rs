@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RWBT_IRQ_MAP")
-            .field(
-                "rwbt_irq_map",
-                &format_args!("{}", self.rwbt_irq_map().bits()),
-            )
+            .field("rwbt_irq_map", &self.rwbt_irq_map().bits())
             .finish()
     }
 }

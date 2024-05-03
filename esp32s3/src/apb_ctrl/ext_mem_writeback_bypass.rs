@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_MEM_WRITEBACK_BYPASS")
-            .field(
-                "writeback_bypass",
-                &format_args!("{}", self.writeback_bypass().bit()),
-            )
+            .field("writeback_bypass", &self.writeback_bypass().bit())
             .finish()
     }
 }

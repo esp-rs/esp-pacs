@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_SYNC_ADDR")
-            .field(
-                "dcache_sync_addr",
-                &format_args!("{}", self.dcache_sync_addr().bits()),
-            )
+            .field("dcache_sync_addr", &self.dcache_sync_addr().bits())
             .finish()
     }
 }

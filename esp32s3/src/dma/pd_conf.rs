@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PD_CONF")
-            .field(
-                "dma_ram_force_pd",
-                &format_args!("{}", self.dma_ram_force_pd().bit()),
-            )
-            .field(
-                "dma_ram_force_pu",
-                &format_args!("{}", self.dma_ram_force_pu().bit()),
-            )
-            .field(
-                "dma_ram_clk_fo",
-                &format_args!("{}", self.dma_ram_clk_fo().bit()),
-            )
+            .field("dma_ram_force_pd", &self.dma_ram_force_pd().bit())
+            .field("dma_ram_force_pu", &self.dma_ram_force_pu().bit())
+            .field("dma_ram_clk_fo", &self.dma_ram_clk_fo().bit())
             .finish()
     }
 }

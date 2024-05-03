@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OCCUPY_3")
-            .field(
-                "occupy_pro_trace",
-                &format_args!("{}", self.occupy_pro_trace().bits()),
-            )
+            .field("occupy_pro_trace", &self.occupy_pro_trace().bits())
             .finish()
     }
 }

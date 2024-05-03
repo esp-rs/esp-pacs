@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JTAG_SEL")
-            .field("soft", &format_args!("{}", self.soft().bit()))
+            .field("soft", &self.soft().bit())
             .finish()
     }
 }

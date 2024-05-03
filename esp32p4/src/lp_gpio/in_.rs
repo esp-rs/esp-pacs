@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("IN")
             .field(
                 "reg_gpio_in_data_next",
-                &format_args!("{}", self.reg_gpio_in_data_next().bits()),
+                &self.reg_gpio_in_data_next().bits(),
             )
             .finish()
     }

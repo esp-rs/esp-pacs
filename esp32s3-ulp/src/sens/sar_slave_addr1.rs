@@ -33,17 +33,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_SLAVE_ADDR1")
-            .field(
-                "sar_i2c_slave_addr1",
-                &format_args!("{}", self.sar_i2c_slave_addr1().bits()),
-            )
-            .field(
-                "sar_i2c_slave_addr0",
-                &format_args!("{}", self.sar_i2c_slave_addr0().bits()),
-            )
+            .field("sar_i2c_slave_addr1", &self.sar_i2c_slave_addr1().bits())
+            .field("sar_i2c_slave_addr0", &self.sar_i2c_slave_addr0().bits())
             .field(
                 "sar_saradc_meas_status",
-                &format_args!("{}", self.sar_saradc_meas_status().bits()),
+                &self.sar_saradc_meas_status().bits(),
             )
             .finish()
     }

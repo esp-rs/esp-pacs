@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHB_CONFIG")
-            .field("hburst", &format_args!("{}", self.hburst().bits()))
-            .field("max_incr", &format_args!("{}", self.max_incr().bits()))
+            .field("hburst", &self.hburst().bits())
+            .field("max_incr", &self.max_incr().bits())
             .finish()
     }
 }

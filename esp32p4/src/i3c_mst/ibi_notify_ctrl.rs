@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("IBI_NOTIFY_CTRL")
             .field(
                 "reg_notify_sir_rejected",
-                &format_args!("{}", self.reg_notify_sir_rejected().bit()),
+                &self.reg_notify_sir_rejected().bit(),
             )
             .finish()
     }

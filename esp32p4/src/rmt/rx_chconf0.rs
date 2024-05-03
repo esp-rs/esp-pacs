@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CHCONF0")
-            .field(
-                "div_cnt_ch4",
-                &format_args!("{}", self.div_cnt_ch4().bits()),
-            )
-            .field(
-                "idle_thres_ch4",
-                &format_args!("{}", self.idle_thres_ch4().bits()),
-            )
-            .field(
-                "mem_size_ch4",
-                &format_args!("{}", self.mem_size_ch4().bits()),
-            )
-            .field(
-                "carrier_en_ch4",
-                &format_args!("{}", self.carrier_en_ch4().bit()),
-            )
-            .field(
-                "carrier_out_lv_ch4",
-                &format_args!("{}", self.carrier_out_lv_ch4().bit()),
-            )
+            .field("div_cnt_ch4", &self.div_cnt_ch4().bits())
+            .field("idle_thres_ch4", &self.idle_thres_ch4().bits())
+            .field("mem_size_ch4", &self.mem_size_ch4().bits())
+            .field("carrier_en_ch4", &self.carrier_en_ch4().bit())
+            .field("carrier_out_lv_ch4", &self.carrier_out_lv_ch4().bit())
             .finish()
     }
 }

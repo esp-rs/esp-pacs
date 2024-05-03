@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_DED_HOLD_CTRL")
-            .field(
-                "reg_gpio_ded_hold",
-                &format_args!("{}", self.reg_gpio_ded_hold().bits()),
-            )
+            .field("reg_gpio_ded_hold", &self.reg_gpio_ded_hold().bits())
             .finish()
     }
 }

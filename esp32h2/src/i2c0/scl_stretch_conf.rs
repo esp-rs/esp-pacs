@@ -46,22 +46,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_STRETCH_CONF")
-            .field(
-                "stretch_protect_num",
-                &format_args!("{}", self.stretch_protect_num().bits()),
-            )
-            .field(
-                "slave_scl_stretch_en",
-                &format_args!("{}", self.slave_scl_stretch_en().bit()),
-            )
-            .field(
-                "slave_byte_ack_ctl_en",
-                &format_args!("{}", self.slave_byte_ack_ctl_en().bit()),
-            )
-            .field(
-                "slave_byte_ack_lvl",
-                &format_args!("{}", self.slave_byte_ack_lvl().bit()),
-            )
+            .field("stretch_protect_num", &self.stretch_protect_num().bits())
+            .field("slave_scl_stretch_en", &self.slave_scl_stretch_en().bit())
+            .field("slave_byte_ack_ctl_en", &self.slave_byte_ack_ctl_en().bit())
+            .field("slave_byte_ack_lvl", &self.slave_byte_ack_lvl().bit())
             .finish()
     }
 }

@@ -46,20 +46,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_RST_EN")
             .field(
                 "aon_efuse_core_reset_en",
-                &format_args!("{}", self.aon_efuse_core_reset_en().bit()),
+                &self.aon_efuse_core_reset_en().bit(),
             )
-            .field(
-                "lp_timer_reset_en",
-                &format_args!("{}", self.lp_timer_reset_en().bit()),
-            )
-            .field(
-                "wdt_reset_en",
-                &format_args!("{}", self.wdt_reset_en().bit()),
-            )
-            .field(
-                "ana_peri_reset_en",
-                &format_args!("{}", self.ana_peri_reset_en().bit()),
-            )
+            .field("lp_timer_reset_en", &self.lp_timer_reset_en().bit())
+            .field("wdt_reset_en", &self.wdt_reset_en().bit())
+            .field("ana_peri_reset_en", &self.ana_peri_reset_en().bit())
             .finish()
     }
 }

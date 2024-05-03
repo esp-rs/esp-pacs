@@ -35,17 +35,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_CTRL")
-            .field(
-                "dcache_enable",
-                &format_args!("{}", self.dcache_enable().bit()),
-            )
-            .field(
-                "dcache_size_mode",
-                &format_args!("{}", self.dcache_size_mode().bit()),
-            )
+            .field("dcache_enable", &self.dcache_enable().bit())
+            .field("dcache_size_mode", &self.dcache_size_mode().bit())
             .field(
                 "dcache_blocksize_mode",
-                &format_args!("{}", self.dcache_blocksize_mode().bits()),
+                &self.dcache_blocksize_mode().bits(),
             )
             .finish()
     }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_TRIGGER_REV")
-            .field(
-                "tx_trigger_rev_en",
-                &format_args!("{}", self.tx_trigger_rev_en().bit()),
-            )
-            .field(
-                "rx_trigger_rev_en",
-                &format_args!("{}", self.rx_trigger_rev_en().bit()),
-            )
+            .field("tx_trigger_rev_en", &self.tx_trigger_rev_en().bit())
+            .field("rx_trigger_rev_en", &self.rx_trigger_rev_en().bit())
             .finish()
     }
 }

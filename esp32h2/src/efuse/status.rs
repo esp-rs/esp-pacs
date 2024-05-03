@@ -69,33 +69,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field("otp_load_sw", &format_args!("{}", self.otp_load_sw().bit()))
-            .field(
-                "otp_vddq_c_sync2",
-                &format_args!("{}", self.otp_vddq_c_sync2().bit()),
-            )
-            .field(
-                "otp_strobe_sw",
-                &format_args!("{}", self.otp_strobe_sw().bit()),
-            )
-            .field("otp_csb_sw", &format_args!("{}", self.otp_csb_sw().bit()))
-            .field(
-                "otp_pgenb_sw",
-                &format_args!("{}", self.otp_pgenb_sw().bit()),
-            )
-            .field(
-                "otp_vddq_is_sw",
-                &format_args!("{}", self.otp_vddq_is_sw().bit()),
-            )
-            .field(
-                "blk0_valid_bit_cnt",
-                &format_args!("{}", self.blk0_valid_bit_cnt().bits()),
-            )
-            .field(
-                "cur_ecdsa_blk",
-                &format_args!("{}", self.cur_ecdsa_blk().bits()),
-            )
+            .field("state", &self.state().bits())
+            .field("otp_load_sw", &self.otp_load_sw().bit())
+            .field("otp_vddq_c_sync2", &self.otp_vddq_c_sync2().bit())
+            .field("otp_strobe_sw", &self.otp_strobe_sw().bit())
+            .field("otp_csb_sw", &self.otp_csb_sw().bit())
+            .field("otp_pgenb_sw", &self.otp_pgenb_sw().bit())
+            .field("otp_vddq_is_sw", &self.otp_vddq_is_sw().bit())
+            .field("blk0_valid_bit_cnt", &self.blk0_valid_bit_cnt().bits())
+            .field("cur_ecdsa_blk", &self.cur_ecdsa_blk().bits())
             .finish()
     }
 }

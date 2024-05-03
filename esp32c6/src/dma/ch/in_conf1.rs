@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_CONF1")
-            .field(
-                "in_check_owner",
-                &format_args!("{}", self.in_check_owner().bit()),
-            )
+            .field("in_check_owner", &self.in_check_owner().bit())
             .finish()
     }
 }

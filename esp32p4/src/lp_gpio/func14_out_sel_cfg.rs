@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("FUNC14_OUT_SEL_CFG")
             .field(
                 "reg_gpio_func14_oe_inv_sel",
-                &format_args!("{}", self.reg_gpio_func14_oe_inv_sel().bit()),
+                &self.reg_gpio_func14_oe_inv_sel().bit(),
             )
             .field(
                 "reg_gpio_func14_oe_sel",
-                &format_args!("{}", self.reg_gpio_func14_oe_sel().bit()),
+                &self.reg_gpio_func14_oe_sel().bit(),
             )
             .field(
                 "reg_gpio_func14_out_inv_sel",
-                &format_args!("{}", self.reg_gpio_func14_out_inv_sel().bit()),
+                &self.reg_gpio_func14_out_inv_sel().bit(),
             )
             .field(
                 "reg_gpio_func14_out_sel",
-                &format_args!("{}", self.reg_gpio_func14_out_sel().bits()),
+                &self.reg_gpio_func14_out_sel().bits(),
             )
             .finish()
     }

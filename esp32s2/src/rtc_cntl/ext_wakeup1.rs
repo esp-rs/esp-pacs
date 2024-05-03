@@ -19,7 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP1")
-            .field("sel", &format_args!("{}", self.sel().bits()))
+            .field("sel", &self.sel().bits())
             .finish()
     }
 }

@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_8")
-            .field("pad8_data", &format_args!("{}", self.pad8_data().bits()))
-            .field(
-                "pad8_debounce_cnt",
-                &format_args!("{}", self.pad8_debounce_cnt().bits()),
-            )
-            .field(
-                "pad8_neg_noise_cnt",
-                &format_args!("{}", self.pad8_neg_noise_cnt().bits()),
-            )
+            .field("pad8_data", &self.pad8_data().bits())
+            .field("pad8_debounce_cnt", &self.pad8_debounce_cnt().bits())
+            .field("pad8_neg_noise_cnt", &self.pad8_neg_noise_cnt().bits())
             .finish()
     }
 }

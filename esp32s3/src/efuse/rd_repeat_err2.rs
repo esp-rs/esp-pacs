@@ -97,58 +97,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR2")
-            .field(
-                "key_purpose_2_err",
-                &format_args!("{}", self.key_purpose_2_err().bits()),
-            )
-            .field(
-                "key_purpose_3_err",
-                &format_args!("{}", self.key_purpose_3_err().bits()),
-            )
-            .field(
-                "key_purpose_4_err",
-                &format_args!("{}", self.key_purpose_4_err().bits()),
-            )
-            .field(
-                "key_purpose_5_err",
-                &format_args!("{}", self.key_purpose_5_err().bits()),
-            )
-            .field(
-                "rpt4_reserved0_err",
-                &format_args!("{}", self.rpt4_reserved0_err().bits()),
-            )
-            .field(
-                "secure_boot_en_err",
-                &format_args!("{}", self.secure_boot_en_err().bit()),
-            )
+            .field("key_purpose_2_err", &self.key_purpose_2_err().bits())
+            .field("key_purpose_3_err", &self.key_purpose_3_err().bits())
+            .field("key_purpose_4_err", &self.key_purpose_4_err().bits())
+            .field("key_purpose_5_err", &self.key_purpose_5_err().bits())
+            .field("rpt4_reserved0_err", &self.rpt4_reserved0_err().bits())
+            .field("secure_boot_en_err", &self.secure_boot_en_err().bit())
             .field(
                 "secure_boot_aggressive_revoke_err",
-                &format_args!("{}", self.secure_boot_aggressive_revoke_err().bit()),
+                &self.secure_boot_aggressive_revoke_err().bit(),
             )
-            .field(
-                "dis_usb_jtag_err",
-                &format_args!("{}", self.dis_usb_jtag_err().bit()),
-            )
-            .field(
-                "dis_usb_device_err",
-                &format_args!("{}", self.dis_usb_device_err().bit()),
-            )
-            .field(
-                "strap_jtag_sel_err",
-                &format_args!("{}", self.strap_jtag_sel_err().bit()),
-            )
-            .field(
-                "usb_phy_sel_err",
-                &format_args!("{}", self.usb_phy_sel_err().bit()),
-            )
+            .field("dis_usb_jtag_err", &self.dis_usb_jtag_err().bit())
+            .field("dis_usb_device_err", &self.dis_usb_device_err().bit())
+            .field("strap_jtag_sel_err", &self.strap_jtag_sel_err().bit())
+            .field("usb_phy_sel_err", &self.usb_phy_sel_err().bit())
             .field(
                 "power_glitch_dsense_err",
-                &format_args!("{}", self.power_glitch_dsense_err().bits()),
+                &self.power_glitch_dsense_err().bits(),
             )
-            .field(
-                "flash_tpuw_err",
-                &format_args!("{}", self.flash_tpuw_err().bits()),
-            )
+            .field("flash_tpuw_err", &self.flash_tpuw_err().bits())
             .finish()
     }
 }

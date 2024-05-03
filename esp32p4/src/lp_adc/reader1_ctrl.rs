@@ -62,26 +62,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("READER1_CTRL")
-            .field(
-                "sar1_clk_div",
-                &format_args!("{}", self.sar1_clk_div().bits()),
-            )
-            .field(
-                "sar1_clk_gated",
-                &format_args!("{}", self.sar1_clk_gated().bit()),
-            )
-            .field(
-                "sar1_sample_num",
-                &format_args!("{}", self.sar1_sample_num().bits()),
-            )
-            .field(
-                "sar1_data_inv",
-                &format_args!("{}", self.sar1_data_inv().bit()),
-            )
-            .field("sar1_int_en", &format_args!("{}", self.sar1_int_en().bit()))
+            .field("sar1_clk_div", &self.sar1_clk_div().bits())
+            .field("sar1_clk_gated", &self.sar1_clk_gated().bit())
+            .field("sar1_sample_num", &self.sar1_sample_num().bits())
+            .field("sar1_data_inv", &self.sar1_data_inv().bit())
+            .field("sar1_int_en", &self.sar1_int_en().bit())
             .field(
                 "sar1_en_pad_force_enable",
-                &format_args!("{}", self.sar1_en_pad_force_enable().bits()),
+                &self.sar1_en_pad_force_enable().bits(),
             )
             .finish()
     }

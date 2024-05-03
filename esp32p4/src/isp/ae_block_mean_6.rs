@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_BLOCK_MEAN_6")
-            .field(
-                "ae_b44_mean",
-                &format_args!("{}", self.ae_b44_mean().bits()),
-            )
+            .field("ae_b44_mean", &self.ae_b44_mean().bits())
             .finish()
     }
 }

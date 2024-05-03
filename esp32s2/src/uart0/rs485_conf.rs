@@ -71,25 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RS485_CONF")
-            .field("rs485_en", &format_args!("{}", self.rs485_en().bit()))
-            .field("dl0_en", &format_args!("{}", self.dl0_en().bit()))
-            .field("dl1_en", &format_args!("{}", self.dl1_en().bit()))
-            .field(
-                "rs485tx_rx_en",
-                &format_args!("{}", self.rs485tx_rx_en().bit()),
-            )
-            .field(
-                "rs485rxby_tx_en",
-                &format_args!("{}", self.rs485rxby_tx_en().bit()),
-            )
-            .field(
-                "rs485_rx_dly_num",
-                &format_args!("{}", self.rs485_rx_dly_num().bit()),
-            )
-            .field(
-                "rs485_tx_dly_num",
-                &format_args!("{}", self.rs485_tx_dly_num().bits()),
-            )
+            .field("rs485_en", &self.rs485_en().bit())
+            .field("dl0_en", &self.dl0_en().bit())
+            .field("dl1_en", &self.dl1_en().bit())
+            .field("rs485tx_rx_en", &self.rs485tx_rx_en().bit())
+            .field("rs485rxby_tx_en", &self.rs485rxby_tx_en().bit())
+            .field("rs485_rx_dly_num", &self.rs485_rx_dly_num().bit())
+            .field("rs485_tx_dly_num", &self.rs485_tx_dly_num().bits())
             .finish()
     }
 }

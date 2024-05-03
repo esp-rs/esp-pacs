@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERRUPT_REG_DATE")
             .field(
                 "core1_interrupt_reg_date",
-                &format_args!("{}", self.core1_interrupt_reg_date().bits()),
+                &self.core1_interrupt_reg_date().bits(),
             )
             .finish()
     }

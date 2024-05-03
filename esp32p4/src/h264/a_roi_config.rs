@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_ROI_CONFIG")
-            .field("a_roi_en", &format_args!("{}", self.a_roi_en().bit()))
-            .field("a_roi_mode", &format_args!("{}", self.a_roi_mode().bit()))
+            .field("a_roi_en", &self.a_roi_en().bit())
+            .field("a_roi_mode", &self.a_roi_mode().bit())
             .finish()
     }
 }

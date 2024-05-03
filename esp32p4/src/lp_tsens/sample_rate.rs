@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAMPLE_RATE")
-            .field(
-                "sample_rate",
-                &format_args!("{}", self.sample_rate().bits()),
-            )
+            .field("sample_rate", &self.sample_rate().bits())
             .finish()
     }
 }

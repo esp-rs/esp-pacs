@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_SIZE")
-            .field(
-                "hist_y_size",
-                &format_args!("{}", self.hist_y_size().bits()),
-            )
-            .field(
-                "hist_x_size",
-                &format_args!("{}", self.hist_x_size().bits()),
-            )
+            .field("hist_y_size", &self.hist_y_size().bits())
+            .field("hist_x_size", &self.hist_x_size().bits())
             .finish()
     }
 }

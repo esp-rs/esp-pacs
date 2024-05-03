@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_SEG1")
-            .field(
-                "hist_seg_7_8",
-                &format_args!("{}", self.hist_seg_7_8().bits()),
-            )
-            .field(
-                "hist_seg_6_7",
-                &format_args!("{}", self.hist_seg_6_7().bits()),
-            )
-            .field(
-                "hist_seg_5_6",
-                &format_args!("{}", self.hist_seg_5_6().bits()),
-            )
-            .field(
-                "hist_seg_4_5",
-                &format_args!("{}", self.hist_seg_4_5().bits()),
-            )
+            .field("hist_seg_7_8", &self.hist_seg_7_8().bits())
+            .field("hist_seg_6_7", &self.hist_seg_6_7().bits())
+            .field("hist_seg_5_6", &self.hist_seg_5_6().bits())
+            .field("hist_seg_4_5", &self.hist_seg_4_5().bits())
             .finish()
     }
 }

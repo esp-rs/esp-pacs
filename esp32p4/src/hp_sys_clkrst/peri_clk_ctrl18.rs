@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL18")
-            .field(
-                "i2s2_rx_div_y",
-                &format_args!("{}", self.i2s2_rx_div_y().bits()),
-            )
-            .field(
-                "i2s2_rx_div_z",
-                &format_args!("{}", self.i2s2_rx_div_z().bits()),
-            )
-            .field(
-                "i2s2_rx_div_yn1",
-                &format_args!("{}", self.i2s2_rx_div_yn1().bit()),
-            )
-            .field(
-                "i2s2_tx_clk_en",
-                &format_args!("{}", self.i2s2_tx_clk_en().bit()),
-            )
-            .field(
-                "i2s2_tx_clk_src_sel",
-                &format_args!("{}", self.i2s2_tx_clk_src_sel().bits()),
-            )
-            .field(
-                "i2s2_tx_div_n",
-                &format_args!("{}", self.i2s2_tx_div_n().bits()),
-            )
+            .field("i2s2_rx_div_y", &self.i2s2_rx_div_y().bits())
+            .field("i2s2_rx_div_z", &self.i2s2_rx_div_z().bits())
+            .field("i2s2_rx_div_yn1", &self.i2s2_rx_div_yn1().bit())
+            .field("i2s2_tx_clk_en", &self.i2s2_tx_clk_en().bit())
+            .field("i2s2_tx_clk_src_sel", &self.i2s2_tx_clk_src_sel().bits())
+            .field("i2s2_tx_div_n", &self.i2s2_tx_div_n().bits())
             .finish()
     }
 }

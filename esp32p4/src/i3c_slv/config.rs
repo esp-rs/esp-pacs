@@ -89,15 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field("slvena", &format_args!("{}", self.slvena().bit()))
-            .field("nack", &format_args!("{}", self.nack().bit()))
-            .field("matchss", &format_args!("{}", self.matchss().bit()))
-            .field("s0ignore", &format_args!("{}", self.s0ignore().bit()))
-            .field("ddrok", &format_args!("{}", self.ddrok().bit()))
-            .field("idrand", &format_args!("{}", self.idrand().bit()))
-            .field("offline", &format_args!("{}", self.offline().bit()))
-            .field("bamatch", &format_args!("{}", self.bamatch().bits()))
-            .field("saddr", &format_args!("{}", self.saddr().bits()))
+            .field("slvena", &self.slvena().bit())
+            .field("nack", &self.nack().bit())
+            .field("matchss", &self.matchss().bit())
+            .field("s0ignore", &self.s0ignore().bit())
+            .field("ddrok", &self.ddrok().bit())
+            .field("idrand", &self.idrand().bit())
+            .field("offline", &self.offline().bit())
+            .field("bamatch", &self.bamatch().bits())
+            .field("saddr", &self.saddr().bits())
             .finish()
     }
 }

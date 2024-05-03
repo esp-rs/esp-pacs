@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLC_MEAN")
-            .field(
-                "blc_r3_mean",
-                &format_args!("{}", self.blc_r3_mean().bits()),
-            )
-            .field(
-                "blc_r2_mean",
-                &format_args!("{}", self.blc_r2_mean().bits()),
-            )
-            .field(
-                "blc_r1_mean",
-                &format_args!("{}", self.blc_r1_mean().bits()),
-            )
-            .field(
-                "blc_r0_mean",
-                &format_args!("{}", self.blc_r0_mean().bits()),
-            )
+            .field("blc_r3_mean", &self.blc_r3_mean().bits())
+            .field("blc_r2_mean", &self.blc_r2_mean().bits())
+            .field("blc_r1_mean", &self.blc_r1_mean().bits())
+            .field("blc_r0_mean", &self.blc_r0_mean().bits())
             .finish()
     }
 }

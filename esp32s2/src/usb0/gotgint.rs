@@ -62,18 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GOTGINT")
-            .field("sesenddet", &format_args!("{}", self.sesenddet().bit()))
-            .field(
-                "sesreqsucstschng",
-                &format_args!("{}", self.sesreqsucstschng().bit()),
-            )
-            .field(
-                "hstnegsucstschng",
-                &format_args!("{}", self.hstnegsucstschng().bit()),
-            )
-            .field("hstnegdet", &format_args!("{}", self.hstnegdet().bit()))
-            .field("adevtoutchg", &format_args!("{}", self.adevtoutchg().bit()))
-            .field("dbncedone", &format_args!("{}", self.dbncedone().bit()))
+            .field("sesenddet", &self.sesenddet().bit())
+            .field("sesreqsucstschng", &self.sesreqsucstschng().bit())
+            .field("hstnegsucstschng", &self.hstnegsucstschng().bit())
+            .field("hstnegdet", &self.hstnegdet().bit())
+            .field("adevtoutchg", &self.adevtoutchg().bit())
+            .field("dbncedone", &self.dbncedone().bit())
             .finish()
     }
 }

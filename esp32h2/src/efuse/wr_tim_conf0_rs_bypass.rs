@@ -37,18 +37,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WR_TIM_CONF0_RS_BYPASS")
-            .field(
-                "bypass_rs_correction",
-                &format_args!("{}", self.bypass_rs_correction().bit()),
-            )
-            .field(
-                "bypass_rs_blk_num",
-                &format_args!("{}", self.bypass_rs_blk_num().bits()),
-            )
-            .field(
-                "tpgm_inactive",
-                &format_args!("{}", self.tpgm_inactive().bits()),
-            )
+            .field("bypass_rs_correction", &self.bypass_rs_correction().bit())
+            .field("bypass_rs_blk_num", &self.bypass_rs_blk_num().bits())
+            .field("tpgm_inactive", &self.tpgm_inactive().bits())
             .finish()
     }
 }

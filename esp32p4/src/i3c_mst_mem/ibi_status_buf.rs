@@ -27,12 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IBI_STATUS_BUF")
-            .field(
-                "data_length",
-                &format_args!("{}", self.data_length().bits()),
-            )
-            .field("ibi_id", &format_args!("{}", self.ibi_id().bits()))
-            .field("ibi_sts", &format_args!("{}", self.ibi_sts().bit()))
+            .field("data_length", &self.data_length().bits())
+            .field("ibi_id", &self.ibi_id().bits())
+            .field("ibi_sts", &self.ibi_sts().bit())
             .finish()
     }
 }

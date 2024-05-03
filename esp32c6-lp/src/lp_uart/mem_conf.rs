@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CONF")
-            .field(
-                "mem_force_pd",
-                &format_args!("{}", self.mem_force_pd().bit()),
-            )
-            .field(
-                "mem_force_pu",
-                &format_args!("{}", self.mem_force_pu().bit()),
-            )
+            .field("mem_force_pd", &self.mem_force_pd().bit())
+            .field("mem_force_pu", &self.mem_force_pu().bit())
             .finish()
     }
 }

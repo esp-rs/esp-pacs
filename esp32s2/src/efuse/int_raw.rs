@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("read_done", &format_args!("{}", self.read_done().bit()))
-            .field("pgm_done", &format_args!("{}", self.pgm_done().bit()))
+            .field("read_done", &self.read_done().bit())
+            .field("pgm_done", &self.pgm_done().bit())
             .finish()
     }
 }

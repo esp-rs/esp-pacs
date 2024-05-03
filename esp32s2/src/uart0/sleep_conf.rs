@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLEEP_CONF")
-            .field(
-                "active_threshold",
-                &format_args!("{}", self.active_threshold().bits()),
-            )
+            .field("active_threshold", &self.active_threshold().bits())
             .finish()
     }
 }

@@ -199,57 +199,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field(
-                "qnr_presition",
-                &format_args!("{}", self.qnr_presition().bit()),
-            )
-            .field("ff_check_en", &format_args!("{}", self.ff_check_en().bit()))
-            .field("sample_sel", &format_args!("{}", self.sample_sel().bits()))
-            .field(
-                "dma_linklist_mode",
-                &format_args!("{}", self.dma_linklist_mode().bit()),
-            )
-            .field(
-                "debug_direct_out_en",
-                &format_args!("{}", self.debug_direct_out_en().bit()),
-            )
-            .field("gray_sel", &format_args!("{}", self.gray_sel().bit()))
-            .field(
-                "lqnr_tbl_sel",
-                &format_args!("{}", self.lqnr_tbl_sel().bits()),
-            )
-            .field(
-                "cqnr_tbl_sel",
-                &format_args!("{}", self.cqnr_tbl_sel().bits()),
-            )
-            .field(
-                "color_space",
-                &format_args!("{}", self.color_space().bits()),
-            )
-            .field("dht_fifo_en", &format_args!("{}", self.dht_fifo_en().bit()))
-            .field(
-                "mem_clk_force_on",
-                &format_args!("{}", self.mem_clk_force_on().bit()),
-            )
-            .field("jfif_ver", &format_args!("{}", self.jfif_ver().bits()))
+            .field("qnr_presition", &self.qnr_presition().bit())
+            .field("ff_check_en", &self.ff_check_en().bit())
+            .field("sample_sel", &self.sample_sel().bits())
+            .field("dma_linklist_mode", &self.dma_linklist_mode().bit())
+            .field("debug_direct_out_en", &self.debug_direct_out_en().bit())
+            .field("gray_sel", &self.gray_sel().bit())
+            .field("lqnr_tbl_sel", &self.lqnr_tbl_sel().bits())
+            .field("cqnr_tbl_sel", &self.cqnr_tbl_sel().bits())
+            .field("color_space", &self.color_space().bits())
+            .field("dht_fifo_en", &self.dht_fifo_en().bit())
+            .field("mem_clk_force_on", &self.mem_clk_force_on().bit())
+            .field("jfif_ver", &self.jfif_ver().bits())
             .field(
                 "decode_timeout_task_sel",
-                &format_args!("{}", self.decode_timeout_task_sel().bit()),
+                &self.decode_timeout_task_sel().bit(),
             )
-            .field("soft_rst", &format_args!("{}", self.soft_rst().bit()))
-            .field("fifo_rst", &format_args!("{}", self.fifo_rst().bit()))
-            .field("pixel_rev", &format_args!("{}", self.pixel_rev().bit()))
-            .field("tailer_en", &format_args!("{}", self.tailer_en().bit()))
-            .field("pause_en", &format_args!("{}", self.pause_en().bit()))
-            .field(
-                "mem_force_pd",
-                &format_args!("{}", self.mem_force_pd().bit()),
-            )
-            .field(
-                "mem_force_pu",
-                &format_args!("{}", self.mem_force_pu().bit()),
-            )
-            .field("mode", &format_args!("{}", self.mode().bit()))
+            .field("soft_rst", &self.soft_rst().bit())
+            .field("fifo_rst", &self.fifo_rst().bit())
+            .field("pixel_rev", &self.pixel_rev().bit())
+            .field("tailer_en", &self.tailer_en().bit())
+            .field("pause_en", &self.pause_en().bit())
+            .field("mem_force_pd", &self.mem_force_pd().bit())
+            .field("mem_force_pu", &self.mem_force_pu().bit())
+            .field("mode", &self.mode().bit())
             .finish()
     }
 }

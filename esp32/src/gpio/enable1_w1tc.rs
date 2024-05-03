@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENABLE1_W1TC")
-            .field(
-                "enable1_data_w1tc",
-                &format_args!("{}", self.enable1_data_w1tc().bits()),
-            )
+            .field("enable1_data_w1tc", &self.enable1_data_w1tc().bits())
             .finish()
     }
 }

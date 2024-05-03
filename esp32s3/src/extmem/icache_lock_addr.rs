@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_LOCK_ADDR")
-            .field(
-                "icache_lock_addr",
-                &format_args!("{}", self.icache_lock_addr().bits()),
-            )
+            .field("icache_lock_addr", &self.icache_lock_addr().bits())
             .finish()
     }
 }

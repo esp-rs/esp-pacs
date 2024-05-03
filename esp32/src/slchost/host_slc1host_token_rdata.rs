@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLC1HOST_TOKEN_RDATA")
-            .field(
-                "host_slc1_token0",
-                &format_args!("{}", self.host_slc1_token0().bits()),
-            )
-            .field(
-                "host_slc1_rx_pf_valid",
-                &format_args!("{}", self.host_slc1_rx_pf_valid().bit()),
-            )
-            .field(
-                "host_hostslc1_token1",
-                &format_args!("{}", self.host_hostslc1_token1().bits()),
-            )
-            .field(
-                "host_slc1_rx_pf_eof",
-                &format_args!("{}", self.host_slc1_rx_pf_eof().bits()),
-            )
+            .field("host_slc1_token0", &self.host_slc1_token0().bits())
+            .field("host_slc1_rx_pf_valid", &self.host_slc1_rx_pf_valid().bit())
+            .field("host_hostslc1_token1", &self.host_hostslc1_token1().bits())
+            .field("host_slc1_rx_pf_eof", &self.host_slc1_rx_pf_eof().bits())
             .finish()
     }
 }

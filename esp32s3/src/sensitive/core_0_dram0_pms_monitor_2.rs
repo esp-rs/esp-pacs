@@ -42,28 +42,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_DRAM0_PMS_MONITOR_2")
             .field(
                 "core_0_dram0_pms_monitor_violate_intr",
-                &format_args!("{}", self.core_0_dram0_pms_monitor_violate_intr().bit()),
+                &self.core_0_dram0_pms_monitor_violate_intr().bit(),
             )
             .field(
                 "core_0_dram0_pms_monitor_violate_status_lock",
-                &format_args!(
-                    "{}",
-                    self.core_0_dram0_pms_monitor_violate_status_lock().bit()
-                ),
+                &self.core_0_dram0_pms_monitor_violate_status_lock().bit(),
             )
             .field(
                 "core_0_dram0_pms_monitor_violate_status_world",
-                &format_args!(
-                    "{}",
-                    self.core_0_dram0_pms_monitor_violate_status_world().bits()
-                ),
+                &self.core_0_dram0_pms_monitor_violate_status_world().bits(),
             )
             .field(
                 "core_0_dram0_pms_monitor_violate_status_addr",
-                &format_args!(
-                    "{}",
-                    self.core_0_dram0_pms_monitor_violate_status_addr().bits()
-                ),
+                &self.core_0_dram0_pms_monitor_violate_status_addr().bits(),
             )
             .finish()
     }

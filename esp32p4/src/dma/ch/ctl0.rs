@@ -107,37 +107,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTL0")
-            .field("ch1_sms", &format_args!("{}", self.ch1_sms().bit()))
-            .field("ch1_dms", &format_args!("{}", self.ch1_dms().bit()))
-            .field("ch1_sinc", &format_args!("{}", self.ch1_sinc().bit()))
-            .field("ch1_dinc", &format_args!("{}", self.ch1_dinc().bit()))
-            .field(
-                "ch1_src_tr_width",
-                &format_args!("{}", self.ch1_src_tr_width().bits()),
-            )
-            .field(
-                "ch1_dst_tr_width",
-                &format_args!("{}", self.ch1_dst_tr_width().bits()),
-            )
-            .field(
-                "ch1_src_msize",
-                &format_args!("{}", self.ch1_src_msize().bits()),
-            )
-            .field(
-                "ch1_dst_msize",
-                &format_args!("{}", self.ch1_dst_msize().bits()),
-            )
-            .field(
-                "ch1_ar_cache",
-                &format_args!("{}", self.ch1_ar_cache().bits()),
-            )
-            .field(
-                "ch1_aw_cache",
-                &format_args!("{}", self.ch1_aw_cache().bits()),
-            )
+            .field("ch1_sms", &self.ch1_sms().bit())
+            .field("ch1_dms", &self.ch1_dms().bit())
+            .field("ch1_sinc", &self.ch1_sinc().bit())
+            .field("ch1_dinc", &self.ch1_dinc().bit())
+            .field("ch1_src_tr_width", &self.ch1_src_tr_width().bits())
+            .field("ch1_dst_tr_width", &self.ch1_dst_tr_width().bits())
+            .field("ch1_src_msize", &self.ch1_src_msize().bits())
+            .field("ch1_dst_msize", &self.ch1_dst_msize().bits())
+            .field("ch1_ar_cache", &self.ch1_ar_cache().bits())
+            .field("ch1_aw_cache", &self.ch1_aw_cache().bits())
             .field(
                 "ch1_nonposted_lastwrite_en",
-                &format_args!("{}", self.ch1_nonposted_lastwrite_en().bit()),
+                &self.ch1_nonposted_lastwrite_en().bit(),
             )
             .finish()
     }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_INF_SEL")
-            .field(
-                "peri_io_swap",
-                &format_args!("{}", self.peri_io_swap().bits()),
-            )
+            .field("peri_io_swap", &self.peri_io_swap().bits())
             .finish()
     }
 }

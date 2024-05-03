@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_0_World_TRIGGER_ADDR")
             .field(
                 "core_0_world_trigger_addr",
-                &format_args!("{}", self.core_0_world_trigger_addr().bits()),
+                &self.core_0_world_trigger_addr().bits(),
             )
             .finish()
     }

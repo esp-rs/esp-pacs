@@ -20,13 +20,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("C0RE_0_DEBUG_MODE")
-            .field(
-                "core_0_debug_mode",
-                &format_args!("{}", self.core_0_debug_mode().bit()),
-            )
+            .field("core_0_debug_mode", &self.core_0_debug_mode().bit())
             .field(
                 "core_0_debug_module_active",
-                &format_args!("{}", self.core_0_debug_module_active().bit()),
+                &self.core_0_debug_module_active().bit(),
             )
             .finish()
     }

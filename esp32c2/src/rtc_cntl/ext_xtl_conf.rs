@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_XTL_CONF")
-            .field(
-                "xtl_ext_ctr_lv",
-                &format_args!("{}", self.xtl_ext_ctr_lv().bit()),
-            )
-            .field(
-                "xtl_ext_ctr_en",
-                &format_args!("{}", self.xtl_ext_ctr_en().bit()),
-            )
+            .field("xtl_ext_ctr_lv", &self.xtl_ext_ctr_lv().bit())
+            .field("xtl_ext_ctr_en", &self.xtl_ext_ctr_en().bit())
             .finish()
     }
 }

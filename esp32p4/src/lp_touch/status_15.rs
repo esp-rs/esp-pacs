@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_15")
-            .field("slp_data", &format_args!("{}", self.slp_data().bits()))
-            .field(
-                "slp_debounce_cnt",
-                &format_args!("{}", self.slp_debounce_cnt().bits()),
-            )
-            .field(
-                "slp_neg_noise_cnt",
-                &format_args!("{}", self.slp_neg_noise_cnt().bits()),
-            )
+            .field("slp_data", &self.slp_data().bits())
+            .field("slp_debounce_cnt", &self.slp_debounce_cnt().bits())
+            .field("slp_neg_noise_cnt", &self.slp_neg_noise_cnt().bits())
             .finish()
     }
 }

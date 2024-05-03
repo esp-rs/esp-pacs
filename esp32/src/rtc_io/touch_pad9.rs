@@ -53,11 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_PAD9")
-            .field("to_gpio", &format_args!("{}", self.to_gpio().bit()))
-            .field("xpd", &format_args!("{}", self.xpd().bit()))
-            .field("tie_opt", &format_args!("{}", self.tie_opt().bit()))
-            .field("start", &format_args!("{}", self.start().bit()))
-            .field("dac", &format_args!("{}", self.dac().bits()))
+            .field("to_gpio", &self.to_gpio().bit())
+            .field("xpd", &self.xpd().bit())
+            .field("tie_opt", &self.tie_opt().bit())
+            .field("start", &self.start().bit())
+            .field("dac", &self.dac().bits())
             .finish()
     }
 }

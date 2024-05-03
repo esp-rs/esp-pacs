@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GDFIFOCFG")
-            .field("gdfifocfg", &format_args!("{}", self.gdfifocfg().bits()))
-            .field(
-                "epinfobaseaddr",
-                &format_args!("{}", self.epinfobaseaddr().bits()),
-            )
+            .field("gdfifocfg", &self.gdfifocfg().bits())
+            .field("epinfobaseaddr", &self.epinfobaseaddr().bits())
             .finish()
     }
 }

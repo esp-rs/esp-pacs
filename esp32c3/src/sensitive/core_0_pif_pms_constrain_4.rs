@@ -161,87 +161,61 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_4")
             .field(
                 "core_0_pif_pms_constrain_world_0_usb_wrap",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_usb_wrap().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_usb_wrap().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_crypto_peri",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_crypto_peri().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_crypto_peri().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_crypto_dma",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_crypto_dma().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_crypto_dma().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_apb_adc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_apb_adc().bits()),
+                &self.core_0_pif_pms_constrain_world_0_apb_adc().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_bt_pwr",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_bt_pwr().bits()),
+                &self.core_0_pif_pms_constrain_world_0_bt_pwr().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_usb_device",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_usb_device().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_usb_device().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_system",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_system().bits()),
+                &self.core_0_pif_pms_constrain_world_0_system().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_sensitive",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_sensitive().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_sensitive().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_interrupt",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_interrupt().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_interrupt().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_dma_copy",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_dma_copy().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_dma_copy().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_cache_config",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_cache_config().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_cache_config().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_ad",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_ad().bits()),
+                &self.core_0_pif_pms_constrain_world_0_ad().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_dio",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_dio().bits()),
+                &self.core_0_pif_pms_constrain_world_0_dio().bits(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_world_controller",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_world_controller()
-                        .bits()
-                ),
+                &self
+                    .core_0_pif_pms_constrain_world_0_world_controller()
+                    .bits(),
             )
             .finish()
     }

@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_CTRL0")
-            .field(
-                "filter_channel1",
-                &format_args!("{}", self.filter_channel1().bits()),
-            )
-            .field(
-                "filter_channel0",
-                &format_args!("{}", self.filter_channel0().bits()),
-            )
-            .field(
-                "filter_reset",
-                &format_args!("{}", self.filter_reset().bit()),
-            )
+            .field("filter_channel1", &self.filter_channel1().bits())
+            .field("filter_channel0", &self.filter_channel0().bits())
+            .field("filter_reset", &self.filter_reset().bit())
             .finish()
     }
 }

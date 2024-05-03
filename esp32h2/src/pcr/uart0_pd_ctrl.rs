@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART0_PD_CTRL")
-            .field(
-                "uart0_mem_force_pu",
-                &format_args!("{}", self.uart0_mem_force_pu().bit()),
-            )
-            .field(
-                "uart0_mem_force_pd",
-                &format_args!("{}", self.uart0_mem_force_pd().bit()),
-            )
+            .field("uart0_mem_force_pu", &self.uart0_mem_force_pu().bit())
+            .field("uart0_mem_force_pd", &self.uart0_mem_force_pd().bit())
             .finish()
     }
 }

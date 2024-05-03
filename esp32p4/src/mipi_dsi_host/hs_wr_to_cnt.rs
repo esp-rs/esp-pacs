@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HS_WR_TO_CNT")
-            .field(
-                "hs_wr_to_cnt",
-                &format_args!("{}", self.hs_wr_to_cnt().bits()),
-            )
+            .field("hs_wr_to_cnt", &self.hs_wr_to_cnt().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERI_RST_EN")
-            .field(
-                "rst_en_dedicated_gpio",
-                &format_args!("{}", self.rst_en_dedicated_gpio().bit()),
-            )
+            .field("rst_en_dedicated_gpio", &self.rst_en_dedicated_gpio().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_CLK_UPDATE")
-            .field(
-                "bus_clock_update",
-                &format_args!("{}", self.bus_clock_update().bit()),
-            )
+            .field("bus_clock_update", &self.bus_clock_update().bit())
             .finish()
     }
 }

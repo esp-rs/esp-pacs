@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SPI_SYS_5")
-            .field(
-                "sys_data_part0_2",
-                &format_args!("{}", self.sys_data_part0_2().bits()),
-            )
+            .field("sys_data_part0_2", &self.sys_data_part0_2().bits())
             .finish()
     }
 }

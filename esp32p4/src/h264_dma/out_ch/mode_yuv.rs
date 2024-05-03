@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODE_YUV")
-            .field(
-                "out_test_y_value",
-                &format_args!("{}", self.out_test_y_value().bits()),
-            )
-            .field(
-                "out_test_u_value",
-                &format_args!("{}", self.out_test_u_value().bits()),
-            )
-            .field(
-                "out_test_v_value",
-                &format_args!("{}", self.out_test_v_value().bits()),
-            )
+            .field("out_test_y_value", &self.out_test_y_value().bits())
+            .field("out_test_u_value", &self.out_test_u_value().bits())
+            .field("out_test_v_value", &self.out_test_v_value().bits())
             .finish()
     }
 }

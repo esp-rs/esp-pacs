@@ -127,55 +127,55 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_1")
             .field(
                 "backup_bus_pms_constrain_uart",
-                &format_args!("{}", self.backup_bus_pms_constrain_uart().bits()),
+                &self.backup_bus_pms_constrain_uart().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_g0spi_1",
-                &format_args!("{}", self.backup_bus_pms_constrain_g0spi_1().bits()),
+                &self.backup_bus_pms_constrain_g0spi_1().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_g0spi_0",
-                &format_args!("{}", self.backup_bus_pms_constrain_g0spi_0().bits()),
+                &self.backup_bus_pms_constrain_g0spi_0().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_gpio",
-                &format_args!("{}", self.backup_bus_pms_constrain_gpio().bits()),
+                &self.backup_bus_pms_constrain_gpio().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_fe2",
-                &format_args!("{}", self.backup_bus_pms_constrain_fe2().bits()),
+                &self.backup_bus_pms_constrain_fe2().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_fe",
-                &format_args!("{}", self.backup_bus_pms_constrain_fe().bits()),
+                &self.backup_bus_pms_constrain_fe().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_timer",
-                &format_args!("{}", self.backup_bus_pms_constrain_timer().bits()),
+                &self.backup_bus_pms_constrain_timer().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_rtc",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtc().bits()),
+                &self.backup_bus_pms_constrain_rtc().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_io_mux",
-                &format_args!("{}", self.backup_bus_pms_constrain_io_mux().bits()),
+                &self.backup_bus_pms_constrain_io_mux().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_wdg",
-                &format_args!("{}", self.backup_bus_pms_constrain_wdg().bits()),
+                &self.backup_bus_pms_constrain_wdg().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_misc",
-                &format_args!("{}", self.backup_bus_pms_constrain_misc().bits()),
+                &self.backup_bus_pms_constrain_misc().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_i2c",
-                &format_args!("{}", self.backup_bus_pms_constrain_i2c().bits()),
+                &self.backup_bus_pms_constrain_i2c().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_uart1",
-                &format_args!("{}", self.backup_bus_pms_constrain_uart1().bits()),
+                &self.backup_bus_pms_constrain_uart1().bits(),
             )
             .finish()
     }

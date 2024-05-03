@@ -74,35 +74,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_SYNC_PRELOAD_INT_CLR")
             .field(
                 "l1_icache0_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache0_pld_done_int_clr().bit()),
+                &self.l1_icache0_pld_done_int_clr().bit(),
             )
             .field(
                 "l1_icache1_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache1_pld_done_int_clr().bit()),
+                &self.l1_icache1_pld_done_int_clr().bit(),
             )
             .field(
                 "l1_icache2_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache2_pld_done_int_clr().bit()),
+                &self.l1_icache2_pld_done_int_clr().bit(),
             )
             .field(
                 "l1_icache3_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache3_pld_done_int_clr().bit()),
+                &self.l1_icache3_pld_done_int_clr().bit(),
             )
             .field(
                 "l1_icache0_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache0_pld_err_int_clr().bit()),
+                &self.l1_icache0_pld_err_int_clr().bit(),
             )
             .field(
                 "l1_icache1_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache1_pld_err_int_clr().bit()),
+                &self.l1_icache1_pld_err_int_clr().bit(),
             )
             .field(
                 "l1_icache2_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache2_pld_err_int_clr().bit()),
+                &self.l1_icache2_pld_err_int_clr().bit(),
             )
             .field(
                 "l1_icache3_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache3_pld_err_int_clr().bit()),
+                &self.l1_icache3_pld_err_int_clr().bit(),
             )
             .finish()
     }

@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMESTAMP_PRESCALER")
-            .field("ts_div_num", &format_args!("{}", self.ts_div_num().bits()))
+            .field("ts_div_num", &self.ts_div_num().bits())
             .finish()
     }
 }

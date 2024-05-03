@@ -53,23 +53,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_TIMING")
-            .field("ncrc", &format_args!("{}", self.ncrc().bits()))
+            .field("ncrc", &self.ncrc().bits())
             .field(
                 "pst_end_cmd_low_value",
-                &format_args!("{}", self.pst_end_cmd_low_value().bits()),
+                &self.pst_end_cmd_low_value().bits(),
             )
             .field(
                 "pst_end_data_low_value",
-                &format_args!("{}", self.pst_end_data_low_value().bits()),
+                &self.pst_end_data_low_value().bits(),
             )
-            .field(
-                "sdclk_stop_thres",
-                &format_args!("{}", self.sdclk_stop_thres().bits()),
-            )
-            .field(
-                "sample_clk_divider",
-                &format_args!("{}", self.sample_clk_divider().bits()),
-            )
+            .field("sdclk_stop_thres", &self.sdclk_stop_thres().bits())
+            .field("sample_clk_divider", &self.sample_clk_divider().bits())
             .finish()
     }
 }

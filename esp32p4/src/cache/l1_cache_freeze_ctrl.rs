@@ -125,66 +125,45 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_FREEZE_CTRL")
-            .field(
-                "l1_icache0_freeze_en",
-                &format_args!("{}", self.l1_icache0_freeze_en().bit()),
-            )
+            .field("l1_icache0_freeze_en", &self.l1_icache0_freeze_en().bit())
             .field(
                 "l1_icache0_freeze_mode",
-                &format_args!("{}", self.l1_icache0_freeze_mode().bit()),
+                &self.l1_icache0_freeze_mode().bit(),
             )
             .field(
                 "l1_icache0_freeze_done",
-                &format_args!("{}", self.l1_icache0_freeze_done().bit()),
+                &self.l1_icache0_freeze_done().bit(),
             )
-            .field(
-                "l1_icache1_freeze_en",
-                &format_args!("{}", self.l1_icache1_freeze_en().bit()),
-            )
+            .field("l1_icache1_freeze_en", &self.l1_icache1_freeze_en().bit())
             .field(
                 "l1_icache1_freeze_mode",
-                &format_args!("{}", self.l1_icache1_freeze_mode().bit()),
+                &self.l1_icache1_freeze_mode().bit(),
             )
             .field(
                 "l1_icache1_freeze_done",
-                &format_args!("{}", self.l1_icache1_freeze_done().bit()),
+                &self.l1_icache1_freeze_done().bit(),
             )
-            .field(
-                "l1_icache2_freeze_en",
-                &format_args!("{}", self.l1_icache2_freeze_en().bit()),
-            )
+            .field("l1_icache2_freeze_en", &self.l1_icache2_freeze_en().bit())
             .field(
                 "l1_icache2_freeze_mode",
-                &format_args!("{}", self.l1_icache2_freeze_mode().bit()),
+                &self.l1_icache2_freeze_mode().bit(),
             )
             .field(
                 "l1_icache2_freeze_done",
-                &format_args!("{}", self.l1_icache2_freeze_done().bit()),
+                &self.l1_icache2_freeze_done().bit(),
             )
-            .field(
-                "l1_icache3_freeze_en",
-                &format_args!("{}", self.l1_icache3_freeze_en().bit()),
-            )
+            .field("l1_icache3_freeze_en", &self.l1_icache3_freeze_en().bit())
             .field(
                 "l1_icache3_freeze_mode",
-                &format_args!("{}", self.l1_icache3_freeze_mode().bit()),
+                &self.l1_icache3_freeze_mode().bit(),
             )
             .field(
                 "l1_icache3_freeze_done",
-                &format_args!("{}", self.l1_icache3_freeze_done().bit()),
+                &self.l1_icache3_freeze_done().bit(),
             )
-            .field(
-                "l1_dcache_freeze_en",
-                &format_args!("{}", self.l1_dcache_freeze_en().bit()),
-            )
-            .field(
-                "l1_dcache_freeze_mode",
-                &format_args!("{}", self.l1_dcache_freeze_mode().bit()),
-            )
-            .field(
-                "l1_dcache_freeze_done",
-                &format_args!("{}", self.l1_dcache_freeze_done().bit()),
-            )
+            .field("l1_dcache_freeze_en", &self.l1_dcache_freeze_en().bit())
+            .field("l1_dcache_freeze_mode", &self.l1_dcache_freeze_mode().bit())
+            .field("l1_dcache_freeze_done", &self.l1_dcache_freeze_done().bit())
             .finish()
     }
 }

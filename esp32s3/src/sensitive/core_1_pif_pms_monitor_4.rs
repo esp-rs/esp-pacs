@@ -32,14 +32,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_MONITOR_4")
             .field(
                 "core_1_pif_pms_monitor_nonword_violate_clr",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_nonword_violate_clr().bit()
-                ),
+                &self.core_1_pif_pms_monitor_nonword_violate_clr().bit(),
             )
             .field(
                 "core_1_pif_pms_monitor_nonword_violate_en",
-                &format_args!("{}", self.core_1_pif_pms_monitor_nonword_violate_en().bit()),
+                &self.core_1_pif_pms_monitor_nonword_violate_en().bit(),
             )
             .finish()
     }

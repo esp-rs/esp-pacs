@@ -21,7 +21,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_CONF")
-            .field("vad_en", &format_args!("{}", self.vad_en().bit()))
+            .field("vad_en", &self.vad_en().bit())
             .finish()
     }
 }

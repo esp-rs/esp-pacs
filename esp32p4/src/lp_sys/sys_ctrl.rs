@@ -82,29 +82,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS_CTRL")
-            .field(
-                "lp_core_disable",
-                &format_args!("{}", self.lp_core_disable().bit()),
-            )
-            .field(
-                "force_download_boot",
-                &format_args!("{}", self.force_download_boot().bit()),
-            )
-            .field("dig_fib", &format_args!("{}", self.dig_fib().bits()))
-            .field(
-                "io_mux_reset_disable",
-                &format_args!("{}", self.io_mux_reset_disable().bit()),
-            )
-            .field("ana_fib", &format_args!("{}", self.ana_fib().bits()))
-            .field("lp_fib_sel", &format_args!("{}", self.lp_fib_sel().bits()))
+            .field("lp_core_disable", &self.lp_core_disable().bit())
+            .field("force_download_boot", &self.force_download_boot().bit())
+            .field("dig_fib", &self.dig_fib().bits())
+            .field("io_mux_reset_disable", &self.io_mux_reset_disable().bit())
+            .field("ana_fib", &self.ana_fib().bits())
+            .field("lp_fib_sel", &self.lp_fib_sel().bits())
             .field(
                 "lp_core_etm_wakeup_flag",
-                &format_args!("{}", self.lp_core_etm_wakeup_flag().bit()),
+                &self.lp_core_etm_wakeup_flag().bit(),
             )
-            .field(
-                "systimer_stall_sel",
-                &format_args!("{}", self.systimer_stall_sel().bit()),
-            )
+            .field("systimer_stall_sel", &self.systimer_stall_sel().bit())
             .finish()
     }
 }

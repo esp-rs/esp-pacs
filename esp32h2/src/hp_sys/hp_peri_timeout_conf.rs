@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_PERI_TIMEOUT_CONF")
             .field(
                 "hp_peri_timeout_thres",
-                &format_args!("{}", self.hp_peri_timeout_thres().bits()),
+                &self.hp_peri_timeout_thres().bits(),
             )
             .field(
                 "hp_peri_timeout_protect_en",
-                &format_args!("{}", self.hp_peri_timeout_protect_en().bit()),
+                &self.hp_peri_timeout_protect_en().bit(),
             )
             .finish()
     }

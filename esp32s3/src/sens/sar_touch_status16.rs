@@ -36,19 +36,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_TOUCH_STATUS16")
             .field(
                 "sar_touch_approach_pad2_cnt",
-                &format_args!("{}", self.sar_touch_approach_pad2_cnt().bits()),
+                &self.sar_touch_approach_pad2_cnt().bits(),
             )
             .field(
                 "sar_touch_approach_pad1_cnt",
-                &format_args!("{}", self.sar_touch_approach_pad1_cnt().bits()),
+                &self.sar_touch_approach_pad1_cnt().bits(),
             )
             .field(
                 "sar_touch_approach_pad0_cnt",
-                &format_args!("{}", self.sar_touch_approach_pad0_cnt().bits()),
+                &self.sar_touch_approach_pad0_cnt().bits(),
             )
             .field(
                 "sar_touch_slp_approach_cnt",
-                &format_args!("{}", self.sar_touch_slp_approach_cnt().bits()),
+                &self.sar_touch_slp_approach_cnt().bits(),
             )
             .finish()
     }

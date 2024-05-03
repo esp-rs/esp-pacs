@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_ASSIST_DEBUG_INTR_MAP")
             .field(
                 "pro_assist_debug_intr_map",
-                &format_args!("{}", self.pro_assist_debug_intr_map().bits()),
+                &self.pro_assist_debug_intr_map().bits(),
             )
             .finish()
     }

@@ -28,13 +28,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMB_PVT_HVT_CONF")
-            .field(
-                "comb_path_len_hvt",
-                &format_args!("{}", self.comb_path_len_hvt().bits()),
-            )
+            .field("comb_path_len_hvt", &self.comb_path_len_hvt().bits())
             .field(
                 "comb_pvt_monitor_en_hvt",
-                &format_args!("{}", self.comb_pvt_monitor_en_hvt().bit()),
+                &self.comb_pvt_monitor_en_hvt().bit(),
             )
             .finish()
     }

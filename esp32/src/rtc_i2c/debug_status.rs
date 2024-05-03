@@ -89,18 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_STATUS")
-            .field("ack_val", &format_args!("{}", self.ack_val().bit()))
-            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
-            .field("timed_out", &format_args!("{}", self.timed_out().bit()))
-            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
-            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
-            .field(
-                "slave_addr_match",
-                &format_args!("{}", self.slave_addr_match().bit()),
-            )
-            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
-            .field("main_state", &format_args!("{}", self.main_state().bits()))
-            .field("scl_state", &format_args!("{}", self.scl_state().bits()))
+            .field("ack_val", &self.ack_val().bit())
+            .field("slave_rw", &self.slave_rw().bit())
+            .field("timed_out", &self.timed_out().bit())
+            .field("arb_lost", &self.arb_lost().bit())
+            .field("bus_busy", &self.bus_busy().bit())
+            .field("slave_addr_match", &self.slave_addr_match().bit())
+            .field("byte_trans", &self.byte_trans().bit())
+            .field("main_state", &self.main_state().bits())
+            .field("scl_state", &self.scl_state().bits())
             .finish()
     }
 }

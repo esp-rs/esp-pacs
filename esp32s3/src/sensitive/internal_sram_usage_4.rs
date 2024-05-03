@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERNAL_SRAM_USAGE_4")
             .field(
                 "internal_sram_log_usage",
-                &format_args!("{}", self.internal_sram_log_usage().bits()),
+                &self.internal_sram_log_usage().bits(),
             )
             .finish()
     }

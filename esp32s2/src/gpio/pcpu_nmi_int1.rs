@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCPU_NMI_INT1")
-            .field(
-                "procpu_nmi1_int",
-                &format_args!("{}", self.procpu_nmi1_int().bits()),
-            )
+            .field("procpu_nmi1_int", &self.procpu_nmi1_int().bits())
             .finish()
     }
 }

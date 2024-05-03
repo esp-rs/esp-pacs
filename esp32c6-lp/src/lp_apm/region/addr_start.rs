@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADDR_START")
-            .field("addr_start", &format_args!("{}", self.addr_start().bits()))
+            .field("addr_start", &self.addr_start().bits())
             .finish()
     }
 }

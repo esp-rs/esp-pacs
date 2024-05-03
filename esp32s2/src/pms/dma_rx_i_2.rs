@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_RX_I_2")
-            .field(
-                "dma_rx_i_ilg_clr",
-                &format_args!("{}", self.dma_rx_i_ilg_clr().bit()),
-            )
-            .field(
-                "dma_rx_i_ilg_en",
-                &format_args!("{}", self.dma_rx_i_ilg_en().bit()),
-            )
-            .field(
-                "dma_rx_i_ilg_intr",
-                &format_args!("{}", self.dma_rx_i_ilg_intr().bit()),
-            )
+            .field("dma_rx_i_ilg_clr", &self.dma_rx_i_ilg_clr().bit())
+            .field("dma_rx_i_ilg_en", &self.dma_rx_i_ilg_en().bit())
+            .field("dma_rx_i_ilg_intr", &self.dma_rx_i_ilg_intr().bit())
             .finish()
     }
 }

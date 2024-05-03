@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_PRELOAD_CTRL")
-            .field(
-                "dcache_preload_ena",
-                &format_args!("{}", self.dcache_preload_ena().bit()),
-            )
-            .field(
-                "dcache_preload_done",
-                &format_args!("{}", self.dcache_preload_done().bit()),
-            )
-            .field(
-                "dcache_preload_order",
-                &format_args!("{}", self.dcache_preload_order().bit()),
-            )
+            .field("dcache_preload_ena", &self.dcache_preload_ena().bit())
+            .field("dcache_preload_done", &self.dcache_preload_done().bit())
+            .field("dcache_preload_order", &self.dcache_preload_order().bit())
             .finish()
     }
 }

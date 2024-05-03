@@ -181,105 +181,57 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_1INT_ST1")
-            .field(
-                "frhost_bit8_int_st1",
-                &format_args!("{}", self.frhost_bit8_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit9_int_st1",
-                &format_args!("{}", self.frhost_bit9_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit10_int_st1",
-                &format_args!("{}", self.frhost_bit10_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit11_int_st1",
-                &format_args!("{}", self.frhost_bit11_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit12_int_st1",
-                &format_args!("{}", self.frhost_bit12_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit13_int_st1",
-                &format_args!("{}", self.frhost_bit13_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit14_int_st1",
-                &format_args!("{}", self.frhost_bit14_int_st1().bit()),
-            )
-            .field(
-                "frhost_bit15_int_st1",
-                &format_args!("{}", self.frhost_bit15_int_st1().bit()),
-            )
-            .field(
-                "slc1_rx_start_int_st1",
-                &format_args!("{}", self.slc1_rx_start_int_st1().bit()),
-            )
-            .field(
-                "slc1_tx_start_int_st1",
-                &format_args!("{}", self.slc1_tx_start_int_st1().bit()),
-            )
-            .field(
-                "slc1_rx_udf_int_st1",
-                &format_args!("{}", self.slc1_rx_udf_int_st1().bit()),
-            )
-            .field(
-                "slc1_tx_ovf_int_st1",
-                &format_args!("{}", self.slc1_tx_ovf_int_st1().bit()),
-            )
+            .field("frhost_bit8_int_st1", &self.frhost_bit8_int_st1().bit())
+            .field("frhost_bit9_int_st1", &self.frhost_bit9_int_st1().bit())
+            .field("frhost_bit10_int_st1", &self.frhost_bit10_int_st1().bit())
+            .field("frhost_bit11_int_st1", &self.frhost_bit11_int_st1().bit())
+            .field("frhost_bit12_int_st1", &self.frhost_bit12_int_st1().bit())
+            .field("frhost_bit13_int_st1", &self.frhost_bit13_int_st1().bit())
+            .field("frhost_bit14_int_st1", &self.frhost_bit14_int_st1().bit())
+            .field("frhost_bit15_int_st1", &self.frhost_bit15_int_st1().bit())
+            .field("slc1_rx_start_int_st1", &self.slc1_rx_start_int_st1().bit())
+            .field("slc1_tx_start_int_st1", &self.slc1_tx_start_int_st1().bit())
+            .field("slc1_rx_udf_int_st1", &self.slc1_rx_udf_int_st1().bit())
+            .field("slc1_tx_ovf_int_st1", &self.slc1_tx_ovf_int_st1().bit())
             .field(
                 "slc1_token0_1to0_int_st1",
-                &format_args!("{}", self.slc1_token0_1to0_int_st1().bit()),
+                &self.slc1_token0_1to0_int_st1().bit(),
             )
             .field(
                 "slc1_token1_1to0_int_st1",
-                &format_args!("{}", self.slc1_token1_1to0_int_st1().bit()),
+                &self.slc1_token1_1to0_int_st1().bit(),
             )
-            .field(
-                "slc1_tx_done_int_st1",
-                &format_args!("{}", self.slc1_tx_done_int_st1().bit()),
-            )
+            .field("slc1_tx_done_int_st1", &self.slc1_tx_done_int_st1().bit())
             .field(
                 "slc1_tx_suc_eof_int_st1",
-                &format_args!("{}", self.slc1_tx_suc_eof_int_st1().bit()),
+                &self.slc1_tx_suc_eof_int_st1().bit(),
             )
-            .field(
-                "slc1_rx_done_int_st1",
-                &format_args!("{}", self.slc1_rx_done_int_st1().bit()),
-            )
-            .field(
-                "slc1_rx_eof_int_st1",
-                &format_args!("{}", self.slc1_rx_eof_int_st1().bit()),
-            )
-            .field(
-                "slc1_tohost_int_st1",
-                &format_args!("{}", self.slc1_tohost_int_st1().bit()),
-            )
+            .field("slc1_rx_done_int_st1", &self.slc1_rx_done_int_st1().bit())
+            .field("slc1_rx_eof_int_st1", &self.slc1_rx_eof_int_st1().bit())
+            .field("slc1_tohost_int_st1", &self.slc1_tohost_int_st1().bit())
             .field(
                 "slc1_tx_dscr_err_int_st1",
-                &format_args!("{}", self.slc1_tx_dscr_err_int_st1().bit()),
+                &self.slc1_tx_dscr_err_int_st1().bit(),
             )
             .field(
                 "slc1_rx_dscr_err_int_st1",
-                &format_args!("{}", self.slc1_rx_dscr_err_int_st1().bit()),
+                &self.slc1_rx_dscr_err_int_st1().bit(),
             )
             .field(
                 "slc1_tx_dscr_empty_int_st1",
-                &format_args!("{}", self.slc1_tx_dscr_empty_int_st1().bit()),
+                &self.slc1_tx_dscr_empty_int_st1().bit(),
             )
             .field(
                 "slc1_host_rd_ack_int_st1",
-                &format_args!("{}", self.slc1_host_rd_ack_int_st1().bit()),
+                &self.slc1_host_rd_ack_int_st1().bit(),
             )
             .field(
                 "slc1_wr_retry_done_int_st1",
-                &format_args!("{}", self.slc1_wr_retry_done_int_st1().bit()),
+                &self.slc1_wr_retry_done_int_st1().bit(),
             )
             .field(
                 "slc1_tx_err_eof_int_st1",
-                &format_args!("{}", self.slc1_tx_err_eof_int_st1().bit()),
+                &self.slc1_tx_err_eof_int_st1().bit(),
             )
             .finish()
     }

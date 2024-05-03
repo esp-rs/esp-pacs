@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_PRELOAD_INT_MAP")
             .field(
                 "icache_preload_int_map",
-                &format_args!("{}", self.icache_preload_int_map().bits()),
+                &self.icache_preload_int_map().bits(),
             )
             .finish()
     }

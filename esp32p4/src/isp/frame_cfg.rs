@@ -53,17 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAME_CFG")
-            .field("vadr_num", &format_args!("{}", self.vadr_num().bits()))
-            .field("hadr_num", &format_args!("{}", self.hadr_num().bits()))
-            .field("bayer_mode", &format_args!("{}", self.bayer_mode().bits()))
-            .field(
-                "hsync_start_exist",
-                &format_args!("{}", self.hsync_start_exist().bit()),
-            )
-            .field(
-                "hsync_end_exist",
-                &format_args!("{}", self.hsync_end_exist().bit()),
-            )
+            .field("vadr_num", &self.vadr_num().bits())
+            .field("hadr_num", &self.hadr_num().bits())
+            .field("bayer_mode", &self.bayer_mode().bits())
+            .field("hsync_start_exist", &self.hsync_start_exist().bit())
+            .field("hsync_end_exist", &self.hsync_end_exist().bit())
             .finish()
     }
 }

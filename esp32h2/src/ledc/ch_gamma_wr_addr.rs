@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_GAMMA_WR_ADDR")
-            .field(
-                "ch_gamma_wr_addr",
-                &format_args!("{}", self.ch_gamma_wr_addr().bits()),
-            )
+            .field("ch_gamma_wr_addr", &self.ch_gamma_wr_addr().bits())
             .finish()
     }
 }

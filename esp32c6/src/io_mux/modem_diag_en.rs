@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_DIAG_EN")
-            .field(
-                "modem_diag_en",
-                &format_args!("{}", self.modem_diag_en().bits()),
-            )
+            .field("modem_diag_en", &self.modem_diag_en().bits())
             .finish()
     }
 }

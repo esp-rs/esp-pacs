@@ -39,15 +39,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIN3")
             .field(
                 "reg_gpio_pin3_wakeup_enable",
-                &format_args!("{}", self.reg_gpio_pin3_wakeup_enable().bit()),
+                &self.reg_gpio_pin3_wakeup_enable().bit(),
             )
             .field(
                 "reg_gpio_pin3_int_type",
-                &format_args!("{}", self.reg_gpio_pin3_int_type().bits()),
+                &self.reg_gpio_pin3_int_type().bits(),
             )
             .field(
                 "reg_gpio_pin3_pad_driver",
-                &format_args!("{}", self.reg_gpio_pin3_pad_driver().bit()),
+                &self.reg_gpio_pin3_pad_driver().bit(),
             )
             .finish()
     }

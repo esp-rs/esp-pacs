@@ -121,34 +121,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GUSBCFG")
-            .field("toutcal", &format_args!("{}", self.toutcal().bits()))
-            .field("phyif", &format_args!("{}", self.phyif().bit()))
-            .field(
-                "ulpi_utmi_sel",
-                &format_args!("{}", self.ulpi_utmi_sel().bit()),
-            )
-            .field("fsintf", &format_args!("{}", self.fsintf().bit()))
-            .field("physel", &format_args!("{}", self.physel().bit()))
-            .field("srpcap", &format_args!("{}", self.srpcap().bit()))
-            .field("hnpcap", &format_args!("{}", self.hnpcap().bit()))
-            .field("usbtrdtim", &format_args!("{}", self.usbtrdtim().bits()))
-            .field(
-                "termseldlpulse",
-                &format_args!("{}", self.termseldlpulse().bit()),
-            )
-            .field("txenddelay", &format_args!("{}", self.txenddelay().bit()))
-            .field(
-                "forcehstmode",
-                &format_args!("{}", self.forcehstmode().bit()),
-            )
-            .field(
-                "forcedevmode",
-                &format_args!("{}", self.forcedevmode().bit()),
-            )
-            .field(
-                "corrupttxpkt",
-                &format_args!("{}", self.corrupttxpkt().bit()),
-            )
+            .field("toutcal", &self.toutcal().bits())
+            .field("phyif", &self.phyif().bit())
+            .field("ulpi_utmi_sel", &self.ulpi_utmi_sel().bit())
+            .field("fsintf", &self.fsintf().bit())
+            .field("physel", &self.physel().bit())
+            .field("srpcap", &self.srpcap().bit())
+            .field("hnpcap", &self.hnpcap().bit())
+            .field("usbtrdtim", &self.usbtrdtim().bits())
+            .field("termseldlpulse", &self.termseldlpulse().bit())
+            .field("txenddelay", &self.txenddelay().bit())
+            .field("forcehstmode", &self.forcehstmode().bit())
+            .field("forcedevmode", &self.forcedevmode().bit())
+            .field("corrupttxpkt", &self.corrupttxpkt().bit())
             .finish()
     }
 }

@@ -41,23 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CHSTATUS")
-            .field(
-                "mem_raddr_ex_ch0",
-                &format_args!("{}", self.mem_raddr_ex_ch0().bits()),
-            )
-            .field(
-                "apb_mem_waddr_ch0",
-                &format_args!("{}", self.apb_mem_waddr_ch0().bits()),
-            )
-            .field("state_ch0", &format_args!("{}", self.state_ch0().bits()))
-            .field(
-                "mem_empty_ch0",
-                &format_args!("{}", self.mem_empty_ch0().bit()),
-            )
-            .field(
-                "apb_mem_wr_err_ch0",
-                &format_args!("{}", self.apb_mem_wr_err_ch0().bit()),
-            )
+            .field("mem_raddr_ex_ch0", &self.mem_raddr_ex_ch0().bits())
+            .field("apb_mem_waddr_ch0", &self.apb_mem_waddr_ch0().bits())
+            .field("state_ch0", &self.state_ch0().bits())
+            .field("mem_empty_ch0", &self.mem_empty_ch0().bit())
+            .field("apb_mem_wr_err_ch0", &self.apb_mem_wr_err_ch0().bit())
             .finish()
     }
 }

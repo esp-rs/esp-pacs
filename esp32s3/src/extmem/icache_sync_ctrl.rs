@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_SYNC_CTRL")
-            .field(
-                "icache_invalidate_ena",
-                &format_args!("{}", self.icache_invalidate_ena().bit()),
-            )
-            .field(
-                "icache_sync_done",
-                &format_args!("{}", self.icache_sync_done().bit()),
-            )
+            .field("icache_invalidate_ena", &self.icache_invalidate_ena().bit())
+            .field("icache_sync_done", &self.icache_sync_done().bit())
             .finish()
     }
 }

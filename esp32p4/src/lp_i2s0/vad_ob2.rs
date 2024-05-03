@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB2")
-            .field(
-                "noise_amp_ob",
-                &format_args!("{}", self.noise_amp_ob().bits()),
-            )
+            .field("noise_amp_ob", &self.noise_amp_ob().bits())
             .finish()
     }
 }

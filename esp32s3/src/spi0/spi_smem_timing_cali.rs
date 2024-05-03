@@ -37,15 +37,12 @@ impl core::fmt::Debug for R {
         f.debug_struct("SPI_SMEM_TIMING_CALI")
             .field(
                 "spi_smem_timing_clk_ena",
-                &format_args!("{}", self.spi_smem_timing_clk_ena().bit()),
+                &self.spi_smem_timing_clk_ena().bit(),
             )
-            .field(
-                "spi_smem_timing_cali",
-                &format_args!("{}", self.spi_smem_timing_cali().bit()),
-            )
+            .field("spi_smem_timing_cali", &self.spi_smem_timing_cali().bit())
             .field(
                 "spi_smem_extra_dummy_cyclelen",
-                &format_args!("{}", self.spi_smem_extra_dummy_cyclelen().bits()),
+                &self.spi_smem_extra_dummy_cyclelen().bits(),
             )
             .finish()
     }

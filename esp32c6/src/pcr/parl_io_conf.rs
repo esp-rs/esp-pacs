@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PARL_IO_CONF")
-            .field("parl_clk_en", &format_args!("{}", self.parl_clk_en().bit()))
-            .field("parl_rst_en", &format_args!("{}", self.parl_rst_en().bit()))
+            .field("parl_clk_en", &self.parl_clk_en().bit())
+            .field("parl_rst_en", &self.parl_rst_en().bit())
             .finish()
     }
 }

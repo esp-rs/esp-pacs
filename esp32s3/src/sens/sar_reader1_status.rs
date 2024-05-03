@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_READER1_STATUS")
             .field(
                 "sar_sar1_reader_status",
-                &format_args!("{}", self.sar_sar1_reader_status().bits()),
+                &self.sar_sar1_reader_status().bits(),
             )
             .finish()
     }

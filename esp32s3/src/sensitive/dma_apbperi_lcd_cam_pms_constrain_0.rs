@@ -21,7 +21,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0")
             .field(
                 "dma_apbperi_lcd_cam_pms_constrain_lock",
-                &format_args!("{}", self.dma_apbperi_lcd_cam_pms_constrain_lock().bit()),
+                &self.dma_apbperi_lcd_cam_pms_constrain_lock().bit(),
             )
             .finish()
     }

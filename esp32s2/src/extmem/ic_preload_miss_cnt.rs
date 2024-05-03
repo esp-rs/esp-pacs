@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IC_PRELOAD_MISS_CNT")
-            .field(
-                "ic_preload_miss_cnt",
-                &format_args!("{}", self.ic_preload_miss_cnt().bits()),
-            )
+            .field("ic_preload_miss_cnt", &self.ic_preload_miss_cnt().bits())
             .finish()
     }
 }

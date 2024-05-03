@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHROM_MPU_TABLE2")
-            .field(
-                "shrom_mpu_table2",
-                &format_args!("{}", self.shrom_mpu_table2().bits()),
-            )
+            .field("shrom_mpu_table2", &self.shrom_mpu_table2().bits())
             .finish()
     }
 }

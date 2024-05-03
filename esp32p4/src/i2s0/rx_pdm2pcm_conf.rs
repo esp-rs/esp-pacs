@@ -62,30 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_PDM2PCM_CONF")
-            .field(
-                "rx_pdm2pcm_en",
-                &format_args!("{}", self.rx_pdm2pcm_en().bit()),
-            )
-            .field(
-                "rx_pdm_sinc_dsr_16_en",
-                &format_args!("{}", self.rx_pdm_sinc_dsr_16_en().bit()),
-            )
+            .field("rx_pdm2pcm_en", &self.rx_pdm2pcm_en().bit())
+            .field("rx_pdm_sinc_dsr_16_en", &self.rx_pdm_sinc_dsr_16_en().bit())
             .field(
                 "rx_pdm2pcm_amplify_num",
-                &format_args!("{}", self.rx_pdm2pcm_amplify_num().bits()),
+                &self.rx_pdm2pcm_amplify_num().bits(),
             )
-            .field(
-                "rx_pdm_hp_bypass",
-                &format_args!("{}", self.rx_pdm_hp_bypass().bit()),
-            )
-            .field(
-                "rx_iir_hp_mult12_5",
-                &format_args!("{}", self.rx_iir_hp_mult12_5().bits()),
-            )
-            .field(
-                "rx_iir_hp_mult12_0",
-                &format_args!("{}", self.rx_iir_hp_mult12_0().bits()),
-            )
+            .field("rx_pdm_hp_bypass", &self.rx_pdm_hp_bypass().bit())
+            .field("rx_iir_hp_mult12_5", &self.rx_iir_hp_mult12_5().bits())
+            .field("rx_iir_hp_mult12_0", &self.rx_iir_hp_mult12_0().bits())
             .finish()
     }
 }

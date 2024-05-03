@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_AUTOLOAD_BUF_CLR_CTRL")
-            .field(
-                "l2_cache_ald_buf_clr",
-                &format_args!("{}", self.l2_cache_ald_buf_clr().bit()),
-            )
+            .field("l2_cache_ald_buf_clr", &self.l2_cache_ald_buf_clr().bit())
             .finish()
     }
 }

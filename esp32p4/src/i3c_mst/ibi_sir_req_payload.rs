@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IBI_SIR_REQ_PAYLOAD")
-            .field(
-                "reg_sir_req_payload",
-                &format_args!("{}", self.reg_sir_req_payload().bits()),
-            )
+            .field("reg_sir_req_payload", &self.reg_sir_req_payload().bits())
             .finish()
     }
 }

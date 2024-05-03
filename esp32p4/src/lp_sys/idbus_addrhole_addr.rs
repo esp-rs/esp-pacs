@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDBUS_ADDRHOLE_ADDR")
-            .field(
-                "idbus_addrhole_addr",
-                &format_args!("{}", self.idbus_addrhole_addr().bits()),
-            )
+            .field("idbus_addrhole_addr", &self.idbus_addrhole_addr().bits())
             .finish()
     }
 }

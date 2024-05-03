@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_PERIPHERAL_STATUS")
             .field(
                 "cpu_peri_byte_error_addr",
-                &format_args!("{}", self.cpu_peri_byte_error_addr().bits()),
+                &self.cpu_peri_byte_error_addr().bits(),
             )
             .finish()
     }

@@ -44,13 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_APPROACH")
-            .field("pad0", &format_args!("{}", self.pad0().bits()))
-            .field("pad1", &format_args!("{}", self.pad1().bits()))
-            .field("pad2", &format_args!("{}", self.pad2().bits()))
-            .field(
-                "touch_slp_approach_en",
-                &format_args!("{}", self.touch_slp_approach_en().bit()),
-            )
+            .field("pad0", &self.pad0().bits())
+            .field("pad1", &self.pad1().bits())
+            .field("pad2", &self.pad2().bits())
+            .field("touch_slp_approach_en", &self.touch_slp_approach_en().bit())
             .finish()
     }
 }

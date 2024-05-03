@@ -33,12 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_USAGE_CONF")
-            .field("cache_usage", &format_args!("{}", self.cache_usage().bit()))
-            .field("sram_usage", &format_args!("{}", self.sram_usage().bits()))
-            .field(
-                "mac_dump_alloc",
-                &format_args!("{}", self.mac_dump_alloc().bit()),
-            )
+            .field("cache_usage", &self.cache_usage().bit())
+            .field("sram_usage", &self.sram_usage().bits())
+            .field("mac_dump_alloc", &self.mac_dump_alloc().bit())
             .finish()
     }
 }

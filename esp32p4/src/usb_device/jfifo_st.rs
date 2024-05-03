@@ -68,38 +68,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("JFIFO_ST")
-            .field(
-                "in_fifo_cnt",
-                &format_args!("{}", self.in_fifo_cnt().bits()),
-            )
-            .field(
-                "in_fifo_empty",
-                &format_args!("{}", self.in_fifo_empty().bit()),
-            )
-            .field(
-                "in_fifo_full",
-                &format_args!("{}", self.in_fifo_full().bit()),
-            )
-            .field(
-                "out_fifo_cnt",
-                &format_args!("{}", self.out_fifo_cnt().bits()),
-            )
-            .field(
-                "out_fifo_empty",
-                &format_args!("{}", self.out_fifo_empty().bit()),
-            )
-            .field(
-                "out_fifo_full",
-                &format_args!("{}", self.out_fifo_full().bit()),
-            )
-            .field(
-                "in_fifo_reset",
-                &format_args!("{}", self.in_fifo_reset().bit()),
-            )
-            .field(
-                "out_fifo_reset",
-                &format_args!("{}", self.out_fifo_reset().bit()),
-            )
+            .field("in_fifo_cnt", &self.in_fifo_cnt().bits())
+            .field("in_fifo_empty", &self.in_fifo_empty().bit())
+            .field("in_fifo_full", &self.in_fifo_full().bit())
+            .field("out_fifo_cnt", &self.out_fifo_cnt().bits())
+            .field("out_fifo_empty", &self.out_fifo_empty().bit())
+            .field("out_fifo_full", &self.out_fifo_full().bit())
+            .field("in_fifo_reset", &self.in_fifo_reset().bit())
+            .field("out_fifo_reset", &self.out_fifo_reset().bit())
             .finish()
     }
 }

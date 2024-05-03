@@ -60,30 +60,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_CTRL2")
-            .field(
-                "touch_meas_en",
-                &format_args!("{}", self.touch_meas_en().bits()),
-            )
-            .field(
-                "touch_meas_done",
-                &format_args!("{}", self.touch_meas_done().bit()),
-            )
-            .field(
-                "touch_start_fsm_en",
-                &format_args!("{}", self.touch_start_fsm_en().bit()),
-            )
-            .field(
-                "touch_start_en",
-                &format_args!("{}", self.touch_start_en().bit()),
-            )
-            .field(
-                "touch_start_force",
-                &format_args!("{}", self.touch_start_force().bit()),
-            )
-            .field(
-                "touch_sleep_cycles",
-                &format_args!("{}", self.touch_sleep_cycles().bits()),
-            )
+            .field("touch_meas_en", &self.touch_meas_en().bits())
+            .field("touch_meas_done", &self.touch_meas_done().bit())
+            .field("touch_start_fsm_en", &self.touch_start_fsm_en().bit())
+            .field("touch_start_en", &self.touch_start_en().bit())
+            .field("touch_start_force", &self.touch_start_force().bit())
+            .field("touch_sleep_cycles", &self.touch_sleep_cycles().bits())
             .finish()
     }
 }

@@ -233,70 +233,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_RST_EN2")
-            .field(
-                "rst_en_intrmtx",
-                &format_args!("{}", self.rst_en_intrmtx().bit()),
-            )
-            .field(
-                "rst_en_parlio",
-                &format_args!("{}", self.rst_en_parlio().bit()),
-            )
-            .field(
-                "rst_en_parlio_rx",
-                &format_args!("{}", self.rst_en_parlio_rx().bit()),
-            )
-            .field(
-                "rst_en_parlio_tx",
-                &format_args!("{}", self.rst_en_parlio_tx().bit()),
-            )
-            .field(
-                "rst_en_i2s0_apb",
-                &format_args!("{}", self.rst_en_i2s0_apb().bit()),
-            )
-            .field(
-                "rst_en_i2s1_apb",
-                &format_args!("{}", self.rst_en_i2s1_apb().bit()),
-            )
-            .field(
-                "rst_en_i2s2_apb",
-                &format_args!("{}", self.rst_en_i2s2_apb().bit()),
-            )
-            .field("rst_en_spi2", &format_args!("{}", self.rst_en_spi2().bit()))
-            .field("rst_en_spi3", &format_args!("{}", self.rst_en_spi3().bit()))
-            .field(
-                "rst_en_lcdcam",
-                &format_args!("{}", self.rst_en_lcdcam().bit()),
-            )
-            .field("rst_en_adc", &format_args!("{}", self.rst_en_adc().bit()))
-            .field(
-                "rst_en_bitsrambler",
-                &format_args!("{}", self.rst_en_bitsrambler().bit()),
-            )
-            .field(
-                "rst_en_bitsrambler_rx",
-                &format_args!("{}", self.rst_en_bitsrambler_rx().bit()),
-            )
-            .field(
-                "rst_en_bitsrambler_tx",
-                &format_args!("{}", self.rst_en_bitsrambler_tx().bit()),
-            )
-            .field(
-                "rst_en_crypto",
-                &format_args!("{}", self.rst_en_crypto().bit()),
-            )
-            .field("rst_en_sec", &format_args!("{}", self.rst_en_sec().bit()))
-            .field("rst_en_aes", &format_args!("{}", self.rst_en_aes().bit()))
-            .field("rst_en_ds", &format_args!("{}", self.rst_en_ds().bit()))
-            .field("rst_en_sha", &format_args!("{}", self.rst_en_sha().bit()))
-            .field("rst_en_hmac", &format_args!("{}", self.rst_en_hmac().bit()))
-            .field(
-                "rst_en_ecdsa",
-                &format_args!("{}", self.rst_en_ecdsa().bit()),
-            )
-            .field("rst_en_rsa", &format_args!("{}", self.rst_en_rsa().bit()))
-            .field("rst_en_ecc", &format_args!("{}", self.rst_en_ecc().bit()))
-            .field("rst_en_km", &format_args!("{}", self.rst_en_km().bit()))
-            .field("rst_en_h264", &format_args!("{}", self.rst_en_h264().bit()))
+            .field("rst_en_intrmtx", &self.rst_en_intrmtx().bit())
+            .field("rst_en_parlio", &self.rst_en_parlio().bit())
+            .field("rst_en_parlio_rx", &self.rst_en_parlio_rx().bit())
+            .field("rst_en_parlio_tx", &self.rst_en_parlio_tx().bit())
+            .field("rst_en_i2s0_apb", &self.rst_en_i2s0_apb().bit())
+            .field("rst_en_i2s1_apb", &self.rst_en_i2s1_apb().bit())
+            .field("rst_en_i2s2_apb", &self.rst_en_i2s2_apb().bit())
+            .field("rst_en_spi2", &self.rst_en_spi2().bit())
+            .field("rst_en_spi3", &self.rst_en_spi3().bit())
+            .field("rst_en_lcdcam", &self.rst_en_lcdcam().bit())
+            .field("rst_en_adc", &self.rst_en_adc().bit())
+            .field("rst_en_bitsrambler", &self.rst_en_bitsrambler().bit())
+            .field("rst_en_bitsrambler_rx", &self.rst_en_bitsrambler_rx().bit())
+            .field("rst_en_bitsrambler_tx", &self.rst_en_bitsrambler_tx().bit())
+            .field("rst_en_crypto", &self.rst_en_crypto().bit())
+            .field("rst_en_sec", &self.rst_en_sec().bit())
+            .field("rst_en_aes", &self.rst_en_aes().bit())
+            .field("rst_en_ds", &self.rst_en_ds().bit())
+            .field("rst_en_sha", &self.rst_en_sha().bit())
+            .field("rst_en_hmac", &self.rst_en_hmac().bit())
+            .field("rst_en_ecdsa", &self.rst_en_ecdsa().bit())
+            .field("rst_en_rsa", &self.rst_en_rsa().bit())
+            .field("rst_en_ecc", &self.rst_en_ecc().bit())
+            .field("rst_en_km", &self.rst_en_km().bit())
+            .field("rst_en_h264", &self.rst_en_h264().bit())
             .finish()
     }
 }

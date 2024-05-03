@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLL_TICK_CONF")
-            .field(
-                "pll_tick_num",
-                &format_args!("{}", self.pll_tick_num().bits()),
-            )
+            .field("pll_tick_num", &self.pll_tick_num().bits())
             .finish()
     }
 }

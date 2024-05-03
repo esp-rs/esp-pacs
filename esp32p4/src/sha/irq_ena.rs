@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IRQ_ENA")
-            .field(
-                "interrupt_ena",
-                &format_args!("{}", self.interrupt_ena().bit()),
-            )
+            .field("interrupt_ena", &self.interrupt_ena().bit())
             .finish()
     }
 }

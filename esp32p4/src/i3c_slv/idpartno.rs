@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDPARTNO")
-            .field("partno", &format_args!("{}", self.partno().bits()))
+            .field("partno", &self.partno().bits())
             .finish()
     }
 }

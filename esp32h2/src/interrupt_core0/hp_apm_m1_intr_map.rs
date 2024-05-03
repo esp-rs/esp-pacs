@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_APM_M1_INTR_MAP")
-            .field(
-                "hp_apm_m1_intr_map",
-                &format_args!("{}", self.hp_apm_m1_intr_map().bits()),
-            )
+            .field("hp_apm_m1_intr_map", &self.hp_apm_m1_intr_map().bits())
             .finish()
     }
 }

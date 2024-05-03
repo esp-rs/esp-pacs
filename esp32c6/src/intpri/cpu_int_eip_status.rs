@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INT_EIP_STATUS")
-            .field(
-                "cpu_int_eip_status",
-                &format_args!("{}", self.cpu_int_eip_status().bits()),
-            )
+            .field("cpu_int_eip_status", &self.cpu_int_eip_status().bits())
             .finish()
     }
 }

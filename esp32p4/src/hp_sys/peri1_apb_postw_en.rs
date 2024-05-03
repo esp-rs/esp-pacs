@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI1_APB_POSTW_EN")
-            .field(
-                "peri1_apb_postw_en",
-                &format_args!("{}", self.peri1_apb_postw_en().bit()),
-            )
+            .field("peri1_apb_postw_en", &self.peri1_apb_postw_en().bit())
             .finish()
     }
 }

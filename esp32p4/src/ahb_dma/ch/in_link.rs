@@ -30,11 +30,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_LINK")
-            .field(
-                "inlink_auto_ret",
-                &format_args!("{}", self.inlink_auto_ret().bit()),
-            )
-            .field("inlink_park", &format_args!("{}", self.inlink_park().bit()))
+            .field("inlink_auto_ret", &self.inlink_auto_ret().bit())
+            .field("inlink_park", &self.inlink_park().bit())
             .finish()
     }
 }

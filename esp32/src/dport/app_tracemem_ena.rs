@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_TRACEMEM_ENA")
-            .field(
-                "app_tracemem_ena",
-                &format_args!("{}", self.app_tracemem_ena().bit()),
-            )
+            .field("app_tracemem_ena", &self.app_tracemem_ena().bit())
             .finish()
     }
 }

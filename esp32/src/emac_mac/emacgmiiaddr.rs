@@ -53,11 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACGMIIADDR")
-            .field("miibusy", &format_args!("{}", self.miibusy().bit()))
-            .field("miiwrite", &format_args!("{}", self.miiwrite().bit()))
-            .field("miicsrclk", &format_args!("{}", self.miicsrclk().bits()))
-            .field("miireg", &format_args!("{}", self.miireg().bits()))
-            .field("miidev", &format_args!("{}", self.miidev().bits()))
+            .field("miibusy", &self.miibusy().bit())
+            .field("miiwrite", &self.miiwrite().bit())
+            .field("miicsrclk", &self.miicsrclk().bits())
+            .field("miireg", &self.miireg().bits())
+            .field("miidev", &self.miidev().bits())
             .finish()
     }
 }

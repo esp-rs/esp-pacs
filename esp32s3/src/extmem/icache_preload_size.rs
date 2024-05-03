@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_PRELOAD_SIZE")
-            .field(
-                "icache_preload_size",
-                &format_args!("{}", self.icache_preload_size().bits()),
-            )
+            .field("icache_preload_size", &self.icache_preload_size().bits())
             .finish()
     }
 }

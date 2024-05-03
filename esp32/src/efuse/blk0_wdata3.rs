@@ -97,44 +97,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_WDATA3")
-            .field(
-                "disable_app_cpu",
-                &format_args!("{}", self.disable_app_cpu().bit()),
-            )
-            .field("disable_bt", &format_args!("{}", self.disable_bt().bit()))
-            .field(
-                "chip_package_4bit",
-                &format_args!("{}", self.chip_package_4bit().bit()),
-            )
-            .field("dis_cache", &format_args!("{}", self.dis_cache().bit()))
-            .field(
-                "spi_pad_config_hd",
-                &format_args!("{}", self.spi_pad_config_hd().bits()),
-            )
-            .field(
-                "chip_package",
-                &format_args!("{}", self.chip_package().bits()),
-            )
-            .field(
-                "chip_cpu_freq_low",
-                &format_args!("{}", self.chip_cpu_freq_low().bit()),
-            )
-            .field(
-                "chip_cpu_freq_rated",
-                &format_args!("{}", self.chip_cpu_freq_rated().bit()),
-            )
-            .field(
-                "blk3_part_reserve",
-                &format_args!("{}", self.blk3_part_reserve().bit()),
-            )
-            .field(
-                "chip_ver_rev1",
-                &format_args!("{}", self.chip_ver_rev1().bit()),
-            )
-            .field(
-                "reserve_0_112",
-                &format_args!("{}", self.reserve_0_112().bits()),
-            )
+            .field("disable_app_cpu", &self.disable_app_cpu().bit())
+            .field("disable_bt", &self.disable_bt().bit())
+            .field("chip_package_4bit", &self.chip_package_4bit().bit())
+            .field("dis_cache", &self.dis_cache().bit())
+            .field("spi_pad_config_hd", &self.spi_pad_config_hd().bits())
+            .field("chip_package", &self.chip_package().bits())
+            .field("chip_cpu_freq_low", &self.chip_cpu_freq_low().bit())
+            .field("chip_cpu_freq_rated", &self.chip_cpu_freq_rated().bit())
+            .field("blk3_part_reserve", &self.blk3_part_reserve().bit())
+            .field("chip_ver_rev1", &self.chip_ver_rev1().bit())
+            .field("reserve_0_112", &self.reserve_0_112().bits())
             .finish()
     }
 }

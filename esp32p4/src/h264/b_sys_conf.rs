@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("B_SYS_CONF")
             .field(
                 "b_db_tmp_ready_trigger_mb_num",
-                &format_args!("{}", self.b_db_tmp_ready_trigger_mb_num().bits()),
+                &self.b_db_tmp_ready_trigger_mb_num().bits(),
             )
             .field(
                 "b_rec_ready_trigger_mb_lines",
-                &format_args!("{}", self.b_rec_ready_trigger_mb_lines().bits()),
+                &self.b_rec_ready_trigger_mb_lines().bits(),
             )
             .field(
                 "b_intra_cost_cmp_offset",
-                &format_args!("{}", self.b_intra_cost_cmp_offset().bits()),
+                &self.b_intra_cost_cmp_offset().bits(),
             )
             .finish()
     }

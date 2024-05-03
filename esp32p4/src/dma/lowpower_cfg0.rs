@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOWPOWER_CFG0")
-            .field("gbl_cslp_en", &format_args!("{}", self.gbl_cslp_en().bit()))
-            .field(
-                "chnl_cslp_en",
-                &format_args!("{}", self.chnl_cslp_en().bit()),
-            )
-            .field(
-                "sbiu_cslp_en",
-                &format_args!("{}", self.sbiu_cslp_en().bit()),
-            )
-            .field(
-                "mxif_cslp_en",
-                &format_args!("{}", self.mxif_cslp_en().bit()),
-            )
+            .field("gbl_cslp_en", &self.gbl_cslp_en().bit())
+            .field("chnl_cslp_en", &self.chnl_cslp_en().bit())
+            .field("sbiu_cslp_en", &self.sbiu_cslp_en().bit())
+            .field("mxif_cslp_en", &self.mxif_cslp_en().bit())
             .finish()
     }
 }

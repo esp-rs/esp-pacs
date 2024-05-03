@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MAIN_BUF0_LOW")
-            .field(
-                "main_timer_buf0_low",
-                &format_args!("{}", self.main_timer_buf0_low().bits()),
-            )
+            .field("main_timer_buf0_low", &self.main_timer_buf0_low().bits())
             .finish()
     }
 }

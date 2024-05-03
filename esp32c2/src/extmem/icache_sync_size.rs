@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_SYNC_SIZE")
-            .field(
-                "icache_sync_size",
-                &format_args!("{}", self.icache_sync_size().bits()),
-            )
+            .field("icache_sync_size", &self.icache_sync_size().bits())
             .finish()
     }
 }

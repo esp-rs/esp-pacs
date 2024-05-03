@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_PRELOAD_ADDR")
             .field(
                 "l2_cache_preload_addr",
-                &format_args!("{}", self.l2_cache_preload_addr().bits()),
+                &self.l2_cache_preload_addr().bits(),
             )
             .finish()
     }

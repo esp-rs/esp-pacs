@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLCHOST_PKT_LEN0")
-            .field(
-                "host_hostslc0_len0",
-                &format_args!("{}", self.host_hostslc0_len0().bits()),
-            )
+            .field("host_hostslc0_len0", &self.host_hostslc0_len0().bits())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_H_CFG0")
-            .field("htotal", &format_args!("{}", self.htotal().bits()))
-            .field("hdisp", &format_args!("{}", self.hdisp().bits()))
+            .field("htotal", &self.htotal().bits())
+            .field("hdisp", &self.hdisp().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CORE_ERR_RESP_DIS")
-            .field(
-                "lp_core_err_resp_dis",
-                &format_args!("{}", self.lp_core_err_resp_dis().bits()),
-            )
+            .field("lp_core_err_resp_dis", &self.lp_core_err_resp_dis().bits())
             .finish()
     }
 }

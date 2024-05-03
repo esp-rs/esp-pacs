@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SEC_CONF")
-            .field(
-                "sec_clk_sel",
-                &format_args!("{}", self.sec_clk_sel().bits()),
-            )
+            .field("sec_clk_sel", &self.sec_clk_sel().bits())
             .finish()
     }
 }

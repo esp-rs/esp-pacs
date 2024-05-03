@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLC1HOST_RX_INFOR")
             .field(
                 "host_slc1host_rx_infor",
-                &format_args!("{}", self.host_slc1host_rx_infor().bits()),
+                &self.host_slc1host_rx_infor().bits(),
             )
             .finish()
     }

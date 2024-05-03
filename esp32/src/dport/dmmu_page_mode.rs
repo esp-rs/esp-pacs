@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMMU_PAGE_MODE")
             .field(
                 "internal_sram_dmmu_ena",
-                &format_args!("{}", self.internal_sram_dmmu_ena().bit()),
+                &self.internal_sram_dmmu_ena().bit(),
             )
-            .field(
-                "dmmu_page_mode",
-                &format_args!("{}", self.dmmu_page_mode().bits()),
-            )
+            .field("dmmu_page_mode", &self.dmmu_page_mode().bits())
             .finish()
     }
 }

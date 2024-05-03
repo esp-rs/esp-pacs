@@ -46,19 +46,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL27")
             .field(
                 "padbist_rx_clk_div_num",
-                &format_args!("{}", self.padbist_rx_clk_div_num().bits()),
+                &self.padbist_rx_clk_div_num().bits(),
             )
             .field(
                 "padbist_tx_clk_src_sel",
-                &format_args!("{}", self.padbist_tx_clk_src_sel().bit()),
+                &self.padbist_tx_clk_src_sel().bit(),
             )
-            .field(
-                "padbist_tx_clk_en",
-                &format_args!("{}", self.padbist_tx_clk_en().bit()),
-            )
+            .field("padbist_tx_clk_en", &self.padbist_tx_clk_en().bit())
             .field(
                 "padbist_tx_clk_div_num",
-                &format_args!("{}", self.padbist_tx_clk_div_num().bits()),
+                &self.padbist_tx_clk_div_num().bits(),
             )
             .finish()
     }

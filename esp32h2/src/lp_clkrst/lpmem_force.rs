@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPMEM_FORCE")
-            .field(
-                "lpmem_clk_force_on",
-                &format_args!("{}", self.lpmem_clk_force_on().bit()),
-            )
+            .field("lpmem_clk_force_on", &self.lpmem_clk_force_on().bit())
             .finish()
     }
 }

@@ -84,43 +84,25 @@ impl core::fmt::Debug for R {
         f.debug_struct("BLK0_RDATA5")
             .field(
                 "rd_spi_pad_config_clk",
-                &format_args!("{}", self.rd_spi_pad_config_clk().bits()),
+                &self.rd_spi_pad_config_clk().bits(),
             )
-            .field(
-                "rd_spi_pad_config_q",
-                &format_args!("{}", self.rd_spi_pad_config_q().bits()),
-            )
-            .field(
-                "rd_spi_pad_config_d",
-                &format_args!("{}", self.rd_spi_pad_config_d().bits()),
-            )
+            .field("rd_spi_pad_config_q", &self.rd_spi_pad_config_q().bits())
+            .field("rd_spi_pad_config_d", &self.rd_spi_pad_config_d().bits())
             .field(
                 "rd_spi_pad_config_cs0",
-                &format_args!("{}", self.rd_spi_pad_config_cs0().bits()),
+                &self.rd_spi_pad_config_cs0().bits(),
             )
-            .field(
-                "rd_chip_ver_rev2",
-                &format_args!("{}", self.rd_chip_ver_rev2().bit()),
-            )
-            .field(
-                "rd_reserve_0_181",
-                &format_args!("{}", self.rd_reserve_0_181().bit()),
-            )
-            .field(
-                "rd_vol_level_hp_inv",
-                &format_args!("{}", self.rd_vol_level_hp_inv().bits()),
-            )
+            .field("rd_chip_ver_rev2", &self.rd_chip_ver_rev2().bit())
+            .field("rd_reserve_0_181", &self.rd_reserve_0_181().bit())
+            .field("rd_vol_level_hp_inv", &self.rd_vol_level_hp_inv().bits())
             .field(
                 "rd_wafer_version_minor",
-                &format_args!("{}", self.rd_wafer_version_minor().bits()),
+                &self.rd_wafer_version_minor().bits(),
             )
-            .field(
-                "rd_reserve_0_186",
-                &format_args!("{}", self.rd_reserve_0_186().bits()),
-            )
+            .field("rd_reserve_0_186", &self.rd_reserve_0_186().bits())
             .field(
                 "rd_flash_crypt_config",
-                &format_args!("{}", self.rd_flash_crypt_config().bits()),
+                &self.rd_flash_crypt_config().bits(),
             )
             .finish()
     }

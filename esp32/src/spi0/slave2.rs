@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("SLAVE2")
             .field(
                 "slv_rdsta_dummy_cyclelen",
-                &format_args!("{}", self.slv_rdsta_dummy_cyclelen().bits()),
+                &self.slv_rdsta_dummy_cyclelen().bits(),
             )
             .field(
                 "slv_wrsta_dummy_cyclelen",
-                &format_args!("{}", self.slv_wrsta_dummy_cyclelen().bits()),
+                &self.slv_wrsta_dummy_cyclelen().bits(),
             )
             .field(
                 "slv_rdbuf_dummy_cyclelen",
-                &format_args!("{}", self.slv_rdbuf_dummy_cyclelen().bits()),
+                &self.slv_rdbuf_dummy_cyclelen().bits(),
             )
             .field(
                 "slv_wrbuf_dummy_cyclelen",
-                &format_args!("{}", self.slv_wrbuf_dummy_cyclelen().bits()),
+                &self.slv_wrbuf_dummy_cyclelen().bits(),
             )
             .finish()
     }

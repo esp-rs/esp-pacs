@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MAC_DUMP_0")
-            .field(
-                "mac_dump_lock",
-                &format_args!("{}", self.mac_dump_lock().bit()),
-            )
+            .field("mac_dump_lock", &self.mac_dump_lock().bit())
             .finish()
     }
 }

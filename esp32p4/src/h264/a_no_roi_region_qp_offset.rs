@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_NO_ROI_REGION_QP_OFFSET")
-            .field(
-                "a_no_roi_region_qp",
-                &format_args!("{}", self.a_no_roi_region_qp().bits()),
-            )
+            .field("a_no_roi_region_qp", &self.a_no_roi_region_qp().bits())
             .finish()
     }
 }

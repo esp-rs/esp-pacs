@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_THRESHOLD")
-            .field(
-                "af_threshold",
-                &format_args!("{}", self.af_threshold().bits()),
-            )
-            .field(
-                "af_gen_threshold",
-                &format_args!("{}", self.af_gen_threshold().bits()),
-            )
+            .field("af_threshold", &self.af_threshold().bits())
+            .field("af_gen_threshold", &self.af_gen_threshold().bits())
             .finish()
     }
 }

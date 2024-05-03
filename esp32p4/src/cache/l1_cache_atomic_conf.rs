@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_ATOMIC_CONF")
-            .field(
-                "l1_dcache_atomic_en",
-                &format_args!("{}", self.l1_dcache_atomic_en().bit()),
-            )
+            .field("l1_dcache_atomic_en", &self.l1_dcache_atomic_en().bit())
             .finish()
     }
 }

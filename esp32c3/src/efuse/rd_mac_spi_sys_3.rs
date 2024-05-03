@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SPI_SYS_3")
-            .field(
-                "spi_pad_conf_2",
-                &format_args!("{}", self.spi_pad_conf_2().bits()),
-            )
-            .field(
-                "sys_data_part0_0",
-                &format_args!("{}", self.sys_data_part0_0().bits()),
-            )
+            .field("spi_pad_conf_2", &self.spi_pad_conf_2().bits())
+            .field("sys_data_part0_0", &self.sys_data_part0_0().bits())
             .finish()
     }
 }

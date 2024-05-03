@@ -24,11 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_IN_POP")
-            .field(
-                "infifo_rdata",
-                &format_args!("{}", self.infifo_rdata().bits()),
-            )
-            .field("infifo_pop", &format_args!("{}", self.infifo_pop().bit()))
+            .field("infifo_rdata", &self.infifo_rdata().bits())
+            .field("infifo_pop", &self.infifo_pop().bit())
             .finish()
     }
 }

@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_UHS1_INT_MODE")
-            .field(
-                "intoe_end_ahead_mode",
-                &format_args!("{}", self.intoe_end_ahead_mode().bits()),
-            )
-            .field(
-                "int_end_ahead_mode",
-                &format_args!("{}", self.int_end_ahead_mode().bits()),
-            )
-            .field(
-                "intoe_st_ahead_mode",
-                &format_args!("{}", self.intoe_st_ahead_mode().bits()),
-            )
-            .field(
-                "int_st_ahead_mode",
-                &format_args!("{}", self.int_st_ahead_mode().bits()),
-            )
+            .field("intoe_end_ahead_mode", &self.intoe_end_ahead_mode().bits())
+            .field("int_end_ahead_mode", &self.int_end_ahead_mode().bits())
+            .field("intoe_st_ahead_mode", &self.intoe_st_ahead_mode().bits())
+            .field("int_st_ahead_mode", &self.int_st_ahead_mode().bits())
             .finish()
     }
 }

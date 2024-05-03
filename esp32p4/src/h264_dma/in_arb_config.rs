@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_ARB_CONFIG")
-            .field(
-                "in_arb_timeout_num",
-                &format_args!("{}", self.in_arb_timeout_num().bits()),
-            )
-            .field(
-                "in_weight_en",
-                &format_args!("{}", self.in_weight_en().bit()),
-            )
+            .field("in_arb_timeout_num", &self.in_arb_timeout_num().bits())
+            .field("in_weight_en", &self.in_weight_en().bit())
             .finish()
     }
 }

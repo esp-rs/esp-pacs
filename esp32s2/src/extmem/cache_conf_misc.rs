@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_CONF_MISC")
             .field(
                 "pro_cache_ignore_preload_mmu_entry_fault",
-                &format_args!("{}", self.pro_cache_ignore_preload_mmu_entry_fault().bit()),
+                &self.pro_cache_ignore_preload_mmu_entry_fault().bit(),
             )
             .field(
                 "pro_cache_ignore_sync_mmu_entry_fault",
-                &format_args!("{}", self.pro_cache_ignore_sync_mmu_entry_fault().bit()),
+                &self.pro_cache_ignore_sync_mmu_entry_fault().bit(),
             )
             .finish()
     }

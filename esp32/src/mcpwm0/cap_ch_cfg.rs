@@ -46,10 +46,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAP_CH_CFG")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("mode", &format_args!("{}", self.mode().bits()))
-            .field("prescale", &format_args!("{}", self.prescale().bits()))
-            .field("in_invert", &format_args!("{}", self.in_invert().bit()))
+            .field("en", &self.en().bit())
+            .field("mode", &self.mode().bits())
+            .field("prescale", &self.prescale().bits())
+            .field("in_invert", &self.in_invert().bit())
             .finish()
     }
 }

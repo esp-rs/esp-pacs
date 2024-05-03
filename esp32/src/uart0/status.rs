@@ -76,16 +76,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
-            .field("st_urx_out", &format_args!("{}", self.st_urx_out().bits()))
-            .field("dsrn", &format_args!("{}", self.dsrn().bit()))
-            .field("ctsn", &format_args!("{}", self.ctsn().bit()))
-            .field("rxd", &format_args!("{}", self.rxd().bit()))
-            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
-            .field("st_utx_out", &format_args!("{}", self.st_utx_out().bits()))
-            .field("dtrn", &format_args!("{}", self.dtrn().bit()))
-            .field("rtsn", &format_args!("{}", self.rtsn().bit()))
-            .field("txd", &format_args!("{}", self.txd().bit()))
+            .field("rxfifo_cnt", &self.rxfifo_cnt().bits())
+            .field("st_urx_out", &self.st_urx_out().bits())
+            .field("dsrn", &self.dsrn().bit())
+            .field("ctsn", &self.ctsn().bit())
+            .field("rxd", &self.rxd().bit())
+            .field("txfifo_cnt", &self.txfifo_cnt().bits())
+            .field("st_utx_out", &self.st_utx_out().bits())
+            .field("dtrn", &self.dtrn().bit())
+            .field("rtsn", &self.rtsn().bit())
+            .field("txd", &self.txd().bit())
             .finish()
     }
 }

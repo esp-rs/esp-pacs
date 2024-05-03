@@ -118,69 +118,60 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_STATE0")
-            .field(
-                "stable_xpd_pll_state",
-                &format_args!("{}", self.stable_xpd_pll_state().bits()),
-            )
-            .field(
-                "stable_xpd_xtal_state",
-                &format_args!("{}", self.stable_xpd_xtal_state().bit()),
-            )
+            .field("stable_xpd_pll_state", &self.stable_xpd_pll_state().bits())
+            .field("stable_xpd_xtal_state", &self.stable_xpd_xtal_state().bit())
             .field(
                 "pmu_ana_xpd_pll_i2c_state",
-                &format_args!("{}", self.pmu_ana_xpd_pll_i2c_state().bits()),
+                &self.pmu_ana_xpd_pll_i2c_state().bits(),
             )
             .field(
                 "pmu_sys_clk_slp_sel_state",
-                &format_args!("{}", self.pmu_sys_clk_slp_sel_state().bit()),
+                &self.pmu_sys_clk_slp_sel_state().bit(),
             )
             .field(
                 "pmu_sys_clk_sel_state",
-                &format_args!("{}", self.pmu_sys_clk_sel_state().bits()),
+                &self.pmu_sys_clk_sel_state().bits(),
             )
             .field(
                 "pmu_sys_clk_no_div_state",
-                &format_args!("{}", self.pmu_sys_clk_no_div_state().bit()),
+                &self.pmu_sys_clk_no_div_state().bit(),
             )
             .field(
                 "pmu_icg_sys_clk_en_state",
-                &format_args!("{}", self.pmu_icg_sys_clk_en_state().bit()),
+                &self.pmu_icg_sys_clk_en_state().bit(),
             )
             .field(
                 "pmu_icg_modem_switch_state",
-                &format_args!("{}", self.pmu_icg_modem_switch_state().bit()),
+                &self.pmu_icg_modem_switch_state().bit(),
             )
             .field(
                 "pmu_icg_modem_code_state",
-                &format_args!("{}", self.pmu_icg_modem_code_state().bits()),
+                &self.pmu_icg_modem_code_state().bits(),
             )
-            .field(
-                "pmu_icg_slp_sel_state",
-                &format_args!("{}", self.pmu_icg_slp_sel_state().bit()),
-            )
+            .field("pmu_icg_slp_sel_state", &self.pmu_icg_slp_sel_state().bit())
             .field(
                 "pmu_icg_global_xtal_state",
-                &format_args!("{}", self.pmu_icg_global_xtal_state().bit()),
+                &self.pmu_icg_global_xtal_state().bit(),
             )
             .field(
                 "pmu_icg_global_pll_state",
-                &format_args!("{}", self.pmu_icg_global_pll_state().bits()),
+                &self.pmu_icg_global_pll_state().bits(),
             )
             .field(
                 "pmu_ana_i2c_iso_en_state",
-                &format_args!("{}", self.pmu_ana_i2c_iso_en_state().bit()),
+                &self.pmu_ana_i2c_iso_en_state().bit(),
             )
             .field(
                 "pmu_ana_i2c_retention_state",
-                &format_args!("{}", self.pmu_ana_i2c_retention_state().bit()),
+                &self.pmu_ana_i2c_retention_state().bit(),
             )
             .field(
                 "pmu_ana_xpd_pll_state",
-                &format_args!("{}", self.pmu_ana_xpd_pll_state().bits()),
+                &self.pmu_ana_xpd_pll_state().bits(),
             )
             .field(
                 "pmu_ana_xpd_xtal_state",
-                &format_args!("{}", self.pmu_ana_xpd_xtal_state().bit()),
+                &self.pmu_ana_xpd_xtal_state().bit(),
             )
             .finish()
     }

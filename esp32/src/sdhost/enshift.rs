@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENSHIFT")
-            .field(
-                "enable_shift",
-                &format_args!("{}", self.enable_shift().bits()),
-            )
+            .field("enable_shift", &self.enable_shift().bits())
             .finish()
     }
 }

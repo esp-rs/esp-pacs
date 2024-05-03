@@ -64,27 +64,24 @@ impl core::fmt::Debug for R {
         f.debug_struct("VAD_PARAM1")
             .field(
                 "param_min_speech_count",
-                &format_args!("{}", self.param_min_speech_count().bits()),
+                &self.param_min_speech_count().bits(),
             )
             .field(
                 "param_max_speech_count",
-                &format_args!("{}", self.param_max_speech_count().bits()),
+                &self.param_max_speech_count().bits(),
             )
             .field(
                 "param_hangover_speech",
-                &format_args!("{}", self.param_hangover_speech().bits()),
+                &self.param_hangover_speech().bits(),
             )
             .field(
                 "param_hangover_silent",
-                &format_args!("{}", self.param_hangover_silent().bits()),
+                &self.param_hangover_silent().bits(),
             )
-            .field(
-                "param_max_offset",
-                &format_args!("{}", self.param_max_offset().bits()),
-            )
+            .field("param_max_offset", &self.param_max_offset().bits())
             .field(
                 "param_skip_band_energy",
-                &format_args!("{}", self.param_skip_band_energy().bit()),
+                &self.param_skip_band_energy().bit(),
             )
             .finish()
     }

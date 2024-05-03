@@ -123,58 +123,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_LP_LOOPBACK_CTRL")
-            .field(
-                "phy_lp_txdataesc_1",
-                &format_args!("{}", self.phy_lp_txdataesc_1().bits()),
-            )
-            .field(
-                "phy_lp_txrequestesc_1",
-                &format_args!("{}", self.phy_lp_txrequestesc_1().bit()),
-            )
-            .field(
-                "phy_lp_txvalidesc_1",
-                &format_args!("{}", self.phy_lp_txvalidesc_1().bit()),
-            )
-            .field(
-                "phy_lp_txlpdtesc_1",
-                &format_args!("{}", self.phy_lp_txlpdtesc_1().bit()),
-            )
-            .field(
-                "phy_lp_basedir_1",
-                &format_args!("{}", self.phy_lp_basedir_1().bit()),
-            )
-            .field(
-                "phy_lp_txdataesc_0",
-                &format_args!("{}", self.phy_lp_txdataesc_0().bits()),
-            )
-            .field(
-                "phy_lp_txrequestesc_0",
-                &format_args!("{}", self.phy_lp_txrequestesc_0().bit()),
-            )
-            .field(
-                "phy_lp_txvalidesc_0",
-                &format_args!("{}", self.phy_lp_txvalidesc_0().bit()),
-            )
-            .field(
-                "phy_lp_txlpdtesc_0",
-                &format_args!("{}", self.phy_lp_txlpdtesc_0().bit()),
-            )
-            .field(
-                "phy_lp_basedir_0",
-                &format_args!("{}", self.phy_lp_basedir_0().bit()),
-            )
+            .field("phy_lp_txdataesc_1", &self.phy_lp_txdataesc_1().bits())
+            .field("phy_lp_txrequestesc_1", &self.phy_lp_txrequestesc_1().bit())
+            .field("phy_lp_txvalidesc_1", &self.phy_lp_txvalidesc_1().bit())
+            .field("phy_lp_txlpdtesc_1", &self.phy_lp_txlpdtesc_1().bit())
+            .field("phy_lp_basedir_1", &self.phy_lp_basedir_1().bit())
+            .field("phy_lp_txdataesc_0", &self.phy_lp_txdataesc_0().bits())
+            .field("phy_lp_txrequestesc_0", &self.phy_lp_txrequestesc_0().bit())
+            .field("phy_lp_txvalidesc_0", &self.phy_lp_txvalidesc_0().bit())
+            .field("phy_lp_txlpdtesc_0", &self.phy_lp_txlpdtesc_0().bit())
+            .field("phy_lp_basedir_0", &self.phy_lp_basedir_0().bit())
             .field(
                 "phy_lp_loopback_check_done",
-                &format_args!("{}", self.phy_lp_loopback_check_done().bit()),
+                &self.phy_lp_loopback_check_done().bit(),
             )
-            .field(
-                "phy_lp_loopback_en",
-                &format_args!("{}", self.phy_lp_loopback_en().bit()),
-            )
-            .field(
-                "phy_lp_loopback_ok",
-                &format_args!("{}", self.phy_lp_loopback_ok().bit()),
-            )
+            .field("phy_lp_loopback_en", &self.phy_lp_loopback_en().bit())
+            .field("phy_lp_loopback_ok", &self.phy_lp_loopback_ok().bit())
             .finish()
     }
 }

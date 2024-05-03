@@ -76,38 +76,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_CTRL")
-            .field(
-                "ecc_err_cnt",
-                &format_args!("{}", self.ecc_err_cnt().bits()),
-            )
+            .field("ecc_err_cnt", &self.ecc_err_cnt().bits())
             .field(
                 "spi_fmem_ecc_err_int_num",
-                &format_args!("{}", self.spi_fmem_ecc_err_int_num().bits()),
+                &self.spi_fmem_ecc_err_int_num().bits(),
             )
             .field(
                 "spi_fmem_ecc_err_int_en",
-                &format_args!("{}", self.spi_fmem_ecc_err_int_en().bit()),
+                &self.spi_fmem_ecc_err_int_en().bit(),
             )
-            .field(
-                "spi_fmem_page_size",
-                &format_args!("{}", self.spi_fmem_page_size().bits()),
-            )
-            .field(
-                "spi_fmem_ecc_addr_en",
-                &format_args!("{}", self.spi_fmem_ecc_addr_en().bit()),
-            )
-            .field(
-                "usr_ecc_addr_en",
-                &format_args!("{}", self.usr_ecc_addr_en().bit()),
-            )
+            .field("spi_fmem_page_size", &self.spi_fmem_page_size().bits())
+            .field("spi_fmem_ecc_addr_en", &self.spi_fmem_ecc_addr_en().bit())
+            .field("usr_ecc_addr_en", &self.usr_ecc_addr_en().bit())
             .field(
                 "ecc_continue_record_err_en",
-                &format_args!("{}", self.ecc_continue_record_err_en().bit()),
+                &self.ecc_continue_record_err_en().bit(),
             )
-            .field(
-                "ecc_err_bits",
-                &format_args!("{}", self.ecc_err_bits().bits()),
-            )
+            .field("ecc_err_bits", &self.ecc_err_bits().bits())
             .finish()
     }
 }

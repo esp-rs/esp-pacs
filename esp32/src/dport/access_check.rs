@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ACCESS_CHECK")
-            .field("pro", &format_args!("{}", self.pro().bit()))
-            .field("app", &format_args!("{}", self.app().bit()))
+            .field("pro", &self.pro().bit())
+            .field("app", &self.app().bit())
             .finish()
     }
 }

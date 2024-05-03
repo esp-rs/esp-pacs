@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ROOT_CLK_CTRL3")
             .field(
                 "apb_clk_div_denominator",
-                &format_args!("{}", self.apb_clk_div_denominator().bits()),
+                &self.apb_clk_div_denominator().bits(),
             )
             .finish()
     }

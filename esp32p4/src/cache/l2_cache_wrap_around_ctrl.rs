@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_WRAP_AROUND_CTRL")
-            .field(
-                "l2_cache_wrap",
-                &format_args!("{}", self.l2_cache_wrap().bit()),
-            )
+            .field("l2_cache_wrap", &self.l2_cache_wrap().bit())
             .finish()
     }
 }

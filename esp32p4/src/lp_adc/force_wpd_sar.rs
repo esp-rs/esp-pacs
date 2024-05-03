@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FORCE_WPD_SAR")
-            .field(
-                "force_xpd_sar1",
-                &format_args!("{}", self.force_xpd_sar1().bits()),
-            )
-            .field(
-                "force_xpd_sar2",
-                &format_args!("{}", self.force_xpd_sar2().bits()),
-            )
+            .field("force_xpd_sar1", &self.force_xpd_sar1().bits())
+            .field("force_xpd_sar2", &self.force_xpd_sar2().bits())
             .finish()
     }
 }

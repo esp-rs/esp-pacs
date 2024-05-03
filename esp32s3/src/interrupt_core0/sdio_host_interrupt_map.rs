@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("SDIO_HOST_INTERRUPT_MAP")
             .field(
                 "sdio_host_interrupt_map",
-                &format_args!("{}", self.sdio_host_interrupt_map().bits()),
+                &self.sdio_host_interrupt_map().bits(),
             )
             .finish()
     }

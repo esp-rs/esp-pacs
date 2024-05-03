@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_SLP1")
-            .field(
-                "touch_slp_th2",
-                &format_args!("{}", self.touch_slp_th2().bits()),
-            )
-            .field(
-                "touch_slp_th1",
-                &format_args!("{}", self.touch_slp_th1().bits()),
-            )
+            .field("touch_slp_th2", &self.touch_slp_th2().bits())
+            .field("touch_slp_th1", &self.touch_slp_th1().bits())
             .finish()
     }
 }

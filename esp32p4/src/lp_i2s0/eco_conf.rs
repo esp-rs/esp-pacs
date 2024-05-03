@@ -24,8 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_CONF")
-            .field("rdn_ena", &format_args!("{}", self.rdn_ena().bit()))
-            .field("rdn_result", &format_args!("{}", self.rdn_result().bit()))
+            .field("rdn_ena", &self.rdn_ena().bit())
+            .field("rdn_result", &self.rdn_result().bit())
             .finish()
     }
 }

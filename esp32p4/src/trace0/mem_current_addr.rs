@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CURRENT_ADDR")
-            .field(
-                "mem_current_addr",
-                &format_args!("{}", self.mem_current_addr().bits()),
-            )
+            .field("mem_current_addr", &self.mem_current_addr().bits())
             .finish()
     }
 }

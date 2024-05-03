@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_ICG_HP_APB")
             .field(
                 "hp_sleep_dig_icg_apb_en",
-                &format_args!("{}", self.hp_sleep_dig_icg_apb_en().bits()),
+                &self.hp_sleep_dig_icg_apb_en().bits(),
             )
             .finish()
     }

@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_STATE")
-            .field(
-                "icache_state",
-                &format_args!("{}", self.icache_state().bits()),
-            )
-            .field(
-                "dcache_state",
-                &format_args!("{}", self.dcache_state().bits()),
-            )
+            .field("icache_state", &self.icache_state().bits())
+            .field("dcache_state", &self.dcache_state().bits())
             .finish()
     }
 }

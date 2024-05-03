@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_CHN_ST")
-            .field(
-                "sar_touch_pad_active",
-                &format_args!("{}", self.sar_touch_pad_active().bits()),
-            )
-            .field(
-                "sar_touch_meas_done",
-                &format_args!("{}", self.sar_touch_meas_done().bit()),
-            )
+            .field("sar_touch_pad_active", &self.sar_touch_pad_active().bits())
+            .field("sar_touch_meas_done", &self.sar_touch_meas_done().bit())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_SYS_MB_RES")
-            .field(
-                "b_sys_total_mb_y",
-                &format_args!("{}", self.b_sys_total_mb_y().bits()),
-            )
-            .field(
-                "b_sys_total_mb_x",
-                &format_args!("{}", self.b_sys_total_mb_x().bits()),
-            )
+            .field("b_sys_total_mb_y", &self.b_sys_total_mb_y().bits())
+            .field("b_sys_total_mb_x", &self.b_sys_total_mb_x().bits())
             .finish()
     }
 }

@@ -191,38 +191,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("ch0_tx_end", &format_args!("{}", self.ch0_tx_end().bit()))
-            .field("ch1_tx_end", &format_args!("{}", self.ch1_tx_end().bit()))
-            .field("ch2_tx_end", &format_args!("{}", self.ch2_tx_end().bit()))
-            .field("ch3_tx_end", &format_args!("{}", self.ch3_tx_end().bit()))
-            .field("ch0_rx_end", &format_args!("{}", self.ch0_rx_end().bit()))
-            .field("ch1_rx_end", &format_args!("{}", self.ch1_rx_end().bit()))
-            .field("ch2_rx_end", &format_args!("{}", self.ch2_rx_end().bit()))
-            .field("ch3_rx_end", &format_args!("{}", self.ch3_rx_end().bit()))
-            .field("ch0_err", &format_args!("{}", self.ch0_err().bit()))
-            .field("ch1_err", &format_args!("{}", self.ch1_err().bit()))
-            .field("ch2_err", &format_args!("{}", self.ch2_err().bit()))
-            .field("ch3_err", &format_args!("{}", self.ch3_err().bit()))
-            .field(
-                "ch0_tx_thr_event",
-                &format_args!("{}", self.ch0_tx_thr_event().bit()),
-            )
-            .field(
-                "ch1_tx_thr_event",
-                &format_args!("{}", self.ch1_tx_thr_event().bit()),
-            )
-            .field(
-                "ch2_tx_thr_event",
-                &format_args!("{}", self.ch2_tx_thr_event().bit()),
-            )
-            .field(
-                "ch3_tx_thr_event",
-                &format_args!("{}", self.ch3_tx_thr_event().bit()),
-            )
-            .field("ch0_tx_loop", &format_args!("{}", self.ch0_tx_loop().bit()))
-            .field("ch1_tx_loop", &format_args!("{}", self.ch1_tx_loop().bit()))
-            .field("ch2_tx_loop", &format_args!("{}", self.ch2_tx_loop().bit()))
-            .field("ch3_tx_loop", &format_args!("{}", self.ch3_tx_loop().bit()))
+            .field("ch0_tx_end", &self.ch0_tx_end().bit())
+            .field("ch1_tx_end", &self.ch1_tx_end().bit())
+            .field("ch2_tx_end", &self.ch2_tx_end().bit())
+            .field("ch3_tx_end", &self.ch3_tx_end().bit())
+            .field("ch0_rx_end", &self.ch0_rx_end().bit())
+            .field("ch1_rx_end", &self.ch1_rx_end().bit())
+            .field("ch2_rx_end", &self.ch2_rx_end().bit())
+            .field("ch3_rx_end", &self.ch3_rx_end().bit())
+            .field("ch0_err", &self.ch0_err().bit())
+            .field("ch1_err", &self.ch1_err().bit())
+            .field("ch2_err", &self.ch2_err().bit())
+            .field("ch3_err", &self.ch3_err().bit())
+            .field("ch0_tx_thr_event", &self.ch0_tx_thr_event().bit())
+            .field("ch1_tx_thr_event", &self.ch1_tx_thr_event().bit())
+            .field("ch2_tx_thr_event", &self.ch2_tx_thr_event().bit())
+            .field("ch3_tx_thr_event", &self.ch3_tx_thr_event().bit())
+            .field("ch0_tx_loop", &self.ch0_tx_loop().bit())
+            .field("ch1_tx_loop", &self.ch1_tx_loop().bit())
+            .field("ch2_tx_loop", &self.ch2_tx_loop().bit())
+            .field("ch3_tx_loop", &self.ch3_tx_loop().bit())
             .finish()
     }
 }

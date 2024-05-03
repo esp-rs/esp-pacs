@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_COMP0")
-            .field("dref_comp0", &format_args!("{}", self.dref_comp0().bits()))
-            .field("mode_comp0", &format_args!("{}", self.mode_comp0().bit()))
-            .field("xpd_comp0", &format_args!("{}", self.xpd_comp0().bit()))
+            .field("dref_comp0", &self.dref_comp0().bits())
+            .field("mode_comp0", &self.mode_comp0().bit())
+            .field("xpd_comp0", &self.xpd_comp0().bit())
             .finish()
     }
 }

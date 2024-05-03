@@ -80,35 +80,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAM_CONF")
-            .field(
-                "cam_data_order",
-                &format_args!("{}", self.cam_data_order().bit()),
-            )
-            .field(
-                "cam_2byte_mode",
-                &format_args!("{}", self.cam_2byte_mode().bit()),
-            )
-            .field(
-                "cam_data_type",
-                &format_args!("{}", self.cam_data_type().bits()),
-            )
-            .field("cam_de_inv", &format_args!("{}", self.cam_de_inv().bit()))
-            .field(
-                "cam_hsync_inv",
-                &format_args!("{}", self.cam_hsync_inv().bit()),
-            )
-            .field(
-                "cam_vsync_inv",
-                &format_args!("{}", self.cam_vsync_inv().bit()),
-            )
+            .field("cam_data_order", &self.cam_data_order().bit())
+            .field("cam_2byte_mode", &self.cam_2byte_mode().bit())
+            .field("cam_data_type", &self.cam_data_type().bits())
+            .field("cam_de_inv", &self.cam_de_inv().bit())
+            .field("cam_hsync_inv", &self.cam_hsync_inv().bit())
+            .field("cam_vsync_inv", &self.cam_vsync_inv().bit())
             .field(
                 "cam_vsync_filter_thres",
-                &format_args!("{}", self.cam_vsync_filter_thres().bits()),
+                &self.cam_vsync_filter_thres().bits(),
             )
-            .field(
-                "cam_vsync_filter_en",
-                &format_args!("{}", self.cam_vsync_filter_en().bit()),
-            )
+            .field("cam_vsync_filter_en", &self.cam_vsync_filter_en().bit())
             .finish()
     }
 }

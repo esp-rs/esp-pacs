@@ -21,7 +21,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0")
             .field(
                 "core_0_toomanyexceptions_m_override_lock",
-                &format_args!("{}", self.core_0_toomanyexceptions_m_override_lock().bit()),
+                &self.core_0_toomanyexceptions_m_override_lock().bit(),
             )
             .finish()
     }

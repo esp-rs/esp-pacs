@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VER_TYPE")
-            .field(
-                "reg_i3c_mst_ver_type",
-                &format_args!("{}", self.reg_i3c_mst_ver_type().bits()),
-            )
+            .field("reg_i3c_mst_ver_type", &self.reg_i3c_mst_ver_type().bits())
             .finish()
     }
 }

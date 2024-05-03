@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VERSION")
-            .field("jpeg_ver", &format_args!("{}", self.jpeg_ver().bits()))
+            .field("jpeg_ver", &self.jpeg_ver().bits())
             .finish()
     }
 }

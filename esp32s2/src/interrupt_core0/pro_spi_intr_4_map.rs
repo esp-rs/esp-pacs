@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_SPI_INTR_4_MAP")
-            .field(
-                "pro_spi_intr_4_map",
-                &format_args!("{}", self.pro_spi_intr_4_map().bits()),
-            )
+            .field("pro_spi_intr_4_map", &self.pro_spi_intr_4_map().bits())
             .finish()
     }
 }

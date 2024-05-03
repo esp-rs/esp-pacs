@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLC_CTRL1")
-            .field(
-                "blc_window_top",
-                &format_args!("{}", self.blc_window_top().bits()),
-            )
-            .field(
-                "blc_window_left",
-                &format_args!("{}", self.blc_window_left().bits()),
-            )
-            .field(
-                "blc_window_vnum",
-                &format_args!("{}", self.blc_window_vnum().bits()),
-            )
-            .field(
-                "blc_window_hnum",
-                &format_args!("{}", self.blc_window_hnum().bits()),
-            )
-            .field(
-                "blc_filter_en",
-                &format_args!("{}", self.blc_filter_en().bit()),
-            )
+            .field("blc_window_top", &self.blc_window_top().bits())
+            .field("blc_window_left", &self.blc_window_left().bits())
+            .field("blc_window_vnum", &self.blc_window_vnum().bits())
+            .field("blc_window_hnum", &self.blc_window_hnum().bits())
+            .field("blc_filter_en", &self.blc_filter_en().bit())
             .finish()
     }
 }

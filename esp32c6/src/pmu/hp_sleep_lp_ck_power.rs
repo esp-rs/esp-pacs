@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_LP_CK_POWER")
-            .field(
-                "hp_sleep_xpd_xtal32k",
-                &format_args!("{}", self.hp_sleep_xpd_xtal32k().bit()),
-            )
-            .field(
-                "hp_sleep_xpd_rc32k",
-                &format_args!("{}", self.hp_sleep_xpd_rc32k().bit()),
-            )
-            .field(
-                "hp_sleep_xpd_fosc_clk",
-                &format_args!("{}", self.hp_sleep_xpd_fosc_clk().bit()),
-            )
-            .field(
-                "hp_sleep_pd_osc_clk",
-                &format_args!("{}", self.hp_sleep_pd_osc_clk().bit()),
-            )
+            .field("hp_sleep_xpd_xtal32k", &self.hp_sleep_xpd_xtal32k().bit())
+            .field("hp_sleep_xpd_rc32k", &self.hp_sleep_xpd_rc32k().bit())
+            .field("hp_sleep_xpd_fosc_clk", &self.hp_sleep_xpd_fosc_clk().bit())
+            .field("hp_sleep_pd_osc_clk", &self.hp_sleep_pd_osc_clk().bit())
             .finish()
     }
 }

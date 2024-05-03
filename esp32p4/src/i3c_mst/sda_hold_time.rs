@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SDA_HOLD_TIME")
             .field(
                 "reg_sda_od_tx_hold_time",
-                &format_args!("{}", self.reg_sda_od_tx_hold_time().bits()),
+                &self.reg_sda_od_tx_hold_time().bits(),
             )
             .field(
                 "reg_sda_pp_tx_hold_time",
-                &format_args!("{}", self.reg_sda_pp_tx_hold_time().bits()),
+                &self.reg_sda_pp_tx_hold_time().bits(),
             )
             .finish()
     }

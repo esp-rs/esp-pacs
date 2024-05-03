@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH_ACE1_SIZE")
-            .field(
-                "flash_ace1_size",
-                &format_args!("{}", self.flash_ace1_size().bits()),
-            )
+            .field("flash_ace1_size", &self.flash_ace1_size().bits())
             .finish()
     }
 }

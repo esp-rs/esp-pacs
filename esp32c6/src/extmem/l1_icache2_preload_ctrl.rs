@@ -40,19 +40,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE2_PRELOAD_CTRL")
             .field(
                 "l1_icache2_preload_ena",
-                &format_args!("{}", self.l1_icache2_preload_ena().bit()),
+                &self.l1_icache2_preload_ena().bit(),
             )
             .field(
                 "l1_icache2_preload_done",
-                &format_args!("{}", self.l1_icache2_preload_done().bit()),
+                &self.l1_icache2_preload_done().bit(),
             )
             .field(
                 "l1_icache2_preload_order",
-                &format_args!("{}", self.l1_icache2_preload_order().bit()),
+                &self.l1_icache2_preload_order().bit(),
             )
             .field(
                 "l1_icache2_preload_rgid",
-                &format_args!("{}", self.l1_icache2_preload_rgid().bits()),
+                &self.l1_icache2_preload_rgid().bits(),
             )
             .finish()
     }

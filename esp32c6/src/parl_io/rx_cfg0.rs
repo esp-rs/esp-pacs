@@ -107,44 +107,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CFG0")
-            .field(
-                "rx_eof_gen_sel",
-                &format_args!("{}", self.rx_eof_gen_sel().bit()),
-            )
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field(
-                "rx_data_bytelen",
-                &format_args!("{}", self.rx_data_bytelen().bits()),
-            )
-            .field("rx_sw_en", &format_args!("{}", self.rx_sw_en().bit()))
-            .field(
-                "rx_pulse_submode_sel",
-                &format_args!("{}", self.rx_pulse_submode_sel().bits()),
-            )
-            .field(
-                "rx_level_submode_sel",
-                &format_args!("{}", self.rx_level_submode_sel().bit()),
-            )
-            .field(
-                "rx_smp_mode_sel",
-                &format_args!("{}", self.rx_smp_mode_sel().bits()),
-            )
-            .field(
-                "rx_clk_edge_sel",
-                &format_args!("{}", self.rx_clk_edge_sel().bit()),
-            )
-            .field(
-                "rx_bit_pack_order",
-                &format_args!("{}", self.rx_bit_pack_order().bit()),
-            )
-            .field(
-                "rx_bus_wid_sel",
-                &format_args!("{}", self.rx_bus_wid_sel().bits()),
-            )
-            .field(
-                "rx_fifo_srst",
-                &format_args!("{}", self.rx_fifo_srst().bit()),
-            )
+            .field("rx_eof_gen_sel", &self.rx_eof_gen_sel().bit())
+            .field("rx_start", &self.rx_start().bit())
+            .field("rx_data_bytelen", &self.rx_data_bytelen().bits())
+            .field("rx_sw_en", &self.rx_sw_en().bit())
+            .field("rx_pulse_submode_sel", &self.rx_pulse_submode_sel().bits())
+            .field("rx_level_submode_sel", &self.rx_level_submode_sel().bit())
+            .field("rx_smp_mode_sel", &self.rx_smp_mode_sel().bits())
+            .field("rx_clk_edge_sel", &self.rx_clk_edge_sel().bit())
+            .field("rx_bit_pack_order", &self.rx_bit_pack_order().bit())
+            .field("rx_bus_wid_sel", &self.rx_bus_wid_sel().bits())
+            .field("rx_fifo_srst", &self.rx_fifo_srst().bit())
             .finish()
     }
 }

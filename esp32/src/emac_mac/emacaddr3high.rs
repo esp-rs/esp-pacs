@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACADDR3HIGH")
-            .field(
-                "mac_address3_hi",
-                &format_args!("{}", self.mac_address3_hi().bits()),
-            )
-            .field(
-                "mask_byte_control3",
-                &format_args!("{}", self.mask_byte_control3().bits()),
-            )
-            .field(
-                "source_address3",
-                &format_args!("{}", self.source_address3().bit()),
-            )
-            .field(
-                "address_enable3",
-                &format_args!("{}", self.address_enable3().bit()),
-            )
+            .field("mac_address3_hi", &self.mac_address3_hi().bits())
+            .field("mask_byte_control3", &self.mask_byte_control3().bits())
+            .field("source_address3", &self.source_address3().bit())
+            .field("address_enable3", &self.address_enable3().bit())
             .finish()
     }
 }

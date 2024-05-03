@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REDUNDANT_ECO_CTRL")
-            .field(
-                "redundant_eco_drive",
-                &format_args!("{}", self.redundant_eco_drive().bit()),
-            )
-            .field(
-                "redundant_eco_result",
-                &format_args!("{}", self.redundant_eco_result().bit()),
-            )
+            .field("redundant_eco_drive", &self.redundant_eco_drive().bit())
+            .field("redundant_eco_result", &self.redundant_eco_result().bit())
             .finish()
     }
 }

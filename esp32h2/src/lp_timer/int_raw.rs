@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "overflow_raw",
-                &format_args!("{}", self.overflow_raw().bit()),
-            )
-            .field(
-                "soc_wakeup_int_raw",
-                &format_args!("{}", self.soc_wakeup_int_raw().bit()),
-            )
+            .field("overflow_raw", &self.overflow_raw().bit())
+            .field("soc_wakeup_int_raw", &self.soc_wakeup_int_raw().bit())
             .finish()
     }
 }

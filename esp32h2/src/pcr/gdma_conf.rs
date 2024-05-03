@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GDMA_CONF")
-            .field("gdma_clk_en", &format_args!("{}", self.gdma_clk_en().bit()))
-            .field("gdma_rst_en", &format_args!("{}", self.gdma_rst_en().bit()))
+            .field("gdma_clk_en", &self.gdma_clk_en().bit())
+            .field("gdma_rst_en", &self.gdma_rst_en().bit())
             .finish()
     }
 }

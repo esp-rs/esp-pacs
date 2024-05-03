@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP_CNTL")
-            .field(
-                "ext_wakeup_status",
-                &format_args!("{}", self.ext_wakeup_status().bits()),
-            )
-            .field(
-                "ext_wakeup_sel",
-                &format_args!("{}", self.ext_wakeup_sel().bits()),
-            )
-            .field(
-                "ext_wakeup_lv",
-                &format_args!("{}", self.ext_wakeup_lv().bits()),
-            )
-            .field(
-                "ext_wakeup_filter",
-                &format_args!("{}", self.ext_wakeup_filter().bit()),
-            )
+            .field("ext_wakeup_status", &self.ext_wakeup_status().bits())
+            .field("ext_wakeup_sel", &self.ext_wakeup_sel().bits())
+            .field("ext_wakeup_lv", &self.ext_wakeup_lv().bits())
+            .field("ext_wakeup_filter", &self.ext_wakeup_filter().bit())
             .finish()
     }
 }

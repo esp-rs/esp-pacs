@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CK_FG_LOW")
-            .field(
-                "colorkey_fg_b_low",
-                &format_args!("{}", self.colorkey_fg_b_low().bits()),
-            )
-            .field(
-                "colorkey_fg_g_low",
-                &format_args!("{}", self.colorkey_fg_g_low().bits()),
-            )
-            .field(
-                "colorkey_fg_r_low",
-                &format_args!("{}", self.colorkey_fg_r_low().bits()),
-            )
+            .field("colorkey_fg_b_low", &self.colorkey_fg_b_low().bits())
+            .field("colorkey_fg_g_low", &self.colorkey_fg_g_low().bits())
+            .field("colorkey_fg_r_low", &self.colorkey_fg_r_low().bits())
             .finish()
     }
 }

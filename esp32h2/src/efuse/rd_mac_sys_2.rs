@@ -55,25 +55,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SYS_2")
-            .field(
-                "rxiq_version",
-                &format_args!("{}", self.rxiq_version().bits()),
-            )
-            .field("rxiq_0", &format_args!("{}", self.rxiq_0().bits()))
-            .field("rxiq_1", &format_args!("{}", self.rxiq_1().bits()))
-            .field(
-                "active_hp_dbias",
-                &format_args!("{}", self.active_hp_dbias().bits()),
-            )
-            .field(
-                "active_lp_dbias",
-                &format_args!("{}", self.active_lp_dbias().bits()),
-            )
-            .field("dslp_dbias", &format_args!("{}", self.dslp_dbias().bits()))
-            .field(
-                "dbias_vol_gap_value1",
-                &format_args!("{}", self.dbias_vol_gap_value1().bit()),
-            )
+            .field("rxiq_version", &self.rxiq_version().bits())
+            .field("rxiq_0", &self.rxiq_0().bits())
+            .field("rxiq_1", &self.rxiq_1().bits())
+            .field("active_hp_dbias", &self.active_hp_dbias().bits())
+            .field("active_lp_dbias", &self.active_lp_dbias().bits())
+            .field("dslp_dbias", &self.dslp_dbias().bits())
+            .field("dbias_vol_gap_value1", &self.dbias_vol_gap_value1().bit())
             .finish()
     }
 }

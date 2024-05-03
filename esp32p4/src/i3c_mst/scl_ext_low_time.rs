@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_EXT_LOW_TIME")
             .field(
                 "reg_i3c_mst_ext_low_period1",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period1().bits()),
+                &self.reg_i3c_mst_ext_low_period1().bits(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period2",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period2().bits()),
+                &self.reg_i3c_mst_ext_low_period2().bits(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period3",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period3().bits()),
+                &self.reg_i3c_mst_ext_low_period3().bits(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period4",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period4().bits()),
+                &self.reg_i3c_mst_ext_low_period4().bits(),
             )
             .finish()
     }

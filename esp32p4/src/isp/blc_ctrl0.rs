@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLC_CTRL0")
-            .field(
-                "blc_r3_stretch",
-                &format_args!("{}", self.blc_r3_stretch().bit()),
-            )
-            .field(
-                "blc_r2_stretch",
-                &format_args!("{}", self.blc_r2_stretch().bit()),
-            )
-            .field(
-                "blc_r1_stretch",
-                &format_args!("{}", self.blc_r1_stretch().bit()),
-            )
-            .field(
-                "blc_r0_stretch",
-                &format_args!("{}", self.blc_r0_stretch().bit()),
-            )
+            .field("blc_r3_stretch", &self.blc_r3_stretch().bit())
+            .field("blc_r2_stretch", &self.blc_r2_stretch().bit())
+            .field("blc_r1_stretch", &self.blc_r1_stretch().bit())
+            .field("blc_r0_stretch", &self.blc_r0_stretch().bit())
             .finish()
     }
 }

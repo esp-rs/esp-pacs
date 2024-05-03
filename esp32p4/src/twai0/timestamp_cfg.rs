@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMESTAMP_CFG")
-            .field("ts_enable", &format_args!("{}", self.ts_enable().bit()))
+            .field("ts_enable", &self.ts_enable().bit())
             .finish()
     }
 }

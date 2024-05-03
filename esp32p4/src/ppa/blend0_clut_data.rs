@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BLEND0_CLUT_DATA")
             .field(
                 "rdwr_word_blend0_clut",
-                &format_args!("{}", self.rdwr_word_blend0_clut().bits()),
+                &self.rdwr_word_blend0_clut().bits(),
             )
             .finish()
     }

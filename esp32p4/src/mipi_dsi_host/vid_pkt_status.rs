@@ -48,30 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_PKT_STATUS")
-            .field(
-                "dpi_cmd_w_empty",
-                &format_args!("{}", self.dpi_cmd_w_empty().bit()),
-            )
-            .field(
-                "dpi_cmd_w_full",
-                &format_args!("{}", self.dpi_cmd_w_full().bit()),
-            )
-            .field(
-                "dpi_pld_w_empty",
-                &format_args!("{}", self.dpi_pld_w_empty().bit()),
-            )
-            .field(
-                "dpi_pld_w_full",
-                &format_args!("{}", self.dpi_pld_w_full().bit()),
-            )
-            .field(
-                "dpi_buff_pld_empty",
-                &format_args!("{}", self.dpi_buff_pld_empty().bit()),
-            )
-            .field(
-                "dpi_buff_pld_full",
-                &format_args!("{}", self.dpi_buff_pld_full().bit()),
-            )
+            .field("dpi_cmd_w_empty", &self.dpi_cmd_w_empty().bit())
+            .field("dpi_cmd_w_full", &self.dpi_cmd_w_full().bit())
+            .field("dpi_pld_w_empty", &self.dpi_pld_w_empty().bit())
+            .field("dpi_pld_w_full", &self.dpi_pld_w_full().bit())
+            .field("dpi_buff_pld_empty", &self.dpi_buff_pld_empty().bit())
+            .field("dpi_buff_pld_full", &self.dpi_buff_pld_full().bit())
             .finish()
     }
 }

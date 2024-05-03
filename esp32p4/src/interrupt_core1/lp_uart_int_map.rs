@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_UART_INT_MAP")
             .field(
                 "core1_lp_uart_int_map",
-                &format_args!("{}", self.core1_lp_uart_int_map().bits()),
+                &self.core1_lp_uart_int_map().bits(),
             )
             .finish()
     }

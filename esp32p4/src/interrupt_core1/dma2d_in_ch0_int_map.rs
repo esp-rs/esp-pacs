@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA2D_IN_CH0_INT_MAP")
             .field(
                 "core1_dma2d_in_ch0_int_map",
-                &format_args!("{}", self.core1_dma2d_in_ch0_int_map().bits()),
+                &self.core1_dma2d_in_ch0_int_map().bits(),
             )
             .finish()
     }

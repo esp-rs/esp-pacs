@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AAD_BLOCK_NUM")
-            .field(
-                "aad_block_num",
-                &format_args!("{}", self.aad_block_num().bits()),
-            )
+            .field("aad_block_num", &self.aad_block_num().bits())
             .finish()
     }
 }

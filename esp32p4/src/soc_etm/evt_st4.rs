@@ -298,131 +298,83 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST4")
             .field(
                 "mcpwm1_evt_op0_tee2_st",
-                &format_args!("{}", self.mcpwm1_evt_op0_tee2_st().bit()),
+                &self.mcpwm1_evt_op0_tee2_st().bit(),
             )
             .field(
                 "mcpwm1_evt_op1_tee2_st",
-                &format_args!("{}", self.mcpwm1_evt_op1_tee2_st().bit()),
+                &self.mcpwm1_evt_op1_tee2_st().bit(),
             )
             .field(
                 "mcpwm1_evt_op2_tee2_st",
-                &format_args!("{}", self.mcpwm1_evt_op2_tee2_st().bit()),
+                &self.mcpwm1_evt_op2_tee2_st().bit(),
             )
             .field(
                 "adc_evt_conv_cmplt0_st",
-                &format_args!("{}", self.adc_evt_conv_cmplt0_st().bit()),
+                &self.adc_evt_conv_cmplt0_st().bit(),
             )
             .field(
                 "adc_evt_eq_above_thresh0_st",
-                &format_args!("{}", self.adc_evt_eq_above_thresh0_st().bit()),
+                &self.adc_evt_eq_above_thresh0_st().bit(),
             )
             .field(
                 "adc_evt_eq_above_thresh1_st",
-                &format_args!("{}", self.adc_evt_eq_above_thresh1_st().bit()),
+                &self.adc_evt_eq_above_thresh1_st().bit(),
             )
             .field(
                 "adc_evt_eq_below_thresh0_st",
-                &format_args!("{}", self.adc_evt_eq_below_thresh0_st().bit()),
+                &self.adc_evt_eq_below_thresh0_st().bit(),
             )
             .field(
                 "adc_evt_eq_below_thresh1_st",
-                &format_args!("{}", self.adc_evt_eq_below_thresh1_st().bit()),
+                &self.adc_evt_eq_below_thresh1_st().bit(),
             )
             .field(
                 "adc_evt_result_done0_st",
-                &format_args!("{}", self.adc_evt_result_done0_st().bit()),
+                &self.adc_evt_result_done0_st().bit(),
             )
-            .field(
-                "adc_evt_stopped0_st",
-                &format_args!("{}", self.adc_evt_stopped0_st().bit()),
-            )
-            .field(
-                "adc_evt_started0_st",
-                &format_args!("{}", self.adc_evt_started0_st().bit()),
-            )
-            .field(
-                "regdma_evt_done0_st",
-                &format_args!("{}", self.regdma_evt_done0_st().bit()),
-            )
-            .field(
-                "regdma_evt_done1_st",
-                &format_args!("{}", self.regdma_evt_done1_st().bit()),
-            )
-            .field(
-                "regdma_evt_done2_st",
-                &format_args!("{}", self.regdma_evt_done2_st().bit()),
-            )
-            .field(
-                "regdma_evt_done3_st",
-                &format_args!("{}", self.regdma_evt_done3_st().bit()),
-            )
-            .field(
-                "regdma_evt_err0_st",
-                &format_args!("{}", self.regdma_evt_err0_st().bit()),
-            )
-            .field(
-                "regdma_evt_err1_st",
-                &format_args!("{}", self.regdma_evt_err1_st().bit()),
-            )
-            .field(
-                "regdma_evt_err2_st",
-                &format_args!("{}", self.regdma_evt_err2_st().bit()),
-            )
-            .field(
-                "regdma_evt_err3_st",
-                &format_args!("{}", self.regdma_evt_err3_st().bit()),
-            )
+            .field("adc_evt_stopped0_st", &self.adc_evt_stopped0_st().bit())
+            .field("adc_evt_started0_st", &self.adc_evt_started0_st().bit())
+            .field("regdma_evt_done0_st", &self.regdma_evt_done0_st().bit())
+            .field("regdma_evt_done1_st", &self.regdma_evt_done1_st().bit())
+            .field("regdma_evt_done2_st", &self.regdma_evt_done2_st().bit())
+            .field("regdma_evt_done3_st", &self.regdma_evt_done3_st().bit())
+            .field("regdma_evt_err0_st", &self.regdma_evt_err0_st().bit())
+            .field("regdma_evt_err1_st", &self.regdma_evt_err1_st().bit())
+            .field("regdma_evt_err2_st", &self.regdma_evt_err2_st().bit())
+            .field("regdma_evt_err3_st", &self.regdma_evt_err3_st().bit())
             .field(
                 "tmpsnsr_evt_over_limit_st",
-                &format_args!("{}", self.tmpsnsr_evt_over_limit_st().bit()),
+                &self.tmpsnsr_evt_over_limit_st().bit(),
             )
-            .field(
-                "i2s0_evt_rx_done_st",
-                &format_args!("{}", self.i2s0_evt_rx_done_st().bit()),
-            )
-            .field(
-                "i2s0_evt_tx_done_st",
-                &format_args!("{}", self.i2s0_evt_tx_done_st().bit()),
-            )
+            .field("i2s0_evt_rx_done_st", &self.i2s0_evt_rx_done_st().bit())
+            .field("i2s0_evt_tx_done_st", &self.i2s0_evt_tx_done_st().bit())
             .field(
                 "i2s0_evt_x_words_received_st",
-                &format_args!("{}", self.i2s0_evt_x_words_received_st().bit()),
+                &self.i2s0_evt_x_words_received_st().bit(),
             )
             .field(
                 "i2s0_evt_x_words_sent_st",
-                &format_args!("{}", self.i2s0_evt_x_words_sent_st().bit()),
+                &self.i2s0_evt_x_words_sent_st().bit(),
             )
-            .field(
-                "i2s1_evt_rx_done_st",
-                &format_args!("{}", self.i2s1_evt_rx_done_st().bit()),
-            )
-            .field(
-                "i2s1_evt_tx_done_st",
-                &format_args!("{}", self.i2s1_evt_tx_done_st().bit()),
-            )
+            .field("i2s1_evt_rx_done_st", &self.i2s1_evt_rx_done_st().bit())
+            .field("i2s1_evt_tx_done_st", &self.i2s1_evt_tx_done_st().bit())
             .field(
                 "i2s1_evt_x_words_received_st",
-                &format_args!("{}", self.i2s1_evt_x_words_received_st().bit()),
+                &self.i2s1_evt_x_words_received_st().bit(),
             )
             .field(
                 "i2s1_evt_x_words_sent_st",
-                &format_args!("{}", self.i2s1_evt_x_words_sent_st().bit()),
+                &self.i2s1_evt_x_words_sent_st().bit(),
             )
-            .field(
-                "i2s2_evt_rx_done_st",
-                &format_args!("{}", self.i2s2_evt_rx_done_st().bit()),
-            )
-            .field(
-                "i2s2_evt_tx_done_st",
-                &format_args!("{}", self.i2s2_evt_tx_done_st().bit()),
-            )
+            .field("i2s2_evt_rx_done_st", &self.i2s2_evt_rx_done_st().bit())
+            .field("i2s2_evt_tx_done_st", &self.i2s2_evt_tx_done_st().bit())
             .field(
                 "i2s2_evt_x_words_received_st",
-                &format_args!("{}", self.i2s2_evt_x_words_received_st().bit()),
+                &self.i2s2_evt_x_words_received_st().bit(),
             )
             .field(
                 "i2s2_evt_x_words_sent_st",
-                &format_args!("{}", self.i2s2_evt_x_words_sent_st().bit()),
+                &self.i2s2_evt_x_words_sent_st().bit(),
             )
             .finish()
     }

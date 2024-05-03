@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROM_TABLE_LOCK")
-            .field(
-                "rom_table_lock",
-                &format_args!("{}", self.rom_table_lock().bit()),
-            )
+            .field("rom_table_lock", &self.rom_table_lock().bit())
             .finish()
     }
 }

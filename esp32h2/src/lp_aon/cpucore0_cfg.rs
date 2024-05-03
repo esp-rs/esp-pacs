@@ -46,22 +46,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPUCORE0_CFG")
-            .field(
-                "cpu_core0_sw_stall",
-                &format_args!("{}", self.cpu_core0_sw_stall().bits()),
-            )
+            .field("cpu_core0_sw_stall", &self.cpu_core0_sw_stall().bits())
             .field(
                 "cpu_core0_ocd_halt_on_reset",
-                &format_args!("{}", self.cpu_core0_ocd_halt_on_reset().bit()),
+                &self.cpu_core0_ocd_halt_on_reset().bit(),
             )
             .field(
                 "cpu_core0_stat_vector_sel",
-                &format_args!("{}", self.cpu_core0_stat_vector_sel().bit()),
+                &self.cpu_core0_stat_vector_sel().bit(),
             )
-            .field(
-                "cpu_core0_dreset_mask",
-                &format_args!("{}", self.cpu_core0_dreset_mask().bit()),
-            )
+            .field("cpu_core0_dreset_mask", &self.cpu_core0_dreset_mask().bit())
             .finish()
     }
 }

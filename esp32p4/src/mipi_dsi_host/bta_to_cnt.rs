@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BTA_TO_CNT")
-            .field("bta_to_cnt", &format_args!("{}", self.bta_to_cnt().bits()))
+            .field("bta_to_cnt", &self.bta_to_cnt().bits())
             .finish()
     }
 }

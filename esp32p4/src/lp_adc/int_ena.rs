@@ -62,29 +62,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "cocpu_saradc1_int_ena",
-                &format_args!("{}", self.cocpu_saradc1_int_ena().bit()),
-            )
-            .field(
-                "cocpu_saradc2_int_ena",
-                &format_args!("{}", self.cocpu_saradc2_int_ena().bit()),
-            )
+            .field("cocpu_saradc1_int_ena", &self.cocpu_saradc1_int_ena().bit())
+            .field("cocpu_saradc2_int_ena", &self.cocpu_saradc2_int_ena().bit())
             .field(
                 "cocpu_saradc1_error_int_ena",
-                &format_args!("{}", self.cocpu_saradc1_error_int_ena().bit()),
+                &self.cocpu_saradc1_error_int_ena().bit(),
             )
             .field(
                 "cocpu_saradc2_error_int_ena",
-                &format_args!("{}", self.cocpu_saradc2_error_int_ena().bit()),
+                &self.cocpu_saradc2_error_int_ena().bit(),
             )
             .field(
                 "cocpu_saradc1_wake_int_ena",
-                &format_args!("{}", self.cocpu_saradc1_wake_int_ena().bit()),
+                &self.cocpu_saradc1_wake_int_ena().bit(),
             )
             .field(
                 "cocpu_saradc2_wake_int_ena",
-                &format_args!("{}", self.cocpu_saradc2_wake_int_ena().bit()),
+                &self.cocpu_saradc2_wake_int_ena().bit(),
             )
             .finish()
     }

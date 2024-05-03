@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RO_PD_CONF")
-            .field(
-                "out_ro_ram_force_pd",
-                &format_args!("{}", self.out_ro_ram_force_pd().bit()),
-            )
-            .field(
-                "out_ro_ram_force_pu",
-                &format_args!("{}", self.out_ro_ram_force_pu().bit()),
-            )
-            .field(
-                "out_ro_ram_clk_fo",
-                &format_args!("{}", self.out_ro_ram_clk_fo().bit()),
-            )
+            .field("out_ro_ram_force_pd", &self.out_ro_ram_force_pd().bit())
+            .field("out_ro_ram_force_pu", &self.out_ro_ram_force_pu().bit())
+            .field("out_ro_ram_clk_fo", &self.out_ro_ram_clk_fo().bit())
             .finish()
     }
 }

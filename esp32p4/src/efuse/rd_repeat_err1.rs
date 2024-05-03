@@ -99,56 +99,47 @@ impl core::fmt::Debug for R {
         f.debug_struct("RD_REPEAT_ERR1")
             .field(
                 "km_huk_gen_state_high_err",
-                &format_args!("{}", self.km_huk_gen_state_high_err().bits()),
+                &self.km_huk_gen_state_high_err().bits(),
             )
             .field(
                 "km_rnd_switch_cycle_err",
-                &format_args!("{}", self.km_rnd_switch_cycle_err().bits()),
+                &self.km_rnd_switch_cycle_err().bits(),
             )
             .field(
                 "km_deploy_only_once_err",
-                &format_args!("{}", self.km_deploy_only_once_err().bits()),
+                &self.km_deploy_only_once_err().bits(),
             )
             .field(
                 "force_use_key_manager_key_err",
-                &format_args!("{}", self.force_use_key_manager_key_err().bits()),
+                &self.force_use_key_manager_key_err().bits(),
             )
             .field(
                 "force_disable_sw_init_key_err",
-                &format_args!("{}", self.force_disable_sw_init_key_err().bit()),
+                &self.force_disable_sw_init_key_err().bit(),
             )
             .field(
                 "xts_key_length_256_err",
-                &format_args!("{}", self.xts_key_length_256_err().bit()),
+                &self.xts_key_length_256_err().bit(),
             )
-            .field(
-                "wdt_delay_sel_err",
-                &format_args!("{}", self.wdt_delay_sel_err().bits()),
-            )
+            .field("wdt_delay_sel_err", &self.wdt_delay_sel_err().bits())
             .field(
                 "spi_boot_crypt_cnt_err",
-                &format_args!("{}", self.spi_boot_crypt_cnt_err().bits()),
+                &self.spi_boot_crypt_cnt_err().bits(),
             )
             .field(
                 "secure_boot_key_revoke0_err",
-                &format_args!("{}", self.secure_boot_key_revoke0_err().bit()),
+                &self.secure_boot_key_revoke0_err().bit(),
             )
             .field(
                 "secure_boot_key_revoke1_err",
-                &format_args!("{}", self.secure_boot_key_revoke1_err().bit()),
+                &self.secure_boot_key_revoke1_err().bit(),
             )
             .field(
                 "secure_boot_key_revoke2_err",
-                &format_args!("{}", self.secure_boot_key_revoke2_err().bit()),
+                &self.secure_boot_key_revoke2_err().bit(),
             )
-            .field(
-                "key_purpose_0_err",
-                &format_args!("{}", self.key_purpose_0_err().bits()),
-            )
-            .field(
-                "key_purpose_1_err",
-                &format_args!("{}", self.key_purpose_1_err().bits()),
-            )
+            .field("key_purpose_0_err", &self.key_purpose_0_err().bits())
+            .field("key_purpose_1_err", &self.key_purpose_1_err().bits())
             .finish()
     }
 }

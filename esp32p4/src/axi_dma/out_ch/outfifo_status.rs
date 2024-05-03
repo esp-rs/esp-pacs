@@ -153,90 +153,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUTFIFO_STATUS")
-            .field(
-                "outfifo_l3_full",
-                &format_args!("{}", self.outfifo_l3_full().bit()),
-            )
-            .field(
-                "outfifo_l3_empty",
-                &format_args!("{}", self.outfifo_l3_empty().bit()),
-            )
-            .field(
-                "outfifo_l3_cnt",
-                &format_args!("{}", self.outfifo_l3_cnt().bits()),
-            )
-            .field(
-                "outfifo_l3_udf",
-                &format_args!("{}", self.outfifo_l3_udf().bit()),
-            )
-            .field(
-                "outfifo_l3_ovf",
-                &format_args!("{}", self.outfifo_l3_ovf().bit()),
-            )
-            .field(
-                "outfifo_l1_full",
-                &format_args!("{}", self.outfifo_l1_full().bit()),
-            )
-            .field(
-                "outfifo_l1_empty",
-                &format_args!("{}", self.outfifo_l1_empty().bit()),
-            )
-            .field(
-                "outfifo_l1_udf",
-                &format_args!("{}", self.outfifo_l1_udf().bit()),
-            )
-            .field(
-                "outfifo_l1_ovf",
-                &format_args!("{}", self.outfifo_l1_ovf().bit()),
-            )
-            .field(
-                "outfifo_l2_full",
-                &format_args!("{}", self.outfifo_l2_full().bit()),
-            )
-            .field(
-                "outfifo_l2_empty",
-                &format_args!("{}", self.outfifo_l2_empty().bit()),
-            )
-            .field(
-                "outfifo_l2_udf",
-                &format_args!("{}", self.outfifo_l2_udf().bit()),
-            )
-            .field(
-                "outfifo_l2_ovf",
-                &format_args!("{}", self.outfifo_l2_ovf().bit()),
-            )
-            .field(
-                "out_remain_under_1b",
-                &format_args!("{}", self.out_remain_under_1b().bit()),
-            )
-            .field(
-                "out_remain_under_2b",
-                &format_args!("{}", self.out_remain_under_2b().bit()),
-            )
-            .field(
-                "out_remain_under_3b",
-                &format_args!("{}", self.out_remain_under_3b().bit()),
-            )
-            .field(
-                "out_remain_under_4b",
-                &format_args!("{}", self.out_remain_under_4b().bit()),
-            )
-            .field(
-                "out_remain_under_5b",
-                &format_args!("{}", self.out_remain_under_5b().bit()),
-            )
-            .field(
-                "out_remain_under_6b",
-                &format_args!("{}", self.out_remain_under_6b().bit()),
-            )
-            .field(
-                "out_remain_under_7b",
-                &format_args!("{}", self.out_remain_under_7b().bit()),
-            )
-            .field(
-                "out_remain_under_8b",
-                &format_args!("{}", self.out_remain_under_8b().bit()),
-            )
+            .field("outfifo_l3_full", &self.outfifo_l3_full().bit())
+            .field("outfifo_l3_empty", &self.outfifo_l3_empty().bit())
+            .field("outfifo_l3_cnt", &self.outfifo_l3_cnt().bits())
+            .field("outfifo_l3_udf", &self.outfifo_l3_udf().bit())
+            .field("outfifo_l3_ovf", &self.outfifo_l3_ovf().bit())
+            .field("outfifo_l1_full", &self.outfifo_l1_full().bit())
+            .field("outfifo_l1_empty", &self.outfifo_l1_empty().bit())
+            .field("outfifo_l1_udf", &self.outfifo_l1_udf().bit())
+            .field("outfifo_l1_ovf", &self.outfifo_l1_ovf().bit())
+            .field("outfifo_l2_full", &self.outfifo_l2_full().bit())
+            .field("outfifo_l2_empty", &self.outfifo_l2_empty().bit())
+            .field("outfifo_l2_udf", &self.outfifo_l2_udf().bit())
+            .field("outfifo_l2_ovf", &self.outfifo_l2_ovf().bit())
+            .field("out_remain_under_1b", &self.out_remain_under_1b().bit())
+            .field("out_remain_under_2b", &self.out_remain_under_2b().bit())
+            .field("out_remain_under_3b", &self.out_remain_under_3b().bit())
+            .field("out_remain_under_4b", &self.out_remain_under_4b().bit())
+            .field("out_remain_under_5b", &self.out_remain_under_5b().bit())
+            .field("out_remain_under_6b", &self.out_remain_under_6b().bit())
+            .field("out_remain_under_7b", &self.out_remain_under_7b().bit())
+            .field("out_remain_under_8b", &self.out_remain_under_8b().bit())
             .finish()
     }
 }

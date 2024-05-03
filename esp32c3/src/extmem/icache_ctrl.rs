@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_CTRL")
-            .field(
-                "icache_enable",
-                &format_args!("{}", self.icache_enable().bit()),
-            )
+            .field("icache_enable", &self.icache_enable().bit())
             .finish()
     }
 }

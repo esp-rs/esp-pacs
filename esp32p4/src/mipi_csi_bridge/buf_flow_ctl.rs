@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUF_FLOW_CTL")
-            .field(
-                "csi_buf_afull_thrd",
-                &format_args!("{}", self.csi_buf_afull_thrd().bits()),
-            )
-            .field(
-                "csi_buf_depth",
-                &format_args!("{}", self.csi_buf_depth().bits()),
-            )
+            .field("csi_buf_afull_thrd", &self.csi_buf_afull_thrd().bits())
+            .field("csi_buf_depth", &self.csi_buf_depth().bits())
             .finish()
     }
 }

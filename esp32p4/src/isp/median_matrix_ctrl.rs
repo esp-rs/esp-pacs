@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEDIAN_MATRIX_CTRL")
-            .field(
-                "median_padding_data",
-                &format_args!("{}", self.median_padding_data().bits()),
-            )
-            .field(
-                "median_padding_mode",
-                &format_args!("{}", self.median_padding_mode().bit()),
-            )
+            .field("median_padding_data", &self.median_padding_data().bits())
+            .field("median_padding_mode", &self.median_padding_mode().bit())
             .finish()
     }
 }

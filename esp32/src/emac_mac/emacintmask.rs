@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACINTMASK")
-            .field("pmtintmask", &format_args!("{}", self.pmtintmask().bit()))
-            .field("lpiintmask", &format_args!("{}", self.lpiintmask().bit()))
+            .field("pmtintmask", &self.pmtintmask().bit())
+            .field("lpiintmask", &self.lpiintmask().bit())
             .finish()
     }
 }

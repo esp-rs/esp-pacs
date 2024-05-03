@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C1_CTRL1")
-            .field(
-                "i2c1_scl_pulse_dur",
-                &format_args!("{}", self.i2c1_scl_pulse_dur().bits()),
-            )
-            .field(
-                "i2c1_sda_side_guard",
-                &format_args!("{}", self.i2c1_sda_side_guard().bits()),
-            )
+            .field("i2c1_scl_pulse_dur", &self.i2c1_scl_pulse_dur().bits())
+            .field("i2c1_sda_side_guard", &self.i2c1_sda_side_guard().bits())
             .finish()
     }
 }

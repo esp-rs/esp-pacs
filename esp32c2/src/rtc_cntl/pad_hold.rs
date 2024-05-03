@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_HOLD")
-            .field(
-                "gpio_pin0_hold",
-                &format_args!("{}", self.gpio_pin0_hold().bit()),
-            )
-            .field(
-                "gpio_pin1_hold",
-                &format_args!("{}", self.gpio_pin1_hold().bit()),
-            )
-            .field(
-                "gpio_pin2_hold",
-                &format_args!("{}", self.gpio_pin2_hold().bit()),
-            )
-            .field(
-                "gpio_pin3_hold",
-                &format_args!("{}", self.gpio_pin3_hold().bit()),
-            )
-            .field(
-                "gpio_pin4_hold",
-                &format_args!("{}", self.gpio_pin4_hold().bit()),
-            )
-            .field(
-                "gpio_pin5_hold",
-                &format_args!("{}", self.gpio_pin5_hold().bit()),
-            )
+            .field("gpio_pin0_hold", &self.gpio_pin0_hold().bit())
+            .field("gpio_pin1_hold", &self.gpio_pin1_hold().bit())
+            .field("gpio_pin2_hold", &self.gpio_pin2_hold().bit())
+            .field("gpio_pin3_hold", &self.gpio_pin3_hold().bit())
+            .field("gpio_pin4_hold", &self.gpio_pin4_hold().bit())
+            .field("gpio_pin5_hold", &self.gpio_pin5_hold().bit())
             .finish()
     }
 }

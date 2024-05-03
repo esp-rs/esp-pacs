@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBIAS_CMD2")
-            .field("dbias_cmd2", &format_args!("{}", self.dbias_cmd2().bits()))
+            .field("dbias_cmd2", &self.dbias_cmd2().bits())
             .finish()
     }
 }

@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_FIX_ALPHA")
-            .field(
-                "sr_rx_fix_alpha",
-                &format_args!("{}", self.sr_rx_fix_alpha().bits()),
-            )
-            .field(
-                "sr_rx_alpha_mod",
-                &format_args!("{}", self.sr_rx_alpha_mod().bits()),
-            )
-            .field(
-                "sr_rx_alpha_inv",
-                &format_args!("{}", self.sr_rx_alpha_inv().bit()),
-            )
+            .field("sr_rx_fix_alpha", &self.sr_rx_fix_alpha().bits())
+            .field("sr_rx_alpha_mod", &self.sr_rx_alpha_mod().bits())
+            .field("sr_rx_alpha_inv", &self.sr_rx_alpha_inv().bit())
             .finish()
     }
 }

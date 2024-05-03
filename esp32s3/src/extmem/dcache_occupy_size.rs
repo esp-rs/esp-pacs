@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_OCCUPY_SIZE")
-            .field(
-                "dcache_occupy_size",
-                &format_args!("{}", self.dcache_occupy_size().bits()),
-            )
+            .field("dcache_occupy_size", &self.dcache_occupy_size().bits())
             .finish()
     }
 }

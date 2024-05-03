@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("XTS_PHYSICAL_ADDRESS")
             .field(
                 "spi_xts_physical_address",
-                &format_args!("{}", self.spi_xts_physical_address().bits()),
+                &self.spi_xts_physical_address().bits(),
             )
             .finish()
     }

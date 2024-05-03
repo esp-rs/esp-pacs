@@ -44,13 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_DATA7")
-            .field("pin_state", &format_args!("{}", self.pin_state().bits()))
-            .field("chip_state", &format_args!("{}", self.chip_state().bits()))
-            .field("sdio_rst", &format_args!("{}", self.sdio_rst().bit()))
-            .field(
-                "sdio_ioready0",
-                &format_args!("{}", self.sdio_ioready0().bit()),
-            )
+            .field("pin_state", &self.pin_state().bits())
+            .field("chip_state", &self.chip_state().bits())
+            .field("sdio_rst", &self.sdio_rst().bit())
+            .field("sdio_ioready0", &self.sdio_ioready0().bit())
             .finish()
     }
 }

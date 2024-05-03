@@ -33,9 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UHCI_CONF")
-            .field("uhci_clk_en", &format_args!("{}", self.uhci_clk_en().bit()))
-            .field("uhci_rst_en", &format_args!("{}", self.uhci_rst_en().bit()))
-            .field("uhci_ready", &format_args!("{}", self.uhci_ready().bit()))
+            .field("uhci_clk_en", &self.uhci_clk_en().bit())
+            .field("uhci_rst_en", &self.uhci_rst_en().bit())
+            .field("uhci_ready", &self.uhci_ready().bit())
             .finish()
     }
 }

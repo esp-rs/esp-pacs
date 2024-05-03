@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_AREA_PIF_0_MIN")
             .field(
                 "core_1_area_pif_0_min",
-                &format_args!("{}", self.core_1_area_pif_0_min().bits()),
+                &self.core_1_area_pif_0_min().bits(),
             )
             .finish()
     }

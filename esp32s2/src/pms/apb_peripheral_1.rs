@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB_PERIPHERAL_1")
             .field(
                 "apb_peripheral_split_burst",
-                &format_args!("{}", self.apb_peripheral_split_burst().bit()),
+                &self.apb_peripheral_split_burst().bit(),
             )
             .finish()
     }

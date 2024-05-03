@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_TIMEOUT_ADDR")
-            .field(
-                "lp_peri_timeout_addr",
-                &format_args!("{}", self.lp_peri_timeout_addr().bits()),
-            )
+            .field("lp_peri_timeout_addr", &self.lp_peri_timeout_addr().bits())
             .finish()
     }
 }

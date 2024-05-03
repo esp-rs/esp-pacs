@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_BY")
-            .field("ae_y_bsize", &format_args!("{}", self.ae_y_bsize().bits()))
-            .field("ae_y_start", &format_args!("{}", self.ae_y_start().bits()))
+            .field("ae_y_bsize", &self.ae_y_bsize().bits())
+            .field("ae_y_start", &self.ae_y_start().bits())
             .finish()
     }
 }

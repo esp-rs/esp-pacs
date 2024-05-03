@@ -44,13 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAME_CFG")
-            .field("vadr_num", &format_args!("{}", self.vadr_num().bits()))
-            .field("hadr_num", &format_args!("{}", self.hadr_num().bits()))
-            .field("has_hsync_e", &format_args!("{}", self.has_hsync_e().bit()))
-            .field(
-                "vadr_num_check",
-                &format_args!("{}", self.vadr_num_check().bit()),
-            )
+            .field("vadr_num", &self.vadr_num().bits())
+            .field("hadr_num", &self.hadr_num().bits())
+            .field("has_hsync_e", &self.has_hsync_e().bit())
+            .field("vadr_num_check", &self.vadr_num_check().bit())
             .finish()
     }
 }

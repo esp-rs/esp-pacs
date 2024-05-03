@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_STATUS")
-            .field(
-                "slc0_tx_full",
-                &format_args!("{}", self.slc0_tx_full().bit()),
-            )
-            .field(
-                "slc0_tx_empty",
-                &format_args!("{}", self.slc0_tx_empty().bit()),
-            )
-            .field(
-                "slc1_tx_full",
-                &format_args!("{}", self.slc1_tx_full().bit()),
-            )
-            .field(
-                "slc1_tx_empty",
-                &format_args!("{}", self.slc1_tx_empty().bit()),
-            )
+            .field("slc0_tx_full", &self.slc0_tx_full().bit())
+            .field("slc0_tx_empty", &self.slc0_tx_empty().bit())
+            .field("slc1_tx_full", &self.slc1_tx_full().bit())
+            .field("slc1_tx_empty", &self.slc1_tx_empty().bit())
             .finish()
     }
 }

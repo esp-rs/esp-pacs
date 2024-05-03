@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_CFG0")
-            .field(
-                "cfg_upmethod",
-                &format_args!("{}", self.cfg_upmethod().bits()),
-            )
-            .field("t0_sel", &format_args!("{}", self.t0_sel().bits()))
-            .field("t1_sel", &format_args!("{}", self.t1_sel().bits()))
+            .field("cfg_upmethod", &self.cfg_upmethod().bits())
+            .field("t0_sel", &self.t0_sel().bits())
+            .field("t1_sel", &self.t1_sel().bits())
             .finish()
     }
 }

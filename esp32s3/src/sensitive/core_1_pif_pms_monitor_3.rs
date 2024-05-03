@@ -17,10 +17,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_MONITOR_3")
             .field(
                 "core_1_pif_pms_monitor_violate_status_haddr",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_violate_status_haddr().bits()
-                ),
+                &self.core_1_pif_pms_monitor_violate_status_haddr().bits(),
             )
             .finish()
     }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_LOCK0_SIZE")
             .field(
                 "pro_dcache_lock0_size",
-                &format_args!("{}", self.pro_dcache_lock0_size().bits()),
+                &self.pro_dcache_lock0_size().bits(),
             )
             .finish()
     }

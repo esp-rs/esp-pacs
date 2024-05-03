@@ -298,131 +298,131 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST1")
             .field(
                 "ledc_evt_duty_chng_end_ch4_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch4_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch4_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch5_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch5_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch5_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch6_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch6_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch6_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch7_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch7_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch7_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch0_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch0_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch0_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch1_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch1_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch1_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch2_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch2_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch2_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch3_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch3_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch3_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch4_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch4_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch4_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch5_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch5_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch5_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch6_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch6_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch6_st().bit(),
             )
             .field(
                 "ledc_evt_ovf_cnt_pls_ch7_st",
-                &format_args!("{}", self.ledc_evt_ovf_cnt_pls_ch7_st().bit()),
+                &self.ledc_evt_ovf_cnt_pls_ch7_st().bit(),
             )
             .field(
                 "ledc_evt_time_ovf_timer0_st",
-                &format_args!("{}", self.ledc_evt_time_ovf_timer0_st().bit()),
+                &self.ledc_evt_time_ovf_timer0_st().bit(),
             )
             .field(
                 "ledc_evt_time_ovf_timer1_st",
-                &format_args!("{}", self.ledc_evt_time_ovf_timer1_st().bit()),
+                &self.ledc_evt_time_ovf_timer1_st().bit(),
             )
             .field(
                 "ledc_evt_time_ovf_timer2_st",
-                &format_args!("{}", self.ledc_evt_time_ovf_timer2_st().bit()),
+                &self.ledc_evt_time_ovf_timer2_st().bit(),
             )
             .field(
                 "ledc_evt_time_ovf_timer3_st",
-                &format_args!("{}", self.ledc_evt_time_ovf_timer3_st().bit()),
+                &self.ledc_evt_time_ovf_timer3_st().bit(),
             )
             .field(
                 "ledc_evt_timer0_cmp_st",
-                &format_args!("{}", self.ledc_evt_timer0_cmp_st().bit()),
+                &self.ledc_evt_timer0_cmp_st().bit(),
             )
             .field(
                 "ledc_evt_timer1_cmp_st",
-                &format_args!("{}", self.ledc_evt_timer1_cmp_st().bit()),
+                &self.ledc_evt_timer1_cmp_st().bit(),
             )
             .field(
                 "ledc_evt_timer2_cmp_st",
-                &format_args!("{}", self.ledc_evt_timer2_cmp_st().bit()),
+                &self.ledc_evt_timer2_cmp_st().bit(),
             )
             .field(
                 "ledc_evt_timer3_cmp_st",
-                &format_args!("{}", self.ledc_evt_timer3_cmp_st().bit()),
+                &self.ledc_evt_timer3_cmp_st().bit(),
             )
             .field(
                 "tg0_evt_cnt_cmp_timer0_st",
-                &format_args!("{}", self.tg0_evt_cnt_cmp_timer0_st().bit()),
+                &self.tg0_evt_cnt_cmp_timer0_st().bit(),
             )
             .field(
                 "tg0_evt_cnt_cmp_timer1_st",
-                &format_args!("{}", self.tg0_evt_cnt_cmp_timer1_st().bit()),
+                &self.tg0_evt_cnt_cmp_timer1_st().bit(),
             )
             .field(
                 "tg1_evt_cnt_cmp_timer0_st",
-                &format_args!("{}", self.tg1_evt_cnt_cmp_timer0_st().bit()),
+                &self.tg1_evt_cnt_cmp_timer0_st().bit(),
             )
             .field(
                 "tg1_evt_cnt_cmp_timer1_st",
-                &format_args!("{}", self.tg1_evt_cnt_cmp_timer1_st().bit()),
+                &self.tg1_evt_cnt_cmp_timer1_st().bit(),
             )
             .field(
                 "systimer_evt_cnt_cmp0_st",
-                &format_args!("{}", self.systimer_evt_cnt_cmp0_st().bit()),
+                &self.systimer_evt_cnt_cmp0_st().bit(),
             )
             .field(
                 "systimer_evt_cnt_cmp1_st",
-                &format_args!("{}", self.systimer_evt_cnt_cmp1_st().bit()),
+                &self.systimer_evt_cnt_cmp1_st().bit(),
             )
             .field(
                 "systimer_evt_cnt_cmp2_st",
-                &format_args!("{}", self.systimer_evt_cnt_cmp2_st().bit()),
+                &self.systimer_evt_cnt_cmp2_st().bit(),
             )
             .field(
                 "mcpwm0_evt_timer0_stop_st",
-                &format_args!("{}", self.mcpwm0_evt_timer0_stop_st().bit()),
+                &self.mcpwm0_evt_timer0_stop_st().bit(),
             )
             .field(
                 "mcpwm0_evt_timer1_stop_st",
-                &format_args!("{}", self.mcpwm0_evt_timer1_stop_st().bit()),
+                &self.mcpwm0_evt_timer1_stop_st().bit(),
             )
             .field(
                 "mcpwm0_evt_timer2_stop_st",
-                &format_args!("{}", self.mcpwm0_evt_timer2_stop_st().bit()),
+                &self.mcpwm0_evt_timer2_stop_st().bit(),
             )
             .field(
                 "mcpwm0_evt_timer0_tez_st",
-                &format_args!("{}", self.mcpwm0_evt_timer0_tez_st().bit()),
+                &self.mcpwm0_evt_timer0_tez_st().bit(),
             )
             .field(
                 "mcpwm0_evt_timer1_tez_st",
-                &format_args!("{}", self.mcpwm0_evt_timer1_tez_st().bit()),
+                &self.mcpwm0_evt_timer1_tez_st().bit(),
             )
             .finish()
     }

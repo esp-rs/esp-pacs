@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FH_CFG1")
-            .field("clr_ost", &format_args!("{}", self.clr_ost().bit()))
-            .field("cbcpulse", &format_args!("{}", self.cbcpulse().bits()))
-            .field("force_cbc", &format_args!("{}", self.force_cbc().bit()))
-            .field("force_ost", &format_args!("{}", self.force_ost().bit()))
+            .field("clr_ost", &self.clr_ost().bit())
+            .field("cbcpulse", &self.cbcpulse().bits())
+            .field("force_cbc", &self.force_cbc().bit())
+            .field("force_ost", &self.force_ost().bit())
             .finish()
     }
 }

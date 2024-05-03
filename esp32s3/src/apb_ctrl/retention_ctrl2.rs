@@ -44,22 +44,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CTRL2")
-            .field(
-                "ret_icache_size",
-                &format_args!("{}", self.ret_icache_size().bits()),
-            )
-            .field(
-                "ret_icache_vld_size",
-                &format_args!("{}", self.ret_icache_vld_size().bits()),
-            )
+            .field("ret_icache_size", &self.ret_icache_size().bits())
+            .field("ret_icache_vld_size", &self.ret_icache_vld_size().bits())
             .field(
                 "ret_icache_start_point",
-                &format_args!("{}", self.ret_icache_start_point().bits()),
+                &self.ret_icache_start_point().bits(),
             )
-            .field(
-                "ret_icache_enable",
-                &format_args!("{}", self.ret_icache_enable().bit()),
-            )
+            .field("ret_icache_enable", &self.ret_icache_enable().bit())
             .finish()
     }
 }

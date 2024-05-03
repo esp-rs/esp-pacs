@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATA_TYPE_CFG")
-            .field(
-                "data_type_min",
-                &format_args!("{}", self.data_type_min().bits()),
-            )
-            .field(
-                "data_type_max",
-                &format_args!("{}", self.data_type_max().bits()),
-            )
+            .field("data_type_min", &self.data_type_min().bits())
+            .field("data_type_max", &self.data_type_max().bits())
             .finish()
     }
 }

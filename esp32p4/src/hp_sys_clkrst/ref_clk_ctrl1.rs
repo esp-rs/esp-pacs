@@ -107,50 +107,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REF_CLK_CTRL1")
-            .field(
-                "ref_120m_clk_div_num",
-                &format_args!("{}", self.ref_120m_clk_div_num().bits()),
-            )
-            .field(
-                "ref_80m_clk_div_num",
-                &format_args!("{}", self.ref_80m_clk_div_num().bits()),
-            )
-            .field(
-                "ref_20m_clk_div_num",
-                &format_args!("{}", self.ref_20m_clk_div_num().bits()),
-            )
-            .field(
-                "tm_400m_clk_en",
-                &format_args!("{}", self.tm_400m_clk_en().bit()),
-            )
-            .field(
-                "tm_200m_clk_en",
-                &format_args!("{}", self.tm_200m_clk_en().bit()),
-            )
-            .field(
-                "tm_100m_clk_en",
-                &format_args!("{}", self.tm_100m_clk_en().bit()),
-            )
-            .field(
-                "ref_50m_clk_en",
-                &format_args!("{}", self.ref_50m_clk_en().bit()),
-            )
-            .field(
-                "ref_25m_clk_en",
-                &format_args!("{}", self.ref_25m_clk_en().bit()),
-            )
-            .field(
-                "tm_480m_clk_en",
-                &format_args!("{}", self.tm_480m_clk_en().bit()),
-            )
-            .field(
-                "ref_240m_clk_en",
-                &format_args!("{}", self.ref_240m_clk_en().bit()),
-            )
-            .field(
-                "tm_240m_clk_en",
-                &format_args!("{}", self.tm_240m_clk_en().bit()),
-            )
+            .field("ref_120m_clk_div_num", &self.ref_120m_clk_div_num().bits())
+            .field("ref_80m_clk_div_num", &self.ref_80m_clk_div_num().bits())
+            .field("ref_20m_clk_div_num", &self.ref_20m_clk_div_num().bits())
+            .field("tm_400m_clk_en", &self.tm_400m_clk_en().bit())
+            .field("tm_200m_clk_en", &self.tm_200m_clk_en().bit())
+            .field("tm_100m_clk_en", &self.tm_100m_clk_en().bit())
+            .field("ref_50m_clk_en", &self.ref_50m_clk_en().bit())
+            .field("ref_25m_clk_en", &self.ref_25m_clk_en().bit())
+            .field("tm_480m_clk_en", &self.tm_480m_clk_en().bit())
+            .field("ref_240m_clk_en", &self.ref_240m_clk_en().bit())
+            .field("tm_240m_clk_en", &self.tm_240m_clk_en().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SOURCE_0")
-            .field(
-                "cache_source_lock",
-                &format_args!("{}", self.cache_source_lock().bit()),
-            )
+            .field("cache_source_lock", &self.cache_source_lock().bit())
             .finish()
     }
 }

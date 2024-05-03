@@ -53,14 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIN_MODE")
-            .field("din0_mode", &format_args!("{}", self.din0_mode().bits()))
-            .field("din1_mode", &format_args!("{}", self.din1_mode().bits()))
-            .field("din2_mode", &format_args!("{}", self.din2_mode().bits()))
-            .field("din3_mode", &format_args!("{}", self.din3_mode().bits()))
-            .field(
-                "timing_hclk_active",
-                &format_args!("{}", self.timing_hclk_active().bit()),
-            )
+            .field("din0_mode", &self.din0_mode().bits())
+            .field("din1_mode", &self.din1_mode().bits())
+            .field("din2_mode", &self.din2_mode().bits())
+            .field("din3_mode", &self.din3_mode().bits())
+            .field("timing_hclk_active", &self.timing_hclk_active().bit())
             .finish()
     }
 }

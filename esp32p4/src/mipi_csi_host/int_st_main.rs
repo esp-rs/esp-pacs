@@ -71,40 +71,34 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_ST_MAIN")
             .field(
                 "st_status_int_phy_fatal",
-                &format_args!("{}", self.st_status_int_phy_fatal().bit()),
+                &self.st_status_int_phy_fatal().bit(),
             )
             .field(
                 "st_status_int_pkt_fatal",
-                &format_args!("{}", self.st_status_int_pkt_fatal().bit()),
+                &self.st_status_int_pkt_fatal().bit(),
             )
             .field(
                 "st_status_int_bndry_frame_fatal",
-                &format_args!("{}", self.st_status_int_bndry_frame_fatal().bit()),
+                &self.st_status_int_bndry_frame_fatal().bit(),
             )
             .field(
                 "st_status_int_seq_frame_fatal",
-                &format_args!("{}", self.st_status_int_seq_frame_fatal().bit()),
+                &self.st_status_int_seq_frame_fatal().bit(),
             )
             .field(
                 "st_status_int_crc_frame_fatal",
-                &format_args!("{}", self.st_status_int_crc_frame_fatal().bit()),
+                &self.st_status_int_crc_frame_fatal().bit(),
             )
             .field(
                 "st_status_int_pld_crc_fatal",
-                &format_args!("{}", self.st_status_int_pld_crc_fatal().bit()),
+                &self.st_status_int_pld_crc_fatal().bit(),
             )
-            .field(
-                "st_status_int_data_id",
-                &format_args!("{}", self.st_status_int_data_id().bit()),
-            )
+            .field("st_status_int_data_id", &self.st_status_int_data_id().bit())
             .field(
                 "st_status_int_ecc_corrected",
-                &format_args!("{}", self.st_status_int_ecc_corrected().bit()),
+                &self.st_status_int_ecc_corrected().bit(),
             )
-            .field(
-                "st_status_int_phy",
-                &format_args!("{}", self.st_status_int_phy().bit()),
-            )
+            .field("st_status_int_phy", &self.st_status_int_phy().bit())
             .finish()
     }
 }

@@ -161,62 +161,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field("index", &format_args!("{}", self.index().bits()))
-            .field(
-                "response_expect",
-                &format_args!("{}", self.response_expect().bit()),
-            )
-            .field(
-                "response_length",
-                &format_args!("{}", self.response_length().bit()),
-            )
-            .field(
-                "check_response_crc",
-                &format_args!("{}", self.check_response_crc().bit()),
-            )
-            .field(
-                "data_expected",
-                &format_args!("{}", self.data_expected().bit()),
-            )
-            .field("read_write", &format_args!("{}", self.read_write().bit()))
-            .field(
-                "transfer_mode",
-                &format_args!("{}", self.transfer_mode().bit()),
-            )
-            .field(
-                "send_auto_stop",
-                &format_args!("{}", self.send_auto_stop().bit()),
-            )
-            .field(
-                "wait_prvdata_complete",
-                &format_args!("{}", self.wait_prvdata_complete().bit()),
-            )
-            .field(
-                "stop_abort_cmd",
-                &format_args!("{}", self.stop_abort_cmd().bit()),
-            )
-            .field(
-                "send_initialization",
-                &format_args!("{}", self.send_initialization().bit()),
-            )
-            .field(
-                "card_number",
-                &format_args!("{}", self.card_number().bits()),
-            )
+            .field("index", &self.index().bits())
+            .field("response_expect", &self.response_expect().bit())
+            .field("response_length", &self.response_length().bit())
+            .field("check_response_crc", &self.check_response_crc().bit())
+            .field("data_expected", &self.data_expected().bit())
+            .field("read_write", &self.read_write().bit())
+            .field("transfer_mode", &self.transfer_mode().bit())
+            .field("send_auto_stop", &self.send_auto_stop().bit())
+            .field("wait_prvdata_complete", &self.wait_prvdata_complete().bit())
+            .field("stop_abort_cmd", &self.stop_abort_cmd().bit())
+            .field("send_initialization", &self.send_initialization().bit())
+            .field("card_number", &self.card_number().bits())
             .field(
                 "update_clock_registers_only",
-                &format_args!("{}", self.update_clock_registers_only().bit()),
+                &self.update_clock_registers_only().bit(),
             )
-            .field(
-                "read_ceata_device",
-                &format_args!("{}", self.read_ceata_device().bit()),
-            )
-            .field(
-                "ccs_expected",
-                &format_args!("{}", self.ccs_expected().bit()),
-            )
-            .field("use_hole", &format_args!("{}", self.use_hole().bit()))
-            .field("start_cmd", &format_args!("{}", self.start_cmd().bit()))
+            .field("read_ceata_device", &self.read_ceata_device().bit())
+            .field("ccs_expected", &self.ccs_expected().bit())
+            .field("use_hole", &self.use_hole().bit())
+            .field("start_cmd", &self.start_cmd().bit())
             .finish()
     }
 }

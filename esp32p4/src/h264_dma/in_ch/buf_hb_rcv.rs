@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BUF_HB_RCV")
             .field(
                 "in_cmdfifo_buf_hb_rcv",
-                &format_args!("{}", self.in_cmdfifo_buf_hb_rcv().bits()),
+                &self.in_cmdfifo_buf_hb_rcv().bits(),
             )
             .finish()
     }

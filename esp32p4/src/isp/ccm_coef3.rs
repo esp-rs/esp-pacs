@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CCM_COEF3")
-            .field("ccm_gg", &format_args!("{}", self.ccm_gg().bits()))
-            .field("ccm_gb", &format_args!("{}", self.ccm_gb().bits()))
+            .field("ccm_gg", &self.ccm_gg().bits())
+            .field("ccm_gb", &self.ccm_gb().bits())
             .finish()
     }
 }

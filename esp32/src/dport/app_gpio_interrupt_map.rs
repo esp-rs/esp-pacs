@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_GPIO_INTERRUPT_MAP")
             .field(
                 "app_gpio_interrupt_app_map",
-                &format_args!("{}", self.app_gpio_interrupt_app_map().bits()),
+                &self.app_gpio_interrupt_app_map().bits(),
             )
             .finish()
     }

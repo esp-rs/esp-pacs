@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_CPU_INTR_FROM_CPU_2_MAP")
             .field(
                 "app_cpu_intr_from_cpu_2_map",
-                &format_args!("{}", self.app_cpu_intr_from_cpu_2_map().bits()),
+                &self.app_cpu_intr_from_cpu_2_map().bits(),
             )
             .finish()
     }

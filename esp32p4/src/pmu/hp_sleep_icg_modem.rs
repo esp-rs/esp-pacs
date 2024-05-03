@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_ICG_MODEM")
             .field(
                 "hp_sleep_dig_icg_modem_code",
-                &format_args!("{}", self.hp_sleep_dig_icg_modem_code().bits()),
+                &self.hp_sleep_dig_icg_modem_code().bits(),
             )
             .finish()
     }

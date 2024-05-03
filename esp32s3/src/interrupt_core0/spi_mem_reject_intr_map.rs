@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("SPI_MEM_REJECT_INTR_MAP")
             .field(
                 "spi_mem_reject_intr_map",
-                &format_args!("{}", self.spi_mem_reject_intr_map().bits()),
+                &self.spi_mem_reject_intr_map().bits(),
             )
             .finish()
     }

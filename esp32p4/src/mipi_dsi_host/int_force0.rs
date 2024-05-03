@@ -197,90 +197,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE0")
-            .field(
-                "force_ack_with_err_0",
-                &format_args!("{}", self.force_ack_with_err_0().bit()),
-            )
-            .field(
-                "force_ack_with_err_1",
-                &format_args!("{}", self.force_ack_with_err_1().bit()),
-            )
-            .field(
-                "force_ack_with_err_2",
-                &format_args!("{}", self.force_ack_with_err_2().bit()),
-            )
-            .field(
-                "force_ack_with_err_3",
-                &format_args!("{}", self.force_ack_with_err_3().bit()),
-            )
-            .field(
-                "force_ack_with_err_4",
-                &format_args!("{}", self.force_ack_with_err_4().bit()),
-            )
-            .field(
-                "force_ack_with_err_5",
-                &format_args!("{}", self.force_ack_with_err_5().bit()),
-            )
-            .field(
-                "force_ack_with_err_6",
-                &format_args!("{}", self.force_ack_with_err_6().bit()),
-            )
-            .field(
-                "force_ack_with_err_7",
-                &format_args!("{}", self.force_ack_with_err_7().bit()),
-            )
-            .field(
-                "force_ack_with_err_8",
-                &format_args!("{}", self.force_ack_with_err_8().bit()),
-            )
-            .field(
-                "force_ack_with_err_9",
-                &format_args!("{}", self.force_ack_with_err_9().bit()),
-            )
-            .field(
-                "force_ack_with_err_10",
-                &format_args!("{}", self.force_ack_with_err_10().bit()),
-            )
-            .field(
-                "force_ack_with_err_11",
-                &format_args!("{}", self.force_ack_with_err_11().bit()),
-            )
-            .field(
-                "force_ack_with_err_12",
-                &format_args!("{}", self.force_ack_with_err_12().bit()),
-            )
-            .field(
-                "force_ack_with_err_13",
-                &format_args!("{}", self.force_ack_with_err_13().bit()),
-            )
-            .field(
-                "force_ack_with_err_14",
-                &format_args!("{}", self.force_ack_with_err_14().bit()),
-            )
-            .field(
-                "force_ack_with_err_15",
-                &format_args!("{}", self.force_ack_with_err_15().bit()),
-            )
-            .field(
-                "force_dphy_errors_0",
-                &format_args!("{}", self.force_dphy_errors_0().bit()),
-            )
-            .field(
-                "force_dphy_errors_1",
-                &format_args!("{}", self.force_dphy_errors_1().bit()),
-            )
-            .field(
-                "force_dphy_errors_2",
-                &format_args!("{}", self.force_dphy_errors_2().bit()),
-            )
-            .field(
-                "force_dphy_errors_3",
-                &format_args!("{}", self.force_dphy_errors_3().bit()),
-            )
-            .field(
-                "force_dphy_errors_4",
-                &format_args!("{}", self.force_dphy_errors_4().bit()),
-            )
+            .field("force_ack_with_err_0", &self.force_ack_with_err_0().bit())
+            .field("force_ack_with_err_1", &self.force_ack_with_err_1().bit())
+            .field("force_ack_with_err_2", &self.force_ack_with_err_2().bit())
+            .field("force_ack_with_err_3", &self.force_ack_with_err_3().bit())
+            .field("force_ack_with_err_4", &self.force_ack_with_err_4().bit())
+            .field("force_ack_with_err_5", &self.force_ack_with_err_5().bit())
+            .field("force_ack_with_err_6", &self.force_ack_with_err_6().bit())
+            .field("force_ack_with_err_7", &self.force_ack_with_err_7().bit())
+            .field("force_ack_with_err_8", &self.force_ack_with_err_8().bit())
+            .field("force_ack_with_err_9", &self.force_ack_with_err_9().bit())
+            .field("force_ack_with_err_10", &self.force_ack_with_err_10().bit())
+            .field("force_ack_with_err_11", &self.force_ack_with_err_11().bit())
+            .field("force_ack_with_err_12", &self.force_ack_with_err_12().bit())
+            .field("force_ack_with_err_13", &self.force_ack_with_err_13().bit())
+            .field("force_ack_with_err_14", &self.force_ack_with_err_14().bit())
+            .field("force_ack_with_err_15", &self.force_ack_with_err_15().bit())
+            .field("force_dphy_errors_0", &self.force_dphy_errors_0().bit())
+            .field("force_dphy_errors_1", &self.force_dphy_errors_1().bit())
+            .field("force_dphy_errors_2", &self.force_dphy_errors_2().bit())
+            .field("force_dphy_errors_3", &self.force_dphy_errors_3().bit())
+            .field("force_dphy_errors_4", &self.force_dphy_errors_4().bit())
             .finish()
     }
 }

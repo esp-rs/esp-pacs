@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSCLK_FREQ_QUERY_0")
-            .field("fosc_freq", &format_args!("{}", self.fosc_freq().bits()))
-            .field("pll_freq", &format_args!("{}", self.pll_freq().bits()))
+            .field("fosc_freq", &self.fosc_freq().bits())
+            .field("pll_freq", &self.pll_freq().bits())
             .finish()
     }
 }

@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_SP_CONF")
-            .field(
-                "scl_rst_slv_en",
-                &format_args!("{}", self.scl_rst_slv_en().bit()),
-            )
-            .field(
-                "scl_rst_slv_num",
-                &format_args!("{}", self.scl_rst_slv_num().bits()),
-            )
-            .field("scl_pd_en", &format_args!("{}", self.scl_pd_en().bit()))
-            .field("sda_pd_en", &format_args!("{}", self.sda_pd_en().bit()))
+            .field("scl_rst_slv_en", &self.scl_rst_slv_en().bit())
+            .field("scl_rst_slv_num", &self.scl_rst_slv_num().bits())
+            .field("scl_pd_en", &self.scl_pd_en().bit())
+            .field("sda_pd_en", &self.sda_pd_en().bit())
             .finish()
     }
 }

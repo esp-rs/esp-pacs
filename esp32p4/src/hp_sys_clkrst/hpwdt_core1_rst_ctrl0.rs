@@ -35,18 +35,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HPWDT_CORE1_RST_CTRL0")
-            .field(
-                "hpcore1_stall_en",
-                &format_args!("{}", self.hpcore1_stall_en().bit()),
-            )
+            .field("hpcore1_stall_en", &self.hpcore1_stall_en().bit())
             .field(
                 "hpcore1_stall_wait_num",
-                &format_args!("{}", self.hpcore1_stall_wait_num().bits()),
+                &self.hpcore1_stall_wait_num().bits(),
             )
-            .field(
-                "wdt_hpcore1_rst_len",
-                &format_args!("{}", self.wdt_hpcore1_rst_len().bits()),
-            )
+            .field("wdt_hpcore1_rst_len", &self.wdt_hpcore1_rst_len().bits())
             .finish()
     }
 }

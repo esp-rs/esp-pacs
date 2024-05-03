@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PSRAM_MSPI_INT_MAP")
             .field(
                 "core0_psram_mspi_int_map",
-                &format_args!("{}", self.core0_psram_mspi_int_map().bits()),
+                &self.core0_psram_mspi_int_map().bits(),
             )
             .finish()
     }

@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL")
             .field(
                 "lp_aonclkrst_rst_en_sdmmc",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_sdmmc().bit()),
+                &self.lp_aonclkrst_rst_en_sdmmc().bit(),
             )
             .field(
                 "lp_aonclkrst_force_norst_sdmmc",
-                &format_args!("{}", self.lp_aonclkrst_force_norst_sdmmc().bit()),
+                &self.lp_aonclkrst_force_norst_sdmmc().bit(),
             )
             .field(
                 "lp_aonclkrst_rst_en_emac",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_emac().bit()),
+                &self.lp_aonclkrst_rst_en_emac().bit(),
             )
             .field(
                 "lp_aonclkrst_force_norst_emac",
-                &format_args!("{}", self.lp_aonclkrst_force_norst_emac().bit()),
+                &self.lp_aonclkrst_force_norst_emac().bit(),
             )
             .finish()
     }

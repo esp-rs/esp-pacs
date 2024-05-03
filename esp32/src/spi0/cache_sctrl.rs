@@ -89,42 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SCTRL")
-            .field(
-                "usr_sram_dio",
-                &format_args!("{}", self.usr_sram_dio().bit()),
-            )
-            .field(
-                "usr_sram_qio",
-                &format_args!("{}", self.usr_sram_qio().bit()),
-            )
-            .field(
-                "usr_wr_sram_dummy",
-                &format_args!("{}", self.usr_wr_sram_dummy().bit()),
-            )
-            .field(
-                "usr_rd_sram_dummy",
-                &format_args!("{}", self.usr_rd_sram_dummy().bit()),
-            )
-            .field(
-                "cache_sram_usr_rcmd",
-                &format_args!("{}", self.cache_sram_usr_rcmd().bit()),
-            )
-            .field(
-                "sram_bytes_len",
-                &format_args!("{}", self.sram_bytes_len().bits()),
-            )
-            .field(
-                "sram_dummy_cyclelen",
-                &format_args!("{}", self.sram_dummy_cyclelen().bits()),
-            )
-            .field(
-                "sram_addr_bitlen",
-                &format_args!("{}", self.sram_addr_bitlen().bits()),
-            )
-            .field(
-                "cache_sram_usr_wcmd",
-                &format_args!("{}", self.cache_sram_usr_wcmd().bit()),
-            )
+            .field("usr_sram_dio", &self.usr_sram_dio().bit())
+            .field("usr_sram_qio", &self.usr_sram_qio().bit())
+            .field("usr_wr_sram_dummy", &self.usr_wr_sram_dummy().bit())
+            .field("usr_rd_sram_dummy", &self.usr_rd_sram_dummy().bit())
+            .field("cache_sram_usr_rcmd", &self.cache_sram_usr_rcmd().bit())
+            .field("sram_bytes_len", &self.sram_bytes_len().bits())
+            .field("sram_dummy_cyclelen", &self.sram_dummy_cyclelen().bits())
+            .field("sram_addr_bitlen", &self.sram_addr_bitlen().bits())
+            .field("cache_sram_usr_wcmd", &self.cache_sram_usr_wcmd().bit())
             .finish()
     }
 }

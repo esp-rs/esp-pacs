@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field("cnt_thres0", &format_args!("{}", self.cnt_thres0().bits()))
-            .field("cnt_thres1", &format_args!("{}", self.cnt_thres1().bits()))
+            .field("cnt_thres0", &self.cnt_thres0().bits())
+            .field("cnt_thres1", &self.cnt_thres1().bits())
             .finish()
     }
 }

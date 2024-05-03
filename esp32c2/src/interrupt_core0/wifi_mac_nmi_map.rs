@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_MAC_NMI_MAP")
-            .field(
-                "wifi_mac_nmi_map",
-                &format_args!("{}", self.wifi_mac_nmi_map().bits()),
-            )
+            .field("wifi_mac_nmi_map", &self.wifi_mac_nmi_map().bits())
             .finish()
     }
 }

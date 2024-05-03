@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS")
-            .field("loop_mode", &format_args!("{}", self.loop_mode().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("loop_mode", &self.loop_mode().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

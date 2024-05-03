@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACADDR0HIGH")
-            .field(
-                "address0_hi",
-                &format_args!("{}", self.address0_hi().bits()),
-            )
-            .field(
-                "address_enable0",
-                &format_args!("{}", self.address_enable0().bit()),
-            )
+            .field("address0_hi", &self.address0_hi().bits())
+            .field("address_enable0", &self.address_enable0().bit())
             .finish()
     }
 }

@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA5")
-            .field(
-                "reserved_3_160",
-                &format_args!("{}", self.reserved_3_160().bits()),
-            )
-            .field(
-                "rd_mac_version",
-                &format_args!("{}", self.rd_mac_version().bits()),
-            )
+            .field("reserved_3_160", &self.reserved_3_160().bits())
+            .field("rd_mac_version", &self.rd_mac_version().bits())
             .finish()
     }
 }

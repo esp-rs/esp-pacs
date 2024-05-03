@@ -46,20 +46,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEV_ADDR_TABLE6_LOC")
             .field(
                 "reg_dat_dev6_static_addr",
-                &format_args!("{}", self.reg_dat_dev6_static_addr().bits()),
+                &self.reg_dat_dev6_static_addr().bits(),
             )
             .field(
                 "reg_dat_dev6_dynamic_addr",
-                &format_args!("{}", self.reg_dat_dev6_dynamic_addr().bits()),
+                &self.reg_dat_dev6_dynamic_addr().bits(),
             )
             .field(
                 "reg_dat_dev6_nack_retry_cnt",
-                &format_args!("{}", self.reg_dat_dev6_nack_retry_cnt().bits()),
+                &self.reg_dat_dev6_nack_retry_cnt().bits(),
             )
-            .field(
-                "reg_dat_dev6_i2c",
-                &format_args!("{}", self.reg_dat_dev6_i2c().bit()),
-            )
+            .field("reg_dat_dev6_i2c", &self.reg_dat_dev6_i2c().bit())
             .finish()
     }
 }

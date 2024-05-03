@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_SYNC_INT_CTRL")
             .field(
                 "pro_icache_sync_int_st",
-                &format_args!("{}", self.pro_icache_sync_int_st().bit()),
+                &self.pro_icache_sync_int_st().bit(),
             )
             .field(
                 "pro_icache_sync_int_ena",
-                &format_args!("{}", self.pro_icache_sync_int_ena().bit()),
+                &self.pro_icache_sync_int_ena().bit(),
             )
             .field(
                 "pro_dcache_sync_int_st",
-                &format_args!("{}", self.pro_dcache_sync_int_st().bit()),
+                &self.pro_dcache_sync_int_st().bit(),
             )
             .field(
                 "pro_dcache_sync_int_ena",
-                &format_args!("{}", self.pro_dcache_sync_int_ena().bit()),
+                &self.pro_dcache_sync_int_ena().bit(),
             )
             .finish()
     }

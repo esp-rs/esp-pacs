@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE0_PRELOCK_SCT0_ADDR")
             .field(
                 "l1_icache0_prelock_sct0_addr",
-                &format_args!("{}", self.l1_icache0_prelock_sct0_addr().bits()),
+                &self.l1_icache0_prelock_sct0_addr().bits(),
             )
             .finish()
     }

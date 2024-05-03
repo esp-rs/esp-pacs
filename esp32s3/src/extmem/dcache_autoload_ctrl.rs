@@ -80,35 +80,20 @@ impl core::fmt::Debug for R {
         f.debug_struct("DCACHE_AUTOLOAD_CTRL")
             .field(
                 "dcache_autoload_sct0_ena",
-                &format_args!("{}", self.dcache_autoload_sct0_ena().bit()),
+                &self.dcache_autoload_sct0_ena().bit(),
             )
             .field(
                 "dcache_autoload_sct1_ena",
-                &format_args!("{}", self.dcache_autoload_sct1_ena().bit()),
+                &self.dcache_autoload_sct1_ena().bit(),
             )
-            .field(
-                "dcache_autoload_ena",
-                &format_args!("{}", self.dcache_autoload_ena().bit()),
-            )
-            .field(
-                "dcache_autoload_done",
-                &format_args!("{}", self.dcache_autoload_done().bit()),
-            )
-            .field(
-                "dcache_autoload_order",
-                &format_args!("{}", self.dcache_autoload_order().bit()),
-            )
-            .field(
-                "dcache_autoload_rqst",
-                &format_args!("{}", self.dcache_autoload_rqst().bits()),
-            )
-            .field(
-                "dcache_autoload_size",
-                &format_args!("{}", self.dcache_autoload_size().bits()),
-            )
+            .field("dcache_autoload_ena", &self.dcache_autoload_ena().bit())
+            .field("dcache_autoload_done", &self.dcache_autoload_done().bit())
+            .field("dcache_autoload_order", &self.dcache_autoload_order().bit())
+            .field("dcache_autoload_rqst", &self.dcache_autoload_rqst().bits())
+            .field("dcache_autoload_size", &self.dcache_autoload_size().bits())
             .field(
                 "dcache_autoload_buffer_clear",
-                &format_args!("{}", self.dcache_autoload_buffer_clear().bit()),
+                &self.dcache_autoload_buffer_clear().bit(),
             )
             .finish()
     }

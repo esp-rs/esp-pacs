@@ -62,29 +62,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHSTATUS")
-            .field(
-                "mem_waddr_ex",
-                &format_args!("{}", self.mem_waddr_ex().bits()),
-            )
-            .field(
-                "mem_raddr_ex",
-                &format_args!("{}", self.mem_raddr_ex().bits()),
-            )
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field(
-                "mem_owner_err",
-                &format_args!("{}", self.mem_owner_err().bit()),
-            )
-            .field("mem_full", &format_args!("{}", self.mem_full().bit()))
-            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
-            .field(
-                "apb_mem_wr_err",
-                &format_args!("{}", self.apb_mem_wr_err().bit()),
-            )
-            .field(
-                "apb_mem_rd_err",
-                &format_args!("{}", self.apb_mem_rd_err().bit()),
-            )
+            .field("mem_waddr_ex", &self.mem_waddr_ex().bits())
+            .field("mem_raddr_ex", &self.mem_raddr_ex().bits())
+            .field("state", &self.state().bits())
+            .field("mem_owner_err", &self.mem_owner_err().bit())
+            .field("mem_full", &self.mem_full().bit())
+            .field("mem_empty", &self.mem_empty().bit())
+            .field("apb_mem_wr_err", &self.apb_mem_wr_err().bit())
+            .field("apb_mem_rd_err", &self.apb_mem_rd_err().bit())
             .finish()
     }
 }

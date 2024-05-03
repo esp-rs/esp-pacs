@@ -64,15 +64,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field("timer_sel", &format_args!("{}", self.timer_sel().bits()))
-            .field("sig_out_en", &format_args!("{}", self.sig_out_en().bit()))
-            .field("idle_lv", &format_args!("{}", self.idle_lv().bit()))
-            .field("ovf_num", &format_args!("{}", self.ovf_num().bits()))
-            .field("ovf_cnt_en", &format_args!("{}", self.ovf_cnt_en().bit()))
-            .field(
-                "ovf_cnt_reset_st",
-                &format_args!("{}", self.ovf_cnt_reset_st().bit()),
-            )
+            .field("timer_sel", &self.timer_sel().bits())
+            .field("sig_out_en", &self.sig_out_en().bit())
+            .field("idle_lv", &self.idle_lv().bit())
+            .field("ovf_num", &self.ovf_num().bits())
+            .field("ovf_cnt_en", &self.ovf_cnt_en().bit())
+            .field("ovf_cnt_reset_st", &self.ovf_cnt_reset_st().bit())
             .finish()
     }
 }

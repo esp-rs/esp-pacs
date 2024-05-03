@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_MEM_MASK")
-            .field(
-                "pd_hp_mem2_pd_mask",
-                &format_args!("{}", self.pd_hp_mem2_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem1_pd_mask",
-                &format_args!("{}", self.pd_hp_mem1_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem0_pd_mask",
-                &format_args!("{}", self.pd_hp_mem0_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem2_mask",
-                &format_args!("{}", self.pd_hp_mem2_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem1_mask",
-                &format_args!("{}", self.pd_hp_mem1_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem0_mask",
-                &format_args!("{}", self.pd_hp_mem0_mask().bits()),
-            )
+            .field("pd_hp_mem2_pd_mask", &self.pd_hp_mem2_pd_mask().bits())
+            .field("pd_hp_mem1_pd_mask", &self.pd_hp_mem1_pd_mask().bits())
+            .field("pd_hp_mem0_pd_mask", &self.pd_hp_mem0_pd_mask().bits())
+            .field("pd_hp_mem2_mask", &self.pd_hp_mem2_mask().bits())
+            .field("pd_hp_mem1_mask", &self.pd_hp_mem1_mask().bits())
+            .field("pd_hp_mem0_mask", &self.pd_hp_mem0_mask().bits())
             .finish()
     }
 }

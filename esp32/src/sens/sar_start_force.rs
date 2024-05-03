@@ -107,38 +107,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_START_FORCE")
-            .field(
-                "sar1_bit_width",
-                &format_args!("{}", self.sar1_bit_width().bits()),
-            )
-            .field(
-                "sar2_bit_width",
-                &format_args!("{}", self.sar2_bit_width().bits()),
-            )
-            .field(
-                "sar2_en_test",
-                &format_args!("{}", self.sar2_en_test().bit()),
-            )
-            .field(
-                "sar2_pwdet_cct",
-                &format_args!("{}", self.sar2_pwdet_cct().bits()),
-            )
+            .field("sar1_bit_width", &self.sar1_bit_width().bits())
+            .field("sar2_bit_width", &self.sar2_bit_width().bits())
+            .field("sar2_en_test", &self.sar2_en_test().bit())
+            .field("sar2_pwdet_cct", &self.sar2_pwdet_cct().bits())
             .field(
                 "ulp_cp_force_start_top",
-                &format_args!("{}", self.ulp_cp_force_start_top().bit()),
+                &self.ulp_cp_force_start_top().bit(),
             )
-            .field(
-                "ulp_cp_start_top",
-                &format_args!("{}", self.ulp_cp_start_top().bit()),
-            )
-            .field("sarclk_en", &format_args!("{}", self.sarclk_en().bit()))
-            .field("pc_init", &format_args!("{}", self.pc_init().bits()))
-            .field("sar2_stop", &format_args!("{}", self.sar2_stop().bit()))
-            .field("sar1_stop", &format_args!("{}", self.sar1_stop().bit()))
-            .field(
-                "sar2_pwdet_en",
-                &format_args!("{}", self.sar2_pwdet_en().bit()),
-            )
+            .field("ulp_cp_start_top", &self.ulp_cp_start_top().bit())
+            .field("sarclk_en", &self.sarclk_en().bit())
+            .field("pc_init", &self.pc_init().bits())
+            .field("sar2_stop", &self.sar2_stop().bit())
+            .field("sar1_stop", &self.sar1_stop().bit())
+            .field("sar2_pwdet_en", &self.sar2_pwdet_en().bit())
             .finish()
     }
 }

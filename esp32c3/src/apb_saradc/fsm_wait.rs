@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FSM_WAIT")
-            .field("xpd_wait", &format_args!("{}", self.xpd_wait().bits()))
-            .field("rstb_wait", &format_args!("{}", self.rstb_wait().bits()))
-            .field(
-                "standby_wait",
-                &format_args!("{}", self.standby_wait().bits()),
-            )
+            .field("xpd_wait", &self.xpd_wait().bits())
+            .field("rstb_wait", &self.rstb_wait().bits())
+            .field("standby_wait", &self.standby_wait().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_CLK_DIV")
-            .field(
-                "sar2_clk_div_num",
-                &format_args!("{}", self.sar2_clk_div_num().bits()),
-            )
-            .field(
-                "sar1_clk_div_num",
-                &format_args!("{}", self.sar1_clk_div_num().bits()),
-            )
+            .field("sar2_clk_div_num", &self.sar2_clk_div_num().bits())
+            .field("sar1_clk_div_num", &self.sar1_clk_div_num().bits())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DPORT_5")
             .field(
                 "pro_dport_reserve_fifo_3",
-                &format_args!("{}", self.pro_dport_reserve_fifo_3().bits()),
+                &self.pro_dport_reserve_fifo_3().bits(),
             )
             .finish()
     }

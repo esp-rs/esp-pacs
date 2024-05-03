@@ -62,21 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH_SUS_CMD")
-            .field("flash_per", &format_args!("{}", self.flash_per().bit()))
-            .field("flash_pes", &format_args!("{}", self.flash_pes().bit()))
-            .field(
-                "flash_per_wait_en",
-                &format_args!("{}", self.flash_per_wait_en().bit()),
-            )
-            .field(
-                "flash_pes_wait_en",
-                &format_args!("{}", self.flash_pes_wait_en().bit()),
-            )
-            .field("pes_per_en", &format_args!("{}", self.pes_per_en().bit()))
-            .field(
-                "pesr_idle_en",
-                &format_args!("{}", self.pesr_idle_en().bit()),
-            )
+            .field("flash_per", &self.flash_per().bit())
+            .field("flash_pes", &self.flash_pes().bit())
+            .field("flash_per_wait_en", &self.flash_per_wait_en().bit())
+            .field("flash_pes_wait_en", &self.flash_pes_wait_en().bit())
+            .field("pes_per_en", &self.pes_per_en().bit())
+            .field("pesr_idle_en", &self.pesr_idle_en().bit())
             .finish()
     }
 }

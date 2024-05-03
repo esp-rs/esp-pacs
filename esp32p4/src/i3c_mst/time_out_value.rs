@@ -82,36 +82,30 @@ impl core::fmt::Debug for R {
         f.debug_struct("TIME_OUT_VALUE")
             .field(
                 "reg_resp_buf_to_value",
-                &format_args!("{}", self.reg_resp_buf_to_value().bits()),
+                &self.reg_resp_buf_to_value().bits(),
             )
-            .field(
-                "reg_resp_buf_to_en",
-                &format_args!("{}", self.reg_resp_buf_to_en().bit()),
-            )
+            .field("reg_resp_buf_to_en", &self.reg_resp_buf_to_en().bit())
             .field(
                 "reg_ibi_data_buf_to_value",
-                &format_args!("{}", self.reg_ibi_data_buf_to_value().bits()),
+                &self.reg_ibi_data_buf_to_value().bits(),
             )
             .field(
                 "reg_ibi_data_buf_to_en",
-                &format_args!("{}", self.reg_ibi_data_buf_to_en().bit()),
+                &self.reg_ibi_data_buf_to_en().bit(),
             )
             .field(
                 "reg_ibi_status_buf_to_value",
-                &format_args!("{}", self.reg_ibi_status_buf_to_value().bits()),
+                &self.reg_ibi_status_buf_to_value().bits(),
             )
             .field(
                 "reg_ibi_status_buf_to_en",
-                &format_args!("{}", self.reg_ibi_status_buf_to_en().bit()),
+                &self.reg_ibi_status_buf_to_en().bit(),
             )
             .field(
                 "reg_rx_data_buf_to_value",
-                &format_args!("{}", self.reg_rx_data_buf_to_value().bits()),
+                &self.reg_rx_data_buf_to_value().bits(),
             )
-            .field(
-                "reg_rx_data_buf_to_en",
-                &format_args!("{}", self.reg_rx_data_buf_to_en().bit()),
-            )
+            .field("reg_rx_data_buf_to_en", &self.reg_rx_data_buf_to_en().bit())
             .finish()
     }
 }

@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FUNC_OUT_SEL_CFG")
-            .field("out_sel", &format_args!("{}", self.out_sel().bits()))
-            .field("inv_sel", &format_args!("{}", self.inv_sel().bit()))
-            .field("oen_sel", &format_args!("{}", self.oen_sel().bit()))
-            .field("oen_inv_sel", &format_args!("{}", self.oen_inv_sel().bit()))
+            .field("out_sel", &self.out_sel().bits())
+            .field("inv_sel", &self.inv_sel().bit())
+            .field("oen_sel", &self.oen_sel().bit())
+            .field("oen_inv_sel", &self.oen_inv_sel().bit())
             .finish()
     }
 }

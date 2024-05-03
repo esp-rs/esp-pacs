@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_AUTOLOAD_SECTION1_ADDR")
             .field(
                 "pro_dcache_autoload_sct1_addr",
-                &format_args!("{}", self.pro_dcache_autoload_sct1_addr().bits()),
+                &self.pro_dcache_autoload_sct1_addr().bits(),
             )
             .finish()
     }

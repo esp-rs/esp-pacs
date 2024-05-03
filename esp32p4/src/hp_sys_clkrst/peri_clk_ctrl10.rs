@@ -71,28 +71,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL10")
-            .field(
-                "i2c0_clk_src_sel",
-                &format_args!("{}", self.i2c0_clk_src_sel().bit()),
-            )
-            .field("i2c0_clk_en", &format_args!("{}", self.i2c0_clk_en().bit()))
-            .field(
-                "i2c0_clk_div_num",
-                &format_args!("{}", self.i2c0_clk_div_num().bits()),
-            )
+            .field("i2c0_clk_src_sel", &self.i2c0_clk_src_sel().bit())
+            .field("i2c0_clk_en", &self.i2c0_clk_en().bit())
+            .field("i2c0_clk_div_num", &self.i2c0_clk_div_num().bits())
             .field(
                 "i2c0_clk_div_numerator",
-                &format_args!("{}", self.i2c0_clk_div_numerator().bits()),
+                &self.i2c0_clk_div_numerator().bits(),
             )
             .field(
                 "i2c0_clk_div_denominator",
-                &format_args!("{}", self.i2c0_clk_div_denominator().bits()),
+                &self.i2c0_clk_div_denominator().bits(),
             )
-            .field(
-                "i2c1_clk_src_sel",
-                &format_args!("{}", self.i2c1_clk_src_sel().bit()),
-            )
-            .field("i2c1_clk_en", &format_args!("{}", self.i2c1_clk_en().bit()))
+            .field("i2c1_clk_src_sel", &self.i2c1_clk_src_sel().bit())
+            .field("i2c1_clk_en", &self.i2c1_clk_en().bit())
             .finish()
     }
 }

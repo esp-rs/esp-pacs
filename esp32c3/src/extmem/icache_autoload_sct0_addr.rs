@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_AUTOLOAD_SCT0_ADDR")
             .field(
                 "icache_autoload_sct0_addr",
-                &format_args!("{}", self.icache_autoload_sct0_addr().bits()),
+                &self.icache_autoload_sct0_addr().bits(),
             )
             .finish()
     }

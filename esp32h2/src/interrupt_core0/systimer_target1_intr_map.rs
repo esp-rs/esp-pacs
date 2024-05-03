@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYSTIMER_TARGET1_INTR_MAP")
             .field(
                 "systimer_target1_intr_map",
-                &format_args!("{}", self.systimer_target1_intr_map().bits()),
+                &self.systimer_target1_intr_map().bits(),
             )
             .finish()
     }

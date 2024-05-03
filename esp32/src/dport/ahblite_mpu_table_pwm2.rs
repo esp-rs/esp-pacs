@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_PWM2")
             .field(
                 "pwm2_access_grant_config",
-                &format_args!("{}", self.pwm2_access_grant_config().bits()),
+                &self.pwm2_access_grant_config().bits(),
             )
             .finish()
     }

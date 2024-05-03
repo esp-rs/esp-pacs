@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_BUSY")
-            .field("busy_state", &format_args!("{}", self.busy_state().bit()))
+            .field("busy_state", &self.busy_state().bit())
             .finish()
     }
 }

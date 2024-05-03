@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TMR_LPCLK_CFG")
-            .field(
-                "phy_clklp2hs_time",
-                &format_args!("{}", self.phy_clklp2hs_time().bits()),
-            )
-            .field(
-                "phy_clkhs2lp_time",
-                &format_args!("{}", self.phy_clkhs2lp_time().bits()),
-            )
+            .field("phy_clklp2hs_time", &self.phy_clklp2hs_time().bits())
+            .field("phy_clkhs2lp_time", &self.phy_clkhs2lp_time().bits())
             .finish()
     }
 }

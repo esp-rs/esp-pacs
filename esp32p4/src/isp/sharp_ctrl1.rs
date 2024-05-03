@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_CTRL1")
-            .field(
-                "sharp_gradient_max",
-                &format_args!("{}", self.sharp_gradient_max().bits()),
-            )
+            .field("sharp_gradient_max", &self.sharp_gradient_max().bits())
             .finish()
     }
 }

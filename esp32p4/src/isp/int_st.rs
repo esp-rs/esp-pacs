@@ -209,80 +209,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "isp_data_type_err",
-                &format_args!("{}", self.isp_data_type_err().bit()),
-            )
-            .field(
-                "isp_async_fifo_ovf",
-                &format_args!("{}", self.isp_async_fifo_ovf().bit()),
-            )
-            .field(
-                "isp_buf_full",
-                &format_args!("{}", self.isp_buf_full().bit()),
-            )
-            .field(
-                "isp_hvnum_setting_err",
-                &format_args!("{}", self.isp_hvnum_setting_err().bit()),
-            )
+            .field("isp_data_type_err", &self.isp_data_type_err().bit())
+            .field("isp_async_fifo_ovf", &self.isp_async_fifo_ovf().bit())
+            .field("isp_buf_full", &self.isp_buf_full().bit())
+            .field("isp_hvnum_setting_err", &self.isp_hvnum_setting_err().bit())
             .field(
                 "isp_data_type_setting_err",
-                &format_args!("{}", self.isp_data_type_setting_err().bit()),
+                &self.isp_data_type_setting_err().bit(),
             )
-            .field(
-                "isp_mipi_hnum_unmatch",
-                &format_args!("{}", self.isp_mipi_hnum_unmatch().bit()),
-            )
-            .field(
-                "dpc_check_done",
-                &format_args!("{}", self.dpc_check_done().bit()),
-            )
-            .field(
-                "gamma_xcoord_err",
-                &format_args!("{}", self.gamma_xcoord_err().bit()),
-            )
-            .field("ae_monitor", &format_args!("{}", self.ae_monitor().bit()))
-            .field(
-                "ae_frame_done",
-                &format_args!("{}", self.ae_frame_done().bit()),
-            )
-            .field("af_fdone", &format_args!("{}", self.af_fdone().bit()))
-            .field("af_env", &format_args!("{}", self.af_env().bit()))
-            .field("awb_fdone", &format_args!("{}", self.awb_fdone().bit()))
-            .field("hist_fdone", &format_args!("{}", self.hist_fdone().bit()))
-            .field("frame", &format_args!("{}", self.frame().bit()))
-            .field("blc_frame", &format_args!("{}", self.blc_frame().bit()))
-            .field("lsc_frame", &format_args!("{}", self.lsc_frame().bit()))
-            .field("dpc_frame", &format_args!("{}", self.dpc_frame().bit()))
-            .field("bf_frame", &format_args!("{}", self.bf_frame().bit()))
-            .field(
-                "demosaic_frame",
-                &format_args!("{}", self.demosaic_frame().bit()),
-            )
-            .field(
-                "median_frame",
-                &format_args!("{}", self.median_frame().bit()),
-            )
-            .field("ccm_frame", &format_args!("{}", self.ccm_frame().bit()))
-            .field("gamma_frame", &format_args!("{}", self.gamma_frame().bit()))
-            .field(
-                "rgb2yuv_frame",
-                &format_args!("{}", self.rgb2yuv_frame().bit()),
-            )
-            .field("sharp_frame", &format_args!("{}", self.sharp_frame().bit()))
-            .field("color_frame", &format_args!("{}", self.color_frame().bit()))
-            .field(
-                "yuv2rgb_frame",
-                &format_args!("{}", self.yuv2rgb_frame().bit()),
-            )
-            .field(
-                "tail_idi_frame",
-                &format_args!("{}", self.tail_idi_frame().bit()),
-            )
-            .field(
-                "header_idi_frame",
-                &format_args!("{}", self.header_idi_frame().bit()),
-            )
+            .field("isp_mipi_hnum_unmatch", &self.isp_mipi_hnum_unmatch().bit())
+            .field("dpc_check_done", &self.dpc_check_done().bit())
+            .field("gamma_xcoord_err", &self.gamma_xcoord_err().bit())
+            .field("ae_monitor", &self.ae_monitor().bit())
+            .field("ae_frame_done", &self.ae_frame_done().bit())
+            .field("af_fdone", &self.af_fdone().bit())
+            .field("af_env", &self.af_env().bit())
+            .field("awb_fdone", &self.awb_fdone().bit())
+            .field("hist_fdone", &self.hist_fdone().bit())
+            .field("frame", &self.frame().bit())
+            .field("blc_frame", &self.blc_frame().bit())
+            .field("lsc_frame", &self.lsc_frame().bit())
+            .field("dpc_frame", &self.dpc_frame().bit())
+            .field("bf_frame", &self.bf_frame().bit())
+            .field("demosaic_frame", &self.demosaic_frame().bit())
+            .field("median_frame", &self.median_frame().bit())
+            .field("ccm_frame", &self.ccm_frame().bit())
+            .field("gamma_frame", &self.gamma_frame().bit())
+            .field("rgb2yuv_frame", &self.rgb2yuv_frame().bit())
+            .field("sharp_frame", &self.sharp_frame().bit())
+            .field("color_frame", &self.color_frame().bit())
+            .field("yuv2rgb_frame", &self.yuv2rgb_frame().bit())
+            .field("tail_idi_frame", &self.tail_idi_frame().bit())
+            .field("header_idi_frame", &self.header_idi_frame().bit())
             .finish()
     }
 }

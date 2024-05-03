@@ -55,23 +55,20 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_SYSCLK")
             .field(
                 "hp_sleep_dig_sys_clk_no_div",
-                &format_args!("{}", self.hp_sleep_dig_sys_clk_no_div().bit()),
+                &self.hp_sleep_dig_sys_clk_no_div().bit(),
             )
             .field(
                 "hp_sleep_icg_sys_clock_en",
-                &format_args!("{}", self.hp_sleep_icg_sys_clock_en().bit()),
+                &self.hp_sleep_icg_sys_clock_en().bit(),
             )
             .field(
                 "hp_sleep_sys_clk_slp_sel",
-                &format_args!("{}", self.hp_sleep_sys_clk_slp_sel().bit()),
+                &self.hp_sleep_sys_clk_slp_sel().bit(),
             )
-            .field(
-                "hp_sleep_icg_slp_sel",
-                &format_args!("{}", self.hp_sleep_icg_slp_sel().bit()),
-            )
+            .field("hp_sleep_icg_slp_sel", &self.hp_sleep_icg_slp_sel().bit())
             .field(
                 "hp_sleep_dig_sys_clk_sel",
-                &format_args!("{}", self.hp_sleep_dig_sys_clk_sel().bits()),
+                &self.hp_sleep_dig_sys_clk_sel().bits(),
             )
             .finish()
     }

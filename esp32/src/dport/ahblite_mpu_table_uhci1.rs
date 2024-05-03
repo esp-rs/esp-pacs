@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_UHCI1")
             .field(
                 "uhci1_access_grant_config",
-                &format_args!("{}", self.uhci1_access_grant_config().bits()),
+                &self.uhci1_access_grant_config().bits(),
             )
             .finish()
     }

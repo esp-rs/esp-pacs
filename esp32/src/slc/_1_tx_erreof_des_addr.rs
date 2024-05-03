@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("_1_TX_ERREOF_DES_ADDR")
             .field(
                 "slc1_tx_err_eof_des_addr",
-                &format_args!("{}", self.slc1_tx_err_eof_des_addr().bits()),
+                &self.slc1_tx_err_eof_des_addr().bits(),
             )
             .finish()
     }

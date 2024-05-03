@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBUS0_ABANDON_CNT")
-            .field(
-                "dbus0_abandon_cnt",
-                &format_args!("{}", self.dbus0_abandon_cnt().bits()),
-            )
+            .field("dbus0_abandon_cnt", &self.dbus0_abandon_cnt().bits())
             .finish()
     }
 }

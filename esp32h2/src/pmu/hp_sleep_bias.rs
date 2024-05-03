@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_BIAS")
-            .field(
-                "hp_sleep_xpd_trx",
-                &format_args!("{}", self.hp_sleep_xpd_trx().bit()),
-            )
-            .field(
-                "hp_sleep_xpd_bias",
-                &format_args!("{}", self.hp_sleep_xpd_bias().bit()),
-            )
-            .field(
-                "hp_sleep_pd_cur",
-                &format_args!("{}", self.hp_sleep_pd_cur().bit()),
-            )
-            .field("sleep", &format_args!("{}", self.sleep().bit()))
+            .field("hp_sleep_xpd_trx", &self.hp_sleep_xpd_trx().bit())
+            .field("hp_sleep_xpd_bias", &self.hp_sleep_xpd_bias().bit())
+            .field("hp_sleep_pd_cur", &self.hp_sleep_pd_cur().bit())
+            .field("sleep", &self.sleep().bit())
             .finish()
     }
 }

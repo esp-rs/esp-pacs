@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_IN_ERR_EOF_DES_ADDR")
-            .field(
-                "in_err_eof_des_addr",
-                &format_args!("{}", self.in_err_eof_des_addr().bits()),
-            )
+            .field("in_err_eof_des_addr", &self.in_err_eof_des_addr().bits())
             .finish()
     }
 }

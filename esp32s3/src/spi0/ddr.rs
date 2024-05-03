@@ -170,78 +170,48 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DDR")
-            .field(
-                "spi_fmem_ddr_en",
-                &format_args!("{}", self.spi_fmem_ddr_en().bit()),
-            )
-            .field(
-                "spi_fmem_var_dummy",
-                &format_args!("{}", self.spi_fmem_var_dummy().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_rdat_swp",
-                &format_args!("{}", self.spi_fmem_ddr_rdat_swp().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_wdat_swp",
-                &format_args!("{}", self.spi_fmem_ddr_wdat_swp().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_cmd_dis",
-                &format_args!("{}", self.spi_fmem_ddr_cmd_dis().bit()),
-            )
+            .field("spi_fmem_ddr_en", &self.spi_fmem_ddr_en().bit())
+            .field("spi_fmem_var_dummy", &self.spi_fmem_var_dummy().bit())
+            .field("spi_fmem_ddr_rdat_swp", &self.spi_fmem_ddr_rdat_swp().bit())
+            .field("spi_fmem_ddr_wdat_swp", &self.spi_fmem_ddr_wdat_swp().bit())
+            .field("spi_fmem_ddr_cmd_dis", &self.spi_fmem_ddr_cmd_dis().bit())
             .field(
                 "spi_fmem_outminbytelen",
-                &format_args!("{}", self.spi_fmem_outminbytelen().bits()),
+                &self.spi_fmem_outminbytelen().bits(),
             )
             .field(
                 "spi_fmem_tx_ddr_msk_en",
-                &format_args!("{}", self.spi_fmem_tx_ddr_msk_en().bit()),
+                &self.spi_fmem_tx_ddr_msk_en().bit(),
             )
             .field(
                 "spi_fmem_rx_ddr_msk_en",
-                &format_args!("{}", self.spi_fmem_rx_ddr_msk_en().bit()),
+                &self.spi_fmem_rx_ddr_msk_en().bit(),
             )
             .field(
                 "spi_fmem_usr_ddr_dqs_thd",
-                &format_args!("{}", self.spi_fmem_usr_ddr_dqs_thd().bits()),
+                &self.spi_fmem_usr_ddr_dqs_thd().bits(),
             )
-            .field(
-                "spi_fmem_ddr_dqs_loop",
-                &format_args!("{}", self.spi_fmem_ddr_dqs_loop().bit()),
-            )
+            .field("spi_fmem_ddr_dqs_loop", &self.spi_fmem_ddr_dqs_loop().bit())
             .field(
                 "spi_fmem_ddr_dqs_loop_mode",
-                &format_args!("{}", self.spi_fmem_ddr_dqs_loop_mode().bit()),
+                &self.spi_fmem_ddr_dqs_loop_mode().bit(),
             )
-            .field(
-                "spi_fmem_clk_diff_en",
-                &format_args!("{}", self.spi_fmem_clk_diff_en().bit()),
-            )
+            .field("spi_fmem_clk_diff_en", &self.spi_fmem_clk_diff_en().bit())
             .field(
                 "spi_fmem_hyperbus_mode",
-                &format_args!("{}", self.spi_fmem_hyperbus_mode().bit()),
+                &self.spi_fmem_hyperbus_mode().bit(),
             )
-            .field(
-                "spi_fmem_dqs_ca_in",
-                &format_args!("{}", self.spi_fmem_dqs_ca_in().bit()),
-            )
+            .field("spi_fmem_dqs_ca_in", &self.spi_fmem_dqs_ca_in().bit())
             .field(
                 "spi_fmem_hyperbus_dummy_2x",
-                &format_args!("{}", self.spi_fmem_hyperbus_dummy_2x().bit()),
+                &self.spi_fmem_hyperbus_dummy_2x().bit(),
             )
-            .field(
-                "spi_fmem_clk_diff_inv",
-                &format_args!("{}", self.spi_fmem_clk_diff_inv().bit()),
-            )
+            .field("spi_fmem_clk_diff_inv", &self.spi_fmem_clk_diff_inv().bit())
             .field(
                 "spi_fmem_octa_ram_addr",
-                &format_args!("{}", self.spi_fmem_octa_ram_addr().bit()),
+                &self.spi_fmem_octa_ram_addr().bit(),
             )
-            .field(
-                "spi_fmem_hyperbus_ca",
-                &format_args!("{}", self.spi_fmem_hyperbus_ca().bit()),
-            )
+            .field("spi_fmem_hyperbus_ca", &self.spi_fmem_hyperbus_ca().bit())
             .finish()
     }
 }

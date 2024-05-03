@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_SW_ECC_BWE_MASK")
             .field(
                 "reg_l2_mem_sw_ecc_bwe_mask_ctrl",
-                &format_args!("{}", self.reg_l2_mem_sw_ecc_bwe_mask_ctrl().bit()),
+                &self.reg_l2_mem_sw_ecc_bwe_mask_ctrl().bit(),
             )
             .finish()
     }

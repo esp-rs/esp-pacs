@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_PKT_SIZE")
-            .field(
-                "vid_pkt_size",
-                &format_args!("{}", self.vid_pkt_size().bits()),
-            )
+            .field("vid_pkt_size", &self.vid_pkt_size().bits())
             .finish()
     }
 }

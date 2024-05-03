@@ -54,20 +54,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("_0_LEN_CONF")
             .field(
                 "slc0_rx_packet_load_en",
-                &format_args!("{}", self.slc0_rx_packet_load_en().bit()),
+                &self.slc0_rx_packet_load_en().bit(),
             )
             .field(
                 "slc0_tx_packet_load_en",
-                &format_args!("{}", self.slc0_tx_packet_load_en().bit()),
+                &self.slc0_tx_packet_load_en().bit(),
             )
-            .field(
-                "slc0_rx_new_pkt_ind",
-                &format_args!("{}", self.slc0_rx_new_pkt_ind().bit()),
-            )
-            .field(
-                "slc0_tx_new_pkt_ind",
-                &format_args!("{}", self.slc0_tx_new_pkt_ind().bit()),
-            )
+            .field("slc0_rx_new_pkt_ind", &self.slc0_rx_new_pkt_ind().bit())
+            .field("slc0_tx_new_pkt_ind", &self.slc0_tx_new_pkt_ind().bit())
             .finish()
     }
 }

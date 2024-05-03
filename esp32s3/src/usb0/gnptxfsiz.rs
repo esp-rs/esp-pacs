@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GNPTXFSIZ")
-            .field(
-                "nptxfstaddr",
-                &format_args!("{}", self.nptxfstaddr().bits()),
-            )
-            .field("nptxfdep", &format_args!("{}", self.nptxfdep().bits()))
+            .field("nptxfstaddr", &self.nptxfstaddr().bits())
+            .field("nptxfdep", &self.nptxfdep().bits())
             .finish()
     }
 }

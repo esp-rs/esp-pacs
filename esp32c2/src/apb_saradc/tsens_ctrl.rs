@@ -42,10 +42,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSENS_CTRL")
-            .field("out", &format_args!("{}", self.out().bits()))
-            .field("in_inv", &format_args!("{}", self.in_inv().bit()))
-            .field("clk_div", &format_args!("{}", self.clk_div().bits()))
-            .field("pu", &format_args!("{}", self.pu().bit()))
+            .field("out", &self.out().bits())
+            .field("in_inv", &self.in_inv().bit())
+            .field("clk_div", &self.clk_div().bits())
+            .field("pu", &self.pu().bit())
             .finish()
     }
 }

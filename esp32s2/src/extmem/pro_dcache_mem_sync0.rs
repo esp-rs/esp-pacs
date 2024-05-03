@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_MEM_SYNC0")
             .field(
                 "pro_dcache_memsync_addr",
-                &format_args!("{}", self.pro_dcache_memsync_addr().bits()),
+                &self.pro_dcache_memsync_addr().bits(),
             )
             .finish()
     }

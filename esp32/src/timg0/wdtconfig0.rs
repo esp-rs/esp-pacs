@@ -453,31 +453,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WDTCONFIG0")
-            .field(
-                "wdt_flashboot_mod_en",
-                &format_args!("{}", self.wdt_flashboot_mod_en().bit()),
-            )
-            .field(
-                "wdt_sys_reset_length",
-                &format_args!("{}", self.wdt_sys_reset_length().bits()),
-            )
-            .field(
-                "wdt_cpu_reset_length",
-                &format_args!("{}", self.wdt_cpu_reset_length().bits()),
-            )
-            .field(
-                "wdt_level_int_en",
-                &format_args!("{}", self.wdt_level_int_en().bit()),
-            )
-            .field(
-                "wdt_edge_int_en",
-                &format_args!("{}", self.wdt_edge_int_en().bit()),
-            )
-            .field("wdt_stg3", &format_args!("{}", self.wdt_stg3().bits()))
-            .field("wdt_stg2", &format_args!("{}", self.wdt_stg2().bits()))
-            .field("wdt_stg1", &format_args!("{}", self.wdt_stg1().bits()))
-            .field("wdt_stg0", &format_args!("{}", self.wdt_stg0().bits()))
-            .field("wdt_en", &format_args!("{}", self.wdt_en().bit()))
+            .field("wdt_flashboot_mod_en", &self.wdt_flashboot_mod_en().bit())
+            .field("wdt_sys_reset_length", &self.wdt_sys_reset_length().bits())
+            .field("wdt_cpu_reset_length", &self.wdt_cpu_reset_length().bits())
+            .field("wdt_level_int_en", &self.wdt_level_int_en().bit())
+            .field("wdt_edge_int_en", &self.wdt_edge_int_en().bit())
+            .field("wdt_stg3", &self.wdt_stg3().bits())
+            .field("wdt_stg2", &self.wdt_stg2().bits())
+            .field("wdt_stg1", &self.wdt_stg1().bits())
+            .field("wdt_stg0", &self.wdt_stg0().bits())
+            .field("wdt_en", &self.wdt_en().bit())
             .finish()
     }
 }

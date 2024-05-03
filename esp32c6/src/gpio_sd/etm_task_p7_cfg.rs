@@ -76,12 +76,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_TASK_P7_CFG")
-            .field("gpio28_en", &format_args!("{}", self.gpio28_en().bit()))
-            .field("gpio29_en", &format_args!("{}", self.gpio29_en().bit()))
-            .field("gpio30_en", &format_args!("{}", self.gpio30_en().bit()))
-            .field("gpio28_sel", &format_args!("{}", self.gpio28_sel().bits()))
-            .field("gpio29_sel", &format_args!("{}", self.gpio29_sel().bits()))
-            .field("gpio30_sel", &format_args!("{}", self.gpio30_sel().bits()))
+            .field("gpio28_en", &self.gpio28_en().bit())
+            .field("gpio29_en", &self.gpio29_en().bit())
+            .field("gpio30_en", &self.gpio30_en().bit())
+            .field("gpio28_sel", &self.gpio28_sel().bits())
+            .field("gpio29_sel", &self.gpio29_sel().bits())
+            .field("gpio30_sel", &self.gpio30_sel().bits())
             .finish()
     }
 }

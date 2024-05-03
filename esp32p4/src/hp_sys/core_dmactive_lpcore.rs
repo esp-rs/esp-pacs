@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_DMACTIVE_LPCORE")
-            .field(
-                "core_dmactive_lpcore",
-                &format_args!("{}", self.core_dmactive_lpcore().bit()),
-            )
+            .field("core_dmactive_lpcore", &self.core_dmactive_lpcore().bit())
             .finish()
     }
 }

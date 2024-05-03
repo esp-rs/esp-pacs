@@ -35,17 +35,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL120")
-            .field(
-                "cam_clk_div_num",
-                &format_args!("{}", self.cam_clk_div_num().bits()),
-            )
+            .field("cam_clk_div_num", &self.cam_clk_div_num().bits())
             .field(
                 "cam_clk_div_numerator",
-                &format_args!("{}", self.cam_clk_div_numerator().bits()),
+                &self.cam_clk_div_numerator().bits(),
             )
             .field(
                 "cam_clk_div_denominator",
-                &format_args!("{}", self.cam_clk_div_denominator().bits()),
+                &self.cam_clk_div_denominator().bits(),
             )
             .finish()
     }

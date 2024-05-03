@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C_EXT0_INTR_MAP")
-            .field(
-                "i2c_ext0_intr_map",
-                &format_args!("{}", self.i2c_ext0_intr_map().bits()),
-            )
+            .field("i2c_ext0_intr_map", &self.i2c_ext0_intr_map().bits())
             .finish()
     }
 }

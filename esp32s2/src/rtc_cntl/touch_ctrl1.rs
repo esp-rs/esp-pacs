@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_CTRL1")
-            .field(
-                "touch_sleep_cycles",
-                &format_args!("{}", self.touch_sleep_cycles().bits()),
-            )
-            .field(
-                "touch_meas_num",
-                &format_args!("{}", self.touch_meas_num().bits()),
-            )
+            .field("touch_sleep_cycles", &self.touch_sleep_cycles().bits())
+            .field("touch_meas_num", &self.touch_meas_num().bits())
             .finish()
     }
 }

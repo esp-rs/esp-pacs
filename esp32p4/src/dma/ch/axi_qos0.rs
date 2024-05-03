@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI_QOS0")
-            .field(
-                "ch1_axi_awqos",
-                &format_args!("{}", self.ch1_axi_awqos().bits()),
-            )
-            .field(
-                "ch1_axi_arqos",
-                &format_args!("{}", self.ch1_axi_arqos().bits()),
-            )
+            .field("ch1_axi_awqos", &self.ch1_axi_awqos().bits())
+            .field("ch1_axi_arqos", &self.ch1_axi_arqos().bits())
             .finish()
     }
 }

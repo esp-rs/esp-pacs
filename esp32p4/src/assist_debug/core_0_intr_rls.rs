@@ -118,51 +118,51 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_INTR_RLS")
             .field(
                 "core_0_area_dram0_0_rd_rls",
-                &format_args!("{}", self.core_0_area_dram0_0_rd_rls().bit()),
+                &self.core_0_area_dram0_0_rd_rls().bit(),
             )
             .field(
                 "core_0_area_dram0_0_wr_rls",
-                &format_args!("{}", self.core_0_area_dram0_0_wr_rls().bit()),
+                &self.core_0_area_dram0_0_wr_rls().bit(),
             )
             .field(
                 "core_0_area_dram0_1_rd_rls",
-                &format_args!("{}", self.core_0_area_dram0_1_rd_rls().bit()),
+                &self.core_0_area_dram0_1_rd_rls().bit(),
             )
             .field(
                 "core_0_area_dram0_1_wr_rls",
-                &format_args!("{}", self.core_0_area_dram0_1_wr_rls().bit()),
+                &self.core_0_area_dram0_1_wr_rls().bit(),
             )
             .field(
                 "core_0_area_pif_0_rd_rls",
-                &format_args!("{}", self.core_0_area_pif_0_rd_rls().bit()),
+                &self.core_0_area_pif_0_rd_rls().bit(),
             )
             .field(
                 "core_0_area_pif_0_wr_rls",
-                &format_args!("{}", self.core_0_area_pif_0_wr_rls().bit()),
+                &self.core_0_area_pif_0_wr_rls().bit(),
             )
             .field(
                 "core_0_area_pif_1_rd_rls",
-                &format_args!("{}", self.core_0_area_pif_1_rd_rls().bit()),
+                &self.core_0_area_pif_1_rd_rls().bit(),
             )
             .field(
                 "core_0_area_pif_1_wr_rls",
-                &format_args!("{}", self.core_0_area_pif_1_wr_rls().bit()),
+                &self.core_0_area_pif_1_wr_rls().bit(),
             )
             .field(
                 "core_0_sp_spill_min_rls",
-                &format_args!("{}", self.core_0_sp_spill_min_rls().bit()),
+                &self.core_0_sp_spill_min_rls().bit(),
             )
             .field(
                 "core_0_sp_spill_max_rls",
-                &format_args!("{}", self.core_0_sp_spill_max_rls().bit()),
+                &self.core_0_sp_spill_max_rls().bit(),
             )
             .field(
                 "core_0_iram0_exception_monitor_rls",
-                &format_args!("{}", self.core_0_iram0_exception_monitor_rls().bit()),
+                &self.core_0_iram0_exception_monitor_rls().bit(),
             )
             .field(
                 "core_0_dram0_exception_monitor_rls",
-                &format_args!("{}", self.core_0_dram0_exception_monitor_rls().bit()),
+                &self.core_0_dram0_exception_monitor_rls().bit(),
             )
             .finish()
     }

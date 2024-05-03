@@ -98,35 +98,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5")
             .field(
                 "core_x_dram0_dma_sram_line_1_category_0",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_0().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_0().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_1",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_1().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_1().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_2",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_2().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_2().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_3",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_3().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_3().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_4",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_4().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_4().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_5",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_5().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_5().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_category_6",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_category_6().bits()),
+                &self.core_x_dram0_dma_sram_line_1_category_6().bits(),
             )
             .field(
                 "core_x_dram0_dma_sram_line_1_splitaddr",
-                &format_args!("{}", self.core_x_dram0_dma_sram_line_1_splitaddr().bits()),
+                &self.core_x_dram0_dma_sram_line_1_splitaddr().bits(),
             )
             .finish()
     }

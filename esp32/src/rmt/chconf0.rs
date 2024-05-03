@@ -71,16 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHCONF0")
-            .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
-            .field("idle_thres", &format_args!("{}", self.idle_thres().bits()))
-            .field("mem_size", &format_args!("{}", self.mem_size().bits()))
-            .field("carrier_en", &format_args!("{}", self.carrier_en().bit()))
-            .field(
-                "carrier_out_lv",
-                &format_args!("{}", self.carrier_out_lv().bit()),
-            )
-            .field("mem_pd", &format_args!("{}", self.mem_pd().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("div_cnt", &self.div_cnt().bits())
+            .field("idle_thres", &self.idle_thres().bits())
+            .field("mem_size", &self.mem_size().bits())
+            .field("carrier_en", &self.carrier_en().bit())
+            .field("carrier_out_lv", &self.carrier_out_lv().bit())
+            .field("mem_pd", &self.mem_pd().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

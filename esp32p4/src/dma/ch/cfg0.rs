@@ -40,16 +40,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG0")
-            .field(
-                "ch1_src_multblk_type",
-                &format_args!("{}", self.ch1_src_multblk_type().bits()),
-            )
-            .field(
-                "ch1_dst_multblk_type",
-                &format_args!("{}", self.ch1_dst_multblk_type().bits()),
-            )
-            .field("ch1_rd_uid", &format_args!("{}", self.ch1_rd_uid().bits()))
-            .field("ch1_wr_uid", &format_args!("{}", self.ch1_wr_uid().bits()))
+            .field("ch1_src_multblk_type", &self.ch1_src_multblk_type().bits())
+            .field("ch1_dst_multblk_type", &self.ch1_dst_multblk_type().bits())
+            .field("ch1_rd_uid", &self.ch1_rd_uid().bits())
+            .field("ch1_wr_uid", &self.ch1_wr_uid().bits())
             .finish()
     }
 }

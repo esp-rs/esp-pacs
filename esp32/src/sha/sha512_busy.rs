@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHA512_BUSY")
-            .field("sha512_busy", &format_args!("{}", self.sha512_busy().bit()))
+            .field("sha512_busy", &self.sha512_busy().bit())
             .finish()
     }
 }

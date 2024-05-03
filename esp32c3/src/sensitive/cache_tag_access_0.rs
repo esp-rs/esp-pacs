@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_TAG_ACCESS_0")
-            .field(
-                "cache_tag_access_lock",
-                &format_args!("{}", self.cache_tag_access_lock().bit()),
-            )
+            .field("cache_tag_access_lock", &self.cache_tag_access_lock().bit())
             .finish()
     }
 }

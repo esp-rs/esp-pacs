@@ -134,75 +134,75 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMMONREG_INTSTATUS0")
             .field(
                 "slvif_commonreg_dec_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_dec_err_intstat().bit()),
+                &self.slvif_commonreg_dec_err_intstat().bit(),
             )
             .field(
                 "slvif_commonreg_wr2ro_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wr2ro_err_intstat().bit()),
+                &self.slvif_commonreg_wr2ro_err_intstat().bit(),
             )
             .field(
                 "slvif_commonreg_rd2wo_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_rd2wo_err_intstat().bit()),
+                &self.slvif_commonreg_rd2wo_err_intstat().bit(),
             )
             .field(
                 "slvif_commonreg_wronhold_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wronhold_err_intstat().bit()),
+                &self.slvif_commonreg_wronhold_err_intstat().bit(),
             )
             .field(
                 "slvif_commonreg_wrparity_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wrparity_err_intstat().bit()),
+                &self.slvif_commonreg_wrparity_err_intstat().bit(),
             )
             .field(
                 "slvif_undefinedreg_dec_err_intstat",
-                &format_args!("{}", self.slvif_undefinedreg_dec_err_intstat().bit()),
+                &self.slvif_undefinedreg_dec_err_intstat().bit(),
             )
             .field(
                 "mxif1_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_rch0_eccprot_correrr_intstat().bit()),
+                &self.mxif1_rch0_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif1_rch0_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_rch0_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_rch0_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "mxif1_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_rch1_eccprot_correrr_intstat().bit()),
+                &self.mxif1_rch1_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif1_rch1_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_rch1_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_rch1_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "mxif1_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_bch_eccprot_correrr_intstat().bit()),
+                &self.mxif1_bch_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif1_bch_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_bch_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_bch_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "mxif2_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_rch0_eccprot_correrr_intstat().bit()),
+                &self.mxif2_rch0_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif2_rch0_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_rch0_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_rch0_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "mxif2_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_rch1_eccprot_correrr_intstat().bit()),
+                &self.mxif2_rch1_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif2_rch1_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_rch1_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_rch1_eccprot_uncorrerr_intstat().bit(),
             )
             .field(
                 "mxif2_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_bch_eccprot_correrr_intstat().bit()),
+                &self.mxif2_bch_eccprot_correrr_intstat().bit(),
             )
             .field(
                 "mxif2_bch_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_bch_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_bch_eccprot_uncorrerr_intstat().bit(),
             )
             .finish()
     }

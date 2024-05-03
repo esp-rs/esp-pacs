@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB_PERIPHERAL_ACCESS_0")
             .field(
                 "apb_peripheral_access_lock",
-                &format_args!("{}", self.apb_peripheral_access_lock().bit()),
+                &self.apb_peripheral_access_lock().bit(),
             )
             .finish()
     }

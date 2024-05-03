@@ -53,26 +53,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_MODEM_HP_CK_POWER")
-            .field(
-                "hp_modem_i2c_iso_en",
-                &format_args!("{}", self.hp_modem_i2c_iso_en().bit()),
-            )
+            .field("hp_modem_i2c_iso_en", &self.hp_modem_i2c_iso_en().bit())
             .field(
                 "hp_modem_i2c_retention",
-                &format_args!("{}", self.hp_modem_i2c_retention().bit()),
+                &self.hp_modem_i2c_retention().bit(),
             )
-            .field(
-                "hp_modem_xpd_bb_i2c",
-                &format_args!("{}", self.hp_modem_xpd_bb_i2c().bit()),
-            )
+            .field("hp_modem_xpd_bb_i2c", &self.hp_modem_xpd_bb_i2c().bit())
             .field(
                 "hp_modem_xpd_bbpll_i2c",
-                &format_args!("{}", self.hp_modem_xpd_bbpll_i2c().bit()),
+                &self.hp_modem_xpd_bbpll_i2c().bit(),
             )
-            .field(
-                "hp_modem_xpd_bbpll",
-                &format_args!("{}", self.hp_modem_xpd_bbpll().bit()),
-            )
+            .field("hp_modem_xpd_bbpll", &self.hp_modem_xpd_bbpll().bit())
             .finish()
     }
 }

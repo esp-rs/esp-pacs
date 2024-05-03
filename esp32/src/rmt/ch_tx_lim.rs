@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_TX_LIM")
-            .field("tx_lim", &format_args!("{}", self.tx_lim().bits()))
+            .field("tx_lim", &self.tx_lim().bits())
             .finish()
     }
 }

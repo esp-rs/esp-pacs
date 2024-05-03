@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_MUX1")
-            .field(
-                "touch_start",
-                &format_args!("{}", self.touch_start().bits()),
-            )
-            .field("touch_xpd", &format_args!("{}", self.touch_xpd().bits()))
+            .field("touch_start", &self.touch_start().bits())
+            .field("touch_xpd", &self.touch_xpd().bits())
             .finish()
     }
 }

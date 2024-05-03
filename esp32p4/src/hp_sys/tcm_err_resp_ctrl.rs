@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_ERR_RESP_CTRL")
-            .field(
-                "tcm_err_resp_en",
-                &format_args!("{}", self.tcm_err_resp_en().bit()),
-            )
+            .field("tcm_err_resp_en", &self.tcm_err_resp_en().bit())
             .finish()
     }
 }

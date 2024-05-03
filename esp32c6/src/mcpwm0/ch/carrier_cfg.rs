@@ -62,12 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CARRIER_CFG")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("prescale", &format_args!("{}", self.prescale().bits()))
-            .field("duty", &format_args!("{}", self.duty().bits()))
-            .field("oshtwth", &format_args!("{}", self.oshtwth().bits()))
-            .field("out_invert", &format_args!("{}", self.out_invert().bit()))
-            .field("in_invert", &format_args!("{}", self.in_invert().bit()))
+            .field("en", &self.en().bit())
+            .field("prescale", &self.prescale().bits())
+            .field("duty", &self.duty().bits())
+            .field("oshtwth", &self.oshtwth().bits())
+            .field("out_invert", &self.out_invert().bit())
+            .field("in_invert", &self.in_invert().bit())
             .finish()
     }
 }

@@ -90,24 +90,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GHWCFG3")
-            .field(
-                "xfersizewidth",
-                &format_args!("{}", self.xfersizewidth().bits()),
-            )
-            .field(
-                "pktsizewidth",
-                &format_args!("{}", self.pktsizewidth().bits()),
-            )
-            .field("otgen", &format_args!("{}", self.otgen().bit()))
-            .field("i2cintsel", &format_args!("{}", self.i2cintsel().bit()))
-            .field("vndctlsupt", &format_args!("{}", self.vndctlsupt().bit()))
-            .field("optfeature", &format_args!("{}", self.optfeature().bit()))
-            .field("rsttype", &format_args!("{}", self.rsttype().bit()))
-            .field("adpsupport", &format_args!("{}", self.adpsupport().bit()))
-            .field("hsicmode", &format_args!("{}", self.hsicmode().bit()))
-            .field("bcsupport", &format_args!("{}", self.bcsupport().bit()))
-            .field("lpmmode", &format_args!("{}", self.lpmmode().bit()))
-            .field("dfifodepth", &format_args!("{}", self.dfifodepth().bits()))
+            .field("xfersizewidth", &self.xfersizewidth().bits())
+            .field("pktsizewidth", &self.pktsizewidth().bits())
+            .field("otgen", &self.otgen().bit())
+            .field("i2cintsel", &self.i2cintsel().bit())
+            .field("vndctlsupt", &self.vndctlsupt().bit())
+            .field("optfeature", &self.optfeature().bit())
+            .field("rsttype", &self.rsttype().bit())
+            .field("adpsupport", &self.adpsupport().bit())
+            .field("hsicmode", &self.hsicmode().bit())
+            .field("bcsupport", &self.bcsupport().bit())
+            .field("lpmmode", &self.lpmmode().bit())
+            .field("dfifodepth", &self.dfifodepth().bits())
             .finish()
     }
 }

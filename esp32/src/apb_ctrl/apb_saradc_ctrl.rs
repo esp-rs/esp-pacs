@@ -125,58 +125,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_SARADC_CTRL")
-            .field(
-                "saradc_start_force",
-                &format_args!("{}", self.saradc_start_force().bit()),
-            )
-            .field(
-                "saradc_start",
-                &format_args!("{}", self.saradc_start().bit()),
-            )
-            .field(
-                "saradc_sar2_mux",
-                &format_args!("{}", self.saradc_sar2_mux().bit()),
-            )
-            .field(
-                "saradc_work_mode",
-                &format_args!("{}", self.saradc_work_mode().bits()),
-            )
-            .field(
-                "saradc_sar_sel",
-                &format_args!("{}", self.saradc_sar_sel().bit()),
-            )
-            .field(
-                "saradc_sar_clk_gated",
-                &format_args!("{}", self.saradc_sar_clk_gated().bit()),
-            )
-            .field(
-                "saradc_sar_clk_div",
-                &format_args!("{}", self.saradc_sar_clk_div().bits()),
-            )
-            .field(
-                "saradc_sar1_patt_len",
-                &format_args!("{}", self.saradc_sar1_patt_len().bits()),
-            )
-            .field(
-                "saradc_sar2_patt_len",
-                &format_args!("{}", self.saradc_sar2_patt_len().bits()),
-            )
+            .field("saradc_start_force", &self.saradc_start_force().bit())
+            .field("saradc_start", &self.saradc_start().bit())
+            .field("saradc_sar2_mux", &self.saradc_sar2_mux().bit())
+            .field("saradc_work_mode", &self.saradc_work_mode().bits())
+            .field("saradc_sar_sel", &self.saradc_sar_sel().bit())
+            .field("saradc_sar_clk_gated", &self.saradc_sar_clk_gated().bit())
+            .field("saradc_sar_clk_div", &self.saradc_sar_clk_div().bits())
+            .field("saradc_sar1_patt_len", &self.saradc_sar1_patt_len().bits())
+            .field("saradc_sar2_patt_len", &self.saradc_sar2_patt_len().bits())
             .field(
                 "saradc_sar1_patt_p_clear",
-                &format_args!("{}", self.saradc_sar1_patt_p_clear().bit()),
+                &self.saradc_sar1_patt_p_clear().bit(),
             )
             .field(
                 "saradc_sar2_patt_p_clear",
-                &format_args!("{}", self.saradc_sar2_patt_p_clear().bit()),
+                &self.saradc_sar2_patt_p_clear().bit(),
             )
-            .field(
-                "saradc_data_sar_sel",
-                &format_args!("{}", self.saradc_data_sar_sel().bit()),
-            )
-            .field(
-                "saradc_data_to_i2s",
-                &format_args!("{}", self.saradc_data_to_i2s().bit()),
-            )
+            .field("saradc_data_sar_sel", &self.saradc_data_sar_sel().bit())
+            .field("saradc_data_to_i2s", &self.saradc_data_to_i2s().bit())
             .finish()
     }
 }

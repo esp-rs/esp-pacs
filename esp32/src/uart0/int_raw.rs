@@ -139,40 +139,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rxfifo_full", &format_args!("{}", self.rxfifo_full().bit()))
-            .field(
-                "txfifo_empty",
-                &format_args!("{}", self.txfifo_empty().bit()),
-            )
-            .field("parity_err", &format_args!("{}", self.parity_err().bit()))
-            .field("frm_err", &format_args!("{}", self.frm_err().bit()))
-            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
-            .field("dsr_chg", &format_args!("{}", self.dsr_chg().bit()))
-            .field("cts_chg", &format_args!("{}", self.cts_chg().bit()))
-            .field("brk_det", &format_args!("{}", self.brk_det().bit()))
-            .field("rxfifo_tout", &format_args!("{}", self.rxfifo_tout().bit()))
-            .field("sw_xon", &format_args!("{}", self.sw_xon().bit()))
-            .field("sw_xoff", &format_args!("{}", self.sw_xoff().bit()))
-            .field("glitch_det", &format_args!("{}", self.glitch_det().bit()))
-            .field("tx_brk_done", &format_args!("{}", self.tx_brk_done().bit()))
-            .field(
-                "tx_brk_idle_done",
-                &format_args!("{}", self.tx_brk_idle_done().bit()),
-            )
-            .field("tx_done", &format_args!("{}", self.tx_done().bit()))
-            .field(
-                "rs485_parity_err",
-                &format_args!("{}", self.rs485_parity_err().bit()),
-            )
-            .field(
-                "rs485_frm_err",
-                &format_args!("{}", self.rs485_frm_err().bit()),
-            )
-            .field("rs485_clash", &format_args!("{}", self.rs485_clash().bit()))
-            .field(
-                "at_cmd_char_det",
-                &format_args!("{}", self.at_cmd_char_det().bit()),
-            )
+            .field("rxfifo_full", &self.rxfifo_full().bit())
+            .field("txfifo_empty", &self.txfifo_empty().bit())
+            .field("parity_err", &self.parity_err().bit())
+            .field("frm_err", &self.frm_err().bit())
+            .field("rxfifo_ovf", &self.rxfifo_ovf().bit())
+            .field("dsr_chg", &self.dsr_chg().bit())
+            .field("cts_chg", &self.cts_chg().bit())
+            .field("brk_det", &self.brk_det().bit())
+            .field("rxfifo_tout", &self.rxfifo_tout().bit())
+            .field("sw_xon", &self.sw_xon().bit())
+            .field("sw_xoff", &self.sw_xoff().bit())
+            .field("glitch_det", &self.glitch_det().bit())
+            .field("tx_brk_done", &self.tx_brk_done().bit())
+            .field("tx_brk_idle_done", &self.tx_brk_idle_done().bit())
+            .field("tx_done", &self.tx_done().bit())
+            .field("rs485_parity_err", &self.rs485_parity_err().bit())
+            .field("rs485_frm_err", &self.rs485_frm_err().bit())
+            .field("rs485_clash", &self.rs485_clash().bit())
+            .field("at_cmd_char_det", &self.at_cmd_char_det().bit())
             .finish()
     }
 }

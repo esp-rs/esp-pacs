@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HW_CFG")
-            .field(
-                "hw_standby_en",
-                &format_args!("{}", self.hw_standby_en().bit()),
-            )
+            .field("hw_standby_en", &self.hw_standby_en().bit())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_CORE_CTRL_INT_MAP")
             .field(
                 "core1_hp_core_ctrl_int_map",
-                &format_args!("{}", self.core1_hp_core_ctrl_int_map().bits()),
+                &self.core1_hp_core_ctrl_int_map().bits(),
             )
             .finish()
     }

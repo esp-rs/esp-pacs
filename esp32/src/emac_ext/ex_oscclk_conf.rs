@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EX_OSCCLK_CONF")
-            .field(
-                "div_num_10m",
-                &format_args!("{}", self.div_num_10m().bits()),
-            )
-            .field(
-                "h_div_num_10m",
-                &format_args!("{}", self.h_div_num_10m().bits()),
-            )
-            .field(
-                "div_num_100m",
-                &format_args!("{}", self.div_num_100m().bits()),
-            )
-            .field(
-                "h_div_num_100m",
-                &format_args!("{}", self.h_div_num_100m().bits()),
-            )
-            .field("clk_sel", &format_args!("{}", self.clk_sel().bit()))
+            .field("div_num_10m", &self.div_num_10m().bits())
+            .field("h_div_num_10m", &self.h_div_num_10m().bits())
+            .field("div_num_100m", &self.div_num_100m().bits())
+            .field("h_div_num_100m", &self.h_div_num_100m().bits())
+            .field("clk_sel", &self.clk_sel().bit())
             .finish()
     }
 }

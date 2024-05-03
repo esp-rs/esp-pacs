@@ -98,43 +98,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BROWN_OUT")
-            .field(
-                "brown_out_int_wait",
-                &format_args!("{}", self.brown_out_int_wait().bits()),
-            )
+            .field("brown_out_int_wait", &self.brown_out_int_wait().bits())
             .field(
                 "brown_out_close_flash_ena",
-                &format_args!("{}", self.brown_out_close_flash_ena().bit()),
+                &self.brown_out_close_flash_ena().bit(),
             )
-            .field(
-                "brown_out_pd_rf_ena",
-                &format_args!("{}", self.brown_out_pd_rf_ena().bit()),
-            )
-            .field(
-                "brown_out_rst_wait",
-                &format_args!("{}", self.brown_out_rst_wait().bits()),
-            )
-            .field(
-                "brown_out_rst_ena",
-                &format_args!("{}", self.brown_out_rst_ena().bit()),
-            )
-            .field(
-                "brown_out_rst_sel",
-                &format_args!("{}", self.brown_out_rst_sel().bit()),
-            )
-            .field(
-                "brown_out_ana_rst_en",
-                &format_args!("{}", self.brown_out_ana_rst_en().bit()),
-            )
-            .field(
-                "brown_out_cnt_clr",
-                &format_args!("{}", self.brown_out_cnt_clr().bit()),
-            )
-            .field(
-                "brown_out_ena",
-                &format_args!("{}", self.brown_out_ena().bit()),
-            )
-            .field("det", &format_args!("{}", self.det().bit()))
+            .field("brown_out_pd_rf_ena", &self.brown_out_pd_rf_ena().bit())
+            .field("brown_out_rst_wait", &self.brown_out_rst_wait().bits())
+            .field("brown_out_rst_ena", &self.brown_out_rst_ena().bit())
+            .field("brown_out_rst_sel", &self.brown_out_rst_sel().bit())
+            .field("brown_out_ana_rst_en", &self.brown_out_ana_rst_en().bit())
+            .field("brown_out_cnt_clr", &self.brown_out_cnt_clr().bit())
+            .field("brown_out_ena", &self.brown_out_ena().bit())
+            .field("det", &self.det().bit())
             .finish()
     }
 }

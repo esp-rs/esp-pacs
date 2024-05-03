@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTRTC")
-            .field(
-                "rtc_step_len",
-                &format_args!("{}", self.rtc_step_len().bits()),
-            )
+            .field("rtc_step_len", &self.rtc_step_len().bits())
             .finish()
     }
 }

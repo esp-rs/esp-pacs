@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WDTCONFIG3")
-            .field(
-                "wdt_stg2_hold",
-                &format_args!("{}", self.wdt_stg2_hold().bits()),
-            )
+            .field("wdt_stg2_hold", &self.wdt_stg2_hold().bits())
             .finish()
     }
 }

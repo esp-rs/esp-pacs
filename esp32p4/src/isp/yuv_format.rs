@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("YUV_FORMAT")
-            .field("yuv_mode", &format_args!("{}", self.yuv_mode().bit()))
-            .field("yuv_range", &format_args!("{}", self.yuv_range().bit()))
+            .field("yuv_mode", &self.yuv_mode().bit())
+            .field("yuv_range", &self.yuv_range().bit())
             .finish()
     }
 }

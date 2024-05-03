@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_MONITOR_3")
             .field(
                 "backup_bus_pms_monitor_violate_haddr",
-                &format_args!("{}", self.backup_bus_pms_monitor_violate_haddr().bits()),
+                &self.backup_bus_pms_monitor_violate_haddr().bits(),
             )
             .finish()
     }

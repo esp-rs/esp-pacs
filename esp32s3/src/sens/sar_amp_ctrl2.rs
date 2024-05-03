@@ -82,36 +82,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_AMP_CTRL2")
             .field(
                 "sar_sar1_dac_xpd_fsm_idle",
-                &format_args!("{}", self.sar_sar1_dac_xpd_fsm_idle().bit()),
+                &self.sar_sar1_dac_xpd_fsm_idle().bit(),
             )
             .field(
                 "sar_xpd_sar_amp_fsm_idle",
-                &format_args!("{}", self.sar_xpd_sar_amp_fsm_idle().bit()),
+                &self.sar_xpd_sar_amp_fsm_idle().bit(),
             )
             .field(
                 "sar_amp_rst_fb_fsm_idle",
-                &format_args!("{}", self.sar_amp_rst_fb_fsm_idle().bit()),
+                &self.sar_amp_rst_fb_fsm_idle().bit(),
             )
             .field(
                 "sar_amp_short_ref_fsm_idle",
-                &format_args!("{}", self.sar_amp_short_ref_fsm_idle().bit()),
+                &self.sar_amp_short_ref_fsm_idle().bit(),
             )
             .field(
                 "sar_amp_short_ref_gnd_fsm_idle",
-                &format_args!("{}", self.sar_amp_short_ref_gnd_fsm_idle().bit()),
+                &self.sar_amp_short_ref_gnd_fsm_idle().bit(),
             )
-            .field(
-                "sar_xpd_sar_fsm_idle",
-                &format_args!("{}", self.sar_xpd_sar_fsm_idle().bit()),
-            )
-            .field(
-                "sar_rstb_fsm_idle",
-                &format_args!("{}", self.sar_rstb_fsm_idle().bit()),
-            )
-            .field(
-                "sar_amp_wait3",
-                &format_args!("{}", self.sar_amp_wait3().bits()),
-            )
+            .field("sar_xpd_sar_fsm_idle", &self.sar_xpd_sar_fsm_idle().bit())
+            .field("sar_rstb_fsm_idle", &self.sar_rstb_fsm_idle().bit())
+            .field("sar_amp_wait3", &self.sar_amp_wait3().bits())
             .finish()
     }
 }

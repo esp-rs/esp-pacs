@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_INT_ST")
-            .field(
-                "tcm_parity_err_int_st",
-                &format_args!("{}", self.tcm_parity_err_int_st().bit()),
-            )
+            .field("tcm_parity_err_int_st", &self.tcm_parity_err_int_st().bit())
             .finish()
     }
 }

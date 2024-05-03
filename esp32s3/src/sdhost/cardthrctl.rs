@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CARDTHRCTL")
-            .field("cardrdthren", &format_args!("{}", self.cardrdthren().bit()))
-            .field(
-                "cardclrinten",
-                &format_args!("{}", self.cardclrinten().bit()),
-            )
-            .field("cardwrthren", &format_args!("{}", self.cardwrthren().bit()))
-            .field(
-                "cardthreshold",
-                &format_args!("{}", self.cardthreshold().bits()),
-            )
+            .field("cardrdthren", &self.cardrdthren().bit())
+            .field("cardclrinten", &self.cardclrinten().bit())
+            .field("cardwrthren", &self.cardwrthren().bit())
+            .field("cardthreshold", &self.cardthreshold().bits())
             .finish()
     }
 }

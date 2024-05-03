@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_WORK_MEAS_NUM")
-            .field(
-                "touch_meas_num2",
-                &format_args!("{}", self.touch_meas_num2().bits()),
-            )
-            .field(
-                "touch_meas_num1",
-                &format_args!("{}", self.touch_meas_num1().bits()),
-            )
-            .field(
-                "touch_meas_num0",
-                &format_args!("{}", self.touch_meas_num0().bits()),
-            )
+            .field("touch_meas_num2", &self.touch_meas_num2().bits())
+            .field("touch_meas_num1", &self.touch_meas_num1().bits())
+            .field("touch_meas_num0", &self.touch_meas_num0().bits())
             .finish()
     }
 }

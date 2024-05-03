@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_RST_EN")
-            .field(
-                "peri_rst_en",
-                &format_args!("{}", self.peri_rst_en().bits()),
-            )
+            .field("peri_rst_en", &self.peri_rst_en().bits())
             .finish()
     }
 }

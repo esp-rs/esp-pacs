@@ -46,20 +46,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_I2S_TXCLK_DIV_XYZ")
             .field(
                 "lp_i2s_tx_clkm_div_yn1",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_yn1().bit()),
+                &self.lp_i2s_tx_clkm_div_yn1().bit(),
             )
-            .field(
-                "lp_i2s_tx_clkm_div_z",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_z().bits()),
-            )
-            .field(
-                "lp_i2s_tx_clkm_div_y",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_y().bits()),
-            )
-            .field(
-                "lp_i2s_tx_clkm_div_x",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_x().bits()),
-            )
+            .field("lp_i2s_tx_clkm_div_z", &self.lp_i2s_tx_clkm_div_z().bits())
+            .field("lp_i2s_tx_clkm_div_y", &self.lp_i2s_tx_clkm_div_y().bits())
+            .field("lp_i2s_tx_clkm_div_x", &self.lp_i2s_tx_clkm_div_x().bits())
             .finish()
     }
 }

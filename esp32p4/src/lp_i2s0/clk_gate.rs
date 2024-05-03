@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_GATE")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "vad_cg_force_on",
-                &format_args!("{}", self.vad_cg_force_on().bit()),
-            )
-            .field(
-                "rx_mem_cg_force_on",
-                &format_args!("{}", self.rx_mem_cg_force_on().bit()),
-            )
-            .field(
-                "rx_reg_cg_force_on",
-                &format_args!("{}", self.rx_reg_cg_force_on().bit()),
-            )
+            .field("clk_en", &self.clk_en().bit())
+            .field("vad_cg_force_on", &self.vad_cg_force_on().bit())
+            .field("rx_mem_cg_force_on", &self.rx_mem_cg_force_on().bit())
+            .field("rx_reg_cg_force_on", &self.rx_reg_cg_force_on().bit())
             .finish()
     }
 }

@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_POR_RST_BYPASS_CTRL")
             .field(
                 "hp_po_cnnt_rstn_bypass_ctrl",
-                &format_args!("{}", self.hp_po_cnnt_rstn_bypass_ctrl().bits()),
+                &self.hp_po_cnnt_rstn_bypass_ctrl().bits(),
             )
             .field(
                 "hp_po_rstn_bypass_ctrl",
-                &format_args!("{}", self.hp_po_rstn_bypass_ctrl().bits()),
+                &self.hp_po_rstn_bypass_ctrl().bits(),
             )
             .finish()
     }

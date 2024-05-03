@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FSM")
-            .field(
-                "lock_delay_time",
-                &format_args!("{}", self.lock_delay_time().bits()),
-            )
+            .field("lock_delay_time", &self.lock_delay_time().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEMOSAIC_GRAD_RATIO")
-            .field(
-                "demosaic_grad_ratio",
-                &format_args!("{}", self.demosaic_grad_ratio().bits()),
-            )
+            .field("demosaic_grad_ratio", &self.demosaic_grad_ratio().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CH_ARB_WEIGH")
-            .field(
-                "tx_ch_arb_weigh",
-                &format_args!("{}", self.tx_ch_arb_weigh().bits()),
-            )
+            .field("tx_ch_arb_weigh", &self.tx_ch_arb_weigh().bits())
             .finish()
     }
 }

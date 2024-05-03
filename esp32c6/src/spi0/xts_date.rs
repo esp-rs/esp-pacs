@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_DATE")
-            .field(
-                "spi_xts_date",
-                &format_args!("{}", self.spi_xts_date().bits()),
-            )
+            .field("spi_xts_date", &self.spi_xts_date().bits())
             .finish()
     }
 }

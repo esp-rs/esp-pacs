@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_MONITOR_1")
             .field(
                 "backup_bus_pms_monitor_violate_clr",
-                &format_args!("{}", self.backup_bus_pms_monitor_violate_clr().bit()),
+                &self.backup_bus_pms_monitor_violate_clr().bit(),
             )
             .field(
                 "backup_bus_pms_monitor_violate_en",
-                &format_args!("{}", self.backup_bus_pms_monitor_violate_en().bit()),
+                &self.backup_bus_pms_monitor_violate_en().bit(),
             )
             .finish()
     }

@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BBPD_CTRL")
-            .field(
-                "dc_est_force_pd",
-                &format_args!("{}", self.dc_est_force_pd().bit()),
-            )
-            .field(
-                "dc_est_force_pu",
-                &format_args!("{}", self.dc_est_force_pu().bit()),
-            )
-            .field(
-                "fft_force_pd",
-                &format_args!("{}", self.fft_force_pd().bit()),
-            )
-            .field(
-                "fft_force_pu",
-                &format_args!("{}", self.fft_force_pu().bit()),
-            )
+            .field("dc_est_force_pd", &self.dc_est_force_pd().bit())
+            .field("dc_est_force_pu", &self.dc_est_force_pu().bit())
+            .field("fft_force_pd", &self.fft_force_pd().bit())
+            .field("fft_force_pu", &self.fft_force_pu().bit())
             .finish()
     }
 }

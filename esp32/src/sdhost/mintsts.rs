@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MINTSTS")
-            .field(
-                "int_status_msk",
-                &format_args!("{}", self.int_status_msk().bits()),
-            )
-            .field(
-                "sdio_interrupt_msk",
-                &format_args!("{}", self.sdio_interrupt_msk().bits()),
-            )
+            .field("int_status_msk", &self.int_status_msk().bits())
+            .field("sdio_interrupt_msk", &self.sdio_interrupt_msk().bits())
             .finish()
     }
 }

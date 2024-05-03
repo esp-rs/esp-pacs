@@ -298,131 +298,131 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST0")
             .field(
                 "gpio_evt_ch0_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch0_rise_edge_st().bit()),
+                &self.gpio_evt_ch0_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch1_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch1_rise_edge_st().bit()),
+                &self.gpio_evt_ch1_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch2_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch2_rise_edge_st().bit()),
+                &self.gpio_evt_ch2_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch3_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch3_rise_edge_st().bit()),
+                &self.gpio_evt_ch3_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch4_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch4_rise_edge_st().bit()),
+                &self.gpio_evt_ch4_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch5_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch5_rise_edge_st().bit()),
+                &self.gpio_evt_ch5_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch6_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch6_rise_edge_st().bit()),
+                &self.gpio_evt_ch6_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch7_rise_edge_st",
-                &format_args!("{}", self.gpio_evt_ch7_rise_edge_st().bit()),
+                &self.gpio_evt_ch7_rise_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch0_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch0_fall_edge_st().bit()),
+                &self.gpio_evt_ch0_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch1_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch1_fall_edge_st().bit()),
+                &self.gpio_evt_ch1_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch2_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch2_fall_edge_st().bit()),
+                &self.gpio_evt_ch2_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch3_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch3_fall_edge_st().bit()),
+                &self.gpio_evt_ch3_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch4_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch4_fall_edge_st().bit()),
+                &self.gpio_evt_ch4_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch5_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch5_fall_edge_st().bit()),
+                &self.gpio_evt_ch5_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch6_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch6_fall_edge_st().bit()),
+                &self.gpio_evt_ch6_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch7_fall_edge_st",
-                &format_args!("{}", self.gpio_evt_ch7_fall_edge_st().bit()),
+                &self.gpio_evt_ch7_fall_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch0_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch0_any_edge_st().bit()),
+                &self.gpio_evt_ch0_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch1_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch1_any_edge_st().bit()),
+                &self.gpio_evt_ch1_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch2_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch2_any_edge_st().bit()),
+                &self.gpio_evt_ch2_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch3_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch3_any_edge_st().bit()),
+                &self.gpio_evt_ch3_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch4_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch4_any_edge_st().bit()),
+                &self.gpio_evt_ch4_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch5_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch5_any_edge_st().bit()),
+                &self.gpio_evt_ch5_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch6_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch6_any_edge_st().bit()),
+                &self.gpio_evt_ch6_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_ch7_any_edge_st",
-                &format_args!("{}", self.gpio_evt_ch7_any_edge_st().bit()),
+                &self.gpio_evt_ch7_any_edge_st().bit(),
             )
             .field(
                 "gpio_evt_zero_det_pos0_st",
-                &format_args!("{}", self.gpio_evt_zero_det_pos0_st().bit()),
+                &self.gpio_evt_zero_det_pos0_st().bit(),
             )
             .field(
                 "gpio_evt_zero_det_neg0_st",
-                &format_args!("{}", self.gpio_evt_zero_det_neg0_st().bit()),
+                &self.gpio_evt_zero_det_neg0_st().bit(),
             )
             .field(
                 "gpio_evt_zero_det_pos1_st",
-                &format_args!("{}", self.gpio_evt_zero_det_pos1_st().bit()),
+                &self.gpio_evt_zero_det_pos1_st().bit(),
             )
             .field(
                 "gpio_evt_zero_det_neg1_st",
-                &format_args!("{}", self.gpio_evt_zero_det_neg1_st().bit()),
+                &self.gpio_evt_zero_det_neg1_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch0_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch0_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch0_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch1_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch1_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch1_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch2_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch2_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch2_st().bit(),
             )
             .field(
                 "ledc_evt_duty_chng_end_ch3_st",
-                &format_args!("{}", self.ledc_evt_duty_chng_end_ch3_st().bit()),
+                &self.ledc_evt_duty_chng_end_ch3_st().bit(),
             )
             .finish()
     }

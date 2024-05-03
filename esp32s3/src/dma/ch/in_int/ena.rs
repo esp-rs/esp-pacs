@@ -98,34 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENA")
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field(
-                "infifo_full_wm",
-                &format_args!("{}", self.infifo_full_wm().bit()),
-            )
-            .field(
-                "infifo_ovf_l1",
-                &format_args!("{}", self.infifo_ovf_l1().bit()),
-            )
-            .field(
-                "infifo_udf_l1",
-                &format_args!("{}", self.infifo_udf_l1().bit()),
-            )
-            .field(
-                "infifo_ovf_l3",
-                &format_args!("{}", self.infifo_ovf_l3().bit()),
-            )
-            .field(
-                "infifo_udf_l3",
-                &format_args!("{}", self.infifo_udf_l3().bit()),
-            )
+            .field("in_done", &self.in_done().bit())
+            .field("in_suc_eof", &self.in_suc_eof().bit())
+            .field("in_err_eof", &self.in_err_eof().bit())
+            .field("in_dscr_err", &self.in_dscr_err().bit())
+            .field("in_dscr_empty", &self.in_dscr_empty().bit())
+            .field("infifo_full_wm", &self.infifo_full_wm().bit())
+            .field("infifo_ovf_l1", &self.infifo_ovf_l1().bit())
+            .field("infifo_udf_l1", &self.infifo_udf_l1().bit())
+            .field("infifo_ovf_l3", &self.infifo_ovf_l3().bit())
+            .field("infifo_udf_l3", &self.infifo_udf_l3().bit())
             .finish()
     }
 }

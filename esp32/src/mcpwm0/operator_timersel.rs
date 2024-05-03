@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OPERATOR_TIMERSEL")
-            .field(
-                "operator0_timersel",
-                &format_args!("{}", self.operator0_timersel().bits()),
-            )
-            .field(
-                "operator1_timersel",
-                &format_args!("{}", self.operator1_timersel().bits()),
-            )
-            .field(
-                "operator2_timersel",
-                &format_args!("{}", self.operator2_timersel().bits()),
-            )
+            .field("operator0_timersel", &self.operator0_timersel().bits())
+            .field("operator1_timersel", &self.operator1_timersel().bits())
+            .field("operator2_timersel", &self.operator2_timersel().bits())
             .finish()
     }
 }

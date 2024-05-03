@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLKSIZ")
-            .field("block_size", &format_args!("{}", self.block_size().bits()))
+            .field("block_size", &self.block_size().bits())
             .finish()
     }
 }

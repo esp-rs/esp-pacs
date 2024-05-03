@@ -62,15 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHB_LITE_MASK")
-            .field("pro", &format_args!("{}", self.pro().bit()))
-            .field("app", &format_args!("{}", self.app().bit()))
-            .field("sdio", &format_args!("{}", self.sdio().bit()))
-            .field("prodport", &format_args!("{}", self.prodport().bit()))
-            .field("appdport", &format_args!("{}", self.appdport().bit()))
-            .field(
-                "ahb_lite_sdhost_pid",
-                &format_args!("{}", self.ahb_lite_sdhost_pid().bits()),
-            )
+            .field("pro", &self.pro().bit())
+            .field("app", &self.app().bit())
+            .field("sdio", &self.sdio().bit())
+            .field("prodport", &self.prodport().bit())
+            .field("appdport", &self.appdport().bit())
+            .field("ahb_lite_sdhost_pid", &self.ahb_lite_sdhost_pid().bits())
             .finish()
     }
 }

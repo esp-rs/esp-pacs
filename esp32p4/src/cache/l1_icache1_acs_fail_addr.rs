@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE1_ACS_FAIL_ADDR")
-            .field(
-                "l1_icache1_fail_addr",
-                &format_args!("{}", self.l1_icache1_fail_addr().bits()),
-            )
+            .field("l1_icache1_fail_addr", &self.l1_icache1_fail_addr().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL6")
-            .field(
-                "soc_wakeup_wait",
-                &format_args!("{}", self.soc_wakeup_wait().bits()),
-            )
-            .field(
-                "soc_wakeup_wait_cfg",
-                &format_args!("{}", self.soc_wakeup_wait_cfg().bits()),
-            )
+            .field("soc_wakeup_wait", &self.soc_wakeup_wait().bits())
+            .field("soc_wakeup_wait_cfg", &self.soc_wakeup_wait_cfg().bits())
             .finish()
     }
 }

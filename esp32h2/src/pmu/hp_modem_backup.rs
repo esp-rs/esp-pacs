@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_BACKUP")
             .field(
                 "hp_sleep2modem_backup_modem_clk_code",
-                &format_args!("{}", self.hp_sleep2modem_backup_modem_clk_code().bits()),
+                &self.hp_sleep2modem_backup_modem_clk_code().bits(),
             )
             .field(
                 "hp_modem_retention_mode",
-                &format_args!("{}", self.hp_modem_retention_mode().bit()),
+                &self.hp_modem_retention_mode().bit(),
             )
             .field(
                 "hp_sleep2modem_retention_en",
-                &format_args!("{}", self.hp_sleep2modem_retention_en().bit()),
+                &self.hp_sleep2modem_retention_en().bit(),
             )
             .field(
                 "hp_sleep2modem_backup_clk_sel",
-                &format_args!("{}", self.hp_sleep2modem_backup_clk_sel().bits()),
+                &self.hp_sleep2modem_backup_clk_sel().bits(),
             )
             .field(
                 "hp_sleep2modem_backup_mode",
-                &format_args!("{}", self.hp_sleep2modem_backup_mode().bits()),
+                &self.hp_sleep2modem_backup_mode().bits(),
             )
             .field(
                 "hp_sleep2modem_backup_en",
-                &format_args!("{}", self.hp_sleep2modem_backup_en().bit()),
+                &self.hp_sleep2modem_backup_en().bit(),
             )
             .finish()
     }

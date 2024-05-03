@@ -59,22 +59,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_STATE")
-            .field("rx_in_idle", &format_args!("{}", self.rx_in_idle().bit()))
-            .field("rx_in_run", &format_args!("{}", self.rx_in_run().bit()))
-            .field("rx_in_wait", &format_args!("{}", self.rx_in_wait().bit()))
-            .field("rx_in_pause", &format_args!("{}", self.rx_in_pause().bit()))
-            .field(
-                "rx_fifo_full",
-                &format_args!("{}", self.rx_fifo_full().bit()),
-            )
-            .field(
-                "rx_eof_get_cnt",
-                &format_args!("{}", self.rx_eof_get_cnt().bits()),
-            )
-            .field(
-                "rx_eof_overload",
-                &format_args!("{}", self.rx_eof_overload().bit()),
-            )
+            .field("rx_in_idle", &self.rx_in_idle().bit())
+            .field("rx_in_run", &self.rx_in_run().bit())
+            .field("rx_in_wait", &self.rx_in_wait().bit())
+            .field("rx_in_pause", &self.rx_in_pause().bit())
+            .field("rx_fifo_full", &self.rx_fifo_full().bit())
+            .field("rx_eof_get_cnt", &self.rx_eof_get_cnt().bits())
+            .field("rx_eof_overload", &self.rx_eof_overload().bit())
             .finish()
     }
 }

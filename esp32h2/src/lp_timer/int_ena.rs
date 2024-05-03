@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "overflow_ena",
-                &format_args!("{}", self.overflow_ena().bit()),
-            )
-            .field(
-                "soc_wakeup_int_ena",
-                &format_args!("{}", self.soc_wakeup_int_ena().bit()),
-            )
+            .field("overflow_ena", &self.overflow_ena().bit())
+            .field("soc_wakeup_int_ena", &self.soc_wakeup_int_ena().bit())
             .finish()
     }
 }

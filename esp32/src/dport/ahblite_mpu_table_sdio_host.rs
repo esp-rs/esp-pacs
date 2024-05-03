@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_SDIO_HOST")
             .field(
                 "sdiohost_access_grant_config",
-                &format_args!("{}", self.sdiohost_access_grant_config().bits()),
+                &self.sdiohost_access_grant_config().bits(),
             )
             .finish()
     }

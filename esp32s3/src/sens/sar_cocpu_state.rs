@@ -45,26 +45,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_COCPU_STATE")
-            .field(
-                "sar_cocpu_clk_en_st",
-                &format_args!("{}", self.sar_cocpu_clk_en_st().bit()),
-            )
-            .field(
-                "sar_cocpu_reset_n",
-                &format_args!("{}", self.sar_cocpu_reset_n().bit()),
-            )
-            .field(
-                "sar_cocpu_eoi",
-                &format_args!("{}", self.sar_cocpu_eoi().bit()),
-            )
-            .field(
-                "sar_cocpu_trap",
-                &format_args!("{}", self.sar_cocpu_trap().bit()),
-            )
-            .field(
-                "sar_cocpu_ebreak",
-                &format_args!("{}", self.sar_cocpu_ebreak().bit()),
-            )
+            .field("sar_cocpu_clk_en_st", &self.sar_cocpu_clk_en_st().bit())
+            .field("sar_cocpu_reset_n", &self.sar_cocpu_reset_n().bit())
+            .field("sar_cocpu_eoi", &self.sar_cocpu_eoi().bit())
+            .field("sar_cocpu_trap", &self.sar_cocpu_trap().bit())
+            .field("sar_cocpu_ebreak", &self.sar_cocpu_ebreak().bit())
             .finish()
     }
 }

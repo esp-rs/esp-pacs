@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CLK_CFG")
-            .field(
-                "rx_clk_i_inv",
-                &format_args!("{}", self.rx_clk_i_inv().bit()),
-            )
-            .field(
-                "rx_clk_o_inv",
-                &format_args!("{}", self.rx_clk_o_inv().bit()),
-            )
+            .field("rx_clk_i_inv", &self.rx_clk_i_inv().bit())
+            .field("rx_clk_o_inv", &self.rx_clk_o_inv().bit())
             .finish()
     }
 }

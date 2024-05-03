@@ -204,102 +204,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "hstimer0_ovf",
-                &format_args!("{}", self.hstimer0_ovf().bit()),
-            )
-            .field(
-                "hstimer1_ovf",
-                &format_args!("{}", self.hstimer1_ovf().bit()),
-            )
-            .field(
-                "hstimer2_ovf",
-                &format_args!("{}", self.hstimer2_ovf().bit()),
-            )
-            .field(
-                "hstimer3_ovf",
-                &format_args!("{}", self.hstimer3_ovf().bit()),
-            )
-            .field(
-                "lstimer0_ovf",
-                &format_args!("{}", self.lstimer0_ovf().bit()),
-            )
-            .field(
-                "lstimer1_ovf",
-                &format_args!("{}", self.lstimer1_ovf().bit()),
-            )
-            .field(
-                "lstimer2_ovf",
-                &format_args!("{}", self.lstimer2_ovf().bit()),
-            )
-            .field(
-                "lstimer3_ovf",
-                &format_args!("{}", self.lstimer3_ovf().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch0",
-                &format_args!("{}", self.duty_chng_end_hsch0().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch1",
-                &format_args!("{}", self.duty_chng_end_hsch1().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch2",
-                &format_args!("{}", self.duty_chng_end_hsch2().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch3",
-                &format_args!("{}", self.duty_chng_end_hsch3().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch4",
-                &format_args!("{}", self.duty_chng_end_hsch4().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch5",
-                &format_args!("{}", self.duty_chng_end_hsch5().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch6",
-                &format_args!("{}", self.duty_chng_end_hsch6().bit()),
-            )
-            .field(
-                "duty_chng_end_hsch7",
-                &format_args!("{}", self.duty_chng_end_hsch7().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch0",
-                &format_args!("{}", self.duty_chng_end_lsch0().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch1",
-                &format_args!("{}", self.duty_chng_end_lsch1().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch2",
-                &format_args!("{}", self.duty_chng_end_lsch2().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch3",
-                &format_args!("{}", self.duty_chng_end_lsch3().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch4",
-                &format_args!("{}", self.duty_chng_end_lsch4().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch5",
-                &format_args!("{}", self.duty_chng_end_lsch5().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch6",
-                &format_args!("{}", self.duty_chng_end_lsch6().bit()),
-            )
-            .field(
-                "duty_chng_end_lsch7",
-                &format_args!("{}", self.duty_chng_end_lsch7().bit()),
-            )
+            .field("hstimer0_ovf", &self.hstimer0_ovf().bit())
+            .field("hstimer1_ovf", &self.hstimer1_ovf().bit())
+            .field("hstimer2_ovf", &self.hstimer2_ovf().bit())
+            .field("hstimer3_ovf", &self.hstimer3_ovf().bit())
+            .field("lstimer0_ovf", &self.lstimer0_ovf().bit())
+            .field("lstimer1_ovf", &self.lstimer1_ovf().bit())
+            .field("lstimer2_ovf", &self.lstimer2_ovf().bit())
+            .field("lstimer3_ovf", &self.lstimer3_ovf().bit())
+            .field("duty_chng_end_hsch0", &self.duty_chng_end_hsch0().bit())
+            .field("duty_chng_end_hsch1", &self.duty_chng_end_hsch1().bit())
+            .field("duty_chng_end_hsch2", &self.duty_chng_end_hsch2().bit())
+            .field("duty_chng_end_hsch3", &self.duty_chng_end_hsch3().bit())
+            .field("duty_chng_end_hsch4", &self.duty_chng_end_hsch4().bit())
+            .field("duty_chng_end_hsch5", &self.duty_chng_end_hsch5().bit())
+            .field("duty_chng_end_hsch6", &self.duty_chng_end_hsch6().bit())
+            .field("duty_chng_end_hsch7", &self.duty_chng_end_hsch7().bit())
+            .field("duty_chng_end_lsch0", &self.duty_chng_end_lsch0().bit())
+            .field("duty_chng_end_lsch1", &self.duty_chng_end_lsch1().bit())
+            .field("duty_chng_end_lsch2", &self.duty_chng_end_lsch2().bit())
+            .field("duty_chng_end_lsch3", &self.duty_chng_end_lsch3().bit())
+            .field("duty_chng_end_lsch4", &self.duty_chng_end_lsch4().bit())
+            .field("duty_chng_end_lsch5", &self.duty_chng_end_lsch5().bit())
+            .field("duty_chng_end_lsch6", &self.duty_chng_end_lsch6().bit())
+            .field("duty_chng_end_lsch7", &self.duty_chng_end_lsch7().bit())
             .finish()
     }
 }

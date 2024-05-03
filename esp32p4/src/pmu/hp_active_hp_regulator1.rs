@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_ACTIVE_HP_REGULATOR1")
             .field(
                 "hp_active_hp_regulator_drv_b",
-                &format_args!("{}", self.hp_active_hp_regulator_drv_b().bits()),
+                &self.hp_active_hp_regulator_drv_b().bits(),
             )
             .finish()
     }

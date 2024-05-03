@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REDUNDANCY_SIG4")
-            .field(
-                "cache_redcy_sig4",
-                &format_args!("{}", self.cache_redcy_sig4().bits()),
-            )
+            .field("cache_redcy_sig4", &self.cache_redcy_sig4().bits())
             .finish()
     }
 }

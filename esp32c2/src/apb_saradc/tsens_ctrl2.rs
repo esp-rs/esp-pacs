@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSENS_CTRL2")
-            .field("xpd_wait", &format_args!("{}", self.xpd_wait().bits()))
-            .field("xpd_force", &format_args!("{}", self.xpd_force().bits()))
-            .field("clk_inv", &format_args!("{}", self.clk_inv().bit()))
-            .field("clk_sel", &format_args!("{}", self.clk_sel().bit()))
+            .field("xpd_wait", &self.xpd_wait().bits())
+            .field("xpd_force", &self.xpd_force().bits())
+            .field("clk_inv", &self.clk_inv().bit())
+            .field("clk_sel", &self.clk_sel().bit())
             .finish()
     }
 }

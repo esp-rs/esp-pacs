@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_PMS_SIZE")
-            .field(
-                "spi_smem_pms_size",
-                &format_args!("{}", self.spi_smem_pms_size().bits()),
-            )
+            .field("spi_smem_pms_size", &self.spi_smem_pms_size().bits())
             .finish()
     }
 }

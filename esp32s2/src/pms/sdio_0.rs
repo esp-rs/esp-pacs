@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_0")
-            .field("sdio_lock", &format_args!("{}", self.sdio_lock().bit()))
+            .field("sdio_lock", &self.sdio_lock().bit())
             .finish()
     }
 }

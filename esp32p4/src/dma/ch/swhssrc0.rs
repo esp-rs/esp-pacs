@@ -41,18 +41,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWHSSRC0")
-            .field(
-                "ch1_swhs_req_src",
-                &format_args!("{}", self.ch1_swhs_req_src().bit()),
-            )
-            .field(
-                "ch1_swhs_sglreq_src",
-                &format_args!("{}", self.ch1_swhs_sglreq_src().bit()),
-            )
-            .field(
-                "ch1_swhs_lst_src",
-                &format_args!("{}", self.ch1_swhs_lst_src().bit()),
-            )
+            .field("ch1_swhs_req_src", &self.ch1_swhs_req_src().bit())
+            .field("ch1_swhs_sglreq_src", &self.ch1_swhs_sglreq_src().bit())
+            .field("ch1_swhs_lst_src", &self.ch1_swhs_lst_src().bit())
             .finish()
     }
 }

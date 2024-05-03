@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VDD_SOURCE_CNTL")
-            .field(
-                "detmode_sel",
-                &format_args!("{}", self.detmode_sel().bits()),
-            )
-            .field(
-                "vgood_event_record",
-                &format_args!("{}", self.vgood_event_record().bits()),
-            )
-            .field(
-                "bod_source_ena",
-                &format_args!("{}", self.bod_source_ena().bits()),
-            )
+            .field("detmode_sel", &self.detmode_sel().bits())
+            .field("vgood_event_record", &self.vgood_event_record().bits())
+            .field("bod_source_ena", &self.bod_source_ena().bits())
             .finish()
     }
 }

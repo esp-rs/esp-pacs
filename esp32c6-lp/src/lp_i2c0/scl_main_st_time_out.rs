@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_MAIN_ST_TIME_OUT")
-            .field(
-                "scl_main_st_to_i2c",
-                &format_args!("{}", self.scl_main_st_to_i2c().bits()),
-            )
+            .field("scl_main_st_to_i2c", &self.scl_main_st_to_i2c().bits())
             .finish()
     }
 }

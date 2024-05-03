@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_FIX_ALPHA")
-            .field(
-                "blend0_rx_fix_alpha",
-                &format_args!("{}", self.blend0_rx_fix_alpha().bits()),
-            )
-            .field(
-                "blend1_rx_fix_alpha",
-                &format_args!("{}", self.blend1_rx_fix_alpha().bits()),
-            )
-            .field(
-                "blend0_rx_alpha_mod",
-                &format_args!("{}", self.blend0_rx_alpha_mod().bits()),
-            )
-            .field(
-                "blend1_rx_alpha_mod",
-                &format_args!("{}", self.blend1_rx_alpha_mod().bits()),
-            )
-            .field(
-                "blend0_rx_alpha_inv",
-                &format_args!("{}", self.blend0_rx_alpha_inv().bit()),
-            )
-            .field(
-                "blend1_rx_alpha_inv",
-                &format_args!("{}", self.blend1_rx_alpha_inv().bit()),
-            )
+            .field("blend0_rx_fix_alpha", &self.blend0_rx_fix_alpha().bits())
+            .field("blend1_rx_fix_alpha", &self.blend1_rx_fix_alpha().bits())
+            .field("blend0_rx_alpha_mod", &self.blend0_rx_alpha_mod().bits())
+            .field("blend1_rx_alpha_mod", &self.blend1_rx_alpha_mod().bits())
+            .field("blend0_rx_alpha_inv", &self.blend0_rx_alpha_inv().bit())
+            .field("blend1_rx_alpha_inv", &self.blend1_rx_alpha_inv().bit())
             .finish()
     }
 }

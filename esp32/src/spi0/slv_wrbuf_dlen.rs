@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_WRBUF_DLEN")
-            .field(
-                "slv_wrbuf_dbitlen",
-                &format_args!("{}", self.slv_wrbuf_dbitlen().bits()),
-            )
+            .field("slv_wrbuf_dbitlen", &self.slv_wrbuf_dbitlen().bits())
             .finish()
     }
 }

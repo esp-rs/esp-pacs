@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_WAITI_CONF")
             .field(
                 "cpu_wait_mode_force_on",
-                &format_args!("{}", self.cpu_wait_mode_force_on().bit()),
+                &self.cpu_wait_mode_force_on().bit(),
             )
-            .field(
-                "cpu_waiti_delay_num",
-                &format_args!("{}", self.cpu_waiti_delay_num().bits()),
-            )
+            .field("cpu_waiti_delay_num", &self.cpu_waiti_delay_num().bits())
             .finish()
     }
 }

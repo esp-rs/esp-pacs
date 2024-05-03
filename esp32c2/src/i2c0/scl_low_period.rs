@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_LOW_PERIOD")
-            .field(
-                "scl_low_period",
-                &format_args!("{}", self.scl_low_period().bits()),
-            )
+            .field("scl_low_period", &self.scl_low_period().bits())
             .finish()
     }
 }

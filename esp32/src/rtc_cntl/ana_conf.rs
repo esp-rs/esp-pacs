@@ -80,29 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_CONF")
-            .field(
-                "plla_force_pd",
-                &format_args!("{}", self.plla_force_pd().bit()),
-            )
-            .field(
-                "plla_force_pu",
-                &format_args!("{}", self.plla_force_pu().bit()),
-            )
-            .field(
-                "bbpll_cal_slp_start",
-                &format_args!("{}", self.bbpll_cal_slp_start().bit()),
-            )
-            .field("pvtmon_pu", &format_args!("{}", self.pvtmon_pu().bit()))
-            .field("txrf_i2c_pu", &format_args!("{}", self.txrf_i2c_pu().bit()))
-            .field(
-                "rfrx_pbus_pu",
-                &format_args!("{}", self.rfrx_pbus_pu().bit()),
-            )
-            .field(
-                "ckgen_i2c_pu",
-                &format_args!("{}", self.ckgen_i2c_pu().bit()),
-            )
-            .field("pll_i2c_pu", &format_args!("{}", self.pll_i2c_pu().bit()))
+            .field("plla_force_pd", &self.plla_force_pd().bit())
+            .field("plla_force_pu", &self.plla_force_pu().bit())
+            .field("bbpll_cal_slp_start", &self.bbpll_cal_slp_start().bit())
+            .field("pvtmon_pu", &self.pvtmon_pu().bit())
+            .field("txrf_i2c_pu", &self.txrf_i2c_pu().bit())
+            .field("rfrx_pbus_pu", &self.rfrx_pbus_pu().bit())
+            .field("ckgen_i2c_pu", &self.ckgen_i2c_pu().bit())
+            .field("pll_i2c_pu", &self.pll_i2c_pu().bit())
             .finish()
     }
 }

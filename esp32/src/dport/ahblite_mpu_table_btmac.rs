@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_BTMAC")
             .field(
                 "btmac_access_grant_config",
-                &format_args!("{}", self.btmac_access_grant_config().bits()),
+                &self.btmac_access_grant_config().bits(),
             )
             .finish()
     }

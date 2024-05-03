@@ -197,78 +197,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIG_PWC")
-            .field(
-                "vdd_spi_pwr_drv",
-                &format_args!("{}", self.vdd_spi_pwr_drv().bits()),
-            )
-            .field(
-                "vdd_spi_pwr_force",
-                &format_args!("{}", self.vdd_spi_pwr_force().bit()),
-            )
-            .field(
-                "lslp_mem_force_pd",
-                &format_args!("{}", self.lslp_mem_force_pd().bit()),
-            )
-            .field(
-                "lslp_mem_force_pu",
-                &format_args!("{}", self.lslp_mem_force_pu().bit()),
-            )
-            .field("bt_force_pd", &format_args!("{}", self.bt_force_pd().bit()))
-            .field("bt_force_pu", &format_args!("{}", self.bt_force_pu().bit()))
-            .field(
-                "dg_peri_force_pd",
-                &format_args!("{}", self.dg_peri_force_pd().bit()),
-            )
-            .field(
-                "dg_peri_force_pu",
-                &format_args!("{}", self.dg_peri_force_pu().bit()),
-            )
-            .field(
-                "fastmem_force_lpd",
-                &format_args!("{}", self.fastmem_force_lpd().bit()),
-            )
-            .field(
-                "fastmem_force_lpu",
-                &format_args!("{}", self.fastmem_force_lpu().bit()),
-            )
-            .field(
-                "wifi_force_pd",
-                &format_args!("{}", self.wifi_force_pd().bit()),
-            )
-            .field(
-                "wifi_force_pu",
-                &format_args!("{}", self.wifi_force_pu().bit()),
-            )
-            .field(
-                "dg_wrap_force_pd",
-                &format_args!("{}", self.dg_wrap_force_pd().bit()),
-            )
-            .field(
-                "dg_wrap_force_pu",
-                &format_args!("{}", self.dg_wrap_force_pu().bit()),
-            )
-            .field(
-                "cpu_top_force_pd",
-                &format_args!("{}", self.cpu_top_force_pd().bit()),
-            )
-            .field(
-                "cpu_top_force_pu",
-                &format_args!("{}", self.cpu_top_force_pu().bit()),
-            )
-            .field("bt_pd_en", &format_args!("{}", self.bt_pd_en().bit()))
-            .field(
-                "dg_peri_pd_en",
-                &format_args!("{}", self.dg_peri_pd_en().bit()),
-            )
-            .field(
-                "cpu_top_pd_en",
-                &format_args!("{}", self.cpu_top_pd_en().bit()),
-            )
-            .field("wifi_pd_en", &format_args!("{}", self.wifi_pd_en().bit()))
-            .field(
-                "dg_wrap_pd_en",
-                &format_args!("{}", self.dg_wrap_pd_en().bit()),
-            )
+            .field("vdd_spi_pwr_drv", &self.vdd_spi_pwr_drv().bits())
+            .field("vdd_spi_pwr_force", &self.vdd_spi_pwr_force().bit())
+            .field("lslp_mem_force_pd", &self.lslp_mem_force_pd().bit())
+            .field("lslp_mem_force_pu", &self.lslp_mem_force_pu().bit())
+            .field("bt_force_pd", &self.bt_force_pd().bit())
+            .field("bt_force_pu", &self.bt_force_pu().bit())
+            .field("dg_peri_force_pd", &self.dg_peri_force_pd().bit())
+            .field("dg_peri_force_pu", &self.dg_peri_force_pu().bit())
+            .field("fastmem_force_lpd", &self.fastmem_force_lpd().bit())
+            .field("fastmem_force_lpu", &self.fastmem_force_lpu().bit())
+            .field("wifi_force_pd", &self.wifi_force_pd().bit())
+            .field("wifi_force_pu", &self.wifi_force_pu().bit())
+            .field("dg_wrap_force_pd", &self.dg_wrap_force_pd().bit())
+            .field("dg_wrap_force_pu", &self.dg_wrap_force_pu().bit())
+            .field("cpu_top_force_pd", &self.cpu_top_force_pd().bit())
+            .field("cpu_top_force_pu", &self.cpu_top_force_pu().bit())
+            .field("bt_pd_en", &self.bt_pd_en().bit())
+            .field("dg_peri_pd_en", &self.dg_peri_pd_en().bit())
+            .field("cpu_top_pd_en", &self.cpu_top_pd_en().bit())
+            .field("wifi_pd_en", &self.wifi_pd_en().bit())
+            .field("dg_wrap_pd_en", &self.dg_wrap_pd_en().bit())
             .finish()
     }
 }

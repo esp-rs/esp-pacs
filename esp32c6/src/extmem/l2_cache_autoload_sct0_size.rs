@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_AUTOLOAD_SCT0_SIZE")
             .field(
                 "l2_cache_autoload_sct0_size",
-                &format_args!("{}", self.l2_cache_autoload_sct0_size().bits()),
+                &self.l2_cache_autoload_sct0_size().bits(),
             )
             .finish()
     }

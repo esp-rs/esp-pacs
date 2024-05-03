@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_RC32K_CNTL")
             .field(
                 "lp_aonclkrst_rc32k_dfreq",
-                &format_args!("{}", self.lp_aonclkrst_rc32k_dfreq().bits()),
+                &self.lp_aonclkrst_rc32k_dfreq().bits(),
             )
             .finish()
     }

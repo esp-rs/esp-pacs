@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("PKT_LEN0")
             .field(
                 "hostslchost_slc0_len0",
-                &format_args!("{}", self.hostslchost_slc0_len0().bits()),
+                &self.hostslchost_slc0_len0().bits(),
             )
             .field(
                 "hostslchost_slc0_len0_check",
-                &format_args!("{}", self.hostslchost_slc0_len0_check().bits()),
+                &self.hostslchost_slc0_len0_check().bits(),
             )
             .finish()
     }

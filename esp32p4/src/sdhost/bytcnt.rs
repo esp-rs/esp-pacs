@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BYTCNT")
-            .field("byte_count", &format_args!("{}", self.byte_count().bits()))
+            .field("byte_count", &self.byte_count().bits())
             .finish()
     }
 }

@@ -26,11 +26,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("EP1_CONF")
             .field(
                 "serial_in_ep_data_free",
-                &format_args!("{}", self.serial_in_ep_data_free().bit()),
+                &self.serial_in_ep_data_free().bit(),
             )
             .field(
                 "serial_out_ep_data_avail",
-                &format_args!("{}", self.serial_out_ep_data_avail().bit()),
+                &self.serial_out_ep_data_avail().bit(),
             )
             .finish()
     }

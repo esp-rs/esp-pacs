@@ -21,7 +21,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TOUCH_APPROACH")
             .field(
                 "touch_approach_meas_time",
-                &format_args!("{}", self.touch_approach_meas_time().bits()),
+                &self.touch_approach_meas_time().bits(),
             )
             .finish()
     }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("FLASH_MSPI_INT_MAP")
             .field(
                 "core0_flash_mspi_int_map",
-                &format_args!("{}", self.core0_flash_mspi_int_map().bits()),
+                &self.core0_flash_mspi_int_map().bits(),
             )
             .finish()
     }

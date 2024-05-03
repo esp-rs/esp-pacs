@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_TG1_T0_EDGE_INT_MAP")
             .field(
                 "pro_tg1_t0_edge_int_map",
-                &format_args!("{}", self.pro_tg1_t0_edge_int_map().bits()),
+                &self.pro_tg1_t0_edge_int_map().bits(),
             )
             .finish()
     }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUTLINK_DSCR_BF0")
-            .field(
-                "dma_outlink_dscr_bf0",
-                &format_args!("{}", self.dma_outlink_dscr_bf0().bits()),
-            )
+            .field("dma_outlink_dscr_bf0", &self.dma_outlink_dscr_bf0().bits())
             .finish()
     }
 }

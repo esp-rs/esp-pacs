@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSCLK_CONF")
-            .field("clk_320m_en", &format_args!("{}", self.clk_320m_en().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "rst_tick_cnt",
-                &format_args!("{}", self.rst_tick_cnt().bit()),
-            )
+            .field("clk_320m_en", &self.clk_320m_en().bit())
+            .field("clk_en", &self.clk_en().bit())
+            .field("rst_tick_cnt", &self.rst_tick_cnt().bit())
             .finish()
     }
 }

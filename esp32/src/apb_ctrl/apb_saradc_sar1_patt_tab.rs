@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB_SARADC_SAR1_PATT_TAB")
             .field(
                 "saradc_sar1_patt_tab1",
-                &format_args!("{}", self.saradc_sar1_patt_tab1().bits()),
+                &self.saradc_sar1_patt_tab1().bits(),
             )
             .finish()
     }

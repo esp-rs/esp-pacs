@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLCHOST_CHECK_SUM0")
             .field(
                 "host_slchost_check_sum0",
-                &format_args!("{}", self.host_slchost_check_sum0().bits()),
+                &self.host_slchost_check_sum0().bits(),
             )
             .finish()
     }

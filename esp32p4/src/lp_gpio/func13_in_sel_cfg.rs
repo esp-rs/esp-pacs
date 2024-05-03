@@ -37,15 +37,12 @@ impl core::fmt::Debug for R {
         f.debug_struct("FUNC13_IN_SEL_CFG")
             .field(
                 "reg_gpio_func13_in_inv_sel",
-                &format_args!("{}", self.reg_gpio_func13_in_inv_sel().bit()),
+                &self.reg_gpio_func13_in_inv_sel().bit(),
             )
-            .field(
-                "reg_gpio_sig13_in_sel",
-                &format_args!("{}", self.reg_gpio_sig13_in_sel().bit()),
-            )
+            .field("reg_gpio_sig13_in_sel", &self.reg_gpio_sig13_in_sel().bit())
             .field(
                 "reg_gpio_func13_in_sel",
-                &format_args!("{}", self.reg_gpio_func13_in_sel().bits()),
+                &self.reg_gpio_func13_in_sel().bits(),
             )
             .finish()
     }

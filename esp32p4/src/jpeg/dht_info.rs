@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DHT_INFO")
-            .field("dc0_dht_id", &format_args!("{}", self.dc0_dht_id().bits()))
-            .field("dc1_dht_id", &format_args!("{}", self.dc1_dht_id().bits()))
-            .field("ac0_dht_id", &format_args!("{}", self.ac0_dht_id().bits()))
-            .field("ac1_dht_id", &format_args!("{}", self.ac1_dht_id().bits()))
+            .field("dc0_dht_id", &self.dc0_dht_id().bits())
+            .field("dc1_dht_id", &self.dc1_dht_id().bits())
+            .field("ac0_dht_id", &self.ac0_dht_id().bits())
+            .field("ac1_dht_id", &self.ac1_dht_id().bits())
             .finish()
     }
 }

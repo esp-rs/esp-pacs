@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_MMU_OWNER")
-            .field(
-                "cache_mmu_owner",
-                &format_args!("{}", self.cache_mmu_owner().bits()),
-            )
+            .field("cache_mmu_owner", &self.cache_mmu_owner().bits())
             .finish()
     }
 }

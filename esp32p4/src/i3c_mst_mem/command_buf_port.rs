@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMMAND_BUF_PORT")
-            .field(
-                "reg_command",
-                &format_args!("{}", self.reg_command().bits()),
-            )
+            .field("reg_command", &self.reg_command().bits())
             .finish()
     }
 }

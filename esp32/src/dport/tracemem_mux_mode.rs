@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TRACEMEM_MUX_MODE")
-            .field(
-                "tracemem_mux_mode",
-                &format_args!("{}", self.tracemem_mux_mode().bits()),
-            )
+            .field("tracemem_mux_mode", &self.tracemem_mux_mode().bits())
             .finish()
     }
 }

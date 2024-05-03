@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_FLOW_STATUS")
-            .field(
-                "raw_buf_depth",
-                &format_args!("{}", self.raw_buf_depth().bits()),
-            )
+            .field("raw_buf_depth", &self.raw_buf_depth().bits())
             .finish()
     }
 }

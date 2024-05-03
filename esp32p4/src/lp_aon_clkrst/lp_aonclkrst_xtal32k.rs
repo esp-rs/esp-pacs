@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_XTAL32K")
             .field(
                 "lp_aonclkrst_dres_xtal32k",
-                &format_args!("{}", self.lp_aonclkrst_dres_xtal32k().bits()),
+                &self.lp_aonclkrst_dres_xtal32k().bits(),
             )
             .field(
                 "lp_aonclkrst_dgm_xtal32k",
-                &format_args!("{}", self.lp_aonclkrst_dgm_xtal32k().bits()),
+                &self.lp_aonclkrst_dgm_xtal32k().bits(),
             )
             .field(
                 "lp_aonclkrst_dbuf_xtal32k",
-                &format_args!("{}", self.lp_aonclkrst_dbuf_xtal32k().bit()),
+                &self.lp_aonclkrst_dbuf_xtal32k().bit(),
             )
             .field(
                 "lp_aonclkrst_dac_xtal32k",
-                &format_args!("{}", self.lp_aonclkrst_dac_xtal32k().bits()),
+                &self.lp_aonclkrst_dac_xtal32k().bits(),
             )
             .finish()
     }

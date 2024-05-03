@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("TIMER2")
             .field(
                 "ulpcp_touch_start_wait",
-                &format_args!("{}", self.ulpcp_touch_start_wait().bits()),
+                &self.ulpcp_touch_start_wait().bits(),
             )
-            .field(
-                "min_time_ck8m_off",
-                &format_args!("{}", self.min_time_ck8m_off().bits()),
-            )
+            .field("min_time_ck8m_off", &self.min_time_ck8m_off().bits())
             .finish()
     }
 }

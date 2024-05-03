@@ -21,10 +21,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_GAMMA_CONF")
-            .field(
-                "ch_gamma_entry_num",
-                &format_args!("{}", self.ch_gamma_entry_num().bits()),
-            )
+            .field("ch_gamma_entry_num", &self.ch_gamma_entry_num().bits())
             .finish()
     }
 }

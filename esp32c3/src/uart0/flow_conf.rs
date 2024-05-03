@@ -62,15 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLOW_CONF")
-            .field(
-                "sw_flow_con_en",
-                &format_args!("{}", self.sw_flow_con_en().bit()),
-            )
-            .field("xonoff_del", &format_args!("{}", self.xonoff_del().bit()))
-            .field("force_xon", &format_args!("{}", self.force_xon().bit()))
-            .field("force_xoff", &format_args!("{}", self.force_xoff().bit()))
-            .field("send_xon", &format_args!("{}", self.send_xon().bit()))
-            .field("send_xoff", &format_args!("{}", self.send_xoff().bit()))
+            .field("sw_flow_con_en", &self.sw_flow_con_en().bit())
+            .field("xonoff_del", &self.xonoff_del().bit())
+            .field("force_xon", &self.force_xon().bit())
+            .field("force_xoff", &self.force_xoff().bit())
+            .field("send_xon", &self.send_xon().bit())
+            .field("send_xoff", &self.send_xoff().bit())
             .finish()
     }
 }

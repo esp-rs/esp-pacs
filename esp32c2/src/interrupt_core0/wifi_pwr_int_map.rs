@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_PWR_INT_MAP")
-            .field(
-                "wifi_pwr_int_map",
-                &format_args!("{}", self.wifi_pwr_int_map().bits()),
-            )
+            .field("wifi_pwr_int_map", &self.wifi_pwr_int_map().bits())
             .finish()
     }
 }

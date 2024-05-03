@@ -43,24 +43,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE1_ACS_CACHE_INT_ST")
             .field(
                 "core1_ibus_acs_msk_icache_st",
-                &format_args!("{}", self.core1_ibus_acs_msk_icache_st().bit()),
+                &self.core1_ibus_acs_msk_icache_st().bit(),
             )
             .field(
                 "core1_ibus_wr_icache_st",
-                &format_args!("{}", self.core1_ibus_wr_icache_st().bit()),
+                &self.core1_ibus_wr_icache_st().bit(),
             )
-            .field(
-                "core1_ibus_reject_st",
-                &format_args!("{}", self.core1_ibus_reject_st().bit()),
-            )
+            .field("core1_ibus_reject_st", &self.core1_ibus_reject_st().bit())
             .field(
                 "core1_dbus_acs_msk_dcache_st",
-                &format_args!("{}", self.core1_dbus_acs_msk_dcache_st().bit()),
+                &self.core1_dbus_acs_msk_dcache_st().bit(),
             )
-            .field(
-                "core1_dbus_reject_st",
-                &format_args!("{}", self.core1_dbus_reject_st().bit()),
-            )
+            .field("core1_dbus_reject_st", &self.core1_dbus_reject_st().bit())
             .finish()
     }
 }

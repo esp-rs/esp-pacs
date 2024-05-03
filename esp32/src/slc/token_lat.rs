@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOKEN_LAT")
-            .field("slc0_token", &format_args!("{}", self.slc0_token().bits()))
-            .field("slc1_token", &format_args!("{}", self.slc1_token().bits()))
+            .field("slc0_token", &self.slc0_token().bits())
+            .field("slc1_token", &self.slc1_token().bits())
             .finish()
     }
 }

@@ -27,17 +27,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTMEM_REJECT_ST")
-            .field(
-                "extmem_reject_atrr",
-                &format_args!("{}", self.extmem_reject_atrr().bits()),
-            )
+            .field("extmem_reject_atrr", &self.extmem_reject_atrr().bits())
             .field(
                 "extmem_reject_channel_num",
-                &format_args!("{}", self.extmem_reject_channel_num().bits()),
+                &self.extmem_reject_channel_num().bits(),
             )
             .field(
                 "extmem_reject_peri_num",
-                &format_args!("{}", self.extmem_reject_peri_num().bits()),
+                &self.extmem_reject_peri_num().bits(),
             )
             .finish()
     }

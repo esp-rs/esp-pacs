@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLUT_CNT")
-            .field(
-                "blend0_clut_cnt",
-                &format_args!("{}", self.blend0_clut_cnt().bits()),
-            )
-            .field(
-                "blend1_clut_cnt",
-                &format_args!("{}", self.blend1_clut_cnt().bits()),
-            )
+            .field("blend0_clut_cnt", &self.blend0_clut_cnt().bits())
+            .field("blend1_clut_cnt", &self.blend1_clut_cnt().bits())
             .finish()
     }
 }

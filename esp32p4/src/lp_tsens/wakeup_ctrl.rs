@@ -51,20 +51,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WAKEUP_CTRL")
-            .field(
-                "wakeup_th_low",
-                &format_args!("{}", self.wakeup_th_low().bits()),
-            )
-            .field(
-                "wakeup_th_high",
-                &format_args!("{}", self.wakeup_th_high().bits()),
-            )
-            .field(
-                "wakeup_over_upper_th",
-                &format_args!("{}", self.wakeup_over_upper_th().bit()),
-            )
-            .field("wakeup_en", &format_args!("{}", self.wakeup_en().bit()))
-            .field("wakeup_mode", &format_args!("{}", self.wakeup_mode().bit()))
+            .field("wakeup_th_low", &self.wakeup_th_low().bits())
+            .field("wakeup_th_high", &self.wakeup_th_high().bits())
+            .field("wakeup_over_upper_th", &self.wakeup_over_upper_th().bit())
+            .field("wakeup_en", &self.wakeup_en().bit())
+            .field("wakeup_mode", &self.wakeup_mode().bit())
             .finish()
     }
 }

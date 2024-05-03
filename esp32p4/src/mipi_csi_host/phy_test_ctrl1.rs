@@ -33,15 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TEST_CTRL1")
-            .field(
-                "phy_testdin",
-                &format_args!("{}", self.phy_testdin().bits()),
-            )
-            .field(
-                "phy_testdout",
-                &format_args!("{}", self.phy_testdout().bits()),
-            )
-            .field("phy_testen", &format_args!("{}", self.phy_testen().bit()))
+            .field("phy_testdin", &self.phy_testdin().bits())
+            .field("phy_testdout", &self.phy_testdout().bits())
+            .field("phy_testen", &self.phy_testen().bit())
             .finish()
     }
 }

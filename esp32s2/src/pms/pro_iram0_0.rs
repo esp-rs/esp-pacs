@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_IRAM0_0")
-            .field(
-                "pro_iram0_lock",
-                &format_args!("{}", self.pro_iram0_lock().bit()),
-            )
+            .field("pro_iram0_lock", &self.pro_iram0_lock().bit())
             .finish()
     }
 }

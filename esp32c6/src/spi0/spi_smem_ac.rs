@@ -69,41 +69,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_AC")
-            .field(
-                "spi_smem_cs_setup",
-                &format_args!("{}", self.spi_smem_cs_setup().bit()),
-            )
-            .field(
-                "spi_smem_cs_hold",
-                &format_args!("{}", self.spi_smem_cs_hold().bit()),
-            )
+            .field("spi_smem_cs_setup", &self.spi_smem_cs_setup().bit())
+            .field("spi_smem_cs_hold", &self.spi_smem_cs_hold().bit())
             .field(
                 "spi_smem_cs_setup_time",
-                &format_args!("{}", self.spi_smem_cs_setup_time().bits()),
+                &self.spi_smem_cs_setup_time().bits(),
             )
             .field(
                 "spi_smem_cs_hold_time",
-                &format_args!("{}", self.spi_smem_cs_hold_time().bits()),
+                &self.spi_smem_cs_hold_time().bits(),
             )
             .field(
                 "spi_smem_ecc_cs_hold_time",
-                &format_args!("{}", self.spi_smem_ecc_cs_hold_time().bits()),
+                &self.spi_smem_ecc_cs_hold_time().bits(),
             )
             .field(
                 "spi_smem_ecc_skip_page_corner",
-                &format_args!("{}", self.spi_smem_ecc_skip_page_corner().bit()),
+                &self.spi_smem_ecc_skip_page_corner().bit(),
             )
             .field(
                 "spi_smem_ecc_16to18_byte_en",
-                &format_args!("{}", self.spi_smem_ecc_16to18_byte_en().bit()),
+                &self.spi_smem_ecc_16to18_byte_en().bit(),
             )
             .field(
                 "spi_smem_cs_hold_delay",
-                &format_args!("{}", self.spi_smem_cs_hold_delay().bits()),
+                &self.spi_smem_cs_hold_delay().bits(),
             )
             .field(
                 "spi_smem_split_trans_en",
-                &format_args!("{}", self.spi_smem_split_trans_en().bit()),
+                &self.spi_smem_split_trans_en().bit(),
             )
             .finish()
     }

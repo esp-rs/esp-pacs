@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_LATTER_CMD_VAL")
-            .field(
-                "lcd_latter_cmd_value",
-                &format_args!("{}", self.lcd_latter_cmd_value().bits()),
-            )
+            .field("lcd_latter_cmd_value", &self.lcd_latter_cmd_value().bits())
             .finish()
     }
 }

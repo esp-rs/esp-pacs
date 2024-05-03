@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK5_W2")
-            .field("block5_w2", &format_args!("{}", self.block5_w2().bits()))
+            .field("block5_w2", &self.block5_w2().bits())
             .finish()
     }
 }

@@ -87,41 +87,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_AUTOLOAD_CTRL")
-            .field(
-                "l2_cache_autoload_ena",
-                &format_args!("{}", self.l2_cache_autoload_ena().bit()),
-            )
+            .field("l2_cache_autoload_ena", &self.l2_cache_autoload_ena().bit())
             .field(
                 "l2_cache_autoload_done",
-                &format_args!("{}", self.l2_cache_autoload_done().bit()),
+                &self.l2_cache_autoload_done().bit(),
             )
             .field(
                 "l2_cache_autoload_order",
-                &format_args!("{}", self.l2_cache_autoload_order().bit()),
+                &self.l2_cache_autoload_order().bit(),
             )
             .field(
                 "l2_cache_autoload_trigger_mode",
-                &format_args!("{}", self.l2_cache_autoload_trigger_mode().bits()),
+                &self.l2_cache_autoload_trigger_mode().bits(),
             )
             .field(
                 "l2_cache_autoload_sct0_ena",
-                &format_args!("{}", self.l2_cache_autoload_sct0_ena().bit()),
+                &self.l2_cache_autoload_sct0_ena().bit(),
             )
             .field(
                 "l2_cache_autoload_sct1_ena",
-                &format_args!("{}", self.l2_cache_autoload_sct1_ena().bit()),
+                &self.l2_cache_autoload_sct1_ena().bit(),
             )
             .field(
                 "l2_cache_autoload_sct2_ena",
-                &format_args!("{}", self.l2_cache_autoload_sct2_ena().bit()),
+                &self.l2_cache_autoload_sct2_ena().bit(),
             )
             .field(
                 "l2_cache_autoload_sct3_ena",
-                &format_args!("{}", self.l2_cache_autoload_sct3_ena().bit()),
+                &self.l2_cache_autoload_sct3_ena().bit(),
             )
             .field(
                 "l2_cache_autoload_rgid",
-                &format_args!("{}", self.l2_cache_autoload_rgid().bits()),
+                &self.l2_cache_autoload_rgid().bits(),
             )
             .finish()
     }

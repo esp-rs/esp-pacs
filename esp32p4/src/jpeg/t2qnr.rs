@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T2QNR")
-            .field("t2_qnr_val", &format_args!("{}", self.t2_qnr_val().bits()))
+            .field("t2_qnr_val", &self.t2_qnr_val().bits())
             .finish()
     }
 }

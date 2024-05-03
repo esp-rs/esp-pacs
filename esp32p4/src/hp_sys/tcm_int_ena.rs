@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_INT_ENA")
             .field(
                 "tcm_parity_err_int_ena",
-                &format_args!("{}", self.tcm_parity_err_int_ena().bit()),
+                &self.tcm_parity_err_int_ena().bit(),
             )
             .finish()
     }

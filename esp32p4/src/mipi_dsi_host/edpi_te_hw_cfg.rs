@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EDPI_TE_HW_CFG")
-            .field(
-                "hw_tear_effect_on",
-                &format_args!("{}", self.hw_tear_effect_on().bit()),
-            )
-            .field(
-                "hw_tear_effect_gen",
-                &format_args!("{}", self.hw_tear_effect_gen().bit()),
-            )
-            .field(
-                "hw_set_scan_line",
-                &format_args!("{}", self.hw_set_scan_line().bit()),
-            )
-            .field(
-                "scan_line_parameter",
-                &format_args!("{}", self.scan_line_parameter().bits()),
-            )
+            .field("hw_tear_effect_on", &self.hw_tear_effect_on().bit())
+            .field("hw_tear_effect_gen", &self.hw_tear_effect_gen().bit())
+            .field("hw_set_scan_line", &self.hw_set_scan_line().bit())
+            .field("scan_line_parameter", &self.scan_line_parameter().bits())
             .finish()
     }
 }

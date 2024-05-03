@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_0")
             .field(
                 "backup_bus_pms_constrain_lock",
-                &format_args!("{}", self.backup_bus_pms_constrain_lock().bit()),
+                &self.backup_bus_pms_constrain_lock().bit(),
             )
             .finish()
     }

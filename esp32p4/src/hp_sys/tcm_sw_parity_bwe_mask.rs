@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_SW_PARITY_BWE_MASK")
             .field(
                 "reg_tcm_sw_parity_bwe_mask_ctrl",
-                &format_args!("{}", self.reg_tcm_sw_parity_bwe_mask_ctrl().bit()),
+                &self.reg_tcm_sw_parity_bwe_mask_ctrl().bit(),
             )
             .finish()
     }

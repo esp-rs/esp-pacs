@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE_PHY")
-            .field(
-                "force_phy_errsoths_0",
-                &format_args!("{}", self.force_phy_errsoths_0().bit()),
-            )
-            .field(
-                "force_phy_errsoths_1",
-                &format_args!("{}", self.force_phy_errsoths_1().bit()),
-            )
-            .field(
-                "force_phy_erresc_0",
-                &format_args!("{}", self.force_phy_erresc_0().bit()),
-            )
-            .field(
-                "force_phy_erresc_1",
-                &format_args!("{}", self.force_phy_erresc_1().bit()),
-            )
+            .field("force_phy_errsoths_0", &self.force_phy_errsoths_0().bit())
+            .field("force_phy_errsoths_1", &self.force_phy_errsoths_1().bit())
+            .field("force_phy_erresc_0", &self.force_phy_erresc_0().bit())
+            .field("force_phy_erresc_1", &self.force_phy_erresc_1().bit())
             .finish()
     }
 }

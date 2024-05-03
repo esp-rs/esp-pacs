@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_WDATA3")
-            .field(
-                "adc1_tp_low",
-                &format_args!("{}", self.adc1_tp_low().bits()),
-            )
-            .field(
-                "adc1_tp_high",
-                &format_args!("{}", self.adc1_tp_high().bits()),
-            )
-            .field(
-                "adc2_tp_low",
-                &format_args!("{}", self.adc2_tp_low().bits()),
-            )
-            .field(
-                "adc2_tp_high",
-                &format_args!("{}", self.adc2_tp_high().bits()),
-            )
+            .field("adc1_tp_low", &self.adc1_tp_low().bits())
+            .field("adc1_tp_high", &self.adc1_tp_high().bits())
+            .field("adc2_tp_low", &self.adc2_tp_low().bits())
+            .field("adc2_tp_high", &self.adc2_tp_high().bits())
             .finish()
     }
 }

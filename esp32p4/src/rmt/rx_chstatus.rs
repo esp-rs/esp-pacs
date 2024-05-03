@@ -48,27 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CHSTATUS")
-            .field(
-                "mem_waddr_ex_ch4",
-                &format_args!("{}", self.mem_waddr_ex_ch4().bits()),
-            )
-            .field(
-                "apb_mem_raddr_ch4",
-                &format_args!("{}", self.apb_mem_raddr_ch4().bits()),
-            )
-            .field("state_ch4", &format_args!("{}", self.state_ch4().bits()))
-            .field(
-                "mem_owner_err_ch4",
-                &format_args!("{}", self.mem_owner_err_ch4().bit()),
-            )
-            .field(
-                "mem_full_ch4",
-                &format_args!("{}", self.mem_full_ch4().bit()),
-            )
-            .field(
-                "apb_mem_rd_err_ch4",
-                &format_args!("{}", self.apb_mem_rd_err_ch4().bit()),
-            )
+            .field("mem_waddr_ex_ch4", &self.mem_waddr_ex_ch4().bits())
+            .field("apb_mem_raddr_ch4", &self.apb_mem_raddr_ch4().bits())
+            .field("state_ch4", &self.state_ch4().bits())
+            .field("mem_owner_err_ch4", &self.mem_owner_err_ch4().bit())
+            .field("mem_full_ch4", &self.mem_full_ch4().bit())
+            .field("apb_mem_rd_err_ch4", &self.apb_mem_rd_err_ch4().bit())
             .finish()
     }
 }

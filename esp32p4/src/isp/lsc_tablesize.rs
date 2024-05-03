@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LSC_TABLESIZE")
-            .field(
-                "lsc_xtablesize",
-                &format_args!("{}", self.lsc_xtablesize().bits()),
-            )
+            .field("lsc_xtablesize", &self.lsc_xtablesize().bits())
             .finish()
     }
 }

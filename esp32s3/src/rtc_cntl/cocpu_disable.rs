@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COCPU_DISABLE")
-            .field(
-                "disable_rtc_cpu",
-                &format_args!("{}", self.disable_rtc_cpu().bit()),
-            )
+            .field("disable_rtc_cpu", &self.disable_rtc_cpu().bit())
             .finish()
     }
 }

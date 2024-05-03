@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK_PHY")
-            .field(
-                "mask_phy_errsoths_0",
-                &format_args!("{}", self.mask_phy_errsoths_0().bit()),
-            )
-            .field(
-                "mask_phy_errsoths_1",
-                &format_args!("{}", self.mask_phy_errsoths_1().bit()),
-            )
-            .field(
-                "mask_phy_erresc_0",
-                &format_args!("{}", self.mask_phy_erresc_0().bit()),
-            )
-            .field(
-                "mask_phy_erresc_1",
-                &format_args!("{}", self.mask_phy_erresc_1().bit()),
-            )
+            .field("mask_phy_errsoths_0", &self.mask_phy_errsoths_0().bit())
+            .field("mask_phy_errsoths_1", &self.mask_phy_errsoths_1().bit())
+            .field("mask_phy_erresc_0", &self.mask_phy_erresc_0().bit())
+            .field("mask_phy_erresc_1", &self.mask_phy_erresc_1().bit())
             .finish()
     }
 }

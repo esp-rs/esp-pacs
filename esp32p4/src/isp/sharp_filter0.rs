@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_FILTER0")
-            .field(
-                "sharp_filter_coe00",
-                &format_args!("{}", self.sharp_filter_coe00().bits()),
-            )
-            .field(
-                "sharp_filter_coe01",
-                &format_args!("{}", self.sharp_filter_coe01().bits()),
-            )
-            .field(
-                "sharp_filter_coe02",
-                &format_args!("{}", self.sharp_filter_coe02().bits()),
-            )
+            .field("sharp_filter_coe00", &self.sharp_filter_coe00().bits())
+            .field("sharp_filter_coe01", &self.sharp_filter_coe01().bits())
+            .field("sharp_filter_coe02", &self.sharp_filter_coe02().bits())
             .finish()
     }
 }

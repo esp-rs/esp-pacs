@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("USB_OTG11_INT_MAP")
             .field(
                 "core1_usb_otg11_int_map",
-                &format_args!("{}", self.core1_usb_otg11_int_map().bits()),
+                &self.core1_usb_otg11_int_map().bits(),
             )
             .finish()
     }

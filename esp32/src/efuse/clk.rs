@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK")
-            .field("sel0", &format_args!("{}", self.sel0().bits()))
-            .field("sel1", &format_args!("{}", self.sel1().bits()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("sel0", &self.sel0().bits())
+            .field("sel1", &self.sel1().bits())
+            .field("en", &self.en().bit())
             .finish()
     }
 }

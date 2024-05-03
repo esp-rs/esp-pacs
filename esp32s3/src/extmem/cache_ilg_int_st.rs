@@ -90,53 +90,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_ILG_INT_ST")
-            .field(
-                "icache_sync_op_fault",
-                &format_args!("{}", self.icache_sync_op_fault().bit()),
-            )
+            .field("icache_sync_op_fault", &self.icache_sync_op_fault().bit())
             .field(
                 "icache_preload_op_fault",
-                &format_args!("{}", self.icache_preload_op_fault().bit()),
+                &self.icache_preload_op_fault().bit(),
             )
-            .field(
-                "dcache_sync_op_fault",
-                &format_args!("{}", self.dcache_sync_op_fault().bit()),
-            )
+            .field("dcache_sync_op_fault", &self.dcache_sync_op_fault().bit())
             .field(
                 "dcache_preload_op_fault",
-                &format_args!("{}", self.dcache_preload_op_fault().bit()),
+                &self.dcache_preload_op_fault().bit(),
             )
-            .field(
-                "dcache_write_flash",
-                &format_args!("{}", self.dcache_write_flash().bit()),
-            )
-            .field(
-                "mmu_entry_fault",
-                &format_args!("{}", self.mmu_entry_fault().bit()),
-            )
-            .field(
-                "dcache_occupy_exc",
-                &format_args!("{}", self.dcache_occupy_exc().bit()),
-            )
-            .field(
-                "ibus_acs_cnt_ovf",
-                &format_args!("{}", self.ibus_acs_cnt_ovf().bit()),
-            )
-            .field(
-                "ibus_acs_miss_cnt_ovf",
-                &format_args!("{}", self.ibus_acs_miss_cnt_ovf().bit()),
-            )
-            .field(
-                "dbus_acs_cnt_ovf",
-                &format_args!("{}", self.dbus_acs_cnt_ovf().bit()),
-            )
+            .field("dcache_write_flash", &self.dcache_write_flash().bit())
+            .field("mmu_entry_fault", &self.mmu_entry_fault().bit())
+            .field("dcache_occupy_exc", &self.dcache_occupy_exc().bit())
+            .field("ibus_acs_cnt_ovf", &self.ibus_acs_cnt_ovf().bit())
+            .field("ibus_acs_miss_cnt_ovf", &self.ibus_acs_miss_cnt_ovf().bit())
+            .field("dbus_acs_cnt_ovf", &self.dbus_acs_cnt_ovf().bit())
             .field(
                 "dbus_acs_flash_miss_cnt_ovf",
-                &format_args!("{}", self.dbus_acs_flash_miss_cnt_ovf().bit()),
+                &self.dbus_acs_flash_miss_cnt_ovf().bit(),
             )
             .field(
                 "dbus_acs_spiram_miss_cnt_ovf",
-                &format_args!("{}", self.dbus_acs_spiram_miss_cnt_ovf().bit()),
+                &self.dbus_acs_spiram_miss_cnt_ovf().bit(),
             )
             .finish()
     }

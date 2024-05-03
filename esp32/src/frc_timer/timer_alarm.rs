@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER_ALARM")
-            .field(
-                "timer_alarm",
-                &format_args!("{}", self.timer_alarm().bits()),
-            )
+            .field("timer_alarm", &self.timer_alarm().bits())
             .finish()
     }
 }

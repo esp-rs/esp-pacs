@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_CPU_RECORD_PID")
-            .field(
-                "record_app_pid",
-                &format_args!("{}", self.record_app_pid().bits()),
-            )
+            .field("record_app_pid", &self.record_app_pid().bits())
             .finish()
     }
 }

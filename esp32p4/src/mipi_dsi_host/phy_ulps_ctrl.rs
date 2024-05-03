@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_ULPS_CTRL")
-            .field(
-                "phy_txrequlpsclk",
-                &format_args!("{}", self.phy_txrequlpsclk().bit()),
-            )
-            .field(
-                "phy_txexitulpsclk",
-                &format_args!("{}", self.phy_txexitulpsclk().bit()),
-            )
-            .field(
-                "phy_txrequlpslan",
-                &format_args!("{}", self.phy_txrequlpslan().bit()),
-            )
-            .field(
-                "phy_txexitulpslan",
-                &format_args!("{}", self.phy_txexitulpslan().bit()),
-            )
+            .field("phy_txrequlpsclk", &self.phy_txrequlpsclk().bit())
+            .field("phy_txexitulpsclk", &self.phy_txexitulpsclk().bit())
+            .field("phy_txrequlpslan", &self.phy_txrequlpslan().bit())
+            .field("phy_txexitulpslan", &self.phy_txexitulpslan().bit())
             .finish()
     }
 }

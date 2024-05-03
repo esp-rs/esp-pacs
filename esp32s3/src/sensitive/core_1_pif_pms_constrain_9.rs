@@ -36,19 +36,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_CONSTRAIN_9")
             .field(
                 "core_1_pif_pms_constrain_rtcfast_spltaddr_world_0",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_spltaddr_world_0()
-                        .bits()
-                ),
+                &self
+                    .core_1_pif_pms_constrain_rtcfast_spltaddr_world_0()
+                    .bits(),
             )
             .field(
                 "core_1_pif_pms_constrain_rtcfast_spltaddr_world_1",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_spltaddr_world_1()
-                        .bits()
-                ),
+                &self
+                    .core_1_pif_pms_constrain_rtcfast_spltaddr_world_1()
+                    .bits(),
             )
             .finish()
     }

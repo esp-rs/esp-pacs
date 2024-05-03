@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_EXTMEM_REJECT_INT_MAP")
             .field(
                 "dma_extmem_reject_int_map",
-                &format_args!("{}", self.dma_extmem_reject_int_map().bits()),
+                &self.dma_extmem_reject_int_map().bits(),
             )
             .finish()
     }

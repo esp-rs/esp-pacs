@@ -48,12 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U_STATUS")
-            .field("zero_mode", &format_args!("{}", self.zero_mode().bits()))
-            .field("thres1", &format_args!("{}", self.thres1().bit()))
-            .field("thres0", &format_args!("{}", self.thres0().bit()))
-            .field("l_lim", &format_args!("{}", self.l_lim().bit()))
-            .field("h_lim", &format_args!("{}", self.h_lim().bit()))
-            .field("zero", &format_args!("{}", self.zero().bit()))
+            .field("zero_mode", &self.zero_mode().bits())
+            .field("thres1", &self.thres1().bit())
+            .field("thres0", &self.thres0().bit())
+            .field("l_lim", &self.l_lim().bit())
+            .field("h_lim", &self.h_lim().bit())
+            .field("zero", &self.zero().bit())
             .finish()
     }
 }

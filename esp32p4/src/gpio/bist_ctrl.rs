@@ -19,7 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BIST_CTRL")
-            .field("bist_pad_oe", &format_args!("{}", self.bist_pad_oe().bit()))
+            .field("bist_pad_oe", &self.bist_pad_oe().bit())
             .finish()
     }
 }

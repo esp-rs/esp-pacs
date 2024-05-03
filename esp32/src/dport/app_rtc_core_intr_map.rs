@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_RTC_CORE_INTR_MAP")
             .field(
                 "app_rtc_core_intr_map",
-                &format_args!("{}", self.app_rtc_core_intr_map().bits()),
+                &self.app_rtc_core_intr_map().bits(),
             )
             .finish()
     }

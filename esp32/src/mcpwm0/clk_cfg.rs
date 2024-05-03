@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CFG")
-            .field(
-                "clk_prescale",
-                &format_args!("{}", self.clk_prescale().bits()),
-            )
+            .field("clk_prescale", &self.clk_prescale().bits())
             .finish()
     }
 }

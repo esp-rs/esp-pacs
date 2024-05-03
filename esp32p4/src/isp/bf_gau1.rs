@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BF_GAU1")
-            .field(
-                "gau_template22",
-                &format_args!("{}", self.gau_template22().bits()),
-            )
+            .field("gau_template22", &self.gau_template22().bits())
             .finish()
     }
 }

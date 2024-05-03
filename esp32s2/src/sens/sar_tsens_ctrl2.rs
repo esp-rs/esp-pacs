@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TSENS_CTRL2")
-            .field(
-                "tsens_xpd_wait",
-                &format_args!("{}", self.tsens_xpd_wait().bits()),
-            )
-            .field(
-                "tsens_xpd_force",
-                &format_args!("{}", self.tsens_xpd_force().bits()),
-            )
-            .field(
-                "tsens_clk_inv",
-                &format_args!("{}", self.tsens_clk_inv().bit()),
-            )
-            .field(
-                "tsens_clkgate_en",
-                &format_args!("{}", self.tsens_clkgate_en().bit()),
-            )
-            .field("tsens_reset", &format_args!("{}", self.tsens_reset().bit()))
+            .field("tsens_xpd_wait", &self.tsens_xpd_wait().bits())
+            .field("tsens_xpd_force", &self.tsens_xpd_force().bits())
+            .field("tsens_clk_inv", &self.tsens_clk_inv().bit())
+            .field("tsens_clkgate_en", &self.tsens_clkgate_en().bit())
+            .field("tsens_reset", &self.tsens_reset().bit())
             .finish()
     }
 }

@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACINTS")
-            .field("pmtints", &format_args!("{}", self.pmtints().bit()))
-            .field("lpiis", &format_args!("{}", self.lpiis().bit()))
+            .field("pmtints", &self.pmtints().bit())
+            .field("lpiis", &self.lpiis().bit())
             .finish()
     }
 }

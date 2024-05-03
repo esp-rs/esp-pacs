@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STEP")
-            .field("xtal_step", &format_args!("{}", self.xtal_step().bits()))
-            .field("pll_step", &format_args!("{}", self.pll_step().bits()))
+            .field("xtal_step", &self.xtal_step().bits())
+            .field("pll_step", &self.pll_step().bits())
             .finish()
     }
 }

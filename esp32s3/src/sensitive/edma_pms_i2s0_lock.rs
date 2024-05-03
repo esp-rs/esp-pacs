@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EDMA_PMS_I2S0_LOCK")
-            .field(
-                "edma_pms_i2s0_lock",
-                &format_args!("{}", self.edma_pms_i2s0_lock().bit()),
-            )
+            .field("edma_pms_i2s0_lock", &self.edma_pms_i2s0_lock().bit())
             .finish()
     }
 }

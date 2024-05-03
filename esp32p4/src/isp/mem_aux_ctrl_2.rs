@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_AUX_CTRL_2")
             .field(
                 "bf_matrix_mem_aux_ctrl",
-                &format_args!("{}", self.bf_matrix_mem_aux_ctrl().bits()),
+                &self.bf_matrix_mem_aux_ctrl().bits(),
             )
             .field(
                 "dpc_matrix_mem_aux_ctrl",
-                &format_args!("{}", self.dpc_matrix_mem_aux_ctrl().bits()),
+                &self.dpc_matrix_mem_aux_ctrl().bits(),
             )
             .finish()
     }

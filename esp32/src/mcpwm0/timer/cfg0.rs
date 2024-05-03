@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG0")
-            .field("prescale", &format_args!("{}", self.prescale().bits()))
-            .field("period", &format_args!("{}", self.period().bits()))
-            .field(
-                "period_upmethod",
-                &format_args!("{}", self.period_upmethod().bits()),
-            )
+            .field("prescale", &self.prescale().bits())
+            .field("period", &self.period().bits())
+            .field("period_upmethod", &self.period_upmethod().bits())
             .finish()
     }
 }

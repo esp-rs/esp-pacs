@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_1_NMI_MASK_TRIGGER_ADDR")
             .field(
                 "core_1_nmi_mask_trigger_addr",
-                &format_args!("{}", self.core_1_nmi_mask_trigger_addr().bits()),
+                &self.core_1_nmi_mask_trigger_addr().bits(),
             )
             .finish()
     }

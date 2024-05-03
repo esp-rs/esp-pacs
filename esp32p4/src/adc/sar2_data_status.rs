@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR2_DATA_STATUS")
-            .field(
-                "apb_saradc2_data",
-                &format_args!("{}", self.apb_saradc2_data().bits()),
-            )
+            .field("apb_saradc2_data", &self.apb_saradc2_data().bits())
             .finish()
     }
 }

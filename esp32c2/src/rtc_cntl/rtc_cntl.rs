@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_CNTL")
-            .field(
-                "dig_reg_cal_en",
-                &format_args!("{}", self.dig_reg_cal_en().bit()),
-            )
-            .field("sck_dcap", &format_args!("{}", self.sck_dcap().bits()))
-            .field(
-                "regulator_force_pd",
-                &format_args!("{}", self.regulator_force_pd().bit()),
-            )
-            .field(
-                "regulator_force_pu",
-                &format_args!("{}", self.regulator_force_pu().bit()),
-            )
+            .field("dig_reg_cal_en", &self.dig_reg_cal_en().bit())
+            .field("sck_dcap", &self.sck_dcap().bits())
+            .field("regulator_force_pd", &self.regulator_force_pd().bit())
+            .field("regulator_force_pu", &self.regulator_force_pu().bit())
             .finish()
     }
 }

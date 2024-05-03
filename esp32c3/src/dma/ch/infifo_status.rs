@@ -62,32 +62,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_STATUS")
-            .field("infifo_full", &format_args!("{}", self.infifo_full().bit()))
-            .field(
-                "infifo_empty",
-                &format_args!("{}", self.infifo_empty().bit()),
-            )
-            .field("infifo_cnt", &format_args!("{}", self.infifo_cnt().bits()))
-            .field(
-                "in_remain_under_1b",
-                &format_args!("{}", self.in_remain_under_1b().bit()),
-            )
-            .field(
-                "in_remain_under_2b",
-                &format_args!("{}", self.in_remain_under_2b().bit()),
-            )
-            .field(
-                "in_remain_under_3b",
-                &format_args!("{}", self.in_remain_under_3b().bit()),
-            )
-            .field(
-                "in_remain_under_4b",
-                &format_args!("{}", self.in_remain_under_4b().bit()),
-            )
-            .field(
-                "in_buf_hungry",
-                &format_args!("{}", self.in_buf_hungry().bit()),
-            )
+            .field("infifo_full", &self.infifo_full().bit())
+            .field("infifo_empty", &self.infifo_empty().bit())
+            .field("infifo_cnt", &self.infifo_cnt().bits())
+            .field("in_remain_under_1b", &self.in_remain_under_1b().bit())
+            .field("in_remain_under_2b", &self.in_remain_under_2b().bit())
+            .field("in_remain_under_3b", &self.in_remain_under_3b().bit())
+            .field("in_remain_under_4b", &self.in_remain_under_4b().bit())
+            .field("in_buf_hungry", &self.in_buf_hungry().bit())
             .finish()
     }
 }

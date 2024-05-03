@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLOCK_DIVIDER")
-            .field("cd", &format_args!("{}", self.cd().bits()))
-            .field("clock_off", &format_args!("{}", self.clock_off().bit()))
+            .field("cd", &self.cd().bits())
+            .field("clock_off", &self.clock_off().bit())
             .finish()
     }
 }

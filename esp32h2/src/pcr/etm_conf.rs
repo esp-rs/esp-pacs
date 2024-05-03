@@ -33,9 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_CONF")
-            .field("etm_clk_en", &format_args!("{}", self.etm_clk_en().bit()))
-            .field("etm_rst_en", &format_args!("{}", self.etm_rst_en().bit()))
-            .field("etm_ready", &format_args!("{}", self.etm_ready().bit()))
+            .field("etm_clk_en", &self.etm_clk_en().bit())
+            .field("etm_rst_en", &self.etm_rst_en().bit())
+            .field("etm_ready", &self.etm_ready().bit())
             .finish()
     }
 }

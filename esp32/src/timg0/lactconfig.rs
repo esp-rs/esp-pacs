@@ -98,19 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTCONFIG")
-            .field("rtc_only", &format_args!("{}", self.rtc_only().bit()))
-            .field("cpst_en", &format_args!("{}", self.cpst_en().bit()))
-            .field("lac_en", &format_args!("{}", self.lac_en().bit()))
-            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
-            .field(
-                "level_int_en",
-                &format_args!("{}", self.level_int_en().bit()),
-            )
-            .field("edge_int_en", &format_args!("{}", self.edge_int_en().bit()))
-            .field("divider", &format_args!("{}", self.divider().bits()))
-            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
-            .field("increase", &format_args!("{}", self.increase().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("rtc_only", &self.rtc_only().bit())
+            .field("cpst_en", &self.cpst_en().bit())
+            .field("lac_en", &self.lac_en().bit())
+            .field("alarm_en", &self.alarm_en().bit())
+            .field("level_int_en", &self.level_int_en().bit())
+            .field("edge_int_en", &self.edge_int_en().bit())
+            .field("divider", &self.divider().bits())
+            .field("autoreload", &self.autoreload().bit())
+            .field("increase", &self.increase().bit())
+            .field("en", &self.en().bit())
             .finish()
     }
 }

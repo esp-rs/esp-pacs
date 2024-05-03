@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("A_DECI_SCORE_OFFSET")
             .field(
                 "a_i16x16_deci_score_offset",
-                &format_args!("{}", self.a_i16x16_deci_score_offset().bits()),
+                &self.a_i16x16_deci_score_offset().bits(),
             )
             .field(
                 "a_i_chroma_deci_score_offset",
-                &format_args!("{}", self.a_i_chroma_deci_score_offset().bits()),
+                &self.a_i_chroma_deci_score_offset().bits(),
             )
             .field(
                 "a_p16x16_deci_score_offset",
-                &format_args!("{}", self.a_p16x16_deci_score_offset().bits()),
+                &self.a_p16x16_deci_score_offset().bits(),
             )
             .field(
                 "a_p_chroma_deci_score_offset",
-                &format_args!("{}", self.a_p_chroma_deci_score_offset().bits()),
+                &self.a_p_chroma_deci_score_offset().bits(),
             )
             .finish()
     }

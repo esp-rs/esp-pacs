@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_ANA_PARA")
-            .field(
-                "touch_touch_buf_drv",
-                &format_args!("{}", self.touch_touch_buf_drv().bits()),
-            )
-            .field(
-                "touch_touch_en_cal",
-                &format_args!("{}", self.touch_touch_en_cal().bit()),
-            )
-            .field(
-                "touch_touch_dcap_cal",
-                &format_args!("{}", self.touch_touch_dcap_cal().bits()),
-            )
+            .field("touch_touch_buf_drv", &self.touch_touch_buf_drv().bits())
+            .field("touch_touch_en_cal", &self.touch_touch_en_cal().bit())
+            .field("touch_touch_dcap_cal", &self.touch_touch_dcap_cal().bits())
             .finish()
     }
 }

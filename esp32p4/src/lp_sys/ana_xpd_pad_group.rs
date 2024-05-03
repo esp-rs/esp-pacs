@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ANA_XPD_PAD_GROUP")
             .field(
                 "ana_reg_xpd_pad_group",
-                &format_args!("{}", self.ana_reg_xpd_pad_group().bits()),
+                &self.ana_reg_xpd_pad_group().bits(),
             )
             .finish()
     }

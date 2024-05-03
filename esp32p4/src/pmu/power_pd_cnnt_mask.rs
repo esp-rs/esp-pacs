@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_CNNT_MASK")
-            .field(
-                "xpd_cnnt_mask",
-                &format_args!("{}", self.xpd_cnnt_mask().bits()),
-            )
-            .field(
-                "pd_cnnt_mask",
-                &format_args!("{}", self.pd_cnnt_mask().bits()),
-            )
+            .field("xpd_cnnt_mask", &self.xpd_cnnt_mask().bits())
+            .field("pd_cnnt_mask", &self.pd_cnnt_mask().bits())
             .finish()
     }
 }

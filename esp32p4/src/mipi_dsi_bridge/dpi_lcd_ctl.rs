@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_LCD_CTL")
-            .field("dpishutdn", &format_args!("{}", self.dpishutdn().bit()))
-            .field("dpicolorm", &format_args!("{}", self.dpicolorm().bit()))
-            .field(
-                "dpiupdatecfg",
-                &format_args!("{}", self.dpiupdatecfg().bit()),
-            )
+            .field("dpishutdn", &self.dpishutdn().bit())
+            .field("dpicolorm", &self.dpicolorm().bit())
+            .field("dpiupdatecfg", &self.dpiupdatecfg().bit())
             .finish()
     }
 }

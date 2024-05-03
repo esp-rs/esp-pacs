@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_VCID")
-            .field("rx", &format_args!("{}", self.rx().bits()))
-            .field("tear_auto", &format_args!("{}", self.tear_auto().bits()))
-            .field("tx_auto", &format_args!("{}", self.tx_auto().bits()))
+            .field("rx", &self.rx().bits())
+            .field("tear_auto", &self.tear_auto().bits())
+            .field("tx_auto", &self.tx_auto().bits())
             .finish()
     }
 }

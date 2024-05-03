@@ -82,46 +82,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_WDATA5")
-            .field(
-                "spi_pad_config_clk",
-                &format_args!("{}", self.spi_pad_config_clk().bits()),
-            )
-            .field(
-                "spi_pad_config_q",
-                &format_args!("{}", self.spi_pad_config_q().bits()),
-            )
-            .field(
-                "spi_pad_config_d",
-                &format_args!("{}", self.spi_pad_config_d().bits()),
-            )
-            .field(
-                "spi_pad_config_cs0",
-                &format_args!("{}", self.spi_pad_config_cs0().bits()),
-            )
-            .field(
-                "chip_ver_rev2",
-                &format_args!("{}", self.chip_ver_rev2().bit()),
-            )
-            .field(
-                "reserve_0_181",
-                &format_args!("{}", self.reserve_0_181().bit()),
-            )
-            .field(
-                "vol_level_hp_inv",
-                &format_args!("{}", self.vol_level_hp_inv().bits()),
-            )
-            .field(
-                "wafer_version_minor",
-                &format_args!("{}", self.wafer_version_minor().bits()),
-            )
-            .field(
-                "reserve_0_186",
-                &format_args!("{}", self.reserve_0_186().bits()),
-            )
-            .field(
-                "flash_crypt_config",
-                &format_args!("{}", self.flash_crypt_config().bits()),
-            )
+            .field("spi_pad_config_clk", &self.spi_pad_config_clk().bits())
+            .field("spi_pad_config_q", &self.spi_pad_config_q().bits())
+            .field("spi_pad_config_d", &self.spi_pad_config_d().bits())
+            .field("spi_pad_config_cs0", &self.spi_pad_config_cs0().bits())
+            .field("chip_ver_rev2", &self.chip_ver_rev2().bit())
+            .field("reserve_0_181", &self.reserve_0_181().bit())
+            .field("vol_level_hp_inv", &self.vol_level_hp_inv().bits())
+            .field("wafer_version_minor", &self.wafer_version_minor().bits())
+            .field("reserve_0_186", &self.reserve_0_186().bits())
+            .field("flash_crypt_config", &self.flash_crypt_config().bits())
             .finish()
     }
 }

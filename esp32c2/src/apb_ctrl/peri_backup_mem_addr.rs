@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_BACKUP_MEM_ADDR")
             .field(
                 "backup_mem_start_addr",
-                &format_args!("{}", self.backup_mem_start_addr().bits()),
+                &self.backup_mem_start_addr().bits(),
             )
             .finish()
     }

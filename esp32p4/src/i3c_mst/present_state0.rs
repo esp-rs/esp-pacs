@@ -83,35 +83,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRESENT_STATE0")
-            .field("sda_lvl", &format_args!("{}", self.sda_lvl().bit()))
-            .field("scl_lvl", &format_args!("{}", self.scl_lvl().bit()))
-            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
-            .field("bus_free", &format_args!("{}", self.bus_free().bit()))
-            .field("cmd_tid", &format_args!("{}", self.cmd_tid().bits()))
-            .field(
-                "scl_gen_fsm_state",
-                &format_args!("{}", self.scl_gen_fsm_state().bits()),
-            )
+            .field("sda_lvl", &self.sda_lvl().bit())
+            .field("scl_lvl", &self.scl_lvl().bit())
+            .field("bus_busy", &self.bus_busy().bit())
+            .field("bus_free", &self.bus_free().bit())
+            .field("cmd_tid", &self.cmd_tid().bits())
+            .field("scl_gen_fsm_state", &self.scl_gen_fsm_state().bits())
             .field(
                 "ibi_ev_handle_fsm_state",
-                &format_args!("{}", self.ibi_ev_handle_fsm_state().bits()),
+                &self.ibi_ev_handle_fsm_state().bits(),
             )
-            .field(
-                "i2c_mode_fsm_state",
-                &format_args!("{}", self.i2c_mode_fsm_state().bits()),
-            )
-            .field(
-                "sdr_mode_fsm_state",
-                &format_args!("{}", self.sdr_mode_fsm_state().bits()),
-            )
-            .field(
-                "daa_mode_fsm_state",
-                &format_args!("{}", self.daa_mode_fsm_state().bits()),
-            )
-            .field(
-                "main_fsm_state",
-                &format_args!("{}", self.main_fsm_state().bits()),
-            )
+            .field("i2c_mode_fsm_state", &self.i2c_mode_fsm_state().bits())
+            .field("sdr_mode_fsm_state", &self.sdr_mode_fsm_state().bits())
+            .field("daa_mode_fsm_state", &self.daa_mode_fsm_state().bits())
+            .field("main_fsm_state", &self.main_fsm_state().bits())
             .finish()
     }
 }

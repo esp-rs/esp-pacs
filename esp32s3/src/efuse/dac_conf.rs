@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DAC_CONF")
-            .field(
-                "dac_clk_div",
-                &format_args!("{}", self.dac_clk_div().bits()),
-            )
-            .field(
-                "dac_clk_pad_sel",
-                &format_args!("{}", self.dac_clk_pad_sel().bit()),
-            )
-            .field("dac_num", &format_args!("{}", self.dac_num().bits()))
-            .field("oe_clr", &format_args!("{}", self.oe_clr().bit()))
+            .field("dac_clk_div", &self.dac_clk_div().bits())
+            .field("dac_clk_pad_sel", &self.dac_clk_pad_sel().bit())
+            .field("dac_num", &self.dac_num().bits())
+            .field("oe_clr", &self.oe_clr().bit())
             .finish()
     }
 }

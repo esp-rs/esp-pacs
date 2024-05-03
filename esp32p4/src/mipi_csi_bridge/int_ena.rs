@@ -62,21 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("vadr_num_gt", &format_args!("{}", self.vadr_num_gt().bit()))
-            .field("vadr_num_lt", &format_args!("{}", self.vadr_num_lt().bit()))
-            .field("discard", &format_args!("{}", self.discard().bit()))
-            .field(
-                "csi_buf_overrun",
-                &format_args!("{}", self.csi_buf_overrun().bit()),
-            )
-            .field(
-                "csi_async_fifo_ovf",
-                &format_args!("{}", self.csi_async_fifo_ovf().bit()),
-            )
-            .field(
-                "dma_cfg_has_updated",
-                &format_args!("{}", self.dma_cfg_has_updated().bit()),
-            )
+            .field("vadr_num_gt", &self.vadr_num_gt().bit())
+            .field("vadr_num_lt", &self.vadr_num_lt().bit())
+            .field("discard", &self.discard().bit())
+            .field("csi_buf_overrun", &self.csi_buf_overrun().bit())
+            .field("csi_async_fifo_ovf", &self.csi_async_fifo_ovf().bit())
+            .field("dma_cfg_has_updated", &self.dma_cfg_has_updated().bit())
             .finish()
     }
 }

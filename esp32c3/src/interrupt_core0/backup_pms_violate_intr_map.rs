@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_PMS_VIOLATE_INTR_MAP")
             .field(
                 "backup_pms_violate_intr_map",
-                &format_args!("{}", self.backup_pms_violate_intr_map().bits()),
+                &self.backup_pms_violate_intr_map().bits(),
             )
             .finish()
     }

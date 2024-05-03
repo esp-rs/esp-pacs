@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_PARLIO_RX_INT_MAP")
             .field(
                 "core1_hp_parlio_rx_int_map",
-                &format_args!("{}", self.core1_hp_parlio_rx_int_map().bits()),
+                &self.core1_hp_parlio_rx_int_map().bits(),
             )
             .finish()
     }

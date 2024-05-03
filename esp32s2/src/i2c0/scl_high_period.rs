@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_HIGH_PERIOD")
-            .field(
-                "scl_high_period",
-                &format_args!("{}", self.scl_high_period().bits()),
-            )
-            .field(
-                "scl_wait_high_period",
-                &format_args!("{}", self.scl_wait_high_period().bits()),
-            )
+            .field("scl_high_period", &self.scl_high_period().bits())
+            .field("scl_wait_high_period", &self.scl_wait_high_period().bits())
             .finish()
     }
 }

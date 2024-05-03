@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_IO_MUX_CONF")
-            .field("iomux_reset", &format_args!("{}", self.iomux_reset().bit()))
-            .field(
-                "iomux_clk_gate_en",
-                &format_args!("{}", self.iomux_clk_gate_en().bit()),
-            )
+            .field("iomux_reset", &self.iomux_reset().bit())
+            .field("iomux_clk_gate_en", &self.iomux_clk_gate_en().bit())
             .finish()
     }
 }

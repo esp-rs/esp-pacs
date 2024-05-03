@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PUSH_BYTECNT")
             .field(
                 "out_cmdfifo_push_bytecnt",
-                &format_args!("{}", self.out_cmdfifo_push_bytecnt().bits()),
+                &self.out_cmdfifo_push_bytecnt().bits(),
             )
             .finish()
     }

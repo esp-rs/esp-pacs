@@ -71,34 +71,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL116")
-            .field(
-                "gpspi2_clk_src_sel",
-                &format_args!("{}", self.gpspi2_clk_src_sel().bits()),
-            )
-            .field(
-                "gpspi2_hs_clk_en",
-                &format_args!("{}", self.gpspi2_hs_clk_en().bit()),
-            )
+            .field("gpspi2_clk_src_sel", &self.gpspi2_clk_src_sel().bits())
+            .field("gpspi2_hs_clk_en", &self.gpspi2_hs_clk_en().bit())
             .field(
                 "gpspi2_hs_clk_div_num",
-                &format_args!("{}", self.gpspi2_hs_clk_div_num().bits()),
+                &self.gpspi2_hs_clk_div_num().bits(),
             )
             .field(
                 "gpspi2_mst_clk_div_num",
-                &format_args!("{}", self.gpspi2_mst_clk_div_num().bits()),
+                &self.gpspi2_mst_clk_div_num().bits(),
             )
-            .field(
-                "gpspi2_mst_clk_en",
-                &format_args!("{}", self.gpspi2_mst_clk_en().bit()),
-            )
-            .field(
-                "gpspi3_clk_src_sel",
-                &format_args!("{}", self.gpspi3_clk_src_sel().bits()),
-            )
-            .field(
-                "gpspi3_hs_clk_en",
-                &format_args!("{}", self.gpspi3_hs_clk_en().bit()),
-            )
+            .field("gpspi2_mst_clk_en", &self.gpspi2_mst_clk_en().bit())
+            .field("gpspi3_clk_src_sel", &self.gpspi3_clk_src_sel().bits())
+            .field("gpspi3_hs_clk_en", &self.gpspi3_hs_clk_en().bit())
             .finish()
     }
 }

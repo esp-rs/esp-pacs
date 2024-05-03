@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODE")
-            .field("reset_mode", &format_args!("{}", self.reset_mode().bit()))
-            .field(
-                "listen_only_mode",
-                &format_args!("{}", self.listen_only_mode().bit()),
-            )
-            .field(
-                "self_test_mode",
-                &format_args!("{}", self.self_test_mode().bit()),
-            )
-            .field(
-                "rx_filter_mode",
-                &format_args!("{}", self.rx_filter_mode().bit()),
-            )
+            .field("reset_mode", &self.reset_mode().bit())
+            .field("listen_only_mode", &self.listen_only_mode().bit())
+            .field("self_test_mode", &self.self_test_mode().bit())
+            .field("rx_filter_mode", &self.rx_filter_mode().bit())
             .finish()
     }
 }

@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_EP0_ST")
-            .field(
-                "in_ep0_state",
-                &format_args!("{}", self.in_ep0_state().bits()),
-            )
-            .field(
-                "in_ep0_wr_addr",
-                &format_args!("{}", self.in_ep0_wr_addr().bits()),
-            )
-            .field(
-                "in_ep0_rd_addr",
-                &format_args!("{}", self.in_ep0_rd_addr().bits()),
-            )
+            .field("in_ep0_state", &self.in_ep0_state().bits())
+            .field("in_ep0_wr_addr", &self.in_ep0_wr_addr().bits())
+            .field("in_ep0_rd_addr", &self.in_ep0_rd_addr().bits())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_HINF")
             .field(
                 "hinf_access_grant_config",
-                &format_args!("{}", self.hinf_access_grant_config().bits()),
+                &self.hinf_access_grant_config().bits(),
             )
             .finish()
     }

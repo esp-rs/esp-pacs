@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("EXTER_MEM_START_ADDR1")
             .field(
                 "access_exter_mem_start_addr1",
-                &format_args!("{}", self.access_exter_mem_start_addr1().bits()),
+                &self.access_exter_mem_start_addr1().bits(),
             )
             .finish()
     }

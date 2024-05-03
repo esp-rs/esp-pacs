@@ -251,54 +251,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GINTMSK")
-            .field("modemismsk", &format_args!("{}", self.modemismsk().bit()))
-            .field("otgintmsk", &format_args!("{}", self.otgintmsk().bit()))
-            .field("sofmsk", &format_args!("{}", self.sofmsk().bit()))
-            .field("rxflvimsk", &format_args!("{}", self.rxflvimsk().bit()))
-            .field("nptxfempmsk", &format_args!("{}", self.nptxfempmsk().bit()))
-            .field(
-                "ginnakeffmsk",
-                &format_args!("{}", self.ginnakeffmsk().bit()),
-            )
-            .field(
-                "goutnackeffmsk",
-                &format_args!("{}", self.goutnackeffmsk().bit()),
-            )
-            .field("erlysuspmsk", &format_args!("{}", self.erlysuspmsk().bit()))
-            .field("usbsuspmsk", &format_args!("{}", self.usbsuspmsk().bit()))
-            .field("usbrstmsk", &format_args!("{}", self.usbrstmsk().bit()))
-            .field("enumdonemsk", &format_args!("{}", self.enumdonemsk().bit()))
-            .field(
-                "isooutdropmsk",
-                &format_args!("{}", self.isooutdropmsk().bit()),
-            )
-            .field("eopfmsk", &format_args!("{}", self.eopfmsk().bit()))
-            .field("epmismsk", &format_args!("{}", self.epmismsk().bit()))
-            .field("iepintmsk", &format_args!("{}", self.iepintmsk().bit()))
-            .field("oepintmsk", &format_args!("{}", self.oepintmsk().bit()))
-            .field(
-                "incompisoinmsk",
-                &format_args!("{}", self.incompisoinmsk().bit()),
-            )
-            .field("incompipmsk", &format_args!("{}", self.incompipmsk().bit()))
-            .field("fetsuspmsk", &format_args!("{}", self.fetsuspmsk().bit()))
-            .field("resetdetmsk", &format_args!("{}", self.resetdetmsk().bit()))
-            .field("prtlntmsk", &format_args!("{}", self.prtlntmsk().bit()))
-            .field("hchintmsk", &format_args!("{}", self.hchintmsk().bit()))
-            .field("ptxfempmsk", &format_args!("{}", self.ptxfempmsk().bit()))
-            .field(
-                "conidstschngmsk",
-                &format_args!("{}", self.conidstschngmsk().bit()),
-            )
-            .field(
-                "disconnintmsk",
-                &format_args!("{}", self.disconnintmsk().bit()),
-            )
-            .field(
-                "sessreqintmsk",
-                &format_args!("{}", self.sessreqintmsk().bit()),
-            )
-            .field("wkupintmsk", &format_args!("{}", self.wkupintmsk().bit()))
+            .field("modemismsk", &self.modemismsk().bit())
+            .field("otgintmsk", &self.otgintmsk().bit())
+            .field("sofmsk", &self.sofmsk().bit())
+            .field("rxflvimsk", &self.rxflvimsk().bit())
+            .field("nptxfempmsk", &self.nptxfempmsk().bit())
+            .field("ginnakeffmsk", &self.ginnakeffmsk().bit())
+            .field("goutnackeffmsk", &self.goutnackeffmsk().bit())
+            .field("erlysuspmsk", &self.erlysuspmsk().bit())
+            .field("usbsuspmsk", &self.usbsuspmsk().bit())
+            .field("usbrstmsk", &self.usbrstmsk().bit())
+            .field("enumdonemsk", &self.enumdonemsk().bit())
+            .field("isooutdropmsk", &self.isooutdropmsk().bit())
+            .field("eopfmsk", &self.eopfmsk().bit())
+            .field("epmismsk", &self.epmismsk().bit())
+            .field("iepintmsk", &self.iepintmsk().bit())
+            .field("oepintmsk", &self.oepintmsk().bit())
+            .field("incompisoinmsk", &self.incompisoinmsk().bit())
+            .field("incompipmsk", &self.incompipmsk().bit())
+            .field("fetsuspmsk", &self.fetsuspmsk().bit())
+            .field("resetdetmsk", &self.resetdetmsk().bit())
+            .field("prtlntmsk", &self.prtlntmsk().bit())
+            .field("hchintmsk", &self.hchintmsk().bit())
+            .field("ptxfempmsk", &self.ptxfempmsk().bit())
+            .field("conidstschngmsk", &self.conidstschngmsk().bit())
+            .field("disconnintmsk", &self.disconnintmsk().bit())
+            .field("sessreqintmsk", &self.sessreqintmsk().bit())
+            .field("wkupintmsk", &self.wkupintmsk().bit())
             .finish()
     }
 }

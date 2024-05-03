@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC_CONF")
-            .field(
-                "ahbm_rst_inter",
-                &format_args!("{}", self.ahbm_rst_inter().bit()),
-            )
-            .field("arb_pri_dis", &format_args!("{}", self.arb_pri_dis().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("ahbm_rst_inter", &self.ahbm_rst_inter().bit())
+            .field("arb_pri_dis", &self.arb_pri_dis().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

@@ -62,21 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EX_CLK_CTRL")
-            .field("ext_en", &format_args!("{}", self.ext_en().bit()))
-            .field("int_en", &format_args!("{}", self.int_en().bit()))
-            .field(
-                "rx_125_clk_en",
-                &format_args!("{}", self.rx_125_clk_en().bit()),
-            )
-            .field(
-                "mii_clk_tx_en",
-                &format_args!("{}", self.mii_clk_tx_en().bit()),
-            )
-            .field(
-                "mii_clk_rx_en",
-                &format_args!("{}", self.mii_clk_rx_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("ext_en", &self.ext_en().bit())
+            .field("int_en", &self.int_en().bit())
+            .field("rx_125_clk_en", &self.rx_125_clk_en().bit())
+            .field("mii_clk_tx_en", &self.mii_clk_tx_en().bit())
+            .field("mii_clk_rx_en", &self.mii_clk_rx_en().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

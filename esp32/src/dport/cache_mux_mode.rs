@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_MUX_MODE")
-            .field(
-                "cache_mux_mode",
-                &format_args!("{}", self.cache_mux_mode().bits()),
-            )
+            .field("cache_mux_mode", &self.cache_mux_mode().bits())
             .finish()
     }
 }

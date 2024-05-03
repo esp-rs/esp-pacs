@@ -37,16 +37,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_CONF_MISC")
             .field(
                 "cache_ignore_preload_mmu_entry_fault",
-                &format_args!("{}", self.cache_ignore_preload_mmu_entry_fault().bit()),
+                &self.cache_ignore_preload_mmu_entry_fault().bit(),
             )
             .field(
                 "cache_ignore_sync_mmu_entry_fault",
-                &format_args!("{}", self.cache_ignore_sync_mmu_entry_fault().bit()),
+                &self.cache_ignore_sync_mmu_entry_fault().bit(),
             )
-            .field(
-                "cache_trace_ena",
-                &format_args!("{}", self.cache_trace_ena().bit()),
-            )
+            .field("cache_trace_ena", &self.cache_trace_ena().bit())
             .finish()
     }
 }

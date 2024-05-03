@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FSM")
-            .field("sample_num", &format_args!("{}", self.sample_num().bits()))
-            .field(
-                "sample_cycle",
-                &format_args!("{}", self.sample_cycle().bits()),
-            )
+            .field("sample_num", &self.sample_num().bits())
+            .field("sample_cycle", &self.sample_cycle().bits())
             .finish()
     }
 }

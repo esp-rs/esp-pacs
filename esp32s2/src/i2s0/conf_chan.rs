@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF_CHAN")
-            .field(
-                "tx_chan_mod",
-                &format_args!("{}", self.tx_chan_mod().bits()),
-            )
-            .field(
-                "rx_chan_mod",
-                &format_args!("{}", self.rx_chan_mod().bits()),
-            )
+            .field("tx_chan_mod", &self.tx_chan_mod().bits())
+            .field("rx_chan_mod", &self.rx_chan_mod().bits())
             .finish()
     }
 }

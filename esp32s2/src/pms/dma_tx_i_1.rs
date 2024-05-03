@@ -125,58 +125,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_TX_I_1")
-            .field(
-                "dma_tx_i_sram_0_r",
-                &format_args!("{}", self.dma_tx_i_sram_0_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_0_w",
-                &format_args!("{}", self.dma_tx_i_sram_0_w().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_1_r",
-                &format_args!("{}", self.dma_tx_i_sram_1_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_1_w",
-                &format_args!("{}", self.dma_tx_i_sram_1_w().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_2_r",
-                &format_args!("{}", self.dma_tx_i_sram_2_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_2_w",
-                &format_args!("{}", self.dma_tx_i_sram_2_w().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_3_r",
-                &format_args!("{}", self.dma_tx_i_sram_3_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_3_w",
-                &format_args!("{}", self.dma_tx_i_sram_3_w().bit()),
-            )
+            .field("dma_tx_i_sram_0_r", &self.dma_tx_i_sram_0_r().bit())
+            .field("dma_tx_i_sram_0_w", &self.dma_tx_i_sram_0_w().bit())
+            .field("dma_tx_i_sram_1_r", &self.dma_tx_i_sram_1_r().bit())
+            .field("dma_tx_i_sram_1_w", &self.dma_tx_i_sram_1_w().bit())
+            .field("dma_tx_i_sram_2_r", &self.dma_tx_i_sram_2_r().bit())
+            .field("dma_tx_i_sram_2_w", &self.dma_tx_i_sram_2_w().bit())
+            .field("dma_tx_i_sram_3_r", &self.dma_tx_i_sram_3_r().bit())
+            .field("dma_tx_i_sram_3_w", &self.dma_tx_i_sram_3_w().bit())
             .field(
                 "dma_tx_i_sram_4_spltaddr",
-                &format_args!("{}", self.dma_tx_i_sram_4_spltaddr().bits()),
+                &self.dma_tx_i_sram_4_spltaddr().bits(),
             )
-            .field(
-                "dma_tx_i_sram_4_l_r",
-                &format_args!("{}", self.dma_tx_i_sram_4_l_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_4_l_w",
-                &format_args!("{}", self.dma_tx_i_sram_4_l_w().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_4_h_r",
-                &format_args!("{}", self.dma_tx_i_sram_4_h_r().bit()),
-            )
-            .field(
-                "dma_tx_i_sram_4_h_w",
-                &format_args!("{}", self.dma_tx_i_sram_4_h_w().bit()),
-            )
+            .field("dma_tx_i_sram_4_l_r", &self.dma_tx_i_sram_4_l_r().bit())
+            .field("dma_tx_i_sram_4_l_w", &self.dma_tx_i_sram_4_l_w().bit())
+            .field("dma_tx_i_sram_4_h_r", &self.dma_tx_i_sram_4_h_r().bit())
+            .field("dma_tx_i_sram_4_h_w", &self.dma_tx_i_sram_4_h_w().bit())
             .finish()
     }
 }

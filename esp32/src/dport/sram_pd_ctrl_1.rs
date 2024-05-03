@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_PD_CTRL_1")
-            .field("sram_pd_1", &format_args!("{}", self.sram_pd_1().bit()))
+            .field("sram_pd_1", &self.sram_pd_1().bit())
             .finish()
     }
 }

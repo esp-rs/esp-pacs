@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL_TICK_CONF")
-            .field(
-                "xtal_tick_num",
-                &format_args!("{}", self.xtal_tick_num().bits()),
-            )
-            .field(
-                "fosc_tick_num",
-                &format_args!("{}", self.fosc_tick_num().bits()),
-            )
-            .field("tick_enable", &format_args!("{}", self.tick_enable().bit()))
-            .field(
-                "rst_tick_cnt",
-                &format_args!("{}", self.rst_tick_cnt().bit()),
-            )
+            .field("xtal_tick_num", &self.xtal_tick_num().bits())
+            .field("fosc_tick_num", &self.fosc_tick_num().bits())
+            .field("tick_enable", &self.tick_enable().bit())
+            .field("rst_tick_cnt", &self.rst_tick_cnt().bit())
             .finish()
     }
 }

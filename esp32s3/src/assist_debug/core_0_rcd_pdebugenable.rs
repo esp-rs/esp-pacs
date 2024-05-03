@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_RCD_PDEBUGENABLE")
             .field(
                 "core_0_rcd_pdebugenable",
-                &format_args!("{}", self.core_0_rcd_pdebugenable().bit()),
+                &self.core_0_rcd_pdebugenable().bit(),
             )
             .finish()
     }

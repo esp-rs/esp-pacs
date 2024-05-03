@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRIVILEGE_MODE_SEL_LOCK")
             .field(
                 "privilege_mode_sel_lock",
-                &format_args!("{}", self.privilege_mode_sel_lock().bit()),
+                &self.privilege_mode_sel_lock().bit(),
             )
             .finish()
     }

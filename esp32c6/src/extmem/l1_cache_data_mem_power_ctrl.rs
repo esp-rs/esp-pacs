@@ -121,63 +121,63 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_DATA_MEM_POWER_CTRL")
             .field(
                 "l1_icache0_data_mem_force_on",
-                &format_args!("{}", self.l1_icache0_data_mem_force_on().bit()),
+                &self.l1_icache0_data_mem_force_on().bit(),
             )
             .field(
                 "l1_icache0_data_mem_force_pd",
-                &format_args!("{}", self.l1_icache0_data_mem_force_pd().bit()),
+                &self.l1_icache0_data_mem_force_pd().bit(),
             )
             .field(
                 "l1_icache0_data_mem_force_pu",
-                &format_args!("{}", self.l1_icache0_data_mem_force_pu().bit()),
+                &self.l1_icache0_data_mem_force_pu().bit(),
             )
             .field(
                 "l1_icache1_data_mem_force_on",
-                &format_args!("{}", self.l1_icache1_data_mem_force_on().bit()),
+                &self.l1_icache1_data_mem_force_on().bit(),
             )
             .field(
                 "l1_icache1_data_mem_force_pd",
-                &format_args!("{}", self.l1_icache1_data_mem_force_pd().bit()),
+                &self.l1_icache1_data_mem_force_pd().bit(),
             )
             .field(
                 "l1_icache1_data_mem_force_pu",
-                &format_args!("{}", self.l1_icache1_data_mem_force_pu().bit()),
+                &self.l1_icache1_data_mem_force_pu().bit(),
             )
             .field(
                 "l1_icache2_data_mem_force_on",
-                &format_args!("{}", self.l1_icache2_data_mem_force_on().bit()),
+                &self.l1_icache2_data_mem_force_on().bit(),
             )
             .field(
                 "l1_icache2_data_mem_force_pd",
-                &format_args!("{}", self.l1_icache2_data_mem_force_pd().bit()),
+                &self.l1_icache2_data_mem_force_pd().bit(),
             )
             .field(
                 "l1_icache2_data_mem_force_pu",
-                &format_args!("{}", self.l1_icache2_data_mem_force_pu().bit()),
+                &self.l1_icache2_data_mem_force_pu().bit(),
             )
             .field(
                 "l1_icache3_data_mem_force_on",
-                &format_args!("{}", self.l1_icache3_data_mem_force_on().bit()),
+                &self.l1_icache3_data_mem_force_on().bit(),
             )
             .field(
                 "l1_icache3_data_mem_force_pd",
-                &format_args!("{}", self.l1_icache3_data_mem_force_pd().bit()),
+                &self.l1_icache3_data_mem_force_pd().bit(),
             )
             .field(
                 "l1_icache3_data_mem_force_pu",
-                &format_args!("{}", self.l1_icache3_data_mem_force_pu().bit()),
+                &self.l1_icache3_data_mem_force_pu().bit(),
             )
             .field(
                 "l1_cache_data_mem_force_on",
-                &format_args!("{}", self.l1_cache_data_mem_force_on().bit()),
+                &self.l1_cache_data_mem_force_on().bit(),
             )
             .field(
                 "l1_cache_data_mem_force_pd",
-                &format_args!("{}", self.l1_cache_data_mem_force_pd().bit()),
+                &self.l1_cache_data_mem_force_pd().bit(),
             )
             .field(
                 "l1_cache_data_mem_force_pu",
-                &format_args!("{}", self.l1_cache_data_mem_force_pu().bit()),
+                &self.l1_cache_data_mem_force_pu().bit(),
             )
             .finish()
     }

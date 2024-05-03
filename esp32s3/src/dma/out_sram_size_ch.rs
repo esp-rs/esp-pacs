@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_SRAM_SIZE_CH")
-            .field("out_size", &format_args!("{}", self.out_size().bits()))
+            .field("out_size", &self.out_size().bits())
             .finish()
     }
 }

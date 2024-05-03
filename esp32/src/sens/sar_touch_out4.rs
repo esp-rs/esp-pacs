@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_OUT4")
-            .field(
-                "touch_meas_out7",
-                &format_args!("{}", self.touch_meas_out7().bits()),
-            )
-            .field(
-                "touch_meas_out6",
-                &format_args!("{}", self.touch_meas_out6().bits()),
-            )
+            .field("touch_meas_out7", &self.touch_meas_out7().bits())
+            .field("touch_meas_out6", &self.touch_meas_out6().bits())
             .finish()
     }
 }

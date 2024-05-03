@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_CACHE_IA_INT_MAP")
-            .field(
-                "app_cache_ia_int_map",
-                &format_args!("{}", self.app_cache_ia_int_map().bits()),
-            )
+            .field("app_cache_ia_int_map", &self.app_cache_ia_int_map().bits())
             .finish()
     }
 }

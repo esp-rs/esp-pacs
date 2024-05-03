@@ -152,61 +152,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_CTRL2")
-            .field(
-                "touch_drange",
-                &format_args!("{}", self.touch_drange().bits()),
-            )
-            .field(
-                "touch_drefl",
-                &format_args!("{}", self.touch_drefl().bits()),
-            )
-            .field(
-                "touch_drefh",
-                &format_args!("{}", self.touch_drefh().bits()),
-            )
-            .field(
-                "touch_xpd_bias",
-                &format_args!("{}", self.touch_xpd_bias().bit()),
-            )
-            .field("touch_refc", &format_args!("{}", self.touch_refc().bits()))
-            .field("touch_dbias", &format_args!("{}", self.touch_dbias().bit()))
-            .field(
-                "touch_slp_timer_en",
-                &format_args!("{}", self.touch_slp_timer_en().bit()),
-            )
-            .field(
-                "touch_start_fsm_en",
-                &format_args!("{}", self.touch_start_fsm_en().bit()),
-            )
-            .field(
-                "touch_start_en",
-                &format_args!("{}", self.touch_start_en().bit()),
-            )
-            .field(
-                "touch_start_force",
-                &format_args!("{}", self.touch_start_force().bit()),
-            )
-            .field(
-                "touch_xpd_wait",
-                &format_args!("{}", self.touch_xpd_wait().bits()),
-            )
-            .field(
-                "touch_slp_cyc_div",
-                &format_args!("{}", self.touch_slp_cyc_div().bits()),
-            )
+            .field("touch_drange", &self.touch_drange().bits())
+            .field("touch_drefl", &self.touch_drefl().bits())
+            .field("touch_drefh", &self.touch_drefh().bits())
+            .field("touch_xpd_bias", &self.touch_xpd_bias().bit())
+            .field("touch_refc", &self.touch_refc().bits())
+            .field("touch_dbias", &self.touch_dbias().bit())
+            .field("touch_slp_timer_en", &self.touch_slp_timer_en().bit())
+            .field("touch_start_fsm_en", &self.touch_start_fsm_en().bit())
+            .field("touch_start_en", &self.touch_start_en().bit())
+            .field("touch_start_force", &self.touch_start_force().bit())
+            .field("touch_xpd_wait", &self.touch_xpd_wait().bits())
+            .field("touch_slp_cyc_div", &self.touch_slp_cyc_div().bits())
             .field(
                 "touch_timer_force_done",
-                &format_args!("{}", self.touch_timer_force_done().bits()),
+                &self.touch_timer_force_done().bits(),
             )
-            .field("touch_reset", &format_args!("{}", self.touch_reset().bit()))
-            .field(
-                "touch_clk_fo",
-                &format_args!("{}", self.touch_clk_fo().bit()),
-            )
-            .field(
-                "touch_clkgate_en",
-                &format_args!("{}", self.touch_clkgate_en().bit()),
-            )
+            .field("touch_reset", &self.touch_reset().bit())
+            .field("touch_clk_fo", &self.touch_clk_fo().bit())
+            .field("touch_clkgate_en", &self.touch_clkgate_en().bit())
             .finish()
     }
 }

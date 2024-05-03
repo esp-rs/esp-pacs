@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_TRACE_1")
-            .field(
-                "pro_trace_disable",
-                &format_args!("{}", self.pro_trace_disable().bit()),
-            )
+            .field("pro_trace_disable", &self.pro_trace_disable().bit())
             .finish()
     }
 }

@@ -29,15 +29,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("ERR_CODE_CAP")
             .field(
                 "err_capture_code_segment",
-                &format_args!("{}", self.err_capture_code_segment().bits()),
+                &self.err_capture_code_segment().bits(),
             )
             .field(
                 "err_capture_code_direction",
-                &format_args!("{}", self.err_capture_code_direction().bit()),
+                &self.err_capture_code_direction().bit(),
             )
             .field(
                 "err_capture_code_type",
-                &format_args!("{}", self.err_capture_code_type().bits()),
+                &self.err_capture_code_type().bits(),
             )
             .finish()
     }

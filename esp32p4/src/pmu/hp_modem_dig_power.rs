@@ -31,7 +31,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_DIG_POWER")
             .field(
                 "hp_modem_dcdc_switch_pd_en",
-                &format_args!("{}", self.hp_modem_dcdc_switch_pd_en().bit()),
+                &self.hp_modem_dcdc_switch_pd_en().bit(),
             )
             .finish()
     }

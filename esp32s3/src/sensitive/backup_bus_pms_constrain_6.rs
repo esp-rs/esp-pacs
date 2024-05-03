@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_6")
             .field(
                 "backup_bus_pms_constrain_rtcfast_l",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_l().bits()),
+                &self.backup_bus_pms_constrain_rtcfast_l().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_rtcfast_h",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_h().bits()),
+                &self.backup_bus_pms_constrain_rtcfast_h().bits(),
             )
             .finish()
     }

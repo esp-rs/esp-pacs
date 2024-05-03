@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER_CMP")
-            .field("timer_cmp", &format_args!("{}", self.timer_cmp().bits()))
+            .field("timer_cmp", &self.timer_cmp().bits())
             .finish()
     }
 }

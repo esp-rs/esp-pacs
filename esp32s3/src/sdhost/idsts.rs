@@ -89,15 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDSTS")
-            .field("ti", &format_args!("{}", self.ti().bit()))
-            .field("ri", &format_args!("{}", self.ri().bit()))
-            .field("fbe", &format_args!("{}", self.fbe().bit()))
-            .field("du", &format_args!("{}", self.du().bit()))
-            .field("ces", &format_args!("{}", self.ces().bit()))
-            .field("nis", &format_args!("{}", self.nis().bit()))
-            .field("ais", &format_args!("{}", self.ais().bit()))
-            .field("fbe_code", &format_args!("{}", self.fbe_code().bits()))
-            .field("fsm", &format_args!("{}", self.fsm().bits()))
+            .field("ti", &self.ti().bit())
+            .field("ri", &self.ri().bit())
+            .field("fbe", &self.fbe().bit())
+            .field("du", &self.du().bit())
+            .field("ces", &self.ces().bit())
+            .field("nis", &self.nis().bit())
+            .field("ais", &self.ais().bit())
+            .field("fbe_code", &self.fbe_code().bits())
+            .field("fsm", &self.fsm().bits())
             .finish()
     }
 }

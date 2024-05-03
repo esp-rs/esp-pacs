@@ -98,43 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF_FORCE_ON")
-            .field("clk_etm_fo", &format_args!("{}", self.clk_etm_fo().bit()))
-            .field(
-                "clk_zb_apb_fo",
-                &format_args!("{}", self.clk_zb_apb_fo().bit()),
-            )
-            .field(
-                "clk_zb_mac_fo",
-                &format_args!("{}", self.clk_zb_mac_fo().bit()),
-            )
-            .field(
-                "clk_modem_sec_ecb_fo",
-                &format_args!("{}", self.clk_modem_sec_ecb_fo().bit()),
-            )
-            .field(
-                "clk_modem_sec_ccm_fo",
-                &format_args!("{}", self.clk_modem_sec_ccm_fo().bit()),
-            )
-            .field(
-                "clk_modem_sec_bah_fo",
-                &format_args!("{}", self.clk_modem_sec_bah_fo().bit()),
-            )
-            .field(
-                "clk_modem_sec_apb_fo",
-                &format_args!("{}", self.clk_modem_sec_apb_fo().bit()),
-            )
-            .field(
-                "clk_modem_sec_fo",
-                &format_args!("{}", self.clk_modem_sec_fo().bit()),
-            )
-            .field(
-                "clk_ble_timer_fo",
-                &format_args!("{}", self.clk_ble_timer_fo().bit()),
-            )
-            .field(
-                "clk_data_dump_fo",
-                &format_args!("{}", self.clk_data_dump_fo().bit()),
-            )
+            .field("clk_etm_fo", &self.clk_etm_fo().bit())
+            .field("clk_zb_apb_fo", &self.clk_zb_apb_fo().bit())
+            .field("clk_zb_mac_fo", &self.clk_zb_mac_fo().bit())
+            .field("clk_modem_sec_ecb_fo", &self.clk_modem_sec_ecb_fo().bit())
+            .field("clk_modem_sec_ccm_fo", &self.clk_modem_sec_ccm_fo().bit())
+            .field("clk_modem_sec_bah_fo", &self.clk_modem_sec_bah_fo().bit())
+            .field("clk_modem_sec_apb_fo", &self.clk_modem_sec_apb_fo().bit())
+            .field("clk_modem_sec_fo", &self.clk_modem_sec_fo().bit())
+            .field("clk_ble_timer_fo", &self.clk_ble_timer_fo().bit())
+            .field("clk_data_dump_fo", &self.clk_data_dump_fo().bit())
             .finish()
     }
 }

@@ -34,21 +34,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_1_MESSAGE_PHASE")
-            .field(
-                "core_1_message_match",
-                &format_args!("{}", self.core_1_message_match().bit()),
-            )
+            .field("core_1_message_match", &self.core_1_message_match().bit())
             .field(
                 "core_1_message_expect",
-                &format_args!("{}", self.core_1_message_expect().bits()),
+                &self.core_1_message_expect().bits(),
             )
             .field(
                 "core_1_message_dataphase",
-                &format_args!("{}", self.core_1_message_dataphase().bit()),
+                &self.core_1_message_dataphase().bit(),
             )
             .field(
                 "core_1_message_addressphase",
-                &format_args!("{}", self.core_1_message_addressphase().bit()),
+                &self.core_1_message_addressphase().bit(),
             )
             .finish()
     }

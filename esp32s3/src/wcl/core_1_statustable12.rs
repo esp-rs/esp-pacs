@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_1_STATUSTABLE12")
-            .field(
-                "core_1_from_world_12",
-                &format_args!("{}", self.core_1_from_world_12().bit()),
-            )
-            .field(
-                "core_1_from_entry_12",
-                &format_args!("{}", self.core_1_from_entry_12().bits()),
-            )
-            .field(
-                "core_1_current_12",
-                &format_args!("{}", self.core_1_current_12().bit()),
-            )
+            .field("core_1_from_world_12", &self.core_1_from_world_12().bit())
+            .field("core_1_from_entry_12", &self.core_1_from_entry_12().bits())
+            .field("core_1_current_12", &self.core_1_current_12().bit())
             .finish()
     }
 }

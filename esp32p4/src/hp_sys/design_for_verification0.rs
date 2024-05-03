@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DESIGN_FOR_VERIFICATION0")
-            .field("dfv0", &format_args!("{}", self.dfv0().bits()))
+            .field("dfv0", &self.dfv0().bits())
             .finish()
     }
 }

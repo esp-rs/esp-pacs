@@ -41,23 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE0")
-            .field(
-                "inlink_dscr_addr",
-                &format_args!("{}", self.inlink_dscr_addr().bits()),
-            )
-            .field(
-                "in_dscr_state",
-                &format_args!("{}", self.in_dscr_state().bits()),
-            )
-            .field("in_state", &format_args!("{}", self.in_state().bits()))
-            .field(
-                "infifo_cnt_debug",
-                &format_args!("{}", self.infifo_cnt_debug().bits()),
-            )
-            .field(
-                "decode_state",
-                &format_args!("{}", self.decode_state().bits()),
-            )
+            .field("inlink_dscr_addr", &self.inlink_dscr_addr().bits())
+            .field("in_dscr_state", &self.in_dscr_state().bits())
+            .field("in_state", &self.in_state().bits())
+            .field("infifo_cnt_debug", &self.infifo_cnt_debug().bits())
+            .field("decode_state", &self.decode_state().bits())
             .finish()
     }
 }

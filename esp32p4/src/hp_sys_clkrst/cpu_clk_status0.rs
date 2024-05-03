@@ -48,29 +48,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_CLK_STATUS0")
-            .field(
-                "asic_or_fpga",
-                &format_args!("{}", self.asic_or_fpga().bit()),
-            )
-            .field(
-                "cpu_div_effect",
-                &format_args!("{}", self.cpu_div_effect().bit()),
-            )
-            .field(
-                "cpu_src_is_cpll",
-                &format_args!("{}", self.cpu_src_is_cpll().bit()),
-            )
-            .field(
-                "cpu_div_num_cur",
-                &format_args!("{}", self.cpu_div_num_cur().bits()),
-            )
+            .field("asic_or_fpga", &self.asic_or_fpga().bit())
+            .field("cpu_div_effect", &self.cpu_div_effect().bit())
+            .field("cpu_src_is_cpll", &self.cpu_src_is_cpll().bit())
+            .field("cpu_div_num_cur", &self.cpu_div_num_cur().bits())
             .field(
                 "cpu_div_numerator_cur",
-                &format_args!("{}", self.cpu_div_numerator_cur().bits()),
+                &self.cpu_div_numerator_cur().bits(),
             )
             .field(
                 "cpu_div_denominator_cur",
-                &format_args!("{}", self.cpu_div_denominator_cur().bits()),
+                &self.cpu_div_denominator_cur().bits(),
             )
             .finish()
     }

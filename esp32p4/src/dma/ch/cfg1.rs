@@ -108,48 +108,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG1")
-            .field("ch1_tt_fc", &format_args!("{}", self.ch1_tt_fc().bits()))
-            .field(
-                "ch1_hs_sel_src",
-                &format_args!("{}", self.ch1_hs_sel_src().bit()),
-            )
-            .field(
-                "ch1_hs_sel_dst",
-                &format_args!("{}", self.ch1_hs_sel_dst().bit()),
-            )
-            .field(
-                "ch1_src_hwhs_pol",
-                &format_args!("{}", self.ch1_src_hwhs_pol().bit()),
-            )
-            .field(
-                "ch1_dst_hwhs_pol",
-                &format_args!("{}", self.ch1_dst_hwhs_pol().bit()),
-            )
-            .field(
-                "ch1_src_per",
-                &format_args!("{}", self.ch1_src_per().bits()),
-            )
-            .field(
-                "ch1_dst_per",
-                &format_args!("{}", self.ch1_dst_per().bits()),
-            )
-            .field(
-                "ch1_ch_prior",
-                &format_args!("{}", self.ch1_ch_prior().bits()),
-            )
-            .field("ch1_lock_ch", &format_args!("{}", self.ch1_lock_ch().bit()))
-            .field(
-                "ch1_lock_ch_l",
-                &format_args!("{}", self.ch1_lock_ch_l().bits()),
-            )
-            .field(
-                "ch1_src_osr_lmt",
-                &format_args!("{}", self.ch1_src_osr_lmt().bits()),
-            )
-            .field(
-                "ch1_dst_osr_lmt",
-                &format_args!("{}", self.ch1_dst_osr_lmt().bits()),
-            )
+            .field("ch1_tt_fc", &self.ch1_tt_fc().bits())
+            .field("ch1_hs_sel_src", &self.ch1_hs_sel_src().bit())
+            .field("ch1_hs_sel_dst", &self.ch1_hs_sel_dst().bit())
+            .field("ch1_src_hwhs_pol", &self.ch1_src_hwhs_pol().bit())
+            .field("ch1_dst_hwhs_pol", &self.ch1_dst_hwhs_pol().bit())
+            .field("ch1_src_per", &self.ch1_src_per().bits())
+            .field("ch1_dst_per", &self.ch1_dst_per().bits())
+            .field("ch1_ch_prior", &self.ch1_ch_prior().bits())
+            .field("ch1_lock_ch", &self.ch1_lock_ch().bit())
+            .field("ch1_lock_ch_l", &self.ch1_lock_ch_l().bits())
+            .field("ch1_src_osr_lmt", &self.ch1_src_osr_lmt().bits())
+            .field("ch1_dst_osr_lmt", &self.ch1_dst_osr_lmt().bits())
             .finish()
     }
 }

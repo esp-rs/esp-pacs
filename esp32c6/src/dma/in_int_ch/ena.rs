@@ -71,16 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENA")
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field("infifo_ovf", &format_args!("{}", self.infifo_ovf().bit()))
-            .field("infifo_udf", &format_args!("{}", self.infifo_udf().bit()))
+            .field("in_done", &self.in_done().bit())
+            .field("in_suc_eof", &self.in_suc_eof().bit())
+            .field("in_err_eof", &self.in_err_eof().bit())
+            .field("in_dscr_err", &self.in_dscr_err().bit())
+            .field("in_dscr_empty", &self.in_dscr_empty().bit())
+            .field("infifo_ovf", &self.infifo_ovf().bit())
+            .field("infifo_udf", &self.infifo_udf().bit())
             .finish()
     }
 }

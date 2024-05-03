@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field("op_code", &format_args!("{}", self.op_code().bits()))
-            .field(
-                "force_no_wr_rd_dis",
-                &format_args!("{}", self.force_no_wr_rd_dis().bit()),
-            )
+            .field("op_code", &self.op_code().bits())
+            .field("force_no_wr_rd_dis", &self.force_no_wr_rd_dis().bit())
             .finish()
     }
 }

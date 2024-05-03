@@ -27,9 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTMASKED")
-            .field("stop_mask", &format_args!("{}", self.stop_mask().bit()))
-            .field("rxpend_mask", &format_args!("{}", self.rxpend_mask().bit()))
-            .field("txsend_mask", &format_args!("{}", self.txsend_mask().bit()))
+            .field("stop_mask", &self.stop_mask().bit())
+            .field("rxpend_mask", &self.rxpend_mask().bit())
+            .field("txsend_mask", &self.txsend_mask().bit())
             .finish()
     }
 }

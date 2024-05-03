@@ -107,32 +107,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL_CLK_OUT_EN")
-            .field("clk20_oen", &format_args!("{}", self.clk20_oen().bit()))
-            .field("clk22_oen", &format_args!("{}", self.clk22_oen().bit()))
-            .field("clk44_oen", &format_args!("{}", self.clk44_oen().bit()))
-            .field("clk_bb_oen", &format_args!("{}", self.clk_bb_oen().bit()))
-            .field("clk80_oen", &format_args!("{}", self.clk80_oen().bit()))
-            .field("clk160_oen", &format_args!("{}", self.clk160_oen().bit()))
-            .field(
-                "clk_320m_oen",
-                &format_args!("{}", self.clk_320m_oen().bit()),
-            )
-            .field(
-                "clk_adc_inf_oen",
-                &format_args!("{}", self.clk_adc_inf_oen().bit()),
-            )
-            .field(
-                "clk_dac_cpu_oen",
-                &format_args!("{}", self.clk_dac_cpu_oen().bit()),
-            )
-            .field(
-                "clk40x_bb_oen",
-                &format_args!("{}", self.clk40x_bb_oen().bit()),
-            )
-            .field(
-                "clk_xtal_oen",
-                &format_args!("{}", self.clk_xtal_oen().bit()),
-            )
+            .field("clk20_oen", &self.clk20_oen().bit())
+            .field("clk22_oen", &self.clk22_oen().bit())
+            .field("clk44_oen", &self.clk44_oen().bit())
+            .field("clk_bb_oen", &self.clk_bb_oen().bit())
+            .field("clk80_oen", &self.clk80_oen().bit())
+            .field("clk160_oen", &self.clk160_oen().bit())
+            .field("clk_320m_oen", &self.clk_320m_oen().bit())
+            .field("clk_adc_inf_oen", &self.clk_adc_inf_oen().bit())
+            .field("clk_dac_cpu_oen", &self.clk_dac_cpu_oen().bit())
+            .field("clk40x_bb_oen", &self.clk40x_bb_oen().bit())
+            .field("clk_xtal_oen", &self.clk_xtal_oen().bit())
             .finish()
     }
 }

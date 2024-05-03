@@ -53,14 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYNC")
-            .field("synci_en", &format_args!("{}", self.synci_en().bit()))
-            .field("sw", &format_args!("{}", self.sw().bit()))
-            .field("synco_sel", &format_args!("{}", self.synco_sel().bits()))
-            .field("phase", &format_args!("{}", self.phase().bits()))
-            .field(
-                "phase_direction",
-                &format_args!("{}", self.phase_direction().bit()),
-            )
+            .field("synci_en", &self.synci_en().bit())
+            .field("sw", &self.sw().bit())
+            .field("synco_sel", &self.synco_sel().bits())
+            .field("phase", &self.phase().bits())
+            .field("phase_direction", &self.phase_direction().bit())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2_CLKM_CONF")
-            .field(
-                "spi2_clkm_sel",
-                &format_args!("{}", self.spi2_clkm_sel().bits()),
-            )
-            .field(
-                "spi2_clkm_en",
-                &format_args!("{}", self.spi2_clkm_en().bit()),
-            )
+            .field("spi2_clkm_sel", &self.spi2_clkm_sel().bits())
+            .field("spi2_clkm_en", &self.spi2_clkm_en().bit())
             .finish()
     }
 }

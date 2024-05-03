@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CRC_EN_WR_DATA")
-            .field(
-                "rx_crc_en_wr_data",
-                &format_args!("{}", self.rx_crc_en_wr_data().bits()),
-            )
+            .field("rx_crc_en_wr_data", &self.rx_crc_en_wr_data().bits())
             .finish()
     }
 }

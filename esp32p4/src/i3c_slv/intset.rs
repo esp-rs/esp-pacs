@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTSET")
-            .field("stop_ena", &format_args!("{}", self.stop_ena().bit()))
-            .field("rxpend_ena", &format_args!("{}", self.rxpend_ena().bit()))
-            .field("txsend_ena", &format_args!("{}", self.txsend_ena().bit()))
+            .field("stop_ena", &self.stop_ena().bit())
+            .field("rxpend_ena", &self.rxpend_ena().bit())
+            .field("txsend_ena", &self.txsend_ena().bit())
             .finish()
     }
 }

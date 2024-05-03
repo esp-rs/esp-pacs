@@ -26,13 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER6")
-            .field(
-                "dg_dcdc_wait_timer",
-                &format_args!("{}", self.dg_dcdc_wait_timer().bits()),
-            )
+            .field("dg_dcdc_wait_timer", &self.dg_dcdc_wait_timer().bits())
             .field(
                 "dg_dcdc_powerup_timer",
-                &format_args!("{}", self.dg_dcdc_powerup_timer().bits()),
+                &self.dg_dcdc_powerup_timer().bits(),
             )
             .finish()
     }

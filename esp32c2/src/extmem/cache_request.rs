@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_REQUEST")
-            .field("bypass", &format_args!("{}", self.bypass().bit()))
+            .field("bypass", &self.bypass().bit())
             .finish()
     }
 }

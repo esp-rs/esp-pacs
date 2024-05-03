@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM8")
-            .field(
-                "param_thres_upd_bdl",
-                &format_args!("{}", self.param_thres_upd_bdl().bits()),
-            )
-            .field(
-                "param_thres_upd_bdh",
-                &format_args!("{}", self.param_thres_upd_bdh().bits()),
-            )
-            .field(
-                "param_feature_burst",
-                &format_args!("{}", self.param_feature_burst().bits()),
-            )
+            .field("param_thres_upd_bdl", &self.param_thres_upd_bdl().bits())
+            .field("param_thres_upd_bdh", &self.param_thres_upd_bdh().bits())
+            .field("param_feature_burst", &self.param_feature_burst().bits())
             .finish()
     }
 }

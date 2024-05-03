@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_DESTINATION")
-            .field(
-                "spi_xts_destination",
-                &format_args!("{}", self.spi_xts_destination().bit()),
-            )
+            .field("spi_xts_destination", &self.spi_xts_destination().bit())
             .finish()
     }
 }

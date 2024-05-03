@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_ICACHE_MEM_SYNC1")
             .field(
                 "pro_icache_memsync_size",
-                &format_args!("{}", self.pro_icache_memsync_size().bits()),
+                &self.pro_icache_memsync_size().bits(),
             )
             .finish()
     }

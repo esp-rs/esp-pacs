@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_ROM_AUX_CTRL")
-            .field(
-                "lp_rom_aux_ctrl",
-                &format_args!("{}", self.lp_rom_aux_ctrl().bits()),
-            )
+            .field("lp_rom_aux_ctrl", &self.lp_rom_aux_ctrl().bits())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WEIGHT_EN")
-            .field("tx", &format_args!("{}", self.tx().bit()))
-            .field("rx", &format_args!("{}", self.rx().bit()))
+            .field("tx", &self.tx().bit())
+            .field("rx", &self.rx().bit())
             .finish()
     }
 }

@@ -29,15 +29,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_DRAM0_EXCEPTION_MONITOR_2")
             .field(
                 "core_0_dram0_recording_addr_1",
-                &format_args!("{}", self.core_0_dram0_recording_addr_1().bits()),
+                &self.core_0_dram0_recording_addr_1().bits(),
             )
             .field(
                 "core_0_dram0_recording_wr_1",
-                &format_args!("{}", self.core_0_dram0_recording_wr_1().bit()),
+                &self.core_0_dram0_recording_wr_1().bit(),
             )
             .field(
                 "core_0_dram0_recording_byteen_1",
-                &format_args!("{}", self.core_0_dram0_recording_byteen_1().bits()),
+                &self.core_0_dram0_recording_byteen_1().bits(),
             )
             .finish()
     }

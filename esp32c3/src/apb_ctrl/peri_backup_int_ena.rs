@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_BACKUP_INT_ENA")
-            .field("done", &format_args!("{}", self.done().bit()))
-            .field("err", &format_args!("{}", self.err().bit()))
+            .field("done", &self.done().bit())
+            .field("err", &self.err().bit())
             .finish()
     }
 }

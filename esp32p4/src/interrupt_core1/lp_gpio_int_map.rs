@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_GPIO_INT_MAP")
             .field(
                 "core1_lp_gpio_int_map",
-                &format_args!("{}", self.core1_lp_gpio_int_map().bits()),
+                &self.core1_lp_gpio_int_map().bits(),
             )
             .finish()
     }

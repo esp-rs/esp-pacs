@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_BLK2_DATA3")
-            .field("pvt_high", &format_args!("{}", self.pvt_high().bits()))
-            .field(
-                "adc_calibration_0",
-                &format_args!("{}", self.adc_calibration_0().bits()),
-            )
+            .field("pvt_high", &self.pvt_high().bits())
+            .field("adc_calibration_0", &self.adc_calibration_0().bits())
             .finish()
     }
 }

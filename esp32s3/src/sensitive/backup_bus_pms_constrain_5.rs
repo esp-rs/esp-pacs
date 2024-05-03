@@ -22,10 +22,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_5")
             .field(
                 "backup_bus_pms_constrain_rtcfast_spltaddr",
-                &format_args!(
-                    "{}",
-                    self.backup_bus_pms_constrain_rtcfast_spltaddr().bits()
-                ),
+                &self.backup_bus_pms_constrain_rtcfast_spltaddr().bits(),
             )
             .finish()
     }

@@ -125,51 +125,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAOPERATION_MODE")
-            .field(
-                "start_stop_rx",
-                &format_args!("{}", self.start_stop_rx().bit()),
-            )
-            .field(
-                "opt_second_frame",
-                &format_args!("{}", self.opt_second_frame().bit()),
-            )
-            .field(
-                "rx_thresh_ctrl",
-                &format_args!("{}", self.rx_thresh_ctrl().bits()),
-            )
-            .field("drop_gfrm", &format_args!("{}", self.drop_gfrm().bit()))
-            .field(
-                "fwd_under_gf",
-                &format_args!("{}", self.fwd_under_gf().bit()),
-            )
-            .field(
-                "fwd_err_frame",
-                &format_args!("{}", self.fwd_err_frame().bit()),
-            )
+            .field("start_stop_rx", &self.start_stop_rx().bit())
+            .field("opt_second_frame", &self.opt_second_frame().bit())
+            .field("rx_thresh_ctrl", &self.rx_thresh_ctrl().bits())
+            .field("drop_gfrm", &self.drop_gfrm().bit())
+            .field("fwd_under_gf", &self.fwd_under_gf().bit())
+            .field("fwd_err_frame", &self.fwd_err_frame().bit())
             .field(
                 "start_stop_transmission_command",
-                &format_args!("{}", self.start_stop_transmission_command().bit()),
+                &self.start_stop_transmission_command().bit(),
             )
-            .field(
-                "tx_thresh_ctrl",
-                &format_args!("{}", self.tx_thresh_ctrl().bits()),
-            )
-            .field(
-                "flush_tx_fifo",
-                &format_args!("{}", self.flush_tx_fifo().bit()),
-            )
-            .field("tx_str_fwd", &format_args!("{}", self.tx_str_fwd().bit()))
-            .field(
-                "dis_flush_recv_frames",
-                &format_args!("{}", self.dis_flush_recv_frames().bit()),
-            )
-            .field(
-                "rx_store_forward",
-                &format_args!("{}", self.rx_store_forward().bit()),
-            )
+            .field("tx_thresh_ctrl", &self.tx_thresh_ctrl().bits())
+            .field("flush_tx_fifo", &self.flush_tx_fifo().bit())
+            .field("tx_str_fwd", &self.tx_str_fwd().bit())
+            .field("dis_flush_recv_frames", &self.dis_flush_recv_frames().bit())
+            .field("rx_store_forward", &self.rx_store_forward().bit())
             .field(
                 "dis_drop_tcpip_err_fram",
-                &format_args!("{}", self.dis_drop_tcpip_err_fram().bit()),
+                &self.dis_drop_tcpip_err_fram().bit(),
             )
             .finish()
     }

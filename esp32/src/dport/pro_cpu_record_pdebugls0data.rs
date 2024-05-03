@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGLS0DATA")
             .field(
                 "record_pro_pdebugls0data",
-                &format_args!("{}", self.record_pro_pdebugls0data().bits()),
+                &self.record_pro_pdebugls0data().bits(),
             )
             .finish()
     }

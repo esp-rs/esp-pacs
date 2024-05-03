@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_RDBUF_DLEN")
-            .field(
-                "slv_dma_rd_bytelen",
-                &format_args!("{}", self.slv_dma_rd_bytelen().bits()),
-            )
-            .field(
-                "slv_rd_buf_done",
-                &format_args!("{}", self.slv_rd_buf_done().bit()),
-            )
-            .field(
-                "seg_magic_err",
-                &format_args!("{}", self.seg_magic_err().bit()),
-            )
+            .field("slv_dma_rd_bytelen", &self.slv_dma_rd_bytelen().bits())
+            .field("slv_rd_buf_done", &self.slv_rd_buf_done().bit())
+            .field("seg_magic_err", &self.seg_magic_err().bit())
             .finish()
     }
 }

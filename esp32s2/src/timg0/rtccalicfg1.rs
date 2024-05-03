@@ -22,12 +22,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("RTCCALICFG1")
             .field(
                 "rtc_cali_cycling_data_vld",
-                &format_args!("{}", self.rtc_cali_cycling_data_vld().bit()),
+                &self.rtc_cali_cycling_data_vld().bit(),
             )
-            .field(
-                "rtc_cali_value",
-                &format_args!("{}", self.rtc_cali_value().bits()),
-            )
+            .field("rtc_cali_value", &self.rtc_cali_value().bits())
             .finish()
     }
 }

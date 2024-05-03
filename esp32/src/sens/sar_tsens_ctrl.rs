@@ -89,42 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TSENS_CTRL")
-            .field(
-                "tsens_xpd_wait",
-                &format_args!("{}", self.tsens_xpd_wait().bits()),
-            )
-            .field(
-                "tsens_xpd_force",
-                &format_args!("{}", self.tsens_xpd_force().bit()),
-            )
-            .field(
-                "tsens_clk_inv",
-                &format_args!("{}", self.tsens_clk_inv().bit()),
-            )
-            .field(
-                "tsens_clk_gated",
-                &format_args!("{}", self.tsens_clk_gated().bit()),
-            )
-            .field(
-                "tsens_in_inv",
-                &format_args!("{}", self.tsens_in_inv().bit()),
-            )
-            .field(
-                "tsens_clk_div",
-                &format_args!("{}", self.tsens_clk_div().bits()),
-            )
-            .field(
-                "tsens_power_up",
-                &format_args!("{}", self.tsens_power_up().bit()),
-            )
-            .field(
-                "tsens_power_up_force",
-                &format_args!("{}", self.tsens_power_up_force().bit()),
-            )
-            .field(
-                "tsens_dump_out",
-                &format_args!("{}", self.tsens_dump_out().bit()),
-            )
+            .field("tsens_xpd_wait", &self.tsens_xpd_wait().bits())
+            .field("tsens_xpd_force", &self.tsens_xpd_force().bit())
+            .field("tsens_clk_inv", &self.tsens_clk_inv().bit())
+            .field("tsens_clk_gated", &self.tsens_clk_gated().bit())
+            .field("tsens_in_inv", &self.tsens_in_inv().bit())
+            .field("tsens_clk_div", &self.tsens_clk_div().bits())
+            .field("tsens_power_up", &self.tsens_power_up().bit())
+            .field("tsens_power_up_force", &self.tsens_power_up_force().bit())
+            .field("tsens_dump_out", &self.tsens_dump_out().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CK8M_TICK_CONF")
-            .field(
-                "ck8m_tick_num",
-                &format_args!("{}", self.ck8m_tick_num().bits()),
-            )
+            .field("ck8m_tick_num", &self.ck8m_tick_num().bits())
             .finish()
     }
 }

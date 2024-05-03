@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGCLK")
-            .field("etm_en", &format_args!("{}", self.etm_en().bit()))
-            .field(
-                "wdt_clk_is_active",
-                &format_args!("{}", self.wdt_clk_is_active().bit()),
-            )
-            .field(
-                "timer_clk_is_active",
-                &format_args!("{}", self.timer_clk_is_active().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("etm_en", &self.etm_en().bit())
+            .field("wdt_clk_is_active", &self.wdt_clk_is_active().bit())
+            .field("timer_clk_is_active", &self.timer_clk_is_active().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

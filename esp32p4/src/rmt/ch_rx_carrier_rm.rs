@@ -26,13 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_CARRIER_RM")
-            .field(
-                "carrier_low_thres_ch",
-                &format_args!("{}", self.carrier_low_thres_ch().bits()),
-            )
+            .field("carrier_low_thres_ch", &self.carrier_low_thres_ch().bits())
             .field(
                 "carrier_high_thres_ch",
-                &format_args!("{}", self.carrier_high_thres_ch().bits()),
+                &self.carrier_high_thres_ch().bits(),
             )
             .finish()
     }

@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB2OTP_WR_DIS")
             .field(
                 "apb2otp_block0_wr_dis",
-                &format_args!("{}", self.apb2otp_block0_wr_dis().bits()),
+                &self.apb2otp_block0_wr_dis().bits(),
             )
             .finish()
     }

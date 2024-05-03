@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("FIFO_CNT")
             .field(
                 "in_cmdfifo_infifo_cnt",
-                &format_args!("{}", self.in_cmdfifo_infifo_cnt().bits()),
+                &self.in_cmdfifo_infifo_cnt().bits(),
             )
             .finish()
     }

@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CH5_COUNTER")
-            .field("rx_ch5_cnt", &format_args!("{}", self.rx_ch5_cnt().bits()))
+            .field("rx_ch5_cnt", &self.rx_ch5_cnt().bits())
             .finish()
     }
 }

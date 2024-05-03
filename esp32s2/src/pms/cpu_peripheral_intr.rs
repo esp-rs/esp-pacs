@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_PERIPHERAL_INTR")
             .field(
                 "cpu_peri_byte_error_clr",
-                &format_args!("{}", self.cpu_peri_byte_error_clr().bit()),
+                &self.cpu_peri_byte_error_clr().bit(),
             )
             .field(
                 "cpu_peri_byte_error_en",
-                &format_args!("{}", self.cpu_peri_byte_error_en().bit()),
+                &self.cpu_peri_byte_error_en().bit(),
             )
             .field(
                 "cpu_peri_byte_error_intr",
-                &format_args!("{}", self.cpu_peri_byte_error_intr().bit()),
+                &self.cpu_peri_byte_error_intr().bit(),
             )
             .finish()
     }

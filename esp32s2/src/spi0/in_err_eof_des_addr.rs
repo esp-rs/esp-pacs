@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("IN_ERR_EOF_DES_ADDR")
             .field(
                 "dma_in_err_eof_des_addr",
-                &format_args!("{}", self.dma_in_err_eof_des_addr().bits()),
+                &self.dma_in_err_eof_des_addr().bits(),
             )
             .finish()
     }

@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_PRELOAD_CTRL")
-            .field(
-                "icache_preload_ena",
-                &format_args!("{}", self.icache_preload_ena().bit()),
-            )
-            .field(
-                "icache_preload_done",
-                &format_args!("{}", self.icache_preload_done().bit()),
-            )
-            .field(
-                "icache_preload_order",
-                &format_args!("{}", self.icache_preload_order().bit()),
-            )
+            .field("icache_preload_ena", &self.icache_preload_ena().bit())
+            .field("icache_preload_done", &self.icache_preload_done().bit())
+            .field("icache_preload_order", &self.icache_preload_order().bit())
             .finish()
     }
 }

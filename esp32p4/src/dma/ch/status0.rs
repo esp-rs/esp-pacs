@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATUS0")
             .field(
                 "ch1_cmpltd_blk_tfr_size",
-                &format_args!("{}", self.ch1_cmpltd_blk_tfr_size().bits()),
+                &self.ch1_cmpltd_blk_tfr_size().bits(),
             )
             .finish()
     }

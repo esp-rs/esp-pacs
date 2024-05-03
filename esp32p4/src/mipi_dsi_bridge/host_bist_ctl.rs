@@ -24,8 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_BIST_CTL")
-            .field("bistok", &format_args!("{}", self.bistok().bit()))
-            .field("biston", &format_args!("{}", self.biston().bit()))
+            .field("bistok", &self.bistok().bit())
+            .field("biston", &self.biston().bit())
             .finish()
     }
 }

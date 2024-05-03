@@ -35,26 +35,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_MONITOR_5")
             .field(
                 "core_1_pif_pms_monitor_nonword_violate_intr",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_nonword_violate_intr().bit()
-                ),
+                &self.core_1_pif_pms_monitor_nonword_violate_intr().bit(),
             )
             .field(
                 "core_1_pif_pms_monitor_nonword_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_nonword_violate_status_hsize()
-                        .bits()
-                ),
+                &self
+                    .core_1_pif_pms_monitor_nonword_violate_status_hsize()
+                    .bits(),
             )
             .field(
                 "core_1_pif_pms_monitor_nonword_violate_status_hworld",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_monitor_nonword_violate_status_hworld()
-                        .bits()
-                ),
+                &self
+                    .core_1_pif_pms_monitor_nonword_violate_status_hworld()
+                    .bits(),
             )
             .finish()
     }

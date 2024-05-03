@@ -33,17 +33,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTCCALICFG2")
-            .field(
-                "rtc_cali_timeout",
-                &format_args!("{}", self.rtc_cali_timeout().bit()),
-            )
+            .field("rtc_cali_timeout", &self.rtc_cali_timeout().bit())
             .field(
                 "rtc_cali_timeout_rst_cnt",
-                &format_args!("{}", self.rtc_cali_timeout_rst_cnt().bits()),
+                &self.rtc_cali_timeout_rst_cnt().bits(),
             )
             .field(
                 "rtc_cali_timeout_thres",
-                &format_args!("{}", self.rtc_cali_timeout_thres().bits()),
+                &self.rtc_cali_timeout_thres().bits(),
             )
             .finish()
     }

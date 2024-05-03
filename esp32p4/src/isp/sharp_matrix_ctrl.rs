@@ -46,20 +46,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("SHARP_MATRIX_CTRL")
             .field(
                 "sharp_tail_pixen_pulse_tl",
-                &format_args!("{}", self.sharp_tail_pixen_pulse_tl().bits()),
+                &self.sharp_tail_pixen_pulse_tl().bits(),
             )
             .field(
                 "sharp_tail_pixen_pulse_th",
-                &format_args!("{}", self.sharp_tail_pixen_pulse_th().bits()),
+                &self.sharp_tail_pixen_pulse_th().bits(),
             )
-            .field(
-                "sharp_padding_data",
-                &format_args!("{}", self.sharp_padding_data().bits()),
-            )
-            .field(
-                "sharp_padding_mode",
-                &format_args!("{}", self.sharp_padding_mode().bit()),
-            )
+            .field("sharp_padding_data", &self.sharp_padding_data().bits())
+            .field("sharp_padding_mode", &self.sharp_padding_mode().bit())
             .finish()
     }
 }

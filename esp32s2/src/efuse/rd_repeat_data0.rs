@@ -160,73 +160,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA0")
-            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
-            .field(
-                "dis_rtc_ram_boot",
-                &format_args!("{}", self.dis_rtc_ram_boot().bit()),
-            )
-            .field("dis_icache", &format_args!("{}", self.dis_icache().bit()))
-            .field("dis_dcache", &format_args!("{}", self.dis_dcache().bit()))
-            .field(
-                "dis_download_icache",
-                &format_args!("{}", self.dis_download_icache().bit()),
-            )
-            .field(
-                "dis_download_dcache",
-                &format_args!("{}", self.dis_download_dcache().bit()),
-            )
-            .field(
-                "dis_force_download",
-                &format_args!("{}", self.dis_force_download().bit()),
-            )
-            .field("dis_usb", &format_args!("{}", self.dis_usb().bit()))
-            .field("dis_can", &format_args!("{}", self.dis_can().bit()))
-            .field(
-                "dis_boot_remap",
-                &format_args!("{}", self.dis_boot_remap().bit()),
-            )
-            .field(
-                "rpt4_reserved5",
-                &format_args!("{}", self.rpt4_reserved5().bit()),
-            )
-            .field(
-                "soft_dis_jtag",
-                &format_args!("{}", self.soft_dis_jtag().bit()),
-            )
-            .field(
-                "hard_dis_jtag",
-                &format_args!("{}", self.hard_dis_jtag().bit()),
-            )
+            .field("rd_dis", &self.rd_dis().bits())
+            .field("dis_rtc_ram_boot", &self.dis_rtc_ram_boot().bit())
+            .field("dis_icache", &self.dis_icache().bit())
+            .field("dis_dcache", &self.dis_dcache().bit())
+            .field("dis_download_icache", &self.dis_download_icache().bit())
+            .field("dis_download_dcache", &self.dis_download_dcache().bit())
+            .field("dis_force_download", &self.dis_force_download().bit())
+            .field("dis_usb", &self.dis_usb().bit())
+            .field("dis_can", &self.dis_can().bit())
+            .field("dis_boot_remap", &self.dis_boot_remap().bit())
+            .field("rpt4_reserved5", &self.rpt4_reserved5().bit())
+            .field("soft_dis_jtag", &self.soft_dis_jtag().bit())
+            .field("hard_dis_jtag", &self.hard_dis_jtag().bit())
             .field(
                 "dis_download_manual_encrypt",
-                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+                &self.dis_download_manual_encrypt().bit(),
             )
-            .field("usb_drefh", &format_args!("{}", self.usb_drefh().bits()))
-            .field("usb_drefl", &format_args!("{}", self.usb_drefl().bits()))
-            .field(
-                "usb_exchg_pins",
-                &format_args!("{}", self.usb_exchg_pins().bit()),
-            )
-            .field(
-                "ext_phy_enable",
-                &format_args!("{}", self.ext_phy_enable().bit()),
-            )
-            .field(
-                "usb_force_nopersist",
-                &format_args!("{}", self.usb_force_nopersist().bit()),
-            )
-            .field(
-                "rpt4_reserved0",
-                &format_args!("{}", self.rpt4_reserved0().bits()),
-            )
-            .field(
-                "vdd_spi_modecurlim",
-                &format_args!("{}", self.vdd_spi_modecurlim().bit()),
-            )
-            .field(
-                "vdd_spi_drefh",
-                &format_args!("{}", self.vdd_spi_drefh().bits()),
-            )
+            .field("usb_drefh", &self.usb_drefh().bits())
+            .field("usb_drefl", &self.usb_drefl().bits())
+            .field("usb_exchg_pins", &self.usb_exchg_pins().bit())
+            .field("ext_phy_enable", &self.ext_phy_enable().bit())
+            .field("usb_force_nopersist", &self.usb_force_nopersist().bit())
+            .field("rpt4_reserved0", &self.rpt4_reserved0().bits())
+            .field("vdd_spi_modecurlim", &self.vdd_spi_modecurlim().bit())
+            .field("vdd_spi_drefh", &self.vdd_spi_drefh().bits())
             .finish()
     }
 }

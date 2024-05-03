@@ -62,12 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EVT_EN2")
-            .field("op0_tee1", &format_args!("{}", self.op0_tee1().bit()))
-            .field("op1_tee1", &format_args!("{}", self.op1_tee1().bit()))
-            .field("op2_tee1", &format_args!("{}", self.op2_tee1().bit()))
-            .field("op0_tee2", &format_args!("{}", self.op0_tee2().bit()))
-            .field("op1_tee2", &format_args!("{}", self.op1_tee2().bit()))
-            .field("op2_tee2", &format_args!("{}", self.op2_tee2().bit()))
+            .field("op0_tee1", &self.op0_tee1().bit())
+            .field("op1_tee1", &self.op1_tee1().bit())
+            .field("op2_tee1", &self.op2_tee1().bit())
+            .field("op0_tee2", &self.op0_tee2().bit())
+            .field("op1_tee2", &self.op1_tee2().bit())
+            .field("op2_tee2", &self.op2_tee2().bit())
             .finish()
     }
 }

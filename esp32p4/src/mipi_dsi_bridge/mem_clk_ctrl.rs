@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_CLK_CTRL")
             .field(
                 "dsi_bridge_mem_clk_force_on",
-                &format_args!("{}", self.dsi_bridge_mem_clk_force_on().bit()),
+                &self.dsi_bridge_mem_clk_force_on().bit(),
             )
-            .field(
-                "dsi_mem_clk_force_on",
-                &format_args!("{}", self.dsi_mem_clk_force_on().bit()),
-            )
+            .field("dsi_mem_clk_force_on", &self.dsi_mem_clk_force_on().bit())
             .finish()
     }
 }

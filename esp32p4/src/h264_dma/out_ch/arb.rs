@@ -35,17 +35,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ARB")
-            .field(
-                "out_arb_token_num",
-                &format_args!("{}", self.out_arb_token_num().bits()),
-            )
+            .field("out_arb_token_num", &self.out_arb_token_num().bits())
             .field(
                 "exter_out_arb_priority",
-                &format_args!("{}", self.exter_out_arb_priority().bits()),
+                &self.exter_out_arb_priority().bits(),
             )
             .field(
                 "inter_out_arb_priority",
-                &format_args!("{}", self.inter_out_arb_priority().bit()),
+                &self.inter_out_arb_priority().bit(),
             )
             .finish()
     }

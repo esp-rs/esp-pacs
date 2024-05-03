@@ -118,55 +118,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RS_ERR0")
-            .field(
-                "mac_sys_err_num",
-                &format_args!("{}", self.mac_sys_err_num().bits()),
-            )
-            .field(
-                "mac_sys_fail",
-                &format_args!("{}", self.mac_sys_fail().bit()),
-            )
-            .field(
-                "sys_part1_err_num",
-                &format_args!("{}", self.sys_part1_err_num().bits()),
-            )
-            .field(
-                "sys_part1_fail",
-                &format_args!("{}", self.sys_part1_fail().bit()),
-            )
-            .field(
-                "usr_data_err_num",
-                &format_args!("{}", self.usr_data_err_num().bits()),
-            )
-            .field(
-                "usr_data_fail",
-                &format_args!("{}", self.usr_data_fail().bit()),
-            )
-            .field(
-                "key0_err_num",
-                &format_args!("{}", self.key0_err_num().bits()),
-            )
-            .field("key0_fail", &format_args!("{}", self.key0_fail().bit()))
-            .field(
-                "key1_err_num",
-                &format_args!("{}", self.key1_err_num().bits()),
-            )
-            .field("key1_fail", &format_args!("{}", self.key1_fail().bit()))
-            .field(
-                "key2_err_num",
-                &format_args!("{}", self.key2_err_num().bits()),
-            )
-            .field("key2_fail", &format_args!("{}", self.key2_fail().bit()))
-            .field(
-                "key3_err_num",
-                &format_args!("{}", self.key3_err_num().bits()),
-            )
-            .field("key3_fail", &format_args!("{}", self.key3_fail().bit()))
-            .field(
-                "key4_err_num",
-                &format_args!("{}", self.key4_err_num().bits()),
-            )
-            .field("key4_fail", &format_args!("{}", self.key4_fail().bit()))
+            .field("mac_sys_err_num", &self.mac_sys_err_num().bits())
+            .field("mac_sys_fail", &self.mac_sys_fail().bit())
+            .field("sys_part1_err_num", &self.sys_part1_err_num().bits())
+            .field("sys_part1_fail", &self.sys_part1_fail().bit())
+            .field("usr_data_err_num", &self.usr_data_err_num().bits())
+            .field("usr_data_fail", &self.usr_data_fail().bit())
+            .field("key0_err_num", &self.key0_err_num().bits())
+            .field("key0_fail", &self.key0_fail().bit())
+            .field("key1_err_num", &self.key1_err_num().bits())
+            .field("key1_fail", &self.key1_fail().bit())
+            .field("key2_err_num", &self.key2_err_num().bits())
+            .field("key2_fail", &self.key2_fail().bit())
+            .field("key3_err_num", &self.key3_err_num().bits())
+            .field("key3_fail", &self.key3_fail().bit())
+            .field("key4_err_num", &self.key4_err_num().bits())
+            .field("key4_fail", &self.key4_fail().bit())
             .finish()
     }
 }

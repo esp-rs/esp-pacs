@@ -41,14 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTSTATUS0")
-            .field("ch1_intstat", &format_args!("{}", self.ch1_intstat().bit()))
-            .field("ch2_intstat", &format_args!("{}", self.ch2_intstat().bit()))
-            .field("ch3_intstat", &format_args!("{}", self.ch3_intstat().bit()))
-            .field("ch4_intstat", &format_args!("{}", self.ch4_intstat().bit()))
-            .field(
-                "commonreg_intstat",
-                &format_args!("{}", self.commonreg_intstat().bit()),
-            )
+            .field("ch1_intstat", &self.ch1_intstat().bit())
+            .field("ch2_intstat", &self.ch2_intstat().bit())
+            .field("ch3_intstat", &self.ch3_intstat().bit())
+            .field("ch4_intstat", &self.ch4_intstat().bit())
+            .field("commonreg_intstat", &self.commonreg_intstat().bit())
             .finish()
     }
 }

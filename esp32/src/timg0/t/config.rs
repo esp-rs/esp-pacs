@@ -71,16 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
-            .field(
-                "level_int_en",
-                &format_args!("{}", self.level_int_en().bit()),
-            )
-            .field("edge_int_en", &format_args!("{}", self.edge_int_en().bit()))
-            .field("divider", &format_args!("{}", self.divider().bits()))
-            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
-            .field("increase", &format_args!("{}", self.increase().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("alarm_en", &self.alarm_en().bit())
+            .field("level_int_en", &self.level_int_en().bit())
+            .field("edge_int_en", &self.edge_int_en().bit())
+            .field("divider", &self.divider().bits())
+            .field("autoreload", &self.autoreload().bit())
+            .field("increase", &self.increase().bit())
+            .field("en", &self.en().bit())
             .finish()
     }
 }

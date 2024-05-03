@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHECK_SUM1")
-            .field(
-                "slchost_check_sum1",
-                &format_args!("{}", self.slchost_check_sum1().bits()),
-            )
+            .field("slchost_check_sum1", &self.slchost_check_sum1().bits())
             .finish()
     }
 }

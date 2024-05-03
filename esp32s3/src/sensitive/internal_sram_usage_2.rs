@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERNAL_SRAM_USAGE_2")
             .field(
                 "internal_sram_core0_trace_usage",
-                &format_args!("{}", self.internal_sram_core0_trace_usage().bits()),
+                &self.internal_sram_core0_trace_usage().bits(),
             )
             .field(
                 "internal_sram_core1_trace_usage",
-                &format_args!("{}", self.internal_sram_core1_trace_usage().bits()),
+                &self.internal_sram_core1_trace_usage().bits(),
             )
             .field(
                 "internal_sram_core0_trace_alloc",
-                &format_args!("{}", self.internal_sram_core0_trace_alloc().bits()),
+                &self.internal_sram_core0_trace_alloc().bits(),
             )
             .field(
                 "internal_sram_core1_trace_alloc",
-                &format_args!("{}", self.internal_sram_core1_trace_alloc().bits()),
+                &self.internal_sram_core1_trace_alloc().bits(),
             )
             .finish()
     }

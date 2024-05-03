@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("_0_EOF_START_DES")
             .field(
                 "slc0_eof_start_des_addr",
-                &format_args!("{}", self.slc0_eof_start_des_addr().bits()),
+                &self.slc0_eof_start_des_addr().bits(),
             )
             .finish()
     }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AXI_PDMA_OUT_CH2_INT_MAP")
             .field(
                 "core1_axi_pdma_out_ch2_int_map",
-                &format_args!("{}", self.core1_axi_pdma_out_ch2_int_map().bits()),
+                &self.core1_axi_pdma_out_ch2_int_map().bits(),
             )
             .finish()
     }

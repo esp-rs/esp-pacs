@@ -53,11 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_ROI_REGION2")
-            .field("x", &format_args!("{}", self.x().bits()))
-            .field("y", &format_args!("{}", self.y().bits()))
-            .field("x_len", &format_args!("{}", self.x_len().bits()))
-            .field("y_len", &format_args!("{}", self.y_len().bits()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("x", &self.x().bits())
+            .field("y", &self.y().bits())
+            .field("x_len", &self.x_len().bits())
+            .field("y_len", &self.y_len().bits())
+            .field("en", &self.en().bit())
             .finish()
     }
 }

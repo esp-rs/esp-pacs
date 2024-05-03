@@ -46,19 +46,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWD_CONFIG")
-            .field(
-                "swd_reset_flag",
-                &format_args!("{}", self.swd_reset_flag().bit()),
-            )
-            .field(
-                "swd_auto_feed_en",
-                &format_args!("{}", self.swd_auto_feed_en().bit()),
-            )
-            .field(
-                "swd_signal_width",
-                &format_args!("{}", self.swd_signal_width().bits()),
-            )
-            .field("swd_disable", &format_args!("{}", self.swd_disable().bit()))
+            .field("swd_reset_flag", &self.swd_reset_flag().bit())
+            .field("swd_auto_feed_en", &self.swd_auto_feed_en().bit())
+            .field("swd_signal_width", &self.swd_signal_width().bits())
+            .field("swd_disable", &self.swd_disable().bit())
             .finish()
     }
 }

@@ -26,13 +26,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLE_TIMER_CLK_CONF")
-            .field(
-                "bletimer_use_xtal",
-                &format_args!("{}", self.bletimer_use_xtal().bit()),
-            )
+            .field("bletimer_use_xtal", &self.bletimer_use_xtal().bit())
             .field(
                 "bletimer_clk_is_active",
-                &format_args!("{}", self.bletimer_clk_is_active().bit()),
+                &self.bletimer_clk_is_active().bit(),
             )
             .finish()
     }

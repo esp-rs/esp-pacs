@@ -80,38 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_MUX0")
-            .field(
-                "touch_data_sel",
-                &format_args!("{}", self.touch_data_sel().bits()),
-            )
-            .field(
-                "touch_freq_sel",
-                &format_args!("{}", self.touch_freq_sel().bits()),
-            )
-            .field(
-                "touch_bufsel",
-                &format_args!("{}", self.touch_bufsel().bits()),
-            )
-            .field(
-                "touch_done_en",
-                &format_args!("{}", self.touch_done_en().bit()),
-            )
-            .field(
-                "touch_done_force",
-                &format_args!("{}", self.touch_done_force().bit()),
-            )
-            .field(
-                "touch_fsm_en",
-                &format_args!("{}", self.touch_fsm_en().bit()),
-            )
-            .field(
-                "touch_start_en",
-                &format_args!("{}", self.touch_start_en().bit()),
-            )
-            .field(
-                "touch_start_force",
-                &format_args!("{}", self.touch_start_force().bit()),
-            )
+            .field("touch_data_sel", &self.touch_data_sel().bits())
+            .field("touch_freq_sel", &self.touch_freq_sel().bits())
+            .field("touch_bufsel", &self.touch_bufsel().bits())
+            .field("touch_done_en", &self.touch_done_en().bit())
+            .field("touch_done_force", &self.touch_done_force().bit())
+            .field("touch_fsm_en", &self.touch_fsm_en().bit())
+            .field("touch_start_en", &self.touch_start_en().bit())
+            .field("touch_start_force", &self.touch_start_force().bit())
             .finish()
     }
 }

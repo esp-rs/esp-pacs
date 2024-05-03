@@ -62,29 +62,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER_SYNCI_CFG")
-            .field(
-                "timer0_syncisel",
-                &format_args!("{}", self.timer0_syncisel().bits()),
-            )
-            .field(
-                "timer1_syncisel",
-                &format_args!("{}", self.timer1_syncisel().bits()),
-            )
-            .field(
-                "timer2_syncisel",
-                &format_args!("{}", self.timer2_syncisel().bits()),
-            )
+            .field("timer0_syncisel", &self.timer0_syncisel().bits())
+            .field("timer1_syncisel", &self.timer1_syncisel().bits())
+            .field("timer2_syncisel", &self.timer2_syncisel().bits())
             .field(
                 "external_synci0_invert",
-                &format_args!("{}", self.external_synci0_invert().bit()),
+                &self.external_synci0_invert().bit(),
             )
             .field(
                 "external_synci1_invert",
-                &format_args!("{}", self.external_synci1_invert().bit()),
+                &self.external_synci1_invert().bit(),
             )
             .field(
                 "external_synci2_invert",
-                &format_args!("{}", self.external_synci2_invert().bit()),
+                &self.external_synci2_invert().bit(),
             )
             .finish()
     }

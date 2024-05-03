@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLOW_CLK_CONF")
-            .field(
-                "ana_clk_div_vld",
-                &format_args!("{}", self.ana_clk_div_vld().bit()),
-            )
-            .field(
-                "ana_clk_div",
-                &format_args!("{}", self.ana_clk_div().bits()),
-            )
-            .field(
-                "slow_clk_next_edge",
-                &format_args!("{}", self.slow_clk_next_edge().bit()),
-            )
+            .field("ana_clk_div_vld", &self.ana_clk_div_vld().bit())
+            .field("ana_clk_div", &self.ana_clk_div().bits())
+            .field("slow_clk_next_edge", &self.slow_clk_next_edge().bit())
             .finish()
     }
 }

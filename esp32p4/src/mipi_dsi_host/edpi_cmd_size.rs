@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("EDPI_CMD_SIZE")
             .field(
                 "edpi_allowed_cmd_size",
-                &format_args!("{}", self.edpi_allowed_cmd_size().bits()),
+                &self.edpi_allowed_cmd_size().bits(),
             )
             .finish()
     }

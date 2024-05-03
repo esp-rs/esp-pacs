@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUICK_SENT")
-            .field(
-                "single_send_num",
-                &format_args!("{}", self.single_send_num().bits()),
-            )
-            .field(
-                "single_send_en",
-                &format_args!("{}", self.single_send_en().bit()),
-            )
-            .field(
-                "always_send_num",
-                &format_args!("{}", self.always_send_num().bits()),
-            )
-            .field(
-                "always_send_en",
-                &format_args!("{}", self.always_send_en().bit()),
-            )
+            .field("single_send_num", &self.single_send_num().bits())
+            .field("single_send_en", &self.single_send_en().bit())
+            .field("always_send_num", &self.always_send_num().bits())
+            .field("always_send_en", &self.always_send_en().bit())
             .finish()
     }
 }

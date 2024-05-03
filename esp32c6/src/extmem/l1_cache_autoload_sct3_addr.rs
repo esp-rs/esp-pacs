@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_AUTOLOAD_SCT3_ADDR")
             .field(
                 "l1_cache_autoload_sct3_addr",
-                &format_args!("{}", self.l1_cache_autoload_sct3_addr().bits()),
+                &self.l1_cache_autoload_sct3_addr().bits(),
             )
             .finish()
     }

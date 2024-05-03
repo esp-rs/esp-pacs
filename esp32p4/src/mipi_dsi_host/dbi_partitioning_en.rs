@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBI_PARTITIONING_EN")
-            .field(
-                "partitioning_en",
-                &format_args!("{}", self.partitioning_en().bit()),
-            )
+            .field("partitioning_en", &self.partitioning_en().bit())
             .finish()
     }
 }

@@ -91,39 +91,39 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_USB_CLKRST_CTRL0")
             .field(
                 "lp_aonclkrst_usb_otg20_sleep_mode",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_sleep_mode().bit()),
+                &self.lp_aonclkrst_usb_otg20_sleep_mode().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_otg20_bk_sys_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_bk_sys_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg20_bk_sys_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_sleep_mode",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_sleep_mode().bit()),
+                &self.lp_aonclkrst_usb_otg11_sleep_mode().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_bk_sys_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_bk_sys_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg11_bk_sys_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_48m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_48m_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg11_48m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_device_48m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_device_48m_clk_en().bit()),
+                &self.lp_aonclkrst_usb_device_48m_clk_en().bit(),
             )
             .field(
                 "lp_aonclkrst_usb_48m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_48m_div_num().bits()),
+                &self.lp_aonclkrst_usb_48m_div_num().bits(),
             )
             .field(
                 "lp_aonclkrst_usb_25m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_25m_div_num().bits()),
+                &self.lp_aonclkrst_usb_25m_div_num().bits(),
             )
             .field(
                 "lp_aonclkrst_usb_12m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_12m_div_num().bits()),
+                &self.lp_aonclkrst_usb_12m_div_num().bits(),
             )
             .finish()
     }

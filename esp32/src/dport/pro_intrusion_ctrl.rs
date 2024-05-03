@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_INTRUSION_CTRL")
             .field(
                 "pro_intrusion_record_reset_n",
-                &format_args!("{}", self.pro_intrusion_record_reset_n().bit()),
+                &self.pro_intrusion_record_reset_n().bit(),
             )
             .finish()
     }

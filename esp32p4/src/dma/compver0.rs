@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMPVER0")
-            .field(
-                "dmac_compver",
-                &format_args!("{}", self.dmac_compver().bits()),
-            )
+            .field("dmac_compver", &self.dmac_compver().bits())
             .finish()
     }
 }

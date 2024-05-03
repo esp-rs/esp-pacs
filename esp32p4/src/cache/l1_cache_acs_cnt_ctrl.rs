@@ -108,54 +108,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_ACS_CNT_CTRL")
-            .field(
-                "l1_ibus0_cnt_ena",
-                &format_args!("{}", self.l1_ibus0_cnt_ena().bit()),
-            )
-            .field(
-                "l1_ibus1_cnt_ena",
-                &format_args!("{}", self.l1_ibus1_cnt_ena().bit()),
-            )
-            .field(
-                "l1_ibus2_cnt_ena",
-                &format_args!("{}", self.l1_ibus2_cnt_ena().bit()),
-            )
-            .field(
-                "l1_ibus3_cnt_ena",
-                &format_args!("{}", self.l1_ibus3_cnt_ena().bit()),
-            )
-            .field(
-                "l1_dbus0_cnt_ena",
-                &format_args!("{}", self.l1_dbus0_cnt_ena().bit()),
-            )
-            .field(
-                "l1_dbus1_cnt_ena",
-                &format_args!("{}", self.l1_dbus1_cnt_ena().bit()),
-            )
-            .field(
-                "l1_dbus2_cnt_ena",
-                &format_args!("{}", self.l1_dbus2_cnt_ena().bit()),
-            )
-            .field(
-                "l1_dbus3_cnt_ena",
-                &format_args!("{}", self.l1_dbus3_cnt_ena().bit()),
-            )
-            .field(
-                "l1_ibus2_cnt_clr",
-                &format_args!("{}", self.l1_ibus2_cnt_clr().bit()),
-            )
-            .field(
-                "l1_ibus3_cnt_clr",
-                &format_args!("{}", self.l1_ibus3_cnt_clr().bit()),
-            )
-            .field(
-                "l1_dbus2_cnt_clr",
-                &format_args!("{}", self.l1_dbus2_cnt_clr().bit()),
-            )
-            .field(
-                "l1_dbus3_cnt_clr",
-                &format_args!("{}", self.l1_dbus3_cnt_clr().bit()),
-            )
+            .field("l1_ibus0_cnt_ena", &self.l1_ibus0_cnt_ena().bit())
+            .field("l1_ibus1_cnt_ena", &self.l1_ibus1_cnt_ena().bit())
+            .field("l1_ibus2_cnt_ena", &self.l1_ibus2_cnt_ena().bit())
+            .field("l1_ibus3_cnt_ena", &self.l1_ibus3_cnt_ena().bit())
+            .field("l1_dbus0_cnt_ena", &self.l1_dbus0_cnt_ena().bit())
+            .field("l1_dbus1_cnt_ena", &self.l1_dbus1_cnt_ena().bit())
+            .field("l1_dbus2_cnt_ena", &self.l1_dbus2_cnt_ena().bit())
+            .field("l1_dbus3_cnt_ena", &self.l1_dbus3_cnt_ena().bit())
+            .field("l1_ibus2_cnt_clr", &self.l1_ibus2_cnt_clr().bit())
+            .field("l1_ibus3_cnt_clr", &self.l1_ibus3_cnt_clr().bit())
+            .field("l1_dbus2_cnt_clr", &self.l1_dbus2_cnt_clr().bit())
+            .field("l1_dbus3_cnt_clr", &self.l1_dbus3_cnt_clr().bit())
             .finish()
     }
 }

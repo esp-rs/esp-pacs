@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_SLEEP_BIAS")
-            .field(
-                "lp_sleep_xpd_bias",
-                &format_args!("{}", self.lp_sleep_xpd_bias().bit()),
-            )
-            .field(
-                "lp_sleep_pd_cur",
-                &format_args!("{}", self.lp_sleep_pd_cur().bit()),
-            )
-            .field("sleep", &format_args!("{}", self.sleep().bit()))
+            .field("lp_sleep_xpd_bias", &self.lp_sleep_xpd_bias().bit())
+            .field("lp_sleep_pd_cur", &self.lp_sleep_pd_cur().bit())
+            .field("sleep", &self.sleep().bit())
             .finish()
     }
 }

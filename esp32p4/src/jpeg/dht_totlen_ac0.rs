@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DHT_TOTLEN_AC0")
-            .field(
-                "dht_totlen_ac0",
-                &format_args!("{}", self.dht_totlen_ac0().bits()),
-            )
+            .field("dht_totlen_ac0", &self.dht_totlen_ac0().bits())
             .finish()
     }
 }

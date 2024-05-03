@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AES_INTR_MAP")
-            .field(
-                "aes_intr_map",
-                &format_args!("{}", self.aes_intr_map().bits()),
-            )
+            .field("aes_intr_map", &self.aes_intr_map().bits())
             .finish()
     }
 }

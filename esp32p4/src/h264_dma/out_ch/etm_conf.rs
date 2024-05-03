@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_CONF")
-            .field("out_etm_en", &format_args!("{}", self.out_etm_en().bit()))
-            .field(
-                "out_etm_loop_en",
-                &format_args!("{}", self.out_etm_loop_en().bit()),
-            )
-            .field(
-                "out_dscr_task_mak",
-                &format_args!("{}", self.out_dscr_task_mak().bits()),
-            )
+            .field("out_etm_en", &self.out_etm_en().bit())
+            .field("out_etm_loop_en", &self.out_etm_loop_en().bit())
+            .field("out_dscr_task_mak", &self.out_dscr_task_mak().bits())
             .finish()
     }
 }

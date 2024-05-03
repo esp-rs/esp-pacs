@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_PRELOAD_SIZE")
             .field(
                 "l2_cache_preload_size",
-                &format_args!("{}", self.l2_cache_preload_size().bits()),
+                &self.l2_cache_preload_size().bits(),
             )
             .finish()
     }

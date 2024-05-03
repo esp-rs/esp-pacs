@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("MODEM_PERI_TIMEOUT_ADDR")
             .field(
                 "modem_peri_timeout_addr",
-                &format_args!("{}", self.modem_peri_timeout_addr().bits()),
+                &self.modem_peri_timeout_addr().bits(),
             )
             .finish()
     }

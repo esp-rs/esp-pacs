@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_PMU_RDN_ECO_LOW")
-            .field(
-                "pmu_rdn_eco_low",
-                &format_args!("{}", self.pmu_rdn_eco_low().bits()),
-            )
+            .field("pmu_rdn_eco_low", &self.pmu_rdn_eco_low().bits())
             .finish()
     }
 }

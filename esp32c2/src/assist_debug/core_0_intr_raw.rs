@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_INTR_RAW")
             .field(
                 "core_0_sp_spill_min_raw",
-                &format_args!("{}", self.core_0_sp_spill_min_raw().bit()),
+                &self.core_0_sp_spill_min_raw().bit(),
             )
             .field(
                 "core_0_sp_spill_max_raw",
-                &format_args!("{}", self.core_0_sp_spill_max_raw().bit()),
+                &self.core_0_sp_spill_max_raw().bit(),
             )
             .finish()
     }

@@ -31,12 +31,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA2")
-            .field("rd_mac_1", &format_args!("{}", self.rd_mac_1().bits()))
-            .field("rd_mac_crc", &format_args!("{}", self.rd_mac_crc().bits()))
-            .field(
-                "rd_reserve_0_88",
-                &format_args!("{}", self.rd_reserve_0_88().bits()),
-            )
+            .field("rd_mac_1", &self.rd_mac_1().bits())
+            .field("rd_mac_crc", &self.rd_mac_crc().bits())
+            .field("rd_reserve_0_88", &self.rd_reserve_0_88().bits())
             .finish()
     }
 }

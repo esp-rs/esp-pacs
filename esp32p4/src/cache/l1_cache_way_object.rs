@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_WAY_OBJECT")
-            .field(
-                "l1_cache_way_object",
-                &format_args!("{}", self.l1_cache_way_object().bits()),
-            )
+            .field("l1_cache_way_object", &self.l1_cache_way_object().bits())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PMU_REG_1_INT_MAP")
             .field(
                 "core1_pmu_reg_1_int_map",
-                &format_args!("{}", self.core1_pmu_reg_1_int_map().bits()),
+                &self.core1_pmu_reg_1_int_map().bits(),
             )
             .finish()
     }

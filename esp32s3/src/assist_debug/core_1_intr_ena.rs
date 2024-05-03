@@ -122,51 +122,51 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_INTR_ENA")
             .field(
                 "core_1_area_dram0_0_rd_intr_ena",
-                &format_args!("{}", self.core_1_area_dram0_0_rd_intr_ena().bit()),
+                &self.core_1_area_dram0_0_rd_intr_ena().bit(),
             )
             .field(
                 "core_1_area_dram0_0_wr_intr_ena",
-                &format_args!("{}", self.core_1_area_dram0_0_wr_intr_ena().bit()),
+                &self.core_1_area_dram0_0_wr_intr_ena().bit(),
             )
             .field(
                 "core_1_area_dram0_1_rd_intr_ena",
-                &format_args!("{}", self.core_1_area_dram0_1_rd_intr_ena().bit()),
+                &self.core_1_area_dram0_1_rd_intr_ena().bit(),
             )
             .field(
                 "core_1_area_dram0_1_wr_intr_ena",
-                &format_args!("{}", self.core_1_area_dram0_1_wr_intr_ena().bit()),
+                &self.core_1_area_dram0_1_wr_intr_ena().bit(),
             )
             .field(
                 "core_1_area_pif_0_rd_intr_ena",
-                &format_args!("{}", self.core_1_area_pif_0_rd_intr_ena().bit()),
+                &self.core_1_area_pif_0_rd_intr_ena().bit(),
             )
             .field(
                 "core_1_area_pif_0_wr_intr_ena",
-                &format_args!("{}", self.core_1_area_pif_0_wr_intr_ena().bit()),
+                &self.core_1_area_pif_0_wr_intr_ena().bit(),
             )
             .field(
                 "core_1_area_pif_1_rd_intr_ena",
-                &format_args!("{}", self.core_1_area_pif_1_rd_intr_ena().bit()),
+                &self.core_1_area_pif_1_rd_intr_ena().bit(),
             )
             .field(
                 "core_1_area_pif_1_wr_intr_ena",
-                &format_args!("{}", self.core_1_area_pif_1_wr_intr_ena().bit()),
+                &self.core_1_area_pif_1_wr_intr_ena().bit(),
             )
             .field(
                 "core_1_sp_spill_min_intr_ena",
-                &format_args!("{}", self.core_1_sp_spill_min_intr_ena().bit()),
+                &self.core_1_sp_spill_min_intr_ena().bit(),
             )
             .field(
                 "core_1_sp_spill_max_intr_ena",
-                &format_args!("{}", self.core_1_sp_spill_max_intr_ena().bit()),
+                &self.core_1_sp_spill_max_intr_ena().bit(),
             )
             .field(
                 "core_1_iram0_exception_monitor_intr_ena",
-                &format_args!("{}", self.core_1_iram0_exception_monitor_intr_ena().bit()),
+                &self.core_1_iram0_exception_monitor_intr_ena().bit(),
             )
             .field(
                 "core_1_dram0_exception_monitor_intr_ena",
-                &format_args!("{}", self.core_1_dram0_exception_monitor_intr_ena().bit()),
+                &self.core_1_dram0_exception_monitor_intr_ena().bit(),
             )
             .finish()
     }

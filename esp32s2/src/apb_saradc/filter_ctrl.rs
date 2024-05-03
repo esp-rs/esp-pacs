@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_CTRL")
-            .field(
-                "adc2_filter_reset",
-                &format_args!("{}", self.adc2_filter_reset().bit()),
-            )
-            .field(
-                "adc1_filter_reset",
-                &format_args!("{}", self.adc1_filter_reset().bit()),
-            )
-            .field(
-                "adc2_filter_factor",
-                &format_args!("{}", self.adc2_filter_factor().bits()),
-            )
-            .field(
-                "adc1_filter_factor",
-                &format_args!("{}", self.adc1_filter_factor().bits()),
-            )
-            .field(
-                "adc2_filter_en",
-                &format_args!("{}", self.adc2_filter_en().bit()),
-            )
-            .field(
-                "adc1_filter_en",
-                &format_args!("{}", self.adc1_filter_en().bit()),
-            )
+            .field("adc2_filter_reset", &self.adc2_filter_reset().bit())
+            .field("adc1_filter_reset", &self.adc1_filter_reset().bit())
+            .field("adc2_filter_factor", &self.adc2_filter_factor().bits())
+            .field("adc1_filter_factor", &self.adc1_filter_factor().bits())
+            .field("adc2_filter_en", &self.adc2_filter_en().bit())
+            .field("adc1_filter_en", &self.adc1_filter_en().bit())
             .finish()
     }
 }

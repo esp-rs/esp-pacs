@@ -71,22 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE0")
-            .field("sw_cpu_int", &format_args!("{}", self.sw_cpu_int().bit()))
-            .field(
-                "slp_reject_cause_clr",
-                &format_args!("{}", self.slp_reject_cause_clr().bit()),
-            )
-            .field(
-                "apb2rtc_bridge_sel",
-                &format_args!("{}", self.apb2rtc_bridge_sel().bit()),
-            )
-            .field(
-                "sdio_active_ind",
-                &format_args!("{}", self.sdio_active_ind().bit()),
-            )
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("sleep_en", &format_args!("{}", self.sleep_en().bit()))
+            .field("sw_cpu_int", &self.sw_cpu_int().bit())
+            .field("slp_reject_cause_clr", &self.slp_reject_cause_clr().bit())
+            .field("apb2rtc_bridge_sel", &self.apb2rtc_bridge_sel().bit())
+            .field("sdio_active_ind", &self.sdio_active_ind().bit())
+            .field("slp_wakeup", &self.slp_wakeup().bit())
+            .field("slp_reject", &self.slp_reject().bit())
+            .field("sleep_en", &self.sleep_en().bit())
             .finish()
     }
 }

@@ -43,24 +43,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_ACS_FAIL_INT_ST")
             .field(
                 "l1_icache0_fail_int_st",
-                &format_args!("{}", self.l1_icache0_fail_int_st().bit()),
+                &self.l1_icache0_fail_int_st().bit(),
             )
             .field(
                 "l1_icache1_fail_int_st",
-                &format_args!("{}", self.l1_icache1_fail_int_st().bit()),
+                &self.l1_icache1_fail_int_st().bit(),
             )
             .field(
                 "l1_icache2_fail_int_st",
-                &format_args!("{}", self.l1_icache2_fail_int_st().bit()),
+                &self.l1_icache2_fail_int_st().bit(),
             )
             .field(
                 "l1_icache3_fail_int_st",
-                &format_args!("{}", self.l1_icache3_fail_int_st().bit()),
+                &self.l1_icache3_fail_int_st().bit(),
             )
-            .field(
-                "l1_cache_fail_int_st",
-                &format_args!("{}", self.l1_cache_fail_int_st().bit()),
-            )
+            .field("l1_cache_fail_int_st", &self.l1_cache_fail_int_st().bit())
             .finish()
     }
 }

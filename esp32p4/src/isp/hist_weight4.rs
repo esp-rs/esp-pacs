@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_WEIGHT4")
-            .field(
-                "hist_weight_34",
-                &format_args!("{}", self.hist_weight_34().bits()),
-            )
-            .field(
-                "hist_weight_33",
-                &format_args!("{}", self.hist_weight_33().bits()),
-            )
-            .field(
-                "hist_weight_32",
-                &format_args!("{}", self.hist_weight_32().bits()),
-            )
-            .field(
-                "hist_weight_31",
-                &format_args!("{}", self.hist_weight_31().bits()),
-            )
+            .field("hist_weight_34", &self.hist_weight_34().bits())
+            .field("hist_weight_33", &self.hist_weight_33().bits())
+            .field("hist_weight_32", &self.hist_weight_32().bits())
+            .field("hist_weight_31", &self.hist_weight_31().bits())
             .finish()
     }
 }

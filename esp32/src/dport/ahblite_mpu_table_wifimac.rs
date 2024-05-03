@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_WIFIMAC")
             .field(
                 "wifimac_access_grant_config",
-                &format_args!("{}", self.wifimac_access_grant_config().bits()),
+                &self.wifimac_access_grant_config().bits(),
             )
             .finish()
     }

@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("BUF_LEN")
             .field(
                 "out_cmdfifo_buf_len_hb",
-                &format_args!("{}", self.out_cmdfifo_buf_len_hb().bits()),
+                &self.out_cmdfifo_buf_len_hb().bits(),
             )
             .finish()
     }

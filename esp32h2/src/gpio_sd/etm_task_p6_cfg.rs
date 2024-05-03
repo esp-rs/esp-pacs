@@ -86,14 +86,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_TASK_P6_CFG")
-            .field("gpio24_en", &format_args!("{}", self.gpio24_en().bit()))
-            .field("gpio25_en", &format_args!("{}", self.gpio25_en().bit()))
-            .field("gpio26_en", &format_args!("{}", self.gpio26_en().bit()))
-            .field("gpio27_en", &format_args!("{}", self.gpio27_en().bit()))
-            .field("gpio24_sel", &format_args!("{}", self.gpio24_sel().bits()))
-            .field("gpio25_sel", &format_args!("{}", self.gpio25_sel().bits()))
-            .field("gpio26_sel", &format_args!("{}", self.gpio26_sel().bits()))
-            .field("gpio27_sel", &format_args!("{}", self.gpio27_sel().bits()))
+            .field("gpio24_en", &self.gpio24_en().bit())
+            .field("gpio25_en", &self.gpio25_en().bit())
+            .field("gpio26_en", &self.gpio26_en().bit())
+            .field("gpio27_en", &self.gpio27_en().bit())
+            .field("gpio24_sel", &self.gpio24_sel().bits())
+            .field("gpio25_sel", &self.gpio25_sel().bits())
+            .field("gpio26_sel", &self.gpio26_sel().bits())
+            .field("gpio27_sel", &self.gpio27_sel().bits())
             .finish()
     }
 }

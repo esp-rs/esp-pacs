@@ -71,13 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA_RTC_W1TC")
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("wdt", &format_args!("{}", self.wdt().bit()))
-            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
-            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
-            .field("swd", &format_args!("{}", self.swd().bit()))
-            .field("bbpll_cal", &format_args!("{}", self.bbpll_cal().bit()))
+            .field("slp_wakeup", &self.slp_wakeup().bit())
+            .field("slp_reject", &self.slp_reject().bit())
+            .field("wdt", &self.wdt().bit())
+            .field("brown_out", &self.brown_out().bit())
+            .field("main_timer", &self.main_timer().bit())
+            .field("swd", &self.swd().bit())
+            .field("bbpll_cal", &self.bbpll_cal().bit())
             .finish()
     }
 }

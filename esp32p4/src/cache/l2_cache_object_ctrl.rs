@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_OBJECT_CTRL")
-            .field(
-                "l2_cache_tag_object",
-                &format_args!("{}", self.l2_cache_tag_object().bit()),
-            )
-            .field(
-                "l2_cache_mem_object",
-                &format_args!("{}", self.l2_cache_mem_object().bit()),
-            )
+            .field("l2_cache_tag_object", &self.l2_cache_tag_object().bit())
+            .field("l2_cache_mem_object", &self.l2_cache_mem_object().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_VACTIVE_LINES")
-            .field(
-                "v_active_lines",
-                &format_args!("{}", self.v_active_lines().bits()),
-            )
+            .field("v_active_lines", &self.v_active_lines().bits())
             .finish()
     }
 }

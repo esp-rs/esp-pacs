@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TARGET_CONF")
-            .field("period", &format_args!("{}", self.period().bits()))
-            .field("period_mode", &format_args!("{}", self.period_mode().bit()))
-            .field(
-                "timer_unit_sel",
-                &format_args!("{}", self.timer_unit_sel().bit()),
-            )
+            .field("period", &self.period().bits())
+            .field("period_mode", &self.period_mode().bit())
+            .field("timer_unit_sel", &self.timer_unit_sel().bit())
             .finish()
     }
 }

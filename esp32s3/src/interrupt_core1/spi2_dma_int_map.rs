@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2_DMA_INT_MAP")
-            .field(
-                "spi2_dma_int_map",
-                &format_args!("{}", self.spi2_dma_int_map().bits()),
-            )
+            .field("spi2_dma_int_map", &self.spi2_dma_int_map().bits())
             .finish()
     }
 }

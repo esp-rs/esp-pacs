@@ -44,15 +44,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "db_tmp_ready",
-                &format_args!("{}", self.db_tmp_ready().bit()),
-            )
-            .field("rec_ready", &format_args!("{}", self.rec_ready().bit()))
-            .field("frame_done", &format_args!("{}", self.frame_done().bit()))
+            .field("db_tmp_ready", &self.db_tmp_ready().bit())
+            .field("rec_ready", &self.rec_ready().bit())
+            .field("frame_done", &self.frame_done().bit())
             .field(
                 "dma_move_2mb_line_done",
-                &format_args!("{}", self.dma_move_2mb_line_done().bit()),
+                &self.dma_move_2mb_line_done().bit(),
             )
             .finish()
     }

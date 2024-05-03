@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("USB20OTG_MEM_CTRL")
             .field(
                 "reg_usb20_mem_clk_force_on",
-                &format_args!("{}", self.reg_usb20_mem_clk_force_on().bit()),
+                &self.reg_usb20_mem_clk_force_on().bit(),
             )
             .finish()
     }

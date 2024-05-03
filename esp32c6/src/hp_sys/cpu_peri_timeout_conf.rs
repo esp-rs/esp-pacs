@@ -30,11 +30,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_PERI_TIMEOUT_CONF")
             .field(
                 "cpu_peri_timeout_thres",
-                &format_args!("{}", self.cpu_peri_timeout_thres().bits()),
+                &self.cpu_peri_timeout_thres().bits(),
             )
             .field(
                 "cpu_peri_timeout_protect_en",
-                &format_args!("{}", self.cpu_peri_timeout_protect_en().bit()),
+                &self.cpu_peri_timeout_protect_en().bit(),
             )
             .finish()
     }

@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXCEPTION_INFO0")
-            .field(
-                "exception_region",
-                &format_args!("{}", self.exception_region().bits()),
-            )
-            .field(
-                "exception_mode",
-                &format_args!("{}", self.exception_mode().bits()),
-            )
-            .field(
-                "exception_id",
-                &format_args!("{}", self.exception_id().bits()),
-            )
+            .field("exception_region", &self.exception_region().bits())
+            .field("exception_mode", &self.exception_mode().bits())
+            .field("exception_id", &self.exception_id().bits())
             .finish()
     }
 }

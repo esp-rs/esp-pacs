@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_PAD14_TH2")
-            .field(
-                "touch_pad14_th2",
-                &format_args!("{}", self.touch_pad14_th2().bits()),
-            )
+            .field("touch_pad14_th2", &self.touch_pad14_th2().bits())
             .finish()
     }
 }

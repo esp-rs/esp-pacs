@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_CORESTALLED_ST")
             .field(
                 "reg_core0_corestalled_st",
-                &format_args!("{}", self.reg_core0_corestalled_st().bit()),
+                &self.reg_core0_corestalled_st().bit(),
             )
             .field(
                 "reg_core1_corestalled_st",
-                &format_args!("{}", self.reg_core1_corestalled_st().bit()),
+                &self.reg_core1_corestalled_st().bit(),
             )
             .finish()
     }

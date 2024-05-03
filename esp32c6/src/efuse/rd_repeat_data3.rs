@@ -111,66 +111,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA3")
-            .field(
-                "dis_download_mode",
-                &format_args!("{}", self.dis_download_mode().bit()),
-            )
-            .field(
-                "dis_direct_boot",
-                &format_args!("{}", self.dis_direct_boot().bit()),
-            )
-            .field(
-                "dis_usb_print",
-                &format_args!("{}", self.dis_usb_print().bit()),
-            )
-            .field(
-                "rpt4_reserved3_5",
-                &format_args!("{}", self.rpt4_reserved3_5().bit()),
-            )
+            .field("dis_download_mode", &self.dis_download_mode().bit())
+            .field("dis_direct_boot", &self.dis_direct_boot().bit())
+            .field("dis_usb_print", &self.dis_usb_print().bit())
+            .field("rpt4_reserved3_5", &self.rpt4_reserved3_5().bit())
             .field(
                 "dis_usb_serial_jtag_download_mode",
-                &format_args!("{}", self.dis_usb_serial_jtag_download_mode().bit()),
+                &self.dis_usb_serial_jtag_download_mode().bit(),
             )
             .field(
                 "enable_security_download",
-                &format_args!("{}", self.enable_security_download().bit()),
+                &self.enable_security_download().bit(),
             )
-            .field(
-                "uart_print_control",
-                &format_args!("{}", self.uart_print_control().bits()),
-            )
-            .field(
-                "rpt4_reserved3_4",
-                &format_args!("{}", self.rpt4_reserved3_4().bit()),
-            )
-            .field(
-                "rpt4_reserved3_3",
-                &format_args!("{}", self.rpt4_reserved3_3().bit()),
-            )
-            .field(
-                "rpt4_reserved3_2",
-                &format_args!("{}", self.rpt4_reserved3_2().bits()),
-            )
-            .field(
-                "rpt4_reserved3_1",
-                &format_args!("{}", self.rpt4_reserved3_1().bit()),
-            )
-            .field(
-                "force_send_resume",
-                &format_args!("{}", self.force_send_resume().bit()),
-            )
-            .field(
-                "secure_version",
-                &format_args!("{}", self.secure_version().bits()),
-            )
+            .field("uart_print_control", &self.uart_print_control().bits())
+            .field("rpt4_reserved3_4", &self.rpt4_reserved3_4().bit())
+            .field("rpt4_reserved3_3", &self.rpt4_reserved3_3().bit())
+            .field("rpt4_reserved3_2", &self.rpt4_reserved3_2().bits())
+            .field("rpt4_reserved3_1", &self.rpt4_reserved3_1().bit())
+            .field("force_send_resume", &self.force_send_resume().bit())
+            .field("secure_version", &self.secure_version().bits())
             .field(
                 "secure_boot_disable_fast_wake",
-                &format_args!("{}", self.secure_boot_disable_fast_wake().bit()),
+                &self.secure_boot_disable_fast_wake().bit(),
             )
-            .field(
-                "rpt4_reserved3_0",
-                &format_args!("{}", self.rpt4_reserved3_0().bit()),
-            )
+            .field("rpt4_reserved3_0", &self.rpt4_reserved3_0().bit())
             .finish()
     }
 }

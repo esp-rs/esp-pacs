@@ -89,21 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BROWN_OUT")
-            .field(
-                "brown_out2_ena",
-                &format_args!("{}", self.brown_out2_ena().bit()),
-            )
-            .field("int_wait", &format_args!("{}", self.int_wait().bits()))
-            .field(
-                "close_flash_ena",
-                &format_args!("{}", self.close_flash_ena().bit()),
-            )
-            .field("pd_rf_ena", &format_args!("{}", self.pd_rf_ena().bit()))
-            .field("rst_wait", &format_args!("{}", self.rst_wait().bits()))
-            .field("rst_ena", &format_args!("{}", self.rst_ena().bit()))
-            .field("rst_sel", &format_args!("{}", self.rst_sel().bit()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field("det", &format_args!("{}", self.det().bit()))
+            .field("brown_out2_ena", &self.brown_out2_ena().bit())
+            .field("int_wait", &self.int_wait().bits())
+            .field("close_flash_ena", &self.close_flash_ena().bit())
+            .field("pd_rf_ena", &self.pd_rf_ena().bit())
+            .field("rst_wait", &self.rst_wait().bits())
+            .field("rst_ena", &self.rst_ena().bit())
+            .field("rst_sel", &self.rst_sel().bit())
+            .field("ena", &self.ena().bit())
+            .field("det", &self.det().bit())
             .finish()
     }
 }

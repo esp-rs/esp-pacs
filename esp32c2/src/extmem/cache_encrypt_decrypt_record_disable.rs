@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE")
             .field(
                 "record_disable_db_encrypt",
-                &format_args!("{}", self.record_disable_db_encrypt().bit()),
+                &self.record_disable_db_encrypt().bit(),
             )
             .field(
                 "record_disable_g0cb_decrypt",
-                &format_args!("{}", self.record_disable_g0cb_decrypt().bit()),
+                &self.record_disable_g0cb_decrypt().bit(),
             )
             .finish()
     }

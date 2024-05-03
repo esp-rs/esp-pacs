@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_MSK_PHY_FATAL")
             .field(
                 "mask_phy_errsotsynchs_0",
-                &format_args!("{}", self.mask_phy_errsotsynchs_0().bit()),
+                &self.mask_phy_errsotsynchs_0().bit(),
             )
             .field(
                 "mask_phy_errsotsynchs_1",
-                &format_args!("{}", self.mask_phy_errsotsynchs_1().bit()),
+                &self.mask_phy_errsotsynchs_1().bit(),
             )
             .finish()
     }

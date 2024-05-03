@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHN_TMP_STATUS")
-            .field(
-                "pad_inactive_status",
-                &format_args!("{}", self.pad_inactive_status().bits()),
-            )
-            .field(
-                "pad_active_status",
-                &format_args!("{}", self.pad_active_status().bits()),
-            )
+            .field("pad_inactive_status", &self.pad_inactive_status().bits())
+            .field("pad_active_status", &self.pad_active_status().bits())
             .finish()
     }
 }

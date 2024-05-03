@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INTR_FROM_CPU_2")
-            .field(
-                "cpu_intr_from_cpu_2",
-                &format_args!("{}", self.cpu_intr_from_cpu_2().bit()),
-            )
+            .field("cpu_intr_from_cpu_2", &self.cpu_intr_from_cpu_2().bit())
             .finish()
     }
 }

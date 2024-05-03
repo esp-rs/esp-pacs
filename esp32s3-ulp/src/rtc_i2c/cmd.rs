@@ -24,11 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field("command", &format_args!("{}", self.command().bits()))
-            .field(
-                "command_done",
-                &format_args!("{}", self.command_done().bit()),
-            )
+            .field("command", &self.command().bits())
+            .field("command_done", &self.command_done().bit())
             .finish()
     }
 }

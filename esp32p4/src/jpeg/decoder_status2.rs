@@ -41,20 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS2")
-            .field(
-                "comp_block_num",
-                &format_args!("{}", self.comp_block_num().bits()),
-            )
-            .field("scan_num", &format_args!("{}", self.scan_num().bits()))
-            .field(
-                "rst_check_wait",
-                &format_args!("{}", self.rst_check_wait().bit()),
-            )
-            .field(
-                "scan_check_wait",
-                &format_args!("{}", self.scan_check_wait().bit()),
-            )
-            .field("mcu_in_proc", &format_args!("{}", self.mcu_in_proc().bit()))
+            .field("comp_block_num", &self.comp_block_num().bits())
+            .field("scan_num", &self.scan_num().bits())
+            .field("rst_check_wait", &self.rst_check_wait().bit())
+            .field("scan_check_wait", &self.scan_check_wait().bit())
+            .field("mcu_in_proc", &self.mcu_in_proc().bit())
             .finish()
     }
 }

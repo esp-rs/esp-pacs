@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_PARITY_CHECK_CTRL")
-            .field(
-                "tcm_parity_check_en",
-                &format_args!("{}", self.tcm_parity_check_en().bit()),
-            )
+            .field("tcm_parity_check_en", &self.tcm_parity_check_en().bit())
             .finish()
     }
 }

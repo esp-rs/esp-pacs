@@ -19,7 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_APPROACH")
-            .field("meas_time", &format_args!("{}", self.meas_time().bits()))
+            .field("meas_time", &self.meas_time().bits())
             .finish()
     }
 }

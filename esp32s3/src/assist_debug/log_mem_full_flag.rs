@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOG_MEM_FULL_FLAG")
-            .field(
-                "log_mem_full_flag",
-                &format_args!("{}", self.log_mem_full_flag().bit()),
-            )
+            .field("log_mem_full_flag", &self.log_mem_full_flag().bit())
             .finish()
     }
 }

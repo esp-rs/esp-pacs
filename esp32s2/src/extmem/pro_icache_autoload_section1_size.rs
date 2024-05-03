@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_ICACHE_AUTOLOAD_SECTION1_SIZE")
             .field(
                 "pro_icache_autoload_sct1_size",
-                &format_args!("{}", self.pro_icache_autoload_sct1_size().bits()),
+                &self.pro_icache_autoload_sct1_size().bits(),
             )
             .finish()
     }

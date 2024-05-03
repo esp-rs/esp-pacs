@@ -24,13 +24,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_TCM_ROM_RDN_ECO_CS")
-            .field(
-                "lp_tcm_rom_rdn_eco_en",
-                &format_args!("{}", self.lp_tcm_rom_rdn_eco_en().bit()),
-            )
+            .field("lp_tcm_rom_rdn_eco_en", &self.lp_tcm_rom_rdn_eco_en().bit())
             .field(
                 "lp_tcm_rom_rdn_eco_result",
-                &format_args!("{}", self.lp_tcm_rom_rdn_eco_result().bit()),
+                &self.lp_tcm_rom_rdn_eco_result().bit(),
             )
             .finish()
     }

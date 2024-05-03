@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_SLEEP_LP_REGULATOR0")
             .field(
                 "lp_sleep_lp_regulator_slp_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_xpd().bit()),
+                &self.lp_sleep_lp_regulator_slp_xpd().bit(),
             )
             .field(
                 "lp_sleep_lp_regulator_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_xpd().bit()),
+                &self.lp_sleep_lp_regulator_xpd().bit(),
             )
             .field(
                 "lp_sleep_lp_regulator_slp_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_dbias().bits()),
+                &self.lp_sleep_lp_regulator_slp_dbias().bits(),
             )
             .field(
                 "lp_sleep_lp_regulator_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_dbias().bits()),
+                &self.lp_sleep_lp_regulator_dbias().bits(),
             )
             .finish()
     }

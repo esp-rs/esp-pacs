@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PSRAM_FLASH_ADDR_INTERCHANGE")
-            .field("cpu", &format_args!("{}", self.cpu().bit()))
-            .field("dma", &format_args!("{}", self.dma().bit()))
+            .field("cpu", &self.cpu().bit())
+            .field("dma", &self.dma().bit())
             .finish()
     }
 }

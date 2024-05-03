@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AF_ENV_USER_TH_LUM")
             .field(
                 "af_env_user_threshold_lum",
-                &format_args!("{}", self.af_env_user_threshold_lum().bits()),
+                &self.af_env_user_threshold_lum().bits(),
             )
             .finish()
     }

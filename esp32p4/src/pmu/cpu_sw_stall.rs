@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_SW_STALL")
             .field(
                 "hpcore1_sw_stall_code",
-                &format_args!("{}", self.hpcore1_sw_stall_code().bits()),
+                &self.hpcore1_sw_stall_code().bits(),
             )
             .field(
                 "hpcore0_sw_stall_code",
-                &format_args!("{}", self.hpcore0_sw_stall_code().bits()),
+                &self.hpcore0_sw_stall_code().bits(),
             )
             .finish()
     }

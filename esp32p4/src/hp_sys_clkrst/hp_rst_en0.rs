@@ -296,125 +296,50 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_RST_EN0")
-            .field(
-                "rst_en_corectrl",
-                &format_args!("{}", self.rst_en_corectrl().bit()),
-            )
-            .field(
-                "rst_en_pvt_top",
-                &format_args!("{}", self.rst_en_pvt_top().bit()),
-            )
+            .field("rst_en_corectrl", &self.rst_en_corectrl().bit())
+            .field("rst_en_pvt_top", &self.rst_en_pvt_top().bit())
             .field(
                 "rst_en_pvt_peri_group1",
-                &format_args!("{}", self.rst_en_pvt_peri_group1().bit()),
+                &self.rst_en_pvt_peri_group1().bit(),
             )
             .field(
                 "rst_en_pvt_peri_group2",
-                &format_args!("{}", self.rst_en_pvt_peri_group2().bit()),
+                &self.rst_en_pvt_peri_group2().bit(),
             )
             .field(
                 "rst_en_pvt_peri_group3",
-                &format_args!("{}", self.rst_en_pvt_peri_group3().bit()),
+                &self.rst_en_pvt_peri_group3().bit(),
             )
             .field(
                 "rst_en_pvt_peri_group4",
-                &format_args!("{}", self.rst_en_pvt_peri_group4().bit()),
+                &self.rst_en_pvt_peri_group4().bit(),
             )
-            .field(
-                "rst_en_regdma",
-                &format_args!("{}", self.rst_en_regdma().bit()),
-            )
-            .field(
-                "rst_en_core0_global",
-                &format_args!("{}", self.rst_en_core0_global().bit()),
-            )
-            .field(
-                "rst_en_core1_global",
-                &format_args!("{}", self.rst_en_core1_global().bit()),
-            )
-            .field(
-                "rst_en_coretrace0",
-                &format_args!("{}", self.rst_en_coretrace0().bit()),
-            )
-            .field(
-                "rst_en_coretrace1",
-                &format_args!("{}", self.rst_en_coretrace1().bit()),
-            )
-            .field(
-                "rst_en_hp_tcm",
-                &format_args!("{}", self.rst_en_hp_tcm().bit()),
-            )
-            .field(
-                "rst_en_hp_cache",
-                &format_args!("{}", self.rst_en_hp_cache().bit()),
-            )
-            .field(
-                "rst_en_l1_i0_cache",
-                &format_args!("{}", self.rst_en_l1_i0_cache().bit()),
-            )
-            .field(
-                "rst_en_l1_i1_cache",
-                &format_args!("{}", self.rst_en_l1_i1_cache().bit()),
-            )
-            .field(
-                "rst_en_l1_d_cache",
-                &format_args!("{}", self.rst_en_l1_d_cache().bit()),
-            )
-            .field(
-                "rst_en_l2_cache",
-                &format_args!("{}", self.rst_en_l2_cache().bit()),
-            )
-            .field(
-                "rst_en_l2_mem",
-                &format_args!("{}", self.rst_en_l2_mem().bit()),
-            )
-            .field(
-                "rst_en_l2memmon",
-                &format_args!("{}", self.rst_en_l2memmon().bit()),
-            )
-            .field(
-                "rst_en_tcmmon",
-                &format_args!("{}", self.rst_en_tcmmon().bit()),
-            )
-            .field(
-                "rst_en_pvt_apb",
-                &format_args!("{}", self.rst_en_pvt_apb().bit()),
-            )
-            .field("rst_en_gdma", &format_args!("{}", self.rst_en_gdma().bit()))
-            .field(
-                "rst_en_mspi_axi",
-                &format_args!("{}", self.rst_en_mspi_axi().bit()),
-            )
-            .field(
-                "rst_en_dual_mspi_axi",
-                &format_args!("{}", self.rst_en_dual_mspi_axi().bit()),
-            )
-            .field(
-                "rst_en_mspi_apb",
-                &format_args!("{}", self.rst_en_mspi_apb().bit()),
-            )
-            .field(
-                "rst_en_dual_mspi_apb",
-                &format_args!("{}", self.rst_en_dual_mspi_apb().bit()),
-            )
-            .field(
-                "rst_en_dsi_brg",
-                &format_args!("{}", self.rst_en_dsi_brg().bit()),
-            )
-            .field(
-                "rst_en_csi_host",
-                &format_args!("{}", self.rst_en_csi_host().bit()),
-            )
-            .field(
-                "rst_en_csi_brg",
-                &format_args!("{}", self.rst_en_csi_brg().bit()),
-            )
-            .field("rst_en_isp", &format_args!("{}", self.rst_en_isp().bit()))
-            .field("rst_en_jpeg", &format_args!("{}", self.rst_en_jpeg().bit()))
-            .field(
-                "rst_en_dma2d",
-                &format_args!("{}", self.rst_en_dma2d().bit()),
-            )
+            .field("rst_en_regdma", &self.rst_en_regdma().bit())
+            .field("rst_en_core0_global", &self.rst_en_core0_global().bit())
+            .field("rst_en_core1_global", &self.rst_en_core1_global().bit())
+            .field("rst_en_coretrace0", &self.rst_en_coretrace0().bit())
+            .field("rst_en_coretrace1", &self.rst_en_coretrace1().bit())
+            .field("rst_en_hp_tcm", &self.rst_en_hp_tcm().bit())
+            .field("rst_en_hp_cache", &self.rst_en_hp_cache().bit())
+            .field("rst_en_l1_i0_cache", &self.rst_en_l1_i0_cache().bit())
+            .field("rst_en_l1_i1_cache", &self.rst_en_l1_i1_cache().bit())
+            .field("rst_en_l1_d_cache", &self.rst_en_l1_d_cache().bit())
+            .field("rst_en_l2_cache", &self.rst_en_l2_cache().bit())
+            .field("rst_en_l2_mem", &self.rst_en_l2_mem().bit())
+            .field("rst_en_l2memmon", &self.rst_en_l2memmon().bit())
+            .field("rst_en_tcmmon", &self.rst_en_tcmmon().bit())
+            .field("rst_en_pvt_apb", &self.rst_en_pvt_apb().bit())
+            .field("rst_en_gdma", &self.rst_en_gdma().bit())
+            .field("rst_en_mspi_axi", &self.rst_en_mspi_axi().bit())
+            .field("rst_en_dual_mspi_axi", &self.rst_en_dual_mspi_axi().bit())
+            .field("rst_en_mspi_apb", &self.rst_en_mspi_apb().bit())
+            .field("rst_en_dual_mspi_apb", &self.rst_en_dual_mspi_apb().bit())
+            .field("rst_en_dsi_brg", &self.rst_en_dsi_brg().bit())
+            .field("rst_en_csi_host", &self.rst_en_csi_host().bit())
+            .field("rst_en_csi_brg", &self.rst_en_csi_brg().bit())
+            .field("rst_en_isp", &self.rst_en_isp().bit())
+            .field("rst_en_jpeg", &self.rst_en_jpeg().bit())
+            .field("rst_en_dma2d", &self.rst_en_dma2d().bit())
             .finish()
     }
 }

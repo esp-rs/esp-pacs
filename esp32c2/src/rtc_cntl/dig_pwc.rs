@@ -80,38 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIG_PWC")
-            .field(
-                "vdd_spi_pwr_drv",
-                &format_args!("{}", self.vdd_spi_pwr_drv().bits()),
-            )
-            .field(
-                "vdd_spi_pwr_force",
-                &format_args!("{}", self.vdd_spi_pwr_force().bit()),
-            )
-            .field(
-                "vdd_spi_pd_en",
-                &format_args!("{}", self.vdd_spi_pd_en().bit()),
-            )
-            .field(
-                "lslp_mem_force_pd",
-                &format_args!("{}", self.lslp_mem_force_pd().bit()),
-            )
-            .field(
-                "lslp_mem_force_pu",
-                &format_args!("{}", self.lslp_mem_force_pu().bit()),
-            )
-            .field(
-                "dg_wrap_force_pd",
-                &format_args!("{}", self.dg_wrap_force_pd().bit()),
-            )
-            .field(
-                "dg_wrap_force_pu",
-                &format_args!("{}", self.dg_wrap_force_pu().bit()),
-            )
-            .field(
-                "dg_wrap_pd_en",
-                &format_args!("{}", self.dg_wrap_pd_en().bit()),
-            )
+            .field("vdd_spi_pwr_drv", &self.vdd_spi_pwr_drv().bits())
+            .field("vdd_spi_pwr_force", &self.vdd_spi_pwr_force().bit())
+            .field("vdd_spi_pd_en", &self.vdd_spi_pd_en().bit())
+            .field("lslp_mem_force_pd", &self.lslp_mem_force_pd().bit())
+            .field("lslp_mem_force_pu", &self.lslp_mem_force_pu().bit())
+            .field("dg_wrap_force_pd", &self.dg_wrap_force_pd().bit())
+            .field("dg_wrap_force_pu", &self.dg_wrap_force_pu().bit())
+            .field("dg_wrap_pd_en", &self.dg_wrap_pd_en().bit())
             .finish()
     }
 }

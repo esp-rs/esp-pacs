@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH_WAITI_CTRL")
-            .field("waiti_dummy", &format_args!("{}", self.waiti_dummy().bit()))
-            .field("waiti_cmd", &format_args!("{}", self.waiti_cmd().bits()))
-            .field(
-                "waiti_dummy_cyclelen",
-                &format_args!("{}", self.waiti_dummy_cyclelen().bits()),
-            )
+            .field("waiti_dummy", &self.waiti_dummy().bit())
+            .field("waiti_cmd", &self.waiti_cmd().bits())
+            .field("waiti_dummy_cyclelen", &self.waiti_dummy_cyclelen().bits())
             .finish()
     }
 }

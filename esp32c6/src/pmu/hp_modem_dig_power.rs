@@ -73,32 +73,26 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_DIG_POWER")
             .field(
                 "hp_modem_vdd_spi_pd_en",
-                &format_args!("{}", self.hp_modem_vdd_spi_pd_en().bit()),
+                &self.hp_modem_vdd_spi_pd_en().bit(),
             )
-            .field(
-                "hp_modem_hp_mem_dslp",
-                &format_args!("{}", self.hp_modem_hp_mem_dslp().bit()),
-            )
+            .field("hp_modem_hp_mem_dslp", &self.hp_modem_hp_mem_dslp().bit())
             .field(
                 "hp_modem_pd_hp_mem_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_mem_pd_en().bits()),
+                &self.hp_modem_pd_hp_mem_pd_en().bits(),
             )
             .field(
                 "hp_modem_pd_hp_wifi_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_wifi_pd_en().bit()),
+                &self.hp_modem_pd_hp_wifi_pd_en().bit(),
             )
             .field(
                 "hp_modem_pd_hp_cpu_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_cpu_pd_en().bit()),
+                &self.hp_modem_pd_hp_cpu_pd_en().bit(),
             )
             .field(
                 "hp_modem_pd_hp_aon_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_aon_pd_en().bit()),
+                &self.hp_modem_pd_hp_aon_pd_en().bit(),
             )
-            .field(
-                "hp_modem_pd_top_pd_en",
-                &format_args!("{}", self.hp_modem_pd_top_pd_en().bit()),
-            )
+            .field("hp_modem_pd_top_pd_en", &self.hp_modem_pd_top_pd_en().bit())
             .finish()
     }
 }

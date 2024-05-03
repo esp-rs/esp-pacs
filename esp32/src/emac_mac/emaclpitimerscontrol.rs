@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACLPITIMERSCONTROL")
-            .field(
-                "lpi_tw_timer",
-                &format_args!("{}", self.lpi_tw_timer().bits()),
-            )
-            .field(
-                "lpi_ls_timer",
-                &format_args!("{}", self.lpi_ls_timer().bits()),
-            )
+            .field("lpi_tw_timer", &self.lpi_tw_timer().bits())
+            .field("lpi_ls_timer", &self.lpi_ls_timer().bits())
             .finish()
     }
 }

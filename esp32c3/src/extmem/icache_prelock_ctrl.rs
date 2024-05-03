@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_PRELOCK_CTRL")
             .field(
                 "icache_prelock_sct0_en",
-                &format_args!("{}", self.icache_prelock_sct0_en().bit()),
+                &self.icache_prelock_sct0_en().bit(),
             )
             .field(
                 "icache_prelock_sct1_en",
-                &format_args!("{}", self.icache_prelock_sct1_en().bit()),
+                &self.icache_prelock_sct1_en().bit(),
             )
             .finish()
     }

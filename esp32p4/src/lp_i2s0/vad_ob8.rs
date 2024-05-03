@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB8")
-            .field(
-                "energy_high_ob",
-                &format_args!("{}", self.energy_high_ob().bits()),
-            )
+            .field("energy_high_ob", &self.energy_high_ob().bits())
             .finish()
     }
 }

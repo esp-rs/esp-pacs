@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_VBP_LINES_ACT")
-            .field(
-                "vbp_lines_act",
-                &format_args!("{}", self.vbp_lines_act().bits()),
-            )
+            .field("vbp_lines_act", &self.vbp_lines_act().bits())
             .finish()
     }
 }

@@ -42,28 +42,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_MONITOR_2")
             .field(
                 "backup_bus_pms_monitor_violate_intr",
-                &format_args!("{}", self.backup_bus_pms_monitor_violate_intr().bit()),
+                &self.backup_bus_pms_monitor_violate_intr().bit(),
             )
             .field(
                 "backup_bus_pms_monitor_violate_status_htrans",
-                &format_args!(
-                    "{}",
-                    self.backup_bus_pms_monitor_violate_status_htrans().bits()
-                ),
+                &self.backup_bus_pms_monitor_violate_status_htrans().bits(),
             )
             .field(
                 "backup_bus_pms_monitor_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.backup_bus_pms_monitor_violate_status_hsize().bits()
-                ),
+                &self.backup_bus_pms_monitor_violate_status_hsize().bits(),
             )
             .field(
                 "backup_bus_pms_monitor_violate_status_hwrite",
-                &format_args!(
-                    "{}",
-                    self.backup_bus_pms_monitor_violate_status_hwrite().bit()
-                ),
+                &self.backup_bus_pms_monitor_violate_status_hwrite().bit(),
             )
             .finish()
     }

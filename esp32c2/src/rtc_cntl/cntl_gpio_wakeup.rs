@@ -143,65 +143,41 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNTL_GPIO_WAKEUP")
-            .field(
-                "gpio_wakeup_status",
-                &format_args!("{}", self.gpio_wakeup_status().bits()),
-            )
+            .field("gpio_wakeup_status", &self.gpio_wakeup_status().bits())
             .field(
                 "gpio_wakeup_status_clr",
-                &format_args!("{}", self.gpio_wakeup_status_clr().bit()),
+                &self.gpio_wakeup_status_clr().bit(),
             )
-            .field(
-                "gpio_pin_clk_gate",
-                &format_args!("{}", self.gpio_pin_clk_gate().bit()),
-            )
-            .field(
-                "gpio_pin5_int_type",
-                &format_args!("{}", self.gpio_pin5_int_type().bits()),
-            )
-            .field(
-                "gpio_pin4_int_type",
-                &format_args!("{}", self.gpio_pin4_int_type().bits()),
-            )
-            .field(
-                "gpio_pin3_int_type",
-                &format_args!("{}", self.gpio_pin3_int_type().bits()),
-            )
-            .field(
-                "gpio_pin2_int_type",
-                &format_args!("{}", self.gpio_pin2_int_type().bits()),
-            )
-            .field(
-                "gpio_pin1_int_type",
-                &format_args!("{}", self.gpio_pin1_int_type().bits()),
-            )
-            .field(
-                "gpio_pin0_int_type",
-                &format_args!("{}", self.gpio_pin0_int_type().bits()),
-            )
+            .field("gpio_pin_clk_gate", &self.gpio_pin_clk_gate().bit())
+            .field("gpio_pin5_int_type", &self.gpio_pin5_int_type().bits())
+            .field("gpio_pin4_int_type", &self.gpio_pin4_int_type().bits())
+            .field("gpio_pin3_int_type", &self.gpio_pin3_int_type().bits())
+            .field("gpio_pin2_int_type", &self.gpio_pin2_int_type().bits())
+            .field("gpio_pin1_int_type", &self.gpio_pin1_int_type().bits())
+            .field("gpio_pin0_int_type", &self.gpio_pin0_int_type().bits())
             .field(
                 "gpio_pin5_wakeup_enable",
-                &format_args!("{}", self.gpio_pin5_wakeup_enable().bit()),
+                &self.gpio_pin5_wakeup_enable().bit(),
             )
             .field(
                 "gpio_pin4_wakeup_enable",
-                &format_args!("{}", self.gpio_pin4_wakeup_enable().bit()),
+                &self.gpio_pin4_wakeup_enable().bit(),
             )
             .field(
                 "gpio_pin3_wakeup_enable",
-                &format_args!("{}", self.gpio_pin3_wakeup_enable().bit()),
+                &self.gpio_pin3_wakeup_enable().bit(),
             )
             .field(
                 "gpio_pin2_wakeup_enable",
-                &format_args!("{}", self.gpio_pin2_wakeup_enable().bit()),
+                &self.gpio_pin2_wakeup_enable().bit(),
             )
             .field(
                 "gpio_pin1_wakeup_enable",
-                &format_args!("{}", self.gpio_pin1_wakeup_enable().bit()),
+                &self.gpio_pin1_wakeup_enable().bit(),
             )
             .field(
                 "gpio_pin0_wakeup_enable",
-                &format_args!("{}", self.gpio_pin0_wakeup_enable().bit()),
+                &self.gpio_pin0_wakeup_enable().bit(),
             )
             .finish()
     }

@@ -125,28 +125,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field("tx_rst", &format_args!("{}", self.tx_rst().bit()))
-            .field("rx_rst", &format_args!("{}", self.rx_rst().bit()))
-            .field("uart0_ce", &format_args!("{}", self.uart0_ce().bit()))
-            .field("uart1_ce", &format_args!("{}", self.uart1_ce().bit()))
-            .field("uart2_ce", &format_args!("{}", self.uart2_ce().bit()))
-            .field("seper_en", &format_args!("{}", self.seper_en().bit()))
-            .field("head_en", &format_args!("{}", self.head_en().bit()))
-            .field("crc_rec_en", &format_args!("{}", self.crc_rec_en().bit()))
-            .field(
-                "uart_idle_eof_en",
-                &format_args!("{}", self.uart_idle_eof_en().bit()),
-            )
-            .field("len_eof_en", &format_args!("{}", self.len_eof_en().bit()))
-            .field(
-                "encode_crc_en",
-                &format_args!("{}", self.encode_crc_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "uart_rx_brk_eof_en",
-                &format_args!("{}", self.uart_rx_brk_eof_en().bit()),
-            )
+            .field("tx_rst", &self.tx_rst().bit())
+            .field("rx_rst", &self.rx_rst().bit())
+            .field("uart0_ce", &self.uart0_ce().bit())
+            .field("uart1_ce", &self.uart1_ce().bit())
+            .field("uart2_ce", &self.uart2_ce().bit())
+            .field("seper_en", &self.seper_en().bit())
+            .field("head_en", &self.head_en().bit())
+            .field("crc_rec_en", &self.crc_rec_en().bit())
+            .field("uart_idle_eof_en", &self.uart_idle_eof_en().bit())
+            .field("len_eof_en", &self.len_eof_en().bit())
+            .field("encode_crc_en", &self.encode_crc_en().bit())
+            .field("clk_en", &self.clk_en().bit())
+            .field("uart_rx_brk_eof_en", &self.uart_rx_brk_eof_en().bit())
             .finish()
     }
 }

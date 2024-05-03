@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_PERI_TIMEOUT_INTR_MAP")
             .field(
                 "lp_peri_timeout_intr_map",
-                &format_args!("{}", self.lp_peri_timeout_intr_map().bits()),
+                &self.lp_peri_timeout_intr_map().bits(),
             )
             .finish()
     }

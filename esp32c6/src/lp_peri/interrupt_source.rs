@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT_SOURCE")
-            .field(
-                "lp_interrupt_source",
-                &format_args!("{}", self.lp_interrupt_source().bits()),
-            )
+            .field("lp_interrupt_source", &self.lp_interrupt_source().bits())
             .finish()
     }
 }

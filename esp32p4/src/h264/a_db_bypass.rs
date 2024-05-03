@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_DB_BYPASS")
-            .field(
-                "a_bypass_db_filter",
-                &format_args!("{}", self.a_bypass_db_filter().bit()),
-            )
+            .field("a_bypass_db_filter", &self.a_bypass_db_filter().bit())
             .finish()
     }
 }

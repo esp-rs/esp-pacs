@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_CONF")
-            .field(
-                "modem_clk_sel",
-                &format_args!("{}", self.modem_clk_sel().bit()),
-            )
-            .field(
-                "modem_clk_en",
-                &format_args!("{}", self.modem_clk_en().bit()),
-            )
-            .field(
-                "modem_rst_en",
-                &format_args!("{}", self.modem_rst_en().bit()),
-            )
+            .field("modem_clk_sel", &self.modem_clk_sel().bit())
+            .field("modem_clk_en", &self.modem_clk_en().bit())
+            .field("modem_rst_en", &self.modem_rst_en().bit())
             .finish()
     }
 }

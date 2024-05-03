@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PUSH")
-            .field(
-                "outfifo_wdata_ch0",
-                &format_args!("{}", self.outfifo_wdata_ch0().bits()),
-            )
-            .field(
-                "outfifo_push_ch0",
-                &format_args!("{}", self.outfifo_push_ch0().bit()),
-            )
+            .field("outfifo_wdata_ch0", &self.outfifo_wdata_ch0().bits())
+            .field("outfifo_push_ch0", &self.outfifo_push_ch0().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OCCUPY_1")
-            .field(
-                "occupy_cache",
-                &format_args!("{}", self.occupy_cache().bits()),
-            )
+            .field("occupy_cache", &self.occupy_cache().bits())
             .finish()
     }
 }

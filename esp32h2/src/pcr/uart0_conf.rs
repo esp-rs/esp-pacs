@@ -33,15 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART0_CONF")
-            .field(
-                "uart0_clk_en",
-                &format_args!("{}", self.uart0_clk_en().bit()),
-            )
-            .field(
-                "uart0_rst_en",
-                &format_args!("{}", self.uart0_rst_en().bit()),
-            )
-            .field("uart0_ready", &format_args!("{}", self.uart0_ready().bit()))
+            .field("uart0_clk_en", &self.uart0_clk_en().bit())
+            .field("uart0_rst_en", &self.uart0_rst_en().bit())
+            .field("uart0_ready", &self.uart0_ready().bit())
             .finish()
     }
 }

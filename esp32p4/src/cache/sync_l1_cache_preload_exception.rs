@@ -50,28 +50,25 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYNC_L1_CACHE_PRELOAD_EXCEPTION")
             .field(
                 "l1_icache0_pld_err_code",
-                &format_args!("{}", self.l1_icache0_pld_err_code().bits()),
+                &self.l1_icache0_pld_err_code().bits(),
             )
             .field(
                 "l1_icache1_pld_err_code",
-                &format_args!("{}", self.l1_icache1_pld_err_code().bits()),
+                &self.l1_icache1_pld_err_code().bits(),
             )
             .field(
                 "l1_icache2_pld_err_code",
-                &format_args!("{}", self.l1_icache2_pld_err_code().bits()),
+                &self.l1_icache2_pld_err_code().bits(),
             )
             .field(
                 "l1_icache3_pld_err_code",
-                &format_args!("{}", self.l1_icache3_pld_err_code().bits()),
+                &self.l1_icache3_pld_err_code().bits(),
             )
             .field(
                 "l1_dcache_pld_err_code",
-                &format_args!("{}", self.l1_dcache_pld_err_code().bits()),
+                &self.l1_dcache_pld_err_code().bits(),
             )
-            .field(
-                "sync_err_code",
-                &format_args!("{}", self.sync_err_code().bits()),
-            )
+            .field("sync_err_code", &self.sync_err_code().bits())
             .finish()
     }
 }

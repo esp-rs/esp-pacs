@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_RX")
-            .field(
-                "phy_rxulpsesc_0",
-                &format_args!("{}", self.phy_rxulpsesc_0().bit()),
-            )
-            .field(
-                "phy_rxulpsesc_1",
-                &format_args!("{}", self.phy_rxulpsesc_1().bit()),
-            )
-            .field(
-                "phy_rxulpsclknot",
-                &format_args!("{}", self.phy_rxulpsclknot().bit()),
-            )
-            .field(
-                "phy_rxclkactivehs",
-                &format_args!("{}", self.phy_rxclkactivehs().bit()),
-            )
+            .field("phy_rxulpsesc_0", &self.phy_rxulpsesc_0().bit())
+            .field("phy_rxulpsesc_1", &self.phy_rxulpsesc_1().bit())
+            .field("phy_rxulpsclknot", &self.phy_rxulpsclknot().bit())
+            .field("phy_rxclkactivehs", &self.phy_rxclkactivehs().bit())
             .finish()
     }
 }

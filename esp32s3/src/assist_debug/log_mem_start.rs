@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOG_MEM_START")
-            .field(
-                "log_mem_start",
-                &format_args!("{}", self.log_mem_start().bits()),
-            )
+            .field("log_mem_start", &self.log_mem_start().bits())
             .finish()
     }
 }

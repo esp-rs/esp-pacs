@@ -55,24 +55,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("COEX_LP_CLK_CONF")
             .field(
                 "coex_lpclk_sel_rtc_slow",
-                &format_args!("{}", self.coex_lpclk_sel_rtc_slow().bit()),
+                &self.coex_lpclk_sel_rtc_slow().bit(),
             )
-            .field(
-                "coex_lpclk_sel_8m",
-                &format_args!("{}", self.coex_lpclk_sel_8m().bit()),
-            )
-            .field(
-                "coex_lpclk_sel_xtal",
-                &format_args!("{}", self.coex_lpclk_sel_xtal().bit()),
-            )
+            .field("coex_lpclk_sel_8m", &self.coex_lpclk_sel_8m().bit())
+            .field("coex_lpclk_sel_xtal", &self.coex_lpclk_sel_xtal().bit())
             .field(
                 "coex_lpclk_sel_xtal32k",
-                &format_args!("{}", self.coex_lpclk_sel_xtal32k().bit()),
+                &self.coex_lpclk_sel_xtal32k().bit(),
             )
-            .field(
-                "coex_lpclk_div_num",
-                &format_args!("{}", self.coex_lpclk_div_num().bits()),
-            )
+            .field("coex_lpclk_div_num", &self.coex_lpclk_div_num().bits())
             .finish()
     }
 }

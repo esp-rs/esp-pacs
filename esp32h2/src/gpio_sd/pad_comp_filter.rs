@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_COMP_FILTER")
-            .field(
-                "zero_det_filter_cnt",
-                &format_args!("{}", self.zero_det_filter_cnt().bits()),
-            )
+            .field("zero_det_filter_cnt", &self.zero_det_filter_cnt().bits())
             .finish()
     }
 }

@@ -173,54 +173,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_DLY_MODE_CFG1")
-            .field(
-                "dout16_mode",
-                &format_args!("{}", self.dout16_mode().bits()),
-            )
-            .field(
-                "dout17_mode",
-                &format_args!("{}", self.dout17_mode().bits()),
-            )
-            .field(
-                "dout18_mode",
-                &format_args!("{}", self.dout18_mode().bits()),
-            )
-            .field(
-                "dout19_mode",
-                &format_args!("{}", self.dout19_mode().bits()),
-            )
-            .field(
-                "dout20_mode",
-                &format_args!("{}", self.dout20_mode().bits()),
-            )
-            .field(
-                "dout21_mode",
-                &format_args!("{}", self.dout21_mode().bits()),
-            )
-            .field(
-                "dout22_mode",
-                &format_args!("{}", self.dout22_mode().bits()),
-            )
-            .field(
-                "dout23_mode",
-                &format_args!("{}", self.dout23_mode().bits()),
-            )
-            .field(
-                "lcd_cd_mode",
-                &format_args!("{}", self.lcd_cd_mode().bits()),
-            )
-            .field(
-                "lcd_de_mode",
-                &format_args!("{}", self.lcd_de_mode().bits()),
-            )
-            .field(
-                "lcd_hsync_mode",
-                &format_args!("{}", self.lcd_hsync_mode().bits()),
-            )
-            .field(
-                "lcd_vsync_mode",
-                &format_args!("{}", self.lcd_vsync_mode().bits()),
-            )
+            .field("dout16_mode", &self.dout16_mode().bits())
+            .field("dout17_mode", &self.dout17_mode().bits())
+            .field("dout18_mode", &self.dout18_mode().bits())
+            .field("dout19_mode", &self.dout19_mode().bits())
+            .field("dout20_mode", &self.dout20_mode().bits())
+            .field("dout21_mode", &self.dout21_mode().bits())
+            .field("dout22_mode", &self.dout22_mode().bits())
+            .field("dout23_mode", &self.dout23_mode().bits())
+            .field("lcd_cd_mode", &self.lcd_cd_mode().bits())
+            .field("lcd_de_mode", &self.lcd_de_mode().bits())
+            .field("lcd_hsync_mode", &self.lcd_hsync_mode().bits())
+            .field("lcd_vsync_mode", &self.lcd_vsync_mode().bits())
             .finish()
     }
 }

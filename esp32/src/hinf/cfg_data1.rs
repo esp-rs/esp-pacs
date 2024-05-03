@@ -138,46 +138,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_DATA1")
-            .field("sdio_enable", &format_args!("{}", self.sdio_enable().bit()))
-            .field(
-                "sdio_ioready1",
-                &format_args!("{}", self.sdio_ioready1().bit()),
-            )
-            .field(
-                "highspeed_enable",
-                &format_args!("{}", self.highspeed_enable().bit()),
-            )
-            .field(
-                "highspeed_mode",
-                &format_args!("{}", self.highspeed_mode().bit()),
-            )
-            .field(
-                "sdio_cd_enable",
-                &format_args!("{}", self.sdio_cd_enable().bit()),
-            )
-            .field(
-                "sdio_ioready2",
-                &format_args!("{}", self.sdio_ioready2().bit()),
-            )
-            .field(
-                "sdio_int_mask",
-                &format_args!("{}", self.sdio_int_mask().bit()),
-            )
-            .field("ioenable2", &format_args!("{}", self.ioenable2().bit()))
-            .field("cd_disable", &format_args!("{}", self.cd_disable().bit()))
-            .field("func1_eps", &format_args!("{}", self.func1_eps().bit()))
-            .field("emp", &format_args!("{}", self.emp().bit()))
-            .field("ioenable1", &format_args!("{}", self.ioenable1().bit()))
-            .field(
-                "sdio20_conf0",
-                &format_args!("{}", self.sdio20_conf0().bits()),
-            )
-            .field("sdio_ver", &format_args!("{}", self.sdio_ver().bits()))
-            .field("func2_eps", &format_args!("{}", self.func2_eps().bit()))
-            .field(
-                "sdio20_conf1",
-                &format_args!("{}", self.sdio20_conf1().bits()),
-            )
+            .field("sdio_enable", &self.sdio_enable().bit())
+            .field("sdio_ioready1", &self.sdio_ioready1().bit())
+            .field("highspeed_enable", &self.highspeed_enable().bit())
+            .field("highspeed_mode", &self.highspeed_mode().bit())
+            .field("sdio_cd_enable", &self.sdio_cd_enable().bit())
+            .field("sdio_ioready2", &self.sdio_ioready2().bit())
+            .field("sdio_int_mask", &self.sdio_int_mask().bit())
+            .field("ioenable2", &self.ioenable2().bit())
+            .field("cd_disable", &self.cd_disable().bit())
+            .field("func1_eps", &self.func1_eps().bit())
+            .field("emp", &self.emp().bit())
+            .field("ioenable1", &self.ioenable1().bit())
+            .field("sdio20_conf0", &self.sdio20_conf0().bits())
+            .field("sdio_ver", &self.sdio_ver().bits())
+            .field("func2_eps", &self.func2_eps().bit())
+            .field("sdio20_conf1", &self.sdio20_conf1().bits())
             .finish()
     }
 }

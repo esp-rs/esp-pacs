@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CLK_STATE1")
             .field(
                 "pmu_icg_func_en_state",
-                &format_args!("{}", self.pmu_icg_func_en_state().bits()),
+                &self.pmu_icg_func_en_state().bits(),
             )
             .finish()
     }

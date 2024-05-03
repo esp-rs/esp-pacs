@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_LOCK_SIZE")
-            .field(
-                "cache_lock_size",
-                &format_args!("{}", self.cache_lock_size().bits()),
-            )
+            .field("cache_lock_size", &self.cache_lock_size().bits())
             .finish()
     }
 }

@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_PMS_ATTR")
-            .field(
-                "spi_smem_pms_rd_attr",
-                &format_args!("{}", self.spi_smem_pms_rd_attr().bit()),
-            )
-            .field(
-                "spi_smem_pms_wr_attr",
-                &format_args!("{}", self.spi_smem_pms_wr_attr().bit()),
-            )
-            .field(
-                "spi_smem_pms_ecc",
-                &format_args!("{}", self.spi_smem_pms_ecc().bit()),
-            )
+            .field("spi_smem_pms_rd_attr", &self.spi_smem_pms_rd_attr().bit())
+            .field("spi_smem_pms_wr_attr", &self.spi_smem_pms_wr_attr().bit())
+            .field("spi_smem_pms_ecc", &self.spi_smem_pms_ecc().bit())
             .finish()
     }
 }

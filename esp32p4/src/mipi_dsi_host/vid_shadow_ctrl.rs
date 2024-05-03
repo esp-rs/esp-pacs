@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_SHADOW_CTRL")
-            .field(
-                "vid_shadow_en",
-                &format_args!("{}", self.vid_shadow_en().bit()),
-            )
-            .field(
-                "vid_shadow_req",
-                &format_args!("{}", self.vid_shadow_req().bit()),
-            )
-            .field(
-                "vid_shadow_pin_req",
-                &format_args!("{}", self.vid_shadow_pin_req().bit()),
-            )
+            .field("vid_shadow_en", &self.vid_shadow_en().bit())
+            .field("vid_shadow_req", &self.vid_shadow_req().bit())
+            .field("vid_shadow_pin_req", &self.vid_shadow_pin_req().bit())
             .finish()
     }
 }

@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ENA")
-            .field("bod_mode0", &format_args!("{}", self.bod_mode0().bit()))
+            .field("bod_mode0", &self.bod_mode0().bit())
             .finish()
     }
 }

@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLCHOST_RDCLR1")
             .field(
                 "host_slchost_slc1_bit7_clraddr",
-                &format_args!("{}", self.host_slchost_slc1_bit7_clraddr().bits()),
+                &self.host_slchost_slc1_bit7_clraddr().bits(),
             )
             .field(
                 "host_slchost_slc1_bit6_clraddr",
-                &format_args!("{}", self.host_slchost_slc1_bit6_clraddr().bits()),
+                &self.host_slchost_slc1_bit6_clraddr().bits(),
             )
             .finish()
     }

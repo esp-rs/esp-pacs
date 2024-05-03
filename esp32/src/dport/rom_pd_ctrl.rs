@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROM_PD_CTRL")
-            .field("pro_rom_pd", &format_args!("{}", self.pro_rom_pd().bit()))
-            .field("app_rom_pd", &format_args!("{}", self.app_rom_pd().bit()))
-            .field(
-                "share_rom_pd",
-                &format_args!("{}", self.share_rom_pd().bits()),
-            )
+            .field("pro_rom_pd", &self.pro_rom_pd().bit())
+            .field("app_rom_pd", &self.app_rom_pd().bit())
+            .field("share_rom_pd", &self.share_rom_pd().bits())
             .finish()
     }
 }

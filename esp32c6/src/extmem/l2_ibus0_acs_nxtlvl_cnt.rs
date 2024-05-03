@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_IBUS0_ACS_NXTLVL_CNT")
-            .field(
-                "l2_ibus0_nxtlvl_cnt",
-                &format_args!("{}", self.l2_ibus0_nxtlvl_cnt().bits()),
-            )
+            .field("l2_ibus0_nxtlvl_cnt", &self.l2_ibus0_nxtlvl_cnt().bits())
             .finish()
     }
 }

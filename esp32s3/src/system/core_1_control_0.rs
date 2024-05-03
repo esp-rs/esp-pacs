@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_CONTROL_0")
             .field(
                 "control_core_1_runstall",
-                &format_args!("{}", self.control_core_1_runstall().bit()),
+                &self.control_core_1_runstall().bit(),
             )
             .field(
                 "control_core_1_clkgate_en",
-                &format_args!("{}", self.control_core_1_clkgate_en().bit()),
+                &self.control_core_1_clkgate_en().bit(),
             )
             .field(
                 "control_core_1_reseting",
-                &format_args!("{}", self.control_core_1_reseting().bit()),
+                &self.control_core_1_reseting().bit(),
             )
             .finish()
     }

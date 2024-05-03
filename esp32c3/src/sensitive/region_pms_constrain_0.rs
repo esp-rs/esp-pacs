@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("REGION_PMS_CONSTRAIN_0")
             .field(
                 "region_pms_constrain_lock",
-                &format_args!("{}", self.region_pms_constrain_lock().bit()),
+                &self.region_pms_constrain_lock().bit(),
             )
             .finish()
     }

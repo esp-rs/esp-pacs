@@ -40,19 +40,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_SLAVE_ADDR3")
-            .field(
-                "i2c_slave_addr5",
-                &format_args!("{}", self.i2c_slave_addr5().bits()),
-            )
-            .field(
-                "i2c_slave_addr4",
-                &format_args!("{}", self.i2c_slave_addr4().bits()),
-            )
-            .field("tsens_out", &format_args!("{}", self.tsens_out().bits()))
-            .field(
-                "tsens_rdy_out",
-                &format_args!("{}", self.tsens_rdy_out().bit()),
-            )
+            .field("i2c_slave_addr5", &self.i2c_slave_addr5().bits())
+            .field("i2c_slave_addr4", &self.i2c_slave_addr4().bits())
+            .field("tsens_out", &self.tsens_out().bits())
+            .field("tsens_rdy_out", &self.tsens_rdy_out().bit())
             .finish()
     }
 }

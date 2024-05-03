@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS4")
-            .field(
-                "hfm_bitstream",
-                &format_args!("{}", self.hfm_bitstream().bits()),
-            )
+            .field("hfm_bitstream", &self.hfm_bitstream().bits())
             .finish()
     }
 }

@@ -44,22 +44,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_CLK_EN")
-            .field(
-                "wifi_clk_en",
-                &format_args!("{}", self.wifi_clk_en().bits()),
-            )
-            .field(
-                "wifi_clk_wifi_en",
-                &format_args!("{}", self.wifi_clk_wifi_en().bits()),
-            )
+            .field("wifi_clk_en", &self.wifi_clk_en().bits())
+            .field("wifi_clk_wifi_en", &self.wifi_clk_wifi_en().bits())
             .field(
                 "wifi_clk_wifi_bt_common",
-                &format_args!("{}", self.wifi_clk_wifi_bt_common().bits()),
+                &self.wifi_clk_wifi_bt_common().bits(),
             )
-            .field(
-                "wifi_clk_bt_en",
-                &format_args!("{}", self.wifi_clk_bt_en().bits()),
-            )
+            .field("wifi_clk_bt_en", &self.wifi_clk_bt_en().bits())
             .finish()
     }
 }

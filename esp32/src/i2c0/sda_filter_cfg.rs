@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDA_FILTER_CFG")
-            .field(
-                "sda_filter_thres",
-                &format_args!("{}", self.sda_filter_thres().bits()),
-            )
-            .field(
-                "sda_filter_en",
-                &format_args!("{}", self.sda_filter_en().bit()),
-            )
+            .field("sda_filter_thres", &self.sda_filter_thres().bits())
+            .field("sda_filter_en", &self.sda_filter_en().bit())
             .finish()
     }
 }

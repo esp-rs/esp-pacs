@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ESC_CONF")
-            .field("seper_char", &format_args!("{}", self.seper_char().bits()))
-            .field(
-                "seper_esc_char0",
-                &format_args!("{}", self.seper_esc_char0().bits()),
-            )
-            .field(
-                "seper_esc_char1",
-                &format_args!("{}", self.seper_esc_char1().bits()),
-            )
+            .field("seper_char", &self.seper_char().bits())
+            .field("seper_esc_char0", &self.seper_esc_char0().bits())
+            .field("seper_esc_char1", &self.seper_esc_char1().bits())
             .finish()
     }
 }

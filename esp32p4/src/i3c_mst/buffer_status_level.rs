@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUFFER_STATUS_LEVEL")
-            .field(
-                "cmd_buf_empty_cnt",
-                &format_args!("{}", self.cmd_buf_empty_cnt().bits()),
-            )
-            .field(
-                "resp_buf_cnt",
-                &format_args!("{}", self.resp_buf_cnt().bits()),
-            )
-            .field(
-                "ibi_data_buf_cnt",
-                &format_args!("{}", self.ibi_data_buf_cnt().bits()),
-            )
-            .field(
-                "ibi_status_buf_cnt",
-                &format_args!("{}", self.ibi_status_buf_cnt().bits()),
-            )
+            .field("cmd_buf_empty_cnt", &self.cmd_buf_empty_cnt().bits())
+            .field("resp_buf_cnt", &self.resp_buf_cnt().bits())
+            .field("ibi_data_buf_cnt", &self.ibi_data_buf_cnt().bits())
+            .field("ibi_status_buf_cnt", &self.ibi_status_buf_cnt().bits())
             .finish()
     }
 }

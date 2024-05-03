@@ -148,59 +148,59 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPCPU_RESET_CTRL0")
             .field(
                 "lp_aonclkrst_hpcore0_lockup_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_lockup_reset_en().bit()),
+                &self.lp_aonclkrst_hpcore0_lockup_reset_en().bit(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore0_reset_length",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore0_reset_length().bits()),
+                &self.lp_aonclkrst_lp_wdt_hpcore0_reset_length().bits(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore0_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore0_reset_en().bit()),
+                &self.lp_aonclkrst_lp_wdt_hpcore0_reset_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stall_wait",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stall_wait().bits()),
+                &self.lp_aonclkrst_hpcore0_stall_wait().bits(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stall_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stall_en().bit()),
+                &self.lp_aonclkrst_hpcore0_stall_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_ocd_halt_on_reset",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_ocd_halt_on_reset().bit()),
+                &self.lp_aonclkrst_hpcore0_ocd_halt_on_reset().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stat_vector_sel",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stat_vector_sel().bit()),
+                &self.lp_aonclkrst_hpcore0_stat_vector_sel().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_lockup_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_lockup_reset_en().bit()),
+                &self.lp_aonclkrst_hpcore1_lockup_reset_en().bit(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore1_reset_length",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore1_reset_length().bits()),
+                &self.lp_aonclkrst_lp_wdt_hpcore1_reset_length().bits(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore1_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore1_reset_en().bit()),
+                &self.lp_aonclkrst_lp_wdt_hpcore1_reset_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stall_wait",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stall_wait().bits()),
+                &self.lp_aonclkrst_hpcore1_stall_wait().bits(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stall_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stall_en().bit()),
+                &self.lp_aonclkrst_hpcore1_stall_en().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_ocd_halt_on_reset",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_ocd_halt_on_reset().bit()),
+                &self.lp_aonclkrst_hpcore1_ocd_halt_on_reset().bit(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stat_vector_sel",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stat_vector_sel().bit()),
+                &self.lp_aonclkrst_hpcore1_stat_vector_sel().bit(),
             )
             .finish()
     }

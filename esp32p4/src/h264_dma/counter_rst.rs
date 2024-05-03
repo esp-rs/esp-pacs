@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("COUNTER_RST")
             .field(
                 "rx_ch0_exter_counter_rst",
-                &format_args!("{}", self.rx_ch0_exter_counter_rst().bit()),
+                &self.rx_ch0_exter_counter_rst().bit(),
             )
             .field(
                 "rx_ch1_exter_counter_rst",
-                &format_args!("{}", self.rx_ch1_exter_counter_rst().bit()),
+                &self.rx_ch1_exter_counter_rst().bit(),
             )
             .field(
                 "rx_ch2_inter_counter_rst",
-                &format_args!("{}", self.rx_ch2_inter_counter_rst().bit()),
+                &self.rx_ch2_inter_counter_rst().bit(),
             )
             .field(
                 "rx_ch5_inter_counter_rst",
-                &format_args!("{}", self.rx_ch5_inter_counter_rst().bit()),
+                &self.rx_ch5_inter_counter_rst().bit(),
             )
             .finish()
     }

@@ -53,23 +53,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("VDDBAT_CHARGE_CNTL")
             .field(
                 "vddbat_charge_undervoltage_flag",
-                &format_args!("{}", self.vddbat_charge_undervoltage_flag().bit()),
+                &self.vddbat_charge_undervoltage_flag().bit(),
             )
-            .field(
-                "vddbat_charge_charger",
-                &format_args!("{}", self.vddbat_charge_charger().bit()),
-            )
-            .field(
-                "vddbat_charge_cnt_clr",
-                &format_args!("{}", self.vddbat_charge_cnt_clr().bit()),
-            )
+            .field("vddbat_charge_charger", &self.vddbat_charge_charger().bit())
+            .field("vddbat_charge_cnt_clr", &self.vddbat_charge_cnt_clr().bit())
             .field(
                 "vddbat_charge_upvoltage_target",
-                &format_args!("{}", self.vddbat_charge_upvoltage_target().bits()),
+                &self.vddbat_charge_upvoltage_target().bits(),
             )
             .field(
                 "vddbat_charge_undervoltage_target",
-                &format_args!("{}", self.vddbat_charge_undervoltage_target().bits()),
+                &self.vddbat_charge_undervoltage_target().bits(),
             )
             .finish()
     }

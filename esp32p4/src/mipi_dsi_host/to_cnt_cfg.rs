@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TO_CNT_CFG")
-            .field(
-                "lprx_to_cnt",
-                &format_args!("{}", self.lprx_to_cnt().bits()),
-            )
-            .field(
-                "hstx_to_cnt",
-                &format_args!("{}", self.hstx_to_cnt().bits()),
-            )
+            .field("lprx_to_cnt", &self.lprx_to_cnt().bits())
+            .field("hstx_to_cnt", &self.hstx_to_cnt().bits())
             .finish()
     }
 }

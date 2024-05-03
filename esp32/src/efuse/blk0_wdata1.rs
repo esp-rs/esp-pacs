@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_WDATA1")
-            .field(
-                "wifi_mac_crc_low",
-                &format_args!("{}", self.wifi_mac_crc_low().bits()),
-            )
+            .field("wifi_mac_crc_low", &self.wifi_mac_crc_low().bits())
             .finish()
     }
 }

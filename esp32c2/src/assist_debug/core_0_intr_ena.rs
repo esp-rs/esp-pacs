@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_INTR_ENA")
             .field(
                 "core_0_sp_spill_min_intr_ena",
-                &format_args!("{}", self.core_0_sp_spill_min_intr_ena().bit()),
+                &self.core_0_sp_spill_min_intr_ena().bit(),
             )
             .field(
                 "core_0_sp_spill_max_intr_ena",
-                &format_args!("{}", self.core_0_sp_spill_max_intr_ena().bit()),
+                &self.core_0_sp_spill_max_intr_ena().bit(),
             )
             .finish()
     }

@@ -91,40 +91,22 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_COCPU_INT_ENA")
             .field(
                 "cocpu_touch_done_int_ena",
-                &format_args!("{}", self.cocpu_touch_done_int_ena().bit()),
+                &self.cocpu_touch_done_int_ena().bit(),
             )
             .field(
                 "cocpu_touch_inactive_int_ena",
-                &format_args!("{}", self.cocpu_touch_inactive_int_ena().bit()),
+                &self.cocpu_touch_inactive_int_ena().bit(),
             )
             .field(
                 "cocpu_touch_active_int_ena",
-                &format_args!("{}", self.cocpu_touch_active_int_ena().bit()),
+                &self.cocpu_touch_active_int_ena().bit(),
             )
-            .field(
-                "cocpu_saradc1_int_ena",
-                &format_args!("{}", self.cocpu_saradc1_int_ena().bit()),
-            )
-            .field(
-                "cocpu_saradc2_int_ena",
-                &format_args!("{}", self.cocpu_saradc2_int_ena().bit()),
-            )
-            .field(
-                "cocpu_tsens_int_ena",
-                &format_args!("{}", self.cocpu_tsens_int_ena().bit()),
-            )
-            .field(
-                "cocpu_start_int_ena",
-                &format_args!("{}", self.cocpu_start_int_ena().bit()),
-            )
-            .field(
-                "cocpu_sw_int_ena",
-                &format_args!("{}", self.cocpu_sw_int_ena().bit()),
-            )
-            .field(
-                "cocpu_swd_int_ena",
-                &format_args!("{}", self.cocpu_swd_int_ena().bit()),
-            )
+            .field("cocpu_saradc1_int_ena", &self.cocpu_saradc1_int_ena().bit())
+            .field("cocpu_saradc2_int_ena", &self.cocpu_saradc2_int_ena().bit())
+            .field("cocpu_tsens_int_ena", &self.cocpu_tsens_int_ena().bit())
+            .field("cocpu_start_int_ena", &self.cocpu_start_int_ena().bit())
+            .field("cocpu_sw_int_ena", &self.cocpu_sw_int_ena().bit())
+            .field("cocpu_swd_int_ena", &self.cocpu_swd_int_ena().bit())
             .finish()
     }
 }

@@ -93,54 +93,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_X_IRAM0_PMS_CONSTRAIN_1")
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_pms_0().bits()
-                ),
+                &self.core_x_iram0_pms_constrain_sram_world_1_pms_0().bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_pms_1().bits()
-                ),
+                &self.core_x_iram0_pms_constrain_sram_world_1_pms_1().bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_pms_2",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_pms_2().bits()
-                ),
+                &self.core_x_iram0_pms_constrain_sram_world_1_pms_2().bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_pms_3",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_pms_3().bits()
-                ),
+                &self.core_x_iram0_pms_constrain_sram_world_1_pms_3().bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0()
-                        .bits()
-                ),
+                &self
+                    .core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_0()
+                    .bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_1()
-                        .bits()
-                ),
+                &self
+                    .core_x_iram0_pms_constrain_sram_world_1_cachedataarray_pms_1()
+                    .bits(),
             )
             .field(
                 "core_x_iram0_pms_constrain_rom_world_1_pms",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_pms_constrain_rom_world_1_pms().bits()
-                ),
+                &self.core_x_iram0_pms_constrain_rom_world_1_pms().bits(),
             )
             .finish()
     }

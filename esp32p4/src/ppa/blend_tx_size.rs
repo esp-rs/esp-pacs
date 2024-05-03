@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_TX_SIZE")
-            .field("blend_hb", &format_args!("{}", self.blend_hb().bits()))
-            .field("blend_vb", &format_args!("{}", self.blend_vb().bits()))
+            .field("blend_hb", &self.blend_hb().bits())
+            .field("blend_vb", &self.blend_vb().bits())
             .finish()
     }
 }

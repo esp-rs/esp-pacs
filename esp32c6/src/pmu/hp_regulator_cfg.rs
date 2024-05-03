@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_REGULATOR_CFG")
-            .field(
-                "dig_regulator_en_cal",
-                &format_args!("{}", self.dig_regulator_en_cal().bit()),
-            )
+            .field("dig_regulator_en_cal", &self.dig_regulator_en_cal().bit())
             .finish()
     }
 }

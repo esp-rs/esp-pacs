@@ -107,29 +107,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCFG")
-            .field(
-                "nzstsouthshk",
-                &format_args!("{}", self.nzstsouthshk().bit()),
-            )
-            .field(
-                "ena32khzsusp",
-                &format_args!("{}", self.ena32khzsusp().bit()),
-            )
-            .field("devaddr", &format_args!("{}", self.devaddr().bits()))
-            .field("perfrlint", &format_args!("{}", self.perfrlint().bits()))
-            .field("endevoutnak", &format_args!("{}", self.endevoutnak().bit()))
-            .field("xcvrdly", &format_args!("{}", self.xcvrdly().bit()))
-            .field(
-                "erraticintmsk",
-                &format_args!("{}", self.erraticintmsk().bit()),
-            )
-            .field("epmiscnt", &format_args!("{}", self.epmiscnt().bits()))
-            .field("descdma", &format_args!("{}", self.descdma().bit()))
-            .field(
-                "perschintvl",
-                &format_args!("{}", self.perschintvl().bits()),
-            )
-            .field("resvalid", &format_args!("{}", self.resvalid().bits()))
+            .field("nzstsouthshk", &self.nzstsouthshk().bit())
+            .field("ena32khzsusp", &self.ena32khzsusp().bit())
+            .field("devaddr", &self.devaddr().bits())
+            .field("perfrlint", &self.perfrlint().bits())
+            .field("endevoutnak", &self.endevoutnak().bit())
+            .field("xcvrdly", &self.xcvrdly().bit())
+            .field("erraticintmsk", &self.erraticintmsk().bit())
+            .field("epmiscnt", &self.epmiscnt().bits())
+            .field("descdma", &self.descdma().bit())
+            .field("perschintvl", &self.perschintvl().bits())
+            .field("resvalid", &self.resvalid().bits())
             .finish()
     }
 }

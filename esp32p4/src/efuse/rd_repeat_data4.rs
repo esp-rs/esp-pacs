@@ -83,44 +83,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA4")
-            .field(
-                "_0pxa_tieh_sel_0",
-                &format_args!("{}", self._0pxa_tieh_sel_0().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_1",
-                &format_args!("{}", self._0pxa_tieh_sel_1().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_2",
-                &format_args!("{}", self._0pxa_tieh_sel_2().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_3",
-                &format_args!("{}", self._0pxa_tieh_sel_3().bits()),
-            )
+            .field("_0pxa_tieh_sel_0", &self._0pxa_tieh_sel_0().bits())
+            .field("_0pxa_tieh_sel_1", &self._0pxa_tieh_sel_1().bits())
+            .field("_0pxa_tieh_sel_2", &self._0pxa_tieh_sel_2().bits())
+            .field("_0pxa_tieh_sel_3", &self._0pxa_tieh_sel_3().bits())
             .field(
                 "km_disable_deploy_mode",
-                &format_args!("{}", self.km_disable_deploy_mode().bits()),
+                &self.km_disable_deploy_mode().bits(),
             )
-            .field(
-                "usb_device_drefl",
-                &format_args!("{}", self.usb_device_drefl().bits()),
-            )
-            .field(
-                "usb_otg11_drefl",
-                &format_args!("{}", self.usb_otg11_drefl().bits()),
-            )
-            .field(
-                "hp_pwr_src_sel",
-                &format_args!("{}", self.hp_pwr_src_sel().bit()),
-            )
-            .field(
-                "dcdc_vset_en",
-                &format_args!("{}", self.dcdc_vset_en().bit()),
-            )
-            .field("dis_wdt", &format_args!("{}", self.dis_wdt().bit()))
-            .field("dis_swd", &format_args!("{}", self.dis_swd().bit()))
+            .field("usb_device_drefl", &self.usb_device_drefl().bits())
+            .field("usb_otg11_drefl", &self.usb_otg11_drefl().bits())
+            .field("hp_pwr_src_sel", &self.hp_pwr_src_sel().bit())
+            .field("dcdc_vset_en", &self.dcdc_vset_en().bit())
+            .field("dis_wdt", &self.dis_wdt().bit())
+            .field("dis_swd", &self.dis_swd().bit())
             .finish()
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_HP_SYS_CNTL")
             .field(
                 "hp_modem_uart_wakeup_en",
-                &format_args!("{}", self.hp_modem_uart_wakeup_en().bit()),
+                &self.hp_modem_uart_wakeup_en().bit(),
             )
             .field(
                 "hp_modem_lp_pad_hold_all",
-                &format_args!("{}", self.hp_modem_lp_pad_hold_all().bit()),
+                &self.hp_modem_lp_pad_hold_all().bit(),
             )
             .field(
                 "hp_modem_hp_pad_hold_all",
-                &format_args!("{}", self.hp_modem_hp_pad_hold_all().bit()),
+                &self.hp_modem_hp_pad_hold_all().bit(),
             )
             .field(
                 "hp_modem_dig_pad_slp_sel",
-                &format_args!("{}", self.hp_modem_dig_pad_slp_sel().bit()),
+                &self.hp_modem_dig_pad_slp_sel().bit(),
             )
             .field(
                 "hp_modem_dig_pause_wdt",
-                &format_args!("{}", self.hp_modem_dig_pause_wdt().bit()),
+                &self.hp_modem_dig_pause_wdt().bit(),
             )
             .field(
                 "hp_modem_dig_cpu_stall",
-                &format_args!("{}", self.hp_modem_dig_cpu_stall().bit()),
+                &self.hp_modem_dig_cpu_stall().bit(),
             )
             .finish()
     }

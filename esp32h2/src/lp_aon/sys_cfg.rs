@@ -40,22 +40,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS_CFG")
-            .field(
-                "ana_fib_swd_enable",
-                &format_args!("{}", self.ana_fib_swd_enable().bit()),
-            )
+            .field("ana_fib_swd_enable", &self.ana_fib_swd_enable().bit())
             .field(
                 "ana_fib_ck_glitch_enable",
-                &format_args!("{}", self.ana_fib_ck_glitch_enable().bit()),
+                &self.ana_fib_ck_glitch_enable().bit(),
             )
-            .field(
-                "ana_fib_bod_enable",
-                &format_args!("{}", self.ana_fib_bod_enable().bit()),
-            )
-            .field(
-                "force_download_boot",
-                &format_args!("{}", self.force_download_boot().bit()),
-            )
+            .field("ana_fib_bod_enable", &self.ana_fib_bod_enable().bit())
+            .field("force_download_boot", &self.force_download_boot().bit())
             .finish()
     }
 }

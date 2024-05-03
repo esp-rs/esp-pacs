@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_1TXFIFO_POP")
-            .field(
-                "slc1_txfifo_rdata",
-                &format_args!("{}", self.slc1_txfifo_rdata().bits()),
-            )
-            .field(
-                "slc1_txfifo_pop",
-                &format_args!("{}", self.slc1_txfifo_pop().bit()),
-            )
+            .field("slc1_txfifo_rdata", &self.slc1_txfifo_rdata().bits())
+            .field("slc1_txfifo_pop", &self.slc1_txfifo_pop().bit())
             .finish()
     }
 }

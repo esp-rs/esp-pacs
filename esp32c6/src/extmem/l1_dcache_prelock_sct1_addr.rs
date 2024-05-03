@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_DCACHE_PRELOCK_SCT1_ADDR")
             .field(
                 "l1_cache_prelock_sct1_addr",
-                &format_args!("{}", self.l1_cache_prelock_sct1_addr().bits()),
+                &self.l1_cache_prelock_sct1_addr().bits(),
             )
             .finish()
     }

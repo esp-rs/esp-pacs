@@ -71,40 +71,22 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_COCPU_INT_RAW")
             .field(
                 "cocpu_touch_done_int_raw",
-                &format_args!("{}", self.cocpu_touch_done_int_raw().bit()),
+                &self.cocpu_touch_done_int_raw().bit(),
             )
             .field(
                 "cocpu_touch_inactive_int_raw",
-                &format_args!("{}", self.cocpu_touch_inactive_int_raw().bit()),
+                &self.cocpu_touch_inactive_int_raw().bit(),
             )
             .field(
                 "cocpu_touch_active_int_raw",
-                &format_args!("{}", self.cocpu_touch_active_int_raw().bit()),
+                &self.cocpu_touch_active_int_raw().bit(),
             )
-            .field(
-                "cocpu_saradc1_int_raw",
-                &format_args!("{}", self.cocpu_saradc1_int_raw().bit()),
-            )
-            .field(
-                "cocpu_saradc2_int_raw",
-                &format_args!("{}", self.cocpu_saradc2_int_raw().bit()),
-            )
-            .field(
-                "cocpu_tsens_int_raw",
-                &format_args!("{}", self.cocpu_tsens_int_raw().bit()),
-            )
-            .field(
-                "cocpu_start_int_raw",
-                &format_args!("{}", self.cocpu_start_int_raw().bit()),
-            )
-            .field(
-                "cocpu_sw_int_raw",
-                &format_args!("{}", self.cocpu_sw_int_raw().bit()),
-            )
-            .field(
-                "cocpu_swd_int_raw",
-                &format_args!("{}", self.cocpu_swd_int_raw().bit()),
-            )
+            .field("cocpu_saradc1_int_raw", &self.cocpu_saradc1_int_raw().bit())
+            .field("cocpu_saradc2_int_raw", &self.cocpu_saradc2_int_raw().bit())
+            .field("cocpu_tsens_int_raw", &self.cocpu_tsens_int_raw().bit())
+            .field("cocpu_start_int_raw", &self.cocpu_start_int_raw().bit())
+            .field("cocpu_sw_int_raw", &self.cocpu_sw_int_raw().bit())
+            .field("cocpu_swd_int_raw", &self.cocpu_swd_int_raw().bit())
             .finish()
     }
 }

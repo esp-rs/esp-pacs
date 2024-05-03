@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GNPTXSTS")
-            .field(
-                "nptxfspcavail",
-                &format_args!("{}", self.nptxfspcavail().bits()),
-            )
-            .field(
-                "nptxqspcavail",
-                &format_args!("{}", self.nptxqspcavail().bits()),
-            )
-            .field("nptxqtop", &format_args!("{}", self.nptxqtop().bits()))
+            .field("nptxfspcavail", &self.nptxfspcavail().bits())
+            .field("nptxqspcavail", &self.nptxqspcavail().bits())
+            .field("nptxqtop", &self.nptxqtop().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_WRBUF_DLEN")
-            .field(
-                "slv_wr_buf_done",
-                &format_args!("{}", self.slv_wr_buf_done().bit()),
-            )
-            .field(
-                "conf_base_bitlen",
-                &format_args!("{}", self.conf_base_bitlen().bits()),
-            )
+            .field("slv_wr_buf_done", &self.slv_wr_buf_done().bit())
+            .field("conf_base_bitlen", &self.conf_base_bitlen().bits())
             .finish()
     }
 }

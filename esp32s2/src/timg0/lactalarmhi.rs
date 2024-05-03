@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTALARMHI")
-            .field("alarm_hi", &format_args!("{}", self.alarm_hi().bits()))
+            .field("alarm_hi", &self.alarm_hi().bits())
             .finish()
     }
 }

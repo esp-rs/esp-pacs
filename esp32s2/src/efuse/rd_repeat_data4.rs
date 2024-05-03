@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA4")
-            .field(
-                "rpt4_reserved4",
-                &format_args!("{}", self.rpt4_reserved4().bits()),
-            )
+            .field("rpt4_reserved4", &self.rpt4_reserved4().bits())
             .finish()
     }
 }

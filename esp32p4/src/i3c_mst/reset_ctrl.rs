@@ -64,29 +64,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_CTRL")
-            .field(
-                "reg_cmd_buf_rst",
-                &format_args!("{}", self.reg_cmd_buf_rst().bit()),
-            )
-            .field(
-                "reg_resp_buf_rst",
-                &format_args!("{}", self.reg_resp_buf_rst().bit()),
-            )
+            .field("reg_cmd_buf_rst", &self.reg_cmd_buf_rst().bit())
+            .field("reg_resp_buf_rst", &self.reg_resp_buf_rst().bit())
             .field(
                 "reg_tx_data_buf_buf_rst",
-                &format_args!("{}", self.reg_tx_data_buf_buf_rst().bit()),
+                &self.reg_tx_data_buf_buf_rst().bit(),
             )
-            .field(
-                "reg_rx_data_buf_rst",
-                &format_args!("{}", self.reg_rx_data_buf_rst().bit()),
-            )
-            .field(
-                "reg_ibi_data_buf_rst",
-                &format_args!("{}", self.reg_ibi_data_buf_rst().bit()),
-            )
+            .field("reg_rx_data_buf_rst", &self.reg_rx_data_buf_rst().bit())
+            .field("reg_ibi_data_buf_rst", &self.reg_ibi_data_buf_rst().bit())
             .field(
                 "reg_ibi_status_buf_rst",
-                &format_args!("{}", self.reg_ibi_status_buf_rst().bit()),
+                &self.reg_ibi_status_buf_rst().bit(),
             )
             .finish()
     }

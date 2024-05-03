@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SW_STANDBY_CFG")
-            .field(
-                "sw_standby_en",
-                &format_args!("{}", self.sw_standby_en().bit()),
-            )
-            .field(
-                "sw_standby_clr",
-                &format_args!("{}", self.sw_standby_clr().bit()),
-            )
+            .field("sw_standby_en", &self.sw_standby_en().bit())
+            .field("sw_standby_clr", &self.sw_standby_clr().bit())
             .finish()
     }
 }

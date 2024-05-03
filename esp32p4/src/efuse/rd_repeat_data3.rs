@@ -90,45 +90,30 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA3")
-            .field(
-                "dis_download_mode",
-                &format_args!("{}", self.dis_download_mode().bit()),
-            )
-            .field(
-                "dis_direct_boot",
-                &format_args!("{}", self.dis_direct_boot().bit()),
-            )
+            .field("dis_download_mode", &self.dis_download_mode().bit())
+            .field("dis_direct_boot", &self.dis_direct_boot().bit())
             .field(
                 "dis_usb_serial_jtag_rom_print",
-                &format_args!("{}", self.dis_usb_serial_jtag_rom_print().bit()),
+                &self.dis_usb_serial_jtag_rom_print().bit(),
             )
-            .field("lock_km_key", &format_args!("{}", self.lock_km_key().bit()))
+            .field("lock_km_key", &self.lock_km_key().bit())
             .field(
                 "dis_usb_serial_jtag_download_mode",
-                &format_args!("{}", self.dis_usb_serial_jtag_download_mode().bit()),
+                &self.dis_usb_serial_jtag_download_mode().bit(),
             )
             .field(
                 "enable_security_download",
-                &format_args!("{}", self.enable_security_download().bit()),
+                &self.enable_security_download().bit(),
             )
-            .field(
-                "uart_print_control",
-                &format_args!("{}", self.uart_print_control().bits()),
-            )
-            .field(
-                "force_send_resume",
-                &format_args!("{}", self.force_send_resume().bit()),
-            )
-            .field(
-                "secure_version",
-                &format_args!("{}", self.secure_version().bits()),
-            )
+            .field("uart_print_control", &self.uart_print_control().bits())
+            .field("force_send_resume", &self.force_send_resume().bit())
+            .field("secure_version", &self.secure_version().bits())
             .field(
                 "secure_boot_disable_fast_wake",
-                &format_args!("{}", self.secure_boot_disable_fast_wake().bit()),
+                &self.secure_boot_disable_fast_wake().bit(),
             )
-            .field("hys_en_pad", &format_args!("{}", self.hys_en_pad().bit()))
-            .field("dcdc_vset", &format_args!("{}", self.dcdc_vset().bits()))
+            .field("hys_en_pad", &self.hys_en_pad().bit())
+            .field("dcdc_vset", &self.dcdc_vset().bits())
             .finish()
     }
 }

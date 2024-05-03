@@ -36,19 +36,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTSTATUS1")
             .field(
                 "ch1_ecc_prot_chmem_correrr_intstat",
-                &format_args!("{}", self.ch1_ecc_prot_chmem_correrr_intstat().bit()),
+                &self.ch1_ecc_prot_chmem_correrr_intstat().bit(),
             )
             .field(
                 "ch1_ecc_prot_chmem_uncorrerr_intstat",
-                &format_args!("{}", self.ch1_ecc_prot_chmem_uncorrerr_intstat().bit()),
+                &self.ch1_ecc_prot_chmem_uncorrerr_intstat().bit(),
             )
             .field(
                 "ch1_ecc_prot_uidmem_correrr_intstat",
-                &format_args!("{}", self.ch1_ecc_prot_uidmem_correrr_intstat().bit()),
+                &self.ch1_ecc_prot_uidmem_correrr_intstat().bit(),
             )
             .field(
                 "ch1_ecc_prot_uidmem_uncorrerr_intstat",
-                &format_args!("{}", self.ch1_ecc_prot_uidmem_uncorrerr_intstat().bit()),
+                &self.ch1_ecc_prot_uidmem_uncorrerr_intstat().bit(),
             )
             .finish()
     }

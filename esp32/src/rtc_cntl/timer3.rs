@@ -44,21 +44,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER3")
-            .field(
-                "wifi_wait_timer",
-                &format_args!("{}", self.wifi_wait_timer().bits()),
-            )
-            .field(
-                "wifi_powerup_timer",
-                &format_args!("{}", self.wifi_powerup_timer().bits()),
-            )
-            .field(
-                "rom_ram_wait_timer",
-                &format_args!("{}", self.rom_ram_wait_timer().bits()),
-            )
+            .field("wifi_wait_timer", &self.wifi_wait_timer().bits())
+            .field("wifi_powerup_timer", &self.wifi_powerup_timer().bits())
+            .field("rom_ram_wait_timer", &self.rom_ram_wait_timer().bits())
             .field(
                 "rom_ram_powerup_timer",
-                &format_args!("{}", self.rom_ram_powerup_timer().bits()),
+                &self.rom_ram_powerup_timer().bits(),
             )
             .finish()
     }

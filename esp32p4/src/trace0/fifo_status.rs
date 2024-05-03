@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_STATUS")
-            .field("fifo_empty", &format_args!("{}", self.fifo_empty().bit()))
-            .field(
-                "work_status",
-                &format_args!("{}", self.work_status().bits()),
-            )
+            .field("fifo_empty", &self.fifo_empty().bit())
+            .field("work_status", &self.work_status().bits())
             .finish()
     }
 }

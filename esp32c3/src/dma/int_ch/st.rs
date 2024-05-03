@@ -97,28 +97,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ST")
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "out_dscr_err",
-                &format_args!("{}", self.out_dscr_err().bit()),
-            )
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
-            .field("infifo_ovf", &format_args!("{}", self.infifo_ovf().bit()))
-            .field("infifo_udf", &format_args!("{}", self.infifo_udf().bit()))
-            .field("outfifo_ovf", &format_args!("{}", self.outfifo_ovf().bit()))
-            .field("outfifo_udf", &format_args!("{}", self.outfifo_udf().bit()))
+            .field("in_done", &self.in_done().bit())
+            .field("in_suc_eof", &self.in_suc_eof().bit())
+            .field("in_err_eof", &self.in_err_eof().bit())
+            .field("out_done", &self.out_done().bit())
+            .field("out_eof", &self.out_eof().bit())
+            .field("in_dscr_err", &self.in_dscr_err().bit())
+            .field("out_dscr_err", &self.out_dscr_err().bit())
+            .field("in_dscr_empty", &self.in_dscr_empty().bit())
+            .field("out_total_eof", &self.out_total_eof().bit())
+            .field("infifo_ovf", &self.infifo_ovf().bit())
+            .field("infifo_udf", &self.infifo_udf().bit())
+            .field("outfifo_ovf", &self.outfifo_ovf().bit())
+            .field("outfifo_udf", &self.outfifo_udf().bit())
             .finish()
     }
 }

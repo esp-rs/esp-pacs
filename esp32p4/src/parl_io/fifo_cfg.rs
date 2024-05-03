@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_CFG")
-            .field(
-                "tx_fifo_srst",
-                &format_args!("{}", self.tx_fifo_srst().bit()),
-            )
-            .field(
-                "rx_fifo_srst",
-                &format_args!("{}", self.rx_fifo_srst().bit()),
-            )
+            .field("tx_fifo_srst", &self.tx_fifo_srst().bit())
+            .field("rx_fifo_srst", &self.rx_fifo_srst().bit())
             .finish()
     }
 }

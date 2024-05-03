@@ -107,50 +107,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL01")
-            .field(
-                "emac_rx_clk_div_num",
-                &format_args!("{}", self.emac_rx_clk_div_num().bits()),
-            )
-            .field(
-                "emac_tx_clk_src_sel",
-                &format_args!("{}", self.emac_tx_clk_src_sel().bit()),
-            )
-            .field(
-                "emac_tx_clk_en",
-                &format_args!("{}", self.emac_tx_clk_en().bit()),
-            )
-            .field(
-                "emac_tx_clk_div_num",
-                &format_args!("{}", self.emac_tx_clk_div_num().bits()),
-            )
+            .field("emac_rx_clk_div_num", &self.emac_rx_clk_div_num().bits())
+            .field("emac_tx_clk_src_sel", &self.emac_tx_clk_src_sel().bit())
+            .field("emac_tx_clk_en", &self.emac_tx_clk_en().bit())
+            .field("emac_tx_clk_div_num", &self.emac_tx_clk_div_num().bits())
             .field(
                 "emac_ptp_ref_clk_src_sel",
-                &format_args!("{}", self.emac_ptp_ref_clk_src_sel().bit()),
+                &self.emac_ptp_ref_clk_src_sel().bit(),
             )
-            .field(
-                "emac_ptp_ref_clk_en",
-                &format_args!("{}", self.emac_ptp_ref_clk_en().bit()),
-            )
-            .field(
-                "emac_unused0_clk_en",
-                &format_args!("{}", self.emac_unused0_clk_en().bit()),
-            )
-            .field(
-                "emac_unused1_clk_en",
-                &format_args!("{}", self.emac_unused1_clk_en().bit()),
-            )
-            .field(
-                "sdio_hs_mode",
-                &format_args!("{}", self.sdio_hs_mode().bit()),
-            )
-            .field(
-                "sdio_ls_clk_src_sel",
-                &format_args!("{}", self.sdio_ls_clk_src_sel().bit()),
-            )
-            .field(
-                "sdio_ls_clk_en",
-                &format_args!("{}", self.sdio_ls_clk_en().bit()),
-            )
+            .field("emac_ptp_ref_clk_en", &self.emac_ptp_ref_clk_en().bit())
+            .field("emac_unused0_clk_en", &self.emac_unused0_clk_en().bit())
+            .field("emac_unused1_clk_en", &self.emac_unused1_clk_en().bit())
+            .field("sdio_hs_mode", &self.sdio_hs_mode().bit())
+            .field("sdio_ls_clk_src_sel", &self.sdio_ls_clk_src_sel().bit())
+            .field("sdio_ls_clk_en", &self.sdio_ls_clk_en().bit())
             .finish()
     }
 }

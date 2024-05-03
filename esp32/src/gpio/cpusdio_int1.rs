@@ -60,24 +60,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPUSDIO_INT1")
-            .field("sdio_int_h", &format_args!("{}", self.sdio_int_h().bits()))
-            .field(
-                "pin_pad_driver",
-                &format_args!("{}", self.pin_pad_driver().bit()),
-            )
-            .field(
-                "pin_int_type",
-                &format_args!("{}", self.pin_int_type().bits()),
-            )
-            .field(
-                "pin_wakeup_enable",
-                &format_args!("{}", self.pin_wakeup_enable().bit()),
-            )
-            .field("pin_config", &format_args!("{}", self.pin_config().bits()))
-            .field(
-                "pin_int_ena",
-                &format_args!("{}", self.pin_int_ena().bits()),
-            )
+            .field("sdio_int_h", &self.sdio_int_h().bits())
+            .field("pin_pad_driver", &self.pin_pad_driver().bit())
+            .field("pin_int_type", &self.pin_int_type().bits())
+            .field("pin_wakeup_enable", &self.pin_wakeup_enable().bit())
+            .field("pin_config", &self.pin_config().bits())
+            .field("pin_int_ena", &self.pin_int_ena().bits())
             .finish()
     }
 }

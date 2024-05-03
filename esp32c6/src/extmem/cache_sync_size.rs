@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SYNC_SIZE")
-            .field(
-                "cache_sync_size",
-                &format_args!("{}", self.cache_sync_size().bits()),
-            )
+            .field("cache_sync_size", &self.cache_sync_size().bits())
             .finish()
     }
 }

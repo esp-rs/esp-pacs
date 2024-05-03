@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("I3C_MST_INT_MAP")
             .field(
                 "core0_i3c_mst_int_map",
-                &format_args!("{}", self.core0_i3c_mst_int_map().bits()),
+                &self.core0_i3c_mst_int_map().bits(),
             )
             .finish()
     }

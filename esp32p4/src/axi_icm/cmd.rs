@@ -69,34 +69,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field(
-                "icm_reg_axi_cmd",
-                &format_args!("{}", self.icm_reg_axi_cmd().bits()),
-            )
-            .field(
-                "icm_reg_rd_wr_chan",
-                &format_args!("{}", self.icm_reg_rd_wr_chan().bit()),
-            )
+            .field("icm_reg_axi_cmd", &self.icm_reg_axi_cmd().bits())
+            .field("icm_reg_rd_wr_chan", &self.icm_reg_rd_wr_chan().bit())
             .field(
                 "icm_reg_axi_master_port",
-                &format_args!("{}", self.icm_reg_axi_master_port().bits()),
+                &self.icm_reg_axi_master_port().bits(),
             )
-            .field(
-                "icm_reg_axi_err_bit",
-                &format_args!("{}", self.icm_reg_axi_err_bit().bit()),
-            )
+            .field("icm_reg_axi_err_bit", &self.icm_reg_axi_err_bit().bit())
             .field(
                 "icm_reg_axi_soft_reset_bit",
-                &format_args!("{}", self.icm_reg_axi_soft_reset_bit().bit()),
+                &self.icm_reg_axi_soft_reset_bit().bit(),
             )
-            .field(
-                "icm_reg_axi_rd_wr_cmd",
-                &format_args!("{}", self.icm_reg_axi_rd_wr_cmd().bit()),
-            )
-            .field(
-                "icm_reg_axi_cmd_en",
-                &format_args!("{}", self.icm_reg_axi_cmd_en().bit()),
-            )
+            .field("icm_reg_axi_rd_wr_cmd", &self.icm_reg_axi_rd_wr_cmd().bit())
+            .field("icm_reg_axi_cmd_en", &self.icm_reg_axi_cmd_en().bit())
             .finish()
     }
 }

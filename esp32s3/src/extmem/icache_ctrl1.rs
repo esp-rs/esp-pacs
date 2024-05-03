@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_CTRL1")
-            .field(
-                "icache_shut_core0_bus",
-                &format_args!("{}", self.icache_shut_core0_bus().bit()),
-            )
-            .field(
-                "icache_shut_core1_bus",
-                &format_args!("{}", self.icache_shut_core1_bus().bit()),
-            )
+            .field("icache_shut_core0_bus", &self.icache_shut_core0_bus().bit())
+            .field("icache_shut_core1_bus", &self.icache_shut_core1_bus().bit())
             .finish()
     }
 }

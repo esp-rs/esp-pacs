@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_STMP_CFG")
-            .field("a_upmethod", &format_args!("{}", self.a_upmethod().bits()))
-            .field("b_upmethod", &format_args!("{}", self.b_upmethod().bits()))
-            .field("a_shdw_full", &format_args!("{}", self.a_shdw_full().bit()))
-            .field("b_shdw_full", &format_args!("{}", self.b_shdw_full().bit()))
+            .field("a_upmethod", &self.a_upmethod().bits())
+            .field("b_upmethod", &self.b_upmethod().bits())
+            .field("a_shdw_full", &self.a_shdw_full().bit())
+            .field("b_shdw_full", &self.b_shdw_full().bit())
             .finish()
     }
 }

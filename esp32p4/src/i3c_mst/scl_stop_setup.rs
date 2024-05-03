@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_STOP_SETUP")
             .field(
                 "reg_scl_stop_setup_time",
-                &format_args!("{}", self.reg_scl_stop_setup_time().bits()),
+                &self.reg_scl_stop_setup_time().bits(),
             )
             .finish()
     }

@@ -53,23 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C_SCLK_CONF")
-            .field(
-                "i2c_sclk_div_a",
-                &format_args!("{}", self.i2c_sclk_div_a().bits()),
-            )
-            .field(
-                "i2c_sclk_div_b",
-                &format_args!("{}", self.i2c_sclk_div_b().bits()),
-            )
-            .field(
-                "i2c_sclk_div_num",
-                &format_args!("{}", self.i2c_sclk_div_num().bits()),
-            )
-            .field(
-                "i2c_sclk_sel",
-                &format_args!("{}", self.i2c_sclk_sel().bit()),
-            )
-            .field("i2c_sclk_en", &format_args!("{}", self.i2c_sclk_en().bit()))
+            .field("i2c_sclk_div_a", &self.i2c_sclk_div_a().bits())
+            .field("i2c_sclk_div_b", &self.i2c_sclk_div_b().bits())
+            .field("i2c_sclk_div_num", &self.i2c_sclk_div_num().bits())
+            .field("i2c_sclk_sel", &self.i2c_sclk_sel().bit())
+            .field("i2c_sclk_en", &self.i2c_sclk_en().bit())
             .finish()
     }
 }

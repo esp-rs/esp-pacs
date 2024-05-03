@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_TG_WDT_LEVEL_INT_MAP")
             .field(
                 "pro_tg_wdt_level_int_map",
-                &format_args!("{}", self.pro_tg_wdt_level_int_map().bits()),
+                &self.pro_tg_wdt_level_int_map().bits(),
             )
             .finish()
     }

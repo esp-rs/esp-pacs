@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTSIZ")
-            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
-            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
+            .field("xfersize", &self.xfersize().bits())
+            .field("pktcnt", &self.pktcnt().bits())
             .finish()
     }
 }

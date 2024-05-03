@@ -62,30 +62,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_HPMEM_CNTL")
-            .field(
-                "force_hp_mem_reset",
-                &format_args!("{}", self.force_hp_mem_reset().bit()),
-            )
-            .field(
-                "force_hp_mem_iso",
-                &format_args!("{}", self.force_hp_mem_iso().bit()),
-            )
-            .field(
-                "force_hp_mem_pu",
-                &format_args!("{}", self.force_hp_mem_pu().bit()),
-            )
-            .field(
-                "force_hp_mem_no_reset",
-                &format_args!("{}", self.force_hp_mem_no_reset().bit()),
-            )
-            .field(
-                "force_hp_mem_no_iso",
-                &format_args!("{}", self.force_hp_mem_no_iso().bit()),
-            )
-            .field(
-                "force_hp_mem_pd",
-                &format_args!("{}", self.force_hp_mem_pd().bit()),
-            )
+            .field("force_hp_mem_reset", &self.force_hp_mem_reset().bit())
+            .field("force_hp_mem_iso", &self.force_hp_mem_iso().bit())
+            .field("force_hp_mem_pu", &self.force_hp_mem_pu().bit())
+            .field("force_hp_mem_no_reset", &self.force_hp_mem_no_reset().bit())
+            .field("force_hp_mem_no_iso", &self.force_hp_mem_no_iso().bit())
+            .field("force_hp_mem_pd", &self.force_hp_mem_pd().bit())
             .finish()
     }
 }

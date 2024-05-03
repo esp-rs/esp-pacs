@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field(
-                "exception_status",
-                &format_args!("{}", self.exception_status().bits()),
-            )
+            .field("exception_status", &self.exception_status().bits())
             .finish()
     }
 }

@@ -88,46 +88,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_PLL_CTRL0")
-            .field(
-                "plla_cal_end",
-                &format_args!("{}", self.plla_cal_end().bit()),
-            )
-            .field(
-                "plla_cal_stop",
-                &format_args!("{}", self.plla_cal_stop().bit()),
-            )
-            .field(
-                "cpu_pll_cal_end",
-                &format_args!("{}", self.cpu_pll_cal_end().bit()),
-            )
-            .field(
-                "cpu_pll_cal_stop",
-                &format_args!("{}", self.cpu_pll_cal_stop().bit()),
-            )
-            .field(
-                "sdio_pll_cal_end",
-                &format_args!("{}", self.sdio_pll_cal_end().bit()),
-            )
-            .field(
-                "sdio_pll_cal_stop",
-                &format_args!("{}", self.sdio_pll_cal_stop().bit()),
-            )
-            .field(
-                "sys_pll_cal_end",
-                &format_args!("{}", self.sys_pll_cal_end().bit()),
-            )
-            .field(
-                "sys_pll_cal_stop",
-                &format_args!("{}", self.sys_pll_cal_stop().bit()),
-            )
-            .field(
-                "mspi_cal_end",
-                &format_args!("{}", self.mspi_cal_end().bit()),
-            )
-            .field(
-                "mspi_cal_stop",
-                &format_args!("{}", self.mspi_cal_stop().bit()),
-            )
+            .field("plla_cal_end", &self.plla_cal_end().bit())
+            .field("plla_cal_stop", &self.plla_cal_stop().bit())
+            .field("cpu_pll_cal_end", &self.cpu_pll_cal_end().bit())
+            .field("cpu_pll_cal_stop", &self.cpu_pll_cal_stop().bit())
+            .field("sdio_pll_cal_end", &self.sdio_pll_cal_end().bit())
+            .field("sdio_pll_cal_stop", &self.sdio_pll_cal_stop().bit())
+            .field("sys_pll_cal_end", &self.sys_pll_cal_end().bit())
+            .field("sys_pll_cal_stop", &self.sys_pll_cal_stop().bit())
+            .field("mspi_cal_end", &self.mspi_cal_end().bit())
+            .field("mspi_cal_stop", &self.mspi_cal_stop().bit())
             .finish()
     }
 }

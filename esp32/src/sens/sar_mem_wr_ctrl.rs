@@ -28,14 +28,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_MEM_WR_CTRL")
-            .field(
-                "mem_wr_addr_init",
-                &format_args!("{}", self.mem_wr_addr_init().bits()),
-            )
-            .field(
-                "mem_wr_addr_size",
-                &format_args!("{}", self.mem_wr_addr_size().bits()),
-            )
+            .field("mem_wr_addr_init", &self.mem_wr_addr_init().bits())
+            .field("mem_wr_addr_size", &self.mem_wr_addr_size().bits())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_TIMERGROUP")
             .field(
                 "timergroup_access_grant_config",
-                &format_args!("{}", self.timergroup_access_grant_config().bits()),
+                &self.timergroup_access_grant_config().bits(),
             )
             .finish()
     }

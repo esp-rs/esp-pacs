@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_VECBASE_OVERRIDE_2")
             .field(
                 "core_1_vecbase_override_world1_value",
-                &format_args!("{}", self.core_1_vecbase_override_world1_value().bits()),
+                &self.core_1_vecbase_override_world1_value().bits(),
             )
             .finish()
     }

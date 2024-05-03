@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWR_STATE")
-            .field(
-                "backup_st_state",
-                &format_args!("{}", self.backup_st_state().bits()),
-            )
-            .field(
-                "lp_pwr_st_state",
-                &format_args!("{}", self.lp_pwr_st_state().bits()),
-            )
-            .field(
-                "hp_pwr_st_state",
-                &format_args!("{}", self.hp_pwr_st_state().bits()),
-            )
+            .field("backup_st_state", &self.backup_st_state().bits())
+            .field("lp_pwr_st_state", &self.lp_pwr_st_state().bits())
+            .field("hp_pwr_st_state", &self.hp_pwr_st_state().bits())
             .finish()
     }
 }

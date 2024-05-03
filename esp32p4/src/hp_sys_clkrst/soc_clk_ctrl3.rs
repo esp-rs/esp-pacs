@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOC_CLK_CTRL3")
-            .field(
-                "ledc_apb_clk_en",
-                &format_args!("{}", self.ledc_apb_clk_en().bit()),
-            )
-            .field(
-                "lcdcam_apb_clk_en",
-                &format_args!("{}", self.lcdcam_apb_clk_en().bit()),
-            )
-            .field(
-                "etm_apb_clk_en",
-                &format_args!("{}", self.etm_apb_clk_en().bit()),
-            )
-            .field(
-                "iomux_apb_clk_en",
-                &format_args!("{}", self.iomux_apb_clk_en().bit()),
-            )
+            .field("ledc_apb_clk_en", &self.ledc_apb_clk_en().bit())
+            .field("lcdcam_apb_clk_en", &self.lcdcam_apb_clk_en().bit())
+            .field("etm_apb_clk_en", &self.etm_apb_clk_en().bit())
+            .field("iomux_apb_clk_en", &self.iomux_apb_clk_en().bit())
             .finish()
     }
 }

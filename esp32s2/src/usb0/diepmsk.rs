@@ -98,37 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPMSK")
-            .field(
-                "di_xfercomplmsk",
-                &format_args!("{}", self.di_xfercomplmsk().bit()),
-            )
-            .field(
-                "di_epdisbldmsk",
-                &format_args!("{}", self.di_epdisbldmsk().bit()),
-            )
-            .field("di_ahbermsk", &format_args!("{}", self.di_ahbermsk().bit()))
-            .field("timeoutmsk", &format_args!("{}", self.timeoutmsk().bit()))
-            .field(
-                "intkntxfempmsk",
-                &format_args!("{}", self.intkntxfempmsk().bit()),
-            )
-            .field(
-                "intknepmismsk",
-                &format_args!("{}", self.intknepmismsk().bit()),
-            )
-            .field(
-                "inepnakeffmsk",
-                &format_args!("{}", self.inepnakeffmsk().bit()),
-            )
-            .field(
-                "txfifoundrnmsk",
-                &format_args!("{}", self.txfifoundrnmsk().bit()),
-            )
-            .field(
-                "bnainintrmsk",
-                &format_args!("{}", self.bnainintrmsk().bit()),
-            )
-            .field("di_nakmsk", &format_args!("{}", self.di_nakmsk().bit()))
+            .field("di_xfercomplmsk", &self.di_xfercomplmsk().bit())
+            .field("di_epdisbldmsk", &self.di_epdisbldmsk().bit())
+            .field("di_ahbermsk", &self.di_ahbermsk().bit())
+            .field("timeoutmsk", &self.timeoutmsk().bit())
+            .field("intkntxfempmsk", &self.intkntxfempmsk().bit())
+            .field("intknepmismsk", &self.intknepmismsk().bit())
+            .field("inepnakeffmsk", &self.inepnakeffmsk().bit())
+            .field("txfifoundrnmsk", &self.txfifoundrnmsk().bit())
+            .field("bnainintrmsk", &self.bnainintrmsk().bit())
+            .field("di_nakmsk", &self.di_nakmsk().bit())
             .finish()
     }
 }

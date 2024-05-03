@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOADHI")
-            .field("load_hi", &format_args!("{}", self.load_hi().bits()))
+            .field("load_hi", &self.load_hi().bits())
             .finish()
     }
 }

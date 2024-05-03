@@ -44,19 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAMISSEDFR")
-            .field("missed_fc", &format_args!("{}", self.missed_fc().bits()))
-            .field(
-                "overflow_bmfc",
-                &format_args!("{}", self.overflow_bmfc().bit()),
-            )
-            .field(
-                "overflow_fc",
-                &format_args!("{}", self.overflow_fc().bits()),
-            )
-            .field(
-                "overflow_bfoc",
-                &format_args!("{}", self.overflow_bfoc().bit()),
-            )
+            .field("missed_fc", &self.missed_fc().bits())
+            .field("overflow_bmfc", &self.overflow_bmfc().bit())
+            .field("overflow_fc", &self.overflow_fc().bits())
+            .field("overflow_bfoc", &self.overflow_bfoc().bit())
             .finish()
     }
 }

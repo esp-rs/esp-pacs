@@ -55,34 +55,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUTFIFO_STATUS")
-            .field(
-                "outfifo_full",
-                &format_args!("{}", self.outfifo_full().bit()),
-            )
-            .field(
-                "outfifo_empty",
-                &format_args!("{}", self.outfifo_empty().bit()),
-            )
-            .field(
-                "outfifo_cnt",
-                &format_args!("{}", self.outfifo_cnt().bits()),
-            )
-            .field(
-                "out_remain_under_1b",
-                &format_args!("{}", self.out_remain_under_1b().bit()),
-            )
-            .field(
-                "out_remain_under_2b",
-                &format_args!("{}", self.out_remain_under_2b().bit()),
-            )
-            .field(
-                "out_remain_under_3b",
-                &format_args!("{}", self.out_remain_under_3b().bit()),
-            )
-            .field(
-                "out_remain_under_4b",
-                &format_args!("{}", self.out_remain_under_4b().bit()),
-            )
+            .field("outfifo_full", &self.outfifo_full().bit())
+            .field("outfifo_empty", &self.outfifo_empty().bit())
+            .field("outfifo_cnt", &self.outfifo_cnt().bits())
+            .field("out_remain_under_1b", &self.out_remain_under_1b().bit())
+            .field("out_remain_under_2b", &self.out_remain_under_2b().bit())
+            .field("out_remain_under_3b", &self.out_remain_under_3b().bit())
+            .field("out_remain_under_4b", &self.out_remain_under_4b().bit())
             .finish()
     }
 }

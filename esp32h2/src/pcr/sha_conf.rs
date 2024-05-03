@@ -33,9 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHA_CONF")
-            .field("sha_clk_en", &format_args!("{}", self.sha_clk_en().bit()))
-            .field("sha_rst_en", &format_args!("{}", self.sha_rst_en().bit()))
-            .field("sha_ready", &format_args!("{}", self.sha_ready().bit()))
+            .field("sha_clk_en", &self.sha_clk_en().bit())
+            .field("sha_rst_en", &self.sha_rst_en().bit())
+            .field("sha_ready", &self.sha_ready().bit())
             .finish()
     }
 }

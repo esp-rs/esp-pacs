@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLC_CONF2")
-            .field(
-                "cvsd_seg_mod",
-                &format_args!("{}", self.cvsd_seg_mod().bits()),
-            )
-            .field("min_period", &format_args!("{}", self.min_period().bits()))
+            .field("cvsd_seg_mod", &self.cvsd_seg_mod().bits())
+            .field("min_period", &self.min_period().bits())
             .finish()
     }
 }

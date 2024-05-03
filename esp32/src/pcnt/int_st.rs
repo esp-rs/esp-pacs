@@ -63,38 +63,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "cnt_thr_event_u0",
-                &format_args!("{}", self.cnt_thr_event_u0().bit()),
-            )
-            .field(
-                "cnt_thr_event_u1",
-                &format_args!("{}", self.cnt_thr_event_u1().bit()),
-            )
-            .field(
-                "cnt_thr_event_u2",
-                &format_args!("{}", self.cnt_thr_event_u2().bit()),
-            )
-            .field(
-                "cnt_thr_event_u3",
-                &format_args!("{}", self.cnt_thr_event_u3().bit()),
-            )
-            .field(
-                "cnt_thr_event_u4",
-                &format_args!("{}", self.cnt_thr_event_u4().bit()),
-            )
-            .field(
-                "cnt_thr_event_u5",
-                &format_args!("{}", self.cnt_thr_event_u5().bit()),
-            )
-            .field(
-                "cnt_thr_event_u6",
-                &format_args!("{}", self.cnt_thr_event_u6().bit()),
-            )
-            .field(
-                "cnt_thr_event_u7",
-                &format_args!("{}", self.cnt_thr_event_u7().bit()),
-            )
+            .field("cnt_thr_event_u0", &self.cnt_thr_event_u0().bit())
+            .field("cnt_thr_event_u1", &self.cnt_thr_event_u1().bit())
+            .field("cnt_thr_event_u2", &self.cnt_thr_event_u2().bit())
+            .field("cnt_thr_event_u3", &self.cnt_thr_event_u3().bit())
+            .field("cnt_thr_event_u4", &self.cnt_thr_event_u4().bit())
+            .field("cnt_thr_event_u5", &self.cnt_thr_event_u5().bit())
+            .field("cnt_thr_event_u6", &self.cnt_thr_event_u6().bit())
+            .field("cnt_thr_event_u7", &self.cnt_thr_event_u7().bit())
             .finish()
     }
 }

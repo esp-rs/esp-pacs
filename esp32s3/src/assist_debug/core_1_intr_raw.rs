@@ -92,51 +92,51 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_INTR_RAW")
             .field(
                 "core_1_area_dram0_0_rd_raw",
-                &format_args!("{}", self.core_1_area_dram0_0_rd_raw().bit()),
+                &self.core_1_area_dram0_0_rd_raw().bit(),
             )
             .field(
                 "core_1_area_dram0_0_wr_raw",
-                &format_args!("{}", self.core_1_area_dram0_0_wr_raw().bit()),
+                &self.core_1_area_dram0_0_wr_raw().bit(),
             )
             .field(
                 "core_1_area_dram0_1_rd_raw",
-                &format_args!("{}", self.core_1_area_dram0_1_rd_raw().bit()),
+                &self.core_1_area_dram0_1_rd_raw().bit(),
             )
             .field(
                 "core_1_area_dram0_1_wr_raw",
-                &format_args!("{}", self.core_1_area_dram0_1_wr_raw().bit()),
+                &self.core_1_area_dram0_1_wr_raw().bit(),
             )
             .field(
                 "core_1_area_pif_0_rd_raw",
-                &format_args!("{}", self.core_1_area_pif_0_rd_raw().bit()),
+                &self.core_1_area_pif_0_rd_raw().bit(),
             )
             .field(
                 "core_1_area_pif_0_wr_raw",
-                &format_args!("{}", self.core_1_area_pif_0_wr_raw().bit()),
+                &self.core_1_area_pif_0_wr_raw().bit(),
             )
             .field(
                 "core_1_area_pif_1_rd_raw",
-                &format_args!("{}", self.core_1_area_pif_1_rd_raw().bit()),
+                &self.core_1_area_pif_1_rd_raw().bit(),
             )
             .field(
                 "core_1_area_pif_1_wr_raw",
-                &format_args!("{}", self.core_1_area_pif_1_wr_raw().bit()),
+                &self.core_1_area_pif_1_wr_raw().bit(),
             )
             .field(
                 "core_1_sp_spill_min_raw",
-                &format_args!("{}", self.core_1_sp_spill_min_raw().bit()),
+                &self.core_1_sp_spill_min_raw().bit(),
             )
             .field(
                 "core_1_sp_spill_max_raw",
-                &format_args!("{}", self.core_1_sp_spill_max_raw().bit()),
+                &self.core_1_sp_spill_max_raw().bit(),
             )
             .field(
                 "core_1_iram0_exception_monitor_raw",
-                &format_args!("{}", self.core_1_iram0_exception_monitor_raw().bit()),
+                &self.core_1_iram0_exception_monitor_raw().bit(),
             )
             .field(
                 "core_1_dram0_exception_monitor_raw",
-                &format_args!("{}", self.core_1_dram0_exception_monitor_raw().bit()),
+                &self.core_1_dram0_exception_monitor_raw().bit(),
             )
             .finish()
     }

@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("IMMU_PAGE_MODE")
             .field(
                 "internal_sram_immu_ena",
-                &format_args!("{}", self.internal_sram_immu_ena().bit()),
+                &self.internal_sram_immu_ena().bit(),
             )
-            .field(
-                "immu_page_mode",
-                &format_args!("{}", self.immu_page_mode().bits()),
-            )
+            .field("immu_page_mode", &self.immu_page_mode().bits())
             .finish()
     }
 }

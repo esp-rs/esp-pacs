@@ -100,43 +100,43 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST7")
             .field(
                 "dma2d_evt_in_suc_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_in_suc_eof_ch1_st().bit()),
+                &self.dma2d_evt_in_suc_eof_ch1_st().bit(),
             )
             .field(
                 "dma2d_evt_out_done_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch0_st().bit()),
+                &self.dma2d_evt_out_done_ch0_st().bit(),
             )
             .field(
                 "dma2d_evt_out_done_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch1_st().bit()),
+                &self.dma2d_evt_out_done_ch1_st().bit(),
             )
             .field(
                 "dma2d_evt_out_done_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch2_st().bit()),
+                &self.dma2d_evt_out_done_ch2_st().bit(),
             )
             .field(
                 "dma2d_evt_out_eof_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch0_st().bit()),
+                &self.dma2d_evt_out_eof_ch0_st().bit(),
             )
             .field(
                 "dma2d_evt_out_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch1_st().bit()),
+                &self.dma2d_evt_out_eof_ch1_st().bit(),
             )
             .field(
                 "dma2d_evt_out_eof_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch2_st().bit()),
+                &self.dma2d_evt_out_eof_ch2_st().bit(),
             )
             .field(
                 "dma2d_evt_out_total_eof_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch0_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch0_st().bit(),
             )
             .field(
                 "dma2d_evt_out_total_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch1_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch1_st().bit(),
             )
             .field(
                 "dma2d_evt_out_total_eof_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch2_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch2_st().bit(),
             )
             .finish()
     }

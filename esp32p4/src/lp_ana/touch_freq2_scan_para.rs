@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_FREQ2_SCAN_PARA")
-            .field(
-                "touch_freq2_dcap_lpf",
-                &format_args!("{}", self.touch_freq2_dcap_lpf().bits()),
-            )
-            .field(
-                "touch_freq2_dres_lpf",
-                &format_args!("{}", self.touch_freq2_dres_lpf().bits()),
-            )
-            .field(
-                "touch_freq2_drv_ls",
-                &format_args!("{}", self.touch_freq2_drv_ls().bits()),
-            )
-            .field(
-                "touch_freq2_drv_hs",
-                &format_args!("{}", self.touch_freq2_drv_hs().bits()),
-            )
-            .field(
-                "touch_freq2_dbias",
-                &format_args!("{}", self.touch_freq2_dbias().bits()),
-            )
+            .field("touch_freq2_dcap_lpf", &self.touch_freq2_dcap_lpf().bits())
+            .field("touch_freq2_dres_lpf", &self.touch_freq2_dres_lpf().bits())
+            .field("touch_freq2_drv_ls", &self.touch_freq2_drv_ls().bits())
+            .field("touch_freq2_drv_hs", &self.touch_freq2_drv_hs().bits())
+            .field("touch_freq2_dbias", &self.touch_freq2_dbias().bits())
             .finish()
     }
 }

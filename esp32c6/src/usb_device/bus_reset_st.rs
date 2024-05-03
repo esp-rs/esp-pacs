@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_RESET_ST")
-            .field(
-                "usb_bus_reset_st",
-                &format_args!("{}", self.usb_bus_reset_st().bit()),
-            )
+            .field("usb_bus_reset_st", &self.usb_bus_reset_st().bit())
             .finish()
     }
 }

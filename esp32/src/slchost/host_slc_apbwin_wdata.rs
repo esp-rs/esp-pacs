@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLC_APBWIN_WDATA")
             .field(
                 "host_slc_apbwin_wdata",
-                &format_args!("{}", self.host_slc_apbwin_wdata().bits()),
+                &self.host_slc_apbwin_wdata().bits(),
             )
             .finish()
     }

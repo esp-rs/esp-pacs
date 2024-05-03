@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_AMP_CTRL1")
-            .field(
-                "sar_amp_wait1",
-                &format_args!("{}", self.sar_amp_wait1().bits()),
-            )
-            .field(
-                "sar_amp_wait2",
-                &format_args!("{}", self.sar_amp_wait2().bits()),
-            )
+            .field("sar_amp_wait1", &self.sar_amp_wait1().bits())
+            .field("sar_amp_wait2", &self.sar_amp_wait2().bits())
             .finish()
     }
 }

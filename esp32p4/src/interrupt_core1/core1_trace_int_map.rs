@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE1_TRACE_INT_MAP")
             .field(
                 "core1_core1_trace_int_map",
-                &format_args!("{}", self.core1_core1_trace_int_map().bits()),
+                &self.core1_core1_trace_int_map().bits(),
             )
             .finish()
     }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKDIV")
-            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
-            .field("frag", &format_args!("{}", self.frag().bits()))
+            .field("clkdiv", &self.clkdiv().bits())
+            .field("frag", &self.frag().bits())
             .finish()
     }
 }

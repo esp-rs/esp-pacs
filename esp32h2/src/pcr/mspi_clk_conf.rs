@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MSPI_CLK_CONF")
-            .field(
-                "mspi_fast_div_num",
-                &format_args!("{}", self.mspi_fast_div_num().bits()),
-            )
+            .field("mspi_fast_div_num", &self.mspi_fast_div_num().bits())
             .finish()
     }
 }

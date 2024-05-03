@@ -98,46 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD7")
-            .field(
-                "reg_pad7_drv",
-                &format_args!("{}", self.reg_pad7_drv().bits()),
-            )
-            .field(
-                "reg_pad7_rde",
-                &format_args!("{}", self.reg_pad7_rde().bit()),
-            )
-            .field(
-                "reg_pad7_rue",
-                &format_args!("{}", self.reg_pad7_rue().bit()),
-            )
-            .field(
-                "reg_pad7_mux_sel",
-                &format_args!("{}", self.reg_pad7_mux_sel().bit()),
-            )
-            .field(
-                "reg_pad7_fun_sel",
-                &format_args!("{}", self.reg_pad7_fun_sel().bits()),
-            )
-            .field(
-                "reg_pad7_slp_sel",
-                &format_args!("{}", self.reg_pad7_slp_sel().bit()),
-            )
-            .field(
-                "reg_pad7_slp_ie",
-                &format_args!("{}", self.reg_pad7_slp_ie().bit()),
-            )
-            .field(
-                "reg_pad7_slp_oe",
-                &format_args!("{}", self.reg_pad7_slp_oe().bit()),
-            )
-            .field(
-                "reg_pad7_fun_ie",
-                &format_args!("{}", self.reg_pad7_fun_ie().bit()),
-            )
-            .field(
-                "reg_pad7_filter_en",
-                &format_args!("{}", self.reg_pad7_filter_en().bit()),
-            )
+            .field("reg_pad7_drv", &self.reg_pad7_drv().bits())
+            .field("reg_pad7_rde", &self.reg_pad7_rde().bit())
+            .field("reg_pad7_rue", &self.reg_pad7_rue().bit())
+            .field("reg_pad7_mux_sel", &self.reg_pad7_mux_sel().bit())
+            .field("reg_pad7_fun_sel", &self.reg_pad7_fun_sel().bits())
+            .field("reg_pad7_slp_sel", &self.reg_pad7_slp_sel().bit())
+            .field("reg_pad7_slp_ie", &self.reg_pad7_slp_ie().bit())
+            .field("reg_pad7_slp_oe", &self.reg_pad7_slp_oe().bit())
+            .field("reg_pad7_fun_ie", &self.reg_pad7_fun_ie().bit())
+            .field("reg_pad7_filter_en", &self.reg_pad7_filter_en().bit())
             .finish()
     }
 }

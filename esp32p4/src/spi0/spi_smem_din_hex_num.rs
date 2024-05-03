@@ -89,41 +89,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_DIN_HEX_NUM")
-            .field(
-                "spi_smem_din08_num",
-                &format_args!("{}", self.spi_smem_din08_num().bits()),
-            )
-            .field(
-                "spi_smem_din09_num",
-                &format_args!("{}", self.spi_smem_din09_num().bits()),
-            )
-            .field(
-                "spi_smem_din10_num",
-                &format_args!("{}", self.spi_smem_din10_num().bits()),
-            )
-            .field(
-                "spi_smem_din11_num",
-                &format_args!("{}", self.spi_smem_din11_num().bits()),
-            )
-            .field(
-                "spi_smem_din12_num",
-                &format_args!("{}", self.spi_smem_din12_num().bits()),
-            )
-            .field(
-                "spi_smem_din13_num",
-                &format_args!("{}", self.spi_smem_din13_num().bits()),
-            )
-            .field(
-                "spi_smem_din14_num",
-                &format_args!("{}", self.spi_smem_din14_num().bits()),
-            )
-            .field(
-                "spi_smem_din15_num",
-                &format_args!("{}", self.spi_smem_din15_num().bits()),
-            )
+            .field("spi_smem_din08_num", &self.spi_smem_din08_num().bits())
+            .field("spi_smem_din09_num", &self.spi_smem_din09_num().bits())
+            .field("spi_smem_din10_num", &self.spi_smem_din10_num().bits())
+            .field("spi_smem_din11_num", &self.spi_smem_din11_num().bits())
+            .field("spi_smem_din12_num", &self.spi_smem_din12_num().bits())
+            .field("spi_smem_din13_num", &self.spi_smem_din13_num().bits())
+            .field("spi_smem_din14_num", &self.spi_smem_din14_num().bits())
+            .field("spi_smem_din15_num", &self.spi_smem_din15_num().bits())
             .field(
                 "spi_smem_dins_hex_num",
-                &format_args!("{}", self.spi_smem_dins_hex_num().bits()),
+                &self.spi_smem_dins_hex_num().bits(),
             )
             .finish()
     }

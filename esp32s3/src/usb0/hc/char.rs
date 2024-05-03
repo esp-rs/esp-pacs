@@ -98,16 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHAR")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("epnum", &format_args!("{}", self.epnum().bits()))
-            .field("epdir", &format_args!("{}", self.epdir().bit()))
-            .field("lspddev", &format_args!("{}", self.lspddev().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("ec", &format_args!("{}", self.ec().bit()))
-            .field("devaddr", &format_args!("{}", self.devaddr().bits()))
-            .field("oddfrm", &format_args!("{}", self.oddfrm().bit()))
-            .field("chdis", &format_args!("{}", self.chdis().bit()))
-            .field("chena", &format_args!("{}", self.chena().bit()))
+            .field("mps", &self.mps().bits())
+            .field("epnum", &self.epnum().bits())
+            .field("epdir", &self.epdir().bit())
+            .field("lspddev", &self.lspddev().bit())
+            .field("eptype", &self.eptype().bits())
+            .field("ec", &self.ec().bit())
+            .field("devaddr", &self.devaddr().bits())
+            .field("oddfrm", &self.oddfrm().bit())
+            .field("chdis", &self.chdis().bit())
+            .field("chena", &self.chena().bit())
             .finish()
     }
 }

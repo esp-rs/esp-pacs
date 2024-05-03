@@ -37,16 +37,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("POWER_WAIT_TIMER1")
             .field(
                 "dg_lp_powerdown_timer",
-                &format_args!("{}", self.dg_lp_powerdown_timer().bits()),
+                &self.dg_lp_powerdown_timer().bits(),
             )
-            .field(
-                "dg_lp_powerup_timer",
-                &format_args!("{}", self.dg_lp_powerup_timer().bits()),
-            )
-            .field(
-                "dg_lp_wait_timer",
-                &format_args!("{}", self.dg_lp_wait_timer().bits()),
-            )
+            .field("dg_lp_powerup_timer", &self.dg_lp_powerup_timer().bits())
+            .field("dg_lp_wait_timer", &self.dg_lp_wait_timer().bits())
             .finish()
     }
 }

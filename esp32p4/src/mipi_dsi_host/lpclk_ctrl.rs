@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPCLK_CTRL")
-            .field(
-                "phy_txrequestclkhs",
-                &format_args!("{}", self.phy_txrequestclkhs().bit()),
-            )
-            .field(
-                "auto_clklane_ctrl",
-                &format_args!("{}", self.auto_clklane_ctrl().bit()),
-            )
+            .field("phy_txrequestclkhs", &self.phy_txrequestclkhs().bit())
+            .field("auto_clklane_ctrl", &self.auto_clklane_ctrl().bit())
             .finish()
     }
 }

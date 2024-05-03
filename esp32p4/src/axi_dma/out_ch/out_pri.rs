@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_PRI")
-            .field("tx_pri", &format_args!("{}", self.tx_pri().bits()))
-            .field(
-                "tx_ch_arb_weigh",
-                &format_args!("{}", self.tx_ch_arb_weigh().bits()),
-            )
-            .field(
-                "tx_arb_weigh_opt_dir",
-                &format_args!("{}", self.tx_arb_weigh_opt_dir().bit()),
-            )
+            .field("tx_pri", &self.tx_pri().bits())
+            .field("tx_ch_arb_weigh", &self.tx_ch_arb_weigh().bits())
+            .field("tx_arb_weigh_opt_dir", &self.tx_arb_weigh_opt_dir().bit())
             .finish()
     }
 }

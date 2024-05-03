@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DHT_VAl_DC1")
-            .field(
-                "dht_val_dc1",
-                &format_args!("{}", self.dht_val_dc1().bits()),
-            )
+            .field("dht_val_dc1", &self.dht_val_dc1().bits())
             .finish()
     }
 }

@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_FLOW_CTRL")
             .field(
                 "dsi_dma_flow_controller",
-                &format_args!("{}", self.dsi_dma_flow_controller().bit()),
+                &self.dsi_dma_flow_controller().bit(),
             )
             .field(
                 "dma_flow_multiblk_num",
-                &format_args!("{}", self.dma_flow_multiblk_num().bits()),
+                &self.dma_flow_multiblk_num().bits(),
             )
             .finish()
     }

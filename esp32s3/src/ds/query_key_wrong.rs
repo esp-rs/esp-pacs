@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_KEY_WRONG")
-            .field(
-                "query_key_wrong",
-                &format_args!("{}", self.query_key_wrong().bits()),
-            )
+            .field("query_key_wrong", &self.query_key_wrong().bits())
             .finish()
     }
 }

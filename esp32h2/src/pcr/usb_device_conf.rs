@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USB_DEVICE_CONF")
-            .field(
-                "usb_device_clk_en",
-                &format_args!("{}", self.usb_device_clk_en().bit()),
-            )
-            .field(
-                "usb_device_rst_en",
-                &format_args!("{}", self.usb_device_rst_en().bit()),
-            )
-            .field(
-                "usb_device_ready",
-                &format_args!("{}", self.usb_device_ready().bit()),
-            )
+            .field("usb_device_clk_en", &self.usb_device_clk_en().bit())
+            .field("usb_device_rst_en", &self.usb_device_rst_en().bit())
+            .field("usb_device_ready", &self.usb_device_ready().bit())
             .finish()
     }
 }

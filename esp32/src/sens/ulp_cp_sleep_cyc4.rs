@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ULP_CP_SLEEP_CYC4")
-            .field(
-                "sleep_cycles_s4",
-                &format_args!("{}", self.sleep_cycles_s4().bits()),
-            )
+            .field("sleep_cycles_s4", &self.sleep_cycles_s4().bits())
             .finish()
     }
 }

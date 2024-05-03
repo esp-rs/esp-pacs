@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_ST")
             .field(
                 "l2_cache_pld_done_int_st",
-                &format_args!("{}", self.l2_cache_pld_done_int_st().bit()),
+                &self.l2_cache_pld_done_int_st().bit(),
             )
             .field(
                 "l2_cache_pld_err_int_st",
-                &format_args!("{}", self.l2_cache_pld_err_int_st().bit()),
+                &self.l2_cache_pld_err_int_st().bit(),
             )
             .finish()
     }

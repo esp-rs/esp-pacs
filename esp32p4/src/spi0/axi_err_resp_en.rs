@@ -116,54 +116,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI_ERR_RESP_EN")
-            .field(
-                "aw_resp_en_mmu_vld",
-                &format_args!("{}", self.aw_resp_en_mmu_vld().bit()),
-            )
-            .field(
-                "aw_resp_en_mmu_gid",
-                &format_args!("{}", self.aw_resp_en_mmu_gid().bit()),
-            )
-            .field(
-                "aw_resp_en_axi_size",
-                &format_args!("{}", self.aw_resp_en_axi_size().bit()),
-            )
-            .field(
-                "aw_resp_en_axi_flash",
-                &format_args!("{}", self.aw_resp_en_axi_flash().bit()),
-            )
-            .field(
-                "aw_resp_en_mmu_ecc",
-                &format_args!("{}", self.aw_resp_en_mmu_ecc().bit()),
-            )
-            .field(
-                "aw_resp_en_mmu_sens",
-                &format_args!("{}", self.aw_resp_en_mmu_sens().bit()),
-            )
-            .field(
-                "aw_resp_en_axi_wstrb",
-                &format_args!("{}", self.aw_resp_en_axi_wstrb().bit()),
-            )
-            .field(
-                "ar_resp_en_mmu_vld",
-                &format_args!("{}", self.ar_resp_en_mmu_vld().bit()),
-            )
-            .field(
-                "ar_resp_en_mmu_gid",
-                &format_args!("{}", self.ar_resp_en_mmu_gid().bit()),
-            )
-            .field(
-                "ar_resp_en_mmu_ecc",
-                &format_args!("{}", self.ar_resp_en_mmu_ecc().bit()),
-            )
-            .field(
-                "ar_resp_en_mmu_sens",
-                &format_args!("{}", self.ar_resp_en_mmu_sens().bit()),
-            )
-            .field(
-                "ar_resp_en_axi_size",
-                &format_args!("{}", self.ar_resp_en_axi_size().bit()),
-            )
+            .field("aw_resp_en_mmu_vld", &self.aw_resp_en_mmu_vld().bit())
+            .field("aw_resp_en_mmu_gid", &self.aw_resp_en_mmu_gid().bit())
+            .field("aw_resp_en_axi_size", &self.aw_resp_en_axi_size().bit())
+            .field("aw_resp_en_axi_flash", &self.aw_resp_en_axi_flash().bit())
+            .field("aw_resp_en_mmu_ecc", &self.aw_resp_en_mmu_ecc().bit())
+            .field("aw_resp_en_mmu_sens", &self.aw_resp_en_mmu_sens().bit())
+            .field("aw_resp_en_axi_wstrb", &self.aw_resp_en_axi_wstrb().bit())
+            .field("ar_resp_en_mmu_vld", &self.ar_resp_en_mmu_vld().bit())
+            .field("ar_resp_en_mmu_gid", &self.ar_resp_en_mmu_gid().bit())
+            .field("ar_resp_en_mmu_ecc", &self.ar_resp_en_mmu_ecc().bit())
+            .field("ar_resp_en_mmu_sens", &self.ar_resp_en_mmu_sens().bit())
+            .field("ar_resp_en_axi_size", &self.ar_resp_en_axi_size().bit())
             .finish()
     }
 }

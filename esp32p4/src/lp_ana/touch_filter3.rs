@@ -19,10 +19,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_FILTER3")
-            .field(
-                "touch_baseline_sw",
-                &format_args!("{}", self.touch_baseline_sw().bits()),
-            )
+            .field("touch_baseline_sw", &self.touch_baseline_sw().bits())
             .finish()
     }
 }

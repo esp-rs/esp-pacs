@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_TOP_MASK")
-            .field(
-                "xpd_top_mask",
-                &format_args!("{}", self.xpd_top_mask().bits()),
-            )
-            .field(
-                "pd_top_mask",
-                &format_args!("{}", self.pd_top_mask().bits()),
-            )
+            .field("xpd_top_mask", &self.xpd_top_mask().bits())
+            .field("pd_top_mask", &self.pd_top_mask().bits())
             .finish()
     }
 }

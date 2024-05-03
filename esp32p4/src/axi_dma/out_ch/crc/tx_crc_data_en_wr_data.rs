@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TX_CRC_DATA_EN_WR_DATA")
             .field(
                 "tx_crc_data_en_wr_data",
-                &format_args!("{}", self.tx_crc_data_en_wr_data().bits()),
+                &self.tx_crc_data_en_wr_data().bits(),
             )
             .finish()
     }

@@ -98,19 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
-            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
-            .field(
-                "sclk_div_num",
-                &format_args!("{}", self.sclk_div_num().bits()),
-            )
-            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bits()))
-            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
-            .field("rst_core", &format_args!("{}", self.rst_core().bit()))
-            .field("tx_sclk_en", &format_args!("{}", self.tx_sclk_en().bit()))
-            .field("rx_sclk_en", &format_args!("{}", self.rx_sclk_en().bit()))
-            .field("tx_rst_core", &format_args!("{}", self.tx_rst_core().bit()))
-            .field("rx_rst_core", &format_args!("{}", self.rx_rst_core().bit()))
+            .field("sclk_div_b", &self.sclk_div_b().bits())
+            .field("sclk_div_a", &self.sclk_div_a().bits())
+            .field("sclk_div_num", &self.sclk_div_num().bits())
+            .field("sclk_sel", &self.sclk_sel().bits())
+            .field("sclk_en", &self.sclk_en().bit())
+            .field("rst_core", &self.rst_core().bit())
+            .field("tx_sclk_en", &self.tx_sclk_en().bit())
+            .field("rx_sclk_en", &self.rx_sclk_en().bit())
+            .field("tx_rst_core", &self.tx_rst_core().bit())
+            .field("rx_rst_core", &self.rx_rst_core().bit())
             .finish()
     }
 }

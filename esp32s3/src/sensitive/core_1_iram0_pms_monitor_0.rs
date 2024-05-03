@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_IRAM0_PMS_MONITOR_0")
             .field(
                 "core_1_iram0_pms_monitor_lock",
-                &format_args!("{}", self.core_1_iram0_pms_monitor_lock().bit()),
+                &self.core_1_iram0_pms_monitor_lock().bit(),
             )
             .finish()
     }

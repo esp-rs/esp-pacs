@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LACTHI")
-            .field("hi", &format_args!("{}", self.hi().bits()))
+            .field("hi", &self.hi().bits())
             .finish()
     }
 }

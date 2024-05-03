@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REMAINDER_BIT_NUM")
-            .field(
-                "remainder_bit_num",
-                &format_args!("{}", self.remainder_bit_num().bits()),
-            )
+            .field("remainder_bit_num", &self.remainder_bit_num().bits())
             .finish()
     }
 }

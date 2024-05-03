@@ -74,14 +74,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPCTL")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("usbactep", &format_args!("{}", self.usbactep().bit()))
-            .field("naksts", &format_args!("{}", self.naksts().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("snp", &format_args!("{}", self.snp().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("epdis", &format_args!("{}", self.epdis().bit()))
-            .field("epena", &format_args!("{}", self.epena().bit()))
+            .field("mps", &self.mps().bits())
+            .field("usbactep", &self.usbactep().bit())
+            .field("naksts", &self.naksts().bit())
+            .field("eptype", &self.eptype().bits())
+            .field("snp", &self.snp().bit())
+            .field("stall", &self.stall().bit())
+            .field("epdis", &self.epdis().bit())
+            .field("epena", &self.epena().bit())
             .finish()
     }
 }

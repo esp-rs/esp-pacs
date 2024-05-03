@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_AUX_CTRL_1")
             .field(
                 "lsc_lut_r_gr_mem_aux_ctrl",
-                &format_args!("{}", self.lsc_lut_r_gr_mem_aux_ctrl().bits()),
+                &self.lsc_lut_r_gr_mem_aux_ctrl().bits(),
             )
             .field(
                 "lsc_lut_gb_b_mem_aux_ctrl",
-                &format_args!("{}", self.lsc_lut_gb_b_mem_aux_ctrl().bits()),
+                &self.lsc_lut_gb_b_mem_aux_ctrl().bits(),
             )
             .finish()
     }

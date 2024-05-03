@@ -80,38 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NRXPD_CTRL")
-            .field(
-                "demap_force_pd",
-                &format_args!("{}", self.demap_force_pd().bit()),
-            )
-            .field(
-                "demap_force_pu",
-                &format_args!("{}", self.demap_force_pu().bit()),
-            )
-            .field(
-                "vit_force_pd",
-                &format_args!("{}", self.vit_force_pd().bit()),
-            )
-            .field(
-                "vit_force_pu",
-                &format_args!("{}", self.vit_force_pu().bit()),
-            )
-            .field(
-                "rx_rot_force_pd",
-                &format_args!("{}", self.rx_rot_force_pd().bit()),
-            )
-            .field(
-                "rx_rot_force_pu",
-                &format_args!("{}", self.rx_rot_force_pu().bit()),
-            )
-            .field(
-                "chan_est_force_pd",
-                &format_args!("{}", self.chan_est_force_pd().bit()),
-            )
-            .field(
-                "chan_est_force_pu",
-                &format_args!("{}", self.chan_est_force_pu().bit()),
-            )
+            .field("demap_force_pd", &self.demap_force_pd().bit())
+            .field("demap_force_pu", &self.demap_force_pu().bit())
+            .field("vit_force_pd", &self.vit_force_pd().bit())
+            .field("vit_force_pu", &self.vit_force_pu().bit())
+            .field("rx_rot_force_pd", &self.rx_rot_force_pd().bit())
+            .field("rx_rot_force_pu", &self.rx_rot_force_pu().bit())
+            .field("chan_est_force_pd", &self.chan_est_force_pd().bit())
+            .field("chan_est_force_pu", &self.chan_est_force_pu().bit())
             .finish()
     }
 }

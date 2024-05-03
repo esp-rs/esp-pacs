@@ -71,34 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_READ_CTRL")
-            .field(
-                "sar1_clk_div",
-                &format_args!("{}", self.sar1_clk_div().bits()),
-            )
-            .field(
-                "sar1_sample_cycle",
-                &format_args!("{}", self.sar1_sample_cycle().bits()),
-            )
-            .field(
-                "sar1_sample_bit",
-                &format_args!("{}", self.sar1_sample_bit().bits()),
-            )
-            .field(
-                "sar1_clk_gated",
-                &format_args!("{}", self.sar1_clk_gated().bit()),
-            )
-            .field(
-                "sar1_sample_num",
-                &format_args!("{}", self.sar1_sample_num().bits()),
-            )
-            .field(
-                "sar1_dig_force",
-                &format_args!("{}", self.sar1_dig_force().bit()),
-            )
-            .field(
-                "sar1_data_inv",
-                &format_args!("{}", self.sar1_data_inv().bit()),
-            )
+            .field("sar1_clk_div", &self.sar1_clk_div().bits())
+            .field("sar1_sample_cycle", &self.sar1_sample_cycle().bits())
+            .field("sar1_sample_bit", &self.sar1_sample_bit().bits())
+            .field("sar1_clk_gated", &self.sar1_clk_gated().bit())
+            .field("sar1_sample_num", &self.sar1_sample_num().bits())
+            .field("sar1_dig_force", &self.sar1_dig_force().bit())
+            .field("sar1_data_inv", &self.sar1_data_inv().bit())
             .finish()
     }
 }

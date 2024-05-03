@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_GPIO_ENABLE")
-            .field(
-                "rtc_gpio_enable",
-                &format_args!("{}", self.rtc_gpio_enable().bits()),
-            )
+            .field("rtc_gpio_enable", &self.rtc_gpio_enable().bits())
             .finish()
     }
 }

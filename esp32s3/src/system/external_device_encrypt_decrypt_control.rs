@@ -46,19 +46,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL")
             .field(
                 "enable_spi_manual_encrypt",
-                &format_args!("{}", self.enable_spi_manual_encrypt().bit()),
+                &self.enable_spi_manual_encrypt().bit(),
             )
             .field(
                 "enable_download_db_encrypt",
-                &format_args!("{}", self.enable_download_db_encrypt().bit()),
+                &self.enable_download_db_encrypt().bit(),
             )
             .field(
                 "enable_download_g0cb_decrypt",
-                &format_args!("{}", self.enable_download_g0cb_decrypt().bit()),
+                &self.enable_download_g0cb_decrypt().bit(),
             )
             .field(
                 "enable_download_manual_encrypt",
-                &format_args!("{}", self.enable_download_manual_encrypt().bit()),
+                &self.enable_download_manual_encrypt().bit(),
             )
             .finish()
     }

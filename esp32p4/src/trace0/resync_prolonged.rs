@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESYNC_PROLONGED")
-            .field(
-                "resync_prolonged",
-                &format_args!("{}", self.resync_prolonged().bits()),
-            )
-            .field(
-                "resync_mode",
-                &format_args!("{}", self.resync_mode().bits()),
-            )
+            .field("resync_prolonged", &self.resync_prolonged().bits())
+            .field("resync_mode", &self.resync_mode().bits())
             .finish()
     }
 }

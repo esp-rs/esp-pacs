@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_SEL_CTRL")
-            .field(
-                "ena_sw_sel_sys_clk",
-                &format_args!("{}", self.ena_sw_sel_sys_clk().bit()),
-            )
-            .field(
-                "sw_sys_clk_src_sel",
-                &format_args!("{}", self.sw_sys_clk_src_sel().bit()),
-            )
+            .field("ena_sw_sel_sys_clk", &self.ena_sw_sel_sys_clk().bit())
+            .field("sw_sys_clk_src_sel", &self.sw_sys_clk_src_sel().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_RWBT_NMI_MAP")
-            .field(
-                "app_rwbt_nmi_map",
-                &format_args!("{}", self.app_rwbt_nmi_map().bits()),
-            )
+            .field("app_rwbt_nmi_map", &self.app_rwbt_nmi_map().bits())
             .finish()
     }
 }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_0_NMI_MASK_PHASE")
-            .field(
-                "core_0_nmi_mask_phase",
-                &format_args!("{}", self.core_0_nmi_mask_phase().bit()),
-            )
+            .field("core_0_nmi_mask_phase", &self.core_0_nmi_mask_phase().bit())
             .finish()
     }
 }

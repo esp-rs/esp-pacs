@@ -76,35 +76,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE1")
-            .field(
-                "slv_addr_err_clr",
-                &format_args!("{}", self.slv_addr_err_clr().bit()),
-            )
-            .field(
-                "slv_cmd_err_clr",
-                &format_args!("{}", self.slv_cmd_err_clr().bit()),
-            )
-            .field(
-                "slv_no_qpi_en",
-                &format_args!("{}", self.slv_no_qpi_en().bit()),
-            )
-            .field(
-                "slv_addr_err",
-                &format_args!("{}", self.slv_addr_err().bit()),
-            )
-            .field("slv_cmd_err", &format_args!("{}", self.slv_cmd_err().bit()))
-            .field(
-                "slv_wr_dma_done",
-                &format_args!("{}", self.slv_wr_dma_done().bit()),
-            )
-            .field(
-                "slv_last_command",
-                &format_args!("{}", self.slv_last_command().bits()),
-            )
-            .field(
-                "slv_last_addr",
-                &format_args!("{}", self.slv_last_addr().bits()),
-            )
+            .field("slv_addr_err_clr", &self.slv_addr_err_clr().bit())
+            .field("slv_cmd_err_clr", &self.slv_cmd_err_clr().bit())
+            .field("slv_no_qpi_en", &self.slv_no_qpi_en().bit())
+            .field("slv_addr_err", &self.slv_addr_err().bit())
+            .field("slv_cmd_err", &self.slv_cmd_err().bit())
+            .field("slv_wr_dma_done", &self.slv_wr_dma_done().bit())
+            .field("slv_last_command", &self.slv_last_command().bits())
+            .field("slv_last_addr", &self.slv_last_addr().bits())
             .finish()
     }
 }

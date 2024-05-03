@@ -64,27 +64,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL117")
             .field(
                 "gpspi3_hs_clk_div_num",
-                &format_args!("{}", self.gpspi3_hs_clk_div_num().bits()),
+                &self.gpspi3_hs_clk_div_num().bits(),
             )
             .field(
                 "gpspi3_mst_clk_div_num",
-                &format_args!("{}", self.gpspi3_mst_clk_div_num().bits()),
+                &self.gpspi3_mst_clk_div_num().bits(),
             )
-            .field(
-                "gpspi3_mst_clk_en",
-                &format_args!("{}", self.gpspi3_mst_clk_en().bit()),
-            )
+            .field("gpspi3_mst_clk_en", &self.gpspi3_mst_clk_en().bit())
             .field(
                 "parlio_rx_clk_src_sel",
-                &format_args!("{}", self.parlio_rx_clk_src_sel().bits()),
+                &self.parlio_rx_clk_src_sel().bits(),
             )
-            .field(
-                "parlio_rx_clk_en",
-                &format_args!("{}", self.parlio_rx_clk_en().bit()),
-            )
+            .field("parlio_rx_clk_en", &self.parlio_rx_clk_en().bit())
             .field(
                 "parlio_rx_clk_div_num",
-                &format_args!("{}", self.parlio_rx_clk_div_num().bits()),
+                &self.parlio_rx_clk_div_num().bits(),
             )
             .finish()
     }

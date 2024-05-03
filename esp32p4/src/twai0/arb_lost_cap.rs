@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ARB_LOST_CAP")
             .field(
                 "arbitration_lost_capture",
-                &format_args!("{}", self.arbitration_lost_capture().bits()),
+                &self.arbitration_lost_capture().bits(),
             )
             .finish()
     }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AT_CMD_GAPTOUT")
-            .field(
-                "rx_gap_tout",
-                &format_args!("{}", self.rx_gap_tout().bits()),
-            )
+            .field("rx_gap_tout", &self.rx_gap_tout().bits())
             .finish()
     }
 }

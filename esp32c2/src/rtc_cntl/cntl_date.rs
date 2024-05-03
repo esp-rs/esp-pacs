@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNTL_DATE")
-            .field("cntl_date", &format_args!("{}", self.cntl_date().bits()))
+            .field("cntl_date", &self.cntl_date().bits())
             .finish()
     }
 }

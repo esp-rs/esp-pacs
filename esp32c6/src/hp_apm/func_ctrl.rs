@@ -47,22 +47,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FUNC_CTRL")
-            .field(
-                "m0_pms_func_en",
-                &format_args!("{}", self.m0_pms_func_en().bit()),
-            )
-            .field(
-                "m1_pms_func_en",
-                &format_args!("{}", self.m1_pms_func_en().bit()),
-            )
-            .field(
-                "m2_pms_func_en",
-                &format_args!("{}", self.m2_pms_func_en().bit()),
-            )
-            .field(
-                "m3_pms_func_en",
-                &format_args!("{}", self.m3_pms_func_en().bit()),
-            )
+            .field("m0_pms_func_en", &self.m0_pms_func_en().bit())
+            .field("m1_pms_func_en", &self.m1_pms_func_en().bit())
+            .field("m2_pms_func_en", &self.m2_pms_func_en().bit())
+            .field("m3_pms_func_en", &self.m3_pms_func_en().bit())
             .finish()
     }
 }

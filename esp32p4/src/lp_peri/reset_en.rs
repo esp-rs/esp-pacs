@@ -127,58 +127,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_EN")
-            .field(
-                "rst_en_lp_tsens",
-                &format_args!("{}", self.rst_en_lp_tsens().bit()),
-            )
-            .field(
-                "rst_en_lp_pms",
-                &format_args!("{}", self.rst_en_lp_pms().bit()),
-            )
-            .field(
-                "rst_en_lp_efuse",
-                &format_args!("{}", self.rst_en_lp_efuse().bit()),
-            )
-            .field(
-                "rst_en_lp_iomux",
-                &format_args!("{}", self.rst_en_lp_iomux().bit()),
-            )
-            .field(
-                "rst_en_lp_touch",
-                &format_args!("{}", self.rst_en_lp_touch().bit()),
-            )
-            .field(
-                "rst_en_lp_spi",
-                &format_args!("{}", self.rst_en_lp_spi().bit()),
-            )
-            .field(
-                "rst_en_lp_adc",
-                &format_args!("{}", self.rst_en_lp_adc().bit()),
-            )
-            .field(
-                "rst_en_lp_i2s",
-                &format_args!("{}", self.rst_en_lp_i2s().bit()),
-            )
-            .field(
-                "rst_en_lp_i2cmst",
-                &format_args!("{}", self.rst_en_lp_i2cmst().bit()),
-            )
-            .field(
-                "rst_en_lp_i2c",
-                &format_args!("{}", self.rst_en_lp_i2c().bit()),
-            )
-            .field(
-                "rst_en_lp_uart",
-                &format_args!("{}", self.rst_en_lp_uart().bit()),
-            )
-            .field(
-                "rst_en_lp_intr",
-                &format_args!("{}", self.rst_en_lp_intr().bit()),
-            )
-            .field(
-                "rst_en_lp_rom",
-                &format_args!("{}", self.rst_en_lp_rom().bit()),
-            )
+            .field("rst_en_lp_tsens", &self.rst_en_lp_tsens().bit())
+            .field("rst_en_lp_pms", &self.rst_en_lp_pms().bit())
+            .field("rst_en_lp_efuse", &self.rst_en_lp_efuse().bit())
+            .field("rst_en_lp_iomux", &self.rst_en_lp_iomux().bit())
+            .field("rst_en_lp_touch", &self.rst_en_lp_touch().bit())
+            .field("rst_en_lp_spi", &self.rst_en_lp_spi().bit())
+            .field("rst_en_lp_adc", &self.rst_en_lp_adc().bit())
+            .field("rst_en_lp_i2s", &self.rst_en_lp_i2s().bit())
+            .field("rst_en_lp_i2cmst", &self.rst_en_lp_i2cmst().bit())
+            .field("rst_en_lp_i2c", &self.rst_en_lp_i2c().bit())
+            .field("rst_en_lp_uart", &self.rst_en_lp_uart().bit())
+            .field("rst_en_lp_intr", &self.rst_en_lp_intr().bit())
+            .field("rst_en_lp_rom", &self.rst_en_lp_rom().bit())
             .finish()
     }
 }

@@ -242,89 +242,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field(
-                "tx_slave_mod",
-                &format_args!("{}", self.tx_slave_mod().bit()),
-            )
-            .field(
-                "rx_slave_mod",
-                &format_args!("{}", self.rx_slave_mod().bit()),
-            )
-            .field(
-                "tx_right_first",
-                &format_args!("{}", self.tx_right_first().bit()),
-            )
-            .field(
-                "rx_right_first",
-                &format_args!("{}", self.rx_right_first().bit()),
-            )
-            .field(
-                "tx_msb_shift",
-                &format_args!("{}", self.tx_msb_shift().bit()),
-            )
-            .field(
-                "rx_msb_shift",
-                &format_args!("{}", self.rx_msb_shift().bit()),
-            )
-            .field(
-                "tx_short_sync",
-                &format_args!("{}", self.tx_short_sync().bit()),
-            )
-            .field(
-                "rx_short_sync",
-                &format_args!("{}", self.rx_short_sync().bit()),
-            )
-            .field("tx_mono", &format_args!("{}", self.tx_mono().bit()))
-            .field("rx_mono", &format_args!("{}", self.rx_mono().bit()))
-            .field(
-                "tx_msb_right",
-                &format_args!("{}", self.tx_msb_right().bit()),
-            )
-            .field(
-                "rx_msb_right",
-                &format_args!("{}", self.rx_msb_right().bit()),
-            )
-            .field(
-                "tx_lsb_first_dma",
-                &format_args!("{}", self.tx_lsb_first_dma().bit()),
-            )
-            .field(
-                "rx_lsb_first_dma",
-                &format_args!("{}", self.rx_lsb_first_dma().bit()),
-            )
-            .field(
-                "sig_loopback",
-                &format_args!("{}", self.sig_loopback().bit()),
-            )
-            .field(
-                "tx_fifo_reset_st",
-                &format_args!("{}", self.tx_fifo_reset_st().bit()),
-            )
-            .field(
-                "rx_fifo_reset_st",
-                &format_args!("{}", self.rx_fifo_reset_st().bit()),
-            )
-            .field("tx_reset_st", &format_args!("{}", self.tx_reset_st().bit()))
-            .field(
-                "tx_dma_equal",
-                &format_args!("{}", self.tx_dma_equal().bit()),
-            )
-            .field(
-                "rx_dma_equal",
-                &format_args!("{}", self.rx_dma_equal().bit()),
-            )
-            .field("pre_req_en", &format_args!("{}", self.pre_req_en().bit()))
-            .field(
-                "tx_big_endian",
-                &format_args!("{}", self.tx_big_endian().bit()),
-            )
-            .field(
-                "rx_big_endian",
-                &format_args!("{}", self.rx_big_endian().bit()),
-            )
-            .field("rx_reset_st", &format_args!("{}", self.rx_reset_st().bit()))
+            .field("tx_start", &self.tx_start().bit())
+            .field("rx_start", &self.rx_start().bit())
+            .field("tx_slave_mod", &self.tx_slave_mod().bit())
+            .field("rx_slave_mod", &self.rx_slave_mod().bit())
+            .field("tx_right_first", &self.tx_right_first().bit())
+            .field("rx_right_first", &self.rx_right_first().bit())
+            .field("tx_msb_shift", &self.tx_msb_shift().bit())
+            .field("rx_msb_shift", &self.rx_msb_shift().bit())
+            .field("tx_short_sync", &self.tx_short_sync().bit())
+            .field("rx_short_sync", &self.rx_short_sync().bit())
+            .field("tx_mono", &self.tx_mono().bit())
+            .field("rx_mono", &self.rx_mono().bit())
+            .field("tx_msb_right", &self.tx_msb_right().bit())
+            .field("rx_msb_right", &self.rx_msb_right().bit())
+            .field("tx_lsb_first_dma", &self.tx_lsb_first_dma().bit())
+            .field("rx_lsb_first_dma", &self.rx_lsb_first_dma().bit())
+            .field("sig_loopback", &self.sig_loopback().bit())
+            .field("tx_fifo_reset_st", &self.tx_fifo_reset_st().bit())
+            .field("rx_fifo_reset_st", &self.rx_fifo_reset_st().bit())
+            .field("tx_reset_st", &self.tx_reset_st().bit())
+            .field("tx_dma_equal", &self.tx_dma_equal().bit())
+            .field("rx_dma_equal", &self.rx_dma_equal().bit())
+            .field("pre_req_en", &self.pre_req_en().bit())
+            .field("tx_big_endian", &self.tx_big_endian().bit())
+            .field("rx_big_endian", &self.rx_big_endian().bit())
+            .field("rx_reset_st", &self.rx_reset_st().bit())
             .finish()
     }
 }

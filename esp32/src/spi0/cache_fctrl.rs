@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_FCTRL")
-            .field(
-                "cache_req_en",
-                &format_args!("{}", self.cache_req_en().bit()),
-            )
-            .field(
-                "cache_usr_cmd_4byte",
-                &format_args!("{}", self.cache_usr_cmd_4byte().bit()),
-            )
-            .field(
-                "cache_flash_usr_cmd",
-                &format_args!("{}", self.cache_flash_usr_cmd().bit()),
-            )
-            .field(
-                "cache_flash_pes_en",
-                &format_args!("{}", self.cache_flash_pes_en().bit()),
-            )
+            .field("cache_req_en", &self.cache_req_en().bit())
+            .field("cache_usr_cmd_4byte", &self.cache_usr_cmd_4byte().bit())
+            .field("cache_flash_usr_cmd", &self.cache_flash_usr_cmd().bit())
+            .field("cache_flash_pes_en", &self.cache_flash_pes_en().bit())
             .finish()
     }
 }

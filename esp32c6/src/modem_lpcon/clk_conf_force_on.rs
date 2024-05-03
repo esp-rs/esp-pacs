@@ -98,43 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF_FORCE_ON")
-            .field(
-                "clk_wifipwr_fo",
-                &format_args!("{}", self.clk_wifipwr_fo().bit()),
-            )
-            .field("clk_coex_fo", &format_args!("{}", self.clk_coex_fo().bit()))
-            .field(
-                "clk_i2c_mst_fo",
-                &format_args!("{}", self.clk_i2c_mst_fo().bit()),
-            )
-            .field(
-                "clk_lp_timer_fo",
-                &format_args!("{}", self.clk_lp_timer_fo().bit()),
-            )
-            .field(
-                "clk_bcmem_fo",
-                &format_args!("{}", self.clk_bcmem_fo().bit()),
-            )
-            .field(
-                "clk_i2c_mst_mem_fo",
-                &format_args!("{}", self.clk_i2c_mst_mem_fo().bit()),
-            )
-            .field(
-                "clk_chan_freq_mem_fo",
-                &format_args!("{}", self.clk_chan_freq_mem_fo().bit()),
-            )
-            .field(
-                "clk_pbus_mem_fo",
-                &format_args!("{}", self.clk_pbus_mem_fo().bit()),
-            )
-            .field(
-                "clk_agc_mem_fo",
-                &format_args!("{}", self.clk_agc_mem_fo().bit()),
-            )
-            .field(
-                "clk_dc_mem_fo",
-                &format_args!("{}", self.clk_dc_mem_fo().bit()),
-            )
+            .field("clk_wifipwr_fo", &self.clk_wifipwr_fo().bit())
+            .field("clk_coex_fo", &self.clk_coex_fo().bit())
+            .field("clk_i2c_mst_fo", &self.clk_i2c_mst_fo().bit())
+            .field("clk_lp_timer_fo", &self.clk_lp_timer_fo().bit())
+            .field("clk_bcmem_fo", &self.clk_bcmem_fo().bit())
+            .field("clk_i2c_mst_mem_fo", &self.clk_i2c_mst_mem_fo().bit())
+            .field("clk_chan_freq_mem_fo", &self.clk_chan_freq_mem_fo().bit())
+            .field("clk_pbus_mem_fo", &self.clk_pbus_mem_fo().bit())
+            .field("clk_agc_mem_fo", &self.clk_agc_mem_fo().bit())
+            .field("clk_dc_mem_fo", &self.clk_dc_mem_fo().bit())
             .finish()
     }
 }

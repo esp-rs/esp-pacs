@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BACKUP_DMA_CFG2")
-            .field(
-                "link_addr_aon",
-                &format_args!("{}", self.link_addr_aon().bits()),
-            )
+            .field("link_addr_aon", &self.link_addr_aon().bits())
             .finish()
     }
 }

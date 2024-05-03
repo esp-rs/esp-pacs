@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_0_RCD_RECORDING")
-            .field(
-                "core_0_rcd_recording",
-                &format_args!("{}", self.core_0_rcd_recording().bit()),
-            )
+            .field("core_0_rcd_recording", &self.core_0_rcd_recording().bit())
             .finish()
     }
 }

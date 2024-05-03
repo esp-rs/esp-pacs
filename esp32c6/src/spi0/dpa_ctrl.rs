@@ -37,15 +37,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("DPA_CTRL")
             .field(
                 "spi_crypt_security_level",
-                &format_args!("{}", self.spi_crypt_security_level().bits()),
+                &self.spi_crypt_security_level().bits(),
             )
             .field(
                 "spi_crypt_calc_d_dpa_en",
-                &format_args!("{}", self.spi_crypt_calc_d_dpa_en().bit()),
+                &self.spi_crypt_calc_d_dpa_en().bit(),
             )
             .field(
                 "spi_crypt_dpa_select_register",
-                &format_args!("{}", self.spi_crypt_dpa_select_register().bit()),
+                &self.spi_crypt_dpa_select_register().bit(),
             )
             .finish()
     }

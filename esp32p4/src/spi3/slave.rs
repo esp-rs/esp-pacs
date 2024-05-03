@@ -98,36 +98,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE")
-            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
-            .field("clk_mode_13", &format_args!("{}", self.clk_mode_13().bit()))
-            .field(
-                "rsck_data_out",
-                &format_args!("{}", self.rsck_data_out().bit()),
-            )
-            .field(
-                "slv_rddma_bitlen_en",
-                &format_args!("{}", self.slv_rddma_bitlen_en().bit()),
-            )
-            .field(
-                "slv_wrdma_bitlen_en",
-                &format_args!("{}", self.slv_wrdma_bitlen_en().bit()),
-            )
-            .field(
-                "slv_rdbuf_bitlen_en",
-                &format_args!("{}", self.slv_rdbuf_bitlen_en().bit()),
-            )
-            .field(
-                "slv_wrbuf_bitlen_en",
-                &format_args!("{}", self.slv_wrbuf_bitlen_en().bit()),
-            )
-            .field(
-                "slv_last_byte_strb",
-                &format_args!("{}", self.slv_last_byte_strb().bits()),
-            )
-            .field("mode", &format_args!("{}", self.mode().bit()))
+            .field("clk_mode", &self.clk_mode().bits())
+            .field("clk_mode_13", &self.clk_mode_13().bit())
+            .field("rsck_data_out", &self.rsck_data_out().bit())
+            .field("slv_rddma_bitlen_en", &self.slv_rddma_bitlen_en().bit())
+            .field("slv_wrdma_bitlen_en", &self.slv_wrdma_bitlen_en().bit())
+            .field("slv_rdbuf_bitlen_en", &self.slv_rdbuf_bitlen_en().bit())
+            .field("slv_wrbuf_bitlen_en", &self.slv_wrbuf_bitlen_en().bit())
+            .field("slv_last_byte_strb", &self.slv_last_byte_strb().bits())
+            .field("mode", &self.mode().bit())
             .field(
                 "mst_fd_wait_dma_tx_data",
-                &format_args!("{}", self.mst_fd_wait_dma_tx_data().bit()),
+                &self.mst_fd_wait_dma_tx_data().bit(),
             )
             .finish()
     }

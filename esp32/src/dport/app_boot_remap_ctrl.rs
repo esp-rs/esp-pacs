@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_BOOT_REMAP_CTRL")
-            .field(
-                "app_boot_remap",
-                &format_args!("{}", self.app_boot_remap().bit()),
-            )
+            .field("app_boot_remap", &self.app_boot_remap().bit())
             .finish()
     }
 }

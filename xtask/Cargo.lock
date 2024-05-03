@@ -902,9 +902,8 @@ dependencies = [
 
 [[package]]
 name = "svd2rust"
-version = "0.33.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "acf4421acea6bd4700755376c2dd57f4f9f9a92247dfa617a2c8df08730271b0"
+version = "0.33.1"
+source = "git+https://github.com/rust-embedded/svd2rust?branch=fmt#305fcd749bf711d9974500b7c745f7e940a2c26b"
 dependencies = [
  "anyhow",
  "html-escape",

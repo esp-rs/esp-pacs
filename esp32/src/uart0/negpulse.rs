@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("NEGPULSE")
-            .field(
-                "negedge_min_cnt",
-                &format_args!("{}", self.negedge_min_cnt().bits()),
-            )
+            .field("negedge_min_cnt", &self.negedge_min_cnt().bits())
             .finish()
     }
 }

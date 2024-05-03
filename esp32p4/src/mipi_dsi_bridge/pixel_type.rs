@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIXEL_TYPE")
-            .field("raw_type", &format_args!("{}", self.raw_type().bits()))
-            .field("dpi_config", &format_args!("{}", self.dpi_config().bits()))
-            .field(
-                "data_in_type",
-                &format_args!("{}", self.data_in_type().bit()),
-            )
+            .field("raw_type", &self.raw_type().bits())
+            .field("dpi_config", &self.dpi_config().bits())
+            .field("data_in_type", &self.data_in_type().bit())
             .finish()
     }
 }

@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_CTRL2")
-            .field(
-                "lcd_vsync_width",
-                &format_args!("{}", self.lcd_vsync_width().bits()),
-            )
-            .field(
-                "vsync_idle_pol",
-                &format_args!("{}", self.vsync_idle_pol().bit()),
-            )
-            .field(
-                "lcd_hsync_width",
-                &format_args!("{}", self.lcd_hsync_width().bits()),
-            )
-            .field(
-                "hsync_idle_pol",
-                &format_args!("{}", self.hsync_idle_pol().bit()),
-            )
-            .field(
-                "lcd_hsync_position",
-                &format_args!("{}", self.lcd_hsync_position().bits()),
-            )
+            .field("lcd_vsync_width", &self.lcd_vsync_width().bits())
+            .field("vsync_idle_pol", &self.vsync_idle_pol().bit())
+            .field("lcd_hsync_width", &self.lcd_hsync_width().bits())
+            .field("hsync_idle_pol", &self.hsync_idle_pol().bit())
+            .field("lcd_hsync_position", &self.lcd_hsync_position().bits())
             .finish()
     }
 }

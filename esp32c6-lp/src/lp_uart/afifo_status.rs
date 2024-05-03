@@ -34,22 +34,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AFIFO_STATUS")
-            .field(
-                "tx_afifo_full",
-                &format_args!("{}", self.tx_afifo_full().bit()),
-            )
-            .field(
-                "tx_afifo_empty",
-                &format_args!("{}", self.tx_afifo_empty().bit()),
-            )
-            .field(
-                "rx_afifo_full",
-                &format_args!("{}", self.rx_afifo_full().bit()),
-            )
-            .field(
-                "rx_afifo_empty",
-                &format_args!("{}", self.rx_afifo_empty().bit()),
-            )
+            .field("tx_afifo_full", &self.tx_afifo_full().bit())
+            .field("tx_afifo_empty", &self.tx_afifo_empty().bit())
+            .field("rx_afifo_full", &self.rx_afifo_full().bit())
+            .field("rx_afifo_empty", &self.rx_afifo_empty().bit())
             .finish()
     }
 }

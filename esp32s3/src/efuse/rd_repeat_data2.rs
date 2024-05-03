@@ -97,52 +97,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA2")
-            .field(
-                "key_purpose_2",
-                &format_args!("{}", self.key_purpose_2().bits()),
-            )
-            .field(
-                "key_purpose_3",
-                &format_args!("{}", self.key_purpose_3().bits()),
-            )
-            .field(
-                "key_purpose_4",
-                &format_args!("{}", self.key_purpose_4().bits()),
-            )
-            .field(
-                "key_purpose_5",
-                &format_args!("{}", self.key_purpose_5().bits()),
-            )
-            .field(
-                "rpt4_reserved0",
-                &format_args!("{}", self.rpt4_reserved0().bits()),
-            )
-            .field(
-                "secure_boot_en",
-                &format_args!("{}", self.secure_boot_en().bit()),
-            )
+            .field("key_purpose_2", &self.key_purpose_2().bits())
+            .field("key_purpose_3", &self.key_purpose_3().bits())
+            .field("key_purpose_4", &self.key_purpose_4().bits())
+            .field("key_purpose_5", &self.key_purpose_5().bits())
+            .field("rpt4_reserved0", &self.rpt4_reserved0().bits())
+            .field("secure_boot_en", &self.secure_boot_en().bit())
             .field(
                 "secure_boot_aggressive_revoke",
-                &format_args!("{}", self.secure_boot_aggressive_revoke().bit()),
+                &self.secure_boot_aggressive_revoke().bit(),
             )
-            .field(
-                "dis_usb_jtag",
-                &format_args!("{}", self.dis_usb_jtag().bit()),
-            )
-            .field(
-                "dis_usb_device",
-                &format_args!("{}", self.dis_usb_device().bit()),
-            )
-            .field(
-                "strap_jtag_sel",
-                &format_args!("{}", self.strap_jtag_sel().bit()),
-            )
-            .field("usb_phy_sel", &format_args!("{}", self.usb_phy_sel().bit()))
-            .field(
-                "power_glitch_dsense",
-                &format_args!("{}", self.power_glitch_dsense().bits()),
-            )
-            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
+            .field("dis_usb_jtag", &self.dis_usb_jtag().bit())
+            .field("dis_usb_device", &self.dis_usb_device().bit())
+            .field("strap_jtag_sel", &self.strap_jtag_sel().bit())
+            .field("usb_phy_sel", &self.usb_phy_sel().bit())
+            .field("power_glitch_dsense", &self.power_glitch_dsense().bits())
+            .field("flash_tpuw", &self.flash_tpuw().bits())
             .finish()
     }
 }

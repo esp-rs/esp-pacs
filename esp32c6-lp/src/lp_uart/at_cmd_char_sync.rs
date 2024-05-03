@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AT_CMD_CHAR_SYNC")
-            .field(
-                "at_cmd_char",
-                &format_args!("{}", self.at_cmd_char().bits()),
-            )
-            .field("char_num", &format_args!("{}", self.char_num().bits()))
+            .field("at_cmd_char", &self.at_cmd_char().bits())
+            .field("char_num", &self.char_num().bits())
             .finish()
     }
 }

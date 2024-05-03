@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DCACHE_AUTOLOAD_SCT0_SIZE")
             .field(
                 "dcache_autoload_sct0_size",
-                &format_args!("{}", self.dcache_autoload_sct0_size().bits()),
+                &self.dcache_autoload_sct0_size().bits(),
             )
             .finish()
     }

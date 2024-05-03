@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IO_MUX")
-            .field("pull_ldo", &format_args!("{}", self.pull_ldo().bits()))
-            .field(
-                "reset_disable",
-                &format_args!("{}", self.reset_disable().bit()),
-            )
+            .field("pull_ldo", &self.pull_ldo().bits())
+            .field("reset_disable", &self.reset_disable().bit())
             .finish()
     }
 }

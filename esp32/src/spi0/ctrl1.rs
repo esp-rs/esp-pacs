@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field(
-                "cs_hold_delay_res",
-                &format_args!("{}", self.cs_hold_delay_res().bits()),
-            )
-            .field(
-                "cs_hold_delay",
-                &format_args!("{}", self.cs_hold_delay().bits()),
-            )
+            .field("cs_hold_delay_res", &self.cs_hold_delay_res().bits())
+            .field("cs_hold_delay", &self.cs_hold_delay().bits())
             .finish()
     }
 }

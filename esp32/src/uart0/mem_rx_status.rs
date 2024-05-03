@@ -27,18 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_RX_STATUS")
-            .field(
-                "mem_rx_status",
-                &format_args!("{}", self.mem_rx_status().bits()),
-            )
-            .field(
-                "mem_rx_rd_addr",
-                &format_args!("{}", self.mem_rx_rd_addr().bits()),
-            )
-            .field(
-                "mem_rx_wr_addr",
-                &format_args!("{}", self.mem_rx_wr_addr().bits()),
-            )
+            .field("mem_rx_status", &self.mem_rx_status().bits())
+            .field("mem_rx_rd_addr", &self.mem_rx_rd_addr().bits())
+            .field("mem_rx_wr_addr", &self.mem_rx_wr_addr().bits())
             .finish()
     }
 }

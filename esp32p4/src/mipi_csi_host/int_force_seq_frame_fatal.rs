@@ -152,70 +152,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE_SEQ_FRAME_FATAL")
-            .field(
-                "force_err_f_seq_vc0",
-                &format_args!("{}", self.force_err_f_seq_vc0().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc1",
-                &format_args!("{}", self.force_err_f_seq_vc1().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc2",
-                &format_args!("{}", self.force_err_f_seq_vc2().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc3",
-                &format_args!("{}", self.force_err_f_seq_vc3().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc4",
-                &format_args!("{}", self.force_err_f_seq_vc4().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc5",
-                &format_args!("{}", self.force_err_f_seq_vc5().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc6",
-                &format_args!("{}", self.force_err_f_seq_vc6().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc7",
-                &format_args!("{}", self.force_err_f_seq_vc7().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc8",
-                &format_args!("{}", self.force_err_f_seq_vc8().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc9",
-                &format_args!("{}", self.force_err_f_seq_vc9().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc10",
-                &format_args!("{}", self.force_err_f_seq_vc10().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc11",
-                &format_args!("{}", self.force_err_f_seq_vc11().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc12",
-                &format_args!("{}", self.force_err_f_seq_vc12().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc13",
-                &format_args!("{}", self.force_err_f_seq_vc13().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc14",
-                &format_args!("{}", self.force_err_f_seq_vc14().bit()),
-            )
-            .field(
-                "force_err_f_seq_vc15",
-                &format_args!("{}", self.force_err_f_seq_vc15().bit()),
-            )
+            .field("force_err_f_seq_vc0", &self.force_err_f_seq_vc0().bit())
+            .field("force_err_f_seq_vc1", &self.force_err_f_seq_vc1().bit())
+            .field("force_err_f_seq_vc2", &self.force_err_f_seq_vc2().bit())
+            .field("force_err_f_seq_vc3", &self.force_err_f_seq_vc3().bit())
+            .field("force_err_f_seq_vc4", &self.force_err_f_seq_vc4().bit())
+            .field("force_err_f_seq_vc5", &self.force_err_f_seq_vc5().bit())
+            .field("force_err_f_seq_vc6", &self.force_err_f_seq_vc6().bit())
+            .field("force_err_f_seq_vc7", &self.force_err_f_seq_vc7().bit())
+            .field("force_err_f_seq_vc8", &self.force_err_f_seq_vc8().bit())
+            .field("force_err_f_seq_vc9", &self.force_err_f_seq_vc9().bit())
+            .field("force_err_f_seq_vc10", &self.force_err_f_seq_vc10().bit())
+            .field("force_err_f_seq_vc11", &self.force_err_f_seq_vc11().bit())
+            .field("force_err_f_seq_vc12", &self.force_err_f_seq_vc12().bit())
+            .field("force_err_f_seq_vc13", &self.force_err_f_seq_vc13().bit())
+            .field("force_err_f_seq_vc14", &self.force_err_f_seq_vc14().bit())
+            .field("force_err_f_seq_vc15", &self.force_err_f_seq_vc15().bit())
             .finish()
     }
 }

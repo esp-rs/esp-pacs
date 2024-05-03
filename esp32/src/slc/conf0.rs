@@ -296,119 +296,44 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field("slc0_tx_rst", &format_args!("{}", self.slc0_tx_rst().bit()))
-            .field("slc0_rx_rst", &format_args!("{}", self.slc0_rx_rst().bit()))
-            .field(
-                "ahbm_fifo_rst",
-                &format_args!("{}", self.ahbm_fifo_rst().bit()),
-            )
-            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
-            .field(
-                "slc0_tx_loop_test",
-                &format_args!("{}", self.slc0_tx_loop_test().bit()),
-            )
-            .field(
-                "slc0_rx_loop_test",
-                &format_args!("{}", self.slc0_rx_loop_test().bit()),
-            )
-            .field(
-                "slc0_rx_auto_wrback",
-                &format_args!("{}", self.slc0_rx_auto_wrback().bit()),
-            )
+            .field("slc0_tx_rst", &self.slc0_tx_rst().bit())
+            .field("slc0_rx_rst", &self.slc0_rx_rst().bit())
+            .field("ahbm_fifo_rst", &self.ahbm_fifo_rst().bit())
+            .field("ahbm_rst", &self.ahbm_rst().bit())
+            .field("slc0_tx_loop_test", &self.slc0_tx_loop_test().bit())
+            .field("slc0_rx_loop_test", &self.slc0_rx_loop_test().bit())
+            .field("slc0_rx_auto_wrback", &self.slc0_rx_auto_wrback().bit())
             .field(
                 "slc0_rx_no_restart_clr",
-                &format_args!("{}", self.slc0_rx_no_restart_clr().bit()),
+                &self.slc0_rx_no_restart_clr().bit(),
             )
-            .field(
-                "slc0_rxdscr_burst_en",
-                &format_args!("{}", self.slc0_rxdscr_burst_en().bit()),
-            )
-            .field(
-                "slc0_rxdata_burst_en",
-                &format_args!("{}", self.slc0_rxdata_burst_en().bit()),
-            )
-            .field(
-                "slc0_rxlink_auto_ret",
-                &format_args!("{}", self.slc0_rxlink_auto_ret().bit()),
-            )
-            .field(
-                "slc0_txlink_auto_ret",
-                &format_args!("{}", self.slc0_txlink_auto_ret().bit()),
-            )
-            .field(
-                "slc0_txdscr_burst_en",
-                &format_args!("{}", self.slc0_txdscr_burst_en().bit()),
-            )
-            .field(
-                "slc0_txdata_burst_en",
-                &format_args!("{}", self.slc0_txdata_burst_en().bit()),
-            )
-            .field(
-                "slc0_token_auto_clr",
-                &format_args!("{}", self.slc0_token_auto_clr().bit()),
-            )
-            .field(
-                "slc0_token_sel",
-                &format_args!("{}", self.slc0_token_sel().bit()),
-            )
-            .field("slc1_tx_rst", &format_args!("{}", self.slc1_tx_rst().bit()))
-            .field("slc1_rx_rst", &format_args!("{}", self.slc1_rx_rst().bit()))
-            .field(
-                "slc0_wr_retry_mask_en",
-                &format_args!("{}", self.slc0_wr_retry_mask_en().bit()),
-            )
-            .field(
-                "slc1_wr_retry_mask_en",
-                &format_args!("{}", self.slc1_wr_retry_mask_en().bit()),
-            )
-            .field(
-                "slc1_tx_loop_test",
-                &format_args!("{}", self.slc1_tx_loop_test().bit()),
-            )
-            .field(
-                "slc1_rx_loop_test",
-                &format_args!("{}", self.slc1_rx_loop_test().bit()),
-            )
-            .field(
-                "slc1_rx_auto_wrback",
-                &format_args!("{}", self.slc1_rx_auto_wrback().bit()),
-            )
+            .field("slc0_rxdscr_burst_en", &self.slc0_rxdscr_burst_en().bit())
+            .field("slc0_rxdata_burst_en", &self.slc0_rxdata_burst_en().bit())
+            .field("slc0_rxlink_auto_ret", &self.slc0_rxlink_auto_ret().bit())
+            .field("slc0_txlink_auto_ret", &self.slc0_txlink_auto_ret().bit())
+            .field("slc0_txdscr_burst_en", &self.slc0_txdscr_burst_en().bit())
+            .field("slc0_txdata_burst_en", &self.slc0_txdata_burst_en().bit())
+            .field("slc0_token_auto_clr", &self.slc0_token_auto_clr().bit())
+            .field("slc0_token_sel", &self.slc0_token_sel().bit())
+            .field("slc1_tx_rst", &self.slc1_tx_rst().bit())
+            .field("slc1_rx_rst", &self.slc1_rx_rst().bit())
+            .field("slc0_wr_retry_mask_en", &self.slc0_wr_retry_mask_en().bit())
+            .field("slc1_wr_retry_mask_en", &self.slc1_wr_retry_mask_en().bit())
+            .field("slc1_tx_loop_test", &self.slc1_tx_loop_test().bit())
+            .field("slc1_rx_loop_test", &self.slc1_rx_loop_test().bit())
+            .field("slc1_rx_auto_wrback", &self.slc1_rx_auto_wrback().bit())
             .field(
                 "slc1_rx_no_restart_clr",
-                &format_args!("{}", self.slc1_rx_no_restart_clr().bit()),
+                &self.slc1_rx_no_restart_clr().bit(),
             )
-            .field(
-                "slc1_rxdscr_burst_en",
-                &format_args!("{}", self.slc1_rxdscr_burst_en().bit()),
-            )
-            .field(
-                "slc1_rxdata_burst_en",
-                &format_args!("{}", self.slc1_rxdata_burst_en().bit()),
-            )
-            .field(
-                "slc1_rxlink_auto_ret",
-                &format_args!("{}", self.slc1_rxlink_auto_ret().bit()),
-            )
-            .field(
-                "slc1_txlink_auto_ret",
-                &format_args!("{}", self.slc1_txlink_auto_ret().bit()),
-            )
-            .field(
-                "slc1_txdscr_burst_en",
-                &format_args!("{}", self.slc1_txdscr_burst_en().bit()),
-            )
-            .field(
-                "slc1_txdata_burst_en",
-                &format_args!("{}", self.slc1_txdata_burst_en().bit()),
-            )
-            .field(
-                "slc1_token_auto_clr",
-                &format_args!("{}", self.slc1_token_auto_clr().bit()),
-            )
-            .field(
-                "slc1_token_sel",
-                &format_args!("{}", self.slc1_token_sel().bit()),
-            )
+            .field("slc1_rxdscr_burst_en", &self.slc1_rxdscr_burst_en().bit())
+            .field("slc1_rxdata_burst_en", &self.slc1_rxdata_burst_en().bit())
+            .field("slc1_rxlink_auto_ret", &self.slc1_rxlink_auto_ret().bit())
+            .field("slc1_txlink_auto_ret", &self.slc1_txlink_auto_ret().bit())
+            .field("slc1_txdscr_burst_en", &self.slc1_txdscr_burst_en().bit())
+            .field("slc1_txdata_burst_en", &self.slc1_txdata_burst_en().bit())
+            .field("slc1_token_auto_clr", &self.slc1_token_auto_clr().bit())
+            .field("slc1_token_sel", &self.slc1_token_sel().bit())
             .finish()
     }
 }

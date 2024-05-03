@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_LASTPC_BEFORE_EXCEPTION")
             .field(
                 "core_0_lastpc_before_exc",
-                &format_args!("{}", self.core_0_lastpc_before_exc().bits()),
+                &self.core_0_lastpc_before_exc().bits(),
             )
             .finish()
     }

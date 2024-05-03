@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_PAD_HYS")
-            .field(
-                "reg_lp_gpio_hys",
-                &format_args!("{}", self.reg_lp_gpio_hys().bits()),
-            )
+            .field("reg_lp_gpio_hys", &self.reg_lp_gpio_hys().bits())
             .finish()
     }
 }

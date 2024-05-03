@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RND_ECO_HIGH")
-            .field(
-                "rnd_eco_high",
-                &format_args!("{}", self.rnd_eco_high().bits()),
-            )
+            .field("rnd_eco_high", &self.rnd_eco_high().bits())
             .finish()
     }
 }

@@ -35,12 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_WDATA0")
-            .field("wr_dis", &format_args!("{}", self.wr_dis().bits()))
-            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
-            .field(
-                "flash_crypt_cnt",
-                &format_args!("{}", self.flash_crypt_cnt().bits()),
-            )
+            .field("wr_dis", &self.wr_dis().bits())
+            .field("rd_dis", &self.rd_dis().bits())
+            .field("flash_crypt_cnt", &self.flash_crypt_cnt().bits())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TST_CTRL0")
-            .field("phy_testclr", &format_args!("{}", self.phy_testclr().bit()))
-            .field("phy_testclk", &format_args!("{}", self.phy_testclk().bit()))
+            .field("phy_testclr", &self.phy_testclr().bit())
+            .field("phy_testclk", &self.phy_testclk().bit())
             .finish()
     }
 }

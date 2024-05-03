@@ -71,31 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field(
-                "cs_setup_time",
-                &format_args!("{}", self.cs_setup_time().bits()),
-            )
-            .field(
-                "cs_hold_time",
-                &format_args!("{}", self.cs_hold_time().bits()),
-            )
-            .field(
-                "ecc_cs_hold_time",
-                &format_args!("{}", self.ecc_cs_hold_time().bits()),
-            )
-            .field(
-                "ecc_skip_page_corner",
-                &format_args!("{}", self.ecc_skip_page_corner().bit()),
-            )
-            .field(
-                "ecc_16to18_byte_en",
-                &format_args!("{}", self.ecc_16to18_byte_en().bit()),
-            )
-            .field(
-                "cs_hold_delay",
-                &format_args!("{}", self.cs_hold_delay().bits()),
-            )
-            .field("sync_reset", &format_args!("{}", self.sync_reset().bit()))
+            .field("cs_setup_time", &self.cs_setup_time().bits())
+            .field("cs_hold_time", &self.cs_hold_time().bits())
+            .field("ecc_cs_hold_time", &self.ecc_cs_hold_time().bits())
+            .field("ecc_skip_page_corner", &self.ecc_skip_page_corner().bit())
+            .field("ecc_16to18_byte_en", &self.ecc_16to18_byte_en().bit())
+            .field("cs_hold_delay", &self.cs_hold_delay().bits())
+            .field("sync_reset", &self.sync_reset().bit())
             .finish()
     }
 }

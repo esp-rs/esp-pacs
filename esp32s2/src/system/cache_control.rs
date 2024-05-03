@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_CONTROL")
-            .field(
-                "pro_icache_clk_on",
-                &format_args!("{}", self.pro_icache_clk_on().bit()),
-            )
-            .field(
-                "pro_dcache_clk_on",
-                &format_args!("{}", self.pro_dcache_clk_on().bit()),
-            )
-            .field(
-                "pro_cache_reset",
-                &format_args!("{}", self.pro_cache_reset().bit()),
-            )
+            .field("pro_icache_clk_on", &self.pro_icache_clk_on().bit())
+            .field("pro_dcache_clk_on", &self.pro_dcache_clk_on().bit())
+            .field("pro_cache_reset", &self.pro_cache_reset().bit())
             .finish()
     }
 }

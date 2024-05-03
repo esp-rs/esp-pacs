@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_COEFF")
-            .field("b", &format_args!("{}", self.b().bits()))
-            .field("g", &format_args!("{}", self.g().bits()))
-            .field("r", &format_args!("{}", self.r().bits()))
+            .field("b", &self.b().bits())
+            .field("g", &self.g().bits())
+            .field("r", &self.r().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_PD_MASK")
-            .field(
-                "lslp_mem_pd_mask",
-                &format_args!("{}", self.lslp_mem_pd_mask().bit()),
-            )
+            .field("lslp_mem_pd_mask", &self.lslp_mem_pd_mask().bit())
             .finish()
     }
 }

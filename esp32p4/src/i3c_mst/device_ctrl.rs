@@ -161,71 +161,44 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEVICE_CTRL")
-            .field(
-                "reg_ba_include",
-                &format_args!("{}", self.reg_ba_include().bit()),
-            )
-            .field(
-                "reg_trans_start",
-                &format_args!("{}", self.reg_trans_start().bit()),
-            )
-            .field("reg_clk_en", &format_args!("{}", self.reg_clk_en().bit()))
+            .field("reg_ba_include", &self.reg_ba_include().bit())
+            .field("reg_trans_start", &self.reg_trans_start().bit())
+            .field("reg_clk_en", &self.reg_clk_en().bit())
             .field(
                 "reg_ibi_rstart_trans_en",
-                &format_args!("{}", self.reg_ibi_rstart_trans_en().bit()),
+                &self.reg_ibi_rstart_trans_en().bit(),
             )
-            .field(
-                "reg_auto_dis_ibi_en",
-                &format_args!("{}", self.reg_auto_dis_ibi_en().bit()),
-            )
-            .field(
-                "reg_dma_rx_en",
-                &format_args!("{}", self.reg_dma_rx_en().bit()),
-            )
-            .field(
-                "reg_dma_tx_en",
-                &format_args!("{}", self.reg_dma_tx_en().bit()),
-            )
+            .field("reg_auto_dis_ibi_en", &self.reg_auto_dis_ibi_en().bit())
+            .field("reg_dma_rx_en", &self.reg_dma_rx_en().bit())
+            .field("reg_dma_tx_en", &self.reg_dma_tx_en().bit())
             .field(
                 "reg_multi_slv_single_ccc_en",
-                &format_args!("{}", self.reg_multi_slv_single_ccc_en().bit()),
+                &self.reg_multi_slv_single_ccc_en().bit(),
             )
-            .field(
-                "reg_rx_bit_order",
-                &format_args!("{}", self.reg_rx_bit_order().bit()),
-            )
-            .field(
-                "reg_rx_byte_order",
-                &format_args!("{}", self.reg_rx_byte_order().bit()),
-            )
+            .field("reg_rx_bit_order", &self.reg_rx_bit_order().bit())
+            .field("reg_rx_byte_order", &self.reg_rx_byte_order().bit())
             .field(
                 "reg_scl_pullup_force_en",
-                &format_args!("{}", self.reg_scl_pullup_force_en().bit()),
+                &self.reg_scl_pullup_force_en().bit(),
             )
-            .field(
-                "reg_scl_oe_force_en",
-                &format_args!("{}", self.reg_scl_oe_force_en().bit()),
-            )
+            .field("reg_scl_oe_force_en", &self.reg_scl_oe_force_en().bit())
             .field(
                 "reg_sda_pp_rd_pullup_en",
-                &format_args!("{}", self.reg_sda_pp_rd_pullup_en().bit()),
+                &self.reg_sda_pp_rd_pullup_en().bit(),
             )
             .field(
                 "reg_sda_rd_tbit_hlvl_pullup_en",
-                &format_args!("{}", self.reg_sda_rd_tbit_hlvl_pullup_en().bit()),
+                &self.reg_sda_rd_tbit_hlvl_pullup_en().bit(),
             )
             .field(
                 "reg_sda_pp_wr_pullup_en",
-                &format_args!("{}", self.reg_sda_pp_wr_pullup_en().bit()),
+                &self.reg_sda_pp_wr_pullup_en().bit(),
             )
             .field(
                 "reg_data_byte_cnt_unlatch",
-                &format_args!("{}", self.reg_data_byte_cnt_unlatch().bit()),
+                &self.reg_data_byte_cnt_unlatch().bit(),
             )
-            .field(
-                "reg_mem_clk_force_on",
-                &format_args!("{}", self.reg_mem_clk_force_on().bit()),
-            )
+            .field("reg_mem_clk_force_on", &self.reg_mem_clk_force_on().bit())
             .finish()
     }
 }

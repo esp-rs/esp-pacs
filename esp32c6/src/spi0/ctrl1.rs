@@ -92,37 +92,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL1")
-            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
+            .field("clk_mode", &self.clk_mode().bits())
             .field(
                 "spi_ar_size0_1_support_en",
-                &format_args!("{}", self.spi_ar_size0_1_support_en().bit()),
+                &self.spi_ar_size0_1_support_en().bit(),
             )
             .field(
                 "spi_aw_size0_1_support_en",
-                &format_args!("{}", self.spi_aw_size0_1_support_en().bit()),
+                &self.spi_aw_size0_1_support_en().bit(),
             )
             .field(
                 "spi_axi_rdata_back_fast",
-                &format_args!("{}", self.spi_axi_rdata_back_fast().bit()),
+                &self.spi_axi_rdata_back_fast().bit(),
             )
-            .field(
-                "rresp_ecc_err_en",
-                &format_args!("{}", self.rresp_ecc_err_en().bit()),
-            )
-            .field(
-                "ar_splice_en",
-                &format_args!("{}", self.ar_splice_en().bit()),
-            )
-            .field(
-                "aw_splice_en",
-                &format_args!("{}", self.aw_splice_en().bit()),
-            )
-            .field("ram0_en", &format_args!("{}", self.ram0_en().bit()))
-            .field("dual_ram_en", &format_args!("{}", self.dual_ram_en().bit()))
-            .field(
-                "fast_write_en",
-                &format_args!("{}", self.fast_write_en().bit()),
-            )
+            .field("rresp_ecc_err_en", &self.rresp_ecc_err_en().bit())
+            .field("ar_splice_en", &self.ar_splice_en().bit())
+            .field("aw_splice_en", &self.aw_splice_en().bit())
+            .field("ram0_en", &self.ram0_en().bit())
+            .field("dual_ram_en", &self.dual_ram_en().bit())
+            .field("fast_write_en", &self.fast_write_en().bit())
             .finish()
     }
 }

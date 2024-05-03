@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_FE2")
             .field(
                 "fe2_access_grant_config",
-                &format_args!("{}", self.fe2_access_grant_config().bits()),
+                &self.fe2_access_grant_config().bits(),
             )
             .finish()
     }

@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_SARDATE")
-            .field("sar_date", &format_args!("{}", self.sar_date().bits()))
+            .field("sar_date", &self.sar_date().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_RCD_EN")
-            .field(
-                "core_1_rcd_recorden",
-                &format_args!("{}", self.core_1_rcd_recorden().bit()),
-            )
-            .field(
-                "core_1_rcd_pdebugen",
-                &format_args!("{}", self.core_1_rcd_pdebugen().bit()),
-            )
+            .field("core_1_rcd_recorden", &self.core_1_rcd_recorden().bit())
+            .field("core_1_rcd_pdebugen", &self.core_1_rcd_pdebugen().bit())
             .finish()
     }
 }

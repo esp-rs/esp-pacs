@@ -29,15 +29,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_ST")
             .field(
                 "reg_l2_mem_ecc_err_int_st",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_int_st().bit()),
+                &self.reg_l2_mem_ecc_err_int_st().bit(),
             )
             .field(
                 "reg_l2_mem_exceed_addr_int_st",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_st().bit()),
+                &self.reg_l2_mem_exceed_addr_int_st().bit(),
             )
             .field(
                 "reg_l2_mem_err_resp_int_st",
-                &format_args!("{}", self.reg_l2_mem_err_resp_int_st().bit()),
+                &self.reg_l2_mem_err_resp_int_st().bit(),
             )
             .finish()
     }

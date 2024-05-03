@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("ULP_CP_TIMER_1")
             .field(
                 "ulp_cp_timer_slp_cycle",
-                &format_args!("{}", self.ulp_cp_timer_slp_cycle().bits()),
+                &self.ulp_cp_timer_slp_cycle().bits(),
             )
             .finish()
     }

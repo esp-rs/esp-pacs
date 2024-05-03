@@ -87,42 +87,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT_ENABLE")
-            .field(
-                "ext_receive_int_ena",
-                &format_args!("{}", self.ext_receive_int_ena().bit()),
-            )
-            .field(
-                "ext_transmit_int_ena",
-                &format_args!("{}", self.ext_transmit_int_ena().bit()),
-            )
+            .field("ext_receive_int_ena", &self.ext_receive_int_ena().bit())
+            .field("ext_transmit_int_ena", &self.ext_transmit_int_ena().bit())
             .field(
                 "ext_err_warning_int_ena",
-                &format_args!("{}", self.ext_err_warning_int_ena().bit()),
+                &self.ext_err_warning_int_ena().bit(),
             )
             .field(
                 "ext_data_overrun_int_ena",
-                &format_args!("{}", self.ext_data_overrun_int_ena().bit()),
+                &self.ext_data_overrun_int_ena().bit(),
             )
             .field(
                 "ts_counter_ovfl_int_ena",
-                &format_args!("{}", self.ts_counter_ovfl_int_ena().bit()),
+                &self.ts_counter_ovfl_int_ena().bit(),
             )
-            .field(
-                "err_passive_int_ena",
-                &format_args!("{}", self.err_passive_int_ena().bit()),
-            )
+            .field("err_passive_int_ena", &self.err_passive_int_ena().bit())
             .field(
                 "arbitration_lost_int_ena",
-                &format_args!("{}", self.arbitration_lost_int_ena().bit()),
+                &self.arbitration_lost_int_ena().bit(),
             )
-            .field(
-                "bus_err_int_ena",
-                &format_args!("{}", self.bus_err_int_ena().bit()),
-            )
-            .field(
-                "idle_int_ena",
-                &format_args!("{}", self.idle_int_ena().bit()),
-            )
+            .field("bus_err_int_ena", &self.bus_err_int_ena().bit())
+            .field("idle_int_ena", &self.idle_int_ena().bit())
             .finish()
     }
 }

@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_LOCK_CTRL")
-            .field(
-                "icache_lock_ena",
-                &format_args!("{}", self.icache_lock_ena().bit()),
-            )
-            .field(
-                "icache_unlock_ena",
-                &format_args!("{}", self.icache_unlock_ena().bit()),
-            )
-            .field(
-                "icache_lock_done",
-                &format_args!("{}", self.icache_lock_done().bit()),
-            )
+            .field("icache_lock_ena", &self.icache_lock_ena().bit())
+            .field("icache_unlock_ena", &self.icache_unlock_ena().bit())
+            .field("icache_lock_done", &self.icache_lock_done().bit())
             .finish()
     }
 }

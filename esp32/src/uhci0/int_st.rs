@@ -125,38 +125,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field("tx_hung", &format_args!("{}", self.tx_hung().bit()))
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "out_dscr_err",
-                &format_args!("{}", self.out_dscr_err().bit()),
-            )
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field(
-                "outlink_eof_err",
-                &format_args!("{}", self.outlink_eof_err().bit()),
-            )
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
-            .field("send_s_q", &format_args!("{}", self.send_s_q().bit()))
-            .field("send_a_q", &format_args!("{}", self.send_a_q().bit()))
-            .field(
-                "dma_infifo_full_wm",
-                &format_args!("{}", self.dma_infifo_full_wm().bit()),
-            )
+            .field("rx_start", &self.rx_start().bit())
+            .field("tx_start", &self.tx_start().bit())
+            .field("rx_hung", &self.rx_hung().bit())
+            .field("tx_hung", &self.tx_hung().bit())
+            .field("in_done", &self.in_done().bit())
+            .field("in_suc_eof", &self.in_suc_eof().bit())
+            .field("in_err_eof", &self.in_err_eof().bit())
+            .field("out_done", &self.out_done().bit())
+            .field("out_eof", &self.out_eof().bit())
+            .field("in_dscr_err", &self.in_dscr_err().bit())
+            .field("out_dscr_err", &self.out_dscr_err().bit())
+            .field("in_dscr_empty", &self.in_dscr_empty().bit())
+            .field("outlink_eof_err", &self.outlink_eof_err().bit())
+            .field("out_total_eof", &self.out_total_eof().bit())
+            .field("send_s_q", &self.send_s_q().bit())
+            .field("send_a_q", &self.send_a_q().bit())
+            .field("dma_infifo_full_wm", &self.dma_infifo_full_wm().bit())
             .finish()
     }
 }

@@ -94,54 +94,45 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_COCPU_INT_RAW")
             .field(
                 "sar_cocpu_touch_done_int_raw",
-                &format_args!("{}", self.sar_cocpu_touch_done_int_raw().bit()),
+                &self.sar_cocpu_touch_done_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_touch_inactive_int_raw",
-                &format_args!("{}", self.sar_cocpu_touch_inactive_int_raw().bit()),
+                &self.sar_cocpu_touch_inactive_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_touch_active_int_raw",
-                &format_args!("{}", self.sar_cocpu_touch_active_int_raw().bit()),
+                &self.sar_cocpu_touch_active_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_saradc1_int_raw",
-                &format_args!("{}", self.sar_cocpu_saradc1_int_raw().bit()),
+                &self.sar_cocpu_saradc1_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_saradc2_int_raw",
-                &format_args!("{}", self.sar_cocpu_saradc2_int_raw().bit()),
+                &self.sar_cocpu_saradc2_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_tsens_int_raw",
-                &format_args!("{}", self.sar_cocpu_tsens_int_raw().bit()),
+                &self.sar_cocpu_tsens_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_start_int_raw",
-                &format_args!("{}", self.sar_cocpu_start_int_raw().bit()),
+                &self.sar_cocpu_start_int_raw().bit(),
             )
-            .field(
-                "sar_cocpu_sw_int_raw",
-                &format_args!("{}", self.sar_cocpu_sw_int_raw().bit()),
-            )
-            .field(
-                "sar_cocpu_swd_int_raw",
-                &format_args!("{}", self.sar_cocpu_swd_int_raw().bit()),
-            )
+            .field("sar_cocpu_sw_int_raw", &self.sar_cocpu_sw_int_raw().bit())
+            .field("sar_cocpu_swd_int_raw", &self.sar_cocpu_swd_int_raw().bit())
             .field(
                 "sar_cocpu_touch_timeout_int_raw",
-                &format_args!("{}", self.sar_cocpu_touch_timeout_int_raw().bit()),
+                &self.sar_cocpu_touch_timeout_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_touch_approach_loop_done_int_raw",
-                &format_args!(
-                    "{}",
-                    self.sar_cocpu_touch_approach_loop_done_int_raw().bit()
-                ),
+                &self.sar_cocpu_touch_approach_loop_done_int_raw().bit(),
             )
             .field(
                 "sar_cocpu_touch_scan_done_int_raw",
-                &format_args!("{}", self.sar_cocpu_touch_scan_done_int_raw().bit()),
+                &self.sar_cocpu_touch_scan_done_int_raw().bit(),
             )
             .finish()
     }

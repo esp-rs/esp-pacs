@@ -134,26 +134,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT")
-            .field("xfercompl", &format_args!("{}", self.xfercompl().bit()))
-            .field("chhltd", &format_args!("{}", self.chhltd().bit()))
-            .field("ahberr", &format_args!("{}", self.ahberr().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("nack", &format_args!("{}", self.nack().bit()))
-            .field("ack", &format_args!("{}", self.ack().bit()))
-            .field("nyet", &format_args!("{}", self.nyet().bit()))
-            .field("xacterr", &format_args!("{}", self.xacterr().bit()))
-            .field("bblerr", &format_args!("{}", self.bblerr().bit()))
-            .field("frmovrun", &format_args!("{}", self.frmovrun().bit()))
-            .field("datatglerr", &format_args!("{}", self.datatglerr().bit()))
-            .field("bnaintr", &format_args!("{}", self.bnaintr().bit()))
-            .field(
-                "xcs_xact_err",
-                &format_args!("{}", self.xcs_xact_err().bit()),
-            )
-            .field(
-                "desc_lst_rollintr",
-                &format_args!("{}", self.desc_lst_rollintr().bit()),
-            )
+            .field("xfercompl", &self.xfercompl().bit())
+            .field("chhltd", &self.chhltd().bit())
+            .field("ahberr", &self.ahberr().bit())
+            .field("stall", &self.stall().bit())
+            .field("nack", &self.nack().bit())
+            .field("ack", &self.ack().bit())
+            .field("nyet", &self.nyet().bit())
+            .field("xacterr", &self.xacterr().bit())
+            .field("bblerr", &self.bblerr().bit())
+            .field("frmovrun", &self.frmovrun().bit())
+            .field("datatglerr", &self.datatglerr().bit())
+            .field("bnaintr", &self.bnaintr().bit())
+            .field("xcs_xact_err", &self.xcs_xact_err().bit())
+            .field("desc_lst_rollintr", &self.desc_lst_rollintr().bit())
             .finish()
     }
 }

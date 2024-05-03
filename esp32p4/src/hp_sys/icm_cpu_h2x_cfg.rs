@@ -35,15 +35,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICM_CPU_H2X_CFG")
             .field(
                 "cpu_icm_h2x_post_wr_en",
-                &format_args!("{}", self.cpu_icm_h2x_post_wr_en().bit()),
+                &self.cpu_icm_h2x_post_wr_en().bit(),
             )
             .field(
                 "cpu_icm_h2x_cut_through_en",
-                &format_args!("{}", self.cpu_icm_h2x_cut_through_en().bit()),
+                &self.cpu_icm_h2x_cut_through_en().bit(),
             )
             .field(
                 "cpu_icm_h2x_bridge_busy",
-                &format_args!("{}", self.cpu_icm_h2x_bridge_busy().bit()),
+                &self.cpu_icm_h2x_bridge_busy().bit(),
             )
             .finish()
     }

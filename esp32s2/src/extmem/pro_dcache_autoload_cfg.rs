@@ -73,31 +73,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_AUTOLOAD_CFG")
             .field(
                 "pro_dcache_autoload_mode",
-                &format_args!("{}", self.pro_dcache_autoload_mode().bit()),
+                &self.pro_dcache_autoload_mode().bit(),
             )
             .field(
                 "pro_dcache_autoload_step",
-                &format_args!("{}", self.pro_dcache_autoload_step().bits()),
+                &self.pro_dcache_autoload_step().bits(),
             )
             .field(
                 "pro_dcache_autoload_order",
-                &format_args!("{}", self.pro_dcache_autoload_order().bit()),
+                &self.pro_dcache_autoload_order().bit(),
             )
             .field(
                 "pro_dcache_autoload_rqst",
-                &format_args!("{}", self.pro_dcache_autoload_rqst().bits()),
+                &self.pro_dcache_autoload_rqst().bits(),
             )
             .field(
                 "pro_dcache_autoload_size",
-                &format_args!("{}", self.pro_dcache_autoload_size().bits()),
+                &self.pro_dcache_autoload_size().bits(),
             )
             .field(
                 "pro_dcache_autoload_sct0_ena",
-                &format_args!("{}", self.pro_dcache_autoload_sct0_ena().bit()),
+                &self.pro_dcache_autoload_sct0_ena().bit(),
             )
             .field(
                 "pro_dcache_autoload_sct1_ena",
-                &format_args!("{}", self.pro_dcache_autoload_sct1_ena().bit()),
+                &self.pro_dcache_autoload_sct1_ena().bit(),
             )
             .finish()
     }

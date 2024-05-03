@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_RESET_AVAIL_CH")
-            .field(
-                "in_reset_avail",
-                &format_args!("{}", self.in_reset_avail().bit()),
-            )
+            .field("in_reset_avail", &self.in_reset_avail().bit())
             .finish()
     }
 }

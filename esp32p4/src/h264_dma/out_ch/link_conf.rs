@@ -42,22 +42,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LINK_CONF")
-            .field(
-                "outlink_stop",
-                &format_args!("{}", self.outlink_stop().bit()),
-            )
-            .field(
-                "outlink_start",
-                &format_args!("{}", self.outlink_start().bit()),
-            )
-            .field(
-                "outlink_restart",
-                &format_args!("{}", self.outlink_restart().bit()),
-            )
-            .field(
-                "outlink_park",
-                &format_args!("{}", self.outlink_park().bit()),
-            )
+            .field("outlink_stop", &self.outlink_stop().bit())
+            .field("outlink_start", &self.outlink_start().bit())
+            .field("outlink_restart", &self.outlink_restart().bit())
+            .field("outlink_park", &self.outlink_park().bit())
             .finish()
     }
 }

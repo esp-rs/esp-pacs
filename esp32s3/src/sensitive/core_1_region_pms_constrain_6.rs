@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_REGION_PMS_CONSTRAIN_6")
             .field(
                 "core_1_region_pms_constrain_addr_3",
-                &format_args!("{}", self.core_1_region_pms_constrain_addr_3().bits()),
+                &self.core_1_region_pms_constrain_addr_3().bits(),
             )
             .finish()
     }

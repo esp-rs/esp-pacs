@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AT_CMD_POSTCNT_SYNC")
-            .field(
-                "post_idle_num",
-                &format_args!("{}", self.post_idle_num().bits()),
-            )
+            .field("post_idle_num", &self.post_idle_num().bits())
             .finish()
     }
 }

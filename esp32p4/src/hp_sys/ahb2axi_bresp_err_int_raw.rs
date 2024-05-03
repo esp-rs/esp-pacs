@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHB2AXI_BRESP_ERR_INT_RAW")
             .field(
                 "cpu_icm_h2x_bresp_err_int_raw",
-                &format_args!("{}", self.cpu_icm_h2x_bresp_err_int_raw().bit()),
+                &self.cpu_icm_h2x_bresp_err_int_raw().bit(),
             )
             .finish()
     }

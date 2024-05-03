@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBI_VCID")
-            .field("dbi_vcid", &format_args!("{}", self.dbi_vcid().bits()))
+            .field("dbi_vcid", &self.dbi_vcid().bits())
             .finish()
     }
 }

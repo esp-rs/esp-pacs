@@ -104,32 +104,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GHWCFG2")
-            .field("otgmode", &format_args!("{}", self.otgmode().bits()))
-            .field("otgarch", &format_args!("{}", self.otgarch().bits()))
-            .field("singpnt", &format_args!("{}", self.singpnt().bit()))
-            .field("hsphytype", &format_args!("{}", self.hsphytype().bits()))
-            .field("fsphytype", &format_args!("{}", self.fsphytype().bits()))
-            .field("numdeveps", &format_args!("{}", self.numdeveps().bits()))
-            .field("numhstchnl", &format_args!("{}", self.numhstchnl().bits()))
-            .field(
-                "periosupport",
-                &format_args!("{}", self.periosupport().bit()),
-            )
-            .field(
-                "dynfifosizing",
-                &format_args!("{}", self.dynfifosizing().bit()),
-            )
-            .field(
-                "multiprocintrpt",
-                &format_args!("{}", self.multiprocintrpt().bit()),
-            )
-            .field("nptxqdepth", &format_args!("{}", self.nptxqdepth().bits()))
-            .field("ptxqdepth", &format_args!("{}", self.ptxqdepth().bits()))
-            .field("tknqdepth", &format_args!("{}", self.tknqdepth().bits()))
-            .field(
-                "otg_enable_ic_usb",
-                &format_args!("{}", self.otg_enable_ic_usb().bit()),
-            )
+            .field("otgmode", &self.otgmode().bits())
+            .field("otgarch", &self.otgarch().bits())
+            .field("singpnt", &self.singpnt().bit())
+            .field("hsphytype", &self.hsphytype().bits())
+            .field("fsphytype", &self.fsphytype().bits())
+            .field("numdeveps", &self.numdeveps().bits())
+            .field("numhstchnl", &self.numhstchnl().bits())
+            .field("periosupport", &self.periosupport().bit())
+            .field("dynfifosizing", &self.dynfifosizing().bit())
+            .field("multiprocintrpt", &self.multiprocintrpt().bit())
+            .field("nptxqdepth", &self.nptxqdepth().bits())
+            .field("ptxqdepth", &self.ptxqdepth().bits())
+            .field("tknqdepth", &self.tknqdepth().bits())
+            .field("otg_enable_ic_usb", &self.otg_enable_ic_usb().bit())
             .finish()
     }
 }

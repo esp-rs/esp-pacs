@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BACKUP_CFG")
-            .field(
-                "backup_sys_clk_no_div",
-                &format_args!("{}", self.backup_sys_clk_no_div().bit()),
-            )
+            .field("backup_sys_clk_no_div", &self.backup_sys_clk_no_div().bit())
             .finish()
     }
 }

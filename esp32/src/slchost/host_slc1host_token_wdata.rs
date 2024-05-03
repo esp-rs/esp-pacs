@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLC1HOST_TOKEN_WDATA")
             .field(
                 "host_slc1host_token0_wd",
-                &format_args!("{}", self.host_slc1host_token0_wd().bits()),
+                &self.host_slc1host_token0_wd().bits(),
             )
             .field(
                 "host_slc1host_token1_wd",
-                &format_args!("{}", self.host_slc1host_token1_wd().bits()),
+                &self.host_slc1host_token1_wd().bits(),
             )
             .finish()
     }

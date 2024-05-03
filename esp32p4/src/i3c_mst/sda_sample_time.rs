@@ -28,11 +28,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SDA_SAMPLE_TIME")
             .field(
                 "reg_sda_od_sample_time",
-                &format_args!("{}", self.reg_sda_od_sample_time().bits()),
+                &self.reg_sda_od_sample_time().bits(),
             )
             .field(
                 "reg_sda_pp_sample_time",
-                &format_args!("{}", self.reg_sda_pp_sample_time().bits()),
+                &self.reg_sda_pp_sample_time().bits(),
             )
             .finish()
     }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_FASTMEM_CRC")
-            .field(
-                "rtc_mem_crc_res",
-                &format_args!("{}", self.rtc_mem_crc_res().bits()),
-            )
+            .field("rtc_mem_crc_res", &self.rtc_mem_crc_res().bits())
             .finish()
     }
 }

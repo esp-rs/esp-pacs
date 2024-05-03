@@ -190,108 +190,105 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLC0HOST_INT_ST")
             .field(
                 "host_slc0_tohost_bit0_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit0_int_st().bit()),
+                &self.host_slc0_tohost_bit0_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit1_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit1_int_st().bit()),
+                &self.host_slc0_tohost_bit1_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit2_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit2_int_st().bit()),
+                &self.host_slc0_tohost_bit2_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit3_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit3_int_st().bit()),
+                &self.host_slc0_tohost_bit3_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit4_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit4_int_st().bit()),
+                &self.host_slc0_tohost_bit4_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit5_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit5_int_st().bit()),
+                &self.host_slc0_tohost_bit5_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit6_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit6_int_st().bit()),
+                &self.host_slc0_tohost_bit6_int_st().bit(),
             )
             .field(
                 "host_slc0_tohost_bit7_int_st",
-                &format_args!("{}", self.host_slc0_tohost_bit7_int_st().bit()),
+                &self.host_slc0_tohost_bit7_int_st().bit(),
             )
             .field(
                 "host_slc0_token0_1to0_int_st",
-                &format_args!("{}", self.host_slc0_token0_1to0_int_st().bit()),
+                &self.host_slc0_token0_1to0_int_st().bit(),
             )
             .field(
                 "host_slc0_token1_1to0_int_st",
-                &format_args!("{}", self.host_slc0_token1_1to0_int_st().bit()),
+                &self.host_slc0_token1_1to0_int_st().bit(),
             )
             .field(
                 "host_slc0_token0_0to1_int_st",
-                &format_args!("{}", self.host_slc0_token0_0to1_int_st().bit()),
+                &self.host_slc0_token0_0to1_int_st().bit(),
             )
             .field(
                 "host_slc0_token1_0to1_int_st",
-                &format_args!("{}", self.host_slc0_token1_0to1_int_st().bit()),
+                &self.host_slc0_token1_0to1_int_st().bit(),
             )
             .field(
                 "host_slc0host_rx_sof_int_st",
-                &format_args!("{}", self.host_slc0host_rx_sof_int_st().bit()),
+                &self.host_slc0host_rx_sof_int_st().bit(),
             )
             .field(
                 "host_slc0host_rx_eof_int_st",
-                &format_args!("{}", self.host_slc0host_rx_eof_int_st().bit()),
+                &self.host_slc0host_rx_eof_int_st().bit(),
             )
             .field(
                 "host_slc0host_rx_start_int_st",
-                &format_args!("{}", self.host_slc0host_rx_start_int_st().bit()),
+                &self.host_slc0host_rx_start_int_st().bit(),
             )
             .field(
                 "host_slc0host_tx_start_int_st",
-                &format_args!("{}", self.host_slc0host_tx_start_int_st().bit()),
+                &self.host_slc0host_tx_start_int_st().bit(),
             )
             .field(
                 "host_slc0_rx_udf_int_st",
-                &format_args!("{}", self.host_slc0_rx_udf_int_st().bit()),
+                &self.host_slc0_rx_udf_int_st().bit(),
             )
             .field(
                 "host_slc0_tx_ovf_int_st",
-                &format_args!("{}", self.host_slc0_tx_ovf_int_st().bit()),
+                &self.host_slc0_tx_ovf_int_st().bit(),
             )
             .field(
                 "host_slc0_rx_pf_valid_int_st",
-                &format_args!("{}", self.host_slc0_rx_pf_valid_int_st().bit()),
+                &self.host_slc0_rx_pf_valid_int_st().bit(),
             )
             .field(
                 "host_slc0_ext_bit0_int_st",
-                &format_args!("{}", self.host_slc0_ext_bit0_int_st().bit()),
+                &self.host_slc0_ext_bit0_int_st().bit(),
             )
             .field(
                 "host_slc0_ext_bit1_int_st",
-                &format_args!("{}", self.host_slc0_ext_bit1_int_st().bit()),
+                &self.host_slc0_ext_bit1_int_st().bit(),
             )
             .field(
                 "host_slc0_ext_bit2_int_st",
-                &format_args!("{}", self.host_slc0_ext_bit2_int_st().bit()),
+                &self.host_slc0_ext_bit2_int_st().bit(),
             )
             .field(
                 "host_slc0_ext_bit3_int_st",
-                &format_args!("{}", self.host_slc0_ext_bit3_int_st().bit()),
+                &self.host_slc0_ext_bit3_int_st().bit(),
             )
             .field(
                 "host_slc0_rx_new_packet_int_st",
-                &format_args!("{}", self.host_slc0_rx_new_packet_int_st().bit()),
+                &self.host_slc0_rx_new_packet_int_st().bit(),
             )
             .field(
                 "host_slc0_host_rd_retry_int_st",
-                &format_args!("{}", self.host_slc0_host_rd_retry_int_st().bit()),
+                &self.host_slc0_host_rd_retry_int_st().bit(),
             )
-            .field(
-                "host_gpio_sdio_int_st",
-                &format_args!("{}", self.host_gpio_sdio_int_st().bit()),
-            )
+            .field("host_gpio_sdio_int_st", &self.host_gpio_sdio_int_st().bit())
             .finish()
     }
 }

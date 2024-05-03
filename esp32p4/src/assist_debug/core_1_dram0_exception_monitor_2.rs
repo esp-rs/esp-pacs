@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_DRAM0_EXCEPTION_MONITOR_2")
             .field(
                 "core_1_dram0_recording_pc_0",
-                &format_args!("{}", self.core_1_dram0_recording_pc_0().bits()),
+                &self.core_1_dram0_recording_pc_0().bits(),
             )
             .finish()
     }

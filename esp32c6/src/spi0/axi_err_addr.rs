@@ -55,33 +55,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI_ERR_ADDR")
-            .field(
-                "axi_err_addr",
-                &format_args!("{}", self.axi_err_addr().bits()),
-            )
-            .field(
-                "all_fifo_empty",
-                &format_args!("{}", self.all_fifo_empty().bit()),
-            )
+            .field("axi_err_addr", &self.axi_err_addr().bits())
+            .field("all_fifo_empty", &self.all_fifo_empty().bit())
             .field(
                 "spi_rdata_afifo_rempty",
-                &format_args!("{}", self.spi_rdata_afifo_rempty().bit()),
+                &self.spi_rdata_afifo_rempty().bit(),
             )
             .field(
                 "spi_raddr_afifo_rempty",
-                &format_args!("{}", self.spi_raddr_afifo_rempty().bit()),
+                &self.spi_raddr_afifo_rempty().bit(),
             )
             .field(
                 "spi_wdata_afifo_rempty",
-                &format_args!("{}", self.spi_wdata_afifo_rempty().bit()),
+                &self.spi_wdata_afifo_rempty().bit(),
             )
             .field(
                 "spi_wblen_afifo_rempty",
-                &format_args!("{}", self.spi_wblen_afifo_rempty().bit()),
+                &self.spi_wblen_afifo_rempty().bit(),
             )
             .field(
                 "spi_all_axi_trans_afifo_empty",
-                &format_args!("{}", self.spi_all_axi_trans_afifo_empty().bit()),
+                &self.spi_all_axi_trans_afifo_empty().bit(),
             )
             .finish()
     }

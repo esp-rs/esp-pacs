@@ -37,16 +37,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON")
             .field(
                 "clk_force_on_manual_crypt",
-                &format_args!("{}", self.clk_force_on_manual_crypt().bit()),
+                &self.clk_force_on_manual_crypt().bit(),
             )
             .field(
                 "clk_force_on_auto_crypt",
-                &format_args!("{}", self.clk_force_on_auto_crypt().bit()),
+                &self.clk_force_on_auto_crypt().bit(),
             )
-            .field(
-                "clk_force_on_crypt",
-                &format_args!("{}", self.clk_force_on_crypt().bit()),
-            )
+            .field("clk_force_on_crypt", &self.clk_force_on_crypt().bit())
             .finish()
     }
 }

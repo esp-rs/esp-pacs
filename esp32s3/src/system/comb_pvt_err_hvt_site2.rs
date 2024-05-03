@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMB_PVT_ERR_HVT_SITE2")
             .field(
                 "comb_timing_err_cnt_hvt_site2",
-                &format_args!("{}", self.comb_timing_err_cnt_hvt_site2().bits()),
+                &self.comb_timing_err_cnt_hvt_site2().bits(),
             )
             .finish()
     }

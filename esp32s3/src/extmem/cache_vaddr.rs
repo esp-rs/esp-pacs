@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_VADDR")
-            .field(
-                "cache_vaddr",
-                &format_args!("{}", self.cache_vaddr().bits()),
-            )
+            .field("cache_vaddr", &self.cache_vaddr().bits())
             .finish()
     }
 }

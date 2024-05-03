@@ -90,30 +90,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR")
-            .field("resp_rec", &format_args!("{}", self.resp_rec().bit()))
-            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
-            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
-            .field(
-                "slave_addressed",
-                &format_args!("{}", self.slave_addressed().bit()),
-            )
-            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
-            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
-            .field(
-                "stretch_cause",
-                &format_args!("{}", self.stretch_cause().bits()),
-            )
-            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
-            .field(
-                "scl_main_state_last",
-                &format_args!("{}", self.scl_main_state_last().bits()),
-            )
-            .field(
-                "scl_state_last",
-                &format_args!("{}", self.scl_state_last().bits()),
-            )
+            .field("resp_rec", &self.resp_rec().bit())
+            .field("slave_rw", &self.slave_rw().bit())
+            .field("time_out", &self.time_out().bit())
+            .field("arb_lost", &self.arb_lost().bit())
+            .field("bus_busy", &self.bus_busy().bit())
+            .field("slave_addressed", &self.slave_addressed().bit())
+            .field("byte_trans", &self.byte_trans().bit())
+            .field("rxfifo_cnt", &self.rxfifo_cnt().bits())
+            .field("stretch_cause", &self.stretch_cause().bits())
+            .field("txfifo_cnt", &self.txfifo_cnt().bits())
+            .field("scl_main_state_last", &self.scl_main_state_last().bits())
+            .field("scl_state_last", &self.scl_state_last().bits())
             .finish()
     }
 }

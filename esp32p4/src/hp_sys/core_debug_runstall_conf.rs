@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_DEBUG_RUNSTALL_CONF")
             .field(
                 "core_debug_runstall_enable",
-                &format_args!("{}", self.core_debug_runstall_enable().bit()),
+                &self.core_debug_runstall_enable().bit(),
             )
             .finish()
     }

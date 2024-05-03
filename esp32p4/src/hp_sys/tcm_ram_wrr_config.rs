@@ -98,46 +98,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_RAM_WRR_CONFIG")
-            .field(
-                "reg_tcm_ram_ibus0_wt",
-                &format_args!("{}", self.reg_tcm_ram_ibus0_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_ibus1_wt",
-                &format_args!("{}", self.reg_tcm_ram_ibus1_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_ibus2_wt",
-                &format_args!("{}", self.reg_tcm_ram_ibus2_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_ibus3_wt",
-                &format_args!("{}", self.reg_tcm_ram_ibus3_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_dbus0_wt",
-                &format_args!("{}", self.reg_tcm_ram_dbus0_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_dbus1_wt",
-                &format_args!("{}", self.reg_tcm_ram_dbus1_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_dbus2_wt",
-                &format_args!("{}", self.reg_tcm_ram_dbus2_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_dbus3_wt",
-                &format_args!("{}", self.reg_tcm_ram_dbus3_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_dma_wt",
-                &format_args!("{}", self.reg_tcm_ram_dma_wt().bits()),
-            )
-            .field(
-                "reg_tcm_ram_wrr_high",
-                &format_args!("{}", self.reg_tcm_ram_wrr_high().bit()),
-            )
+            .field("reg_tcm_ram_ibus0_wt", &self.reg_tcm_ram_ibus0_wt().bits())
+            .field("reg_tcm_ram_ibus1_wt", &self.reg_tcm_ram_ibus1_wt().bits())
+            .field("reg_tcm_ram_ibus2_wt", &self.reg_tcm_ram_ibus2_wt().bits())
+            .field("reg_tcm_ram_ibus3_wt", &self.reg_tcm_ram_ibus3_wt().bits())
+            .field("reg_tcm_ram_dbus0_wt", &self.reg_tcm_ram_dbus0_wt().bits())
+            .field("reg_tcm_ram_dbus1_wt", &self.reg_tcm_ram_dbus1_wt().bits())
+            .field("reg_tcm_ram_dbus2_wt", &self.reg_tcm_ram_dbus2_wt().bits())
+            .field("reg_tcm_ram_dbus3_wt", &self.reg_tcm_ram_dbus3_wt().bits())
+            .field("reg_tcm_ram_dma_wt", &self.reg_tcm_ram_dma_wt().bits())
+            .field("reg_tcm_ram_wrr_high", &self.reg_tcm_ram_wrr_high().bit())
             .finish()
     }
 }

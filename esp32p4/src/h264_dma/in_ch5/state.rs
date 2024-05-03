@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE")
-            .field("in_state", &format_args!("{}", self.in_state().bits()))
-            .field(
-                "in_reset_avail",
-                &format_args!("{}", self.in_reset_avail().bit()),
-            )
+            .field("in_state", &self.in_state().bits())
+            .field("in_reset_avail", &self.in_reset_avail().bit())
             .finish()
     }
 }

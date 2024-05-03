@@ -27,15 +27,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE")
-            .field("tx_idle", &format_args!("{}", self.tx_idle().bit()))
-            .field(
-                "tx_fifo_reset_back",
-                &format_args!("{}", self.tx_fifo_reset_back().bit()),
-            )
-            .field(
-                "rx_fifo_reset_back",
-                &format_args!("{}", self.rx_fifo_reset_back().bit()),
-            )
+            .field("tx_idle", &self.tx_idle().bit())
+            .field("tx_fifo_reset_back", &self.tx_fifo_reset_back().bit())
+            .field("rx_fifo_reset_back", &self.rx_fifo_reset_back().bit())
             .finish()
     }
 }

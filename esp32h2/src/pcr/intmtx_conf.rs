@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTMTX_CONF")
-            .field(
-                "intmtx_clk_en",
-                &format_args!("{}", self.intmtx_clk_en().bit()),
-            )
-            .field(
-                "intmtx_rst_en",
-                &format_args!("{}", self.intmtx_rst_en().bit()),
-            )
-            .field(
-                "intmtx_ready",
-                &format_args!("{}", self.intmtx_ready().bit()),
-            )
+            .field("intmtx_clk_en", &self.intmtx_clk_en().bit())
+            .field("intmtx_rst_en", &self.intmtx_rst_en().bit())
+            .field("intmtx_ready", &self.intmtx_ready().bit())
             .finish()
     }
 }

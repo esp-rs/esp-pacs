@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP_CONF")
-            .field(
-                "gpio_wakeup_filter",
-                &format_args!("{}", self.gpio_wakeup_filter().bit()),
-            )
-            .field(
-                "ext_wakeup0_lv",
-                &format_args!("{}", self.ext_wakeup0_lv().bit()),
-            )
-            .field(
-                "ext_wakeup1_lv",
-                &format_args!("{}", self.ext_wakeup1_lv().bit()),
-            )
+            .field("gpio_wakeup_filter", &self.gpio_wakeup_filter().bit())
+            .field("ext_wakeup0_lv", &self.ext_wakeup0_lv().bit())
+            .field("ext_wakeup1_lv", &self.ext_wakeup1_lv().bit())
             .finish()
     }
 }

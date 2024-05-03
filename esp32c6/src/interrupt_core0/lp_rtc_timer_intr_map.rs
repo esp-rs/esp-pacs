@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_RTC_TIMER_INTR_MAP")
             .field(
                 "lp_rtc_timer_intr_map",
-                &format_args!("{}", self.lp_rtc_timer_intr_map().bits()),
+                &self.lp_rtc_timer_intr_map().bits(),
             )
             .finish()
     }

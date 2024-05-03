@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH_SUS_CTRL")
-            .field(
-                "flash_pes_en",
-                &format_args!("{}", self.flash_pes_en().bit()),
-            )
-            .field(
-                "flash_per_command",
-                &format_args!("{}", self.flash_per_command().bits()),
-            )
-            .field(
-                "flash_pes_command",
-                &format_args!("{}", self.flash_pes_command().bits()),
-            )
+            .field("flash_pes_en", &self.flash_pes_en().bit())
+            .field("flash_per_command", &self.flash_per_command().bits())
+            .field("flash_pes_command", &self.flash_pes_command().bits())
             .finish()
     }
 }

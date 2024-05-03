@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("RETENTION_CTRL1")
             .field(
                 "retention_tag_link_addr",
-                &format_args!("{}", self.retention_tag_link_addr().bits()),
+                &self.retention_tag_link_addr().bits(),
             )
             .finish()
     }

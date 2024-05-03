@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_0_DSCR_CNT")
-            .field(
-                "slc0_rx_dscr_cnt_lat",
-                &format_args!("{}", self.slc0_rx_dscr_cnt_lat().bits()),
-            )
-            .field(
-                "slc0_rx_get_eof_occ",
-                &format_args!("{}", self.slc0_rx_get_eof_occ().bit()),
-            )
+            .field("slc0_rx_dscr_cnt_lat", &self.slc0_rx_dscr_cnt_lat().bits())
+            .field("slc0_rx_get_eof_occ", &self.slc0_rx_get_eof_occ().bit())
             .finish()
     }
 }

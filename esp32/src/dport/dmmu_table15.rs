@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMMU_TABLE15")
-            .field(
-                "dmmu_table15",
-                &format_args!("{}", self.dmmu_table15().bits()),
-            )
+            .field("dmmu_table15", &self.dmmu_table15().bits())
             .finish()
     }
 }

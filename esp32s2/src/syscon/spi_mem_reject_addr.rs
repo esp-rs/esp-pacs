@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_MEM_REJECT_ADDR")
-            .field(
-                "spi_mem_reject_addr",
-                &format_args!("{}", self.spi_mem_reject_addr().bits()),
-            )
+            .field("spi_mem_reject_addr", &self.spi_mem_reject_addr().bits())
             .finish()
     }
 }

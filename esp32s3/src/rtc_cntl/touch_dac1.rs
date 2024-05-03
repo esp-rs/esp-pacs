@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_DAC1")
-            .field(
-                "touch_pad14_dac",
-                &format_args!("{}", self.touch_pad14_dac().bits()),
-            )
-            .field(
-                "touch_pad13_dac",
-                &format_args!("{}", self.touch_pad13_dac().bits()),
-            )
-            .field(
-                "touch_pad12_dac",
-                &format_args!("{}", self.touch_pad12_dac().bits()),
-            )
-            .field(
-                "touch_pad11_dac",
-                &format_args!("{}", self.touch_pad11_dac().bits()),
-            )
-            .field(
-                "touch_pad10_dac",
-                &format_args!("{}", self.touch_pad10_dac().bits()),
-            )
+            .field("touch_pad14_dac", &self.touch_pad14_dac().bits())
+            .field("touch_pad13_dac", &self.touch_pad13_dac().bits())
+            .field("touch_pad12_dac", &self.touch_pad12_dac().bits())
+            .field("touch_pad11_dac", &self.touch_pad11_dac().bits())
+            .field("touch_pad10_dac", &self.touch_pad10_dac().bits())
             .finish()
     }
 }

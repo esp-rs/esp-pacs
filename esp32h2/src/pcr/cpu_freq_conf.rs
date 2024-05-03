@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_FREQ_CONF")
-            .field(
-                "cpu_div_num",
-                &format_args!("{}", self.cpu_div_num().bits()),
-            )
+            .field("cpu_div_num", &self.cpu_div_num().bits())
             .finish()
     }
 }

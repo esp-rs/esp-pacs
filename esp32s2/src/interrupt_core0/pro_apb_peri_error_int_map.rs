@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_APB_PERI_ERROR_INT_MAP")
             .field(
                 "pro_apb_peri_error_int_map",
-                &format_args!("{}", self.pro_apb_peri_error_int_map().bits()),
+                &self.pro_apb_peri_error_int_map().bits(),
             )
             .finish()
     }

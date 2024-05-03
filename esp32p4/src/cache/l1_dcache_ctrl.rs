@@ -58,30 +58,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_DCACHE_CTRL")
-            .field(
-                "l1_dcache_shut_dbus0",
-                &format_args!("{}", self.l1_dcache_shut_dbus0().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus1",
-                &format_args!("{}", self.l1_dcache_shut_dbus1().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus2",
-                &format_args!("{}", self.l1_dcache_shut_dbus2().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus3",
-                &format_args!("{}", self.l1_dcache_shut_dbus3().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dma",
-                &format_args!("{}", self.l1_dcache_shut_dma().bit()),
-            )
-            .field(
-                "l1_dcache_undef_op",
-                &format_args!("{}", self.l1_dcache_undef_op().bits()),
-            )
+            .field("l1_dcache_shut_dbus0", &self.l1_dcache_shut_dbus0().bit())
+            .field("l1_dcache_shut_dbus1", &self.l1_dcache_shut_dbus1().bit())
+            .field("l1_dcache_shut_dbus2", &self.l1_dcache_shut_dbus2().bit())
+            .field("l1_dcache_shut_dbus3", &self.l1_dcache_shut_dbus3().bit())
+            .field("l1_dcache_shut_dma", &self.l1_dcache_shut_dma().bit())
+            .field("l1_dcache_undef_op", &self.l1_dcache_undef_op().bits())
             .finish()
     }
 }

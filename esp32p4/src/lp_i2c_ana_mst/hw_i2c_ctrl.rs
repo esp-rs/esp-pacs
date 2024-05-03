@@ -35,15 +35,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HW_I2C_CTRL")
-            .field(
-                "hw_i2c_scl_pulse_dur",
-                &format_args!("{}", self.hw_i2c_scl_pulse_dur().bits()),
-            )
+            .field("hw_i2c_scl_pulse_dur", &self.hw_i2c_scl_pulse_dur().bits())
             .field(
                 "hw_i2c_sda_side_guard",
-                &format_args!("{}", self.hw_i2c_sda_side_guard().bits()),
+                &self.hw_i2c_sda_side_guard().bits(),
             )
-            .field("arbiter_dis", &format_args!("{}", self.arbiter_dis().bit()))
+            .field("arbiter_dis", &self.arbiter_dis().bit())
             .finish()
     }
 }

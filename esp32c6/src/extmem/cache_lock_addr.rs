@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_LOCK_ADDR")
-            .field(
-                "cache_lock_addr",
-                &format_args!("{}", self.cache_lock_addr().bits()),
-            )
+            .field("cache_lock_addr", &self.cache_lock_addr().bits())
             .finish()
     }
 }

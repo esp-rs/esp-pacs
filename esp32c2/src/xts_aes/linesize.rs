@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LINESIZE")
-            .field("linesize", &format_args!("{}", self.linesize().bit()))
+            .field("linesize", &self.linesize().bit())
             .finish()
     }
 }

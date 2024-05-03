@@ -87,50 +87,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA6")
-            .field(
-                "rd_coding_scheme",
-                &format_args!("{}", self.rd_coding_scheme().bits()),
-            )
+            .field("rd_coding_scheme", &self.rd_coding_scheme().bits())
             .field(
                 "rd_console_debug_disable",
-                &format_args!("{}", self.rd_console_debug_disable().bit()),
+                &self.rd_console_debug_disable().bit(),
             )
-            .field(
-                "rd_disable_sdio_host",
-                &format_args!("{}", self.rd_disable_sdio_host().bit()),
-            )
-            .field(
-                "rd_abs_done_0",
-                &format_args!("{}", self.rd_abs_done_0().bit()),
-            )
-            .field(
-                "rd_abs_done_1",
-                &format_args!("{}", self.rd_abs_done_1().bit()),
-            )
-            .field(
-                "rd_jtag_disable",
-                &format_args!("{}", self.rd_jtag_disable().bit()),
-            )
-            .field(
-                "rd_disable_dl_encrypt",
-                &format_args!("{}", self.rd_disable_dl_encrypt().bit()),
-            )
-            .field(
-                "rd_disable_dl_decrypt",
-                &format_args!("{}", self.rd_disable_dl_decrypt().bit()),
-            )
-            .field(
-                "rd_disable_dl_cache",
-                &format_args!("{}", self.rd_disable_dl_cache().bit()),
-            )
-            .field(
-                "rd_key_status",
-                &format_args!("{}", self.rd_key_status().bit()),
-            )
-            .field(
-                "rd_reserve_0_203",
-                &format_args!("{}", self.rd_reserve_0_203().bits()),
-            )
+            .field("rd_disable_sdio_host", &self.rd_disable_sdio_host().bit())
+            .field("rd_abs_done_0", &self.rd_abs_done_0().bit())
+            .field("rd_abs_done_1", &self.rd_abs_done_1().bit())
+            .field("rd_jtag_disable", &self.rd_jtag_disable().bit())
+            .field("rd_disable_dl_encrypt", &self.rd_disable_dl_encrypt().bit())
+            .field("rd_disable_dl_decrypt", &self.rd_disable_dl_decrypt().bit())
+            .field("rd_disable_dl_cache", &self.rd_disable_dl_cache().bit())
+            .field("rd_key_status", &self.rd_key_status().bit())
+            .field("rd_reserve_0_203", &self.rd_reserve_0_203().bits())
             .finish()
     }
 }

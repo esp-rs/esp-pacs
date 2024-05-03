@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LCD_CAM_INT_MAP")
             .field(
                 "core0_lcd_cam_int_map",
-                &format_args!("{}", self.core0_lcd_cam_int_map().bits()),
+                &self.core0_lcd_cam_int_map().bits(),
             )
             .finish()
     }

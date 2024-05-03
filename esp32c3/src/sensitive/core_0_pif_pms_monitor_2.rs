@@ -51,35 +51,23 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_MONITOR_2")
             .field(
                 "core_0_pif_pms_monitor_violate_intr",
-                &format_args!("{}", self.core_0_pif_pms_monitor_violate_intr().bit()),
+                &self.core_0_pif_pms_monitor_violate_intr().bit(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hport_0",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hport_0().bit()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hport_0().bit(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hsize().bits()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hsize().bits(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hwrite",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hwrite().bit()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hwrite().bit(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hworld",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hworld().bits()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hworld().bits(),
             )
             .finish()
     }

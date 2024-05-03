@@ -44,10 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field("tx_sclk_en", &format_args!("{}", self.tx_sclk_en().bit()))
-            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
-            .field("tx_rst_core", &format_args!("{}", self.tx_rst_core().bit()))
-            .field("rst_core", &format_args!("{}", self.rst_core().bit()))
+            .field("tx_sclk_en", &self.tx_sclk_en().bit())
+            .field("sclk_en", &self.sclk_en().bit())
+            .field("tx_rst_core", &self.tx_rst_core().bit())
+            .field("rst_core", &self.rst_core().bit())
             .finish()
     }
 }

@@ -69,18 +69,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCON")
-            .field("card_type", &format_args!("{}", self.card_type().bit()))
-            .field("card_num", &format_args!("{}", self.card_num().bits()))
-            .field("bus_type", &format_args!("{}", self.bus_type().bit()))
-            .field("data_width", &format_args!("{}", self.data_width().bits()))
-            .field("addr_width", &format_args!("{}", self.addr_width().bits()))
-            .field("dma_width", &format_args!("{}", self.dma_width().bits()))
-            .field("ram_indise", &format_args!("{}", self.ram_indise().bit()))
-            .field("hold", &format_args!("{}", self.hold().bit()))
-            .field(
-                "num_clk_div",
-                &format_args!("{}", self.num_clk_div().bits()),
-            )
+            .field("card_type", &self.card_type().bit())
+            .field("card_num", &self.card_num().bits())
+            .field("bus_type", &self.bus_type().bit())
+            .field("data_width", &self.data_width().bits())
+            .field("addr_width", &self.addr_width().bits())
+            .field("dma_width", &self.dma_width().bits())
+            .field("ram_indise", &self.ram_indise().bit())
+            .field("hold", &self.hold().bit())
+            .field("num_clk_div", &self.num_clk_div().bits())
             .finish()
     }
 }

@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_CK_CNTL")
-            .field(
-                "modify_icg_cntl_wait",
-                &format_args!("{}", self.modify_icg_cntl_wait().bits()),
-            )
-            .field(
-                "switch_icg_cntl_wait",
-                &format_args!("{}", self.switch_icg_cntl_wait().bits()),
-            )
+            .field("modify_icg_cntl_wait", &self.modify_icg_cntl_wait().bits())
+            .field("switch_icg_cntl_wait", &self.switch_icg_cntl_wait().bits())
             .finish()
     }
 }

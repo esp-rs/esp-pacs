@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_VCID_ACT")
-            .field(
-                "dpi_vcid_act",
-                &format_args!("{}", self.dpi_vcid_act().bits()),
-            )
+            .field("dpi_vcid_act", &self.dpi_vcid_act().bits())
             .finish()
     }
 }

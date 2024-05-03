@@ -89,41 +89,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_HP_REGULATOR0")
-            .field(
-                "lp_dbias_vol",
-                &format_args!("{}", self.lp_dbias_vol().bits()),
-            )
-            .field(
-                "hp_dbias_vol",
-                &format_args!("{}", self.hp_dbias_vol().bits()),
-            )
+            .field("lp_dbias_vol", &self.lp_dbias_vol().bits())
+            .field("hp_dbias_vol", &self.hp_dbias_vol().bits())
             .field(
                 "dig_regulator0_dbias_sel",
-                &format_args!("{}", self.dig_regulator0_dbias_sel().bit()),
+                &self.dig_regulator0_dbias_sel().bit(),
             )
             .field(
                 "hp_active_hp_regulator_slp_mem_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_xpd().bit()),
+                &self.hp_active_hp_regulator_slp_mem_xpd().bit(),
             )
             .field(
                 "hp_active_hp_regulator_slp_logic_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_xpd().bit()),
+                &self.hp_active_hp_regulator_slp_logic_xpd().bit(),
             )
             .field(
                 "hp_active_hp_regulator_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_xpd().bit()),
+                &self.hp_active_hp_regulator_xpd().bit(),
             )
             .field(
                 "hp_active_hp_regulator_slp_mem_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_dbias().bits()),
+                &self.hp_active_hp_regulator_slp_mem_dbias().bits(),
             )
             .field(
                 "hp_active_hp_regulator_slp_logic_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_dbias().bits()),
+                &self.hp_active_hp_regulator_slp_logic_dbias().bits(),
             )
             .field(
                 "hp_active_hp_regulator_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_dbias().bits()),
+                &self.hp_active_hp_regulator_dbias().bits(),
             )
             .finish()
     }

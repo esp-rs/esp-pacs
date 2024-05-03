@@ -71,34 +71,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RF_PWC")
-            .field(
-                "mspi_phy_xpd",
-                &format_args!("{}", self.mspi_phy_xpd().bit()),
-            )
-            .field(
-                "sdio_pll_xpd",
-                &format_args!("{}", self.sdio_pll_xpd().bit()),
-            )
-            .field(
-                "perif_i2c_rstb",
-                &format_args!("{}", self.perif_i2c_rstb().bit()),
-            )
-            .field(
-                "xpd_perif_i2c",
-                &format_args!("{}", self.xpd_perif_i2c().bit()),
-            )
-            .field(
-                "xpd_txrf_i2c",
-                &format_args!("{}", self.xpd_txrf_i2c().bit()),
-            )
-            .field(
-                "xpd_rfrx_pbus",
-                &format_args!("{}", self.xpd_rfrx_pbus().bit()),
-            )
-            .field(
-                "xpd_ckgen_i2c",
-                &format_args!("{}", self.xpd_ckgen_i2c().bit()),
-            )
+            .field("mspi_phy_xpd", &self.mspi_phy_xpd().bit())
+            .field("sdio_pll_xpd", &self.sdio_pll_xpd().bit())
+            .field("perif_i2c_rstb", &self.perif_i2c_rstb().bit())
+            .field("xpd_perif_i2c", &self.xpd_perif_i2c().bit())
+            .field("xpd_txrf_i2c", &self.xpd_txrf_i2c().bit())
+            .field("xpd_rfrx_pbus", &self.xpd_rfrx_pbus().bit())
+            .field("xpd_ckgen_i2c", &self.xpd_ckgen_i2c().bit())
             .finish()
     }
 }

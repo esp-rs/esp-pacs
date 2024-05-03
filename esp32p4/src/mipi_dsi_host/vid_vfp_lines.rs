@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_VFP_LINES")
-            .field("vfp_lines", &format_args!("{}", self.vfp_lines().bits()))
+            .field("vfp_lines", &self.vfp_lines().bits())
             .finish()
     }
 }

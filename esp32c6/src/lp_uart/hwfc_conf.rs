@@ -26,11 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HWFC_CONF")
-            .field(
-                "rx_flow_thrhd",
-                &format_args!("{}", self.rx_flow_thrhd().bits()),
-            )
-            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
+            .field("rx_flow_thrhd", &self.rx_flow_thrhd().bits())
+            .field("rx_flow_en", &self.rx_flow_en().bit())
             .finish()
     }
 }

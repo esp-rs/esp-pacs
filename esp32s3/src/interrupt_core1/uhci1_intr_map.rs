@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UHCI1_INTR_MAP")
-            .field(
-                "uhci1_intr_map",
-                &format_args!("{}", self.uhci1_intr_map().bits()),
-            )
+            .field("uhci1_intr_map", &self.uhci1_intr_map().bits())
             .finish()
     }
 }

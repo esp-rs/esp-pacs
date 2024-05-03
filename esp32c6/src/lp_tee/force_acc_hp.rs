@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("FORCE_ACC_HP")
             .field(
                 "lp_aon_force_acc_hpmem_en",
-                &format_args!("{}", self.lp_aon_force_acc_hpmem_en().bit()),
+                &self.lp_aon_force_acc_hpmem_en().bit(),
             )
             .finish()
     }

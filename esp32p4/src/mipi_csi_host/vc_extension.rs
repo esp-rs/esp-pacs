@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VC_EXTENSION")
-            .field("vcx", &format_args!("{}", self.vcx().bit()))
+            .field("vcx", &self.vcx().bit())
             .finish()
     }
 }

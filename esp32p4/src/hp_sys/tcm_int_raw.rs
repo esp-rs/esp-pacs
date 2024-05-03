@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_INT_RAW")
             .field(
                 "tcm_parity_err_int_raw",
-                &format_args!("{}", self.tcm_parity_err_int_raw().bit()),
+                &self.tcm_parity_err_int_raw().bit(),
             )
             .finish()
     }

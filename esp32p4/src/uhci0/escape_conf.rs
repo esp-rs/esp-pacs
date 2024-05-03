@@ -80,38 +80,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ESCAPE_CONF")
-            .field(
-                "tx_c0_esc_en",
-                &format_args!("{}", self.tx_c0_esc_en().bit()),
-            )
-            .field(
-                "tx_db_esc_en",
-                &format_args!("{}", self.tx_db_esc_en().bit()),
-            )
-            .field(
-                "tx_11_esc_en",
-                &format_args!("{}", self.tx_11_esc_en().bit()),
-            )
-            .field(
-                "tx_13_esc_en",
-                &format_args!("{}", self.tx_13_esc_en().bit()),
-            )
-            .field(
-                "rx_c0_esc_en",
-                &format_args!("{}", self.rx_c0_esc_en().bit()),
-            )
-            .field(
-                "rx_db_esc_en",
-                &format_args!("{}", self.rx_db_esc_en().bit()),
-            )
-            .field(
-                "rx_11_esc_en",
-                &format_args!("{}", self.rx_11_esc_en().bit()),
-            )
-            .field(
-                "rx_13_esc_en",
-                &format_args!("{}", self.rx_13_esc_en().bit()),
-            )
+            .field("tx_c0_esc_en", &self.tx_c0_esc_en().bit())
+            .field("tx_db_esc_en", &self.tx_db_esc_en().bit())
+            .field("tx_11_esc_en", &self.tx_11_esc_en().bit())
+            .field("tx_13_esc_en", &self.tx_13_esc_en().bit())
+            .field("rx_c0_esc_en", &self.rx_c0_esc_en().bit())
+            .field("rx_db_esc_en", &self.rx_db_esc_en().bit())
+            .field("rx_11_esc_en", &self.rx_11_esc_en().bit())
+            .field("rx_13_esc_en", &self.rx_13_esc_en().bit())
             .finish()
     }
 }

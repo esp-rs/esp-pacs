@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WDTFEED")
-            .field("wdt_feed", &format_args!("{}", self.wdt_feed().bit()))
+            .field("wdt_feed", &self.wdt_feed().bit())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1CACHE_BUS1_ID")
-            .field(
-                "reg_l1_cache_bus1_id",
-                &format_args!("{}", self.reg_l1_cache_bus1_id().bits()),
-            )
+            .field("reg_l1_cache_bus1_id", &self.reg_l1_cache_bus1_id().bits())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERNAL_SRAM_USAGE_0")
             .field(
                 "internal_sram_usage_lock",
-                &format_args!("{}", self.internal_sram_usage_lock().bit()),
+                &self.internal_sram_usage_lock().bit(),
             )
             .finish()
     }

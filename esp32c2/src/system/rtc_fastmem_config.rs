@@ -42,22 +42,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_FASTMEM_CONFIG")
-            .field(
-                "rtc_mem_crc_start",
-                &format_args!("{}", self.rtc_mem_crc_start().bit()),
-            )
-            .field(
-                "rtc_mem_crc_addr",
-                &format_args!("{}", self.rtc_mem_crc_addr().bits()),
-            )
-            .field(
-                "rtc_mem_crc_len",
-                &format_args!("{}", self.rtc_mem_crc_len().bits()),
-            )
-            .field(
-                "rtc_mem_crc_finish",
-                &format_args!("{}", self.rtc_mem_crc_finish().bit()),
-            )
+            .field("rtc_mem_crc_start", &self.rtc_mem_crc_start().bit())
+            .field("rtc_mem_crc_addr", &self.rtc_mem_crc_addr().bits())
+            .field("rtc_mem_crc_len", &self.rtc_mem_crc_len().bits())
+            .field("rtc_mem_crc_finish", &self.rtc_mem_crc_finish().bit())
             .finish()
     }
 }

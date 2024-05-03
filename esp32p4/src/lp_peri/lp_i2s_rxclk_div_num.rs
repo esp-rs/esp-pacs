@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_I2S_RXCLK_DIV_NUM")
             .field(
                 "lp_i2s_rx_clkm_div_num",
-                &format_args!("{}", self.lp_i2s_rx_clkm_div_num().bits()),
+                &self.lp_i2s_rx_clkm_div_num().bits(),
             )
             .finish()
     }

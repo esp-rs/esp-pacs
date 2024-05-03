@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_WINPIXNUM")
-            .field(
-                "ae_subwin_pixnum",
-                &format_args!("{}", self.ae_subwin_pixnum().bits()),
-            )
+            .field("ae_subwin_pixnum", &self.ae_subwin_pixnum().bits())
             .finish()
     }
 }

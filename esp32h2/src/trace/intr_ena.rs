@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTR_ENA")
             .field(
                 "fifo_overflow_intr_ena",
-                &format_args!("{}", self.fifo_overflow_intr_ena().bit()),
+                &self.fifo_overflow_intr_ena().bit(),
             )
-            .field(
-                "mem_full_intr_ena",
-                &format_args!("{}", self.mem_full_intr_ena().bit()),
-            )
+            .field("mem_full_intr_ena", &self.mem_full_intr_ena().bit())
             .finish()
     }
 }

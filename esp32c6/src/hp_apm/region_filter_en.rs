@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGION_FILTER_EN")
-            .field(
-                "region_filter_en",
-                &format_args!("{}", self.region_filter_en().bits()),
-            )
+            .field("region_filter_en", &self.region_filter_en().bits())
             .finish()
     }
 }

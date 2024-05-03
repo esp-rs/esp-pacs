@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_HP_REGULATOR0")
             .field(
                 "hp_sleep_hp_regulator_slp_mem_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_mem_xpd().bit()),
+                &self.hp_sleep_hp_regulator_slp_mem_xpd().bit(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_logic_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_logic_xpd().bit()),
+                &self.hp_sleep_hp_regulator_slp_logic_xpd().bit(),
             )
             .field(
                 "hp_sleep_hp_regulator_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_xpd().bit()),
+                &self.hp_sleep_hp_regulator_xpd().bit(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_mem_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_mem_dbias().bits()),
+                &self.hp_sleep_hp_regulator_slp_mem_dbias().bits(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_logic_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_logic_dbias().bits()),
+                &self.hp_sleep_hp_regulator_slp_logic_dbias().bits(),
             )
             .field(
                 "hp_sleep_hp_regulator_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_dbias().bits()),
+                &self.hp_sleep_hp_regulator_dbias().bits(),
             )
             .finish()
     }

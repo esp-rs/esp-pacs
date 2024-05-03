@@ -22,11 +22,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("SRAM_DRD_CMD")
             .field(
                 "cache_sram_usr_rd_cmd_value",
-                &format_args!("{}", self.cache_sram_usr_rd_cmd_value().bits()),
+                &self.cache_sram_usr_rd_cmd_value().bits(),
             )
             .field(
                 "cache_sram_usr_rd_cmd_bitlen",
-                &format_args!("{}", self.cache_sram_usr_rd_cmd_bitlen().bits()),
+                &self.cache_sram_usr_rd_cmd_bitlen().bits(),
             )
             .finish()
     }

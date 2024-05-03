@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SEARCH_POS")
-            .field("search_pos", &format_args!("{}", self.search_pos().bits()))
+            .field("search_pos", &self.search_pos().bits())
             .finish()
     }
 }

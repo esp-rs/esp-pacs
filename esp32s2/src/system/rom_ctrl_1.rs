@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROM_CTRL_1")
-            .field(
-                "rom_force_pd",
-                &format_args!("{}", self.rom_force_pd().bits()),
-            )
-            .field(
-                "rom_force_pu",
-                &format_args!("{}", self.rom_force_pu().bits()),
-            )
+            .field("rom_force_pd", &self.rom_force_pd().bits())
+            .field("rom_force_pu", &self.rom_force_pu().bits())
             .finish()
     }
 }

@@ -125,41 +125,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rxfifo_wm", &format_args!("{}", self.rxfifo_wm().bit()))
-            .field("txfifo_wm", &format_args!("{}", self.txfifo_wm().bit()))
-            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
-            .field("end_detect", &format_args!("{}", self.end_detect().bit()))
-            .field(
-                "byte_trans_done",
-                &format_args!("{}", self.byte_trans_done().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "mst_txfifo_udf",
-                &format_args!("{}", self.mst_txfifo_udf().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
-            .field("nack", &format_args!("{}", self.nack().bit()))
-            .field("txfifo_ovf", &format_args!("{}", self.txfifo_ovf().bit()))
-            .field("rxfifo_udf", &format_args!("{}", self.rxfifo_udf().bit()))
-            .field("scl_st_to", &format_args!("{}", self.scl_st_to().bit()))
-            .field(
-                "scl_main_st_to",
-                &format_args!("{}", self.scl_main_st_to().bit()),
-            )
-            .field("det_start", &format_args!("{}", self.det_start().bit()))
-            .field(
-                "slave_stretch",
-                &format_args!("{}", self.slave_stretch().bit()),
-            )
+            .field("rxfifo_wm", &self.rxfifo_wm().bit())
+            .field("txfifo_wm", &self.txfifo_wm().bit())
+            .field("rxfifo_ovf", &self.rxfifo_ovf().bit())
+            .field("end_detect", &self.end_detect().bit())
+            .field("byte_trans_done", &self.byte_trans_done().bit())
+            .field("arbitration_lost", &self.arbitration_lost().bit())
+            .field("mst_txfifo_udf", &self.mst_txfifo_udf().bit())
+            .field("trans_complete", &self.trans_complete().bit())
+            .field("time_out", &self.time_out().bit())
+            .field("trans_start", &self.trans_start().bit())
+            .field("nack", &self.nack().bit())
+            .field("txfifo_ovf", &self.txfifo_ovf().bit())
+            .field("rxfifo_udf", &self.rxfifo_udf().bit())
+            .field("scl_st_to", &self.scl_st_to().bit())
+            .field("scl_main_st_to", &self.scl_main_st_to().bit())
+            .field("det_start", &self.det_start().bit())
+            .field("slave_stretch", &self.slave_stretch().bit())
             .finish()
     }
 }

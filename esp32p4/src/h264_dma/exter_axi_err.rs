@@ -55,33 +55,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTER_AXI_ERR")
-            .field(
-                "exter_rid_err_cnt",
-                &format_args!("{}", self.exter_rid_err_cnt().bits()),
-            )
-            .field(
-                "exter_rresp_err_cnt",
-                &format_args!("{}", self.exter_rresp_err_cnt().bits()),
-            )
-            .field(
-                "exter_wresp_err_cnt",
-                &format_args!("{}", self.exter_wresp_err_cnt().bits()),
-            )
-            .field(
-                "exter_rd_fifo_cnt",
-                &format_args!("{}", self.exter_rd_fifo_cnt().bits()),
-            )
+            .field("exter_rid_err_cnt", &self.exter_rid_err_cnt().bits())
+            .field("exter_rresp_err_cnt", &self.exter_rresp_err_cnt().bits())
+            .field("exter_wresp_err_cnt", &self.exter_wresp_err_cnt().bits())
+            .field("exter_rd_fifo_cnt", &self.exter_rd_fifo_cnt().bits())
             .field(
                 "exter_rd_bak_fifo_cnt",
-                &format_args!("{}", self.exter_rd_bak_fifo_cnt().bits()),
+                &self.exter_rd_bak_fifo_cnt().bits(),
             )
-            .field(
-                "exter_wr_fifo_cnt",
-                &format_args!("{}", self.exter_wr_fifo_cnt().bits()),
-            )
+            .field("exter_wr_fifo_cnt", &self.exter_wr_fifo_cnt().bits())
             .field(
                 "exter_wr_bak_fifo_cnt",
-                &format_args!("{}", self.exter_wr_bak_fifo_cnt().bits()),
+                &self.exter_wr_bak_fifo_cnt().bits(),
             )
             .finish()
     }

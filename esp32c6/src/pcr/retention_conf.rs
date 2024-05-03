@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CONF")
-            .field(
-                "retention_clk_en",
-                &format_args!("{}", self.retention_clk_en().bit()),
-            )
-            .field(
-                "retention_rst_en",
-                &format_args!("{}", self.retention_rst_en().bit()),
-            )
+            .field("retention_clk_en", &self.retention_clk_en().bit())
+            .field("retention_rst_en", &self.retention_rst_en().bit())
             .finish()
     }
 }

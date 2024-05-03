@@ -80,32 +80,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL22")
-            .field(
-                "ledc_clk_src_sel",
-                &format_args!("{}", self.ledc_clk_src_sel().bits()),
-            )
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field(
-                "rmt_clk_src_sel",
-                &format_args!("{}", self.rmt_clk_src_sel().bits()),
-            )
-            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
-            .field(
-                "rmt_clk_div_num",
-                &format_args!("{}", self.rmt_clk_div_num().bits()),
-            )
+            .field("ledc_clk_src_sel", &self.ledc_clk_src_sel().bits())
+            .field("ledc_clk_en", &self.ledc_clk_en().bit())
+            .field("rmt_clk_src_sel", &self.rmt_clk_src_sel().bits())
+            .field("rmt_clk_en", &self.rmt_clk_en().bit())
+            .field("rmt_clk_div_num", &self.rmt_clk_div_num().bits())
             .field(
                 "rmt_clk_div_numerator",
-                &format_args!("{}", self.rmt_clk_div_numerator().bits()),
+                &self.rmt_clk_div_numerator().bits(),
             )
             .field(
                 "rmt_clk_div_denominator",
-                &format_args!("{}", self.rmt_clk_div_denominator().bits()),
+                &self.rmt_clk_div_denominator().bits(),
             )
-            .field(
-                "adc_clk_src_sel",
-                &format_args!("{}", self.adc_clk_src_sel().bits()),
-            )
+            .field("adc_clk_src_sel", &self.adc_clk_src_sel().bits())
             .finish()
     }
 }

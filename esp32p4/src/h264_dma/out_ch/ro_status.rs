@@ -41,26 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RO_STATUS")
-            .field(
-                "outfifo_ro_cnt",
-                &format_args!("{}", self.outfifo_ro_cnt().bits()),
-            )
-            .field(
-                "out_ro_wr_state",
-                &format_args!("{}", self.out_ro_wr_state().bits()),
-            )
-            .field(
-                "out_ro_rd_state",
-                &format_args!("{}", self.out_ro_rd_state().bits()),
-            )
-            .field(
-                "out_pixel_byte",
-                &format_args!("{}", self.out_pixel_byte().bits()),
-            )
-            .field(
-                "out_burst_block_num",
-                &format_args!("{}", self.out_burst_block_num().bits()),
-            )
+            .field("outfifo_ro_cnt", &self.outfifo_ro_cnt().bits())
+            .field("out_ro_wr_state", &self.out_ro_wr_state().bits())
+            .field("out_ro_rd_state", &self.out_ro_rd_state().bits())
+            .field("out_pixel_byte", &self.out_pixel_byte().bits())
+            .field("out_burst_block_num", &self.out_burst_block_num().bits())
             .finish()
     }
 }

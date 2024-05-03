@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAMMA_RY1")
-            .field(
-                "gamma_r_y03",
-                &format_args!("{}", self.gamma_r_y03().bits()),
-            )
-            .field(
-                "gamma_r_y02",
-                &format_args!("{}", self.gamma_r_y02().bits()),
-            )
-            .field(
-                "gamma_r_y01",
-                &format_args!("{}", self.gamma_r_y01().bits()),
-            )
-            .field(
-                "gamma_r_y00",
-                &format_args!("{}", self.gamma_r_y00().bits()),
-            )
+            .field("gamma_r_y03", &self.gamma_r_y03().bits())
+            .field("gamma_r_y02", &self.gamma_r_y02().bits())
+            .field("gamma_r_y01", &self.gamma_r_y01().bits())
+            .field("gamma_r_y00", &self.gamma_r_y00().bits())
             .finish()
     }
 }

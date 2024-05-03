@@ -48,18 +48,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_ST")
-            .field("cmd_st", &format_args!("{}", self.cmd_st().bits()))
-            .field("func_st", &format_args!("{}", self.func_st().bits()))
-            .field("sdio_wakeup", &format_args!("{}", self.sdio_wakeup().bit()))
-            .field("bus_st", &format_args!("{}", self.bus_st().bits()))
-            .field(
-                "func1_acc_state",
-                &format_args!("{}", self.func1_acc_state().bits()),
-            )
-            .field(
-                "func2_acc_state",
-                &format_args!("{}", self.func2_acc_state().bits()),
-            )
+            .field("cmd_st", &self.cmd_st().bits())
+            .field("func_st", &self.func_st().bits())
+            .field("sdio_wakeup", &self.sdio_wakeup().bit())
+            .field("bus_st", &self.bus_st().bits())
+            .field("func1_acc_state", &self.func1_acc_state().bits())
+            .field("func2_acc_state", &self.func2_acc_state().bits())
             .finish()
     }
 }

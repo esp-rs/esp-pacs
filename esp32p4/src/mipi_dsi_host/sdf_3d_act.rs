@@ -41,26 +41,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDF_3D_ACT")
-            .field(
-                "mode_3d_act",
-                &format_args!("{}", self.mode_3d_act().bits()),
-            )
-            .field(
-                "format_3d_act",
-                &format_args!("{}", self.format_3d_act().bits()),
-            )
-            .field(
-                "second_vsync_act",
-                &format_args!("{}", self.second_vsync_act().bit()),
-            )
-            .field(
-                "right_first_act",
-                &format_args!("{}", self.right_first_act().bit()),
-            )
-            .field(
-                "send_3d_cfg_act",
-                &format_args!("{}", self.send_3d_cfg_act().bit()),
-            )
+            .field("mode_3d_act", &self.mode_3d_act().bits())
+            .field("format_3d_act", &self.format_3d_act().bits())
+            .field("second_vsync_act", &self.second_vsync_act().bit())
+            .field("right_first_act", &self.right_first_act().bit())
+            .field("send_3d_cfg_act", &self.send_3d_cfg_act().bit())
             .finish()
     }
 }

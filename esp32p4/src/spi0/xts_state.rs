@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_STATE")
-            .field(
-                "spi_xts_state",
-                &format_args!("{}", self.spi_xts_state().bits()),
-            )
+            .field("spi_xts_state", &self.spi_xts_state().bits())
             .finish()
     }
 }

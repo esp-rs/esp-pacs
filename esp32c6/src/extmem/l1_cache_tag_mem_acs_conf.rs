@@ -84,43 +84,43 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_TAG_MEM_ACS_CONF")
             .field(
                 "l1_icache0_tag_mem_rd_en",
-                &format_args!("{}", self.l1_icache0_tag_mem_rd_en().bit()),
+                &self.l1_icache0_tag_mem_rd_en().bit(),
             )
             .field(
                 "l1_icache0_tag_mem_wr_en",
-                &format_args!("{}", self.l1_icache0_tag_mem_wr_en().bit()),
+                &self.l1_icache0_tag_mem_wr_en().bit(),
             )
             .field(
                 "l1_icache1_tag_mem_rd_en",
-                &format_args!("{}", self.l1_icache1_tag_mem_rd_en().bit()),
+                &self.l1_icache1_tag_mem_rd_en().bit(),
             )
             .field(
                 "l1_icache1_tag_mem_wr_en",
-                &format_args!("{}", self.l1_icache1_tag_mem_wr_en().bit()),
+                &self.l1_icache1_tag_mem_wr_en().bit(),
             )
             .field(
                 "l1_icache2_tag_mem_rd_en",
-                &format_args!("{}", self.l1_icache2_tag_mem_rd_en().bit()),
+                &self.l1_icache2_tag_mem_rd_en().bit(),
             )
             .field(
                 "l1_icache2_tag_mem_wr_en",
-                &format_args!("{}", self.l1_icache2_tag_mem_wr_en().bit()),
+                &self.l1_icache2_tag_mem_wr_en().bit(),
             )
             .field(
                 "l1_icache3_tag_mem_rd_en",
-                &format_args!("{}", self.l1_icache3_tag_mem_rd_en().bit()),
+                &self.l1_icache3_tag_mem_rd_en().bit(),
             )
             .field(
                 "l1_icache3_tag_mem_wr_en",
-                &format_args!("{}", self.l1_icache3_tag_mem_wr_en().bit()),
+                &self.l1_icache3_tag_mem_wr_en().bit(),
             )
             .field(
                 "l1_cache_tag_mem_rd_en",
-                &format_args!("{}", self.l1_cache_tag_mem_rd_en().bit()),
+                &self.l1_cache_tag_mem_rd_en().bit(),
             )
             .field(
                 "l1_cache_tag_mem_wr_en",
-                &format_args!("{}", self.l1_cache_tag_mem_wr_en().bit()),
+                &self.l1_cache_tag_mem_wr_en().bit(),
             )
             .finish()
     }

@@ -83,47 +83,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA2")
-            .field(
-                "key_purpose_2",
-                &format_args!("{}", self.key_purpose_2().bits()),
-            )
-            .field(
-                "key_purpose_3",
-                &format_args!("{}", self.key_purpose_3().bits()),
-            )
-            .field(
-                "key_purpose_4",
-                &format_args!("{}", self.key_purpose_4().bits()),
-            )
-            .field(
-                "key_purpose_5",
-                &format_args!("{}", self.key_purpose_5().bits()),
-            )
-            .field(
-                "dpa_sec_level",
-                &format_args!("{}", self.dpa_sec_level().bits()),
-            )
-            .field(
-                "rpt4_reserved2_1",
-                &format_args!("{}", self.rpt4_reserved2_1().bit()),
-            )
-            .field(
-                "crypt_dpa_enable",
-                &format_args!("{}", self.crypt_dpa_enable().bit()),
-            )
-            .field(
-                "secure_boot_en",
-                &format_args!("{}", self.secure_boot_en().bit()),
-            )
+            .field("key_purpose_2", &self.key_purpose_2().bits())
+            .field("key_purpose_3", &self.key_purpose_3().bits())
+            .field("key_purpose_4", &self.key_purpose_4().bits())
+            .field("key_purpose_5", &self.key_purpose_5().bits())
+            .field("dpa_sec_level", &self.dpa_sec_level().bits())
+            .field("rpt4_reserved2_1", &self.rpt4_reserved2_1().bit())
+            .field("crypt_dpa_enable", &self.crypt_dpa_enable().bit())
+            .field("secure_boot_en", &self.secure_boot_en().bit())
             .field(
                 "secure_boot_aggressive_revoke",
-                &format_args!("{}", self.secure_boot_aggressive_revoke().bit()),
+                &self.secure_boot_aggressive_revoke().bit(),
             )
-            .field(
-                "rpt4_reserved2_0",
-                &format_args!("{}", self.rpt4_reserved2_0().bits()),
-            )
-            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
+            .field("rpt4_reserved2_0", &self.rpt4_reserved2_0().bits())
+            .field("flash_tpuw", &self.flash_tpuw().bits())
             .finish()
     }
 }

@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_RD_BIT")
-            .field(
-                "slv_rdata_bit",
-                &format_args!("{}", self.slv_rdata_bit().bits()),
-            )
+            .field("slv_rdata_bit", &self.slv_rdata_bit().bits())
             .finish()
     }
 }

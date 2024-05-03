@@ -46,17 +46,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("DATE")
             .field(
                 "spi_smem_spiclk_fun_drv",
-                &format_args!("{}", self.spi_smem_spiclk_fun_drv().bits()),
+                &self.spi_smem_spiclk_fun_drv().bits(),
             )
             .field(
                 "spi_fmem_spiclk_fun_drv",
-                &format_args!("{}", self.spi_fmem_spiclk_fun_drv().bits()),
+                &self.spi_fmem_spiclk_fun_drv().bits(),
             )
             .field(
                 "spi_spiclk_pad_drv_ctl_en",
-                &format_args!("{}", self.spi_spiclk_pad_drv_ctl_en().bit()),
+                &self.spi_spiclk_pad_drv_ctl_en().bit(),
             )
-            .field("date", &format_args!("{}", self.date().bits()))
+            .field("date", &self.date().bits())
             .finish()
     }
 }

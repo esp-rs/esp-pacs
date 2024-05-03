@@ -44,16 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("fsub_pin", &format_args!("{}", self.fsub_pin().bit()))
-            .field("ssub_pin", &format_args!("{}", self.ssub_pin().bit()))
-            .field(
-                "ck_idle_edge",
-                &format_args!("{}", self.ck_idle_edge().bit()),
-            )
-            .field(
-                "cs_keep_active",
-                &format_args!("{}", self.cs_keep_active().bit()),
-            )
+            .field("fsub_pin", &self.fsub_pin().bit())
+            .field("ssub_pin", &self.ssub_pin().bit())
+            .field("ck_idle_edge", &self.ck_idle_edge().bit())
+            .field("cs_keep_active", &self.cs_keep_active().bit())
             .finish()
     }
 }

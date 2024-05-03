@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_TAG_ACCESS_1")
-            .field(
-                "pro_i_tag_rd_acs",
-                &format_args!("{}", self.pro_i_tag_rd_acs().bit()),
-            )
-            .field(
-                "pro_i_tag_wr_acs",
-                &format_args!("{}", self.pro_i_tag_wr_acs().bit()),
-            )
-            .field(
-                "pro_d_tag_rd_acs",
-                &format_args!("{}", self.pro_d_tag_rd_acs().bit()),
-            )
-            .field(
-                "pro_d_tag_wr_acs",
-                &format_args!("{}", self.pro_d_tag_wr_acs().bit()),
-            )
+            .field("pro_i_tag_rd_acs", &self.pro_i_tag_rd_acs().bit())
+            .field("pro_i_tag_wr_acs", &self.pro_i_tag_wr_acs().bit())
+            .field("pro_d_tag_rd_acs", &self.pro_d_tag_rd_acs().bit())
+            .field("pro_d_tag_wr_acs", &self.pro_d_tag_wr_acs().bit())
             .finish()
     }
 }

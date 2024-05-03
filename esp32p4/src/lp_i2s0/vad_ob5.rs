@@ -13,7 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB5")
-            .field("offset_ob", &format_args!("{}", self.offset_ob().bits()))
+            .field("offset_ob", &self.offset_ob().bits())
             .finish()
     }
 }

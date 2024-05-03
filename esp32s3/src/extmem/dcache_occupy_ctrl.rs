@@ -24,14 +24,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_OCCUPY_CTRL")
-            .field(
-                "dcache_occupy_ena",
-                &format_args!("{}", self.dcache_occupy_ena().bit()),
-            )
-            .field(
-                "dcache_occupy_done",
-                &format_args!("{}", self.dcache_occupy_done().bit()),
-            )
+            .field("dcache_occupy_ena", &self.dcache_occupy_ena().bit())
+            .field("dcache_occupy_done", &self.dcache_occupy_done().bit())
             .finish()
     }
 }

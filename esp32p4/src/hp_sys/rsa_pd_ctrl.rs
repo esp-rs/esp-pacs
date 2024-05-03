@@ -35,15 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RSA_PD_CTRL")
-            .field(
-                "rsa_mem_force_pd",
-                &format_args!("{}", self.rsa_mem_force_pd().bit()),
-            )
-            .field(
-                "rsa_mem_force_pu",
-                &format_args!("{}", self.rsa_mem_force_pu().bit()),
-            )
-            .field("rsa_mem_pd", &format_args!("{}", self.rsa_mem_pd().bit()))
+            .field("rsa_mem_force_pd", &self.rsa_mem_force_pd().bit())
+            .field("rsa_mem_force_pu", &self.rsa_mem_force_pu().bit())
+            .field("rsa_mem_pd", &self.rsa_mem_pd().bit())
             .finish()
     }
 }

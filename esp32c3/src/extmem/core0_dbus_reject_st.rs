@@ -20,14 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE0_DBUS_REJECT_ST")
-            .field(
-                "core0_dbus_attr",
-                &format_args!("{}", self.core0_dbus_attr().bits()),
-            )
-            .field(
-                "core0_dbus_world",
-                &format_args!("{}", self.core0_dbus_world().bit()),
-            )
+            .field("core0_dbus_attr", &self.core0_dbus_attr().bits())
+            .field("core0_dbus_world", &self.core0_dbus_world().bit())
             .finish()
     }
 }

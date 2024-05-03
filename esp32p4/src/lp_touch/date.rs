@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field("rtc_date", &format_args!("{}", self.rtc_date().bits()))
-            .field("rtc_clk_en", &format_args!("{}", self.rtc_clk_en().bit()))
+            .field("rtc_date", &self.rtc_date().bits())
+            .field("rtc_clk_en", &self.rtc_clk_en().bit())
             .finish()
     }
 }

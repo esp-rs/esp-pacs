@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM5")
-            .field(
-                "param_noise_mean_up0",
-                &format_args!("{}", self.param_noise_mean_up0().bits()),
-            )
-            .field(
-                "param_noise_mean_up1",
-                &format_args!("{}", self.param_noise_mean_up1().bits()),
-            )
+            .field("param_noise_mean_up0", &self.param_noise_mean_up0().bits())
+            .field("param_noise_mean_up1", &self.param_noise_mean_up1().bits())
             .finish()
     }
 }

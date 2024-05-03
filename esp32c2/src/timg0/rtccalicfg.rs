@@ -53,24 +53,12 @@ impl core::fmt::Debug for R {
         f.debug_struct("RTCCALICFG")
             .field(
                 "rtc_cali_start_cycling",
-                &format_args!("{}", self.rtc_cali_start_cycling().bit()),
+                &self.rtc_cali_start_cycling().bit(),
             )
-            .field(
-                "rtc_cali_clk_sel",
-                &format_args!("{}", self.rtc_cali_clk_sel().bits()),
-            )
-            .field(
-                "rtc_cali_rdy",
-                &format_args!("{}", self.rtc_cali_rdy().bit()),
-            )
-            .field(
-                "rtc_cali_max",
-                &format_args!("{}", self.rtc_cali_max().bits()),
-            )
-            .field(
-                "rtc_cali_start",
-                &format_args!("{}", self.rtc_cali_start().bit()),
-            )
+            .field("rtc_cali_clk_sel", &self.rtc_cali_clk_sel().bits())
+            .field("rtc_cali_rdy", &self.rtc_cali_rdy().bit())
+            .field("rtc_cali_max", &self.rtc_cali_max().bits())
+            .field("rtc_cali_start", &self.rtc_cali_start().bit())
             .finish()
     }
 }

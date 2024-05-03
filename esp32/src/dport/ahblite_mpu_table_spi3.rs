@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_SPI3")
             .field(
                 "spi3_access_grant_config",
-                &format_args!("{}", self.spi3_access_grant_config().bits()),
+                &self.spi3_access_grant_config().bits(),
             )
             .finish()
     }

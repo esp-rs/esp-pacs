@@ -47,24 +47,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_AUTOLOAD_BUF_CLR_CTRL")
             .field(
                 "l1_icache0_ald_buf_clr",
-                &format_args!("{}", self.l1_icache0_ald_buf_clr().bit()),
+                &self.l1_icache0_ald_buf_clr().bit(),
             )
             .field(
                 "l1_icache1_ald_buf_clr",
-                &format_args!("{}", self.l1_icache1_ald_buf_clr().bit()),
+                &self.l1_icache1_ald_buf_clr().bit(),
             )
             .field(
                 "l1_icache2_ald_buf_clr",
-                &format_args!("{}", self.l1_icache2_ald_buf_clr().bit()),
+                &self.l1_icache2_ald_buf_clr().bit(),
             )
             .field(
                 "l1_icache3_ald_buf_clr",
-                &format_args!("{}", self.l1_icache3_ald_buf_clr().bit()),
+                &self.l1_icache3_ald_buf_clr().bit(),
             )
-            .field(
-                "l1_cache_ald_buf_clr",
-                &format_args!("{}", self.l1_cache_ald_buf_clr().bit()),
-            )
+            .field("l1_cache_ald_buf_clr", &self.l1_cache_ald_buf_clr().bit())
             .finish()
     }
 }

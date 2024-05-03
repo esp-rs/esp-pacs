@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CLK_EN")
-            .field(
-                "fast_ori_gate",
-                &format_args!("{}", self.fast_ori_gate().bit()),
-            )
+            .field("fast_ori_gate", &self.fast_ori_gate().bit())
             .finish()
     }
 }

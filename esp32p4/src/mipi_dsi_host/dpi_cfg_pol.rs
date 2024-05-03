@@ -53,26 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_CFG_POL")
-            .field(
-                "dataen_active_low",
-                &format_args!("{}", self.dataen_active_low().bit()),
-            )
-            .field(
-                "vsync_active_low",
-                &format_args!("{}", self.vsync_active_low().bit()),
-            )
-            .field(
-                "hsync_active_low",
-                &format_args!("{}", self.hsync_active_low().bit()),
-            )
-            .field(
-                "shutd_active_low",
-                &format_args!("{}", self.shutd_active_low().bit()),
-            )
-            .field(
-                "colorm_active_low",
-                &format_args!("{}", self.colorm_active_low().bit()),
-            )
+            .field("dataen_active_low", &self.dataen_active_low().bit())
+            .field("vsync_active_low", &self.vsync_active_low().bit())
+            .field("hsync_active_low", &self.hsync_active_low().bit())
+            .field("shutd_active_low", &self.shutd_active_low().bit())
+            .field("colorm_active_low", &self.colorm_active_low().bit())
             .finish()
     }
 }

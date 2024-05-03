@@ -20,8 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RDATAH")
-            .field("data_lsb", &format_args!("{}", self.data_lsb().bits()))
-            .field("data_msb", &format_args!("{}", self.data_msb().bits()))
+            .field("data_lsb", &self.data_lsb().bits())
+            .field("data_msb", &self.data_msb().bits())
             .finish()
     }
 }

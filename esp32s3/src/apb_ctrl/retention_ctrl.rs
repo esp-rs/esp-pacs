@@ -28,12 +28,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("RETENTION_CTRL")
             .field(
                 "retention_cpu_link_addr",
-                &format_args!("{}", self.retention_cpu_link_addr().bits()),
+                &self.retention_cpu_link_addr().bits(),
             )
-            .field(
-                "nobypass_cpu_iso_rst",
-                &format_args!("{}", self.nobypass_cpu_iso_rst().bit()),
-            )
+            .field("nobypass_cpu_iso_rst", &self.nobypass_cpu_iso_rst().bit())
             .finish()
     }
 }

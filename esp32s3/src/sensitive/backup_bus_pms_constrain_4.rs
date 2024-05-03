@@ -156,70 +156,67 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_4")
             .field(
                 "backup_bus_pms_constrain_usb_device",
-                &format_args!("{}", self.backup_bus_pms_constrain_usb_device().bits()),
+                &self.backup_bus_pms_constrain_usb_device().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_usb_wrap",
-                &format_args!("{}", self.backup_bus_pms_constrain_usb_wrap().bits()),
+                &self.backup_bus_pms_constrain_usb_wrap().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_crypto_peri",
-                &format_args!("{}", self.backup_bus_pms_constrain_crypto_peri().bits()),
+                &self.backup_bus_pms_constrain_crypto_peri().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_crypto_dma",
-                &format_args!("{}", self.backup_bus_pms_constrain_crypto_dma().bits()),
+                &self.backup_bus_pms_constrain_crypto_dma().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_apb_adc",
-                &format_args!("{}", self.backup_bus_pms_constrain_apb_adc().bits()),
+                &self.backup_bus_pms_constrain_apb_adc().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_lcd_cam",
-                &format_args!("{}", self.backup_bus_pms_constrain_lcd_cam().bits()),
+                &self.backup_bus_pms_constrain_lcd_cam().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_bt_pwr",
-                &format_args!("{}", self.backup_bus_pms_constrain_bt_pwr().bits()),
+                &self.backup_bus_pms_constrain_bt_pwr().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_usb",
-                &format_args!("{}", self.backup_bus_pms_constrain_usb().bits()),
+                &self.backup_bus_pms_constrain_usb().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_system",
-                &format_args!("{}", self.backup_bus_pms_constrain_system().bits()),
+                &self.backup_bus_pms_constrain_system().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_sensitive",
-                &format_args!("{}", self.backup_bus_pms_constrain_sensitive().bits()),
+                &self.backup_bus_pms_constrain_sensitive().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_interrupt",
-                &format_args!("{}", self.backup_bus_pms_constrain_interrupt().bits()),
+                &self.backup_bus_pms_constrain_interrupt().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_dma_copy",
-                &format_args!("{}", self.backup_bus_pms_constrain_dma_copy().bits()),
+                &self.backup_bus_pms_constrain_dma_copy().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_cache_config",
-                &format_args!("{}", self.backup_bus_pms_constrain_cache_config().bits()),
+                &self.backup_bus_pms_constrain_cache_config().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_ad",
-                &format_args!("{}", self.backup_bus_pms_constrain_ad().bits()),
+                &self.backup_bus_pms_constrain_ad().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_dio",
-                &format_args!("{}", self.backup_bus_pms_constrain_dio().bits()),
+                &self.backup_bus_pms_constrain_dio().bits(),
             )
             .field(
                 "backup_bus_pms_constrain_world_controller",
-                &format_args!(
-                    "{}",
-                    self.backup_bus_pms_constrain_world_controller().bits()
-                ),
+                &self.backup_bus_pms_constrain_world_controller().bits(),
             )
             .finish()
     }

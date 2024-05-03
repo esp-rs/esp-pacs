@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DBUS_TO_FLASH_END_VADDR")
             .field(
                 "dbus_to_flash_end_vaddr",
-                &format_args!("{}", self.dbus_to_flash_end_vaddr().bits()),
+                &self.dbus_to_flash_end_vaddr().bits(),
             )
             .finish()
     }

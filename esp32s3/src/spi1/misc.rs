@@ -53,17 +53,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("cs0_dis", &format_args!("{}", self.cs0_dis().bit()))
-            .field("cs1_dis", &format_args!("{}", self.cs1_dis().bit()))
-            .field(
-                "ck_idle_edge",
-                &format_args!("{}", self.ck_idle_edge().bit()),
-            )
-            .field(
-                "cs_keep_active",
-                &format_args!("{}", self.cs_keep_active().bit()),
-            )
-            .field("auto_per", &format_args!("{}", self.auto_per().bit()))
+            .field("cs0_dis", &self.cs0_dis().bit())
+            .field("cs1_dis", &self.cs1_dis().bit())
+            .field("ck_idle_edge", &self.ck_idle_edge().bit())
+            .field("cs_keep_active", &self.cs_keep_active().bit())
+            .field("auto_per", &self.auto_per().bit())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AES_CONF")
-            .field("aes_clk_en", &format_args!("{}", self.aes_clk_en().bit()))
-            .field("aes_rst_en", &format_args!("{}", self.aes_rst_en().bit()))
+            .field("aes_clk_en", &self.aes_clk_en().bit())
+            .field("aes_rst_en", &self.aes_rst_en().bit())
             .finish()
     }
 }

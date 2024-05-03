@@ -32,10 +32,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FUNC_CTRL")
-            .field(
-                "m0_pms_func_en",
-                &format_args!("{}", self.m0_pms_func_en().bit()),
-            )
+            .field("m0_pms_func_en", &self.m0_pms_func_en().bit())
             .finish()
     }
 }

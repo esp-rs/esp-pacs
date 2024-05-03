@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WR_TIM_CONF1")
-            .field("tsup_a", &format_args!("{}", self.tsup_a().bits()))
-            .field("pwr_on_num", &format_args!("{}", self.pwr_on_num().bits()))
-            .field("thp_a", &format_args!("{}", self.thp_a().bits()))
+            .field("tsup_a", &self.tsup_a().bits())
+            .field("pwr_on_num", &self.pwr_on_num().bits())
+            .field("thp_a", &self.thp_a().bits())
             .finish()
     }
 }

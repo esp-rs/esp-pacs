@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LP_CLK_EN")
             .field(
                 "lp_aonclkrst_lp_rtc_xtal_force_on",
-                &format_args!("{}", self.lp_aonclkrst_lp_rtc_xtal_force_on().bit()),
+                &self.lp_aonclkrst_lp_rtc_xtal_force_on().bit(),
             )
             .field(
                 "lp_aonclkrst_ck_en_lp_ram",
-                &format_args!("{}", self.lp_aonclkrst_ck_en_lp_ram().bit()),
+                &self.lp_aonclkrst_ck_en_lp_ram().bit(),
             )
             .field(
                 "lp_aonclkrst_etm_event_tick_en",
-                &format_args!("{}", self.lp_aonclkrst_etm_event_tick_en().bit()),
+                &self.lp_aonclkrst_etm_event_tick_en().bit(),
             )
             .field(
                 "lp_aonclkrst_pll8m_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_pll8m_clk_force_on().bit()),
+                &self.lp_aonclkrst_pll8m_clk_force_on().bit(),
             )
             .field(
                 "lp_aonclkrst_xtal_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_xtal_clk_force_on().bit()),
+                &self.lp_aonclkrst_xtal_clk_force_on().bit(),
             )
             .field(
                 "lp_aonclkrst_fosc_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_fosc_clk_force_on().bit()),
+                &self.lp_aonclkrst_fosc_clk_force_on().bit(),
             )
             .finish()
     }

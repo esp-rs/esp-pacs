@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U2_CHANGE_CONF")
-            .field(
-                "cnt_step_u2",
-                &format_args!("{}", self.cnt_step_u2().bits()),
-            )
-            .field(
-                "cnt_step_lim_u2",
-                &format_args!("{}", self.cnt_step_lim_u2().bits()),
-            )
+            .field("cnt_step_u2", &self.cnt_step_u2().bits())
+            .field("cnt_step_lim_u2", &self.cnt_step_lim_u2().bits())
             .finish()
     }
 }

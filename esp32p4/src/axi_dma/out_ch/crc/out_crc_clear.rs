@@ -17,10 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CRC_CLEAR")
-            .field(
-                "out_crc_clear",
-                &format_args!("{}", self.out_crc_clear().bit()),
-            )
+            .field("out_crc_clear", &self.out_crc_clear().bit())
             .finish()
     }
 }

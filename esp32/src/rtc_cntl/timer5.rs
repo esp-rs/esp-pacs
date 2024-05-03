@@ -46,20 +46,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("TIMER5")
             .field(
                 "ulp_cp_subtimer_prediv",
-                &format_args!("{}", self.ulp_cp_subtimer_prediv().bits()),
+                &self.ulp_cp_subtimer_prediv().bits(),
             )
-            .field(
-                "min_slp_val",
-                &format_args!("{}", self.min_slp_val().bits()),
-            )
-            .field(
-                "rtcmem_wait_timer",
-                &format_args!("{}", self.rtcmem_wait_timer().bits()),
-            )
-            .field(
-                "rtcmem_powerup_timer",
-                &format_args!("{}", self.rtcmem_powerup_timer().bits()),
-            )
+            .field("min_slp_val", &self.min_slp_val().bits())
+            .field("rtcmem_wait_timer", &self.rtcmem_wait_timer().bits())
+            .field("rtcmem_powerup_timer", &self.rtcmem_powerup_timer().bits())
             .finish()
     }
 }

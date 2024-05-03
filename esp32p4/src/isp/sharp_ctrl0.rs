@@ -44,22 +44,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_CTRL0")
-            .field(
-                "sharp_threshold_low",
-                &format_args!("{}", self.sharp_threshold_low().bits()),
-            )
-            .field(
-                "sharp_threshold_high",
-                &format_args!("{}", self.sharp_threshold_high().bits()),
-            )
-            .field(
-                "sharp_amount_low",
-                &format_args!("{}", self.sharp_amount_low().bits()),
-            )
-            .field(
-                "sharp_amount_high",
-                &format_args!("{}", self.sharp_amount_high().bits()),
-            )
+            .field("sharp_threshold_low", &self.sharp_threshold_low().bits())
+            .field("sharp_threshold_high", &self.sharp_threshold_high().bits())
+            .field("sharp_amount_low", &self.sharp_amount_low().bits())
+            .field("sharp_amount_high", &self.sharp_amount_high().bits())
             .finish()
     }
 }

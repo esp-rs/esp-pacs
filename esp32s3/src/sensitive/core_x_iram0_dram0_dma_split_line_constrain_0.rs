@@ -21,11 +21,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0")
             .field(
                 "core_x_iram0_dram0_dma_split_line_constrain_lock",
-                &format_args!(
-                    "{}",
-                    self.core_x_iram0_dram0_dma_split_line_constrain_lock()
-                        .bit()
-                ),
+                &self
+                    .core_x_iram0_dram0_dma_split_line_constrain_lock()
+                    .bit(),
             )
             .finish()
     }

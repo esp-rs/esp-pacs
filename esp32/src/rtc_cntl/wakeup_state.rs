@@ -33,15 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WAKEUP_STATE")
-            .field(
-                "wakeup_cause",
-                &format_args!("{}", self.wakeup_cause().bits()),
-            )
-            .field("wakeup_ena", &format_args!("{}", self.wakeup_ena().bits()))
-            .field(
-                "gpio_wakeup_filter",
-                &format_args!("{}", self.gpio_wakeup_filter().bit()),
-            )
+            .field("wakeup_cause", &self.wakeup_cause().bits())
+            .field("wakeup_ena", &self.wakeup_ena().bits())
+            .field("gpio_wakeup_filter", &self.gpio_wakeup_filter().bit())
             .finish()
     }
 }

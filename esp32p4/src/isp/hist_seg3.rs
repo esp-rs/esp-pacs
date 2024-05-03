@@ -35,18 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_SEG3")
-            .field(
-                "hist_seg_14_15",
-                &format_args!("{}", self.hist_seg_14_15().bits()),
-            )
-            .field(
-                "hist_seg_13_14",
-                &format_args!("{}", self.hist_seg_13_14().bits()),
-            )
-            .field(
-                "hist_seg_12_13",
-                &format_args!("{}", self.hist_seg_12_13().bits()),
-            )
+            .field("hist_seg_14_15", &self.hist_seg_14_15().bits())
+            .field("hist_seg_13_14", &self.hist_seg_13_14().bits())
+            .field("hist_seg_12_13", &self.hist_seg_12_13().bits())
             .finish()
     }
 }

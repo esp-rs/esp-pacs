@@ -89,15 +89,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("sdio_idle", &format_args!("{}", self.sdio_idle().bit()))
-            .field("wdt", &format_args!("{}", self.wdt().bit()))
-            .field("time_valid", &format_args!("{}", self.time_valid().bit()))
-            .field("ulp_cp", &format_args!("{}", self.ulp_cp().bit()))
-            .field("touch", &format_args!("{}", self.touch().bit()))
-            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
-            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
+            .field("slp_wakeup", &self.slp_wakeup().bit())
+            .field("slp_reject", &self.slp_reject().bit())
+            .field("sdio_idle", &self.sdio_idle().bit())
+            .field("wdt", &self.wdt().bit())
+            .field("time_valid", &self.time_valid().bit())
+            .field("ulp_cp", &self.ulp_cp().bit())
+            .field("touch", &self.touch().bit())
+            .field("brown_out", &self.brown_out().bit())
+            .field("main_timer", &self.main_timer().bit())
             .finish()
     }
 }

@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS3")
-            .field(
-                "lookup_data",
-                &format_args!("{}", self.lookup_data().bits()),
-            )
+            .field("lookup_data", &self.lookup_data().bits())
             .finish()
     }
 }

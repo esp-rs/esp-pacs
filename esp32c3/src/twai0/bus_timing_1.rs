@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_TIMING_1")
-            .field("time_seg1", &format_args!("{}", self.time_seg1().bits()))
-            .field("time_seg2", &format_args!("{}", self.time_seg2().bits()))
-            .field("time_samp", &format_args!("{}", self.time_samp().bit()))
+            .field("time_seg1", &self.time_seg1().bits())
+            .field("time_seg2", &self.time_seg2().bits())
+            .field("time_samp", &self.time_samp().bit())
             .finish()
     }
 }

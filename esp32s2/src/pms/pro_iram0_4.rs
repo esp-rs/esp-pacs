@@ -33,18 +33,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_IRAM0_4")
-            .field(
-                "pro_iram0_ilg_clr",
-                &format_args!("{}", self.pro_iram0_ilg_clr().bit()),
-            )
-            .field(
-                "pro_iram0_ilg_en",
-                &format_args!("{}", self.pro_iram0_ilg_en().bit()),
-            )
-            .field(
-                "pro_iram0_ilg_intr",
-                &format_args!("{}", self.pro_iram0_ilg_intr().bit()),
-            )
+            .field("pro_iram0_ilg_clr", &self.pro_iram0_ilg_clr().bit())
+            .field("pro_iram0_ilg_en", &self.pro_iram0_ilg_en().bit())
+            .field("pro_iram0_ilg_intr", &self.pro_iram0_ilg_intr().bit())
             .finish()
     }
 }

@@ -26,8 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIC_SIZE")
-            .field("va", &format_args!("{}", self.va().bits()))
-            .field("ha", &format_args!("{}", self.ha().bits()))
+            .field("va", &self.va().bits())
+            .field("ha", &self.ha().bits())
             .finish()
     }
 }

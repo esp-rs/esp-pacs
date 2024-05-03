@@ -54,31 +54,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_PIF_PMS_CONSTRAIN_10")
             .field(
                 "core_1_pif_pms_constrain_rtcfast_world_0_l",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_world_0_l().bits()
-                ),
+                &self.core_1_pif_pms_constrain_rtcfast_world_0_l().bits(),
             )
             .field(
                 "core_1_pif_pms_constrain_rtcfast_world_0_h",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_world_0_h().bits()
-                ),
+                &self.core_1_pif_pms_constrain_rtcfast_world_0_h().bits(),
             )
             .field(
                 "core_1_pif_pms_constrain_rtcfast_world_1_l",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_world_1_l().bits()
-                ),
+                &self.core_1_pif_pms_constrain_rtcfast_world_1_l().bits(),
             )
             .field(
                 "core_1_pif_pms_constrain_rtcfast_world_1_h",
-                &format_args!(
-                    "{}",
-                    self.core_1_pif_pms_constrain_rtcfast_world_1_h().bits()
-                ),
+                &self.core_1_pif_pms_constrain_rtcfast_world_1_h().bits(),
             )
             .finish()
     }

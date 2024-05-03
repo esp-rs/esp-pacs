@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("J0_MEM")
-            .field("j0", &format_args!("{}", self.j0().bits()))
+            .field("j0", &self.j0().bits())
             .finish()
     }
 }

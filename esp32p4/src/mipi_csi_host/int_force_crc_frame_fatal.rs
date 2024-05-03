@@ -154,67 +154,67 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_FORCE_CRC_FRAME_FATAL")
             .field(
                 "force_err_frame_data_vc0",
-                &format_args!("{}", self.force_err_frame_data_vc0().bit()),
+                &self.force_err_frame_data_vc0().bit(),
             )
             .field(
                 "force_err_frame_data_vc1",
-                &format_args!("{}", self.force_err_frame_data_vc1().bit()),
+                &self.force_err_frame_data_vc1().bit(),
             )
             .field(
                 "force_err_frame_data_vc2",
-                &format_args!("{}", self.force_err_frame_data_vc2().bit()),
+                &self.force_err_frame_data_vc2().bit(),
             )
             .field(
                 "force_err_frame_data_vc3",
-                &format_args!("{}", self.force_err_frame_data_vc3().bit()),
+                &self.force_err_frame_data_vc3().bit(),
             )
             .field(
                 "force_err_frame_data_vc4",
-                &format_args!("{}", self.force_err_frame_data_vc4().bit()),
+                &self.force_err_frame_data_vc4().bit(),
             )
             .field(
                 "force_err_frame_data_vc5",
-                &format_args!("{}", self.force_err_frame_data_vc5().bit()),
+                &self.force_err_frame_data_vc5().bit(),
             )
             .field(
                 "force_err_frame_data_vc6",
-                &format_args!("{}", self.force_err_frame_data_vc6().bit()),
+                &self.force_err_frame_data_vc6().bit(),
             )
             .field(
                 "force_err_frame_data_vc7",
-                &format_args!("{}", self.force_err_frame_data_vc7().bit()),
+                &self.force_err_frame_data_vc7().bit(),
             )
             .field(
                 "force_err_frame_data_vc8",
-                &format_args!("{}", self.force_err_frame_data_vc8().bit()),
+                &self.force_err_frame_data_vc8().bit(),
             )
             .field(
                 "force_err_frame_data_vc9",
-                &format_args!("{}", self.force_err_frame_data_vc9().bit()),
+                &self.force_err_frame_data_vc9().bit(),
             )
             .field(
                 "force_err_frame_data_vc10",
-                &format_args!("{}", self.force_err_frame_data_vc10().bit()),
+                &self.force_err_frame_data_vc10().bit(),
             )
             .field(
                 "force_err_frame_data_vc11",
-                &format_args!("{}", self.force_err_frame_data_vc11().bit()),
+                &self.force_err_frame_data_vc11().bit(),
             )
             .field(
                 "force_err_frame_data_vc12",
-                &format_args!("{}", self.force_err_frame_data_vc12().bit()),
+                &self.force_err_frame_data_vc12().bit(),
             )
             .field(
                 "force_err_frame_data_vc13",
-                &format_args!("{}", self.force_err_frame_data_vc13().bit()),
+                &self.force_err_frame_data_vc13().bit(),
             )
             .field(
                 "force_err_frame_data_vc14",
-                &format_args!("{}", self.force_err_frame_data_vc14().bit()),
+                &self.force_err_frame_data_vc14().bit(),
             )
             .field(
                 "force_err_frame_data_vc15",
-                &format_args!("{}", self.force_err_frame_data_vc15().bit()),
+                &self.force_err_frame_data_vc15().bit(),
             )
             .finish()
     }

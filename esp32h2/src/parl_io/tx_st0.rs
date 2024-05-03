@@ -20,11 +20,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_ST0")
-            .field("tx_cnt", &format_args!("{}", self.tx_cnt().bits()))
-            .field(
-                "tx_fifo_rd_bit_cnt",
-                &format_args!("{}", self.tx_fifo_rd_bit_cnt().bits()),
-            )
+            .field("tx_cnt", &self.tx_cnt().bits())
+            .field("tx_fifo_rd_bit_cnt", &self.tx_fifo_rd_bit_cnt().bits())
             .finish()
     }
 }

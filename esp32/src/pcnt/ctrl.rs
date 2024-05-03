@@ -135,47 +135,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("cnt_rst_u0", &format_args!("{}", self.cnt_rst_u0().bit()))
-            .field("cnt_rst_u1", &format_args!("{}", self.cnt_rst_u1().bit()))
-            .field("cnt_rst_u2", &format_args!("{}", self.cnt_rst_u2().bit()))
-            .field("cnt_rst_u3", &format_args!("{}", self.cnt_rst_u3().bit()))
-            .field("cnt_rst_u4", &format_args!("{}", self.cnt_rst_u4().bit()))
-            .field("cnt_rst_u5", &format_args!("{}", self.cnt_rst_u5().bit()))
-            .field("cnt_rst_u6", &format_args!("{}", self.cnt_rst_u6().bit()))
-            .field("cnt_rst_u7", &format_args!("{}", self.cnt_rst_u7().bit()))
-            .field(
-                "cnt_pause_u0",
-                &format_args!("{}", self.cnt_pause_u0().bit()),
-            )
-            .field(
-                "cnt_pause_u1",
-                &format_args!("{}", self.cnt_pause_u1().bit()),
-            )
-            .field(
-                "cnt_pause_u2",
-                &format_args!("{}", self.cnt_pause_u2().bit()),
-            )
-            .field(
-                "cnt_pause_u3",
-                &format_args!("{}", self.cnt_pause_u3().bit()),
-            )
-            .field(
-                "cnt_pause_u4",
-                &format_args!("{}", self.cnt_pause_u4().bit()),
-            )
-            .field(
-                "cnt_pause_u5",
-                &format_args!("{}", self.cnt_pause_u5().bit()),
-            )
-            .field(
-                "cnt_pause_u6",
-                &format_args!("{}", self.cnt_pause_u6().bit()),
-            )
-            .field(
-                "cnt_pause_u7",
-                &format_args!("{}", self.cnt_pause_u7().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("cnt_rst_u0", &self.cnt_rst_u0().bit())
+            .field("cnt_rst_u1", &self.cnt_rst_u1().bit())
+            .field("cnt_rst_u2", &self.cnt_rst_u2().bit())
+            .field("cnt_rst_u3", &self.cnt_rst_u3().bit())
+            .field("cnt_rst_u4", &self.cnt_rst_u4().bit())
+            .field("cnt_rst_u5", &self.cnt_rst_u5().bit())
+            .field("cnt_rst_u6", &self.cnt_rst_u6().bit())
+            .field("cnt_rst_u7", &self.cnt_rst_u7().bit())
+            .field("cnt_pause_u0", &self.cnt_pause_u0().bit())
+            .field("cnt_pause_u1", &self.cnt_pause_u1().bit())
+            .field("cnt_pause_u2", &self.cnt_pause_u2().bit())
+            .field("cnt_pause_u3", &self.cnt_pause_u3().bit())
+            .field("cnt_pause_u4", &self.cnt_pause_u4().bit())
+            .field("cnt_pause_u5", &self.cnt_pause_u5().bit())
+            .field("cnt_pause_u6", &self.cnt_pause_u6().bit())
+            .field("cnt_pause_u7", &self.cnt_pause_u7().bit())
+            .field("clk_en", &self.clk_en().bit())
             .finish()
     }
 }

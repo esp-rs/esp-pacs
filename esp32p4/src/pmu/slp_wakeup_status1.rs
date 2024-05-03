@@ -13,10 +13,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_STATUS1")
-            .field(
-                "reject_cause",
-                &format_args!("{}", self.reject_cause().bits()),
-            )
+            .field("reject_cause", &self.reject_cause().bits())
             .finish()
     }
 }

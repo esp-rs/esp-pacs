@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_0_World_DRam0_PIF")
             .field(
                 "core_0_world_dram0_pif",
-                &format_args!("{}", self.core_0_world_dram0_pif().bits()),
+                &self.core_0_world_dram0_pif().bits(),
             )
             .finish()
     }

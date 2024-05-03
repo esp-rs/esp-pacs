@@ -153,90 +153,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST0")
-            .field(
-                "ack_with_err_0",
-                &format_args!("{}", self.ack_with_err_0().bit()),
-            )
-            .field(
-                "ack_with_err_1",
-                &format_args!("{}", self.ack_with_err_1().bit()),
-            )
-            .field(
-                "ack_with_err_2",
-                &format_args!("{}", self.ack_with_err_2().bit()),
-            )
-            .field(
-                "ack_with_err_3",
-                &format_args!("{}", self.ack_with_err_3().bit()),
-            )
-            .field(
-                "ack_with_err_4",
-                &format_args!("{}", self.ack_with_err_4().bit()),
-            )
-            .field(
-                "ack_with_err_5",
-                &format_args!("{}", self.ack_with_err_5().bit()),
-            )
-            .field(
-                "ack_with_err_6",
-                &format_args!("{}", self.ack_with_err_6().bit()),
-            )
-            .field(
-                "ack_with_err_7",
-                &format_args!("{}", self.ack_with_err_7().bit()),
-            )
-            .field(
-                "ack_with_err_8",
-                &format_args!("{}", self.ack_with_err_8().bit()),
-            )
-            .field(
-                "ack_with_err_9",
-                &format_args!("{}", self.ack_with_err_9().bit()),
-            )
-            .field(
-                "ack_with_err_10",
-                &format_args!("{}", self.ack_with_err_10().bit()),
-            )
-            .field(
-                "ack_with_err_11",
-                &format_args!("{}", self.ack_with_err_11().bit()),
-            )
-            .field(
-                "ack_with_err_12",
-                &format_args!("{}", self.ack_with_err_12().bit()),
-            )
-            .field(
-                "ack_with_err_13",
-                &format_args!("{}", self.ack_with_err_13().bit()),
-            )
-            .field(
-                "ack_with_err_14",
-                &format_args!("{}", self.ack_with_err_14().bit()),
-            )
-            .field(
-                "ack_with_err_15",
-                &format_args!("{}", self.ack_with_err_15().bit()),
-            )
-            .field(
-                "dphy_errors_0",
-                &format_args!("{}", self.dphy_errors_0().bit()),
-            )
-            .field(
-                "dphy_errors_1",
-                &format_args!("{}", self.dphy_errors_1().bit()),
-            )
-            .field(
-                "dphy_errors_2",
-                &format_args!("{}", self.dphy_errors_2().bit()),
-            )
-            .field(
-                "dphy_errors_3",
-                &format_args!("{}", self.dphy_errors_3().bit()),
-            )
-            .field(
-                "dphy_errors_4",
-                &format_args!("{}", self.dphy_errors_4().bit()),
-            )
+            .field("ack_with_err_0", &self.ack_with_err_0().bit())
+            .field("ack_with_err_1", &self.ack_with_err_1().bit())
+            .field("ack_with_err_2", &self.ack_with_err_2().bit())
+            .field("ack_with_err_3", &self.ack_with_err_3().bit())
+            .field("ack_with_err_4", &self.ack_with_err_4().bit())
+            .field("ack_with_err_5", &self.ack_with_err_5().bit())
+            .field("ack_with_err_6", &self.ack_with_err_6().bit())
+            .field("ack_with_err_7", &self.ack_with_err_7().bit())
+            .field("ack_with_err_8", &self.ack_with_err_8().bit())
+            .field("ack_with_err_9", &self.ack_with_err_9().bit())
+            .field("ack_with_err_10", &self.ack_with_err_10().bit())
+            .field("ack_with_err_11", &self.ack_with_err_11().bit())
+            .field("ack_with_err_12", &self.ack_with_err_12().bit())
+            .field("ack_with_err_13", &self.ack_with_err_13().bit())
+            .field("ack_with_err_14", &self.ack_with_err_14().bit())
+            .field("ack_with_err_15", &self.ack_with_err_15().bit())
+            .field("dphy_errors_0", &self.dphy_errors_0().bit())
+            .field("dphy_errors_1", &self.dphy_errors_1().bit())
+            .field("dphy_errors_2", &self.dphy_errors_2().bit())
+            .field("dphy_errors_3", &self.dphy_errors_3().bit())
+            .field("dphy_errors_4", &self.dphy_errors_4().bit())
             .finish()
     }
 }

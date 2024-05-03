@@ -71,40 +71,31 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEBUG_INFO0")
             .field(
                 "top_ctrl_inter_debug_state",
-                &format_args!("{}", self.top_ctrl_inter_debug_state().bits()),
+                &self.top_ctrl_inter_debug_state().bits(),
             )
             .field(
                 "top_ctrl_intra_debug_state",
-                &format_args!("{}", self.top_ctrl_intra_debug_state().bits()),
+                &self.top_ctrl_intra_debug_state().bits(),
             )
-            .field(
-                "p_i_cmp_debug_state",
-                &format_args!("{}", self.p_i_cmp_debug_state().bits()),
-            )
-            .field(
-                "mvd_debug_state",
-                &format_args!("{}", self.mvd_debug_state().bits()),
-            )
+            .field("p_i_cmp_debug_state", &self.p_i_cmp_debug_state().bits())
+            .field("mvd_debug_state", &self.mvd_debug_state().bits())
             .field(
                 "mc_chroma_ip_debug_state",
-                &format_args!("{}", self.mc_chroma_ip_debug_state().bit()),
+                &self.mc_chroma_ip_debug_state().bit(),
             )
             .field(
                 "intra_16x16_chroma_ctrl_debug_state",
-                &format_args!("{}", self.intra_16x16_chroma_ctrl_debug_state().bits()),
+                &self.intra_16x16_chroma_ctrl_debug_state().bits(),
             )
             .field(
                 "intra_4x4_ctrl_debug_state",
-                &format_args!("{}", self.intra_4x4_ctrl_debug_state().bits()),
+                &self.intra_4x4_ctrl_debug_state().bits(),
             )
             .field(
                 "intra_top_ctrl_debug_state",
-                &format_args!("{}", self.intra_top_ctrl_debug_state().bits()),
+                &self.intra_top_ctrl_debug_state().bits(),
             )
-            .field(
-                "ime_ctrl_debug_state",
-                &format_args!("{}", self.ime_ctrl_debug_state().bits()),
-            )
+            .field("ime_ctrl_debug_state", &self.ime_ctrl_debug_state().bits())
             .finish()
     }
 }

@@ -62,27 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("trans_end", &format_args!("{}", self.trans_end().bit()))
-            .field(
-                "trans_end_int_ena",
-                &format_args!("{}", self.trans_end_int_ena().bit()),
-            )
-            .field(
-                "cspi_st_trans_end",
-                &format_args!("{}", self.cspi_st_trans_end().bit()),
-            )
+            .field("trans_end", &self.trans_end().bit())
+            .field("trans_end_int_ena", &self.trans_end_int_ena().bit())
+            .field("cspi_st_trans_end", &self.cspi_st_trans_end().bit())
             .field(
                 "cspi_st_trans_end_int_ena",
-                &format_args!("{}", self.cspi_st_trans_end_int_ena().bit()),
+                &self.cspi_st_trans_end_int_ena().bit(),
             )
-            .field(
-                "ck_idle_edge",
-                &format_args!("{}", self.ck_idle_edge().bit()),
-            )
-            .field(
-                "cs_keep_active",
-                &format_args!("{}", self.cs_keep_active().bit()),
-            )
+            .field("ck_idle_edge", &self.ck_idle_edge().bit())
+            .field("cs_keep_active", &self.cs_keep_active().bit())
             .finish()
     }
 }

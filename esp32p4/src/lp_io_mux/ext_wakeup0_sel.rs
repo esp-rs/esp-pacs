@@ -26,14 +26,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP0_SEL")
-            .field(
-                "reg_xtl_ext_ctr_sel",
-                &format_args!("{}", self.reg_xtl_ext_ctr_sel().bits()),
-            )
-            .field(
-                "reg_ext_wakeup0_sel",
-                &format_args!("{}", self.reg_ext_wakeup0_sel().bits()),
-            )
+            .field("reg_xtl_ext_ctr_sel", &self.reg_xtl_ext_ctr_sel().bits())
+            .field("reg_ext_wakeup0_sel", &self.reg_ext_wakeup0_sel().bits())
             .finish()
     }
 }

@@ -35,9 +35,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_CACHE_LOCK_3_ADDR")
-            .field("pre", &format_args!("{}", self.pre().bits()))
-            .field("min", &format_args!("{}", self.min().bits()))
-            .field("max", &format_args!("{}", self.max().bits()))
+            .field("pre", &self.pre().bits())
+            .field("min", &self.min().bits())
+            .field("max", &self.max().bits())
             .finish()
     }
 }

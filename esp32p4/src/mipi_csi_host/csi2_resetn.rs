@@ -17,7 +17,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CSI2_RESETN")
-            .field("csi2_resetn", &format_args!("{}", self.csi2_resetn().bit()))
+            .field("csi2_resetn", &self.csi2_resetn().bit())
             .finish()
     }
 }

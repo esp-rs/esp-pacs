@@ -62,14 +62,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMT_CSR")
-            .field("pwrdwn", &format_args!("{}", self.pwrdwn().bit()))
-            .field("mgkpkten", &format_args!("{}", self.mgkpkten().bit()))
-            .field("rwkpkten", &format_args!("{}", self.rwkpkten().bit()))
-            .field("mgkprcvd", &format_args!("{}", self.mgkprcvd().bit()))
-            .field("rwkprcvd", &format_args!("{}", self.rwkprcvd().bit()))
-            .field("glblucast", &format_args!("{}", self.glblucast().bit()))
-            .field("rwkptr", &format_args!("{}", self.rwkptr().bits()))
-            .field("rwkfiltrst", &format_args!("{}", self.rwkfiltrst().bit()))
+            .field("pwrdwn", &self.pwrdwn().bit())
+            .field("mgkpkten", &self.mgkpkten().bit())
+            .field("rwkpkten", &self.rwkpkten().bit())
+            .field("mgkprcvd", &self.mgkprcvd().bit())
+            .field("rwkprcvd", &self.rwkprcvd().bit())
+            .field("glblucast", &self.glblucast().bit())
+            .field("rwkptr", &self.rwkptr().bits())
+            .field("rwkfiltrst", &self.rwkfiltrst().bit())
             .finish()
     }
 }

@@ -19,7 +19,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPSYS_APM_RESET_BYPASS")
             .field(
                 "lp_aonclkrst_hpsys_apm_reset_bypass",
-                &format_args!("{}", self.lp_aonclkrst_hpsys_apm_reset_bypass().bits()),
+                &self.lp_aonclkrst_hpsys_apm_reset_bypass().bits(),
             )
             .finish()
     }

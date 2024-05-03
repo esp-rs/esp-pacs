@@ -52,10 +52,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHEN1")
-            .field("ch1_abort", &format_args!("{}", self.ch1_abort().bit()))
-            .field("ch2_abort", &format_args!("{}", self.ch2_abort().bit()))
-            .field("ch3_abort", &format_args!("{}", self.ch3_abort().bit()))
-            .field("ch4_abort", &format_args!("{}", self.ch4_abort().bit()))
+            .field("ch1_abort", &self.ch1_abort().bit())
+            .field("ch2_abort", &self.ch2_abort().bit())
+            .field("ch3_abort", &self.ch3_abort().bit())
+            .field("ch4_abort", &self.ch4_abort().bit())
             .finish()
     }
 }
