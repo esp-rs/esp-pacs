@@ -1039,6 +1039,52 @@ impl core::fmt::Debug for I2S0 {
 }
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub mod i2s0;
+#[doc = "IEEE802154 Peripheral"]
+pub struct IEEE802154 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for IEEE802154 {}
+impl IEEE802154 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const ieee802154::RegisterBlock = 0x600a_3000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const ieee802154::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for IEEE802154 {
+    type Target = ieee802154::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for IEEE802154 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("IEEE802154").finish()
+    }
+}
+#[doc = "IEEE802154 Peripheral"]
+pub mod ieee802154;
 #[doc = "Interrupt Controller (Core 0)"]
 pub struct INTERRUPT_CORE0 {
     _marker: PhantomData<*const ()>,
@@ -3240,6 +3286,8 @@ pub struct Peripherals {
     pub I2C0: I2C0,
     #[doc = "I2S0"]
     pub I2S0: I2S0,
+    #[doc = "IEEE802154"]
+    pub IEEE802154: IEEE802154,
     #[doc = "INTERRUPT_CORE0"]
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
@@ -3405,6 +3453,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             I2S0: I2S0 {
+                _marker: PhantomData,
+            },
+            IEEE802154: IEEE802154 {
                 _marker: PhantomData,
             },
             INTERRUPT_CORE0: INTERRUPT_CORE0 {
