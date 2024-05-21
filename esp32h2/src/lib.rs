@@ -922,7 +922,7 @@ pub struct IEEE802154 {
 unsafe impl Send for IEEE802154 {}
 impl IEEE802154 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const ieee802154::RegisterBlock = 0x6004_7000 as *const _;
+    pub const PTR: *const ieee802154::RegisterBlock = 0x600a_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const ieee802154::RegisterBlock {
