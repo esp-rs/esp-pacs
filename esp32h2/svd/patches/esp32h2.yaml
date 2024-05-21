@@ -295,3 +295,7 @@ TWAI0:
         name: TX_BYTE_11
       DATA_12:
         name: TX_BYTE_12
+
+_modify:
+  IEEE802154:
+    baseAddress: 0x600A3000
