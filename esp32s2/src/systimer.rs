@@ -54,28 +54,28 @@ impl RegisterBlock {
     pub fn trgt_iter(&self) -> impl Iterator<Item = &TRGT> {
         self.trgt.iter()
     }
-    #[doc = "0x2c..0x38 - Configure work mode for system timer target %s"]
+    #[doc = "0x2c..0x38 - Cluster TARGET%s_CONF, containing TARGET?_CONF"]
     #[inline(always)]
     pub const fn target_conf(&self, n: usize) -> &TARGET_CONF {
         &self.target_conf[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x2c..0x38 - Configure work mode for system timer target %s"]
+    #[doc = "0x2c..0x38 - Cluster TARGET%s_CONF, containing TARGET?_CONF"]
     #[inline(always)]
     pub fn target_conf_iter(&self) -> impl Iterator<Item = &TARGET_CONF> {
         self.target_conf.iter()
     }
-    #[doc = "0x2c - Configure work mode for system timer target 0"]
+    #[doc = "0x2c - Cluster TARGET0_CONF, containing TARGET?_CONF"]
     #[inline(always)]
     pub const fn target0_conf(&self) -> &TARGET_CONF {
         self.target_conf(0)
     }
-    #[doc = "0x30 - Configure work mode for system timer target 1"]
+    #[doc = "0x30 - Cluster TARGET1_CONF, containing TARGET?_CONF"]
     #[inline(always)]
     pub const fn target1_conf(&self) -> &TARGET_CONF {
         self.target_conf(1)
     }
-    #[doc = "0x34 - Configure work mode for system timer target 2"]
+    #[doc = "0x34 - Cluster TARGET2_CONF, containing TARGET?_CONF"]
     #[inline(always)]
     pub const fn target2_conf(&self) -> &TARGET_CONF {
         self.target_conf(2)
@@ -158,9 +158,10 @@ pub use self::trgt::TRGT;
 #[doc = r"Cluster"]
 #[doc = "Cluster TRGT%s, containing TARGET?_HI, TARGET?_LO"]
 pub mod trgt;
-#[doc = "TARGET_CONF (rw) register accessor: Configure work mode for system timer target %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`target_conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`target_conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@target_conf`] module"]
-pub type TARGET_CONF = crate::Reg<target_conf::TARGET_CONF_SPEC>;
-#[doc = "Configure work mode for system timer target %s"]
+#[doc = "Cluster TARGET%s_CONF, containing TARGET?_CONF"]
+pub use self::target_conf::TARGET_CONF;
+#[doc = r"Cluster"]
+#[doc = "Cluster TARGET%s_CONF, containing TARGET?_CONF"]
 pub mod target_conf;
 #[doc = "UNIT_OP (rw) register accessor: Read out system timer value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`unit_op::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`unit_op::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unit_op`] module"]
 pub type UNIT_OP = crate::Reg<unit_op::UNIT_OP_SPEC>;

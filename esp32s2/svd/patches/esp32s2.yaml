@@ -41,7 +41,7 @@ DEDICATED_GPIO:
   OUT_DRT:
     _modify:
       VLAUE:
-       name: VALUE
+        name: VALUE
   OUT_IDV:
     _array:
       CH?: {}
@@ -182,11 +182,10 @@ SYSTIMER:
   "INT_ENA,INT_RAW,INT_CLR":
     _array:
       TARGET?: {}
-  
+
   _array:
     UNIT?_OP:
       dimIncrement: 4
-    TARGET?_CONF: {}
   _cluster:
     TRGT%s:
       TARGET?_HI:
@@ -199,6 +198,8 @@ SYSTIMER:
         name: HI
       UNIT?_VALUE_LO:
         name: LO
+    TARGET%s_CONF:
+      TARGET?_CONF: {}
 
 USB0:
   _include: ../../../common_patches/usb0.yaml
