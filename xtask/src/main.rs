@@ -375,7 +375,7 @@ fn format(path: &Path) -> Result<()> {
 
     let base_dir = path.join("src");
     let string_contents = fs::read_to_string(&lib_file)?;
-    form::create_directory_structure(base_dir, &string_contents, false).map_err(Error::msg)?;
+    form::create_directory_structure(base_dir, &string_contents, true).map_err(Error::msg)?;
 
     fs::remove_file(&lib_file)?;
 
