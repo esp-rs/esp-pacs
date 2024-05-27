@@ -1,9 +1,9 @@
-#[doc = "Register `SLC_APBWIN_RDATA` reader"]
+///Register `SLC_APBWIN_RDATA` reader
 pub type R = crate::R<SLC_APBWIN_RDATA_SPEC>;
-#[doc = "Field `SLC_APBWIN_RDATA` reader - *******Description***********"]
+///Field `SLC_APBWIN_RDATA` reader - *******Description***********
 pub type SLC_APBWIN_RDATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     pub fn slc_apbwin_rdata(&self) -> SLC_APBWIN_RDATA_R {
         SLC_APBWIN_RDATA_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct SLC_APBWIN_RDATA_SPEC;
 impl crate::RegisterSpec for SLC_APBWIN_RDATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`slc_apbwin_rdata::R`](R) reader structure"]
+///`read()` method returns [`slc_apbwin_rdata::R`](R) reader structure
 impl crate::Readable for SLC_APBWIN_RDATA_SPEC {}
-#[doc = "`reset()` method sets SLC_APBWIN_RDATA to value 0"]
+///`reset()` method sets SLC_APBWIN_RDATA to value 0
 impl crate::Resettable for SLC_APBWIN_RDATA_SPEC {
     const RESET_VALUE: u32 = 0;
 }

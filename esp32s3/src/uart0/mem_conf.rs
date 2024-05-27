@@ -1,58 +1,58 @@
-#[doc = "Register `MEM_CONF` reader"]
+///Register `MEM_CONF` reader
 pub type R = crate::R<MEM_CONF_SPEC>;
-#[doc = "Register `MEM_CONF` writer"]
+///Register `MEM_CONF` writer
 pub type W = crate::W<MEM_CONF_SPEC>;
-#[doc = "Field `RX_SIZE` reader - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
+///Field `RX_SIZE` reader - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes.
 pub type RX_SIZE_R = crate::FieldReader;
-#[doc = "Field `RX_SIZE` writer - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
+///Field `RX_SIZE` writer - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes.
 pub type RX_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `TX_SIZE` reader - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
+///Field `TX_SIZE` reader - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes.
 pub type TX_SIZE_R = crate::FieldReader;
-#[doc = "Field `TX_SIZE` writer - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
+///Field `TX_SIZE` writer - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes.
 pub type TX_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
+///Field `RX_FLOW_THRHD` reader - This register is used to configure the maximum amount of data that can be received when hardware flow control works.
 pub type RX_FLOW_THRHD_R = crate::FieldReader<u16>;
-#[doc = "Field `RX_FLOW_THRHD` writer - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
+///Field `RX_FLOW_THRHD` writer - This register is used to configure the maximum amount of data that can be received when hardware flow control works.
 pub type RX_FLOW_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
-#[doc = "Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
+///Field `RX_TOUT_THRHD` reader - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1.
 pub type RX_TOUT_THRHD_R = crate::FieldReader<u16>;
-#[doc = "Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
+///Field `RX_TOUT_THRHD` writer - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1.
 pub type RX_TOUT_THRHD_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
-#[doc = "Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory."]
+///Field `MEM_FORCE_PD` reader - Set this bit to force power down UART memory.
 pub type MEM_FORCE_PD_R = crate::BitReader;
-#[doc = "Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory."]
+///Field `MEM_FORCE_PD` writer - Set this bit to force power down UART memory.
 pub type MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory."]
+///Field `MEM_FORCE_PU` reader - Set this bit to force power up UART memory.
 pub type MEM_FORCE_PU_R = crate::BitReader;
-#[doc = "Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory."]
+///Field `MEM_FORCE_PU` writer - Set this bit to force power up UART memory.
 pub type MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
+    ///Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes.
     #[inline(always)]
     pub fn rx_size(&self) -> RX_SIZE_R {
         RX_SIZE_R::new(((self.bits >> 1) & 7) as u8)
     }
-    #[doc = "Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
+    ///Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes.
     #[inline(always)]
     pub fn tx_size(&self) -> TX_SIZE_R {
         TX_SIZE_R::new(((self.bits >> 4) & 7) as u8)
     }
-    #[doc = "Bits 7:16 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
+    ///Bits 7:16 - This register is used to configure the maximum amount of data that can be received when hardware flow control works.
     #[inline(always)]
     pub fn rx_flow_thrhd(&self) -> RX_FLOW_THRHD_R {
         RX_FLOW_THRHD_R::new(((self.bits >> 7) & 0x03ff) as u16)
     }
-    #[doc = "Bits 17:26 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
+    ///Bits 17:26 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1.
     #[inline(always)]
     pub fn rx_tout_thrhd(&self) -> RX_TOUT_THRHD_R {
         RX_TOUT_THRHD_R::new(((self.bits >> 17) & 0x03ff) as u16)
     }
-    #[doc = "Bit 27 - Set this bit to force power down UART memory."]
+    ///Bit 27 - Set this bit to force power down UART memory.
     #[inline(always)]
     pub fn mem_force_pd(&self) -> MEM_FORCE_PD_R {
         MEM_FORCE_PD_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 28 - Set this bit to force power up UART memory."]
+    ///Bit 28 - Set this bit to force power up UART memory.
     #[inline(always)]
     pub fn mem_force_pu(&self) -> MEM_FORCE_PU_R {
         MEM_FORCE_PU_R::new(((self.bits >> 28) & 1) != 0)
@@ -72,57 +72,59 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
+    ///Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes.
     #[inline(always)]
     #[must_use]
     pub fn rx_size(&mut self) -> RX_SIZE_W<MEM_CONF_SPEC> {
         RX_SIZE_W::new(self, 1)
     }
-    #[doc = "Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
+    ///Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes.
     #[inline(always)]
     #[must_use]
     pub fn tx_size(&mut self) -> TX_SIZE_W<MEM_CONF_SPEC> {
         TX_SIZE_W::new(self, 4)
     }
-    #[doc = "Bits 7:16 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
+    ///Bits 7:16 - This register is used to configure the maximum amount of data that can be received when hardware flow control works.
     #[inline(always)]
     #[must_use]
     pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<MEM_CONF_SPEC> {
         RX_FLOW_THRHD_W::new(self, 7)
     }
-    #[doc = "Bits 17:26 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
+    ///Bits 17:26 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1.
     #[inline(always)]
     #[must_use]
     pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<MEM_CONF_SPEC> {
         RX_TOUT_THRHD_W::new(self, 17)
     }
-    #[doc = "Bit 27 - Set this bit to force power down UART memory."]
+    ///Bit 27 - Set this bit to force power down UART memory.
     #[inline(always)]
     #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 27)
     }
-    #[doc = "Bit 28 - Set this bit to force power up UART memory."]
+    ///Bit 28 - Set this bit to force power up UART memory.
     #[inline(always)]
     #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 28)
     }
 }
-#[doc = "UART threshold and allocation configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**UART threshold and allocation configuration
+
+You can [`read`](crate::generic::Reg::read) this register and get [`mem_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct MEM_CONF_SPEC;
 impl crate::RegisterSpec for MEM_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`mem_conf::R`](R) reader structure"]
+///`read()` method returns [`mem_conf::R`](R) reader structure
 impl crate::Readable for MEM_CONF_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure
 impl crate::Writable for MEM_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets MEM_CONF to value 0x0014_0012"]
+///`reset()` method sets MEM_CONF to value 0x0014_0012
 impl crate::Resettable for MEM_CONF_SPEC {
     const RESET_VALUE: u32 = 0x0014_0012;
 }

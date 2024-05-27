@@ -1,9 +1,9 @@
-#[doc = "Register `PRO_INTR_STATUS_2` reader"]
+///Register `PRO_INTR_STATUS_2` reader
 pub type R = crate::R<PRO_INTR_STATUS_2_SPEC>;
-#[doc = "Field `PRO_INTR_STATUS_2` reader - "]
+///Field `PRO_INTR_STATUS_2` reader -
 pub type PRO_INTR_STATUS_2_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     pub fn pro_intr_status_2(&self) -> PRO_INTR_STATUS_2_R {
         PRO_INTR_STATUS_2_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_intr_status_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pro_intr_status_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PRO_INTR_STATUS_2_SPEC;
 impl crate::RegisterSpec for PRO_INTR_STATUS_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pro_intr_status_2::R`](R) reader structure"]
+///`read()` method returns [`pro_intr_status_2::R`](R) reader structure
 impl crate::Readable for PRO_INTR_STATUS_2_SPEC {}
-#[doc = "`reset()` method sets PRO_INTR_STATUS_2 to value 0"]
+///`reset()` method sets PRO_INTR_STATUS_2 to value 0
 impl crate::Resettable for PRO_INTR_STATUS_2_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,31 +1,31 @@
-#[doc = "Register `INT_RAW_TIMERS` reader"]
+///Register `INT_RAW_TIMERS` reader
 pub type R = crate::R<INT_RAW_TIMERS_SPEC>;
-#[doc = "Field `T(0-0)` reader - The raw interrupt status bit for the TIMG_T%s_INT interrupt."]
+///Field `T(0-0)` reader - The raw interrupt status bit for the TIMG_T%s_INT interrupt.
 pub type T_R = crate::BitReader;
-#[doc = "Field `WDT` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
+///Field `WDT` reader - The raw interrupt status bit for the TIMG_WDT_INT interrupt.
 pub type WDT_R = crate::BitReader;
 impl R {
-    #[doc = "The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    ///The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field
     #[inline(always)]
     pub fn t(&self, n: u8) -> T_R {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         T_R::new(((self.bits >> (n * 0)) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt."]
+    ///Iterator for array of:
+    ///The raw interrupt status bit for the TIMG_T(0-0)_INT interrupt.
     #[inline(always)]
     pub fn t_iter(&self) -> impl Iterator<Item = T_R> + '_ {
         (0..1).map(move |n| T_R::new(((self.bits >> (n * 0)) & 1) != 0))
     }
-    #[doc = "Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt."]
+    ///Bit 0 - The raw interrupt status bit for the TIMG_T0_INT interrupt.
     #[inline(always)]
     pub fn t0(&self) -> T_R {
         T_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The raw interrupt status bit for the TIMG_WDT_INT interrupt."]
+    ///Bit 1 - The raw interrupt status bit for the TIMG_WDT_INT interrupt.
     #[inline(always)]
     pub fn wdt(&self) -> WDT_R {
         WDT_R::new(((self.bits >> 1) & 1) != 0)
@@ -40,14 +40,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Raw interrupt status
+
+You can [`read`](crate::generic::Reg::read) this register and get [`int_raw_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INT_RAW_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_RAW_TIMERS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_raw_timers::R`](R) reader structure"]
+///`read()` method returns [`int_raw_timers::R`](R) reader structure
 impl crate::Readable for INT_RAW_TIMERS_SPEC {}
-#[doc = "`reset()` method sets INT_RAW_TIMERS to value 0"]
+///`reset()` method sets INT_RAW_TIMERS to value 0
 impl crate::Resettable for INT_RAW_TIMERS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

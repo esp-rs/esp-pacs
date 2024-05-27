@@ -1,13 +1,13 @@
-#[doc = "Register `TG1_T0_INT_MAP` reader"]
+///Register `TG1_T0_INT_MAP` reader
 pub type R = crate::R<TG1_T0_INT_MAP_SPEC>;
-#[doc = "Register `TG1_T0_INT_MAP` writer"]
+///Register `TG1_T0_INT_MAP` writer
 pub type W = crate::W<TG1_T0_INT_MAP_SPEC>;
-#[doc = "Field `TG1_T0_INT_MAP` reader - reg_core0_tg1_t0_int_map"]
+///Field `TG1_T0_INT_MAP` reader - reg_core0_tg1_t0_int_map
 pub type TG1_T0_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `TG1_T0_INT_MAP` writer - reg_core0_tg1_t0_int_map"]
+///Field `TG1_T0_INT_MAP` writer - reg_core0_tg1_t0_int_map
 pub type TG1_T0_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - reg_core0_tg1_t0_int_map"]
+    ///Bits 0:4 - reg_core0_tg1_t0_int_map
     #[inline(always)]
     pub fn tg1_t0_int_map(&self) -> TG1_T0_INT_MAP_R {
         TG1_T0_INT_MAP_R::new((self.bits & 0x1f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - reg_core0_tg1_t0_int_map"]
+    ///Bits 0:4 - reg_core0_tg1_t0_int_map
     #[inline(always)]
     #[must_use]
     pub fn tg1_t0_int_map(&mut self) -> TG1_T0_INT_MAP_W<TG1_T0_INT_MAP_SPEC> {
         TG1_T0_INT_MAP_W::new(self, 0)
     }
 }
-#[doc = "tg1 to intr map register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tg1_t0_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tg1_t0_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**tg1 to intr map register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`tg1_t0_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tg1_t0_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct TG1_T0_INT_MAP_SPEC;
 impl crate::RegisterSpec for TG1_T0_INT_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`tg1_t0_int_map::R`](R) reader structure"]
+///`read()` method returns [`tg1_t0_int_map::R`](R) reader structure
 impl crate::Readable for TG1_T0_INT_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`tg1_t0_int_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`tg1_t0_int_map::W`](W) writer structure
 impl crate::Writable for TG1_T0_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets TG1_T0_INT_MAP to value 0"]
+///`reset()` method sets TG1_T0_INT_MAP to value 0
 impl crate::Resettable for TG1_T0_INT_MAP_SPEC {
     const RESET_VALUE: u32 = 0;
 }

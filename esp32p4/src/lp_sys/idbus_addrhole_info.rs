@@ -1,23 +1,23 @@
-#[doc = "Register `IDBUS_ADDRHOLE_INFO` reader"]
+///Register `IDBUS_ADDRHOLE_INFO` reader
 pub type R = crate::R<IDBUS_ADDRHOLE_INFO_SPEC>;
-#[doc = "Field `IDBUS_ADDRHOLE_ID` reader - need_des"]
+///Field `IDBUS_ADDRHOLE_ID` reader - need_des
 pub type IDBUS_ADDRHOLE_ID_R = crate::FieldReader;
-#[doc = "Field `IDBUS_ADDRHOLE_WR` reader - need_des"]
+///Field `IDBUS_ADDRHOLE_WR` reader - need_des
 pub type IDBUS_ADDRHOLE_WR_R = crate::BitReader;
-#[doc = "Field `IDBUS_ADDRHOLE_SECURE` reader - need_des"]
+///Field `IDBUS_ADDRHOLE_SECURE` reader - need_des
 pub type IDBUS_ADDRHOLE_SECURE_R = crate::BitReader;
 impl R {
-    #[doc = "Bits 0:4 - need_des"]
+    ///Bits 0:4 - need_des
     #[inline(always)]
     pub fn idbus_addrhole_id(&self) -> IDBUS_ADDRHOLE_ID_R {
         IDBUS_ADDRHOLE_ID_R::new((self.bits & 0x1f) as u8)
     }
-    #[doc = "Bit 5 - need_des"]
+    ///Bit 5 - need_des
     #[inline(always)]
     pub fn idbus_addrhole_wr(&self) -> IDBUS_ADDRHOLE_WR_R {
         IDBUS_ADDRHOLE_WR_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - need_des"]
+    ///Bit 6 - need_des
     #[inline(always)]
     pub fn idbus_addrhole_secure(&self) -> IDBUS_ADDRHOLE_SECURE_R {
         IDBUS_ADDRHOLE_SECURE_R::new(((self.bits >> 6) & 1) != 0)
@@ -33,14 +33,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idbus_addrhole_info::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**need_des
+
+You can [`read`](crate::generic::Reg::read) this register and get [`idbus_addrhole_info::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct IDBUS_ADDRHOLE_INFO_SPEC;
 impl crate::RegisterSpec for IDBUS_ADDRHOLE_INFO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`idbus_addrhole_info::R`](R) reader structure"]
+///`read()` method returns [`idbus_addrhole_info::R`](R) reader structure
 impl crate::Readable for IDBUS_ADDRHOLE_INFO_SPEC {}
-#[doc = "`reset()` method sets IDBUS_ADDRHOLE_INFO to value 0"]
+///`reset()` method sets IDBUS_ADDRHOLE_INFO to value 0
 impl crate::Resettable for IDBUS_ADDRHOLE_INFO_SPEC {
     const RESET_VALUE: u32 = 0;
 }

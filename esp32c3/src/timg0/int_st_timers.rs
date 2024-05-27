@@ -1,31 +1,31 @@
-#[doc = "Register `INT_ST_TIMERS` reader"]
+///Register `INT_ST_TIMERS` reader
 pub type R = crate::R<INT_ST_TIMERS_SPEC>;
-#[doc = "Field `T(0-0)` reader - t%s_int_st"]
+///Field `T(0-0)` reader - t%s_int_st
 pub type T_R = crate::BitReader;
-#[doc = "Field `WDT` reader - wdt_int_st"]
+///Field `WDT` reader - wdt_int_st
 pub type WDT_R = crate::BitReader;
 impl R {
-    #[doc = "t(0-0)_int_st"]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    ///t(0-0)_int_st
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field
     #[inline(always)]
     pub fn t(&self, n: u8) -> T_R {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         T_R::new(((self.bits >> (n * 0)) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "t(0-0)_int_st"]
+    ///Iterator for array of:
+    ///t(0-0)_int_st
     #[inline(always)]
     pub fn t_iter(&self) -> impl Iterator<Item = T_R> + '_ {
         (0..1).map(move |n| T_R::new(((self.bits >> (n * 0)) & 1) != 0))
     }
-    #[doc = "Bit 0 - t0_int_st"]
+    ///Bit 0 - t0_int_st
     #[inline(always)]
     pub fn t0(&self) -> T_R {
         T_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - wdt_int_st"]
+    ///Bit 1 - wdt_int_st
     #[inline(always)]
     pub fn wdt(&self) -> WDT_R {
         WDT_R::new(((self.bits >> 1) & 1) != 0)
@@ -40,14 +40,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "INT_ST_TIMG_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**INT_ST_TIMG_REG
+
+You can [`read`](crate::generic::Reg::read) this register and get [`int_st_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INT_ST_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_ST_TIMERS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_st_timers::R`](R) reader structure"]
+///`read()` method returns [`int_st_timers::R`](R) reader structure
 impl crate::Readable for INT_ST_TIMERS_SPEC {}
-#[doc = "`reset()` method sets INT_ST_TIMERS to value 0"]
+///`reset()` method sets INT_ST_TIMERS to value 0
 impl crate::Resettable for INT_ST_TIMERS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

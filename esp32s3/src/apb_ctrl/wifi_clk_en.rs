@@ -1,13 +1,13 @@
-#[doc = "Register `WIFI_CLK_EN` reader"]
+///Register `WIFI_CLK_EN` reader
 pub type R = crate::R<WIFI_CLK_EN_SPEC>;
-#[doc = "Register `WIFI_CLK_EN` writer"]
+///Register `WIFI_CLK_EN` writer
 pub type W = crate::W<WIFI_CLK_EN_SPEC>;
-#[doc = "Field `WIFI_CLK_EN` reader - ******* Description ***********"]
+///Field `WIFI_CLK_EN` reader - ******* Description ***********
 pub type WIFI_CLK_EN_R = crate::FieldReader<u32>;
-#[doc = "Field `WIFI_CLK_EN` writer - ******* Description ***********"]
+///Field `WIFI_CLK_EN` writer - ******* Description ***********
 pub type WIFI_CLK_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    ///Bits 0:31 - ******* Description ***********
     #[inline(always)]
     pub fn wifi_clk_en(&self) -> WIFI_CLK_EN_R {
         WIFI_CLK_EN_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    ///Bits 0:31 - ******* Description ***********
     #[inline(always)]
     #[must_use]
     pub fn wifi_clk_en(&mut self) -> WIFI_CLK_EN_W<WIFI_CLK_EN_SPEC> {
@@ -34,15 +34,15 @@ pub struct WIFI_CLK_EN_SPEC;
 impl crate::RegisterSpec for WIFI_CLK_EN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`wifi_clk_en::R`](R) reader structure"]
+///`read()` method returns [`wifi_clk_en::R`](R) reader structure
 impl crate::Readable for WIFI_CLK_EN_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`wifi_clk_en::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`wifi_clk_en::W`](W) writer structure
 impl crate::Writable for WIFI_CLK_EN_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets WIFI_CLK_EN to value 0xfffc_e030"]
+///`reset()` method sets WIFI_CLK_EN to value 0xfffc_e030
 impl crate::Resettable for WIFI_CLK_EN_SPEC {
     const RESET_VALUE: u32 = 0xfffc_e030;
 }

@@ -1,49 +1,49 @@
-#[doc = "Register `PG_CTRL` reader"]
+///Register `PG_CTRL` reader
 pub type R = crate::R<PG_CTRL_SPEC>;
-#[doc = "Register `PG_CTRL` writer"]
+///Register `PG_CTRL` writer
 pub type W = crate::W<PG_CTRL_SPEC>;
-#[doc = "Field `POWER_GLITCH_DSENSE` reader - GLITCH_DSENSE"]
+///Field `POWER_GLITCH_DSENSE` reader - GLITCH_DSENSE
 pub type POWER_GLITCH_DSENSE_R = crate::FieldReader;
-#[doc = "Field `POWER_GLITCH_DSENSE` writer - GLITCH_DSENSE"]
+///Field `POWER_GLITCH_DSENSE` writer - GLITCH_DSENSE
 pub type POWER_GLITCH_DSENSE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `POWER_GLITCH_FORCE_PD` reader - force power glitch disable"]
+///Field `POWER_GLITCH_FORCE_PD` reader - force power glitch disable
 pub type POWER_GLITCH_FORCE_PD_R = crate::BitReader;
-#[doc = "Field `POWER_GLITCH_FORCE_PD` writer - force power glitch disable"]
+///Field `POWER_GLITCH_FORCE_PD` writer - force power glitch disable
 pub type POWER_GLITCH_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `POWER_GLITCH_FORCE_PU` reader - force power glitch enable"]
+///Field `POWER_GLITCH_FORCE_PU` reader - force power glitch enable
 pub type POWER_GLITCH_FORCE_PU_R = crate::BitReader;
-#[doc = "Field `POWER_GLITCH_FORCE_PU` writer - force power glitch enable"]
+///Field `POWER_GLITCH_FORCE_PU` writer - force power glitch enable
 pub type POWER_GLITCH_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `POWER_GLITCH_EFUSE_SEL` reader - select use analog fib signal"]
+///Field `POWER_GLITCH_EFUSE_SEL` reader - select use analog fib signal
 pub type POWER_GLITCH_EFUSE_SEL_R = crate::BitReader;
-#[doc = "Field `POWER_GLITCH_EFUSE_SEL` writer - select use analog fib signal"]
+///Field `POWER_GLITCH_EFUSE_SEL` writer - select use analog fib signal
 pub type POWER_GLITCH_EFUSE_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `POWER_GLITCH_EN` reader - enable power glitch"]
+///Field `POWER_GLITCH_EN` reader - enable power glitch
 pub type POWER_GLITCH_EN_R = crate::BitReader;
-#[doc = "Field `POWER_GLITCH_EN` writer - enable power glitch"]
+///Field `POWER_GLITCH_EN` writer - enable power glitch
 pub type POWER_GLITCH_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 26:27 - GLITCH_DSENSE"]
+    ///Bits 26:27 - GLITCH_DSENSE
     #[inline(always)]
     pub fn power_glitch_dsense(&self) -> POWER_GLITCH_DSENSE_R {
         POWER_GLITCH_DSENSE_R::new(((self.bits >> 26) & 3) as u8)
     }
-    #[doc = "Bit 28 - force power glitch disable"]
+    ///Bit 28 - force power glitch disable
     #[inline(always)]
     pub fn power_glitch_force_pd(&self) -> POWER_GLITCH_FORCE_PD_R {
         POWER_GLITCH_FORCE_PD_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bit 29 - force power glitch enable"]
+    ///Bit 29 - force power glitch enable
     #[inline(always)]
     pub fn power_glitch_force_pu(&self) -> POWER_GLITCH_FORCE_PU_R {
         POWER_GLITCH_FORCE_PU_R::new(((self.bits >> 29) & 1) != 0)
     }
-    #[doc = "Bit 30 - select use analog fib signal"]
+    ///Bit 30 - select use analog fib signal
     #[inline(always)]
     pub fn power_glitch_efuse_sel(&self) -> POWER_GLITCH_EFUSE_SEL_R {
         POWER_GLITCH_EFUSE_SEL_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - enable power glitch"]
+    ///Bit 31 - enable power glitch
     #[inline(always)]
     pub fn power_glitch_en(&self) -> POWER_GLITCH_EN_R {
         POWER_GLITCH_EN_R::new(((self.bits >> 31) & 1) != 0)
@@ -62,51 +62,53 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 26:27 - GLITCH_DSENSE"]
+    ///Bits 26:27 - GLITCH_DSENSE
     #[inline(always)]
     #[must_use]
     pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W<PG_CTRL_SPEC> {
         POWER_GLITCH_DSENSE_W::new(self, 26)
     }
-    #[doc = "Bit 28 - force power glitch disable"]
+    ///Bit 28 - force power glitch disable
     #[inline(always)]
     #[must_use]
     pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W<PG_CTRL_SPEC> {
         POWER_GLITCH_FORCE_PD_W::new(self, 28)
     }
-    #[doc = "Bit 29 - force power glitch enable"]
+    ///Bit 29 - force power glitch enable
     #[inline(always)]
     #[must_use]
     pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W<PG_CTRL_SPEC> {
         POWER_GLITCH_FORCE_PU_W::new(self, 29)
     }
-    #[doc = "Bit 30 - select use analog fib signal"]
+    ///Bit 30 - select use analog fib signal
     #[inline(always)]
     #[must_use]
     pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W<PG_CTRL_SPEC> {
         POWER_GLITCH_EFUSE_SEL_W::new(self, 30)
     }
-    #[doc = "Bit 31 - enable power glitch"]
+    ///Bit 31 - enable power glitch
     #[inline(always)]
     #[must_use]
     pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W<PG_CTRL_SPEC> {
         POWER_GLITCH_EN_W::new(self, 31)
     }
 }
-#[doc = "configure power glitch\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pg_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pg_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**configure power glitch
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pg_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pg_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PG_CTRL_SPEC;
 impl crate::RegisterSpec for PG_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pg_ctrl::R`](R) reader structure"]
+///`read()` method returns [`pg_ctrl::R`](R) reader structure
 impl crate::Readable for PG_CTRL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`pg_ctrl::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`pg_ctrl::W`](W) writer structure
 impl crate::Writable for PG_CTRL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PG_CTRL to value 0"]
+///`reset()` method sets PG_CTRL to value 0
 impl crate::Resettable for PG_CTRL_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,13 +1,13 @@
-#[doc = "Register `ICACHE_LOCK_SIZE` reader"]
+///Register `ICACHE_LOCK_SIZE` reader
 pub type R = crate::R<ICACHE_LOCK_SIZE_SPEC>;
-#[doc = "Register `ICACHE_LOCK_SIZE` writer"]
+///Register `ICACHE_LOCK_SIZE` writer
 pub type W = crate::W<ICACHE_LOCK_SIZE_SPEC>;
-#[doc = "Field `ICACHE_LOCK_SIZE` reader - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
+///Field `ICACHE_LOCK_SIZE` reader - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG.
 pub type ICACHE_LOCK_SIZE_R = crate::FieldReader<u16>;
-#[doc = "Field `ICACHE_LOCK_SIZE` writer - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
+///Field `ICACHE_LOCK_SIZE` writer - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG.
 pub type ICACHE_LOCK_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
-    #[doc = "Bits 0:15 - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
+    ///Bits 0:15 - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG.
     #[inline(always)]
     pub fn icache_lock_size(&self) -> ICACHE_LOCK_SIZE_R {
         ICACHE_LOCK_SIZE_R::new((self.bits & 0xffff) as u16)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG."]
+    ///Bits 0:15 - The bits are used to configure the length for lock operations. The bits are the counts of cache block. It should be combined with ICACHE_LOCK_ADDR_REG.
     #[inline(always)]
     #[must_use]
     pub fn icache_lock_size(&mut self) -> ICACHE_LOCK_SIZE_W<ICACHE_LOCK_SIZE_SPEC> {
@@ -34,15 +34,15 @@ pub struct ICACHE_LOCK_SIZE_SPEC;
 impl crate::RegisterSpec for ICACHE_LOCK_SIZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`icache_lock_size::R`](R) reader structure"]
+///`read()` method returns [`icache_lock_size::R`](R) reader structure
 impl crate::Readable for ICACHE_LOCK_SIZE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`icache_lock_size::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`icache_lock_size::W`](W) writer structure
 impl crate::Writable for ICACHE_LOCK_SIZE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ICACHE_LOCK_SIZE to value 0"]
+///`reset()` method sets ICACHE_LOCK_SIZE to value 0
 impl crate::Resettable for ICACHE_LOCK_SIZE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

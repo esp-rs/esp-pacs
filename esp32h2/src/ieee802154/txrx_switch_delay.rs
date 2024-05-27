@@ -1,13 +1,13 @@
-#[doc = "Register `TXRX_SWITCH_DELAY` reader"]
+///Register `TXRX_SWITCH_DELAY` reader
 pub type R = crate::R<TXRX_SWITCH_DELAY_SPEC>;
-#[doc = "Register `TXRX_SWITCH_DELAY` writer"]
+///Register `TXRX_SWITCH_DELAY` writer
 pub type W = crate::W<TXRX_SWITCH_DELAY_SPEC>;
-#[doc = "Field `TXRX_SWITCH_DELAY` reader - "]
+///Field `TXRX_SWITCH_DELAY` reader -
 pub type TXRX_SWITCH_DELAY_R = crate::FieldReader<u16>;
-#[doc = "Field `TXRX_SWITCH_DELAY` writer - "]
+///Field `TXRX_SWITCH_DELAY` writer -
 pub type TXRX_SWITCH_DELAY_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 impl R {
-    #[doc = "Bits 0:9"]
+    ///Bits 0:9
     #[inline(always)]
     pub fn txrx_switch_delay(&self) -> TXRX_SWITCH_DELAY_R {
         TXRX_SWITCH_DELAY_R::new((self.bits & 0x03ff) as u16)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:9"]
+    ///Bits 0:9
     #[inline(always)]
     #[must_use]
     pub fn txrx_switch_delay(&mut self) -> TXRX_SWITCH_DELAY_W<TXRX_SWITCH_DELAY_SPEC> {
         TXRX_SWITCH_DELAY_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txrx_switch_delay::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txrx_switch_delay::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`txrx_switch_delay::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txrx_switch_delay::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct TXRX_SWITCH_DELAY_SPEC;
 impl crate::RegisterSpec for TXRX_SWITCH_DELAY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`txrx_switch_delay::R`](R) reader structure"]
+///`read()` method returns [`txrx_switch_delay::R`](R) reader structure
 impl crate::Readable for TXRX_SWITCH_DELAY_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`txrx_switch_delay::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`txrx_switch_delay::W`](W) writer structure
 impl crate::Writable for TXRX_SWITCH_DELAY_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets TXRX_SWITCH_DELAY to value 0"]
+///`reset()` method sets TXRX_SWITCH_DELAY to value 0
 impl crate::Resettable for TXRX_SWITCH_DELAY_SPEC {
     const RESET_VALUE: u32 = 0;
 }

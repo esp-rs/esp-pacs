@@ -4,7 +4,7 @@ pub struct R<REG: RegisterSpec> {
     pub(super) _reg: marker::PhantomData<REG>,
 }
 pub struct W<REG: RegisterSpec> {
-    #[doc = "Writable bits"]
+    ///Writable bits
     pub(crate) bits: REG::Ux,
     pub(super) _reg: marker::PhantomData<REG>,
 }
@@ -16,7 +16,7 @@ where
     _reg: marker::PhantomData<FI>,
 }
 impl<FI: FieldSpec> FieldReader<FI> {
-    #[doc = " Creates a new instance of the reader."]
+    /// Creates a new instance of the reader.
     #[allow(unused)]
     #[inline(always)]
     pub(crate) const fn new(bits: FI::Ux) -> Self {
@@ -31,7 +31,7 @@ pub struct BitReader<FI = bool> {
     _reg: marker::PhantomData<FI>,
 }
 impl<FI> BitReader<FI> {
-    #[doc = " Creates a new instance of the reader."]
+    /// Creates a new instance of the reader.
     #[allow(unused)]
     #[inline(always)]
     pub(crate) const fn new(bits: bool) -> Self {
@@ -55,7 +55,7 @@ where
     REG: Writable + RegisterSpec,
     FI: FieldSpec,
 {
-    #[doc = " Creates a new instance of the writer"]
+    /// Creates a new instance of the writer
     #[allow(unused)]
     #[inline(always)]
     pub(crate) fn new(w: &'a mut W<REG>, o: u8) -> Self {
@@ -80,7 +80,7 @@ where
     REG: Writable + RegisterSpec,
     bool: From<FI>,
 {
-    #[doc = " Creates a new instance of the writer"]
+    /// Creates a new instance of the writer
     #[allow(unused)]
     #[inline(always)]
     pub(crate) fn new(w: &'a mut W<REG>, o: u8) -> Self {

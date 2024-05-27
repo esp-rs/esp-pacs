@@ -1,9 +1,9 @@
-#[doc = "Register `BUF_LEN` reader"]
+///Register `BUF_LEN` reader
 pub type R = crate::R<BUF_LEN_SPEC>;
-#[doc = "Field `OUT_CMDFIFO_BUF_LEN_HB` reader - only for debug"]
+///Field `OUT_CMDFIFO_BUF_LEN_HB` reader - only for debug
 pub type OUT_CMDFIFO_BUF_LEN_HB_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:12 - only for debug"]
+    ///Bits 0:12 - only for debug
     #[inline(always)]
     pub fn out_cmdfifo_buf_len_hb(&self) -> OUT_CMDFIFO_BUF_LEN_HB_R {
         OUT_CMDFIFO_BUF_LEN_HB_R::new((self.bits & 0x1fff) as u16)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx buf len register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buf_len::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**TX CHx buf len register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`buf_len::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct BUF_LEN_SPEC;
 impl crate::RegisterSpec for BUF_LEN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`buf_len::R`](R) reader structure"]
+///`read()` method returns [`buf_len::R`](R) reader structure
 impl crate::Readable for BUF_LEN_SPEC {}
-#[doc = "`reset()` method sets BUF_LEN to value 0"]
+///`reset()` method sets BUF_LEN to value 0
 impl crate::Resettable for BUF_LEN_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `PRO_DPORT_7` reader"]
+///Register `PRO_DPORT_7` reader
 pub type R = crate::R<PRO_DPORT_7_SPEC>;
-#[doc = "Field `PRO_DPORT_ILG_ST` reader - Record the illegitimate information of PeriBus1. \\[25:6\\]: store the bits \\[21:2\\] of PeriBus1 address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: if bits \\[31:22\\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \\[3:0\\]: PeriBus1 byte enables."]
+///Field `PRO_DPORT_ILG_ST` reader - Record the illegitimate information of PeriBus1. \[25:6\]: store the bits \[21:2\] of PeriBus1 address. \[5\]: 1 means atomic access, 0 means nonatomic access. \[4\]: if bits \[31:22\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \[3:0\]: PeriBus1 byte enables.
 pub type PRO_DPORT_ILG_ST_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:25 - Record the illegitimate information of PeriBus1. \\[25:6\\]: store the bits \\[21:2\\] of PeriBus1 address. \\[5\\]: 1 means atomic access, 0 means nonatomic access. \\[4\\]: if bits \\[31:22\\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \\[3:0\\]: PeriBus1 byte enables."]
+    ///Bits 0:25 - Record the illegitimate information of PeriBus1. \[25:6\]: store the bits \[21:2\] of PeriBus1 address. \[5\]: 1 means atomic access, 0 means nonatomic access. \[4\]: if bits \[31:22\] of PeriBus1 address are 0xfd, then the bit value is 1, otherwise it is 0. \[3:0\]: PeriBus1 byte enables.
     #[inline(always)]
     pub fn pro_dport_ilg_st(&self) -> PRO_DPORT_ILG_ST_R {
         PRO_DPORT_ILG_ST_R::new(self.bits & 0x03ff_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PeriBus1 status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dport_7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**PeriBus1 status register.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pro_dport_7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PRO_DPORT_7_SPEC;
 impl crate::RegisterSpec for PRO_DPORT_7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pro_dport_7::R`](R) reader structure"]
+///`read()` method returns [`pro_dport_7::R`](R) reader structure
 impl crate::Readable for PRO_DPORT_7_SPEC {}
-#[doc = "`reset()` method sets PRO_DPORT_7 to value 0"]
+///`reset()` method sets PRO_DPORT_7 to value 0
 impl crate::Resettable for PRO_DPORT_7_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `STATUS_INTERRUPT` reader"]
+///Register `STATUS_INTERRUPT` reader
 pub type R = crate::R<STATUS_INTERRUPT_SPEC>;
-#[doc = "Field `NEXT` reader - need des"]
+///Field `NEXT` reader - need des
 pub type NEXT_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:7 - need des"]
+    ///Bits 0:7 - need des
     #[inline(always)]
     pub fn next(&self) -> NEXT_R {
         NEXT_R::new((self.bits & 0xff) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_interrupt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**need des
+
+You can [`read`](crate::generic::Reg::read) this register and get [`status_interrupt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STATUS_INTERRUPT_SPEC;
 impl crate::RegisterSpec for STATUS_INTERRUPT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`status_interrupt::R`](R) reader structure"]
+///`read()` method returns [`status_interrupt::R`](R) reader structure
 impl crate::Readable for STATUS_INTERRUPT_SPEC {}
-#[doc = "`reset()` method sets STATUS_INTERRUPT to value 0"]
+///`reset()` method sets STATUS_INTERRUPT to value 0
 impl crate::Resettable for STATUS_INTERRUPT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

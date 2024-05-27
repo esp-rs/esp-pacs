@@ -1,9 +1,9 @@
-#[doc = "Register `L2_UNALLOCATE_BUFFER_CLEAR` reader"]
+///Register `L2_UNALLOCATE_BUFFER_CLEAR` reader
 pub type R = crate::R<L2_UNALLOCATE_BUFFER_CLEAR_SPEC>;
-#[doc = "Field `L2_CACHE_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l2 icache where the unallocate request is responsed but not completed."]
+///Field `L2_CACHE_UNALLOC_CLR` reader - The bit is used to clear the unallocate request buffer of l2 icache where the unallocate request is responsed but not completed.
 pub type L2_CACHE_UNALLOC_CLR_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 5 - The bit is used to clear the unallocate request buffer of l2 icache where the unallocate request is responsed but not completed."]
+    ///Bit 5 - The bit is used to clear the unallocate request buffer of l2 icache where the unallocate request is responsed but not completed.
     #[inline(always)]
     pub fn l2_cache_unalloc_clr(&self) -> L2_CACHE_UNALLOC_CLR_R {
         L2_CACHE_UNALLOC_CLR_R::new(((self.bits >> 5) & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Unallocate request buffer clear registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_unallocate_buffer_clear::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Unallocate request buffer clear registers
+
+You can [`read`](crate::generic::Reg::read) this register and get [`l2_unallocate_buffer_clear::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct L2_UNALLOCATE_BUFFER_CLEAR_SPEC;
 impl crate::RegisterSpec for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`l2_unallocate_buffer_clear::R`](R) reader structure"]
+///`read()` method returns [`l2_unallocate_buffer_clear::R`](R) reader structure
 impl crate::Readable for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {}
-#[doc = "`reset()` method sets L2_UNALLOCATE_BUFFER_CLEAR to value 0"]
+///`reset()` method sets L2_UNALLOCATE_BUFFER_CLEAR to value 0
 impl crate::Resettable for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

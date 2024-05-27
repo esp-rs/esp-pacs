@@ -1,6 +1,6 @@
-#[doc = "Register `DMARXBASEADDR` reader"]
+///Register `DMARXBASEADDR` reader
 pub type R = crate::R<DMARXBASEADDR_SPEC>;
-#[doc = "Register `DMARXBASEADDR` writer"]
+///Register `DMARXBASEADDR` writer
 pub type W = crate::W<DMARXBASEADDR_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -9,20 +9,22 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {}
-#[doc = "This field contains the base address of the first descriptor in the Receive Descriptor list. The LSB Bits\\[1:0\\] are ignored and internally taken as all-zero by the DMA. Therefore these LSB bits are read-only.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmarxbaseaddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmarxbaseaddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**This field contains the base address of the first descriptor in the Receive Descriptor list. The LSB Bits\[1:0\] are ignored and internally taken as all-zero by the DMA. Therefore these LSB bits are read-only.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dmarxbaseaddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmarxbaseaddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMARXBASEADDR_SPEC;
 impl crate::RegisterSpec for DMARXBASEADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dmarxbaseaddr::R`](R) reader structure"]
+///`read()` method returns [`dmarxbaseaddr::R`](R) reader structure
 impl crate::Readable for DMARXBASEADDR_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dmarxbaseaddr::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dmarxbaseaddr::W`](W) writer structure
 impl crate::Writable for DMARXBASEADDR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DMARXBASEADDR to value 0"]
+///`reset()` method sets DMARXBASEADDR to value 0
 impl crate::Resettable for DMARXBASEADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

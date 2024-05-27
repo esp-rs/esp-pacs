@@ -1,9 +1,9 @@
-#[doc = "Register `L2_CACHE_WAY_OBJECT` reader"]
+///Register `L2_CACHE_WAY_OBJECT` reader
 pub type R = crate::R<L2_CACHE_WAY_OBJECT_SPEC>;
-#[doc = "Field `L2_CACHE_WAY_OBJECT` reader - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, ?, 7: way7."]
+///Field `L2_CACHE_WAY_OBJECT` reader - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, ?, 7: way7.
 pub type L2_CACHE_WAY_OBJECT_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, ?, 7: way7."]
+    ///Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, ?, 7: way7.
     #[inline(always)]
     pub fn l2_cache_way_object(&self) -> L2_CACHE_WAY_OBJECT_R {
         L2_CACHE_WAY_OBJECT_R::new((self.bits & 7) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Tag and Data memory way register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_way_object::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Cache Tag and Data memory way register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_way_object::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct L2_CACHE_WAY_OBJECT_SPEC;
 impl crate::RegisterSpec for L2_CACHE_WAY_OBJECT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`l2_cache_way_object::R`](R) reader structure"]
+///`read()` method returns [`l2_cache_way_object::R`](R) reader structure
 impl crate::Readable for L2_CACHE_WAY_OBJECT_SPEC {}
-#[doc = "`reset()` method sets L2_CACHE_WAY_OBJECT to value 0"]
+///`reset()` method sets L2_CACHE_WAY_OBJECT to value 0
 impl crate::Resettable for L2_CACHE_WAY_OBJECT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

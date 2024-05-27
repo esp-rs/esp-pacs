@@ -1,9 +1,9 @@
-#[doc = "Register `STRAP` reader"]
+///Register `STRAP` reader
 pub type R = crate::R<STRAP_SPEC>;
-#[doc = "Field `STRAPPING` reader - pad strapping register"]
+///Field `STRAPPING` reader - pad strapping register
 pub type STRAPPING_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:15 - pad strapping register"]
+    ///Bits 0:15 - pad strapping register
     #[inline(always)]
     pub fn strapping(&self) -> STRAPPING_R {
         STRAPPING_R::new((self.bits & 0xffff) as u16)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "pad strapping register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`strap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**pad strapping register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`strap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STRAP_SPEC;
 impl crate::RegisterSpec for STRAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`strap::R`](R) reader structure"]
+///`read()` method returns [`strap::R`](R) reader structure
 impl crate::Readable for STRAP_SPEC {}
-#[doc = "`reset()` method sets STRAP to value 0"]
+///`reset()` method sets STRAP to value 0
 impl crate::Resettable for STRAP_SPEC {
     const RESET_VALUE: u32 = 0;
 }

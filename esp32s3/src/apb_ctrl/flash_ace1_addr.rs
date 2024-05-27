@@ -1,13 +1,13 @@
-#[doc = "Register `FLASH_ACE1_ADDR` reader"]
+///Register `FLASH_ACE1_ADDR` reader
 pub type R = crate::R<FLASH_ACE1_ADDR_SPEC>;
-#[doc = "Register `FLASH_ACE1_ADDR` writer"]
+///Register `FLASH_ACE1_ADDR` writer
 pub type W = crate::W<FLASH_ACE1_ADDR_SPEC>;
-#[doc = "Field `S` reader - ******* Description ***********"]
+///Field `S` reader - ******* Description ***********
 pub type S_R = crate::FieldReader<u32>;
-#[doc = "Field `S` writer - ******* Description ***********"]
+///Field `S` writer - ******* Description ***********
 pub type S_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    ///Bits 0:31 - ******* Description ***********
     #[inline(always)]
     pub fn s(&self) -> S_R {
         S_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    ///Bits 0:31 - ******* Description ***********
     #[inline(always)]
     #[must_use]
     pub fn s(&mut self) -> S_W<FLASH_ACE1_ADDR_SPEC> {
@@ -34,15 +34,15 @@ pub struct FLASH_ACE1_ADDR_SPEC;
 impl crate::RegisterSpec for FLASH_ACE1_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`flash_ace1_addr::R`](R) reader structure"]
+///`read()` method returns [`flash_ace1_addr::R`](R) reader structure
 impl crate::Readable for FLASH_ACE1_ADDR_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`flash_ace1_addr::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`flash_ace1_addr::W`](W) writer structure
 impl crate::Writable for FLASH_ACE1_ADDR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets FLASH_ACE1_ADDR to value 0x1000_0000"]
+///`reset()` method sets FLASH_ACE1_ADDR to value 0x1000_0000
 impl crate::Resettable for FLASH_ACE1_ADDR_SPEC {
     const RESET_VALUE: u32 = 0x1000_0000;
 }

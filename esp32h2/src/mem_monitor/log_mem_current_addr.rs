@@ -1,9 +1,9 @@
-#[doc = "Register `LOG_MEM_CURRENT_ADDR` reader"]
+///Register `LOG_MEM_CURRENT_ADDR` reader
 pub type R = crate::R<LOG_MEM_CURRENT_ADDR_SPEC>;
-#[doc = "Field `LOG_MEM_CURRENT_ADDR` reader - means next writing address"]
+///Field `LOG_MEM_CURRENT_ADDR` reader - means next writing address
 pub type LOG_MEM_CURRENT_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - means next writing address"]
+    ///Bits 0:31 - means next writing address
     #[inline(always)]
     pub fn log_mem_current_addr(&self) -> LOG_MEM_CURRENT_ADDR_R {
         LOG_MEM_CURRENT_ADDR_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "current writing address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_mem_current_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**current writing address.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`log_mem_current_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct LOG_MEM_CURRENT_ADDR_SPEC;
 impl crate::RegisterSpec for LOG_MEM_CURRENT_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`log_mem_current_addr::R`](R) reader structure"]
+///`read()` method returns [`log_mem_current_addr::R`](R) reader structure
 impl crate::Readable for LOG_MEM_CURRENT_ADDR_SPEC {}
-#[doc = "`reset()` method sets LOG_MEM_CURRENT_ADDR to value 0"]
+///`reset()` method sets LOG_MEM_CURRENT_ADDR to value 0
 impl crate::Resettable for LOG_MEM_CURRENT_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

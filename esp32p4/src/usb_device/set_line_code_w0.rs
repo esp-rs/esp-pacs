@@ -1,9 +1,9 @@
-#[doc = "Register `SET_LINE_CODE_W0` reader"]
+///Register `SET_LINE_CODE_W0` reader
 pub type R = crate::R<SET_LINE_CODE_W0_SPEC>;
-#[doc = "Field `DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command."]
+///Field `DW_DTE_RATE` reader - The value of dwDTERate set by host through SET_LINE_CODING command.
 pub type DW_DTE_RATE_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - The value of dwDTERate set by host through SET_LINE_CODING command."]
+    ///Bits 0:31 - The value of dwDTERate set by host through SET_LINE_CODING command.
     #[inline(always)]
     pub fn dw_dte_rate(&self) -> DW_DTE_RATE_R {
         DW_DTE_RATE_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "W0 of SET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**W0 of SET_LINE_CODING command.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct SET_LINE_CODE_W0_SPEC;
 impl crate::RegisterSpec for SET_LINE_CODE_W0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`set_line_code_w0::R`](R) reader structure"]
+///`read()` method returns [`set_line_code_w0::R`](R) reader structure
 impl crate::Readable for SET_LINE_CODE_W0_SPEC {}
-#[doc = "`reset()` method sets SET_LINE_CODE_W0 to value 0"]
+///`reset()` method sets SET_LINE_CODE_W0 to value 0
 impl crate::Resettable for SET_LINE_CODE_W0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

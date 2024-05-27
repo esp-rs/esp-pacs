@@ -1,4 +1,4 @@
-#[doc = "Register `DMATXCURRDESC` reader"]
+///Register `DMATXCURRDESC` reader
 pub type R = crate::R<DMATXCURRDESC_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -6,14 +6,16 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-#[doc = "The address of the current receive descriptor list. Cleared on Reset.Pointer updated by the DMA during operation.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmatxcurrdesc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**The address of the current receive descriptor list. Cleared on Reset.Pointer updated by the DMA during operation.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dmatxcurrdesc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMATXCURRDESC_SPEC;
 impl crate::RegisterSpec for DMATXCURRDESC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dmatxcurrdesc::R`](R) reader structure"]
+///`read()` method returns [`dmatxcurrdesc::R`](R) reader structure
 impl crate::Readable for DMATXCURRDESC_SPEC {}
-#[doc = "`reset()` method sets DMATXCURRDESC to value 0"]
+///`reset()` method sets DMATXCURRDESC to value 0
 impl crate::Resettable for DMATXCURRDESC_SPEC {
     const RESET_VALUE: u32 = 0;
 }

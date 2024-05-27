@@ -1,9 +1,9 @@
-#[doc = "Register `IN` reader"]
+///Register `IN` reader
 pub type R = crate::R<IN_SPEC>;
-#[doc = "Field `NEXT` reader - RTC GPIO input data"]
+///Field `NEXT` reader - RTC GPIO input data
 pub type NEXT_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 10:31 - RTC GPIO input data"]
+    ///Bits 10:31 - RTC GPIO input data
     #[inline(always)]
     pub fn next(&self) -> NEXT_R {
         NEXT_R::new((self.bits >> 10) & 0x003f_ffff)
@@ -15,14 +15,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("IN").field("next", &self.next()).finish()
     }
 }
-#[doc = "RTC GPIO input data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**RTC GPIO input data
+
+You can [`read`](crate::generic::Reg::read) this register and get [`in_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct IN_SPEC;
 impl crate::RegisterSpec for IN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`in_::R`](R) reader structure"]
+///`read()` method returns [`in_::R`](R) reader structure
 impl crate::Readable for IN_SPEC {}
-#[doc = "`reset()` method sets IN to value 0"]
+///`reset()` method sets IN to value 0
 impl crate::Resettable for IN_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `APP_DCACHE_DBUG7` reader"]
+///Register `APP_DCACHE_DBUG7` reader
 pub type R = crate::R<APP_DCACHE_DBUG7_SPEC>;
-#[doc = "Field `APP_IRAM1ADDR_IA` reader - "]
+///Field `APP_IRAM1ADDR_IA` reader -
 pub type APP_IRAM1ADDR_IA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:19"]
+    ///Bits 0:19
     #[inline(always)]
     pub fn app_iram1addr_ia(&self) -> APP_IRAM1ADDR_IA_R {
         APP_IRAM1ADDR_IA_R::new(self.bits & 0x000f_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`app_dcache_dbug7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`app_dcache_dbug7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct APP_DCACHE_DBUG7_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG7_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`app_dcache_dbug7::R`](R) reader structure"]
+///`read()` method returns [`app_dcache_dbug7::R`](R) reader structure
 impl crate::Readable for APP_DCACHE_DBUG7_SPEC {}
-#[doc = "`reset()` method sets APP_DCACHE_DBUG7 to value 0"]
+///`reset()` method sets APP_DCACHE_DBUG7 to value 0
 impl crate::Resettable for APP_DCACHE_DBUG7_SPEC {
     const RESET_VALUE: u32 = 0;
 }

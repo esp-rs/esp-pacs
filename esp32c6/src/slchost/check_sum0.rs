@@ -1,9 +1,9 @@
-#[doc = "Register `CHECK_SUM0` reader"]
+///Register `CHECK_SUM0` reader
 pub type R = crate::R<CHECK_SUM0_SPEC>;
-#[doc = "Field `SLCHOST_CHECK_SUM0` reader - *******Description***********"]
+///Field `SLCHOST_CHECK_SUM0` reader - *******Description***********
 pub type SLCHOST_CHECK_SUM0_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     pub fn slchost_check_sum0(&self) -> SLCHOST_CHECK_SUM0_R {
         SLCHOST_CHECK_SUM0_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct CHECK_SUM0_SPEC;
 impl crate::RegisterSpec for CHECK_SUM0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`check_sum0::R`](R) reader structure"]
+///`read()` method returns [`check_sum0::R`](R) reader structure
 impl crate::Readable for CHECK_SUM0_SPEC {}
-#[doc = "`reset()` method sets CHECK_SUM0 to value 0"]
+///`reset()` method sets CHECK_SUM0 to value 0
 impl crate::Resettable for CHECK_SUM0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

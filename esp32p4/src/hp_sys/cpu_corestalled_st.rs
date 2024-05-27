@@ -1,16 +1,16 @@
-#[doc = "Register `CPU_CORESTALLED_ST` reader"]
+///Register `CPU_CORESTALLED_ST` reader
 pub type R = crate::R<CPU_CORESTALLED_ST_SPEC>;
-#[doc = "Field `REG_CORE0_CORESTALLED_ST` reader - hp core0 corestalled status"]
+///Field `REG_CORE0_CORESTALLED_ST` reader - hp core0 corestalled status
 pub type REG_CORE0_CORESTALLED_ST_R = crate::BitReader;
-#[doc = "Field `REG_CORE1_CORESTALLED_ST` reader - hp core1 corestalled status"]
+///Field `REG_CORE1_CORESTALLED_ST` reader - hp core1 corestalled status
 pub type REG_CORE1_CORESTALLED_ST_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - hp core0 corestalled status"]
+    ///Bit 0 - hp core0 corestalled status
     #[inline(always)]
     pub fn reg_core0_corestalled_st(&self) -> REG_CORE0_CORESTALLED_ST_R {
         REG_CORE0_CORESTALLED_ST_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - hp core1 corestalled status"]
+    ///Bit 1 - hp core1 corestalled status
     #[inline(always)]
     pub fn reg_core1_corestalled_st(&self) -> REG_CORE1_CORESTALLED_ST_R {
         REG_CORE1_CORESTALLED_ST_R::new(((self.bits >> 1) & 1) != 0)
@@ -25,14 +25,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_corestalled_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`cpu_corestalled_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CPU_CORESTALLED_ST_SPEC;
 impl crate::RegisterSpec for CPU_CORESTALLED_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cpu_corestalled_st::R`](R) reader structure"]
+///`read()` method returns [`cpu_corestalled_st::R`](R) reader structure
 impl crate::Readable for CPU_CORESTALLED_ST_SPEC {}
-#[doc = "`reset()` method sets CPU_CORESTALLED_ST to value 0"]
+///`reset()` method sets CPU_CORESTALLED_ST to value 0
 impl crate::Resettable for CPU_CORESTALLED_ST_SPEC {
     const RESET_VALUE: u32 = 0;
 }

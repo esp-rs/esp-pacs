@@ -1,13 +1,13 @@
-#[doc = "Register `DCACHE_PRELOCK_SCT0_ADDR` reader"]
+///Register `DCACHE_PRELOCK_SCT0_ADDR` reader
 pub type R = crate::R<DCACHE_PRELOCK_SCT0_ADDR_SPEC>;
-#[doc = "Register `DCACHE_PRELOCK_SCT0_ADDR` writer"]
+///Register `DCACHE_PRELOCK_SCT0_ADDR` writer
 pub type W = crate::W<DCACHE_PRELOCK_SCT0_ADDR_SPEC>;
-#[doc = "Field `DCACHE_PRELOCK_SCT0_ADDR` reader - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG"]
+///Field `DCACHE_PRELOCK_SCT0_ADDR` reader - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG
 pub type DCACHE_PRELOCK_SCT0_ADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `DCACHE_PRELOCK_SCT0_ADDR` writer - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG"]
+///Field `DCACHE_PRELOCK_SCT0_ADDR` writer - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG
 pub type DCACHE_PRELOCK_SCT0_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG"]
+    ///Bits 0:31 - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG
     #[inline(always)]
     pub fn dcache_prelock_sct0_addr(&self) -> DCACHE_PRELOCK_SCT0_ADDR_R {
         DCACHE_PRELOCK_SCT0_ADDR_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG"]
+    ///Bits 0:31 - The bits are used to configure the first start virtual address of data prelock, which is combined with DCACHE_PRELOCK_SCT0_SIZE_REG
     #[inline(always)]
     #[must_use]
     pub fn dcache_prelock_sct0_addr(
@@ -36,15 +36,15 @@ pub struct DCACHE_PRELOCK_SCT0_ADDR_SPEC;
 impl crate::RegisterSpec for DCACHE_PRELOCK_SCT0_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dcache_prelock_sct0_addr::R`](R) reader structure"]
+///`read()` method returns [`dcache_prelock_sct0_addr::R`](R) reader structure
 impl crate::Readable for DCACHE_PRELOCK_SCT0_ADDR_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dcache_prelock_sct0_addr::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dcache_prelock_sct0_addr::W`](W) writer structure
 impl crate::Writable for DCACHE_PRELOCK_SCT0_ADDR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DCACHE_PRELOCK_SCT0_ADDR to value 0"]
+///`reset()` method sets DCACHE_PRELOCK_SCT0_ADDR to value 0
 impl crate::Resettable for DCACHE_PRELOCK_SCT0_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `SAR2_DATA_STATUS` reader"]
+///Register `SAR2_DATA_STATUS` reader
 pub type R = crate::R<SAR2_DATA_STATUS_SPEC>;
-#[doc = "Field `APB_SARADC2_DATA` reader - need_des"]
+///Field `APB_SARADC2_DATA` reader - need_des
 pub type APB_SARADC2_DATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:16 - need_des"]
+    ///Bits 0:16 - need_des
     #[inline(always)]
     pub fn apb_saradc2_data(&self) -> APB_SARADC2_DATA_R {
         APB_SARADC2_DATA_R::new(self.bits & 0x0001_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar2_data_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`sar2_data_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct SAR2_DATA_STATUS_SPEC;
 impl crate::RegisterSpec for SAR2_DATA_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`sar2_data_status::R`](R) reader structure"]
+///`read()` method returns [`sar2_data_status::R`](R) reader structure
 impl crate::Readable for SAR2_DATA_STATUS_SPEC {}
-#[doc = "`reset()` method sets SAR2_DATA_STATUS to value 0"]
+///`reset()` method sets SAR2_DATA_STATUS to value 0
 impl crate::Resettable for SAR2_DATA_STATUS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

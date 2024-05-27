@@ -1,40 +1,40 @@
-#[doc = "Register `CONF_W1` reader"]
+///Register `CONF_W1` reader
 pub type R = crate::R<CONF_W1_SPEC>;
-#[doc = "Register `CONF_W1` writer"]
+///Register `CONF_W1` writer
 pub type W = crate::W<CONF_W1_SPEC>;
-#[doc = "Field `SLCHOST_CONF4` reader - *******Description***********"]
+///Field `SLCHOST_CONF4` reader - *******Description***********
 pub type SLCHOST_CONF4_R = crate::FieldReader;
-#[doc = "Field `SLCHOST_CONF4` writer - *******Description***********"]
+///Field `SLCHOST_CONF4` writer - *******Description***********
 pub type SLCHOST_CONF4_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SLCHOST_CONF5` reader - *******Description***********"]
+///Field `SLCHOST_CONF5` reader - *******Description***********
 pub type SLCHOST_CONF5_R = crate::FieldReader;
-#[doc = "Field `SLCHOST_CONF5` writer - *******Description***********"]
+///Field `SLCHOST_CONF5` writer - *******Description***********
 pub type SLCHOST_CONF5_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SLCHOST_CONF6` reader - *******Description***********"]
+///Field `SLCHOST_CONF6` reader - *******Description***********
 pub type SLCHOST_CONF6_R = crate::FieldReader;
-#[doc = "Field `SLCHOST_CONF6` writer - *******Description***********"]
+///Field `SLCHOST_CONF6` writer - *******Description***********
 pub type SLCHOST_CONF6_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SLCHOST_CONF7` reader - *******Description***********"]
+///Field `SLCHOST_CONF7` reader - *******Description***********
 pub type SLCHOST_CONF7_R = crate::FieldReader;
-#[doc = "Field `SLCHOST_CONF7` writer - *******Description***********"]
+///Field `SLCHOST_CONF7` writer - *******Description***********
 pub type SLCHOST_CONF7_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
-    #[doc = "Bits 0:7 - *******Description***********"]
+    ///Bits 0:7 - *******Description***********
     #[inline(always)]
     pub fn slchost_conf4(&self) -> SLCHOST_CONF4_R {
         SLCHOST_CONF4_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - *******Description***********"]
+    ///Bits 8:15 - *******Description***********
     #[inline(always)]
     pub fn slchost_conf5(&self) -> SLCHOST_CONF5_R {
         SLCHOST_CONF5_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 16:23 - *******Description***********"]
+    ///Bits 16:23 - *******Description***********
     #[inline(always)]
     pub fn slchost_conf6(&self) -> SLCHOST_CONF6_R {
         SLCHOST_CONF6_R::new(((self.bits >> 16) & 0xff) as u8)
     }
-    #[doc = "Bits 24:31 - *******Description***********"]
+    ///Bits 24:31 - *******Description***********
     #[inline(always)]
     pub fn slchost_conf7(&self) -> SLCHOST_CONF7_R {
         SLCHOST_CONF7_R::new(((self.bits >> 24) & 0xff) as u8)
@@ -52,25 +52,25 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - *******Description***********"]
+    ///Bits 0:7 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slchost_conf4(&mut self) -> SLCHOST_CONF4_W<CONF_W1_SPEC> {
         SLCHOST_CONF4_W::new(self, 0)
     }
-    #[doc = "Bits 8:15 - *******Description***********"]
+    ///Bits 8:15 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slchost_conf5(&mut self) -> SLCHOST_CONF5_W<CONF_W1_SPEC> {
         SLCHOST_CONF5_W::new(self, 8)
     }
-    #[doc = "Bits 16:23 - *******Description***********"]
+    ///Bits 16:23 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slchost_conf6(&mut self) -> SLCHOST_CONF6_W<CONF_W1_SPEC> {
         SLCHOST_CONF6_W::new(self, 16)
     }
-    #[doc = "Bits 24:31 - *******Description***********"]
+    ///Bits 24:31 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slchost_conf7(&mut self) -> SLCHOST_CONF7_W<CONF_W1_SPEC> {
@@ -82,15 +82,15 @@ pub struct CONF_W1_SPEC;
 impl crate::RegisterSpec for CONF_W1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`conf_w1::R`](R) reader structure"]
+///`read()` method returns [`conf_w1::R`](R) reader structure
 impl crate::Readable for CONF_W1_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`conf_w1::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`conf_w1::W`](W) writer structure
 impl crate::Writable for CONF_W1_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CONF_W1 to value 0"]
+///`reset()` method sets CONF_W1 to value 0
 impl crate::Resettable for CONF_W1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

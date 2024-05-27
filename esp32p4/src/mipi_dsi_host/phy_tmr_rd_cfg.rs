@@ -1,13 +1,13 @@
-#[doc = "Register `PHY_TMR_RD_CFG` reader"]
+///Register `PHY_TMR_RD_CFG` reader
 pub type R = crate::R<PHY_TMR_RD_CFG_SPEC>;
-#[doc = "Register `PHY_TMR_RD_CFG` writer"]
+///Register `PHY_TMR_RD_CFG` writer
 pub type W = crate::W<PHY_TMR_RD_CFG_SPEC>;
-#[doc = "Field `MAX_RD_TIME` reader - NA"]
+///Field `MAX_RD_TIME` reader - NA
 pub type MAX_RD_TIME_R = crate::FieldReader<u16>;
-#[doc = "Field `MAX_RD_TIME` writer - NA"]
+///Field `MAX_RD_TIME` writer - NA
 pub type MAX_RD_TIME_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 impl R {
-    #[doc = "Bits 0:14 - NA"]
+    ///Bits 0:14 - NA
     #[inline(always)]
     pub fn max_rd_time(&self) -> MAX_RD_TIME_R {
         MAX_RD_TIME_R::new((self.bits & 0x7fff) as u16)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:14 - NA"]
+    ///Bits 0:14 - NA
     #[inline(always)]
     #[must_use]
     pub fn max_rd_time(&mut self) -> MAX_RD_TIME_W<PHY_TMR_RD_CFG_SPEC> {
         MAX_RD_TIME_W::new(self, 0)
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`phy_tmr_rd_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`phy_tmr_rd_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`phy_tmr_rd_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`phy_tmr_rd_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PHY_TMR_RD_CFG_SPEC;
 impl crate::RegisterSpec for PHY_TMR_RD_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`phy_tmr_rd_cfg::R`](R) reader structure"]
+///`read()` method returns [`phy_tmr_rd_cfg::R`](R) reader structure
 impl crate::Readable for PHY_TMR_RD_CFG_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`phy_tmr_rd_cfg::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`phy_tmr_rd_cfg::W`](W) writer structure
 impl crate::Writable for PHY_TMR_RD_CFG_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PHY_TMR_RD_CFG to value 0"]
+///`reset()` method sets PHY_TMR_RD_CFG to value 0
 impl crate::Resettable for PHY_TMR_RD_CFG_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `SPI_MEM_REJECT_ADDR` reader"]
+///Register `SPI_MEM_REJECT_ADDR` reader
 pub type R = crate::R<SPI_MEM_REJECT_ADDR_SPEC>;
-#[doc = "Field `SPI_MEM_REJECT_ADDR` reader - ******* Description ***********"]
+///Field `SPI_MEM_REJECT_ADDR` reader - ******* Description ***********
 pub type SPI_MEM_REJECT_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    ///Bits 0:31 - ******* Description ***********
     #[inline(always)]
     pub fn spi_mem_reject_addr(&self) -> SPI_MEM_REJECT_ADDR_R {
         SPI_MEM_REJECT_ADDR_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct SPI_MEM_REJECT_ADDR_SPEC;
 impl crate::RegisterSpec for SPI_MEM_REJECT_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`spi_mem_reject_addr::R`](R) reader structure"]
+///`read()` method returns [`spi_mem_reject_addr::R`](R) reader structure
 impl crate::Readable for SPI_MEM_REJECT_ADDR_SPEC {}
-#[doc = "`reset()` method sets SPI_MEM_REJECT_ADDR to value 0"]
+///`reset()` method sets SPI_MEM_REJECT_ADDR to value 0
 impl crate::Resettable for SPI_MEM_REJECT_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

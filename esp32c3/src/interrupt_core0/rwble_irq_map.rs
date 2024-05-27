@@ -1,13 +1,13 @@
-#[doc = "Register `RWBLE_IRQ_MAP` reader"]
+///Register `RWBLE_IRQ_MAP` reader
 pub type R = crate::R<RWBLE_IRQ_MAP_SPEC>;
-#[doc = "Register `RWBLE_IRQ_MAP` writer"]
+///Register `RWBLE_IRQ_MAP` writer
 pub type W = crate::W<RWBLE_IRQ_MAP_SPEC>;
-#[doc = "Field `RWBLE_IRQ_MAP` reader - reg_core0_rwble_irq_map"]
+///Field `RWBLE_IRQ_MAP` reader - reg_core0_rwble_irq_map
 pub type RWBLE_IRQ_MAP_R = crate::FieldReader;
-#[doc = "Field `RWBLE_IRQ_MAP` writer - reg_core0_rwble_irq_map"]
+///Field `RWBLE_IRQ_MAP` writer - reg_core0_rwble_irq_map
 pub type RWBLE_IRQ_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - reg_core0_rwble_irq_map"]
+    ///Bits 0:4 - reg_core0_rwble_irq_map
     #[inline(always)]
     pub fn rwble_irq_map(&self) -> RWBLE_IRQ_MAP_R {
         RWBLE_IRQ_MAP_R::new((self.bits & 0x1f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - reg_core0_rwble_irq_map"]
+    ///Bits 0:4 - reg_core0_rwble_irq_map
     #[inline(always)]
     #[must_use]
     pub fn rwble_irq_map(&mut self) -> RWBLE_IRQ_MAP_W<RWBLE_IRQ_MAP_SPEC> {
         RWBLE_IRQ_MAP_W::new(self, 0)
     }
 }
-#[doc = "rwble intr map register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rwble_irq_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rwble_irq_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**rwble intr map register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rwble_irq_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rwble_irq_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RWBLE_IRQ_MAP_SPEC;
 impl crate::RegisterSpec for RWBLE_IRQ_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rwble_irq_map::R`](R) reader structure"]
+///`read()` method returns [`rwble_irq_map::R`](R) reader structure
 impl crate::Readable for RWBLE_IRQ_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`rwble_irq_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`rwble_irq_map::W`](W) writer structure
 impl crate::Writable for RWBLE_IRQ_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets RWBLE_IRQ_MAP to value 0"]
+///`reset()` method sets RWBLE_IRQ_MAP to value 0
 impl crate::Resettable for RWBLE_IRQ_MAP_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,16 +1,16 @@
-#[doc = "Register `RDATAH` reader"]
+///Register `RDATAH` reader
 pub type R = crate::R<RDATAH_SPEC>;
-#[doc = "Field `DATA_LSB` reader - NA"]
+///Field `DATA_LSB` reader - NA
 pub type DATA_LSB_R = crate::FieldReader;
-#[doc = "Field `DATA_MSB` reader - This register allows reading a Half-word (byte pair) from the bus unless external FIFO is used. A Half-word should not be read unless there is at least 2 bytes of data waiting, as indicated by the RX FIFO level trigger or RXCOUNT available space in the DATACTRL register"]
+///Field `DATA_MSB` reader - This register allows reading a Half-word (byte pair) from the bus unless external FIFO is used. A Half-word should not be read unless there is at least 2 bytes of data waiting, as indicated by the RX FIFO level trigger or RXCOUNT available space in the DATACTRL register
 pub type DATA_MSB_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:7 - NA"]
+    ///Bits 0:7 - NA
     #[inline(always)]
     pub fn data_lsb(&self) -> DATA_LSB_R {
         DATA_LSB_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - This register allows reading a Half-word (byte pair) from the bus unless external FIFO is used. A Half-word should not be read unless there is at least 2 bytes of data waiting, as indicated by the RX FIFO level trigger or RXCOUNT available space in the DATACTRL register"]
+    ///Bits 8:15 - This register allows reading a Half-word (byte pair) from the bus unless external FIFO is used. A Half-word should not be read unless there is at least 2 bytes of data waiting, as indicated by the RX FIFO level trigger or RXCOUNT available space in the DATACTRL register
     #[inline(always)]
     pub fn data_msb(&self) -> DATA_MSB_R {
         DATA_MSB_R::new(((self.bits >> 8) & 0xff) as u8)
@@ -25,14 +25,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Read Half-word Data (from-bus) register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rdatah::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Read Half-word Data (from-bus) register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rdatah::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RDATAH_SPEC;
 impl crate::RegisterSpec for RDATAH_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rdatah::R`](R) reader structure"]
+///`read()` method returns [`rdatah::R`](R) reader structure
 impl crate::Readable for RDATAH_SPEC {}
-#[doc = "`reset()` method sets RDATAH to value 0"]
+///`reset()` method sets RDATAH to value 0
 impl crate::Resettable for RDATAH_SPEC {
     const RESET_VALUE: u32 = 0;
 }

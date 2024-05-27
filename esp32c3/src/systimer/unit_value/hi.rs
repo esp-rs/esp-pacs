@@ -1,9 +1,9 @@
-#[doc = "Register `HI` reader"]
+///Register `HI` reader
 pub type R = crate::R<HI_SPEC>;
-#[doc = "Field `VALUE_HI` reader - timer read value high 32bit"]
+///Field `VALUE_HI` reader - timer read value high 32bit
 pub type VALUE_HI_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:19 - timer read value high 32bit"]
+    ///Bits 0:19 - timer read value high 32bit
     #[inline(always)]
     pub fn value_hi(&self) -> VALUE_HI_R {
         VALUE_HI_R::new(self.bits & 0x000f_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SYSTIMER_UNIT0_VALUE_HI.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**SYSTIMER_UNIT0_VALUE_HI.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`hi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct HI_SPEC;
 impl crate::RegisterSpec for HI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`hi::R`](R) reader structure"]
+///`read()` method returns [`hi::R`](R) reader structure
 impl crate::Readable for HI_SPEC {}
-#[doc = "`reset()` method sets HI to value 0"]
+///`reset()` method sets HI to value 0
 impl crate::Resettable for HI_SPEC {
     const RESET_VALUE: u32 = 0;
 }

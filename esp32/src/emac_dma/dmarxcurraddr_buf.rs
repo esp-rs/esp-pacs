@@ -1,4 +1,4 @@
-#[doc = "Register `DMARXCURRADDR_BUF` reader"]
+///Register `DMARXCURRADDR_BUF` reader
 pub type R = crate::R<DMARXCURRADDR_BUF_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -6,14 +6,16 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-#[doc = "The address of the current receive descriptor list. Cleared on Reset.Pointer updated by the DMA during operation.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmarxcurraddr_buf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**The address of the current receive descriptor list. Cleared on Reset.Pointer updated by the DMA during operation.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dmarxcurraddr_buf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMARXCURRADDR_BUF_SPEC;
 impl crate::RegisterSpec for DMARXCURRADDR_BUF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dmarxcurraddr_buf::R`](R) reader structure"]
+///`read()` method returns [`dmarxcurraddr_buf::R`](R) reader structure
 impl crate::Readable for DMARXCURRADDR_BUF_SPEC {}
-#[doc = "`reset()` method sets DMARXCURRADDR_BUF to value 0"]
+///`reset()` method sets DMARXCURRADDR_BUF to value 0
 impl crate::Resettable for DMARXCURRADDR_BUF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

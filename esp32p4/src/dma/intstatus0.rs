@@ -1,37 +1,37 @@
-#[doc = "Register `INTSTATUS0` reader"]
+///Register `INTSTATUS0` reader
 pub type R = crate::R<INTSTATUS0_SPEC>;
-#[doc = "Field `CH1_INTSTAT` reader - NA"]
+///Field `CH1_INTSTAT` reader - NA
 pub type CH1_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH2_INTSTAT` reader - NA"]
+///Field `CH2_INTSTAT` reader - NA
 pub type CH2_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH3_INTSTAT` reader - NA"]
+///Field `CH3_INTSTAT` reader - NA
 pub type CH3_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH4_INTSTAT` reader - NA"]
+///Field `CH4_INTSTAT` reader - NA
 pub type CH4_INTSTAT_R = crate::BitReader;
-#[doc = "Field `COMMONREG_INTSTAT` reader - NA"]
+///Field `COMMONREG_INTSTAT` reader - NA
 pub type COMMONREG_INTSTAT_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - NA"]
+    ///Bit 0 - NA
     #[inline(always)]
     pub fn ch1_intstat(&self) -> CH1_INTSTAT_R {
         CH1_INTSTAT_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - NA"]
+    ///Bit 1 - NA
     #[inline(always)]
     pub fn ch2_intstat(&self) -> CH2_INTSTAT_R {
         CH2_INTSTAT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - NA"]
+    ///Bit 2 - NA
     #[inline(always)]
     pub fn ch3_intstat(&self) -> CH3_INTSTAT_R {
         CH3_INTSTAT_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - NA"]
+    ///Bit 3 - NA
     #[inline(always)]
     pub fn ch4_intstat(&self) -> CH4_INTSTAT_R {
         CH4_INTSTAT_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 16 - NA"]
+    ///Bit 16 - NA
     #[inline(always)]
     pub fn commonreg_intstat(&self) -> COMMONREG_INTSTAT_R {
         COMMONREG_INTSTAT_R::new(((self.bits >> 16) & 1) != 0)
@@ -49,14 +49,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intstatus0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`intstatus0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INTSTATUS0_SPEC;
 impl crate::RegisterSpec for INTSTATUS0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`intstatus0::R`](R) reader structure"]
+///`read()` method returns [`intstatus0::R`](R) reader structure
 impl crate::Readable for INTSTATUS0_SPEC {}
-#[doc = "`reset()` method sets INTSTATUS0 to value 0"]
+///`reset()` method sets INTSTATUS0 to value 0
 impl crate::Resettable for INTSTATUS0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,13 +1,13 @@
-#[doc = "Register `IMMU_TABLE5` reader"]
+///Register `IMMU_TABLE5` reader
 pub type R = crate::R<IMMU_TABLE5_SPEC>;
-#[doc = "Register `IMMU_TABLE5` writer"]
+///Register `IMMU_TABLE5` writer
 pub type W = crate::W<IMMU_TABLE5_SPEC>;
-#[doc = "Field `IMMU_TABLE5` reader - "]
+///Field `IMMU_TABLE5` reader -
 pub type IMMU_TABLE5_R = crate::FieldReader;
-#[doc = "Field `IMMU_TABLE5` writer - "]
+///Field `IMMU_TABLE5` writer -
 pub type IMMU_TABLE5_W<'a, REG> = crate::FieldWriter<'a, REG, 7>;
 impl R {
-    #[doc = "Bits 0:6"]
+    ///Bits 0:6
     #[inline(always)]
     pub fn immu_table5(&self) -> IMMU_TABLE5_R {
         IMMU_TABLE5_R::new((self.bits & 0x7f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:6"]
+    ///Bits 0:6
     #[inline(always)]
     #[must_use]
     pub fn immu_table5(&mut self) -> IMMU_TABLE5_W<IMMU_TABLE5_SPEC> {
         IMMU_TABLE5_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`immu_table5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`immu_table5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`immu_table5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`immu_table5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct IMMU_TABLE5_SPEC;
 impl crate::RegisterSpec for IMMU_TABLE5_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`immu_table5::R`](R) reader structure"]
+///`read()` method returns [`immu_table5::R`](R) reader structure
 impl crate::Readable for IMMU_TABLE5_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`immu_table5::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`immu_table5::W`](W) writer structure
 impl crate::Writable for IMMU_TABLE5_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets IMMU_TABLE5 to value 0x05"]
+///`reset()` method sets IMMU_TABLE5 to value 0x05
 impl crate::Resettable for IMMU_TABLE5_SPEC {
     const RESET_VALUE: u32 = 0x05;
 }

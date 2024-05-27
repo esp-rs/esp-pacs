@@ -1,23 +1,23 @@
-#[doc = "Register `RD_REPEAT_ERR4` reader"]
+///Register `RD_REPEAT_ERR4` reader
 pub type R = crate::R<RD_REPEAT_ERR4_SPEC>;
-#[doc = "Field `HYS_EN_PAD1_ERR` reader - Indicates a programming error of HYS_EN_PAD1."]
+///Field `HYS_EN_PAD1_ERR` reader - Indicates a programming error of HYS_EN_PAD1.
 pub type HYS_EN_PAD1_ERR_R = crate::FieldReader<u32>;
-#[doc = "Field `RPT4_RESERVED4_ERR_1` reader - Reserved."]
+///Field `RPT4_RESERVED4_ERR_1` reader - Reserved.
 pub type RPT4_RESERVED4_ERR_1_R = crate::FieldReader;
-#[doc = "Field `RPT4_RESERVED4_ERR_0` reader - Reserved."]
+///Field `RPT4_RESERVED4_ERR_0` reader - Reserved.
 pub type RPT4_RESERVED4_ERR_0_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:21 - Indicates a programming error of HYS_EN_PAD1."]
+    ///Bits 0:21 - Indicates a programming error of HYS_EN_PAD1.
     #[inline(always)]
     pub fn hys_en_pad1_err(&self) -> HYS_EN_PAD1_ERR_R {
         HYS_EN_PAD1_ERR_R::new(self.bits & 0x003f_ffff)
     }
-    #[doc = "Bits 22:23 - Reserved."]
+    ///Bits 22:23 - Reserved.
     #[inline(always)]
     pub fn rpt4_reserved4_err_1(&self) -> RPT4_RESERVED4_ERR_1_R {
         RPT4_RESERVED4_ERR_1_R::new(((self.bits >> 22) & 3) as u8)
     }
-    #[doc = "Bits 24:31 - Reserved."]
+    ///Bits 24:31 - Reserved.
     #[inline(always)]
     pub fn rpt4_reserved4_err_0(&self) -> RPT4_RESERVED4_ERR_0_R {
         RPT4_RESERVED4_ERR_0_R::new(((self.bits >> 24) & 0xff) as u8)
@@ -33,14 +33,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Programming error record register 4 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Programming error record register 4 of BLOCK0.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RD_REPEAT_ERR4_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_ERR4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rd_repeat_err4::R`](R) reader structure"]
+///`read()` method returns [`rd_repeat_err4::R`](R) reader structure
 impl crate::Readable for RD_REPEAT_ERR4_SPEC {}
-#[doc = "`reset()` method sets RD_REPEAT_ERR4 to value 0"]
+///`reset()` method sets RD_REPEAT_ERR4 to value 0
 impl crate::Resettable for RD_REPEAT_ERR4_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `RD_RESULT_%s` reader"]
+///Register `RD_RESULT_%s` reader
 pub type R = crate::R<RD_RESULT__SPEC>;
-#[doc = "Field `RDATA` reader - Read the %sth 32-bit of hash result."]
+///Field `RDATA` reader - Read the %sth 32-bit of hash result.
 pub type RDATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Read the %sth 32-bit of hash result."]
+    ///Bits 0:31 - Read the %sth 32-bit of hash result.
     #[inline(always)]
     pub fn rdata(&self) -> RDATA_R {
         RDATA_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Hash result register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_result_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Hash result register %s
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rd_result_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RD_RESULT__SPEC;
 impl crate::RegisterSpec for RD_RESULT__SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rd_result_::R`](R) reader structure"]
+///`read()` method returns [`rd_result_::R`](R) reader structure
 impl crate::Readable for RD_RESULT__SPEC {}
-#[doc = "`reset()` method sets RD_RESULT_%s to value 0"]
+///`reset()` method sets RD_RESULT_%s to value 0
 impl crate::Resettable for RD_RESULT__SPEC {
     const RESET_VALUE: u32 = 0;
 }

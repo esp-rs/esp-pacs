@@ -1,9 +1,9 @@
-#[doc = "Register `SHA_BUSY` reader"]
+///Register `SHA_BUSY` reader
 pub type R = crate::R<SHA_BUSY_SPEC>;
-#[doc = "Field `SHA_BUSY` reader - The busy status bit of SHA Calculator in ECDSA Accelerator. 1:SHA is in calculation. 0: SHA is idle."]
+///Field `SHA_BUSY` reader - The busy status bit of SHA Calculator in ECDSA Accelerator. 1:SHA is in calculation. 0: SHA is idle.
 pub type SHA_BUSY_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - The busy status bit of SHA Calculator in ECDSA Accelerator. 1:SHA is in calculation. 0: SHA is idle."]
+    ///Bit 0 - The busy status bit of SHA Calculator in ECDSA Accelerator. 1:SHA is in calculation. 0: SHA is idle.
     #[inline(always)]
     pub fn sha_busy(&self) -> SHA_BUSY_R {
         SHA_BUSY_R::new((self.bits & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ECDSA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sha_busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**ECDSA status register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`sha_busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct SHA_BUSY_SPEC;
 impl crate::RegisterSpec for SHA_BUSY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`sha_busy::R`](R) reader structure"]
+///`read()` method returns [`sha_busy::R`](R) reader structure
 impl crate::Readable for SHA_BUSY_SPEC {}
-#[doc = "`reset()` method sets SHA_BUSY to value 0"]
+///`reset()` method sets SHA_BUSY to value 0
 impl crate::Resettable for SHA_BUSY_SPEC {
     const RESET_VALUE: u32 = 0;
 }

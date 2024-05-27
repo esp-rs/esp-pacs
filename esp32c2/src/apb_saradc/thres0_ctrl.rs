@@ -1,31 +1,31 @@
-#[doc = "Register `THRES0_CTRL` reader"]
+///Register `THRES0_CTRL` reader
 pub type R = crate::R<THRES0_CTRL_SPEC>;
-#[doc = "Register `THRES0_CTRL` writer"]
+///Register `THRES0_CTRL` writer
 pub type W = crate::W<THRES0_CTRL_SPEC>;
-#[doc = "Field `THRES0_CHANNEL` reader - Need add description"]
+///Field `THRES0_CHANNEL` reader - Need add description
 pub type THRES0_CHANNEL_R = crate::FieldReader;
-#[doc = "Field `THRES0_CHANNEL` writer - Need add description"]
+///Field `THRES0_CHANNEL` writer - Need add description
 pub type THRES0_CHANNEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `THRES0_HIGH` reader - saradc1's thres0 monitor thres"]
+///Field `THRES0_HIGH` reader - saradc1's thres0 monitor thres
 pub type THRES0_HIGH_R = crate::FieldReader<u16>;
-#[doc = "Field `THRES0_HIGH` writer - saradc1's thres0 monitor thres"]
+///Field `THRES0_HIGH` writer - saradc1's thres0 monitor thres
 pub type THRES0_HIGH_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
-#[doc = "Field `THRES0_LOW` reader - saradc1's thres0 monitor thres"]
+///Field `THRES0_LOW` reader - saradc1's thres0 monitor thres
 pub type THRES0_LOW_R = crate::FieldReader<u16>;
-#[doc = "Field `THRES0_LOW` writer - saradc1's thres0 monitor thres"]
+///Field `THRES0_LOW` writer - saradc1's thres0 monitor thres
 pub type THRES0_LOW_W<'a, REG> = crate::FieldWriter<'a, REG, 13, u16>;
 impl R {
-    #[doc = "Bits 0:3 - Need add description"]
+    ///Bits 0:3 - Need add description
     #[inline(always)]
     pub fn thres0_channel(&self) -> THRES0_CHANNEL_R {
         THRES0_CHANNEL_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 5:17 - saradc1's thres0 monitor thres"]
+    ///Bits 5:17 - saradc1's thres0 monitor thres
     #[inline(always)]
     pub fn thres0_high(&self) -> THRES0_HIGH_R {
         THRES0_HIGH_R::new(((self.bits >> 5) & 0x1fff) as u16)
     }
-    #[doc = "Bits 18:30 - saradc1's thres0 monitor thres"]
+    ///Bits 18:30 - saradc1's thres0 monitor thres
     #[inline(always)]
     pub fn thres0_low(&self) -> THRES0_LOW_R {
         THRES0_LOW_R::new(((self.bits >> 18) & 0x1fff) as u16)
@@ -42,39 +42,41 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - Need add description"]
+    ///Bits 0:3 - Need add description
     #[inline(always)]
     #[must_use]
     pub fn thres0_channel(&mut self) -> THRES0_CHANNEL_W<THRES0_CTRL_SPEC> {
         THRES0_CHANNEL_W::new(self, 0)
     }
-    #[doc = "Bits 5:17 - saradc1's thres0 monitor thres"]
+    ///Bits 5:17 - saradc1's thres0 monitor thres
     #[inline(always)]
     #[must_use]
     pub fn thres0_high(&mut self) -> THRES0_HIGH_W<THRES0_CTRL_SPEC> {
         THRES0_HIGH_W::new(self, 5)
     }
-    #[doc = "Bits 18:30 - saradc1's thres0 monitor thres"]
+    ///Bits 18:30 - saradc1's thres0 monitor thres
     #[inline(always)]
     #[must_use]
     pub fn thres0_low(&mut self) -> THRES0_LOW_W<THRES0_CTRL_SPEC> {
         THRES0_LOW_W::new(self, 18)
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`thres0_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`thres0_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**register description
+
+You can [`read`](crate::generic::Reg::read) this register and get [`thres0_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`thres0_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct THRES0_CTRL_SPEC;
 impl crate::RegisterSpec for THRES0_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`thres0_ctrl::R`](R) reader structure"]
+///`read()` method returns [`thres0_ctrl::R`](R) reader structure
 impl crate::Readable for THRES0_CTRL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`thres0_ctrl::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`thres0_ctrl::W`](W) writer structure
 impl crate::Writable for THRES0_CTRL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets THRES0_CTRL to value 0x0003_ffed"]
+///`reset()` method sets THRES0_CTRL to value 0x0003_ffed
 impl crate::Resettable for THRES0_CTRL_SPEC {
     const RESET_VALUE: u32 = 0x0003_ffed;
 }

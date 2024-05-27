@@ -1,16 +1,16 @@
-#[doc = "Register `CORE_0_DRAM0_EXCEPTION_MONITOR_3` reader"]
+///Register `CORE_0_DRAM0_EXCEPTION_MONITOR_3` reader
 pub type R = crate::R<CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC>;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_ADDR_1` reader - The second dram0's addr\\[25:4\\] status when trigger DRAM busy interrupt"]
+///Field `CORE_0_DRAM0_RECORDING_ADDR_1` reader - The second dram0's addr\[25:4\] status when trigger DRAM busy interrupt
 pub type CORE_0_DRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32>;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_WR_1` reader - The second dram0's wr status when trigger DRAM busy interrupt"]
+///Field `CORE_0_DRAM0_RECORDING_WR_1` reader - The second dram0's wr status when trigger DRAM busy interrupt
 pub type CORE_0_DRAM0_RECORDING_WR_1_R = crate::BitReader;
 impl R {
-    #[doc = "Bits 0:21 - The second dram0's addr\\[25:4\\] status when trigger DRAM busy interrupt"]
+    ///Bits 0:21 - The second dram0's addr\[25:4\] status when trigger DRAM busy interrupt
     #[inline(always)]
     pub fn core_0_dram0_recording_addr_1(&self) -> CORE_0_DRAM0_RECORDING_ADDR_1_R {
         CORE_0_DRAM0_RECORDING_ADDR_1_R::new(self.bits & 0x003f_ffff)
     }
-    #[doc = "Bit 22 - The second dram0's wr status when trigger DRAM busy interrupt"]
+    ///Bit 22 - The second dram0's wr status when trigger DRAM busy interrupt
     #[inline(always)]
     pub fn core_0_dram0_recording_wr_1(&self) -> CORE_0_DRAM0_RECORDING_WR_1_R {
         CORE_0_DRAM0_RECORDING_WR_1_R::new(((self.bits >> 22) & 1) != 0)
@@ -31,14 +31,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "core0 bus busy status regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_exception_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**core0 bus busy status regsiter
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_exception_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC;
 impl crate::RegisterSpec for CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_dram0_exception_monitor_3::R`](R) reader structure"]
+///`read()` method returns [`core_0_dram0_exception_monitor_3::R`](R) reader structure
 impl crate::Readable for CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC {}
-#[doc = "`reset()` method sets CORE_0_DRAM0_EXCEPTION_MONITOR_3 to value 0"]
+///`reset()` method sets CORE_0_DRAM0_EXCEPTION_MONITOR_3 to value 0
 impl crate::Resettable for CORE_0_DRAM0_EXCEPTION_MONITOR_3_SPEC {
     const RESET_VALUE: u32 = 0;
 }

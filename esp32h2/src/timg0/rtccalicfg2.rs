@@ -1,29 +1,29 @@
-#[doc = "Register `RTCCALICFG2` reader"]
+///Register `RTCCALICFG2` reader
 pub type R = crate::R<RTCCALICFG2_SPEC>;
-#[doc = "Register `RTCCALICFG2` writer"]
+///Register `RTCCALICFG2` writer
 pub type W = crate::W<RTCCALICFG2_SPEC>;
-#[doc = "Field `RTC_CALI_TIMEOUT` reader - RTC calibration timeout indicator"]
+///Field `RTC_CALI_TIMEOUT` reader - RTC calibration timeout indicator
 pub type RTC_CALI_TIMEOUT_R = crate::BitReader;
-#[doc = "Field `RTC_CALI_TIMEOUT_RST_CNT` reader - Cycles that release calibration timeout reset"]
+///Field `RTC_CALI_TIMEOUT_RST_CNT` reader - Cycles that release calibration timeout reset
 pub type RTC_CALI_TIMEOUT_RST_CNT_R = crate::FieldReader;
-#[doc = "Field `RTC_CALI_TIMEOUT_RST_CNT` writer - Cycles that release calibration timeout reset"]
+///Field `RTC_CALI_TIMEOUT_RST_CNT` writer - Cycles that release calibration timeout reset
 pub type RTC_CALI_TIMEOUT_RST_CNT_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `RTC_CALI_TIMEOUT_THRES` reader - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
+///Field `RTC_CALI_TIMEOUT_THRES` reader - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered.
 pub type RTC_CALI_TIMEOUT_THRES_R = crate::FieldReader<u32>;
-#[doc = "Field `RTC_CALI_TIMEOUT_THRES` writer - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
+///Field `RTC_CALI_TIMEOUT_THRES` writer - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered.
 pub type RTC_CALI_TIMEOUT_THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 25, u32>;
 impl R {
-    #[doc = "Bit 0 - RTC calibration timeout indicator"]
+    ///Bit 0 - RTC calibration timeout indicator
     #[inline(always)]
     pub fn rtc_cali_timeout(&self) -> RTC_CALI_TIMEOUT_R {
         RTC_CALI_TIMEOUT_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 3:6 - Cycles that release calibration timeout reset"]
+    ///Bits 3:6 - Cycles that release calibration timeout reset
     #[inline(always)]
     pub fn rtc_cali_timeout_rst_cnt(&self) -> RTC_CALI_TIMEOUT_RST_CNT_R {
         RTC_CALI_TIMEOUT_RST_CNT_R::new(((self.bits >> 3) & 0x0f) as u8)
     }
-    #[doc = "Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
+    ///Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered.
     #[inline(always)]
     pub fn rtc_cali_timeout_thres(&self) -> RTC_CALI_TIMEOUT_THRES_R {
         RTC_CALI_TIMEOUT_THRES_R::new((self.bits >> 7) & 0x01ff_ffff)
@@ -40,33 +40,35 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 3:6 - Cycles that release calibration timeout reset"]
+    ///Bits 3:6 - Cycles that release calibration timeout reset
     #[inline(always)]
     #[must_use]
     pub fn rtc_cali_timeout_rst_cnt(&mut self) -> RTC_CALI_TIMEOUT_RST_CNT_W<RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_RST_CNT_W::new(self, 3)
     }
-    #[doc = "Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
+    ///Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered.
     #[inline(always)]
     #[must_use]
     pub fn rtc_cali_timeout_thres(&mut self) -> RTC_CALI_TIMEOUT_THRES_W<RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_THRES_W::new(self, 7)
     }
 }
-#[doc = "Timer group calibration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtccalicfg2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtccalicfg2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Timer group calibration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rtccalicfg2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtccalicfg2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RTCCALICFG2_SPEC;
 impl crate::RegisterSpec for RTCCALICFG2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rtccalicfg2::R`](R) reader structure"]
+///`read()` method returns [`rtccalicfg2::R`](R) reader structure
 impl crate::Readable for RTCCALICFG2_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`rtccalicfg2::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`rtccalicfg2::W`](W) writer structure
 impl crate::Writable for RTCCALICFG2_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets RTCCALICFG2 to value 0xffff_ff98"]
+///`reset()` method sets RTCCALICFG2 to value 0xffff_ff98
 impl crate::Resettable for RTCCALICFG2_SPEC {
     const RESET_VALUE: u32 = 0xffff_ff98;
 }

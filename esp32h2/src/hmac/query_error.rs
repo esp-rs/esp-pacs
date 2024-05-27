@@ -1,9 +1,9 @@
-#[doc = "Register `QUERY_ERROR` reader"]
+///Register `QUERY_ERROR` reader
 pub type R = crate::R<QUERY_ERROR_SPEC>;
-#[doc = "Field `QUERY_CHECK` reader - Hmac configuration state. 0: key are agree with purpose. 1: error"]
+///Field `QUERY_CHECK` reader - Hmac configuration state. 0: key are agree with purpose. 1: error
 pub type QUERY_CHECK_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Hmac configuration state. 0: key are agree with purpose. 1: error"]
+    ///Bit 0 - Hmac configuration state. 0: key are agree with purpose. 1: error
     #[inline(always)]
     pub fn query_check(&self) -> QUERY_CHECK_R {
         QUERY_CHECK_R::new((self.bits & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Error register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_error::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Error register.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`query_error::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct QUERY_ERROR_SPEC;
 impl crate::RegisterSpec for QUERY_ERROR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`query_error::R`](R) reader structure"]
+///`read()` method returns [`query_error::R`](R) reader structure
 impl crate::Readable for QUERY_ERROR_SPEC {}
-#[doc = "`reset()` method sets QUERY_ERROR to value 0"]
+///`reset()` method sets QUERY_ERROR to value 0
 impl crate::Resettable for QUERY_ERROR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

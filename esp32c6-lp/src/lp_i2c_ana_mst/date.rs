@@ -1,22 +1,22 @@
-#[doc = "Register `DATE` reader"]
+///Register `DATE` reader
 pub type R = crate::R<DATE_SPEC>;
-#[doc = "Register `DATE` writer"]
+///Register `DATE` writer
 pub type W = crate::W<DATE_SPEC>;
-#[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` reader - need_des"]
+///Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` reader - need_des
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` writer - need_des"]
+///Field `LP_I2C_ANA_MAST_I2C_MAT_DATE` writer - need_des
 pub type LP_I2C_ANA_MAST_I2C_MAT_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
-#[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` reader - need_des"]
+///Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` reader - need_des
 pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R = crate::BitReader;
-#[doc = "Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` writer - need_des"]
+///Field `LP_I2C_ANA_MAST_I2C_MAT_CLK_EN` writer - need_des
 pub type LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:27 - need_des"]
+    ///Bits 0:27 - need_des
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c_mat_date(&self) -> LP_I2C_ANA_MAST_I2C_MAT_DATE_R {
         LP_I2C_ANA_MAST_I2C_MAT_DATE_R::new(self.bits & 0x0fff_ffff)
     }
-    #[doc = "Bit 28 - need_des"]
+    ///Bit 28 - need_des
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c_mat_clk_en(&self) -> LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R {
         LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_R::new(((self.bits >> 28) & 1) != 0)
@@ -38,13 +38,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:27 - need_des"]
+    ///Bits 0:27 - need_des
     #[inline(always)]
     #[must_use]
     pub fn lp_i2c_ana_mast_i2c_mat_date(&mut self) -> LP_I2C_ANA_MAST_I2C_MAT_DATE_W<DATE_SPEC> {
         LP_I2C_ANA_MAST_I2C_MAT_DATE_W::new(self, 0)
     }
-    #[doc = "Bit 28 - need_des"]
+    ///Bit 28 - need_des
     #[inline(always)]
     #[must_use]
     pub fn lp_i2c_ana_mast_i2c_mat_clk_en(
@@ -53,20 +53,22 @@ impl W {
         LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W::new(self, 28)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**need_des
+
+You can [`read`](crate::generic::Reg::read) this register and get [`date::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`date::R`](R) reader structure"]
+///`read()` method returns [`date::R`](R) reader structure
 impl crate::Readable for DATE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`date::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`date::W`](W) writer structure
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DATE to value 0x0200_7301"]
+///`reset()` method sets DATE to value 0x0200_7301
 impl crate::Resettable for DATE_SPEC {
     const RESET_VALUE: u32 = 0x0200_7301;
 }

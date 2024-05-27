@@ -1,9 +1,9 @@
-#[doc = "Register `FIFO_BCNT` reader"]
+///Register `FIFO_BCNT` reader
 pub type R = crate::R<FIFO_BCNT_SPEC>;
-#[doc = "Field `OUT_CMDFIFO_OUTFIFO_BCNT` reader - only for debug"]
+///Field `OUT_CMDFIFO_OUTFIFO_BCNT` reader - only for debug
 pub type OUT_CMDFIFO_OUTFIFO_BCNT_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:9 - only for debug"]
+    ///Bits 0:9 - only for debug
     #[inline(always)]
     pub fn out_cmdfifo_outfifo_bcnt(&self) -> OUT_CMDFIFO_OUTFIFO_BCNT_R {
         OUT_CMDFIFO_OUTFIFO_BCNT_R::new((self.bits & 0x03ff) as u16)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx fifo byte cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_bcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**TX CHx fifo byte cnt register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`fifo_bcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct FIFO_BCNT_SPEC;
 impl crate::RegisterSpec for FIFO_BCNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`fifo_bcnt::R`](R) reader structure"]
+///`read()` method returns [`fifo_bcnt::R`](R) reader structure
 impl crate::Readable for FIFO_BCNT_SPEC {}
-#[doc = "`reset()` method sets FIFO_BCNT to value 0"]
+///`reset()` method sets FIFO_BCNT to value 0
 impl crate::Resettable for FIFO_BCNT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

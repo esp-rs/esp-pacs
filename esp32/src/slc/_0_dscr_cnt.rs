@@ -1,16 +1,16 @@
-#[doc = "Register `_0_DSCR_CNT` reader"]
+///Register `_0_DSCR_CNT` reader
 pub type R = crate::R<_0_DSCR_CNT_SPEC>;
-#[doc = "Field `SLC0_RX_DSCR_CNT_LAT` reader - "]
+///Field `SLC0_RX_DSCR_CNT_LAT` reader -
 pub type SLC0_RX_DSCR_CNT_LAT_R = crate::FieldReader<u16>;
-#[doc = "Field `SLC0_RX_GET_EOF_OCC` reader - "]
+///Field `SLC0_RX_GET_EOF_OCC` reader -
 pub type SLC0_RX_GET_EOF_OCC_R = crate::BitReader;
 impl R {
-    #[doc = "Bits 0:9"]
+    ///Bits 0:9
     #[inline(always)]
     pub fn slc0_rx_dscr_cnt_lat(&self) -> SLC0_RX_DSCR_CNT_LAT_R {
         SLC0_RX_DSCR_CNT_LAT_R::new((self.bits & 0x03ff) as u16)
     }
-    #[doc = "Bit 16"]
+    ///Bit 16
     #[inline(always)]
     pub fn slc0_rx_get_eof_occ(&self) -> SLC0_RX_GET_EOF_OCC_R {
         SLC0_RX_GET_EOF_OCC_R::new(((self.bits >> 16) & 1) != 0)
@@ -25,14 +25,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_dscr_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`_0_dscr_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct _0_DSCR_CNT_SPEC;
 impl crate::RegisterSpec for _0_DSCR_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`_0_dscr_cnt::R`](R) reader structure"]
+///`read()` method returns [`_0_dscr_cnt::R`](R) reader structure
 impl crate::Readable for _0_DSCR_CNT_SPEC {}
-#[doc = "`reset()` method sets _0_DSCR_CNT to value 0"]
+///`reset()` method sets _0_DSCR_CNT to value 0
 impl crate::Resettable for _0_DSCR_CNT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

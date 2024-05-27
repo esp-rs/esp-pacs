@@ -1,9 +1,9 @@
-#[doc = "Register `HOST_SLC_APBWIN_RDATA` reader"]
+///Register `HOST_SLC_APBWIN_RDATA` reader
 pub type R = crate::R<HOST_SLC_APBWIN_RDATA_SPEC>;
-#[doc = "Field `HOST_SLC_APBWIN_RDATA` reader - "]
+///Field `HOST_SLC_APBWIN_RDATA` reader -
 pub type HOST_SLC_APBWIN_RDATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     pub fn host_slc_apbwin_rdata(&self) -> HOST_SLC_APBWIN_RDATA_R {
         HOST_SLC_APBWIN_RDATA_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slc_apbwin_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`host_slc_apbwin_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct HOST_SLC_APBWIN_RDATA_SPEC;
 impl crate::RegisterSpec for HOST_SLC_APBWIN_RDATA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`host_slc_apbwin_rdata::R`](R) reader structure"]
+///`read()` method returns [`host_slc_apbwin_rdata::R`](R) reader structure
 impl crate::Readable for HOST_SLC_APBWIN_RDATA_SPEC {}
-#[doc = "`reset()` method sets HOST_SLC_APBWIN_RDATA to value 0"]
+///`reset()` method sets HOST_SLC_APBWIN_RDATA to value 0
 impl crate::Resettable for HOST_SLC_APBWIN_RDATA_SPEC {
     const RESET_VALUE: u32 = 0;
 }

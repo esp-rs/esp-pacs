@@ -1,9 +1,9 @@
-#[doc = "Register `STATUS0` reader"]
+///Register `STATUS0` reader
 pub type R = crate::R<STATUS0_SPEC>;
-#[doc = "Field `CH1_CMPLTD_BLK_TFR_SIZE` reader - NA"]
+///Field `CH1_CMPLTD_BLK_TFR_SIZE` reader - NA
 pub type CH1_CMPLTD_BLK_TFR_SIZE_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:21 - NA"]
+    ///Bits 0:21 - NA
     #[inline(always)]
     pub fn ch1_cmpltd_blk_tfr_size(&self) -> CH1_CMPLTD_BLK_TFR_SIZE_R {
         CH1_CMPLTD_BLK_TFR_SIZE_R::new(self.bits & 0x003f_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STATUS0_SPEC;
 impl crate::RegisterSpec for STATUS0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`status0::R`](R) reader structure"]
+///`read()` method returns [`status0::R`](R) reader structure
 impl crate::Readable for STATUS0_SPEC {}
-#[doc = "`reset()` method sets STATUS0 to value 0"]
+///`reset()` method sets STATUS0 to value 0
 impl crate::Resettable for STATUS0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

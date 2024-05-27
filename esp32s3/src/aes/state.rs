@@ -1,9 +1,9 @@
-#[doc = "Register `STATE` reader"]
+///Register `STATE` reader
 pub type R = crate::R<STATE_SPEC>;
-#[doc = "Field `STATE` reader - Stores the working status of the AES accelerator. For typical AES, 0: idle, 1: busy. For DMA-AES, 0: idle, 1: busy, 2: calculation_done."]
+///Field `STATE` reader - Stores the working status of the AES accelerator. For typical AES, 0: idle, 1: busy. For DMA-AES, 0: idle, 1: busy, 2: calculation_done.
 pub type STATE_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:1 - Stores the working status of the AES accelerator. For typical AES, 0: idle, 1: busy. For DMA-AES, 0: idle, 1: busy, 2: calculation_done."]
+    ///Bits 0:1 - Stores the working status of the AES accelerator. For typical AES, 0: idle, 1: busy. For DMA-AES, 0: idle, 1: busy, 2: calculation_done.
     #[inline(always)]
     pub fn state(&self) -> STATE_R {
         STATE_R::new((self.bits & 3) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "AES state register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**AES state register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STATE_SPEC;
 impl crate::RegisterSpec for STATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`state::R`](R) reader structure"]
+///`read()` method returns [`state::R`](R) reader structure
 impl crate::Readable for STATE_SPEC {}
-#[doc = "`reset()` method sets STATE to value 0"]
+///`reset()` method sets STATE to value 0
 impl crate::Resettable for STATE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

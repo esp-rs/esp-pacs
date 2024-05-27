@@ -1,67 +1,67 @@
-#[doc = "Register `INT_RAW` reader"]
+///Register `INT_RAW` reader
 pub type R = crate::R<INT_RAW_SPEC>;
-#[doc = "Register `INT_RAW` writer"]
+///Register `INT_RAW` writer
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `SLP_WAKEUP` reader - sleep wakeup interrupt raw"]
+///Field `SLP_WAKEUP` reader - sleep wakeup interrupt raw
 pub type SLP_WAKEUP_R = crate::BitReader;
-#[doc = "Field `SLP_WAKEUP` writer - sleep wakeup interrupt raw"]
+///Field `SLP_WAKEUP` writer - sleep wakeup interrupt raw
 pub type SLP_WAKEUP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SLP_REJECT` reader - sleep reject interrupt raw"]
+///Field `SLP_REJECT` reader - sleep reject interrupt raw
 pub type SLP_REJECT_R = crate::BitReader;
-#[doc = "Field `SLP_REJECT` writer - sleep reject interrupt raw"]
+///Field `SLP_REJECT` writer - sleep reject interrupt raw
 pub type SLP_REJECT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `WDT` reader - RTC WDT interrupt raw"]
+///Field `WDT` reader - RTC WDT interrupt raw
 pub type WDT_R = crate::BitReader;
-#[doc = "Field `WDT` writer - RTC WDT interrupt raw"]
+///Field `WDT` writer - RTC WDT interrupt raw
 pub type WDT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BROWN_OUT` reader - brown out interrupt raw"]
+///Field `BROWN_OUT` reader - brown out interrupt raw
 pub type BROWN_OUT_R = crate::BitReader;
-#[doc = "Field `BROWN_OUT` writer - brown out interrupt raw"]
+///Field `BROWN_OUT` writer - brown out interrupt raw
 pub type BROWN_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MAIN_TIMER` reader - RTC main timer interrupt raw"]
+///Field `MAIN_TIMER` reader - RTC main timer interrupt raw
 pub type MAIN_TIMER_R = crate::BitReader;
-#[doc = "Field `MAIN_TIMER` writer - RTC main timer interrupt raw"]
+///Field `MAIN_TIMER` writer - RTC main timer interrupt raw
 pub type MAIN_TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SWD` reader - super watch dog interrupt raw"]
+///Field `SWD` reader - super watch dog interrupt raw
 pub type SWD_R = crate::BitReader;
-#[doc = "Field `SWD` writer - super watch dog interrupt raw"]
+///Field `SWD` writer - super watch dog interrupt raw
 pub type SWD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BBPLL_CAL` reader - Need add desc"]
+///Field `BBPLL_CAL` reader - Need add desc
 pub type BBPLL_CAL_R = crate::BitReader;
-#[doc = "Field `BBPLL_CAL` writer - Need add desc"]
+///Field `BBPLL_CAL` writer - Need add desc
 pub type BBPLL_CAL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - sleep wakeup interrupt raw"]
+    ///Bit 0 - sleep wakeup interrupt raw
     #[inline(always)]
     pub fn slp_wakeup(&self) -> SLP_WAKEUP_R {
         SLP_WAKEUP_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - sleep reject interrupt raw"]
+    ///Bit 1 - sleep reject interrupt raw
     #[inline(always)]
     pub fn slp_reject(&self) -> SLP_REJECT_R {
         SLP_REJECT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 3 - RTC WDT interrupt raw"]
+    ///Bit 3 - RTC WDT interrupt raw
     #[inline(always)]
     pub fn wdt(&self) -> WDT_R {
         WDT_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 9 - brown out interrupt raw"]
+    ///Bit 9 - brown out interrupt raw
     #[inline(always)]
     pub fn brown_out(&self) -> BROWN_OUT_R {
         BROWN_OUT_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - RTC main timer interrupt raw"]
+    ///Bit 10 - RTC main timer interrupt raw
     #[inline(always)]
     pub fn main_timer(&self) -> MAIN_TIMER_R {
         MAIN_TIMER_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 15 - super watch dog interrupt raw"]
+    ///Bit 15 - super watch dog interrupt raw
     #[inline(always)]
     pub fn swd(&self) -> SWD_R {
         SWD_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 20 - Need add desc"]
+    ///Bit 20 - Need add desc
     #[inline(always)]
     pub fn bbpll_cal(&self) -> BBPLL_CAL_R {
         BBPLL_CAL_R::new(((self.bits >> 20) & 1) != 0)
@@ -82,63 +82,65 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - sleep wakeup interrupt raw"]
+    ///Bit 0 - sleep wakeup interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_RAW_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
-    #[doc = "Bit 1 - sleep reject interrupt raw"]
+    ///Bit 1 - sleep reject interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_RAW_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
-    #[doc = "Bit 3 - RTC WDT interrupt raw"]
+    ///Bit 3 - RTC WDT interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn wdt(&mut self) -> WDT_W<INT_RAW_SPEC> {
         WDT_W::new(self, 3)
     }
-    #[doc = "Bit 9 - brown out interrupt raw"]
+    ///Bit 9 - brown out interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_RAW_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
-    #[doc = "Bit 10 - RTC main timer interrupt raw"]
+    ///Bit 10 - RTC main timer interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_RAW_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
-    #[doc = "Bit 15 - super watch dog interrupt raw"]
+    ///Bit 15 - super watch dog interrupt raw
     #[inline(always)]
     #[must_use]
     pub fn swd(&mut self) -> SWD_W<INT_RAW_SPEC> {
         SWD_W::new(self, 15)
     }
-    #[doc = "Bit 20 - Need add desc"]
+    ///Bit 20 - Need add desc
     #[inline(always)]
     #[must_use]
     pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<INT_RAW_SPEC> {
         BBPLL_CAL_W::new(self, 20)
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**register description
+
+You can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_raw::R`](R) reader structure"]
+///`read()` method returns [`int_raw::R`](R) reader structure
 impl crate::Readable for INT_RAW_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`int_raw::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`int_raw::W`](W) writer structure
 impl crate::Writable for INT_RAW_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets INT_RAW to value 0"]
+///`reset()` method sets INT_RAW to value 0
 impl crate::Resettable for INT_RAW_SPEC {
     const RESET_VALUE: u32 = 0;
 }

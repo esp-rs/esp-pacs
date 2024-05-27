@@ -1,9 +1,9 @@
-#[doc = "Register `CORE1_IBUS_REJECT_VADDR` reader"]
+///Register `CORE1_IBUS_REJECT_VADDR` reader
 pub type R = crate::R<CORE1_IBUS_REJECT_VADDR_SPEC>;
-#[doc = "Field `CORE1_IBUS_VADDR` reader - The bits are used to indicate the virtual address of CPU access ibus when authentication fail."]
+///Field `CORE1_IBUS_VADDR` reader - The bits are used to indicate the virtual address of CPU access ibus when authentication fail.
 pub type CORE1_IBUS_VADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - The bits are used to indicate the virtual address of CPU access ibus when authentication fail."]
+    ///Bits 0:31 - The bits are used to indicate the virtual address of CPU access ibus when authentication fail.
     #[inline(always)]
     pub fn core1_ibus_vaddr(&self) -> CORE1_IBUS_VADDR_R {
         CORE1_IBUS_VADDR_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct CORE1_IBUS_REJECT_VADDR_SPEC;
 impl crate::RegisterSpec for CORE1_IBUS_REJECT_VADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core1_ibus_reject_vaddr::R`](R) reader structure"]
+///`read()` method returns [`core1_ibus_reject_vaddr::R`](R) reader structure
 impl crate::Readable for CORE1_IBUS_REJECT_VADDR_SPEC {}
-#[doc = "`reset()` method sets CORE1_IBUS_REJECT_VADDR to value 0xffff_ffff"]
+///`reset()` method sets CORE1_IBUS_REJECT_VADDR to value 0xffff_ffff
 impl crate::Resettable for CORE1_IBUS_REJECT_VADDR_SPEC {
     const RESET_VALUE: u32 = 0xffff_ffff;
 }

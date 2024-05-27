@@ -1,86 +1,86 @@
-#[doc = "Register `EMACDEBUG` reader"]
+///Register `EMACDEBUG` reader
 pub type R = crate::R<EMACDEBUG_SPEC>;
-#[doc = "Field `MACRPES` reader - When high this bit indicates that the MAC MII receive protocol engine is actively receiving data and not in IDLE state."]
+///Field `MACRPES` reader - When high this bit indicates that the MAC MII receive protocol engine is actively receiving data and not in IDLE state.
 pub type MACRPES_R = crate::BitReader;
-#[doc = "Field `MACRFFCS` reader - When high this field indicates the active state of the FIFO Read and Write controllers of the MAC Receive Frame Controller Module. MACRFFCS\\[1\\] represents the status of FIFO Read controller. MACRFFCS\\[0\\] represents the status of small FIFO Write controller."]
+///Field `MACRFFCS` reader - When high this field indicates the active state of the FIFO Read and Write controllers of the MAC Receive Frame Controller Module. MACRFFCS\[1\] represents the status of FIFO Read controller. MACRFFCS\[0\] represents the status of small FIFO Write controller.
 pub type MACRFFCS_R = crate::FieldReader;
-#[doc = "Field `MTLRFWCAS` reader - When high this bit indicates that the MTL Rx FIFO Write Controller is active and is transferring a received frame to the FIFO."]
+///Field `MTLRFWCAS` reader - When high this bit indicates that the MTL Rx FIFO Write Controller is active and is transferring a received frame to the FIFO.
 pub type MTLRFWCAS_R = crate::BitReader;
-#[doc = "Field `MTLRFRCS` reader - This field gives the state of the Rx FIFO read Controller: 2'b00: IDLE state.2'b01: Reading frame data.2'b10: Reading frame status (or timestamp).2'b11: Flushing the frame data and status."]
+///Field `MTLRFRCS` reader - This field gives the state of the Rx FIFO read Controller: 2'b00: IDLE state.2'b01: Reading frame data.2'b10: Reading frame status (or timestamp).2'b11: Flushing the frame data and status.
 pub type MTLRFRCS_R = crate::FieldReader;
-#[doc = "Field `MTLRFFLS` reader - This field gives the status of the fill-level of the Rx FIFO: 2'b00: Rx FIFO Empty. 2'b01: Rx FIFO fill-level below flow-control deactivate threshold. 2'b10: Rx FIFO fill-level above flow-control activate threshold. 2'b11: Rx FIFO Full."]
+///Field `MTLRFFLS` reader - This field gives the status of the fill-level of the Rx FIFO: 2'b00: Rx FIFO Empty. 2'b01: Rx FIFO fill-level below flow-control deactivate threshold. 2'b10: Rx FIFO fill-level above flow-control activate threshold. 2'b11: Rx FIFO Full.
 pub type MTLRFFLS_R = crate::FieldReader;
-#[doc = "Field `MACTPES` reader - When high this bit indicates that the MAC MII transmit protocol engine is actively transmitting data and is not in the IDLE state."]
+///Field `MACTPES` reader - When high this bit indicates that the MAC MII transmit protocol engine is actively transmitting data and is not in the IDLE state.
 pub type MACTPES_R = crate::BitReader;
-#[doc = "Field `MACTFCS` reader - This field indicates the state of the MAC Transmit Frame Controller module: 2'b00: IDLE state. 2'b01: Waiting for status of previous frame or IFG or backoff period to be over. 2'b10: Generating and transmitting a Pause frame (in the full-duplex mode). 2'b11: Transferring input frame for transmission."]
+///Field `MACTFCS` reader - This field indicates the state of the MAC Transmit Frame Controller module: 2'b00: IDLE state. 2'b01: Waiting for status of previous frame or IFG or backoff period to be over. 2'b10: Generating and transmitting a Pause frame (in the full-duplex mode). 2'b11: Transferring input frame for transmission.
 pub type MACTFCS_R = crate::FieldReader;
-#[doc = "Field `MACTP` reader - When high this bit indicates that the MAC transmitter is in the Pause condition (in the full-duplex-mode) and hence does not schedule any frame for transmission."]
+///Field `MACTP` reader - When high this bit indicates that the MAC transmitter is in the Pause condition (in the full-duplex-mode) and hence does not schedule any frame for transmission.
 pub type MACTP_R = crate::BitReader;
-#[doc = "Field `MTLTFRCS` reader - This field indicates the state of the Tx FIFO Read Controller: 2'b00: IDLE state. 2'b01: READ state (transferring data to the MAC transmitter). 2'b10: Waiting for TxStatus from the MAC transmitter. 2'b11: Writing the received TxStatus or flushing the Tx FIFO."]
+///Field `MTLTFRCS` reader - This field indicates the state of the Tx FIFO Read Controller: 2'b00: IDLE state. 2'b01: READ state (transferring data to the MAC transmitter). 2'b10: Waiting for TxStatus from the MAC transmitter. 2'b11: Writing the received TxStatus or flushing the Tx FIFO.
 pub type MTLTFRCS_R = crate::FieldReader;
-#[doc = "Field `MTLTFWCS` reader - When high this bit indicates that the MTL Tx FIFO Write Controller is active and is transferring data to the Tx FIFO."]
+///Field `MTLTFWCS` reader - When high this bit indicates that the MTL Tx FIFO Write Controller is active and is transferring data to the Tx FIFO.
 pub type MTLTFWCS_R = crate::BitReader;
-#[doc = "Field `MTLTFNES` reader - When high this bit indicates that the MTL Tx FIFO is not empty and some data is left for Transmission."]
+///Field `MTLTFNES` reader - When high this bit indicates that the MTL Tx FIFO is not empty and some data is left for Transmission.
 pub type MTLTFNES_R = crate::BitReader;
-#[doc = "Field `MTLTSFFS` reader - When high this bit indicates that the MTL TxStatus FIFO is full. Therefore the MTL cannot accept any more frames for transmission."]
+///Field `MTLTSFFS` reader - When high this bit indicates that the MTL TxStatus FIFO is full. Therefore the MTL cannot accept any more frames for transmission.
 pub type MTLTSFFS_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - When high this bit indicates that the MAC MII receive protocol engine is actively receiving data and not in IDLE state."]
+    ///Bit 0 - When high this bit indicates that the MAC MII receive protocol engine is actively receiving data and not in IDLE state.
     #[inline(always)]
     pub fn macrpes(&self) -> MACRPES_R {
         MACRPES_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:2 - When high this field indicates the active state of the FIFO Read and Write controllers of the MAC Receive Frame Controller Module. MACRFFCS\\[1\\] represents the status of FIFO Read controller. MACRFFCS\\[0\\] represents the status of small FIFO Write controller."]
+    ///Bits 1:2 - When high this field indicates the active state of the FIFO Read and Write controllers of the MAC Receive Frame Controller Module. MACRFFCS\[1\] represents the status of FIFO Read controller. MACRFFCS\[0\] represents the status of small FIFO Write controller.
     #[inline(always)]
     pub fn macrffcs(&self) -> MACRFFCS_R {
         MACRFFCS_R::new(((self.bits >> 1) & 3) as u8)
     }
-    #[doc = "Bit 4 - When high this bit indicates that the MTL Rx FIFO Write Controller is active and is transferring a received frame to the FIFO."]
+    ///Bit 4 - When high this bit indicates that the MTL Rx FIFO Write Controller is active and is transferring a received frame to the FIFO.
     #[inline(always)]
     pub fn mtlrfwcas(&self) -> MTLRFWCAS_R {
         MTLRFWCAS_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bits 5:6 - This field gives the state of the Rx FIFO read Controller: 2'b00: IDLE state.2'b01: Reading frame data.2'b10: Reading frame status (or timestamp).2'b11: Flushing the frame data and status."]
+    ///Bits 5:6 - This field gives the state of the Rx FIFO read Controller: 2'b00: IDLE state.2'b01: Reading frame data.2'b10: Reading frame status (or timestamp).2'b11: Flushing the frame data and status.
     #[inline(always)]
     pub fn mtlrfrcs(&self) -> MTLRFRCS_R {
         MTLRFRCS_R::new(((self.bits >> 5) & 3) as u8)
     }
-    #[doc = "Bits 8:9 - This field gives the status of the fill-level of the Rx FIFO: 2'b00: Rx FIFO Empty. 2'b01: Rx FIFO fill-level below flow-control deactivate threshold. 2'b10: Rx FIFO fill-level above flow-control activate threshold. 2'b11: Rx FIFO Full."]
+    ///Bits 8:9 - This field gives the status of the fill-level of the Rx FIFO: 2'b00: Rx FIFO Empty. 2'b01: Rx FIFO fill-level below flow-control deactivate threshold. 2'b10: Rx FIFO fill-level above flow-control activate threshold. 2'b11: Rx FIFO Full.
     #[inline(always)]
     pub fn mtlrffls(&self) -> MTLRFFLS_R {
         MTLRFFLS_R::new(((self.bits >> 8) & 3) as u8)
     }
-    #[doc = "Bit 16 - When high this bit indicates that the MAC MII transmit protocol engine is actively transmitting data and is not in the IDLE state."]
+    ///Bit 16 - When high this bit indicates that the MAC MII transmit protocol engine is actively transmitting data and is not in the IDLE state.
     #[inline(always)]
     pub fn mactpes(&self) -> MACTPES_R {
         MACTPES_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bits 17:18 - This field indicates the state of the MAC Transmit Frame Controller module: 2'b00: IDLE state. 2'b01: Waiting for status of previous frame or IFG or backoff period to be over. 2'b10: Generating and transmitting a Pause frame (in the full-duplex mode). 2'b11: Transferring input frame for transmission."]
+    ///Bits 17:18 - This field indicates the state of the MAC Transmit Frame Controller module: 2'b00: IDLE state. 2'b01: Waiting for status of previous frame or IFG or backoff period to be over. 2'b10: Generating and transmitting a Pause frame (in the full-duplex mode). 2'b11: Transferring input frame for transmission.
     #[inline(always)]
     pub fn mactfcs(&self) -> MACTFCS_R {
         MACTFCS_R::new(((self.bits >> 17) & 3) as u8)
     }
-    #[doc = "Bit 19 - When high this bit indicates that the MAC transmitter is in the Pause condition (in the full-duplex-mode) and hence does not schedule any frame for transmission."]
+    ///Bit 19 - When high this bit indicates that the MAC transmitter is in the Pause condition (in the full-duplex-mode) and hence does not schedule any frame for transmission.
     #[inline(always)]
     pub fn mactp(&self) -> MACTP_R {
         MACTP_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bits 20:21 - This field indicates the state of the Tx FIFO Read Controller: 2'b00: IDLE state. 2'b01: READ state (transferring data to the MAC transmitter). 2'b10: Waiting for TxStatus from the MAC transmitter. 2'b11: Writing the received TxStatus or flushing the Tx FIFO."]
+    ///Bits 20:21 - This field indicates the state of the Tx FIFO Read Controller: 2'b00: IDLE state. 2'b01: READ state (transferring data to the MAC transmitter). 2'b10: Waiting for TxStatus from the MAC transmitter. 2'b11: Writing the received TxStatus or flushing the Tx FIFO.
     #[inline(always)]
     pub fn mtltfrcs(&self) -> MTLTFRCS_R {
         MTLTFRCS_R::new(((self.bits >> 20) & 3) as u8)
     }
-    #[doc = "Bit 22 - When high this bit indicates that the MTL Tx FIFO Write Controller is active and is transferring data to the Tx FIFO."]
+    ///Bit 22 - When high this bit indicates that the MTL Tx FIFO Write Controller is active and is transferring data to the Tx FIFO.
     #[inline(always)]
     pub fn mtltfwcs(&self) -> MTLTFWCS_R {
         MTLTFWCS_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 24 - When high this bit indicates that the MTL Tx FIFO is not empty and some data is left for Transmission."]
+    ///Bit 24 - When high this bit indicates that the MTL Tx FIFO is not empty and some data is left for Transmission.
     #[inline(always)]
     pub fn mtltfnes(&self) -> MTLTFNES_R {
         MTLTFNES_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - When high this bit indicates that the MTL TxStatus FIFO is full. Therefore the MTL cannot accept any more frames for transmission."]
+    ///Bit 25 - When high this bit indicates that the MTL TxStatus FIFO is full. Therefore the MTL cannot accept any more frames for transmission.
     #[inline(always)]
     pub fn mtltsffs(&self) -> MTLTSFFS_R {
         MTLTSFFS_R::new(((self.bits >> 25) & 1) != 0)
@@ -105,14 +105,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Status debugging bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacdebug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Status debugging bits
+
+You can [`read`](crate::generic::Reg::read) this register and get [`emacdebug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct EMACDEBUG_SPEC;
 impl crate::RegisterSpec for EMACDEBUG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`emacdebug::R`](R) reader structure"]
+///`read()` method returns [`emacdebug::R`](R) reader structure
 impl crate::Readable for EMACDEBUG_SPEC {}
-#[doc = "`reset()` method sets EMACDEBUG to value 0"]
+///`reset()` method sets EMACDEBUG to value 0
 impl crate::Resettable for EMACDEBUG_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `DMA_IN_ERR_EOF_DES_ADDR` reader"]
+///Register `DMA_IN_ERR_EOF_DES_ADDR` reader
 pub type R = crate::R<DMA_IN_ERR_EOF_DES_ADDR_SPEC>;
-#[doc = "Field `IN_ERR_EOF_DES_ADDR` reader - This register stores the address of the receive descriptor when there are some errors in this descriptor."]
+///Field `IN_ERR_EOF_DES_ADDR` reader - This register stores the address of the receive descriptor when there are some errors in this descriptor.
 pub type IN_ERR_EOF_DES_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - This register stores the address of the receive descriptor when there are some errors in this descriptor."]
+    ///Bits 0:31 - This register stores the address of the receive descriptor when there are some errors in this descriptor.
     #[inline(always)]
     pub fn in_err_eof_des_addr(&self) -> IN_ERR_EOF_DES_ADDR_R {
         IN_ERR_EOF_DES_ADDR_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Inlink descriptor address when errors occur\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_err_eof_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Inlink descriptor address when errors occur
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dma_in_err_eof_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMA_IN_ERR_EOF_DES_ADDR_SPEC;
 impl crate::RegisterSpec for DMA_IN_ERR_EOF_DES_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dma_in_err_eof_des_addr::R`](R) reader structure"]
+///`read()` method returns [`dma_in_err_eof_des_addr::R`](R) reader structure
 impl crate::Readable for DMA_IN_ERR_EOF_DES_ADDR_SPEC {}
-#[doc = "`reset()` method sets DMA_IN_ERR_EOF_DES_ADDR to value 0"]
+///`reset()` method sets DMA_IN_ERR_EOF_DES_ADDR to value 0
 impl crate::Resettable for DMA_IN_ERR_EOF_DES_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

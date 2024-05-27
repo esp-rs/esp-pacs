@@ -1,13 +1,13 @@
-#[doc = "Register `TX_DSCR_CONF` reader"]
+///Register `TX_DSCR_CONF` reader
 pub type R = crate::R<TX_DSCR_CONF_SPEC>;
-#[doc = "Register `TX_DSCR_CONF` writer"]
+///Register `TX_DSCR_CONF` writer
 pub type W = crate::W<TX_DSCR_CONF_SPEC>;
-#[doc = "Field `WR_RETRY_THRESHOLD` reader - "]
+///Field `WR_RETRY_THRESHOLD` reader -
 pub type WR_RETRY_THRESHOLD_R = crate::FieldReader<u16>;
-#[doc = "Field `WR_RETRY_THRESHOLD` writer - "]
+///Field `WR_RETRY_THRESHOLD` writer -
 pub type WR_RETRY_THRESHOLD_W<'a, REG> = crate::FieldWriter<'a, REG, 11, u16>;
 impl R {
-    #[doc = "Bits 0:10"]
+    ///Bits 0:10
     #[inline(always)]
     pub fn wr_retry_threshold(&self) -> WR_RETRY_THRESHOLD_R {
         WR_RETRY_THRESHOLD_R::new((self.bits & 0x07ff) as u16)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:10"]
+    ///Bits 0:10
     #[inline(always)]
     #[must_use]
     pub fn wr_retry_threshold(&mut self) -> WR_RETRY_THRESHOLD_W<TX_DSCR_CONF_SPEC> {
         WR_RETRY_THRESHOLD_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_dscr_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_dscr_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`tx_dscr_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_dscr_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct TX_DSCR_CONF_SPEC;
 impl crate::RegisterSpec for TX_DSCR_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`tx_dscr_conf::R`](R) reader structure"]
+///`read()` method returns [`tx_dscr_conf::R`](R) reader structure
 impl crate::Readable for TX_DSCR_CONF_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`tx_dscr_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`tx_dscr_conf::W`](W) writer structure
 impl crate::Writable for TX_DSCR_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets TX_DSCR_CONF to value 0x80"]
+///`reset()` method sets TX_DSCR_CONF to value 0x80
 impl crate::Resettable for TX_DSCR_CONF_SPEC {
     const RESET_VALUE: u32 = 0x80;
 }

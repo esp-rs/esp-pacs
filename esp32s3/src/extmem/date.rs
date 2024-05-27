@@ -1,13 +1,13 @@
-#[doc = "Register `DATE` reader"]
+///Register `DATE` reader
 pub type R = crate::R<DATE_SPEC>;
-#[doc = "Register `DATE` writer"]
+///Register `DATE` writer
 pub type W = crate::W<DATE_SPEC>;
-#[doc = "Field `DATE` reader - version information."]
+///Field `DATE` reader - version information.
 pub type DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `DATE` writer - version information."]
+///Field `DATE` writer - version information.
 pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 28, u32>;
 impl R {
-    #[doc = "Bits 0:27 - version information."]
+    ///Bits 0:27 - version information.
     #[inline(always)]
     pub fn date(&self) -> DATE_R {
         DATE_R::new(self.bits & 0x0fff_ffff)
@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:27 - version information."]
+    ///Bits 0:27 - version information.
     #[inline(always)]
     #[must_use]
     pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
@@ -32,15 +32,15 @@ pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`date::R`](R) reader structure"]
+///`read()` method returns [`date::R`](R) reader structure
 impl crate::Readable for DATE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`date::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`date::W`](W) writer structure
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DATE to value 0x0201_2310"]
+///`reset()` method sets DATE to value 0x0201_2310
 impl crate::Resettable for DATE_SPEC {
     const RESET_VALUE: u32 = 0x0201_2310;
 }

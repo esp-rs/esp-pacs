@@ -1,13 +1,13 @@
-#[doc = "Register `DBUS_TO_FLASH_END_VADDR` reader"]
+///Register `DBUS_TO_FLASH_END_VADDR` reader
 pub type R = crate::R<DBUS_TO_FLASH_END_VADDR_SPEC>;
-#[doc = "Register `DBUS_TO_FLASH_END_VADDR` writer"]
+///Register `DBUS_TO_FLASH_END_VADDR` writer
 pub type W = crate::W<DBUS_TO_FLASH_END_VADDR_SPEC>;
-#[doc = "Field `DBUS_TO_FLASH_END_VADDR` reader - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
+///Field `DBUS_TO_FLASH_END_VADDR` reader - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter.
 pub type DBUS_TO_FLASH_END_VADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `DBUS_TO_FLASH_END_VADDR` writer - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
+///Field `DBUS_TO_FLASH_END_VADDR` writer - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter.
 pub type DBUS_TO_FLASH_END_VADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
+    ///Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter.
     #[inline(always)]
     pub fn dbus_to_flash_end_vaddr(&self) -> DBUS_TO_FLASH_END_VADDR_R {
         DBUS_TO_FLASH_END_VADDR_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
+    ///Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter.
     #[inline(always)]
     #[must_use]
     pub fn dbus_to_flash_end_vaddr(
@@ -36,15 +36,15 @@ pub struct DBUS_TO_FLASH_END_VADDR_SPEC;
 impl crate::RegisterSpec for DBUS_TO_FLASH_END_VADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dbus_to_flash_end_vaddr::R`](R) reader structure"]
+///`read()` method returns [`dbus_to_flash_end_vaddr::R`](R) reader structure
 impl crate::Readable for DBUS_TO_FLASH_END_VADDR_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dbus_to_flash_end_vaddr::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dbus_to_flash_end_vaddr::W`](W) writer structure
 impl crate::Writable for DBUS_TO_FLASH_END_VADDR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DBUS_TO_FLASH_END_VADDR to value 0"]
+///`reset()` method sets DBUS_TO_FLASH_END_VADDR to value 0
 impl crate::Resettable for DBUS_TO_FLASH_END_VADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

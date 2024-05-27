@@ -1,13 +1,13 @@
-#[doc = "Register `SCRAMBLING_SEED2` reader"]
+///Register `SCRAMBLING_SEED2` reader
 pub type R = crate::R<SCRAMBLING_SEED2_SPEC>;
-#[doc = "Register `SCRAMBLING_SEED2` writer"]
+///Register `SCRAMBLING_SEED2` writer
 pub type W = crate::W<SCRAMBLING_SEED2_SPEC>;
-#[doc = "Field `SCRAMBLE_SEED_LANE2` reader - NA"]
+///Field `SCRAMBLE_SEED_LANE2` reader - NA
 pub type SCRAMBLE_SEED_LANE2_R = crate::FieldReader<u16>;
-#[doc = "Field `SCRAMBLE_SEED_LANE2` writer - NA"]
+///Field `SCRAMBLE_SEED_LANE2` writer - NA
 pub type SCRAMBLE_SEED_LANE2_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
-    #[doc = "Bits 0:15 - NA"]
+    ///Bits 0:15 - NA
     #[inline(always)]
     pub fn scramble_seed_lane2(&self) -> SCRAMBLE_SEED_LANE2_R {
         SCRAMBLE_SEED_LANE2_R::new((self.bits & 0xffff) as u16)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - NA"]
+    ///Bits 0:15 - NA
     #[inline(always)]
     #[must_use]
     pub fn scramble_seed_lane2(&mut self) -> SCRAMBLE_SEED_LANE2_W<SCRAMBLING_SEED2_SPEC> {
         SCRAMBLE_SEED_LANE2_W::new(self, 0)
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scrambling_seed2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scrambling_seed2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`scrambling_seed2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scrambling_seed2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct SCRAMBLING_SEED2_SPEC;
 impl crate::RegisterSpec for SCRAMBLING_SEED2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`scrambling_seed2::R`](R) reader structure"]
+///`read()` method returns [`scrambling_seed2::R`](R) reader structure
 impl crate::Readable for SCRAMBLING_SEED2_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`scrambling_seed2::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`scrambling_seed2::W`](W) writer structure
 impl crate::Writable for SCRAMBLING_SEED2_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets SCRAMBLING_SEED2 to value 0x1188"]
+///`reset()` method sets SCRAMBLING_SEED2 to value 0x1188
 impl crate::Resettable for SCRAMBLING_SEED2_SPEC {
     const RESET_VALUE: u32 = 0x1188;
 }

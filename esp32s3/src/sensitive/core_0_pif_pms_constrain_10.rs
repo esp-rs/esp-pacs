@@ -1,46 +1,46 @@
-#[doc = "Register `CORE_0_PIF_PMS_CONSTRAIN_10` reader"]
+///Register `CORE_0_PIF_PMS_CONSTRAIN_10` reader
 pub type R = crate::R<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC>;
-#[doc = "Register `CORE_0_PIF_PMS_CONSTRAIN_10` writer"]
+///Register `CORE_0_PIF_PMS_CONSTRAIN_10` writer
 pub type W = crate::W<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC>;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L` reader - RTCFast memory low region permission in world 0 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L` reader - RTCFast memory low region permission in world 0 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_R = crate::FieldReader;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L` writer - RTCFast memory low region permission in world 0 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L` writer - RTCFast memory low region permission in world 0 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H` reader - RTCFast memory high region permission in world 0 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H` reader - RTCFast memory high region permission in world 0 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_R = crate::FieldReader;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H` writer - RTCFast memory high region permission in world 0 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H` writer - RTCFast memory high region permission in world 0 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L` reader - RTCFast memory low region permission in world 1 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L` reader - RTCFast memory low region permission in world 1 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_R = crate::FieldReader;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L` writer - RTCFast memory low region permission in world 1 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L` writer - RTCFast memory low region permission in world 1 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H` reader - RTCFast memory high region permission in world 1 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H` reader - RTCFast memory high region permission in world 1 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_R = crate::FieldReader;
-#[doc = "Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H` writer - RTCFast memory high region permission in world 1 for core0."]
+///Field `CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H` writer - RTCFast memory high region permission in world 1 for core0.
 pub type CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
-    #[doc = "Bits 0:2 - RTCFast memory low region permission in world 0 for core0."]
+    ///Bits 0:2 - RTCFast memory low region permission in world 0 for core0.
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcfast_world_0_l(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_R {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_R::new((self.bits & 7) as u8)
     }
-    #[doc = "Bits 3:5 - RTCFast memory high region permission in world 0 for core0."]
+    ///Bits 3:5 - RTCFast memory high region permission in world 0 for core0.
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcfast_world_0_h(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_R {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_R::new(((self.bits >> 3) & 7) as u8)
     }
-    #[doc = "Bits 6:8 - RTCFast memory low region permission in world 1 for core0."]
+    ///Bits 6:8 - RTCFast memory low region permission in world 1 for core0.
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcfast_world_1_l(
         &self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_R {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_R::new(((self.bits >> 6) & 7) as u8)
     }
-    #[doc = "Bits 9:11 - RTCFast memory high region permission in world 1 for core0."]
+    ///Bits 9:11 - RTCFast memory high region permission in world 1 for core0.
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_rtcfast_world_1_h(
         &self,
@@ -72,7 +72,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:2 - RTCFast memory low region permission in world 0 for core0."]
+    ///Bits 0:2 - RTCFast memory low region permission in world 0 for core0.
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_rtcfast_world_0_l(
@@ -80,7 +80,7 @@ impl W {
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W::new(self, 0)
     }
-    #[doc = "Bits 3:5 - RTCFast memory high region permission in world 0 for core0."]
+    ///Bits 3:5 - RTCFast memory high region permission in world 0 for core0.
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_rtcfast_world_0_h(
@@ -88,7 +88,7 @@ impl W {
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W::new(self, 3)
     }
-    #[doc = "Bits 6:8 - RTCFast memory low region permission in world 1 for core0."]
+    ///Bits 6:8 - RTCFast memory low region permission in world 1 for core0.
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_rtcfast_world_1_l(
@@ -96,7 +96,7 @@ impl W {
     ) -> CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W<CORE_0_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W::new(self, 6)
     }
-    #[doc = "Bits 9:11 - RTCFast memory high region permission in world 1 for core0."]
+    ///Bits 9:11 - RTCFast memory high region permission in world 1 for core0.
     #[inline(always)]
     #[must_use]
     pub fn core_0_pif_pms_constrain_rtcfast_world_1_h(
@@ -105,20 +105,22 @@ impl W {
         CORE_0_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_W::new(self, 9)
     }
 }
-#[doc = "Core0 access peripherals permission configuration register 10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_10::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_10::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Core0 access peripherals permission configuration register 10.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_constrain_10::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_pif_pms_constrain_10::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_PIF_PMS_CONSTRAIN_10_SPEC;
 impl crate::RegisterSpec for CORE_0_PIF_PMS_CONSTRAIN_10_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_pif_pms_constrain_10::R`](R) reader structure"]
+///`read()` method returns [`core_0_pif_pms_constrain_10::R`](R) reader structure
 impl crate::Readable for CORE_0_PIF_PMS_CONSTRAIN_10_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`core_0_pif_pms_constrain_10::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`core_0_pif_pms_constrain_10::W`](W) writer structure
 impl crate::Writable for CORE_0_PIF_PMS_CONSTRAIN_10_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_10 to value 0x0fff"]
+///`reset()` method sets CORE_0_PIF_PMS_CONSTRAIN_10 to value 0x0fff
 impl crate::Resettable for CORE_0_PIF_PMS_CONSTRAIN_10_SPEC {
     const RESET_VALUE: u32 = 0x0fff;
 }

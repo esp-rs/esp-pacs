@@ -1,22 +1,22 @@
-#[doc = "Register `SPI_MEM_ECC_CTRL` reader"]
+///Register `SPI_MEM_ECC_CTRL` reader
 pub type R = crate::R<SPI_MEM_ECC_CTRL_SPEC>;
-#[doc = "Register `SPI_MEM_ECC_CTRL` writer"]
+///Register `SPI_MEM_ECC_CTRL` writer
 pub type W = crate::W<SPI_MEM_ECC_CTRL_SPEC>;
-#[doc = "Field `FLASH_PAGE_SIZE` reader - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+///Field `FLASH_PAGE_SIZE` reader - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
 pub type FLASH_PAGE_SIZE_R = crate::FieldReader;
-#[doc = "Field `FLASH_PAGE_SIZE` writer - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+///Field `FLASH_PAGE_SIZE` writer - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
 pub type FLASH_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `SRAM_PAGE_SIZE` reader - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+///Field `SRAM_PAGE_SIZE` reader - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
 pub type SRAM_PAGE_SIZE_R = crate::FieldReader;
-#[doc = "Field `SRAM_PAGE_SIZE` writer - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+///Field `SRAM_PAGE_SIZE` writer - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
 pub type SRAM_PAGE_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
-    #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+    ///Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
     #[inline(always)]
     pub fn flash_page_size(&self) -> FLASH_PAGE_SIZE_R {
         FLASH_PAGE_SIZE_R::new(((self.bits >> 18) & 3) as u8)
     }
-    #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+    ///Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
     #[inline(always)]
     pub fn sram_page_size(&self) -> SRAM_PAGE_SIZE_R {
         SRAM_PAGE_SIZE_R::new(((self.bits >> 20) & 3) as u8)
@@ -32,13 +32,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+    ///Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
     #[inline(always)]
     #[must_use]
     pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
         FLASH_PAGE_SIZE_W::new(self, 18)
     }
-    #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
+    ///Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes.
     #[inline(always)]
     #[must_use]
     pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
@@ -50,15 +50,15 @@ pub struct SPI_MEM_ECC_CTRL_SPEC;
 impl crate::RegisterSpec for SPI_MEM_ECC_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`spi_mem_ecc_ctrl::R`](R) reader structure"]
+///`read()` method returns [`spi_mem_ecc_ctrl::R`](R) reader structure
 impl crate::Readable for SPI_MEM_ECC_CTRL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`spi_mem_ecc_ctrl::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`spi_mem_ecc_ctrl::W`](W) writer structure
 impl crate::Writable for SPI_MEM_ECC_CTRL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets SPI_MEM_ECC_CTRL to value 0x0020_0000"]
+///`reset()` method sets SPI_MEM_ECC_CTRL to value 0x0020_0000
 impl crate::Resettable for SPI_MEM_ECC_CTRL_SPEC {
     const RESET_VALUE: u32 = 0x0020_0000;
 }

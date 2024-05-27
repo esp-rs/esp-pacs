@@ -1,16 +1,16 @@
-#[doc = "Register `VAD_RESULT` reader"]
+///Register `VAD_RESULT` reader
 pub type R = crate::R<VAD_RESULT_SPEC>;
-#[doc = "Field `VAD_FLAG` reader - Reg vad flag observe signal"]
+///Field `VAD_FLAG` reader - Reg vad flag observe signal
 pub type VAD_FLAG_R = crate::BitReader;
-#[doc = "Field `ENERGY_ENOUGH` reader - Reg energy enough observe signal"]
+///Field `ENERGY_ENOUGH` reader - Reg energy enough observe signal
 pub type ENERGY_ENOUGH_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Reg vad flag observe signal"]
+    ///Bit 0 - Reg vad flag observe signal
     #[inline(always)]
     pub fn vad_flag(&self) -> VAD_FLAG_R {
         VAD_FLAG_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Reg energy enough observe signal"]
+    ///Bit 1 - Reg energy enough observe signal
     #[inline(always)]
     pub fn energy_enough(&self) -> ENERGY_ENOUGH_R {
         ENERGY_ENOUGH_R::new(((self.bits >> 1) & 1) != 0)
@@ -25,14 +25,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2S VAD Result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vad_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**I2S VAD Result register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`vad_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct VAD_RESULT_SPEC;
 impl crate::RegisterSpec for VAD_RESULT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`vad_result::R`](R) reader structure"]
+///`read()` method returns [`vad_result::R`](R) reader structure
 impl crate::Readable for VAD_RESULT_SPEC {}
-#[doc = "`reset()` method sets VAD_RESULT to value 0"]
+///`reset()` method sets VAD_RESULT to value 0
 impl crate::Resettable for VAD_RESULT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `TXFIFO_START_ADDR` reader"]
+///Register `TXFIFO_START_ADDR` reader
 pub type R = crate::R<TXFIFO_START_ADDR_SPEC>;
-#[doc = "Field `TXFIFO_START_ADDR` reader - Represents the I2C txfifo first address."]
+///Field `TXFIFO_START_ADDR` reader - Represents the I2C txfifo first address.
 pub type TXFIFO_START_ADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Represents the I2C txfifo first address."]
+    ///Bits 0:31 - Represents the I2C txfifo first address.
     #[inline(always)]
     pub fn txfifo_start_addr(&self) -> TXFIFO_START_ADDR_R {
         TXFIFO_START_ADDR_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2C TXFIFO base address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txfifo_start_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**I2C TXFIFO base address register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`txfifo_start_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct TXFIFO_START_ADDR_SPEC;
 impl crate::RegisterSpec for TXFIFO_START_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`txfifo_start_addr::R`](R) reader structure"]
+///`read()` method returns [`txfifo_start_addr::R`](R) reader structure
 impl crate::Readable for TXFIFO_START_ADDR_SPEC {}
-#[doc = "`reset()` method sets TXFIFO_START_ADDR to value 0"]
+///`reset()` method sets TXFIFO_START_ADDR to value 0
 impl crate::Resettable for TXFIFO_START_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

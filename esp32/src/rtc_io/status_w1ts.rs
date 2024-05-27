@@ -1,6 +1,6 @@
-#[doc = "Register `STATUS_W1TS` writer"]
+///Register `STATUS_W1TS` writer
 pub type W = crate::W<STATUS_W1TS_SPEC>;
-#[doc = "Field `STATUS_INT_W1TS` writer - GPIO0~17 interrupt status write 1 to set"]
+///Field `STATUS_INT_W1TS` writer - GPIO0~17 interrupt status write 1 to set
 pub type STATUS_INT_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 18, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
@@ -9,25 +9,27 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 14:31 - GPIO0~17 interrupt status write 1 to set"]
+    ///Bits 14:31 - GPIO0~17 interrupt status write 1 to set
     #[inline(always)]
     #[must_use]
     pub fn status_int_w1ts(&mut self) -> STATUS_INT_W1TS_W<STATUS_W1TS_SPEC> {
         STATUS_INT_W1TS_W::new(self, 14)
     }
 }
-#[doc = "\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STATUS_W1TS_SPEC;
 impl crate::RegisterSpec for STATUS_W1TS_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`status_w1ts::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`status_w1ts::W`](W) writer structure
 impl crate::Writable for STATUS_W1TS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets STATUS_W1TS to value 0"]
+///`reset()` method sets STATUS_W1TS to value 0
 impl crate::Resettable for STATUS_W1TS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

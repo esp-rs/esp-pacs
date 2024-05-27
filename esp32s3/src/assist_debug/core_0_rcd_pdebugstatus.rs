@@ -1,9 +1,9 @@
-#[doc = "Register `CORE_0_RCD_PDEBUGSTATUS` reader"]
+///Register `CORE_0_RCD_PDEBUGSTATUS` reader
 pub type R = crate::R<CORE_0_RCD_PDEBUGSTATUS_SPEC>;
-#[doc = "Field `CORE_0_RCD_PDEBUGSTATUS` reader - core0 pdebugstatus"]
+///Field `CORE_0_RCD_PDEBUGSTATUS` reader - core0 pdebugstatus
 pub type CORE_0_RCD_PDEBUGSTATUS_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:7 - core0 pdebugstatus"]
+    ///Bits 0:7 - core0 pdebugstatus
     #[inline(always)]
     pub fn core_0_rcd_pdebugstatus(&self) -> CORE_0_RCD_PDEBUGSTATUS_R {
         CORE_0_RCD_PDEBUGSTATUS_R::new((self.bits & 0xff) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "core0 pdebug status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_rcd_pdebugstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**core0 pdebug status register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_rcd_pdebugstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_RCD_PDEBUGSTATUS_SPEC;
 impl crate::RegisterSpec for CORE_0_RCD_PDEBUGSTATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_rcd_pdebugstatus::R`](R) reader structure"]
+///`read()` method returns [`core_0_rcd_pdebugstatus::R`](R) reader structure
 impl crate::Readable for CORE_0_RCD_PDEBUGSTATUS_SPEC {}
-#[doc = "`reset()` method sets CORE_0_RCD_PDEBUGSTATUS to value 0"]
+///`reset()` method sets CORE_0_RCD_PDEBUGSTATUS to value 0
 impl crate::Resettable for CORE_0_RCD_PDEBUGSTATUS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

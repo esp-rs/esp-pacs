@@ -1,9 +1,9 @@
-#[doc = "Register `MODEM_PERI_TIMEOUT_UID` reader"]
+///Register `MODEM_PERI_TIMEOUT_UID` reader
 pub type R = crate::R<MODEM_PERI_TIMEOUT_UID_SPEC>;
-#[doc = "Field `MODEM_PERI_TIMEOUT_UID` reader - Record master id\\[4:0\\] &amp; master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
+///Field `MODEM_PERI_TIMEOUT_UID` reader - Record master id\[4:0\] &amp; master permission\[6:5\] when trigger timeout. This register will be cleared after the interrupt is cleared.
 pub type MODEM_PERI_TIMEOUT_UID_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:6 - Record master id\\[4:0\\] &amp; master permission\\[6:5\\] when trigger timeout. This register will be cleared after the interrupt is cleared."]
+    ///Bits 0:6 - Record master id\[4:0\] &amp; master permission\[6:5\] when trigger timeout. This register will be cleared after the interrupt is cleared.
     #[inline(always)]
     pub fn modem_peri_timeout_uid(&self) -> MODEM_PERI_TIMEOUT_UID_R {
         MODEM_PERI_TIMEOUT_UID_R::new((self.bits & 0x7f) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MODEM_PERI_TIMEOUT_UID register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`modem_peri_timeout_uid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**MODEM_PERI_TIMEOUT_UID register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`modem_peri_timeout_uid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct MODEM_PERI_TIMEOUT_UID_SPEC;
 impl crate::RegisterSpec for MODEM_PERI_TIMEOUT_UID_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`modem_peri_timeout_uid::R`](R) reader structure"]
+///`read()` method returns [`modem_peri_timeout_uid::R`](R) reader structure
 impl crate::Readable for MODEM_PERI_TIMEOUT_UID_SPEC {}
-#[doc = "`reset()` method sets MODEM_PERI_TIMEOUT_UID to value 0"]
+///`reset()` method sets MODEM_PERI_TIMEOUT_UID to value 0
 impl crate::Resettable for MODEM_PERI_TIMEOUT_UID_SPEC {
     const RESET_VALUE: u32 = 0;
 }

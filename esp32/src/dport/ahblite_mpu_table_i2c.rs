@@ -1,13 +1,13 @@
-#[doc = "Register `AHBLITE_MPU_TABLE_I2C` reader"]
+///Register `AHBLITE_MPU_TABLE_I2C` reader
 pub type R = crate::R<AHBLITE_MPU_TABLE_I2C_SPEC>;
-#[doc = "Register `AHBLITE_MPU_TABLE_I2C` writer"]
+///Register `AHBLITE_MPU_TABLE_I2C` writer
 pub type W = crate::W<AHBLITE_MPU_TABLE_I2C_SPEC>;
-#[doc = "Field `I2C_ACCESS_GRANT_CONFIG` reader - "]
+///Field `I2C_ACCESS_GRANT_CONFIG` reader -
 pub type I2C_ACCESS_GRANT_CONFIG_R = crate::FieldReader;
-#[doc = "Field `I2C_ACCESS_GRANT_CONFIG` writer - "]
+///Field `I2C_ACCESS_GRANT_CONFIG` writer -
 pub type I2C_ACCESS_GRANT_CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
-    #[doc = "Bits 0:5"]
+    ///Bits 0:5
     #[inline(always)]
     pub fn i2c_access_grant_config(&self) -> I2C_ACCESS_GRANT_CONFIG_R {
         I2C_ACCESS_GRANT_CONFIG_R::new((self.bits & 0x3f) as u8)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5"]
+    ///Bits 0:5
     #[inline(always)]
     #[must_use]
     pub fn i2c_access_grant_config(
@@ -31,20 +31,22 @@ impl W {
         I2C_ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahblite_mpu_table_i2c::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahblite_mpu_table_i2c::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`ahblite_mpu_table_i2c::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahblite_mpu_table_i2c::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct AHBLITE_MPU_TABLE_I2C_SPEC;
 impl crate::RegisterSpec for AHBLITE_MPU_TABLE_I2C_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`ahblite_mpu_table_i2c::R`](R) reader structure"]
+///`read()` method returns [`ahblite_mpu_table_i2c::R`](R) reader structure
 impl crate::Readable for AHBLITE_MPU_TABLE_I2C_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`ahblite_mpu_table_i2c::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`ahblite_mpu_table_i2c::W`](W) writer structure
 impl crate::Writable for AHBLITE_MPU_TABLE_I2C_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets AHBLITE_MPU_TABLE_I2C to value 0"]
+///`reset()` method sets AHBLITE_MPU_TABLE_I2C to value 0
 impl crate::Resettable for AHBLITE_MPU_TABLE_I2C_SPEC {
     const RESET_VALUE: u32 = 0;
 }

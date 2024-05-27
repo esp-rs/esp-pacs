@@ -1,13 +1,13 @@
-#[doc = "Register `PRO_ICACHE_SYNC_INT_MAP` reader"]
+///Register `PRO_ICACHE_SYNC_INT_MAP` reader
 pub type R = crate::R<PRO_ICACHE_SYNC_INT_MAP_SPEC>;
-#[doc = "Register `PRO_ICACHE_SYNC_INT_MAP` writer"]
+///Register `PRO_ICACHE_SYNC_INT_MAP` writer
 pub type W = crate::W<PRO_ICACHE_SYNC_INT_MAP_SPEC>;
-#[doc = "Field `PRO_ICACHE_SYNC_INT_MAP` reader - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts."]
+///Field `PRO_ICACHE_SYNC_INT_MAP` reader - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts.
 pub type PRO_ICACHE_SYNC_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `PRO_ICACHE_SYNC_INT_MAP` writer - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts."]
+///Field `PRO_ICACHE_SYNC_INT_MAP` writer - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts.
 pub type PRO_ICACHE_SYNC_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts."]
+    ///Bits 0:4 - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts.
     #[inline(always)]
     pub fn pro_icache_sync_int_map(&self) -> PRO_ICACHE_SYNC_INT_MAP_R {
         PRO_ICACHE_SYNC_INT_MAP_R::new((self.bits & 0x1f) as u8)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts."]
+    ///Bits 0:4 - This register is used to map ICACHE_SYNC_INT interrupt signal to one of the CPU interrupts.
     #[inline(always)]
     #[must_use]
     pub fn pro_icache_sync_int_map(
@@ -31,20 +31,22 @@ impl W {
         PRO_ICACHE_SYNC_INT_MAP_W::new(self, 0)
     }
 }
-#[doc = "ICACHE_SYNC_INT interrupt configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_icache_sync_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pro_icache_sync_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**ICACHE_SYNC_INT interrupt configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pro_icache_sync_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pro_icache_sync_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PRO_ICACHE_SYNC_INT_MAP_SPEC;
 impl crate::RegisterSpec for PRO_ICACHE_SYNC_INT_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pro_icache_sync_int_map::R`](R) reader structure"]
+///`read()` method returns [`pro_icache_sync_int_map::R`](R) reader structure
 impl crate::Readable for PRO_ICACHE_SYNC_INT_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`pro_icache_sync_int_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`pro_icache_sync_int_map::W`](W) writer structure
 impl crate::Writable for PRO_ICACHE_SYNC_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PRO_ICACHE_SYNC_INT_MAP to value 0x10"]
+///`reset()` method sets PRO_ICACHE_SYNC_INT_MAP to value 0x10
 impl crate::Resettable for PRO_ICACHE_SYNC_INT_MAP_SPEC {
     const RESET_VALUE: u32 = 0x10;
 }

@@ -1,13 +1,13 @@
-#[doc = "Register `ENHANCE_ACK_CFG` reader"]
+///Register `ENHANCE_ACK_CFG` reader
 pub type R = crate::R<ENHANCE_ACK_CFG_SPEC>;
-#[doc = "Register `ENHANCE_ACK_CFG` writer"]
+///Register `ENHANCE_ACK_CFG` writer
 pub type W = crate::W<ENHANCE_ACK_CFG_SPEC>;
-#[doc = "Field `TX_ENH_ACK_GENERATE_DONE_NOTIFY` reader - "]
+///Field `TX_ENH_ACK_GENERATE_DONE_NOTIFY` reader -
 pub type TX_ENH_ACK_GENERATE_DONE_NOTIFY_R = crate::FieldReader<u32>;
-#[doc = "Field `TX_ENH_ACK_GENERATE_DONE_NOTIFY` writer - "]
+///Field `TX_ENH_ACK_GENERATE_DONE_NOTIFY` writer -
 pub type TX_ENH_ACK_GENERATE_DONE_NOTIFY_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     pub fn tx_enh_ack_generate_done_notify(&self) -> TX_ENH_ACK_GENERATE_DONE_NOTIFY_R {
         TX_ENH_ACK_GENERATE_DONE_NOTIFY_R::new(self.bits)
@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     #[must_use]
     pub fn tx_enh_ack_generate_done_notify(
@@ -34,20 +34,22 @@ impl W {
         TX_ENH_ACK_GENERATE_DONE_NOTIFY_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enhance_ack_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enhance_ack_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`enhance_ack_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enhance_ack_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct ENHANCE_ACK_CFG_SPEC;
 impl crate::RegisterSpec for ENHANCE_ACK_CFG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`enhance_ack_cfg::R`](R) reader structure"]
+///`read()` method returns [`enhance_ack_cfg::R`](R) reader structure
 impl crate::Readable for ENHANCE_ACK_CFG_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`enhance_ack_cfg::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`enhance_ack_cfg::W`](W) writer structure
 impl crate::Writable for ENHANCE_ACK_CFG_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ENHANCE_ACK_CFG to value 0"]
+///`reset()` method sets ENHANCE_ACK_CFG to value 0
 impl crate::Resettable for ENHANCE_ACK_CFG_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,30 +1,30 @@
-#[doc = "Register `INTSTATUS1` reader"]
+///Register `INTSTATUS1` reader
 pub type R = crate::R<INTSTATUS1_SPEC>;
-#[doc = "Field `CH1_ECC_PROT_CHMEM_CORRERR_INTSTAT` reader - NA"]
+///Field `CH1_ECC_PROT_CHMEM_CORRERR_INTSTAT` reader - NA
 pub type CH1_ECC_PROT_CHMEM_CORRERR_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH1_ECC_PROT_CHMEM_UNCORRERR_INTSTAT` reader - NA"]
+///Field `CH1_ECC_PROT_CHMEM_UNCORRERR_INTSTAT` reader - NA
 pub type CH1_ECC_PROT_CHMEM_UNCORRERR_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH1_ECC_PROT_UIDMEM_CORRERR_INTSTAT` reader - NA"]
+///Field `CH1_ECC_PROT_UIDMEM_CORRERR_INTSTAT` reader - NA
 pub type CH1_ECC_PROT_UIDMEM_CORRERR_INTSTAT_R = crate::BitReader;
-#[doc = "Field `CH1_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT` reader - NA"]
+///Field `CH1_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT` reader - NA
 pub type CH1_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - NA"]
+    ///Bit 0 - NA
     #[inline(always)]
     pub fn ch1_ecc_prot_chmem_correrr_intstat(&self) -> CH1_ECC_PROT_CHMEM_CORRERR_INTSTAT_R {
         CH1_ECC_PROT_CHMEM_CORRERR_INTSTAT_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - NA"]
+    ///Bit 1 - NA
     #[inline(always)]
     pub fn ch1_ecc_prot_chmem_uncorrerr_intstat(&self) -> CH1_ECC_PROT_CHMEM_UNCORRERR_INTSTAT_R {
         CH1_ECC_PROT_CHMEM_UNCORRERR_INTSTAT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - NA"]
+    ///Bit 2 - NA
     #[inline(always)]
     pub fn ch1_ecc_prot_uidmem_correrr_intstat(&self) -> CH1_ECC_PROT_UIDMEM_CORRERR_INTSTAT_R {
         CH1_ECC_PROT_UIDMEM_CORRERR_INTSTAT_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - NA"]
+    ///Bit 3 - NA
     #[inline(always)]
     pub fn ch1_ecc_prot_uidmem_uncorrerr_intstat(&self) -> CH1_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT_R {
         CH1_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT_R::new(((self.bits >> 3) & 1) != 0)
@@ -53,14 +53,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intstatus1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`intstatus1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INTSTATUS1_SPEC;
 impl crate::RegisterSpec for INTSTATUS1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`intstatus1::R`](R) reader structure"]
+///`read()` method returns [`intstatus1::R`](R) reader structure
 impl crate::Readable for INTSTATUS1_SPEC {}
-#[doc = "`reset()` method sets INTSTATUS1 to value 0"]
+///`reset()` method sets INTSTATUS1 to value 0
 impl crate::Resettable for INTSTATUS1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,16 +1,16 @@
-#[doc = "Register `PKT_LEN2` reader"]
+///Register `PKT_LEN2` reader
 pub type R = crate::R<PKT_LEN2_SPEC>;
-#[doc = "Field `HOSTSLCHOST_SLC0_LEN2` reader - *******Description***********"]
+///Field `HOSTSLCHOST_SLC0_LEN2` reader - *******Description***********
 pub type HOSTSLCHOST_SLC0_LEN2_R = crate::FieldReader<u32>;
-#[doc = "Field `HOSTSLCHOST_SLC0_LEN2_CHECK` reader - *******Description***********"]
+///Field `HOSTSLCHOST_SLC0_LEN2_CHECK` reader - *******Description***********
 pub type HOSTSLCHOST_SLC0_LEN2_CHECK_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:19 - *******Description***********"]
+    ///Bits 0:19 - *******Description***********
     #[inline(always)]
     pub fn hostslchost_slc0_len2(&self) -> HOSTSLCHOST_SLC0_LEN2_R {
         HOSTSLCHOST_SLC0_LEN2_R::new(self.bits & 0x000f_ffff)
     }
-    #[doc = "Bits 20:31 - *******Description***********"]
+    ///Bits 20:31 - *******Description***********
     #[inline(always)]
     pub fn hostslchost_slc0_len2_check(&self) -> HOSTSLCHOST_SLC0_LEN2_CHECK_R {
         HOSTSLCHOST_SLC0_LEN2_CHECK_R::new(((self.bits >> 20) & 0x0fff) as u16)
@@ -33,9 +33,9 @@ pub struct PKT_LEN2_SPEC;
 impl crate::RegisterSpec for PKT_LEN2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pkt_len2::R`](R) reader structure"]
+///`read()` method returns [`pkt_len2::R`](R) reader structure
 impl crate::Readable for PKT_LEN2_SPEC {}
-#[doc = "`reset()` method sets PKT_LEN2 to value 0"]
+///`reset()` method sets PKT_LEN2 to value 0
 impl crate::Resettable for PKT_LEN2_SPEC {
     const RESET_VALUE: u32 = 0;
 }

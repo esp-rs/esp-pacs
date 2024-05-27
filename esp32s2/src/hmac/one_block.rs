@@ -1,6 +1,6 @@
-#[doc = "Register `ONE_BLOCK` writer"]
+///Register `ONE_BLOCK` writer
 pub type W = crate::W<ONE_BLOCK_SPEC>;
-#[doc = "Field `SET_ONE_BLOCK` writer - Set this bit to show no padding is required."]
+///Field `SET_ONE_BLOCK` writer - Set this bit to show no padding is required.
 pub type SET_ONE_BLOCK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
@@ -9,25 +9,27 @@ impl core::fmt::Debug for crate::generic::Reg<ONE_BLOCK_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to show no padding is required."]
+    ///Bit 0 - Set this bit to show no padding is required.
     #[inline(always)]
     #[must_use]
     pub fn set_one_block(&mut self) -> SET_ONE_BLOCK_W<ONE_BLOCK_SPEC> {
         SET_ONE_BLOCK_W::new(self, 0)
     }
 }
-#[doc = "One block message register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`one_block::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**One block message register.
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`one_block::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct ONE_BLOCK_SPEC;
 impl crate::RegisterSpec for ONE_BLOCK_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`one_block::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`one_block::W`](W) writer structure
 impl crate::Writable for ONE_BLOCK_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ONE_BLOCK to value 0"]
+///`reset()` method sets ONE_BLOCK to value 0
 impl crate::Resettable for ONE_BLOCK_SPEC {
     const RESET_VALUE: u32 = 0;
 }

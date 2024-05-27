@@ -1,193 +1,193 @@
-#[doc = "Register `INT_FORCE0` reader"]
+///Register `INT_FORCE0` reader
 pub type R = crate::R<INT_FORCE0_SPEC>;
-#[doc = "Register `INT_FORCE0` writer"]
+///Register `INT_FORCE0` writer
 pub type W = crate::W<INT_FORCE0_SPEC>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_0` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_0` reader - NA
 pub type FORCE_ACK_WITH_ERR_0_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_0` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_0` writer - NA
 pub type FORCE_ACK_WITH_ERR_0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_1` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_1` reader - NA
 pub type FORCE_ACK_WITH_ERR_1_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_1` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_1` writer - NA
 pub type FORCE_ACK_WITH_ERR_1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_2` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_2` reader - NA
 pub type FORCE_ACK_WITH_ERR_2_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_2` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_2` writer - NA
 pub type FORCE_ACK_WITH_ERR_2_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_3` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_3` reader - NA
 pub type FORCE_ACK_WITH_ERR_3_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_3` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_3` writer - NA
 pub type FORCE_ACK_WITH_ERR_3_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_4` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_4` reader - NA
 pub type FORCE_ACK_WITH_ERR_4_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_4` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_4` writer - NA
 pub type FORCE_ACK_WITH_ERR_4_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_5` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_5` reader - NA
 pub type FORCE_ACK_WITH_ERR_5_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_5` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_5` writer - NA
 pub type FORCE_ACK_WITH_ERR_5_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_6` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_6` reader - NA
 pub type FORCE_ACK_WITH_ERR_6_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_6` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_6` writer - NA
 pub type FORCE_ACK_WITH_ERR_6_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_7` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_7` reader - NA
 pub type FORCE_ACK_WITH_ERR_7_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_7` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_7` writer - NA
 pub type FORCE_ACK_WITH_ERR_7_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_8` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_8` reader - NA
 pub type FORCE_ACK_WITH_ERR_8_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_8` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_8` writer - NA
 pub type FORCE_ACK_WITH_ERR_8_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_9` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_9` reader - NA
 pub type FORCE_ACK_WITH_ERR_9_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_9` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_9` writer - NA
 pub type FORCE_ACK_WITH_ERR_9_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_10` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_10` reader - NA
 pub type FORCE_ACK_WITH_ERR_10_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_10` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_10` writer - NA
 pub type FORCE_ACK_WITH_ERR_10_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_11` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_11` reader - NA
 pub type FORCE_ACK_WITH_ERR_11_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_11` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_11` writer - NA
 pub type FORCE_ACK_WITH_ERR_11_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_12` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_12` reader - NA
 pub type FORCE_ACK_WITH_ERR_12_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_12` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_12` writer - NA
 pub type FORCE_ACK_WITH_ERR_12_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_13` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_13` reader - NA
 pub type FORCE_ACK_WITH_ERR_13_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_13` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_13` writer - NA
 pub type FORCE_ACK_WITH_ERR_13_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_14` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_14` reader - NA
 pub type FORCE_ACK_WITH_ERR_14_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_14` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_14` writer - NA
 pub type FORCE_ACK_WITH_ERR_14_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_ACK_WITH_ERR_15` reader - NA"]
+///Field `FORCE_ACK_WITH_ERR_15` reader - NA
 pub type FORCE_ACK_WITH_ERR_15_R = crate::BitReader;
-#[doc = "Field `FORCE_ACK_WITH_ERR_15` writer - NA"]
+///Field `FORCE_ACK_WITH_ERR_15` writer - NA
 pub type FORCE_ACK_WITH_ERR_15_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_DPHY_ERRORS_0` reader - NA"]
+///Field `FORCE_DPHY_ERRORS_0` reader - NA
 pub type FORCE_DPHY_ERRORS_0_R = crate::BitReader;
-#[doc = "Field `FORCE_DPHY_ERRORS_0` writer - NA"]
+///Field `FORCE_DPHY_ERRORS_0` writer - NA
 pub type FORCE_DPHY_ERRORS_0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_DPHY_ERRORS_1` reader - NA"]
+///Field `FORCE_DPHY_ERRORS_1` reader - NA
 pub type FORCE_DPHY_ERRORS_1_R = crate::BitReader;
-#[doc = "Field `FORCE_DPHY_ERRORS_1` writer - NA"]
+///Field `FORCE_DPHY_ERRORS_1` writer - NA
 pub type FORCE_DPHY_ERRORS_1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_DPHY_ERRORS_2` reader - NA"]
+///Field `FORCE_DPHY_ERRORS_2` reader - NA
 pub type FORCE_DPHY_ERRORS_2_R = crate::BitReader;
-#[doc = "Field `FORCE_DPHY_ERRORS_2` writer - NA"]
+///Field `FORCE_DPHY_ERRORS_2` writer - NA
 pub type FORCE_DPHY_ERRORS_2_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_DPHY_ERRORS_3` reader - NA"]
+///Field `FORCE_DPHY_ERRORS_3` reader - NA
 pub type FORCE_DPHY_ERRORS_3_R = crate::BitReader;
-#[doc = "Field `FORCE_DPHY_ERRORS_3` writer - NA"]
+///Field `FORCE_DPHY_ERRORS_3` writer - NA
 pub type FORCE_DPHY_ERRORS_3_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_DPHY_ERRORS_4` reader - NA"]
+///Field `FORCE_DPHY_ERRORS_4` reader - NA
 pub type FORCE_DPHY_ERRORS_4_R = crate::BitReader;
-#[doc = "Field `FORCE_DPHY_ERRORS_4` writer - NA"]
+///Field `FORCE_DPHY_ERRORS_4` writer - NA
 pub type FORCE_DPHY_ERRORS_4_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - NA"]
+    ///Bit 0 - NA
     #[inline(always)]
     pub fn force_ack_with_err_0(&self) -> FORCE_ACK_WITH_ERR_0_R {
         FORCE_ACK_WITH_ERR_0_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - NA"]
+    ///Bit 1 - NA
     #[inline(always)]
     pub fn force_ack_with_err_1(&self) -> FORCE_ACK_WITH_ERR_1_R {
         FORCE_ACK_WITH_ERR_1_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - NA"]
+    ///Bit 2 - NA
     #[inline(always)]
     pub fn force_ack_with_err_2(&self) -> FORCE_ACK_WITH_ERR_2_R {
         FORCE_ACK_WITH_ERR_2_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - NA"]
+    ///Bit 3 - NA
     #[inline(always)]
     pub fn force_ack_with_err_3(&self) -> FORCE_ACK_WITH_ERR_3_R {
         FORCE_ACK_WITH_ERR_3_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - NA"]
+    ///Bit 4 - NA
     #[inline(always)]
     pub fn force_ack_with_err_4(&self) -> FORCE_ACK_WITH_ERR_4_R {
         FORCE_ACK_WITH_ERR_4_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - NA"]
+    ///Bit 5 - NA
     #[inline(always)]
     pub fn force_ack_with_err_5(&self) -> FORCE_ACK_WITH_ERR_5_R {
         FORCE_ACK_WITH_ERR_5_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - NA"]
+    ///Bit 6 - NA
     #[inline(always)]
     pub fn force_ack_with_err_6(&self) -> FORCE_ACK_WITH_ERR_6_R {
         FORCE_ACK_WITH_ERR_6_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - NA"]
+    ///Bit 7 - NA
     #[inline(always)]
     pub fn force_ack_with_err_7(&self) -> FORCE_ACK_WITH_ERR_7_R {
         FORCE_ACK_WITH_ERR_7_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - NA"]
+    ///Bit 8 - NA
     #[inline(always)]
     pub fn force_ack_with_err_8(&self) -> FORCE_ACK_WITH_ERR_8_R {
         FORCE_ACK_WITH_ERR_8_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - NA"]
+    ///Bit 9 - NA
     #[inline(always)]
     pub fn force_ack_with_err_9(&self) -> FORCE_ACK_WITH_ERR_9_R {
         FORCE_ACK_WITH_ERR_9_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - NA"]
+    ///Bit 10 - NA
     #[inline(always)]
     pub fn force_ack_with_err_10(&self) -> FORCE_ACK_WITH_ERR_10_R {
         FORCE_ACK_WITH_ERR_10_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - NA"]
+    ///Bit 11 - NA
     #[inline(always)]
     pub fn force_ack_with_err_11(&self) -> FORCE_ACK_WITH_ERR_11_R {
         FORCE_ACK_WITH_ERR_11_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - NA"]
+    ///Bit 12 - NA
     #[inline(always)]
     pub fn force_ack_with_err_12(&self) -> FORCE_ACK_WITH_ERR_12_R {
         FORCE_ACK_WITH_ERR_12_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - NA"]
+    ///Bit 13 - NA
     #[inline(always)]
     pub fn force_ack_with_err_13(&self) -> FORCE_ACK_WITH_ERR_13_R {
         FORCE_ACK_WITH_ERR_13_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - NA"]
+    ///Bit 14 - NA
     #[inline(always)]
     pub fn force_ack_with_err_14(&self) -> FORCE_ACK_WITH_ERR_14_R {
         FORCE_ACK_WITH_ERR_14_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - NA"]
+    ///Bit 15 - NA
     #[inline(always)]
     pub fn force_ack_with_err_15(&self) -> FORCE_ACK_WITH_ERR_15_R {
         FORCE_ACK_WITH_ERR_15_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16 - NA"]
+    ///Bit 16 - NA
     #[inline(always)]
     pub fn force_dphy_errors_0(&self) -> FORCE_DPHY_ERRORS_0_R {
         FORCE_DPHY_ERRORS_0_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 17 - NA"]
+    ///Bit 17 - NA
     #[inline(always)]
     pub fn force_dphy_errors_1(&self) -> FORCE_DPHY_ERRORS_1_R {
         FORCE_DPHY_ERRORS_1_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - NA"]
+    ///Bit 18 - NA
     #[inline(always)]
     pub fn force_dphy_errors_2(&self) -> FORCE_DPHY_ERRORS_2_R {
         FORCE_DPHY_ERRORS_2_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bit 19 - NA"]
+    ///Bit 19 - NA
     #[inline(always)]
     pub fn force_dphy_errors_3(&self) -> FORCE_DPHY_ERRORS_3_R {
         FORCE_DPHY_ERRORS_3_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bit 20 - NA"]
+    ///Bit 20 - NA
     #[inline(always)]
     pub fn force_dphy_errors_4(&self) -> FORCE_DPHY_ERRORS_4_R {
         FORCE_DPHY_ERRORS_4_R::new(((self.bits >> 20) & 1) != 0)
@@ -222,147 +222,149 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - NA"]
+    ///Bit 0 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_0(&mut self) -> FORCE_ACK_WITH_ERR_0_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_0_W::new(self, 0)
     }
-    #[doc = "Bit 1 - NA"]
+    ///Bit 1 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_1(&mut self) -> FORCE_ACK_WITH_ERR_1_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_1_W::new(self, 1)
     }
-    #[doc = "Bit 2 - NA"]
+    ///Bit 2 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_2(&mut self) -> FORCE_ACK_WITH_ERR_2_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_2_W::new(self, 2)
     }
-    #[doc = "Bit 3 - NA"]
+    ///Bit 3 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_3(&mut self) -> FORCE_ACK_WITH_ERR_3_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_3_W::new(self, 3)
     }
-    #[doc = "Bit 4 - NA"]
+    ///Bit 4 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_4(&mut self) -> FORCE_ACK_WITH_ERR_4_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_4_W::new(self, 4)
     }
-    #[doc = "Bit 5 - NA"]
+    ///Bit 5 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_5(&mut self) -> FORCE_ACK_WITH_ERR_5_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_5_W::new(self, 5)
     }
-    #[doc = "Bit 6 - NA"]
+    ///Bit 6 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_6(&mut self) -> FORCE_ACK_WITH_ERR_6_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_6_W::new(self, 6)
     }
-    #[doc = "Bit 7 - NA"]
+    ///Bit 7 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_7(&mut self) -> FORCE_ACK_WITH_ERR_7_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_7_W::new(self, 7)
     }
-    #[doc = "Bit 8 - NA"]
+    ///Bit 8 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_8(&mut self) -> FORCE_ACK_WITH_ERR_8_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_8_W::new(self, 8)
     }
-    #[doc = "Bit 9 - NA"]
+    ///Bit 9 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_9(&mut self) -> FORCE_ACK_WITH_ERR_9_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_9_W::new(self, 9)
     }
-    #[doc = "Bit 10 - NA"]
+    ///Bit 10 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_10(&mut self) -> FORCE_ACK_WITH_ERR_10_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_10_W::new(self, 10)
     }
-    #[doc = "Bit 11 - NA"]
+    ///Bit 11 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_11(&mut self) -> FORCE_ACK_WITH_ERR_11_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_11_W::new(self, 11)
     }
-    #[doc = "Bit 12 - NA"]
+    ///Bit 12 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_12(&mut self) -> FORCE_ACK_WITH_ERR_12_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_12_W::new(self, 12)
     }
-    #[doc = "Bit 13 - NA"]
+    ///Bit 13 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_13(&mut self) -> FORCE_ACK_WITH_ERR_13_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_13_W::new(self, 13)
     }
-    #[doc = "Bit 14 - NA"]
+    ///Bit 14 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_14(&mut self) -> FORCE_ACK_WITH_ERR_14_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_14_W::new(self, 14)
     }
-    #[doc = "Bit 15 - NA"]
+    ///Bit 15 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_ack_with_err_15(&mut self) -> FORCE_ACK_WITH_ERR_15_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_15_W::new(self, 15)
     }
-    #[doc = "Bit 16 - NA"]
+    ///Bit 16 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_dphy_errors_0(&mut self) -> FORCE_DPHY_ERRORS_0_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_0_W::new(self, 16)
     }
-    #[doc = "Bit 17 - NA"]
+    ///Bit 17 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_dphy_errors_1(&mut self) -> FORCE_DPHY_ERRORS_1_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_1_W::new(self, 17)
     }
-    #[doc = "Bit 18 - NA"]
+    ///Bit 18 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_dphy_errors_2(&mut self) -> FORCE_DPHY_ERRORS_2_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_2_W::new(self, 18)
     }
-    #[doc = "Bit 19 - NA"]
+    ///Bit 19 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_dphy_errors_3(&mut self) -> FORCE_DPHY_ERRORS_3_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_3_W::new(self, 19)
     }
-    #[doc = "Bit 20 - NA"]
+    ///Bit 20 - NA
     #[inline(always)]
     #[must_use]
     pub fn force_dphy_errors_4(&mut self) -> FORCE_DPHY_ERRORS_4_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_4_W::new(self, 20)
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_force0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_force0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`int_force0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_force0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INT_FORCE0_SPEC;
 impl crate::RegisterSpec for INT_FORCE0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_force0::R`](R) reader structure"]
+///`read()` method returns [`int_force0::R`](R) reader structure
 impl crate::Readable for INT_FORCE0_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`int_force0::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`int_force0::W`](W) writer structure
 impl crate::Writable for INT_FORCE0_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets INT_FORCE0 to value 0"]
+///`reset()` method sets INT_FORCE0 to value 0
 impl crate::Resettable for INT_FORCE0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

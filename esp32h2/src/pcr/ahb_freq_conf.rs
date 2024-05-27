@@ -1,13 +1,13 @@
-#[doc = "Register `AHB_FREQ_CONF` reader"]
+///Register `AHB_FREQ_CONF` reader
 pub type R = crate::R<AHB_FREQ_CONF_SPEC>;
-#[doc = "Register `AHB_FREQ_CONF` writer"]
+///Register `AHB_FREQ_CONF` writer
 pub type W = crate::W<AHB_FREQ_CONF_SPEC>;
-#[doc = "Field `AHB_DIV_NUM` reader - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM."]
+///Field `AHB_DIV_NUM` reader - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM.
 pub type AHB_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `AHB_DIV_NUM` writer - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM."]
+///Field `AHB_DIV_NUM` writer - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM.
 pub type AHB_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
-    #[doc = "Bits 0:7 - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM."]
+    ///Bits 0:7 - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM.
     #[inline(always)]
     pub fn ahb_div_num(&self) -> AHB_DIV_NUM_R {
         AHB_DIV_NUM_R::new((self.bits & 0xff) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM."]
+    ///Bits 0:7 - Set this field to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_DIV_NUM.
     #[inline(always)]
     #[must_use]
     pub fn ahb_div_num(&mut self) -> AHB_DIV_NUM_W<AHB_FREQ_CONF_SPEC> {
         AHB_DIV_NUM_W::new(self, 0)
     }
 }
-#[doc = "AHB_FREQ configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahb_freq_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahb_freq_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**AHB_FREQ configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`ahb_freq_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ahb_freq_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct AHB_FREQ_CONF_SPEC;
 impl crate::RegisterSpec for AHB_FREQ_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`ahb_freq_conf::R`](R) reader structure"]
+///`read()` method returns [`ahb_freq_conf::R`](R) reader structure
 impl crate::Readable for AHB_FREQ_CONF_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`ahb_freq_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`ahb_freq_conf::W`](W) writer structure
 impl crate::Writable for AHB_FREQ_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets AHB_FREQ_CONF to value 0"]
+///`reset()` method sets AHB_FREQ_CONF to value 0
 impl crate::Resettable for AHB_FREQ_CONF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

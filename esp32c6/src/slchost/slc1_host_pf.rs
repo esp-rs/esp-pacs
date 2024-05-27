@@ -1,9 +1,9 @@
-#[doc = "Register `SLC1_HOST_PF` reader"]
+///Register `SLC1_HOST_PF` reader
 pub type R = crate::R<SLC1_HOST_PF_SPEC>;
-#[doc = "Field `SLC1_PF_DATA` reader - *******Description***********"]
+///Field `SLC1_PF_DATA` reader - *******Description***********
 pub type SLC1_PF_DATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     pub fn slc1_pf_data(&self) -> SLC1_PF_DATA_R {
         SLC1_PF_DATA_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct SLC1_HOST_PF_SPEC;
 impl crate::RegisterSpec for SLC1_HOST_PF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`slc1_host_pf::R`](R) reader structure"]
+///`read()` method returns [`slc1_host_pf::R`](R) reader structure
 impl crate::Readable for SLC1_HOST_PF_SPEC {}
-#[doc = "`reset()` method sets SLC1_HOST_PF to value 0"]
+///`reset()` method sets SLC1_HOST_PF to value 0
 impl crate::Resettable for SLC1_HOST_PF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

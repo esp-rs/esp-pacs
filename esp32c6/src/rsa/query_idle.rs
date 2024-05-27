@@ -1,9 +1,9 @@
-#[doc = "Register `QUERY_IDLE` reader"]
+///Register `QUERY_IDLE` reader
 pub type R = crate::R<QUERY_IDLE_SPEC>;
-#[doc = "Field `QUERY_IDLE` reader - query rsa idle. 1'b0: busy, 1'b1: idle"]
+///Field `QUERY_IDLE` reader - query rsa idle. 1'b0: busy, 1'b1: idle
 pub type QUERY_IDLE_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - query rsa idle. 1'b0: busy, 1'b1: idle"]
+    ///Bit 0 - query rsa idle. 1'b0: busy, 1'b1: idle
     #[inline(always)]
     pub fn query_idle(&self) -> QUERY_IDLE_R {
         QUERY_IDLE_R::new((self.bits & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RSA query idle register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_idle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**RSA query idle register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`query_idle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct QUERY_IDLE_SPEC;
 impl crate::RegisterSpec for QUERY_IDLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`query_idle::R`](R) reader structure"]
+///`read()` method returns [`query_idle::R`](R) reader structure
 impl crate::Readable for QUERY_IDLE_SPEC {}
-#[doc = "`reset()` method sets QUERY_IDLE to value 0"]
+///`reset()` method sets QUERY_IDLE to value 0
 impl crate::Resettable for QUERY_IDLE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

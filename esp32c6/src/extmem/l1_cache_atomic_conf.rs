@@ -1,9 +1,9 @@
-#[doc = "Register `L1_CACHE_ATOMIC_CONF` reader"]
+///Register `L1_CACHE_ATOMIC_CONF` reader
 pub type R = crate::R<L1_CACHE_ATOMIC_CONF_SPEC>;
-#[doc = "Field `L1_CACHE_ATOMIC_EN` reader - The bit is used to enable atomic feature on L1-Cache when multiple cores access L1-Cache. 1: disable, 1: enable."]
+///Field `L1_CACHE_ATOMIC_EN` reader - The bit is used to enable atomic feature on L1-Cache when multiple cores access L1-Cache. 1: disable, 1: enable.
 pub type L1_CACHE_ATOMIC_EN_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - The bit is used to enable atomic feature on L1-Cache when multiple cores access L1-Cache. 1: disable, 1: enable."]
+    ///Bit 0 - The bit is used to enable atomic feature on L1-Cache when multiple cores access L1-Cache. 1: disable, 1: enable.
     #[inline(always)]
     pub fn l1_cache_atomic_en(&self) -> L1_CACHE_ATOMIC_EN_R {
         L1_CACHE_ATOMIC_EN_R::new((self.bits & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 Cache atomic feature configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_atomic_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**L1 Cache atomic feature configure register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_atomic_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct L1_CACHE_ATOMIC_CONF_SPEC;
 impl crate::RegisterSpec for L1_CACHE_ATOMIC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`l1_cache_atomic_conf::R`](R) reader structure"]
+///`read()` method returns [`l1_cache_atomic_conf::R`](R) reader structure
 impl crate::Readable for L1_CACHE_ATOMIC_CONF_SPEC {}
-#[doc = "`reset()` method sets L1_CACHE_ATOMIC_CONF to value 0"]
+///`reset()` method sets L1_CACHE_ATOMIC_CONF to value 0
 impl crate::Resettable for L1_CACHE_ATOMIC_CONF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

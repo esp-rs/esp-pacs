@@ -1,13 +1,13 @@
-#[doc = "Register `CORE_0_RCD_PDEBUGENABLE` reader"]
+///Register `CORE_0_RCD_PDEBUGENABLE` reader
 pub type R = crate::R<CORE_0_RCD_PDEBUGENABLE_SPEC>;
-#[doc = "Register `CORE_0_RCD_PDEBUGENABLE` writer"]
+///Register `CORE_0_RCD_PDEBUGENABLE` writer
 pub type W = crate::W<CORE_0_RCD_PDEBUGENABLE_SPEC>;
-#[doc = "Field `CORE_0_RCD_PDEBUGENABLE` reader - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
+///Field `CORE_0_RCD_PDEBUGENABLE` reader - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC
 pub type CORE_0_RCD_PDEBUGENABLE_R = crate::BitReader;
-#[doc = "Field `CORE_0_RCD_PDEBUGENABLE` writer - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
+///Field `CORE_0_RCD_PDEBUGENABLE` writer - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC
 pub type CORE_0_RCD_PDEBUGENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
+    ///Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC
     #[inline(always)]
     pub fn core_0_rcd_pdebugenable(&self) -> CORE_0_RCD_PDEBUGENABLE_R {
         CORE_0_RCD_PDEBUGENABLE_R::new((self.bits & 1) != 0)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC"]
+    ///Bit 0 - Core0 Pdebugenable,set 1 to open core0 Pdebug interface,then can get core0 PC
     #[inline(always)]
     #[must_use]
     pub fn core_0_rcd_pdebugenable(
@@ -31,20 +31,22 @@ impl W {
         CORE_0_RCD_PDEBUGENABLE_W::new(self, 0)
     }
 }
-#[doc = "core0 pdebug configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_rcd_pdebugenable::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_rcd_pdebugenable::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**core0 pdebug configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_rcd_pdebugenable::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_rcd_pdebugenable::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_RCD_PDEBUGENABLE_SPEC;
 impl crate::RegisterSpec for CORE_0_RCD_PDEBUGENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_rcd_pdebugenable::R`](R) reader structure"]
+///`read()` method returns [`core_0_rcd_pdebugenable::R`](R) reader structure
 impl crate::Readable for CORE_0_RCD_PDEBUGENABLE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`core_0_rcd_pdebugenable::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`core_0_rcd_pdebugenable::W`](W) writer structure
 impl crate::Writable for CORE_0_RCD_PDEBUGENABLE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CORE_0_RCD_PDEBUGENABLE to value 0"]
+///`reset()` method sets CORE_0_RCD_PDEBUGENABLE to value 0
 impl crate::Resettable for CORE_0_RCD_PDEBUGENABLE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,13 +1,13 @@
-#[doc = "Register `FUNC2_2` reader"]
+///Register `FUNC2_2` reader
 pub type R = crate::R<FUNC2_2_SPEC>;
-#[doc = "Register `FUNC2_2` writer"]
+///Register `FUNC2_2` writer
 pub type W = crate::W<FUNC2_2_SPEC>;
-#[doc = "Field `SLC_FUNC1_MDSTAT` reader - *******Description***********"]
+///Field `SLC_FUNC1_MDSTAT` reader - *******Description***********
 pub type SLC_FUNC1_MDSTAT_R = crate::BitReader;
-#[doc = "Field `SLC_FUNC1_MDSTAT` writer - *******Description***********"]
+///Field `SLC_FUNC1_MDSTAT` writer - *******Description***********
 pub type SLC_FUNC1_MDSTAT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - *******Description***********"]
+    ///Bit 0 - *******Description***********
     #[inline(always)]
     pub fn slc_func1_mdstat(&self) -> SLC_FUNC1_MDSTAT_R {
         SLC_FUNC1_MDSTAT_R::new((self.bits & 1) != 0)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - *******Description***********"]
+    ///Bit 0 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slc_func1_mdstat(&mut self) -> SLC_FUNC1_MDSTAT_W<FUNC2_2_SPEC> {
@@ -34,15 +34,15 @@ pub struct FUNC2_2_SPEC;
 impl crate::RegisterSpec for FUNC2_2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`func2_2::R`](R) reader structure"]
+///`read()` method returns [`func2_2::R`](R) reader structure
 impl crate::Readable for FUNC2_2_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`func2_2::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`func2_2::W`](W) writer structure
 impl crate::Writable for FUNC2_2_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets FUNC2_2 to value 0x01"]
+///`reset()` method sets FUNC2_2 to value 0x01
 impl crate::Resettable for FUNC2_2_SPEC {
     const RESET_VALUE: u32 = 0x01;
 }

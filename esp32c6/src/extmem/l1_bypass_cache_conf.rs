@@ -1,37 +1,37 @@
-#[doc = "Register `L1_BYPASS_CACHE_CONF` reader"]
+///Register `L1_BYPASS_CACHE_CONF` reader
 pub type R = crate::R<L1_BYPASS_CACHE_CONF_SPEC>;
-#[doc = "Field `BYPASS_L1_ICACHE0_EN` reader - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass."]
+///Field `BYPASS_L1_ICACHE0_EN` reader - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass.
 pub type BYPASS_L1_ICACHE0_EN_R = crate::BitReader;
-#[doc = "Field `BYPASS_L1_ICACHE1_EN` reader - The bit is used to enable bypass L1-ICache1. 0: disable bypass, 1: enable bypass."]
+///Field `BYPASS_L1_ICACHE1_EN` reader - The bit is used to enable bypass L1-ICache1. 0: disable bypass, 1: enable bypass.
 pub type BYPASS_L1_ICACHE1_EN_R = crate::BitReader;
-#[doc = "Field `BYPASS_L1_ICACHE2_EN` reader - Reserved"]
+///Field `BYPASS_L1_ICACHE2_EN` reader - Reserved
 pub type BYPASS_L1_ICACHE2_EN_R = crate::BitReader;
-#[doc = "Field `BYPASS_L1_ICACHE3_EN` reader - Reserved"]
+///Field `BYPASS_L1_ICACHE3_EN` reader - Reserved
 pub type BYPASS_L1_ICACHE3_EN_R = crate::BitReader;
-#[doc = "Field `BYPASS_L1_DCACHE_EN` reader - The bit is used to enable bypass L1-DCache. 0: disable bypass, 1: enable bypass."]
+///Field `BYPASS_L1_DCACHE_EN` reader - The bit is used to enable bypass L1-DCache. 0: disable bypass, 1: enable bypass.
 pub type BYPASS_L1_DCACHE_EN_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass."]
+    ///Bit 0 - The bit is used to enable bypass L1-ICache0. 0: disable bypass, 1: enable bypass.
     #[inline(always)]
     pub fn bypass_l1_icache0_en(&self) -> BYPASS_L1_ICACHE0_EN_R {
         BYPASS_L1_ICACHE0_EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The bit is used to enable bypass L1-ICache1. 0: disable bypass, 1: enable bypass."]
+    ///Bit 1 - The bit is used to enable bypass L1-ICache1. 0: disable bypass, 1: enable bypass.
     #[inline(always)]
     pub fn bypass_l1_icache1_en(&self) -> BYPASS_L1_ICACHE1_EN_R {
         BYPASS_L1_ICACHE1_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Reserved"]
+    ///Bit 2 - Reserved
     #[inline(always)]
     pub fn bypass_l1_icache2_en(&self) -> BYPASS_L1_ICACHE2_EN_R {
         BYPASS_L1_ICACHE2_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Reserved"]
+    ///Bit 3 - Reserved
     #[inline(always)]
     pub fn bypass_l1_icache3_en(&self) -> BYPASS_L1_ICACHE3_EN_R {
         BYPASS_L1_ICACHE3_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - The bit is used to enable bypass L1-DCache. 0: disable bypass, 1: enable bypass."]
+    ///Bit 4 - The bit is used to enable bypass L1-DCache. 0: disable bypass, 1: enable bypass.
     #[inline(always)]
     pub fn bypass_l1_dcache_en(&self) -> BYPASS_L1_DCACHE_EN_R {
         BYPASS_L1_DCACHE_EN_R::new(((self.bits >> 4) & 1) != 0)
@@ -49,14 +49,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Bypass Cache configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_bypass_cache_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Bypass Cache configure register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`l1_bypass_cache_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct L1_BYPASS_CACHE_CONF_SPEC;
 impl crate::RegisterSpec for L1_BYPASS_CACHE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`l1_bypass_cache_conf::R`](R) reader structure"]
+///`read()` method returns [`l1_bypass_cache_conf::R`](R) reader structure
 impl crate::Readable for L1_BYPASS_CACHE_CONF_SPEC {}
-#[doc = "`reset()` method sets L1_BYPASS_CACHE_CONF to value 0"]
+///`reset()` method sets L1_BYPASS_CACHE_CONF to value 0
 impl crate::Resettable for L1_BYPASS_CACHE_CONF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

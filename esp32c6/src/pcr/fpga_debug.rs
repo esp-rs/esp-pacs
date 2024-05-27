@@ -1,13 +1,13 @@
-#[doc = "Register `FPGA_DEBUG` reader"]
+///Register `FPGA_DEBUG` reader
 pub type R = crate::R<FPGA_DEBUG_SPEC>;
-#[doc = "Register `FPGA_DEBUG` writer"]
+///Register `FPGA_DEBUG` writer
 pub type W = crate::W<FPGA_DEBUG_SPEC>;
-#[doc = "Field `FPGA_DEBUG` reader - Only used in fpga debug."]
+///Field `FPGA_DEBUG` reader - Only used in fpga debug.
 pub type FPGA_DEBUG_R = crate::FieldReader<u32>;
-#[doc = "Field `FPGA_DEBUG` writer - Only used in fpga debug."]
+///Field `FPGA_DEBUG` writer - Only used in fpga debug.
 pub type FPGA_DEBUG_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Only used in fpga debug."]
+    ///Bits 0:31 - Only used in fpga debug.
     #[inline(always)]
     pub fn fpga_debug(&self) -> FPGA_DEBUG_R {
         FPGA_DEBUG_R::new(self.bits)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Only used in fpga debug."]
+    ///Bits 0:31 - Only used in fpga debug.
     #[inline(always)]
     #[must_use]
     pub fn fpga_debug(&mut self) -> FPGA_DEBUG_W<FPGA_DEBUG_SPEC> {
         FPGA_DEBUG_W::new(self, 0)
     }
 }
-#[doc = "fpga debug register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fpga_debug::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fpga_debug::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**fpga debug register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`fpga_debug::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fpga_debug::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct FPGA_DEBUG_SPEC;
 impl crate::RegisterSpec for FPGA_DEBUG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`fpga_debug::R`](R) reader structure"]
+///`read()` method returns [`fpga_debug::R`](R) reader structure
 impl crate::Readable for FPGA_DEBUG_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`fpga_debug::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`fpga_debug::W`](W) writer structure
 impl crate::Writable for FPGA_DEBUG_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets FPGA_DEBUG to value 0xffff_ffff"]
+///`reset()` method sets FPGA_DEBUG to value 0xffff_ffff
 impl crate::Resettable for FPGA_DEBUG_SPEC {
     const RESET_VALUE: u32 = 0xffff_ffff;
 }

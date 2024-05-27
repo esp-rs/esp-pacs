@@ -1,13 +1,13 @@
-#[doc = "Register `ICACHE_SYNC_SIZE` reader"]
+///Register `ICACHE_SYNC_SIZE` reader
 pub type R = crate::R<ICACHE_SYNC_SIZE_SPEC>;
-#[doc = "Register `ICACHE_SYNC_SIZE` writer"]
+///Register `ICACHE_SYNC_SIZE` writer
 pub type W = crate::W<ICACHE_SYNC_SIZE_SPEC>;
-#[doc = "Field `ICACHE_SYNC_SIZE` reader - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG."]
+///Field `ICACHE_SYNC_SIZE` reader - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG.
 pub type ICACHE_SYNC_SIZE_R = crate::FieldReader<u32>;
-#[doc = "Field `ICACHE_SYNC_SIZE` writer - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG."]
+///Field `ICACHE_SYNC_SIZE` writer - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG.
 pub type ICACHE_SYNC_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 23, u32>;
 impl R {
-    #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG."]
+    ///Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG.
     #[inline(always)]
     pub fn icache_sync_size(&self) -> ICACHE_SYNC_SIZE_R {
         ICACHE_SYNC_SIZE_R::new(self.bits & 0x007f_ffff)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG."]
+    ///Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with ICACHE_SYNC_ADDR_REG.
     #[inline(always)]
     #[must_use]
     pub fn icache_sync_size(&mut self) -> ICACHE_SYNC_SIZE_W<ICACHE_SYNC_SIZE_SPEC> {
@@ -34,15 +34,15 @@ pub struct ICACHE_SYNC_SIZE_SPEC;
 impl crate::RegisterSpec for ICACHE_SYNC_SIZE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`icache_sync_size::R`](R) reader structure"]
+///`read()` method returns [`icache_sync_size::R`](R) reader structure
 impl crate::Readable for ICACHE_SYNC_SIZE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`icache_sync_size::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`icache_sync_size::W`](W) writer structure
 impl crate::Writable for ICACHE_SYNC_SIZE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ICACHE_SYNC_SIZE to value 0"]
+///`reset()` method sets ICACHE_SYNC_SIZE to value 0
 impl crate::Resettable for ICACHE_SYNC_SIZE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

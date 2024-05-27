@@ -1,9 +1,9 @@
-#[doc = "Register `MULT_INT_ST` reader"]
+///Register `MULT_INT_ST` reader
 pub type R = crate::R<MULT_INT_ST_SPEC>;
-#[doc = "Field `CALC_DONE` reader - The masked interrupt status bit for the ecc_calc_done_int interrupt"]
+///Field `CALC_DONE` reader - The masked interrupt status bit for the ecc_calc_done_int interrupt
 pub type CALC_DONE_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - The masked interrupt status bit for the ecc_calc_done_int interrupt"]
+    ///Bit 0 - The masked interrupt status bit for the ecc_calc_done_int interrupt
     #[inline(always)]
     pub fn calc_done(&self) -> CALC_DONE_R {
         CALC_DONE_R::new((self.bits & 1) != 0)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ECC interrupt status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**ECC interrupt status register.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`mult_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct MULT_INT_ST_SPEC;
 impl crate::RegisterSpec for MULT_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`mult_int_st::R`](R) reader structure"]
+///`read()` method returns [`mult_int_st::R`](R) reader structure
 impl crate::Readable for MULT_INT_ST_SPEC {}
-#[doc = "`reset()` method sets MULT_INT_ST to value 0"]
+///`reset()` method sets MULT_INT_ST to value 0
 impl crate::Resettable for MULT_INT_ST_SPEC {
     const RESET_VALUE: u32 = 0;
 }

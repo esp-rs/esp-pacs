@@ -1,13 +1,13 @@
-#[doc = "Register `SLCHOSTDATE` reader"]
+///Register `SLCHOSTDATE` reader
 pub type R = crate::R<SLCHOSTDATE_SPEC>;
-#[doc = "Register `SLCHOSTDATE` writer"]
+///Register `SLCHOSTDATE` writer
 pub type W = crate::W<SLCHOSTDATE_SPEC>;
-#[doc = "Field `SLCHOST_DATE` reader - *******Description***********"]
+///Field `SLCHOST_DATE` reader - *******Description***********
 pub type SLCHOST_DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `SLCHOST_DATE` writer - *******Description***********"]
+///Field `SLCHOST_DATE` writer - *******Description***********
 pub type SLCHOST_DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     pub fn slchost_date(&self) -> SLCHOST_DATE_R {
         SLCHOST_DATE_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     #[must_use]
     pub fn slchost_date(&mut self) -> SLCHOST_DATE_W<SLCHOSTDATE_SPEC> {
@@ -34,15 +34,15 @@ pub struct SLCHOSTDATE_SPEC;
 impl crate::RegisterSpec for SLCHOSTDATE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`slchostdate::R`](R) reader structure"]
+///`read()` method returns [`slchostdate::R`](R) reader structure
 impl crate::Readable for SLCHOSTDATE_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`slchostdate::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`slchostdate::W`](W) writer structure
 impl crate::Writable for SLCHOSTDATE_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets SLCHOSTDATE to value 0x2106_0700"]
+///`reset()` method sets SLCHOSTDATE to value 0x2106_0700
 impl crate::Resettable for SLCHOSTDATE_SPEC {
     const RESET_VALUE: u32 = 0x2106_0700;
 }

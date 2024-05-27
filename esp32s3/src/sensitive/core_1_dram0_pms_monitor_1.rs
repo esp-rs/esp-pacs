@@ -1,22 +1,22 @@
-#[doc = "Register `CORE_1_DRAM0_PMS_MONITOR_1` reader"]
+///Register `CORE_1_DRAM0_PMS_MONITOR_1` reader
 pub type R = crate::R<CORE_1_DRAM0_PMS_MONITOR_1_SPEC>;
-#[doc = "Register `CORE_1_DRAM0_PMS_MONITOR_1` writer"]
+///Register `CORE_1_DRAM0_PMS_MONITOR_1` writer
 pub type W = crate::W<CORE_1_DRAM0_PMS_MONITOR_1_SPEC>;
-#[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR` reader - Set 1 to clear core1 dram0 permission monior interrupt."]
+///Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR` reader - Set 1 to clear core1 dram0 permission monior interrupt.
 pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_R = crate::BitReader;
-#[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR` writer - Set 1 to clear core1 dram0 permission monior interrupt."]
+///Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR` writer - Set 1 to clear core1 dram0 permission monior interrupt.
 pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN` reader - Set 1 to enable core1 dram0 permission monitor interrupt."]
+///Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN` reader - Set 1 to enable core1 dram0 permission monitor interrupt.
 pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN_R = crate::BitReader;
-#[doc = "Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN` writer - Set 1 to enable core1 dram0 permission monitor interrupt."]
+///Field `CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN` writer - Set 1 to enable core1 dram0 permission monitor interrupt.
 pub type CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Set 1 to clear core1 dram0 permission monior interrupt."]
+    ///Bit 0 - Set 1 to clear core1 dram0 permission monior interrupt.
     #[inline(always)]
     pub fn core_1_dram0_pms_monitor_violate_clr(&self) -> CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_R {
         CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Set 1 to enable core1 dram0 permission monitor interrupt."]
+    ///Bit 1 - Set 1 to enable core1 dram0 permission monitor interrupt.
     #[inline(always)]
     pub fn core_1_dram0_pms_monitor_violate_en(&self) -> CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN_R {
         CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN_R::new(((self.bits >> 1) & 1) != 0)
@@ -38,7 +38,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set 1 to clear core1 dram0 permission monior interrupt."]
+    ///Bit 0 - Set 1 to clear core1 dram0 permission monior interrupt.
     #[inline(always)]
     #[must_use]
     pub fn core_1_dram0_pms_monitor_violate_clr(
@@ -46,7 +46,7 @@ impl W {
     ) -> CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_W<CORE_1_DRAM0_PMS_MONITOR_1_SPEC> {
         CORE_1_DRAM0_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Set 1 to enable core1 dram0 permission monitor interrupt."]
+    ///Bit 1 - Set 1 to enable core1 dram0 permission monitor interrupt.
     #[inline(always)]
     #[must_use]
     pub fn core_1_dram0_pms_monitor_violate_en(
@@ -55,20 +55,22 @@ impl W {
         CORE_1_DRAM0_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
 }
-#[doc = "core1 dram0 permission monitor configuration register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_dram0_pms_monitor_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_1_dram0_pms_monitor_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**core1 dram0 permission monitor configuration register 1
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_1_dram0_pms_monitor_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_1_dram0_pms_monitor_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_1_DRAM0_PMS_MONITOR_1_SPEC;
 impl crate::RegisterSpec for CORE_1_DRAM0_PMS_MONITOR_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_1_dram0_pms_monitor_1::R`](R) reader structure"]
+///`read()` method returns [`core_1_dram0_pms_monitor_1::R`](R) reader structure
 impl crate::Readable for CORE_1_DRAM0_PMS_MONITOR_1_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`core_1_dram0_pms_monitor_1::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`core_1_dram0_pms_monitor_1::W`](W) writer structure
 impl crate::Writable for CORE_1_DRAM0_PMS_MONITOR_1_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CORE_1_DRAM0_PMS_MONITOR_1 to value 0x03"]
+///`reset()` method sets CORE_1_DRAM0_PMS_MONITOR_1 to value 0x03
 impl crate::Resettable for CORE_1_DRAM0_PMS_MONITOR_1_SPEC {
     const RESET_VALUE: u32 = 0x03;
 }

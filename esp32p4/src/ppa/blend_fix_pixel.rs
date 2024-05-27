@@ -1,13 +1,13 @@
-#[doc = "Register `BLEND_FIX_PIXEL` reader"]
+///Register `BLEND_FIX_PIXEL` reader
 pub type R = crate::R<BLEND_FIX_PIXEL_SPEC>;
-#[doc = "Register `BLEND_FIX_PIXEL` writer"]
+///Register `BLEND_FIX_PIXEL` writer
 pub type W = crate::W<BLEND_FIX_PIXEL_SPEC>;
-#[doc = "Field `BLEND_TX_FIX_PIXEL` reader - The configure fix pixel in fix pixel filling mode for blender engine."]
+///Field `BLEND_TX_FIX_PIXEL` reader - The configure fix pixel in fix pixel filling mode for blender engine.
 pub type BLEND_TX_FIX_PIXEL_R = crate::FieldReader<u32>;
-#[doc = "Field `BLEND_TX_FIX_PIXEL` writer - The configure fix pixel in fix pixel filling mode for blender engine."]
+///Field `BLEND_TX_FIX_PIXEL` writer - The configure fix pixel in fix pixel filling mode for blender engine.
 pub type BLEND_TX_FIX_PIXEL_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - The configure fix pixel in fix pixel filling mode for blender engine."]
+    ///Bits 0:31 - The configure fix pixel in fix pixel filling mode for blender engine.
     #[inline(always)]
     pub fn blend_tx_fix_pixel(&self) -> BLEND_TX_FIX_PIXEL_R {
         BLEND_TX_FIX_PIXEL_R::new(self.bits)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The configure fix pixel in fix pixel filling mode for blender engine."]
+    ///Bits 0:31 - The configure fix pixel in fix pixel filling mode for blender engine.
     #[inline(always)]
     #[must_use]
     pub fn blend_tx_fix_pixel(&mut self) -> BLEND_TX_FIX_PIXEL_W<BLEND_FIX_PIXEL_SPEC> {
         BLEND_TX_FIX_PIXEL_W::new(self, 0)
     }
 }
-#[doc = "Blending engine fix pixel register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blend_fix_pixel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blend_fix_pixel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Blending engine fix pixel register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`blend_fix_pixel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blend_fix_pixel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct BLEND_FIX_PIXEL_SPEC;
 impl crate::RegisterSpec for BLEND_FIX_PIXEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`blend_fix_pixel::R`](R) reader structure"]
+///`read()` method returns [`blend_fix_pixel::R`](R) reader structure
 impl crate::Readable for BLEND_FIX_PIXEL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`blend_fix_pixel::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`blend_fix_pixel::W`](W) writer structure
 impl crate::Writable for BLEND_FIX_PIXEL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets BLEND_FIX_PIXEL to value 0"]
+///`reset()` method sets BLEND_FIX_PIXEL to value 0
 impl crate::Resettable for BLEND_FIX_PIXEL_SPEC {
     const RESET_VALUE: u32 = 0;
 }

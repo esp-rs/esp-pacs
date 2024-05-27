@@ -1,31 +1,31 @@
-#[doc = "Register `DCACHE_TAG_POWER_CTRL` reader"]
+///Register `DCACHE_TAG_POWER_CTRL` reader
 pub type R = crate::R<DCACHE_TAG_POWER_CTRL_SPEC>;
-#[doc = "Register `DCACHE_TAG_POWER_CTRL` writer"]
+///Register `DCACHE_TAG_POWER_CTRL` writer
 pub type W = crate::W<DCACHE_TAG_POWER_CTRL_SPEC>;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
+///Field `DCACHE_TAG_MEM_FORCE_ON` reader - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating.
 pub type DCACHE_TAG_MEM_FORCE_ON_R = crate::BitReader;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
+///Field `DCACHE_TAG_MEM_FORCE_ON` writer - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating.
 pub type DCACHE_TAG_MEM_FORCE_ON_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
+///Field `DCACHE_TAG_MEM_FORCE_PD` reader - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down
 pub type DCACHE_TAG_MEM_FORCE_PD_R = crate::BitReader;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
+///Field `DCACHE_TAG_MEM_FORCE_PD` writer - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down
 pub type DCACHE_TAG_MEM_FORCE_PD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up"]
+///Field `DCACHE_TAG_MEM_FORCE_PU` reader - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up
 pub type DCACHE_TAG_MEM_FORCE_PU_R = crate::BitReader;
-#[doc = "Field `DCACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up"]
+///Field `DCACHE_TAG_MEM_FORCE_PU` writer - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up
 pub type DCACHE_TAG_MEM_FORCE_PU_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
+    ///Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating.
     #[inline(always)]
     pub fn dcache_tag_mem_force_on(&self) -> DCACHE_TAG_MEM_FORCE_ON_R {
         DCACHE_TAG_MEM_FORCE_ON_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
+    ///Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down
     #[inline(always)]
     pub fn dcache_tag_mem_force_pd(&self) -> DCACHE_TAG_MEM_FORCE_PD_R {
         DCACHE_TAG_MEM_FORCE_PD_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up"]
+    ///Bit 2 - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up
     #[inline(always)]
     pub fn dcache_tag_mem_force_pu(&self) -> DCACHE_TAG_MEM_FORCE_PU_R {
         DCACHE_TAG_MEM_FORCE_PU_R::new(((self.bits >> 2) & 1) != 0)
@@ -42,7 +42,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
+    ///Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating.
     #[inline(always)]
     #[must_use]
     pub fn dcache_tag_mem_force_on(
@@ -50,7 +50,7 @@ impl W {
     ) -> DCACHE_TAG_MEM_FORCE_ON_W<DCACHE_TAG_POWER_CTRL_SPEC> {
         DCACHE_TAG_MEM_FORCE_ON_W::new(self, 0)
     }
-    #[doc = "Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
+    ///Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down
     #[inline(always)]
     #[must_use]
     pub fn dcache_tag_mem_force_pd(
@@ -58,7 +58,7 @@ impl W {
     ) -> DCACHE_TAG_MEM_FORCE_PD_W<DCACHE_TAG_POWER_CTRL_SPEC> {
         DCACHE_TAG_MEM_FORCE_PD_W::new(self, 1)
     }
-    #[doc = "Bit 2 - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up"]
+    ///Bit 2 - The bit is used to power dcache tag memory up, 0: follow rtc_lslp_pd, 1: power up
     #[inline(always)]
     #[must_use]
     pub fn dcache_tag_mem_force_pu(
@@ -72,15 +72,15 @@ pub struct DCACHE_TAG_POWER_CTRL_SPEC;
 impl crate::RegisterSpec for DCACHE_TAG_POWER_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dcache_tag_power_ctrl::R`](R) reader structure"]
+///`read()` method returns [`dcache_tag_power_ctrl::R`](R) reader structure
 impl crate::Readable for DCACHE_TAG_POWER_CTRL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dcache_tag_power_ctrl::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dcache_tag_power_ctrl::W`](W) writer structure
 impl crate::Writable for DCACHE_TAG_POWER_CTRL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DCACHE_TAG_POWER_CTRL to value 0x05"]
+///`reset()` method sets DCACHE_TAG_POWER_CTRL to value 0x05
 impl crate::Resettable for DCACHE_TAG_POWER_CTRL_SPEC {
     const RESET_VALUE: u32 = 0x05;
 }

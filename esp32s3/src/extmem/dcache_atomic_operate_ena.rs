@@ -1,13 +1,13 @@
-#[doc = "Register `DCACHE_ATOMIC_OPERATE_ENA` reader"]
+///Register `DCACHE_ATOMIC_OPERATE_ENA` reader
 pub type R = crate::R<DCACHE_ATOMIC_OPERATE_ENA_SPEC>;
-#[doc = "Register `DCACHE_ATOMIC_OPERATE_ENA` writer"]
+///Register `DCACHE_ATOMIC_OPERATE_ENA` writer
 pub type W = crate::W<DCACHE_ATOMIC_OPERATE_ENA_SPEC>;
-#[doc = "Field `DCACHE_ATOMIC_OPERATE_ENA` reader - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
+///Field `DCACHE_ATOMIC_OPERATE_ENA` reader - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation.
 pub type DCACHE_ATOMIC_OPERATE_ENA_R = crate::BitReader;
-#[doc = "Field `DCACHE_ATOMIC_OPERATE_ENA` writer - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
+///Field `DCACHE_ATOMIC_OPERATE_ENA` writer - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation.
 pub type DCACHE_ATOMIC_OPERATE_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
+    ///Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation.
     #[inline(always)]
     pub fn dcache_atomic_operate_ena(&self) -> DCACHE_ATOMIC_OPERATE_ENA_R {
         DCACHE_ATOMIC_OPERATE_ENA_R::new((self.bits & 1) != 0)
@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
+    ///Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation.
     #[inline(always)]
     #[must_use]
     pub fn dcache_atomic_operate_ena(
@@ -39,15 +39,15 @@ pub struct DCACHE_ATOMIC_OPERATE_ENA_SPEC;
 impl crate::RegisterSpec for DCACHE_ATOMIC_OPERATE_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dcache_atomic_operate_ena::R`](R) reader structure"]
+///`read()` method returns [`dcache_atomic_operate_ena::R`](R) reader structure
 impl crate::Readable for DCACHE_ATOMIC_OPERATE_ENA_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dcache_atomic_operate_ena::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dcache_atomic_operate_ena::W`](W) writer structure
 impl crate::Writable for DCACHE_ATOMIC_OPERATE_ENA_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DCACHE_ATOMIC_OPERATE_ENA to value 0x01"]
+///`reset()` method sets DCACHE_ATOMIC_OPERATE_ENA to value 0x01
 impl crate::Resettable for DCACHE_ATOMIC_OPERATE_ENA_SPEC {
     const RESET_VALUE: u32 = 0x01;
 }

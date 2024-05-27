@@ -1,9 +1,9 @@
-#[doc = "Register `TIME_HIGH1` reader"]
+///Register `TIME_HIGH1` reader
 pub type R = crate::R<TIME_HIGH1_SPEC>;
-#[doc = "Field `TIMER_VALUE1_HIGH` reader - Stores the higher 16 bits of RTC timer."]
+///Field `TIMER_VALUE1_HIGH` reader - Stores the higher 16 bits of RTC timer.
 pub type TIMER_VALUE1_HIGH_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:15 - Stores the higher 16 bits of RTC timer."]
+    ///Bits 0:15 - Stores the higher 16 bits of RTC timer.
     #[inline(always)]
     pub fn timer_value1_high(&self) -> TIMER_VALUE1_HIGH_R {
         TIMER_VALUE1_HIGH_R::new((self.bits & 0xffff) as u16)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Stores the higher 16 bits of RTC timer 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_high1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Stores the higher 16 bits of RTC timer 1
+
+You can [`read`](crate::generic::Reg::read) this register and get [`time_high1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct TIME_HIGH1_SPEC;
 impl crate::RegisterSpec for TIME_HIGH1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`time_high1::R`](R) reader structure"]
+///`read()` method returns [`time_high1::R`](R) reader structure
 impl crate::Readable for TIME_HIGH1_SPEC {}
-#[doc = "`reset()` method sets TIME_HIGH1 to value 0"]
+///`reset()` method sets TIME_HIGH1 to value 0
 impl crate::Resettable for TIME_HIGH1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

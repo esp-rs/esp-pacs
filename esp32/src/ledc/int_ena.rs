@@ -1,200 +1,200 @@
-#[doc = "Register `INT_ENA` reader"]
+///Register `INT_ENA` reader
 pub type R = crate::R<INT_ENA_SPEC>;
-#[doc = "Register `INT_ENA` writer"]
+///Register `INT_ENA` writer
 pub type W = crate::W<INT_ENA_SPEC>;
-#[doc = "Field `HSTIMER_OVF(0-3)` reader - The interrupt enable bit for high speed channel%s counter overflow interrupt."]
+///Field `HSTIMER_OVF(0-3)` reader - The interrupt enable bit for high speed channel%s counter overflow interrupt.
 pub type HSTIMER_OVF_R = crate::BitReader;
-#[doc = "Field `HSTIMER_OVF(0-3)` writer - The interrupt enable bit for high speed channel%s counter overflow interrupt."]
+///Field `HSTIMER_OVF(0-3)` writer - The interrupt enable bit for high speed channel%s counter overflow interrupt.
 pub type HSTIMER_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `LSTIMER_OVF(0-3)` reader - The interrupt enable bit for low speed channel%s counter overflow interrupt."]
+///Field `LSTIMER_OVF(0-3)` reader - The interrupt enable bit for low speed channel%s counter overflow interrupt.
 pub type LSTIMER_OVF_R = crate::BitReader;
-#[doc = "Field `LSTIMER_OVF(0-3)` writer - The interrupt enable bit for low speed channel%s counter overflow interrupt."]
+///Field `LSTIMER_OVF(0-3)` writer - The interrupt enable bit for low speed channel%s counter overflow interrupt.
 pub type LSTIMER_OVF_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_HSCH(0-7)` reader - The interrupt enable bit for high speed channel %s duty change done interrupt."]
+///Field `DUTY_CHNG_END_HSCH(0-7)` reader - The interrupt enable bit for high speed channel %s duty change done interrupt.
 pub type DUTY_CHNG_END_HSCH_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_HSCH(0-7)` writer - The interrupt enable bit for high speed channel %s duty change done interrupt."]
+///Field `DUTY_CHNG_END_HSCH(0-7)` writer - The interrupt enable bit for high speed channel %s duty change done interrupt.
 pub type DUTY_CHNG_END_HSCH_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DUTY_CHNG_END_LSCH(0-7)` reader - The interrupt enable bit for low speed channel %s duty change done interrupt."]
+///Field `DUTY_CHNG_END_LSCH(0-7)` reader - The interrupt enable bit for low speed channel %s duty change done interrupt.
 pub type DUTY_CHNG_END_LSCH_R = crate::BitReader;
-#[doc = "Field `DUTY_CHNG_END_LSCH(0-7)` writer - The interrupt enable bit for low speed channel %s duty change done interrupt."]
+///Field `DUTY_CHNG_END_LSCH(0-7)` writer - The interrupt enable bit for low speed channel %s duty change done interrupt.
 pub type DUTY_CHNG_END_LSCH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "The interrupt enable bit for high speed channel(0-3) counter overflow interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field"]
+    ///The interrupt enable bit for high speed channel(0-3) counter overflow interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field
     #[inline(always)]
     pub fn hstimer_ovf(&self, n: u8) -> HSTIMER_OVF_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         HSTIMER_OVF_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt enable bit for high speed channel(0-3) counter overflow interrupt."]
+    ///Iterator for array of:
+    ///The interrupt enable bit for high speed channel(0-3) counter overflow interrupt.
     #[inline(always)]
     pub fn hstimer_ovf_iter(&self) -> impl Iterator<Item = HSTIMER_OVF_R> + '_ {
         (0..4).map(move |n| HSTIMER_OVF_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 0 - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
+    ///Bit 0 - The interrupt enable bit for high speed channel0 counter overflow interrupt.
     #[inline(always)]
     pub fn hstimer0_ovf(&self) -> HSTIMER_OVF_R {
         HSTIMER_OVF_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The interrupt enable bit for high speed channel1 counter overflow interrupt."]
+    ///Bit 1 - The interrupt enable bit for high speed channel1 counter overflow interrupt.
     #[inline(always)]
     pub fn hstimer1_ovf(&self) -> HSTIMER_OVF_R {
         HSTIMER_OVF_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - The interrupt enable bit for high speed channel2 counter overflow interrupt."]
+    ///Bit 2 - The interrupt enable bit for high speed channel2 counter overflow interrupt.
     #[inline(always)]
     pub fn hstimer2_ovf(&self) -> HSTIMER_OVF_R {
         HSTIMER_OVF_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - The interrupt enable bit for high speed channel3 counter overflow interrupt."]
+    ///Bit 3 - The interrupt enable bit for high speed channel3 counter overflow interrupt.
     #[inline(always)]
     pub fn hstimer3_ovf(&self) -> HSTIMER_OVF_R {
         HSTIMER_OVF_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "The interrupt enable bit for low speed channel(0-3) counter overflow interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field"]
+    ///The interrupt enable bit for low speed channel(0-3) counter overflow interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field
     #[inline(always)]
     pub fn lstimer_ovf(&self, n: u8) -> LSTIMER_OVF_R {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         LSTIMER_OVF_R::new(((self.bits >> (n + 4)) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt enable bit for low speed channel(0-3) counter overflow interrupt."]
+    ///Iterator for array of:
+    ///The interrupt enable bit for low speed channel(0-3) counter overflow interrupt.
     #[inline(always)]
     pub fn lstimer_ovf_iter(&self) -> impl Iterator<Item = LSTIMER_OVF_R> + '_ {
         (0..4).map(move |n| LSTIMER_OVF_R::new(((self.bits >> (n + 4)) & 1) != 0))
     }
-    #[doc = "Bit 4 - The interrupt enable bit for low speed channel0 counter overflow interrupt."]
+    ///Bit 4 - The interrupt enable bit for low speed channel0 counter overflow interrupt.
     #[inline(always)]
     pub fn lstimer0_ovf(&self) -> LSTIMER_OVF_R {
         LSTIMER_OVF_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - The interrupt enable bit for low speed channel1 counter overflow interrupt."]
+    ///Bit 5 - The interrupt enable bit for low speed channel1 counter overflow interrupt.
     #[inline(always)]
     pub fn lstimer1_ovf(&self) -> LSTIMER_OVF_R {
         LSTIMER_OVF_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - The interrupt enable bit for low speed channel2 counter overflow interrupt."]
+    ///Bit 6 - The interrupt enable bit for low speed channel2 counter overflow interrupt.
     #[inline(always)]
     pub fn lstimer2_ovf(&self) -> LSTIMER_OVF_R {
         LSTIMER_OVF_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - The interrupt enable bit for low speed channel3 counter overflow interrupt."]
+    ///Bit 7 - The interrupt enable bit for low speed channel3 counter overflow interrupt.
     #[inline(always)]
     pub fn lstimer3_ovf(&self) -> LSTIMER_OVF_R {
         LSTIMER_OVF_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "The interrupt enable bit for high speed channel (0-7) duty change done interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field"]
+    ///The interrupt enable bit for high speed channel (0-7) duty change done interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field
     #[inline(always)]
     pub fn duty_chng_end_hsch(&self, n: u8) -> DUTY_CHNG_END_HSCH_R {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> (n + 8)) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt enable bit for high speed channel (0-7) duty change done interrupt."]
+    ///Iterator for array of:
+    ///The interrupt enable bit for high speed channel (0-7) duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch_iter(&self) -> impl Iterator<Item = DUTY_CHNG_END_HSCH_R> + '_ {
         (0..8).map(move |n| DUTY_CHNG_END_HSCH_R::new(((self.bits >> (n + 8)) & 1) != 0))
     }
-    #[doc = "Bit 8 - The interrupt enable bit for high speed channel 0 duty change done interrupt."]
+    ///Bit 8 - The interrupt enable bit for high speed channel 0 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch0(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - The interrupt enable bit for high speed channel 1 duty change done interrupt."]
+    ///Bit 9 - The interrupt enable bit for high speed channel 1 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch1(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - The interrupt enable bit for high speed channel 2 duty change done interrupt."]
+    ///Bit 10 - The interrupt enable bit for high speed channel 2 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch2(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - The interrupt enable bit for high speed channel 3 duty change done interrupt."]
+    ///Bit 11 - The interrupt enable bit for high speed channel 3 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch3(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - The interrupt enable bit for high speed channel 4 duty change done interrupt."]
+    ///Bit 12 - The interrupt enable bit for high speed channel 4 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch4(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 13 - The interrupt enable bit for high speed channel 5 duty change done interrupt."]
+    ///Bit 13 - The interrupt enable bit for high speed channel 5 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch5(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 13) & 1) != 0)
     }
-    #[doc = "Bit 14 - The interrupt enable bit for high speed channel 6 duty change done interrupt."]
+    ///Bit 14 - The interrupt enable bit for high speed channel 6 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch6(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - The interrupt enable bit for high speed channel 7 duty change done interrupt."]
+    ///Bit 15 - The interrupt enable bit for high speed channel 7 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_hsch7(&self) -> DUTY_CHNG_END_HSCH_R {
         DUTY_CHNG_END_HSCH_R::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "The interrupt enable bit for low speed channel (0-7) duty change done interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field"]
+    ///The interrupt enable bit for low speed channel (0-7) duty change done interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field
     #[inline(always)]
     pub fn duty_chng_end_lsch(&self, n: u8) -> DUTY_CHNG_END_LSCH_R {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> (n + 16)) & 1) != 0)
     }
-    #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt enable bit for low speed channel (0-7) duty change done interrupt."]
+    ///Iterator for array of:
+    ///The interrupt enable bit for low speed channel (0-7) duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch_iter(&self) -> impl Iterator<Item = DUTY_CHNG_END_LSCH_R> + '_ {
         (0..8).map(move |n| DUTY_CHNG_END_LSCH_R::new(((self.bits >> (n + 16)) & 1) != 0))
     }
-    #[doc = "Bit 16 - The interrupt enable bit for low speed channel 0 duty change done interrupt."]
+    ///Bit 16 - The interrupt enable bit for low speed channel 0 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch0(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 16) & 1) != 0)
     }
-    #[doc = "Bit 17 - The interrupt enable bit for low speed channel 1 duty change done interrupt."]
+    ///Bit 17 - The interrupt enable bit for low speed channel 1 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch1(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - The interrupt enable bit for low speed channel 2 duty change done interrupt."]
+    ///Bit 18 - The interrupt enable bit for low speed channel 2 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch2(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 18) & 1) != 0)
     }
-    #[doc = "Bit 19 - The interrupt enable bit for low speed channel 3 duty change done interrupt."]
+    ///Bit 19 - The interrupt enable bit for low speed channel 3 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch3(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bit 20 - The interrupt enable bit for low speed channel 4 duty change done interrupt."]
+    ///Bit 20 - The interrupt enable bit for low speed channel 4 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch4(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - The interrupt enable bit for low speed channel 5 duty change done interrupt."]
+    ///Bit 21 - The interrupt enable bit for low speed channel 5 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch5(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Bit 22 - The interrupt enable bit for low speed channel 6 duty change done interrupt."]
+    ///Bit 22 - The interrupt enable bit for low speed channel 6 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch6(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - The interrupt enable bit for low speed channel 7 duty change done interrupt."]
+    ///Bit 23 - The interrupt enable bit for low speed channel 7 duty change done interrupt.
     #[inline(always)]
     pub fn duty_chng_end_lsch7(&self) -> DUTY_CHNG_END_LSCH_R {
         DUTY_CHNG_END_LSCH_R::new(((self.bits >> 23) & 1) != 0)
@@ -232,9 +232,9 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "The interrupt enable bit for high speed channel(0-3) counter overflow interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field"]
+    ///The interrupt enable bit for high speed channel(0-3) counter overflow interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field
     #[inline(always)]
     #[must_use]
     pub fn hstimer_ovf(&mut self, n: u8) -> HSTIMER_OVF_W<INT_ENA_SPEC> {
@@ -242,33 +242,33 @@ impl W {
         [(); 4][n as usize];
         HSTIMER_OVF_W::new(self, n)
     }
-    #[doc = "Bit 0 - The interrupt enable bit for high speed channel0 counter overflow interrupt."]
+    ///Bit 0 - The interrupt enable bit for high speed channel0 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn hstimer0_ovf(&mut self) -> HSTIMER_OVF_W<INT_ENA_SPEC> {
         HSTIMER_OVF_W::new(self, 0)
     }
-    #[doc = "Bit 1 - The interrupt enable bit for high speed channel1 counter overflow interrupt."]
+    ///Bit 1 - The interrupt enable bit for high speed channel1 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn hstimer1_ovf(&mut self) -> HSTIMER_OVF_W<INT_ENA_SPEC> {
         HSTIMER_OVF_W::new(self, 1)
     }
-    #[doc = "Bit 2 - The interrupt enable bit for high speed channel2 counter overflow interrupt."]
+    ///Bit 2 - The interrupt enable bit for high speed channel2 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn hstimer2_ovf(&mut self) -> HSTIMER_OVF_W<INT_ENA_SPEC> {
         HSTIMER_OVF_W::new(self, 2)
     }
-    #[doc = "Bit 3 - The interrupt enable bit for high speed channel3 counter overflow interrupt."]
+    ///Bit 3 - The interrupt enable bit for high speed channel3 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn hstimer3_ovf(&mut self) -> HSTIMER_OVF_W<INT_ENA_SPEC> {
         HSTIMER_OVF_W::new(self, 3)
     }
-    #[doc = "The interrupt enable bit for low speed channel(0-3) counter overflow interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field"]
+    ///The interrupt enable bit for low speed channel(0-3) counter overflow interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field
     #[inline(always)]
     #[must_use]
     pub fn lstimer_ovf(&mut self, n: u8) -> LSTIMER_OVF_W<INT_ENA_SPEC> {
@@ -276,33 +276,33 @@ impl W {
         [(); 4][n as usize];
         LSTIMER_OVF_W::new(self, n + 4)
     }
-    #[doc = "Bit 4 - The interrupt enable bit for low speed channel0 counter overflow interrupt."]
+    ///Bit 4 - The interrupt enable bit for low speed channel0 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn lstimer0_ovf(&mut self) -> LSTIMER_OVF_W<INT_ENA_SPEC> {
         LSTIMER_OVF_W::new(self, 4)
     }
-    #[doc = "Bit 5 - The interrupt enable bit for low speed channel1 counter overflow interrupt."]
+    ///Bit 5 - The interrupt enable bit for low speed channel1 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn lstimer1_ovf(&mut self) -> LSTIMER_OVF_W<INT_ENA_SPEC> {
         LSTIMER_OVF_W::new(self, 5)
     }
-    #[doc = "Bit 6 - The interrupt enable bit for low speed channel2 counter overflow interrupt."]
+    ///Bit 6 - The interrupt enable bit for low speed channel2 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn lstimer2_ovf(&mut self) -> LSTIMER_OVF_W<INT_ENA_SPEC> {
         LSTIMER_OVF_W::new(self, 6)
     }
-    #[doc = "Bit 7 - The interrupt enable bit for low speed channel3 counter overflow interrupt."]
+    ///Bit 7 - The interrupt enable bit for low speed channel3 counter overflow interrupt.
     #[inline(always)]
     #[must_use]
     pub fn lstimer3_ovf(&mut self) -> LSTIMER_OVF_W<INT_ENA_SPEC> {
         LSTIMER_OVF_W::new(self, 7)
     }
-    #[doc = "The interrupt enable bit for high speed channel (0-7) duty change done interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field"]
+    ///The interrupt enable bit for high speed channel (0-7) duty change done interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch(&mut self, n: u8) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
@@ -310,57 +310,57 @@ impl W {
         [(); 8][n as usize];
         DUTY_CHNG_END_HSCH_W::new(self, n + 8)
     }
-    #[doc = "Bit 8 - The interrupt enable bit for high speed channel 0 duty change done interrupt."]
+    ///Bit 8 - The interrupt enable bit for high speed channel 0 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch0(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 8)
     }
-    #[doc = "Bit 9 - The interrupt enable bit for high speed channel 1 duty change done interrupt."]
+    ///Bit 9 - The interrupt enable bit for high speed channel 1 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch1(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 9)
     }
-    #[doc = "Bit 10 - The interrupt enable bit for high speed channel 2 duty change done interrupt."]
+    ///Bit 10 - The interrupt enable bit for high speed channel 2 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch2(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 10)
     }
-    #[doc = "Bit 11 - The interrupt enable bit for high speed channel 3 duty change done interrupt."]
+    ///Bit 11 - The interrupt enable bit for high speed channel 3 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch3(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 11)
     }
-    #[doc = "Bit 12 - The interrupt enable bit for high speed channel 4 duty change done interrupt."]
+    ///Bit 12 - The interrupt enable bit for high speed channel 4 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch4(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 12)
     }
-    #[doc = "Bit 13 - The interrupt enable bit for high speed channel 5 duty change done interrupt."]
+    ///Bit 13 - The interrupt enable bit for high speed channel 5 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch5(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 13)
     }
-    #[doc = "Bit 14 - The interrupt enable bit for high speed channel 6 duty change done interrupt."]
+    ///Bit 14 - The interrupt enable bit for high speed channel 6 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch6(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 14)
     }
-    #[doc = "Bit 15 - The interrupt enable bit for high speed channel 7 duty change done interrupt."]
+    ///Bit 15 - The interrupt enable bit for high speed channel 7 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch7(&mut self) -> DUTY_CHNG_END_HSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_HSCH_W::new(self, 15)
     }
-    #[doc = "The interrupt enable bit for low speed channel (0-7) duty change done interrupt."]
-    #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field"]
+    ///The interrupt enable bit for low speed channel (0-7) duty change done interrupt.
+    ///
+    ///NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch(&mut self, n: u8) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
@@ -368,69 +368,71 @@ impl W {
         [(); 8][n as usize];
         DUTY_CHNG_END_LSCH_W::new(self, n + 16)
     }
-    #[doc = "Bit 16 - The interrupt enable bit for low speed channel 0 duty change done interrupt."]
+    ///Bit 16 - The interrupt enable bit for low speed channel 0 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch0(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 16)
     }
-    #[doc = "Bit 17 - The interrupt enable bit for low speed channel 1 duty change done interrupt."]
+    ///Bit 17 - The interrupt enable bit for low speed channel 1 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch1(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 17)
     }
-    #[doc = "Bit 18 - The interrupt enable bit for low speed channel 2 duty change done interrupt."]
+    ///Bit 18 - The interrupt enable bit for low speed channel 2 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch2(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 18)
     }
-    #[doc = "Bit 19 - The interrupt enable bit for low speed channel 3 duty change done interrupt."]
+    ///Bit 19 - The interrupt enable bit for low speed channel 3 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch3(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 19)
     }
-    #[doc = "Bit 20 - The interrupt enable bit for low speed channel 4 duty change done interrupt."]
+    ///Bit 20 - The interrupt enable bit for low speed channel 4 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch4(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 20)
     }
-    #[doc = "Bit 21 - The interrupt enable bit for low speed channel 5 duty change done interrupt."]
+    ///Bit 21 - The interrupt enable bit for low speed channel 5 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch5(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 21)
     }
-    #[doc = "Bit 22 - The interrupt enable bit for low speed channel 6 duty change done interrupt."]
+    ///Bit 22 - The interrupt enable bit for low speed channel 6 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch6(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 22)
     }
-    #[doc = "Bit 23 - The interrupt enable bit for low speed channel 7 duty change done interrupt."]
+    ///Bit 23 - The interrupt enable bit for low speed channel 7 duty change done interrupt.
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch7(&mut self) -> DUTY_CHNG_END_LSCH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_LSCH_W::new(self, 23)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`int_ena::R`](R) reader structure"]
+///`read()` method returns [`int_ena::R`](R) reader structure
 impl crate::Readable for INT_ENA_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`int_ena::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`int_ena::W`](W) writer structure
 impl crate::Writable for INT_ENA_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets INT_ENA to value 0"]
+///`reset()` method sets INT_ENA to value 0
 impl crate::Resettable for INT_ENA_SPEC {
     const RESET_VALUE: u32 = 0;
 }

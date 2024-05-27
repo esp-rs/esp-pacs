@@ -1,9 +1,9 @@
-#[doc = "Register `GPIO_IN0` reader"]
+///Register `GPIO_IN0` reader
 pub type R = crate::R<GPIO_IN0_SPEC>;
-#[doc = "Field `GPIO_SDIO_IN0` reader - *******Description***********"]
+///Field `GPIO_SDIO_IN0` reader - *******Description***********
 pub type GPIO_SDIO_IN0_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - *******Description***********"]
+    ///Bits 0:31 - *******Description***********
     #[inline(always)]
     pub fn gpio_sdio_in0(&self) -> GPIO_SDIO_IN0_R {
         GPIO_SDIO_IN0_R::new(self.bits)
@@ -22,9 +22,9 @@ pub struct GPIO_IN0_SPEC;
 impl crate::RegisterSpec for GPIO_IN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`gpio_in0::R`](R) reader structure"]
+///`read()` method returns [`gpio_in0::R`](R) reader structure
 impl crate::Readable for GPIO_IN0_SPEC {}
-#[doc = "`reset()` method sets GPIO_IN0 to value 0"]
+///`reset()` method sets GPIO_IN0 to value 0
 impl crate::Resettable for GPIO_IN0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

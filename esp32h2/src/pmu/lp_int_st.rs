@@ -1,86 +1,86 @@
-#[doc = "Register `LP_INT_ST` reader"]
+///Register `LP_INT_ST` reader
 pub type R = crate::R<LP_INT_ST_SPEC>;
-#[doc = "Field `LP_CPU_WAKEUP` reader - need_des"]
+///Field `LP_CPU_WAKEUP` reader - need_des
 pub type LP_CPU_WAKEUP_R = crate::BitReader;
-#[doc = "Field `MODEM_SWITCH_ACTIVE_END` reader - need_des"]
+///Field `MODEM_SWITCH_ACTIVE_END` reader - need_des
 pub type MODEM_SWITCH_ACTIVE_END_R = crate::BitReader;
-#[doc = "Field `SLEEP_SWITCH_ACTIVE_END` reader - need_des"]
+///Field `SLEEP_SWITCH_ACTIVE_END` reader - need_des
 pub type SLEEP_SWITCH_ACTIVE_END_R = crate::BitReader;
-#[doc = "Field `SLEEP_SWITCH_MODEM_END` reader - need_des"]
+///Field `SLEEP_SWITCH_MODEM_END` reader - need_des
 pub type SLEEP_SWITCH_MODEM_END_R = crate::BitReader;
-#[doc = "Field `MODEM_SWITCH_SLEEP_END` reader - need_des"]
+///Field `MODEM_SWITCH_SLEEP_END` reader - need_des
 pub type MODEM_SWITCH_SLEEP_END_R = crate::BitReader;
-#[doc = "Field `ACTIVE_SWITCH_SLEEP_END` reader - need_des"]
+///Field `ACTIVE_SWITCH_SLEEP_END` reader - need_des
 pub type ACTIVE_SWITCH_SLEEP_END_R = crate::BitReader;
-#[doc = "Field `MODEM_SWITCH_ACTIVE_START` reader - need_des"]
+///Field `MODEM_SWITCH_ACTIVE_START` reader - need_des
 pub type MODEM_SWITCH_ACTIVE_START_R = crate::BitReader;
-#[doc = "Field `SLEEP_SWITCH_ACTIVE_START` reader - need_des"]
+///Field `SLEEP_SWITCH_ACTIVE_START` reader - need_des
 pub type SLEEP_SWITCH_ACTIVE_START_R = crate::BitReader;
-#[doc = "Field `SLEEP_SWITCH_MODEM_START` reader - need_des"]
+///Field `SLEEP_SWITCH_MODEM_START` reader - need_des
 pub type SLEEP_SWITCH_MODEM_START_R = crate::BitReader;
-#[doc = "Field `MODEM_SWITCH_SLEEP_START` reader - need_des"]
+///Field `MODEM_SWITCH_SLEEP_START` reader - need_des
 pub type MODEM_SWITCH_SLEEP_START_R = crate::BitReader;
-#[doc = "Field `ACTIVE_SWITCH_SLEEP_START` reader - need_des"]
+///Field `ACTIVE_SWITCH_SLEEP_START` reader - need_des
 pub type ACTIVE_SWITCH_SLEEP_START_R = crate::BitReader;
-#[doc = "Field `HP_SW_TRIGGER` reader - need_des"]
+///Field `HP_SW_TRIGGER` reader - need_des
 pub type HP_SW_TRIGGER_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 20 - need_des"]
+    ///Bit 20 - need_des
     #[inline(always)]
     pub fn lp_cpu_wakeup(&self) -> LP_CPU_WAKEUP_R {
         LP_CPU_WAKEUP_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 21 - need_des"]
+    ///Bit 21 - need_des
     #[inline(always)]
     pub fn modem_switch_active_end(&self) -> MODEM_SWITCH_ACTIVE_END_R {
         MODEM_SWITCH_ACTIVE_END_R::new(((self.bits >> 21) & 1) != 0)
     }
-    #[doc = "Bit 22 - need_des"]
+    ///Bit 22 - need_des
     #[inline(always)]
     pub fn sleep_switch_active_end(&self) -> SLEEP_SWITCH_ACTIVE_END_R {
         SLEEP_SWITCH_ACTIVE_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - need_des"]
+    ///Bit 23 - need_des
     #[inline(always)]
     pub fn sleep_switch_modem_end(&self) -> SLEEP_SWITCH_MODEM_END_R {
         SLEEP_SWITCH_MODEM_END_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Bit 24 - need_des"]
+    ///Bit 24 - need_des
     #[inline(always)]
     pub fn modem_switch_sleep_end(&self) -> MODEM_SWITCH_SLEEP_END_R {
         MODEM_SWITCH_SLEEP_END_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - need_des"]
+    ///Bit 25 - need_des
     #[inline(always)]
     pub fn active_switch_sleep_end(&self) -> ACTIVE_SWITCH_SLEEP_END_R {
         ACTIVE_SWITCH_SLEEP_END_R::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 26 - need_des"]
+    ///Bit 26 - need_des
     #[inline(always)]
     pub fn modem_switch_active_start(&self) -> MODEM_SWITCH_ACTIVE_START_R {
         MODEM_SWITCH_ACTIVE_START_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 27 - need_des"]
+    ///Bit 27 - need_des
     #[inline(always)]
     pub fn sleep_switch_active_start(&self) -> SLEEP_SWITCH_ACTIVE_START_R {
         SLEEP_SWITCH_ACTIVE_START_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 28 - need_des"]
+    ///Bit 28 - need_des
     #[inline(always)]
     pub fn sleep_switch_modem_start(&self) -> SLEEP_SWITCH_MODEM_START_R {
         SLEEP_SWITCH_MODEM_START_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bit 29 - need_des"]
+    ///Bit 29 - need_des
     #[inline(always)]
     pub fn modem_switch_sleep_start(&self) -> MODEM_SWITCH_SLEEP_START_R {
         MODEM_SWITCH_SLEEP_START_R::new(((self.bits >> 29) & 1) != 0)
     }
-    #[doc = "Bit 30 - need_des"]
+    ///Bit 30 - need_des
     #[inline(always)]
     pub fn active_switch_sleep_start(&self) -> ACTIVE_SWITCH_SLEEP_START_R {
         ACTIVE_SWITCH_SLEEP_START_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - need_des"]
+    ///Bit 31 - need_des
     #[inline(always)]
     pub fn hp_sw_trigger(&self) -> HP_SW_TRIGGER_R {
         HP_SW_TRIGGER_R::new(((self.bits >> 31) & 1) != 0)
@@ -114,14 +114,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**need_des
+
+You can [`read`](crate::generic::Reg::read) this register and get [`lp_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct LP_INT_ST_SPEC;
 impl crate::RegisterSpec for LP_INT_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`lp_int_st::R`](R) reader structure"]
+///`read()` method returns [`lp_int_st::R`](R) reader structure
 impl crate::Readable for LP_INT_ST_SPEC {}
-#[doc = "`reset()` method sets LP_INT_ST to value 0"]
+///`reset()` method sets LP_INT_ST to value 0
 impl crate::Resettable for LP_INT_ST_SPEC {
     const RESET_VALUE: u32 = 0;
 }

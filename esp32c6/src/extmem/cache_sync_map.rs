@@ -1,13 +1,13 @@
-#[doc = "Register `CACHE_SYNC_MAP` reader"]
+///Register `CACHE_SYNC_MAP` reader
 pub type R = crate::R<CACHE_SYNC_MAP_SPEC>;
-#[doc = "Register `CACHE_SYNC_MAP` writer"]
+///Register `CACHE_SYNC_MAP` writer
 pub type W = crate::W<CACHE_SYNC_MAP_SPEC>;
-#[doc = "Field `CACHE_SYNC_MAP` reader - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
+///Field `CACHE_SYNC_MAP` reader - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \[4\]: L1-Cache
 pub type CACHE_SYNC_MAP_R = crate::FieldReader;
-#[doc = "Field `CACHE_SYNC_MAP` writer - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
+///Field `CACHE_SYNC_MAP` writer - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \[4\]: L1-Cache
 pub type CACHE_SYNC_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
-    #[doc = "Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
+    ///Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \[4\]: L1-Cache
     #[inline(always)]
     pub fn cache_sync_map(&self) -> CACHE_SYNC_MAP_R {
         CACHE_SYNC_MAP_R::new((self.bits & 0x3f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[4\\]: L1-Cache"]
+    ///Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \[4\]: L1-Cache
     #[inline(always)]
     #[must_use]
     pub fn cache_sync_map(&mut self) -> CACHE_SYNC_MAP_W<CACHE_SYNC_MAP_SPEC> {
         CACHE_SYNC_MAP_W::new(self, 0)
     }
 }
-#[doc = "Sync map configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_sync_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_sync_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Sync map configure register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`cache_sync_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_sync_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CACHE_SYNC_MAP_SPEC;
 impl crate::RegisterSpec for CACHE_SYNC_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cache_sync_map::R`](R) reader structure"]
+///`read()` method returns [`cache_sync_map::R`](R) reader structure
 impl crate::Readable for CACHE_SYNC_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`cache_sync_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`cache_sync_map::W`](W) writer structure
 impl crate::Writable for CACHE_SYNC_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CACHE_SYNC_MAP to value 0x3f"]
+///`reset()` method sets CACHE_SYNC_MAP to value 0x3f
 impl crate::Resettable for CACHE_SYNC_MAP_SPEC {
     const RESET_VALUE: u32 = 0x3f;
 }

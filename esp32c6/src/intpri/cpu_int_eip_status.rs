@@ -1,9 +1,9 @@
-#[doc = "Register `CPU_INT_EIP_STATUS` reader"]
+///Register `CPU_INT_EIP_STATUS` reader
 pub type R = crate::R<CPU_INT_EIP_STATUS_SPEC>;
-#[doc = "Field `CPU_INT_EIP_STATUS` reader - Need add description"]
+///Field `CPU_INT_EIP_STATUS` reader - Need add description
 pub type CPU_INT_EIP_STATUS_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Need add description"]
+    ///Bits 0:31 - Need add description
     #[inline(always)]
     pub fn cpu_int_eip_status(&self) -> CPU_INT_EIP_STATUS_R {
         CPU_INT_EIP_STATUS_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_int_eip_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**register description
+
+You can [`read`](crate::generic::Reg::read) this register and get [`cpu_int_eip_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CPU_INT_EIP_STATUS_SPEC;
 impl crate::RegisterSpec for CPU_INT_EIP_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cpu_int_eip_status::R`](R) reader structure"]
+///`read()` method returns [`cpu_int_eip_status::R`](R) reader structure
 impl crate::Readable for CPU_INT_EIP_STATUS_SPEC {}
-#[doc = "`reset()` method sets CPU_INT_EIP_STATUS to value 0"]
+///`reset()` method sets CPU_INT_EIP_STATUS to value 0
 impl crate::Resettable for CPU_INT_EIP_STATUS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

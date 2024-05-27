@@ -1,6 +1,6 @@
-#[doc = "Register `ENABLE_W1TC` writer"]
+///Register `ENABLE_W1TC` writer
 pub type W = crate::W<ENABLE_W1TC_SPEC>;
-#[doc = "Field `ENABLE_W1TC` writer - GPIO0 ~ 31 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear GPIO_ENABLE_REG."]
+///Field `ENABLE_W1TC` writer - GPIO0 ~ 31 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear GPIO_ENABLE_REG.
 pub type ENABLE_W1TC_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
@@ -9,25 +9,27 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - GPIO0 ~ 31 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear GPIO_ENABLE_REG."]
+    ///Bits 0:31 - GPIO0 ~ 31 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear GPIO_ENABLE_REG.
     #[inline(always)]
     #[must_use]
     pub fn enable_w1tc(&mut self) -> ENABLE_W1TC_W<ENABLE_W1TC_SPEC> {
         ENABLE_W1TC_W::new(self, 0)
     }
 }
-#[doc = "GPIO0 ~ 31 output enable bit clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**GPIO0 ~ 31 output enable bit clear register
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct ENABLE_W1TC_SPEC;
 impl crate::RegisterSpec for ENABLE_W1TC_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`enable_w1tc::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`enable_w1tc::W`](W) writer structure
 impl crate::Writable for ENABLE_W1TC_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ENABLE_W1TC to value 0"]
+///`reset()` method sets ENABLE_W1TC to value 0
 impl crate::Resettable for ENABLE_W1TC_SPEC {
     const RESET_VALUE: u32 = 0;
 }

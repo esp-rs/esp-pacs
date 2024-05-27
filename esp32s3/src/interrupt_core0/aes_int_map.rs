@@ -1,13 +1,13 @@
-#[doc = "Register `AES_INT_MAP` reader"]
+///Register `AES_INT_MAP` reader
 pub type R = crate::R<AES_INT_MAP_SPEC>;
-#[doc = "Register `AES_INT_MAP` writer"]
+///Register `AES_INT_MAP` writer
 pub type W = crate::W<AES_INT_MAP_SPEC>;
-#[doc = "Field `AES_INT_MAP` reader - this register used to map aes interrupt to one of core0's external interrupt"]
+///Field `AES_INT_MAP` reader - this register used to map aes interrupt to one of core0's external interrupt
 pub type AES_INT_MAP_R = crate::FieldReader;
-#[doc = "Field `AES_INT_MAP` writer - this register used to map aes interrupt to one of core0's external interrupt"]
+///Field `AES_INT_MAP` writer - this register used to map aes interrupt to one of core0's external interrupt
 pub type AES_INT_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - this register used to map aes interrupt to one of core0's external interrupt"]
+    ///Bits 0:4 - this register used to map aes interrupt to one of core0's external interrupt
     #[inline(always)]
     pub fn aes_int_map(&self) -> AES_INT_MAP_R {
         AES_INT_MAP_R::new((self.bits & 0x1f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - this register used to map aes interrupt to one of core0's external interrupt"]
+    ///Bits 0:4 - this register used to map aes interrupt to one of core0's external interrupt
     #[inline(always)]
     #[must_use]
     pub fn aes_int_map(&mut self) -> AES_INT_MAP_W<AES_INT_MAP_SPEC> {
         AES_INT_MAP_W::new(self, 0)
     }
 }
-#[doc = "aes interrupt configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`aes_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`aes_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**aes interrupt configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`aes_int_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`aes_int_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct AES_INT_MAP_SPEC;
 impl crate::RegisterSpec for AES_INT_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`aes_int_map::R`](R) reader structure"]
+///`read()` method returns [`aes_int_map::R`](R) reader structure
 impl crate::Readable for AES_INT_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`aes_int_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`aes_int_map::W`](W) writer structure
 impl crate::Writable for AES_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets AES_INT_MAP to value 0x10"]
+///`reset()` method sets AES_INT_MAP to value 0x10
 impl crate::Resettable for AES_INT_MAP_SPEC {
     const RESET_VALUE: u32 = 0x10;
 }

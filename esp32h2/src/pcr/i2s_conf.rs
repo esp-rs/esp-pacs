@@ -1,36 +1,36 @@
-#[doc = "Register `I2S_CONF` reader"]
+///Register `I2S_CONF` reader
 pub type R = crate::R<I2S_CONF_SPEC>;
-#[doc = "Register `I2S_CONF` writer"]
+///Register `I2S_CONF` writer
 pub type W = crate::W<I2S_CONF_SPEC>;
-#[doc = "Field `I2S_CLK_EN` reader - Set 1 to enable i2s apb clock"]
+///Field `I2S_CLK_EN` reader - Set 1 to enable i2s apb clock
 pub type I2S_CLK_EN_R = crate::BitReader;
-#[doc = "Field `I2S_CLK_EN` writer - Set 1 to enable i2s apb clock"]
+///Field `I2S_CLK_EN` writer - Set 1 to enable i2s apb clock
 pub type I2S_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S_RST_EN` reader - Set 0 to reset i2s module"]
+///Field `I2S_RST_EN` reader - Set 0 to reset i2s module
 pub type I2S_RST_EN_R = crate::BitReader;
-#[doc = "Field `I2S_RST_EN` writer - Set 0 to reset i2s module"]
+///Field `I2S_RST_EN` writer - Set 0 to reset i2s module
 pub type I2S_RST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S_RX_READY` reader - Query this field before using i2s rx function, after reset i2s module"]
+///Field `I2S_RX_READY` reader - Query this field before using i2s rx function, after reset i2s module
 pub type I2S_RX_READY_R = crate::BitReader;
-#[doc = "Field `I2S_TX_READY` reader - Query this field before using i2s tx function, after reset i2s module"]
+///Field `I2S_TX_READY` reader - Query this field before using i2s tx function, after reset i2s module
 pub type I2S_TX_READY_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
+    ///Bit 0 - Set 1 to enable i2s apb clock
     #[inline(always)]
     pub fn i2s_clk_en(&self) -> I2S_CLK_EN_R {
         I2S_CLK_EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Set 0 to reset i2s module"]
+    ///Bit 1 - Set 0 to reset i2s module
     #[inline(always)]
     pub fn i2s_rst_en(&self) -> I2S_RST_EN_R {
         I2S_RST_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - Query this field before using i2s rx function, after reset i2s module"]
+    ///Bit 2 - Query this field before using i2s rx function, after reset i2s module
     #[inline(always)]
     pub fn i2s_rx_ready(&self) -> I2S_RX_READY_R {
         I2S_RX_READY_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Query this field before using i2s tx function, after reset i2s module"]
+    ///Bit 3 - Query this field before using i2s tx function, after reset i2s module
     #[inline(always)]
     pub fn i2s_tx_ready(&self) -> I2S_TX_READY_R {
         I2S_TX_READY_R::new(((self.bits >> 3) & 1) != 0)
@@ -48,33 +48,35 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
+    ///Bit 0 - Set 1 to enable i2s apb clock
     #[inline(always)]
     #[must_use]
     pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<I2S_CONF_SPEC> {
         I2S_CLK_EN_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Set 0 to reset i2s module"]
+    ///Bit 1 - Set 0 to reset i2s module
     #[inline(always)]
     #[must_use]
     pub fn i2s_rst_en(&mut self) -> I2S_RST_EN_W<I2S_CONF_SPEC> {
         I2S_RST_EN_W::new(self, 1)
     }
 }
-#[doc = "I2S configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`i2s_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**I2S configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`i2s_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`i2s_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct I2S_CONF_SPEC;
 impl crate::RegisterSpec for I2S_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`i2s_conf::R`](R) reader structure"]
+///`read()` method returns [`i2s_conf::R`](R) reader structure
 impl crate::Readable for I2S_CONF_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`i2s_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`i2s_conf::W`](W) writer structure
 impl crate::Writable for I2S_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets I2S_CONF to value 0x0d"]
+///`reset()` method sets I2S_CONF to value 0x0d
 impl crate::Resettable for I2S_CONF_SPEC {
     const RESET_VALUE: u32 = 0x0d;
 }

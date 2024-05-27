@@ -1,9 +1,9 @@
-#[doc = "Register `MEAS_STATUS` reader"]
+///Register `MEAS_STATUS` reader
 pub type R = crate::R<MEAS_STATUS_SPEC>;
-#[doc = "Field `SARADC_MEAS_STATUS` reader - N/A"]
+///Field `SARADC_MEAS_STATUS` reader - N/A
 pub type SARADC_MEAS_STATUS_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:7 - N/A"]
+    ///Bits 0:7 - N/A
     #[inline(always)]
     pub fn saradc_meas_status(&self) -> SARADC_MEAS_STATUS_R {
         SARADC_MEAS_STATUS_R::new((self.bits & 0xff) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "N/A\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`meas_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**N/A
+
+You can [`read`](crate::generic::Reg::read) this register and get [`meas_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct MEAS_STATUS_SPEC;
 impl crate::RegisterSpec for MEAS_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`meas_status::R`](R) reader structure"]
+///`read()` method returns [`meas_status::R`](R) reader structure
 impl crate::Readable for MEAS_STATUS_SPEC {}
-#[doc = "`reset()` method sets MEAS_STATUS to value 0"]
+///`reset()` method sets MEAS_STATUS to value 0
 impl crate::Resettable for MEAS_STATUS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

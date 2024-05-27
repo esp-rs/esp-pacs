@@ -1,93 +1,93 @@
-#[doc = "Register `L1_ICACHE_CACHESIZE_CONF` reader"]
+///Register `L1_ICACHE_CACHESIZE_CONF` reader
 pub type R = crate::R<L1_ICACHE_CACHESIZE_CONF_SPEC>;
-#[doc = "Field `L1_ICACHE_CACHESIZE_256` reader - The field is used to configure cachesize of L1-ICache as 256 bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_256` reader - The field is used to configure cachesize of L1-ICache as 256 bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_256_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_512` reader - The field is used to configure cachesize of L1-ICache as 512 bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_512` reader - The field is used to configure cachesize of L1-ICache as 512 bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_512_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_1K` reader - The field is used to configure cachesize of L1-ICache as 1k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_1K` reader - The field is used to configure cachesize of L1-ICache as 1k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_1K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_2K` reader - The field is used to configure cachesize of L1-ICache as 2k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_2K` reader - The field is used to configure cachesize of L1-ICache as 2k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_2K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_4K` reader - The field is used to configure cachesize of L1-ICache as 4k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_4K` reader - The field is used to configure cachesize of L1-ICache as 4k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_4K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_8K` reader - The field is used to configure cachesize of L1-ICache as 8k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_8K` reader - The field is used to configure cachesize of L1-ICache as 8k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_8K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_16K` reader - The field is used to configure cachesize of L1-ICache as 16k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_16K` reader - The field is used to configure cachesize of L1-ICache as 16k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_16K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_32K` reader - The field is used to configure cachesize of L1-ICache as 32k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_32K` reader - The field is used to configure cachesize of L1-ICache as 32k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_32K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_64K` reader - The field is used to configure cachesize of L1-ICache as 64k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_64K` reader - The field is used to configure cachesize of L1-ICache as 64k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_64K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_128K` reader - The field is used to configure cachesize of L1-ICache as 128k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_128K` reader - The field is used to configure cachesize of L1-ICache as 128k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_128K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_256K` reader - The field is used to configure cachesize of L1-ICache as 256k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_256K` reader - The field is used to configure cachesize of L1-ICache as 256k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_256K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_512K` reader - The field is used to configure cachesize of L1-ICache as 512k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_512K` reader - The field is used to configure cachesize of L1-ICache as 512k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_512K_R = crate::BitReader;
-#[doc = "Field `L1_ICACHE_CACHESIZE_1024K` reader - The field is used to configure cachesize of L1-ICache as 1024k bytes. This field and all other fields within this register is onehot."]
+///Field `L1_ICACHE_CACHESIZE_1024K` reader - The field is used to configure cachesize of L1-ICache as 1024k bytes. This field and all other fields within this register is onehot.
 pub type L1_ICACHE_CACHESIZE_1024K_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - The field is used to configure cachesize of L1-ICache as 256 bytes. This field and all other fields within this register is onehot."]
+    ///Bit 0 - The field is used to configure cachesize of L1-ICache as 256 bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_256(&self) -> L1_ICACHE_CACHESIZE_256_R {
         L1_ICACHE_CACHESIZE_256_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - The field is used to configure cachesize of L1-ICache as 512 bytes. This field and all other fields within this register is onehot."]
+    ///Bit 1 - The field is used to configure cachesize of L1-ICache as 512 bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_512(&self) -> L1_ICACHE_CACHESIZE_512_R {
         L1_ICACHE_CACHESIZE_512_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - The field is used to configure cachesize of L1-ICache as 1k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 2 - The field is used to configure cachesize of L1-ICache as 1k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_1k(&self) -> L1_ICACHE_CACHESIZE_1K_R {
         L1_ICACHE_CACHESIZE_1K_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - The field is used to configure cachesize of L1-ICache as 2k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 3 - The field is used to configure cachesize of L1-ICache as 2k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_2k(&self) -> L1_ICACHE_CACHESIZE_2K_R {
         L1_ICACHE_CACHESIZE_2K_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - The field is used to configure cachesize of L1-ICache as 4k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 4 - The field is used to configure cachesize of L1-ICache as 4k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_4k(&self) -> L1_ICACHE_CACHESIZE_4K_R {
         L1_ICACHE_CACHESIZE_4K_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - The field is used to configure cachesize of L1-ICache as 8k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 5 - The field is used to configure cachesize of L1-ICache as 8k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_8k(&self) -> L1_ICACHE_CACHESIZE_8K_R {
         L1_ICACHE_CACHESIZE_8K_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - The field is used to configure cachesize of L1-ICache as 16k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 6 - The field is used to configure cachesize of L1-ICache as 16k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_16k(&self) -> L1_ICACHE_CACHESIZE_16K_R {
         L1_ICACHE_CACHESIZE_16K_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - The field is used to configure cachesize of L1-ICache as 32k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 7 - The field is used to configure cachesize of L1-ICache as 32k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_32k(&self) -> L1_ICACHE_CACHESIZE_32K_R {
         L1_ICACHE_CACHESIZE_32K_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - The field is used to configure cachesize of L1-ICache as 64k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 8 - The field is used to configure cachesize of L1-ICache as 64k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_64k(&self) -> L1_ICACHE_CACHESIZE_64K_R {
         L1_ICACHE_CACHESIZE_64K_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - The field is used to configure cachesize of L1-ICache as 128k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 9 - The field is used to configure cachesize of L1-ICache as 128k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_128k(&self) -> L1_ICACHE_CACHESIZE_128K_R {
         L1_ICACHE_CACHESIZE_128K_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - The field is used to configure cachesize of L1-ICache as 256k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 10 - The field is used to configure cachesize of L1-ICache as 256k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_256k(&self) -> L1_ICACHE_CACHESIZE_256K_R {
         L1_ICACHE_CACHESIZE_256K_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - The field is used to configure cachesize of L1-ICache as 512k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 11 - The field is used to configure cachesize of L1-ICache as 512k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_512k(&self) -> L1_ICACHE_CACHESIZE_512K_R {
         L1_ICACHE_CACHESIZE_512K_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - The field is used to configure cachesize of L1-ICache as 1024k bytes. This field and all other fields within this register is onehot."]
+    ///Bit 12 - The field is used to configure cachesize of L1-ICache as 1024k bytes. This field and all other fields within this register is onehot.
     #[inline(always)]
     pub fn l1_icache_cachesize_1024k(&self) -> L1_ICACHE_CACHESIZE_1024K_R {
         L1_ICACHE_CACHESIZE_1024K_R::new(((self.bits >> 12) & 1) != 0)
@@ -116,14 +116,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 instruction Cache CacheSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache_cachesize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**L1 instruction Cache CacheSize mode configure register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`l1_icache_cachesize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct L1_ICACHE_CACHESIZE_CONF_SPEC;
 impl crate::RegisterSpec for L1_ICACHE_CACHESIZE_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`l1_icache_cachesize_conf::R`](R) reader structure"]
+///`read()` method returns [`l1_icache_cachesize_conf::R`](R) reader structure
 impl crate::Readable for L1_ICACHE_CACHESIZE_CONF_SPEC {}
-#[doc = "`reset()` method sets L1_ICACHE_CACHESIZE_CONF to value 0x40"]
+///`reset()` method sets L1_ICACHE_CACHESIZE_CONF to value 0x40
 impl crate::Resettable for L1_ICACHE_CACHESIZE_CONF_SPEC {
     const RESET_VALUE: u32 = 0x40;
 }

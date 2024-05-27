@@ -1,13 +1,13 @@
-#[doc = "Register `CACHE_MMU_OWNER` reader"]
+///Register `CACHE_MMU_OWNER` reader
 pub type R = crate::R<CACHE_MMU_OWNER_SPEC>;
-#[doc = "Register `CACHE_MMU_OWNER` writer"]
+///Register `CACHE_MMU_OWNER` writer
 pub type W = crate::W<CACHE_MMU_OWNER_SPEC>;
-#[doc = "Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
+///Field `CACHE_MMU_OWNER` reader - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved.
 pub type CACHE_MMU_OWNER_R = crate::FieldReader<u32>;
-#[doc = "Field `CACHE_MMU_OWNER` writer - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
+///Field `CACHE_MMU_OWNER` writer - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved.
 pub type CACHE_MMU_OWNER_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
-    #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
+    ///Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved.
     #[inline(always)]
     pub fn cache_mmu_owner(&self) -> CACHE_MMU_OWNER_R {
         CACHE_MMU_OWNER_R::new(self.bits & 0x00ff_ffff)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved."]
+    ///Bits 0:23 - The bits are used to specify the owner of MMU.bit0: icache, bit1: dcache, bit2: dma, bit3: reserved.
     #[inline(always)]
     #[must_use]
     pub fn cache_mmu_owner(&mut self) -> CACHE_MMU_OWNER_W<CACHE_MMU_OWNER_SPEC> {
@@ -34,15 +34,15 @@ pub struct CACHE_MMU_OWNER_SPEC;
 impl crate::RegisterSpec for CACHE_MMU_OWNER_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cache_mmu_owner::R`](R) reader structure"]
+///`read()` method returns [`cache_mmu_owner::R`](R) reader structure
 impl crate::Readable for CACHE_MMU_OWNER_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`cache_mmu_owner::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`cache_mmu_owner::W`](W) writer structure
 impl crate::Writable for CACHE_MMU_OWNER_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CACHE_MMU_OWNER to value 0"]
+///`reset()` method sets CACHE_MMU_OWNER to value 0
 impl crate::Resettable for CACHE_MMU_OWNER_SPEC {
     const RESET_VALUE: u32 = 0;
 }

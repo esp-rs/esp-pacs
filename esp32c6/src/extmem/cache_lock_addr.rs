@@ -1,13 +1,13 @@
-#[doc = "Register `CACHE_LOCK_ADDR` reader"]
+///Register `CACHE_LOCK_ADDR` reader
 pub type R = crate::R<CACHE_LOCK_ADDR_SPEC>;
-#[doc = "Register `CACHE_LOCK_ADDR` writer"]
+///Register `CACHE_LOCK_ADDR` writer
 pub type W = crate::W<CACHE_LOCK_ADDR_SPEC>;
-#[doc = "Field `CACHE_LOCK_ADDR` reader - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
+///Field `CACHE_LOCK_ADDR` reader - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG
 pub type CACHE_LOCK_ADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `CACHE_LOCK_ADDR` writer - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
+///Field `CACHE_LOCK_ADDR` writer - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG
 pub type CACHE_LOCK_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
+    ///Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG
     #[inline(always)]
     pub fn cache_lock_addr(&self) -> CACHE_LOCK_ADDR_R {
         CACHE_LOCK_ADDR_R::new(self.bits)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
+    ///Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG
     #[inline(always)]
     #[must_use]
     pub fn cache_lock_addr(&mut self) -> CACHE_LOCK_ADDR_W<CACHE_LOCK_ADDR_SPEC> {
         CACHE_LOCK_ADDR_W::new(self, 0)
     }
 }
-#[doc = "Lock (manual lock) address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_lock_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_lock_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Lock (manual lock) address configure register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`cache_lock_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_lock_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CACHE_LOCK_ADDR_SPEC;
 impl crate::RegisterSpec for CACHE_LOCK_ADDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cache_lock_addr::R`](R) reader structure"]
+///`read()` method returns [`cache_lock_addr::R`](R) reader structure
 impl crate::Readable for CACHE_LOCK_ADDR_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`cache_lock_addr::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`cache_lock_addr::W`](W) writer structure
 impl crate::Writable for CACHE_LOCK_ADDR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets CACHE_LOCK_ADDR to value 0"]
+///`reset()` method sets CACHE_LOCK_ADDR to value 0
 impl crate::Resettable for CACHE_LOCK_ADDR_SPEC {
     const RESET_VALUE: u32 = 0;
 }

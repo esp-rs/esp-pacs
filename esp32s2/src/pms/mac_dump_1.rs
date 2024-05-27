@@ -1,13 +1,13 @@
-#[doc = "Register `MAC_DUMP_1` reader"]
+///Register `MAC_DUMP_1` reader
 pub type R = crate::R<MAC_DUMP_1_SPEC>;
-#[doc = "Register `MAC_DUMP_1` writer"]
+///Register `MAC_DUMP_1` writer
 pub type W = crate::W<MAC_DUMP_1_SPEC>;
-#[doc = "Field `MAC_DUMP_CONNECT` reader - Configure MAC dump connection."]
+///Field `MAC_DUMP_CONNECT` reader - Configure MAC dump connection.
 pub type MAC_DUMP_CONNECT_R = crate::FieldReader<u16>;
-#[doc = "Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection."]
+///Field `MAC_DUMP_CONNECT` writer - Configure MAC dump connection.
 pub type MAC_DUMP_CONNECT_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
-    #[doc = "Bits 0:11 - Configure MAC dump connection."]
+    ///Bits 0:11 - Configure MAC dump connection.
     #[inline(always)]
     pub fn mac_dump_connect(&self) -> MAC_DUMP_CONNECT_R {
         MAC_DUMP_CONNECT_R::new((self.bits & 0x0fff) as u16)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - Configure MAC dump connection."]
+    ///Bits 0:11 - Configure MAC dump connection.
     #[inline(always)]
     #[must_use]
     pub fn mac_dump_connect(&mut self) -> MAC_DUMP_CONNECT_W<MAC_DUMP_1_SPEC> {
         MAC_DUMP_CONNECT_W::new(self, 0)
     }
 }
-#[doc = "MAC dump permission control register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mac_dump_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mac_dump_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**MAC dump permission control register 1.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`mac_dump_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mac_dump_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct MAC_DUMP_1_SPEC;
 impl crate::RegisterSpec for MAC_DUMP_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`mac_dump_1::R`](R) reader structure"]
+///`read()` method returns [`mac_dump_1::R`](R) reader structure
 impl crate::Readable for MAC_DUMP_1_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`mac_dump_1::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`mac_dump_1::W`](W) writer structure
 impl crate::Writable for MAC_DUMP_1_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets MAC_DUMP_1 to value 0xe4"]
+///`reset()` method sets MAC_DUMP_1 to value 0xe4
 impl crate::Resettable for MAC_DUMP_1_SPEC {
     const RESET_VALUE: u32 = 0xe4;
 }

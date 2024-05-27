@@ -1,9 +1,9 @@
-#[doc = "Register `DBUS_ACS_CNT` reader"]
+///Register `DBUS_ACS_CNT` reader
 pub type R = crate::R<DBUS_ACS_CNT_SPEC>;
-#[doc = "Field `DBUS_ACS_CNT` reader - The bits are used to count the number of dbus access flash through icache."]
+///Field `DBUS_ACS_CNT` reader - The bits are used to count the number of dbus access flash through icache.
 pub type DBUS_ACS_CNT_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - The bits are used to count the number of dbus access flash through icache."]
+    ///Bits 0:31 - The bits are used to count the number of dbus access flash through icache.
     #[inline(always)]
     pub fn dbus_acs_cnt(&self) -> DBUS_ACS_CNT_R {
         DBUS_ACS_CNT_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dbus_acs_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**This description will be updated in the near future.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dbus_acs_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DBUS_ACS_CNT_SPEC;
 impl crate::RegisterSpec for DBUS_ACS_CNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dbus_acs_cnt::R`](R) reader structure"]
+///`read()` method returns [`dbus_acs_cnt::R`](R) reader structure
 impl crate::Readable for DBUS_ACS_CNT_SPEC {}
-#[doc = "`reset()` method sets DBUS_ACS_CNT to value 0"]
+///`reset()` method sets DBUS_ACS_CNT to value 0
 impl crate::Resettable for DBUS_ACS_CNT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

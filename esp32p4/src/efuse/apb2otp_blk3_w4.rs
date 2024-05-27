@@ -1,9 +1,9 @@
-#[doc = "Register `APB2OTP_BLK3_W4` reader"]
+///Register `APB2OTP_BLK3_W4` reader
 pub type R = crate::R<APB2OTP_BLK3_W4_SPEC>;
-#[doc = "Field `APB2OTP_BLOCK3_W4` reader - Otp block3 word4 data."]
+///Field `APB2OTP_BLOCK3_W4` reader - Otp block3 word4 data.
 pub type APB2OTP_BLOCK3_W4_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Otp block3 word4 data."]
+    ///Bits 0:31 - Otp block3 word4 data.
     #[inline(always)]
     pub fn apb2otp_block3_w4(&self) -> APB2OTP_BLOCK3_W4_R {
         APB2OTP_BLOCK3_W4_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "eFuse apb2otp block3 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk3_w4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**eFuse apb2otp block3 data register4.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk3_w4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct APB2OTP_BLK3_W4_SPEC;
 impl crate::RegisterSpec for APB2OTP_BLK3_W4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`apb2otp_blk3_w4::R`](R) reader structure"]
+///`read()` method returns [`apb2otp_blk3_w4::R`](R) reader structure
 impl crate::Readable for APB2OTP_BLK3_W4_SPEC {}
-#[doc = "`reset()` method sets APB2OTP_BLK3_W4 to value 0"]
+///`reset()` method sets APB2OTP_BLK3_W4 to value 0
 impl crate::Resettable for APB2OTP_BLK3_W4_SPEC {
     const RESET_VALUE: u32 = 0;
 }

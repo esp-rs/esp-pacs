@@ -1,13 +1,13 @@
-#[doc = "Register `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` reader"]
+///Register `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` reader
 pub type R = crate::R<DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>;
-#[doc = "Register `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` writer"]
+///Register `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` writer
 pub type W = crate::W<DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>;
-#[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` reader - reg_core0_dma_apbperi_pms_monitor_violate_intr_map"]
+///Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` reader - reg_core0_dma_apbperi_pms_monitor_violate_intr_map
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_R = crate::FieldReader;
-#[doc = "Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` writer - reg_core0_dma_apbperi_pms_monitor_violate_intr_map"]
+///Field `DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP` writer - reg_core0_dma_apbperi_pms_monitor_violate_intr_map
 pub type DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 0:4 - reg_core0_dma_apbperi_pms_monitor_violate_intr_map"]
+    ///Bits 0:4 - reg_core0_dma_apbperi_pms_monitor_violate_intr_map
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_violate_intr_map(
         &self,
@@ -27,7 +27,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - reg_core0_dma_apbperi_pms_monitor_violate_intr_map"]
+    ///Bits 0:4 - reg_core0_dma_apbperi_pms_monitor_violate_intr_map
     #[inline(always)]
     #[must_use]
     pub fn dma_apbperi_pms_monitor_violate_intr_map(
@@ -37,20 +37,22 @@ impl W {
         DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_W::new(self, 0)
     }
 }
-#[doc = "dma pms violatile intr map register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_violate_intr_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_violate_intr_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**dma pms violatile intr map register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_violate_intr_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_violate_intr_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC;
 impl crate::RegisterSpec for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dma_apbperi_pms_monitor_violate_intr_map::R`](R) reader structure"]
+///`read()` method returns [`dma_apbperi_pms_monitor_violate_intr_map::R`](R) reader structure
 impl crate::Readable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dma_apbperi_pms_monitor_violate_intr_map::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dma_apbperi_pms_monitor_violate_intr_map::W`](W) writer structure
 impl crate::Writable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP to value 0"]
+///`reset()` method sets DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP to value 0
 impl crate::Resettable for DMA_APBPERI_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
     const RESET_VALUE: u32 = 0;
 }

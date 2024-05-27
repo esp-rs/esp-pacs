@@ -1,22 +1,22 @@
-#[doc = "Register `DAC_CONF` reader"]
+///Register `DAC_CONF` reader
 pub type R = crate::R<DAC_CONF_SPEC>;
-#[doc = "Register `DAC_CONF` writer"]
+///Register `DAC_CONF` writer
 pub type W = crate::W<DAC_CONF_SPEC>;
-#[doc = "Field `DAC_CLK_DIV` reader - "]
+///Field `DAC_CLK_DIV` reader -
 pub type DAC_CLK_DIV_R = crate::FieldReader;
-#[doc = "Field `DAC_CLK_DIV` writer - "]
+///Field `DAC_CLK_DIV` writer -
 pub type DAC_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `DAC_CLK_PAD_SEL` reader - "]
+///Field `DAC_CLK_PAD_SEL` reader -
 pub type DAC_CLK_PAD_SEL_R = crate::BitReader;
-#[doc = "Field `DAC_CLK_PAD_SEL` writer - "]
+///Field `DAC_CLK_PAD_SEL` writer -
 pub type DAC_CLK_PAD_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7"]
+    ///Bits 0:7
     #[inline(always)]
     pub fn dac_clk_div(&self) -> DAC_CLK_DIV_R {
         DAC_CLK_DIV_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bit 8"]
+    ///Bit 8
     #[inline(always)]
     pub fn dac_clk_pad_sel(&self) -> DAC_CLK_PAD_SEL_R {
         DAC_CLK_PAD_SEL_R::new(((self.bits >> 8) & 1) != 0)
@@ -32,33 +32,35 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7"]
+    ///Bits 0:7
     #[inline(always)]
     #[must_use]
     pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC> {
         DAC_CLK_DIV_W::new(self, 0)
     }
-    #[doc = "Bit 8"]
+    ///Bit 8
     #[inline(always)]
     #[must_use]
     pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC> {
         DAC_CLK_PAD_SEL_W::new(self, 8)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dac_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dac_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dac_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dac_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DAC_CONF_SPEC;
 impl crate::RegisterSpec for DAC_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dac_conf::R`](R) reader structure"]
+///`read()` method returns [`dac_conf::R`](R) reader structure
 impl crate::Readable for DAC_CONF_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dac_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`dac_conf::W`](W) writer structure
 impl crate::Writable for DAC_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DAC_CONF to value 0x28"]
+///`reset()` method sets DAC_CONF to value 0x28
 impl crate::Resettable for DAC_CONF_SPEC {
     const RESET_VALUE: u32 = 0x28;
 }

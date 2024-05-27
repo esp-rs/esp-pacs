@@ -1,9 +1,9 @@
-#[doc = "Register `DIEPDMAB` reader"]
+///Register `DIEPDMAB` reader
 pub type R = crate::R<DIEPDMAB_SPEC>;
-#[doc = "Field `DMABUFFERADDR` reader - "]
+///Field `DMABUFFERADDR` reader -
 pub type DMABUFFERADDR_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     pub fn dmabufferaddr(&self) -> DMABUFFERADDR_R {
         DMABUFFERADDR_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepdmab::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`diepdmab::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DIEPDMAB_SPEC;
 impl crate::RegisterSpec for DIEPDMAB_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`diepdmab::R`](R) reader structure"]
+///`read()` method returns [`diepdmab::R`](R) reader structure
 impl crate::Readable for DIEPDMAB_SPEC {}
-#[doc = "`reset()` method sets DIEPDMAB to value 0"]
+///`reset()` method sets DIEPDMAB to value 0
 impl crate::Resettable for DIEPDMAB_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,30 +1,30 @@
-#[doc = "Register `Core_0_MESSAGE_PHASE` reader"]
+///Register `Core_0_MESSAGE_PHASE` reader
 pub type R = crate::R<CORE_0_MESSAGE_PHASE_SPEC>;
-#[doc = "Field `CORE_0_MESSAGE_MATCH` reader - This bit indicates whether the check is successful"]
+///Field `CORE_0_MESSAGE_MATCH` reader - This bit indicates whether the check is successful
 pub type CORE_0_MESSAGE_MATCH_R = crate::BitReader;
-#[doc = "Field `CORE_0_MESSAGE_EXPECT` reader - This field indicates the data to be written next time"]
+///Field `CORE_0_MESSAGE_EXPECT` reader - This field indicates the data to be written next time
 pub type CORE_0_MESSAGE_EXPECT_R = crate::FieldReader;
-#[doc = "Field `CORE_0_MESSAGE_DATAPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data"]
+///Field `CORE_0_MESSAGE_DATAPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data
 pub type CORE_0_MESSAGE_DATAPHASE_R = crate::BitReader;
-#[doc = "Field `CORE_0_MESSAGE_ADDRESSPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address."]
+///Field `CORE_0_MESSAGE_ADDRESSPHASE` reader - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address.
 pub type CORE_0_MESSAGE_ADDRESSPHASE_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - This bit indicates whether the check is successful"]
+    ///Bit 0 - This bit indicates whether the check is successful
     #[inline(always)]
     pub fn core_0_message_match(&self) -> CORE_0_MESSAGE_MATCH_R {
         CORE_0_MESSAGE_MATCH_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:4 - This field indicates the data to be written next time"]
+    ///Bits 1:4 - This field indicates the data to be written next time
     #[inline(always)]
     pub fn core_0_message_expect(&self) -> CORE_0_MESSAGE_EXPECT_R {
         CORE_0_MESSAGE_EXPECT_R::new(((self.bits >> 1) & 0x0f) as u8)
     }
-    #[doc = "Bit 5 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data"]
+    ///Bit 5 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking data
     #[inline(always)]
     pub fn core_0_message_dataphase(&self) -> CORE_0_MESSAGE_DATAPHASE_R {
         CORE_0_MESSAGE_DATAPHASE_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address."]
+    ///Bit 6 - If this bit is 1, it means that is checking clear write_buffer operation,and is checking address.
     #[inline(always)]
     pub fn core_0_message_addressphase(&self) -> CORE_0_MESSAGE_ADDRESSPHASE_R {
         CORE_0_MESSAGE_ADDRESSPHASE_R::new(((self.bits >> 6) & 1) != 0)
@@ -44,14 +44,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Clear writer_buffer status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_message_phase::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Clear writer_buffer status register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_message_phase::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_MESSAGE_PHASE_SPEC;
 impl crate::RegisterSpec for CORE_0_MESSAGE_PHASE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_message_phase::R`](R) reader structure"]
+///`read()` method returns [`core_0_message_phase::R`](R) reader structure
 impl crate::Readable for CORE_0_MESSAGE_PHASE_SPEC {}
-#[doc = "`reset()` method sets Core_0_MESSAGE_PHASE to value 0"]
+///`reset()` method sets Core_0_MESSAGE_PHASE to value 0
 impl crate::Resettable for CORE_0_MESSAGE_PHASE_SPEC {
     const RESET_VALUE: u32 = 0;
 }

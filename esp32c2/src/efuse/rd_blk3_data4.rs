@@ -1,9 +1,9 @@
-#[doc = "Register `RD_BLK3_DATA4` reader"]
+///Register `RD_BLK3_DATA4` reader
 pub type R = crate::R<RD_BLK3_DATA4_SPEC>;
-#[doc = "Field `BLK3_DATA4` reader - Store the fifth 32-bit of Block3."]
+///Field `BLK3_DATA4` reader - Store the fifth 32-bit of Block3.
 pub type BLK3_DATA4_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Store the fifth 32-bit of Block3."]
+    ///Bits 0:31 - Store the fifth 32-bit of Block3.
     #[inline(always)]
     pub fn blk3_data4(&self) -> BLK3_DATA4_R {
         BLK3_DATA4_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Register 4 of BLOCK3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_blk3_data4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Register 4 of BLOCK3.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`rd_blk3_data4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RD_BLK3_DATA4_SPEC;
 impl crate::RegisterSpec for RD_BLK3_DATA4_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`rd_blk3_data4::R`](R) reader structure"]
+///`read()` method returns [`rd_blk3_data4::R`](R) reader structure
 impl crate::Readable for RD_BLK3_DATA4_SPEC {}
-#[doc = "`reset()` method sets RD_BLK3_DATA4 to value 0"]
+///`reset()` method sets RD_BLK3_DATA4 to value 0
 impl crate::Resettable for RD_BLK3_DATA4_SPEC {
     const RESET_VALUE: u32 = 0;
 }

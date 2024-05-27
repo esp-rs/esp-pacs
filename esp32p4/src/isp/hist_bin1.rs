@@ -1,9 +1,9 @@
-#[doc = "Register `HIST_BIN1` reader"]
+///Register `HIST_BIN1` reader
 pub type R = crate::R<HIST_BIN1_SPEC>;
-#[doc = "Field `HIST_BIN_1` reader - this field represents result of histogram bin 1"]
+///Field `HIST_BIN_1` reader - this field represents result of histogram bin 1
 pub type HIST_BIN_1_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:16 - this field represents result of histogram bin 1"]
+    ///Bits 0:16 - this field represents result of histogram bin 1
     #[inline(always)]
     pub fn hist_bin_1(&self) -> HIST_BIN_1_R {
         HIST_BIN_1_R::new(self.bits & 0x0001_ffff)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of histogram bin 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hist_bin1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**result of histogram bin 1
+
+You can [`read`](crate::generic::Reg::read) this register and get [`hist_bin1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct HIST_BIN1_SPEC;
 impl crate::RegisterSpec for HIST_BIN1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`hist_bin1::R`](R) reader structure"]
+///`read()` method returns [`hist_bin1::R`](R) reader structure
 impl crate::Readable for HIST_BIN1_SPEC {}
-#[doc = "`reset()` method sets HIST_BIN1 to value 0"]
+///`reset()` method sets HIST_BIN1 to value 0
 impl crate::Resettable for HIST_BIN1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

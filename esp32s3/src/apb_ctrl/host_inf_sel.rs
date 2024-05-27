@@ -1,13 +1,13 @@
-#[doc = "Register `HOST_INF_SEL` reader"]
+///Register `HOST_INF_SEL` reader
 pub type R = crate::R<HOST_INF_SEL_SPEC>;
-#[doc = "Register `HOST_INF_SEL` writer"]
+///Register `HOST_INF_SEL` writer
 pub type W = crate::W<HOST_INF_SEL_SPEC>;
-#[doc = "Field `PERI_IO_SWAP` reader - ******* Description ***********"]
+///Field `PERI_IO_SWAP` reader - ******* Description ***********
 pub type PERI_IO_SWAP_R = crate::FieldReader;
-#[doc = "Field `PERI_IO_SWAP` writer - ******* Description ***********"]
+///Field `PERI_IO_SWAP` writer - ******* Description ***********
 pub type PERI_IO_SWAP_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 impl R {
-    #[doc = "Bits 0:7 - ******* Description ***********"]
+    ///Bits 0:7 - ******* Description ***********
     #[inline(always)]
     pub fn peri_io_swap(&self) -> PERI_IO_SWAP_R {
         PERI_IO_SWAP_R::new((self.bits & 0xff) as u8)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - ******* Description ***********"]
+    ///Bits 0:7 - ******* Description ***********
     #[inline(always)]
     #[must_use]
     pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W<HOST_INF_SEL_SPEC> {
@@ -34,15 +34,15 @@ pub struct HOST_INF_SEL_SPEC;
 impl crate::RegisterSpec for HOST_INF_SEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`host_inf_sel::R`](R) reader structure"]
+///`read()` method returns [`host_inf_sel::R`](R) reader structure
 impl crate::Readable for HOST_INF_SEL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`host_inf_sel::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`host_inf_sel::W`](W) writer structure
 impl crate::Writable for HOST_INF_SEL_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets HOST_INF_SEL to value 0"]
+///`reset()` method sets HOST_INF_SEL to value 0
 impl crate::Resettable for HOST_INF_SEL_SPEC {
     const RESET_VALUE: u32 = 0;
 }

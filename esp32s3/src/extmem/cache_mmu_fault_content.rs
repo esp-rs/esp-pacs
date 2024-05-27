@@ -1,16 +1,16 @@
-#[doc = "Register `CACHE_MMU_FAULT_CONTENT` reader"]
+///Register `CACHE_MMU_FAULT_CONTENT` reader
 pub type R = crate::R<CACHE_MMU_FAULT_CONTENT_SPEC>;
-#[doc = "Field `CACHE_MMU_FAULT_CONTENT` reader - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
+///Field `CACHE_MMU_FAULT_CONTENT` reader - The bits are used to indicate the content of mmu entry which cause mmu fault..
 pub type CACHE_MMU_FAULT_CONTENT_R = crate::FieldReader<u16>;
-#[doc = "Field `CACHE_MMU_FAULT_CODE` reader - The right-most 3 bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: writeback, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx. The most significant bit is used to indicate this operation occurs in which one icache."]
+///Field `CACHE_MMU_FAULT_CODE` reader - The right-most 3 bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: writeback, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx. The most significant bit is used to indicate this operation occurs in which one icache.
 pub type CACHE_MMU_FAULT_CODE_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:15 - The bits are used to indicate the content of mmu entry which cause mmu fault.."]
+    ///Bits 0:15 - The bits are used to indicate the content of mmu entry which cause mmu fault..
     #[inline(always)]
     pub fn cache_mmu_fault_content(&self) -> CACHE_MMU_FAULT_CONTENT_R {
         CACHE_MMU_FAULT_CONTENT_R::new((self.bits & 0xffff) as u16)
     }
-    #[doc = "Bits 16:19 - The right-most 3 bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: writeback, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx. The most significant bit is used to indicate this operation occurs in which one icache."]
+    ///Bits 16:19 - The right-most 3 bits are used to indicate the operations which cause mmu fault occurrence. 0: default, 1: cpu miss, 2: preload miss, 3: writeback, 4: cpu miss evict recovery address, 5: load miss evict recovery address, 6: external dma tx, 7: external dma rx. The most significant bit is used to indicate this operation occurs in which one icache.
     #[inline(always)]
     pub fn cache_mmu_fault_code(&self) -> CACHE_MMU_FAULT_CODE_R {
         CACHE_MMU_FAULT_CODE_R::new(((self.bits >> 16) & 0x0f) as u8)
@@ -30,9 +30,9 @@ pub struct CACHE_MMU_FAULT_CONTENT_SPEC;
 impl crate::RegisterSpec for CACHE_MMU_FAULT_CONTENT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`cache_mmu_fault_content::R`](R) reader structure"]
+///`read()` method returns [`cache_mmu_fault_content::R`](R) reader structure
 impl crate::Readable for CACHE_MMU_FAULT_CONTENT_SPEC {}
-#[doc = "`reset()` method sets CACHE_MMU_FAULT_CONTENT to value 0"]
+///`reset()` method sets CACHE_MMU_FAULT_CONTENT to value 0
 impl crate::Resettable for CACHE_MMU_FAULT_CONTENT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

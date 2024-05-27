@@ -1,9 +1,9 @@
-#[doc = "Register `PCPU_NMI_INT1` reader"]
+///Register `PCPU_NMI_INT1` reader
 pub type R = crate::R<PCPU_NMI_INT1_SPEC>;
-#[doc = "Field `PROCPU_NMI_INT1` reader - GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34"]
+///Field `PROCPU_NMI_INT1` reader - GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34
 pub type PROCPU_NMI_INT1_R = crate::FieldReader;
 impl R {
-    #[doc = "Bits 0:2 - GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34"]
+    ///Bits 0:2 - GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34
     #[inline(always)]
     pub fn procpu_nmi_int1(&self) -> PROCPU_NMI_INT1_R {
         PROCPU_NMI_INT1_R::new((self.bits & 7) as u8)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcpu_nmi_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**GPIO PRO_CPU(not shielded) interrupt status register for GPIO32-34
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pcpu_nmi_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PCPU_NMI_INT1_SPEC;
 impl crate::RegisterSpec for PCPU_NMI_INT1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pcpu_nmi_int1::R`](R) reader structure"]
+///`read()` method returns [`pcpu_nmi_int1::R`](R) reader structure
 impl crate::Readable for PCPU_NMI_INT1_SPEC {}
-#[doc = "`reset()` method sets PCPU_NMI_INT1 to value 0"]
+///`reset()` method sets PCPU_NMI_INT1 to value 0
 impl crate::Resettable for PCPU_NMI_INT1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,12 +1,12 @@
-#[doc = "Register `RST_CONF` writer"]
+///Register `RST_CONF` writer
 pub type W = crate::W<RST_CONF_SPEC>;
-#[doc = "Field `RST_WIFIPWR` writer - "]
+///Field `RST_WIFIPWR` writer -
 pub type RST_WIFIPWR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_COEX` writer - "]
+///Field `RST_COEX` writer -
 pub type RST_COEX_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_I2C_MST` writer - "]
+///Field `RST_I2C_MST` writer -
 pub type RST_I2C_MST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_LP_TIMER` writer - "]
+///Field `RST_LP_TIMER` writer -
 pub type RST_LP_TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<RST_CONF_SPEC> {
@@ -15,43 +15,45 @@ impl core::fmt::Debug for crate::generic::Reg<RST_CONF_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    ///Bit 0
     #[inline(always)]
     #[must_use]
     pub fn rst_wifipwr(&mut self) -> RST_WIFIPWR_W<RST_CONF_SPEC> {
         RST_WIFIPWR_W::new(self, 0)
     }
-    #[doc = "Bit 1"]
+    ///Bit 1
     #[inline(always)]
     #[must_use]
     pub fn rst_coex(&mut self) -> RST_COEX_W<RST_CONF_SPEC> {
         RST_COEX_W::new(self, 1)
     }
-    #[doc = "Bit 2"]
+    ///Bit 2
     #[inline(always)]
     #[must_use]
     pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<RST_CONF_SPEC> {
         RST_I2C_MST_W::new(self, 2)
     }
-    #[doc = "Bit 3"]
+    ///Bit 3
     #[inline(always)]
     #[must_use]
     pub fn rst_lp_timer(&mut self) -> RST_LP_TIMER_W<RST_CONF_SPEC> {
         RST_LP_TIMER_W::new(self, 3)
     }
 }
-#[doc = "\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rst_conf::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rst_conf::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct RST_CONF_SPEC;
 impl crate::RegisterSpec for RST_CONF_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`rst_conf::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`rst_conf::W`](W) writer structure
 impl crate::Writable for RST_CONF_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets RST_CONF to value 0"]
+///`reset()` method sets RST_CONF to value 0
 impl crate::Resettable for RST_CONF_SPEC {
     const RESET_VALUE: u32 = 0;
 }

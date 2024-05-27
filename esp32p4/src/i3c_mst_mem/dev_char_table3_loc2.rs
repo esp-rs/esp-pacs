@@ -1,9 +1,9 @@
-#[doc = "Register `DEV_CHAR_TABLE3_LOC2` reader"]
+///Register `DEV_CHAR_TABLE3_LOC2` reader
 pub type R = crate::R<DEV_CHAR_TABLE3_LOC2_SPEC>;
-#[doc = "Field `DCT_DEV3_LOC2` reader - NA"]
+///Field `DCT_DEV3_LOC2` reader - NA
 pub type DCT_DEV3_LOC2_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - NA"]
+    ///Bits 0:31 - NA
     #[inline(always)]
     pub fn dct_dev3_loc2(&self) -> DCT_DEV3_LOC2_R {
         DCT_DEV3_LOC2_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dev_char_table3_loc2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dev_char_table3_loc2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DEV_CHAR_TABLE3_LOC2_SPEC;
 impl crate::RegisterSpec for DEV_CHAR_TABLE3_LOC2_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dev_char_table3_loc2::R`](R) reader structure"]
+///`read()` method returns [`dev_char_table3_loc2::R`](R) reader structure
 impl crate::Readable for DEV_CHAR_TABLE3_LOC2_SPEC {}
-#[doc = "`reset()` method sets DEV_CHAR_TABLE3_LOC2 to value 0"]
+///`reset()` method sets DEV_CHAR_TABLE3_LOC2 to value 0
 impl crate::Resettable for DEV_CHAR_TABLE3_LOC2_SPEC {
     const RESET_VALUE: u32 = 0;
 }

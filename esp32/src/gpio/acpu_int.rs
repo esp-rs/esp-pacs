@@ -1,9 +1,9 @@
-#[doc = "Register `ACPU_INT` reader"]
+///Register `ACPU_INT` reader
 pub type R = crate::R<ACPU_INT_SPEC>;
-#[doc = "Field `APPCPU_INT` reader - GPIO0~31 APP CPU interrupt status"]
+///Field `APPCPU_INT` reader - GPIO0~31 APP CPU interrupt status
 pub type APPCPU_INT_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - GPIO0~31 APP CPU interrupt status"]
+    ///Bits 0:31 - GPIO0~31 APP CPU interrupt status
     #[inline(always)]
     pub fn appcpu_int(&self) -> APPCPU_INT_R {
         APPCPU_INT_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`acpu_int::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`acpu_int::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct ACPU_INT_SPEC;
 impl crate::RegisterSpec for ACPU_INT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`acpu_int::R`](R) reader structure"]
+///`read()` method returns [`acpu_int::R`](R) reader structure
 impl crate::Readable for ACPU_INT_SPEC {}
-#[doc = "`reset()` method sets ACPU_INT to value 0"]
+///`reset()` method sets ACPU_INT to value 0
 impl crate::Resettable for ACPU_INT_SPEC {
     const RESET_VALUE: u32 = 0;
 }

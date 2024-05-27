@@ -1,9 +1,9 @@
-#[doc = "Register `PRO_INTR_STATUS_0` reader"]
+///Register `PRO_INTR_STATUS_0` reader
 pub type R = crate::R<PRO_INTR_STATUS_0_SPEC>;
-#[doc = "Field `PRO_INTR_STATUS_0` reader - This register stores the status of the first 32 input interrupt sources."]
+///Field `PRO_INTR_STATUS_0` reader - This register stores the status of the first 32 input interrupt sources.
 pub type PRO_INTR_STATUS_0_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - This register stores the status of the first 32 input interrupt sources."]
+    ///Bits 0:31 - This register stores the status of the first 32 input interrupt sources.
     #[inline(always)]
     pub fn pro_intr_status_0(&self) -> PRO_INTR_STATUS_0_R {
         PRO_INTR_STATUS_0_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Interrupt status register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_intr_status_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Interrupt status register 0
+
+You can [`read`](crate::generic::Reg::read) this register and get [`pro_intr_status_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct PRO_INTR_STATUS_0_SPEC;
 impl crate::RegisterSpec for PRO_INTR_STATUS_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pro_intr_status_0::R`](R) reader structure"]
+///`read()` method returns [`pro_intr_status_0::R`](R) reader structure
 impl crate::Readable for PRO_INTR_STATUS_0_SPEC {}
-#[doc = "`reset()` method sets PRO_INTR_STATUS_0 to value 0"]
+///`reset()` method sets PRO_INTR_STATUS_0 to value 0
 impl crate::Resettable for PRO_INTR_STATUS_0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

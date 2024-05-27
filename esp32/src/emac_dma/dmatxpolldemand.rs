@@ -1,4 +1,4 @@
-#[doc = "Register `DMATXPOLLDEMAND` reader"]
+///Register `DMATXPOLLDEMAND` reader
 pub type R = crate::R<DMATXPOLLDEMAND_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -6,14 +6,16 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-#[doc = "When these bits are written with any value the DMA reads the current descriptor to which the Register (Current Host Transmit Descriptor Register) is pointing. If that descriptor is not available (owned by the Host) the transmission returns to the suspend state and Bit\\[2\\] (TU) of Status Register is asserted. If the descriptor is available the transmission resumes.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmatxpolldemand::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**When these bits are written with any value the DMA reads the current descriptor to which the Register (Current Host Transmit Descriptor Register) is pointing. If that descriptor is not available (owned by the Host) the transmission returns to the suspend state and Bit\[2\] (TU) of Status Register is asserted. If the descriptor is available the transmission resumes.
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dmatxpolldemand::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DMATXPOLLDEMAND_SPEC;
 impl crate::RegisterSpec for DMATXPOLLDEMAND_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dmatxpolldemand::R`](R) reader structure"]
+///`read()` method returns [`dmatxpolldemand::R`](R) reader structure
 impl crate::Readable for DMATXPOLLDEMAND_SPEC {}
-#[doc = "`reset()` method sets DMATXPOLLDEMAND to value 0"]
+///`reset()` method sets DMATXPOLLDEMAND to value 0
 impl crate::Resettable for DMATXPOLLDEMAND_SPEC {
     const RESET_VALUE: u32 = 0;
 }

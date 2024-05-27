@@ -1,13 +1,13 @@
-#[doc = "Register `EXT_WAKEUP0` reader"]
+///Register `EXT_WAKEUP0` reader
 pub type R = crate::R<EXT_WAKEUP0_SPEC>;
-#[doc = "Register `EXT_WAKEUP0` writer"]
+///Register `EXT_WAKEUP0` writer
 pub type W = crate::W<EXT_WAKEUP0_SPEC>;
-#[doc = "Field `SEL` reader - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
+///Field `SEL` reader - GPIO\[0-17\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc
 pub type SEL_R = crate::FieldReader;
-#[doc = "Field `SEL` writer - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
+///Field `SEL` writer - GPIO\[0-17\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc
 pub type SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 impl R {
-    #[doc = "Bits 27:31 - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
+    ///Bits 27:31 - GPIO\[0-17\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc
     #[inline(always)]
     pub fn sel(&self) -> SEL_R {
         SEL_R::new(((self.bits >> 27) & 0x1f) as u8)
@@ -22,27 +22,29 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 27:31 - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
+    ///Bits 27:31 - GPIO\[0-17\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc
     #[inline(always)]
     #[must_use]
     pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP0_SPEC> {
         SEL_W::new(self, 27)
     }
 }
-#[doc = "External wake up configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ext_wakeup0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ext_wakeup0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**External wake up configuration register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`ext_wakeup0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ext_wakeup0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct EXT_WAKEUP0_SPEC;
 impl crate::RegisterSpec for EXT_WAKEUP0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`ext_wakeup0::R`](R) reader structure"]
+///`read()` method returns [`ext_wakeup0::R`](R) reader structure
 impl crate::Readable for EXT_WAKEUP0_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`ext_wakeup0::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`ext_wakeup0::W`](W) writer structure
 impl crate::Writable for EXT_WAKEUP0_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets EXT_WAKEUP0 to value 0"]
+///`reset()` method sets EXT_WAKEUP0 to value 0
 impl crate::Resettable for EXT_WAKEUP0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

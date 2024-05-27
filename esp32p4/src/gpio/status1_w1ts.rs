@@ -1,6 +1,6 @@
-#[doc = "Register `STATUS1_W1TS` writer"]
+///Register `STATUS1_W1TS` writer
 pub type W = crate::W<STATUS1_W1TS_SPEC>;
-#[doc = "Field `STATUS1_W1TS` writer - GPIO interrupt status set register for GPIO32-56"]
+///Field `STATUS1_W1TS` writer - GPIO interrupt status set register for GPIO32-56
 pub type STATUS1_W1TS_W<'a, REG> = crate::FieldWriter<'a, REG, 25, u32>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<STATUS1_W1TS_SPEC> {
@@ -9,25 +9,27 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS1_W1TS_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:24 - GPIO interrupt status set register for GPIO32-56"]
+    ///Bits 0:24 - GPIO interrupt status set register for GPIO32-56
     #[inline(always)]
     #[must_use]
     pub fn status1_w1ts(&mut self) -> STATUS1_W1TS_W<STATUS1_W1TS_SPEC> {
         STATUS1_W1TS_W::new(self, 0)
     }
 }
-#[doc = "GPIO interrupt status set register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status1_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**GPIO interrupt status set register for GPIO32-56
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status1_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct STATUS1_W1TS_SPEC;
 impl crate::RegisterSpec for STATUS1_W1TS_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`status1_w1ts::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`status1_w1ts::W`](W) writer structure
 impl crate::Writable for STATUS1_W1TS_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets STATUS1_W1TS to value 0"]
+///`reset()` method sets STATUS1_W1TS to value 0
 impl crate::Resettable for STATUS1_W1TS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

@@ -1,9 +1,9 @@
-#[doc = "Register `VERSION` reader"]
+///Register `VERSION` reader
 pub type R = crate::R<VERSION_SPEC>;
-#[doc = "Field `VERSION` reader - NA"]
+///Field `VERSION` reader - NA
 pub type VERSION_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - NA"]
+    ///Bits 0:31 - NA
     #[inline(always)]
     pub fn version(&self) -> VERSION_R {
         VERSION_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`version::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**NA
+
+You can [`read`](crate::generic::Reg::read) this register and get [`version::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct VERSION_SPEC;
 impl crate::RegisterSpec for VERSION_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`version::R`](R) reader structure"]
+///`read()` method returns [`version::R`](R) reader structure
 impl crate::Readable for VERSION_SPEC {}
-#[doc = "`reset()` method sets VERSION to value 0x3135_302a"]
+///`reset()` method sets VERSION to value 0x3135_302a
 impl crate::Resettable for VERSION_SPEC {
     const RESET_VALUE: u32 = 0x3135_302a;
 }

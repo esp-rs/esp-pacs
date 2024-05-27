@@ -1,9 +1,9 @@
-#[doc = "Register `LACTHI` reader"]
+///Register `LACTHI` reader
 pub type R = crate::R<LACTHI_SPEC>;
-#[doc = "Field `HI` reader - "]
+///Field `HI` reader -
 pub type HI_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31"]
+    ///Bits 0:31
     #[inline(always)]
     pub fn hi(&self) -> HI_R {
         HI_R::new(self.bits)
@@ -15,14 +15,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("LACTHI").field("hi", &self.hi()).finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lacthi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`lacthi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct LACTHI_SPEC;
 impl crate::RegisterSpec for LACTHI_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`lacthi::R`](R) reader structure"]
+///`read()` method returns [`lacthi::R`](R) reader structure
 impl crate::Readable for LACTHI_SPEC {}
-#[doc = "`reset()` method sets LACTHI to value 0"]
+///`reset()` method sets LACTHI to value 0
 impl crate::Resettable for LACTHI_SPEC {
     const RESET_VALUE: u32 = 0;
 }

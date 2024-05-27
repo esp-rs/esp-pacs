@@ -1,9 +1,9 @@
-#[doc = "Register `INTR_0` reader"]
+///Register `INTR_0` reader
 pub type R = crate::R<INTR_0_SPEC>;
-#[doc = "Field `INT_0` reader - GPIO interrupt 0 status register for GPIO0-31"]
+///Field `INT_0` reader - GPIO interrupt 0 status register for GPIO0-31
 pub type INT_0_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - GPIO interrupt 0 status register for GPIO0-31"]
+    ///Bits 0:31 - GPIO interrupt 0 status register for GPIO0-31
     #[inline(always)]
     pub fn int_0(&self) -> INT_0_R {
         INT_0_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO interrupt 0 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**GPIO interrupt 0 status register for GPIO0-31
+
+You can [`read`](crate::generic::Reg::read) this register and get [`intr_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct INTR_0_SPEC;
 impl crate::RegisterSpec for INTR_0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`intr_0::R`](R) reader structure"]
+///`read()` method returns [`intr_0::R`](R) reader structure
 impl crate::Readable for INTR_0_SPEC {}
-#[doc = "`reset()` method sets INTR_0 to value 0"]
+///`reset()` method sets INTR_0 to value 0
 impl crate::Resettable for INTR_0_SPEC {
     const RESET_VALUE: u32 = 0;
 }

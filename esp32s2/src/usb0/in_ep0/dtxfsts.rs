@@ -1,9 +1,9 @@
-#[doc = "Register `DTXFSTS` reader"]
+///Register `DTXFSTS` reader
 pub type R = crate::R<DTXFSTS_SPEC>;
-#[doc = "Field `INEPTXFSPCAVAIL` reader - "]
+///Field `INEPTXFSPCAVAIL` reader -
 pub type INEPTXFSPCAVAIL_R = crate::FieldReader<u16>;
 impl R {
-    #[doc = "Bits 0:15"]
+    ///Bits 0:15
     #[inline(always)]
     pub fn ineptxfspcavail(&self) -> INEPTXFSPCAVAIL_R {
         INEPTXFSPCAVAIL_R::new((self.bits & 0xffff) as u16)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dtxfsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**
+
+You can [`read`](crate::generic::Reg::read) this register and get [`dtxfsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct DTXFSTS_SPEC;
 impl crate::RegisterSpec for DTXFSTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dtxfsts::R`](R) reader structure"]
+///`read()` method returns [`dtxfsts::R`](R) reader structure
 impl crate::Readable for DTXFSTS_SPEC {}
-#[doc = "`reset()` method sets DTXFSTS to value 0"]
+///`reset()` method sets DTXFSTS to value 0
 impl crate::Resettable for DTXFSTS_SPEC {
     const RESET_VALUE: u32 = 0;
 }

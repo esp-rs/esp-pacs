@@ -1,9 +1,9 @@
-#[doc = "Register `CORE_0_AREA_PC` reader"]
+///Register `CORE_0_AREA_PC` reader
 pub type R = crate::R<CORE_0_AREA_PC_SPEC>;
-#[doc = "Field `CORE_0_AREA_PC` reader - the stackpointer when first touch region monitor interrupt"]
+///Field `CORE_0_AREA_PC` reader - the stackpointer when first touch region monitor interrupt
 pub type CORE_0_AREA_PC_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - the stackpointer when first touch region monitor interrupt"]
+    ///Bits 0:31 - the stackpointer when first touch region monitor interrupt
     #[inline(always)]
     pub fn core_0_area_pc(&self) -> CORE_0_AREA_PC_R {
         CORE_0_AREA_PC_R::new(self.bits)
@@ -17,14 +17,16 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "core0 area pc status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_area_pc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**core0 area pc status register
+
+You can [`read`](crate::generic::Reg::read) this register and get [`core_0_area_pc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct CORE_0_AREA_PC_SPEC;
 impl crate::RegisterSpec for CORE_0_AREA_PC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`core_0_area_pc::R`](R) reader structure"]
+///`read()` method returns [`core_0_area_pc::R`](R) reader structure
 impl crate::Readable for CORE_0_AREA_PC_SPEC {}
-#[doc = "`reset()` method sets CORE_0_AREA_PC to value 0"]
+///`reset()` method sets CORE_0_AREA_PC to value 0
 impl crate::Resettable for CORE_0_AREA_PC_SPEC {
     const RESET_VALUE: u32 = 0;
 }

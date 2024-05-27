@@ -1,6 +1,6 @@
-#[doc = "Register `ENABLE_W1TC` writer"]
+///Register `ENABLE_W1TC` writer
 pub type W = crate::W<ENABLE_W1TC_SPEC>;
-#[doc = "Field `REG_GPIO_ENABLE_DATA_W1TC` writer - Reserved"]
+///Field `REG_GPIO_ENABLE_DATA_W1TC` writer - Reserved
 pub type REG_GPIO_ENABLE_DATA_W1TC_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
@@ -9,25 +9,27 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Reserved"]
+    ///Bits 0:15 - Reserved
     #[inline(always)]
     #[must_use]
     pub fn reg_gpio_enable_data_w1tc(&mut self) -> REG_GPIO_ENABLE_DATA_W1TC_W<ENABLE_W1TC_SPEC> {
         REG_GPIO_ENABLE_DATA_W1TC_W::new(self, 0)
     }
 }
-#[doc = "Reserved\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+/**Reserved
+
+You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api).*/
 pub struct ENABLE_W1TC_SPEC;
 impl crate::RegisterSpec for ENABLE_W1TC_SPEC {
     type Ux = u32;
 }
-#[doc = "`write(|w| ..)` method takes [`enable_w1tc::W`](W) writer structure"]
+///`write(|w| ..)` method takes [`enable_w1tc::W`](W) writer structure
 impl crate::Writable for ENABLE_W1TC_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets ENABLE_W1TC to value 0"]
+///`reset()` method sets ENABLE_W1TC to value 0
 impl crate::Resettable for ENABLE_W1TC_SPEC {
     const RESET_VALUE: u32 = 0;
 }
