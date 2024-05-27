@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_ARB_CONFIG")
-            .field(
-                "in_arb_timeout_num",
-                &format_args!("{}", self.in_arb_timeout_num().bits()),
-            )
-            .field(
-                "in_weight_en",
-                &format_args!("{}", self.in_weight_en().bit()),
-            )
+            .field("in_arb_timeout_num", &self.in_arb_timeout_num())
+            .field("in_weight_en", &self.in_weight_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_ARB_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

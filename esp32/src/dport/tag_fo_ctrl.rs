@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TAG_FO_CTRL")
-            .field(
-                "pro_cache_tag_force_on",
-                &format_args!("{}", self.pro_cache_tag_force_on().bit()),
-            )
-            .field(
-                "pro_cache_tag_pd",
-                &format_args!("{}", self.pro_cache_tag_pd().bit()),
-            )
-            .field(
-                "app_cache_tag_force_on",
-                &format_args!("{}", self.app_cache_tag_force_on().bit()),
-            )
-            .field(
-                "app_cache_tag_pd",
-                &format_args!("{}", self.app_cache_tag_pd().bit()),
-            )
+            .field("pro_cache_tag_force_on", &self.pro_cache_tag_force_on())
+            .field("pro_cache_tag_pd", &self.pro_cache_tag_pd())
+            .field("app_cache_tag_force_on", &self.app_cache_tag_force_on())
+            .field("app_cache_tag_pd", &self.app_cache_tag_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TAG_FO_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

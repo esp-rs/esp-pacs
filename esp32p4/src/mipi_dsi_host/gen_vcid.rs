@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_VCID")
-            .field("rx", &format_args!("{}", self.rx().bits()))
-            .field("tear_auto", &format_args!("{}", self.tear_auto().bits()))
-            .field("tx_auto", &format_args!("{}", self.tx_auto().bits()))
+            .field("rx", &self.rx())
+            .field("tear_auto", &self.tear_auto())
+            .field("tx_auto", &self.tx_auto())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GEN_VCID_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

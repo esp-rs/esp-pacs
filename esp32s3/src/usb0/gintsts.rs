@@ -238,44 +238,35 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GINTSTS")
-            .field("curmod_int", &format_args!("{}", self.curmod_int().bit()))
-            .field("modemis", &format_args!("{}", self.modemis().bit()))
-            .field("otgint", &format_args!("{}", self.otgint().bit()))
-            .field("sof", &format_args!("{}", self.sof().bit()))
-            .field("rxflvi", &format_args!("{}", self.rxflvi().bit()))
-            .field("nptxfemp", &format_args!("{}", self.nptxfemp().bit()))
-            .field("ginnakeff", &format_args!("{}", self.ginnakeff().bit()))
-            .field("goutnakeff", &format_args!("{}", self.goutnakeff().bit()))
-            .field("erlysusp", &format_args!("{}", self.erlysusp().bit()))
-            .field("usbsusp", &format_args!("{}", self.usbsusp().bit()))
-            .field("usbrst", &format_args!("{}", self.usbrst().bit()))
-            .field("enumdone", &format_args!("{}", self.enumdone().bit()))
-            .field("isooutdrop", &format_args!("{}", self.isooutdrop().bit()))
-            .field("eopf", &format_args!("{}", self.eopf().bit()))
-            .field("epmis", &format_args!("{}", self.epmis().bit()))
-            .field("iepint", &format_args!("{}", self.iepint().bit()))
-            .field("oepint", &format_args!("{}", self.oepint().bit()))
-            .field("incompisoin", &format_args!("{}", self.incompisoin().bit()))
-            .field("incompip", &format_args!("{}", self.incompip().bit()))
-            .field("fetsusp", &format_args!("{}", self.fetsusp().bit()))
-            .field("resetdet", &format_args!("{}", self.resetdet().bit()))
-            .field("prtlnt", &format_args!("{}", self.prtlnt().bit()))
-            .field("hchlnt", &format_args!("{}", self.hchlnt().bit()))
-            .field("ptxfemp", &format_args!("{}", self.ptxfemp().bit()))
-            .field(
-                "conidstschng",
-                &format_args!("{}", self.conidstschng().bit()),
-            )
-            .field("disconnint", &format_args!("{}", self.disconnint().bit()))
-            .field("sessreqint", &format_args!("{}", self.sessreqint().bit()))
-            .field("wkupint", &format_args!("{}", self.wkupint().bit()))
+            .field("curmod_int", &self.curmod_int())
+            .field("modemis", &self.modemis())
+            .field("otgint", &self.otgint())
+            .field("sof", &self.sof())
+            .field("rxflvi", &self.rxflvi())
+            .field("nptxfemp", &self.nptxfemp())
+            .field("ginnakeff", &self.ginnakeff())
+            .field("goutnakeff", &self.goutnakeff())
+            .field("erlysusp", &self.erlysusp())
+            .field("usbsusp", &self.usbsusp())
+            .field("usbrst", &self.usbrst())
+            .field("enumdone", &self.enumdone())
+            .field("isooutdrop", &self.isooutdrop())
+            .field("eopf", &self.eopf())
+            .field("epmis", &self.epmis())
+            .field("iepint", &self.iepint())
+            .field("oepint", &self.oepint())
+            .field("incompisoin", &self.incompisoin())
+            .field("incompip", &self.incompip())
+            .field("fetsusp", &self.fetsusp())
+            .field("resetdet", &self.resetdet())
+            .field("prtlnt", &self.prtlnt())
+            .field("hchlnt", &self.hchlnt())
+            .field("ptxfemp", &self.ptxfemp())
+            .field("conidstschng", &self.conidstschng())
+            .field("disconnint", &self.disconnint())
+            .field("sessreqint", &self.sessreqint())
+            .field("wkupint", &self.wkupint())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GINTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_CK_WAIT_CNTL")
-            .field(
-                "wait_xtl_stable",
-                &format_args!("{}", self.wait_xtl_stable().bits()),
-            )
-            .field(
-                "wait_pll_stable",
-                &format_args!("{}", self.wait_pll_stable().bits()),
-            )
+            .field("wait_xtl_stable", &self.wait_xtl_stable())
+            .field("wait_pll_stable", &self.wait_pll_stable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_CK_WAIT_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

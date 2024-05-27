@@ -53,30 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_TIMING")
-            .field("ncrc", &format_args!("{}", self.ncrc().bits()))
-            .field(
-                "pst_end_cmd_low_value",
-                &format_args!("{}", self.pst_end_cmd_low_value().bits()),
-            )
-            .field(
-                "pst_end_data_low_value",
-                &format_args!("{}", self.pst_end_data_low_value().bits()),
-            )
-            .field(
-                "sdclk_stop_thres",
-                &format_args!("{}", self.sdclk_stop_thres().bits()),
-            )
-            .field(
-                "sample_clk_divider",
-                &format_args!("{}", self.sample_clk_divider().bits()),
-            )
+            .field("ncrc", &self.ncrc())
+            .field("pst_end_cmd_low_value", &self.pst_end_cmd_low_value())
+            .field("pst_end_data_low_value", &self.pst_end_data_low_value())
+            .field("sdclk_stop_thres", &self.sdclk_stop_thres())
+            .field("sample_clk_divider", &self.sample_clk_divider())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CFG_TIMING_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

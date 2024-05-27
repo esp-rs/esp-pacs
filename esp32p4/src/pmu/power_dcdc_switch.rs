@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_DCDC_SWITCH")
-            .field(
-                "force_dcdc_switch_pu",
-                &format_args!("{}", self.force_dcdc_switch_pu().bit()),
-            )
-            .field(
-                "force_dcdc_switch_pd",
-                &format_args!("{}", self.force_dcdc_switch_pd().bit()),
-            )
+            .field("force_dcdc_switch_pu", &self.force_dcdc_switch_pu())
+            .field("force_dcdc_switch_pd", &self.force_dcdc_switch_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_DCDC_SWITCH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

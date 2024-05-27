@@ -80,39 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL22")
-            .field(
-                "ledc_clk_src_sel",
-                &format_args!("{}", self.ledc_clk_src_sel().bits()),
-            )
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field(
-                "rmt_clk_src_sel",
-                &format_args!("{}", self.rmt_clk_src_sel().bits()),
-            )
-            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
-            .field(
-                "rmt_clk_div_num",
-                &format_args!("{}", self.rmt_clk_div_num().bits()),
-            )
-            .field(
-                "rmt_clk_div_numerator",
-                &format_args!("{}", self.rmt_clk_div_numerator().bits()),
-            )
-            .field(
-                "rmt_clk_div_denominator",
-                &format_args!("{}", self.rmt_clk_div_denominator().bits()),
-            )
-            .field(
-                "adc_clk_src_sel",
-                &format_args!("{}", self.adc_clk_src_sel().bits()),
-            )
+            .field("ledc_clk_src_sel", &self.ledc_clk_src_sel())
+            .field("ledc_clk_en", &self.ledc_clk_en())
+            .field("rmt_clk_src_sel", &self.rmt_clk_src_sel())
+            .field("rmt_clk_en", &self.rmt_clk_en())
+            .field("rmt_clk_div_num", &self.rmt_clk_div_num())
+            .field("rmt_clk_div_numerator", &self.rmt_clk_div_numerator())
+            .field("rmt_clk_div_denominator", &self.rmt_clk_div_denominator())
+            .field("adc_clk_src_sel", &self.adc_clk_src_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL22_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

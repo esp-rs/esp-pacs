@@ -24,21 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_1TXFIFO_POP")
-            .field(
-                "slc1_txfifo_rdata",
-                &format_args!("{}", self.slc1_txfifo_rdata().bits()),
-            )
-            .field(
-                "slc1_txfifo_pop",
-                &format_args!("{}", self.slc1_txfifo_pop().bit()),
-            )
+            .field("slc1_txfifo_rdata", &self.slc1_txfifo_rdata())
+            .field("slc1_txfifo_pop", &self.slc1_txfifo_pop())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_1TXFIFO_POP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

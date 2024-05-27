@@ -62,25 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TXRX_STATUS")
-            .field("txrx_state", &format_args!("{}", self.txrx_state().bits()))
-            .field("tx_proc", &format_args!("{}", self.tx_proc().bit()))
-            .field("rx_proc", &format_args!("{}", self.rx_proc().bit()))
-            .field("ed_proc", &format_args!("{}", self.ed_proc().bit()))
-            .field(
-                "ed_trigger_tx_proc",
-                &format_args!("{}", self.ed_trigger_tx_proc().bit()),
-            )
-            .field(
-                "rf_ctrl_state",
-                &format_args!("{}", self.rf_ctrl_state().bits()),
-            )
+            .field("txrx_state", &self.txrx_state())
+            .field("tx_proc", &self.tx_proc())
+            .field("rx_proc", &self.rx_proc())
+            .field("ed_proc", &self.ed_proc())
+            .field("ed_trigger_tx_proc", &self.ed_trigger_tx_proc())
+            .field("rf_ctrl_state", &self.rf_ctrl_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TXRX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

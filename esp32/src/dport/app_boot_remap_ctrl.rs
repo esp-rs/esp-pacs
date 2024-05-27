@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_BOOT_REMAP_CTRL")
-            .field(
-                "app_boot_remap",
-                &format_args!("{}", self.app_boot_remap().bit()),
-            )
+            .field("app_boot_remap", &self.app_boot_remap())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APP_BOOT_REMAP_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

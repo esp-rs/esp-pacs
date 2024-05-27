@@ -71,23 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTHRCTL")
-            .field("nonisothren", &format_args!("{}", self.nonisothren().bit()))
-            .field("isothren", &format_args!("{}", self.isothren().bit()))
-            .field("txthrlen", &format_args!("{}", self.txthrlen().bits()))
-            .field(
-                "ahbthrratio",
-                &format_args!("{}", self.ahbthrratio().bits()),
-            )
-            .field("rxthren", &format_args!("{}", self.rxthren().bit()))
-            .field("rxthrlen", &format_args!("{}", self.rxthrlen().bits()))
-            .field("arbprken", &format_args!("{}", self.arbprken().bit()))
+            .field("nonisothren", &self.nonisothren())
+            .field("isothren", &self.isothren())
+            .field("txthrlen", &self.txthrlen())
+            .field("ahbthrratio", &self.ahbthrratio())
+            .field("rxthren", &self.rxthren())
+            .field("rxthrlen", &self.rxthrlen())
+            .field("arbprken", &self.arbprken())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DTHRCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

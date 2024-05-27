@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CONF")
-            .field(
-                "retention_clk_en",
-                &format_args!("{}", self.retention_clk_en().bit()),
-            )
-            .field(
-                "retention_rst_en",
-                &format_args!("{}", self.retention_rst_en().bit()),
-            )
+            .field("retention_clk_en", &self.retention_clk_en())
+            .field("retention_rst_en", &self.retention_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RETENTION_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

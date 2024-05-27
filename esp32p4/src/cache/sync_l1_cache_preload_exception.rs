@@ -48,37 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYNC_L1_CACHE_PRELOAD_EXCEPTION")
-            .field(
-                "l1_icache0_pld_err_code",
-                &format_args!("{}", self.l1_icache0_pld_err_code().bits()),
-            )
-            .field(
-                "l1_icache1_pld_err_code",
-                &format_args!("{}", self.l1_icache1_pld_err_code().bits()),
-            )
-            .field(
-                "l1_icache2_pld_err_code",
-                &format_args!("{}", self.l1_icache2_pld_err_code().bits()),
-            )
-            .field(
-                "l1_icache3_pld_err_code",
-                &format_args!("{}", self.l1_icache3_pld_err_code().bits()),
-            )
-            .field(
-                "l1_dcache_pld_err_code",
-                &format_args!("{}", self.l1_dcache_pld_err_code().bits()),
-            )
-            .field(
-                "sync_err_code",
-                &format_args!("{}", self.sync_err_code().bits()),
-            )
+            .field("l1_icache0_pld_err_code", &self.l1_icache0_pld_err_code())
+            .field("l1_icache1_pld_err_code", &self.l1_icache1_pld_err_code())
+            .field("l1_icache2_pld_err_code", &self.l1_icache2_pld_err_code())
+            .field("l1_icache3_pld_err_code", &self.l1_icache3_pld_err_code())
+            .field("l1_dcache_pld_err_code", &self.l1_dcache_pld_err_code())
+            .field("sync_err_code", &self.sync_err_code())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sync_l1_cache_preload_exception::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_UNALLOCATE_BUFFER_CLEAR")
-            .field(
-                "l2_cache_unalloc_clr",
-                &format_args!("{}", self.l2_cache_unalloc_clr().bit()),
-            )
+            .field("l2_cache_unalloc_clr", &self.l2_cache_unalloc_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_UNALLOCATE_BUFFER_CLEAR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Unallocate request buffer clear registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_unallocate_buffer_clear::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAW_INTS")
-            .field("raw_ints", &format_args!("{}", self.raw_ints().bits()))
+            .field("raw_ints", &self.raw_ints())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RAW_INTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SDIO raw ints register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`raw_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

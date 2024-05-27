@@ -34,26 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE")
-            .field(
-                "inlink_dscr_addr",
-                &format_args!("{}", self.inlink_dscr_addr().bits()),
-            )
-            .field(
-                "in_dscr_state",
-                &format_args!("{}", self.in_dscr_state().bits()),
-            )
-            .field("in_state", &format_args!("{}", self.in_state().bits()))
-            .field(
-                "in_reset_avail",
-                &format_args!("{}", self.in_reset_avail().bit()),
-            )
+            .field("inlink_dscr_addr", &self.inlink_dscr_addr())
+            .field("in_dscr_state", &self.in_dscr_state())
+            .field("in_state", &self.in_state())
+            .field("in_reset_avail", &self.in_reset_avail())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RX CHx state register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

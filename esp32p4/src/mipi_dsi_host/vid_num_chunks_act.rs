@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_NUM_CHUNKS_ACT")
-            .field(
-                "vid_num_chunks_act",
-                &format_args!("{}", self.vid_num_chunks_act().bits()),
-            )
+            .field("vid_num_chunks_act", &self.vid_num_chunks_act())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VID_NUM_CHUNKS_ACT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vid_num_chunks_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

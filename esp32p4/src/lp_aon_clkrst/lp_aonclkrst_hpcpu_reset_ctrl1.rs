@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPCPU_RESET_CTRL1")
             .field(
                 "lp_aonclkrst_hpcore0_sw_stall_code",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_sw_stall_code().bits()),
+                &self.lp_aonclkrst_hpcore0_sw_stall_code(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_sw_stall_code",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_sw_stall_code().bits()),
+                &self.lp_aonclkrst_hpcore1_sw_stall_code(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -58,37 +58,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEAS1_CTRL2")
-            .field(
-                "meas1_data_sar",
-                &format_args!("{}", self.meas1_data_sar().bits()),
-            )
-            .field(
-                "meas1_done_sar",
-                &format_args!("{}", self.meas1_done_sar().bit()),
-            )
-            .field(
-                "meas1_start_sar",
-                &format_args!("{}", self.meas1_start_sar().bit()),
-            )
-            .field(
-                "meas1_start_force",
-                &format_args!("{}", self.meas1_start_force().bit()),
-            )
-            .field(
-                "sar1_en_pad",
-                &format_args!("{}", self.sar1_en_pad().bits()),
-            )
-            .field(
-                "sar1_en_pad_force",
-                &format_args!("{}", self.sar1_en_pad_force().bit()),
-            )
+            .field("meas1_data_sar", &self.meas1_data_sar())
+            .field("meas1_done_sar", &self.meas1_done_sar())
+            .field("meas1_start_sar", &self.meas1_start_sar())
+            .field("meas1_start_force", &self.meas1_start_force())
+            .field("sar1_en_pad", &self.sar1_en_pad())
+            .field("sar1_en_pad_force", &self.sar1_en_pad_force())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEAS1_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

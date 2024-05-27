@@ -40,29 +40,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEVICE_TABLE")
-            .field(
-                "reg_dct_daa_init_index",
-                &format_args!("{}", self.reg_dct_daa_init_index().bits()),
-            )
-            .field(
-                "reg_dat_daa_init_index",
-                &format_args!("{}", self.reg_dat_daa_init_index().bits()),
-            )
-            .field(
-                "present_dct_index",
-                &format_args!("{}", self.present_dct_index().bits()),
-            )
-            .field(
-                "present_dat_index",
-                &format_args!("{}", self.present_dat_index().bits()),
-            )
+            .field("reg_dct_daa_init_index", &self.reg_dct_daa_init_index())
+            .field("reg_dat_daa_init_index", &self.reg_dat_daa_init_index())
+            .field("present_dct_index", &self.present_dct_index())
+            .field("present_dat_index", &self.present_dat_index())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEVICE_TABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

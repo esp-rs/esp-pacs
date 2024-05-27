@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CRC")
-            .field("data", &format_args!("{}", self.data().bits()))
+            .field("data", &self.data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_CRC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI1 TX CRC data register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_crc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

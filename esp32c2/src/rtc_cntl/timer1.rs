@@ -53,30 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER1")
-            .field(
-                "cpu_stall_en",
-                &format_args!("{}", self.cpu_stall_en().bit()),
-            )
-            .field(
-                "cpu_stall_wait",
-                &format_args!("{}", self.cpu_stall_wait().bits()),
-            )
-            .field("ck8m_wait", &format_args!("{}", self.ck8m_wait().bits()))
-            .field(
-                "xtl_buf_wait",
-                &format_args!("{}", self.xtl_buf_wait().bits()),
-            )
-            .field(
-                "pll_buf_wait",
-                &format_args!("{}", self.pll_buf_wait().bits()),
-            )
+            .field("cpu_stall_en", &self.cpu_stall_en())
+            .field("cpu_stall_wait", &self.cpu_stall_wait())
+            .field("ck8m_wait", &self.ck8m_wait())
+            .field("xtl_buf_wait", &self.xtl_buf_wait())
+            .field("pll_buf_wait", &self.pll_buf_wait())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMER1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

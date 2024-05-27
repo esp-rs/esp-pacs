@@ -62,21 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("comp0_neg", &format_args!("{}", self.comp0_neg().bit()))
-            .field("comp0_pos", &format_args!("{}", self.comp0_pos().bit()))
-            .field("comp0_all", &format_args!("{}", self.comp0_all().bit()))
-            .field("comp1_neg", &format_args!("{}", self.comp1_neg().bit()))
-            .field("comp1_pos", &format_args!("{}", self.comp1_pos().bit()))
-            .field("comp1_all", &format_args!("{}", self.comp1_all().bit()))
-            .field("bistok", &format_args!("{}", self.bistok().bit()))
-            .field("bistfail", &format_args!("{}", self.bistfail().bit()))
+            .field("comp0_neg", &self.comp0_neg())
+            .field("comp0_pos", &self.comp0_pos())
+            .field("comp0_all", &self.comp0_all())
+            .field("comp1_neg", &self.comp1_neg())
+            .field("comp1_pos", &self.comp1_pos())
+            .field("comp1_all", &self.comp1_all())
+            .field("bistok", &self.bistok())
+            .field("bistfail", &self.bistfail())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "analog comparator interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

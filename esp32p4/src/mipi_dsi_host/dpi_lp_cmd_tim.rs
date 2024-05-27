@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_LP_CMD_TIM")
-            .field(
-                "invact_lpcmd_time",
-                &format_args!("{}", self.invact_lpcmd_time().bits()),
-            )
-            .field(
-                "outvact_lpcmd_time",
-                &format_args!("{}", self.outvact_lpcmd_time().bits()),
-            )
+            .field("invact_lpcmd_time", &self.invact_lpcmd_time())
+            .field("outvact_lpcmd_time", &self.outvact_lpcmd_time())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_LP_CMD_TIM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CH_ARB_WEIGH")
-            .field(
-                "tx_ch_arb_weigh",
-                &format_args!("{}", self.tx_ch_arb_weigh().bits()),
-            )
+            .field("tx_ch_arb_weigh", &self.tx_ch_arb_weigh())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_CH_ARB_WEIGH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

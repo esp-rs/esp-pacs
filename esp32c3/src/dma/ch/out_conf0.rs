@@ -62,34 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CONF0")
-            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
-            .field(
-                "out_loop_test",
-                &format_args!("{}", self.out_loop_test().bit()),
-            )
-            .field(
-                "out_auto_wrback",
-                &format_args!("{}", self.out_auto_wrback().bit()),
-            )
-            .field(
-                "out_eof_mode",
-                &format_args!("{}", self.out_eof_mode().bit()),
-            )
-            .field(
-                "outdscr_burst_en",
-                &format_args!("{}", self.outdscr_burst_en().bit()),
-            )
-            .field(
-                "out_data_burst_en",
-                &format_args!("{}", self.out_data_burst_en().bit()),
-            )
+            .field("out_rst", &self.out_rst())
+            .field("out_loop_test", &self.out_loop_test())
+            .field("out_auto_wrback", &self.out_auto_wrback())
+            .field("out_eof_mode", &self.out_eof_mode())
+            .field("outdscr_burst_en", &self.outdscr_burst_en())
+            .field("out_data_burst_en", &self.out_data_burst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

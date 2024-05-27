@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_W1TS")
-            .field(
-                "status_int_w1ts",
-                &format_args!("{}", self.status_int_w1ts().bits()),
-            )
+            .field("status_int_w1ts", &self.status_int_w1ts())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

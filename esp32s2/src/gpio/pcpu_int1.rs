@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCPU_INT1")
-            .field(
-                "procpu1_int",
-                &format_args!("{}", self.procpu1_int().bits()),
-            )
+            .field("procpu1_int", &self.procpu1_int())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PCPU_INT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "GPIO32 ~ 53 PRO_CPU interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcpu_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

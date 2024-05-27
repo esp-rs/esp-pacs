@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IFS_COUNTER")
-            .field(
-                "ifs_counter",
-                &format_args!("{}", self.ifs_counter().bits()),
-            )
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("ifs_counter", &self.ifs_counter())
+            .field("en", &self.en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IFS_COUNTER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

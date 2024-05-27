@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCPU_NMI_INT1")
-            .field(
-                "procpu_nmi_int_h",
-                &format_args!("{}", self.procpu_nmi_int_h().bits()),
-            )
+            .field("procpu_nmi_int_h", &self.procpu_nmi_int_h())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PCPU_NMI_INT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcpu_nmi_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

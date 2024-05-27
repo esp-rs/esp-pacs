@@ -71,41 +71,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_AUTOLOAD_CFG")
-            .field(
-                "pro_dcache_autoload_mode",
-                &format_args!("{}", self.pro_dcache_autoload_mode().bit()),
-            )
-            .field(
-                "pro_dcache_autoload_step",
-                &format_args!("{}", self.pro_dcache_autoload_step().bits()),
-            )
+            .field("pro_dcache_autoload_mode", &self.pro_dcache_autoload_mode())
+            .field("pro_dcache_autoload_step", &self.pro_dcache_autoload_step())
             .field(
                 "pro_dcache_autoload_order",
-                &format_args!("{}", self.pro_dcache_autoload_order().bit()),
+                &self.pro_dcache_autoload_order(),
             )
-            .field(
-                "pro_dcache_autoload_rqst",
-                &format_args!("{}", self.pro_dcache_autoload_rqst().bits()),
-            )
-            .field(
-                "pro_dcache_autoload_size",
-                &format_args!("{}", self.pro_dcache_autoload_size().bits()),
-            )
+            .field("pro_dcache_autoload_rqst", &self.pro_dcache_autoload_rqst())
+            .field("pro_dcache_autoload_size", &self.pro_dcache_autoload_size())
             .field(
                 "pro_dcache_autoload_sct0_ena",
-                &format_args!("{}", self.pro_dcache_autoload_sct0_ena().bit()),
+                &self.pro_dcache_autoload_sct0_ena(),
             )
             .field(
                 "pro_dcache_autoload_sct1_ena",
-                &format_args!("{}", self.pro_dcache_autoload_sct1_ena().bit()),
+                &self.pro_dcache_autoload_sct1_ena(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_AUTOLOAD_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

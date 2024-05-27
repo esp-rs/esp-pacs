@@ -51,33 +51,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTCCALICFG")
-            .field(
-                "rtc_cali_start_cycling",
-                &format_args!("{}", self.rtc_cali_start_cycling().bit()),
-            )
-            .field(
-                "rtc_cali_clk_sel",
-                &format_args!("{}", self.rtc_cali_clk_sel().bits()),
-            )
-            .field(
-                "rtc_cali_rdy",
-                &format_args!("{}", self.rtc_cali_rdy().bit()),
-            )
-            .field(
-                "rtc_cali_max",
-                &format_args!("{}", self.rtc_cali_max().bits()),
-            )
-            .field(
-                "rtc_cali_start",
-                &format_args!("{}", self.rtc_cali_start().bit()),
-            )
+            .field("rtc_cali_start_cycling", &self.rtc_cali_start_cycling())
+            .field("rtc_cali_clk_sel", &self.rtc_cali_clk_sel())
+            .field("rtc_cali_rdy", &self.rtc_cali_rdy())
+            .field("rtc_cali_max", &self.rtc_cali_max())
+            .field("rtc_cali_start", &self.rtc_cali_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -48,37 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_DCACHE_BLOCKSIZE_CONF")
-            .field(
-                "l1_dcache_blocksize_8",
-                &format_args!("{}", self.l1_dcache_blocksize_8().bit()),
-            )
-            .field(
-                "l1_dcache_blocksize_16",
-                &format_args!("{}", self.l1_dcache_blocksize_16().bit()),
-            )
-            .field(
-                "l1_dcache_blocksize_32",
-                &format_args!("{}", self.l1_dcache_blocksize_32().bit()),
-            )
-            .field(
-                "l1_dcache_blocksize_64",
-                &format_args!("{}", self.l1_dcache_blocksize_64().bit()),
-            )
-            .field(
-                "l1_dcache_blocksize_128",
-                &format_args!("{}", self.l1_dcache_blocksize_128().bit()),
-            )
-            .field(
-                "l1_dcache_blocksize_256",
-                &format_args!("{}", self.l1_dcache_blocksize_256().bit()),
-            )
+            .field("l1_dcache_blocksize_8", &self.l1_dcache_blocksize_8())
+            .field("l1_dcache_blocksize_16", &self.l1_dcache_blocksize_16())
+            .field("l1_dcache_blocksize_32", &self.l1_dcache_blocksize_32())
+            .field("l1_dcache_blocksize_64", &self.l1_dcache_blocksize_64())
+            .field("l1_dcache_blocksize_128", &self.l1_dcache_blocksize_128())
+            .field("l1_dcache_blocksize_256", &self.l1_dcache_blocksize_256())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_DCACHE_BLOCKSIZE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 data Cache BlockSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dcache_blocksize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

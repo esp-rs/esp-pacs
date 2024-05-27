@@ -89,37 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field(
-                "sda_force_out",
-                &format_args!("{}", self.sda_force_out().bit()),
-            )
-            .field(
-                "scl_force_out",
-                &format_args!("{}", self.scl_force_out().bit()),
-            )
-            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
-            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
-            .field(
-                "tx_lsb_first",
-                &format_args!("{}", self.tx_lsb_first().bit()),
-            )
-            .field(
-                "rx_lsb_first",
-                &format_args!("{}", self.rx_lsb_first().bit()),
-            )
-            .field(
-                "i2c_ctrl_clk_gate_en",
-                &format_args!("{}", self.i2c_ctrl_clk_gate_en().bit()),
-            )
-            .field("i2c_reset", &format_args!("{}", self.i2c_reset().bit()))
-            .field("i2cclk_en", &format_args!("{}", self.i2cclk_en().bit()))
+            .field("sda_force_out", &self.sda_force_out())
+            .field("scl_force_out", &self.scl_force_out())
+            .field("ms_mode", &self.ms_mode())
+            .field("trans_start", &self.trans_start())
+            .field("tx_lsb_first", &self.tx_lsb_first())
+            .field("rx_lsb_first", &self.rx_lsb_first())
+            .field("i2c_ctrl_clk_gate_en", &self.i2c_ctrl_clk_gate_en())
+            .field("i2c_reset", &self.i2c_reset())
+            .field("i2cclk_en", &self.i2cclk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

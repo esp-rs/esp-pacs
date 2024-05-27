@@ -55,31 +55,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL118")
             .field(
                 "parlio_rx_clk_div_numerator",
-                &format_args!("{}", self.parlio_rx_clk_div_numerator().bits()),
+                &self.parlio_rx_clk_div_numerator(),
             )
             .field(
                 "parlio_rx_clk_div_denominator",
-                &format_args!("{}", self.parlio_rx_clk_div_denominator().bits()),
+                &self.parlio_rx_clk_div_denominator(),
             )
-            .field(
-                "parlio_tx_clk_src_sel",
-                &format_args!("{}", self.parlio_tx_clk_src_sel().bits()),
-            )
-            .field(
-                "parlio_tx_clk_en",
-                &format_args!("{}", self.parlio_tx_clk_en().bit()),
-            )
-            .field(
-                "parlio_tx_clk_div_num",
-                &format_args!("{}", self.parlio_tx_clk_div_num().bits()),
-            )
+            .field("parlio_tx_clk_src_sel", &self.parlio_tx_clk_src_sel())
+            .field("parlio_tx_clk_en", &self.parlio_tx_clk_en())
+            .field("parlio_tx_clk_div_num", &self.parlio_tx_clk_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL118_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -83,49 +83,40 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_DBUG3")
-            .field(
-                "pro_mmu_rdata",
-                &format_args!("{}", self.pro_mmu_rdata().bits()),
-            )
+            .field("pro_mmu_rdata", &self.pro_mmu_rdata())
             .field(
                 "pro_cpu_disabled_cache_ia",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia().bits()),
+                &self.pro_cpu_disabled_cache_ia(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_opposite",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_opposite().bit()),
+                &self.pro_cpu_disabled_cache_ia_opposite(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_dram1",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_dram1().bit()),
+                &self.pro_cpu_disabled_cache_ia_dram1(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_irom0",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_irom0().bit()),
+                &self.pro_cpu_disabled_cache_ia_irom0(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_iram1",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_iram1().bit()),
+                &self.pro_cpu_disabled_cache_ia_iram1(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_iram0",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_iram0().bit()),
+                &self.pro_cpu_disabled_cache_ia_iram0(),
             )
             .field(
                 "pro_cpu_disabled_cache_ia_drom0",
-                &format_args!("{}", self.pro_cpu_disabled_cache_ia_drom0().bit()),
+                &self.pro_cpu_disabled_cache_ia_drom0(),
             )
             .field(
                 "pro_cache_iram0_pid_error",
-                &format_args!("{}", self.pro_cache_iram0_pid_error().bit()),
+                &self.pro_cache_iram0_pid_error(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

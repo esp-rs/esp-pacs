@@ -33,23 +33,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMB_PD_SITE1_UNIT1_VT0_CONF2")
             .field(
                 "monitor_edg_mod_vt0_pd_site1_unit1",
-                &format_args!("{}", self.monitor_edg_mod_vt0_pd_site1_unit1().bits()),
+                &self.monitor_edg_mod_vt0_pd_site1_unit1(),
             )
             .field(
                 "delay_ovf_vt0_pd_site1_unit1",
-                &format_args!("{}", self.delay_ovf_vt0_pd_site1_unit1().bit()),
+                &self.delay_ovf_vt0_pd_site1_unit1(),
             )
             .field(
                 "timing_err_cnt_o_vt0_pd_site1_unit1",
-                &format_args!("{}", self.timing_err_cnt_o_vt0_pd_site1_unit1().bits()),
+                &self.timing_err_cnt_o_vt0_pd_site1_unit1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMB_PD_SITE1_UNIT1_VT0_CONF2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T0QNR")
-            .field("t0_qnr_val", &format_args!("{}", self.t0_qnr_val().bits()))
+            .field("t0_qnr_val", &self.t0_qnr_val())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<T0QNR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0qnr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

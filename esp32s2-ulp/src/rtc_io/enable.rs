@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("ENABLE")
             .field(
                 "reg_rtcio_reg_gpio_enable",
-                &format_args!("{}", self.reg_rtcio_reg_gpio_enable().bits()),
+                &self.reg_rtcio_reg_gpio_enable(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ENABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

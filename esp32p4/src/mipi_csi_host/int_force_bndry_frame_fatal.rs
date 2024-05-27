@@ -154,75 +154,69 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_FORCE_BNDRY_FRAME_FATAL")
             .field(
                 "force_err_f_bndry_match_vc0",
-                &format_args!("{}", self.force_err_f_bndry_match_vc0().bit()),
+                &self.force_err_f_bndry_match_vc0(),
             )
             .field(
                 "force_err_f_bndry_match_vc1",
-                &format_args!("{}", self.force_err_f_bndry_match_vc1().bit()),
+                &self.force_err_f_bndry_match_vc1(),
             )
             .field(
                 "force_err_f_bndry_match_vc2",
-                &format_args!("{}", self.force_err_f_bndry_match_vc2().bit()),
+                &self.force_err_f_bndry_match_vc2(),
             )
             .field(
                 "force_err_f_bndry_match_vc3",
-                &format_args!("{}", self.force_err_f_bndry_match_vc3().bit()),
+                &self.force_err_f_bndry_match_vc3(),
             )
             .field(
                 "force_err_f_bndry_match_vc4",
-                &format_args!("{}", self.force_err_f_bndry_match_vc4().bit()),
+                &self.force_err_f_bndry_match_vc4(),
             )
             .field(
                 "force_err_f_bndry_match_vc5",
-                &format_args!("{}", self.force_err_f_bndry_match_vc5().bit()),
+                &self.force_err_f_bndry_match_vc5(),
             )
             .field(
                 "force_err_f_bndry_match_vc6",
-                &format_args!("{}", self.force_err_f_bndry_match_vc6().bit()),
+                &self.force_err_f_bndry_match_vc6(),
             )
             .field(
                 "force_err_f_bndry_match_vc7",
-                &format_args!("{}", self.force_err_f_bndry_match_vc7().bit()),
+                &self.force_err_f_bndry_match_vc7(),
             )
             .field(
                 "force_err_f_bndry_match_vc8",
-                &format_args!("{}", self.force_err_f_bndry_match_vc8().bit()),
+                &self.force_err_f_bndry_match_vc8(),
             )
             .field(
                 "force_err_f_bndry_match_vc9",
-                &format_args!("{}", self.force_err_f_bndry_match_vc9().bit()),
+                &self.force_err_f_bndry_match_vc9(),
             )
             .field(
                 "force_err_f_bndry_match_vc10",
-                &format_args!("{}", self.force_err_f_bndry_match_vc10().bit()),
+                &self.force_err_f_bndry_match_vc10(),
             )
             .field(
                 "force_err_f_bndry_match_vc11",
-                &format_args!("{}", self.force_err_f_bndry_match_vc11().bit()),
+                &self.force_err_f_bndry_match_vc11(),
             )
             .field(
                 "force_err_f_bndry_match_vc12",
-                &format_args!("{}", self.force_err_f_bndry_match_vc12().bit()),
+                &self.force_err_f_bndry_match_vc12(),
             )
             .field(
                 "force_err_f_bndry_match_vc13",
-                &format_args!("{}", self.force_err_f_bndry_match_vc13().bit()),
+                &self.force_err_f_bndry_match_vc13(),
             )
             .field(
                 "force_err_f_bndry_match_vc14",
-                &format_args!("{}", self.force_err_f_bndry_match_vc14().bit()),
+                &self.force_err_f_bndry_match_vc14(),
             )
             .field(
                 "force_err_f_bndry_match_vc15",
-                &format_args!("{}", self.force_err_f_bndry_match_vc15().bit()),
+                &self.force_err_f_bndry_match_vc15(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_FORCE_BNDRY_FRAME_FATAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

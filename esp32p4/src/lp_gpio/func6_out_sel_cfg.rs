@@ -46,27 +46,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("FUNC6_OUT_SEL_CFG")
             .field(
                 "reg_gpio_func6_oe_inv_sel",
-                &format_args!("{}", self.reg_gpio_func6_oe_inv_sel().bit()),
+                &self.reg_gpio_func6_oe_inv_sel(),
             )
-            .field(
-                "reg_gpio_func6_oe_sel",
-                &format_args!("{}", self.reg_gpio_func6_oe_sel().bit()),
-            )
+            .field("reg_gpio_func6_oe_sel", &self.reg_gpio_func6_oe_sel())
             .field(
                 "reg_gpio_func6_out_inv_sel",
-                &format_args!("{}", self.reg_gpio_func6_out_inv_sel().bit()),
+                &self.reg_gpio_func6_out_inv_sel(),
             )
-            .field(
-                "reg_gpio_func6_out_sel",
-                &format_args!("{}", self.reg_gpio_func6_out_sel().bits()),
-            )
+            .field("reg_gpio_func6_out_sel", &self.reg_gpio_func6_out_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FUNC6_OUT_SEL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

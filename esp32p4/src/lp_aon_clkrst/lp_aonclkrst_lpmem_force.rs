@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LPMEM_FORCE")
             .field(
                 "lp_aonclkrst_lpmem_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_lpmem_clk_force_on().bit()),
+                &self.lp_aonclkrst_lpmem_clk_force_on(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_LPMEM_FORCE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

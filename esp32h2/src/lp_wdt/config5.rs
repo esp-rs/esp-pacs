@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG5")
-            .field(
-                "chip_reset_target",
-                &format_args!("{}", self.chip_reset_target().bits()),
-            )
-            .field(
-                "chip_reset_en",
-                &format_args!("{}", self.chip_reset_en().bit()),
-            )
-            .field(
-                "chip_reset_key",
-                &format_args!("{}", self.chip_reset_key().bits()),
-            )
+            .field("chip_reset_target", &self.chip_reset_target())
+            .field("chip_reset_en", &self.chip_reset_en())
+            .field("chip_reset_key", &self.chip_reset_key())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONFIG5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

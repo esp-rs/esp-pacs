@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_STATUS1")
-            .field(
-                "gpio_sdio_int1",
-                &format_args!("{}", self.gpio_sdio_int1().bits()),
-            )
+            .field("gpio_sdio_int1", &self.gpio_sdio_int1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GPIO_STATUS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_TAG_OBJECT_CTRL")
-            .field(
-                "icache_tag_object",
-                &format_args!("{}", self.icache_tag_object().bit()),
-            )
-            .field(
-                "dcache_tag_object",
-                &format_args!("{}", self.dcache_tag_object().bit()),
-            )
+            .field("icache_tag_object", &self.icache_tag_object())
+            .field("dcache_tag_object", &self.dcache_tag_object())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_TAG_OBJECT_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

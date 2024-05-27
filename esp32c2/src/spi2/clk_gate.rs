@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_GATE")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "mst_clk_active",
-                &format_args!("{}", self.mst_clk_active().bit()),
-            )
-            .field("mst_clk_sel", &format_args!("{}", self.mst_clk_sel().bit()))
+            .field("clk_en", &self.clk_en())
+            .field("mst_clk_active", &self.mst_clk_active())
+            .field("mst_clk_sel", &self.mst_clk_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_GATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

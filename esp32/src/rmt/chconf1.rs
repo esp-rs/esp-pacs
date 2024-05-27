@@ -125,38 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHCONF1")
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_en", &format_args!("{}", self.rx_en().bit()))
-            .field("mem_wr_rst", &format_args!("{}", self.mem_wr_rst().bit()))
-            .field("mem_rd_rst", &format_args!("{}", self.mem_rd_rst().bit()))
-            .field("apb_mem_rst", &format_args!("{}", self.apb_mem_rst().bit()))
-            .field("mem_owner", &format_args!("{}", self.mem_owner().bit()))
-            .field(
-                "tx_conti_mode",
-                &format_args!("{}", self.tx_conti_mode().bit()),
-            )
-            .field(
-                "rx_filter_en",
-                &format_args!("{}", self.rx_filter_en().bit()),
-            )
-            .field(
-                "rx_filter_thres",
-                &format_args!("{}", self.rx_filter_thres().bits()),
-            )
-            .field("ref_cnt_rst", &format_args!("{}", self.ref_cnt_rst().bit()))
-            .field(
-                "ref_always_on",
-                &format_args!("{}", self.ref_always_on().bit()),
-            )
-            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
-            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
+            .field("tx_start", &self.tx_start())
+            .field("rx_en", &self.rx_en())
+            .field("mem_wr_rst", &self.mem_wr_rst())
+            .field("mem_rd_rst", &self.mem_rd_rst())
+            .field("apb_mem_rst", &self.apb_mem_rst())
+            .field("mem_owner", &self.mem_owner())
+            .field("tx_conti_mode", &self.tx_conti_mode())
+            .field("rx_filter_en", &self.rx_filter_en())
+            .field("rx_filter_thres", &self.rx_filter_thres())
+            .field("ref_cnt_rst", &self.ref_cnt_rst())
+            .field("ref_always_on", &self.ref_always_on())
+            .field("idle_out_lv", &self.idle_out_lv())
+            .field("idle_out_en", &self.idle_out_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHCONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -62,31 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPC_CTRL")
-            .field(
-                "dpc_check_en",
-                &format_args!("{}", self.dpc_check_en().bit()),
-            )
-            .field("sta_en", &format_args!("{}", self.sta_en().bit()))
-            .field("dyn_en", &format_args!("{}", self.dyn_en().bit()))
-            .field(
-                "dpc_black_en",
-                &format_args!("{}", self.dpc_black_en().bit()),
-            )
-            .field(
-                "dpc_method_sel",
-                &format_args!("{}", self.dpc_method_sel().bit()),
-            )
-            .field(
-                "dpc_check_od_en",
-                &format_args!("{}", self.dpc_check_od_en().bit()),
-            )
+            .field("dpc_check_en", &self.dpc_check_en())
+            .field("sta_en", &self.sta_en())
+            .field("dyn_en", &self.dyn_en())
+            .field("dpc_black_en", &self.dpc_black_en())
+            .field("dpc_method_sel", &self.dpc_method_sel())
+            .field("dpc_check_od_en", &self.dpc_check_od_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

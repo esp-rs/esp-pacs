@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_ST")
-            .field(
-                "blend_size_diff_st",
-                &format_args!("{}", self.blend_size_diff_st().bit()),
-            )
+            .field("blend_size_diff_st", &self.blend_size_diff_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLEND_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Blending engine status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blend_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

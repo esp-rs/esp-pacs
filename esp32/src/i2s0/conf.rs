@@ -179,71 +179,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field("tx_reset", &format_args!("{}", self.tx_reset().bit()))
-            .field("rx_reset", &format_args!("{}", self.rx_reset().bit()))
-            .field(
-                "tx_fifo_reset",
-                &format_args!("{}", self.tx_fifo_reset().bit()),
-            )
-            .field(
-                "rx_fifo_reset",
-                &format_args!("{}", self.rx_fifo_reset().bit()),
-            )
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field(
-                "tx_slave_mod",
-                &format_args!("{}", self.tx_slave_mod().bit()),
-            )
-            .field(
-                "rx_slave_mod",
-                &format_args!("{}", self.rx_slave_mod().bit()),
-            )
-            .field(
-                "tx_right_first",
-                &format_args!("{}", self.tx_right_first().bit()),
-            )
-            .field(
-                "rx_right_first",
-                &format_args!("{}", self.rx_right_first().bit()),
-            )
-            .field(
-                "tx_msb_shift",
-                &format_args!("{}", self.tx_msb_shift().bit()),
-            )
-            .field(
-                "rx_msb_shift",
-                &format_args!("{}", self.rx_msb_shift().bit()),
-            )
-            .field(
-                "tx_short_sync",
-                &format_args!("{}", self.tx_short_sync().bit()),
-            )
-            .field(
-                "rx_short_sync",
-                &format_args!("{}", self.rx_short_sync().bit()),
-            )
-            .field("tx_mono", &format_args!("{}", self.tx_mono().bit()))
-            .field("rx_mono", &format_args!("{}", self.rx_mono().bit()))
-            .field(
-                "tx_msb_right",
-                &format_args!("{}", self.tx_msb_right().bit()),
-            )
-            .field(
-                "rx_msb_right",
-                &format_args!("{}", self.rx_msb_right().bit()),
-            )
-            .field(
-                "sig_loopback",
-                &format_args!("{}", self.sig_loopback().bit()),
-            )
+            .field("tx_reset", &self.tx_reset())
+            .field("rx_reset", &self.rx_reset())
+            .field("tx_fifo_reset", &self.tx_fifo_reset())
+            .field("rx_fifo_reset", &self.rx_fifo_reset())
+            .field("tx_start", &self.tx_start())
+            .field("rx_start", &self.rx_start())
+            .field("tx_slave_mod", &self.tx_slave_mod())
+            .field("rx_slave_mod", &self.rx_slave_mod())
+            .field("tx_right_first", &self.tx_right_first())
+            .field("rx_right_first", &self.rx_right_first())
+            .field("tx_msb_shift", &self.tx_msb_shift())
+            .field("rx_msb_shift", &self.rx_msb_shift())
+            .field("tx_short_sync", &self.tx_short_sync())
+            .field("rx_short_sync", &self.rx_short_sync())
+            .field("tx_mono", &self.tx_mono())
+            .field("rx_mono", &self.rx_mono())
+            .field("tx_msb_right", &self.tx_msb_right())
+            .field("rx_msb_right", &self.rx_msb_right())
+            .field("sig_loopback", &self.sig_loopback())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -195,39 +195,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("ch0_tx_end", &format_args!("{}", self.ch0_tx_end().bit()))
-            .field("ch1_tx_end", &format_args!("{}", self.ch1_tx_end().bit()))
-            .field("ch2_rx_end", &format_args!("{}", self.ch2_rx_end().bit()))
-            .field("ch3_rx_end", &format_args!("{}", self.ch3_rx_end().bit()))
-            .field("ch0_tx_err", &format_args!("{}", self.ch0_tx_err().bit()))
-            .field("ch1_tx_err", &format_args!("{}", self.ch1_tx_err().bit()))
-            .field("ch2_rx_err", &format_args!("{}", self.ch2_rx_err().bit()))
-            .field("ch3_rx_err", &format_args!("{}", self.ch3_rx_err().bit()))
-            .field(
-                "ch0_tx_thr_event",
-                &format_args!("{}", self.ch0_tx_thr_event().bit()),
-            )
-            .field(
-                "ch1_tx_thr_event",
-                &format_args!("{}", self.ch1_tx_thr_event().bit()),
-            )
-            .field(
-                "ch2_rx_thr_event",
-                &format_args!("{}", self.ch2_rx_thr_event().bit()),
-            )
-            .field(
-                "ch3_rx_thr_event",
-                &format_args!("{}", self.ch3_rx_thr_event().bit()),
-            )
-            .field("ch0_tx_loop", &format_args!("{}", self.ch0_tx_loop().bit()))
-            .field("ch1_tx_loop", &format_args!("{}", self.ch1_tx_loop().bit()))
+            .field("ch0_tx_end", &self.ch0_tx_end())
+            .field("ch1_tx_end", &self.ch1_tx_end())
+            .field("ch2_rx_end", &self.ch2_rx_end())
+            .field("ch3_rx_end", &self.ch3_rx_end())
+            .field("ch0_tx_err", &self.ch0_tx_err())
+            .field("ch1_tx_err", &self.ch1_tx_err())
+            .field("ch2_rx_err", &self.ch2_rx_err())
+            .field("ch3_rx_err", &self.ch3_rx_err())
+            .field("ch0_tx_thr_event", &self.ch0_tx_thr_event())
+            .field("ch1_tx_thr_event", &self.ch1_tx_thr_event())
+            .field("ch2_rx_thr_event", &self.ch2_rx_thr_event())
+            .field("ch3_rx_thr_event", &self.ch3_rx_thr_event())
+            .field("ch0_tx_loop", &self.ch0_tx_loop())
+            .field("ch1_tx_loop", &self.ch1_tx_loop())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RMT_INT_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

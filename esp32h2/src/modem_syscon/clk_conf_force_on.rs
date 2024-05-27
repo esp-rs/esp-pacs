@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF_FORCE_ON")
-            .field("clk_etm_fo", &format_args!("{}", self.clk_etm_fo().bit()))
-            .field("clk_zb_fo", &format_args!("{}", self.clk_zb_fo().bit()))
-            .field(
-                "clk_modem_sec_fo",
-                &format_args!("{}", self.clk_modem_sec_fo().bit()),
-            )
-            .field(
-                "clk_ble_timer_fo",
-                &format_args!("{}", self.clk_ble_timer_fo().bit()),
-            )
-            .field(
-                "clk_data_dump_fo",
-                &format_args!("{}", self.clk_data_dump_fo().bit()),
-            )
+            .field("clk_etm_fo", &self.clk_etm_fo())
+            .field("clk_zb_fo", &self.clk_zb_fo())
+            .field("clk_modem_sec_fo", &self.clk_modem_sec_fo())
+            .field("clk_ble_timer_fo", &self.clk_ble_timer_fo())
+            .field("clk_data_dump_fo", &self.clk_data_dump_fo())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

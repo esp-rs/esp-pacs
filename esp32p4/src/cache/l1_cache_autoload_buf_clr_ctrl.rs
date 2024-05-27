@@ -49,33 +49,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_AUTOLOAD_BUF_CLR_CTRL")
-            .field(
-                "l1_icache0_ald_buf_clr",
-                &format_args!("{}", self.l1_icache0_ald_buf_clr().bit()),
-            )
-            .field(
-                "l1_icache1_ald_buf_clr",
-                &format_args!("{}", self.l1_icache1_ald_buf_clr().bit()),
-            )
-            .field(
-                "l1_icache2_ald_buf_clr",
-                &format_args!("{}", self.l1_icache2_ald_buf_clr().bit()),
-            )
-            .field(
-                "l1_icache3_ald_buf_clr",
-                &format_args!("{}", self.l1_icache3_ald_buf_clr().bit()),
-            )
-            .field(
-                "l1_dcache_ald_buf_clr",
-                &format_args!("{}", self.l1_dcache_ald_buf_clr().bit()),
-            )
+            .field("l1_icache0_ald_buf_clr", &self.l1_icache0_ald_buf_clr())
+            .field("l1_icache1_ald_buf_clr", &self.l1_icache1_ald_buf_clr())
+            .field("l1_icache2_ald_buf_clr", &self.l1_icache2_ald_buf_clr())
+            .field("l1_icache3_ald_buf_clr", &self.l1_icache3_ald_buf_clr())
+            .field("l1_dcache_ald_buf_clr", &self.l1_dcache_ald_buf_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

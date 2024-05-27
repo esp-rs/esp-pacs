@@ -160,101 +160,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_STATUS")
-            .field(
-                "infifo_l3_full",
-                &format_args!("{}", self.infifo_l3_full().bit()),
-            )
-            .field(
-                "infifo_l3_empty",
-                &format_args!("{}", self.infifo_l3_empty().bit()),
-            )
-            .field(
-                "infifo_l3_cnt",
-                &format_args!("{}", self.infifo_l3_cnt().bits()),
-            )
-            .field(
-                "infifo_l3_udf",
-                &format_args!("{}", self.infifo_l3_udf().bit()),
-            )
-            .field(
-                "infifo_l3_ovf",
-                &format_args!("{}", self.infifo_l3_ovf().bit()),
-            )
-            .field(
-                "infifo_l1_full",
-                &format_args!("{}", self.infifo_l1_full().bit()),
-            )
-            .field(
-                "infifo_l1_empty",
-                &format_args!("{}", self.infifo_l1_empty().bit()),
-            )
-            .field(
-                "infifo_l1_udf",
-                &format_args!("{}", self.infifo_l1_udf().bit()),
-            )
-            .field(
-                "infifo_l1_ovf",
-                &format_args!("{}", self.infifo_l1_ovf().bit()),
-            )
-            .field(
-                "infifo_l2_full",
-                &format_args!("{}", self.infifo_l2_full().bit()),
-            )
-            .field(
-                "infifo_l2_empty",
-                &format_args!("{}", self.infifo_l2_empty().bit()),
-            )
-            .field(
-                "infifo_l2_udf",
-                &format_args!("{}", self.infifo_l2_udf().bit()),
-            )
-            .field(
-                "infifo_l2_ovf",
-                &format_args!("{}", self.infifo_l2_ovf().bit()),
-            )
-            .field(
-                "in_remain_under_1b",
-                &format_args!("{}", self.in_remain_under_1b().bit()),
-            )
-            .field(
-                "in_remain_under_2b",
-                &format_args!("{}", self.in_remain_under_2b().bit()),
-            )
-            .field(
-                "in_remain_under_3b",
-                &format_args!("{}", self.in_remain_under_3b().bit()),
-            )
-            .field(
-                "in_remain_under_4b",
-                &format_args!("{}", self.in_remain_under_4b().bit()),
-            )
-            .field(
-                "in_remain_under_5b",
-                &format_args!("{}", self.in_remain_under_5b().bit()),
-            )
-            .field(
-                "in_remain_under_6b",
-                &format_args!("{}", self.in_remain_under_6b().bit()),
-            )
-            .field(
-                "in_remain_under_7b",
-                &format_args!("{}", self.in_remain_under_7b().bit()),
-            )
-            .field(
-                "in_remain_under_8b",
-                &format_args!("{}", self.in_remain_under_8b().bit()),
-            )
-            .field(
-                "in_buf_hungry",
-                &format_args!("{}", self.in_buf_hungry().bit()),
-            )
+            .field("infifo_l3_full", &self.infifo_l3_full())
+            .field("infifo_l3_empty", &self.infifo_l3_empty())
+            .field("infifo_l3_cnt", &self.infifo_l3_cnt())
+            .field("infifo_l3_udf", &self.infifo_l3_udf())
+            .field("infifo_l3_ovf", &self.infifo_l3_ovf())
+            .field("infifo_l1_full", &self.infifo_l1_full())
+            .field("infifo_l1_empty", &self.infifo_l1_empty())
+            .field("infifo_l1_udf", &self.infifo_l1_udf())
+            .field("infifo_l1_ovf", &self.infifo_l1_ovf())
+            .field("infifo_l2_full", &self.infifo_l2_full())
+            .field("infifo_l2_empty", &self.infifo_l2_empty())
+            .field("infifo_l2_udf", &self.infifo_l2_udf())
+            .field("infifo_l2_ovf", &self.infifo_l2_ovf())
+            .field("in_remain_under_1b", &self.in_remain_under_1b())
+            .field("in_remain_under_2b", &self.in_remain_under_2b())
+            .field("in_remain_under_3b", &self.in_remain_under_3b())
+            .field("in_remain_under_4b", &self.in_remain_under_4b())
+            .field("in_remain_under_5b", &self.in_remain_under_5b())
+            .field("in_remain_under_6b", &self.in_remain_under_6b())
+            .field("in_remain_under_7b", &self.in_remain_under_7b())
+            .field("in_remain_under_8b", &self.in_remain_under_8b())
+            .field("in_buf_hungry", &self.in_buf_hungry())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INFIFO_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`infifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -206,74 +206,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OTG_CONF")
-            .field(
-                "srp_sessend_override",
-                &format_args!("{}", self.srp_sessend_override().bit()),
-            )
-            .field(
-                "srp_sessend_value",
-                &format_args!("{}", self.srp_sessend_value().bit()),
-            )
-            .field("phy_sel", &format_args!("{}", self.phy_sel().bit()))
-            .field(
-                "dfifo_force_pd",
-                &format_args!("{}", self.dfifo_force_pd().bit()),
-            )
-            .field(
-                "dbnce_fltr_bypass",
-                &format_args!("{}", self.dbnce_fltr_bypass().bit()),
-            )
-            .field(
-                "exchg_pins_override",
-                &format_args!("{}", self.exchg_pins_override().bit()),
-            )
-            .field("exchg_pins", &format_args!("{}", self.exchg_pins().bit()))
-            .field("vrefh", &format_args!("{}", self.vrefh().bits()))
-            .field("vrefl", &format_args!("{}", self.vrefl().bits()))
-            .field(
-                "vref_override",
-                &format_args!("{}", self.vref_override().bit()),
-            )
-            .field(
-                "pad_pull_override",
-                &format_args!("{}", self.pad_pull_override().bit()),
-            )
-            .field("dp_pullup", &format_args!("{}", self.dp_pullup().bit()))
-            .field("dp_pulldown", &format_args!("{}", self.dp_pulldown().bit()))
-            .field("dm_pullup", &format_args!("{}", self.dm_pullup().bit()))
-            .field("dm_pulldown", &format_args!("{}", self.dm_pulldown().bit()))
-            .field(
-                "pullup_value",
-                &format_args!("{}", self.pullup_value().bit()),
-            )
-            .field(
-                "usb_pad_enable",
-                &format_args!("{}", self.usb_pad_enable().bit()),
-            )
-            .field(
-                "ahb_clk_force_on",
-                &format_args!("{}", self.ahb_clk_force_on().bit()),
-            )
-            .field(
-                "phy_clk_force_on",
-                &format_args!("{}", self.phy_clk_force_on().bit()),
-            )
-            .field(
-                "phy_tx_edge_sel",
-                &format_args!("{}", self.phy_tx_edge_sel().bit()),
-            )
-            .field(
-                "dfifo_force_pu",
-                &format_args!("{}", self.dfifo_force_pu().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("srp_sessend_override", &self.srp_sessend_override())
+            .field("srp_sessend_value", &self.srp_sessend_value())
+            .field("phy_sel", &self.phy_sel())
+            .field("dfifo_force_pd", &self.dfifo_force_pd())
+            .field("dbnce_fltr_bypass", &self.dbnce_fltr_bypass())
+            .field("exchg_pins_override", &self.exchg_pins_override())
+            .field("exchg_pins", &self.exchg_pins())
+            .field("vrefh", &self.vrefh())
+            .field("vrefl", &self.vrefl())
+            .field("vref_override", &self.vref_override())
+            .field("pad_pull_override", &self.pad_pull_override())
+            .field("dp_pullup", &self.dp_pullup())
+            .field("dp_pulldown", &self.dp_pulldown())
+            .field("dm_pullup", &self.dm_pullup())
+            .field("dm_pulldown", &self.dm_pulldown())
+            .field("pullup_value", &self.pullup_value())
+            .field("usb_pad_enable", &self.usb_pad_enable())
+            .field("ahb_clk_force_on", &self.ahb_clk_force_on())
+            .field("phy_clk_force_on", &self.phy_clk_force_on())
+            .field("phy_tx_edge_sel", &self.phy_tx_edge_sel())
+            .field("dfifo_force_pu", &self.dfifo_force_pu())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OTG_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

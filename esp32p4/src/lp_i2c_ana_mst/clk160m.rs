@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK160M")
-            .field(
-                "clk_i2c_mst_sel_160m",
-                &format_args!("{}", self.clk_i2c_mst_sel_160m().bit()),
-            )
+            .field("clk_i2c_mst_sel_160m", &self.clk_i2c_mst_sel_160m())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK160M_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

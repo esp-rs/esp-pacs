@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CAUSE")
-            .field(
-                "wakeup_cause",
-                &format_args!("{}", self.wakeup_cause().bits()),
-            )
+            .field("wakeup_cause", &self.wakeup_cause())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CAUSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

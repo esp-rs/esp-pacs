@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RSA_PD_CTRL")
-            .field("rsa_mem_pd", &format_args!("{}", self.rsa_mem_pd().bit()))
-            .field(
-                "rsa_mem_force_pu",
-                &format_args!("{}", self.rsa_mem_force_pu().bit()),
-            )
-            .field(
-                "rsa_mem_force_pd",
-                &format_args!("{}", self.rsa_mem_force_pd().bit()),
-            )
+            .field("rsa_mem_pd", &self.rsa_mem_pd())
+            .field("rsa_mem_force_pu", &self.rsa_mem_force_pu())
+            .field("rsa_mem_force_pd", &self.rsa_mem_force_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RSA_PD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

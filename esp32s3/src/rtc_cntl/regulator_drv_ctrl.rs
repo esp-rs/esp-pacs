@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGULATOR_DRV_CTRL")
-            .field(
-                "regulator_drv_b_monitor",
-                &format_args!("{}", self.regulator_drv_b_monitor().bits()),
-            )
-            .field(
-                "regulator_drv_b_slp",
-                &format_args!("{}", self.regulator_drv_b_slp().bits()),
-            )
-            .field(
-                "dg_vdd_drv_b_slp",
-                &format_args!("{}", self.dg_vdd_drv_b_slp().bits()),
-            )
-            .field(
-                "dg_vdd_drv_b_monitor",
-                &format_args!("{}", self.dg_vdd_drv_b_monitor().bits()),
-            )
+            .field("regulator_drv_b_monitor", &self.regulator_drv_b_monitor())
+            .field("regulator_drv_b_slp", &self.regulator_drv_b_slp())
+            .field("dg_vdd_drv_b_slp", &self.dg_vdd_drv_b_slp())
+            .field("dg_vdd_drv_b_monitor", &self.dg_vdd_drv_b_monitor())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGULATOR_DRV_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

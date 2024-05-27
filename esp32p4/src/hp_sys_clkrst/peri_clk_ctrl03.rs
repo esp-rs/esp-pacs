@@ -71,41 +71,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL03")
-            .field(
-                "mipi_dsi_dphy_cfg_clk_en",
-                &format_args!("{}", self.mipi_dsi_dphy_cfg_clk_en().bit()),
-            )
+            .field("mipi_dsi_dphy_cfg_clk_en", &self.mipi_dsi_dphy_cfg_clk_en())
             .field(
                 "mipi_dsi_dphy_pll_refclk_en",
-                &format_args!("{}", self.mipi_dsi_dphy_pll_refclk_en().bit()),
+                &self.mipi_dsi_dphy_pll_refclk_en(),
             )
             .field(
                 "mipi_csi_dphy_clk_src_sel",
-                &format_args!("{}", self.mipi_csi_dphy_clk_src_sel().bits()),
+                &self.mipi_csi_dphy_clk_src_sel(),
             )
-            .field(
-                "mipi_csi_dphy_cfg_clk_en",
-                &format_args!("{}", self.mipi_csi_dphy_cfg_clk_en().bit()),
-            )
-            .field(
-                "mipi_dsi_dpiclk_src_sel",
-                &format_args!("{}", self.mipi_dsi_dpiclk_src_sel().bits()),
-            )
-            .field(
-                "mipi_dsi_dpiclk_en",
-                &format_args!("{}", self.mipi_dsi_dpiclk_en().bit()),
-            )
-            .field(
-                "mipi_dsi_dpiclk_div_num",
-                &format_args!("{}", self.mipi_dsi_dpiclk_div_num().bits()),
-            )
+            .field("mipi_csi_dphy_cfg_clk_en", &self.mipi_csi_dphy_cfg_clk_en())
+            .field("mipi_dsi_dpiclk_src_sel", &self.mipi_dsi_dpiclk_src_sel())
+            .field("mipi_dsi_dpiclk_en", &self.mipi_dsi_dpiclk_en())
+            .field("mipi_dsi_dpiclk_div_num", &self.mipi_dsi_dpiclk_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL03_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

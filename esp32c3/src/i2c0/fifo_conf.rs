@@ -71,29 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_CONF")
-            .field(
-                "rxfifo_wm_thrhd",
-                &format_args!("{}", self.rxfifo_wm_thrhd().bits()),
-            )
-            .field(
-                "txfifo_wm_thrhd",
-                &format_args!("{}", self.txfifo_wm_thrhd().bits()),
-            )
-            .field("nonfifo_en", &format_args!("{}", self.nonfifo_en().bit()))
-            .field(
-                "fifo_addr_cfg_en",
-                &format_args!("{}", self.fifo_addr_cfg_en().bit()),
-            )
-            .field("rx_fifo_rst", &format_args!("{}", self.rx_fifo_rst().bit()))
-            .field("tx_fifo_rst", &format_args!("{}", self.tx_fifo_rst().bit()))
-            .field("fifo_prt_en", &format_args!("{}", self.fifo_prt_en().bit()))
+            .field("rxfifo_wm_thrhd", &self.rxfifo_wm_thrhd())
+            .field("txfifo_wm_thrhd", &self.txfifo_wm_thrhd())
+            .field("nonfifo_en", &self.nonfifo_en())
+            .field("fifo_addr_cfg_en", &self.fifo_addr_cfg_en())
+            .field("rx_fifo_rst", &self.rx_fifo_rst())
+            .field("tx_fifo_rst", &self.tx_fifo_rst())
+            .field("fifo_prt_en", &self.fifo_prt_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

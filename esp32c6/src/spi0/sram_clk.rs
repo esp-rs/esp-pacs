@@ -34,20 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_CLK")
-            .field("sclkcnt_l", &format_args!("{}", self.sclkcnt_l().bits()))
-            .field("sclkcnt_h", &format_args!("{}", self.sclkcnt_h().bits()))
-            .field("sclkcnt_n", &format_args!("{}", self.sclkcnt_n().bits()))
-            .field(
-                "sclk_equ_sysclk",
-                &format_args!("{}", self.sclk_equ_sysclk().bit()),
-            )
+            .field("sclkcnt_l", &self.sclkcnt_l())
+            .field("sclkcnt_h", &self.sclkcnt_h())
+            .field("sclkcnt_n", &self.sclkcnt_n())
+            .field("sclk_equ_sysclk", &self.sclk_equ_sysclk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SRAM_CLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI0 external RAM clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_clk::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

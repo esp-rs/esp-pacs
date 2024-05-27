@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("BLK0_BACKUP2_W1")
             .field(
                 "otp_bebug_block0_backup2_w1",
-                &format_args!("{}", self.otp_bebug_block0_backup2_w1().bits()),
+                &self.otp_bebug_block0_backup2_w1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_BACKUP2_W1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Otp debuger block0 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

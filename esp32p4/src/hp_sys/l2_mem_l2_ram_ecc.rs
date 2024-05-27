@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_MEM_L2_RAM_ECC")
-            .field(
-                "reg_l2_ram_unit0_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit0_ecc_en().bit()),
-            )
-            .field(
-                "reg_l2_ram_unit1_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit1_ecc_en().bit()),
-            )
-            .field(
-                "reg_l2_ram_unit2_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit2_ecc_en().bit()),
-            )
-            .field(
-                "reg_l2_ram_unit3_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit3_ecc_en().bit()),
-            )
-            .field(
-                "reg_l2_ram_unit4_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit4_ecc_en().bit()),
-            )
-            .field(
-                "reg_l2_ram_unit5_ecc_en",
-                &format_args!("{}", self.reg_l2_ram_unit5_ecc_en().bit()),
-            )
+            .field("reg_l2_ram_unit0_ecc_en", &self.reg_l2_ram_unit0_ecc_en())
+            .field("reg_l2_ram_unit1_ecc_en", &self.reg_l2_ram_unit1_ecc_en())
+            .field("reg_l2_ram_unit2_ecc_en", &self.reg_l2_ram_unit2_ecc_en())
+            .field("reg_l2_ram_unit3_ecc_en", &self.reg_l2_ram_unit3_ecc_en())
+            .field("reg_l2_ram_unit4_ecc_en", &self.reg_l2_ram_unit4_ecc_en())
+            .field("reg_l2_ram_unit5_ecc_en", &self.reg_l2_ram_unit5_ecc_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_L2_RAM_ECC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

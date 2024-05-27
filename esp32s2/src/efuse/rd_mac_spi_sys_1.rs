@@ -20,18 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SPI_SYS_1")
-            .field("mac_1", &format_args!("{}", self.mac_1().bits()))
-            .field(
-                "spi_pad_conf_0",
-                &format_args!("{}", self.spi_pad_conf_0().bits()),
-            )
+            .field("mac_1", &self.mac_1())
+            .field("spi_pad_conf_0", &self.spi_pad_conf_0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_MAC_SPI_SYS_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Register 1 of BLOCK1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_mac_spi_sys_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

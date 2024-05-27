@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_INT_RAW")
-            .field(
-                "tcm_parity_err_int_raw",
-                &format_args!("{}", self.tcm_parity_err_int_raw().bit()),
-            )
+            .field("tcm_parity_err_int_raw", &self.tcm_parity_err_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

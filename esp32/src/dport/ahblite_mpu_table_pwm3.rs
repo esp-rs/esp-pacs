@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBLITE_MPU_TABLE_PWM3")
-            .field(
-                "pwm3_access_grant_config",
-                &format_args!("{}", self.pwm3_access_grant_config().bits()),
-            )
+            .field("pwm3_access_grant_config", &self.pwm3_access_grant_config())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_PWM3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

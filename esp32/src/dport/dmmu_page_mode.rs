@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMMU_PAGE_MODE")
-            .field(
-                "internal_sram_dmmu_ena",
-                &format_args!("{}", self.internal_sram_dmmu_ena().bit()),
-            )
-            .field(
-                "dmmu_page_mode",
-                &format_args!("{}", self.dmmu_page_mode().bits()),
-            )
+            .field("internal_sram_dmmu_ena", &self.internal_sram_dmmu_ena())
+            .field("dmmu_page_mode", &self.dmmu_page_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMMU_PAGE_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

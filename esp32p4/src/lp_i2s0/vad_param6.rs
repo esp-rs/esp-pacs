@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM6")
-            .field(
-                "param_noise_std_fs_thsl",
-                &format_args!("{}", self.param_noise_std_fs_thsl().bits()),
-            )
-            .field(
-                "param_noise_std_fs_thsh",
-                &format_args!("{}", self.param_noise_std_fs_thsh().bits()),
-            )
+            .field("param_noise_std_fs_thsl", &self.param_noise_std_fs_thsl())
+            .field("param_noise_std_fs_thsh", &self.param_noise_std_fs_thsh())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_PARAM6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

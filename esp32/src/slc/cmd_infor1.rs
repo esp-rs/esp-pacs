@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD_INFOR1")
-            .field(
-                "cmd_content1",
-                &format_args!("{}", self.cmd_content1().bits()),
-            )
+            .field("cmd_content1", &self.cmd_content1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMD_INFOR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd_infor1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

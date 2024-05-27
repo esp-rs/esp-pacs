@@ -62,22 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_DEBUG_SEL")
-            .field("debug_sel0", &format_args!("{}", self.debug_sel0().bits()))
-            .field("debug_sel1", &format_args!("{}", self.debug_sel1().bits()))
-            .field("debug_sel2", &format_args!("{}", self.debug_sel2().bits()))
-            .field("debug_sel3", &format_args!("{}", self.debug_sel3().bits()))
-            .field("debug_sel4", &format_args!("{}", self.debug_sel4().bits()))
-            .field(
-                "debug_12m_no_gating",
-                &format_args!("{}", self.debug_12m_no_gating().bit()),
-            )
+            .field("debug_sel0", &self.debug_sel0())
+            .field("debug_sel1", &self.debug_sel1())
+            .field("debug_sel2", &self.debug_sel2())
+            .field("debug_sel3", &self.debug_sel3())
+            .field("debug_sel4", &self.debug_sel4())
+            .field("debug_12m_no_gating", &self.debug_12m_no_gating())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_DEBUG_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

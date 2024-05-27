@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACWDOGTO")
-            .field("wdogto", &format_args!("{}", self.wdogto().bits()))
-            .field("pwdogen", &format_args!("{}", self.pwdogen().bit()))
+            .field("wdogto", &self.wdogto())
+            .field("pwdogen", &self.pwdogen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACWDOGTO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

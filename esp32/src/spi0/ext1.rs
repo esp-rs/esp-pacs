@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT1")
-            .field(
-                "t_erase_time",
-                &format_args!("{}", self.t_erase_time().bits()),
-            )
-            .field(
-                "t_erase_shift",
-                &format_args!("{}", self.t_erase_shift().bits()),
-            )
-            .field("t_erase_ena", &format_args!("{}", self.t_erase_ena().bit()))
+            .field("t_erase_time", &self.t_erase_time())
+            .field("t_erase_shift", &self.t_erase_shift())
+            .field("t_erase_ena", &self.t_erase_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

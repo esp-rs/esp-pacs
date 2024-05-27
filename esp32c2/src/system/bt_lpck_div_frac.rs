@@ -71,41 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BT_LPCK_DIV_FRAC")
-            .field(
-                "bt_lpck_div_b",
-                &format_args!("{}", self.bt_lpck_div_b().bits()),
-            )
-            .field(
-                "bt_lpck_div_a",
-                &format_args!("{}", self.bt_lpck_div_a().bits()),
-            )
-            .field(
-                "lpclk_sel_rtc_slow",
-                &format_args!("{}", self.lpclk_sel_rtc_slow().bit()),
-            )
-            .field(
-                "lpclk_sel_8m",
-                &format_args!("{}", self.lpclk_sel_8m().bit()),
-            )
-            .field(
-                "lpclk_sel_xtal",
-                &format_args!("{}", self.lpclk_sel_xtal().bit()),
-            )
-            .field(
-                "lpclk_sel_xtal32k",
-                &format_args!("{}", self.lpclk_sel_xtal32k().bit()),
-            )
-            .field(
-                "lpclk_rtc_en",
-                &format_args!("{}", self.lpclk_rtc_en().bit()),
-            )
+            .field("bt_lpck_div_b", &self.bt_lpck_div_b())
+            .field("bt_lpck_div_a", &self.bt_lpck_div_a())
+            .field("lpclk_sel_rtc_slow", &self.lpclk_sel_rtc_slow())
+            .field("lpclk_sel_8m", &self.lpclk_sel_8m())
+            .field("lpclk_sel_xtal", &self.lpclk_sel_xtal())
+            .field("lpclk_sel_xtal32k", &self.lpclk_sel_xtal32k())
+            .field("lpclk_rtc_en", &self.lpclk_rtc_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_FRAC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_PERIPHERAL_INTR")
-            .field(
-                "apb_peri_byte_error_clr",
-                &format_args!("{}", self.apb_peri_byte_error_clr().bit()),
-            )
-            .field(
-                "apb_peri_byte_error_en",
-                &format_args!("{}", self.apb_peri_byte_error_en().bit()),
-            )
-            .field(
-                "apb_peri_byte_error_intr",
-                &format_args!("{}", self.apb_peri_byte_error_intr().bit()),
-            )
+            .field("apb_peri_byte_error_clr", &self.apb_peri_byte_error_clr())
+            .field("apb_peri_byte_error_en", &self.apb_peri_byte_error_en())
+            .field("apb_peri_byte_error_intr", &self.apb_peri_byte_error_intr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_INTR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

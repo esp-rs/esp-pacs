@@ -107,51 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAM_CTRL")
-            .field("cam_stop_en", &format_args!("{}", self.cam_stop_en().bit()))
-            .field(
-                "cam_vsync_filter_thres",
-                &format_args!("{}", self.cam_vsync_filter_thres().bits()),
-            )
-            .field("cam_update", &format_args!("{}", self.cam_update().bit()))
-            .field(
-                "cam_byte_order",
-                &format_args!("{}", self.cam_byte_order().bit()),
-            )
-            .field(
-                "cam_bit_order",
-                &format_args!("{}", self.cam_bit_order().bit()),
-            )
-            .field(
-                "cam_line_int_en",
-                &format_args!("{}", self.cam_line_int_en().bit()),
-            )
-            .field(
-                "cam_vs_eof_en",
-                &format_args!("{}", self.cam_vs_eof_en().bit()),
-            )
-            .field(
-                "cam_clkm_div_num",
-                &format_args!("{}", self.cam_clkm_div_num().bits()),
-            )
-            .field(
-                "cam_clkm_div_b",
-                &format_args!("{}", self.cam_clkm_div_b().bits()),
-            )
-            .field(
-                "cam_clkm_div_a",
-                &format_args!("{}", self.cam_clkm_div_a().bits()),
-            )
-            .field(
-                "cam_clk_sel",
-                &format_args!("{}", self.cam_clk_sel().bits()),
-            )
+            .field("cam_stop_en", &self.cam_stop_en())
+            .field("cam_vsync_filter_thres", &self.cam_vsync_filter_thres())
+            .field("cam_update", &self.cam_update())
+            .field("cam_byte_order", &self.cam_byte_order())
+            .field("cam_bit_order", &self.cam_bit_order())
+            .field("cam_line_int_en", &self.cam_line_int_en())
+            .field("cam_vs_eof_en", &self.cam_vs_eof_en())
+            .field("cam_clkm_div_num", &self.cam_clkm_div_num())
+            .field("cam_clkm_div_b", &self.cam_clkm_div_b())
+            .field("cam_clkm_div_a", &self.cam_clkm_div_a())
+            .field("cam_clk_sel", &self.cam_clk_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CAM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

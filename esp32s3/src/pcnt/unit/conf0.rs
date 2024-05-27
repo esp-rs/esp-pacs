@@ -325,67 +325,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field(
-                "filter_thres",
-                &format_args!("{}", self.filter_thres().bits()),
-            )
-            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
-            .field("thr_zero_en", &format_args!("{}", self.thr_zero_en().bit()))
-            .field(
-                "thr_h_lim_en",
-                &format_args!("{}", self.thr_h_lim_en().bit()),
-            )
-            .field(
-                "thr_l_lim_en",
-                &format_args!("{}", self.thr_l_lim_en().bit()),
-            )
-            .field(
-                "thr_thres0_en",
-                &format_args!("{}", self.thr_thres0_en().bit()),
-            )
-            .field(
-                "thr_thres1_en",
-                &format_args!("{}", self.thr_thres1_en().bit()),
-            )
-            .field(
-                "ch0_neg_mode",
-                &format_args!("{}", self.ch0_neg_mode().bits()),
-            )
-            .field(
-                "ch1_neg_mode",
-                &format_args!("{}", self.ch1_neg_mode().bits()),
-            )
-            .field(
-                "ch0_pos_mode",
-                &format_args!("{}", self.ch0_pos_mode().bits()),
-            )
-            .field(
-                "ch1_pos_mode",
-                &format_args!("{}", self.ch1_pos_mode().bits()),
-            )
-            .field(
-                "ch0_hctrl_mode",
-                &format_args!("{}", self.ch0_hctrl_mode().bits()),
-            )
-            .field(
-                "ch1_hctrl_mode",
-                &format_args!("{}", self.ch1_hctrl_mode().bits()),
-            )
-            .field(
-                "ch0_lctrl_mode",
-                &format_args!("{}", self.ch0_lctrl_mode().bits()),
-            )
-            .field(
-                "ch1_lctrl_mode",
-                &format_args!("{}", self.ch1_lctrl_mode().bits()),
-            )
+            .field("filter_thres", &self.filter_thres())
+            .field("filter_en", &self.filter_en())
+            .field("thr_zero_en", &self.thr_zero_en())
+            .field("thr_h_lim_en", &self.thr_h_lim_en())
+            .field("thr_l_lim_en", &self.thr_l_lim_en())
+            .field("thr_thres0_en", &self.thr_thres0_en())
+            .field("thr_thres1_en", &self.thr_thres1_en())
+            .field("ch0_neg_mode", &self.ch0_neg_mode())
+            .field("ch1_neg_mode", &self.ch1_neg_mode())
+            .field("ch0_pos_mode", &self.ch0_pos_mode())
+            .field("ch1_pos_mode", &self.ch1_pos_mode())
+            .field("ch0_hctrl_mode", &self.ch0_hctrl_mode())
+            .field("ch1_hctrl_mode", &self.ch1_hctrl_mode())
+            .field("ch0_lctrl_mode", &self.ch0_lctrl_mode())
+            .field("ch1_lctrl_mode", &self.ch1_lctrl_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

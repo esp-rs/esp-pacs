@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_STATUS16")
-            .field(
-                "touch_approach_pad2_cnt",
-                &format_args!("{}", self.touch_approach_pad2_cnt().bits()),
-            )
-            .field(
-                "touch_approach_pad1_cnt",
-                &format_args!("{}", self.touch_approach_pad1_cnt().bits()),
-            )
-            .field(
-                "touch_approach_pad0_cnt",
-                &format_args!("{}", self.touch_approach_pad0_cnt().bits()),
-            )
-            .field(
-                "touch_slp_approach_cnt",
-                &format_args!("{}", self.touch_slp_approach_cnt().bits()),
-            )
+            .field("touch_approach_pad2_cnt", &self.touch_approach_pad2_cnt())
+            .field("touch_approach_pad1_cnt", &self.touch_approach_pad1_cnt())
+            .field("touch_approach_pad0_cnt", &self.touch_approach_pad0_cnt())
+            .field("touch_slp_approach_cnt", &self.touch_slp_approach_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS16_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Touch approach count status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_status16::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

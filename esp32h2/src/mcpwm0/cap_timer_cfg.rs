@@ -37,25 +37,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAP_TIMER_CFG")
-            .field(
-                "cap_timer_en",
-                &format_args!("{}", self.cap_timer_en().bit()),
-            )
-            .field(
-                "cap_synci_en",
-                &format_args!("{}", self.cap_synci_en().bit()),
-            )
-            .field(
-                "cap_synci_sel",
-                &format_args!("{}", self.cap_synci_sel().bits()),
-            )
+            .field("cap_timer_en", &self.cap_timer_en())
+            .field("cap_synci_en", &self.cap_synci_en())
+            .field("cap_synci_sel", &self.cap_synci_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CAP_TIMER_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

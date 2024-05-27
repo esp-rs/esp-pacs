@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_I2C_EXT1")
             .field(
                 "i2cext1_access_grant_config",
-                &format_args!("{}", self.i2cext1_access_grant_config().bits()),
+                &self.i2cext1_access_grant_config(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_I2C_EXT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

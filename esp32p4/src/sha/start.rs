@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("START")
-            .field("start", &format_args!("{}", self.start().bits()))
+            .field("start", &self.start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Typical SHA configuration register 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`start::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

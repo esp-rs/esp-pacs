@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_SEG0")
-            .field(
-                "hist_seg_3_4",
-                &format_args!("{}", self.hist_seg_3_4().bits()),
-            )
-            .field(
-                "hist_seg_2_3",
-                &format_args!("{}", self.hist_seg_2_3().bits()),
-            )
-            .field(
-                "hist_seg_1_2",
-                &format_args!("{}", self.hist_seg_1_2().bits()),
-            )
-            .field(
-                "hist_seg_0_1",
-                &format_args!("{}", self.hist_seg_0_1().bits()),
-            )
+            .field("hist_seg_3_4", &self.hist_seg_3_4())
+            .field("hist_seg_2_3", &self.hist_seg_2_3())
+            .field("hist_seg_1_2", &self.hist_seg_1_2())
+            .field("hist_seg_0_1", &self.hist_seg_0_1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HIST_SEG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

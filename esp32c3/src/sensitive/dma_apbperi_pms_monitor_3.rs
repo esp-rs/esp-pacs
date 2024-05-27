@@ -26,22 +26,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_3")
             .field(
                 "dma_apbperi_pms_monitor_violate_status_wr",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_status_wr().bit()),
+                &self.dma_apbperi_pms_monitor_violate_status_wr(),
             )
             .field(
                 "dma_apbperi_pms_monitor_violate_status_byteen",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_pms_monitor_violate_status_byteen().bits()
-                ),
+                &self.dma_apbperi_pms_monitor_violate_status_byteen(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_PMS_MONITOR_3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_3_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

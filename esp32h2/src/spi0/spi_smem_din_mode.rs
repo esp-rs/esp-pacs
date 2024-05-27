@@ -69,49 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_DIN_MODE")
-            .field(
-                "spi_smem_din0_mode",
-                &format_args!("{}", self.spi_smem_din0_mode().bits()),
-            )
-            .field(
-                "spi_smem_din1_mode",
-                &format_args!("{}", self.spi_smem_din1_mode().bits()),
-            )
-            .field(
-                "spi_smem_din2_mode",
-                &format_args!("{}", self.spi_smem_din2_mode().bits()),
-            )
-            .field(
-                "spi_smem_din3_mode",
-                &format_args!("{}", self.spi_smem_din3_mode().bits()),
-            )
-            .field(
-                "spi_smem_din4_mode",
-                &format_args!("{}", self.spi_smem_din4_mode().bits()),
-            )
-            .field(
-                "spi_smem_din5_mode",
-                &format_args!("{}", self.spi_smem_din5_mode().bits()),
-            )
-            .field(
-                "spi_smem_din6_mode",
-                &format_args!("{}", self.spi_smem_din6_mode().bits()),
-            )
-            .field(
-                "spi_smem_din7_mode",
-                &format_args!("{}", self.spi_smem_din7_mode().bits()),
-            )
-            .field(
-                "spi_smem_dins_mode",
-                &format_args!("{}", self.spi_smem_dins_mode().bits()),
-            )
+            .field("spi_smem_din0_mode", &self.spi_smem_din0_mode())
+            .field("spi_smem_din1_mode", &self.spi_smem_din1_mode())
+            .field("spi_smem_din2_mode", &self.spi_smem_din2_mode())
+            .field("spi_smem_din3_mode", &self.spi_smem_din3_mode())
+            .field("spi_smem_din4_mode", &self.spi_smem_din4_mode())
+            .field("spi_smem_din5_mode", &self.spi_smem_din5_mode())
+            .field("spi_smem_din6_mode", &self.spi_smem_din6_mode())
+            .field("spi_smem_din7_mode", &self.spi_smem_din7_mode())
+            .field("spi_smem_dins_mode", &self.spi_smem_dins_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DIN_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI external RAM input timing delay mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_din_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

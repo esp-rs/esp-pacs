@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC0HOST_RX_INFOR")
-            .field(
-                "slc0host_rx_infor",
-                &format_args!("{}", self.slc0host_rx_infor().bits()),
-            )
+            .field("slc0host_rx_infor", &self.slc0host_rx_infor())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_RX_INFOR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

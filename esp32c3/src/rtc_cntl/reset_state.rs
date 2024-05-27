@@ -112,61 +112,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_STATE")
-            .field(
-                "reset_cause_procpu",
-                &format_args!("{}", self.reset_cause_procpu().bits()),
-            )
-            .field(
-                "reset_cause_appcpu",
-                &format_args!("{}", self.reset_cause_appcpu().bits()),
-            )
-            .field(
-                "stat_vector_sel_appcpu",
-                &format_args!("{}", self.stat_vector_sel_appcpu().bit()),
-            )
-            .field(
-                "stat_vector_sel_procpu",
-                &format_args!("{}", self.stat_vector_sel_procpu().bit()),
-            )
-            .field(
-                "all_reset_flag_procpu",
-                &format_args!("{}", self.all_reset_flag_procpu().bit()),
-            )
-            .field(
-                "all_reset_flag_appcpu",
-                &format_args!("{}", self.all_reset_flag_appcpu().bit()),
-            )
-            .field(
-                "ocd_halt_on_reset_appcpu",
-                &format_args!("{}", self.ocd_halt_on_reset_appcpu().bit()),
-            )
-            .field(
-                "ocd_halt_on_reset_procpu",
-                &format_args!("{}", self.ocd_halt_on_reset_procpu().bit()),
-            )
-            .field(
-                "jtag_reset_flag_procpu",
-                &format_args!("{}", self.jtag_reset_flag_procpu().bit()),
-            )
-            .field(
-                "jtag_reset_flag_appcpu",
-                &format_args!("{}", self.jtag_reset_flag_appcpu().bit()),
-            )
-            .field(
-                "dreset_mask_appcpu",
-                &format_args!("{}", self.dreset_mask_appcpu().bit()),
-            )
-            .field(
-                "dreset_mask_procpu",
-                &format_args!("{}", self.dreset_mask_procpu().bit()),
-            )
+            .field("reset_cause_procpu", &self.reset_cause_procpu())
+            .field("reset_cause_appcpu", &self.reset_cause_appcpu())
+            .field("stat_vector_sel_appcpu", &self.stat_vector_sel_appcpu())
+            .field("stat_vector_sel_procpu", &self.stat_vector_sel_procpu())
+            .field("all_reset_flag_procpu", &self.all_reset_flag_procpu())
+            .field("all_reset_flag_appcpu", &self.all_reset_flag_appcpu())
+            .field("ocd_halt_on_reset_appcpu", &self.ocd_halt_on_reset_appcpu())
+            .field("ocd_halt_on_reset_procpu", &self.ocd_halt_on_reset_procpu())
+            .field("jtag_reset_flag_procpu", &self.jtag_reset_flag_procpu())
+            .field("jtag_reset_flag_appcpu", &self.jtag_reset_flag_appcpu())
+            .field("dreset_mask_appcpu", &self.dreset_mask_appcpu())
+            .field("dreset_mask_procpu", &self.dreset_mask_procpu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

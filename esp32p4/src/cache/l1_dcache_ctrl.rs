@@ -58,37 +58,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_DCACHE_CTRL")
-            .field(
-                "l1_dcache_shut_dbus0",
-                &format_args!("{}", self.l1_dcache_shut_dbus0().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus1",
-                &format_args!("{}", self.l1_dcache_shut_dbus1().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus2",
-                &format_args!("{}", self.l1_dcache_shut_dbus2().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dbus3",
-                &format_args!("{}", self.l1_dcache_shut_dbus3().bit()),
-            )
-            .field(
-                "l1_dcache_shut_dma",
-                &format_args!("{}", self.l1_dcache_shut_dma().bit()),
-            )
-            .field(
-                "l1_dcache_undef_op",
-                &format_args!("{}", self.l1_dcache_undef_op().bits()),
-            )
+            .field("l1_dcache_shut_dbus0", &self.l1_dcache_shut_dbus0())
+            .field("l1_dcache_shut_dbus1", &self.l1_dcache_shut_dbus1())
+            .field("l1_dcache_shut_dbus2", &self.l1_dcache_shut_dbus2())
+            .field("l1_dcache_shut_dbus3", &self.l1_dcache_shut_dbus3())
+            .field("l1_dcache_shut_dma", &self.l1_dcache_shut_dma())
+            .field("l1_dcache_undef_op", &self.l1_dcache_undef_op())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_DCACHE_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

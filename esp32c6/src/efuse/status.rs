@@ -62,36 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field("otp_load_sw", &format_args!("{}", self.otp_load_sw().bit()))
-            .field(
-                "otp_vddq_c_sync2",
-                &format_args!("{}", self.otp_vddq_c_sync2().bit()),
-            )
-            .field(
-                "otp_strobe_sw",
-                &format_args!("{}", self.otp_strobe_sw().bit()),
-            )
-            .field("otp_csb_sw", &format_args!("{}", self.otp_csb_sw().bit()))
-            .field(
-                "otp_pgenb_sw",
-                &format_args!("{}", self.otp_pgenb_sw().bit()),
-            )
-            .field(
-                "otp_vddq_is_sw",
-                &format_args!("{}", self.otp_vddq_is_sw().bit()),
-            )
-            .field(
-                "blk0_valid_bit_cnt",
-                &format_args!("{}", self.blk0_valid_bit_cnt().bits()),
-            )
+            .field("state", &self.state())
+            .field("otp_load_sw", &self.otp_load_sw())
+            .field("otp_vddq_c_sync2", &self.otp_vddq_c_sync2())
+            .field("otp_strobe_sw", &self.otp_strobe_sw())
+            .field("otp_csb_sw", &self.otp_csb_sw())
+            .field("otp_pgenb_sw", &self.otp_pgenb_sw())
+            .field("otp_vddq_is_sw", &self.otp_vddq_is_sw())
+            .field("blk0_valid_bit_cnt", &self.blk0_valid_bit_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "eFuse status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

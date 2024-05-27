@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_1RXFIFO_PUSH")
-            .field(
-                "slc1_rxfifo_wdata",
-                &format_args!("{}", self.slc1_rxfifo_wdata().bits()),
-            )
-            .field(
-                "slc1_rxfifo_push",
-                &format_args!("{}", self.slc1_rxfifo_push().bit()),
-            )
+            .field("slc1_rxfifo_wdata", &self.slc1_rxfifo_wdata())
+            .field("slc1_rxfifo_push", &self.slc1_rxfifo_push())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_1RXFIFO_PUSH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

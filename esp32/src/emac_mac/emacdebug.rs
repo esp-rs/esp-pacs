@@ -90,25 +90,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACDEBUG")
-            .field("macrpes", &format_args!("{}", self.macrpes().bit()))
-            .field("macrffcs", &format_args!("{}", self.macrffcs().bits()))
-            .field("mtlrfwcas", &format_args!("{}", self.mtlrfwcas().bit()))
-            .field("mtlrfrcs", &format_args!("{}", self.mtlrfrcs().bits()))
-            .field("mtlrffls", &format_args!("{}", self.mtlrffls().bits()))
-            .field("mactpes", &format_args!("{}", self.mactpes().bit()))
-            .field("mactfcs", &format_args!("{}", self.mactfcs().bits()))
-            .field("mactp", &format_args!("{}", self.mactp().bit()))
-            .field("mtltfrcs", &format_args!("{}", self.mtltfrcs().bits()))
-            .field("mtltfwcs", &format_args!("{}", self.mtltfwcs().bit()))
-            .field("mtltfnes", &format_args!("{}", self.mtltfnes().bit()))
-            .field("mtltsffs", &format_args!("{}", self.mtltsffs().bit()))
+            .field("macrpes", &self.macrpes())
+            .field("macrffcs", &self.macrffcs())
+            .field("mtlrfwcas", &self.mtlrfwcas())
+            .field("mtlrfrcs", &self.mtlrfrcs())
+            .field("mtlrffls", &self.mtlrffls())
+            .field("mactpes", &self.mactpes())
+            .field("mactfcs", &self.mactfcs())
+            .field("mactp", &self.mactp())
+            .field("mtltfrcs", &self.mtltfrcs())
+            .field("mtltfwcs", &self.mtltfwcs())
+            .field("mtltfnes", &self.mtltfnes())
+            .field("mtltsffs", &self.mtltsffs())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACDEBUG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Status debugging bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacdebug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

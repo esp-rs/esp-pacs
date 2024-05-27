@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PARL_CLK_TX_CONF")
-            .field(
-                "parl_clk_tx_div_num",
-                &format_args!("{}", self.parl_clk_tx_div_num().bits()),
-            )
-            .field(
-                "parl_clk_tx_sel",
-                &format_args!("{}", self.parl_clk_tx_sel().bits()),
-            )
-            .field(
-                "parl_clk_tx_en",
-                &format_args!("{}", self.parl_clk_tx_en().bit()),
-            )
-            .field(
-                "parl_tx_rst_en",
-                &format_args!("{}", self.parl_tx_rst_en().bit()),
-            )
+            .field("parl_clk_tx_div_num", &self.parl_clk_tx_div_num())
+            .field("parl_clk_tx_sel", &self.parl_clk_tx_sel())
+            .field("parl_clk_tx_en", &self.parl_clk_tx_en())
+            .field("parl_tx_rst_en", &self.parl_tx_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PARL_CLK_TX_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

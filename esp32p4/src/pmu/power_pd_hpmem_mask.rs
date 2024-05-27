@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_HPMEM_MASK")
-            .field(
-                "xpd_hp_mem_mask",
-                &format_args!("{}", self.xpd_hp_mem_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem_mask",
-                &format_args!("{}", self.pd_hp_mem_mask().bits()),
-            )
+            .field("xpd_hp_mem_mask", &self.xpd_hp_mem_mask())
+            .field("pd_hp_mem_mask", &self.pd_hp_mem_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPMEM_MASK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

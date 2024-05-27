@@ -28,19 +28,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_RAW")
             .field(
                 "l2_cache_pld_done_int_raw",
-                &format_args!("{}", self.l2_cache_pld_done_int_raw().bit()),
+                &self.l2_cache_pld_done_int_raw(),
             )
-            .field(
-                "l2_cache_pld_err_int_raw",
-                &format_args!("{}", self.l2_cache_pld_err_int_raw().bit()),
-            )
+            .field("l2_cache_pld_err_int_raw", &self.l2_cache_pld_err_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

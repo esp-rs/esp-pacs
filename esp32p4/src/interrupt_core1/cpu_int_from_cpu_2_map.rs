@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CPU_INT_FROM_CPU_2_MAP")
             .field(
                 "core1_cpu_int_from_cpu_2_map",
-                &format_args!("{}", self.core1_cpu_int_from_cpu_2_map().bits()),
+                &self.core1_cpu_int_from_cpu_2_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_INT_FROM_CPU_2_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

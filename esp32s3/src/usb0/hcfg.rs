@@ -71,23 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HCFG")
-            .field(
-                "fslspclksel",
-                &format_args!("{}", self.fslspclksel().bits()),
-            )
-            .field("fslssupp", &format_args!("{}", self.fslssupp().bit()))
-            .field("ena32khzs", &format_args!("{}", self.ena32khzs().bit()))
-            .field("descdma", &format_args!("{}", self.descdma().bit()))
-            .field("frlisten", &format_args!("{}", self.frlisten().bits()))
-            .field("perschedena", &format_args!("{}", self.perschedena().bit()))
-            .field("modechtimen", &format_args!("{}", self.modechtimen().bit()))
+            .field("fslspclksel", &self.fslspclksel())
+            .field("fslssupp", &self.fslssupp())
+            .field("ena32khzs", &self.ena32khzs())
+            .field("descdma", &self.descdma())
+            .field("frlisten", &self.frlisten())
+            .field("perschedena", &self.perschedena())
+            .field("modechtimen", &self.modechtimen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

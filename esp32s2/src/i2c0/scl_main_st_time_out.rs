@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_MAIN_ST_TIME_OUT")
-            .field(
-                "scl_main_st_to",
-                &format_args!("{}", self.scl_main_st_to().bits()),
-            )
+            .field("scl_main_st_to", &self.scl_main_st_to())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_MAIN_ST_TIME_OUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

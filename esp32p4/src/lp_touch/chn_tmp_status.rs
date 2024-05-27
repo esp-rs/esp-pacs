@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHN_TMP_STATUS")
-            .field(
-                "pad_inactive_status",
-                &format_args!("{}", self.pad_inactive_status().bits()),
-            )
-            .field(
-                "pad_active_status",
-                &format_args!("{}", self.pad_active_status().bits()),
-            )
+            .field("pad_inactive_status", &self.pad_inactive_status())
+            .field("pad_active_status", &self.pad_active_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHN_TMP_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chn_tmp_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

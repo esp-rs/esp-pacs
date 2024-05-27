@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK")
-            .field("sel0", &format_args!("{}", self.sel0().bits()))
-            .field("sel1", &format_args!("{}", self.sel1().bits()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("sel0", &self.sel0())
+            .field("sel1", &self.sel1())
+            .field("en", &self.en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

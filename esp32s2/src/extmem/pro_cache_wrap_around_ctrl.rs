@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CACHE_WRAP_AROUND_CTRL")
             .field(
                 "pro_cache_flash_wrap_around",
-                &format_args!("{}", self.pro_cache_flash_wrap_around().bit()),
+                &self.pro_cache_flash_wrap_around(),
             )
             .field(
                 "pro_cache_sram_rd_wrap_around",
-                &format_args!("{}", self.pro_cache_sram_rd_wrap_around().bit()),
+                &self.pro_cache_sram_rd_wrap_around(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

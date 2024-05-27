@@ -76,39 +76,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TSENS_CTRL")
-            .field("tsens_out", &format_args!("{}", self.tsens_out().bits()))
-            .field("tsens_ready", &format_args!("{}", self.tsens_ready().bit()))
-            .field(
-                "tsens_int_en",
-                &format_args!("{}", self.tsens_int_en().bit()),
-            )
-            .field(
-                "tsens_in_inv",
-                &format_args!("{}", self.tsens_in_inv().bit()),
-            )
-            .field(
-                "tsens_clk_div",
-                &format_args!("{}", self.tsens_clk_div().bits()),
-            )
-            .field(
-                "tsens_power_up",
-                &format_args!("{}", self.tsens_power_up().bit()),
-            )
-            .field(
-                "tsens_power_up_force",
-                &format_args!("{}", self.tsens_power_up_force().bit()),
-            )
-            .field(
-                "tsens_dump_out",
-                &format_args!("{}", self.tsens_dump_out().bit()),
-            )
+            .field("tsens_out", &self.tsens_out())
+            .field("tsens_ready", &self.tsens_ready())
+            .field("tsens_int_en", &self.tsens_int_en())
+            .field("tsens_in_inv", &self.tsens_in_inv())
+            .field("tsens_clk_div", &self.tsens_clk_div())
+            .field("tsens_power_up", &self.tsens_power_up())
+            .field("tsens_power_up_force", &self.tsens_power_up_force())
+            .field("tsens_dump_out", &self.tsens_dump_out())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

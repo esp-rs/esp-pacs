@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_BB_CFG")
-            .field(
-                "wifi_bb_cfg",
-                &format_args!("{}", self.wifi_bb_cfg().bits()),
-            )
+            .field("wifi_bb_cfg", &self.wifi_bb_cfg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<WIFI_BB_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

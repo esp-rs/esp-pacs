@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKDIV")
-            .field("clkdiv", &format_args!("{}", self.clkdiv().bits()))
-            .field(
-                "clkdiv_frag",
-                &format_args!("{}", self.clkdiv_frag().bits()),
-            )
+            .field("clkdiv", &self.clkdiv())
+            .field("clkdiv_frag", &self.clkdiv_frag())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBI_CMDSIZE")
-            .field(
-                "wr_cmd_size",
-                &format_args!("{}", self.wr_cmd_size().bits()),
-            )
-            .field(
-                "allowed_cmd_size",
-                &format_args!("{}", self.allowed_cmd_size().bits()),
-            )
+            .field("wr_cmd_size", &self.wr_cmd_size())
+            .field("allowed_cmd_size", &self.allowed_cmd_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBI_CMDSIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

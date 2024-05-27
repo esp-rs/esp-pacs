@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("sr_eof", &format_args!("{}", self.sr_eof().bit()))
-            .field("blend_eof", &format_args!("{}", self.blend_eof().bit()))
-            .field(
-                "sr_param_cfg_err",
-                &format_args!("{}", self.sr_param_cfg_err().bit()),
-            )
+            .field("sr_eof", &self.sr_eof())
+            .field("blend_eof", &self.blend_eof())
+            .field("sr_param_cfg_err", &self.sr_param_cfg_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

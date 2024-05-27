@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_MODEM_HP_SYS_CNTL")
-            .field(
-                "hp_modem_uart_wakeup_en",
-                &format_args!("{}", self.hp_modem_uart_wakeup_en().bit()),
-            )
-            .field(
-                "hp_modem_lp_pad_hold_all",
-                &format_args!("{}", self.hp_modem_lp_pad_hold_all().bit()),
-            )
-            .field(
-                "hp_modem_hp_pad_hold_all",
-                &format_args!("{}", self.hp_modem_hp_pad_hold_all().bit()),
-            )
-            .field(
-                "hp_modem_dig_pad_slp_sel",
-                &format_args!("{}", self.hp_modem_dig_pad_slp_sel().bit()),
-            )
-            .field(
-                "hp_modem_dig_pause_wdt",
-                &format_args!("{}", self.hp_modem_dig_pause_wdt().bit()),
-            )
-            .field(
-                "hp_modem_dig_cpu_stall",
-                &format_args!("{}", self.hp_modem_dig_cpu_stall().bit()),
-            )
+            .field("hp_modem_uart_wakeup_en", &self.hp_modem_uart_wakeup_en())
+            .field("hp_modem_lp_pad_hold_all", &self.hp_modem_lp_pad_hold_all())
+            .field("hp_modem_hp_pad_hold_all", &self.hp_modem_hp_pad_hold_all())
+            .field("hp_modem_dig_pad_slp_sel", &self.hp_modem_dig_pad_slp_sel())
+            .field("hp_modem_dig_pause_wdt", &self.hp_modem_dig_pause_wdt())
+            .field("hp_modem_dig_cpu_stall", &self.hp_modem_dig_cpu_stall())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_SYS_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

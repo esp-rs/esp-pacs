@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_EP3_ST")
-            .field(
-                "in_ep3_state",
-                &format_args!("{}", self.in_ep3_state().bits()),
-            )
-            .field(
-                "in_ep3_wr_addr",
-                &format_args!("{}", self.in_ep3_wr_addr().bits()),
-            )
-            .field(
-                "in_ep3_rd_addr",
-                &format_args!("{}", self.in_ep3_rd_addr().bits()),
-            )
+            .field("in_ep3_state", &self.in_ep3_state())
+            .field("in_ep3_wr_addr", &self.in_ep3_wr_addr())
+            .field("in_ep3_rd_addr", &self.in_ep3_rd_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_EP3_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "USB_DEVICE_IN_EP3_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep3_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

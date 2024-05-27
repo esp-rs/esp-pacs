@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE_SPI_CONFIG")
-            .field(
-                "slave_spi_mask_pro",
-                &format_args!("{}", self.slave_spi_mask_pro().bit()),
-            )
-            .field(
-                "slave_spi_mask_app",
-                &format_args!("{}", self.slave_spi_mask_app().bit()),
-            )
-            .field(
-                "spi_encrypt_enable",
-                &format_args!("{}", self.spi_encrypt_enable().bit()),
-            )
-            .field(
-                "spi_decrypt_enable",
-                &format_args!("{}", self.spi_decrypt_enable().bit()),
-            )
+            .field("slave_spi_mask_pro", &self.slave_spi_mask_pro())
+            .field("slave_spi_mask_app", &self.slave_spi_mask_app())
+            .field("spi_encrypt_enable", &self.spi_encrypt_enable())
+            .field("spi_decrypt_enable", &self.spi_decrypt_enable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPI_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_ACTIVE_ICG_HP_FUNC")
             .field(
                 "hp_active_dig_icg_func_en",
-                &format_args!("{}", self.hp_active_dig_icg_func_en().bits()),
+                &self.hp_active_dig_icg_func_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_ICG_HP_FUNC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

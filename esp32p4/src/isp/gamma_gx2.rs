@@ -80,45 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAMMA_GX2")
-            .field(
-                "gamma_g_x0f",
-                &format_args!("{}", self.gamma_g_x0f().bits()),
-            )
-            .field(
-                "gamma_g_x0e",
-                &format_args!("{}", self.gamma_g_x0e().bits()),
-            )
-            .field(
-                "gamma_g_x0d",
-                &format_args!("{}", self.gamma_g_x0d().bits()),
-            )
-            .field(
-                "gamma_g_x0c",
-                &format_args!("{}", self.gamma_g_x0c().bits()),
-            )
-            .field(
-                "gamma_g_x0b",
-                &format_args!("{}", self.gamma_g_x0b().bits()),
-            )
-            .field(
-                "gamma_g_x0a",
-                &format_args!("{}", self.gamma_g_x0a().bits()),
-            )
-            .field(
-                "gamma_g_x09",
-                &format_args!("{}", self.gamma_g_x09().bits()),
-            )
-            .field(
-                "gamma_g_x08",
-                &format_args!("{}", self.gamma_g_x08().bits()),
-            )
+            .field("gamma_g_x0f", &self.gamma_g_x0f())
+            .field("gamma_g_x0e", &self.gamma_g_x0e())
+            .field("gamma_g_x0d", &self.gamma_g_x0d())
+            .field("gamma_g_x0c", &self.gamma_g_x0c())
+            .field("gamma_g_x0b", &self.gamma_g_x0b())
+            .field("gamma_g_x0a", &self.gamma_g_x0a())
+            .field("gamma_g_x09", &self.gamma_g_x09())
+            .field("gamma_g_x08", &self.gamma_g_x08())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GAMMA_GX2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

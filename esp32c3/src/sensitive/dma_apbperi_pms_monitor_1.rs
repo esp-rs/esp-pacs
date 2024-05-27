@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_1")
             .field(
                 "dma_apbperi_pms_monitor_violate_clr",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_clr().bit()),
+                &self.dma_apbperi_pms_monitor_violate_clr(),
             )
             .field(
                 "dma_apbperi_pms_monitor_violate_en",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_violate_en().bit()),
+                &self.dma_apbperi_pms_monitor_violate_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_PMS_MONITOR_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

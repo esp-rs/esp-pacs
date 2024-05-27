@@ -27,25 +27,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXTMEM_REJECT_ST")
-            .field(
-                "extmem_reject_atrr",
-                &format_args!("{}", self.extmem_reject_atrr().bits()),
-            )
+            .field("extmem_reject_atrr", &self.extmem_reject_atrr())
             .field(
                 "extmem_reject_channel_num",
-                &format_args!("{}", self.extmem_reject_channel_num().bits()),
+                &self.extmem_reject_channel_num(),
             )
-            .field(
-                "extmem_reject_peri_num",
-                &format_args!("{}", self.extmem_reject_peri_num().bits()),
-            )
+            .field("extmem_reject_peri_num", &self.extmem_reject_peri_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Reject status accessing external RAM\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`extmem_reject_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

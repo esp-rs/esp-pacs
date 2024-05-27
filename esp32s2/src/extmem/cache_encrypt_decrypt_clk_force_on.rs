@@ -37,25 +37,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON")
-            .field(
-                "clk_force_on_db_encrypt",
-                &format_args!("{}", self.clk_force_on_db_encrypt().bit()),
-            )
+            .field("clk_force_on_db_encrypt", &self.clk_force_on_db_encrypt())
             .field(
                 "clk_force_on_g0cb_decrypt",
-                &format_args!("{}", self.clk_force_on_g0cb_decrypt().bit()),
+                &self.clk_force_on_g0cb_decrypt(),
             )
             .field(
                 "clk_force_on_automatic_encrypt_decrypt",
-                &format_args!("{}", self.clk_force_on_automatic_encrypt_decrypt().bit()),
+                &self.clk_force_on_automatic_encrypt_decrypt(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

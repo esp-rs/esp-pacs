@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEVEL_SPLIT0")
-            .field(
-                "level_split0",
-                &format_args!("{}", self.level_split0().bits()),
-            )
+            .field("level_split0", &self.level_split0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LEVEL_SPLIT0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`level_split0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

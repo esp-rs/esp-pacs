@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_CORESTALLED_ST")
-            .field(
-                "reg_core0_corestalled_st",
-                &format_args!("{}", self.reg_core0_corestalled_st().bit()),
-            )
-            .field(
-                "reg_core1_corestalled_st",
-                &format_args!("{}", self.reg_core1_corestalled_st().bit()),
-            )
+            .field("reg_core0_corestalled_st", &self.reg_core0_corestalled_st())
+            .field("reg_core1_corestalled_st", &self.reg_core1_corestalled_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_CORESTALLED_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_corestalled_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

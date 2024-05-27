@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHROM_MPU_TABLE7")
-            .field(
-                "shrom_mpu_table7",
-                &format_args!("{}", self.shrom_mpu_table7().bits()),
-            )
+            .field("shrom_mpu_table7", &self.shrom_mpu_table7())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SHROM_MPU_TABLE7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

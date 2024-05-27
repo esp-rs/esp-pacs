@@ -107,51 +107,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTL1")
-            .field(
-                "ch1_ar_prot",
-                &format_args!("{}", self.ch1_ar_prot().bits()),
-            )
-            .field(
-                "ch1_aw_prot",
-                &format_args!("{}", self.ch1_aw_prot().bits()),
-            )
-            .field(
-                "ch1_arlen_en",
-                &format_args!("{}", self.ch1_arlen_en().bit()),
-            )
-            .field("ch1_arlen", &format_args!("{}", self.ch1_arlen().bits()))
-            .field(
-                "ch1_awlen_en",
-                &format_args!("{}", self.ch1_awlen_en().bit()),
-            )
-            .field("ch1_awlen", &format_args!("{}", self.ch1_awlen().bits()))
-            .field(
-                "ch1_src_stat_en",
-                &format_args!("{}", self.ch1_src_stat_en().bit()),
-            )
-            .field(
-                "ch1_dst_stat_en",
-                &format_args!("{}", self.ch1_dst_stat_en().bit()),
-            )
-            .field(
-                "ch1_ioc_blktfr",
-                &format_args!("{}", self.ch1_ioc_blktfr().bit()),
-            )
+            .field("ch1_ar_prot", &self.ch1_ar_prot())
+            .field("ch1_aw_prot", &self.ch1_aw_prot())
+            .field("ch1_arlen_en", &self.ch1_arlen_en())
+            .field("ch1_arlen", &self.ch1_arlen())
+            .field("ch1_awlen_en", &self.ch1_awlen_en())
+            .field("ch1_awlen", &self.ch1_awlen())
+            .field("ch1_src_stat_en", &self.ch1_src_stat_en())
+            .field("ch1_dst_stat_en", &self.ch1_dst_stat_en())
+            .field("ch1_ioc_blktfr", &self.ch1_ioc_blktfr())
             .field(
                 "ch1_shadowreg_or_lli_last",
-                &format_args!("{}", self.ch1_shadowreg_or_lli_last().bit()),
+                &self.ch1_shadowreg_or_lli_last(),
             )
             .field(
                 "ch1_shadowreg_or_lli_valid",
-                &format_args!("{}", self.ch1_shadowreg_or_lli_valid().bit()),
+                &self.ch1_shadowreg_or_lli_valid(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

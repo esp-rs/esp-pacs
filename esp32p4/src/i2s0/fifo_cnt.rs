@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_CNT")
-            .field(
-                "tx_fifo_cnt",
-                &format_args!("{}", self.tx_fifo_cnt().bits()),
-            )
+            .field("tx_fifo_cnt", &self.tx_fifo_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

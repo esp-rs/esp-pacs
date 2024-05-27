@@ -152,71 +152,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "tx_data_buf_thld",
-                &format_args!("{}", self.tx_data_buf_thld().bit()),
-            )
-            .field(
-                "rx_data_buf_thld",
-                &format_args!("{}", self.rx_data_buf_thld().bit()),
-            )
-            .field(
-                "ibi_status_thld",
-                &format_args!("{}", self.ibi_status_thld().bit()),
-            )
-            .field(
-                "cmd_buf_empty_thld",
-                &format_args!("{}", self.cmd_buf_empty_thld().bit()),
-            )
-            .field("resp_ready", &format_args!("{}", self.resp_ready().bit()))
-            .field(
-                "nxt_cmd_req_err",
-                &format_args!("{}", self.nxt_cmd_req_err().bit()),
-            )
-            .field(
-                "transfer_err",
-                &format_args!("{}", self.transfer_err().bit()),
-            )
-            .field(
-                "transfer_complete",
-                &format_args!("{}", self.transfer_complete().bit()),
-            )
-            .field(
-                "command_done",
-                &format_args!("{}", self.command_done().bit()),
-            )
-            .field(
-                "detect_start",
-                &format_args!("{}", self.detect_start().bit()),
-            )
-            .field(
-                "resp_buf_ovf",
-                &format_args!("{}", self.resp_buf_ovf().bit()),
-            )
-            .field(
-                "ibi_data_buf_ovf",
-                &format_args!("{}", self.ibi_data_buf_ovf().bit()),
-            )
-            .field(
-                "ibi_status_buf_ovf",
-                &format_args!("{}", self.ibi_status_buf_ovf().bit()),
-            )
-            .field(
-                "ibi_handle_done",
-                &format_args!("{}", self.ibi_handle_done().bit()),
-            )
-            .field("ibi_detect", &format_args!("{}", self.ibi_detect().bit()))
-            .field(
-                "cmd_ccc_mismatch",
-                &format_args!("{}", self.cmd_ccc_mismatch().bit()),
-            )
+            .field("tx_data_buf_thld", &self.tx_data_buf_thld())
+            .field("rx_data_buf_thld", &self.rx_data_buf_thld())
+            .field("ibi_status_thld", &self.ibi_status_thld())
+            .field("cmd_buf_empty_thld", &self.cmd_buf_empty_thld())
+            .field("resp_ready", &self.resp_ready())
+            .field("nxt_cmd_req_err", &self.nxt_cmd_req_err())
+            .field("transfer_err", &self.transfer_err())
+            .field("transfer_complete", &self.transfer_complete())
+            .field("command_done", &self.command_done())
+            .field("detect_start", &self.detect_start())
+            .field("resp_buf_ovf", &self.resp_buf_ovf())
+            .field("ibi_data_buf_ovf", &self.ibi_data_buf_ovf())
+            .field("ibi_status_buf_ovf", &self.ibi_status_buf_ovf())
+            .field("ibi_handle_done", &self.ibi_handle_done())
+            .field("ibi_detect", &self.ibi_detect())
+            .field("cmd_ccc_mismatch", &self.cmd_ccc_mismatch())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

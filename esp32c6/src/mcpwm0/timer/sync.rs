@@ -53,21 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYNC")
-            .field("synci_en", &format_args!("{}", self.synci_en().bit()))
-            .field("sw", &format_args!("{}", self.sw().bit()))
-            .field("synco_sel", &format_args!("{}", self.synco_sel().bits()))
-            .field("phase", &format_args!("{}", self.phase().bits()))
-            .field(
-                "phase_direction",
-                &format_args!("{}", self.phase_direction().bit()),
-            )
+            .field("synci_en", &self.synci_en())
+            .field("sw", &self.sw())
+            .field("synco_sel", &self.synco_sel())
+            .field("phase", &self.phase())
+            .field("phase_direction", &self.phase_direction())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYNC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

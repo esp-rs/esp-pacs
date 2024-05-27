@@ -98,44 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPMSK")
-            .field(
-                "di_xfercomplmsk",
-                &format_args!("{}", self.di_xfercomplmsk().bit()),
-            )
-            .field(
-                "di_epdisbldmsk",
-                &format_args!("{}", self.di_epdisbldmsk().bit()),
-            )
-            .field("di_ahbermsk", &format_args!("{}", self.di_ahbermsk().bit()))
-            .field("timeoutmsk", &format_args!("{}", self.timeoutmsk().bit()))
-            .field(
-                "intkntxfempmsk",
-                &format_args!("{}", self.intkntxfempmsk().bit()),
-            )
-            .field(
-                "intknepmismsk",
-                &format_args!("{}", self.intknepmismsk().bit()),
-            )
-            .field(
-                "inepnakeffmsk",
-                &format_args!("{}", self.inepnakeffmsk().bit()),
-            )
-            .field(
-                "txfifoundrnmsk",
-                &format_args!("{}", self.txfifoundrnmsk().bit()),
-            )
-            .field(
-                "bnainintrmsk",
-                &format_args!("{}", self.bnainintrmsk().bit()),
-            )
-            .field("di_nakmsk", &format_args!("{}", self.di_nakmsk().bit()))
+            .field("di_xfercomplmsk", &self.di_xfercomplmsk())
+            .field("di_epdisbldmsk", &self.di_epdisbldmsk())
+            .field("di_ahbermsk", &self.di_ahbermsk())
+            .field("timeoutmsk", &self.timeoutmsk())
+            .field("intkntxfempmsk", &self.intkntxfempmsk())
+            .field("intknepmismsk", &self.intknepmismsk())
+            .field("inepnakeffmsk", &self.inepnakeffmsk())
+            .field("txfifoundrnmsk", &self.txfifoundrnmsk())
+            .field("bnainintrmsk", &self.bnainintrmsk())
+            .field("di_nakmsk", &self.di_nakmsk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIEPMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

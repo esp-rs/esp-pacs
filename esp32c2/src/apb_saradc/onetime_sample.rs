@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ONETIME_SAMPLE")
-            .field(
-                "onetime_atten",
-                &format_args!("{}", self.onetime_atten().bits()),
-            )
-            .field(
-                "onetime_channel",
-                &format_args!("{}", self.onetime_channel().bits()),
-            )
-            .field(
-                "onetime_start",
-                &format_args!("{}", self.onetime_start().bit()),
-            )
-            .field(
-                "saradc2_onetime_sample",
-                &format_args!("{}", self.saradc2_onetime_sample().bit()),
-            )
-            .field(
-                "saradc1_onetime_sample",
-                &format_args!("{}", self.saradc1_onetime_sample().bit()),
-            )
+            .field("onetime_atten", &self.onetime_atten())
+            .field("onetime_channel", &self.onetime_channel())
+            .field("onetime_start", &self.onetime_start())
+            .field("saradc2_onetime_sample", &self.saradc2_onetime_sample())
+            .field("saradc1_onetime_sample", &self.saradc1_onetime_sample())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ONETIME_SAMPLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

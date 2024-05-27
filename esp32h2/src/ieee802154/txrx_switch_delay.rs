@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TXRX_SWITCH_DELAY")
-            .field(
-                "txrx_switch_delay",
-                &format_args!("{}", self.txrx_switch_delay().bits()),
-            )
+            .field("txrx_switch_delay", &self.txrx_switch_delay())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TXRX_SWITCH_DELAY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

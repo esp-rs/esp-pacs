@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_GENRL_CFG")
-            .field(
-                "rx_gating_en",
-                &format_args!("{}", self.rx_gating_en().bit()),
-            )
-            .field(
-                "rx_timeout_thres",
-                &format_args!("{}", self.rx_timeout_thres().bits()),
-            )
-            .field(
-                "rx_timeout_en",
-                &format_args!("{}", self.rx_timeout_en().bit()),
-            )
-            .field(
-                "rx_eof_gen_sel",
-                &format_args!("{}", self.rx_eof_gen_sel().bit()),
-            )
+            .field("rx_gating_en", &self.rx_gating_en())
+            .field("rx_timeout_thres", &self.rx_timeout_thres())
+            .field("rx_timeout_en", &self.rx_timeout_en())
+            .field("rx_eof_gen_sel", &self.rx_eof_gen_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_GENRL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

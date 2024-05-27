@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_RC_CONF0")
-            .field("a_qp", &format_args!("{}", self.a_qp().bits()))
-            .field(
-                "a_rate_ctrl_u",
-                &format_args!("{}", self.a_rate_ctrl_u().bits()),
-            )
-            .field(
-                "a_mb_rate_ctrl_en",
-                &format_args!("{}", self.a_mb_rate_ctrl_en().bit()),
-            )
+            .field("a_qp", &self.a_qp())
+            .field("a_rate_ctrl_u", &self.a_rate_ctrl_u())
+            .field("a_mb_rate_ctrl_en", &self.a_mb_rate_ctrl_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_RC_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

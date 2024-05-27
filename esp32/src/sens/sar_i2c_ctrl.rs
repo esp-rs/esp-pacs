@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_I2C_CTRL")
-            .field(
-                "sar_i2c_ctrl",
-                &format_args!("{}", self.sar_i2c_ctrl().bits()),
-            )
-            .field(
-                "sar_i2c_start",
-                &format_args!("{}", self.sar_i2c_start().bit()),
-            )
-            .field(
-                "sar_i2c_start_force",
-                &format_args!("{}", self.sar_i2c_start_force().bit()),
-            )
+            .field("sar_i2c_ctrl", &self.sar_i2c_ctrl())
+            .field("sar_i2c_start", &self.sar_i2c_start())
+            .field("sar_i2c_start_force", &self.sar_i2c_start_force())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_I2C_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

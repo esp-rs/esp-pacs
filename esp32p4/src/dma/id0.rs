@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ID0")
-            .field("dmac_id", &format_args!("{}", self.dmac_id().bits()))
+            .field("dmac_id", &self.dmac_id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ID0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`id0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

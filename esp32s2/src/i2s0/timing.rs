@@ -134,63 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMING")
-            .field(
-                "tx_bck_in_delay",
-                &format_args!("{}", self.tx_bck_in_delay().bits()),
-            )
-            .field(
-                "tx_ws_in_delay",
-                &format_args!("{}", self.tx_ws_in_delay().bits()),
-            )
-            .field(
-                "rx_bck_in_delay",
-                &format_args!("{}", self.rx_bck_in_delay().bits()),
-            )
-            .field(
-                "rx_ws_in_delay",
-                &format_args!("{}", self.rx_ws_in_delay().bits()),
-            )
-            .field(
-                "rx_sd_in_delay",
-                &format_args!("{}", self.rx_sd_in_delay().bits()),
-            )
-            .field(
-                "tx_bck_out_delay",
-                &format_args!("{}", self.tx_bck_out_delay().bits()),
-            )
-            .field(
-                "tx_ws_out_delay",
-                &format_args!("{}", self.tx_ws_out_delay().bits()),
-            )
-            .field(
-                "tx_sd_out_delay",
-                &format_args!("{}", self.tx_sd_out_delay().bits()),
-            )
-            .field(
-                "rx_ws_out_delay",
-                &format_args!("{}", self.rx_ws_out_delay().bits()),
-            )
-            .field(
-                "rx_bck_out_delay",
-                &format_args!("{}", self.rx_bck_out_delay().bits()),
-            )
-            .field("tx_dsync_sw", &format_args!("{}", self.tx_dsync_sw().bit()))
-            .field("rx_dsync_sw", &format_args!("{}", self.rx_dsync_sw().bit()))
-            .field(
-                "data_enable_delay",
-                &format_args!("{}", self.data_enable_delay().bits()),
-            )
-            .field(
-                "tx_bck_in_inv",
-                &format_args!("{}", self.tx_bck_in_inv().bit()),
-            )
+            .field("tx_bck_in_delay", &self.tx_bck_in_delay())
+            .field("tx_ws_in_delay", &self.tx_ws_in_delay())
+            .field("rx_bck_in_delay", &self.rx_bck_in_delay())
+            .field("rx_ws_in_delay", &self.rx_ws_in_delay())
+            .field("rx_sd_in_delay", &self.rx_sd_in_delay())
+            .field("tx_bck_out_delay", &self.tx_bck_out_delay())
+            .field("tx_ws_out_delay", &self.tx_ws_out_delay())
+            .field("tx_sd_out_delay", &self.tx_sd_out_delay())
+            .field("rx_ws_out_delay", &self.rx_ws_out_delay())
+            .field("rx_bck_out_delay", &self.rx_bck_out_delay())
+            .field("tx_dsync_sw", &self.tx_dsync_sw())
+            .field("rx_dsync_sw", &self.rx_dsync_sw())
+            .field("data_enable_delay", &self.data_enable_delay())
+            .field("tx_bck_in_inv", &self.tx_bck_in_inv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMING_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

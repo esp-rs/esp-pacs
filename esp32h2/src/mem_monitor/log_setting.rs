@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOG_SETTING")
-            .field("log_ena", &format_args!("{}", self.log_ena().bits()))
-            .field("log_mode", &format_args!("{}", self.log_mode().bits()))
-            .field(
-                "log_mem_loop_enable",
-                &format_args!("{}", self.log_mem_loop_enable().bit()),
-            )
+            .field("log_ena", &self.log_ena())
+            .field("log_mode", &self.log_mode())
+            .field("log_mem_loop_enable", &self.log_mem_loop_enable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LOG_SETTING_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

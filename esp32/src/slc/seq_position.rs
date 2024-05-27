@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SEQ_POSITION")
-            .field(
-                "slc0_seq_position",
-                &format_args!("{}", self.slc0_seq_position().bits()),
-            )
-            .field(
-                "slc1_seq_position",
-                &format_args!("{}", self.slc1_seq_position().bits()),
-            )
+            .field("slc0_seq_position", &self.slc0_seq_position())
+            .field("slc1_seq_position", &self.slc1_seq_position())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SEQ_POSITION_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_SYNC_RST_CTRL")
-            .field(
-                "l2_cache_sync_rst",
-                &format_args!("{}", self.l2_cache_sync_rst().bit()),
-            )
+            .field("l2_cache_sync_rst", &self.l2_cache_sync_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_RST_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

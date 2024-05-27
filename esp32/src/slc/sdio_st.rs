@@ -48,25 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_ST")
-            .field("cmd_st", &format_args!("{}", self.cmd_st().bits()))
-            .field("func_st", &format_args!("{}", self.func_st().bits()))
-            .field("sdio_wakeup", &format_args!("{}", self.sdio_wakeup().bit()))
-            .field("bus_st", &format_args!("{}", self.bus_st().bits()))
-            .field(
-                "func1_acc_state",
-                &format_args!("{}", self.func1_acc_state().bits()),
-            )
-            .field(
-                "func2_acc_state",
-                &format_args!("{}", self.func2_acc_state().bits()),
-            )
+            .field("cmd_st", &self.cmd_st())
+            .field("func_st", &self.func_st())
+            .field("sdio_wakeup", &self.sdio_wakeup())
+            .field("bus_st", &self.bus_st())
+            .field("func1_acc_state", &self.func1_acc_state())
+            .field("func2_acc_state", &self.func2_acc_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDIO_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sdio_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

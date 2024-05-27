@@ -45,33 +45,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_UNALLOCATE_BUFFER_CLEAR")
-            .field(
-                "l1_icache0_unalloc_clr",
-                &format_args!("{}", self.l1_icache0_unalloc_clr().bit()),
-            )
-            .field(
-                "l1_icache1_unalloc_clr",
-                &format_args!("{}", self.l1_icache1_unalloc_clr().bit()),
-            )
-            .field(
-                "l1_icache2_unalloc_clr",
-                &format_args!("{}", self.l1_icache2_unalloc_clr().bit()),
-            )
-            .field(
-                "l1_icache3_unalloc_clr",
-                &format_args!("{}", self.l1_icache3_unalloc_clr().bit()),
-            )
-            .field(
-                "l1_cache_unalloc_clr",
-                &format_args!("{}", self.l1_cache_unalloc_clr().bit()),
-            )
+            .field("l1_icache0_unalloc_clr", &self.l1_icache0_unalloc_clr())
+            .field("l1_icache1_unalloc_clr", &self.l1_icache1_unalloc_clr())
+            .field("l1_icache2_unalloc_clr", &self.l1_icache2_unalloc_clr())
+            .field("l1_icache3_unalloc_clr", &self.l1_icache3_unalloc_clr())
+            .field("l1_cache_unalloc_clr", &self.l1_cache_unalloc_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

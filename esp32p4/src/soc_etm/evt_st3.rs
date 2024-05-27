@@ -298,139 +298,43 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST3")
             .field(
                 "mcpwm1_evt_timer1_stop_st",
-                &format_args!("{}", self.mcpwm1_evt_timer1_stop_st().bit()),
+                &self.mcpwm1_evt_timer1_stop_st(),
             )
             .field(
                 "mcpwm1_evt_timer2_stop_st",
-                &format_args!("{}", self.mcpwm1_evt_timer2_stop_st().bit()),
+                &self.mcpwm1_evt_timer2_stop_st(),
             )
-            .field(
-                "mcpwm1_evt_timer0_tez_st",
-                &format_args!("{}", self.mcpwm1_evt_timer0_tez_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_timer1_tez_st",
-                &format_args!("{}", self.mcpwm1_evt_timer1_tez_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_timer2_tez_st",
-                &format_args!("{}", self.mcpwm1_evt_timer2_tez_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_timer0_tep_st",
-                &format_args!("{}", self.mcpwm1_evt_timer0_tep_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_timer1_tep_st",
-                &format_args!("{}", self.mcpwm1_evt_timer1_tep_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_timer2_tep_st",
-                &format_args!("{}", self.mcpwm1_evt_timer2_tep_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op0_tea_st",
-                &format_args!("{}", self.mcpwm1_evt_op0_tea_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op1_tea_st",
-                &format_args!("{}", self.mcpwm1_evt_op1_tea_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op2_tea_st",
-                &format_args!("{}", self.mcpwm1_evt_op2_tea_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op0_teb_st",
-                &format_args!("{}", self.mcpwm1_evt_op0_teb_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op1_teb_st",
-                &format_args!("{}", self.mcpwm1_evt_op1_teb_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op2_teb_st",
-                &format_args!("{}", self.mcpwm1_evt_op2_teb_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f0_st",
-                &format_args!("{}", self.mcpwm1_evt_f0_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f1_st",
-                &format_args!("{}", self.mcpwm1_evt_f1_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f2_st",
-                &format_args!("{}", self.mcpwm1_evt_f2_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f0_clr_st",
-                &format_args!("{}", self.mcpwm1_evt_f0_clr_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f1_clr_st",
-                &format_args!("{}", self.mcpwm1_evt_f1_clr_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_f2_clr_st",
-                &format_args!("{}", self.mcpwm1_evt_f2_clr_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz0_cbc_st",
-                &format_args!("{}", self.mcpwm1_evt_tz0_cbc_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz1_cbc_st",
-                &format_args!("{}", self.mcpwm1_evt_tz1_cbc_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz2_cbc_st",
-                &format_args!("{}", self.mcpwm1_evt_tz2_cbc_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz0_ost_st",
-                &format_args!("{}", self.mcpwm1_evt_tz0_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz1_ost_st",
-                &format_args!("{}", self.mcpwm1_evt_tz1_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_tz2_ost_st",
-                &format_args!("{}", self.mcpwm1_evt_tz2_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_cap0_st",
-                &format_args!("{}", self.mcpwm1_evt_cap0_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_cap1_st",
-                &format_args!("{}", self.mcpwm1_evt_cap1_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_cap2_st",
-                &format_args!("{}", self.mcpwm1_evt_cap2_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op0_tee1_st",
-                &format_args!("{}", self.mcpwm1_evt_op0_tee1_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op1_tee1_st",
-                &format_args!("{}", self.mcpwm1_evt_op1_tee1_st().bit()),
-            )
-            .field(
-                "mcpwm1_evt_op2_tee1_st",
-                &format_args!("{}", self.mcpwm1_evt_op2_tee1_st().bit()),
-            )
+            .field("mcpwm1_evt_timer0_tez_st", &self.mcpwm1_evt_timer0_tez_st())
+            .field("mcpwm1_evt_timer1_tez_st", &self.mcpwm1_evt_timer1_tez_st())
+            .field("mcpwm1_evt_timer2_tez_st", &self.mcpwm1_evt_timer2_tez_st())
+            .field("mcpwm1_evt_timer0_tep_st", &self.mcpwm1_evt_timer0_tep_st())
+            .field("mcpwm1_evt_timer1_tep_st", &self.mcpwm1_evt_timer1_tep_st())
+            .field("mcpwm1_evt_timer2_tep_st", &self.mcpwm1_evt_timer2_tep_st())
+            .field("mcpwm1_evt_op0_tea_st", &self.mcpwm1_evt_op0_tea_st())
+            .field("mcpwm1_evt_op1_tea_st", &self.mcpwm1_evt_op1_tea_st())
+            .field("mcpwm1_evt_op2_tea_st", &self.mcpwm1_evt_op2_tea_st())
+            .field("mcpwm1_evt_op0_teb_st", &self.mcpwm1_evt_op0_teb_st())
+            .field("mcpwm1_evt_op1_teb_st", &self.mcpwm1_evt_op1_teb_st())
+            .field("mcpwm1_evt_op2_teb_st", &self.mcpwm1_evt_op2_teb_st())
+            .field("mcpwm1_evt_f0_st", &self.mcpwm1_evt_f0_st())
+            .field("mcpwm1_evt_f1_st", &self.mcpwm1_evt_f1_st())
+            .field("mcpwm1_evt_f2_st", &self.mcpwm1_evt_f2_st())
+            .field("mcpwm1_evt_f0_clr_st", &self.mcpwm1_evt_f0_clr_st())
+            .field("mcpwm1_evt_f1_clr_st", &self.mcpwm1_evt_f1_clr_st())
+            .field("mcpwm1_evt_f2_clr_st", &self.mcpwm1_evt_f2_clr_st())
+            .field("mcpwm1_evt_tz0_cbc_st", &self.mcpwm1_evt_tz0_cbc_st())
+            .field("mcpwm1_evt_tz1_cbc_st", &self.mcpwm1_evt_tz1_cbc_st())
+            .field("mcpwm1_evt_tz2_cbc_st", &self.mcpwm1_evt_tz2_cbc_st())
+            .field("mcpwm1_evt_tz0_ost_st", &self.mcpwm1_evt_tz0_ost_st())
+            .field("mcpwm1_evt_tz1_ost_st", &self.mcpwm1_evt_tz1_ost_st())
+            .field("mcpwm1_evt_tz2_ost_st", &self.mcpwm1_evt_tz2_ost_st())
+            .field("mcpwm1_evt_cap0_st", &self.mcpwm1_evt_cap0_st())
+            .field("mcpwm1_evt_cap1_st", &self.mcpwm1_evt_cap1_st())
+            .field("mcpwm1_evt_cap2_st", &self.mcpwm1_evt_cap2_st())
+            .field("mcpwm1_evt_op0_tee1_st", &self.mcpwm1_evt_op0_tee1_st())
+            .field("mcpwm1_evt_op1_tee1_st", &self.mcpwm1_evt_op1_tee1_st())
+            .field("mcpwm1_evt_op2_tee1_st", &self.mcpwm1_evt_op2_tee1_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EVT_ST3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

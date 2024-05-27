@@ -233,92 +233,32 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("done", &format_args!("{}", self.done().bit()))
-            .field(
-                "rle_parallel_err",
-                &format_args!("{}", self.rle_parallel_err().bit()),
-            )
-            .field("cid_err", &format_args!("{}", self.cid_err().bit()))
-            .field(
-                "c_dht_dc_id_err",
-                &format_args!("{}", self.c_dht_dc_id_err().bit()),
-            )
-            .field(
-                "c_dht_ac_id_err",
-                &format_args!("{}", self.c_dht_ac_id_err().bit()),
-            )
-            .field(
-                "c_dqt_id_err",
-                &format_args!("{}", self.c_dqt_id_err().bit()),
-            )
-            .field("rst_uxp_err", &format_args!("{}", self.rst_uxp_err().bit()))
-            .field(
-                "rst_check_none_err",
-                &format_args!("{}", self.rst_check_none_err().bit()),
-            )
-            .field(
-                "rst_check_pos_err",
-                &format_args!("{}", self.rst_check_pos_err().bit()),
-            )
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field(
-                "sr_color_mode_err",
-                &format_args!("{}", self.sr_color_mode_err().bit()),
-            )
-            .field("dct_done", &format_args!("{}", self.dct_done().bit()))
-            .field(
-                "bs_last_block_eof",
-                &format_args!("{}", self.bs_last_block_eof().bit()),
-            )
-            .field(
-                "scan_check_none_err",
-                &format_args!("{}", self.scan_check_none_err().bit()),
-            )
-            .field(
-                "scan_check_pos_err",
-                &format_args!("{}", self.scan_check_pos_err().bit()),
-            )
-            .field("uxp_det", &format_args!("{}", self.uxp_det().bit()))
-            .field(
-                "en_frame_eof_err",
-                &format_args!("{}", self.en_frame_eof_err().bit()),
-            )
-            .field(
-                "en_frame_eof_lack",
-                &format_args!("{}", self.en_frame_eof_lack().bit()),
-            )
-            .field(
-                "de_frame_eof_err",
-                &format_args!("{}", self.de_frame_eof_err().bit()),
-            )
-            .field(
-                "de_frame_eof_lack",
-                &format_args!("{}", self.de_frame_eof_lack().bit()),
-            )
-            .field(
-                "sos_unmatch_err",
-                &format_args!("{}", self.sos_unmatch_err().bit()),
-            )
-            .field(
-                "marker_err_fst_scan",
-                &format_args!("{}", self.marker_err_fst_scan().bit()),
-            )
-            .field(
-                "marker_err_other_scan",
-                &format_args!("{}", self.marker_err_other_scan().bit()),
-            )
-            .field("undet", &format_args!("{}", self.undet().bit()))
-            .field(
-                "decode_timeout",
-                &format_args!("{}", self.decode_timeout().bit()),
-            )
+            .field("done", &self.done())
+            .field("rle_parallel_err", &self.rle_parallel_err())
+            .field("cid_err", &self.cid_err())
+            .field("c_dht_dc_id_err", &self.c_dht_dc_id_err())
+            .field("c_dht_ac_id_err", &self.c_dht_ac_id_err())
+            .field("c_dqt_id_err", &self.c_dqt_id_err())
+            .field("rst_uxp_err", &self.rst_uxp_err())
+            .field("rst_check_none_err", &self.rst_check_none_err())
+            .field("rst_check_pos_err", &self.rst_check_pos_err())
+            .field("out_eof", &self.out_eof())
+            .field("sr_color_mode_err", &self.sr_color_mode_err())
+            .field("dct_done", &self.dct_done())
+            .field("bs_last_block_eof", &self.bs_last_block_eof())
+            .field("scan_check_none_err", &self.scan_check_none_err())
+            .field("scan_check_pos_err", &self.scan_check_pos_err())
+            .field("uxp_det", &self.uxp_det())
+            .field("en_frame_eof_err", &self.en_frame_eof_err())
+            .field("en_frame_eof_lack", &self.en_frame_eof_lack())
+            .field("de_frame_eof_err", &self.de_frame_eof_err())
+            .field("de_frame_eof_lack", &self.de_frame_eof_lack())
+            .field("sos_unmatch_err", &self.sos_unmatch_err())
+            .field("marker_err_fst_scan", &self.marker_err_fst_scan())
+            .field("marker_err_other_scan", &self.marker_err_other_scan())
+            .field("undet", &self.undet())
+            .field("decode_timeout", &self.decode_timeout())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

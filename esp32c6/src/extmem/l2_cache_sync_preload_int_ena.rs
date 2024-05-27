@@ -22,19 +22,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_ENA")
             .field(
                 "l2_cache_pld_done_int_ena",
-                &format_args!("{}", self.l2_cache_pld_done_int_ena().bit()),
+                &self.l2_cache_pld_done_int_ena(),
             )
-            .field(
-                "l2_cache_pld_err_int_ena",
-                &format_args!("{}", self.l2_cache_pld_err_int_ena().bit()),
-            )
+            .field("l2_cache_pld_err_int_ena", &self.l2_cache_pld_err_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-Cache Access Fail Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_preload_int_ena::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

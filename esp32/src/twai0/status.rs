@@ -69,22 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("rx_buf_st", &format_args!("{}", self.rx_buf_st().bit()))
-            .field("overrun_st", &format_args!("{}", self.overrun_st().bit()))
-            .field("tx_buf_st", &format_args!("{}", self.tx_buf_st().bit()))
-            .field("tx_complete", &format_args!("{}", self.tx_complete().bit()))
-            .field("rx_st", &format_args!("{}", self.rx_st().bit()))
-            .field("tx_st", &format_args!("{}", self.tx_st().bit()))
-            .field("err_st", &format_args!("{}", self.err_st().bit()))
-            .field("bus_off_st", &format_args!("{}", self.bus_off_st().bit()))
-            .field("miss_st", &format_args!("{}", self.miss_st().bit()))
+            .field("rx_buf_st", &self.rx_buf_st())
+            .field("overrun_st", &self.overrun_st())
+            .field("tx_buf_st", &self.tx_buf_st())
+            .field("tx_complete", &self.tx_complete())
+            .field("rx_st", &self.rx_st())
+            .field("tx_st", &self.tx_st())
+            .field("err_st", &self.err_st())
+            .field("bus_off_st", &self.bus_off_st())
+            .field("miss_st", &self.miss_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

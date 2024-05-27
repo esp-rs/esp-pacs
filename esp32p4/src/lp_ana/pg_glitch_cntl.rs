@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PG_GLITCH_CNTL")
-            .field(
-                "power_glitch_reset_ena",
-                &format_args!("{}", self.power_glitch_reset_ena().bit()),
-            )
+            .field("power_glitch_reset_ena", &self.power_glitch_reset_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PG_GLITCH_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_CTRL0")
-            .field(
-                "sharp_threshold_low",
-                &format_args!("{}", self.sharp_threshold_low().bits()),
-            )
-            .field(
-                "sharp_threshold_high",
-                &format_args!("{}", self.sharp_threshold_high().bits()),
-            )
-            .field(
-                "sharp_amount_low",
-                &format_args!("{}", self.sharp_amount_low().bits()),
-            )
-            .field(
-                "sharp_amount_high",
-                &format_args!("{}", self.sharp_amount_high().bits()),
-            )
+            .field("sharp_threshold_low", &self.sharp_threshold_low())
+            .field("sharp_threshold_high", &self.sharp_threshold_high())
+            .field("sharp_amount_low", &self.sharp_amount_low())
+            .field("sharp_amount_high", &self.sharp_amount_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SHARP_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

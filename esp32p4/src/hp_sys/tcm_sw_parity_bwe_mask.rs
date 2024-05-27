@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("TCM_SW_PARITY_BWE_MASK")
             .field(
                 "reg_tcm_sw_parity_bwe_mask_ctrl",
-                &format_args!("{}", self.reg_tcm_sw_parity_bwe_mask_ctrl().bit()),
+                &self.reg_tcm_sw_parity_bwe_mask_ctrl(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_SW_PARITY_BWE_MASK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

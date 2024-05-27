@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_TIMING")
-            .field(
-                "rx_sd_in_dm",
-                &format_args!("{}", self.rx_sd_in_dm().bits()),
-            )
-            .field(
-                "rx_ws_out_dm",
-                &format_args!("{}", self.rx_ws_out_dm().bits()),
-            )
-            .field(
-                "rx_bck_out_dm",
-                &format_args!("{}", self.rx_bck_out_dm().bits()),
-            )
-            .field(
-                "rx_ws_in_dm",
-                &format_args!("{}", self.rx_ws_in_dm().bits()),
-            )
-            .field(
-                "rx_bck_in_dm",
-                &format_args!("{}", self.rx_bck_in_dm().bits()),
-            )
+            .field("rx_sd_in_dm", &self.rx_sd_in_dm())
+            .field("rx_ws_out_dm", &self.rx_ws_out_dm())
+            .field("rx_bck_out_dm", &self.rx_bck_out_dm())
+            .field("rx_ws_in_dm", &self.rx_ws_in_dm())
+            .field("rx_bck_in_dm", &self.rx_bck_in_dm())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_TIMING_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

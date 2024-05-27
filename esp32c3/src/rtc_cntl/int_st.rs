@@ -69,25 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("wdt", &format_args!("{}", self.wdt().bit()))
-            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
-            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
-            .field("swd", &format_args!("{}", self.swd().bit()))
-            .field(
-                "xtal32k_dead",
-                &format_args!("{}", self.xtal32k_dead().bit()),
-            )
-            .field("glitch_det", &format_args!("{}", self.glitch_det().bit()))
-            .field("bbpll_cal", &format_args!("{}", self.bbpll_cal().bit()))
+            .field("slp_wakeup", &self.slp_wakeup())
+            .field("slp_reject", &self.slp_reject())
+            .field("wdt", &self.wdt())
+            .field("brown_out", &self.brown_out())
+            .field("main_timer", &self.main_timer())
+            .field("swd", &self.swd())
+            .field("xtal32k_dead", &self.xtal32k_dead())
+            .field("glitch_det", &self.glitch_det())
+            .field("bbpll_cal", &self.bbpll_cal())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

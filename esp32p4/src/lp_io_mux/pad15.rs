@@ -98,53 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD15")
-            .field(
-                "reg_pad15_drv",
-                &format_args!("{}", self.reg_pad15_drv().bits()),
-            )
-            .field(
-                "reg_pad15_rde",
-                &format_args!("{}", self.reg_pad15_rde().bit()),
-            )
-            .field(
-                "reg_pad15_rue",
-                &format_args!("{}", self.reg_pad15_rue().bit()),
-            )
-            .field(
-                "reg_pad15_mux_sel",
-                &format_args!("{}", self.reg_pad15_mux_sel().bit()),
-            )
-            .field(
-                "reg_pad15_fun_sel",
-                &format_args!("{}", self.reg_pad15_fun_sel().bits()),
-            )
-            .field(
-                "reg_pad15_slp_sel",
-                &format_args!("{}", self.reg_pad15_slp_sel().bit()),
-            )
-            .field(
-                "reg_pad15_slp_ie",
-                &format_args!("{}", self.reg_pad15_slp_ie().bit()),
-            )
-            .field(
-                "reg_pad15_slp_oe",
-                &format_args!("{}", self.reg_pad15_slp_oe().bit()),
-            )
-            .field(
-                "reg_pad15_fun_ie",
-                &format_args!("{}", self.reg_pad15_fun_ie().bit()),
-            )
-            .field(
-                "reg_pad15_filter_en",
-                &format_args!("{}", self.reg_pad15_filter_en().bit()),
-            )
+            .field("reg_pad15_drv", &self.reg_pad15_drv())
+            .field("reg_pad15_rde", &self.reg_pad15_rde())
+            .field("reg_pad15_rue", &self.reg_pad15_rue())
+            .field("reg_pad15_mux_sel", &self.reg_pad15_mux_sel())
+            .field("reg_pad15_fun_sel", &self.reg_pad15_fun_sel())
+            .field("reg_pad15_slp_sel", &self.reg_pad15_slp_sel())
+            .field("reg_pad15_slp_ie", &self.reg_pad15_slp_ie())
+            .field("reg_pad15_slp_oe", &self.reg_pad15_slp_oe())
+            .field("reg_pad15_fun_ie", &self.reg_pad15_fun_ie())
+            .field("reg_pad15_filter_en", &self.reg_pad15_filter_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PAD15_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

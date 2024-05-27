@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCM_WAIT_DELAY")
-            .field(
-                "dcdc_pre_delay",
-                &format_args!("{}", self.dcdc_pre_delay().bits()),
-            )
-            .field(
-                "dcdc_res_off_delay",
-                &format_args!("{}", self.dcdc_res_off_delay().bits()),
-            )
-            .field(
-                "dcdc_stable_delay",
-                &format_args!("{}", self.dcdc_stable_delay().bits()),
-            )
+            .field("dcdc_pre_delay", &self.dcdc_pre_delay())
+            .field("dcdc_res_off_delay", &self.dcdc_res_off_delay())
+            .field("dcdc_stable_delay", &self.dcdc_stable_delay())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCM_WAIT_DELAY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

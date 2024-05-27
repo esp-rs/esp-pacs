@@ -87,49 +87,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT_ENABLE")
-            .field(
-                "ext_receive_int_ena",
-                &format_args!("{}", self.ext_receive_int_ena().bit()),
-            )
-            .field(
-                "ext_transmit_int_ena",
-                &format_args!("{}", self.ext_transmit_int_ena().bit()),
-            )
-            .field(
-                "ext_err_warning_int_ena",
-                &format_args!("{}", self.ext_err_warning_int_ena().bit()),
-            )
-            .field(
-                "ext_data_overrun_int_ena",
-                &format_args!("{}", self.ext_data_overrun_int_ena().bit()),
-            )
-            .field(
-                "ts_counter_ovfl_int_ena",
-                &format_args!("{}", self.ts_counter_ovfl_int_ena().bit()),
-            )
-            .field(
-                "err_passive_int_ena",
-                &format_args!("{}", self.err_passive_int_ena().bit()),
-            )
-            .field(
-                "arbitration_lost_int_ena",
-                &format_args!("{}", self.arbitration_lost_int_ena().bit()),
-            )
-            .field(
-                "bus_err_int_ena",
-                &format_args!("{}", self.bus_err_int_ena().bit()),
-            )
-            .field(
-                "idle_int_ena",
-                &format_args!("{}", self.idle_int_ena().bit()),
-            )
+            .field("ext_receive_int_ena", &self.ext_receive_int_ena())
+            .field("ext_transmit_int_ena", &self.ext_transmit_int_ena())
+            .field("ext_err_warning_int_ena", &self.ext_err_warning_int_ena())
+            .field("ext_data_overrun_int_ena", &self.ext_data_overrun_int_ena())
+            .field("ts_counter_ovfl_int_ena", &self.ts_counter_ovfl_int_ena())
+            .field("err_passive_int_ena", &self.err_passive_int_ena())
+            .field("arbitration_lost_int_ena", &self.arbitration_lost_int_ena())
+            .field("bus_err_int_ena", &self.bus_err_int_ena())
+            .field("idle_int_ena", &self.idle_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_ENABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

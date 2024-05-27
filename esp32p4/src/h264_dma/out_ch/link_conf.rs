@@ -42,29 +42,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LINK_CONF")
-            .field(
-                "outlink_stop",
-                &format_args!("{}", self.outlink_stop().bit()),
-            )
-            .field(
-                "outlink_start",
-                &format_args!("{}", self.outlink_start().bit()),
-            )
-            .field(
-                "outlink_restart",
-                &format_args!("{}", self.outlink_restart().bit()),
-            )
-            .field(
-                "outlink_park",
-                &format_args!("{}", self.outlink_park().bit()),
-            )
+            .field("outlink_stop", &self.outlink_stop())
+            .field("outlink_start", &self.outlink_start())
+            .field("outlink_restart", &self.outlink_restart())
+            .field("outlink_park", &self.outlink_park())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LINK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

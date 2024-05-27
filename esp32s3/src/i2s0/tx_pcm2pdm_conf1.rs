@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_PCM2PDM_CONF1")
-            .field("tx_pdm_fp", &format_args!("{}", self.tx_pdm_fp().bits()))
-            .field("tx_pdm_fs", &format_args!("{}", self.tx_pdm_fs().bits()))
-            .field(
-                "tx_iir_hp_mult12_5",
-                &format_args!("{}", self.tx_iir_hp_mult12_5().bits()),
-            )
-            .field(
-                "tx_iir_hp_mult12_0",
-                &format_args!("{}", self.tx_iir_hp_mult12_0().bits()),
-            )
+            .field("tx_pdm_fp", &self.tx_pdm_fp())
+            .field("tx_pdm_fs", &self.tx_pdm_fs())
+            .field("tx_iir_hp_mult12_5", &self.tx_iir_hp_mult12_5())
+            .field("tx_iir_hp_mult12_0", &self.tx_iir_hp_mult12_0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_PCM2PDM_CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

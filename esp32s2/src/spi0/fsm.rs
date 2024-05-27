@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FSM")
-            .field("st", &format_args!("{}", self.st().bits()))
-            .field(
-                "mst_dma_rd_bytelen",
-                &format_args!("{}", self.mst_dma_rd_bytelen().bits()),
-            )
+            .field("st", &self.st())
+            .field("mst_dma_rd_bytelen", &self.mst_dma_rd_bytelen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FSM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

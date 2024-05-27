@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_THRES2")
-            .field(
-                "sar_touch_out_th2",
-                &format_args!("{}", self.sar_touch_out_th2().bits()),
-            )
+            .field("sar_touch_out_th2", &self.sar_touch_out_th2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_THRES2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

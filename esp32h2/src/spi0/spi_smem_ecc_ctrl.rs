@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_ECC_CTRL")
-            .field(
-                "spi_smem_ecc_err_int_en",
-                &format_args!("{}", self.spi_smem_ecc_err_int_en().bit()),
-            )
-            .field(
-                "spi_smem_page_size",
-                &format_args!("{}", self.spi_smem_page_size().bits()),
-            )
-            .field(
-                "spi_smem_ecc_addr_en",
-                &format_args!("{}", self.spi_smem_ecc_addr_en().bit()),
-            )
+            .field("spi_smem_ecc_err_int_en", &self.spi_smem_ecc_err_int_en())
+            .field("spi_smem_page_size", &self.spi_smem_page_size())
+            .field("spi_smem_ecc_addr_en", &self.spi_smem_ecc_addr_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_ECC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI ECC control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ecc_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

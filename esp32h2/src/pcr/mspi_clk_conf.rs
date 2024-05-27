@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MSPI_CLK_CONF")
-            .field(
-                "mspi_fast_div_num",
-                &format_args!("{}", self.mspi_fast_div_num().bits()),
-            )
+            .field("mspi_fast_div_num", &self.mspi_fast_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MSPI_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

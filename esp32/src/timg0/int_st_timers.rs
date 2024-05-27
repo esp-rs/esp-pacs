@@ -47,17 +47,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_TIMERS")
-            .field("t0", &format_args!("{}", self.t0().bit()))
-            .field("t1", &format_args!("{}", self.t1().bit()))
-            .field("wdt", &format_args!("{}", self.wdt().bit()))
-            .field("lact", &format_args!("{}", self.lact().bit()))
+            .field("t0", &self.t0())
+            .field("t1", &self.t1())
+            .field("wdt", &self.wdt())
+            .field("lact", &self.lact())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_TIMERS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

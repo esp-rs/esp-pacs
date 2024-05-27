@@ -118,62 +118,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RS_ERR0")
-            .field(
-                "mac_sys_err_num",
-                &format_args!("{}", self.mac_sys_err_num().bits()),
-            )
-            .field(
-                "mac_sys_fail",
-                &format_args!("{}", self.mac_sys_fail().bit()),
-            )
-            .field(
-                "sys_part1_err_num",
-                &format_args!("{}", self.sys_part1_err_num().bits()),
-            )
-            .field(
-                "sys_part1_fail",
-                &format_args!("{}", self.sys_part1_fail().bit()),
-            )
-            .field(
-                "usr_data_err_num",
-                &format_args!("{}", self.usr_data_err_num().bits()),
-            )
-            .field(
-                "usr_data_fail",
-                &format_args!("{}", self.usr_data_fail().bit()),
-            )
-            .field(
-                "key0_err_num",
-                &format_args!("{}", self.key0_err_num().bits()),
-            )
-            .field("key0_fail", &format_args!("{}", self.key0_fail().bit()))
-            .field(
-                "key1_err_num",
-                &format_args!("{}", self.key1_err_num().bits()),
-            )
-            .field("key1_fail", &format_args!("{}", self.key1_fail().bit()))
-            .field(
-                "key2_err_num",
-                &format_args!("{}", self.key2_err_num().bits()),
-            )
-            .field("key2_fail", &format_args!("{}", self.key2_fail().bit()))
-            .field(
-                "key3_err_num",
-                &format_args!("{}", self.key3_err_num().bits()),
-            )
-            .field("key3_fail", &format_args!("{}", self.key3_fail().bit()))
-            .field(
-                "key4_err_num",
-                &format_args!("{}", self.key4_err_num().bits()),
-            )
-            .field("key4_fail", &format_args!("{}", self.key4_fail().bit()))
+            .field("mac_sys_err_num", &self.mac_sys_err_num())
+            .field("mac_sys_fail", &self.mac_sys_fail())
+            .field("sys_part1_err_num", &self.sys_part1_err_num())
+            .field("sys_part1_fail", &self.sys_part1_fail())
+            .field("usr_data_err_num", &self.usr_data_err_num())
+            .field("usr_data_fail", &self.usr_data_fail())
+            .field("key0_err_num", &self.key0_err_num())
+            .field("key0_fail", &self.key0_fail())
+            .field("key1_err_num", &self.key1_err_num())
+            .field("key1_fail", &self.key1_fail())
+            .field("key2_err_num", &self.key2_err_num())
+            .field("key2_fail", &self.key2_fail())
+            .field("key3_err_num", &self.key3_err_num())
+            .field("key3_fail", &self.key3_fail())
+            .field("key4_err_num", &self.key4_err_num())
+            .field("key4_fail", &self.key4_fail())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_RS_ERR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK1-10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_rs_err0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

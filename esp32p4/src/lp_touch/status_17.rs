@@ -48,22 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_17")
-            .field("dcap_lpf", &format_args!("{}", self.dcap_lpf().bits()))
-            .field("dres_lpf", &format_args!("{}", self.dres_lpf().bits()))
-            .field("drv_ls", &format_args!("{}", self.drv_ls().bits()))
-            .field("drv_hs", &format_args!("{}", self.drv_hs().bits()))
-            .field("dbias", &format_args!("{}", self.dbias().bits()))
-            .field(
-                "rtc_freq_scan_cnt",
-                &format_args!("{}", self.rtc_freq_scan_cnt().bits()),
-            )
+            .field("dcap_lpf", &self.dcap_lpf())
+            .field("dres_lpf", &self.dres_lpf())
+            .field("drv_ls", &self.drv_ls())
+            .field("drv_hs", &self.drv_hs())
+            .field("dbias", &self.dbias())
+            .field("rtc_freq_scan_cnt", &self.rtc_freq_scan_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_17_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_17::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

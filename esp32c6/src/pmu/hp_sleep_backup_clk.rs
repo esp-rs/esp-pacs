@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_BACKUP_CLK")
             .field(
                 "hp_sleep_backup_icg_func_en",
-                &format_args!("{}", self.hp_sleep_backup_icg_func_en().bits()),
+                &self.hp_sleep_backup_icg_func_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_BACKUP_CLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

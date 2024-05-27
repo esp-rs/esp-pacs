@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("FPGA_DEBUG_PROBE")
             .field(
                 "reg_i3c_mst_fpga_debug_probe",
-                &format_args!("{}", self.reg_i3c_mst_fpga_debug_probe().bits()),
+                &self.reg_i3c_mst_fpga_debug_probe(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FPGA_DEBUG_PROBE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_OUT1")
-            .field(
-                "touch_meas_out1",
-                &format_args!("{}", self.touch_meas_out1().bits()),
-            )
-            .field(
-                "touch_meas_out0",
-                &format_args!("{}", self.touch_meas_out0().bits()),
-            )
+            .field("touch_meas_out1", &self.touch_meas_out1())
+            .field("touch_meas_out0", &self.touch_meas_out0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_OUT1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_out1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

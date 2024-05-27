@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_BITMAP_LOW1")
-            .field(
-                "pump_bitmap_low1",
-                &format_args!("{}", self.pump_bitmap_low1().bits()),
-            )
+            .field("pump_bitmap_low1", &self.pump_bitmap_low1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PMUP_BITMAP_LOW1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

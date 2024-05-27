@@ -62,21 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIN_NUM")
-            .field("din0_num", &format_args!("{}", self.din0_num().bits()))
-            .field("din1_num", &format_args!("{}", self.din1_num().bits()))
-            .field("din2_num", &format_args!("{}", self.din2_num().bits()))
-            .field("din3_num", &format_args!("{}", self.din3_num().bits()))
-            .field("din4_num", &format_args!("{}", self.din4_num().bits()))
-            .field("din5_num", &format_args!("{}", self.din5_num().bits()))
-            .field("din6_num", &format_args!("{}", self.din6_num().bits()))
-            .field("din7_num", &format_args!("{}", self.din7_num().bits()))
+            .field("din0_num", &self.din0_num())
+            .field("din1_num", &self.din1_num())
+            .field("din2_num", &self.din2_num())
+            .field("din3_num", &self.din3_num())
+            .field("din4_num", &self.din4_num())
+            .field("din5_num", &self.din5_num())
+            .field("din6_num", &self.din6_num())
+            .field("din7_num", &self.din7_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIN_NUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI input delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

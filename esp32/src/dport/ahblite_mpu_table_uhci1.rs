@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_UHCI1")
             .field(
                 "uhci1_access_grant_config",
-                &format_args!("{}", self.uhci1_access_grant_config().bits()),
+                &self.uhci1_access_grant_config(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_UHCI1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

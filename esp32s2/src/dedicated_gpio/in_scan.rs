@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_SCAN")
-            .field("in_status", &format_args!("{}", self.in_status().bits()))
+            .field("in_status", &self.in_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_SCAN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Dedicated GPIO input status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_scan::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

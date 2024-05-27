@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_BACKUP_INT_ENA")
-            .field("done", &format_args!("{}", self.done().bit()))
-            .field("err", &format_args!("{}", self.err().bit()))
+            .field("done", &self.done())
+            .field("err", &self.err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSTIMER_CONF")
-            .field(
-                "systimer_clk_en",
-                &format_args!("{}", self.systimer_clk_en().bit()),
-            )
-            .field(
-                "systimer_rst_en",
-                &format_args!("{}", self.systimer_rst_en().bit()),
-            )
-            .field(
-                "systimer_ready",
-                &format_args!("{}", self.systimer_ready().bit()),
-            )
+            .field("systimer_clk_en", &self.systimer_clk_en())
+            .field("systimer_rst_en", &self.systimer_rst_en())
+            .field("systimer_ready", &self.systimer_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYSTIMER_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

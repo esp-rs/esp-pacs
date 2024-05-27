@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE1_DBUS_REJECT_VADDR")
-            .field(
-                "core1_dbus_vaddr",
-                &format_args!("{}", self.core1_dbus_vaddr().bits()),
-            )
+            .field("core1_dbus_vaddr", &self.core1_dbus_vaddr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE1_DBUS_REJECT_VADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core1_dbus_reject_vaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

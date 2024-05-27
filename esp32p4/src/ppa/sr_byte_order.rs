@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_BYTE_ORDER")
-            .field(
-                "sr_rx_byte_swap_en",
-                &format_args!("{}", self.sr_rx_byte_swap_en().bit()),
-            )
-            .field(
-                "sr_rx_rgb_swap_en",
-                &format_args!("{}", self.sr_rx_rgb_swap_en().bit()),
-            )
-            .field(
-                "sr_macro_bk_ro_bypass",
-                &format_args!("{}", self.sr_macro_bk_ro_bypass().bit()),
-            )
+            .field("sr_rx_byte_swap_en", &self.sr_rx_byte_swap_en())
+            .field("sr_rx_rgb_swap_en", &self.sr_rx_rgb_swap_en())
+            .field("sr_macro_bk_ro_bypass", &self.sr_macro_bk_ro_bypass())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_BYTE_ORDER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

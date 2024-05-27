@@ -64,35 +64,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LP_CLK_EN")
             .field(
                 "lp_aonclkrst_lp_rtc_xtal_force_on",
-                &format_args!("{}", self.lp_aonclkrst_lp_rtc_xtal_force_on().bit()),
+                &self.lp_aonclkrst_lp_rtc_xtal_force_on(),
             )
             .field(
                 "lp_aonclkrst_ck_en_lp_ram",
-                &format_args!("{}", self.lp_aonclkrst_ck_en_lp_ram().bit()),
+                &self.lp_aonclkrst_ck_en_lp_ram(),
             )
             .field(
                 "lp_aonclkrst_etm_event_tick_en",
-                &format_args!("{}", self.lp_aonclkrst_etm_event_tick_en().bit()),
+                &self.lp_aonclkrst_etm_event_tick_en(),
             )
             .field(
                 "lp_aonclkrst_pll8m_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_pll8m_clk_force_on().bit()),
+                &self.lp_aonclkrst_pll8m_clk_force_on(),
             )
             .field(
                 "lp_aonclkrst_xtal_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_xtal_clk_force_on().bit()),
+                &self.lp_aonclkrst_xtal_clk_force_on(),
             )
             .field(
                 "lp_aonclkrst_fosc_clk_force_on",
-                &format_args!("{}", self.lp_aonclkrst_fosc_clk_force_on().bit()),
+                &self.lp_aonclkrst_fosc_clk_force_on(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_LP_CLK_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

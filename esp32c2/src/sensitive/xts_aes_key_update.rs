@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_AES_KEY_UPDATE")
-            .field(
-                "xts_aes_key_update",
-                &format_args!("{}", self.xts_aes_key_update().bit()),
-            )
+            .field("xts_aes_key_update", &self.xts_aes_key_update())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<XTS_AES_KEY_UPDATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

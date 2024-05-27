@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_POWER_CONF")
-            .field(
-                "sram_force_pu",
-                &format_args!("{}", self.sram_force_pu().bits()),
-            )
-            .field(
-                "sram_force_pd",
-                &format_args!("{}", self.sram_force_pd().bits()),
-            )
-            .field(
-                "sram_clkgate_force_on",
-                &format_args!("{}", self.sram_clkgate_force_on().bits()),
-            )
-            .field(
-                "rom_force_pu",
-                &format_args!("{}", self.rom_force_pu().bits()),
-            )
-            .field(
-                "rom_force_pd",
-                &format_args!("{}", self.rom_force_pd().bits()),
-            )
-            .field(
-                "rom_clkgate_force_on",
-                &format_args!("{}", self.rom_clkgate_force_on().bits()),
-            )
+            .field("sram_force_pu", &self.sram_force_pu())
+            .field("sram_force_pd", &self.sram_force_pd())
+            .field("sram_clkgate_force_on", &self.sram_clkgate_force_on())
+            .field("rom_force_pu", &self.rom_force_pu())
+            .field("rom_force_pd", &self.rom_force_pd())
+            .field("rom_clkgate_force_on", &self.rom_clkgate_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SRAM_POWER_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

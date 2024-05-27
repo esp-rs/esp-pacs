@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLUT_CNT")
-            .field(
-                "blend0_clut_cnt",
-                &format_args!("{}", self.blend0_clut_cnt().bits()),
-            )
-            .field(
-                "blend1_clut_cnt",
-                &format_args!("{}", self.blend1_clut_cnt().bits()),
-            )
+            .field("blend0_clut_cnt", &self.blend0_clut_cnt())
+            .field("blend1_clut_cnt", &self.blend1_clut_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLUT_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLEND CLUT write counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clut_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

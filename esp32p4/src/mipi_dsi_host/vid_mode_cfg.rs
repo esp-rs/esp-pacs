@@ -116,34 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_MODE_CFG")
-            .field(
-                "vid_mode_type",
-                &format_args!("{}", self.vid_mode_type().bits()),
-            )
-            .field("lp_vsa_en", &format_args!("{}", self.lp_vsa_en().bit()))
-            .field("lp_vbp_en", &format_args!("{}", self.lp_vbp_en().bit()))
-            .field("lp_vfp_en", &format_args!("{}", self.lp_vfp_en().bit()))
-            .field("lp_vact_en", &format_args!("{}", self.lp_vact_en().bit()))
-            .field("lp_hbp_en", &format_args!("{}", self.lp_hbp_en().bit()))
-            .field("lp_hfp_en", &format_args!("{}", self.lp_hfp_en().bit()))
-            .field(
-                "frame_bta_ack_en",
-                &format_args!("{}", self.frame_bta_ack_en().bit()),
-            )
-            .field("lp_cmd_en", &format_args!("{}", self.lp_cmd_en().bit()))
-            .field("vpg_en", &format_args!("{}", self.vpg_en().bit()))
-            .field("vpg_mode", &format_args!("{}", self.vpg_mode().bit()))
-            .field(
-                "vpg_orientation",
-                &format_args!("{}", self.vpg_orientation().bit()),
-            )
+            .field("vid_mode_type", &self.vid_mode_type())
+            .field("lp_vsa_en", &self.lp_vsa_en())
+            .field("lp_vbp_en", &self.lp_vbp_en())
+            .field("lp_vfp_en", &self.lp_vfp_en())
+            .field("lp_vact_en", &self.lp_vact_en())
+            .field("lp_hbp_en", &self.lp_hbp_en())
+            .field("lp_hfp_en", &self.lp_hfp_en())
+            .field("frame_bta_ack_en", &self.frame_bta_ack_en())
+            .field("lp_cmd_en", &self.lp_cmd_en())
+            .field("vpg_en", &self.vpg_en())
+            .field("vpg_mode", &self.vpg_mode())
+            .field("vpg_orientation", &self.vpg_orientation())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VID_MODE_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

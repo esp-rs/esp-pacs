@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_FAIL_INT_ENA")
-            .field(
-                "l2_cache_fail_int_ena",
-                &format_args!("{}", self.l2_cache_fail_int_ena().bit()),
-            )
+            .field("l2_cache_fail_int_ena", &self.l2_cache_fail_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_FAIL_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

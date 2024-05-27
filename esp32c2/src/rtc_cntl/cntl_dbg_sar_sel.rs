@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNTL_DBG_SAR_SEL")
-            .field(
-                "sar_debug_sel",
-                &format_args!("{}", self.sar_debug_sel().bits()),
-            )
+            .field("sar_debug_sel", &self.sar_debug_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CNTL_DBG_SAR_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

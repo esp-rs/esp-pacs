@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_COLOR_MODE")
-            .field(
-                "blend0_rx_cm",
-                &format_args!("{}", self.blend0_rx_cm().bits()),
-            )
-            .field(
-                "blend1_rx_cm",
-                &format_args!("{}", self.blend1_rx_cm().bits()),
-            )
-            .field(
-                "blend_tx_cm",
-                &format_args!("{}", self.blend_tx_cm().bits()),
-            )
+            .field("blend0_rx_cm", &self.blend0_rx_cm())
+            .field("blend1_rx_cm", &self.blend1_rx_cm())
+            .field("blend_tx_cm", &self.blend_tx_cm())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLEND_COLOR_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

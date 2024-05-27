@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMESTAMP_DATA")
-            .field(
-                "timestamp_data",
-                &format_args!("{}", self.timestamp_data().bits()),
-            )
+            .field("timestamp_data", &self.timestamp_data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMESTAMP_DATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Timestamp data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timestamp_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

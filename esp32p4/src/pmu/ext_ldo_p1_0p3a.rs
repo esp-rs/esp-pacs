@@ -89,46 +89,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_LDO_P1_0P3A")
-            .field(
-                "_0p3a_force_tieh_sel_1",
-                &format_args!("{}", self._0p3a_force_tieh_sel_1().bit()),
-            )
-            .field("_0p3a_xpd_1", &format_args!("{}", self._0p3a_xpd_1().bit()))
-            .field(
-                "_0p3a_tieh_sel_1",
-                &format_args!("{}", self._0p3a_tieh_sel_1().bits()),
-            )
-            .field(
-                "_0p3a_tieh_pos_en_1",
-                &format_args!("{}", self._0p3a_tieh_pos_en_1().bit()),
-            )
-            .field(
-                "_0p3a_tieh_neg_en_1",
-                &format_args!("{}", self._0p3a_tieh_neg_en_1().bit()),
-            )
-            .field(
-                "_0p3a_tieh_1",
-                &format_args!("{}", self._0p3a_tieh_1().bit()),
-            )
-            .field(
-                "_0p3a_target1_1",
-                &format_args!("{}", self._0p3a_target1_1().bits()),
-            )
-            .field(
-                "_0p3a_target0_1",
-                &format_args!("{}", self._0p3a_target0_1().bits()),
-            )
+            .field("_0p3a_force_tieh_sel_1", &self._0p3a_force_tieh_sel_1())
+            .field("_0p3a_xpd_1", &self._0p3a_xpd_1())
+            .field("_0p3a_tieh_sel_1", &self._0p3a_tieh_sel_1())
+            .field("_0p3a_tieh_pos_en_1", &self._0p3a_tieh_pos_en_1())
+            .field("_0p3a_tieh_neg_en_1", &self._0p3a_tieh_neg_en_1())
+            .field("_0p3a_tieh_1", &self._0p3a_tieh_1())
+            .field("_0p3a_target1_1", &self._0p3a_target1_1())
+            .field("_0p3a_target0_1", &self._0p3a_target0_1())
             .field(
                 "_0p3a_ldo_cnt_prescaler_sel_1",
-                &format_args!("{}", self._0p3a_ldo_cnt_prescaler_sel_1().bit()),
+                &self._0p3a_ldo_cnt_prescaler_sel_1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_LDO_P1_0P3A_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

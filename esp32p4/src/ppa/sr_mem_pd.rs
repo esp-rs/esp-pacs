@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_MEM_PD")
-            .field(
-                "sr_mem_clk_ena",
-                &format_args!("{}", self.sr_mem_clk_ena().bit()),
-            )
-            .field(
-                "sr_mem_force_pd",
-                &format_args!("{}", self.sr_mem_force_pd().bit()),
-            )
-            .field(
-                "sr_mem_force_pu",
-                &format_args!("{}", self.sr_mem_force_pu().bit()),
-            )
+            .field("sr_mem_clk_ena", &self.sr_mem_clk_ena())
+            .field("sr_mem_force_pd", &self.sr_mem_force_pd())
+            .field("sr_mem_force_pu", &self.sr_mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_MEM_PD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

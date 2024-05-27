@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_EXT_LOW_TIME")
             .field(
                 "reg_i3c_mst_ext_low_period1",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period1().bits()),
+                &self.reg_i3c_mst_ext_low_period1(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period2",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period2().bits()),
+                &self.reg_i3c_mst_ext_low_period2(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period3",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period3().bits()),
+                &self.reg_i3c_mst_ext_low_period3(),
             )
             .field(
                 "reg_i3c_mst_ext_low_period4",
-                &format_args!("{}", self.reg_i3c_mst_ext_low_period4().bits()),
+                &self.reg_i3c_mst_ext_low_period4(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_EXT_LOW_TIME_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

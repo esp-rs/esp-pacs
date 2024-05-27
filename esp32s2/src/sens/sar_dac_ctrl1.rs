@@ -89,37 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_DAC_CTRL1")
-            .field("sw_fstep", &format_args!("{}", self.sw_fstep().bits()))
-            .field("sw_tone_en", &format_args!("{}", self.sw_tone_en().bit()))
-            .field(
-                "debug_bit_sel",
-                &format_args!("{}", self.debug_bit_sel().bits()),
-            )
-            .field(
-                "dac_dig_force",
-                &format_args!("{}", self.dac_dig_force().bit()),
-            )
-            .field(
-                "dac_clk_force_low",
-                &format_args!("{}", self.dac_clk_force_low().bit()),
-            )
-            .field(
-                "dac_clk_force_high",
-                &format_args!("{}", self.dac_clk_force_high().bit()),
-            )
-            .field("dac_clk_inv", &format_args!("{}", self.dac_clk_inv().bit()))
-            .field("dac_reset", &format_args!("{}", self.dac_reset().bit()))
-            .field(
-                "dac_clkgate_en",
-                &format_args!("{}", self.dac_clkgate_en().bit()),
-            )
+            .field("sw_fstep", &self.sw_fstep())
+            .field("sw_tone_en", &self.sw_tone_en())
+            .field("debug_bit_sel", &self.debug_bit_sel())
+            .field("dac_dig_force", &self.dac_dig_force())
+            .field("dac_clk_force_low", &self.dac_clk_force_low())
+            .field("dac_clk_force_high", &self.dac_clk_force_high())
+            .field("dac_clk_inv", &self.dac_clk_inv())
+            .field("dac_reset", &self.dac_reset())
+            .field("dac_clkgate_en", &self.dac_clkgate_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_DAC_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_0_MONTR_ENA")
-            .field(
-                "core_0_sp_spill_min_ena",
-                &format_args!("{}", self.core_0_sp_spill_min_ena().bit()),
-            )
-            .field(
-                "core_0_sp_spill_max_ena",
-                &format_args!("{}", self.core_0_sp_spill_max_ena().bit()),
-            )
+            .field("core_0_sp_spill_min_ena", &self.core_0_sp_spill_min_ena())
+            .field("core_0_sp_spill_max_ena", &self.core_0_sp_spill_max_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_MONTR_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

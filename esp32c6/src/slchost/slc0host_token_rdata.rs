@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC0HOST_TOKEN_RDATA")
-            .field(
-                "slc0_token0",
-                &format_args!("{}", self.slc0_token0().bits()),
-            )
-            .field(
-                "slc0_rx_pf_valid",
-                &format_args!("{}", self.slc0_rx_pf_valid().bit()),
-            )
-            .field(
-                "hostslchost_slc0_token1",
-                &format_args!("{}", self.hostslchost_slc0_token1().bits()),
-            )
-            .field(
-                "slc0_rx_pf_eof",
-                &format_args!("{}", self.slc0_rx_pf_eof().bits()),
-            )
+            .field("slc0_token0", &self.slc0_token0())
+            .field("slc0_rx_pf_valid", &self.slc0_rx_pf_valid())
+            .field("hostslchost_slc0_token1", &self.hostslchost_slc0_token1())
+            .field("slc0_rx_pf_eof", &self.slc0_rx_pf_eof())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLC0HOST_TOKEN_RDATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc0host_token_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

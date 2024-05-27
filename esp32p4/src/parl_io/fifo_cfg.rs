@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_CFG")
-            .field(
-                "tx_fifo_srst",
-                &format_args!("{}", self.tx_fifo_srst().bit()),
-            )
-            .field(
-                "rx_fifo_srst",
-                &format_args!("{}", self.rx_fifo_srst().bit()),
-            )
+            .field("tx_fifo_srst", &self.tx_fifo_srst())
+            .field("rx_fifo_srst", &self.rx_fifo_srst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

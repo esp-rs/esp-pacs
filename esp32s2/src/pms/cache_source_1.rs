@@ -64,35 +64,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_SOURCE_1")
             .field(
                 "pro_cache_i_source_pro_iram1",
-                &format_args!("{}", self.pro_cache_i_source_pro_iram1().bit()),
+                &self.pro_cache_i_source_pro_iram1(),
             )
             .field(
                 "pro_cache_i_source_pro_irom0",
-                &format_args!("{}", self.pro_cache_i_source_pro_irom0().bit()),
+                &self.pro_cache_i_source_pro_irom0(),
             )
             .field(
                 "pro_cache_i_source_pro_drom0",
-                &format_args!("{}", self.pro_cache_i_source_pro_drom0().bit()),
+                &self.pro_cache_i_source_pro_drom0(),
             )
             .field(
                 "pro_cache_d_source_pro_dram0",
-                &format_args!("{}", self.pro_cache_d_source_pro_dram0().bit()),
+                &self.pro_cache_d_source_pro_dram0(),
             )
             .field(
                 "pro_cache_d_source_pro_dport",
-                &format_args!("{}", self.pro_cache_d_source_pro_dport().bit()),
+                &self.pro_cache_d_source_pro_dport(),
             )
             .field(
                 "pro_cache_d_source_pro_drom0",
-                &format_args!("{}", self.pro_cache_d_source_pro_drom0().bit()),
+                &self.pro_cache_d_source_pro_drom0(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_SOURCE_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

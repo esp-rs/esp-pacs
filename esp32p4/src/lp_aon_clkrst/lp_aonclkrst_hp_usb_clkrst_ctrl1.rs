@@ -84,46 +84,37 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_USB_CLKRST_CTRL1")
             .field(
                 "lp_aonclkrst_rst_en_usb_otg20_adp",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_usb_otg20_adp().bit()),
+                &self.lp_aonclkrst_rst_en_usb_otg20_adp(),
             )
             .field(
                 "lp_aonclkrst_rst_en_usb_otg20_phy",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_usb_otg20_phy().bit()),
+                &self.lp_aonclkrst_rst_en_usb_otg20_phy(),
             )
             .field(
                 "lp_aonclkrst_rst_en_usb_otg20",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_usb_otg20().bit()),
+                &self.lp_aonclkrst_rst_en_usb_otg20(),
             )
             .field(
                 "lp_aonclkrst_rst_en_usb_otg11",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_usb_otg11().bit()),
+                &self.lp_aonclkrst_rst_en_usb_otg11(),
             )
             .field(
                 "lp_aonclkrst_rst_en_usb_device",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_usb_device().bit()),
+                &self.lp_aonclkrst_rst_en_usb_device(),
             )
             .field(
                 "lp_aonclkrst_usb_otg20_phyref_clk_src_sel",
-                &format_args!(
-                    "{}",
-                    self.lp_aonclkrst_usb_otg20_phyref_clk_src_sel().bits()
-                ),
+                &self.lp_aonclkrst_usb_otg20_phyref_clk_src_sel(),
             )
             .field(
                 "lp_aonclkrst_usb_otg20_phyref_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_phyref_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg20_phyref_clk_en(),
             )
             .field(
                 "lp_aonclkrst_usb_otg20_ulpi_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_ulpi_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg20_ulpi_clk_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

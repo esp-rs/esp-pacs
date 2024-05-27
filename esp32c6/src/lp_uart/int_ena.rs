@@ -161,39 +161,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("rxfifo_full", &format_args!("{}", self.rxfifo_full().bit()))
-            .field(
-                "txfifo_empty",
-                &format_args!("{}", self.txfifo_empty().bit()),
-            )
-            .field("parity_err", &format_args!("{}", self.parity_err().bit()))
-            .field("frm_err", &format_args!("{}", self.frm_err().bit()))
-            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
-            .field("dsr_chg", &format_args!("{}", self.dsr_chg().bit()))
-            .field("cts_chg", &format_args!("{}", self.cts_chg().bit()))
-            .field("brk_det", &format_args!("{}", self.brk_det().bit()))
-            .field("rxfifo_tout", &format_args!("{}", self.rxfifo_tout().bit()))
-            .field("sw_xon", &format_args!("{}", self.sw_xon().bit()))
-            .field("sw_xoff", &format_args!("{}", self.sw_xoff().bit()))
-            .field("glitch_det", &format_args!("{}", self.glitch_det().bit()))
-            .field("tx_brk_done", &format_args!("{}", self.tx_brk_done().bit()))
-            .field(
-                "tx_brk_idle_done",
-                &format_args!("{}", self.tx_brk_idle_done().bit()),
-            )
-            .field("tx_done", &format_args!("{}", self.tx_done().bit()))
-            .field(
-                "at_cmd_char_det",
-                &format_args!("{}", self.at_cmd_char_det().bit()),
-            )
-            .field("wakeup", &format_args!("{}", self.wakeup().bit()))
+            .field("rxfifo_full", &self.rxfifo_full())
+            .field("txfifo_empty", &self.txfifo_empty())
+            .field("parity_err", &self.parity_err())
+            .field("frm_err", &self.frm_err())
+            .field("rxfifo_ovf", &self.rxfifo_ovf())
+            .field("dsr_chg", &self.dsr_chg())
+            .field("cts_chg", &self.cts_chg())
+            .field("brk_det", &self.brk_det())
+            .field("rxfifo_tout", &self.rxfifo_tout())
+            .field("sw_xon", &self.sw_xon())
+            .field("sw_xoff", &self.sw_xoff())
+            .field("glitch_det", &self.glitch_det())
+            .field("tx_brk_done", &self.tx_brk_done())
+            .field("tx_brk_idle_done", &self.tx_brk_idle_done())
+            .field("tx_done", &self.tx_done())
+            .field("at_cmd_char_det", &self.at_cmd_char_det())
+            .field("wakeup", &self.wakeup())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_RSV_DPI_DATA")
-            .field(
-                "dpi_rsv_data",
-                &format_args!("{}", self.dpi_rsv_data().bits()),
-            )
+            .field("dpi_rsv_data", &self.dpi_rsv_data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_RSV_DPI_DATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

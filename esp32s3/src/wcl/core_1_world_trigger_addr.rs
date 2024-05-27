@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_1_World_TRIGGER_ADDR")
             .field(
                 "core_1_world_trigger_addr",
-                &format_args!("{}", self.core_1_world_trigger_addr().bits()),
+                &self.core_1_world_trigger_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_WORLD_TRIGGER_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

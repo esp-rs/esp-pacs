@@ -16,15 +16,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("IV_MEM")
-            .field("iv", &format_args!("{}", self.iv().bits()))
-            .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IV_MEM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("IV_MEM").field("iv", &self.iv()).finish()
     }
 }
 impl W {

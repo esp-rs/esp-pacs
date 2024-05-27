@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("CRYPTO_CTRL")
             .field(
                 "reg_enable_spi_manual_encrypt",
-                &format_args!("{}", self.reg_enable_spi_manual_encrypt().bit()),
+                &self.reg_enable_spi_manual_encrypt(),
             )
             .field(
                 "reg_enable_download_db_encrypt",
-                &format_args!("{}", self.reg_enable_download_db_encrypt().bit()),
+                &self.reg_enable_download_db_encrypt(),
             )
             .field(
                 "reg_enable_download_g0cb_decrypt",
-                &format_args!("{}", self.reg_enable_download_g0cb_decrypt().bit()),
+                &self.reg_enable_download_g0cb_decrypt(),
             )
             .field(
                 "reg_enable_download_manual_encrypt",
-                &format_args!("{}", self.reg_enable_download_manual_encrypt().bit()),
+                &self.reg_enable_download_manual_encrypt(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CRYPTO_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

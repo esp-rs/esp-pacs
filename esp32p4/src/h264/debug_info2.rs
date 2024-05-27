@@ -132,85 +132,49 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_INFO2")
-            .field(
-                "p_rc_done_debug_flag",
-                &format_args!("{}", self.p_rc_done_debug_flag().bit()),
-            )
+            .field("p_rc_done_debug_flag", &self.p_rc_done_debug_flag())
             .field(
                 "p_p_i_cmp_done_debug_flag",
-                &format_args!("{}", self.p_p_i_cmp_done_debug_flag().bit()),
+                &self.p_p_i_cmp_done_debug_flag(),
             )
             .field(
                 "p_mv_merge_done_debug_flag",
-                &format_args!("{}", self.p_mv_merge_done_debug_flag().bit()),
+                &self.p_mv_merge_done_debug_flag(),
             )
             .field(
                 "p_move_ori_done_debug_flag",
-                &format_args!("{}", self.p_move_ori_done_debug_flag().bit()),
+                &self.p_move_ori_done_debug_flag(),
             )
-            .field(
-                "p_mc_done_debug_flag",
-                &format_args!("{}", self.p_mc_done_debug_flag().bit()),
-            )
-            .field(
-                "p_ime_done_debug_flag",
-                &format_args!("{}", self.p_ime_done_debug_flag().bit()),
-            )
+            .field("p_mc_done_debug_flag", &self.p_mc_done_debug_flag())
+            .field("p_ime_done_debug_flag", &self.p_ime_done_debug_flag())
             .field(
                 "p_get_ori_done_debug_flag",
-                &format_args!("{}", self.p_get_ori_done_debug_flag().bit()),
+                &self.p_get_ori_done_debug_flag(),
             )
-            .field(
-                "p_fme_done_debug_flag",
-                &format_args!("{}", self.p_fme_done_debug_flag().bit()),
-            )
-            .field(
-                "p_fetch_done_debug_flag",
-                &format_args!("{}", self.p_fetch_done_debug_flag().bit()),
-            )
-            .field(
-                "p_db_done_debug_flag",
-                &format_args!("{}", self.p_db_done_debug_flag().bit()),
-            )
-            .field(
-                "p_bs_buf_done_debug_flag",
-                &format_args!("{}", self.p_bs_buf_done_debug_flag().bit()),
-            )
+            .field("p_fme_done_debug_flag", &self.p_fme_done_debug_flag())
+            .field("p_fetch_done_debug_flag", &self.p_fetch_done_debug_flag())
+            .field("p_db_done_debug_flag", &self.p_db_done_debug_flag())
+            .field("p_bs_buf_done_debug_flag", &self.p_bs_buf_done_debug_flag())
             .field(
                 "ref_move_2mb_line_done_debug_flag",
-                &format_args!("{}", self.ref_move_2mb_line_done_debug_flag().bit()),
+                &self.ref_move_2mb_line_done_debug_flag(),
             )
             .field(
                 "i_p_i_cmp_done_debug_flag",
-                &format_args!("{}", self.i_p_i_cmp_done_debug_flag().bit()),
+                &self.i_p_i_cmp_done_debug_flag(),
             )
             .field(
                 "i_move_ori_done_debug_flag",
-                &format_args!("{}", self.i_move_ori_done_debug_flag().bit()),
+                &self.i_move_ori_done_debug_flag(),
             )
             .field(
                 "i_get_ori_done_debug_flag",
-                &format_args!("{}", self.i_get_ori_done_debug_flag().bit()),
+                &self.i_get_ori_done_debug_flag(),
             )
-            .field(
-                "i_ec_done_debug_flag",
-                &format_args!("{}", self.i_ec_done_debug_flag().bit()),
-            )
-            .field(
-                "i_db_done_debug_flag",
-                &format_args!("{}", self.i_db_done_debug_flag().bit()),
-            )
-            .field(
-                "i_bs_buf_done_debug_flag",
-                &format_args!("{}", self.i_bs_buf_done_debug_flag().bit()),
-            )
+            .field("i_ec_done_debug_flag", &self.i_ec_done_debug_flag())
+            .field("i_db_done_debug_flag", &self.i_db_done_debug_flag())
+            .field("i_bs_buf_done_debug_flag", &self.i_bs_buf_done_debug_flag())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEBUG_INFO2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Debug information register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`debug_info2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

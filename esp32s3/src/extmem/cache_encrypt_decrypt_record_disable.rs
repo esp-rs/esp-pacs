@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE")
             .field(
                 "record_disable_db_encrypt",
-                &format_args!("{}", self.record_disable_db_encrypt().bit()),
+                &self.record_disable_db_encrypt(),
             )
             .field(
                 "record_disable_g0cb_decrypt",
-                &format_args!("{}", self.record_disable_g0cb_decrypt().bit()),
+                &self.record_disable_g0cb_decrypt(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

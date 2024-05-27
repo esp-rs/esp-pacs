@@ -90,46 +90,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "jtag_in_flush",
-                &format_args!("{}", self.jtag_in_flush().bit()),
-            )
-            .field("sof", &format_args!("{}", self.sof().bit()))
-            .field(
-                "serial_out_recv_pkt",
-                &format_args!("{}", self.serial_out_recv_pkt().bit()),
-            )
-            .field(
-                "serial_in_empty",
-                &format_args!("{}", self.serial_in_empty().bit()),
-            )
-            .field("pid_err", &format_args!("{}", self.pid_err().bit()))
-            .field("crc5_err", &format_args!("{}", self.crc5_err().bit()))
-            .field("crc16_err", &format_args!("{}", self.crc16_err().bit()))
-            .field("stuff_err", &format_args!("{}", self.stuff_err().bit()))
-            .field(
-                "in_token_rec_in_ep1",
-                &format_args!("{}", self.in_token_rec_in_ep1().bit()),
-            )
-            .field(
-                "usb_bus_reset",
-                &format_args!("{}", self.usb_bus_reset().bit()),
-            )
-            .field(
-                "out_ep1_zero_payload",
-                &format_args!("{}", self.out_ep1_zero_payload().bit()),
-            )
-            .field(
-                "out_ep2_zero_payload",
-                &format_args!("{}", self.out_ep2_zero_payload().bit()),
-            )
+            .field("jtag_in_flush", &self.jtag_in_flush())
+            .field("sof", &self.sof())
+            .field("serial_out_recv_pkt", &self.serial_out_recv_pkt())
+            .field("serial_in_empty", &self.serial_in_empty())
+            .field("pid_err", &self.pid_err())
+            .field("crc5_err", &self.crc5_err())
+            .field("crc16_err", &self.crc16_err())
+            .field("stuff_err", &self.stuff_err())
+            .field("in_token_rec_in_ep1", &self.in_token_rec_in_ep1())
+            .field("usb_bus_reset", &self.usb_bus_reset())
+            .field("out_ep1_zero_payload", &self.out_ep1_zero_payload())
+            .field("out_ep2_zero_payload", &self.out_ep2_zero_payload())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "USB_DEVICE_INT_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -37,25 +37,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_CTRL0")
-            .field(
-                "af_auto_update",
-                &format_args!("{}", self.af_auto_update().bit()),
-            )
-            .field(
-                "af_env_threshold",
-                &format_args!("{}", self.af_env_threshold().bits()),
-            )
-            .field(
-                "af_env_period",
-                &format_args!("{}", self.af_env_period().bits()),
-            )
+            .field("af_auto_update", &self.af_auto_update())
+            .field("af_env_threshold", &self.af_env_threshold())
+            .field("af_env_period", &self.af_env_period())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

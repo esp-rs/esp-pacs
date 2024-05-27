@@ -107,54 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field(
-                "out_auto_wrback",
-                &format_args!("{}", self.out_auto_wrback().bit()),
-            )
-            .field(
-                "out_eof_mode",
-                &format_args!("{}", self.out_eof_mode().bit()),
-            )
-            .field(
-                "outdscr_burst_en",
-                &format_args!("{}", self.outdscr_burst_en().bit()),
-            )
-            .field(
-                "out_ecc_aes_en",
-                &format_args!("{}", self.out_ecc_aes_en().bit()),
-            )
-            .field(
-                "out_check_owner",
-                &format_args!("{}", self.out_check_owner().bit()),
-            )
-            .field(
-                "out_mem_burst_length",
-                &format_args!("{}", self.out_mem_burst_length().bits()),
-            )
-            .field(
-                "out_page_bound_en",
-                &format_args!("{}", self.out_page_bound_en().bit()),
-            )
-            .field(
-                "out_reorder_en",
-                &format_args!("{}", self.out_reorder_en().bit()),
-            )
-            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
-            .field(
-                "out_cmd_disable",
-                &format_args!("{}", self.out_cmd_disable().bit()),
-            )
-            .field(
-                "out_arb_weight_opt_dis",
-                &format_args!("{}", self.out_arb_weight_opt_dis().bit()),
-            )
+            .field("out_auto_wrback", &self.out_auto_wrback())
+            .field("out_eof_mode", &self.out_eof_mode())
+            .field("outdscr_burst_en", &self.outdscr_burst_en())
+            .field("out_ecc_aes_en", &self.out_ecc_aes_en())
+            .field("out_check_owner", &self.out_check_owner())
+            .field("out_mem_burst_length", &self.out_mem_burst_length())
+            .field("out_page_bound_en", &self.out_page_bound_en())
+            .field("out_reorder_en", &self.out_reorder_en())
+            .field("out_rst", &self.out_rst())
+            .field("out_cmd_disable", &self.out_cmd_disable())
+            .field("out_arb_weight_opt_dis", &self.out_arb_weight_opt_dis())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

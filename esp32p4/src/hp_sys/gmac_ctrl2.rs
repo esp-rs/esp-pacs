@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GMAC_CTRL2")
-            .field(
-                "ptp_timestamp_h",
-                &format_args!("{}", self.ptp_timestamp_h().bits()),
-            )
+            .field("ptp_timestamp_h", &self.ptp_timestamp_h())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GMAC_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "N/A\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gmac_ctrl2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

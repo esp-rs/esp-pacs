@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI_QOS0")
-            .field(
-                "ch1_axi_awqos",
-                &format_args!("{}", self.ch1_axi_awqos().bits()),
-            )
-            .field(
-                "ch1_axi_arqos",
-                &format_args!("{}", self.ch1_axi_arqos().bits()),
-            )
+            .field("ch1_axi_awqos", &self.ch1_axi_awqos())
+            .field("ch1_axi_arqos", &self.ch1_axi_arqos())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AXI_QOS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TEST_CTRL0")
-            .field("phy_testclr", &format_args!("{}", self.phy_testclr().bit()))
-            .field("phy_testclk", &format_args!("{}", self.phy_testclk().bit()))
+            .field("phy_testclr", &self.phy_testclr())
+            .field("phy_testclk", &self.phy_testclk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_TEST_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

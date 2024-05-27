@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("Core_0_STATUSTABLE_CURRENT")
             .field(
                 "core_0_statustable_current",
-                &format_args!("{}", self.core_0_statustable_current().bits()),
+                &self.core_0_statustable_current(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_STATUSTABLE_CURRENT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

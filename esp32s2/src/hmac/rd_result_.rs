@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RESULT_")
-            .field("rdata", &format_args!("{}", self.rdata().bits()))
+            .field("rdata", &self.rdata())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_RESULT__SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Hash result register %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_result_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

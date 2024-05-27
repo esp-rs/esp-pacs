@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_SLP_THRES")
-            .field(
-                "touch_slp_th",
-                &format_args!("{}", self.touch_slp_th().bits()),
-            )
-            .field(
-                "touch_slp_approach_en",
-                &format_args!("{}", self.touch_slp_approach_en().bit()),
-            )
-            .field(
-                "touch_slp_pad",
-                &format_args!("{}", self.touch_slp_pad().bits()),
-            )
+            .field("touch_slp_th", &self.touch_slp_th())
+            .field("touch_slp_approach_en", &self.touch_slp_approach_en())
+            .field("touch_slp_pad", &self.touch_slp_pad())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_SLP_THRES_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

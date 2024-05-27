@@ -28,21 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_STRETCH_CONF")
-            .field(
-                "stretch_protect_num",
-                &format_args!("{}", self.stretch_protect_num().bits()),
-            )
-            .field(
-                "slave_scl_stretch_en",
-                &format_args!("{}", self.slave_scl_stretch_en().bit()),
-            )
+            .field("stretch_protect_num", &self.stretch_protect_num())
+            .field("slave_scl_stretch_en", &self.slave_scl_stretch_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_STRETCH_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

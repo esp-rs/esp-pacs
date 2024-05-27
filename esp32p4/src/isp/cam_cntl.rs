@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAM_CNTL")
-            .field("cam_en", &format_args!("{}", self.cam_en().bit()))
-            .field("cam_update", &format_args!("{}", self.cam_update().bit()))
-            .field("cam_reset", &format_args!("{}", self.cam_reset().bit()))
-            .field("cam_clk_inv", &format_args!("{}", self.cam_clk_inv().bit()))
+            .field("cam_en", &self.cam_en())
+            .field("cam_update", &self.cam_update())
+            .field("cam_reset", &self.cam_reset())
+            .field("cam_clk_inv", &self.cam_clk_inv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CAM_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

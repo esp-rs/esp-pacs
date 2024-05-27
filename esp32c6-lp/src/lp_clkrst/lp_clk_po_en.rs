@@ -107,33 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CLK_PO_EN")
-            .field(
-                "aon_slow_oen",
-                &format_args!("{}", self.aon_slow_oen().bit()),
-            )
-            .field(
-                "aon_fast_oen",
-                &format_args!("{}", self.aon_fast_oen().bit()),
-            )
-            .field("sosc_oen", &format_args!("{}", self.sosc_oen().bit()))
-            .field("fosc_oen", &format_args!("{}", self.fosc_oen().bit()))
-            .field("osc32k_oen", &format_args!("{}", self.osc32k_oen().bit()))
-            .field("xtal32k_oen", &format_args!("{}", self.xtal32k_oen().bit()))
-            .field(
-                "core_efuse_oen",
-                &format_args!("{}", self.core_efuse_oen().bit()),
-            )
-            .field("slow_oen", &format_args!("{}", self.slow_oen().bit()))
-            .field("fast_oen", &format_args!("{}", self.fast_oen().bit()))
-            .field("rng_oen", &format_args!("{}", self.rng_oen().bit()))
-            .field("lpbus_oen", &format_args!("{}", self.lpbus_oen().bit()))
+            .field("aon_slow_oen", &self.aon_slow_oen())
+            .field("aon_fast_oen", &self.aon_fast_oen())
+            .field("sosc_oen", &self.sosc_oen())
+            .field("fosc_oen", &self.fosc_oen())
+            .field("osc32k_oen", &self.osc32k_oen())
+            .field("xtal32k_oen", &self.xtal32k_oen())
+            .field("core_efuse_oen", &self.core_efuse_oen())
+            .field("slow_oen", &self.slow_oen())
+            .field("fast_oen", &self.fast_oen())
+            .field("rng_oen", &self.rng_oen())
+            .field("lpbus_oen", &self.lpbus_oen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CLK_PO_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

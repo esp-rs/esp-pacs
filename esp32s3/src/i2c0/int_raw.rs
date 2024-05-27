@@ -132,52 +132,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rxfifo_wm", &format_args!("{}", self.rxfifo_wm().bit()))
-            .field("txfifo_wm", &format_args!("{}", self.txfifo_wm().bit()))
-            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
-            .field("end_detect", &format_args!("{}", self.end_detect().bit()))
-            .field(
-                "byte_trans_done",
-                &format_args!("{}", self.byte_trans_done().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "mst_txfifo_udf",
-                &format_args!("{}", self.mst_txfifo_udf().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
-            .field("nack", &format_args!("{}", self.nack().bit()))
-            .field("txfifo_ovf", &format_args!("{}", self.txfifo_ovf().bit()))
-            .field("rxfifo_udf", &format_args!("{}", self.rxfifo_udf().bit()))
-            .field("scl_st_to", &format_args!("{}", self.scl_st_to().bit()))
-            .field(
-                "scl_main_st_to",
-                &format_args!("{}", self.scl_main_st_to().bit()),
-            )
-            .field("det_start", &format_args!("{}", self.det_start().bit()))
-            .field(
-                "slave_stretch",
-                &format_args!("{}", self.slave_stretch().bit()),
-            )
-            .field(
-                "general_call",
-                &format_args!("{}", self.general_call().bit()),
-            )
+            .field("rxfifo_wm", &self.rxfifo_wm())
+            .field("txfifo_wm", &self.txfifo_wm())
+            .field("rxfifo_ovf", &self.rxfifo_ovf())
+            .field("end_detect", &self.end_detect())
+            .field("byte_trans_done", &self.byte_trans_done())
+            .field("arbitration_lost", &self.arbitration_lost())
+            .field("mst_txfifo_udf", &self.mst_txfifo_udf())
+            .field("trans_complete", &self.trans_complete())
+            .field("time_out", &self.time_out())
+            .field("trans_start", &self.trans_start())
+            .field("nack", &self.nack())
+            .field("txfifo_ovf", &self.txfifo_ovf())
+            .field("rxfifo_udf", &self.rxfifo_udf())
+            .field("scl_st_to", &self.scl_st_to())
+            .field("scl_main_st_to", &self.scl_main_st_to())
+            .field("det_start", &self.det_start())
+            .field("slave_stretch", &self.slave_stretch())
+            .field("general_call", &self.general_call())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

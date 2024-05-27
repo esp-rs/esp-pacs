@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_RX_STATUS")
-            .field(
-                "mem_rx_status",
-                &format_args!("{}", self.mem_rx_status().bits()),
-            )
-            .field(
-                "mem_rx_rd_addr",
-                &format_args!("{}", self.mem_rx_rd_addr().bits()),
-            )
-            .field(
-                "mem_rx_wr_addr",
-                &format_args!("{}", self.mem_rx_wr_addr().bits()),
-            )
+            .field("mem_rx_status", &self.mem_rx_status())
+            .field("mem_rx_rd_addr", &self.mem_rx_rd_addr())
+            .field("mem_rx_wr_addr", &self.mem_rx_wr_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_RX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_rx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

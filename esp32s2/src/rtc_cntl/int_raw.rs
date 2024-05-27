@@ -146,48 +146,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("sdio_idle", &format_args!("{}", self.sdio_idle().bit()))
-            .field("wdt", &format_args!("{}", self.wdt().bit()))
-            .field(
-                "touch_scan_done",
-                &format_args!("{}", self.touch_scan_done().bit()),
-            )
-            .field("ulp_cp", &format_args!("{}", self.ulp_cp().bit()))
-            .field("touch_done", &format_args!("{}", self.touch_done().bit()))
-            .field(
-                "touch_active",
-                &format_args!("{}", self.touch_active().bit()),
-            )
-            .field(
-                "touch_inactive",
-                &format_args!("{}", self.touch_inactive().bit()),
-            )
-            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
-            .field("main_timer", &format_args!("{}", self.main_timer().bit()))
-            .field("saradc1", &format_args!("{}", self.saradc1().bit()))
-            .field("tsens", &format_args!("{}", self.tsens().bit()))
-            .field("cocpu", &format_args!("{}", self.cocpu().bit()))
-            .field("saradc2", &format_args!("{}", self.saradc2().bit()))
-            .field("swd", &format_args!("{}", self.swd().bit()))
-            .field(
-                "xtal32k_dead",
-                &format_args!("{}", self.xtal32k_dead().bit()),
-            )
-            .field("cocpu_trap", &format_args!("{}", self.cocpu_trap().bit()))
-            .field(
-                "touch_timeout",
-                &format_args!("{}", self.touch_timeout().bit()),
-            )
-            .field("glitch_det", &format_args!("{}", self.glitch_det().bit()))
+            .field("slp_wakeup", &self.slp_wakeup())
+            .field("slp_reject", &self.slp_reject())
+            .field("sdio_idle", &self.sdio_idle())
+            .field("wdt", &self.wdt())
+            .field("touch_scan_done", &self.touch_scan_done())
+            .field("ulp_cp", &self.ulp_cp())
+            .field("touch_done", &self.touch_done())
+            .field("touch_active", &self.touch_active())
+            .field("touch_inactive", &self.touch_inactive())
+            .field("brown_out", &self.brown_out())
+            .field("main_timer", &self.main_timer())
+            .field("saradc1", &self.saradc1())
+            .field("tsens", &self.tsens())
+            .field("cocpu", &self.cocpu())
+            .field("saradc2", &self.saradc2())
+            .field("swd", &self.swd())
+            .field("xtal32k_dead", &self.xtal32k_dead())
+            .field("cocpu_trap", &self.cocpu_trap())
+            .field("touch_timeout", &self.touch_timeout())
+            .field("glitch_det", &self.glitch_det())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC interrupt raw register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

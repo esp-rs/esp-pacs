@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_PD_CTRL")
-            .field(
-                "ecc_mem_force_pd",
-                &format_args!("{}", self.ecc_mem_force_pd().bit()),
-            )
-            .field(
-                "ecc_mem_force_pu",
-                &format_args!("{}", self.ecc_mem_force_pu().bit()),
-            )
-            .field("ecc_mem_pd", &format_args!("{}", self.ecc_mem_pd().bit()))
+            .field("ecc_mem_force_pd", &self.ecc_mem_force_pd())
+            .field("ecc_mem_force_pu", &self.ecc_mem_force_pu())
+            .field("ecc_mem_pd", &self.ecc_mem_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ECC_PD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

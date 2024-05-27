@@ -53,24 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_D_NUM")
-            .field("d_dqs_num", &format_args!("{}", self.d_dqs_num().bits()))
-            .field("d_cd_num", &format_args!("{}", self.d_cd_num().bits()))
-            .field("d_de_num", &format_args!("{}", self.d_de_num().bits()))
-            .field(
-                "d_hsync_num",
-                &format_args!("{}", self.d_hsync_num().bits()),
-            )
-            .field(
-                "d_vsync_num",
-                &format_args!("{}", self.d_vsync_num().bits()),
-            )
+            .field("d_dqs_num", &self.d_dqs_num())
+            .field("d_cd_num", &self.d_cd_num())
+            .field("d_de_num", &self.d_de_num())
+            .field("d_hsync_num", &self.d_hsync_num())
+            .field("d_vsync_num", &self.d_vsync_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_D_NUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_ST")
-            .field(
-                "l2_cache_pld_done_int_st",
-                &format_args!("{}", self.l2_cache_pld_done_int_st().bit()),
-            )
-            .field(
-                "l2_cache_pld_err_int_st",
-                &format_args!("{}", self.l2_cache_pld_err_int_st().bit()),
-            )
+            .field("l2_cache_pld_done_int_st", &self.l2_cache_pld_done_int_st())
+            .field("l2_cache_pld_err_int_st", &self.l2_cache_pld_err_int_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-Cache Access Fail Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_preload_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

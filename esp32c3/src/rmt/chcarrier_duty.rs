@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHCARRIER_DUTY")
-            .field(
-                "carrier_low",
-                &format_args!("{}", self.carrier_low().bits()),
-            )
-            .field(
-                "carrier_high",
-                &format_args!("{}", self.carrier_high().bits()),
-            )
+            .field("carrier_low", &self.carrier_low())
+            .field("carrier_high", &self.carrier_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHCARRIER_DUTY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

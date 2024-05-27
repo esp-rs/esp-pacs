@@ -12,15 +12,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("H_MEM")
-            .field("h", &format_args!("{}", self.h().bits()))
-            .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<H_MEM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("H_MEM").field("h", &self.h()).finish()
     }
 }
 #[doc = "GCM hash subkey\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`h_mem::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

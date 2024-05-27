@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LLP0")
-            .field("ch1_lms", &format_args!("{}", self.ch1_lms().bit()))
-            .field("ch1_loc0", &format_args!("{}", self.ch1_loc0().bits()))
+            .field("ch1_lms", &self.ch1_lms())
+            .field("ch1_loc0", &self.ch1_loc0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LLP0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

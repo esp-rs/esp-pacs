@@ -107,42 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLASH_SUS_CTRL")
-            .field("flash_per", &format_args!("{}", self.flash_per().bit()))
-            .field("flash_pes", &format_args!("{}", self.flash_pes().bit()))
-            .field(
-                "flash_per_wait_en",
-                &format_args!("{}", self.flash_per_wait_en().bit()),
-            )
-            .field(
-                "flash_pes_wait_en",
-                &format_args!("{}", self.flash_pes_wait_en().bit()),
-            )
-            .field("pes_per_en", &format_args!("{}", self.pes_per_en().bit()))
-            .field(
-                "flash_pes_en",
-                &format_args!("{}", self.flash_pes_en().bit()),
-            )
-            .field(
-                "pesr_end_msk",
-                &format_args!("{}", self.pesr_end_msk().bits()),
-            )
-            .field(
-                "spi_fmem_rd_sus_2b",
-                &format_args!("{}", self.spi_fmem_rd_sus_2b().bit()),
-            )
-            .field("per_end_en", &format_args!("{}", self.per_end_en().bit()))
-            .field("pes_end_en", &format_args!("{}", self.pes_end_en().bit()))
-            .field(
-                "sus_timeout_cnt",
-                &format_args!("{}", self.sus_timeout_cnt().bits()),
-            )
+            .field("flash_per", &self.flash_per())
+            .field("flash_pes", &self.flash_pes())
+            .field("flash_per_wait_en", &self.flash_per_wait_en())
+            .field("flash_pes_wait_en", &self.flash_pes_wait_en())
+            .field("pes_per_en", &self.pes_per_en())
+            .field("flash_pes_en", &self.flash_pes_en())
+            .field("pesr_end_msk", &self.pesr_end_msk())
+            .field("spi_fmem_rd_sus_2b", &self.spi_fmem_rd_sus_2b())
+            .field("per_end_en", &self.per_end_en())
+            .field("pes_end_en", &self.pes_end_en())
+            .field("sus_timeout_cnt", &self.sus_timeout_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FLASH_SUS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

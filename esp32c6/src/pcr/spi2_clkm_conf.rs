@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI2_CLKM_CONF")
-            .field(
-                "spi2_clkm_sel",
-                &format_args!("{}", self.spi2_clkm_sel().bits()),
-            )
-            .field(
-                "spi2_clkm_en",
-                &format_args!("{}", self.spi2_clkm_en().bit()),
-            )
+            .field("spi2_clkm_sel", &self.spi2_clkm_sel())
+            .field("spi2_clkm_en", &self.spi2_clkm_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI2_CLKM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TRACE_CONF")
-            .field(
-                "trace_clk_en",
-                &format_args!("{}", self.trace_clk_en().bit()),
-            )
-            .field(
-                "trace_rst_en",
-                &format_args!("{}", self.trace_rst_en().bit()),
-            )
+            .field("trace_clk_en", &self.trace_clk_en())
+            .field("trace_rst_en", &self.trace_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TRACE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

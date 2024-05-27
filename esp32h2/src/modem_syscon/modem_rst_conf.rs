@@ -125,50 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_RST_CONF")
-            .field("rst_fe", &format_args!("{}", self.rst_fe().bit()))
-            .field(
-                "rst_btmac_apb",
-                &format_args!("{}", self.rst_btmac_apb().bit()),
-            )
-            .field("rst_btmac", &format_args!("{}", self.rst_btmac().bit()))
-            .field(
-                "rst_btbb_apb",
-                &format_args!("{}", self.rst_btbb_apb().bit()),
-            )
-            .field("rst_btbb", &format_args!("{}", self.rst_btbb().bit()))
-            .field("rst_etm", &format_args!("{}", self.rst_etm().bit()))
-            .field("rst_zbmac", &format_args!("{}", self.rst_zbmac().bit()))
-            .field(
-                "rst_modem_ecb",
-                &format_args!("{}", self.rst_modem_ecb().bit()),
-            )
-            .field(
-                "rst_modem_ccm",
-                &format_args!("{}", self.rst_modem_ccm().bit()),
-            )
-            .field(
-                "rst_modem_bah",
-                &format_args!("{}", self.rst_modem_bah().bit()),
-            )
-            .field(
-                "rst_modem_sec",
-                &format_args!("{}", self.rst_modem_sec().bit()),
-            )
-            .field(
-                "rst_ble_timer",
-                &format_args!("{}", self.rst_ble_timer().bit()),
-            )
-            .field(
-                "rst_data_dump",
-                &format_args!("{}", self.rst_data_dump().bit()),
-            )
+            .field("rst_fe", &self.rst_fe())
+            .field("rst_btmac_apb", &self.rst_btmac_apb())
+            .field("rst_btmac", &self.rst_btmac())
+            .field("rst_btbb_apb", &self.rst_btbb_apb())
+            .field("rst_btbb", &self.rst_btbb())
+            .field("rst_etm", &self.rst_etm())
+            .field("rst_zbmac", &self.rst_zbmac())
+            .field("rst_modem_ecb", &self.rst_modem_ecb())
+            .field("rst_modem_ccm", &self.rst_modem_ccm())
+            .field("rst_modem_bah", &self.rst_modem_bah())
+            .field("rst_modem_sec", &self.rst_modem_sec())
+            .field("rst_ble_timer", &self.rst_ble_timer())
+            .field("rst_data_dump", &self.rst_data_dump())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODEM_RST_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RC_STATUS0")
-            .field(
-                "frame_mad_sum",
-                &format_args!("{}", self.frame_mad_sum().bits()),
-            )
+            .field("frame_mad_sum", &self.frame_mad_sum())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RC_STATUS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Rate control status register0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rc_status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

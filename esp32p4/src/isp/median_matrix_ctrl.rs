@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEDIAN_MATRIX_CTRL")
-            .field(
-                "median_padding_data",
-                &format_args!("{}", self.median_padding_data().bits()),
-            )
-            .field(
-                "median_padding_mode",
-                &format_args!("{}", self.median_padding_mode().bit()),
-            )
+            .field("median_padding_data", &self.median_padding_data())
+            .field("median_padding_mode", &self.median_padding_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEDIAN_MATRIX_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -105,57 +105,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGLS0STAT")
-            .field(
-                "record_pro_pdebugls0stat",
-                &format_args!("{}", self.record_pro_pdebugls0stat().bits()),
-            )
+            .field("record_pro_pdebugls0stat", &self.record_pro_pdebugls0stat())
             .field(
                 "record_pdebugls0stat_type",
-                &format_args!("{}", self.record_pdebugls0stat_type().bits()),
+                &self.record_pdebugls0stat_type(),
             )
-            .field(
-                "record_pdebugls0stat_sz",
-                &format_args!("{}", self.record_pdebugls0stat_sz().bits()),
-            )
+            .field("record_pdebugls0stat_sz", &self.record_pdebugls0stat_sz())
             .field(
                 "record_pdebugls0stat_dtlbm",
-                &format_args!("{}", self.record_pdebugls0stat_dtlbm().bit()),
+                &self.record_pdebugls0stat_dtlbm(),
             )
-            .field(
-                "record_pdebugls0stat_dcm",
-                &format_args!("{}", self.record_pdebugls0stat_dcm().bit()),
-            )
-            .field(
-                "record_pdebugls0stat_dch",
-                &format_args!("{}", self.record_pdebugls0stat_dch().bit()),
-            )
-            .field(
-                "record_pdebugls0stat_uc",
-                &format_args!("{}", self.record_pdebugls0stat_uc().bit()),
-            )
-            .field(
-                "record_pdebugls0stat_wb",
-                &format_args!("{}", self.record_pdebugls0stat_wb().bit()),
-            )
-            .field(
-                "record_pdebugls0stat_coh",
-                &format_args!("{}", self.record_pdebugls0stat_coh().bit()),
-            )
+            .field("record_pdebugls0stat_dcm", &self.record_pdebugls0stat_dcm())
+            .field("record_pdebugls0stat_dch", &self.record_pdebugls0stat_dch())
+            .field("record_pdebugls0stat_uc", &self.record_pdebugls0stat_uc())
+            .field("record_pdebugls0stat_wb", &self.record_pdebugls0stat_wb())
+            .field("record_pdebugls0stat_coh", &self.record_pdebugls0stat_coh())
             .field(
                 "record_pdebugls0stat_stcoh",
-                &format_args!("{}", self.record_pdebugls0stat_stcoh().bits()),
+                &self.record_pdebugls0stat_stcoh(),
             )
-            .field(
-                "record_pdebugls0stat_tgt",
-                &format_args!("{}", self.record_pdebugls0stat_tgt().bits()),
-            )
+            .field("record_pdebugls0stat_tgt", &self.record_pdebugls0stat_tgt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INF3_PAN_ID")
-            .field(
-                "mac_inf3_pan_id",
-                &format_args!("{}", self.mac_inf3_pan_id().bits()),
-            )
+            .field("mac_inf3_pan_id", &self.mac_inf3_pan_id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INF3_PAN_ID_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

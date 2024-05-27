@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE2_AUTOLOAD_SCT0_ADDR")
             .field(
                 "l1_icache2_autoload_sct0_addr",
-                &format_args!("{}", self.l1_icache2_autoload_sct0_addr().bits()),
+                &self.l1_icache2_autoload_sct0_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE2_AUTOLOAD_SCT0_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 instruction Cache 2 autoload section 0 address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache2_autoload_sct0_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

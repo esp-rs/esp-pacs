@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_LOOPBACK_CNT")
-            .field(
-                "phy_hs_check_cnt_th",
-                &format_args!("{}", self.phy_hs_check_cnt_th().bits()),
-            )
-            .field(
-                "phy_lp_check_cnt_th",
-                &format_args!("{}", self.phy_lp_check_cnt_th().bits()),
-            )
+            .field("phy_hs_check_cnt_th", &self.phy_hs_check_cnt_th())
+            .field("phy_lp_check_cnt_th", &self.phy_lp_check_cnt_th())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_LOOPBACK_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

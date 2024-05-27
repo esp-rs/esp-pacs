@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_CFG0")
-            .field(
-                "cfg_upmethod",
-                &format_args!("{}", self.cfg_upmethod().bits()),
-            )
-            .field("t0_sel", &format_args!("{}", self.t0_sel().bits()))
-            .field("t1_sel", &format_args!("{}", self.t1_sel().bits()))
+            .field("cfg_upmethod", &self.cfg_upmethod())
+            .field("t0_sel", &self.t0_sel())
+            .field("t1_sel", &self.t1_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GEN_CFG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

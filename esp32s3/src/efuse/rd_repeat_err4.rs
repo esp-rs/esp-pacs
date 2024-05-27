@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR4")
-            .field(
-                "rpt4_reserved2_err",
-                &format_args!("{}", self.rpt4_reserved2_err().bits()),
-            )
+            .field("rpt4_reserved2_err", &self.rpt4_reserved2_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 4 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

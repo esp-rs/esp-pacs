@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE0_IBUS_REJECT_ST")
-            .field(
-                "core0_ibus_tag_attr",
-                &format_args!("{}", self.core0_ibus_tag_attr().bits()),
-            )
-            .field(
-                "core0_ibus_attr",
-                &format_args!("{}", self.core0_ibus_attr().bits()),
-            )
-            .field(
-                "core0_ibus_world",
-                &format_args!("{}", self.core0_ibus_world().bit()),
-            )
+            .field("core0_ibus_tag_attr", &self.core0_ibus_tag_attr())
+            .field("core0_ibus_attr", &self.core0_ibus_attr())
+            .field("core0_ibus_world", &self.core0_ibus_world())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE0_IBUS_REJECT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core0_ibus_reject_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

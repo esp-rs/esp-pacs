@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_RCD_EN")
-            .field(
-                "core_1_rcd_recorden",
-                &format_args!("{}", self.core_1_rcd_recorden().bit()),
-            )
-            .field(
-                "core_1_rcd_pdebugen",
-                &format_args!("{}", self.core_1_rcd_pdebugen().bit()),
-            )
+            .field("core_1_rcd_recorden", &self.core_1_rcd_recorden())
+            .field("core_1_rcd_pdebugen", &self.core_1_rcd_pdebugen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_RCD_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

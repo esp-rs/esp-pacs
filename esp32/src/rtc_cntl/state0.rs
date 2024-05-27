@@ -87,40 +87,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE0")
-            .field(
-                "touch_wakeup_force_en",
-                &format_args!("{}", self.touch_wakeup_force_en().bit()),
-            )
-            .field(
-                "ulp_cp_wakeup_force_en",
-                &format_args!("{}", self.ulp_cp_wakeup_force_en().bit()),
-            )
-            .field(
-                "apb2rtc_bridge_sel",
-                &format_args!("{}", self.apb2rtc_bridge_sel().bit()),
-            )
-            .field(
-                "touch_slp_timer_en",
-                &format_args!("{}", self.touch_slp_timer_en().bit()),
-            )
-            .field(
-                "ulp_cp_slp_timer_en",
-                &format_args!("{}", self.ulp_cp_slp_timer_en().bit()),
-            )
-            .field(
-                "sdio_active_ind",
-                &format_args!("{}", self.sdio_active_ind().bit()),
-            )
-            .field("slp_wakeup", &format_args!("{}", self.slp_wakeup().bit()))
-            .field("slp_reject", &format_args!("{}", self.slp_reject().bit()))
-            .field("sleep_en", &format_args!("{}", self.sleep_en().bit()))
+            .field("touch_wakeup_force_en", &self.touch_wakeup_force_en())
+            .field("ulp_cp_wakeup_force_en", &self.ulp_cp_wakeup_force_en())
+            .field("apb2rtc_bridge_sel", &self.apb2rtc_bridge_sel())
+            .field("touch_slp_timer_en", &self.touch_slp_timer_en())
+            .field("ulp_cp_slp_timer_en", &self.ulp_cp_slp_timer_en())
+            .field("sdio_active_ind", &self.sdio_active_ind())
+            .field("slp_wakeup", &self.slp_wakeup())
+            .field("slp_reject", &self.slp_reject())
+            .field("sleep_en", &self.sleep_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

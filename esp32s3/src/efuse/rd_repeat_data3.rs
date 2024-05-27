@@ -111,70 +111,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA3")
-            .field(
-                "dis_download_mode",
-                &format_args!("{}", self.dis_download_mode().bit()),
-            )
-            .field(
-                "dis_legacy_spi_boot",
-                &format_args!("{}", self.dis_legacy_spi_boot().bit()),
-            )
-            .field(
-                "uart_print_channel",
-                &format_args!("{}", self.uart_print_channel().bit()),
-            )
-            .field(
-                "flash_ecc_mode",
-                &format_args!("{}", self.flash_ecc_mode().bit()),
-            )
-            .field(
-                "dis_usb_download_mode",
-                &format_args!("{}", self.dis_usb_download_mode().bit()),
-            )
-            .field(
-                "enable_security_download",
-                &format_args!("{}", self.enable_security_download().bit()),
-            )
-            .field(
-                "uart_print_control",
-                &format_args!("{}", self.uart_print_control().bits()),
-            )
-            .field(
-                "pin_power_selection",
-                &format_args!("{}", self.pin_power_selection().bit()),
-            )
-            .field("flash_type", &format_args!("{}", self.flash_type().bit()))
-            .field(
-                "flash_page_size",
-                &format_args!("{}", self.flash_page_size().bits()),
-            )
-            .field(
-                "flash_ecc_en",
-                &format_args!("{}", self.flash_ecc_en().bit()),
-            )
-            .field(
-                "force_send_resume",
-                &format_args!("{}", self.force_send_resume().bit()),
-            )
-            .field(
-                "secure_version",
-                &format_args!("{}", self.secure_version().bits()),
-            )
-            .field(
-                "powerglitch_en",
-                &format_args!("{}", self.powerglitch_en().bit()),
-            )
-            .field(
-                "rpt4_reserved1",
-                &format_args!("{}", self.rpt4_reserved1().bit()),
-            )
+            .field("dis_download_mode", &self.dis_download_mode())
+            .field("dis_legacy_spi_boot", &self.dis_legacy_spi_boot())
+            .field("uart_print_channel", &self.uart_print_channel())
+            .field("flash_ecc_mode", &self.flash_ecc_mode())
+            .field("dis_usb_download_mode", &self.dis_usb_download_mode())
+            .field("enable_security_download", &self.enable_security_download())
+            .field("uart_print_control", &self.uart_print_control())
+            .field("pin_power_selection", &self.pin_power_selection())
+            .field("flash_type", &self.flash_type())
+            .field("flash_page_size", &self.flash_page_size())
+            .field("flash_ecc_en", &self.flash_ecc_en())
+            .field("force_send_resume", &self.force_send_resume())
+            .field("secure_version", &self.secure_version())
+            .field("powerglitch_en", &self.powerglitch_en())
+            .field("rpt4_reserved1", &self.rpt4_reserved1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK0 data register 4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

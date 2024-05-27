@@ -47,27 +47,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMERGROUP1_CONF")
-            .field("tg1_clk_en", &format_args!("{}", self.tg1_clk_en().bit()))
-            .field("tg1_rst_en", &format_args!("{}", self.tg1_rst_en().bit()))
-            .field(
-                "tg1_wdt_ready",
-                &format_args!("{}", self.tg1_wdt_ready().bit()),
-            )
-            .field(
-                "tg1_timer0_ready",
-                &format_args!("{}", self.tg1_timer0_ready().bit()),
-            )
-            .field(
-                "tg1_timer1_ready",
-                &format_args!("{}", self.tg1_timer1_ready().bit()),
-            )
+            .field("tg1_clk_en", &self.tg1_clk_en())
+            .field("tg1_rst_en", &self.tg1_rst_en())
+            .field("tg1_wdt_ready", &self.tg1_wdt_ready())
+            .field("tg1_timer0_ready", &self.tg1_timer0_ready())
+            .field("tg1_timer1_ready", &self.tg1_timer1_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP1_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

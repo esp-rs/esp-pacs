@@ -80,42 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_RD_BYTE")
-            .field(
-                "slv_data_bytelen",
-                &format_args!("{}", self.slv_data_bytelen().bits()),
-            )
-            .field(
-                "slv_rddma_bytelen_en",
-                &format_args!("{}", self.slv_rddma_bytelen_en().bit()),
-            )
-            .field(
-                "slv_wrdma_bytelen_en",
-                &format_args!("{}", self.slv_wrdma_bytelen_en().bit()),
-            )
-            .field(
-                "slv_rdbuf_bytelen_en",
-                &format_args!("{}", self.slv_rdbuf_bytelen_en().bit()),
-            )
-            .field(
-                "slv_wrbuf_bytelen_en",
-                &format_args!("{}", self.slv_wrbuf_bytelen_en().bit()),
-            )
-            .field(
-                "dma_seg_magic_value",
-                &format_args!("{}", self.dma_seg_magic_value().bits()),
-            )
-            .field(
-                "slv_rd_dma_done",
-                &format_args!("{}", self.slv_rd_dma_done().bit()),
-            )
-            .field("usr_conf", &format_args!("{}", self.usr_conf().bit()))
+            .field("slv_data_bytelen", &self.slv_data_bytelen())
+            .field("slv_rddma_bytelen_en", &self.slv_rddma_bytelen_en())
+            .field("slv_wrdma_bytelen_en", &self.slv_wrdma_bytelen_en())
+            .field("slv_rdbuf_bytelen_en", &self.slv_rdbuf_bytelen_en())
+            .field("slv_wrbuf_bytelen_en", &self.slv_wrbuf_bytelen_en())
+            .field("dma_seg_magic_value", &self.dma_seg_magic_value())
+            .field("slv_rd_dma_done", &self.slv_rd_dma_done())
+            .field("usr_conf", &self.usr_conf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLV_RD_BYTE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

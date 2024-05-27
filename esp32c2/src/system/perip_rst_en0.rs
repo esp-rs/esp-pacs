@@ -107,42 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_RST_EN0")
-            .field("spi01_rst", &format_args!("{}", self.spi01_rst().bit()))
-            .field("uart_rst", &format_args!("{}", self.uart_rst().bit()))
-            .field("uart1_rst", &format_args!("{}", self.uart1_rst().bit()))
-            .field("spi2_rst", &format_args!("{}", self.spi2_rst().bit()))
-            .field(
-                "i2c_ext0_rst",
-                &format_args!("{}", self.i2c_ext0_rst().bit()),
-            )
-            .field("ledc_rst", &format_args!("{}", self.ledc_rst().bit()))
-            .field(
-                "timergroup_rst",
-                &format_args!("{}", self.timergroup_rst().bit()),
-            )
-            .field(
-                "uart_mem_rst",
-                &format_args!("{}", self.uart_mem_rst().bit()),
-            )
-            .field(
-                "apb_saradc_rst",
-                &format_args!("{}", self.apb_saradc_rst().bit()),
-            )
-            .field(
-                "systimer_rst",
-                &format_args!("{}", self.systimer_rst().bit()),
-            )
-            .field(
-                "adc2_arb_rst",
-                &format_args!("{}", self.adc2_arb_rst().bit()),
-            )
+            .field("spi01_rst", &self.spi01_rst())
+            .field("uart_rst", &self.uart_rst())
+            .field("uart1_rst", &self.uart1_rst())
+            .field("spi2_rst", &self.spi2_rst())
+            .field("i2c_ext0_rst", &self.i2c_ext0_rst())
+            .field("ledc_rst", &self.ledc_rst())
+            .field("timergroup_rst", &self.timergroup_rst())
+            .field("uart_mem_rst", &self.uart_mem_rst())
+            .field("apb_saradc_rst", &self.apb_saradc_rst())
+            .field("systimer_rst", &self.systimer_rst())
+            .field("adc2_arb_rst", &self.adc2_arb_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

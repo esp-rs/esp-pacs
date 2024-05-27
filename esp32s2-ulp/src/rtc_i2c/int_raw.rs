@@ -69,37 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "slave_tran_comp",
-                &format_args!("{}", self.slave_tran_comp().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "master_tran_comp",
-                &format_args!("{}", self.master_tran_comp().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("ack_err", &format_args!("{}", self.ack_err().bit()))
-            .field("rx_data", &format_args!("{}", self.rx_data().bit()))
-            .field("tx_data", &format_args!("{}", self.tx_data().bit()))
-            .field(
-                "detect_start",
-                &format_args!("{}", self.detect_start().bit()),
-            )
+            .field("slave_tran_comp", &self.slave_tran_comp())
+            .field("arbitration_lost", &self.arbitration_lost())
+            .field("master_tran_comp", &self.master_tran_comp())
+            .field("trans_complete", &self.trans_complete())
+            .field("time_out", &self.time_out())
+            .field("ack_err", &self.ack_err())
+            .field("rx_data", &self.rx_data())
+            .field("tx_data", &self.tx_data())
+            .field("detect_start", &self.detect_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC I2C raw interrupt\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

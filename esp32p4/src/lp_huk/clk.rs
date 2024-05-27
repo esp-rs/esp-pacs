@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field(
-                "mem_cg_force_on",
-                &format_args!("{}", self.mem_cg_force_on().bit()),
-            )
+            .field("en", &self.en())
+            .field("mem_cg_force_on", &self.mem_cg_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE0_ACS_CACHE_INT_ENA")
-            .field(
-                "core0_ibus_acs_msk_ic",
-                &format_args!("{}", self.core0_ibus_acs_msk_ic().bit()),
-            )
-            .field(
-                "core0_ibus_wr_ic",
-                &format_args!("{}", self.core0_ibus_wr_ic().bit()),
-            )
-            .field(
-                "core0_ibus_reject",
-                &format_args!("{}", self.core0_ibus_reject().bit()),
-            )
-            .field(
-                "core0_dbus_acs_msk_ic",
-                &format_args!("{}", self.core0_dbus_acs_msk_ic().bit()),
-            )
-            .field(
-                "core0_dbus_reject",
-                &format_args!("{}", self.core0_dbus_reject().bit()),
-            )
-            .field(
-                "core0_dbus_wr_ic",
-                &format_args!("{}", self.core0_dbus_wr_ic().bit()),
-            )
+            .field("core0_ibus_acs_msk_ic", &self.core0_ibus_acs_msk_ic())
+            .field("core0_ibus_wr_ic", &self.core0_ibus_wr_ic())
+            .field("core0_ibus_reject", &self.core0_ibus_reject())
+            .field("core0_dbus_acs_msk_ic", &self.core0_dbus_acs_msk_ic())
+            .field("core0_dbus_reject", &self.core0_dbus_reject())
+            .field("core0_dbus_wr_ic", &self.core0_dbus_wr_ic())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE0_ACS_CACHE_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

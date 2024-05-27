@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND0_CLUT_DATA")
-            .field(
-                "rdwr_word_blend0_clut",
-                &format_args!("{}", self.rdwr_word_blend0_clut().bits()),
-            )
+            .field("rdwr_word_blend0_clut", &self.rdwr_word_blend0_clut())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLEND0_CLUT_DATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

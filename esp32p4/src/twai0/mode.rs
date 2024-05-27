@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODE")
-            .field("reset_mode", &format_args!("{}", self.reset_mode().bit()))
-            .field(
-                "listen_only_mode",
-                &format_args!("{}", self.listen_only_mode().bit()),
-            )
-            .field(
-                "self_test_mode",
-                &format_args!("{}", self.self_test_mode().bit()),
-            )
-            .field(
-                "acceptance_filter_mode",
-                &format_args!("{}", self.acceptance_filter_mode().bit()),
-            )
+            .field("reset_mode", &self.reset_mode())
+            .field("listen_only_mode", &self.listen_only_mode())
+            .field("self_test_mode", &self.self_test_mode())
+            .field("acceptance_filter_mode", &self.acceptance_filter_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

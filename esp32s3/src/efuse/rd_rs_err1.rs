@@ -34,26 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_RS_ERR1")
-            .field(
-                "key5_err_num",
-                &format_args!("{}", self.key5_err_num().bits()),
-            )
-            .field("key5_fail", &format_args!("{}", self.key5_fail().bit()))
-            .field(
-                "sys_part2_err_num",
-                &format_args!("{}", self.sys_part2_err_num().bits()),
-            )
-            .field(
-                "sys_part2_fail",
-                &format_args!("{}", self.sys_part2_fail().bit()),
-            )
+            .field("key5_err_num", &self.key5_err_num())
+            .field("key5_fail", &self.key5_fail())
+            .field("sys_part2_err_num", &self.sys_part2_err_num())
+            .field("sys_part2_fail", &self.sys_part2_fail())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_RS_ERR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 1 of BLOCK1-10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_rs_err1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

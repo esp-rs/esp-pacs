@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERIPHERAL_STATUS")
-            .field(
-                "cpu_peri_byte_error_addr",
-                &format_args!("{}", self.cpu_peri_byte_error_addr().bits()),
-            )
+            .field("cpu_peri_byte_error_addr", &self.cpu_peri_byte_error_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_PERIPHERAL_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PeribBus1 peripheral access status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_peripheral_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

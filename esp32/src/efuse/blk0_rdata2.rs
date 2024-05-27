@@ -31,19 +31,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA2")
-            .field("rd_mac_1", &format_args!("{}", self.rd_mac_1().bits()))
-            .field("rd_mac_crc", &format_args!("{}", self.rd_mac_crc().bits()))
-            .field(
-                "rd_reserve_0_88",
-                &format_args!("{}", self.rd_reserve_0_88().bits()),
-            )
+            .field("rd_mac_1", &self.rd_mac_1())
+            .field("rd_mac_crc", &self.rd_mac_crc())
+            .field("rd_reserve_0_88", &self.rd_reserve_0_88())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -109,45 +109,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE")
-            .field("clk_mode", &format_args!("{}", self.clk_mode().bits()))
-            .field("clk_mode_13", &format_args!("{}", self.clk_mode_13().bit()))
-            .field(
-                "rsck_data_out",
-                &format_args!("{}", self.rsck_data_out().bit()),
-            )
-            .field(
-                "slv_rddma_bitlen_en",
-                &format_args!("{}", self.slv_rddma_bitlen_en().bit()),
-            )
-            .field(
-                "slv_wrdma_bitlen_en",
-                &format_args!("{}", self.slv_wrdma_bitlen_en().bit()),
-            )
-            .field(
-                "slv_rdbuf_bitlen_en",
-                &format_args!("{}", self.slv_rdbuf_bitlen_en().bit()),
-            )
-            .field(
-                "slv_wrbuf_bitlen_en",
-                &format_args!("{}", self.slv_wrbuf_bitlen_en().bit()),
-            )
-            .field(
-                "dma_seg_magic_value",
-                &format_args!("{}", self.dma_seg_magic_value().bits()),
-            )
-            .field("mode", &format_args!("{}", self.mode().bit()))
-            .field("usr_conf", &format_args!("{}", self.usr_conf().bit()))
-            .field(
-                "mst_fd_wait_dma_tx_data",
-                &format_args!("{}", self.mst_fd_wait_dma_tx_data().bit()),
-            )
+            .field("clk_mode", &self.clk_mode())
+            .field("clk_mode_13", &self.clk_mode_13())
+            .field("rsck_data_out", &self.rsck_data_out())
+            .field("slv_rddma_bitlen_en", &self.slv_rddma_bitlen_en())
+            .field("slv_wrdma_bitlen_en", &self.slv_wrdma_bitlen_en())
+            .field("slv_rdbuf_bitlen_en", &self.slv_rdbuf_bitlen_en())
+            .field("slv_wrbuf_bitlen_en", &self.slv_wrbuf_bitlen_en())
+            .field("dma_seg_magic_value", &self.dma_seg_magic_value())
+            .field("mode", &self.mode())
+            .field("usr_conf", &self.usr_conf())
+            .field("mst_fd_wait_dma_tx_data", &self.mst_fd_wait_dma_tx_data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_TO_HP")
-            .field(
-                "icg_hp_xtal32k",
-                &format_args!("{}", self.icg_hp_xtal32k().bit()),
-            )
-            .field("icg_hp_sosc", &format_args!("{}", self.icg_hp_sosc().bit()))
-            .field(
-                "icg_hp_osc32k",
-                &format_args!("{}", self.icg_hp_osc32k().bit()),
-            )
-            .field("icg_hp_fosc", &format_args!("{}", self.icg_hp_fosc().bit()))
+            .field("icg_hp_xtal32k", &self.icg_hp_xtal32k())
+            .field("icg_hp_sosc", &self.icg_hp_sosc())
+            .field("icg_hp_osc32k", &self.icg_hp_osc32k())
+            .field("icg_hp_fosc", &self.icg_hp_fosc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_TO_HP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

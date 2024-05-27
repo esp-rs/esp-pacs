@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMB_PVT_ERR_LVT_SITE0")
             .field(
                 "comb_timing_err_cnt_lvt_site0",
-                &format_args!("{}", self.comb_timing_err_cnt_lvt_site0().bits()),
+                &self.comb_timing_err_cnt_lvt_site0(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_ERR_LVT_SITE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pvt_err_lvt_site0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

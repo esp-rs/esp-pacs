@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("RAW_BUF_ALMOST_EMPTY_THRD")
             .field(
                 "dsi_raw_buf_almost_empty_thrd",
-                &format_args!("{}", self.dsi_raw_buf_almost_empty_thrd().bits()),
+                &self.dsi_raw_buf_almost_empty_thrd(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RAW_BUF_ALMOST_EMPTY_THRD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

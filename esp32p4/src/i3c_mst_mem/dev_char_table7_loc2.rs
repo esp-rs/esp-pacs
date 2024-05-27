@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEV_CHAR_TABLE7_LOC2")
-            .field(
-                "dct_dev7_loc2",
-                &format_args!("{}", self.dct_dev7_loc2().bits()),
-            )
+            .field("dct_dev7_loc2", &self.dct_dev7_loc2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEV_CHAR_TABLE7_LOC2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dev_char_table7_loc2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

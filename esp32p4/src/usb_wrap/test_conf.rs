@@ -65,20 +65,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TEST_CONF")
-            .field("test_enable", &format_args!("{}", self.test_enable().bit()))
-            .field("test_usb_oe", &format_args!("{}", self.test_usb_oe().bit()))
-            .field("test_tx_dp", &format_args!("{}", self.test_tx_dp().bit()))
-            .field("test_tx_dm", &format_args!("{}", self.test_tx_dm().bit()))
-            .field("test_rx_rcv", &format_args!("{}", self.test_rx_rcv().bit()))
-            .field("test_rx_dp", &format_args!("{}", self.test_rx_dp().bit()))
-            .field("test_rx_dm", &format_args!("{}", self.test_rx_dm().bit()))
+            .field("test_enable", &self.test_enable())
+            .field("test_usb_oe", &self.test_usb_oe())
+            .field("test_tx_dp", &self.test_tx_dp())
+            .field("test_tx_dm", &self.test_tx_dm())
+            .field("test_rx_rcv", &self.test_rx_rcv())
+            .field("test_rx_dp", &self.test_rx_dp())
+            .field("test_rx_dm", &self.test_rx_dm())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TEST_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

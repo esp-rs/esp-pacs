@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_RSTZ")
-            .field(
-                "phy_shutdownz",
-                &format_args!("{}", self.phy_shutdownz().bit()),
-            )
-            .field("phy_rstz", &format_args!("{}", self.phy_rstz().bit()))
-            .field(
-                "phy_enableclk",
-                &format_args!("{}", self.phy_enableclk().bit()),
-            )
-            .field(
-                "phy_forcepll",
-                &format_args!("{}", self.phy_forcepll().bit()),
-            )
+            .field("phy_shutdownz", &self.phy_shutdownz())
+            .field("phy_rstz", &self.phy_rstz())
+            .field("phy_enableclk", &self.phy_enableclk())
+            .field("phy_forcepll", &self.phy_forcepll())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_RSTZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

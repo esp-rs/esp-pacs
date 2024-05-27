@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_0_ENTRY_CHECK")
-            .field(
-                "core_0_entry_check",
-                &format_args!("{}", self.core_0_entry_check().bits()),
-            )
+            .field("core_0_entry_check", &self.core_0_entry_check())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_ENTRY_CHECK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

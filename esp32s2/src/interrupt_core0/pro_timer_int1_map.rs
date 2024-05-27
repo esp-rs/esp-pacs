@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_TIMER_INT1_MAP")
-            .field(
-                "pro_timer_int1_map",
-                &format_args!("{}", self.pro_timer_int1_map().bits()),
-            )
+            .field("pro_timer_int1_map", &self.pro_timer_int1_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_TIMER_INT1_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

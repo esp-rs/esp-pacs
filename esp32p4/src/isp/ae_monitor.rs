@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_MONITOR")
-            .field("tl", &format_args!("{}", self.tl().bits()))
-            .field("th", &format_args!("{}", self.th().bits()))
-            .field("period", &format_args!("{}", self.period().bits()))
+            .field("tl", &self.tl())
+            .field("th", &self.th())
+            .field("period", &self.period())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AE_MONITOR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

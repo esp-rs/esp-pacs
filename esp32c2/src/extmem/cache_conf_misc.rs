@@ -46,27 +46,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_CONF_MISC")
             .field(
                 "cache_ignore_preload_mmu_entry_fault",
-                &format_args!("{}", self.cache_ignore_preload_mmu_entry_fault().bit()),
+                &self.cache_ignore_preload_mmu_entry_fault(),
             )
             .field(
                 "cache_ignore_sync_mmu_entry_fault",
-                &format_args!("{}", self.cache_ignore_sync_mmu_entry_fault().bit()),
+                &self.cache_ignore_sync_mmu_entry_fault(),
             )
-            .field(
-                "cache_trace_ena",
-                &format_args!("{}", self.cache_trace_ena().bit()),
-            )
-            .field(
-                "cache_mmu_page_size",
-                &format_args!("{}", self.cache_mmu_page_size().bits()),
-            )
+            .field("cache_trace_ena", &self.cache_trace_ena())
+            .field("cache_mmu_page_size", &self.cache_mmu_page_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_MISC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

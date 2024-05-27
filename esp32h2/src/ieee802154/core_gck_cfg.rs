@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_GCK_CFG")
-            .field("dis_pkt_gck", &format_args!("{}", self.dis_pkt_gck().bit()))
-            .field(
-                "dis_ctrl_gck",
-                &format_args!("{}", self.dis_ctrl_gck().bit()),
-            )
+            .field("dis_pkt_gck", &self.dis_pkt_gck())
+            .field("dis_ctrl_gck", &self.dis_ctrl_gck())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_GCK_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

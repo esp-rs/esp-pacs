@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MAIN_BUF1_LOW")
-            .field(
-                "main_timer_buf1_low",
-                &format_args!("{}", self.main_timer_buf1_low().bits()),
-            )
+            .field("main_timer_buf1_low", &self.main_timer_buf1_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MAIN_BUF1_LOW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`main_buf1_low::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

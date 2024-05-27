@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_0_STATUSTABLE4")
-            .field(
-                "core_0_from_world_4",
-                &format_args!("{}", self.core_0_from_world_4().bit()),
-            )
-            .field(
-                "core_0_from_entry_4",
-                &format_args!("{}", self.core_0_from_entry_4().bits()),
-            )
-            .field(
-                "core_0_current_4",
-                &format_args!("{}", self.core_0_current_4().bit()),
-            )
+            .field("core_0_from_world_4", &self.core_0_from_world_4())
+            .field("core_0_from_entry_4", &self.core_0_from_entry_4())
+            .field("core_0_current_4", &self.core_0_current_4())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_STATUSTABLE4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

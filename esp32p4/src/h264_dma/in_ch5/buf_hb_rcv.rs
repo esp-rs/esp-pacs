@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUF_HB_RCV")
-            .field(
-                "in_cmdfifo_buf_hb_rcv",
-                &format_args!("{}", self.in_cmdfifo_buf_hb_rcv().bits()),
-            )
+            .field("in_cmdfifo_buf_hb_rcv", &self.in_cmdfifo_buf_hb_rcv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BUF_HB_RCV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "rx CH5 buf len hb rcv register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buf_hb_rcv::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

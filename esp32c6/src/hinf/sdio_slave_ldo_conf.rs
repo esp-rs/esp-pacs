@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_SLAVE_LDO_CONF")
-            .field(
-                "ldo_ready_ctl_in_en",
-                &format_args!("{}", self.ldo_ready_ctl_in_en().bit()),
-            )
-            .field(
-                "ldo_ready_thres",
-                &format_args!("{}", self.ldo_ready_thres().bits()),
-            )
-            .field(
-                "ldo_ready_ignore_en",
-                &format_args!("{}", self.ldo_ready_ignore_en().bit()),
-            )
+            .field("ldo_ready_ctl_in_en", &self.ldo_ready_ctl_in_en())
+            .field("ldo_ready_thres", &self.ldo_ready_thres())
+            .field("ldo_ready_ignore_en", &self.ldo_ready_ignore_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_LDO_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

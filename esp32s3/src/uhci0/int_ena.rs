@@ -89,31 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("rx_start", &format_args!("{}", self.rx_start().bit()))
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field("tx_hung", &format_args!("{}", self.tx_hung().bit()))
-            .field(
-                "send_s_reg_q",
-                &format_args!("{}", self.send_s_reg_q().bit()),
-            )
-            .field(
-                "send_a_reg_q",
-                &format_args!("{}", self.send_a_reg_q().bit()),
-            )
-            .field(
-                "outlink_eof_err",
-                &format_args!("{}", self.outlink_eof_err().bit()),
-            )
-            .field("app_ctrl0", &format_args!("{}", self.app_ctrl0().bit()))
-            .field("app_ctrl1", &format_args!("{}", self.app_ctrl1().bit()))
+            .field("rx_start", &self.rx_start())
+            .field("tx_start", &self.tx_start())
+            .field("rx_hung", &self.rx_hung())
+            .field("tx_hung", &self.tx_hung())
+            .field("send_s_reg_q", &self.send_s_reg_q())
+            .field("send_a_reg_q", &self.send_a_reg_q())
+            .field("outlink_eof_err", &self.outlink_eof_err())
+            .field("app_ctrl0", &self.app_ctrl0())
+            .field("app_ctrl1", &self.app_ctrl1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

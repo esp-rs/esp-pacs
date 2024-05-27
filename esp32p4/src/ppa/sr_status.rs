@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_STATUS")
-            .field(
-                "sr_rx_dscr_sample_state",
-                &format_args!("{}", self.sr_rx_dscr_sample_state().bits()),
-            )
-            .field(
-                "sr_rx_scan_state",
-                &format_args!("{}", self.sr_rx_scan_state().bits()),
-            )
-            .field(
-                "sr_tx_dscr_sample_state",
-                &format_args!("{}", self.sr_tx_dscr_sample_state().bits()),
-            )
-            .field(
-                "sr_tx_scan_state",
-                &format_args!("{}", self.sr_tx_scan_state().bits()),
-            )
+            .field("sr_rx_dscr_sample_state", &self.sr_rx_dscr_sample_state())
+            .field("sr_rx_scan_state", &self.sr_rx_scan_state())
+            .field("sr_tx_dscr_sample_state", &self.sr_tx_dscr_sample_state())
+            .field("sr_tx_scan_state", &self.sr_tx_scan_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SR FSM register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

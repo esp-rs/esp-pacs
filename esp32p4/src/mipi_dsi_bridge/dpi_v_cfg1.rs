@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_V_CFG1")
-            .field("vbank", &format_args!("{}", self.vbank().bits()))
-            .field("vsync", &format_args!("{}", self.vsync().bits()))
+            .field("vbank", &self.vbank())
+            .field("vsync", &self.vsync())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_V_CFG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

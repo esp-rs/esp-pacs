@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_COEFF")
-            .field("b", &format_args!("{}", self.b().bits()))
-            .field("g", &format_args!("{}", self.g().bits()))
-            .field("r", &format_args!("{}", self.r().bits()))
+            .field("b", &self.b())
+            .field("g", &self.g())
+            .field("r", &self.r())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HIST_COEFF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

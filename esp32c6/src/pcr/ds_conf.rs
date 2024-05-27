@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DS_CONF")
-            .field("ds_clk_en", &format_args!("{}", self.ds_clk_en().bit()))
-            .field("ds_rst_en", &format_args!("{}", self.ds_rst_en().bit()))
+            .field("ds_clk_en", &self.ds_clk_en())
+            .field("ds_rst_en", &self.ds_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DS_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

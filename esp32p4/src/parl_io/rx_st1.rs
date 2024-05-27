@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_ST1")
-            .field(
-                "rx_fifo_rd_bit_cnt",
-                &format_args!("{}", self.rx_fifo_rd_bit_cnt().bits()),
-            )
+            .field("rx_fifo_rd_bit_cnt", &self.rx_fifo_rd_bit_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_ST1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Parallel IO RX status register1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_st1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

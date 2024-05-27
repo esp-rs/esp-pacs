@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_INIT")
-            .field(
-                "reg_tcm_init_en",
-                &format_args!("{}", self.reg_tcm_init_en().bit()),
-            )
-            .field(
-                "reg_tcm_init_cnt_reset",
-                &format_args!("{}", self.reg_tcm_init_cnt_reset().bit()),
-            )
-            .field(
-                "reg_tcm_init_done",
-                &format_args!("{}", self.reg_tcm_init_done().bit()),
-            )
+            .field("reg_tcm_init_en", &self.reg_tcm_init_en())
+            .field("reg_tcm_init_cnt_reset", &self.reg_tcm_init_cnt_reset())
+            .field("reg_tcm_init_done", &self.reg_tcm_init_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_INIT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WDTCONFIG5")
-            .field(
-                "wdt_stg3_hold",
-                &format_args!("{}", self.wdt_stg3_hold().bits()),
-            )
+            .field("wdt_stg3_hold", &self.wdt_stg3_hold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<WDTCONFIG5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

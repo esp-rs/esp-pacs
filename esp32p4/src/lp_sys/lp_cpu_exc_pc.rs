@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CPU_EXC_PC")
-            .field(
-                "lp_cpu_exc_pc",
-                &format_args!("{}", self.lp_cpu_exc_pc().bits()),
-            )
+            .field("lp_cpu_exc_pc", &self.lp_cpu_exc_pc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CPU_EXC_PC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_cpu_exc_pc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

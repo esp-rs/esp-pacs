@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_RSTART_SETUP")
             .field(
                 "reg_scl_rstart_setup_time",
-                &format_args!("{}", self.reg_scl_rstart_setup_time().bits()),
+                &self.reg_scl_rstart_setup_time(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_RSTART_SETUP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

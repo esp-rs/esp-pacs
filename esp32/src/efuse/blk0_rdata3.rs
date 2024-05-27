@@ -97,57 +97,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA3")
-            .field(
-                "rd_disable_app_cpu",
-                &format_args!("{}", self.rd_disable_app_cpu().bit()),
-            )
-            .field(
-                "rd_disable_bt",
-                &format_args!("{}", self.rd_disable_bt().bit()),
-            )
-            .field(
-                "rd_chip_package_4bit",
-                &format_args!("{}", self.rd_chip_package_4bit().bit()),
-            )
-            .field(
-                "rd_dis_cache",
-                &format_args!("{}", self.rd_dis_cache().bit()),
-            )
-            .field(
-                "rd_spi_pad_config_hd",
-                &format_args!("{}", self.rd_spi_pad_config_hd().bits()),
-            )
-            .field(
-                "rd_chip_package",
-                &format_args!("{}", self.rd_chip_package().bits()),
-            )
-            .field(
-                "rd_chip_cpu_freq_low",
-                &format_args!("{}", self.rd_chip_cpu_freq_low().bit()),
-            )
-            .field(
-                "rd_chip_cpu_freq_rated",
-                &format_args!("{}", self.rd_chip_cpu_freq_rated().bit()),
-            )
-            .field(
-                "rd_blk3_part_reserve",
-                &format_args!("{}", self.rd_blk3_part_reserve().bit()),
-            )
-            .field(
-                "rd_chip_ver_rev1",
-                &format_args!("{}", self.rd_chip_ver_rev1().bit()),
-            )
-            .field(
-                "rd_reserve_0_112",
-                &format_args!("{}", self.rd_reserve_0_112().bits()),
-            )
+            .field("rd_disable_app_cpu", &self.rd_disable_app_cpu())
+            .field("rd_disable_bt", &self.rd_disable_bt())
+            .field("rd_chip_package_4bit", &self.rd_chip_package_4bit())
+            .field("rd_dis_cache", &self.rd_dis_cache())
+            .field("rd_spi_pad_config_hd", &self.rd_spi_pad_config_hd())
+            .field("rd_chip_package", &self.rd_chip_package())
+            .field("rd_chip_cpu_freq_low", &self.rd_chip_cpu_freq_low())
+            .field("rd_chip_cpu_freq_rated", &self.rd_chip_cpu_freq_rated())
+            .field("rd_blk3_part_reserve", &self.rd_blk3_part_reserve())
+            .field("rd_chip_ver_rev1", &self.rd_chip_ver_rev1())
+            .field("rd_reserve_0_112", &self.rd_reserve_0_112())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

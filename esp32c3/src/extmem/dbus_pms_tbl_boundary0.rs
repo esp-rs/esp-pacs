@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBUS_PMS_TBL_BOUNDARY0")
-            .field(
-                "dbus_pms_boundary0",
-                &format_args!("{}", self.dbus_pms_boundary0().bits()),
-            )
+            .field("dbus_pms_boundary0", &self.dbus_pms_boundary0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBUS_PMS_TBL_BOUNDARY0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -67,21 +67,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_RLS")
-            .field("gpio0", &format_args!("{}", self.gpio0().bit()))
-            .field("gpio1", &format_args!("{}", self.gpio1().bit()))
-            .field("gpio2", &format_args!("{}", self.gpio2().bit()))
-            .field("gpio3", &format_args!("{}", self.gpio3().bit()))
-            .field("gpio4", &format_args!("{}", self.gpio4().bit()))
-            .field("gpio5", &format_args!("{}", self.gpio5().bit()))
-            .field("gpio6", &format_args!("{}", self.gpio6().bit()))
-            .field("gpio7", &format_args!("{}", self.gpio7().bit()))
+            .field("gpio0", &self.gpio0())
+            .field("gpio1", &self.gpio1())
+            .field("gpio2", &self.gpio2())
+            .field("gpio3", &self.gpio3())
+            .field("gpio4", &self.gpio4())
+            .field("gpio5", &self.gpio5())
+            .field("gpio6", &self.gpio6())
+            .field("gpio7", &self.gpio7())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTR_RLS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

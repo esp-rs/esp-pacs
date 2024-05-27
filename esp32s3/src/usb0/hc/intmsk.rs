@@ -125,35 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTMSK")
-            .field(
-                "xfercomplmsk",
-                &format_args!("{}", self.xfercomplmsk().bit()),
-            )
-            .field("chhltdmsk", &format_args!("{}", self.chhltdmsk().bit()))
-            .field("ahberrmsk", &format_args!("{}", self.ahberrmsk().bit()))
-            .field("stallmsk", &format_args!("{}", self.stallmsk().bit()))
-            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
-            .field("ackmsk", &format_args!("{}", self.ackmsk().bit()))
-            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
-            .field("xacterrmsk", &format_args!("{}", self.xacterrmsk().bit()))
-            .field("bblerrmsk", &format_args!("{}", self.bblerrmsk().bit()))
-            .field("frmovrunmsk", &format_args!("{}", self.frmovrunmsk().bit()))
-            .field(
-                "datatglerrmsk",
-                &format_args!("{}", self.datatglerrmsk().bit()),
-            )
-            .field("bnaintrmsk", &format_args!("{}", self.bnaintrmsk().bit()))
-            .field(
-                "desc_lst_rollintrmsk",
-                &format_args!("{}", self.desc_lst_rollintrmsk().bit()),
-            )
+            .field("xfercomplmsk", &self.xfercomplmsk())
+            .field("chhltdmsk", &self.chhltdmsk())
+            .field("ahberrmsk", &self.ahberrmsk())
+            .field("stallmsk", &self.stallmsk())
+            .field("nakmsk", &self.nakmsk())
+            .field("ackmsk", &self.ackmsk())
+            .field("nyetmsk", &self.nyetmsk())
+            .field("xacterrmsk", &self.xacterrmsk())
+            .field("bblerrmsk", &self.bblerrmsk())
+            .field("frmovrunmsk", &self.frmovrunmsk())
+            .field("datatglerrmsk", &self.datatglerrmsk())
+            .field("bnaintrmsk", &self.bnaintrmsk())
+            .field("desc_lst_rollintrmsk", &self.desc_lst_rollintrmsk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

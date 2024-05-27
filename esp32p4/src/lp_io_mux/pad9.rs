@@ -98,53 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD9")
-            .field(
-                "reg_pad9_drv",
-                &format_args!("{}", self.reg_pad9_drv().bits()),
-            )
-            .field(
-                "reg_pad9_rde",
-                &format_args!("{}", self.reg_pad9_rde().bit()),
-            )
-            .field(
-                "reg_pad9_rue",
-                &format_args!("{}", self.reg_pad9_rue().bit()),
-            )
-            .field(
-                "reg_pad9_mux_sel",
-                &format_args!("{}", self.reg_pad9_mux_sel().bit()),
-            )
-            .field(
-                "reg_pad9_fun_sel",
-                &format_args!("{}", self.reg_pad9_fun_sel().bits()),
-            )
-            .field(
-                "reg_pad9_slp_sel",
-                &format_args!("{}", self.reg_pad9_slp_sel().bit()),
-            )
-            .field(
-                "reg_pad9_slp_ie",
-                &format_args!("{}", self.reg_pad9_slp_ie().bit()),
-            )
-            .field(
-                "reg_pad9_slp_oe",
-                &format_args!("{}", self.reg_pad9_slp_oe().bit()),
-            )
-            .field(
-                "reg_pad9_fun_ie",
-                &format_args!("{}", self.reg_pad9_fun_ie().bit()),
-            )
-            .field(
-                "reg_pad9_filter_en",
-                &format_args!("{}", self.reg_pad9_filter_en().bit()),
-            )
+            .field("reg_pad9_drv", &self.reg_pad9_drv())
+            .field("reg_pad9_rde", &self.reg_pad9_rde())
+            .field("reg_pad9_rue", &self.reg_pad9_rue())
+            .field("reg_pad9_mux_sel", &self.reg_pad9_mux_sel())
+            .field("reg_pad9_fun_sel", &self.reg_pad9_fun_sel())
+            .field("reg_pad9_slp_sel", &self.reg_pad9_slp_sel())
+            .field("reg_pad9_slp_ie", &self.reg_pad9_slp_ie())
+            .field("reg_pad9_slp_oe", &self.reg_pad9_slp_oe())
+            .field("reg_pad9_fun_ie", &self.reg_pad9_fun_ie())
+            .field("reg_pad9_filter_en", &self.reg_pad9_filter_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PAD9_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

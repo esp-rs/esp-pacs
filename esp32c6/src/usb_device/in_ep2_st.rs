@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_EP2_ST")
-            .field(
-                "in_ep2_state",
-                &format_args!("{}", self.in_ep2_state().bits()),
-            )
-            .field(
-                "in_ep2_wr_addr",
-                &format_args!("{}", self.in_ep2_wr_addr().bits()),
-            )
-            .field(
-                "in_ep2_rd_addr",
-                &format_args!("{}", self.in_ep2_rd_addr().bits()),
-            )
+            .field("in_ep2_state", &self.in_ep2_state())
+            .field("in_ep2_wr_addr", &self.in_ep2_wr_addr())
+            .field("in_ep2_rd_addr", &self.in_ep2_rd_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_EP2_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "CDC-ACM interrupt IN endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep2_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

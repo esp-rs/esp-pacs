@@ -78,21 +78,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPCTL")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("usbactep", &format_args!("{}", self.usbactep().bit()))
-            .field("naksts", &format_args!("{}", self.naksts().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("txfnum", &format_args!("{}", self.txfnum().bits()))
-            .field("epdis", &format_args!("{}", self.epdis().bit()))
-            .field("epena", &format_args!("{}", self.epena().bit()))
+            .field("mps", &self.mps())
+            .field("usbactep", &self.usbactep())
+            .field("naksts", &self.naksts())
+            .field("eptype", &self.eptype())
+            .field("stall", &self.stall())
+            .field("txfnum", &self.txfnum())
+            .field("epdis", &self.epdis())
+            .field("epena", &self.epena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIEPCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

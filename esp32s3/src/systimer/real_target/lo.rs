@@ -12,15 +12,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LO")
-            .field("lo_ro", &format_args!("{}", self.lo_ro().bits()))
-            .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("LO").field("lo_ro", &self.lo_ro()).finish()
     }
 }
 #[doc = "system timer comp0 actual target value low register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -71,35 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_FORCE")
-            .field(
-                "cntuforce_upmethod",
-                &format_args!("{}", self.cntuforce_upmethod().bits()),
-            )
-            .field(
-                "a_cntuforce_mode",
-                &format_args!("{}", self.a_cntuforce_mode().bits()),
-            )
-            .field(
-                "b_cntuforce_mode",
-                &format_args!("{}", self.b_cntuforce_mode().bits()),
-            )
-            .field("a_nciforce", &format_args!("{}", self.a_nciforce().bit()))
-            .field(
-                "a_nciforce_mode",
-                &format_args!("{}", self.a_nciforce_mode().bits()),
-            )
-            .field("b_nciforce", &format_args!("{}", self.b_nciforce().bit()))
-            .field(
-                "b_nciforce_mode",
-                &format_args!("{}", self.b_nciforce_mode().bits()),
-            )
+            .field("cntuforce_upmethod", &self.cntuforce_upmethod())
+            .field("a_cntuforce_mode", &self.a_cntuforce_mode())
+            .field("b_cntuforce_mode", &self.b_cntuforce_mode())
+            .field("a_nciforce", &self.a_nciforce())
+            .field("a_nciforce_mode", &self.a_nciforce_mode())
+            .field("b_nciforce", &self.b_nciforce())
+            .field("b_nciforce_mode", &self.b_nciforce_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GEN_FORCE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

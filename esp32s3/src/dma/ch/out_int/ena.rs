@@ -80,39 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENA")
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field(
-                "out_dscr_err",
-                &format_args!("{}", self.out_dscr_err().bit()),
-            )
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
-            .field(
-                "outfifo_ovf_l1",
-                &format_args!("{}", self.outfifo_ovf_l1().bit()),
-            )
-            .field(
-                "outfifo_udf_l1",
-                &format_args!("{}", self.outfifo_udf_l1().bit()),
-            )
-            .field(
-                "outfifo_ovf_l3",
-                &format_args!("{}", self.outfifo_ovf_l3().bit()),
-            )
-            .field(
-                "outfifo_udf_l3",
-                &format_args!("{}", self.outfifo_udf_l3().bit()),
-            )
+            .field("out_done", &self.out_done())
+            .field("out_eof", &self.out_eof())
+            .field("out_dscr_err", &self.out_dscr_err())
+            .field("out_total_eof", &self.out_total_eof())
+            .field("outfifo_ovf_l1", &self.outfifo_ovf_l1())
+            .field("outfifo_udf_l1", &self.outfifo_udf_l1())
+            .field("outfifo_ovf_l3", &self.outfifo_ovf_l3())
+            .field("outfifo_udf_l3", &self.outfifo_udf_l3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

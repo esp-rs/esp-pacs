@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_ROI_REGION4_7_QP")
-            .field(
-                "a_roi_region4_qp",
-                &format_args!("{}", self.a_roi_region4_qp().bits()),
-            )
-            .field(
-                "a_roi_region5_qp",
-                &format_args!("{}", self.a_roi_region5_qp().bits()),
-            )
-            .field(
-                "a_roi_region6_qp",
-                &format_args!("{}", self.a_roi_region6_qp().bits()),
-            )
-            .field(
-                "a_roi_region7_qp",
-                &format_args!("{}", self.a_roi_region7_qp().bits()),
-            )
+            .field("a_roi_region4_qp", &self.a_roi_region4_qp())
+            .field("a_roi_region5_qp", &self.a_roi_region5_qp())
+            .field("a_roi_region6_qp", &self.a_roi_region6_qp())
+            .field("a_roi_region7_qp", &self.a_roi_region7_qp())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_ROI_REGION4_7_QP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

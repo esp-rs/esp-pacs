@@ -55,41 +55,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "lp_addrhole_int_st",
-                &format_args!("{}", self.lp_addrhole_int_st().bit()),
-            )
-            .field(
-                "idbus_addrhole_int_st",
-                &format_args!("{}", self.idbus_addrhole_int_st().bit()),
-            )
+            .field("lp_addrhole_int_st", &self.lp_addrhole_int_st())
+            .field("idbus_addrhole_int_st", &self.idbus_addrhole_int_st())
             .field(
                 "lp_core_ahb_timeout_int_st",
-                &format_args!("{}", self.lp_core_ahb_timeout_int_st().bit()),
+                &self.lp_core_ahb_timeout_int_st(),
             )
             .field(
                 "lp_core_ibus_timeout_int_st",
-                &format_args!("{}", self.lp_core_ibus_timeout_int_st().bit()),
+                &self.lp_core_ibus_timeout_int_st(),
             )
             .field(
                 "lp_core_dbus_timeout_int_st",
-                &format_args!("{}", self.lp_core_dbus_timeout_int_st().bit()),
+                &self.lp_core_dbus_timeout_int_st(),
             )
-            .field(
-                "etm_task_ulp_int_st",
-                &format_args!("{}", self.etm_task_ulp_int_st().bit()),
-            )
-            .field(
-                "slow_clk_tick_int_st",
-                &format_args!("{}", self.slow_clk_tick_int_st().bit()),
-            )
+            .field("etm_task_ulp_int_st", &self.etm_task_ulp_int_st())
+            .field("slow_clk_tick_int_st", &self.slow_clk_tick_int_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "masked interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

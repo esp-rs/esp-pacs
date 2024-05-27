@@ -67,21 +67,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_DLY")
-            .field("ch0", &format_args!("{}", self.ch0().bits()))
-            .field("ch1", &format_args!("{}", self.ch1().bits()))
-            .field("ch2", &format_args!("{}", self.ch2().bits()))
-            .field("ch3", &format_args!("{}", self.ch3().bits()))
-            .field("ch4", &format_args!("{}", self.ch4().bits()))
-            .field("ch5", &format_args!("{}", self.ch5().bits()))
-            .field("ch6", &format_args!("{}", self.ch6().bits()))
-            .field("ch7", &format_args!("{}", self.ch7().bits()))
+            .field("ch0", &self.ch0())
+            .field("ch1", &self.ch1())
+            .field("ch2", &self.ch2())
+            .field("ch3", &self.ch3())
+            .field("ch4", &self.ch4())
+            .field("ch5", &self.ch5())
+            .field("ch6", &self.ch6())
+            .field("ch7", &self.ch7())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_DLY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_CNNT_CNTL")
-            .field(
-                "force_cnnt_reset",
-                &format_args!("{}", self.force_cnnt_reset().bit()),
-            )
-            .field(
-                "force_cnnt_iso",
-                &format_args!("{}", self.force_cnnt_iso().bit()),
-            )
-            .field(
-                "force_cnnt_pu",
-                &format_args!("{}", self.force_cnnt_pu().bit()),
-            )
-            .field(
-                "force_cnnt_no_reset",
-                &format_args!("{}", self.force_cnnt_no_reset().bit()),
-            )
-            .field(
-                "force_cnnt_no_iso",
-                &format_args!("{}", self.force_cnnt_no_iso().bit()),
-            )
-            .field(
-                "force_cnnt_pd",
-                &format_args!("{}", self.force_cnnt_pd().bit()),
-            )
+            .field("force_cnnt_reset", &self.force_cnnt_reset())
+            .field("force_cnnt_iso", &self.force_cnnt_iso())
+            .field("force_cnnt_pu", &self.force_cnnt_pu())
+            .field("force_cnnt_no_reset", &self.force_cnnt_no_reset())
+            .field("force_cnnt_no_iso", &self.force_cnnt_no_iso())
+            .field("force_cnnt_pd", &self.force_cnnt_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_CNNT_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

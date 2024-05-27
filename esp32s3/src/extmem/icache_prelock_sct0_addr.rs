@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_PRELOCK_SCT0_ADDR")
-            .field(
-                "icache_prelock_sct0_addr",
-                &format_args!("{}", self.icache_prelock_sct0_addr().bits()),
-            )
+            .field("icache_prelock_sct0_addr", &self.icache_prelock_sct0_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOCK_SCT0_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

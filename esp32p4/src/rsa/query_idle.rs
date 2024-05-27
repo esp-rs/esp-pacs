@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_IDLE")
-            .field("query_idle", &format_args!("{}", self.query_idle().bit()))
+            .field("query_idle", &self.query_idle())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<QUERY_IDLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Represents the RSA status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_idle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

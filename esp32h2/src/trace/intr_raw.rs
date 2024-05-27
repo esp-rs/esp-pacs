@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_RAW")
-            .field(
-                "fifo_overflow_intr_raw",
-                &format_args!("{}", self.fifo_overflow_intr_raw().bit()),
-            )
-            .field(
-                "mem_full_intr_raw",
-                &format_args!("{}", self.mem_full_intr_raw().bit()),
-            )
+            .field("fifo_overflow_intr_raw", &self.fifo_overflow_intr_raw())
+            .field("mem_full_intr_raw", &self.mem_full_intr_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTR_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

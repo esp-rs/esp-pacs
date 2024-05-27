@@ -37,23 +37,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("FUNC3_IN_SEL_CFG")
             .field(
                 "reg_gpio_func3_in_inv_sel",
-                &format_args!("{}", self.reg_gpio_func3_in_inv_sel().bit()),
+                &self.reg_gpio_func3_in_inv_sel(),
             )
-            .field(
-                "reg_gpio_sig3_in_sel",
-                &format_args!("{}", self.reg_gpio_sig3_in_sel().bit()),
-            )
-            .field(
-                "reg_gpio_func3_in_sel",
-                &format_args!("{}", self.reg_gpio_func3_in_sel().bits()),
-            )
+            .field("reg_gpio_sig3_in_sel", &self.reg_gpio_sig3_in_sel())
+            .field("reg_gpio_func3_in_sel", &self.reg_gpio_func3_in_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FUNC3_IN_SEL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

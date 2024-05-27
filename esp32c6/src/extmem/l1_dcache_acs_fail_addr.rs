@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_DCACHE_ACS_FAIL_ADDR")
-            .field(
-                "l1_cache_fail_addr",
-                &format_args!("{}", self.l1_cache_fail_addr().bits()),
-            )
+            .field("l1_cache_fail_addr", &self.l1_cache_fail_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_DCACHE_ACS_FAIL_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-Cache Access Fail Address information register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dcache_acs_fail_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -27,22 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMING_CALI")
-            .field(
-                "timing_clk_ena",
-                &format_args!("{}", self.timing_clk_ena().bit()),
-            )
-            .field("timing_cali", &format_args!("{}", self.timing_cali().bit()))
-            .field(
-                "extra_dummy_cyclelen",
-                &format_args!("{}", self.extra_dummy_cyclelen().bits()),
-            )
+            .field("timing_clk_ena", &self.timing_clk_ena())
+            .field("timing_cali", &self.timing_cali())
+            .field("extra_dummy_cyclelen", &self.extra_dummy_cyclelen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMING_CALI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI0 timing calibration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timing_cali::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

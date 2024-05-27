@@ -71,41 +71,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_MODEM_DIG_POWER")
-            .field(
-                "hp_modem_vdd_spi_pd_en",
-                &format_args!("{}", self.hp_modem_vdd_spi_pd_en().bit()),
-            )
-            .field(
-                "hp_modem_hp_mem_dslp",
-                &format_args!("{}", self.hp_modem_hp_mem_dslp().bit()),
-            )
-            .field(
-                "hp_modem_pd_hp_mem_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_mem_pd_en().bits()),
-            )
+            .field("hp_modem_vdd_spi_pd_en", &self.hp_modem_vdd_spi_pd_en())
+            .field("hp_modem_hp_mem_dslp", &self.hp_modem_hp_mem_dslp())
+            .field("hp_modem_pd_hp_mem_pd_en", &self.hp_modem_pd_hp_mem_pd_en())
             .field(
                 "hp_modem_pd_hp_wifi_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_wifi_pd_en().bit()),
+                &self.hp_modem_pd_hp_wifi_pd_en(),
             )
-            .field(
-                "hp_modem_pd_hp_cpu_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_cpu_pd_en().bit()),
-            )
-            .field(
-                "hp_modem_pd_hp_aon_pd_en",
-                &format_args!("{}", self.hp_modem_pd_hp_aon_pd_en().bit()),
-            )
-            .field(
-                "hp_modem_pd_top_pd_en",
-                &format_args!("{}", self.hp_modem_pd_top_pd_en().bit()),
-            )
+            .field("hp_modem_pd_hp_cpu_pd_en", &self.hp_modem_pd_hp_cpu_pd_en())
+            .field("hp_modem_pd_hp_aon_pd_en", &self.hp_modem_pd_hp_aon_pd_en())
+            .field("hp_modem_pd_top_pd_en", &self.hp_modem_pd_top_pd_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

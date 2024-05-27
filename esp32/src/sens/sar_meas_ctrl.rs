@@ -71,41 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_MEAS_CTRL")
-            .field(
-                "xpd_sar_amp_fsm",
-                &format_args!("{}", self.xpd_sar_amp_fsm().bits()),
-            )
-            .field(
-                "amp_rst_fb_fsm",
-                &format_args!("{}", self.amp_rst_fb_fsm().bits()),
-            )
-            .field(
-                "amp_short_ref_fsm",
-                &format_args!("{}", self.amp_short_ref_fsm().bits()),
-            )
-            .field(
-                "amp_short_ref_gnd_fsm",
-                &format_args!("{}", self.amp_short_ref_gnd_fsm().bits()),
-            )
-            .field(
-                "xpd_sar_fsm",
-                &format_args!("{}", self.xpd_sar_fsm().bits()),
-            )
-            .field(
-                "sar_rstb_fsm",
-                &format_args!("{}", self.sar_rstb_fsm().bits()),
-            )
-            .field(
-                "sar2_xpd_wait",
-                &format_args!("{}", self.sar2_xpd_wait().bits()),
-            )
+            .field("xpd_sar_amp_fsm", &self.xpd_sar_amp_fsm())
+            .field("amp_rst_fb_fsm", &self.amp_rst_fb_fsm())
+            .field("amp_short_ref_fsm", &self.amp_short_ref_fsm())
+            .field("amp_short_ref_gnd_fsm", &self.amp_short_ref_gnd_fsm())
+            .field("xpd_sar_fsm", &self.xpd_sar_fsm())
+            .field("sar_rstb_fsm", &self.sar_rstb_fsm())
+            .field("sar2_xpd_wait", &self.sar2_xpd_wait())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHB_FREQ_CONF")
-            .field(
-                "ahb_ls_div_num",
-                &format_args!("{}", self.ahb_ls_div_num().bits()),
-            )
-            .field(
-                "ahb_hs_div_num",
-                &format_args!("{}", self.ahb_hs_div_num().bits()),
-            )
+            .field("ahb_ls_div_num", &self.ahb_ls_div_num())
+            .field("ahb_hs_div_num", &self.ahb_hs_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHB_FREQ_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

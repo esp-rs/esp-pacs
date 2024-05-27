@@ -55,18 +55,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGDMA_CONF")
-            .field("flow_err", &format_args!("{}", self.flow_err().bits()))
-            .field("to_mem", &format_args!("{}", self.to_mem().bit()))
-            .field("link_sel", &format_args!("{}", self.link_sel().bits()))
-            .field("to_mem_mac", &format_args!("{}", self.to_mem_mac().bit()))
-            .field("sel_mac", &format_args!("{}", self.sel_mac().bit()))
+            .field("flow_err", &self.flow_err())
+            .field("to_mem", &self.to_mem())
+            .field("link_sel", &self.link_sel())
+            .field("to_mem_mac", &self.to_mem_mac())
+            .field("sel_mac", &self.sel_mac())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGDMA_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

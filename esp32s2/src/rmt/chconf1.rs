@@ -113,39 +113,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHCONF1")
-            .field("tx_start", &format_args!("{}", self.tx_start().bit()))
-            .field("rx_en", &format_args!("{}", self.rx_en().bit()))
-            .field("mem_owner", &format_args!("{}", self.mem_owner().bit()))
-            .field(
-                "tx_conti_mode",
-                &format_args!("{}", self.tx_conti_mode().bit()),
-            )
-            .field(
-                "rx_filter_en",
-                &format_args!("{}", self.rx_filter_en().bit()),
-            )
-            .field(
-                "rx_filter_thres",
-                &format_args!("{}", self.rx_filter_thres().bits()),
-            )
-            .field(
-                "chk_rx_carrier_en",
-                &format_args!("{}", self.chk_rx_carrier_en().bit()),
-            )
-            .field(
-                "ref_always_on",
-                &format_args!("{}", self.ref_always_on().bit()),
-            )
-            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
-            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
-            .field("tx_stop", &format_args!("{}", self.tx_stop().bit()))
+            .field("tx_start", &self.tx_start())
+            .field("rx_en", &self.rx_en())
+            .field("mem_owner", &self.mem_owner())
+            .field("tx_conti_mode", &self.tx_conti_mode())
+            .field("rx_filter_en", &self.rx_filter_en())
+            .field("rx_filter_thres", &self.rx_filter_thres())
+            .field("chk_rx_carrier_en", &self.chk_rx_carrier_en())
+            .field("ref_always_on", &self.ref_always_on())
+            .field("idle_out_lv", &self.idle_out_lv())
+            .field("idle_out_en", &self.idle_out_en())
+            .field("tx_stop", &self.tx_stop())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHCONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

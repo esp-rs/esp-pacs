@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_PMS_VIOLATE_INTR_MAP")
             .field(
                 "backup_pms_violate_intr_map",
-                &format_args!("{}", self.backup_pms_violate_intr_map().bits()),
+                &self.backup_pms_violate_intr_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BACKUP_PMS_VIOLATE_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

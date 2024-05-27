@@ -97,65 +97,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE_CACHESIZE_CONF")
-            .field(
-                "l1_icache_cachesize_256",
-                &format_args!("{}", self.l1_icache_cachesize_256().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_512",
-                &format_args!("{}", self.l1_icache_cachesize_512().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_1k",
-                &format_args!("{}", self.l1_icache_cachesize_1k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_2k",
-                &format_args!("{}", self.l1_icache_cachesize_2k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_4k",
-                &format_args!("{}", self.l1_icache_cachesize_4k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_8k",
-                &format_args!("{}", self.l1_icache_cachesize_8k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_16k",
-                &format_args!("{}", self.l1_icache_cachesize_16k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_32k",
-                &format_args!("{}", self.l1_icache_cachesize_32k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_64k",
-                &format_args!("{}", self.l1_icache_cachesize_64k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_128k",
-                &format_args!("{}", self.l1_icache_cachesize_128k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_256k",
-                &format_args!("{}", self.l1_icache_cachesize_256k().bit()),
-            )
-            .field(
-                "l1_icache_cachesize_512k",
-                &format_args!("{}", self.l1_icache_cachesize_512k().bit()),
-            )
+            .field("l1_icache_cachesize_256", &self.l1_icache_cachesize_256())
+            .field("l1_icache_cachesize_512", &self.l1_icache_cachesize_512())
+            .field("l1_icache_cachesize_1k", &self.l1_icache_cachesize_1k())
+            .field("l1_icache_cachesize_2k", &self.l1_icache_cachesize_2k())
+            .field("l1_icache_cachesize_4k", &self.l1_icache_cachesize_4k())
+            .field("l1_icache_cachesize_8k", &self.l1_icache_cachesize_8k())
+            .field("l1_icache_cachesize_16k", &self.l1_icache_cachesize_16k())
+            .field("l1_icache_cachesize_32k", &self.l1_icache_cachesize_32k())
+            .field("l1_icache_cachesize_64k", &self.l1_icache_cachesize_64k())
+            .field("l1_icache_cachesize_128k", &self.l1_icache_cachesize_128k())
+            .field("l1_icache_cachesize_256k", &self.l1_icache_cachesize_256k())
+            .field("l1_icache_cachesize_512k", &self.l1_icache_cachesize_512k())
             .field(
                 "l1_icache_cachesize_1024k",
-                &format_args!("{}", self.l1_icache_cachesize_1024k().bit()),
+                &self.l1_icache_cachesize_1024k(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE_CACHESIZE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 instruction Cache CacheSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache_cachesize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

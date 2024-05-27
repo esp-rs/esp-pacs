@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DLL_CLK_CONF")
-            .field(
-                "dll_cclk_in_slf_en",
-                &format_args!("{}", self.dll_cclk_in_slf_en().bit()),
-            )
-            .field(
-                "dll_cclk_in_drv_en",
-                &format_args!("{}", self.dll_cclk_in_drv_en().bit()),
-            )
-            .field(
-                "dll_cclk_in_sam_en",
-                &format_args!("{}", self.dll_cclk_in_sam_en().bit()),
-            )
-            .field(
-                "dll_cclk_in_slf_phase",
-                &format_args!("{}", self.dll_cclk_in_slf_phase().bits()),
-            )
-            .field(
-                "dll_cclk_in_drv_phase",
-                &format_args!("{}", self.dll_cclk_in_drv_phase().bits()),
-            )
-            .field(
-                "dll_cclk_in_sam_phase",
-                &format_args!("{}", self.dll_cclk_in_sam_phase().bits()),
-            )
+            .field("dll_cclk_in_slf_en", &self.dll_cclk_in_slf_en())
+            .field("dll_cclk_in_drv_en", &self.dll_cclk_in_drv_en())
+            .field("dll_cclk_in_sam_en", &self.dll_cclk_in_sam_en())
+            .field("dll_cclk_in_slf_phase", &self.dll_cclk_in_slf_phase())
+            .field("dll_cclk_in_drv_phase", &self.dll_cclk_in_drv_phase())
+            .field("dll_cclk_in_sam_phase", &self.dll_cclk_in_sam_phase())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DLL_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

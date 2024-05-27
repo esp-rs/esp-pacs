@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN_CTRL")
-            .field("clk1", &format_args!("{}", self.clk1().bits()))
-            .field("clk2", &format_args!("{}", self.clk2().bits()))
-            .field("clk3", &format_args!("{}", self.clk3().bits()))
+            .field("clk1", &self.clk1())
+            .field("clk2", &self.clk2())
+            .field("clk3", &self.clk3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PIN_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_PRELOAD_INT_CTRL")
-            .field("st", &format_args!("{}", self.st().bit()))
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field(
-                "dcache_preload_int_st",
-                &format_args!("{}", self.dcache_preload_int_st().bit()),
-            )
-            .field(
-                "dcache_preload_int_ena",
-                &format_args!("{}", self.dcache_preload_int_ena().bit()),
-            )
+            .field("st", &self.st())
+            .field("ena", &self.ena())
+            .field("dcache_preload_int_st", &self.dcache_preload_int_st())
+            .field("dcache_preload_int_ena", &self.dcache_preload_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_PRELOAD_INT_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

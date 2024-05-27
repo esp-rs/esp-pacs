@@ -60,37 +60,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPBUS")
-            .field(
-                "fast_mem_wpulse",
-                &format_args!("{}", self.fast_mem_wpulse().bits()),
-            )
-            .field(
-                "fast_mem_wa",
-                &format_args!("{}", self.fast_mem_wa().bits()),
-            )
-            .field(
-                "fast_mem_ra",
-                &format_args!("{}", self.fast_mem_ra().bits()),
-            )
-            .field(
-                "fast_mem_mux_fsm_idle",
-                &format_args!("{}", self.fast_mem_mux_fsm_idle().bit()),
-            )
-            .field(
-                "fast_mem_mux_sel_status",
-                &format_args!("{}", self.fast_mem_mux_sel_status().bit()),
-            )
-            .field(
-                "fast_mem_mux_sel",
-                &format_args!("{}", self.fast_mem_mux_sel().bit()),
-            )
+            .field("fast_mem_wpulse", &self.fast_mem_wpulse())
+            .field("fast_mem_wa", &self.fast_mem_wa())
+            .field("fast_mem_ra", &self.fast_mem_ra())
+            .field("fast_mem_mux_fsm_idle", &self.fast_mem_mux_fsm_idle())
+            .field("fast_mem_mux_sel_status", &self.fast_mem_mux_sel_status())
+            .field("fast_mem_mux_sel", &self.fast_mem_mux_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LPBUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

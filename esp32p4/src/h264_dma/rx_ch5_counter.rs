@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CH5_COUNTER")
-            .field("rx_ch5_cnt", &format_args!("{}", self.rx_ch5_cnt().bits()))
+            .field("rx_ch5_cnt", &self.rx_ch5_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_CH5_COUNTER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "rx ch5 counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_ch5_counter::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

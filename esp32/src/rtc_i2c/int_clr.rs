@@ -46,29 +46,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_CLR")
-            .field(
-                "slave_trans_complete",
-                &format_args!("{}", self.slave_trans_complete().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "master_trans_complete",
-                &format_args!("{}", self.master_trans_complete().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
+            .field("slave_trans_complete", &self.slave_trans_complete())
+            .field("arbitration_lost", &self.arbitration_lost())
+            .field("master_trans_complete", &self.master_trans_complete())
+            .field("trans_complete", &self.trans_complete())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

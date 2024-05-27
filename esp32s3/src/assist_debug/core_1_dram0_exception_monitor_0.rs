@@ -22,19 +22,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_DRAM0_EXCEPTION_MONITOR_0")
             .field(
                 "core_1_dram0_recording_addr_0",
-                &format_args!("{}", self.core_1_dram0_recording_addr_0().bits()),
+                &self.core_1_dram0_recording_addr_0(),
             )
             .field(
                 "core_1_dram0_recording_wr_0",
-                &format_args!("{}", self.core_1_dram0_recording_wr_0().bit()),
+                &self.core_1_dram0_recording_wr_0(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_DRAM0_EXCEPTION_MONITOR_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Core1 bus busy status regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_dram0_exception_monitor_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

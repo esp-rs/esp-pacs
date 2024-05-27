@@ -64,35 +64,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_TIMEOUT_INT_ENA")
             .field(
                 "core0_ahb_timeout_int_ena",
-                &format_args!("{}", self.core0_ahb_timeout_int_ena().bit()),
+                &self.core0_ahb_timeout_int_ena(),
             )
             .field(
                 "core1_ahb_timeout_int_ena",
-                &format_args!("{}", self.core1_ahb_timeout_int_ena().bit()),
+                &self.core1_ahb_timeout_int_ena(),
             )
             .field(
                 "core0_ibus_timeout_int_ena",
-                &format_args!("{}", self.core0_ibus_timeout_int_ena().bit()),
+                &self.core0_ibus_timeout_int_ena(),
             )
             .field(
                 "core1_ibus_timeout_int_ena",
-                &format_args!("{}", self.core1_ibus_timeout_int_ena().bit()),
+                &self.core1_ibus_timeout_int_ena(),
             )
             .field(
                 "core0_dbus_timeout_int_ena",
-                &format_args!("{}", self.core0_dbus_timeout_int_ena().bit()),
+                &self.core0_dbus_timeout_int_ena(),
             )
             .field(
                 "core1_dbus_timeout_int_ena",
-                &format_args!("{}", self.core1_dbus_timeout_int_ena().bit()),
+                &self.core1_dbus_timeout_int_ena(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_TIMEOUT_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

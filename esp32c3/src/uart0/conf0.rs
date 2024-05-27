@@ -251,43 +251,34 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field("parity", &format_args!("{}", self.parity().bit()))
-            .field("parity_en", &format_args!("{}", self.parity_en().bit()))
-            .field("bit_num", &format_args!("{}", self.bit_num().bits()))
-            .field(
-                "stop_bit_num",
-                &format_args!("{}", self.stop_bit_num().bits()),
-            )
-            .field("sw_rts", &format_args!("{}", self.sw_rts().bit()))
-            .field("sw_dtr", &format_args!("{}", self.sw_dtr().bit()))
-            .field("txd_brk", &format_args!("{}", self.txd_brk().bit()))
-            .field("irda_dplx", &format_args!("{}", self.irda_dplx().bit()))
-            .field("irda_tx_en", &format_args!("{}", self.irda_tx_en().bit()))
-            .field("irda_wctl", &format_args!("{}", self.irda_wctl().bit()))
-            .field("irda_tx_inv", &format_args!("{}", self.irda_tx_inv().bit()))
-            .field("irda_rx_inv", &format_args!("{}", self.irda_rx_inv().bit()))
-            .field("loopback", &format_args!("{}", self.loopback().bit()))
-            .field("tx_flow_en", &format_args!("{}", self.tx_flow_en().bit()))
-            .field("irda_en", &format_args!("{}", self.irda_en().bit()))
-            .field("rxfifo_rst", &format_args!("{}", self.rxfifo_rst().bit()))
-            .field("txfifo_rst", &format_args!("{}", self.txfifo_rst().bit()))
-            .field("rxd_inv", &format_args!("{}", self.rxd_inv().bit()))
-            .field("cts_inv", &format_args!("{}", self.cts_inv().bit()))
-            .field("dsr_inv", &format_args!("{}", self.dsr_inv().bit()))
-            .field("txd_inv", &format_args!("{}", self.txd_inv().bit()))
-            .field("rts_inv", &format_args!("{}", self.rts_inv().bit()))
-            .field("dtr_inv", &format_args!("{}", self.dtr_inv().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field("err_wr_mask", &format_args!("{}", self.err_wr_mask().bit()))
-            .field("autobaud_en", &format_args!("{}", self.autobaud_en().bit()))
-            .field("mem_clk_en", &format_args!("{}", self.mem_clk_en().bit()))
+            .field("parity", &self.parity())
+            .field("parity_en", &self.parity_en())
+            .field("bit_num", &self.bit_num())
+            .field("stop_bit_num", &self.stop_bit_num())
+            .field("sw_rts", &self.sw_rts())
+            .field("sw_dtr", &self.sw_dtr())
+            .field("txd_brk", &self.txd_brk())
+            .field("irda_dplx", &self.irda_dplx())
+            .field("irda_tx_en", &self.irda_tx_en())
+            .field("irda_wctl", &self.irda_wctl())
+            .field("irda_tx_inv", &self.irda_tx_inv())
+            .field("irda_rx_inv", &self.irda_rx_inv())
+            .field("loopback", &self.loopback())
+            .field("tx_flow_en", &self.tx_flow_en())
+            .field("irda_en", &self.irda_en())
+            .field("rxfifo_rst", &self.rxfifo_rst())
+            .field("txfifo_rst", &self.txfifo_rst())
+            .field("rxd_inv", &self.rxd_inv())
+            .field("cts_inv", &self.cts_inv())
+            .field("dsr_inv", &self.dsr_inv())
+            .field("txd_inv", &self.txd_inv())
+            .field("rts_inv", &self.rts_inv())
+            .field("dtr_inv", &self.dtr_inv())
+            .field("clk_en", &self.clk_en())
+            .field("err_wr_mask", &self.err_wr_mask())
+            .field("autobaud_en", &self.autobaud_en())
+            .field("mem_clk_en", &self.mem_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

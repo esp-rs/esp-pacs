@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAME_CODE_LENGTH")
-            .field(
-                "frame_code_length",
-                &format_args!("{}", self.frame_code_length().bits()),
-            )
+            .field("frame_code_length", &self.frame_code_length())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FRAME_CODE_LENGTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Frame code byte length register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frame_code_length::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

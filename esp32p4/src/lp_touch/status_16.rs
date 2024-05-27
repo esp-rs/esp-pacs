@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_16")
-            .field(
-                "approach_pad2_cnt",
-                &format_args!("{}", self.approach_pad2_cnt().bits()),
-            )
-            .field(
-                "approach_pad1_cnt",
-                &format_args!("{}", self.approach_pad1_cnt().bits()),
-            )
-            .field(
-                "approach_pad0_cnt",
-                &format_args!("{}", self.approach_pad0_cnt().bits()),
-            )
-            .field(
-                "slp_approach_cnt",
-                &format_args!("{}", self.slp_approach_cnt().bits()),
-            )
+            .field("approach_pad2_cnt", &self.approach_pad2_cnt())
+            .field("approach_pad1_cnt", &self.approach_pad1_cnt())
+            .field("approach_pad0_cnt", &self.approach_pad0_cnt())
+            .field("slp_approach_cnt", &self.slp_approach_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_16_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_16::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

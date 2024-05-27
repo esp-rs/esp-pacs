@@ -134,33 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT")
-            .field("xfercompl", &format_args!("{}", self.xfercompl().bit()))
-            .field("chhltd", &format_args!("{}", self.chhltd().bit()))
-            .field("ahberr", &format_args!("{}", self.ahberr().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("nack", &format_args!("{}", self.nack().bit()))
-            .field("ack", &format_args!("{}", self.ack().bit()))
-            .field("nyet", &format_args!("{}", self.nyet().bit()))
-            .field("xacterr", &format_args!("{}", self.xacterr().bit()))
-            .field("bblerr", &format_args!("{}", self.bblerr().bit()))
-            .field("frmovrun", &format_args!("{}", self.frmovrun().bit()))
-            .field("datatglerr", &format_args!("{}", self.datatglerr().bit()))
-            .field("bnaintr", &format_args!("{}", self.bnaintr().bit()))
-            .field(
-                "xcs_xact_err",
-                &format_args!("{}", self.xcs_xact_err().bit()),
-            )
-            .field(
-                "desc_lst_rollintr",
-                &format_args!("{}", self.desc_lst_rollintr().bit()),
-            )
+            .field("xfercompl", &self.xfercompl())
+            .field("chhltd", &self.chhltd())
+            .field("ahberr", &self.ahberr())
+            .field("stall", &self.stall())
+            .field("nack", &self.nack())
+            .field("ack", &self.ack())
+            .field("nyet", &self.nyet())
+            .field("xacterr", &self.xacterr())
+            .field("bblerr", &self.bblerr())
+            .field("frmovrun", &self.frmovrun())
+            .field("datatglerr", &self.datatglerr())
+            .field("bnaintr", &self.bnaintr())
+            .field("xcs_xact_err", &self.xcs_xact_err())
+            .field("desc_lst_rollintr", &self.desc_lst_rollintr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

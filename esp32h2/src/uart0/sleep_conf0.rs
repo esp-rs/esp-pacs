@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLEEP_CONF0")
-            .field("wk_char1", &format_args!("{}", self.wk_char1().bits()))
-            .field("wk_char2", &format_args!("{}", self.wk_char2().bits()))
-            .field("wk_char3", &format_args!("{}", self.wk_char3().bits()))
-            .field("wk_char4", &format_args!("{}", self.wk_char4().bits()))
+            .field("wk_char1", &self.wk_char1())
+            .field("wk_char2", &self.wk_char2())
+            .field("wk_char3", &self.wk_char3())
+            .field("wk_char4", &self.wk_char4())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

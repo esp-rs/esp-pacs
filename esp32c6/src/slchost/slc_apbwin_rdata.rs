@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLC_APBWIN_RDATA")
-            .field(
-                "slc_apbwin_rdata",
-                &format_args!("{}", self.slc_apbwin_rdata().bits()),
-            )
+            .field("slc_apbwin_rdata", &self.slc_apbwin_rdata())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLC_APBWIN_RDATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc_apbwin_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

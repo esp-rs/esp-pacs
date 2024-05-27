@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_AUTOLOAD_SCT2_ADDR")
             .field(
                 "l2_cache_autoload_sct2_addr",
-                &format_args!("{}", self.l2_cache_autoload_sct2_addr().bits()),
+                &self.l2_cache_autoload_sct2_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_AUTOLOAD_SCT2_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

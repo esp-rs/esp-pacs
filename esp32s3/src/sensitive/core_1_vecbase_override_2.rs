@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_VECBASE_OVERRIDE_2")
             .field(
                 "core_1_vecbase_override_world1_value",
-                &format_args!("{}", self.core_1_vecbase_override_world1_value().bits()),
+                &self.core_1_vecbase_override_world1_value(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_VECBASE_OVERRIDE_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

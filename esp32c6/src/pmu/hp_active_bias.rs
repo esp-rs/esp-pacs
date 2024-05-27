@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_BIAS")
-            .field(
-                "hp_active_xpd_bias",
-                &format_args!("{}", self.hp_active_xpd_bias().bit()),
-            )
-            .field(
-                "hp_active_dbg_atten",
-                &format_args!("{}", self.hp_active_dbg_atten().bits()),
-            )
-            .field(
-                "hp_active_pd_cur",
-                &format_args!("{}", self.hp_active_pd_cur().bit()),
-            )
-            .field("sleep", &format_args!("{}", self.sleep().bit()))
+            .field("hp_active_xpd_bias", &self.hp_active_xpd_bias())
+            .field("hp_active_dbg_atten", &self.hp_active_dbg_atten())
+            .field("hp_active_pd_cur", &self.hp_active_pd_cur())
+            .field("sleep", &self.sleep())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_BIAS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -41,22 +41,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IMM_PAD_HOLD_ALL")
-            .field("pad_slp_sel", &format_args!("{}", self.pad_slp_sel().bit()))
-            .field(
-                "lp_pad_hold_all",
-                &format_args!("{}", self.lp_pad_hold_all().bit()),
-            )
-            .field(
-                "hp_pad_hold_all",
-                &format_args!("{}", self.hp_pad_hold_all().bit()),
-            )
+            .field("pad_slp_sel", &self.pad_slp_sel())
+            .field("lp_pad_hold_all", &self.lp_pad_hold_all())
+            .field("hp_pad_hold_all", &self.hp_pad_hold_all())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IMM_PAD_HOLD_ALL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

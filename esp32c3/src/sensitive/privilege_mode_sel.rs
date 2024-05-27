@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRIVILEGE_MODE_SEL")
-            .field(
-                "privilege_mode_sel",
-                &format_args!("{}", self.privilege_mode_sel().bit()),
-            )
+            .field("privilege_mode_sel", &self.privilege_mode_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRIVILEGE_MODE_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

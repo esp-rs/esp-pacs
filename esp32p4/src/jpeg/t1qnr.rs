@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("T1QNR")
-            .field(
-                "chrominance_qnr_val",
-                &format_args!("{}", self.chrominance_qnr_val().bits()),
-            )
+            .field("chrominance_qnr_val", &self.chrominance_qnr_val())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<T1QNR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t1qnr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

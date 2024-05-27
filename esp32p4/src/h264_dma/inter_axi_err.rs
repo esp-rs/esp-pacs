@@ -55,41 +55,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTER_AXI_ERR")
-            .field(
-                "inter_rid_err_cnt",
-                &format_args!("{}", self.inter_rid_err_cnt().bits()),
-            )
-            .field(
-                "inter_rresp_err_cnt",
-                &format_args!("{}", self.inter_rresp_err_cnt().bits()),
-            )
-            .field(
-                "inter_wresp_err_cnt",
-                &format_args!("{}", self.inter_wresp_err_cnt().bits()),
-            )
-            .field(
-                "inter_rd_fifo_cnt",
-                &format_args!("{}", self.inter_rd_fifo_cnt().bits()),
-            )
-            .field(
-                "inter_rd_bak_fifo_cnt",
-                &format_args!("{}", self.inter_rd_bak_fifo_cnt().bits()),
-            )
-            .field(
-                "inter_wr_fifo_cnt",
-                &format_args!("{}", self.inter_wr_fifo_cnt().bits()),
-            )
-            .field(
-                "inter_wr_bak_fifo_cnt",
-                &format_args!("{}", self.inter_wr_bak_fifo_cnt().bits()),
-            )
+            .field("inter_rid_err_cnt", &self.inter_rid_err_cnt())
+            .field("inter_rresp_err_cnt", &self.inter_rresp_err_cnt())
+            .field("inter_wresp_err_cnt", &self.inter_wresp_err_cnt())
+            .field("inter_rd_fifo_cnt", &self.inter_rd_fifo_cnt())
+            .field("inter_rd_bak_fifo_cnt", &self.inter_rd_bak_fifo_cnt())
+            .field("inter_wr_fifo_cnt", &self.inter_wr_fifo_cnt())
+            .field("inter_wr_bak_fifo_cnt", &self.inter_wr_bak_fifo_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTER_AXI_ERR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "inter memory axi err register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inter_axi_err::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

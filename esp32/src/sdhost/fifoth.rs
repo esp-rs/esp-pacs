@@ -35,19 +35,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFOTH")
-            .field("tx_wmark", &format_args!("{}", self.tx_wmark().bits()))
-            .field("rx_wmark", &format_args!("{}", self.rx_wmark().bits()))
+            .field("tx_wmark", &self.tx_wmark())
+            .field("rx_wmark", &self.rx_wmark())
             .field(
                 "dma_multiple_transaction_size",
-                &format_args!("{}", self.dma_multiple_transaction_size().bits()),
+                &self.dma_multiple_transaction_size(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFOTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

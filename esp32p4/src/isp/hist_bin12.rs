@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_BIN12")
-            .field(
-                "hist_bin_12",
-                &format_args!("{}", self.hist_bin_12().bits()),
-            )
+            .field("hist_bin_12", &self.hist_bin_12())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HIST_BIN12_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "result of histogram bin 12\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hist_bin12::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

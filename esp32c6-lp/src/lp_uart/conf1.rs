@@ -80,27 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field(
-                "rxfifo_full_thrhd",
-                &format_args!("{}", self.rxfifo_full_thrhd().bits()),
-            )
-            .field(
-                "txfifo_empty_thrhd",
-                &format_args!("{}", self.txfifo_empty_thrhd().bits()),
-            )
-            .field("cts_inv", &format_args!("{}", self.cts_inv().bit()))
-            .field("dsr_inv", &format_args!("{}", self.dsr_inv().bit()))
-            .field("rts_inv", &format_args!("{}", self.rts_inv().bit()))
-            .field("dtr_inv", &format_args!("{}", self.dtr_inv().bit()))
-            .field("sw_dtr", &format_args!("{}", self.sw_dtr().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("rxfifo_full_thrhd", &self.rxfifo_full_thrhd())
+            .field("txfifo_empty_thrhd", &self.txfifo_empty_thrhd())
+            .field("cts_inv", &self.cts_inv())
+            .field("dsr_inv", &self.dsr_inv())
+            .field("rts_inv", &self.rts_inv())
+            .field("dtr_inv", &self.dtr_inv())
+            .field("sw_dtr", &self.sw_dtr())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

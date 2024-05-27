@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_MEM_AHB_BUFFER_CTRL")
-            .field(
-                "l2_mem_ahb_wrbuffer_en",
-                &format_args!("{}", self.l2_mem_ahb_wrbuffer_en().bit()),
-            )
-            .field(
-                "l2_mem_ahb_rdbuffer_en",
-                &format_args!("{}", self.l2_mem_ahb_rdbuffer_en().bit()),
-            )
+            .field("l2_mem_ahb_wrbuffer_en", &self.l2_mem_ahb_wrbuffer_en())
+            .field("l2_mem_ahb_rdbuffer_en", &self.l2_mem_ahb_rdbuffer_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_AHB_BUFFER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

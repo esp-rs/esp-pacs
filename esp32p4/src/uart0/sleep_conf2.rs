@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLEEP_CONF2")
-            .field(
-                "active_threshold",
-                &format_args!("{}", self.active_threshold().bits()),
-            )
-            .field(
-                "rx_wake_up_thrhd",
-                &format_args!("{}", self.rx_wake_up_thrhd().bits()),
-            )
-            .field(
-                "wk_char_num",
-                &format_args!("{}", self.wk_char_num().bits()),
-            )
-            .field(
-                "wk_char_mask",
-                &format_args!("{}", self.wk_char_mask().bits()),
-            )
-            .field(
-                "wk_mode_sel",
-                &format_args!("{}", self.wk_mode_sel().bits()),
-            )
+            .field("active_threshold", &self.active_threshold())
+            .field("rx_wake_up_thrhd", &self.rx_wake_up_thrhd())
+            .field("wk_char_num", &self.wk_char_num())
+            .field("wk_char_mask", &self.wk_char_mask())
+            .field("wk_mode_sel", &self.wk_mode_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLEEP_CONF2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -37,25 +37,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_ULP_CP_TIMER")
-            .field(
-                "ulp_cp_pc_init",
-                &format_args!("{}", self.ulp_cp_pc_init().bits()),
-            )
-            .field(
-                "ulp_cp_gpio_wakeup_ena",
-                &format_args!("{}", self.ulp_cp_gpio_wakeup_ena().bit()),
-            )
-            .field(
-                "ulp_cp_slp_timer_en",
-                &format_args!("{}", self.ulp_cp_slp_timer_en().bit()),
-            )
+            .field("ulp_cp_pc_init", &self.ulp_cp_pc_init())
+            .field("ulp_cp_gpio_wakeup_ena", &self.ulp_cp_gpio_wakeup_ena())
+            .field("ulp_cp_slp_timer_en", &self.ulp_cp_slp_timer_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_ULP_CP_TIMER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

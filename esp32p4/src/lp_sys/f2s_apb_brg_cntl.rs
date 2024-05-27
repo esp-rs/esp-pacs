@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("F2S_APB_BRG_CNTL")
-            .field(
-                "f2s_apb_postw_en",
-                &format_args!("{}", self.f2s_apb_postw_en().bit()),
-            )
+            .field("f2s_apb_postw_en", &self.f2s_apb_postw_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<F2S_APB_BRG_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

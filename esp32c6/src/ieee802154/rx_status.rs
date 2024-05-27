@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_STATUS")
-            .field(
-                "filter_fail_status",
-                &format_args!("{}", self.filter_fail_status().bits()),
-            )
-            .field(
-                "rx_abort_status",
-                &format_args!("{}", self.rx_abort_status().bits()),
-            )
-            .field("rx_state", &format_args!("{}", self.rx_state().bits()))
-            .field(
-                "preamble_match",
-                &format_args!("{}", self.preamble_match().bit()),
-            )
-            .field("sfd_match", &format_args!("{}", self.sfd_match().bit()))
+            .field("filter_fail_status", &self.filter_fail_status())
+            .field("rx_abort_status", &self.rx_abort_status())
+            .field("rx_state", &self.rx_state())
+            .field("preamble_match", &self.preamble_match())
+            .field("sfd_match", &self.sfd_match())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

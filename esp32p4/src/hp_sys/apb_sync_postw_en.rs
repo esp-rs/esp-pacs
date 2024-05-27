@@ -44,29 +44,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_SYNC_POSTW_EN")
-            .field(
-                "gmac_apb_postw_en",
-                &format_args!("{}", self.gmac_apb_postw_en().bit()),
-            )
-            .field(
-                "dsi_host_apb_postw_en",
-                &format_args!("{}", self.dsi_host_apb_postw_en().bit()),
-            )
+            .field("gmac_apb_postw_en", &self.gmac_apb_postw_en())
+            .field("dsi_host_apb_postw_en", &self.dsi_host_apb_postw_en())
             .field(
                 "csi_host_apb_sync_postw_en",
-                &format_args!("{}", self.csi_host_apb_sync_postw_en().bit()),
+                &self.csi_host_apb_sync_postw_en(),
             )
             .field(
                 "csi_host_apb_async_postw_en",
-                &format_args!("{}", self.csi_host_apb_async_postw_en().bit()),
+                &self.csi_host_apb_async_postw_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_SYNC_POSTW_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

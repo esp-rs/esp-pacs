@@ -46,23 +46,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_TRANS_MODE")
-            .field("blend_en", &format_args!("{}", self.blend_en().bit()))
-            .field(
-                "blend_bypass",
-                &format_args!("{}", self.blend_bypass().bit()),
-            )
-            .field(
-                "blend_fix_pixel_fill_en",
-                &format_args!("{}", self.blend_fix_pixel_fill_en().bit()),
-            )
-            .field("blend_rst", &format_args!("{}", self.blend_rst().bit()))
+            .field("blend_en", &self.blend_en())
+            .field("blend_bypass", &self.blend_bypass())
+            .field("blend_fix_pixel_fill_en", &self.blend_fix_pixel_fill_en())
+            .field("blend_rst", &self.blend_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLEND_TRANS_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

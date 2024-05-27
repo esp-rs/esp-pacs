@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_CTRL1")
-            .field(
-                "filter_factor1",
-                &format_args!("{}", self.filter_factor1().bits()),
-            )
-            .field(
-                "filter_factor0",
-                &format_args!("{}", self.filter_factor0().bits()),
-            )
+            .field("filter_factor1", &self.filter_factor1())
+            .field("filter_factor0", &self.filter_factor0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

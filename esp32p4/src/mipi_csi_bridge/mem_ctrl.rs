@@ -28,19 +28,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_CTRL")
             .field(
                 "csi_bridge_mem_clk_force_on",
-                &format_args!("{}", self.csi_bridge_mem_clk_force_on().bit()),
+                &self.csi_bridge_mem_clk_force_on(),
             )
-            .field(
-                "csi_mem_aux_ctrl",
-                &format_args!("{}", self.csi_mem_aux_ctrl().bits()),
-            )
+            .field("csi_mem_aux_ctrl", &self.csi_mem_aux_ctrl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

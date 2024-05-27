@@ -52,25 +52,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMS_REJECT")
-            .field(
-                "reject_addr",
-                &format_args!("{}", self.reject_addr().bits()),
-            )
-            .field("pm_en", &format_args!("{}", self.pm_en().bit()))
-            .field("pms_ld", &format_args!("{}", self.pms_ld().bit()))
-            .field("pms_st", &format_args!("{}", self.pms_st().bit()))
-            .field(
-                "pms_multi_hit",
-                &format_args!("{}", self.pms_multi_hit().bit()),
-            )
-            .field("pms_ivd", &format_args!("{}", self.pms_ivd().bit()))
+            .field("reject_addr", &self.reject_addr())
+            .field("pm_en", &self.pm_en())
+            .field("pms_ld", &self.pms_ld())
+            .field("pms_st", &self.pms_st())
+            .field("pms_multi_hit", &self.pms_multi_hit())
+            .field("pms_ivd", &self.pms_ivd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PMS_REJECT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

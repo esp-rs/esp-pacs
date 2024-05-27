@@ -20,15 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RDATAH")
-            .field("data_lsb", &format_args!("{}", self.data_lsb().bits()))
-            .field("data_msb", &format_args!("{}", self.data_msb().bits()))
+            .field("data_lsb", &self.data_lsb())
+            .field("data_msb", &self.data_msb())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RDATAH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Read Half-word Data (from-bus) register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rdatah::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

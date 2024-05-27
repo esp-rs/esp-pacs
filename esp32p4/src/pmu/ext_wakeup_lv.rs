@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP_LV")
-            .field(
-                "ext_wakeup_lv",
-                &format_args!("{}", self.ext_wakeup_lv().bits()),
-            )
+            .field("ext_wakeup_lv", &self.ext_wakeup_lv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP_LV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

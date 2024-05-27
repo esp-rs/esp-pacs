@@ -83,57 +83,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD_PKT_STATUS")
-            .field(
-                "gen_cmd_empty",
-                &format_args!("{}", self.gen_cmd_empty().bit()),
-            )
-            .field(
-                "gen_cmd_full",
-                &format_args!("{}", self.gen_cmd_full().bit()),
-            )
-            .field(
-                "gen_pld_w_empty",
-                &format_args!("{}", self.gen_pld_w_empty().bit()),
-            )
-            .field(
-                "gen_pld_w_full",
-                &format_args!("{}", self.gen_pld_w_full().bit()),
-            )
-            .field(
-                "gen_pld_r_empty",
-                &format_args!("{}", self.gen_pld_r_empty().bit()),
-            )
-            .field(
-                "gen_pld_r_full",
-                &format_args!("{}", self.gen_pld_r_full().bit()),
-            )
-            .field(
-                "gen_rd_cmd_busy",
-                &format_args!("{}", self.gen_rd_cmd_busy().bit()),
-            )
-            .field(
-                "gen_buff_cmd_empty",
-                &format_args!("{}", self.gen_buff_cmd_empty().bit()),
-            )
-            .field(
-                "gen_buff_cmd_full",
-                &format_args!("{}", self.gen_buff_cmd_full().bit()),
-            )
-            .field(
-                "gen_buff_pld_empty",
-                &format_args!("{}", self.gen_buff_pld_empty().bit()),
-            )
-            .field(
-                "gen_buff_pld_full",
-                &format_args!("{}", self.gen_buff_pld_full().bit()),
-            )
+            .field("gen_cmd_empty", &self.gen_cmd_empty())
+            .field("gen_cmd_full", &self.gen_cmd_full())
+            .field("gen_pld_w_empty", &self.gen_pld_w_empty())
+            .field("gen_pld_w_full", &self.gen_pld_w_full())
+            .field("gen_pld_r_empty", &self.gen_pld_r_empty())
+            .field("gen_pld_r_full", &self.gen_pld_r_full())
+            .field("gen_rd_cmd_busy", &self.gen_rd_cmd_busy())
+            .field("gen_buff_cmd_empty", &self.gen_buff_cmd_empty())
+            .field("gen_buff_cmd_full", &self.gen_buff_cmd_full())
+            .field("gen_buff_pld_empty", &self.gen_buff_pld_empty())
+            .field("gen_buff_pld_full", &self.gen_buff_pld_full())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMD_PKT_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd_pkt_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

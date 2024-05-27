@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_6")
             .field(
                 "backup_bus_pms_constrain_rtcfast_l",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_l().bits()),
+                &self.backup_bus_pms_constrain_rtcfast_l(),
             )
             .field(
                 "backup_bus_pms_constrain_rtcfast_h",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtcfast_h().bits()),
+                &self.backup_bus_pms_constrain_rtcfast_h(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

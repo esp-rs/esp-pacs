@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PSRAM_FLASH_ADDR_INTERCHANGE")
-            .field("cpu", &format_args!("{}", self.cpu().bit()))
-            .field("dma", &format_args!("{}", self.dma().bit()))
+            .field("cpu", &self.cpu())
+            .field("dma", &self.dma())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PSRAM_FLASH_ADDR_INTERCHANGE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

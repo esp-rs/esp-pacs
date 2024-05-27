@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EDMA_PMS_RMT")
-            .field("attr1", &format_args!("{}", self.attr1().bits()))
-            .field("attr2", &format_args!("{}", self.attr2().bits()))
+            .field("attr1", &self.attr1())
+            .field("attr2", &self.attr2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_RMT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

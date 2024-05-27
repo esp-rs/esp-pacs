@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_INTRUSION_CTRL")
             .field(
                 "pro_intrusion_record_reset_n",
-                &format_args!("{}", self.pro_intrusion_record_reset_n().bit()),
+                &self.pro_intrusion_record_reset_n(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_INTRUSION_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

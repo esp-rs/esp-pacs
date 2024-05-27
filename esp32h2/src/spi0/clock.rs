@@ -44,20 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLOCK")
-            .field("clkcnt_l", &format_args!("{}", self.clkcnt_l().bits()))
-            .field("clkcnt_h", &format_args!("{}", self.clkcnt_h().bits()))
-            .field("clkcnt_n", &format_args!("{}", self.clkcnt_n().bits()))
-            .field(
-                "clk_equ_sysclk",
-                &format_args!("{}", self.clk_equ_sysclk().bit()),
-            )
+            .field("clkcnt_l", &self.clkcnt_l())
+            .field("clkcnt_h", &self.clkcnt_h())
+            .field("clkcnt_n", &self.clkcnt_n())
+            .field("clk_equ_sysclk", &self.clk_equ_sysclk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLOCK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLC_APBWIN_CONF")
-            .field(
-                "host_slc_apbwin_addr",
-                &format_args!("{}", self.host_slc_apbwin_addr().bits()),
-            )
-            .field(
-                "host_slc_apbwin_wr",
-                &format_args!("{}", self.host_slc_apbwin_wr().bit()),
-            )
-            .field(
-                "host_slc_apbwin_start",
-                &format_args!("{}", self.host_slc_apbwin_start().bit()),
-            )
+            .field("host_slc_apbwin_addr", &self.host_slc_apbwin_addr())
+            .field("host_slc_apbwin_wr", &self.host_slc_apbwin_wr())
+            .field("host_slc_apbwin_start", &self.host_slc_apbwin_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_SLC_APBWIN_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -83,22 +83,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FAULT_DETECT")
-            .field("f0_en", &format_args!("{}", self.f0_en().bit()))
-            .field("f1_en", &format_args!("{}", self.f1_en().bit()))
-            .field("f2_en", &format_args!("{}", self.f2_en().bit()))
-            .field("f0_pole", &format_args!("{}", self.f0_pole().bit()))
-            .field("f1_pole", &format_args!("{}", self.f1_pole().bit()))
-            .field("f2_pole", &format_args!("{}", self.f2_pole().bit()))
-            .field("event_f0", &format_args!("{}", self.event_f0().bit()))
-            .field("event_f1", &format_args!("{}", self.event_f1().bit()))
-            .field("event_f2", &format_args!("{}", self.event_f2().bit()))
+            .field("f0_en", &self.f0_en())
+            .field("f1_en", &self.f1_en())
+            .field("f2_en", &self.f2_en())
+            .field("f0_pole", &self.f0_pole())
+            .field("f1_pole", &self.f1_pole())
+            .field("f2_pole", &self.f2_pole())
+            .field("event_f0", &self.event_f0())
+            .field("event_f1", &self.event_f1())
+            .field("event_f2", &self.event_f2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FAULT_DETECT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

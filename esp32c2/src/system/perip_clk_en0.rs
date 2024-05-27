@@ -107,48 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_CLK_EN0")
-            .field(
-                "spi01_clk_en",
-                &format_args!("{}", self.spi01_clk_en().bit()),
-            )
-            .field("uart_clk_en", &format_args!("{}", self.uart_clk_en().bit()))
-            .field(
-                "uart1_clk_en",
-                &format_args!("{}", self.uart1_clk_en().bit()),
-            )
-            .field("spi2_clk_en", &format_args!("{}", self.spi2_clk_en().bit()))
-            .field(
-                "i2c_ext0_clk_en",
-                &format_args!("{}", self.i2c_ext0_clk_en().bit()),
-            )
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field(
-                "timergroup_clk_en",
-                &format_args!("{}", self.timergroup_clk_en().bit()),
-            )
-            .field(
-                "uart_mem_clk_en",
-                &format_args!("{}", self.uart_mem_clk_en().bit()),
-            )
-            .field(
-                "apb_saradc_clk_en",
-                &format_args!("{}", self.apb_saradc_clk_en().bit()),
-            )
-            .field(
-                "systimer_clk_en",
-                &format_args!("{}", self.systimer_clk_en().bit()),
-            )
-            .field(
-                "adc2_arb_clk_en",
-                &format_args!("{}", self.adc2_arb_clk_en().bit()),
-            )
+            .field("spi01_clk_en", &self.spi01_clk_en())
+            .field("uart_clk_en", &self.uart_clk_en())
+            .field("uart1_clk_en", &self.uart1_clk_en())
+            .field("spi2_clk_en", &self.spi2_clk_en())
+            .field("i2c_ext0_clk_en", &self.i2c_ext0_clk_en())
+            .field("ledc_clk_en", &self.ledc_clk_en())
+            .field("timergroup_clk_en", &self.timergroup_clk_en())
+            .field("uart_mem_clk_en", &self.uart_mem_clk_en())
+            .field("apb_saradc_clk_en", &self.apb_saradc_clk_en())
+            .field("systimer_clk_en", &self.systimer_clk_en())
+            .field("adc2_arb_clk_en", &self.adc2_arb_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

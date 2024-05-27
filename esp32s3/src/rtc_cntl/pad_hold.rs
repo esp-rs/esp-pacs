@@ -206,80 +206,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PAD_HOLD")
-            .field(
-                "touch_pad0_hold",
-                &format_args!("{}", self.touch_pad0_hold().bit()),
-            )
-            .field(
-                "touch_pad1_hold",
-                &format_args!("{}", self.touch_pad1_hold().bit()),
-            )
-            .field(
-                "touch_pad2_hold",
-                &format_args!("{}", self.touch_pad2_hold().bit()),
-            )
-            .field(
-                "touch_pad3_hold",
-                &format_args!("{}", self.touch_pad3_hold().bit()),
-            )
-            .field(
-                "touch_pad4_hold",
-                &format_args!("{}", self.touch_pad4_hold().bit()),
-            )
-            .field(
-                "touch_pad5_hold",
-                &format_args!("{}", self.touch_pad5_hold().bit()),
-            )
-            .field(
-                "touch_pad6_hold",
-                &format_args!("{}", self.touch_pad6_hold().bit()),
-            )
-            .field(
-                "touch_pad7_hold",
-                &format_args!("{}", self.touch_pad7_hold().bit()),
-            )
-            .field(
-                "touch_pad8_hold",
-                &format_args!("{}", self.touch_pad8_hold().bit()),
-            )
-            .field(
-                "touch_pad9_hold",
-                &format_args!("{}", self.touch_pad9_hold().bit()),
-            )
-            .field(
-                "touch_pad10_hold",
-                &format_args!("{}", self.touch_pad10_hold().bit()),
-            )
-            .field(
-                "touch_pad11_hold",
-                &format_args!("{}", self.touch_pad11_hold().bit()),
-            )
-            .field(
-                "touch_pad12_hold",
-                &format_args!("{}", self.touch_pad12_hold().bit()),
-            )
-            .field(
-                "touch_pad13_hold",
-                &format_args!("{}", self.touch_pad13_hold().bit()),
-            )
-            .field(
-                "touch_pad14_hold",
-                &format_args!("{}", self.touch_pad14_hold().bit()),
-            )
-            .field("x32p_hold", &format_args!("{}", self.x32p_hold().bit()))
-            .field("x32n_hold", &format_args!("{}", self.x32n_hold().bit()))
-            .field("pdac1_hold", &format_args!("{}", self.pdac1_hold().bit()))
-            .field("pdac2_hold", &format_args!("{}", self.pdac2_hold().bit()))
-            .field("pad19_hold", &format_args!("{}", self.pad19_hold().bit()))
-            .field("pad20_hold", &format_args!("{}", self.pad20_hold().bit()))
-            .field("pad21_hold", &format_args!("{}", self.pad21_hold().bit()))
+            .field("touch_pad0_hold", &self.touch_pad0_hold())
+            .field("touch_pad1_hold", &self.touch_pad1_hold())
+            .field("touch_pad2_hold", &self.touch_pad2_hold())
+            .field("touch_pad3_hold", &self.touch_pad3_hold())
+            .field("touch_pad4_hold", &self.touch_pad4_hold())
+            .field("touch_pad5_hold", &self.touch_pad5_hold())
+            .field("touch_pad6_hold", &self.touch_pad6_hold())
+            .field("touch_pad7_hold", &self.touch_pad7_hold())
+            .field("touch_pad8_hold", &self.touch_pad8_hold())
+            .field("touch_pad9_hold", &self.touch_pad9_hold())
+            .field("touch_pad10_hold", &self.touch_pad10_hold())
+            .field("touch_pad11_hold", &self.touch_pad11_hold())
+            .field("touch_pad12_hold", &self.touch_pad12_hold())
+            .field("touch_pad13_hold", &self.touch_pad13_hold())
+            .field("touch_pad14_hold", &self.touch_pad14_hold())
+            .field("x32p_hold", &self.x32p_hold())
+            .field("x32n_hold", &self.x32n_hold())
+            .field("pdac1_hold", &self.pdac1_hold())
+            .field("pdac2_hold", &self.pdac2_hold())
+            .field("pad19_hold", &self.pad19_hold())
+            .field("pad20_hold", &self.pad20_hold())
+            .field("pad21_hold", &self.pad21_hold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PAD_HOLD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

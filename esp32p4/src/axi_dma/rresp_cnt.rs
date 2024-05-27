@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RRESP_CNT")
-            .field("rresp_cnt", &format_args!("{}", self.rresp_cnt().bits()))
+            .field("rresp_cnt", &self.rresp_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RRESP_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "AXI wr responce cnt register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rresp_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

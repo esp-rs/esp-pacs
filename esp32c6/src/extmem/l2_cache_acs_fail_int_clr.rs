@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_FAIL_INT_CLR")
-            .field(
-                "l2_cache_fail_int_clr",
-                &format_args!("{}", self.l2_cache_fail_int_clr().bit()),
-            )
+            .field("l2_cache_fail_int_clr", &self.l2_cache_fail_int_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_FAIL_INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-Cache Access Fail Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_fail_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

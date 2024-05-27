@@ -35,25 +35,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPA_CTRL")
-            .field(
-                "spi_crypt_security_level",
-                &format_args!("{}", self.spi_crypt_security_level().bits()),
-            )
-            .field(
-                "spi_crypt_calc_d_dpa_en",
-                &format_args!("{}", self.spi_crypt_calc_d_dpa_en().bit()),
-            )
+            .field("spi_crypt_security_level", &self.spi_crypt_security_level())
+            .field("spi_crypt_calc_d_dpa_en", &self.spi_crypt_calc_d_dpa_en())
             .field(
                 "spi_crypt_dpa_select_register",
-                &format_args!("{}", self.spi_crypt_dpa_select_register().bit()),
+                &self.spi_crypt_dpa_select_register(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPA_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -100,51 +100,36 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_ST7")
             .field(
                 "dma2d_evt_in_suc_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_in_suc_eof_ch1_st().bit()),
+                &self.dma2d_evt_in_suc_eof_ch1_st(),
             )
             .field(
                 "dma2d_evt_out_done_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch0_st().bit()),
+                &self.dma2d_evt_out_done_ch0_st(),
             )
             .field(
                 "dma2d_evt_out_done_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch1_st().bit()),
+                &self.dma2d_evt_out_done_ch1_st(),
             )
             .field(
                 "dma2d_evt_out_done_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_done_ch2_st().bit()),
+                &self.dma2d_evt_out_done_ch2_st(),
             )
-            .field(
-                "dma2d_evt_out_eof_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch0_st().bit()),
-            )
-            .field(
-                "dma2d_evt_out_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch1_st().bit()),
-            )
-            .field(
-                "dma2d_evt_out_eof_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_eof_ch2_st().bit()),
-            )
+            .field("dma2d_evt_out_eof_ch0_st", &self.dma2d_evt_out_eof_ch0_st())
+            .field("dma2d_evt_out_eof_ch1_st", &self.dma2d_evt_out_eof_ch1_st())
+            .field("dma2d_evt_out_eof_ch2_st", &self.dma2d_evt_out_eof_ch2_st())
             .field(
                 "dma2d_evt_out_total_eof_ch0_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch0_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch0_st(),
             )
             .field(
                 "dma2d_evt_out_total_eof_ch1_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch1_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch1_st(),
             )
             .field(
                 "dma2d_evt_out_total_eof_ch2_st",
-                &format_args!("{}", self.dma2d_evt_out_total_eof_ch2_st().bit()),
+                &self.dma2d_evt_out_total_eof_ch2_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EVT_ST7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

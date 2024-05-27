@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR1DATA_STATUS")
-            .field(
-                "saradc1_data",
-                &format_args!("{}", self.saradc1_data().bits()),
-            )
+            .field("saradc1_data", &self.saradc1_data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR1DATA_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar1data_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

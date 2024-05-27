@@ -34,20 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("per_end", &format_args!("{}", self.per_end().bit()))
-            .field("pes_end", &format_args!("{}", self.pes_end().bit()))
-            .field(
-                "total_trans_end",
-                &format_args!("{}", self.total_trans_end().bit()),
-            )
-            .field("brown_out", &format_args!("{}", self.brown_out().bit()))
+            .field("per_end", &self.per_end())
+            .field("pes_end", &self.pes_end())
+            .field("total_trans_end", &self.total_trans_end())
+            .field("brown_out", &self.brown_out())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI1 interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

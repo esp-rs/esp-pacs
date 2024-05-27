@@ -244,115 +244,85 @@ impl core::fmt::Debug for R {
         f.debug_struct("SLC1HOST_INT_ENA1")
             .field(
                 "slc1_tohost_bit0_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit0_int_ena1().bit()),
+                &self.slc1_tohost_bit0_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit1_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit1_int_ena1().bit()),
+                &self.slc1_tohost_bit1_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit2_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit2_int_ena1().bit()),
+                &self.slc1_tohost_bit2_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit3_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit3_int_ena1().bit()),
+                &self.slc1_tohost_bit3_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit4_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit4_int_ena1().bit()),
+                &self.slc1_tohost_bit4_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit5_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit5_int_ena1().bit()),
+                &self.slc1_tohost_bit5_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit6_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit6_int_ena1().bit()),
+                &self.slc1_tohost_bit6_int_ena1(),
             )
             .field(
                 "slc1_tohost_bit7_int_ena1",
-                &format_args!("{}", self.slc1_tohost_bit7_int_ena1().bit()),
+                &self.slc1_tohost_bit7_int_ena1(),
             )
             .field(
                 "slc1_token0_1to0_int_ena1",
-                &format_args!("{}", self.slc1_token0_1to0_int_ena1().bit()),
+                &self.slc1_token0_1to0_int_ena1(),
             )
             .field(
                 "slc1_token1_1to0_int_ena1",
-                &format_args!("{}", self.slc1_token1_1to0_int_ena1().bit()),
+                &self.slc1_token1_1to0_int_ena1(),
             )
             .field(
                 "slc1_token0_0to1_int_ena1",
-                &format_args!("{}", self.slc1_token0_0to1_int_ena1().bit()),
+                &self.slc1_token0_0to1_int_ena1(),
             )
             .field(
                 "slc1_token1_0to1_int_ena1",
-                &format_args!("{}", self.slc1_token1_0to1_int_ena1().bit()),
+                &self.slc1_token1_0to1_int_ena1(),
             )
-            .field(
-                "slc1host_rx_sof_int_ena1",
-                &format_args!("{}", self.slc1host_rx_sof_int_ena1().bit()),
-            )
-            .field(
-                "slc1host_rx_eof_int_ena1",
-                &format_args!("{}", self.slc1host_rx_eof_int_ena1().bit()),
-            )
+            .field("slc1host_rx_sof_int_ena1", &self.slc1host_rx_sof_int_ena1())
+            .field("slc1host_rx_eof_int_ena1", &self.slc1host_rx_eof_int_ena1())
             .field(
                 "slc1host_rx_start_int_ena1",
-                &format_args!("{}", self.slc1host_rx_start_int_ena1().bit()),
+                &self.slc1host_rx_start_int_ena1(),
             )
             .field(
                 "slc1host_tx_start_int_ena1",
-                &format_args!("{}", self.slc1host_tx_start_int_ena1().bit()),
+                &self.slc1host_tx_start_int_ena1(),
             )
-            .field(
-                "slc1_rx_udf_int_ena1",
-                &format_args!("{}", self.slc1_rx_udf_int_ena1().bit()),
-            )
-            .field(
-                "slc1_tx_ovf_int_ena1",
-                &format_args!("{}", self.slc1_tx_ovf_int_ena1().bit()),
-            )
+            .field("slc1_rx_udf_int_ena1", &self.slc1_rx_udf_int_ena1())
+            .field("slc1_tx_ovf_int_ena1", &self.slc1_tx_ovf_int_ena1())
             .field(
                 "slc1_rx_pf_valid_int_ena1",
-                &format_args!("{}", self.slc1_rx_pf_valid_int_ena1().bit()),
+                &self.slc1_rx_pf_valid_int_ena1(),
             )
-            .field(
-                "slc1_ext_bit0_int_ena1",
-                &format_args!("{}", self.slc1_ext_bit0_int_ena1().bit()),
-            )
-            .field(
-                "slc1_ext_bit1_int_ena1",
-                &format_args!("{}", self.slc1_ext_bit1_int_ena1().bit()),
-            )
-            .field(
-                "slc1_ext_bit2_int_ena1",
-                &format_args!("{}", self.slc1_ext_bit2_int_ena1().bit()),
-            )
-            .field(
-                "slc1_ext_bit3_int_ena1",
-                &format_args!("{}", self.slc1_ext_bit3_int_ena1().bit()),
-            )
+            .field("slc1_ext_bit0_int_ena1", &self.slc1_ext_bit0_int_ena1())
+            .field("slc1_ext_bit1_int_ena1", &self.slc1_ext_bit1_int_ena1())
+            .field("slc1_ext_bit2_int_ena1", &self.slc1_ext_bit2_int_ena1())
+            .field("slc1_ext_bit3_int_ena1", &self.slc1_ext_bit3_int_ena1())
             .field(
                 "slc1_wifi_rx_new_packet_int_ena1",
-                &format_args!("{}", self.slc1_wifi_rx_new_packet_int_ena1().bit()),
+                &self.slc1_wifi_rx_new_packet_int_ena1(),
             )
             .field(
                 "slc1_host_rd_retry_int_ena1",
-                &format_args!("{}", self.slc1_host_rd_retry_int_ena1().bit()),
+                &self.slc1_host_rd_retry_int_ena1(),
             )
             .field(
                 "slc1_bt_rx_new_packet_int_ena1",
-                &format_args!("{}", self.slc1_bt_rx_new_packet_int_ena1().bit()),
+                &self.slc1_bt_rx_new_packet_int_ena1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLC1HOST_INT_ENA1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

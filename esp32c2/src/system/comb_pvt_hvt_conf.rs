@@ -28,21 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMB_PVT_HVT_CONF")
-            .field(
-                "comb_path_len_hvt",
-                &format_args!("{}", self.comb_path_len_hvt().bits()),
-            )
-            .field(
-                "comb_pvt_monitor_en_hvt",
-                &format_args!("{}", self.comb_pvt_monitor_en_hvt().bit()),
-            )
+            .field("comb_path_len_hvt", &self.comb_path_len_hvt())
+            .field("comb_pvt_monitor_en_hvt", &self.comb_pvt_monitor_en_hvt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_HVT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

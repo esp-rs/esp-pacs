@@ -99,63 +99,36 @@ impl core::fmt::Debug for R {
         f.debug_struct("RD_REPEAT_ERR1")
             .field(
                 "km_huk_gen_state_high_err",
-                &format_args!("{}", self.km_huk_gen_state_high_err().bits()),
+                &self.km_huk_gen_state_high_err(),
             )
-            .field(
-                "km_rnd_switch_cycle_err",
-                &format_args!("{}", self.km_rnd_switch_cycle_err().bits()),
-            )
-            .field(
-                "km_deploy_only_once_err",
-                &format_args!("{}", self.km_deploy_only_once_err().bits()),
-            )
+            .field("km_rnd_switch_cycle_err", &self.km_rnd_switch_cycle_err())
+            .field("km_deploy_only_once_err", &self.km_deploy_only_once_err())
             .field(
                 "force_use_key_manager_key_err",
-                &format_args!("{}", self.force_use_key_manager_key_err().bits()),
+                &self.force_use_key_manager_key_err(),
             )
             .field(
                 "force_disable_sw_init_key_err",
-                &format_args!("{}", self.force_disable_sw_init_key_err().bit()),
+                &self.force_disable_sw_init_key_err(),
             )
-            .field(
-                "xts_key_length_256_err",
-                &format_args!("{}", self.xts_key_length_256_err().bit()),
-            )
-            .field(
-                "wdt_delay_sel_err",
-                &format_args!("{}", self.wdt_delay_sel_err().bits()),
-            )
-            .field(
-                "spi_boot_crypt_cnt_err",
-                &format_args!("{}", self.spi_boot_crypt_cnt_err().bits()),
-            )
+            .field("xts_key_length_256_err", &self.xts_key_length_256_err())
+            .field("wdt_delay_sel_err", &self.wdt_delay_sel_err())
+            .field("spi_boot_crypt_cnt_err", &self.spi_boot_crypt_cnt_err())
             .field(
                 "secure_boot_key_revoke0_err",
-                &format_args!("{}", self.secure_boot_key_revoke0_err().bit()),
+                &self.secure_boot_key_revoke0_err(),
             )
             .field(
                 "secure_boot_key_revoke1_err",
-                &format_args!("{}", self.secure_boot_key_revoke1_err().bit()),
+                &self.secure_boot_key_revoke1_err(),
             )
             .field(
                 "secure_boot_key_revoke2_err",
-                &format_args!("{}", self.secure_boot_key_revoke2_err().bit()),
+                &self.secure_boot_key_revoke2_err(),
             )
-            .field(
-                "key_purpose_0_err",
-                &format_args!("{}", self.key_purpose_0_err().bits()),
-            )
-            .field(
-                "key_purpose_1_err",
-                &format_args!("{}", self.key_purpose_1_err().bits()),
-            )
+            .field("key_purpose_0_err", &self.key_purpose_0_err())
+            .field("key_purpose_1_err", &self.key_purpose_1_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 1 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

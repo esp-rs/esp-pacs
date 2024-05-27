@@ -41,30 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_COCPU_DEBUG")
-            .field("cocpu_pc", &format_args!("{}", self.cocpu_pc().bits()))
-            .field(
-                "cocpu_mem_vld",
-                &format_args!("{}", self.cocpu_mem_vld().bit()),
-            )
-            .field(
-                "cocpu_mem_rdy",
-                &format_args!("{}", self.cocpu_mem_rdy().bit()),
-            )
-            .field(
-                "cocpu_mem_wen",
-                &format_args!("{}", self.cocpu_mem_wen().bits()),
-            )
-            .field(
-                "cocpu_mem_addr",
-                &format_args!("{}", self.cocpu_mem_addr().bits()),
-            )
+            .field("cocpu_pc", &self.cocpu_pc())
+            .field("cocpu_mem_vld", &self.cocpu_mem_vld())
+            .field("cocpu_mem_rdy", &self.cocpu_mem_rdy())
+            .field("cocpu_mem_wen", &self.cocpu_mem_wen())
+            .field("cocpu_mem_addr", &self.cocpu_mem_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_DEBUG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "ULP-RISCV debug register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_debug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

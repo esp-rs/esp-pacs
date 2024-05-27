@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BOOT_ADDR_HP_LP")
-            .field(
-                "boot_addr_hp_lp",
-                &format_args!("{}", self.boot_addr_hp_lp().bits()),
-            )
+            .field("boot_addr_hp_lp", &self.boot_addr_hp_lp())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BOOT_ADDR_HP_LP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

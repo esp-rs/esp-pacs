@@ -170,85 +170,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOLD_FORCE")
-            .field(
-                "adc1_hold_force",
-                &format_args!("{}", self.adc1_hold_force().bit()),
-            )
-            .field(
-                "adc2_hold_force",
-                &format_args!("{}", self.adc2_hold_force().bit()),
-            )
-            .field(
-                "pdac1_hold_force",
-                &format_args!("{}", self.pdac1_hold_force().bit()),
-            )
-            .field(
-                "pdac2_hold_force",
-                &format_args!("{}", self.pdac2_hold_force().bit()),
-            )
-            .field(
-                "sense1_hold_force",
-                &format_args!("{}", self.sense1_hold_force().bit()),
-            )
-            .field(
-                "sense2_hold_force",
-                &format_args!("{}", self.sense2_hold_force().bit()),
-            )
-            .field(
-                "sense3_hold_force",
-                &format_args!("{}", self.sense3_hold_force().bit()),
-            )
-            .field(
-                "sense4_hold_force",
-                &format_args!("{}", self.sense4_hold_force().bit()),
-            )
-            .field(
-                "touch_pad0_hold_force",
-                &format_args!("{}", self.touch_pad0_hold_force().bit()),
-            )
-            .field(
-                "touch_pad1_hold_force",
-                &format_args!("{}", self.touch_pad1_hold_force().bit()),
-            )
-            .field(
-                "touch_pad2_hold_force",
-                &format_args!("{}", self.touch_pad2_hold_force().bit()),
-            )
-            .field(
-                "touch_pad3_hold_force",
-                &format_args!("{}", self.touch_pad3_hold_force().bit()),
-            )
-            .field(
-                "touch_pad4_hold_force",
-                &format_args!("{}", self.touch_pad4_hold_force().bit()),
-            )
-            .field(
-                "touch_pad5_hold_force",
-                &format_args!("{}", self.touch_pad5_hold_force().bit()),
-            )
-            .field(
-                "touch_pad6_hold_force",
-                &format_args!("{}", self.touch_pad6_hold_force().bit()),
-            )
-            .field(
-                "touch_pad7_hold_force",
-                &format_args!("{}", self.touch_pad7_hold_force().bit()),
-            )
-            .field(
-                "x32p_hold_force",
-                &format_args!("{}", self.x32p_hold_force().bit()),
-            )
-            .field(
-                "x32n_hold_force",
-                &format_args!("{}", self.x32n_hold_force().bit()),
-            )
+            .field("adc1_hold_force", &self.adc1_hold_force())
+            .field("adc2_hold_force", &self.adc2_hold_force())
+            .field("pdac1_hold_force", &self.pdac1_hold_force())
+            .field("pdac2_hold_force", &self.pdac2_hold_force())
+            .field("sense1_hold_force", &self.sense1_hold_force())
+            .field("sense2_hold_force", &self.sense2_hold_force())
+            .field("sense3_hold_force", &self.sense3_hold_force())
+            .field("sense4_hold_force", &self.sense4_hold_force())
+            .field("touch_pad0_hold_force", &self.touch_pad0_hold_force())
+            .field("touch_pad1_hold_force", &self.touch_pad1_hold_force())
+            .field("touch_pad2_hold_force", &self.touch_pad2_hold_force())
+            .field("touch_pad3_hold_force", &self.touch_pad3_hold_force())
+            .field("touch_pad4_hold_force", &self.touch_pad4_hold_force())
+            .field("touch_pad5_hold_force", &self.touch_pad5_hold_force())
+            .field("touch_pad6_hold_force", &self.touch_pad6_hold_force())
+            .field("touch_pad7_hold_force", &self.touch_pad7_hold_force())
+            .field("x32p_hold_force", &self.x32p_hold_force())
+            .field("x32n_hold_force", &self.x32n_hold_force())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOLD_FORCE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

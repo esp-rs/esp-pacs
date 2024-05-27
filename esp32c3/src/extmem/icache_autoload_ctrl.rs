@@ -60,37 +60,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_AUTOLOAD_CTRL")
-            .field(
-                "icache_autoload_sct0_ena",
-                &format_args!("{}", self.icache_autoload_sct0_ena().bit()),
-            )
-            .field(
-                "icache_autoload_sct1_ena",
-                &format_args!("{}", self.icache_autoload_sct1_ena().bit()),
-            )
-            .field(
-                "icache_autoload_ena",
-                &format_args!("{}", self.icache_autoload_ena().bit()),
-            )
-            .field(
-                "icache_autoload_done",
-                &format_args!("{}", self.icache_autoload_done().bit()),
-            )
-            .field(
-                "icache_autoload_order",
-                &format_args!("{}", self.icache_autoload_order().bit()),
-            )
-            .field(
-                "icache_autoload_rqst",
-                &format_args!("{}", self.icache_autoload_rqst().bits()),
-            )
+            .field("icache_autoload_sct0_ena", &self.icache_autoload_sct0_ena())
+            .field("icache_autoload_sct1_ena", &self.icache_autoload_sct1_ena())
+            .field("icache_autoload_ena", &self.icache_autoload_ena())
+            .field("icache_autoload_done", &self.icache_autoload_done())
+            .field("icache_autoload_order", &self.icache_autoload_order())
+            .field("icache_autoload_rqst", &self.icache_autoload_rqst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_AUTOLOAD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

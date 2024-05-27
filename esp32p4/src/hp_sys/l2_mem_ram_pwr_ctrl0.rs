@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_MEM_RAM_PWR_CTRL0")
-            .field(
-                "reg_l2_mem_clk_force_on",
-                &format_args!("{}", self.reg_l2_mem_clk_force_on().bit()),
-            )
+            .field("reg_l2_mem_clk_force_on", &self.reg_l2_mem_clk_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_RAM_PWR_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

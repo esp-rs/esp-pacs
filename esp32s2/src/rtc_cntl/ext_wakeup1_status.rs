@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP1_STATUS")
-            .field(
-                "ext_wakeup1_status",
-                &format_args!("{}", self.ext_wakeup1_status().bits()),
-            )
+            .field("ext_wakeup1_status", &self.ext_wakeup1_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP1_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "EXT1 wakeup source register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ext_wakeup1_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -48,37 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_CLK_STATUS0")
-            .field(
-                "asic_or_fpga",
-                &format_args!("{}", self.asic_or_fpga().bit()),
-            )
-            .field(
-                "cpu_div_effect",
-                &format_args!("{}", self.cpu_div_effect().bit()),
-            )
-            .field(
-                "cpu_src_is_cpll",
-                &format_args!("{}", self.cpu_src_is_cpll().bit()),
-            )
-            .field(
-                "cpu_div_num_cur",
-                &format_args!("{}", self.cpu_div_num_cur().bits()),
-            )
-            .field(
-                "cpu_div_numerator_cur",
-                &format_args!("{}", self.cpu_div_numerator_cur().bits()),
-            )
-            .field(
-                "cpu_div_denominator_cur",
-                &format_args!("{}", self.cpu_div_denominator_cur().bits()),
-            )
+            .field("asic_or_fpga", &self.asic_or_fpga())
+            .field("cpu_div_effect", &self.cpu_div_effect())
+            .field("cpu_src_is_cpll", &self.cpu_src_is_cpll())
+            .field("cpu_div_num_cur", &self.cpu_div_num_cur())
+            .field("cpu_div_numerator_cur", &self.cpu_div_numerator_cur())
+            .field("cpu_div_denominator_cur", &self.cpu_div_denominator_cur())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_CLK_STATUS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "CPU Clock Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_clk_status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

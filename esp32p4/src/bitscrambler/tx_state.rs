@@ -59,29 +59,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_STATE")
-            .field("tx_in_idle", &format_args!("{}", self.tx_in_idle().bit()))
-            .field("tx_in_run", &format_args!("{}", self.tx_in_run().bit()))
-            .field("tx_in_wait", &format_args!("{}", self.tx_in_wait().bit()))
-            .field("tx_in_pause", &format_args!("{}", self.tx_in_pause().bit()))
-            .field(
-                "tx_fifo_empty",
-                &format_args!("{}", self.tx_fifo_empty().bit()),
-            )
-            .field(
-                "tx_eof_get_cnt",
-                &format_args!("{}", self.tx_eof_get_cnt().bits()),
-            )
-            .field(
-                "tx_eof_overload",
-                &format_args!("{}", self.tx_eof_overload().bit()),
-            )
+            .field("tx_in_idle", &self.tx_in_idle())
+            .field("tx_in_run", &self.tx_in_run())
+            .field("tx_in_wait", &self.tx_in_wait())
+            .field("tx_in_pause", &self.tx_in_pause())
+            .field("tx_fifo_empty", &self.tx_fifo_empty())
+            .field("tx_eof_get_cnt", &self.tx_eof_get_cnt())
+            .field("tx_eof_overload", &self.tx_eof_overload())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

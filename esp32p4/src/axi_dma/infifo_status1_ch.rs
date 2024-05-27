@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_STATUS1_CH")
-            .field(
-                "l1infifo_cnt",
-                &format_args!("{}", self.l1infifo_cnt().bits()),
-            )
-            .field(
-                "l2infifo_cnt",
-                &format_args!("{}", self.l2infifo_cnt().bits()),
-            )
+            .field("l1infifo_cnt", &self.l1infifo_cnt())
+            .field("l2infifo_cnt", &self.l2infifo_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INFIFO_STATUS1_CH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`infifo_status1_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

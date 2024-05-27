@@ -53,21 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER")
-            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
-            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
-            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
-            .field(
-                "usr_dummy_idle",
-                &format_args!("{}", self.usr_dummy_idle().bit()),
-            )
-            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
+            .field("cs_hold", &self.cs_hold())
+            .field("cs_setup", &self.cs_setup())
+            .field("ck_out_edge", &self.ck_out_edge())
+            .field("usr_dummy_idle", &self.usr_dummy_idle())
+            .field("usr_dummy", &self.usr_dummy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

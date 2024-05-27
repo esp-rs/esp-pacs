@@ -42,29 +42,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_PRELOAD_CTRL")
-            .field(
-                "l2_cache_preload_ena",
-                &format_args!("{}", self.l2_cache_preload_ena().bit()),
-            )
-            .field(
-                "l2_cache_preload_done",
-                &format_args!("{}", self.l2_cache_preload_done().bit()),
-            )
-            .field(
-                "l2_cache_preload_order",
-                &format_args!("{}", self.l2_cache_preload_order().bit()),
-            )
-            .field(
-                "l2_cache_preload_rgid",
-                &format_args!("{}", self.l2_cache_preload_rgid().bits()),
-            )
+            .field("l2_cache_preload_ena", &self.l2_cache_preload_ena())
+            .field("l2_cache_preload_done", &self.l2_cache_preload_done())
+            .field("l2_cache_preload_order", &self.l2_cache_preload_order())
+            .field("l2_cache_preload_rgid", &self.l2_cache_preload_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOAD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

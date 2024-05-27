@@ -62,34 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SUS_STATUS")
-            .field("flash_sus", &format_args!("{}", self.flash_sus().bit()))
-            .field(
-                "flash_hpm_dly_256",
-                &format_args!("{}", self.flash_hpm_dly_256().bit()),
-            )
-            .field(
-                "flash_res_dly_256",
-                &format_args!("{}", self.flash_res_dly_256().bit()),
-            )
-            .field(
-                "flash_dp_dly_256",
-                &format_args!("{}", self.flash_dp_dly_256().bit()),
-            )
-            .field(
-                "flash_per_dly_256",
-                &format_args!("{}", self.flash_per_dly_256().bit()),
-            )
-            .field(
-                "flash_pes_dly_256",
-                &format_args!("{}", self.flash_pes_dly_256().bit()),
-            )
+            .field("flash_sus", &self.flash_sus())
+            .field("flash_hpm_dly_256", &self.flash_hpm_dly_256())
+            .field("flash_res_dly_256", &self.flash_res_dly_256())
+            .field("flash_dp_dly_256", &self.flash_dp_dly_256())
+            .field("flash_per_dly_256", &self.flash_per_dly_256())
+            .field("flash_pes_dly_256", &self.flash_pes_dly_256())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SUS_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

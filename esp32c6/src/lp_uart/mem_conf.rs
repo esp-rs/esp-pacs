@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CONF")
-            .field(
-                "mem_force_pd",
-                &format_args!("{}", self.mem_force_pd().bit()),
-            )
-            .field(
-                "mem_force_pu",
-                &format_args!("{}", self.mem_force_pu().bit()),
-            )
+            .field("mem_force_pd", &self.mem_force_pd())
+            .field("mem_force_pu", &self.mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

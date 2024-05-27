@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG_CFG")
-            .field(
-                "rng_sample_enable",
-                &format_args!("{}", self.rng_sample_enable().bit()),
-            )
-            .field(
-                "rng_chain_clk_div_num",
-                &format_args!("{}", self.rng_chain_clk_div_num().bits()),
-            )
-            .field(
-                "rng_sample_cnt",
-                &format_args!("{}", self.rng_sample_cnt().bits()),
-            )
+            .field("rng_sample_enable", &self.rng_sample_enable())
+            .field("rng_chain_clk_div_num", &self.rng_chain_clk_div_num())
+            .field("rng_sample_cnt", &self.rng_sample_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RNG_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

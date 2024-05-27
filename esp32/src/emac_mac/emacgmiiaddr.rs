@@ -53,18 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACGMIIADDR")
-            .field("miibusy", &format_args!("{}", self.miibusy().bit()))
-            .field("miiwrite", &format_args!("{}", self.miiwrite().bit()))
-            .field("miicsrclk", &format_args!("{}", self.miicsrclk().bits()))
-            .field("miireg", &format_args!("{}", self.miireg().bits()))
-            .field("miidev", &format_args!("{}", self.miidev().bits()))
+            .field("miibusy", &self.miibusy())
+            .field("miiwrite", &self.miiwrite())
+            .field("miicsrclk", &self.miicsrclk())
+            .field("miireg", &self.miireg())
+            .field("miidev", &self.miidev())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACGMIIADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

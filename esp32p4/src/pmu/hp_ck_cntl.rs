@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_CK_CNTL")
-            .field(
-                "modify_icg_cntl_wait",
-                &format_args!("{}", self.modify_icg_cntl_wait().bits()),
-            )
-            .field(
-                "switch_icg_cntl_wait",
-                &format_args!("{}", self.switch_icg_cntl_wait().bits()),
-            )
+            .field("modify_icg_cntl_wait", &self.modify_icg_cntl_wait())
+            .field("switch_icg_cntl_wait", &self.switch_icg_cntl_wait())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_CK_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

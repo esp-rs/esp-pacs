@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_0_RXPKT_H_DSCR")
-            .field(
-                "slc0_rx_pkt_h_dscr_addr",
-                &format_args!("{}", self.slc0_rx_pkt_h_dscr_addr().bits()),
-            )
+            .field("slc0_rx_pkt_h_dscr_addr", &self.slc0_rx_pkt_h_dscr_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_0_RXPKT_H_DSCR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

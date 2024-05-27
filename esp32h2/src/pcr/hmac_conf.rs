@@ -33,16 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HMAC_CONF")
-            .field("hmac_clk_en", &format_args!("{}", self.hmac_clk_en().bit()))
-            .field("hmac_rst_en", &format_args!("{}", self.hmac_rst_en().bit()))
-            .field("hmac_ready", &format_args!("{}", self.hmac_ready().bit()))
+            .field("hmac_clk_en", &self.hmac_clk_en())
+            .field("hmac_rst_en", &self.hmac_rst_en())
+            .field("hmac_ready", &self.hmac_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HMAC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

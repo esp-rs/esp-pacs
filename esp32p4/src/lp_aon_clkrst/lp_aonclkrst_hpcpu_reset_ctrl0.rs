@@ -148,67 +148,61 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPCPU_RESET_CTRL0")
             .field(
                 "lp_aonclkrst_hpcore0_lockup_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_lockup_reset_en().bit()),
+                &self.lp_aonclkrst_hpcore0_lockup_reset_en(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore0_reset_length",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore0_reset_length().bits()),
+                &self.lp_aonclkrst_lp_wdt_hpcore0_reset_length(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore0_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore0_reset_en().bit()),
+                &self.lp_aonclkrst_lp_wdt_hpcore0_reset_en(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stall_wait",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stall_wait().bits()),
+                &self.lp_aonclkrst_hpcore0_stall_wait(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stall_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stall_en().bit()),
+                &self.lp_aonclkrst_hpcore0_stall_en(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_ocd_halt_on_reset",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_ocd_halt_on_reset().bit()),
+                &self.lp_aonclkrst_hpcore0_ocd_halt_on_reset(),
             )
             .field(
                 "lp_aonclkrst_hpcore0_stat_vector_sel",
-                &format_args!("{}", self.lp_aonclkrst_hpcore0_stat_vector_sel().bit()),
+                &self.lp_aonclkrst_hpcore0_stat_vector_sel(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_lockup_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_lockup_reset_en().bit()),
+                &self.lp_aonclkrst_hpcore1_lockup_reset_en(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore1_reset_length",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore1_reset_length().bits()),
+                &self.lp_aonclkrst_lp_wdt_hpcore1_reset_length(),
             )
             .field(
                 "lp_aonclkrst_lp_wdt_hpcore1_reset_en",
-                &format_args!("{}", self.lp_aonclkrst_lp_wdt_hpcore1_reset_en().bit()),
+                &self.lp_aonclkrst_lp_wdt_hpcore1_reset_en(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stall_wait",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stall_wait().bits()),
+                &self.lp_aonclkrst_hpcore1_stall_wait(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stall_en",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stall_en().bit()),
+                &self.lp_aonclkrst_hpcore1_stall_en(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_ocd_halt_on_reset",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_ocd_halt_on_reset().bit()),
+                &self.lp_aonclkrst_hpcore1_ocd_halt_on_reset(),
             )
             .field(
                 "lp_aonclkrst_hpcore1_stat_vector_sel",
-                &format_args!("{}", self.lp_aonclkrst_hpcore1_stat_vector_sel().bit()),
+                &self.lp_aonclkrst_hpcore1_stat_vector_sel(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

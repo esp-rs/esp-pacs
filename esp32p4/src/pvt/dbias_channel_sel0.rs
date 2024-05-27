@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBIAS_CHANNEL_SEL0")
-            .field(
-                "dbias_channel3_sel",
-                &format_args!("{}", self.dbias_channel3_sel().bits()),
-            )
-            .field(
-                "dbias_channel2_sel",
-                &format_args!("{}", self.dbias_channel2_sel().bits()),
-            )
-            .field(
-                "dbias_channel1_sel",
-                &format_args!("{}", self.dbias_channel1_sel().bits()),
-            )
-            .field(
-                "dbias_channel0_sel",
-                &format_args!("{}", self.dbias_channel0_sel().bits()),
-            )
+            .field("dbias_channel3_sel", &self.dbias_channel3_sel())
+            .field("dbias_channel2_sel", &self.dbias_channel2_sel())
+            .field("dbias_channel1_sel", &self.dbias_channel1_sel())
+            .field("dbias_channel0_sel", &self.dbias_channel0_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBIAS_CHANNEL_SEL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

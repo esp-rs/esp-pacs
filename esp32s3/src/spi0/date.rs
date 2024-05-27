@@ -44,26 +44,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATE")
-            .field(
-                "spi_smem_spiclk_fun_drv",
-                &format_args!("{}", self.spi_smem_spiclk_fun_drv().bits()),
-            )
-            .field(
-                "spi_fmem_spiclk_fun_drv",
-                &format_args!("{}", self.spi_fmem_spiclk_fun_drv().bits()),
-            )
+            .field("spi_smem_spiclk_fun_drv", &self.spi_smem_spiclk_fun_drv())
+            .field("spi_fmem_spiclk_fun_drv", &self.spi_fmem_spiclk_fun_drv())
             .field(
                 "spi_spiclk_pad_drv_ctl_en",
-                &format_args!("{}", self.spi_spiclk_pad_drv_ctl_en().bit()),
+                &self.spi_spiclk_pad_drv_ctl_en(),
             )
-            .field("date", &format_args!("{}", self.date().bits()))
+            .field("date", &self.date())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

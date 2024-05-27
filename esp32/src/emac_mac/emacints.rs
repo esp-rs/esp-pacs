@@ -20,15 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACINTS")
-            .field("pmtints", &format_args!("{}", self.pmtints().bit()))
-            .field("lpiis", &format_args!("{}", self.lpiis().bit()))
+            .field("pmtints", &self.pmtints())
+            .field("lpiis", &self.lpiis())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACINTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

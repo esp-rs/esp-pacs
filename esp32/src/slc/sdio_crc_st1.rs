@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_CRC_ST1")
-            .field(
-                "cmd_crc_err_cnt",
-                &format_args!("{}", self.cmd_crc_err_cnt().bits()),
-            )
-            .field("err_cnt_clr", &format_args!("{}", self.err_cnt_clr().bit()))
+            .field("cmd_crc_err_cnt", &self.cmd_crc_err_cnt())
+            .field("err_cnt_clr", &self.err_cnt_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDIO_CRC_ST1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

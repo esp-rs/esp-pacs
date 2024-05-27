@@ -33,16 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_CONF")
-            .field("ecc_clk_en", &format_args!("{}", self.ecc_clk_en().bit()))
-            .field("ecc_rst_en", &format_args!("{}", self.ecc_rst_en().bit()))
-            .field("ecc_ready", &format_args!("{}", self.ecc_ready().bit()))
+            .field("ecc_clk_en", &self.ecc_clk_en())
+            .field("ecc_rst_en", &self.ecc_rst_en())
+            .field("ecc_ready", &self.ecc_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ECC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

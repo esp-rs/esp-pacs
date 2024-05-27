@@ -33,16 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_FREEZE")
-            .field("ena", &format_args!("{}", self.ena().bit()))
-            .field("mode", &format_args!("{}", self.mode().bit()))
-            .field("done", &format_args!("{}", self.done().bit()))
+            .field("ena", &self.ena())
+            .field("mode", &self.mode())
+            .field("done", &self.done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCACHE_FREEZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

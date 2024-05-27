@@ -83,51 +83,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR4")
-            .field(
-                "_0pxa_tieh_sel_0_err",
-                &format_args!("{}", self._0pxa_tieh_sel_0_err().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_1_err",
-                &format_args!("{}", self._0pxa_tieh_sel_1_err().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_2_err",
-                &format_args!("{}", self._0pxa_tieh_sel_2_err().bits()),
-            )
-            .field(
-                "_0pxa_tieh_sel_3_err",
-                &format_args!("{}", self._0pxa_tieh_sel_3_err().bits()),
-            )
+            .field("_0pxa_tieh_sel_0_err", &self._0pxa_tieh_sel_0_err())
+            .field("_0pxa_tieh_sel_1_err", &self._0pxa_tieh_sel_1_err())
+            .field("_0pxa_tieh_sel_2_err", &self._0pxa_tieh_sel_2_err())
+            .field("_0pxa_tieh_sel_3_err", &self._0pxa_tieh_sel_3_err())
             .field(
                 "km_disable_deploy_mode_err",
-                &format_args!("{}", self.km_disable_deploy_mode_err().bits()),
+                &self.km_disable_deploy_mode_err(),
             )
-            .field(
-                "usb_device_drefl_err",
-                &format_args!("{}", self.usb_device_drefl_err().bits()),
-            )
-            .field(
-                "usb_otg11_drefl_err",
-                &format_args!("{}", self.usb_otg11_drefl_err().bits()),
-            )
-            .field(
-                "hp_pwr_src_sel_err",
-                &format_args!("{}", self.hp_pwr_src_sel_err().bit()),
-            )
-            .field(
-                "dcdc_vset_en_err",
-                &format_args!("{}", self.dcdc_vset_en_err().bit()),
-            )
-            .field("dis_wdt_err", &format_args!("{}", self.dis_wdt_err().bit()))
-            .field("dis_swd_err", &format_args!("{}", self.dis_swd_err().bit()))
+            .field("usb_device_drefl_err", &self.usb_device_drefl_err())
+            .field("usb_otg11_drefl_err", &self.usb_otg11_drefl_err())
+            .field("hp_pwr_src_sel_err", &self.hp_pwr_src_sel_err())
+            .field("dcdc_vset_en_err", &self.dcdc_vset_en_err())
+            .field("dis_wdt_err", &self.dis_wdt_err())
+            .field("dis_swd_err", &self.dis_swd_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 4 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -116,43 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPMSK")
-            .field(
-                "xfercomplmsk",
-                &format_args!("{}", self.xfercomplmsk().bit()),
-            )
-            .field("epdisbldmsk", &format_args!("{}", self.epdisbldmsk().bit()))
-            .field("ahbermsk", &format_args!("{}", self.ahbermsk().bit()))
-            .field("setupmsk", &format_args!("{}", self.setupmsk().bit()))
-            .field(
-                "outtknepdismsk",
-                &format_args!("{}", self.outtknepdismsk().bit()),
-            )
-            .field(
-                "stsphsercvdmsk",
-                &format_args!("{}", self.stsphsercvdmsk().bit()),
-            )
-            .field(
-                "back2backsetup",
-                &format_args!("{}", self.back2backsetup().bit()),
-            )
-            .field(
-                "outpkterrmsk",
-                &format_args!("{}", self.outpkterrmsk().bit()),
-            )
-            .field(
-                "bnaoutintrmsk",
-                &format_args!("{}", self.bnaoutintrmsk().bit()),
-            )
-            .field("bbleerrmsk", &format_args!("{}", self.bbleerrmsk().bit()))
-            .field("nakmsk", &format_args!("{}", self.nakmsk().bit()))
-            .field("nyetmsk", &format_args!("{}", self.nyetmsk().bit()))
+            .field("xfercomplmsk", &self.xfercomplmsk())
+            .field("epdisbldmsk", &self.epdisbldmsk())
+            .field("ahbermsk", &self.ahbermsk())
+            .field("setupmsk", &self.setupmsk())
+            .field("outtknepdismsk", &self.outtknepdismsk())
+            .field("stsphsercvdmsk", &self.stsphsercvdmsk())
+            .field("back2backsetup", &self.back2backsetup())
+            .field("outpkterrmsk", &self.outpkterrmsk())
+            .field("bnaoutintrmsk", &self.bnaoutintrmsk())
+            .field("bbleerrmsk", &self.bbleerrmsk())
+            .field("nakmsk", &self.nakmsk())
+            .field("nyetmsk", &self.nyetmsk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DOEPMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

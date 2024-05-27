@@ -57,18 +57,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF0")
-            .field("timer_sel", &format_args!("{}", self.timer_sel().bits()))
-            .field("sig_out_en", &format_args!("{}", self.sig_out_en().bit()))
-            .field("idle_lv", &format_args!("{}", self.idle_lv().bit()))
-            .field("ovf_num", &format_args!("{}", self.ovf_num().bits()))
-            .field("ovf_cnt_en", &format_args!("{}", self.ovf_cnt_en().bit()))
+            .field("timer_sel", &self.timer_sel())
+            .field("sig_out_en", &self.sig_out_en())
+            .field("idle_lv", &self.idle_lv())
+            .field("ovf_num", &self.ovf_num())
+            .field("ovf_cnt_en", &self.ovf_cnt_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

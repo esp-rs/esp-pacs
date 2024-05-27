@@ -27,25 +27,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ERR_CODE_CAP")
-            .field(
-                "err_capture_code_segment",
-                &format_args!("{}", self.err_capture_code_segment().bits()),
-            )
+            .field("err_capture_code_segment", &self.err_capture_code_segment())
             .field(
                 "err_capture_code_direction",
-                &format_args!("{}", self.err_capture_code_direction().bit()),
+                &self.err_capture_code_direction(),
             )
-            .field(
-                "err_capture_code_type",
-                &format_args!("{}", self.err_capture_code_type().bits()),
-            )
+            .field("err_capture_code_type", &self.err_capture_code_type())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ERR_CODE_CAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TWAI error info capture register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`err_code_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

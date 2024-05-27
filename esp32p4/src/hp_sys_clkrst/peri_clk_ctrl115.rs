@@ -89,49 +89,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL115")
-            .field(
-                "uart4_sclk_div_num",
-                &format_args!("{}", self.uart4_sclk_div_num().bits()),
-            )
-            .field(
-                "uart4_sclk_div_numerator",
-                &format_args!("{}", self.uart4_sclk_div_numerator().bits()),
-            )
+            .field("uart4_sclk_div_num", &self.uart4_sclk_div_num())
+            .field("uart4_sclk_div_numerator", &self.uart4_sclk_div_numerator())
             .field(
                 "uart4_sclk_div_denominator",
-                &format_args!("{}", self.uart4_sclk_div_denominator().bits()),
+                &self.uart4_sclk_div_denominator(),
             )
-            .field(
-                "twai0_clk_src_sel",
-                &format_args!("{}", self.twai0_clk_src_sel().bit()),
-            )
-            .field(
-                "twai0_clk_en",
-                &format_args!("{}", self.twai0_clk_en().bit()),
-            )
-            .field(
-                "twai1_clk_src_sel",
-                &format_args!("{}", self.twai1_clk_src_sel().bit()),
-            )
-            .field(
-                "twai1_clk_en",
-                &format_args!("{}", self.twai1_clk_en().bit()),
-            )
-            .field(
-                "twai2_clk_src_sel",
-                &format_args!("{}", self.twai2_clk_src_sel().bit()),
-            )
-            .field(
-                "twai2_clk_en",
-                &format_args!("{}", self.twai2_clk_en().bit()),
-            )
+            .field("twai0_clk_src_sel", &self.twai0_clk_src_sel())
+            .field("twai0_clk_en", &self.twai0_clk_en())
+            .field("twai1_clk_src_sel", &self.twai1_clk_src_sel())
+            .field("twai1_clk_en", &self.twai1_clk_en())
+            .field("twai2_clk_src_sel", &self.twai2_clk_src_sel())
+            .field("twai2_clk_en", &self.twai2_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL115_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

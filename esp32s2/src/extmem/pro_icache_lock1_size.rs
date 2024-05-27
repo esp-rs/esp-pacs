@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_ICACHE_LOCK1_SIZE")
-            .field(
-                "pro_icache_lock1_size",
-                &format_args!("{}", self.pro_icache_lock1_size().bits()),
-            )
+            .field("pro_icache_lock1_size", &self.pro_icache_lock1_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_LOCK1_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

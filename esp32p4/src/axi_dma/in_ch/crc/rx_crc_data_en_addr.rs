@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CRC_DATA_EN_ADDR")
-            .field(
-                "rx_crc_data_en_addr",
-                &format_args!("{}", self.rx_crc_data_en_addr().bits()),
-            )
+            .field("rx_crc_data_en_addr", &self.rx_crc_data_en_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_CRC_DATA_EN_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

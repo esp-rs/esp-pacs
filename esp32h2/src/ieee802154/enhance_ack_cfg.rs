@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("ENHANCE_ACK_CFG")
             .field(
                 "tx_enh_ack_generate_done_notify",
-                &format_args!("{}", self.tx_enh_ack_generate_done_notify().bits()),
+                &self.tx_enh_ack_generate_done_notify(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ENHANCE_ACK_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

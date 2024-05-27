@@ -39,23 +39,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIN11")
             .field(
                 "reg_gpio_pin11_wakeup_enable",
-                &format_args!("{}", self.reg_gpio_pin11_wakeup_enable().bit()),
+                &self.reg_gpio_pin11_wakeup_enable(),
             )
-            .field(
-                "reg_gpio_pin11_int_type",
-                &format_args!("{}", self.reg_gpio_pin11_int_type().bits()),
-            )
+            .field("reg_gpio_pin11_int_type", &self.reg_gpio_pin11_int_type())
             .field(
                 "reg_gpio_pin11_pad_driver",
-                &format_args!("{}", self.reg_gpio_pin11_pad_driver().bit()),
+                &self.reg_gpio_pin11_pad_driver(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PIN11_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTSET")
-            .field("stop_ena", &format_args!("{}", self.stop_ena().bit()))
-            .field("rxpend_ena", &format_args!("{}", self.rxpend_ena().bit()))
-            .field("txsend_ena", &format_args!("{}", self.txsend_ena().bit()))
+            .field("stop_ena", &self.stop_ena())
+            .field("rxpend_ena", &self.rxpend_ena())
+            .field("txsend_ena", &self.txsend_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTSET_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

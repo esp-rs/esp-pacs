@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DSC_PARAMETER")
-            .field(
-                "compression_mode",
-                &format_args!("{}", self.compression_mode().bit()),
-            )
-            .field(
-                "compress_algo",
-                &format_args!("{}", self.compress_algo().bits()),
-            )
-            .field("pps_sel", &format_args!("{}", self.pps_sel().bits()))
+            .field("compression_mode", &self.compression_mode())
+            .field("compress_algo", &self.compress_algo())
+            .field("pps_sel", &self.pps_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DSC_PARAMETER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

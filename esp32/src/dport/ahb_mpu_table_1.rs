@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHB_MPU_TABLE_1")
-            .field(
-                "ahb_access_grant_1",
-                &format_args!("{}", self.ahb_access_grant_1().bits()),
-            )
+            .field("ahb_access_grant_1", &self.ahb_access_grant_1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHB_MPU_TABLE_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

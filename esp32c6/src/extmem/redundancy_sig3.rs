@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REDUNDANCY_SIG3")
-            .field(
-                "cache_redcy_sig3",
-                &format_args!("{}", self.cache_redcy_sig3().bits()),
-            )
+            .field("cache_redcy_sig3", &self.cache_redcy_sig3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REDUNDANCY_SIG3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

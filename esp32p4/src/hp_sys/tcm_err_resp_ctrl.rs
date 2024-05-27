@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_ERR_RESP_CTRL")
-            .field(
-                "tcm_err_resp_en",
-                &format_args!("{}", self.tcm_err_resp_en().bit()),
-            )
+            .field("tcm_err_resp_en", &self.tcm_err_resp_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_ERR_RESP_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

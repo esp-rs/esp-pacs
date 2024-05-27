@@ -115,63 +115,57 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_REFRESH")
             .field(
                 "reg_l2_mem_unit0_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit0_refersh_en().bit()),
+                &self.reg_l2_mem_unit0_refersh_en(),
             )
             .field(
                 "reg_l2_mem_unit1_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit1_refersh_en().bit()),
+                &self.reg_l2_mem_unit1_refersh_en(),
             )
             .field(
                 "reg_l2_mem_unit2_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit2_refersh_en().bit()),
+                &self.reg_l2_mem_unit2_refersh_en(),
             )
             .field(
                 "reg_l2_mem_unit3_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit3_refersh_en().bit()),
+                &self.reg_l2_mem_unit3_refersh_en(),
             )
             .field(
                 "reg_l2_mem_unit4_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit4_refersh_en().bit()),
+                &self.reg_l2_mem_unit4_refersh_en(),
             )
             .field(
                 "reg_l2_mem_unit5_refersh_en",
-                &format_args!("{}", self.reg_l2_mem_unit5_refersh_en().bit()),
+                &self.reg_l2_mem_unit5_refersh_en(),
             )
             .field(
                 "reg_l2_mem_refersh_cnt_reset",
-                &format_args!("{}", self.reg_l2_mem_refersh_cnt_reset().bit()),
+                &self.reg_l2_mem_refersh_cnt_reset(),
             )
             .field(
                 "reg_l2_mem_unit0_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit0_refresh_done().bit()),
+                &self.reg_l2_mem_unit0_refresh_done(),
             )
             .field(
                 "reg_l2_mem_unit1_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit1_refresh_done().bit()),
+                &self.reg_l2_mem_unit1_refresh_done(),
             )
             .field(
                 "reg_l2_mem_unit2_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit2_refresh_done().bit()),
+                &self.reg_l2_mem_unit2_refresh_done(),
             )
             .field(
                 "reg_l2_mem_unit3_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit3_refresh_done().bit()),
+                &self.reg_l2_mem_unit3_refresh_done(),
             )
             .field(
                 "reg_l2_mem_unit4_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit4_refresh_done().bit()),
+                &self.reg_l2_mem_unit4_refresh_done(),
             )
             .field(
                 "reg_l2_mem_unit5_refresh_done",
-                &format_args!("{}", self.reg_l2_mem_unit5_refresh_done().bit()),
+                &self.reg_l2_mem_unit5_refresh_done(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_REFRESH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

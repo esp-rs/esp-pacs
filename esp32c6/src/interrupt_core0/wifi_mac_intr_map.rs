@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_MAC_INTR_MAP")
-            .field(
-                "wifi_mac_intr_map",
-                &format_args!("{}", self.wifi_mac_intr_map().bits()),
-            )
+            .field("wifi_mac_intr_map", &self.wifi_mac_intr_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<WIFI_MAC_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

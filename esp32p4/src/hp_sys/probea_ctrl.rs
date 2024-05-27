@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PROBEA_CTRL")
-            .field(
-                "reg_probe_a_mod_sel",
-                &format_args!("{}", self.reg_probe_a_mod_sel().bits()),
-            )
-            .field(
-                "reg_probe_a_top_sel",
-                &format_args!("{}", self.reg_probe_a_top_sel().bits()),
-            )
-            .field(
-                "reg_probe_l_sel",
-                &format_args!("{}", self.reg_probe_l_sel().bits()),
-            )
-            .field(
-                "reg_probe_h_sel",
-                &format_args!("{}", self.reg_probe_h_sel().bits()),
-            )
-            .field(
-                "reg_probe_global_en",
-                &format_args!("{}", self.reg_probe_global_en().bit()),
-            )
+            .field("reg_probe_a_mod_sel", &self.reg_probe_a_mod_sel())
+            .field("reg_probe_a_top_sel", &self.reg_probe_a_top_sel())
+            .field("reg_probe_l_sel", &self.reg_probe_l_sel())
+            .field("reg_probe_h_sel", &self.reg_probe_h_sel())
+            .field("reg_probe_global_en", &self.reg_probe_global_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PROBEA_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

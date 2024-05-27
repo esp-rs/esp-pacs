@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MINTSTS")
-            .field(
-                "int_status_msk",
-                &format_args!("{}", self.int_status_msk().bits()),
-            )
-            .field(
-                "sdio_interrupt_msk",
-                &format_args!("{}", self.sdio_interrupt_msk().bits()),
-            )
+            .field("int_status_msk", &self.int_status_msk())
+            .field("sdio_interrupt_msk", &self.sdio_interrupt_msk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MINTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Masked interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mintsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

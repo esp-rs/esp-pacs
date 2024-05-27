@@ -53,21 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDF_3D")
-            .field("mode_3d", &format_args!("{}", self.mode_3d().bits()))
-            .field("format_3d", &format_args!("{}", self.format_3d().bits()))
-            .field(
-                "second_vsync",
-                &format_args!("{}", self.second_vsync().bit()),
-            )
-            .field("right_first", &format_args!("{}", self.right_first().bit()))
-            .field("send_3d_cfg", &format_args!("{}", self.send_3d_cfg().bit()))
+            .field("mode_3d", &self.mode_3d())
+            .field("format_3d", &self.format_3d())
+            .field("second_vsync", &self.second_vsync())
+            .field("right_first", &self.right_first())
+            .field("send_3d_cfg", &self.send_3d_cfg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDF_3D_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

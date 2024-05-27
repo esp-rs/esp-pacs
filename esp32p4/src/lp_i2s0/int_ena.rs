@@ -62,28 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("rx_done", &format_args!("{}", self.rx_done().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field(
-                "rx_fifomem_udf",
-                &format_args!("{}", self.rx_fifomem_udf().bit()),
-            )
-            .field("lp_vad_done", &format_args!("{}", self.lp_vad_done().bit()))
-            .field(
-                "lp_vad_reset_done",
-                &format_args!("{}", self.lp_vad_reset_done().bit()),
-            )
-            .field(
-                "rx_mem_threshold",
-                &format_args!("{}", self.rx_mem_threshold().bit()),
-            )
+            .field("rx_done", &self.rx_done())
+            .field("rx_hung", &self.rx_hung())
+            .field("rx_fifomem_udf", &self.rx_fifomem_udf())
+            .field("lp_vad_done", &self.lp_vad_done())
+            .field("lp_vad_reset_done", &self.lp_vad_reset_done())
+            .field("rx_mem_threshold", &self.rx_mem_threshold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

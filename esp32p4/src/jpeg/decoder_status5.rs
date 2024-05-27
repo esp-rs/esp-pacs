@@ -66,24 +66,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS5")
-            .field(
-                "idct_hfm_data",
-                &format_args!("{}", self.idct_hfm_data().bits()),
-            )
-            .field("ns0", &format_args!("{}", self.ns0().bits()))
-            .field("ns1", &format_args!("{}", self.ns1().bits()))
-            .field("ns2", &format_args!("{}", self.ns2().bits()))
-            .field("ns3", &format_args!("{}", self.ns3().bits()))
-            .field("data_last_o", &format_args!("{}", self.data_last_o().bit()))
-            .field("rdn_result", &format_args!("{}", self.rdn_result().bit()))
-            .field("rdn_ena", &format_args!("{}", self.rdn_ena().bit()))
+            .field("idct_hfm_data", &self.idct_hfm_data())
+            .field("ns0", &self.ns0())
+            .field("ns1", &self.ns1())
+            .field("ns2", &self.ns2())
+            .field("ns3", &self.ns3())
+            .field("data_last_o", &self.data_last_o())
+            .field("rdn_result", &self.rdn_result())
+            .field("rdn_ena", &self.rdn_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DECODER_STATUS5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

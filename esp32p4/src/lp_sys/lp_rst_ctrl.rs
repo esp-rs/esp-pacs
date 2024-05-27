@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_RST_CTRL")
-            .field(
-                "ana_rst_bypass",
-                &format_args!("{}", self.ana_rst_bypass().bit()),
-            )
-            .field(
-                "sys_rst_bypass",
-                &format_args!("{}", self.sys_rst_bypass().bit()),
-            )
-            .field(
-                "efuse_force_norst",
-                &format_args!("{}", self.efuse_force_norst().bit()),
-            )
+            .field("ana_rst_bypass", &self.ana_rst_bypass())
+            .field("sys_rst_bypass", &self.sys_rst_bypass())
+            .field("efuse_force_norst", &self.efuse_force_norst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_RST_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

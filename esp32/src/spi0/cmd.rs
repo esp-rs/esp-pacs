@@ -152,29 +152,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field("flash_per", &format_args!("{}", self.flash_per().bit()))
-            .field("flash_pes", &format_args!("{}", self.flash_pes().bit()))
-            .field("usr", &format_args!("{}", self.usr().bit()))
-            .field("flash_hpm", &format_args!("{}", self.flash_hpm().bit()))
-            .field("flash_res", &format_args!("{}", self.flash_res().bit()))
-            .field("flash_dp", &format_args!("{}", self.flash_dp().bit()))
-            .field("flash_ce", &format_args!("{}", self.flash_ce().bit()))
-            .field("flash_be", &format_args!("{}", self.flash_be().bit()))
-            .field("flash_se", &format_args!("{}", self.flash_se().bit()))
-            .field("flash_pp", &format_args!("{}", self.flash_pp().bit()))
-            .field("flash_wrsr", &format_args!("{}", self.flash_wrsr().bit()))
-            .field("flash_rdsr", &format_args!("{}", self.flash_rdsr().bit()))
-            .field("flash_rdid", &format_args!("{}", self.flash_rdid().bit()))
-            .field("flash_wrdi", &format_args!("{}", self.flash_wrdi().bit()))
-            .field("flash_wren", &format_args!("{}", self.flash_wren().bit()))
-            .field("flash_read", &format_args!("{}", self.flash_read().bit()))
+            .field("flash_per", &self.flash_per())
+            .field("flash_pes", &self.flash_pes())
+            .field("usr", &self.usr())
+            .field("flash_hpm", &self.flash_hpm())
+            .field("flash_res", &self.flash_res())
+            .field("flash_dp", &self.flash_dp())
+            .field("flash_ce", &self.flash_ce())
+            .field("flash_be", &self.flash_be())
+            .field("flash_se", &self.flash_se())
+            .field("flash_pp", &self.flash_pp())
+            .field("flash_wrsr", &self.flash_wrsr())
+            .field("flash_rdsr", &self.flash_rdsr())
+            .field("flash_rdid", &self.flash_rdid())
+            .field("flash_wrdi", &self.flash_wrdi())
+            .field("flash_wren", &self.flash_wren())
+            .field("flash_read", &self.flash_read())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

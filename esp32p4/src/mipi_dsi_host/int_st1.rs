@@ -104,57 +104,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST1")
-            .field("to_hs_tx", &format_args!("{}", self.to_hs_tx().bit()))
-            .field("to_lp_rx", &format_args!("{}", self.to_lp_rx().bit()))
-            .field(
-                "ecc_single_err",
-                &format_args!("{}", self.ecc_single_err().bit()),
-            )
-            .field(
-                "ecc_milti_err",
-                &format_args!("{}", self.ecc_milti_err().bit()),
-            )
-            .field("crc_err", &format_args!("{}", self.crc_err().bit()))
-            .field(
-                "pkt_size_err",
-                &format_args!("{}", self.pkt_size_err().bit()),
-            )
-            .field("eopt_err", &format_args!("{}", self.eopt_err().bit()))
-            .field(
-                "dpi_pld_wr_err",
-                &format_args!("{}", self.dpi_pld_wr_err().bit()),
-            )
-            .field(
-                "gen_cmd_wr_err",
-                &format_args!("{}", self.gen_cmd_wr_err().bit()),
-            )
-            .field(
-                "gen_pld_wr_err",
-                &format_args!("{}", self.gen_pld_wr_err().bit()),
-            )
-            .field(
-                "gen_pld_send_err",
-                &format_args!("{}", self.gen_pld_send_err().bit()),
-            )
-            .field(
-                "gen_pld_rd_err",
-                &format_args!("{}", self.gen_pld_rd_err().bit()),
-            )
-            .field(
-                "gen_pld_recev_err",
-                &format_args!("{}", self.gen_pld_recev_err().bit()),
-            )
-            .field(
-                "dpi_buff_pld_under",
-                &format_args!("{}", self.dpi_buff_pld_under().bit()),
-            )
+            .field("to_hs_tx", &self.to_hs_tx())
+            .field("to_lp_rx", &self.to_lp_rx())
+            .field("ecc_single_err", &self.ecc_single_err())
+            .field("ecc_milti_err", &self.ecc_milti_err())
+            .field("crc_err", &self.crc_err())
+            .field("pkt_size_err", &self.pkt_size_err())
+            .field("eopt_err", &self.eopt_err())
+            .field("dpi_pld_wr_err", &self.dpi_pld_wr_err())
+            .field("gen_cmd_wr_err", &self.gen_cmd_wr_err())
+            .field("gen_pld_wr_err", &self.gen_pld_wr_err())
+            .field("gen_pld_send_err", &self.gen_pld_send_err())
+            .field("gen_pld_rd_err", &self.gen_pld_rd_err())
+            .field("gen_pld_recev_err", &self.gen_pld_recev_err())
+            .field("dpi_buff_pld_under", &self.dpi_buff_pld_under())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

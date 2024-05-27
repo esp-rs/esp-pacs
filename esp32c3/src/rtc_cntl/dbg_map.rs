@@ -116,61 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBG_MAP")
-            .field(
-                "gpio_pin5_mux_sel",
-                &format_args!("{}", self.gpio_pin5_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin4_mux_sel",
-                &format_args!("{}", self.gpio_pin4_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin3_mux_sel",
-                &format_args!("{}", self.gpio_pin3_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin2_mux_sel",
-                &format_args!("{}", self.gpio_pin2_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin1_mux_sel",
-                &format_args!("{}", self.gpio_pin1_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin0_mux_sel",
-                &format_args!("{}", self.gpio_pin0_mux_sel().bit()),
-            )
-            .field(
-                "gpio_pin5_fun_sel",
-                &format_args!("{}", self.gpio_pin5_fun_sel().bits()),
-            )
-            .field(
-                "gpio_pin4_fun_sel",
-                &format_args!("{}", self.gpio_pin4_fun_sel().bits()),
-            )
-            .field(
-                "gpio_pin3_fun_sel",
-                &format_args!("{}", self.gpio_pin3_fun_sel().bits()),
-            )
-            .field(
-                "gpio_pin2_fun_sel",
-                &format_args!("{}", self.gpio_pin2_fun_sel().bits()),
-            )
-            .field(
-                "gpio_pin1_fun_sel",
-                &format_args!("{}", self.gpio_pin1_fun_sel().bits()),
-            )
-            .field(
-                "gpio_pin0_fun_sel",
-                &format_args!("{}", self.gpio_pin0_fun_sel().bits()),
-            )
+            .field("gpio_pin5_mux_sel", &self.gpio_pin5_mux_sel())
+            .field("gpio_pin4_mux_sel", &self.gpio_pin4_mux_sel())
+            .field("gpio_pin3_mux_sel", &self.gpio_pin3_mux_sel())
+            .field("gpio_pin2_mux_sel", &self.gpio_pin2_mux_sel())
+            .field("gpio_pin1_mux_sel", &self.gpio_pin1_mux_sel())
+            .field("gpio_pin0_mux_sel", &self.gpio_pin0_mux_sel())
+            .field("gpio_pin5_fun_sel", &self.gpio_pin5_fun_sel())
+            .field("gpio_pin4_fun_sel", &self.gpio_pin4_fun_sel())
+            .field("gpio_pin3_fun_sel", &self.gpio_pin3_fun_sel())
+            .field("gpio_pin2_fun_sel", &self.gpio_pin2_fun_sel())
+            .field("gpio_pin1_fun_sel", &self.gpio_pin1_fun_sel())
+            .field("gpio_pin0_fun_sel", &self.gpio_pin0_fun_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBG_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

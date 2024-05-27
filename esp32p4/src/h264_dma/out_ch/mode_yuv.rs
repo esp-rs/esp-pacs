@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODE_YUV")
-            .field(
-                "out_test_y_value",
-                &format_args!("{}", self.out_test_y_value().bits()),
-            )
-            .field(
-                "out_test_u_value",
-                &format_args!("{}", self.out_test_u_value().bits()),
-            )
-            .field(
-                "out_test_v_value",
-                &format_args!("{}", self.out_test_v_value().bits()),
-            )
+            .field("out_test_y_value", &self.out_test_y_value())
+            .field("out_test_u_value", &self.out_test_u_value())
+            .field("out_test_v_value", &self.out_test_v_value())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODE_YUV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

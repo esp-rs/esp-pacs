@@ -41,30 +41,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field(
-                "vddbat_charge_upvoltage",
-                &format_args!("{}", self.vddbat_charge_upvoltage().bit()),
-            )
+            .field("vddbat_charge_upvoltage", &self.vddbat_charge_upvoltage())
             .field(
                 "vddbat_charge_undervoltage",
-                &format_args!("{}", self.vddbat_charge_undervoltage().bit()),
+                &self.vddbat_charge_undervoltage(),
             )
-            .field(
-                "vddbat_upvoltage",
-                &format_args!("{}", self.vddbat_upvoltage().bit()),
-            )
-            .field(
-                "vddbat_undervoltage",
-                &format_args!("{}", self.vddbat_undervoltage().bit()),
-            )
-            .field("bod_mode0", &format_args!("{}", self.bod_mode0().bit()))
+            .field("vddbat_upvoltage", &self.vddbat_upvoltage())
+            .field("vddbat_undervoltage", &self.vddbat_undervoltage())
+            .field("bod_mode0", &self.bod_mode0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

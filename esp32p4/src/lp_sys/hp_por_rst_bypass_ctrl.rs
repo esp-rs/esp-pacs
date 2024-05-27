@@ -28,19 +28,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_POR_RST_BYPASS_CTRL")
             .field(
                 "hp_po_cnnt_rstn_bypass_ctrl",
-                &format_args!("{}", self.hp_po_cnnt_rstn_bypass_ctrl().bits()),
+                &self.hp_po_cnnt_rstn_bypass_ctrl(),
             )
-            .field(
-                "hp_po_rstn_bypass_ctrl",
-                &format_args!("{}", self.hp_po_rstn_bypass_ctrl().bits()),
-            )
+            .field("hp_po_rstn_bypass_ctrl", &self.hp_po_rstn_bypass_ctrl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_POR_RST_BYPASS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

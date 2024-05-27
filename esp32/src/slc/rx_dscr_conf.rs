@@ -116,61 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_DSCR_CONF")
-            .field(
-                "slc0_token_no_replace",
-                &format_args!("{}", self.slc0_token_no_replace().bit()),
-            )
-            .field(
-                "slc0_infor_no_replace",
-                &format_args!("{}", self.slc0_infor_no_replace().bit()),
-            )
-            .field(
-                "slc0_rx_fill_mode",
-                &format_args!("{}", self.slc0_rx_fill_mode().bit()),
-            )
-            .field(
-                "slc0_rx_eof_mode",
-                &format_args!("{}", self.slc0_rx_eof_mode().bit()),
-            )
-            .field(
-                "slc0_rx_fill_en",
-                &format_args!("{}", self.slc0_rx_fill_en().bit()),
-            )
-            .field(
-                "slc0_rd_retry_threshold",
-                &format_args!("{}", self.slc0_rd_retry_threshold().bits()),
-            )
-            .field(
-                "slc1_token_no_replace",
-                &format_args!("{}", self.slc1_token_no_replace().bit()),
-            )
-            .field(
-                "slc1_infor_no_replace",
-                &format_args!("{}", self.slc1_infor_no_replace().bit()),
-            )
-            .field(
-                "slc1_rx_fill_mode",
-                &format_args!("{}", self.slc1_rx_fill_mode().bit()),
-            )
-            .field(
-                "slc1_rx_eof_mode",
-                &format_args!("{}", self.slc1_rx_eof_mode().bit()),
-            )
-            .field(
-                "slc1_rx_fill_en",
-                &format_args!("{}", self.slc1_rx_fill_en().bit()),
-            )
-            .field(
-                "slc1_rd_retry_threshold",
-                &format_args!("{}", self.slc1_rd_retry_threshold().bits()),
-            )
+            .field("slc0_token_no_replace", &self.slc0_token_no_replace())
+            .field("slc0_infor_no_replace", &self.slc0_infor_no_replace())
+            .field("slc0_rx_fill_mode", &self.slc0_rx_fill_mode())
+            .field("slc0_rx_eof_mode", &self.slc0_rx_eof_mode())
+            .field("slc0_rx_fill_en", &self.slc0_rx_fill_en())
+            .field("slc0_rd_retry_threshold", &self.slc0_rd_retry_threshold())
+            .field("slc1_token_no_replace", &self.slc1_token_no_replace())
+            .field("slc1_infor_no_replace", &self.slc1_infor_no_replace())
+            .field("slc1_rx_fill_mode", &self.slc1_rx_fill_mode())
+            .field("slc1_rx_eof_mode", &self.slc1_rx_eof_mode())
+            .field("slc1_rx_fill_en", &self.slc1_rx_fill_en())
+            .field("slc1_rd_retry_threshold", &self.slc1_rd_retry_threshold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_DSCR_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

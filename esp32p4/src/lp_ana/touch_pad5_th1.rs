@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_PAD5_TH1")
-            .field(
-                "touch_pad5_th1",
-                &format_args!("{}", self.touch_pad5_th1().bits()),
-            )
+            .field("touch_pad5_th1", &self.touch_pad5_th1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_PAD5_TH1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

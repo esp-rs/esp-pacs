@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_HP_CK_POWER")
-            .field(
-                "hp_active_i2c_iso_en",
-                &format_args!("{}", self.hp_active_i2c_iso_en().bit()),
-            )
-            .field(
-                "hp_active_i2c_retention",
-                &format_args!("{}", self.hp_active_i2c_retention().bit()),
-            )
-            .field(
-                "hp_active_xpd_bb_i2c",
-                &format_args!("{}", self.hp_active_xpd_bb_i2c().bit()),
-            )
-            .field(
-                "hp_active_xpd_bbpll_i2c",
-                &format_args!("{}", self.hp_active_xpd_bbpll_i2c().bit()),
-            )
-            .field(
-                "hp_active_xpd_bbpll",
-                &format_args!("{}", self.hp_active_xpd_bbpll().bit()),
-            )
+            .field("hp_active_i2c_iso_en", &self.hp_active_i2c_iso_en())
+            .field("hp_active_i2c_retention", &self.hp_active_i2c_retention())
+            .field("hp_active_xpd_bb_i2c", &self.hp_active_xpd_bb_i2c())
+            .field("hp_active_xpd_bbpll_i2c", &self.hp_active_xpd_bbpll_i2c())
+            .field("hp_active_xpd_bbpll", &self.hp_active_xpd_bbpll())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

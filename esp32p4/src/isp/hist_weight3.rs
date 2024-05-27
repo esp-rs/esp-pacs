@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_WEIGHT3")
-            .field(
-                "hist_weight_30",
-                &format_args!("{}", self.hist_weight_30().bits()),
-            )
-            .field(
-                "hist_weight_24",
-                &format_args!("{}", self.hist_weight_24().bits()),
-            )
-            .field(
-                "hist_weight_23",
-                &format_args!("{}", self.hist_weight_23().bits()),
-            )
-            .field(
-                "hist_weight_22",
-                &format_args!("{}", self.hist_weight_22().bits()),
-            )
+            .field("hist_weight_30", &self.hist_weight_30())
+            .field("hist_weight_24", &self.hist_weight_24())
+            .field("hist_weight_23", &self.hist_weight_23())
+            .field("hist_weight_22", &self.hist_weight_22())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HIST_WEIGHT3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

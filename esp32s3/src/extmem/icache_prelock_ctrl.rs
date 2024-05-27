@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_PRELOCK_CTRL")
-            .field(
-                "icache_prelock_sct0_en",
-                &format_args!("{}", self.icache_prelock_sct0_en().bit()),
-            )
-            .field(
-                "icache_prelock_sct1_en",
-                &format_args!("{}", self.icache_prelock_sct1_en().bit()),
-            )
+            .field("icache_prelock_sct0_en", &self.icache_prelock_sct0_en())
+            .field("icache_prelock_sct1_en", &self.icache_prelock_sct1_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_PRELOCK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

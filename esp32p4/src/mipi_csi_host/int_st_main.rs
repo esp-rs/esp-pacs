@@ -69,49 +69,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_MAIN")
-            .field(
-                "st_status_int_phy_fatal",
-                &format_args!("{}", self.st_status_int_phy_fatal().bit()),
-            )
-            .field(
-                "st_status_int_pkt_fatal",
-                &format_args!("{}", self.st_status_int_pkt_fatal().bit()),
-            )
+            .field("st_status_int_phy_fatal", &self.st_status_int_phy_fatal())
+            .field("st_status_int_pkt_fatal", &self.st_status_int_pkt_fatal())
             .field(
                 "st_status_int_bndry_frame_fatal",
-                &format_args!("{}", self.st_status_int_bndry_frame_fatal().bit()),
+                &self.st_status_int_bndry_frame_fatal(),
             )
             .field(
                 "st_status_int_seq_frame_fatal",
-                &format_args!("{}", self.st_status_int_seq_frame_fatal().bit()),
+                &self.st_status_int_seq_frame_fatal(),
             )
             .field(
                 "st_status_int_crc_frame_fatal",
-                &format_args!("{}", self.st_status_int_crc_frame_fatal().bit()),
+                &self.st_status_int_crc_frame_fatal(),
             )
             .field(
                 "st_status_int_pld_crc_fatal",
-                &format_args!("{}", self.st_status_int_pld_crc_fatal().bit()),
+                &self.st_status_int_pld_crc_fatal(),
             )
-            .field(
-                "st_status_int_data_id",
-                &format_args!("{}", self.st_status_int_data_id().bit()),
-            )
+            .field("st_status_int_data_id", &self.st_status_int_data_id())
             .field(
                 "st_status_int_ecc_corrected",
-                &format_args!("{}", self.st_status_int_ecc_corrected().bit()),
+                &self.st_status_int_ecc_corrected(),
             )
-            .field(
-                "st_status_int_phy",
-                &format_args!("{}", self.st_status_int_phy().bit()),
-            )
+            .field("st_status_int_phy", &self.st_status_int_phy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_MAIN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_main::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

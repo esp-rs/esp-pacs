@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CONF1")
-            .field(
-                "tx_tdm_ws_width",
-                &format_args!("{}", self.tx_tdm_ws_width().bits()),
-            )
-            .field(
-                "tx_bits_mod",
-                &format_args!("{}", self.tx_bits_mod().bits()),
-            )
-            .field(
-                "tx_half_sample_bits",
-                &format_args!("{}", self.tx_half_sample_bits().bits()),
-            )
-            .field(
-                "tx_tdm_chan_bits",
-                &format_args!("{}", self.tx_tdm_chan_bits().bits()),
-            )
+            .field("tx_tdm_ws_width", &self.tx_tdm_ws_width())
+            .field("tx_bits_mod", &self.tx_bits_mod())
+            .field("tx_half_sample_bits", &self.tx_half_sample_bits())
+            .field("tx_tdm_chan_bits", &self.tx_tdm_chan_bits())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

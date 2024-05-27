@@ -296,141 +296,75 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_ST4")
-            .field(
-                "mcpwm0_task_clr0_ost_st",
-                &format_args!("{}", self.mcpwm0_task_clr0_ost_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_clr1_ost_st",
-                &format_args!("{}", self.mcpwm0_task_clr1_ost_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_clr2_ost_st",
-                &format_args!("{}", self.mcpwm0_task_clr2_ost_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_cap0_st",
-                &format_args!("{}", self.mcpwm0_task_cap0_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_cap1_st",
-                &format_args!("{}", self.mcpwm0_task_cap1_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_cap2_st",
-                &format_args!("{}", self.mcpwm0_task_cap2_st().bit()),
-            )
+            .field("mcpwm0_task_clr0_ost_st", &self.mcpwm0_task_clr0_ost_st())
+            .field("mcpwm0_task_clr1_ost_st", &self.mcpwm0_task_clr1_ost_st())
+            .field("mcpwm0_task_clr2_ost_st", &self.mcpwm0_task_clr2_ost_st())
+            .field("mcpwm0_task_cap0_st", &self.mcpwm0_task_cap0_st())
+            .field("mcpwm0_task_cap1_st", &self.mcpwm0_task_cap1_st())
+            .field("mcpwm0_task_cap2_st", &self.mcpwm0_task_cap2_st())
             .field(
                 "mcpwm1_task_cmpr0_a_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr0_a_up_st().bit()),
+                &self.mcpwm1_task_cmpr0_a_up_st(),
             )
             .field(
                 "mcpwm1_task_cmpr1_a_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr1_a_up_st().bit()),
+                &self.mcpwm1_task_cmpr1_a_up_st(),
             )
             .field(
                 "mcpwm1_task_cmpr2_a_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr2_a_up_st().bit()),
+                &self.mcpwm1_task_cmpr2_a_up_st(),
             )
             .field(
                 "mcpwm1_task_cmpr0_b_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr0_b_up_st().bit()),
+                &self.mcpwm1_task_cmpr0_b_up_st(),
             )
             .field(
                 "mcpwm1_task_cmpr1_b_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr1_b_up_st().bit()),
+                &self.mcpwm1_task_cmpr1_b_up_st(),
             )
             .field(
                 "mcpwm1_task_cmpr2_b_up_st",
-                &format_args!("{}", self.mcpwm1_task_cmpr2_b_up_st().bit()),
+                &self.mcpwm1_task_cmpr2_b_up_st(),
             )
-            .field(
-                "mcpwm1_task_gen_stop_st",
-                &format_args!("{}", self.mcpwm1_task_gen_stop_st().bit()),
-            )
+            .field("mcpwm1_task_gen_stop_st", &self.mcpwm1_task_gen_stop_st())
             .field(
                 "mcpwm1_task_timer0_syn_st",
-                &format_args!("{}", self.mcpwm1_task_timer0_syn_st().bit()),
+                &self.mcpwm1_task_timer0_syn_st(),
             )
             .field(
                 "mcpwm1_task_timer1_syn_st",
-                &format_args!("{}", self.mcpwm1_task_timer1_syn_st().bit()),
+                &self.mcpwm1_task_timer1_syn_st(),
             )
             .field(
                 "mcpwm1_task_timer2_syn_st",
-                &format_args!("{}", self.mcpwm1_task_timer2_syn_st().bit()),
+                &self.mcpwm1_task_timer2_syn_st(),
             )
             .field(
                 "mcpwm1_task_timer0_period_up_st",
-                &format_args!("{}", self.mcpwm1_task_timer0_period_up_st().bit()),
+                &self.mcpwm1_task_timer0_period_up_st(),
             )
             .field(
                 "mcpwm1_task_timer1_period_up_st",
-                &format_args!("{}", self.mcpwm1_task_timer1_period_up_st().bit()),
+                &self.mcpwm1_task_timer1_period_up_st(),
             )
             .field(
                 "mcpwm1_task_timer2_period_up_st",
-                &format_args!("{}", self.mcpwm1_task_timer2_period_up_st().bit()),
+                &self.mcpwm1_task_timer2_period_up_st(),
             )
-            .field(
-                "mcpwm1_task_tz0_ost_st",
-                &format_args!("{}", self.mcpwm1_task_tz0_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_tz1_ost_st",
-                &format_args!("{}", self.mcpwm1_task_tz1_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_tz2_ost_st",
-                &format_args!("{}", self.mcpwm1_task_tz2_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_clr0_ost_st",
-                &format_args!("{}", self.mcpwm1_task_clr0_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_clr1_ost_st",
-                &format_args!("{}", self.mcpwm1_task_clr1_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_clr2_ost_st",
-                &format_args!("{}", self.mcpwm1_task_clr2_ost_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_cap0_st",
-                &format_args!("{}", self.mcpwm1_task_cap0_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_cap1_st",
-                &format_args!("{}", self.mcpwm1_task_cap1_st().bit()),
-            )
-            .field(
-                "mcpwm1_task_cap2_st",
-                &format_args!("{}", self.mcpwm1_task_cap2_st().bit()),
-            )
-            .field(
-                "adc_task_sample0_st",
-                &format_args!("{}", self.adc_task_sample0_st().bit()),
-            )
-            .field(
-                "adc_task_sample1_st",
-                &format_args!("{}", self.adc_task_sample1_st().bit()),
-            )
-            .field(
-                "adc_task_start0_st",
-                &format_args!("{}", self.adc_task_start0_st().bit()),
-            )
-            .field(
-                "adc_task_stop0_st",
-                &format_args!("{}", self.adc_task_stop0_st().bit()),
-            )
+            .field("mcpwm1_task_tz0_ost_st", &self.mcpwm1_task_tz0_ost_st())
+            .field("mcpwm1_task_tz1_ost_st", &self.mcpwm1_task_tz1_ost_st())
+            .field("mcpwm1_task_tz2_ost_st", &self.mcpwm1_task_tz2_ost_st())
+            .field("mcpwm1_task_clr0_ost_st", &self.mcpwm1_task_clr0_ost_st())
+            .field("mcpwm1_task_clr1_ost_st", &self.mcpwm1_task_clr1_ost_st())
+            .field("mcpwm1_task_clr2_ost_st", &self.mcpwm1_task_clr2_ost_st())
+            .field("mcpwm1_task_cap0_st", &self.mcpwm1_task_cap0_st())
+            .field("mcpwm1_task_cap1_st", &self.mcpwm1_task_cap1_st())
+            .field("mcpwm1_task_cap2_st", &self.mcpwm1_task_cap2_st())
+            .field("adc_task_sample0_st", &self.adc_task_sample0_st())
+            .field("adc_task_sample1_st", &self.adc_task_sample1_st())
+            .field("adc_task_start0_st", &self.adc_task_start0_st())
+            .field("adc_task_stop0_st", &self.adc_task_stop0_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_ST4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

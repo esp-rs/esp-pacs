@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_RDATA5")
-            .field(
-                "reserved_3_160",
-                &format_args!("{}", self.reserved_3_160().bits()),
-            )
-            .field(
-                "rd_mac_version",
-                &format_args!("{}", self.rd_mac_version().bits()),
-            )
+            .field("reserved_3_160", &self.reserved_3_160())
+            .field("rd_mac_version", &self.rd_mac_version())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK3_RDATA5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_rdata5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -116,61 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CONF")
-            .field(
-                "agc_mem_force_pu",
-                &format_args!("{}", self.agc_mem_force_pu().bit()),
-            )
-            .field(
-                "agc_mem_force_pd",
-                &format_args!("{}", self.agc_mem_force_pd().bit()),
-            )
-            .field(
-                "pbus_mem_force_pu",
-                &format_args!("{}", self.pbus_mem_force_pu().bit()),
-            )
-            .field(
-                "pbus_mem_force_pd",
-                &format_args!("{}", self.pbus_mem_force_pd().bit()),
-            )
-            .field(
-                "i2c_mst_mem_force_pu",
-                &format_args!("{}", self.i2c_mst_mem_force_pu().bit()),
-            )
-            .field(
-                "i2c_mst_mem_force_pd",
-                &format_args!("{}", self.i2c_mst_mem_force_pd().bit()),
-            )
-            .field(
-                "chan_freq_mem_force_pu",
-                &format_args!("{}", self.chan_freq_mem_force_pu().bit()),
-            )
-            .field(
-                "chan_freq_mem_force_pd",
-                &format_args!("{}", self.chan_freq_mem_force_pd().bit()),
-            )
-            .field(
-                "modem_pwr_mem_wp",
-                &format_args!("{}", self.modem_pwr_mem_wp().bits()),
-            )
-            .field(
-                "modem_pwr_mem_wa",
-                &format_args!("{}", self.modem_pwr_mem_wa().bits()),
-            )
-            .field(
-                "modem_pwr_mem_ra",
-                &format_args!("{}", self.modem_pwr_mem_ra().bits()),
-            )
-            .field(
-                "modem_pwr_mem_rm",
-                &format_args!("{}", self.modem_pwr_mem_rm().bits()),
-            )
+            .field("agc_mem_force_pu", &self.agc_mem_force_pu())
+            .field("agc_mem_force_pd", &self.agc_mem_force_pd())
+            .field("pbus_mem_force_pu", &self.pbus_mem_force_pu())
+            .field("pbus_mem_force_pd", &self.pbus_mem_force_pd())
+            .field("i2c_mst_mem_force_pu", &self.i2c_mst_mem_force_pu())
+            .field("i2c_mst_mem_force_pd", &self.i2c_mst_mem_force_pd())
+            .field("chan_freq_mem_force_pu", &self.chan_freq_mem_force_pu())
+            .field("chan_freq_mem_force_pd", &self.chan_freq_mem_force_pd())
+            .field("modem_pwr_mem_wp", &self.modem_pwr_mem_wp())
+            .field("modem_pwr_mem_wa", &self.modem_pwr_mem_wa())
+            .field("modem_pwr_mem_ra", &self.modem_pwr_mem_ra())
+            .field("modem_pwr_mem_rm", &self.modem_pwr_mem_rm())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

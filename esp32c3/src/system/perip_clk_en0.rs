@@ -296,93 +296,39 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_CLK_EN0")
-            .field(
-                "timers_clk_en",
-                &format_args!("{}", self.timers_clk_en().bit()),
-            )
-            .field(
-                "spi01_clk_en",
-                &format_args!("{}", self.spi01_clk_en().bit()),
-            )
-            .field("uart_clk_en", &format_args!("{}", self.uart_clk_en().bit()))
-            .field("wdg_clk_en", &format_args!("{}", self.wdg_clk_en().bit()))
-            .field("i2s0_clk_en", &format_args!("{}", self.i2s0_clk_en().bit()))
-            .field(
-                "uart1_clk_en",
-                &format_args!("{}", self.uart1_clk_en().bit()),
-            )
-            .field("spi2_clk_en", &format_args!("{}", self.spi2_clk_en().bit()))
-            .field(
-                "i2c_ext0_clk_en",
-                &format_args!("{}", self.i2c_ext0_clk_en().bit()),
-            )
-            .field(
-                "uhci0_clk_en",
-                &format_args!("{}", self.uhci0_clk_en().bit()),
-            )
-            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
-            .field("pcnt_clk_en", &format_args!("{}", self.pcnt_clk_en().bit()))
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field(
-                "uhci1_clk_en",
-                &format_args!("{}", self.uhci1_clk_en().bit()),
-            )
-            .field(
-                "timergroup_clk_en",
-                &format_args!("{}", self.timergroup_clk_en().bit()),
-            )
-            .field(
-                "efuse_clk_en",
-                &format_args!("{}", self.efuse_clk_en().bit()),
-            )
-            .field(
-                "timergroup1_clk_en",
-                &format_args!("{}", self.timergroup1_clk_en().bit()),
-            )
-            .field("spi3_clk_en", &format_args!("{}", self.spi3_clk_en().bit()))
-            .field("pwm0_clk_en", &format_args!("{}", self.pwm0_clk_en().bit()))
-            .field("ext1_clk_en", &format_args!("{}", self.ext1_clk_en().bit()))
-            .field("twai_clk_en", &format_args!("{}", self.twai_clk_en().bit()))
-            .field("pwm1_clk_en", &format_args!("{}", self.pwm1_clk_en().bit()))
-            .field("i2s1_clk_en", &format_args!("{}", self.i2s1_clk_en().bit()))
-            .field(
-                "spi2_dma_clk_en",
-                &format_args!("{}", self.spi2_dma_clk_en().bit()),
-            )
-            .field(
-                "usb_device_clk_en",
-                &format_args!("{}", self.usb_device_clk_en().bit()),
-            )
-            .field(
-                "uart_mem_clk_en",
-                &format_args!("{}", self.uart_mem_clk_en().bit()),
-            )
-            .field("pwm2_clk_en", &format_args!("{}", self.pwm2_clk_en().bit()))
-            .field("pwm3_clk_en", &format_args!("{}", self.pwm3_clk_en().bit()))
-            .field(
-                "spi3_dma_clk_en",
-                &format_args!("{}", self.spi3_dma_clk_en().bit()),
-            )
-            .field(
-                "apb_saradc_clk_en",
-                &format_args!("{}", self.apb_saradc_clk_en().bit()),
-            )
-            .field(
-                "systimer_clk_en",
-                &format_args!("{}", self.systimer_clk_en().bit()),
-            )
-            .field(
-                "adc2_arb_clk_en",
-                &format_args!("{}", self.adc2_arb_clk_en().bit()),
-            )
-            .field("spi4_clk_en", &format_args!("{}", self.spi4_clk_en().bit()))
+            .field("timers_clk_en", &self.timers_clk_en())
+            .field("spi01_clk_en", &self.spi01_clk_en())
+            .field("uart_clk_en", &self.uart_clk_en())
+            .field("wdg_clk_en", &self.wdg_clk_en())
+            .field("i2s0_clk_en", &self.i2s0_clk_en())
+            .field("uart1_clk_en", &self.uart1_clk_en())
+            .field("spi2_clk_en", &self.spi2_clk_en())
+            .field("i2c_ext0_clk_en", &self.i2c_ext0_clk_en())
+            .field("uhci0_clk_en", &self.uhci0_clk_en())
+            .field("rmt_clk_en", &self.rmt_clk_en())
+            .field("pcnt_clk_en", &self.pcnt_clk_en())
+            .field("ledc_clk_en", &self.ledc_clk_en())
+            .field("uhci1_clk_en", &self.uhci1_clk_en())
+            .field("timergroup_clk_en", &self.timergroup_clk_en())
+            .field("efuse_clk_en", &self.efuse_clk_en())
+            .field("timergroup1_clk_en", &self.timergroup1_clk_en())
+            .field("spi3_clk_en", &self.spi3_clk_en())
+            .field("pwm0_clk_en", &self.pwm0_clk_en())
+            .field("ext1_clk_en", &self.ext1_clk_en())
+            .field("twai_clk_en", &self.twai_clk_en())
+            .field("pwm1_clk_en", &self.pwm1_clk_en())
+            .field("i2s1_clk_en", &self.i2s1_clk_en())
+            .field("spi2_dma_clk_en", &self.spi2_dma_clk_en())
+            .field("usb_device_clk_en", &self.usb_device_clk_en())
+            .field("uart_mem_clk_en", &self.uart_mem_clk_en())
+            .field("pwm2_clk_en", &self.pwm2_clk_en())
+            .field("pwm3_clk_en", &self.pwm3_clk_en())
+            .field("spi3_dma_clk_en", &self.spi3_dma_clk_en())
+            .field("apb_saradc_clk_en", &self.apb_saradc_clk_en())
+            .field("systimer_clk_en", &self.systimer_clk_en())
+            .field("adc2_arb_clk_en", &self.adc2_arb_clk_en())
+            .field("spi4_clk_en", &self.spi4_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

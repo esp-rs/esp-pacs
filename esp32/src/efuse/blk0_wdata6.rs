@@ -98,44 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_WDATA6")
-            .field(
-                "coding_scheme",
-                &format_args!("{}", self.coding_scheme().bits()),
-            )
-            .field(
-                "console_debug_disable",
-                &format_args!("{}", self.console_debug_disable().bit()),
-            )
-            .field(
-                "disable_sdio_host",
-                &format_args!("{}", self.disable_sdio_host().bit()),
-            )
-            .field("abs_done_0", &format_args!("{}", self.abs_done_0().bit()))
-            .field("abs_done_1", &format_args!("{}", self.abs_done_1().bit()))
-            .field(
-                "disable_jtag",
-                &format_args!("{}", self.disable_jtag().bit()),
-            )
-            .field(
-                "disable_dl_encrypt",
-                &format_args!("{}", self.disable_dl_encrypt().bit()),
-            )
-            .field(
-                "disable_dl_decrypt",
-                &format_args!("{}", self.disable_dl_decrypt().bit()),
-            )
-            .field(
-                "disable_dl_cache",
-                &format_args!("{}", self.disable_dl_cache().bit()),
-            )
-            .field("key_status", &format_args!("{}", self.key_status().bit()))
+            .field("coding_scheme", &self.coding_scheme())
+            .field("console_debug_disable", &self.console_debug_disable())
+            .field("disable_sdio_host", &self.disable_sdio_host())
+            .field("abs_done_0", &self.abs_done_0())
+            .field("abs_done_1", &self.abs_done_1())
+            .field("disable_jtag", &self.disable_jtag())
+            .field("disable_dl_encrypt", &self.disable_dl_encrypt())
+            .field("disable_dl_decrypt", &self.disable_dl_decrypt())
+            .field("disable_dl_cache", &self.disable_dl_cache())
+            .field("key_status", &self.key_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_WDATA6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

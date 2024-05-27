@@ -56,34 +56,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GMAC_CTRL0")
-            .field("ptp_pps", &format_args!("{}", self.ptp_pps().bit()))
-            .field(
-                "sbd_flowctrl",
-                &format_args!("{}", self.sbd_flowctrl().bit()),
-            )
-            .field(
-                "phy_intf_sel",
-                &format_args!("{}", self.phy_intf_sel().bits()),
-            )
-            .field(
-                "gmac_mem_clk_force_on",
-                &format_args!("{}", self.gmac_mem_clk_force_on().bit()),
-            )
-            .field(
-                "gmac_rst_clk_tx_n",
-                &format_args!("{}", self.gmac_rst_clk_tx_n().bit()),
-            )
-            .field(
-                "gmac_rst_clk_rx_n",
-                &format_args!("{}", self.gmac_rst_clk_rx_n().bit()),
-            )
+            .field("ptp_pps", &self.ptp_pps())
+            .field("sbd_flowctrl", &self.sbd_flowctrl())
+            .field("phy_intf_sel", &self.phy_intf_sel())
+            .field("gmac_mem_clk_force_on", &self.gmac_mem_clk_force_on())
+            .field("gmac_rst_clk_tx_n", &self.gmac_rst_clk_tx_n())
+            .field("gmac_rst_clk_rx_n", &self.gmac_rst_clk_rx_n())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GMAC_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

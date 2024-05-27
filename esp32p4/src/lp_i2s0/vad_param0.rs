@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM0")
-            .field(
-                "param_min_energy",
-                &format_args!("{}", self.param_min_energy().bits()),
-            )
-            .field(
-                "param_init_frame_num",
-                &format_args!("{}", self.param_init_frame_num().bits()),
-            )
+            .field("param_min_energy", &self.param_min_energy())
+            .field("param_init_frame_num", &self.param_init_frame_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_PARAM0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

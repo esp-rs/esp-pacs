@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_INT3_MAP")
-            .field(
-                "core0_gpio_int3_map",
-                &format_args!("{}", self.core0_gpio_int3_map().bits()),
-            )
+            .field("core0_gpio_int3_map", &self.core0_gpio_int3_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GPIO_INT3_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

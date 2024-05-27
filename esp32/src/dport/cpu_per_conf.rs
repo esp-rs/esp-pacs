@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PER_CONF")
-            .field(
-                "cpuperiod_sel",
-                &format_args!("{}", self.cpuperiod_sel().bits()),
-            )
-            .field(
-                "lowspeed_clk_sel",
-                &format_args!("{}", self.lowspeed_clk_sel().bit()),
-            )
-            .field(
-                "fast_clk_rtc_sel",
-                &format_args!("{}", self.fast_clk_rtc_sel().bit()),
-            )
+            .field("cpuperiod_sel", &self.cpuperiod_sel())
+            .field("lowspeed_clk_sel", &self.lowspeed_clk_sel())
+            .field("fast_clk_rtc_sel", &self.fast_clk_rtc_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_PER_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

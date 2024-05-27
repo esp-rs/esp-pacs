@@ -80,45 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_HPAON_CNTL")
-            .field(
-                "force_hp_aon_reset",
-                &format_args!("{}", self.force_hp_aon_reset().bit()),
-            )
-            .field(
-                "force_hp_aon_iso",
-                &format_args!("{}", self.force_hp_aon_iso().bit()),
-            )
-            .field(
-                "force_hp_aon_pu",
-                &format_args!("{}", self.force_hp_aon_pu().bit()),
-            )
-            .field(
-                "force_hp_aon_no_reset",
-                &format_args!("{}", self.force_hp_aon_no_reset().bit()),
-            )
-            .field(
-                "force_hp_aon_no_iso",
-                &format_args!("{}", self.force_hp_aon_no_iso().bit()),
-            )
-            .field(
-                "force_hp_aon_pd",
-                &format_args!("{}", self.force_hp_aon_pd().bit()),
-            )
-            .field(
-                "pd_hp_aon_mask",
-                &format_args!("{}", self.pd_hp_aon_mask().bits()),
-            )
-            .field(
-                "pd_hp_aon_pd_mask",
-                &format_args!("{}", self.pd_hp_aon_pd_mask().bits()),
-            )
+            .field("force_hp_aon_reset", &self.force_hp_aon_reset())
+            .field("force_hp_aon_iso", &self.force_hp_aon_iso())
+            .field("force_hp_aon_pu", &self.force_hp_aon_pu())
+            .field("force_hp_aon_no_reset", &self.force_hp_aon_no_reset())
+            .field("force_hp_aon_no_iso", &self.force_hp_aon_no_iso())
+            .field("force_hp_aon_pd", &self.force_hp_aon_pd())
+            .field("pd_hp_aon_mask", &self.pd_hp_aon_mask())
+            .field("pd_hp_aon_pd_mask", &self.pd_hp_aon_pd_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPAON_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

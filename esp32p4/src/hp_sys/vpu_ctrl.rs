@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VPU_CTRL")
-            .field(
-                "ppa_lslp_mem_pd",
-                &format_args!("{}", self.ppa_lslp_mem_pd().bit()),
-            )
-            .field(
-                "jpeg_sdslp_mem_pd",
-                &format_args!("{}", self.jpeg_sdslp_mem_pd().bit()),
-            )
-            .field(
-                "jpeg_lslp_mem_pd",
-                &format_args!("{}", self.jpeg_lslp_mem_pd().bit()),
-            )
-            .field(
-                "jpeg_dslp_mem_pd",
-                &format_args!("{}", self.jpeg_dslp_mem_pd().bit()),
-            )
-            .field(
-                "dma2d_lslp_mem_pd",
-                &format_args!("{}", self.dma2d_lslp_mem_pd().bit()),
-            )
+            .field("ppa_lslp_mem_pd", &self.ppa_lslp_mem_pd())
+            .field("jpeg_sdslp_mem_pd", &self.jpeg_sdslp_mem_pd())
+            .field("jpeg_lslp_mem_pd", &self.jpeg_lslp_mem_pd())
+            .field("jpeg_dslp_mem_pd", &self.jpeg_dslp_mem_pd())
+            .field("dma2d_lslp_mem_pd", &self.dma2d_lslp_mem_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VPU_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

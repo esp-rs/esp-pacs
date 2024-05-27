@@ -108,50 +108,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CHCONF0")
-            .field(
-                "tx_conti_mode_ch0",
-                &format_args!("{}", self.tx_conti_mode_ch0().bit()),
-            )
-            .field(
-                "mem_tx_wrap_en_ch0",
-                &format_args!("{}", self.mem_tx_wrap_en_ch0().bit()),
-            )
-            .field(
-                "idle_out_lv_ch0",
-                &format_args!("{}", self.idle_out_lv_ch0().bit()),
-            )
-            .field(
-                "idle_out_en_ch0",
-                &format_args!("{}", self.idle_out_en_ch0().bit()),
-            )
-            .field("tx_stop_ch0", &format_args!("{}", self.tx_stop_ch0().bit()))
-            .field(
-                "div_cnt_ch0",
-                &format_args!("{}", self.div_cnt_ch0().bits()),
-            )
-            .field(
-                "mem_size_ch0",
-                &format_args!("{}", self.mem_size_ch0().bits()),
-            )
-            .field(
-                "carrier_eff_en_ch0",
-                &format_args!("{}", self.carrier_eff_en_ch0().bit()),
-            )
-            .field(
-                "carrier_en_ch0",
-                &format_args!("{}", self.carrier_en_ch0().bit()),
-            )
-            .field(
-                "carrier_out_lv_ch0",
-                &format_args!("{}", self.carrier_out_lv_ch0().bit()),
-            )
+            .field("tx_conti_mode_ch0", &self.tx_conti_mode_ch0())
+            .field("mem_tx_wrap_en_ch0", &self.mem_tx_wrap_en_ch0())
+            .field("idle_out_lv_ch0", &self.idle_out_lv_ch0())
+            .field("idle_out_en_ch0", &self.idle_out_en_ch0())
+            .field("tx_stop_ch0", &self.tx_stop_ch0())
+            .field("div_cnt_ch0", &self.div_cnt_ch0())
+            .field("mem_size_ch0", &self.mem_size_ch0())
+            .field("carrier_eff_en_ch0", &self.carrier_eff_en_ch0())
+            .field("carrier_en_ch0", &self.carrier_en_ch0())
+            .field("carrier_out_lv_ch0", &self.carrier_out_lv_ch0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_CHCONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

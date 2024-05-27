@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("C0RE_0_LASTPC_BEFORE_EXCEPTION")
-            .field(
-                "core_0_lastpc_before_exc",
-                &format_args!("{}", self.core_0_lastpc_before_exc().bits()),
-            )
+            .field("core_0_lastpc_before_exc", &self.core_0_lastpc_before_exc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`c0re_0_lastpc_before_exception::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

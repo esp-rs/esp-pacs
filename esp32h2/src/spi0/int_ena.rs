@@ -65,29 +65,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("slv_st_end", &format_args!("{}", self.slv_st_end().bit()))
-            .field("mst_st_end", &format_args!("{}", self.mst_st_end().bit()))
-            .field("ecc_err", &format_args!("{}", self.ecc_err().bit()))
-            .field("pms_reject", &format_args!("{}", self.pms_reject().bit()))
-            .field(
-                "axi_raddr_err",
-                &format_args!("{}", self.axi_raddr_err().bit()),
-            )
-            .field(
-                "axi_wr_flash_err",
-                &format_args!("{}", self.axi_wr_flash_err().bit()),
-            )
-            .field(
-                "axi_waddr_err_int__ena",
-                &format_args!("{}", self.axi_waddr_err_int__ena().bit()),
-            )
+            .field("slv_st_end", &self.slv_st_end())
+            .field("mst_st_end", &self.mst_st_end())
+            .field("ecc_err", &self.ecc_err())
+            .field("pms_reject", &self.pms_reject())
+            .field("axi_raddr_err", &self.axi_raddr_err())
+            .field("axi_wr_flash_err", &self.axi_wr_flash_err())
+            .field("axi_waddr_err_int__ena", &self.axi_waddr_err_int__ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

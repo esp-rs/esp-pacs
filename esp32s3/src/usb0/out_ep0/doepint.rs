@@ -134,30 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPINT")
-            .field("xfercompl", &format_args!("{}", self.xfercompl().bit()))
-            .field("epdisbld", &format_args!("{}", self.epdisbld().bit()))
-            .field("ahberr", &format_args!("{}", self.ahberr().bit()))
-            .field("setup", &format_args!("{}", self.setup().bit()))
-            .field("outtknepdis", &format_args!("{}", self.outtknepdis().bit()))
-            .field("stsphsercvd", &format_args!("{}", self.stsphsercvd().bit()))
-            .field(
-                "back2backsetup",
-                &format_args!("{}", self.back2backsetup().bit()),
-            )
-            .field("outpkterr", &format_args!("{}", self.outpkterr().bit()))
-            .field("bnaintr", &format_args!("{}", self.bnaintr().bit()))
-            .field("pktdrpsts", &format_args!("{}", self.pktdrpsts().bit()))
-            .field("bbleerr", &format_args!("{}", self.bbleerr().bit()))
-            .field("nakintrpt", &format_args!("{}", self.nakintrpt().bit()))
-            .field("nyepintrpt", &format_args!("{}", self.nyepintrpt().bit()))
-            .field("stuppktrcvd", &format_args!("{}", self.stuppktrcvd().bit()))
+            .field("xfercompl", &self.xfercompl())
+            .field("epdisbld", &self.epdisbld())
+            .field("ahberr", &self.ahberr())
+            .field("setup", &self.setup())
+            .field("outtknepdis", &self.outtknepdis())
+            .field("stsphsercvd", &self.stsphsercvd())
+            .field("back2backsetup", &self.back2backsetup())
+            .field("outpkterr", &self.outpkterr())
+            .field("bnaintr", &self.bnaintr())
+            .field("pktdrpsts", &self.pktdrpsts())
+            .field("bbleerr", &self.bbleerr())
+            .field("nakintrpt", &self.nakintrpt())
+            .field("nyepintrpt", &self.nyepintrpt())
+            .field("stuppktrcvd", &self.stuppktrcvd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DOEPINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

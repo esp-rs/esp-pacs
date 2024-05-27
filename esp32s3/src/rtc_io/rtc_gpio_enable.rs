@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_GPIO_ENABLE")
-            .field(
-                "rtc_gpio_enable",
-                &format_args!("{}", self.rtc_gpio_enable().bits()),
-            )
+            .field("rtc_gpio_enable", &self.rtc_gpio_enable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_GPIO_ENABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

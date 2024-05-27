@@ -73,35 +73,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field(
-                "check_sum_en",
-                &format_args!("{}", self.check_sum_en().bit()),
-            )
-            .field(
-                "check_seq_en",
-                &format_args!("{}", self.check_seq_en().bit()),
-            )
-            .field("crc_disable", &format_args!("{}", self.crc_disable().bit()))
-            .field("save_head", &format_args!("{}", self.save_head().bit()))
-            .field(
-                "tx_check_sum_re",
-                &format_args!("{}", self.tx_check_sum_re().bit()),
-            )
-            .field(
-                "tx_ack_num_re",
-                &format_args!("{}", self.tx_ack_num_re().bit()),
-            )
-            .field(
-                "wait_sw_start",
-                &format_args!("{}", self.wait_sw_start().bit()),
-            )
+            .field("check_sum_en", &self.check_sum_en())
+            .field("check_seq_en", &self.check_seq_en())
+            .field("crc_disable", &self.crc_disable())
+            .field("save_head", &self.save_head())
+            .field("tx_check_sum_re", &self.tx_check_sum_re())
+            .field("tx_ack_num_re", &self.tx_ack_num_re())
+            .field("wait_sw_start", &self.wait_sw_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

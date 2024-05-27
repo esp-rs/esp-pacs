@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_STATUS")
-            .field(
-                "infifo_full_l1",
-                &format_args!("{}", self.infifo_full_l1().bit()),
-            )
-            .field(
-                "infifo_empty_l1",
-                &format_args!("{}", self.infifo_empty_l1().bit()),
-            )
-            .field(
-                "infifo_cnt_l1",
-                &format_args!("{}", self.infifo_cnt_l1().bits()),
-            )
+            .field("infifo_full_l1", &self.infifo_full_l1())
+            .field("infifo_empty_l1", &self.infifo_empty_l1())
+            .field("infifo_cnt_l1", &self.infifo_cnt_l1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RX CH5 INFIFO status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

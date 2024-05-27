@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG0")
-            .field("prescale", &format_args!("{}", self.prescale().bits()))
-            .field("period", &format_args!("{}", self.period().bits()))
-            .field(
-                "period_upmethod",
-                &format_args!("{}", self.period_upmethod().bits()),
-            )
+            .field("prescale", &self.prescale())
+            .field("period", &self.period())
+            .field("period_upmethod", &self.period_upmethod())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CFG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

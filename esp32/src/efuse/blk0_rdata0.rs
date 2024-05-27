@@ -41,33 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA0")
-            .field(
-                "rd_efuse_wr_dis",
-                &format_args!("{}", self.rd_efuse_wr_dis().bits()),
-            )
-            .field(
-                "rd_efuse_rd_dis",
-                &format_args!("{}", self.rd_efuse_rd_dis().bits()),
-            )
-            .field(
-                "rd_flash_crypt_cnt",
-                &format_args!("{}", self.rd_flash_crypt_cnt().bits()),
-            )
-            .field(
-                "rd_uart_download_dis",
-                &format_args!("{}", self.rd_uart_download_dis().bit()),
-            )
-            .field(
-                "reserved_0_28",
-                &format_args!("{}", self.reserved_0_28().bits()),
-            )
+            .field("rd_efuse_wr_dis", &self.rd_efuse_wr_dis())
+            .field("rd_efuse_rd_dis", &self.rd_efuse_rd_dis())
+            .field("rd_flash_crypt_cnt", &self.rd_flash_crypt_cnt())
+            .field("rd_uart_download_dis", &self.rd_uart_download_dis())
+            .field("reserved_0_28", &self.reserved_0_28())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_rdata0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_IBUS1_ACS_HIT_CNT")
-            .field(
-                "l1_ibus1_hit_cnt",
-                &format_args!("{}", self.l1_ibus1_hit_cnt().bits()),
-            )
+            .field("l1_ibus1_hit_cnt", &self.l1_ibus1_hit_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_IBUS1_ACS_HIT_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-ICache bus1 Hit-Access Counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_ibus1_acs_hit_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

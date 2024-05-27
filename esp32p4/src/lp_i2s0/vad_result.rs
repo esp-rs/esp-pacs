@@ -20,18 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_RESULT")
-            .field("vad_flag", &format_args!("{}", self.vad_flag().bit()))
-            .field(
-                "energy_enough",
-                &format_args!("{}", self.energy_enough().bit()),
-            )
+            .field("vad_flag", &self.vad_flag())
+            .field("energy_enough", &self.energy_enough())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_RESULT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "I2S VAD Result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vad_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

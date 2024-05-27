@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPEMPMSK")
-            .field(
-                "d_ineptxfempmsk",
-                &format_args!("{}", self.d_ineptxfempmsk().bits()),
-            )
+            .field("d_ineptxfempmsk", &self.d_ineptxfempmsk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIEPEMPMSK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

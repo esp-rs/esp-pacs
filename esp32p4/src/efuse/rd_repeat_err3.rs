@@ -90,61 +90,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR3")
-            .field(
-                "dis_download_mode_err",
-                &format_args!("{}", self.dis_download_mode_err().bit()),
-            )
-            .field(
-                "dis_direct_boot_err",
-                &format_args!("{}", self.dis_direct_boot_err().bit()),
-            )
+            .field("dis_download_mode_err", &self.dis_download_mode_err())
+            .field("dis_direct_boot_err", &self.dis_direct_boot_err())
             .field(
                 "dis_usb_serial_jtag_rom_print_err",
-                &format_args!("{}", self.dis_usb_serial_jtag_rom_print_err().bit()),
+                &self.dis_usb_serial_jtag_rom_print_err(),
             )
-            .field(
-                "lock_km_key_err",
-                &format_args!("{}", self.lock_km_key_err().bit()),
-            )
+            .field("lock_km_key_err", &self.lock_km_key_err())
             .field(
                 "dis_usb_serial_jtag_download_mode_err",
-                &format_args!("{}", self.dis_usb_serial_jtag_download_mode_err().bit()),
+                &self.dis_usb_serial_jtag_download_mode_err(),
             )
             .field(
                 "enable_security_download_err",
-                &format_args!("{}", self.enable_security_download_err().bit()),
+                &self.enable_security_download_err(),
             )
-            .field(
-                "uart_print_control_err",
-                &format_args!("{}", self.uart_print_control_err().bits()),
-            )
-            .field(
-                "force_send_resume_err",
-                &format_args!("{}", self.force_send_resume_err().bit()),
-            )
-            .field(
-                "secure_version_err",
-                &format_args!("{}", self.secure_version_err().bits()),
-            )
+            .field("uart_print_control_err", &self.uart_print_control_err())
+            .field("force_send_resume_err", &self.force_send_resume_err())
+            .field("secure_version_err", &self.secure_version_err())
             .field(
                 "secure_boot_disable_fast_wake_err",
-                &format_args!("{}", self.secure_boot_disable_fast_wake_err().bit()),
+                &self.secure_boot_disable_fast_wake_err(),
             )
-            .field(
-                "hys_en_pad_err",
-                &format_args!("{}", self.hys_en_pad_err().bit()),
-            )
-            .field(
-                "dcdc_vset_err",
-                &format_args!("{}", self.dcdc_vset_err().bits()),
-            )
+            .field("hys_en_pad_err", &self.hys_en_pad_err())
+            .field("dcdc_vset_err", &self.dcdc_vset_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 3 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

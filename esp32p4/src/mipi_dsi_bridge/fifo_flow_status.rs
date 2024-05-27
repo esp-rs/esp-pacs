@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_FLOW_STATUS")
-            .field(
-                "raw_buf_depth",
-                &format_args!("{}", self.raw_buf_depth().bits()),
-            )
+            .field("raw_buf_depth", &self.raw_buf_depth())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_FLOW_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "dsi bridge raw buffer depth register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_flow_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

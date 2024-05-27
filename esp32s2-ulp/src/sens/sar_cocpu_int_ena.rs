@@ -89,49 +89,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_COCPU_INT_ENA")
-            .field(
-                "cocpu_touch_done_int_ena",
-                &format_args!("{}", self.cocpu_touch_done_int_ena().bit()),
-            )
+            .field("cocpu_touch_done_int_ena", &self.cocpu_touch_done_int_ena())
             .field(
                 "cocpu_touch_inactive_int_ena",
-                &format_args!("{}", self.cocpu_touch_inactive_int_ena().bit()),
+                &self.cocpu_touch_inactive_int_ena(),
             )
             .field(
                 "cocpu_touch_active_int_ena",
-                &format_args!("{}", self.cocpu_touch_active_int_ena().bit()),
+                &self.cocpu_touch_active_int_ena(),
             )
-            .field(
-                "cocpu_saradc1_int_ena",
-                &format_args!("{}", self.cocpu_saradc1_int_ena().bit()),
-            )
-            .field(
-                "cocpu_saradc2_int_ena",
-                &format_args!("{}", self.cocpu_saradc2_int_ena().bit()),
-            )
-            .field(
-                "cocpu_tsens_int_ena",
-                &format_args!("{}", self.cocpu_tsens_int_ena().bit()),
-            )
-            .field(
-                "cocpu_start_int_ena",
-                &format_args!("{}", self.cocpu_start_int_ena().bit()),
-            )
-            .field(
-                "cocpu_sw_int_ena",
-                &format_args!("{}", self.cocpu_sw_int_ena().bit()),
-            )
-            .field(
-                "cocpu_swd_int_ena",
-                &format_args!("{}", self.cocpu_swd_int_ena().bit()),
-            )
+            .field("cocpu_saradc1_int_ena", &self.cocpu_saradc1_int_ena())
+            .field("cocpu_saradc2_int_ena", &self.cocpu_saradc2_int_ena())
+            .field("cocpu_tsens_int_ena", &self.cocpu_tsens_int_ena())
+            .field("cocpu_start_int_ena", &self.cocpu_start_int_ena())
+            .field("cocpu_sw_int_ena", &self.cocpu_sw_int_ena())
+            .field("cocpu_swd_int_ena", &self.cocpu_swd_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

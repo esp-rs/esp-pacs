@@ -73,39 +73,33 @@ impl core::fmt::Debug for R {
         f.debug_struct("REGION_PMS_CONSTRAIN_2")
             .field(
                 "region_pms_constrain_world_1_area_0",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_0().bits()),
+                &self.region_pms_constrain_world_1_area_0(),
             )
             .field(
                 "region_pms_constrain_world_1_area_1",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_1().bits()),
+                &self.region_pms_constrain_world_1_area_1(),
             )
             .field(
                 "region_pms_constrain_world_1_area_2",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_2().bits()),
+                &self.region_pms_constrain_world_1_area_2(),
             )
             .field(
                 "region_pms_constrain_world_1_area_3",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_3().bits()),
+                &self.region_pms_constrain_world_1_area_3(),
             )
             .field(
                 "region_pms_constrain_world_1_area_4",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_4().bits()),
+                &self.region_pms_constrain_world_1_area_4(),
             )
             .field(
                 "region_pms_constrain_world_1_area_5",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_5().bits()),
+                &self.region_pms_constrain_world_1_area_5(),
             )
             .field(
                 "region_pms_constrain_world_1_area_6",
-                &format_args!("{}", self.region_pms_constrain_world_1_area_6().bits()),
+                &self.region_pms_constrain_world_1_area_6(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGION_PMS_CONSTRAIN_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

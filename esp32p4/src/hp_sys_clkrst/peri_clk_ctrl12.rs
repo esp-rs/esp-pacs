@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL12")
-            .field(
-                "i2s0_rx_div_n",
-                &format_args!("{}", self.i2s0_rx_div_n().bits()),
-            )
-            .field(
-                "i2s0_rx_div_x",
-                &format_args!("{}", self.i2s0_rx_div_x().bits()),
-            )
-            .field(
-                "i2s0_rx_div_y",
-                &format_args!("{}", self.i2s0_rx_div_y().bits()),
-            )
+            .field("i2s0_rx_div_n", &self.i2s0_rx_div_n())
+            .field("i2s0_rx_div_x", &self.i2s0_rx_div_x())
+            .field("i2s0_rx_div_y", &self.i2s0_rx_div_y())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL12_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

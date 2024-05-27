@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_FASTMEM_CRC")
-            .field(
-                "rtc_mem_crc_res",
-                &format_args!("{}", self.rtc_mem_crc_res().bits()),
-            )
+            .field("rtc_mem_crc_res", &self.rtc_mem_crc_res())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_FASTMEM_CRC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC fast memory CRC controlling register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_fastmem_crc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

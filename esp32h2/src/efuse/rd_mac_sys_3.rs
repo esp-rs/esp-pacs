@@ -69,43 +69,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SYS_3")
-            .field(
-                "dbias_vol_gap_value2",
-                &format_args!("{}", self.dbias_vol_gap_value2().bits()),
-            )
-            .field(
-                "dbias_vol_gap_sign",
-                &format_args!("{}", self.dbias_vol_gap_sign().bit()),
-            )
-            .field(
-                "mac_reserved_2",
-                &format_args!("{}", self.mac_reserved_2().bits()),
-            )
-            .field(
-                "wafer_version_minor",
-                &format_args!("{}", self.wafer_version_minor().bits()),
-            )
-            .field(
-                "wafer_version_major",
-                &format_args!("{}", self.wafer_version_major().bits()),
-            )
+            .field("dbias_vol_gap_value2", &self.dbias_vol_gap_value2())
+            .field("dbias_vol_gap_sign", &self.dbias_vol_gap_sign())
+            .field("mac_reserved_2", &self.mac_reserved_2())
+            .field("wafer_version_minor", &self.wafer_version_minor())
+            .field("wafer_version_major", &self.wafer_version_major())
             .field(
                 "disable_wafer_version_major",
-                &format_args!("{}", self.disable_wafer_version_major().bit()),
+                &self.disable_wafer_version_major(),
             )
-            .field("flash_cap", &format_args!("{}", self.flash_cap().bits()))
-            .field("flash_temp", &format_args!("{}", self.flash_temp().bits()))
-            .field(
-                "flash_vendor",
-                &format_args!("{}", self.flash_vendor().bits()),
-            )
+            .field("flash_cap", &self.flash_cap())
+            .field("flash_temp", &self.flash_temp())
+            .field("flash_vendor", &self.flash_vendor())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_MAC_SYS_3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK1 data register $n.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_mac_sys_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

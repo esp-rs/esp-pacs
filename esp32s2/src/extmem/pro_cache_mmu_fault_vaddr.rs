@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_CACHE_MMU_FAULT_VADDR")
             .field(
                 "pro_cache_mmu_fault_vaddr",
-                &format_args!("{}", self.pro_cache_mmu_fault_vaddr().bits()),
+                &self.pro_cache_mmu_fault_vaddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_MMU_FAULT_VADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_cache_mmu_fault_vaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

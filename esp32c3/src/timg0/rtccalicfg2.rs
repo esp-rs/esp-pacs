@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTCCALICFG2")
-            .field(
-                "rtc_cali_timeout",
-                &format_args!("{}", self.rtc_cali_timeout().bit()),
-            )
-            .field(
-                "rtc_cali_timeout_rst_cnt",
-                &format_args!("{}", self.rtc_cali_timeout_rst_cnt().bits()),
-            )
-            .field(
-                "rtc_cali_timeout_thres",
-                &format_args!("{}", self.rtc_cali_timeout_thres().bits()),
-            )
+            .field("rtc_cali_timeout", &self.rtc_cali_timeout())
+            .field("rtc_cali_timeout_rst_cnt", &self.rtc_cali_timeout_rst_cnt())
+            .field("rtc_cali_timeout_thres", &self.rtc_cali_timeout_thres())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

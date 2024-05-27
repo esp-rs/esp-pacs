@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HIST_SIZE")
-            .field(
-                "hist_y_size",
-                &format_args!("{}", self.hist_y_size().bits()),
-            )
-            .field(
-                "hist_x_size",
-                &format_args!("{}", self.hist_x_size().bits()),
-            )
+            .field("hist_y_size", &self.hist_y_size())
+            .field("hist_x_size", &self.hist_x_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HIST_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

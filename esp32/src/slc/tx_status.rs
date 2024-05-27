@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_STATUS")
-            .field(
-                "slc0_tx_full",
-                &format_args!("{}", self.slc0_tx_full().bit()),
-            )
-            .field(
-                "slc0_tx_empty",
-                &format_args!("{}", self.slc0_tx_empty().bit()),
-            )
-            .field(
-                "slc1_tx_full",
-                &format_args!("{}", self.slc1_tx_full().bit()),
-            )
-            .field(
-                "slc1_tx_empty",
-                &format_args!("{}", self.slc1_tx_empty().bit()),
-            )
+            .field("slc0_tx_full", &self.slc0_tx_full())
+            .field("slc0_tx_empty", &self.slc0_tx_empty())
+            .field("slc1_tx_full", &self.slc1_tx_full())
+            .field("slc1_tx_empty", &self.slc1_tx_empty())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -114,49 +114,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE")
-            .field("trans_done", &format_args!("{}", self.trans_done().bit()))
-            .field(
-                "int_rd_buf_done_en",
-                &format_args!("{}", self.int_rd_buf_done_en().bit()),
-            )
-            .field(
-                "int_wr_buf_done_en",
-                &format_args!("{}", self.int_wr_buf_done_en().bit()),
-            )
-            .field(
-                "int_rd_dma_done_en",
-                &format_args!("{}", self.int_rd_dma_done_en().bit()),
-            )
-            .field(
-                "int_wr_dma_done_en",
-                &format_args!("{}", self.int_wr_dma_done_en().bit()),
-            )
-            .field(
-                "int_trans_done_en",
-                &format_args!("{}", self.int_trans_done_en().bit()),
-            )
-            .field(
-                "int_dma_seg_trans_en",
-                &format_args!("{}", self.int_dma_seg_trans_en().bit()),
-            )
-            .field(
-                "seg_magic_err_int_en",
-                &format_args!("{}", self.seg_magic_err_int_en().bit()),
-            )
-            .field("trans_cnt", &format_args!("{}", self.trans_cnt().bits()))
-            .field(
-                "trans_done_auto_clr_en",
-                &format_args!("{}", self.trans_done_auto_clr_en().bit()),
-            )
-            .field("mode", &format_args!("{}", self.mode().bit()))
-            .field("soft_reset", &format_args!("{}", self.soft_reset().bit()))
+            .field("trans_done", &self.trans_done())
+            .field("int_rd_buf_done_en", &self.int_rd_buf_done_en())
+            .field("int_wr_buf_done_en", &self.int_wr_buf_done_en())
+            .field("int_rd_dma_done_en", &self.int_rd_dma_done_en())
+            .field("int_wr_dma_done_en", &self.int_wr_dma_done_en())
+            .field("int_trans_done_en", &self.int_trans_done_en())
+            .field("int_dma_seg_trans_en", &self.int_dma_seg_trans_en())
+            .field("seg_magic_err_int_en", &self.seg_magic_err_int_en())
+            .field("trans_cnt", &self.trans_cnt())
+            .field("trans_done_auto_clr_en", &self.trans_done_auto_clr_en())
+            .field("mode", &self.mode())
+            .field("soft_reset", &self.soft_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

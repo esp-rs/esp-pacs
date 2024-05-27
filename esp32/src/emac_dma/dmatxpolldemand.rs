@@ -6,12 +6,6 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMATXPOLLDEMAND_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "When these bits are written with any value the DMA reads the current descriptor to which the Register (Current Host Transmit Descriptor Register) is pointing. If that descriptor is not available (owned by the Host) the transmission returns to the suspend state and Bit\\[2\\] (TU) of Status Register is asserted. If the descriptor is available the transmission resumes.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmatxpolldemand::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMATXPOLLDEMAND_SPEC;
 impl crate::RegisterSpec for DMATXPOLLDEMAND_SPEC {

@@ -34,29 +34,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACCESS_ATTR_CTRL")
-            .field(
-                "l2_cache_access_force_cc",
-                &format_args!("{}", self.l2_cache_access_force_cc().bit()),
-            )
-            .field(
-                "l2_cache_access_force_wb",
-                &format_args!("{}", self.l2_cache_access_force_wb().bit()),
-            )
+            .field("l2_cache_access_force_cc", &self.l2_cache_access_force_cc())
+            .field("l2_cache_access_force_wb", &self.l2_cache_access_force_wb())
             .field(
                 "l2_cache_access_force_wma",
-                &format_args!("{}", self.l2_cache_access_force_wma().bit()),
+                &self.l2_cache_access_force_wma(),
             )
             .field(
                 "l2_cache_access_force_rma",
-                &format_args!("{}", self.l2_cache_access_force_rma().bit()),
+                &self.l2_cache_access_force_rma(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACCESS_ATTR_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 Cache access Attribute propagation control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_access_attr_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

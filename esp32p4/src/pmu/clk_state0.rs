@@ -118,77 +118,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_STATE0")
-            .field(
-                "stable_xpd_pll_state",
-                &format_args!("{}", self.stable_xpd_pll_state().bits()),
-            )
-            .field(
-                "stable_xpd_xtal_state",
-                &format_args!("{}", self.stable_xpd_xtal_state().bit()),
-            )
+            .field("stable_xpd_pll_state", &self.stable_xpd_pll_state())
+            .field("stable_xpd_xtal_state", &self.stable_xpd_xtal_state())
             .field(
                 "pmu_ana_xpd_pll_i2c_state",
-                &format_args!("{}", self.pmu_ana_xpd_pll_i2c_state().bits()),
+                &self.pmu_ana_xpd_pll_i2c_state(),
             )
             .field(
                 "pmu_sys_clk_slp_sel_state",
-                &format_args!("{}", self.pmu_sys_clk_slp_sel_state().bit()),
+                &self.pmu_sys_clk_slp_sel_state(),
             )
-            .field(
-                "pmu_sys_clk_sel_state",
-                &format_args!("{}", self.pmu_sys_clk_sel_state().bits()),
-            )
-            .field(
-                "pmu_sys_clk_no_div_state",
-                &format_args!("{}", self.pmu_sys_clk_no_div_state().bit()),
-            )
-            .field(
-                "pmu_icg_sys_clk_en_state",
-                &format_args!("{}", self.pmu_icg_sys_clk_en_state().bit()),
-            )
+            .field("pmu_sys_clk_sel_state", &self.pmu_sys_clk_sel_state())
+            .field("pmu_sys_clk_no_div_state", &self.pmu_sys_clk_no_div_state())
+            .field("pmu_icg_sys_clk_en_state", &self.pmu_icg_sys_clk_en_state())
             .field(
                 "pmu_icg_modem_switch_state",
-                &format_args!("{}", self.pmu_icg_modem_switch_state().bit()),
+                &self.pmu_icg_modem_switch_state(),
             )
-            .field(
-                "pmu_icg_modem_code_state",
-                &format_args!("{}", self.pmu_icg_modem_code_state().bits()),
-            )
-            .field(
-                "pmu_icg_slp_sel_state",
-                &format_args!("{}", self.pmu_icg_slp_sel_state().bit()),
-            )
+            .field("pmu_icg_modem_code_state", &self.pmu_icg_modem_code_state())
+            .field("pmu_icg_slp_sel_state", &self.pmu_icg_slp_sel_state())
             .field(
                 "pmu_icg_global_xtal_state",
-                &format_args!("{}", self.pmu_icg_global_xtal_state().bit()),
+                &self.pmu_icg_global_xtal_state(),
             )
-            .field(
-                "pmu_icg_global_pll_state",
-                &format_args!("{}", self.pmu_icg_global_pll_state().bits()),
-            )
-            .field(
-                "pmu_ana_i2c_iso_en_state",
-                &format_args!("{}", self.pmu_ana_i2c_iso_en_state().bit()),
-            )
+            .field("pmu_icg_global_pll_state", &self.pmu_icg_global_pll_state())
+            .field("pmu_ana_i2c_iso_en_state", &self.pmu_ana_i2c_iso_en_state())
             .field(
                 "pmu_ana_i2c_retention_state",
-                &format_args!("{}", self.pmu_ana_i2c_retention_state().bit()),
+                &self.pmu_ana_i2c_retention_state(),
             )
-            .field(
-                "pmu_ana_xpd_pll_state",
-                &format_args!("{}", self.pmu_ana_xpd_pll_state().bits()),
-            )
-            .field(
-                "pmu_ana_xpd_xtal_state",
-                &format_args!("{}", self.pmu_ana_xpd_xtal_state().bit()),
-            )
+            .field("pmu_ana_xpd_pll_state", &self.pmu_ana_xpd_pll_state())
+            .field("pmu_ana_xpd_xtal_state", &self.pmu_ana_xpd_xtal_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_STATE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk_state0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

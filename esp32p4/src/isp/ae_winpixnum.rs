@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_WINPIXNUM")
-            .field(
-                "ae_subwin_pixnum",
-                &format_args!("{}", self.ae_subwin_pixnum().bits()),
-            )
+            .field("ae_subwin_pixnum", &self.ae_subwin_pixnum())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AE_WINPIXNUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

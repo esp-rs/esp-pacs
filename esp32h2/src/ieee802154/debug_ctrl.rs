@@ -71,41 +71,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_CTRL")
-            .field(
-                "debug_signal_sel",
-                &format_args!("{}", self.debug_signal_sel().bits()),
-            )
+            .field("debug_signal_sel", &self.debug_signal_sel())
             .field(
                 "debug_trigger_state_select",
-                &format_args!("{}", self.debug_trigger_state_select().bits()),
+                &self.debug_trigger_state_select(),
             )
-            .field(
-                "debug_ser_debug_sel",
-                &format_args!("{}", self.debug_ser_debug_sel().bits()),
-            )
+            .field("debug_ser_debug_sel", &self.debug_ser_debug_sel())
             .field(
                 "debug_trigger_state_match_value",
-                &format_args!("{}", self.debug_trigger_state_match_value().bits()),
+                &self.debug_trigger_state_match_value(),
             )
             .field(
                 "debug_trigger_pulse_select",
-                &format_args!("{}", self.debug_trigger_pulse_select().bits()),
+                &self.debug_trigger_pulse_select(),
             )
             .field(
                 "debug_state_match_dump_en",
-                &format_args!("{}", self.debug_state_match_dump_en().bit()),
+                &self.debug_state_match_dump_en(),
             )
-            .field(
-                "debug_trigger_dump_en",
-                &format_args!("{}", self.debug_trigger_dump_en().bit()),
-            )
+            .field("debug_trigger_dump_en", &self.debug_trigger_dump_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEBUG_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

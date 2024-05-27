@@ -41,33 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RO_STATUS")
-            .field(
-                "outfifo_ro_cnt",
-                &format_args!("{}", self.outfifo_ro_cnt().bits()),
-            )
-            .field(
-                "out_ro_wr_state",
-                &format_args!("{}", self.out_ro_wr_state().bits()),
-            )
-            .field(
-                "out_ro_rd_state",
-                &format_args!("{}", self.out_ro_rd_state().bits()),
-            )
-            .field(
-                "out_pixel_byte",
-                &format_args!("{}", self.out_pixel_byte().bits()),
-            )
-            .field(
-                "out_burst_block_num",
-                &format_args!("{}", self.out_burst_block_num().bits()),
-            )
+            .field("outfifo_ro_cnt", &self.outfifo_ro_cnt())
+            .field("out_ro_wr_state", &self.out_ro_wr_state())
+            .field("out_ro_rd_state", &self.out_ro_rd_state())
+            .field("out_pixel_byte", &self.out_pixel_byte())
+            .field("out_burst_block_num", &self.out_burst_block_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RO_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TX CHx reorder status register. Available on CH0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ro_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

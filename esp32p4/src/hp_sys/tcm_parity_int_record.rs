@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_PARITY_INT_RECORD")
-            .field(
-                "tcm_parity_err_int_addr",
-                &format_args!("{}", self.tcm_parity_err_int_addr().bits()),
-            )
+            .field("tcm_parity_err_int_addr", &self.tcm_parity_err_int_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_PARITY_INT_RECORD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tcm_parity_int_record::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

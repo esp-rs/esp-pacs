@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_ADDRHOLE_INFO")
-            .field(
-                "lp_addrhole_id",
-                &format_args!("{}", self.lp_addrhole_id().bits()),
-            )
-            .field(
-                "lp_addrhole_wr",
-                &format_args!("{}", self.lp_addrhole_wr().bit()),
-            )
-            .field(
-                "lp_addrhole_secure",
-                &format_args!("{}", self.lp_addrhole_secure().bit()),
-            )
+            .field("lp_addrhole_id", &self.lp_addrhole_id())
+            .field("lp_addrhole_wr", &self.lp_addrhole_wr())
+            .field("lp_addrhole_secure", &self.lp_addrhole_secure())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_ADDRHOLE_INFO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_addrhole_info::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

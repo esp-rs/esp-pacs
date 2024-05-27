@@ -89,49 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_DOUT_HEX_MODE")
-            .field(
-                "spi_smem_dout08_mode",
-                &format_args!("{}", self.spi_smem_dout08_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout09_mode",
-                &format_args!("{}", self.spi_smem_dout09_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout10_mode",
-                &format_args!("{}", self.spi_smem_dout10_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout11_mode",
-                &format_args!("{}", self.spi_smem_dout11_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout12_mode",
-                &format_args!("{}", self.spi_smem_dout12_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout13_mode",
-                &format_args!("{}", self.spi_smem_dout13_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout14_mode",
-                &format_args!("{}", self.spi_smem_dout14_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout15_mode",
-                &format_args!("{}", self.spi_smem_dout15_mode().bit()),
-            )
-            .field(
-                "spi_smem_douts_hex_mode",
-                &format_args!("{}", self.spi_smem_douts_hex_mode().bit()),
-            )
+            .field("spi_smem_dout08_mode", &self.spi_smem_dout08_mode())
+            .field("spi_smem_dout09_mode", &self.spi_smem_dout09_mode())
+            .field("spi_smem_dout10_mode", &self.spi_smem_dout10_mode())
+            .field("spi_smem_dout11_mode", &self.spi_smem_dout11_mode())
+            .field("spi_smem_dout12_mode", &self.spi_smem_dout12_mode())
+            .field("spi_smem_dout13_mode", &self.spi_smem_dout13_mode())
+            .field("spi_smem_dout14_mode", &self.spi_smem_dout14_mode())
+            .field("spi_smem_dout15_mode", &self.spi_smem_dout15_mode())
+            .field("spi_smem_douts_hex_mode", &self.spi_smem_douts_hex_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DOUT_HEX_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAP_CH")
-            .field("value", &format_args!("{}", self.value().bits()))
+            .field("value", &self.value())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CAP_CH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Value of last capture on channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

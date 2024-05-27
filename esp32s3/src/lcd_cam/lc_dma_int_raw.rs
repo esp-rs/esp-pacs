@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LC_DMA_INT_RAW")
-            .field(
-                "lcd_vsync_int_raw",
-                &format_args!("{}", self.lcd_vsync_int_raw().bit()),
-            )
-            .field(
-                "lcd_trans_done_int_raw",
-                &format_args!("{}", self.lcd_trans_done_int_raw().bit()),
-            )
-            .field(
-                "cam_vsync_int_raw",
-                &format_args!("{}", self.cam_vsync_int_raw().bit()),
-            )
-            .field(
-                "cam_hs_int_raw",
-                &format_args!("{}", self.cam_hs_int_raw().bit()),
-            )
+            .field("lcd_vsync_int_raw", &self.lcd_vsync_int_raw())
+            .field("lcd_trans_done_int_raw", &self.lcd_trans_done_int_raw())
+            .field("cam_vsync_int_raw", &self.cam_vsync_int_raw())
+            .field("cam_hs_int_raw", &self.cam_hs_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LC_DMA_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "LCD_CAM GDMA raw interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_dma_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

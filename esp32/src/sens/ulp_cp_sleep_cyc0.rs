@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ULP_CP_SLEEP_CYC0")
-            .field(
-                "sleep_cycles_s0",
-                &format_args!("{}", self.sleep_cycles_s0().bits()),
-            )
+            .field("sleep_cycles_s0", &self.sleep_cycles_s0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ULP_CP_SLEEP_CYC0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

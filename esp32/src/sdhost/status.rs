@@ -76,41 +76,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field(
-                "fifo_rx_watermark",
-                &format_args!("{}", self.fifo_rx_watermark().bit()),
-            )
-            .field(
-                "fifo_tx_watermark",
-                &format_args!("{}", self.fifo_tx_watermark().bit()),
-            )
-            .field("fifo_empty", &format_args!("{}", self.fifo_empty().bit()))
-            .field("fifo_full", &format_args!("{}", self.fifo_full().bit()))
-            .field(
-                "command_fsm_states",
-                &format_args!("{}", self.command_fsm_states().bits()),
-            )
-            .field(
-                "data_3_status",
-                &format_args!("{}", self.data_3_status().bit()),
-            )
-            .field("data_busy", &format_args!("{}", self.data_busy().bit()))
-            .field(
-                "data_state_mc_busy",
-                &format_args!("{}", self.data_state_mc_busy().bit()),
-            )
-            .field(
-                "response_index",
-                &format_args!("{}", self.response_index().bits()),
-            )
-            .field("fifo_count", &format_args!("{}", self.fifo_count().bits()))
+            .field("fifo_rx_watermark", &self.fifo_rx_watermark())
+            .field("fifo_tx_watermark", &self.fifo_tx_watermark())
+            .field("fifo_empty", &self.fifo_empty())
+            .field("fifo_full", &self.fifo_full())
+            .field("command_fsm_states", &self.command_fsm_states())
+            .field("data_3_status", &self.data_3_status())
+            .field("data_busy", &self.data_busy())
+            .field("data_state_mc_busy", &self.data_state_mc_busy())
+            .field("response_index", &self.response_index())
+            .field("fifo_count", &self.fifo_count())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SD/MMC status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

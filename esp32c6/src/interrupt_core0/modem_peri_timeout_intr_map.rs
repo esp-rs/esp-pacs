@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("MODEM_PERI_TIMEOUT_INTR_MAP")
             .field(
                 "modem_peri_timeout_intr_map",
-                &format_args!("{}", self.modem_peri_timeout_intr_map().bits()),
+                &self.modem_peri_timeout_intr_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

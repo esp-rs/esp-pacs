@@ -251,121 +251,40 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_FORCE_NORST1")
-            .field(
-                "force_norst_i3cslv",
-                &format_args!("{}", self.force_norst_i3cslv().bit()),
-            )
-            .field(
-                "force_norst_i2c1",
-                &format_args!("{}", self.force_norst_i2c1().bit()),
-            )
-            .field(
-                "force_norst_i2c0",
-                &format_args!("{}", self.force_norst_i2c0().bit()),
-            )
-            .field(
-                "force_norst_rmt",
-                &format_args!("{}", self.force_norst_rmt().bit()),
-            )
-            .field(
-                "force_norst_pwm0",
-                &format_args!("{}", self.force_norst_pwm0().bit()),
-            )
-            .field(
-                "force_norst_pwm1",
-                &format_args!("{}", self.force_norst_pwm1().bit()),
-            )
-            .field(
-                "force_norst_can0",
-                &format_args!("{}", self.force_norst_can0().bit()),
-            )
-            .field(
-                "force_norst_can1",
-                &format_args!("{}", self.force_norst_can1().bit()),
-            )
-            .field(
-                "force_norst_can2",
-                &format_args!("{}", self.force_norst_can2().bit()),
-            )
-            .field(
-                "force_norst_ledc",
-                &format_args!("{}", self.force_norst_ledc().bit()),
-            )
-            .field(
-                "force_norst_pcnt",
-                &format_args!("{}", self.force_norst_pcnt().bit()),
-            )
-            .field(
-                "force_norst_etm",
-                &format_args!("{}", self.force_norst_etm().bit()),
-            )
-            .field(
-                "force_norst_intrmtx",
-                &format_args!("{}", self.force_norst_intrmtx().bit()),
-            )
-            .field(
-                "force_norst_parlio",
-                &format_args!("{}", self.force_norst_parlio().bit()),
-            )
-            .field(
-                "force_norst_parlio_rx",
-                &format_args!("{}", self.force_norst_parlio_rx().bit()),
-            )
-            .field(
-                "force_norst_parlio_tx",
-                &format_args!("{}", self.force_norst_parlio_tx().bit()),
-            )
-            .field(
-                "force_norst_i2s0",
-                &format_args!("{}", self.force_norst_i2s0().bit()),
-            )
-            .field(
-                "force_norst_i2s1",
-                &format_args!("{}", self.force_norst_i2s1().bit()),
-            )
-            .field(
-                "force_norst_i2s2",
-                &format_args!("{}", self.force_norst_i2s2().bit()),
-            )
-            .field(
-                "force_norst_spi2",
-                &format_args!("{}", self.force_norst_spi2().bit()),
-            )
-            .field(
-                "force_norst_spi3",
-                &format_args!("{}", self.force_norst_spi3().bit()),
-            )
-            .field(
-                "force_norst_lcdcam",
-                &format_args!("{}", self.force_norst_lcdcam().bit()),
-            )
-            .field(
-                "force_norst_adc",
-                &format_args!("{}", self.force_norst_adc().bit()),
-            )
-            .field(
-                "force_norst_bitsrambler",
-                &format_args!("{}", self.force_norst_bitsrambler().bit()),
-            )
+            .field("force_norst_i3cslv", &self.force_norst_i3cslv())
+            .field("force_norst_i2c1", &self.force_norst_i2c1())
+            .field("force_norst_i2c0", &self.force_norst_i2c0())
+            .field("force_norst_rmt", &self.force_norst_rmt())
+            .field("force_norst_pwm0", &self.force_norst_pwm0())
+            .field("force_norst_pwm1", &self.force_norst_pwm1())
+            .field("force_norst_can0", &self.force_norst_can0())
+            .field("force_norst_can1", &self.force_norst_can1())
+            .field("force_norst_can2", &self.force_norst_can2())
+            .field("force_norst_ledc", &self.force_norst_ledc())
+            .field("force_norst_pcnt", &self.force_norst_pcnt())
+            .field("force_norst_etm", &self.force_norst_etm())
+            .field("force_norst_intrmtx", &self.force_norst_intrmtx())
+            .field("force_norst_parlio", &self.force_norst_parlio())
+            .field("force_norst_parlio_rx", &self.force_norst_parlio_rx())
+            .field("force_norst_parlio_tx", &self.force_norst_parlio_tx())
+            .field("force_norst_i2s0", &self.force_norst_i2s0())
+            .field("force_norst_i2s1", &self.force_norst_i2s1())
+            .field("force_norst_i2s2", &self.force_norst_i2s2())
+            .field("force_norst_spi2", &self.force_norst_spi2())
+            .field("force_norst_spi3", &self.force_norst_spi3())
+            .field("force_norst_lcdcam", &self.force_norst_lcdcam())
+            .field("force_norst_adc", &self.force_norst_adc())
+            .field("force_norst_bitsrambler", &self.force_norst_bitsrambler())
             .field(
                 "force_norst_bitsrambler_rx",
-                &format_args!("{}", self.force_norst_bitsrambler_rx().bit()),
+                &self.force_norst_bitsrambler_rx(),
             )
             .field(
                 "force_norst_bitsrambler_tx",
-                &format_args!("{}", self.force_norst_bitsrambler_tx().bit()),
+                &self.force_norst_bitsrambler_tx(),
             )
-            .field(
-                "force_norst_h264",
-                &format_args!("{}", self.force_norst_h264().bit()),
-            )
+            .field("force_norst_h264", &self.force_norst_h264())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_FORCE_NORST1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

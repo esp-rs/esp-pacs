@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL11")
-            .field(
-                "i2c1_clk_div_num",
-                &format_args!("{}", self.i2c1_clk_div_num().bits()),
-            )
-            .field(
-                "i2c1_clk_div_numerator",
-                &format_args!("{}", self.i2c1_clk_div_numerator().bits()),
-            )
-            .field(
-                "i2c1_clk_div_denominator",
-                &format_args!("{}", self.i2c1_clk_div_denominator().bits()),
-            )
-            .field(
-                "i2s0_rx_clk_en",
-                &format_args!("{}", self.i2s0_rx_clk_en().bit()),
-            )
-            .field(
-                "i2s0_rx_clk_src_sel",
-                &format_args!("{}", self.i2s0_rx_clk_src_sel().bits()),
-            )
+            .field("i2c1_clk_div_num", &self.i2c1_clk_div_num())
+            .field("i2c1_clk_div_numerator", &self.i2c1_clk_div_numerator())
+            .field("i2c1_clk_div_denominator", &self.i2c1_clk_div_denominator())
+            .field("i2s0_rx_clk_en", &self.i2s0_rx_clk_en())
+            .field("i2s0_rx_clk_src_sel", &self.i2s0_rx_clk_src_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL11_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

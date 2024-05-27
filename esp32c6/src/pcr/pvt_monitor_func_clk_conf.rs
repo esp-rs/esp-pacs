@@ -37,23 +37,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("PVT_MONITOR_FUNC_CLK_CONF")
             .field(
                 "pvt_monitor_func_clk_div_num",
-                &format_args!("{}", self.pvt_monitor_func_clk_div_num().bits()),
+                &self.pvt_monitor_func_clk_div_num(),
             )
-            .field(
-                "pvt_monitor_func_clk_sel",
-                &format_args!("{}", self.pvt_monitor_func_clk_sel().bit()),
-            )
-            .field(
-                "pvt_monitor_func_clk_en",
-                &format_args!("{}", self.pvt_monitor_func_clk_en().bit()),
-            )
+            .field("pvt_monitor_func_clk_sel", &self.pvt_monitor_func_clk_sel())
+            .field("pvt_monitor_func_clk_en", &self.pvt_monitor_func_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

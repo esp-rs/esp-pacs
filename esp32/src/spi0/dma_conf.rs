@@ -134,54 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_CONF")
-            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
-            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
-            .field(
-                "ahbm_fifo_rst",
-                &format_args!("{}", self.ahbm_fifo_rst().bit()),
-            )
-            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
-            .field(
-                "in_loop_test",
-                &format_args!("{}", self.in_loop_test().bit()),
-            )
-            .field(
-                "out_loop_test",
-                &format_args!("{}", self.out_loop_test().bit()),
-            )
-            .field(
-                "out_auto_wrback",
-                &format_args!("{}", self.out_auto_wrback().bit()),
-            )
-            .field(
-                "out_eof_mode",
-                &format_args!("{}", self.out_eof_mode().bit()),
-            )
-            .field(
-                "outdscr_burst_en",
-                &format_args!("{}", self.outdscr_burst_en().bit()),
-            )
-            .field(
-                "indscr_burst_en",
-                &format_args!("{}", self.indscr_burst_en().bit()),
-            )
-            .field(
-                "out_data_burst_en",
-                &format_args!("{}", self.out_data_burst_en().bit()),
-            )
-            .field("dma_rx_stop", &format_args!("{}", self.dma_rx_stop().bit()))
-            .field("dma_tx_stop", &format_args!("{}", self.dma_tx_stop().bit()))
-            .field(
-                "dma_continue",
-                &format_args!("{}", self.dma_continue().bit()),
-            )
+            .field("in_rst", &self.in_rst())
+            .field("out_rst", &self.out_rst())
+            .field("ahbm_fifo_rst", &self.ahbm_fifo_rst())
+            .field("ahbm_rst", &self.ahbm_rst())
+            .field("in_loop_test", &self.in_loop_test())
+            .field("out_loop_test", &self.out_loop_test())
+            .field("out_auto_wrback", &self.out_auto_wrback())
+            .field("out_eof_mode", &self.out_eof_mode())
+            .field("outdscr_burst_en", &self.outdscr_burst_en())
+            .field("indscr_burst_en", &self.indscr_burst_en())
+            .field("out_data_burst_en", &self.out_data_burst_en())
+            .field("dma_rx_stop", &self.dma_rx_stop())
+            .field("dma_tx_stop", &self.dma_tx_stop())
+            .field("dma_continue", &self.dma_continue())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

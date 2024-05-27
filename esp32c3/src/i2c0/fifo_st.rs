@@ -41,33 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_ST")
-            .field(
-                "rxfifo_raddr",
-                &format_args!("{}", self.rxfifo_raddr().bits()),
-            )
-            .field(
-                "rxfifo_waddr",
-                &format_args!("{}", self.rxfifo_waddr().bits()),
-            )
-            .field(
-                "txfifo_raddr",
-                &format_args!("{}", self.txfifo_raddr().bits()),
-            )
-            .field(
-                "txfifo_waddr",
-                &format_args!("{}", self.txfifo_waddr().bits()),
-            )
-            .field(
-                "slave_rw_point",
-                &format_args!("{}", self.slave_rw_point().bits()),
-            )
+            .field("rxfifo_raddr", &self.rxfifo_raddr())
+            .field("rxfifo_waddr", &self.rxfifo_waddr())
+            .field("txfifo_raddr", &self.txfifo_raddr())
+            .field("txfifo_waddr", &self.txfifo_waddr())
+            .field("slave_rw_point", &self.slave_rw_point())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "I2C_FIFO_ST_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

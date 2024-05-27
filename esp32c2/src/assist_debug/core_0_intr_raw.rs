@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_0_INTR_RAW")
-            .field(
-                "core_0_sp_spill_min_raw",
-                &format_args!("{}", self.core_0_sp_spill_min_raw().bit()),
-            )
-            .field(
-                "core_0_sp_spill_max_raw",
-                &format_args!("{}", self.core_0_sp_spill_max_raw().bit()),
-            )
+            .field("core_0_sp_spill_min_raw", &self.core_0_sp_spill_min_raw())
+            .field("core_0_sp_spill_max_raw", &self.core_0_sp_spill_max_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_INTR_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "core0 monitor interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_intr_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERIPHERAL_INTR")
-            .field(
-                "cpu_peri_byte_error_clr",
-                &format_args!("{}", self.cpu_peri_byte_error_clr().bit()),
-            )
-            .field(
-                "cpu_peri_byte_error_en",
-                &format_args!("{}", self.cpu_peri_byte_error_en().bit()),
-            )
-            .field(
-                "cpu_peri_byte_error_intr",
-                &format_args!("{}", self.cpu_peri_byte_error_intr().bit()),
-            )
+            .field("cpu_peri_byte_error_clr", &self.cpu_peri_byte_error_clr())
+            .field("cpu_peri_byte_error_en", &self.cpu_peri_byte_error_en())
+            .field("cpu_peri_byte_error_intr", &self.cpu_peri_byte_error_intr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_PERIPHERAL_INTR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

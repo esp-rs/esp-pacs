@@ -17,19 +17,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PIF_ACCESS_MONITOR_3")
             .field(
                 "pif_access_monitor_nonword_violate_status_haddr",
-                &format_args!(
-                    "{}",
-                    self.pif_access_monitor_nonword_violate_status_haddr()
-                        .bits()
-                ),
+                &self.pif_access_monitor_nonword_violate_status_haddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PIF_ACCESS_MONITOR_3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pif_access_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -134,69 +134,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DDR")
-            .field(
-                "spi_fmem_ddr_en",
-                &format_args!("{}", self.spi_fmem_ddr_en().bit()),
-            )
-            .field(
-                "spi_fmem_var_dummy",
-                &format_args!("{}", self.spi_fmem_var_dummy().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_rdat_swp",
-                &format_args!("{}", self.spi_fmem_ddr_rdat_swp().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_wdat_swp",
-                &format_args!("{}", self.spi_fmem_ddr_wdat_swp().bit()),
-            )
-            .field(
-                "spi_fmem_ddr_cmd_dis",
-                &format_args!("{}", self.spi_fmem_ddr_cmd_dis().bit()),
-            )
-            .field(
-                "spi_fmem_outminbytelen",
-                &format_args!("{}", self.spi_fmem_outminbytelen().bits()),
-            )
-            .field(
-                "spi_fmem_usr_ddr_dqs_thd",
-                &format_args!("{}", self.spi_fmem_usr_ddr_dqs_thd().bits()),
-            )
-            .field(
-                "spi_fmem_ddr_dqs_loop",
-                &format_args!("{}", self.spi_fmem_ddr_dqs_loop().bit()),
-            )
-            .field(
-                "spi_fmem_clk_diff_en",
-                &format_args!("{}", self.spi_fmem_clk_diff_en().bit()),
-            )
-            .field(
-                "spi_fmem_dqs_ca_in",
-                &format_args!("{}", self.spi_fmem_dqs_ca_in().bit()),
-            )
+            .field("spi_fmem_ddr_en", &self.spi_fmem_ddr_en())
+            .field("spi_fmem_var_dummy", &self.spi_fmem_var_dummy())
+            .field("spi_fmem_ddr_rdat_swp", &self.spi_fmem_ddr_rdat_swp())
+            .field("spi_fmem_ddr_wdat_swp", &self.spi_fmem_ddr_wdat_swp())
+            .field("spi_fmem_ddr_cmd_dis", &self.spi_fmem_ddr_cmd_dis())
+            .field("spi_fmem_outminbytelen", &self.spi_fmem_outminbytelen())
+            .field("spi_fmem_usr_ddr_dqs_thd", &self.spi_fmem_usr_ddr_dqs_thd())
+            .field("spi_fmem_ddr_dqs_loop", &self.spi_fmem_ddr_dqs_loop())
+            .field("spi_fmem_clk_diff_en", &self.spi_fmem_clk_diff_en())
+            .field("spi_fmem_dqs_ca_in", &self.spi_fmem_dqs_ca_in())
             .field(
                 "spi_fmem_hyperbus_dummy_2x",
-                &format_args!("{}", self.spi_fmem_hyperbus_dummy_2x().bit()),
+                &self.spi_fmem_hyperbus_dummy_2x(),
             )
-            .field(
-                "spi_fmem_clk_diff_inv",
-                &format_args!("{}", self.spi_fmem_clk_diff_inv().bit()),
-            )
-            .field(
-                "spi_fmem_octa_ram_addr",
-                &format_args!("{}", self.spi_fmem_octa_ram_addr().bit()),
-            )
-            .field(
-                "spi_fmem_hyperbus_ca",
-                &format_args!("{}", self.spi_fmem_hyperbus_ca().bit()),
-            )
+            .field("spi_fmem_clk_diff_inv", &self.spi_fmem_clk_diff_inv())
+            .field("spi_fmem_octa_ram_addr", &self.spi_fmem_octa_ram_addr())
+            .field("spi_fmem_hyperbus_ca", &self.spi_fmem_hyperbus_ca())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

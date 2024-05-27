@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER2")
-            .field(
-                "usr_command_value",
-                &format_args!("{}", self.usr_command_value().bits()),
-            )
-            .field(
-                "usr_command_bitlen",
-                &format_args!("{}", self.usr_command_bitlen().bits()),
-            )
+            .field("usr_command_value", &self.usr_command_value())
+            .field("usr_command_bitlen", &self.usr_command_bitlen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

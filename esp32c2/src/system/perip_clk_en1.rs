@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_CLK_EN1")
-            .field(
-                "crypto_ecc_clk_en",
-                &format_args!("{}", self.crypto_ecc_clk_en().bit()),
-            )
-            .field(
-                "crypto_sha_clk_en",
-                &format_args!("{}", self.crypto_sha_clk_en().bit()),
-            )
-            .field("dma_clk_en", &format_args!("{}", self.dma_clk_en().bit()))
-            .field(
-                "tsens_clk_en",
-                &format_args!("{}", self.tsens_clk_en().bit()),
-            )
+            .field("crypto_ecc_clk_en", &self.crypto_ecc_clk_en())
+            .field("crypto_sha_clk_en", &self.crypto_sha_clk_en())
+            .field("dma_clk_en", &self.dma_clk_en())
+            .field("tsens_clk_en", &self.tsens_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

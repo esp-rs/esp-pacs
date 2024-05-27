@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUFFER_STATUS_LEVEL")
-            .field(
-                "cmd_buf_empty_cnt",
-                &format_args!("{}", self.cmd_buf_empty_cnt().bits()),
-            )
-            .field(
-                "resp_buf_cnt",
-                &format_args!("{}", self.resp_buf_cnt().bits()),
-            )
-            .field(
-                "ibi_data_buf_cnt",
-                &format_args!("{}", self.ibi_data_buf_cnt().bits()),
-            )
-            .field(
-                "ibi_status_buf_cnt",
-                &format_args!("{}", self.ibi_status_buf_cnt().bits()),
-            )
+            .field("cmd_buf_empty_cnt", &self.cmd_buf_empty_cnt())
+            .field("resp_buf_cnt", &self.resp_buf_cnt())
+            .field("ibi_data_buf_cnt", &self.ibi_data_buf_cnt())
+            .field("ibi_status_buf_cnt", &self.ibi_status_buf_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BUFFER_STATUS_LEVEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BUFFER_STATUS_LEVEL reflects the status level of Buffers in the controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buffer_status_level::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

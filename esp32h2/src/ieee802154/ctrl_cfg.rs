@@ -170,82 +170,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL_CFG")
-            .field(
-                "hw_auto_ack_tx_en",
-                &format_args!("{}", self.hw_auto_ack_tx_en().bit()),
-            )
-            .field(
-                "hw_enhance_ack_tx_en",
-                &format_args!("{}", self.hw_enhance_ack_tx_en().bit()),
-            )
-            .field(
-                "hw_auto_ack_rx_en",
-                &format_args!("{}", self.hw_auto_ack_rx_en().bit()),
-            )
-            .field(
-                "dis_ifs_control",
-                &format_args!("{}", self.dis_ifs_control().bit()),
-            )
-            .field(
-                "pan_coordinator",
-                &format_args!("{}", self.pan_coordinator().bit()),
-            )
-            .field(
-                "promiscuous_mode",
-                &format_args!("{}", self.promiscuous_mode().bit()),
-            )
+            .field("hw_auto_ack_tx_en", &self.hw_auto_ack_tx_en())
+            .field("hw_enhance_ack_tx_en", &self.hw_enhance_ack_tx_en())
+            .field("hw_auto_ack_rx_en", &self.hw_auto_ack_rx_en())
+            .field("dis_ifs_control", &self.dis_ifs_control())
+            .field("pan_coordinator", &self.pan_coordinator())
+            .field("promiscuous_mode", &self.promiscuous_mode())
             .field(
                 "dis_frame_version_rsv_filter",
-                &format_args!("{}", self.dis_frame_version_rsv_filter().bit()),
+                &self.dis_frame_version_rsv_filter(),
             )
-            .field(
-                "autopend_enhance",
-                &format_args!("{}", self.autopend_enhance().bit()),
-            )
-            .field(
-                "filter_enhance",
-                &format_args!("{}", self.filter_enhance().bit()),
-            )
-            .field(
-                "coex_arb_delay",
-                &format_args!("{}", self.coex_arb_delay().bits()),
-            )
-            .field("bit_order", &format_args!("{}", self.bit_order().bit()))
-            .field(
-                "no_rss_trk_enb",
-                &format_args!("{}", self.no_rss_trk_enb().bit()),
-            )
-            .field(
-                "force_rx_enb",
-                &format_args!("{}", self.force_rx_enb().bit()),
-            )
-            .field(
-                "rx_done_trigger_idle",
-                &format_args!("{}", self.rx_done_trigger_idle().bit()),
-            )
-            .field(
-                "mac_inf0_enable",
-                &format_args!("{}", self.mac_inf0_enable().bit()),
-            )
-            .field(
-                "mac_inf1_enable",
-                &format_args!("{}", self.mac_inf1_enable().bit()),
-            )
-            .field(
-                "mac_inf2_enable",
-                &format_args!("{}", self.mac_inf2_enable().bit()),
-            )
-            .field(
-                "mac_inf3_enable",
-                &format_args!("{}", self.mac_inf3_enable().bit()),
-            )
+            .field("autopend_enhance", &self.autopend_enhance())
+            .field("filter_enhance", &self.filter_enhance())
+            .field("coex_arb_delay", &self.coex_arb_delay())
+            .field("bit_order", &self.bit_order())
+            .field("no_rss_trk_enb", &self.no_rss_trk_enb())
+            .field("force_rx_enb", &self.force_rx_enb())
+            .field("rx_done_trigger_idle", &self.rx_done_trigger_idle())
+            .field("mac_inf0_enable", &self.mac_inf0_enable())
+            .field("mac_inf1_enable", &self.mac_inf1_enable())
+            .field("mac_inf2_enable", &self.mac_inf2_enable())
+            .field("mac_inf3_enable", &self.mac_inf3_enable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

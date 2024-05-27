@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_BACKUP_CONFIG")
-            .field(
-                "peri_backup_flow_err",
-                &format_args!("{}", self.peri_backup_flow_err().bits()),
-            )
-            .field(
-                "peri_backup_burst_limit",
-                &format_args!("{}", self.peri_backup_burst_limit().bits()),
-            )
-            .field(
-                "peri_backup_tout_thres",
-                &format_args!("{}", self.peri_backup_tout_thres().bits()),
-            )
-            .field(
-                "peri_backup_size",
-                &format_args!("{}", self.peri_backup_size().bits()),
-            )
-            .field(
-                "peri_backup_to_mem",
-                &format_args!("{}", self.peri_backup_to_mem().bit()),
-            )
-            .field(
-                "peri_backup_ena",
-                &format_args!("{}", self.peri_backup_ena().bit()),
-            )
+            .field("peri_backup_flow_err", &self.peri_backup_flow_err())
+            .field("peri_backup_burst_limit", &self.peri_backup_burst_limit())
+            .field("peri_backup_tout_thres", &self.peri_backup_tout_thres())
+            .field("peri_backup_size", &self.peri_backup_size())
+            .field("peri_backup_to_mem", &self.peri_backup_to_mem())
+            .field("peri_backup_ena", &self.peri_backup_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

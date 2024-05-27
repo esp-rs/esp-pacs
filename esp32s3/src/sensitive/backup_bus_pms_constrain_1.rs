@@ -127,63 +127,57 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_1")
             .field(
                 "backup_bus_pms_constrain_uart",
-                &format_args!("{}", self.backup_bus_pms_constrain_uart().bits()),
+                &self.backup_bus_pms_constrain_uart(),
             )
             .field(
                 "backup_bus_pms_constrain_g0spi_1",
-                &format_args!("{}", self.backup_bus_pms_constrain_g0spi_1().bits()),
+                &self.backup_bus_pms_constrain_g0spi_1(),
             )
             .field(
                 "backup_bus_pms_constrain_g0spi_0",
-                &format_args!("{}", self.backup_bus_pms_constrain_g0spi_0().bits()),
+                &self.backup_bus_pms_constrain_g0spi_0(),
             )
             .field(
                 "backup_bus_pms_constrain_gpio",
-                &format_args!("{}", self.backup_bus_pms_constrain_gpio().bits()),
+                &self.backup_bus_pms_constrain_gpio(),
             )
             .field(
                 "backup_bus_pms_constrain_fe2",
-                &format_args!("{}", self.backup_bus_pms_constrain_fe2().bits()),
+                &self.backup_bus_pms_constrain_fe2(),
             )
             .field(
                 "backup_bus_pms_constrain_fe",
-                &format_args!("{}", self.backup_bus_pms_constrain_fe().bits()),
+                &self.backup_bus_pms_constrain_fe(),
             )
             .field(
                 "backup_bus_pms_constrain_rtc",
-                &format_args!("{}", self.backup_bus_pms_constrain_rtc().bits()),
+                &self.backup_bus_pms_constrain_rtc(),
             )
             .field(
                 "backup_bus_pms_constrain_io_mux",
-                &format_args!("{}", self.backup_bus_pms_constrain_io_mux().bits()),
+                &self.backup_bus_pms_constrain_io_mux(),
             )
             .field(
                 "backup_bus_pms_constrain_hinf",
-                &format_args!("{}", self.backup_bus_pms_constrain_hinf().bits()),
+                &self.backup_bus_pms_constrain_hinf(),
             )
             .field(
                 "backup_bus_pms_constrain_misc",
-                &format_args!("{}", self.backup_bus_pms_constrain_misc().bits()),
+                &self.backup_bus_pms_constrain_misc(),
             )
             .field(
                 "backup_bus_pms_constrain_i2c",
-                &format_args!("{}", self.backup_bus_pms_constrain_i2c().bits()),
+                &self.backup_bus_pms_constrain_i2c(),
             )
             .field(
                 "backup_bus_pms_constrain_i2s0",
-                &format_args!("{}", self.backup_bus_pms_constrain_i2s0().bits()),
+                &self.backup_bus_pms_constrain_i2s0(),
             )
             .field(
                 "backup_bus_pms_constrain_uart1",
-                &format_args!("{}", self.backup_bus_pms_constrain_uart1().bits()),
+                &self.backup_bus_pms_constrain_uart1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

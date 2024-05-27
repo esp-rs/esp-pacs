@@ -114,55 +114,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USBOTG20_CTRL")
-            .field(
-                "otg_phy_test_done",
-                &format_args!("{}", self.otg_phy_test_done().bit()),
-            )
-            .field(
-                "usb_mem_aux_ctrl",
-                &format_args!("{}", self.usb_mem_aux_ctrl().bits()),
-            )
-            .field(
-                "phy_suspendm",
-                &format_args!("{}", self.phy_suspendm().bit()),
-            )
-            .field(
-                "phy_suspend_force_en",
-                &format_args!("{}", self.phy_suspend_force_en().bit()),
-            )
-            .field("phy_rstn", &format_args!("{}", self.phy_rstn().bit()))
-            .field(
-                "phy_reset_force_en",
-                &format_args!("{}", self.phy_reset_force_en().bit()),
-            )
-            .field(
-                "phy_pll_force_en",
-                &format_args!("{}", self.phy_pll_force_en().bit()),
-            )
-            .field("phy_pll_en", &format_args!("{}", self.phy_pll_en().bit()))
-            .field(
-                "otg_suspendm",
-                &format_args!("{}", self.otg_suspendm().bit()),
-            )
-            .field(
-                "otg_phy_txbitstuff_en",
-                &format_args!("{}", self.otg_phy_txbitstuff_en().bit()),
-            )
-            .field(
-                "otg_phy_refclk_mode",
-                &format_args!("{}", self.otg_phy_refclk_mode().bit()),
-            )
-            .field(
-                "otg_phy_bisten",
-                &format_args!("{}", self.otg_phy_bisten().bit()),
-            )
+            .field("otg_phy_test_done", &self.otg_phy_test_done())
+            .field("usb_mem_aux_ctrl", &self.usb_mem_aux_ctrl())
+            .field("phy_suspendm", &self.phy_suspendm())
+            .field("phy_suspend_force_en", &self.phy_suspend_force_en())
+            .field("phy_rstn", &self.phy_rstn())
+            .field("phy_reset_force_en", &self.phy_reset_force_en())
+            .field("phy_pll_force_en", &self.phy_pll_force_en())
+            .field("phy_pll_en", &self.phy_pll_en())
+            .field("otg_suspendm", &self.otg_suspendm())
+            .field("otg_phy_txbitstuff_en", &self.otg_phy_txbitstuff_en())
+            .field("otg_phy_refclk_mode", &self.otg_phy_refclk_mode())
+            .field("otg_phy_bisten", &self.otg_phy_bisten())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USBOTG20_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

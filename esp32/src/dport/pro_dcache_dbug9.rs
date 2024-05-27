@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_DBUG9")
-            .field(
-                "pro_opsdramaddr_ia",
-                &format_args!("{}", self.pro_opsdramaddr_ia().bits()),
-            )
+            .field("pro_opsdramaddr_ia", &self.pro_opsdramaddr_ia())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG9_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dcache_dbug9::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -85,55 +85,49 @@ impl core::fmt::Debug for R {
         f.debug_struct("HW_CFG")
             .field(
                 "icm_reg_axi_hwcfg_qos_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_qos_support().bit()),
+                &self.icm_reg_axi_hwcfg_qos_support(),
             )
             .field(
                 "icm_reg_axi_hwcfg_apb3_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_apb3_support().bit()),
+                &self.icm_reg_axi_hwcfg_apb3_support(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi4_support",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi4_support().bit()),
+                &self.icm_reg_axi_hwcfg_axi4_support(),
             )
             .field(
                 "icm_reg_axi_hwcfg_lock_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_lock_en().bit()),
+                &self.icm_reg_axi_hwcfg_lock_en(),
             )
             .field(
                 "icm_reg_axi_hwcfg_trust_zone_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_trust_zone_en().bit()),
+                &self.icm_reg_axi_hwcfg_trust_zone_en(),
             )
             .field(
                 "icm_reg_axi_hwcfg_decoder_type",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_decoder_type().bit()),
+                &self.icm_reg_axi_hwcfg_decoder_type(),
             )
             .field(
                 "icm_reg_axi_hwcfg_remap_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_remap_en().bit()),
+                &self.icm_reg_axi_hwcfg_remap_en(),
             )
             .field(
                 "icm_reg_axi_hwcfg_bi_dir_cmd_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_bi_dir_cmd_en().bit()),
+                &self.icm_reg_axi_hwcfg_bi_dir_cmd_en(),
             )
             .field(
                 "icm_reg_axi_hwcfg_low_power_inf_en",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_low_power_inf_en().bit()),
+                &self.icm_reg_axi_hwcfg_low_power_inf_en(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi_num_masters",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi_num_masters().bits()),
+                &self.icm_reg_axi_hwcfg_axi_num_masters(),
             )
             .field(
                 "icm_reg_axi_hwcfg_axi_num_slaves",
-                &format_args!("{}", self.icm_reg_axi_hwcfg_axi_num_slaves().bits()),
+                &self.icm_reg_axi_hwcfg_axi_num_slaves(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HW_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hw_cfg::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

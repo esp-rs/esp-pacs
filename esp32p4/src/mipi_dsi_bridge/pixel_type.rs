@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIXEL_TYPE")
-            .field("raw_type", &format_args!("{}", self.raw_type().bits()))
-            .field("dpi_config", &format_args!("{}", self.dpi_config().bits()))
-            .field(
-                "data_in_type",
-                &format_args!("{}", self.data_in_type().bit()),
-            )
+            .field("raw_type", &self.raw_type())
+            .field("dpi_config", &self.dpi_config())
+            .field("data_in_type", &self.data_in_type())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PIXEL_TYPE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

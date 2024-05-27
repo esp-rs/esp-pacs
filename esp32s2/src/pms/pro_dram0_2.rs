@@ -55,31 +55,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DRAM0_2")
             .field(
                 "pro_dram0_rtcfast_spltaddr",
-                &format_args!("{}", self.pro_dram0_rtcfast_spltaddr().bits()),
+                &self.pro_dram0_rtcfast_spltaddr(),
             )
-            .field(
-                "pro_dram0_rtcfast_l_r",
-                &format_args!("{}", self.pro_dram0_rtcfast_l_r().bit()),
-            )
-            .field(
-                "pro_dram0_rtcfast_l_w",
-                &format_args!("{}", self.pro_dram0_rtcfast_l_w().bit()),
-            )
-            .field(
-                "pro_dram0_rtcfast_h_r",
-                &format_args!("{}", self.pro_dram0_rtcfast_h_r().bit()),
-            )
-            .field(
-                "pro_dram0_rtcfast_h_w",
-                &format_args!("{}", self.pro_dram0_rtcfast_h_w().bit()),
-            )
+            .field("pro_dram0_rtcfast_l_r", &self.pro_dram0_rtcfast_l_r())
+            .field("pro_dram0_rtcfast_l_w", &self.pro_dram0_rtcfast_l_w())
+            .field("pro_dram0_rtcfast_h_r", &self.pro_dram0_rtcfast_h_r())
+            .field("pro_dram0_rtcfast_h_w", &self.pro_dram0_rtcfast_h_w())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DRAM0_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

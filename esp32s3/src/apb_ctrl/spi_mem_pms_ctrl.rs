@@ -24,21 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_MEM_PMS_CTRL")
-            .field(
-                "spi_mem_reject_int",
-                &format_args!("{}", self.spi_mem_reject_int().bit()),
-            )
-            .field(
-                "spi_mem_reject_cde",
-                &format_args!("{}", self.spi_mem_reject_cde().bits()),
-            )
+            .field("spi_mem_reject_int", &self.spi_mem_reject_int())
+            .field("spi_mem_reject_cde", &self.spi_mem_reject_cde())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_PMS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER_CNT_CAP")
-            .field(
-                "timer_cnt_cap",
-                &format_args!("{}", self.timer_cnt_cap().bits()),
-            )
+            .field("timer_cnt_cap", &self.timer_cnt_cap())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMER_CNT_CAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Ledc timer%s captured count value register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_cnt_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

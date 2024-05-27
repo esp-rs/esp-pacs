@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "overflow_raw",
-                &format_args!("{}", self.overflow_raw().bit()),
-            )
-            .field(
-                "soc_wakeup_int_raw",
-                &format_args!("{}", self.soc_wakeup_int_raw().bit()),
-            )
+            .field("overflow_raw", &self.overflow_raw())
+            .field("soc_wakeup_int_raw", &self.soc_wakeup_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

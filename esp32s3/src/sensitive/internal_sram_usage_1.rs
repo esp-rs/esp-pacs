@@ -37,23 +37,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERNAL_SRAM_USAGE_1")
             .field(
                 "internal_sram_icache_usage",
-                &format_args!("{}", self.internal_sram_icache_usage().bits()),
+                &self.internal_sram_icache_usage(),
             )
             .field(
                 "internal_sram_dcache_usage",
-                &format_args!("{}", self.internal_sram_dcache_usage().bits()),
+                &self.internal_sram_dcache_usage(),
             )
-            .field(
-                "internal_sram_cpu_usage",
-                &format_args!("{}", self.internal_sram_cpu_usage().bits()),
-            )
+            .field("internal_sram_cpu_usage", &self.internal_sram_cpu_usage())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

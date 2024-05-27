@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CTRL")
-            .field(
-                "retention_clk_sel",
-                &format_args!("{}", self.retention_clk_sel().bit()),
-            )
-            .field(
-                "retention_done_wait",
-                &format_args!("{}", self.retention_done_wait().bits()),
-            )
-            .field(
-                "retention_clkoff_wait",
-                &format_args!("{}", self.retention_clkoff_wait().bits()),
-            )
-            .field(
-                "retention_en",
-                &format_args!("{}", self.retention_en().bit()),
-            )
-            .field(
-                "retention_wait",
-                &format_args!("{}", self.retention_wait().bits()),
-            )
+            .field("retention_clk_sel", &self.retention_clk_sel())
+            .field("retention_done_wait", &self.retention_done_wait())
+            .field("retention_clkoff_wait", &self.retention_clkoff_wait())
+            .field("retention_en", &self.retention_en())
+            .field("retention_wait", &self.retention_wait())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

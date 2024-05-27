@@ -55,41 +55,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_INFO1")
-            .field(
-                "fme_ctrl_debug_state",
-                &format_args!("{}", self.fme_ctrl_debug_state().bits()),
-            )
-            .field(
-                "deci_calc_debug_state",
-                &format_args!("{}", self.deci_calc_debug_state().bits()),
-            )
-            .field(
-                "db_debug_state",
-                &format_args!("{}", self.db_debug_state().bits()),
-            )
-            .field(
-                "cavlc_enc_debug_state",
-                &format_args!("{}", self.cavlc_enc_debug_state().bits()),
-            )
-            .field(
-                "cavlc_scan_debug_state",
-                &format_args!("{}", self.cavlc_scan_debug_state().bits()),
-            )
-            .field(
-                "cavlc_ctrl_debug_state",
-                &format_args!("{}", self.cavlc_ctrl_debug_state().bits()),
-            )
-            .field(
-                "bs_buffer_debug_state",
-                &format_args!("{}", self.bs_buffer_debug_state().bit()),
-            )
+            .field("fme_ctrl_debug_state", &self.fme_ctrl_debug_state())
+            .field("deci_calc_debug_state", &self.deci_calc_debug_state())
+            .field("db_debug_state", &self.db_debug_state())
+            .field("cavlc_enc_debug_state", &self.cavlc_enc_debug_state())
+            .field("cavlc_scan_debug_state", &self.cavlc_scan_debug_state())
+            .field("cavlc_ctrl_debug_state", &self.cavlc_ctrl_debug_state())
+            .field("bs_buffer_debug_state", &self.bs_buffer_debug_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEBUG_INFO1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Debug information register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`debug_info1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

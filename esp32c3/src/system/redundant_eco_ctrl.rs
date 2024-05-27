@@ -24,21 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REDUNDANT_ECO_CTRL")
-            .field(
-                "redundant_eco_drive",
-                &format_args!("{}", self.redundant_eco_drive().bit()),
-            )
-            .field(
-                "redundant_eco_result",
-                &format_args!("{}", self.redundant_eco_result().bit()),
-            )
+            .field("redundant_eco_drive", &self.redundant_eco_drive())
+            .field("redundant_eco_result", &self.redundant_eco_result())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REDUNDANT_ECO_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

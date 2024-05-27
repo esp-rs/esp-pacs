@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLICE_HEADER_REMAIN")
-            .field(
-                "slice_remain_bitlength",
-                &format_args!("{}", self.slice_remain_bitlength().bits()),
-            )
-            .field(
-                "slice_remain_bit",
-                &format_args!("{}", self.slice_remain_bit().bits()),
-            )
+            .field("slice_remain_bitlength", &self.slice_remain_bitlength())
+            .field("slice_remain_bit", &self.slice_remain_bit())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLICE_HEADER_REMAIN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

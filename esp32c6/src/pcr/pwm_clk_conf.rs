@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWM_CLK_CONF")
-            .field(
-                "pwm_div_num",
-                &format_args!("{}", self.pwm_div_num().bits()),
-            )
-            .field(
-                "pwm_clkm_sel",
-                &format_args!("{}", self.pwm_clkm_sel().bits()),
-            )
-            .field("pwm_clkm_en", &format_args!("{}", self.pwm_clkm_en().bit()))
+            .field("pwm_div_num", &self.pwm_div_num())
+            .field("pwm_clkm_sel", &self.pwm_clkm_sel())
+            .field("pwm_clkm_en", &self.pwm_clkm_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PWM_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

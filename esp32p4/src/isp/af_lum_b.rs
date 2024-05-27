@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_LUM_B")
-            .field("af_lumb", &format_args!("{}", self.af_lumb().bits()))
+            .field("af_lumb", &self.af_lumb())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_LUM_B_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "result of lum of af window b\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`af_lum_b::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

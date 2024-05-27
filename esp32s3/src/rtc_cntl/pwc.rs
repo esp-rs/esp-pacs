@@ -152,62 +152,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PWC")
-            .field(
-                "fastmem_force_noiso",
-                &format_args!("{}", self.fastmem_force_noiso().bit()),
-            )
-            .field(
-                "fastmem_force_iso",
-                &format_args!("{}", self.fastmem_force_iso().bit()),
-            )
-            .field(
-                "slowmem_force_noiso",
-                &format_args!("{}", self.slowmem_force_noiso().bit()),
-            )
-            .field(
-                "slowmem_force_iso",
-                &format_args!("{}", self.slowmem_force_iso().bit()),
-            )
-            .field("force_iso", &format_args!("{}", self.force_iso().bit()))
-            .field("force_noiso", &format_args!("{}", self.force_noiso().bit()))
-            .field(
-                "fastmem_folw_cpu",
-                &format_args!("{}", self.fastmem_folw_cpu().bit()),
-            )
-            .field(
-                "fastmem_force_lpd",
-                &format_args!("{}", self.fastmem_force_lpd().bit()),
-            )
-            .field(
-                "fastmem_force_lpu",
-                &format_args!("{}", self.fastmem_force_lpu().bit()),
-            )
-            .field(
-                "slowmem_folw_cpu",
-                &format_args!("{}", self.slowmem_folw_cpu().bit()),
-            )
-            .field(
-                "slowmem_force_lpd",
-                &format_args!("{}", self.slowmem_force_lpd().bit()),
-            )
-            .field(
-                "slowmem_force_lpu",
-                &format_args!("{}", self.slowmem_force_lpu().bit()),
-            )
-            .field("force_pd", &format_args!("{}", self.force_pd().bit()))
-            .field("force_pu", &format_args!("{}", self.force_pu().bit()))
-            .field("pd_en", &format_args!("{}", self.pd_en().bit()))
-            .field(
-                "pad_force_hold",
-                &format_args!("{}", self.pad_force_hold().bit()),
-            )
+            .field("fastmem_force_noiso", &self.fastmem_force_noiso())
+            .field("fastmem_force_iso", &self.fastmem_force_iso())
+            .field("slowmem_force_noiso", &self.slowmem_force_noiso())
+            .field("slowmem_force_iso", &self.slowmem_force_iso())
+            .field("force_iso", &self.force_iso())
+            .field("force_noiso", &self.force_noiso())
+            .field("fastmem_folw_cpu", &self.fastmem_folw_cpu())
+            .field("fastmem_force_lpd", &self.fastmem_force_lpd())
+            .field("fastmem_force_lpu", &self.fastmem_force_lpu())
+            .field("slowmem_folw_cpu", &self.slowmem_folw_cpu())
+            .field("slowmem_force_lpd", &self.slowmem_force_lpd())
+            .field("slowmem_force_lpu", &self.slowmem_force_lpu())
+            .field("force_pd", &self.force_pd())
+            .field("force_pu", &self.force_pu())
+            .field("pd_en", &self.pd_en())
+            .field("pad_force_hold", &self.pad_force_hold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PWC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

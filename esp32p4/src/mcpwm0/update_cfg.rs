@@ -80,36 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UPDATE_CFG")
-            .field(
-                "global_up_en",
-                &format_args!("{}", self.global_up_en().bit()),
-            )
-            .field(
-                "global_force_up",
-                &format_args!("{}", self.global_force_up().bit()),
-            )
-            .field("op0_up_en", &format_args!("{}", self.op0_up_en().bit()))
-            .field(
-                "op0_force_up",
-                &format_args!("{}", self.op0_force_up().bit()),
-            )
-            .field("op1_up_en", &format_args!("{}", self.op1_up_en().bit()))
-            .field(
-                "op1_force_up",
-                &format_args!("{}", self.op1_force_up().bit()),
-            )
-            .field("op2_up_en", &format_args!("{}", self.op2_up_en().bit()))
-            .field(
-                "op2_force_up",
-                &format_args!("{}", self.op2_force_up().bit()),
-            )
+            .field("global_up_en", &self.global_up_en())
+            .field("global_force_up", &self.global_force_up())
+            .field("op0_up_en", &self.op0_up_en())
+            .field("op0_force_up", &self.op0_force_up())
+            .field("op1_up_en", &self.op1_up_en())
+            .field("op1_force_up", &self.op1_force_up())
+            .field("op2_up_en", &self.op2_up_en())
+            .field("op2_force_up", &self.op2_force_up())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UPDATE_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

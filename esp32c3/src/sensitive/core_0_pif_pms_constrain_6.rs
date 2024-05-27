@@ -101,59 +101,41 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_6")
             .field(
                 "core_0_pif_pms_constrain_world_1_bt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_bt().bits()),
+                &self.core_0_pif_pms_constrain_world_1_bt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_i2c_ext0",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_i2c_ext0().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_i2c_ext0(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_uhci0",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_uhci0().bits()),
+                &self.core_0_pif_pms_constrain_world_1_uhci0(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_rmt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_rmt().bits()),
+                &self.core_0_pif_pms_constrain_world_1_rmt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_ledc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_ledc().bits()),
+                &self.core_0_pif_pms_constrain_world_1_ledc(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_bb",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_bb().bits()),
+                &self.core_0_pif_pms_constrain_world_1_bb(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_timergroup",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_timergroup().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_timergroup(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_timergroup1",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_timergroup1().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_timergroup1(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_systimer",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_systimer().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_systimer(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

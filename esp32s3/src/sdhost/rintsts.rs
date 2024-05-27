@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RINTSTS")
-            .field(
-                "int_status_raw",
-                &format_args!("{}", self.int_status_raw().bits()),
-            )
-            .field(
-                "sdio_interrupt_raw",
-                &format_args!("{}", self.sdio_interrupt_raw().bits()),
-            )
+            .field("int_status_raw", &self.int_status_raw())
+            .field("sdio_interrupt_raw", &self.sdio_interrupt_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RINTSTS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

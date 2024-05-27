@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_EXTMEM_REJECT_INT_MAP")
             .field(
                 "dma_extmem_reject_int_map",
-                &format_args!("{}", self.dma_extmem_reject_int_map().bits()),
+                &self.dma_extmem_reject_int_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_EXTMEM_REJECT_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

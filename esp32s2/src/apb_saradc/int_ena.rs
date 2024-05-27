@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("adc2_thres", &format_args!("{}", self.adc2_thres().bit()))
-            .field("adc1_thres", &format_args!("{}", self.adc1_thres().bit()))
-            .field("adc2_done", &format_args!("{}", self.adc2_done().bit()))
-            .field("adc1_done", &format_args!("{}", self.adc1_done().bit()))
+            .field("adc2_thres", &self.adc2_thres())
+            .field("adc1_thres", &self.adc1_thres())
+            .field("adc2_done", &self.adc2_done())
+            .field("adc1_done", &self.adc1_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -161,66 +161,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USB_CONF")
-            .field("usb_vrefh", &format_args!("{}", self.usb_vrefh().bits()))
-            .field("usb_vrefl", &format_args!("{}", self.usb_vrefl().bits()))
-            .field(
-                "usb_vref_override",
-                &format_args!("{}", self.usb_vref_override().bit()),
-            )
-            .field(
-                "usb_pad_pull_override",
-                &format_args!("{}", self.usb_pad_pull_override().bit()),
-            )
-            .field(
-                "usb_dp_pullup",
-                &format_args!("{}", self.usb_dp_pullup().bit()),
-            )
-            .field(
-                "usb_dp_pulldown",
-                &format_args!("{}", self.usb_dp_pulldown().bit()),
-            )
-            .field(
-                "usb_dm_pullup",
-                &format_args!("{}", self.usb_dm_pullup().bit()),
-            )
-            .field(
-                "usb_dm_pulldown",
-                &format_args!("{}", self.usb_dm_pulldown().bit()),
-            )
-            .field(
-                "usb_pullup_value",
-                &format_args!("{}", self.usb_pullup_value().bit()),
-            )
-            .field(
-                "usb_pad_enable_override",
-                &format_args!("{}", self.usb_pad_enable_override().bit()),
-            )
-            .field(
-                "usb_pad_enable",
-                &format_args!("{}", self.usb_pad_enable().bit()),
-            )
-            .field("usb_txm", &format_args!("{}", self.usb_txm().bit()))
-            .field("usb_txp", &format_args!("{}", self.usb_txp().bit()))
-            .field("usb_tx_en", &format_args!("{}", self.usb_tx_en().bit()))
-            .field(
-                "usb_tx_en_override",
-                &format_args!("{}", self.usb_tx_en_override().bit()),
-            )
-            .field(
-                "usb_reset_disable",
-                &format_args!("{}", self.usb_reset_disable().bit()),
-            )
-            .field(
-                "io_mux_reset_disable",
-                &format_args!("{}", self.io_mux_reset_disable().bit()),
-            )
+            .field("usb_vrefh", &self.usb_vrefh())
+            .field("usb_vrefl", &self.usb_vrefl())
+            .field("usb_vref_override", &self.usb_vref_override())
+            .field("usb_pad_pull_override", &self.usb_pad_pull_override())
+            .field("usb_dp_pullup", &self.usb_dp_pullup())
+            .field("usb_dp_pulldown", &self.usb_dp_pulldown())
+            .field("usb_dm_pullup", &self.usb_dm_pullup())
+            .field("usb_dm_pulldown", &self.usb_dm_pulldown())
+            .field("usb_pullup_value", &self.usb_pullup_value())
+            .field("usb_pad_enable_override", &self.usb_pad_enable_override())
+            .field("usb_pad_enable", &self.usb_pad_enable())
+            .field("usb_txm", &self.usb_txm())
+            .field("usb_txp", &self.usb_txp())
+            .field("usb_tx_en", &self.usb_tx_en())
+            .field("usb_tx_en_override", &self.usb_tx_en_override())
+            .field("usb_reset_disable", &self.usb_reset_disable())
+            .field("io_mux_reset_disable", &self.io_mux_reset_disable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USB_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

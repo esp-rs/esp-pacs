@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE1_PRELOAD_ADDR")
-            .field(
-                "l1_icache1_preload_addr",
-                &format_args!("{}", self.l1_icache1_preload_addr().bits()),
-            )
+            .field("l1_icache1_preload_addr", &self.l1_icache1_preload_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE1_PRELOAD_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 instruction Cache 1 preload address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache1_preload_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

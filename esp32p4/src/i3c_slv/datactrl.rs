@@ -60,19 +60,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATACTRL")
-            .field("txtrig", &format_args!("{}", self.txtrig().bits()))
-            .field("rxtrig", &format_args!("{}", self.rxtrig().bits()))
-            .field("txcount", &format_args!("{}", self.txcount().bits()))
-            .field("rxcount", &format_args!("{}", self.rxcount().bits()))
-            .field("txfull", &format_args!("{}", self.txfull().bit()))
-            .field("rxempty", &format_args!("{}", self.rxempty().bit()))
+            .field("txtrig", &self.txtrig())
+            .field("rxtrig", &self.rxtrig())
+            .field("txcount", &self.txcount())
+            .field("rxcount", &self.rxcount())
+            .field("txfull", &self.txfull())
+            .field("rxempty", &self.rxempty())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DATACTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -134,69 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE1")
-            .field(
-                "force_to_hs_tx",
-                &format_args!("{}", self.force_to_hs_tx().bit()),
-            )
-            .field(
-                "force_to_lp_rx",
-                &format_args!("{}", self.force_to_lp_rx().bit()),
-            )
-            .field(
-                "force_ecc_single_err",
-                &format_args!("{}", self.force_ecc_single_err().bit()),
-            )
-            .field(
-                "force_ecc_milti_err",
-                &format_args!("{}", self.force_ecc_milti_err().bit()),
-            )
-            .field(
-                "force_crc_err",
-                &format_args!("{}", self.force_crc_err().bit()),
-            )
-            .field(
-                "force_pkt_size_err",
-                &format_args!("{}", self.force_pkt_size_err().bit()),
-            )
-            .field(
-                "force_eopt_err",
-                &format_args!("{}", self.force_eopt_err().bit()),
-            )
-            .field(
-                "force_dpi_pld_wr_err",
-                &format_args!("{}", self.force_dpi_pld_wr_err().bit()),
-            )
-            .field(
-                "force_gen_cmd_wr_err",
-                &format_args!("{}", self.force_gen_cmd_wr_err().bit()),
-            )
-            .field(
-                "force_gen_pld_wr_err",
-                &format_args!("{}", self.force_gen_pld_wr_err().bit()),
-            )
-            .field(
-                "force_gen_pld_send_err",
-                &format_args!("{}", self.force_gen_pld_send_err().bit()),
-            )
-            .field(
-                "force_gen_pld_rd_err",
-                &format_args!("{}", self.force_gen_pld_rd_err().bit()),
-            )
-            .field(
-                "force_gen_pld_recev_err",
-                &format_args!("{}", self.force_gen_pld_recev_err().bit()),
-            )
-            .field(
-                "force_dpi_buff_pld_under",
-                &format_args!("{}", self.force_dpi_buff_pld_under().bit()),
-            )
+            .field("force_to_hs_tx", &self.force_to_hs_tx())
+            .field("force_to_lp_rx", &self.force_to_lp_rx())
+            .field("force_ecc_single_err", &self.force_ecc_single_err())
+            .field("force_ecc_milti_err", &self.force_ecc_milti_err())
+            .field("force_crc_err", &self.force_crc_err())
+            .field("force_pkt_size_err", &self.force_pkt_size_err())
+            .field("force_eopt_err", &self.force_eopt_err())
+            .field("force_dpi_pld_wr_err", &self.force_dpi_pld_wr_err())
+            .field("force_gen_cmd_wr_err", &self.force_gen_cmd_wr_err())
+            .field("force_gen_pld_wr_err", &self.force_gen_pld_wr_err())
+            .field("force_gen_pld_send_err", &self.force_gen_pld_send_err())
+            .field("force_gen_pld_rd_err", &self.force_gen_pld_rd_err())
+            .field("force_gen_pld_recev_err", &self.force_gen_pld_recev_err())
+            .field("force_dpi_buff_pld_under", &self.force_dpi_buff_pld_under())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_FORCE1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

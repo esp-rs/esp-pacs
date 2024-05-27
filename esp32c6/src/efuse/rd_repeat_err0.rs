@@ -146,90 +146,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR0")
-            .field("rd_dis_err", &format_args!("{}", self.rd_dis_err().bits()))
-            .field(
-                "swap_uart_sdio_en_err",
-                &format_args!("{}", self.swap_uart_sdio_en_err().bit()),
-            )
-            .field(
-                "dis_icache_err",
-                &format_args!("{}", self.dis_icache_err().bit()),
-            )
-            .field(
-                "dis_usb_jtag_err",
-                &format_args!("{}", self.dis_usb_jtag_err().bit()),
-            )
-            .field(
-                "dis_download_icache_err",
-                &format_args!("{}", self.dis_download_icache_err().bit()),
-            )
-            .field(
-                "dis_usb_serial_jtag_err",
-                &format_args!("{}", self.dis_usb_serial_jtag_err().bit()),
-            )
-            .field(
-                "dis_force_download_err",
-                &format_args!("{}", self.dis_force_download_err().bit()),
-            )
+            .field("rd_dis_err", &self.rd_dis_err())
+            .field("swap_uart_sdio_en_err", &self.swap_uart_sdio_en_err())
+            .field("dis_icache_err", &self.dis_icache_err())
+            .field("dis_usb_jtag_err", &self.dis_usb_jtag_err())
+            .field("dis_download_icache_err", &self.dis_download_icache_err())
+            .field("dis_usb_serial_jtag_err", &self.dis_usb_serial_jtag_err())
+            .field("dis_force_download_err", &self.dis_force_download_err())
             .field(
                 "spi_download_mspi_dis_err",
-                &format_args!("{}", self.spi_download_mspi_dis_err().bit()),
+                &self.spi_download_mspi_dis_err(),
             )
-            .field(
-                "dis_twai_err",
-                &format_args!("{}", self.dis_twai_err().bit()),
-            )
-            .field(
-                "jtag_sel_enable_err",
-                &format_args!("{}", self.jtag_sel_enable_err().bit()),
-            )
-            .field(
-                "soft_dis_jtag_err",
-                &format_args!("{}", self.soft_dis_jtag_err().bits()),
-            )
-            .field(
-                "dis_pad_jtag_err",
-                &format_args!("{}", self.dis_pad_jtag_err().bit()),
-            )
+            .field("dis_twai_err", &self.dis_twai_err())
+            .field("jtag_sel_enable_err", &self.jtag_sel_enable_err())
+            .field("soft_dis_jtag_err", &self.soft_dis_jtag_err())
+            .field("dis_pad_jtag_err", &self.dis_pad_jtag_err())
             .field(
                 "dis_download_manual_encrypt_err",
-                &format_args!("{}", self.dis_download_manual_encrypt_err().bit()),
+                &self.dis_download_manual_encrypt_err(),
             )
-            .field(
-                "usb_drefh_err",
-                &format_args!("{}", self.usb_drefh_err().bits()),
-            )
-            .field(
-                "usb_drefl_err",
-                &format_args!("{}", self.usb_drefl_err().bits()),
-            )
-            .field(
-                "usb_exchg_pins_err",
-                &format_args!("{}", self.usb_exchg_pins_err().bit()),
-            )
-            .field(
-                "vdd_spi_as_gpio_err",
-                &format_args!("{}", self.vdd_spi_as_gpio_err().bit()),
-            )
-            .field(
-                "rpt4_reserved0_err_2",
-                &format_args!("{}", self.rpt4_reserved0_err_2().bits()),
-            )
-            .field(
-                "rpt4_reserved0_err_1",
-                &format_args!("{}", self.rpt4_reserved0_err_1().bit()),
-            )
-            .field(
-                "rpt4_reserved0_err_0",
-                &format_args!("{}", self.rpt4_reserved0_err_0().bits()),
-            )
+            .field("usb_drefh_err", &self.usb_drefh_err())
+            .field("usb_drefl_err", &self.usb_drefl_err())
+            .field("usb_exchg_pins_err", &self.usb_exchg_pins_err())
+            .field("vdd_spi_as_gpio_err", &self.vdd_spi_as_gpio_err())
+            .field("rpt4_reserved0_err_2", &self.rpt4_reserved0_err_2())
+            .field("rpt4_reserved0_err_1", &self.rpt4_reserved0_err_1())
+            .field("rpt4_reserved0_err_0", &self.rpt4_reserved0_err_0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

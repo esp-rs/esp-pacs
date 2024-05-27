@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_AUTOLOAD_SCT0_SIZE")
             .field(
                 "icache_autoload_sct0_size",
-                &format_args!("{}", self.icache_autoload_sct0_size().bits()),
+                &self.icache_autoload_sct0_size(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_AUTOLOAD_SCT0_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

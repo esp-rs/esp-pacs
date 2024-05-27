@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OPERATOR_TIMERSEL")
-            .field(
-                "operator0_timersel",
-                &format_args!("{}", self.operator0_timersel().bits()),
-            )
-            .field(
-                "operator1_timersel",
-                &format_args!("{}", self.operator1_timersel().bits()),
-            )
-            .field(
-                "operator2_timersel",
-                &format_args!("{}", self.operator2_timersel().bits()),
-            )
+            .field("operator0_timersel", &self.operator0_timersel())
+            .field("operator1_timersel", &self.operator1_timersel())
+            .field("operator2_timersel", &self.operator2_timersel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OPERATOR_TIMERSEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

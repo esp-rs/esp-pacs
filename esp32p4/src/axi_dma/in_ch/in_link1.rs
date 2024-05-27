@@ -30,18 +30,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_LINK1")
-            .field(
-                "inlink_auto_ret",
-                &format_args!("{}", self.inlink_auto_ret().bit()),
-            )
-            .field("inlink_park", &format_args!("{}", self.inlink_park().bit()))
+            .field("inlink_auto_ret", &self.inlink_auto_ret())
+            .field("inlink_park", &self.inlink_park())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_LINK1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

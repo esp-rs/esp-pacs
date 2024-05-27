@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VER_TYPE")
-            .field(
-                "reg_i3c_mst_ver_type",
-                &format_args!("{}", self.reg_i3c_mst_ver_type().bits()),
-            )
+            .field("reg_i3c_mst_ver_type", &self.reg_i3c_mst_ver_type())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VER_TYPE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

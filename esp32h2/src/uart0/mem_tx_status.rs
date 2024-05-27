@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_TX_STATUS")
-            .field(
-                "tx_sram_waddr",
-                &format_args!("{}", self.tx_sram_waddr().bits()),
-            )
-            .field(
-                "tx_sram_raddr",
-                &format_args!("{}", self.tx_sram_raddr().bits()),
-            )
+            .field("tx_sram_waddr", &self.tx_sram_waddr())
+            .field("tx_sram_raddr", &self.tx_sram_raddr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_TX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Tx-SRAM write and read offset address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_tx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -296,141 +296,45 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_FORCE_NORST0")
-            .field(
-                "force_norst_core0",
-                &format_args!("{}", self.force_norst_core0().bit()),
-            )
-            .field(
-                "force_norst_core1",
-                &format_args!("{}", self.force_norst_core1().bit()),
-            )
-            .field(
-                "force_norst_coretrace0",
-                &format_args!("{}", self.force_norst_coretrace0().bit()),
-            )
-            .field(
-                "force_norst_coretrace1",
-                &format_args!("{}", self.force_norst_coretrace1().bit()),
-            )
-            .field(
-                "force_norst_l2memmon",
-                &format_args!("{}", self.force_norst_l2memmon().bit()),
-            )
-            .field(
-                "force_norst_tcmmon",
-                &format_args!("{}", self.force_norst_tcmmon().bit()),
-            )
-            .field(
-                "force_norst_gdma",
-                &format_args!("{}", self.force_norst_gdma().bit()),
-            )
-            .field(
-                "force_norst_mspi_axi",
-                &format_args!("{}", self.force_norst_mspi_axi().bit()),
-            )
+            .field("force_norst_core0", &self.force_norst_core0())
+            .field("force_norst_core1", &self.force_norst_core1())
+            .field("force_norst_coretrace0", &self.force_norst_coretrace0())
+            .field("force_norst_coretrace1", &self.force_norst_coretrace1())
+            .field("force_norst_l2memmon", &self.force_norst_l2memmon())
+            .field("force_norst_tcmmon", &self.force_norst_tcmmon())
+            .field("force_norst_gdma", &self.force_norst_gdma())
+            .field("force_norst_mspi_axi", &self.force_norst_mspi_axi())
             .field(
                 "force_norst_dual_mspi_axi",
-                &format_args!("{}", self.force_norst_dual_mspi_axi().bit()),
+                &self.force_norst_dual_mspi_axi(),
             )
-            .field(
-                "force_norst_mspi_apb",
-                &format_args!("{}", self.force_norst_mspi_apb().bit()),
-            )
+            .field("force_norst_mspi_apb", &self.force_norst_mspi_apb())
             .field(
                 "force_norst_dual_mspi_apb",
-                &format_args!("{}", self.force_norst_dual_mspi_apb().bit()),
+                &self.force_norst_dual_mspi_apb(),
             )
-            .field(
-                "force_norst_dsi_brg",
-                &format_args!("{}", self.force_norst_dsi_brg().bit()),
-            )
-            .field(
-                "force_norst_csi_host",
-                &format_args!("{}", self.force_norst_csi_host().bit()),
-            )
-            .field(
-                "force_norst_csi_brg",
-                &format_args!("{}", self.force_norst_csi_brg().bit()),
-            )
-            .field(
-                "force_norst_isp",
-                &format_args!("{}", self.force_norst_isp().bit()),
-            )
-            .field(
-                "force_norst_jpeg",
-                &format_args!("{}", self.force_norst_jpeg().bit()),
-            )
-            .field(
-                "force_norst_dma2d",
-                &format_args!("{}", self.force_norst_dma2d().bit()),
-            )
-            .field(
-                "force_norst_ppa",
-                &format_args!("{}", self.force_norst_ppa().bit()),
-            )
-            .field(
-                "force_norst_ahb_pdma",
-                &format_args!("{}", self.force_norst_ahb_pdma().bit()),
-            )
-            .field(
-                "force_norst_axi_pdma",
-                &format_args!("{}", self.force_norst_axi_pdma().bit()),
-            )
-            .field(
-                "force_norst_iomux",
-                &format_args!("{}", self.force_norst_iomux().bit()),
-            )
-            .field(
-                "force_norst_padbist",
-                &format_args!("{}", self.force_norst_padbist().bit()),
-            )
-            .field(
-                "force_norst_stimer",
-                &format_args!("{}", self.force_norst_stimer().bit()),
-            )
-            .field(
-                "force_norst_timergrp0",
-                &format_args!("{}", self.force_norst_timergrp0().bit()),
-            )
-            .field(
-                "force_norst_timergrp1",
-                &format_args!("{}", self.force_norst_timergrp1().bit()),
-            )
-            .field(
-                "force_norst_uart0",
-                &format_args!("{}", self.force_norst_uart0().bit()),
-            )
-            .field(
-                "force_norst_uart1",
-                &format_args!("{}", self.force_norst_uart1().bit()),
-            )
-            .field(
-                "force_norst_uart2",
-                &format_args!("{}", self.force_norst_uart2().bit()),
-            )
-            .field(
-                "force_norst_uart3",
-                &format_args!("{}", self.force_norst_uart3().bit()),
-            )
-            .field(
-                "force_norst_uart4",
-                &format_args!("{}", self.force_norst_uart4().bit()),
-            )
-            .field(
-                "force_norst_uhci",
-                &format_args!("{}", self.force_norst_uhci().bit()),
-            )
-            .field(
-                "force_norst_i3cmst",
-                &format_args!("{}", self.force_norst_i3cmst().bit()),
-            )
+            .field("force_norst_dsi_brg", &self.force_norst_dsi_brg())
+            .field("force_norst_csi_host", &self.force_norst_csi_host())
+            .field("force_norst_csi_brg", &self.force_norst_csi_brg())
+            .field("force_norst_isp", &self.force_norst_isp())
+            .field("force_norst_jpeg", &self.force_norst_jpeg())
+            .field("force_norst_dma2d", &self.force_norst_dma2d())
+            .field("force_norst_ppa", &self.force_norst_ppa())
+            .field("force_norst_ahb_pdma", &self.force_norst_ahb_pdma())
+            .field("force_norst_axi_pdma", &self.force_norst_axi_pdma())
+            .field("force_norst_iomux", &self.force_norst_iomux())
+            .field("force_norst_padbist", &self.force_norst_padbist())
+            .field("force_norst_stimer", &self.force_norst_stimer())
+            .field("force_norst_timergrp0", &self.force_norst_timergrp0())
+            .field("force_norst_timergrp1", &self.force_norst_timergrp1())
+            .field("force_norst_uart0", &self.force_norst_uart0())
+            .field("force_norst_uart1", &self.force_norst_uart1())
+            .field("force_norst_uart2", &self.force_norst_uart2())
+            .field("force_norst_uart3", &self.force_norst_uart3())
+            .field("force_norst_uart4", &self.force_norst_uart4())
+            .field("force_norst_uhci", &self.force_norst_uhci())
+            .field("force_norst_i3cmst", &self.force_norst_i3cmst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_FORCE_NORST0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

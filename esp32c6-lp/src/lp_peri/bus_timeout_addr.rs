@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_TIMEOUT_ADDR")
-            .field(
-                "lp_peri_timeout_addr",
-                &format_args!("{}", self.lp_peri_timeout_addr().bits()),
-            )
+            .field("lp_peri_timeout_addr", &self.lp_peri_timeout_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BUS_TIMEOUT_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bus_timeout_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

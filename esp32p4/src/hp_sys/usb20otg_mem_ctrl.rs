@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("USB20OTG_MEM_CTRL")
             .field(
                 "reg_usb20_mem_clk_force_on",
-                &format_args!("{}", self.reg_usb20_mem_clk_force_on().bit()),
+                &self.reg_usb20_mem_clk_force_on(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USB20OTG_MEM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

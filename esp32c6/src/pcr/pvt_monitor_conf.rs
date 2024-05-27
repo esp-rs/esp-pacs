@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PVT_MONITOR_CONF")
-            .field(
-                "pvt_monitor_clk_en",
-                &format_args!("{}", self.pvt_monitor_clk_en().bit()),
-            )
-            .field(
-                "pvt_monitor_rst_en",
-                &format_args!("{}", self.pvt_monitor_rst_en().bit()),
-            )
-            .field(
-                "pvt_monitor_site1_clk_en",
-                &format_args!("{}", self.pvt_monitor_site1_clk_en().bit()),
-            )
-            .field(
-                "pvt_monitor_site2_clk_en",
-                &format_args!("{}", self.pvt_monitor_site2_clk_en().bit()),
-            )
-            .field(
-                "pvt_monitor_site3_clk_en",
-                &format_args!("{}", self.pvt_monitor_site3_clk_en().bit()),
-            )
+            .field("pvt_monitor_clk_en", &self.pvt_monitor_clk_en())
+            .field("pvt_monitor_rst_en", &self.pvt_monitor_rst_en())
+            .field("pvt_monitor_site1_clk_en", &self.pvt_monitor_site1_clk_en())
+            .field("pvt_monitor_site2_clk_en", &self.pvt_monitor_site2_clk_en())
+            .field("pvt_monitor_site3_clk_en", &self.pvt_monitor_site3_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PVT_MONITOR_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

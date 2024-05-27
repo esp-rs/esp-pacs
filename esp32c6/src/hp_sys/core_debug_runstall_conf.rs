@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_DEBUG_RUNSTALL_CONF")
             .field(
                 "core_debug_runstall_enable",
-                &format_args!("{}", self.core_debug_runstall_enable().bit()),
+                &self.core_debug_runstall_enable(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_DEBUG_RUNSTALL_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

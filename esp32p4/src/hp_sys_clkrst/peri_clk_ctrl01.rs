@@ -107,57 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL01")
-            .field(
-                "emac_rx_clk_div_num",
-                &format_args!("{}", self.emac_rx_clk_div_num().bits()),
-            )
-            .field(
-                "emac_tx_clk_src_sel",
-                &format_args!("{}", self.emac_tx_clk_src_sel().bit()),
-            )
-            .field(
-                "emac_tx_clk_en",
-                &format_args!("{}", self.emac_tx_clk_en().bit()),
-            )
-            .field(
-                "emac_tx_clk_div_num",
-                &format_args!("{}", self.emac_tx_clk_div_num().bits()),
-            )
-            .field(
-                "emac_ptp_ref_clk_src_sel",
-                &format_args!("{}", self.emac_ptp_ref_clk_src_sel().bit()),
-            )
-            .field(
-                "emac_ptp_ref_clk_en",
-                &format_args!("{}", self.emac_ptp_ref_clk_en().bit()),
-            )
-            .field(
-                "emac_unused0_clk_en",
-                &format_args!("{}", self.emac_unused0_clk_en().bit()),
-            )
-            .field(
-                "emac_unused1_clk_en",
-                &format_args!("{}", self.emac_unused1_clk_en().bit()),
-            )
-            .field(
-                "sdio_hs_mode",
-                &format_args!("{}", self.sdio_hs_mode().bit()),
-            )
-            .field(
-                "sdio_ls_clk_src_sel",
-                &format_args!("{}", self.sdio_ls_clk_src_sel().bit()),
-            )
-            .field(
-                "sdio_ls_clk_en",
-                &format_args!("{}", self.sdio_ls_clk_en().bit()),
-            )
+            .field("emac_rx_clk_div_num", &self.emac_rx_clk_div_num())
+            .field("emac_tx_clk_src_sel", &self.emac_tx_clk_src_sel())
+            .field("emac_tx_clk_en", &self.emac_tx_clk_en())
+            .field("emac_tx_clk_div_num", &self.emac_tx_clk_div_num())
+            .field("emac_ptp_ref_clk_src_sel", &self.emac_ptp_ref_clk_src_sel())
+            .field("emac_ptp_ref_clk_en", &self.emac_ptp_ref_clk_en())
+            .field("emac_unused0_clk_en", &self.emac_unused0_clk_en())
+            .field("emac_unused1_clk_en", &self.emac_unused1_clk_en())
+            .field("sdio_hs_mode", &self.sdio_hs_mode())
+            .field("sdio_ls_clk_src_sel", &self.sdio_ls_clk_src_sel())
+            .field("sdio_ls_clk_en", &self.sdio_ls_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL01_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

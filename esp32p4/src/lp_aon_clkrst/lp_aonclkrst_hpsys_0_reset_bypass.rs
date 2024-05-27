@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HPSYS_0_RESET_BYPASS")
             .field(
                 "lp_aonclkrst_hpsys_0_reset_bypass",
-                &format_args!("{}", self.lp_aonclkrst_hpsys_0_reset_bypass().bits()),
+                &self.lp_aonclkrst_hpsys_0_reset_bypass(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HPSYS_0_RESET_BYPASS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_CONF")
-            .field(
-                "adc_eof_num",
-                &format_args!("{}", self.adc_eof_num().bits()),
-            )
-            .field(
-                "adc_reset_fsm",
-                &format_args!("{}", self.adc_reset_fsm().bit()),
-            )
-            .field("adc_trans", &format_args!("{}", self.adc_trans().bit()))
+            .field("adc_eof_num", &self.adc_eof_num())
+            .field("adc_reset_fsm", &self.adc_reset_fsm())
+            .field("adc_trans", &self.adc_trans())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

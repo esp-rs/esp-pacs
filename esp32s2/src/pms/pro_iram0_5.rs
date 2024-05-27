@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_IRAM0_5")
-            .field(
-                "pro_iram0_ilg_st",
-                &format_args!("{}", self.pro_iram0_ilg_st().bits()),
-            )
+            .field("pro_iram0_ilg_st", &self.pro_iram0_ilg_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_IRAM0_5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "IBUS status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_iram0_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

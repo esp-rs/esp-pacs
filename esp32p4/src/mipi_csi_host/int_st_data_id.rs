@@ -118,77 +118,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_DATA_ID")
-            .field(
-                "st_err_id_vc0",
-                &format_args!("{}", self.st_err_id_vc0().bit()),
-            )
-            .field(
-                "st_err_id_vc1",
-                &format_args!("{}", self.st_err_id_vc1().bit()),
-            )
-            .field(
-                "st_err_id_vc2",
-                &format_args!("{}", self.st_err_id_vc2().bit()),
-            )
-            .field(
-                "st_err_id_vc3",
-                &format_args!("{}", self.st_err_id_vc3().bit()),
-            )
-            .field(
-                "st_err_id_vc4",
-                &format_args!("{}", self.st_err_id_vc4().bit()),
-            )
-            .field(
-                "st_err_id_vc5",
-                &format_args!("{}", self.st_err_id_vc5().bit()),
-            )
-            .field(
-                "st_err_id_vc6",
-                &format_args!("{}", self.st_err_id_vc6().bit()),
-            )
-            .field(
-                "st_err_id_vc7",
-                &format_args!("{}", self.st_err_id_vc7().bit()),
-            )
-            .field(
-                "st_err_id_vc8",
-                &format_args!("{}", self.st_err_id_vc8().bit()),
-            )
-            .field(
-                "st_err_id_vc9",
-                &format_args!("{}", self.st_err_id_vc9().bit()),
-            )
-            .field(
-                "st_err_id_vc10",
-                &format_args!("{}", self.st_err_id_vc10().bit()),
-            )
-            .field(
-                "st_err_id_vc11",
-                &format_args!("{}", self.st_err_id_vc11().bit()),
-            )
-            .field(
-                "st_err_id_vc12",
-                &format_args!("{}", self.st_err_id_vc12().bit()),
-            )
-            .field(
-                "st_err_id_vc13",
-                &format_args!("{}", self.st_err_id_vc13().bit()),
-            )
-            .field(
-                "st_err_id_vc14",
-                &format_args!("{}", self.st_err_id_vc14().bit()),
-            )
-            .field(
-                "st_err_id_vc15",
-                &format_args!("{}", self.st_err_id_vc15().bit()),
-            )
+            .field("st_err_id_vc0", &self.st_err_id_vc0())
+            .field("st_err_id_vc1", &self.st_err_id_vc1())
+            .field("st_err_id_vc2", &self.st_err_id_vc2())
+            .field("st_err_id_vc3", &self.st_err_id_vc3())
+            .field("st_err_id_vc4", &self.st_err_id_vc4())
+            .field("st_err_id_vc5", &self.st_err_id_vc5())
+            .field("st_err_id_vc6", &self.st_err_id_vc6())
+            .field("st_err_id_vc7", &self.st_err_id_vc7())
+            .field("st_err_id_vc8", &self.st_err_id_vc8())
+            .field("st_err_id_vc9", &self.st_err_id_vc9())
+            .field("st_err_id_vc10", &self.st_err_id_vc10())
+            .field("st_err_id_vc11", &self.st_err_id_vc11())
+            .field("st_err_id_vc12", &self.st_err_id_vc12())
+            .field("st_err_id_vc13", &self.st_err_id_vc13())
+            .field("st_err_id_vc14", &self.st_err_id_vc14())
+            .field("st_err_id_vc15", &self.st_err_id_vc15())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_DATA_ID_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_data_id::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

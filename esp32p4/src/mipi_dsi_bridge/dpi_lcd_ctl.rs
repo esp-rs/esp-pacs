@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_LCD_CTL")
-            .field("dpishutdn", &format_args!("{}", self.dpishutdn().bit()))
-            .field("dpicolorm", &format_args!("{}", self.dpicolorm().bit()))
-            .field(
-                "dpiupdatecfg",
-                &format_args!("{}", self.dpiupdatecfg().bit()),
-            )
+            .field("dpishutdn", &self.dpishutdn())
+            .field("dpicolorm", &self.dpicolorm())
+            .field("dpiupdatecfg", &self.dpiupdatecfg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_LCD_CTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

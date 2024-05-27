@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKDIV")
-            .field(
-                "clk_divider0",
-                &format_args!("{}", self.clk_divider0().bits()),
-            )
-            .field(
-                "clk_divider1",
-                &format_args!("{}", self.clk_divider1().bits()),
-            )
-            .field(
-                "clk_divider2",
-                &format_args!("{}", self.clk_divider2().bits()),
-            )
-            .field(
-                "clk_divider3",
-                &format_args!("{}", self.clk_divider3().bits()),
-            )
+            .field("clk_divider0", &self.clk_divider0())
+            .field("clk_divider1", &self.clk_divider1())
+            .field("clk_divider2", &self.clk_divider2())
+            .field("clk_divider3", &self.clk_divider3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLKDIV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

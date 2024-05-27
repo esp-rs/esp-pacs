@@ -27,16 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTMASKED")
-            .field("stop_mask", &format_args!("{}", self.stop_mask().bit()))
-            .field("rxpend_mask", &format_args!("{}", self.rxpend_mask().bit()))
-            .field("txsend_mask", &format_args!("{}", self.txsend_mask().bit()))
+            .field("stop_mask", &self.stop_mask())
+            .field("rxpend_mask", &self.rxpend_mask())
+            .field("txsend_mask", &self.txsend_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTMASKED_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intmasked::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

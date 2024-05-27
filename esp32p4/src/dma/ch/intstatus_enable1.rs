@@ -44,36 +44,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTSTATUS_ENABLE1")
             .field(
                 "ch1_enable_ecc_prot_chmem_correrr_intstat",
-                &format_args!("{}", self.ch1_enable_ecc_prot_chmem_correrr_intstat().bit()),
+                &self.ch1_enable_ecc_prot_chmem_correrr_intstat(),
             )
             .field(
                 "ch1_enable_ecc_prot_chmem_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_chmem_uncorrerr_intstat().bit()
-                ),
+                &self.ch1_enable_ecc_prot_chmem_uncorrerr_intstat(),
             )
             .field(
                 "ch1_enable_ecc_prot_uidmem_correrr_intstat",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_uidmem_correrr_intstat().bit()
-                ),
+                &self.ch1_enable_ecc_prot_uidmem_correrr_intstat(),
             )
             .field(
                 "ch1_enable_ecc_prot_uidmem_uncorrerr_intstat",
-                &format_args!(
-                    "{}",
-                    self.ch1_enable_ecc_prot_uidmem_uncorrerr_intstat().bit()
-                ),
+                &self.ch1_enable_ecc_prot_uidmem_uncorrerr_intstat(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTSTATUS_ENABLE1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intstatus_enable1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

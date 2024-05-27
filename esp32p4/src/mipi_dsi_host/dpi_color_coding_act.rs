@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_COLOR_CODING_ACT")
-            .field(
-                "dpi_color_coding_act",
-                &format_args!("{}", self.dpi_color_coding_act().bits()),
-            )
-            .field(
-                "loosely18_en_act",
-                &format_args!("{}", self.loosely18_en_act().bit()),
-            )
+            .field("dpi_color_coding_act", &self.dpi_color_coding_act())
+            .field("loosely18_en_act", &self.loosely18_en_act())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_COLOR_CODING_ACT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpi_color_coding_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

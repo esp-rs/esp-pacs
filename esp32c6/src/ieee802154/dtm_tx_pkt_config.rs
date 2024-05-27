@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTM_TX_PKT_CONFIG")
-            .field(
-                "dtm_tx_pkt_threshold",
-                &format_args!("{}", self.dtm_tx_pkt_threshold().bits()),
-            )
+            .field("dtm_tx_pkt_threshold", &self.dtm_tx_pkt_threshold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DTM_TX_PKT_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

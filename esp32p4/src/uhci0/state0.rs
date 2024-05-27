@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE0")
-            .field(
-                "rx_err_cause",
-                &format_args!("{}", self.rx_err_cause().bits()),
-            )
-            .field(
-                "decode_state",
-                &format_args!("{}", self.decode_state().bits()),
-            )
+            .field("rx_err_cause", &self.rx_err_cause())
+            .field("decode_state", &self.decode_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "UHCI Receive Status Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

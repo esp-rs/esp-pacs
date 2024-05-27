@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field("xpd_wait", &format_args!("{}", self.xpd_wait().bits()))
-            .field("xpd_force", &format_args!("{}", self.xpd_force().bits()))
-            .field("clk_inv", &format_args!("{}", self.clk_inv().bit()))
+            .field("xpd_wait", &self.xpd_wait())
+            .field("xpd_force", &self.xpd_force())
+            .field("clk_inv", &self.clk_inv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

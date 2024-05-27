@@ -8,12 +8,6 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMARXBASEADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 impl W {}
 #[doc = "This field contains the base address of the first descriptor in the Receive Descriptor list. The LSB Bits\\[1:0\\] are ignored and internally taken as all-zero by the DMA. Therefore these LSB bits are read-only.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmarxbaseaddr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmarxbaseaddr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMARXBASEADDR_SPEC;

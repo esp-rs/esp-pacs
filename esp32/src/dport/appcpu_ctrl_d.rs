@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APPCPU_CTRL_D")
-            .field(
-                "appcpu_boot_addr",
-                &format_args!("{}", self.appcpu_boot_addr().bits()),
-            )
+            .field("appcpu_boot_addr", &self.appcpu_boot_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_D_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

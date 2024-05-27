@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1CACHE_BUS0_ID")
-            .field(
-                "reg_l1_cache_bus0_id",
-                &format_args!("{}", self.reg_l1_cache_bus0_id().bits()),
-            )
+            .field("reg_l1_cache_bus0_id", &self.reg_l1_cache_bus0_id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1CACHE_BUS0_ID_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

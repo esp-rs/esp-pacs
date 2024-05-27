@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_MEM_RDN_ECO_LOW")
-            .field(
-                "reg_l2_mem_rdn_eco_low",
-                &format_args!("{}", self.reg_l2_mem_rdn_eco_low().bits()),
-            )
+            .field("reg_l2_mem_rdn_eco_low", &self.reg_l2_mem_rdn_eco_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_RDN_ECO_LOW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

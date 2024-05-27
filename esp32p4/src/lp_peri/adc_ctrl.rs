@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ADC_CTRL")
-            .field(
-                "sar2_clk_force_on",
-                &format_args!("{}", self.sar2_clk_force_on().bit()),
-            )
-            .field(
-                "sar1_clk_force_on",
-                &format_args!("{}", self.sar1_clk_force_on().bit()),
-            )
-            .field(
-                "lpadc_func_div_num",
-                &format_args!("{}", self.lpadc_func_div_num().bits()),
-            )
-            .field(
-                "lpadc_sar2_div_num",
-                &format_args!("{}", self.lpadc_sar2_div_num().bits()),
-            )
-            .field(
-                "lpadc_sar1_div_num",
-                &format_args!("{}", self.lpadc_sar1_div_num().bits()),
-            )
+            .field("sar2_clk_force_on", &self.sar2_clk_force_on())
+            .field("sar1_clk_force_on", &self.sar1_clk_force_on())
+            .field("lpadc_func_div_num", &self.lpadc_func_div_num())
+            .field("lpadc_sar2_div_num", &self.lpadc_sar2_div_num())
+            .field("lpadc_sar1_div_num", &self.lpadc_sar1_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ADC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

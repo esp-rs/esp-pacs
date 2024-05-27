@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_DATA_CFG")
-            .field("tx_bitlen", &format_args!("{}", self.tx_bitlen().bits()))
-            .field(
-                "tx_data_order_inv",
-                &format_args!("{}", self.tx_data_order_inv().bit()),
-            )
-            .field(
-                "tx_bus_wid_sel",
-                &format_args!("{}", self.tx_bus_wid_sel().bits()),
-            )
+            .field("tx_bitlen", &self.tx_bitlen())
+            .field("tx_data_order_inv", &self.tx_data_order_inv())
+            .field("tx_bus_wid_sel", &self.tx_bus_wid_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_DATA_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

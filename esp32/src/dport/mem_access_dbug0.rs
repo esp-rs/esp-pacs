@@ -69,43 +69,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_ACCESS_DBUG0")
-            .field(
-                "pro_rom_mpu_ad",
-                &format_args!("{}", self.pro_rom_mpu_ad().bit()),
-            )
-            .field("pro_rom_ia", &format_args!("{}", self.pro_rom_ia().bit()))
-            .field(
-                "app_rom_mpu_ad",
-                &format_args!("{}", self.app_rom_mpu_ad().bit()),
-            )
-            .field("app_rom_ia", &format_args!("{}", self.app_rom_ia().bit()))
-            .field(
-                "share_rom_mpu_ad",
-                &format_args!("{}", self.share_rom_mpu_ad().bits()),
-            )
-            .field(
-                "share_rom_ia",
-                &format_args!("{}", self.share_rom_ia().bits()),
-            )
-            .field(
-                "internal_sram_mmu_ad",
-                &format_args!("{}", self.internal_sram_mmu_ad().bits()),
-            )
-            .field(
-                "internal_sram_ia",
-                &format_args!("{}", self.internal_sram_ia().bits()),
-            )
+            .field("pro_rom_mpu_ad", &self.pro_rom_mpu_ad())
+            .field("pro_rom_ia", &self.pro_rom_ia())
+            .field("app_rom_mpu_ad", &self.app_rom_mpu_ad())
+            .field("app_rom_ia", &self.app_rom_ia())
+            .field("share_rom_mpu_ad", &self.share_rom_mpu_ad())
+            .field("share_rom_ia", &self.share_rom_ia())
+            .field("internal_sram_mmu_ad", &self.internal_sram_mmu_ad())
+            .field("internal_sram_ia", &self.internal_sram_ia())
             .field(
                 "internal_sram_mmu_multi_hit",
-                &format_args!("{}", self.internal_sram_mmu_multi_hit().bits()),
+                &self.internal_sram_mmu_multi_hit(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_ACCESS_DBUG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_access_dbug0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

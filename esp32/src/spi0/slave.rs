@@ -137,55 +137,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE")
-            .field(
-                "slv_rd_buf_done",
-                &format_args!("{}", self.slv_rd_buf_done().bit()),
-            )
-            .field(
-                "slv_wr_buf_done",
-                &format_args!("{}", self.slv_wr_buf_done().bit()),
-            )
-            .field(
-                "slv_rd_sta_done",
-                &format_args!("{}", self.slv_rd_sta_done().bit()),
-            )
-            .field(
-                "slv_wr_sta_done",
-                &format_args!("{}", self.slv_wr_sta_done().bit()),
-            )
-            .field("trans_done", &format_args!("{}", self.trans_done().bit()))
-            .field("int_en", &format_args!("{}", self.int_en().bits()))
-            .field("cs_i_mode", &format_args!("{}", self.cs_i_mode().bits()))
-            .field(
-                "slv_last_command",
-                &format_args!("{}", self.slv_last_command().bits()),
-            )
-            .field(
-                "slv_last_state",
-                &format_args!("{}", self.slv_last_state().bits()),
-            )
-            .field("trans_cnt", &format_args!("{}", self.trans_cnt().bits()))
-            .field(
-                "slv_cmd_define",
-                &format_args!("{}", self.slv_cmd_define().bit()),
-            )
-            .field(
-                "slv_wr_rd_sta_en",
-                &format_args!("{}", self.slv_wr_rd_sta_en().bit()),
-            )
-            .field(
-                "slv_wr_rd_buf_en",
-                &format_args!("{}", self.slv_wr_rd_buf_en().bit()),
-            )
-            .field("mode", &format_args!("{}", self.mode().bit()))
-            .field("sync_reset", &format_args!("{}", self.sync_reset().bit()))
+            .field("slv_rd_buf_done", &self.slv_rd_buf_done())
+            .field("slv_wr_buf_done", &self.slv_wr_buf_done())
+            .field("slv_rd_sta_done", &self.slv_rd_sta_done())
+            .field("slv_wr_sta_done", &self.slv_wr_sta_done())
+            .field("trans_done", &self.trans_done())
+            .field("int_en", &self.int_en())
+            .field("cs_i_mode", &self.cs_i_mode())
+            .field("slv_last_command", &self.slv_last_command())
+            .field("slv_last_state", &self.slv_last_state())
+            .field("trans_cnt", &self.trans_cnt())
+            .field("slv_cmd_define", &self.slv_cmd_define())
+            .field("slv_wr_rd_sta_en", &self.slv_wr_rd_sta_en())
+            .field("slv_wr_rd_buf_en", &self.slv_wr_rd_buf_en())
+            .field("mode", &self.mode())
+            .field("sync_reset", &self.sync_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

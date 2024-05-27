@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_SW_STALL")
-            .field(
-                "hpcore1_sw_stall_code",
-                &format_args!("{}", self.hpcore1_sw_stall_code().bits()),
-            )
-            .field(
-                "hpcore0_sw_stall_code",
-                &format_args!("{}", self.hpcore0_sw_stall_code().bits()),
-            )
+            .field("hpcore1_sw_stall_code", &self.hpcore1_sw_stall_code())
+            .field("hpcore0_sw_stall_code", &self.hpcore0_sw_stall_code())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_SW_STALL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -21,18 +21,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP")
             .field(
                 "core_1_iram0_pms_monitor_violate_intr_map",
-                &format_args!(
-                    "{}",
-                    self.core_1_iram0_pms_monitor_violate_intr_map().bits()
-                ),
+                &self.core_1_iram0_pms_monitor_violate_intr_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

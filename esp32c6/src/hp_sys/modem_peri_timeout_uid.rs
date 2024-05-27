@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_PERI_TIMEOUT_UID")
-            .field(
-                "modem_peri_timeout_uid",
-                &format_args!("{}", self.modem_peri_timeout_uid().bits()),
-            )
+            .field("modem_peri_timeout_uid", &self.modem_peri_timeout_uid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODEM_PERI_TIMEOUT_UID_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MODEM_PERI_TIMEOUT_UID register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`modem_peri_timeout_uid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

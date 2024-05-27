@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("THRES0_CTRL")
-            .field(
-                "thres0_channel",
-                &format_args!("{}", self.thres0_channel().bits()),
-            )
-            .field(
-                "thres0_high",
-                &format_args!("{}", self.thres0_high().bits()),
-            )
-            .field("thres0_low", &format_args!("{}", self.thres0_low().bits()))
+            .field("thres0_channel", &self.thres0_channel())
+            .field("thres0_high", &self.thres0_high())
+            .field("thres0_low", &self.thres0_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<THRES0_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field(
-                "clk_wifipwr_en",
-                &format_args!("{}", self.clk_wifipwr_en().bit()),
-            )
-            .field("clk_coex_en", &format_args!("{}", self.clk_coex_en().bit()))
-            .field(
-                "clk_i2c_mst_en",
-                &format_args!("{}", self.clk_i2c_mst_en().bit()),
-            )
-            .field(
-                "clk_lp_timer_en",
-                &format_args!("{}", self.clk_lp_timer_en().bit()),
-            )
+            .field("clk_wifipwr_en", &self.clk_wifipwr_en())
+            .field("clk_coex_en", &self.clk_coex_en())
+            .field("clk_i2c_mst_en", &self.clk_i2c_mst_en())
+            .field("clk_lp_timer_en", &self.clk_lp_timer_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

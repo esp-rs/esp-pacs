@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_DBUS1_ACS_MISS_CNT")
-            .field(
-                "l1_dbus1_miss_cnt",
-                &format_args!("{}", self.l1_dbus1_miss_cnt().bits()),
-            )
+            .field("l1_dbus1_miss_cnt", &self.l1_dbus1_miss_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_DBUS1_ACS_MISS_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-DCache bus1 Miss-Access Counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dbus1_acs_miss_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -28,19 +28,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_CLK_CTRL")
             .field(
                 "dsi_bridge_mem_clk_force_on",
-                &format_args!("{}", self.dsi_bridge_mem_clk_force_on().bit()),
+                &self.dsi_bridge_mem_clk_force_on(),
             )
-            .field(
-                "dsi_mem_clk_force_on",
-                &format_args!("{}", self.dsi_mem_clk_force_on().bit()),
-            )
+            .field("dsi_mem_clk_force_on", &self.dsi_mem_clk_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CLK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

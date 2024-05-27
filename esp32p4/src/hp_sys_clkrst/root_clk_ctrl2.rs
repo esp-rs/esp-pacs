@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROOT_CLK_CTRL2")
-            .field(
-                "sys_clk_div_numerator",
-                &format_args!("{}", self.sys_clk_div_numerator().bits()),
-            )
-            .field(
-                "sys_clk_div_denominator",
-                &format_args!("{}", self.sys_clk_div_denominator().bits()),
-            )
-            .field(
-                "apb_clk_div_num",
-                &format_args!("{}", self.apb_clk_div_num().bits()),
-            )
-            .field(
-                "apb_clk_div_numerator",
-                &format_args!("{}", self.apb_clk_div_numerator().bits()),
-            )
+            .field("sys_clk_div_numerator", &self.sys_clk_div_numerator())
+            .field("sys_clk_div_denominator", &self.sys_clk_div_denominator())
+            .field("apb_clk_div_num", &self.apb_clk_div_num())
+            .field("apb_clk_div_numerator", &self.apb_clk_div_numerator())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ROOT_CLK_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

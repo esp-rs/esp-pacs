@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKGATE_FORCE_ON")
-            .field(
-                "rom_clkgate_force_on",
-                &format_args!("{}", self.rom_clkgate_force_on().bits()),
-            )
-            .field(
-                "sram_clkgate_force_on",
-                &format_args!("{}", self.sram_clkgate_force_on().bits()),
-            )
+            .field("rom_clkgate_force_on", &self.rom_clkgate_force_on())
+            .field("sram_clkgate_force_on", &self.sram_clkgate_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLKGATE_FORCE_ON_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

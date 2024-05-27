@@ -37,25 +37,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UPDATE")
-            .field(
-                "main_timer_xtal_off",
-                &format_args!("{}", self.main_timer_xtal_off().bit()),
-            )
-            .field(
-                "main_timer_sys_stall",
-                &format_args!("{}", self.main_timer_sys_stall().bit()),
-            )
-            .field(
-                "main_timer_sys_rst",
-                &format_args!("{}", self.main_timer_sys_rst().bit()),
-            )
+            .field("main_timer_xtal_off", &self.main_timer_xtal_off())
+            .field("main_timer_sys_stall", &self.main_timer_sys_stall())
+            .field("main_timer_sys_rst", &self.main_timer_sys_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UPDATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

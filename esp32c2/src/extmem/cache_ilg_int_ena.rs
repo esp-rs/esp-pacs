@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_ILG_INT_ENA")
-            .field(
-                "icache_sync_op_fault",
-                &format_args!("{}", self.icache_sync_op_fault().bit()),
-            )
-            .field(
-                "icache_preload_op_fault",
-                &format_args!("{}", self.icache_preload_op_fault().bit()),
-            )
-            .field(
-                "mmu_entry_fault",
-                &format_args!("{}", self.mmu_entry_fault().bit()),
-            )
-            .field(
-                "ibus_cnt_ovf",
-                &format_args!("{}", self.ibus_cnt_ovf().bit()),
-            )
-            .field(
-                "dbus_cnt_ovf",
-                &format_args!("{}", self.dbus_cnt_ovf().bit()),
-            )
+            .field("icache_sync_op_fault", &self.icache_sync_op_fault())
+            .field("icache_preload_op_fault", &self.icache_preload_op_fault())
+            .field("mmu_entry_fault", &self.mmu_entry_fault())
+            .field("ibus_cnt_ovf", &self.ibus_cnt_ovf())
+            .field("dbus_cnt_ovf", &self.dbus_cnt_ovf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_ILG_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

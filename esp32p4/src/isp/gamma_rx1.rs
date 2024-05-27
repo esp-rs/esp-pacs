@@ -80,45 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAMMA_RX1")
-            .field(
-                "gamma_r_x07",
-                &format_args!("{}", self.gamma_r_x07().bits()),
-            )
-            .field(
-                "gamma_r_x06",
-                &format_args!("{}", self.gamma_r_x06().bits()),
-            )
-            .field(
-                "gamma_r_x05",
-                &format_args!("{}", self.gamma_r_x05().bits()),
-            )
-            .field(
-                "gamma_r_x04",
-                &format_args!("{}", self.gamma_r_x04().bits()),
-            )
-            .field(
-                "gamma_r_x03",
-                &format_args!("{}", self.gamma_r_x03().bits()),
-            )
-            .field(
-                "gamma_r_x02",
-                &format_args!("{}", self.gamma_r_x02().bits()),
-            )
-            .field(
-                "gamma_r_x01",
-                &format_args!("{}", self.gamma_r_x01().bits()),
-            )
-            .field(
-                "gamma_r_x00",
-                &format_args!("{}", self.gamma_r_x00().bits()),
-            )
+            .field("gamma_r_x07", &self.gamma_r_x07())
+            .field("gamma_r_x06", &self.gamma_r_x06())
+            .field("gamma_r_x05", &self.gamma_r_x05())
+            .field("gamma_r_x04", &self.gamma_r_x04())
+            .field("gamma_r_x03", &self.gamma_r_x03())
+            .field("gamma_r_x02", &self.gamma_r_x02())
+            .field("gamma_r_x01", &self.gamma_r_x01())
+            .field("gamma_r_x00", &self.gamma_r_x00())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GAMMA_RX1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

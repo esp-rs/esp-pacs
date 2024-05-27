@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_HBP_TIME_ACT")
-            .field(
-                "vid_hbp_time_act",
-                &format_args!("{}", self.vid_hbp_time_act().bits()),
-            )
+            .field("vid_hbp_time_act", &self.vid_hbp_time_act())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VID_HBP_TIME_ACT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vid_hbp_time_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

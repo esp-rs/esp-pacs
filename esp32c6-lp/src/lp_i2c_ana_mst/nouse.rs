@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("NOUSE")
             .field(
                 "lp_i2c_ana_mast_i2c_mst_nouse",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c_mst_nouse().bits()),
+                &self.lp_i2c_ana_mast_i2c_mst_nouse(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<NOUSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

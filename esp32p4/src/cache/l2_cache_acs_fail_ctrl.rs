@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_ACS_FAIL_CTRL")
             .field(
                 "l2_cache_acs_fail_check_mode",
-                &format_args!("{}", self.l2_cache_acs_fail_check_mode().bit()),
+                &self.l2_cache_acs_fail_check_mode(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_FAIL_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

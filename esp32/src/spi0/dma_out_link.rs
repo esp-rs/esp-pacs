@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_OUT_LINK")
-            .field(
-                "outlink_addr",
-                &format_args!("{}", self.outlink_addr().bits()),
-            )
-            .field(
-                "outlink_stop",
-                &format_args!("{}", self.outlink_stop().bit()),
-            )
-            .field(
-                "outlink_start",
-                &format_args!("{}", self.outlink_start().bit()),
-            )
-            .field(
-                "outlink_restart",
-                &format_args!("{}", self.outlink_restart().bit()),
-            )
+            .field("outlink_addr", &self.outlink_addr())
+            .field("outlink_stop", &self.outlink_stop())
+            .field("outlink_start", &self.outlink_start())
+            .field("outlink_restart", &self.outlink_restart())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_OUT_LINK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

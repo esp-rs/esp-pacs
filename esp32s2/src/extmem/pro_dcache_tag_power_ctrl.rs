@@ -37,23 +37,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_TAG_POWER_CTRL")
             .field(
                 "pro_dcache_tag_mem_force_on",
-                &format_args!("{}", self.pro_dcache_tag_mem_force_on().bit()),
+                &self.pro_dcache_tag_mem_force_on(),
             )
             .field(
                 "pro_dcache_tag_mem_force_pd",
-                &format_args!("{}", self.pro_dcache_tag_mem_force_pd().bit()),
+                &self.pro_dcache_tag_mem_force_pd(),
             )
             .field(
                 "pro_dcache_tag_mem_force_pu",
-                &format_args!("{}", self.pro_dcache_tag_mem_force_pu().bit()),
+                &self.pro_dcache_tag_mem_force_pu(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_TAG_POWER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

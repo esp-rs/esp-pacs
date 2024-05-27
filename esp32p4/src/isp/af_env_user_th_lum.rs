@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AF_ENV_USER_TH_LUM")
             .field(
                 "af_env_user_threshold_lum",
-                &format_args!("{}", self.af_env_user_threshold_lum().bits()),
+                &self.af_env_user_threshold_lum(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_ENV_USER_TH_LUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR1_PATT_TAB4")
-            .field(
-                "sar1_patt_tab4",
-                &format_args!("{}", self.sar1_patt_tab4().bits()),
-            )
+            .field("sar1_patt_tab4", &self.sar1_patt_tab4())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR1_PATT_TAB4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

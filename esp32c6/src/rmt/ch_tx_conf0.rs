@@ -108,35 +108,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_TX_CONF0")
-            .field(
-                "tx_conti_mode",
-                &format_args!("{}", self.tx_conti_mode().bit()),
-            )
-            .field(
-                "mem_tx_wrap_en",
-                &format_args!("{}", self.mem_tx_wrap_en().bit()),
-            )
-            .field("idle_out_lv", &format_args!("{}", self.idle_out_lv().bit()))
-            .field("idle_out_en", &format_args!("{}", self.idle_out_en().bit()))
-            .field("tx_stop", &format_args!("{}", self.tx_stop().bit()))
-            .field("div_cnt", &format_args!("{}", self.div_cnt().bits()))
-            .field("mem_size", &format_args!("{}", self.mem_size().bits()))
-            .field(
-                "carrier_eff_en",
-                &format_args!("{}", self.carrier_eff_en().bit()),
-            )
-            .field("carrier_en", &format_args!("{}", self.carrier_en().bit()))
-            .field(
-                "carrier_out_lv",
-                &format_args!("{}", self.carrier_out_lv().bit()),
-            )
+            .field("tx_conti_mode", &self.tx_conti_mode())
+            .field("mem_tx_wrap_en", &self.mem_tx_wrap_en())
+            .field("idle_out_lv", &self.idle_out_lv())
+            .field("idle_out_en", &self.idle_out_en())
+            .field("tx_stop", &self.tx_stop())
+            .field("div_cnt", &self.div_cnt())
+            .field("mem_size", &self.mem_size())
+            .field("carrier_eff_en", &self.carrier_eff_en())
+            .field("carrier_en", &self.carrier_en())
+            .field("carrier_out_lv", &self.carrier_out_lv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH_TX_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -69,41 +69,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE0_AUTOLOAD_CTRL")
-            .field(
-                "l1_icache0_autoload_ena",
-                &format_args!("{}", self.l1_icache0_autoload_ena().bit()),
-            )
-            .field(
-                "l1_icache0_autoload_done",
-                &format_args!("{}", self.l1_icache0_autoload_done().bit()),
-            )
+            .field("l1_icache0_autoload_ena", &self.l1_icache0_autoload_ena())
+            .field("l1_icache0_autoload_done", &self.l1_icache0_autoload_done())
             .field(
                 "l1_icache0_autoload_order",
-                &format_args!("{}", self.l1_icache0_autoload_order().bit()),
+                &self.l1_icache0_autoload_order(),
             )
             .field(
                 "l1_icache0_autoload_trigger_mode",
-                &format_args!("{}", self.l1_icache0_autoload_trigger_mode().bits()),
+                &self.l1_icache0_autoload_trigger_mode(),
             )
             .field(
                 "l1_icache0_autoload_sct0_ena",
-                &format_args!("{}", self.l1_icache0_autoload_sct0_ena().bit()),
+                &self.l1_icache0_autoload_sct0_ena(),
             )
             .field(
                 "l1_icache0_autoload_sct1_ena",
-                &format_args!("{}", self.l1_icache0_autoload_sct1_ena().bit()),
+                &self.l1_icache0_autoload_sct1_ena(),
             )
-            .field(
-                "l1_icache0_autoload_rgid",
-                &format_args!("{}", self.l1_icache0_autoload_rgid().bits()),
-            )
+            .field("l1_icache0_autoload_rgid", &self.l1_icache0_autoload_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE0_AUTOLOAD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

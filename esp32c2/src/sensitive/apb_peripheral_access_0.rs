@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB_PERIPHERAL_ACCESS_0")
             .field(
                 "apb_peripheral_access_lock",
-                &format_args!("{}", self.apb_peripheral_access_lock().bit()),
+                &self.apb_peripheral_access_lock(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_ACCESS_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

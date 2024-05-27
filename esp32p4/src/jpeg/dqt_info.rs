@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DQT_INFO")
-            .field(
-                "t0_dqt_info",
-                &format_args!("{}", self.t0_dqt_info().bits()),
-            )
-            .field(
-                "t1_dqt_info",
-                &format_args!("{}", self.t1_dqt_info().bits()),
-            )
-            .field(
-                "t2_dqt_info",
-                &format_args!("{}", self.t2_dqt_info().bits()),
-            )
-            .field(
-                "t3_dqt_info",
-                &format_args!("{}", self.t3_dqt_info().bits()),
-            )
+            .field("t0_dqt_info", &self.t0_dqt_info())
+            .field("t1_dqt_info", &self.t1_dqt_info())
+            .field("t2_dqt_info", &self.t2_dqt_info())
+            .field("t3_dqt_info", &self.t3_dqt_info())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DQT_INFO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

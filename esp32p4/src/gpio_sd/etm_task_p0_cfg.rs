@@ -86,21 +86,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_TASK_P0_CFG")
-            .field("gpio0_en", &format_args!("{}", self.gpio0_en().bit()))
-            .field("gpio1_en", &format_args!("{}", self.gpio1_en().bit()))
-            .field("gpio2_en", &format_args!("{}", self.gpio2_en().bit()))
-            .field("gpio3_en", &format_args!("{}", self.gpio3_en().bit()))
-            .field("gpio0_sel", &format_args!("{}", self.gpio0_sel().bits()))
-            .field("gpio1_sel", &format_args!("{}", self.gpio1_sel().bits()))
-            .field("gpio2_sel", &format_args!("{}", self.gpio2_sel().bits()))
-            .field("gpio3_sel", &format_args!("{}", self.gpio3_sel().bits()))
+            .field("gpio0_en", &self.gpio0_en())
+            .field("gpio1_en", &self.gpio1_en())
+            .field("gpio2_en", &self.gpio2_en())
+            .field("gpio3_en", &self.gpio3_en())
+            .field("gpio0_sel", &self.gpio0_sel())
+            .field("gpio1_sel", &self.gpio1_sel())
+            .field("gpio2_sel", &self.gpio2_sel())
+            .field("gpio3_sel", &self.gpio3_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ETM_TASK_P0_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

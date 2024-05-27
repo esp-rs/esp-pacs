@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_O_HOLD_CTRL0")
-            .field(
-                "reg_gpio_0_hold_low",
-                &format_args!("{}", self.reg_gpio_0_hold_low().bits()),
-            )
+            .field("reg_gpio_0_hold_low", &self.reg_gpio_0_hold_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GPIO_O_HOLD_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

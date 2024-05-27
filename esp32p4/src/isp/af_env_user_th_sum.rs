@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AF_ENV_USER_TH_SUM")
             .field(
                 "af_env_user_threshold_sum",
-                &format_args!("{}", self.af_env_user_threshold_sum().bits()),
+                &self.af_env_user_threshold_sum(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_ENV_USER_TH_SUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

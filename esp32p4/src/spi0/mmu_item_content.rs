@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MMU_ITEM_CONTENT")
-            .field(
-                "spi_mmu_item_content",
-                &format_args!("{}", self.spi_mmu_item_content().bits()),
-            )
+            .field("spi_mmu_item_content", &self.spi_mmu_item_content())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MMU_ITEM_CONTENT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

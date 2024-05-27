@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_DB_BYPASS")
-            .field(
-                "a_bypass_db_filter",
-                &format_args!("{}", self.a_bypass_db_filter().bit()),
-            )
+            .field("a_bypass_db_filter", &self.a_bypass_db_filter())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_DB_BYPASS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

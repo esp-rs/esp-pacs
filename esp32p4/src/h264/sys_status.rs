@@ -27,19 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYS_STATUS")
-            .field("frame_num", &format_args!("{}", self.frame_num().bits()))
-            .field(
-                "dual_stream_sel",
-                &format_args!("{}", self.dual_stream_sel().bit()),
-            )
-            .field("intra_flag", &format_args!("{}", self.intra_flag().bit()))
+            .field("frame_num", &self.frame_num())
+            .field("dual_stream_sel", &self.dual_stream_sel())
+            .field("intra_flag", &self.intra_flag())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYS_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "System status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sys_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIEPTXF")
-            .field(
-                "inep1txfstaddr",
-                &format_args!("{}", self.inep1txfstaddr().bits()),
-            )
-            .field(
-                "inep1txfdep",
-                &format_args!("{}", self.inep1txfdep().bits()),
-            )
+            .field("inep1txfstaddr", &self.inep1txfstaddr())
+            .field("inep1txfdep", &self.inep1txfdep())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIEPTXF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

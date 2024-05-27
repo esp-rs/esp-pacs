@@ -172,83 +172,44 @@ impl core::fmt::Debug for R {
         f.debug_struct("CLK_FORCE_ON_CTRL0")
             .field(
                 "cpuicm_gated_clk_force_on",
-                &format_args!("{}", self.cpuicm_gated_clk_force_on().bit()),
+                &self.cpuicm_gated_clk_force_on(),
             )
-            .field(
-                "tcm_cpu_clk_force_on",
-                &format_args!("{}", self.tcm_cpu_clk_force_on().bit()),
-            )
-            .field(
-                "busmon_cpu_clk_force_on",
-                &format_args!("{}", self.busmon_cpu_clk_force_on().bit()),
-            )
-            .field(
-                "l1cache_cpu_clk_force_on",
-                &format_args!("{}", self.l1cache_cpu_clk_force_on().bit()),
-            )
+            .field("tcm_cpu_clk_force_on", &self.tcm_cpu_clk_force_on())
+            .field("busmon_cpu_clk_force_on", &self.busmon_cpu_clk_force_on())
+            .field("l1cache_cpu_clk_force_on", &self.l1cache_cpu_clk_force_on())
             .field(
                 "l1cache_d_cpu_clk_force_on",
-                &format_args!("{}", self.l1cache_d_cpu_clk_force_on().bit()),
+                &self.l1cache_d_cpu_clk_force_on(),
             )
             .field(
                 "l1cache_i0_cpu_clk_force_on",
-                &format_args!("{}", self.l1cache_i0_cpu_clk_force_on().bit()),
+                &self.l1cache_i0_cpu_clk_force_on(),
             )
             .field(
                 "l1cache_i1_cpu_clk_force_on",
-                &format_args!("{}", self.l1cache_i1_cpu_clk_force_on().bit()),
+                &self.l1cache_i1_cpu_clk_force_on(),
             )
-            .field(
-                "trace_cpu_clk_force_on",
-                &format_args!("{}", self.trace_cpu_clk_force_on().bit()),
-            )
-            .field(
-                "trace_sys_clk_force_on",
-                &format_args!("{}", self.trace_sys_clk_force_on().bit()),
-            )
-            .field(
-                "l1cache_mem_clk_force_on",
-                &format_args!("{}", self.l1cache_mem_clk_force_on().bit()),
-            )
+            .field("trace_cpu_clk_force_on", &self.trace_cpu_clk_force_on())
+            .field("trace_sys_clk_force_on", &self.trace_sys_clk_force_on())
+            .field("l1cache_mem_clk_force_on", &self.l1cache_mem_clk_force_on())
             .field(
                 "l1cache_d_mem_clk_force_on",
-                &format_args!("{}", self.l1cache_d_mem_clk_force_on().bit()),
+                &self.l1cache_d_mem_clk_force_on(),
             )
             .field(
                 "l1cache_i0_mem_clk_force_on",
-                &format_args!("{}", self.l1cache_i0_mem_clk_force_on().bit()),
+                &self.l1cache_i0_mem_clk_force_on(),
             )
             .field(
                 "l1cache_i1_mem_clk_force_on",
-                &format_args!("{}", self.l1cache_i1_mem_clk_force_on().bit()),
+                &self.l1cache_i1_mem_clk_force_on(),
             )
-            .field(
-                "l2cache_mem_clk_force_on",
-                &format_args!("{}", self.l2cache_mem_clk_force_on().bit()),
-            )
-            .field(
-                "l2mem_mem_clk_force_on",
-                &format_args!("{}", self.l2mem_mem_clk_force_on().bit()),
-            )
-            .field(
-                "sar1_clk_force_on",
-                &format_args!("{}", self.sar1_clk_force_on().bit()),
-            )
-            .field(
-                "sar2_clk_force_on",
-                &format_args!("{}", self.sar2_clk_force_on().bit()),
-            )
-            .field(
-                "gmac_tx_clk_force_on",
-                &format_args!("{}", self.gmac_tx_clk_force_on().bit()),
-            )
+            .field("l2cache_mem_clk_force_on", &self.l2cache_mem_clk_force_on())
+            .field("l2mem_mem_clk_force_on", &self.l2mem_mem_clk_force_on())
+            .field("sar1_clk_force_on", &self.sar1_clk_force_on())
+            .field("sar2_clk_force_on", &self.sar2_clk_force_on())
+            .field("gmac_tx_clk_force_on", &self.gmac_tx_clk_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_FORCE_ON_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

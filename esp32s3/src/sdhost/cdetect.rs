@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CDETECT")
-            .field(
-                "card_detect_n",
-                &format_args!("{}", self.card_detect_n().bits()),
-            )
+            .field("card_detect_n", &self.card_detect_n())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CDETECT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Card detect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdetect::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

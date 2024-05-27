@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_CTRL1")
-            .field(
-                "lcd_vb_front",
-                &format_args!("{}", self.lcd_vb_front().bits()),
-            )
-            .field(
-                "lcd_ha_width",
-                &format_args!("{}", self.lcd_ha_width().bits()),
-            )
-            .field(
-                "lcd_ht_width",
-                &format_args!("{}", self.lcd_ht_width().bits()),
-            )
+            .field("lcd_vb_front", &self.lcd_vb_front())
+            .field("lcd_ha_width", &self.lcd_ha_width())
+            .field("lcd_ht_width", &self.lcd_ht_width())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

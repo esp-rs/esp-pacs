@@ -44,29 +44,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_TIMING_CALI")
-            .field(
-                "spi_smem_timing_clk_ena",
-                &format_args!("{}", self.spi_smem_timing_clk_ena().bit()),
-            )
-            .field(
-                "spi_smem_timing_cali",
-                &format_args!("{}", self.spi_smem_timing_cali().bit()),
-            )
+            .field("spi_smem_timing_clk_ena", &self.spi_smem_timing_clk_ena())
+            .field("spi_smem_timing_cali", &self.spi_smem_timing_cali())
             .field(
                 "spi_smem_extra_dummy_cyclelen",
-                &format_args!("{}", self.spi_smem_extra_dummy_cyclelen().bits()),
+                &self.spi_smem_extra_dummy_cyclelen(),
             )
-            .field(
-                "spi_smem_dll_timing_cali",
-                &format_args!("{}", self.spi_smem_dll_timing_cali().bit()),
-            )
+            .field("spi_smem_dll_timing_cali", &self.spi_smem_dll_timing_cali())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_TIMING_CALI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

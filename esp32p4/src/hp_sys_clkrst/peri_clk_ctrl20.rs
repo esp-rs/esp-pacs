@@ -125,65 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL20")
-            .field(
-                "mcpwm0_clk_src_sel",
-                &format_args!("{}", self.mcpwm0_clk_src_sel().bits()),
-            )
-            .field(
-                "mcpwm0_clk_en",
-                &format_args!("{}", self.mcpwm0_clk_en().bit()),
-            )
-            .field(
-                "mcpwm0_clk_div_num",
-                &format_args!("{}", self.mcpwm0_clk_div_num().bits()),
-            )
-            .field(
-                "mcpwm1_clk_src_sel",
-                &format_args!("{}", self.mcpwm1_clk_src_sel().bits()),
-            )
-            .field(
-                "mcpwm1_clk_en",
-                &format_args!("{}", self.mcpwm1_clk_en().bit()),
-            )
-            .field(
-                "mcpwm1_clk_div_num",
-                &format_args!("{}", self.mcpwm1_clk_div_num().bits()),
-            )
-            .field(
-                "timergrp0_t0_src_sel",
-                &format_args!("{}", self.timergrp0_t0_src_sel().bits()),
-            )
-            .field(
-                "timergrp0_t0_clk_en",
-                &format_args!("{}", self.timergrp0_t0_clk_en().bit()),
-            )
-            .field(
-                "timergrp0_t1_src_sel",
-                &format_args!("{}", self.timergrp0_t1_src_sel().bits()),
-            )
-            .field(
-                "timergrp0_t1_clk_en",
-                &format_args!("{}", self.timergrp0_t1_clk_en().bit()),
-            )
-            .field(
-                "timergrp0_wdt_src_sel",
-                &format_args!("{}", self.timergrp0_wdt_src_sel().bits()),
-            )
-            .field(
-                "timergrp0_wdt_clk_en",
-                &format_args!("{}", self.timergrp0_wdt_clk_en().bit()),
-            )
-            .field(
-                "timergrp0_tgrt_clk_en",
-                &format_args!("{}", self.timergrp0_tgrt_clk_en().bit()),
-            )
+            .field("mcpwm0_clk_src_sel", &self.mcpwm0_clk_src_sel())
+            .field("mcpwm0_clk_en", &self.mcpwm0_clk_en())
+            .field("mcpwm0_clk_div_num", &self.mcpwm0_clk_div_num())
+            .field("mcpwm1_clk_src_sel", &self.mcpwm1_clk_src_sel())
+            .field("mcpwm1_clk_en", &self.mcpwm1_clk_en())
+            .field("mcpwm1_clk_div_num", &self.mcpwm1_clk_div_num())
+            .field("timergrp0_t0_src_sel", &self.timergrp0_t0_src_sel())
+            .field("timergrp0_t0_clk_en", &self.timergrp0_t0_clk_en())
+            .field("timergrp0_t1_src_sel", &self.timergrp0_t1_src_sel())
+            .field("timergrp0_t1_clk_en", &self.timergrp0_t1_clk_en())
+            .field("timergrp0_wdt_src_sel", &self.timergrp0_wdt_src_sel())
+            .field("timergrp0_wdt_clk_en", &self.timergrp0_wdt_clk_en())
+            .field("timergrp0_tgrt_clk_en", &self.timergrp0_tgrt_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL20_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

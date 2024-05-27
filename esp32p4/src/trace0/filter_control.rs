@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_CONTROL")
-            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
-            .field("match_comp", &format_args!("{}", self.match_comp().bit()))
-            .field(
-                "match_privilege",
-                &format_args!("{}", self.match_privilege().bit()),
-            )
-            .field(
-                "match_ecause",
-                &format_args!("{}", self.match_ecause().bit()),
-            )
-            .field(
-                "match_interrupt",
-                &format_args!("{}", self.match_interrupt().bit()),
-            )
+            .field("filter_en", &self.filter_en())
+            .field("match_comp", &self.match_comp())
+            .field("match_privilege", &self.match_privilege())
+            .field("match_ecause", &self.match_ecause())
+            .field("match_interrupt", &self.match_interrupt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FILTER_CONTROL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

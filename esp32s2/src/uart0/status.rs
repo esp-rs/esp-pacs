@@ -62,21 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
-            .field("dsrn", &format_args!("{}", self.dsrn().bit()))
-            .field("ctsn", &format_args!("{}", self.ctsn().bit()))
-            .field("rxd", &format_args!("{}", self.rxd().bit()))
-            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
-            .field("dtrn", &format_args!("{}", self.dtrn().bit()))
-            .field("rtsn", &format_args!("{}", self.rtsn().bit()))
-            .field("txd", &format_args!("{}", self.txd().bit()))
+            .field("rxfifo_cnt", &self.rxfifo_cnt())
+            .field("dsrn", &self.dsrn())
+            .field("ctsn", &self.ctsn())
+            .field("rxd", &self.rxd())
+            .field("txfifo_cnt", &self.txfifo_cnt())
+            .field("dtrn", &self.dtrn())
+            .field("rtsn", &self.rtsn())
+            .field("txd", &self.txd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "UART status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

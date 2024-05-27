@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_REJECT_CONF")
-            .field(
-                "sleep_reject_ena",
-                &format_args!("{}", self.sleep_reject_ena().bits()),
-            )
-            .field(
-                "light_slp_reject_en",
-                &format_args!("{}", self.light_slp_reject_en().bit()),
-            )
-            .field(
-                "deep_slp_reject_en",
-                &format_args!("{}", self.deep_slp_reject_en().bit()),
-            )
+            .field("sleep_reject_ena", &self.sleep_reject_ena())
+            .field("light_slp_reject_en", &self.light_slp_reject_en())
+            .field("deep_slp_reject_en", &self.deep_slp_reject_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLP_REJECT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

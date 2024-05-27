@@ -44,29 +44,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_LP_DIG_POWER")
-            .field(
-                "hp_sleep_bod_source_sel",
-                &format_args!("{}", self.hp_sleep_bod_source_sel().bit()),
-            )
-            .field(
-                "hp_sleep_vddbat_mode",
-                &format_args!("{}", self.hp_sleep_vddbat_mode().bits()),
-            )
-            .field(
-                "hp_sleep_lp_mem_dslp",
-                &format_args!("{}", self.hp_sleep_lp_mem_dslp().bit()),
-            )
+            .field("hp_sleep_bod_source_sel", &self.hp_sleep_bod_source_sel())
+            .field("hp_sleep_vddbat_mode", &self.hp_sleep_vddbat_mode())
+            .field("hp_sleep_lp_mem_dslp", &self.hp_sleep_lp_mem_dslp())
             .field(
                 "hp_sleep_pd_lp_peri_pd_en",
-                &format_args!("{}", self.hp_sleep_pd_lp_peri_pd_en().bit()),
+                &self.hp_sleep_pd_lp_peri_pd_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

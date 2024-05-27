@@ -116,61 +116,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_PCM2PDM_CONF")
-            .field(
-                "tx_pdm_hp_bypass",
-                &format_args!("{}", self.tx_pdm_hp_bypass().bit()),
-            )
-            .field(
-                "tx_pdm_sinc_osr2",
-                &format_args!("{}", self.tx_pdm_sinc_osr2().bits()),
-            )
-            .field(
-                "tx_pdm_prescale",
-                &format_args!("{}", self.tx_pdm_prescale().bits()),
-            )
-            .field(
-                "tx_pdm_hp_in_shift",
-                &format_args!("{}", self.tx_pdm_hp_in_shift().bits()),
-            )
-            .field(
-                "tx_pdm_lp_in_shift",
-                &format_args!("{}", self.tx_pdm_lp_in_shift().bits()),
-            )
-            .field(
-                "tx_pdm_sinc_in_shift",
-                &format_args!("{}", self.tx_pdm_sinc_in_shift().bits()),
-            )
+            .field("tx_pdm_hp_bypass", &self.tx_pdm_hp_bypass())
+            .field("tx_pdm_sinc_osr2", &self.tx_pdm_sinc_osr2())
+            .field("tx_pdm_prescale", &self.tx_pdm_prescale())
+            .field("tx_pdm_hp_in_shift", &self.tx_pdm_hp_in_shift())
+            .field("tx_pdm_lp_in_shift", &self.tx_pdm_lp_in_shift())
+            .field("tx_pdm_sinc_in_shift", &self.tx_pdm_sinc_in_shift())
             .field(
                 "tx_pdm_sigmadelta_in_shift",
-                &format_args!("{}", self.tx_pdm_sigmadelta_in_shift().bits()),
+                &self.tx_pdm_sigmadelta_in_shift(),
             )
             .field(
                 "tx_pdm_sigmadelta_dither2",
-                &format_args!("{}", self.tx_pdm_sigmadelta_dither2().bit()),
+                &self.tx_pdm_sigmadelta_dither2(),
             )
-            .field(
-                "tx_pdm_sigmadelta_dither",
-                &format_args!("{}", self.tx_pdm_sigmadelta_dither().bit()),
-            )
-            .field(
-                "tx_pdm_dac_2out_en",
-                &format_args!("{}", self.tx_pdm_dac_2out_en().bit()),
-            )
-            .field(
-                "tx_pdm_dac_mode_en",
-                &format_args!("{}", self.tx_pdm_dac_mode_en().bit()),
-            )
-            .field(
-                "pcm2pdm_conv_en",
-                &format_args!("{}", self.pcm2pdm_conv_en().bit()),
-            )
+            .field("tx_pdm_sigmadelta_dither", &self.tx_pdm_sigmadelta_dither())
+            .field("tx_pdm_dac_2out_en", &self.tx_pdm_dac_2out_en())
+            .field("tx_pdm_dac_mode_en", &self.tx_pdm_dac_mode_en())
+            .field("pcm2pdm_conv_en", &self.pcm2pdm_conv_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_PCM2PDM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

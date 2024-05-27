@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SENSITIVE_REG_DATE")
-            .field(
-                "sensitive_reg_date",
-                &format_args!("{}", self.sensitive_reg_date().bits()),
-            )
+            .field("sensitive_reg_date", &self.sensitive_reg_date())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SENSITIVE_REG_DATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

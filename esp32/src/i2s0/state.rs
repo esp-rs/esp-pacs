@@ -27,22 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATE")
-            .field("tx_idle", &format_args!("{}", self.tx_idle().bit()))
-            .field(
-                "tx_fifo_reset_back",
-                &format_args!("{}", self.tx_fifo_reset_back().bit()),
-            )
-            .field(
-                "rx_fifo_reset_back",
-                &format_args!("{}", self.rx_fifo_reset_back().bit()),
-            )
+            .field("tx_idle", &self.tx_idle())
+            .field("tx_fifo_reset_back", &self.tx_fifo_reset_back())
+            .field("rx_fifo_reset_back", &self.rx_fifo_reset_back())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

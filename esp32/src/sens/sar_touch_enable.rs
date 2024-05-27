@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_ENABLE")
-            .field(
-                "touch_pad_worken",
-                &format_args!("{}", self.touch_pad_worken().bits()),
-            )
-            .field(
-                "touch_pad_outen2",
-                &format_args!("{}", self.touch_pad_outen2().bits()),
-            )
-            .field(
-                "touch_pad_outen1",
-                &format_args!("{}", self.touch_pad_outen1().bits()),
-            )
+            .field("touch_pad_worken", &self.touch_pad_worken())
+            .field("touch_pad_outen2", &self.touch_pad_outen2())
+            .field("touch_pad_outen1", &self.touch_pad_outen1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_ENABLE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

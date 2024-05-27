@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_PERIPHERAL_STATUS")
-            .field(
-                "apb_peri_byte_error_addr",
-                &format_args!("{}", self.apb_peri_byte_error_addr().bits()),
-            )
+            .field("apb_peri_byte_error_addr", &self.apb_peri_byte_error_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_PERIPHERAL_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PeribBus2 peripheral access status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_peripheral_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -53,18 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_PAD9")
-            .field("to_gpio", &format_args!("{}", self.to_gpio().bit()))
-            .field("xpd", &format_args!("{}", self.xpd().bit()))
-            .field("tie_opt", &format_args!("{}", self.tie_opt().bit()))
-            .field("start", &format_args!("{}", self.start().bit()))
-            .field("dac", &format_args!("{}", self.dac().bits()))
+            .field("to_gpio", &self.to_gpio())
+            .field("xpd", &self.xpd())
+            .field("tie_opt", &self.tie_opt())
+            .field("start", &self.start())
+            .field("dac", &self.dac())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_PAD9_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

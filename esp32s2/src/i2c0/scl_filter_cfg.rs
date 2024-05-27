@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_FILTER_CFG")
-            .field(
-                "scl_filter_thres",
-                &format_args!("{}", self.scl_filter_thres().bits()),
-            )
-            .field(
-                "scl_filter_en",
-                &format_args!("{}", self.scl_filter_en().bit()),
-            )
+            .field("scl_filter_thres", &self.scl_filter_thres())
+            .field("scl_filter_en", &self.scl_filter_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_FILTER_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

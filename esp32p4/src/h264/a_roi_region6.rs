@@ -53,18 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_ROI_REGION6")
-            .field("x", &format_args!("{}", self.x().bits()))
-            .field("y", &format_args!("{}", self.y().bits()))
-            .field("x_len", &format_args!("{}", self.x_len().bits()))
-            .field("y_len", &format_args!("{}", self.y_len().bits()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("x", &self.x())
+            .field("y", &self.y())
+            .field("x_len", &self.x_len())
+            .field("y_len", &self.y_len())
+            .field("en", &self.en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_ROI_REGION6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

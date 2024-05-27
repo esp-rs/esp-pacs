@@ -46,27 +46,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("SHARP_MATRIX_CTRL")
             .field(
                 "sharp_tail_pixen_pulse_tl",
-                &format_args!("{}", self.sharp_tail_pixen_pulse_tl().bits()),
+                &self.sharp_tail_pixen_pulse_tl(),
             )
             .field(
                 "sharp_tail_pixen_pulse_th",
-                &format_args!("{}", self.sharp_tail_pixen_pulse_th().bits()),
+                &self.sharp_tail_pixen_pulse_th(),
             )
-            .field(
-                "sharp_padding_data",
-                &format_args!("{}", self.sharp_padding_data().bits()),
-            )
-            .field(
-                "sharp_padding_mode",
-                &format_args!("{}", self.sharp_padding_mode().bit()),
-            )
+            .field("sharp_padding_data", &self.sharp_padding_data())
+            .field("sharp_padding_mode", &self.sharp_padding_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SHARP_MATRIX_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DHT_INFO")
-            .field("dc0_dht_id", &format_args!("{}", self.dc0_dht_id().bits()))
-            .field("dc1_dht_id", &format_args!("{}", self.dc1_dht_id().bits()))
-            .field("ac0_dht_id", &format_args!("{}", self.ac0_dht_id().bits()))
-            .field("ac1_dht_id", &format_args!("{}", self.ac1_dht_id().bits()))
+            .field("dc0_dht_id", &self.dc0_dht_id())
+            .field("dc1_dht_id", &self.dc1_dht_id())
+            .field("ac0_dht_id", &self.ac0_dht_id())
+            .field("ac1_dht_id", &self.ac1_dht_id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DHT_INFO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

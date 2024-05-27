@@ -62,34 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IRAM_DRAM_AHB_SEL")
-            .field(
-                "mask_pro_iram",
-                &format_args!("{}", self.mask_pro_iram().bit()),
-            )
-            .field(
-                "mask_app_iram",
-                &format_args!("{}", self.mask_app_iram().bit()),
-            )
-            .field(
-                "mask_pro_dram",
-                &format_args!("{}", self.mask_pro_dram().bit()),
-            )
-            .field(
-                "mask_app_dram",
-                &format_args!("{}", self.mask_app_dram().bit()),
-            )
-            .field("mask_ahb", &format_args!("{}", self.mask_ahb().bit()))
-            .field(
-                "mac_dump_mode",
-                &format_args!("{}", self.mac_dump_mode().bits()),
-            )
+            .field("mask_pro_iram", &self.mask_pro_iram())
+            .field("mask_app_iram", &self.mask_app_iram())
+            .field("mask_pro_dram", &self.mask_pro_dram())
+            .field("mask_app_dram", &self.mask_app_dram())
+            .field("mask_ahb", &self.mask_ahb())
+            .field("mac_dump_mode", &self.mac_dump_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IRAM_DRAM_AHB_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

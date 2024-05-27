@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_RX")
-            .field(
-                "phy_rxulpsesc_0",
-                &format_args!("{}", self.phy_rxulpsesc_0().bit()),
-            )
-            .field(
-                "phy_rxulpsesc_1",
-                &format_args!("{}", self.phy_rxulpsesc_1().bit()),
-            )
-            .field(
-                "phy_rxulpsclknot",
-                &format_args!("{}", self.phy_rxulpsclknot().bit()),
-            )
-            .field(
-                "phy_rxclkactivehs",
-                &format_args!("{}", self.phy_rxclkactivehs().bit()),
-            )
+            .field("phy_rxulpsesc_0", &self.phy_rxulpsesc_0())
+            .field("phy_rxulpsesc_1", &self.phy_rxulpsesc_1())
+            .field("phy_rxulpsclknot", &self.phy_rxulpsclknot())
+            .field("phy_rxclkactivehs", &self.phy_rxclkactivehs())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_RX_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`phy_rx::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

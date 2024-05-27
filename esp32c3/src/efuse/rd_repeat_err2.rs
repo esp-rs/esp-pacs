@@ -69,49 +69,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR2")
-            .field(
-                "key_purpose_2_err",
-                &format_args!("{}", self.key_purpose_2_err().bits()),
-            )
-            .field(
-                "key_purpose_3_err",
-                &format_args!("{}", self.key_purpose_3_err().bits()),
-            )
-            .field(
-                "key_purpose_4_err",
-                &format_args!("{}", self.key_purpose_4_err().bits()),
-            )
-            .field(
-                "key_purpose_5_err",
-                &format_args!("{}", self.key_purpose_5_err().bits()),
-            )
-            .field(
-                "rpt4_reserved3_err",
-                &format_args!("{}", self.rpt4_reserved3_err().bits()),
-            )
-            .field(
-                "secure_boot_en_err",
-                &format_args!("{}", self.secure_boot_en_err().bit()),
-            )
+            .field("key_purpose_2_err", &self.key_purpose_2_err())
+            .field("key_purpose_3_err", &self.key_purpose_3_err())
+            .field("key_purpose_4_err", &self.key_purpose_4_err())
+            .field("key_purpose_5_err", &self.key_purpose_5_err())
+            .field("rpt4_reserved3_err", &self.rpt4_reserved3_err())
+            .field("secure_boot_en_err", &self.secure_boot_en_err())
             .field(
                 "secure_boot_aggressive_revoke_err",
-                &format_args!("{}", self.secure_boot_aggressive_revoke_err().bit()),
+                &self.secure_boot_aggressive_revoke_err(),
             )
-            .field(
-                "rpt4_reserved0_err",
-                &format_args!("{}", self.rpt4_reserved0_err().bits()),
-            )
-            .field(
-                "flash_tpuw_err",
-                &format_args!("{}", self.flash_tpuw_err().bits()),
-            )
+            .field("rpt4_reserved0_err", &self.rpt4_reserved0_err())
+            .field("flash_tpuw_err", &self.flash_tpuw_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 2 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

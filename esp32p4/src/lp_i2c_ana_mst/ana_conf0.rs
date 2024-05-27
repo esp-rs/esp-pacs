@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_CONF0")
-            .field("ana_conf0", &format_args!("{}", self.ana_conf0().bits()))
-            .field(
-                "ana_status0",
-                &format_args!("{}", self.ana_status0().bits()),
-            )
+            .field("ana_conf0", &self.ana_conf0())
+            .field("ana_status0", &self.ana_status0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ANA_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

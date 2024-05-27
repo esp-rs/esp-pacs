@@ -195,121 +195,43 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_0INT_RAW")
-            .field(
-                "frhost_bit0_int_raw",
-                &format_args!("{}", self.frhost_bit0_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit1_int_raw",
-                &format_args!("{}", self.frhost_bit1_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit2_int_raw",
-                &format_args!("{}", self.frhost_bit2_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit3_int_raw",
-                &format_args!("{}", self.frhost_bit3_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit4_int_raw",
-                &format_args!("{}", self.frhost_bit4_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit5_int_raw",
-                &format_args!("{}", self.frhost_bit5_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit6_int_raw",
-                &format_args!("{}", self.frhost_bit6_int_raw().bit()),
-            )
-            .field(
-                "frhost_bit7_int_raw",
-                &format_args!("{}", self.frhost_bit7_int_raw().bit()),
-            )
-            .field(
-                "slc0_rx_start_int_raw",
-                &format_args!("{}", self.slc0_rx_start_int_raw().bit()),
-            )
-            .field(
-                "slc0_tx_start_int_raw",
-                &format_args!("{}", self.slc0_tx_start_int_raw().bit()),
-            )
-            .field(
-                "slc0_rx_udf_int_raw",
-                &format_args!("{}", self.slc0_rx_udf_int_raw().bit()),
-            )
-            .field(
-                "slc0_tx_ovf_int_raw",
-                &format_args!("{}", self.slc0_tx_ovf_int_raw().bit()),
-            )
-            .field(
-                "slc0_token0_1to0_int_raw",
-                &format_args!("{}", self.slc0_token0_1to0_int_raw().bit()),
-            )
-            .field(
-                "slc0_token1_1to0_int_raw",
-                &format_args!("{}", self.slc0_token1_1to0_int_raw().bit()),
-            )
-            .field(
-                "slc0_tx_done_int_raw",
-                &format_args!("{}", self.slc0_tx_done_int_raw().bit()),
-            )
-            .field(
-                "slc0_tx_suc_eof_int_raw",
-                &format_args!("{}", self.slc0_tx_suc_eof_int_raw().bit()),
-            )
-            .field(
-                "slc0_rx_done_int_raw",
-                &format_args!("{}", self.slc0_rx_done_int_raw().bit()),
-            )
-            .field(
-                "slc0_rx_eof_int_raw",
-                &format_args!("{}", self.slc0_rx_eof_int_raw().bit()),
-            )
-            .field(
-                "slc0_tohost_int_raw",
-                &format_args!("{}", self.slc0_tohost_int_raw().bit()),
-            )
-            .field(
-                "slc0_tx_dscr_err_int_raw",
-                &format_args!("{}", self.slc0_tx_dscr_err_int_raw().bit()),
-            )
-            .field(
-                "slc0_rx_dscr_err_int_raw",
-                &format_args!("{}", self.slc0_rx_dscr_err_int_raw().bit()),
-            )
+            .field("frhost_bit0_int_raw", &self.frhost_bit0_int_raw())
+            .field("frhost_bit1_int_raw", &self.frhost_bit1_int_raw())
+            .field("frhost_bit2_int_raw", &self.frhost_bit2_int_raw())
+            .field("frhost_bit3_int_raw", &self.frhost_bit3_int_raw())
+            .field("frhost_bit4_int_raw", &self.frhost_bit4_int_raw())
+            .field("frhost_bit5_int_raw", &self.frhost_bit5_int_raw())
+            .field("frhost_bit6_int_raw", &self.frhost_bit6_int_raw())
+            .field("frhost_bit7_int_raw", &self.frhost_bit7_int_raw())
+            .field("slc0_rx_start_int_raw", &self.slc0_rx_start_int_raw())
+            .field("slc0_tx_start_int_raw", &self.slc0_tx_start_int_raw())
+            .field("slc0_rx_udf_int_raw", &self.slc0_rx_udf_int_raw())
+            .field("slc0_tx_ovf_int_raw", &self.slc0_tx_ovf_int_raw())
+            .field("slc0_token0_1to0_int_raw", &self.slc0_token0_1to0_int_raw())
+            .field("slc0_token1_1to0_int_raw", &self.slc0_token1_1to0_int_raw())
+            .field("slc0_tx_done_int_raw", &self.slc0_tx_done_int_raw())
+            .field("slc0_tx_suc_eof_int_raw", &self.slc0_tx_suc_eof_int_raw())
+            .field("slc0_rx_done_int_raw", &self.slc0_rx_done_int_raw())
+            .field("slc0_rx_eof_int_raw", &self.slc0_rx_eof_int_raw())
+            .field("slc0_tohost_int_raw", &self.slc0_tohost_int_raw())
+            .field("slc0_tx_dscr_err_int_raw", &self.slc0_tx_dscr_err_int_raw())
+            .field("slc0_rx_dscr_err_int_raw", &self.slc0_rx_dscr_err_int_raw())
             .field(
                 "slc0_tx_dscr_empty_int_raw",
-                &format_args!("{}", self.slc0_tx_dscr_empty_int_raw().bit()),
+                &self.slc0_tx_dscr_empty_int_raw(),
             )
-            .field(
-                "slc0_host_rd_ack_int_raw",
-                &format_args!("{}", self.slc0_host_rd_ack_int_raw().bit()),
-            )
+            .field("slc0_host_rd_ack_int_raw", &self.slc0_host_rd_ack_int_raw())
             .field(
                 "slc0_wr_retry_done_int_raw",
-                &format_args!("{}", self.slc0_wr_retry_done_int_raw().bit()),
+                &self.slc0_wr_retry_done_int_raw(),
             )
-            .field(
-                "slc0_tx_err_eof_int_raw",
-                &format_args!("{}", self.slc0_tx_err_eof_int_raw().bit()),
-            )
-            .field(
-                "cmd_dtc_int_raw",
-                &format_args!("{}", self.cmd_dtc_int_raw().bit()),
-            )
+            .field("slc0_tx_err_eof_int_raw", &self.slc0_tx_err_eof_int_raw())
+            .field("cmd_dtc_int_raw", &self.cmd_dtc_int_raw())
             .field(
                 "slc0_rx_quick_eof_int_raw",
-                &format_args!("{}", self.slc0_rx_quick_eof_int_raw().bit()),
+                &self.slc0_rx_quick_eof_int_raw(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_0INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

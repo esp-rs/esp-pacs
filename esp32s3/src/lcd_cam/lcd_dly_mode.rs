@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_DLY_MODE")
-            .field(
-                "lcd_cd_mode",
-                &format_args!("{}", self.lcd_cd_mode().bits()),
-            )
-            .field(
-                "lcd_de_mode",
-                &format_args!("{}", self.lcd_de_mode().bits()),
-            )
-            .field(
-                "lcd_hsync_mode",
-                &format_args!("{}", self.lcd_hsync_mode().bits()),
-            )
-            .field(
-                "lcd_vsync_mode",
-                &format_args!("{}", self.lcd_vsync_mode().bits()),
-            )
+            .field("lcd_cd_mode", &self.lcd_cd_mode())
+            .field("lcd_de_mode", &self.lcd_de_mode())
+            .field("lcd_hsync_mode", &self.lcd_hsync_mode())
+            .field("lcd_vsync_mode", &self.lcd_vsync_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_DLY_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

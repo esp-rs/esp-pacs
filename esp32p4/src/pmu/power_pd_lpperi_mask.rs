@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_LPPERI_MASK")
-            .field(
-                "xpd_lp_peri_mask",
-                &format_args!("{}", self.xpd_lp_peri_mask().bits()),
-            )
-            .field(
-                "pd_lp_peri_mask",
-                &format_args!("{}", self.pd_lp_peri_mask().bits()),
-            )
+            .field("xpd_lp_peri_mask", &self.xpd_lp_peri_mask())
+            .field("pd_lp_peri_mask", &self.pd_lp_peri_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_LPPERI_MASK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
