@@ -48,19 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("thres1_low", &format_args!("{}", self.thres1_low().bit()))
-            .field("thres0_low", &format_args!("{}", self.thres0_low().bit()))
-            .field("thres1_high", &format_args!("{}", self.thres1_high().bit()))
-            .field("thres0_high", &format_args!("{}", self.thres0_high().bit()))
-            .field("adc2_done", &format_args!("{}", self.adc2_done().bit()))
-            .field("adc1_done", &format_args!("{}", self.adc1_done().bit()))
+            .field("thres1_low", &self.thres1_low())
+            .field("thres0_low", &self.thres0_low())
+            .field("thres1_high", &self.thres1_high())
+            .field("thres0_high", &self.thres0_high())
+            .field("adc2_done", &self.adc2_done())
+            .field("adc1_done", &self.adc1_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "state of interrupt\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

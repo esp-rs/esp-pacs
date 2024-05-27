@@ -53,30 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_CFG")
-            .field("touch_dcur", &format_args!("{}", self.touch_dcur().bits()))
-            .field(
-                "touch_drange",
-                &format_args!("{}", self.touch_drange().bits()),
-            )
-            .field(
-                "touch_drefl",
-                &format_args!("{}", self.touch_drefl().bits()),
-            )
-            .field(
-                "touch_drefh",
-                &format_args!("{}", self.touch_drefh().bits()),
-            )
-            .field(
-                "touch_xpd_bias",
-                &format_args!("{}", self.touch_xpd_bias().bit()),
-            )
+            .field("touch_dcur", &self.touch_dcur())
+            .field("touch_drange", &self.touch_drange())
+            .field("touch_drefl", &self.touch_drefl())
+            .field("touch_drefh", &self.touch_drefh())
+            .field("touch_xpd_bias", &self.touch_xpd_bias())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

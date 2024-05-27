@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL3")
-            .field(
-                "lp_min_slp_val",
-                &format_args!("{}", self.lp_min_slp_val().bits()),
-            )
-            .field(
-                "hp_min_slp_val",
-                &format_args!("{}", self.hp_min_slp_val().bits()),
-            )
-            .field(
-                "sleep_prt_sel",
-                &format_args!("{}", self.sleep_prt_sel().bits()),
-            )
+            .field("lp_min_slp_val", &self.lp_min_slp_val())
+            .field("hp_min_slp_val", &self.hp_min_slp_val())
+            .field("sleep_prt_sel", &self.sleep_prt_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

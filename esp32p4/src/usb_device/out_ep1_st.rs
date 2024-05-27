@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_EP1_ST")
-            .field(
-                "out_ep1_state",
-                &format_args!("{}", self.out_ep1_state().bits()),
-            )
-            .field(
-                "out_ep1_wr_addr",
-                &format_args!("{}", self.out_ep1_wr_addr().bits()),
-            )
-            .field(
-                "out_ep1_rd_addr",
-                &format_args!("{}", self.out_ep1_rd_addr().bits()),
-            )
-            .field(
-                "out_ep1_rec_data_cnt",
-                &format_args!("{}", self.out_ep1_rec_data_cnt().bits()),
-            )
+            .field("out_ep1_state", &self.out_ep1_state())
+            .field("out_ep1_wr_addr", &self.out_ep1_wr_addr())
+            .field("out_ep1_rd_addr", &self.out_ep1_rd_addr())
+            .field("out_ep1_rec_data_cnt", &self.out_ep1_rec_data_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_EP1_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "CDC-ACM OUT endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_ep1_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

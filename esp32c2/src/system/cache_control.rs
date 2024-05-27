@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_CONTROL")
-            .field(
-                "icache_clk_on",
-                &format_args!("{}", self.icache_clk_on().bit()),
-            )
-            .field(
-                "icache_reset",
-                &format_args!("{}", self.icache_reset().bit()),
-            )
-            .field(
-                "dcache_clk_on",
-                &format_args!("{}", self.dcache_clk_on().bit()),
-            )
-            .field(
-                "dcache_reset",
-                &format_args!("{}", self.dcache_reset().bit()),
-            )
+            .field("icache_clk_on", &self.icache_clk_on())
+            .field("icache_reset", &self.icache_reset())
+            .field("dcache_clk_on", &self.dcache_clk_on())
+            .field("dcache_reset", &self.dcache_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_CONTROL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

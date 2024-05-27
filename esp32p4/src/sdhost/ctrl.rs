@@ -98,38 +98,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field(
-                "controller_reset",
-                &format_args!("{}", self.controller_reset().bit()),
-            )
-            .field("fifo_reset", &format_args!("{}", self.fifo_reset().bit()))
-            .field("dma_reset", &format_args!("{}", self.dma_reset().bit()))
-            .field("int_enable", &format_args!("{}", self.int_enable().bit()))
-            .field("read_wait", &format_args!("{}", self.read_wait().bit()))
-            .field(
-                "send_irq_response",
-                &format_args!("{}", self.send_irq_response().bit()),
-            )
-            .field(
-                "abort_read_data",
-                &format_args!("{}", self.abort_read_data().bit()),
-            )
-            .field("send_ccsd", &format_args!("{}", self.send_ccsd().bit()))
-            .field(
-                "send_auto_stop_ccsd",
-                &format_args!("{}", self.send_auto_stop_ccsd().bit()),
-            )
+            .field("controller_reset", &self.controller_reset())
+            .field("fifo_reset", &self.fifo_reset())
+            .field("dma_reset", &self.dma_reset())
+            .field("int_enable", &self.int_enable())
+            .field("read_wait", &self.read_wait())
+            .field("send_irq_response", &self.send_irq_response())
+            .field("abort_read_data", &self.abort_read_data())
+            .field("send_ccsd", &self.send_ccsd())
+            .field("send_auto_stop_ccsd", &self.send_auto_stop_ccsd())
             .field(
                 "ceata_device_interrupt_status",
-                &format_args!("{}", self.ceata_device_interrupt_status().bit()),
+                &self.ceata_device_interrupt_status(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

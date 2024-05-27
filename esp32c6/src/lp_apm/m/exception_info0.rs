@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXCEPTION_INFO0")
-            .field(
-                "exception_region",
-                &format_args!("{}", self.exception_region().bits()),
-            )
-            .field(
-                "exception_mode",
-                &format_args!("{}", self.exception_mode().bits()),
-            )
-            .field(
-                "exception_id",
-                &format_args!("{}", self.exception_id().bits()),
-            )
+            .field("exception_region", &self.exception_region())
+            .field("exception_mode", &self.exception_mode())
+            .field("exception_id", &self.exception_id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXCEPTION_INFO0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "M0 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exception_info0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -49,33 +49,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_WRAP_AROUND_CTRL")
-            .field(
-                "l1_icache0_wrap",
-                &format_args!("{}", self.l1_icache0_wrap().bit()),
-            )
-            .field(
-                "l1_icache1_wrap",
-                &format_args!("{}", self.l1_icache1_wrap().bit()),
-            )
-            .field(
-                "l1_icache2_wrap",
-                &format_args!("{}", self.l1_icache2_wrap().bit()),
-            )
-            .field(
-                "l1_icache3_wrap",
-                &format_args!("{}", self.l1_icache3_wrap().bit()),
-            )
-            .field(
-                "l1_dcache_wrap",
-                &format_args!("{}", self.l1_dcache_wrap().bit()),
-            )
+            .field("l1_icache0_wrap", &self.l1_icache0_wrap())
+            .field("l1_icache1_wrap", &self.l1_icache1_wrap())
+            .field("l1_icache2_wrap", &self.l1_icache2_wrap())
+            .field("l1_icache3_wrap", &self.l1_icache3_wrap())
+            .field("l1_dcache_wrap", &self.l1_dcache_wrap())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_WRAP_AROUND_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

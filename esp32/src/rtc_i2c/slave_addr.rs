@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE_ADDR")
-            .field("slave_addr", &format_args!("{}", self.slave_addr().bits()))
-            .field("_10bit", &format_args!("{}", self._10bit().bit()))
+            .field("slave_addr", &self.slave_addr())
+            .field("_10bit", &self._10bit())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

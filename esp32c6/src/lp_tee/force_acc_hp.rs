@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("FORCE_ACC_HP")
             .field(
                 "lp_aon_force_acc_hpmem_en",
-                &format_args!("{}", self.lp_aon_force_acc_hpmem_en().bit()),
+                &self.lp_aon_force_acc_hpmem_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FORCE_ACC_HP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

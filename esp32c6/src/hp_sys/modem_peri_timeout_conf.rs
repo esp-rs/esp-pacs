@@ -28,21 +28,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_PERI_TIMEOUT_CONF")
-            .field(
-                "modem_peri_timeout_thres",
-                &format_args!("{}", self.modem_peri_timeout_thres().bits()),
-            )
+            .field("modem_peri_timeout_thres", &self.modem_peri_timeout_thres())
             .field(
                 "modem_peri_timeout_protect_en",
-                &format_args!("{}", self.modem_peri_timeout_protect_en().bit()),
+                &self.modem_peri_timeout_protect_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODEM_PERI_TIMEOUT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

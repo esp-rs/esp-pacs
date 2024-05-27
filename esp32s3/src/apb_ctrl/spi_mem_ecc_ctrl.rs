@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_MEM_ECC_CTRL")
-            .field(
-                "flash_page_size",
-                &format_args!("{}", self.flash_page_size().bits()),
-            )
-            .field(
-                "sram_page_size",
-                &format_args!("{}", self.sram_page_size().bits()),
-            )
+            .field("flash_page_size", &self.flash_page_size())
+            .field("sram_page_size", &self.sram_page_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_MEM_ECC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

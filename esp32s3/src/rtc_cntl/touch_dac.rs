@@ -98,53 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_DAC")
-            .field(
-                "touch_pad9_dac",
-                &format_args!("{}", self.touch_pad9_dac().bits()),
-            )
-            .field(
-                "touch_pad8_dac",
-                &format_args!("{}", self.touch_pad8_dac().bits()),
-            )
-            .field(
-                "touch_pad7_dac",
-                &format_args!("{}", self.touch_pad7_dac().bits()),
-            )
-            .field(
-                "touch_pad6_dac",
-                &format_args!("{}", self.touch_pad6_dac().bits()),
-            )
-            .field(
-                "touch_pad5_dac",
-                &format_args!("{}", self.touch_pad5_dac().bits()),
-            )
-            .field(
-                "touch_pad4_dac",
-                &format_args!("{}", self.touch_pad4_dac().bits()),
-            )
-            .field(
-                "touch_pad3_dac",
-                &format_args!("{}", self.touch_pad3_dac().bits()),
-            )
-            .field(
-                "touch_pad2_dac",
-                &format_args!("{}", self.touch_pad2_dac().bits()),
-            )
-            .field(
-                "touch_pad1_dac",
-                &format_args!("{}", self.touch_pad1_dac().bits()),
-            )
-            .field(
-                "touch_pad0_dac",
-                &format_args!("{}", self.touch_pad0_dac().bits()),
-            )
+            .field("touch_pad9_dac", &self.touch_pad9_dac())
+            .field("touch_pad8_dac", &self.touch_pad8_dac())
+            .field("touch_pad7_dac", &self.touch_pad7_dac())
+            .field("touch_pad6_dac", &self.touch_pad6_dac())
+            .field("touch_pad5_dac", &self.touch_pad5_dac())
+            .field("touch_pad4_dac", &self.touch_pad4_dac())
+            .field("touch_pad3_dac", &self.touch_pad3_dac())
+            .field("touch_pad2_dac", &self.touch_pad2_dac())
+            .field("touch_pad1_dac", &self.touch_pad1_dac())
+            .field("touch_pad0_dac", &self.touch_pad0_dac())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_DAC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

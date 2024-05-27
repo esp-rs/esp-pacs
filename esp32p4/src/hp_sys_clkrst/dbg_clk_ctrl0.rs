@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBG_CLK_CTRL0")
-            .field(
-                "dbg_ch0_sel",
-                &format_args!("{}", self.dbg_ch0_sel().bits()),
-            )
-            .field(
-                "dbg_ch1_sel",
-                &format_args!("{}", self.dbg_ch1_sel().bits()),
-            )
-            .field(
-                "dbg_ch2_sel",
-                &format_args!("{}", self.dbg_ch2_sel().bits()),
-            )
-            .field(
-                "dbg_ch0_div_num",
-                &format_args!("{}", self.dbg_ch0_div_num().bits()),
-            )
+            .field("dbg_ch0_sel", &self.dbg_ch0_sel())
+            .field("dbg_ch1_sel", &self.dbg_ch1_sel())
+            .field("dbg_ch2_sel", &self.dbg_ch2_sel())
+            .field("dbg_ch0_div_num", &self.dbg_ch0_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBG_CLK_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

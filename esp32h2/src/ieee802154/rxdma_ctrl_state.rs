@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RXDMA_CTRL_STATE")
-            .field(
-                "rxdma_water_level",
-                &format_args!("{}", self.rxdma_water_level().bits()),
-            )
-            .field(
-                "rxdma_state",
-                &format_args!("{}", self.rxdma_state().bits()),
-            )
-            .field(
-                "rxdma_append_lqi_offset",
-                &format_args!("{}", self.rxdma_append_lqi_offset().bit()),
-            )
-            .field(
-                "rxdma_append_freq_offset",
-                &format_args!("{}", self.rxdma_append_freq_offset().bit()),
-            )
+            .field("rxdma_water_level", &self.rxdma_water_level())
+            .field("rxdma_state", &self.rxdma_state())
+            .field("rxdma_append_lqi_offset", &self.rxdma_append_lqi_offset())
+            .field("rxdma_append_freq_offset", &self.rxdma_append_freq_offset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RXDMA_CTRL_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

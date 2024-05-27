@@ -22,19 +22,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("SRAM_DWR_CMD")
             .field(
                 "cache_sram_usr_wr_cmd_value",
-                &format_args!("{}", self.cache_sram_usr_wr_cmd_value().bits()),
+                &self.cache_sram_usr_wr_cmd_value(),
             )
             .field(
                 "cache_sram_usr_wr_cmd_bitlen",
-                &format_args!("{}", self.cache_sram_usr_wr_cmd_bitlen().bits()),
+                &self.cache_sram_usr_wr_cmd_bitlen(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SRAM_DWR_CMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI0 external RAM DDR write command control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_dwr_cmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

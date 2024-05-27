@@ -94,59 +94,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("SAR_COCPU_INT_ST")
             .field(
                 "sar_cocpu_touch_done_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_done_int_st().bit()),
+                &self.sar_cocpu_touch_done_int_st(),
             )
             .field(
                 "sar_cocpu_touch_inactive_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_inactive_int_st().bit()),
+                &self.sar_cocpu_touch_inactive_int_st(),
             )
             .field(
                 "sar_cocpu_touch_active_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_active_int_st().bit()),
+                &self.sar_cocpu_touch_active_int_st(),
             )
-            .field(
-                "sar_cocpu_saradc1_int_st",
-                &format_args!("{}", self.sar_cocpu_saradc1_int_st().bit()),
-            )
-            .field(
-                "sar_cocpu_saradc2_int_st",
-                &format_args!("{}", self.sar_cocpu_saradc2_int_st().bit()),
-            )
-            .field(
-                "sar_cocpu_tsens_int_st",
-                &format_args!("{}", self.sar_cocpu_tsens_int_st().bit()),
-            )
-            .field(
-                "sar_cocpu_start_int_st",
-                &format_args!("{}", self.sar_cocpu_start_int_st().bit()),
-            )
-            .field(
-                "sar_cocpu_sw_int_st",
-                &format_args!("{}", self.sar_cocpu_sw_int_st().bit()),
-            )
-            .field(
-                "sar_cocpu_swd_int_st",
-                &format_args!("{}", self.sar_cocpu_swd_int_st().bit()),
-            )
+            .field("sar_cocpu_saradc1_int_st", &self.sar_cocpu_saradc1_int_st())
+            .field("sar_cocpu_saradc2_int_st", &self.sar_cocpu_saradc2_int_st())
+            .field("sar_cocpu_tsens_int_st", &self.sar_cocpu_tsens_int_st())
+            .field("sar_cocpu_start_int_st", &self.sar_cocpu_start_int_st())
+            .field("sar_cocpu_sw_int_st", &self.sar_cocpu_sw_int_st())
+            .field("sar_cocpu_swd_int_st", &self.sar_cocpu_swd_int_st())
             .field(
                 "sar_cocpu_touch_timeout_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_timeout_int_st().bit()),
+                &self.sar_cocpu_touch_timeout_int_st(),
             )
             .field(
                 "sar_cocpu_touch_approach_loop_done_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_approach_loop_done_int_st().bit()),
+                &self.sar_cocpu_touch_approach_loop_done_int_st(),
             )
             .field(
                 "sar_cocpu_touch_scan_done_int_st",
-                &format_args!("{}", self.sar_cocpu_touch_scan_done_int_st().bit()),
+                &self.sar_cocpu_touch_scan_done_int_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "the interrupt state of ulp\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

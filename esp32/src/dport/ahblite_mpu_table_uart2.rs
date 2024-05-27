@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHBLITE_MPU_TABLE_UART2")
             .field(
                 "uart2_access_grant_config",
-                &format_args!("{}", self.uart2_access_grant_config().bits()),
+                &self.uart2_access_grant_config(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_UART2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

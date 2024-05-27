@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGDMA_CURRENT_LINK_ADDR")
-            .field(
-                "current_link_addr",
-                &format_args!("{}", self.current_link_addr().bits()),
-            )
+            .field("current_link_addr", &self.current_link_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGDMA_CURRENT_LINK_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "current link addr\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`regdma_current_link_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

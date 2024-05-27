@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CACHE_DATAARRAY_CONNECT_1")
             .field(
                 "cache_dataarray_connect_flatten",
-                &format_args!("{}", self.cache_dataarray_connect_flatten().bits()),
+                &self.cache_dataarray_connect_flatten(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_DATAARRAY_CONNECT_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

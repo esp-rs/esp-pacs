@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_RC_CONF1")
-            .field(
-                "a_chroma_dc_qp_delta",
-                &format_args!("{}", self.a_chroma_dc_qp_delta().bits()),
-            )
-            .field(
-                "a_chroma_qp_delta",
-                &format_args!("{}", self.a_chroma_qp_delta().bits()),
-            )
-            .field("a_qp_min", &format_args!("{}", self.a_qp_min().bits()))
-            .field("a_qp_max", &format_args!("{}", self.a_qp_max().bits()))
-            .field(
-                "a_mad_frame_pred",
-                &format_args!("{}", self.a_mad_frame_pred().bits()),
-            )
+            .field("a_chroma_dc_qp_delta", &self.a_chroma_dc_qp_delta())
+            .field("a_chroma_qp_delta", &self.a_chroma_qp_delta())
+            .field("a_qp_min", &self.a_qp_min())
+            .field("a_qp_max", &self.a_qp_max())
+            .field("a_mad_frame_pred", &self.a_mad_frame_pred())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_RC_CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_RCD_PDEBUGSP")
-            .field(
-                "core_1_rcd_pdebugsp",
-                &format_args!("{}", self.core_1_rcd_pdebugsp().bits()),
-            )
+            .field("core_1_rcd_pdebugsp", &self.core_1_rcd_pdebugsp())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_RCD_PDEBUGSP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "record status regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_rcd_pdebugsp::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

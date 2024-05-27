@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LC_HUNG_CONF")
-            .field(
-                "lc_fifo_timeout",
-                &format_args!("{}", self.lc_fifo_timeout().bits()),
-            )
-            .field(
-                "lc_fifo_timeout_shift",
-                &format_args!("{}", self.lc_fifo_timeout_shift().bits()),
-            )
-            .field(
-                "lc_fifo_timeout_ena",
-                &format_args!("{}", self.lc_fifo_timeout_ena().bit()),
-            )
+            .field("lc_fifo_timeout", &self.lc_fifo_timeout())
+            .field("lc_fifo_timeout_shift", &self.lc_fifo_timeout_shift())
+            .field("lc_fifo_timeout_ena", &self.lc_fifo_timeout_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LC_HUNG_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

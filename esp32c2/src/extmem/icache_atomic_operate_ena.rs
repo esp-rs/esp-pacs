@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("ICACHE_ATOMIC_OPERATE_ENA")
             .field(
                 "icache_atomic_operate_ena",
-                &format_args!("{}", self.icache_atomic_operate_ena().bit()),
+                &self.icache_atomic_operate_ena(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_ATOMIC_OPERATE_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

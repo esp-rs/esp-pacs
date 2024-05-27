@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ED_SCAN_DURATION")
-            .field(
-                "ed_scan_duration",
-                &format_args!("{}", self.ed_scan_duration().bits()),
-            )
-            .field(
-                "ed_scan_wait_dly",
-                &format_args!("{}", self.ed_scan_wait_dly().bits()),
-            )
+            .field("ed_scan_duration", &self.ed_scan_duration())
+            .field("ed_scan_wait_dly", &self.ed_scan_wait_dly())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ED_SCAN_DURATION_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_SRC_FREQ0")
-            .field(
-                "cpu_src_freq",
-                &format_args!("{}", self.cpu_src_freq().bits()),
-            )
+            .field("cpu_src_freq", &self.cpu_src_freq())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_SRC_FREQ0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "CPU Source Frequency\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_src_freq0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

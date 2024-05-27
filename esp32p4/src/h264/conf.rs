@@ -242,96 +242,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "rec_ram_clk_en2",
-                &format_args!("{}", self.rec_ram_clk_en2().bit()),
-            )
-            .field(
-                "rec_ram_clk_en1",
-                &format_args!("{}", self.rec_ram_clk_en1().bit()),
-            )
-            .field(
-                "quant_ram_clk_en2",
-                &format_args!("{}", self.quant_ram_clk_en2().bit()),
-            )
-            .field(
-                "quant_ram_clk_en1",
-                &format_args!("{}", self.quant_ram_clk_en1().bit()),
-            )
-            .field(
-                "pre_ram_clk_en",
-                &format_args!("{}", self.pre_ram_clk_en().bit()),
-            )
-            .field(
-                "mvd_ram_clk_en",
-                &format_args!("{}", self.mvd_ram_clk_en().bit()),
-            )
-            .field(
-                "mc_ram_clk_en",
-                &format_args!("{}", self.mc_ram_clk_en().bit()),
-            )
-            .field(
-                "ref_ram_clk_en",
-                &format_args!("{}", self.ref_ram_clk_en().bit()),
-            )
-            .field(
-                "i4x4_ref_ram_clk_en",
-                &format_args!("{}", self.i4x4_ref_ram_clk_en().bit()),
-            )
-            .field(
-                "ime_ram_clk_en",
-                &format_args!("{}", self.ime_ram_clk_en().bit()),
-            )
-            .field(
-                "fme_ram_clk_en",
-                &format_args!("{}", self.fme_ram_clk_en().bit()),
-            )
-            .field(
-                "fetch_ram_clk_en",
-                &format_args!("{}", self.fetch_ram_clk_en().bit()),
-            )
-            .field(
-                "db_ram_clk_en",
-                &format_args!("{}", self.db_ram_clk_en().bit()),
-            )
-            .field(
-                "cur_mb_ram_clk_en",
-                &format_args!("{}", self.cur_mb_ram_clk_en().bit()),
-            )
-            .field(
-                "cavlc_ram_clk_en",
-                &format_args!("{}", self.cavlc_ram_clk_en().bit()),
-            )
-            .field("ime_clk_en", &format_args!("{}", self.ime_clk_en().bit()))
-            .field("fme_clk_en", &format_args!("{}", self.fme_clk_en().bit()))
-            .field("mc_clk_en", &format_args!("{}", self.mc_clk_en().bit()))
-            .field(
-                "interpolator_clk_en",
-                &format_args!("{}", self.interpolator_clk_en().bit()),
-            )
-            .field("db_clk_en", &format_args!("{}", self.db_clk_en().bit()))
-            .field(
-                "clavlc_clk_en",
-                &format_args!("{}", self.clavlc_clk_en().bit()),
-            )
-            .field(
-                "intra_clk_en",
-                &format_args!("{}", self.intra_clk_en().bit()),
-            )
-            .field("deci_clk_en", &format_args!("{}", self.deci_clk_en().bit()))
-            .field("bs_clk_en", &format_args!("{}", self.bs_clk_en().bit()))
-            .field(
-                "mv_merge_clk_en",
-                &format_args!("{}", self.mv_merge_clk_en().bit()),
-            )
+            .field("clk_en", &self.clk_en())
+            .field("rec_ram_clk_en2", &self.rec_ram_clk_en2())
+            .field("rec_ram_clk_en1", &self.rec_ram_clk_en1())
+            .field("quant_ram_clk_en2", &self.quant_ram_clk_en2())
+            .field("quant_ram_clk_en1", &self.quant_ram_clk_en1())
+            .field("pre_ram_clk_en", &self.pre_ram_clk_en())
+            .field("mvd_ram_clk_en", &self.mvd_ram_clk_en())
+            .field("mc_ram_clk_en", &self.mc_ram_clk_en())
+            .field("ref_ram_clk_en", &self.ref_ram_clk_en())
+            .field("i4x4_ref_ram_clk_en", &self.i4x4_ref_ram_clk_en())
+            .field("ime_ram_clk_en", &self.ime_ram_clk_en())
+            .field("fme_ram_clk_en", &self.fme_ram_clk_en())
+            .field("fetch_ram_clk_en", &self.fetch_ram_clk_en())
+            .field("db_ram_clk_en", &self.db_ram_clk_en())
+            .field("cur_mb_ram_clk_en", &self.cur_mb_ram_clk_en())
+            .field("cavlc_ram_clk_en", &self.cavlc_ram_clk_en())
+            .field("ime_clk_en", &self.ime_clk_en())
+            .field("fme_clk_en", &self.fme_clk_en())
+            .field("mc_clk_en", &self.mc_clk_en())
+            .field("interpolator_clk_en", &self.interpolator_clk_en())
+            .field("db_clk_en", &self.db_clk_en())
+            .field("clavlc_clk_en", &self.clavlc_clk_en())
+            .field("intra_clk_en", &self.intra_clk_en())
+            .field("deci_clk_en", &self.deci_clk_en())
+            .field("bs_clk_en", &self.bs_clk_en())
+            .field("mv_merge_clk_en", &self.mv_merge_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

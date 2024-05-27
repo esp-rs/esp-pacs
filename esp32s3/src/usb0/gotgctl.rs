@@ -174,39 +174,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GOTGCTL")
-            .field("sesreqscs", &format_args!("{}", self.sesreqscs().bit()))
-            .field("sesreq", &format_args!("{}", self.sesreq().bit()))
-            .field("vbvalidoven", &format_args!("{}", self.vbvalidoven().bit()))
-            .field(
-                "vbvalidovval",
-                &format_args!("{}", self.vbvalidovval().bit()),
-            )
-            .field("avalidoven", &format_args!("{}", self.avalidoven().bit()))
-            .field("avalidovval", &format_args!("{}", self.avalidovval().bit()))
-            .field("bvalidoven", &format_args!("{}", self.bvalidoven().bit()))
-            .field("bvalidovval", &format_args!("{}", self.bvalidovval().bit()))
-            .field("hstnegscs", &format_args!("{}", self.hstnegscs().bit()))
-            .field("hnpreq", &format_args!("{}", self.hnpreq().bit()))
-            .field("hstsethnpen", &format_args!("{}", self.hstsethnpen().bit()))
-            .field("devhnpen", &format_args!("{}", self.devhnpen().bit()))
-            .field("ehen", &format_args!("{}", self.ehen().bit()))
-            .field(
-                "dbncefltrbypass",
-                &format_args!("{}", self.dbncefltrbypass().bit()),
-            )
-            .field("conidsts", &format_args!("{}", self.conidsts().bit()))
-            .field("dbnctime", &format_args!("{}", self.dbnctime().bit()))
-            .field("asesvld", &format_args!("{}", self.asesvld().bit()))
-            .field("bsesvld", &format_args!("{}", self.bsesvld().bit()))
-            .field("otgver", &format_args!("{}", self.otgver().bit()))
-            .field("curmod", &format_args!("{}", self.curmod().bit()))
+            .field("sesreqscs", &self.sesreqscs())
+            .field("sesreq", &self.sesreq())
+            .field("vbvalidoven", &self.vbvalidoven())
+            .field("vbvalidovval", &self.vbvalidovval())
+            .field("avalidoven", &self.avalidoven())
+            .field("avalidovval", &self.avalidovval())
+            .field("bvalidoven", &self.bvalidoven())
+            .field("bvalidovval", &self.bvalidovval())
+            .field("hstnegscs", &self.hstnegscs())
+            .field("hnpreq", &self.hnpreq())
+            .field("hstsethnpen", &self.hstsethnpen())
+            .field("devhnpen", &self.devhnpen())
+            .field("ehen", &self.ehen())
+            .field("dbncefltrbypass", &self.dbncefltrbypass())
+            .field("conidsts", &self.conidsts())
+            .field("dbnctime", &self.dbnctime())
+            .field("asesvld", &self.asesvld())
+            .field("bsesvld", &self.bsesvld())
+            .field("otgver", &self.otgver())
+            .field("curmod", &self.curmod())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GOTGCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

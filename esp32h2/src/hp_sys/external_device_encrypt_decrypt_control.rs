@@ -44,27 +44,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL")
             .field(
                 "enable_spi_manual_encrypt",
-                &format_args!("{}", self.enable_spi_manual_encrypt().bit()),
+                &self.enable_spi_manual_encrypt(),
             )
             .field(
                 "enable_download_db_encrypt",
-                &format_args!("{}", self.enable_download_db_encrypt().bit()),
+                &self.enable_download_db_encrypt(),
             )
             .field(
                 "enable_download_g0cb_decrypt",
-                &format_args!("{}", self.enable_download_g0cb_decrypt().bit()),
+                &self.enable_download_g0cb_decrypt(),
             )
             .field(
                 "enable_download_manual_encrypt",
-                &format_args!("{}", self.enable_download_manual_encrypt().bit()),
+                &self.enable_download_manual_encrypt(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXTERNAL_DEVICE_ENCRYPT_DECRYPT_CONTROL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

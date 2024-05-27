@@ -12,15 +12,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("HI")
-            .field("hi_ro", &format_args!("{}", self.hi_ro().bits()))
-            .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+        f.debug_struct("HI").field("hi_ro", &self.hi_ro()).finish()
     }
 }
 #[doc = "system timer comp0 actual target value high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

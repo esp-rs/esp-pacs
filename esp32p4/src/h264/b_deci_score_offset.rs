@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("B_DECI_SCORE_OFFSET")
             .field(
                 "b_i16x16_deci_score_offset",
-                &format_args!("{}", self.b_i16x16_deci_score_offset().bits()),
+                &self.b_i16x16_deci_score_offset(),
             )
             .field(
                 "b_i_chroma_deci_score_offset",
-                &format_args!("{}", self.b_i_chroma_deci_score_offset().bits()),
+                &self.b_i_chroma_deci_score_offset(),
             )
             .field(
                 "b_p16x16_deci_score_offset",
-                &format_args!("{}", self.b_p16x16_deci_score_offset().bits()),
+                &self.b_p16x16_deci_score_offset(),
             )
             .field(
                 "b_p_chroma_deci_score_offset",
-                &format_args!("{}", self.b_p_chroma_deci_score_offset().bits()),
+                &self.b_p_chroma_deci_score_offset(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<B_DECI_SCORE_OFFSET_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

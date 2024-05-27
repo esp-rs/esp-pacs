@@ -119,62 +119,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_CACHE_CTRL")
-            .field(
-                "app_cache_mode",
-                &format_args!("{}", self.app_cache_mode().bit()),
-            )
-            .field(
-                "app_cache_enable",
-                &format_args!("{}", self.app_cache_enable().bit()),
-            )
-            .field(
-                "app_cache_flush_ena",
-                &format_args!("{}", self.app_cache_flush_ena().bit()),
-            )
-            .field(
-                "app_cache_flush_done",
-                &format_args!("{}", self.app_cache_flush_done().bit()),
-            )
-            .field(
-                "app_cache_lock_0_en",
-                &format_args!("{}", self.app_cache_lock_0_en().bit()),
-            )
-            .field(
-                "app_cache_lock_1_en",
-                &format_args!("{}", self.app_cache_lock_1_en().bit()),
-            )
-            .field(
-                "app_cache_lock_2_en",
-                &format_args!("{}", self.app_cache_lock_2_en().bit()),
-            )
-            .field(
-                "app_cache_lock_3_en",
-                &format_args!("{}", self.app_cache_lock_3_en().bit()),
-            )
-            .field(
-                "app_single_iram_ena",
-                &format_args!("{}", self.app_single_iram_ena().bit()),
-            )
-            .field(
-                "app_dram_split",
-                &format_args!("{}", self.app_dram_split().bit()),
-            )
-            .field(
-                "app_ahb_spi_req",
-                &format_args!("{}", self.app_ahb_spi_req().bit()),
-            )
-            .field(
-                "app_slave_req",
-                &format_args!("{}", self.app_slave_req().bit()),
-            )
-            .field("app_dram_hl", &format_args!("{}", self.app_dram_hl().bit()))
+            .field("app_cache_mode", &self.app_cache_mode())
+            .field("app_cache_enable", &self.app_cache_enable())
+            .field("app_cache_flush_ena", &self.app_cache_flush_ena())
+            .field("app_cache_flush_done", &self.app_cache_flush_done())
+            .field("app_cache_lock_0_en", &self.app_cache_lock_0_en())
+            .field("app_cache_lock_1_en", &self.app_cache_lock_1_en())
+            .field("app_cache_lock_2_en", &self.app_cache_lock_2_en())
+            .field("app_cache_lock_3_en", &self.app_cache_lock_3_en())
+            .field("app_single_iram_ena", &self.app_single_iram_ena())
+            .field("app_dram_split", &self.app_dram_split())
+            .field("app_ahb_spi_req", &self.app_ahb_spi_req())
+            .field("app_slave_req", &self.app_slave_req())
+            .field("app_dram_hl", &self.app_dram_hl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APP_CACHE_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

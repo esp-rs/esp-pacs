@@ -29,23 +29,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_RECORD0")
             .field(
                 "reg_l2_mem_exceed_addr_int_addr",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_addr().bits()),
+                &self.reg_l2_mem_exceed_addr_int_addr(),
             )
             .field(
                 "reg_l2_mem_exceed_addr_int_we",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_we().bit()),
+                &self.reg_l2_mem_exceed_addr_int_we(),
             )
             .field(
                 "reg_l2_mem_exceed_addr_int_master",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_master().bits()),
+                &self.reg_l2_mem_exceed_addr_int_master(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_INT_RECORD0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_mem_int_record0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

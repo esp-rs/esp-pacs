@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHADDR")
-            .field(
-                "apb_mem_waddr",
-                &format_args!("{}", self.apb_mem_waddr().bits()),
-            )
-            .field(
-                "apb_mem_raddr",
-                &format_args!("{}", self.apb_mem_raddr().bits()),
-            )
+            .field("apb_mem_waddr", &self.apb_mem_waddr())
+            .field("apb_mem_raddr", &self.apb_mem_raddr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Channel %s address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

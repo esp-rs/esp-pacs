@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("TX_ABORT_INTERRUPT_CONTROL")
             .field(
                 "tx_abort_interrupt_control",
-                &format_args!("{}", self.tx_abort_interrupt_control().bits()),
+                &self.tx_abort_interrupt_control(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_ABORT_INTERRUPT_CONTROL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

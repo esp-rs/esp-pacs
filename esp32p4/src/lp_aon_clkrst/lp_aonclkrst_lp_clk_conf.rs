@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LP_CLK_CONF")
             .field(
                 "lp_aonclkrst_slow_clk_sel",
-                &format_args!("{}", self.lp_aonclkrst_slow_clk_sel().bits()),
+                &self.lp_aonclkrst_slow_clk_sel(),
             )
             .field(
                 "lp_aonclkrst_fast_clk_sel",
-                &format_args!("{}", self.lp_aonclkrst_fast_clk_sel().bits()),
+                &self.lp_aonclkrst_fast_clk_sel(),
             )
             .field(
                 "lp_aonclkrst_lp_peri_div_num",
-                &format_args!("{}", self.lp_aonclkrst_lp_peri_div_num().bits()),
+                &self.lp_aonclkrst_lp_peri_div_num(),
             )
             .field(
                 "lp_aonclkrst_ana_sel_ref_pll8m",
-                &format_args!("{}", self.lp_aonclkrst_ana_sel_ref_pll8m().bit()),
+                &self.lp_aonclkrst_ana_sel_ref_pll8m(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_LP_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

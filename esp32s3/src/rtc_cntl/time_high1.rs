@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIME_HIGH1")
-            .field(
-                "timer_value1_high",
-                &format_args!("{}", self.timer_value1_high().bits()),
-            )
+            .field("timer_value1_high", &self.timer_value1_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIME_HIGH1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC timer high 16 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_high1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

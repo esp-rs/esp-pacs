@@ -67,26 +67,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PCGCCTL")
-            .field("stoppclk", &format_args!("{}", self.stoppclk().bit()))
-            .field("gatehclk", &format_args!("{}", self.gatehclk().bit()))
-            .field("pwrclmp", &format_args!("{}", self.pwrclmp().bit()))
-            .field(
-                "rstpdwnmodule",
-                &format_args!("{}", self.rstpdwnmodule().bit()),
-            )
-            .field("physleep", &format_args!("{}", self.physleep().bit()))
-            .field("l1suspended", &format_args!("{}", self.l1suspended().bit()))
-            .field(
-                "resetaftersusp",
-                &format_args!("{}", self.resetaftersusp().bit()),
-            )
+            .field("stoppclk", &self.stoppclk())
+            .field("gatehclk", &self.gatehclk())
+            .field("pwrclmp", &self.pwrclmp())
+            .field("rstpdwnmodule", &self.rstpdwnmodule())
+            .field("physleep", &self.physleep())
+            .field("l1suspended", &self.l1suspended())
+            .field("resetaftersusp", &self.resetaftersusp())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PCGCCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

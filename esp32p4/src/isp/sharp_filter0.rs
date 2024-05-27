@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_FILTER0")
-            .field(
-                "sharp_filter_coe00",
-                &format_args!("{}", self.sharp_filter_coe00().bits()),
-            )
-            .field(
-                "sharp_filter_coe01",
-                &format_args!("{}", self.sharp_filter_coe01().bits()),
-            )
-            .field(
-                "sharp_filter_coe02",
-                &format_args!("{}", self.sharp_filter_coe02().bits()),
-            )
+            .field("sharp_filter_coe00", &self.sharp_filter_coe00())
+            .field("sharp_filter_coe01", &self.sharp_filter_coe01())
+            .field("sharp_filter_coe02", &self.sharp_filter_coe02())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SHARP_FILTER0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

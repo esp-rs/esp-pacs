@@ -80,45 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_CNT_INT_RAW")
-            .field(
-                "l2_ibus0_ovf_int_raw",
-                &format_args!("{}", self.l2_ibus0_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_ibus1_ovf_int_raw",
-                &format_args!("{}", self.l2_ibus1_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_ibus2_ovf_int_raw",
-                &format_args!("{}", self.l2_ibus2_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_ibus3_ovf_int_raw",
-                &format_args!("{}", self.l2_ibus3_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_dbus0_ovf_int_raw",
-                &format_args!("{}", self.l2_dbus0_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_dbus1_ovf_int_raw",
-                &format_args!("{}", self.l2_dbus1_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_dbus2_ovf_int_raw",
-                &format_args!("{}", self.l2_dbus2_ovf_int_raw().bit()),
-            )
-            .field(
-                "l2_dbus3_ovf_int_raw",
-                &format_args!("{}", self.l2_dbus3_ovf_int_raw().bit()),
-            )
+            .field("l2_ibus0_ovf_int_raw", &self.l2_ibus0_ovf_int_raw())
+            .field("l2_ibus1_ovf_int_raw", &self.l2_ibus1_ovf_int_raw())
+            .field("l2_ibus2_ovf_int_raw", &self.l2_ibus2_ovf_int_raw())
+            .field("l2_ibus3_ovf_int_raw", &self.l2_ibus3_ovf_int_raw())
+            .field("l2_dbus0_ovf_int_raw", &self.l2_dbus0_ovf_int_raw())
+            .field("l2_dbus1_ovf_int_raw", &self.l2_dbus1_ovf_int_raw())
+            .field("l2_dbus2_ovf_int_raw", &self.l2_dbus2_ovf_int_raw())
+            .field("l2_dbus3_ovf_int_raw", &self.l2_dbus3_ovf_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

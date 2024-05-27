@@ -42,29 +42,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RNG_CFG")
-            .field(
-                "rng_timer_en",
-                &format_args!("{}", self.rng_timer_en().bit()),
-            )
-            .field(
-                "rng_timer_pscale",
-                &format_args!("{}", self.rng_timer_pscale().bits()),
-            )
-            .field(
-                "rng_sar_enable",
-                &format_args!("{}", self.rng_sar_enable().bit()),
-            )
-            .field(
-                "rng_sar_data",
-                &format_args!("{}", self.rng_sar_data().bits()),
-            )
+            .field("rng_timer_en", &self.rng_timer_en())
+            .field("rng_timer_pscale", &self.rng_timer_pscale())
+            .field("rng_sar_enable", &self.rng_sar_enable())
+            .field("rng_sar_data", &self.rng_sar_data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RNG_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

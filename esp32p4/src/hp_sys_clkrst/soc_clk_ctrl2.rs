@@ -296,141 +296,39 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SOC_CLK_CTRL2")
-            .field(
-                "rmt_sys_clk_en",
-                &format_args!("{}", self.rmt_sys_clk_en().bit()),
-            )
-            .field(
-                "hp_clkrst_apb_clk_en",
-                &format_args!("{}", self.hp_clkrst_apb_clk_en().bit()),
-            )
-            .field(
-                "sysreg_apb_clk_en",
-                &format_args!("{}", self.sysreg_apb_clk_en().bit()),
-            )
-            .field(
-                "icm_apb_clk_en",
-                &format_args!("{}", self.icm_apb_clk_en().bit()),
-            )
-            .field(
-                "intrmtx_apb_clk_en",
-                &format_args!("{}", self.intrmtx_apb_clk_en().bit()),
-            )
-            .field(
-                "adc_apb_clk_en",
-                &format_args!("{}", self.adc_apb_clk_en().bit()),
-            )
-            .field(
-                "uhci_apb_clk_en",
-                &format_args!("{}", self.uhci_apb_clk_en().bit()),
-            )
-            .field(
-                "uart0_apb_clk_en",
-                &format_args!("{}", self.uart0_apb_clk_en().bit()),
-            )
-            .field(
-                "uart1_apb_clk_en",
-                &format_args!("{}", self.uart1_apb_clk_en().bit()),
-            )
-            .field(
-                "uart2_apb_clk_en",
-                &format_args!("{}", self.uart2_apb_clk_en().bit()),
-            )
-            .field(
-                "uart3_apb_clk_en",
-                &format_args!("{}", self.uart3_apb_clk_en().bit()),
-            )
-            .field(
-                "uart4_apb_clk_en",
-                &format_args!("{}", self.uart4_apb_clk_en().bit()),
-            )
-            .field(
-                "i2c0_apb_clk_en",
-                &format_args!("{}", self.i2c0_apb_clk_en().bit()),
-            )
-            .field(
-                "i2c1_apb_clk_en",
-                &format_args!("{}", self.i2c1_apb_clk_en().bit()),
-            )
-            .field(
-                "i2s0_apb_clk_en",
-                &format_args!("{}", self.i2s0_apb_clk_en().bit()),
-            )
-            .field(
-                "i2s1_apb_clk_en",
-                &format_args!("{}", self.i2s1_apb_clk_en().bit()),
-            )
-            .field(
-                "i2s2_apb_clk_en",
-                &format_args!("{}", self.i2s2_apb_clk_en().bit()),
-            )
-            .field(
-                "i3c_mst_apb_clk_en",
-                &format_args!("{}", self.i3c_mst_apb_clk_en().bit()),
-            )
-            .field(
-                "i3c_slv_apb_clk_en",
-                &format_args!("{}", self.i3c_slv_apb_clk_en().bit()),
-            )
-            .field(
-                "gpspi2_apb_clk_en",
-                &format_args!("{}", self.gpspi2_apb_clk_en().bit()),
-            )
-            .field(
-                "gpspi3_apb_clk_en",
-                &format_args!("{}", self.gpspi3_apb_clk_en().bit()),
-            )
-            .field(
-                "timergrp0_apb_clk_en",
-                &format_args!("{}", self.timergrp0_apb_clk_en().bit()),
-            )
-            .field(
-                "timergrp1_apb_clk_en",
-                &format_args!("{}", self.timergrp1_apb_clk_en().bit()),
-            )
-            .field(
-                "systimer_apb_clk_en",
-                &format_args!("{}", self.systimer_apb_clk_en().bit()),
-            )
-            .field(
-                "twai0_apb_clk_en",
-                &format_args!("{}", self.twai0_apb_clk_en().bit()),
-            )
-            .field(
-                "twai1_apb_clk_en",
-                &format_args!("{}", self.twai1_apb_clk_en().bit()),
-            )
-            .field(
-                "twai2_apb_clk_en",
-                &format_args!("{}", self.twai2_apb_clk_en().bit()),
-            )
-            .field(
-                "mcpwm0_apb_clk_en",
-                &format_args!("{}", self.mcpwm0_apb_clk_en().bit()),
-            )
-            .field(
-                "mcpwm1_apb_clk_en",
-                &format_args!("{}", self.mcpwm1_apb_clk_en().bit()),
-            )
-            .field(
-                "usb_device_apb_clk_en",
-                &format_args!("{}", self.usb_device_apb_clk_en().bit()),
-            )
-            .field(
-                "pcnt_apb_clk_en",
-                &format_args!("{}", self.pcnt_apb_clk_en().bit()),
-            )
-            .field(
-                "parlio_apb_clk_en",
-                &format_args!("{}", self.parlio_apb_clk_en().bit()),
-            )
+            .field("rmt_sys_clk_en", &self.rmt_sys_clk_en())
+            .field("hp_clkrst_apb_clk_en", &self.hp_clkrst_apb_clk_en())
+            .field("sysreg_apb_clk_en", &self.sysreg_apb_clk_en())
+            .field("icm_apb_clk_en", &self.icm_apb_clk_en())
+            .field("intrmtx_apb_clk_en", &self.intrmtx_apb_clk_en())
+            .field("adc_apb_clk_en", &self.adc_apb_clk_en())
+            .field("uhci_apb_clk_en", &self.uhci_apb_clk_en())
+            .field("uart0_apb_clk_en", &self.uart0_apb_clk_en())
+            .field("uart1_apb_clk_en", &self.uart1_apb_clk_en())
+            .field("uart2_apb_clk_en", &self.uart2_apb_clk_en())
+            .field("uart3_apb_clk_en", &self.uart3_apb_clk_en())
+            .field("uart4_apb_clk_en", &self.uart4_apb_clk_en())
+            .field("i2c0_apb_clk_en", &self.i2c0_apb_clk_en())
+            .field("i2c1_apb_clk_en", &self.i2c1_apb_clk_en())
+            .field("i2s0_apb_clk_en", &self.i2s0_apb_clk_en())
+            .field("i2s1_apb_clk_en", &self.i2s1_apb_clk_en())
+            .field("i2s2_apb_clk_en", &self.i2s2_apb_clk_en())
+            .field("i3c_mst_apb_clk_en", &self.i3c_mst_apb_clk_en())
+            .field("i3c_slv_apb_clk_en", &self.i3c_slv_apb_clk_en())
+            .field("gpspi2_apb_clk_en", &self.gpspi2_apb_clk_en())
+            .field("gpspi3_apb_clk_en", &self.gpspi3_apb_clk_en())
+            .field("timergrp0_apb_clk_en", &self.timergrp0_apb_clk_en())
+            .field("timergrp1_apb_clk_en", &self.timergrp1_apb_clk_en())
+            .field("systimer_apb_clk_en", &self.systimer_apb_clk_en())
+            .field("twai0_apb_clk_en", &self.twai0_apb_clk_en())
+            .field("twai1_apb_clk_en", &self.twai1_apb_clk_en())
+            .field("twai2_apb_clk_en", &self.twai2_apb_clk_en())
+            .field("mcpwm0_apb_clk_en", &self.mcpwm0_apb_clk_en())
+            .field("mcpwm1_apb_clk_en", &self.mcpwm1_apb_clk_en())
+            .field("usb_device_apb_clk_en", &self.usb_device_apb_clk_en())
+            .field("pcnt_apb_clk_en", &self.pcnt_apb_clk_en())
+            .field("parlio_apb_clk_en", &self.parlio_apb_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SOC_CLK_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

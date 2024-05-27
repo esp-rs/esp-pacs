@@ -71,20 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_DRV_CFG")
-            .field("pump_en", &format_args!("{}", self.pump_en().bit()))
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field("pump_drv4", &format_args!("{}", self.pump_drv4().bits()))
-            .field("pump_drv3", &format_args!("{}", self.pump_drv3().bits()))
-            .field("pump_drv2", &format_args!("{}", self.pump_drv2().bits()))
-            .field("pump_drv1", &format_args!("{}", self.pump_drv1().bits()))
-            .field("pump_drv0", &format_args!("{}", self.pump_drv0().bits()))
+            .field("pump_en", &self.pump_en())
+            .field("clk_en", &self.clk_en())
+            .field("pump_drv4", &self.pump_drv4())
+            .field("pump_drv3", &self.pump_drv3())
+            .field("pump_drv2", &self.pump_drv2())
+            .field("pump_drv1", &self.pump_drv1())
+            .field("pump_drv0", &self.pump_drv0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PMUP_DRV_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

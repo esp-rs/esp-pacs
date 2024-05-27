@@ -48,31 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_RX_STATUS")
-            .field(
-                "mem_waddr_ex",
-                &format_args!("{}", self.mem_waddr_ex().bits()),
-            )
-            .field(
-                "apb_mem_raddr",
-                &format_args!("{}", self.apb_mem_raddr().bits()),
-            )
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field(
-                "mem_owner_err",
-                &format_args!("{}", self.mem_owner_err().bit()),
-            )
-            .field("mem_full", &format_args!("{}", self.mem_full().bit()))
-            .field(
-                "apb_mem_rd_err",
-                &format_args!("{}", self.apb_mem_rd_err().bit()),
-            )
+            .field("mem_waddr_ex", &self.mem_waddr_ex())
+            .field("apb_mem_raddr", &self.apb_mem_raddr())
+            .field("state", &self.state())
+            .field("mem_owner_err", &self.mem_owner_err())
+            .field("mem_full", &self.mem_full())
+            .field("apb_mem_rd_err", &self.apb_mem_rd_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH_RX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RMT_CH2STATUS_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_rx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

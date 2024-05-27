@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_ICG_MODEM")
             .field(
                 "hp_sleep_dig_icg_modem_code",
-                &format_args!("{}", self.hp_sleep_dig_icg_modem_code().bits()),
+                &self.hp_sleep_dig_icg_modem_code(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_ICG_MODEM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

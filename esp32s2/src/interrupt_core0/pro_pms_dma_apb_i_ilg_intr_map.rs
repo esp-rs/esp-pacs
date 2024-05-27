@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_PMS_DMA_APB_I_ILG_INTR_MAP")
             .field(
                 "pro_pms_dma_apb_i_ilg_intr_map",
-                &format_args!("{}", self.pro_pms_dma_apb_i_ilg_intr_map().bits()),
+                &self.pro_pms_dma_apb_i_ilg_intr_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_PMS_DMA_APB_I_ILG_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

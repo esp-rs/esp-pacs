@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_CORE1_ACS_INT_MAP")
-            .field(
-                "cache_core1_acs_int_map",
-                &format_args!("{}", self.cache_core1_acs_int_map().bits()),
-            )
+            .field("cache_core1_acs_int_map", &self.cache_core1_acs_int_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_CORE1_ACS_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

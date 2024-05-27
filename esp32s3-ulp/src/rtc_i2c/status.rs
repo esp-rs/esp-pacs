@@ -76,32 +76,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("ack_rec", &format_args!("{}", self.ack_rec().bit()))
-            .field("slave_rw", &format_args!("{}", self.slave_rw().bit()))
-            .field("arb_lost", &format_args!("{}", self.arb_lost().bit()))
-            .field("bus_busy", &format_args!("{}", self.bus_busy().bit()))
-            .field(
-                "slave_addressed",
-                &format_args!("{}", self.slave_addressed().bit()),
-            )
-            .field("byte_trans", &format_args!("{}", self.byte_trans().bit()))
-            .field("op_cnt", &format_args!("{}", self.op_cnt().bits()))
-            .field("shift", &format_args!("{}", self.shift().bits()))
-            .field(
-                "scl_main_state_last",
-                &format_args!("{}", self.scl_main_state_last().bits()),
-            )
-            .field(
-                "scl_state_last",
-                &format_args!("{}", self.scl_state_last().bits()),
-            )
+            .field("ack_rec", &self.ack_rec())
+            .field("slave_rw", &self.slave_rw())
+            .field("arb_lost", &self.arb_lost())
+            .field("bus_busy", &self.bus_busy())
+            .field("slave_addressed", &self.slave_addressed())
+            .field("byte_trans", &self.byte_trans())
+            .field("op_cnt", &self.op_cnt())
+            .field("shift", &self.shift())
+            .field("scl_main_state_last", &self.scl_main_state_last())
+            .field("scl_state_last", &self.scl_state_last())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "get i2c status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

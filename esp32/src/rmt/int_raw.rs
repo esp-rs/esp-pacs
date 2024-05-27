@@ -234,69 +234,39 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("ch0_tx_end", &format_args!("{}", self.ch0_tx_end().bit()))
-            .field("ch1_tx_end", &format_args!("{}", self.ch1_tx_end().bit()))
-            .field("ch2_tx_end", &format_args!("{}", self.ch2_tx_end().bit()))
-            .field("ch3_tx_end", &format_args!("{}", self.ch3_tx_end().bit()))
-            .field("ch4_tx_end", &format_args!("{}", self.ch4_tx_end().bit()))
-            .field("ch5_tx_end", &format_args!("{}", self.ch5_tx_end().bit()))
-            .field("ch6_tx_end", &format_args!("{}", self.ch6_tx_end().bit()))
-            .field("ch7_tx_end", &format_args!("{}", self.ch7_tx_end().bit()))
-            .field("ch0_rx_end", &format_args!("{}", self.ch0_rx_end().bit()))
-            .field("ch1_rx_end", &format_args!("{}", self.ch1_rx_end().bit()))
-            .field("ch2_rx_end", &format_args!("{}", self.ch2_rx_end().bit()))
-            .field("ch3_rx_end", &format_args!("{}", self.ch3_rx_end().bit()))
-            .field("ch4_rx_end", &format_args!("{}", self.ch4_rx_end().bit()))
-            .field("ch5_rx_end", &format_args!("{}", self.ch5_rx_end().bit()))
-            .field("ch6_rx_end", &format_args!("{}", self.ch6_rx_end().bit()))
-            .field("ch7_rx_end", &format_args!("{}", self.ch7_rx_end().bit()))
-            .field("ch0_err", &format_args!("{}", self.ch0_err().bit()))
-            .field("ch1_err", &format_args!("{}", self.ch1_err().bit()))
-            .field("ch2_err", &format_args!("{}", self.ch2_err().bit()))
-            .field("ch3_err", &format_args!("{}", self.ch3_err().bit()))
-            .field("ch4_err", &format_args!("{}", self.ch4_err().bit()))
-            .field("ch5_err", &format_args!("{}", self.ch5_err().bit()))
-            .field("ch6_err", &format_args!("{}", self.ch6_err().bit()))
-            .field("ch7_err", &format_args!("{}", self.ch7_err().bit()))
-            .field(
-                "ch0_tx_thr_event",
-                &format_args!("{}", self.ch0_tx_thr_event().bit()),
-            )
-            .field(
-                "ch1_tx_thr_event",
-                &format_args!("{}", self.ch1_tx_thr_event().bit()),
-            )
-            .field(
-                "ch2_tx_thr_event",
-                &format_args!("{}", self.ch2_tx_thr_event().bit()),
-            )
-            .field(
-                "ch3_tx_thr_event",
-                &format_args!("{}", self.ch3_tx_thr_event().bit()),
-            )
-            .field(
-                "ch4_tx_thr_event",
-                &format_args!("{}", self.ch4_tx_thr_event().bit()),
-            )
-            .field(
-                "ch5_tx_thr_event",
-                &format_args!("{}", self.ch5_tx_thr_event().bit()),
-            )
-            .field(
-                "ch6_tx_thr_event",
-                &format_args!("{}", self.ch6_tx_thr_event().bit()),
-            )
-            .field(
-                "ch7_tx_thr_event",
-                &format_args!("{}", self.ch7_tx_thr_event().bit()),
-            )
+            .field("ch0_tx_end", &self.ch0_tx_end())
+            .field("ch1_tx_end", &self.ch1_tx_end())
+            .field("ch2_tx_end", &self.ch2_tx_end())
+            .field("ch3_tx_end", &self.ch3_tx_end())
+            .field("ch4_tx_end", &self.ch4_tx_end())
+            .field("ch5_tx_end", &self.ch5_tx_end())
+            .field("ch6_tx_end", &self.ch6_tx_end())
+            .field("ch7_tx_end", &self.ch7_tx_end())
+            .field("ch0_rx_end", &self.ch0_rx_end())
+            .field("ch1_rx_end", &self.ch1_rx_end())
+            .field("ch2_rx_end", &self.ch2_rx_end())
+            .field("ch3_rx_end", &self.ch3_rx_end())
+            .field("ch4_rx_end", &self.ch4_rx_end())
+            .field("ch5_rx_end", &self.ch5_rx_end())
+            .field("ch6_rx_end", &self.ch6_rx_end())
+            .field("ch7_rx_end", &self.ch7_rx_end())
+            .field("ch0_err", &self.ch0_err())
+            .field("ch1_err", &self.ch1_err())
+            .field("ch2_err", &self.ch2_err())
+            .field("ch3_err", &self.ch3_err())
+            .field("ch4_err", &self.ch4_err())
+            .field("ch5_err", &self.ch5_err())
+            .field("ch6_err", &self.ch6_err())
+            .field("ch7_err", &self.ch7_err())
+            .field("ch0_tx_thr_event", &self.ch0_tx_thr_event())
+            .field("ch1_tx_thr_event", &self.ch1_tx_thr_event())
+            .field("ch2_tx_thr_event", &self.ch2_tx_thr_event())
+            .field("ch3_tx_thr_event", &self.ch3_tx_thr_event())
+            .field("ch4_tx_thr_event", &self.ch4_tx_thr_event())
+            .field("ch5_tx_thr_event", &self.ch5_tx_thr_event())
+            .field("ch6_tx_thr_event", &self.ch6_tx_thr_event())
+            .field("ch7_tx_thr_event", &self.ch7_tx_thr_event())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSIZ")
-            .field("xfersize", &format_args!("{}", self.xfersize().bits()))
-            .field("pktcnt", &format_args!("{}", self.pktcnt().bits()))
-            .field("pid", &format_args!("{}", self.pid().bits()))
-            .field("dopng", &format_args!("{}", self.dopng().bit()))
+            .field("xfersize", &self.xfersize())
+            .field("pktcnt", &self.pktcnt())
+            .field("pid", &self.pid())
+            .field("dopng", &self.dopng())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TSIZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

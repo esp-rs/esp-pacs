@@ -105,65 +105,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_CACHESIZE_CONF")
-            .field(
-                "l2_cache_cachesize_256",
-                &format_args!("{}", self.l2_cache_cachesize_256().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_512",
-                &format_args!("{}", self.l2_cache_cachesize_512().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_1k",
-                &format_args!("{}", self.l2_cache_cachesize_1k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_2k",
-                &format_args!("{}", self.l2_cache_cachesize_2k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_4k",
-                &format_args!("{}", self.l2_cache_cachesize_4k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_8k",
-                &format_args!("{}", self.l2_cache_cachesize_8k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_16k",
-                &format_args!("{}", self.l2_cache_cachesize_16k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_32k",
-                &format_args!("{}", self.l2_cache_cachesize_32k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_64k",
-                &format_args!("{}", self.l2_cache_cachesize_64k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_128k",
-                &format_args!("{}", self.l2_cache_cachesize_128k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_256k",
-                &format_args!("{}", self.l2_cache_cachesize_256k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_512k",
-                &format_args!("{}", self.l2_cache_cachesize_512k().bit()),
-            )
-            .field(
-                "l2_cache_cachesize_1024k",
-                &format_args!("{}", self.l2_cache_cachesize_1024k().bit()),
-            )
+            .field("l2_cache_cachesize_256", &self.l2_cache_cachesize_256())
+            .field("l2_cache_cachesize_512", &self.l2_cache_cachesize_512())
+            .field("l2_cache_cachesize_1k", &self.l2_cache_cachesize_1k())
+            .field("l2_cache_cachesize_2k", &self.l2_cache_cachesize_2k())
+            .field("l2_cache_cachesize_4k", &self.l2_cache_cachesize_4k())
+            .field("l2_cache_cachesize_8k", &self.l2_cache_cachesize_8k())
+            .field("l2_cache_cachesize_16k", &self.l2_cache_cachesize_16k())
+            .field("l2_cache_cachesize_32k", &self.l2_cache_cachesize_32k())
+            .field("l2_cache_cachesize_64k", &self.l2_cache_cachesize_64k())
+            .field("l2_cache_cachesize_128k", &self.l2_cache_cachesize_128k())
+            .field("l2_cache_cachesize_256k", &self.l2_cache_cachesize_256k())
+            .field("l2_cache_cachesize_512k", &self.l2_cache_cachesize_512k())
+            .field("l2_cache_cachesize_1024k", &self.l2_cache_cachesize_1024k())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_CACHESIZE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

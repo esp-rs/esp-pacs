@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CACHE_3")
-            .field(
-                "pro_cache_ilg_st_i",
-                &format_args!("{}", self.pro_cache_ilg_st_i().bits()),
-            )
+            .field("pro_cache_ilg_st_i", &self.pro_cache_ilg_st_i())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Icache status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_cache_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

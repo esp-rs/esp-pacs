@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLEND_BYTE_ORDER")
-            .field(
-                "blend0_rx_byte_swap_en",
-                &format_args!("{}", self.blend0_rx_byte_swap_en().bit()),
-            )
-            .field(
-                "blend1_rx_byte_swap_en",
-                &format_args!("{}", self.blend1_rx_byte_swap_en().bit()),
-            )
-            .field(
-                "blend0_rx_rgb_swap_en",
-                &format_args!("{}", self.blend0_rx_rgb_swap_en().bit()),
-            )
-            .field(
-                "blend1_rx_rgb_swap_en",
-                &format_args!("{}", self.blend1_rx_rgb_swap_en().bit()),
-            )
+            .field("blend0_rx_byte_swap_en", &self.blend0_rx_byte_swap_en())
+            .field("blend1_rx_byte_swap_en", &self.blend1_rx_byte_swap_en())
+            .field("blend0_rx_rgb_swap_en", &self.blend0_rx_rgb_swap_en())
+            .field("blend1_rx_rgb_swap_en", &self.blend1_rx_rgb_swap_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLEND_BYTE_ORDER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

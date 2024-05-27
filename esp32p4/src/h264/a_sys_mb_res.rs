@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_SYS_MB_RES")
-            .field(
-                "a_sys_total_mb_y",
-                &format_args!("{}", self.a_sys_total_mb_y().bits()),
-            )
-            .field(
-                "a_sys_total_mb_x",
-                &format_args!("{}", self.a_sys_total_mb_x().bits()),
-            )
+            .field("a_sys_total_mb_y", &self.a_sys_total_mb_y())
+            .field("a_sys_total_mb_x", &self.a_sys_total_mb_x())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_SYS_MB_RES_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

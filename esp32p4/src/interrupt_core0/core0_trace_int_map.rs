@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE0_TRACE_INT_MAP")
             .field(
                 "core0_core0_trace_int_map",
-                &format_args!("{}", self.core0_core0_trace_int_map().bits()),
+                &self.core0_core0_trace_int_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE0_TRACE_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CARDTHRCTL")
-            .field("cardrdthren", &format_args!("{}", self.cardrdthren().bit()))
-            .field(
-                "cardclrinten",
-                &format_args!("{}", self.cardclrinten().bit()),
-            )
-            .field("cardwrthren", &format_args!("{}", self.cardwrthren().bit()))
-            .field(
-                "cardthreshold",
-                &format_args!("{}", self.cardthreshold().bits()),
-            )
+            .field("cardrdthren", &self.cardrdthren())
+            .field("cardclrinten", &self.cardclrinten())
+            .field("cardwrthren", &self.cardwrthren())
+            .field("cardthreshold", &self.cardthreshold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CARDTHRCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -206,101 +206,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_EN")
-            .field(
-                "task_cmpr0_a_up_en",
-                &format_args!("{}", self.task_cmpr0_a_up_en().bit()),
-            )
-            .field(
-                "task_cmpr1_a_up_en",
-                &format_args!("{}", self.task_cmpr1_a_up_en().bit()),
-            )
-            .field(
-                "task_cmpr2_a_up_en",
-                &format_args!("{}", self.task_cmpr2_a_up_en().bit()),
-            )
-            .field(
-                "task_cmpr0_b_up_en",
-                &format_args!("{}", self.task_cmpr0_b_up_en().bit()),
-            )
-            .field(
-                "task_cmpr1_b_up_en",
-                &format_args!("{}", self.task_cmpr1_b_up_en().bit()),
-            )
-            .field(
-                "task_cmpr2_b_up_en",
-                &format_args!("{}", self.task_cmpr2_b_up_en().bit()),
-            )
-            .field(
-                "task_gen_stop_en",
-                &format_args!("{}", self.task_gen_stop_en().bit()),
-            )
-            .field(
-                "task_timer0_sync_en",
-                &format_args!("{}", self.task_timer0_sync_en().bit()),
-            )
-            .field(
-                "task_timer1_sync_en",
-                &format_args!("{}", self.task_timer1_sync_en().bit()),
-            )
-            .field(
-                "task_timer2_sync_en",
-                &format_args!("{}", self.task_timer2_sync_en().bit()),
-            )
-            .field(
-                "task_timer0_period_up_en",
-                &format_args!("{}", self.task_timer0_period_up_en().bit()),
-            )
-            .field(
-                "task_timer1_period_up_en",
-                &format_args!("{}", self.task_timer1_period_up_en().bit()),
-            )
-            .field(
-                "task_timer2_period_up_en",
-                &format_args!("{}", self.task_timer2_period_up_en().bit()),
-            )
-            .field(
-                "task_tz0_ost_en",
-                &format_args!("{}", self.task_tz0_ost_en().bit()),
-            )
-            .field(
-                "task_tz1_ost_en",
-                &format_args!("{}", self.task_tz1_ost_en().bit()),
-            )
-            .field(
-                "task_tz2_ost_en",
-                &format_args!("{}", self.task_tz2_ost_en().bit()),
-            )
-            .field(
-                "task_clr0_ost_en",
-                &format_args!("{}", self.task_clr0_ost_en().bit()),
-            )
-            .field(
-                "task_clr1_ost_en",
-                &format_args!("{}", self.task_clr1_ost_en().bit()),
-            )
-            .field(
-                "task_clr2_ost_en",
-                &format_args!("{}", self.task_clr2_ost_en().bit()),
-            )
-            .field(
-                "task_cap0_en",
-                &format_args!("{}", self.task_cap0_en().bit()),
-            )
-            .field(
-                "task_cap1_en",
-                &format_args!("{}", self.task_cap1_en().bit()),
-            )
-            .field(
-                "task_cap2_en",
-                &format_args!("{}", self.task_cap2_en().bit()),
-            )
+            .field("task_cmpr0_a_up_en", &self.task_cmpr0_a_up_en())
+            .field("task_cmpr1_a_up_en", &self.task_cmpr1_a_up_en())
+            .field("task_cmpr2_a_up_en", &self.task_cmpr2_a_up_en())
+            .field("task_cmpr0_b_up_en", &self.task_cmpr0_b_up_en())
+            .field("task_cmpr1_b_up_en", &self.task_cmpr1_b_up_en())
+            .field("task_cmpr2_b_up_en", &self.task_cmpr2_b_up_en())
+            .field("task_gen_stop_en", &self.task_gen_stop_en())
+            .field("task_timer0_sync_en", &self.task_timer0_sync_en())
+            .field("task_timer1_sync_en", &self.task_timer1_sync_en())
+            .field("task_timer2_sync_en", &self.task_timer2_sync_en())
+            .field("task_timer0_period_up_en", &self.task_timer0_period_up_en())
+            .field("task_timer1_period_up_en", &self.task_timer1_period_up_en())
+            .field("task_timer2_period_up_en", &self.task_timer2_period_up_en())
+            .field("task_tz0_ost_en", &self.task_tz0_ost_en())
+            .field("task_tz1_ost_en", &self.task_tz1_ost_en())
+            .field("task_tz2_ost_en", &self.task_tz2_ost_en())
+            .field("task_clr0_ost_en", &self.task_clr0_ost_en())
+            .field("task_clr1_ost_en", &self.task_clr1_ost_en())
+            .field("task_clr2_ost_en", &self.task_clr2_ost_en())
+            .field("task_cap0_en", &self.task_cap0_en())
+            .field("task_cap1_en", &self.task_cap1_en())
+            .field("task_cap2_en", &self.task_cap2_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

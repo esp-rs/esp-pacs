@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INF0_SHORT_ADDR")
-            .field(
-                "mac_inf0_short_addr",
-                &format_args!("{}", self.mac_inf0_short_addr().bits()),
-            )
+            .field("mac_inf0_short_addr", &self.mac_inf0_short_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INF0_SHORT_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

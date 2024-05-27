@@ -19,17 +19,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK_RAW_NUM_CFG")
-            .field(
-                "blk_raw_num_total",
-                &format_args!("{}", self.blk_raw_num_total().bits()),
-            )
+            .field("blk_raw_num_total", &self.blk_raw_num_total())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK_RAW_NUM_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

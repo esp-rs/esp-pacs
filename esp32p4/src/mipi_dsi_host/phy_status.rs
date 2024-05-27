@@ -69,46 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_STATUS")
-            .field("phy_lock", &format_args!("{}", self.phy_lock().bit()))
-            .field(
-                "phy_direction",
-                &format_args!("{}", self.phy_direction().bit()),
-            )
-            .field(
-                "phy_stopstateclklane",
-                &format_args!("{}", self.phy_stopstateclklane().bit()),
-            )
-            .field(
-                "phy_ulpsactivenotclk",
-                &format_args!("{}", self.phy_ulpsactivenotclk().bit()),
-            )
-            .field(
-                "phy_stopstate0lane",
-                &format_args!("{}", self.phy_stopstate0lane().bit()),
-            )
-            .field(
-                "phy_ulpsactivenot0lane",
-                &format_args!("{}", self.phy_ulpsactivenot0lane().bit()),
-            )
-            .field(
-                "phy_rxulpsesc0lane",
-                &format_args!("{}", self.phy_rxulpsesc0lane().bit()),
-            )
-            .field(
-                "phy_stopstate1lane",
-                &format_args!("{}", self.phy_stopstate1lane().bit()),
-            )
-            .field(
-                "phy_ulpsactivenot1lane",
-                &format_args!("{}", self.phy_ulpsactivenot1lane().bit()),
-            )
+            .field("phy_lock", &self.phy_lock())
+            .field("phy_direction", &self.phy_direction())
+            .field("phy_stopstateclklane", &self.phy_stopstateclklane())
+            .field("phy_ulpsactivenotclk", &self.phy_ulpsactivenotclk())
+            .field("phy_stopstate0lane", &self.phy_stopstate0lane())
+            .field("phy_ulpsactivenot0lane", &self.phy_ulpsactivenot0lane())
+            .field("phy_rxulpsesc0lane", &self.phy_rxulpsesc0lane())
+            .field("phy_stopstate1lane", &self.phy_stopstate1lane())
+            .field("phy_ulpsactivenot1lane", &self.phy_ulpsactivenot1lane())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`phy_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AWB0_ACC_B")
-            .field("awb0_acc_b", &format_args!("{}", self.awb0_acc_b().bits()))
+            .field("awb0_acc_b", &self.awb0_acc_b())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AWB0_ACC_B_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "result of accumulate of b channel of all white points\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`awb0_acc_b::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

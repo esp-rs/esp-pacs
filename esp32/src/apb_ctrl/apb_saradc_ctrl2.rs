@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB_SARADC_CTRL2")
-            .field(
-                "saradc_meas_num_limit",
-                &format_args!("{}", self.saradc_meas_num_limit().bit()),
-            )
-            .field(
-                "saradc_max_meas_num",
-                &format_args!("{}", self.saradc_max_meas_num().bits()),
-            )
-            .field(
-                "saradc_sar1_inv",
-                &format_args!("{}", self.saradc_sar1_inv().bit()),
-            )
-            .field(
-                "saradc_sar2_inv",
-                &format_args!("{}", self.saradc_sar2_inv().bit()),
-            )
+            .field("saradc_meas_num_limit", &self.saradc_meas_num_limit())
+            .field("saradc_max_meas_num", &self.saradc_max_meas_num())
+            .field("saradc_sar1_inv", &self.saradc_sar1_inv())
+            .field("saradc_sar2_inv", &self.saradc_sar2_inv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB_SARADC_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

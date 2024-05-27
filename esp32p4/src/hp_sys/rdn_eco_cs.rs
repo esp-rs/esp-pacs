@@ -24,21 +24,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RDN_ECO_CS")
-            .field(
-                "reg_hp_sys_rdn_eco_en",
-                &format_args!("{}", self.reg_hp_sys_rdn_eco_en().bit()),
-            )
+            .field("reg_hp_sys_rdn_eco_en", &self.reg_hp_sys_rdn_eco_en())
             .field(
                 "reg_hp_sys_rdn_eco_result",
-                &format_args!("{}", self.reg_hp_sys_rdn_eco_result().bit()),
+                &self.reg_hp_sys_rdn_eco_result(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RDN_ECO_CS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

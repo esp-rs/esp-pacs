@@ -60,31 +60,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_LINK")
-            .field(
-                "inlink_addr",
-                &format_args!("{}", self.inlink_addr().bits()),
-            )
-            .field(
-                "inlink_auto_ret",
-                &format_args!("{}", self.inlink_auto_ret().bit()),
-            )
-            .field("inlink_stop", &format_args!("{}", self.inlink_stop().bit()))
-            .field(
-                "inlink_start",
-                &format_args!("{}", self.inlink_start().bit()),
-            )
-            .field(
-                "inlink_restart",
-                &format_args!("{}", self.inlink_restart().bit()),
-            )
-            .field("inlink_park", &format_args!("{}", self.inlink_park().bit()))
+            .field("inlink_addr", &self.inlink_addr())
+            .field("inlink_auto_ret", &self.inlink_auto_ret())
+            .field("inlink_stop", &self.inlink_stop())
+            .field("inlink_start", &self.inlink_start())
+            .field("inlink_restart", &self.inlink_restart())
+            .field("inlink_park", &self.inlink_park())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_LINK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

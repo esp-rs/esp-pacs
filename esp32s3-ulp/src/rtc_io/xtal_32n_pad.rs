@@ -89,31 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTAL_32N_PAD")
-            .field("x32n_fun_ie", &format_args!("{}", self.x32n_fun_ie().bit()))
-            .field("x32n_slp_oe", &format_args!("{}", self.x32n_slp_oe().bit()))
-            .field("x32n_slp_ie", &format_args!("{}", self.x32n_slp_ie().bit()))
-            .field(
-                "x32n_slp_sel",
-                &format_args!("{}", self.x32n_slp_sel().bit()),
-            )
-            .field(
-                "x32n_fun_sel",
-                &format_args!("{}", self.x32n_fun_sel().bits()),
-            )
-            .field(
-                "x32n_mux_sel",
-                &format_args!("{}", self.x32n_mux_sel().bit()),
-            )
-            .field("x32n_rue", &format_args!("{}", self.x32n_rue().bit()))
-            .field("x32n_rde", &format_args!("{}", self.x32n_rde().bit()))
-            .field("x32n_drv", &format_args!("{}", self.x32n_drv().bits()))
+            .field("x32n_fun_ie", &self.x32n_fun_ie())
+            .field("x32n_slp_oe", &self.x32n_slp_oe())
+            .field("x32n_slp_ie", &self.x32n_slp_ie())
+            .field("x32n_slp_sel", &self.x32n_slp_sel())
+            .field("x32n_fun_sel", &self.x32n_fun_sel())
+            .field("x32n_mux_sel", &self.x32n_mux_sel())
+            .field("x32n_rue", &self.x32n_rue())
+            .field("x32n_rde", &self.x32n_rde())
+            .field("x32n_drv", &self.x32n_drv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<XTAL_32N_PAD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

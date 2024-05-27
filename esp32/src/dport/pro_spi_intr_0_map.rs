@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_SPI_INTR_0_MAP")
-            .field(
-                "pro_spi_intr_0_map",
-                &format_args!("{}", self.pro_spi_intr_0_map().bits()),
-            )
+            .field("pro_spi_intr_0_map", &self.pro_spi_intr_0_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_SPI_INTR_0_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

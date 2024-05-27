@@ -150,79 +150,61 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_2")
             .field(
                 "core_0_pif_pms_constrain_world_0_bt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_bt().bits()),
+                &self.core_0_pif_pms_constrain_world_0_bt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_i2c_ext0",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_i2c_ext0().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_i2c_ext0(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_uhci0",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_uhci0().bits()),
+                &self.core_0_pif_pms_constrain_world_0_uhci0(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_slchost",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_slchost().bits()),
+                &self.core_0_pif_pms_constrain_world_0_slchost(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_rmt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_rmt().bits()),
+                &self.core_0_pif_pms_constrain_world_0_rmt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_pcnt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_pcnt().bits()),
+                &self.core_0_pif_pms_constrain_world_0_pcnt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_slc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_slc().bits()),
+                &self.core_0_pif_pms_constrain_world_0_slc(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_ledc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_ledc().bits()),
+                &self.core_0_pif_pms_constrain_world_0_ledc(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_backup",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_backup().bits()),
+                &self.core_0_pif_pms_constrain_world_0_backup(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_bb",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_bb().bits()),
+                &self.core_0_pif_pms_constrain_world_0_bb(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_pwm0",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_0_pwm0().bits()),
+                &self.core_0_pif_pms_constrain_world_0_pwm0(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_timergroup",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_timergroup().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_timergroup(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_timergroup1",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_timergroup1().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_timergroup1(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_0_systimer",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_0_systimer().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_0_systimer(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

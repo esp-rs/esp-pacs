@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DPORT_7")
-            .field(
-                "pro_dport_ilg_st",
-                &format_args!("{}", self.pro_dport_ilg_st().bits()),
-            )
+            .field("pro_dport_ilg_st", &self.pro_dport_ilg_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DPORT_7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PeriBus1 status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dport_7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

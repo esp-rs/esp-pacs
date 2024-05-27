@@ -179,80 +179,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field(
-                "efuse_clk_force_gating",
-                &format_args!("{}", self.efuse_clk_force_gating().bit()),
-            )
-            .field(
-                "efuse_clk_force_nogating",
-                &format_args!("{}", self.efuse_clk_force_nogating().bit()),
-            )
-            .field(
-                "ck8m_div_sel_vld",
-                &format_args!("{}", self.ck8m_div_sel_vld().bit()),
-            )
-            .field("ck8m_div", &format_args!("{}", self.ck8m_div().bits()))
-            .field("enb_ck8m", &format_args!("{}", self.enb_ck8m().bit()))
-            .field(
-                "enb_ck8m_div",
-                &format_args!("{}", self.enb_ck8m_div().bit()),
-            )
-            .field(
-                "dig_xtal32k_en",
-                &format_args!("{}", self.dig_xtal32k_en().bit()),
-            )
-            .field(
-                "dig_clk8m_d256_en",
-                &format_args!("{}", self.dig_clk8m_d256_en().bit()),
-            )
-            .field(
-                "dig_clk8m_en",
-                &format_args!("{}", self.dig_clk8m_en().bit()),
-            )
-            .field(
-                "ck8m_div_sel",
-                &format_args!("{}", self.ck8m_div_sel().bits()),
-            )
-            .field(
-                "xtal_force_nogating",
-                &format_args!("{}", self.xtal_force_nogating().bit()),
-            )
-            .field(
-                "ck8m_force_nogating",
-                &format_args!("{}", self.ck8m_force_nogating().bit()),
-            )
-            .field("ck8m_dfreq", &format_args!("{}", self.ck8m_dfreq().bits()))
-            .field(
-                "ck8m_force_pd",
-                &format_args!("{}", self.ck8m_force_pd().bit()),
-            )
-            .field(
-                "ck8m_force_pu",
-                &format_args!("{}", self.ck8m_force_pu().bit()),
-            )
-            .field(
-                "xtal_global_force_gating",
-                &format_args!("{}", self.xtal_global_force_gating().bit()),
-            )
+            .field("efuse_clk_force_gating", &self.efuse_clk_force_gating())
+            .field("efuse_clk_force_nogating", &self.efuse_clk_force_nogating())
+            .field("ck8m_div_sel_vld", &self.ck8m_div_sel_vld())
+            .field("ck8m_div", &self.ck8m_div())
+            .field("enb_ck8m", &self.enb_ck8m())
+            .field("enb_ck8m_div", &self.enb_ck8m_div())
+            .field("dig_xtal32k_en", &self.dig_xtal32k_en())
+            .field("dig_clk8m_d256_en", &self.dig_clk8m_d256_en())
+            .field("dig_clk8m_en", &self.dig_clk8m_en())
+            .field("ck8m_div_sel", &self.ck8m_div_sel())
+            .field("xtal_force_nogating", &self.xtal_force_nogating())
+            .field("ck8m_force_nogating", &self.ck8m_force_nogating())
+            .field("ck8m_dfreq", &self.ck8m_dfreq())
+            .field("ck8m_force_pd", &self.ck8m_force_pd())
+            .field("ck8m_force_pu", &self.ck8m_force_pu())
+            .field("xtal_global_force_gating", &self.xtal_global_force_gating())
             .field(
                 "xtal_global_force_nogating",
-                &format_args!("{}", self.xtal_global_force_nogating().bit()),
+                &self.xtal_global_force_nogating(),
             )
-            .field(
-                "fast_clk_rtc_sel",
-                &format_args!("{}", self.fast_clk_rtc_sel().bit()),
-            )
-            .field(
-                "ana_clk_rtc_sel",
-                &format_args!("{}", self.ana_clk_rtc_sel().bits()),
-            )
+            .field("fast_clk_rtc_sel", &self.fast_clk_rtc_sel())
+            .field("ana_clk_rtc_sel", &self.ana_clk_rtc_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

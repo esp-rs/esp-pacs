@@ -71,20 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACFC")
-            .field("fcbba", &format_args!("{}", self.fcbba().bit()))
-            .field("tfce", &format_args!("{}", self.tfce().bit()))
-            .field("rfce", &format_args!("{}", self.rfce().bit()))
-            .field("upfd", &format_args!("{}", self.upfd().bit()))
-            .field("plt", &format_args!("{}", self.plt().bits()))
-            .field("dzpq", &format_args!("{}", self.dzpq().bit()))
-            .field("pause_time", &format_args!("{}", self.pause_time().bits()))
+            .field("fcbba", &self.fcbba())
+            .field("tfce", &self.tfce())
+            .field("rfce", &self.rfce())
+            .field("upfd", &self.upfd())
+            .field("plt", &self.plt())
+            .field("dzpq", &self.dzpq())
+            .field("pause_time", &self.pause_time())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACFC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

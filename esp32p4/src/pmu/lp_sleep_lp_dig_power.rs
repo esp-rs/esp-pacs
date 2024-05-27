@@ -53,33 +53,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_SLEEP_LP_DIG_POWER")
-            .field(
-                "lp_sleep_lp_pad_slp_sel",
-                &format_args!("{}", self.lp_sleep_lp_pad_slp_sel().bit()),
-            )
-            .field(
-                "lp_sleep_bod_source_sel",
-                &format_args!("{}", self.lp_sleep_bod_source_sel().bit()),
-            )
-            .field(
-                "lp_sleep_vddbat_mode",
-                &format_args!("{}", self.lp_sleep_vddbat_mode().bits()),
-            )
-            .field(
-                "lp_sleep_lp_mem_dslp",
-                &format_args!("{}", self.lp_sleep_lp_mem_dslp().bit()),
-            )
+            .field("lp_sleep_lp_pad_slp_sel", &self.lp_sleep_lp_pad_slp_sel())
+            .field("lp_sleep_bod_source_sel", &self.lp_sleep_bod_source_sel())
+            .field("lp_sleep_vddbat_mode", &self.lp_sleep_vddbat_mode())
+            .field("lp_sleep_lp_mem_dslp", &self.lp_sleep_lp_mem_dslp())
             .field(
                 "lp_sleep_pd_lp_peri_pd_en",
-                &format_args!("{}", self.lp_sleep_pd_lp_peri_pd_en().bit()),
+                &self.lp_sleep_pd_lp_peri_pd_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_LP_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

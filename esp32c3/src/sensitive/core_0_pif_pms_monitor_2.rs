@@ -51,43 +51,25 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_MONITOR_2")
             .field(
                 "core_0_pif_pms_monitor_violate_intr",
-                &format_args!("{}", self.core_0_pif_pms_monitor_violate_intr().bit()),
+                &self.core_0_pif_pms_monitor_violate_intr(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hport_0",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hport_0().bit()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hport_0(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hsize().bits()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hsize(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hwrite",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hwrite().bit()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hwrite(),
             )
             .field(
                 "core_0_pif_pms_monitor_violate_status_hworld",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_violate_status_hworld().bits()
-                ),
+                &self.core_0_pif_pms_monitor_violate_status_hworld(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_MONITOR_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SENSITIVE_CORE_0_PIF_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

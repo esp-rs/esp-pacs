@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_ABORT_INTR_CTRL")
-            .field(
-                "rx_abort_intr_ctrl",
-                &format_args!("{}", self.rx_abort_intr_ctrl().bits()),
-            )
+            .field("rx_abort_intr_ctrl", &self.rx_abort_intr_ctrl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_ABORT_INTR_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

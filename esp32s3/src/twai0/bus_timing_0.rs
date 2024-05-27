@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUS_TIMING_0")
-            .field("baud_presc", &format_args!("{}", self.baud_presc().bits()))
-            .field(
-                "sync_jump_width",
-                &format_args!("{}", self.sync_jump_width().bits()),
-            )
+            .field("baud_presc", &self.baud_presc())
+            .field("sync_jump_width", &self.sync_jump_width())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BUS_TIMING_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

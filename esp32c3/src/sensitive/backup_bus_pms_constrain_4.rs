@@ -64,35 +64,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("BACKUP_BUS_PMS_CONSTRAIN_4")
             .field(
                 "backup_bus_pms_constrain_usb_wrap",
-                &format_args!("{}", self.backup_bus_pms_constrain_usb_wrap().bits()),
+                &self.backup_bus_pms_constrain_usb_wrap(),
             )
             .field(
                 "backup_bus_pms_constrain_crypto_peri",
-                &format_args!("{}", self.backup_bus_pms_constrain_crypto_peri().bits()),
+                &self.backup_bus_pms_constrain_crypto_peri(),
             )
             .field(
                 "backup_bus_pms_constrain_crypto_dma",
-                &format_args!("{}", self.backup_bus_pms_constrain_crypto_dma().bits()),
+                &self.backup_bus_pms_constrain_crypto_dma(),
             )
             .field(
                 "backup_bus_pms_constrain_apb_adc",
-                &format_args!("{}", self.backup_bus_pms_constrain_apb_adc().bits()),
+                &self.backup_bus_pms_constrain_apb_adc(),
             )
             .field(
                 "backup_bus_pms_constrain_bt_pwr",
-                &format_args!("{}", self.backup_bus_pms_constrain_bt_pwr().bits()),
+                &self.backup_bus_pms_constrain_bt_pwr(),
             )
             .field(
                 "backup_bus_pms_constrain_usb_device",
-                &format_args!("{}", self.backup_bus_pms_constrain_usb_device().bits()),
+                &self.backup_bus_pms_constrain_usb_device(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

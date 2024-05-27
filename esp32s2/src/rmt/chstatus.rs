@@ -62,36 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHSTATUS")
-            .field(
-                "mem_waddr_ex",
-                &format_args!("{}", self.mem_waddr_ex().bits()),
-            )
-            .field(
-                "mem_raddr_ex",
-                &format_args!("{}", self.mem_raddr_ex().bits()),
-            )
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field(
-                "mem_owner_err",
-                &format_args!("{}", self.mem_owner_err().bit()),
-            )
-            .field("mem_full", &format_args!("{}", self.mem_full().bit()))
-            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
-            .field(
-                "apb_mem_wr_err",
-                &format_args!("{}", self.apb_mem_wr_err().bit()),
-            )
-            .field(
-                "apb_mem_rd_err",
-                &format_args!("{}", self.apb_mem_rd_err().bit()),
-            )
+            .field("mem_waddr_ex", &self.mem_waddr_ex())
+            .field("mem_raddr_ex", &self.mem_raddr_ex())
+            .field("state", &self.state())
+            .field("mem_owner_err", &self.mem_owner_err())
+            .field("mem_full", &self.mem_full())
+            .field("mem_empty", &self.mem_empty())
+            .field("apb_mem_wr_err", &self.apb_mem_wr_err())
+            .field("apb_mem_rd_err", &self.apb_mem_rd_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHSTATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Channel %s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

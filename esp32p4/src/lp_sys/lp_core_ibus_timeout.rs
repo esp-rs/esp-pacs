@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CORE_IBUS_TIMEOUT")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("thres", &format_args!("{}", self.thres().bits()))
+            .field("en", &self.en())
+            .field("thres", &self.thres())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CORE_IBUS_TIMEOUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

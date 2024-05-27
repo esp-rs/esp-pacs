@@ -82,30 +82,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_CTRL")
-            .field("tx_ena", &format_args!("{}", self.tx_ena().bit()))
-            .field("tx_pause", &format_args!("{}", self.tx_pause().bit()))
-            .field("tx_halt", &format_args!("{}", self.tx_halt().bit()))
-            .field("tx_eof_mode", &format_args!("{}", self.tx_eof_mode().bit()))
-            .field(
-                "tx_cond_mode",
-                &format_args!("{}", self.tx_cond_mode().bit()),
-            )
-            .field(
-                "tx_fetch_mode",
-                &format_args!("{}", self.tx_fetch_mode().bit()),
-            )
-            .field(
-                "tx_halt_mode",
-                &format_args!("{}", self.tx_halt_mode().bit()),
-            )
-            .field("tx_rd_dummy", &format_args!("{}", self.tx_rd_dummy().bit()))
+            .field("tx_ena", &self.tx_ena())
+            .field("tx_pause", &self.tx_pause())
+            .field("tx_halt", &self.tx_halt())
+            .field("tx_eof_mode", &self.tx_eof_mode())
+            .field("tx_cond_mode", &self.tx_cond_mode())
+            .field("tx_fetch_mode", &self.tx_fetch_mode())
+            .field("tx_halt_mode", &self.tx_halt_mode())
+            .field("tx_rd_dummy", &self.tx_rd_dummy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEAS1_CTRL1")
-            .field(
-                "force_xpd_amp",
-                &format_args!("{}", self.force_xpd_amp().bits()),
-            )
-            .field(
-                "amp_rst_fb_force",
-                &format_args!("{}", self.amp_rst_fb_force().bits()),
-            )
-            .field(
-                "amp_short_ref_force",
-                &format_args!("{}", self.amp_short_ref_force().bits()),
-            )
-            .field(
-                "amp_short_ref_gnd_force",
-                &format_args!("{}", self.amp_short_ref_gnd_force().bits()),
-            )
+            .field("force_xpd_amp", &self.force_xpd_amp())
+            .field("amp_rst_fb_force", &self.amp_rst_fb_force())
+            .field("amp_short_ref_force", &self.amp_short_ref_force())
+            .field("amp_short_ref_gnd_force", &self.amp_short_ref_gnd_force())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEAS1_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

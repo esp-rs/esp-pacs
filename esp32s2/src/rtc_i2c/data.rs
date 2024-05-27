@@ -31,19 +31,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATA")
-            .field("rdata", &format_args!("{}", self.rdata().bits()))
-            .field(
-                "slave_tx_data",
-                &format_args!("{}", self.slave_tx_data().bits()),
-            )
-            .field("done", &format_args!("{}", self.done().bit()))
+            .field("rdata", &self.rdata())
+            .field("slave_tx_data", &self.slave_tx_data())
+            .field("done", &self.done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

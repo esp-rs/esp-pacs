@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COEX_PTI")
-            .field("coex_pti", &format_args!("{}", self.coex_pti().bits()))
-            .field(
-                "coex_ack_pti",
-                &format_args!("{}", self.coex_ack_pti().bits()),
-            )
-            .field(
-                "close_rf_sel",
-                &format_args!("{}", self.close_rf_sel().bit()),
-            )
+            .field("coex_pti", &self.coex_pti())
+            .field("coex_ack_pti", &self.coex_ack_pti())
+            .field("close_rf_sel", &self.close_rf_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COEX_PTI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

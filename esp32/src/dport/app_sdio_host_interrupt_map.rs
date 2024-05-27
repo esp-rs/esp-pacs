@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_SDIO_HOST_INTERRUPT_MAP")
             .field(
                 "app_sdio_host_interrupt_map",
-                &format_args!("{}", self.app_sdio_host_interrupt_map().bits()),
+                &self.app_sdio_host_interrupt_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APP_SDIO_HOST_INTERRUPT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

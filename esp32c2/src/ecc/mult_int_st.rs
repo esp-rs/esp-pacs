@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MULT_INT_ST")
-            .field("calc_done", &format_args!("{}", self.calc_done().bit()))
+            .field("calc_done", &self.calc_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MULT_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "I2S interrupt status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

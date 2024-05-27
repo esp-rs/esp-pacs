@@ -20,18 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_ST0")
-            .field("tx_cnt", &format_args!("{}", self.tx_cnt().bits()))
-            .field(
-                "tx_fifo_rd_bit_cnt",
-                &format_args!("{}", self.tx_fifo_rd_bit_cnt().bits()),
-            )
+            .field("tx_cnt", &self.tx_cnt())
+            .field("tx_fifo_rd_bit_cnt", &self.tx_fifo_rd_bit_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_ST0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Parallel IO TX status register0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_st0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

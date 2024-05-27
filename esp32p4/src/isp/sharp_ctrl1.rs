@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SHARP_CTRL1")
-            .field(
-                "sharp_gradient_max",
-                &format_args!("{}", self.sharp_gradient_max().bits()),
-            )
+            .field("sharp_gradient_max", &self.sharp_gradient_max())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SHARP_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "sharp control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sharp_ctrl1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

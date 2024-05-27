@@ -134,63 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field(
-                "slc0_check_owner",
-                &format_args!("{}", self.slc0_check_owner().bit()),
-            )
-            .field(
-                "slc0_tx_check_sum_en",
-                &format_args!("{}", self.slc0_tx_check_sum_en().bit()),
-            )
-            .field(
-                "slc0_rx_check_sum_en",
-                &format_args!("{}", self.slc0_rx_check_sum_en().bit()),
-            )
-            .field("cmd_hold_en", &format_args!("{}", self.cmd_hold_en().bit()))
-            .field(
-                "slc0_len_auto_clr",
-                &format_args!("{}", self.slc0_len_auto_clr().bit()),
-            )
-            .field(
-                "slc0_tx_stitch_en",
-                &format_args!("{}", self.slc0_tx_stitch_en().bit()),
-            )
-            .field(
-                "slc0_rx_stitch_en",
-                &format_args!("{}", self.slc0_rx_stitch_en().bit()),
-            )
-            .field(
-                "slc1_check_owner",
-                &format_args!("{}", self.slc1_check_owner().bit()),
-            )
-            .field(
-                "slc1_tx_check_sum_en",
-                &format_args!("{}", self.slc1_tx_check_sum_en().bit()),
-            )
-            .field(
-                "slc1_rx_check_sum_en",
-                &format_args!("{}", self.slc1_rx_check_sum_en().bit()),
-            )
-            .field(
-                "host_int_level_sel",
-                &format_args!("{}", self.host_int_level_sel().bit()),
-            )
-            .field(
-                "slc1_tx_stitch_en",
-                &format_args!("{}", self.slc1_tx_stitch_en().bit()),
-            )
-            .field(
-                "slc1_rx_stitch_en",
-                &format_args!("{}", self.slc1_rx_stitch_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("slc0_check_owner", &self.slc0_check_owner())
+            .field("slc0_tx_check_sum_en", &self.slc0_tx_check_sum_en())
+            .field("slc0_rx_check_sum_en", &self.slc0_rx_check_sum_en())
+            .field("cmd_hold_en", &self.cmd_hold_en())
+            .field("slc0_len_auto_clr", &self.slc0_len_auto_clr())
+            .field("slc0_tx_stitch_en", &self.slc0_tx_stitch_en())
+            .field("slc0_rx_stitch_en", &self.slc0_rx_stitch_en())
+            .field("slc1_check_owner", &self.slc1_check_owner())
+            .field("slc1_tx_check_sum_en", &self.slc1_tx_check_sum_en())
+            .field("slc1_rx_check_sum_en", &self.slc1_rx_check_sum_en())
+            .field("host_int_level_sel", &self.host_int_level_sel())
+            .field("slc1_tx_stitch_en", &self.slc1_tx_stitch_en())
+            .field("slc1_rx_stitch_en", &self.slc1_rx_stitch_en())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

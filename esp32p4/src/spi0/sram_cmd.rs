@@ -197,46 +197,40 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_CMD")
-            .field("sclk_mode", &format_args!("{}", self.sclk_mode().bits()))
-            .field("swb_mode", &format_args!("{}", self.swb_mode().bits()))
-            .field("sdin_dual", &format_args!("{}", self.sdin_dual().bit()))
-            .field("sdout_dual", &format_args!("{}", self.sdout_dual().bit()))
-            .field("saddr_dual", &format_args!("{}", self.saddr_dual().bit()))
-            .field("sdin_quad", &format_args!("{}", self.sdin_quad().bit()))
-            .field("sdout_quad", &format_args!("{}", self.sdout_quad().bit()))
-            .field("saddr_quad", &format_args!("{}", self.saddr_quad().bit()))
-            .field("scmd_quad", &format_args!("{}", self.scmd_quad().bit()))
-            .field("sdin_oct", &format_args!("{}", self.sdin_oct().bit()))
-            .field("sdout_oct", &format_args!("{}", self.sdout_oct().bit()))
-            .field("saddr_oct", &format_args!("{}", self.saddr_oct().bit()))
-            .field("scmd_oct", &format_args!("{}", self.scmd_oct().bit()))
-            .field("sdummy_rin", &format_args!("{}", self.sdummy_rin().bit()))
-            .field("sdummy_wout", &format_args!("{}", self.sdummy_wout().bit()))
+            .field("sclk_mode", &self.sclk_mode())
+            .field("swb_mode", &self.swb_mode())
+            .field("sdin_dual", &self.sdin_dual())
+            .field("sdout_dual", &self.sdout_dual())
+            .field("saddr_dual", &self.saddr_dual())
+            .field("sdin_quad", &self.sdin_quad())
+            .field("sdout_quad", &self.sdout_quad())
+            .field("saddr_quad", &self.saddr_quad())
+            .field("scmd_quad", &self.scmd_quad())
+            .field("sdin_oct", &self.sdin_oct())
+            .field("sdout_oct", &self.sdout_oct())
+            .field("saddr_oct", &self.saddr_oct())
+            .field("scmd_oct", &self.scmd_oct())
+            .field("sdummy_rin", &self.sdummy_rin())
+            .field("sdummy_wout", &self.sdummy_wout())
             .field(
                 "spi_smem_wdummy_dqs_always_out",
-                &format_args!("{}", self.spi_smem_wdummy_dqs_always_out().bit()),
+                &self.spi_smem_wdummy_dqs_always_out(),
             )
             .field(
                 "spi_smem_wdummy_always_out",
-                &format_args!("{}", self.spi_smem_wdummy_always_out().bit()),
+                &self.spi_smem_wdummy_always_out(),
             )
-            .field("sdin_hex", &format_args!("{}", self.sdin_hex().bit()))
-            .field("sdout_hex", &format_args!("{}", self.sdout_hex().bit()))
+            .field("sdin_hex", &self.sdin_hex())
+            .field("sdout_hex", &self.sdout_hex())
             .field(
                 "spi_smem_dqs_ie_always_on",
-                &format_args!("{}", self.spi_smem_dqs_ie_always_on().bit()),
+                &self.spi_smem_dqs_ie_always_on(),
             )
             .field(
                 "spi_smem_data_ie_always_on",
-                &format_args!("{}", self.spi_smem_data_ie_always_on().bit()),
+                &self.spi_smem_data_ie_always_on(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SRAM_CMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

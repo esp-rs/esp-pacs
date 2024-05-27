@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_XPD_PAD_GROUP")
-            .field(
-                "ana_reg_xpd_pad_group",
-                &format_args!("{}", self.ana_reg_xpd_pad_group().bits()),
-            )
+            .field("ana_reg_xpd_pad_group", &self.ana_reg_xpd_pad_group())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ANA_XPD_PAD_GROUP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

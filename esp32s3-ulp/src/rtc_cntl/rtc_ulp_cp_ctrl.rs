@@ -64,37 +64,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_ULP_CP_CTRL")
-            .field(
-                "ulp_cp_mem_addr_init",
-                &format_args!("{}", self.ulp_cp_mem_addr_init().bits()),
-            )
-            .field(
-                "ulp_cp_mem_addr_size",
-                &format_args!("{}", self.ulp_cp_mem_addr_size().bits()),
-            )
-            .field(
-                "ulp_cp_clk_fo",
-                &format_args!("{}", self.ulp_cp_clk_fo().bit()),
-            )
-            .field(
-                "ulp_cp_reset",
-                &format_args!("{}", self.ulp_cp_reset().bit()),
-            )
-            .field(
-                "ulp_cp_force_start_top",
-                &format_args!("{}", self.ulp_cp_force_start_top().bit()),
-            )
-            .field(
-                "ulp_cp_start_top",
-                &format_args!("{}", self.ulp_cp_start_top().bit()),
-            )
+            .field("ulp_cp_mem_addr_init", &self.ulp_cp_mem_addr_init())
+            .field("ulp_cp_mem_addr_size", &self.ulp_cp_mem_addr_size())
+            .field("ulp_cp_clk_fo", &self.ulp_cp_clk_fo())
+            .field("ulp_cp_reset", &self.ulp_cp_reset())
+            .field("ulp_cp_force_start_top", &self.ulp_cp_force_start_top())
+            .field("ulp_cp_start_top", &self.ulp_cp_start_top())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_ULP_CP_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

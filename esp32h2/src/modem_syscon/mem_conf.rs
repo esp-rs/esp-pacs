@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CONF")
-            .field(
-                "modem_mem_wp",
-                &format_args!("{}", self.modem_mem_wp().bits()),
-            )
-            .field(
-                "modem_mem_wa",
-                &format_args!("{}", self.modem_mem_wa().bits()),
-            )
-            .field(
-                "modem_mem_ra",
-                &format_args!("{}", self.modem_mem_ra().bits()),
-            )
+            .field("modem_mem_wp", &self.modem_mem_wp())
+            .field("modem_mem_wa", &self.modem_mem_wa())
+            .field("modem_mem_ra", &self.modem_mem_ra())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

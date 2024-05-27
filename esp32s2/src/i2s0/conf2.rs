@@ -116,52 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF2")
-            .field("camera_en", &format_args!("{}", self.camera_en().bit()))
-            .field(
-                "lcd_tx_wrx2_en",
-                &format_args!("{}", self.lcd_tx_wrx2_en().bit()),
-            )
-            .field(
-                "lcd_tx_sdx2_en",
-                &format_args!("{}", self.lcd_tx_sdx2_en().bit()),
-            )
-            .field(
-                "data_enable_test_en",
-                &format_args!("{}", self.data_enable_test_en().bit()),
-            )
-            .field("data_enable", &format_args!("{}", self.data_enable().bit()))
-            .field("lcd_en", &format_args!("{}", self.lcd_en().bit()))
-            .field(
-                "ext_adc_start_en",
-                &format_args!("{}", self.ext_adc_start_en().bit()),
-            )
-            .field(
-                "inter_valid_en",
-                &format_args!("{}", self.inter_valid_en().bit()),
-            )
-            .field(
-                "cam_sync_fifo_reset",
-                &format_args!("{}", self.cam_sync_fifo_reset().bit()),
-            )
-            .field(
-                "cam_clk_loopback",
-                &format_args!("{}", self.cam_clk_loopback().bit()),
-            )
-            .field(
-                "vsync_filter_en",
-                &format_args!("{}", self.vsync_filter_en().bit()),
-            )
-            .field(
-                "vsync_filter_thres",
-                &format_args!("{}", self.vsync_filter_thres().bits()),
-            )
+            .field("camera_en", &self.camera_en())
+            .field("lcd_tx_wrx2_en", &self.lcd_tx_wrx2_en())
+            .field("lcd_tx_sdx2_en", &self.lcd_tx_sdx2_en())
+            .field("data_enable_test_en", &self.data_enable_test_en())
+            .field("data_enable", &self.data_enable())
+            .field("lcd_en", &self.lcd_en())
+            .field("ext_adc_start_en", &self.ext_adc_start_en())
+            .field("inter_valid_en", &self.inter_valid_en())
+            .field("cam_sync_fifo_reset", &self.cam_sync_fifo_reset())
+            .field("cam_clk_loopback", &self.cam_clk_loopback())
+            .field("vsync_filter_en", &self.vsync_filter_en())
+            .field("vsync_filter_thres", &self.vsync_filter_thres())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -168,82 +168,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_XTL_CONF")
-            .field(
-                "xtal32k_wdt_en",
-                &format_args!("{}", self.xtal32k_wdt_en().bit()),
-            )
-            .field(
-                "xtal32k_wdt_clk_fo",
-                &format_args!("{}", self.xtal32k_wdt_clk_fo().bit()),
-            )
-            .field(
-                "xtal32k_wdt_reset",
-                &format_args!("{}", self.xtal32k_wdt_reset().bit()),
-            )
-            .field(
-                "xtal32k_ext_clk_fo",
-                &format_args!("{}", self.xtal32k_ext_clk_fo().bit()),
-            )
-            .field(
-                "xtal32k_auto_backup",
-                &format_args!("{}", self.xtal32k_auto_backup().bit()),
-            )
-            .field(
-                "xtal32k_auto_restart",
-                &format_args!("{}", self.xtal32k_auto_restart().bit()),
-            )
-            .field(
-                "xtal32k_auto_return",
-                &format_args!("{}", self.xtal32k_auto_return().bit()),
-            )
-            .field(
-                "xtal32k_xpd_force",
-                &format_args!("{}", self.xtal32k_xpd_force().bit()),
-            )
-            .field(
-                "enckinit_xtal_32k",
-                &format_args!("{}", self.enckinit_xtal_32k().bit()),
-            )
-            .field(
-                "dbuf_xtal_32k",
-                &format_args!("{}", self.dbuf_xtal_32k().bit()),
-            )
-            .field(
-                "dgm_xtal_32k",
-                &format_args!("{}", self.dgm_xtal_32k().bits()),
-            )
-            .field(
-                "dres_xtal_32k",
-                &format_args!("{}", self.dres_xtal_32k().bits()),
-            )
-            .field(
-                "xpd_xtal_32k",
-                &format_args!("{}", self.xpd_xtal_32k().bit()),
-            )
-            .field(
-                "dac_xtal_32k",
-                &format_args!("{}", self.dac_xtal_32k().bits()),
-            )
-            .field("wdt_state", &format_args!("{}", self.wdt_state().bits()))
-            .field(
-                "xtal32k_gpio_sel",
-                &format_args!("{}", self.xtal32k_gpio_sel().bit()),
-            )
-            .field(
-                "xtl_ext_ctr_lv",
-                &format_args!("{}", self.xtl_ext_ctr_lv().bit()),
-            )
-            .field(
-                "xtl_ext_ctr_en",
-                &format_args!("{}", self.xtl_ext_ctr_en().bit()),
-            )
+            .field("xtal32k_wdt_en", &self.xtal32k_wdt_en())
+            .field("xtal32k_wdt_clk_fo", &self.xtal32k_wdt_clk_fo())
+            .field("xtal32k_wdt_reset", &self.xtal32k_wdt_reset())
+            .field("xtal32k_ext_clk_fo", &self.xtal32k_ext_clk_fo())
+            .field("xtal32k_auto_backup", &self.xtal32k_auto_backup())
+            .field("xtal32k_auto_restart", &self.xtal32k_auto_restart())
+            .field("xtal32k_auto_return", &self.xtal32k_auto_return())
+            .field("xtal32k_xpd_force", &self.xtal32k_xpd_force())
+            .field("enckinit_xtal_32k", &self.enckinit_xtal_32k())
+            .field("dbuf_xtal_32k", &self.dbuf_xtal_32k())
+            .field("dgm_xtal_32k", &self.dgm_xtal_32k())
+            .field("dres_xtal_32k", &self.dres_xtal_32k())
+            .field("xpd_xtal_32k", &self.xpd_xtal_32k())
+            .field("dac_xtal_32k", &self.dac_xtal_32k())
+            .field("wdt_state", &self.wdt_state())
+            .field("xtal32k_gpio_sel", &self.xtal32k_gpio_sel())
+            .field("xtl_ext_ctr_lv", &self.xtl_ext_ctr_lv())
+            .field("xtl_ext_ctr_en", &self.xtl_ext_ctr_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_XTL_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

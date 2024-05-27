@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK3_WDATA3")
-            .field(
-                "adc1_tp_low",
-                &format_args!("{}", self.adc1_tp_low().bits()),
-            )
-            .field(
-                "adc1_tp_high",
-                &format_args!("{}", self.adc1_tp_high().bits()),
-            )
-            .field(
-                "adc2_tp_low",
-                &format_args!("{}", self.adc2_tp_low().bits()),
-            )
-            .field(
-                "adc2_tp_high",
-                &format_args!("{}", self.adc2_tp_high().bits()),
-            )
+            .field("adc1_tp_low", &self.adc1_tp_low())
+            .field("adc1_tp_high", &self.adc1_tp_high())
+            .field("adc2_tp_low", &self.adc2_tp_low())
+            .field("adc2_tp_high", &self.adc2_tp_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK3_WDATA3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

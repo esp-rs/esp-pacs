@@ -82,55 +82,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1")
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_pms_0",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_pms_0().bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_pms_0(),
             )
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_pms_1",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_pms_1().bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_pms_1(),
             )
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_pms_2",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_pms_2().bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_pms_2(),
             )
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_pms_3",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_pms_3().bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_pms_3(),
             )
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_0",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_0()
-                        .bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_0(),
             )
             .field(
                 "dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_1",
-                &format_args!(
-                    "{}",
-                    self.dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_1()
-                        .bits()
-                ),
+                &self.dma_apbperi_adc_dac_pms_constrain_sram_cachedataarray_pms_1(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

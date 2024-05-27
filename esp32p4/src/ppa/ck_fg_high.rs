@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CK_FG_HIGH")
-            .field(
-                "colorkey_fg_b_high",
-                &format_args!("{}", self.colorkey_fg_b_high().bits()),
-            )
-            .field(
-                "colorkey_fg_g_high",
-                &format_args!("{}", self.colorkey_fg_g_high().bits()),
-            )
-            .field(
-                "colorkey_fg_r_high",
-                &format_args!("{}", self.colorkey_fg_r_high().bits()),
-            )
+            .field("colorkey_fg_b_high", &self.colorkey_fg_b_high())
+            .field("colorkey_fg_g_high", &self.colorkey_fg_g_high())
+            .field("colorkey_fg_r_high", &self.colorkey_fg_r_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CK_FG_HIGH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

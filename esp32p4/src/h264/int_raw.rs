@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "db_tmp_ready",
-                &format_args!("{}", self.db_tmp_ready().bit()),
-            )
-            .field("rec_ready", &format_args!("{}", self.rec_ready().bit()))
-            .field("frame_done", &format_args!("{}", self.frame_done().bit()))
-            .field(
-                "dma_move_2mb_line_done",
-                &format_args!("{}", self.dma_move_2mb_line_done().bit()),
-            )
+            .field("db_tmp_ready", &self.db_tmp_ready())
+            .field("rec_ready", &self.rec_ready())
+            .field("frame_done", &self.frame_done())
+            .field("dma_move_2mb_line_done", &self.dma_move_2mb_line_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

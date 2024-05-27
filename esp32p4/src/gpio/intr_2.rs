@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_2")
-            .field("int_2", &format_args!("{}", self.int_2().bits()))
+            .field("int_2", &self.int_2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTR_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "GPIO interrupt 2 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

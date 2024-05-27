@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP_CONF")
-            .field(
-                "ext_wakeup0_lv",
-                &format_args!("{}", self.ext_wakeup0_lv().bit()),
-            )
-            .field(
-                "ext_wakeup1_lv",
-                &format_args!("{}", self.ext_wakeup1_lv().bit()),
-            )
+            .field("ext_wakeup0_lv", &self.ext_wakeup0_lv())
+            .field("ext_wakeup1_lv", &self.ext_wakeup1_lv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

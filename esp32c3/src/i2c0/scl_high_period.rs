@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_HIGH_PERIOD")
-            .field(
-                "scl_high_period",
-                &format_args!("{}", self.scl_high_period().bits()),
-            )
-            .field(
-                "scl_wait_high_period",
-                &format_args!("{}", self.scl_wait_high_period().bits()),
-            )
+            .field("scl_high_period", &self.scl_high_period())
+            .field("scl_wait_high_period", &self.scl_wait_high_period())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_HIGH_PERIOD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

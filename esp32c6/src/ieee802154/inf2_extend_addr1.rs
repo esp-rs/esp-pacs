@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INF2_EXTEND_ADDR1")
-            .field(
-                "mac_inf2_extend_addr1",
-                &format_args!("{}", self.mac_inf2_extend_addr1().bits()),
-            )
+            .field("mac_inf2_extend_addr1", &self.mac_inf2_extend_addr1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INF2_EXTEND_ADDR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

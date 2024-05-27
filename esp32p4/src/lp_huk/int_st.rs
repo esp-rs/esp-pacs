@@ -27,16 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("prep_done", &format_args!("{}", self.prep_done().bit()))
-            .field("proc_done", &format_args!("{}", self.proc_done().bit()))
-            .field("post_done", &format_args!("{}", self.post_done().bit()))
+            .field("prep_done", &self.prep_done())
+            .field("proc_done", &self.proc_done())
+            .field("post_done", &self.post_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "HUK Generator interrupt status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

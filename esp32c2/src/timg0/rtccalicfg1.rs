@@ -22,19 +22,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("RTCCALICFG1")
             .field(
                 "rtc_cali_cycling_data_vld",
-                &format_args!("{}", self.rtc_cali_cycling_data_vld().bit()),
+                &self.rtc_cali_cycling_data_vld(),
             )
-            .field(
-                "rtc_cali_value",
-                &format_args!("{}", self.rtc_cali_value().bits()),
-            )
+            .field("rtc_cali_value", &self.rtc_cali_value())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTCCALICFG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "RTC calibration configure1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtccalicfg1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -71,41 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_CTRL2")
-            .field(
-                "lcd_vsync_width",
-                &format_args!("{}", self.lcd_vsync_width().bits()),
-            )
-            .field(
-                "lcd_vsync_idle_pol",
-                &format_args!("{}", self.lcd_vsync_idle_pol().bit()),
-            )
-            .field(
-                "lcd_de_idle_pol",
-                &format_args!("{}", self.lcd_de_idle_pol().bit()),
-            )
-            .field(
-                "lcd_hs_blank_en",
-                &format_args!("{}", self.lcd_hs_blank_en().bit()),
-            )
-            .field(
-                "lcd_hsync_width",
-                &format_args!("{}", self.lcd_hsync_width().bits()),
-            )
-            .field(
-                "lcd_hsync_idle_pol",
-                &format_args!("{}", self.lcd_hsync_idle_pol().bit()),
-            )
-            .field(
-                "lcd_hsync_position",
-                &format_args!("{}", self.lcd_hsync_position().bits()),
-            )
+            .field("lcd_vsync_width", &self.lcd_vsync_width())
+            .field("lcd_vsync_idle_pol", &self.lcd_vsync_idle_pol())
+            .field("lcd_de_idle_pol", &self.lcd_de_idle_pol())
+            .field("lcd_hs_blank_en", &self.lcd_hs_blank_en())
+            .field("lcd_hsync_width", &self.lcd_hsync_width())
+            .field("lcd_hsync_idle_pol", &self.lcd_hsync_idle_pol())
+            .field("lcd_hsync_position", &self.lcd_hsync_position())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS0")
-            .field(
-                "decode_byte_cnt",
-                &format_args!("{}", self.decode_byte_cnt().bits()),
-            )
-            .field(
-                "header_dec_st",
-                &format_args!("{}", self.header_dec_st().bits()),
-            )
-            .field(
-                "decode_sample_sel",
-                &format_args!("{}", self.decode_sample_sel().bits()),
-            )
+            .field("decode_byte_cnt", &self.decode_byte_cnt())
+            .field("header_dec_st", &self.header_dec_st())
+            .field("decode_sample_sel", &self.decode_sample_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DECODER_STATUS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`decoder_status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

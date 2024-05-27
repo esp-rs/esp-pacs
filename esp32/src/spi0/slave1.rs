@@ -89,49 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE1")
-            .field(
-                "slv_rdbuf_dummy_en",
-                &format_args!("{}", self.slv_rdbuf_dummy_en().bit()),
-            )
-            .field(
-                "slv_wrbuf_dummy_en",
-                &format_args!("{}", self.slv_wrbuf_dummy_en().bit()),
-            )
-            .field(
-                "slv_rdsta_dummy_en",
-                &format_args!("{}", self.slv_rdsta_dummy_en().bit()),
-            )
-            .field(
-                "slv_wrsta_dummy_en",
-                &format_args!("{}", self.slv_wrsta_dummy_en().bit()),
-            )
-            .field(
-                "slv_wr_addr_bitlen",
-                &format_args!("{}", self.slv_wr_addr_bitlen().bits()),
-            )
-            .field(
-                "slv_rd_addr_bitlen",
-                &format_args!("{}", self.slv_rd_addr_bitlen().bits()),
-            )
-            .field(
-                "slv_status_readback",
-                &format_args!("{}", self.slv_status_readback().bit()),
-            )
-            .field(
-                "slv_status_fast_en",
-                &format_args!("{}", self.slv_status_fast_en().bit()),
-            )
-            .field(
-                "slv_status_bitlen",
-                &format_args!("{}", self.slv_status_bitlen().bits()),
-            )
+            .field("slv_rdbuf_dummy_en", &self.slv_rdbuf_dummy_en())
+            .field("slv_wrbuf_dummy_en", &self.slv_wrbuf_dummy_en())
+            .field("slv_rdsta_dummy_en", &self.slv_rdsta_dummy_en())
+            .field("slv_wrsta_dummy_en", &self.slv_wrsta_dummy_en())
+            .field("slv_wr_addr_bitlen", &self.slv_wr_addr_bitlen())
+            .field("slv_rd_addr_bitlen", &self.slv_rd_addr_bitlen())
+            .field("slv_status_readback", &self.slv_status_readback())
+            .field("slv_status_fast_en", &self.slv_status_fast_en())
+            .field("slv_status_bitlen", &self.slv_status_bitlen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

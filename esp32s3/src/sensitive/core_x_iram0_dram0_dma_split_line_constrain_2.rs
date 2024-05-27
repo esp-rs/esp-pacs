@@ -82,43 +82,37 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2")
             .field(
                 "core_x_iram0_sram_line_0_category_0",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_0().bits()),
+                &self.core_x_iram0_sram_line_0_category_0(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_1",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_1().bits()),
+                &self.core_x_iram0_sram_line_0_category_1(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_2",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_2().bits()),
+                &self.core_x_iram0_sram_line_0_category_2(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_3",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_3().bits()),
+                &self.core_x_iram0_sram_line_0_category_3(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_4",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_4().bits()),
+                &self.core_x_iram0_sram_line_0_category_4(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_5",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_5().bits()),
+                &self.core_x_iram0_sram_line_0_category_5(),
             )
             .field(
                 "core_x_iram0_sram_line_0_category_6",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_category_6().bits()),
+                &self.core_x_iram0_sram_line_0_category_6(),
             )
             .field(
                 "core_x_iram0_sram_line_0_splitaddr",
-                &format_args!("{}", self.core_x_iram0_sram_line_0_splitaddr().bits()),
+                &self.core_x_iram0_sram_line_0_splitaddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -46,27 +46,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL")
             .field(
                 "lp_aonclkrst_rst_en_sdmmc",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_sdmmc().bit()),
+                &self.lp_aonclkrst_rst_en_sdmmc(),
             )
             .field(
                 "lp_aonclkrst_force_norst_sdmmc",
-                &format_args!("{}", self.lp_aonclkrst_force_norst_sdmmc().bit()),
+                &self.lp_aonclkrst_force_norst_sdmmc(),
             )
-            .field(
-                "lp_aonclkrst_rst_en_emac",
-                &format_args!("{}", self.lp_aonclkrst_rst_en_emac().bit()),
-            )
+            .field("lp_aonclkrst_rst_en_emac", &self.lp_aonclkrst_rst_en_emac())
             .field(
                 "lp_aonclkrst_force_norst_emac",
-                &format_args!("{}", self.lp_aonclkrst_force_norst_emac().bit()),
+                &self.lp_aonclkrst_force_norst_emac(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

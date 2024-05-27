@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RTC_ULP_CP_TIMER_1")
-            .field(
-                "ulp_cp_timer_slp_cycle",
-                &format_args!("{}", self.ulp_cp_timer_slp_cycle().bits()),
-            )
+            .field("ulp_cp_timer_slp_cycle", &self.ulp_cp_timer_slp_cycle())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RTC_ULP_CP_TIMER_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

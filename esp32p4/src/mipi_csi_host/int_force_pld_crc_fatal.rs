@@ -152,77 +152,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE_PLD_CRC_FATAL")
-            .field(
-                "force_err_crc_vc0",
-                &format_args!("{}", self.force_err_crc_vc0().bit()),
-            )
-            .field(
-                "force_err_crc_vc1",
-                &format_args!("{}", self.force_err_crc_vc1().bit()),
-            )
-            .field(
-                "force_err_crc_vc2",
-                &format_args!("{}", self.force_err_crc_vc2().bit()),
-            )
-            .field(
-                "force_err_crc_vc3",
-                &format_args!("{}", self.force_err_crc_vc3().bit()),
-            )
-            .field(
-                "force_err_crc_vc4",
-                &format_args!("{}", self.force_err_crc_vc4().bit()),
-            )
-            .field(
-                "force_err_crc_vc5",
-                &format_args!("{}", self.force_err_crc_vc5().bit()),
-            )
-            .field(
-                "force_err_crc_vc6",
-                &format_args!("{}", self.force_err_crc_vc6().bit()),
-            )
-            .field(
-                "force_err_crc_vc7",
-                &format_args!("{}", self.force_err_crc_vc7().bit()),
-            )
-            .field(
-                "force_err_crc_vc8",
-                &format_args!("{}", self.force_err_crc_vc8().bit()),
-            )
-            .field(
-                "force_err_crc_vc9",
-                &format_args!("{}", self.force_err_crc_vc9().bit()),
-            )
-            .field(
-                "force_err_crc_vc10",
-                &format_args!("{}", self.force_err_crc_vc10().bit()),
-            )
-            .field(
-                "force_err_crc_vc11",
-                &format_args!("{}", self.force_err_crc_vc11().bit()),
-            )
-            .field(
-                "force_err_crc_vc12",
-                &format_args!("{}", self.force_err_crc_vc12().bit()),
-            )
-            .field(
-                "force_err_crc_vc13",
-                &format_args!("{}", self.force_err_crc_vc13().bit()),
-            )
-            .field(
-                "force_err_crc_vc14",
-                &format_args!("{}", self.force_err_crc_vc14().bit()),
-            )
-            .field(
-                "force_err_crc_vc15",
-                &format_args!("{}", self.force_err_crc_vc15().bit()),
-            )
+            .field("force_err_crc_vc0", &self.force_err_crc_vc0())
+            .field("force_err_crc_vc1", &self.force_err_crc_vc1())
+            .field("force_err_crc_vc2", &self.force_err_crc_vc2())
+            .field("force_err_crc_vc3", &self.force_err_crc_vc3())
+            .field("force_err_crc_vc4", &self.force_err_crc_vc4())
+            .field("force_err_crc_vc5", &self.force_err_crc_vc5())
+            .field("force_err_crc_vc6", &self.force_err_crc_vc6())
+            .field("force_err_crc_vc7", &self.force_err_crc_vc7())
+            .field("force_err_crc_vc8", &self.force_err_crc_vc8())
+            .field("force_err_crc_vc9", &self.force_err_crc_vc9())
+            .field("force_err_crc_vc10", &self.force_err_crc_vc10())
+            .field("force_err_crc_vc11", &self.force_err_crc_vc11())
+            .field("force_err_crc_vc12", &self.force_err_crc_vc12())
+            .field("force_err_crc_vc13", &self.force_err_crc_vc13())
+            .field("force_err_crc_vc14", &self.force_err_crc_vc14())
+            .field("force_err_crc_vc15", &self.force_err_crc_vc15())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_FORCE_PLD_CRC_FATAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

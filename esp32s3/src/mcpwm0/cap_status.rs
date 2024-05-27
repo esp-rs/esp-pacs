@@ -27,16 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CAP_STATUS")
-            .field("cap0_edge", &format_args!("{}", self.cap0_edge().bit()))
-            .field("cap1_edge", &format_args!("{}", self.cap1_edge().bit()))
-            .field("cap2_edge", &format_args!("{}", self.cap2_edge().bit()))
+            .field("cap0_edge", &self.cap0_edge())
+            .field("cap1_edge", &self.cap1_edge())
+            .field("cap2_edge", &self.cap2_edge())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CAP_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Edge of last capture trigger\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

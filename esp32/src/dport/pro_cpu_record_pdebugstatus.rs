@@ -33,25 +33,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGSTATUS")
-            .field(
-                "record_pro_pdebugstatus",
-                &format_args!("{}", self.record_pro_pdebugstatus().bits()),
-            )
+            .field("record_pro_pdebugstatus", &self.record_pro_pdebugstatus())
             .field(
                 "record_pdebugstatus_bbcause",
-                &format_args!("{}", self.record_pdebugstatus_bbcause().bits()),
+                &self.record_pdebugstatus_bbcause(),
             )
             .field(
                 "record_pdebugstatus_insntype",
-                &format_args!("{}", self.record_pdebugstatus_insntype().bits()),
+                &self.record_pdebugstatus_insntype(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

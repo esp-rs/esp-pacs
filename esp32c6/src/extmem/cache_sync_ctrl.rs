@@ -58,37 +58,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_SYNC_CTRL")
-            .field(
-                "cache_invalidate_ena",
-                &format_args!("{}", self.cache_invalidate_ena().bit()),
-            )
-            .field(
-                "cache_clean_ena",
-                &format_args!("{}", self.cache_clean_ena().bit()),
-            )
-            .field(
-                "cache_writeback_ena",
-                &format_args!("{}", self.cache_writeback_ena().bit()),
-            )
+            .field("cache_invalidate_ena", &self.cache_invalidate_ena())
+            .field("cache_clean_ena", &self.cache_clean_ena())
+            .field("cache_writeback_ena", &self.cache_writeback_ena())
             .field(
                 "cache_writeback_invalidate_ena",
-                &format_args!("{}", self.cache_writeback_invalidate_ena().bit()),
+                &self.cache_writeback_invalidate_ena(),
             )
-            .field(
-                "cache_sync_done",
-                &format_args!("{}", self.cache_sync_done().bit()),
-            )
-            .field(
-                "cache_sync_rgid",
-                &format_args!("{}", self.cache_sync_rgid().bits()),
-            )
+            .field("cache_sync_done", &self.cache_sync_done())
+            .field("cache_sync_rgid", &self.cache_sync_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_SYNC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

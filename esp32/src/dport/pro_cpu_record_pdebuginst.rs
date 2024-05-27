@@ -60,37 +60,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGINST")
-            .field(
-                "record_pro_pdebuginst",
-                &format_args!("{}", self.record_pro_pdebuginst().bits()),
-            )
-            .field(
-                "record_pdebuginst_sz",
-                &format_args!("{}", self.record_pdebuginst_sz().bits()),
-            )
-            .field(
-                "record_pdebuginst_isrc",
-                &format_args!("{}", self.record_pdebuginst_isrc().bits()),
-            )
+            .field("record_pro_pdebuginst", &self.record_pro_pdebuginst())
+            .field("record_pdebuginst_sz", &self.record_pdebuginst_sz())
+            .field("record_pdebuginst_isrc", &self.record_pdebuginst_isrc())
             .field(
                 "record_pdebuginst_loop_rep",
-                &format_args!("{}", self.record_pdebuginst_loop_rep().bit()),
+                &self.record_pdebuginst_loop_rep(),
             )
-            .field(
-                "record_pdebuginst_loop",
-                &format_args!("{}", self.record_pdebuginst_loop().bit()),
-            )
-            .field(
-                "record_pdebuginst_cintl",
-                &format_args!("{}", self.record_pdebuginst_cintl().bits()),
-            )
+            .field("record_pdebuginst_loop", &self.record_pdebuginst_loop())
+            .field("record_pdebuginst_cintl", &self.record_pdebuginst_cintl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

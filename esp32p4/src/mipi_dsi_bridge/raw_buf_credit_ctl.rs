@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAW_BUF_CREDIT_CTL")
-            .field(
-                "credit_thrd",
-                &format_args!("{}", self.credit_thrd().bits()),
-            )
-            .field(
-                "credit_burst_thrd",
-                &format_args!("{}", self.credit_burst_thrd().bits()),
-            )
-            .field(
-                "credit_reset",
-                &format_args!("{}", self.credit_reset().bit()),
-            )
+            .field("credit_thrd", &self.credit_thrd())
+            .field("credit_burst_thrd", &self.credit_burst_thrd())
+            .field("credit_reset", &self.credit_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RAW_BUF_CREDIT_CTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

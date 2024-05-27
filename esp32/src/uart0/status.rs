@@ -76,23 +76,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("rxfifo_cnt", &format_args!("{}", self.rxfifo_cnt().bits()))
-            .field("st_urx_out", &format_args!("{}", self.st_urx_out().bits()))
-            .field("dsrn", &format_args!("{}", self.dsrn().bit()))
-            .field("ctsn", &format_args!("{}", self.ctsn().bit()))
-            .field("rxd", &format_args!("{}", self.rxd().bit()))
-            .field("txfifo_cnt", &format_args!("{}", self.txfifo_cnt().bits()))
-            .field("st_utx_out", &format_args!("{}", self.st_utx_out().bits()))
-            .field("dtrn", &format_args!("{}", self.dtrn().bit()))
-            .field("rtsn", &format_args!("{}", self.rtsn().bit()))
-            .field("txd", &format_args!("{}", self.txd().bit()))
+            .field("rxfifo_cnt", &self.rxfifo_cnt())
+            .field("st_urx_out", &self.st_urx_out())
+            .field("dsrn", &self.dsrn())
+            .field("ctsn", &self.ctsn())
+            .field("rxd", &self.rxd())
+            .field("txfifo_cnt", &self.txfifo_cnt())
+            .field("st_utx_out", &self.st_utx_out())
+            .field("dtrn", &self.dtrn())
+            .field("rtsn", &self.rtsn())
+            .field("txd", &self.txd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

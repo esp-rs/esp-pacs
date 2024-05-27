@@ -24,15 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_CELL_CTRL")
-            .field("rdn_result", &format_args!("{}", self.rdn_result().bit()))
-            .field("rdn_ena", &format_args!("{}", self.rdn_ena().bit()))
+            .field("rdn_result", &self.rdn_result())
+            .field("rdn_ena", &self.rdn_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ECO_CELL_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

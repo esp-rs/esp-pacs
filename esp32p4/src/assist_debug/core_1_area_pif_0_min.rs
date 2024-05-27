@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_AREA_PIF_0_MIN")
-            .field(
-                "core_1_area_pif_0_min",
-                &format_args!("{}", self.core_1_area_pif_0_min().bits()),
-            )
+            .field("core_1_area_pif_0_min", &self.core_1_area_pif_0_min())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_AREA_PIF_0_MIN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

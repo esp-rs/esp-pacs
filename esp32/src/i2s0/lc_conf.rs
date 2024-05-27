@@ -134,57 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LC_CONF")
-            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
-            .field("out_rst", &format_args!("{}", self.out_rst().bit()))
-            .field(
-                "ahbm_fifo_rst",
-                &format_args!("{}", self.ahbm_fifo_rst().bit()),
-            )
-            .field("ahbm_rst", &format_args!("{}", self.ahbm_rst().bit()))
-            .field(
-                "out_loop_test",
-                &format_args!("{}", self.out_loop_test().bit()),
-            )
-            .field(
-                "in_loop_test",
-                &format_args!("{}", self.in_loop_test().bit()),
-            )
-            .field(
-                "out_auto_wrback",
-                &format_args!("{}", self.out_auto_wrback().bit()),
-            )
-            .field(
-                "out_no_restart_clr",
-                &format_args!("{}", self.out_no_restart_clr().bit()),
-            )
-            .field(
-                "out_eof_mode",
-                &format_args!("{}", self.out_eof_mode().bit()),
-            )
-            .field(
-                "outdscr_burst_en",
-                &format_args!("{}", self.outdscr_burst_en().bit()),
-            )
-            .field(
-                "indscr_burst_en",
-                &format_args!("{}", self.indscr_burst_en().bit()),
-            )
-            .field(
-                "out_data_burst_en",
-                &format_args!("{}", self.out_data_burst_en().bit()),
-            )
-            .field("check_owner", &format_args!("{}", self.check_owner().bit()))
-            .field(
-                "mem_trans_en",
-                &format_args!("{}", self.mem_trans_en().bit()),
-            )
+            .field("in_rst", &self.in_rst())
+            .field("out_rst", &self.out_rst())
+            .field("ahbm_fifo_rst", &self.ahbm_fifo_rst())
+            .field("ahbm_rst", &self.ahbm_rst())
+            .field("out_loop_test", &self.out_loop_test())
+            .field("in_loop_test", &self.in_loop_test())
+            .field("out_auto_wrback", &self.out_auto_wrback())
+            .field("out_no_restart_clr", &self.out_no_restart_clr())
+            .field("out_eof_mode", &self.out_eof_mode())
+            .field("outdscr_burst_en", &self.outdscr_burst_en())
+            .field("indscr_burst_en", &self.indscr_burst_en())
+            .field("out_data_burst_en", &self.out_data_burst_en())
+            .field("check_owner", &self.check_owner())
+            .field("mem_trans_en", &self.mem_trans_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

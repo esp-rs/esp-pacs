@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAMPLE_RATE_CONF")
-            .field(
-                "tx_bck_div_num",
-                &format_args!("{}", self.tx_bck_div_num().bits()),
-            )
-            .field(
-                "rx_bck_div_num",
-                &format_args!("{}", self.rx_bck_div_num().bits()),
-            )
-            .field(
-                "tx_bits_mod",
-                &format_args!("{}", self.tx_bits_mod().bits()),
-            )
-            .field(
-                "rx_bits_mod",
-                &format_args!("{}", self.rx_bits_mod().bits()),
-            )
+            .field("tx_bck_div_num", &self.tx_bck_div_num())
+            .field("rx_bck_div_num", &self.rx_bck_div_num())
+            .field("tx_bits_mod", &self.tx_bits_mod())
+            .field("rx_bits_mod", &self.rx_bits_mod())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAMPLE_RATE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

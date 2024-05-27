@@ -50,21 +50,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IMM_HP_CK_POWER")
-            .field(
-                "tie_low_cali_xtal_icg",
-                &format_args!("{}", self.tie_low_cali_xtal_icg().bit()),
-            )
-            .field(
-                "tie_high_cali_xtal_icg",
-                &format_args!("{}", self.tie_high_cali_xtal_icg().bit()),
-            )
+            .field("tie_low_cali_xtal_icg", &self.tie_low_cali_xtal_icg())
+            .field("tie_high_cali_xtal_icg", &self.tie_high_cali_xtal_icg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IMM_HP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

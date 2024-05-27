@@ -111,70 +111,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR")
-            .field("rd_dis_err", &format_args!("{}", self.rd_dis_err().bits()))
-            .field(
-                "wdt_delay_sel_err",
-                &format_args!("{}", self.wdt_delay_sel_err().bits()),
-            )
-            .field(
-                "dis_pad_jtag_err",
-                &format_args!("{}", self.dis_pad_jtag_err().bit()),
-            )
-            .field(
-                "dis_download_icache_err",
-                &format_args!("{}", self.dis_download_icache_err().bit()),
-            )
+            .field("rd_dis_err", &self.rd_dis_err())
+            .field("wdt_delay_sel_err", &self.wdt_delay_sel_err())
+            .field("dis_pad_jtag_err", &self.dis_pad_jtag_err())
+            .field("dis_download_icache_err", &self.dis_download_icache_err())
             .field(
                 "dis_download_manual_encrypt_err",
-                &format_args!("{}", self.dis_download_manual_encrypt_err().bit()),
+                &self.dis_download_manual_encrypt_err(),
             )
             .field(
                 "spi_boot_encrypt_decrypt_cnt_err",
-                &format_args!("{}", self.spi_boot_encrypt_decrypt_cnt_err().bits()),
+                &self.spi_boot_encrypt_decrypt_cnt_err(),
             )
-            .field(
-                "xts_key_length_256_err",
-                &format_args!("{}", self.xts_key_length_256_err().bit()),
-            )
-            .field(
-                "uart_print_control_err",
-                &format_args!("{}", self.uart_print_control_err().bits()),
-            )
-            .field(
-                "force_send_resume_err",
-                &format_args!("{}", self.force_send_resume_err().bit()),
-            )
-            .field(
-                "dis_download_mode_err",
-                &format_args!("{}", self.dis_download_mode_err().bit()),
-            )
-            .field(
-                "dis_direct_boot_err",
-                &format_args!("{}", self.dis_direct_boot_err().bit()),
-            )
+            .field("xts_key_length_256_err", &self.xts_key_length_256_err())
+            .field("uart_print_control_err", &self.uart_print_control_err())
+            .field("force_send_resume_err", &self.force_send_resume_err())
+            .field("dis_download_mode_err", &self.dis_download_mode_err())
+            .field("dis_direct_boot_err", &self.dis_direct_boot_err())
             .field(
                 "enable_security_download_err",
-                &format_args!("{}", self.enable_security_download_err().bit()),
+                &self.enable_security_download_err(),
             )
-            .field(
-                "flash_tpuw_err",
-                &format_args!("{}", self.flash_tpuw_err().bits()),
-            )
-            .field(
-                "secure_boot_en_err",
-                &format_args!("{}", self.secure_boot_en_err().bit()),
-            )
-            .field(
-                "rpt4_reserved_err",
-                &format_args!("{}", self.rpt4_reserved_err().bits()),
-            )
+            .field("flash_tpuw_err", &self.flash_tpuw_err())
+            .field("secure_boot_en_err", &self.secure_boot_en_err())
+            .field("rpt4_reserved_err", &self.rpt4_reserved_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 0 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

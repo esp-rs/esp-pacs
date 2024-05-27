@@ -71,38 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL19")
-            .field(
-                "i2s2_tx_div_x",
-                &format_args!("{}", self.i2s2_tx_div_x().bits()),
-            )
-            .field(
-                "i2s2_tx_div_y",
-                &format_args!("{}", self.i2s2_tx_div_y().bits()),
-            )
-            .field(
-                "i2s2_tx_div_z",
-                &format_args!("{}", self.i2s2_tx_div_z().bits()),
-            )
-            .field(
-                "i2s2_tx_div_yn1",
-                &format_args!("{}", self.i2s2_tx_div_yn1().bit()),
-            )
-            .field(
-                "i2s2_mst_clk_sel",
-                &format_args!("{}", self.i2s2_mst_clk_sel().bit()),
-            )
-            .field(
-                "lcd_clk_src_sel",
-                &format_args!("{}", self.lcd_clk_src_sel().bits()),
-            )
-            .field("lcd_clk_en", &format_args!("{}", self.lcd_clk_en().bit()))
+            .field("i2s2_tx_div_x", &self.i2s2_tx_div_x())
+            .field("i2s2_tx_div_y", &self.i2s2_tx_div_y())
+            .field("i2s2_tx_div_z", &self.i2s2_tx_div_z())
+            .field("i2s2_tx_div_yn1", &self.i2s2_tx_div_yn1())
+            .field("i2s2_mst_clk_sel", &self.i2s2_mst_clk_sel())
+            .field("lcd_clk_src_sel", &self.lcd_clk_src_sel())
+            .field("lcd_clk_en", &self.lcd_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL19_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -73,41 +73,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field(
-                "cs_setup_time",
-                &format_args!("{}", self.cs_setup_time().bits()),
-            )
-            .field(
-                "cs_hold_time",
-                &format_args!("{}", self.cs_hold_time().bits()),
-            )
-            .field(
-                "ecc_cs_hold_time",
-                &format_args!("{}", self.ecc_cs_hold_time().bits()),
-            )
-            .field(
-                "ecc_skip_page_corner",
-                &format_args!("{}", self.ecc_skip_page_corner().bit()),
-            )
-            .field(
-                "ecc_16to18_byte_en",
-                &format_args!("{}", self.ecc_16to18_byte_en().bit()),
-            )
-            .field(
-                "split_trans_en",
-                &format_args!("{}", self.split_trans_en().bit()),
-            )
-            .field(
-                "cs_hold_delay",
-                &format_args!("{}", self.cs_hold_delay().bits()),
-            )
+            .field("cs_setup_time", &self.cs_setup_time())
+            .field("cs_hold_time", &self.cs_hold_time())
+            .field("ecc_cs_hold_time", &self.ecc_cs_hold_time())
+            .field("ecc_skip_page_corner", &self.ecc_skip_page_corner())
+            .field("ecc_16to18_byte_en", &self.ecc_16to18_byte_en())
+            .field("split_trans_en", &self.split_trans_en())
+            .field("cs_hold_delay", &self.cs_hold_delay())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

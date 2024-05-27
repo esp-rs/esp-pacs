@@ -89,49 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_RGB_YUV")
-            .field(
-                "lcd_conv_8bits_data_inv",
-                &format_args!("{}", self.lcd_conv_8bits_data_inv().bit()),
-            )
-            .field(
-                "lcd_conv_yuv2yuv_mode",
-                &format_args!("{}", self.lcd_conv_yuv2yuv_mode().bits()),
-            )
-            .field(
-                "lcd_conv_yuv_mode",
-                &format_args!("{}", self.lcd_conv_yuv_mode().bits()),
-            )
-            .field(
-                "lcd_conv_protocol_mode",
-                &format_args!("{}", self.lcd_conv_protocol_mode().bit()),
-            )
-            .field(
-                "lcd_conv_data_out_mode",
-                &format_args!("{}", self.lcd_conv_data_out_mode().bit()),
-            )
-            .field(
-                "lcd_conv_data_in_mode",
-                &format_args!("{}", self.lcd_conv_data_in_mode().bit()),
-            )
-            .field(
-                "lcd_conv_mode_8bits_on",
-                &format_args!("{}", self.lcd_conv_mode_8bits_on().bit()),
-            )
-            .field(
-                "lcd_conv_trans_mode",
-                &format_args!("{}", self.lcd_conv_trans_mode().bit()),
-            )
-            .field(
-                "lcd_conv_bypass",
-                &format_args!("{}", self.lcd_conv_bypass().bit()),
-            )
+            .field("lcd_conv_8bits_data_inv", &self.lcd_conv_8bits_data_inv())
+            .field("lcd_conv_yuv2yuv_mode", &self.lcd_conv_yuv2yuv_mode())
+            .field("lcd_conv_yuv_mode", &self.lcd_conv_yuv_mode())
+            .field("lcd_conv_protocol_mode", &self.lcd_conv_protocol_mode())
+            .field("lcd_conv_data_out_mode", &self.lcd_conv_data_out_mode())
+            .field("lcd_conv_data_in_mode", &self.lcd_conv_data_in_mode())
+            .field("lcd_conv_mode_8bits_on", &self.lcd_conv_mode_8bits_on())
+            .field("lcd_conv_trans_mode", &self.lcd_conv_trans_mode())
+            .field("lcd_conv_bypass", &self.lcd_conv_bypass())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_RGB_YUV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

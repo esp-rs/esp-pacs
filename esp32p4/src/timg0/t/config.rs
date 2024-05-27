@@ -64,19 +64,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field("use_xtal", &format_args!("{}", self.use_xtal().bit()))
-            .field("alarm_en", &format_args!("{}", self.alarm_en().bit()))
-            .field("divider", &format_args!("{}", self.divider().bits()))
-            .field("autoreload", &format_args!("{}", self.autoreload().bit()))
-            .field("increase", &format_args!("{}", self.increase().bit()))
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("use_xtal", &self.use_xtal())
+            .field("alarm_en", &self.alarm_en())
+            .field("divider", &self.divider())
+            .field("autoreload", &self.autoreload())
+            .field("increase", &self.increase())
+            .field("en", &self.en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

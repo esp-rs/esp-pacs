@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBLITE_MPU_TABLE_EMAC")
-            .field(
-                "emac_access_grant_config",
-                &format_args!("{}", self.emac_access_grant_config().bits()),
-            )
+            .field("emac_access_grant_config", &self.emac_access_grant_config())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHBLITE_MPU_TABLE_EMAC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

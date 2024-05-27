@@ -89,34 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_INT_CLR")
-            .field(
-                "inlink_dscr_empty",
-                &format_args!("{}", self.inlink_dscr_empty().bit()),
-            )
-            .field(
-                "outlink_dscr_error",
-                &format_args!("{}", self.outlink_dscr_error().bit()),
-            )
-            .field(
-                "inlink_dscr_error",
-                &format_args!("{}", self.inlink_dscr_error().bit()),
-            )
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
+            .field("inlink_dscr_empty", &self.inlink_dscr_empty())
+            .field("outlink_dscr_error", &self.outlink_dscr_error())
+            .field("inlink_dscr_error", &self.inlink_dscr_error())
+            .field("in_done", &self.in_done())
+            .field("in_err_eof", &self.in_err_eof())
+            .field("in_suc_eof", &self.in_suc_eof())
+            .field("out_done", &self.out_done())
+            .field("out_eof", &self.out_eof())
+            .field("out_total_eof", &self.out_total_eof())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

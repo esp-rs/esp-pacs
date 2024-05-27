@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AT_CMD_CHAR_SYNC")
-            .field(
-                "at_cmd_char",
-                &format_args!("{}", self.at_cmd_char().bits()),
-            )
-            .field("char_num", &format_args!("{}", self.char_num().bits()))
+            .field("at_cmd_char", &self.at_cmd_char())
+            .field("char_num", &self.char_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AT_CMD_CHAR_SYNC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

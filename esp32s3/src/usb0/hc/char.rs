@@ -98,23 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CHAR")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("epnum", &format_args!("{}", self.epnum().bits()))
-            .field("epdir", &format_args!("{}", self.epdir().bit()))
-            .field("lspddev", &format_args!("{}", self.lspddev().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("ec", &format_args!("{}", self.ec().bit()))
-            .field("devaddr", &format_args!("{}", self.devaddr().bits()))
-            .field("oddfrm", &format_args!("{}", self.oddfrm().bit()))
-            .field("chdis", &format_args!("{}", self.chdis().bit()))
-            .field("chena", &format_args!("{}", self.chena().bit()))
+            .field("mps", &self.mps())
+            .field("epnum", &self.epnum())
+            .field("epdir", &self.epdir())
+            .field("lspddev", &self.lspddev())
+            .field("eptype", &self.eptype())
+            .field("ec", &self.ec())
+            .field("devaddr", &self.devaddr())
+            .field("oddfrm", &self.oddfrm())
+            .field("chdis", &self.chdis())
+            .field("chena", &self.chena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CHAR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

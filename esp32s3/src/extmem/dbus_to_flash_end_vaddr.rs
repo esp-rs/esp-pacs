@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBUS_TO_FLASH_END_VADDR")
-            .field(
-                "dbus_to_flash_end_vaddr",
-                &format_args!("{}", self.dbus_to_flash_end_vaddr().bits()),
-            )
+            .field("dbus_to_flash_end_vaddr", &self.dbus_to_flash_end_vaddr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBUS_TO_FLASH_END_VADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

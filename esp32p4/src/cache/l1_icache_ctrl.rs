@@ -49,33 +49,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE_CTRL")
-            .field(
-                "l1_icache_shut_ibus0",
-                &format_args!("{}", self.l1_icache_shut_ibus0().bit()),
-            )
-            .field(
-                "l1_icache_shut_ibus1",
-                &format_args!("{}", self.l1_icache_shut_ibus1().bit()),
-            )
-            .field(
-                "l1_icache_shut_ibus2",
-                &format_args!("{}", self.l1_icache_shut_ibus2().bit()),
-            )
-            .field(
-                "l1_icache_shut_ibus3",
-                &format_args!("{}", self.l1_icache_shut_ibus3().bit()),
-            )
-            .field(
-                "l1_icache_undef_op",
-                &format_args!("{}", self.l1_icache_undef_op().bits()),
-            )
+            .field("l1_icache_shut_ibus0", &self.l1_icache_shut_ibus0())
+            .field("l1_icache_shut_ibus1", &self.l1_icache_shut_ibus1())
+            .field("l1_icache_shut_ibus2", &self.l1_icache_shut_ibus2())
+            .field("l1_icache_shut_ibus3", &self.l1_icache_shut_ibus3())
+            .field("l1_icache_undef_op", &self.l1_icache_undef_op())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

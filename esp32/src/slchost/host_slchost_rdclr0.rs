@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("HOST_SLCHOST_RDCLR0")
             .field(
                 "host_slchost_slc0_bit7_clraddr",
-                &format_args!("{}", self.host_slchost_slc0_bit7_clraddr().bits()),
+                &self.host_slchost_slc0_bit7_clraddr(),
             )
             .field(
                 "host_slchost_slc0_bit6_clraddr",
-                &format_args!("{}", self.host_slchost_slc0_bit6_clraddr().bits()),
+                &self.host_slchost_slc0_bit6_clraddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_RDCLR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

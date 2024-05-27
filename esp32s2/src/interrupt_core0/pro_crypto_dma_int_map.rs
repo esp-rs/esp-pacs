@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CRYPTO_DMA_INT_MAP")
-            .field(
-                "pro_crypto_dma_int_map",
-                &format_args!("{}", self.pro_crypto_dma_int_map().bits()),
-            )
+            .field("pro_crypto_dma_int_map", &self.pro_crypto_dma_int_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CRYPTO_DMA_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

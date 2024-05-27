@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TCM_RDN_ECO_HIGH")
-            .field(
-                "reg_hp_tcm_rdn_eco_high",
-                &format_args!("{}", self.reg_hp_tcm_rdn_eco_high().bits()),
-            )
+            .field("reg_hp_tcm_rdn_eco_high", &self.reg_hp_tcm_rdn_eco_high())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TCM_RDN_ECO_HIGH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

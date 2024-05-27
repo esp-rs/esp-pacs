@@ -55,31 +55,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("WIFI_LP_CLK_CONF")
             .field(
                 "clk_wifipwr_lp_sel_osc_slow",
-                &format_args!("{}", self.clk_wifipwr_lp_sel_osc_slow().bit()),
+                &self.clk_wifipwr_lp_sel_osc_slow(),
             )
             .field(
                 "clk_wifipwr_lp_sel_osc_fast",
-                &format_args!("{}", self.clk_wifipwr_lp_sel_osc_fast().bit()),
+                &self.clk_wifipwr_lp_sel_osc_fast(),
             )
-            .field(
-                "clk_wifipwr_lp_sel_xtal",
-                &format_args!("{}", self.clk_wifipwr_lp_sel_xtal().bit()),
-            )
+            .field("clk_wifipwr_lp_sel_xtal", &self.clk_wifipwr_lp_sel_xtal())
             .field(
                 "clk_wifipwr_lp_sel_xtal32k",
-                &format_args!("{}", self.clk_wifipwr_lp_sel_xtal32k().bit()),
+                &self.clk_wifipwr_lp_sel_xtal32k(),
             )
-            .field(
-                "clk_wifipwr_lp_div_num",
-                &format_args!("{}", self.clk_wifipwr_lp_div_num().bits()),
-            )
+            .field("clk_wifipwr_lp_div_num", &self.clk_wifipwr_lp_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<WIFI_LP_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

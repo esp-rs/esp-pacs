@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROOT_CLK_CTRL0")
-            .field(
-                "cpuicm_delay_num",
-                &format_args!("{}", self.cpuicm_delay_num().bits()),
-            )
-            .field(
-                "soc_clk_div_update",
-                &format_args!("{}", self.soc_clk_div_update().bit()),
-            )
-            .field(
-                "cpu_clk_div_num",
-                &format_args!("{}", self.cpu_clk_div_num().bits()),
-            )
-            .field(
-                "cpu_clk_div_numerator",
-                &format_args!("{}", self.cpu_clk_div_numerator().bits()),
-            )
-            .field(
-                "cpu_clk_div_denominator",
-                &format_args!("{}", self.cpu_clk_div_denominator().bits()),
-            )
+            .field("cpuicm_delay_num", &self.cpuicm_delay_num())
+            .field("soc_clk_div_update", &self.soc_clk_div_update())
+            .field("cpu_clk_div_num", &self.cpu_clk_div_num())
+            .field("cpu_clk_div_numerator", &self.cpu_clk_div_numerator())
+            .field("cpu_clk_div_denominator", &self.cpu_clk_div_denominator())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ROOT_CLK_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -40,26 +40,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_SLAVE_ADDR3")
-            .field(
-                "i2c_slave_addr5",
-                &format_args!("{}", self.i2c_slave_addr5().bits()),
-            )
-            .field(
-                "i2c_slave_addr4",
-                &format_args!("{}", self.i2c_slave_addr4().bits()),
-            )
-            .field("tsens_out", &format_args!("{}", self.tsens_out().bits()))
-            .field(
-                "tsens_rdy_out",
-                &format_args!("{}", self.tsens_rdy_out().bit()),
-            )
+            .field("i2c_slave_addr5", &self.i2c_slave_addr5())
+            .field("i2c_slave_addr4", &self.i2c_slave_addr4())
+            .field("tsens_out", &self.tsens_out())
+            .field("tsens_rdy_out", &self.tsens_rdy_out())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_SLAVE_ADDR3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

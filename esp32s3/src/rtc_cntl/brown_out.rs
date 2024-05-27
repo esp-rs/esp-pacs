@@ -89,46 +89,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BROWN_OUT")
-            .field(
-                "brown_out_int_wait",
-                &format_args!("{}", self.brown_out_int_wait().bits()),
-            )
+            .field("brown_out_int_wait", &self.brown_out_int_wait())
             .field(
                 "brown_out_close_flash_ena",
-                &format_args!("{}", self.brown_out_close_flash_ena().bit()),
+                &self.brown_out_close_flash_ena(),
             )
-            .field(
-                "brown_out_pd_rf_ena",
-                &format_args!("{}", self.brown_out_pd_rf_ena().bit()),
-            )
-            .field(
-                "brown_out_rst_wait",
-                &format_args!("{}", self.brown_out_rst_wait().bits()),
-            )
-            .field(
-                "brown_out_rst_ena",
-                &format_args!("{}", self.brown_out_rst_ena().bit()),
-            )
-            .field(
-                "brown_out_rst_sel",
-                &format_args!("{}", self.brown_out_rst_sel().bit()),
-            )
-            .field(
-                "brown_out_ana_rst_en",
-                &format_args!("{}", self.brown_out_ana_rst_en().bit()),
-            )
-            .field(
-                "brown_out_ena",
-                &format_args!("{}", self.brown_out_ena().bit()),
-            )
-            .field("det", &format_args!("{}", self.det().bit()))
+            .field("brown_out_pd_rf_ena", &self.brown_out_pd_rf_ena())
+            .field("brown_out_rst_wait", &self.brown_out_rst_wait())
+            .field("brown_out_rst_ena", &self.brown_out_rst_ena())
+            .field("brown_out_rst_sel", &self.brown_out_rst_sel())
+            .field("brown_out_ana_rst_en", &self.brown_out_ana_rst_en())
+            .field("brown_out_ena", &self.brown_out_ena())
+            .field("det", &self.det())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BROWN_OUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

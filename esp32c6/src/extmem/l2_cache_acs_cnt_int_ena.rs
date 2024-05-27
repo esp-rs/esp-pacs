@@ -62,45 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_CNT_INT_ENA")
-            .field(
-                "l2_ibus0_ovf_int_ena",
-                &format_args!("{}", self.l2_ibus0_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_ibus1_ovf_int_ena",
-                &format_args!("{}", self.l2_ibus1_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_ibus2_ovf_int_ena",
-                &format_args!("{}", self.l2_ibus2_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_ibus3_ovf_int_ena",
-                &format_args!("{}", self.l2_ibus3_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_dbus0_ovf_int_ena",
-                &format_args!("{}", self.l2_dbus0_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_dbus1_ovf_int_ena",
-                &format_args!("{}", self.l2_dbus1_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_dbus2_ovf_int_ena",
-                &format_args!("{}", self.l2_dbus2_ovf_int_ena().bit()),
-            )
-            .field(
-                "l2_dbus3_ovf_int_ena",
-                &format_args!("{}", self.l2_dbus3_ovf_int_ena().bit()),
-            )
+            .field("l2_ibus0_ovf_int_ena", &self.l2_ibus0_ovf_int_ena())
+            .field("l2_ibus1_ovf_int_ena", &self.l2_ibus1_ovf_int_ena())
+            .field("l2_ibus2_ovf_int_ena", &self.l2_ibus2_ovf_int_ena())
+            .field("l2_ibus3_ovf_int_ena", &self.l2_ibus3_ovf_int_ena())
+            .field("l2_dbus0_ovf_int_ena", &self.l2_dbus0_ovf_int_ena())
+            .field("l2_dbus1_ovf_int_ena", &self.l2_dbus1_ovf_int_ena())
+            .field("l2_dbus2_ovf_int_ena", &self.l2_dbus2_ovf_int_ena())
+            .field("l2_dbus3_ovf_int_ena", &self.l2_dbus3_ovf_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Access Counter Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_cnt_int_ena::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

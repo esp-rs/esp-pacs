@@ -62,22 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field("scan_done", &format_args!("{}", self.scan_done().bit()))
-            .field("done", &format_args!("{}", self.done().bit()))
-            .field("active", &format_args!("{}", self.active().bit()))
-            .field("inactive", &format_args!("{}", self.inactive().bit()))
-            .field("timeout", &format_args!("{}", self.timeout().bit()))
-            .field(
-                "approach_loop_done",
-                &format_args!("{}", self.approach_loop_done().bit()),
-            )
+            .field("scan_done", &self.scan_done())
+            .field("done", &self.done())
+            .field("active", &self.active())
+            .field("inactive", &self.inactive())
+            .field("timeout", &self.timeout())
+            .field("approach_loop_done", &self.approach_loop_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

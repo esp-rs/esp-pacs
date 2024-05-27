@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INFIFO_POP")
-            .field(
-                "infifo_rdata",
-                &format_args!("{}", self.infifo_rdata().bits()),
-            )
-            .field("infifo_pop", &format_args!("{}", self.infifo_pop().bit()))
+            .field("infifo_rdata", &self.infifo_rdata())
+            .field("infifo_pop", &self.infifo_pop())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INFIFO_POP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

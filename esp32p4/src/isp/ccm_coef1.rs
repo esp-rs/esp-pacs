@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CCM_COEF1")
-            .field("ccm_rb", &format_args!("{}", self.ccm_rb().bits()))
-            .field("ccm_gr", &format_args!("{}", self.ccm_gr().bits()))
+            .field("ccm_rb", &self.ccm_rb())
+            .field("ccm_gr", &self.ccm_gr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CCM_COEF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

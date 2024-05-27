@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MODEM_LP_TIMER_CONF")
-            .field(
-                "lp_timer_sel_rtc_slow",
-                &format_args!("{}", self.lp_timer_sel_rtc_slow().bit()),
-            )
-            .field(
-                "lp_timer_sel_8m",
-                &format_args!("{}", self.lp_timer_sel_8m().bit()),
-            )
-            .field(
-                "lp_timer_sel_xtal",
-                &format_args!("{}", self.lp_timer_sel_xtal().bit()),
-            )
-            .field(
-                "lp_timer_sel_xtal32k",
-                &format_args!("{}", self.lp_timer_sel_xtal32k().bit()),
-            )
-            .field(
-                "lp_timer_clk_div_num",
-                &format_args!("{}", self.lp_timer_clk_div_num().bits()),
-            )
+            .field("lp_timer_sel_rtc_slow", &self.lp_timer_sel_rtc_slow())
+            .field("lp_timer_sel_8m", &self.lp_timer_sel_8m())
+            .field("lp_timer_sel_xtal", &self.lp_timer_sel_xtal())
+            .field("lp_timer_sel_xtal32k", &self.lp_timer_sel_xtal32k())
+            .field("lp_timer_clk_div_num", &self.lp_timer_clk_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MODEM_LP_TIMER_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSENS_CLK_CONF")
-            .field(
-                "tsens_clk_sel",
-                &format_args!("{}", self.tsens_clk_sel().bit()),
-            )
-            .field(
-                "tsens_clk_en",
-                &format_args!("{}", self.tsens_clk_en().bit()),
-            )
-            .field(
-                "tsens_rst_en",
-                &format_args!("{}", self.tsens_rst_en().bit()),
-            )
+            .field("tsens_clk_sel", &self.tsens_clk_sel())
+            .field("tsens_clk_en", &self.tsens_clk_en())
+            .field("tsens_rst_en", &self.tsens_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TSENS_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

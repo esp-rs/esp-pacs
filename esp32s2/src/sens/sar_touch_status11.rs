@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_STATUS11")
-            .field(
-                "touch_pad11_data",
-                &format_args!("{}", self.touch_pad11_data().bits()),
-            )
-            .field(
-                "touch_pad11_debounce",
-                &format_args!("{}", self.touch_pad11_debounce().bits()),
-            )
+            .field("touch_pad11_data", &self.touch_pad11_data())
+            .field("touch_pad11_debounce", &self.touch_pad11_debounce())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_STATUS11_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Touch pad 11 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_status11::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

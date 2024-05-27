@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTMASK")
-            .field("int_mask", &format_args!("{}", self.int_mask().bits()))
-            .field(
-                "sdio_int_mask",
-                &format_args!("{}", self.sdio_int_mask().bits()),
-            )
+            .field("int_mask", &self.int_mask())
+            .field("sdio_int_mask", &self.sdio_int_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTMASK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

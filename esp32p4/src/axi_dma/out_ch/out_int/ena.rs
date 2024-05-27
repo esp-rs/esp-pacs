@@ -98,47 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ENA")
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field(
-                "out_dscr_err",
-                &format_args!("{}", self.out_dscr_err().bit()),
-            )
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
-            .field(
-                "outfifo_l1_ovf",
-                &format_args!("{}", self.outfifo_l1_ovf().bit()),
-            )
-            .field(
-                "outfifo_l1_udf",
-                &format_args!("{}", self.outfifo_l1_udf().bit()),
-            )
-            .field(
-                "outfifo_l2_ovf",
-                &format_args!("{}", self.outfifo_l2_ovf().bit()),
-            )
-            .field(
-                "outfifo_l2_udf",
-                &format_args!("{}", self.outfifo_l2_udf().bit()),
-            )
-            .field(
-                "outfifo_l3_ovf",
-                &format_args!("{}", self.outfifo_l3_ovf().bit()),
-            )
-            .field(
-                "outfifo_l3_udf",
-                &format_args!("{}", self.outfifo_l3_udf().bit()),
-            )
+            .field("out_done", &self.out_done())
+            .field("out_eof", &self.out_eof())
+            .field("out_dscr_err", &self.out_dscr_err())
+            .field("out_total_eof", &self.out_total_eof())
+            .field("outfifo_l1_ovf", &self.outfifo_l1_ovf())
+            .field("outfifo_l1_udf", &self.outfifo_l1_udf())
+            .field("outfifo_l2_ovf", &self.outfifo_l2_ovf())
+            .field("outfifo_l2_udf", &self.outfifo_l2_udf())
+            .field("outfifo_l3_ovf", &self.outfifo_l3_ovf())
+            .field("outfifo_l3_udf", &self.outfifo_l3_udf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

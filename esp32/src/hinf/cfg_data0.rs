@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CFG_DATA0")
-            .field(
-                "user_id_fn1",
-                &format_args!("{}", self.user_id_fn1().bits()),
-            )
-            .field(
-                "device_id_fn1",
-                &format_args!("{}", self.device_id_fn1().bits()),
-            )
+            .field("user_id_fn1", &self.user_id_fn1())
+            .field("device_id_fn1", &self.device_id_fn1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CFG_DATA0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

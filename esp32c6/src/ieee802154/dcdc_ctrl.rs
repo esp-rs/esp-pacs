@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCDC_CTRL")
-            .field(
-                "dcdc_pre_up_delay",
-                &format_args!("{}", self.dcdc_pre_up_delay().bits()),
-            )
-            .field(
-                "dcdc_down_delay",
-                &format_args!("{}", self.dcdc_down_delay().bits()),
-            )
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("tx_dcdc_up", &format_args!("{}", self.tx_dcdc_up().bit()))
+            .field("dcdc_pre_up_delay", &self.dcdc_pre_up_delay())
+            .field("dcdc_down_delay", &self.dcdc_down_delay())
+            .field("en", &self.en())
+            .field("tx_dcdc_up", &self.tx_dcdc_up())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCDC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

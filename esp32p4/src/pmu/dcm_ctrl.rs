@@ -113,54 +113,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCM_CTRL")
-            .field(
-                "dcdc_done_force",
-                &format_args!("{}", self.dcdc_done_force().bit()),
-            )
-            .field(
-                "dcdc_on_force_pu",
-                &format_args!("{}", self.dcdc_on_force_pu().bit()),
-            )
-            .field(
-                "dcdc_on_force_pd",
-                &format_args!("{}", self.dcdc_on_force_pd().bit()),
-            )
-            .field(
-                "dcdc_fb_res_force_pu",
-                &format_args!("{}", self.dcdc_fb_res_force_pu().bit()),
-            )
-            .field(
-                "dcdc_fb_res_force_pd",
-                &format_args!("{}", self.dcdc_fb_res_force_pd().bit()),
-            )
-            .field(
-                "dcdc_ls_force_pu",
-                &format_args!("{}", self.dcdc_ls_force_pu().bit()),
-            )
-            .field(
-                "dcdc_ls_force_pd",
-                &format_args!("{}", self.dcdc_ls_force_pd().bit()),
-            )
-            .field(
-                "dcdc_ds_force_pu",
-                &format_args!("{}", self.dcdc_ds_force_pu().bit()),
-            )
-            .field(
-                "dcdc_ds_force_pd",
-                &format_args!("{}", self.dcdc_ds_force_pd().bit()),
-            )
-            .field("dcm_cur_st", &format_args!("{}", self.dcm_cur_st().bits()))
-            .field(
-                "dcdc_en_amux_test",
-                &format_args!("{}", self.dcdc_en_amux_test().bit()),
-            )
+            .field("dcdc_done_force", &self.dcdc_done_force())
+            .field("dcdc_on_force_pu", &self.dcdc_on_force_pu())
+            .field("dcdc_on_force_pd", &self.dcdc_on_force_pd())
+            .field("dcdc_fb_res_force_pu", &self.dcdc_fb_res_force_pu())
+            .field("dcdc_fb_res_force_pd", &self.dcdc_fb_res_force_pd())
+            .field("dcdc_ls_force_pu", &self.dcdc_ls_force_pu())
+            .field("dcdc_ls_force_pd", &self.dcdc_ls_force_pd())
+            .field("dcdc_ds_force_pu", &self.dcdc_ds_force_pu())
+            .field("dcdc_ds_force_pd", &self.dcdc_ds_force_pd())
+            .field("dcm_cur_st", &self.dcm_cur_st())
+            .field("dcdc_en_amux_test", &self.dcdc_en_amux_test())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

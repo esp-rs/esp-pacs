@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_CNT_INT_CLR")
-            .field(
-                "l2_ibus2_ovf_int_clr",
-                &format_args!("{}", self.l2_ibus2_ovf_int_clr().bit()),
-            )
-            .field(
-                "l2_ibus3_ovf_int_clr",
-                &format_args!("{}", self.l2_ibus3_ovf_int_clr().bit()),
-            )
-            .field(
-                "l2_dbus2_ovf_int_clr",
-                &format_args!("{}", self.l2_dbus2_ovf_int_clr().bit()),
-            )
-            .field(
-                "l2_dbus3_ovf_int_clr",
-                &format_args!("{}", self.l2_dbus3_ovf_int_clr().bit()),
-            )
+            .field("l2_ibus2_ovf_int_clr", &self.l2_ibus2_ovf_int_clr())
+            .field("l2_ibus3_ovf_int_clr", &self.l2_ibus3_ovf_int_clr())
+            .field("l2_dbus2_ovf_int_clr", &self.l2_dbus2_ovf_int_clr())
+            .field("l2_dbus3_ovf_int_clr", &self.l2_dbus3_ovf_int_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -73,36 +73,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("PERI_CLK_CTRL119")
             .field(
                 "parlio_tx_clk_div_numerator",
-                &format_args!("{}", self.parlio_tx_clk_div_numerator().bits()),
+                &self.parlio_tx_clk_div_numerator(),
             )
             .field(
                 "parlio_tx_clk_div_denominator",
-                &format_args!("{}", self.parlio_tx_clk_div_denominator().bits()),
+                &self.parlio_tx_clk_div_denominator(),
             )
-            .field(
-                "i3c_mst_clk_src_sel",
-                &format_args!("{}", self.i3c_mst_clk_src_sel().bits()),
-            )
-            .field(
-                "i3c_mst_clk_en",
-                &format_args!("{}", self.i3c_mst_clk_en().bit()),
-            )
-            .field(
-                "i3c_mst_clk_div_num",
-                &format_args!("{}", self.i3c_mst_clk_div_num().bits()),
-            )
-            .field(
-                "cam_clk_src_sel",
-                &format_args!("{}", self.cam_clk_src_sel().bits()),
-            )
-            .field("cam_clk_en", &format_args!("{}", self.cam_clk_en().bit()))
+            .field("i3c_mst_clk_src_sel", &self.i3c_mst_clk_src_sel())
+            .field("i3c_mst_clk_en", &self.i3c_mst_clk_en())
+            .field("i3c_mst_clk_div_num", &self.i3c_mst_clk_div_num())
+            .field("cam_clk_src_sel", &self.cam_clk_src_sel())
+            .field("cam_clk_en", &self.cam_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL119_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

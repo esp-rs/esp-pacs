@@ -132,29 +132,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS")
-            .field("stnotstop", &format_args!("{}", self.stnotstop().bit()))
-            .field("stmsg", &format_args!("{}", self.stmsg().bit()))
-            .field("stccch", &format_args!("{}", self.stccch().bit()))
-            .field("streqrd", &format_args!("{}", self.streqrd().bit()))
-            .field("streqwr", &format_args!("{}", self.streqwr().bit()))
-            .field("stdaa", &format_args!("{}", self.stdaa().bit()))
-            .field("sthdr", &format_args!("{}", self.sthdr().bit()))
-            .field("start", &format_args!("{}", self.start().bit()))
-            .field("matched", &format_args!("{}", self.matched().bit()))
-            .field("stop", &format_args!("{}", self.stop().bit()))
-            .field("rxpend", &format_args!("{}", self.rxpend().bit()))
-            .field("txnotfull", &format_args!("{}", self.txnotfull().bit()))
-            .field("dachg", &format_args!("{}", self.dachg().bit()))
-            .field("ccc", &format_args!("{}", self.ccc().bit()))
-            .field("errwarn", &format_args!("{}", self.errwarn().bit()))
-            .field("hdrmatch", &format_args!("{}", self.hdrmatch().bit()))
+            .field("stnotstop", &self.stnotstop())
+            .field("stmsg", &self.stmsg())
+            .field("stccch", &self.stccch())
+            .field("streqrd", &self.streqrd())
+            .field("streqwr", &self.streqwr())
+            .field("stdaa", &self.stdaa())
+            .field("sthdr", &self.sthdr())
+            .field("start", &self.start())
+            .field("matched", &self.matched())
+            .field("stop", &self.stop())
+            .field("rxpend", &self.rxpend())
+            .field("txnotfull", &self.txnotfull())
+            .field("dachg", &self.dachg())
+            .field("ccc", &self.ccc())
+            .field("errwarn", &self.errwarn())
+            .field("hdrmatch", &self.hdrmatch())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

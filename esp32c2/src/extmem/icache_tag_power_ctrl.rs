@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_TAG_POWER_CTRL")
-            .field(
-                "icache_tag_mem_force_on",
-                &format_args!("{}", self.icache_tag_mem_force_on().bit()),
-            )
-            .field(
-                "icache_tag_mem_force_pd",
-                &format_args!("{}", self.icache_tag_mem_force_pd().bit()),
-            )
-            .field(
-                "icache_tag_mem_force_pu",
-                &format_args!("{}", self.icache_tag_mem_force_pu().bit()),
-            )
+            .field("icache_tag_mem_force_on", &self.icache_tag_mem_force_on())
+            .field("icache_tag_mem_force_pd", &self.icache_tag_mem_force_pd())
+            .field("icache_tag_mem_force_pu", &self.icache_tag_mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_TAG_POWER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

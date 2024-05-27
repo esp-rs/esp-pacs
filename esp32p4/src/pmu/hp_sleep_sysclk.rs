@@ -55,31 +55,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_SYSCLK")
             .field(
                 "hp_sleep_dig_sys_clk_no_div",
-                &format_args!("{}", self.hp_sleep_dig_sys_clk_no_div().bit()),
+                &self.hp_sleep_dig_sys_clk_no_div(),
             )
             .field(
                 "hp_sleep_icg_sys_clock_en",
-                &format_args!("{}", self.hp_sleep_icg_sys_clock_en().bit()),
+                &self.hp_sleep_icg_sys_clock_en(),
             )
-            .field(
-                "hp_sleep_sys_clk_slp_sel",
-                &format_args!("{}", self.hp_sleep_sys_clk_slp_sel().bit()),
-            )
-            .field(
-                "hp_sleep_icg_slp_sel",
-                &format_args!("{}", self.hp_sleep_icg_slp_sel().bit()),
-            )
-            .field(
-                "hp_sleep_dig_sys_clk_sel",
-                &format_args!("{}", self.hp_sleep_dig_sys_clk_sel().bits()),
-            )
+            .field("hp_sleep_sys_clk_slp_sel", &self.hp_sleep_sys_clk_slp_sel())
+            .field("hp_sleep_icg_slp_sel", &self.hp_sleep_icg_slp_sel())
+            .field("hp_sleep_dig_sys_clk_sel", &self.hp_sleep_dig_sys_clk_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_SYSCLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -53,30 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTM_CONFIG")
-            .field(
-                "dtmch_tx_length",
-                &format_args!("{}", self.dtmch_tx_length().bits()),
-            )
-            .field(
-                "dtm_tx_pld_type",
-                &format_args!("{}", self.dtm_tx_pld_type().bits()),
-            )
-            .field(
-                "dtm_hop_freq",
-                &format_args!("{}", self.dtm_hop_freq().bits()),
-            )
-            .field(
-                "dtm_contrx_en",
-                &format_args!("{}", self.dtm_contrx_en().bit()),
-            )
-            .field("dtm_on", &format_args!("{}", self.dtm_on().bit()))
+            .field("dtmch_tx_length", &self.dtmch_tx_length())
+            .field("dtm_tx_pld_type", &self.dtm_tx_pld_type())
+            .field("dtm_hop_freq", &self.dtm_hop_freq())
+            .field("dtm_contrx_en", &self.dtm_contrx_en())
+            .field("dtm_on", &self.dtm_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DTM_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

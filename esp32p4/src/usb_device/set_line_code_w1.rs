@@ -27,22 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SET_LINE_CODE_W1")
-            .field(
-                "bchar_format",
-                &format_args!("{}", self.bchar_format().bits()),
-            )
-            .field(
-                "bparity_type",
-                &format_args!("{}", self.bparity_type().bits()),
-            )
-            .field("bdata_bits", &format_args!("{}", self.bdata_bits().bits()))
+            .field("bchar_format", &self.bchar_format())
+            .field("bparity_type", &self.bparity_type())
+            .field("bdata_bits", &self.bdata_bits())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SET_LINE_CODE_W1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "W1 of SET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

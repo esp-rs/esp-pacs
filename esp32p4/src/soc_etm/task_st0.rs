@@ -296,141 +296,63 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_ST0")
-            .field(
-                "gpio_task_ch0_set_st",
-                &format_args!("{}", self.gpio_task_ch0_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch1_set_st",
-                &format_args!("{}", self.gpio_task_ch1_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch2_set_st",
-                &format_args!("{}", self.gpio_task_ch2_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch3_set_st",
-                &format_args!("{}", self.gpio_task_ch3_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch4_set_st",
-                &format_args!("{}", self.gpio_task_ch4_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch5_set_st",
-                &format_args!("{}", self.gpio_task_ch5_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch6_set_st",
-                &format_args!("{}", self.gpio_task_ch6_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch7_set_st",
-                &format_args!("{}", self.gpio_task_ch7_set_st().bit()),
-            )
-            .field(
-                "gpio_task_ch0_clear_st",
-                &format_args!("{}", self.gpio_task_ch0_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch1_clear_st",
-                &format_args!("{}", self.gpio_task_ch1_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch2_clear_st",
-                &format_args!("{}", self.gpio_task_ch2_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch3_clear_st",
-                &format_args!("{}", self.gpio_task_ch3_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch4_clear_st",
-                &format_args!("{}", self.gpio_task_ch4_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch5_clear_st",
-                &format_args!("{}", self.gpio_task_ch5_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch6_clear_st",
-                &format_args!("{}", self.gpio_task_ch6_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch7_clear_st",
-                &format_args!("{}", self.gpio_task_ch7_clear_st().bit()),
-            )
-            .field(
-                "gpio_task_ch0_toggle_st",
-                &format_args!("{}", self.gpio_task_ch0_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch1_toggle_st",
-                &format_args!("{}", self.gpio_task_ch1_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch2_toggle_st",
-                &format_args!("{}", self.gpio_task_ch2_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch3_toggle_st",
-                &format_args!("{}", self.gpio_task_ch3_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch4_toggle_st",
-                &format_args!("{}", self.gpio_task_ch4_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch5_toggle_st",
-                &format_args!("{}", self.gpio_task_ch5_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch6_toggle_st",
-                &format_args!("{}", self.gpio_task_ch6_toggle_st().bit()),
-            )
-            .field(
-                "gpio_task_ch7_toggle_st",
-                &format_args!("{}", self.gpio_task_ch7_toggle_st().bit()),
-            )
+            .field("gpio_task_ch0_set_st", &self.gpio_task_ch0_set_st())
+            .field("gpio_task_ch1_set_st", &self.gpio_task_ch1_set_st())
+            .field("gpio_task_ch2_set_st", &self.gpio_task_ch2_set_st())
+            .field("gpio_task_ch3_set_st", &self.gpio_task_ch3_set_st())
+            .field("gpio_task_ch4_set_st", &self.gpio_task_ch4_set_st())
+            .field("gpio_task_ch5_set_st", &self.gpio_task_ch5_set_st())
+            .field("gpio_task_ch6_set_st", &self.gpio_task_ch6_set_st())
+            .field("gpio_task_ch7_set_st", &self.gpio_task_ch7_set_st())
+            .field("gpio_task_ch0_clear_st", &self.gpio_task_ch0_clear_st())
+            .field("gpio_task_ch1_clear_st", &self.gpio_task_ch1_clear_st())
+            .field("gpio_task_ch2_clear_st", &self.gpio_task_ch2_clear_st())
+            .field("gpio_task_ch3_clear_st", &self.gpio_task_ch3_clear_st())
+            .field("gpio_task_ch4_clear_st", &self.gpio_task_ch4_clear_st())
+            .field("gpio_task_ch5_clear_st", &self.gpio_task_ch5_clear_st())
+            .field("gpio_task_ch6_clear_st", &self.gpio_task_ch6_clear_st())
+            .field("gpio_task_ch7_clear_st", &self.gpio_task_ch7_clear_st())
+            .field("gpio_task_ch0_toggle_st", &self.gpio_task_ch0_toggle_st())
+            .field("gpio_task_ch1_toggle_st", &self.gpio_task_ch1_toggle_st())
+            .field("gpio_task_ch2_toggle_st", &self.gpio_task_ch2_toggle_st())
+            .field("gpio_task_ch3_toggle_st", &self.gpio_task_ch3_toggle_st())
+            .field("gpio_task_ch4_toggle_st", &self.gpio_task_ch4_toggle_st())
+            .field("gpio_task_ch5_toggle_st", &self.gpio_task_ch5_toggle_st())
+            .field("gpio_task_ch6_toggle_st", &self.gpio_task_ch6_toggle_st())
+            .field("gpio_task_ch7_toggle_st", &self.gpio_task_ch7_toggle_st())
             .field(
                 "ledc_task_timer0_res_update_st",
-                &format_args!("{}", self.ledc_task_timer0_res_update_st().bit()),
+                &self.ledc_task_timer0_res_update_st(),
             )
             .field(
                 "ledc_task_timer1_res_update_st",
-                &format_args!("{}", self.ledc_task_timer1_res_update_st().bit()),
+                &self.ledc_task_timer1_res_update_st(),
             )
             .field(
                 "ledc_task_timer2_res_update_st",
-                &format_args!("{}", self.ledc_task_timer2_res_update_st().bit()),
+                &self.ledc_task_timer2_res_update_st(),
             )
             .field(
                 "ledc_task_timer3_res_update_st",
-                &format_args!("{}", self.ledc_task_timer3_res_update_st().bit()),
+                &self.ledc_task_timer3_res_update_st(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch0_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch0_st().bit()),
+                &self.ledc_task_duty_scale_update_ch0_st(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch1_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch1_st().bit()),
+                &self.ledc_task_duty_scale_update_ch1_st(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch2_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch2_st().bit()),
+                &self.ledc_task_duty_scale_update_ch2_st(),
             )
             .field(
                 "ledc_task_duty_scale_update_ch3_st",
-                &format_args!("{}", self.ledc_task_duty_scale_update_ch3_st().bit()),
+                &self.ledc_task_duty_scale_update_ch3_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_ST0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

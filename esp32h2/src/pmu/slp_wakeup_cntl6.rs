@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLP_WAKEUP_CNTL6")
-            .field(
-                "soc_wakeup_wait",
-                &format_args!("{}", self.soc_wakeup_wait().bits()),
-            )
-            .field(
-                "soc_wakeup_wait_cfg",
-                &format_args!("{}", self.soc_wakeup_wait_cfg().bits()),
-            )
+            .field("soc_wakeup_wait", &self.soc_wakeup_wait())
+            .field("soc_wakeup_wait_cfg", &self.soc_wakeup_wait_cfg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLP_WAKEUP_CNTL6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

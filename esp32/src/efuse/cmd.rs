@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field("read_cmd", &format_args!("{}", self.read_cmd().bit()))
-            .field("pgm_cmd", &format_args!("{}", self.pgm_cmd().bit()))
+            .field("read_cmd", &self.read_cmd())
+            .field("pgm_cmd", &self.pgm_cmd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BUF_LEN")
-            .field(
-                "out_cmdfifo_buf_len_hb",
-                &format_args!("{}", self.out_cmdfifo_buf_len_hb().bits()),
-            )
+            .field("out_cmdfifo_buf_len_hb", &self.out_cmdfifo_buf_len_hb())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BUF_LEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TX CHx buf len register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buf_len::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

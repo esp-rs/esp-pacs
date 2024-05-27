@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("USB_OTG_ENDP_MULTI_PROC_INT_MAP")
             .field(
                 "core1_usb_otg_endp_multi_proc_int_map",
-                &format_args!("{}", self.core1_usb_otg_endp_multi_proc_int_map().bits()),
+                &self.core1_usb_otg_endp_multi_proc_int_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USB_OTG_ENDP_MULTI_PROC_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

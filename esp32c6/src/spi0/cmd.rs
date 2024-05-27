@@ -27,16 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMD")
-            .field("mst_st", &format_args!("{}", self.mst_st().bits()))
-            .field("slv_st", &format_args!("{}", self.slv_st().bits()))
-            .field("usr", &format_args!("{}", self.usr().bit()))
+            .field("mst_st", &self.mst_st())
+            .field("slv_st", &self.slv_st())
+            .field("usr", &self.usr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI0 FSM status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -33,25 +33,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICM_CPU_H2X_CFG")
-            .field(
-                "cpu_icm_h2x_post_wr_en",
-                &format_args!("{}", self.cpu_icm_h2x_post_wr_en().bit()),
-            )
+            .field("cpu_icm_h2x_post_wr_en", &self.cpu_icm_h2x_post_wr_en())
             .field(
                 "cpu_icm_h2x_cut_through_en",
-                &format_args!("{}", self.cpu_icm_h2x_cut_through_en().bit()),
+                &self.cpu_icm_h2x_cut_through_en(),
             )
-            .field(
-                "cpu_icm_h2x_bridge_busy",
-                &format_args!("{}", self.cpu_icm_h2x_bridge_busy().bit()),
-            )
+            .field("cpu_icm_h2x_bridge_busy", &self.cpu_icm_h2x_bridge_busy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICM_CPU_H2X_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

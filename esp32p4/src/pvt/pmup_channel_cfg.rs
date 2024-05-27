@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMUP_CHANNEL_CFG")
-            .field(
-                "pump_channel_code4",
-                &format_args!("{}", self.pump_channel_code4().bits()),
-            )
-            .field(
-                "pump_channel_code3",
-                &format_args!("{}", self.pump_channel_code3().bits()),
-            )
-            .field(
-                "pump_channel_code2",
-                &format_args!("{}", self.pump_channel_code2().bits()),
-            )
-            .field(
-                "pump_channel_code1",
-                &format_args!("{}", self.pump_channel_code1().bits()),
-            )
-            .field(
-                "pump_channel_code0",
-                &format_args!("{}", self.pump_channel_code0().bits()),
-            )
+            .field("pump_channel_code4", &self.pump_channel_code4())
+            .field("pump_channel_code3", &self.pump_channel_code3())
+            .field("pump_channel_code2", &self.pump_channel_code2())
+            .field("pump_channel_code1", &self.pump_channel_code1())
+            .field("pump_channel_code0", &self.pump_channel_code0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PMUP_CHANNEL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

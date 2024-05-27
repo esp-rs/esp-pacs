@@ -86,21 +86,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DOEPCTL")
-            .field("mps", &format_args!("{}", self.mps().bits()))
-            .field("usbactep", &format_args!("{}", self.usbactep().bit()))
-            .field("naksts", &format_args!("{}", self.naksts().bit()))
-            .field("eptype", &format_args!("{}", self.eptype().bits()))
-            .field("snp", &format_args!("{}", self.snp().bit()))
-            .field("stall", &format_args!("{}", self.stall().bit()))
-            .field("epdis", &format_args!("{}", self.epdis().bit()))
-            .field("epena", &format_args!("{}", self.epena().bit()))
+            .field("mps", &self.mps())
+            .field("usbactep", &self.usbactep())
+            .field("naksts", &self.naksts())
+            .field("eptype", &self.eptype())
+            .field("snp", &self.snp())
+            .field("stall", &self.stall())
+            .field("epdis", &self.epdis())
+            .field("epena", &self.epena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DOEPCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

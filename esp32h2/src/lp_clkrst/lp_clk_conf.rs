@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CLK_CONF")
-            .field(
-                "slow_clk_sel",
-                &format_args!("{}", self.slow_clk_sel().bits()),
-            )
-            .field(
-                "fast_clk_sel",
-                &format_args!("{}", self.fast_clk_sel().bits()),
-            )
-            .field(
-                "lp_peri_div_num",
-                &format_args!("{}", self.lp_peri_div_num().bits()),
-            )
+            .field("slow_clk_sel", &self.slow_clk_sel())
+            .field("fast_clk_sel", &self.fast_clk_sel())
+            .field("lp_peri_div_num", &self.lp_peri_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

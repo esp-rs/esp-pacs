@@ -161,81 +161,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_TDM_CTRL")
-            .field(
-                "rx_tdm_pdm_chan0_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan0_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan1_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan1_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan2_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan2_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan3_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan3_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan4_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan4_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan5_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan5_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan6_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan6_en().bit()),
-            )
-            .field(
-                "rx_tdm_pdm_chan7_en",
-                &format_args!("{}", self.rx_tdm_pdm_chan7_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan8_en",
-                &format_args!("{}", self.rx_tdm_chan8_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan9_en",
-                &format_args!("{}", self.rx_tdm_chan9_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan10_en",
-                &format_args!("{}", self.rx_tdm_chan10_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan11_en",
-                &format_args!("{}", self.rx_tdm_chan11_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan12_en",
-                &format_args!("{}", self.rx_tdm_chan12_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan13_en",
-                &format_args!("{}", self.rx_tdm_chan13_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan14_en",
-                &format_args!("{}", self.rx_tdm_chan14_en().bit()),
-            )
-            .field(
-                "rx_tdm_chan15_en",
-                &format_args!("{}", self.rx_tdm_chan15_en().bit()),
-            )
-            .field(
-                "rx_tdm_tot_chan_num",
-                &format_args!("{}", self.rx_tdm_tot_chan_num().bits()),
-            )
+            .field("rx_tdm_pdm_chan0_en", &self.rx_tdm_pdm_chan0_en())
+            .field("rx_tdm_pdm_chan1_en", &self.rx_tdm_pdm_chan1_en())
+            .field("rx_tdm_pdm_chan2_en", &self.rx_tdm_pdm_chan2_en())
+            .field("rx_tdm_pdm_chan3_en", &self.rx_tdm_pdm_chan3_en())
+            .field("rx_tdm_pdm_chan4_en", &self.rx_tdm_pdm_chan4_en())
+            .field("rx_tdm_pdm_chan5_en", &self.rx_tdm_pdm_chan5_en())
+            .field("rx_tdm_pdm_chan6_en", &self.rx_tdm_pdm_chan6_en())
+            .field("rx_tdm_pdm_chan7_en", &self.rx_tdm_pdm_chan7_en())
+            .field("rx_tdm_chan8_en", &self.rx_tdm_chan8_en())
+            .field("rx_tdm_chan9_en", &self.rx_tdm_chan9_en())
+            .field("rx_tdm_chan10_en", &self.rx_tdm_chan10_en())
+            .field("rx_tdm_chan11_en", &self.rx_tdm_chan11_en())
+            .field("rx_tdm_chan12_en", &self.rx_tdm_chan12_en())
+            .field("rx_tdm_chan13_en", &self.rx_tdm_chan13_en())
+            .field("rx_tdm_chan14_en", &self.rx_tdm_chan14_en())
+            .field("rx_tdm_chan15_en", &self.rx_tdm_chan15_en())
+            .field("rx_tdm_tot_chan_num", &self.rx_tdm_tot_chan_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_TDM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

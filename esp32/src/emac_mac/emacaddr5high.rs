@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACADDR5HIGH")
-            .field(
-                "mac_address5_hi",
-                &format_args!("{}", self.mac_address5_hi().bits()),
-            )
-            .field(
-                "mask_byte_control5",
-                &format_args!("{}", self.mask_byte_control5().bits()),
-            )
-            .field(
-                "source_address5",
-                &format_args!("{}", self.source_address5().bit()),
-            )
-            .field(
-                "address_enable5",
-                &format_args!("{}", self.address_enable5().bit()),
-            )
+            .field("mac_address5_hi", &self.mac_address5_hi())
+            .field("mask_byte_control5", &self.mask_byte_control5())
+            .field("source_address5", &self.source_address5())
+            .field("address_enable5", &self.address_enable5())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACADDR5HIGH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

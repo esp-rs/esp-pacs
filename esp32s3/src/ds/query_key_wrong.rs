@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_KEY_WRONG")
-            .field(
-                "query_key_wrong",
-                &format_args!("{}", self.query_key_wrong().bits()),
-            )
+            .field("query_key_wrong", &self.query_key_wrong())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<QUERY_KEY_WRONG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Checks the reason why DS_KEY is not ready\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_key_wrong::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

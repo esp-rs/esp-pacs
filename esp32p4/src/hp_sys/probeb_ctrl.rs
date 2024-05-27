@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PROBEB_CTRL")
-            .field(
-                "reg_probe_b_mod_sel",
-                &format_args!("{}", self.reg_probe_b_mod_sel().bits()),
-            )
-            .field(
-                "reg_probe_b_top_sel",
-                &format_args!("{}", self.reg_probe_b_top_sel().bits()),
-            )
-            .field(
-                "reg_probe_b_en",
-                &format_args!("{}", self.reg_probe_b_en().bit()),
-            )
+            .field("reg_probe_b_mod_sel", &self.reg_probe_b_mod_sel())
+            .field("reg_probe_b_top_sel", &self.reg_probe_b_top_sel())
+            .field("reg_probe_b_en", &self.reg_probe_b_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PROBEB_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

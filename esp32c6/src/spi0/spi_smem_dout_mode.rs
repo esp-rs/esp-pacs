@@ -69,49 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_DOUT_MODE")
-            .field(
-                "spi_smem_dout0_mode",
-                &format_args!("{}", self.spi_smem_dout0_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout1_mode",
-                &format_args!("{}", self.spi_smem_dout1_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout2_mode",
-                &format_args!("{}", self.spi_smem_dout2_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout3_mode",
-                &format_args!("{}", self.spi_smem_dout3_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout4_mode",
-                &format_args!("{}", self.spi_smem_dout4_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout5_mode",
-                &format_args!("{}", self.spi_smem_dout5_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout6_mode",
-                &format_args!("{}", self.spi_smem_dout6_mode().bit()),
-            )
-            .field(
-                "spi_smem_dout7_mode",
-                &format_args!("{}", self.spi_smem_dout7_mode().bit()),
-            )
-            .field(
-                "spi_smem_douts_mode",
-                &format_args!("{}", self.spi_smem_douts_mode().bit()),
-            )
+            .field("spi_smem_dout0_mode", &self.spi_smem_dout0_mode())
+            .field("spi_smem_dout1_mode", &self.spi_smem_dout1_mode())
+            .field("spi_smem_dout2_mode", &self.spi_smem_dout2_mode())
+            .field("spi_smem_dout3_mode", &self.spi_smem_dout3_mode())
+            .field("spi_smem_dout4_mode", &self.spi_smem_dout4_mode())
+            .field("spi_smem_dout5_mode", &self.spi_smem_dout5_mode())
+            .field("spi_smem_dout6_mode", &self.spi_smem_dout6_mode())
+            .field("spi_smem_dout7_mode", &self.spi_smem_dout7_mode())
+            .field("spi_smem_douts_mode", &self.spi_smem_douts_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DOUT_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI external RAM output timing adjustment control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_dout_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

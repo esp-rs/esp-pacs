@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_I2S_TXCLK_DIV_XYZ")
-            .field(
-                "lp_i2s_tx_clkm_div_yn1",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_yn1().bit()),
-            )
-            .field(
-                "lp_i2s_tx_clkm_div_z",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_z().bits()),
-            )
-            .field(
-                "lp_i2s_tx_clkm_div_y",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_y().bits()),
-            )
-            .field(
-                "lp_i2s_tx_clkm_div_x",
-                &format_args!("{}", self.lp_i2s_tx_clkm_div_x().bits()),
-            )
+            .field("lp_i2s_tx_clkm_div_yn1", &self.lp_i2s_tx_clkm_div_yn1())
+            .field("lp_i2s_tx_clkm_div_z", &self.lp_i2s_tx_clkm_div_z())
+            .field("lp_i2s_tx_clkm_div_y", &self.lp_i2s_tx_clkm_div_y())
+            .field("lp_i2s_tx_clkm_div_x", &self.lp_i2s_tx_clkm_div_x())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_I2S_TXCLK_DIV_XYZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

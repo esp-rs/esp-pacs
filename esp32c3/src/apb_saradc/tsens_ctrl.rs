@@ -42,17 +42,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TSENS_CTRL")
-            .field("out", &format_args!("{}", self.out().bits()))
-            .field("in_inv", &format_args!("{}", self.in_inv().bit()))
-            .field("clk_div", &format_args!("{}", self.clk_div().bits()))
-            .field("pu", &format_args!("{}", self.pu().bit()))
+            .field("out", &self.out())
+            .field("in_inv", &self.in_inv())
+            .field("clk_div", &self.clk_div())
+            .field("pu", &self.pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TSENS_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

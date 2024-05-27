@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_GAMMA_RD_ADDR")
-            .field(
-                "ch_gamma_rd_addr",
-                &format_args!("{}", self.ch_gamma_rd_addr().bits()),
-            )
+            .field("ch_gamma_rd_addr", &self.ch_gamma_rd_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH_GAMMA_RD_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

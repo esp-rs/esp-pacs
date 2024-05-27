@@ -125,72 +125,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA0")
-            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
-            .field(
-                "usb_device_exchg_pins",
-                &format_args!("{}", self.usb_device_exchg_pins().bit()),
-            )
-            .field(
-                "usb_otg11_exchg_pins",
-                &format_args!("{}", self.usb_otg11_exchg_pins().bit()),
-            )
-            .field(
-                "dis_usb_jtag",
-                &format_args!("{}", self.dis_usb_jtag().bit()),
-            )
-            .field(
-                "powerglitch_en",
-                &format_args!("{}", self.powerglitch_en().bit()),
-            )
-            .field(
-                "dis_usb_serial_jtag",
-                &format_args!("{}", self.dis_usb_serial_jtag().bit()),
-            )
-            .field(
-                "dis_force_download",
-                &format_args!("{}", self.dis_force_download().bit()),
-            )
-            .field(
-                "spi_download_mspi_dis",
-                &format_args!("{}", self.spi_download_mspi_dis().bit()),
-            )
-            .field("dis_twai", &format_args!("{}", self.dis_twai().bit()))
-            .field(
-                "jtag_sel_enable",
-                &format_args!("{}", self.jtag_sel_enable().bit()),
-            )
-            .field(
-                "soft_dis_jtag",
-                &format_args!("{}", self.soft_dis_jtag().bits()),
-            )
-            .field(
-                "dis_pad_jtag",
-                &format_args!("{}", self.dis_pad_jtag().bit()),
-            )
+            .field("rd_dis", &self.rd_dis())
+            .field("usb_device_exchg_pins", &self.usb_device_exchg_pins())
+            .field("usb_otg11_exchg_pins", &self.usb_otg11_exchg_pins())
+            .field("dis_usb_jtag", &self.dis_usb_jtag())
+            .field("powerglitch_en", &self.powerglitch_en())
+            .field("dis_usb_serial_jtag", &self.dis_usb_serial_jtag())
+            .field("dis_force_download", &self.dis_force_download())
+            .field("spi_download_mspi_dis", &self.spi_download_mspi_dis())
+            .field("dis_twai", &self.dis_twai())
+            .field("jtag_sel_enable", &self.jtag_sel_enable())
+            .field("soft_dis_jtag", &self.soft_dis_jtag())
+            .field("dis_pad_jtag", &self.dis_pad_jtag())
             .field(
                 "dis_download_manual_encrypt",
-                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+                &self.dis_download_manual_encrypt(),
             )
-            .field(
-                "usb_device_drefh",
-                &format_args!("{}", self.usb_device_drefh().bits()),
-            )
-            .field(
-                "usb_otg11_drefh",
-                &format_args!("{}", self.usb_otg11_drefh().bits()),
-            )
-            .field("usb_phy_sel", &format_args!("{}", self.usb_phy_sel().bit()))
-            .field(
-                "km_huk_gen_state_low",
-                &format_args!("{}", self.km_huk_gen_state_low().bits()),
-            )
+            .field("usb_device_drefh", &self.usb_device_drefh())
+            .field("usb_otg11_drefh", &self.usb_otg11_drefh())
+            .field("usb_phy_sel", &self.usb_phy_sel())
+            .field("km_huk_gen_state_low", &self.km_huk_gen_state_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK0 data register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

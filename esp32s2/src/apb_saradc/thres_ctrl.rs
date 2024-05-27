@@ -71,32 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("THRES_CTRL")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "adc2_thres_mode",
-                &format_args!("{}", self.adc2_thres_mode().bit()),
-            )
-            .field(
-                "adc1_thres_mode",
-                &format_args!("{}", self.adc1_thres_mode().bit()),
-            )
-            .field("adc2_thres", &format_args!("{}", self.adc2_thres().bits()))
-            .field("adc1_thres", &format_args!("{}", self.adc1_thres().bits()))
-            .field(
-                "adc2_thres_en",
-                &format_args!("{}", self.adc2_thres_en().bit()),
-            )
-            .field(
-                "adc1_thres_en",
-                &format_args!("{}", self.adc1_thres_en().bit()),
-            )
+            .field("clk_en", &self.clk_en())
+            .field("adc2_thres_mode", &self.adc2_thres_mode())
+            .field("adc1_thres_mode", &self.adc1_thres_mode())
+            .field("adc2_thres", &self.adc2_thres())
+            .field("adc1_thres", &self.adc1_thres())
+            .field("adc2_thres_en", &self.adc2_thres_en())
+            .field("adc1_thres_en", &self.adc1_thres_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

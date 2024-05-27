@@ -51,33 +51,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WAKEUP1")
-            .field(
-                "sar1_wakeup_th_low",
-                &format_args!("{}", self.sar1_wakeup_th_low().bits()),
-            )
-            .field(
-                "sar1_wakeup_th_high",
-                &format_args!("{}", self.sar1_wakeup_th_high().bits()),
-            )
+            .field("sar1_wakeup_th_low", &self.sar1_wakeup_th_low())
+            .field("sar1_wakeup_th_high", &self.sar1_wakeup_th_high())
             .field(
                 "sar1_wakeup_over_upper_th",
-                &format_args!("{}", self.sar1_wakeup_over_upper_th().bit()),
+                &self.sar1_wakeup_over_upper_th(),
             )
-            .field(
-                "sar1_wakeup_en",
-                &format_args!("{}", self.sar1_wakeup_en().bit()),
-            )
-            .field(
-                "sar1_wakeup_mode",
-                &format_args!("{}", self.sar1_wakeup_mode().bit()),
-            )
+            .field("sar1_wakeup_en", &self.sar1_wakeup_en())
+            .field("sar1_wakeup_mode", &self.sar1_wakeup_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<WAKEUP1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

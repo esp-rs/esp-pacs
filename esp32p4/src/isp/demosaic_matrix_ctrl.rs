@@ -46,27 +46,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEMOSAIC_MATRIX_CTRL")
             .field(
                 "demosaic_tail_pixen_pulse_tl",
-                &format_args!("{}", self.demosaic_tail_pixen_pulse_tl().bits()),
+                &self.demosaic_tail_pixen_pulse_tl(),
             )
             .field(
                 "demosaic_tail_pixen_pulse_th",
-                &format_args!("{}", self.demosaic_tail_pixen_pulse_th().bits()),
+                &self.demosaic_tail_pixen_pulse_th(),
             )
-            .field(
-                "demosaic_padding_data",
-                &format_args!("{}", self.demosaic_padding_data().bits()),
-            )
-            .field(
-                "demosaic_padding_mode",
-                &format_args!("{}", self.demosaic_padding_mode().bit()),
-            )
+            .field("demosaic_padding_data", &self.demosaic_padding_data())
+            .field("demosaic_padding_mode", &self.demosaic_padding_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEMOSAIC_MATRIX_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

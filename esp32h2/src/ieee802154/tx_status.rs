@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_STATUS")
-            .field("tx_state", &format_args!("{}", self.tx_state().bits()))
-            .field(
-                "tx_abort_status",
-                &format_args!("{}", self.tx_abort_status().bits()),
-            )
-            .field(
-                "tx_sec_error_code",
-                &format_args!("{}", self.tx_sec_error_code().bits()),
-            )
+            .field("tx_state", &self.tx_state())
+            .field("tx_abort_status", &self.tx_abort_status())
+            .field("tx_sec_error_code", &self.tx_sec_error_code())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

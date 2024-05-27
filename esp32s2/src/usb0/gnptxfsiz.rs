@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GNPTXFSIZ")
-            .field(
-                "nptxfstaddr",
-                &format_args!("{}", self.nptxfstaddr().bits()),
-            )
-            .field("nptxfdep", &format_args!("{}", self.nptxfdep().bits()))
+            .field("nptxfstaddr", &self.nptxfstaddr())
+            .field("nptxfdep", &self.nptxfdep())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GNPTXFSIZ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_DMACTIVE_LPCORE")
-            .field(
-                "core_dmactive_lpcore",
-                &format_args!("{}", self.core_dmactive_lpcore().bit()),
-            )
+            .field("core_dmactive_lpcore", &self.core_dmactive_lpcore())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_DMACTIVE_LPCORE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_dmactive_lpcore::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

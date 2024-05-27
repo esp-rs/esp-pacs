@@ -298,139 +298,121 @@ impl core::fmt::Debug for R {
         f.debug_struct("TASK_ST3")
             .field(
                 "tg0_task_cnt_cap_timer0_st",
-                &format_args!("{}", self.tg0_task_cnt_cap_timer0_st().bit()),
+                &self.tg0_task_cnt_cap_timer0_st(),
             )
             .field(
                 "tg0_task_cnt_start_timer1_st",
-                &format_args!("{}", self.tg0_task_cnt_start_timer1_st().bit()),
+                &self.tg0_task_cnt_start_timer1_st(),
             )
             .field(
                 "tg0_task_alarm_start_timer1_st",
-                &format_args!("{}", self.tg0_task_alarm_start_timer1_st().bit()),
+                &self.tg0_task_alarm_start_timer1_st(),
             )
             .field(
                 "tg0_task_cnt_stop_timer1_st",
-                &format_args!("{}", self.tg0_task_cnt_stop_timer1_st().bit()),
+                &self.tg0_task_cnt_stop_timer1_st(),
             )
             .field(
                 "tg0_task_cnt_reload_timer1_st",
-                &format_args!("{}", self.tg0_task_cnt_reload_timer1_st().bit()),
+                &self.tg0_task_cnt_reload_timer1_st(),
             )
             .field(
                 "tg0_task_cnt_cap_timer1_st",
-                &format_args!("{}", self.tg0_task_cnt_cap_timer1_st().bit()),
+                &self.tg0_task_cnt_cap_timer1_st(),
             )
             .field(
                 "tg1_task_cnt_start_timer0_st",
-                &format_args!("{}", self.tg1_task_cnt_start_timer0_st().bit()),
+                &self.tg1_task_cnt_start_timer0_st(),
             )
             .field(
                 "tg1_task_alarm_start_timer0_st",
-                &format_args!("{}", self.tg1_task_alarm_start_timer0_st().bit()),
+                &self.tg1_task_alarm_start_timer0_st(),
             )
             .field(
                 "tg1_task_cnt_stop_timer0_st",
-                &format_args!("{}", self.tg1_task_cnt_stop_timer0_st().bit()),
+                &self.tg1_task_cnt_stop_timer0_st(),
             )
             .field(
                 "tg1_task_cnt_reload_timer0_st",
-                &format_args!("{}", self.tg1_task_cnt_reload_timer0_st().bit()),
+                &self.tg1_task_cnt_reload_timer0_st(),
             )
             .field(
                 "tg1_task_cnt_cap_timer0_st",
-                &format_args!("{}", self.tg1_task_cnt_cap_timer0_st().bit()),
+                &self.tg1_task_cnt_cap_timer0_st(),
             )
             .field(
                 "tg1_task_cnt_start_timer1_st",
-                &format_args!("{}", self.tg1_task_cnt_start_timer1_st().bit()),
+                &self.tg1_task_cnt_start_timer1_st(),
             )
             .field(
                 "tg1_task_alarm_start_timer1_st",
-                &format_args!("{}", self.tg1_task_alarm_start_timer1_st().bit()),
+                &self.tg1_task_alarm_start_timer1_st(),
             )
             .field(
                 "tg1_task_cnt_stop_timer1_st",
-                &format_args!("{}", self.tg1_task_cnt_stop_timer1_st().bit()),
+                &self.tg1_task_cnt_stop_timer1_st(),
             )
             .field(
                 "tg1_task_cnt_reload_timer1_st",
-                &format_args!("{}", self.tg1_task_cnt_reload_timer1_st().bit()),
+                &self.tg1_task_cnt_reload_timer1_st(),
             )
             .field(
                 "tg1_task_cnt_cap_timer1_st",
-                &format_args!("{}", self.tg1_task_cnt_cap_timer1_st().bit()),
+                &self.tg1_task_cnt_cap_timer1_st(),
             )
             .field(
                 "mcpwm0_task_cmpr0_a_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr0_a_up_st().bit()),
+                &self.mcpwm0_task_cmpr0_a_up_st(),
             )
             .field(
                 "mcpwm0_task_cmpr1_a_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr1_a_up_st().bit()),
+                &self.mcpwm0_task_cmpr1_a_up_st(),
             )
             .field(
                 "mcpwm0_task_cmpr2_a_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr2_a_up_st().bit()),
+                &self.mcpwm0_task_cmpr2_a_up_st(),
             )
             .field(
                 "mcpwm0_task_cmpr0_b_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr0_b_up_st().bit()),
+                &self.mcpwm0_task_cmpr0_b_up_st(),
             )
             .field(
                 "mcpwm0_task_cmpr1_b_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr1_b_up_st().bit()),
+                &self.mcpwm0_task_cmpr1_b_up_st(),
             )
             .field(
                 "mcpwm0_task_cmpr2_b_up_st",
-                &format_args!("{}", self.mcpwm0_task_cmpr2_b_up_st().bit()),
+                &self.mcpwm0_task_cmpr2_b_up_st(),
             )
-            .field(
-                "mcpwm0_task_gen_stop_st",
-                &format_args!("{}", self.mcpwm0_task_gen_stop_st().bit()),
-            )
+            .field("mcpwm0_task_gen_stop_st", &self.mcpwm0_task_gen_stop_st())
             .field(
                 "mcpwm0_task_timer0_syn_st",
-                &format_args!("{}", self.mcpwm0_task_timer0_syn_st().bit()),
+                &self.mcpwm0_task_timer0_syn_st(),
             )
             .field(
                 "mcpwm0_task_timer1_syn_st",
-                &format_args!("{}", self.mcpwm0_task_timer1_syn_st().bit()),
+                &self.mcpwm0_task_timer1_syn_st(),
             )
             .field(
                 "mcpwm0_task_timer2_syn_st",
-                &format_args!("{}", self.mcpwm0_task_timer2_syn_st().bit()),
+                &self.mcpwm0_task_timer2_syn_st(),
             )
             .field(
                 "mcpwm0_task_timer0_period_up_st",
-                &format_args!("{}", self.mcpwm0_task_timer0_period_up_st().bit()),
+                &self.mcpwm0_task_timer0_period_up_st(),
             )
             .field(
                 "mcpwm0_task_timer1_period_up_st",
-                &format_args!("{}", self.mcpwm0_task_timer1_period_up_st().bit()),
+                &self.mcpwm0_task_timer1_period_up_st(),
             )
             .field(
                 "mcpwm0_task_timer2_period_up_st",
-                &format_args!("{}", self.mcpwm0_task_timer2_period_up_st().bit()),
+                &self.mcpwm0_task_timer2_period_up_st(),
             )
-            .field(
-                "mcpwm0_task_tz0_ost_st",
-                &format_args!("{}", self.mcpwm0_task_tz0_ost_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_tz1_ost_st",
-                &format_args!("{}", self.mcpwm0_task_tz1_ost_st().bit()),
-            )
-            .field(
-                "mcpwm0_task_tz2_ost_st",
-                &format_args!("{}", self.mcpwm0_task_tz2_ost_st().bit()),
-            )
+            .field("mcpwm0_task_tz0_ost_st", &self.mcpwm0_task_tz0_ost_st())
+            .field("mcpwm0_task_tz1_ost_st", &self.mcpwm0_task_tz1_ost_st())
+            .field("mcpwm0_task_tz2_ost_st", &self.mcpwm0_task_tz2_ost_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_ST3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

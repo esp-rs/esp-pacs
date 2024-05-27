@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_ADDRHOLE_ADDR")
-            .field(
-                "lp_addrhole_addr",
-                &format_args!("{}", self.lp_addrhole_addr().bits()),
-            )
+            .field("lp_addrhole_addr", &self.lp_addrhole_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_ADDRHOLE_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_addrhole_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

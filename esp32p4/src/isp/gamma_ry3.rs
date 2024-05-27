@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAMMA_RY3")
-            .field(
-                "gamma_r_y0b",
-                &format_args!("{}", self.gamma_r_y0b().bits()),
-            )
-            .field(
-                "gamma_r_y0a",
-                &format_args!("{}", self.gamma_r_y0a().bits()),
-            )
-            .field(
-                "gamma_r_y09",
-                &format_args!("{}", self.gamma_r_y09().bits()),
-            )
-            .field(
-                "gamma_r_y08",
-                &format_args!("{}", self.gamma_r_y08().bits()),
-            )
+            .field("gamma_r_y0b", &self.gamma_r_y0b())
+            .field("gamma_r_y0a", &self.gamma_r_y0a())
+            .field("gamma_r_y09", &self.gamma_r_y09())
+            .field("gamma_r_y08", &self.gamma_r_y08())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GAMMA_RY3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

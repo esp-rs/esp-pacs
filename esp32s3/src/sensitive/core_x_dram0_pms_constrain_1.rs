@@ -176,113 +176,61 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_X_DRAM0_PMS_CONSTRAIN_1")
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_pms_0().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_pms_0(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_pms_1().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_pms_1(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_pms_2",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_pms_2().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_pms_2(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_pms_3",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_pms_3().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_pms_3(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_0()
-                        .bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_0(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_1()
-                        .bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_1(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_pms_0().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_pms_0(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_pms_1().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_pms_1(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_pms_2",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_pms_2().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_pms_2(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_pms_3",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_pms_3().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_pms_3(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_0",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_0()
-                        .bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_0(),
             )
             .field(
                 "core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_1",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_1()
-                        .bits()
-                ),
+                &self.core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_1(),
             )
             .field(
                 "core_x_dram0_pms_constrain_rom_world_0_pms",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_rom_world_0_pms().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_rom_world_0_pms(),
             )
             .field(
                 "core_x_dram0_pms_constrain_rom_world_1_pms",
-                &format_args!(
-                    "{}",
-                    self.core_x_dram0_pms_constrain_rom_world_1_pms().bits()
-                ),
+                &self.core_x_dram0_pms_constrain_rom_world_1_pms(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

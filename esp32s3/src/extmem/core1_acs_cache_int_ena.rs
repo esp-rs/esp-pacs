@@ -55,31 +55,22 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE1_ACS_CACHE_INT_ENA")
             .field(
                 "core1_ibus_acs_msk_ic_int_ena",
-                &format_args!("{}", self.core1_ibus_acs_msk_ic_int_ena().bit()),
+                &self.core1_ibus_acs_msk_ic_int_ena(),
             )
-            .field(
-                "core1_ibus_wr_ic_int_ena",
-                &format_args!("{}", self.core1_ibus_wr_ic_int_ena().bit()),
-            )
+            .field("core1_ibus_wr_ic_int_ena", &self.core1_ibus_wr_ic_int_ena())
             .field(
                 "core1_ibus_reject_int_ena",
-                &format_args!("{}", self.core1_ibus_reject_int_ena().bit()),
+                &self.core1_ibus_reject_int_ena(),
             )
             .field(
                 "core1_dbus_acs_msk_dc_int_ena",
-                &format_args!("{}", self.core1_dbus_acs_msk_dc_int_ena().bit()),
+                &self.core1_dbus_acs_msk_dc_int_ena(),
             )
             .field(
                 "core1_dbus_reject_int_ena",
-                &format_args!("{}", self.core1_dbus_reject_int_ena().bit()),
+                &self.core1_dbus_reject_int_ena(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE1_ACS_CACHE_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

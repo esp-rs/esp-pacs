@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_RST_EN")
-            .field(
-                "aon_efuse_core_reset_en",
-                &format_args!("{}", self.aon_efuse_core_reset_en().bit()),
-            )
-            .field(
-                "lp_timer_reset_en",
-                &format_args!("{}", self.lp_timer_reset_en().bit()),
-            )
-            .field(
-                "wdt_reset_en",
-                &format_args!("{}", self.wdt_reset_en().bit()),
-            )
-            .field(
-                "ana_peri_reset_en",
-                &format_args!("{}", self.ana_peri_reset_en().bit()),
-            )
+            .field("aon_efuse_core_reset_en", &self.aon_efuse_core_reset_en())
+            .field("lp_timer_reset_en", &self.lp_timer_reset_en())
+            .field("wdt_reset_en", &self.wdt_reset_en())
+            .field("ana_peri_reset_en", &self.ana_peri_reset_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_RST_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

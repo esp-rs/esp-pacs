@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_SEL_CFG0")
-            .field(
-                "debug_field0_sel",
-                &format_args!("{}", self.debug_field0_sel().bits()),
-            )
-            .field(
-                "debug_field1_sel",
-                &format_args!("{}", self.debug_field1_sel().bits()),
-            )
-            .field(
-                "debug_field2_sel",
-                &format_args!("{}", self.debug_field2_sel().bits()),
-            )
-            .field(
-                "debug_field3_sel",
-                &format_args!("{}", self.debug_field3_sel().bits()),
-            )
+            .field("debug_field0_sel", &self.debug_field0_sel())
+            .field("debug_field1_sel", &self.debug_field1_sel())
+            .field("debug_field2_sel", &self.debug_field2_sel())
+            .field("debug_field3_sel", &self.debug_field3_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEBUG_SEL_CFG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_CONF")
-            .field(
-                "cache_clk_en",
-                &format_args!("{}", self.cache_clk_en().bit()),
-            )
-            .field(
-                "cache_rst_en",
-                &format_args!("{}", self.cache_rst_en().bit()),
-            )
+            .field("cache_clk_en", &self.cache_clk_en())
+            .field("cache_rst_en", &self.cache_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

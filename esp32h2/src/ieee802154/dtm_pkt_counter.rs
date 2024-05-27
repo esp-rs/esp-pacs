@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DTM_PKT_COUNTER")
-            .field(
-                "dtm_txrx_pkt_count",
-                &format_args!("{}", self.dtm_txrx_pkt_count().bits()),
-            )
-            .field(
-                "dtm_crc_err_pkt_count",
-                &format_args!("{}", self.dtm_crc_err_pkt_count().bits()),
-            )
+            .field("dtm_txrx_pkt_count", &self.dtm_txrx_pkt_count())
+            .field("dtm_crc_err_pkt_count", &self.dtm_crc_err_pkt_count())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DTM_PKT_COUNTER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

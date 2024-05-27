@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_MEM_END_ADDR")
-            .field(
-                "access_intr_mem_end_addr",
-                &format_args!("{}", self.access_intr_mem_end_addr().bits()),
-            )
+            .field("access_intr_mem_end_addr", &self.access_intr_mem_end_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTR_MEM_END_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

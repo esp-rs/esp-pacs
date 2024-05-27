@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_CTRL")
-            .field(
-                "csi_enableclk",
-                &format_args!("{}", self.csi_enableclk().bit()),
-            )
-            .field(
-                "csi_cfg_clk_en",
-                &format_args!("{}", self.csi_cfg_clk_en().bit()),
-            )
-            .field(
-                "loopbk_test_en",
-                &format_args!("{}", self.loopbk_test_en().bit()),
-            )
+            .field("csi_enableclk", &self.csi_enableclk())
+            .field("csi_cfg_clk_en", &self.csi_cfg_clk_en())
+            .field("loopbk_test_en", &self.loopbk_test_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

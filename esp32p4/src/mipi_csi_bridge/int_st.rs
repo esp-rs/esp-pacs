@@ -48,28 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("vadr_num_gt", &format_args!("{}", self.vadr_num_gt().bit()))
-            .field("vadr_num_lt", &format_args!("{}", self.vadr_num_lt().bit()))
-            .field("discard", &format_args!("{}", self.discard().bit()))
-            .field(
-                "csi_buf_overrun",
-                &format_args!("{}", self.csi_buf_overrun().bit()),
-            )
-            .field(
-                "csi_async_fifo_ovf",
-                &format_args!("{}", self.csi_async_fifo_ovf().bit()),
-            )
-            .field(
-                "dma_cfg_has_updated",
-                &format_args!("{}", self.dma_cfg_has_updated().bit()),
-            )
+            .field("vadr_num_gt", &self.vadr_num_gt())
+            .field("vadr_num_lt", &self.vadr_num_lt())
+            .field("discard", &self.discard())
+            .field("csi_buf_overrun", &self.csi_buf_overrun())
+            .field("csi_async_fifo_ovf", &self.csi_async_fifo_ovf())
+            .field("dma_cfg_has_updated", &self.dma_cfg_has_updated())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "csi bridge interrupt st.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

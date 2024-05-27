@@ -33,16 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEDC_CONF")
-            .field("ledc_clk_en", &format_args!("{}", self.ledc_clk_en().bit()))
-            .field("ledc_rst_en", &format_args!("{}", self.ledc_rst_en().bit()))
-            .field("ledc_ready", &format_args!("{}", self.ledc_ready().bit()))
+            .field("ledc_clk_en", &self.ledc_clk_en())
+            .field("ledc_rst_en", &self.ledc_rst_en())
+            .field("ledc_ready", &self.ledc_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LEDC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

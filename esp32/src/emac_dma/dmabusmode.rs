@@ -116,40 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMABUSMODE")
-            .field("sw_rst", &format_args!("{}", self.sw_rst().bit()))
-            .field("dma_arb_sch", &format_args!("{}", self.dma_arb_sch().bit()))
-            .field(
-                "desc_skip_len",
-                &format_args!("{}", self.desc_skip_len().bits()),
-            )
-            .field(
-                "alt_desc_size",
-                &format_args!("{}", self.alt_desc_size().bit()),
-            )
-            .field(
-                "prog_burst_len",
-                &format_args!("{}", self.prog_burst_len().bits()),
-            )
-            .field("pri_ratio", &format_args!("{}", self.pri_ratio().bits()))
-            .field("fixed_burst", &format_args!("{}", self.fixed_burst().bit()))
-            .field("rx_dma_pbl", &format_args!("{}", self.rx_dma_pbl().bits()))
-            .field("use_sep_pbl", &format_args!("{}", self.use_sep_pbl().bit()))
-            .field("pblx8_mode", &format_args!("{}", self.pblx8_mode().bit()))
-            .field(
-                "dmaaddralibea",
-                &format_args!("{}", self.dmaaddralibea().bit()),
-            )
-            .field(
-                "dmamixedburst",
-                &format_args!("{}", self.dmamixedburst().bit()),
-            )
+            .field("sw_rst", &self.sw_rst())
+            .field("dma_arb_sch", &self.dma_arb_sch())
+            .field("desc_skip_len", &self.desc_skip_len())
+            .field("alt_desc_size", &self.alt_desc_size())
+            .field("prog_burst_len", &self.prog_burst_len())
+            .field("pri_ratio", &self.pri_ratio())
+            .field("fixed_burst", &self.fixed_burst())
+            .field("rx_dma_pbl", &self.rx_dma_pbl())
+            .field("use_sep_pbl", &self.use_sep_pbl())
+            .field("pblx8_mode", &self.pblx8_mode())
+            .field("dmaaddralibea", &self.dmaaddralibea())
+            .field("dmamixedburst", &self.dmamixedburst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMABUSMODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

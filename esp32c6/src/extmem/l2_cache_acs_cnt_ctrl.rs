@@ -118,77 +118,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_ACS_CNT_CTRL")
-            .field(
-                "l2_ibus0_cnt_ena",
-                &format_args!("{}", self.l2_ibus0_cnt_ena().bit()),
-            )
-            .field(
-                "l2_ibus1_cnt_ena",
-                &format_args!("{}", self.l2_ibus1_cnt_ena().bit()),
-            )
-            .field(
-                "l2_ibus2_cnt_ena",
-                &format_args!("{}", self.l2_ibus2_cnt_ena().bit()),
-            )
-            .field(
-                "l2_ibus3_cnt_ena",
-                &format_args!("{}", self.l2_ibus3_cnt_ena().bit()),
-            )
-            .field(
-                "l2_dbus0_cnt_ena",
-                &format_args!("{}", self.l2_dbus0_cnt_ena().bit()),
-            )
-            .field(
-                "l2_dbus1_cnt_ena",
-                &format_args!("{}", self.l2_dbus1_cnt_ena().bit()),
-            )
-            .field(
-                "l2_dbus2_cnt_ena",
-                &format_args!("{}", self.l2_dbus2_cnt_ena().bit()),
-            )
-            .field(
-                "l2_dbus3_cnt_ena",
-                &format_args!("{}", self.l2_dbus3_cnt_ena().bit()),
-            )
-            .field(
-                "l2_ibus0_cnt_clr",
-                &format_args!("{}", self.l2_ibus0_cnt_clr().bit()),
-            )
-            .field(
-                "l2_ibus1_cnt_clr",
-                &format_args!("{}", self.l2_ibus1_cnt_clr().bit()),
-            )
-            .field(
-                "l2_ibus2_cnt_clr",
-                &format_args!("{}", self.l2_ibus2_cnt_clr().bit()),
-            )
-            .field(
-                "l2_ibus3_cnt_clr",
-                &format_args!("{}", self.l2_ibus3_cnt_clr().bit()),
-            )
-            .field(
-                "l2_dbus0_cnt_clr",
-                &format_args!("{}", self.l2_dbus0_cnt_clr().bit()),
-            )
-            .field(
-                "l2_dbus1_cnt_clr",
-                &format_args!("{}", self.l2_dbus1_cnt_clr().bit()),
-            )
-            .field(
-                "l2_dbus2_cnt_clr",
-                &format_args!("{}", self.l2_dbus2_cnt_clr().bit()),
-            )
-            .field(
-                "l2_dbus3_cnt_clr",
-                &format_args!("{}", self.l2_dbus3_cnt_clr().bit()),
-            )
+            .field("l2_ibus0_cnt_ena", &self.l2_ibus0_cnt_ena())
+            .field("l2_ibus1_cnt_ena", &self.l2_ibus1_cnt_ena())
+            .field("l2_ibus2_cnt_ena", &self.l2_ibus2_cnt_ena())
+            .field("l2_ibus3_cnt_ena", &self.l2_ibus3_cnt_ena())
+            .field("l2_dbus0_cnt_ena", &self.l2_dbus0_cnt_ena())
+            .field("l2_dbus1_cnt_ena", &self.l2_dbus1_cnt_ena())
+            .field("l2_dbus2_cnt_ena", &self.l2_dbus2_cnt_ena())
+            .field("l2_dbus3_cnt_ena", &self.l2_dbus3_cnt_ena())
+            .field("l2_ibus0_cnt_clr", &self.l2_ibus0_cnt_clr())
+            .field("l2_ibus1_cnt_clr", &self.l2_ibus1_cnt_clr())
+            .field("l2_ibus2_cnt_clr", &self.l2_ibus2_cnt_clr())
+            .field("l2_ibus3_cnt_clr", &self.l2_ibus3_cnt_clr())
+            .field("l2_dbus0_cnt_clr", &self.l2_dbus0_cnt_clr())
+            .field("l2_dbus1_cnt_clr", &self.l2_dbus1_cnt_clr())
+            .field("l2_dbus2_cnt_clr", &self.l2_dbus2_cnt_clr())
+            .field("l2_dbus3_cnt_clr", &self.l2_dbus3_cnt_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_CNT_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Access Counter enable and clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_cnt_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

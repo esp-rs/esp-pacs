@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("cali_data")
-            .field(
-                "cali_value_sync2",
-                &format_args!("{}", self.cali_value_sync2().bits()),
-            )
-            .field(
-                "cali_rdy_real",
-                &format_args!("{}", self.cali_rdy_real().bit()),
-            )
-            .field(
-                "cali_rdy_sync2",
-                &format_args!("{}", self.cali_rdy_sync2().bit()),
-            )
+            .field("cali_value_sync2", &self.cali_value_sync2())
+            .field("cali_rdy_real", &self.cali_rdy_real())
+            .field("cali_rdy_sync2", &self.cali_rdy_sync2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CALI_DATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cali_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

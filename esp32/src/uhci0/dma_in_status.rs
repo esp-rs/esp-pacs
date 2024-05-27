@@ -27,19 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_IN_STATUS")
-            .field("in_full", &format_args!("{}", self.in_full().bit()))
-            .field("in_empty", &format_args!("{}", self.in_empty().bit()))
-            .field(
-                "rx_err_cause",
-                &format_args!("{}", self.rx_err_cause().bits()),
-            )
+            .field("in_full", &self.in_full())
+            .field("in_empty", &self.in_empty())
+            .field("rx_err_cause", &self.rx_err_cause())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_IN_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CLK_CTRL")
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "lp_fosc_hp_cken",
-                &format_args!("{}", self.lp_fosc_hp_cken().bit()),
-            )
+            .field("clk_en", &self.clk_en())
+            .field("lp_fosc_hp_cken", &self.lp_fosc_hp_cken())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CLK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

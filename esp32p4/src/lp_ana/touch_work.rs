@@ -55,24 +55,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_WORK")
-            .field("div_num2", &format_args!("{}", self.div_num2().bits()))
-            .field("div_num1", &format_args!("{}", self.div_num1().bits()))
-            .field("div_num0", &format_args!("{}", self.div_num0().bits()))
-            .field(
-                "touch_out_sel",
-                &format_args!("{}", self.touch_out_sel().bit()),
-            )
-            .field(
-                "touch_out_gate",
-                &format_args!("{}", self.touch_out_gate().bit()),
-            )
+            .field("div_num2", &self.div_num2())
+            .field("div_num1", &self.div_num1())
+            .field("div_num0", &self.div_num0())
+            .field("touch_out_sel", &self.touch_out_sel())
+            .field("touch_out_gate", &self.touch_out_gate())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_WORK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

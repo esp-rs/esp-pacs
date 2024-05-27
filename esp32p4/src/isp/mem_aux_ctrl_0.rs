@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_AUX_CTRL_0")
-            .field(
-                "header_mem_aux_ctrl",
-                &format_args!("{}", self.header_mem_aux_ctrl().bits()),
-            )
-            .field(
-                "dpc_lut_mem_aux_ctrl",
-                &format_args!("{}", self.dpc_lut_mem_aux_ctrl().bits()),
-            )
+            .field("header_mem_aux_ctrl", &self.header_mem_aux_ctrl())
+            .field("dpc_lut_mem_aux_ctrl", &self.dpc_lut_mem_aux_ctrl())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_AUX_CTRL_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

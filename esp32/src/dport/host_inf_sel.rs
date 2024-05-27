@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_INF_SEL")
-            .field(
-                "peri_io_swap",
-                &format_args!("{}", self.peri_io_swap().bits()),
-            )
-            .field(
-                "link_device_sel",
-                &format_args!("{}", self.link_device_sel().bits()),
-            )
+            .field("peri_io_swap", &self.peri_io_swap())
+            .field("link_device_sel", &self.link_device_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_INF_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

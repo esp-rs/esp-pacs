@@ -64,35 +64,23 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_BACKUP")
             .field(
                 "hp_sleep2modem_backup_modem_clk_code",
-                &format_args!("{}", self.hp_sleep2modem_backup_modem_clk_code().bits()),
+                &self.hp_sleep2modem_backup_modem_clk_code(),
             )
-            .field(
-                "hp_modem_retention_mode",
-                &format_args!("{}", self.hp_modem_retention_mode().bit()),
-            )
+            .field("hp_modem_retention_mode", &self.hp_modem_retention_mode())
             .field(
                 "hp_sleep2modem_retention_en",
-                &format_args!("{}", self.hp_sleep2modem_retention_en().bit()),
+                &self.hp_sleep2modem_retention_en(),
             )
             .field(
                 "hp_sleep2modem_backup_clk_sel",
-                &format_args!("{}", self.hp_sleep2modem_backup_clk_sel().bits()),
+                &self.hp_sleep2modem_backup_clk_sel(),
             )
             .field(
                 "hp_sleep2modem_backup_mode",
-                &format_args!("{}", self.hp_sleep2modem_backup_mode().bits()),
+                &self.hp_sleep2modem_backup_mode(),
             )
-            .field(
-                "hp_sleep2modem_backup_en",
-                &format_args!("{}", self.hp_sleep2modem_backup_en().bit()),
-            )
+            .field("hp_sleep2modem_backup_en", &self.hp_sleep2modem_backup_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_BACKUP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_MEAS_WAIT2")
-            .field(
-                "force_xpd_sar_sw",
-                &format_args!("{}", self.force_xpd_sar_sw().bit()),
-            )
-            .field(
-                "sar_amp_wait3",
-                &format_args!("{}", self.sar_amp_wait3().bits()),
-            )
-            .field(
-                "force_xpd_amp",
-                &format_args!("{}", self.force_xpd_amp().bits()),
-            )
-            .field(
-                "force_xpd_sar",
-                &format_args!("{}", self.force_xpd_sar().bits()),
-            )
-            .field(
-                "sar2_rstb_wait",
-                &format_args!("{}", self.sar2_rstb_wait().bits()),
-            )
+            .field("force_xpd_sar_sw", &self.force_xpd_sar_sw())
+            .field("sar_amp_wait3", &self.sar_amp_wait3())
+            .field("force_xpd_amp", &self.force_xpd_amp())
+            .field("force_xpd_sar", &self.force_xpd_sar())
+            .field("sar2_rstb_wait", &self.sar2_rstb_wait())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_MEAS_WAIT2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PD_CONF")
-            .field(
-                "dma_ram_force_pd",
-                &format_args!("{}", self.dma_ram_force_pd().bit()),
-            )
-            .field(
-                "dma_ram_force_pu",
-                &format_args!("{}", self.dma_ram_force_pu().bit()),
-            )
-            .field(
-                "dma_ram_clk_fo",
-                &format_args!("{}", self.dma_ram_clk_fo().bit()),
-            )
+            .field("dma_ram_force_pd", &self.dma_ram_force_pd())
+            .field("dma_ram_force_pu", &self.dma_ram_force_pu())
+            .field("dma_ram_clk_fo", &self.dma_ram_clk_fo())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

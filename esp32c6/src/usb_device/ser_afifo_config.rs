@@ -58,37 +58,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SER_AFIFO_CONFIG")
-            .field(
-                "serial_in_afifo_reset_wr",
-                &format_args!("{}", self.serial_in_afifo_reset_wr().bit()),
-            )
-            .field(
-                "serial_in_afifo_reset_rd",
-                &format_args!("{}", self.serial_in_afifo_reset_rd().bit()),
-            )
+            .field("serial_in_afifo_reset_wr", &self.serial_in_afifo_reset_wr())
+            .field("serial_in_afifo_reset_rd", &self.serial_in_afifo_reset_rd())
             .field(
                 "serial_out_afifo_reset_wr",
-                &format_args!("{}", self.serial_out_afifo_reset_wr().bit()),
+                &self.serial_out_afifo_reset_wr(),
             )
             .field(
                 "serial_out_afifo_reset_rd",
-                &format_args!("{}", self.serial_out_afifo_reset_rd().bit()),
+                &self.serial_out_afifo_reset_rd(),
             )
-            .field(
-                "serial_out_afifo_rempty",
-                &format_args!("{}", self.serial_out_afifo_rempty().bit()),
-            )
-            .field(
-                "serial_in_afifo_wfull",
-                &format_args!("{}", self.serial_in_afifo_wfull().bit()),
-            )
+            .field("serial_out_afifo_rempty", &self.serial_out_afifo_rempty())
+            .field("serial_in_afifo_wfull", &self.serial_in_afifo_wfull())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SER_AFIFO_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

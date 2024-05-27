@@ -62,28 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EX_CLK_CTRL")
-            .field("ext_en", &format_args!("{}", self.ext_en().bit()))
-            .field("int_en", &format_args!("{}", self.int_en().bit()))
-            .field(
-                "rx_125_clk_en",
-                &format_args!("{}", self.rx_125_clk_en().bit()),
-            )
-            .field(
-                "mii_clk_tx_en",
-                &format_args!("{}", self.mii_clk_tx_en().bit()),
-            )
-            .field(
-                "mii_clk_rx_en",
-                &format_args!("{}", self.mii_clk_rx_en().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("ext_en", &self.ext_en())
+            .field("int_en", &self.int_en())
+            .field("rx_125_clk_en", &self.rx_125_clk_en())
+            .field("mii_clk_tx_en", &self.mii_clk_tx_en())
+            .field("mii_clk_rx_en", &self.mii_clk_rx_en())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EX_CLK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

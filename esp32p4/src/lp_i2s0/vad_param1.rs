@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM1")
-            .field(
-                "param_min_speech_count",
-                &format_args!("{}", self.param_min_speech_count().bits()),
-            )
-            .field(
-                "param_max_speech_count",
-                &format_args!("{}", self.param_max_speech_count().bits()),
-            )
-            .field(
-                "param_hangover_speech",
-                &format_args!("{}", self.param_hangover_speech().bits()),
-            )
-            .field(
-                "param_hangover_silent",
-                &format_args!("{}", self.param_hangover_silent().bits()),
-            )
-            .field(
-                "param_max_offset",
-                &format_args!("{}", self.param_max_offset().bits()),
-            )
-            .field(
-                "param_skip_band_energy",
-                &format_args!("{}", self.param_skip_band_energy().bit()),
-            )
+            .field("param_min_speech_count", &self.param_min_speech_count())
+            .field("param_max_speech_count", &self.param_max_speech_count())
+            .field("param_hangover_speech", &self.param_hangover_speech())
+            .field("param_hangover_silent", &self.param_hangover_silent())
+            .field("param_max_offset", &self.param_max_offset())
+            .field("param_skip_band_energy", &self.param_skip_band_energy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_PARAM1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

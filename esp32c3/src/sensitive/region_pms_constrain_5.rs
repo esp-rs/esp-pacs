@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("REGION_PMS_CONSTRAIN_5")
             .field(
                 "region_pms_constrain_addr_2",
-                &format_args!("{}", self.region_pms_constrain_addr_2().bits()),
+                &self.region_pms_constrain_addr_2(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGION_PMS_CONSTRAIN_5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

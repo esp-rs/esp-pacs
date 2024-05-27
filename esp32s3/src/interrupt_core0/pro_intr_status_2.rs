@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_INTR_STATUS_2")
-            .field(
-                "intr_status_2",
-                &format_args!("{}", self.intr_status_2().bits()),
-            )
+            .field("intr_status_2", &self.intr_status_2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_INTR_STATUS_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_intr_status_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

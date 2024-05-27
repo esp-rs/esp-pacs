@@ -82,53 +82,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLK0_RDATA5")
-            .field(
-                "rd_spi_pad_config_clk",
-                &format_args!("{}", self.rd_spi_pad_config_clk().bits()),
-            )
-            .field(
-                "rd_spi_pad_config_q",
-                &format_args!("{}", self.rd_spi_pad_config_q().bits()),
-            )
-            .field(
-                "rd_spi_pad_config_d",
-                &format_args!("{}", self.rd_spi_pad_config_d().bits()),
-            )
-            .field(
-                "rd_spi_pad_config_cs0",
-                &format_args!("{}", self.rd_spi_pad_config_cs0().bits()),
-            )
-            .field(
-                "rd_chip_ver_rev2",
-                &format_args!("{}", self.rd_chip_ver_rev2().bit()),
-            )
-            .field(
-                "rd_reserve_0_181",
-                &format_args!("{}", self.rd_reserve_0_181().bit()),
-            )
-            .field(
-                "rd_vol_level_hp_inv",
-                &format_args!("{}", self.rd_vol_level_hp_inv().bits()),
-            )
-            .field(
-                "rd_wafer_version_minor",
-                &format_args!("{}", self.rd_wafer_version_minor().bits()),
-            )
-            .field(
-                "rd_reserve_0_186",
-                &format_args!("{}", self.rd_reserve_0_186().bits()),
-            )
-            .field(
-                "rd_flash_crypt_config",
-                &format_args!("{}", self.rd_flash_crypt_config().bits()),
-            )
+            .field("rd_spi_pad_config_clk", &self.rd_spi_pad_config_clk())
+            .field("rd_spi_pad_config_q", &self.rd_spi_pad_config_q())
+            .field("rd_spi_pad_config_d", &self.rd_spi_pad_config_d())
+            .field("rd_spi_pad_config_cs0", &self.rd_spi_pad_config_cs0())
+            .field("rd_chip_ver_rev2", &self.rd_chip_ver_rev2())
+            .field("rd_reserve_0_181", &self.rd_reserve_0_181())
+            .field("rd_vol_level_hp_inv", &self.rd_vol_level_hp_inv())
+            .field("rd_wafer_version_minor", &self.rd_wafer_version_minor())
+            .field("rd_reserve_0_186", &self.rd_reserve_0_186())
+            .field("rd_flash_crypt_config", &self.rd_flash_crypt_config())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLK0_RDATA5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

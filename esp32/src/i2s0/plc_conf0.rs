@@ -62,28 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLC_CONF0")
-            .field(
-                "good_pack_max",
-                &format_args!("{}", self.good_pack_max().bits()),
-            )
-            .field("n_err_seg", &format_args!("{}", self.n_err_seg().bits()))
-            .field("shift_rate", &format_args!("{}", self.shift_rate().bits()))
-            .field(
-                "max_slide_sample",
-                &format_args!("{}", self.max_slide_sample().bits()),
-            )
-            .field(
-                "pack_len_8k",
-                &format_args!("{}", self.pack_len_8k().bits()),
-            )
-            .field("n_min_err", &format_args!("{}", self.n_min_err().bits()))
+            .field("good_pack_max", &self.good_pack_max())
+            .field("n_err_seg", &self.n_err_seg())
+            .field("shift_rate", &self.shift_rate())
+            .field("max_slide_sample", &self.max_slide_sample())
+            .field("pack_len_8k", &self.pack_len_8k())
+            .field("n_min_err", &self.n_min_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PLC_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_CLK_DIV")
-            .field(
-                "sar2_clk_div_num",
-                &format_args!("{}", self.sar2_clk_div_num().bits()),
-            )
-            .field(
-                "sar1_clk_div_num",
-                &format_args!("{}", self.sar1_clk_div_num().bits()),
-            )
+            .field("sar2_clk_div_num", &self.sar2_clk_div_num())
+            .field("sar1_clk_div_num", &self.sar1_clk_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_CLK_DIV_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

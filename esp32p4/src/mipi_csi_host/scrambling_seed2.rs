@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCRAMBLING_SEED2")
-            .field(
-                "scramble_seed_lane2",
-                &format_args!("{}", self.scramble_seed_lane2().bits()),
-            )
+            .field("scramble_seed_lane2", &self.scramble_seed_lane2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCRAMBLING_SEED2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

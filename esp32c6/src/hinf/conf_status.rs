@@ -62,30 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF_STATUS")
-            .field(
-                "func0_config0",
-                &format_args!("{}", self.func0_config0().bits()),
-            )
-            .field("sdr25_st", &format_args!("{}", self.sdr25_st().bit()))
-            .field("sdr50_st", &format_args!("{}", self.sdr50_st().bit()))
-            .field("sdr104_st", &format_args!("{}", self.sdr104_st().bit()))
-            .field("ddr50_st", &format_args!("{}", self.ddr50_st().bit()))
-            .field("tune_st", &format_args!("{}", self.tune_st().bits()))
-            .field(
-                "sdio_switch_volt_st",
-                &format_args!("{}", self.sdio_switch_volt_st().bit()),
-            )
-            .field(
-                "sdio_switch_end",
-                &format_args!("{}", self.sdio_switch_end().bit()),
-            )
+            .field("func0_config0", &self.func0_config0())
+            .field("sdr25_st", &self.sdr25_st())
+            .field("sdr50_st", &self.sdr50_st())
+            .field("sdr104_st", &self.sdr104_st())
+            .field("ddr50_st", &self.ddr50_st())
+            .field("tune_st", &self.tune_st())
+            .field("sdio_switch_volt_st", &self.sdio_switch_volt_st())
+            .field("sdio_switch_end", &self.sdio_switch_end())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "func0 config0 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

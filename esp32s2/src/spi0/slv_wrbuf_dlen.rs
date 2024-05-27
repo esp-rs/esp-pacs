@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLV_WRBUF_DLEN")
-            .field(
-                "slv_wr_buf_done",
-                &format_args!("{}", self.slv_wr_buf_done().bit()),
-            )
-            .field(
-                "conf_base_bitlen",
-                &format_args!("{}", self.conf_base_bitlen().bits()),
-            )
+            .field("slv_wr_buf_done", &self.slv_wr_buf_done())
+            .field("conf_base_bitlen", &self.conf_base_bitlen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLV_WRBUF_DLEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -33,22 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_TST_CTRL1")
-            .field(
-                "phy_testdin",
-                &format_args!("{}", self.phy_testdin().bits()),
-            )
-            .field(
-                "pht_testdout",
-                &format_args!("{}", self.pht_testdout().bits()),
-            )
-            .field("phy_testen", &format_args!("{}", self.phy_testen().bit()))
+            .field("phy_testdin", &self.phy_testdin())
+            .field("pht_testdout", &self.pht_testdout())
+            .field("phy_testen", &self.phy_testen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_TST_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

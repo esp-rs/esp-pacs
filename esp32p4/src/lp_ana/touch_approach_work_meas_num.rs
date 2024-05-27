@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_APPROACH_WORK_MEAS_NUM")
-            .field(
-                "touch_approach_meas_num2",
-                &format_args!("{}", self.touch_approach_meas_num2().bits()),
-            )
-            .field(
-                "touch_approach_meas_num1",
-                &format_args!("{}", self.touch_approach_meas_num1().bits()),
-            )
-            .field(
-                "touch_approach_meas_num0",
-                &format_args!("{}", self.touch_approach_meas_num0().bits()),
-            )
+            .field("touch_approach_meas_num2", &self.touch_approach_meas_num2())
+            .field("touch_approach_meas_num1", &self.touch_approach_meas_num1())
+            .field("touch_approach_meas_num0", &self.touch_approach_meas_num0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_APPROACH_WORK_MEAS_NUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

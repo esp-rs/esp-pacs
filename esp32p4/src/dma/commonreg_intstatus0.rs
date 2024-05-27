@@ -134,83 +134,77 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMMONREG_INTSTATUS0")
             .field(
                 "slvif_commonreg_dec_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_dec_err_intstat().bit()),
+                &self.slvif_commonreg_dec_err_intstat(),
             )
             .field(
                 "slvif_commonreg_wr2ro_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wr2ro_err_intstat().bit()),
+                &self.slvif_commonreg_wr2ro_err_intstat(),
             )
             .field(
                 "slvif_commonreg_rd2wo_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_rd2wo_err_intstat().bit()),
+                &self.slvif_commonreg_rd2wo_err_intstat(),
             )
             .field(
                 "slvif_commonreg_wronhold_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wronhold_err_intstat().bit()),
+                &self.slvif_commonreg_wronhold_err_intstat(),
             )
             .field(
                 "slvif_commonreg_wrparity_err_intstat",
-                &format_args!("{}", self.slvif_commonreg_wrparity_err_intstat().bit()),
+                &self.slvif_commonreg_wrparity_err_intstat(),
             )
             .field(
                 "slvif_undefinedreg_dec_err_intstat",
-                &format_args!("{}", self.slvif_undefinedreg_dec_err_intstat().bit()),
+                &self.slvif_undefinedreg_dec_err_intstat(),
             )
             .field(
                 "mxif1_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_rch0_eccprot_correrr_intstat().bit()),
+                &self.mxif1_rch0_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif1_rch0_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_rch0_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_rch0_eccprot_uncorrerr_intstat(),
             )
             .field(
                 "mxif1_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_rch1_eccprot_correrr_intstat().bit()),
+                &self.mxif1_rch1_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif1_rch1_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_rch1_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_rch1_eccprot_uncorrerr_intstat(),
             )
             .field(
                 "mxif1_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif1_bch_eccprot_correrr_intstat().bit()),
+                &self.mxif1_bch_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif1_bch_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif1_bch_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif1_bch_eccprot_uncorrerr_intstat(),
             )
             .field(
                 "mxif2_rch0_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_rch0_eccprot_correrr_intstat().bit()),
+                &self.mxif2_rch0_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif2_rch0_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_rch0_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_rch0_eccprot_uncorrerr_intstat(),
             )
             .field(
                 "mxif2_rch1_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_rch1_eccprot_correrr_intstat().bit()),
+                &self.mxif2_rch1_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif2_rch1_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_rch1_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_rch1_eccprot_uncorrerr_intstat(),
             )
             .field(
                 "mxif2_bch_eccprot_correrr_intstat",
-                &format_args!("{}", self.mxif2_bch_eccprot_correrr_intstat().bit()),
+                &self.mxif2_bch_eccprot_correrr_intstat(),
             )
             .field(
                 "mxif2_bch_eccprot_uncorrerr_intstat",
-                &format_args!("{}", self.mxif2_bch_eccprot_uncorrerr_intstat().bit()),
+                &self.mxif2_bch_eccprot_uncorrerr_intstat(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMMONREG_INTSTATUS0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`commonreg_intstatus0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

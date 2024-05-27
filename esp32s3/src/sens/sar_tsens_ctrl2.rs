@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TSENS_CTRL2")
-            .field(
-                "sar_tsens_xpd_wait",
-                &format_args!("{}", self.sar_tsens_xpd_wait().bits()),
-            )
-            .field(
-                "sar_tsens_xpd_force",
-                &format_args!("{}", self.sar_tsens_xpd_force().bits()),
-            )
-            .field(
-                "sar_tsens_clk_inv",
-                &format_args!("{}", self.sar_tsens_clk_inv().bit()),
-            )
+            .field("sar_tsens_xpd_wait", &self.sar_tsens_xpd_wait())
+            .field("sar_tsens_xpd_force", &self.sar_tsens_xpd_force())
+            .field("sar_tsens_clk_inv", &self.sar_tsens_clk_inv())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TSENS_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

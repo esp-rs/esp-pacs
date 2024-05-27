@@ -46,29 +46,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MEM_CTRL")
-            .field(
-                "uart_wakeup_flag",
-                &format_args!("{}", self.uart_wakeup_flag().bit()),
-            )
-            .field(
-                "uart_wakeup_en",
-                &format_args!("{}", self.uart_wakeup_en().bit()),
-            )
-            .field(
-                "uart_mem_force_pd",
-                &format_args!("{}", self.uart_mem_force_pd().bit()),
-            )
-            .field(
-                "uart_mem_force_pu",
-                &format_args!("{}", self.uart_mem_force_pu().bit()),
-            )
+            .field("uart_wakeup_flag", &self.uart_wakeup_flag())
+            .field("uart_wakeup_en", &self.uart_wakeup_en())
+            .field("uart_mem_force_pd", &self.uart_mem_force_pd())
+            .field("uart_mem_force_pu", &self.uart_mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

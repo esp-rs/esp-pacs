@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_INTR_FROM_CPU_0_MAP")
-            .field(
-                "cpu_intr_from_cpu_0_map",
-                &format_args!("{}", self.cpu_intr_from_cpu_0_map().bits()),
-            )
+            .field("cpu_intr_from_cpu_0_map", &self.cpu_intr_from_cpu_0_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_INTR_FROM_CPU_0_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

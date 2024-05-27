@@ -80,21 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACFF")
-            .field("pmode", &format_args!("{}", self.pmode().bit()))
-            .field("daif", &format_args!("{}", self.daif().bit()))
-            .field("pam", &format_args!("{}", self.pam().bit()))
-            .field("dbf", &format_args!("{}", self.dbf().bit()))
-            .field("pcf", &format_args!("{}", self.pcf().bits()))
-            .field("saif", &format_args!("{}", self.saif().bit()))
-            .field("safe", &format_args!("{}", self.safe().bit()))
-            .field("receive_all", &format_args!("{}", self.receive_all().bit()))
+            .field("pmode", &self.pmode())
+            .field("daif", &self.daif())
+            .field("pam", &self.pam())
+            .field("dbf", &self.dbf())
+            .field("pcf", &self.pcf())
+            .field("saif", &self.saif())
+            .field("safe", &self.safe())
+            .field("receive_all", &self.receive_all())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACFF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMEOUT_CONF")
-            .field(
-                "cpu_timeout_rst_en",
-                &format_args!("{}", self.cpu_timeout_rst_en().bit()),
-            )
-            .field(
-                "hp_timeout_rst_en",
-                &format_args!("{}", self.hp_timeout_rst_en().bit()),
-            )
+            .field("cpu_timeout_rst_en", &self.cpu_timeout_rst_en())
+            .field("hp_timeout_rst_en", &self.hp_timeout_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMEOUT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

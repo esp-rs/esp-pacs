@@ -109,57 +109,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL02")
-            .field(
-                "sdio_ls_clk_div_num",
-                &format_args!("{}", self.sdio_ls_clk_div_num().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_l",
-                &format_args!("{}", self.sdio_ls_clk_edge_l().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_h",
-                &format_args!("{}", self.sdio_ls_clk_edge_h().bits()),
-            )
-            .field(
-                "sdio_ls_clk_edge_n",
-                &format_args!("{}", self.sdio_ls_clk_edge_n().bits()),
-            )
-            .field(
-                "sdio_ls_slf_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_slf_clk_edge_sel().bits()),
-            )
-            .field(
-                "sdio_ls_drv_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_drv_clk_edge_sel().bits()),
-            )
-            .field(
-                "sdio_ls_sam_clk_edge_sel",
-                &format_args!("{}", self.sdio_ls_sam_clk_edge_sel().bits()),
-            )
-            .field(
-                "sdio_ls_slf_clk_en",
-                &format_args!("{}", self.sdio_ls_slf_clk_en().bit()),
-            )
-            .field(
-                "sdio_ls_drv_clk_en",
-                &format_args!("{}", self.sdio_ls_drv_clk_en().bit()),
-            )
-            .field(
-                "sdio_ls_sam_clk_en",
-                &format_args!("{}", self.sdio_ls_sam_clk_en().bit()),
-            )
+            .field("sdio_ls_clk_div_num", &self.sdio_ls_clk_div_num())
+            .field("sdio_ls_clk_edge_l", &self.sdio_ls_clk_edge_l())
+            .field("sdio_ls_clk_edge_h", &self.sdio_ls_clk_edge_h())
+            .field("sdio_ls_clk_edge_n", &self.sdio_ls_clk_edge_n())
+            .field("sdio_ls_slf_clk_edge_sel", &self.sdio_ls_slf_clk_edge_sel())
+            .field("sdio_ls_drv_clk_edge_sel", &self.sdio_ls_drv_clk_edge_sel())
+            .field("sdio_ls_sam_clk_edge_sel", &self.sdio_ls_sam_clk_edge_sel())
+            .field("sdio_ls_slf_clk_en", &self.sdio_ls_slf_clk_en())
+            .field("sdio_ls_drv_clk_en", &self.sdio_ls_drv_clk_en())
+            .field("sdio_ls_sam_clk_en", &self.sdio_ls_sam_clk_en())
             .field(
                 "mipi_dsi_dphy_clk_src_sel",
-                &format_args!("{}", self.mipi_dsi_dphy_clk_src_sel().bits()),
+                &self.mipi_dsi_dphy_clk_src_sel(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL02_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

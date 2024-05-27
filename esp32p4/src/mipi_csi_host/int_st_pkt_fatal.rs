@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST_PKT_FATAL")
-            .field(
-                "st_err_ecc_double",
-                &format_args!("{}", self.st_err_ecc_double().bit()),
-            )
-            .field(
-                "st_shorter_payload",
-                &format_args!("{}", self.st_shorter_payload().bit()),
-            )
+            .field("st_err_ecc_double", &self.st_err_ecc_double())
+            .field("st_shorter_payload", &self.st_shorter_payload())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_PKT_FATAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_pkt_fatal::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

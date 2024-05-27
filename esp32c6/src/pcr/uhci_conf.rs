@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UHCI_CONF")
-            .field("uhci_clk_en", &format_args!("{}", self.uhci_clk_en().bit()))
-            .field("uhci_rst_en", &format_args!("{}", self.uhci_rst_en().bit()))
+            .field("uhci_clk_en", &self.uhci_clk_en())
+            .field("uhci_rst_en", &self.uhci_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UHCI_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -28,21 +28,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_PERI_TIMEOUT_CONF")
-            .field(
-                "hp_peri_timeout_thres",
-                &format_args!("{}", self.hp_peri_timeout_thres().bits()),
-            )
+            .field("hp_peri_timeout_thres", &self.hp_peri_timeout_thres())
             .field(
                 "hp_peri_timeout_protect_en",
-                &format_args!("{}", self.hp_peri_timeout_protect_en().bit()),
+                &self.hp_peri_timeout_protect_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_PERI_TIMEOUT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

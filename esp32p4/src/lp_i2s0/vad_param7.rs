@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_PARAM7")
-            .field(
-                "param_thres_upd_base",
-                &format_args!("{}", self.param_thres_upd_base().bits()),
-            )
-            .field(
-                "param_thres_upd_vary",
-                &format_args!("{}", self.param_thres_upd_vary().bits()),
-            )
+            .field("param_thres_upd_base", &self.param_thres_upd_base())
+            .field("param_thres_upd_vary", &self.param_thres_upd_vary())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_PARAM7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

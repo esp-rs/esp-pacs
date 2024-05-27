@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLC_VALUE")
-            .field(
-                "blc_r3_value",
-                &format_args!("{}", self.blc_r3_value().bits()),
-            )
-            .field(
-                "blc_r2_value",
-                &format_args!("{}", self.blc_r2_value().bits()),
-            )
-            .field(
-                "blc_r1_value",
-                &format_args!("{}", self.blc_r1_value().bits()),
-            )
-            .field(
-                "blc_r0_value",
-                &format_args!("{}", self.blc_r0_value().bits()),
-            )
+            .field("blc_r3_value", &self.blc_r3_value())
+            .field("blc_r2_value", &self.blc_r2_value())
+            .field("blc_r1_value", &self.blc_r1_value())
+            .field("blc_r0_value", &self.blc_r0_value())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLC_VALUE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

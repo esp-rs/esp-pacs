@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_DCACHE_AUTOLOAD_SECTION0_SIZE")
             .field(
                 "pro_dcache_autoload_sct0_size",
-                &format_args!("{}", self.pro_dcache_autoload_sct0_size().bits()),
+                &self.pro_dcache_autoload_sct0_size(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_AUTOLOAD_SECTION0_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

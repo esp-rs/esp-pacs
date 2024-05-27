@@ -125,32 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("dummy_out", &format_args!("{}", self.dummy_out().bit()))
-            .field("faddr_dual", &format_args!("{}", self.faddr_dual().bit()))
-            .field("faddr_quad", &format_args!("{}", self.faddr_quad().bit()))
-            .field("fcmd_dual", &format_args!("{}", self.fcmd_dual().bit()))
-            .field("fcmd_quad", &format_args!("{}", self.fcmd_quad().bit()))
-            .field("fread_dual", &format_args!("{}", self.fread_dual().bit()))
-            .field("fread_quad", &format_args!("{}", self.fread_quad().bit()))
-            .field("q_pol", &format_args!("{}", self.q_pol().bit()))
-            .field("d_pol", &format_args!("{}", self.d_pol().bit()))
-            .field("hold_pol", &format_args!("{}", self.hold_pol().bit()))
-            .field("wp_pol", &format_args!("{}", self.wp_pol().bit()))
-            .field(
-                "rd_bit_order",
-                &format_args!("{}", self.rd_bit_order().bit()),
-            )
-            .field(
-                "wr_bit_order",
-                &format_args!("{}", self.wr_bit_order().bit()),
-            )
+            .field("dummy_out", &self.dummy_out())
+            .field("faddr_dual", &self.faddr_dual())
+            .field("faddr_quad", &self.faddr_quad())
+            .field("fcmd_dual", &self.fcmd_dual())
+            .field("fcmd_quad", &self.fcmd_quad())
+            .field("fread_dual", &self.fread_dual())
+            .field("fread_quad", &self.fread_quad())
+            .field("q_pol", &self.q_pol())
+            .field("d_pol", &self.d_pol())
+            .field("hold_pol", &self.hold_pol())
+            .field("wp_pol", &self.wp_pol())
+            .field("rd_bit_order", &self.rd_bit_order())
+            .field("wr_bit_order", &self.wr_bit_order())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

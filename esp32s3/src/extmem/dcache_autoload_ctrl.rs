@@ -78,45 +78,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_AUTOLOAD_CTRL")
-            .field(
-                "dcache_autoload_sct0_ena",
-                &format_args!("{}", self.dcache_autoload_sct0_ena().bit()),
-            )
-            .field(
-                "dcache_autoload_sct1_ena",
-                &format_args!("{}", self.dcache_autoload_sct1_ena().bit()),
-            )
-            .field(
-                "dcache_autoload_ena",
-                &format_args!("{}", self.dcache_autoload_ena().bit()),
-            )
-            .field(
-                "dcache_autoload_done",
-                &format_args!("{}", self.dcache_autoload_done().bit()),
-            )
-            .field(
-                "dcache_autoload_order",
-                &format_args!("{}", self.dcache_autoload_order().bit()),
-            )
-            .field(
-                "dcache_autoload_rqst",
-                &format_args!("{}", self.dcache_autoload_rqst().bits()),
-            )
-            .field(
-                "dcache_autoload_size",
-                &format_args!("{}", self.dcache_autoload_size().bits()),
-            )
+            .field("dcache_autoload_sct0_ena", &self.dcache_autoload_sct0_ena())
+            .field("dcache_autoload_sct1_ena", &self.dcache_autoload_sct1_ena())
+            .field("dcache_autoload_ena", &self.dcache_autoload_ena())
+            .field("dcache_autoload_done", &self.dcache_autoload_done())
+            .field("dcache_autoload_order", &self.dcache_autoload_order())
+            .field("dcache_autoload_rqst", &self.dcache_autoload_rqst())
+            .field("dcache_autoload_size", &self.dcache_autoload_size())
             .field(
                 "dcache_autoload_buffer_clear",
-                &format_args!("{}", self.dcache_autoload_buffer_clear().bit()),
+                &self.dcache_autoload_buffer_clear(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCACHE_AUTOLOAD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

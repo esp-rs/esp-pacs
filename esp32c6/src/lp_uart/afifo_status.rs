@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AFIFO_STATUS")
-            .field(
-                "tx_afifo_full",
-                &format_args!("{}", self.tx_afifo_full().bit()),
-            )
-            .field(
-                "tx_afifo_empty",
-                &format_args!("{}", self.tx_afifo_empty().bit()),
-            )
-            .field(
-                "rx_afifo_full",
-                &format_args!("{}", self.rx_afifo_full().bit()),
-            )
-            .field(
-                "rx_afifo_empty",
-                &format_args!("{}", self.rx_afifo_empty().bit()),
-            )
+            .field("tx_afifo_full", &self.tx_afifo_full())
+            .field("tx_afifo_empty", &self.tx_afifo_empty())
+            .field("rx_afifo_full", &self.rx_afifo_full())
+            .field("rx_afifo_empty", &self.rx_afifo_empty())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AFIFO_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "UART AFIFO Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`afifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

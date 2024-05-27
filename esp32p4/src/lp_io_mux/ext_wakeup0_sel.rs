@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_WAKEUP0_SEL")
-            .field(
-                "reg_xtl_ext_ctr_sel",
-                &format_args!("{}", self.reg_xtl_ext_ctr_sel().bits()),
-            )
-            .field(
-                "reg_ext_wakeup0_sel",
-                &format_args!("{}", self.reg_ext_wakeup0_sel().bits()),
-            )
+            .field("reg_xtl_ext_ctr_sel", &self.reg_xtl_ext_ctr_sel())
+            .field("reg_ext_wakeup0_sel", &self.reg_ext_wakeup0_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_WAKEUP0_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

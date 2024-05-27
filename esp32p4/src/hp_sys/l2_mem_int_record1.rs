@@ -43,31 +43,19 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_RECORD1")
             .field(
                 "reg_l2_mem_ecc_err_int_addr",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_int_addr().bits()),
+                &self.reg_l2_mem_ecc_err_int_addr(),
             )
             .field(
                 "reg_l2_mem_ecc_one_bit_err",
-                &format_args!("{}", self.reg_l2_mem_ecc_one_bit_err().bit()),
+                &self.reg_l2_mem_ecc_one_bit_err(),
             )
             .field(
                 "reg_l2_mem_ecc_two_bit_err",
-                &format_args!("{}", self.reg_l2_mem_ecc_two_bit_err().bit()),
+                &self.reg_l2_mem_ecc_two_bit_err(),
             )
-            .field(
-                "reg_l2_mem_ecc_err_bit",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_bit().bits()),
-            )
-            .field(
-                "reg_l2_cache_err_bank",
-                &format_args!("{}", self.reg_l2_cache_err_bank().bit()),
-            )
+            .field("reg_l2_mem_ecc_err_bit", &self.reg_l2_mem_ecc_err_bit())
+            .field("reg_l2_cache_err_bank", &self.reg_l2_cache_err_bank())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_INT_RECORD1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_mem_int_record1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

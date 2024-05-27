@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U3_CHANGE_CONF")
-            .field(
-                "cnt_step_u3",
-                &format_args!("{}", self.cnt_step_u3().bits()),
-            )
-            .field(
-                "cnt_step_lim_u3",
-                &format_args!("{}", self.cnt_step_lim_u3().bits()),
-            )
+            .field("cnt_step_u3", &self.cnt_step_u3())
+            .field("cnt_step_lim_u3", &self.cnt_step_lim_u3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<U3_CHANGE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

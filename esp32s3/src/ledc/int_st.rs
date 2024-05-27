@@ -157,57 +157,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("timer0_ovf", &format_args!("{}", self.timer0_ovf().bit()))
-            .field("timer1_ovf", &format_args!("{}", self.timer1_ovf().bit()))
-            .field("timer2_ovf", &format_args!("{}", self.timer2_ovf().bit()))
-            .field("timer3_ovf", &format_args!("{}", self.timer3_ovf().bit()))
-            .field(
-                "duty_chng_end_ch0",
-                &format_args!("{}", self.duty_chng_end_ch0().bit()),
-            )
-            .field(
-                "duty_chng_end_ch1",
-                &format_args!("{}", self.duty_chng_end_ch1().bit()),
-            )
-            .field(
-                "duty_chng_end_ch2",
-                &format_args!("{}", self.duty_chng_end_ch2().bit()),
-            )
-            .field(
-                "duty_chng_end_ch3",
-                &format_args!("{}", self.duty_chng_end_ch3().bit()),
-            )
-            .field(
-                "duty_chng_end_ch4",
-                &format_args!("{}", self.duty_chng_end_ch4().bit()),
-            )
-            .field(
-                "duty_chng_end_ch5",
-                &format_args!("{}", self.duty_chng_end_ch5().bit()),
-            )
-            .field(
-                "duty_chng_end_ch6",
-                &format_args!("{}", self.duty_chng_end_ch6().bit()),
-            )
-            .field(
-                "duty_chng_end_ch7",
-                &format_args!("{}", self.duty_chng_end_ch7().bit()),
-            )
-            .field("ovf_cnt_ch0", &format_args!("{}", self.ovf_cnt_ch0().bit()))
-            .field("ovf_cnt_ch1", &format_args!("{}", self.ovf_cnt_ch1().bit()))
-            .field("ovf_cnt_ch2", &format_args!("{}", self.ovf_cnt_ch2().bit()))
-            .field("ovf_cnt_ch3", &format_args!("{}", self.ovf_cnt_ch3().bit()))
-            .field("ovf_cnt_ch4", &format_args!("{}", self.ovf_cnt_ch4().bit()))
-            .field("ovf_cnt_ch5", &format_args!("{}", self.ovf_cnt_ch5().bit()))
-            .field("ovf_cnt_ch6", &format_args!("{}", self.ovf_cnt_ch6().bit()))
-            .field("ovf_cnt_ch7", &format_args!("{}", self.ovf_cnt_ch7().bit()))
+            .field("timer0_ovf", &self.timer0_ovf())
+            .field("timer1_ovf", &self.timer1_ovf())
+            .field("timer2_ovf", &self.timer2_ovf())
+            .field("timer3_ovf", &self.timer3_ovf())
+            .field("duty_chng_end_ch0", &self.duty_chng_end_ch0())
+            .field("duty_chng_end_ch1", &self.duty_chng_end_ch1())
+            .field("duty_chng_end_ch2", &self.duty_chng_end_ch2())
+            .field("duty_chng_end_ch3", &self.duty_chng_end_ch3())
+            .field("duty_chng_end_ch4", &self.duty_chng_end_ch4())
+            .field("duty_chng_end_ch5", &self.duty_chng_end_ch5())
+            .field("duty_chng_end_ch6", &self.duty_chng_end_ch6())
+            .field("duty_chng_end_ch7", &self.duty_chng_end_ch7())
+            .field("ovf_cnt_ch0", &self.ovf_cnt_ch0())
+            .field("ovf_cnt_ch1", &self.ovf_cnt_ch1())
+            .field("ovf_cnt_ch2", &self.ovf_cnt_ch2())
+            .field("ovf_cnt_ch3", &self.ovf_cnt_ch3())
+            .field("ovf_cnt_ch4", &self.ovf_cnt_ch4())
+            .field("ovf_cnt_ch5", &self.ovf_cnt_ch5())
+            .field("ovf_cnt_ch6", &self.ovf_cnt_ch6())
+            .field("ovf_cnt_ch7", &self.ovf_cnt_ch7())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

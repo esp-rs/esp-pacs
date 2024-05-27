@@ -96,53 +96,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PHY_HS_LOOPBACK_CTRL")
-            .field(
-                "phy_hs_txdatahs_1",
-                &format_args!("{}", self.phy_hs_txdatahs_1().bits()),
-            )
-            .field(
-                "phy_hs_txrequestdatahs_1",
-                &format_args!("{}", self.phy_hs_txrequestdatahs_1().bit()),
-            )
-            .field(
-                "phy_hs_basedir_1",
-                &format_args!("{}", self.phy_hs_basedir_1().bit()),
-            )
-            .field(
-                "phy_hs_txdatahs_0",
-                &format_args!("{}", self.phy_hs_txdatahs_0().bits()),
-            )
-            .field(
-                "phy_hs_txrequestdatahs_0",
-                &format_args!("{}", self.phy_hs_txrequestdatahs_0().bit()),
-            )
-            .field(
-                "phy_hs_basedir_0",
-                &format_args!("{}", self.phy_hs_basedir_0().bit()),
-            )
-            .field(
-                "phy_hs_txrequesthsclk",
-                &format_args!("{}", self.phy_hs_txrequesthsclk().bit()),
-            )
+            .field("phy_hs_txdatahs_1", &self.phy_hs_txdatahs_1())
+            .field("phy_hs_txrequestdatahs_1", &self.phy_hs_txrequestdatahs_1())
+            .field("phy_hs_basedir_1", &self.phy_hs_basedir_1())
+            .field("phy_hs_txdatahs_0", &self.phy_hs_txdatahs_0())
+            .field("phy_hs_txrequestdatahs_0", &self.phy_hs_txrequestdatahs_0())
+            .field("phy_hs_basedir_0", &self.phy_hs_basedir_0())
+            .field("phy_hs_txrequesthsclk", &self.phy_hs_txrequesthsclk())
             .field(
                 "phy_hs_loopback_check_done",
-                &format_args!("{}", self.phy_hs_loopback_check_done().bit()),
+                &self.phy_hs_loopback_check_done(),
             )
-            .field(
-                "phy_hs_loopback_en",
-                &format_args!("{}", self.phy_hs_loopback_en().bit()),
-            )
-            .field(
-                "phy_hs_loopback_ok",
-                &format_args!("{}", self.phy_hs_loopback_ok().bit()),
-            )
+            .field("phy_hs_loopback_en", &self.phy_hs_loopback_en())
+            .field("phy_hs_loopback_ok", &self.phy_hs_loopback_ok())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PHY_HS_LOOPBACK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

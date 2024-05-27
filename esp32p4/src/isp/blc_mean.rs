@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BLC_MEAN")
-            .field(
-                "blc_r3_mean",
-                &format_args!("{}", self.blc_r3_mean().bits()),
-            )
-            .field(
-                "blc_r2_mean",
-                &format_args!("{}", self.blc_r2_mean().bits()),
-            )
-            .field(
-                "blc_r1_mean",
-                &format_args!("{}", self.blc_r1_mean().bits()),
-            )
-            .field(
-                "blc_r0_mean",
-                &format_args!("{}", self.blc_r0_mean().bits()),
-            )
+            .field("blc_r3_mean", &self.blc_r3_mean())
+            .field("blc_r2_mean", &self.blc_r2_mean())
+            .field("blc_r1_mean", &self.blc_r1_mean())
+            .field("blc_r0_mean", &self.blc_r0_mean())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BLC_MEAN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "results of the average of black window\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blc_mean::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

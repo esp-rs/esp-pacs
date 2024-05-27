@@ -188,45 +188,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACCONFIG")
-            .field("pltf", &format_args!("{}", self.pltf().bits()))
-            .field("rx", &format_args!("{}", self.rx().bit()))
-            .field("tx", &format_args!("{}", self.tx().bit()))
-            .field(
-                "deferralcheck",
-                &format_args!("{}", self.deferralcheck().bit()),
-            )
-            .field(
-                "backofflimit",
-                &format_args!("{}", self.backofflimit().bits()),
-            )
-            .field("padcrcstrip", &format_args!("{}", self.padcrcstrip().bit()))
-            .field("retry", &format_args!("{}", self.retry().bit()))
-            .field(
-                "rxipcoffload",
-                &format_args!("{}", self.rxipcoffload().bit()),
-            )
-            .field("duplex", &format_args!("{}", self.duplex().bit()))
-            .field("loopback", &format_args!("{}", self.loopback().bit()))
-            .field("rxown", &format_args!("{}", self.rxown().bit()))
-            .field("fespeed", &format_args!("{}", self.fespeed().bit()))
-            .field("mii", &format_args!("{}", self.mii().bit()))
-            .field("disablecrs", &format_args!("{}", self.disablecrs().bit()))
-            .field(
-                "interframegap",
-                &format_args!("{}", self.interframegap().bits()),
-            )
-            .field("jumboframe", &format_args!("{}", self.jumboframe().bit()))
-            .field("jabber", &format_args!("{}", self.jabber().bit()))
-            .field("watchdog", &format_args!("{}", self.watchdog().bit()))
-            .field("ass2kp", &format_args!("{}", self.ass2kp().bit()))
-            .field("sairc", &format_args!("{}", self.sairc().bits()))
+            .field("pltf", &self.pltf())
+            .field("rx", &self.rx())
+            .field("tx", &self.tx())
+            .field("deferralcheck", &self.deferralcheck())
+            .field("backofflimit", &self.backofflimit())
+            .field("padcrcstrip", &self.padcrcstrip())
+            .field("retry", &self.retry())
+            .field("rxipcoffload", &self.rxipcoffload())
+            .field("duplex", &self.duplex())
+            .field("loopback", &self.loopback())
+            .field("rxown", &self.rxown())
+            .field("fespeed", &self.fespeed())
+            .field("mii", &self.mii())
+            .field("disablecrs", &self.disablecrs())
+            .field("interframegap", &self.interframegap())
+            .field("jumboframe", &self.jumboframe())
+            .field("jabber", &self.jabber())
+            .field("watchdog", &self.watchdog())
+            .field("ass2kp", &self.ass2kp())
+            .field("sairc", &self.sairc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACCONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

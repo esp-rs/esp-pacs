@@ -28,21 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_CAUSE")
-            .field(
-                "reset_cause",
-                &format_args!("{}", self.reset_cause().bits()),
-            )
-            .field(
-                "core0_reset_flag",
-                &format_args!("{}", self.core0_reset_flag().bit()),
-            )
+            .field("reset_cause", &self.reset_cause())
+            .field("core0_reset_flag", &self.core0_reset_flag())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RESET_CAUSE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

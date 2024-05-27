@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLKMGR_CFG")
-            .field(
-                "tx_esc_clk_division",
-                &format_args!("{}", self.tx_esc_clk_division().bits()),
-            )
-            .field(
-                "to_clk_division",
-                &format_args!("{}", self.to_clk_division().bits()),
-            )
+            .field("tx_esc_clk_division", &self.tx_esc_clk_division())
+            .field("to_clk_division", &self.to_clk_division())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLKMGR_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

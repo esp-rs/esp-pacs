@@ -91,46 +91,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_MISC")
-            .field(
-                "lcd_wire_mode",
-                &format_args!("{}", self.lcd_wire_mode().bits()),
-            )
-            .field(
-                "lcd_vfk_cyclelen",
-                &format_args!("{}", self.lcd_vfk_cyclelen().bits()),
-            )
-            .field(
-                "lcd_vbk_cyclelen",
-                &format_args!("{}", self.lcd_vbk_cyclelen().bits()),
-            )
-            .field(
-                "lcd_next_frame_en",
-                &format_args!("{}", self.lcd_next_frame_en().bit()),
-            )
-            .field("lcd_bk_en", &format_args!("{}", self.lcd_bk_en().bit()))
-            .field(
-                "lcd_cd_data_set",
-                &format_args!("{}", self.lcd_cd_data_set().bit()),
-            )
-            .field(
-                "lcd_cd_dummy_set",
-                &format_args!("{}", self.lcd_cd_dummy_set().bit()),
-            )
-            .field(
-                "lcd_cd_cmd_set",
-                &format_args!("{}", self.lcd_cd_cmd_set().bit()),
-            )
-            .field(
-                "lcd_cd_idle_edge",
-                &format_args!("{}", self.lcd_cd_idle_edge().bit()),
-            )
+            .field("lcd_wire_mode", &self.lcd_wire_mode())
+            .field("lcd_vfk_cyclelen", &self.lcd_vfk_cyclelen())
+            .field("lcd_vbk_cyclelen", &self.lcd_vbk_cyclelen())
+            .field("lcd_next_frame_en", &self.lcd_next_frame_en())
+            .field("lcd_bk_en", &self.lcd_bk_en())
+            .field("lcd_cd_data_set", &self.lcd_cd_data_set())
+            .field("lcd_cd_dummy_set", &self.lcd_cd_dummy_set())
+            .field("lcd_cd_cmd_set", &self.lcd_cd_cmd_set())
+            .field("lcd_cd_idle_edge", &self.lcd_cd_idle_edge())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_MISC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

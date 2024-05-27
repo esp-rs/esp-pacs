@@ -48,37 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_OUTSTATUS")
-            .field(
-                "dma_outdscr_addr",
-                &format_args!("{}", self.dma_outdscr_addr().bits()),
-            )
-            .field(
-                "dma_outdscr_state",
-                &format_args!("{}", self.dma_outdscr_state().bits()),
-            )
-            .field(
-                "dma_out_state",
-                &format_args!("{}", self.dma_out_state().bits()),
-            )
-            .field(
-                "dma_outfifo_cnt",
-                &format_args!("{}", self.dma_outfifo_cnt().bits()),
-            )
-            .field(
-                "dma_outfifo_full",
-                &format_args!("{}", self.dma_outfifo_full().bit()),
-            )
-            .field(
-                "dma_outfifo_empty",
-                &format_args!("{}", self.dma_outfifo_empty().bit()),
-            )
+            .field("dma_outdscr_addr", &self.dma_outdscr_addr())
+            .field("dma_outdscr_state", &self.dma_outdscr_state())
+            .field("dma_out_state", &self.dma_out_state())
+            .field("dma_outfifo_cnt", &self.dma_outfifo_cnt())
+            .field("dma_outfifo_full", &self.dma_outfifo_full())
+            .field("dma_outfifo_empty", &self.dma_outfifo_empty())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_OUTSTATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI DMA TX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_outstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -107,36 +107,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_FCTRL")
-            .field("axi_req_en", &format_args!("{}", self.axi_req_en().bit()))
-            .field(
-                "cache_usr_addr_4byte",
-                &format_args!("{}", self.cache_usr_addr_4byte().bit()),
-            )
-            .field(
-                "cache_flash_usr_cmd",
-                &format_args!("{}", self.cache_flash_usr_cmd().bit()),
-            )
-            .field("fdin_dual", &format_args!("{}", self.fdin_dual().bit()))
-            .field("fdout_dual", &format_args!("{}", self.fdout_dual().bit()))
-            .field("faddr_dual", &format_args!("{}", self.faddr_dual().bit()))
-            .field("fdin_quad", &format_args!("{}", self.fdin_quad().bit()))
-            .field("fdout_quad", &format_args!("{}", self.fdout_quad().bit()))
-            .field("faddr_quad", &format_args!("{}", self.faddr_quad().bit()))
+            .field("axi_req_en", &self.axi_req_en())
+            .field("cache_usr_addr_4byte", &self.cache_usr_addr_4byte())
+            .field("cache_flash_usr_cmd", &self.cache_flash_usr_cmd())
+            .field("fdin_dual", &self.fdin_dual())
+            .field("fdout_dual", &self.fdout_dual())
+            .field("faddr_dual", &self.faddr_dual())
+            .field("fdin_quad", &self.fdin_quad())
+            .field("fdout_quad", &self.fdout_quad())
+            .field("faddr_quad", &self.faddr_quad())
             .field(
                 "spi_same_aw_ar_addr_chk_en",
-                &format_args!("{}", self.spi_same_aw_ar_addr_chk_en().bit()),
+                &self.spi_same_aw_ar_addr_chk_en(),
             )
-            .field(
-                "spi_close_axi_inf_en",
-                &format_args!("{}", self.spi_close_axi_inf_en().bit()),
-            )
+            .field("spi_close_axi_inf_en", &self.spi_close_axi_inf_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_FCTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CMPR_CFG")
-            .field("a_upmethod", &format_args!("{}", self.a_upmethod().bits()))
-            .field("b_upmethod", &format_args!("{}", self.b_upmethod().bits()))
-            .field("a_shdw_full", &format_args!("{}", self.a_shdw_full().bit()))
-            .field("b_shdw_full", &format_args!("{}", self.b_shdw_full().bit()))
+            .field("a_upmethod", &self.a_upmethod())
+            .field("b_upmethod", &self.b_upmethod())
+            .field("a_shdw_full", &self.a_shdw_full())
+            .field("b_shdw_full", &self.b_shdw_full())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CMPR_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_PRELOCK_SCT0_ADDR")
             .field(
                 "l1_cache_prelock_sct0_addr",
-                &format_args!("{}", self.l1_cache_prelock_sct0_addr().bits()),
+                &self.l1_cache_prelock_sct0_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -40,29 +40,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_LOCK_CTRL")
-            .field(
-                "cache_lock_ena",
-                &format_args!("{}", self.cache_lock_ena().bit()),
-            )
-            .field(
-                "cache_unlock_ena",
-                &format_args!("{}", self.cache_unlock_ena().bit()),
-            )
-            .field(
-                "cache_lock_done",
-                &format_args!("{}", self.cache_lock_done().bit()),
-            )
-            .field(
-                "cache_lock_rgid",
-                &format_args!("{}", self.cache_lock_rgid().bits()),
-            )
+            .field("cache_lock_ena", &self.cache_lock_ena())
+            .field("cache_unlock_ena", &self.cache_unlock_ena())
+            .field("cache_lock_done", &self.cache_lock_done())
+            .field("cache_lock_rgid", &self.cache_lock_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_LOCK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYSTIMER_TARGET1_INT_MAP")
             .field(
                 "core0_systimer_target1_int_map",
-                &format_args!("{}", self.core0_systimer_target1_int_map().bits()),
+                &self.core0_systimer_target1_int_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYSTIMER_TARGET1_INT_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

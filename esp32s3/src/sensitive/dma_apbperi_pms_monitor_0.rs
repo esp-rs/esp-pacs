@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DMA_APBPERI_PMS_MONITOR_0")
             .field(
                 "dma_apbperi_pms_monitor_lock",
-                &format_args!("{}", self.dma_apbperi_pms_monitor_lock().bit()),
+                &self.dma_apbperi_pms_monitor_lock(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_APBPERI_PMS_MONITOR_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

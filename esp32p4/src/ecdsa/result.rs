@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESULT")
-            .field(
-                "operation_result",
-                &format_args!("{}", self.operation_result().bit()),
-            )
-            .field(
-                "k_value_warning",
-                &format_args!("{}", self.k_value_warning().bit()),
-            )
+            .field("operation_result", &self.operation_result())
+            .field("k_value_warning", &self.k_value_warning())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RESULT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "ECDSA result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -20,15 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ACCESS_CHECK")
-            .field("pro", &format_args!("{}", self.pro().bit()))
-            .field("app", &format_args!("{}", self.app().bit()))
+            .field("pro", &self.pro())
+            .field("app", &self.app())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ACCESS_CHECK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`access_check::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

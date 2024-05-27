@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FUNC_IN_SEL_CFG")
-            .field("in_sel", &format_args!("{}", self.in_sel().bits()))
-            .field("in_inv_sel", &format_args!("{}", self.in_inv_sel().bit()))
-            .field("sel", &format_args!("{}", self.sel().bit()))
+            .field("in_sel", &self.in_sel())
+            .field("in_inv_sel", &self.in_inv_sel())
+            .field("sel", &self.sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FUNC_IN_SEL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

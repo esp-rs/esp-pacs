@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PD_CONF")
-            .field(
-                "fifo_force_pd",
-                &format_args!("{}", self.fifo_force_pd().bit()),
-            )
-            .field(
-                "fifo_force_pu",
-                &format_args!("{}", self.fifo_force_pu().bit()),
-            )
-            .field(
-                "plc_mem_force_pd",
-                &format_args!("{}", self.plc_mem_force_pd().bit()),
-            )
-            .field(
-                "plc_mem_force_pu",
-                &format_args!("{}", self.plc_mem_force_pu().bit()),
-            )
+            .field("fifo_force_pd", &self.fifo_force_pd())
+            .field("fifo_force_pu", &self.fifo_force_pu())
+            .field("plc_mem_force_pd", &self.plc_mem_force_pd())
+            .field("plc_mem_force_pu", &self.plc_mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PD_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

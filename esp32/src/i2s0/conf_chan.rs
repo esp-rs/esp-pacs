@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF_CHAN")
-            .field(
-                "tx_chan_mod",
-                &format_args!("{}", self.tx_chan_mod().bits()),
-            )
-            .field(
-                "rx_chan_mod",
-                &format_args!("{}", self.rx_chan_mod().bits()),
-            )
+            .field("tx_chan_mod", &self.tx_chan_mod())
+            .field("rx_chan_mod", &self.rx_chan_mod())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF_CHAN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

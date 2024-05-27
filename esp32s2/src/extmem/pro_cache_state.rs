@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CACHE_STATE")
-            .field(
-                "pro_icache_state",
-                &format_args!("{}", self.pro_icache_state().bits()),
-            )
-            .field(
-                "pro_dcache_state",
-                &format_args!("{}", self.pro_dcache_state().bits()),
-            )
+            .field("pro_icache_state", &self.pro_icache_state())
+            .field("pro_dcache_state", &self.pro_dcache_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_cache_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

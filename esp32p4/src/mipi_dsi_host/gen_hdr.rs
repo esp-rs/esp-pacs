@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN_HDR")
-            .field("gen_dt", &format_args!("{}", self.gen_dt().bits()))
-            .field("gen_vc", &format_args!("{}", self.gen_vc().bits()))
-            .field(
-                "gen_wc_lsbyte",
-                &format_args!("{}", self.gen_wc_lsbyte().bits()),
-            )
-            .field(
-                "gen_wc_msbyte",
-                &format_args!("{}", self.gen_wc_msbyte().bits()),
-            )
+            .field("gen_dt", &self.gen_dt())
+            .field("gen_vc", &self.gen_vc())
+            .field("gen_wc_lsbyte", &self.gen_wc_lsbyte())
+            .field("gen_wc_msbyte", &self.gen_wc_msbyte())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GEN_HDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,34 +35,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_MONITOR_5")
             .field(
                 "core_0_pif_pms_monitor_nonword_violate_intr",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_nonword_violate_intr().bit()
-                ),
+                &self.core_0_pif_pms_monitor_nonword_violate_intr(),
             )
             .field(
                 "core_0_pif_pms_monitor_nonword_violate_status_hsize",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_nonword_violate_status_hsize()
-                        .bits()
-                ),
+                &self.core_0_pif_pms_monitor_nonword_violate_status_hsize(),
             )
             .field(
                 "core_0_pif_pms_monitor_nonword_violate_status_hworld",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_nonword_violate_status_hworld()
-                        .bits()
-                ),
+                &self.core_0_pif_pms_monitor_nonword_violate_status_hworld(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_MONITOR_5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Core0 permission report register 5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

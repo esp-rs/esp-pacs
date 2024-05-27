@@ -89,46 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_CLOCK")
-            .field(
-                "lcd_clkcnt_n",
-                &format_args!("{}", self.lcd_clkcnt_n().bits()),
-            )
-            .field(
-                "lcd_clk_equ_sysclk",
-                &format_args!("{}", self.lcd_clk_equ_sysclk().bit()),
-            )
-            .field(
-                "lcd_ck_idle_edge",
-                &format_args!("{}", self.lcd_ck_idle_edge().bit()),
-            )
-            .field(
-                "lcd_ck_out_edge",
-                &format_args!("{}", self.lcd_ck_out_edge().bit()),
-            )
-            .field(
-                "lcd_clkm_div_num",
-                &format_args!("{}", self.lcd_clkm_div_num().bits()),
-            )
-            .field(
-                "lcd_clkm_div_b",
-                &format_args!("{}", self.lcd_clkm_div_b().bits()),
-            )
-            .field(
-                "lcd_clkm_div_a",
-                &format_args!("{}", self.lcd_clkm_div_a().bits()),
-            )
-            .field(
-                "lcd_clk_sel",
-                &format_args!("{}", self.lcd_clk_sel().bits()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("lcd_clkcnt_n", &self.lcd_clkcnt_n())
+            .field("lcd_clk_equ_sysclk", &self.lcd_clk_equ_sysclk())
+            .field("lcd_ck_idle_edge", &self.lcd_ck_idle_edge())
+            .field("lcd_ck_out_edge", &self.lcd_ck_out_edge())
+            .field("lcd_clkm_div_num", &self.lcd_clkm_div_num())
+            .field("lcd_clkm_div_b", &self.lcd_clkm_div_b())
+            .field("lcd_clkm_div_a", &self.lcd_clkm_div_a())
+            .field("lcd_clk_sel", &self.lcd_clk_sel())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_CLOCK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

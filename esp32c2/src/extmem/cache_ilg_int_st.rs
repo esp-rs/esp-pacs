@@ -55,41 +55,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_ILG_INT_ST")
-            .field(
-                "icache_sync_op_fault",
-                &format_args!("{}", self.icache_sync_op_fault().bit()),
-            )
-            .field(
-                "icache_preload_op_fault",
-                &format_args!("{}", self.icache_preload_op_fault().bit()),
-            )
-            .field(
-                "mmu_entry_fault",
-                &format_args!("{}", self.mmu_entry_fault().bit()),
-            )
-            .field(
-                "ibus_acs_cnt_ovf",
-                &format_args!("{}", self.ibus_acs_cnt_ovf().bit()),
-            )
-            .field(
-                "ibus_acs_miss_cnt_ovf",
-                &format_args!("{}", self.ibus_acs_miss_cnt_ovf().bit()),
-            )
-            .field(
-                "dbus_acs_cnt_ovf",
-                &format_args!("{}", self.dbus_acs_cnt_ovf().bit()),
-            )
+            .field("icache_sync_op_fault", &self.icache_sync_op_fault())
+            .field("icache_preload_op_fault", &self.icache_preload_op_fault())
+            .field("mmu_entry_fault", &self.mmu_entry_fault())
+            .field("ibus_acs_cnt_ovf", &self.ibus_acs_cnt_ovf())
+            .field("ibus_acs_miss_cnt_ovf", &self.ibus_acs_miss_cnt_ovf())
+            .field("dbus_acs_cnt_ovf", &self.dbus_acs_cnt_ovf())
             .field(
                 "dbus_acs_flash_miss_cnt_ovf",
-                &format_args!("{}", self.dbus_acs_flash_miss_cnt_ovf().bit()),
+                &self.dbus_acs_flash_miss_cnt_ovf(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_ILG_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_ilg_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

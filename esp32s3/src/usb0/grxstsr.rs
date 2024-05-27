@@ -41,18 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GRXSTSR")
-            .field("g_chnum", &format_args!("{}", self.g_chnum().bits()))
-            .field("g_bcnt", &format_args!("{}", self.g_bcnt().bits()))
-            .field("g_dpid", &format_args!("{}", self.g_dpid().bits()))
-            .field("g_pktsts", &format_args!("{}", self.g_pktsts().bits()))
-            .field("g_fn", &format_args!("{}", self.g_fn().bits()))
+            .field("g_chnum", &self.g_chnum())
+            .field("g_bcnt", &self.g_bcnt())
+            .field("g_dpid", &self.g_dpid())
+            .field("g_pktsts", &self.g_pktsts())
+            .field("g_fn", &self.g_fn())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GRXSTSR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`grxstsr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

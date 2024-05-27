@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_CTRL1")
-            .field(
-                "pro_dcache_mask_bus0",
-                &format_args!("{}", self.pro_dcache_mask_bus0().bit()),
-            )
-            .field(
-                "pro_dcache_mask_bus1",
-                &format_args!("{}", self.pro_dcache_mask_bus1().bit()),
-            )
-            .field(
-                "pro_dcache_mask_bus2",
-                &format_args!("{}", self.pro_dcache_mask_bus2().bit()),
-            )
+            .field("pro_dcache_mask_bus0", &self.pro_dcache_mask_bus0())
+            .field("pro_dcache_mask_bus1", &self.pro_dcache_mask_bus1())
+            .field("pro_dcache_mask_bus2", &self.pro_dcache_mask_bus2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

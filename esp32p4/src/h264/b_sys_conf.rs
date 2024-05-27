@@ -37,23 +37,14 @@ impl core::fmt::Debug for R {
         f.debug_struct("B_SYS_CONF")
             .field(
                 "b_db_tmp_ready_trigger_mb_num",
-                &format_args!("{}", self.b_db_tmp_ready_trigger_mb_num().bits()),
+                &self.b_db_tmp_ready_trigger_mb_num(),
             )
             .field(
                 "b_rec_ready_trigger_mb_lines",
-                &format_args!("{}", self.b_rec_ready_trigger_mb_lines().bits()),
+                &self.b_rec_ready_trigger_mb_lines(),
             )
-            .field(
-                "b_intra_cost_cmp_offset",
-                &format_args!("{}", self.b_intra_cost_cmp_offset().bits()),
-            )
+            .field("b_intra_cost_cmp_offset", &self.b_intra_cost_cmp_offset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<B_SYS_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

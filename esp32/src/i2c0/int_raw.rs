@@ -97,44 +97,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("rxfifo_full", &format_args!("{}", self.rxfifo_full().bit()))
-            .field(
-                "txfifo_empty",
-                &format_args!("{}", self.txfifo_empty().bit()),
-            )
-            .field("rxfifo_ovf", &format_args!("{}", self.rxfifo_ovf().bit()))
-            .field("end_detect", &format_args!("{}", self.end_detect().bit()))
-            .field(
-                "slave_tran_comp",
-                &format_args!("{}", self.slave_tran_comp().bit()),
-            )
-            .field(
-                "arbitration_lost",
-                &format_args!("{}", self.arbitration_lost().bit()),
-            )
-            .field(
-                "master_tran_comp",
-                &format_args!("{}", self.master_tran_comp().bit()),
-            )
-            .field(
-                "trans_complete",
-                &format_args!("{}", self.trans_complete().bit()),
-            )
-            .field("time_out", &format_args!("{}", self.time_out().bit()))
-            .field("trans_start", &format_args!("{}", self.trans_start().bit()))
-            .field("ack_err", &format_args!("{}", self.ack_err().bit()))
-            .field("rx_rec_full", &format_args!("{}", self.rx_rec_full().bit()))
-            .field(
-                "tx_send_empty",
-                &format_args!("{}", self.tx_send_empty().bit()),
-            )
+            .field("rxfifo_full", &self.rxfifo_full())
+            .field("txfifo_empty", &self.txfifo_empty())
+            .field("rxfifo_ovf", &self.rxfifo_ovf())
+            .field("end_detect", &self.end_detect())
+            .field("slave_tran_comp", &self.slave_tran_comp())
+            .field("arbitration_lost", &self.arbitration_lost())
+            .field("master_tran_comp", &self.master_tran_comp())
+            .field("trans_complete", &self.trans_complete())
+            .field("time_out", &self.time_out())
+            .field("trans_start", &self.trans_start())
+            .field("ack_err", &self.ack_err())
+            .field("rx_rec_full", &self.rx_rec_full())
+            .field("tx_send_empty", &self.tx_send_empty())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

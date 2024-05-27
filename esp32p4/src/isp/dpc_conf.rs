@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPC_CONF")
-            .field(
-                "dpc_threshold_l",
-                &format_args!("{}", self.dpc_threshold_l().bits()),
-            )
-            .field(
-                "dpc_threshold_h",
-                &format_args!("{}", self.dpc_threshold_h().bits()),
-            )
-            .field(
-                "dpc_factor_dark",
-                &format_args!("{}", self.dpc_factor_dark().bits()),
-            )
-            .field(
-                "dpc_factor_brig",
-                &format_args!("{}", self.dpc_factor_brig().bits()),
-            )
+            .field("dpc_threshold_l", &self.dpc_threshold_l())
+            .field("dpc_threshold_h", &self.dpc_threshold_h())
+            .field("dpc_factor_dark", &self.dpc_factor_dark())
+            .field("dpc_factor_brig", &self.dpc_factor_brig())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

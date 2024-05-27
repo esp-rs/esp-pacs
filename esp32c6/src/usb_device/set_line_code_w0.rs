@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SET_LINE_CODE_W0")
-            .field(
-                "dw_dte_rate",
-                &format_args!("{}", self.dw_dte_rate().bits()),
-            )
+            .field("dw_dte_rate", &self.dw_dte_rate())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SET_LINE_CODE_W0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "W0 of SET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

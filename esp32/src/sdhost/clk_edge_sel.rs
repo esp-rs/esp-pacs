@@ -89,40 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_EDGE_SEL")
-            .field(
-                "cclkin_edge_drv_sel",
-                &format_args!("{}", self.cclkin_edge_drv_sel().bits()),
-            )
-            .field(
-                "cclkin_edge_sam_sel",
-                &format_args!("{}", self.cclkin_edge_sam_sel().bits()),
-            )
-            .field(
-                "cclkin_edge_slf_sel",
-                &format_args!("{}", self.cclkin_edge_slf_sel().bits()),
-            )
-            .field(
-                "ccllkin_edge_h",
-                &format_args!("{}", self.ccllkin_edge_h().bits()),
-            )
-            .field(
-                "ccllkin_edge_l",
-                &format_args!("{}", self.ccllkin_edge_l().bits()),
-            )
-            .field(
-                "ccllkin_edge_n",
-                &format_args!("{}", self.ccllkin_edge_n().bits()),
-            )
-            .field("esdio_mode", &format_args!("{}", self.esdio_mode().bit()))
-            .field("esd_mode", &format_args!("{}", self.esd_mode().bit()))
-            .field("cclk_en", &format_args!("{}", self.cclk_en().bit()))
+            .field("cclkin_edge_drv_sel", &self.cclkin_edge_drv_sel())
+            .field("cclkin_edge_sam_sel", &self.cclkin_edge_sam_sel())
+            .field("cclkin_edge_slf_sel", &self.cclkin_edge_slf_sel())
+            .field("ccllkin_edge_h", &self.ccllkin_edge_h())
+            .field("ccllkin_edge_l", &self.ccllkin_edge_l())
+            .field("ccllkin_edge_n", &self.ccllkin_edge_n())
+            .field("esdio_mode", &self.esdio_mode())
+            .field("esd_mode", &self.esd_mode())
+            .field("cclk_en", &self.cclk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_EDGE_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

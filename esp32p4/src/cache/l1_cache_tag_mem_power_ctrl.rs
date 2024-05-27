@@ -133,71 +133,65 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_TAG_MEM_POWER_CTRL")
             .field(
                 "l1_icache0_tag_mem_force_on",
-                &format_args!("{}", self.l1_icache0_tag_mem_force_on().bit()),
+                &self.l1_icache0_tag_mem_force_on(),
             )
             .field(
                 "l1_icache0_tag_mem_force_pd",
-                &format_args!("{}", self.l1_icache0_tag_mem_force_pd().bit()),
+                &self.l1_icache0_tag_mem_force_pd(),
             )
             .field(
                 "l1_icache0_tag_mem_force_pu",
-                &format_args!("{}", self.l1_icache0_tag_mem_force_pu().bit()),
+                &self.l1_icache0_tag_mem_force_pu(),
             )
             .field(
                 "l1_icache1_tag_mem_force_on",
-                &format_args!("{}", self.l1_icache1_tag_mem_force_on().bit()),
+                &self.l1_icache1_tag_mem_force_on(),
             )
             .field(
                 "l1_icache1_tag_mem_force_pd",
-                &format_args!("{}", self.l1_icache1_tag_mem_force_pd().bit()),
+                &self.l1_icache1_tag_mem_force_pd(),
             )
             .field(
                 "l1_icache1_tag_mem_force_pu",
-                &format_args!("{}", self.l1_icache1_tag_mem_force_pu().bit()),
+                &self.l1_icache1_tag_mem_force_pu(),
             )
             .field(
                 "l1_icache2_tag_mem_force_on",
-                &format_args!("{}", self.l1_icache2_tag_mem_force_on().bit()),
+                &self.l1_icache2_tag_mem_force_on(),
             )
             .field(
                 "l1_icache2_tag_mem_force_pd",
-                &format_args!("{}", self.l1_icache2_tag_mem_force_pd().bit()),
+                &self.l1_icache2_tag_mem_force_pd(),
             )
             .field(
                 "l1_icache2_tag_mem_force_pu",
-                &format_args!("{}", self.l1_icache2_tag_mem_force_pu().bit()),
+                &self.l1_icache2_tag_mem_force_pu(),
             )
             .field(
                 "l1_icache3_tag_mem_force_on",
-                &format_args!("{}", self.l1_icache3_tag_mem_force_on().bit()),
+                &self.l1_icache3_tag_mem_force_on(),
             )
             .field(
                 "l1_icache3_tag_mem_force_pd",
-                &format_args!("{}", self.l1_icache3_tag_mem_force_pd().bit()),
+                &self.l1_icache3_tag_mem_force_pd(),
             )
             .field(
                 "l1_icache3_tag_mem_force_pu",
-                &format_args!("{}", self.l1_icache3_tag_mem_force_pu().bit()),
+                &self.l1_icache3_tag_mem_force_pu(),
             )
             .field(
                 "l1_dcache_tag_mem_force_on",
-                &format_args!("{}", self.l1_dcache_tag_mem_force_on().bit()),
+                &self.l1_dcache_tag_mem_force_on(),
             )
             .field(
                 "l1_dcache_tag_mem_force_pd",
-                &format_args!("{}", self.l1_dcache_tag_mem_force_pd().bit()),
+                &self.l1_dcache_tag_mem_force_pd(),
             )
             .field(
                 "l1_dcache_tag_mem_force_pu",
-                &format_args!("{}", self.l1_dcache_tag_mem_force_pu().bit()),
+                &self.l1_dcache_tag_mem_force_pu(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -27,22 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ERR_CODE_CAP")
-            .field(
-                "ecc_segment",
-                &format_args!("{}", self.ecc_segment().bits()),
-            )
-            .field(
-                "ecc_direction",
-                &format_args!("{}", self.ecc_direction().bit()),
-            )
-            .field("ecc_type", &format_args!("{}", self.ecc_type().bits()))
+            .field("ecc_segment", &self.ecc_segment())
+            .field("ecc_direction", &self.ecc_direction())
+            .field("ecc_type", &self.ecc_type())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ERR_CODE_CAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Error Code Capture Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`err_code_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

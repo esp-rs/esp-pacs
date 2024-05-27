@@ -33,19 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SRAM_USAGE_CONF")
-            .field("sram_usage", &format_args!("{}", self.sram_usage().bits()))
-            .field(
-                "mac_dump_alloc",
-                &format_args!("{}", self.mac_dump_alloc().bits()),
-            )
-            .field("cache_usage", &format_args!("{}", self.cache_usage().bit()))
+            .field("sram_usage", &self.sram_usage())
+            .field("mac_dump_alloc", &self.mac_dump_alloc())
+            .field("cache_usage", &self.cache_usage())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SRAM_USAGE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_BRIDGE_ARBITER_CTRL")
-            .field(
-                "alloc_wb_hold_arbiter",
-                &format_args!("{}", self.alloc_wb_hold_arbiter().bit()),
-            )
+            .field("alloc_wb_hold_arbiter", &self.alloc_wb_hold_arbiter())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_BRIDGE_ARBITER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECO_HIGH_APB")
-            .field(
-                "rnd_eco_high_apb",
-                &format_args!("{}", self.rnd_eco_high_apb().bits()),
-            )
+            .field("rnd_eco_high_apb", &self.rnd_eco_high_apb())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ECO_HIGH_APB_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

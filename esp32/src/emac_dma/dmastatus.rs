@@ -188,72 +188,27 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMASTATUS")
-            .field("trans_int", &format_args!("{}", self.trans_int().bit()))
-            .field(
-                "trans_proc_stop",
-                &format_args!("{}", self.trans_proc_stop().bit()),
-            )
-            .field(
-                "trans_buf_unavail",
-                &format_args!("{}", self.trans_buf_unavail().bit()),
-            )
-            .field(
-                "trans_jabber_to",
-                &format_args!("{}", self.trans_jabber_to().bit()),
-            )
-            .field("recv_ovflow", &format_args!("{}", self.recv_ovflow().bit()))
-            .field(
-                "trans_undflow",
-                &format_args!("{}", self.trans_undflow().bit()),
-            )
-            .field("recv_int", &format_args!("{}", self.recv_int().bit()))
-            .field(
-                "recv_buf_unavail",
-                &format_args!("{}", self.recv_buf_unavail().bit()),
-            )
-            .field(
-                "recv_proc_stop",
-                &format_args!("{}", self.recv_proc_stop().bit()),
-            )
-            .field("recv_wdt_to", &format_args!("{}", self.recv_wdt_to().bit()))
-            .field(
-                "early_trans_int",
-                &format_args!("{}", self.early_trans_int().bit()),
-            )
-            .field(
-                "fatal_bus_err_int",
-                &format_args!("{}", self.fatal_bus_err_int().bit()),
-            )
-            .field(
-                "early_recv_int",
-                &format_args!("{}", self.early_recv_int().bit()),
-            )
-            .field(
-                "abn_int_summ",
-                &format_args!("{}", self.abn_int_summ().bit()),
-            )
-            .field(
-                "norm_int_summ",
-                &format_args!("{}", self.norm_int_summ().bit()),
-            )
-            .field(
-                "recv_proc_state",
-                &format_args!("{}", self.recv_proc_state().bits()),
-            )
-            .field(
-                "trans_proc_state",
-                &format_args!("{}", self.trans_proc_state().bits()),
-            )
-            .field("error_bits", &format_args!("{}", self.error_bits().bits()))
-            .field("pmt_int", &format_args!("{}", self.pmt_int().bit()))
-            .field("ts_tri_int", &format_args!("{}", self.ts_tri_int().bit()))
+            .field("trans_int", &self.trans_int())
+            .field("trans_proc_stop", &self.trans_proc_stop())
+            .field("trans_buf_unavail", &self.trans_buf_unavail())
+            .field("trans_jabber_to", &self.trans_jabber_to())
+            .field("recv_ovflow", &self.recv_ovflow())
+            .field("trans_undflow", &self.trans_undflow())
+            .field("recv_int", &self.recv_int())
+            .field("recv_buf_unavail", &self.recv_buf_unavail())
+            .field("recv_proc_stop", &self.recv_proc_stop())
+            .field("recv_wdt_to", &self.recv_wdt_to())
+            .field("early_trans_int", &self.early_trans_int())
+            .field("fatal_bus_err_int", &self.fatal_bus_err_int())
+            .field("early_recv_int", &self.early_recv_int())
+            .field("abn_int_summ", &self.abn_int_summ())
+            .field("norm_int_summ", &self.norm_int_summ())
+            .field("recv_proc_state", &self.recv_proc_state())
+            .field("trans_proc_state", &self.trans_proc_state())
+            .field("error_bits", &self.error_bits())
+            .field("pmt_int", &self.pmt_int())
+            .field("ts_tri_int", &self.ts_tri_int())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMASTATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

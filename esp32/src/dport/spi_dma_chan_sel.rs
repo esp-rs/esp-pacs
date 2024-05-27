@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_DMA_CHAN_SEL")
-            .field(
-                "spi1_dma_chan_sel",
-                &format_args!("{}", self.spi1_dma_chan_sel().bits()),
-            )
-            .field(
-                "spi2_dma_chan_sel",
-                &format_args!("{}", self.spi2_dma_chan_sel().bits()),
-            )
-            .field(
-                "spi3_dma_chan_sel",
-                &format_args!("{}", self.spi3_dma_chan_sel().bits()),
-            )
+            .field("spi1_dma_chan_sel", &self.spi1_dma_chan_sel())
+            .field("spi2_dma_chan_sel", &self.spi2_dma_chan_sel())
+            .field("spi3_dma_chan_sel", &self.spi3_dma_chan_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_DMA_CHAN_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_FREQ1_SCAN_PARA")
-            .field(
-                "touch_freq1_dcap_lpf",
-                &format_args!("{}", self.touch_freq1_dcap_lpf().bits()),
-            )
-            .field(
-                "touch_freq1_dres_lpf",
-                &format_args!("{}", self.touch_freq1_dres_lpf().bits()),
-            )
-            .field(
-                "touch_freq1_drv_ls",
-                &format_args!("{}", self.touch_freq1_drv_ls().bits()),
-            )
-            .field(
-                "touch_freq1_drv_hs",
-                &format_args!("{}", self.touch_freq1_drv_hs().bits()),
-            )
-            .field(
-                "touch_freq1_dbias",
-                &format_args!("{}", self.touch_freq1_dbias().bits()),
-            )
+            .field("touch_freq1_dcap_lpf", &self.touch_freq1_dcap_lpf())
+            .field("touch_freq1_dres_lpf", &self.touch_freq1_dres_lpf())
+            .field("touch_freq1_drv_ls", &self.touch_freq1_drv_ls())
+            .field("touch_freq1_drv_hs", &self.touch_freq1_drv_hs())
+            .field("touch_freq1_dbias", &self.touch_freq1_dbias())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_FREQ1_SCAN_PARA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

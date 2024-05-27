@@ -80,45 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLCHOST_CONF")
-            .field(
-                "host_frc_sdio11",
-                &format_args!("{}", self.host_frc_sdio11().bits()),
-            )
-            .field(
-                "host_frc_sdio20",
-                &format_args!("{}", self.host_frc_sdio20().bits()),
-            )
-            .field(
-                "host_frc_neg_samp",
-                &format_args!("{}", self.host_frc_neg_samp().bits()),
-            )
-            .field(
-                "host_frc_pos_samp",
-                &format_args!("{}", self.host_frc_pos_samp().bits()),
-            )
-            .field(
-                "host_frc_quick_in",
-                &format_args!("{}", self.host_frc_quick_in().bits()),
-            )
-            .field(
-                "host_sdio20_int_delay",
-                &format_args!("{}", self.host_sdio20_int_delay().bit()),
-            )
-            .field(
-                "host_sdio_pad_pullup",
-                &format_args!("{}", self.host_sdio_pad_pullup().bit()),
-            )
-            .field(
-                "host_hspeed_con_en",
-                &format_args!("{}", self.host_hspeed_con_en().bit()),
-            )
+            .field("host_frc_sdio11", &self.host_frc_sdio11())
+            .field("host_frc_sdio20", &self.host_frc_sdio20())
+            .field("host_frc_neg_samp", &self.host_frc_neg_samp())
+            .field("host_frc_pos_samp", &self.host_frc_pos_samp())
+            .field("host_frc_quick_in", &self.host_frc_quick_in())
+            .field("host_sdio20_int_delay", &self.host_sdio20_int_delay())
+            .field("host_sdio_pad_pullup", &self.host_sdio_pad_pullup())
+            .field("host_hspeed_con_en", &self.host_hspeed_con_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

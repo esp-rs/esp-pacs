@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_CLK_CONFIG")
-            .field(
-                "reg_l2_cache_clk_on",
-                &format_args!("{}", self.reg_l2_cache_clk_on().bit()),
-            )
-            .field(
-                "reg_l1_d_cache_clk_on",
-                &format_args!("{}", self.reg_l1_d_cache_clk_on().bit()),
-            )
-            .field(
-                "reg_l1_i1_cache_clk_on",
-                &format_args!("{}", self.reg_l1_i1_cache_clk_on().bit()),
-            )
-            .field(
-                "reg_l1_i0_cache_clk_on",
-                &format_args!("{}", self.reg_l1_i0_cache_clk_on().bit()),
-            )
+            .field("reg_l2_cache_clk_on", &self.reg_l2_cache_clk_on())
+            .field("reg_l1_d_cache_clk_on", &self.reg_l1_d_cache_clk_on())
+            .field("reg_l1_i1_cache_clk_on", &self.reg_l1_i1_cache_clk_on())
+            .field("reg_l1_i0_cache_clk_on", &self.reg_l1_i0_cache_clk_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_CLK_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

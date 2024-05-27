@@ -33,22 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART1_CONF")
-            .field(
-                "uart1_clk_en",
-                &format_args!("{}", self.uart1_clk_en().bit()),
-            )
-            .field(
-                "uart1_rst_en",
-                &format_args!("{}", self.uart1_rst_en().bit()),
-            )
-            .field("uart1_ready", &format_args!("{}", self.uart1_ready().bit()))
+            .field("uart1_clk_en", &self.uart1_clk_en())
+            .field("uart1_rst_en", &self.uart1_rst_en())
+            .field("uart1_ready", &self.uart1_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UART1_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

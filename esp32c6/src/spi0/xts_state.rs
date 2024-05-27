@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("XTS_STATE")
-            .field(
-                "spi_xts_state",
-                &format_args!("{}", self.spi_xts_state().bits()),
-            )
+            .field("spi_xts_state", &self.spi_xts_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<XTS_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Manual Encryption physical address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xts_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ECC_ERR_BIT")
-            .field(
-                "ecc_data_err_bit",
-                &format_args!("{}", self.ecc_data_err_bit().bits()),
-            )
-            .field(
-                "ecc_chk_err_bit",
-                &format_args!("{}", self.ecc_chk_err_bit().bits()),
-            )
-            .field(
-                "ecc_byte_err",
-                &format_args!("{}", self.ecc_byte_err().bit()),
-            )
-            .field(
-                "ecc_err_cnt",
-                &format_args!("{}", self.ecc_err_cnt().bits()),
-            )
+            .field("ecc_data_err_bit", &self.ecc_data_err_bit())
+            .field("ecc_chk_err_bit", &self.ecc_chk_err_bit())
+            .field("ecc_byte_err", &self.ecc_byte_err())
+            .field("ecc_err_cnt", &self.ecc_err_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ECC_ERR_BIT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI ECC error bits register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ecc_err_bit::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

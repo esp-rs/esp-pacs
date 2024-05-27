@@ -91,47 +91,41 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_HP_USB_CLKRST_CTRL0")
             .field(
                 "lp_aonclkrst_usb_otg20_sleep_mode",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_sleep_mode().bit()),
+                &self.lp_aonclkrst_usb_otg20_sleep_mode(),
             )
             .field(
                 "lp_aonclkrst_usb_otg20_bk_sys_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg20_bk_sys_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg20_bk_sys_clk_en(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_sleep_mode",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_sleep_mode().bit()),
+                &self.lp_aonclkrst_usb_otg11_sleep_mode(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_bk_sys_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_bk_sys_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg11_bk_sys_clk_en(),
             )
             .field(
                 "lp_aonclkrst_usb_otg11_48m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_otg11_48m_clk_en().bit()),
+                &self.lp_aonclkrst_usb_otg11_48m_clk_en(),
             )
             .field(
                 "lp_aonclkrst_usb_device_48m_clk_en",
-                &format_args!("{}", self.lp_aonclkrst_usb_device_48m_clk_en().bit()),
+                &self.lp_aonclkrst_usb_device_48m_clk_en(),
             )
             .field(
                 "lp_aonclkrst_usb_48m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_48m_div_num().bits()),
+                &self.lp_aonclkrst_usb_48m_div_num(),
             )
             .field(
                 "lp_aonclkrst_usb_25m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_25m_div_num().bits()),
+                &self.lp_aonclkrst_usb_25m_div_num(),
             )
             .field(
                 "lp_aonclkrst_usb_12m_div_num",
-                &format_args!("{}", self.lp_aonclkrst_usb_12m_div_num().bits()),
+                &self.lp_aonclkrst_usb_12m_div_num(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_HP_USB_CLKRST_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

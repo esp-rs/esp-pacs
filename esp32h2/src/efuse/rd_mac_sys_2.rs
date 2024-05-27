@@ -55,32 +55,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_MAC_SYS_2")
-            .field(
-                "rxiq_version",
-                &format_args!("{}", self.rxiq_version().bits()),
-            )
-            .field("rxiq_0", &format_args!("{}", self.rxiq_0().bits()))
-            .field("rxiq_1", &format_args!("{}", self.rxiq_1().bits()))
-            .field(
-                "active_hp_dbias",
-                &format_args!("{}", self.active_hp_dbias().bits()),
-            )
-            .field(
-                "active_lp_dbias",
-                &format_args!("{}", self.active_lp_dbias().bits()),
-            )
-            .field("dslp_dbias", &format_args!("{}", self.dslp_dbias().bits()))
-            .field(
-                "dbias_vol_gap_value1",
-                &format_args!("{}", self.dbias_vol_gap_value1().bit()),
-            )
+            .field("rxiq_version", &self.rxiq_version())
+            .field("rxiq_0", &self.rxiq_0())
+            .field("rxiq_1", &self.rxiq_1())
+            .field("active_hp_dbias", &self.active_hp_dbias())
+            .field("active_lp_dbias", &self.active_lp_dbias())
+            .field("dslp_dbias", &self.dslp_dbias())
+            .field("dbias_vol_gap_value1", &self.dbias_vol_gap_value1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_MAC_SYS_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK1 data register $n.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_mac_sys_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

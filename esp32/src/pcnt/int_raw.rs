@@ -63,45 +63,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "cnt_thr_event_u0",
-                &format_args!("{}", self.cnt_thr_event_u0().bit()),
-            )
-            .field(
-                "cnt_thr_event_u1",
-                &format_args!("{}", self.cnt_thr_event_u1().bit()),
-            )
-            .field(
-                "cnt_thr_event_u2",
-                &format_args!("{}", self.cnt_thr_event_u2().bit()),
-            )
-            .field(
-                "cnt_thr_event_u3",
-                &format_args!("{}", self.cnt_thr_event_u3().bit()),
-            )
-            .field(
-                "cnt_thr_event_u4",
-                &format_args!("{}", self.cnt_thr_event_u4().bit()),
-            )
-            .field(
-                "cnt_thr_event_u5",
-                &format_args!("{}", self.cnt_thr_event_u5().bit()),
-            )
-            .field(
-                "cnt_thr_event_u6",
-                &format_args!("{}", self.cnt_thr_event_u6().bit()),
-            )
-            .field(
-                "cnt_thr_event_u7",
-                &format_args!("{}", self.cnt_thr_event_u7().bit()),
-            )
+            .field("cnt_thr_event_u0", &self.cnt_thr_event_u0())
+            .field("cnt_thr_event_u1", &self.cnt_thr_event_u1())
+            .field("cnt_thr_event_u2", &self.cnt_thr_event_u2())
+            .field("cnt_thr_event_u3", &self.cnt_thr_event_u3())
+            .field("cnt_thr_event_u4", &self.cnt_thr_event_u4())
+            .field("cnt_thr_event_u5", &self.cnt_thr_event_u5())
+            .field("cnt_thr_event_u6", &self.cnt_thr_event_u6())
+            .field("cnt_thr_event_u7", &self.cnt_thr_event_u7())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

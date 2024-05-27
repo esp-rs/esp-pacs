@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_PAD_HOLD")
-            .field(
-                "reg_lp_gpio_hold",
-                &format_args!("{}", self.reg_lp_gpio_hold().bits()),
-            )
+            .field("reg_lp_gpio_hold", &self.reg_lp_gpio_hold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_PAD_HOLD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

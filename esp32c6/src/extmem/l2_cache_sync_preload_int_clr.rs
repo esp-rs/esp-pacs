@@ -22,19 +22,10 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_SYNC_PRELOAD_INT_CLR")
             .field(
                 "l2_cache_pld_done_int_clr",
-                &format_args!("{}", self.l2_cache_pld_done_int_clr().bit()),
+                &self.l2_cache_pld_done_int_clr(),
             )
-            .field(
-                "l2_cache_pld_err_int_clr",
-                &format_args!("{}", self.l2_cache_pld_err_int_clr().bit()),
-            )
+            .field("l2_cache_pld_err_int_clr", &self.l2_cache_pld_err_int_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Sync Preload operation Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_preload_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

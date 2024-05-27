@@ -27,19 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IBI_STATUS_BUF")
-            .field(
-                "data_length",
-                &format_args!("{}", self.data_length().bits()),
-            )
-            .field("ibi_id", &format_args!("{}", self.ibi_id().bits()))
-            .field("ibi_sts", &format_args!("{}", self.ibi_sts().bit()))
+            .field("data_length", &self.data_length())
+            .field("ibi_id", &self.ibi_id())
+            .field("ibi_sts", &self.ibi_sts())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IBI_STATUS_BUF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "In-Band Interrupt Buffer Status/Data Register. When receiving an IBI, IBI_PORT is used to both: Read the IBI Status Read the IBI Data(which is raw/opaque data)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ibi_status_buf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

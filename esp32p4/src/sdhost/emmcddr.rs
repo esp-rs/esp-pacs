@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMMCDDR")
-            .field(
-                "halfstartbit",
-                &format_args!("{}", self.halfstartbit().bits()),
-            )
-            .field("hs400_mode", &format_args!("{}", self.hs400_mode().bit()))
+            .field("halfstartbit", &self.halfstartbit())
+            .field("hs400_mode", &self.hs400_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMMCDDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

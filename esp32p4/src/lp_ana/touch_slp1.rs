@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_SLP1")
-            .field(
-                "touch_slp_th2",
-                &format_args!("{}", self.touch_slp_th2().bits()),
-            )
-            .field(
-                "touch_slp_th1",
-                &format_args!("{}", self.touch_slp_th1().bits()),
-            )
+            .field("touch_slp_th2", &self.touch_slp_th2())
+            .field("touch_slp_th1", &self.touch_slp_th1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_SLP1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

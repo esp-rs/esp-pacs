@@ -79,42 +79,33 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_7")
             .field(
                 "core_0_pif_pms_constrain_world_1_spi_2",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_spi_2().bits()),
+                &self.core_0_pif_pms_constrain_world_1_spi_2(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_apb_ctrl",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_apb_ctrl().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_apb_ctrl(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_can",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_can().bits()),
+                &self.core_0_pif_pms_constrain_world_1_can(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_i2s1",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_i2s1().bits()),
+                &self.core_0_pif_pms_constrain_world_1_i2s1(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_rwbt",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_rwbt().bits()),
+                &self.core_0_pif_pms_constrain_world_1_rwbt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_wifimac",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_wifimac().bits()),
+                &self.core_0_pif_pms_constrain_world_1_wifimac(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_pwr",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_pwr().bits()),
+                &self.core_0_pif_pms_constrain_world_1_pwr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

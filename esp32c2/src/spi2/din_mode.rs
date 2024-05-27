@@ -69,25 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIN_MODE")
-            .field("din0_mode", &format_args!("{}", self.din0_mode().bits()))
-            .field("din1_mode", &format_args!("{}", self.din1_mode().bits()))
-            .field("din2_mode", &format_args!("{}", self.din2_mode().bits()))
-            .field("din3_mode", &format_args!("{}", self.din3_mode().bits()))
-            .field("din4_mode", &format_args!("{}", self.din4_mode().bits()))
-            .field("din5_mode", &format_args!("{}", self.din5_mode().bits()))
-            .field("din6_mode", &format_args!("{}", self.din6_mode().bits()))
-            .field("din7_mode", &format_args!("{}", self.din7_mode().bits()))
-            .field(
-                "timing_hclk_active",
-                &format_args!("{}", self.timing_hclk_active().bit()),
-            )
+            .field("din0_mode", &self.din0_mode())
+            .field("din1_mode", &self.din1_mode())
+            .field("din2_mode", &self.din2_mode())
+            .field("din3_mode", &self.din3_mode())
+            .field("din4_mode", &self.din4_mode())
+            .field("din5_mode", &self.din5_mode())
+            .field("din6_mode", &self.din6_mode())
+            .field("din7_mode", &self.din7_mode())
+            .field("timing_hclk_active", &self.timing_hclk_active())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIN_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI input delay mode configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

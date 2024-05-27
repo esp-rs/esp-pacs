@@ -73,43 +73,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_DCACHE_DBUG0")
-            .field(
-                "pro_slave_wdata",
-                &format_args!("{}", self.pro_slave_wdata().bit()),
-            )
-            .field(
-                "pro_cache_mmu_ia",
-                &format_args!("{}", self.pro_cache_mmu_ia().bit()),
-            )
-            .field(
-                "pro_cache_ia",
-                &format_args!("{}", self.pro_cache_ia().bits()),
-            )
-            .field(
-                "pro_cache_state",
-                &format_args!("{}", self.pro_cache_state().bits()),
-            )
-            .field(
-                "pro_wr_bak_to_read",
-                &format_args!("{}", self.pro_wr_bak_to_read().bit()),
-            )
-            .field("pro_tx_end", &format_args!("{}", self.pro_tx_end().bit()))
-            .field(
-                "pro_slave_wr",
-                &format_args!("{}", self.pro_slave_wr().bit()),
-            )
-            .field(
-                "pro_slave_wdata_v",
-                &format_args!("{}", self.pro_slave_wdata_v().bit()),
-            )
-            .field("pro_rx_end", &format_args!("{}", self.pro_rx_end().bit()))
+            .field("pro_slave_wdata", &self.pro_slave_wdata())
+            .field("pro_cache_mmu_ia", &self.pro_cache_mmu_ia())
+            .field("pro_cache_ia", &self.pro_cache_ia())
+            .field("pro_cache_state", &self.pro_cache_state())
+            .field("pro_wr_bak_to_read", &self.pro_wr_bak_to_read())
+            .field("pro_tx_end", &self.pro_tx_end())
+            .field("pro_slave_wr", &self.pro_slave_wr())
+            .field("pro_slave_wdata_v", &self.pro_slave_wdata_v())
+            .field("pro_rx_end", &self.pro_rx_end())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_DCACHE_DBUG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

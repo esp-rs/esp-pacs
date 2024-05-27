@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEMOSAIC_GRAD_RATIO")
-            .field(
-                "demosaic_grad_ratio",
-                &format_args!("{}", self.demosaic_grad_ratio().bits()),
-            )
+            .field("demosaic_grad_ratio", &self.demosaic_grad_ratio())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEMOSAIC_GRAD_RATIO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

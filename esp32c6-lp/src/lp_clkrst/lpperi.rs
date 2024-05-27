@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPPERI")
-            .field(
-                "lp_i2c_clk_sel",
-                &format_args!("{}", self.lp_i2c_clk_sel().bit()),
-            )
-            .field(
-                "lp_uart_clk_sel",
-                &format_args!("{}", self.lp_uart_clk_sel().bit()),
-            )
+            .field("lp_i2c_clk_sel", &self.lp_i2c_clk_sel())
+            .field("lp_uart_clk_sel", &self.lp_uart_clk_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LPPERI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

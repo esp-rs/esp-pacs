@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_TIMEOUT_CTRL")
-            .field(
-                "touch_timeout_num",
-                &format_args!("{}", self.touch_timeout_num().bits()),
-            )
-            .field(
-                "touch_timeout_en",
-                &format_args!("{}", self.touch_timeout_en().bit()),
-            )
+            .field("touch_timeout_num", &self.touch_timeout_num())
+            .field("touch_timeout_en", &self.touch_timeout_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_TIMEOUT_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

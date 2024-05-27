@@ -76,21 +76,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GRSTCTL")
-            .field("csftrst", &format_args!("{}", self.csftrst().bit()))
-            .field("piufssftrst", &format_args!("{}", self.piufssftrst().bit()))
-            .field("frmcntrrst", &format_args!("{}", self.frmcntrrst().bit()))
-            .field("rxfflsh", &format_args!("{}", self.rxfflsh().bit()))
-            .field("txfflsh", &format_args!("{}", self.txfflsh().bit()))
-            .field("txfnum", &format_args!("{}", self.txfnum().bits()))
-            .field("dmareq", &format_args!("{}", self.dmareq().bit()))
-            .field("ahbidle", &format_args!("{}", self.ahbidle().bit()))
+            .field("csftrst", &self.csftrst())
+            .field("piufssftrst", &self.piufssftrst())
+            .field("frmcntrrst", &self.frmcntrrst())
+            .field("rxfflsh", &self.rxfflsh())
+            .field("txfflsh", &self.txfflsh())
+            .field("txfnum", &self.txfnum())
+            .field("dmareq", &self.dmareq())
+            .field("ahbidle", &self.ahbidle())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GRSTCTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

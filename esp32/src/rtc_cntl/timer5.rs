@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER5")
-            .field(
-                "ulp_cp_subtimer_prediv",
-                &format_args!("{}", self.ulp_cp_subtimer_prediv().bits()),
-            )
-            .field(
-                "min_slp_val",
-                &format_args!("{}", self.min_slp_val().bits()),
-            )
-            .field(
-                "rtcmem_wait_timer",
-                &format_args!("{}", self.rtcmem_wait_timer().bits()),
-            )
-            .field(
-                "rtcmem_powerup_timer",
-                &format_args!("{}", self.rtcmem_powerup_timer().bits()),
-            )
+            .field("ulp_cp_subtimer_prediv", &self.ulp_cp_subtimer_prediv())
+            .field("min_slp_val", &self.min_slp_val())
+            .field("rtcmem_wait_timer", &self.rtcmem_wait_timer())
+            .field("rtcmem_powerup_timer", &self.rtcmem_powerup_timer())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMER5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

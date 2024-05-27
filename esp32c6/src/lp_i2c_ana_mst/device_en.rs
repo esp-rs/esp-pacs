@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEVICE_EN")
             .field(
                 "lp_i2c_ana_mast_i2c_device_en",
-                &format_args!("{}", self.lp_i2c_ana_mast_i2c_device_en().bits()),
+                &self.lp_i2c_ana_mast_i2c_device_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEVICE_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

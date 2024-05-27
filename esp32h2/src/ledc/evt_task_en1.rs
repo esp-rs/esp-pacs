@@ -262,123 +262,57 @@ impl core::fmt::Debug for R {
         f.debug_struct("EVT_TASK_EN1")
             .field(
                 "task_timer0_res_update_en",
-                &format_args!("{}", self.task_timer0_res_update_en().bit()),
+                &self.task_timer0_res_update_en(),
             )
             .field(
                 "task_timer1_res_update_en",
-                &format_args!("{}", self.task_timer1_res_update_en().bit()),
+                &self.task_timer1_res_update_en(),
             )
             .field(
                 "task_timer2_res_update_en",
-                &format_args!("{}", self.task_timer2_res_update_en().bit()),
+                &self.task_timer2_res_update_en(),
             )
             .field(
                 "task_timer3_res_update_en",
-                &format_args!("{}", self.task_timer3_res_update_en().bit()),
+                &self.task_timer3_res_update_en(),
             )
-            .field(
-                "task_timer0_cap_en",
-                &format_args!("{}", self.task_timer0_cap_en().bit()),
-            )
-            .field(
-                "task_timer1_cap_en",
-                &format_args!("{}", self.task_timer1_cap_en().bit()),
-            )
-            .field(
-                "task_timer2_cap_en",
-                &format_args!("{}", self.task_timer2_cap_en().bit()),
-            )
-            .field(
-                "task_timer3_cap_en",
-                &format_args!("{}", self.task_timer3_cap_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch0_en",
-                &format_args!("{}", self.task_sig_out_dis_ch0_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch1_en",
-                &format_args!("{}", self.task_sig_out_dis_ch1_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch2_en",
-                &format_args!("{}", self.task_sig_out_dis_ch2_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch3_en",
-                &format_args!("{}", self.task_sig_out_dis_ch3_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch4_en",
-                &format_args!("{}", self.task_sig_out_dis_ch4_en().bit()),
-            )
-            .field(
-                "task_sig_out_dis_ch5_en",
-                &format_args!("{}", self.task_sig_out_dis_ch5_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch0_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch0_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch1_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch1_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch2_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch2_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch3_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch3_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch4_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch4_en().bit()),
-            )
-            .field(
-                "task_ovf_cnt_rst_ch5_en",
-                &format_args!("{}", self.task_ovf_cnt_rst_ch5_en().bit()),
-            )
-            .field(
-                "task_timer0_rst_en",
-                &format_args!("{}", self.task_timer0_rst_en().bit()),
-            )
-            .field(
-                "task_timer1_rst_en",
-                &format_args!("{}", self.task_timer1_rst_en().bit()),
-            )
-            .field(
-                "task_timer2_rst_en",
-                &format_args!("{}", self.task_timer2_rst_en().bit()),
-            )
-            .field(
-                "task_timer3_rst_en",
-                &format_args!("{}", self.task_timer3_rst_en().bit()),
-            )
+            .field("task_timer0_cap_en", &self.task_timer0_cap_en())
+            .field("task_timer1_cap_en", &self.task_timer1_cap_en())
+            .field("task_timer2_cap_en", &self.task_timer2_cap_en())
+            .field("task_timer3_cap_en", &self.task_timer3_cap_en())
+            .field("task_sig_out_dis_ch0_en", &self.task_sig_out_dis_ch0_en())
+            .field("task_sig_out_dis_ch1_en", &self.task_sig_out_dis_ch1_en())
+            .field("task_sig_out_dis_ch2_en", &self.task_sig_out_dis_ch2_en())
+            .field("task_sig_out_dis_ch3_en", &self.task_sig_out_dis_ch3_en())
+            .field("task_sig_out_dis_ch4_en", &self.task_sig_out_dis_ch4_en())
+            .field("task_sig_out_dis_ch5_en", &self.task_sig_out_dis_ch5_en())
+            .field("task_ovf_cnt_rst_ch0_en", &self.task_ovf_cnt_rst_ch0_en())
+            .field("task_ovf_cnt_rst_ch1_en", &self.task_ovf_cnt_rst_ch1_en())
+            .field("task_ovf_cnt_rst_ch2_en", &self.task_ovf_cnt_rst_ch2_en())
+            .field("task_ovf_cnt_rst_ch3_en", &self.task_ovf_cnt_rst_ch3_en())
+            .field("task_ovf_cnt_rst_ch4_en", &self.task_ovf_cnt_rst_ch4_en())
+            .field("task_ovf_cnt_rst_ch5_en", &self.task_ovf_cnt_rst_ch5_en())
+            .field("task_timer0_rst_en", &self.task_timer0_rst_en())
+            .field("task_timer1_rst_en", &self.task_timer1_rst_en())
+            .field("task_timer2_rst_en", &self.task_timer2_rst_en())
+            .field("task_timer3_rst_en", &self.task_timer3_rst_en())
             .field(
                 "task_timer0_pause_resume_en",
-                &format_args!("{}", self.task_timer0_pause_resume_en().bit()),
+                &self.task_timer0_pause_resume_en(),
             )
             .field(
                 "task_timer1_pause_resume_en",
-                &format_args!("{}", self.task_timer1_pause_resume_en().bit()),
+                &self.task_timer1_pause_resume_en(),
             )
             .field(
                 "task_timer2_pause_resume_en",
-                &format_args!("{}", self.task_timer2_pause_resume_en().bit()),
+                &self.task_timer2_pause_resume_en(),
             )
             .field(
                 "task_timer3_pause_resume_en",
-                &format_args!("{}", self.task_timer3_pause_resume_en().bit()),
+                &self.task_timer3_pause_resume_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EVT_TASK_EN1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

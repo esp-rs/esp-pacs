@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLCHOST_INF_ST")
-            .field(
-                "host_sdio20_mode",
-                &format_args!("{}", self.host_sdio20_mode().bits()),
-            )
-            .field(
-                "host_sdio_neg_samp",
-                &format_args!("{}", self.host_sdio_neg_samp().bits()),
-            )
-            .field(
-                "host_sdio_quick_in",
-                &format_args!("{}", self.host_sdio_quick_in().bits()),
-            )
+            .field("host_sdio20_mode", &self.host_sdio20_mode())
+            .field("host_sdio_neg_samp", &self.host_sdio_neg_samp())
+            .field("host_sdio_quick_in", &self.host_sdio_quick_in())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_INF_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slchost_inf_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

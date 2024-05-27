@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DHT_TOTLEN_AC1")
-            .field(
-                "dht_totlen_ac1",
-                &format_args!("{}", self.dht_totlen_ac1().bits()),
-            )
+            .field("dht_totlen_ac1", &self.dht_totlen_ac1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DHT_TOTLEN_AC1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_totlen_ac1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

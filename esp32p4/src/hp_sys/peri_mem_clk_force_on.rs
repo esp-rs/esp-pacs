@@ -44,29 +44,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_MEM_CLK_FORCE_ON")
-            .field(
-                "rmt_mem_clk_force_on",
-                &format_args!("{}", self.rmt_mem_clk_force_on().bit()),
-            )
+            .field("rmt_mem_clk_force_on", &self.rmt_mem_clk_force_on())
             .field(
                 "bitscrambler_tx_mem_clk_force_on",
-                &format_args!("{}", self.bitscrambler_tx_mem_clk_force_on().bit()),
+                &self.bitscrambler_tx_mem_clk_force_on(),
             )
             .field(
                 "bitscrambler_rx_mem_clk_force_on",
-                &format_args!("{}", self.bitscrambler_rx_mem_clk_force_on().bit()),
+                &self.bitscrambler_rx_mem_clk_force_on(),
             )
-            .field(
-                "gdma_mem_clk_force_on",
-                &format_args!("{}", self.gdma_mem_clk_force_on().bit()),
-            )
+            .field("gdma_mem_clk_force_on", &self.gdma_mem_clk_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_MEM_CLK_FORCE_ON_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

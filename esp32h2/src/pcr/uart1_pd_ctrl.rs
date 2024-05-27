@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART1_PD_CTRL")
-            .field(
-                "uart1_mem_force_pu",
-                &format_args!("{}", self.uart1_mem_force_pu().bit()),
-            )
-            .field(
-                "uart1_mem_force_pd",
-                &format_args!("{}", self.uart1_mem_force_pd().bit()),
-            )
+            .field("uart1_mem_force_pu", &self.uart1_mem_force_pu())
+            .field("uart1_mem_force_pd", &self.uart1_mem_force_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UART1_PD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("SCL_TERMN_T_EXT_LOW_TIME")
             .field(
                 "reg_i3c_mst_termn_t_ext_low_time",
-                &format_args!("{}", self.reg_i3c_mst_termn_t_ext_low_time().bits()),
+                &self.reg_i3c_mst_termn_t_ext_low_time(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_TERMN_T_EXT_LOW_TIME_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

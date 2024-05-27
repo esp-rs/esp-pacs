@@ -121,35 +121,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER")
-            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
-            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
-            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
-            .field("fwrite_dio", &format_args!("{}", self.fwrite_dio().bit()))
-            .field("fwrite_qio", &format_args!("{}", self.fwrite_qio().bit()))
-            .field(
-                "usr_miso_highpart",
-                &format_args!("{}", self.usr_miso_highpart().bit()),
-            )
-            .field(
-                "usr_mosi_highpart",
-                &format_args!("{}", self.usr_mosi_highpart().bit()),
-            )
-            .field(
-                "usr_dummy_idle",
-                &format_args!("{}", self.usr_dummy_idle().bit()),
-            )
-            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
-            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
-            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
-            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
-            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .field("ck_out_edge", &self.ck_out_edge())
+            .field("fwrite_dual", &self.fwrite_dual())
+            .field("fwrite_quad", &self.fwrite_quad())
+            .field("fwrite_dio", &self.fwrite_dio())
+            .field("fwrite_qio", &self.fwrite_qio())
+            .field("usr_miso_highpart", &self.usr_miso_highpart())
+            .field("usr_mosi_highpart", &self.usr_mosi_highpart())
+            .field("usr_dummy_idle", &self.usr_dummy_idle())
+            .field("usr_mosi", &self.usr_mosi())
+            .field("usr_miso", &self.usr_miso())
+            .field("usr_dummy", &self.usr_dummy())
+            .field("usr_addr", &self.usr_addr())
+            .field("usr_command", &self.usr_command())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

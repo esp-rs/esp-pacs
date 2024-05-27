@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER3")
-            .field(
-                "wifi_wait_timer",
-                &format_args!("{}", self.wifi_wait_timer().bits()),
-            )
-            .field(
-                "wifi_powerup_timer",
-                &format_args!("{}", self.wifi_powerup_timer().bits()),
-            )
-            .field(
-                "bt_wait_timer",
-                &format_args!("{}", self.bt_wait_timer().bits()),
-            )
-            .field(
-                "bt_powerup_timer",
-                &format_args!("{}", self.bt_powerup_timer().bits()),
-            )
+            .field("wifi_wait_timer", &self.wifi_wait_timer())
+            .field("wifi_powerup_timer", &self.wifi_powerup_timer())
+            .field("bt_wait_timer", &self.bt_wait_timer())
+            .field("bt_powerup_timer", &self.bt_powerup_timer())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMER3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

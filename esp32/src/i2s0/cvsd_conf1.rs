@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CVSD_CONF1")
-            .field(
-                "cvsd_sigma_max",
-                &format_args!("{}", self.cvsd_sigma_max().bits()),
-            )
-            .field(
-                "cvsd_sigma_min",
-                &format_args!("{}", self.cvsd_sigma_min().bits()),
-            )
+            .field("cvsd_sigma_max", &self.cvsd_sigma_max())
+            .field("cvsd_sigma_min", &self.cvsd_sigma_min())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CVSD_CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

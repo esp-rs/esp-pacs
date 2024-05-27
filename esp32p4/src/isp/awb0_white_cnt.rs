@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AWB0_WHITE_CNT")
-            .field(
-                "awb0_white_cnt",
-                &format_args!("{}", self.awb0_white_cnt().bits()),
-            )
+            .field("awb0_white_cnt", &self.awb0_white_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AWB0_WHITE_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "result of awb white point number\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`awb0_white_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

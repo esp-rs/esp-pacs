@@ -134,69 +134,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK1")
-            .field(
-                "mask_to_hs_tx",
-                &format_args!("{}", self.mask_to_hs_tx().bit()),
-            )
-            .field(
-                "mask_to_lp_rx",
-                &format_args!("{}", self.mask_to_lp_rx().bit()),
-            )
-            .field(
-                "mask_ecc_single_err",
-                &format_args!("{}", self.mask_ecc_single_err().bit()),
-            )
-            .field(
-                "mask_ecc_milti_err",
-                &format_args!("{}", self.mask_ecc_milti_err().bit()),
-            )
-            .field(
-                "mask_crc_err",
-                &format_args!("{}", self.mask_crc_err().bit()),
-            )
-            .field(
-                "mask_pkt_size_err",
-                &format_args!("{}", self.mask_pkt_size_err().bit()),
-            )
-            .field(
-                "mask_eopt_err",
-                &format_args!("{}", self.mask_eopt_err().bit()),
-            )
-            .field(
-                "mask_dpi_pld_wr_err",
-                &format_args!("{}", self.mask_dpi_pld_wr_err().bit()),
-            )
-            .field(
-                "mask_gen_cmd_wr_err",
-                &format_args!("{}", self.mask_gen_cmd_wr_err().bit()),
-            )
-            .field(
-                "mask_gen_pld_wr_err",
-                &format_args!("{}", self.mask_gen_pld_wr_err().bit()),
-            )
-            .field(
-                "mask_gen_pld_send_err",
-                &format_args!("{}", self.mask_gen_pld_send_err().bit()),
-            )
-            .field(
-                "mask_gen_pld_rd_err",
-                &format_args!("{}", self.mask_gen_pld_rd_err().bit()),
-            )
-            .field(
-                "mask_gen_pld_recev_err",
-                &format_args!("{}", self.mask_gen_pld_recev_err().bit()),
-            )
-            .field(
-                "mask_dpi_buff_pld_under",
-                &format_args!("{}", self.mask_dpi_buff_pld_under().bit()),
-            )
+            .field("mask_to_hs_tx", &self.mask_to_hs_tx())
+            .field("mask_to_lp_rx", &self.mask_to_lp_rx())
+            .field("mask_ecc_single_err", &self.mask_ecc_single_err())
+            .field("mask_ecc_milti_err", &self.mask_ecc_milti_err())
+            .field("mask_crc_err", &self.mask_crc_err())
+            .field("mask_pkt_size_err", &self.mask_pkt_size_err())
+            .field("mask_eopt_err", &self.mask_eopt_err())
+            .field("mask_dpi_pld_wr_err", &self.mask_dpi_pld_wr_err())
+            .field("mask_gen_cmd_wr_err", &self.mask_gen_cmd_wr_err())
+            .field("mask_gen_pld_wr_err", &self.mask_gen_pld_wr_err())
+            .field("mask_gen_pld_send_err", &self.mask_gen_pld_send_err())
+            .field("mask_gen_pld_rd_err", &self.mask_gen_pld_rd_err())
+            .field("mask_gen_pld_recev_err", &self.mask_gen_pld_recev_err())
+            .field("mask_dpi_buff_pld_under", &self.mask_dpi_buff_pld_under())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_MSK1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

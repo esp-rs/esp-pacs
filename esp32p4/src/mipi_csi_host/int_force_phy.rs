@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_FORCE_PHY")
-            .field(
-                "force_phy_errsoths_0",
-                &format_args!("{}", self.force_phy_errsoths_0().bit()),
-            )
-            .field(
-                "force_phy_errsoths_1",
-                &format_args!("{}", self.force_phy_errsoths_1().bit()),
-            )
-            .field(
-                "force_phy_erresc_0",
-                &format_args!("{}", self.force_phy_erresc_0().bit()),
-            )
-            .field(
-                "force_phy_erresc_1",
-                &format_args!("{}", self.force_phy_erresc_1().bit()),
-            )
+            .field("force_phy_errsoths_0", &self.force_phy_errsoths_0())
+            .field("force_phy_errsoths_1", &self.force_phy_errsoths_1())
+            .field("force_phy_erresc_0", &self.force_phy_erresc_0())
+            .field("force_phy_erresc_1", &self.force_phy_erresc_1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_FORCE_PHY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

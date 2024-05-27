@@ -55,24 +55,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PIN4")
-            .field(
-                "sync_bypass",
-                &format_args!("{}", self.sync_bypass().bits()),
-            )
-            .field("pad_driver", &format_args!("{}", self.pad_driver().bit()))
-            .field("int_type", &format_args!("{}", self.int_type().bits()))
-            .field(
-                "wakeup_enable",
-                &format_args!("{}", self.wakeup_enable().bit()),
-            )
-            .field("filter_en", &format_args!("{}", self.filter_en().bit()))
+            .field("sync_bypass", &self.sync_bypass())
+            .field("pad_driver", &self.pad_driver())
+            .field("int_type", &self.int_type())
+            .field("wakeup_enable", &self.wakeup_enable())
+            .field("filter_en", &self.filter_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PIN4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -53,18 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field("duty_scale", &format_args!("{}", self.duty_scale().bits()))
-            .field("duty_cycle", &format_args!("{}", self.duty_cycle().bits()))
-            .field("duty_num", &format_args!("{}", self.duty_num().bits()))
-            .field("duty_inc", &format_args!("{}", self.duty_inc().bit()))
-            .field("duty_start", &format_args!("{}", self.duty_start().bit()))
+            .field("duty_scale", &self.duty_scale())
+            .field("duty_cycle", &self.duty_cycle())
+            .field("duty_num", &self.duty_num())
+            .field("duty_inc", &self.duty_inc())
+            .field("duty_start", &self.duty_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

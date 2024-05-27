@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_SHADOW_CTRL")
-            .field(
-                "vid_shadow_en",
-                &format_args!("{}", self.vid_shadow_en().bit()),
-            )
-            .field(
-                "vid_shadow_req",
-                &format_args!("{}", self.vid_shadow_req().bit()),
-            )
-            .field(
-                "vid_shadow_pin_req",
-                &format_args!("{}", self.vid_shadow_pin_req().bit()),
-            )
+            .field("vid_shadow_en", &self.vid_shadow_en())
+            .field("vid_shadow_req", &self.vid_shadow_req())
+            .field("vid_shadow_pin_req", &self.vid_shadow_pin_req())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VID_SHADOW_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

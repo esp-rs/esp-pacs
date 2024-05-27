@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDIO_SLAVE_CONF")
-            .field(
-                "sdio_slave_clk_en",
-                &format_args!("{}", self.sdio_slave_clk_en().bit()),
-            )
-            .field(
-                "sdio_slave_rst_en",
-                &format_args!("{}", self.sdio_slave_rst_en().bit()),
-            )
+            .field("sdio_slave_clk_en", &self.sdio_slave_clk_en())
+            .field("sdio_slave_rst_en", &self.sdio_slave_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDIO_SLAVE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

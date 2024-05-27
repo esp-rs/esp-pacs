@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_BCNT")
-            .field(
-                "out_cmdfifo_outfifo_bcnt",
-                &format_args!("{}", self.out_cmdfifo_outfifo_bcnt().bits()),
-            )
+            .field("out_cmdfifo_outfifo_bcnt", &self.out_cmdfifo_outfifo_bcnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_BCNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TX CHx fifo byte cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_bcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

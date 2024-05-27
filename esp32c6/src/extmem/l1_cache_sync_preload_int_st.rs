@@ -92,59 +92,41 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_SYNC_PRELOAD_INT_ST")
             .field(
                 "l1_icache0_pld_done_int_st",
-                &format_args!("{}", self.l1_icache0_pld_done_int_st().bit()),
+                &self.l1_icache0_pld_done_int_st(),
             )
             .field(
                 "l1_icache1_pld_done_int_st",
-                &format_args!("{}", self.l1_icache1_pld_done_int_st().bit()),
+                &self.l1_icache1_pld_done_int_st(),
             )
             .field(
                 "l1_icache2_pld_done_int_st",
-                &format_args!("{}", self.l1_icache2_pld_done_int_st().bit()),
+                &self.l1_icache2_pld_done_int_st(),
             )
             .field(
                 "l1_icache3_pld_done_int_st",
-                &format_args!("{}", self.l1_icache3_pld_done_int_st().bit()),
+                &self.l1_icache3_pld_done_int_st(),
             )
-            .field(
-                "l1_cache_pld_done_int_st",
-                &format_args!("{}", self.l1_cache_pld_done_int_st().bit()),
-            )
-            .field(
-                "cache_sync_done_int_st",
-                &format_args!("{}", self.cache_sync_done_int_st().bit()),
-            )
+            .field("l1_cache_pld_done_int_st", &self.l1_cache_pld_done_int_st())
+            .field("cache_sync_done_int_st", &self.cache_sync_done_int_st())
             .field(
                 "l1_icache0_pld_err_int_st",
-                &format_args!("{}", self.l1_icache0_pld_err_int_st().bit()),
+                &self.l1_icache0_pld_err_int_st(),
             )
             .field(
                 "l1_icache1_pld_err_int_st",
-                &format_args!("{}", self.l1_icache1_pld_err_int_st().bit()),
+                &self.l1_icache1_pld_err_int_st(),
             )
             .field(
                 "l1_icache2_pld_err_int_st",
-                &format_args!("{}", self.l1_icache2_pld_err_int_st().bit()),
+                &self.l1_icache2_pld_err_int_st(),
             )
             .field(
                 "l1_icache3_pld_err_int_st",
-                &format_args!("{}", self.l1_icache3_pld_err_int_st().bit()),
+                &self.l1_icache3_pld_err_int_st(),
             )
-            .field(
-                "l1_cache_pld_err_int_st",
-                &format_args!("{}", self.l1_cache_pld_err_int_st().bit()),
-            )
-            .field(
-                "cache_sync_err_int_st",
-                &format_args!("{}", self.cache_sync_err_int_st().bit()),
-            )
+            .field("l1_cache_pld_err_int_st", &self.l1_cache_pld_err_int_st())
+            .field("cache_sync_err_int_st", &self.cache_sync_err_int_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_SYNC_PRELOAD_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-Cache Access Fail Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_sync_preload_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

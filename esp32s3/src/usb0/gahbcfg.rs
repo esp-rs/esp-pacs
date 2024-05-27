@@ -89,28 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GAHBCFG")
-            .field("glbllntrmsk", &format_args!("{}", self.glbllntrmsk().bit()))
-            .field("hbstlen", &format_args!("{}", self.hbstlen().bits()))
-            .field("dmaen", &format_args!("{}", self.dmaen().bit()))
-            .field("nptxfemplvl", &format_args!("{}", self.nptxfemplvl().bit()))
-            .field("ptxfemplvl", &format_args!("{}", self.ptxfemplvl().bit()))
-            .field("remmemsupp", &format_args!("{}", self.remmemsupp().bit()))
-            .field(
-                "notialldmawrit",
-                &format_args!("{}", self.notialldmawrit().bit()),
-            )
-            .field("ahbsingle", &format_args!("{}", self.ahbsingle().bit()))
-            .field(
-                "invdescendianess",
-                &format_args!("{}", self.invdescendianess().bit()),
-            )
+            .field("glbllntrmsk", &self.glbllntrmsk())
+            .field("hbstlen", &self.hbstlen())
+            .field("dmaen", &self.dmaen())
+            .field("nptxfemplvl", &self.nptxfemplvl())
+            .field("ptxfemplvl", &self.ptxfemplvl())
+            .field("remmemsupp", &self.remmemsupp())
+            .field("notialldmawrit", &self.notialldmawrit())
+            .field("ahbsingle", &self.ahbsingle())
+            .field("invdescendianess", &self.invdescendianess())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GAHBCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

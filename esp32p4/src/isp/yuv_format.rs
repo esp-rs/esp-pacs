@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("YUV_FORMAT")
-            .field("yuv_mode", &format_args!("{}", self.yuv_mode().bit()))
-            .field("yuv_range", &format_args!("{}", self.yuv_range().bit()))
+            .field("yuv_mode", &self.yuv_mode())
+            .field("yuv_range", &self.yuv_range())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<YUV_FORMAT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

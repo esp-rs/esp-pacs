@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_MMU_POWER_CTRL")
-            .field(
-                "cache_mmu_mem_force_on",
-                &format_args!("{}", self.cache_mmu_mem_force_on().bit()),
-            )
-            .field(
-                "cache_mmu_mem_force_pd",
-                &format_args!("{}", self.cache_mmu_mem_force_pd().bit()),
-            )
-            .field(
-                "cache_mmu_mem_force_pu",
-                &format_args!("{}", self.cache_mmu_mem_force_pu().bit()),
-            )
+            .field("cache_mmu_mem_force_on", &self.cache_mmu_mem_force_on())
+            .field("cache_mmu_mem_force_pd", &self.cache_mmu_mem_force_pd())
+            .field("cache_mmu_mem_force_pu", &self.cache_mmu_mem_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_MMU_POWER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

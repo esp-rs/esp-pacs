@@ -182,134 +182,77 @@ impl core::fmt::Debug for R {
         f.debug_struct("COMMONREG_INTSIGNAL_ENABLE0")
             .field(
                 "enable_slvif_commonreg_dec_err_intsignal",
-                &format_args!("{}", self.enable_slvif_commonreg_dec_err_intsignal().bit()),
+                &self.enable_slvif_commonreg_dec_err_intsignal(),
             )
             .field(
                 "enable_slvif_commonreg_wr2ro_err_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_wr2ro_err_intsignal().bit()
-                ),
+                &self.enable_slvif_commonreg_wr2ro_err_intsignal(),
             )
             .field(
                 "enable_slvif_commonreg_rd2wo_err_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_rd2wo_err_intsignal().bit()
-                ),
+                &self.enable_slvif_commonreg_rd2wo_err_intsignal(),
             )
             .field(
                 "enable_slvif_commonreg_wronhold_err_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_wronhold_err_intsignal().bit()
-                ),
+                &self.enable_slvif_commonreg_wronhold_err_intsignal(),
             )
             .field(
                 "enable_slvif_commonreg_wrparity_err_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_commonreg_wrparity_err_intsignal().bit()
-                ),
+                &self.enable_slvif_commonreg_wrparity_err_intsignal(),
             )
             .field(
                 "enable_slvif_undefinedreg_dec_err_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_slvif_undefinedreg_dec_err_intsignal().bit()
-                ),
+                &self.enable_slvif_undefinedreg_dec_err_intsignal(),
             )
             .field(
                 "enable_mxif1_rch0_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch0_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif1_rch0_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif1_rch0_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch0_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif1_rch0_eccprot_uncorrerr_intsignal(),
             )
             .field(
                 "enable_mxif1_rch1_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch1_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif1_rch1_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif1_rch1_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_rch1_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif1_rch1_eccprot_uncorrerr_intsignal(),
             )
             .field(
                 "enable_mxif1_bch_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_bch_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif1_bch_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif1_bch_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif1_bch_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif1_bch_eccprot_uncorrerr_intsignal(),
             )
             .field(
                 "enable_mxif2_rch0_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch0_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif2_rch0_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif2_rch0_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch0_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif2_rch0_eccprot_uncorrerr_intsignal(),
             )
             .field(
                 "enable_mxif2_rch1_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch1_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif2_rch1_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif2_rch1_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_rch1_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif2_rch1_eccprot_uncorrerr_intsignal(),
             )
             .field(
                 "enable_mxif2_bch_eccprot_correrr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_bch_eccprot_correrr_intsignal().bit()
-                ),
+                &self.enable_mxif2_bch_eccprot_correrr_intsignal(),
             )
             .field(
                 "enable_mxif2_bch_eccprot_uncorrerr_intsignal",
-                &format_args!(
-                    "{}",
-                    self.enable_mxif2_bch_eccprot_uncorrerr_intsignal().bit()
-                ),
+                &self.enable_mxif2_bch_eccprot_uncorrerr_intsignal(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

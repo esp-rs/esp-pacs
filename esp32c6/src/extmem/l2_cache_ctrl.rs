@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_CTRL")
-            .field(
-                "l2_cache_shut_dma",
-                &format_args!("{}", self.l2_cache_shut_dma().bit()),
-            )
-            .field(
-                "l2_cache_undef_op",
-                &format_args!("{}", self.l2_cache_undef_op().bits()),
-            )
+            .field("l2_cache_shut_dma", &self.l2_cache_shut_dma())
+            .field("l2_cache_undef_op", &self.l2_cache_undef_op())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L2 Cache(L2-Cache) control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

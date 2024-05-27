@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_ACK_TIMEOUT_CNT")
-            .field(
-                "rx_ack_timeout_cnt",
-                &format_args!("{}", self.rx_ack_timeout_cnt().bits()),
-            )
+            .field("rx_ack_timeout_cnt", &self.rx_ack_timeout_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_ACK_TIMEOUT_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

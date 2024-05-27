@@ -22,19 +22,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_ICACHE1_PRELOCK_SCT_SIZE")
             .field(
                 "l1_icache1_prelock_sct0_size",
-                &format_args!("{}", self.l1_icache1_prelock_sct0_size().bits()),
+                &self.l1_icache1_prelock_sct0_size(),
             )
             .field(
                 "l1_icache1_prelock_sct1_size",
-                &format_args!("{}", self.l1_icache1_prelock_sct1_size().bits()),
+                &self.l1_icache1_prelock_sct1_size(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE1_PRELOCK_SCT_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1 instruction Cache 1 prelock section size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache1_prelock_sct_size::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

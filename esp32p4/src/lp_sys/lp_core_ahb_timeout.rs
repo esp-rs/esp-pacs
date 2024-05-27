@@ -44,23 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CORE_AHB_TIMEOUT")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field("thres", &format_args!("{}", self.thres().bits()))
-            .field(
-                "lp2hp_ahb_timeout_en",
-                &format_args!("{}", self.lp2hp_ahb_timeout_en().bit()),
-            )
-            .field(
-                "lp2hp_ahb_timeout_thres",
-                &format_args!("{}", self.lp2hp_ahb_timeout_thres().bits()),
-            )
+            .field("en", &self.en())
+            .field("thres", &self.thres())
+            .field("lp2hp_ahb_timeout_en", &self.lp2hp_ahb_timeout_en())
+            .field("lp2hp_ahb_timeout_thres", &self.lp2hp_ahb_timeout_thres())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CORE_AHB_TIMEOUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

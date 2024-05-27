@@ -31,15 +31,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_DIG_POWER")
             .field(
                 "hp_modem_dcdc_switch_pd_en",
-                &format_args!("{}", self.hp_modem_dcdc_switch_pd_en().bit()),
+                &self.hp_modem_dcdc_switch_pd_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

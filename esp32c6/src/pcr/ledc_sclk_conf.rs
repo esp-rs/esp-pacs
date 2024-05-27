@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LEDC_SCLK_CONF")
-            .field(
-                "ledc_sclk_sel",
-                &format_args!("{}", self.ledc_sclk_sel().bits()),
-            )
-            .field(
-                "ledc_sclk_en",
-                &format_args!("{}", self.ledc_sclk_en().bit()),
-            )
+            .field("ledc_sclk_sel", &self.ledc_sclk_sel())
+            .field("ledc_sclk_en", &self.ledc_sclk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LEDC_SCLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

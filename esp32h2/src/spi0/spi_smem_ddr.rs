@@ -118,62 +118,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_DDR")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field(
-                "spi_smem_var_dummy",
-                &format_args!("{}", self.spi_smem_var_dummy().bit()),
-            )
-            .field("rdat_swp", &format_args!("{}", self.rdat_swp().bit()))
-            .field("wdat_swp", &format_args!("{}", self.wdat_swp().bit()))
-            .field("cmd_dis", &format_args!("{}", self.cmd_dis().bit()))
-            .field(
-                "spi_smem_outminbytelen",
-                &format_args!("{}", self.spi_smem_outminbytelen().bits()),
-            )
-            .field(
-                "spi_smem_tx_ddr_msk_en",
-                &format_args!("{}", self.spi_smem_tx_ddr_msk_en().bit()),
-            )
-            .field(
-                "spi_smem_rx_ddr_msk_en",
-                &format_args!("{}", self.spi_smem_rx_ddr_msk_en().bit()),
-            )
-            .field(
-                "spi_smem_usr_ddr_dqs_thd",
-                &format_args!("{}", self.spi_smem_usr_ddr_dqs_thd().bits()),
-            )
-            .field("dqs_loop", &format_args!("{}", self.dqs_loop().bit()))
-            .field(
-                "spi_smem_clk_diff_en",
-                &format_args!("{}", self.spi_smem_clk_diff_en().bit()),
-            )
-            .field(
-                "spi_smem_dqs_ca_in",
-                &format_args!("{}", self.spi_smem_dqs_ca_in().bit()),
-            )
+            .field("en", &self.en())
+            .field("spi_smem_var_dummy", &self.spi_smem_var_dummy())
+            .field("rdat_swp", &self.rdat_swp())
+            .field("wdat_swp", &self.wdat_swp())
+            .field("cmd_dis", &self.cmd_dis())
+            .field("spi_smem_outminbytelen", &self.spi_smem_outminbytelen())
+            .field("spi_smem_tx_ddr_msk_en", &self.spi_smem_tx_ddr_msk_en())
+            .field("spi_smem_rx_ddr_msk_en", &self.spi_smem_rx_ddr_msk_en())
+            .field("spi_smem_usr_ddr_dqs_thd", &self.spi_smem_usr_ddr_dqs_thd())
+            .field("dqs_loop", &self.dqs_loop())
+            .field("spi_smem_clk_diff_en", &self.spi_smem_clk_diff_en())
+            .field("spi_smem_dqs_ca_in", &self.spi_smem_dqs_ca_in())
             .field(
                 "spi_smem_hyperbus_dummy_2x",
-                &format_args!("{}", self.spi_smem_hyperbus_dummy_2x().bit()),
+                &self.spi_smem_hyperbus_dummy_2x(),
             )
-            .field(
-                "spi_smem_clk_diff_inv",
-                &format_args!("{}", self.spi_smem_clk_diff_inv().bit()),
-            )
-            .field(
-                "spi_smem_octa_ram_addr",
-                &format_args!("{}", self.spi_smem_octa_ram_addr().bit()),
-            )
-            .field(
-                "spi_smem_hyperbus_ca",
-                &format_args!("{}", self.spi_smem_hyperbus_ca().bit()),
-            )
+            .field("spi_smem_clk_diff_inv", &self.spi_smem_clk_diff_inv())
+            .field("spi_smem_octa_ram_addr", &self.spi_smem_octa_ram_addr())
+            .field("spi_smem_hyperbus_ca", &self.spi_smem_hyperbus_ca())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_DDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI0 external RAM DDR mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_0_AREA_DRAM0_0_MAX")
-            .field(
-                "core_0_area_dram0_0_max",
-                &format_args!("{}", self.core_0_area_dram0_0_max().bits()),
-            )
+            .field("core_0_area_dram0_0_max", &self.core_0_area_dram0_0_max())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_AREA_DRAM0_0_MAX_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

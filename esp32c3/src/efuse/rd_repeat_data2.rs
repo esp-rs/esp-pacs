@@ -69,46 +69,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA2")
-            .field(
-                "key_purpose_2",
-                &format_args!("{}", self.key_purpose_2().bits()),
-            )
-            .field(
-                "key_purpose_3",
-                &format_args!("{}", self.key_purpose_3().bits()),
-            )
-            .field(
-                "key_purpose_4",
-                &format_args!("{}", self.key_purpose_4().bits()),
-            )
-            .field(
-                "key_purpose_5",
-                &format_args!("{}", self.key_purpose_5().bits()),
-            )
-            .field(
-                "rpt4_reserved3",
-                &format_args!("{}", self.rpt4_reserved3().bits()),
-            )
-            .field(
-                "secure_boot_en",
-                &format_args!("{}", self.secure_boot_en().bit()),
-            )
+            .field("key_purpose_2", &self.key_purpose_2())
+            .field("key_purpose_3", &self.key_purpose_3())
+            .field("key_purpose_4", &self.key_purpose_4())
+            .field("key_purpose_5", &self.key_purpose_5())
+            .field("rpt4_reserved3", &self.rpt4_reserved3())
+            .field("secure_boot_en", &self.secure_boot_en())
             .field(
                 "secure_boot_aggressive_revoke",
-                &format_args!("{}", self.secure_boot_aggressive_revoke().bit()),
+                &self.secure_boot_aggressive_revoke(),
             )
-            .field(
-                "rpt4_reserved0",
-                &format_args!("{}", self.rpt4_reserved0().bits()),
-            )
-            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
+            .field("rpt4_reserved0", &self.rpt4_reserved0())
+            .field("flash_tpuw", &self.flash_tpuw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK0 data register 3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

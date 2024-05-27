@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SDM_INV_PHASE_CONF")
-            .field(
-                "clk_sdm_inv_phase_ena",
-                &format_args!("{}", self.clk_sdm_inv_phase_ena().bit()),
-            )
-            .field(
-                "clk_sdm_inv_phase_sel",
-                &format_args!("{}", self.clk_sdm_inv_phase_sel().bits()),
-            )
+            .field("clk_sdm_inv_phase_ena", &self.clk_sdm_inv_phase_ena())
+            .field("clk_sdm_inv_phase_sel", &self.clk_sdm_inv_phase_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SDM_INV_PHASE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

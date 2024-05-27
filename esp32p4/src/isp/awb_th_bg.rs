@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AWB_TH_BG")
-            .field("awb_min_bg", &format_args!("{}", self.awb_min_bg().bits()))
-            .field("awb_max_bg", &format_args!("{}", self.awb_max_bg().bits()))
+            .field("awb_min_bg", &self.awb_min_bg())
+            .field("awb_max_bg", &self.awb_max_bg())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AWB_TH_BG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

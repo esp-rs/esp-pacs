@@ -48,37 +48,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_TIMEOUT_INT_ST")
-            .field(
-                "core0_ahb_timeout_int_st",
-                &format_args!("{}", self.core0_ahb_timeout_int_st().bit()),
-            )
-            .field(
-                "core1_ahb_timeout_int_st",
-                &format_args!("{}", self.core1_ahb_timeout_int_st().bit()),
-            )
+            .field("core0_ahb_timeout_int_st", &self.core0_ahb_timeout_int_st())
+            .field("core1_ahb_timeout_int_st", &self.core1_ahb_timeout_int_st())
             .field(
                 "core0_ibus_timeout_int_st",
-                &format_args!("{}", self.core0_ibus_timeout_int_st().bit()),
+                &self.core0_ibus_timeout_int_st(),
             )
             .field(
                 "core1_ibus_timeout_int_st",
-                &format_args!("{}", self.core1_ibus_timeout_int_st().bit()),
+                &self.core1_ibus_timeout_int_st(),
             )
             .field(
                 "core0_dbus_timeout_int_st",
-                &format_args!("{}", self.core0_dbus_timeout_int_st().bit()),
+                &self.core0_dbus_timeout_int_st(),
             )
             .field(
                 "core1_dbus_timeout_int_st",
-                &format_args!("{}", self.core1_dbus_timeout_int_st().bit()),
+                &self.core1_dbus_timeout_int_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_TIMEOUT_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "masked interrupt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_timeout_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

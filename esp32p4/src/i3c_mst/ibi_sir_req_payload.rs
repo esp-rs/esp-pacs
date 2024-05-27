@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IBI_SIR_REQ_PAYLOAD")
-            .field(
-                "reg_sir_req_payload",
-                &format_args!("{}", self.reg_sir_req_payload().bits()),
-            )
+            .field("reg_sir_req_payload", &self.reg_sir_req_payload())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IBI_SIR_REQ_PAYLOAD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

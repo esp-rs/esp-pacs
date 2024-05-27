@@ -47,33 +47,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FIFO_ST")
-            .field(
-                "rxfifo_start_addr",
-                &format_args!("{}", self.rxfifo_start_addr().bits()),
-            )
-            .field(
-                "rxfifo_end_addr",
-                &format_args!("{}", self.rxfifo_end_addr().bits()),
-            )
-            .field(
-                "txfifo_start_addr",
-                &format_args!("{}", self.txfifo_start_addr().bits()),
-            )
-            .field(
-                "txfifo_end_addr",
-                &format_args!("{}", self.txfifo_end_addr().bits()),
-            )
-            .field(
-                "slave_rw_point",
-                &format_args!("{}", self.slave_rw_point().bits()),
-            )
+            .field("rxfifo_start_addr", &self.rxfifo_start_addr())
+            .field("rxfifo_end_addr", &self.rxfifo_end_addr())
+            .field("txfifo_start_addr", &self.txfifo_start_addr())
+            .field("txfifo_end_addr", &self.txfifo_end_addr())
+            .field("slave_rw_point", &self.slave_rw_point())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FIFO_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

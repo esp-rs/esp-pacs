@@ -48,19 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U_STATUS")
-            .field("zero_mode", &format_args!("{}", self.zero_mode().bits()))
-            .field("thres1", &format_args!("{}", self.thres1().bit()))
-            .field("thres0", &format_args!("{}", self.thres0().bit()))
-            .field("l_lim", &format_args!("{}", self.l_lim().bit()))
-            .field("h_lim", &format_args!("{}", self.h_lim().bit()))
-            .field("zero", &format_args!("{}", self.zero().bit()))
+            .field("zero_mode", &self.zero_mode())
+            .field("thres1", &self.thres1())
+            .field("thres0", &self.thres0())
+            .field("l_lim", &self.l_lim())
+            .field("h_lim", &self.h_lim())
+            .field("zero", &self.zero())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<U_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PNCT UNIT%s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

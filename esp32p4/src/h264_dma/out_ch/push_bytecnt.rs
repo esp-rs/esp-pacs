@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PUSH_BYTECNT")
-            .field(
-                "out_cmdfifo_push_bytecnt",
-                &format_args!("{}", self.out_cmdfifo_push_bytecnt().bits()),
-            )
+            .field("out_cmdfifo_push_bytecnt", &self.out_cmdfifo_push_bytecnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PUSH_BYTECNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "TX CHx push byte cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`push_bytecnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

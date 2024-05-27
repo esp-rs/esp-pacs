@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COEX_LP_CLK_CONF")
-            .field(
-                "clk_coex_lp_sel_osc_slow",
-                &format_args!("{}", self.clk_coex_lp_sel_osc_slow().bit()),
-            )
-            .field(
-                "clk_coex_lp_sel_osc_fast",
-                &format_args!("{}", self.clk_coex_lp_sel_osc_fast().bit()),
-            )
-            .field(
-                "clk_coex_lp_sel_xtal",
-                &format_args!("{}", self.clk_coex_lp_sel_xtal().bit()),
-            )
-            .field(
-                "clk_coex_lp_sel_xtal32k",
-                &format_args!("{}", self.clk_coex_lp_sel_xtal32k().bit()),
-            )
-            .field(
-                "clk_coex_lp_div_num",
-                &format_args!("{}", self.clk_coex_lp_div_num().bits()),
-            )
+            .field("clk_coex_lp_sel_osc_slow", &self.clk_coex_lp_sel_osc_slow())
+            .field("clk_coex_lp_sel_osc_fast", &self.clk_coex_lp_sel_osc_fast())
+            .field("clk_coex_lp_sel_xtal", &self.clk_coex_lp_sel_xtal())
+            .field("clk_coex_lp_sel_xtal32k", &self.clk_coex_lp_sel_xtal32k())
+            .field("clk_coex_lp_div_num", &self.clk_coex_lp_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COEX_LP_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

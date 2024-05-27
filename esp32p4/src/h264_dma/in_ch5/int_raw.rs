@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field(
-                "infifo_ovf_l1",
-                &format_args!("{}", self.infifo_ovf_l1().bit()),
-            )
-            .field(
-                "infifo_udf_l1",
-                &format_args!("{}", self.infifo_udf_l1().bit()),
-            )
-            .field(
-                "fetch_mb_col_cnt_ovf",
-                &format_args!("{}", self.fetch_mb_col_cnt_ovf().bit()),
-            )
+            .field("in_done", &self.in_done())
+            .field("in_suc_eof", &self.in_suc_eof())
+            .field("infifo_ovf_l1", &self.infifo_ovf_l1())
+            .field("infifo_udf_l1", &self.infifo_udf_l1())
+            .field("fetch_mb_col_cnt_ovf", &self.fetch_mb_col_cnt_ovf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

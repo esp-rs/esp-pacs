@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SCL_I2C_FMP_TIME")
-            .field(
-                "reg_i2c_fmp_low_period",
-                &format_args!("{}", self.reg_i2c_fmp_low_period().bits()),
-            )
-            .field(
-                "reg_i2c_fmp_high_period",
-                &format_args!("{}", self.reg_i2c_fmp_high_period().bits()),
-            )
+            .field("reg_i2c_fmp_low_period", &self.reg_i2c_fmp_low_period())
+            .field("reg_i2c_fmp_high_period", &self.reg_i2c_fmp_high_period())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SCL_I2C_FMP_TIME_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

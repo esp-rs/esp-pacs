@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APPCPU_CTRL_B")
-            .field(
-                "appcpu_clkgate_en",
-                &format_args!("{}", self.appcpu_clkgate_en().bit()),
-            )
+            .field("appcpu_clkgate_en", &self.appcpu_clkgate_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APPCPU_CTRL_B_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BT_LPCK_DIV_INT")
-            .field(
-                "bt_lpck_div_num",
-                &format_args!("{}", self.bt_lpck_div_num().bits()),
-            )
-            .field(
-                "btextwakeup_req",
-                &format_args!("{}", self.btextwakeup_req().bit()),
-            )
+            .field("bt_lpck_div_num", &self.bt_lpck_div_num())
+            .field("btextwakeup_req", &self.btextwakeup_req())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BT_LPCK_DIV_INT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

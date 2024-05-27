@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTER_MEM_START_ADDR0")
             .field(
                 "access_inter_mem_start_addr0",
-                &format_args!("{}", self.access_inter_mem_start_addr0().bits()),
+                &self.access_inter_mem_start_addr0(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTER_MEM_START_ADDR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

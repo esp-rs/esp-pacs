@@ -71,38 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("READER2_CTRL")
-            .field(
-                "sar2_clk_div",
-                &format_args!("{}", self.sar2_clk_div().bits()),
-            )
-            .field(
-                "sar2_wait_arb_cycle",
-                &format_args!("{}", self.sar2_wait_arb_cycle().bits()),
-            )
-            .field(
-                "sar2_clk_gated",
-                &format_args!("{}", self.sar2_clk_gated().bit()),
-            )
-            .field(
-                "sar2_sample_num",
-                &format_args!("{}", self.sar2_sample_num().bits()),
-            )
-            .field(
-                "sar2_en_pad_force_enable",
-                &format_args!("{}", self.sar2_en_pad_force_enable().bits()),
-            )
-            .field(
-                "sar2_data_inv",
-                &format_args!("{}", self.sar2_data_inv().bit()),
-            )
-            .field("sar2_int_en", &format_args!("{}", self.sar2_int_en().bit()))
+            .field("sar2_clk_div", &self.sar2_clk_div())
+            .field("sar2_wait_arb_cycle", &self.sar2_wait_arb_cycle())
+            .field("sar2_clk_gated", &self.sar2_clk_gated())
+            .field("sar2_sample_num", &self.sar2_sample_num())
+            .field("sar2_en_pad_force_enable", &self.sar2_en_pad_force_enable())
+            .field("sar2_data_inv", &self.sar2_data_inv())
+            .field("sar2_int_en", &self.sar2_int_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<READER2_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

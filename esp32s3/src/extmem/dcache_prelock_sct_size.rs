@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DCACHE_PRELOCK_SCT_SIZE")
-            .field(
-                "dcache_prelock_sct1_size",
-                &format_args!("{}", self.dcache_prelock_sct1_size().bits()),
-            )
-            .field(
-                "dcache_prelock_sct0_size",
-                &format_args!("{}", self.dcache_prelock_sct0_size().bits()),
-            )
+            .field("dcache_prelock_sct1_size", &self.dcache_prelock_sct1_size())
+            .field("dcache_prelock_sct0_size", &self.dcache_prelock_sct0_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

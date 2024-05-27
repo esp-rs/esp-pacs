@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_TIMING")
-            .field(
-                "tx_sd_out_dm",
-                &format_args!("{}", self.tx_sd_out_dm().bits()),
-            )
-            .field(
-                "tx_sd1_out_dm",
-                &format_args!("{}", self.tx_sd1_out_dm().bits()),
-            )
-            .field(
-                "tx_ws_out_dm",
-                &format_args!("{}", self.tx_ws_out_dm().bits()),
-            )
-            .field(
-                "tx_bck_out_dm",
-                &format_args!("{}", self.tx_bck_out_dm().bits()),
-            )
-            .field(
-                "tx_ws_in_dm",
-                &format_args!("{}", self.tx_ws_in_dm().bits()),
-            )
-            .field(
-                "tx_bck_in_dm",
-                &format_args!("{}", self.tx_bck_in_dm().bits()),
-            )
+            .field("tx_sd_out_dm", &self.tx_sd_out_dm())
+            .field("tx_sd1_out_dm", &self.tx_sd1_out_dm())
+            .field("tx_ws_out_dm", &self.tx_ws_out_dm())
+            .field("tx_bck_out_dm", &self.tx_bck_out_dm())
+            .field("tx_ws_in_dm", &self.tx_ws_in_dm())
+            .field("tx_bck_in_dm", &self.tx_bck_in_dm())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_TIMING_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

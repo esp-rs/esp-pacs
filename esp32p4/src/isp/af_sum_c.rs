@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_SUM_C")
-            .field("af_sumc", &format_args!("{}", self.af_sumc().bits()))
+            .field("af_sumc", &self.af_sumc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_SUM_C_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "result of sum of af window c\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`af_sum_c::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

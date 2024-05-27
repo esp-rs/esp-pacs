@@ -125,65 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_RX_I_1")
-            .field(
-                "dma_rx_i_sram_0_r",
-                &format_args!("{}", self.dma_rx_i_sram_0_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_0_w",
-                &format_args!("{}", self.dma_rx_i_sram_0_w().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_1_r",
-                &format_args!("{}", self.dma_rx_i_sram_1_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_1_w",
-                &format_args!("{}", self.dma_rx_i_sram_1_w().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_2_r",
-                &format_args!("{}", self.dma_rx_i_sram_2_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_2_w",
-                &format_args!("{}", self.dma_rx_i_sram_2_w().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_3_r",
-                &format_args!("{}", self.dma_rx_i_sram_3_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_3_w",
-                &format_args!("{}", self.dma_rx_i_sram_3_w().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_4_spltaddr",
-                &format_args!("{}", self.dma_rx_i_sram_4_spltaddr().bits()),
-            )
-            .field(
-                "dma_rx_i_sram_4_l_r",
-                &format_args!("{}", self.dma_rx_i_sram_4_l_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_4_l_w",
-                &format_args!("{}", self.dma_rx_i_sram_4_l_w().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_4_h_r",
-                &format_args!("{}", self.dma_rx_i_sram_4_h_r().bit()),
-            )
-            .field(
-                "dma_rx_i_sram_4_h_w",
-                &format_args!("{}", self.dma_rx_i_sram_4_h_w().bit()),
-            )
+            .field("dma_rx_i_sram_0_r", &self.dma_rx_i_sram_0_r())
+            .field("dma_rx_i_sram_0_w", &self.dma_rx_i_sram_0_w())
+            .field("dma_rx_i_sram_1_r", &self.dma_rx_i_sram_1_r())
+            .field("dma_rx_i_sram_1_w", &self.dma_rx_i_sram_1_w())
+            .field("dma_rx_i_sram_2_r", &self.dma_rx_i_sram_2_r())
+            .field("dma_rx_i_sram_2_w", &self.dma_rx_i_sram_2_w())
+            .field("dma_rx_i_sram_3_r", &self.dma_rx_i_sram_3_r())
+            .field("dma_rx_i_sram_3_w", &self.dma_rx_i_sram_3_w())
+            .field("dma_rx_i_sram_4_spltaddr", &self.dma_rx_i_sram_4_spltaddr())
+            .field("dma_rx_i_sram_4_l_r", &self.dma_rx_i_sram_4_l_r())
+            .field("dma_rx_i_sram_4_l_w", &self.dma_rx_i_sram_4_l_w())
+            .field("dma_rx_i_sram_4_h_r", &self.dma_rx_i_sram_4_h_r())
+            .field("dma_rx_i_sram_4_h_w", &self.dma_rx_i_sram_4_h_w())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_RX_I_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

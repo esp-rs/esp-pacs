@@ -69,49 +69,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_COCPU_INT_RAW")
-            .field(
-                "cocpu_touch_done_int_raw",
-                &format_args!("{}", self.cocpu_touch_done_int_raw().bit()),
-            )
+            .field("cocpu_touch_done_int_raw", &self.cocpu_touch_done_int_raw())
             .field(
                 "cocpu_touch_inactive_int_raw",
-                &format_args!("{}", self.cocpu_touch_inactive_int_raw().bit()),
+                &self.cocpu_touch_inactive_int_raw(),
             )
             .field(
                 "cocpu_touch_active_int_raw",
-                &format_args!("{}", self.cocpu_touch_active_int_raw().bit()),
+                &self.cocpu_touch_active_int_raw(),
             )
-            .field(
-                "cocpu_saradc1_int_raw",
-                &format_args!("{}", self.cocpu_saradc1_int_raw().bit()),
-            )
-            .field(
-                "cocpu_saradc2_int_raw",
-                &format_args!("{}", self.cocpu_saradc2_int_raw().bit()),
-            )
-            .field(
-                "cocpu_tsens_int_raw",
-                &format_args!("{}", self.cocpu_tsens_int_raw().bit()),
-            )
-            .field(
-                "cocpu_start_int_raw",
-                &format_args!("{}", self.cocpu_start_int_raw().bit()),
-            )
-            .field(
-                "cocpu_sw_int_raw",
-                &format_args!("{}", self.cocpu_sw_int_raw().bit()),
-            )
-            .field(
-                "cocpu_swd_int_raw",
-                &format_args!("{}", self.cocpu_swd_int_raw().bit()),
-            )
+            .field("cocpu_saradc1_int_raw", &self.cocpu_saradc1_int_raw())
+            .field("cocpu_saradc2_int_raw", &self.cocpu_saradc2_int_raw())
+            .field("cocpu_tsens_int_raw", &self.cocpu_tsens_int_raw())
+            .field("cocpu_start_int_raw", &self.cocpu_start_int_raw())
+            .field("cocpu_sw_int_raw", &self.cocpu_sw_int_raw())
+            .field("cocpu_swd_int_raw", &self.cocpu_swd_int_raw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_COCPU_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Interrupt raw bit of ULP-RISCV\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

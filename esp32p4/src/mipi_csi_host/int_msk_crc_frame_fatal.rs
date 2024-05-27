@@ -152,77 +152,23 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK_CRC_FRAME_FATAL")
-            .field(
-                "mask_err_frame_data_vc0",
-                &format_args!("{}", self.mask_err_frame_data_vc0().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc1",
-                &format_args!("{}", self.mask_err_frame_data_vc1().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc2",
-                &format_args!("{}", self.mask_err_frame_data_vc2().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc3",
-                &format_args!("{}", self.mask_err_frame_data_vc3().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc4",
-                &format_args!("{}", self.mask_err_frame_data_vc4().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc5",
-                &format_args!("{}", self.mask_err_frame_data_vc5().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc6",
-                &format_args!("{}", self.mask_err_frame_data_vc6().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc7",
-                &format_args!("{}", self.mask_err_frame_data_vc7().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc8",
-                &format_args!("{}", self.mask_err_frame_data_vc8().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc9",
-                &format_args!("{}", self.mask_err_frame_data_vc9().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc10",
-                &format_args!("{}", self.mask_err_frame_data_vc10().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc11",
-                &format_args!("{}", self.mask_err_frame_data_vc11().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc12",
-                &format_args!("{}", self.mask_err_frame_data_vc12().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc13",
-                &format_args!("{}", self.mask_err_frame_data_vc13().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc14",
-                &format_args!("{}", self.mask_err_frame_data_vc14().bit()),
-            )
-            .field(
-                "mask_err_frame_data_vc15",
-                &format_args!("{}", self.mask_err_frame_data_vc15().bit()),
-            )
+            .field("mask_err_frame_data_vc0", &self.mask_err_frame_data_vc0())
+            .field("mask_err_frame_data_vc1", &self.mask_err_frame_data_vc1())
+            .field("mask_err_frame_data_vc2", &self.mask_err_frame_data_vc2())
+            .field("mask_err_frame_data_vc3", &self.mask_err_frame_data_vc3())
+            .field("mask_err_frame_data_vc4", &self.mask_err_frame_data_vc4())
+            .field("mask_err_frame_data_vc5", &self.mask_err_frame_data_vc5())
+            .field("mask_err_frame_data_vc6", &self.mask_err_frame_data_vc6())
+            .field("mask_err_frame_data_vc7", &self.mask_err_frame_data_vc7())
+            .field("mask_err_frame_data_vc8", &self.mask_err_frame_data_vc8())
+            .field("mask_err_frame_data_vc9", &self.mask_err_frame_data_vc9())
+            .field("mask_err_frame_data_vc10", &self.mask_err_frame_data_vc10())
+            .field("mask_err_frame_data_vc11", &self.mask_err_frame_data_vc11())
+            .field("mask_err_frame_data_vc12", &self.mask_err_frame_data_vc12())
+            .field("mask_err_frame_data_vc13", &self.mask_err_frame_data_vc13())
+            .field("mask_err_frame_data_vc14", &self.mask_err_frame_data_vc14())
+            .field("mask_err_frame_data_vc15", &self.mask_err_frame_data_vc15())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_MSK_CRC_FRAME_FATAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

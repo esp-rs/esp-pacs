@@ -98,53 +98,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REF_CLK_CTRL2")
-            .field(
-                "ref_160m_clk_en",
-                &format_args!("{}", self.ref_160m_clk_en().bit()),
-            )
-            .field(
-                "tm_160m_clk_en",
-                &format_args!("{}", self.tm_160m_clk_en().bit()),
-            )
-            .field(
-                "ref_120m_clk_en",
-                &format_args!("{}", self.ref_120m_clk_en().bit()),
-            )
-            .field(
-                "tm_120m_clk_en",
-                &format_args!("{}", self.tm_120m_clk_en().bit()),
-            )
-            .field(
-                "ref_80m_clk_en",
-                &format_args!("{}", self.ref_80m_clk_en().bit()),
-            )
-            .field(
-                "tm_80m_clk_en",
-                &format_args!("{}", self.tm_80m_clk_en().bit()),
-            )
-            .field(
-                "tm_60m_clk_en",
-                &format_args!("{}", self.tm_60m_clk_en().bit()),
-            )
-            .field(
-                "tm_48m_clk_en",
-                &format_args!("{}", self.tm_48m_clk_en().bit()),
-            )
-            .field(
-                "ref_20m_clk_en",
-                &format_args!("{}", self.ref_20m_clk_en().bit()),
-            )
-            .field(
-                "tm_20m_clk_en",
-                &format_args!("{}", self.tm_20m_clk_en().bit()),
-            )
+            .field("ref_160m_clk_en", &self.ref_160m_clk_en())
+            .field("tm_160m_clk_en", &self.tm_160m_clk_en())
+            .field("ref_120m_clk_en", &self.ref_120m_clk_en())
+            .field("tm_120m_clk_en", &self.tm_120m_clk_en())
+            .field("ref_80m_clk_en", &self.ref_80m_clk_en())
+            .field("tm_80m_clk_en", &self.tm_80m_clk_en())
+            .field("tm_60m_clk_en", &self.tm_60m_clk_en())
+            .field("tm_48m_clk_en", &self.tm_48m_clk_en())
+            .field("ref_20m_clk_en", &self.ref_20m_clk_en())
+            .field("tm_20m_clk_en", &self.tm_20m_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REF_CLK_CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

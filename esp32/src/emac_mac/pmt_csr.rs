@@ -62,21 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PMT_CSR")
-            .field("pwrdwn", &format_args!("{}", self.pwrdwn().bit()))
-            .field("mgkpkten", &format_args!("{}", self.mgkpkten().bit()))
-            .field("rwkpkten", &format_args!("{}", self.rwkpkten().bit()))
-            .field("mgkprcvd", &format_args!("{}", self.mgkprcvd().bit()))
-            .field("rwkprcvd", &format_args!("{}", self.rwkprcvd().bit()))
-            .field("glblucast", &format_args!("{}", self.glblucast().bit()))
-            .field("rwkptr", &format_args!("{}", self.rwkptr().bits()))
-            .field("rwkfiltrst", &format_args!("{}", self.rwkfiltrst().bit()))
+            .field("pwrdwn", &self.pwrdwn())
+            .field("mgkpkten", &self.mgkpkten())
+            .field("rwkpkten", &self.rwkpkten())
+            .field("mgkprcvd", &self.mgkprcvd())
+            .field("rwkprcvd", &self.rwkprcvd())
+            .field("glblucast", &self.glblucast())
+            .field("rwkptr", &self.rwkptr())
+            .field("rwkfiltrst", &self.rwkfiltrst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PMT_CSR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "PMT Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmt_csr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

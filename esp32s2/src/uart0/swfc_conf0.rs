@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SWFC_CONF0")
-            .field(
-                "xoff_threshold",
-                &format_args!("{}", self.xoff_threshold().bits()),
-            )
-            .field("xoff_char", &format_args!("{}", self.xoff_char().bits()))
+            .field("xoff_threshold", &self.xoff_threshold())
+            .field("xoff_char", &self.xoff_char())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SWFC_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

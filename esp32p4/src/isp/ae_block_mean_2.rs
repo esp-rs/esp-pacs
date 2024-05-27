@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AE_BLOCK_MEAN_2")
-            .field(
-                "ae_b21_mean",
-                &format_args!("{}", self.ae_b21_mean().bits()),
-            )
-            .field(
-                "ae_b20_mean",
-                &format_args!("{}", self.ae_b20_mean().bits()),
-            )
-            .field(
-                "ae_b14_mean",
-                &format_args!("{}", self.ae_b14_mean().bits()),
-            )
-            .field(
-                "ae_b13_mean",
-                &format_args!("{}", self.ae_b13_mean().bits()),
-            )
+            .field("ae_b21_mean", &self.ae_b21_mean())
+            .field("ae_b20_mean", &self.ae_b20_mean())
+            .field("ae_b14_mean", &self.ae_b14_mean())
+            .field("ae_b13_mean", &self.ae_b13_mean())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AE_BLOCK_MEAN_2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "ae statistic result register 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_block_mean_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

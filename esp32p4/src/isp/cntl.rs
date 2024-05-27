@@ -206,47 +206,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CNTL")
-            .field(
-                "mipi_data_en",
-                &format_args!("{}", self.mipi_data_en().bit()),
-            )
-            .field("isp_en", &format_args!("{}", self.isp_en().bit()))
-            .field("blc_en", &format_args!("{}", self.blc_en().bit()))
-            .field("dpc_en", &format_args!("{}", self.dpc_en().bit()))
-            .field("bf_en", &format_args!("{}", self.bf_en().bit()))
-            .field("lsc_en", &format_args!("{}", self.lsc_en().bit()))
-            .field("demosaic_en", &format_args!("{}", self.demosaic_en().bit()))
-            .field("median_en", &format_args!("{}", self.median_en().bit()))
-            .field("ccm_en", &format_args!("{}", self.ccm_en().bit()))
-            .field("gamma_en", &format_args!("{}", self.gamma_en().bit()))
-            .field("rgb2yuv_en", &format_args!("{}", self.rgb2yuv_en().bit()))
-            .field("sharp_en", &format_args!("{}", self.sharp_en().bit()))
-            .field("color_en", &format_args!("{}", self.color_en().bit()))
-            .field("yuv2rgb_en", &format_args!("{}", self.yuv2rgb_en().bit()))
-            .field("ae_en", &format_args!("{}", self.ae_en().bit()))
-            .field("af_en", &format_args!("{}", self.af_en().bit()))
-            .field("awb_en", &format_args!("{}", self.awb_en().bit()))
-            .field("hist_en", &format_args!("{}", self.hist_en().bit()))
-            .field(
-                "byte_endian_order",
-                &format_args!("{}", self.byte_endian_order().bit()),
-            )
-            .field(
-                "isp_data_type",
-                &format_args!("{}", self.isp_data_type().bits()),
-            )
-            .field("isp_in_src", &format_args!("{}", self.isp_in_src().bits()))
-            .field(
-                "isp_out_type",
-                &format_args!("{}", self.isp_out_type().bits()),
-            )
+            .field("mipi_data_en", &self.mipi_data_en())
+            .field("isp_en", &self.isp_en())
+            .field("blc_en", &self.blc_en())
+            .field("dpc_en", &self.dpc_en())
+            .field("bf_en", &self.bf_en())
+            .field("lsc_en", &self.lsc_en())
+            .field("demosaic_en", &self.demosaic_en())
+            .field("median_en", &self.median_en())
+            .field("ccm_en", &self.ccm_en())
+            .field("gamma_en", &self.gamma_en())
+            .field("rgb2yuv_en", &self.rgb2yuv_en())
+            .field("sharp_en", &self.sharp_en())
+            .field("color_en", &self.color_en())
+            .field("yuv2rgb_en", &self.yuv2rgb_en())
+            .field("ae_en", &self.ae_en())
+            .field("af_en", &self.af_en())
+            .field("awb_en", &self.awb_en())
+            .field("hist_en", &self.hist_en())
+            .field("byte_endian_order", &self.byte_endian_order())
+            .field("isp_data_type", &self.isp_data_type())
+            .field("isp_in_src", &self.isp_in_src())
+            .field("isp_out_type", &self.isp_out_type())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

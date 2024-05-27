@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_DENOISE")
-            .field("data", &format_args!("{}", self.data().bits()))
+            .field("data", &self.data())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_DENOISE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "configure touch controller\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_denoise::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ETM_CONF")
-            .field(
-                "etm_tx_send_word_num",
-                &format_args!("{}", self.etm_tx_send_word_num().bits()),
-            )
-            .field(
-                "etm_rx_receive_word_num",
-                &format_args!("{}", self.etm_rx_receive_word_num().bits()),
-            )
+            .field("etm_tx_send_word_num", &self.etm_tx_send_word_num())
+            .field("etm_rx_receive_word_num", &self.etm_rx_receive_word_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ETM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

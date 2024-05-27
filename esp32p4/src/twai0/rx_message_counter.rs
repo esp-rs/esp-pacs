@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_MESSAGE_COUNTER")
-            .field(
-                "rx_message_counter",
-                &format_args!("{}", self.rx_message_counter().bits()),
-            )
+            .field("rx_message_counter", &self.rx_message_counter())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_MESSAGE_COUNTER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Received message counter register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_message_counter::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

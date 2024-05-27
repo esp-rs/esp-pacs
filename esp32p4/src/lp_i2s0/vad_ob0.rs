@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VAD_OB0")
-            .field(
-                "speech_count_ob",
-                &format_args!("{}", self.speech_count_ob().bits()),
-            )
-            .field(
-                "silent_count_ob",
-                &format_args!("{}", self.silent_count_ob().bits()),
-            )
-            .field(
-                "max_signal0_ob",
-                &format_args!("{}", self.max_signal0_ob().bits()),
-            )
+            .field("speech_count_ob", &self.speech_count_ob())
+            .field("silent_count_ob", &self.silent_count_ob())
+            .field("max_signal0_ob", &self.max_signal0_ob())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VAD_OB0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "I2S VAD Observe register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vad_ob0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

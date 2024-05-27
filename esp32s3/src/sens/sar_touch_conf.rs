@@ -69,41 +69,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_TOUCH_CONF")
-            .field(
-                "sar_touch_outen",
-                &format_args!("{}", self.sar_touch_outen().bits()),
-            )
-            .field(
-                "sar_touch_data_sel",
-                &format_args!("{}", self.sar_touch_data_sel().bits()),
-            )
-            .field(
-                "sar_touch_denoise_end",
-                &format_args!("{}", self.sar_touch_denoise_end().bit()),
-            )
-            .field(
-                "sar_touch_unit_end",
-                &format_args!("{}", self.sar_touch_unit_end().bit()),
-            )
-            .field(
-                "sar_touch_approach_pad2",
-                &format_args!("{}", self.sar_touch_approach_pad2().bits()),
-            )
-            .field(
-                "sar_touch_approach_pad1",
-                &format_args!("{}", self.sar_touch_approach_pad1().bits()),
-            )
-            .field(
-                "sar_touch_approach_pad0",
-                &format_args!("{}", self.sar_touch_approach_pad0().bits()),
-            )
+            .field("sar_touch_outen", &self.sar_touch_outen())
+            .field("sar_touch_data_sel", &self.sar_touch_data_sel())
+            .field("sar_touch_denoise_end", &self.sar_touch_denoise_end())
+            .field("sar_touch_unit_end", &self.sar_touch_unit_end())
+            .field("sar_touch_approach_pad2", &self.sar_touch_approach_pad2())
+            .field("sar_touch_approach_pad1", &self.sar_touch_approach_pad1())
+            .field("sar_touch_approach_pad0", &self.sar_touch_approach_pad0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_TOUCH_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

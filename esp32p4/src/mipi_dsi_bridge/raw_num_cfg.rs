@@ -28,21 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RAW_NUM_CFG")
-            .field(
-                "raw_num_total",
-                &format_args!("{}", self.raw_num_total().bits()),
-            )
-            .field(
-                "unalign_64bit_en",
-                &format_args!("{}", self.unalign_64bit_en().bit()),
-            )
+            .field("raw_num_total", &self.raw_num_total())
+            .field("unalign_64bit_en", &self.unalign_64bit_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RAW_NUM_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLICE_HEADER_BYTE_LENGTH")
-            .field(
-                "slice_byte_length",
-                &format_args!("{}", self.slice_byte_length().bits()),
-            )
+            .field("slice_byte_length", &self.slice_byte_length())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLICE_HEADER_BYTE_LENGTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

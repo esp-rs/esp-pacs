@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TXRX_PATH_DELAY")
-            .field(
-                "tx_path_delay",
-                &format_args!("{}", self.tx_path_delay().bits()),
-            )
-            .field(
-                "rx_path_delay",
-                &format_args!("{}", self.rx_path_delay().bits()),
-            )
+            .field("tx_path_delay", &self.tx_path_delay())
+            .field("rx_path_delay", &self.rx_path_delay())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TXRX_PATH_DELAY_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

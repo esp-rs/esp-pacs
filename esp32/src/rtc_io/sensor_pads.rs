@@ -224,97 +224,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SENSOR_PADS")
-            .field(
-                "sense4_fun_ie",
-                &format_args!("{}", self.sense4_fun_ie().bit()),
-            )
-            .field(
-                "sense4_slp_ie",
-                &format_args!("{}", self.sense4_slp_ie().bit()),
-            )
-            .field(
-                "sense4_slp_sel",
-                &format_args!("{}", self.sense4_slp_sel().bit()),
-            )
-            .field(
-                "sense4_fun_sel",
-                &format_args!("{}", self.sense4_fun_sel().bits()),
-            )
-            .field(
-                "sense3_fun_ie",
-                &format_args!("{}", self.sense3_fun_ie().bit()),
-            )
-            .field(
-                "sense3_slp_ie",
-                &format_args!("{}", self.sense3_slp_ie().bit()),
-            )
-            .field(
-                "sense3_slp_sel",
-                &format_args!("{}", self.sense3_slp_sel().bit()),
-            )
-            .field(
-                "sense3_fun_sel",
-                &format_args!("{}", self.sense3_fun_sel().bits()),
-            )
-            .field(
-                "sense2_fun_ie",
-                &format_args!("{}", self.sense2_fun_ie().bit()),
-            )
-            .field(
-                "sense2_slp_ie",
-                &format_args!("{}", self.sense2_slp_ie().bit()),
-            )
-            .field(
-                "sense2_slp_sel",
-                &format_args!("{}", self.sense2_slp_sel().bit()),
-            )
-            .field(
-                "sense2_fun_sel",
-                &format_args!("{}", self.sense2_fun_sel().bits()),
-            )
-            .field(
-                "sense1_fun_ie",
-                &format_args!("{}", self.sense1_fun_ie().bit()),
-            )
-            .field(
-                "sense1_slp_ie",
-                &format_args!("{}", self.sense1_slp_ie().bit()),
-            )
-            .field(
-                "sense1_slp_sel",
-                &format_args!("{}", self.sense1_slp_sel().bit()),
-            )
-            .field(
-                "sense1_fun_sel",
-                &format_args!("{}", self.sense1_fun_sel().bits()),
-            )
-            .field(
-                "sense4_mux_sel",
-                &format_args!("{}", self.sense4_mux_sel().bit()),
-            )
-            .field(
-                "sense3_mux_sel",
-                &format_args!("{}", self.sense3_mux_sel().bit()),
-            )
-            .field(
-                "sense2_mux_sel",
-                &format_args!("{}", self.sense2_mux_sel().bit()),
-            )
-            .field(
-                "sense1_mux_sel",
-                &format_args!("{}", self.sense1_mux_sel().bit()),
-            )
-            .field("sense4_hold", &format_args!("{}", self.sense4_hold().bit()))
-            .field("sense3_hold", &format_args!("{}", self.sense3_hold().bit()))
-            .field("sense2_hold", &format_args!("{}", self.sense2_hold().bit()))
-            .field("sense1_hold", &format_args!("{}", self.sense1_hold().bit()))
+            .field("sense4_fun_ie", &self.sense4_fun_ie())
+            .field("sense4_slp_ie", &self.sense4_slp_ie())
+            .field("sense4_slp_sel", &self.sense4_slp_sel())
+            .field("sense4_fun_sel", &self.sense4_fun_sel())
+            .field("sense3_fun_ie", &self.sense3_fun_ie())
+            .field("sense3_slp_ie", &self.sense3_slp_ie())
+            .field("sense3_slp_sel", &self.sense3_slp_sel())
+            .field("sense3_fun_sel", &self.sense3_fun_sel())
+            .field("sense2_fun_ie", &self.sense2_fun_ie())
+            .field("sense2_slp_ie", &self.sense2_slp_ie())
+            .field("sense2_slp_sel", &self.sense2_slp_sel())
+            .field("sense2_fun_sel", &self.sense2_fun_sel())
+            .field("sense1_fun_ie", &self.sense1_fun_ie())
+            .field("sense1_slp_ie", &self.sense1_slp_ie())
+            .field("sense1_slp_sel", &self.sense1_slp_sel())
+            .field("sense1_fun_sel", &self.sense1_fun_sel())
+            .field("sense4_mux_sel", &self.sense4_mux_sel())
+            .field("sense3_mux_sel", &self.sense3_mux_sel())
+            .field("sense2_mux_sel", &self.sense2_mux_sel())
+            .field("sense1_mux_sel", &self.sense1_mux_sel())
+            .field("sense4_hold", &self.sense4_hold())
+            .field("sense3_hold", &self.sense3_hold())
+            .field("sense2_hold", &self.sense2_hold())
+            .field("sense1_hold", &self.sense1_hold())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SENSOR_PADS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

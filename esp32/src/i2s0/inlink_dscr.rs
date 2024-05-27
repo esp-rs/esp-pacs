@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INLINK_DSCR")
-            .field(
-                "inlink_dscr",
-                &format_args!("{}", self.inlink_dscr().bits()),
-            )
+            .field("inlink_dscr", &self.inlink_dscr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INLINK_DSCR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inlink_dscr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ROOT_CLK_CTRL")
-            .field("cpu_clk_en", &format_args!("{}", self.cpu_clk_en().bit()))
-            .field("sys_clk_en", &format_args!("{}", self.sys_clk_en().bit()))
+            .field("cpu_clk_en", &self.cpu_clk_en())
+            .field("sys_clk_en", &self.sys_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ROOT_CLK_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

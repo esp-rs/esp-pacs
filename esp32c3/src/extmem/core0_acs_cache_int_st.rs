@@ -50,35 +50,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE0_ACS_CACHE_INT_ST")
             .field(
                 "core0_ibus_acs_msk_icache",
-                &format_args!("{}", self.core0_ibus_acs_msk_icache().bit()),
+                &self.core0_ibus_acs_msk_icache(),
             )
-            .field(
-                "core0_ibus_wr_icache",
-                &format_args!("{}", self.core0_ibus_wr_icache().bit()),
-            )
-            .field(
-                "core0_ibus_reject",
-                &format_args!("{}", self.core0_ibus_reject().bit()),
-            )
+            .field("core0_ibus_wr_icache", &self.core0_ibus_wr_icache())
+            .field("core0_ibus_reject", &self.core0_ibus_reject())
             .field(
                 "core0_dbus_acs_msk_icache",
-                &format_args!("{}", self.core0_dbus_acs_msk_icache().bit()),
+                &self.core0_dbus_acs_msk_icache(),
             )
-            .field(
-                "core0_dbus_reject",
-                &format_args!("{}", self.core0_dbus_reject().bit()),
-            )
-            .field(
-                "core0_dbus_wr_icache",
-                &format_args!("{}", self.core0_dbus_wr_icache().bit()),
-            )
+            .field("core0_dbus_reject", &self.core0_dbus_reject())
+            .field("core0_dbus_wr_icache", &self.core0_dbus_wr_icache())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE0_ACS_CACHE_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core0_acs_cache_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

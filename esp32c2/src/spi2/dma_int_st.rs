@@ -153,67 +153,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_INT_ST")
-            .field(
-                "dma_infifo_full_err",
-                &format_args!("{}", self.dma_infifo_full_err().bit()),
-            )
-            .field(
-                "dma_outfifo_empty_err",
-                &format_args!("{}", self.dma_outfifo_empty_err().bit()),
-            )
-            .field("slv_ex_qpi", &format_args!("{}", self.slv_ex_qpi().bit()))
-            .field("slv_en_qpi", &format_args!("{}", self.slv_en_qpi().bit()))
-            .field("slv_cmd7", &format_args!("{}", self.slv_cmd7().bit()))
-            .field("slv_cmd8", &format_args!("{}", self.slv_cmd8().bit()))
-            .field("slv_cmd9", &format_args!("{}", self.slv_cmd9().bit()))
-            .field("slv_cmda", &format_args!("{}", self.slv_cmda().bit()))
-            .field(
-                "slv_rd_dma_done",
-                &format_args!("{}", self.slv_rd_dma_done().bit()),
-            )
-            .field(
-                "slv_wr_dma_done",
-                &format_args!("{}", self.slv_wr_dma_done().bit()),
-            )
-            .field(
-                "slv_rd_buf_done",
-                &format_args!("{}", self.slv_rd_buf_done().bit()),
-            )
-            .field(
-                "slv_wr_buf_done",
-                &format_args!("{}", self.slv_wr_buf_done().bit()),
-            )
-            .field("trans_done", &format_args!("{}", self.trans_done().bit()))
-            .field(
-                "dma_seg_trans_done",
-                &format_args!("{}", self.dma_seg_trans_done().bit()),
-            )
-            .field(
-                "seg_magic_err",
-                &format_args!("{}", self.seg_magic_err().bit()),
-            )
-            .field(
-                "slv_buf_addr_err",
-                &format_args!("{}", self.slv_buf_addr_err().bit()),
-            )
-            .field("slv_cmd_err", &format_args!("{}", self.slv_cmd_err().bit()))
-            .field(
-                "mst_rx_afifo_wfull_err",
-                &format_args!("{}", self.mst_rx_afifo_wfull_err().bit()),
-            )
-            .field(
-                "mst_tx_afifo_rempty_err",
-                &format_args!("{}", self.mst_tx_afifo_rempty_err().bit()),
-            )
-            .field("app2", &format_args!("{}", self.app2().bit()))
-            .field("app1", &format_args!("{}", self.app1().bit()))
+            .field("dma_infifo_full_err", &self.dma_infifo_full_err())
+            .field("dma_outfifo_empty_err", &self.dma_outfifo_empty_err())
+            .field("slv_ex_qpi", &self.slv_ex_qpi())
+            .field("slv_en_qpi", &self.slv_en_qpi())
+            .field("slv_cmd7", &self.slv_cmd7())
+            .field("slv_cmd8", &self.slv_cmd8())
+            .field("slv_cmd9", &self.slv_cmd9())
+            .field("slv_cmda", &self.slv_cmda())
+            .field("slv_rd_dma_done", &self.slv_rd_dma_done())
+            .field("slv_wr_dma_done", &self.slv_wr_dma_done())
+            .field("slv_rd_buf_done", &self.slv_rd_buf_done())
+            .field("slv_wr_buf_done", &self.slv_wr_buf_done())
+            .field("trans_done", &self.trans_done())
+            .field("dma_seg_trans_done", &self.dma_seg_trans_done())
+            .field("seg_magic_err", &self.seg_magic_err())
+            .field("slv_buf_addr_err", &self.slv_buf_addr_err())
+            .field("slv_cmd_err", &self.slv_cmd_err())
+            .field("mst_rx_afifo_wfull_err", &self.mst_rx_afifo_wfull_err())
+            .field("mst_tx_afifo_rempty_err", &self.mst_tx_afifo_rempty_err())
+            .field("app2", &self.app2())
+            .field("app1", &self.app1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "SPI interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_ARB_WEIGH_OPT_DIR")
-            .field(
-                "rx_arb_weigh_opt_dir",
-                &format_args!("{}", self.rx_arb_weigh_opt_dir().bit()),
-            )
+            .field("rx_arb_weigh_opt_dir", &self.rx_arb_weigh_opt_dir())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_ARB_WEIGH_OPT_DIR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -80,30 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MULT_CONF")
-            .field("start", &format_args!("{}", self.start().bit()))
-            .field("key_length", &format_args!("{}", self.key_length().bit()))
-            .field("mod_base", &format_args!("{}", self.mod_base().bit()))
-            .field("work_mode", &format_args!("{}", self.work_mode().bits()))
-            .field(
-                "security_mode",
-                &format_args!("{}", self.security_mode().bit()),
-            )
-            .field(
-                "verification_result",
-                &format_args!("{}", self.verification_result().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "mem_clock_gate_force_on",
-                &format_args!("{}", self.mem_clock_gate_force_on().bit()),
-            )
+            .field("start", &self.start())
+            .field("key_length", &self.key_length())
+            .field("mod_base", &self.mod_base())
+            .field("work_mode", &self.work_mode())
+            .field("security_mode", &self.security_mode())
+            .field("verification_result", &self.verification_result())
+            .field("clk_en", &self.clk_en())
+            .field("mem_clock_gate_force_on", &self.mem_clock_gate_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MULT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

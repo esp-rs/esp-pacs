@@ -181,103 +181,69 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_CONSTRAIN_8")
             .field(
                 "core_0_pif_pms_constrain_world_1_usb_device",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_usb_device().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_usb_device(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_usb_wrap",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_usb_wrap().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_usb_wrap(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_crypto_peri",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_crypto_peri().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_crypto_peri(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_crypto_dma",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_crypto_dma().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_crypto_dma(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_apb_adc",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_apb_adc().bits()),
+                &self.core_0_pif_pms_constrain_world_1_apb_adc(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_lcd_cam",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_lcd_cam().bits()),
+                &self.core_0_pif_pms_constrain_world_1_lcd_cam(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_bt_pwr",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_bt_pwr().bits()),
+                &self.core_0_pif_pms_constrain_world_1_bt_pwr(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_usb",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_usb().bits()),
+                &self.core_0_pif_pms_constrain_world_1_usb(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_system",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_system().bits()),
+                &self.core_0_pif_pms_constrain_world_1_system(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_sensitive",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_sensitive().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_sensitive(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_interrupt",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_interrupt().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_interrupt(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_dma_copy",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_dma_copy().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_dma_copy(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_cache_config",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_cache_config().bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_cache_config(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_ad",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_ad().bits()),
+                &self.core_0_pif_pms_constrain_world_1_ad(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_dio",
-                &format_args!("{}", self.core_0_pif_pms_constrain_world_1_dio().bits()),
+                &self.core_0_pif_pms_constrain_world_1_dio(),
             )
             .field(
                 "core_0_pif_pms_constrain_world_1_world_controller",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_constrain_world_1_world_controller()
-                        .bits()
-                ),
+                &self.core_0_pif_pms_constrain_world_1_world_controller(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_CONSTRAIN_8_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

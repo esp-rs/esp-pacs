@@ -27,25 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_EP0_ST")
-            .field(
-                "out_ep0_state",
-                &format_args!("{}", self.out_ep0_state().bits()),
-            )
-            .field(
-                "out_ep0_wr_addr",
-                &format_args!("{}", self.out_ep0_wr_addr().bits()),
-            )
-            .field(
-                "out_ep0_rd_addr",
-                &format_args!("{}", self.out_ep0_rd_addr().bits()),
-            )
+            .field("out_ep0_state", &self.out_ep0_state())
+            .field("out_ep0_wr_addr", &self.out_ep0_wr_addr())
+            .field("out_ep0_rd_addr", &self.out_ep0_rd_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_EP0_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Control OUT endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_ep0_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

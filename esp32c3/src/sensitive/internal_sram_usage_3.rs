@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("INTERNAL_SRAM_USAGE_3")
             .field(
                 "internal_sram_usage_mac_dump_sram",
-                &format_args!("{}", self.internal_sram_usage_mac_dump_sram().bits()),
+                &self.internal_sram_usage_mac_dump_sram(),
             )
             .field(
                 "internal_sram_alloc_mac_dump",
-                &format_args!("{}", self.internal_sram_alloc_mac_dump().bit()),
+                &self.internal_sram_alloc_mac_dump(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTERNAL_SRAM_USAGE_3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

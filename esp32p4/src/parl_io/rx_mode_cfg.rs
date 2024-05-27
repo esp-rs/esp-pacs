@@ -53,30 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_MODE_CFG")
-            .field(
-                "rx_ext_en_sel",
-                &format_args!("{}", self.rx_ext_en_sel().bits()),
-            )
-            .field("rx_sw_en", &format_args!("{}", self.rx_sw_en().bit()))
-            .field(
-                "rx_ext_en_inv",
-                &format_args!("{}", self.rx_ext_en_inv().bit()),
-            )
-            .field(
-                "rx_pulse_submode_sel",
-                &format_args!("{}", self.rx_pulse_submode_sel().bits()),
-            )
-            .field(
-                "rx_smp_mode_sel",
-                &format_args!("{}", self.rx_smp_mode_sel().bits()),
-            )
+            .field("rx_ext_en_sel", &self.rx_ext_en_sel())
+            .field("rx_sw_en", &self.rx_sw_en())
+            .field("rx_ext_en_inv", &self.rx_ext_en_inv())
+            .field("rx_pulse_submode_sel", &self.rx_pulse_submode_sel())
+            .field("rx_smp_mode_sel", &self.rx_smp_mode_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_MODE_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

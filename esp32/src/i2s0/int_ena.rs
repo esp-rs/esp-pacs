@@ -161,42 +161,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ENA")
-            .field(
-                "rx_take_data",
-                &format_args!("{}", self.rx_take_data().bit()),
-            )
-            .field("tx_put_data", &format_args!("{}", self.tx_put_data().bit()))
-            .field("rx_wfull", &format_args!("{}", self.rx_wfull().bit()))
-            .field("rx_rempty", &format_args!("{}", self.rx_rempty().bit()))
-            .field("tx_wfull", &format_args!("{}", self.tx_wfull().bit()))
-            .field("tx_rempty", &format_args!("{}", self.tx_rempty().bit()))
-            .field("rx_hung", &format_args!("{}", self.rx_hung().bit()))
-            .field("tx_hung", &format_args!("{}", self.tx_hung().bit()))
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("out_done", &format_args!("{}", self.out_done().bit()))
-            .field("out_eof", &format_args!("{}", self.out_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "out_dscr_err",
-                &format_args!("{}", self.out_dscr_err().bit()),
-            )
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field(
-                "out_total_eof",
-                &format_args!("{}", self.out_total_eof().bit()),
-            )
+            .field("rx_take_data", &self.rx_take_data())
+            .field("tx_put_data", &self.tx_put_data())
+            .field("rx_wfull", &self.rx_wfull())
+            .field("rx_rempty", &self.rx_rempty())
+            .field("tx_wfull", &self.tx_wfull())
+            .field("tx_rempty", &self.tx_rempty())
+            .field("rx_hung", &self.rx_hung())
+            .field("tx_hung", &self.tx_hung())
+            .field("in_done", &self.in_done())
+            .field("in_suc_eof", &self.in_suc_eof())
+            .field("in_err_eof", &self.in_err_eof())
+            .field("out_done", &self.out_done())
+            .field("out_eof", &self.out_eof())
+            .field("in_dscr_err", &self.in_dscr_err())
+            .field("out_dscr_err", &self.out_dscr_err())
+            .field("in_dscr_empty", &self.in_dscr_empty())
+            .field("out_total_eof", &self.out_total_eof())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

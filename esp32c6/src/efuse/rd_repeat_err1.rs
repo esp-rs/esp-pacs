@@ -62,45 +62,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_ERR1")
-            .field(
-                "rpt4_reserved1_err_0",
-                &format_args!("{}", self.rpt4_reserved1_err_0().bits()),
-            )
-            .field(
-                "wdt_delay_sel_err",
-                &format_args!("{}", self.wdt_delay_sel_err().bits()),
-            )
-            .field(
-                "spi_boot_crypt_cnt_err",
-                &format_args!("{}", self.spi_boot_crypt_cnt_err().bits()),
-            )
+            .field("rpt4_reserved1_err_0", &self.rpt4_reserved1_err_0())
+            .field("wdt_delay_sel_err", &self.wdt_delay_sel_err())
+            .field("spi_boot_crypt_cnt_err", &self.spi_boot_crypt_cnt_err())
             .field(
                 "secure_boot_key_revoke0_err",
-                &format_args!("{}", self.secure_boot_key_revoke0_err().bit()),
+                &self.secure_boot_key_revoke0_err(),
             )
             .field(
                 "secure_boot_key_revoke1_err",
-                &format_args!("{}", self.secure_boot_key_revoke1_err().bit()),
+                &self.secure_boot_key_revoke1_err(),
             )
             .field(
                 "secure_boot_key_revoke2_err",
-                &format_args!("{}", self.secure_boot_key_revoke2_err().bit()),
+                &self.secure_boot_key_revoke2_err(),
             )
-            .field(
-                "key_purpose_0_err",
-                &format_args!("{}", self.key_purpose_0_err().bits()),
-            )
-            .field(
-                "key_purpose_1_err",
-                &format_args!("{}", self.key_purpose_1_err().bits()),
-            )
+            .field("key_purpose_0_err", &self.key_purpose_0_err())
+            .field("key_purpose_1_err", &self.key_purpose_1_err())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_ERR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Programming error record register 1 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

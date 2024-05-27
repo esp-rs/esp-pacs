@@ -44,20 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("C")
-            .field(
-                "dqt_tbl_sel",
-                &format_args!("{}", self.dqt_tbl_sel().bits()),
-            )
-            .field("y_factor", &format_args!("{}", self.y_factor().bits()))
-            .field("x_factor", &format_args!("{}", self.x_factor().bits()))
-            .field("id", &format_args!("{}", self.id().bits()))
+            .field("dqt_tbl_sel", &self.dqt_tbl_sel())
+            .field("y_factor", &self.y_factor())
+            .field("x_factor", &self.x_factor())
+            .field("id", &self.id())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<C_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

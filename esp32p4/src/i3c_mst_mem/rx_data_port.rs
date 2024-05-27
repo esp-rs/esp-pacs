@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_DATA_PORT")
-            .field(
-                "rx_data_port",
-                &format_args!("{}", self.rx_data_port().bits()),
-            )
+            .field("rx_data_port", &self.rx_data_port())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_DATA_PORT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_data_port::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

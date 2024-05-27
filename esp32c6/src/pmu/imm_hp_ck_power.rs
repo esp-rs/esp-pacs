@@ -36,12 +36,6 @@ impl core::fmt::Debug for R {
         f.debug_struct("IMM_HP_CK_POWER").finish()
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IMM_HP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]

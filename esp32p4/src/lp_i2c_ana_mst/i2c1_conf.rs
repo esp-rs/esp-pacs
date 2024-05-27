@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2C1_CONF")
-            .field("i2c1_conf", &format_args!("{}", self.i2c1_conf().bits()))
-            .field(
-                "i2c1_status",
-                &format_args!("{}", self.i2c1_status().bits()),
-            )
+            .field("i2c1_conf", &self.i2c1_conf())
+            .field("i2c1_status", &self.i2c1_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<I2C1_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

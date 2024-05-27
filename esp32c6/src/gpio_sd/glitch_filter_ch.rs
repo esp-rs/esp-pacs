@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GLITCH_FILTER_CH")
-            .field("en", &format_args!("{}", self.en().bit()))
-            .field(
-                "input_io_num",
-                &format_args!("{}", self.input_io_num().bits()),
-            )
-            .field(
-                "window_thres",
-                &format_args!("{}", self.window_thres().bits()),
-            )
-            .field(
-                "window_width",
-                &format_args!("{}", self.window_width().bits()),
-            )
+            .field("en", &self.en())
+            .field("input_io_num", &self.input_io_num())
+            .field("window_thres", &self.window_thres())
+            .field("window_width", &self.window_width())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GLITCH_FILTER_CH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

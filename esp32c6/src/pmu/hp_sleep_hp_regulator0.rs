@@ -64,35 +64,29 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_SLEEP_HP_REGULATOR0")
             .field(
                 "hp_sleep_hp_regulator_slp_mem_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_mem_xpd().bit()),
+                &self.hp_sleep_hp_regulator_slp_mem_xpd(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_logic_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_logic_xpd().bit()),
+                &self.hp_sleep_hp_regulator_slp_logic_xpd(),
             )
             .field(
                 "hp_sleep_hp_regulator_xpd",
-                &format_args!("{}", self.hp_sleep_hp_regulator_xpd().bit()),
+                &self.hp_sleep_hp_regulator_xpd(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_mem_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_mem_dbias().bits()),
+                &self.hp_sleep_hp_regulator_slp_mem_dbias(),
             )
             .field(
                 "hp_sleep_hp_regulator_slp_logic_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_slp_logic_dbias().bits()),
+                &self.hp_sleep_hp_regulator_slp_logic_dbias(),
             )
             .field(
                 "hp_sleep_hp_regulator_dbias",
-                &format_args!("{}", self.hp_sleep_hp_regulator_dbias().bits()),
+                &self.hp_sleep_hp_regulator_dbias(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_HP_REGULATOR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

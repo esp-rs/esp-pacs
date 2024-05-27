@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EDMA_PMS_RMT_LOCK")
-            .field(
-                "edma_pms_rmt_lock",
-                &format_args!("{}", self.edma_pms_rmt_lock().bit()),
-            )
+            .field("edma_pms_rmt_lock", &self.edma_pms_rmt_lock())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EDMA_PMS_RMT_LOCK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

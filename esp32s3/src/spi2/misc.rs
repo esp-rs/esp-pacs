@@ -161,51 +161,24 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("cs0_dis", &format_args!("{}", self.cs0_dis().bit()))
-            .field("cs1_dis", &format_args!("{}", self.cs1_dis().bit()))
-            .field("cs2_dis", &format_args!("{}", self.cs2_dis().bit()))
-            .field("cs3_dis", &format_args!("{}", self.cs3_dis().bit()))
-            .field("cs4_dis", &format_args!("{}", self.cs4_dis().bit()))
-            .field("cs5_dis", &format_args!("{}", self.cs5_dis().bit()))
-            .field("ck_dis", &format_args!("{}", self.ck_dis().bit()))
-            .field(
-                "master_cs_pol",
-                &format_args!("{}", self.master_cs_pol().bits()),
-            )
-            .field(
-                "clk_data_dtr_en",
-                &format_args!("{}", self.clk_data_dtr_en().bit()),
-            )
-            .field("data_dtr_en", &format_args!("{}", self.data_dtr_en().bit()))
-            .field("addr_dtr_en", &format_args!("{}", self.addr_dtr_en().bit()))
-            .field("cmd_dtr_en", &format_args!("{}", self.cmd_dtr_en().bit()))
-            .field(
-                "slave_cs_pol",
-                &format_args!("{}", self.slave_cs_pol().bit()),
-            )
-            .field(
-                "dqs_idle_edge",
-                &format_args!("{}", self.dqs_idle_edge().bit()),
-            )
-            .field(
-                "ck_idle_edge",
-                &format_args!("{}", self.ck_idle_edge().bit()),
-            )
-            .field(
-                "cs_keep_active",
-                &format_args!("{}", self.cs_keep_active().bit()),
-            )
-            .field(
-                "quad_din_pin_swap",
-                &format_args!("{}", self.quad_din_pin_swap().bit()),
-            )
+            .field("cs0_dis", &self.cs0_dis())
+            .field("cs1_dis", &self.cs1_dis())
+            .field("cs2_dis", &self.cs2_dis())
+            .field("cs3_dis", &self.cs3_dis())
+            .field("cs4_dis", &self.cs4_dis())
+            .field("cs5_dis", &self.cs5_dis())
+            .field("ck_dis", &self.ck_dis())
+            .field("master_cs_pol", &self.master_cs_pol())
+            .field("clk_data_dtr_en", &self.clk_data_dtr_en())
+            .field("data_dtr_en", &self.data_dtr_en())
+            .field("addr_dtr_en", &self.addr_dtr_en())
+            .field("cmd_dtr_en", &self.cmd_dtr_en())
+            .field("slave_cs_pol", &self.slave_cs_pol())
+            .field("dqs_idle_edge", &self.dqs_idle_edge())
+            .field("ck_idle_edge", &self.ck_idle_edge())
+            .field("cs_keep_active", &self.cs_keep_active())
+            .field("quad_din_pin_swap", &self.quad_din_pin_swap())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MISC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

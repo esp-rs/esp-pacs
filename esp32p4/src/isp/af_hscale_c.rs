@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AF_HSCALE_C")
-            .field(
-                "af_rpoint_c",
-                &format_args!("{}", self.af_rpoint_c().bits()),
-            )
-            .field(
-                "af_lpoint_c",
-                &format_args!("{}", self.af_lpoint_c().bits()),
-            )
+            .field("af_rpoint_c", &self.af_rpoint_c())
+            .field("af_lpoint_c", &self.af_lpoint_c())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AF_HSCALE_C_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

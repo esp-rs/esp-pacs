@@ -17,19 +17,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_PIF_PMS_MONITOR_6")
             .field(
                 "core_0_pif_pms_monitor_nonword_violate_status_haddr",
-                &format_args!(
-                    "{}",
-                    self.core_0_pif_pms_monitor_nonword_violate_status_haddr()
-                        .bits()
-                ),
+                &self.core_0_pif_pms_monitor_nonword_violate_status_haddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_PIF_PMS_MONITOR_6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Core0 permission report register 6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_6::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

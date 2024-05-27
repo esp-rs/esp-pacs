@@ -125,65 +125,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL00")
-            .field(
-                "flash_clk_src_sel",
-                &format_args!("{}", self.flash_clk_src_sel().bits()),
-            )
-            .field(
-                "flash_pll_clk_en",
-                &format_args!("{}", self.flash_pll_clk_en().bit()),
-            )
-            .field(
-                "flash_core_clk_en",
-                &format_args!("{}", self.flash_core_clk_en().bit()),
-            )
-            .field(
-                "flash_core_clk_div_num",
-                &format_args!("{}", self.flash_core_clk_div_num().bits()),
-            )
-            .field(
-                "psram_clk_src_sel",
-                &format_args!("{}", self.psram_clk_src_sel().bits()),
-            )
-            .field(
-                "psram_pll_clk_en",
-                &format_args!("{}", self.psram_pll_clk_en().bit()),
-            )
-            .field(
-                "psram_core_clk_en",
-                &format_args!("{}", self.psram_core_clk_en().bit()),
-            )
-            .field(
-                "psram_core_clk_div_num",
-                &format_args!("{}", self.psram_core_clk_div_num().bits()),
-            )
-            .field(
-                "pad_emac_ref_clk_en",
-                &format_args!("{}", self.pad_emac_ref_clk_en().bit()),
-            )
-            .field(
-                "emac_rmii_clk_src_sel",
-                &format_args!("{}", self.emac_rmii_clk_src_sel().bits()),
-            )
-            .field(
-                "emac_rmii_clk_en",
-                &format_args!("{}", self.emac_rmii_clk_en().bit()),
-            )
-            .field(
-                "emac_rx_clk_src_sel",
-                &format_args!("{}", self.emac_rx_clk_src_sel().bit()),
-            )
-            .field(
-                "emac_rx_clk_en",
-                &format_args!("{}", self.emac_rx_clk_en().bit()),
-            )
+            .field("flash_clk_src_sel", &self.flash_clk_src_sel())
+            .field("flash_pll_clk_en", &self.flash_pll_clk_en())
+            .field("flash_core_clk_en", &self.flash_core_clk_en())
+            .field("flash_core_clk_div_num", &self.flash_core_clk_div_num())
+            .field("psram_clk_src_sel", &self.psram_clk_src_sel())
+            .field("psram_pll_clk_en", &self.psram_pll_clk_en())
+            .field("psram_core_clk_en", &self.psram_core_clk_en())
+            .field("psram_core_clk_div_num", &self.psram_core_clk_div_num())
+            .field("pad_emac_ref_clk_en", &self.pad_emac_ref_clk_en())
+            .field("emac_rmii_clk_src_sel", &self.emac_rmii_clk_src_sel())
+            .field("emac_rmii_clk_en", &self.emac_rmii_clk_en())
+            .field("emac_rx_clk_src_sel", &self.emac_rx_clk_src_sel())
+            .field("emac_rx_clk_en", &self.emac_rx_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL00_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

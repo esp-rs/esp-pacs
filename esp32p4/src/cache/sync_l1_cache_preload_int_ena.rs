@@ -110,59 +110,47 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYNC_L1_CACHE_PRELOAD_INT_ENA")
             .field(
                 "l1_icache0_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache0_pld_done_int_ena().bit()),
+                &self.l1_icache0_pld_done_int_ena(),
             )
             .field(
                 "l1_icache1_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache1_pld_done_int_ena().bit()),
+                &self.l1_icache1_pld_done_int_ena(),
             )
             .field(
                 "l1_icache2_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache2_pld_done_int_ena().bit()),
+                &self.l1_icache2_pld_done_int_ena(),
             )
             .field(
                 "l1_icache3_pld_done_int_ena",
-                &format_args!("{}", self.l1_icache3_pld_done_int_ena().bit()),
+                &self.l1_icache3_pld_done_int_ena(),
             )
             .field(
                 "l1_dcache_pld_done_int_ena",
-                &format_args!("{}", self.l1_dcache_pld_done_int_ena().bit()),
+                &self.l1_dcache_pld_done_int_ena(),
             )
-            .field(
-                "sync_done_int_ena",
-                &format_args!("{}", self.sync_done_int_ena().bit()),
-            )
+            .field("sync_done_int_ena", &self.sync_done_int_ena())
             .field(
                 "l1_icache0_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache0_pld_err_int_ena().bit()),
+                &self.l1_icache0_pld_err_int_ena(),
             )
             .field(
                 "l1_icache1_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache1_pld_err_int_ena().bit()),
+                &self.l1_icache1_pld_err_int_ena(),
             )
             .field(
                 "l1_icache2_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache2_pld_err_int_ena().bit()),
+                &self.l1_icache2_pld_err_int_ena(),
             )
             .field(
                 "l1_icache3_pld_err_int_ena",
-                &format_args!("{}", self.l1_icache3_pld_err_int_ena().bit()),
+                &self.l1_icache3_pld_err_int_ena(),
             )
             .field(
                 "l1_dcache_pld_err_int_ena",
-                &format_args!("{}", self.l1_dcache_pld_err_int_ena().bit()),
+                &self.l1_dcache_pld_err_int_ena(),
             )
-            .field(
-                "sync_err_int_ena",
-                &format_args!("{}", self.sync_err_int_ena().bit()),
-            )
+            .field("sync_err_int_ena", &self.sync_err_int_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYNC_L1_CACHE_PRELOAD_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_FILT")
-            .field(
-                "glitch_filt",
-                &format_args!("{}", self.glitch_filt().bits()),
-            )
-            .field(
-                "glitch_filt_en",
-                &format_args!("{}", self.glitch_filt_en().bit()),
-            )
+            .field("glitch_filt", &self.glitch_filt())
+            .field("glitch_filt_en", &self.glitch_filt_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_FILT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

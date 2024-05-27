@@ -88,53 +88,17 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ANA_PLL_CTRL0")
-            .field(
-                "plla_cal_end",
-                &format_args!("{}", self.plla_cal_end().bit()),
-            )
-            .field(
-                "plla_cal_stop",
-                &format_args!("{}", self.plla_cal_stop().bit()),
-            )
-            .field(
-                "cpu_pll_cal_end",
-                &format_args!("{}", self.cpu_pll_cal_end().bit()),
-            )
-            .field(
-                "cpu_pll_cal_stop",
-                &format_args!("{}", self.cpu_pll_cal_stop().bit()),
-            )
-            .field(
-                "sdio_pll_cal_end",
-                &format_args!("{}", self.sdio_pll_cal_end().bit()),
-            )
-            .field(
-                "sdio_pll_cal_stop",
-                &format_args!("{}", self.sdio_pll_cal_stop().bit()),
-            )
-            .field(
-                "sys_pll_cal_end",
-                &format_args!("{}", self.sys_pll_cal_end().bit()),
-            )
-            .field(
-                "sys_pll_cal_stop",
-                &format_args!("{}", self.sys_pll_cal_stop().bit()),
-            )
-            .field(
-                "mspi_cal_end",
-                &format_args!("{}", self.mspi_cal_end().bit()),
-            )
-            .field(
-                "mspi_cal_stop",
-                &format_args!("{}", self.mspi_cal_stop().bit()),
-            )
+            .field("plla_cal_end", &self.plla_cal_end())
+            .field("plla_cal_stop", &self.plla_cal_stop())
+            .field("cpu_pll_cal_end", &self.cpu_pll_cal_end())
+            .field("cpu_pll_cal_stop", &self.cpu_pll_cal_stop())
+            .field("sdio_pll_cal_end", &self.sdio_pll_cal_end())
+            .field("sdio_pll_cal_stop", &self.sdio_pll_cal_stop())
+            .field("sys_pll_cal_end", &self.sys_pll_cal_end())
+            .field("sys_pll_cal_stop", &self.sys_pll_cal_stop())
+            .field("mspi_cal_end", &self.mspi_cal_end())
+            .field("mspi_cal_stop", &self.mspi_cal_stop())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ANA_PLL_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

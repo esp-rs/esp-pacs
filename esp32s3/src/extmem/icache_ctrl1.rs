@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_CTRL1")
-            .field(
-                "icache_shut_core0_bus",
-                &format_args!("{}", self.icache_shut_core0_bus().bit()),
-            )
-            .field(
-                "icache_shut_core1_bus",
-                &format_args!("{}", self.icache_shut_core1_bus().bit()),
-            )
+            .field("icache_shut_core0_bus", &self.icache_shut_core0_bus())
+            .field("icache_shut_core1_bus", &self.icache_shut_core1_bus())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

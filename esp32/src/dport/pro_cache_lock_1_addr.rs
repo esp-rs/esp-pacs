@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CACHE_LOCK_1_ADDR")
-            .field("pre", &format_args!("{}", self.pre().bits()))
-            .field("min", &format_args!("{}", self.min().bits()))
-            .field("max", &format_args!("{}", self.max().bits()))
+            .field("pre", &self.pre())
+            .field("min", &self.min())
+            .field("max", &self.max())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CACHE_LOCK_1_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

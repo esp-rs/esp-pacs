@@ -40,29 +40,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RESET_STATE")
-            .field(
-                "reset_cause_procpu",
-                &format_args!("{}", self.reset_cause_procpu().bits()),
-            )
-            .field(
-                "reset_cause_appcpu",
-                &format_args!("{}", self.reset_cause_appcpu().bits()),
-            )
-            .field(
-                "appcpu_stat_vector_sel",
-                &format_args!("{}", self.appcpu_stat_vector_sel().bit()),
-            )
-            .field(
-                "procpu_stat_vector_sel",
-                &format_args!("{}", self.procpu_stat_vector_sel().bit()),
-            )
+            .field("reset_cause_procpu", &self.reset_cause_procpu())
+            .field("reset_cause_appcpu", &self.reset_cause_appcpu())
+            .field("appcpu_stat_vector_sel", &self.appcpu_stat_vector_sel())
+            .field("procpu_stat_vector_sel", &self.procpu_stat_vector_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RESET_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

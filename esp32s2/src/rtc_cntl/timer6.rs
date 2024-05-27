@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMER6")
-            .field(
-                "dg_dcdc_wait_timer",
-                &format_args!("{}", self.dg_dcdc_wait_timer().bits()),
-            )
-            .field(
-                "dg_dcdc_powerup_timer",
-                &format_args!("{}", self.dg_dcdc_powerup_timer().bits()),
-            )
+            .field("dg_dcdc_wait_timer", &self.dg_dcdc_wait_timer())
+            .field("dg_dcdc_powerup_timer", &self.dg_dcdc_powerup_timer())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMER6_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

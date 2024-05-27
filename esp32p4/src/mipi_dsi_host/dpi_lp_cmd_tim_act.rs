@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_LP_CMD_TIM_ACT")
-            .field(
-                "invact_lpcmd_time_act",
-                &format_args!("{}", self.invact_lpcmd_time_act().bits()),
-            )
-            .field(
-                "outvact_lpcmd_time_act",
-                &format_args!("{}", self.outvact_lpcmd_time_act().bits()),
-            )
+            .field("invact_lpcmd_time_act", &self.invact_lpcmd_time_act())
+            .field("outvact_lpcmd_time_act", &self.outvact_lpcmd_time_act())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_LP_CMD_TIM_ACT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpi_lp_cmd_tim_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

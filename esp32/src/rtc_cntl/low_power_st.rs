@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LOW_POWER_ST")
-            .field(
-                "low_power_diag0",
-                &format_args!("{}", self.low_power_diag0().bits()),
-            )
-            .field(
-                "rdy_for_wakeup",
-                &format_args!("{}", self.rdy_for_wakeup().bit()),
-            )
+            .field("low_power_diag0", &self.low_power_diag0())
+            .field("rdy_for_wakeup", &self.rdy_for_wakeup())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LOW_POWER_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`low_power_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

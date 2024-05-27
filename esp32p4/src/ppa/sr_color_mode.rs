@@ -62,31 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_COLOR_MODE")
-            .field("sr_rx_cm", &format_args!("{}", self.sr_rx_cm().bits()))
-            .field("sr_tx_cm", &format_args!("{}", self.sr_tx_cm().bits()))
-            .field(
-                "yuv_rx_range",
-                &format_args!("{}", self.yuv_rx_range().bit()),
-            )
-            .field(
-                "yuv_tx_range",
-                &format_args!("{}", self.yuv_tx_range().bit()),
-            )
-            .field(
-                "yuv2rgb_protocal",
-                &format_args!("{}", self.yuv2rgb_protocal().bit()),
-            )
-            .field(
-                "rgb2yuv_protocal",
-                &format_args!("{}", self.rgb2yuv_protocal().bit()),
-            )
+            .field("sr_rx_cm", &self.sr_rx_cm())
+            .field("sr_tx_cm", &self.sr_tx_cm())
+            .field("yuv_rx_range", &self.yuv_rx_range())
+            .field("yuv_tx_range", &self.yuv_tx_range())
+            .field("yuv2rgb_protocal", &self.yuv2rgb_protocal())
+            .field("rgb2yuv_protocal", &self.rgb2yuv_protocal())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_COLOR_MODE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

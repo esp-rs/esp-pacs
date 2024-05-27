@@ -251,76 +251,34 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER")
-            .field("doutdin", &format_args!("{}", self.doutdin().bit()))
-            .field("cs_hold", &format_args!("{}", self.cs_hold().bit()))
-            .field("cs_setup", &format_args!("{}", self.cs_setup().bit()))
-            .field("ck_i_edge", &format_args!("{}", self.ck_i_edge().bit()))
-            .field("ck_out_edge", &format_args!("{}", self.ck_out_edge().bit()))
-            .field(
-                "rd_byte_order",
-                &format_args!("{}", self.rd_byte_order().bit()),
-            )
-            .field(
-                "wr_byte_order",
-                &format_args!("{}", self.wr_byte_order().bit()),
-            )
-            .field("fwrite_dual", &format_args!("{}", self.fwrite_dual().bit()))
-            .field("fwrite_quad", &format_args!("{}", self.fwrite_quad().bit()))
-            .field("fwrite_dio", &format_args!("{}", self.fwrite_dio().bit()))
-            .field("fwrite_qio", &format_args!("{}", self.fwrite_qio().bit()))
-            .field("sio", &format_args!("{}", self.sio().bit()))
-            .field(
-                "usr_hold_pol",
-                &format_args!("{}", self.usr_hold_pol().bit()),
-            )
-            .field(
-                "usr_dout_hold",
-                &format_args!("{}", self.usr_dout_hold().bit()),
-            )
-            .field(
-                "usr_din_hold",
-                &format_args!("{}", self.usr_din_hold().bit()),
-            )
-            .field(
-                "usr_dummy_hold",
-                &format_args!("{}", self.usr_dummy_hold().bit()),
-            )
-            .field(
-                "usr_addr_hold",
-                &format_args!("{}", self.usr_addr_hold().bit()),
-            )
-            .field(
-                "usr_cmd_hold",
-                &format_args!("{}", self.usr_cmd_hold().bit()),
-            )
-            .field(
-                "usr_prep_hold",
-                &format_args!("{}", self.usr_prep_hold().bit()),
-            )
-            .field(
-                "usr_miso_highpart",
-                &format_args!("{}", self.usr_miso_highpart().bit()),
-            )
-            .field(
-                "usr_mosi_highpart",
-                &format_args!("{}", self.usr_mosi_highpart().bit()),
-            )
-            .field(
-                "usr_dummy_idle",
-                &format_args!("{}", self.usr_dummy_idle().bit()),
-            )
-            .field("usr_mosi", &format_args!("{}", self.usr_mosi().bit()))
-            .field("usr_miso", &format_args!("{}", self.usr_miso().bit()))
-            .field("usr_dummy", &format_args!("{}", self.usr_dummy().bit()))
-            .field("usr_addr", &format_args!("{}", self.usr_addr().bit()))
-            .field("usr_command", &format_args!("{}", self.usr_command().bit()))
+            .field("doutdin", &self.doutdin())
+            .field("cs_hold", &self.cs_hold())
+            .field("cs_setup", &self.cs_setup())
+            .field("ck_i_edge", &self.ck_i_edge())
+            .field("ck_out_edge", &self.ck_out_edge())
+            .field("rd_byte_order", &self.rd_byte_order())
+            .field("wr_byte_order", &self.wr_byte_order())
+            .field("fwrite_dual", &self.fwrite_dual())
+            .field("fwrite_quad", &self.fwrite_quad())
+            .field("fwrite_dio", &self.fwrite_dio())
+            .field("fwrite_qio", &self.fwrite_qio())
+            .field("sio", &self.sio())
+            .field("usr_hold_pol", &self.usr_hold_pol())
+            .field("usr_dout_hold", &self.usr_dout_hold())
+            .field("usr_din_hold", &self.usr_din_hold())
+            .field("usr_dummy_hold", &self.usr_dummy_hold())
+            .field("usr_addr_hold", &self.usr_addr_hold())
+            .field("usr_cmd_hold", &self.usr_cmd_hold())
+            .field("usr_prep_hold", &self.usr_prep_hold())
+            .field("usr_miso_highpart", &self.usr_miso_highpart())
+            .field("usr_mosi_highpart", &self.usr_mosi_highpart())
+            .field("usr_dummy_idle", &self.usr_dummy_idle())
+            .field("usr_mosi", &self.usr_mosi())
+            .field("usr_miso", &self.usr_miso())
+            .field("usr_dummy", &self.usr_dummy())
+            .field("usr_addr", &self.usr_addr())
+            .field("usr_command", &self.usr_command())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

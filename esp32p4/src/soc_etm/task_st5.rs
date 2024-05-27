@@ -296,141 +296,69 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_ST5")
-            .field(
-                "regdma_task_start0_st",
-                &format_args!("{}", self.regdma_task_start0_st().bit()),
-            )
-            .field(
-                "regdma_task_start1_st",
-                &format_args!("{}", self.regdma_task_start1_st().bit()),
-            )
-            .field(
-                "regdma_task_start2_st",
-                &format_args!("{}", self.regdma_task_start2_st().bit()),
-            )
-            .field(
-                "regdma_task_start3_st",
-                &format_args!("{}", self.regdma_task_start3_st().bit()),
-            )
+            .field("regdma_task_start0_st", &self.regdma_task_start0_st())
+            .field("regdma_task_start1_st", &self.regdma_task_start1_st())
+            .field("regdma_task_start2_st", &self.regdma_task_start2_st())
+            .field("regdma_task_start3_st", &self.regdma_task_start3_st())
             .field(
                 "tmpsnsr_task_start_sample_st",
-                &format_args!("{}", self.tmpsnsr_task_start_sample_st().bit()),
+                &self.tmpsnsr_task_start_sample_st(),
             )
             .field(
                 "tmpsnsr_task_stop_sample_st",
-                &format_args!("{}", self.tmpsnsr_task_stop_sample_st().bit()),
+                &self.tmpsnsr_task_stop_sample_st(),
             )
-            .field(
-                "i2s0_task_start_rx_st",
-                &format_args!("{}", self.i2s0_task_start_rx_st().bit()),
-            )
-            .field(
-                "i2s0_task_start_tx_st",
-                &format_args!("{}", self.i2s0_task_start_tx_st().bit()),
-            )
-            .field(
-                "i2s0_task_stop_rx_st",
-                &format_args!("{}", self.i2s0_task_stop_rx_st().bit()),
-            )
-            .field(
-                "i2s0_task_stop_tx_st",
-                &format_args!("{}", self.i2s0_task_stop_tx_st().bit()),
-            )
-            .field(
-                "i2s1_task_start_rx_st",
-                &format_args!("{}", self.i2s1_task_start_rx_st().bit()),
-            )
-            .field(
-                "i2s1_task_start_tx_st",
-                &format_args!("{}", self.i2s1_task_start_tx_st().bit()),
-            )
-            .field(
-                "i2s1_task_stop_rx_st",
-                &format_args!("{}", self.i2s1_task_stop_rx_st().bit()),
-            )
-            .field(
-                "i2s1_task_stop_tx_st",
-                &format_args!("{}", self.i2s1_task_stop_tx_st().bit()),
-            )
-            .field(
-                "i2s2_task_start_rx_st",
-                &format_args!("{}", self.i2s2_task_start_rx_st().bit()),
-            )
-            .field(
-                "i2s2_task_start_tx_st",
-                &format_args!("{}", self.i2s2_task_start_tx_st().bit()),
-            )
-            .field(
-                "i2s2_task_stop_rx_st",
-                &format_args!("{}", self.i2s2_task_stop_rx_st().bit()),
-            )
-            .field(
-                "i2s2_task_stop_tx_st",
-                &format_args!("{}", self.i2s2_task_stop_tx_st().bit()),
-            )
-            .field(
-                "ulp_task_wakeup_cpu_st",
-                &format_args!("{}", self.ulp_task_wakeup_cpu_st().bit()),
-            )
-            .field(
-                "ulp_task_int_cpu_st",
-                &format_args!("{}", self.ulp_task_int_cpu_st().bit()),
-            )
-            .field(
-                "rtc_task_start_st",
-                &format_args!("{}", self.rtc_task_start_st().bit()),
-            )
-            .field(
-                "rtc_task_stop_st",
-                &format_args!("{}", self.rtc_task_stop_st().bit()),
-            )
-            .field(
-                "rtc_task_clr_st",
-                &format_args!("{}", self.rtc_task_clr_st().bit()),
-            )
-            .field(
-                "rtc_task_triggerflw_st",
-                &format_args!("{}", self.rtc_task_triggerflw_st().bit()),
-            )
+            .field("i2s0_task_start_rx_st", &self.i2s0_task_start_rx_st())
+            .field("i2s0_task_start_tx_st", &self.i2s0_task_start_tx_st())
+            .field("i2s0_task_stop_rx_st", &self.i2s0_task_stop_rx_st())
+            .field("i2s0_task_stop_tx_st", &self.i2s0_task_stop_tx_st())
+            .field("i2s1_task_start_rx_st", &self.i2s1_task_start_rx_st())
+            .field("i2s1_task_start_tx_st", &self.i2s1_task_start_tx_st())
+            .field("i2s1_task_stop_rx_st", &self.i2s1_task_stop_rx_st())
+            .field("i2s1_task_stop_tx_st", &self.i2s1_task_stop_tx_st())
+            .field("i2s2_task_start_rx_st", &self.i2s2_task_start_rx_st())
+            .field("i2s2_task_start_tx_st", &self.i2s2_task_start_tx_st())
+            .field("i2s2_task_stop_rx_st", &self.i2s2_task_stop_rx_st())
+            .field("i2s2_task_stop_tx_st", &self.i2s2_task_stop_tx_st())
+            .field("ulp_task_wakeup_cpu_st", &self.ulp_task_wakeup_cpu_st())
+            .field("ulp_task_int_cpu_st", &self.ulp_task_int_cpu_st())
+            .field("rtc_task_start_st", &self.rtc_task_start_st())
+            .field("rtc_task_stop_st", &self.rtc_task_stop_st())
+            .field("rtc_task_clr_st", &self.rtc_task_clr_st())
+            .field("rtc_task_triggerflw_st", &self.rtc_task_triggerflw_st())
             .field(
                 "pdma_ahb_task_in_start_ch0_st",
-                &format_args!("{}", self.pdma_ahb_task_in_start_ch0_st().bit()),
+                &self.pdma_ahb_task_in_start_ch0_st(),
             )
             .field(
                 "pdma_ahb_task_in_start_ch1_st",
-                &format_args!("{}", self.pdma_ahb_task_in_start_ch1_st().bit()),
+                &self.pdma_ahb_task_in_start_ch1_st(),
             )
             .field(
                 "pdma_ahb_task_in_start_ch2_st",
-                &format_args!("{}", self.pdma_ahb_task_in_start_ch2_st().bit()),
+                &self.pdma_ahb_task_in_start_ch2_st(),
             )
             .field(
                 "pdma_ahb_task_out_start_ch0_st",
-                &format_args!("{}", self.pdma_ahb_task_out_start_ch0_st().bit()),
+                &self.pdma_ahb_task_out_start_ch0_st(),
             )
             .field(
                 "pdma_ahb_task_out_start_ch1_st",
-                &format_args!("{}", self.pdma_ahb_task_out_start_ch1_st().bit()),
+                &self.pdma_ahb_task_out_start_ch1_st(),
             )
             .field(
                 "pdma_ahb_task_out_start_ch2_st",
-                &format_args!("{}", self.pdma_ahb_task_out_start_ch2_st().bit()),
+                &self.pdma_ahb_task_out_start_ch2_st(),
             )
             .field(
                 "pdma_axi_task_in_start_ch0_st",
-                &format_args!("{}", self.pdma_axi_task_in_start_ch0_st().bit()),
+                &self.pdma_axi_task_in_start_ch0_st(),
             )
             .field(
                 "pdma_axi_task_in_start_ch1_st",
-                &format_args!("{}", self.pdma_axi_task_in_start_ch1_st().bit()),
+                &self.pdma_axi_task_in_start_ch1_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_ST5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

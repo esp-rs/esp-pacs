@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_CTRL0")
-            .field(
-                "filter_channel1",
-                &format_args!("{}", self.filter_channel1().bits()),
-            )
-            .field(
-                "filter_channel0",
-                &format_args!("{}", self.filter_channel0().bits()),
-            )
-            .field(
-                "filter_reset",
-                &format_args!("{}", self.filter_reset().bit()),
-            )
+            .field("filter_channel1", &self.filter_channel1())
+            .field("filter_channel0", &self.filter_channel0())
+            .field("filter_reset", &self.filter_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FILTER_CTRL0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

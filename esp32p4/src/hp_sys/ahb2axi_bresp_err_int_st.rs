@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHB2AXI_BRESP_ERR_INT_ST")
             .field(
                 "cpu_icm_h2x_bresp_err_int_st",
-                &format_args!("{}", self.cpu_icm_h2x_bresp_err_int_st().bit()),
+                &self.cpu_icm_h2x_bresp_err_int_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHB2AXI_BRESP_ERR_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ahb2axi_bresp_err_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

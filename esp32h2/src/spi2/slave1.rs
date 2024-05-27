@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE1")
-            .field(
-                "slv_data_bitlen",
-                &format_args!("{}", self.slv_data_bitlen().bits()),
-            )
-            .field(
-                "slv_last_command",
-                &format_args!("{}", self.slv_last_command().bits()),
-            )
-            .field(
-                "slv_last_addr",
-                &format_args!("{}", self.slv_last_addr().bits()),
-            )
+            .field("slv_data_bitlen", &self.slv_data_bitlen())
+            .field("slv_last_command", &self.slv_last_command())
+            .field("slv_last_addr", &self.slv_last_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

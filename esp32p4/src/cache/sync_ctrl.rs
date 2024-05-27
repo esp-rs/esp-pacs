@@ -60,28 +60,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYNC_CTRL")
-            .field(
-                "invalidate_ena",
-                &format_args!("{}", self.invalidate_ena().bit()),
-            )
-            .field("clean_ena", &format_args!("{}", self.clean_ena().bit()))
-            .field(
-                "writeback_ena",
-                &format_args!("{}", self.writeback_ena().bit()),
-            )
-            .field(
-                "writeback_invalidate_ena",
-                &format_args!("{}", self.writeback_invalidate_ena().bit()),
-            )
-            .field("sync_done", &format_args!("{}", self.sync_done().bit()))
-            .field("sync_rgid", &format_args!("{}", self.sync_rgid().bits()))
+            .field("invalidate_ena", &self.invalidate_ena())
+            .field("clean_ena", &self.clean_ena())
+            .field("writeback_ena", &self.writeback_ena())
+            .field("writeback_invalidate_ena", &self.writeback_invalidate_ena())
+            .field("sync_done", &self.sync_done())
+            .field("sync_rgid", &self.sync_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYNC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

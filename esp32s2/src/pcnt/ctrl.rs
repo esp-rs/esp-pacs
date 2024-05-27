@@ -95,34 +95,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("cnt_rst_u0", &format_args!("{}", self.cnt_rst_u0().bit()))
-            .field("cnt_rst_u1", &format_args!("{}", self.cnt_rst_u1().bit()))
-            .field("cnt_rst_u2", &format_args!("{}", self.cnt_rst_u2().bit()))
-            .field("cnt_rst_u3", &format_args!("{}", self.cnt_rst_u3().bit()))
-            .field(
-                "cnt_pause_u0",
-                &format_args!("{}", self.cnt_pause_u0().bit()),
-            )
-            .field(
-                "cnt_pause_u1",
-                &format_args!("{}", self.cnt_pause_u1().bit()),
-            )
-            .field(
-                "cnt_pause_u2",
-                &format_args!("{}", self.cnt_pause_u2().bit()),
-            )
-            .field(
-                "cnt_pause_u3",
-                &format_args!("{}", self.cnt_pause_u3().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
+            .field("cnt_rst_u0", &self.cnt_rst_u0())
+            .field("cnt_rst_u1", &self.cnt_rst_u1())
+            .field("cnt_rst_u2", &self.cnt_rst_u2())
+            .field("cnt_rst_u3", &self.cnt_rst_u3())
+            .field("cnt_pause_u0", &self.cnt_pause_u0())
+            .field("cnt_pause_u1", &self.cnt_pause_u1())
+            .field("cnt_pause_u2", &self.cnt_pause_u2())
+            .field("cnt_pause_u3", &self.cnt_pause_u3())
+            .field("clk_en", &self.clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

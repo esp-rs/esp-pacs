@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_0_DSCR_CNT")
-            .field(
-                "slc0_rx_dscr_cnt_lat",
-                &format_args!("{}", self.slc0_rx_dscr_cnt_lat().bits()),
-            )
-            .field(
-                "slc0_rx_get_eof_occ",
-                &format_args!("{}", self.slc0_rx_get_eof_occ().bit()),
-            )
+            .field("slc0_rx_dscr_cnt_lat", &self.slc0_rx_dscr_cnt_lat())
+            .field("slc0_rx_get_eof_occ", &self.slc0_rx_get_eof_occ())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_0_DSCR_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_dscr_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

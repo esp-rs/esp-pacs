@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL110")
-            .field(
-                "lcd_clk_div_num",
-                &format_args!("{}", self.lcd_clk_div_num().bits()),
-            )
-            .field(
-                "lcd_clk_div_numerator",
-                &format_args!("{}", self.lcd_clk_div_numerator().bits()),
-            )
-            .field(
-                "lcd_clk_div_denominator",
-                &format_args!("{}", self.lcd_clk_div_denominator().bits()),
-            )
-            .field(
-                "uart0_clk_src_sel",
-                &format_args!("{}", self.uart0_clk_src_sel().bits()),
-            )
-            .field(
-                "uart0_clk_en",
-                &format_args!("{}", self.uart0_clk_en().bit()),
-            )
+            .field("lcd_clk_div_num", &self.lcd_clk_div_num())
+            .field("lcd_clk_div_numerator", &self.lcd_clk_div_numerator())
+            .field("lcd_clk_div_denominator", &self.lcd_clk_div_denominator())
+            .field("uart0_clk_src_sel", &self.uart0_clk_src_sel())
+            .field("uart0_clk_en", &self.uart0_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL110_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

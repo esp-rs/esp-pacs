@@ -27,22 +27,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS_5")
-            .field("pad5_data", &format_args!("{}", self.pad5_data().bits()))
-            .field(
-                "pad5_debounce_cnt",
-                &format_args!("{}", self.pad5_debounce_cnt().bits()),
-            )
-            .field(
-                "pad5_neg_noise_cnt",
-                &format_args!("{}", self.pad5_neg_noise_cnt().bits()),
-            )
+            .field("pad5_data", &self.pad5_data())
+            .field("pad5_debounce_cnt", &self.pad5_debounce_cnt())
+            .field("pad5_neg_noise_cnt", &self.pad5_neg_noise_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS_5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

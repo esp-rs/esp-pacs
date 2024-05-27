@@ -92,51 +92,39 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_DATA_MEM_ACS_CONF")
             .field(
                 "l1_icache0_data_mem_rd_en",
-                &format_args!("{}", self.l1_icache0_data_mem_rd_en().bit()),
+                &self.l1_icache0_data_mem_rd_en(),
             )
             .field(
                 "l1_icache0_data_mem_wr_en",
-                &format_args!("{}", self.l1_icache0_data_mem_wr_en().bit()),
+                &self.l1_icache0_data_mem_wr_en(),
             )
             .field(
                 "l1_icache1_data_mem_rd_en",
-                &format_args!("{}", self.l1_icache1_data_mem_rd_en().bit()),
+                &self.l1_icache1_data_mem_rd_en(),
             )
             .field(
                 "l1_icache1_data_mem_wr_en",
-                &format_args!("{}", self.l1_icache1_data_mem_wr_en().bit()),
+                &self.l1_icache1_data_mem_wr_en(),
             )
             .field(
                 "l1_icache2_data_mem_rd_en",
-                &format_args!("{}", self.l1_icache2_data_mem_rd_en().bit()),
+                &self.l1_icache2_data_mem_rd_en(),
             )
             .field(
                 "l1_icache2_data_mem_wr_en",
-                &format_args!("{}", self.l1_icache2_data_mem_wr_en().bit()),
+                &self.l1_icache2_data_mem_wr_en(),
             )
             .field(
                 "l1_icache3_data_mem_rd_en",
-                &format_args!("{}", self.l1_icache3_data_mem_rd_en().bit()),
+                &self.l1_icache3_data_mem_rd_en(),
             )
             .field(
                 "l1_icache3_data_mem_wr_en",
-                &format_args!("{}", self.l1_icache3_data_mem_wr_en().bit()),
+                &self.l1_icache3_data_mem_wr_en(),
             )
-            .field(
-                "l1_dcache_data_mem_rd_en",
-                &format_args!("{}", self.l1_dcache_data_mem_rd_en().bit()),
-            )
-            .field(
-                "l1_dcache_data_mem_wr_en",
-                &format_args!("{}", self.l1_dcache_data_mem_wr_en().bit()),
-            )
+            .field("l1_dcache_data_mem_rd_en", &self.l1_dcache_data_mem_rd_en())
+            .field("l1_dcache_data_mem_wr_en", &self.l1_dcache_data_mem_wr_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RETENTION_CTRL")
-            .field(
-                "retention_cpu_link_addr",
-                &format_args!("{}", self.retention_cpu_link_addr().bits()),
-            )
-            .field(
-                "nobypass_cpu_iso_rst",
-                &format_args!("{}", self.nobypass_cpu_iso_rst().bit()),
-            )
+            .field("retention_cpu_link_addr", &self.retention_cpu_link_addr())
+            .field("nobypass_cpu_iso_rst", &self.nobypass_cpu_iso_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RETENTION_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

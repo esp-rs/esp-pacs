@@ -29,23 +29,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_MEM_INT_ST")
             .field(
                 "reg_l2_mem_ecc_err_int_st",
-                &format_args!("{}", self.reg_l2_mem_ecc_err_int_st().bit()),
+                &self.reg_l2_mem_ecc_err_int_st(),
             )
             .field(
                 "reg_l2_mem_exceed_addr_int_st",
-                &format_args!("{}", self.reg_l2_mem_exceed_addr_int_st().bit()),
+                &self.reg_l2_mem_exceed_addr_int_st(),
             )
             .field(
                 "reg_l2_mem_err_resp_int_st",
-                &format_args!("{}", self.reg_l2_mem_err_resp_int_st().bit()),
+                &self.reg_l2_mem_err_resp_int_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_MEM_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_mem_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

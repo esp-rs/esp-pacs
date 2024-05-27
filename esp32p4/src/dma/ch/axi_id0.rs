@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AXI_ID0")
-            .field(
-                "ch1_axi_read_id_suffix",
-                &format_args!("{}", self.ch1_axi_read_id_suffix().bit()),
-            )
-            .field(
-                "ch1_axi_write_id_suffix",
-                &format_args!("{}", self.ch1_axi_write_id_suffix().bit()),
-            )
+            .field("ch1_axi_read_id_suffix", &self.ch1_axi_read_id_suffix())
+            .field("ch1_axi_write_id_suffix", &self.ch1_axi_write_id_suffix())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AXI_ID0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

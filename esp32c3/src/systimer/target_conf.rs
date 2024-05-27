@@ -35,19 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TARGET_CONF")
-            .field("period", &format_args!("{}", self.period().bits()))
-            .field("period_mode", &format_args!("{}", self.period_mode().bit()))
-            .field(
-                "timer_unit_sel",
-                &format_args!("{}", self.timer_unit_sel().bit()),
-            )
+            .field("period", &self.period())
+            .field("period_mode", &self.period_mode())
+            .field("timer_unit_sel", &self.timer_unit_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TARGET_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -55,35 +55,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CH_TX_STATUS")
-            .field(
-                "mem_raddr_ex",
-                &format_args!("{}", self.mem_raddr_ex().bits()),
-            )
-            .field("state", &format_args!("{}", self.state().bits()))
-            .field(
-                "apb_mem_waddr",
-                &format_args!("{}", self.apb_mem_waddr().bits()),
-            )
-            .field(
-                "apb_mem_rd_err",
-                &format_args!("{}", self.apb_mem_rd_err().bit()),
-            )
-            .field("mem_empty", &format_args!("{}", self.mem_empty().bit()))
-            .field(
-                "apb_mem_wr_err",
-                &format_args!("{}", self.apb_mem_wr_err().bit()),
-            )
-            .field(
-                "apb_mem_raddr",
-                &format_args!("{}", self.apb_mem_raddr().bits()),
-            )
+            .field("mem_raddr_ex", &self.mem_raddr_ex())
+            .field("state", &self.state())
+            .field("apb_mem_waddr", &self.apb_mem_waddr())
+            .field("apb_mem_rd_err", &self.apb_mem_rd_err())
+            .field("mem_empty", &self.mem_empty())
+            .field("apb_mem_wr_err", &self.apb_mem_wr_err())
+            .field("apb_mem_raddr", &self.apb_mem_raddr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CH_TX_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Channel %s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_tx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

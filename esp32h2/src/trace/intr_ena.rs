@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_ENA")
-            .field(
-                "fifo_overflow_intr_ena",
-                &format_args!("{}", self.fifo_overflow_intr_ena().bit()),
-            )
-            .field(
-                "mem_full_intr_ena",
-                &format_args!("{}", self.mem_full_intr_ena().bit()),
-            )
+            .field("fifo_overflow_intr_ena", &self.fifo_overflow_intr_ena())
+            .field("mem_full_intr_ena", &self.mem_full_intr_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTR_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

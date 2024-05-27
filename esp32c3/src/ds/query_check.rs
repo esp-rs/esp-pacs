@@ -20,15 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("QUERY_CHECK")
-            .field("md_error", &format_args!("{}", self.md_error().bit()))
-            .field("padding_bad", &format_args!("{}", self.padding_bad().bit()))
+            .field("md_error", &self.md_error())
+            .field("padding_bad", &self.padding_bad())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<QUERY_CHECK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "DS query check result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_check::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

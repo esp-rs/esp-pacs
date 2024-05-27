@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FILTER_MATCH_CONTROL")
-            .field(
-                "match_choice_privilege",
-                &format_args!("{}", self.match_choice_privilege().bit()),
-            )
-            .field(
-                "match_value_interrupt",
-                &format_args!("{}", self.match_value_interrupt().bit()),
-            )
-            .field(
-                "match_choice_ecause",
-                &format_args!("{}", self.match_choice_ecause().bits()),
-            )
+            .field("match_choice_privilege", &self.match_choice_privilege())
+            .field("match_value_interrupt", &self.match_value_interrupt())
+            .field("match_choice_ecause", &self.match_choice_ecause())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FILTER_MATCH_CONTROL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

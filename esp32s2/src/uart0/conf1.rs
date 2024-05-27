@@ -53,27 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field(
-                "rxfifo_full_thrhd",
-                &format_args!("{}", self.rxfifo_full_thrhd().bits()),
-            )
-            .field(
-                "txfifo_empty_thrhd",
-                &format_args!("{}", self.txfifo_empty_thrhd().bits()),
-            )
-            .field(
-                "rx_tout_flow_dis",
-                &format_args!("{}", self.rx_tout_flow_dis().bit()),
-            )
-            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
-            .field("rx_tout_en", &format_args!("{}", self.rx_tout_en().bit()))
+            .field("rxfifo_full_thrhd", &self.rxfifo_full_thrhd())
+            .field("txfifo_empty_thrhd", &self.txfifo_empty_thrhd())
+            .field("rx_tout_flow_dis", &self.rx_tout_flow_dis())
+            .field("rx_flow_en", &self.rx_flow_en())
+            .field("rx_tout_en", &self.rx_tout_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

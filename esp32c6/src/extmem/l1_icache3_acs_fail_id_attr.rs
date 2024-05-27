@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_ICACHE3_ACS_FAIL_ID_ATTR")
-            .field(
-                "l1_icache3_fail_id",
-                &format_args!("{}", self.l1_icache3_fail_id().bits()),
-            )
-            .field(
-                "l1_icache3_fail_attr",
-                &format_args!("{}", self.l1_icache3_fail_attr().bits()),
-            )
+            .field("l1_icache3_fail_id", &self.l1_icache3_fail_id())
+            .field("l1_icache3_fail_attr", &self.l1_icache3_fail_attr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_ICACHE3_ACS_FAIL_ID_ATTR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L1-ICache0 Access Fail ID/attribution information register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache3_acs_fail_id_attr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

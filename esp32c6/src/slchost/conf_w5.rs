@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF_W5")
-            .field(
-                "slchost_conf20",
-                &format_args!("{}", self.slchost_conf20().bits()),
-            )
-            .field(
-                "slchost_conf21",
-                &format_args!("{}", self.slchost_conf21().bits()),
-            )
-            .field(
-                "slchost_conf22",
-                &format_args!("{}", self.slchost_conf22().bits()),
-            )
-            .field(
-                "slchost_conf23",
-                &format_args!("{}", self.slchost_conf23().bits()),
-            )
+            .field("slchost_conf20", &self.slchost_conf20())
+            .field("slchost_conf21", &self.slchost_conf21())
+            .field("slchost_conf22", &self.slchost_conf22())
+            .field("slchost_conf23", &self.slchost_conf23())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF_W5_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("YUV_CFG")
-            .field("protocal", &format_args!("{}", self.protocal().bit()))
-            .field(
-                "yuv_pix_endian",
-                &format_args!("{}", self.yuv_pix_endian().bit()),
-            )
-            .field(
-                "yuv422_format",
-                &format_args!("{}", self.yuv422_format().bits()),
-            )
+            .field("protocal", &self.protocal())
+            .field("yuv_pix_endian", &self.yuv_pix_endian())
+            .field("yuv422_format", &self.yuv422_format())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<YUV_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

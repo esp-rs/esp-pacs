@@ -82,39 +82,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_SCAL_ROTATE")
-            .field(
-                "sr_scal_x_int",
-                &format_args!("{}", self.sr_scal_x_int().bits()),
-            )
-            .field(
-                "sr_scal_x_frag",
-                &format_args!("{}", self.sr_scal_x_frag().bits()),
-            )
-            .field(
-                "sr_scal_y_int",
-                &format_args!("{}", self.sr_scal_y_int().bits()),
-            )
-            .field(
-                "sr_scal_y_frag",
-                &format_args!("{}", self.sr_scal_y_frag().bits()),
-            )
-            .field(
-                "sr_rotate_angle",
-                &format_args!("{}", self.sr_rotate_angle().bits()),
-            )
-            .field(
-                "scal_rotate_rst",
-                &format_args!("{}", self.scal_rotate_rst().bit()),
-            )
-            .field("sr_mirror_x", &format_args!("{}", self.sr_mirror_x().bit()))
-            .field("sr_mirror_y", &format_args!("{}", self.sr_mirror_y().bit()))
+            .field("sr_scal_x_int", &self.sr_scal_x_int())
+            .field("sr_scal_x_frag", &self.sr_scal_x_frag())
+            .field("sr_scal_y_int", &self.sr_scal_y_int())
+            .field("sr_scal_y_frag", &self.sr_scal_y_frag())
+            .field("sr_rotate_angle", &self.sr_rotate_angle())
+            .field("scal_rotate_rst", &self.scal_rotate_rst())
+            .field("sr_mirror_x", &self.sr_mirror_x())
+            .field("sr_mirror_y", &self.sr_mirror_y())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_SCAL_ROTATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

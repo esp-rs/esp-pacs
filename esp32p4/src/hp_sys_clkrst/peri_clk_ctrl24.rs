@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL24")
-            .field(
-                "adc_sar1_clk_div_num",
-                &format_args!("{}", self.adc_sar1_clk_div_num().bits()),
-            )
-            .field(
-                "adc_sar2_clk_div_num",
-                &format_args!("{}", self.adc_sar2_clk_div_num().bits()),
-            )
-            .field(
-                "pvt_clk_div_num",
-                &format_args!("{}", self.pvt_clk_div_num().bits()),
-            )
-            .field("pvt_clk_en", &format_args!("{}", self.pvt_clk_en().bit()))
+            .field("adc_sar1_clk_div_num", &self.adc_sar1_clk_div_num())
+            .field("adc_sar2_clk_div_num", &self.adc_sar2_clk_div_num())
+            .field("pvt_clk_div_num", &self.pvt_clk_div_num())
+            .field("pvt_clk_en", &self.pvt_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL24_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

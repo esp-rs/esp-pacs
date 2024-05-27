@@ -62,34 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF1")
-            .field(
-                "tx_pcm_conf",
-                &format_args!("{}", self.tx_pcm_conf().bits()),
-            )
-            .field(
-                "tx_pcm_bypass",
-                &format_args!("{}", self.tx_pcm_bypass().bit()),
-            )
-            .field(
-                "rx_pcm_conf",
-                &format_args!("{}", self.rx_pcm_conf().bits()),
-            )
-            .field(
-                "rx_pcm_bypass",
-                &format_args!("{}", self.rx_pcm_bypass().bit()),
-            )
-            .field("tx_stop_en", &format_args!("{}", self.tx_stop_en().bit()))
-            .field(
-                "tx_zeros_rm_en",
-                &format_args!("{}", self.tx_zeros_rm_en().bit()),
-            )
+            .field("tx_pcm_conf", &self.tx_pcm_conf())
+            .field("tx_pcm_bypass", &self.tx_pcm_bypass())
+            .field("rx_pcm_conf", &self.rx_pcm_conf())
+            .field("rx_pcm_bypass", &self.rx_pcm_bypass())
+            .field("tx_stop_en", &self.tx_stop_en())
+            .field("tx_zeros_rm_en", &self.tx_zeros_rm_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

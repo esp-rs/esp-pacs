@@ -62,45 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L1_CACHE_ACS_CNT_INT_ST")
-            .field(
-                "l1_ibus0_ovf_int_st",
-                &format_args!("{}", self.l1_ibus0_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_ibus1_ovf_int_st",
-                &format_args!("{}", self.l1_ibus1_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_ibus2_ovf_int_st",
-                &format_args!("{}", self.l1_ibus2_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_ibus3_ovf_int_st",
-                &format_args!("{}", self.l1_ibus3_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_dbus0_ovf_int_st",
-                &format_args!("{}", self.l1_dbus0_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_dbus1_ovf_int_st",
-                &format_args!("{}", self.l1_dbus1_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_dbus2_ovf_int_st",
-                &format_args!("{}", self.l1_dbus2_ovf_int_st().bit()),
-            )
-            .field(
-                "l1_dbus3_ovf_int_st",
-                &format_args!("{}", self.l1_dbus3_ovf_int_st().bit()),
-            )
+            .field("l1_ibus0_ovf_int_st", &self.l1_ibus0_ovf_int_st())
+            .field("l1_ibus1_ovf_int_st", &self.l1_ibus1_ovf_int_st())
+            .field("l1_ibus2_ovf_int_st", &self.l1_ibus2_ovf_int_st())
+            .field("l1_ibus3_ovf_int_st", &self.l1_ibus3_ovf_int_st())
+            .field("l1_dbus0_ovf_int_st", &self.l1_dbus0_ovf_int_st())
+            .field("l1_dbus1_ovf_int_st", &self.l1_dbus1_ovf_int_st())
+            .field("l1_dbus2_ovf_int_st", &self.l1_dbus2_ovf_int_st())
+            .field("l1_dbus3_ovf_int_st", &self.l1_dbus3_ovf_int_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_CNT_INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Access Counter Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_acs_cnt_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

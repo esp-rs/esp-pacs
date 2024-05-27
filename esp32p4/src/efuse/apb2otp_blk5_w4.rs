@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APB2OTP_BLK5_W4")
-            .field(
-                "apb2otp_block5_w4",
-                &format_args!("{}", self.apb2otp_block5_w4().bits()),
-            )
+            .field("apb2otp_block5_w4", &self.apb2otp_block5_w4())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB2OTP_BLK5_W4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "eFuse apb2otp block5 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk5_w4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

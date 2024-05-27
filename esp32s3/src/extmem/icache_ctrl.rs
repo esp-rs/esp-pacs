@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_CTRL")
-            .field(
-                "icache_enable",
-                &format_args!("{}", self.icache_enable().bit()),
-            )
-            .field(
-                "icache_way_mode",
-                &format_args!("{}", self.icache_way_mode().bit()),
-            )
-            .field(
-                "icache_size_mode",
-                &format_args!("{}", self.icache_size_mode().bit()),
-            )
-            .field(
-                "icache_blocksize_mode",
-                &format_args!("{}", self.icache_blocksize_mode().bit()),
-            )
+            .field("icache_enable", &self.icache_enable())
+            .field("icache_way_mode", &self.icache_way_mode())
+            .field("icache_size_mode", &self.icache_size_mode())
+            .field("icache_blocksize_mode", &self.icache_blocksize_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

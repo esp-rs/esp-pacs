@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_AUTOLOAD_SCT3_SIZE")
             .field(
                 "l2_cache_autoload_sct3_size",
-                &format_args!("{}", self.l2_cache_autoload_sct3_size().bits()),
+                &self.l2_cache_autoload_sct3_size(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_AUTOLOAD_SCT3_SIZE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "L2 Cache autoload section 3 size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_autoload_sct3_size::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

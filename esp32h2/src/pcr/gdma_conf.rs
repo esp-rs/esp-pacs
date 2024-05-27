@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GDMA_CONF")
-            .field("gdma_clk_en", &format_args!("{}", self.gdma_clk_en().bit()))
-            .field("gdma_rst_en", &format_args!("{}", self.gdma_rst_en().bit()))
+            .field("gdma_clk_en", &self.gdma_clk_en())
+            .field("gdma_rst_en", &self.gdma_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GDMA_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -107,54 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("APP_CACHE_CTRL1")
-            .field(
-                "app_cache_mask_iram0",
-                &format_args!("{}", self.app_cache_mask_iram0().bit()),
-            )
-            .field(
-                "app_cache_mask_iram1",
-                &format_args!("{}", self.app_cache_mask_iram1().bit()),
-            )
-            .field(
-                "app_cache_mask_irom0",
-                &format_args!("{}", self.app_cache_mask_irom0().bit()),
-            )
-            .field(
-                "app_cache_mask_dram1",
-                &format_args!("{}", self.app_cache_mask_dram1().bit()),
-            )
-            .field(
-                "app_cache_mask_drom0",
-                &format_args!("{}", self.app_cache_mask_drom0().bit()),
-            )
-            .field(
-                "app_cache_mask_opsdram",
-                &format_args!("{}", self.app_cache_mask_opsdram().bit()),
-            )
-            .field(
-                "app_cmmu_sram_page_mode",
-                &format_args!("{}", self.app_cmmu_sram_page_mode().bits()),
-            )
-            .field(
-                "app_cmmu_flash_page_mode",
-                &format_args!("{}", self.app_cmmu_flash_page_mode().bits()),
-            )
-            .field(
-                "app_cmmu_force_on",
-                &format_args!("{}", self.app_cmmu_force_on().bit()),
-            )
-            .field("app_cmmu_pd", &format_args!("{}", self.app_cmmu_pd().bit()))
-            .field(
-                "app_cache_mmu_ia_clr",
-                &format_args!("{}", self.app_cache_mmu_ia_clr().bit()),
-            )
+            .field("app_cache_mask_iram0", &self.app_cache_mask_iram0())
+            .field("app_cache_mask_iram1", &self.app_cache_mask_iram1())
+            .field("app_cache_mask_irom0", &self.app_cache_mask_irom0())
+            .field("app_cache_mask_dram1", &self.app_cache_mask_dram1())
+            .field("app_cache_mask_drom0", &self.app_cache_mask_drom0())
+            .field("app_cache_mask_opsdram", &self.app_cache_mask_opsdram())
+            .field("app_cmmu_sram_page_mode", &self.app_cmmu_sram_page_mode())
+            .field("app_cmmu_flash_page_mode", &self.app_cmmu_flash_page_mode())
+            .field("app_cmmu_force_on", &self.app_cmmu_force_on())
+            .field("app_cmmu_pd", &self.app_cmmu_pd())
+            .field("app_cache_mmu_ia_clr", &self.app_cache_mmu_ia_clr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APP_CACHE_CTRL1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_ICACHE_MEM_SYNC1")
-            .field(
-                "pro_icache_memsync_size",
-                &format_args!("{}", self.pro_icache_memsync_size().bits()),
-            )
+            .field("pro_icache_memsync_size", &self.pro_icache_memsync_size())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_MEM_SYNC1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

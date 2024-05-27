@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CRC_FINAL_RESULT")
-            .field(
-                "out_crc_final_result",
-                &format_args!("{}", self.out_crc_final_result().bits()),
-            )
+            .field("out_crc_final_result", &self.out_crc_final_result())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_CRC_FINAL_RESULT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "This register is used to store ch0 crc result\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_crc_final_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

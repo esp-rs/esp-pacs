@@ -71,20 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("slv_event", &format_args!("{}", self.slv_event().bits()))
-            .field("extdata", &format_args!("{}", self.extdata().bit()))
-            .field("mapidx", &format_args!("{}", self.mapidx().bits()))
-            .field("ibidata", &format_args!("{}", self.ibidata().bits()))
-            .field("pendint", &format_args!("{}", self.pendint().bits()))
-            .field("actstate", &format_args!("{}", self.actstate().bits()))
-            .field("vendinfo", &format_args!("{}", self.vendinfo().bits()))
+            .field("slv_event", &self.slv_event())
+            .field("extdata", &self.extdata())
+            .field("mapidx", &self.mapidx())
+            .field("ibidata", &self.ibidata())
+            .field("pendint", &self.pendint())
+            .field("actstate", &self.actstate())
+            .field("vendinfo", &self.vendinfo())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

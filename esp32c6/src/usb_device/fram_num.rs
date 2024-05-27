@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAM_NUM")
-            .field(
-                "sof_frame_index",
-                &format_args!("{}", self.sof_frame_index().bits()),
-            )
+            .field("sof_frame_index", &self.sof_frame_index())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FRAM_NUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Last received SOF frame index register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fram_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

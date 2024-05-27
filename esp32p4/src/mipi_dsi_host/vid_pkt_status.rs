@@ -48,37 +48,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VID_PKT_STATUS")
-            .field(
-                "dpi_cmd_w_empty",
-                &format_args!("{}", self.dpi_cmd_w_empty().bit()),
-            )
-            .field(
-                "dpi_cmd_w_full",
-                &format_args!("{}", self.dpi_cmd_w_full().bit()),
-            )
-            .field(
-                "dpi_pld_w_empty",
-                &format_args!("{}", self.dpi_pld_w_empty().bit()),
-            )
-            .field(
-                "dpi_pld_w_full",
-                &format_args!("{}", self.dpi_pld_w_full().bit()),
-            )
-            .field(
-                "dpi_buff_pld_empty",
-                &format_args!("{}", self.dpi_buff_pld_empty().bit()),
-            )
-            .field(
-                "dpi_buff_pld_full",
-                &format_args!("{}", self.dpi_buff_pld_full().bit()),
-            )
+            .field("dpi_cmd_w_empty", &self.dpi_cmd_w_empty())
+            .field("dpi_cmd_w_full", &self.dpi_cmd_w_full())
+            .field("dpi_pld_w_empty", &self.dpi_pld_w_empty())
+            .field("dpi_pld_w_full", &self.dpi_pld_w_full())
+            .field("dpi_buff_pld_empty", &self.dpi_buff_pld_empty())
+            .field("dpi_buff_pld_full", &self.dpi_buff_pld_full())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VID_PKT_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vid_pkt_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

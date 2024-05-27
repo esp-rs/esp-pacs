@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLL_DIV_CLK_EN")
-            .field(
-                "pll_240m_clk_en",
-                &format_args!("{}", self.pll_240m_clk_en().bit()),
-            )
-            .field(
-                "pll_160m_clk_en",
-                &format_args!("{}", self.pll_160m_clk_en().bit()),
-            )
-            .field(
-                "pll_120m_clk_en",
-                &format_args!("{}", self.pll_120m_clk_en().bit()),
-            )
-            .field(
-                "pll_80m_clk_en",
-                &format_args!("{}", self.pll_80m_clk_en().bit()),
-            )
-            .field(
-                "pll_48m_clk_en",
-                &format_args!("{}", self.pll_48m_clk_en().bit()),
-            )
-            .field(
-                "pll_40m_clk_en",
-                &format_args!("{}", self.pll_40m_clk_en().bit()),
-            )
+            .field("pll_240m_clk_en", &self.pll_240m_clk_en())
+            .field("pll_160m_clk_en", &self.pll_160m_clk_en())
+            .field("pll_120m_clk_en", &self.pll_120m_clk_en())
+            .field("pll_80m_clk_en", &self.pll_80m_clk_en())
+            .field("pll_48m_clk_en", &self.pll_48m_clk_en())
+            .field("pll_40m_clk_en", &self.pll_40m_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PLL_DIV_CLK_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

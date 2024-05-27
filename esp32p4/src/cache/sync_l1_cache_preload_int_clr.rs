@@ -54,27 +54,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("SYNC_L1_CACHE_PRELOAD_INT_CLR")
             .field(
                 "l1_icache2_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache2_pld_done_int_clr().bit()),
+                &self.l1_icache2_pld_done_int_clr(),
             )
             .field(
                 "l1_icache3_pld_done_int_clr",
-                &format_args!("{}", self.l1_icache3_pld_done_int_clr().bit()),
+                &self.l1_icache3_pld_done_int_clr(),
             )
             .field(
                 "l1_icache2_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache2_pld_err_int_clr().bit()),
+                &self.l1_icache2_pld_err_int_clr(),
             )
             .field(
                 "l1_icache3_pld_err_int_clr",
-                &format_args!("{}", self.l1_icache3_pld_err_int_clr().bit()),
+                &self.l1_icache3_pld_err_int_clr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYNC_L1_CACHE_PRELOAD_INT_CLR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

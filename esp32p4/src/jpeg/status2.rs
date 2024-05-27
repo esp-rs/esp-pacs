@@ -41,24 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STATUS2")
-            .field(
-                "source_pixel",
-                &format_args!("{}", self.source_pixel().bits()),
-            )
-            .field("last_block", &format_args!("{}", self.last_block().bit()))
-            .field("last_mcu", &format_args!("{}", self.last_mcu().bit()))
-            .field("last_dc", &format_args!("{}", self.last_dc().bit()))
-            .field(
-                "packfifo_ready",
-                &format_args!("{}", self.packfifo_ready().bit()),
-            )
+            .field("source_pixel", &self.source_pixel())
+            .field("last_block", &self.last_block())
+            .field("last_mcu", &self.last_mcu())
+            .field("last_dc", &self.last_dc())
+            .field("packfifo_ready", &self.packfifo_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<STATUS2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -116,25 +116,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GEN")
-            .field("utez", &format_args!("{}", self.utez().bits()))
-            .field("utep", &format_args!("{}", self.utep().bits()))
-            .field("utea", &format_args!("{}", self.utea().bits()))
-            .field("uteb", &format_args!("{}", self.uteb().bits()))
-            .field("ut0", &format_args!("{}", self.ut0().bits()))
-            .field("ut1", &format_args!("{}", self.ut1().bits()))
-            .field("dtez", &format_args!("{}", self.dtez().bits()))
-            .field("dtep", &format_args!("{}", self.dtep().bits()))
-            .field("dtea", &format_args!("{}", self.dtea().bits()))
-            .field("dteb", &format_args!("{}", self.dteb().bits()))
-            .field("dt0", &format_args!("{}", self.dt0().bits()))
-            .field("dt1", &format_args!("{}", self.dt1().bits()))
+            .field("utez", &self.utez())
+            .field("utep", &self.utep())
+            .field("utea", &self.utea())
+            .field("uteb", &self.uteb())
+            .field("ut0", &self.ut0())
+            .field("ut1", &self.ut1())
+            .field("dtez", &self.dtez())
+            .field("dtep", &self.dtep())
+            .field("dtea", &self.dtea())
+            .field("dteb", &self.dteb())
+            .field("dt0", &self.dt0())
+            .field("dt1", &self.dt1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GEN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

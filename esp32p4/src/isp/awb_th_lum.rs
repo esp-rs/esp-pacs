@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AWB_TH_LUM")
-            .field(
-                "awb_min_lum",
-                &format_args!("{}", self.awb_min_lum().bits()),
-            )
-            .field(
-                "awb_max_lum",
-                &format_args!("{}", self.awb_max_lum().bits()),
-            )
+            .field("awb_min_lum", &self.awb_min_lum())
+            .field("awb_max_lum", &self.awb_max_lum())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AWB_TH_LUM_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

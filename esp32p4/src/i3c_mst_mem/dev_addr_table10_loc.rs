@@ -46,27 +46,18 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEV_ADDR_TABLE10_LOC")
             .field(
                 "reg_dat_dev10_static_addr",
-                &format_args!("{}", self.reg_dat_dev10_static_addr().bits()),
+                &self.reg_dat_dev10_static_addr(),
             )
             .field(
                 "reg_dat_dev10_dynamic_addr",
-                &format_args!("{}", self.reg_dat_dev10_dynamic_addr().bits()),
+                &self.reg_dat_dev10_dynamic_addr(),
             )
             .field(
                 "reg_dat_dev10_nack_retry_cnt",
-                &format_args!("{}", self.reg_dat_dev10_nack_retry_cnt().bits()),
+                &self.reg_dat_dev10_nack_retry_cnt(),
             )
-            .field(
-                "reg_dat_dev10_i2c",
-                &format_args!("{}", self.reg_dat_dev10_i2c().bit()),
-            )
+            .field("reg_dat_dev10_i2c", &self.reg_dat_dev10_i2c())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DEV_ADDR_TABLE10_LOC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

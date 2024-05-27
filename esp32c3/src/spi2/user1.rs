@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER1")
-            .field(
-                "usr_dummy_cyclelen",
-                &format_args!("{}", self.usr_dummy_cyclelen().bits()),
-            )
-            .field(
-                "mst_wfull_err_end_en",
-                &format_args!("{}", self.mst_wfull_err_end_en().bit()),
-            )
-            .field(
-                "cs_setup_time",
-                &format_args!("{}", self.cs_setup_time().bits()),
-            )
-            .field(
-                "cs_hold_time",
-                &format_args!("{}", self.cs_hold_time().bits()),
-            )
-            .field(
-                "usr_addr_bitlen",
-                &format_args!("{}", self.usr_addr_bitlen().bits()),
-            )
+            .field("usr_dummy_cyclelen", &self.usr_dummy_cyclelen())
+            .field("mst_wfull_err_end_en", &self.mst_wfull_err_end_en())
+            .field("cs_setup_time", &self.cs_setup_time())
+            .field("cs_hold_time", &self.cs_hold_time())
+            .field("usr_addr_bitlen", &self.usr_addr_bitlen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

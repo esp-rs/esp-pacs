@@ -69,49 +69,25 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI_SMEM_AC")
-            .field(
-                "spi_smem_cs_setup",
-                &format_args!("{}", self.spi_smem_cs_setup().bit()),
-            )
-            .field(
-                "spi_smem_cs_hold",
-                &format_args!("{}", self.spi_smem_cs_hold().bit()),
-            )
-            .field(
-                "spi_smem_cs_setup_time",
-                &format_args!("{}", self.spi_smem_cs_setup_time().bits()),
-            )
-            .field(
-                "spi_smem_cs_hold_time",
-                &format_args!("{}", self.spi_smem_cs_hold_time().bits()),
-            )
+            .field("spi_smem_cs_setup", &self.spi_smem_cs_setup())
+            .field("spi_smem_cs_hold", &self.spi_smem_cs_hold())
+            .field("spi_smem_cs_setup_time", &self.spi_smem_cs_setup_time())
+            .field("spi_smem_cs_hold_time", &self.spi_smem_cs_hold_time())
             .field(
                 "spi_smem_ecc_cs_hold_time",
-                &format_args!("{}", self.spi_smem_ecc_cs_hold_time().bits()),
+                &self.spi_smem_ecc_cs_hold_time(),
             )
             .field(
                 "spi_smem_ecc_skip_page_corner",
-                &format_args!("{}", self.spi_smem_ecc_skip_page_corner().bit()),
+                &self.spi_smem_ecc_skip_page_corner(),
             )
             .field(
                 "spi_smem_ecc_16to18_byte_en",
-                &format_args!("{}", self.spi_smem_ecc_16to18_byte_en().bit()),
+                &self.spi_smem_ecc_16to18_byte_en(),
             )
-            .field(
-                "spi_smem_cs_hold_delay",
-                &format_args!("{}", self.spi_smem_cs_hold_delay().bits()),
-            )
-            .field(
-                "spi_smem_split_trans_en",
-                &format_args!("{}", self.spi_smem_split_trans_en().bit()),
-            )
+            .field("spi_smem_cs_hold_delay", &self.spi_smem_cs_hold_delay())
+            .field("spi_smem_split_trans_en", &self.spi_smem_split_trans_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SPI_SMEM_AC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "MSPI external RAM ECC and SPI CS timing control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ac::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

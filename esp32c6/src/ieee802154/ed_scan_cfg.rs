@@ -62,28 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ED_SCAN_CFG")
-            .field(
-                "cca_ed_threshold",
-                &format_args!("{}", self.cca_ed_threshold().bits()),
-            )
-            .field(
-                "ed_sample_mode",
-                &format_args!("{}", self.ed_sample_mode().bits()),
-            )
-            .field(
-                "dis_ed_power_sel",
-                &format_args!("{}", self.dis_ed_power_sel().bit()),
-            )
-            .field("cca_mode", &format_args!("{}", self.cca_mode().bits()))
-            .field("ed_rss", &format_args!("{}", self.ed_rss().bits()))
-            .field("cca_busy", &format_args!("{}", self.cca_busy().bit()))
+            .field("cca_ed_threshold", &self.cca_ed_threshold())
+            .field("ed_sample_mode", &self.ed_sample_mode())
+            .field("dis_ed_power_sel", &self.dis_ed_power_sel())
+            .field("cca_mode", &self.cca_mode())
+            .field("ed_rss", &self.ed_rss())
+            .field("cca_busy", &self.cca_busy())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ED_SCAN_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

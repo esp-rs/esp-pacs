@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_0_INTR_ENA")
             .field(
                 "core_0_sp_spill_min_intr_ena",
-                &format_args!("{}", self.core_0_sp_spill_min_intr_ena().bit()),
+                &self.core_0_sp_spill_min_intr_ena(),
             )
             .field(
                 "core_0_sp_spill_max_intr_ena",
-                &format_args!("{}", self.core_0_sp_spill_max_intr_ena().bit()),
+                &self.core_0_sp_spill_max_intr_ena(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_0_INTR_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

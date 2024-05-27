@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RO_PD_CONF")
-            .field(
-                "in_ro_ram_clk_fo",
-                &format_args!("{}", self.in_ro_ram_clk_fo().bit()),
-            )
+            .field("in_ro_ram_clk_fo", &self.in_ro_ram_clk_fo())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RO_PD_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

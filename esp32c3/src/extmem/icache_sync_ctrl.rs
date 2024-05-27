@@ -24,21 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ICACHE_SYNC_CTRL")
-            .field(
-                "icache_invalidate_ena",
-                &format_args!("{}", self.icache_invalidate_ena().bit()),
-            )
-            .field(
-                "icache_sync_done",
-                &format_args!("{}", self.icache_sync_done().bit()),
-            )
+            .field("icache_invalidate_ena", &self.icache_invalidate_ena())
+            .field("icache_sync_done", &self.icache_sync_done())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ICACHE_SYNC_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -116,61 +116,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ENA")
-            .field(
-                "lp_cpu_wakeup",
-                &format_args!("{}", self.lp_cpu_wakeup().bit()),
-            )
-            .field(
-                "modem_switch_active_end",
-                &format_args!("{}", self.modem_switch_active_end().bit()),
-            )
-            .field(
-                "sleep_switch_active_end",
-                &format_args!("{}", self.sleep_switch_active_end().bit()),
-            )
-            .field(
-                "sleep_switch_modem_end",
-                &format_args!("{}", self.sleep_switch_modem_end().bit()),
-            )
-            .field(
-                "modem_switch_sleep_end",
-                &format_args!("{}", self.modem_switch_sleep_end().bit()),
-            )
-            .field(
-                "active_switch_sleep_end",
-                &format_args!("{}", self.active_switch_sleep_end().bit()),
-            )
+            .field("lp_cpu_wakeup", &self.lp_cpu_wakeup())
+            .field("modem_switch_active_end", &self.modem_switch_active_end())
+            .field("sleep_switch_active_end", &self.sleep_switch_active_end())
+            .field("sleep_switch_modem_end", &self.sleep_switch_modem_end())
+            .field("modem_switch_sleep_end", &self.modem_switch_sleep_end())
+            .field("active_switch_sleep_end", &self.active_switch_sleep_end())
             .field(
                 "modem_switch_active_start",
-                &format_args!("{}", self.modem_switch_active_start().bit()),
+                &self.modem_switch_active_start(),
             )
             .field(
                 "sleep_switch_active_start",
-                &format_args!("{}", self.sleep_switch_active_start().bit()),
+                &self.sleep_switch_active_start(),
             )
-            .field(
-                "sleep_switch_modem_start",
-                &format_args!("{}", self.sleep_switch_modem_start().bit()),
-            )
-            .field(
-                "modem_switch_sleep_start",
-                &format_args!("{}", self.modem_switch_sleep_start().bit()),
-            )
+            .field("sleep_switch_modem_start", &self.sleep_switch_modem_start())
+            .field("modem_switch_sleep_start", &self.modem_switch_sleep_start())
             .field(
                 "active_switch_sleep_start",
-                &format_args!("{}", self.active_switch_sleep_start().bit()),
+                &self.active_switch_sleep_start(),
             )
-            .field(
-                "hp_sw_trigger",
-                &format_args!("{}", self.hp_sw_trigger().bit()),
-            )
+            .field("hp_sw_trigger", &self.hp_sw_trigger())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

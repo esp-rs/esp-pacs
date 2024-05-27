@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("B_DECI_SCORE")
-            .field(
-                "b_c_deci_score",
-                &format_args!("{}", self.b_c_deci_score().bits()),
-            )
-            .field(
-                "b_l_deci_score",
-                &format_args!("{}", self.b_l_deci_score().bits()),
-            )
+            .field("b_c_deci_score", &self.b_c_deci_score())
+            .field("b_l_deci_score", &self.b_l_deci_score())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<B_DECI_SCORE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

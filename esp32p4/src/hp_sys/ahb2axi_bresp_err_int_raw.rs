@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("AHB2AXI_BRESP_ERR_INT_RAW")
             .field(
                 "cpu_icm_h2x_bresp_err_int_raw",
-                &format_args!("{}", self.cpu_icm_h2x_bresp_err_int_raw().bit()),
+                &self.cpu_icm_h2x_bresp_err_int_raw(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<AHB2AXI_BRESP_ERR_INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

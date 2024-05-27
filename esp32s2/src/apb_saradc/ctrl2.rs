@@ -71,29 +71,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field(
-                "meas_num_limit",
-                &format_args!("{}", self.meas_num_limit().bit()),
-            )
-            .field(
-                "max_meas_num",
-                &format_args!("{}", self.max_meas_num().bits()),
-            )
-            .field("sar1_inv", &format_args!("{}", self.sar1_inv().bit()))
-            .field("sar2_inv", &format_args!("{}", self.sar2_inv().bit()))
-            .field("timer_sel", &format_args!("{}", self.timer_sel().bit()))
-            .field(
-                "timer_target",
-                &format_args!("{}", self.timer_target().bits()),
-            )
-            .field("timer_en", &format_args!("{}", self.timer_en().bit()))
+            .field("meas_num_limit", &self.meas_num_limit())
+            .field("max_meas_num", &self.max_meas_num())
+            .field("sar1_inv", &self.sar1_inv())
+            .field("sar2_inv", &self.sar2_inv())
+            .field("timer_sel", &self.timer_sel())
+            .field("timer_target", &self.timer_target())
+            .field("timer_en", &self.timer_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

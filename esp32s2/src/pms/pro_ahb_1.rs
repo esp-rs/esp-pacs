@@ -73,39 +73,15 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_AHB_1")
             .field(
                 "pro_ahb_rtcslow_0_spltaddr",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_spltaddr().bits()),
+                &self.pro_ahb_rtcslow_0_spltaddr(),
             )
-            .field(
-                "pro_ahb_rtcslow_0_l_f",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_l_f().bit()),
-            )
-            .field(
-                "pro_ahb_rtcslow_0_l_r",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_l_r().bit()),
-            )
-            .field(
-                "pro_ahb_rtcslow_0_l_w",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_l_w().bit()),
-            )
-            .field(
-                "pro_ahb_rtcslow_0_h_f",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_h_f().bit()),
-            )
-            .field(
-                "pro_ahb_rtcslow_0_h_r",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_h_r().bit()),
-            )
-            .field(
-                "pro_ahb_rtcslow_0_h_w",
-                &format_args!("{}", self.pro_ahb_rtcslow_0_h_w().bit()),
-            )
+            .field("pro_ahb_rtcslow_0_l_f", &self.pro_ahb_rtcslow_0_l_f())
+            .field("pro_ahb_rtcslow_0_l_r", &self.pro_ahb_rtcslow_0_l_r())
+            .field("pro_ahb_rtcslow_0_l_w", &self.pro_ahb_rtcslow_0_l_w())
+            .field("pro_ahb_rtcslow_0_h_f", &self.pro_ahb_rtcslow_0_h_f())
+            .field("pro_ahb_rtcslow_0_h_r", &self.pro_ahb_rtcslow_0_h_r())
+            .field("pro_ahb_rtcslow_0_h_w", &self.pro_ahb_rtcslow_0_h_w())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_AHB_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

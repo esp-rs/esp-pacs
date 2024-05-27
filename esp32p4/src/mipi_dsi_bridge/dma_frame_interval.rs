@@ -44,26 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_FRAME_INTERVAL")
-            .field(
-                "dma_frame_slot",
-                &format_args!("{}", self.dma_frame_slot().bits()),
-            )
-            .field(
-                "dma_frame_interval",
-                &format_args!("{}", self.dma_frame_interval().bits()),
-            )
-            .field(
-                "dma_multiblk_en",
-                &format_args!("{}", self.dma_multiblk_en().bit()),
-            )
-            .field("en", &format_args!("{}", self.en().bit()))
+            .field("dma_frame_slot", &self.dma_frame_slot())
+            .field("dma_frame_interval", &self.dma_frame_interval())
+            .field("dma_multiblk_en", &self.dma_multiblk_en())
+            .field("en", &self.en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_FRAME_INTERVAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

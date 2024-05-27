@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RX_CRC_WIDTH")
-            .field(
-                "rx_crc_width",
-                &format_args!("{}", self.rx_crc_width().bits()),
-            )
-            .field(
-                "rx_crc_lautch_flga",
-                &format_args!("{}", self.rx_crc_lautch_flga().bit()),
-            )
+            .field("rx_crc_width", &self.rx_crc_width())
+            .field("rx_crc_lautch_flga", &self.rx_crc_lautch_flga())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RX_CRC_WIDTH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

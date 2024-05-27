@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("APB2OTP_BLK0_BACKUP3_W2")
             .field(
                 "apb2otp_block0_backup3_w2",
-                &format_args!("{}", self.apb2otp_block0_backup3_w2().bits()),
+                &self.apb2otp_block0_backup3_w2(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APB2OTP_BLK0_BACKUP3_W2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "eFuse apb2otp block0 data register13.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk0_backup3_w2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

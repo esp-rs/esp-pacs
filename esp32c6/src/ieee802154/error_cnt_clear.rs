@@ -143,73 +143,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ERROR_CNT_CLEAR")
-            .field(
-                "cca_busy_cnt_clear",
-                &format_args!("{}", self.cca_busy_cnt_clear().bit()),
-            )
+            .field("cca_busy_cnt_clear", &self.cca_busy_cnt_clear())
             .field(
                 "tx_security_error_cnt_clear",
-                &format_args!("{}", self.tx_security_error_cnt_clear().bit()),
+                &self.tx_security_error_cnt_clear(),
             )
-            .field(
-                "tx_break_coex_cnt_clear",
-                &format_args!("{}", self.tx_break_coex_cnt_clear().bit()),
-            )
-            .field(
-                "rx_ack_timeout_cnt_clear",
-                &format_args!("{}", self.rx_ack_timeout_cnt_clear().bit()),
-            )
+            .field("tx_break_coex_cnt_clear", &self.tx_break_coex_cnt_clear())
+            .field("rx_ack_timeout_cnt_clear", &self.rx_ack_timeout_cnt_clear())
             .field(
                 "rx_ack_abort_coex_cnt_clear",
-                &format_args!("{}", self.rx_ack_abort_coex_cnt_clear().bit()),
+                &self.rx_ack_abort_coex_cnt_clear(),
             )
-            .field(
-                "ed_scan_coex_cnt_clear",
-                &format_args!("{}", self.ed_scan_coex_cnt_clear().bit()),
-            )
+            .field("ed_scan_coex_cnt_clear", &self.ed_scan_coex_cnt_clear())
             .field(
                 "tx_ack_abort_coex_cnt_clear",
-                &format_args!("{}", self.tx_ack_abort_coex_cnt_clear().bit()),
+                &self.tx_ack_abort_coex_cnt_clear(),
             )
-            .field(
-                "rx_restart_cnt_clear",
-                &format_args!("{}", self.rx_restart_cnt_clear().bit()),
-            )
-            .field(
-                "rx_abort_coex_cnt_clear",
-                &format_args!("{}", self.rx_abort_coex_cnt_clear().bit()),
-            )
-            .field(
-                "no_rss_detect_cnt_clear",
-                &format_args!("{}", self.no_rss_detect_cnt_clear().bit()),
-            )
-            .field(
-                "rx_filter_fail_cnt_clear",
-                &format_args!("{}", self.rx_filter_fail_cnt_clear().bit()),
-            )
-            .field(
-                "cca_fail_cnt_clear",
-                &format_args!("{}", self.cca_fail_cnt_clear().bit()),
-            )
-            .field(
-                "ed_abort_cnt_clear",
-                &format_args!("{}", self.ed_abort_cnt_clear().bit()),
-            )
-            .field(
-                "crc_error_cnt_clear",
-                &format_args!("{}", self.crc_error_cnt_clear().bit()),
-            )
-            .field(
-                "sfd_timeout_cnt_clear",
-                &format_args!("{}", self.sfd_timeout_cnt_clear().bit()),
-            )
+            .field("rx_restart_cnt_clear", &self.rx_restart_cnt_clear())
+            .field("rx_abort_coex_cnt_clear", &self.rx_abort_coex_cnt_clear())
+            .field("no_rss_detect_cnt_clear", &self.no_rss_detect_cnt_clear())
+            .field("rx_filter_fail_cnt_clear", &self.rx_filter_fail_cnt_clear())
+            .field("cca_fail_cnt_clear", &self.cca_fail_cnt_clear())
+            .field("ed_abort_cnt_clear", &self.ed_abort_cnt_clear())
+            .field("crc_error_cnt_clear", &self.crc_error_cnt_clear())
+            .field("sfd_timeout_cnt_clear", &self.sfd_timeout_cnt_clear())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ERROR_CNT_CLEAR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

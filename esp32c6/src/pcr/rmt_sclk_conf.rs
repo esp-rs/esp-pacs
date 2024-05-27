@@ -53,21 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMT_SCLK_CONF")
-            .field("sclk_div_a", &format_args!("{}", self.sclk_div_a().bits()))
-            .field("sclk_div_b", &format_args!("{}", self.sclk_div_b().bits()))
-            .field(
-                "sclk_div_num",
-                &format_args!("{}", self.sclk_div_num().bits()),
-            )
-            .field("sclk_sel", &format_args!("{}", self.sclk_sel().bits()))
-            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
+            .field("sclk_div_a", &self.sclk_div_a())
+            .field("sclk_div_b", &self.sclk_div_b())
+            .field("sclk_div_num", &self.sclk_div_num())
+            .field("sclk_sel", &self.sclk_sel())
+            .field("sclk_en", &self.sclk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RMT_SCLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

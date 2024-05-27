@@ -35,25 +35,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_CONTROL_0")
-            .field(
-                "control_core_1_runstall",
-                &format_args!("{}", self.control_core_1_runstall().bit()),
-            )
+            .field("control_core_1_runstall", &self.control_core_1_runstall())
             .field(
                 "control_core_1_clkgate_en",
-                &format_args!("{}", self.control_core_1_clkgate_en().bit()),
+                &self.control_core_1_clkgate_en(),
             )
-            .field(
-                "control_core_1_reseting",
-                &format_args!("{}", self.control_core_1_reseting().bit()),
-            )
+            .field("control_core_1_reseting", &self.control_core_1_reseting())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_CONTROL_0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

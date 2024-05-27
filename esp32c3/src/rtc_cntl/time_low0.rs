@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIME_LOW0")
-            .field(
-                "timer_value0_low",
-                &format_args!("{}", self.timer_value0_low().bits()),
-            )
+            .field("timer_value0_low", &self.timer_value0_low())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIME_LOW0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_low0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

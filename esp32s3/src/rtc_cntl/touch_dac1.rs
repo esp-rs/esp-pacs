@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_DAC1")
-            .field(
-                "touch_pad14_dac",
-                &format_args!("{}", self.touch_pad14_dac().bits()),
-            )
-            .field(
-                "touch_pad13_dac",
-                &format_args!("{}", self.touch_pad13_dac().bits()),
-            )
-            .field(
-                "touch_pad12_dac",
-                &format_args!("{}", self.touch_pad12_dac().bits()),
-            )
-            .field(
-                "touch_pad11_dac",
-                &format_args!("{}", self.touch_pad11_dac().bits()),
-            )
-            .field(
-                "touch_pad10_dac",
-                &format_args!("{}", self.touch_pad10_dac().bits()),
-            )
+            .field("touch_pad14_dac", &self.touch_pad14_dac())
+            .field("touch_pad13_dac", &self.touch_pad13_dac())
+            .field("touch_pad12_dac", &self.touch_pad12_dac())
+            .field("touch_pad11_dac", &self.touch_pad11_dac())
+            .field("touch_pad10_dac", &self.touch_pad10_dac())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_DAC1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

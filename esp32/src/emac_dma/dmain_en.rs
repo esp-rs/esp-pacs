@@ -143,28 +143,22 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMAIN_EN")
-            .field("dmain_tie", &format_args!("{}", self.dmain_tie().bit()))
-            .field("dmain_tse", &format_args!("{}", self.dmain_tse().bit()))
-            .field("dmain_tbue", &format_args!("{}", self.dmain_tbue().bit()))
-            .field("dmain_tjte", &format_args!("{}", self.dmain_tjte().bit()))
-            .field("dmain_oie", &format_args!("{}", self.dmain_oie().bit()))
-            .field("dmain_uie", &format_args!("{}", self.dmain_uie().bit()))
-            .field("dmain_rie", &format_args!("{}", self.dmain_rie().bit()))
-            .field("dmain_rbue", &format_args!("{}", self.dmain_rbue().bit()))
-            .field("dmain_rse", &format_args!("{}", self.dmain_rse().bit()))
-            .field("dmain_rwte", &format_args!("{}", self.dmain_rwte().bit()))
-            .field("dmain_etie", &format_args!("{}", self.dmain_etie().bit()))
-            .field("dmain_fbee", &format_args!("{}", self.dmain_fbee().bit()))
-            .field("dmain_erie", &format_args!("{}", self.dmain_erie().bit()))
-            .field("dmain_aise", &format_args!("{}", self.dmain_aise().bit()))
-            .field("dmain_nise", &format_args!("{}", self.dmain_nise().bit()))
+            .field("dmain_tie", &self.dmain_tie())
+            .field("dmain_tse", &self.dmain_tse())
+            .field("dmain_tbue", &self.dmain_tbue())
+            .field("dmain_tjte", &self.dmain_tjte())
+            .field("dmain_oie", &self.dmain_oie())
+            .field("dmain_uie", &self.dmain_uie())
+            .field("dmain_rie", &self.dmain_rie())
+            .field("dmain_rbue", &self.dmain_rbue())
+            .field("dmain_rse", &self.dmain_rse())
+            .field("dmain_rwte", &self.dmain_rwte())
+            .field("dmain_etie", &self.dmain_etie())
+            .field("dmain_fbee", &self.dmain_fbee())
+            .field("dmain_erie", &self.dmain_erie())
+            .field("dmain_aise", &self.dmain_aise())
+            .field("dmain_nise", &self.dmain_nise())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMAIN_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

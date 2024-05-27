@@ -33,16 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RMT_CONF")
-            .field("rmt_clk_en", &format_args!("{}", self.rmt_clk_en().bit()))
-            .field("rmt_rst_en", &format_args!("{}", self.rmt_rst_en().bit()))
-            .field("rmt_ready", &format_args!("{}", self.rmt_ready().bit()))
+            .field("rmt_clk_en", &self.rmt_clk_en())
+            .field("rmt_rst_en", &self.rmt_rst_en())
+            .field("rmt_ready", &self.rmt_ready())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RMT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_GENRL_CFG")
-            .field(
-                "tx_eof_gen_sel",
-                &format_args!("{}", self.tx_eof_gen_sel().bit()),
-            )
-            .field(
-                "tx_idle_value",
-                &format_args!("{}", self.tx_idle_value().bits()),
-            )
-            .field(
-                "tx_gating_en",
-                &format_args!("{}", self.tx_gating_en().bit()),
-            )
-            .field(
-                "tx_valid_output_en",
-                &format_args!("{}", self.tx_valid_output_en().bit()),
-            )
+            .field("tx_eof_gen_sel", &self.tx_eof_gen_sel())
+            .field("tx_idle_value", &self.tx_idle_value())
+            .field("tx_gating_en", &self.tx_gating_en())
+            .field("tx_valid_output_en", &self.tx_valid_output_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_GENRL_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

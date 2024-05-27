@@ -92,59 +92,35 @@ impl core::fmt::Debug for R {
         f.debug_struct("CORE_1_INTR_RAW")
             .field(
                 "core_1_area_dram0_0_rd_raw",
-                &format_args!("{}", self.core_1_area_dram0_0_rd_raw().bit()),
+                &self.core_1_area_dram0_0_rd_raw(),
             )
             .field(
                 "core_1_area_dram0_0_wr_raw",
-                &format_args!("{}", self.core_1_area_dram0_0_wr_raw().bit()),
+                &self.core_1_area_dram0_0_wr_raw(),
             )
             .field(
                 "core_1_area_dram0_1_rd_raw",
-                &format_args!("{}", self.core_1_area_dram0_1_rd_raw().bit()),
+                &self.core_1_area_dram0_1_rd_raw(),
             )
             .field(
                 "core_1_area_dram0_1_wr_raw",
-                &format_args!("{}", self.core_1_area_dram0_1_wr_raw().bit()),
+                &self.core_1_area_dram0_1_wr_raw(),
             )
-            .field(
-                "core_1_area_pif_0_rd_raw",
-                &format_args!("{}", self.core_1_area_pif_0_rd_raw().bit()),
-            )
-            .field(
-                "core_1_area_pif_0_wr_raw",
-                &format_args!("{}", self.core_1_area_pif_0_wr_raw().bit()),
-            )
-            .field(
-                "core_1_area_pif_1_rd_raw",
-                &format_args!("{}", self.core_1_area_pif_1_rd_raw().bit()),
-            )
-            .field(
-                "core_1_area_pif_1_wr_raw",
-                &format_args!("{}", self.core_1_area_pif_1_wr_raw().bit()),
-            )
-            .field(
-                "core_1_sp_spill_min_raw",
-                &format_args!("{}", self.core_1_sp_spill_min_raw().bit()),
-            )
-            .field(
-                "core_1_sp_spill_max_raw",
-                &format_args!("{}", self.core_1_sp_spill_max_raw().bit()),
-            )
+            .field("core_1_area_pif_0_rd_raw", &self.core_1_area_pif_0_rd_raw())
+            .field("core_1_area_pif_0_wr_raw", &self.core_1_area_pif_0_wr_raw())
+            .field("core_1_area_pif_1_rd_raw", &self.core_1_area_pif_1_rd_raw())
+            .field("core_1_area_pif_1_wr_raw", &self.core_1_area_pif_1_wr_raw())
+            .field("core_1_sp_spill_min_raw", &self.core_1_sp_spill_min_raw())
+            .field("core_1_sp_spill_max_raw", &self.core_1_sp_spill_max_raw())
             .field(
                 "core_1_iram0_exception_monitor_raw",
-                &format_args!("{}", self.core_1_iram0_exception_monitor_raw().bit()),
+                &self.core_1_iram0_exception_monitor_raw(),
             )
             .field(
                 "core_1_dram0_exception_monitor_raw",
-                &format_args!("{}", self.core_1_dram0_exception_monitor_raw().bit()),
+                &self.core_1_dram0_exception_monitor_raw(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_INTR_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Core1 monitor interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_intr_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

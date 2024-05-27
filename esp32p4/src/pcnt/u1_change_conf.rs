@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("U1_CHANGE_CONF")
-            .field(
-                "cnt_step_u1",
-                &format_args!("{}", self.cnt_step_u1().bits()),
-            )
-            .field(
-                "cnt_step_lim_u1",
-                &format_args!("{}", self.cnt_step_lim_u1().bits()),
-            )
+            .field("cnt_step_u1", &self.cnt_step_u1())
+            .field("cnt_step_lim_u1", &self.cnt_step_lim_u1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<U1_CHANGE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -104,69 +104,33 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SR_PARAM_ERR_ST")
-            .field(
-                "tx_dscr_vb_err_st",
-                &format_args!("{}", self.tx_dscr_vb_err_st().bit()),
-            )
-            .field(
-                "tx_dscr_hb_err_st",
-                &format_args!("{}", self.tx_dscr_hb_err_st().bit()),
-            )
-            .field(
-                "y_rx_scal_equal_0_err_st",
-                &format_args!("{}", self.y_rx_scal_equal_0_err_st().bit()),
-            )
-            .field(
-                "rx_dscr_vb_err_st",
-                &format_args!("{}", self.rx_dscr_vb_err_st().bit()),
-            )
+            .field("tx_dscr_vb_err_st", &self.tx_dscr_vb_err_st())
+            .field("tx_dscr_hb_err_st", &self.tx_dscr_hb_err_st())
+            .field("y_rx_scal_equal_0_err_st", &self.y_rx_scal_equal_0_err_st())
+            .field("rx_dscr_vb_err_st", &self.rx_dscr_vb_err_st())
             .field(
                 "ydst_len_too_samll_err_st",
-                &format_args!("{}", self.ydst_len_too_samll_err_st().bit()),
+                &self.ydst_len_too_samll_err_st(),
             )
             .field(
                 "ydst_len_too_large_err_st",
-                &format_args!("{}", self.ydst_len_too_large_err_st().bit()),
+                &self.ydst_len_too_large_err_st(),
             )
-            .field(
-                "x_rx_scal_equal_0_err_st",
-                &format_args!("{}", self.x_rx_scal_equal_0_err_st().bit()),
-            )
-            .field(
-                "rx_dscr_hb_err_st",
-                &format_args!("{}", self.rx_dscr_hb_err_st().bit()),
-            )
+            .field("x_rx_scal_equal_0_err_st", &self.x_rx_scal_equal_0_err_st())
+            .field("rx_dscr_hb_err_st", &self.rx_dscr_hb_err_st())
             .field(
                 "xdst_len_too_samll_err_st",
-                &format_args!("{}", self.xdst_len_too_samll_err_st().bit()),
+                &self.xdst_len_too_samll_err_st(),
             )
             .field(
                 "xdst_len_too_large_err_st",
-                &format_args!("{}", self.xdst_len_too_large_err_st().bit()),
+                &self.xdst_len_too_large_err_st(),
             )
-            .field(
-                "x_yuv420_rx_scale_err_st",
-                &format_args!("{}", self.x_yuv420_rx_scale_err_st().bit()),
-            )
-            .field(
-                "y_yuv420_rx_scale_err_st",
-                &format_args!("{}", self.y_yuv420_rx_scale_err_st().bit()),
-            )
-            .field(
-                "x_yuv420_tx_scale_err_st",
-                &format_args!("{}", self.x_yuv420_tx_scale_err_st().bit()),
-            )
-            .field(
-                "y_yuv420_tx_scale_err_st",
-                &format_args!("{}", self.y_yuv420_tx_scale_err_st().bit()),
-            )
+            .field("x_yuv420_rx_scale_err_st", &self.x_yuv420_rx_scale_err_st())
+            .field("y_yuv420_rx_scale_err_st", &self.y_yuv420_rx_scale_err_st())
+            .field("x_yuv420_tx_scale_err_st", &self.x_yuv420_tx_scale_err_st())
+            .field("y_yuv420_tx_scale_err_st", &self.y_yuv420_tx_scale_err_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SR_PARAM_ERR_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Scaling and rotating coefficient error register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_param_err_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

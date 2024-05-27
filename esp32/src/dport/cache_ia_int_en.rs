@@ -125,65 +125,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_IA_INT_EN")
-            .field(
-                "cache_ia_int_en",
-                &format_args!("{}", self.cache_ia_int_en().bits()),
-            )
-            .field(
-                "cache_ia_int_app_drom0",
-                &format_args!("{}", self.cache_ia_int_app_drom0().bit()),
-            )
-            .field(
-                "cache_ia_int_app_iram0",
-                &format_args!("{}", self.cache_ia_int_app_iram0().bit()),
-            )
-            .field(
-                "cache_ia_int_app_iram1",
-                &format_args!("{}", self.cache_ia_int_app_iram1().bit()),
-            )
-            .field(
-                "cache_ia_int_app_irom0",
-                &format_args!("{}", self.cache_ia_int_app_irom0().bit()),
-            )
-            .field(
-                "cache_ia_int_app_dram1",
-                &format_args!("{}", self.cache_ia_int_app_dram1().bit()),
-            )
+            .field("cache_ia_int_en", &self.cache_ia_int_en())
+            .field("cache_ia_int_app_drom0", &self.cache_ia_int_app_drom0())
+            .field("cache_ia_int_app_iram0", &self.cache_ia_int_app_iram0())
+            .field("cache_ia_int_app_iram1", &self.cache_ia_int_app_iram1())
+            .field("cache_ia_int_app_irom0", &self.cache_ia_int_app_irom0())
+            .field("cache_ia_int_app_dram1", &self.cache_ia_int_app_dram1())
             .field(
                 "cache_ia_int_app_opposite",
-                &format_args!("{}", self.cache_ia_int_app_opposite().bit()),
+                &self.cache_ia_int_app_opposite(),
             )
-            .field(
-                "cache_ia_int_pro_drom0",
-                &format_args!("{}", self.cache_ia_int_pro_drom0().bit()),
-            )
-            .field(
-                "cache_ia_int_pro_iram0",
-                &format_args!("{}", self.cache_ia_int_pro_iram0().bit()),
-            )
-            .field(
-                "cache_ia_int_pro_iram1",
-                &format_args!("{}", self.cache_ia_int_pro_iram1().bit()),
-            )
-            .field(
-                "cache_ia_int_pro_irom0",
-                &format_args!("{}", self.cache_ia_int_pro_irom0().bit()),
-            )
-            .field(
-                "cache_ia_int_pro_dram1",
-                &format_args!("{}", self.cache_ia_int_pro_dram1().bit()),
-            )
+            .field("cache_ia_int_pro_drom0", &self.cache_ia_int_pro_drom0())
+            .field("cache_ia_int_pro_iram0", &self.cache_ia_int_pro_iram0())
+            .field("cache_ia_int_pro_iram1", &self.cache_ia_int_pro_iram1())
+            .field("cache_ia_int_pro_irom0", &self.cache_ia_int_pro_irom0())
+            .field("cache_ia_int_pro_dram1", &self.cache_ia_int_pro_dram1())
             .field(
                 "cache_ia_int_pro_opposite",
-                &format_args!("{}", self.cache_ia_int_pro_opposite().bit()),
+                &self.cache_ia_int_pro_opposite(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_IA_INT_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

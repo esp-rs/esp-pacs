@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BITSCRAMBLER_PERI_SEL")
-            .field(
-                "bitscrambler_peri_rx_sel",
-                &format_args!("{}", self.bitscrambler_peri_rx_sel().bits()),
-            )
-            .field(
-                "bitscrambler_peri_tx_sel",
-                &format_args!("{}", self.bitscrambler_peri_tx_sel().bits()),
-            )
+            .field("bitscrambler_peri_rx_sel", &self.bitscrambler_peri_rx_sel())
+            .field("bitscrambler_peri_tx_sel", &self.bitscrambler_peri_tx_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BITSCRAMBLER_PERI_SEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

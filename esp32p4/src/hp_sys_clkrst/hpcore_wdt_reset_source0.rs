@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("HPCORE_WDT_RESET_SOURCE0")
             .field(
                 "hpcore0_wdt_reset_source_sel",
-                &format_args!("{}", self.hpcore0_wdt_reset_source_sel().bit()),
+                &self.hpcore0_wdt_reset_source_sel(),
             )
             .field(
                 "hpcore1_wdt_reset_source_sel",
-                &format_args!("{}", self.hpcore1_wdt_reset_source_sel().bit()),
+                &self.hpcore1_wdt_reset_source_sel(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HPCORE_WDT_RESET_SOURCE0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

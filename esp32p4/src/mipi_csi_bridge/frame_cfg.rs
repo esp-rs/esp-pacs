@@ -44,20 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FRAME_CFG")
-            .field("vadr_num", &format_args!("{}", self.vadr_num().bits()))
-            .field("hadr_num", &format_args!("{}", self.hadr_num().bits()))
-            .field("has_hsync_e", &format_args!("{}", self.has_hsync_e().bit()))
-            .field(
-                "vadr_num_check",
-                &format_args!("{}", self.vadr_num_check().bit()),
-            )
+            .field("vadr_num", &self.vadr_num())
+            .field("hadr_num", &self.hadr_num())
+            .field("has_hsync_e", &self.has_hsync_e())
+            .field("vadr_num_check", &self.vadr_num_check())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<FRAME_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

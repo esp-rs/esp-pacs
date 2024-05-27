@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("cali_conf")
-            .field(
-                "cali_rtc_max",
-                &format_args!("{}", self.cali_rtc_max().bits()),
-            )
-            .field("cali_start", &format_args!("{}", self.cali_start().bit()))
+            .field("cali_rtc_max", &self.cali_rtc_max())
+            .field("cali_start", &self.cali_start())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CALI_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

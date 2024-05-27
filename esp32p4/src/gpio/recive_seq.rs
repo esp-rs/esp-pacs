@@ -13,14 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RECIVE_SEQ")
-            .field("recive_seq", &format_args!("{}", self.recive_seq().bits()))
+            .field("recive_seq", &self.recive_seq())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RECIVE_SEQ_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "High speed sdio pad bist recive sequence\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`recive_seq::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

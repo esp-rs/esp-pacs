@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTERRUPT_REG_DATE")
-            .field(
-                "core1_interrupt_reg_date",
-                &format_args!("{}", self.core1_interrupt_reg_date().bits()),
-            )
+            .field("core1_interrupt_reg_date", &self.core1_interrupt_reg_date())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INTERRUPT_REG_DATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

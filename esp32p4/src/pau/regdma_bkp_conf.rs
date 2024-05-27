@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REGDMA_BKP_CONF")
-            .field(
-                "read_interval",
-                &format_args!("{}", self.read_interval().bits()),
-            )
-            .field(
-                "link_tout_thres",
-                &format_args!("{}", self.link_tout_thres().bits()),
-            )
-            .field(
-                "burst_limit",
-                &format_args!("{}", self.burst_limit().bits()),
-            )
-            .field(
-                "backup_tout_thres",
-                &format_args!("{}", self.backup_tout_thres().bits()),
-            )
+            .field("read_interval", &self.read_interval())
+            .field("link_tout_thres", &self.link_tout_thres())
+            .field("burst_limit", &self.burst_limit())
+            .field("backup_tout_thres", &self.backup_tout_thres())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REGDMA_BKP_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

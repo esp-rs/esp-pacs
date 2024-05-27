@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("APP_GPIO_INTERRUPT_NMI_MAP")
             .field(
                 "app_gpio_interrupt_app_nmi_map",
-                &format_args!("{}", self.app_gpio_interrupt_app_nmi_map().bits()),
+                &self.app_gpio_interrupt_app_nmi_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<APP_GPIO_INTERRUPT_NMI_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

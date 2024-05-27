@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_OBJECT_CTRL")
-            .field(
-                "l2_cache_tag_object",
-                &format_args!("{}", self.l2_cache_tag_object().bit()),
-            )
-            .field(
-                "l2_cache_mem_object",
-                &format_args!("{}", self.l2_cache_mem_object().bit()),
-            )
+            .field("l2_cache_tag_object", &self.l2_cache_tag_object())
+            .field("l2_cache_mem_object", &self.l2_cache_mem_object())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_OBJECT_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Tag and Data memory Object control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_object_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

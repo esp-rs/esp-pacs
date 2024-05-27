@@ -41,27 +41,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS2")
-            .field(
-                "comp_block_num",
-                &format_args!("{}", self.comp_block_num().bits()),
-            )
-            .field("scan_num", &format_args!("{}", self.scan_num().bits()))
-            .field(
-                "rst_check_wait",
-                &format_args!("{}", self.rst_check_wait().bit()),
-            )
-            .field(
-                "scan_check_wait",
-                &format_args!("{}", self.scan_check_wait().bit()),
-            )
-            .field("mcu_in_proc", &format_args!("{}", self.mcu_in_proc().bit()))
+            .field("comp_block_num", &self.comp_block_num())
+            .field("scan_num", &self.scan_num())
+            .field("rst_check_wait", &self.rst_check_wait())
+            .field("scan_check_wait", &self.scan_check_wait())
+            .field("mcu_in_proc", &self.mcu_in_proc())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DECODER_STATUS2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`decoder_status2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

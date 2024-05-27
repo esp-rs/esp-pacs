@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PROBE_OUT")
-            .field(
-                "reg_probe_top_out",
-                &format_args!("{}", self.reg_probe_top_out().bits()),
-            )
+            .field("reg_probe_top_out", &self.reg_probe_top_out())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PROBE_OUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`probe_out::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DATA_BUFFER_STATUS_LEVEL")
-            .field(
-                "tx_data_buf_empty_cnt",
-                &format_args!("{}", self.tx_data_buf_empty_cnt().bits()),
-            )
-            .field(
-                "rx_data_buf_cnt",
-                &format_args!("{}", self.rx_data_buf_cnt().bits()),
-            )
+            .field("tx_data_buf_empty_cnt", &self.tx_data_buf_empty_cnt())
+            .field("rx_data_buf_cnt", &self.rx_data_buf_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DATA_BUFFER_STATUS_LEVEL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "DATA_BUFFER_STATUS_LEVEL reflects the status level of the Buffers in the controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data_buffer_status_level::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

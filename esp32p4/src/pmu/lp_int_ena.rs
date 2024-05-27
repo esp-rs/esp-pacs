@@ -179,89 +179,68 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_INT_ENA")
-            .field(
-                "lp_cpu_sleep_reject",
-                &format_args!("{}", self.lp_cpu_sleep_reject().bit()),
-            )
+            .field("lp_cpu_sleep_reject", &self.lp_cpu_sleep_reject())
             .field(
                 "_0p1a_cnt_target0_reach_0_lp",
-                &format_args!("{}", self._0p1a_cnt_target0_reach_0_lp().bit()),
+                &self._0p1a_cnt_target0_reach_0_lp(),
             )
             .field(
                 "_0p1a_cnt_target1_reach_0_lp",
-                &format_args!("{}", self._0p1a_cnt_target1_reach_0_lp().bit()),
+                &self._0p1a_cnt_target1_reach_0_lp(),
             )
             .field(
                 "_0p1a_cnt_target0_reach_1_lp",
-                &format_args!("{}", self._0p1a_cnt_target0_reach_1_lp().bit()),
+                &self._0p1a_cnt_target0_reach_1_lp(),
             )
             .field(
                 "_0p1a_cnt_target1_reach_1_lp",
-                &format_args!("{}", self._0p1a_cnt_target1_reach_1_lp().bit()),
+                &self._0p1a_cnt_target1_reach_1_lp(),
             )
             .field(
                 "_0p2a_cnt_target0_reach_0_lp",
-                &format_args!("{}", self._0p2a_cnt_target0_reach_0_lp().bit()),
+                &self._0p2a_cnt_target0_reach_0_lp(),
             )
             .field(
                 "_0p2a_cnt_target1_reach_0_lp",
-                &format_args!("{}", self._0p2a_cnt_target1_reach_0_lp().bit()),
+                &self._0p2a_cnt_target1_reach_0_lp(),
             )
             .field(
                 "_0p2a_cnt_target0_reach_1_lp",
-                &format_args!("{}", self._0p2a_cnt_target0_reach_1_lp().bit()),
+                &self._0p2a_cnt_target0_reach_1_lp(),
             )
             .field(
                 "_0p2a_cnt_target1_reach_1_lp",
-                &format_args!("{}", self._0p2a_cnt_target1_reach_1_lp().bit()),
+                &self._0p2a_cnt_target1_reach_1_lp(),
             )
             .field(
                 "_0p3a_cnt_target0_reach_0_lp",
-                &format_args!("{}", self._0p3a_cnt_target0_reach_0_lp().bit()),
+                &self._0p3a_cnt_target0_reach_0_lp(),
             )
             .field(
                 "_0p3a_cnt_target1_reach_0_lp",
-                &format_args!("{}", self._0p3a_cnt_target1_reach_0_lp().bit()),
+                &self._0p3a_cnt_target1_reach_0_lp(),
             )
             .field(
                 "_0p3a_cnt_target0_reach_1_lp",
-                &format_args!("{}", self._0p3a_cnt_target0_reach_1_lp().bit()),
+                &self._0p3a_cnt_target0_reach_1_lp(),
             )
             .field(
                 "_0p3a_cnt_target1_reach_1_lp",
-                &format_args!("{}", self._0p3a_cnt_target1_reach_1_lp().bit()),
+                &self._0p3a_cnt_target1_reach_1_lp(),
             )
-            .field(
-                "lp_cpu_wakeup",
-                &format_args!("{}", self.lp_cpu_wakeup().bit()),
-            )
-            .field(
-                "sleep_switch_active_end",
-                &format_args!("{}", self.sleep_switch_active_end().bit()),
-            )
-            .field(
-                "active_switch_sleep_end",
-                &format_args!("{}", self.active_switch_sleep_end().bit()),
-            )
+            .field("lp_cpu_wakeup", &self.lp_cpu_wakeup())
+            .field("sleep_switch_active_end", &self.sleep_switch_active_end())
+            .field("active_switch_sleep_end", &self.active_switch_sleep_end())
             .field(
                 "sleep_switch_active_start",
-                &format_args!("{}", self.sleep_switch_active_start().bit()),
+                &self.sleep_switch_active_start(),
             )
             .field(
                 "active_switch_sleep_start",
-                &format_args!("{}", self.active_switch_sleep_start().bit()),
+                &self.active_switch_sleep_start(),
             )
-            .field(
-                "hp_sw_trigger",
-                &format_args!("{}", self.hp_sw_trigger().bit()),
-            )
+            .field("hp_sw_trigger", &self.hp_sw_trigger())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_INT_ENA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

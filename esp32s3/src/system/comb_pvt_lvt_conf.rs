@@ -28,21 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMB_PVT_LVT_CONF")
-            .field(
-                "comb_path_len_lvt",
-                &format_args!("{}", self.comb_path_len_lvt().bits()),
-            )
-            .field(
-                "comb_pvt_monitor_en_lvt",
-                &format_args!("{}", self.comb_pvt_monitor_en_lvt().bit()),
-            )
+            .field("comb_path_len_lvt", &self.comb_path_len_lvt())
+            .field("comb_pvt_monitor_en_lvt", &self.comb_pvt_monitor_en_lvt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<COMB_PVT_LVT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

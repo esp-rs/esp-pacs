@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF_FORCE_ON")
-            .field("clk_coex_fo", &format_args!("{}", self.clk_coex_fo().bit()))
-            .field(
-                "clk_i2c_mst_fo",
-                &format_args!("{}", self.clk_i2c_mst_fo().bit()),
-            )
-            .field(
-                "clk_fe_mem_fo",
-                &format_args!("{}", self.clk_fe_mem_fo().bit()),
-            )
+            .field("clk_coex_fo", &self.clk_coex_fo())
+            .field("clk_i2c_mst_fo", &self.clk_i2c_mst_fo())
+            .field("clk_fe_mem_fo", &self.clk_fe_mem_fo())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_FORCE_ON_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ESC_CONF")
-            .field("seper_char", &format_args!("{}", self.seper_char().bits()))
-            .field(
-                "seper_esc_char0",
-                &format_args!("{}", self.seper_esc_char0().bits()),
-            )
-            .field(
-                "seper_esc_char1",
-                &format_args!("{}", self.seper_esc_char1().bits()),
-            )
+            .field("seper_char", &self.seper_char())
+            .field("seper_esc_char0", &self.seper_esc_char0())
+            .field("seper_esc_char1", &self.seper_esc_char1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ESC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

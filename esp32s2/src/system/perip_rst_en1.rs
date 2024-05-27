@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_RST_EN1")
-            .field(
-                "crypto_aes_rst",
-                &format_args!("{}", self.crypto_aes_rst().bit()),
-            )
-            .field(
-                "crypto_sha_rst",
-                &format_args!("{}", self.crypto_sha_rst().bit()),
-            )
-            .field(
-                "crypto_rsa_rst",
-                &format_args!("{}", self.crypto_rsa_rst().bit()),
-            )
-            .field(
-                "crypto_ds_rst",
-                &format_args!("{}", self.crypto_ds_rst().bit()),
-            )
-            .field(
-                "crypto_hmac_rst",
-                &format_args!("{}", self.crypto_hmac_rst().bit()),
-            )
-            .field(
-                "crypto_dma_rst",
-                &format_args!("{}", self.crypto_dma_rst().bit()),
-            )
+            .field("crypto_aes_rst", &self.crypto_aes_rst())
+            .field("crypto_sha_rst", &self.crypto_sha_rst())
+            .field("crypto_rsa_rst", &self.crypto_rsa_rst())
+            .field("crypto_ds_rst", &self.crypto_ds_rst())
+            .field("crypto_hmac_rst", &self.crypto_hmac_rst())
+            .field("crypto_dma_rst", &self.crypto_dma_rst())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_RST_EN1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

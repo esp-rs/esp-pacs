@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_FLOW_CTRL")
-            .field(
-                "dsi_dma_flow_controller",
-                &format_args!("{}", self.dsi_dma_flow_controller().bit()),
-            )
-            .field(
-                "dma_flow_multiblk_num",
-                &format_args!("{}", self.dma_flow_multiblk_num().bits()),
-            )
+            .field("dsi_dma_flow_controller", &self.dsi_dma_flow_controller())
+            .field("dma_flow_multiblk_num", &self.dma_flow_multiblk_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_FLOW_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SLAVE3")
-            .field(
-                "slv_rdbuf_cmd_value",
-                &format_args!("{}", self.slv_rdbuf_cmd_value().bits()),
-            )
-            .field(
-                "slv_wrbuf_cmd_value",
-                &format_args!("{}", self.slv_wrbuf_cmd_value().bits()),
-            )
-            .field(
-                "slv_rdsta_cmd_value",
-                &format_args!("{}", self.slv_rdsta_cmd_value().bits()),
-            )
-            .field(
-                "slv_wrsta_cmd_value",
-                &format_args!("{}", self.slv_wrsta_cmd_value().bits()),
-            )
+            .field("slv_rdbuf_cmd_value", &self.slv_rdbuf_cmd_value())
+            .field("slv_wrbuf_cmd_value", &self.slv_wrbuf_cmd_value())
+            .field("slv_rdsta_cmd_value", &self.slv_rdsta_cmd_value())
+            .field("slv_wrsta_cmd_value", &self.slv_wrsta_cmd_value())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SLAVE3_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

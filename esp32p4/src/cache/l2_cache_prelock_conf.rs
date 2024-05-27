@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_PRELOCK_CONF")
-            .field(
-                "l2_cache_prelock_sct0_en",
-                &format_args!("{}", self.l2_cache_prelock_sct0_en().bit()),
-            )
-            .field(
-                "l2_cache_prelock_sct1_en",
-                &format_args!("{}", self.l2_cache_prelock_sct1_en().bit()),
-            )
-            .field(
-                "l2_cache_prelock_rgid",
-                &format_args!("{}", self.l2_cache_prelock_rgid().bits()),
-            )
+            .field("l2_cache_prelock_sct0_en", &self.l2_cache_prelock_sct0_en())
+            .field("l2_cache_prelock_sct1_en", &self.l2_cache_prelock_sct1_en())
+            .field("l2_cache_prelock_rgid", &self.l2_cache_prelock_rgid())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_PRELOCK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

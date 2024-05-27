@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ROM_CTRL_1")
-            .field(
-                "rom_force_pd",
-                &format_args!("{}", self.rom_force_pd().bits()),
-            )
-            .field(
-                "rom_force_pu",
-                &format_args!("{}", self.rom_force_pu().bits()),
-            )
+            .field("rom_force_pd", &self.rom_force_pd())
+            .field("rom_force_pu", &self.rom_force_pu())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ROM_CTRL_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -80,39 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_CONF0")
-            .field("in_rst", &format_args!("{}", self.in_rst().bit()))
-            .field(
-                "in_loop_test",
-                &format_args!("{}", self.in_loop_test().bit()),
-            )
-            .field(
-                "mem_trans_en",
-                &format_args!("{}", self.mem_trans_en().bit()),
-            )
-            .field("in_etm_en", &format_args!("{}", self.in_etm_en().bit()))
-            .field(
-                "in_burst_size_sel",
-                &format_args!("{}", self.in_burst_size_sel().bits()),
-            )
-            .field(
-                "in_cmd_disable",
-                &format_args!("{}", self.in_cmd_disable().bit()),
-            )
-            .field(
-                "in_ecc_aec_en",
-                &format_args!("{}", self.in_ecc_aec_en().bit()),
-            )
-            .field(
-                "indscr_burst_en",
-                &format_args!("{}", self.indscr_burst_en().bit()),
-            )
+            .field("in_rst", &self.in_rst())
+            .field("in_loop_test", &self.in_loop_test())
+            .field("mem_trans_en", &self.mem_trans_en())
+            .field("in_etm_en", &self.in_etm_en())
+            .field("in_burst_size_sel", &self.in_burst_size_sel())
+            .field("in_cmd_disable", &self.in_cmd_disable())
+            .field("in_ecc_aec_en", &self.in_ecc_aec_en())
+            .field("indscr_burst_en", &self.indscr_burst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IN_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

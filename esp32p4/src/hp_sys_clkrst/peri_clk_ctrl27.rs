@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERI_CLK_CTRL27")
-            .field(
-                "padbist_rx_clk_div_num",
-                &format_args!("{}", self.padbist_rx_clk_div_num().bits()),
-            )
-            .field(
-                "padbist_tx_clk_src_sel",
-                &format_args!("{}", self.padbist_tx_clk_src_sel().bit()),
-            )
-            .field(
-                "padbist_tx_clk_en",
-                &format_args!("{}", self.padbist_tx_clk_en().bit()),
-            )
-            .field(
-                "padbist_tx_clk_div_num",
-                &format_args!("{}", self.padbist_tx_clk_div_num().bits()),
-            )
+            .field("padbist_rx_clk_div_num", &self.padbist_rx_clk_div_num())
+            .field("padbist_tx_clk_src_sel", &self.padbist_tx_clk_src_sel())
+            .field("padbist_tx_clk_en", &self.padbist_tx_clk_en())
+            .field("padbist_tx_clk_div_num", &self.padbist_tx_clk_div_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERI_CLK_CTRL27_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

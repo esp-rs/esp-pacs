@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CORE_1_AREA_PIF_1_MAX")
-            .field(
-                "core_1_area_pif_1_max",
-                &format_args!("{}", self.core_1_area_pif_1_max().bits()),
-            )
+            .field("core_1_area_pif_1_max", &self.core_1_area_pif_1_max())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_AREA_PIF_1_MAX_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

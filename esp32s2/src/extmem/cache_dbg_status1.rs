@@ -188,117 +188,51 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CACHE_DBG_STATUS1")
-            .field(
-                "dbus0_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus0_acs_msk_dcache_st().bit()),
-            )
-            .field(
-                "dbus1_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus1_acs_msk_dcache_st().bit()),
-            )
-            .field(
-                "dbus2_acs_msk_dcache_st",
-                &format_args!("{}", self.dbus2_acs_msk_dcache_st().bit()),
-            )
-            .field(
-                "dbus0_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus1_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus2_acs_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_cnt_ovf_st().bit()),
-            )
+            .field("dbus0_acs_msk_dcache_st", &self.dbus0_acs_msk_dcache_st())
+            .field("dbus1_acs_msk_dcache_st", &self.dbus1_acs_msk_dcache_st())
+            .field("dbus2_acs_msk_dcache_st", &self.dbus2_acs_msk_dcache_st())
+            .field("dbus0_acs_cnt_ovf_st", &self.dbus0_acs_cnt_ovf_st())
+            .field("dbus1_acs_cnt_ovf_st", &self.dbus1_acs_cnt_ovf_st())
+            .field("dbus2_acs_cnt_ovf_st", &self.dbus2_acs_cnt_ovf_st())
             .field(
                 "dbus0_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus0_acs_miss_cnt_ovf_st(),
             )
             .field(
                 "dbus1_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus1_acs_miss_cnt_ovf_st(),
             )
             .field(
                 "dbus2_acs_miss_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_miss_cnt_ovf_st().bit()),
+                &self.dbus2_acs_miss_cnt_ovf_st(),
             )
-            .field(
-                "dbus0_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_acs_wb_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus1_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_acs_wb_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus2_acs_wb_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_acs_wb_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus0_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus0_abandon_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus1_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus1_abandon_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dbus2_abandon_cnt_ovf_st",
-                &format_args!("{}", self.dbus2_abandon_cnt_ovf_st().bit()),
-            )
+            .field("dbus0_acs_wb_cnt_ovf_st", &self.dbus0_acs_wb_cnt_ovf_st())
+            .field("dbus1_acs_wb_cnt_ovf_st", &self.dbus1_acs_wb_cnt_ovf_st())
+            .field("dbus2_acs_wb_cnt_ovf_st", &self.dbus2_acs_wb_cnt_ovf_st())
+            .field("dbus0_abandon_cnt_ovf_st", &self.dbus0_abandon_cnt_ovf_st())
+            .field("dbus1_abandon_cnt_ovf_st", &self.dbus1_abandon_cnt_ovf_st())
+            .field("dbus2_abandon_cnt_ovf_st", &self.dbus2_abandon_cnt_ovf_st())
             .field(
                 "dc_preload_miss_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_miss_cnt_ovf_st().bit()),
+                &self.dc_preload_miss_cnt_ovf_st(),
             )
             .field(
                 "dc_preload_evict_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_evict_cnt_ovf_st().bit()),
+                &self.dc_preload_evict_cnt_ovf_st(),
             )
-            .field(
-                "dc_preload_cnt_ovf_st",
-                &format_args!("{}", self.dc_preload_cnt_ovf_st().bit()),
-            )
-            .field(
-                "dc_sync_size_fault_st",
-                &format_args!("{}", self.dc_sync_size_fault_st().bit()),
-            )
-            .field(
-                "dc_preload_size_fault_st",
-                &format_args!("{}", self.dc_preload_size_fault_st().bit()),
-            )
-            .field(
-                "dcache_write_flash_st",
-                &format_args!("{}", self.dcache_write_flash_st().bit()),
-            )
-            .field(
-                "dcache_reject_st",
-                &format_args!("{}", self.dcache_reject_st().bit()),
-            )
+            .field("dc_preload_cnt_ovf_st", &self.dc_preload_cnt_ovf_st())
+            .field("dc_sync_size_fault_st", &self.dc_sync_size_fault_st())
+            .field("dc_preload_size_fault_st", &self.dc_preload_size_fault_st())
+            .field("dcache_write_flash_st", &self.dcache_write_flash_st())
+            .field("dcache_reject_st", &self.dcache_reject_st())
             .field(
                 "dcache_set_preload_ilg_st",
-                &format_args!("{}", self.dcache_set_preload_ilg_st().bit()),
+                &self.dcache_set_preload_ilg_st(),
             )
-            .field(
-                "dcache_set_sync_ilg_st",
-                &format_args!("{}", self.dcache_set_sync_ilg_st().bit()),
-            )
-            .field(
-                "dcache_set_lock_ilg_st",
-                &format_args!("{}", self.dcache_set_lock_ilg_st().bit()),
-            )
-            .field(
-                "mmu_entry_fault_st",
-                &format_args!("{}", self.mmu_entry_fault_st().bit()),
-            )
+            .field("dcache_set_sync_ilg_st", &self.dcache_set_sync_ilg_st())
+            .field("dcache_set_lock_ilg_st", &self.dcache_set_lock_ilg_st())
+            .field("mmu_entry_fault_st", &self.mmu_entry_fault_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CACHE_DBG_STATUS1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_dbg_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

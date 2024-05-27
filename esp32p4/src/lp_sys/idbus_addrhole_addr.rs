@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IDBUS_ADDRHOLE_ADDR")
-            .field(
-                "idbus_addrhole_addr",
-                &format_args!("{}", self.idbus_addrhole_addr().bits()),
-            )
+            .field("idbus_addrhole_addr", &self.idbus_addrhole_addr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<IDBUS_ADDRHOLE_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idbus_addrhole_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

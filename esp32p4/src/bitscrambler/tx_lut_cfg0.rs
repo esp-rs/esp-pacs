@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TX_LUT_CFG0")
-            .field("tx_lut_idx", &format_args!("{}", self.tx_lut_idx().bits()))
-            .field(
-                "tx_lut_mode",
-                &format_args!("{}", self.tx_lut_mode().bits()),
-            )
+            .field("tx_lut_idx", &self.tx_lut_idx())
+            .field("tx_lut_mode", &self.tx_lut_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TX_LUT_CFG0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

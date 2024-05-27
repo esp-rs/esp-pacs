@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ARB_LOST_CAP")
-            .field(
-                "arb_lost_cap",
-                &format_args!("{}", self.arb_lost_cap().bits()),
-            )
+            .field("arb_lost_cap", &self.arb_lost_cap())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ARB_LOST_CAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Arbitration Lost Capture Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`arb_lost_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_ICG_HP_APB")
-            .field(
-                "hp_active_dig_icg_apb_en",
-                &format_args!("{}", self.hp_active_dig_icg_apb_en().bits()),
-            )
+            .field("hp_active_dig_icg_apb_en", &self.hp_active_dig_icg_apb_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_ICG_HP_APB_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

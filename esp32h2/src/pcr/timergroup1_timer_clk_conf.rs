@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TIMERGROUP1_TIMER_CLK_CONF")
-            .field(
-                "tg1_timer_clk_sel",
-                &format_args!("{}", self.tg1_timer_clk_sel().bits()),
-            )
-            .field(
-                "tg1_timer_clk_en",
-                &format_args!("{}", self.tg1_timer_clk_en().bit()),
-            )
+            .field("tg1_timer_clk_sel", &self.tg1_timer_clk_sel())
+            .field("tg1_timer_clk_en", &self.tg1_timer_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TIMERGROUP1_TIMER_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

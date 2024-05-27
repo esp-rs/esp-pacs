@@ -197,97 +197,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK0")
-            .field(
-                "mask_ack_with_err_0",
-                &format_args!("{}", self.mask_ack_with_err_0().bit()),
-            )
-            .field(
-                "mask_ack_with_err_1",
-                &format_args!("{}", self.mask_ack_with_err_1().bit()),
-            )
-            .field(
-                "mask_ack_with_err_2",
-                &format_args!("{}", self.mask_ack_with_err_2().bit()),
-            )
-            .field(
-                "mask_ack_with_err_3",
-                &format_args!("{}", self.mask_ack_with_err_3().bit()),
-            )
-            .field(
-                "mask_ack_with_err_4",
-                &format_args!("{}", self.mask_ack_with_err_4().bit()),
-            )
-            .field(
-                "mask_ack_with_err_5",
-                &format_args!("{}", self.mask_ack_with_err_5().bit()),
-            )
-            .field(
-                "mask_ack_with_err_6",
-                &format_args!("{}", self.mask_ack_with_err_6().bit()),
-            )
-            .field(
-                "mask_ack_with_err_7",
-                &format_args!("{}", self.mask_ack_with_err_7().bit()),
-            )
-            .field(
-                "mask_ack_with_err_8",
-                &format_args!("{}", self.mask_ack_with_err_8().bit()),
-            )
-            .field(
-                "mask_ack_with_err_9",
-                &format_args!("{}", self.mask_ack_with_err_9().bit()),
-            )
-            .field(
-                "mask_ack_with_err_10",
-                &format_args!("{}", self.mask_ack_with_err_10().bit()),
-            )
-            .field(
-                "mask_ack_with_err_11",
-                &format_args!("{}", self.mask_ack_with_err_11().bit()),
-            )
-            .field(
-                "mask_ack_with_err_12",
-                &format_args!("{}", self.mask_ack_with_err_12().bit()),
-            )
-            .field(
-                "mask_ack_with_err_13",
-                &format_args!("{}", self.mask_ack_with_err_13().bit()),
-            )
-            .field(
-                "mask_ack_with_err_14",
-                &format_args!("{}", self.mask_ack_with_err_14().bit()),
-            )
-            .field(
-                "mask_ack_with_err_15",
-                &format_args!("{}", self.mask_ack_with_err_15().bit()),
-            )
-            .field(
-                "mask_dphy_errors_0",
-                &format_args!("{}", self.mask_dphy_errors_0().bit()),
-            )
-            .field(
-                "mask_dphy_errors_1",
-                &format_args!("{}", self.mask_dphy_errors_1().bit()),
-            )
-            .field(
-                "mask_dphy_errors_2",
-                &format_args!("{}", self.mask_dphy_errors_2().bit()),
-            )
-            .field(
-                "mask_dphy_errors_3",
-                &format_args!("{}", self.mask_dphy_errors_3().bit()),
-            )
-            .field(
-                "mask_dphy_errors_4",
-                &format_args!("{}", self.mask_dphy_errors_4().bit()),
-            )
+            .field("mask_ack_with_err_0", &self.mask_ack_with_err_0())
+            .field("mask_ack_with_err_1", &self.mask_ack_with_err_1())
+            .field("mask_ack_with_err_2", &self.mask_ack_with_err_2())
+            .field("mask_ack_with_err_3", &self.mask_ack_with_err_3())
+            .field("mask_ack_with_err_4", &self.mask_ack_with_err_4())
+            .field("mask_ack_with_err_5", &self.mask_ack_with_err_5())
+            .field("mask_ack_with_err_6", &self.mask_ack_with_err_6())
+            .field("mask_ack_with_err_7", &self.mask_ack_with_err_7())
+            .field("mask_ack_with_err_8", &self.mask_ack_with_err_8())
+            .field("mask_ack_with_err_9", &self.mask_ack_with_err_9())
+            .field("mask_ack_with_err_10", &self.mask_ack_with_err_10())
+            .field("mask_ack_with_err_11", &self.mask_ack_with_err_11())
+            .field("mask_ack_with_err_12", &self.mask_ack_with_err_12())
+            .field("mask_ack_with_err_13", &self.mask_ack_with_err_13())
+            .field("mask_ack_with_err_14", &self.mask_ack_with_err_14())
+            .field("mask_ack_with_err_15", &self.mask_ack_with_err_15())
+            .field("mask_dphy_errors_0", &self.mask_dphy_errors_0())
+            .field("mask_dphy_errors_1", &self.mask_dphy_errors_1())
+            .field("mask_dphy_errors_2", &self.mask_dphy_errors_2())
+            .field("mask_dphy_errors_3", &self.mask_dphy_errors_3())
+            .field("mask_dphy_errors_4", &self.mask_dphy_errors_4())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_MSK0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

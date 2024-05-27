@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF_POWER_ST")
-            .field(
-                "clk_zb_st_map",
-                &format_args!("{}", self.clk_zb_st_map().bits()),
-            )
-            .field(
-                "clk_fe_st_map",
-                &format_args!("{}", self.clk_fe_st_map().bits()),
-            )
-            .field(
-                "clk_bt_st_map",
-                &format_args!("{}", self.clk_bt_st_map().bits()),
-            )
-            .field(
-                "clk_wifi_st_map",
-                &format_args!("{}", self.clk_wifi_st_map().bits()),
-            )
-            .field(
-                "clk_modem_peri_st_map",
-                &format_args!("{}", self.clk_modem_peri_st_map().bits()),
-            )
-            .field(
-                "clk_modem_apb_st_map",
-                &format_args!("{}", self.clk_modem_apb_st_map().bits()),
-            )
+            .field("clk_zb_st_map", &self.clk_zb_st_map())
+            .field("clk_fe_st_map", &self.clk_fe_st_map())
+            .field("clk_bt_st_map", &self.clk_bt_st_map())
+            .field("clk_wifi_st_map", &self.clk_wifi_st_map())
+            .field("clk_modem_peri_st_map", &self.clk_modem_peri_st_map())
+            .field("clk_modem_apb_st_map", &self.clk_modem_apb_st_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_POWER_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

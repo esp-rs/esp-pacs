@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GET_LINE_CODE_W1")
-            .field(
-                "get_bdata_bits",
-                &format_args!("{}", self.get_bdata_bits().bits()),
-            )
-            .field(
-                "get_bparity_type",
-                &format_args!("{}", self.get_bparity_type().bits()),
-            )
-            .field(
-                "get_bchar_format",
-                &format_args!("{}", self.get_bchar_format().bits()),
-            )
+            .field("get_bdata_bits", &self.get_bdata_bits())
+            .field("get_bparity_type", &self.get_bparity_type())
+            .field("get_bchar_format", &self.get_bchar_format())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GET_LINE_CODE_W1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

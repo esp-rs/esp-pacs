@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PERIP_CLK_EN1")
-            .field(
-                "crypto_aes_clk_en",
-                &format_args!("{}", self.crypto_aes_clk_en().bit()),
-            )
-            .field(
-                "crypto_sha_clk_en",
-                &format_args!("{}", self.crypto_sha_clk_en().bit()),
-            )
-            .field(
-                "crypto_rsa_clk_en",
-                &format_args!("{}", self.crypto_rsa_clk_en().bit()),
-            )
-            .field(
-                "crypto_ds_clk_en",
-                &format_args!("{}", self.crypto_ds_clk_en().bit()),
-            )
-            .field(
-                "crypto_hmac_clk_en",
-                &format_args!("{}", self.crypto_hmac_clk_en().bit()),
-            )
-            .field(
-                "crypto_dma_clk_en",
-                &format_args!("{}", self.crypto_dma_clk_en().bit()),
-            )
+            .field("crypto_aes_clk_en", &self.crypto_aes_clk_en())
+            .field("crypto_sha_clk_en", &self.crypto_sha_clk_en())
+            .field("crypto_rsa_clk_en", &self.crypto_rsa_clk_en())
+            .field("crypto_ds_clk_en", &self.crypto_ds_clk_en())
+            .field("crypto_hmac_clk_en", &self.crypto_hmac_clk_en())
+            .field("crypto_dma_clk_en", &self.crypto_dma_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PERIP_CLK_EN1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

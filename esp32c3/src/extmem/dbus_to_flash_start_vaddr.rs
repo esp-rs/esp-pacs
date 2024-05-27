@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("DBUS_TO_FLASH_START_VADDR")
             .field(
                 "dbus_to_flash_start_vaddr",
-                &format_args!("{}", self.dbus_to_flash_start_vaddr().bits()),
+                &self.dbus_to_flash_start_vaddr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBUS_TO_FLASH_START_VADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

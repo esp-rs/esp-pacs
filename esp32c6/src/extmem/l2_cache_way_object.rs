@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("L2_CACHE_WAY_OBJECT")
-            .field(
-                "l2_cache_way_object",
-                &format_args!("{}", self.l2_cache_way_object().bits()),
-            )
+            .field("l2_cache_way_object", &self.l2_cache_way_object())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_WAY_OBJECT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache Tag and Data memory way register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_way_object::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("I2S_CONF")
-            .field("i2s_clk_en", &format_args!("{}", self.i2s_clk_en().bit()))
-            .field("i2s_rst_en", &format_args!("{}", self.i2s_rst_en().bit()))
+            .field("i2s_clk_en", &self.i2s_clk_en())
+            .field("i2s_rst_en", &self.i2s_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<I2S_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -122,55 +122,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTR")
-            .field(
-                "sda_force_out",
-                &format_args!("{}", self.sda_force_out().bit()),
-            )
-            .field(
-                "scl_force_out",
-                &format_args!("{}", self.scl_force_out().bit()),
-            )
-            .field(
-                "sample_scl_level",
-                &format_args!("{}", self.sample_scl_level().bit()),
-            )
-            .field(
-                "rx_full_ack_level",
-                &format_args!("{}", self.rx_full_ack_level().bit()),
-            )
-            .field("ms_mode", &format_args!("{}", self.ms_mode().bit()))
-            .field(
-                "tx_lsb_first",
-                &format_args!("{}", self.tx_lsb_first().bit()),
-            )
-            .field(
-                "rx_lsb_first",
-                &format_args!("{}", self.rx_lsb_first().bit()),
-            )
-            .field("clk_en", &format_args!("{}", self.clk_en().bit()))
-            .field(
-                "arbitration_en",
-                &format_args!("{}", self.arbitration_en().bit()),
-            )
-            .field(
-                "slv_tx_auto_start_en",
-                &format_args!("{}", self.slv_tx_auto_start_en().bit()),
-            )
-            .field(
-                "addr_10bit_rw_check_en",
-                &format_args!("{}", self.addr_10bit_rw_check_en().bit()),
-            )
-            .field(
-                "addr_broadcasting_en",
-                &format_args!("{}", self.addr_broadcasting_en().bit()),
-            )
+            .field("sda_force_out", &self.sda_force_out())
+            .field("scl_force_out", &self.scl_force_out())
+            .field("sample_scl_level", &self.sample_scl_level())
+            .field("rx_full_ack_level", &self.rx_full_ack_level())
+            .field("ms_mode", &self.ms_mode())
+            .field("tx_lsb_first", &self.tx_lsb_first())
+            .field("rx_lsb_first", &self.rx_lsb_first())
+            .field("clk_en", &self.clk_en())
+            .field("arbitration_en", &self.arbitration_en())
+            .field("slv_tx_auto_start_en", &self.slv_tx_auto_start_en())
+            .field("addr_10bit_rw_check_en", &self.addr_10bit_rw_check_en())
+            .field("addr_broadcasting_en", &self.addr_broadcasting_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

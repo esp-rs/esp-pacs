@@ -278,115 +278,37 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EVT_EN")
-            .field(
-                "evt_timer0_stop_en",
-                &format_args!("{}", self.evt_timer0_stop_en().bit()),
-            )
-            .field(
-                "evt_timer1_stop_en",
-                &format_args!("{}", self.evt_timer1_stop_en().bit()),
-            )
-            .field(
-                "evt_timer2_stop_en",
-                &format_args!("{}", self.evt_timer2_stop_en().bit()),
-            )
-            .field(
-                "evt_timer0_tez_en",
-                &format_args!("{}", self.evt_timer0_tez_en().bit()),
-            )
-            .field(
-                "evt_timer1_tez_en",
-                &format_args!("{}", self.evt_timer1_tez_en().bit()),
-            )
-            .field(
-                "evt_timer2_tez_en",
-                &format_args!("{}", self.evt_timer2_tez_en().bit()),
-            )
-            .field(
-                "evt_timer0_tep_en",
-                &format_args!("{}", self.evt_timer0_tep_en().bit()),
-            )
-            .field(
-                "evt_timer1_tep_en",
-                &format_args!("{}", self.evt_timer1_tep_en().bit()),
-            )
-            .field(
-                "evt_timer2_tep_en",
-                &format_args!("{}", self.evt_timer2_tep_en().bit()),
-            )
-            .field(
-                "evt_op0_tea_en",
-                &format_args!("{}", self.evt_op0_tea_en().bit()),
-            )
-            .field(
-                "evt_op1_tea_en",
-                &format_args!("{}", self.evt_op1_tea_en().bit()),
-            )
-            .field(
-                "evt_op2_tea_en",
-                &format_args!("{}", self.evt_op2_tea_en().bit()),
-            )
-            .field(
-                "evt_op0_teb_en",
-                &format_args!("{}", self.evt_op0_teb_en().bit()),
-            )
-            .field(
-                "evt_op1_teb_en",
-                &format_args!("{}", self.evt_op1_teb_en().bit()),
-            )
-            .field(
-                "evt_op2_teb_en",
-                &format_args!("{}", self.evt_op2_teb_en().bit()),
-            )
-            .field("evt_f0_en", &format_args!("{}", self.evt_f0_en().bit()))
-            .field("evt_f1_en", &format_args!("{}", self.evt_f1_en().bit()))
-            .field("evt_f2_en", &format_args!("{}", self.evt_f2_en().bit()))
-            .field(
-                "evt_f0_clr_en",
-                &format_args!("{}", self.evt_f0_clr_en().bit()),
-            )
-            .field(
-                "evt_f1_clr_en",
-                &format_args!("{}", self.evt_f1_clr_en().bit()),
-            )
-            .field(
-                "evt_f2_clr_en",
-                &format_args!("{}", self.evt_f2_clr_en().bit()),
-            )
-            .field(
-                "evt_tz0_cbc_en",
-                &format_args!("{}", self.evt_tz0_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz1_cbc_en",
-                &format_args!("{}", self.evt_tz1_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz2_cbc_en",
-                &format_args!("{}", self.evt_tz2_cbc_en().bit()),
-            )
-            .field(
-                "evt_tz0_ost_en",
-                &format_args!("{}", self.evt_tz0_ost_en().bit()),
-            )
-            .field(
-                "evt_tz1_ost_en",
-                &format_args!("{}", self.evt_tz1_ost_en().bit()),
-            )
-            .field(
-                "evt_tz2_ost_en",
-                &format_args!("{}", self.evt_tz2_ost_en().bit()),
-            )
-            .field("evt_cap0_en", &format_args!("{}", self.evt_cap0_en().bit()))
-            .field("evt_cap1_en", &format_args!("{}", self.evt_cap1_en().bit()))
-            .field("evt_cap2_en", &format_args!("{}", self.evt_cap2_en().bit()))
+            .field("evt_timer0_stop_en", &self.evt_timer0_stop_en())
+            .field("evt_timer1_stop_en", &self.evt_timer1_stop_en())
+            .field("evt_timer2_stop_en", &self.evt_timer2_stop_en())
+            .field("evt_timer0_tez_en", &self.evt_timer0_tez_en())
+            .field("evt_timer1_tez_en", &self.evt_timer1_tez_en())
+            .field("evt_timer2_tez_en", &self.evt_timer2_tez_en())
+            .field("evt_timer0_tep_en", &self.evt_timer0_tep_en())
+            .field("evt_timer1_tep_en", &self.evt_timer1_tep_en())
+            .field("evt_timer2_tep_en", &self.evt_timer2_tep_en())
+            .field("evt_op0_tea_en", &self.evt_op0_tea_en())
+            .field("evt_op1_tea_en", &self.evt_op1_tea_en())
+            .field("evt_op2_tea_en", &self.evt_op2_tea_en())
+            .field("evt_op0_teb_en", &self.evt_op0_teb_en())
+            .field("evt_op1_teb_en", &self.evt_op1_teb_en())
+            .field("evt_op2_teb_en", &self.evt_op2_teb_en())
+            .field("evt_f0_en", &self.evt_f0_en())
+            .field("evt_f1_en", &self.evt_f1_en())
+            .field("evt_f2_en", &self.evt_f2_en())
+            .field("evt_f0_clr_en", &self.evt_f0_clr_en())
+            .field("evt_f1_clr_en", &self.evt_f1_clr_en())
+            .field("evt_f2_clr_en", &self.evt_f2_clr_en())
+            .field("evt_tz0_cbc_en", &self.evt_tz0_cbc_en())
+            .field("evt_tz1_cbc_en", &self.evt_tz1_cbc_en())
+            .field("evt_tz2_cbc_en", &self.evt_tz2_cbc_en())
+            .field("evt_tz0_ost_en", &self.evt_tz0_ost_en())
+            .field("evt_tz1_ost_en", &self.evt_tz1_ost_en())
+            .field("evt_tz2_ost_en", &self.evt_tz2_ost_en())
+            .field("evt_cap0_en", &self.evt_cap0_en())
+            .field("evt_cap1_en", &self.evt_cap1_en())
+            .field("evt_cap2_en", &self.evt_cap2_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EVT_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

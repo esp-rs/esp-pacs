@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field(
-                "tx_fifo_rempty",
-                &format_args!("{}", self.tx_fifo_rempty().bit()),
-            )
-            .field(
-                "rx_fifo_wovf",
-                &format_args!("{}", self.rx_fifo_wovf().bit()),
-            )
-            .field("tx_eof", &format_args!("{}", self.tx_eof().bit()))
+            .field("tx_fifo_rempty", &self.tx_fifo_rempty())
+            .field("rx_fifo_wovf", &self.rx_fifo_wovf())
+            .field("tx_eof", &self.tx_eof())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,20 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUCH_APPROACH")
-            .field("pad0", &format_args!("{}", self.pad0().bits()))
-            .field("pad1", &format_args!("{}", self.pad1().bits()))
-            .field("pad2", &format_args!("{}", self.pad2().bits()))
-            .field(
-                "touch_slp_approach_en",
-                &format_args!("{}", self.touch_slp_approach_en().bit()),
-            )
+            .field("pad0", &self.pad0())
+            .field("pad1", &self.pad1())
+            .field("pad2", &self.pad2())
+            .field("touch_slp_approach_en", &self.touch_slp_approach_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUCH_APPROACH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

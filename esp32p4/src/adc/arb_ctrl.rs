@@ -80,33 +80,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ARB_CTRL")
-            .field("apb_force", &format_args!("{}", self.apb_force().bit()))
-            .field("rtc_force", &format_args!("{}", self.rtc_force().bit()))
-            .field("wifi_force", &format_args!("{}", self.wifi_force().bit()))
-            .field("grant_force", &format_args!("{}", self.grant_force().bit()))
-            .field(
-                "apb_priority",
-                &format_args!("{}", self.apb_priority().bits()),
-            )
-            .field(
-                "rtc_priority",
-                &format_args!("{}", self.rtc_priority().bits()),
-            )
-            .field(
-                "wifi_priority",
-                &format_args!("{}", self.wifi_priority().bits()),
-            )
-            .field(
-                "fix_priority",
-                &format_args!("{}", self.fix_priority().bit()),
-            )
+            .field("apb_force", &self.apb_force())
+            .field("rtc_force", &self.rtc_force())
+            .field("wifi_force", &self.wifi_force())
+            .field("grant_force", &self.grant_force())
+            .field("apb_priority", &self.apb_priority())
+            .field("rtc_priority", &self.rtc_priority())
+            .field("wifi_priority", &self.wifi_priority())
+            .field("fix_priority", &self.fix_priority())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ARB_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

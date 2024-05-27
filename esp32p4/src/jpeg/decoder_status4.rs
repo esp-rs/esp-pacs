@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DECODER_STATUS4")
-            .field(
-                "block_eof_cnt",
-                &format_args!("{}", self.block_eof_cnt().bits()),
-            )
-            .field(
-                "dezigzag_ready",
-                &format_args!("{}", self.dezigzag_ready().bit()),
-            )
-            .field(
-                "de_frame_eof_check",
-                &format_args!("{}", self.de_frame_eof_check().bit()),
-            )
-            .field(
-                "de_dma2d_in_push",
-                &format_args!("{}", self.de_dma2d_in_push().bit()),
-            )
+            .field("block_eof_cnt", &self.block_eof_cnt())
+            .field("dezigzag_ready", &self.dezigzag_ready())
+            .field("de_frame_eof_check", &self.de_frame_eof_check())
+            .field("de_dma2d_in_push", &self.de_dma2d_in_push())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DECODER_STATUS4_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`decoder_status4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

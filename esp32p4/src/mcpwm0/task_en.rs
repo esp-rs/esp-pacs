@@ -206,44 +206,29 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TASK_EN")
-            .field("cmpr0_a_up", &format_args!("{}", self.cmpr0_a_up().bit()))
-            .field("cmpr1_a_up", &format_args!("{}", self.cmpr1_a_up().bit()))
-            .field("cmpr2_a_up", &format_args!("{}", self.cmpr2_a_up().bit()))
-            .field("cmpr0_b_up", &format_args!("{}", self.cmpr0_b_up().bit()))
-            .field("cmpr1_b_up", &format_args!("{}", self.cmpr1_b_up().bit()))
-            .field("cmpr2_b_up", &format_args!("{}", self.cmpr2_b_up().bit()))
-            .field("gen_stop", &format_args!("{}", self.gen_stop().bit()))
-            .field("timer0_sync", &format_args!("{}", self.timer0_sync().bit()))
-            .field("timer1_sync", &format_args!("{}", self.timer1_sync().bit()))
-            .field("timer2_sync", &format_args!("{}", self.timer2_sync().bit()))
-            .field(
-                "timer0_period_up",
-                &format_args!("{}", self.timer0_period_up().bit()),
-            )
-            .field(
-                "timer1_period_up",
-                &format_args!("{}", self.timer1_period_up().bit()),
-            )
-            .field(
-                "timer2_period_up",
-                &format_args!("{}", self.timer2_period_up().bit()),
-            )
-            .field("tz0_ost", &format_args!("{}", self.tz0_ost().bit()))
-            .field("tz1_ost", &format_args!("{}", self.tz1_ost().bit()))
-            .field("tz2_ost", &format_args!("{}", self.tz2_ost().bit()))
-            .field("clr0_ost", &format_args!("{}", self.clr0_ost().bit()))
-            .field("clr1_ost", &format_args!("{}", self.clr1_ost().bit()))
-            .field("clr2_ost", &format_args!("{}", self.clr2_ost().bit()))
-            .field("cap0", &format_args!("{}", self.cap0().bit()))
-            .field("cap1", &format_args!("{}", self.cap1().bit()))
-            .field("cap2", &format_args!("{}", self.cap2().bit()))
+            .field("cmpr0_a_up", &self.cmpr0_a_up())
+            .field("cmpr1_a_up", &self.cmpr1_a_up())
+            .field("cmpr2_a_up", &self.cmpr2_a_up())
+            .field("cmpr0_b_up", &self.cmpr0_b_up())
+            .field("cmpr1_b_up", &self.cmpr1_b_up())
+            .field("cmpr2_b_up", &self.cmpr2_b_up())
+            .field("gen_stop", &self.gen_stop())
+            .field("timer0_sync", &self.timer0_sync())
+            .field("timer1_sync", &self.timer1_sync())
+            .field("timer2_sync", &self.timer2_sync())
+            .field("timer0_period_up", &self.timer0_period_up())
+            .field("timer1_period_up", &self.timer1_period_up())
+            .field("timer2_period_up", &self.timer2_period_up())
+            .field("tz0_ost", &self.tz0_ost())
+            .field("tz1_ost", &self.tz1_ost())
+            .field("tz2_ost", &self.tz2_ost())
+            .field("clr0_ost", &self.clr0_ost())
+            .field("clr1_ost", &self.clr1_ost())
+            .field("clr2_ost", &self.clr2_ost())
+            .field("cap0", &self.cap0())
+            .field("cap1", &self.cap1())
+            .field("cap2", &self.cap2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

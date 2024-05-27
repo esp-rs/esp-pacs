@@ -62,28 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONFIG")
-            .field(
-                "dm_trigger_ena",
-                &format_args!("{}", self.dm_trigger_ena().bit()),
-            )
-            .field("reset_ena", &format_args!("{}", self.reset_ena().bit()))
-            .field("halt_ena", &format_args!("{}", self.halt_ena().bit()))
-            .field("stall_ena", &format_args!("{}", self.stall_ena().bit()))
-            .field(
-                "full_address",
-                &format_args!("{}", self.full_address().bit()),
-            )
-            .field(
-                "implicit_except",
-                &format_args!("{}", self.implicit_except().bit()),
-            )
+            .field("dm_trigger_ena", &self.dm_trigger_ena())
+            .field("reset_ena", &self.reset_ena())
+            .field("halt_ena", &self.halt_ena())
+            .field("stall_ena", &self.stall_ena())
+            .field("full_address", &self.full_address())
+            .field("implicit_except", &self.implicit_except())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

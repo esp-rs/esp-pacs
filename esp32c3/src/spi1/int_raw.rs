@@ -53,18 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("per_end", &format_args!("{}", self.per_end().bit()))
-            .field("pes_end", &format_args!("{}", self.pes_end().bit()))
-            .field("wpe_end", &format_args!("{}", self.wpe_end().bit()))
-            .field("slv_st_end", &format_args!("{}", self.slv_st_end().bit()))
-            .field("mst_st_end", &format_args!("{}", self.mst_st_end().bit()))
+            .field("per_end", &self.per_end())
+            .field("pes_end", &self.pes_end())
+            .field("wpe_end", &self.wpe_end())
+            .field("slv_st_end", &self.slv_st_end())
+            .field("mst_st_end", &self.mst_st_end())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_RAW_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

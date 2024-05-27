@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("TOUT_CONF_SYNC")
-            .field("rx_tout_en", &format_args!("{}", self.rx_tout_en().bit()))
-            .field(
-                "rx_tout_flow_dis",
-                &format_args!("{}", self.rx_tout_flow_dis().bit()),
-            )
-            .field(
-                "rx_tout_thrhd",
-                &format_args!("{}", self.rx_tout_thrhd().bits()),
-            )
+            .field("rx_tout_en", &self.rx_tout_en())
+            .field("rx_tout_flow_dis", &self.rx_tout_flow_dis())
+            .field("rx_tout_thrhd", &self.rx_tout_thrhd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TOUT_CONF_SYNC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -298,139 +298,133 @@ impl core::fmt::Debug for R {
         f.debug_struct("TASK_ST2")
             .field(
                 "ledc_task_timer0_pause_st",
-                &format_args!("{}", self.ledc_task_timer0_pause_st().bit()),
+                &self.ledc_task_timer0_pause_st(),
             )
             .field(
                 "ledc_task_timer1_pause_st",
-                &format_args!("{}", self.ledc_task_timer1_pause_st().bit()),
+                &self.ledc_task_timer1_pause_st(),
             )
             .field(
                 "ledc_task_timer2_pause_st",
-                &format_args!("{}", self.ledc_task_timer2_pause_st().bit()),
+                &self.ledc_task_timer2_pause_st(),
             )
             .field(
                 "ledc_task_timer3_pause_st",
-                &format_args!("{}", self.ledc_task_timer3_pause_st().bit()),
+                &self.ledc_task_timer3_pause_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch0_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch0_st().bit()),
+                &self.ledc_task_gamma_restart_ch0_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch1_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch1_st().bit()),
+                &self.ledc_task_gamma_restart_ch1_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch2_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch2_st().bit()),
+                &self.ledc_task_gamma_restart_ch2_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch3_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch3_st().bit()),
+                &self.ledc_task_gamma_restart_ch3_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch4_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch4_st().bit()),
+                &self.ledc_task_gamma_restart_ch4_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch5_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch5_st().bit()),
+                &self.ledc_task_gamma_restart_ch5_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch6_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch6_st().bit()),
+                &self.ledc_task_gamma_restart_ch6_st(),
             )
             .field(
                 "ledc_task_gamma_restart_ch7_st",
-                &format_args!("{}", self.ledc_task_gamma_restart_ch7_st().bit()),
+                &self.ledc_task_gamma_restart_ch7_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch0_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch0_st().bit()),
+                &self.ledc_task_gamma_pause_ch0_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch1_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch1_st().bit()),
+                &self.ledc_task_gamma_pause_ch1_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch2_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch2_st().bit()),
+                &self.ledc_task_gamma_pause_ch2_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch3_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch3_st().bit()),
+                &self.ledc_task_gamma_pause_ch3_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch4_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch4_st().bit()),
+                &self.ledc_task_gamma_pause_ch4_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch5_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch5_st().bit()),
+                &self.ledc_task_gamma_pause_ch5_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch6_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch6_st().bit()),
+                &self.ledc_task_gamma_pause_ch6_st(),
             )
             .field(
                 "ledc_task_gamma_pause_ch7_st",
-                &format_args!("{}", self.ledc_task_gamma_pause_ch7_st().bit()),
+                &self.ledc_task_gamma_pause_ch7_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch0_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch0_st().bit()),
+                &self.ledc_task_gamma_resume_ch0_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch1_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch1_st().bit()),
+                &self.ledc_task_gamma_resume_ch1_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch2_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch2_st().bit()),
+                &self.ledc_task_gamma_resume_ch2_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch3_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch3_st().bit()),
+                &self.ledc_task_gamma_resume_ch3_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch4_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch4_st().bit()),
+                &self.ledc_task_gamma_resume_ch4_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch5_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch5_st().bit()),
+                &self.ledc_task_gamma_resume_ch5_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch6_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch6_st().bit()),
+                &self.ledc_task_gamma_resume_ch6_st(),
             )
             .field(
                 "ledc_task_gamma_resume_ch7_st",
-                &format_args!("{}", self.ledc_task_gamma_resume_ch7_st().bit()),
+                &self.ledc_task_gamma_resume_ch7_st(),
             )
             .field(
                 "tg0_task_cnt_start_timer0_st",
-                &format_args!("{}", self.tg0_task_cnt_start_timer0_st().bit()),
+                &self.tg0_task_cnt_start_timer0_st(),
             )
             .field(
                 "tg0_task_alarm_start_timer0_st",
-                &format_args!("{}", self.tg0_task_alarm_start_timer0_st().bit()),
+                &self.tg0_task_alarm_start_timer0_st(),
             )
             .field(
                 "tg0_task_cnt_stop_timer0_st",
-                &format_args!("{}", self.tg0_task_cnt_stop_timer0_st().bit()),
+                &self.tg0_task_cnt_stop_timer0_st(),
             )
             .field(
                 "tg0_task_cnt_reload_timer0_st",
-                &format_args!("{}", self.tg0_task_cnt_reload_timer0_st().bit()),
+                &self.tg0_task_cnt_reload_timer0_st(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<TASK_ST2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

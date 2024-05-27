@@ -55,23 +55,14 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("ST")
-            .field("in_done", &format_args!("{}", self.in_done().bit()))
-            .field("in_suc_eof", &format_args!("{}", self.in_suc_eof().bit()))
-            .field("in_err_eof", &format_args!("{}", self.in_err_eof().bit()))
-            .field("in_dscr_err", &format_args!("{}", self.in_dscr_err().bit()))
-            .field(
-                "in_dscr_empty",
-                &format_args!("{}", self.in_dscr_empty().bit()),
-            )
-            .field("infifo_ovf", &format_args!("{}", self.infifo_ovf().bit()))
-            .field("infifo_udf", &format_args!("{}", self.infifo_udf().bit()))
+            .field("in_done", &self.in_done())
+            .field("in_suc_eof", &self.in_suc_eof())
+            .field("in_err_eof", &self.in_err_eof())
+            .field("in_dscr_err", &self.in_dscr_err())
+            .field("in_dscr_empty", &self.in_dscr_empty())
+            .field("infifo_ovf", &self.infifo_ovf())
+            .field("infifo_udf", &self.infifo_udf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Masked interrupt of channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

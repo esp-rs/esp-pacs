@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SYSTIMER_FUNC_CLK_CONF")
-            .field(
-                "systimer_func_clk_sel",
-                &format_args!("{}", self.systimer_func_clk_sel().bit()),
-            )
-            .field(
-                "systimer_func_clk_en",
-                &format_args!("{}", self.systimer_func_clk_en().bit()),
-            )
+            .field("systimer_func_clk_sel", &self.systimer_func_clk_sel())
+            .field("systimer_func_clk_en", &self.systimer_func_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SYSTIMER_FUNC_CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

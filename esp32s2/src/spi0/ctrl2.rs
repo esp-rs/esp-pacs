@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL2")
-            .field(
-                "cs_setup_time",
-                &format_args!("{}", self.cs_setup_time().bits()),
-            )
-            .field(
-                "cs_hold_time",
-                &format_args!("{}", self.cs_hold_time().bits()),
-            )
-            .field(
-                "cs_delay_mode",
-                &format_args!("{}", self.cs_delay_mode().bits()),
-            )
-            .field(
-                "cs_delay_num",
-                &format_args!("{}", self.cs_delay_num().bits()),
-            )
+            .field("cs_setup_time", &self.cs_setup_time())
+            .field("cs_hold_time", &self.cs_hold_time())
+            .field("cs_delay_mode", &self.cs_delay_mode())
+            .field("cs_delay_num", &self.cs_delay_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

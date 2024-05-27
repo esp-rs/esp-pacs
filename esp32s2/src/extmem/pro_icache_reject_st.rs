@@ -20,21 +20,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_ICACHE_REJECT_ST")
-            .field(
-                "pro_icache_tag_attr",
-                &format_args!("{}", self.pro_icache_tag_attr().bits()),
-            )
-            .field(
-                "pro_icache_cpu_attr",
-                &format_args!("{}", self.pro_icache_cpu_attr().bits()),
-            )
+            .field("pro_icache_tag_attr", &self.pro_icache_tag_attr())
+            .field("pro_icache_cpu_attr", &self.pro_icache_cpu_attr())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_REJECT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_icache_reject_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

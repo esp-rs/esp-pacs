@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_PERI_CLK_EN")
-            .field(
-                "clk_en_assist_debug",
-                &format_args!("{}", self.clk_en_assist_debug().bit()),
-            )
-            .field(
-                "clk_en_dedicated_gpio",
-                &format_args!("{}", self.clk_en_dedicated_gpio().bit()),
-            )
+            .field("clk_en_assist_debug", &self.clk_en_assist_debug())
+            .field("clk_en_dedicated_gpio", &self.clk_en_dedicated_gpio())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_PERI_CLK_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CONF2")
-            .field("cnt_h_lim", &format_args!("{}", self.cnt_h_lim().bits()))
-            .field("cnt_l_lim", &format_args!("{}", self.cnt_l_lim().bits()))
+            .field("cnt_h_lim", &self.cnt_h_lim())
+            .field("cnt_l_lim", &self.cnt_l_lim())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CONF2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

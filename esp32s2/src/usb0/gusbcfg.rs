@@ -121,41 +121,20 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GUSBCFG")
-            .field("toutcal", &format_args!("{}", self.toutcal().bits()))
-            .field("phyif", &format_args!("{}", self.phyif().bit()))
-            .field(
-                "ulpi_utmi_sel",
-                &format_args!("{}", self.ulpi_utmi_sel().bit()),
-            )
-            .field("fsintf", &format_args!("{}", self.fsintf().bit()))
-            .field("physel", &format_args!("{}", self.physel().bit()))
-            .field("srpcap", &format_args!("{}", self.srpcap().bit()))
-            .field("hnpcap", &format_args!("{}", self.hnpcap().bit()))
-            .field("usbtrdtim", &format_args!("{}", self.usbtrdtim().bits()))
-            .field(
-                "termseldlpulse",
-                &format_args!("{}", self.termseldlpulse().bit()),
-            )
-            .field("txenddelay", &format_args!("{}", self.txenddelay().bit()))
-            .field(
-                "forcehstmode",
-                &format_args!("{}", self.forcehstmode().bit()),
-            )
-            .field(
-                "forcedevmode",
-                &format_args!("{}", self.forcedevmode().bit()),
-            )
-            .field(
-                "corrupttxpkt",
-                &format_args!("{}", self.corrupttxpkt().bit()),
-            )
+            .field("toutcal", &self.toutcal())
+            .field("phyif", &self.phyif())
+            .field("ulpi_utmi_sel", &self.ulpi_utmi_sel())
+            .field("fsintf", &self.fsintf())
+            .field("physel", &self.physel())
+            .field("srpcap", &self.srpcap())
+            .field("hnpcap", &self.hnpcap())
+            .field("usbtrdtim", &self.usbtrdtim())
+            .field("termseldlpulse", &self.termseldlpulse())
+            .field("txenddelay", &self.txenddelay())
+            .field("forcehstmode", &self.forcehstmode())
+            .field("forcedevmode", &self.forcedevmode())
+            .field("corrupttxpkt", &self.corrupttxpkt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GUSBCFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

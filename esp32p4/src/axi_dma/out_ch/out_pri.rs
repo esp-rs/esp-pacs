@@ -35,22 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_PRI")
-            .field("tx_pri", &format_args!("{}", self.tx_pri().bits()))
-            .field(
-                "tx_ch_arb_weigh",
-                &format_args!("{}", self.tx_ch_arb_weigh().bits()),
-            )
-            .field(
-                "tx_arb_weigh_opt_dir",
-                &format_args!("{}", self.tx_arb_weigh_opt_dir().bit()),
-            )
+            .field("tx_pri", &self.tx_pri())
+            .field("tx_ch_arb_weigh", &self.tx_ch_arb_weigh())
+            .field("tx_arb_weigh_opt_dir", &self.tx_arb_weigh_opt_dir())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_PRI_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

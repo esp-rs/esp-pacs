@@ -26,18 +26,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPI_MISC_CONFIG")
-            .field("dpi_en", &format_args!("{}", self.dpi_en().bit()))
+            .field("dpi_en", &self.dpi_en())
             .field(
                 "fifo_underrun_discard_vcnt",
-                &format_args!("{}", self.fifo_underrun_discard_vcnt().bits()),
+                &self.fifo_underrun_discard_vcnt(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPI_MISC_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

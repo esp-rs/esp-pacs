@@ -107,57 +107,18 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("BIAS_CONF")
-            .field(
-                "bias_buf_idle",
-                &format_args!("{}", self.bias_buf_idle().bit()),
-            )
-            .field(
-                "bias_buf_wake",
-                &format_args!("{}", self.bias_buf_wake().bit()),
-            )
-            .field(
-                "bias_buf_deep_slp",
-                &format_args!("{}", self.bias_buf_deep_slp().bit()),
-            )
-            .field(
-                "bias_buf_monitor",
-                &format_args!("{}", self.bias_buf_monitor().bit()),
-            )
-            .field(
-                "pd_cur_deep_slp",
-                &format_args!("{}", self.pd_cur_deep_slp().bit()),
-            )
-            .field(
-                "pd_cur_monitor",
-                &format_args!("{}", self.pd_cur_monitor().bit()),
-            )
-            .field(
-                "bias_sleep_deep_slp",
-                &format_args!("{}", self.bias_sleep_deep_slp().bit()),
-            )
-            .field(
-                "bias_sleep_monitor",
-                &format_args!("{}", self.bias_sleep_monitor().bit()),
-            )
-            .field(
-                "dbg_atten_deep_slp",
-                &format_args!("{}", self.dbg_atten_deep_slp().bits()),
-            )
-            .field(
-                "dbg_atten_monitor",
-                &format_args!("{}", self.dbg_atten_monitor().bits()),
-            )
-            .field(
-                "dbg_atten_wakeup",
-                &format_args!("{}", self.dbg_atten_wakeup().bits()),
-            )
+            .field("bias_buf_idle", &self.bias_buf_idle())
+            .field("bias_buf_wake", &self.bias_buf_wake())
+            .field("bias_buf_deep_slp", &self.bias_buf_deep_slp())
+            .field("bias_buf_monitor", &self.bias_buf_monitor())
+            .field("pd_cur_deep_slp", &self.pd_cur_deep_slp())
+            .field("pd_cur_monitor", &self.pd_cur_monitor())
+            .field("bias_sleep_deep_slp", &self.bias_sleep_deep_slp())
+            .field("bias_sleep_monitor", &self.bias_sleep_monitor())
+            .field("dbg_atten_deep_slp", &self.dbg_atten_deep_slp())
+            .field("dbg_atten_monitor", &self.dbg_atten_monitor())
+            .field("dbg_atten_wakeup", &self.dbg_atten_wakeup())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<BIAS_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_SPI_MEM_REJECT_INTR_MAP")
             .field(
                 "pro_spi_mem_reject_intr_map",
-                &format_args!("{}", self.pro_spi_mem_reject_intr_map().bits()),
+                &self.pro_spi_mem_reject_intr_map(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_SPI_MEM_REJECT_INTR_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

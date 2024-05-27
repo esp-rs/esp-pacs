@@ -224,103 +224,31 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DIG_ISO")
-            .field("force_off", &format_args!("{}", self.force_off().bit()))
-            .field("force_on", &format_args!("{}", self.force_on().bit()))
-            .field(
-                "dg_pad_autohold",
-                &format_args!("{}", self.dg_pad_autohold().bit()),
-            )
-            .field(
-                "dg_pad_autohold_en",
-                &format_args!("{}", self.dg_pad_autohold_en().bit()),
-            )
-            .field(
-                "dg_pad_force_noiso",
-                &format_args!("{}", self.dg_pad_force_noiso().bit()),
-            )
-            .field(
-                "dg_pad_force_iso",
-                &format_args!("{}", self.dg_pad_force_iso().bit()),
-            )
-            .field(
-                "dg_pad_force_unhold",
-                &format_args!("{}", self.dg_pad_force_unhold().bit()),
-            )
-            .field(
-                "dg_pad_force_hold",
-                &format_args!("{}", self.dg_pad_force_hold().bit()),
-            )
-            .field(
-                "rom0_force_iso",
-                &format_args!("{}", self.rom0_force_iso().bit()),
-            )
-            .field(
-                "rom0_force_noiso",
-                &format_args!("{}", self.rom0_force_noiso().bit()),
-            )
-            .field(
-                "inter_ram0_force_iso",
-                &format_args!("{}", self.inter_ram0_force_iso().bit()),
-            )
-            .field(
-                "inter_ram0_force_noiso",
-                &format_args!("{}", self.inter_ram0_force_noiso().bit()),
-            )
-            .field(
-                "inter_ram1_force_iso",
-                &format_args!("{}", self.inter_ram1_force_iso().bit()),
-            )
-            .field(
-                "inter_ram1_force_noiso",
-                &format_args!("{}", self.inter_ram1_force_noiso().bit()),
-            )
-            .field(
-                "inter_ram2_force_iso",
-                &format_args!("{}", self.inter_ram2_force_iso().bit()),
-            )
-            .field(
-                "inter_ram2_force_noiso",
-                &format_args!("{}", self.inter_ram2_force_noiso().bit()),
-            )
-            .field(
-                "inter_ram3_force_iso",
-                &format_args!("{}", self.inter_ram3_force_iso().bit()),
-            )
-            .field(
-                "inter_ram3_force_noiso",
-                &format_args!("{}", self.inter_ram3_force_noiso().bit()),
-            )
-            .field(
-                "inter_ram4_force_iso",
-                &format_args!("{}", self.inter_ram4_force_iso().bit()),
-            )
-            .field(
-                "inter_ram4_force_noiso",
-                &format_args!("{}", self.inter_ram4_force_noiso().bit()),
-            )
-            .field(
-                "wifi_force_iso",
-                &format_args!("{}", self.wifi_force_iso().bit()),
-            )
-            .field(
-                "wifi_force_noiso",
-                &format_args!("{}", self.wifi_force_noiso().bit()),
-            )
-            .field(
-                "dg_wrap_force_iso",
-                &format_args!("{}", self.dg_wrap_force_iso().bit()),
-            )
-            .field(
-                "dg_wrap_force_noiso",
-                &format_args!("{}", self.dg_wrap_force_noiso().bit()),
-            )
+            .field("force_off", &self.force_off())
+            .field("force_on", &self.force_on())
+            .field("dg_pad_autohold", &self.dg_pad_autohold())
+            .field("dg_pad_autohold_en", &self.dg_pad_autohold_en())
+            .field("dg_pad_force_noiso", &self.dg_pad_force_noiso())
+            .field("dg_pad_force_iso", &self.dg_pad_force_iso())
+            .field("dg_pad_force_unhold", &self.dg_pad_force_unhold())
+            .field("dg_pad_force_hold", &self.dg_pad_force_hold())
+            .field("rom0_force_iso", &self.rom0_force_iso())
+            .field("rom0_force_noiso", &self.rom0_force_noiso())
+            .field("inter_ram0_force_iso", &self.inter_ram0_force_iso())
+            .field("inter_ram0_force_noiso", &self.inter_ram0_force_noiso())
+            .field("inter_ram1_force_iso", &self.inter_ram1_force_iso())
+            .field("inter_ram1_force_noiso", &self.inter_ram1_force_noiso())
+            .field("inter_ram2_force_iso", &self.inter_ram2_force_iso())
+            .field("inter_ram2_force_noiso", &self.inter_ram2_force_noiso())
+            .field("inter_ram3_force_iso", &self.inter_ram3_force_iso())
+            .field("inter_ram3_force_noiso", &self.inter_ram3_force_noiso())
+            .field("inter_ram4_force_iso", &self.inter_ram4_force_iso())
+            .field("inter_ram4_force_noiso", &self.inter_ram4_force_noiso())
+            .field("wifi_force_iso", &self.wifi_force_iso())
+            .field("wifi_force_noiso", &self.wifi_force_noiso())
+            .field("dg_wrap_force_iso", &self.dg_wrap_force_iso())
+            .field("dg_wrap_force_noiso", &self.dg_wrap_force_noiso())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DIG_ISO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

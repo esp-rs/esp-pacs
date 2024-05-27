@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SARADC_CONF")
-            .field(
-                "saradc_clk_en",
-                &format_args!("{}", self.saradc_clk_en().bit()),
-            )
-            .field(
-                "saradc_rst_en",
-                &format_args!("{}", self.saradc_rst_en().bit()),
-            )
-            .field(
-                "saradc_reg_clk_en",
-                &format_args!("{}", self.saradc_reg_clk_en().bit()),
-            )
-            .field(
-                "saradc_reg_rst_en",
-                &format_args!("{}", self.saradc_reg_rst_en().bit()),
-            )
+            .field("saradc_clk_en", &self.saradc_clk_en())
+            .field("saradc_rst_en", &self.saradc_rst_en())
+            .field("saradc_reg_clk_en", &self.saradc_reg_clk_en())
+            .field("saradc_reg_rst_en", &self.saradc_reg_rst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SARADC_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

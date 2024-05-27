@@ -69,22 +69,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EMACLPI_CRS")
-            .field("tlpien", &format_args!("{}", self.tlpien().bit()))
-            .field("tlpiex", &format_args!("{}", self.tlpiex().bit()))
-            .field("rlpien", &format_args!("{}", self.rlpien().bit()))
-            .field("rlpiex", &format_args!("{}", self.rlpiex().bit()))
-            .field("tlpist", &format_args!("{}", self.tlpist().bit()))
-            .field("rlpist", &format_args!("{}", self.rlpist().bit()))
-            .field("lpien", &format_args!("{}", self.lpien().bit()))
-            .field("pls", &format_args!("{}", self.pls().bit()))
-            .field("lpitxa", &format_args!("{}", self.lpitxa().bit()))
+            .field("tlpien", &self.tlpien())
+            .field("tlpiex", &self.tlpiex())
+            .field("rlpien", &self.rlpien())
+            .field("rlpiex", &self.rlpiex())
+            .field("tlpist", &self.tlpist())
+            .field("rlpist", &self.rlpist())
+            .field("lpien", &self.lpien())
+            .field("pls", &self.pls())
+            .field("lpitxa", &self.lpitxa())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EMACLPI_CRS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "LPI Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emaclpi_crs::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

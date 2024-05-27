@@ -44,20 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_TIM_CONF")
-            .field("thr_a", &format_args!("{}", self.thr_a().bits()))
-            .field("trd", &format_args!("{}", self.trd().bits()))
-            .field("tsur_a", &format_args!("{}", self.tsur_a().bits()))
-            .field(
-                "read_init_num",
-                &format_args!("{}", self.read_init_num().bits()),
-            )
+            .field("thr_a", &self.thr_a())
+            .field("trd", &self.trd())
+            .field("tsur_a", &self.tsur_a())
+            .field("read_init_num", &self.read_init_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_TIM_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

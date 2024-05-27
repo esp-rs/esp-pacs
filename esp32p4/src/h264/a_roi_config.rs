@@ -26,15 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("A_ROI_CONFIG")
-            .field("a_roi_en", &format_args!("{}", self.a_roi_en().bit()))
-            .field("a_roi_mode", &format_args!("{}", self.a_roi_mode().bit()))
+            .field("a_roi_en", &self.a_roi_en())
+            .field("a_roi_mode", &self.a_roi_mode())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<A_ROI_CONFIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

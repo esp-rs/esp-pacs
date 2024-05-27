@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("Core_1_World_DRam0_PIF")
-            .field(
-                "core_1_world_dram0_pif",
-                &format_args!("{}", self.core_1_world_dram0_pif().bits()),
-            )
+            .field("core_1_world_dram0_pif", &self.core_1_world_dram0_pif())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CORE_1_WORLD_DRAM0_PIF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

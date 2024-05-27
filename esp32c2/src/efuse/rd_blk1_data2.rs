@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_BLK1_DATA2")
-            .field(
-                "system_data2",
-                &format_args!("{}", self.system_data2().bits()),
-            )
+            .field("system_data2", &self.system_data2())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_BLK1_DATA2_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK1 data register 2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_blk1_data2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

@@ -89,43 +89,16 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CONF0")
-            .field("out_rst_", &format_args!("{}", self.out_rst_().bit()))
-            .field(
-                "out_loop_test",
-                &format_args!("{}", self.out_loop_test().bit()),
-            )
-            .field(
-                "out_auto_wrback",
-                &format_args!("{}", self.out_auto_wrback().bit()),
-            )
-            .field(
-                "out_eof_mode",
-                &format_args!("{}", self.out_eof_mode().bit()),
-            )
-            .field("out_etm_en", &format_args!("{}", self.out_etm_en().bit()))
-            .field(
-                "out_burst_size_sel",
-                &format_args!("{}", self.out_burst_size_sel().bits()),
-            )
-            .field(
-                "out_cmd_disable",
-                &format_args!("{}", self.out_cmd_disable().bit()),
-            )
-            .field(
-                "out_ecc_aec_en",
-                &format_args!("{}", self.out_ecc_aec_en().bit()),
-            )
-            .field(
-                "outdscr_burst_en",
-                &format_args!("{}", self.outdscr_burst_en().bit()),
-            )
+            .field("out_rst_", &self.out_rst_())
+            .field("out_loop_test", &self.out_loop_test())
+            .field("out_auto_wrback", &self.out_auto_wrback())
+            .field("out_eof_mode", &self.out_eof_mode())
+            .field("out_etm_en", &self.out_etm_en())
+            .field("out_burst_size_sel", &self.out_burst_size_sel())
+            .field("out_cmd_disable", &self.out_cmd_disable())
+            .field("out_ecc_aec_en", &self.out_ecc_aec_en())
+            .field("outdscr_burst_en", &self.outdscr_burst_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_CONF0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

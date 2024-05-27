@@ -100,51 +100,45 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_AONCLKRST_LP_CLK_PO_EN")
             .field(
                 "lp_aonclkrst_clk_core_efuse_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_core_efuse_oen().bit()),
+                &self.lp_aonclkrst_clk_core_efuse_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_lp_bus_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_lp_bus_oen().bit()),
+                &self.lp_aonclkrst_clk_lp_bus_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_aon_slow_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_aon_slow_oen().bit()),
+                &self.lp_aonclkrst_clk_aon_slow_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_aon_fast_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_aon_fast_oen().bit()),
+                &self.lp_aonclkrst_clk_aon_fast_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_slow_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_slow_oen().bit()),
+                &self.lp_aonclkrst_clk_slow_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_fast_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_fast_oen().bit()),
+                &self.lp_aonclkrst_clk_fast_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_fosc_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_fosc_oen().bit()),
+                &self.lp_aonclkrst_clk_fosc_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_rc32k_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_rc32k_oen().bit()),
+                &self.lp_aonclkrst_clk_rc32k_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_sxtal_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_sxtal_oen().bit()),
+                &self.lp_aonclkrst_clk_sxtal_oen(),
             )
             .field(
                 "lp_aonclkrst_clk_sosc_oen",
-                &format_args!("{}", self.lp_aonclkrst_clk_sosc_oen().bit()),
+                &self.lp_aonclkrst_clk_sosc_oen(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -294,141 +294,126 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PRO_CPU_RECORD_PDEBUGDATA")
-            .field(
-                "record_pro_pdebugdata",
-                &format_args!("{}", self.record_pro_pdebugdata().bits()),
-            )
+            .field("record_pro_pdebugdata", &self.record_pro_pdebugdata())
             .field(
                 "record_pdebugdata_dep_other",
-                &format_args!("{}", self.record_pdebugdata_dep_other().bit()),
+                &self.record_pdebugdata_dep_other(),
             )
-            .field(
-                "record_pdebugdata_excvec",
-                &format_args!("{}", self.record_pdebugdata_excvec().bits()),
-            )
+            .field("record_pdebugdata_excvec", &self.record_pdebugdata_excvec())
             .field(
                 "record_pdebugdata_insntype_sr",
-                &format_args!("{}", self.record_pdebugdata_insntype_sr().bits()),
+                &self.record_pdebugdata_insntype_sr(),
             )
             .field(
                 "record_pdebugdata_insntype_rer",
-                &format_args!("{}", self.record_pdebugdata_insntype_rer().bit()),
+                &self.record_pdebugdata_insntype_rer(),
             )
             .field(
                 "record_pdebugdata_stall_buff",
-                &format_args!("{}", self.record_pdebugdata_stall_buff().bit()),
+                &self.record_pdebugdata_stall_buff(),
             )
             .field(
                 "record_pdebugdata_insntype_wer",
-                &format_args!("{}", self.record_pdebugdata_insntype_wer().bit()),
+                &self.record_pdebugdata_insntype_wer(),
             )
             .field(
                 "record_pdebugdata_stall_buffconfl",
-                &format_args!("{}", self.record_pdebugdata_stall_buffconfl().bit()),
+                &self.record_pdebugdata_stall_buffconfl(),
             )
             .field(
                 "record_pdebugdata_insntype_er",
-                &format_args!("{}", self.record_pdebugdata_insntype_er().bits()),
+                &self.record_pdebugdata_insntype_er(),
             )
             .field(
                 "record_pdebugdata_stall_dcm",
-                &format_args!("{}", self.record_pdebugdata_stall_dcm().bit()),
+                &self.record_pdebugdata_stall_dcm(),
             )
             .field(
                 "record_pdebugdata_stall_lsu",
-                &format_args!("{}", self.record_pdebugdata_stall_lsu().bit()),
+                &self.record_pdebugdata_stall_lsu(),
             )
             .field(
                 "record_pdebugdata_stall_icm",
-                &format_args!("{}", self.record_pdebugdata_stall_icm().bit()),
+                &self.record_pdebugdata_stall_icm(),
             )
             .field(
                 "record_pdebugdata_stall_irambusy",
-                &format_args!("{}", self.record_pdebugdata_stall_irambusy().bit()),
+                &self.record_pdebugdata_stall_irambusy(),
             )
             .field(
                 "record_pdebugdata_dep_lsu",
-                &format_args!("{}", self.record_pdebugdata_dep_lsu().bit()),
+                &self.record_pdebugdata_dep_lsu(),
             )
             .field(
                 "record_pdebugdata_stall_ipif",
-                &format_args!("{}", self.record_pdebugdata_stall_ipif().bit()),
+                &self.record_pdebugdata_stall_ipif(),
             )
             .field(
                 "record_pdebugdata_insntype_rsr",
-                &format_args!("{}", self.record_pdebugdata_insntype_rsr().bit()),
+                &self.record_pdebugdata_insntype_rsr(),
             )
             .field(
                 "record_pdebugdata_stall_tie",
-                &format_args!("{}", self.record_pdebugdata_stall_tie().bit()),
+                &self.record_pdebugdata_stall_tie(),
             )
             .field(
                 "record_pdebugdata_insntype_wsr",
-                &format_args!("{}", self.record_pdebugdata_insntype_wsr().bit()),
+                &self.record_pdebugdata_insntype_wsr(),
             )
             .field(
                 "record_pdebugdata_stall_run",
-                &format_args!("{}", self.record_pdebugdata_stall_run().bit()),
+                &self.record_pdebugdata_stall_run(),
             )
             .field(
                 "record_pdebugdata_insntype_xsr",
-                &format_args!("{}", self.record_pdebugdata_insntype_xsr().bit()),
+                &self.record_pdebugdata_insntype_xsr(),
             )
             .field(
                 "record_pdebugdata_dep_str",
-                &format_args!("{}", self.record_pdebugdata_dep_str().bit()),
+                &self.record_pdebugdata_dep_str(),
             )
-            .field(
-                "record_pdebugdata_dep",
-                &format_args!("{}", self.record_pdebugdata_dep().bit()),
-            )
+            .field("record_pdebugdata_dep", &self.record_pdebugdata_dep())
             .field(
                 "record_pdebugdata_stall_bpifetch",
-                &format_args!("{}", self.record_pdebugdata_stall_bpifetch().bit()),
+                &self.record_pdebugdata_stall_bpifetch(),
             )
             .field(
                 "record_pdebugdata_stall_l32r",
-                &format_args!("{}", self.record_pdebugdata_stall_l32r().bit()),
+                &self.record_pdebugdata_stall_l32r(),
             )
             .field(
                 "record_pdebugdata_stall_lsproc",
-                &format_args!("{}", self.record_pdebugdata_stall_lsproc().bit()),
+                &self.record_pdebugdata_stall_lsproc(),
             )
             .field(
                 "record_pdebugdata_stall_bpload",
-                &format_args!("{}", self.record_pdebugdata_stall_bpload().bit()),
+                &self.record_pdebugdata_stall_bpload(),
             )
             .field(
                 "record_pdebugdata_dep_memw",
-                &format_args!("{}", self.record_pdebugdata_dep_memw().bit()),
+                &self.record_pdebugdata_dep_memw(),
             )
             .field(
                 "record_pdebugdata_exccause",
-                &format_args!("{}", self.record_pdebugdata_exccause().bits()),
+                &self.record_pdebugdata_exccause(),
             )
             .field(
                 "record_pdebugdata_stall_bankconfl",
-                &format_args!("{}", self.record_pdebugdata_stall_bankconfl().bit()),
+                &self.record_pdebugdata_stall_bankconfl(),
             )
             .field(
                 "record_pdebugdata_dep_halt",
-                &format_args!("{}", self.record_pdebugdata_dep_halt().bit()),
+                &self.record_pdebugdata_dep_halt(),
             )
             .field(
                 "record_pdebugdata_stall_itermul",
-                &format_args!("{}", self.record_pdebugdata_stall_itermul().bit()),
+                &self.record_pdebugdata_stall_itermul(),
             )
             .field(
                 "record_pdebugdata_stall_iterdiv",
-                &format_args!("{}", self.record_pdebugdata_stall_iterdiv().bit()),
+                &self.record_pdebugdata_stall_iterdiv(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_CPU_RECORD_PDEBUGDATA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

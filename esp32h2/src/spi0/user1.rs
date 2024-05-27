@@ -33,25 +33,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("USER1")
-            .field(
-                "usr_dummy_cyclelen",
-                &format_args!("{}", self.usr_dummy_cyclelen().bits()),
-            )
-            .field(
-                "usr_dbytelen",
-                &format_args!("{}", self.usr_dbytelen().bits()),
-            )
-            .field(
-                "usr_addr_bitlen",
-                &format_args!("{}", self.usr_addr_bitlen().bits()),
-            )
+            .field("usr_dummy_cyclelen", &self.usr_dummy_cyclelen())
+            .field("usr_dbytelen", &self.usr_dbytelen())
+            .field("usr_addr_bitlen", &self.usr_addr_bitlen())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<USER1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

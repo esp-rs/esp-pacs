@@ -111,67 +111,28 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA0")
-            .field("rd_dis", &format_args!("{}", self.rd_dis().bits()))
-            .field(
-                "wdt_delay_sel",
-                &format_args!("{}", self.wdt_delay_sel().bits()),
-            )
-            .field(
-                "dis_pad_jtag",
-                &format_args!("{}", self.dis_pad_jtag().bit()),
-            )
-            .field(
-                "dis_download_icache",
-                &format_args!("{}", self.dis_download_icache().bit()),
-            )
+            .field("rd_dis", &self.rd_dis())
+            .field("wdt_delay_sel", &self.wdt_delay_sel())
+            .field("dis_pad_jtag", &self.dis_pad_jtag())
+            .field("dis_download_icache", &self.dis_download_icache())
             .field(
                 "dis_download_manual_encrypt",
-                &format_args!("{}", self.dis_download_manual_encrypt().bit()),
+                &self.dis_download_manual_encrypt(),
             )
             .field(
                 "spi_boot_encrypt_decrypt_cnt",
-                &format_args!("{}", self.spi_boot_encrypt_decrypt_cnt().bits()),
+                &self.spi_boot_encrypt_decrypt_cnt(),
             )
-            .field(
-                "xts_key_length_256",
-                &format_args!("{}", self.xts_key_length_256().bit()),
-            )
-            .field(
-                "uart_print_control",
-                &format_args!("{}", self.uart_print_control().bits()),
-            )
-            .field(
-                "force_send_resume",
-                &format_args!("{}", self.force_send_resume().bit()),
-            )
-            .field(
-                "dis_download_mode",
-                &format_args!("{}", self.dis_download_mode().bit()),
-            )
-            .field(
-                "dis_direct_boot",
-                &format_args!("{}", self.dis_direct_boot().bit()),
-            )
-            .field(
-                "enable_security_download",
-                &format_args!("{}", self.enable_security_download().bit()),
-            )
-            .field("flash_tpuw", &format_args!("{}", self.flash_tpuw().bits()))
-            .field(
-                "secure_boot_en",
-                &format_args!("{}", self.secure_boot_en().bit()),
-            )
-            .field(
-                "rpt4_reserved",
-                &format_args!("{}", self.rpt4_reserved().bits()),
-            )
+            .field("xts_key_length_256", &self.xts_key_length_256())
+            .field("uart_print_control", &self.uart_print_control())
+            .field("force_send_resume", &self.force_send_resume())
+            .field("dis_download_mode", &self.dis_download_mode())
+            .field("dis_direct_boot", &self.dis_direct_boot())
+            .field("enable_security_download", &self.enable_security_download())
+            .field("flash_tpuw", &self.flash_tpuw())
+            .field("secure_boot_en", &self.secure_boot_en())
+            .field("rpt4_reserved", &self.rpt4_reserved())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK0 data register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

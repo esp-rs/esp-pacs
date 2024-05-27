@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LCD_CTRL")
-            .field(
-                "lcd_hb_front",
-                &format_args!("{}", self.lcd_hb_front().bits()),
-            )
-            .field(
-                "lcd_va_height",
-                &format_args!("{}", self.lcd_va_height().bits()),
-            )
-            .field(
-                "lcd_vt_height",
-                &format_args!("{}", self.lcd_vt_height().bits()),
-            )
-            .field(
-                "lcd_rgb_mode_en",
-                &format_args!("{}", self.lcd_rgb_mode_en().bit()),
-            )
+            .field("lcd_hb_front", &self.lcd_hb_front())
+            .field("lcd_va_height", &self.lcd_va_height())
+            .field("lcd_vt_height", &self.lcd_vt_height())
+            .field("lcd_rgb_mode_en", &self.lcd_rgb_mode_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LCD_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

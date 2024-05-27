@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_TCM_PWR_CTRL")
-            .field(
-                "lp_tcm_rom_clk_force_on",
-                &format_args!("{}", self.lp_tcm_rom_clk_force_on().bit()),
-            )
-            .field(
-                "lp_tcm_ram_clk_force_on",
-                &format_args!("{}", self.lp_tcm_ram_clk_force_on().bit()),
-            )
+            .field("lp_tcm_rom_clk_force_on", &self.lp_tcm_rom_clk_force_on())
+            .field("lp_tcm_ram_clk_force_on", &self.lp_tcm_ram_clk_force_on())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_TCM_PWR_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

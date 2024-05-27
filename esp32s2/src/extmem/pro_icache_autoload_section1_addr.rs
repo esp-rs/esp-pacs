@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("PRO_ICACHE_AUTOLOAD_SECTION1_ADDR")
             .field(
                 "pro_icache_autoload_sct1_addr",
-                &format_args!("{}", self.pro_icache_autoload_sct1_addr().bits()),
+                &self.pro_icache_autoload_sct1_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<PRO_ICACHE_AUTOLOAD_SECTION1_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

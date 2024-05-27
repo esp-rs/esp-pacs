@@ -44,17 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
-            .field("tx_sclk_en", &format_args!("{}", self.tx_sclk_en().bit()))
-            .field("sclk_en", &format_args!("{}", self.sclk_en().bit()))
-            .field("tx_rst_core", &format_args!("{}", self.tx_rst_core().bit()))
-            .field("rst_core", &format_args!("{}", self.rst_core().bit()))
+            .field("tx_sclk_en", &self.tx_sclk_en())
+            .field("sclk_en", &self.sclk_en())
+            .field("tx_rst_core", &self.tx_rst_core())
+            .field("rst_core", &self.rst_core())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

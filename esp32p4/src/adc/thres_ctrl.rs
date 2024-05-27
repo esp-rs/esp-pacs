@@ -53,21 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("THRES_CTRL")
-            .field(
-                "thres_all_en",
-                &format_args!("{}", self.thres_all_en().bit()),
-            )
-            .field("thres3_en", &format_args!("{}", self.thres3_en().bit()))
-            .field("thres2_en", &format_args!("{}", self.thres2_en().bit()))
-            .field("thres1_en", &format_args!("{}", self.thres1_en().bit()))
-            .field("thres0_en", &format_args!("{}", self.thres0_en().bit()))
+            .field("thres_all_en", &self.thres_all_en())
+            .field("thres3_en", &self.thres3_en())
+            .field("thres2_en", &self.thres2_en())
+            .field("thres1_en", &self.thres1_en())
+            .field("thres0_en", &self.thres0_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<THRES_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

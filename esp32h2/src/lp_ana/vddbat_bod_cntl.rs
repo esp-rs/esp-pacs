@@ -51,33 +51,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VDDBAT_BOD_CNTL")
-            .field(
-                "vddbat_undervoltage_flag",
-                &format_args!("{}", self.vddbat_undervoltage_flag().bit()),
-            )
-            .field(
-                "vddbat_charger",
-                &format_args!("{}", self.vddbat_charger().bit()),
-            )
-            .field(
-                "vddbat_cnt_clr",
-                &format_args!("{}", self.vddbat_cnt_clr().bit()),
-            )
-            .field(
-                "vddbat_upvoltage_target",
-                &format_args!("{}", self.vddbat_upvoltage_target().bits()),
-            )
+            .field("vddbat_undervoltage_flag", &self.vddbat_undervoltage_flag())
+            .field("vddbat_charger", &self.vddbat_charger())
+            .field("vddbat_cnt_clr", &self.vddbat_cnt_clr())
+            .field("vddbat_upvoltage_target", &self.vddbat_upvoltage_target())
             .field(
                 "vddbat_undervoltage_target",
-                &format_args!("{}", self.vddbat_undervoltage_target().bits()),
+                &self.vddbat_undervoltage_target(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VDDBAT_BOD_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

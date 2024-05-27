@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DBI_CFG")
-            .field(
-                "in_dbi_conf",
-                &format_args!("{}", self.in_dbi_conf().bits()),
-            )
-            .field(
-                "out_dbi_conf",
-                &format_args!("{}", self.out_dbi_conf().bits()),
-            )
-            .field(
-                "lut_size_conf",
-                &format_args!("{}", self.lut_size_conf().bits()),
-            )
+            .field("in_dbi_conf", &self.in_dbi_conf())
+            .field("out_dbi_conf", &self.out_dbi_conf())
+            .field("lut_size_conf", &self.lut_size_conf())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DBI_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

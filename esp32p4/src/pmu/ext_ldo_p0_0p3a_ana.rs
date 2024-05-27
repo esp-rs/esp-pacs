@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EXT_LDO_P0_0P3A_ANA")
-            .field(
-                "ana_0p3a_mul_0",
-                &format_args!("{}", self.ana_0p3a_mul_0().bits()),
-            )
-            .field(
-                "ana_0p3a_en_vdet_0",
-                &format_args!("{}", self.ana_0p3a_en_vdet_0().bit()),
-            )
-            .field(
-                "ana_0p3a_en_cur_lim_0",
-                &format_args!("{}", self.ana_0p3a_en_cur_lim_0().bit()),
-            )
-            .field(
-                "ana_0p3a_dref_0",
-                &format_args!("{}", self.ana_0p3a_dref_0().bits()),
-            )
+            .field("ana_0p3a_mul_0", &self.ana_0p3a_mul_0())
+            .field("ana_0p3a_en_vdet_0", &self.ana_0p3a_en_vdet_0())
+            .field("ana_0p3a_en_cur_lim_0", &self.ana_0p3a_en_cur_lim_0())
+            .field("ana_0p3a_dref_0", &self.ana_0p3a_dref_0())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EXT_LDO_P0_0P3A_ANA_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -80,45 +80,21 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLUT_CONF")
-            .field(
-                "apb_fifo_mask",
-                &format_args!("{}", self.apb_fifo_mask().bit()),
-            )
-            .field(
-                "blend0_clut_mem_rst",
-                &format_args!("{}", self.blend0_clut_mem_rst().bit()),
-            )
-            .field(
-                "blend1_clut_mem_rst",
-                &format_args!("{}", self.blend1_clut_mem_rst().bit()),
-            )
+            .field("apb_fifo_mask", &self.apb_fifo_mask())
+            .field("blend0_clut_mem_rst", &self.blend0_clut_mem_rst())
+            .field("blend1_clut_mem_rst", &self.blend1_clut_mem_rst())
             .field(
                 "blend0_clut_mem_rdaddr_rst",
-                &format_args!("{}", self.blend0_clut_mem_rdaddr_rst().bit()),
+                &self.blend0_clut_mem_rdaddr_rst(),
             )
             .field(
                 "blend1_clut_mem_rdaddr_rst",
-                &format_args!("{}", self.blend1_clut_mem_rdaddr_rst().bit()),
+                &self.blend1_clut_mem_rdaddr_rst(),
             )
-            .field(
-                "blend0_clut_mem_force_pd",
-                &format_args!("{}", self.blend0_clut_mem_force_pd().bit()),
-            )
-            .field(
-                "blend0_clut_mem_force_pu",
-                &format_args!("{}", self.blend0_clut_mem_force_pu().bit()),
-            )
-            .field(
-                "blend0_clut_mem_clk_ena",
-                &format_args!("{}", self.blend0_clut_mem_clk_ena().bit()),
-            )
+            .field("blend0_clut_mem_force_pd", &self.blend0_clut_mem_force_pd())
+            .field("blend0_clut_mem_force_pu", &self.blend0_clut_mem_force_pu())
+            .field("blend0_clut_mem_clk_ena", &self.blend0_clut_mem_clk_ena())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CLUT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

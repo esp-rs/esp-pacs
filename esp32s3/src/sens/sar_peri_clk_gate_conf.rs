@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_PERI_CLK_GATE_CONF")
-            .field(
-                "rtc_i2c_clk_en",
-                &format_args!("{}", self.rtc_i2c_clk_en().bit()),
-            )
-            .field(
-                "tsens_clk_en",
-                &format_args!("{}", self.tsens_clk_en().bit()),
-            )
-            .field(
-                "saradc_clk_en",
-                &format_args!("{}", self.saradc_clk_en().bit()),
-            )
-            .field(
-                "iomux_clk_en",
-                &format_args!("{}", self.iomux_clk_en().bit()),
-            )
+            .field("rtc_i2c_clk_en", &self.rtc_i2c_clk_en())
+            .field("tsens_clk_en", &self.tsens_clk_en())
+            .field("saradc_clk_en", &self.saradc_clk_en())
+            .field("iomux_clk_en", &self.iomux_clk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_PERI_CLK_GATE_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

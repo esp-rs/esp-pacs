@@ -28,19 +28,13 @@ impl core::fmt::Debug for R {
         f.debug_struct("MEM_AUX_CTRL_1")
             .field(
                 "lsc_lut_r_gr_mem_aux_ctrl",
-                &format_args!("{}", self.lsc_lut_r_gr_mem_aux_ctrl().bits()),
+                &self.lsc_lut_r_gr_mem_aux_ctrl(),
             )
             .field(
                 "lsc_lut_gb_b_mem_aux_ctrl",
-                &format_args!("{}", self.lsc_lut_gb_b_mem_aux_ctrl().bits()),
+                &self.lsc_lut_gb_b_mem_aux_ctrl(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MEM_AUX_CTRL_1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

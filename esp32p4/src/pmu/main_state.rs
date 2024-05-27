@@ -38,29 +38,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MAIN_STATE")
-            .field(
-                "enable_cali_pmu_cntl",
-                &format_args!("{}", self.enable_cali_pmu_cntl().bit()),
-            )
-            .field(
-                "pmu_main_last_st_state",
-                &format_args!("{}", self.pmu_main_last_st_state().bits()),
-            )
-            .field(
-                "pmu_main_tar_st_state",
-                &format_args!("{}", self.pmu_main_tar_st_state().bits()),
-            )
-            .field(
-                "pmu_main_cur_st_state",
-                &format_args!("{}", self.pmu_main_cur_st_state().bits()),
-            )
+            .field("enable_cali_pmu_cntl", &self.enable_cali_pmu_cntl())
+            .field("pmu_main_last_st_state", &self.pmu_main_last_st_state())
+            .field("pmu_main_tar_st_state", &self.pmu_main_tar_st_state())
+            .field("pmu_main_cur_st_state", &self.pmu_main_cur_st_state())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MAIN_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

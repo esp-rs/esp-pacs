@@ -17,17 +17,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GPIO_INTERRUPT_PRO_MAP")
-            .field(
-                "gpio_interrupt_pro_map",
-                &format_args!("{}", self.gpio_interrupt_pro_map().bits()),
-            )
+            .field("gpio_interrupt_pro_map", &self.gpio_interrupt_pro_map())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GPIO_INTERRUPT_PRO_MAP_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

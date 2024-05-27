@@ -167,32 +167,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CTRL")
-            .field("fdummy_rin", &format_args!("{}", self.fdummy_rin().bit()))
-            .field("fdummy_wout", &format_args!("{}", self.fdummy_wout().bit()))
-            .field("fdout_oct", &format_args!("{}", self.fdout_oct().bit()))
-            .field("fdin_oct", &format_args!("{}", self.fdin_oct().bit()))
-            .field("faddr_oct", &format_args!("{}", self.faddr_oct().bit()))
-            .field("fcmd_quad", &format_args!("{}", self.fcmd_quad().bit()))
-            .field("fcmd_oct", &format_args!("{}", self.fcmd_oct().bit()))
-            .field("fcs_crc_en", &format_args!("{}", self.fcs_crc_en().bit()))
-            .field("tx_crc_en", &format_args!("{}", self.tx_crc_en().bit()))
-            .field("fastrd_mode", &format_args!("{}", self.fastrd_mode().bit()))
-            .field("fread_dual", &format_args!("{}", self.fread_dual().bit()))
-            .field("resandres", &format_args!("{}", self.resandres().bit()))
-            .field("q_pol", &format_args!("{}", self.q_pol().bit()))
-            .field("d_pol", &format_args!("{}", self.d_pol().bit()))
-            .field("fread_quad", &format_args!("{}", self.fread_quad().bit()))
-            .field("wp", &format_args!("{}", self.wp().bit()))
-            .field("wrsr_2b", &format_args!("{}", self.wrsr_2b().bit()))
-            .field("fread_dio", &format_args!("{}", self.fread_dio().bit()))
-            .field("fread_qio", &format_args!("{}", self.fread_qio().bit()))
+            .field("fdummy_rin", &self.fdummy_rin())
+            .field("fdummy_wout", &self.fdummy_wout())
+            .field("fdout_oct", &self.fdout_oct())
+            .field("fdin_oct", &self.fdin_oct())
+            .field("faddr_oct", &self.faddr_oct())
+            .field("fcmd_quad", &self.fcmd_quad())
+            .field("fcmd_oct", &self.fcmd_oct())
+            .field("fcs_crc_en", &self.fcs_crc_en())
+            .field("tx_crc_en", &self.tx_crc_en())
+            .field("fastrd_mode", &self.fastrd_mode())
+            .field("fread_dual", &self.fread_dual())
+            .field("resandres", &self.resandres())
+            .field("q_pol", &self.q_pol())
+            .field("d_pol", &self.d_pol())
+            .field("fread_quad", &self.fread_quad())
+            .field("wp", &self.wp())
+            .field("wrsr_2b", &self.wrsr_2b())
+            .field("fread_dio", &self.fread_dio())
+            .field("fread_qio", &self.fread_qio())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

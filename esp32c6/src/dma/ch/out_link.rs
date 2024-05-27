@@ -30,21 +30,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_LINK")
-            .field(
-                "outlink_addr",
-                &format_args!("{}", self.outlink_addr().bits()),
-            )
-            .field(
-                "outlink_park",
-                &format_args!("{}", self.outlink_park().bit()),
-            )
+            .field("outlink_addr", &self.outlink_addr())
+            .field("outlink_park", &self.outlink_park())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<OUT_LINK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

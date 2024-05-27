@@ -26,18 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HWFC_CONF_SYNC")
-            .field(
-                "rx_flow_thrhd",
-                &format_args!("{}", self.rx_flow_thrhd().bits()),
-            )
-            .field("rx_flow_en", &format_args!("{}", self.rx_flow_en().bit()))
+            .field("rx_flow_thrhd", &self.rx_flow_thrhd())
+            .field("rx_flow_en", &self.rx_flow_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HWFC_CONF_SYNC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

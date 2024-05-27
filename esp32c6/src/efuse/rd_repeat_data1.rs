@@ -62,45 +62,15 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RD_REPEAT_DATA1")
-            .field(
-                "rpt4_reserved1_0",
-                &format_args!("{}", self.rpt4_reserved1_0().bits()),
-            )
-            .field(
-                "wdt_delay_sel",
-                &format_args!("{}", self.wdt_delay_sel().bits()),
-            )
-            .field(
-                "spi_boot_crypt_cnt",
-                &format_args!("{}", self.spi_boot_crypt_cnt().bits()),
-            )
-            .field(
-                "secure_boot_key_revoke0",
-                &format_args!("{}", self.secure_boot_key_revoke0().bit()),
-            )
-            .field(
-                "secure_boot_key_revoke1",
-                &format_args!("{}", self.secure_boot_key_revoke1().bit()),
-            )
-            .field(
-                "secure_boot_key_revoke2",
-                &format_args!("{}", self.secure_boot_key_revoke2().bit()),
-            )
-            .field(
-                "key_purpose_0",
-                &format_args!("{}", self.key_purpose_0().bits()),
-            )
-            .field(
-                "key_purpose_1",
-                &format_args!("{}", self.key_purpose_1().bits()),
-            )
+            .field("rpt4_reserved1_0", &self.rpt4_reserved1_0())
+            .field("wdt_delay_sel", &self.wdt_delay_sel())
+            .field("spi_boot_crypt_cnt", &self.spi_boot_crypt_cnt())
+            .field("secure_boot_key_revoke0", &self.secure_boot_key_revoke0())
+            .field("secure_boot_key_revoke1", &self.secure_boot_key_revoke1())
+            .field("secure_boot_key_revoke2", &self.secure_boot_key_revoke2())
+            .field("key_purpose_0", &self.key_purpose_0())
+            .field("key_purpose_1", &self.key_purpose_1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RD_REPEAT_DATA1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "BLOCK0 data register 2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

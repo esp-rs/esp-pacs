@@ -13,17 +13,8 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DPC_DEADPIX_CNT")
-            .field(
-                "dpc_deadpix_cnt",
-                &format_args!("{}", self.dpc_deadpix_cnt().bits()),
-            )
+            .field("dpc_deadpix_cnt", &self.dpc_deadpix_cnt())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DPC_DEADPIX_CNT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "DPC dead-pix number register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpc_deadpix_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

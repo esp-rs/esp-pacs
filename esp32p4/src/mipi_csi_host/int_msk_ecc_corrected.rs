@@ -154,75 +154,69 @@ impl core::fmt::Debug for R {
         f.debug_struct("INT_MSK_ECC_CORRECTED")
             .field(
                 "mask_err_ecc_corrected_vc0",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc0().bit()),
+                &self.mask_err_ecc_corrected_vc0(),
             )
             .field(
                 "mask_err_ecc_corrected_vc1",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc1().bit()),
+                &self.mask_err_ecc_corrected_vc1(),
             )
             .field(
                 "mask_err_ecc_corrected_vc2",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc2().bit()),
+                &self.mask_err_ecc_corrected_vc2(),
             )
             .field(
                 "mask_err_ecc_corrected_vc3",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc3().bit()),
+                &self.mask_err_ecc_corrected_vc3(),
             )
             .field(
                 "mask_err_ecc_corrected_vc4",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc4().bit()),
+                &self.mask_err_ecc_corrected_vc4(),
             )
             .field(
                 "mask_err_ecc_corrected_vc5",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc5().bit()),
+                &self.mask_err_ecc_corrected_vc5(),
             )
             .field(
                 "mask_err_ecc_corrected_vc6",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc6().bit()),
+                &self.mask_err_ecc_corrected_vc6(),
             )
             .field(
                 "mask_err_ecc_corrected_vc7",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc7().bit()),
+                &self.mask_err_ecc_corrected_vc7(),
             )
             .field(
                 "mask_err_ecc_corrected_vc8",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc8().bit()),
+                &self.mask_err_ecc_corrected_vc8(),
             )
             .field(
                 "mask_err_ecc_corrected_vc9",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc9().bit()),
+                &self.mask_err_ecc_corrected_vc9(),
             )
             .field(
                 "mask_err_ecc_corrected_vc10",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc10().bit()),
+                &self.mask_err_ecc_corrected_vc10(),
             )
             .field(
                 "mask_err_ecc_corrected_vc11",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc11().bit()),
+                &self.mask_err_ecc_corrected_vc11(),
             )
             .field(
                 "mask_err_ecc_corrected_vc12",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc12().bit()),
+                &self.mask_err_ecc_corrected_vc12(),
             )
             .field(
                 "mask_err_ecc_corrected_vc13",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc13().bit()),
+                &self.mask_err_ecc_corrected_vc13(),
             )
             .field(
                 "mask_err_ecc_corrected_vc14",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc14().bit()),
+                &self.mask_err_ecc_corrected_vc14(),
             )
             .field(
                 "mask_err_ecc_corrected_vc15",
-                &format_args!("{}", self.mask_err_ecc_corrected_vc15().bit()),
+                &self.mask_err_ecc_corrected_vc15(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_MSK_ECC_CORRECTED_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

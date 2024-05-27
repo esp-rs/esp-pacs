@@ -34,29 +34,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HOST_SLCHOST_STATE_W0")
-            .field(
-                "host_slchost_state0",
-                &format_args!("{}", self.host_slchost_state0().bits()),
-            )
-            .field(
-                "host_slchost_state1",
-                &format_args!("{}", self.host_slchost_state1().bits()),
-            )
-            .field(
-                "host_slchost_state2",
-                &format_args!("{}", self.host_slchost_state2().bits()),
-            )
-            .field(
-                "host_slchost_state3",
-                &format_args!("{}", self.host_slchost_state3().bits()),
-            )
+            .field("host_slchost_state0", &self.host_slchost_state0())
+            .field("host_slchost_state1", &self.host_slchost_state1())
+            .field("host_slchost_state2", &self.host_slchost_state2())
+            .field("host_slchost_state3", &self.host_slchost_state3())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_STATE_W0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slchost_state_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

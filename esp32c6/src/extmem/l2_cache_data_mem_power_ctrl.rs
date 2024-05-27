@@ -29,23 +29,17 @@ impl core::fmt::Debug for R {
         f.debug_struct("L2_CACHE_DATA_MEM_POWER_CTRL")
             .field(
                 "l2_cache_data_mem_force_on",
-                &format_args!("{}", self.l2_cache_data_mem_force_on().bit()),
+                &self.l2_cache_data_mem_force_on(),
             )
             .field(
                 "l2_cache_data_mem_force_pd",
-                &format_args!("{}", self.l2_cache_data_mem_force_pd().bit()),
+                &self.l2_cache_data_mem_force_pd(),
             )
             .field(
                 "l2_cache_data_mem_force_pu",
-                &format_args!("{}", self.l2_cache_data_mem_force_pu().bit()),
+                &self.l2_cache_data_mem_force_pu(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Cache data memory power control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_data_mem_power_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

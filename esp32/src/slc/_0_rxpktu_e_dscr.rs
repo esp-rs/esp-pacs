@@ -15,15 +15,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("_0_RXPKTU_E_DSCR")
             .field(
                 "slc0_rx_pkt_end_dscr_addr",
-                &format_args!("{}", self.slc0_rx_pkt_end_dscr_addr().bits()),
+                &self.slc0_rx_pkt_end_dscr_addr(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_0_RXPKTU_E_DSCR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_rxpktu_e_dscr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

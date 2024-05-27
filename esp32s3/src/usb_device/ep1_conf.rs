@@ -24,21 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EP1_CONF")
-            .field(
-                "serial_in_ep_data_free",
-                &format_args!("{}", self.serial_in_ep_data_free().bit()),
-            )
-            .field(
-                "serial_out_ep_data_avail",
-                &format_args!("{}", self.serial_out_ep_data_avail().bit()),
-            )
+            .field("serial_in_ep_data_free", &self.serial_in_ep_data_free())
+            .field("serial_out_ep_data_avail", &self.serial_out_ep_data_avail())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EP1_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

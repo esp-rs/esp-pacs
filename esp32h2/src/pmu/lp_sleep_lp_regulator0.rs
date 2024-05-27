@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_SLEEP_LP_REGULATOR0")
             .field(
                 "lp_sleep_lp_regulator_slp_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_xpd().bit()),
+                &self.lp_sleep_lp_regulator_slp_xpd(),
             )
             .field(
                 "lp_sleep_lp_regulator_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_xpd().bit()),
+                &self.lp_sleep_lp_regulator_xpd(),
             )
             .field(
                 "lp_sleep_lp_regulator_slp_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_dbias().bits()),
+                &self.lp_sleep_lp_regulator_slp_dbias(),
             )
             .field(
                 "lp_sleep_lp_regulator_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_dbias().bits()),
+                &self.lp_sleep_lp_regulator_dbias(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_LP_REGULATOR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

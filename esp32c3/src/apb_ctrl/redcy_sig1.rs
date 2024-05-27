@@ -24,18 +24,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("REDCY_SIG1")
-            .field("redcy_sig1", &format_args!("{}", self.redcy_sig1().bits()))
-            .field(
-                "redcy_nandor",
-                &format_args!("{}", self.redcy_nandor().bit()),
-            )
+            .field("redcy_sig1", &self.redcy_sig1())
+            .field("redcy_nandor", &self.redcy_nandor())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<REDCY_SIG1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

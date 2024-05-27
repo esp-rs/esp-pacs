@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DMA_REQ_CFG")
-            .field(
-                "dma_burst_len",
-                &format_args!("{}", self.dma_burst_len().bits()),
-            )
-            .field(
-                "dma_cfg_upd_by_blk",
-                &format_args!("{}", self.dma_cfg_upd_by_blk().bit()),
-            )
-            .field(
-                "dma_force_rd_status",
-                &format_args!("{}", self.dma_force_rd_status().bit()),
-            )
+            .field("dma_burst_len", &self.dma_burst_len())
+            .field("dma_cfg_upd_by_blk", &self.dma_cfg_upd_by_blk())
+            .field("dma_force_rd_status", &self.dma_force_rd_status())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<DMA_REQ_CFG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SAR_PERI_RESET_CONF")
-            .field(
-                "sar_cocpu_reset",
-                &format_args!("{}", self.sar_cocpu_reset().bit()),
-            )
-            .field(
-                "sar_rtc_i2c_reset",
-                &format_args!("{}", self.sar_rtc_i2c_reset().bit()),
-            )
-            .field(
-                "sar_tsens_reset",
-                &format_args!("{}", self.sar_tsens_reset().bit()),
-            )
-            .field(
-                "sar_saradc_reset",
-                &format_args!("{}", self.sar_saradc_reset().bit()),
-            )
+            .field("sar_cocpu_reset", &self.sar_cocpu_reset())
+            .field("sar_rtc_i2c_reset", &self.sar_rtc_i2c_reset())
+            .field("sar_tsens_reset", &self.sar_tsens_reset())
+            .field("sar_saradc_reset", &self.sar_saradc_reset())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<SAR_PERI_RESET_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

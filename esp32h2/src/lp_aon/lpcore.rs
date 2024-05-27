@@ -28,18 +28,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LPCORE")
-            .field(
-                "etm_wakeup_flag",
-                &format_args!("{}", self.etm_wakeup_flag().bit()),
-            )
-            .field("disable", &format_args!("{}", self.disable().bit()))
+            .field("etm_wakeup_flag", &self.etm_wakeup_flag())
+            .field("disable", &self.disable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LPCORE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

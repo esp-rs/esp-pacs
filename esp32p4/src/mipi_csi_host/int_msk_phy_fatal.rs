@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_MSK_PHY_FATAL")
-            .field(
-                "mask_phy_errsotsynchs_0",
-                &format_args!("{}", self.mask_phy_errsotsynchs_0().bit()),
-            )
-            .field(
-                "mask_phy_errsotsynchs_1",
-                &format_args!("{}", self.mask_phy_errsotsynchs_1().bit()),
-            )
+            .field("mask_phy_errsotsynchs_0", &self.mask_phy_errsotsynchs_0())
+            .field("mask_phy_errsotsynchs_1", &self.mask_phy_errsotsynchs_1())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<INT_MSK_PHY_FATAL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

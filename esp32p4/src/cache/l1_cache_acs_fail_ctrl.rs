@@ -55,31 +55,25 @@ impl core::fmt::Debug for R {
         f.debug_struct("L1_CACHE_ACS_FAIL_CTRL")
             .field(
                 "l1_icache0_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache0_acs_fail_check_mode().bit()),
+                &self.l1_icache0_acs_fail_check_mode(),
             )
             .field(
                 "l1_icache1_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache1_acs_fail_check_mode().bit()),
+                &self.l1_icache1_acs_fail_check_mode(),
             )
             .field(
                 "l1_icache2_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache2_acs_fail_check_mode().bit()),
+                &self.l1_icache2_acs_fail_check_mode(),
             )
             .field(
                 "l1_icache3_acs_fail_check_mode",
-                &format_args!("{}", self.l1_icache3_acs_fail_check_mode().bit()),
+                &self.l1_icache3_acs_fail_check_mode(),
             )
             .field(
                 "l1_dcache_acs_fail_check_mode",
-                &format_args!("{}", self.l1_dcache_acs_fail_check_mode().bit()),
+                &self.l1_dcache_acs_fail_check_mode(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<L1_CACHE_ACS_FAIL_CTRL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

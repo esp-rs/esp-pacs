@@ -181,113 +181,38 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("_1INT_ST")
-            .field(
-                "frhost_bit8_int_st",
-                &format_args!("{}", self.frhost_bit8_int_st().bit()),
-            )
-            .field(
-                "frhost_bit9_int_st",
-                &format_args!("{}", self.frhost_bit9_int_st().bit()),
-            )
-            .field(
-                "frhost_bit10_int_st",
-                &format_args!("{}", self.frhost_bit10_int_st().bit()),
-            )
-            .field(
-                "frhost_bit11_int_st",
-                &format_args!("{}", self.frhost_bit11_int_st().bit()),
-            )
-            .field(
-                "frhost_bit12_int_st",
-                &format_args!("{}", self.frhost_bit12_int_st().bit()),
-            )
-            .field(
-                "frhost_bit13_int_st",
-                &format_args!("{}", self.frhost_bit13_int_st().bit()),
-            )
-            .field(
-                "frhost_bit14_int_st",
-                &format_args!("{}", self.frhost_bit14_int_st().bit()),
-            )
-            .field(
-                "frhost_bit15_int_st",
-                &format_args!("{}", self.frhost_bit15_int_st().bit()),
-            )
-            .field(
-                "slc1_rx_start_int_st",
-                &format_args!("{}", self.slc1_rx_start_int_st().bit()),
-            )
-            .field(
-                "slc1_tx_start_int_st",
-                &format_args!("{}", self.slc1_tx_start_int_st().bit()),
-            )
-            .field(
-                "slc1_rx_udf_int_st",
-                &format_args!("{}", self.slc1_rx_udf_int_st().bit()),
-            )
-            .field(
-                "slc1_tx_ovf_int_st",
-                &format_args!("{}", self.slc1_tx_ovf_int_st().bit()),
-            )
-            .field(
-                "slc1_token0_1to0_int_st",
-                &format_args!("{}", self.slc1_token0_1to0_int_st().bit()),
-            )
-            .field(
-                "slc1_token1_1to0_int_st",
-                &format_args!("{}", self.slc1_token1_1to0_int_st().bit()),
-            )
-            .field(
-                "slc1_tx_done_int_st",
-                &format_args!("{}", self.slc1_tx_done_int_st().bit()),
-            )
-            .field(
-                "slc1_tx_suc_eof_int_st",
-                &format_args!("{}", self.slc1_tx_suc_eof_int_st().bit()),
-            )
-            .field(
-                "slc1_rx_done_int_st",
-                &format_args!("{}", self.slc1_rx_done_int_st().bit()),
-            )
-            .field(
-                "slc1_rx_eof_int_st",
-                &format_args!("{}", self.slc1_rx_eof_int_st().bit()),
-            )
-            .field(
-                "slc1_tohost_int_st",
-                &format_args!("{}", self.slc1_tohost_int_st().bit()),
-            )
-            .field(
-                "slc1_tx_dscr_err_int_st",
-                &format_args!("{}", self.slc1_tx_dscr_err_int_st().bit()),
-            )
-            .field(
-                "slc1_rx_dscr_err_int_st",
-                &format_args!("{}", self.slc1_rx_dscr_err_int_st().bit()),
-            )
+            .field("frhost_bit8_int_st", &self.frhost_bit8_int_st())
+            .field("frhost_bit9_int_st", &self.frhost_bit9_int_st())
+            .field("frhost_bit10_int_st", &self.frhost_bit10_int_st())
+            .field("frhost_bit11_int_st", &self.frhost_bit11_int_st())
+            .field("frhost_bit12_int_st", &self.frhost_bit12_int_st())
+            .field("frhost_bit13_int_st", &self.frhost_bit13_int_st())
+            .field("frhost_bit14_int_st", &self.frhost_bit14_int_st())
+            .field("frhost_bit15_int_st", &self.frhost_bit15_int_st())
+            .field("slc1_rx_start_int_st", &self.slc1_rx_start_int_st())
+            .field("slc1_tx_start_int_st", &self.slc1_tx_start_int_st())
+            .field("slc1_rx_udf_int_st", &self.slc1_rx_udf_int_st())
+            .field("slc1_tx_ovf_int_st", &self.slc1_tx_ovf_int_st())
+            .field("slc1_token0_1to0_int_st", &self.slc1_token0_1to0_int_st())
+            .field("slc1_token1_1to0_int_st", &self.slc1_token1_1to0_int_st())
+            .field("slc1_tx_done_int_st", &self.slc1_tx_done_int_st())
+            .field("slc1_tx_suc_eof_int_st", &self.slc1_tx_suc_eof_int_st())
+            .field("slc1_rx_done_int_st", &self.slc1_rx_done_int_st())
+            .field("slc1_rx_eof_int_st", &self.slc1_rx_eof_int_st())
+            .field("slc1_tohost_int_st", &self.slc1_tohost_int_st())
+            .field("slc1_tx_dscr_err_int_st", &self.slc1_tx_dscr_err_int_st())
+            .field("slc1_rx_dscr_err_int_st", &self.slc1_rx_dscr_err_int_st())
             .field(
                 "slc1_tx_dscr_empty_int_st",
-                &format_args!("{}", self.slc1_tx_dscr_empty_int_st().bit()),
+                &self.slc1_tx_dscr_empty_int_st(),
             )
-            .field(
-                "slc1_host_rd_ack_int_st",
-                &format_args!("{}", self.slc1_host_rd_ack_int_st().bit()),
-            )
+            .field("slc1_host_rd_ack_int_st", &self.slc1_host_rd_ack_int_st())
             .field(
                 "slc1_wr_retry_done_int_st",
-                &format_args!("{}", self.slc1_wr_retry_done_int_st().bit()),
+                &self.slc1_wr_retry_done_int_st(),
             )
-            .field(
-                "slc1_tx_err_eof_int_st",
-                &format_args!("{}", self.slc1_tx_err_eof_int_st().bit()),
-            )
+            .field("slc1_tx_err_eof_int_st", &self.slc1_tx_err_eof_int_st())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<_1INT_ST_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_1int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

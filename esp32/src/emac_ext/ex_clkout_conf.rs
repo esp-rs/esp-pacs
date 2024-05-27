@@ -35,16 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("EX_CLKOUT_CONF")
-            .field("div_num", &format_args!("{}", self.div_num().bits()))
-            .field("h_div_num", &format_args!("{}", self.h_div_num().bits()))
-            .field("dly_num", &format_args!("{}", self.dly_num().bits()))
+            .field("div_num", &self.div_num())
+            .field("h_div_num", &self.h_div_num())
+            .field("dly_num", &self.dly_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<EX_CLKOUT_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

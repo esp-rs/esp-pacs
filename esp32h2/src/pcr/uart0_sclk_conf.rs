@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("UART0_SCLK_CONF")
-            .field(
-                "uart0_sclk_div_a",
-                &format_args!("{}", self.uart0_sclk_div_a().bits()),
-            )
-            .field(
-                "uart0_sclk_div_b",
-                &format_args!("{}", self.uart0_sclk_div_b().bits()),
-            )
-            .field(
-                "uart0_sclk_div_num",
-                &format_args!("{}", self.uart0_sclk_div_num().bits()),
-            )
-            .field(
-                "uart0_sclk_sel",
-                &format_args!("{}", self.uart0_sclk_sel().bits()),
-            )
-            .field(
-                "uart0_sclk_en",
-                &format_args!("{}", self.uart0_sclk_en().bit()),
-            )
+            .field("uart0_sclk_div_a", &self.uart0_sclk_div_a())
+            .field("uart0_sclk_div_b", &self.uart0_sclk_div_b())
+            .field("uart0_sclk_div_num", &self.uart0_sclk_div_num())
+            .field("uart0_sclk_sel", &self.uart0_sclk_sel())
+            .field("uart0_sclk_en", &self.uart0_sclk_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<UART0_SCLK_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

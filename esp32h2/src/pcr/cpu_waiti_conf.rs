@@ -40,29 +40,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CPU_WAITI_CONF")
-            .field(
-                "cpuperiod_sel",
-                &format_args!("{}", self.cpuperiod_sel().bits()),
-            )
-            .field(
-                "pll_freq_sel",
-                &format_args!("{}", self.pll_freq_sel().bit()),
-            )
-            .field(
-                "cpu_wait_mode_force_on",
-                &format_args!("{}", self.cpu_wait_mode_force_on().bit()),
-            )
-            .field(
-                "cpu_waiti_delay_num",
-                &format_args!("{}", self.cpu_waiti_delay_num().bits()),
-            )
+            .field("cpuperiod_sel", &self.cpuperiod_sel())
+            .field("pll_freq_sel", &self.pll_freq_sel())
+            .field("cpu_wait_mode_force_on", &self.cpu_wait_mode_force_on())
+            .field("cpu_waiti_delay_num", &self.cpu_waiti_delay_num())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<CPU_WAITI_CONF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {

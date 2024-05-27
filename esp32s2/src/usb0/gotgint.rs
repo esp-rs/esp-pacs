@@ -62,25 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("GOTGINT")
-            .field("sesenddet", &format_args!("{}", self.sesenddet().bit()))
-            .field(
-                "sesreqsucstschng",
-                &format_args!("{}", self.sesreqsucstschng().bit()),
-            )
-            .field(
-                "hstnegsucstschng",
-                &format_args!("{}", self.hstnegsucstschng().bit()),
-            )
-            .field("hstnegdet", &format_args!("{}", self.hstnegdet().bit()))
-            .field("adevtoutchg", &format_args!("{}", self.adevtoutchg().bit()))
-            .field("dbncedone", &format_args!("{}", self.dbncedone().bit()))
+            .field("sesenddet", &self.sesenddet())
+            .field("sesreqsucstschng", &self.sesreqsucstschng())
+            .field("hstnegsucstschng", &self.hstnegsucstschng())
+            .field("hstnegdet", &self.hstnegdet())
+            .field("adevtoutchg", &self.adevtoutchg())
+            .field("dbncedone", &self.dbncedone())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<GOTGINT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
