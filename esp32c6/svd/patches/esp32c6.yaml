@@ -96,7 +96,7 @@ PARL_IO:
         name: RX_FIFO_WOVF_INT_CLR
         description: Write 1 to clear RX_FIFO_WOVF_INTR.
 
-"EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+"I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -106,6 +106,9 @@ LEDC:
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml
+
+EFUSE:
+  _include: ../../../common_patches/efuse.yaml
 
 LP_ANA:
   _include: ../../../common_patches/lpana_int_strip.yaml

@@ -95,7 +95,7 @@ RTC_IO:
       GPIO_OUT_DATA_W1TS:
         name: RTC_GPIO_OUT_DATA_W1TS
 
-"EFUSE,I2C0,I2S0,UART0,RTC_I2C":
+"I2C0,I2S0,UART0,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -106,6 +106,39 @@ LEDC:
     _modify:
       "*":
         access: read-write
+
+EFUSE:
+  _modify:
+    RD_SYS_DATA_PART2_%s:
+      name:
+        RD_SYS_PART2_DATA%s
+    RD_SYS_DATA_PART1_%s:
+      name:
+        RD_SYS_PART1_DATA%s
+  PGM_DATA%s:
+    _modify:
+      PGM_DATA:
+        name: DATA
+  PGM_CHECK_VALUE%s:
+    _modify:
+      PGM_RS_DATA:
+        name: DATA
+  RD_USR_DATA%s:
+    _modify:
+      USR_DATA:
+        name: DATA
+  RD_KEY?_DATA%s:
+    _modify:
+      KEY?_DATA:
+        name: DATA
+  RD_SYS_PART?_DATA%s:
+    _modify:
+      SYS_DATA_PART?:
+        name: DATA
+  _cluster:
+    RD_KEY%s:
+      RD_KEY?_DATA%s: {}
+  _include: ../../../common_patches/int_strip.yaml
 
 PCNT:
   _include: ../../../common_patches/pcnt.yaml
