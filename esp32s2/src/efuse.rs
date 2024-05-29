@@ -16,22 +16,17 @@ pub struct RegisterBlock {
     rd_mac_spi_sys_3: RD_MAC_SPI_SYS_3,
     rd_mac_spi_sys_4: RD_MAC_SPI_SYS_4,
     rd_mac_spi_sys_5: RD_MAC_SPI_SYS_5,
-    rd_sys_data_part1_: [RD_SYS_DATA_PART1_; 8],
+    rd_sys_part1_data: [RD_SYS_PART1_DATA; 8],
     rd_usr_data: [RD_USR_DATA; 8],
-    rd_key0_data: [RD_KEY0_DATA; 8],
-    rd_key1_data: [RD_KEY1_DATA; 8],
-    rd_key2_data: [RD_KEY2_DATA; 8],
-    rd_key3_data: [RD_KEY3_DATA; 8],
-    rd_key4_data: [RD_KEY4_DATA; 8],
-    rd_key5_data: [RD_KEY5_DATA; 8],
-    rd_sys_data_part2_: [RD_SYS_DATA_PART2_; 8],
+    rd_key: [RD_KEY; 6],
+    rd_sys_part2_data: [RD_SYS_PART2_DATA; 8],
     rd_repeat_err0: RD_REPEAT_ERR0,
     rd_repeat_err1: RD_REPEAT_ERR1,
     rd_repeat_err2: RD_REPEAT_ERR2,
     rd_repeat_err3: RD_REPEAT_ERR3,
-    _reserved27: [u8; 0x04],
+    _reserved22: [u8; 0x04],
     rd_repeat_err4: RD_REPEAT_ERR4,
-    _reserved28: [u8; 0x2c],
+    _reserved23: [u8; 0x2c],
     rd_rs_err0: RD_RS_ERR0,
     rd_rs_err1: RD_RS_ERR1,
     clk: CLK,
@@ -134,14 +129,14 @@ impl RegisterBlock {
     }
     #[doc = "0x5c..0x7c - Register %s of BLOCK2 (system)."]
     #[inline(always)]
-    pub const fn rd_sys_data_part1_(&self, n: usize) -> &RD_SYS_DATA_PART1_ {
-        &self.rd_sys_data_part1_[n]
+    pub const fn rd_sys_part1_data(&self, n: usize) -> &RD_SYS_PART1_DATA {
+        &self.rd_sys_part1_data[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x5c..0x7c - Register %s of BLOCK2 (system)."]
     #[inline(always)]
-    pub fn rd_sys_data_part1__iter(&self) -> impl Iterator<Item = &RD_SYS_DATA_PART1_> {
-        self.rd_sys_data_part1_.iter()
+    pub fn rd_sys_part1_data_iter(&self) -> impl Iterator<Item = &RD_SYS_PART1_DATA> {
+        self.rd_sys_part1_data.iter()
     }
     #[doc = "0x7c..0x9c - Register %s of BLOCK3 (user)."]
     #[inline(always)]
@@ -154,82 +149,27 @@ impl RegisterBlock {
     pub fn rd_usr_data_iter(&self) -> impl Iterator<Item = &RD_USR_DATA> {
         self.rd_usr_data.iter()
     }
-    #[doc = "0x9c..0xbc - Register %s of BLOCK4 (KEY0)."]
+    #[doc = "0x9c..0x15c - Cluster RD_KEY%s, containing RD_KEY?_DATA%s"]
     #[inline(always)]
-    pub const fn rd_key0_data(&self, n: usize) -> &RD_KEY0_DATA {
-        &self.rd_key0_data[n]
+    pub const fn rd_key(&self, n: usize) -> &RD_KEY {
+        &self.rd_key[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x9c..0xbc - Register %s of BLOCK4 (KEY0)."]
+    #[doc = "0x9c..0x15c - Cluster RD_KEY%s, containing RD_KEY?_DATA%s"]
     #[inline(always)]
-    pub fn rd_key0_data_iter(&self) -> impl Iterator<Item = &RD_KEY0_DATA> {
-        self.rd_key0_data.iter()
-    }
-    #[doc = "0xbc..0xdc - Register %s of BLOCK5 (KEY1)."]
-    #[inline(always)]
-    pub const fn rd_key1_data(&self, n: usize) -> &RD_KEY1_DATA {
-        &self.rd_key1_data[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0xbc..0xdc - Register %s of BLOCK5 (KEY1)."]
-    #[inline(always)]
-    pub fn rd_key1_data_iter(&self) -> impl Iterator<Item = &RD_KEY1_DATA> {
-        self.rd_key1_data.iter()
-    }
-    #[doc = "0xdc..0xfc - Register %s of BLOCK6 (KEY2)."]
-    #[inline(always)]
-    pub const fn rd_key2_data(&self, n: usize) -> &RD_KEY2_DATA {
-        &self.rd_key2_data[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0xdc..0xfc - Register %s of BLOCK6 (KEY2)."]
-    #[inline(always)]
-    pub fn rd_key2_data_iter(&self) -> impl Iterator<Item = &RD_KEY2_DATA> {
-        self.rd_key2_data.iter()
-    }
-    #[doc = "0xfc..0x11c - Register %s of BLOCK7 (KEY3)."]
-    #[inline(always)]
-    pub const fn rd_key3_data(&self, n: usize) -> &RD_KEY3_DATA {
-        &self.rd_key3_data[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0xfc..0x11c - Register %s of BLOCK7 (KEY3)."]
-    #[inline(always)]
-    pub fn rd_key3_data_iter(&self) -> impl Iterator<Item = &RD_KEY3_DATA> {
-        self.rd_key3_data.iter()
-    }
-    #[doc = "0x11c..0x13c - Register %s of BLOCK8 (KEY4)."]
-    #[inline(always)]
-    pub const fn rd_key4_data(&self, n: usize) -> &RD_KEY4_DATA {
-        &self.rd_key4_data[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x11c..0x13c - Register %s of BLOCK8 (KEY4)."]
-    #[inline(always)]
-    pub fn rd_key4_data_iter(&self) -> impl Iterator<Item = &RD_KEY4_DATA> {
-        self.rd_key4_data.iter()
-    }
-    #[doc = "0x13c..0x15c - Register %s of BLOCK9 (KEY5)."]
-    #[inline(always)]
-    pub const fn rd_key5_data(&self, n: usize) -> &RD_KEY5_DATA {
-        &self.rd_key5_data[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x13c..0x15c - Register %s of BLOCK9 (KEY5)."]
-    #[inline(always)]
-    pub fn rd_key5_data_iter(&self) -> impl Iterator<Item = &RD_KEY5_DATA> {
-        self.rd_key5_data.iter()
+    pub fn rd_key_iter(&self) -> impl Iterator<Item = &RD_KEY> {
+        self.rd_key.iter()
     }
     #[doc = "0x15c..0x17c - Register %s of BLOCK10 (system)."]
     #[inline(always)]
-    pub const fn rd_sys_data_part2_(&self, n: usize) -> &RD_SYS_DATA_PART2_ {
-        &self.rd_sys_data_part2_[n]
+    pub const fn rd_sys_part2_data(&self, n: usize) -> &RD_SYS_PART2_DATA {
+        &self.rd_sys_part2_data[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x15c..0x17c - Register %s of BLOCK10 (system)."]
     #[inline(always)]
-    pub fn rd_sys_data_part2__iter(&self) -> impl Iterator<Item = &RD_SYS_DATA_PART2_> {
-        self.rd_sys_data_part2_.iter()
+    pub fn rd_sys_part2_data_iter(&self) -> impl Iterator<Item = &RD_SYS_PART2_DATA> {
+        self.rd_sys_part2_data.iter()
     }
     #[doc = "0x17c - Programming error record register 0 of BLOCK0."]
     #[inline(always)]
@@ -393,42 +333,23 @@ pub mod rd_mac_spi_sys_4;
 pub type RD_MAC_SPI_SYS_5 = crate::Reg<rd_mac_spi_sys_5::RD_MAC_SPI_SYS_5_SPEC>;
 #[doc = "Register 5 of BLOCK1."]
 pub mod rd_mac_spi_sys_5;
-#[doc = "RD_SYS_DATA_PART1_ (r) register accessor: Register %s of BLOCK2 (system).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_sys_data_part1_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_data_part1_`] module"]
-pub type RD_SYS_DATA_PART1_ = crate::Reg<rd_sys_data_part1_::RD_SYS_DATA_PART1__SPEC>;
+#[doc = "RD_SYS_PART1_DATA (r) register accessor: Register %s of BLOCK2 (system).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_sys_part1_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_part1_data`] module"]
+pub type RD_SYS_PART1_DATA = crate::Reg<rd_sys_part1_data::RD_SYS_PART1_DATA_SPEC>;
 #[doc = "Register %s of BLOCK2 (system)."]
-pub mod rd_sys_data_part1_;
+pub mod rd_sys_part1_data;
 #[doc = "RD_USR_DATA (r) register accessor: Register %s of BLOCK3 (user).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_usr_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_usr_data`] module"]
 pub type RD_USR_DATA = crate::Reg<rd_usr_data::RD_USR_DATA_SPEC>;
 #[doc = "Register %s of BLOCK3 (user)."]
 pub mod rd_usr_data;
-#[doc = "RD_KEY0_DATA (r) register accessor: Register %s of BLOCK4 (KEY0).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key0_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key0_data`] module"]
-pub type RD_KEY0_DATA = crate::Reg<rd_key0_data::RD_KEY0_DATA_SPEC>;
-#[doc = "Register %s of BLOCK4 (KEY0)."]
-pub mod rd_key0_data;
-#[doc = "RD_KEY1_DATA (r) register accessor: Register %s of BLOCK5 (KEY1).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key1_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key1_data`] module"]
-pub type RD_KEY1_DATA = crate::Reg<rd_key1_data::RD_KEY1_DATA_SPEC>;
-#[doc = "Register %s of BLOCK5 (KEY1)."]
-pub mod rd_key1_data;
-#[doc = "RD_KEY2_DATA (r) register accessor: Register %s of BLOCK6 (KEY2).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key2_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key2_data`] module"]
-pub type RD_KEY2_DATA = crate::Reg<rd_key2_data::RD_KEY2_DATA_SPEC>;
-#[doc = "Register %s of BLOCK6 (KEY2)."]
-pub mod rd_key2_data;
-#[doc = "RD_KEY3_DATA (r) register accessor: Register %s of BLOCK7 (KEY3).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key3_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key3_data`] module"]
-pub type RD_KEY3_DATA = crate::Reg<rd_key3_data::RD_KEY3_DATA_SPEC>;
-#[doc = "Register %s of BLOCK7 (KEY3)."]
-pub mod rd_key3_data;
-#[doc = "RD_KEY4_DATA (r) register accessor: Register %s of BLOCK8 (KEY4).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key4_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key4_data`] module"]
-pub type RD_KEY4_DATA = crate::Reg<rd_key4_data::RD_KEY4_DATA_SPEC>;
-#[doc = "Register %s of BLOCK8 (KEY4)."]
-pub mod rd_key4_data;
-#[doc = "RD_KEY5_DATA (r) register accessor: Register %s of BLOCK9 (KEY5).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key5_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_key5_data`] module"]
-pub type RD_KEY5_DATA = crate::Reg<rd_key5_data::RD_KEY5_DATA_SPEC>;
-#[doc = "Register %s of BLOCK9 (KEY5)."]
-pub mod rd_key5_data;
-#[doc = "RD_SYS_DATA_PART2_ (r) register accessor: Register %s of BLOCK10 (system).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_sys_data_part2_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_data_part2_`] module"]
-pub type RD_SYS_DATA_PART2_ = crate::Reg<rd_sys_data_part2_::RD_SYS_DATA_PART2__SPEC>;
+#[doc = "Cluster RD_KEY%s, containing RD_KEY?_DATA%s"]
+pub use self::rd_key::RD_KEY;
+#[doc = r"Cluster"]
+#[doc = "Cluster RD_KEY%s, containing RD_KEY?_DATA%s"]
+pub mod rd_key;
+#[doc = "RD_SYS_PART2_DATA (r) register accessor: Register %s of BLOCK10 (system).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_sys_part2_data::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_sys_part2_data`] module"]
+pub type RD_SYS_PART2_DATA = crate::Reg<rd_sys_part2_data::RD_SYS_PART2_DATA_SPEC>;
 #[doc = "Register %s of BLOCK10 (system)."]
-pub mod rd_sys_data_part2_;
+pub mod rd_sys_part2_data;
 #[doc = "RD_REPEAT_ERR0 (r) register accessor: Programming error record register 0 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_repeat_err0`] module"]
 pub type RD_REPEAT_ERR0 = crate::Reg<rd_repeat_err0::RD_REPEAT_ERR0_SPEC>;
 #[doc = "Programming error record register 0 of BLOCK0."]

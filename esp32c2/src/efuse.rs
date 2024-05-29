@@ -2,17 +2,8 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    pgm_data0: PGM_DATA0,
-    pgm_data1: PGM_DATA1,
-    pgm_data2: PGM_DATA2,
-    pgm_data3: PGM_DATA3,
-    pgm_data4: PGM_DATA4,
-    pgm_data5: PGM_DATA5,
-    pgm_data6: PGM_DATA6,
-    pgm_data7: PGM_DATA7,
-    pgm_check_value0: PGM_CHECK_VALUE0,
-    pgm_check_value1: PGM_CHECK_VALUE1,
-    pgm_check_value2: PGM_CHECK_VALUE2,
+    pgm_data: [PGM_DATA; 8],
+    pgm_check_value: [PGM_CHECK_VALUE; 3],
     rd_wr_dis: RD_WR_DIS,
     rd_repeat_data0: RD_REPEAT_DATA0,
     rd_blk1_data0: RD_BLK1_DATA0,
@@ -42,7 +33,7 @@ pub struct RegisterBlock {
     cmd: CMD,
     int_raw: INT_RAW,
     int_st: INT_ST,
-    _reserved40: [u8; 0x60],
+    _reserved31: [u8; 0x60],
     int_ena: INT_ENA,
     int_clr: INT_CLR,
     dac_conf: DAC_CONF,
@@ -50,64 +41,31 @@ pub struct RegisterBlock {
     wr_tim_conf0: WR_TIM_CONF0,
     wr_tim_conf1: WR_TIM_CONF1,
     wr_tim_conf2: WR_TIM_CONF2,
-    _reserved47: [u8; 0xe0],
+    _reserved38: [u8; 0xe0],
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - Register 0 that stores data to be programmed."]
+    #[doc = "0x00..0x20 - Register %s that stores data to be programmed."]
     #[inline(always)]
-    pub const fn pgm_data0(&self) -> &PGM_DATA0 {
-        &self.pgm_data0
+    pub const fn pgm_data(&self, n: usize) -> &PGM_DATA {
+        &self.pgm_data[n]
     }
-    #[doc = "0x04 - Register 1 that stores data to be programmed."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x20 - Register %s that stores data to be programmed."]
     #[inline(always)]
-    pub const fn pgm_data1(&self) -> &PGM_DATA1 {
-        &self.pgm_data1
+    pub fn pgm_data_iter(&self) -> impl Iterator<Item = &PGM_DATA> {
+        self.pgm_data.iter()
     }
-    #[doc = "0x08 - Register 2 that stores data to be programmed."]
+    #[doc = "0x20..0x2c - Register %s that stores the RS code to be programmed."]
     #[inline(always)]
-    pub const fn pgm_data2(&self) -> &PGM_DATA2 {
-        &self.pgm_data2
+    pub const fn pgm_check_value(&self, n: usize) -> &PGM_CHECK_VALUE {
+        &self.pgm_check_value[n]
     }
-    #[doc = "0x0c - Register 3 that stores data to be programmed."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x20..0x2c - Register %s that stores the RS code to be programmed."]
     #[inline(always)]
-    pub const fn pgm_data3(&self) -> &PGM_DATA3 {
-        &self.pgm_data3
-    }
-    #[doc = "0x10 - Register 4 that stores data to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_data4(&self) -> &PGM_DATA4 {
-        &self.pgm_data4
-    }
-    #[doc = "0x14 - Register 5 that stores data to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_data5(&self) -> &PGM_DATA5 {
-        &self.pgm_data5
-    }
-    #[doc = "0x18 - Register 6 that stores data to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_data6(&self) -> &PGM_DATA6 {
-        &self.pgm_data6
-    }
-    #[doc = "0x1c - Register 7 that stores data to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_data7(&self) -> &PGM_DATA7 {
-        &self.pgm_data7
-    }
-    #[doc = "0x20 - Register 0 that stores the RS code to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_check_value0(&self) -> &PGM_CHECK_VALUE0 {
-        &self.pgm_check_value0
-    }
-    #[doc = "0x24 - Register 1 that stores the RS code to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_check_value1(&self) -> &PGM_CHECK_VALUE1 {
-        &self.pgm_check_value1
-    }
-    #[doc = "0x28 - Register 2 that stores the RS code to be programmed."]
-    #[inline(always)]
-    pub const fn pgm_check_value2(&self) -> &PGM_CHECK_VALUE2 {
-        &self.pgm_check_value2
+    pub fn pgm_check_value_iter(&self) -> impl Iterator<Item = &PGM_CHECK_VALUE> {
+        self.pgm_check_value.iter()
     }
     #[doc = "0x2c - BLOCK0 data register 0."]
     #[inline(always)]
@@ -295,50 +253,14 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "PGM_DATA0 (rw) register accessor: Register 0 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data0`] module"]
-pub type PGM_DATA0 = crate::Reg<pgm_data0::PGM_DATA0_SPEC>;
-#[doc = "Register 0 that stores data to be programmed."]
-pub mod pgm_data0;
-#[doc = "PGM_DATA1 (rw) register accessor: Register 1 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data1`] module"]
-pub type PGM_DATA1 = crate::Reg<pgm_data1::PGM_DATA1_SPEC>;
-#[doc = "Register 1 that stores data to be programmed."]
-pub mod pgm_data1;
-#[doc = "PGM_DATA2 (rw) register accessor: Register 2 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data2`] module"]
-pub type PGM_DATA2 = crate::Reg<pgm_data2::PGM_DATA2_SPEC>;
-#[doc = "Register 2 that stores data to be programmed."]
-pub mod pgm_data2;
-#[doc = "PGM_DATA3 (rw) register accessor: Register 3 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data3`] module"]
-pub type PGM_DATA3 = crate::Reg<pgm_data3::PGM_DATA3_SPEC>;
-#[doc = "Register 3 that stores data to be programmed."]
-pub mod pgm_data3;
-#[doc = "PGM_DATA4 (rw) register accessor: Register 4 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data4::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data4::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data4`] module"]
-pub type PGM_DATA4 = crate::Reg<pgm_data4::PGM_DATA4_SPEC>;
-#[doc = "Register 4 that stores data to be programmed."]
-pub mod pgm_data4;
-#[doc = "PGM_DATA5 (rw) register accessor: Register 5 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data5::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data5::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data5`] module"]
-pub type PGM_DATA5 = crate::Reg<pgm_data5::PGM_DATA5_SPEC>;
-#[doc = "Register 5 that stores data to be programmed."]
-pub mod pgm_data5;
-#[doc = "PGM_DATA6 (rw) register accessor: Register 6 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data6::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data6::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data6`] module"]
-pub type PGM_DATA6 = crate::Reg<pgm_data6::PGM_DATA6_SPEC>;
-#[doc = "Register 6 that stores data to be programmed."]
-pub mod pgm_data6;
-#[doc = "PGM_DATA7 (rw) register accessor: Register 7 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data7::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data7::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data7`] module"]
-pub type PGM_DATA7 = crate::Reg<pgm_data7::PGM_DATA7_SPEC>;
-#[doc = "Register 7 that stores data to be programmed."]
-pub mod pgm_data7;
-#[doc = "PGM_CHECK_VALUE0 (rw) register accessor: Register 0 that stores the RS code to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_check_value0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_check_value0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_check_value0`] module"]
-pub type PGM_CHECK_VALUE0 = crate::Reg<pgm_check_value0::PGM_CHECK_VALUE0_SPEC>;
-#[doc = "Register 0 that stores the RS code to be programmed."]
-pub mod pgm_check_value0;
-#[doc = "PGM_CHECK_VALUE1 (rw) register accessor: Register 1 that stores the RS code to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_check_value1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_check_value1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_check_value1`] module"]
-pub type PGM_CHECK_VALUE1 = crate::Reg<pgm_check_value1::PGM_CHECK_VALUE1_SPEC>;
-#[doc = "Register 1 that stores the RS code to be programmed."]
-pub mod pgm_check_value1;
-#[doc = "PGM_CHECK_VALUE2 (rw) register accessor: Register 2 that stores the RS code to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_check_value2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_check_value2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_check_value2`] module"]
-pub type PGM_CHECK_VALUE2 = crate::Reg<pgm_check_value2::PGM_CHECK_VALUE2_SPEC>;
-#[doc = "Register 2 that stores the RS code to be programmed."]
-pub mod pgm_check_value2;
+#[doc = "PGM_DATA (rw) register accessor: Register %s that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_data`] module"]
+pub type PGM_DATA = crate::Reg<pgm_data::PGM_DATA_SPEC>;
+#[doc = "Register %s that stores data to be programmed."]
+pub mod pgm_data;
+#[doc = "PGM_CHECK_VALUE (rw) register accessor: Register %s that stores the RS code to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_check_value::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_check_value::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pgm_check_value`] module"]
+pub type PGM_CHECK_VALUE = crate::Reg<pgm_check_value::PGM_CHECK_VALUE_SPEC>;
+#[doc = "Register %s that stores the RS code to be programmed."]
+pub mod pgm_check_value;
 #[doc = "RD_WR_DIS (r) register accessor: BLOCK0 data register 0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_wr_dis::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rd_wr_dis`] module"]
 pub type RD_WR_DIS = crate::Reg<rd_wr_dis::RD_WR_DIS_SPEC>;
 #[doc = "BLOCK0 data register 0."]

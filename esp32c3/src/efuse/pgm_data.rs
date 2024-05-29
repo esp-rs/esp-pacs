@@ -2,12 +2,12 @@
 pub type R = crate::R<PGM_DATA_SPEC>;
 #[doc = "Register `PGM_DATA%s` writer"]
 pub type W = crate::W<PGM_DATA_SPEC>;
-#[doc = "Field `DATA` reader - The content of the %sth 32-bit data to be programmed."]
+#[doc = "Field `DATA` reader - The content of the 0th 32-bit data to be programmed."]
 pub type DATA_R = crate::FieldReader<u32>;
-#[doc = "Field `DATA` writer - The content of the %sth 32-bit data to be programmed."]
+#[doc = "Field `DATA` writer - The content of the 0th 32-bit data to be programmed."]
 pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - The content of the %sth 32-bit data to be programmed."]
+    #[doc = "Bits 0:31 - The content of the 0th 32-bit data to be programmed."]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - The content of the %sth 32-bit data to be programmed."]
+    #[doc = "Bits 0:31 - The content of the 0th 32-bit data to be programmed."]
     #[inline(always)]
     #[must_use]
     pub fn data(&mut self) -> DATA_W<PGM_DATA_SPEC> {
