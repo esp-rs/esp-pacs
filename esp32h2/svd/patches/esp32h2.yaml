@@ -35,6 +35,10 @@ LP_WDT:
       name: INT_ENA
     INT_CLR_RTC:
       name: INT_CLR
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
 
 SPI[01]:
   _strip: SPI_MEM_

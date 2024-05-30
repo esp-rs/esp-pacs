@@ -64,10 +64,13 @@ LP_WDT:
       name: INT_ENA
     INT_CLR_RTC:
       name: INT_CLR
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
 
 PMU:
   _include: ../../../common_patches/pmu_int_strip.yaml
-
 
 SPI[01]:
   _strip: SPI_MEM_
@@ -100,7 +103,7 @@ PARL_IO:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: 
+  _include:
     - ../../../common_patches/ledc_collect.yaml
     - ../../../common_patches/ledc_int.yaml
 
@@ -149,7 +152,7 @@ SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml
 
 SYSTIMER:
-  _include: 
+  _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
@@ -169,7 +172,7 @@ DMA:
     OUT_INT_ST_CH%s: {}
     OUT_INT_ENA_CH%s: {}
     OUT_INT_CLR_CH%s: {}
-  
+
     IN_CONF0_CH%s: {}
     IN_CONF1_CH%s: {}
     INFIFO_STATUS_CH%s: {}
