@@ -1,0 +1,8 @@
+SAR_DAC_CTRL2:
+  _array:
+    "DAC_DC*": {}
+    "DAC_SCALE*": {}
+    "DAC_INV*": {}
+    "DAC_CW_EN*":
+      name: "DAC_CW_EN%s"
+      description: "1: to select CW generator as source to PDAC%s_DAC[7:0]  0: to select register reg_pdac%s_dac[7:0] as source to PDAC%s_DAC[7:0]"

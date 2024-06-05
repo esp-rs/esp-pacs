@@ -1,0 +1,5 @@
+_array:
+  "PAD_DAC*": {}
+
+  "PAD_DAC*":
+    _strip: "PDAC1_"

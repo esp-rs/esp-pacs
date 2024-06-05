@@ -18,8 +18,7 @@ pub struct RegisterBlock {
     hall_sens: HALL_SENS,
     sensor_pads: SENSOR_PADS,
     adc_pad: ADC_PAD,
-    pad_dac1: PAD_DAC1,
-    pad_dac2: PAD_DAC2,
+    pad_dac: [PAD_DAC; 2],
     xtal_32k_pad: XTAL_32K_PAD,
     touch_cfg: TOUCH_CFG,
     touch_pad0: TOUCH_PAD0,
@@ -124,15 +123,26 @@ impl RegisterBlock {
     pub const fn adc_pad(&self) -> &ADC_PAD {
         &self.adc_pad
     }
-    #[doc = "0x84 - "]
+    #[doc = "0x84..0x8c - "]
     #[inline(always)]
-    pub const fn pad_dac1(&self) -> &PAD_DAC1 {
-        &self.pad_dac1
+    pub const fn pad_dac(&self, n: usize) -> &PAD_DAC {
+        &self.pad_dac[n]
     }
-    #[doc = "0x88 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x84..0x8c - "]
     #[inline(always)]
-    pub const fn pad_dac2(&self) -> &PAD_DAC2 {
-        &self.pad_dac2
+    pub fn pad_dac_iter(&self) -> impl Iterator<Item = &PAD_DAC> {
+        self.pad_dac.iter()
+    }
+    #[doc = "0x84 - PAD_DAC1"]
+    #[inline(always)]
+    pub const fn pad_dac1(&self) -> &PAD_DAC {
+        self.pad_dac(0)
+    }
+    #[doc = "0x88 - PAD_DAC2"]
+    #[inline(always)]
+    pub const fn pad_dac2(&self) -> &PAD_DAC {
+        self.pad_dac(1)
     }
     #[doc = "0x8c - "]
     #[inline(always)]
@@ -279,14 +289,10 @@ pub mod sensor_pads;
 pub type ADC_PAD = crate::Reg<adc_pad::ADC_PAD_SPEC>;
 #[doc = ""]
 pub mod adc_pad;
-#[doc = "PAD_DAC1 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac1`] module"]
-pub type PAD_DAC1 = crate::Reg<pad_dac1::PAD_DAC1_SPEC>;
+#[doc = "PAD_DAC (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac`] module"]
+pub type PAD_DAC = crate::Reg<pad_dac::PAD_DAC_SPEC>;
 #[doc = ""]
-pub mod pad_dac1;
-#[doc = "PAD_DAC2 (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac2`] module"]
-pub type PAD_DAC2 = crate::Reg<pad_dac2::PAD_DAC2_SPEC>;
-#[doc = ""]
-pub mod pad_dac2;
+pub mod pad_dac;
 #[doc = "XTAL_32K_PAD (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xtal_32k_pad::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`xtal_32k_pad::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@xtal_32k_pad`] module"]
 pub type XTAL_32K_PAD = crate::Reg<xtal_32k_pad::XTAL_32K_PAD_SPEC>;
 #[doc = ""]
