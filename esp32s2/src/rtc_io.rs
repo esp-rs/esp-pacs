@@ -17,8 +17,7 @@ pub struct RegisterBlock {
     touch_pad: [TOUCH_PAD; 15],
     xtal_32p_pad: XTAL_32P_PAD,
     xtal_32n_pad: XTAL_32N_PAD,
-    pad_dac1: PAD_DAC1,
-    pad_dac2: PAD_DAC2,
+    pad_dac: [PAD_DAC; 2],
     rtc_pad19: RTC_PAD19,
     rtc_pad20: RTC_PAD20,
     rtc_pad21: RTC_PAD21,
@@ -26,7 +25,7 @@ pub struct RegisterBlock {
     xtl_ext_ctr: XTL_EXT_CTR,
     sar_i2c_io: SAR_I2C_IO,
     rtc_io_touch_ctrl: RTC_IO_TOUCH_CTRL,
-    _reserved24: [u8; 0x0110],
+    _reserved23: [u8; 0x0110],
     rtc_io_date: RTC_IO_DATE,
 }
 impl RegisterBlock {
@@ -117,15 +116,26 @@ impl RegisterBlock {
     pub const fn xtal_32n_pad(&self) -> &XTAL_32N_PAD {
         &self.xtal_32n_pad
     }
+    #[doc = "0xc8..0xd0 - DAC%s configuration register"]
+    #[inline(always)]
+    pub const fn pad_dac(&self, n: usize) -> &PAD_DAC {
+        &self.pad_dac[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xc8..0xd0 - DAC%s configuration register"]
+    #[inline(always)]
+    pub fn pad_dac_iter(&self) -> impl Iterator<Item = &PAD_DAC> {
+        self.pad_dac.iter()
+    }
     #[doc = "0xc8 - DAC1 configuration register"]
     #[inline(always)]
-    pub const fn pad_dac1(&self) -> &PAD_DAC1 {
-        &self.pad_dac1
+    pub const fn pad_dac1(&self) -> &PAD_DAC {
+        self.pad_dac(0)
     }
     #[doc = "0xcc - DAC2 configuration register"]
     #[inline(always)]
-    pub const fn pad_dac2(&self) -> &PAD_DAC2 {
-        &self.pad_dac2
+    pub const fn pad_dac2(&self) -> &PAD_DAC {
+        self.pad_dac(1)
     }
     #[doc = "0xd0 - Touch pad 19 configuration register"]
     #[inline(always)]
@@ -228,14 +238,10 @@ pub mod xtal_32p_pad;
 pub type XTAL_32N_PAD = crate::Reg<xtal_32n_pad::XTAL_32N_PAD_SPEC>;
 #[doc = "32KHz crystal N-pad configuration register"]
 pub mod xtal_32n_pad;
-#[doc = "PAD_DAC1 (rw) register accessor: DAC1 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac1`] module"]
-pub type PAD_DAC1 = crate::Reg<pad_dac1::PAD_DAC1_SPEC>;
-#[doc = "DAC1 configuration register"]
-pub mod pad_dac1;
-#[doc = "PAD_DAC2 (rw) register accessor: DAC2 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac2`] module"]
-pub type PAD_DAC2 = crate::Reg<pad_dac2::PAD_DAC2_SPEC>;
-#[doc = "DAC2 configuration register"]
-pub mod pad_dac2;
+#[doc = "PAD_DAC (rw) register accessor: DAC%s configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_dac::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_dac::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pad_dac`] module"]
+pub type PAD_DAC = crate::Reg<pad_dac::PAD_DAC_SPEC>;
+#[doc = "DAC%s configuration register"]
+pub mod pad_dac;
 #[doc = "RTC_PAD19 (rw) register accessor: Touch pad 19 configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_pad19::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_pad19::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_pad19`] module"]
 pub type RTC_PAD19 = crate::Reg<rtc_pad19::RTC_PAD19_SPEC>;
 #[doc = "Touch pad 19 configuration register"]

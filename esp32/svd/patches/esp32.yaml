@@ -10,6 +10,9 @@ RTC_I2C:
     INT_EN:
       name: INT_ENA
 
+RTC_IO:
+  _include: ../../../common_patches/rtc_io.yaml
+
 "EFUSE,I2C0,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
   _include: ../../../common_patches/int_strip.yaml
 
@@ -101,6 +104,9 @@ PCNT:
         name: CORE_STATUS
   _include: ../../../common_patches/pcnt.yaml
 
+SENS:
+  _include: ../../../common_patches/sens.yaml
+
 SPI0:
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
@@ -136,7 +142,7 @@ GPIO_SD:
   VERSION:
     _modify:
       SD_DATE:
-       name: GPIO_SD_DATE
+        name: GPIO_SD_DATE
 
 UHCI0:
   _include: ../../../common_patches/int_strip.yaml

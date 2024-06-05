@@ -41,7 +41,7 @@ DEDICATED_GPIO:
   OUT_DRT:
     _modify:
       VLAUE:
-       name: VALUE
+        name: VALUE
   OUT_IDV:
     _array:
       CH?: {}
@@ -82,6 +82,8 @@ RTC_CNTL:
   _include: ../../../common_patches/int_strip.yaml
 
 RTC_IO:
+  _include: ../../../common_patches/rtc_io.yaml
+
   RTC_GPIO_ENABLE_W1TS:
     _modify:
       REG_RTCIO_REG_GPIO_ENABLE_W1TS:
@@ -109,6 +111,9 @@ LEDC:
 
 PCNT:
   _include: ../../../common_patches/pcnt.yaml
+
+SENS:
+  _include: ../../../common_patches/sens.yaml
 
 SPI0:
   _include:
@@ -182,7 +187,7 @@ SYSTIMER:
   "INT_ENA,INT_RAW,INT_CLR":
     _array:
       TARGET?: {}
-  
+
   _array:
     UNIT?_OP:
       dimIncrement: 4
