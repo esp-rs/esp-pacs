@@ -1,6 +1,6 @@
 [package]
 name = "esp32s2-ulp"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.76"
 description = "Peripheral access crate for the ESP32-S2's RISC-V ULP coprocessor"
