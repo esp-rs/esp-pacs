@@ -1,4 +1,5 @@
 PROVIDE(LP_TIMER = DefaultHandler);
+PROVIDE(PMU = DefaultHandler);
 PROVIDE(LP_UART = DefaultHandler);
 PROVIDE(LP_I2C = DefaultHandler);
 PROVIDE(LP_WDT = DefaultHandler);

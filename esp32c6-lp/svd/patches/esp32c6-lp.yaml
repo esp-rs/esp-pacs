@@ -39,3 +39,7 @@ LP_TIMER:
 
 LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
+
+_copy:
+    PMU:
+        from: ../../../esp32c6/svd/esp32c6.svd:PMU
