@@ -14,6 +14,7 @@ pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
     fn LP_TIMER();
+    fn PMU();
     fn LP_UART();
     fn LP_I2C();
     fn LP_WDT();
@@ -45,7 +46,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 22] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: PMU },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: LP_UART },
@@ -616,6 +617,52 @@ impl core::fmt::Debug for LP_WDT {
 }
 #[doc = "Low-power Watchdog Timer"]
 pub mod lp_wdt;
+#[doc = "PMU Peripheral"]
+pub struct PMU {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for PMU {}
+impl PMU {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const pmu::RegisterBlock = 0x600b_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const pmu::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for PMU {
+    type Target = pmu::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for PMU {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PMU").finish()
+    }
+}
+#[doc = "PMU Peripheral"]
+pub mod pmu;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -645,6 +692,8 @@ pub struct Peripherals {
     pub LP_UART: LP_UART,
     #[doc = "LP_WDT"]
     pub LP_WDT: LP_WDT,
+    #[doc = "PMU"]
+    pub PMU: PMU,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -701,6 +750,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             LP_WDT: LP_WDT {
+                _marker: PhantomData,
+            },
+            PMU: PMU {
                 _marker: PhantomData,
             },
         }

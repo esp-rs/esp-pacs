@@ -5,6 +5,8 @@
 pub enum Interrupt {
     #[doc = "7 - LP_TIMER"]
     LP_TIMER = 7,
+    #[doc = "13 - PMU"]
+    PMU = 13,
     #[doc = "16 - LP_UART"]
     LP_UART = 16,
     #[doc = "17 - LP_I2C"]
@@ -27,6 +29,7 @@ impl Interrupt {
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
             7 => Ok(Interrupt::LP_TIMER),
+            13 => Ok(Interrupt::PMU),
             16 => Ok(Interrupt::LP_UART),
             17 => Ok(Interrupt::LP_I2C),
             18 => Ok(Interrupt::LP_WDT),
