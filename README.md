@@ -47,15 +47,15 @@ Patching is accomplished using the `xtask` package's `patch` subcommand. The `pa
 - If zero arguments are provided, it will patch all PACs in the repository
 - If one or more arguments are provided, it will patch each specified PAC
 
-In order to apply patches to one or more chips' SVDs, from within the `xtask/` directory you can run:
+In order to apply patches to one or more chips' SVDs, from the repository's root directory you can run:
 
 ```bash
 # Only patch the ESP32-C3's SVD:
-cargo run -- patch esp32c3
+cargo xtask patch esp32c3
 # Patch the SVDs for the ESP32, ESP32-S2, and ESP32-S3:
-cargo run -- patch esp32 esp32s2 esp32s3
+cargo xtask patch esp32 esp32s2 esp32s3
 # Patch all the SVDs!
-cargo run -- patch
+cargo xtask patch
 ```
 
 ### Generating the PACs
@@ -65,15 +65,15 @@ PACs are also generated using an `xtask` subcommand, this time the `generate` su
 - If zero arguments are provided, it will patch and (re-)generate all PACs in the repository
 - If one or more arguments are provided, it will patch and (re-)generate each specified PAC
 
-In order to apply re-generate to one or more chips'SVDs, from within the `xtask/` directory you can run:
+In order to apply re-generate to one or more chips'SVDs, from the repository's root directory you can run:
 
 ```shell
 # Only generate the ESP32-C3's PAC:
-cargo run -- generate esp32c3
+cargo xtask generate esp32c3
 # Generate the PACs for the ESP32, ESP32-S2, and ESP32-S3:
-cargo run -- generate esp32 esp32s2 esp32s3
+cargo xtask generate esp32 esp32s2 esp32s3
 # Generate all the PACs!
-cargo run -- generate
+cargo xtask generate
 ```
 
 **Note:** It's also possible to build the PACs after patching and generating them, using the `build` subcommand instead of `generate`. This otherwise works the same as the process described above, but confirms that all generate source files build successfully. It's a good idea to do this prior to opening a pull request.
