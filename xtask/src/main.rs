@@ -12,7 +12,8 @@ use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
     config::{IdentFormats, IdentFormatsTheme},
     util::IdentFormat,
-    Config, Target,
+    Config,
+    Target,
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::DocumentMut;
