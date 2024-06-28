@@ -14,6 +14,10 @@ APB_SARADC:
       name: CTRL_DATE
   CLKM_CONF:
     _strip: REG_
+  CTRL2:
+    _strip: SARADC_
+  CTRL:
+    _strip: SARADC_
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml

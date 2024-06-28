@@ -8,6 +8,10 @@ AES:
   _include: ../../../common_patches/aes.yaml
 
 APB_SARADC:
+  CTRL2:
+    _strip: SARADC_
+  CTRL:
+    _strip: SARADC_
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
