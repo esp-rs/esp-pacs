@@ -15,6 +15,8 @@ APB_SARADC:
       name: TSENS_SAMPLE
   TSENS_SAMPLE:
     _strip: TSENS_SAMPLE_
+  CTRL2:
+    _strip: SARADC_
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
