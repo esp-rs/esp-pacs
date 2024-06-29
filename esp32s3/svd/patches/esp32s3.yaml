@@ -57,6 +57,9 @@ LEDC:
     - ../../../common_patches/ledc_collect.yaml
     - ../../../common_patches/ledc_int.yaml
 
+EFUSE:
+  _include: ../../../common_patches/efuse.yaml
+
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml
 

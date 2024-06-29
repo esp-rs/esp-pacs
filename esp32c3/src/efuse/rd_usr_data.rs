@@ -1,9 +1,9 @@
 #[doc = "Register `RD_USR_DATA%s` reader"]
 pub type R = crate::R<RD_USR_DATA_SPEC>;
-#[doc = "Field `DATA` reader - Stores the %sth 32 bits of BLOCK3 (user)."]
+#[doc = "Field `DATA` reader - Stores the zeroth 32 bits of BLOCK3 (user)."]
 pub type DATA_R = crate::FieldReader<u32>;
 impl R {
-    #[doc = "Bits 0:31 - Stores the %sth 32 bits of BLOCK3 (user)."]
+    #[doc = "Bits 0:31 - Stores the zeroth 32 bits of BLOCK3 (user)."]
     #[inline(always)]
     pub fn data(&self) -> DATA_R {
         DATA_R::new(self.bits)

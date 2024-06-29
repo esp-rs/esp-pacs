@@ -1,0 +1,49 @@
+PGM_DATA?:
+  _modify:
+    PGM_DATA_?:
+      name: DATA
+PGM_CHECK_VALUE?:
+  _modify:
+    PGM_RS_DATA_?:
+      name: DATA
+RD_USR_DATA?:
+  _modify:
+    USR_DATA?:
+      name: DATA
+RD_KEY?_DATA?:
+  _modify:
+    KEY?_DATA?:
+      name: DATA
+RD_SYS_PART?_DATA?:
+  _modify:
+    SYS_DATA_PART?_?:
+      name: DATA
+_array:
+  PGM_DATA?: {}
+  PGM_CHECK_VALUE?: {}
+  RD_USR_DATA?: {}
+  RD_SYS_PART1_DATA?:
+    description: Register %s of BLOCK2 (system).
+  RD_SYS_PART2_DATA?:
+    description: Register %s of BLOCK10 (system).
+_cluster:
+  RD_KEY%s:
+    RD_KEY?_DATA0:
+      name: DATA0
+    RD_KEY?_DATA1:
+      name: DATA1
+    RD_KEY?_DATA2:
+      name: DATA2
+    RD_KEY?_DATA3:
+      name: DATA3
+    RD_KEY?_DATA4:
+      name: DATA4
+    RD_KEY?_DATA5:
+      name: DATA5
+    RD_KEY?_DATA6:
+      name: DATA6
+    RD_KEY?_DATA7:
+      name: DATA7
+    _array:
+      DATA?: {}
+_include: int_strip.yaml

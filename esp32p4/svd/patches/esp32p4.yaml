@@ -47,12 +47,16 @@ LP_ANA:
     COMD?: {}
   _include: ../../../common_patches/int_strip.yaml
 
+
+EFUSE:
+  _include: ../../../common_patches/efuse.yaml
+
 SPI[01]:
   _strip: SPI_MEM_
   "*":
     _strip: SPI_MEM_
 
-"EFUSE,I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2S0,LP_UART":
+"I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:

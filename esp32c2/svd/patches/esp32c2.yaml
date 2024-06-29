@@ -26,7 +26,7 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,UART0,SPI1":
+"I2C0,UART0,SPI1":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -69,6 +69,20 @@ APB_CTRL:
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml
+
+EFUSE:
+  PGM_DATA?:
+    _modify:
+      PGM_DATA_?:
+        name: DATA
+  PGM_CHECK_VALUE?:
+    _modify:
+      PGM_RS_DATA_?:
+        name: DATA
+  _array:
+    PGM_DATA?: {}
+    PGM_CHECK_VALUE?: {}
+  _include: ../../../common_patches/int_strip.yaml
 
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml

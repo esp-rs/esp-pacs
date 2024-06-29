@@ -20,7 +20,7 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,SPI1,UHCI0,USB_DEVICE":
+"I2C0,I2S0,UART0,SPI1,UHCI0,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -93,6 +93,9 @@ APB_CTRL:
     _modify:
       "*":
         modifiedWriteValues: oneToClear
+
+EFUSE:
+  _include: ../../../common_patches/efuse.yaml
 
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml
