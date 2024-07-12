@@ -24,7 +24,7 @@ impl W {
         DBUS_ACS_CNT_CLR_W::new(self, 1)
     }
 }
-#[doc = "This description will be updated in the near future.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cache_acs_cnt_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This description will be updated in the near future.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_acs_cnt_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_ACS_CNT_CLR_SPEC;
 impl crate::RegisterSpec for CACHE_ACS_CNT_CLR_SPEC {
     type Ux = u32;

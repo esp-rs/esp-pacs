@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "DATA_BUFFER_STATUS_LEVEL reflects the status level of the Buffers in the controller.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`data_buffer_status_level::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DATA_BUFFER_STATUS_LEVEL reflects the status level of the Buffers in the controller.\n\nYou can [`read`](crate::Reg::read) this register and get [`data_buffer_status_level::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATA_BUFFER_STATUS_LEVEL_SPEC;
 impl crate::RegisterSpec for DATA_BUFFER_STATUS_LEVEL_SPEC {
     type Ux = u32;

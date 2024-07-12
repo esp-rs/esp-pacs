@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MSPI ECO high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`registerrnd_eco_high::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MSPI ECO high register\n\nYou can [`read`](crate::Reg::read) this register and get [`registerrnd_eco_high::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REGISTERRND_ECO_HIGH_SPEC;
 impl crate::RegisterSpec for REGISTERRND_ECO_HIGH_SPEC {
     type Ux = u32;

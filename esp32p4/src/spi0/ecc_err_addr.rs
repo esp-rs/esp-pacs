@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MSPI ECC error address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ecc_err_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MSPI ECC error address register\n\nYou can [`read`](crate::Reg::read) this register and get [`ecc_err_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ECC_ERR_ADDR_SPEC;
 impl crate::RegisterSpec for ECC_ERR_ADDR_SPEC {
     type Ux = u32;

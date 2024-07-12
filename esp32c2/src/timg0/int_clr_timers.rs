@@ -13,7 +13,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_TIMERS_SPEC> {
 impl W {
     #[doc = "Set this bit to clear the TIMG_T(0-0)_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn t(&mut self, n: u8) -> T_W<INT_CLR_TIMERS_SPEC> {
@@ -34,7 +34,7 @@ impl W {
         WDT_W::new(self, 1)
     }
 }
-#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr_timers::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr_timers::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_CLR_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_CLR_TIMERS_SPEC {
     type Ux = u32;

@@ -5,7 +5,7 @@ pub type GPIO_R = crate::BitReader;
 impl R {
     #[doc = "This is the status bit for DEDIC_GPIO(0-7)_INT_RAW when DEDIC_GPIO7_INT_ENA is set to 1."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
     pub fn gpio(&self, n: u8) -> GPIO_R {
         #[allow(clippy::no_effect)]
@@ -74,7 +74,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_ST_SPEC;
 impl crate::RegisterSpec for INTR_ST_SPEC {
     type Ux = u32;

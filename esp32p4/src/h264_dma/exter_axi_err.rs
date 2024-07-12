@@ -65,7 +65,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "exter memory axi err register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exter_axi_err::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "exter memory axi err register\n\nYou can [`read`](crate::Reg::read) this register and get [`exter_axi_err::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXTER_AXI_ERR_SPEC;
 impl crate::RegisterSpec for EXTER_AXI_ERR_SPEC {
     type Ux = u32;

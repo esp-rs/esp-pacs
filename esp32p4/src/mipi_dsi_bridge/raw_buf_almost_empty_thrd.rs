@@ -34,7 +34,7 @@ impl W {
         DSI_RAW_BUF_ALMOST_EMPTY_THRD_W::new(self, 0)
     }
 }
-#[doc = "dsi_bridge buffer empty threshold register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`raw_buf_almost_empty_thrd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`raw_buf_almost_empty_thrd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "dsi_bridge buffer empty threshold register\n\nYou can [`read`](crate::Reg::read) this register and get [`raw_buf_almost_empty_thrd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`raw_buf_almost_empty_thrd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RAW_BUF_ALMOST_EMPTY_THRD_SPEC;
 impl crate::RegisterSpec for RAW_BUF_ALMOST_EMPTY_THRD_SPEC {
     type Ux = u32;

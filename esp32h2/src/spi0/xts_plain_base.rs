@@ -29,7 +29,7 @@ impl W {
         SPI_XTS_PLAIN_W::new(self, 0)
     }
 }
-#[doc = "The base address of the memory that stores plaintext in Manual Encryption\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xts_plain_base::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`xts_plain_base::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The base address of the memory that stores plaintext in Manual Encryption\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_plain_base::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_plain_base::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct XTS_PLAIN_BASE_SPEC;
 impl crate::RegisterSpec for XTS_PLAIN_BASE_SPEC {
     type Ux = u32;

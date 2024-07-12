@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Rate control status register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rc_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Rate control status register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`rc_status1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RC_STATUS1_SPEC;
 impl crate::RegisterSpec for RC_STATUS1_SPEC {
     type Ux = u32;

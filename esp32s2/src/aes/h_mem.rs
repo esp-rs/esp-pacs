@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("H_MEM").field("h", &self.h()).finish()
     }
 }
-#[doc = "GCM hash subkey\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`h_mem::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GCM hash subkey\n\nYou can [`read`](crate::Reg::read) this register and get [`h_mem::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct H_MEM_SPEC;
 impl crate::RegisterSpec for H_MEM_SPEC {
     type Ux = u32;

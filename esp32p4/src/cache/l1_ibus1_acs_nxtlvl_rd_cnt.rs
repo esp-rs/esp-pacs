@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1-ICache bus1 Next-Level-Access Counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_ibus1_acs_nxtlvl_rd_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1-ICache bus1 Next-Level-Access Counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_ibus1_acs_nxtlvl_rd_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_IBUS1_ACS_NXTLVL_RD_CNT_SPEC;
 impl crate::RegisterSpec for L1_IBUS1_ACS_NXTLVL_RD_CNT_SPEC {
     type Ux = u32;

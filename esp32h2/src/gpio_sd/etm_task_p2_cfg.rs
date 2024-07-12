@@ -13,7 +13,7 @@ pub type GPIO_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO8_EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO8_EN` field.</div>"]
     #[inline(always)]
     pub fn gpio_en(&self, n: u8) -> GPIO_EN_R {
         #[allow(clippy::no_effect)]
@@ -48,7 +48,7 @@ impl R {
     }
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO8_SEL` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO8_SEL` field.</div>"]
     #[inline(always)]
     pub fn gpio_sel(&self, n: u8) -> GPIO_SEL_R {
         #[allow(clippy::no_effect)]
@@ -100,7 +100,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Enable bit of GPIO response etm task."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO8_EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO8_EN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn gpio_en(&mut self, n: u8) -> GPIO_EN_W<ETM_TASK_P2_CFG_SPEC> {
@@ -134,7 +134,7 @@ impl W {
     }
     #[doc = "GPIO choose a etm task channel."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO8_SEL` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO8_SEL` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn gpio_sel(&mut self, n: u8) -> GPIO_SEL_W<ETM_TASK_P2_CFG_SPEC> {
@@ -167,7 +167,7 @@ impl W {
         GPIO_SEL_W::new(self, 25)
     }
 }
-#[doc = "Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`etm_task_p2_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`etm_task_p2_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Etm Configure Register to decide which GPIO been chosen\n\nYou can [`read`](crate::Reg::read) this register and get [`etm_task_p2_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_task_p2_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ETM_TASK_P2_CFG_SPEC;
 impl crate::RegisterSpec for ETM_TASK_P2_CFG_SPEC {
     type Ux = u32;

@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "FIFO status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "FIFO status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_ST_SPEC;
 impl crate::RegisterSpec for FIFO_ST_SPEC {
     type Ux = u32;

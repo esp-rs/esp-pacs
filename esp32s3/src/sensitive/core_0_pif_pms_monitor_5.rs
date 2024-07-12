@@ -48,7 +48,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Core0 permission report register 5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_pif_pms_monitor_5::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core0 permission report register 5.\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_pif_pms_monitor_5::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_PIF_PMS_MONITOR_5_SPEC;
 impl crate::RegisterSpec for CORE_0_PIF_PMS_MONITOR_5_SPEC {
     type Ux = u32;

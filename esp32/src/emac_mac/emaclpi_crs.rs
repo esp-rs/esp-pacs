@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "LPI Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emaclpi_crs::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LPI Control and Status\n\nYou can [`read`](crate::Reg::read) this register and get [`emaclpi_crs::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EMACLPI_CRS_SPEC;
 impl crate::RegisterSpec for EMACLPI_CRS_SPEC {
     type Ux = u32;

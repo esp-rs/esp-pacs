@@ -34,7 +34,7 @@ impl W {
         CORE_0_VECBASE_OVERRIDE_LOCK_W::new(self, 0)
     }
 }
-#[doc = "core0 vecbase override configuration register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_vecbase_override_lock::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_0_vecbase_override_lock::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "core0 vecbase override configuration register 0\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_vecbase_override_lock::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_vecbase_override_lock::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_VECBASE_OVERRIDE_LOCK_SPEC;
 impl crate::RegisterSpec for CORE_0_VECBASE_OVERRIDE_LOCK_SPEC {
     type Ux = u32;

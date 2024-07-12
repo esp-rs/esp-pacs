@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2S interrupt raw register, valid in level.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S interrupt raw register, valid in level.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_int_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MULT_INT_RAW_SPEC;
 impl crate::RegisterSpec for MULT_INT_RAW_SPEC {
     type Ux = u32;

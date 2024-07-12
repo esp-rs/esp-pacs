@@ -16,7 +16,7 @@ impl W {
         SET_TEXT_ING_W::new(self, 0)
     }
 }
-#[doc = "HMAC message continue register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`set_message_ing::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HMAC message continue register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_message_ing::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_MESSAGE_ING_SPEC;
 impl crate::RegisterSpec for SET_MESSAGE_ING_SPEC {
     type Ux = u32;

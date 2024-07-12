@@ -17,11 +17,11 @@ impl UNIT_VALUE {
         &self.lo
     }
 }
-#[doc = "HI (r) register accessor: System timer value, high 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hi`] module"]
+#[doc = "HI (r) register accessor: System timer value, high 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hi`] module"]
 pub type HI = crate::Reg<hi::HI_SPEC>;
 #[doc = "System timer value, high 32 bits"]
 pub mod hi;
-#[doc = "LO (r) register accessor: System timer value, low 32 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lo`] module"]
+#[doc = "LO (r) register accessor: System timer value, low 32 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lo`] module"]
 pub type LO = crate::Reg<lo::LO_SPEC>;
 #[doc = "System timer value, low 32 bits"]
 pub mod lo;

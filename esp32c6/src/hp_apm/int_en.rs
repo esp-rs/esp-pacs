@@ -9,7 +9,7 @@ pub type M_APM_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "APM M(0-3) interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `M0_APM` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_APM` field.</div>"]
     #[inline(always)]
     pub fn m_apm(&self, n: u8) -> M_APM_R {
         #[allow(clippy::no_effect)]
@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "APM M(0-3) interrupt enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `M0_APM` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_APM` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn m_apm(&mut self, n: u8) -> M_APM_W<INT_EN_SPEC> {
@@ -90,7 +90,7 @@ impl W {
         M_APM_W::new(self, 3)
     }
 }
-#[doc = "APM interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_en::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_en::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APM interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_EN_SPEC;
 impl crate::RegisterSpec for INT_EN_SPEC {
     type Ux = u32;

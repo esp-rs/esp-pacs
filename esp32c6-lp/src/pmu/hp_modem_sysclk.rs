@@ -55,31 +55,16 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_MODEM_SYSCLK")
             .field(
                 "hp_modem_dig_sys_clk_no_div",
-                &format_args!("{}", self.hp_modem_dig_sys_clk_no_div().bit()),
+                &self.hp_modem_dig_sys_clk_no_div(),
             )
             .field(
                 "hp_modem_icg_sys_clock_en",
-                &format_args!("{}", self.hp_modem_icg_sys_clock_en().bit()),
+                &self.hp_modem_icg_sys_clock_en(),
             )
-            .field(
-                "hp_modem_sys_clk_slp_sel",
-                &format_args!("{}", self.hp_modem_sys_clk_slp_sel().bit()),
-            )
-            .field(
-                "hp_modem_icg_slp_sel",
-                &format_args!("{}", self.hp_modem_icg_slp_sel().bit()),
-            )
-            .field(
-                "hp_modem_dig_sys_clk_sel",
-                &format_args!("{}", self.hp_modem_dig_sys_clk_sel().bits()),
-            )
+            .field("hp_modem_sys_clk_slp_sel", &self.hp_modem_sys_clk_slp_sel())
+            .field("hp_modem_icg_slp_sel", &self.hp_modem_icg_slp_sel())
+            .field("hp_modem_dig_sys_clk_sel", &self.hp_modem_dig_sys_clk_sel())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_SYSCLK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -118,7 +103,7 @@ impl W {
         HP_MODEM_DIG_SYS_CLK_SEL_W::new(self, 30)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_modem_sysclk::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_modem_sysclk::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_modem_sysclk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_sysclk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_MODEM_SYSCLK_SPEC;
 impl crate::RegisterSpec for HP_MODEM_SYSCLK_SPEC {
     type Ux = u32;

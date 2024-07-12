@@ -60,7 +60,7 @@ impl W {
         HP_PERI_TIMEOUT_PROTECT_EN_W::new(self, 17)
     }
 }
-#[doc = "HP_PERI_TIMEOUT configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_peri_timeout_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_peri_timeout_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HP_PERI_TIMEOUT configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri_timeout_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_peri_timeout_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_PERI_TIMEOUT_CONF_SPEC;
 impl crate::RegisterSpec for HP_PERI_TIMEOUT_CONF_SPEC {
     type Ux = u32;

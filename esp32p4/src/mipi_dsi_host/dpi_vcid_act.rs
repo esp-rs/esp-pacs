@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpi_vcid_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_vcid_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DPI_VCID_ACT_SPEC;
 impl crate::RegisterSpec for DPI_VCID_ACT_SPEC {
     type Ux = u32;

@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 Cache autoload section 1 address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_autoload_sct3_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 Cache autoload section 1 address configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_cache_autoload_sct3_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_AUTOLOAD_SCT3_ADDR_SPEC;
 impl crate::RegisterSpec for L1_CACHE_AUTOLOAD_SCT3_ADDR_SPEC {
     type Ux = u32;

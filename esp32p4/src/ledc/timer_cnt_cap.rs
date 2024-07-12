@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Ledc timer%s captured count value register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer_cnt_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ledc timer%s captured count value register.\n\nYou can [`read`](crate::Reg::read) this register and get [`timer_cnt_cap::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMER_CNT_CAP_SPEC;
 impl crate::RegisterSpec for TIMER_CNT_CAP_SPEC {
     type Ux = u32;

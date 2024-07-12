@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("IDLE").field("idle", &self.idle()).finish()
     }
 }
-#[doc = "RSA idle register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`idle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RSA idle register\n\nYou can [`read`](crate::Reg::read) this register and get [`idle::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IDLE_SPEC;
 impl crate::RegisterSpec for IDLE_SPEC {
     type Ux = u32;

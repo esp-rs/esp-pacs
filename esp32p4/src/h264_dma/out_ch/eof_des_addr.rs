@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx eof des addr register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`eof_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx eof des addr register\n\nYou can [`read`](crate::Reg::read) this register and get [`eof_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EOF_DES_ADDR_SPEC;
 impl crate::RegisterSpec for EOF_DES_ADDR_SPEC {
     type Ux = u32;

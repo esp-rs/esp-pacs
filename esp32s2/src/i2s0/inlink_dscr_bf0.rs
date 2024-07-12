@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Address of next inlink descriptor\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inlink_dscr_bf0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Address of next inlink descriptor\n\nYou can [`read`](crate::Reg::read) this register and get [`inlink_dscr_bf0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INLINK_DSCR_BF0_SPEC;
 impl crate::RegisterSpec for INLINK_DSCR_BF0_SPEC {
     type Ux = u32;

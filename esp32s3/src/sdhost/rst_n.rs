@@ -29,7 +29,7 @@ impl W {
         CARD_RESET_W::new(self, 0)
     }
 }
-#[doc = "Card reset register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rst_n::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rst_n::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Card reset register\n\nYou can [`read`](crate::Reg::read) this register and get [`rst_n::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rst_n::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RST_N_SPEC;
 impl crate::RegisterSpec for RST_N_SPEC {
     type Ux = u32;

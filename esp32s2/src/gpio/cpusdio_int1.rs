@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO32 ~ 53 CPU SDIO interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpusdio_int1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO32 ~ 53 CPU SDIO interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpusdio_int1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPUSDIO_INT1_SPEC;
 impl crate::RegisterSpec for CPUSDIO_INT1_SPEC {
     type Ux = u32;

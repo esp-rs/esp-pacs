@@ -234,7 +234,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0int_st1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`_0int_st1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0INT_ST1_SPEC;
 impl crate::RegisterSpec for _0INT_ST1_SPEC {
     type Ux = u32;

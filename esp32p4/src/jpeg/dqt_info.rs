@@ -77,7 +77,7 @@ impl W {
         T3_DQT_INFO_W::new(self, 24)
     }
 }
-#[doc = "Control and configuration registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dqt_info::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dqt_info::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dqt_info::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dqt_info::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DQT_INFO_SPEC;
 impl crate::RegisterSpec for DQT_INFO_SPEC {
     type Ux = u32;

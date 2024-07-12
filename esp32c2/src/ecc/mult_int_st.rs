@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2S interrupt status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mult_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S interrupt status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`mult_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MULT_INT_ST_SPEC;
 impl crate::RegisterSpec for MULT_INT_ST_SPEC {
     type Ux = u32;

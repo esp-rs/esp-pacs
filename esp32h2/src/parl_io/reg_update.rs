@@ -16,7 +16,7 @@ impl W {
         RX_REG_UPDATE_W::new(self, 31)
     }
 }
-#[doc = "Parallel IO FIFO configuration register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reg_update::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Parallel IO FIFO configuration register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_update::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REG_UPDATE_SPEC;
 impl crate::RegisterSpec for REG_UPDATE_SPEC {
     type Ux = u32;

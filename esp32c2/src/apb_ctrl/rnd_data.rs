@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "APB_CTRL_RND_DATA_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rnd_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB_CTRL_RND_DATA_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`rnd_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RND_DATA_SPEC;
 impl crate::RegisterSpec for RND_DATA_SPEC {
     type Ux = u32;

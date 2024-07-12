@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RTC_CNTL_RTC_SLP_WAKEUP_CAUSE_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slp_wakeup_cause::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC_CNTL_RTC_SLP_WAKEUP_CAUSE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`slp_wakeup_cause::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLP_WAKEUP_CAUSE_SPEC;
 impl crate::RegisterSpec for SLP_WAKEUP_CAUSE_SPEC {
     type Ux = u32;

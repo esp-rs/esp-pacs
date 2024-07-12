@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Host descriptor address pointer\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dscaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host descriptor address pointer\n\nYou can [`read`](crate::Reg::read) this register and get [`dscaddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSCADDR_SPEC;
 impl crate::RegisterSpec for DSCADDR_SPEC {
     type Ux = u32;

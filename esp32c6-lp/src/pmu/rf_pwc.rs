@@ -62,34 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RF_PWC")
-            .field(
-                "perif_i2c_rstb",
-                &format_args!("{}", self.perif_i2c_rstb().bit()),
-            )
-            .field(
-                "xpd_perif_i2c",
-                &format_args!("{}", self.xpd_perif_i2c().bit()),
-            )
-            .field(
-                "xpd_txrf_i2c",
-                &format_args!("{}", self.xpd_txrf_i2c().bit()),
-            )
-            .field(
-                "xpd_rfrx_pbus",
-                &format_args!("{}", self.xpd_rfrx_pbus().bit()),
-            )
-            .field(
-                "xpd_ckgen_i2c",
-                &format_args!("{}", self.xpd_ckgen_i2c().bit()),
-            )
-            .field("xpd_pll_i2c", &format_args!("{}", self.xpd_pll_i2c().bit()))
+            .field("perif_i2c_rstb", &self.perif_i2c_rstb())
+            .field("xpd_perif_i2c", &self.xpd_perif_i2c())
+            .field("xpd_txrf_i2c", &self.xpd_txrf_i2c())
+            .field("xpd_rfrx_pbus", &self.xpd_rfrx_pbus())
+            .field("xpd_ckgen_i2c", &self.xpd_ckgen_i2c())
+            .field("xpd_pll_i2c", &self.xpd_pll_i2c())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<RF_PWC_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -130,7 +109,7 @@ impl W {
         XPD_PLL_I2C_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rf_pwc::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rf_pwc::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`rf_pwc::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rf_pwc::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RF_PWC_SPEC;
 impl crate::RegisterSpec for RF_PWC_SPEC {
     type Ux = u32;

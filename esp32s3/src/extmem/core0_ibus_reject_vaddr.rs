@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core0_ibus_reject_vaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`core0_ibus_reject_vaddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE0_IBUS_REJECT_VADDR_SPEC;
 impl crate::RegisterSpec for CORE0_IBUS_REJECT_VADDR_SPEC {
     type Ux = u32;

@@ -21,7 +21,7 @@ pub type DAC_CW_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "DC offset for DAC(1-2) CW generator."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_DC1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_DC1` field.</div>"]
     #[inline(always)]
     pub fn dac_dc(&self, n: u8) -> DAC_DC_R {
         #[allow(clippy::no_effect)]
@@ -46,7 +46,7 @@ impl R {
     }
     #[doc = "DAC(1-2) scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_SCALE1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_SCALE1` field.</div>"]
     #[inline(always)]
     pub fn dac_scale(&self, n: u8) -> DAC_SCALE_R {
         #[allow(clippy::no_effect)]
@@ -71,7 +71,7 @@ impl R {
     }
     #[doc = "Invert DAC(1-2). 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_INV1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_INV1` field.</div>"]
     #[inline(always)]
     pub fn dac_inv(&self, n: u8) -> DAC_INV_R {
         #[allow(clippy::no_effect)]
@@ -96,7 +96,7 @@ impl R {
     }
     #[doc = "1: to select CW generator as source to PDAC(1-2)_DAC\\[7:0\\] 0: to select register reg_pdac(1-2)_dac\\[7:0\\] as source to PDAC(1-2)_DAC\\[7:0\\]"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_CW_EN1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_CW_EN1` field.</div>"]
     #[inline(always)]
     pub fn dac_cw_en(&self, n: u8) -> DAC_CW_EN_R {
         #[allow(clippy::no_effect)]
@@ -138,7 +138,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "DC offset for DAC(1-2) CW generator."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_DC1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_DC1` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dac_dc(&mut self, n: u8) -> DAC_DC_W<SAR_DAC_CTRL2_SPEC> {
@@ -160,7 +160,7 @@ impl W {
     }
     #[doc = "DAC(1-2) scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_SCALE1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_SCALE1` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dac_scale(&mut self, n: u8) -> DAC_SCALE_W<SAR_DAC_CTRL2_SPEC> {
@@ -182,7 +182,7 @@ impl W {
     }
     #[doc = "Invert DAC(1-2). 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_INV1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_INV1` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dac_inv(&mut self, n: u8) -> DAC_INV_W<SAR_DAC_CTRL2_SPEC> {
@@ -204,7 +204,7 @@ impl W {
     }
     #[doc = "1: to select CW generator as source to PDAC(1-2)_DAC\\[7:0\\] 0: to select register reg_pdac(1-2)_dac\\[7:0\\] as source to PDAC(1-2)_DAC\\[7:0\\]"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DAC_CW_EN1` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_CW_EN1` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dac_cw_en(&mut self, n: u8) -> DAC_CW_EN_W<SAR_DAC_CTRL2_SPEC> {
@@ -225,7 +225,7 @@ impl W {
         DAC_CW_EN_W::new(self, 25)
     }
 }
-#[doc = "DAC output control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_dac_ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_dac_ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DAC output control\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_dac_ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_dac_ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_DAC_CTRL2_SPEC;
 impl crate::RegisterSpec for SAR_DAC_CTRL2_SPEC {
     type Ux = u32;

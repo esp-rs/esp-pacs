@@ -61,7 +61,7 @@ impl W {
         SR_MACRO_BK_RO_BYPASS_W::new(self, 2)
     }
 }
-#[doc = "Scaling and rotating engine byte order register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_byte_order::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr_byte_order::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Scaling and rotating engine byte order register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_byte_order::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_byte_order::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_BYTE_ORDER_SPEC;
 impl crate::RegisterSpec for SR_BYTE_ORDER_SPEC {
     type Ux = u32;

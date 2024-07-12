@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "In-Band Interrupt Buffer Status/Data Register. When receiving an IBI, IBI_PORT is used to both: Read the IBI Status Read the IBI Data(which is raw/opaque data)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ibi_status_buf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "In-Band Interrupt Buffer Status/Data Register. When receiving an IBI, IBI_PORT is used to both: Read the IBI Status Read the IBI Data(which is raw/opaque data)\n\nYou can [`read`](crate::Reg::read) this register and get [`ibi_status_buf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IBI_STATUS_BUF_SPEC;
 impl crate::RegisterSpec for IBI_STATUS_BUF_SPEC {
     type Ux = u32;

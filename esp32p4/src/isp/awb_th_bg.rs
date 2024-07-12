@@ -45,7 +45,7 @@ impl W {
         AWB_MAX_BG_W::new(self, 16)
     }
 }
-#[doc = "awb b/g threshold register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`awb_th_bg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`awb_th_bg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "awb b/g threshold register\n\nYou can [`read`](crate::Reg::read) this register and get [`awb_th_bg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`awb_th_bg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AWB_TH_BG_SPEC;
 impl crate::RegisterSpec for AWB_TH_BG_SPEC {
     type Ux = u32;

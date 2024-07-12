@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 instruction Cache 2 preload-operation control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache2_preload_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 instruction Cache 2 preload-operation control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache2_preload_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_ICACHE2_PRELOAD_CTRL_SPEC;
 impl crate::RegisterSpec for L1_ICACHE2_PRELOAD_CTRL_SPEC {
     type Ux = u32;

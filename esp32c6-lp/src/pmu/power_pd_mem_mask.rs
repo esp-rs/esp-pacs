@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_MEM_MASK")
-            .field(
-                "pd_hp_mem2_pd_mask",
-                &format_args!("{}", self.pd_hp_mem2_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem1_pd_mask",
-                &format_args!("{}", self.pd_hp_mem1_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem0_pd_mask",
-                &format_args!("{}", self.pd_hp_mem0_pd_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem2_mask",
-                &format_args!("{}", self.pd_hp_mem2_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem1_mask",
-                &format_args!("{}", self.pd_hp_mem1_mask().bits()),
-            )
-            .field(
-                "pd_hp_mem0_mask",
-                &format_args!("{}", self.pd_hp_mem0_mask().bits()),
-            )
+            .field("pd_hp_mem2_pd_mask", &self.pd_hp_mem2_pd_mask())
+            .field("pd_hp_mem1_pd_mask", &self.pd_hp_mem1_pd_mask())
+            .field("pd_hp_mem0_pd_mask", &self.pd_hp_mem0_pd_mask())
+            .field("pd_hp_mem2_mask", &self.pd_hp_mem2_mask())
+            .field("pd_hp_mem1_mask", &self.pd_hp_mem1_mask())
+            .field("pd_hp_mem0_mask", &self.pd_hp_mem0_mask())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_MEM_MASK_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -133,7 +109,7 @@ impl W {
         PD_HP_MEM0_MASK_W::new(self, 27)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_pd_mem_mask::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_pd_mem_mask::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_pd_mem_mask::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_pd_mem_mask::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_PD_MEM_MASK_SPEC;
 impl crate::RegisterSpec for POWER_PD_MEM_MASK_SPEC {
     type Ux = u32;

@@ -73,7 +73,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PMT Control and Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pmt_csr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PMT Control and Status\n\nYou can [`read`](crate::Reg::read) this register and get [`pmt_csr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PMT_CSR_SPEC;
 impl crate::RegisterSpec for PMT_CSR_SPEC {
     type Ux = u32;

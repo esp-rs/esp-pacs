@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ae statistic result register 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_block_mean_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ae statistic result register 3\n\nYou can [`read`](crate::Reg::read) this register and get [`ae_block_mean_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AE_BLOCK_MEAN_3_SPEC;
 impl crate::RegisterSpec for AE_BLOCK_MEAN_3_SPEC {
     type Ux = u32;

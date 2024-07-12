@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "M0 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exception_info1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "M0 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`exception_info1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXCEPTION_INFO1_SPEC;
 impl crate::RegisterSpec for EXCEPTION_INFO1_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`level_split1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USED TO SPLIT L1 CACHE AND L2 CACHE\n\nYou can [`read`](crate::Reg::read) this register and get [`level_split1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LEVEL_SPLIT1_SPEC;
 impl crate::RegisterSpec for LEVEL_SPLIT1_SPEC {
     type Ux = u32;

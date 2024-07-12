@@ -73,7 +73,7 @@ impl W {
         INTERNAL_SRAM_CPU_USAGE_W::new(self, 4)
     }
 }
-#[doc = "Internal SRAM configuration register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`internal_sram_usage_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`internal_sram_usage_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Internal SRAM configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`internal_sram_usage_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`internal_sram_usage_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERNAL_SRAM_USAGE_1_SPEC;
 impl crate::RegisterSpec for INTERNAL_SRAM_USAGE_1_SPEC {
     type Ux = u32;

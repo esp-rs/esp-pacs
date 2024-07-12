@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ULP-RISCV debug register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_debug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ULP-RISCV debug register\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_cocpu_debug::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_DEBUG_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_DEBUG_SPEC {
     type Ux = u32;

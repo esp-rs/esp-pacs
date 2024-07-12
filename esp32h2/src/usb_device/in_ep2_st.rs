@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "CDC-ACM interrupt IN endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep2_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CDC-ACM interrupt IN endpoint status information.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ep2_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_EP2_ST_SPEC;
 impl crate::RegisterSpec for IN_EP2_ST_SPEC {
     type Ux = u32;

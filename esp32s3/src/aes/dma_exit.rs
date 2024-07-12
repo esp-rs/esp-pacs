@@ -16,7 +16,7 @@ impl W {
         DMA_EXIT_W::new(self, 0)
     }
 }
-#[doc = "AES-DMA exit config\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_exit::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "AES-DMA exit config\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_exit::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_EXIT_SPEC;
 impl crate::RegisterSpec for DMA_EXIT_SPEC {
     type Ux = u32;

@@ -73,7 +73,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Access Counter Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_cnt_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Access Counter Interrupt clear register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_cnt_int_clr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_ACS_CNT_INT_CLR_SPEC;
 impl crate::RegisterSpec for L2_CACHE_ACS_CNT_INT_CLR_SPEC {
     type Ux = u32;

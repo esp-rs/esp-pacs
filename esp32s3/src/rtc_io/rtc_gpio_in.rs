@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RTC GPIO input data\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_gpio_in::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC GPIO input data\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_gpio_in::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_GPIO_IN_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_IN_SPEC {
     type Ux = u32;

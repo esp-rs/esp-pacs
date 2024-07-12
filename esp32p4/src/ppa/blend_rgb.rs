@@ -61,7 +61,7 @@ impl W {
         BLEND1_RX_R_W::new(self, 16)
     }
 }
-#[doc = "RGB color register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blend_rgb::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`blend_rgb::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RGB color register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_rgb::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`blend_rgb::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLEND_RGB_SPEC;
 impl crate::RegisterSpec for BLEND_RGB_SPEC {
     type Ux = u32;

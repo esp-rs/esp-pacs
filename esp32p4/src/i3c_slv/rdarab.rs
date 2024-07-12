@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Read Byte Data (from-bus) register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rdarab::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Read Byte Data (from-bus) register\n\nYou can [`read`](crate::Reg::read) this register and get [`rdarab::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RDARAB_SPEC;
 impl crate::RegisterSpec for RDARAB_SPEC {
     type Ux = u32;

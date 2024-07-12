@@ -31,7 +31,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 external RAM DDR read command control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_drd_cmd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 external RAM DDR read command control register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_drd_cmd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SRAM_DRD_CMD_SPEC;
 impl crate::RegisterSpec for SRAM_DRD_CMD_SPEC {
     type Ux = u32;

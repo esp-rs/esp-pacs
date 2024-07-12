@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("T0_MEM").field("t0", &self.t0()).finish()
     }
 }
-#[doc = "T0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t0_mem::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "T0\n\nYou can [`read`](crate::Reg::read) this register and get [`t0_mem::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct T0_MEM_SPEC;
 impl crate::RegisterSpec for T0_MEM_SPEC {
     type Ux = u32;

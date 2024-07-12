@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`response_buf_port::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`response_buf_port::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESPONSE_BUF_PORT_SPEC;
 impl crate::RegisterSpec for RESPONSE_BUF_PORT_SPEC {
     type Ux = u32;

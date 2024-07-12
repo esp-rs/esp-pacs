@@ -18,7 +18,7 @@ impl W {
         RTC_GPIO_STATUS_INT_W1TS_W::new(self, 10)
     }
 }
-#[doc = "One set RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_gpio_status_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "One set RTC GPIO 0 ~ 21 interrupt status\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_gpio_status_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_GPIO_STATUS_W1TS_SPEC;
 impl crate::RegisterSpec for RTC_GPIO_STATUS_W1TS_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "eFuse apb2otp block7 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk7_w11::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "eFuse apb2otp block7 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk7_w11::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2OTP_BLK7_W11_SPEC;
 impl crate::RegisterSpec for APB2OTP_BLK7_W11_SPEC {
     type Ux = u32;

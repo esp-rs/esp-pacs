@@ -72,7 +72,7 @@ impl W {
         OUTFIFO_UDF_L3_W::new(self, 7)
     }
 }
-#[doc = "Interrupt clear bits of Tx channel 0\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear bits of Tx channel 0\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLR_SPEC;
 impl crate::RegisterSpec for CLR_SPEC {
     type Ux = u32;

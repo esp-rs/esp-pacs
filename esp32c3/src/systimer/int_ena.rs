@@ -9,7 +9,7 @@ pub type TARGET_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "interupt(0-2) enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TARGET0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
     pub fn target(&self, n: u8) -> TARGET_R {
         #[allow(clippy::no_effect)]
@@ -51,7 +51,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "interupt(0-2) enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TARGET0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn target(&mut self, n: u8) -> TARGET_W<INT_ENA_SPEC> {
@@ -78,7 +78,7 @@ impl W {
         TARGET_W::new(self, 2)
     }
 }
-#[doc = "SYSTIMER_INT_ENA.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SYSTIMER_INT_ENA.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_SPEC;
 impl crate::RegisterSpec for INT_ENA_SPEC {
     type Ux = u32;

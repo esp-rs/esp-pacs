@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_WAIT_TIMER1")
-            .field(
-                "dg_lp_powerdown_timer",
-                &format_args!("{}", self.dg_lp_powerdown_timer().bits()),
-            )
-            .field(
-                "dg_lp_powerup_timer",
-                &format_args!("{}", self.dg_lp_powerup_timer().bits()),
-            )
-            .field(
-                "dg_lp_wait_timer",
-                &format_args!("{}", self.dg_lp_wait_timer().bits()),
-            )
+            .field("dg_lp_powerdown_timer", &self.dg_lp_powerdown_timer())
+            .field("dg_lp_powerup_timer", &self.dg_lp_powerup_timer())
+            .field("dg_lp_wait_timer", &self.dg_lp_wait_timer())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_WAIT_TIMER1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -76,7 +61,7 @@ impl W {
         DG_LP_WAIT_TIMER_W::new(self, 23)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_wait_timer1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_wait_timer1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_wait_timer1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_wait_timer1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_WAIT_TIMER1_SPEC;
 impl crate::RegisterSpec for POWER_WAIT_TIMER1_SPEC {
     type Ux = u32;

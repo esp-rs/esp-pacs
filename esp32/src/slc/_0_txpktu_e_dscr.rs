@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_txpktu_e_dscr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`_0_txpktu_e_dscr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0_TXPKTU_E_DSCR_SPEC;
 impl crate::RegisterSpec for _0_TXPKTU_E_DSCR_SPEC {
     type Ux = u32;

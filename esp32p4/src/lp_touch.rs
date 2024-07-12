@@ -156,103 +156,103 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "INT_RAW (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc = "INT_RAW (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "need_des"]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc = "INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "need_des"]
 pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc = "INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "need_des"]
 pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "need_des"]
 pub mod int_clr;
-#[doc = "CHN_STATUS (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chn_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chn_status`] module"]
+#[doc = "CHN_STATUS (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`chn_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chn_status`] module"]
 pub type CHN_STATUS = crate::Reg<chn_status::CHN_STATUS_SPEC>;
 #[doc = "need_des"]
 pub mod chn_status;
-#[doc = "STATUS_0 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_0`] module"]
+#[doc = "STATUS_0 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_0`] module"]
 pub type STATUS_0 = crate::Reg<status_0::STATUS_0_SPEC>;
 #[doc = "need_des"]
 pub mod status_0;
-#[doc = "STATUS_1 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_1`] module"]
+#[doc = "STATUS_1 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_1`] module"]
 pub type STATUS_1 = crate::Reg<status_1::STATUS_1_SPEC>;
 #[doc = "need_des"]
 pub mod status_1;
-#[doc = "STATUS_2 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_2`] module"]
+#[doc = "STATUS_2 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_2`] module"]
 pub type STATUS_2 = crate::Reg<status_2::STATUS_2_SPEC>;
 #[doc = "need_des"]
 pub mod status_2;
-#[doc = "STATUS_3 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_3`] module"]
+#[doc = "STATUS_3 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_3`] module"]
 pub type STATUS_3 = crate::Reg<status_3::STATUS_3_SPEC>;
 #[doc = "need_des"]
 pub mod status_3;
-#[doc = "STATUS_4 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_4`] module"]
+#[doc = "STATUS_4 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_4`] module"]
 pub type STATUS_4 = crate::Reg<status_4::STATUS_4_SPEC>;
 #[doc = "need_des"]
 pub mod status_4;
-#[doc = "STATUS_5 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_5`] module"]
+#[doc = "STATUS_5 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_5`] module"]
 pub type STATUS_5 = crate::Reg<status_5::STATUS_5_SPEC>;
 #[doc = "need_des"]
 pub mod status_5;
-#[doc = "STATUS_6 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_6`] module"]
+#[doc = "STATUS_6 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_6`] module"]
 pub type STATUS_6 = crate::Reg<status_6::STATUS_6_SPEC>;
 #[doc = "need_des"]
 pub mod status_6;
-#[doc = "STATUS_7 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_7`] module"]
+#[doc = "STATUS_7 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_7`] module"]
 pub type STATUS_7 = crate::Reg<status_7::STATUS_7_SPEC>;
 #[doc = "need_des"]
 pub mod status_7;
-#[doc = "STATUS_8 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_8`] module"]
+#[doc = "STATUS_8 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_8`] module"]
 pub type STATUS_8 = crate::Reg<status_8::STATUS_8_SPEC>;
 #[doc = "need_des"]
 pub mod status_8;
-#[doc = "STATUS_9 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_9`] module"]
+#[doc = "STATUS_9 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_9`] module"]
 pub type STATUS_9 = crate::Reg<status_9::STATUS_9_SPEC>;
 #[doc = "need_des"]
 pub mod status_9;
-#[doc = "STATUS_10 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_10`] module"]
+#[doc = "STATUS_10 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_10`] module"]
 pub type STATUS_10 = crate::Reg<status_10::STATUS_10_SPEC>;
 #[doc = "need_des"]
 pub mod status_10;
-#[doc = "STATUS_11 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_11`] module"]
+#[doc = "STATUS_11 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_11`] module"]
 pub type STATUS_11 = crate::Reg<status_11::STATUS_11_SPEC>;
 #[doc = "need_des"]
 pub mod status_11;
-#[doc = "STATUS_12 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_12::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_12`] module"]
+#[doc = "STATUS_12 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_12::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_12`] module"]
 pub type STATUS_12 = crate::Reg<status_12::STATUS_12_SPEC>;
 #[doc = "need_des"]
 pub mod status_12;
-#[doc = "STATUS_13 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_13::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_13`] module"]
+#[doc = "STATUS_13 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_13::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_13`] module"]
 pub type STATUS_13 = crate::Reg<status_13::STATUS_13_SPEC>;
 #[doc = "need_des"]
 pub mod status_13;
-#[doc = "STATUS_14 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_14::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_14`] module"]
+#[doc = "STATUS_14 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_14::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_14`] module"]
 pub type STATUS_14 = crate::Reg<status_14::STATUS_14_SPEC>;
 #[doc = "need_des"]
 pub mod status_14;
-#[doc = "STATUS_15 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_15::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_15`] module"]
+#[doc = "STATUS_15 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_15::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_15`] module"]
 pub type STATUS_15 = crate::Reg<status_15::STATUS_15_SPEC>;
 #[doc = "need_des"]
 pub mod status_15;
-#[doc = "STATUS_16 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_16::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_16`] module"]
+#[doc = "STATUS_16 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_16::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_16`] module"]
 pub type STATUS_16 = crate::Reg<status_16::STATUS_16_SPEC>;
 #[doc = "need_des"]
 pub mod status_16;
-#[doc = "STATUS_17 (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_17::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_17`] module"]
+#[doc = "STATUS_17 (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_17::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_17`] module"]
 pub type STATUS_17 = crate::Reg<status_17::STATUS_17_SPEC>;
 #[doc = "need_des"]
 pub mod status_17;
-#[doc = "CHN_TMP_STATUS (r) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chn_tmp_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chn_tmp_status`] module"]
+#[doc = "CHN_TMP_STATUS (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`chn_tmp_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@chn_tmp_status`] module"]
 pub type CHN_TMP_STATUS = crate::Reg<chn_tmp_status::CHN_TMP_STATUS_SPEC>;
 #[doc = "need_des"]
 pub mod chn_tmp_status;
-#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "need_des"]
 pub mod date;

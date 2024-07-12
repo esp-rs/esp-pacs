@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Host buffer address pointer register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bufaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Host buffer address pointer register\n\nYou can [`read`](crate::Reg::read) this register and get [`bufaddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFADDR_SPEC;
 impl crate::RegisterSpec for BUFADDR_SPEC {
     type Ux = u32;

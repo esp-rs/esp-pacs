@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Blending engine status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blend_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Blending engine status register\n\nYou can [`read`](crate::Reg::read) this register and get [`blend_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLEND_ST_SPEC;
 impl crate::RegisterSpec for BLEND_ST_SPEC {
     type Ux = u32;

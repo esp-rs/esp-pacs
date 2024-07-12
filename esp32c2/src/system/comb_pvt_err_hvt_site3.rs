@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "mem pvt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pvt_err_hvt_site3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_hvt_site3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMB_PVT_ERR_HVT_SITE3_SPEC;
 impl crate::RegisterSpec for COMB_PVT_ERR_HVT_SITE3_SPEC {
     type Ux = u32;

@@ -77,7 +77,7 @@ impl W {
         RX_BITS_MOD_W::new(self, 18)
     }
 }
-#[doc = "I2S sample rate register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sample_rate_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sample_rate_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S sample rate register\n\nYou can [`read`](crate::Reg::read) this register and get [`sample_rate_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sample_rate_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAMPLE_RATE_CONF_SPEC;
 impl crate::RegisterSpec for SAMPLE_RATE_CONF_SPEC {
     type Ux = u32;

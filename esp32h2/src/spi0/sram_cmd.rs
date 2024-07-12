@@ -185,7 +185,7 @@ impl W {
         SDUMMY_RIN_W::new(self, 22)
     }
 }
-#[doc = "SPI0 external RAM mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_cmd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sram_cmd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 external RAM mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SRAM_CMD_SPEC;
 impl crate::RegisterSpec for SRAM_CMD_SPEC {
     type Ux = u32;

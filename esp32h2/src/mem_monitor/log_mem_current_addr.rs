@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "current writing address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_mem_current_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "current writing address.\n\nYou can [`read`](crate::Reg::read) this register and get [`log_mem_current_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOG_MEM_CURRENT_ADDR_SPEC;
 impl crate::RegisterSpec for LOG_MEM_CURRENT_ADDR_SPEC {
     type Ux = u32;

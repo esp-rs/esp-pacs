@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "The third word of current receive descriptor\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_dscr_bf0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The third word of current receive descriptor\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_in_dscr_bf0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_IN_DSCR_BF0_SPEC;
 impl crate::RegisterSpec for DMA_IN_DSCR_BF0_SPEC {
     type Ux = u32;

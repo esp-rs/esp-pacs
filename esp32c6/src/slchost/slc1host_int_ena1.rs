@@ -523,7 +523,7 @@ impl W {
         SLC1_BT_RX_NEW_PACKET_INT_ENA1_W::new(self, 25)
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc1host_int_ena1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slc1host_int_ena1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`slc1host_int_ena1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slc1host_int_ena1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC1HOST_INT_ENA1_SPEC;
 impl crate::RegisterSpec for SLC1HOST_INT_ENA1_SPEC {
     type Ux = u32;

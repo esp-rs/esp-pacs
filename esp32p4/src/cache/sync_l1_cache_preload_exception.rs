@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sync_l1_cache_preload_exception::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Sync/Preload Operation exception register\n\nYou can [`read`](crate::Reg::read) this register and get [`sync_l1_cache_preload_exception::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC;
 impl crate::RegisterSpec for SYNC_L1_CACHE_PRELOAD_EXCEPTION_SPEC {
     type Ux = u32;

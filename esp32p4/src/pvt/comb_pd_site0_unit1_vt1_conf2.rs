@@ -56,7 +56,7 @@ impl W {
         MONITOR_EDG_MOD_VT1_PD_SITE0_UNIT1_W::new(self, 0)
     }
 }
-#[doc = "needs desc\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pd_site0_unit1_vt1_conf2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`comb_pd_site0_unit1_vt1_conf2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "needs desc\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pd_site0_unit1_vt1_conf2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comb_pd_site0_unit1_vt1_conf2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMB_PD_SITE0_UNIT1_VT1_CONF2_SPEC;
 impl crate::RegisterSpec for COMB_PD_SITE0_UNIT1_VT1_CONF2_SPEC {
     type Ux = u32;

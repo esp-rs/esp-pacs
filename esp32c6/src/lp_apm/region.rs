@@ -23,15 +23,15 @@ impl REGION {
         &self.pms_attr
     }
 }
-#[doc = "ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`addr_start::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`addr_start::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr_start`] module"]
+#[doc = "ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::Reg::read) this register and get [`addr_start::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr_start::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr_start`] module"]
 pub type ADDR_START = crate::Reg<addr_start::ADDR_START_SPEC>;
 #[doc = "Region address register"]
 pub mod addr_start;
-#[doc = "ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`addr_end::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`addr_end::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr_end`] module"]
+#[doc = "ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::Reg::read) this register and get [`addr_end::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr_end::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr_end`] module"]
 pub type ADDR_END = crate::Reg<addr_end::ADDR_END_SPEC>;
 #[doc = "Region address register"]
 pub mod addr_end;
-#[doc = "PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pms_attr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pms_attr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pms_attr`] module"]
+#[doc = "PMS_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`pms_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pms_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pms_attr`] module"]
 pub type PMS_ATTR = crate::Reg<pms_attr::PMS_ATTR_SPEC>;
 #[doc = "Region access authority attribute register"]
 pub mod pms_attr;

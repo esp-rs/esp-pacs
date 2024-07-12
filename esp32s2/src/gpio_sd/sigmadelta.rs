@@ -45,7 +45,7 @@ impl W {
         PRESCALE_W::new(self, 8)
     }
 }
-#[doc = "Duty-cycle configuration register of SDM%s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sigmadelta::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sigmadelta::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Duty-cycle configuration register of SDM%s\n\nYou can [`read`](crate::Reg::read) this register and get [`sigmadelta::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sigmadelta::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SIGMADELTA_SPEC;
 impl crate::RegisterSpec for SIGMADELTA_SPEC {
     type Ux = u32;

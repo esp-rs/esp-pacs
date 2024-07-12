@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of sum of af window b\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`af_sum_b::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "result of sum of af window b\n\nYou can [`read`](crate::Reg::read) this register and get [`af_sum_b::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AF_SUM_B_SPEC;
 impl crate::RegisterSpec for AF_SUM_B_SPEC {
     type Ux = u32;

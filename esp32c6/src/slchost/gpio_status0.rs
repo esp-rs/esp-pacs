@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gpio_status0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio_status0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_STATUS0_SPEC;
 impl crate::RegisterSpec for GPIO_STATUS0_SPEC {
     type Ux = u32;

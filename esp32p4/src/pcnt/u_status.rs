@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PNCT UNIT%s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PNCT UNIT%s status register\n\nYou can [`read`](crate::Reg::read) this register and get [`u_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct U_STATUS_SPEC;
 impl crate::RegisterSpec for U_STATUS_SPEC {
     type Ux = u32;

@@ -31,7 +31,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "exception monitor status register2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_dram0_exception_monitor_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "exception monitor status register2\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_dram0_exception_monitor_0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_DRAM0_EXCEPTION_MONITOR_0_SPEC;
 impl crate::RegisterSpec for CORE_0_DRAM0_EXCEPTION_MONITOR_0_SPEC {
     type Ux = u32;

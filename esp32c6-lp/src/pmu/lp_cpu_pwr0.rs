@@ -85,49 +85,19 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_CPU_PWR0")
-            .field(
-                "lp_cpu_waiti_rdy",
-                &format_args!("{}", self.lp_cpu_waiti_rdy().bit()),
-            )
-            .field(
-                "lp_cpu_stall_rdy",
-                &format_args!("{}", self.lp_cpu_stall_rdy().bit()),
-            )
-            .field(
-                "lp_cpu_force_stall",
-                &format_args!("{}", self.lp_cpu_force_stall().bit()),
-            )
-            .field(
-                "lp_cpu_slp_waiti_flag_en",
-                &format_args!("{}", self.lp_cpu_slp_waiti_flag_en().bit()),
-            )
-            .field(
-                "lp_cpu_slp_stall_flag_en",
-                &format_args!("{}", self.lp_cpu_slp_stall_flag_en().bit()),
-            )
-            .field(
-                "lp_cpu_slp_stall_wait",
-                &format_args!("{}", self.lp_cpu_slp_stall_wait().bits()),
-            )
-            .field(
-                "lp_cpu_slp_stall_en",
-                &format_args!("{}", self.lp_cpu_slp_stall_en().bit()),
-            )
-            .field(
-                "lp_cpu_slp_reset_en",
-                &format_args!("{}", self.lp_cpu_slp_reset_en().bit()),
-            )
+            .field("lp_cpu_waiti_rdy", &self.lp_cpu_waiti_rdy())
+            .field("lp_cpu_stall_rdy", &self.lp_cpu_stall_rdy())
+            .field("lp_cpu_force_stall", &self.lp_cpu_force_stall())
+            .field("lp_cpu_slp_waiti_flag_en", &self.lp_cpu_slp_waiti_flag_en())
+            .field("lp_cpu_slp_stall_flag_en", &self.lp_cpu_slp_stall_flag_en())
+            .field("lp_cpu_slp_stall_wait", &self.lp_cpu_slp_stall_wait())
+            .field("lp_cpu_slp_stall_en", &self.lp_cpu_slp_stall_en())
+            .field("lp_cpu_slp_reset_en", &self.lp_cpu_slp_reset_en())
             .field(
                 "lp_cpu_slp_bypass_intr_en",
-                &format_args!("{}", self.lp_cpu_slp_bypass_intr_en().bit()),
+                &self.lp_cpu_slp_bypass_intr_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_CPU_PWR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -174,7 +144,7 @@ impl W {
         LP_CPU_SLP_BYPASS_INTR_EN_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_cpu_pwr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_cpu_pwr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_cpu_pwr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_cpu_pwr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LP_CPU_PWR0_SPEC;
 impl crate::RegisterSpec for LP_CPU_PWR0_SPEC {
     type Ux = u32;

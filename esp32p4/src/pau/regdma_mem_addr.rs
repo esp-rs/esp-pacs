@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "mem addr\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`regdma_mem_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "mem addr\n\nYou can [`read`](crate::Reg::read) this register and get [`regdma_mem_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REGDMA_MEM_ADDR_SPEC;
 impl crate::RegisterSpec for REGDMA_MEM_ADDR_SPEC {
     type Ux = u32;

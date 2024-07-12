@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dbus_acs_spiram_miss_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`dbus_acs_spiram_miss_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DBUS_ACS_SPIRAM_MISS_CNT_SPEC;
 impl crate::RegisterSpec for DBUS_ACS_SPIRAM_MISS_CNT_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "High speed sdio pad bist recive sequence\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`recive_seq::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "High speed sdio pad bist recive sequence\n\nYou can [`read`](crate::Reg::read) this register and get [`recive_seq::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RECIVE_SEQ_SPEC;
 impl crate::RegisterSpec for RECIVE_SEQ_SPEC {
     type Ux = u32;

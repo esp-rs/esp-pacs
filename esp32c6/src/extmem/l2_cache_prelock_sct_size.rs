@@ -31,7 +31,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L2 Cache prelock section size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_prelock_sct_size::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L2 Cache prelock section size configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_prelock_sct_size::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_PRELOCK_SCT_SIZE_SPEC;
 impl crate::RegisterSpec for L2_CACHE_PRELOCK_SCT_SIZE_SPEC {
     type Ux = u32;

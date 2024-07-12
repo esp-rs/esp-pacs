@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "The last outlink descriptor address when EOF occurs of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_bfr_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The last outlink descriptor address when EOF occurs of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_bfr_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_EOF_BFR_DES_ADDR_SPEC;
 impl crate::RegisterSpec for OUT_EOF_BFR_DES_ADDR_SPEC {
     type Ux = u32;

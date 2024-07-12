@@ -18,7 +18,7 @@ impl W {
         REG_RTCIO_REG_GPIO_ENABLE_W1TC_W::new(self, 10)
     }
 }
-#[doc = "RTC GPIO output enable bit clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC GPIO output enable bit clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLE_W1TC_SPEC;
 impl crate::RegisterSpec for ENABLE_W1TC_SPEC {
     type Ux = u32;

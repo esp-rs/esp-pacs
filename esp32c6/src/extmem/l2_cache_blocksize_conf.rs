@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L2 Cache BlockSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_blocksize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L2 Cache BlockSize mode configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_blocksize_conf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_BLOCKSIZE_CONF_SPEC;
 impl crate::RegisterSpec for L2_CACHE_BLOCKSIZE_CONF_SPEC {
     type Ux = u32;

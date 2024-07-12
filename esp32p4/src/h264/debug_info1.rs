@@ -65,7 +65,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Debug information register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`debug_info1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Debug information register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`debug_info1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEBUG_INFO1_SPEC;
 impl crate::RegisterSpec for DEBUG_INFO1_SPEC {
     type Ux = u32;

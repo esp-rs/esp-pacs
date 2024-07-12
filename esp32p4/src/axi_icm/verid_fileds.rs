@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`verid_fileds::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`verid_fileds::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VERID_FILEDS_SPEC;
 impl crate::RegisterSpec for VERID_FILEDS_SPEC {
     type Ux = u32;

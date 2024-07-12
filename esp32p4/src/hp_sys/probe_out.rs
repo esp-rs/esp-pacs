@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`probe_out::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`probe_out::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROBE_OUT_SPEC;
 impl crate::RegisterSpec for PROBE_OUT_SPEC {
     type Ux = u32;

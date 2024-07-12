@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc0_host_pf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`slc0_host_pf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC0_HOST_PF_SPEC;
 impl crate::RegisterSpec for SLC0_HOST_PF_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Frame code byte length register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`frame_code_length::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Frame code byte length register.\n\nYou can [`read`](crate::Reg::read) this register and get [`frame_code_length::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FRAME_CODE_LENGTH_SPEC;
 impl crate::RegisterSpec for FRAME_CODE_LENGTH_SPEC {
     type Ux = u32;

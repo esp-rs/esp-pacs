@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Hardware feature register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hcon::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Hardware feature register\n\nYou can [`read`](crate::Reg::read) this register and get [`hcon::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HCON_SPEC;
 impl crate::RegisterSpec for HCON_SPEC {
     type Ux = u32;

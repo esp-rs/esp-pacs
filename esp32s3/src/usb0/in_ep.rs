@@ -43,13 +43,13 @@ impl IN_EP {
         &self.diepdmab
     }
 }
-#[doc = "DIEPCTL (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`diepctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`diepctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl`] module"]
+#[doc = "DIEPCTL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`diepctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`diepctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@diepctl`] module"]
 pub type DIEPCTL = crate::Reg<diepctl::DIEPCTL_SPEC>;
 #[doc = ""]
 pub mod diepctl;
 pub use crate::usb0::in_ep0::diepint;
 pub use crate::usb0::in_ep0::DIEPINT;
-#[doc = "DIEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dieptsiz::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dieptsiz::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz`] module"]
+#[doc = "DIEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dieptsiz::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dieptsiz::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dieptsiz`] module"]
 pub type DIEPTSIZ = crate::Reg<dieptsiz::DIEPTSIZ_SPEC>;
 #[doc = ""]
 pub mod dieptsiz;

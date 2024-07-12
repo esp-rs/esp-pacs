@@ -13,20 +13,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("VDD_SPI_STATUS")
-            .field(
-                "stable_vdd_spi_pwr_drv",
-                &format_args!("{}", self.stable_vdd_spi_pwr_drv().bit()),
-            )
+            .field("stable_vdd_spi_pwr_drv", &self.stable_vdd_spi_pwr_drv())
             .finish()
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<VDD_SPI_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vdd_spi_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`vdd_spi_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VDD_SPI_STATUS_SPEC;
 impl crate::RegisterSpec for VDD_SPI_STATUS_SPEC {
     type Ux = u32;

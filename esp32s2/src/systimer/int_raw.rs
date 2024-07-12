@@ -5,7 +5,7 @@ pub type TARGET_R = crate::BitReader;
 impl R {
     #[doc = "Interrupt raw bit of system timer target (0-2)."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TARGET0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
     pub fn target(&self, n: u8) -> TARGET_R {
         #[allow(clippy::no_effect)]
@@ -44,7 +44,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "System timer interrupt raw\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "System timer interrupt raw\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;

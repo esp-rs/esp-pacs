@@ -45,7 +45,7 @@ impl W {
         DMA_FLOW_MULTIBLK_NUM_W::new(self, 4)
     }
 }
-#[doc = "dsi_bridge dma flow controller register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_flow_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_flow_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "dsi_bridge dma flow controller register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_flow_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_flow_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_FLOW_CTRL_SPEC;
 impl crate::RegisterSpec for DMA_FLOW_CTRL_SPEC {
     type Ux = u32;

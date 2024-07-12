@@ -28,7 +28,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pkt_len2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`pkt_len2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PKT_LEN2_SPEC;
 impl crate::RegisterSpec for PKT_LEN2_SPEC {
     type Ux = u32;

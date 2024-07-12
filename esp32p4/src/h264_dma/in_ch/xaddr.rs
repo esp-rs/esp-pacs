@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RX CHx xaddr register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX CHx xaddr register\n\nYou can [`read`](crate::Reg::read) this register and get [`xaddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct XADDR_SPEC;
 impl crate::RegisterSpec for XADDR_SPEC {
     type Ux = u32;

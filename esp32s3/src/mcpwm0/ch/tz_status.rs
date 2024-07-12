@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Status of fault events.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tz_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status of fault events.\n\nYou can [`read`](crate::Reg::read) this register and get [`tz_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TZ_STATUS_SPEC;
 impl crate::RegisterSpec for TZ_STATUS_SPEC {
     type Ux = u32;

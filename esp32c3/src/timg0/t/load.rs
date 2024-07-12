@@ -16,7 +16,7 @@ impl W {
         LOAD_W::new(self, 0)
     }
 }
-#[doc = "TIMG_T0LOAD_REG.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`load::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TIMG_T0LOAD_REG.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`load::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOAD_SPEC;
 impl crate::RegisterSpec for LOAD_SPEC {
     type Ux = u32;

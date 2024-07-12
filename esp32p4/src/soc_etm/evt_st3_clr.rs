@@ -280,7 +280,7 @@ impl W {
         MCPWM1_EVT_OP2_TEE1_ST_CLR_W::new(self, 31)
     }
 }
-#[doc = "Events trigger status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`evt_st3_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Events trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`evt_st3_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EVT_ST3_CLR_SPEC;
 impl crate::RegisterSpec for EVT_ST3_CLR_SPEC {
     type Ux = u32;

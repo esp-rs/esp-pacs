@@ -222,7 +222,7 @@ impl R {
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a negative edge."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_NEG_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_NEG_MODE` field.</div>"]
     #[inline(always)]
     pub fn ch_neg_mode(&self, n: u8) -> CH_NEG_MODE_R {
         #[allow(clippy::no_effect)]
@@ -247,7 +247,7 @@ impl R {
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a positive edge."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_POS_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_POS_MODE` field.</div>"]
     #[inline(always)]
     pub fn ch_pos_mode(&self, n: u8) -> CH_POS_MODE_R {
         #[allow(clippy::no_effect)]
@@ -272,7 +272,7 @@ impl R {
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_HCTRL_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_HCTRL_MODE` field.</div>"]
     #[inline(always)]
     pub fn ch_hctrl_mode(&self, n: u8) -> CH_HCTRL_MODE_R {
         #[allow(clippy::no_effect)]
@@ -297,7 +297,7 @@ impl R {
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_LCTRL_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_LCTRL_MODE` field.</div>"]
     #[inline(always)]
     pub fn ch_lctrl_mode(&self, n: u8) -> CH_LCTRL_MODE_R {
         #[allow(clippy::no_effect)]
@@ -388,7 +388,7 @@ impl W {
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a negative edge."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_NEG_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_NEG_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_neg_mode(&mut self, n: u8) -> CH_NEG_MODE_W<CONF0_SPEC> {
@@ -410,7 +410,7 @@ impl W {
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a positive edge."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_POS_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_POS_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_pos_mode(&mut self, n: u8) -> CH_POS_MODE_W<CONF0_SPEC> {
@@ -432,7 +432,7 @@ impl W {
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_HCTRL_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_HCTRL_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_hctrl_mode(&mut self, n: u8) -> CH_HCTRL_MODE_W<CONF0_SPEC> {
@@ -454,7 +454,7 @@ impl W {
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_LCTRL_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_LCTRL_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_lctrl_mode(&mut self, n: u8) -> CH_LCTRL_MODE_W<CONF0_SPEC> {
@@ -475,7 +475,7 @@ impl W {
         CH_LCTRL_MODE_W::new(self, 30)
     }
 }
-#[doc = "Configuration register 0 for unit\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configuration register 0 for unit\n\nYou can [`read`](crate::Reg::read) this register and get [`conf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF0_SPEC;
 impl crate::RegisterSpec for CONF0_SPEC {
     type Ux = u32;

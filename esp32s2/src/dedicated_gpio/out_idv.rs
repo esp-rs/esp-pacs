@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_IDV_SPEC> {
 impl W {
     #[doc = "Configure channel (0-7) output value. 0: hold output value. 1: set output value. 2: clear output value. 3: inverse output value."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch(&mut self, n: u8) -> CH_W<OUT_IDV_SPEC> {
@@ -68,7 +68,7 @@ impl W {
         CH_W::new(self, 14)
     }
 }
-#[doc = "Dedicated GPIO individual output register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_idv::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dedicated GPIO individual output register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_idv::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_IDV_SPEC;
 impl crate::RegisterSpec for OUT_IDV_SPEC {
     type Ux = u32;

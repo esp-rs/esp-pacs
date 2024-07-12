@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_totlen_ac0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_totlen_ac0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DHT_TOTLEN_AC0_SPEC;
 impl crate::RegisterSpec for DHT_TOTLEN_AC0_SPEC {
     type Ux = u32;

@@ -61,7 +61,7 @@ impl W {
         OUT_RO_RAM_CLK_FO_W::new(self, 6)
     }
 }
-#[doc = "TX CHx reorder power config register. Available on CH0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ro_pd_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ro_pd_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx reorder power config register. Available on CH0\n\nYou can [`read`](crate::Reg::read) this register and get [`ro_pd_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ro_pd_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RO_PD_CONF_SPEC;
 impl crate::RegisterSpec for RO_PD_CONF_SPEC {
     type Ux = u32;

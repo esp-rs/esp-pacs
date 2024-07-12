@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "sharp control register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sharp_ctrl1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "sharp control register 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sharp_ctrl1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SHARP_CTRL1_SPEC;
 impl crate::RegisterSpec for SHARP_CTRL1_SPEC {
     type Ux = u32;

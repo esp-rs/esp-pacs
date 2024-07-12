@@ -29,7 +29,7 @@ impl W {
         ICACHE_LOCK_ADDR_W::new(self, 0)
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`icache_lock_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icache_lock_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`icache_lock_addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`icache_lock_addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICACHE_LOCK_ADDR_SPEC;
 impl crate::RegisterSpec for ICACHE_LOCK_ADDR_SPEC {
     type Ux = u32;

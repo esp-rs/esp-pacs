@@ -35,7 +35,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "core1 dram0 permission monitor configuration register 3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_dram0_pms_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "core1 dram0 permission monitor configuration register 3.\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_dram0_pms_monitor_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_DRAM0_PMS_MONITOR_3_SPEC;
 impl crate::RegisterSpec for CORE_1_DRAM0_PMS_MONITOR_3_SPEC {
     type Ux = u32;

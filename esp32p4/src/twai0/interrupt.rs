@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Interrupt signals' register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`interrupt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt signals' register.\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERRUPT_SPEC;
 impl crate::RegisterSpec for INTERRUPT_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Stores the higher 16 bits of RTC timer 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_high0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Stores the higher 16 bits of RTC timer 0\n\nYou can [`read`](crate::Reg::read) this register and get [`time_high0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_HIGH0_SPEC;
 impl crate::RegisterSpec for TIME_HIGH0_SPEC {
     type Ux = u32;

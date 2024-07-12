@@ -17,7 +17,7 @@ pub type LACT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "interrupt when timer(0-1) alarm"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
     pub fn t(&self, n: u8) -> T_R {
         #[allow(clippy::no_effect)]
@@ -65,7 +65,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "interrupt when timer(0-1) alarm"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn t(&mut self, n: u8) -> T_W<INT_ENA_TIMERS_SPEC> {
@@ -98,7 +98,7 @@ impl W {
         LACT_W::new(self, 3)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena_timers::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena_timers::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena_timers::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena_timers::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_ENA_TIMERS_SPEC {
     type Ux = u32;

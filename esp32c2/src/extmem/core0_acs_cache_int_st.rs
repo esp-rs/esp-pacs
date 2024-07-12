@@ -63,7 +63,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core0_acs_cache_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::Reg::read) this register and get [`core0_acs_cache_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE0_ACS_CACHE_INT_ST_SPEC;
 impl crate::RegisterSpec for CORE0_ACS_CACHE_INT_ST_SPEC {
     type Ux = u32;

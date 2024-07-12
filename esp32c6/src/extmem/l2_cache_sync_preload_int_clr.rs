@@ -28,7 +28,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Sync Preload operation Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_preload_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Sync Preload operation Interrupt clear register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_sync_preload_int_clr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_SYNC_PRELOAD_INT_CLR_SPEC;
 impl crate::RegisterSpec for L2_CACHE_SYNC_PRELOAD_INT_CLR_SPEC {
     type Ux = u32;

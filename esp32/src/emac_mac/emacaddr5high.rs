@@ -77,7 +77,7 @@ impl W {
         ADDRESS_ENABLE5_W::new(self, 31)
     }
 }
-#[doc = "Upper 16 bits of the sixth 6-byte MAC address\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacaddr5high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`emacaddr5high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Upper 16 bits of the sixth 6-byte MAC address\n\nYou can [`read`](crate::Reg::read) this register and get [`emacaddr5high::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`emacaddr5high::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EMACADDR5HIGH_SPEC;
 impl crate::RegisterSpec for EMACADDR5HIGH_SPEC {
     type Ux = u32;

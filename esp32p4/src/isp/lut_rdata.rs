@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "LUT read data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lut_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LUT read data register\n\nYou can [`read`](crate::Reg::read) this register and get [`lut_rdata::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LUT_RDATA_SPEC;
 impl crate::RegisterSpec for LUT_RDATA_SPEC {
     type Ux = u32;

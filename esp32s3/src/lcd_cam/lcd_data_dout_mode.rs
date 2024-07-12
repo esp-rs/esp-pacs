@@ -79,7 +79,7 @@ where
 impl R {
     #[doc = "The output data bit (0-15) is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delayed by the falling edge of LCD_CLK."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field.</div>"]
     #[inline(always)]
     pub fn dout_mode(&self, n: u8) -> DOUT_MODE_R {
         #[allow(clippy::no_effect)]
@@ -199,7 +199,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "The output data bit (0-15) is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delayed by the falling edge of LCD_CLK."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dout_mode(&mut self, n: u8) -> DOUT_MODE_W<LCD_DATA_DOUT_MODE_SPEC> {
@@ -304,7 +304,7 @@ impl W {
         DOUT_MODE_W::new(self, 30)
     }
 }
-#[doc = "LCD data delay configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_data_dout_mode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_data_dout_mode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD data delay configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_data_dout_mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_data_dout_mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_DATA_DOUT_MODE_SPEC;
 impl crate::RegisterSpec for LCD_DATA_DOUT_MODE_SPEC {
     type Ux = u32;

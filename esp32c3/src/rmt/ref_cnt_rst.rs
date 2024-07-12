@@ -40,7 +40,7 @@ impl W {
         CH3_W::new(self, 3)
     }
 }
-#[doc = "RMT_REF_CNT_RST_REG.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ref_cnt_rst::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RMT_REF_CNT_RST_REG.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ref_cnt_rst::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REF_CNT_RST_SPEC;
 impl crate::RegisterSpec for REF_CNT_RST_SPEC {
     type Ux = u32;

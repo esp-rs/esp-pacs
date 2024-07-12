@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Typical SHA configuration register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`continue_::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Typical SHA configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`continue_::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONTINUE_SPEC;
 impl crate::RegisterSpec for CONTINUE_SPEC {
     type Ux = u32;

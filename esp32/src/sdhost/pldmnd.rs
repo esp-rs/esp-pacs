@@ -16,7 +16,7 @@ impl W {
         PD_W::new(self, 0)
     }
 }
-#[doc = "Poll demand configuration register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pldmnd::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Poll demand configuration register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pldmnd::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLDMND_SPEC;
 impl crate::RegisterSpec for PLDMND_SPEC {
     type Ux = u32;

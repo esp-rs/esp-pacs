@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RX Copy DMA status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_rx_i_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX Copy DMA status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_rx_i_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_RX_I_3_SPEC;
 impl crate::RegisterSpec for DMA_RX_I_3_SPEC {
     type Ux = u32;

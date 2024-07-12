@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Core1 bus busy status regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_dram0_exception_monitor_4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core1 bus busy status regsiter\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_dram0_exception_monitor_4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_DRAM0_EXCEPTION_MONITOR_4_SPEC;
 impl crate::RegisterSpec for CORE_1_DRAM0_EXCEPTION_MONITOR_4_SPEC {
     type Ux = u32;

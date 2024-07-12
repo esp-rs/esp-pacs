@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`app_dcache_dbug1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`app_dcache_dbug1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APP_DCACHE_DBUG1_SPEC;
 impl crate::RegisterSpec for APP_DCACHE_DBUG1_SPEC {
     type Ux = u32;

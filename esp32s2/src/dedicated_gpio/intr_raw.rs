@@ -5,7 +5,7 @@ pub type GPIO_R = crate::BitReader;
 impl R {
     #[doc = "This interrupt raw bit turns to high level when dedicated GPIO(0-7) has level/edge change configured by DEDIC_GPIO_INTR_RCGN_REG."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
     pub fn gpio(&self, n: u8) -> GPIO_R {
         #[allow(clippy::no_effect)]
@@ -74,7 +74,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_RAW_SPEC;
 impl crate::RegisterSpec for INTR_RAW_SPEC {
     type Ux = u32;

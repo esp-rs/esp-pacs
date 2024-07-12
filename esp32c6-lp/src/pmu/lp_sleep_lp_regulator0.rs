@@ -46,27 +46,21 @@ impl core::fmt::Debug for R {
         f.debug_struct("LP_SLEEP_LP_REGULATOR0")
             .field(
                 "lp_sleep_lp_regulator_slp_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_xpd().bit()),
+                &self.lp_sleep_lp_regulator_slp_xpd(),
             )
             .field(
                 "lp_sleep_lp_regulator_xpd",
-                &format_args!("{}", self.lp_sleep_lp_regulator_xpd().bit()),
+                &self.lp_sleep_lp_regulator_xpd(),
             )
             .field(
                 "lp_sleep_lp_regulator_slp_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_slp_dbias().bits()),
+                &self.lp_sleep_lp_regulator_slp_dbias(),
             )
             .field(
                 "lp_sleep_lp_regulator_dbias",
-                &format_args!("{}", self.lp_sleep_lp_regulator_dbias().bits()),
+                &self.lp_sleep_lp_regulator_dbias(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_LP_REGULATOR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -103,7 +97,7 @@ impl W {
         LP_SLEEP_LP_REGULATOR_DBIAS_W::new(self, 27)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_sleep_lp_regulator0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_sleep_lp_regulator0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_sleep_lp_regulator0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_sleep_lp_regulator0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LP_SLEEP_LP_REGULATOR0_SPEC;
 impl crate::RegisterSpec for LP_SLEEP_LP_REGULATOR0_SPEC {
     type Ux = u32;

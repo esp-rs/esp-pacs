@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "UHCI data-input status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UHCI data-input status register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_in_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_IN_STATUS_SPEC;
 impl crate::RegisterSpec for DMA_IN_STATUS_SPEC {
     type Ux = u32;

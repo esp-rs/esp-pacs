@@ -216,7 +216,7 @@ impl W {
         PHY_LP_LOOPBACK_EN_W::new(self, 30)
     }
 }
-#[doc = "dsi phy lp_loopback test ctrl\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`phy_lp_loopback_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`phy_lp_loopback_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "dsi phy lp_loopback test ctrl\n\nYou can [`read`](crate::Reg::read) this register and get [`phy_lp_loopback_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`phy_lp_loopback_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PHY_LP_LOOPBACK_CTRL_SPEC;
 impl crate::RegisterSpec for PHY_LP_LOOPBACK_CTRL_SPEC {
     type Ux = u32;

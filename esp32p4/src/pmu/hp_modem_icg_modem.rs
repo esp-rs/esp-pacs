@@ -18,7 +18,7 @@ impl W {
         HP_MODEM_DIG_ICG_MODEM_CODE_W::new(self, 30)
     }
 }
-#[doc = "need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_modem_icg_modem::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_icg_modem::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_MODEM_ICG_MODEM_SPEC;
 impl crate::RegisterSpec for HP_MODEM_ICG_MODEM_SPEC {
     type Ux = u32;

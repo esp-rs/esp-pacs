@@ -29,7 +29,7 @@ impl W {
         OUT_CHECK_OWNER_W::new(self, 12)
     }
 }
-#[doc = "Configure 1 register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configure 1 register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_conf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_conf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_CONF1_SPEC;
 impl crate::RegisterSpec for OUT_CONF1_SPEC {
     type Ux = u32;

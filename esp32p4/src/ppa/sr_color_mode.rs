@@ -109,7 +109,7 @@ impl W {
         RGB2YUV_PROTOCAL_W::new(self, 11)
     }
 }
-#[doc = "Scaling and rotating engine color mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_color_mode::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr_color_mode::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Scaling and rotating engine color mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_color_mode::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sr_color_mode::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_COLOR_MODE_SPEC;
 impl crate::RegisterSpec for SR_COLOR_MODE_SPEC {
     type Ux = u32;

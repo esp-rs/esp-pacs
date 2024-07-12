@@ -116,7 +116,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 data Cache CacheSize mode configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dcache_cachesize_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 data Cache CacheSize mode configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_dcache_cachesize_conf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_DCACHE_CACHESIZE_CONF_SPEC;
 impl crate::RegisterSpec for L1_DCACHE_CACHESIZE_CONF_SPEC {
     type Ux = u32;

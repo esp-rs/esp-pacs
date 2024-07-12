@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Access Fail Interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_acs_fail_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Access Fail Interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_cache_acs_fail_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_ACS_FAIL_INT_ST_SPEC;
 impl crate::RegisterSpec for L1_CACHE_ACS_FAIL_INT_ST_SPEC {
     type Ux = u32;

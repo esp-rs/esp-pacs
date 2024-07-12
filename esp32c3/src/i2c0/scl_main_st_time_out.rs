@@ -29,7 +29,7 @@ impl W {
         SCL_MAIN_ST_TO_I2C_W::new(self, 0)
     }
 }
-#[doc = "I2C_SCL_MAIN_ST_TIME_OUT_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scl_main_st_time_out::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scl_main_st_time_out::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C_SCL_MAIN_ST_TIME_OUT_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_main_st_time_out::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_main_st_time_out::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCL_MAIN_ST_TIME_OUT_SPEC;
 impl crate::RegisterSpec for SCL_MAIN_ST_TIME_OUT_SPEC {
     type Ux = u32;

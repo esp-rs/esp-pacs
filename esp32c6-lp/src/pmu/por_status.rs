@@ -13,17 +13,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POR_STATUS")
-            .field("por_done", &format_args!("{}", self.por_done().bit()))
+            .field("por_done", &self.por_done())
             .finish()
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POR_STATUS_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`por_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`por_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POR_STATUS_SPEC;
 impl crate::RegisterSpec for POR_STATUS_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "N/A\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gmac_ctrl1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "N/A\n\nYou can [`read`](crate::Reg::read) this register and get [`gmac_ctrl1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GMAC_CTRL1_SPEC;
 impl crate::RegisterSpec for GMAC_CTRL1_SPEC {
     type Ux = u32;

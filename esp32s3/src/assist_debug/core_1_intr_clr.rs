@@ -235,7 +235,7 @@ impl W {
         CORE_1_DRAM0_EXCEPTION_MONITOR_CLR_W::new(self, 11)
     }
 }
-#[doc = "Core1 monitor interrupt clr register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_intr_clr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core_1_intr_clr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core1 monitor interrupt clr register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_intr_clr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_1_intr_clr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_INTR_CLR_SPEC;
 impl crate::RegisterSpec for CORE_1_INTR_CLR_SPEC {
     type Ux = u32;

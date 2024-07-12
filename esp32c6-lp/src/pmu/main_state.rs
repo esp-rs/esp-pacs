@@ -27,28 +27,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MAIN_STATE")
-            .field(
-                "main_last_st_state",
-                &format_args!("{}", self.main_last_st_state().bits()),
-            )
-            .field(
-                "main_tar_st_state",
-                &format_args!("{}", self.main_tar_st_state().bits()),
-            )
-            .field(
-                "main_cur_st_state",
-                &format_args!("{}", self.main_cur_st_state().bits()),
-            )
+            .field("main_last_st_state", &self.main_last_st_state())
+            .field("main_tar_st_state", &self.main_tar_st_state())
+            .field("main_cur_st_state", &self.main_cur_st_state())
             .finish()
     }
 }
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<MAIN_STATE_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`main_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`main_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MAIN_STATE_SPEC;
 impl crate::RegisterSpec for MAIN_STATE_SPEC {
     type Ux = u32;

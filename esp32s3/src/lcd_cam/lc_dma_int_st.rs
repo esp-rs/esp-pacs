@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "LCD_CAM GDMA masked interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_dma_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD_CAM GDMA masked interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`lc_dma_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_DMA_INT_ST_SPEC;
 impl crate::RegisterSpec for LC_DMA_INT_ST_SPEC {
     type Ux = u32;

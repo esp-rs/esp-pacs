@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "rx ch2 counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_ch2_counter::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "rx ch2 counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ch2_counter::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_CH2_COUNTER_SPEC;
 impl crate::RegisterSpec for RX_CH2_COUNTER_SPEC {
     type Ux = u32;

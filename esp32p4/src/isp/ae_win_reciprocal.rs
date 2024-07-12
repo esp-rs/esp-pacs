@@ -29,7 +29,7 @@ impl W {
         AE_SUBWIN_RECIP_W::new(self, 0)
     }
 }
-#[doc = "reciprocal of ae sub-window pixel number\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ae_win_reciprocal::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ae_win_reciprocal::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "reciprocal of ae sub-window pixel number\n\nYou can [`read`](crate::Reg::read) this register and get [`ae_win_reciprocal::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ae_win_reciprocal::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AE_WIN_RECIPROCAL_SPEC;
 impl crate::RegisterSpec for AE_WIN_RECIPROCAL_SPEC {
     type Ux = u32;

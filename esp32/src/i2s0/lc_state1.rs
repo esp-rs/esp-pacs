@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lc_state1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`lc_state1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LC_STATE1_SPEC;
 impl crate::RegisterSpec for LC_STATE1_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Set this bit to clear high speed channel(0-3) counter overflow interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn hstimer_ovf(&mut self, n: u8) -> HSTIMER_OVF_W<INT_CLR_SPEC> {
@@ -51,7 +51,7 @@ impl W {
     }
     #[doc = "Set this bit to clear low speed channel(0-3) counter overflow interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn lstimer_ovf(&mut self, n: u8) -> LSTIMER_OVF_W<INT_CLR_SPEC> {
@@ -85,7 +85,7 @@ impl W {
     }
     #[doc = "Set this bit to clear high speed channel (0-7) duty change done interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_hsch(&mut self, n: u8) -> DUTY_CHNG_END_HSCH_W<INT_CLR_SPEC> {
@@ -143,7 +143,7 @@ impl W {
     }
     #[doc = "Set this bit to clear low speed channel (0-7) duty change done interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_lsch(&mut self, n: u8) -> DUTY_CHNG_END_LSCH_W<INT_CLR_SPEC> {
@@ -200,7 +200,7 @@ impl W {
         DUTY_CHNG_END_LSCH_W::new(self, 23)
     }
 }
-#[doc = "\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_CLR_SPEC;
 impl crate::RegisterSpec for INT_CLR_SPEC {
     type Ux = u32;

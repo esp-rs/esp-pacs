@@ -178,7 +178,7 @@ impl W {
         TOUCH_APPROACH_LOOP_DONE_W::new(self, 20)
     }
 }
-#[doc = "oneset rtc interrupt\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena_rtc_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "oneset rtc interrupt\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena_rtc_w1ts::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ENA_RTC_W1TS_SPEC;
 impl crate::RegisterSpec for INT_ENA_RTC_W1TS_SPEC {
     type Ux = u32;

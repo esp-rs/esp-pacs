@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "BLEND CLUT write counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clut_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "BLEND CLUT write counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`clut_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLUT_CNT_SPEC;
 impl crate::RegisterSpec for CLUT_CNT_SPEC {
     type Ux = u32;

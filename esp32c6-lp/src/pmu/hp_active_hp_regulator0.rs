@@ -89,49 +89,34 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_HP_REGULATOR0")
-            .field(
-                "lp_dbias_vol",
-                &format_args!("{}", self.lp_dbias_vol().bits()),
-            )
-            .field(
-                "hp_dbias_vol",
-                &format_args!("{}", self.hp_dbias_vol().bits()),
-            )
-            .field(
-                "dig_regulator0_dbias_sel",
-                &format_args!("{}", self.dig_regulator0_dbias_sel().bit()),
-            )
+            .field("lp_dbias_vol", &self.lp_dbias_vol())
+            .field("hp_dbias_vol", &self.hp_dbias_vol())
+            .field("dig_regulator0_dbias_sel", &self.dig_regulator0_dbias_sel())
             .field(
                 "hp_active_hp_regulator_slp_mem_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_xpd().bit()),
+                &self.hp_active_hp_regulator_slp_mem_xpd(),
             )
             .field(
                 "hp_active_hp_regulator_slp_logic_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_xpd().bit()),
+                &self.hp_active_hp_regulator_slp_logic_xpd(),
             )
             .field(
                 "hp_active_hp_regulator_xpd",
-                &format_args!("{}", self.hp_active_hp_regulator_xpd().bit()),
+                &self.hp_active_hp_regulator_xpd(),
             )
             .field(
                 "hp_active_hp_regulator_slp_mem_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_mem_dbias().bits()),
+                &self.hp_active_hp_regulator_slp_mem_dbias(),
             )
             .field(
                 "hp_active_hp_regulator_slp_logic_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_slp_logic_dbias().bits()),
+                &self.hp_active_hp_regulator_slp_logic_dbias(),
             )
             .field(
                 "hp_active_hp_regulator_dbias",
-                &format_args!("{}", self.hp_active_hp_regulator_dbias().bits()),
+                &self.hp_active_hp_regulator_dbias(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_REGULATOR0_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -198,7 +183,7 @@ impl W {
         HP_ACTIVE_HP_REGULATOR_DBIAS_W::new(self, 27)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_active_hp_regulator0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_active_hp_regulator0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_active_hp_regulator0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_active_hp_regulator0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_ACTIVE_HP_REGULATOR0_SPEC;
 impl crate::RegisterSpec for HP_ACTIVE_HP_REGULATOR0_SPEC {
     type Ux = u32;

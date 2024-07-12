@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Ledc ch%s gamma ram read data register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_gamma_rd_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Ledc ch%s gamma ram read data register.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_gamma_rd_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_GAMMA_RD_DATA_SPEC;
 impl crate::RegisterSpec for CH_GAMMA_RD_DATA_SPEC {
     type Ux = u32;

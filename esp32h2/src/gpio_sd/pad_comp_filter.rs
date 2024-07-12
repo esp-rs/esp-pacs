@@ -29,7 +29,7 @@ impl W {
         ZERO_DET_FILTER_CNT_W::new(self, 0)
     }
 }
-#[doc = "Zero Detect filter Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pad_comp_filter::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pad_comp_filter::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Zero Detect filter Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pad_comp_filter::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pad_comp_filter::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PAD_COMP_FILTER_SPEC;
 impl crate::RegisterSpec for PAD_COMP_FILTER_SPEC {
     type Ux = u32;

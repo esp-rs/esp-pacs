@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "DMA_OUT_STATE_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA_OUT_STATE_CH0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_STATE_SPEC;
 impl crate::RegisterSpec for OUT_STATE_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "This register is used to store ch0 crc result\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_crc_final_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This register is used to store ch0 crc result\n\nYou can [`read`](crate::Reg::read) this register and get [`in_crc_final_result::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_CRC_FINAL_RESULT_SPEC;
 impl crate::RegisterSpec for IN_CRC_FINAL_RESULT_SPEC {
     type Ux = u32;

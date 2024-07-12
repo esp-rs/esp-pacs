@@ -177,7 +177,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Transmit FIFO status of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outfifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transmit FIFO status of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUTFIFO_STATUS_SPEC;
 impl crate::RegisterSpec for OUTFIFO_STATUS_SPEC {
     type Ux = u32;

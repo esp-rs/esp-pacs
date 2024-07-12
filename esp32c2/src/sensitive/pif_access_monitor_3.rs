@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pif_access_monitor_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "register description\n\nYou can [`read`](crate::Reg::read) this register and get [`pif_access_monitor_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PIF_ACCESS_MONITOR_3_SPEC;
 impl crate::RegisterSpec for PIF_ACCESS_MONITOR_3_SPEC {
     type Ux = u32;

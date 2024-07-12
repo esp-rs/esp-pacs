@@ -17,7 +17,7 @@ pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Set this bit to clear unit(0-7)'s counter."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field.</div>"]
     #[inline(always)]
     pub fn cnt_rst_u(&self, n: u8) -> CNT_RST_U_R {
         #[allow(clippy::no_effect)]
@@ -72,7 +72,7 @@ impl R {
     }
     #[doc = "Set this bit to pause unit(0-7)'s counter."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field.</div>"]
     #[inline(always)]
     pub fn cnt_pause_u(&self, n: u8) -> CNT_PAUSE_U_R {
         #[allow(clippy::no_effect)]
@@ -158,7 +158,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Set this bit to clear unit(0-7)'s counter."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cnt_rst_u(&mut self, n: u8) -> CNT_RST_U_W<CTRL_SPEC> {
@@ -216,7 +216,7 @@ impl W {
     }
     #[doc = "Set this bit to pause unit(0-7)'s counter."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cnt_pause_u(&mut self, n: u8) -> CNT_PAUSE_U_W<CTRL_SPEC> {
@@ -279,7 +279,7 @@ impl W {
         CLK_EN_W::new(self, 16)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

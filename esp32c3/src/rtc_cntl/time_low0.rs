@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "rtc configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_low0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`time_low0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_LOW0_SPEC;
 impl crate::RegisterSpec for TIME_LOW0_SPEC {
     type Ux = u32;

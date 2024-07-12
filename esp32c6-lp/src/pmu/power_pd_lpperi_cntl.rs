@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_PD_LPPERI_CNTL")
-            .field(
-                "force_lp_peri_reset",
-                &format_args!("{}", self.force_lp_peri_reset().bit()),
-            )
-            .field(
-                "force_lp_peri_iso",
-                &format_args!("{}", self.force_lp_peri_iso().bit()),
-            )
-            .field(
-                "force_lp_peri_pu",
-                &format_args!("{}", self.force_lp_peri_pu().bit()),
-            )
-            .field(
-                "force_lp_peri_no_reset",
-                &format_args!("{}", self.force_lp_peri_no_reset().bit()),
-            )
-            .field(
-                "force_lp_peri_no_iso",
-                &format_args!("{}", self.force_lp_peri_no_iso().bit()),
-            )
-            .field(
-                "force_lp_peri_pd",
-                &format_args!("{}", self.force_lp_peri_pd().bit()),
-            )
+            .field("force_lp_peri_reset", &self.force_lp_peri_reset())
+            .field("force_lp_peri_iso", &self.force_lp_peri_iso())
+            .field("force_lp_peri_pu", &self.force_lp_peri_pu())
+            .field("force_lp_peri_no_reset", &self.force_lp_peri_no_reset())
+            .field("force_lp_peri_no_iso", &self.force_lp_peri_no_iso())
+            .field("force_lp_peri_pd", &self.force_lp_peri_pd())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_PD_LPPERI_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -135,7 +111,7 @@ impl W {
         FORCE_LP_PERI_PD_W::new(self, 5)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_pd_lpperi_cntl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_pd_lpperi_cntl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_pd_lpperi_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_pd_lpperi_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_PD_LPPERI_CNTL_SPEC;
 impl crate::RegisterSpec for POWER_PD_LPPERI_CNTL_SPEC {
     type Ux = u32;

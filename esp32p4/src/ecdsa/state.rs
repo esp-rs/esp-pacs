@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("STATE").field("busy", &self.busy()).finish()
     }
 }
-#[doc = "ECDSA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ECDSA status register\n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATE_SPEC;
 impl crate::RegisterSpec for STATE_SPEC {
     type Ux = u32;

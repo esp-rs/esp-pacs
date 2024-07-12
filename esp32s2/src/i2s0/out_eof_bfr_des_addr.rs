@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Address of buffer relative to the outlink descriptor that produces EOF\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_bfr_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Address of buffer relative to the outlink descriptor that produces EOF\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_bfr_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_EOF_BFR_DES_ADDR_SPEC;
 impl crate::RegisterSpec for OUT_EOF_BFR_DES_ADDR_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Card detect register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cdetect::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Card detect register\n\nYou can [`read`](crate::Reg::read) this register and get [`cdetect::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CDETECT_SPEC;
 impl crate::RegisterSpec for CDETECT_SPEC {
     type Ux = u32;

@@ -52,7 +52,7 @@ impl W {
         CORE0_DBUS_REJECT_W::new(self, 4)
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`core0_acs_cache_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core0_acs_cache_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE0_ACS_CACHE_INT_CLR_SPEC;
 impl crate::RegisterSpec for CORE0_ACS_CACHE_INT_CLR_SPEC {
     type Ux = u32;

@@ -97,7 +97,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cmd_pkt_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`cmd_pkt_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CMD_PKT_STATUS_SPEC;
 impl crate::RegisterSpec for CMD_PKT_STATUS_SPEC {
     type Ux = u32;

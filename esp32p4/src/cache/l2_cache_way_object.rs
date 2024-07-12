@@ -29,7 +29,7 @@ impl W {
         L2_CACHE_WAY_OBJECT_W::new(self, 0)
     }
 }
-#[doc = "Cache Tag and Data memory way register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_way_object::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l2_cache_way_object::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Tag and Data memory way register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_way_object::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l2_cache_way_object::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_WAY_OBJECT_SPEC;
 impl crate::RegisterSpec for L2_CACHE_WAY_OBJECT_SPEC {
     type Ux = u32;

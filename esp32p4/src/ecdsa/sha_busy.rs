@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ECDSA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sha_busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ECDSA status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sha_busy::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SHA_BUSY_SPEC;
 impl crate::RegisterSpec for SHA_BUSY_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Outlink descriptor address before the last transmit descriptor\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_out_eof_bfr_des_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Outlink descriptor address before the last transmit descriptor\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_out_eof_bfr_des_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_OUT_EOF_BFR_DES_ADDR_SPEC;
 impl crate::RegisterSpec for DMA_OUT_EOF_BFR_DES_ADDR_SPEC {
     type Ux = u32;

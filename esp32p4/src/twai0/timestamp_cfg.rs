@@ -29,7 +29,7 @@ impl W {
         TS_ENABLE_W::new(self, 0)
     }
 }
-#[doc = "Timestamp configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timestamp_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timestamp_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Timestamp configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timestamp_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timestamp_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMESTAMP_CFG_SPEC;
 impl crate::RegisterSpec for TIMESTAMP_CFG_SPEC {
     type Ux = u32;

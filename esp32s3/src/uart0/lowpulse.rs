@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Autobaud minimum low pulse duration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lowpulse::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Autobaud minimum low pulse duration register\n\nYou can [`read`](crate::Reg::read) this register and get [`lowpulse::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOWPULSE_SPEC;
 impl crate::RegisterSpec for LOWPULSE_SPEC {
     type Ux = u32;

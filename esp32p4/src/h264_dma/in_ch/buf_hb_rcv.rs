@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RX CH0 buf len hb rcv register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`buf_hb_rcv::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX CH0 buf len hb rcv register\n\nYou can [`read`](crate::Reg::read) this register and get [`buf_hb_rcv::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUF_HB_RCV_SPEC;
 impl crate::RegisterSpec for BUF_HB_RCV_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "The last inlink descriptor address of Tx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_dscr_bf0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The last inlink descriptor address of Tx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr_bf0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_DSCR_BF0_SPEC;
 impl crate::RegisterSpec for OUT_DSCR_BF0_SPEC {
     type Ux = u32;

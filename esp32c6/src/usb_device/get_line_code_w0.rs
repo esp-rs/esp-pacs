@@ -29,7 +29,7 @@ impl W {
         GET_DW_DTE_RATE_W::new(self, 0)
     }
 }
-#[doc = "W0 of GET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`get_line_code_w0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`get_line_code_w0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "W0 of GET_LINE_CODING command.\n\nYou can [`read`](crate::Reg::read) this register and get [`get_line_code_w0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`get_line_code_w0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GET_LINE_CODE_W0_SPEC;
 impl crate::RegisterSpec for GET_LINE_CODE_W0_SPEC {
     type Ux = u32;

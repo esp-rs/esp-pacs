@@ -176,7 +176,7 @@ impl W {
         APP1_INT_SET_W::new(self, 20)
     }
 }
-#[doc = "SPI interrupt software set register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_int_set::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI interrupt software set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_int_set::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_INT_SET_SPEC;
 impl crate::RegisterSpec for DMA_INT_SET_SPEC {
     type Ux = u32;

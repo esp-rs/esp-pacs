@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Receive Message Counter Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_message_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive Message Counter Register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_message_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_MESSAGE_CNT_SPEC;
 impl crate::RegisterSpec for RX_MESSAGE_CNT_SPEC {
     type Ux = u32;

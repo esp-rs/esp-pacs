@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Parallel IO RX status register0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_st0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Parallel IO RX status register0\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_st0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_ST0_SPEC;
 impl crate::RegisterSpec for RX_ST0_SPEC {
     type Ux = u32;

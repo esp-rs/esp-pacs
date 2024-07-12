@@ -26,21 +26,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LP_SLEEP_LP_DIG_POWER")
-            .field(
-                "lp_sleep_lp_mem_dslp",
-                &format_args!("{}", self.lp_sleep_lp_mem_dslp().bit()),
-            )
+            .field("lp_sleep_lp_mem_dslp", &self.lp_sleep_lp_mem_dslp())
             .field(
                 "lp_sleep_pd_lp_peri_pd_en",
-                &format_args!("{}", self.lp_sleep_pd_lp_peri_pd_en().bit()),
+                &self.lp_sleep_pd_lp_peri_pd_en(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<LP_SLEEP_LP_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -59,7 +50,7 @@ impl W {
         LP_SLEEP_PD_LP_PERI_PD_EN_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lp_sleep_lp_dig_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lp_sleep_lp_dig_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_sleep_lp_dig_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_sleep_lp_dig_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LP_SLEEP_LP_DIG_POWER_SPEC;
 impl crate::RegisterSpec for LP_SLEEP_LP_DIG_POWER_SPEC {
     type Ux = u32;

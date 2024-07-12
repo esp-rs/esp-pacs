@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "IN Endpoint 2 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep2_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "IN Endpoint 2 status\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ep2_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_EP2_ST_SPEC;
 impl crate::RegisterSpec for IN_EP2_ST_SPEC {
     type Ux = u32;

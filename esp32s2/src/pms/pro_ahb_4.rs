@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PeriBus2 status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_ahb_4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PeriBus2 status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`pro_ahb_4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_AHB_4_SPEC;
 impl crate::RegisterSpec for PRO_AHB_4_SPEC {
     type Ux = u32;

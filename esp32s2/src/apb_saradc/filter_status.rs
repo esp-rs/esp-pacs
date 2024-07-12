@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Data status of DIG ADC2 filter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`filter_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Data status of DIG ADC2 filter\n\nYou can [`read`](crate::Reg::read) this register and get [`filter_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FILTER_STATUS_SPEC;
 impl crate::RegisterSpec for FILTER_STATUS_SPEC {
     type Ux = u32;

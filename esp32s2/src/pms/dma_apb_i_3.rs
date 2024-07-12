@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Internal DMA status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apb_i_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Internal DMA status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apb_i_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_APB_I_3_SPEC;
 impl crate::RegisterSpec for DMA_APB_I_3_SPEC {
     type Ux = u32;

@@ -73,7 +73,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI input delay number configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`din_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI input delay number configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`din_num::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIN_NUM_SPEC;
 impl crate::RegisterSpec for DIN_NUM_SPEC {
     type Ux = u32;

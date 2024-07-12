@@ -61,7 +61,7 @@ impl W {
         COLORKEY_FG_R_HIGH_W::new(self, 16)
     }
 }
-#[doc = "foreground color key higher threshold\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ck_fg_high::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ck_fg_high::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "foreground color key higher threshold\n\nYou can [`read`](crate::Reg::read) this register and get [`ck_fg_high::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ck_fg_high::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CK_FG_HIGH_SPEC;
 impl crate::RegisterSpec for CK_FG_HIGH_SPEC {
     type Ux = u32;

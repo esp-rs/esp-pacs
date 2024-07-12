@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ibi_data_buf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`ibi_data_buf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IBI_DATA_BUF_SPEC;
 impl crate::RegisterSpec for IBI_DATA_BUF_SPEC {
     type Ux = u32;

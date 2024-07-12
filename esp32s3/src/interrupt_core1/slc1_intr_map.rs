@@ -29,7 +29,7 @@ impl W {
         SLC1_INTR_MAP_W::new(self, 0)
     }
 }
-#[doc = "slc1 interrupt configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc1_intr_map::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`slc1_intr_map::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "slc1 interrupt configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`slc1_intr_map::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`slc1_intr_map::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC1_INTR_MAP_SPEC;
 impl crate::RegisterSpec for SLC1_INTR_MAP_SPEC {
     type Ux = u32;

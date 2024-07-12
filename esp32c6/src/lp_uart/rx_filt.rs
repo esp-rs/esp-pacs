@@ -45,7 +45,7 @@ impl W {
         GLITCH_FILT_EN_W::new(self, 8)
     }
 }
-#[doc = "Rx Filter configuration\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_filt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rx_filt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Rx Filter configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_filt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_filt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_FILT_SPEC;
 impl crate::RegisterSpec for RX_FILT_SPEC {
     type Ux = u32;

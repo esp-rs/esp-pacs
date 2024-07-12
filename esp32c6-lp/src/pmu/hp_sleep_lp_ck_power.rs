@@ -44,29 +44,11 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_LP_CK_POWER")
-            .field(
-                "hp_sleep_xpd_xtal32k",
-                &format_args!("{}", self.hp_sleep_xpd_xtal32k().bit()),
-            )
-            .field(
-                "hp_sleep_xpd_rc32k",
-                &format_args!("{}", self.hp_sleep_xpd_rc32k().bit()),
-            )
-            .field(
-                "hp_sleep_xpd_fosc_clk",
-                &format_args!("{}", self.hp_sleep_xpd_fosc_clk().bit()),
-            )
-            .field(
-                "hp_sleep_pd_osc_clk",
-                &format_args!("{}", self.hp_sleep_pd_osc_clk().bit()),
-            )
+            .field("hp_sleep_xpd_xtal32k", &self.hp_sleep_xpd_xtal32k())
+            .field("hp_sleep_xpd_rc32k", &self.hp_sleep_xpd_rc32k())
+            .field("hp_sleep_xpd_fosc_clk", &self.hp_sleep_xpd_fosc_clk())
+            .field("hp_sleep_pd_osc_clk", &self.hp_sleep_pd_osc_clk())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_LP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -95,7 +77,7 @@ impl W {
         HP_SLEEP_PD_OSC_CLK_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_sleep_lp_ck_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_sleep_lp_ck_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_sleep_lp_ck_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_sleep_lp_ck_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_SLEEP_LP_CK_POWER_SPEC;
 impl crate::RegisterSpec for HP_SLEEP_LP_CK_POWER_SPEC {
     type Ux = u32;

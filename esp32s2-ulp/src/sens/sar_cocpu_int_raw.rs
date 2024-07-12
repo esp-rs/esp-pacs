@@ -87,7 +87,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Interrupt raw bit of ULP-RISCV\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt raw bit of ULP-RISCV\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_cocpu_int_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_INT_RAW_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_INT_RAW_SPEC {
     type Ux = u32;
