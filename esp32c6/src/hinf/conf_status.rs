@@ -73,7 +73,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "func0 config0 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "func0 config0 status\n\nYou can [`read`](crate::Reg::read) this register and get [`conf_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONF_STATUS_SPEC;
 impl crate::RegisterSpec for CONF_STATUS_SPEC {
     type Ux = u32;

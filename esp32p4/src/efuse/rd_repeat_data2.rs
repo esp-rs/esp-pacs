@@ -127,7 +127,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "BLOCK0 data register 3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_data2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "BLOCK0 data register 3.\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_data2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_DATA2_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_DATA2_SPEC {
     type Ux = u32;

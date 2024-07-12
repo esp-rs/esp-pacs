@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "DMA_IN_DSCR_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_dscr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA_IN_DSCR_CH0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dscr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_DSCR_SPEC;
 impl crate::RegisterSpec for IN_DSCR_SPEC {
     type Ux = u32;

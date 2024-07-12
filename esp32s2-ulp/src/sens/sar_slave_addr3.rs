@@ -45,7 +45,7 @@ impl W {
         I2C_SLAVE_ADDR4_W::new(self, 11)
     }
 }
-#[doc = "Configure slave addresses 4-5 of RTC I2C\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_slave_addr3::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_slave_addr3::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configure slave addresses 4-5 of RTC I2C\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_slave_addr3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_slave_addr3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_SLAVE_ADDR3_SPEC;
 impl crate::RegisterSpec for SAR_SLAVE_ADDR3_SPEC {
     type Ux = u32;

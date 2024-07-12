@@ -18,7 +18,7 @@ impl W {
         CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W::new(self, 0)
     }
 }
-#[doc = "JTAG configuration register 2\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`jtag_ctrl_2::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "JTAG configuration register 2\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`jtag_ctrl_2::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct JTAG_CTRL_2_SPEC;
 impl crate::RegisterSpec for JTAG_CTRL_2_SPEC {
     type Ux = u32;

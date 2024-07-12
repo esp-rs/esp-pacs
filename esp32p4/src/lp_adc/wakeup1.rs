@@ -88,7 +88,7 @@ impl W {
         SAR1_WAKEUP_MODE_W::new(self, 31)
     }
 }
-#[doc = "ADC1 wakeup configuration registers.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wakeup1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wakeup1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ADC1 wakeup configuration registers.\n\nYou can [`read`](crate::Reg::read) this register and get [`wakeup1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wakeup1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WAKEUP1_SPEC;
 impl crate::RegisterSpec for WAKEUP1_SPEC {
     type Ux = u32;

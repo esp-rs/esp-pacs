@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Indicates if SHA Accelerator is busy or not\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Indicates if SHA Accelerator is busy or not\n\nYou can [`read`](crate::Reg::read) this register and get [`busy::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUSY_SPEC;
 impl crate::RegisterSpec for BUSY_SPEC {
     type Ux = u32;

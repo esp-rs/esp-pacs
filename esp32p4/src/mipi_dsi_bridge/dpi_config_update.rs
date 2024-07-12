@@ -16,7 +16,7 @@ impl W {
         DPI_CONFIG_UPDATE_W::new(self, 0)
     }
 }
-#[doc = "dsi_bridge dpi config update register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dpi_config_update::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "dsi_bridge dpi config update register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dpi_config_update::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DPI_CONFIG_UPDATE_SPEC;
 impl crate::RegisterSpec for DPI_CONFIG_UPDATE_SPEC {
     type Ux = u32;

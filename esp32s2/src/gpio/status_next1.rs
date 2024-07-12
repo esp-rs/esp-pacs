@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO32 ~ 53 interrupt source register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_next1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO32 ~ 53 interrupt source register\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_NEXT1_SPEC;
 impl crate::RegisterSpec for STATUS_NEXT1_SPEC {
     type Ux = u32;

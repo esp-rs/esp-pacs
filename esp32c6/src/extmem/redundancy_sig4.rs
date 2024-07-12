@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache redundancy signal 0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`redundancy_sig4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache redundancy signal 0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`redundancy_sig4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REDUNDANCY_SIG4_SPEC;
 impl crate::RegisterSpec for REDUNDANCY_SIG4_SPEC {
     type Ux = u32;

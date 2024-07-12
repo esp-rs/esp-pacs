@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 instruction Cache 2 autoload section 0 size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache2_autoload_sct0_size::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 instruction Cache 2 autoload section 0 size configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache2_autoload_sct0_size::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_ICACHE2_AUTOLOAD_SCT0_SIZE_SPEC;
 impl crate::RegisterSpec for L1_ICACHE2_AUTOLOAD_SCT0_SIZE_SPEC {
     type Ux = u32;

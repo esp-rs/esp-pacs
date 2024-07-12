@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD1_SET_SPEC> {
 impl W {
     #[doc = "Configures whether or not to enable ch(32-49).\\\\0: Invalid, No effect\\\\1: Enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH_SET32` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_SET32` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_set(&mut self, n: u8) -> CH_SET_W<CH_ENA_AD1_SET_SPEC> {
@@ -128,7 +128,7 @@ impl W {
         CH_SET_W::new(self, 17)
     }
 }
-#[doc = "Channel enable set register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_ena_ad1_set::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel enable set register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad1_set::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_ENA_AD1_SET_SPEC;
 impl crate::RegisterSpec for CH_ENA_AD1_SET_SPEC {
     type Ux = u32;

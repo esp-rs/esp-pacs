@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Manual Encryption physical address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`xts_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Manual Encryption physical address register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct XTS_STATE_SPEC;
 impl crate::RegisterSpec for XTS_STATE_SPEC {
     type Ux = u32;

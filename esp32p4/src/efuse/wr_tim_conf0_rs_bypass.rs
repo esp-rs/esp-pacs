@@ -69,7 +69,7 @@ impl W {
         TPGM_INACTIVE_W::new(self, 13)
     }
 }
-#[doc = "Configurarion register0 of eFuse programming time parameters and rs bypass operation.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wr_tim_conf0_rs_bypass::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`wr_tim_conf0_rs_bypass::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configurarion register0 of eFuse programming time parameters and rs bypass operation.\n\nYou can [`read`](crate::Reg::read) this register and get [`wr_tim_conf0_rs_bypass::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wr_tim_conf0_rs_bypass::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WR_TIM_CONF0_RS_BYPASS_SPEC;
 impl crate::RegisterSpec for WR_TIM_CONF0_RS_BYPASS_SPEC {
     type Ux = u32;

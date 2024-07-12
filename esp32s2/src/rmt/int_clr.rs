@@ -19,7 +19,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Set this bit to clear the CH(0-3)_TX_END_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_CLR_SPEC> {
@@ -53,7 +53,7 @@ impl W {
     }
     #[doc = "Set this bit to clear the CH(0-3)_RX_END_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_CLR_SPEC> {
@@ -87,7 +87,7 @@ impl W {
     }
     #[doc = "Set this bit to clear the CH(0-3)_ERR_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<INT_CLR_SPEC> {
@@ -121,7 +121,7 @@ impl W {
     }
     #[doc = "Set this bit to clear the CH(0-3)_TX_THR_EVENT_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
@@ -155,7 +155,7 @@ impl W {
     }
     #[doc = "Set this bit to clear the CH(0-3)_TX_LOOP_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
@@ -188,7 +188,7 @@ impl W {
         CH_TX_LOOP_W::new(self, 19)
     }
 }
-#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_CLR_SPEC;
 impl crate::RegisterSpec for INT_CLR_SPEC {
     type Ux = u32;

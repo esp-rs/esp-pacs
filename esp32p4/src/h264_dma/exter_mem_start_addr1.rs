@@ -34,7 +34,7 @@ impl W {
         ACCESS_EXTER_MEM_START_ADDR1_W::new(self, 0)
     }
 }
-#[doc = "Start address of exter memory range1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exter_mem_start_addr1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`exter_mem_start_addr1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Start address of exter memory range1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`exter_mem_start_addr1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`exter_mem_start_addr1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXTER_MEM_START_ADDR1_SPEC;
 impl crate::RegisterSpec for EXTER_MEM_START_ADDR1_SPEC {
     type Ux = u32;

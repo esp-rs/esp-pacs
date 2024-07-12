@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Core_1 NMI mask phase register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_nmi_mask_phase::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Core_1 NMI mask phase register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_nmi_mask_phase::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_NMI_MASK_PHASE_SPEC;
 impl crate::RegisterSpec for CORE_1_NMI_MASK_PHASE_SPEC {
     type Ux = u32;

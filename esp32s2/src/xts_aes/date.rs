@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DATE").field("date", &self.date()).finish()
     }
 }
-#[doc = "Version control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
     type Ux = u32;

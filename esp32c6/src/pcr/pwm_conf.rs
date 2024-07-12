@@ -45,7 +45,7 @@ impl W {
         PWM_RST_EN_W::new(self, 1)
     }
 }
-#[doc = "PWM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pwm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pwm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PWM configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pwm_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pwm_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PWM_CONF_SPEC;
 impl crate::RegisterSpec for PWM_CONF_SPEC {
     type Ux = u32;

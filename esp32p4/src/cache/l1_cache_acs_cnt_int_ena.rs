@@ -117,7 +117,7 @@ impl W {
         L1_DBUS1_OVF_INT_ENA_W::new(self, 5)
     }
 }
-#[doc = "Cache Access Counter Interrupt enable register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_cache_acs_cnt_int_ena::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`l1_cache_acs_cnt_int_ena::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Access Counter Interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_cache_acs_cnt_int_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`l1_cache_acs_cnt_int_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_CACHE_ACS_CNT_INT_ENA_SPEC;
 impl crate::RegisterSpec for L1_CACHE_ACS_CNT_INT_ENA_SPEC {
     type Ux = u32;

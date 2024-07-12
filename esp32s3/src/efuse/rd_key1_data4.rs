@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Register 4 of BLOCK5 (KEY1).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_key1_data4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Register 4 of BLOCK5 (KEY1).\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_key1_data4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_KEY1_DATA4_SPEC;
 impl crate::RegisterSpec for RD_KEY1_DATA4_SPEC {
     type Ux = u32;

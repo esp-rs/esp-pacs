@@ -29,7 +29,7 @@ impl W {
         TX_BCK_CNT_RST_W::new(self, 31)
     }
 }
-#[doc = "I2S sync counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bck_cnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bck_cnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S sync counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`bck_cnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bck_cnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BCK_CNT_SPEC;
 impl crate::RegisterSpec for BCK_CNT_SPEC {
     type Ux = u32;

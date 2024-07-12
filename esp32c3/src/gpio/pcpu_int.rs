@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO PRO_CPU interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pcpu_int::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO PRO_CPU interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`pcpu_int::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PCPU_INT_SPEC;
 impl crate::RegisterSpec for PCPU_INT_SPEC {
     type Ux = u32;

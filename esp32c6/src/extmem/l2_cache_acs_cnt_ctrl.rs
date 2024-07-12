@@ -137,7 +137,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Access Counter enable and clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_cnt_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Access Counter enable and clear register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_cnt_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_ACS_CNT_CTRL_SPEC;
 impl crate::RegisterSpec for L2_CACHE_ACS_CNT_CTRL_SPEC {
     type Ux = u32;

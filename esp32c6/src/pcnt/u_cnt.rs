@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("U_CNT").field("cnt", &self.cnt()).finish()
     }
 }
-#[doc = "Counter value for unit %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`u_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Counter value for unit %s\n\nYou can [`read`](crate::Reg::read) this register and get [`u_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct U_CNT_SPEC;
 impl crate::RegisterSpec for U_CNT_SPEC {
     type Ux = u32;

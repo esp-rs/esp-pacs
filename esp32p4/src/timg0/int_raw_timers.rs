@@ -7,7 +7,7 @@ pub type WDT_R = crate::BitReader;
 impl R {
     #[doc = "The raw interrupt status bit for the TIMG_T(0-1)_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
     pub fn t(&self, n: u8) -> T_R {
         #[allow(clippy::no_effect)]
@@ -46,7 +46,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw_timers::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_RAW_TIMERS_SPEC {
     type Ux = u32;

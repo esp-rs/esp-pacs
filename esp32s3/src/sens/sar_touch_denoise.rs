@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "configure touch controller\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_denoise::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configure touch controller\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_denoise::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_TOUCH_DENOISE_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_DENOISE_SPEC {
     type Ux = u32;

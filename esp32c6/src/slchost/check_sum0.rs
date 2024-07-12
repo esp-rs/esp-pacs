@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`check_sum0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`check_sum0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHECK_SUM0_SPEC;
 impl crate::RegisterSpec for CHECK_SUM0_SPEC {
     type Ux = u32;

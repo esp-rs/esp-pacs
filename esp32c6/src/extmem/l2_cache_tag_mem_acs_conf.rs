@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache tag memory access configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_tag_mem_acs_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache tag memory access configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_tag_mem_acs_conf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_TAG_MEM_ACS_CONF_SPEC;
 impl crate::RegisterSpec for L2_CACHE_TAG_MEM_ACS_CONF_SPEC {
     type Ux = u32;

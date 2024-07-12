@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Card write protection (WP) status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wrtprt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Card write protection (WP) status register\n\nYou can [`read`](crate::Reg::read) this register and get [`wrtprt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WRTPRT_SPEC;
 impl crate::RegisterSpec for WRTPRT_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "current link addr\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`regdma_current_link_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "current link addr\n\nYou can [`read`](crate::Reg::read) this register and get [`regdma_current_link_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REGDMA_CURRENT_LINK_ADDR_SPEC;
 impl crate::RegisterSpec for REGDMA_CURRENT_LINK_ADDR_SPEC {
     type Ux = u32;

@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Last capture trigger edge information register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Last capture trigger edge information register\n\nYou can [`read`](crate::Reg::read) this register and get [`cap_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_STATUS_SPEC;
 impl crate::RegisterSpec for CAP_STATUS_SPEC {
     type Ux = u32;

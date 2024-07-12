@@ -69,7 +69,7 @@ impl W {
         RTC_MEM_CRC_LEN_W::new(self, 20)
     }
 }
-#[doc = "fast memory config register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_fastmem_config::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_fastmem_config::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "fast memory config register\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_fastmem_config::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_fastmem_config::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_FASTMEM_CONFIG_SPEC;
 impl crate::RegisterSpec for RTC_FASTMEM_CONFIG_SPEC {
     type Ux = u32;

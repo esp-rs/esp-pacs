@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_HP_PAD")
-            .field(
-                "force_hp_pad_no_iso_all",
-                &format_args!("{}", self.force_hp_pad_no_iso_all().bit()),
-            )
-            .field(
-                "force_hp_pad_iso_all",
-                &format_args!("{}", self.force_hp_pad_iso_all().bit()),
-            )
+            .field("force_hp_pad_no_iso_all", &self.force_hp_pad_no_iso_all())
+            .field("force_hp_pad_iso_all", &self.force_hp_pad_iso_all())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_HP_PAD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -57,7 +45,7 @@ impl W {
         FORCE_HP_PAD_ISO_ALL_W::new(self, 1)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_hp_pad::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_hp_pad::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_hp_pad::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_hp_pad::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_HP_PAD_SPEC;
 impl crate::RegisterSpec for POWER_HP_PAD_SPEC {
     type Ux = u32;

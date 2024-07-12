@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("EXT2").field("st", &self.st()).finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ext2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`ext2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXT2_SPEC;
 impl crate::RegisterSpec for EXT2_SPEC {
     type Ux = u32;

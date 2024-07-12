@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "stack monitor pc status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_sp_pc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "stack monitor pc status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_sp_pc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_SP_PC_SPEC;
 impl crate::RegisterSpec for CORE_0_SP_PC_SPEC {
     type Ux = u32;

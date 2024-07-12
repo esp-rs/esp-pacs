@@ -24,7 +24,7 @@ impl W {
         OUT_MSK_W::new(self, 8)
     }
 }
-#[doc = "Dedicated GPIO mask output register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_msk::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dedicated GPIO mask output register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_msk::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_MSK_SPEC;
 impl crate::RegisterSpec for OUT_MSK_SPEC {
     type Ux = u32;

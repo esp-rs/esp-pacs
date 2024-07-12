@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Register %s of BLOCK3 (user).\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_usr_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Register %s of BLOCK3 (user).\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_usr_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_USR_DATA_SPEC;
 impl crate::RegisterSpec for RD_USR_DATA_SPEC {
     type Ux = u32;

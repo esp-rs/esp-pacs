@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Backup addr\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`regdma_backup_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Backup addr\n\nYou can [`read`](crate::Reg::read) this register and get [`regdma_backup_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REGDMA_BACKUP_ADDR_SPEC;
 impl crate::RegisterSpec for REGDMA_BACKUP_ADDR_SPEC {
     type Ux = u32;

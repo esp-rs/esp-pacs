@@ -90,7 +90,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MSPI external RAM ECC and SPI CS timing control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ac::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MSPI external RAM ECC and SPI CS timing control register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_ac::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_AC_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_AC_SPEC {
     type Ux = u32;

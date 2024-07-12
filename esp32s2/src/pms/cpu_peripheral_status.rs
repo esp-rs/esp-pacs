@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PeribBus1 peripheral access status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_peripheral_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PeribBus1 peripheral access status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_peripheral_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPU_PERIPHERAL_STATUS_SPEC;
 impl crate::RegisterSpec for CPU_PERIPHERAL_STATUS_SPEC {
     type Ux = u32;

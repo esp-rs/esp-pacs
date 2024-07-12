@@ -93,7 +93,7 @@ impl W {
         CLK_SEL_W::new(self, 24)
     }
 }
-#[doc = "RMII clock half and whole divider settings\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ex_oscclk_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ex_oscclk_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RMII clock half and whole divider settings\n\nYou can [`read`](crate::Reg::read) this register and get [`ex_oscclk_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ex_oscclk_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EX_OSCCLK_CONF_SPEC;
 impl crate::RegisterSpec for EX_OSCCLK_CONF_SPEC {
     type Ux = u32;

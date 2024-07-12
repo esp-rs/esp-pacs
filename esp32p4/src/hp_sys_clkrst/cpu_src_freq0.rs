@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "CPU Source Frequency\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_src_freq0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CPU Source Frequency\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_src_freq0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPU_SRC_FREQ0_SPEC;
 impl crate::RegisterSpec for CPU_SRC_FREQ0_SPEC {
     type Ux = u32;

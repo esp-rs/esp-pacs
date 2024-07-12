@@ -9,7 +9,7 @@ pub type SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Select GPIO out value configured by registers or CPU instructions for channel (0-7). 0: Configured by registers. 1: configured by CPU instructions."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SEL0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
     pub fn sel(&self, n: u8) -> SEL_R {
         #[allow(clippy::no_effect)]
@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Select GPIO out value configured by registers or CPU instructions for channel (0-7). 0: Configured by registers. 1: configured by CPU instructions."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `SEL0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn sel(&mut self, n: u8) -> SEL_W<OUT_CPU_SPEC> {
@@ -138,7 +138,7 @@ impl W {
         SEL_W::new(self, 7)
     }
 }
-#[doc = "Dedicated GPIO output mode selection register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_cpu::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_cpu::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dedicated GPIO output mode selection register\n\nYou can [`read`](crate::Reg::read) this register and get [`out_cpu::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_cpu::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_CPU_SPEC;
 impl crate::RegisterSpec for OUT_CPU_SPEC {
     type Ux = u32;

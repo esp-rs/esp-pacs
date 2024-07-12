@@ -125,7 +125,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "the interrupt state of ulp\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_cocpu_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "the interrupt state of ulp\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_cocpu_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_INT_ST_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_INT_ST_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "BLOCK1 data register 4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_mac_spi_sys_4::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "BLOCK1 data register 4.\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_mac_spi_sys_4::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_MAC_SPI_SYS_4_SPEC;
 impl crate::RegisterSpec for RD_MAC_SPI_SYS_4_SPEC {
     type Ux = u32;

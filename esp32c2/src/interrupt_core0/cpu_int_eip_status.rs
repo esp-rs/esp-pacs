@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cpu_int_eip_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_int_eip_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPU_INT_EIP_STATUS_SPEC;
 impl crate::RegisterSpec for CPU_INT_EIP_STATUS_SPEC {
     type Ux = u32;

@@ -61,7 +61,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intstatus_enable1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`intstatus_enable1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTSTATUS_ENABLE1_SPEC;
 impl crate::RegisterSpec for INTSTATUS_ENABLE1_SPEC {
     type Ux = u32;

@@ -29,7 +29,7 @@ impl W {
         ULP_CP_TIMER_SLP_CYCLE_W::new(self, 8)
     }
 }
-#[doc = "configure ulp sleep time\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_ulp_cp_timer_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_ulp_cp_timer_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configure ulp sleep time\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_ulp_cp_timer_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_ulp_cp_timer_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_ULP_CP_TIMER_1_SPEC;
 impl crate::RegisterSpec for RTC_ULP_CP_TIMER_1_SPEC {
     type Ux = u32;

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Set this bit to clear the PCNT_CNT_THR_EVENT_U(0-3)_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
@@ -44,7 +44,7 @@ impl W {
         CNT_THR_EVENT_U_W::new(self, 3)
     }
 }
-#[doc = "Interrupt clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_CLR_SPEC;
 impl crate::RegisterSpec for INT_CLR_SPEC {
     type Ux = u32;

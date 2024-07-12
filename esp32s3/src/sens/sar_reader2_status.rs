@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "get saradc1 reader controller status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_reader2_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "get saradc1 reader controller status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_reader2_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_READER2_STATUS_SPEC;
 impl crate::RegisterSpec for SAR_READER2_STATUS_SPEC {
     type Ux = u32;

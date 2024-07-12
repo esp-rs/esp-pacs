@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SDIO raw ints register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`raw_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SDIO raw ints register.\n\nYou can [`read`](crate::Reg::read) this register and get [`raw_ints::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RAW_INTS_SPEC;
 impl crate::RegisterSpec for RAW_INTS_SPEC {
     type Ux = u32;

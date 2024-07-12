@@ -29,7 +29,7 @@ impl W {
         PGM_DATA_7_W::new(self, 0)
     }
 }
-#[doc = "Register 7 that stores data to be programmed.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pgm_data7::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pgm_data7::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Register 7 that stores data to be programmed.\n\nYou can [`read`](crate::Reg::read) this register and get [`pgm_data7::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pgm_data7::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PGM_DATA7_SPEC;
 impl crate::RegisterSpec for PGM_DATA7_SPEC {
     type Ux = u32;

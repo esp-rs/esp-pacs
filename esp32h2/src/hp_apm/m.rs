@@ -29,19 +29,19 @@ impl M {
         &self.exception_info1
     }
 }
-#[doc = "STATUS (r) register accessor: M0 status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
+#[doc = "STATUS (r) register accessor: M0 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "M0 status register"]
 pub mod status;
-#[doc = "STATUS_CLR (w) register accessor: M0 status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_clr`] module"]
+#[doc = "STATUS_CLR (w) register accessor: M0 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_clr`] module"]
 pub type STATUS_CLR = crate::Reg<status_clr::STATUS_CLR_SPEC>;
 #[doc = "M0 status clear register"]
 pub mod status_clr;
-#[doc = "EXCEPTION_INFO0 (r) register accessor: M0 exception_info0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exception_info0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@exception_info0`] module"]
+#[doc = "EXCEPTION_INFO0 (r) register accessor: M0 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@exception_info0`] module"]
 pub type EXCEPTION_INFO0 = crate::Reg<exception_info0::EXCEPTION_INFO0_SPEC>;
 #[doc = "M0 exception_info0 register"]
 pub mod exception_info0;
-#[doc = "EXCEPTION_INFO1 (r) register accessor: M0 exception_info1 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`exception_info1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@exception_info1`] module"]
+#[doc = "EXCEPTION_INFO1 (r) register accessor: M0 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@exception_info1`] module"]
 pub type EXCEPTION_INFO1 = crate::Reg<exception_info1::EXCEPTION_INFO1_SPEC>;
 #[doc = "M0 exception_info1 register"]
 pub mod exception_info1;

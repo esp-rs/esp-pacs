@@ -105,7 +105,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Status debugging bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emacdebug::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status debugging bits\n\nYou can [`read`](crate::Reg::read) this register and get [`emacdebug::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EMACDEBUG_SPEC;
 impl crate::RegisterSpec for EMACDEBUG_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "PeriBus1 status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dport_7::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PeriBus1 status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`pro_dport_7::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_DPORT_7_SPEC;
 impl crate::RegisterSpec for PRO_DPORT_7_SPEC {
     type Ux = u32;

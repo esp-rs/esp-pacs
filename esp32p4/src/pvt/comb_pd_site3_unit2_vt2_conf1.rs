@@ -87,7 +87,7 @@ impl W {
         DELAY_LIMIT_VT2_PD_SITE3_UNIT2_W::new(self, 2)
     }
 }
-#[doc = "needs desc\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`comb_pd_site3_unit2_vt2_conf1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`comb_pd_site3_unit2_vt2_conf1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "needs desc\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pd_site3_unit2_vt2_conf1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comb_pd_site3_unit2_vt2_conf1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COMB_PD_SITE3_UNIT2_VT2_CONF1_SPEC;
 impl crate::RegisterSpec for COMB_PD_SITE3_UNIT2_VT2_CONF1_SPEC {
     type Ux = u32;

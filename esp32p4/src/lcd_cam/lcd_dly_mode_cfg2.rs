@@ -11,7 +11,7 @@ pub use super::lcd_dly_mode_cfg1::DOUT_MODE_W;
 impl R {
     #[doc = "The output data bit (0-15) is delayed by module clock LCD_CLK"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field.</div>"]
     #[inline(always)]
     pub fn dout_mode(&self, n: u8) -> DOUT_MODE_R {
         #[allow(clippy::no_effect)]
@@ -131,7 +131,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "The output data bit (0-15) is delayed by module clock LCD_CLK"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn dout_mode(&mut self, n: u8) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
@@ -236,7 +236,7 @@ impl W {
         DOUT_MODE_W::new(self, 30)
     }
 }
-#[doc = "LCD config register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_dly_mode_cfg2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_dly_mode_cfg2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD config register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_dly_mode_cfg2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_dly_mode_cfg2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_DLY_MODE_CFG2_SPEC;
 impl crate::RegisterSpec for LCD_DLY_MODE_CFG2_SPEC {
     type Ux = u32;

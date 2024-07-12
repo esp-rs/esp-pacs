@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Masked interrupt status of external RAM permission\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`extmem_reject_int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Masked interrupt status of external RAM permission\n\nYou can [`read`](crate::Reg::read) this register and get [`extmem_reject_int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXTMEM_REJECT_INT_ST_SPEC;
 impl crate::RegisterSpec for EXTMEM_REJECT_INT_ST_SPEC {
     type Ux = u32;

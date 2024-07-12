@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("LACTHI").field("hi", &self.hi()).finish()
     }
 }
-#[doc = "LACT high register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lacthi::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LACT high register\n\nYou can [`read`](crate::Reg::read) this register and get [`lacthi::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LACTHI_SPEC;
 impl crate::RegisterSpec for LACTHI_SPEC {
     type Ux = u32;

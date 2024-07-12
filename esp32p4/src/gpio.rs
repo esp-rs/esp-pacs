@@ -1865,191 +1865,191 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "BT_SELECT (rw) register accessor: GPIO bit select register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bt_select::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bt_select::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bt_select`] module"]
+#[doc = "BT_SELECT (rw) register accessor: GPIO bit select register\n\nYou can [`read`](crate::Reg::read) this register and get [`bt_select::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bt_select::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bt_select`] module"]
 pub type BT_SELECT = crate::Reg<bt_select::BT_SELECT_SPEC>;
 #[doc = "GPIO bit select register"]
 pub mod bt_select;
-#[doc = "OUT (rw) register accessor: GPIO output register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out`] module"]
+#[doc = "OUT (rw) register accessor: GPIO output register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`out::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out`] module"]
 pub type OUT = crate::Reg<out::OUT_SPEC>;
 #[doc = "GPIO output register for GPIO0-31"]
 pub mod out;
-#[doc = "OUT_W1TS (w) register accessor: GPIO output set register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1ts`] module"]
+#[doc = "OUT_W1TS (w) register accessor: GPIO output set register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1ts`] module"]
 pub type OUT_W1TS = crate::Reg<out_w1ts::OUT_W1TS_SPEC>;
 #[doc = "GPIO output set register for GPIO0-31"]
 pub mod out_w1ts;
-#[doc = "OUT_W1TC (w) register accessor: GPIO output clear register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1tc`] module"]
+#[doc = "OUT_W1TC (w) register accessor: GPIO output clear register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_w1tc`] module"]
 pub type OUT_W1TC = crate::Reg<out_w1tc::OUT_W1TC_SPEC>;
 #[doc = "GPIO output clear register for GPIO0-31"]
 pub mod out_w1tc;
-#[doc = "OUT1 (rw) register accessor: GPIO output register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1`] module"]
+#[doc = "OUT1 (rw) register accessor: GPIO output register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`out1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1`] module"]
 pub type OUT1 = crate::Reg<out1::OUT1_SPEC>;
 #[doc = "GPIO output register for GPIO32-56"]
 pub mod out1;
-#[doc = "OUT1_W1TS (w) register accessor: GPIO output set register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1ts`] module"]
+#[doc = "OUT1_W1TS (w) register accessor: GPIO output set register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1ts`] module"]
 pub type OUT1_W1TS = crate::Reg<out1_w1ts::OUT1_W1TS_SPEC>;
 #[doc = "GPIO output set register for GPIO32-56"]
 pub mod out1_w1ts;
-#[doc = "OUT1_W1TC (w) register accessor: GPIO output clear register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1tc`] module"]
+#[doc = "OUT1_W1TC (w) register accessor: GPIO output clear register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out1_w1tc`] module"]
 pub type OUT1_W1TC = crate::Reg<out1_w1tc::OUT1_W1TC_SPEC>;
 #[doc = "GPIO output clear register for GPIO32-56"]
 pub mod out1_w1tc;
-#[doc = "ENABLE (rw) register accessor: GPIO output enable register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable`] module"]
+#[doc = "ENABLE (rw) register accessor: GPIO output enable register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable`] module"]
 pub type ENABLE = crate::Reg<enable::ENABLE_SPEC>;
 #[doc = "GPIO output enable register for GPIO0-31"]
 pub mod enable;
-#[doc = "ENABLE_W1TS (w) register accessor: GPIO output enable set register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1ts`] module"]
+#[doc = "ENABLE_W1TS (w) register accessor: GPIO output enable set register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1ts`] module"]
 pub type ENABLE_W1TS = crate::Reg<enable_w1ts::ENABLE_W1TS_SPEC>;
 #[doc = "GPIO output enable set register for GPIO0-31"]
 pub mod enable_w1ts;
-#[doc = "ENABLE_W1TC (w) register accessor: GPIO output enable clear register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1tc`] module"]
+#[doc = "ENABLE_W1TC (w) register accessor: GPIO output enable clear register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable_w1tc`] module"]
 pub type ENABLE_W1TC = crate::Reg<enable_w1tc::ENABLE_W1TC_SPEC>;
 #[doc = "GPIO output enable clear register for GPIO0-31"]
 pub mod enable_w1tc;
-#[doc = "ENABLE1 (rw) register accessor: GPIO output enable register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`enable1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1`] module"]
+#[doc = "ENABLE1 (rw) register accessor: GPIO output enable register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`enable1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1`] module"]
 pub type ENABLE1 = crate::Reg<enable1::ENABLE1_SPEC>;
 #[doc = "GPIO output enable register for GPIO32-56"]
 pub mod enable1;
-#[doc = "ENABLE1_W1TS (w) register accessor: GPIO output enable set register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1ts`] module"]
+#[doc = "ENABLE1_W1TS (w) register accessor: GPIO output enable set register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1ts`] module"]
 pub type ENABLE1_W1TS = crate::Reg<enable1_w1ts::ENABLE1_W1TS_SPEC>;
 #[doc = "GPIO output enable set register for GPIO32-56"]
 pub mod enable1_w1ts;
-#[doc = "ENABLE1_W1TC (w) register accessor: GPIO output enable clear register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enable1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1tc`] module"]
+#[doc = "ENABLE1_W1TC (w) register accessor: GPIO output enable clear register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`enable1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@enable1_w1tc`] module"]
 pub type ENABLE1_W1TC = crate::Reg<enable1_w1tc::ENABLE1_W1TC_SPEC>;
 #[doc = "GPIO output enable clear register for GPIO32-56"]
 pub mod enable1_w1tc;
-#[doc = "STRAP (r) register accessor: pad strapping register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`strap::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@strap`] module"]
+#[doc = "STRAP (r) register accessor: pad strapping register\n\nYou can [`read`](crate::Reg::read) this register and get [`strap::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@strap`] module"]
 pub type STRAP = crate::Reg<strap::STRAP_SPEC>;
 #[doc = "pad strapping register"]
 pub mod strap;
-#[doc = "IN (r) register accessor: GPIO input register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_`] module"]
+#[doc = "IN (r) register accessor: GPIO input register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`in_::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_`] module"]
 pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "GPIO input register for GPIO0-31"]
 pub mod in_;
-#[doc = "IN1 (r) register accessor: GPIO input register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in1`] module"]
+#[doc = "IN1 (r) register accessor: GPIO input register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`in1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in1`] module"]
 pub type IN1 = crate::Reg<in1::IN1_SPEC>;
 #[doc = "GPIO input register for GPIO32-56"]
 pub mod in1;
-#[doc = "STATUS (rw) register accessor: GPIO interrupt status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
+#[doc = "STATUS (rw) register accessor: GPIO interrupt status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "GPIO interrupt status register for GPIO0-31"]
 pub mod status;
-#[doc = "STATUS_W1TS (w) register accessor: GPIO interrupt status set register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1ts`] module"]
+#[doc = "STATUS_W1TS (w) register accessor: GPIO interrupt status set register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1ts`] module"]
 pub type STATUS_W1TS = crate::Reg<status_w1ts::STATUS_W1TS_SPEC>;
 #[doc = "GPIO interrupt status set register for GPIO0-31"]
 pub mod status_w1ts;
-#[doc = "STATUS_W1TC (w) register accessor: GPIO interrupt status clear register for GPIO0-31\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1tc`] module"]
+#[doc = "STATUS_W1TC (w) register accessor: GPIO interrupt status clear register for GPIO0-31\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_w1tc`] module"]
 pub type STATUS_W1TC = crate::Reg<status_w1tc::STATUS_W1TC_SPEC>;
 #[doc = "GPIO interrupt status clear register for GPIO0-31"]
 pub mod status_w1tc;
-#[doc = "STATUS1 (rw) register accessor: GPIO interrupt status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1`] module"]
+#[doc = "STATUS1 (rw) register accessor: GPIO interrupt status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`status1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1`] module"]
 pub type STATUS1 = crate::Reg<status1::STATUS1_SPEC>;
 #[doc = "GPIO interrupt status register for GPIO32-56"]
 pub mod status1;
-#[doc = "STATUS1_W1TS (w) register accessor: GPIO interrupt status set register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1ts`] module"]
+#[doc = "STATUS1_W1TS (w) register accessor: GPIO interrupt status set register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1ts::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1ts`] module"]
 pub type STATUS1_W1TS = crate::Reg<status1_w1ts::STATUS1_W1TS_SPEC>;
 #[doc = "GPIO interrupt status set register for GPIO32-56"]
 pub mod status1_w1ts;
-#[doc = "STATUS1_W1TC (w) register accessor: GPIO interrupt status clear register for GPIO32-56\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1tc`] module"]
+#[doc = "STATUS1_W1TC (w) register accessor: GPIO interrupt status clear register for GPIO32-56\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status1_w1tc::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status1_w1tc`] module"]
 pub type STATUS1_W1TC = crate::Reg<status1_w1tc::STATUS1_W1TC_SPEC>;
 #[doc = "GPIO interrupt status clear register for GPIO32-56"]
 pub mod status1_w1tc;
-#[doc = "INTR_0 (r) register accessor: GPIO interrupt 0 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_0`] module"]
+#[doc = "INTR_0 (r) register accessor: GPIO interrupt 0 status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_0`] module"]
 pub type INTR_0 = crate::Reg<intr_0::INTR_0_SPEC>;
 #[doc = "GPIO interrupt 0 status register for GPIO0-31"]
 pub mod intr_0;
-#[doc = "INTR1_0 (r) register accessor: GPIO interrupt 0 status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr1_0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_0`] module"]
+#[doc = "INTR1_0 (r) register accessor: GPIO interrupt 0 status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_0`] module"]
 pub type INTR1_0 = crate::Reg<intr1_0::INTR1_0_SPEC>;
 #[doc = "GPIO interrupt 0 status register for GPIO32-56"]
 pub mod intr1_0;
-#[doc = "INTR_1 (r) register accessor: GPIO interrupt 1 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_1`] module"]
+#[doc = "INTR_1 (r) register accessor: GPIO interrupt 1 status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_1`] module"]
 pub type INTR_1 = crate::Reg<intr_1::INTR_1_SPEC>;
 #[doc = "GPIO interrupt 1 status register for GPIO0-31"]
 pub mod intr_1;
-#[doc = "INTR1_1 (r) register accessor: GPIO interrupt 1 status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr1_1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_1`] module"]
+#[doc = "INTR1_1 (r) register accessor: GPIO interrupt 1 status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_1`] module"]
 pub type INTR1_1 = crate::Reg<intr1_1::INTR1_1_SPEC>;
 #[doc = "GPIO interrupt 1 status register for GPIO32-56"]
 pub mod intr1_1;
-#[doc = "STATUS_NEXT (r) register accessor: GPIO interrupt source register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_next::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next`] module"]
+#[doc = "STATUS_NEXT (r) register accessor: GPIO interrupt source register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next`] module"]
 pub type STATUS_NEXT = crate::Reg<status_next::STATUS_NEXT_SPEC>;
 #[doc = "GPIO interrupt source register for GPIO0-31"]
 pub mod status_next;
-#[doc = "STATUS_NEXT1 (r) register accessor: GPIO interrupt source register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status_next1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next1`] module"]
+#[doc = "STATUS_NEXT1 (r) register accessor: GPIO interrupt source register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`status_next1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_next1`] module"]
 pub type STATUS_NEXT1 = crate::Reg<status_next1::STATUS_NEXT1_SPEC>;
 #[doc = "GPIO interrupt source register for GPIO32-56"]
 pub mod status_next1;
-#[doc = "PIN (rw) register accessor: GPIO pin configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pin::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
+#[doc = "PIN (rw) register accessor: GPIO pin configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
 pub type PIN = crate::Reg<pin::PIN_SPEC>;
 #[doc = "GPIO pin configuration register"]
 pub mod pin;
-#[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: GPIO output function select register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`func_out_sel_cfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
+#[doc = "FUNC_OUT_SEL_CFG (rw) register accessor: GPIO output function select register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_out_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_out_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_out_sel_cfg`] module"]
 pub type FUNC_OUT_SEL_CFG = crate::Reg<func_out_sel_cfg::FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "GPIO output function select register"]
 pub mod func_out_sel_cfg;
-#[doc = "INTR_2 (r) register accessor: GPIO interrupt 2 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_2`] module"]
+#[doc = "INTR_2 (r) register accessor: GPIO interrupt 2 status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_2`] module"]
 pub type INTR_2 = crate::Reg<intr_2::INTR_2_SPEC>;
 #[doc = "GPIO interrupt 2 status register for GPIO0-31"]
 pub mod intr_2;
-#[doc = "INTR1_2 (r) register accessor: GPIO interrupt 2 status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr1_2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_2`] module"]
+#[doc = "INTR1_2 (r) register accessor: GPIO interrupt 2 status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_2`] module"]
 pub type INTR1_2 = crate::Reg<intr1_2::INTR1_2_SPEC>;
 #[doc = "GPIO interrupt 2 status register for GPIO32-56"]
 pub mod intr1_2;
-#[doc = "INTR_3 (r) register accessor: GPIO interrupt 3 status register for GPIO0-31\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_3`] module"]
+#[doc = "INTR_3 (r) register accessor: GPIO interrupt 3 status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_3`] module"]
 pub type INTR_3 = crate::Reg<intr_3::INTR_3_SPEC>;
 #[doc = "GPIO interrupt 3 status register for GPIO0-31"]
 pub mod intr_3;
-#[doc = "INTR1_3 (r) register accessor: GPIO interrupt 3 status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr1_3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_3`] module"]
+#[doc = "INTR1_3 (r) register accessor: GPIO interrupt 3 status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr1_3`] module"]
 pub type INTR1_3 = crate::Reg<intr1_3::INTR1_3_SPEC>;
 #[doc = "GPIO interrupt 3 status register for GPIO32-56"]
 pub mod intr1_3;
-#[doc = "CLOCK_GATE (rw) register accessor: GPIO clock gate register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clock_gate::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
+#[doc = "CLOCK_GATE (rw) register accessor: GPIO clock gate register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gate register"]
 pub mod clock_gate;
-#[doc = "INT_RAW (rw) register accessor: analog comparator interrupt raw\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc = "INT_RAW (rw) register accessor: analog comparator interrupt raw\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "analog comparator interrupt raw"]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: analog comparator interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc = "INT_ST (r) register accessor: analog comparator interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "analog comparator interrupt status"]
 pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: analog comparator interrupt enable\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc = "INT_ENA (rw) register accessor: analog comparator interrupt enable\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "analog comparator interrupt enable"]
 pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: analog comparator interrupt clear\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (w) register accessor: analog comparator interrupt clear\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "analog comparator interrupt clear"]
 pub mod int_clr;
-#[doc = "ZERO_DET0_FILTER_CNT (rw) register accessor: GPIO analog comparator zero detect filter count\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`zero_det0_filter_cnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`zero_det0_filter_cnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@zero_det0_filter_cnt`] module"]
+#[doc = "ZERO_DET0_FILTER_CNT (rw) register accessor: GPIO analog comparator zero detect filter count\n\nYou can [`read`](crate::Reg::read) this register and get [`zero_det0_filter_cnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`zero_det0_filter_cnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@zero_det0_filter_cnt`] module"]
 pub type ZERO_DET0_FILTER_CNT = crate::Reg<zero_det0_filter_cnt::ZERO_DET0_FILTER_CNT_SPEC>;
 #[doc = "GPIO analog comparator zero detect filter count"]
 pub mod zero_det0_filter_cnt;
-#[doc = "ZERO_DET1_FILTER_CNT (rw) register accessor: GPIO analog comparator zero detect filter count\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`zero_det1_filter_cnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`zero_det1_filter_cnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@zero_det1_filter_cnt`] module"]
+#[doc = "ZERO_DET1_FILTER_CNT (rw) register accessor: GPIO analog comparator zero detect filter count\n\nYou can [`read`](crate::Reg::read) this register and get [`zero_det1_filter_cnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`zero_det1_filter_cnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@zero_det1_filter_cnt`] module"]
 pub type ZERO_DET1_FILTER_CNT = crate::Reg<zero_det1_filter_cnt::ZERO_DET1_FILTER_CNT_SPEC>;
 #[doc = "GPIO analog comparator zero detect filter count"]
 pub mod zero_det1_filter_cnt;
-#[doc = "SEND_SEQ (rw) register accessor: High speed sdio pad bist send sequence\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`send_seq::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`send_seq::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@send_seq`] module"]
+#[doc = "SEND_SEQ (rw) register accessor: High speed sdio pad bist send sequence\n\nYou can [`read`](crate::Reg::read) this register and get [`send_seq::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`send_seq::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@send_seq`] module"]
 pub type SEND_SEQ = crate::Reg<send_seq::SEND_SEQ_SPEC>;
 #[doc = "High speed sdio pad bist send sequence"]
 pub mod send_seq;
-#[doc = "RECIVE_SEQ (r) register accessor: High speed sdio pad bist recive sequence\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`recive_seq::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@recive_seq`] module"]
+#[doc = "RECIVE_SEQ (r) register accessor: High speed sdio pad bist recive sequence\n\nYou can [`read`](crate::Reg::read) this register and get [`recive_seq::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@recive_seq`] module"]
 pub type RECIVE_SEQ = crate::Reg<recive_seq::RECIVE_SEQ_SPEC>;
 #[doc = "High speed sdio pad bist recive sequence"]
 pub mod recive_seq;
-#[doc = "BISTIN_SEL (rw) register accessor: High speed sdio pad bist in pad sel\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bistin_sel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bistin_sel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bistin_sel`] module"]
+#[doc = "BISTIN_SEL (rw) register accessor: High speed sdio pad bist in pad sel\n\nYou can [`read`](crate::Reg::read) this register and get [`bistin_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bistin_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bistin_sel`] module"]
 pub type BISTIN_SEL = crate::Reg<bistin_sel::BISTIN_SEL_SPEC>;
 #[doc = "High speed sdio pad bist in pad sel"]
 pub mod bistin_sel;
-#[doc = "BIST_CTRL (rw) register accessor: High speed sdio pad bist control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bist_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bist_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bist_ctrl`] module"]
+#[doc = "BIST_CTRL (rw) register accessor: High speed sdio pad bist control\n\nYou can [`read`](crate::Reg::read) this register and get [`bist_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bist_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bist_ctrl`] module"]
 pub type BIST_CTRL = crate::Reg<bist_ctrl::BIST_CTRL_SPEC>;
 #[doc = "High speed sdio pad bist control"]
 pub mod bist_ctrl;
-#[doc = "DATE (rw) register accessor: GPIO version register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (rw) register accessor: GPIO version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "GPIO version register"]
 pub mod date;
-#[doc = "FUNC_IN_SEL_CFG (rw) register accessor: GPIO input function configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`func_in_sel_cfg::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
+#[doc = "FUNC_IN_SEL_CFG (rw) register accessor: GPIO input function configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_in_sel_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_in_sel_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_in_sel_cfg`] module"]
 pub type FUNC_IN_SEL_CFG = crate::Reg<func_in_sel_cfg::FUNC_IN_SEL_CFG_SPEC>;
 #[doc = "GPIO input function configuration register"]
 pub mod func_in_sel_cfg;

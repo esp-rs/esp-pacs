@@ -29,19 +29,19 @@ impl TIMER {
         &self.status
     }
 }
-#[doc = "CFG0 (rw) register accessor: PWM timer0 period and update method configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfg0`] module"]
+#[doc = "CFG0 (rw) register accessor: PWM timer0 period and update method configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfg0`] module"]
 pub type CFG0 = crate::Reg<cfg0::CFG0_SPEC>;
 #[doc = "PWM timer0 period and update method configuration register."]
 pub mod cfg0;
-#[doc = "CFG1 (rw) register accessor: PWM timer0 working mode and start/stop control register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cfg1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cfg1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfg1`] module"]
+#[doc = "CFG1 (rw) register accessor: PWM timer0 working mode and start/stop control register.\n\nYou can [`read`](crate::Reg::read) this register and get [`cfg1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cfg1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cfg1`] module"]
 pub type CFG1 = crate::Reg<cfg1::CFG1_SPEC>;
 #[doc = "PWM timer0 working mode and start/stop control register."]
 pub mod cfg1;
-#[doc = "SYNC (rw) register accessor: PWM timer0 sync function configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sync::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sync::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sync`] module"]
+#[doc = "SYNC (rw) register accessor: PWM timer0 sync function configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`sync::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sync::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sync`] module"]
 pub type SYNC = crate::Reg<sync::SYNC_SPEC>;
 #[doc = "PWM timer0 sync function configuration register."]
 pub mod sync;
-#[doc = "STATUS (r) register accessor: PWM timer0 status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
+#[doc = "STATUS (r) register accessor: PWM timer0 status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status`] module"]
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "PWM timer0 status register."]
 pub mod status;

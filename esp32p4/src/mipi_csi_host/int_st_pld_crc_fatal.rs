@@ -137,7 +137,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_pld_crc_fatal::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_pld_crc_fatal::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_PLD_CRC_FATAL_SPEC;
 impl crate::RegisterSpec for INT_ST_PLD_CRC_FATAL_SPEC {
     type Ux = u32;

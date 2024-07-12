@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2S VAD Observe register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vad_ob3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2S VAD Observe register\n\nYou can [`read`](crate::Reg::read) this register and get [`vad_ob3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VAD_OB3_SPEC;
 impl crate::RegisterSpec for VAD_OB3_SPEC {
     type Ux = u32;

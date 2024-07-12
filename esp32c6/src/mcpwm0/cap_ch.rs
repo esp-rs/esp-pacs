@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Value of last capture on channel %s\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cap_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Value of last capture on channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`cap_ch::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CAP_CH_SPEC;
 impl crate::RegisterSpec for CAP_CH_SPEC {
     type Ux = u32;

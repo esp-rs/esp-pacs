@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ASSIST_DEBUG_LOG_MEM_WRITING_ADDR_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_mem_writing_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ASSIST_DEBUG_LOG_MEM_WRITING_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`log_mem_writing_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOG_MEM_WRITING_ADDR_SPEC;
 impl crate::RegisterSpec for LOG_MEM_WRITING_ADDR_SPEC {
     type Ux = u32;

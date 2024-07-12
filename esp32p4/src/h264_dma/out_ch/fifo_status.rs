@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx outfifo status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx outfifo status register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_STATUS_SPEC;
 impl crate::RegisterSpec for FIFO_STATUS_SPEC {
     type Ux = u32;

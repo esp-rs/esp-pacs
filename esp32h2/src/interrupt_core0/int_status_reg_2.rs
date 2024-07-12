@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_status_reg_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "register description\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status_reg_2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_STATUS_REG_2_SPEC;
 impl crate::RegisterSpec for INT_STATUS_REG_2_SPEC {
     type Ux = u32;

@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI DMA TX status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_outstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI DMA TX status\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_outstatus::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_OUTSTATUS_SPEC;
 impl crate::RegisterSpec for DMA_OUTSTATUS_SPEC {
     type Ux = u32;

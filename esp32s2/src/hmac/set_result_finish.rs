@@ -16,7 +16,7 @@ impl W {
         SET_RESULT_END_W::new(self, 0)
     }
 }
-#[doc = "HMAC read result completion register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`set_result_finish::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HMAC read result completion register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_result_finish::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_RESULT_FINISH_SPEC;
 impl crate::RegisterSpec for SET_RESULT_FINISH_SPEC {
     type Ux = u32;

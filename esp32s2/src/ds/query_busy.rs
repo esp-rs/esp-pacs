@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Status of the DS\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_busy::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Status of the DS\n\nYou can [`read`](crate::Reg::read) this register and get [`query_busy::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct QUERY_BUSY_SPEC;
 impl crate::RegisterSpec for QUERY_BUSY_SPEC {
     type Ux = u32;

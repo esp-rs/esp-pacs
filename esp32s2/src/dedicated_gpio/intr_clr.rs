@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<INTR_CLR_SPEC> {
 impl W {
     #[doc = "Set this bit to clear the DEDIC_GPIO(0-7)_INT_RAW interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn gpio(&mut self, n: u8) -> GPIO_W<INTR_CLR_SPEC> {
@@ -68,7 +68,7 @@ impl W {
         GPIO_W::new(self, 7)
     }
 }
-#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_CLR_SPEC;
 impl crate::RegisterSpec for INTR_CLR_SPEC {
     type Ux = u32;

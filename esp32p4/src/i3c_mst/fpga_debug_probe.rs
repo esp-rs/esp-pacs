@@ -34,7 +34,7 @@ impl W {
         REG_I3C_MST_FPGA_DEBUG_PROBE_W::new(self, 0)
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fpga_debug_probe::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fpga_debug_probe::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`fpga_debug_probe::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fpga_debug_probe::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FPGA_DEBUG_PROBE_SPEC;
 impl crate::RegisterSpec for FPGA_DEBUG_PROBE_SPEC {
     type Ux = u32;

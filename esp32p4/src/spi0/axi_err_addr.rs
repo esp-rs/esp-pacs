@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 AXI request error address.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`axi_err_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 AXI request error address.\n\nYou can [`read`](crate::Reg::read) this register and get [`axi_err_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AXI_ERR_ADDR_SPEC;
 impl crate::RegisterSpec for AXI_ERR_ADDR_SPEC {
     type Ux = u32;

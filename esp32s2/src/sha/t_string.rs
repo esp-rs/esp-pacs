@@ -29,7 +29,7 @@ impl W {
         T_STRING_W::new(self, 0)
     }
 }
-#[doc = "String content register for calculating initial Hash Value (only effective for SHA-512/t)\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`t_string::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`t_string::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "String content register for calculating initial Hash Value (only effective for SHA-512/t)\n\nYou can [`read`](crate::Reg::read) this register and get [`t_string::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`t_string::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct T_STRING_SPEC;
 impl crate::RegisterSpec for T_STRING_SPEC {
     type Ux = u32;

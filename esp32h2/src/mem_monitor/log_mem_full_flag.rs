@@ -29,7 +29,7 @@ impl W {
         CLR_LOG_MEM_FULL_FLAG_W::new(self, 1)
     }
 }
-#[doc = "full flag status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`log_mem_full_flag::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`log_mem_full_flag::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "full flag status register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_mem_full_flag::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_mem_full_flag::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOG_MEM_FULL_FLAG_SPEC;
 impl crate::RegisterSpec for LOG_MEM_FULL_FLAG_SPEC {
     type Ux = u32;

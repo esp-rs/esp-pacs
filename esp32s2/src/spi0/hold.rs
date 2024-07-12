@@ -93,7 +93,7 @@ impl W {
         DMA_SEG_TRANS_DONE_W::new(self, 7)
     }
 }
-#[doc = "SPI hold register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hold::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hold::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI hold register\n\nYou can [`read`](crate::Reg::read) this register and get [`hold::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hold::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOLD_SPEC;
 impl crate::RegisterSpec for HOLD_SPEC {
     type Ux = u32;

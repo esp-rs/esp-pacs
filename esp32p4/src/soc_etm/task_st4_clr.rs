@@ -308,7 +308,7 @@ impl W {
         ADC_TASK_STOP0_ST_CLR_W::new(self, 31)
     }
 }
-#[doc = "Tasks trigger status clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`task_st4_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Tasks trigger status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`task_st4_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TASK_ST4_CLR_SPEC;
 impl crate::RegisterSpec for TASK_ST4_CLR_SPEC {
     type Ux = u32;

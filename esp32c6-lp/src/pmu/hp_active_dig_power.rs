@@ -71,41 +71,26 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_ACTIVE_DIG_POWER")
-            .field(
-                "hp_active_vdd_spi_pd_en",
-                &format_args!("{}", self.hp_active_vdd_spi_pd_en().bit()),
-            )
-            .field(
-                "hp_active_hp_mem_dslp",
-                &format_args!("{}", self.hp_active_hp_mem_dslp().bit()),
-            )
+            .field("hp_active_vdd_spi_pd_en", &self.hp_active_vdd_spi_pd_en())
+            .field("hp_active_hp_mem_dslp", &self.hp_active_hp_mem_dslp())
             .field(
                 "hp_active_pd_hp_mem_pd_en",
-                &format_args!("{}", self.hp_active_pd_hp_mem_pd_en().bits()),
+                &self.hp_active_pd_hp_mem_pd_en(),
             )
             .field(
                 "hp_active_pd_hp_wifi_pd_en",
-                &format_args!("{}", self.hp_active_pd_hp_wifi_pd_en().bit()),
+                &self.hp_active_pd_hp_wifi_pd_en(),
             )
             .field(
                 "hp_active_pd_hp_cpu_pd_en",
-                &format_args!("{}", self.hp_active_pd_hp_cpu_pd_en().bit()),
+                &self.hp_active_pd_hp_cpu_pd_en(),
             )
             .field(
                 "hp_active_pd_hp_aon_pd_en",
-                &format_args!("{}", self.hp_active_pd_hp_aon_pd_en().bit()),
+                &self.hp_active_pd_hp_aon_pd_en(),
             )
-            .field(
-                "hp_active_pd_top_pd_en",
-                &format_args!("{}", self.hp_active_pd_top_pd_en().bit()),
-            )
+            .field("hp_active_pd_top_pd_en", &self.hp_active_pd_top_pd_en())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_DIG_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -162,7 +147,7 @@ impl W {
         HP_ACTIVE_PD_TOP_PD_EN_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_active_dig_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_active_dig_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_active_dig_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_active_dig_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_ACTIVE_DIG_POWER_SPEC;
 impl crate::RegisterSpec for HP_ACTIVE_DIG_POWER_SPEC {
     type Ux = u32;

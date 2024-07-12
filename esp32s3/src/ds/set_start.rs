@@ -16,7 +16,7 @@ impl W {
         SET_START_W::new(self, 0)
     }
 }
-#[doc = "Activates the DS peripheral\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`set_start::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Activates the DS peripheral\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_start::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_START_SPEC;
 impl crate::RegisterSpec for SET_START_SPEC {
     type Ux = u32;

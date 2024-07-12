@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MSPI ECC control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ecc_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MSPI ECC control register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_ecc_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_ECC_CTRL_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_ECC_CTRL_SPEC {
     type Ux = u32;

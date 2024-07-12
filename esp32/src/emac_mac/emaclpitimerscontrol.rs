@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "LPI Timers Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`emaclpitimerscontrol::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LPI Timers Control\n\nYou can [`read`](crate::Reg::read) this register and get [`emaclpitimerscontrol::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EMACLPITIMERSCONTROL_SPEC;
 impl crate::RegisterSpec for EMACLPITIMERSCONTROL_SPEC {
     type Ux = u32;

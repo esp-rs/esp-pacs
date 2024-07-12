@@ -37,7 +37,7 @@ impl W {
         INFIFO_POP_W::new(self, 16)
     }
 }
-#[doc = "Pop control register of RX FIFO\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_in_pop::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_in_pop::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Pop control register of RX FIFO\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_in_pop::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_in_pop::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_IN_POP_SPEC;
 impl crate::RegisterSpec for DMA_IN_POP_SPEC {
     type Ux = u32;

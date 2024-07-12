@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "results of the average of black window\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blc_mean::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "results of the average of black window\n\nYou can [`read`](crate::Reg::read) this register and get [`blc_mean::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLC_MEAN_SPEC;
 impl crate::RegisterSpec for BLC_MEAN_SPEC {
     type Ux = u32;

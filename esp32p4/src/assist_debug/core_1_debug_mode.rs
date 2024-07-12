@@ -28,7 +28,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "cpu status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_1_debug_mode::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_1_debug_mode::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_1_DEBUG_MODE_SPEC;
 impl crate::RegisterSpec for CORE_1_DEBUG_MODE_SPEC {
     type Ux = u32;

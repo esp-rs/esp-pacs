@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L2-Cache Access Fail ID/attribution information register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_fail_id_attr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L2-Cache Access Fail ID/attribution information register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_fail_id_attr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_ACS_FAIL_ID_ATTR_SPEC;
 impl crate::RegisterSpec for L2_CACHE_ACS_FAIL_ID_ATTR_SPEC {
     type Ux = u32;

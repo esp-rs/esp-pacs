@@ -11,7 +11,7 @@ pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
     #[doc = "The interrupt state bit for channel (0-7)'s mt_ch(0-7)_tx_end_int_raw when mt_ch(0-7)_tx_end_int_ena is set to (0-7)."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
         #[allow(clippy::no_effect)]
@@ -66,7 +66,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_rx_end_int_raw when rmt_ch(0-7)_rx_end_int_ena is set to (0-7)."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field.</div>"]
     #[inline(always)]
     pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
         #[allow(clippy::no_effect)]
@@ -121,7 +121,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_err_int_raw when rmt_ch(0-7)_err_int_ena is set to (0-7)."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field.</div>"]
     #[inline(always)]
     pub fn ch_err(&self, n: u8) -> CH_ERR_R {
         #[allow(clippy::no_effect)]
@@ -176,7 +176,7 @@ impl R {
     }
     #[doc = "The interrupt state bit for channel (0-7)'s rmt_ch(0-7)_tx_thr_event_int_raw when mt_ch(0-7)_tx_thr_event_int_ena is set to 1."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
         #[allow(clippy::no_effect)]
@@ -269,7 +269,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;

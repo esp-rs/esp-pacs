@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1-Cache Access Fail Address information register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_dcache_acs_fail_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1-Cache Access Fail Address information register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_dcache_acs_fail_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_DCACHE_ACS_FAIL_ADDR_SPEC;
 impl crate::RegisterSpec for L1_DCACHE_ACS_FAIL_ADDR_SPEC {
     type Ux = u32;

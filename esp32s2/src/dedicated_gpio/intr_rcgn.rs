@@ -9,7 +9,7 @@ pub type INTR_MODE_CH_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 impl R {
     #[doc = "Configure channel (0-7) interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INTR_MODE_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INTR_MODE_CH0` field.</div>"]
     #[inline(always)]
     pub fn intr_mode_ch(&self, n: u8) -> INTR_MODE_CH_R {
         #[allow(clippy::no_effect)]
@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Configure channel (0-7) interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INTR_MODE_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INTR_MODE_CH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn intr_mode_ch(&mut self, n: u8) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
@@ -138,7 +138,7 @@ impl W {
         INTR_MODE_CH_W::new(self, 21)
     }
 }
-#[doc = "Dedicated GPIO interrupts generation mode register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_rcgn::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr_rcgn::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dedicated GPIO interrupts generation mode register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_rcgn::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_rcgn::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_RCGN_SPEC;
 impl crate::RegisterSpec for INTR_RCGN_SPEC {
     type Ux = u32;

@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_rx_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`mem_rx_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_RX_STATUS_SPEC;
 impl crate::RegisterSpec for MEM_RX_STATUS_SPEC {
     type Ux = u32;

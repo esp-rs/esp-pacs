@@ -26,21 +26,9 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_CK_WAIT_CNTL")
-            .field(
-                "wait_xtl_stable",
-                &format_args!("{}", self.wait_xtl_stable().bits()),
-            )
-            .field(
-                "wait_pll_stable",
-                &format_args!("{}", self.wait_pll_stable().bits()),
-            )
+            .field("wait_xtl_stable", &self.wait_xtl_stable())
+            .field("wait_pll_stable", &self.wait_pll_stable())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_CK_WAIT_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -57,7 +45,7 @@ impl W {
         WAIT_PLL_STABLE_W::new(self, 16)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_ck_wait_cntl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_ck_wait_cntl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_ck_wait_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_ck_wait_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_CK_WAIT_CNTL_SPEC;
 impl crate::RegisterSpec for POWER_CK_WAIT_CNTL_SPEC {
     type Ux = u32;

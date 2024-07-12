@@ -16,7 +16,7 @@ impl W {
         CONTINUE_W::new(self, 0)
     }
 }
-#[doc = "Operation continue controlling register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`continue_::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Operation continue controlling register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`continue_::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CONTINUE_SPEC;
 impl crate::RegisterSpec for CONTINUE_SPEC {
     type Ux = u32;

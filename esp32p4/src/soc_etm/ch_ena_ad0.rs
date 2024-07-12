@@ -9,7 +9,7 @@ pub type CH_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Represents ch(0-31) enable status.\\\\0: Disable\\\\1: Enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
     #[inline(always)]
     pub fn ch_ena(&self, n: u8) -> CH_ENA_R {
         #[allow(clippy::no_effect)]
@@ -225,7 +225,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Represents ch(0-31) enable status.\\\\0: Disable\\\\1: Enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_ena(&mut self, n: u8) -> CH_ENA_W<CH_ENA_AD0_SPEC> {
@@ -426,7 +426,7 @@ impl W {
         CH_ENA_W::new(self, 31)
     }
 }
-#[doc = "Channel enable status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ch_ena_ad0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_ena_ad0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel enable status register\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_ena_ad0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_ENA_AD0_SPEC;
 impl crate::RegisterSpec for CH_ENA_AD0_SPEC {
     type Ux = u32;

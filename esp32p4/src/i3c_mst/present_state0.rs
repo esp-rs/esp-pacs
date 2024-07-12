@@ -97,7 +97,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`present_state0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`present_state0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRESENT_STATE0_SPEC;
 impl crate::RegisterSpec for PRESENT_STATE0_SPEC {
     type Ux = u32;

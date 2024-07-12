@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<CH_ENA_AD1_CLR_SPEC> {
 impl W {
     #[doc = "Configures whether or not to clear ch(32-49) enable.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH_CLR32` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_CLR32` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch_clr(&mut self, n: u8) -> CH_CLR_W<CH_ENA_AD1_CLR_SPEC> {
@@ -128,7 +128,7 @@ impl W {
         CH_CLR_W::new(self, 17)
     }
 }
-#[doc = "Channel enable clear register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_ena_ad1_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel enable clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_ena_ad1_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_ENA_AD1_CLR_SPEC;
 impl crate::RegisterSpec for CH_ENA_AD1_CLR_SPEC {
     type Ux = u32;

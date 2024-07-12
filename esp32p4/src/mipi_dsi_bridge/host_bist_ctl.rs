@@ -37,7 +37,7 @@ impl W {
         BISTON_W::new(self, 1)
     }
 }
-#[doc = "dsi_bridge host bist control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_bist_ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`host_bist_ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "dsi_bridge host bist control register\n\nYou can [`read`](crate::Reg::read) this register and get [`host_bist_ctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`host_bist_ctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOST_BIST_CTL_SPEC;
 impl crate::RegisterSpec for HOST_BIST_CTL_SPEC {
     type Ux = u32;

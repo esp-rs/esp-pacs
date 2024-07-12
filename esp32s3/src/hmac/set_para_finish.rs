@@ -16,7 +16,7 @@ impl W {
         SET_PARA_END_W::new(self, 0)
     }
 }
-#[doc = "Finish initial configuration.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`set_para_finish::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Finish initial configuration.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_para_finish::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_PARA_FINISH_SPEC;
 impl crate::RegisterSpec for SET_PARA_FINISH_SPEC {
     type Ux = u32;

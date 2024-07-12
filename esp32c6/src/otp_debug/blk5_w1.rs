@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Otp debuger block5 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Otp debuger block5 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLK5_W1_SPEC;
 impl crate::RegisterSpec for BLK5_W1_SPEC {
     type Ux = u32;

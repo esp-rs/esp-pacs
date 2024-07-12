@@ -29,7 +29,7 @@ impl W {
         MIN_SLP_VAL_W::new(self, 8)
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timer5::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timer5::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "register description\n\nYou can [`read`](crate::Reg::read) this register and get [`timer5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timer5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMER5_SPEC;
 impl crate::RegisterSpec for TIMER5_SPEC {
     type Ux = u32;

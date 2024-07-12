@@ -29,7 +29,7 @@ impl W {
         SAR1_ATTEN_W::new(self, 0)
     }
 }
-#[doc = "Configure SAR ADC1 attenuation\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_atten1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_atten1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configure SAR ADC1 attenuation\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_atten1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_atten1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_ATTEN1_SPEC;
 impl crate::RegisterSpec for SAR_ATTEN1_SPEC {
     type Ux = u32;

@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("FSM").field("st", &self.st()).finish()
     }
 }
-#[doc = "SPI1 state machine(FSM) status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fsm::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI1 state machine(FSM) status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fsm::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FSM_SPEC;
 impl crate::RegisterSpec for FSM_SPEC {
     type Ux = u32;

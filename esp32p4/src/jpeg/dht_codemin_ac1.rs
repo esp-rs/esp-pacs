@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dht_codemin_ac1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`dht_codemin_ac1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DHT_CODEMIN_AC1_SPEC;
 impl crate::RegisterSpec for DHT_CODEMIN_AC1_SPEC {
     type Ux = u32;

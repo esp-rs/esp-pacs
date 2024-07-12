@@ -29,7 +29,7 @@ impl W {
         PHYSICAL_ADDRESS_W::new(self, 0)
     }
 }
-#[doc = "XTS-AES physical address register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`physical_address::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`physical_address::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "XTS-AES physical address register\n\nYou can [`read`](crate::Reg::read) this register and get [`physical_address::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`physical_address::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PHYSICAL_ADDRESS_SPEC;
 impl crate::RegisterSpec for PHYSICAL_ADDRESS_SPEC {
     type Ux = u32;

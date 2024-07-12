@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx second-to-last dscr addr register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dscr_bf1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx second-to-last dscr addr register\n\nYou can [`read`](crate::Reg::read) this register and get [`dscr_bf1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DSCR_BF1_SPEC;
 impl crate::RegisterSpec for DSCR_BF1_SPEC {
     type Ux = u32;

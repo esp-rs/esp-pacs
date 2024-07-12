@@ -29,7 +29,7 @@ impl W {
         SLCHOST_WIN_CMD_W::new(self, 0)
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`win_cmd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`win_cmd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`win_cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`win_cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WIN_CMD_SPEC;
 impl crate::RegisterSpec for WIN_CMD_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "lock status regsiter\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lock_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "lock status regsiter\n\nYou can [`read`](crate::Reg::read) this register and get [`lock_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LOCK_STATUS_SPEC;
 impl crate::RegisterSpec for LOCK_STATUS_SPEC {
     type Ux = u32;

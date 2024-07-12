@@ -181,7 +181,7 @@ impl W {
         COCPU_CLKGATE_EN_W::new(self, 27)
     }
 }
-#[doc = "configure ulp-riscv\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cocpu_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cocpu_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "configure ulp-riscv\n\nYou can [`read`](crate::Reg::read) this register and get [`cocpu_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cocpu_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct COCPU_CTRL_SPEC;
 impl crate::RegisterSpec for COCPU_CTRL_SPEC {
     type Ux = u32;

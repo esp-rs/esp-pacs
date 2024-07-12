@@ -17,7 +17,7 @@ pub type R_PMS_R_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Region execute authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field.</div>"]
     #[inline(always)]
     pub fn r_pms_x(&self, n: u8) -> R_PMS_X_R {
         #[allow(clippy::no_effect)]
@@ -47,7 +47,7 @@ impl R {
     }
     #[doc = "Region write authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field.</div>"]
     #[inline(always)]
     pub fn r_pms_w(&self, n: u8) -> R_PMS_W_R {
         #[allow(clippy::no_effect)]
@@ -77,7 +77,7 @@ impl R {
     }
     #[doc = "Region read authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field.</div>"]
     #[inline(always)]
     pub fn r_pms_r(&self, n: u8) -> R_PMS_R_R {
         #[allow(clippy::no_effect)]
@@ -125,7 +125,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Region execute authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn r_pms_x(&mut self, n: u8) -> R_PMS_X_W<PMS_ATTR_SPEC> {
@@ -153,7 +153,7 @@ impl W {
     }
     #[doc = "Region write authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn r_pms_w(&mut self, n: u8) -> R_PMS_W_W<PMS_ATTR_SPEC> {
@@ -181,7 +181,7 @@ impl W {
     }
     #[doc = "Region read authority in REE_MODE(0-2)"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn r_pms_r(&mut self, n: u8) -> R_PMS_R_W<PMS_ATTR_SPEC> {
@@ -208,7 +208,7 @@ impl W {
         R_PMS_R_W::new(self, 10)
     }
 }
-#[doc = "Region access authority attribute register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pms_attr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pms_attr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Region access authority attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`pms_attr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pms_attr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PMS_ATTR_SPEC;
 impl crate::RegisterSpec for PMS_ATTR_SPEC {
     type Ux = u32;

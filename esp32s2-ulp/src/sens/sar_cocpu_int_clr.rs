@@ -86,7 +86,7 @@ impl W {
         COCPU_SWD_INT_CLR_W::new(self, 8)
     }
 }
-#[doc = "Interrupt clear bit of ULP-RISCV\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_cocpu_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt clear bit of ULP-RISCV\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_cocpu_int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_INT_CLR_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_INT_CLR_SPEC {
     type Ux = u32;

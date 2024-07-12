@@ -16,7 +16,7 @@ impl W {
         MAIN_TIMER_ALARM_LOAD_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`main_overflow::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`main_overflow::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MAIN_OVERFLOW_SPEC;
 impl crate::RegisterSpec for MAIN_OVERFLOW_SPEC {
     type Ux = u32;

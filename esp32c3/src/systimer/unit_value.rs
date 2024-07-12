@@ -17,11 +17,11 @@ impl UNIT_VALUE {
         &self.lo
     }
 }
-#[doc = "HI (r) register accessor: SYSTIMER_UNIT0_VALUE_HI.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hi::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hi`] module"]
+#[doc = "HI (r) register accessor: SYSTIMER_UNIT0_VALUE_HI.\n\nYou can [`read`](crate::Reg::read) this register and get [`hi::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hi`] module"]
 pub type HI = crate::Reg<hi::HI_SPEC>;
 #[doc = "SYSTIMER_UNIT0_VALUE_HI."]
 pub mod hi;
-#[doc = "LO (r) register accessor: SYSTIMER_UNIT0_VALUE_LO.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lo`] module"]
+#[doc = "LO (r) register accessor: SYSTIMER_UNIT0_VALUE_LO.\n\nYou can [`read`](crate::Reg::read) this register and get [`lo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lo`] module"]
 pub type LO = crate::Reg<lo::LO_SPEC>;
 #[doc = "SYSTIMER_UNIT0_VALUE_LO."]
 pub mod lo;

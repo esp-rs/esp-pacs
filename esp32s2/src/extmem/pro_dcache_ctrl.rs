@@ -274,7 +274,7 @@ impl W {
         PRO_DCACHE_LOCK_ENA_W::new(self, 24)
     }
 }
-#[doc = "register description\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_dcache_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pro_dcache_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "register description\n\nYou can [`read`](crate::Reg::read) this register and get [`pro_dcache_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_dcache_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_DCACHE_CTRL_SPEC;
 impl crate::RegisterSpec for PRO_DCACHE_CTRL_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RTC fast memory CRC control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_fastmem_crc::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC fast memory CRC control register\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_fastmem_crc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_FASTMEM_CRC_SPEC;
 impl crate::RegisterSpec for RTC_FASTMEM_CRC_SPEC {
     type Ux = u32;

@@ -62,37 +62,13 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_SLEEP_HP_SYS_CNTL")
-            .field(
-                "hp_sleep_uart_wakeup_en",
-                &format_args!("{}", self.hp_sleep_uart_wakeup_en().bit()),
-            )
-            .field(
-                "hp_sleep_lp_pad_hold_all",
-                &format_args!("{}", self.hp_sleep_lp_pad_hold_all().bit()),
-            )
-            .field(
-                "hp_sleep_hp_pad_hold_all",
-                &format_args!("{}", self.hp_sleep_hp_pad_hold_all().bit()),
-            )
-            .field(
-                "hp_sleep_dig_pad_slp_sel",
-                &format_args!("{}", self.hp_sleep_dig_pad_slp_sel().bit()),
-            )
-            .field(
-                "hp_sleep_dig_pause_wdt",
-                &format_args!("{}", self.hp_sleep_dig_pause_wdt().bit()),
-            )
-            .field(
-                "hp_sleep_dig_cpu_stall",
-                &format_args!("{}", self.hp_sleep_dig_cpu_stall().bit()),
-            )
+            .field("hp_sleep_uart_wakeup_en", &self.hp_sleep_uart_wakeup_en())
+            .field("hp_sleep_lp_pad_hold_all", &self.hp_sleep_lp_pad_hold_all())
+            .field("hp_sleep_hp_pad_hold_all", &self.hp_sleep_hp_pad_hold_all())
+            .field("hp_sleep_dig_pad_slp_sel", &self.hp_sleep_dig_pad_slp_sel())
+            .field("hp_sleep_dig_pause_wdt", &self.hp_sleep_dig_pause_wdt())
+            .field("hp_sleep_dig_cpu_stall", &self.hp_sleep_dig_cpu_stall())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_SLEEP_HP_SYS_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -145,7 +121,7 @@ impl W {
         HP_SLEEP_DIG_CPU_STALL_W::new(self, 29)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_sleep_hp_sys_cntl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_sleep_hp_sys_cntl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_sleep_hp_sys_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_sleep_hp_sys_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_SLEEP_HP_SYS_CNTL_SPEC;
 impl crate::RegisterSpec for HP_SLEEP_HP_SYS_CNTL_SPEC {
     type Ux = u32;

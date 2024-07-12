@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Receive status of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`in_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_STATE_SPEC;
 impl crate::RegisterSpec for IN_STATE_SPEC {
     type Ux = u32;

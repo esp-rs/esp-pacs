@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of awb white point number\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`awb0_white_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "result of awb white point number\n\nYou can [`read`](crate::Reg::read) this register and get [`awb0_white_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AWB0_WHITE_CNT_SPEC;
 impl crate::RegisterSpec for AWB0_WHITE_CNT_SPEC {
     type Ux = u32;

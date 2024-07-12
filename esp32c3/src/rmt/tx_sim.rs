@@ -61,7 +61,7 @@ impl W {
         TX_SIM_EN_W::new(self, 2)
     }
 }
-#[doc = "RMT_TX_SIM_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tx_sim::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tx_sim::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RMT_TX_SIM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_sim::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_sim::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TX_SIM_SPEC;
 impl crate::RegisterSpec for TX_SIM_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx push byte cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`push_bytecnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx push byte cnt register\n\nYou can [`read`](crate::Reg::read) this register and get [`push_bytecnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PUSH_BYTECNT_SPEC;
 impl crate::RegisterSpec for PUSH_BYTECNT_SPEC {
     type Ux = u32;

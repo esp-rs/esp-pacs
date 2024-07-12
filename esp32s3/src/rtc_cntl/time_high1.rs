@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RTC timer high 16 bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`time_high1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC timer high 16 bits\n\nYou can [`read`](crate::Reg::read) this register and get [`time_high1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIME_HIGH1_SPEC;
 impl crate::RegisterSpec for TIME_HIGH1_SPEC {
     type Ux = u32;

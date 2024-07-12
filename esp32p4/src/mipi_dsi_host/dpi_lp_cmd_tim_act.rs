@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dpi_lp_cmd_tim_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dpi_lp_cmd_tim_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DPI_LP_CMD_TIM_ACT_SPEC;
 impl crate::RegisterSpec for DPI_LP_CMD_TIM_ACT_SPEC {
     type Ux = u32;

@@ -45,7 +45,7 @@ impl W {
         AF_LPOINT_A_W::new(self, 16)
     }
 }
-#[doc = "h-scale of af window a register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`af_hscale_a::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`af_hscale_a::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "h-scale of af window a register\n\nYou can [`read`](crate::Reg::read) this register and get [`af_hscale_a::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`af_hscale_a::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AF_HSCALE_A_SPEC;
 impl crate::RegisterSpec for AF_HSCALE_A_SPEC {
     type Ux = u32;

@@ -82,7 +82,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Programming error record register 1 of BLOCK0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rd_repeat_err1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Programming error record register 1 of BLOCK0.\n\nYou can [`read`](crate::Reg::read) this register and get [`rd_repeat_err1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RD_REPEAT_ERR1_SPEC;
 impl crate::RegisterSpec for RD_REPEAT_ERR1_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slchost_gpio_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`host_slchost_gpio_status1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOST_SLCHOST_GPIO_STATUS1_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_GPIO_STATUS1_SPEC {
     type Ux = u32;

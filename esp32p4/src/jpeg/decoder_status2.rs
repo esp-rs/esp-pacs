@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`decoder_status2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Trace and Debug registers\n\nYou can [`read`](crate::Reg::read) this register and get [`decoder_status2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DECODER_STATUS2_SPEC;
 impl crate::RegisterSpec for DECODER_STATUS2_SPEC {
     type Ux = u32;

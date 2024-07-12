@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chn_tmp_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`chn_tmp_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHN_TMP_STATUS_SPEC;
 impl crate::RegisterSpec for CHN_TMP_STATUS_SPEC {
     type Ux = u32;

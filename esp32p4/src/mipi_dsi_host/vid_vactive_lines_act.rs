@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`vid_vactive_lines_act::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`vid_vactive_lines_act::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VID_VACTIVE_LINES_ACT_SPEC;
 impl crate::RegisterSpec for VID_VACTIVE_LINES_ACT_SPEC {
     type Ux = u32;

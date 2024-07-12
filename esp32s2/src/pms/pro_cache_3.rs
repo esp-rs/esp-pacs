@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Icache status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pro_cache_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Icache status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRO_CACHE_3_SPEC;
 impl crate::RegisterSpec for PRO_CACHE_3_SPEC {
     type Ux = u32;

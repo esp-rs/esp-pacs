@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RSA clean register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clean::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RSA clean register\n\nYou can [`read`](crate::Reg::read) this register and get [`clean::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLEAN_SPEC;
 impl crate::RegisterSpec for CLEAN_SPEC {
     type Ux = u32;

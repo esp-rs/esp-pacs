@@ -17,7 +17,7 @@ pub type OVF_CNT_CH_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Triggered when the timer(0-3) has reached its maximum counter value."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
     pub fn timer_ovf(&self, n: u8) -> TIMER_OVF_R {
         #[allow(clippy::no_effect)]
@@ -52,7 +52,7 @@ impl R {
     }
     #[doc = "Interrupt raw bit for channel (0-5). Triggered when the gradual change of duty has finished."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
     pub fn duty_chng_end_ch(&self, n: u8) -> DUTY_CHNG_END_CH_R {
         #[allow(clippy::no_effect)]
@@ -97,7 +97,7 @@ impl R {
     }
     #[doc = "Interrupt raw bit for channel (0-5). Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
     pub fn ovf_cnt_ch(&self, n: u8) -> OVF_CNT_CH_R {
         #[allow(clippy::no_effect)]
@@ -167,7 +167,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Triggered when the timer(0-3) has reached its maximum counter value."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn timer_ovf(&mut self, n: u8) -> TIMER_OVF_W<INT_RAW_SPEC> {
@@ -201,7 +201,7 @@ impl W {
     }
     #[doc = "Interrupt raw bit for channel (0-5). Triggered when the gradual change of duty has finished."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn duty_chng_end_ch(&mut self, n: u8) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
@@ -247,7 +247,7 @@ impl W {
     }
     #[doc = "Interrupt raw bit for channel (0-5). Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ovf_cnt_ch(&mut self, n: u8) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
@@ -292,7 +292,7 @@ impl W {
         OVF_CNT_CH_W::new(self, 17)
     }
 }
-#[doc = "Raw interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;

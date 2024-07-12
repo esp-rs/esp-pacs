@@ -29,7 +29,7 @@ impl W {
         S_MATCH_W::new(self, 0)
     }
 }
-#[doc = "secondary comparator match value\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`filter_s_comparator_match::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`filter_s_comparator_match::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "secondary comparator match value\n\nYou can [`read`](crate::Reg::read) this register and get [`filter_s_comparator_match::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`filter_s_comparator_match::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FILTER_S_COMPARATOR_MATCH_SPEC;
 impl crate::RegisterSpec for FILTER_S_COMPARATOR_MATCH_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Timestamp data register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timestamp_data::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Timestamp data register\n\nYou can [`read`](crate::Reg::read) this register and get [`timestamp_data::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMESTAMP_DATA_SPEC;
 impl crate::RegisterSpec for TIMESTAMP_DATA_SPEC {
     type Ux = u32;

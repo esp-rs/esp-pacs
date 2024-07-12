@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_1_txlink_dscr_bf1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`_1_txlink_dscr_bf1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _1_TXLINK_DSCR_BF1_SPEC;
 impl crate::RegisterSpec for _1_TXLINK_DSCR_BF1_SPEC {
     type Ux = u32;

@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "UART AFIFO Status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`afifo_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "UART AFIFO Status\n\nYou can [`read`](crate::Reg::read) this register and get [`afifo_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AFIFO_STATUS_SPEC;
 impl crate::RegisterSpec for AFIFO_STATUS_SPEC {
     type Ux = u32;

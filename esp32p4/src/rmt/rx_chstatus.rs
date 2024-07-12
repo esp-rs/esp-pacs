@@ -57,7 +57,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Channel %s status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_chstatus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Channel %s status register\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chstatus::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_CHSTATUS_SPEC;
 impl crate::RegisterSpec for RX_CHSTATUS_SPEC {
     type Ux = u32;

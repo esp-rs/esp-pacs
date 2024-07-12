@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1-Cache Access Fail Interrupt clear register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_acs_fail_int_clr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1-Cache Access Fail Interrupt clear register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_acs_fail_int_clr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_ACS_FAIL_INT_CLR_SPEC;
 impl crate::RegisterSpec for L2_CACHE_ACS_FAIL_INT_CLR_SPEC {
     type Ux = u32;

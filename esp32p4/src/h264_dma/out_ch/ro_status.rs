@@ -49,7 +49,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx reorder status register. Available on CH0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ro_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx reorder status register. Available on CH0\n\nYou can [`read`](crate::Reg::read) this register and get [`ro_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RO_STATUS_SPEC;
 impl crate::RegisterSpec for RO_STATUS_SPEC {
     type Ux = u32;

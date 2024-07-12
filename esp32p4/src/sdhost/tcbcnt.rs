@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Transferred byte count register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tcbcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Transferred byte count register\n\nYou can [`read`](crate::Reg::read) this register and get [`tcbcnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TCBCNT_SPEC;
 impl crate::RegisterSpec for TCBCNT_SPEC {
     type Ux = u32;

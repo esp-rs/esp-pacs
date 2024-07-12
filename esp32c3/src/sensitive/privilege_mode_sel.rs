@@ -29,7 +29,7 @@ impl W {
         PRIVILEGE_MODE_SEL_W::new(self, 0)
     }
 }
-#[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`privilege_mode_sel::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`privilege_mode_sel::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SENSITIVE_PRIVILEGE_MODE_SEL_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`privilege_mode_sel::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`privilege_mode_sel::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRIVILEGE_MODE_SEL_SPEC;
 impl crate::RegisterSpec for PRIVILEGE_MODE_SEL_SPEC {
     type Ux = u32;

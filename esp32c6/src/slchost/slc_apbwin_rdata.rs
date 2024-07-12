@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "*******Description***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slc_apbwin_rdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "*******Description***********\n\nYou can [`read`](crate::Reg::read) this register and get [`slc_apbwin_rdata::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLC_APBWIN_RDATA_SPEC;
 impl crate::RegisterSpec for SLC_APBWIN_RDATA_SPEC {
     type Ux = u32;

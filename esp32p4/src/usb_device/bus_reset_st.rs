@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "USB Bus reset status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bus_reset_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USB Bus reset status register\n\nYou can [`read`](crate::Reg::read) this register and get [`bus_reset_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUS_RESET_ST_SPEC;
 impl crate::RegisterSpec for BUS_RESET_ST_SPEC {
     type Ux = u32;

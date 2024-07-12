@@ -19,15 +19,9 @@ impl core::fmt::Debug for R {
         f.debug_struct("HP_ACTIVE_HP_REGULATOR1")
             .field(
                 "hp_active_hp_regulator_drv_b",
-                &format_args!("{}", self.hp_active_hp_regulator_drv_b().bits()),
+                &self.hp_active_hp_regulator_drv_b(),
             )
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_ACTIVE_HP_REGULATOR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -40,7 +34,7 @@ impl W {
         HP_ACTIVE_HP_REGULATOR_DRV_B_W::new(self, 8)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_active_hp_regulator1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_active_hp_regulator1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_active_hp_regulator1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_active_hp_regulator1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_ACTIVE_HP_REGULATOR1_SPEC;
 impl crate::RegisterSpec for HP_ACTIVE_HP_REGULATOR1_SPEC {
     type Ux = u32;

@@ -45,7 +45,7 @@ impl W {
         MEM_MONITOR_RST_EN_W::new(self, 1)
     }
 }
-#[doc = "MEM_MONITOR configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mem_monitor_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mem_monitor_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MEM_MONITOR configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`mem_monitor_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mem_monitor_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEM_MONITOR_CONF_SPEC;
 impl crate::RegisterSpec for MEM_MONITOR_CONF_SPEC {
     type Ux = u32;

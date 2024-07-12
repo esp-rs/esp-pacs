@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Bypass Cache configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_bypass_cache_conf::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Bypass Cache configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_bypass_cache_conf::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_BYPASS_CACHE_CONF_SPEC;
 impl crate::RegisterSpec for L2_BYPASS_CACHE_CONF_SPEC {
     type Ux = u32;

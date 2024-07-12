@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`infifo_status1_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Receive FIFO status of Rx channel 0\n\nYou can [`read`](crate::Reg::read) this register and get [`infifo_status1_ch::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INFIFO_STATUS1_CH_SPEC;
 impl crate::RegisterSpec for INFIFO_STATUS1_CH_SPEC {
     type Ux = u32;

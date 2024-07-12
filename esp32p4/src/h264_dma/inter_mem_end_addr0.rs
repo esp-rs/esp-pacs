@@ -34,7 +34,7 @@ impl W {
         ACCESS_INTER_MEM_END_ADDR0_W::new(self, 0)
     }
 }
-#[doc = "end address of inter memory range0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`inter_mem_end_addr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inter_mem_end_addr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "end address of inter memory range0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`inter_mem_end_addr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inter_mem_end_addr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTER_MEM_END_ADDR0_SPEC;
 impl crate::RegisterSpec for INTER_MEM_END_ADDR0_SPEC {
     type Ux = u32;

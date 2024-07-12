@@ -31,7 +31,7 @@ impl W {
         SARADC_SAR2_PATT_TAB1_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb_saradc_sar2_patt_tab::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb_saradc_sar2_patt_tab::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`apb_saradc_sar2_patt_tab::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb_saradc_sar2_patt_tab::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB_SARADC_SAR2_PATT_TAB_SPEC;
 impl crate::RegisterSpec for APB_SARADC_SAR2_PATT_TAB_SPEC {
     type Ux = u32;

@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "OUT Endpoint 1 status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_ep1_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "OUT Endpoint 1 status\n\nYou can [`read`](crate::Reg::read) this register and get [`out_ep1_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_EP1_ST_SPEC;
 impl crate::RegisterSpec for OUT_EP1_ST_SPEC {
     type Ux = u32;

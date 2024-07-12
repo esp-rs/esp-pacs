@@ -28,7 +28,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TIMG_RTCCALICFG1_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtccalicfg1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TIMG_RTCCALICFG1_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`rtccalicfg1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTCCALICFG1_SPEC;
 impl crate::RegisterSpec for RTCCALICFG1_SPEC {
     type Ux = u32;

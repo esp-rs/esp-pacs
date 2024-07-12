@@ -797,531 +797,531 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "WR_DIS (r) register accessor: Otp debuger block0 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wr_dis::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wr_dis`] module"]
+#[doc = "WR_DIS (r) register accessor: Otp debuger block0 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`wr_dis::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wr_dis`] module"]
 pub type WR_DIS = crate::Reg<wr_dis::WR_DIS_SPEC>;
 #[doc = "Otp debuger block0 data register1."]
 pub mod wr_dis;
-#[doc = "BLK0_BACKUP1_W1 (r) register accessor: Otp debuger block0 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup1_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w1`] module"]
+#[doc = "BLK0_BACKUP1_W1 (r) register accessor: Otp debuger block0 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w1`] module"]
 pub type BLK0_BACKUP1_W1 = crate::Reg<blk0_backup1_w1::BLK0_BACKUP1_W1_SPEC>;
 #[doc = "Otp debuger block0 data register2."]
 pub mod blk0_backup1_w1;
-#[doc = "BLK0_BACKUP1_W2 (r) register accessor: Otp debuger block0 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup1_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w2`] module"]
+#[doc = "BLK0_BACKUP1_W2 (r) register accessor: Otp debuger block0 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w2`] module"]
 pub type BLK0_BACKUP1_W2 = crate::Reg<blk0_backup1_w2::BLK0_BACKUP1_W2_SPEC>;
 #[doc = "Otp debuger block0 data register3."]
 pub mod blk0_backup1_w2;
-#[doc = "BLK0_BACKUP1_W3 (r) register accessor: Otp debuger block0 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup1_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w3`] module"]
+#[doc = "BLK0_BACKUP1_W3 (r) register accessor: Otp debuger block0 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w3`] module"]
 pub type BLK0_BACKUP1_W3 = crate::Reg<blk0_backup1_w3::BLK0_BACKUP1_W3_SPEC>;
 #[doc = "Otp debuger block0 data register4."]
 pub mod blk0_backup1_w3;
-#[doc = "BLK0_BACKUP1_W4 (r) register accessor: Otp debuger block0 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup1_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w4`] module"]
+#[doc = "BLK0_BACKUP1_W4 (r) register accessor: Otp debuger block0 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w4`] module"]
 pub type BLK0_BACKUP1_W4 = crate::Reg<blk0_backup1_w4::BLK0_BACKUP1_W4_SPEC>;
 #[doc = "Otp debuger block0 data register5."]
 pub mod blk0_backup1_w4;
-#[doc = "BLK0_BACKUP1_W5 (r) register accessor: Otp debuger block0 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup1_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w5`] module"]
+#[doc = "BLK0_BACKUP1_W5 (r) register accessor: Otp debuger block0 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup1_w5`] module"]
 pub type BLK0_BACKUP1_W5 = crate::Reg<blk0_backup1_w5::BLK0_BACKUP1_W5_SPEC>;
 #[doc = "Otp debuger block0 data register6."]
 pub mod blk0_backup1_w5;
-#[doc = "BLK0_BACKUP2_W1 (r) register accessor: Otp debuger block0 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w1`] module"]
+#[doc = "BLK0_BACKUP2_W1 (r) register accessor: Otp debuger block0 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w1`] module"]
 pub type BLK0_BACKUP2_W1 = crate::Reg<blk0_backup2_w1::BLK0_BACKUP2_W1_SPEC>;
 #[doc = "Otp debuger block0 data register7."]
 pub mod blk0_backup2_w1;
-#[doc = "BLK0_BACKUP2_W2 (r) register accessor: Otp debuger block0 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w2`] module"]
+#[doc = "BLK0_BACKUP2_W2 (r) register accessor: Otp debuger block0 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w2`] module"]
 pub type BLK0_BACKUP2_W2 = crate::Reg<blk0_backup2_w2::BLK0_BACKUP2_W2_SPEC>;
 #[doc = "Otp debuger block0 data register8."]
 pub mod blk0_backup2_w2;
-#[doc = "BLK0_BACKUP2_W3 (r) register accessor: Otp debuger block0 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w3`] module"]
+#[doc = "BLK0_BACKUP2_W3 (r) register accessor: Otp debuger block0 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w3`] module"]
 pub type BLK0_BACKUP2_W3 = crate::Reg<blk0_backup2_w3::BLK0_BACKUP2_W3_SPEC>;
 #[doc = "Otp debuger block0 data register9."]
 pub mod blk0_backup2_w3;
-#[doc = "BLK0_BACKUP2_W4 (r) register accessor: Otp debuger block0 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w4`] module"]
+#[doc = "BLK0_BACKUP2_W4 (r) register accessor: Otp debuger block0 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w4`] module"]
 pub type BLK0_BACKUP2_W4 = crate::Reg<blk0_backup2_w4::BLK0_BACKUP2_W4_SPEC>;
 #[doc = "Otp debuger block0 data register10."]
 pub mod blk0_backup2_w4;
-#[doc = "BLK0_BACKUP2_W5 (r) register accessor: Otp debuger block0 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w5`] module"]
+#[doc = "BLK0_BACKUP2_W5 (r) register accessor: Otp debuger block0 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup2_w5`] module"]
 pub type BLK0_BACKUP2_W5 = crate::Reg<blk0_backup2_w5::BLK0_BACKUP2_W5_SPEC>;
 #[doc = "Otp debuger block0 data register11."]
 pub mod blk0_backup2_w5;
-#[doc = "BLK0_BACKUP3_W1 (r) register accessor: Otp debuger block0 data register12.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup3_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w1`] module"]
+#[doc = "BLK0_BACKUP3_W1 (r) register accessor: Otp debuger block0 data register12.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w1`] module"]
 pub type BLK0_BACKUP3_W1 = crate::Reg<blk0_backup3_w1::BLK0_BACKUP3_W1_SPEC>;
 #[doc = "Otp debuger block0 data register12."]
 pub mod blk0_backup3_w1;
-#[doc = "BLK0_BACKUP3_W2 (r) register accessor: Otp debuger block0 data register13.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup3_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w2`] module"]
+#[doc = "BLK0_BACKUP3_W2 (r) register accessor: Otp debuger block0 data register13.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w2`] module"]
 pub type BLK0_BACKUP3_W2 = crate::Reg<blk0_backup3_w2::BLK0_BACKUP3_W2_SPEC>;
 #[doc = "Otp debuger block0 data register13."]
 pub mod blk0_backup3_w2;
-#[doc = "BLK0_BACKUP3_W3 (r) register accessor: Otp debuger block0 data register14.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup3_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w3`] module"]
+#[doc = "BLK0_BACKUP3_W3 (r) register accessor: Otp debuger block0 data register14.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w3`] module"]
 pub type BLK0_BACKUP3_W3 = crate::Reg<blk0_backup3_w3::BLK0_BACKUP3_W3_SPEC>;
 #[doc = "Otp debuger block0 data register14."]
 pub mod blk0_backup3_w3;
-#[doc = "BLK0_BACKUP3_W4 (r) register accessor: Otp debuger block0 data register15.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup3_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w4`] module"]
+#[doc = "BLK0_BACKUP3_W4 (r) register accessor: Otp debuger block0 data register15.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w4`] module"]
 pub type BLK0_BACKUP3_W4 = crate::Reg<blk0_backup3_w4::BLK0_BACKUP3_W4_SPEC>;
 #[doc = "Otp debuger block0 data register15."]
 pub mod blk0_backup3_w4;
-#[doc = "BLK0_BACKUP3_W5 (r) register accessor: Otp debuger block0 data register16.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup3_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w5`] module"]
+#[doc = "BLK0_BACKUP3_W5 (r) register accessor: Otp debuger block0 data register16.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup3_w5`] module"]
 pub type BLK0_BACKUP3_W5 = crate::Reg<blk0_backup3_w5::BLK0_BACKUP3_W5_SPEC>;
 #[doc = "Otp debuger block0 data register16."]
 pub mod blk0_backup3_w5;
-#[doc = "BLK0_BACKUP4_W1 (r) register accessor: Otp debuger block0 data register17.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup4_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w1`] module"]
+#[doc = "BLK0_BACKUP4_W1 (r) register accessor: Otp debuger block0 data register17.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w1`] module"]
 pub type BLK0_BACKUP4_W1 = crate::Reg<blk0_backup4_w1::BLK0_BACKUP4_W1_SPEC>;
 #[doc = "Otp debuger block0 data register17."]
 pub mod blk0_backup4_w1;
-#[doc = "BLK0_BACKUP4_W2 (r) register accessor: Otp debuger block0 data register18.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup4_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w2`] module"]
+#[doc = "BLK0_BACKUP4_W2 (r) register accessor: Otp debuger block0 data register18.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w2`] module"]
 pub type BLK0_BACKUP4_W2 = crate::Reg<blk0_backup4_w2::BLK0_BACKUP4_W2_SPEC>;
 #[doc = "Otp debuger block0 data register18."]
 pub mod blk0_backup4_w2;
-#[doc = "BLK0_BACKUP4_W3 (r) register accessor: Otp debuger block0 data register19.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup4_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w3`] module"]
+#[doc = "BLK0_BACKUP4_W3 (r) register accessor: Otp debuger block0 data register19.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w3`] module"]
 pub type BLK0_BACKUP4_W3 = crate::Reg<blk0_backup4_w3::BLK0_BACKUP4_W3_SPEC>;
 #[doc = "Otp debuger block0 data register19."]
 pub mod blk0_backup4_w3;
-#[doc = "BLK0_BACKUP4_W4 (r) register accessor: Otp debuger block0 data register20.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup4_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w4`] module"]
+#[doc = "BLK0_BACKUP4_W4 (r) register accessor: Otp debuger block0 data register20.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w4`] module"]
 pub type BLK0_BACKUP4_W4 = crate::Reg<blk0_backup4_w4::BLK0_BACKUP4_W4_SPEC>;
 #[doc = "Otp debuger block0 data register20."]
 pub mod blk0_backup4_w4;
-#[doc = "BLK0_BACKUP4_W5 (r) register accessor: Otp debuger block0 data register21.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup4_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w5`] module"]
+#[doc = "BLK0_BACKUP4_W5 (r) register accessor: Otp debuger block0 data register21.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk0_backup4_w5`] module"]
 pub type BLK0_BACKUP4_W5 = crate::Reg<blk0_backup4_w5::BLK0_BACKUP4_W5_SPEC>;
 #[doc = "Otp debuger block0 data register21."]
 pub mod blk0_backup4_w5;
-#[doc = "BLK1_W1 (r) register accessor: Otp debuger block1 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w1`] module"]
+#[doc = "BLK1_W1 (r) register accessor: Otp debuger block1 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w1`] module"]
 pub type BLK1_W1 = crate::Reg<blk1_w1::BLK1_W1_SPEC>;
 #[doc = "Otp debuger block1 data register1."]
 pub mod blk1_w1;
-#[doc = "BLK1_W2 (r) register accessor: Otp debuger block1 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w2`] module"]
+#[doc = "BLK1_W2 (r) register accessor: Otp debuger block1 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w2`] module"]
 pub type BLK1_W2 = crate::Reg<blk1_w2::BLK1_W2_SPEC>;
 #[doc = "Otp debuger block1 data register2."]
 pub mod blk1_w2;
-#[doc = "BLK1_W3 (r) register accessor: Otp debuger block1 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w3`] module"]
+#[doc = "BLK1_W3 (r) register accessor: Otp debuger block1 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w3`] module"]
 pub type BLK1_W3 = crate::Reg<blk1_w3::BLK1_W3_SPEC>;
 #[doc = "Otp debuger block1 data register3."]
 pub mod blk1_w3;
-#[doc = "BLK1_W4 (r) register accessor: Otp debuger block1 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w4`] module"]
+#[doc = "BLK1_W4 (r) register accessor: Otp debuger block1 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w4`] module"]
 pub type BLK1_W4 = crate::Reg<blk1_w4::BLK1_W4_SPEC>;
 #[doc = "Otp debuger block1 data register4."]
 pub mod blk1_w4;
-#[doc = "BLK1_W5 (r) register accessor: Otp debuger block1 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w5`] module"]
+#[doc = "BLK1_W5 (r) register accessor: Otp debuger block1 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w5`] module"]
 pub type BLK1_W5 = crate::Reg<blk1_w5::BLK1_W5_SPEC>;
 #[doc = "Otp debuger block1 data register5."]
 pub mod blk1_w5;
-#[doc = "BLK1_W6 (r) register accessor: Otp debuger block1 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w6`] module"]
+#[doc = "BLK1_W6 (r) register accessor: Otp debuger block1 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w6`] module"]
 pub type BLK1_W6 = crate::Reg<blk1_w6::BLK1_W6_SPEC>;
 #[doc = "Otp debuger block1 data register6."]
 pub mod blk1_w6;
-#[doc = "BLK1_W7 (r) register accessor: Otp debuger block1 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w7`] module"]
+#[doc = "BLK1_W7 (r) register accessor: Otp debuger block1 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w7`] module"]
 pub type BLK1_W7 = crate::Reg<blk1_w7::BLK1_W7_SPEC>;
 #[doc = "Otp debuger block1 data register7."]
 pub mod blk1_w7;
-#[doc = "BLK1_W8 (r) register accessor: Otp debuger block1 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w8`] module"]
+#[doc = "BLK1_W8 (r) register accessor: Otp debuger block1 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w8`] module"]
 pub type BLK1_W8 = crate::Reg<blk1_w8::BLK1_W8_SPEC>;
 #[doc = "Otp debuger block1 data register8."]
 pub mod blk1_w8;
-#[doc = "BLK1_W9 (r) register accessor: Otp debuger block1 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk1_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w9`] module"]
+#[doc = "BLK1_W9 (r) register accessor: Otp debuger block1 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk1_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk1_w9`] module"]
 pub type BLK1_W9 = crate::Reg<blk1_w9::BLK1_W9_SPEC>;
 #[doc = "Otp debuger block1 data register9."]
 pub mod blk1_w9;
-#[doc = "BLK2_W1 (r) register accessor: Otp debuger block2 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w1`] module"]
+#[doc = "BLK2_W1 (r) register accessor: Otp debuger block2 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w1`] module"]
 pub type BLK2_W1 = crate::Reg<blk2_w1::BLK2_W1_SPEC>;
 #[doc = "Otp debuger block2 data register1."]
 pub mod blk2_w1;
-#[doc = "BLK2_W2 (r) register accessor: Otp debuger block2 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w2`] module"]
+#[doc = "BLK2_W2 (r) register accessor: Otp debuger block2 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w2`] module"]
 pub type BLK2_W2 = crate::Reg<blk2_w2::BLK2_W2_SPEC>;
 #[doc = "Otp debuger block2 data register2."]
 pub mod blk2_w2;
-#[doc = "BLK2_W3 (r) register accessor: Otp debuger block2 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w3`] module"]
+#[doc = "BLK2_W3 (r) register accessor: Otp debuger block2 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w3`] module"]
 pub type BLK2_W3 = crate::Reg<blk2_w3::BLK2_W3_SPEC>;
 #[doc = "Otp debuger block2 data register3."]
 pub mod blk2_w3;
-#[doc = "BLK2_W4 (r) register accessor: Otp debuger block2 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w4`] module"]
+#[doc = "BLK2_W4 (r) register accessor: Otp debuger block2 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w4`] module"]
 pub type BLK2_W4 = crate::Reg<blk2_w4::BLK2_W4_SPEC>;
 #[doc = "Otp debuger block2 data register4."]
 pub mod blk2_w4;
-#[doc = "BLK2_W5 (r) register accessor: Otp debuger block2 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w5`] module"]
+#[doc = "BLK2_W5 (r) register accessor: Otp debuger block2 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w5`] module"]
 pub type BLK2_W5 = crate::Reg<blk2_w5::BLK2_W5_SPEC>;
 #[doc = "Otp debuger block2 data register5."]
 pub mod blk2_w5;
-#[doc = "BLK2_W6 (r) register accessor: Otp debuger block2 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w6`] module"]
+#[doc = "BLK2_W6 (r) register accessor: Otp debuger block2 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w6`] module"]
 pub type BLK2_W6 = crate::Reg<blk2_w6::BLK2_W6_SPEC>;
 #[doc = "Otp debuger block2 data register6."]
 pub mod blk2_w6;
-#[doc = "BLK2_W7 (r) register accessor: Otp debuger block2 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w7`] module"]
+#[doc = "BLK2_W7 (r) register accessor: Otp debuger block2 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w7`] module"]
 pub type BLK2_W7 = crate::Reg<blk2_w7::BLK2_W7_SPEC>;
 #[doc = "Otp debuger block2 data register7."]
 pub mod blk2_w7;
-#[doc = "BLK2_W8 (r) register accessor: Otp debuger block2 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w8`] module"]
+#[doc = "BLK2_W8 (r) register accessor: Otp debuger block2 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w8`] module"]
 pub type BLK2_W8 = crate::Reg<blk2_w8::BLK2_W8_SPEC>;
 #[doc = "Otp debuger block2 data register8."]
 pub mod blk2_w8;
-#[doc = "BLK2_W9 (r) register accessor: Otp debuger block2 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w9`] module"]
+#[doc = "BLK2_W9 (r) register accessor: Otp debuger block2 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w9`] module"]
 pub type BLK2_W9 = crate::Reg<blk2_w9::BLK2_W9_SPEC>;
 #[doc = "Otp debuger block2 data register9."]
 pub mod blk2_w9;
-#[doc = "BLK2_W10 (r) register accessor: Otp debuger block2 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w10`] module"]
+#[doc = "BLK2_W10 (r) register accessor: Otp debuger block2 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w10`] module"]
 pub type BLK2_W10 = crate::Reg<blk2_w10::BLK2_W10_SPEC>;
 #[doc = "Otp debuger block2 data register10."]
 pub mod blk2_w10;
-#[doc = "BLK2_W11 (r) register accessor: Otp debuger block2 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk2_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w11`] module"]
+#[doc = "BLK2_W11 (r) register accessor: Otp debuger block2 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk2_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk2_w11`] module"]
 pub type BLK2_W11 = crate::Reg<blk2_w11::BLK2_W11_SPEC>;
 #[doc = "Otp debuger block2 data register11."]
 pub mod blk2_w11;
-#[doc = "BLK3_W1 (r) register accessor: Otp debuger block3 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w1`] module"]
+#[doc = "BLK3_W1 (r) register accessor: Otp debuger block3 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w1`] module"]
 pub type BLK3_W1 = crate::Reg<blk3_w1::BLK3_W1_SPEC>;
 #[doc = "Otp debuger block3 data register1."]
 pub mod blk3_w1;
-#[doc = "BLK3_W2 (r) register accessor: Otp debuger block3 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w2`] module"]
+#[doc = "BLK3_W2 (r) register accessor: Otp debuger block3 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w2`] module"]
 pub type BLK3_W2 = crate::Reg<blk3_w2::BLK3_W2_SPEC>;
 #[doc = "Otp debuger block3 data register2."]
 pub mod blk3_w2;
-#[doc = "BLK3_W3 (r) register accessor: Otp debuger block3 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w3`] module"]
+#[doc = "BLK3_W3 (r) register accessor: Otp debuger block3 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w3`] module"]
 pub type BLK3_W3 = crate::Reg<blk3_w3::BLK3_W3_SPEC>;
 #[doc = "Otp debuger block3 data register3."]
 pub mod blk3_w3;
-#[doc = "BLK3_W4 (r) register accessor: Otp debuger block3 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w4`] module"]
+#[doc = "BLK3_W4 (r) register accessor: Otp debuger block3 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w4`] module"]
 pub type BLK3_W4 = crate::Reg<blk3_w4::BLK3_W4_SPEC>;
 #[doc = "Otp debuger block3 data register4."]
 pub mod blk3_w4;
-#[doc = "BLK3_W5 (r) register accessor: Otp debuger block3 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w5`] module"]
+#[doc = "BLK3_W5 (r) register accessor: Otp debuger block3 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w5`] module"]
 pub type BLK3_W5 = crate::Reg<blk3_w5::BLK3_W5_SPEC>;
 #[doc = "Otp debuger block3 data register5."]
 pub mod blk3_w5;
-#[doc = "BLK3_W6 (r) register accessor: Otp debuger block3 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w6`] module"]
+#[doc = "BLK3_W6 (r) register accessor: Otp debuger block3 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w6`] module"]
 pub type BLK3_W6 = crate::Reg<blk3_w6::BLK3_W6_SPEC>;
 #[doc = "Otp debuger block3 data register6."]
 pub mod blk3_w6;
-#[doc = "BLK3_W7 (r) register accessor: Otp debuger block3 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w7`] module"]
+#[doc = "BLK3_W7 (r) register accessor: Otp debuger block3 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w7`] module"]
 pub type BLK3_W7 = crate::Reg<blk3_w7::BLK3_W7_SPEC>;
 #[doc = "Otp debuger block3 data register7."]
 pub mod blk3_w7;
-#[doc = "BLK3_W8 (r) register accessor: Otp debuger block3 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w8`] module"]
+#[doc = "BLK3_W8 (r) register accessor: Otp debuger block3 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w8`] module"]
 pub type BLK3_W8 = crate::Reg<blk3_w8::BLK3_W8_SPEC>;
 #[doc = "Otp debuger block3 data register8."]
 pub mod blk3_w8;
-#[doc = "BLK3_W9 (r) register accessor: Otp debuger block3 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w9`] module"]
+#[doc = "BLK3_W9 (r) register accessor: Otp debuger block3 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w9`] module"]
 pub type BLK3_W9 = crate::Reg<blk3_w9::BLK3_W9_SPEC>;
 #[doc = "Otp debuger block3 data register9."]
 pub mod blk3_w9;
-#[doc = "BLK3_W10 (r) register accessor: Otp debuger block3 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w10`] module"]
+#[doc = "BLK3_W10 (r) register accessor: Otp debuger block3 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w10`] module"]
 pub type BLK3_W10 = crate::Reg<blk3_w10::BLK3_W10_SPEC>;
 #[doc = "Otp debuger block3 data register10."]
 pub mod blk3_w10;
-#[doc = "BLK3_W11 (r) register accessor: Otp debuger block3 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk3_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w11`] module"]
+#[doc = "BLK3_W11 (r) register accessor: Otp debuger block3 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk3_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk3_w11`] module"]
 pub type BLK3_W11 = crate::Reg<blk3_w11::BLK3_W11_SPEC>;
 #[doc = "Otp debuger block3 data register11."]
 pub mod blk3_w11;
-#[doc = "BLK4_W1 (r) register accessor: Otp debuger block4 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w1`] module"]
+#[doc = "BLK4_W1 (r) register accessor: Otp debuger block4 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w1`] module"]
 pub type BLK4_W1 = crate::Reg<blk4_w1::BLK4_W1_SPEC>;
 #[doc = "Otp debuger block4 data register1."]
 pub mod blk4_w1;
-#[doc = "BLK4_W2 (r) register accessor: Otp debuger block4 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w2`] module"]
+#[doc = "BLK4_W2 (r) register accessor: Otp debuger block4 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w2`] module"]
 pub type BLK4_W2 = crate::Reg<blk4_w2::BLK4_W2_SPEC>;
 #[doc = "Otp debuger block4 data register2."]
 pub mod blk4_w2;
-#[doc = "BLK4_W3 (r) register accessor: Otp debuger block4 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w3`] module"]
+#[doc = "BLK4_W3 (r) register accessor: Otp debuger block4 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w3`] module"]
 pub type BLK4_W3 = crate::Reg<blk4_w3::BLK4_W3_SPEC>;
 #[doc = "Otp debuger block4 data register3."]
 pub mod blk4_w3;
-#[doc = "BLK4_W4 (r) register accessor: Otp debuger block4 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w4`] module"]
+#[doc = "BLK4_W4 (r) register accessor: Otp debuger block4 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w4`] module"]
 pub type BLK4_W4 = crate::Reg<blk4_w4::BLK4_W4_SPEC>;
 #[doc = "Otp debuger block4 data register4."]
 pub mod blk4_w4;
-#[doc = "BLK4_W5 (r) register accessor: Otp debuger block4 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w5`] module"]
+#[doc = "BLK4_W5 (r) register accessor: Otp debuger block4 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w5`] module"]
 pub type BLK4_W5 = crate::Reg<blk4_w5::BLK4_W5_SPEC>;
 #[doc = "Otp debuger block4 data register5."]
 pub mod blk4_w5;
-#[doc = "BLK4_W6 (r) register accessor: Otp debuger block4 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w6`] module"]
+#[doc = "BLK4_W6 (r) register accessor: Otp debuger block4 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w6`] module"]
 pub type BLK4_W6 = crate::Reg<blk4_w6::BLK4_W6_SPEC>;
 #[doc = "Otp debuger block4 data register6."]
 pub mod blk4_w6;
-#[doc = "BLK4_W7 (r) register accessor: Otp debuger block4 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w7`] module"]
+#[doc = "BLK4_W7 (r) register accessor: Otp debuger block4 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w7`] module"]
 pub type BLK4_W7 = crate::Reg<blk4_w7::BLK4_W7_SPEC>;
 #[doc = "Otp debuger block4 data register7."]
 pub mod blk4_w7;
-#[doc = "BLK4_W8 (r) register accessor: Otp debuger block4 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w8`] module"]
+#[doc = "BLK4_W8 (r) register accessor: Otp debuger block4 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w8`] module"]
 pub type BLK4_W8 = crate::Reg<blk4_w8::BLK4_W8_SPEC>;
 #[doc = "Otp debuger block4 data register8."]
 pub mod blk4_w8;
-#[doc = "BLK4_W9 (r) register accessor: Otp debuger block4 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w9`] module"]
+#[doc = "BLK4_W9 (r) register accessor: Otp debuger block4 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w9`] module"]
 pub type BLK4_W9 = crate::Reg<blk4_w9::BLK4_W9_SPEC>;
 #[doc = "Otp debuger block4 data register9."]
 pub mod blk4_w9;
-#[doc = "BLK4_W10 (r) register accessor: Otp debuger block4 data registe10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w10`] module"]
+#[doc = "BLK4_W10 (r) register accessor: Otp debuger block4 data registe10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w10`] module"]
 pub type BLK4_W10 = crate::Reg<blk4_w10::BLK4_W10_SPEC>;
 #[doc = "Otp debuger block4 data registe10."]
 pub mod blk4_w10;
-#[doc = "BLK4_W11 (r) register accessor: Otp debuger block4 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk4_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w11`] module"]
+#[doc = "BLK4_W11 (r) register accessor: Otp debuger block4 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk4_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk4_w11`] module"]
 pub type BLK4_W11 = crate::Reg<blk4_w11::BLK4_W11_SPEC>;
 #[doc = "Otp debuger block4 data register11."]
 pub mod blk4_w11;
-#[doc = "BLK5_W1 (r) register accessor: Otp debuger block5 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w1`] module"]
+#[doc = "BLK5_W1 (r) register accessor: Otp debuger block5 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w1`] module"]
 pub type BLK5_W1 = crate::Reg<blk5_w1::BLK5_W1_SPEC>;
 #[doc = "Otp debuger block5 data register1."]
 pub mod blk5_w1;
-#[doc = "BLK5_W2 (r) register accessor: Otp debuger block5 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w2`] module"]
+#[doc = "BLK5_W2 (r) register accessor: Otp debuger block5 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w2`] module"]
 pub type BLK5_W2 = crate::Reg<blk5_w2::BLK5_W2_SPEC>;
 #[doc = "Otp debuger block5 data register2."]
 pub mod blk5_w2;
-#[doc = "BLK5_W3 (r) register accessor: Otp debuger block5 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w3`] module"]
+#[doc = "BLK5_W3 (r) register accessor: Otp debuger block5 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w3`] module"]
 pub type BLK5_W3 = crate::Reg<blk5_w3::BLK5_W3_SPEC>;
 #[doc = "Otp debuger block5 data register3."]
 pub mod blk5_w3;
-#[doc = "BLK5_W4 (r) register accessor: Otp debuger block5 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w4`] module"]
+#[doc = "BLK5_W4 (r) register accessor: Otp debuger block5 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w4`] module"]
 pub type BLK5_W4 = crate::Reg<blk5_w4::BLK5_W4_SPEC>;
 #[doc = "Otp debuger block5 data register4."]
 pub mod blk5_w4;
-#[doc = "BLK5_W5 (r) register accessor: Otp debuger block5 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w5`] module"]
+#[doc = "BLK5_W5 (r) register accessor: Otp debuger block5 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w5`] module"]
 pub type BLK5_W5 = crate::Reg<blk5_w5::BLK5_W5_SPEC>;
 #[doc = "Otp debuger block5 data register5."]
 pub mod blk5_w5;
-#[doc = "BLK5_W6 (r) register accessor: Otp debuger block5 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w6`] module"]
+#[doc = "BLK5_W6 (r) register accessor: Otp debuger block5 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w6`] module"]
 pub type BLK5_W6 = crate::Reg<blk5_w6::BLK5_W6_SPEC>;
 #[doc = "Otp debuger block5 data register6."]
 pub mod blk5_w6;
-#[doc = "BLK5_W7 (r) register accessor: Otp debuger block5 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w7`] module"]
+#[doc = "BLK5_W7 (r) register accessor: Otp debuger block5 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w7`] module"]
 pub type BLK5_W7 = crate::Reg<blk5_w7::BLK5_W7_SPEC>;
 #[doc = "Otp debuger block5 data register7."]
 pub mod blk5_w7;
-#[doc = "BLK5_W8 (r) register accessor: Otp debuger block5 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w8`] module"]
+#[doc = "BLK5_W8 (r) register accessor: Otp debuger block5 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w8`] module"]
 pub type BLK5_W8 = crate::Reg<blk5_w8::BLK5_W8_SPEC>;
 #[doc = "Otp debuger block5 data register8."]
 pub mod blk5_w8;
-#[doc = "BLK5_W9 (r) register accessor: Otp debuger block5 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w9`] module"]
+#[doc = "BLK5_W9 (r) register accessor: Otp debuger block5 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w9`] module"]
 pub type BLK5_W9 = crate::Reg<blk5_w9::BLK5_W9_SPEC>;
 #[doc = "Otp debuger block5 data register9."]
 pub mod blk5_w9;
-#[doc = "BLK5_W10 (r) register accessor: Otp debuger block5 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w10`] module"]
+#[doc = "BLK5_W10 (r) register accessor: Otp debuger block5 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w10`] module"]
 pub type BLK5_W10 = crate::Reg<blk5_w10::BLK5_W10_SPEC>;
 #[doc = "Otp debuger block5 data register10."]
 pub mod blk5_w10;
-#[doc = "BLK5_W11 (r) register accessor: Otp debuger block5 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk5_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w11`] module"]
+#[doc = "BLK5_W11 (r) register accessor: Otp debuger block5 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk5_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk5_w11`] module"]
 pub type BLK5_W11 = crate::Reg<blk5_w11::BLK5_W11_SPEC>;
 #[doc = "Otp debuger block5 data register11."]
 pub mod blk5_w11;
-#[doc = "BLK6_W1 (r) register accessor: Otp debuger block6 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w1`] module"]
+#[doc = "BLK6_W1 (r) register accessor: Otp debuger block6 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w1`] module"]
 pub type BLK6_W1 = crate::Reg<blk6_w1::BLK6_W1_SPEC>;
 #[doc = "Otp debuger block6 data register1."]
 pub mod blk6_w1;
-#[doc = "BLK6_W2 (r) register accessor: Otp debuger block6 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w2`] module"]
+#[doc = "BLK6_W2 (r) register accessor: Otp debuger block6 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w2`] module"]
 pub type BLK6_W2 = crate::Reg<blk6_w2::BLK6_W2_SPEC>;
 #[doc = "Otp debuger block6 data register2."]
 pub mod blk6_w2;
-#[doc = "BLK6_W3 (r) register accessor: Otp debuger block6 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w3`] module"]
+#[doc = "BLK6_W3 (r) register accessor: Otp debuger block6 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w3`] module"]
 pub type BLK6_W3 = crate::Reg<blk6_w3::BLK6_W3_SPEC>;
 #[doc = "Otp debuger block6 data register3."]
 pub mod blk6_w3;
-#[doc = "BLK6_W4 (r) register accessor: Otp debuger block6 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w4`] module"]
+#[doc = "BLK6_W4 (r) register accessor: Otp debuger block6 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w4`] module"]
 pub type BLK6_W4 = crate::Reg<blk6_w4::BLK6_W4_SPEC>;
 #[doc = "Otp debuger block6 data register4."]
 pub mod blk6_w4;
-#[doc = "BLK6_W5 (r) register accessor: Otp debuger block6 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w5`] module"]
+#[doc = "BLK6_W5 (r) register accessor: Otp debuger block6 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w5`] module"]
 pub type BLK6_W5 = crate::Reg<blk6_w5::BLK6_W5_SPEC>;
 #[doc = "Otp debuger block6 data register5."]
 pub mod blk6_w5;
-#[doc = "BLK6_W6 (r) register accessor: Otp debuger block6 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w6`] module"]
+#[doc = "BLK6_W6 (r) register accessor: Otp debuger block6 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w6`] module"]
 pub type BLK6_W6 = crate::Reg<blk6_w6::BLK6_W6_SPEC>;
 #[doc = "Otp debuger block6 data register6."]
 pub mod blk6_w6;
-#[doc = "BLK6_W7 (r) register accessor: Otp debuger block6 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w7`] module"]
+#[doc = "BLK6_W7 (r) register accessor: Otp debuger block6 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w7`] module"]
 pub type BLK6_W7 = crate::Reg<blk6_w7::BLK6_W7_SPEC>;
 #[doc = "Otp debuger block6 data register7."]
 pub mod blk6_w7;
-#[doc = "BLK6_W8 (r) register accessor: Otp debuger block6 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w8`] module"]
+#[doc = "BLK6_W8 (r) register accessor: Otp debuger block6 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w8`] module"]
 pub type BLK6_W8 = crate::Reg<blk6_w8::BLK6_W8_SPEC>;
 #[doc = "Otp debuger block6 data register8."]
 pub mod blk6_w8;
-#[doc = "BLK6_W9 (r) register accessor: Otp debuger block6 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w9`] module"]
+#[doc = "BLK6_W9 (r) register accessor: Otp debuger block6 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w9`] module"]
 pub type BLK6_W9 = crate::Reg<blk6_w9::BLK6_W9_SPEC>;
 #[doc = "Otp debuger block6 data register9."]
 pub mod blk6_w9;
-#[doc = "BLK6_W10 (r) register accessor: Otp debuger block6 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w10`] module"]
+#[doc = "BLK6_W10 (r) register accessor: Otp debuger block6 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w10`] module"]
 pub type BLK6_W10 = crate::Reg<blk6_w10::BLK6_W10_SPEC>;
 #[doc = "Otp debuger block6 data register10."]
 pub mod blk6_w10;
-#[doc = "BLK6_W11 (r) register accessor: Otp debuger block6 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk6_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w11`] module"]
+#[doc = "BLK6_W11 (r) register accessor: Otp debuger block6 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk6_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk6_w11`] module"]
 pub type BLK6_W11 = crate::Reg<blk6_w11::BLK6_W11_SPEC>;
 #[doc = "Otp debuger block6 data register11."]
 pub mod blk6_w11;
-#[doc = "BLK7_W1 (r) register accessor: Otp debuger block7 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w1`] module"]
+#[doc = "BLK7_W1 (r) register accessor: Otp debuger block7 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w1`] module"]
 pub type BLK7_W1 = crate::Reg<blk7_w1::BLK7_W1_SPEC>;
 #[doc = "Otp debuger block7 data register1."]
 pub mod blk7_w1;
-#[doc = "BLK7_W2 (r) register accessor: Otp debuger block7 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w2`] module"]
+#[doc = "BLK7_W2 (r) register accessor: Otp debuger block7 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w2`] module"]
 pub type BLK7_W2 = crate::Reg<blk7_w2::BLK7_W2_SPEC>;
 #[doc = "Otp debuger block7 data register2."]
 pub mod blk7_w2;
-#[doc = "BLK7_W3 (r) register accessor: Otp debuger block7 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w3`] module"]
+#[doc = "BLK7_W3 (r) register accessor: Otp debuger block7 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w3`] module"]
 pub type BLK7_W3 = crate::Reg<blk7_w3::BLK7_W3_SPEC>;
 #[doc = "Otp debuger block7 data register3."]
 pub mod blk7_w3;
-#[doc = "BLK7_W4 (r) register accessor: Otp debuger block7 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w4`] module"]
+#[doc = "BLK7_W4 (r) register accessor: Otp debuger block7 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w4`] module"]
 pub type BLK7_W4 = crate::Reg<blk7_w4::BLK7_W4_SPEC>;
 #[doc = "Otp debuger block7 data register4."]
 pub mod blk7_w4;
-#[doc = "BLK7_W5 (r) register accessor: Otp debuger block7 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w5`] module"]
+#[doc = "BLK7_W5 (r) register accessor: Otp debuger block7 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w5`] module"]
 pub type BLK7_W5 = crate::Reg<blk7_w5::BLK7_W5_SPEC>;
 #[doc = "Otp debuger block7 data register5."]
 pub mod blk7_w5;
-#[doc = "BLK7_W6 (r) register accessor: Otp debuger block7 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w6`] module"]
+#[doc = "BLK7_W6 (r) register accessor: Otp debuger block7 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w6`] module"]
 pub type BLK7_W6 = crate::Reg<blk7_w6::BLK7_W6_SPEC>;
 #[doc = "Otp debuger block7 data register6."]
 pub mod blk7_w6;
-#[doc = "BLK7_W7 (r) register accessor: Otp debuger block7 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w7`] module"]
+#[doc = "BLK7_W7 (r) register accessor: Otp debuger block7 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w7`] module"]
 pub type BLK7_W7 = crate::Reg<blk7_w7::BLK7_W7_SPEC>;
 #[doc = "Otp debuger block7 data register7."]
 pub mod blk7_w7;
-#[doc = "BLK7_W8 (r) register accessor: Otp debuger block7 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w8`] module"]
+#[doc = "BLK7_W8 (r) register accessor: Otp debuger block7 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w8`] module"]
 pub type BLK7_W8 = crate::Reg<blk7_w8::BLK7_W8_SPEC>;
 #[doc = "Otp debuger block7 data register8."]
 pub mod blk7_w8;
-#[doc = "BLK7_W9 (r) register accessor: Otp debuger block7 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w9`] module"]
+#[doc = "BLK7_W9 (r) register accessor: Otp debuger block7 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w9`] module"]
 pub type BLK7_W9 = crate::Reg<blk7_w9::BLK7_W9_SPEC>;
 #[doc = "Otp debuger block7 data register9."]
 pub mod blk7_w9;
-#[doc = "BLK7_W10 (r) register accessor: Otp debuger block7 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w10`] module"]
+#[doc = "BLK7_W10 (r) register accessor: Otp debuger block7 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w10`] module"]
 pub type BLK7_W10 = crate::Reg<blk7_w10::BLK7_W10_SPEC>;
 #[doc = "Otp debuger block7 data register10."]
 pub mod blk7_w10;
-#[doc = "BLK7_W11 (r) register accessor: Otp debuger block7 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk7_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w11`] module"]
+#[doc = "BLK7_W11 (r) register accessor: Otp debuger block7 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk7_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk7_w11`] module"]
 pub type BLK7_W11 = crate::Reg<blk7_w11::BLK7_W11_SPEC>;
 #[doc = "Otp debuger block7 data register11."]
 pub mod blk7_w11;
-#[doc = "BLK8_W1 (r) register accessor: Otp debuger block8 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w1`] module"]
+#[doc = "BLK8_W1 (r) register accessor: Otp debuger block8 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w1`] module"]
 pub type BLK8_W1 = crate::Reg<blk8_w1::BLK8_W1_SPEC>;
 #[doc = "Otp debuger block8 data register1."]
 pub mod blk8_w1;
-#[doc = "BLK8_W2 (r) register accessor: Otp debuger block8 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w2`] module"]
+#[doc = "BLK8_W2 (r) register accessor: Otp debuger block8 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w2`] module"]
 pub type BLK8_W2 = crate::Reg<blk8_w2::BLK8_W2_SPEC>;
 #[doc = "Otp debuger block8 data register2."]
 pub mod blk8_w2;
-#[doc = "BLK8_W3 (r) register accessor: Otp debuger block8 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w3`] module"]
+#[doc = "BLK8_W3 (r) register accessor: Otp debuger block8 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w3`] module"]
 pub type BLK8_W3 = crate::Reg<blk8_w3::BLK8_W3_SPEC>;
 #[doc = "Otp debuger block8 data register3."]
 pub mod blk8_w3;
-#[doc = "BLK8_W4 (r) register accessor: Otp debuger block8 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w4`] module"]
+#[doc = "BLK8_W4 (r) register accessor: Otp debuger block8 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w4`] module"]
 pub type BLK8_W4 = crate::Reg<blk8_w4::BLK8_W4_SPEC>;
 #[doc = "Otp debuger block8 data register4."]
 pub mod blk8_w4;
-#[doc = "BLK8_W5 (r) register accessor: Otp debuger block8 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w5`] module"]
+#[doc = "BLK8_W5 (r) register accessor: Otp debuger block8 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w5`] module"]
 pub type BLK8_W5 = crate::Reg<blk8_w5::BLK8_W5_SPEC>;
 #[doc = "Otp debuger block8 data register5."]
 pub mod blk8_w5;
-#[doc = "BLK8_W6 (r) register accessor: Otp debuger block8 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w6`] module"]
+#[doc = "BLK8_W6 (r) register accessor: Otp debuger block8 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w6`] module"]
 pub type BLK8_W6 = crate::Reg<blk8_w6::BLK8_W6_SPEC>;
 #[doc = "Otp debuger block8 data register6."]
 pub mod blk8_w6;
-#[doc = "BLK8_W7 (r) register accessor: Otp debuger block8 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w7`] module"]
+#[doc = "BLK8_W7 (r) register accessor: Otp debuger block8 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w7`] module"]
 pub type BLK8_W7 = crate::Reg<blk8_w7::BLK8_W7_SPEC>;
 #[doc = "Otp debuger block8 data register7."]
 pub mod blk8_w7;
-#[doc = "BLK8_W8 (r) register accessor: Otp debuger block8 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w8`] module"]
+#[doc = "BLK8_W8 (r) register accessor: Otp debuger block8 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w8`] module"]
 pub type BLK8_W8 = crate::Reg<blk8_w8::BLK8_W8_SPEC>;
 #[doc = "Otp debuger block8 data register8."]
 pub mod blk8_w8;
-#[doc = "BLK8_W9 (r) register accessor: Otp debuger block8 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w9`] module"]
+#[doc = "BLK8_W9 (r) register accessor: Otp debuger block8 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w9`] module"]
 pub type BLK8_W9 = crate::Reg<blk8_w9::BLK8_W9_SPEC>;
 #[doc = "Otp debuger block8 data register9."]
 pub mod blk8_w9;
-#[doc = "BLK8_W10 (r) register accessor: Otp debuger block8 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w10`] module"]
+#[doc = "BLK8_W10 (r) register accessor: Otp debuger block8 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w10`] module"]
 pub type BLK8_W10 = crate::Reg<blk8_w10::BLK8_W10_SPEC>;
 #[doc = "Otp debuger block8 data register10."]
 pub mod blk8_w10;
-#[doc = "BLK8_W11 (r) register accessor: Otp debuger block8 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk8_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w11`] module"]
+#[doc = "BLK8_W11 (r) register accessor: Otp debuger block8 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk8_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk8_w11`] module"]
 pub type BLK8_W11 = crate::Reg<blk8_w11::BLK8_W11_SPEC>;
 #[doc = "Otp debuger block8 data register11."]
 pub mod blk8_w11;
-#[doc = "BLK9_W1 (r) register accessor: Otp debuger block9 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w1`] module"]
+#[doc = "BLK9_W1 (r) register accessor: Otp debuger block9 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w1`] module"]
 pub type BLK9_W1 = crate::Reg<blk9_w1::BLK9_W1_SPEC>;
 #[doc = "Otp debuger block9 data register1."]
 pub mod blk9_w1;
-#[doc = "BLK9_W2 (r) register accessor: Otp debuger block9 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w2`] module"]
+#[doc = "BLK9_W2 (r) register accessor: Otp debuger block9 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w2`] module"]
 pub type BLK9_W2 = crate::Reg<blk9_w2::BLK9_W2_SPEC>;
 #[doc = "Otp debuger block9 data register2."]
 pub mod blk9_w2;
-#[doc = "BLK9_W3 (r) register accessor: Otp debuger block9 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w3`] module"]
+#[doc = "BLK9_W3 (r) register accessor: Otp debuger block9 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w3`] module"]
 pub type BLK9_W3 = crate::Reg<blk9_w3::BLK9_W3_SPEC>;
 #[doc = "Otp debuger block9 data register3."]
 pub mod blk9_w3;
-#[doc = "BLK9_W4 (r) register accessor: Otp debuger block9 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w4`] module"]
+#[doc = "BLK9_W4 (r) register accessor: Otp debuger block9 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w4`] module"]
 pub type BLK9_W4 = crate::Reg<blk9_w4::BLK9_W4_SPEC>;
 #[doc = "Otp debuger block9 data register4."]
 pub mod blk9_w4;
-#[doc = "BLK9_W5 (r) register accessor: Otp debuger block9 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w5`] module"]
+#[doc = "BLK9_W5 (r) register accessor: Otp debuger block9 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w5`] module"]
 pub type BLK9_W5 = crate::Reg<blk9_w5::BLK9_W5_SPEC>;
 #[doc = "Otp debuger block9 data register5."]
 pub mod blk9_w5;
-#[doc = "BLK9_W6 (r) register accessor: Otp debuger block9 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w6`] module"]
+#[doc = "BLK9_W6 (r) register accessor: Otp debuger block9 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w6`] module"]
 pub type BLK9_W6 = crate::Reg<blk9_w6::BLK9_W6_SPEC>;
 #[doc = "Otp debuger block9 data register6."]
 pub mod blk9_w6;
-#[doc = "BLK9_W7 (r) register accessor: Otp debuger block9 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w7`] module"]
+#[doc = "BLK9_W7 (r) register accessor: Otp debuger block9 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w7`] module"]
 pub type BLK9_W7 = crate::Reg<blk9_w7::BLK9_W7_SPEC>;
 #[doc = "Otp debuger block9 data register7."]
 pub mod blk9_w7;
-#[doc = "BLK9_W8 (r) register accessor: Otp debuger block9 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w8`] module"]
+#[doc = "BLK9_W8 (r) register accessor: Otp debuger block9 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w8`] module"]
 pub type BLK9_W8 = crate::Reg<blk9_w8::BLK9_W8_SPEC>;
 #[doc = "Otp debuger block9 data register8."]
 pub mod blk9_w8;
-#[doc = "BLK9_W9 (r) register accessor: Otp debuger block9 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w9`] module"]
+#[doc = "BLK9_W9 (r) register accessor: Otp debuger block9 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w9`] module"]
 pub type BLK9_W9 = crate::Reg<blk9_w9::BLK9_W9_SPEC>;
 #[doc = "Otp debuger block9 data register9."]
 pub mod blk9_w9;
-#[doc = "BLK9_W10 (r) register accessor: Otp debuger block9 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w10`] module"]
+#[doc = "BLK9_W10 (r) register accessor: Otp debuger block9 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w10`] module"]
 pub type BLK9_W10 = crate::Reg<blk9_w10::BLK9_W10_SPEC>;
 #[doc = "Otp debuger block9 data register10."]
 pub mod blk9_w10;
-#[doc = "BLK9_W11 (r) register accessor: Otp debuger block9 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk9_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w11`] module"]
+#[doc = "BLK9_W11 (r) register accessor: Otp debuger block9 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk9_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk9_w11`] module"]
 pub type BLK9_W11 = crate::Reg<blk9_w11::BLK9_W11_SPEC>;
 #[doc = "Otp debuger block9 data register11."]
 pub mod blk9_w11;
-#[doc = "BLK10_W1 (r) register accessor: Otp debuger block10 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w1`] module"]
+#[doc = "BLK10_W1 (r) register accessor: Otp debuger block10 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w1`] module"]
 pub type BLK10_W1 = crate::Reg<blk10_w1::BLK10_W1_SPEC>;
 #[doc = "Otp debuger block10 data register1."]
 pub mod blk10_w1;
-#[doc = "BLK10_W2 (r) register accessor: Otp debuger block10 data register2.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w2`] module"]
+#[doc = "BLK10_W2 (r) register accessor: Otp debuger block10 data register2.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w2`] module"]
 pub type BLK10_W2 = crate::Reg<blk10_w2::BLK10_W2_SPEC>;
 #[doc = "Otp debuger block10 data register2."]
 pub mod blk10_w2;
-#[doc = "BLK10_W3 (r) register accessor: Otp debuger block10 data register3.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w3`] module"]
+#[doc = "BLK10_W3 (r) register accessor: Otp debuger block10 data register3.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w3`] module"]
 pub type BLK10_W3 = crate::Reg<blk10_w3::BLK10_W3_SPEC>;
 #[doc = "Otp debuger block10 data register3."]
 pub mod blk10_w3;
-#[doc = "BLK10_W4 (r) register accessor: Otp debuger block10 data register4.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w4::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w4`] module"]
+#[doc = "BLK10_W4 (r) register accessor: Otp debuger block10 data register4.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w4`] module"]
 pub type BLK10_W4 = crate::Reg<blk10_w4::BLK10_W4_SPEC>;
 #[doc = "Otp debuger block10 data register4."]
 pub mod blk10_w4;
-#[doc = "BLK10_W5 (r) register accessor: Otp debuger block10 data register5.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w5::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w5`] module"]
+#[doc = "BLK10_W5 (r) register accessor: Otp debuger block10 data register5.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w5`] module"]
 pub type BLK10_W5 = crate::Reg<blk10_w5::BLK10_W5_SPEC>;
 #[doc = "Otp debuger block10 data register5."]
 pub mod blk10_w5;
-#[doc = "BLK10_W6 (r) register accessor: Otp debuger block10 data register6.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w6::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w6`] module"]
+#[doc = "BLK10_W6 (r) register accessor: Otp debuger block10 data register6.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w6`] module"]
 pub type BLK10_W6 = crate::Reg<blk10_w6::BLK10_W6_SPEC>;
 #[doc = "Otp debuger block10 data register6."]
 pub mod blk10_w6;
-#[doc = "BLK10_W7 (r) register accessor: Otp debuger block10 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w7::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w7`] module"]
+#[doc = "BLK10_W7 (r) register accessor: Otp debuger block10 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w7`] module"]
 pub type BLK10_W7 = crate::Reg<blk10_w7::BLK10_W7_SPEC>;
 #[doc = "Otp debuger block10 data register7."]
 pub mod blk10_w7;
-#[doc = "BLK10_W8 (r) register accessor: Otp debuger block10 data register8.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w8::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w8`] module"]
+#[doc = "BLK10_W8 (r) register accessor: Otp debuger block10 data register8.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w8`] module"]
 pub type BLK10_W8 = crate::Reg<blk10_w8::BLK10_W8_SPEC>;
 #[doc = "Otp debuger block10 data register8."]
 pub mod blk10_w8;
-#[doc = "BLK10_W9 (r) register accessor: Otp debuger block10 data register9.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w9::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w9`] module"]
+#[doc = "BLK10_W9 (r) register accessor: Otp debuger block10 data register9.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w9`] module"]
 pub type BLK10_W9 = crate::Reg<blk10_w9::BLK10_W9_SPEC>;
 #[doc = "Otp debuger block10 data register9."]
 pub mod blk10_w9;
-#[doc = "BLK10_W10 (r) register accessor: Otp debuger block10 data register10.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w10::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w10`] module"]
+#[doc = "BLK10_W10 (r) register accessor: Otp debuger block10 data register10.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w10`] module"]
 pub type BLK10_W10 = crate::Reg<blk10_w10::BLK10_W10_SPEC>;
 #[doc = "Otp debuger block10 data register10."]
 pub mod blk10_w10;
-#[doc = "BLK10_W11 (r) register accessor: Otp debuger block10 data register11.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk10_w11::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w11`] module"]
+#[doc = "BLK10_W11 (r) register accessor: Otp debuger block10 data register11.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk10_w11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@blk10_w11`] module"]
 pub type BLK10_W11 = crate::Reg<blk10_w11::BLK10_W11_SPEC>;
 #[doc = "Otp debuger block10 data register11."]
 pub mod blk10_w11;
-#[doc = "CLK (rw) register accessor: Otp debuger clk_en configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
+#[doc = "CLK (rw) register accessor: Otp debuger clk_en configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "Otp debuger clk_en configuration register."]
 pub mod clk;
-#[doc = "APB2OTP_EN (rw) register accessor: Otp_debuger apb2otp enable configuration register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_en::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`apb2otp_en::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_en`] module"]
+#[doc = "APB2OTP_EN (rw) register accessor: Otp_debuger apb2otp enable configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`apb2otp_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@apb2otp_en`] module"]
 pub type APB2OTP_EN = crate::Reg<apb2otp_en::APB2OTP_EN_SPEC>;
 #[doc = "Otp_debuger apb2otp enable configuration register."]
 pub mod apb2otp_en;
-#[doc = "DATE (rw) register accessor: eFuse version register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (rw) register accessor: eFuse version register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "eFuse version register."]
 pub mod date;

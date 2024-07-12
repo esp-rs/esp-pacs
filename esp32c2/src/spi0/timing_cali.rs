@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 timing calibration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`timing_cali::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 timing calibration register\n\nYou can [`read`](crate::Reg::read) this register and get [`timing_cali::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMING_CALI_SPEC;
 impl crate::RegisterSpec for TIMING_CALI_SPEC {
     type Ux = u32;

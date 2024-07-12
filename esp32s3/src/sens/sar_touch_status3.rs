@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "touch channel status of touch pad 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_touch_status3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "touch channel status of touch pad 3\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_TOUCH_STATUS3_SPEC;
 impl crate::RegisterSpec for SAR_TOUCH_STATUS3_SPEC {
     type Ux = u32;

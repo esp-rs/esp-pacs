@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Error register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`query_error::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Error register.\n\nYou can [`read`](crate::Reg::read) this register and get [`query_error::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct QUERY_ERROR_SPEC;
 impl crate::RegisterSpec for QUERY_ERROR_SPEC {
     type Ux = u32;

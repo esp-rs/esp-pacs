@@ -106,59 +106,59 @@ pub use self::out_int::OUT_INT;
 #[doc = r"Cluster"]
 #[doc = "Cluster OUT_INT, containing OUT_INT_RAW, OUT_INT_ST, OUT_INT_ENA, OUT_INT_CLR"]
 pub mod out_int;
-#[doc = "OUT_CONF0 (rw) register accessor: Configure 0 register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf0`] module"]
+#[doc = "OUT_CONF0 (rw) register accessor: Configure 0 register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf0`] module"]
 pub type OUT_CONF0 = crate::Reg<out_conf0::OUT_CONF0_SPEC>;
 #[doc = "Configure 0 register of Tx channel0"]
 pub mod out_conf0;
-#[doc = "OUT_CONF1 (rw) register accessor: Configure 1 register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf1`] module"]
+#[doc = "OUT_CONF1 (rw) register accessor: Configure 1 register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_conf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_conf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_conf1`] module"]
 pub type OUT_CONF1 = crate::Reg<out_conf1::OUT_CONF1_SPEC>;
 #[doc = "Configure 1 register of Tx channel0"]
 pub mod out_conf1;
-#[doc = "OUTFIFO_STATUS (r) register accessor: Transmit FIFO status of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`outfifo_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status`] module"]
+#[doc = "OUTFIFO_STATUS (r) register accessor: Transmit FIFO status of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`outfifo_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@outfifo_status`] module"]
 pub type OUTFIFO_STATUS = crate::Reg<outfifo_status::OUTFIFO_STATUS_SPEC>;
 #[doc = "Transmit FIFO status of Tx channel0"]
 pub mod outfifo_status;
-#[doc = "OUT_PUSH (rw) register accessor: Push control register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_push::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_push::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_push`] module"]
+#[doc = "OUT_PUSH (rw) register accessor: Push control register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_push::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_push::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_push`] module"]
 pub type OUT_PUSH = crate::Reg<out_push::OUT_PUSH_SPEC>;
 #[doc = "Push control register of Tx channel0"]
 pub mod out_push;
-#[doc = "OUT_LINK1 (rw) register accessor: Link descriptor configure and control register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_link1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_link1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link1`] module"]
+#[doc = "OUT_LINK1 (rw) register accessor: Link descriptor configure and control register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link1`] module"]
 pub type OUT_LINK1 = crate::Reg<out_link1::OUT_LINK1_SPEC>;
 #[doc = "Link descriptor configure and control register of Tx channel0"]
 pub mod out_link1;
-#[doc = "OUT_LINK2 (rw) register accessor: Link descriptor configure and control register of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_link2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_link2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link2`] module"]
+#[doc = "OUT_LINK2 (rw) register accessor: Link descriptor configure and control register of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_link2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_link2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_link2`] module"]
 pub type OUT_LINK2 = crate::Reg<out_link2::OUT_LINK2_SPEC>;
 #[doc = "Link descriptor configure and control register of Tx channel0"]
 pub mod out_link2;
-#[doc = "OUT_STATE (r) register accessor: Transmit status of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_state::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_state`] module"]
+#[doc = "OUT_STATE (r) register accessor: Transmit status of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_state`] module"]
 pub type OUT_STATE = crate::Reg<out_state::OUT_STATE_SPEC>;
 #[doc = "Transmit status of Tx channel0"]
 pub mod out_state;
-#[doc = "OUT_EOF_DES_ADDR (r) register accessor: Outlink descriptor address when EOF occurs of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_eof_des_addr`] module"]
+#[doc = "OUT_EOF_DES_ADDR (r) register accessor: Outlink descriptor address when EOF occurs of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_des_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_eof_des_addr`] module"]
 pub type OUT_EOF_DES_ADDR = crate::Reg<out_eof_des_addr::OUT_EOF_DES_ADDR_SPEC>;
 #[doc = "Outlink descriptor address when EOF occurs of Tx channel0"]
 pub mod out_eof_des_addr;
-#[doc = "OUT_EOF_BFR_DES_ADDR (r) register accessor: The last outlink descriptor address when EOF occurs of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_eof_bfr_des_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_eof_bfr_des_addr`] module"]
+#[doc = "OUT_EOF_BFR_DES_ADDR (r) register accessor: The last outlink descriptor address when EOF occurs of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_eof_bfr_des_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_eof_bfr_des_addr`] module"]
 pub type OUT_EOF_BFR_DES_ADDR = crate::Reg<out_eof_bfr_des_addr::OUT_EOF_BFR_DES_ADDR_SPEC>;
 #[doc = "The last outlink descriptor address when EOF occurs of Tx channel0"]
 pub mod out_eof_bfr_des_addr;
-#[doc = "OUT_DSCR (r) register accessor: Current outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_dscr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr`] module"]
+#[doc = "OUT_DSCR (r) register accessor: Current outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr`] module"]
 pub type OUT_DSCR = crate::Reg<out_dscr::OUT_DSCR_SPEC>;
 #[doc = "Current outlink descriptor address of Tx channel0"]
 pub mod out_dscr;
-#[doc = "OUT_DSCR_BF0 (r) register accessor: The last outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_dscr_bf0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr_bf0`] module"]
+#[doc = "OUT_DSCR_BF0 (r) register accessor: The last outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr_bf0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr_bf0`] module"]
 pub type OUT_DSCR_BF0 = crate::Reg<out_dscr_bf0::OUT_DSCR_BF0_SPEC>;
 #[doc = "The last outlink descriptor address of Tx channel0"]
 pub mod out_dscr_bf0;
-#[doc = "OUT_DSCR_BF1 (r) register accessor: The second-to-last outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_dscr_bf1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr_bf1`] module"]
+#[doc = "OUT_DSCR_BF1 (r) register accessor: The second-to-last outlink descriptor address of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_dscr_bf1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_dscr_bf1`] module"]
 pub type OUT_DSCR_BF1 = crate::Reg<out_dscr_bf1::OUT_DSCR_BF1_SPEC>;
 #[doc = "The second-to-last outlink descriptor address of Tx channel0"]
 pub mod out_dscr_bf1;
-#[doc = "OUT_PRI (rw) register accessor: Priority register of Tx channel0.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_pri::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_pri::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_pri`] module"]
+#[doc = "OUT_PRI (rw) register accessor: Priority register of Tx channel0.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_pri::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_pri::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_pri`] module"]
 pub type OUT_PRI = crate::Reg<out_pri::OUT_PRI_SPEC>;
 #[doc = "Priority register of Tx channel0."]
 pub mod out_pri;
-#[doc = "OUT_PERI_SEL (rw) register accessor: Peripheral selection of Tx channel0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_peri_sel::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_peri_sel::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_peri_sel`] module"]
+#[doc = "OUT_PERI_SEL (rw) register accessor: Peripheral selection of Tx channel0\n\nYou can [`read`](crate::Reg::read) this register and get [`out_peri_sel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_peri_sel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@out_peri_sel`] module"]
 pub type OUT_PERI_SEL = crate::Reg<out_peri_sel::OUT_PERI_SEL_SPEC>;
 #[doc = "Peripheral selection of Tx channel0"]
 pub mod out_peri_sel;

@@ -17,7 +17,7 @@ pub type CH_TX_LOOP_R = crate::BitReader;
 impl R {
     #[doc = "reg_ch(0-1)_tx_end_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_end(&self, n: u8) -> CH_TX_END_R {
         #[allow(clippy::no_effect)]
@@ -42,7 +42,7 @@ impl R {
     }
     #[doc = "reg_ch2_rx_end_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field.</div>"]
     #[inline(always)]
     pub fn ch_rx_end(&self, n: u8) -> CH_RX_END_R {
         #[allow(clippy::no_effect)]
@@ -67,7 +67,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_err_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_err(&self, n: u8) -> CH_TX_ERR_R {
         #[allow(clippy::no_effect)]
@@ -92,7 +92,7 @@ impl R {
     }
     #[doc = "reg_ch2_err_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field.</div>"]
     #[inline(always)]
     pub fn ch_rx_err(&self, n: u8) -> CH_RX_ERR_R {
         #[allow(clippy::no_effect)]
@@ -117,7 +117,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_thr_event_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_thr_event(&self, n: u8) -> CH_TX_THR_EVENT_R {
         #[allow(clippy::no_effect)]
@@ -142,7 +142,7 @@ impl R {
     }
     #[doc = "reg_ch2_rx_thr_event_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
     pub fn ch_rx_thr_event(&self, n: u8) -> CH_RX_THR_EVENT_R {
         #[allow(clippy::no_effect)]
@@ -167,7 +167,7 @@ impl R {
     }
     #[doc = "reg_ch(0-1)_tx_loop_int_st."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
     pub fn ch_tx_loop(&self, n: u8) -> CH_TX_LOOP_R {
         #[allow(clippy::no_effect)]
@@ -212,7 +212,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RMT_INT_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RMT_INT_ST_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;

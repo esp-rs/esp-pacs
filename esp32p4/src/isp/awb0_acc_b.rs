@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of accumulate of b channel of all white points\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`awb0_acc_b::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "result of accumulate of b channel of all white points\n\nYou can [`read`](crate::Reg::read) this register and get [`awb0_acc_b::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AWB0_ACC_B_SPEC;
 impl crate::RegisterSpec for AWB0_ACC_B_SPEC {
     type Ux = u32;

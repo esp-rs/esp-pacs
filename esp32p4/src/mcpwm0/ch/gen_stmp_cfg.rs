@@ -77,7 +77,7 @@ impl W {
         B_SHDW_FULL_W::new(self, 9)
     }
 }
-#[doc = "Generator0 time stamp registers A and B transfer status and update method register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`gen_stmp_cfg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gen_stmp_cfg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Generator0 time stamp registers A and B transfer status and update method register\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_stmp_cfg::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_stmp_cfg::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GEN_STMP_CFG_SPEC;
 impl crate::RegisterSpec for GEN_STMP_CFG_SPEC {
     type Ux = u32;

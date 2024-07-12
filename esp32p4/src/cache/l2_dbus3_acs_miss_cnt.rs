@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L2-Cache bus3 Miss-Access Counter register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_dbus3_acs_miss_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L2-Cache bus3 Miss-Access Counter register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_dbus3_acs_miss_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_DBUS3_ACS_MISS_CNT_SPEC;
 impl crate::RegisterSpec for L2_DBUS3_ACS_MISS_CNT_SPEC {
     type Ux = u32;

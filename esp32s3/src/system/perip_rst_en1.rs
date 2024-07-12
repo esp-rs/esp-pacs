@@ -189,7 +189,7 @@ impl W {
         USB_DEVICE_RST_W::new(self, 10)
     }
 }
-#[doc = "peripheral reset configuration regsiter 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`perip_rst_en1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`perip_rst_en1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "peripheral reset configuration regsiter 1\n\nYou can [`read`](crate::Reg::read) this register and get [`perip_rst_en1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`perip_rst_en1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERIP_RST_EN1_SPEC;
 impl crate::RegisterSpec for PERIP_RST_EN1_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Reject address accessing external RAM\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`extmem_reject_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Reject address accessing external RAM\n\nYou can [`read`](crate::Reg::read) this register and get [`extmem_reject_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EXTMEM_REJECT_ADDR_SPEC;
 impl crate::RegisterSpec for EXTMEM_REJECT_ADDR_SPEC {
     type Ux = u32;

@@ -9,7 +9,7 @@ pub type GPIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "The enable bit for DEDIC_GPIO(0-7)_INT_ST register."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
     pub fn gpio(&self, n: u8) -> GPIO_R {
         #[allow(clippy::no_effect)]
@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "The enable bit for DEDIC_GPIO(0-7)_INT_ST register."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `GPIO0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn gpio(&mut self, n: u8) -> GPIO_W<INTR_RLS_SPEC> {
@@ -138,7 +138,7 @@ impl W {
         GPIO_W::new(self, 7)
     }
 }
-#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_rls::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr_rls::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_rls::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_rls::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_RLS_SPEC;
 impl crate::RegisterSpec for INTR_RLS_SPEC {
     type Ux = u32;

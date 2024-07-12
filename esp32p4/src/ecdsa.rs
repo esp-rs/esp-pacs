@@ -167,83 +167,83 @@ impl RegisterBlock {
         self.qay_mem.iter()
     }
 }
-#[doc = "CONF (rw) register accessor: ECDSA configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`conf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
+#[doc = "CONF (rw) register accessor: ECDSA configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "ECDSA configure register"]
 pub mod conf;
-#[doc = "CLK (rw) register accessor: ECDSA clock gate register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`clk::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
+#[doc = "CLK (rw) register accessor: ECDSA clock gate register\n\nYou can [`read`](crate::Reg::read) this register and get [`clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "ECDSA clock gate register"]
 pub mod clk;
-#[doc = "INT_RAW (r) register accessor: ECDSA interrupt raw register, valid in level.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+#[doc = "INT_RAW (r) register accessor: ECDSA interrupt raw register, valid in level.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "ECDSA interrupt raw register, valid in level."]
 pub mod int_raw;
-#[doc = "INT_ST (r) register accessor: ECDSA interrupt status register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+#[doc = "INT_ST (r) register accessor: ECDSA interrupt status register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
 pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "ECDSA interrupt status register."]
 pub mod int_st;
-#[doc = "INT_ENA (rw) register accessor: ECDSA interrupt enable register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_ena::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+#[doc = "INT_ENA (rw) register accessor: ECDSA interrupt enable register.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "ECDSA interrupt enable register."]
 pub mod int_ena;
-#[doc = "INT_CLR (w) register accessor: ECDSA interrupt clear register.\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+#[doc = "INT_CLR (w) register accessor: ECDSA interrupt clear register.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
 pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "ECDSA interrupt clear register."]
 pub mod int_clr;
-#[doc = "START (w) register accessor: ECDSA start register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
+#[doc = "START (w) register accessor: ECDSA start register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "ECDSA start register"]
 pub mod start;
-#[doc = "STATE (r) register accessor: ECDSA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`state::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state`] module"]
+#[doc = "STATE (r) register accessor: ECDSA status register\n\nYou can [`read`](crate::Reg::read) this register and get [`state::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@state`] module"]
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = "ECDSA status register"]
 pub mod state;
-#[doc = "RESULT (r) register accessor: ECDSA result register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`result::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@result`] module"]
+#[doc = "RESULT (r) register accessor: ECDSA result register\n\nYou can [`read`](crate::Reg::read) this register and get [`result::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@result`] module"]
 pub type RESULT = crate::Reg<result::RESULT_SPEC>;
 #[doc = "ECDSA result register"]
 pub mod result;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`date::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;
-#[doc = "SHA_MODE (rw) register accessor: ECDSA control SHA register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sha_mode::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sha_mode::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_mode`] module"]
+#[doc = "SHA_MODE (rw) register accessor: ECDSA control SHA register\n\nYou can [`read`](crate::Reg::read) this register and get [`sha_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_mode`] module"]
 pub type SHA_MODE = crate::Reg<sha_mode::SHA_MODE_SPEC>;
 #[doc = "ECDSA control SHA register"]
 pub mod sha_mode;
-#[doc = "SHA_START (w) register accessor: ECDSA control SHA register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sha_start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_start`] module"]
+#[doc = "SHA_START (w) register accessor: ECDSA control SHA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha_start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_start`] module"]
 pub type SHA_START = crate::Reg<sha_start::SHA_START_SPEC>;
 #[doc = "ECDSA control SHA register"]
 pub mod sha_start;
-#[doc = "SHA_CONTINUE (w) register accessor: ECDSA control SHA register\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sha_continue::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_continue`] module"]
+#[doc = "SHA_CONTINUE (w) register accessor: ECDSA control SHA register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha_continue::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_continue`] module"]
 pub type SHA_CONTINUE = crate::Reg<sha_continue::SHA_CONTINUE_SPEC>;
 #[doc = "ECDSA control SHA register"]
 pub mod sha_continue;
-#[doc = "SHA_BUSY (r) register accessor: ECDSA status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sha_busy::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_busy`] module"]
+#[doc = "SHA_BUSY (r) register accessor: ECDSA status register\n\nYou can [`read`](crate::Reg::read) this register and get [`sha_busy::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha_busy`] module"]
 pub type SHA_BUSY = crate::Reg<sha_busy::SHA_BUSY_SPEC>;
 #[doc = "ECDSA status register"]
 pub mod sha_busy;
-#[doc = "MESSAGE_MEM (rw) register accessor: The memory that stores message.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`message_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`message_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@message_mem`] module"]
+#[doc = "MESSAGE_MEM (rw) register accessor: The memory that stores message.\n\nYou can [`read`](crate::Reg::read) this register and get [`message_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`message_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@message_mem`] module"]
 pub type MESSAGE_MEM = crate::Reg<message_mem::MESSAGE_MEM_SPEC>;
 #[doc = "The memory that stores message."]
 pub mod message_mem;
-#[doc = "R_MEM (rw) register accessor: The memory that stores r.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`r_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`r_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@r_mem`] module"]
+#[doc = "R_MEM (rw) register accessor: The memory that stores r.\n\nYou can [`read`](crate::Reg::read) this register and get [`r_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`r_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@r_mem`] module"]
 pub type R_MEM = crate::Reg<r_mem::R_MEM_SPEC>;
 #[doc = "The memory that stores r."]
 pub mod r_mem;
-#[doc = "S_MEM (rw) register accessor: The memory that stores s.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`s_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`s_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@s_mem`] module"]
+#[doc = "S_MEM (rw) register accessor: The memory that stores s.\n\nYou can [`read`](crate::Reg::read) this register and get [`s_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`s_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@s_mem`] module"]
 pub type S_MEM = crate::Reg<s_mem::S_MEM_SPEC>;
 #[doc = "The memory that stores s."]
 pub mod s_mem;
-#[doc = "Z_MEM (rw) register accessor: The memory that stores software written z.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`z_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
+#[doc = "Z_MEM (rw) register accessor: The memory that stores software written z.\n\nYou can [`read`](crate::Reg::read) this register and get [`z_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
 pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
 #[doc = "The memory that stores software written z."]
 pub mod z_mem;
-#[doc = "QAX_MEM (rw) register accessor: The memory that stores x coordinates of QA or software written k.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`qax_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`qax_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qax_mem`] module"]
+#[doc = "QAX_MEM (rw) register accessor: The memory that stores x coordinates of QA or software written k.\n\nYou can [`read`](crate::Reg::read) this register and get [`qax_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qax_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qax_mem`] module"]
 pub type QAX_MEM = crate::Reg<qax_mem::QAX_MEM_SPEC>;
 #[doc = "The memory that stores x coordinates of QA or software written k."]
 pub mod qax_mem;
-#[doc = "QAY_MEM (rw) register accessor: The memory that stores y coordinates of QA.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`qay_mem::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`qay_mem::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qay_mem`] module"]
+#[doc = "QAY_MEM (rw) register accessor: The memory that stores y coordinates of QA.\n\nYou can [`read`](crate::Reg::read) this register and get [`qay_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`qay_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@qay_mem`] module"]
 pub type QAY_MEM = crate::Reg<qay_mem::QAY_MEM_SPEC>;
 #[doc = "The memory that stores y coordinates of QA."]
 pub mod qay_mem;

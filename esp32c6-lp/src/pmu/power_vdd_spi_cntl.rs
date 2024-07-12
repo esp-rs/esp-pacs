@@ -35,25 +35,10 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("POWER_VDD_SPI_CNTL")
-            .field(
-                "vdd_spi_pwr_wait",
-                &format_args!("{}", self.vdd_spi_pwr_wait().bits()),
-            )
-            .field(
-                "vdd_spi_pwr_sw",
-                &format_args!("{}", self.vdd_spi_pwr_sw().bits()),
-            )
-            .field(
-                "vdd_spi_pwr_sel_sw",
-                &format_args!("{}", self.vdd_spi_pwr_sel_sw().bit()),
-            )
+            .field("vdd_spi_pwr_wait", &self.vdd_spi_pwr_wait())
+            .field("vdd_spi_pwr_sw", &self.vdd_spi_pwr_sw())
+            .field("vdd_spi_pwr_sel_sw", &self.vdd_spi_pwr_sel_sw())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<POWER_VDD_SPI_CNTL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -76,7 +61,7 @@ impl W {
         VDD_SPI_PWR_SEL_SW_W::new(self, 31)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`power_vdd_spi_cntl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`power_vdd_spi_cntl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`power_vdd_spi_cntl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`power_vdd_spi_cntl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POWER_VDD_SPI_CNTL_SPEC;
 impl crate::RegisterSpec for POWER_VDD_SPI_CNTL_SPEC {
     type Ux = u32;

@@ -123,7 +123,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ASSIST_DEBUG_CORE_0_INTR_RAW_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_intr_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ASSIST_DEBUG_CORE_0_INTR_RAW_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_INTR_RAW_SPEC;
 impl crate::RegisterSpec for CORE_0_INTR_RAW_SPEC {
     type Ux = u32;

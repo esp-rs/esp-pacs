@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Otp debuger block0 data register7.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`blk0_backup2_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Otp debuger block0 data register7.\n\nYou can [`read`](crate::Reg::read) this register and get [`blk0_backup2_w1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BLK0_BACKUP2_W1_SPEC;
 impl crate::RegisterSpec for BLK0_BACKUP2_W1_SPEC {
     type Ux = u32;

@@ -29,7 +29,7 @@ impl W {
         LCD_LATTER_CMD_VALUE_W::new(self, 0)
     }
 }
-#[doc = "LCD config register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`lcd_latter_cmd_val::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`lcd_latter_cmd_val::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LCD config register.\n\nYou can [`read`](crate::Reg::read) this register and get [`lcd_latter_cmd_val::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lcd_latter_cmd_val::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct LCD_LATTER_CMD_VAL_SPEC;
 impl crate::RegisterSpec for LCD_LATTER_CMD_VAL_SPEC {
     type Ux = u32;

@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "JTAG IN endpoint status information.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep3_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "JTAG IN endpoint status information.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ep3_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_EP3_ST_SPEC;
 impl crate::RegisterSpec for IN_EP3_ST_SPEC {
     type Ux = u32;

@@ -29,7 +29,7 @@ impl W {
         SCL_STOP_PERIOD_W::new(self, 0)
     }
 }
-#[doc = "Configure the delay between SDA and SCL positive edge for a stop condition\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`scl_stop_period::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`scl_stop_period::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Configure the delay between SDA and SCL positive edge for a stop condition\n\nYou can [`read`](crate::Reg::read) this register and get [`scl_stop_period::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`scl_stop_period::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SCL_STOP_PERIOD_SPEC;
 impl crate::RegisterSpec for SCL_STOP_PERIOD_SPEC {
     type Ux = u32;

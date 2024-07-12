@@ -29,7 +29,7 @@ impl W {
         DIS_RTC_CPU_W::new(self, 0)
     }
 }
-#[doc = "RTC coprocessor permission register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rtc_pms::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rtc_pms::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RTC coprocessor permission register.\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_pms::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_pms::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_PMS_SPEC;
 impl crate::RegisterSpec for RTC_PMS_SPEC {
     type Ux = u32;

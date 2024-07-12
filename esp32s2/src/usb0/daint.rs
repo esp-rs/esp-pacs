@@ -7,7 +7,7 @@ pub type OUTEPINT_R = crate::BitReader;
 impl R {
     #[doc = ""]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `INEPINT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INEPINT0` field.</div>"]
     #[inline(always)]
     pub fn inepint(&self, n: u8) -> INEPINT_R {
         #[allow(clippy::no_effect)]
@@ -57,7 +57,7 @@ impl R {
     }
     #[doc = ""]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OUTEPINT0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OUTEPINT0` field.</div>"]
     #[inline(always)]
     pub fn outepint(&self, n: u8) -> OUTEPINT_R {
         #[allow(clippy::no_effect)]
@@ -127,7 +127,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`daint::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`daint::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DAINT_SPEC;
 impl crate::RegisterSpec for DAINT_SPEC {
     type Ux = u32;

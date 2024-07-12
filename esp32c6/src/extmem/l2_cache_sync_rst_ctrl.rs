@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Sync Reset control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_sync_rst_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Sync Reset control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_sync_rst_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_SYNC_RST_CTRL_SPEC;
 impl crate::RegisterSpec for L2_CACHE_SYNC_RST_CTRL_SPEC {
     type Ux = u32;

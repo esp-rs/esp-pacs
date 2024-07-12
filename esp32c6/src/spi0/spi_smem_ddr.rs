@@ -140,7 +140,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 external RAM DDR mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_ddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 external RAM DDR mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_ddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_DDR_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_DDR_SPEC {
     type Ux = u32;

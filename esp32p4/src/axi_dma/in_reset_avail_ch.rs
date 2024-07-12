@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "The rx channel 0 reset valid_flag register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_reset_avail_ch::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The rx channel 0 reset valid_flag register.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_reset_avail_ch::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_RESET_AVAIL_CH_SPEC;
 impl crate::RegisterSpec for IN_RESET_AVAIL_CH_SPEC {
     type Ux = u32;

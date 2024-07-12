@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of histogram bin 3\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hist_bin3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "result of histogram bin 3\n\nYou can [`read`](crate::Reg::read) this register and get [`hist_bin3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HIST_BIN3_SPEC;
 impl crate::RegisterSpec for HIST_BIN3_SPEC {
     type Ux = u32;

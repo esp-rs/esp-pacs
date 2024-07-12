@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "NA\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dev_char_table10_loc2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "NA\n\nYou can [`read`](crate::Reg::read) this register and get [`dev_char_table10_loc2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DEV_CHAR_TABLE10_LOC2_SPEC;
 impl crate::RegisterSpec for DEV_CHAR_TABLE10_LOC2_SPEC {
     type Ux = u32;

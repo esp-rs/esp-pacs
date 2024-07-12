@@ -5,7 +5,7 @@ pub type CNT_THR_EVENT_U_R = crate::BitReader;
 impl R {
     #[doc = "This is the interrupt raw bit for channel(0-7) event."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field.</div>"]
     #[inline(always)]
     pub fn cnt_thr_event_u(&self, n: u8) -> CNT_THR_EVENT_U_R {
         #[allow(clippy::no_effect)]
@@ -74,7 +74,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_raw::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_RAW_SPEC;
 impl crate::RegisterSpec for INT_RAW_SPEC {
     type Ux = u32;

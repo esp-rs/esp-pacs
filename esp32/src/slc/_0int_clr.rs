@@ -224,7 +224,7 @@ impl W {
         SLC0_RX_QUICK_EOF_INT_CLR_W::new(self, 26)
     }
 }
-#[doc = "\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`_0int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_0int_clr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0INT_CLR_SPEC;
 impl crate::RegisterSpec for _0INT_CLR_SPEC {
     type Ux = u32;

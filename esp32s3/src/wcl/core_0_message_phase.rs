@@ -44,7 +44,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Clear writer_buffer status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`core_0_message_phase::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Clear writer_buffer status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_message_phase::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_MESSAGE_PHASE_SPEC;
 impl crate::RegisterSpec for CORE_0_MESSAGE_PHASE_SPEC {
     type Ux = u32;

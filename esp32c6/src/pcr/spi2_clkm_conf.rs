@@ -45,7 +45,7 @@ impl W {
         SPI2_CLKM_EN_W::new(self, 22)
     }
 }
-#[doc = "SPI2_CLKM configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi2_clkm_conf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi2_clkm_conf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI2_CLKM configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi2_clkm_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi2_clkm_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI2_CLKM_CONF_SPEC;
 impl crate::RegisterSpec for SPI2_CLKM_CONF_SPEC {
     type Ux = u32;

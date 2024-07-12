@@ -31,7 +31,7 @@ impl W {
         ACCESS_INTR_MEM_END_ADDR_W::new(self, 0)
     }
 }
-#[doc = "The end address of accessible address space. The access address beyond this range would lead to descriptor error.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr_mem_end_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr_mem_end_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The end address of accessible address space. The access address beyond this range would lead to descriptor error.\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_mem_end_addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_mem_end_addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_MEM_END_ADDR_SPEC;
 impl crate::RegisterSpec for INTR_MEM_END_ADDR_SPEC {
     type Ux = u32;

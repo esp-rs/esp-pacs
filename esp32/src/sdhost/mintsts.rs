@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Masked interrupt status register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`mintsts::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Masked interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`mintsts::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MINTSTS_SPEC;
 impl crate::RegisterSpec for MINTSTS_SPEC {
     type Ux = u32;

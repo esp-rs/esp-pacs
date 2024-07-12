@@ -38,13 +38,13 @@ impl OUT_EP {
         &self.doepdmab
     }
 }
-#[doc = "DOEPCTL (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doepctl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doepctl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl`] module"]
+#[doc = "DOEPCTL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`doepctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doepctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doepctl`] module"]
 pub type DOEPCTL = crate::Reg<doepctl::DOEPCTL_SPEC>;
 #[doc = ""]
 pub mod doepctl;
 pub use crate::usb0::out_ep0::doepint;
 pub use crate::usb0::out_ep0::DOEPINT;
-#[doc = "DOEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::generic::Reg::read) this register and get [`doeptsiz::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`doeptsiz::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz`] module"]
+#[doc = "DOEPTSIZ (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`doeptsiz::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`doeptsiz::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@doeptsiz`] module"]
 pub type DOEPTSIZ = crate::Reg<doeptsiz::DOEPTSIZ_SPEC>;
 #[doc = ""]
 pub mod doeptsiz;

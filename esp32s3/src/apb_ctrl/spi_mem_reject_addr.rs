@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_mem_reject_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_mem_reject_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_MEM_REJECT_ADDR_SPEC;
 impl crate::RegisterSpec for SPI_MEM_REJECT_ADDR_SPEC {
     type Ux = u32;

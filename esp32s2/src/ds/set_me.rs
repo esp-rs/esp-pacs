@@ -16,7 +16,7 @@ impl W {
         SET_ME_W::new(self, 0)
     }
 }
-#[doc = "Starts DS operation\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`set_me::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Starts DS operation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`set_me::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_ME_SPEC;
 impl crate::RegisterSpec for SET_ME_SPEC {
     type Ux = u32;

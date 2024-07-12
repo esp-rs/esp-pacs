@@ -9,7 +9,7 @@ pub type M_PMS_FUNC_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "PMS M(0-1) function enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `M0_PMS_FUNC_EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_PMS_FUNC_EN` field.</div>"]
     #[inline(always)]
     pub fn m_pms_func_en(&self, n: u8) -> M_PMS_FUNC_EN_R {
         #[allow(clippy::no_effect)]
@@ -45,7 +45,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "PMS M(0-1) function enable"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `M0_PMS_FUNC_EN` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_PMS_FUNC_EN` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn m_pms_func_en(&mut self, n: u8) -> M_PMS_FUNC_EN_W<FUNC_CTRL_SPEC> {
@@ -66,7 +66,7 @@ impl W {
         M_PMS_FUNC_EN_W::new(self, 1)
     }
 }
-#[doc = "PMS function control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`func_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`func_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "PMS function control register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FUNC_CTRL_SPEC;
 impl crate::RegisterSpec for FUNC_CTRL_SPEC {
     type Ux = u32;

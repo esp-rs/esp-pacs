@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`host_slchost_state_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`host_slchost_state_w0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HOST_SLCHOST_STATE_W0_SPEC;
 impl crate::RegisterSpec for HOST_SLCHOST_STATE_W0_SPEC {
     type Ux = u32;

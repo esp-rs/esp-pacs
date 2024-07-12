@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "LEDC_LSCH0_DUTY_R.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`duty_r::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LEDC_LSCH0_DUTY_R.\n\nYou can [`read`](crate::Reg::read) this register and get [`duty_r::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DUTY_R_SPEC;
 impl crate::RegisterSpec for DUTY_R_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "W0 of SET_LINE_CODING command.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`set_line_code_w0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "W0 of SET_LINE_CODING command.\n\nYou can [`read`](crate::Reg::read) this register and get [`set_line_code_w0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SET_LINE_CODE_W0_SPEC;
 impl crate::RegisterSpec for SET_LINE_CODE_W0_SPEC {
     type Ux = u32;

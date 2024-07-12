@@ -9,7 +9,7 @@ pub type LACT_R = crate::BitReader;
 impl R {
     #[doc = "The masked interrupt status bit for the TIMG_T(0-1)_INT interrupt."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `T0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
     pub fn t(&self, n: u8) -> T_R {
         #[allow(clippy::no_effect)]
@@ -54,7 +54,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st_timers::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_timers::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_TIMERS_SPEC;
 impl crate::RegisterSpec for INT_ST_TIMERS_SPEC {
     type Ux = u32;

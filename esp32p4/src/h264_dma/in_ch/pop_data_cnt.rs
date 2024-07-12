@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RX CHx pop data cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`pop_data_cnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RX CHx pop data cnt register\n\nYou can [`read`](crate::Reg::read) this register and get [`pop_data_cnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct POP_DATA_CNT_SPEC;
 impl crate::RegisterSpec for POP_DATA_CNT_SPEC {
     type Ux = u32;

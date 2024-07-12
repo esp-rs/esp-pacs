@@ -9,7 +9,7 @@ pub type OVF_CNT_CH_R = crate::BitReader;
 impl R {
     #[doc = "This is the masked interrupt status bit for the TIMER(0-3)_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
     pub fn timer_ovf(&self, n: u8) -> TIMER_OVF_R {
         #[allow(clippy::no_effect)]
@@ -44,7 +44,7 @@ impl R {
     }
     #[doc = "This is the masked interrupt status bit for the DUTY_CHNG_END_CH(0-7) interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
     pub fn duty_chng_end_ch(&self, n: u8) -> DUTY_CHNG_END_CH_R {
         #[allow(clippy::no_effect)]
@@ -99,7 +99,7 @@ impl R {
     }
     #[doc = "This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH(0-7) interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
     pub fn ovf_cnt_ch(&self, n: u8) -> OVF_CNT_CH_R {
         #[allow(clippy::no_effect)]
@@ -180,7 +180,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Masked interrupt status\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;

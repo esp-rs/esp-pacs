@@ -25,7 +25,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SYSCLK frequency query 0 register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sysclk_freq_query_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SYSCLK frequency query 0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`sysclk_freq_query_0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYSCLK_FREQ_QUERY_0_SPEC;
 impl crate::RegisterSpec for SYSCLK_FREQ_QUERY_0_SPEC {
     type Ux = u32;

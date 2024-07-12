@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "USB_DEVICE_IN_EP0_ST_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_ep0_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "USB_DEVICE_IN_EP0_ST_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`in_ep0_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_EP0_ST_SPEC;
 impl crate::RegisterSpec for IN_EP0_ST_SPEC {
     type Ux = u32;

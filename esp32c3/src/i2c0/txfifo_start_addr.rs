@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "I2C_TXFIFO_START_ADDR_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`txfifo_start_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "I2C_TXFIFO_START_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`txfifo_start_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TXFIFO_START_ADDR_SPEC;
 impl crate::RegisterSpec for TXFIFO_START_ADDR_SPEC {
     type Ux = u32;

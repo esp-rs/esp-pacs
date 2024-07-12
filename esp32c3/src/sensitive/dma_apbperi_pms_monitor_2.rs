@@ -46,7 +46,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apbperi_pms_monitor_2::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SENSITIVE_DMA_APBPERI_PMS_MONITOR_2_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_pms_monitor_2::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_APBPERI_PMS_MONITOR_2_SPEC;
 impl crate::RegisterSpec for DMA_APBPERI_PMS_MONITOR_2_SPEC {
     type Ux = u32;

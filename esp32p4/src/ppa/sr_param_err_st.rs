@@ -133,7 +133,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Scaling and rotating coefficient error register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sr_param_err_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Scaling and rotating coefficient error register\n\nYou can [`read`](crate::Reg::read) this register and get [`sr_param_err_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SR_PARAM_ERR_ST_SPEC;
 impl crate::RegisterSpec for SR_PARAM_ERR_ST_SPEC {
     type Ux = u32;

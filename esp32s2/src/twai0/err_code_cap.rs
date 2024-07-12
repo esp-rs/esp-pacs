@@ -33,7 +33,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Error Code Capture Register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`err_code_cap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Error Code Capture Register\n\nYou can [`read`](crate::Reg::read) this register and get [`err_code_cap::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ERR_CODE_CAP_SPEC;
 impl crate::RegisterSpec for ERR_CODE_CAP_SPEC {
     type Ux = u32;

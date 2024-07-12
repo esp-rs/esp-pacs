@@ -31,7 +31,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 instruction Cache 0 prelock section size configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache0_prelock_sct_size::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 instruction Cache 0 prelock section size configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache0_prelock_sct_size::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_ICACHE0_PRELOCK_SCT_SIZE_SPEC;
 impl crate::RegisterSpec for L1_ICACHE0_PRELOCK_SCT_SIZE_SPEC {
     type Ux = u32;

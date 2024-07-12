@@ -45,7 +45,7 @@ impl W {
         USB_UART_CHIP_RST_DIS_W::new(self, 2)
     }
 }
-#[doc = "CDC-ACM chip reset control.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`chip_rst::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`chip_rst::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "CDC-ACM chip reset control.\n\nYou can [`read`](crate::Reg::read) this register and get [`chip_rst::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`chip_rst::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHIP_RST_SPEC;
 impl crate::RegisterSpec for CHIP_RST_SPEC {
     type Ux = u32;

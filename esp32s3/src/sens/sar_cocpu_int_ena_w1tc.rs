@@ -128,7 +128,7 @@ impl W {
         SAR_COCPU_TOUCH_SCAN_DONE_INT_ENA_W1TC_W::new(self, 11)
     }
 }
-#[doc = "the interrupt enable clear of ulp\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_cocpu_int_ena_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "the interrupt enable clear of ulp\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_cocpu_int_ena_w1tc::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_COCPU_INT_ENA_W1TC_SPEC;
 impl crate::RegisterSpec for SAR_COCPU_INT_ENA_W1TC_SPEC {
     type Ux = u32;

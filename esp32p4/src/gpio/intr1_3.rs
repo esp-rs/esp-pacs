@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "GPIO interrupt 3 status register for GPIO32-56\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`intr1_3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "GPIO interrupt 3 status register for GPIO32-56\n\nYou can [`read`](crate::Reg::read) this register and get [`intr1_3::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR1_3_SPEC;
 impl crate::RegisterSpec for INTR1_3_SPEC {
     type Ux = u32;

@@ -11,7 +11,7 @@ pub type DUTY_CHNG_END_LSCH_R = crate::BitReader;
 impl R {
     #[doc = "The interrupt status bit for high speed channel(0-3) counter overflow event."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `HSTIMER0_OVF` field.</div>"]
     #[inline(always)]
     pub fn hstimer_ovf(&self, n: u8) -> HSTIMER_OVF_R {
         #[allow(clippy::no_effect)]
@@ -46,7 +46,7 @@ impl R {
     }
     #[doc = "The interrupt status bit for low speed channel(0-3) counter overflow event."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `LSTIMER0_OVF` field.</div>"]
     #[inline(always)]
     pub fn lstimer_ovf(&self, n: u8) -> LSTIMER_OVF_R {
         #[allow(clippy::no_effect)]
@@ -81,7 +81,7 @@ impl R {
     }
     #[doc = "The interrupt status bit for high speed channel (0-7) duty change done event."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_HSCH0` field.</div>"]
     #[inline(always)]
     pub fn duty_chng_end_hsch(&self, n: u8) -> DUTY_CHNG_END_HSCH_R {
         #[allow(clippy::no_effect)]
@@ -136,7 +136,7 @@ impl R {
     }
     #[doc = "The interrupt status bit for low speed channel (0-7) duty change done event."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_LSCH0` field.</div>"]
     #[inline(always)]
     pub fn duty_chng_end_lsch(&self, n: u8) -> DUTY_CHNG_END_LSCH_R {
         #[allow(clippy::no_effect)]
@@ -221,7 +221,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;

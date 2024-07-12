@@ -5,7 +5,7 @@ pub type TARGET_R = crate::BitReader;
 impl R {
     #[doc = "reg_target(0-2)_int_st"]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `TARGET0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
     pub fn target(&self, n: u8) -> TARGET_R {
         #[allow(clippy::no_effect)]
@@ -44,7 +44,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SYSTIMER_INT_ST.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`int_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SYSTIMER_INT_ST.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INT_ST_SPEC;
 impl crate::RegisterSpec for INT_ST_SPEC {
     type Ux = u32;

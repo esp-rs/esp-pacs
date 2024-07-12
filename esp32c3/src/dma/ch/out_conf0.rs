@@ -109,7 +109,7 @@ impl W {
         OUT_DATA_BURST_EN_W::new(self, 5)
     }
 }
-#[doc = "DMA_OUT_CONF0_CH0_REG.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`out_conf0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`out_conf0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "DMA_OUT_CONF0_CH0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`out_conf0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_conf0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct OUT_CONF0_SPEC;
 impl crate::RegisterSpec for OUT_CONF0_SPEC {
     type Ux = u32;

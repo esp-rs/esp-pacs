@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "The read and write data register for CHANNEL$n by apb fifo access.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`rx_chdata::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "The read and write data register for CHANNEL$n by apb fifo access.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_chdata::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RX_CHDATA_SPEC;
 impl crate::RegisterSpec for RX_CHDATA_SPEC {
     type Ux = u32;

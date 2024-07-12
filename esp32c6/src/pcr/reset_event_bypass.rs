@@ -45,7 +45,7 @@ impl W {
         RESET_EVENT_BYPASS_W::new(self, 1)
     }
 }
-#[doc = "reset event bypass backdoor configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`reset_event_bypass::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_event_bypass::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "reset event bypass backdoor configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`reset_event_bypass::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reset_event_bypass::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_EVENT_BYPASS_SPEC;
 impl crate::RegisterSpec for RESET_EVENT_BYPASS_SPEC {
     type Ux = u32;

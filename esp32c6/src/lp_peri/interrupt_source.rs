@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`interrupt_source::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_source::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERRUPT_SOURCE_SPEC;
 impl crate::RegisterSpec for INTERRUPT_SOURCE_SPEC {
     type Ux = u32;

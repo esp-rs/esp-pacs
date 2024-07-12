@@ -29,7 +29,7 @@ impl W {
         SLC0_RX_PKT_H_DSCR_ADDR_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`_0_rxpkt_h_dscr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`_0_rxpkt_h_dscr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`_0_rxpkt_h_dscr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`_0_rxpkt_h_dscr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct _0_RXPKT_H_DSCR_SPEC;
 impl crate::RegisterSpec for _0_RXPKT_H_DSCR_SPEC {
     type Ux = u32;

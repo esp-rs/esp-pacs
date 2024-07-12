@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "HP_PERI_TIMEOUT_UID register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_peri_timeout_uid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "HP_PERI_TIMEOUT_UID register\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_peri_timeout_uid::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_PERI_TIMEOUT_UID_SPEC;
 impl crate::RegisterSpec for HP_PERI_TIMEOUT_UID_SPEC {
     type Ux = u32;

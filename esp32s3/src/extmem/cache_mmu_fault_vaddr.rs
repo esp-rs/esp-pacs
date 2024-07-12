@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "******* Description ***********\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_mmu_fault_vaddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_mmu_fault_vaddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_MMU_FAULT_VADDR_SPEC;
 impl crate::RegisterSpec for CACHE_MMU_FAULT_VADDR_SPEC {
     type Ux = u32;

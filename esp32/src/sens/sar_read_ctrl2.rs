@@ -141,7 +141,7 @@ impl W {
         SAR2_DATA_INV_W::new(self, 29)
     }
 }
-#[doc = "\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sar_read_ctrl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sar_read_ctrl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_read_ctrl2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_read_ctrl2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SAR_READ_CTRL2_SPEC;
 impl crate::RegisterSpec for SAR_READ_CTRL2_SPEC {
     type Ux = u32;

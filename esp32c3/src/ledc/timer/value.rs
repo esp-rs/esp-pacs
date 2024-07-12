@@ -15,7 +15,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("VALUE").field("cnt", &self.cnt()).finish()
     }
 }
-#[doc = "LEDC_LSTIMER0_VALUE.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`value::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "LEDC_LSTIMER0_VALUE.\n\nYou can [`read`](crate::Reg::read) this register and get [`value::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VALUE_SPEC;
 impl crate::RegisterSpec for VALUE_SPEC {
     type Ux = u32;

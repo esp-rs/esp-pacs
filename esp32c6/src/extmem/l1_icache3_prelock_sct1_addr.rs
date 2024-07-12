@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "L1 instruction Cache 3 prelock section1 address configure register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l1_icache3_prelock_sct1_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "L1 instruction Cache 3 prelock section1 address configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`l1_icache3_prelock_sct1_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L1_ICACHE3_PRELOCK_SCT1_ADDR_SPEC;
 impl crate::RegisterSpec for L1_ICACHE3_PRELOCK_SCT1_ADDR_SPEC {
     type Ux = u32;

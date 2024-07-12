@@ -20,7 +20,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "eFuse apb2otp block0 data register17.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`apb2otp_blk0_backup4_w1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "eFuse apb2otp block0 data register17.\n\nYou can [`read`](crate::Reg::read) this register and get [`apb2otp_blk0_backup4_w1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct APB2OTP_BLK0_BACKUP4_W1_SPEC;
 impl crate::RegisterSpec for APB2OTP_BLK0_BACKUP4_W1_SPEC {
     type Ux = u32;

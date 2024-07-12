@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`cache_state::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "This description will be updated in the near future.\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_state::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CACHE_STATE_SPEC;
 impl crate::RegisterSpec for CACHE_STATE_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Otp debuger block0 data register1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`wr_dis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Otp debuger block0 data register1.\n\nYou can [`read`](crate::Reg::read) this register and get [`wr_dis::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct WR_DIS_SPEC;
 impl crate::RegisterSpec for WR_DIS_SPEC {
     type Ux = u32;

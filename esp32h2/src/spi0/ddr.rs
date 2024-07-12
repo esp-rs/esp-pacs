@@ -140,7 +140,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 flash DDR mode control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ddr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 flash DDR mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ddr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DDR_SPEC;
 impl crate::RegisterSpec for DDR_SPEC {
     type Ux = u32;

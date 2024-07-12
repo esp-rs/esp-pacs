@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`slp_wakeup_status1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`slp_wakeup_status1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLP_WAKEUP_STATUS1_SPEC;
 impl crate::RegisterSpec for SLP_WAKEUP_STATUS1_SPEC {
     type Ux = u32;

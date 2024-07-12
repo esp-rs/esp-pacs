@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "result of lum of af window c\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`af_lum_c::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "result of lum of af window c\n\nYou can [`read`](crate::Reg::read) this register and get [`af_lum_c::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AF_LUM_C_SPEC;
 impl crate::RegisterSpec for AF_LUM_C_SPEC {
     type Ux = u32;

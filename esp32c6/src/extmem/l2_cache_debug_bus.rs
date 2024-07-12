@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Tag/data memory content register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_debug_bus::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Tag/data memory content register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_debug_bus::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_DEBUG_BUS_SPEC;
 impl crate::RegisterSpec for L2_CACHE_DEBUG_BUS_SPEC {
     type Ux = u32;

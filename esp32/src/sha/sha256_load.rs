@@ -16,7 +16,7 @@ impl W {
         SHA256_LOAD_W::new(self, 0)
     }
 }
-#[doc = "\n\nYou can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sha256_load::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha256_load::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SHA256_LOAD_SPEC;
 impl crate::RegisterSpec for SHA256_LOAD_SPEC {
     type Ux = u32;

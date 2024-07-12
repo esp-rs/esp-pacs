@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "MODEM_PERI_TIMEOUT_ADDR register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`modem_peri_timeout_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "MODEM_PERI_TIMEOUT_ADDR register\n\nYou can [`read`](crate::Reg::read) this register and get [`modem_peri_timeout_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MODEM_PERI_TIMEOUT_ADDR_SPEC;
 impl crate::RegisterSpec for MODEM_PERI_TIMEOUT_ADDR_SPEC {
     type Ux = u32;

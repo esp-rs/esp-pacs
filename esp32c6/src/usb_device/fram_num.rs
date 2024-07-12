@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Last received SOF frame index register.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fram_num::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Last received SOF frame index register.\n\nYou can [`read`](crate::Reg::read) this register and get [`fram_num::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FRAM_NUM_SPEC;
 impl crate::RegisterSpec for FRAM_NUM_SPEC {
     type Ux = u32;

@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "TX CHx fifo byte cnt register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`fifo_bcnt::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "TX CHx fifo byte cnt register\n\nYou can [`read`](crate::Reg::read) this register and get [`fifo_bcnt::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_BCNT_SPEC;
 impl crate::RegisterSpec for FIFO_BCNT_SPEC {
     type Ux = u32;

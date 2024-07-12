@@ -9,7 +9,7 @@ pub type CH_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
     #[doc = "Configure GPIO(0-7) input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0` field.</div>"]
     #[inline(always)]
     pub fn ch(&self, n: u8) -> CH_R {
         #[allow(clippy::no_effect)]
@@ -81,7 +81,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Configure GPIO(0-7) input delay. 0: no delay. 1: one clock delay. 2: two clock delay. 3: three clock delay."]
     #[doc = ""]
-    #[doc = "NOTE: `n` is number of field in register. `n == 0` corresponds to `CH0` field"]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0` field.</div>"]
     #[inline(always)]
     #[must_use]
     pub fn ch(&mut self, n: u8) -> CH_W<IN_DLY_SPEC> {
@@ -138,7 +138,7 @@ impl W {
         CH_W::new(self, 14)
     }
 }
-#[doc = "Dedicated GPIO input delay configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`in_dly::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`in_dly::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Dedicated GPIO input delay configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`in_dly::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_dly::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IN_DLY_SPEC;
 impl crate::RegisterSpec for IN_DLY_SPEC {
     type Ux = u32;

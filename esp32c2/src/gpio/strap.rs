@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "pad strapping register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`strap::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "pad strapping register\n\nYou can [`read`](crate::Reg::read) this register and get [`strap::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STRAP_SPEC;
 impl crate::RegisterSpec for STRAP_SPEC {
     type Ux = u32;

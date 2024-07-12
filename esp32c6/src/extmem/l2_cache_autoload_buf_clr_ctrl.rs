@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "Cache Autoload buffer clear control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`l2_cache_autoload_buf_clr_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Cache Autoload buffer clear control register\n\nYou can [`read`](crate::Reg::read) this register and get [`l2_cache_autoload_buf_clr_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct L2_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC;
 impl crate::RegisterSpec for L2_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC {
     type Ux = u32;

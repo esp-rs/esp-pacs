@@ -224,7 +224,7 @@ impl W {
         DMA_APB_I_SRAM_4_H_W_W::new(self, 28)
     }
 }
-#[doc = "Internal DMA permission control register 1.\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dma_apb_i_1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dma_apb_i_1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "Internal DMA permission control register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apb_i_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apb_i_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMA_APB_I_1_SPEC;
 impl crate::RegisterSpec for DMA_APB_I_1_SPEC {
     type Ux = u32;

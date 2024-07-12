@@ -53,33 +53,12 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("HP_MODEM_HP_CK_POWER")
-            .field(
-                "hp_modem_i2c_iso_en",
-                &format_args!("{}", self.hp_modem_i2c_iso_en().bit()),
-            )
-            .field(
-                "hp_modem_i2c_retention",
-                &format_args!("{}", self.hp_modem_i2c_retention().bit()),
-            )
-            .field(
-                "hp_modem_xpd_bb_i2c",
-                &format_args!("{}", self.hp_modem_xpd_bb_i2c().bit()),
-            )
-            .field(
-                "hp_modem_xpd_bbpll_i2c",
-                &format_args!("{}", self.hp_modem_xpd_bbpll_i2c().bit()),
-            )
-            .field(
-                "hp_modem_xpd_bbpll",
-                &format_args!("{}", self.hp_modem_xpd_bbpll().bit()),
-            )
+            .field("hp_modem_i2c_iso_en", &self.hp_modem_i2c_iso_en())
+            .field("hp_modem_i2c_retention", &self.hp_modem_i2c_retention())
+            .field("hp_modem_xpd_bb_i2c", &self.hp_modem_xpd_bb_i2c())
+            .field("hp_modem_xpd_bbpll_i2c", &self.hp_modem_xpd_bbpll_i2c())
+            .field("hp_modem_xpd_bbpll", &self.hp_modem_xpd_bbpll())
             .finish()
-    }
-}
-#[cfg(feature = "impl-register-debug")]
-impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_CK_POWER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
@@ -118,7 +97,7 @@ impl W {
         HP_MODEM_XPD_BBPLL_W::new(self, 30)
     }
 }
-#[doc = "need_des\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`hp_modem_hp_ck_power::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`hp_modem_hp_ck_power::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_modem_hp_ck_power::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_modem_hp_ck_power::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct HP_MODEM_HP_CK_POWER_SPEC;
 impl crate::RegisterSpec for HP_MODEM_HP_CK_POWER_SPEC {
     type Ux = u32;

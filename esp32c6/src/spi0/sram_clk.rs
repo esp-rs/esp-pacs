@@ -41,7 +41,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 external RAM clock control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sram_clk::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 external RAM clock control register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_clk::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SRAM_CLK_SPEC;
 impl crate::RegisterSpec for SRAM_CLK_SPEC {
     type Ux = u32;

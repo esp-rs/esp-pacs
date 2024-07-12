@@ -125,7 +125,7 @@ impl W {
         LPCLK_RTC_EN_W::new(self, 28)
     }
 }
-#[doc = "low power clock configuration register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`bt_lpck_div_frac::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bt_lpck_div_frac::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "low power clock configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`bt_lpck_div_frac::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bt_lpck_div_frac::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BT_LPCK_DIV_FRAC_SPEC;
 impl crate::RegisterSpec for BT_LPCK_DIV_FRAC_SPEC {
     type Ux = u32;

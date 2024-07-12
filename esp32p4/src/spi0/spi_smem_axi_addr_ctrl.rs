@@ -60,7 +60,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "SPI0 AXI address control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`spi_smem_axi_addr_ctrl::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI0 AXI address control register\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_smem_axi_addr_ctrl::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_SMEM_AXI_ADDR_CTRL_SPEC;
 impl crate::RegisterSpec for SPI_SMEM_AXI_ADDR_CTRL_SPEC {
     type Ux = u32;
