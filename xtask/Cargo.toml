@@ -6,12 +6,12 @@ publish = false
 
 [dependencies]
 anyhow     = "1.0.86"
-clap       = { version = "4.5.4", features = ["derive"] }
+clap       = { version = "4.5.9", features = ["derive"] }
 env_logger = "0.11.3"
 form       = "0.12.1"
-log        = "0.4.21"
+log        = "0.4.22"
 semver     = "1.0.23"
-strum      = { version = "0.26.2", features = ["derive"] }
-svd2rust   = { version = "0.33.3", default-features = false }
-svdtools   = "0.3.14"
-toml_edit  = "0.22.13"
+strum      = { version = "0.26.3", features = ["derive"] }
+svd2rust   = { version = "0.33.4", default-features = false }
+svdtools   = "0.3.17"
+toml_edit  = "0.22.15"
