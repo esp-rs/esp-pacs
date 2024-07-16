@@ -47,6 +47,10 @@ LP_ANA:
     COMD?: {}
   _include: ../../../common_patches/int_strip.yaml
 
+I2C0:
+  _include:
+    - ../../../common_patches/i2c0.yaml
+
 SPI[01]:
   _strip: SPI_MEM_
   "*":

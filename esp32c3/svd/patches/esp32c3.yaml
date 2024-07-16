@@ -16,6 +16,8 @@ I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
+  _include:
+    - ../../../common_patches/i2c0.yaml
 
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
