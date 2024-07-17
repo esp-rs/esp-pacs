@@ -18,10 +18,106 @@ pub type ACK_EXP_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ACK_VALUE_R = crate::BitReader;
 #[doc = "Field `ACK_VALUE` writer - Acknowledge value for command %s."]
 pub type ACK_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `OPCODE` reader - Opcode part of command %s. 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END."]
-pub type OPCODE_R = crate::FieldReader;
-#[doc = "Field `OPCODE` writer - Opcode part of command %s. 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END."]
-pub type OPCODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
+#[doc = "Opcode part of command %s.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum OPCODE {
+    #[doc = "0: RSTART opcode"]
+    Rstart = 0,
+    #[doc = "1: WRITE opcode"]
+    Write = 1,
+    #[doc = "2: READ opcode"]
+    Read = 2,
+    #[doc = "3: STOP opcode"]
+    Stop = 3,
+    #[doc = "4: END opcode"]
+    End = 4,
+}
+impl From<OPCODE> for u8 {
+    #[inline(always)]
+    fn from(variant: OPCODE) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for OPCODE {
+    type Ux = u8;
+}
+impl crate::IsEnum for OPCODE {}
+#[doc = "Field `OPCODE` reader - Opcode part of command %s."]
+pub type OPCODE_R = crate::FieldReader<OPCODE>;
+impl OPCODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<OPCODE> {
+        match self.bits {
+            0 => Some(OPCODE::Rstart),
+            1 => Some(OPCODE::Write),
+            2 => Some(OPCODE::Read),
+            3 => Some(OPCODE::Stop),
+            4 => Some(OPCODE::End),
+            _ => None,
+        }
+    }
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn is_rstart(&self) -> bool {
+        *self == OPCODE::Rstart
+    }
+    #[doc = "WRITE opcode"]
+    #[inline(always)]
+    pub fn is_write(&self) -> bool {
+        *self == OPCODE::Write
+    }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn is_read(&self) -> bool {
+        *self == OPCODE::Read
+    }
+    #[doc = "STOP opcode"]
+    #[inline(always)]
+    pub fn is_stop(&self) -> bool {
+        *self == OPCODE::Stop
+    }
+    #[doc = "END opcode"]
+    #[inline(always)]
+    pub fn is_end(&self) -> bool {
+        *self == OPCODE::End
+    }
+}
+#[doc = "Field `OPCODE` writer - Opcode part of command %s."]
+pub type OPCODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3, OPCODE>;
+impl<'a, REG> OPCODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn rstart(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Rstart)
+    }
+    #[doc = "WRITE opcode"]
+    #[inline(always)]
+    pub fn write(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Write)
+    }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn read(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Read)
+    }
+    #[doc = "STOP opcode"]
+    #[inline(always)]
+    pub fn stop(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Stop)
+    }
+    #[doc = "END opcode"]
+    #[inline(always)]
+    pub fn end(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::End)
+    }
+}
 #[doc = "Field `COMMAND_DONE` reader - When command0 is done in I2C Master mode this bit changes to high level."]
 pub type COMMAND_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND_DONE` writer - When command0 is done in I2C Master mode this bit changes to high level."]
@@ -47,7 +143,7 @@ impl R {
     pub fn ack_value(&self) -> ACK_VALUE_R {
         ACK_VALUE_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bits 11:13 - Opcode part of command %s. 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END."]
+    #[doc = "Bits 11:13 - Opcode part of command %s."]
     #[inline(always)]
     pub fn opcode(&self) -> OPCODE_R {
         OPCODE_R::new(((self.bits >> 11) & 7) as u8)
@@ -96,7 +192,7 @@ impl W {
     pub fn ack_value(&mut self) -> ACK_VALUE_W<COMD_SPEC> {
         ACK_VALUE_W::new(self, 10)
     }
-    #[doc = "Bits 11:13 - Opcode part of command %s. 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END."]
+    #[doc = "Bits 11:13 - Opcode part of command %s."]
     #[inline(always)]
     #[must_use]
     pub fn opcode(&mut self) -> OPCODE_W<COMD_SPEC> {

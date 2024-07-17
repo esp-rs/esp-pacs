@@ -1,28 +1,35 @@
 COMD%s:
-    _delete: ["COMMAND"]
-    _add:
-      OPCODE:
-        description: "Opcode part of command %s. 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END."
-        bitOffset: 11
-        bitWidth: 3
-        access: read-write
-      ACK_VALUE:
-        description: "Acknowledge value for command %s."
-        bitOffset: 10
-        bitWidth: 1
-        access: read-write
-      ACK_EXP:
-        description: "Acknowledge expected for command %s."
-        bitOffset: 9
-        bitWidth: 1
-        access: read-write
-      ACK_CHECK_EN:
-        description: "Acknowledge check enable for command %s."
-        bitOffset: 8
-        bitWidth: 1
-        access: read-write
-      BYTE_NUM:
-        description: "Number of bytes to be sent or received for command %s."
-        bitOffset: 0
-        bitWidth: 8
-        access: read-write
+  _delete: ["COMMAND"]
+  _add:
+    OPCODE:
+      description: "Opcode part of command %s."
+      bitOffset: 11
+      bitWidth: 3
+      access: read-write
+    ACK_VALUE:
+      description: "Acknowledge value for command %s."
+      bitOffset: 10
+      bitWidth: 1
+      access: read-write
+    ACK_EXP:
+      description: "Acknowledge expected for command %s."
+      bitOffset: 9
+      bitWidth: 1
+      access: read-write
+    ACK_CHECK_EN:
+      description: "Acknowledge check enable for command %s."
+      bitOffset: 8
+      bitWidth: 1
+      access: read-write
+    BYTE_NUM:
+      description: "Number of bytes to be sent or received for command %s."
+      bitOffset: 0
+      bitWidth: 8
+      access: read-write
+  OPCODE:
+      _name: Opcode
+      Rstart: [0, RSTART opcode]
+      Write: [1, WRITE opcode]
+      Read: [2, READ opcode]
+      Stop: [3, STOP opcode]
+      End: [4, END opcode]
