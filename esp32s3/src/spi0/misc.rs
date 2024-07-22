@@ -2,6 +2,14 @@
 pub type R = crate::R<MISC_SPEC>;
 #[doc = "Register `MISC` writer"]
 pub type W = crate::W<MISC_SPEC>;
+#[doc = "Field `CS0_DIS` reader - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+pub type CS0_DIS_R = crate::BitReader;
+#[doc = "Field `CS0_DIS` writer - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS1_DIS` reader - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+pub type CS1_DIS_R = crate::BitReader;
+#[doc = "Field `CS1_DIS` writer - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FSUB_PIN` reader - Flash is connected to SPI SUBPIN bus."]
 pub type FSUB_PIN_R = crate::BitReader;
 #[doc = "Field `FSUB_PIN` writer - Flash is connected to SPI SUBPIN bus."]
@@ -19,6 +27,16 @@ pub type CS_KEEP_ACTIVE_R = crate::BitReader;
 #[doc = "Field `CS_KEEP_ACTIVE` writer - SPI_CS line keep low when the bit is set."]
 pub type CS_KEEP_ACTIVE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+    #[inline(always)]
+    pub fn cs0_dis(&self) -> CS0_DIS_R {
+        CS0_DIS_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+    #[inline(always)]
+    pub fn cs1_dis(&self) -> CS1_DIS_R {
+        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
+    }
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
     pub fn fsub_pin(&self) -> FSUB_PIN_R {
@@ -48,10 +66,24 @@ impl core::fmt::Debug for R {
             .field("ssub_pin", &self.ssub_pin())
             .field("ck_idle_edge", &self.ck_idle_edge())
             .field("cs_keep_active", &self.cs_keep_active())
+            .field("cs1_dis", &self.cs1_dis())
+            .field("cs0_dis", &self.cs0_dis())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+    #[inline(always)]
+    #[must_use]
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
+        CS0_DIS_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+    #[inline(always)]
+    #[must_use]
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
+        CS1_DIS_W::new(self, 1)
+    }
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
     #[must_use]

@@ -80,6 +80,20 @@ TIMG0:
 PCNT:
   _include: ../../../common_patches/pcnt.yaml
 
+SPI0:
+  MISC:
+    _add:
+      CS1_DIS:
+        description: "Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."
+        bitOffset: 1
+        bitWidth: 1
+        access: read-write
+      CS0_DIS:
+        description: "Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+
 SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
 

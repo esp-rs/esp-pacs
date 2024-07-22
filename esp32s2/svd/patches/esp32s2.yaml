@@ -116,6 +116,128 @@ SENS:
   _include: ../../../common_patches/sens.yaml
 
 SPI0:
+  _add:
+    CACHE_SCTRL:
+      description: "SPI Memory Cache SCTRL Register"
+      addressOffset: 0x40
+      size: 0x20
+      access: read-write
+      fields:
+        SRAM_WDUMMY_CYCLELEN:
+          description: "For SPI0, in the SRAM mode, it is the length in bits of write dummy phase. The register value shall be (bit_num-1)."
+          bitOffset: 22
+          bitWidth: 8
+          access: read-write
+        SRAM_OCT:
+          description: "Reserved"
+          bitOffset: 21
+          bitWidth: 1
+          access: read-write
+        CACHE_SRAM_USR_WCMD:
+          description: "For SPI0, in the SPI SRAM mode, cache write SRAM for user define command."
+          bitOffset: 20
+          bitWidth: 1
+          access: read-write
+        SRAM_ADDR_BITLEN:
+          description: "For SPI0, in the SRAM mode, it is the length in bits of address phase. The register value shall be (bit_num-1)."
+          bitOffset: 14
+          bitWidth: 6
+          access: read-write
+        SRAM_RDUMMY_CYCLELEN:
+          description: "For SPI0, in the SRAM mode, it is the length in bits of read dummy phase. The register value shall be (bit_num-1)."
+          bitOffset: 6
+          bitWidth: 8
+          access: read-write
+        CACHE_SRAM_USR_RCMD:
+          description: "For SPI0, in the SPI SRAM mode, cache read SRAM for user define command."
+          bitOffset: 5
+          bitWidth: 1
+          access: read-write
+        USR_RD_SRAM_DUMMY:
+          description: "For SPI0, in the SPI SRAM mode, it is the enable bit of dummy phase for read operations."
+          bitOffset: 4
+          bitWidth: 1
+          access: read-write
+        USR_WR_SRAM_DUMMY:
+          description: "For SPI0, in the SPI SRAM mode, it is the enable bit of dummy phase for write operations."
+          bitOffset: 3
+          bitWidth: 1
+          access: read-write
+        USR_SRAM_QIO:
+          description: "For SPI0, in the SPI SRAM mode, SPI quad I/O mode enable. 1: enable, 0: disable."
+          bitOffset: 2
+          bitWidth: 1
+          access: read-write
+        USR_SRAM_DIO:
+          description: "For SPI0, in the SPI SRAM mode, SPI dual I/O mode enable. 1: enable, 0: disable."
+          bitOffset: 1
+          bitWidth: 1
+          access: read-write
+        CACHE_USR_SCMD_4BYTE:
+          description: "For SPI0, in the SPI SRAM mode, cache read flash with 4 bytes command. 1: enable, 0: disable."
+          bitOffset: 0
+          bitWidth: 1
+          access: read-write
+    SRAM_DWR_CMD:
+      description: "SPI Memory SRAM DWR CMD Register"
+      addressOffset: 0x4C
+      size: 0x20
+      access: read-write
+      fields:
+        CACHE_SRAM_USR_WR_CMD_BITLEN:
+          description: "For SPI0, when cache mode is enabled, it is the length in bits of the command phase for SRAM. The register value shall be (bit_num-1)."
+          bitOffset: 28
+          bitWidth: 4
+          access: read-write
+        CACHE_SRAM_USR_WR_CMD_VALUE:
+          description: "For SPI0, when cache mode is enabled, it is the write command value of the command phase for SRAM."
+          bitOffset: 0
+          bitWidth: 16
+          access: read-write
+    SRAM_DRD_CMD:
+      description: "SPI Memory SRAM DRD CMD Register"
+      addressOffset: 0x48
+      size: 0x20
+      access: read-write
+      fields:
+        CACHE_SRAM_USR_RD_CMD_BITLEN:
+          description: "For SPI0, when cache mode is enabled, it is the length in bits of the command phase for SRAM. The register value shall be (bit_num-1)."
+          bitOffset: 28
+          bitWidth: 4
+          access: read-write
+        CACHE_SRAM_USR_RD_CMD_VALUE:
+          description: "For SPI0, when cache mode is enabled, it is the read command value of the command phase for SRAM."
+          bitOffset: 0
+          bitWidth: 16
+          access: read-write
+    SRAM_CLK:
+      description: "SPI Memory SRAM Clock Register"
+      addressOffset: 0x50
+      size: 0x20
+      access: read-write
+      fields:
+        SCLK_EQU_SYSCLK:
+          description: "For SPI0 SRAM interface, 1: spi_mem_clk is equal to system, 0: spi_mem_clk is divided from system clock."
+          bitOffset: 31
+          bitWidth: 1
+          access: read-write
+        SCLKCNT_N:
+          description: "For SPI0 SRAM interface, it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)."
+          bitOffset: 16
+          bitWidth: 8
+          access: read-write
+        SCLKCNT_H:
+          description: "For SPI0 SRAM interface, it must be floor((spi_mem_clkcnt_N+1)/2-1)."
+          bitOffset: 8
+          bitWidth: 8
+          access: read-write
+        SCLKCNT_L:
+          description: "For SPI0 SRAM interface, it must be equal to spi_mem_clkcnt_N."
+          bitOffset: 0
+          bitWidth: 8
+          access: read-write
+
+
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml
