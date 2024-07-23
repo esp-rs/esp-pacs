@@ -108,6 +108,13 @@ SENS:
   _include: ../../../common_patches/sens.yaml
 
 SPI0:
+  _modify:
+    DATE:
+      access: read-write
+  USER1:
+    _modify:
+      USR_ADDR_BITLEN:
+        access: read-write
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml
