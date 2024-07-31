@@ -1,5 +1,183 @@
 _svd: "../esp32c6.base.svd"
 
+_add:
+  PLIC_MX:
+    description: PLIC Peripheral
+    baseAddress: 0x20001000
+    groupName: PLIC
+    addressBlock:
+      offset: 0x0
+      size: 0x98
+      usage: registers
+    registers:
+      MXINT_ENABLE:
+        description: "PLIC MX Interrupt Enable Register"
+        addressOffset: 0x0000
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_ENABLE:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      MXINT_TYPE:
+        description: "PLIC MX Interrupt Type Register"
+        addressOffset: 0x0004
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_TYPE:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      MXINT_CLEAR:
+        description: "PLIC MX Interrupt Clear Register"
+        addressOffset: 0x0008
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_CLEAR:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      EMIP_STATUS:
+        description: "PLIC EMIP Status Register"
+        addressOffset: 0x000C
+        size: 32
+        access: read-only
+        fields:
+          CPU_EIP_STATUS:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      MXINT%s_PRI:
+        dim: 32
+        dimIncrement: 0x20
+        description: "PLIC MX Interrupt %s Priority Register"
+        addressOffset: 0x0010
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_PRI:
+            description: ""
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      MXINT_THRESH:
+        description: "PLIC MX Interrupt Threshold Register"
+        addressOffset: 0x0090
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_THRESH:
+            description: ""
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      MXINT_CLAIM:
+        description: "PLIC MX Interrupt Claim Register"
+        addressOffset: 0x0094
+        size: 32
+        access: read-write
+        fields:
+          CPU_MXINT_CLAIM:
+            description: "hp_mb_int is generated after writing 32'h20200721 to core0_lp_intr_flag."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+  PLIC_UX:
+    description: PLIC Peripheral
+    baseAddress: 0x20001400
+    groupName: PLIC
+    addressBlock:
+      offset: 0x0
+      size: 0x98
+      usage: registers
+    registers:
+      UXINT_ENABLE:
+        description: "PLIC UX Interrupt Enable Register"
+        addressOffset: 0x0000
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_ENABLE:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      UXINT_TYPE:
+        description: "PLIC UX Interrupt Type Register"
+        addressOffset: 0x0004
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_TYPE:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      UXINT_CLEAR:
+        description: "PLIC UX Interrupt Clear Register"
+        addressOffset: 0x0008
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_CLEAR:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      EUIP_STATUS:
+        description: "PLIC EMIP Status Register"
+        addressOffset: 0x000C
+        size: 32
+        access: read-only
+        fields:
+          CPU_EIP_STATUS:
+            description: ""
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      UXINT%s_PRI:
+        dim: 32
+        dimIncrement: 0x20
+        description: "PLIC UX Interrupt %s Priority Register"
+        addressOffset: 0x0010
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT0_PRI:
+            description: ""
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      UXINT_THRESH:
+        description: "PLIC UX Interrupt Threshold Register"
+        addressOffset: 0x0090
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_THRESH:
+            description: ""
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+        UXINT_CLAIM:
+        description: "PLIC UX Interrupt Claim Register"
+        addressOffset: 0x0094
+        size: 32
+        access: read-write
+        fields:
+          CPU_UXINT_CLAIM:
+            description: "hp_mb_int is generated after writing 32'h20200721 to core0_lp_intr_flag."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+
 _modify:
   SPI?:
     groupName: SPI
