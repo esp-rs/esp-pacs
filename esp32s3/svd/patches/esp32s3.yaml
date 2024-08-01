@@ -83,13 +83,24 @@ PCNT:
 SPI0:
   MISC:
     _add:
-      CS1_DIS:
-        description: "Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."
-        bitOffset: 1
+      CS%s_DIS:
+        dim: 2
+        dimIndex: 0-1
+        dimIncrement: 0x1
+        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
+        bitOffset: 0
         bitWidth: 1
         access: read-write
-      CS0_DIS:
-        description: "Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."
+
+SPI1:
+  MISC:
+    _delete: ["CS0_DIS", "CS1_DIS"]
+    _add:
+      CS%s_DIS:
+        dim: 2
+        dimIndex: 0-1
+        dimIncrement: 0x1
+        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
         bitOffset: 0
         bitWidth: 1
         access: read-write

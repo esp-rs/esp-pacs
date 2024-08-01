@@ -2,30 +2,10 @@
 pub type R = crate::R<MISC_SPEC>;
 #[doc = "Register `MISC` writer"]
 pub type W = crate::W<MISC_SPEC>;
-#[doc = "Field `CS0_DIS` reader - SPI CS0 pin enable, 1: disable CS0, 0: SPI_CS0 signal is from/to CS0 pin. Can be configured in CONF state."]
-pub type CS0_DIS_R = crate::BitReader;
-#[doc = "Field `CS0_DIS` writer - SPI CS0 pin enable, 1: disable CS0, 0: SPI_CS0 signal is from/to CS0 pin. Can be configured in CONF state."]
-pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS1_DIS` reader - SPI CS1 pin enable, 1: disable CS1, 0: SPI_CS1 signal is from/to CS1 pin. Can be configured in CONF state."]
-pub type CS1_DIS_R = crate::BitReader;
-#[doc = "Field `CS1_DIS` writer - SPI CS1 pin enable, 1: disable CS1, 0: SPI_CS1 signal is from/to CS1 pin. Can be configured in CONF state."]
-pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS2_DIS` reader - SPI CS2 pin enable, 1: disable CS2, 0: SPI_CS2 signal is from/to CS2 pin. Can be configured in CONF state."]
-pub type CS2_DIS_R = crate::BitReader;
-#[doc = "Field `CS2_DIS` writer - SPI CS2 pin enable, 1: disable CS2, 0: SPI_CS2 signal is from/to CS2 pin. Can be configured in CONF state."]
-pub type CS2_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS3_DIS` reader - SPI CS3 pin enable, 1: disable CS3, 0: SPI_CS3 signal is from/to CS3 pin. Can be configured in CONF state."]
-pub type CS3_DIS_R = crate::BitReader;
-#[doc = "Field `CS3_DIS` writer - SPI CS3 pin enable, 1: disable CS3, 0: SPI_CS3 signal is from/to CS3 pin. Can be configured in CONF state."]
-pub type CS3_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS4_DIS` reader - SPI CS4 pin enable, 1: disable CS4, 0: SPI_CS4 signal is from/to CS4 pin. Can be configured in CONF state."]
-pub type CS4_DIS_R = crate::BitReader;
-#[doc = "Field `CS4_DIS` writer - SPI CS4 pin enable, 1: disable CS4, 0: SPI_CS4 signal is from/to CS4 pin. Can be configured in CONF state."]
-pub type CS4_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS5_DIS` reader - SPI CS5 pin enable, 1: disable CS5, 0: SPI_CS5 signal is from/to CS5 pin. Can be configured in CONF state."]
-pub type CS5_DIS_R = crate::BitReader;
-#[doc = "Field `CS5_DIS` writer - SPI CS5 pin enable, 1: disable CS5, 0: SPI_CS5 signal is from/to CS5 pin. Can be configured in CONF state."]
-pub type CS5_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS_DIS(0-5)` reader - Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"]
+pub type CS_DIS_R = crate::BitReader;
+#[doc = "Field `CS_DIS(0-5)` writer - Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"]
+pub type CS_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_DIS` reader - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
 pub type CK_DIS_R = crate::BitReader;
 #[doc = "Field `CK_DIS` writer - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
@@ -91,35 +71,50 @@ pub type QUAD_DIN_PIN_SWAP_R = crate::BitReader;
 #[doc = "Field `QUAD_DIN_PIN_SWAP` writer - 1: spi quad input swap enable 0: spi quad input swap disable. Can be configured in CONF state."]
 pub type QUAD_DIN_PIN_SWAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: SPI_CS0 signal is from/to CS0 pin. Can be configured in CONF state."]
+    #[doc = "Set this bit to raise high SPI_CS(0-5) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-5) is in low level when SPI1 transfer starts"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
-    pub fn cs0_dis(&self) -> CS0_DIS_R {
-        CS0_DIS_R::new((self.bits & 1) != 0)
+    pub fn cs_dis(&self, n: u8) -> CS_DIS_R {
+        #[allow(clippy::no_effect)]
+        [(); 6][n as usize];
+        CS_DIS_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: SPI_CS1 signal is from/to CS1 pin. Can be configured in CONF state."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "Set this bit to raise high SPI_CS(0-5) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-5) is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs1_dis(&self) -> CS1_DIS_R {
-        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cs_dis_iter(&self) -> impl Iterator<Item = CS_DIS_R> + '_ {
+        (0..6).map(move |n| CS_DIS_R::new(((self.bits >> n) & 1) != 0))
     }
-    #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: SPI_CS2 signal is from/to CS2 pin. Can be configured in CONF state."]
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs2_dis(&self) -> CS2_DIS_R {
-        CS2_DIS_R::new(((self.bits >> 2) & 1) != 0)
+    pub fn cs0_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 3 - SPI CS3 pin enable, 1: disable CS3, 0: SPI_CS3 signal is from/to CS3 pin. Can be configured in CONF state."]
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs3_dis(&self) -> CS3_DIS_R {
-        CS3_DIS_R::new(((self.bits >> 3) & 1) != 0)
+    pub fn cs1_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4 - SPI CS4 pin enable, 1: disable CS4, 0: SPI_CS4 signal is from/to CS4 pin. Can be configured in CONF state."]
+    #[doc = "Bit 2 - Set this bit to raise high SPI_CS2 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS2 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs4_dis(&self) -> CS4_DIS_R {
-        CS4_DIS_R::new(((self.bits >> 4) & 1) != 0)
+    pub fn cs2_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5 - SPI CS5 pin enable, 1: disable CS5, 0: SPI_CS5 signal is from/to CS5 pin. Can be configured in CONF state."]
+    #[doc = "Bit 3 - Set this bit to raise high SPI_CS3 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS3 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs5_dis(&self) -> CS5_DIS_R {
-        CS5_DIS_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn cs3_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Set this bit to raise high SPI_CS4 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS4 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    pub fn cs4_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Set this bit to raise high SPI_CS5 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS5 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    pub fn cs5_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
     #[inline(always)]
@@ -206,12 +201,6 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("cs0_dis", &self.cs0_dis())
-            .field("cs1_dis", &self.cs1_dis())
-            .field("cs2_dis", &self.cs2_dis())
-            .field("cs3_dis", &self.cs3_dis())
-            .field("cs4_dis", &self.cs4_dis())
-            .field("cs5_dis", &self.cs5_dis())
             .field("ck_dis", &self.ck_dis())
             .field("master_cs_pol", &self.master_cs_pol())
             .field("clk_data_dtr_en", &self.clk_data_dtr_en())
@@ -228,45 +217,61 @@ impl core::fmt::Debug for R {
             .field("ck_idle_edge", &self.ck_idle_edge())
             .field("cs_keep_active", &self.cs_keep_active())
             .field("quad_din_pin_swap", &self.quad_din_pin_swap())
+            .field("cs0_dis", &self.cs0_dis())
+            .field("cs1_dis", &self.cs1_dis())
+            .field("cs2_dis", &self.cs2_dis())
+            .field("cs3_dis", &self.cs3_dis())
+            .field("cs4_dis", &self.cs4_dis())
+            .field("cs5_dis", &self.cs5_dis())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - SPI CS0 pin enable, 1: disable CS0, 0: SPI_CS0 signal is from/to CS0 pin. Can be configured in CONF state."]
+    #[doc = "Set this bit to raise high SPI_CS(0-5) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-5) is in low level when SPI1 transfer starts"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
     #[must_use]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
-        CS0_DIS_W::new(self, 0)
+    pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<MISC_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 6][n as usize];
+        CS_DIS_W::new(self, n)
     }
-    #[doc = "Bit 1 - SPI CS1 pin enable, 1: disable CS1, 0: SPI_CS1 signal is from/to CS1 pin. Can be configured in CONF state."]
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
-        CS1_DIS_W::new(self, 1)
+    pub fn cs0_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 0)
     }
-    #[doc = "Bit 2 - SPI CS2 pin enable, 1: disable CS2, 0: SPI_CS2 signal is from/to CS2 pin. Can be configured in CONF state."]
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs2_dis(&mut self) -> CS2_DIS_W<MISC_SPEC> {
-        CS2_DIS_W::new(self, 2)
+    pub fn cs1_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 1)
     }
-    #[doc = "Bit 3 - SPI CS3 pin enable, 1: disable CS3, 0: SPI_CS3 signal is from/to CS3 pin. Can be configured in CONF state."]
+    #[doc = "Bit 2 - Set this bit to raise high SPI_CS2 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS2 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs3_dis(&mut self) -> CS3_DIS_W<MISC_SPEC> {
-        CS3_DIS_W::new(self, 3)
+    pub fn cs2_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 2)
     }
-    #[doc = "Bit 4 - SPI CS4 pin enable, 1: disable CS4, 0: SPI_CS4 signal is from/to CS4 pin. Can be configured in CONF state."]
+    #[doc = "Bit 3 - Set this bit to raise high SPI_CS3 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS3 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs4_dis(&mut self) -> CS4_DIS_W<MISC_SPEC> {
-        CS4_DIS_W::new(self, 4)
+    pub fn cs3_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 3)
     }
-    #[doc = "Bit 5 - SPI CS5 pin enable, 1: disable CS5, 0: SPI_CS5 signal is from/to CS5 pin. Can be configured in CONF state."]
+    #[doc = "Bit 4 - Set this bit to raise high SPI_CS4 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS4 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs5_dis(&mut self) -> CS5_DIS_W<MISC_SPEC> {
-        CS5_DIS_W::new(self, 5)
+    pub fn cs4_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 4)
+    }
+    #[doc = "Bit 5 - Set this bit to raise high SPI_CS5 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS5 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cs5_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: spi clk out disable, 0: spi clk out enable. Can be configured in CONF state."]
     #[inline(always)]
