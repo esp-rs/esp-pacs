@@ -1,5 +1,7 @@
 #[doc = "Register `DATE` reader"]
 pub type R = crate::R<DATE_SPEC>;
+#[doc = "Register `DATE` writer"]
+pub type W = crate::W<DATE_SPEC>;
 #[doc = "Field `DATE` reader - SPI register version."]
 pub type DATE_R = crate::FieldReader<u32>;
 impl R {
@@ -15,13 +17,20 @@ impl core::fmt::Debug for R {
         f.debug_struct("DATE").field("date", &self.date()).finish()
     }
 }
-#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+impl W {}
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`date::R`](R) reader structure"]
 impl crate::Readable for DATE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`date::W`](W) writer structure"]
+impl crate::Writable for DATE_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets DATE to value 0x0160_4270"]
 impl crate::Resettable for DATE_SPEC {
     const RESET_VALUE: u32 = 0x0160_4270;

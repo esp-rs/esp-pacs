@@ -108,6 +108,24 @@ SENS:
   _include: ../../../common_patches/sens.yaml
 
 SPI0:
+  _modify:
+    DATE:
+      access: read-write
+  USER1:
+    _modify:
+      USR_ADDR_BITLEN:
+        access: read-write
+  PIN:
+    _delete: ["CS0_DIS", "CS1_DIS", "CS2_DIS"]
+    _add:
+      CS%s_DIS:
+        dim: 3
+        dimIndex: 0-2
+        dimIncrement: 0x1
+        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml

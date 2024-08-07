@@ -8,6 +8,8 @@ pub type USR_DUMMY_CYCLELEN_R = crate::FieldReader;
 pub type USR_DUMMY_CYCLELEN_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `USR_ADDR_BITLEN` reader - The length in bits of address phase. The register value shall be (bit_num-1)."]
 pub type USR_ADDR_BITLEN_R = crate::FieldReader;
+#[doc = "Field `USR_ADDR_BITLEN` writer - The length in bits of address phase. The register value shall be (bit_num-1)."]
+pub type USR_ADDR_BITLEN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
     #[inline(always)]
@@ -35,6 +37,12 @@ impl W {
     #[must_use]
     pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC> {
         USR_DUMMY_CYCLELEN_W::new(self, 0)
+    }
+    #[doc = "Bits 26:31 - The length in bits of address phase. The register value shall be (bit_num-1)."]
+    #[inline(always)]
+    #[must_use]
+    pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC> {
+        USR_ADDR_BITLEN_W::new(self, 26)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`user1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`user1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

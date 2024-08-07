@@ -18,11 +18,11 @@ pub struct RegisterBlock {
     slave1: SLAVE1,
     slv_wrbuf_dlen: SLV_WRBUF_DLEN,
     slv_rdbuf_dlen: SLV_RDBUF_DLEN,
-    slv_rd_byte: SLV_RD_BYTE,
+    _reserved_16_cache_sctrl: [u8; 0x04],
     fsm: FSM,
-    hold: HOLD,
-    dma_conf: DMA_CONF,
-    dma_out_link: DMA_OUT_LINK,
+    _reserved_18_hold: [u8; 0x04],
+    _reserved_19_dma_conf: [u8; 0x04],
+    _reserved_20_sram_clk: [u8; 0x04],
     dma_in_link: DMA_IN_LINK,
     dma_int_ena: DMA_INT_ENA,
     dma_int_raw: DMA_INT_RAW,
@@ -134,30 +134,50 @@ impl RegisterBlock {
     pub const fn slv_rdbuf_dlen(&self) -> &SLV_RDBUF_DLEN {
         &self.slv_rdbuf_dlen
     }
+    #[doc = "0x40 - SPI Memory Cache SCTRL Register"]
+    #[inline(always)]
+    pub const fn cache_sctrl(&self) -> &CACHE_SCTRL {
+        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
+    }
     #[doc = "0x40 - SPI interrupt control register"]
     #[inline(always)]
     pub const fn slv_rd_byte(&self) -> &SLV_RD_BYTE {
-        &self.slv_rd_byte
+        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
     }
     #[doc = "0x44 - SPI master status and DMA read byte control register"]
     #[inline(always)]
     pub const fn fsm(&self) -> &FSM {
         &self.fsm
     }
+    #[doc = "0x48 - SPI Memory SRAM DRD CMD Register"]
+    #[inline(always)]
+    pub const fn sram_drd_cmd(&self) -> &SRAM_DRD_CMD {
+        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+    }
     #[doc = "0x48 - SPI hold register"]
     #[inline(always)]
     pub const fn hold(&self) -> &HOLD {
-        &self.hold
+        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+    }
+    #[doc = "0x4c - SPI Memory SRAM DWR CMD Register"]
+    #[inline(always)]
+    pub const fn sram_dwr_cmd(&self) -> &SRAM_DWR_CMD {
+        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
     }
     #[doc = "0x4c - SPI DMA control register"]
     #[inline(always)]
     pub const fn dma_conf(&self) -> &DMA_CONF {
-        &self.dma_conf
+        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
+    }
+    #[doc = "0x50 - SPI Memory SRAM Clock Register"]
+    #[inline(always)]
+    pub const fn sram_clk(&self) -> &SRAM_CLK {
+        unsafe { &*(self as *const Self).cast::<u8>().add(80).cast() }
     }
     #[doc = "0x50 - SPI DMA TX link configuration"]
     #[inline(always)]
     pub const fn dma_out_link(&self) -> &DMA_OUT_LINK {
-        &self.dma_out_link
+        unsafe { &*(self as *const Self).cast::<u8>().add(80).cast() }
     }
     #[doc = "0x54 - SPI DMA RX link configuration"]
     #[inline(always)]
@@ -502,3 +522,19 @@ pub mod lcd_d_num;
 pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
 #[doc = "SPI version control"]
 pub mod reg_date;
+#[doc = "CACHE_SCTRL (rw) register accessor: SPI Memory Cache SCTRL Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_sctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_sctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_sctrl`] module"]
+pub type CACHE_SCTRL = crate::Reg<cache_sctrl::CACHE_SCTRL_SPEC>;
+#[doc = "SPI Memory Cache SCTRL Register"]
+pub mod cache_sctrl;
+#[doc = "SRAM_DWR_CMD (rw) register accessor: SPI Memory SRAM DWR CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_dwr_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_dwr_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_dwr_cmd`] module"]
+pub type SRAM_DWR_CMD = crate::Reg<sram_dwr_cmd::SRAM_DWR_CMD_SPEC>;
+#[doc = "SPI Memory SRAM DWR CMD Register"]
+pub mod sram_dwr_cmd;
+#[doc = "SRAM_DRD_CMD (rw) register accessor: SPI Memory SRAM DRD CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_drd_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_drd_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_drd_cmd`] module"]
+pub type SRAM_DRD_CMD = crate::Reg<sram_drd_cmd::SRAM_DRD_CMD_SPEC>;
+#[doc = "SPI Memory SRAM DRD CMD Register"]
+pub mod sram_drd_cmd;
+#[doc = "SRAM_CLK (rw) register accessor: SPI Memory SRAM Clock Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_clk`] module"]
+pub type SRAM_CLK = crate::Reg<sram_clk::SRAM_CLK_SPEC>;
+#[doc = "SPI Memory SRAM Clock Register"]
+pub mod sram_clk;

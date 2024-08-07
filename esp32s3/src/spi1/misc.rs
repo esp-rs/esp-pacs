@@ -2,14 +2,10 @@
 pub type R = crate::R<MISC_SPEC>;
 #[doc = "Register `MISC` writer"]
 pub type W = crate::W<MISC_SPEC>;
-#[doc = "Field `CS0_DIS` reader - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub type CS0_DIS_R = crate::BitReader;
-#[doc = "Field `CS0_DIS` writer - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
-pub type CS0_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CS1_DIS` reader - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub type CS1_DIS_R = crate::BitReader;
-#[doc = "Field `CS1_DIS` writer - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
-pub type CS1_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CS_DIS(0-1)` reader - Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"]
+pub type CS_DIS_R = crate::BitReader;
+#[doc = "Field `CS_DIS(0-1)` writer - Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"]
+pub type CS_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CK_IDLE_EDGE` reader - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
 pub type CK_IDLE_EDGE_R = crate::BitReader;
 #[doc = "Field `CK_IDLE_EDGE` writer - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
@@ -23,15 +19,30 @@ pub type AUTO_PER_R = crate::BitReader;
 #[doc = "Field `AUTO_PER` writer - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
 pub type AUTO_PER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+    #[doc = "Set this bit to raise high SPI_CS(0-1) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-1) is in low level when SPI1 transfer starts"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
-    pub fn cs0_dis(&self) -> CS0_DIS_R {
-        CS0_DIS_R::new((self.bits & 1) != 0)
+    pub fn cs_dis(&self, n: u8) -> CS_DIS_R {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        CS_DIS_R::new(((self.bits >> n) & 1) != 0)
     }
-    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "Set this bit to raise high SPI_CS(0-1) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-1) is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs1_dis(&self) -> CS1_DIS_R {
-        CS1_DIS_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn cs_dis_iter(&self) -> impl Iterator<Item = CS_DIS_R> + '_ {
+        (0..2).map(move |n| CS_DIS_R::new(((self.bits >> n) & 1) != 0))
+    }
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    pub fn cs0_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    pub fn cs1_dis(&self) -> CS_DIS_R {
+        CS_DIS_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
     #[inline(always)]
@@ -53,26 +64,36 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("MISC")
-            .field("cs0_dis", &self.cs0_dis())
-            .field("cs1_dis", &self.cs1_dis())
             .field("ck_idle_edge", &self.ck_idle_edge())
             .field("cs_keep_active", &self.cs_keep_active())
             .field("auto_per", &self.auto_per())
+            .field("cs0_dis", &self.cs0_dis())
+            .field("cs1_dis", &self.cs1_dis())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bit 0 - Set this bit to raise high SPI_CS pin, which means that the SPI device(flash) connected to SPI_CS is in low level when SPI1 transfer starts."]
+    #[doc = "Set this bit to raise high SPI_CS(0-1) pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS(0-1) is in low level when SPI1 transfer starts"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
     #[must_use]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
-        CS0_DIS_W::new(self, 0)
+    pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<MISC_SPEC> {
+        #[allow(clippy::no_effect)]
+        [(); 2][n as usize];
+        CS_DIS_W::new(self, n)
     }
-    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM) connected to SPI_CS1 is in low level when SPI1 transfer starts."]
+    #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
     #[must_use]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
-        CS1_DIS_W::new(self, 1)
+    pub fn cs0_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 0)
+    }
+    #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
+    #[inline(always)]
+    #[must_use]
+    pub fn cs1_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+        CS_DIS_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
     #[inline(always)]
