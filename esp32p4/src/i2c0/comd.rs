@@ -2,19 +2,151 @@
 pub type R = crate::R<COMD_SPEC>;
 #[doc = "Register `COMD%s` writer"]
 pub type W = crate::W<COMD_SPEC>;
-#[doc = "Field `COMMAND` reader - Configures command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information."]
-pub type COMMAND_R = crate::FieldReader<u16>;
-#[doc = "Field `COMMAND` writer - Configures command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information."]
-pub type COMMAND_W<'a, REG> = crate::FieldWriter<'a, REG, 14, u16>;
+#[doc = "Field `BYTE_NUM` reader - Number of bytes to be sent or received for command %s."]
+pub type BYTE_NUM_R = crate::FieldReader;
+#[doc = "Field `BYTE_NUM` writer - Number of bytes to be sent or received for command %s."]
+pub type BYTE_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
+#[doc = "Field `ACK_CHECK_EN` reader - Acknowledge check enable for command %s."]
+pub type ACK_CHECK_EN_R = crate::BitReader;
+#[doc = "Field `ACK_CHECK_EN` writer - Acknowledge check enable for command %s."]
+pub type ACK_CHECK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ACK_EXP` reader - Acknowledge expected for command %s."]
+pub type ACK_EXP_R = crate::BitReader;
+#[doc = "Field `ACK_EXP` writer - Acknowledge expected for command %s."]
+pub type ACK_EXP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `ACK_VALUE` reader - Acknowledge value for command %s."]
+pub type ACK_VALUE_R = crate::BitReader;
+#[doc = "Field `ACK_VALUE` writer - Acknowledge value for command %s."]
+pub type ACK_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Opcode part of command %s.\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum OPCODE {
+    #[doc = "0: RSTART opcode"]
+    Rstart = 0,
+    #[doc = "1: WRITE opcode"]
+    Write = 1,
+    #[doc = "2: READ opcode"]
+    Read = 2,
+    #[doc = "3: STOP opcode"]
+    Stop = 3,
+    #[doc = "4: END opcode"]
+    End = 4,
+}
+impl From<OPCODE> for u8 {
+    #[inline(always)]
+    fn from(variant: OPCODE) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for OPCODE {
+    type Ux = u8;
+}
+impl crate::IsEnum for OPCODE {}
+#[doc = "Field `OPCODE` reader - Opcode part of command %s."]
+pub type OPCODE_R = crate::FieldReader<OPCODE>;
+impl OPCODE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> Option<OPCODE> {
+        match self.bits {
+            0 => Some(OPCODE::Rstart),
+            1 => Some(OPCODE::Write),
+            2 => Some(OPCODE::Read),
+            3 => Some(OPCODE::Stop),
+            4 => Some(OPCODE::End),
+            _ => None,
+        }
+    }
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn is_rstart(&self) -> bool {
+        *self == OPCODE::Rstart
+    }
+    #[doc = "WRITE opcode"]
+    #[inline(always)]
+    pub fn is_write(&self) -> bool {
+        *self == OPCODE::Write
+    }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn is_read(&self) -> bool {
+        *self == OPCODE::Read
+    }
+    #[doc = "STOP opcode"]
+    #[inline(always)]
+    pub fn is_stop(&self) -> bool {
+        *self == OPCODE::Stop
+    }
+    #[doc = "END opcode"]
+    #[inline(always)]
+    pub fn is_end(&self) -> bool {
+        *self == OPCODE::End
+    }
+}
+#[doc = "Field `OPCODE` writer - Opcode part of command %s."]
+pub type OPCODE_W<'a, REG> = crate::FieldWriter<'a, REG, 3, OPCODE>;
+impl<'a, REG> OPCODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn rstart(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Rstart)
+    }
+    #[doc = "WRITE opcode"]
+    #[inline(always)]
+    pub fn write(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Write)
+    }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn read(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Read)
+    }
+    #[doc = "STOP opcode"]
+    #[inline(always)]
+    pub fn stop(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Stop)
+    }
+    #[doc = "END opcode"]
+    #[inline(always)]
+    pub fn end(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::End)
+    }
+}
 #[doc = "Field `COMMAND_DONE` reader - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
 pub type COMMAND_DONE_R = crate::BitReader;
 #[doc = "Field `COMMAND_DONE` writer - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
 pub type COMMAND_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:13 - Configures command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information."]
+    #[doc = "Bits 0:7 - Number of bytes to be sent or received for command %s."]
     #[inline(always)]
-    pub fn command(&self) -> COMMAND_R {
-        COMMAND_R::new((self.bits & 0x3fff) as u16)
+    pub fn byte_num(&self) -> BYTE_NUM_R {
+        BYTE_NUM_R::new((self.bits & 0xff) as u8)
+    }
+    #[doc = "Bit 8 - Acknowledge check enable for command %s."]
+    #[inline(always)]
+    pub fn ack_check_en(&self) -> ACK_CHECK_EN_R {
+        ACK_CHECK_EN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - Acknowledge expected for command %s."]
+    #[inline(always)]
+    pub fn ack_exp(&self) -> ACK_EXP_R {
+        ACK_EXP_R::new(((self.bits >> 9) & 1) != 0)
+    }
+    #[doc = "Bit 10 - Acknowledge value for command %s."]
+    #[inline(always)]
+    pub fn ack_value(&self) -> ACK_VALUE_R {
+        ACK_VALUE_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bits 11:13 - Opcode part of command %s."]
+    #[inline(always)]
+    pub fn opcode(&self) -> OPCODE_R {
+        OPCODE_R::new(((self.bits >> 11) & 7) as u8)
     }
     #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
     #[inline(always)]
@@ -26,17 +158,45 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("COMD")
-            .field("command", &self.command())
             .field("command_done", &self.command_done())
+            .field("opcode", &self.opcode())
+            .field("ack_value", &self.ack_value())
+            .field("ack_exp", &self.ack_exp())
+            .field("ack_check_en", &self.ack_check_en())
+            .field("byte_num", &self.byte_num())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:13 - Configures command 0. It consists of three parts: op_code is the command, 0: RSTART, 1: WRITE, 2: READ, 3: STOP, 4: END. Byte_num represents the number of bytes that need to be sent or received. ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for more information."]
+    #[doc = "Bits 0:7 - Number of bytes to be sent or received for command %s."]
     #[inline(always)]
     #[must_use]
-    pub fn command(&mut self) -> COMMAND_W<COMD_SPEC> {
-        COMMAND_W::new(self, 0)
+    pub fn byte_num(&mut self) -> BYTE_NUM_W<COMD_SPEC> {
+        BYTE_NUM_W::new(self, 0)
+    }
+    #[doc = "Bit 8 - Acknowledge check enable for command %s."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ack_check_en(&mut self) -> ACK_CHECK_EN_W<COMD_SPEC> {
+        ACK_CHECK_EN_W::new(self, 8)
+    }
+    #[doc = "Bit 9 - Acknowledge expected for command %s."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ack_exp(&mut self) -> ACK_EXP_W<COMD_SPEC> {
+        ACK_EXP_W::new(self, 9)
+    }
+    #[doc = "Bit 10 - Acknowledge value for command %s."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ack_value(&mut self) -> ACK_VALUE_W<COMD_SPEC> {
+        ACK_VALUE_W::new(self, 10)
+    }
+    #[doc = "Bits 11:13 - Opcode part of command %s."]
+    #[inline(always)]
+    #[must_use]
+    pub fn opcode(&mut self) -> OPCODE_W<COMD_SPEC> {
+        OPCODE_W::new(self, 11)
     }
     #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode. 0: Not done 1: Done"]
     #[inline(always)]

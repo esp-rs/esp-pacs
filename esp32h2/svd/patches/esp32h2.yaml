@@ -23,6 +23,8 @@ I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
+  _include:
+    - ../../../common_patches/i2c0.yaml
 
 HP_APM,LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
