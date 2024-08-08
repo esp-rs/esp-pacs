@@ -21,7 +21,7 @@ runs:
     # Install the newest available version of the specified toolchain,
     # required for building the PAC:
 
-    - uses: dtolnay/rust-toolchain@nightly
+    - uses: dtolnay/rust-toolchain@stable
       if: startsWith(inputs.target, 'riscv')
       with:
         target: ${{ inputs.target }}
