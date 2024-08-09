@@ -7,8 +7,9 @@ pub struct RegisterBlock {
     uxint_clear: UXINT_CLEAR,
     euip_status: EUIP_STATUS,
     uxint_pri: (),
-    _reserved5: [u8; 0x84],
+    _reserved5: [u8; 0x80],
     uxint_thresh: UXINT_THRESH,
+    uxint_claim: UXINT_CLAIM,
 }
 impl RegisterBlock {
     #[doc = "0x00 - PLIC UX Interrupt Enable Register"]
@@ -216,10 +217,15 @@ impl RegisterBlock {
     pub const fn uxint31_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(31)
     }
-    #[doc = "0x94 - PLIC UX Interrupt Claim Register"]
+    #[doc = "0x90 - PLIC UX Interrupt Threshold Register"]
     #[inline(always)]
     pub const fn uxint_thresh(&self) -> &UXINT_THRESH {
         &self.uxint_thresh
+    }
+    #[doc = "0x94 - PLIC UX Interrupt Claim Register"]
+    #[inline(always)]
+    pub const fn uxint_claim(&self) -> &UXINT_CLAIM {
+        &self.uxint_claim
     }
 }
 #[doc = "UXINT_ENABLE (rw) register accessor: PLIC UX Interrupt Enable Register\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_enable`] module"]
@@ -242,7 +248,11 @@ pub mod euip_status;
 pub type UXINT_PRI = crate::Reg<uxint_pri::UXINT_PRI_SPEC>;
 #[doc = "PLIC UX Interrupt %s Priority Register"]
 pub mod uxint_pri;
-#[doc = "UXINT_THRESH (rw) register accessor: PLIC UX Interrupt Claim Register\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_thresh::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_thresh::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_thresh`] module"]
+#[doc = "UXINT_THRESH (rw) register accessor: PLIC UX Interrupt Threshold Register\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_thresh::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_thresh::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_thresh`] module"]
 pub type UXINT_THRESH = crate::Reg<uxint_thresh::UXINT_THRESH_SPEC>;
-#[doc = "PLIC UX Interrupt Claim Register"]
+#[doc = "PLIC UX Interrupt Threshold Register"]
 pub mod uxint_thresh;
+#[doc = "UXINT_CLAIM (rw) register accessor: PLIC UX Interrupt Claim Register\n\nYou can [`read`](crate::Reg::read) this register and get [`uxint_claim::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uxint_claim::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uxint_claim`] module"]
+pub type UXINT_CLAIM = crate::Reg<uxint_claim::UXINT_CLAIM_SPEC>;
+#[doc = "PLIC UX Interrupt Claim Register"]
+pub mod uxint_claim;

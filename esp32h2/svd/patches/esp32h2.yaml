@@ -166,7 +166,7 @@ _add:
             bitOffset: 0
             bitWidth: 8
             access: read-write
-        UXINT_CLAIM:
+      UXINT_CLAIM:
         description: "PLIC UX Interrupt Claim Register"
         addressOffset: 0x0094
         size: 32
