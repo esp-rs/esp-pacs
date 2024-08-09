@@ -2755,6 +2755,98 @@ impl core::fmt::Debug for USB_DEVICE {
 }
 #[doc = "Full-speed USB Serial/JTAG Controller"]
 pub mod usb_device;
+#[doc = "PLIC Peripheral"]
+pub struct PLIC_MX {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for PLIC_MX {}
+impl PLIC_MX {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const plic_mx::RegisterBlock = 0x2000_1000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const plic_mx::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for PLIC_MX {
+    type Target = plic_mx::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for PLIC_MX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_MX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_mx;
+#[doc = "PLIC Peripheral"]
+pub struct PLIC_UX {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for PLIC_UX {}
+impl PLIC_UX {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const plic_ux::RegisterBlock = 0x2000_1400 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const plic_ux::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for PLIC_UX {
+    type Target = plic_ux::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for PLIC_UX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_UX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_ux;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -2870,6 +2962,10 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "USB_DEVICE"]
     pub USB_DEVICE: USB_DEVICE,
+    #[doc = "PLIC_MX"]
+    pub PLIC_MX: PLIC_MX,
+    #[doc = "PLIC_UX"]
+    pub PLIC_UX: PLIC_UX,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -2947,6 +3043,8 @@ impl Peripherals {
             UART1: UART1::steal(),
             UHCI0: UHCI0::steal(),
             USB_DEVICE: USB_DEVICE::steal(),
+            PLIC_MX: PLIC_MX::steal(),
+            PLIC_UX: PLIC_UX::steal(),
         }
     }
 }
