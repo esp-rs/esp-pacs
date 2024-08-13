@@ -6,6 +6,7 @@ I2C0:
       name: INT_ST
   _include:
     - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_opcode.yaml
 
 RTC_I2C:
   _modify:
