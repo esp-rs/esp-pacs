@@ -28,8 +28,9 @@ COMD%s:
       access: read-write
   OPCODE:
       _name: Opcode
-      Rstart: [0, RSTART opcode]
       Write: [1, WRITE opcode]
-      Read: [2, READ opcode]
-      Stop: [3, STOP opcode]
+      Read: [3, READ opcode]
+      Stop: [2, STOP opcode]
       End: [4, END opcode]
+      Rstart: [6, RSTART opcode]
+      

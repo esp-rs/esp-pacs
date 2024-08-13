@@ -23,16 +23,16 @@ pub type ACK_VALUE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OPCODE {
-    #[doc = "0: RSTART opcode"]
-    Rstart = 0,
     #[doc = "1: WRITE opcode"]
     Write = 1,
-    #[doc = "2: READ opcode"]
-    Read = 2,
-    #[doc = "3: STOP opcode"]
-    Stop = 3,
+    #[doc = "2: STOP opcode"]
+    Stop = 2,
+    #[doc = "3: READ opcode"]
+    Read = 3,
     #[doc = "4: END opcode"]
     End = 4,
+    #[doc = "6: RSTART opcode"]
+    Rstart = 6,
 }
 impl From<OPCODE> for u8 {
     #[inline(always)]
@@ -51,38 +51,38 @@ impl OPCODE_R {
     #[inline(always)]
     pub const fn variant(&self) -> Option<OPCODE> {
         match self.bits {
-            0 => Some(OPCODE::Rstart),
             1 => Some(OPCODE::Write),
-            2 => Some(OPCODE::Read),
-            3 => Some(OPCODE::Stop),
+            2 => Some(OPCODE::Stop),
+            3 => Some(OPCODE::Read),
             4 => Some(OPCODE::End),
+            6 => Some(OPCODE::Rstart),
             _ => None,
         }
-    }
-    #[doc = "RSTART opcode"]
-    #[inline(always)]
-    pub fn is_rstart(&self) -> bool {
-        *self == OPCODE::Rstart
     }
     #[doc = "WRITE opcode"]
     #[inline(always)]
     pub fn is_write(&self) -> bool {
         *self == OPCODE::Write
     }
-    #[doc = "READ opcode"]
-    #[inline(always)]
-    pub fn is_read(&self) -> bool {
-        *self == OPCODE::Read
-    }
     #[doc = "STOP opcode"]
     #[inline(always)]
     pub fn is_stop(&self) -> bool {
         *self == OPCODE::Stop
     }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn is_read(&self) -> bool {
+        *self == OPCODE::Read
+    }
     #[doc = "END opcode"]
     #[inline(always)]
     pub fn is_end(&self) -> bool {
         *self == OPCODE::End
+    }
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn is_rstart(&self) -> bool {
+        *self == OPCODE::Rstart
     }
 }
 #[doc = "Field `OPCODE` writer - Opcode part of command %s."]
@@ -92,30 +92,30 @@ where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
 {
-    #[doc = "RSTART opcode"]
-    #[inline(always)]
-    pub fn rstart(self) -> &'a mut crate::W<REG> {
-        self.variant(OPCODE::Rstart)
-    }
     #[doc = "WRITE opcode"]
     #[inline(always)]
     pub fn write(self) -> &'a mut crate::W<REG> {
         self.variant(OPCODE::Write)
-    }
-    #[doc = "READ opcode"]
-    #[inline(always)]
-    pub fn read(self) -> &'a mut crate::W<REG> {
-        self.variant(OPCODE::Read)
     }
     #[doc = "STOP opcode"]
     #[inline(always)]
     pub fn stop(self) -> &'a mut crate::W<REG> {
         self.variant(OPCODE::Stop)
     }
+    #[doc = "READ opcode"]
+    #[inline(always)]
+    pub fn read(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Read)
+    }
     #[doc = "END opcode"]
     #[inline(always)]
     pub fn end(self) -> &'a mut crate::W<REG> {
         self.variant(OPCODE::End)
+    }
+    #[doc = "RSTART opcode"]
+    #[inline(always)]
+    pub fn rstart(self) -> &'a mut crate::W<REG> {
+        self.variant(OPCODE::Rstart)
     }
 }
 #[doc = "Field `COMMAND_DONE` reader - When command 0 is done in I2C Master mode, this bit changes to high level."]
