@@ -6,8 +6,7 @@ pub struct RegisterBlock {
     mxint_type: MXINT_TYPE,
     mxint_clear: MXINT_CLEAR,
     emip_status: EMIP_STATUS,
-    mxint_pri: (),
-    _reserved5: [u8; 0x80],
+    mxint_pri: [MXINT_PRI; 32],
     mxint_thresh: MXINT_THRESH,
     mxint_claim: MXINT_CLAIM,
 }
@@ -35,184 +34,170 @@ impl RegisterBlock {
     #[doc = "0x10..0x90 - PLIC MX Interrupt %s Priority Register"]
     #[inline(always)]
     pub const fn mxint_pri(&self, n: usize) -> &MXINT_PRI {
-        #[allow(clippy::no_effect)]
-        [(); 32][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(32 * n)
-                .cast()
-        }
+        &self.mxint_pri[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x10..0x90 - PLIC MX Interrupt %s Priority Register"]
     #[inline(always)]
     pub fn mxint_pri_iter(&self) -> impl Iterator<Item = &MXINT_PRI> {
-        (0..32).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(32 * n)
-                .cast()
-        })
+        self.mxint_pri.iter()
     }
     #[doc = "0x10 - PLIC MX Interrupt 0 Priority Register"]
     #[inline(always)]
     pub const fn mxint0_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(0)
     }
-    #[doc = "0x30 - PLIC MX Interrupt 1 Priority Register"]
+    #[doc = "0x14 - PLIC MX Interrupt 1 Priority Register"]
     #[inline(always)]
     pub const fn mxint1_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(1)
     }
-    #[doc = "0x50 - PLIC MX Interrupt 2 Priority Register"]
+    #[doc = "0x18 - PLIC MX Interrupt 2 Priority Register"]
     #[inline(always)]
     pub const fn mxint2_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(2)
     }
-    #[doc = "0x70 - PLIC MX Interrupt 3 Priority Register"]
+    #[doc = "0x1c - PLIC MX Interrupt 3 Priority Register"]
     #[inline(always)]
     pub const fn mxint3_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(3)
     }
-    #[doc = "0x90 - PLIC MX Interrupt 4 Priority Register"]
+    #[doc = "0x20 - PLIC MX Interrupt 4 Priority Register"]
     #[inline(always)]
     pub const fn mxint4_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(4)
     }
-    #[doc = "0xb0 - PLIC MX Interrupt 5 Priority Register"]
+    #[doc = "0x24 - PLIC MX Interrupt 5 Priority Register"]
     #[inline(always)]
     pub const fn mxint5_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(5)
     }
-    #[doc = "0xd0 - PLIC MX Interrupt 6 Priority Register"]
+    #[doc = "0x28 - PLIC MX Interrupt 6 Priority Register"]
     #[inline(always)]
     pub const fn mxint6_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(6)
     }
-    #[doc = "0xf0 - PLIC MX Interrupt 7 Priority Register"]
+    #[doc = "0x2c - PLIC MX Interrupt 7 Priority Register"]
     #[inline(always)]
     pub const fn mxint7_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(7)
     }
-    #[doc = "0x110 - PLIC MX Interrupt 8 Priority Register"]
+    #[doc = "0x30 - PLIC MX Interrupt 8 Priority Register"]
     #[inline(always)]
     pub const fn mxint8_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(8)
     }
-    #[doc = "0x130 - PLIC MX Interrupt 9 Priority Register"]
+    #[doc = "0x34 - PLIC MX Interrupt 9 Priority Register"]
     #[inline(always)]
     pub const fn mxint9_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(9)
     }
-    #[doc = "0x150 - PLIC MX Interrupt 10 Priority Register"]
+    #[doc = "0x38 - PLIC MX Interrupt 10 Priority Register"]
     #[inline(always)]
     pub const fn mxint10_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(10)
     }
-    #[doc = "0x170 - PLIC MX Interrupt 11 Priority Register"]
+    #[doc = "0x3c - PLIC MX Interrupt 11 Priority Register"]
     #[inline(always)]
     pub const fn mxint11_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(11)
     }
-    #[doc = "0x190 - PLIC MX Interrupt 12 Priority Register"]
+    #[doc = "0x40 - PLIC MX Interrupt 12 Priority Register"]
     #[inline(always)]
     pub const fn mxint12_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(12)
     }
-    #[doc = "0x1b0 - PLIC MX Interrupt 13 Priority Register"]
+    #[doc = "0x44 - PLIC MX Interrupt 13 Priority Register"]
     #[inline(always)]
     pub const fn mxint13_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(13)
     }
-    #[doc = "0x1d0 - PLIC MX Interrupt 14 Priority Register"]
+    #[doc = "0x48 - PLIC MX Interrupt 14 Priority Register"]
     #[inline(always)]
     pub const fn mxint14_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(14)
     }
-    #[doc = "0x1f0 - PLIC MX Interrupt 15 Priority Register"]
+    #[doc = "0x4c - PLIC MX Interrupt 15 Priority Register"]
     #[inline(always)]
     pub const fn mxint15_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(15)
     }
-    #[doc = "0x210 - PLIC MX Interrupt 16 Priority Register"]
+    #[doc = "0x50 - PLIC MX Interrupt 16 Priority Register"]
     #[inline(always)]
     pub const fn mxint16_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(16)
     }
-    #[doc = "0x230 - PLIC MX Interrupt 17 Priority Register"]
+    #[doc = "0x54 - PLIC MX Interrupt 17 Priority Register"]
     #[inline(always)]
     pub const fn mxint17_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(17)
     }
-    #[doc = "0x250 - PLIC MX Interrupt 18 Priority Register"]
+    #[doc = "0x58 - PLIC MX Interrupt 18 Priority Register"]
     #[inline(always)]
     pub const fn mxint18_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(18)
     }
-    #[doc = "0x270 - PLIC MX Interrupt 19 Priority Register"]
+    #[doc = "0x5c - PLIC MX Interrupt 19 Priority Register"]
     #[inline(always)]
     pub const fn mxint19_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(19)
     }
-    #[doc = "0x290 - PLIC MX Interrupt 20 Priority Register"]
+    #[doc = "0x60 - PLIC MX Interrupt 20 Priority Register"]
     #[inline(always)]
     pub const fn mxint20_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(20)
     }
-    #[doc = "0x2b0 - PLIC MX Interrupt 21 Priority Register"]
+    #[doc = "0x64 - PLIC MX Interrupt 21 Priority Register"]
     #[inline(always)]
     pub const fn mxint21_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(21)
     }
-    #[doc = "0x2d0 - PLIC MX Interrupt 22 Priority Register"]
+    #[doc = "0x68 - PLIC MX Interrupt 22 Priority Register"]
     #[inline(always)]
     pub const fn mxint22_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(22)
     }
-    #[doc = "0x2f0 - PLIC MX Interrupt 23 Priority Register"]
+    #[doc = "0x6c - PLIC MX Interrupt 23 Priority Register"]
     #[inline(always)]
     pub const fn mxint23_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(23)
     }
-    #[doc = "0x310 - PLIC MX Interrupt 24 Priority Register"]
+    #[doc = "0x70 - PLIC MX Interrupt 24 Priority Register"]
     #[inline(always)]
     pub const fn mxint24_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(24)
     }
-    #[doc = "0x330 - PLIC MX Interrupt 25 Priority Register"]
+    #[doc = "0x74 - PLIC MX Interrupt 25 Priority Register"]
     #[inline(always)]
     pub const fn mxint25_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(25)
     }
-    #[doc = "0x350 - PLIC MX Interrupt 26 Priority Register"]
+    #[doc = "0x78 - PLIC MX Interrupt 26 Priority Register"]
     #[inline(always)]
     pub const fn mxint26_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(26)
     }
-    #[doc = "0x370 - PLIC MX Interrupt 27 Priority Register"]
+    #[doc = "0x7c - PLIC MX Interrupt 27 Priority Register"]
     #[inline(always)]
     pub const fn mxint27_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(27)
     }
-    #[doc = "0x390 - PLIC MX Interrupt 28 Priority Register"]
+    #[doc = "0x80 - PLIC MX Interrupt 28 Priority Register"]
     #[inline(always)]
     pub const fn mxint28_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(28)
     }
-    #[doc = "0x3b0 - PLIC MX Interrupt 29 Priority Register"]
+    #[doc = "0x84 - PLIC MX Interrupt 29 Priority Register"]
     #[inline(always)]
     pub const fn mxint29_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(29)
     }
-    #[doc = "0x3d0 - PLIC MX Interrupt 30 Priority Register"]
+    #[doc = "0x88 - PLIC MX Interrupt 30 Priority Register"]
     #[inline(always)]
     pub const fn mxint30_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(30)
     }
-    #[doc = "0x3f0 - PLIC MX Interrupt 31 Priority Register"]
+    #[doc = "0x8c - PLIC MX Interrupt 31 Priority Register"]
     #[inline(always)]
     pub const fn mxint31_pri(&self) -> &MXINT_PRI {
         self.mxint_pri(31)
