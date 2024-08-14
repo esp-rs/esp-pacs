@@ -56,7 +56,7 @@ _add:
             access: read-only
       MXINT%s_PRI:
         dim: 32
-        dimIncrement: 0x20
+        dimIncrement: 0x4
         description: "PLIC MX Interrupt %s Priority Register"
         addressOffset: 0x0010
         size: 32
@@ -144,13 +144,13 @@ _add:
             access: read-only
       UXINT%s_PRI:
         dim: 32
-        dimIncrement: 0x20
+        dimIncrement: 0x4
         description: "PLIC UX Interrupt %s Priority Register"
         addressOffset: 0x0010
         size: 32
         access: read-write
         fields:
-          CPU_UXINT0_PRI:
+          CPU_UXINT_PRI:
             description: ""
             bitOffset: 0
             bitWidth: 4

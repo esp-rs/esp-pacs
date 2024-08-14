@@ -6,8 +6,7 @@ pub struct RegisterBlock {
     uxint_type: UXINT_TYPE,
     uxint_clear: UXINT_CLEAR,
     euip_status: EUIP_STATUS,
-    uxint_pri: (),
-    _reserved5: [u8; 0x80],
+    uxint_pri: [UXINT_PRI; 32],
     uxint_thresh: UXINT_THRESH,
     uxint_claim: UXINT_CLAIM,
 }
@@ -35,184 +34,170 @@ impl RegisterBlock {
     #[doc = "0x10..0x90 - PLIC UX Interrupt %s Priority Register"]
     #[inline(always)]
     pub const fn uxint_pri(&self, n: usize) -> &UXINT_PRI {
-        #[allow(clippy::no_effect)]
-        [(); 32][n];
-        unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(32 * n)
-                .cast()
-        }
+        &self.uxint_pri[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x10..0x90 - PLIC UX Interrupt %s Priority Register"]
     #[inline(always)]
     pub fn uxint_pri_iter(&self) -> impl Iterator<Item = &UXINT_PRI> {
-        (0..32).map(move |n| unsafe {
-            &*(self as *const Self)
-                .cast::<u8>()
-                .add(16)
-                .add(32 * n)
-                .cast()
-        })
+        self.uxint_pri.iter()
     }
     #[doc = "0x10 - PLIC UX Interrupt 0 Priority Register"]
     #[inline(always)]
     pub const fn uxint0_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(0)
     }
-    #[doc = "0x30 - PLIC UX Interrupt 1 Priority Register"]
+    #[doc = "0x14 - PLIC UX Interrupt 1 Priority Register"]
     #[inline(always)]
     pub const fn uxint1_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(1)
     }
-    #[doc = "0x50 - PLIC UX Interrupt 2 Priority Register"]
+    #[doc = "0x18 - PLIC UX Interrupt 2 Priority Register"]
     #[inline(always)]
     pub const fn uxint2_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(2)
     }
-    #[doc = "0x70 - PLIC UX Interrupt 3 Priority Register"]
+    #[doc = "0x1c - PLIC UX Interrupt 3 Priority Register"]
     #[inline(always)]
     pub const fn uxint3_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(3)
     }
-    #[doc = "0x90 - PLIC UX Interrupt 4 Priority Register"]
+    #[doc = "0x20 - PLIC UX Interrupt 4 Priority Register"]
     #[inline(always)]
     pub const fn uxint4_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(4)
     }
-    #[doc = "0xb0 - PLIC UX Interrupt 5 Priority Register"]
+    #[doc = "0x24 - PLIC UX Interrupt 5 Priority Register"]
     #[inline(always)]
     pub const fn uxint5_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(5)
     }
-    #[doc = "0xd0 - PLIC UX Interrupt 6 Priority Register"]
+    #[doc = "0x28 - PLIC UX Interrupt 6 Priority Register"]
     #[inline(always)]
     pub const fn uxint6_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(6)
     }
-    #[doc = "0xf0 - PLIC UX Interrupt 7 Priority Register"]
+    #[doc = "0x2c - PLIC UX Interrupt 7 Priority Register"]
     #[inline(always)]
     pub const fn uxint7_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(7)
     }
-    #[doc = "0x110 - PLIC UX Interrupt 8 Priority Register"]
+    #[doc = "0x30 - PLIC UX Interrupt 8 Priority Register"]
     #[inline(always)]
     pub const fn uxint8_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(8)
     }
-    #[doc = "0x130 - PLIC UX Interrupt 9 Priority Register"]
+    #[doc = "0x34 - PLIC UX Interrupt 9 Priority Register"]
     #[inline(always)]
     pub const fn uxint9_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(9)
     }
-    #[doc = "0x150 - PLIC UX Interrupt 10 Priority Register"]
+    #[doc = "0x38 - PLIC UX Interrupt 10 Priority Register"]
     #[inline(always)]
     pub const fn uxint10_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(10)
     }
-    #[doc = "0x170 - PLIC UX Interrupt 11 Priority Register"]
+    #[doc = "0x3c - PLIC UX Interrupt 11 Priority Register"]
     #[inline(always)]
     pub const fn uxint11_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(11)
     }
-    #[doc = "0x190 - PLIC UX Interrupt 12 Priority Register"]
+    #[doc = "0x40 - PLIC UX Interrupt 12 Priority Register"]
     #[inline(always)]
     pub const fn uxint12_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(12)
     }
-    #[doc = "0x1b0 - PLIC UX Interrupt 13 Priority Register"]
+    #[doc = "0x44 - PLIC UX Interrupt 13 Priority Register"]
     #[inline(always)]
     pub const fn uxint13_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(13)
     }
-    #[doc = "0x1d0 - PLIC UX Interrupt 14 Priority Register"]
+    #[doc = "0x48 - PLIC UX Interrupt 14 Priority Register"]
     #[inline(always)]
     pub const fn uxint14_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(14)
     }
-    #[doc = "0x1f0 - PLIC UX Interrupt 15 Priority Register"]
+    #[doc = "0x4c - PLIC UX Interrupt 15 Priority Register"]
     #[inline(always)]
     pub const fn uxint15_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(15)
     }
-    #[doc = "0x210 - PLIC UX Interrupt 16 Priority Register"]
+    #[doc = "0x50 - PLIC UX Interrupt 16 Priority Register"]
     #[inline(always)]
     pub const fn uxint16_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(16)
     }
-    #[doc = "0x230 - PLIC UX Interrupt 17 Priority Register"]
+    #[doc = "0x54 - PLIC UX Interrupt 17 Priority Register"]
     #[inline(always)]
     pub const fn uxint17_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(17)
     }
-    #[doc = "0x250 - PLIC UX Interrupt 18 Priority Register"]
+    #[doc = "0x58 - PLIC UX Interrupt 18 Priority Register"]
     #[inline(always)]
     pub const fn uxint18_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(18)
     }
-    #[doc = "0x270 - PLIC UX Interrupt 19 Priority Register"]
+    #[doc = "0x5c - PLIC UX Interrupt 19 Priority Register"]
     #[inline(always)]
     pub const fn uxint19_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(19)
     }
-    #[doc = "0x290 - PLIC UX Interrupt 20 Priority Register"]
+    #[doc = "0x60 - PLIC UX Interrupt 20 Priority Register"]
     #[inline(always)]
     pub const fn uxint20_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(20)
     }
-    #[doc = "0x2b0 - PLIC UX Interrupt 21 Priority Register"]
+    #[doc = "0x64 - PLIC UX Interrupt 21 Priority Register"]
     #[inline(always)]
     pub const fn uxint21_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(21)
     }
-    #[doc = "0x2d0 - PLIC UX Interrupt 22 Priority Register"]
+    #[doc = "0x68 - PLIC UX Interrupt 22 Priority Register"]
     #[inline(always)]
     pub const fn uxint22_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(22)
     }
-    #[doc = "0x2f0 - PLIC UX Interrupt 23 Priority Register"]
+    #[doc = "0x6c - PLIC UX Interrupt 23 Priority Register"]
     #[inline(always)]
     pub const fn uxint23_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(23)
     }
-    #[doc = "0x310 - PLIC UX Interrupt 24 Priority Register"]
+    #[doc = "0x70 - PLIC UX Interrupt 24 Priority Register"]
     #[inline(always)]
     pub const fn uxint24_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(24)
     }
-    #[doc = "0x330 - PLIC UX Interrupt 25 Priority Register"]
+    #[doc = "0x74 - PLIC UX Interrupt 25 Priority Register"]
     #[inline(always)]
     pub const fn uxint25_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(25)
     }
-    #[doc = "0x350 - PLIC UX Interrupt 26 Priority Register"]
+    #[doc = "0x78 - PLIC UX Interrupt 26 Priority Register"]
     #[inline(always)]
     pub const fn uxint26_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(26)
     }
-    #[doc = "0x370 - PLIC UX Interrupt 27 Priority Register"]
+    #[doc = "0x7c - PLIC UX Interrupt 27 Priority Register"]
     #[inline(always)]
     pub const fn uxint27_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(27)
     }
-    #[doc = "0x390 - PLIC UX Interrupt 28 Priority Register"]
+    #[doc = "0x80 - PLIC UX Interrupt 28 Priority Register"]
     #[inline(always)]
     pub const fn uxint28_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(28)
     }
-    #[doc = "0x3b0 - PLIC UX Interrupt 29 Priority Register"]
+    #[doc = "0x84 - PLIC UX Interrupt 29 Priority Register"]
     #[inline(always)]
     pub const fn uxint29_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(29)
     }
-    #[doc = "0x3d0 - PLIC UX Interrupt 30 Priority Register"]
+    #[doc = "0x88 - PLIC UX Interrupt 30 Priority Register"]
     #[inline(always)]
     pub const fn uxint30_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(30)
     }
-    #[doc = "0x3f0 - PLIC UX Interrupt 31 Priority Register"]
+    #[doc = "0x8c - PLIC UX Interrupt 31 Priority Register"]
     #[inline(always)]
     pub const fn uxint31_pri(&self) -> &UXINT_PRI {
         self.uxint_pri(31)
