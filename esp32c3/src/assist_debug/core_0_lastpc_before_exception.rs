@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "ASSIST_DEBUG_CORE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CORE_0_LASTPC_BEFORE_EXCEPTION_SPEC;
 impl crate::RegisterSpec for CORE_0_LASTPC_BEFORE_EXCEPTION_SPEC {
     type Ux = u32;

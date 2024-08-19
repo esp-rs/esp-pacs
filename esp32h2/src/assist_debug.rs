@@ -37,7 +37,7 @@ pub struct RegisterBlock {
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - core0 monitor enable configuration register"]
+    #[doc = "0x00 - ASSIST_DEBUG_CORE_0_MONTR_ENA_REG"]
     #[inline(always)]
     pub const fn core_0_montr_ena(&self) -> &CORE_0_MONTR_ENA {
         &self.core_0_montr_ena
@@ -181,12 +181,12 @@ impl RegisterBlock {
     ) -> &CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1 {
         &self.core_x_iram0_dram0_exception_monitor_1
     }
-    #[doc = "0x70 - cpu status register"]
+    #[doc = "0x70 - ASSIST_DEBUG_CORE_0_LASTPC_BEFORE_EXCEPTION"]
     #[inline(always)]
     pub const fn core_0_lastpc_before_exception(&self) -> &CORE_0_LASTPC_BEFORE_EXCEPTION {
         &self.core_0_lastpc_before_exception
     }
-    #[doc = "0x74 - cpu status register"]
+    #[doc = "0x74 - ASSIST_DEBUG_CORE_0_DEBUG_MODE"]
     #[inline(always)]
     pub const fn core_0_debug_mode(&self) -> &CORE_0_DEBUG_MODE {
         &self.core_0_debug_mode
@@ -202,9 +202,9 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "CORE_0_MONTR_ENA (rw) register accessor: core0 monitor enable configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_montr_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_montr_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_montr_ena`] module"]
+#[doc = "CORE_0_MONTR_ENA (rw) register accessor: ASSIST_DEBUG_CORE_0_MONTR_ENA_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_montr_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_0_montr_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_montr_ena`] module"]
 pub type CORE_0_MONTR_ENA = crate::Reg<core_0_montr_ena::CORE_0_MONTR_ENA_SPEC>;
-#[doc = "core0 monitor enable configuration register"]
+#[doc = "ASSIST_DEBUG_CORE_0_MONTR_ENA_REG"]
 pub mod core_0_montr_ena;
 #[doc = "CORE_0_INTR_RAW (r) register accessor: core0 monitor interrupt status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_intr_raw`] module"]
 pub type CORE_0_INTR_RAW = crate::Reg<core_0_intr_raw::CORE_0_INTR_RAW_SPEC>;
@@ -326,14 +326,14 @@ pub type CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1 =
     crate::Reg<core_x_iram0_dram0_exception_monitor_1::CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC>;
 #[doc = "exception monitor status register7"]
 pub mod core_x_iram0_dram0_exception_monitor_1;
-#[doc = "CORE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_lastpc_before_exception`] module"]
+#[doc = "CORE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: ASSIST_DEBUG_CORE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_lastpc_before_exception`] module"]
 pub type CORE_0_LASTPC_BEFORE_EXCEPTION =
     crate::Reg<core_0_lastpc_before_exception::CORE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
-#[doc = "cpu status register"]
+#[doc = "ASSIST_DEBUG_CORE_0_LASTPC_BEFORE_EXCEPTION"]
 pub mod core_0_lastpc_before_exception;
-#[doc = "CORE_0_DEBUG_MODE (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
+#[doc = "CORE_0_DEBUG_MODE (r) register accessor: ASSIST_DEBUG_CORE_0_DEBUG_MODE\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
 pub type CORE_0_DEBUG_MODE = crate::Reg<core_0_debug_mode::CORE_0_DEBUG_MODE_SPEC>;
-#[doc = "cpu status register"]
+#[doc = "ASSIST_DEBUG_CORE_0_DEBUG_MODE"]
 pub mod core_0_debug_mode;
 #[doc = "CLOCK_GATE (rw) register accessor: clock register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
