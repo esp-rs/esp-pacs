@@ -14,10 +14,10 @@ pub struct RegisterBlock {
     wdtwprotect: WDTWPROTECT,
     rtccalicfg: RTCCALICFG,
     rtccalicfg1: RTCCALICFG1,
-    int_ena_timers: INT_ENA_TIMERS,
-    int_raw_timers: INT_RAW_TIMERS,
-    int_st_timers: INT_ST_TIMERS,
-    int_clr_timers: INT_CLR_TIMERS,
+    int_ena: INT_ENA,
+    int_raw: INT_RAW,
+    int_st: INT_ST,
+    int_clr: INT_CLR,
     rtccalicfg2: RTCCALICFG2,
     _reserved16: [u8; 0x74],
     ntimers_date: NTIMERS_DATE,
@@ -87,23 +87,23 @@ impl RegisterBlock {
     }
     #[doc = "0x70 - Interrupt enable bits"]
     #[inline(always)]
-    pub const fn int_ena_timers(&self) -> &INT_ENA_TIMERS {
-        &self.int_ena_timers
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x74 - Raw interrupt status"]
     #[inline(always)]
-    pub const fn int_raw_timers(&self) -> &INT_RAW_TIMERS {
-        &self.int_raw_timers
+    pub const fn int_raw(&self) -> &INT_RAW {
+        &self.int_raw
     }
     #[doc = "0x78 - Masked interrupt status"]
     #[inline(always)]
-    pub const fn int_st_timers(&self) -> &INT_ST_TIMERS {
-        &self.int_st_timers
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x7c - Interrupt clear bits"]
     #[inline(always)]
-    pub const fn int_clr_timers(&self) -> &INT_CLR_TIMERS {
-        &self.int_clr_timers
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x80 - Timer group calibration register"]
     #[inline(always)]
@@ -166,22 +166,22 @@ pub mod rtccalicfg;
 pub type RTCCALICFG1 = crate::Reg<rtccalicfg1::RTCCALICFG1_SPEC>;
 #[doc = "RTC calibration configure1 register"]
 pub mod rtccalicfg1;
-#[doc = "INT_ENA_TIMERS (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena_timers::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena_timers::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena_timers`] module"]
-pub type INT_ENA_TIMERS = crate::Reg<int_ena_timers::INT_ENA_TIMERS_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: Interrupt enable bits\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "Interrupt enable bits"]
-pub mod int_ena_timers;
-#[doc = "INT_RAW_TIMERS (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw_timers::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw_timers`] module"]
-pub type INT_RAW_TIMERS = crate::Reg<int_raw_timers::INT_RAW_TIMERS_SPEC>;
+pub mod int_ena;
+#[doc = "INT_RAW (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
+pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]
-pub mod int_raw_timers;
-#[doc = "INT_ST_TIMERS (r) register accessor: Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st_timers::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st_timers`] module"]
-pub type INT_ST_TIMERS = crate::Reg<int_st_timers::INT_ST_TIMERS_SPEC>;
+pub mod int_raw;
+#[doc = "INT_ST (r) register accessor: Masked interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "Masked interrupt status"]
-pub mod int_st_timers;
-#[doc = "INT_CLR_TIMERS (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr_timers::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr_timers`] module"]
-pub type INT_CLR_TIMERS = crate::Reg<int_clr_timers::INT_CLR_TIMERS_SPEC>;
+pub mod int_st;
+#[doc = "INT_CLR (w) register accessor: Interrupt clear bits\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "Interrupt clear bits"]
-pub mod int_clr_timers;
+pub mod int_clr;
 #[doc = "RTCCALICFG2 (rw) register accessor: Timer group calibration register\n\nYou can [`read`](crate::Reg::read) this register and get [`rtccalicfg2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtccalicfg2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtccalicfg2`] module"]
 pub type RTCCALICFG2 = crate::Reg<rtccalicfg2::RTCCALICFG2_SPEC>;
 #[doc = "Timer group calibration register"]

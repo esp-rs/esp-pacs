@@ -1,4 +1,3 @@
-
 _cluster:
   T%s:
     dimIncrement: 0x24
@@ -21,16 +20,16 @@ _cluster:
     T?LOAD:
       name: LOAD
 
-INT_ENA_TIMERS:
+INT_ENA:
   _array:
     T?: {}
-INT_RAW_TIMERS:
+INT_RAW:
   _array:
     T?: {}
-INT_ST_TIMERS:
+INT_ST:
   _array:
     T?: {}
-INT_CLR_TIMERS:
+INT_CLR:
   _array:
     T?: {}
 
