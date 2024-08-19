@@ -483,3 +483,7 @@ TWAI0:
 _modify:
   IEEE802154:
     baseAddress: 0x600A3000
+
+ASSIST_DEBUG:
+  _include: ../../../common_patches/assist_debug.yaml
+  
