@@ -30,7 +30,7 @@ pub struct RegisterBlock {
     core_0_dram0_exception_monitor_3: CORE_0_DRAM0_EXCEPTION_MONITOR_3,
     core_x_iram0_dram0_exception_monitor_0: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0,
     core_x_iram0_dram0_exception_monitor_1: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1,
-    c0re_0_lastpc_before_exception: C0RE_0_LASTPC_BEFORE_EXCEPTION,
+    core_0_lastpc_before_exception: CORE_0_LASTPC_BEFORE_EXCEPTION,
     core_0_debug_mode: CORE_0_DEBUG_MODE,
     clock_gate: CLOCK_GATE,
     _reserved31: [u8; 0x0380],
@@ -183,8 +183,8 @@ impl RegisterBlock {
     }
     #[doc = "0x70 - cpu status register"]
     #[inline(always)]
-    pub const fn c0re_0_lastpc_before_exception(&self) -> &C0RE_0_LASTPC_BEFORE_EXCEPTION {
-        &self.c0re_0_lastpc_before_exception
+    pub const fn core_0_lastpc_before_exception(&self) -> &CORE_0_LASTPC_BEFORE_EXCEPTION {
+        &self.core_0_lastpc_before_exception
     }
     #[doc = "0x74 - cpu status register"]
     #[inline(always)]
@@ -326,11 +326,11 @@ pub type CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1 =
     crate::Reg<core_x_iram0_dram0_exception_monitor_1::CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC>;
 #[doc = "exception monitor status register7"]
 pub mod core_x_iram0_dram0_exception_monitor_1;
-#[doc = "C0RE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`c0re_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0re_0_lastpc_before_exception`] module"]
-pub type C0RE_0_LASTPC_BEFORE_EXCEPTION =
-    crate::Reg<c0re_0_lastpc_before_exception::C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
+#[doc = "CORE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_lastpc_before_exception`] module"]
+pub type CORE_0_LASTPC_BEFORE_EXCEPTION =
+    crate::Reg<core_0_lastpc_before_exception::CORE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
 #[doc = "cpu status register"]
-pub mod c0re_0_lastpc_before_exception;
+pub mod core_0_lastpc_before_exception;
 #[doc = "CORE_0_DEBUG_MODE (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
 pub type CORE_0_DEBUG_MODE = crate::Reg<core_0_debug_mode::CORE_0_DEBUG_MODE_SPEC>;
 #[doc = "cpu status register"]

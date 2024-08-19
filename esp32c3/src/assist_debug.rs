@@ -39,7 +39,7 @@ pub struct RegisterBlock {
     log_mem_end: LOG_MEM_END,
     log_mem_writing_addr: LOG_MEM_WRITING_ADDR,
     log_mem_full_flag: LOG_MEM_FULL_FLAG,
-    c0re_0_lastpc_before_exception: C0RE_0_LASTPC_BEFORE_EXCEPTION,
+    core_0_lastpc_before_exception: CORE_0_LASTPC_BEFORE_EXCEPTION,
     core_0_debug_mode: CORE_0_DEBUG_MODE,
     _reserved39: [u8; 0x0160],
     date: DATE,
@@ -236,8 +236,8 @@ impl RegisterBlock {
     }
     #[doc = "0x94 - ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION"]
     #[inline(always)]
-    pub const fn c0re_0_lastpc_before_exception(&self) -> &C0RE_0_LASTPC_BEFORE_EXCEPTION {
-        &self.c0re_0_lastpc_before_exception
+    pub const fn core_0_lastpc_before_exception(&self) -> &CORE_0_LASTPC_BEFORE_EXCEPTION {
+        &self.core_0_lastpc_before_exception
     }
     #[doc = "0x98 - ASSIST_DEBUG_C0RE_0_DEBUG_MODE"]
     #[inline(always)]
@@ -410,11 +410,11 @@ pub mod log_mem_writing_addr;
 pub type LOG_MEM_FULL_FLAG = crate::Reg<log_mem_full_flag::LOG_MEM_FULL_FLAG_SPEC>;
 #[doc = "ASSIST_DEBUG_LOG_MEM_FULL_FLAG_REG"]
 pub mod log_mem_full_flag;
-#[doc = "C0RE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::Reg::read) this register and get [`c0re_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0re_0_lastpc_before_exception`] module"]
-pub type C0RE_0_LASTPC_BEFORE_EXCEPTION =
-    crate::Reg<c0re_0_lastpc_before_exception::C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
+#[doc = "CORE_0_LASTPC_BEFORE_EXCEPTION (r) register accessor: ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_lastpc_before_exception::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_lastpc_before_exception`] module"]
+pub type CORE_0_LASTPC_BEFORE_EXCEPTION =
+    crate::Reg<core_0_lastpc_before_exception::CORE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
 #[doc = "ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION"]
-pub mod c0re_0_lastpc_before_exception;
+pub mod core_0_lastpc_before_exception;
 #[doc = "CORE_0_DEBUG_MODE (r) register accessor: ASSIST_DEBUG_C0RE_0_DEBUG_MODE\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
 pub type CORE_0_DEBUG_MODE = crate::Reg<core_0_debug_mode::CORE_0_DEBUG_MODE_SPEC>;
 #[doc = "ASSIST_DEBUG_C0RE_0_DEBUG_MODE"]
