@@ -31,7 +31,7 @@ pub struct RegisterBlock {
     core_x_iram0_dram0_exception_monitor_0: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_0,
     core_x_iram0_dram0_exception_monitor_1: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1,
     c0re_0_lastpc_before_exception: C0RE_0_LASTPC_BEFORE_EXCEPTION,
-    c0re_0_debug_mode: C0RE_0_DEBUG_MODE,
+    core_0_debug_mode: CORE_0_DEBUG_MODE,
     clock_gate: CLOCK_GATE,
     _reserved31: [u8; 0x0380],
     date: DATE,
@@ -188,8 +188,8 @@ impl RegisterBlock {
     }
     #[doc = "0x74 - cpu status register"]
     #[inline(always)]
-    pub const fn c0re_0_debug_mode(&self) -> &C0RE_0_DEBUG_MODE {
-        &self.c0re_0_debug_mode
+    pub const fn core_0_debug_mode(&self) -> &CORE_0_DEBUG_MODE {
+        &self.core_0_debug_mode
     }
     #[doc = "0x78 - clock register"]
     #[inline(always)]
@@ -331,10 +331,10 @@ pub type C0RE_0_LASTPC_BEFORE_EXCEPTION =
     crate::Reg<c0re_0_lastpc_before_exception::C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
 #[doc = "cpu status register"]
 pub mod c0re_0_lastpc_before_exception;
-#[doc = "C0RE_0_DEBUG_MODE (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`c0re_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0re_0_debug_mode`] module"]
-pub type C0RE_0_DEBUG_MODE = crate::Reg<c0re_0_debug_mode::C0RE_0_DEBUG_MODE_SPEC>;
+#[doc = "CORE_0_DEBUG_MODE (r) register accessor: cpu status register\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
+pub type CORE_0_DEBUG_MODE = crate::Reg<core_0_debug_mode::CORE_0_DEBUG_MODE_SPEC>;
 #[doc = "cpu status register"]
-pub mod c0re_0_debug_mode;
+pub mod core_0_debug_mode;
 #[doc = "CLOCK_GATE (rw) register accessor: clock register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "clock register"]

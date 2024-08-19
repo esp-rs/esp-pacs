@@ -40,7 +40,7 @@ pub struct RegisterBlock {
     log_mem_writing_addr: LOG_MEM_WRITING_ADDR,
     log_mem_full_flag: LOG_MEM_FULL_FLAG,
     c0re_0_lastpc_before_exception: C0RE_0_LASTPC_BEFORE_EXCEPTION,
-    c0re_0_debug_mode: C0RE_0_DEBUG_MODE,
+    core_0_debug_mode: CORE_0_DEBUG_MODE,
     _reserved39: [u8; 0x0160],
     date: DATE,
 }
@@ -241,8 +241,8 @@ impl RegisterBlock {
     }
     #[doc = "0x98 - ASSIST_DEBUG_C0RE_0_DEBUG_MODE"]
     #[inline(always)]
-    pub const fn c0re_0_debug_mode(&self) -> &C0RE_0_DEBUG_MODE {
-        &self.c0re_0_debug_mode
+    pub const fn core_0_debug_mode(&self) -> &CORE_0_DEBUG_MODE {
+        &self.core_0_debug_mode
     }
     #[doc = "0x1fc - ASSIST_DEBUG_DATE_REG"]
     #[inline(always)]
@@ -415,10 +415,10 @@ pub type C0RE_0_LASTPC_BEFORE_EXCEPTION =
     crate::Reg<c0re_0_lastpc_before_exception::C0RE_0_LASTPC_BEFORE_EXCEPTION_SPEC>;
 #[doc = "ASSIST_DEBUG_C0RE_0_LASTPC_BEFORE_EXCEPTION"]
 pub mod c0re_0_lastpc_before_exception;
-#[doc = "C0RE_0_DEBUG_MODE (r) register accessor: ASSIST_DEBUG_C0RE_0_DEBUG_MODE\n\nYou can [`read`](crate::Reg::read) this register and get [`c0re_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@c0re_0_debug_mode`] module"]
-pub type C0RE_0_DEBUG_MODE = crate::Reg<c0re_0_debug_mode::C0RE_0_DEBUG_MODE_SPEC>;
+#[doc = "CORE_0_DEBUG_MODE (r) register accessor: ASSIST_DEBUG_C0RE_0_DEBUG_MODE\n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_debug_mode::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_debug_mode`] module"]
+pub type CORE_0_DEBUG_MODE = crate::Reg<core_0_debug_mode::CORE_0_DEBUG_MODE_SPEC>;
 #[doc = "ASSIST_DEBUG_C0RE_0_DEBUG_MODE"]
-pub mod c0re_0_debug_mode;
+pub mod core_0_debug_mode;
 #[doc = "DATE (rw) register accessor: ASSIST_DEBUG_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "ASSIST_DEBUG_DATE_REG"]
