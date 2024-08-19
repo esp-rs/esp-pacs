@@ -460,3 +460,7 @@ DMA:
         name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
+
+ASSIST_DEBUG:
+  _include: ../../../common_patches/assist_debug.yaml
+  
