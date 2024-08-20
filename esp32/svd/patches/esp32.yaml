@@ -14,6 +14,92 @@ RTC_I2C:
       name: INT_ENA
 
 RTC_IO:
+  _delete: ["TOUCH_PAD0", "TOUCH_PAD1", "TOUCH_PAD2", "TOUCH_PAD3", "TOUCH_PAD4", "TOUCH_PAD5", "TOUCH_PAD6", "TOUCH_PAD7", "TOUCH_PAD8", "TOUCH_PAD9"]
+  _add:
+      TOUCH_PAD%s:
+        dim: 10
+        dimIndex: 0-9
+        dimIncrement: 0x4
+        description: "Touch pad %s configuration register"
+        addressOffset: 0x94
+        size: 32
+        access: read-write
+        fields:
+          TO_GPIO:
+            description: "connect the rtc pad input to digital pad input"
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          FUN_IE:
+            description: "the input enable of the pad"
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          SLP_OE:
+            description: "the output enable of the pad in sleep status"
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          SLP_IE:
+            description: "the input enable of the pad in sleep status"
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          SLP_SEL:
+            description: "the sleep status selection signal of the pad"
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          FUN_SEL:
+            description: "the functional selection signal of the pad"
+            bitOffset: 17
+            bitWidth: 2
+            access: read-write
+          MUX_SEL:
+            description: "1 select the digital function, 0 selects the rtc function"
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          XPD:
+            description: "touch sensor power on"
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          TIE_OPT:
+            description: "default touch sensor tie option. 0: tie low, 1: tie high"
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          START:
+            description: "start touch sensor"
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          DAC:
+            description: "touch sensor slope control. 3-bit for each touch panel, default 100"
+            bitOffset: 23
+            bitWidth: 3
+            access: read-write
+          RUE:
+            description: "the pull up enable of the pad"
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          RDE:
+            description: "the pull down enable of the pad"
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          DRV:
+            description: "the driver strength of the pad"
+            bitOffset: 29
+            bitWidth: 2
+            access: read-write
+          HOLD:
+            description: "hold the current value of the output when setting the hold to 1"
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
   _include: ../../../common_patches/rtc_io.yaml
 
 "EFUSE,I2C0,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
