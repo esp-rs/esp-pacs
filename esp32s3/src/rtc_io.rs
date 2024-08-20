@@ -14,21 +14,7 @@ pub struct RegisterBlock {
     rtc_gpio_in: RTC_GPIO_IN,
     pin: [PIN; 22],
     rtc_debug_sel: RTC_DEBUG_SEL,
-    touch_pad0: TOUCH_PAD0,
-    touch_pad1: TOUCH_PAD1,
-    touch_pad2: TOUCH_PAD2,
-    touch_pad3: TOUCH_PAD3,
-    touch_pad4: TOUCH_PAD4,
-    touch_pad5: TOUCH_PAD5,
-    touch_pad6: TOUCH_PAD6,
-    touch_pad7: TOUCH_PAD7,
-    touch_pad8: TOUCH_PAD8,
-    touch_pad9: TOUCH_PAD9,
-    touch_pad10: TOUCH_PAD10,
-    touch_pad11: TOUCH_PAD11,
-    touch_pad12: TOUCH_PAD12,
-    touch_pad13: TOUCH_PAD13,
-    touch_pad14: TOUCH_PAD14,
+    touch_pad: [TOUCH_PAD; 15],
     xtal_32p_pad: XTAL_32P_PAD,
     xtal_32n_pad: XTAL_32N_PAD,
     pad_dac1: PAD_DAC1,
@@ -40,7 +26,7 @@ pub struct RegisterBlock {
     xtl_ext_ctr: XTL_EXT_CTR,
     sar_i2c_io: SAR_I2C_IO,
     touch_ctrl: TOUCH_CTRL,
-    _reserved38: [u8; 0x0110],
+    _reserved24: [u8; 0x0110],
     date: DATE,
 }
 impl RegisterBlock {
@@ -110,80 +96,16 @@ impl RegisterBlock {
     pub const fn rtc_debug_sel(&self) -> &RTC_DEBUG_SEL {
         &self.rtc_debug_sel
     }
-    #[doc = "0x84 - configure RTC PAD0"]
+    #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
     #[inline(always)]
-    pub const fn touch_pad0(&self) -> &TOUCH_PAD0 {
-        &self.touch_pad0
+    pub const fn touch_pad(&self, n: usize) -> &TOUCH_PAD {
+        &self.touch_pad[n]
     }
-    #[doc = "0x88 - configure RTC PAD1"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
     #[inline(always)]
-    pub const fn touch_pad1(&self) -> &TOUCH_PAD1 {
-        &self.touch_pad1
-    }
-    #[doc = "0x8c - configure RTC PAD2"]
-    #[inline(always)]
-    pub const fn touch_pad2(&self) -> &TOUCH_PAD2 {
-        &self.touch_pad2
-    }
-    #[doc = "0x90 - configure RTC PAD3"]
-    #[inline(always)]
-    pub const fn touch_pad3(&self) -> &TOUCH_PAD3 {
-        &self.touch_pad3
-    }
-    #[doc = "0x94 - configure RTC PAD4"]
-    #[inline(always)]
-    pub const fn touch_pad4(&self) -> &TOUCH_PAD4 {
-        &self.touch_pad4
-    }
-    #[doc = "0x98 - configure RTC PAD5"]
-    #[inline(always)]
-    pub const fn touch_pad5(&self) -> &TOUCH_PAD5 {
-        &self.touch_pad5
-    }
-    #[doc = "0x9c - configure RTC PAD6"]
-    #[inline(always)]
-    pub const fn touch_pad6(&self) -> &TOUCH_PAD6 {
-        &self.touch_pad6
-    }
-    #[doc = "0xa0 - configure RTC PAD7"]
-    #[inline(always)]
-    pub const fn touch_pad7(&self) -> &TOUCH_PAD7 {
-        &self.touch_pad7
-    }
-    #[doc = "0xa4 - configure RTC PAD8"]
-    #[inline(always)]
-    pub const fn touch_pad8(&self) -> &TOUCH_PAD8 {
-        &self.touch_pad8
-    }
-    #[doc = "0xa8 - configure RTC PAD9"]
-    #[inline(always)]
-    pub const fn touch_pad9(&self) -> &TOUCH_PAD9 {
-        &self.touch_pad9
-    }
-    #[doc = "0xac - configure RTC PAD10"]
-    #[inline(always)]
-    pub const fn touch_pad10(&self) -> &TOUCH_PAD10 {
-        &self.touch_pad10
-    }
-    #[doc = "0xb0 - configure RTC PAD11"]
-    #[inline(always)]
-    pub const fn touch_pad11(&self) -> &TOUCH_PAD11 {
-        &self.touch_pad11
-    }
-    #[doc = "0xb4 - configure RTC PAD12"]
-    #[inline(always)]
-    pub const fn touch_pad12(&self) -> &TOUCH_PAD12 {
-        &self.touch_pad12
-    }
-    #[doc = "0xb8 - configure RTC PAD13"]
-    #[inline(always)]
-    pub const fn touch_pad13(&self) -> &TOUCH_PAD13 {
-        &self.touch_pad13
-    }
-    #[doc = "0xbc - configure RTC PAD14"]
-    #[inline(always)]
-    pub const fn touch_pad14(&self) -> &TOUCH_PAD14 {
-        &self.touch_pad14
+    pub fn touch_pad_iter(&self) -> impl Iterator<Item = &TOUCH_PAD> {
+        self.touch_pad.iter()
     }
     #[doc = "0xc0 - configure RTC PAD15"]
     #[inline(always)]
@@ -294,66 +216,6 @@ pub mod pin;
 pub type RTC_DEBUG_SEL = crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>;
 #[doc = "configure rtc debug"]
 pub mod rtc_debug_sel;
-#[doc = "TOUCH_PAD0 (rw) register accessor: configure RTC PAD0\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad0`] module"]
-pub type TOUCH_PAD0 = crate::Reg<touch_pad0::TOUCH_PAD0_SPEC>;
-#[doc = "configure RTC PAD0"]
-pub mod touch_pad0;
-#[doc = "TOUCH_PAD1 (rw) register accessor: configure RTC PAD1\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad1`] module"]
-pub type TOUCH_PAD1 = crate::Reg<touch_pad1::TOUCH_PAD1_SPEC>;
-#[doc = "configure RTC PAD1"]
-pub mod touch_pad1;
-#[doc = "TOUCH_PAD2 (rw) register accessor: configure RTC PAD2\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad2`] module"]
-pub type TOUCH_PAD2 = crate::Reg<touch_pad2::TOUCH_PAD2_SPEC>;
-#[doc = "configure RTC PAD2"]
-pub mod touch_pad2;
-#[doc = "TOUCH_PAD3 (rw) register accessor: configure RTC PAD3\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad3`] module"]
-pub type TOUCH_PAD3 = crate::Reg<touch_pad3::TOUCH_PAD3_SPEC>;
-#[doc = "configure RTC PAD3"]
-pub mod touch_pad3;
-#[doc = "TOUCH_PAD4 (rw) register accessor: configure RTC PAD4\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad4`] module"]
-pub type TOUCH_PAD4 = crate::Reg<touch_pad4::TOUCH_PAD4_SPEC>;
-#[doc = "configure RTC PAD4"]
-pub mod touch_pad4;
-#[doc = "TOUCH_PAD5 (rw) register accessor: configure RTC PAD5\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad5`] module"]
-pub type TOUCH_PAD5 = crate::Reg<touch_pad5::TOUCH_PAD5_SPEC>;
-#[doc = "configure RTC PAD5"]
-pub mod touch_pad5;
-#[doc = "TOUCH_PAD6 (rw) register accessor: configure RTC PAD6\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad6`] module"]
-pub type TOUCH_PAD6 = crate::Reg<touch_pad6::TOUCH_PAD6_SPEC>;
-#[doc = "configure RTC PAD6"]
-pub mod touch_pad6;
-#[doc = "TOUCH_PAD7 (rw) register accessor: configure RTC PAD7\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad7`] module"]
-pub type TOUCH_PAD7 = crate::Reg<touch_pad7::TOUCH_PAD7_SPEC>;
-#[doc = "configure RTC PAD7"]
-pub mod touch_pad7;
-#[doc = "TOUCH_PAD8 (rw) register accessor: configure RTC PAD8\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad8`] module"]
-pub type TOUCH_PAD8 = crate::Reg<touch_pad8::TOUCH_PAD8_SPEC>;
-#[doc = "configure RTC PAD8"]
-pub mod touch_pad8;
-#[doc = "TOUCH_PAD9 (rw) register accessor: configure RTC PAD9\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad9`] module"]
-pub type TOUCH_PAD9 = crate::Reg<touch_pad9::TOUCH_PAD9_SPEC>;
-#[doc = "configure RTC PAD9"]
-pub mod touch_pad9;
-#[doc = "TOUCH_PAD10 (rw) register accessor: configure RTC PAD10\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad10`] module"]
-pub type TOUCH_PAD10 = crate::Reg<touch_pad10::TOUCH_PAD10_SPEC>;
-#[doc = "configure RTC PAD10"]
-pub mod touch_pad10;
-#[doc = "TOUCH_PAD11 (rw) register accessor: configure RTC PAD11\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad11`] module"]
-pub type TOUCH_PAD11 = crate::Reg<touch_pad11::TOUCH_PAD11_SPEC>;
-#[doc = "configure RTC PAD11"]
-pub mod touch_pad11;
-#[doc = "TOUCH_PAD12 (rw) register accessor: configure RTC PAD12\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad12`] module"]
-pub type TOUCH_PAD12 = crate::Reg<touch_pad12::TOUCH_PAD12_SPEC>;
-#[doc = "configure RTC PAD12"]
-pub mod touch_pad12;
-#[doc = "TOUCH_PAD13 (rw) register accessor: configure RTC PAD13\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad13`] module"]
-pub type TOUCH_PAD13 = crate::Reg<touch_pad13::TOUCH_PAD13_SPEC>;
-#[doc = "configure RTC PAD13"]
-pub mod touch_pad13;
-#[doc = "TOUCH_PAD14 (rw) register accessor: configure RTC PAD14\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad14`] module"]
-pub type TOUCH_PAD14 = crate::Reg<touch_pad14::TOUCH_PAD14_SPEC>;
-#[doc = "configure RTC PAD14"]
-pub mod touch_pad14;
 #[doc = "XTAL_32P_PAD (rw) register accessor: configure RTC PAD15\n\nYou can [`read`](crate::Reg::read) this register and get [`xtal_32p_pad::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xtal_32p_pad::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@xtal_32p_pad`] module"]
 pub type XTAL_32P_PAD = crate::Reg<xtal_32p_pad::XTAL_32P_PAD_SPEC>;
 #[doc = "configure RTC PAD15"]
@@ -402,3 +264,7 @@ pub mod touch_ctrl;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "version"]
 pub mod date;
+#[doc = "TOUCH_PAD (rw) register accessor: Touch pad %s configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad`] module"]
+pub type TOUCH_PAD = crate::Reg<touch_pad::TOUCH_PAD_SPEC>;
+#[doc = "Touch pad %s configuration register"]
+pub mod touch_pad;

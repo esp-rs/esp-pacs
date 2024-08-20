@@ -155,6 +155,79 @@ RTC_I2C:
       description: I2C command%s register
   _include: ../../../common_patches/int_strip.yaml
 
+RTC_IO:
+  _delete: ["TOUCH_PAD0", "TOUCH_PAD1", "TOUCH_PAD2", "TOUCH_PAD3", "TOUCH_PAD4", "TOUCH_PAD5", "TOUCH_PAD6", "TOUCH_PAD7", "TOUCH_PAD8", "TOUCH_PAD9", "TOUCH_PAD10", "TOUCH_PAD11", "TOUCH_PAD12", "TOUCH_PAD13", "TOUCH_PAD14"]
+  _add:
+      TOUCH_PAD%s:
+        dim: 15
+        dimIndex: 0-14
+        dimIncrement: 0x4
+        description: "Touch pad %s configuration register"
+        addressOffset: 0x84
+        size: 32
+        access: read-write
+        fields:
+          FUN_IE:
+            description: "input enable in work mode"
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          SLP_OE:
+            description: "output enable in sleep mode"
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          SLP_IE:
+            description: "input enable in sleep mode"
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          SLP_SEL:
+            description: "1: enable sleep mode during sleep, 0: no sleep mode"
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          FUN_SEL:
+            description: "function sel"
+            bitOffset: 17
+            bitWidth: 2
+            access: read-write
+          MUX_SEL:
+            description: "1: use RTC GPIO, 0: use digital GPIO"
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          XPD:
+            description: "touch sensor power on"
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          TIE_OPT:
+            description: "default touch sensor tie option. 0: tie low, 1: tie high"
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          START:
+            description: "start touch sensor"
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          RUE:
+            description: "the pull up enable of the pad"
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          RDE:
+            description: "the pull down enable of the pad"
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          DRV:
+            description: "the driver strength of the pad"
+            bitOffset: 29
+            bitWidth: 2
+            access: read-write
+
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
