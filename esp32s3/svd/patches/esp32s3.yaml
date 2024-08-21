@@ -155,6 +155,11 @@ RTC_I2C:
       description: I2C command%s register
   _include: ../../../common_patches/int_strip.yaml
 
+RTC_IO:
+  _array:
+    TOUCH_PAD*:
+      name: TOUCH_PAD%s
+
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
