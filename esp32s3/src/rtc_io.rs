@@ -96,13 +96,13 @@ impl RegisterBlock {
     pub const fn rtc_debug_sel(&self) -> &RTC_DEBUG_SEL {
         &self.rtc_debug_sel
     }
-    #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
+    #[doc = "0x84..0xc0 - configure RTC PAD%s"]
     #[inline(always)]
     pub const fn touch_pad(&self, n: usize) -> &TOUCH_PAD {
         &self.touch_pad[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x84..0xc0 - Touch pad %s configuration register"]
+    #[doc = "0x84..0xc0 - configure RTC PAD%s"]
     #[inline(always)]
     pub fn touch_pad_iter(&self) -> impl Iterator<Item = &TOUCH_PAD> {
         self.touch_pad.iter()
@@ -216,6 +216,10 @@ pub mod pin;
 pub type RTC_DEBUG_SEL = crate::Reg<rtc_debug_sel::RTC_DEBUG_SEL_SPEC>;
 #[doc = "configure rtc debug"]
 pub mod rtc_debug_sel;
+#[doc = "TOUCH_PAD (rw) register accessor: configure RTC PAD%s\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad`] module"]
+pub type TOUCH_PAD = crate::Reg<touch_pad::TOUCH_PAD_SPEC>;
+#[doc = "configure RTC PAD%s"]
+pub mod touch_pad;
 #[doc = "XTAL_32P_PAD (rw) register accessor: configure RTC PAD15\n\nYou can [`read`](crate::Reg::read) this register and get [`xtal_32p_pad::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xtal_32p_pad::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@xtal_32p_pad`] module"]
 pub type XTAL_32P_PAD = crate::Reg<xtal_32p_pad::XTAL_32P_PAD_SPEC>;
 #[doc = "configure RTC PAD15"]
@@ -264,7 +268,3 @@ pub mod touch_ctrl;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "version"]
 pub mod date;
-#[doc = "TOUCH_PAD (rw) register accessor: Touch pad %s configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad`] module"]
-pub type TOUCH_PAD = crate::Reg<touch_pad::TOUCH_PAD_SPEC>;
-#[doc = "Touch pad %s configuration register"]
-pub mod touch_pad;
