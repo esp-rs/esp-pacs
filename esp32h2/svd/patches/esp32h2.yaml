@@ -179,6 +179,8 @@ _add:
             access: read-write
 
 _modify:
+  IEEE802154:
+    baseAddress: 0x600A3000
   SPI?:
     groupName: SPI
 
@@ -229,7 +231,7 @@ SPI[01]:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _include: 
+  _include:
     - ../../../common_patches/ledc_collect.yaml
     - ../../../common_patches/ledc_int.yaml
 
@@ -285,7 +287,7 @@ SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml
 
 SYSTIMER:
-  _include: 
+  _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
@@ -480,10 +482,5 @@ TWAI0:
       DATA_12:
         name: TX_BYTE_12
 
-_modify:
-  IEEE802154:
-    baseAddress: 0x600A3000
-
 ASSIST_DEBUG:
   _include: ../../../common_patches/assist_debug.yaml
-  
