@@ -80,6 +80,10 @@ extern "C" {
     fn GPIO_INT2();
     fn GPIO_INT3();
     fn GPIO_PAD_COMP();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn CACHE();
     fn CSI_BRIDGE();
     fn DSI_BRIDGE();
@@ -243,10 +247,18 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 128] = [
     Vector {
         _handler: GPIO_PAD_COMP,
     },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector { _handler: CACHE },
     Vector { _reserved: 0 },
     Vector {

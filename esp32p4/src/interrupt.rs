@@ -137,6 +137,14 @@ pub enum Interrupt {
     GPIO_INT3 = 77,
     #[doc = "78 - GPIO_PAD_COMP"]
     GPIO_PAD_COMP = 78,
+    #[doc = "79 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 79,
+    #[doc = "80 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 80,
+    #[doc = "81 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 81,
+    #[doc = "82 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 82,
     #[doc = "83 - CACHE"]
     CACHE = 83,
     #[doc = "85 - CSI_BRIDGE"]
@@ -269,6 +277,10 @@ impl Interrupt {
             76 => Ok(Interrupt::GPIO_INT2),
             77 => Ok(Interrupt::GPIO_INT3),
             78 => Ok(Interrupt::GPIO_PAD_COMP),
+            79 => Ok(Interrupt::FROM_CPU_INTR0),
+            80 => Ok(Interrupt::FROM_CPU_INTR1),
+            81 => Ok(Interrupt::FROM_CPU_INTR2),
+            82 => Ok(Interrupt::FROM_CPU_INTR3),
             83 => Ok(Interrupt::CACHE),
             85 => Ok(Interrupt::CSI_BRIDGE),
             86 => Ok(Interrupt::DSI_BRIDGE),

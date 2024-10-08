@@ -157,7 +157,8 @@ PCNT:
         CH?_HCTRL_MODE:
           _name: CtrlMode
           Keep: [0, No modification]
-          Reverse: [1, Invert behavior (increase -> decrease, decrease -> increase)]
+          Reverse:
+            [1, Invert behavior (increase -> decrease, decrease -> increase)]
           Disable: [-1, Inhibit counter modification]
       U?_CONF1:
         name: CONF1
@@ -223,8 +224,8 @@ SPI[23]:
   "*":
     _strip: SPI_
   _include:
-   - ../../../common_patches/spi_dma_int_strip.yaml
-   - ../../../common_patches/spi_w.yaml
+    - ../../../common_patches/spi_dma_int_strip.yaml
+    - ../../../common_patches/spi_w.yaml
 
 SOC_ETM:
   _include: ../../../common_patches/etm_collect.yaml
@@ -313,7 +314,7 @@ MCPWM0:
   _include: ../../../common_patches/int_strip.yaml
 
 SYSTIMER:
-  _include: 
+  _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
     - ../../../common_patches/systimer_real_target.yaml
@@ -405,7 +406,7 @@ AHB_DMA:
     OUT_INT_ST_CH%s: {}
     OUT_INT_ENA_CH%s: {}
     OUT_INT_CLR_CH%s: {}
-  
+
     OUT_CRC_INIT_DATA_CH%s: {}
     TX_CRC_WIDTH_CH%s: {}
     OUT_CRC_CLEAR_CH%s: {}
@@ -484,7 +485,7 @@ AHB_DMA:
         _modify:
           "*":
             modifiedWriteValues: oneToClear
-    
+
     OUT_CRC_CH%s:
       OUT_CRC_INIT_DATA_CH?:
         name: OUT_CRC_INIT_DATA
@@ -707,7 +708,7 @@ AXI_DMA:
     TX_CRC_EN_ADDR_CH%s: {}
     TX_CRC_DATA_EN_WR_DATA_CH%s: {}
     TX_CRC_DATA_EN_ADDR_CH%s: {}
-  
+
   _cluster:
     IN_CH%s:
       _cluster:
@@ -720,7 +721,7 @@ AXI_DMA:
             name: ENA
           IN_INT_CLR:
             name: CLR
-        
+
         CRC:
           IN_CRC_INIT_DATA: {}
           RX_CRC_WIDTH: {}
@@ -821,7 +822,7 @@ AXI_DMA:
             name: ENA
           OUT_INT_CLR:
             name: CLR
-        
+
         CRC:
           OUT_CRC_INIT_DATA: {}
           TX_CRC_WIDTH: {}
@@ -1336,3 +1337,15 @@ LCD_CAM:
     _array:
       DOUT*_MODE:
         description: The output data bit %s is delayed by module clock LCD_CLK
+
+HP_SYS:
+  _add:
+    _interrupts:
+      FROM_CPU_INTR0:
+        value: 79
+      FROM_CPU_INTR1:
+        value: 80
+      FROM_CPU_INTR2:
+        value: 81
+      FROM_CPU_INTR3:
+        value: 82
