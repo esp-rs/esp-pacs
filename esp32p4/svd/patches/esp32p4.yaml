@@ -215,6 +215,24 @@ UHCI0:
 
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
+  _modify:
+    _interrupts:
+      TG0_T0:
+        name: TG0_T0_LEVEL
+      TG0_T1:
+        name: TG0_T1_LEVEL
+      TG0_WDT:
+        name: TG0_WDT_LEVEL
+
+TIMG1:
+  _modify:
+    _interrupts:
+      TG1_T0:
+        name: TG1_T0_LEVEL
+      TG1_T1:
+        name: TG1_T1_LEVEL
+      TG1_WDT:
+        name: TG1_WDT_LEVEL
 
 SPI1:
   _include: ../../../common_patches/spi_w.yaml
