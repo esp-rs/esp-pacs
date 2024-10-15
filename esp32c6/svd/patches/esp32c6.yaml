@@ -236,6 +236,11 @@ LP_I2C0:
     COMD?: {}
   _include: ../../../common_patches/int_strip.yaml
 
+LP_IO:
+  _array:
+    GPIO?: {}
+    PIN?: {}
+
 LP_WDT:
   _modify:
     INT_ST_RTC:

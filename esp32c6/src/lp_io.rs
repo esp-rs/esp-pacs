@@ -12,27 +12,13 @@ pub struct RegisterBlock {
     status_w1ts: STATUS_W1TS,
     status_w1tc: STATUS_W1TC,
     in_: IN,
-    pin0: PIN0,
-    pin1: PIN1,
-    pin2: PIN2,
-    pin3: PIN3,
-    pin4: PIN4,
-    pin5: PIN5,
-    pin6: PIN6,
-    pin7: PIN7,
-    gpio0: GPIO0,
-    gpio1: GPIO1,
-    gpio2: GPIO2,
-    gpio3: GPIO3,
-    gpio4: GPIO4,
-    gpio5: GPIO5,
-    gpio6: GPIO6,
-    gpio7: GPIO7,
+    pin: [PIN; 8],
+    gpio: [GPIO; 8],
     status_interrupt: STATUS_INTERRUPT,
     debug_sel0: DEBUG_SEL0,
     debug_sel1: DEBUG_SEL1,
     lpi2c: LPI2C,
-    _reserved30: [u8; 0x0384],
+    _reserved16: [u8; 0x0384],
     date: DATE,
 }
 impl RegisterBlock {
@@ -86,85 +72,27 @@ impl RegisterBlock {
     pub const fn in_(&self) -> &IN {
         &self.in_
     }
-    #[doc = "0x28 - need des"]
+    #[doc = "0x28..0x48 - need des"]
     #[inline(always)]
-    pub const fn pin0(&self) -> &PIN0 {
-        &self.pin0
+    pub const fn pin(&self, n: usize) -> &PIN {
+        &self.pin[n]
     }
-    #[doc = "0x2c - need des"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x28..0x48 - need des"]
     #[inline(always)]
-    pub const fn pin1(&self) -> &PIN1 {
-        &self.pin1
+    pub fn pin_iter(&self) -> impl Iterator<Item = &PIN> {
+        self.pin.iter()
     }
-    #[doc = "0x30 - need des"]
+    #[doc = "0x48..0x68 - need des"]
     #[inline(always)]
-    pub const fn pin2(&self) -> &PIN2 {
-        &self.pin2
+    pub const fn gpio(&self, n: usize) -> &GPIO {
+        &self.gpio[n]
     }
-    #[doc = "0x34 - need des"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x48..0x68 - need des"]
     #[inline(always)]
-    pub const fn pin3(&self) -> &PIN3 {
-        &self.pin3
-    }
-    #[doc = "0x38 - need des"]
-    #[inline(always)]
-    pub const fn pin4(&self) -> &PIN4 {
-        &self.pin4
-    }
-    #[doc = "0x3c - need des"]
-    #[inline(always)]
-    pub const fn pin5(&self) -> &PIN5 {
-        &self.pin5
-    }
-    #[doc = "0x40 - need des"]
-    #[inline(always)]
-    pub const fn pin6(&self) -> &PIN6 {
-        &self.pin6
-    }
-    #[doc = "0x44 - need des"]
-    #[inline(always)]
-    pub const fn pin7(&self) -> &PIN7 {
-        &self.pin7
-    }
-    #[doc = "0x48 - need des"]
-    #[inline(always)]
-    pub const fn gpio0(&self) -> &GPIO0 {
-        &self.gpio0
-    }
-    #[doc = "0x4c - need des"]
-    #[inline(always)]
-    pub const fn gpio1(&self) -> &GPIO1 {
-        &self.gpio1
-    }
-    #[doc = "0x50 - need des"]
-    #[inline(always)]
-    pub const fn gpio2(&self) -> &GPIO2 {
-        &self.gpio2
-    }
-    #[doc = "0x54 - need des"]
-    #[inline(always)]
-    pub const fn gpio3(&self) -> &GPIO3 {
-        &self.gpio3
-    }
-    #[doc = "0x58 - need des"]
-    #[inline(always)]
-    pub const fn gpio4(&self) -> &GPIO4 {
-        &self.gpio4
-    }
-    #[doc = "0x5c - need des"]
-    #[inline(always)]
-    pub const fn gpio5(&self) -> &GPIO5 {
-        &self.gpio5
-    }
-    #[doc = "0x60 - need des"]
-    #[inline(always)]
-    pub const fn gpio6(&self) -> &GPIO6 {
-        &self.gpio6
-    }
-    #[doc = "0x64 - need des"]
-    #[inline(always)]
-    pub const fn gpio7(&self) -> &GPIO7 {
-        &self.gpio7
+    pub fn gpio_iter(&self) -> impl Iterator<Item = &GPIO> {
+        self.gpio.iter()
     }
     #[doc = "0x68 - need des"]
     #[inline(always)]
@@ -232,70 +160,14 @@ pub mod status_w1tc;
 pub type IN = crate::Reg<in_::IN_SPEC>;
 #[doc = "need des"]
 pub mod in_;
-#[doc = "PIN0 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin0`] module"]
-pub type PIN0 = crate::Reg<pin0::PIN0_SPEC>;
+#[doc = "PIN (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin`] module"]
+pub type PIN = crate::Reg<pin::PIN_SPEC>;
 #[doc = "need des"]
-pub mod pin0;
-#[doc = "PIN1 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin1`] module"]
-pub type PIN1 = crate::Reg<pin1::PIN1_SPEC>;
+pub mod pin;
+#[doc = "GPIO (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio`] module"]
+pub type GPIO = crate::Reg<gpio::GPIO_SPEC>;
 #[doc = "need des"]
-pub mod pin1;
-#[doc = "PIN2 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin2`] module"]
-pub type PIN2 = crate::Reg<pin2::PIN2_SPEC>;
-#[doc = "need des"]
-pub mod pin2;
-#[doc = "PIN3 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin3`] module"]
-pub type PIN3 = crate::Reg<pin3::PIN3_SPEC>;
-#[doc = "need des"]
-pub mod pin3;
-#[doc = "PIN4 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin4`] module"]
-pub type PIN4 = crate::Reg<pin4::PIN4_SPEC>;
-#[doc = "need des"]
-pub mod pin4;
-#[doc = "PIN5 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin5`] module"]
-pub type PIN5 = crate::Reg<pin5::PIN5_SPEC>;
-#[doc = "need des"]
-pub mod pin5;
-#[doc = "PIN6 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin6`] module"]
-pub type PIN6 = crate::Reg<pin6::PIN6_SPEC>;
-#[doc = "need des"]
-pub mod pin6;
-#[doc = "PIN7 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pin7`] module"]
-pub type PIN7 = crate::Reg<pin7::PIN7_SPEC>;
-#[doc = "need des"]
-pub mod pin7;
-#[doc = "GPIO0 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio0`] module"]
-pub type GPIO0 = crate::Reg<gpio0::GPIO0_SPEC>;
-#[doc = "need des"]
-pub mod gpio0;
-#[doc = "GPIO1 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio1`] module"]
-pub type GPIO1 = crate::Reg<gpio1::GPIO1_SPEC>;
-#[doc = "need des"]
-pub mod gpio1;
-#[doc = "GPIO2 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio2`] module"]
-pub type GPIO2 = crate::Reg<gpio2::GPIO2_SPEC>;
-#[doc = "need des"]
-pub mod gpio2;
-#[doc = "GPIO3 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio3`] module"]
-pub type GPIO3 = crate::Reg<gpio3::GPIO3_SPEC>;
-#[doc = "need des"]
-pub mod gpio3;
-#[doc = "GPIO4 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio4`] module"]
-pub type GPIO4 = crate::Reg<gpio4::GPIO4_SPEC>;
-#[doc = "need des"]
-pub mod gpio4;
-#[doc = "GPIO5 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio5`] module"]
-pub type GPIO5 = crate::Reg<gpio5::GPIO5_SPEC>;
-#[doc = "need des"]
-pub mod gpio5;
-#[doc = "GPIO6 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio6`] module"]
-pub type GPIO6 = crate::Reg<gpio6::GPIO6_SPEC>;
-#[doc = "need des"]
-pub mod gpio6;
-#[doc = "GPIO7 (rw) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio7`] module"]
-pub type GPIO7 = crate::Reg<gpio7::GPIO7_SPEC>;
-#[doc = "need des"]
-pub mod gpio7;
+pub mod gpio;
 #[doc = "STATUS_INTERRUPT (r) register accessor: need des\n\nYou can [`read`](crate::Reg::read) this register and get [`status_interrupt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@status_interrupt`] module"]
 pub type STATUS_INTERRUPT = crate::Reg<status_interrupt::STATUS_INTERRUPT_SPEC>;
 #[doc = "need des"]
