@@ -1,7 +1,7 @@
-#[doc = "Register `GPIO5` reader"]
-pub type R = crate::R<GPIO5_SPEC>;
-#[doc = "Register `GPIO5` writer"]
-pub type W = crate::W<GPIO5_SPEC>;
+#[doc = "Register `GPIO%s` reader"]
+pub type R = crate::R<GPIO_SPEC>;
+#[doc = "Register `GPIO%s` writer"]
+pub type W = crate::W<GPIO_SPEC>;
 #[doc = "Field `MCU_OE` reader - need des"]
 pub type MCU_OE_R = crate::BitReader;
 #[doc = "Field `MCU_OE` writer - need des"]
@@ -106,7 +106,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("GPIO5")
+        f.debug_struct("GPIO")
             .field("mcu_oe", &self.mcu_oe())
             .field("slp_sel", &self.slp_sel())
             .field("mcu_wpd", &self.mcu_wpd())
@@ -125,84 +125,84 @@ impl W {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO5_SPEC> {
+    pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO5_SPEC> {
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO5_SPEC> {
+    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO5_SPEC> {
+    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO5_SPEC> {
+    pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO5_SPEC> {
+    pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO5_SPEC> {
+    pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO5_SPEC> {
+    pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO5_SPEC> {
+    pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO5_SPEC> {
+    pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO5_SPEC> {
+    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO_SPEC> {
         MCU_SEL_W::new(self, 12)
     }
 }
-#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GPIO5_SPEC;
-impl crate::RegisterSpec for GPIO5_SPEC {
+#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GPIO_SPEC;
+impl crate::RegisterSpec for GPIO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`gpio5::R`](R) reader structure"]
-impl crate::Readable for GPIO5_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`gpio5::W`](W) writer structure"]
-impl crate::Writable for GPIO5_SPEC {
+#[doc = "`read()` method returns [`gpio::R`](R) reader structure"]
+impl crate::Readable for GPIO_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gpio::W`](W) writer structure"]
+impl crate::Writable for GPIO_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets GPIO5 to value 0"]
-impl crate::Resettable for GPIO5_SPEC {
+#[doc = "`reset()` method sets GPIO%s to value 0"]
+impl crate::Resettable for GPIO_SPEC {
     const RESET_VALUE: u32 = 0;
 }

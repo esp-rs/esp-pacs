@@ -1,7 +1,7 @@
-#[doc = "Register `PIN5` reader"]
-pub type R = crate::R<PIN5_SPEC>;
-#[doc = "Register `PIN5` writer"]
-pub type W = crate::W<PIN5_SPEC>;
+#[doc = "Register `PIN%s` reader"]
+pub type R = crate::R<PIN_SPEC>;
+#[doc = "Register `PIN%s` writer"]
+pub type W = crate::W<PIN_SPEC>;
 #[doc = "Field `SYNC_BYPASS` reader - need des"]
 pub type SYNC_BYPASS_R = crate::FieldReader;
 #[doc = "Field `SYNC_BYPASS` writer - need des"]
@@ -54,7 +54,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("PIN5")
+        f.debug_struct("PIN")
             .field("sync_bypass", &self.sync_bypass())
             .field("pad_driver", &self.pad_driver())
             .field("int_type", &self.int_type())
@@ -67,54 +67,54 @@ impl W {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn sync_bypass(&mut self) -> SYNC_BYPASS_W<PIN5_SPEC> {
+    pub fn sync_bypass(&mut self) -> SYNC_BYPASS_W<PIN_SPEC> {
         SYNC_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN5_SPEC> {
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC> {
         PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn edge_wakeup_clr(&mut self) -> EDGE_WAKEUP_CLR_W<PIN5_SPEC> {
+    pub fn edge_wakeup_clr(&mut self) -> EDGE_WAKEUP_CLR_W<PIN_SPEC> {
         EDGE_WAKEUP_CLR_W::new(self, 3)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn int_type(&mut self) -> INT_TYPE_W<PIN5_SPEC> {
+    pub fn int_type(&mut self) -> INT_TYPE_W<PIN_SPEC> {
         INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN5_SPEC> {
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN_SPEC> {
         WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
     #[must_use]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<PIN5_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<PIN_SPEC> {
         FILTER_EN_W::new(self, 11)
     }
 }
-#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct PIN5_SPEC;
-impl crate::RegisterSpec for PIN5_SPEC {
+#[doc = "need des\n\nYou can [`read`](crate::Reg::read) this register and get [`pin::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pin::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PIN_SPEC;
+impl crate::RegisterSpec for PIN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`pin5::R`](R) reader structure"]
-impl crate::Readable for PIN5_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`pin5::W`](W) writer structure"]
-impl crate::Writable for PIN5_SPEC {
+#[doc = "`read()` method returns [`pin::R`](R) reader structure"]
+impl crate::Readable for PIN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pin::W`](W) writer structure"]
+impl crate::Writable for PIN_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PIN5 to value 0"]
-impl crate::Resettable for PIN5_SPEC {
+#[doc = "`reset()` method sets PIN%s to value 0"]
+impl crate::Resettable for PIN_SPEC {
     const RESET_VALUE: u32 = 0;
 }
