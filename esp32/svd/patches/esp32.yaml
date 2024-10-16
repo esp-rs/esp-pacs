@@ -188,3 +188,17 @@ MCPWM0:
     _modify:
       "*":
         access: read-write
+
+TWAI0:
+  CLOCK_DIVIDER:
+    _modify:
+      CD:
+        bitWidth: 3
+      CLOCK_OFF:
+        bitOffset: 3
+    _add:
+      EXT_MODE:
+        access: read-write
+        description: "This bit can be configured under reset mode. 1: Extended mode, compatiable with CAN2.0B; 0: Basic mode"
+        bitOffset: 7
+        bitWidth: 1
