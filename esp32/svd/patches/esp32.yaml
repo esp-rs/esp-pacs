@@ -202,3 +202,10 @@ TWAI0:
         description: "This bit can be configured under reset mode. 1: Extended mode, compatiable with CAN2.0B; 0: Basic mode"
         bitOffset: 7
         bitWidth: 1
+  INT_ENA:
+    _add:
+      BRP_DIV:
+        access: read-write
+        description: "THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"
+        bitOffset: 4
+        bitWidth: 1

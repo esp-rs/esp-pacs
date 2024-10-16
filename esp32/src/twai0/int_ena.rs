@@ -18,6 +18,10 @@ pub type ERR_WARN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type OVERRUN_INT_ENA_R = crate::BitReader;
 #[doc = "Field `OVERRUN_INT_ENA` writer - Set this bit to 1 to enable data overrun interrupt."]
 pub type OVERRUN_INT_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `BRP_DIV` reader - THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"]
+pub type BRP_DIV_R = crate::BitReader;
+#[doc = "Field `BRP_DIV` writer - THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"]
+pub type BRP_DIV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` reader - Set this bit to 1 to enable error passive interrupt."]
 pub type ERR_PASSIVE_INT_ENA_R = crate::BitReader;
 #[doc = "Field `ERR_PASSIVE_INT_ENA` writer - Set this bit to 1 to enable error passive interrupt."]
@@ -51,6 +55,11 @@ impl R {
     pub fn overrun_int_ena(&self) -> OVERRUN_INT_ENA_R {
         OVERRUN_INT_ENA_R::new(((self.bits >> 3) & 1) != 0)
     }
+    #[doc = "Bit 4 - THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"]
+    #[inline(always)]
+    pub fn brp_div(&self) -> BRP_DIV_R {
+        BRP_DIV_R::new(((self.bits >> 4) & 1) != 0)
+    }
     #[doc = "Bit 5 - Set this bit to 1 to enable error passive interrupt."]
     #[inline(always)]
     pub fn err_passive_int_ena(&self) -> ERR_PASSIVE_INT_ENA_R {
@@ -78,6 +87,7 @@ impl core::fmt::Debug for R {
             .field("err_passive_int_ena", &self.err_passive_int_ena())
             .field("arb_lost_int_ena", &self.arb_lost_int_ena())
             .field("bus_err_int_ena", &self.bus_err_int_ena())
+            .field("brp_div", &self.brp_div())
             .finish()
     }
 }
@@ -105,6 +115,12 @@ impl W {
     #[must_use]
     pub fn overrun_int_ena(&mut self) -> OVERRUN_INT_ENA_W<INT_ENA_SPEC> {
         OVERRUN_INT_ENA_W::new(self, 3)
+    }
+    #[doc = "Bit 4 - THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"]
+    #[inline(always)]
+    #[must_use]
+    pub fn brp_div(&mut self) -> BRP_DIV_W<INT_ENA_SPEC> {
+        BRP_DIV_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable error passive interrupt."]
     #[inline(always)]
