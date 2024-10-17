@@ -188,3 +188,6 @@ MCPWM0:
     _modify:
       "*":
         access: read-write
+
+_include:
+  - "esp32-wifi.yaml"
