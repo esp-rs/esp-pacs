@@ -1,0 +1,236 @@
+
+
+# This is a patch against the SVD provided by Espressif
+# Patchfile for use with https://github.com/rust-embedded/svdtools
+# Expects the svd repo to be cloned in the directory next to this repo
+# Then run `svd patch esp32-wifi.yaml` in this directory, the patched file will be in ../svd/svd/
+_add:
+    WIFI:
+        description: MAC controller for Wi-Fi peripheral
+        groupName: WIFI
+        baseAddress: 0x3ff73000
+        size: 32
+        addressBlock:
+            offset: 0x0
+            size: 0x2000
+            usage: registers
+        registers:
+            BSSID_FILTER_ADDR_LOW:
+                description: First 4 bytes of BSSID MAC address filter
+                addressOffset: 0x0
+                access: read-write
+            BSSID_FILTER_ADDR_HIGH:
+                description: last 2 bytes of BSSID MAC address filter
+                addressOffset: 0x4
+                fields:
+                    ADDR:
+                        bitOffset: 0
+                        bitWidth: 16
+            BSSID_FILTER_ADDR_MASK_LOW:
+                description: mask applied to BSSID MAC address filter
+                addressOffset: 0x20
+                access: read-write
+            BSSID_FILTER_ADDR_MASK_HIGH:
+                description: mask applied to BSSID MAC address filter
+                addressOffset: 0x24
+                access: read-write
+                fields:
+                    MASK:
+                        bitOffset: 0
+                        bitWidth: 16
+                    ENABLE:
+                        bitOffset: 16
+                        bitWidth: 1
+            RA_FILTER_ADDR_LOW:
+                description:  first 4 bytes of RA MAC address filter
+                addressOffset: 0x40
+                access: read-write
+            RA_FILTER_ADDR_HIGH:
+                description: last 2 bytes of RA MAC address filter
+                addressOffset: 0x44
+                fields:
+                    ADDR:
+                        bitOffset: 0
+                        bitWidth: 16
+            RA_FILTER_ADDR_MASK_LOW:
+                description: mask applied to RA MAC address filter
+                addressOffset: 0x60
+                access: read-write
+            RA_FILTER_ADDR_MASK_HIGH:
+                description: mask applied to RA MAC address filter
+                addressOffset: 0x64
+                access: read-write
+                fields:
+                    MASK:
+                        bitOffset: 0
+                        bitWidth: 16
+                    ENABLE:
+                        bitOffset: 16
+                        bitWidth: 1
+            RX_CTRL:
+                description: Controls the reception of frames
+                addressOffset: 0x84
+                access: read-write
+                fields:
+                    RX_DESCR_RELOAD:
+                        bitOffset: 0
+                        bitWidth: 1
+                        description: Instruct the hardware to reload the RX descriptors
+            RX_DESCR_BASE:
+                description: base address of the RX DMA list
+                addressOffset: 0x88
+                acccess: read-write
+            RX_DESCR_NEXT:
+                description: next item in the RX DMA list
+                addressOffset: 0x8c
+                access: read-write
+            RX_DESCR_LAST:
+                description: last item in RX DMA list
+                addressOffset: 0x90
+                access: read-write
+            WIFI_INT_STATUS:
+                description: Interrupt status of WIFI peripheral
+                addressOffset: 0xc48
+                access: read
+                fields:
+                    TXQ_COMPLETE:
+                        description: Indicates the completion of a transmission
+                        bitOffset: 7
+                        bitWidth: 1
+                    TXQ_COLLISION:
+                        description: Indicates a collision, while transmitting
+                        bitOffset: 8
+                        bitWidth: 1
+                    TXQ_TIMEOUT:
+                        description: Indicates a timeout, while transmitting
+                        bitOffset: 19
+                        bitWidth: 1
+            WIFI_INT_CLEAR:
+                description: Interrupt status clear of WIFI peripheral
+                addressOffset: 0xc4c
+                access: write
+            CTRL_REG:
+                description: Exact name and meaning unknown, used initializing the MAC
+                addressOffset: 0xcb8
+                access: read-write
+            TX_ERROR_CLEAR:
+                description:  Clear the error status of a slot
+                addressOffset: 0xcbc
+                access: write
+                fields:
+                    SLOT_COLLISION:
+                        bitOffset: 0
+                        bitWidth: 5
+                    SLOT_TIMEOUT:
+                        bitOffset: 0x10
+                        bitWidth: 5
+            TX_ERROR_STATUS:
+                description: Error status of a slot
+                addressOffset: 0xcc0
+                access: read
+                fields:
+                    SLOT_COLLISION:
+                        bitOffset: 0
+                        bitWidth: 5
+                    SLOT_TIMEOUT:
+                        bitOffset: 0x10
+                        bitWidth: 5
+            TX_COMPLETE_CLEAR:
+                description: Clear the completion status of a slot
+                addressOffset: 0xcc4
+                access: write
+                fields: 
+                    SLOTS:
+                        bitOffset: 0
+                        bitWidth: 5
+            TX_COMPLETE_STATUS:
+                description: Completion status of a slot
+                addressOffset: 0xcc8
+                access: read
+                fields:
+                    SLOTS:
+                        bitOffset: 0
+                        bitWidth: 5
+WIFI:
+    _add:
+        _clusters:
+            TX_SLOT_CONFIG%s:
+                dim: 5
+                dimIncrement: 0x8
+                description: Used to configure the TX slot.
+                addressOffset: 0xcfc
+                access: read-write
+                registers:
+                    CONFIG:
+                        description: Config
+                        addressOffset: 0x0
+                        access: read-write  
+                    PLCP0:
+                        description: PLCP0
+                        addressOffset: 0x4
+                        access: read-write
+                        fields:
+                            DMA_ADDR:
+                                description: Bottom bits of address of dma_item
+                                bitOffset: 0
+                                bitWidth: 20
+                                access: write
+                            FLAGS:
+                                description: Flags for the SLOT
+                                bitOffset: 20
+                                bitWidth: 12
+                                access: read-write
+            TX_SLOT_PARAMETERS%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1168
+                description: Used to set transmission parameters for the slot
+                registers:
+                    PLCP1:
+                        description: PLCP1
+                        addressOffset: 0x0
+                        access: read-write
+                        fields:
+                            LEN:
+                                description: Length of packet (in bytes)
+                                bitOffset: 0
+                                bitWidth: 12
+                            RATE:
+                                description: Packet rate (see wifi_phy_rate_t)
+                                bitOffset: 12
+                                bitWidth: 5
+                            IS_80211_N:
+                                description: Bit indicating if this is 802.11n
+                                bitOffset: 25
+                                bitWidth: 1
+                            UNKNOWN_ENABLE:
+                                description: meaning unknown, set to one for TX
+                                bitOffset: 28
+                                bitWidth: 2
+                    PLCP2:
+                        description: PLCP2
+                        addressOffset: 0x4
+                        access: read-write
+                        fields:
+                            UNKNOWN:
+                                description: meaning unknown, set to one for TX
+                                bitOffset: 5
+                                bitWidth: 1
+                    HT_SIG:
+                        description: HT-SIG field in HT preamble
+                        addressOffset: 0x8
+                        access: read-write
+                    HT_UNKNOWN:
+                        description: exact meaning and name unknown, related to HT
+                        addressOffset: 0xc
+                        access: read-write
+                        fields:
+                            LENGTH:
+                                description: The length of the PPDU
+                                bitOffset: 0x0
+                                bitWidth: 20
+                                access: write
+                    DURATION:
+                        description: duration of the frame exchange
+                        addressOffset: 0x10
+                        access: read-write
