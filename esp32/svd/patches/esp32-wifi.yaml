@@ -15,58 +15,6 @@ _add:
             size: 0x2000
             usage: registers
         registers:
-            BSSID_FILTER_ADDR_LOW:
-                description: First 4 bytes of BSSID MAC address filter
-                addressOffset: 0x0
-                access: read-write
-            BSSID_FILTER_ADDR_HIGH:
-                description: last 2 bytes of BSSID MAC address filter
-                addressOffset: 0x4
-                fields:
-                    ADDR:
-                        bitOffset: 0
-                        bitWidth: 16
-            BSSID_FILTER_ADDR_MASK_LOW:
-                description: mask applied to BSSID MAC address filter
-                addressOffset: 0x20
-                access: read-write
-            BSSID_FILTER_ADDR_MASK_HIGH:
-                description: mask applied to BSSID MAC address filter
-                addressOffset: 0x24
-                access: read-write
-                fields:
-                    MASK:
-                        bitOffset: 0
-                        bitWidth: 16
-                    ENABLE:
-                        bitOffset: 16
-                        bitWidth: 1
-            RA_FILTER_ADDR_LOW:
-                description:  first 4 bytes of RA MAC address filter
-                addressOffset: 0x40
-                access: read-write
-            RA_FILTER_ADDR_HIGH:
-                description: last 2 bytes of RA MAC address filter
-                addressOffset: 0x44
-                fields:
-                    ADDR:
-                        bitOffset: 0
-                        bitWidth: 16
-            RA_FILTER_ADDR_MASK_LOW:
-                description: mask applied to RA MAC address filter
-                addressOffset: 0x60
-                access: read-write
-            RA_FILTER_ADDR_MASK_HIGH:
-                description: mask applied to RA MAC address filter
-                addressOffset: 0x64
-                access: read-write
-                fields:
-                    MASK:
-                        bitOffset: 0
-                        bitWidth: 16
-                    ENABLE:
-                        bitOffset: 16
-                        bitWidth: 1
             RX_CTRL:
                 description: Controls the reception of frames
                 addressOffset: 0x84
@@ -76,6 +24,10 @@ _add:
                         bitOffset: 0
                         bitWidth: 1
                         description: Instruct the hardware to reload the RX descriptors
+                    RX_ENABLE:
+                        bitOffset: 31
+                        bitWidth: 1
+                        description: Enable frame reception
             RX_DESCR_BASE:
                 description: base address of the RX DMA list
                 addressOffset: 0x88
@@ -87,6 +39,11 @@ _add:
             RX_DESCR_LAST:
                 description: last item in RX DMA list
                 addressOffset: 0x90
+                access: read-write
+            UNKNOWN_RX_POLICY%s:
+                dim: 2
+                dimIncrement: 4
+                addressOffset: 0xd8
                 access: read-write
             WIFI_INT_STATUS:
                 description: Interrupt status of WIFI peripheral
@@ -109,8 +66,8 @@ _add:
                 description: Interrupt status clear of WIFI peripheral
                 addressOffset: 0xc4c
                 access: write
-            CTRL_REG:
-                description: Exact name and meaning unknown, used initializing the MAC
+            CTRL:
+                description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8
                 access: read-write
             TX_ERROR_CLEAR:
@@ -154,6 +111,53 @@ _add:
 WIFI:
     _add:
         _clusters:
+            FILTER_BANK%s:
+                dim: 2
+                dimIncrement: 0x40
+                addressOffset: 0x0
+                description: "
+                    Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA.
+                    Each filter bank has registers for two interfaces.
+                    "
+                registers:
+                    ADDR_LOW%s:
+                        dim: 2
+                        dimIncrement: 0x8
+                        description: First 4 bytes of BSSID MAC address filter
+                        addressOffset: 0x0
+                        access: read-write
+                    ADDR_HIGH%s:
+                        dim: 2
+                        dimIncrement: 0x8
+                        description: last 2 bytes of BSSID MAC address filter
+                        addressOffset: 0x4
+                        access: read-write
+                        fields:
+                            ADDR:
+                                bitOffset: 0
+                                bitWidth: 16
+                                access: read-write
+                    MASK_LOW%s:
+                        dim: 2
+                        dimIncrement: 0x8
+                        description: First 4 bytes of BSSID MAC address filter mask
+                        addressOffset: 0x20
+                        access: read-write
+                    MASK_HIGH%s:
+                        dim: 2
+                        dimIncrement: 0x8
+                        description: last 2 bytes of BSSID MAC address filter mask
+                        addressOffset: 0x24
+                        access: read-write
+                        fields:
+                            MASK:
+                                bitOffset: 0
+                                bitWidth: 16
+                                access: read-write
+                            ENABLED:
+                                bitOffset: 16
+                                bitWidth: 1
+                                access: read-write
             TX_SLOT_CONFIG%s:
                 dim: 5
                 dimIncrement: 0x8
@@ -234,3 +238,29 @@ WIFI:
                         description: duration of the frame exchange
                         addressOffset: 0x10
                         access: read-write
+            CRYPTO_KEY_ENTRY%s:
+                dim: 16
+                dimIncrement: 40
+                addressOffset: 0x1400
+                access: read-write
+                description: The cryptographic keys, to be used by the MAC
+                registers:
+                    ADDR_LOW:
+                        addressOffset: 0x0
+                        access: read-write
+                    ADDR_HIGH:
+                        addressOffset: 0x4
+                        access: read-write
+                        fields:
+                            ADDR:
+                                bitOffset: 0x0
+                                bitWidth: 0x10
+                            ALGORITHM:
+                                bitOffset: 0x12
+                                bitWidth: 0x3
+                            INTERFACE:
+                                bitOffset: 0x18
+                                bitWidth: 0x2
+                            SUPPLICANT_KEY_INDEX:
+                                bitOffset: 0x1e
+                                bitWidth: 0x2
