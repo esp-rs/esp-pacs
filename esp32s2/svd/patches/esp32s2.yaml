@@ -342,3 +342,20 @@ SYSTIMER:
 
 USB0:
   _include: ../../../common_patches/usb0.yaml
+
+RSA:
+  _modify:
+    CLEAR_INTERRUPT:
+      name: INT_CLR
+    INTERRUPT_ENA:
+      name: INT_ENA
+
+  INT_CLR:
+    _modify:
+      CLEAR_INTERRUPT:
+        name: INT_CLR
+        access: read-write
+  INT_ENA:
+    _modify:
+      INTERRUPT_ENA:
+        name: INT_ENA

@@ -477,3 +477,10 @@ RMT:
       - SCLK_DIV_B
       - SCLK_SEL
       - SCLK_ACTIVE
+
+RSA:
+  INT_CLR:
+    _modify:
+      CLEAR_INTERRUPT:
+        name: INT_CLR
+        access: read-write

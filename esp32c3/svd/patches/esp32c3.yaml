@@ -66,21 +66,21 @@ _add:
       usage: registers
     registers:
       GEN_CTRL:
-          description: "FE General Control Register"
-          addressOffset: 0x0090
-          size: 0x2
-          access: read-write
-          fields:
-            IQ_EST_FORCE_PU:
-              description: "Force Power Up for IQ Estimation"
-              bitOffset: 5
-              bitWidth: 1
-              access: read-write
-            IQ_EST_FORCE_PD:
-              description: "Force Power Down for IQ Estimation"
-              bitOffset: 4
-              bitWidth: 1
-              access: read-write
+        description: "FE General Control Register"
+        addressOffset: 0x0090
+        size: 0x2
+        access: read-write
+        fields:
+          IQ_EST_FORCE_PU:
+            description: "Force Power Up for IQ Estimation"
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          IQ_EST_FORCE_PD:
+            description: "Force Power Down for IQ Estimation"
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
   FE2:
     description: need des
     baseAddress: 0x60005000
@@ -91,22 +91,21 @@ _add:
       usage: registers
     registers:
       TX_INTERP_CTRL:
-          description: "FE2 TX Interpolation Control Register"
-          addressOffset: 0x00f0
-          size: 0x20
-          access: read-write
-          fields:
-            TX_INF_FORCE_PU:
-              description: "Force Power Up field"
-              bitOffset: 10
-              bitWidth: 1
-              access: read-write
-            TX_INF_FORCE_PD:
-              description: "Force Power Down field"
-              bitOffset: 9
-              bitWidth: 1
-              access: read-write
-
+        description: "FE2 TX Interpolation Control Register"
+        addressOffset: 0x00f0
+        size: 0x20
+        access: read-write
+        fields:
+          TX_INF_FORCE_PU:
+            description: "Force Power Up field"
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          TX_INF_FORCE_PD:
+            description: "Force Power Down field"
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
 
 _modify:
   SPI?:
@@ -186,7 +185,6 @@ LEDC:
       "*":
         modifiedWriteValues: oneToClear
 
-
 APB_CTRL:
   PERI_BACKUP_INT_RAW:
     _strip: PERI_BACKUP_
@@ -241,16 +239,16 @@ SPI2:
 
 DS:
   _add:
-      IV_MEM%s:
-        dim: 4
-        dimIncrement: 0x4
-        name: IV_MEM%s
-        description: IV block data
-        addressOffset: 0x630
-        size: 0x20
+    IV_MEM%s:
+      dim: 4
+      dimIncrement: 0x4
+      name: IV_MEM%s
+      description: IV block data
+      addressOffset: 0x630
+      size: 0x20
 
 SYSTIMER:
-  _include: 
+  _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
 
@@ -340,4 +338,10 @@ DMA:
 
 ASSIST_DEBUG:
   _include: ../../../common_patches/assist_debug.yaml
-  
+
+RSA:
+  INT_CLR:
+    _modify:
+      CLEAR_INTERRUPT:
+        name: INT_CLR
+        access: read-write
