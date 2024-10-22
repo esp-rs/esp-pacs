@@ -190,7 +190,7 @@ WIFI:
         _clusters:
             FILTER_BANK%s:
                 dim: 2
-                dimIncrement: 0x20
+                dimIncrement: 0x40
                 addressOffset: 0x0
                 description: "
                     Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA.
@@ -218,13 +218,13 @@ WIFI:
                         dim: 2
                         dimIncrement: 0x8
                         description: First 4 bytes of BSSID MAC address filter mask
-                        addressOffset: 0x10
+                        addressOffset: 0x20
                         access: read-write
                     MASK_HIGH%s:
                         dim: 2
                         dimIncrement: 0x8
                         description: last 2 bytes of BSSID MAC address filter mask
-                        addressOffset: 0x14
+                        addressOffset: 0x24
                         access: read-write
                         fields:
                             MASK:
