@@ -455,9 +455,15 @@ LCD_CAM:
 
 RSA:
   _modify:
+    CLEAR_INTERRUPT:
+      name: INT_CLR
     INTERRUPT_ENA:
       name: INT_ENA
 
+  INT_CLR:
+    _modify:
+      CLEAR_INTERRUPT:
+        name: INT_CLR
   INT_ENA:
     _modify:
       INTERRUPT_ENA:

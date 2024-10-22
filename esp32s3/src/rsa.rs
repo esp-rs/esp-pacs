@@ -13,7 +13,7 @@ pub struct RegisterBlock {
     modmult_start: MODMULT_START,
     mult_start: MULT_START,
     idle: IDLE,
-    clear_interrupt: CLEAR_INTERRUPT,
+    int_clr: INT_CLR,
     constant_time: CONSTANT_TIME,
     search_enable: SEARCH_ENABLE,
     search_pos: SEARCH_POS,
@@ -102,8 +102,8 @@ impl RegisterBlock {
     }
     #[doc = "0x81c - RSA interrupt clear register"]
     #[inline(always)]
-    pub const fn clear_interrupt(&self) -> &CLEAR_INTERRUPT {
-        &self.clear_interrupt
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x820 - CONSTANT_TIME option control register"]
     #[inline(always)]
@@ -175,10 +175,10 @@ pub mod mult_start;
 pub type IDLE = crate::Reg<idle::IDLE_SPEC>;
 #[doc = "RSA idle register"]
 pub mod idle;
-#[doc = "CLEAR_INTERRUPT (w) register accessor: RSA interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clear_interrupt::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clear_interrupt`] module"]
-pub type CLEAR_INTERRUPT = crate::Reg<clear_interrupt::CLEAR_INTERRUPT_SPEC>;
+#[doc = "INT_CLR (w) register accessor: RSA interrupt clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "RSA interrupt clear register"]
-pub mod clear_interrupt;
+pub mod int_clr;
 #[doc = "CONSTANT_TIME (rw) register accessor: CONSTANT_TIME option control register\n\nYou can [`read`](crate::Reg::read) this register and get [`constant_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`constant_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@constant_time`] module"]
 pub type CONSTANT_TIME = crate::Reg<constant_time::CONSTANT_TIME_SPEC>;
 #[doc = "CONSTANT_TIME option control register"]
