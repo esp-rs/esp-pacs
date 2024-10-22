@@ -483,3 +483,4 @@ RSA:
     _modify:
       CLEAR_INTERRUPT:
         name: INT_CLR
+        access: read-write
