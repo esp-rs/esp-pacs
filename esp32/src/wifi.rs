@@ -3,7 +3,7 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     filter_bank: [FILTER_BANK; 2],
-    _reserved1: [u8; 0x04],
+    _reserved1: [u8; 0x44],
     rx_ctrl: RX_CTRL,
     rx_descr_base: RX_DESCR_BASE,
     rx_descr_next: RX_DESCR_NEXT,
@@ -46,13 +46,13 @@ pub struct RegisterBlock {
     crypto_key_entry: [CRYPTO_KEY_ENTRY; 16],
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x40 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
     #[inline(always)]
     pub const fn filter_bank(&self, n: usize) -> &FILTER_BANK {
         &self.filter_bank[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x40 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
     #[inline(always)]
     pub fn filter_bank_iter(&self) -> impl Iterator<Item = &FILTER_BANK> {
         self.filter_bank.iter()
