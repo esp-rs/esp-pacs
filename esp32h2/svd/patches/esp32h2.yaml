@@ -484,3 +484,12 @@ TWAI0:
 
 ASSIST_DEBUG:
   _include: ../../../common_patches/assist_debug.yaml
+
+RMT:
+  SYS_CONF:
+    _delete:
+      - SCLK_DIV_NUM
+      - SCLK_DIV_A
+      - SCLK_DIV_B
+      - SCLK_SEL
+      - SCLK_ACTIVE
