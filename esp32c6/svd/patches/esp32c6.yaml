@@ -484,3 +484,9 @@ RSA:
       CLEAR_INTERRUPT:
         name: INT_CLR
         access: read-write
+
+TWAI*:
+  CMD:
+    _modify:
+      SELF_RX_REQUEST:
+        name: SELF_RX_REQ
