@@ -10,24 +10,29 @@ pub struct RegisterBlock {
     rx_descr_last: RX_DESCR_LAST,
     _reserved5: [u8; 0x44],
     unknown_rx_policy: [UNKNOWN_RX_POLICY; 2],
-    _reserved6: [u8; 0x01ec],
+    _reserved6: [u8; 0x01dc],
+    hw_stat_ack_int: HW_STAT_ACK_INT,
+    hw_stat_rts_int: HW_STAT_RTS_INT,
+    hw_stat_cts_int: HW_STAT_CTS_INT,
+    hw_stat_rifs_int: HW_STAT_RIFS_INT,
     hw_stat_rx_success: HW_STAT_RX_SUCCESS,
     hw_stat_rx_end: HW_STAT_RX_END,
-    _reserved8: [u8; 0x04],
+    _reserved12: [u8; 0x04],
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
-    _reserved10: [u8; 0x0968],
+    hw_stat_block_err: HW_STAT_BLOCK_ERR,
+    _reserved15: [u8; 0x0964],
     wifi_int_status: WIFI_INT_STATUS,
     wifi_int_clear: WIFI_INT_CLEAR,
-    _reserved12: [u8; 0x68],
+    _reserved17: [u8; 0x68],
     ctrl: CTRL,
     tx_error_clear: TX_ERROR_CLEAR,
     tx_error_status: TX_ERROR_STATUS,
     tx_complete_clear: TX_COMPLETE_CLEAR,
     tx_complete_status: TX_COMPLETE_STATUS,
-    _reserved17: [u8; 0x30],
+    _reserved22: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved18: [u8; 0x34],
+    _reserved23: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -35,9 +40,9 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved25: [u8; 0x03f4],
+    _reserved30: [u8; 0x03f4],
     tx_slot_parameters: [TX_SLOT_PARAMETERS; 5],
-    _reserved26: [u8; 0x016c],
+    _reserved31: [u8; 0x016c],
     crypto_key_entry: [CRYPTO_KEY_ENTRY; 16],
 }
 impl RegisterBlock {
@@ -83,6 +88,26 @@ impl RegisterBlock {
     pub fn unknown_rx_policy_iter(&self) -> impl Iterator<Item = &UNKNOWN_RX_POLICY> {
         self.unknown_rx_policy.iter()
     }
+    #[doc = "0x2bc - "]
+    #[inline(always)]
+    pub const fn hw_stat_ack_int(&self) -> &HW_STAT_ACK_INT {
+        &self.hw_stat_ack_int
+    }
+    #[doc = "0x2c0 - "]
+    #[inline(always)]
+    pub const fn hw_stat_rts_int(&self) -> &HW_STAT_RTS_INT {
+        &self.hw_stat_rts_int
+    }
+    #[doc = "0x2c4 - "]
+    #[inline(always)]
+    pub const fn hw_stat_cts_int(&self) -> &HW_STAT_CTS_INT {
+        &self.hw_stat_cts_int
+    }
+    #[doc = "0x2c8 - "]
+    #[inline(always)]
+    pub const fn hw_stat_rifs_int(&self) -> &HW_STAT_RIFS_INT {
+        &self.hw_stat_rifs_int
+    }
     #[doc = "0x2cc - "]
     #[inline(always)]
     pub const fn hw_stat_rx_success(&self) -> &HW_STAT_RX_SUCCESS {
@@ -102,6 +127,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn hw_stat_full2(&self) -> &HW_STAT_FULL2 {
         &self.hw_stat_full2
+    }
+    #[doc = "0x2e0 - "]
+    #[inline(always)]
+    pub const fn hw_stat_block_err(&self) -> &HW_STAT_BLOCK_ERR {
+        &self.hw_stat_block_err
     }
     #[doc = "0xc48 - Interrupt status of WIFI peripheral"]
     #[inline(always)]
@@ -227,6 +257,22 @@ pub mod rx_descr_last;
 pub type UNKNOWN_RX_POLICY = crate::Reg<unknown_rx_policy::UNKNOWN_RX_POLICY_SPEC>;
 #[doc = ""]
 pub mod unknown_rx_policy;
+#[doc = "HW_STAT_ACK_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_ack_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_ack_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_ack_int`] module"]
+pub type HW_STAT_ACK_INT = crate::Reg<hw_stat_ack_int::HW_STAT_ACK_INT_SPEC>;
+#[doc = ""]
+pub mod hw_stat_ack_int;
+#[doc = "HW_STAT_RTS_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_rts_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_rts_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_rts_int`] module"]
+pub type HW_STAT_RTS_INT = crate::Reg<hw_stat_rts_int::HW_STAT_RTS_INT_SPEC>;
+#[doc = ""]
+pub mod hw_stat_rts_int;
+#[doc = "HW_STAT_CTS_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_cts_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_cts_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_cts_int`] module"]
+pub type HW_STAT_CTS_INT = crate::Reg<hw_stat_cts_int::HW_STAT_CTS_INT_SPEC>;
+#[doc = ""]
+pub mod hw_stat_cts_int;
+#[doc = "HW_STAT_RIFS_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_rifs_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_rifs_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_rifs_int`] module"]
+pub type HW_STAT_RIFS_INT = crate::Reg<hw_stat_rifs_int::HW_STAT_RIFS_INT_SPEC>;
+#[doc = ""]
+pub mod hw_stat_rifs_int;
 #[doc = "HW_STAT_RX_SUCCESS (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_rx_success::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_rx_success::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_rx_success`] module"]
 pub type HW_STAT_RX_SUCCESS = crate::Reg<hw_stat_rx_success::HW_STAT_RX_SUCCESS_SPEC>;
 #[doc = ""]
@@ -243,6 +289,10 @@ pub mod hw_stat_hop_err;
 pub type HW_STAT_FULL2 = crate::Reg<hw_stat_full2::HW_STAT_FULL2_SPEC>;
 #[doc = ""]
 pub mod hw_stat_full2;
+#[doc = "HW_STAT_BLOCK_ERR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_block_err::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_block_err::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_block_err`] module"]
+pub type HW_STAT_BLOCK_ERR = crate::Reg<hw_stat_block_err::HW_STAT_BLOCK_ERR_SPEC>;
+#[doc = ""]
+pub mod hw_stat_block_err;
 #[doc = "WIFI_INT_STATUS (rw) register accessor: Interrupt status of WIFI peripheral\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_int_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_int_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_int_status`] module"]
 pub type WIFI_INT_STATUS = crate::Reg<wifi_int_status::WIFI_INT_STATUS_SPEC>;
 #[doc = "Interrupt status of WIFI peripheral"]
