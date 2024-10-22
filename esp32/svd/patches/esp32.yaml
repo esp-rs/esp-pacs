@@ -209,3 +209,5 @@ TWAI0:
         description: "THIS IS NOT AN INTERRUPT. brp_div will prescale BRP by 2. Only available on ESP32 Revision 2 or later. Reserved otherwise"
         bitOffset: 4
         bitWidth: 1
+_include:
+  - "esp32-wifi.yaml"
