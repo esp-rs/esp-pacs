@@ -17,7 +17,7 @@ pub struct RegisterBlock {
     constant_time: CONSTANT_TIME,
     search_enable: SEARCH_ENABLE,
     search_pos: SEARCH_POS,
-    interrupt_ena: INTERRUPT_ENA,
+    int_ena: INT_ENA,
     date: DATE,
 }
 impl RegisterBlock {
@@ -122,8 +122,8 @@ impl RegisterBlock {
     }
     #[doc = "0x82c - RSA interrupt enable register"]
     #[inline(always)]
-    pub const fn interrupt_ena(&self) -> &INTERRUPT_ENA {
-        &self.interrupt_ena
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x830 - Version control register"]
     #[inline(always)]
@@ -175,10 +175,10 @@ pub mod search_enable;
 pub type SEARCH_POS = crate::Reg<search_pos::SEARCH_POS_SPEC>;
 #[doc = "The search position"]
 pub mod search_pos;
-#[doc = "INTERRUPT_ENA (rw) register accessor: RSA interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interrupt_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_ena`] module"]
-pub type INTERRUPT_ENA = crate::Reg<interrupt_ena::INTERRUPT_ENA_SPEC>;
+#[doc = "INT_ENA (rw) register accessor: RSA interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "RSA interrupt enable register"]
-pub mod interrupt_ena;
+pub mod int_ena;
 #[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
