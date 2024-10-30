@@ -7,7 +7,9 @@ pub struct TX_SLOT_PARAMETERS {
     ht_sig: HT_SIG,
     ht_unknown: HT_UNKNOWN,
     duration: DURATION,
-    _reserved_end: [u8; 0x28],
+    _reserved5: [u8; 0x04],
+    pmd: PMD,
+    _reserved_end: [u8; 0x20],
 }
 impl TX_SLOT_PARAMETERS {
     #[doc = "0x00 - PLCP1"]
@@ -35,6 +37,11 @@ impl TX_SLOT_PARAMETERS {
     pub const fn duration(&self) -> &DURATION {
         &self.duration
     }
+    #[doc = "0x18 - "]
+    #[inline(always)]
+    pub const fn pmd(&self) -> &PMD {
+        &self.pmd
+    }
 }
 #[doc = "PLCP1 (rw) register accessor: PLCP1\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp1`] module"]
 pub type PLCP1 = crate::Reg<plcp1::PLCP1_SPEC>;
@@ -56,3 +63,7 @@ pub mod ht_unknown;
 pub type DURATION = crate::Reg<duration::DURATION_SPEC>;
 #[doc = "duration of the frame exchange"]
 pub mod duration;
+#[doc = "PMD (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pmd`] module"]
+pub type PMD = crate::Reg<pmd::PMD_SPEC>;
+#[doc = ""]
+pub mod pmd;

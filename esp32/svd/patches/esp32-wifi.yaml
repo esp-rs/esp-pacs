@@ -12,7 +12,7 @@ _add:
         size: 32
         addressBlock:
             offset: 0x0
-            size: 0x2000
+            size: 0x2100
             usage: registers
         registers:
 
@@ -314,6 +314,9 @@ WIFI:
                     DURATION:
                         description: duration of the frame exchange
                         addressOffset: 0x10
+                        access: read-write
+                    PMD:
+                        addressOffset: 0x18
                         access: read-write
             CRYPTO_KEY_ENTRY%s:
                 dim: 16
