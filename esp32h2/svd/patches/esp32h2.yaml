@@ -506,3 +506,8 @@ TWAI*:
     _modify:
       SELF_RX_REQUEST:
         name: SELF_RX_REQ
+
+  ERR_CODE_CAP:
+    _modify:
+      ERR_CAPTURE_CODE_DIRECTION:
+        name: ECC_DIRECTION
