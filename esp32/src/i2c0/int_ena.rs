@@ -42,10 +42,10 @@ pub type TIME_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type TRANS_START_R = crate::BitReader;
 #[doc = "Field `TRANS_START` writer - The enable bit for trans_start_int interrupt."]
 pub type TRANS_START_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ACK_ERR` reader - The enable bit for ack_err_int interrupt."]
-pub type ACK_ERR_R = crate::BitReader;
-#[doc = "Field `ACK_ERR` writer - The enable bit for ack_err_int interrupt."]
-pub type ACK_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `NACK` reader - The enable bit for ack_err_int interrupt."]
+pub type NACK_R = crate::BitReader;
+#[doc = "Field `NACK` writer - The enable bit for ack_err_int interrupt."]
+pub type NACK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_REC_FULL` reader - The enable bit for rx_rec_full_int interrupt."]
 pub type RX_REC_FULL_R = crate::BitReader;
 #[doc = "Field `RX_REC_FULL` writer - The enable bit for rx_rec_full_int interrupt."]
@@ -107,8 +107,8 @@ impl R {
     }
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
-    pub fn ack_err(&self) -> ACK_ERR_R {
-        ACK_ERR_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn nack(&self) -> NACK_R {
+        NACK_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]
@@ -135,7 +135,7 @@ impl core::fmt::Debug for R {
             .field("trans_complete", &self.trans_complete())
             .field("time_out", &self.time_out())
             .field("trans_start", &self.trans_start())
-            .field("ack_err", &self.ack_err())
+            .field("nack", &self.nack())
             .field("rx_rec_full", &self.rx_rec_full())
             .field("tx_send_empty", &self.tx_send_empty())
             .finish()
@@ -205,8 +205,8 @@ impl W {
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_err(&mut self) -> ACK_ERR_W<INT_ENA_SPEC> {
-        ACK_ERR_W::new(self, 10)
+    pub fn nack(&mut self) -> NACK_W<INT_ENA_SPEC> {
+        NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]

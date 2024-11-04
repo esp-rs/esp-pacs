@@ -20,8 +20,8 @@ pub type TRANS_COMPLETE_R = crate::BitReader;
 pub type TIME_OUT_R = crate::BitReader;
 #[doc = "Field `TRANS_START` reader - The raw interrupt status bit for trans_start_int interrupt. when I2C sends the START bit it will produce trans_start_int interrupt."]
 pub type TRANS_START_R = crate::BitReader;
-#[doc = "Field `ACK_ERR` reader - The raw interrupt status bit for ack_err_int interrupt. when I2C receives a wrong ACK bit it will produce ack_err_int interrupt.."]
-pub type ACK_ERR_R = crate::BitReader;
+#[doc = "Field `NACK` reader - The raw interrupt status bit for ack_err_int interrupt. when I2C receives a wrong ACK bit it will produce ack_err_int interrupt.."]
+pub type NACK_R = crate::BitReader;
 #[doc = "Field `RX_REC_FULL` reader - The raw interrupt status bit for rx_rec_full_int interrupt. when I2C receives more data than nonfifo_rx_thres it will produce rx_rec_full_int interrupt."]
 pub type RX_REC_FULL_R = crate::BitReader;
 #[doc = "Field `TX_SEND_EMPTY` reader - The raw interrupt status bit for tx_send_empty_int interrupt.when I2C sends more data than nonfifo_tx_thres it will produce tx_send_empty_int interrupt.."]
@@ -79,8 +79,8 @@ impl R {
     }
     #[doc = "Bit 10 - The raw interrupt status bit for ack_err_int interrupt. when I2C receives a wrong ACK bit it will produce ack_err_int interrupt.."]
     #[inline(always)]
-    pub fn ack_err(&self) -> ACK_ERR_R {
-        ACK_ERR_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn nack(&self) -> NACK_R {
+        NACK_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The raw interrupt status bit for rx_rec_full_int interrupt. when I2C receives more data than nonfifo_rx_thres it will produce rx_rec_full_int interrupt."]
     #[inline(always)]
@@ -107,7 +107,7 @@ impl core::fmt::Debug for R {
             .field("trans_complete", &self.trans_complete())
             .field("time_out", &self.time_out())
             .field("trans_start", &self.trans_start())
-            .field("ack_err", &self.ack_err())
+            .field("nack", &self.nack())
             .field("rx_rec_full", &self.rx_rec_full())
             .field("tx_send_empty", &self.tx_send_empty())
             .finish()

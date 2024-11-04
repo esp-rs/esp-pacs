@@ -33,4 +33,3 @@ COMD%s:
       Stop: [2, STOP opcode]
       End: [4, END opcode]
       Rstart: [6, RSTART opcode]
-      
