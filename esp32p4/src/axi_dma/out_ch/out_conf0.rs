@@ -2,10 +2,10 @@
 pub type R = crate::R<OUT_CONF0_SPEC>;
 #[doc = "Register `OUT_CONF0` writer"]
 pub type W = crate::W<OUT_CONF0_SPEC>;
-#[doc = "Field `OUT_RST_` reader - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST__R = crate::BitReader;
-#[doc = "Field `OUT_RST_` writer - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
-pub type OUT_RST__W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUT_RST` reader - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
+pub type OUT_RST_R = crate::BitReader;
+#[doc = "Field `OUT_RST` writer - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
+pub type OUT_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_LOOP_TEST` reader - reserved"]
 pub type OUT_LOOP_TEST_R = crate::BitReader;
 #[doc = "Field `OUT_LOOP_TEST` writer - reserved"]
@@ -41,8 +41,8 @@ pub type OUTDSCR_BURST_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
-    pub fn out_rst_(&self) -> OUT_RST__R {
-        OUT_RST__R::new((self.bits & 1) != 0)
+    pub fn out_rst(&self) -> OUT_RST_R {
+        OUT_RST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
@@ -89,7 +89,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CONF0")
-            .field("out_rst_", &self.out_rst_())
+            .field("out_rst", &self.out_rst())
             .field("out_loop_test", &self.out_loop_test())
             .field("out_auto_wrback", &self.out_auto_wrback())
             .field("out_eof_mode", &self.out_eof_mode())
@@ -105,8 +105,8 @@ impl W {
     #[doc = "Bit 0 - This bit is used to reset AXI_DMA channel0 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
     #[must_use]
-    pub fn out_rst_(&mut self) -> OUT_RST__W<OUT_CONF0_SPEC> {
-        OUT_RST__W::new(self, 0)
+    pub fn out_rst(&mut self) -> OUT_RST_W<OUT_CONF0_SPEC> {
+        OUT_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
