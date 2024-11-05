@@ -20,8 +20,8 @@ pub type TRANS_COMPLETE_R = crate::BitReader;
 pub type TIME_OUT_R = crate::BitReader;
 #[doc = "Field `TRANS_START` reader - The masked interrupt status for trans_start_int interrupt."]
 pub type TRANS_START_R = crate::BitReader;
-#[doc = "Field `ACK_ERR` reader - The masked interrupt status for ack_err_int interrupt."]
-pub type ACK_ERR_R = crate::BitReader;
+#[doc = "Field `NACK` reader - The masked interrupt status for ack_err_int interrupt."]
+pub type NACK_R = crate::BitReader;
 #[doc = "Field `RX_REC_FULL` reader - The masked interrupt status for rx_rec_full_int interrupt."]
 pub type RX_REC_FULL_R = crate::BitReader;
 #[doc = "Field `TX_SEND_EMPTY` reader - The masked interrupt status for tx_send_empty_int interrupt."]
@@ -79,8 +79,8 @@ impl R {
     }
     #[doc = "Bit 10 - The masked interrupt status for ack_err_int interrupt."]
     #[inline(always)]
-    pub fn ack_err(&self) -> ACK_ERR_R {
-        ACK_ERR_R::new(((self.bits >> 10) & 1) != 0)
+    pub fn nack(&self) -> NACK_R {
+        NACK_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - The masked interrupt status for rx_rec_full_int interrupt."]
     #[inline(always)]
@@ -107,7 +107,7 @@ impl core::fmt::Debug for R {
             .field("trans_complete", &self.trans_complete())
             .field("time_out", &self.time_out())
             .field("trans_start", &self.trans_start())
-            .field("ack_err", &self.ack_err())
+            .field("nack", &self.nack())
             .field("rx_rec_full", &self.rx_rec_full())
             .field("tx_send_empty", &self.tx_send_empty())
             .finish()

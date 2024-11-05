@@ -20,8 +20,8 @@ pub type TRANS_COMPLETE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 pub type TIME_OUT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TRANS_START` writer - Set this bit to clear the trans_start_int interrupt."]
 pub type TRANS_START_W<'a, REG> = crate::BitWriter1C<'a, REG>;
-#[doc = "Field `ACK_ERR` writer - Set this bit to clear the ack_err_int interrupt."]
-pub type ACK_ERR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
+#[doc = "Field `NACK` writer - Set this bit to clear the ack_err_int interrupt."]
+pub type NACK_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `RX_REC_FULL` writer - Set this bit to clear the rx_rec_full_int interrupt."]
 pub type RX_REC_FULL_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TX_SEND_EMPTY` writer - Set this bit to clear the tx_send_empty_int interrupt."]
@@ -96,8 +96,8 @@ impl W {
     #[doc = "Bit 10 - Set this bit to clear the ack_err_int interrupt."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_err(&mut self) -> ACK_ERR_W<INT_CLR_SPEC> {
-        ACK_ERR_W::new(self, 10)
+    pub fn nack(&mut self) -> NACK_W<INT_CLR_SPEC> {
+        NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the rx_rec_full_int interrupt."]
     #[inline(always)]
