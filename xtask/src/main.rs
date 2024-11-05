@@ -72,7 +72,7 @@ enum Commands {
 
     /// Generate the specified package(s)
     ///
-    /// Additionally patches the releavant SVD(s) prior to generating the
+    /// Additionally patches the relevant SVD(s) prior to generating the
     /// package(s).
     Generate {
         /// Package(s) to target
@@ -272,22 +272,13 @@ fn build_package(workspace: &Path, chip: &Chip) -> Result<()> {
 
     if target.starts_with("riscv") {
         Command::new("rustup")
-            .args([
-                "target",
-                "add",
-                &target,
-            ])
+            .args(["target", "add", &target])
             .current_dir(&path)
             .stdout(Stdio::inherit())
             .stderr(Stdio::inherit())
             .output()?;
         Command::new("cargo")
-            .args([
-                &format!("+{channel}"),
-                "build",
-                "--target",
-                &target,
-            ])
+            .args([&format!("+{channel}"), "build", "--target", &target])
             .current_dir(path)
             .stdout(Stdio::inherit())
             .stderr(Stdio::inherit())
