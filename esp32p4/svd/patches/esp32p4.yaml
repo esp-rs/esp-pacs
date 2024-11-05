@@ -59,6 +59,15 @@ SPI[01]:
 "EFUSE,I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,USB_DEVICE,MIPI_CSI_BRIDGE,MIPI_DSI_BRIDGE,ECDSA,GPIO,H264,PPA,RMT,LP_TOUCH,LP_TSENS,ISP,LP_HUK,LP_I2S0,LP_UART":
   _include: ../../../common_patches/int_strip.yaml
 
+UART0:
+  CLK_CONF:
+    _add:
+      RST_CORE:
+        description: Write 1 then write 0 to this bit, reset UART Tx/Rx.
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+
 LEDC:
   _include: ../../../common_patches/ledc_int.yaml
   _expand_array:
@@ -487,6 +496,10 @@ AHB_DMA:
       IN_INT_CLR_CH?:
         name: CLR
         _strip_end: _CH_INT_CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
     OUT_INT_CH%s:
       OUT_INT_RAW_CH?:
         name: RAW
@@ -868,7 +881,7 @@ AXI_DMA:
             modifiedWriteValues: oneToClear
       OUT_CONF0_CH?:
         name: OUT_CONF0
-        _strip_end: [CH, _CH0]
+        _strip_end: [_CH, _CH0]
       OUT_CONF1_CH?:
         name: OUT_CONF1
         _strip_end: _CH

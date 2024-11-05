@@ -2,6 +2,10 @@
 pub type R = crate::R<CLK_CONF_SPEC>;
 #[doc = "Register `CLK_CONF` writer"]
 pub type W = crate::W<CLK_CONF_SPEC>;
+#[doc = "Field `RST_CORE` reader - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
+pub type RST_CORE_R = crate::BitReader;
+#[doc = "Field `RST_CORE` writer - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
+pub type RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_SCLK_EN` reader - Set this bit to enable UART Tx clock."]
 pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Set this bit to enable UART Tx clock."]
@@ -19,6 +23,11 @@ pub type RX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `RX_RST_CORE` writer - Write 1 then write 0 to this bit to reset UART Rx."]
 pub type RX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 23 - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
+    #[inline(always)]
+    pub fn rst_core(&self) -> RST_CORE_R {
+        RST_CORE_R::new(((self.bits >> 23) & 1) != 0)
+    }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
     pub fn tx_sclk_en(&self) -> TX_SCLK_EN_R {
@@ -48,10 +57,17 @@ impl core::fmt::Debug for R {
             .field("rx_sclk_en", &self.rx_sclk_en())
             .field("tx_rst_core", &self.tx_rst_core())
             .field("rx_rst_core", &self.rx_rst_core())
+            .field("rst_core", &self.rst_core())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 23 - Write 1 then write 0 to this bit, reset UART Tx/Rx."]
+    #[inline(always)]
+    #[must_use]
+    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+        RST_CORE_W::new(self, 23)
+    }
     #[doc = "Bit 24 - Set this bit to enable UART Tx clock."]
     #[inline(always)]
     #[must_use]
