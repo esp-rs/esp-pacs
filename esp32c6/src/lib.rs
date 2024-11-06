@@ -3247,6 +3247,52 @@ impl core::fmt::Debug for USB_DEVICE {
 }
 #[doc = "Full-speed USB Serial/JTAG Controller"]
 pub mod usb_device;
+#[doc = "Core Local Interrupts"]
+pub struct CLINT {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for CLINT {}
+impl CLINT {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const clint::RegisterBlock = 0x2000_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const clint::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for CLINT {
+    type Target = clint::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for CLINT {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLINT").finish()
+    }
+}
+#[doc = "Core Local Interrupts"]
+pub mod clint;
 #[doc = "PLIC Peripheral"]
 pub struct PLIC_MX {
     _marker: PhantomData<*const ()>,
@@ -3474,6 +3520,8 @@ pub struct Peripherals {
     pub UHCI0: UHCI0,
     #[doc = "USB_DEVICE"]
     pub USB_DEVICE: USB_DEVICE,
+    #[doc = "CLINT"]
+    pub CLINT: CLINT,
     #[doc = "PLIC_MX"]
     pub PLIC_MX: PLIC_MX,
     #[doc = "PLIC_UX"]
@@ -3565,6 +3613,7 @@ impl Peripherals {
             UART1: UART1::steal(),
             UHCI0: UHCI0::steal(),
             USB_DEVICE: USB_DEVICE::steal(),
+            CLINT: CLINT::steal(),
             PLIC_MX: PLIC_MX::steal(),
             PLIC_UX: PLIC_UX::steal(),
         }
