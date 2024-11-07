@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - sample number"]
     #[inline(always)]
-    #[must_use]
     pub fn sample_num(&mut self) -> SAMPLE_NUM_W<FSM_SPEC> {
         SAMPLE_NUM_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn sample_cycle(&mut self) -> SAMPLE_CYCLE_W<FSM_SPEC> {
         SAMPLE_CYCLE_W::new(self, 24)
     }

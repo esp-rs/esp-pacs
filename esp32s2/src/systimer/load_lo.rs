@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The value to be loaded into system timer, low 32 bits."]
     #[inline(always)]
-    #[must_use]
     pub fn load_lo(&mut self) -> LOAD_LO_W<LOAD_LO_SPEC> {
         LOAD_LO_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_gpio_enable(&mut self) -> RTC_GPIO_ENABLE_W<RTC_GPIO_ENABLE_SPEC> {
         RTC_GPIO_ENABLE_W::new(self, 10)
     }

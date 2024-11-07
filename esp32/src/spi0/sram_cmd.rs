@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For SPI0 SRAM DIO mode enable . SRAM DIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_dio(&mut self) -> SRAM_DIO_W<SRAM_CMD_SPEC> {
         SRAM_DIO_W::new(self, 0)
     }
     #[doc = "Bit 1 - For SPI0 SRAM QIO mode enable . SRAM QIO enable command will be send when the bit is set. The bit will be cleared once the operation done."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_qio(&mut self) -> SRAM_QIO_W<SRAM_CMD_SPEC> {
         SRAM_QIO_W::new(self, 1)
     }
     #[doc = "Bit 4 - For SPI0 SRAM IO mode reset enable. SRAM IO mode reset operation will be triggered when the bit is set. The bit will be cleared once the operation done"]
     #[inline(always)]
-    #[must_use]
     pub fn sram_rstio(&mut self) -> SRAM_RSTIO_W<SRAM_CMD_SPEC> {
         SRAM_RSTIO_W::new(self, 4)
     }

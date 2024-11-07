@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_W1TS_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to this field to assert interrupt enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_tsens_wake_int_ena_w1ts(
         &mut self,
     ) -> COCPU_TSENS_WAKE_INT_ENA_W1TS_W<INT_ENA_W1TS_SPEC> {

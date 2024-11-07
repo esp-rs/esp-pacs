@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_RESULT_FINISH_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to end upstream and clear the calculation result."]
     #[inline(always)]
-    #[must_use]
     pub fn set_result_end(&mut self) -> SET_RESULT_END_W<SET_RESULT_FINISH_SPEC> {
         SET_RESULT_END_W::new(self, 0)
     }

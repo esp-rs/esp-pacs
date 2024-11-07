@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn hinf_access_grant_config(
         &mut self,
     ) -> HINF_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_HINF_SPEC> {

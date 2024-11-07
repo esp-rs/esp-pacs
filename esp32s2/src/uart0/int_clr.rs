@@ -49,121 +49,101 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear UART_THE RXFIFO_FULL_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<INT_CLR_SPEC> {
         RXFIFO_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear UART_TXFIFO_EMPTY_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<INT_CLR_SPEC> {
         TXFIFO_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear UART_PARITY_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn parity_err(&mut self) -> PARITY_ERR_W<INT_CLR_SPEC> {
         PARITY_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear UART_FRM_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn frm_err(&mut self) -> FRM_ERR_W<INT_CLR_SPEC> {
         FRM_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear UART_UART_RXFIFO_OVF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_CLR_SPEC> {
         RXFIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear UART_DSR_CHG_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn dsr_chg(&mut self) -> DSR_CHG_W<INT_CLR_SPEC> {
         DSR_CHG_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear UART_CTS_CHG_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cts_chg(&mut self) -> CTS_CHG_W<INT_CLR_SPEC> {
         CTS_CHG_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear UART_BRK_DET_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn brk_det(&mut self) -> BRK_DET_W<INT_CLR_SPEC> {
         BRK_DET_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to clear UART_RXFIFO_TOUT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_tout(&mut self) -> RXFIFO_TOUT_W<INT_CLR_SPEC> {
         RXFIFO_TOUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to clear UART_SW_XON_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_xon(&mut self) -> SW_XON_W<INT_CLR_SPEC> {
         SW_XON_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to clear UART_SW_XOFF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_xoff(&mut self) -> SW_XOFF_W<INT_CLR_SPEC> {
         SW_XOFF_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear UART_GLITCH_DET_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_CLR_SPEC> {
         GLITCH_DET_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to clear UART_TX_BRK_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_done(&mut self) -> TX_BRK_DONE_W<INT_CLR_SPEC> {
         TX_BRK_DONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to clear UART_TX_BRK_IDLE_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_idle_done(&mut self) -> TX_BRK_IDLE_DONE_W<INT_CLR_SPEC> {
         TX_BRK_IDLE_DONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to clear UART_TX_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_done(&mut self) -> TX_DONE_W<INT_CLR_SPEC> {
         TX_DONE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to clear UART_RS485_PARITY_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_parity_err(&mut self) -> RS485_PARITY_ERR_W<INT_CLR_SPEC> {
         RS485_PARITY_ERR_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to clear UART_RS485_FRM_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_frm_err(&mut self) -> RS485_FRM_ERR_W<INT_CLR_SPEC> {
         RS485_FRM_ERR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to clear UART_RS485_CLASH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_clash(&mut self) -> RS485_CLASH_W<INT_CLR_SPEC> {
         RS485_CLASH_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to clear UART_AT_CMD_CHAR_DET_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn at_cmd_char_det(&mut self) -> AT_CMD_CHAR_DET_W<INT_CLR_SPEC> {
         AT_CMD_CHAR_DET_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to clear UART_WAKEUP_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup(&mut self) -> WAKEUP_W<INT_CLR_SPEC> {
         WAKEUP_W::new(self, 19)
     }

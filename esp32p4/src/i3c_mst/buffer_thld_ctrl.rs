@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Command Buffer Empty Threshold Value is used to control the number of empty locations(or greater) in the Command Buffer that trigger CMD_BUFFER_READY_STAT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_cmd_buf_empty_thld(&mut self) -> REG_CMD_BUF_EMPTY_THLD_W<BUFFER_THLD_CTRL_SPEC> {
         REG_CMD_BUF_EMPTY_THLD_W::new(self, 0)
     }
     #[doc = "Bits 6:8 - Response Buffer Threshold Value is used to control the number of entries in the Response Buffer that trigger the RESP_READY_STAT_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_resp_buf_thld(&mut self) -> REG_RESP_BUF_THLD_W<BUFFER_THLD_CTRL_SPEC> {
         REG_RESP_BUF_THLD_W::new(self, 6)
     }
     #[doc = "Bits 12:14 - In-Band Interrupt Data Threshold Value . Every In Band Interrupt received by I3C controller generates an IBI status. This field controls the number of IBI data entries in the IBI buffer that trigger the IBI_DATA_THLD_STAT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_ibi_data_buf_thld(&mut self) -> REG_IBI_DATA_BUF_THLD_W<BUFFER_THLD_CTRL_SPEC> {
         REG_IBI_DATA_BUF_THLD_W::new(self, 12)
     }
     #[doc = "Bits 18:20 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_ibi_status_buf_thld(&mut self) -> REG_IBI_STATUS_BUF_THLD_W<BUFFER_THLD_CTRL_SPEC> {
         REG_IBI_STATUS_BUF_THLD_W::new(self, 18)
     }

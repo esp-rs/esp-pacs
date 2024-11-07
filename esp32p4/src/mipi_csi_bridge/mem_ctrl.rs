@@ -37,13 +37,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - csi bridge memory clock gating force on."]
     #[inline(always)]
-    #[must_use]
     pub fn csi_bridge_mem_clk_force_on(&mut self) -> CSI_BRIDGE_MEM_CLK_FORCE_ON_W<MEM_CTRL_SPEC> {
         CSI_BRIDGE_MEM_CLK_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bits 1:14 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn csi_mem_aux_ctrl(&mut self) -> CSI_MEM_AUX_CTRL_W<MEM_CTRL_SPEC> {
         CSI_MEM_AUX_CTRL_W::new(self, 1)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 1 to enable ECC clock"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_ecc_clk_en(&mut self) -> CRYPTO_ECC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_ECC_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 10 - Set 1 to enable TSENS clock"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         TSENS_CLK_EN_W::new(self, 10)
     }

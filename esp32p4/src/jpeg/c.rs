@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - choose c0 quntization table id (TBD)"]
     #[inline(always)]
-    #[must_use]
     pub fn dqt_tbl_sel(&mut self) -> DQT_TBL_SEL_W<C_SPEC> {
         DQT_TBL_SEL_W::new(self, 0)
     }
     #[doc = "Bits 8:11 - vertical sampling factor of c0"]
     #[inline(always)]
-    #[must_use]
     pub fn y_factor(&mut self) -> Y_FACTOR_W<C_SPEC> {
         Y_FACTOR_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - horizontal sampling factor of c0"]
     #[inline(always)]
-    #[must_use]
     pub fn x_factor(&mut self) -> X_FACTOR_W<C_SPEC> {
         X_FACTOR_W::new(self, 12)
     }
     #[doc = "Bits 16:23 - the identifier of c0"]
     #[inline(always)]
-    #[must_use]
     pub fn id(&mut self) -> ID_W<C_SPEC> {
         ID_W::new(self, 16)
     }

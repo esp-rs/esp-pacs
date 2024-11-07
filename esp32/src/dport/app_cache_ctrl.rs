@@ -138,61 +138,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_mode(&mut self) -> APP_CACHE_MODE_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_enable(&mut self) -> APP_CACHE_ENABLE_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_ENABLE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_flush_ena(&mut self) -> APP_CACHE_FLUSH_ENA_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_FLUSH_ENA_W::new(self, 4)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_lock_0_en(&mut self) -> APP_CACHE_LOCK_0_EN_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_LOCK_0_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_lock_1_en(&mut self) -> APP_CACHE_LOCK_1_EN_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_LOCK_1_EN_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_lock_2_en(&mut self) -> APP_CACHE_LOCK_2_EN_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_LOCK_2_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_lock_3_en(&mut self) -> APP_CACHE_LOCK_3_EN_W<APP_CACHE_CTRL_SPEC> {
         APP_CACHE_LOCK_3_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn app_single_iram_ena(&mut self) -> APP_SINGLE_IRAM_ENA_W<APP_CACHE_CTRL_SPEC> {
         APP_SINGLE_IRAM_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn app_dram_split(&mut self) -> APP_DRAM_SPLIT_W<APP_CACHE_CTRL_SPEC> {
         APP_DRAM_SPLIT_W::new(self, 11)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn app_dram_hl(&mut self) -> APP_DRAM_HL_W<APP_CACHE_CTRL_SPEC> {
         APP_DRAM_HL_W::new(self, 14)
     }

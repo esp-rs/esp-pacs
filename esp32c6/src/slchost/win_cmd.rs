@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slchost_win_cmd(&mut self) -> SLCHOST_WIN_CMD_W<WIN_CMD_SPEC> {
         SLCHOST_WIN_CMD_W::new(self, 0)
     }

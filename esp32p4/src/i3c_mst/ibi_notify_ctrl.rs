@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Notify Rejected Slave Interrupt Request Control. This bit is used to suppress reporting to the application about Slave Interrupt Request. 0:Suppress passing the IBI Status to the IBI FIFO(hence not notifying the application) when a SIR request is NACKed and auto-disabled base on the IBI_SIR_REQ_REJECT register. 1: Writes IBI Status to the IBI FIFO(hence notifying the application) when SIR request is NACKed and auto-disabled based on the IBI_SIR_REQ_REJECT registerl."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_notify_sir_rejected(&mut self) -> REG_NOTIFY_SIR_REJECTED_W<IBI_NOTIFY_CTRL_SPEC> {
         REG_NOTIFY_SIR_REJECTED_W::new(self, 2)
     }

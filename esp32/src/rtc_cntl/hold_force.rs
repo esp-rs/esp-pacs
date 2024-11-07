@@ -194,109 +194,91 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_hold_force(&mut self) -> ADC1_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         ADC1_HOLD_FORCE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_hold_force(&mut self) -> ADC2_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         ADC2_HOLD_FORCE_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac1_hold_force(&mut self) -> PDAC1_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         PDAC1_HOLD_FORCE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_hold_force(&mut self) -> PDAC2_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         PDAC2_HOLD_FORCE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn sense1_hold_force(&mut self) -> SENSE1_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         SENSE1_HOLD_FORCE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn sense2_hold_force(&mut self) -> SENSE2_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         SENSE2_HOLD_FORCE_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn sense3_hold_force(&mut self) -> SENSE3_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         SENSE3_HOLD_FORCE_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn sense4_hold_force(&mut self) -> SENSE4_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         SENSE4_HOLD_FORCE_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad0_hold_force(&mut self) -> TOUCH_PAD0_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD0_HOLD_FORCE_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad1_hold_force(&mut self) -> TOUCH_PAD1_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD1_HOLD_FORCE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad2_hold_force(&mut self) -> TOUCH_PAD2_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD2_HOLD_FORCE_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad3_hold_force(&mut self) -> TOUCH_PAD3_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD3_HOLD_FORCE_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad4_hold_force(&mut self) -> TOUCH_PAD4_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD4_HOLD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad5_hold_force(&mut self) -> TOUCH_PAD5_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD5_HOLD_FORCE_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad6_hold_force(&mut self) -> TOUCH_PAD6_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD6_HOLD_FORCE_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad7_hold_force(&mut self) -> TOUCH_PAD7_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         TOUCH_PAD7_HOLD_FORCE_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn x32p_hold_force(&mut self) -> X32P_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         X32P_HOLD_FORCE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_hold_force(&mut self) -> X32N_HOLD_FORCE_W<HOLD_FORCE_SPEC> {
         X32N_HOLD_FORCE_W::new(self, 17)
     }

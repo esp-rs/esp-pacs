@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn appdport_apb_mask1(&mut self) -> APPDPORT_APB_MASK1_W<APP_DPORT_APB_MASK1_SPEC> {
         APPDPORT_APB_MASK1_W::new(self, 0)
     }

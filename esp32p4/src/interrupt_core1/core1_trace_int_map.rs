@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_core1_trace_int_map(
         &mut self,
     ) -> CORE1_CORE1_TRACE_INT_MAP_W<CORE1_TRACE_INT_MAP_SPEC> {

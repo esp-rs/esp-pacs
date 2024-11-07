@@ -286,7 +286,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit0_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT0_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -294,7 +293,6 @@ impl W {
     }
     #[doc = "Bit 1 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit1_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT1_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -302,7 +300,6 @@ impl W {
     }
     #[doc = "Bit 2 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit2_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT2_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -310,7 +307,6 @@ impl W {
     }
     #[doc = "Bit 3 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit3_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT3_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -318,7 +314,6 @@ impl W {
     }
     #[doc = "Bit 4 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit4_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT4_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -326,7 +321,6 @@ impl W {
     }
     #[doc = "Bit 5 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit5_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT5_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -334,7 +328,6 @@ impl W {
     }
     #[doc = "Bit 6 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit6_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT6_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -342,7 +335,6 @@ impl W {
     }
     #[doc = "Bit 7 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tohost_bit7_int_raw(
         &mut self,
     ) -> SLC0_TOHOST_BIT7_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -350,7 +342,6 @@ impl W {
     }
     #[doc = "Bit 8 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_token0_1to0_int_raw(
         &mut self,
     ) -> SLC0_TOKEN0_1TO0_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -358,7 +349,6 @@ impl W {
     }
     #[doc = "Bit 9 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_token1_1to0_int_raw(
         &mut self,
     ) -> SLC0_TOKEN1_1TO0_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -366,7 +356,6 @@ impl W {
     }
     #[doc = "Bit 10 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_token0_0to1_int_raw(
         &mut self,
     ) -> SLC0_TOKEN0_0TO1_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -374,7 +363,6 @@ impl W {
     }
     #[doc = "Bit 11 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_token1_0to1_int_raw(
         &mut self,
     ) -> SLC0_TOKEN1_0TO1_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -382,19 +370,16 @@ impl W {
     }
     #[doc = "Bit 12 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_rx_sof_int_raw(&mut self) -> SLC0HOST_RX_SOF_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0HOST_RX_SOF_INT_RAW_W::new(self, 12)
     }
     #[doc = "Bit 13 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_rx_eof_int_raw(&mut self) -> SLC0HOST_RX_EOF_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0HOST_RX_EOF_INT_RAW_W::new(self, 13)
     }
     #[doc = "Bit 14 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_rx_start_int_raw(
         &mut self,
     ) -> SLC0HOST_RX_START_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -402,7 +387,6 @@ impl W {
     }
     #[doc = "Bit 15 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_tx_start_int_raw(
         &mut self,
     ) -> SLC0HOST_TX_START_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -410,19 +394,16 @@ impl W {
     }
     #[doc = "Bit 16 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_rx_udf_int_raw(&mut self) -> SLC0_RX_UDF_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_RX_UDF_INT_RAW_W::new(self, 16)
     }
     #[doc = "Bit 17 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_tx_ovf_int_raw(&mut self) -> SLC0_TX_OVF_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_TX_OVF_INT_RAW_W::new(self, 17)
     }
     #[doc = "Bit 18 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_rx_pf_valid_int_raw(
         &mut self,
     ) -> SLC0_RX_PF_VALID_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -430,31 +411,26 @@ impl W {
     }
     #[doc = "Bit 19 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_ext_bit0_int_raw(&mut self) -> SLC0_EXT_BIT0_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_EXT_BIT0_INT_RAW_W::new(self, 19)
     }
     #[doc = "Bit 20 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_ext_bit1_int_raw(&mut self) -> SLC0_EXT_BIT1_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_EXT_BIT1_INT_RAW_W::new(self, 20)
     }
     #[doc = "Bit 21 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_ext_bit2_int_raw(&mut self) -> SLC0_EXT_BIT2_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_EXT_BIT2_INT_RAW_W::new(self, 21)
     }
     #[doc = "Bit 22 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_ext_bit3_int_raw(&mut self) -> SLC0_EXT_BIT3_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         SLC0_EXT_BIT3_INT_RAW_W::new(self, 22)
     }
     #[doc = "Bit 23 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_rx_new_packet_int_raw(
         &mut self,
     ) -> SLC0_RX_NEW_PACKET_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -462,7 +438,6 @@ impl W {
     }
     #[doc = "Bit 24 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_host_rd_retry_int_raw(
         &mut self,
     ) -> SLC0_HOST_RD_RETRY_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
@@ -470,7 +445,6 @@ impl W {
     }
     #[doc = "Bit 25 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_sdio_int_raw(&mut self) -> GPIO_SDIO_INT_RAW_W<SLC0HOST_INT_RAW_SPEC> {
         GPIO_SDIO_INT_RAW_W::new(self, 25)
     }

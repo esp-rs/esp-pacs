@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 1 to enable SPI01 clock"]
     #[inline(always)]
-    #[must_use]
     pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         SPI01_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable UART clock"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         UART_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set 1 to enable UART1 clock"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         UART1_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to enable SPI2 clock"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         SPI2_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set 1 to enable I2C_EXT0 clock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_ext0_clk_en(&mut self) -> I2C_EXT0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         I2C_EXT0_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 11 - Set 1 to enable LEDC clock"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         LEDC_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 13 - Set 1 to enable TIMERGROUP clock"]
     #[inline(always)]
-    #[must_use]
     pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         TIMERGROUP_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 24 - Set 1 to enable UART_MEM clock"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         UART_MEM_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 28 - Set 1 to enable APB_SARADC clock"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_saradc_clk_en(&mut self) -> APB_SARADC_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         APB_SARADC_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set 1 to enable SYSTEMTIMER clock"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_clk_en(&mut self) -> SYSTIMER_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         SYSTIMER_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set 1 to enable ADC2_ARB clock"]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_arb_clk_en(&mut self) -> ADC2_ARB_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         ADC2_ARB_CLK_EN_W::new(self, 30)
     }

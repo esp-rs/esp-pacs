@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - 2-bit attenuation for each pad. \\[1:0\\] is used for channel 0, \\[3:2\\] is used for channel 1, etc."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_atten(&mut self) -> SAR1_ATTEN_W<SAR_ATTEN1_SPEC> {
         SAR1_ATTEN_W::new(self, 0)
     }

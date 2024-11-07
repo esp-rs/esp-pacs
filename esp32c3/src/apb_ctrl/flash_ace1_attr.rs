@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - reg_flash_ace1_attr"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_ace1_attr(&mut self) -> FLASH_ACE1_ATTR_W<FLASH_ACE1_ATTR_SPEC> {
         FLASH_ACE1_ATTR_W::new(self, 0)
     }

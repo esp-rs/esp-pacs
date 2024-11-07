@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - The delay mode of I2S Rx SD input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_sd_in_dm(&mut self) -> RX_SD_IN_DM_W<RX_TIMING_SPEC> {
         RX_SD_IN_DM_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - The delay mode of I2S Rx WS output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ws_out_dm(&mut self) -> RX_WS_OUT_DM_W<RX_TIMING_SPEC> {
         RX_WS_OUT_DM_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - The delay mode of I2S Rx BCK output signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_bck_out_dm(&mut self) -> RX_BCK_OUT_DM_W<RX_TIMING_SPEC> {
         RX_BCK_OUT_DM_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - The delay mode of I2S Rx WS input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ws_in_dm(&mut self) -> RX_WS_IN_DM_W<RX_TIMING_SPEC> {
         RX_WS_IN_DM_W::new(self, 24)
     }
     #[doc = "Bits 28:29 - The delay mode of I2S Rx BCK input signal. 0: bypass. 1: delay by pos edge. 2: delay by neg edge. 3: not used."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_bck_in_dm(&mut self) -> RX_BCK_IN_DM_W<RX_TIMING_SPEC> {
         RX_BCK_IN_DM_W::new(self, 28)
     }

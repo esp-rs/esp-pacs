@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - In the dummy phase the signal level of spi is output by the spi controller."]
     #[inline(always)]
-    #[must_use]
     pub fn fdummy_out(&mut self) -> FDUMMY_OUT_W<CTRL_SPEC> {
         FDUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 7 - Apply 2 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
         FCMD_DUAL_W::new(self, 7)
     }
     #[doc = "Bit 8 - Apply 4 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 10 - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
-    #[must_use]
     pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC> {
         FCS_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC> {
         TX_CRC_EN_W::new(self, 11)
     }
     #[doc = "Bit 13 - This bit enable the bits: spi_mem_fread_qio, spi_mem_fread_dio, spi_mem_fread_qout and spi_mem_fread_dout. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
         FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC> {
         RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
-    #[must_use]
     pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low"]
     #[inline(always)]
-    #[must_use]
     pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
     #[inline(always)]
-    #[must_use]
     pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
         WP_W::new(self, 21)
     }
     #[doc = "Bit 22 - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC> {
         WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
         FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
         FREAD_QIO_W::new(self, 24)
     }

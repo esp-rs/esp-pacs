@@ -19,7 +19,6 @@ impl core::fmt::Debug for crate::generic::Reg<CORE0_ACS_CACHE_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt by cpu access icache while the corresponding ibus is disabled or icache is disabled which include speculative access."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_acs_msk_ic(
         &mut self,
     ) -> CORE0_IBUS_ACS_MSK_IC_W<CORE0_ACS_CACHE_INT_CLR_SPEC> {
@@ -27,19 +26,16 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to clear interrupt by ibus trying to write icache"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_wr_ic(&mut self) -> CORE0_IBUS_WR_IC_W<CORE0_ACS_CACHE_INT_CLR_SPEC> {
         CORE0_IBUS_WR_IC_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to clear interrupt by authentication fail."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_reject(&mut self) -> CORE0_IBUS_REJECT_W<CORE0_ACS_CACHE_INT_CLR_SPEC> {
         CORE0_IBUS_REJECT_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to clear interrupt by cpu access dcache while the corresponding dbus is disabled or dcache is disabled which include speculative access."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_acs_msk_dc(
         &mut self,
     ) -> CORE0_DBUS_ACS_MSK_DC_W<CORE0_ACS_CACHE_INT_CLR_SPEC> {
@@ -47,7 +43,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to clear interrupt by authentication fail."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_reject(&mut self) -> CORE0_DBUS_REJECT_W<CORE0_ACS_CACHE_INT_CLR_SPEC> {
         CORE0_DBUS_REJECT_W::new(self, 4)
     }

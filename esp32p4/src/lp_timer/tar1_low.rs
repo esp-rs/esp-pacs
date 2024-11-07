@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer_tar_low1(&mut self) -> MAIN_TIMER_TAR_LOW1_W<TAR1_LOW_SPEC> {
         MAIN_TIMER_TAR_LOW1_W::new(self, 0)
     }

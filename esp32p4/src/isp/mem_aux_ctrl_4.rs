@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures the mem_aux of sharp uv line buffer memory"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_matrix_uv_mem_aux_ctrl(
         &mut self,
     ) -> SHARP_MATRIX_UV_MEM_AUX_CTRL_W<MEM_AUX_CTRL_4_SPEC> {

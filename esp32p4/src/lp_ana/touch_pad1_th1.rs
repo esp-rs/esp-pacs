@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad1_th1(&mut self) -> TOUCH_PAD1_TH1_W<TOUCH_PAD1_TH1_SPEC> {
         TOUCH_PAD1_TH1_W::new(self, 16)
     }

@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable slave transit complete interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_tran_comp(&mut self) -> SLAVE_TRAN_COMP_W<INT_ENA_SPEC> {
         SLAVE_TRAN_COMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - enable arbitration lost interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_ENA_SPEC> {
         ARBITRATION_LOST_W::new(self, 1)
     }
     #[doc = "Bit 2 - enable master transit complete interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn master_tran_comp(&mut self) -> MASTER_TRAN_COMP_W<INT_ENA_SPEC> {
         MASTER_TRAN_COMP_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable transit complete interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_ENA_SPEC> {
         TRANS_COMPLETE_W::new(self, 3)
     }
     #[doc = "Bit 4 - enable time out interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<INT_ENA_SPEC> {
         TIME_OUT_W::new(self, 4)
     }
     #[doc = "Bit 5 - enable eack error interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn ack_err(&mut self) -> ACK_ERR_W<INT_ENA_SPEC> {
         ACK_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - enable receive data interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_data(&mut self) -> RX_DATA_W<INT_ENA_SPEC> {
         RX_DATA_W::new(self, 6)
     }
     #[doc = "Bit 7 - enable transit data interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_data(&mut self) -> TX_DATA_W<INT_ENA_SPEC> {
         TX_DATA_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable detect start interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn detect_start(&mut self) -> DETECT_START_W<INT_ENA_SPEC> {
         DETECT_START_W::new(self, 8)
     }

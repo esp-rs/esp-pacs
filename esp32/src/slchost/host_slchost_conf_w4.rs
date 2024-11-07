@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - SLC timeout value"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_conf16(&mut self) -> HOST_SLCHOST_CONF16_W<HOST_SLCHOST_CONF_W4_SPEC> {
         HOST_SLCHOST_CONF16_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - SLC timeout enable"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_conf17(&mut self) -> HOST_SLCHOST_CONF17_W<HOST_SLCHOST_CONF_W4_SPEC> {
         HOST_SLCHOST_CONF17_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_conf18(&mut self) -> HOST_SLCHOST_CONF18_W<HOST_SLCHOST_CONF_W4_SPEC> {
         HOST_SLCHOST_CONF18_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Interrupt to target CPU"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_conf19(&mut self) -> HOST_SLCHOST_CONF19_W<HOST_SLCHOST_CONF_W4_SPEC> {
         HOST_SLCHOST_CONF19_W::new(self, 24)
     }

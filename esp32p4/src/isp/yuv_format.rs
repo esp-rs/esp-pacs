@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the yuv mode. 0: ITU-R BT.601, 1: ITU-R BT.709"]
     #[inline(always)]
-    #[must_use]
     pub fn yuv_mode(&mut self) -> YUV_MODE_W<YUV_FORMAT_SPEC> {
         YUV_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures the yuv range. 0: full range, 1: limit range"]
     #[inline(always)]
-    #[must_use]
     pub fn yuv_range(&mut self) -> YUV_RANGE_W<YUV_FORMAT_SPEC> {
         YUV_RANGE_W::new(self, 1)
     }

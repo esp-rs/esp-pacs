@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_hp_tcm_rdn_eco_low(&mut self) -> REG_HP_TCM_RDN_ECO_LOW_W<TCM_RDN_ECO_LOW_SPEC> {
         REG_HP_TCM_RDN_ECO_LOW_W::new(self, 0)
     }

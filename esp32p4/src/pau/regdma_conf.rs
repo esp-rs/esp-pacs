@@ -66,37 +66,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - backup start signal"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<REGDMA_CONF_SPEC> {
         START_W::new(self, 3)
     }
     #[doc = "Bit 4 - backup direction(reg to mem / mem to reg)"]
     #[inline(always)]
-    #[must_use]
     pub fn to_mem(&mut self) -> TO_MEM_W<REGDMA_CONF_SPEC> {
         TO_MEM_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Link select"]
     #[inline(always)]
-    #[must_use]
     pub fn link_sel(&mut self) -> LINK_SEL_W<REGDMA_CONF_SPEC> {
         LINK_SEL_W::new(self, 5)
     }
     #[doc = "Bit 7 - mac sw backup start signal"]
     #[inline(always)]
-    #[must_use]
     pub fn start_mac(&mut self) -> START_MAC_W<REGDMA_CONF_SPEC> {
         START_MAC_W::new(self, 7)
     }
     #[doc = "Bit 8 - mac sw backup direction(reg to mem / mem to reg)"]
     #[inline(always)]
-    #[must_use]
     pub fn to_mem_mac(&mut self) -> TO_MEM_MAC_W<REGDMA_CONF_SPEC> {
         TO_MEM_MAC_W::new(self, 8)
     }
     #[doc = "Bit 9 - mac hw/sw select"]
     #[inline(always)]
-    #[must_use]
     pub fn sel_mac(&mut self) -> SEL_MAC_W<REGDMA_CONF_SPEC> {
         SEL_MAC_W::new(self, 9)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - this field configures every block y size"]
     #[inline(always)]
-    #[must_use]
     pub fn ae_y_bsize(&mut self) -> AE_Y_BSIZE_W<AE_BY_SPEC> {
         AE_Y_BSIZE_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - this field configures first block start y address"]
     #[inline(always)]
-    #[must_use]
     pub fn ae_y_start(&mut self) -> AE_Y_START_W<AE_BY_SPEC> {
         AE_Y_START_W::new(self, 11)
     }

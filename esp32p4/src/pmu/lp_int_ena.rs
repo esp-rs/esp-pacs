@@ -246,13 +246,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_cpu_sleep_reject(&mut self) -> LP_CPU_SLEEP_REJECT_W<LP_INT_ENA_SPEC> {
         LP_CPU_SLEEP_REJECT_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_0p1a_0_counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target0_reach_0_lp(
         &mut self,
     ) -> _0P1A_CNT_TARGET0_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -260,7 +258,6 @@ impl W {
     }
     #[doc = "Bit 15 - reg_0p1a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target1_reach_0_lp(
         &mut self,
     ) -> _0P1A_CNT_TARGET1_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -268,7 +265,6 @@ impl W {
     }
     #[doc = "Bit 16 - reg_0p1a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target0_reach_1_lp(
         &mut self,
     ) -> _0P1A_CNT_TARGET0_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -276,7 +272,6 @@ impl W {
     }
     #[doc = "Bit 17 - reg_0p1a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target1_reach_1_lp(
         &mut self,
     ) -> _0P1A_CNT_TARGET1_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -284,7 +279,6 @@ impl W {
     }
     #[doc = "Bit 18 - reg_0p2a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target0_reach_0_lp(
         &mut self,
     ) -> _0P2A_CNT_TARGET0_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -292,7 +286,6 @@ impl W {
     }
     #[doc = "Bit 19 - reg_0p2a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target1_reach_0_lp(
         &mut self,
     ) -> _0P2A_CNT_TARGET1_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -300,7 +293,6 @@ impl W {
     }
     #[doc = "Bit 20 - reg_0p2a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target0_reach_1_lp(
         &mut self,
     ) -> _0P2A_CNT_TARGET0_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -308,7 +300,6 @@ impl W {
     }
     #[doc = "Bit 21 - reg_0p2a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target1_reach_1_lp(
         &mut self,
     ) -> _0P2A_CNT_TARGET1_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -316,7 +307,6 @@ impl W {
     }
     #[doc = "Bit 22 - reg_0p3a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target0_reach_0_lp(
         &mut self,
     ) -> _0P3A_CNT_TARGET0_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -324,7 +314,6 @@ impl W {
     }
     #[doc = "Bit 23 - reg_0p3a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target1_reach_0_lp(
         &mut self,
     ) -> _0P3A_CNT_TARGET1_REACH_0_LP_W<LP_INT_ENA_SPEC> {
@@ -332,7 +321,6 @@ impl W {
     }
     #[doc = "Bit 24 - reg_0p3a_0_counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target0_reach_1_lp(
         &mut self,
     ) -> _0P3A_CNT_TARGET0_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -340,7 +328,6 @@ impl W {
     }
     #[doc = "Bit 25 - reg_0p3a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target1_reach_1_lp(
         &mut self,
     ) -> _0P3A_CNT_TARGET1_REACH_1_LP_W<LP_INT_ENA_SPEC> {
@@ -348,37 +335,31 @@ impl W {
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_cpu_wakeup(&mut self) -> LP_CPU_WAKEUP_W<LP_INT_ENA_SPEC> {
         LP_CPU_WAKEUP_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_switch_active_end(&mut self) -> SLEEP_SWITCH_ACTIVE_END_W<LP_INT_ENA_SPEC> {
         SLEEP_SWITCH_ACTIVE_END_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn active_switch_sleep_end(&mut self) -> ACTIVE_SWITCH_SLEEP_END_W<LP_INT_ENA_SPEC> {
         ACTIVE_SWITCH_SLEEP_END_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_switch_active_start(&mut self) -> SLEEP_SWITCH_ACTIVE_START_W<LP_INT_ENA_SPEC> {
         SLEEP_SWITCH_ACTIVE_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn active_switch_sleep_start(&mut self) -> ACTIVE_SWITCH_SLEEP_START_W<LP_INT_ENA_SPEC> {
         ACTIVE_SWITCH_SLEEP_START_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sw_trigger(&mut self) -> HP_SW_TRIGGER_W<LP_INT_ENA_SPEC> {
         HP_SW_TRIGGER_W::new(self, 31)
     }

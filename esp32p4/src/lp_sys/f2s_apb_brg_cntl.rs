@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn f2s_apb_postw_en(&mut self) -> F2S_APB_POSTW_EN_W<F2S_APB_BRG_CNTL_SPEC> {
         F2S_APB_POSTW_EN_W::new(self, 0)
     }

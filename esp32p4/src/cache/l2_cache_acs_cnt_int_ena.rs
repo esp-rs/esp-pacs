@@ -86,7 +86,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_ibus0_ovf_int_ena(
         &mut self,
     ) -> L2_IBUS0_OVF_INT_ENA_W<L2_CACHE_ACS_CNT_INT_ENA_SPEC> {
@@ -94,7 +93,6 @@ impl W {
     }
     #[doc = "Bit 9 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_ibus1_ovf_int_ena(
         &mut self,
     ) -> L2_IBUS1_OVF_INT_ENA_W<L2_CACHE_ACS_CNT_INT_ENA_SPEC> {
@@ -102,7 +100,6 @@ impl W {
     }
     #[doc = "Bit 12 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus0 accesses L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_dbus0_ovf_int_ena(
         &mut self,
     ) -> L2_DBUS0_OVF_INT_ENA_W<L2_CACHE_ACS_CNT_INT_ENA_SPEC> {
@@ -110,7 +107,6 @@ impl W {
     }
     #[doc = "Bit 13 - The bit is used to enable interrupt of one of counters overflow that occurs in L2-Cache due to bus1 accesses L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_dbus1_ovf_int_ena(
         &mut self,
     ) -> L2_DBUS1_OVF_INT_ENA_W<L2_CACHE_ACS_CNT_INT_ENA_SPEC> {

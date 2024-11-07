@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_tp_low(&mut self) -> ADC1_TP_LOW_W<BLK3_WDATA3_SPEC> {
         ADC1_TP_LOW_W::new(self, 0)
     }
     #[doc = "Bits 7:15"]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_tp_high(&mut self) -> ADC1_TP_HIGH_W<BLK3_WDATA3_SPEC> {
         ADC1_TP_HIGH_W::new(self, 7)
     }
     #[doc = "Bits 16:22"]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_tp_low(&mut self) -> ADC2_TP_LOW_W<BLK3_WDATA3_SPEC> {
         ADC2_TP_LOW_W::new(self, 16)
     }
     #[doc = "Bits 23:31"]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_tp_high(&mut self) -> ADC2_TP_HIGH_W<BLK3_WDATA3_SPEC> {
         ADC2_TP_HIGH_W::new(self, 23)
     }

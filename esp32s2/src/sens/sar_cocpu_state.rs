@@ -56,7 +56,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - Trigger ULP-RISCV debug registers"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_dbg_trigger(&mut self) -> COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC> {
         COCPU_DBG_TRIGGER_W::new(self, 25)
     }

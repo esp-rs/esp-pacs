@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn glch_lpdly(&mut self) -> GLCH_LPDLY_W<LOWPOWER_CFG1_SPEC> {
         GLCH_LPDLY_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn sbiu_lpdly(&mut self) -> SBIU_LPDLY_W<LOWPOWER_CFG1_SPEC> {
         SBIU_LPDLY_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mxif_lpdly(&mut self) -> MXIF_LPDLY_W<LOWPOWER_CFG1_SPEC> {
         MXIF_LPDLY_W::new(self, 16)
     }

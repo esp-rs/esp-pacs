@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Only reserved for ECO."]
     #[inline(always)]
-    #[must_use]
     pub fn redcy_high(&mut self) -> REDCY_HIGH_W<RND_ECO_HIGH_SPEC> {
         REDCY_HIGH_W::new(self, 0)
     }

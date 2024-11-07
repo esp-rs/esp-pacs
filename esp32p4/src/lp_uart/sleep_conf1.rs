@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register restores the specified char0 to wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn wk_char0(&mut self) -> WK_CHAR0_W<SLEEP_CONF1_SPEC> {
         WK_CHAR0_W::new(self, 0)
     }

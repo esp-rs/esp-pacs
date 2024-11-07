@@ -73,25 +73,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done. Note that this bit and the other sync-bits (clean_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_invalidate_ena(&mut self) -> CACHE_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC> {
         CACHE_INVALIDATE_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done. Note that this bit and the other sync-bits (invalidate_ena, writeback_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_clean_ena(&mut self) -> CACHE_CLEAN_ENA_W<CACHE_SYNC_CTRL_SPEC> {
         CACHE_CLEAN_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_invalidate_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_writeback_ena(&mut self) -> CACHE_WRITEBACK_ENA_W<CACHE_SYNC_CTRL_SPEC> {
         CACHE_WRITEBACK_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable writeback-invalidate operation. It will be cleared by hardware after writeback-invalidate operation done. Note that this bit and the other sync-bits (invalidate_ena, clean_ena, writeback_ena) are mutually exclusive, that is, those bits can not be set to 1 at the same time."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_writeback_invalidate_ena(
         &mut self,
     ) -> CACHE_WRITEBACK_INVALIDATE_ENA_W<CACHE_SYNC_CTRL_SPEC> {

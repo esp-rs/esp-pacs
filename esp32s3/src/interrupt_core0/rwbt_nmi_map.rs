@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map mac rwbt_nmi to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn rwbt_nmi_map(&mut self) -> RWBT_NMI_MAP_W<RWBT_NMI_MAP_SPEC> {
         RWBT_NMI_MAP_W::new(self, 0)
     }

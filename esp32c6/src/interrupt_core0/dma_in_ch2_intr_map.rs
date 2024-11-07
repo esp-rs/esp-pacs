@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_in_ch2_intr_map(&mut self) -> DMA_IN_CH2_INTR_MAP_W<DMA_IN_CH2_INTR_MAP_SPEC> {
         DMA_IN_CH2_INTR_MAP_W::new(self, 0)
     }

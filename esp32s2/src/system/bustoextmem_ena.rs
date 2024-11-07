@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable bus to EDMA."]
     #[inline(always)]
-    #[must_use]
     pub fn bustoextmem_ena(&mut self) -> BUSTOEXTMEM_ENA_W<BUSTOEXTMEM_ENA_SPEC> {
         BUSTOEXTMEM_ENA_W::new(self, 0)
     }

@@ -78,25 +78,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 15 - dll is controlled by software"]
     #[inline(always)]
-    #[must_use]
     pub fn dll_on_sw(&mut self) -> DLL_ON_SW_W<INF_ST_SPEC> {
         DLL_ON_SW_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software dll on"]
     #[inline(always)]
-    #[must_use]
     pub fn dll_on(&mut self) -> DLL_ON_W<INF_ST_SPEC> {
         DLL_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - dll clock mode is controlled by software"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mode_sw(&mut self) -> CLK_MODE_SW_W<INF_ST_SPEC> {
         CLK_MODE_SW_W::new(self, 17)
     }
     #[doc = "Bits 18:19 - Software set clock mode"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mode(&mut self) -> CLK_MODE_W<INF_ST_SPEC> {
         CLK_MODE_W::new(self, 18)
     }

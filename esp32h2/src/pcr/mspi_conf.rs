@@ -62,25 +62,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable mspi clock, include mspi pll clock"]
     #[inline(always)]
-    #[must_use]
     pub fn mspi_clk_en(&mut self) -> MSPI_CLK_EN_W<MSPI_CONF_SPEC> {
         MSPI_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset mspi module"]
     #[inline(always)]
-    #[must_use]
     pub fn mspi_rst_en(&mut self) -> MSPI_RST_EN_W<MSPI_CONF_SPEC> {
         MSPI_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable mspi pll clock"]
     #[inline(always)]
-    #[must_use]
     pub fn mspi_pll_clk_en(&mut self) -> MSPI_PLL_CLK_EN_W<MSPI_CONF_SPEC> {
         MSPI_PLL_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - set this field to select clock-source."]
     #[inline(always)]
-    #[must_use]
     pub fn mspi_clk_sel(&mut self) -> MSPI_CLK_SEL_W<MSPI_CONF_SPEC> {
         MSPI_CLK_SEL_W::new(self, 3)
     }

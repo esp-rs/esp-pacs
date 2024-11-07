@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn record_disable_db_encrypt(
         &mut self,
     ) -> RECORD_DISABLE_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn record_disable_g0cb_decrypt(
         &mut self,
     ) -> RECORD_DISABLE_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {

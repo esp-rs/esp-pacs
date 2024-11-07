@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version control register"]
     #[inline(always)]
-    #[must_use]
     pub fn version(&mut self) -> VERSION_W<DATE_SPEC> {
         VERSION_W::new(self, 0)
     }

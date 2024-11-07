@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:22 - The bits are used to configure the length for sync operations. The bits are the counts of cache block. It should be combined with DCACHE_SYNC_ADDR_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_sync_size(&mut self) -> DCACHE_SYNC_SIZE_W<DCACHE_SYNC_SIZE_SPEC> {
         DCACHE_SYNC_SIZE_W::new(self, 0)
     }

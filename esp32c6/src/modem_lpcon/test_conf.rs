@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<TEST_CONF_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_debug_ena(&mut self) -> CLK_DEBUG_ENA_W<TEST_CONF_SPEC> {
         CLK_DEBUG_ENA_W::new(self, 1)
     }

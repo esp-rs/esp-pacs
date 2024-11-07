@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn xfercompl(&mut self) -> XFERCOMPL_W<INT_SPEC> {
         XFERCOMPL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn chhltd(&mut self) -> CHHLTD_W<INT_SPEC> {
         CHHLTD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ahberr(&mut self) -> AHBERR_W<INT_SPEC> {
         AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn stall(&mut self) -> STALL_W<INT_SPEC> {
         STALL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn nack(&mut self) -> NACK_W<INT_SPEC> {
         NACK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ack(&mut self) -> ACK_W<INT_SPEC> {
         ACK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn nyet(&mut self) -> NYET_W<INT_SPEC> {
         NYET_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn xacterr(&mut self) -> XACTERR_W<INT_SPEC> {
         XACTERR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn bblerr(&mut self) -> BBLERR_W<INT_SPEC> {
         BBLERR_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn frmovrun(&mut self) -> FRMOVRUN_W<INT_SPEC> {
         FRMOVRUN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn datatglerr(&mut self) -> DATATGLERR_W<INT_SPEC> {
         DATATGLERR_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn bnaintr(&mut self) -> BNAINTR_W<INT_SPEC> {
         BNAINTR_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn xcs_xact_err(&mut self) -> XCS_XACT_ERR_W<INT_SPEC> {
         XCS_XACT_ERR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn desc_lst_rollintr(&mut self) -> DESC_LST_ROLLINTR_W<INT_SPEC> {
         DESC_LST_ROLLINTR_W::new(self, 13)
     }

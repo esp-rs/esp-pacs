@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_thres_upd_base(&mut self) -> PARAM_THRES_UPD_BASE_W<VAD_PARAM7_SPEC> {
         PARAM_THRES_UPD_BASE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_thres_upd_vary(&mut self) -> PARAM_THRES_UPD_VARY_W<VAD_PARAM7_SPEC> {
         PARAM_THRES_UPD_VARY_W::new(self, 16)
     }

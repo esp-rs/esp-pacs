@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delayed by the falling edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cd_mode(&mut self) -> LCD_CD_MODE_W<LCD_DLY_MODE_SPEC> {
         LCD_CD_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delayed by the falling edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_de_mode(&mut self) -> LCD_DE_MODE_W<LCD_DLY_MODE_SPEC> {
         LCD_DE_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delayed by the falling edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_hsync_mode(&mut self) -> LCD_HSYNC_MODE_W<LCD_DLY_MODE_SPEC> {
         LCD_HSYNC_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delay. 1: delayed by the rising edge of LCD_CLK. 2: delay by the falling edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vsync_mode(&mut self) -> LCD_VSYNC_MODE_W<LCD_DLY_MODE_SPEC> {
         LCD_VSYNC_MODE_W::new(self, 6)
     }

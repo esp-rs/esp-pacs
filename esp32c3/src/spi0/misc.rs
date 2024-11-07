@@ -77,37 +77,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - The bit is used to indicate the spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_end(&mut self) -> TRANS_END_W<MISC_SPEC> {
         TRANS_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt of spi0_mst_st controlled transmitting is done."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<MISC_SPEC> {
         TRANS_END_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to indicate the spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
-    #[must_use]
     pub fn cspi_st_trans_end(&mut self) -> CSPI_ST_TRANS_END_W<MISC_SPEC> {
         CSPI_ST_TRANS_END_W::new(self, 5)
     }
     #[doc = "Bit 6 - The bit is used to enable the interrupt of spi0_slv_st controlled transmitting is done."]
     #[inline(always)]
-    #[must_use]
     pub fn cspi_st_trans_end_int_ena(&mut self) -> CSPI_ST_TRANS_END_INT_ENA_W<MISC_SPEC> {
         CSPI_ST_TRANS_END_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 9 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
-    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - spi cs line keep low when the bit is set."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 10)
     }

@@ -200,79 +200,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sesreq(&mut self) -> SESREQ_W<GOTGCTL_SPEC> {
         SESREQ_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<GOTGCTL_SPEC> {
         VBVALIDOVEN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<GOTGCTL_SPEC> {
         VBVALIDOVVAL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn avalidoven(&mut self) -> AVALIDOVEN_W<GOTGCTL_SPEC> {
         AVALIDOVEN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<GOTGCTL_SPEC> {
         AVALIDOVVAL_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<GOTGCTL_SPEC> {
         BVALIDOVEN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<GOTGCTL_SPEC> {
         BVALIDOVVAL_W::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCTL_SPEC> {
         HNPREQ_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<GOTGCTL_SPEC> {
         HSTSETHNPEN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn devhnpen(&mut self) -> DEVHNPEN_W<GOTGCTL_SPEC> {
         DEVHNPEN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn ehen(&mut self) -> EHEN_W<GOTGCTL_SPEC> {
         EHEN_W::new(self, 12)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<GOTGCTL_SPEC> {
         DBNCEFLTRBYPASS_W::new(self, 15)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn otgver(&mut self) -> OTGVER_W<GOTGCTL_SPEC> {
         OTGVER_W::new(self, 20)
     }

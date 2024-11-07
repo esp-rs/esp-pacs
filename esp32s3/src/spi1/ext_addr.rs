@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The register are the higher 32bits in the 64 bits address mode."]
     #[inline(always)]
-    #[must_use]
     pub fn ext_addr(&mut self) -> EXT_ADDR_W<EXT_ADDR_SPEC> {
         EXT_ADDR_W::new(self, 0)
     }

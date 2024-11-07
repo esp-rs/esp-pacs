@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:10 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_channel3_sel(&mut self) -> DBIAS_CHANNEL3_SEL_W<DBIAS_CHANNEL_SEL0_SPEC> {
         DBIAS_CHANNEL3_SEL_W::new(self, 4)
     }
     #[doc = "Bits 11:17 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_channel2_sel(&mut self) -> DBIAS_CHANNEL2_SEL_W<DBIAS_CHANNEL_SEL0_SPEC> {
         DBIAS_CHANNEL2_SEL_W::new(self, 11)
     }
     #[doc = "Bits 18:24 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_channel1_sel(&mut self) -> DBIAS_CHANNEL1_SEL_W<DBIAS_CHANNEL_SEL0_SPEC> {
         DBIAS_CHANNEL1_SEL_W::new(self, 18)
     }
     #[doc = "Bits 25:31 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_channel0_sel(&mut self) -> DBIAS_CHANNEL0_SEL_W<DBIAS_CHANNEL_SEL0_SPEC> {
         DBIAS_CHANNEL0_SEL_W::new(self, 25)
     }

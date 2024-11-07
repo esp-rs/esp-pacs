@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - unstable period when window change,during this period no check stackpointer"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_sp_unstable(&mut self) -> CORE_1_SP_UNSTABLE_W<CORE_1_SP_UNSTABLE_SPEC> {
         CORE_1_SP_UNSTABLE_W::new(self, 0)
     }

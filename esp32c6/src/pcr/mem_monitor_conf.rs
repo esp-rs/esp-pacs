@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable mem_monitor clock"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_monitor_clk_en(&mut self) -> MEM_MONITOR_CLK_EN_W<MEM_MONITOR_CONF_SPEC> {
         MEM_MONITOR_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset mem_monitor module"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_monitor_rst_en(&mut self) -> MEM_MONITOR_RST_EN_W<MEM_MONITOR_CONF_SPEC> {
         MEM_MONITOR_RST_EN_W::new(self, 1)
     }

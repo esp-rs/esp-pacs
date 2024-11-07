@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_mem_wp(&mut self) -> MODEM_MEM_WP_W<MEM_CONF_SPEC> {
         MODEM_MEM_WP_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_mem_wa(&mut self) -> MODEM_MEM_WA_W<MEM_CONF_SPEC> {
         MODEM_MEM_WA_W::new(self, 3)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_mem_ra(&mut self) -> MODEM_MEM_RA_W<MEM_CONF_SPEC> {
         MODEM_MEM_RA_W::new(self, 6)
     }

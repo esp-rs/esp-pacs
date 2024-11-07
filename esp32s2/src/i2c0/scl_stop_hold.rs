@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - This register is used to configure the delay after the STOP condition, in I2C module clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SCL_STOP_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }

@@ -15,19 +15,16 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_eof(&mut self) -> SR_EOF_W<INT_CLR_SPEC> {
         SR_EOF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the PPA_BLEND_EOF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn blend_eof(&mut self) -> BLEND_EOF_W<INT_CLR_SPEC> {
         BLEND_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<INT_CLR_SPEC> {
         SR_PARAM_CFG_ERR_W::new(self, 2)
     }

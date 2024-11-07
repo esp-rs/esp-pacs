@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for CH0_TX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0_tx_end(&mut self) -> CH0_TX_END_W<INT_ENA_SPEC> {
         CH0_TX_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for CH1_TX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_tx_end(&mut self) -> CH1_TX_END_W<INT_ENA_SPEC> {
         CH1_TX_END_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for CH2_TX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_tx_end(&mut self) -> CH2_TX_END_W<INT_ENA_SPEC> {
         CH2_TX_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for CH3_TX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_tx_end(&mut self) -> CH3_TX_END_W<INT_ENA_SPEC> {
         CH3_TX_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt enable bit for CH0_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch0_err(&mut self) -> TX_CH0_ERR_W<INT_ENA_SPEC> {
         TX_CH0_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for CH1_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch1_err(&mut self) -> TX_CH1_ERR_W<INT_ENA_SPEC> {
         TX_CH1_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - The interrupt enable bit for CH2_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch2_err(&mut self) -> TX_CH2_ERR_W<INT_ENA_SPEC> {
         TX_CH2_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The interrupt enable bit for CH3_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch3_err(&mut self) -> TX_CH3_ERR_W<INT_ENA_SPEC> {
         TX_CH3_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - The interrupt enable bit for CH0_TX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0_tx_thr_event(&mut self) -> CH0_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH0_TX_THR_EVENT_W::new(self, 8)
     }
     #[doc = "Bit 9 - The interrupt enable bit for CH1_TX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_tx_thr_event(&mut self) -> CH1_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH1_TX_THR_EVENT_W::new(self, 9)
     }
     #[doc = "Bit 10 - The interrupt enable bit for CH2_TX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_tx_thr_event(&mut self) -> CH2_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH2_TX_THR_EVENT_W::new(self, 10)
     }
     #[doc = "Bit 11 - The interrupt enable bit for CH3_TX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_tx_thr_event(&mut self) -> CH3_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH3_TX_THR_EVENT_W::new(self, 11)
     }
     #[doc = "Bit 12 - The interrupt enable bit for CH0_TX_LOOP_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0_tx_loop(&mut self) -> CH0_TX_LOOP_W<INT_ENA_SPEC> {
         CH0_TX_LOOP_W::new(self, 12)
     }
     #[doc = "Bit 13 - The interrupt enable bit for CH1_TX_LOOP_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_tx_loop(&mut self) -> CH1_TX_LOOP_W<INT_ENA_SPEC> {
         CH1_TX_LOOP_W::new(self, 13)
     }
     #[doc = "Bit 14 - The interrupt enable bit for CH2_TX_LOOP_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_tx_loop(&mut self) -> CH2_TX_LOOP_W<INT_ENA_SPEC> {
         CH2_TX_LOOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - The interrupt enable bit for CH3_TX_LOOP_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_tx_loop(&mut self) -> CH3_TX_LOOP_W<INT_ENA_SPEC> {
         CH3_TX_LOOP_W::new(self, 15)
     }
     #[doc = "Bit 16 - The interrupt enable bit for CH4_RX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_rx_end(&mut self) -> CH4_RX_END_W<INT_ENA_SPEC> {
         CH4_RX_END_W::new(self, 16)
     }
     #[doc = "Bit 17 - The interrupt enable bit for CH5_RX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5_rx_end(&mut self) -> CH5_RX_END_W<INT_ENA_SPEC> {
         CH5_RX_END_W::new(self, 17)
     }
     #[doc = "Bit 18 - The interrupt enable bit for CH6_RX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6_rx_end(&mut self) -> CH6_RX_END_W<INT_ENA_SPEC> {
         CH6_RX_END_W::new(self, 18)
     }
     #[doc = "Bit 19 - The interrupt enable bit for CH7_RX_END_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7_rx_end(&mut self) -> CH7_RX_END_W<INT_ENA_SPEC> {
         CH7_RX_END_W::new(self, 19)
     }
     #[doc = "Bit 20 - The interrupt enable bit for CH4_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_err(&mut self) -> CH4_ERR_W<INT_ENA_SPEC> {
         CH4_ERR_W::new(self, 20)
     }
     #[doc = "Bit 21 - The interrupt enable bit for CH5_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5_err(&mut self) -> CH5_ERR_W<INT_ENA_SPEC> {
         CH5_ERR_W::new(self, 21)
     }
     #[doc = "Bit 22 - The interrupt enable bit for CH6_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6_err(&mut self) -> CH6_ERR_W<INT_ENA_SPEC> {
         CH6_ERR_W::new(self, 22)
     }
     #[doc = "Bit 23 - The interrupt enable bit for CH7_ERR_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7_err(&mut self) -> CH7_ERR_W<INT_ENA_SPEC> {
         CH7_ERR_W::new(self, 23)
     }
     #[doc = "Bit 24 - The interrupt enable bit for CH4_RX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_rx_thr_event(&mut self) -> CH4_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH4_RX_THR_EVENT_W::new(self, 24)
     }
     #[doc = "Bit 25 - The interrupt enable bit for CH5_RX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5_rx_thr_event(&mut self) -> CH5_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH5_RX_THR_EVENT_W::new(self, 25)
     }
     #[doc = "Bit 26 - The interrupt enable bit for CH6_RX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6_rx_thr_event(&mut self) -> CH6_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH6_RX_THR_EVENT_W::new(self, 26)
     }
     #[doc = "Bit 27 - The interrupt enable bit for CH7_RX_THR_EVENT_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7_rx_thr_event(&mut self) -> CH7_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH7_RX_THR_EVENT_W::new(self, 27)
     }
     #[doc = "Bit 28 - The interrupt enable bit for CH3_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch3_dma_access_fail(&mut self) -> TX_CH3_DMA_ACCESS_FAIL_W<INT_ENA_SPEC> {
         TX_CH3_DMA_ACCESS_FAIL_W::new(self, 28)
     }
     #[doc = "Bit 29 - The interrupt enable bit for CH7_DMA_ACCESS_FAIL_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ch7_dma_access_fail(&mut self) -> RX_CH7_DMA_ACCESS_FAIL_W<INT_ENA_SPEC> {
         RX_CH7_DMA_ACCESS_FAIL_W::new(self, 29)
     }

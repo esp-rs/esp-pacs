@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function on L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_prelock_sct0_en(
         &mut self,
     ) -> L2_CACHE_PRELOCK_SCT0_EN_W<L2_CACHE_PRELOCK_CONF_SPEC> {
@@ -52,7 +51,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function on L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_prelock_sct1_en(
         &mut self,
     ) -> L2_CACHE_PRELOCK_SCT1_EN_W<L2_CACHE_PRELOCK_CONF_SPEC> {
@@ -60,7 +58,6 @@ impl W {
     }
     #[doc = "Bits 2:5 - The bit is used to set the gid of l2 cache prelock."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_prelock_rgid(&mut self) -> L2_CACHE_PRELOCK_RGID_W<L2_CACHE_PRELOCK_CONF_SPEC> {
         L2_CACHE_PRELOCK_RGID_W::new(self, 2)
     }

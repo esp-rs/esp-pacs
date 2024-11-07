@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_mst_nouse(&mut self) -> I2C_MST_NOUSE_W<NOUSE_SPEC> {
         I2C_MST_NOUSE_W::new(self, 0)
     }

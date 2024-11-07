@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn cfg_upmethod(&mut self) -> CFG_UPMETHOD_W<GEN_CFG0_SPEC> {
         CFG_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    #[must_use]
     pub fn t0_sel(&mut self) -> T0_SEL_W<GEN_CFG0_SPEC> {
         T0_SEL_W::new(self, 4)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
-    #[must_use]
     pub fn t1_sel(&mut self) -> T1_SEL_W<GEN_CFG0_SPEC> {
         T1_SEL_W::new(self, 7)
     }

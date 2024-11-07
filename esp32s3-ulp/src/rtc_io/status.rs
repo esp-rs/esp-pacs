@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 interrupt status"]
     #[inline(always)]
-    #[must_use]
     pub fn int(&mut self) -> INT_W<STATUS_SPEC> {
         INT_W::new(self, 10)
     }

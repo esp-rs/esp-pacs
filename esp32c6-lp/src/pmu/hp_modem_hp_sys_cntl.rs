@@ -74,7 +74,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_uart_wakeup_en(
         &mut self,
     ) -> HP_MODEM_UART_WAKEUP_EN_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
@@ -82,7 +81,6 @@ impl W {
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_lp_pad_hold_all(
         &mut self,
     ) -> HP_MODEM_LP_PAD_HOLD_ALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
@@ -90,7 +88,6 @@ impl W {
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_pad_hold_all(
         &mut self,
     ) -> HP_MODEM_HP_PAD_HOLD_ALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
@@ -98,7 +95,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_dig_pad_slp_sel(
         &mut self,
     ) -> HP_MODEM_DIG_PAD_SLP_SEL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
@@ -106,7 +102,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_dig_pause_wdt(
         &mut self,
     ) -> HP_MODEM_DIG_PAUSE_WDT_W<HP_MODEM_HP_SYS_CNTL_SPEC> {
@@ -114,7 +109,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_dig_cpu_stall(
         &mut self,
     ) -> HP_MODEM_DIG_CPU_STALL_W<HP_MODEM_HP_SYS_CNTL_SPEC> {

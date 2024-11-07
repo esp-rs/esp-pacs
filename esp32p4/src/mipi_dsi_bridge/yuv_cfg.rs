@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures yuv protoocl, 0: bt.601, 1: bt.709"]
     #[inline(always)]
-    #[must_use]
     pub fn protocal(&mut self) -> PROTOCAL_W<YUV_CFG_SPEC> {
         PROTOCAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures yuv pixel endian, 0: y0u0y1v1y2u2y3v3, 1: y3u3y2v2y1u1y0v0"]
     #[inline(always)]
-    #[must_use]
     pub fn yuv_pix_endian(&mut self) -> YUV_PIX_ENDIAN_W<YUV_CFG_SPEC> {
         YUV_PIX_ENDIAN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - this field configures yuv422 store format, 0: yuyv, 1: yvyu, 2: uyvy, 3: vyuy"]
     #[inline(always)]
-    #[must_use]
     pub fn yuv422_format(&mut self) -> YUV422_FORMAT_W<YUV_CFG_SPEC> {
         YUV422_FORMAT_W::new(self, 2)
     }

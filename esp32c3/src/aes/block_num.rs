@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits stores the number of Plaintext/ciphertext block."]
     #[inline(always)]
-    #[must_use]
     pub fn block_num(&mut self) -> BLOCK_NUM_W<BLOCK_NUM_SPEC> {
         BLOCK_NUM_W::new(self, 0)
     }

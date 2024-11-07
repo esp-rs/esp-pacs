@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1=push pull,0=open drain"]
     #[inline(always)]
-    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1=push pull,0=open drain"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1=master,0=slave"]
     #[inline(always)]
-    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC> {
         MS_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - force start"]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC> {
         TRANS_START_W::new(self, 3)
     }
     #[doc = "Bit 4 - transit lsb first"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC> {
         TX_LSB_FIRST_W::new(self, 4)
     }
     #[doc = "Bit 5 - receive lsb first"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC> {
         RX_LSB_FIRST_W::new(self, 5)
     }
     #[doc = "Bit 29 - configure i2c ctrl clk enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_ctrl_clk_gate_en(&mut self) -> I2C_CTRL_CLK_GATE_EN_W<CTRL_SPEC> {
         I2C_CTRL_CLK_GATE_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - rtc i2c sw reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_reset(&mut self) -> I2C_RESET_W<CTRL_SPEC> {
         I2C_RESET_W::new(self, 30)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
-    #[must_use]
     pub fn i2cclk_en(&mut self) -> I2CCLK_EN_W<CTRL_SPEC> {
         I2CCLK_EN_W::new(self, 31)
     }

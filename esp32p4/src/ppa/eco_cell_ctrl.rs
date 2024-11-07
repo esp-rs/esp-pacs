@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn rdn_ena(&mut self) -> RDN_ENA_W<ECO_CELL_CTRL_SPEC> {
         RDN_ENA_W::new(self, 1)
     }

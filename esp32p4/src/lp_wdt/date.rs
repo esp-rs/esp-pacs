@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_wdt_date(&mut self) -> LP_WDT_DATE_W<DATE_SPEC> {
         LP_WDT_DATE_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<DATE_SPEC> {
         CLK_EN_W::new(self, 31)
     }

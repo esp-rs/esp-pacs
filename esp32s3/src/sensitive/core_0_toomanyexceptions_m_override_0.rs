@@ -29,7 +29,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core0 toomanyexception override configuration register"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_toomanyexceptions_m_override_lock(
         &mut self,
     ) -> CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_LOCK_W<CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_0_SPEC>

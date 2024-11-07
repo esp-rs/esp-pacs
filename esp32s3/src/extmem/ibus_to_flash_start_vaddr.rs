@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of ibus to access flash. The register is used to give constraints to ibus access counter."]
     #[inline(always)]
-    #[must_use]
     pub fn ibus_to_flash_start_vaddr(
         &mut self,
     ) -> IBUS_TO_FLASH_START_VADDR_W<IBUS_TO_FLASH_START_VADDR_SPEC> {

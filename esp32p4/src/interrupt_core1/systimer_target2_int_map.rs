@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_systimer_target2_int_map(
         &mut self,
     ) -> CORE1_SYSTIMER_TARGET2_INT_MAP_W<SYSTIMER_TARGET2_INT_MAP_SPEC> {

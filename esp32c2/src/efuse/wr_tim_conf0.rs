@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures hold time for efuse program."]
     #[inline(always)]
-    #[must_use]
     pub fn thp_a(&mut self) -> THP_A_W<WR_TIM_CONF0_SPEC> {
         THP_A_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures pulse time for burning '0' bit."]
     #[inline(always)]
-    #[must_use]
     pub fn tpgm_inactive(&mut self) -> TPGM_INACTIVE_W<WR_TIM_CONF0_SPEC> {
         TPGM_INACTIVE_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - Configures pulse time for burning '1' bit."]
     #[inline(always)]
-    #[must_use]
     pub fn tpgm(&mut self) -> TPGM_W<WR_TIM_CONF0_SPEC> {
         TPGM_W::new(self, 16)
     }

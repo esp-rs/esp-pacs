@@ -152,79 +152,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn xfercompl(&mut self) -> XFERCOMPL_W<DIEPINT_SPEC> {
         XFERCOMPL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn epdisbld(&mut self) -> EPDISBLD_W<DIEPINT_SPEC> {
         EPDISBLD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ahberr(&mut self) -> AHBERR_W<DIEPINT_SPEC> {
         AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT_SPEC> {
         TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT_SPEC> {
         INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn intknepmis(&mut self) -> INTKNEPMIS_W<DIEPINT_SPEC> {
         INTKNEPMIS_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn inepnakeff(&mut self) -> INEPNAKEFF_W<DIEPINT_SPEC> {
         INEPNAKEFF_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<DIEPINT_SPEC> {
         TXFIFOUNDRN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn bnaintr(&mut self) -> BNAINTR_W<DIEPINT_SPEC> {
         BNAINTR_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DIEPINT_SPEC> {
         PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn bbleerr(&mut self) -> BBLEERR_W<DIEPINT_SPEC> {
         BBLEERR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn nakintrpt(&mut self) -> NAKINTRPT_W<DIEPINT_SPEC> {
         NAKINTRPT_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn nyetintrpt(&mut self) -> NYETINTRPT_W<DIEPINT_SPEC> {
         NYETINTRPT_W::new(self, 14)
     }

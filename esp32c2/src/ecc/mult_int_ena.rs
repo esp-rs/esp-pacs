@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn calc_done(&mut self) -> CALC_DONE_W<MULT_INT_ENA_SPEC> {
         CALC_DONE_W::new(self, 0)
     }

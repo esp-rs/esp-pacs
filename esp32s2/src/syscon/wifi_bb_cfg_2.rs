@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_bb_cfg_2(&mut self) -> WIFI_BB_CFG_2_W<WIFI_BB_CFG_2_SPEC> {
         WIFI_BB_CFG_2_W::new(self, 0)
     }

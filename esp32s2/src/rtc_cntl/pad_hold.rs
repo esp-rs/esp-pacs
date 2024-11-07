@@ -234,133 +234,111 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Sets the touch GPIO 0 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad0_hold(&mut self) -> TOUCH_PAD0_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD0_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sets the touch GPIO 1 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad1_hold(&mut self) -> TOUCH_PAD1_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD1_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Sets the touch GPIO 2 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad2_hold(&mut self) -> TOUCH_PAD2_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD2_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Sets the touch GPIO 3 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad3_hold(&mut self) -> TOUCH_PAD3_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD3_HOLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Sets the touch GPIO 4 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad4_hold(&mut self) -> TOUCH_PAD4_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD4_HOLD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Sets the touch GPIO 5 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad5_hold(&mut self) -> TOUCH_PAD5_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD5_HOLD_W::new(self, 5)
     }
     #[doc = "Bit 6 - Sets the touch GPIO 6 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad6_hold(&mut self) -> TOUCH_PAD6_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD6_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Sets the touch GPIO 7 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad7_hold(&mut self) -> TOUCH_PAD7_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD7_HOLD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Sets the touch GPIO 8 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad8_hold(&mut self) -> TOUCH_PAD8_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD8_HOLD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Sets the touch GPIO 9 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad9_hold(&mut self) -> TOUCH_PAD9_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD9_HOLD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Sets the touch GPIO 10 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad10_hold(&mut self) -> TOUCH_PAD10_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD10_HOLD_W::new(self, 10)
     }
     #[doc = "Bit 11 - Sets the touch GPIO 11 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad11_hold(&mut self) -> TOUCH_PAD11_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD11_HOLD_W::new(self, 11)
     }
     #[doc = "Bit 12 - Sets the touch GPIO 12 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad12_hold(&mut self) -> TOUCH_PAD12_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD12_HOLD_W::new(self, 12)
     }
     #[doc = "Bit 13 - Sets the touch GPIO 13 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad13_hold(&mut self) -> TOUCH_PAD13_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD13_HOLD_W::new(self, 13)
     }
     #[doc = "Bit 14 - Sets the touch GPIO 14 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad14_hold(&mut self) -> TOUCH_PAD14_HOLD_W<PAD_HOLD_SPEC> {
         TOUCH_PAD14_HOLD_W::new(self, 14)
     }
     #[doc = "Bit 15 - Sets the x32p to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn x32p_hold(&mut self) -> X32P_HOLD_W<PAD_HOLD_SPEC> {
         X32P_HOLD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Sets the x32n to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_hold(&mut self) -> X32N_HOLD_W<PAD_HOLD_SPEC> {
         X32N_HOLD_W::new(self, 16)
     }
     #[doc = "Bit 17 - Sets the pdac1 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn pdac1_hold(&mut self) -> PDAC1_HOLD_W<PAD_HOLD_SPEC> {
         PDAC1_HOLD_W::new(self, 17)
     }
     #[doc = "Bit 18 - Sets the pdac2 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_hold(&mut self) -> PDAC2_HOLD_W<PAD_HOLD_SPEC> {
         PDAC2_HOLD_W::new(self, 18)
     }
     #[doc = "Bit 19 - Sets the RTG GPIO 19 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn pad19_hold(&mut self) -> PAD19_HOLD_W<PAD_HOLD_SPEC> {
         PAD19_HOLD_W::new(self, 19)
     }
     #[doc = "Bit 20 - Sets the RTG GPIO 20 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn pad20_hold(&mut self) -> PAD20_HOLD_W<PAD_HOLD_SPEC> {
         PAD20_HOLD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Sets the RTG GPIO 21 to hold."]
     #[inline(always)]
-    #[must_use]
     pub fn pad21_hold(&mut self) -> PAD21_HOLD_W<PAD_HOLD_SPEC> {
         PAD21_HOLD_W::new(self, 21)
     }

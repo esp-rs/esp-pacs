@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - the raw interrupt status of bresp error, triggered when if bresp err occurs in post write mode in ahb2axi."]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_icm_h2x_bresp_err_int_raw(
         &mut self,
     ) -> CPU_ICM_H2X_BRESP_ERR_INT_RAW_W<AHB2AXI_BRESP_ERR_INT_RAW_SPEC> {

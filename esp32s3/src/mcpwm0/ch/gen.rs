@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Action on PWM0A triggered by event TEZ when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn utez(&mut self) -> UTEZ_W<GEN_SPEC> {
         UTEZ_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Action on PWM0A triggered by event TEP when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn utep(&mut self) -> UTEP_W<GEN_SPEC> {
         UTEP_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Action on PWM0A triggered by event TEA when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn utea(&mut self) -> UTEA_W<GEN_SPEC> {
         UTEA_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Action on PWM0A triggered by event TEB when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn uteb(&mut self) -> UTEB_W<GEN_SPEC> {
         UTEB_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Action on PWM0A triggered by event_t0 when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn ut0(&mut self) -> UT0_W<GEN_SPEC> {
         UT0_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Action on PWM0A triggered by event_t1 when timer increasing"]
     #[inline(always)]
-    #[must_use]
     pub fn ut1(&mut self) -> UT1_W<GEN_SPEC> {
         UT1_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Action on PWM0A triggered by event TEZ when timer decreasing"]
     #[inline(always)]
-    #[must_use]
     pub fn dtez(&mut self) -> DTEZ_W<GEN_SPEC> {
         DTEZ_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Action on PWM0A triggered by event TEP when timer decreasing"]
     #[inline(always)]
-    #[must_use]
     pub fn dtep(&mut self) -> DTEP_W<GEN_SPEC> {
         DTEP_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Action on PWM0A triggered by event TEA when timer decreasing"]
     #[inline(always)]
-    #[must_use]
     pub fn dtea(&mut self) -> DTEA_W<GEN_SPEC> {
         DTEA_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Action on PWM0A triggered by event TEB when timer decreasing"]
     #[inline(always)]
-    #[must_use]
     pub fn dteb(&mut self) -> DTEB_W<GEN_SPEC> {
         DTEB_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Action on PWM0A triggered by event_t0 when timer decreasing"]
     #[inline(always)]
-    #[must_use]
     pub fn dt0(&mut self) -> DT0_W<GEN_SPEC> {
         DT0_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - Action on PWM0A triggered by event_t1 when timer decreasing. 0: no change, 1: low, 2: high, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn dt1(&mut self) -> DT1_W<GEN_SPEC> {
         DT1_W::new(self, 22)
     }

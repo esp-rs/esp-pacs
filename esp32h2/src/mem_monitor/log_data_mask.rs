@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - byte mask enable, BIT0 mask the first byte of MEM_MONITOR_LOG_CHECK_DATA, and BIT1 mask second byte, and so on."]
     #[inline(always)]
-    #[must_use]
     pub fn log_data_mask(&mut self) -> LOG_DATA_MASK_W<LOG_DATA_MASK_SPEC> {
         LOG_DATA_MASK_W::new(self, 0)
     }

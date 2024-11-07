@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - configure touch timerout time"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timeout_num(&mut self) -> TOUCH_TIMEOUT_NUM_W<TOUCH_TIMEOUT_CTRL_SPEC> {
         TOUCH_TIMEOUT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 22 - enable touch timerout"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timeout_en(&mut self) -> TOUCH_TIMEOUT_EN_W<TOUCH_TIMEOUT_CTRL_SPEC> {
         TOUCH_TIMEOUT_EN_W::new(self, 22)
     }

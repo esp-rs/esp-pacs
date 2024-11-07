@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn div_num_10m(&mut self) -> DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC> {
         DIV_NUM_10M_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
-    #[must_use]
     pub fn h_div_num_10m(&mut self) -> H_DIV_NUM_10M_W<EX_OSCCLK_CONF_SPEC> {
         H_DIV_NUM_10M_W::new(self, 6)
     }
     #[doc = "Bits 12:17"]
     #[inline(always)]
-    #[must_use]
     pub fn div_num_100m(&mut self) -> DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC> {
         DIV_NUM_100M_W::new(self, 12)
     }
     #[doc = "Bits 18:23"]
     #[inline(always)]
-    #[must_use]
     pub fn h_div_num_100m(&mut self) -> H_DIV_NUM_100M_W<EX_OSCCLK_CONF_SPEC> {
         H_DIV_NUM_100M_W::new(self, 18)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_sel(&mut self) -> CLK_SEL_W<EX_OSCCLK_CONF_SPEC> {
         CLK_SEL_W::new(self, 24)
     }

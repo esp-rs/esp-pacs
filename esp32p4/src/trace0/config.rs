@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure whether or not enable cpu trigger action.\\\\1: enable\\\\0:disable\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn dm_trigger_ena(&mut self) -> DM_TRIGGER_ENA_W<CONFIG_SPEC> {
         DM_TRIGGER_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configure whether or not enable trace cpu haverest, when enabeld, if cpu have reset, the encoder will output a packet to report the address of the last instruction, and upon reset deassertion, the encoder start again.\\\\1: enabeld\\\\0: disabled\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn reset_ena(&mut self) -> RESET_ENA_W<CONFIG_SPEC> {
         RESET_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configure whether or not enable trace cpu is halted, when enabeld, if the cpu halted, the encoder will output a packet to report the address of the last instruction, and upon halted deassertion, the encoder start again.When disabled, encoder will not report the last address before halted and first address after halted, cpu halted information will not be tracked. \\\\1: enabeld\\\\0: disabled\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn halt_ena(&mut self) -> HALT_ENA_W<CONFIG_SPEC> {
         HALT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configure whether or not enable stall cpu. When enabled, when the fifo almost full, the cpu will be stalled until the packets is able to write to fifo.\\\\1: enabled.\\\\0: disabled\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn stall_ena(&mut self) -> STALL_ENA_W<CONFIG_SPEC> {
         STALL_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configure whether or not enable full-address mode.\\\\1: full address mode.\\\\0: delta address mode\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn full_address(&mut self) -> FULL_ADDRESS_W<CONFIG_SPEC> {
         FULL_ADDRESS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configure whether or not enabel implicit exception mode. When enabled,, do not sent exception address, only exception cause in exception packets.\\\\1: enabled\\\\0: disabled\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn implicit_except(&mut self) -> IMPLICIT_EXCEPT_W<CONFIG_SPEC> {
         IMPLICIT_EXCEPT_W::new(self, 5)
     }

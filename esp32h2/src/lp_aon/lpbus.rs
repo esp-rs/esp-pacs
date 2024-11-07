@@ -86,25 +86,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:18 - This field controls fast memory WPULSE parameter. 0b000 for 1.1V/1.0V/0.9V operating Voltage."]
     #[inline(always)]
-    #[must_use]
     pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC> {
         FAST_MEM_WPULSE_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - This field controls fast memory WA parameter. 0b100 for 1.1V operating Voltage, 0b101 for 1.0V, 0b110 for 0.9V."]
     #[inline(always)]
-    #[must_use]
     pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC> {
         FAST_MEM_WA_W::new(self, 19)
     }
     #[doc = "Bits 22:23 - This field controls fast memory RA parameter. 0b00 for 1.1V/1.0V operating Voltage, 0b01 for 0.9V."]
     #[inline(always)]
-    #[must_use]
     pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC> {
         FAST_MEM_RA_W::new(self, 22)
     }
     #[doc = "Bits 24:27 - This field controls fast memory RM parameter. 0b0011 for 1.1V operating Voltage, 0b0010 for 1.0V, 0b0000 for 0.9V."]
     #[inline(always)]
-    #[must_use]
     pub fn fast_mem_rm(&mut self) -> FAST_MEM_RM_W<LPBUS_SPEC> {
         FAST_MEM_RM_W::new(self, 24)
     }

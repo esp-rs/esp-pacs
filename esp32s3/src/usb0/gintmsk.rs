@@ -284,163 +284,136 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn modemismsk(&mut self) -> MODEMISMSK_W<GINTMSK_SPEC> {
         MODEMISMSK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn otgintmsk(&mut self) -> OTGINTMSK_W<GINTMSK_SPEC> {
         OTGINTMSK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn sofmsk(&mut self) -> SOFMSK_W<GINTMSK_SPEC> {
         SOFMSK_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn rxflvimsk(&mut self) -> RXFLVIMSK_W<GINTMSK_SPEC> {
         RXFLVIMSK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn nptxfempmsk(&mut self) -> NPTXFEMPMSK_W<GINTMSK_SPEC> {
         NPTXFEMPMSK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ginnakeffmsk(&mut self) -> GINNAKEFFMSK_W<GINTMSK_SPEC> {
         GINNAKEFFMSK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn goutnackeffmsk(&mut self) -> GOUTNACKEFFMSK_W<GINTMSK_SPEC> {
         GOUTNACKEFFMSK_W::new(self, 7)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn erlysuspmsk(&mut self) -> ERLYSUSPMSK_W<GINTMSK_SPEC> {
         ERLYSUSPMSK_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn usbsuspmsk(&mut self) -> USBSUSPMSK_W<GINTMSK_SPEC> {
         USBSUSPMSK_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn usbrstmsk(&mut self) -> USBRSTMSK_W<GINTMSK_SPEC> {
         USBRSTMSK_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn enumdonemsk(&mut self) -> ENUMDONEMSK_W<GINTMSK_SPEC> {
         ENUMDONEMSK_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn isooutdropmsk(&mut self) -> ISOOUTDROPMSK_W<GINTMSK_SPEC> {
         ISOOUTDROPMSK_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn eopfmsk(&mut self) -> EOPFMSK_W<GINTMSK_SPEC> {
         EOPFMSK_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn epmismsk(&mut self) -> EPMISMSK_W<GINTMSK_SPEC> {
         EPMISMSK_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn iepintmsk(&mut self) -> IEPINTMSK_W<GINTMSK_SPEC> {
         IEPINTMSK_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
     pub fn oepintmsk(&mut self) -> OEPINTMSK_W<GINTMSK_SPEC> {
         OEPINTMSK_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn incompisoinmsk(&mut self) -> INCOMPISOINMSK_W<GINTMSK_SPEC> {
         INCOMPISOINMSK_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn incompipmsk(&mut self) -> INCOMPIPMSK_W<GINTMSK_SPEC> {
         INCOMPIPMSK_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn fetsuspmsk(&mut self) -> FETSUSPMSK_W<GINTMSK_SPEC> {
         FETSUSPMSK_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
     pub fn resetdetmsk(&mut self) -> RESETDETMSK_W<GINTMSK_SPEC> {
         RESETDETMSK_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn prtlntmsk(&mut self) -> PRTLNTMSK_W<GINTMSK_SPEC> {
         PRTLNTMSK_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn hchintmsk(&mut self) -> HCHINTMSK_W<GINTMSK_SPEC> {
         HCHINTMSK_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn ptxfempmsk(&mut self) -> PTXFEMPMSK_W<GINTMSK_SPEC> {
         PTXFEMPMSK_W::new(self, 26)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn conidstschngmsk(&mut self) -> CONIDSTSCHNGMSK_W<GINTMSK_SPEC> {
         CONIDSTSCHNGMSK_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn disconnintmsk(&mut self) -> DISCONNINTMSK_W<GINTMSK_SPEC> {
         DISCONNINTMSK_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn sessreqintmsk(&mut self) -> SESSREQINTMSK_W<GINTMSK_SPEC> {
         SESSREQINTMSK_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn wkupintmsk(&mut self) -> WKUPINTMSK_W<GINTMSK_SPEC> {
         WKUPINTMSK_W::new(self, 31)
     }

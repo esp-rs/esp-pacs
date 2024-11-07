@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map apb_adc interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_adc_int_map(&mut self) -> APB_ADC_INT_MAP_W<APB_ADC_INT_MAP_SPEC> {
         APB_ADC_INT_MAP_W::new(self, 0)
     }

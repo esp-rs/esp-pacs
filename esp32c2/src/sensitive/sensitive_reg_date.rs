@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn sensitive_reg_date(&mut self) -> SENSITIVE_REG_DATE_W<SENSITIVE_REG_DATE_SPEC> {
         SENSITIVE_REG_DATE_W::new(self, 0)
     }

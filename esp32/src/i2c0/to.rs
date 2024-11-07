@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register is used to configure the max clock number of receiving a data."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<TO_SPEC> {
         TIME_OUT_W::new(self, 0)
     }

@@ -15,19 +15,16 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to clear TX_FIFO_REMPTY_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_rempty(&mut self) -> TX_FIFO_REMPTY_W<INT_CLR_SPEC> {
         TX_FIFO_REMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to clear RX_FIFO_WOVF_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_wovf(&mut self) -> RX_FIFO_WOVF_W<INT_CLR_SPEC> {
         RX_FIFO_WOVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear TX_EOF_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_eof(&mut self) -> TX_EOF_W<INT_CLR_SPEC> {
         TX_EOF_W::new(self, 2)
     }

@@ -89,6 +89,7 @@ pub enum Interrupt {
     ETS_CORE0_PIF_PMS_SIZE = 41,
 }
 #[doc = r" TryFromInterruptError"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Debug, Copy, Clone)]
 pub struct TryFromInterruptError(());
 impl Interrupt {

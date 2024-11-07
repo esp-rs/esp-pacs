@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - GPIO0~31 interrupt status write 1 to set"]
     #[inline(always)]
-    #[must_use]
     pub fn status_int_w1ts(&mut self) -> STATUS_INT_W1TS_W<STATUS_W1TS_SPEC> {
         STATUS_INT_W1TS_W::new(self, 0)
     }

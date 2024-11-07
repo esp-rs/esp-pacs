@@ -214,121 +214,101 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - These bits control the number of preamble bytes that are added to the beginning of every Transmit frame. The preamble reduction occurs only when the MAC is operating in the full-duplex mode.2'b00: 7 bytes of preamble. 2'b01: 5 bytes of preamble. 2'b10: 3 bytes of preamble."]
     #[inline(always)]
-    #[must_use]
     pub fn pltf(&mut self) -> PLTF_W<EMACCONFIG_SPEC> {
         PLTF_W::new(self, 0)
     }
     #[doc = "Bit 2 - When this bit is set the receiver state machine of the MAC is enabled for receiving frames from the MII. When this bit is reset the MAC receive state machine is disabled after the completion of the reception of the current frame and does not receive any further frames from the MII."]
     #[inline(always)]
-    #[must_use]
     pub fn rx(&mut self) -> RX_W<EMACCONFIG_SPEC> {
         RX_W::new(self, 2)
     }
     #[doc = "Bit 3 - When this bit is set the transmit state machine of the MAC is enabled for transmission on the MII. When this bit is reset the MAC transmit state machine is disabled after the completion of the transmission of the current frame and does not transmit any further frames."]
     #[inline(always)]
-    #[must_use]
     pub fn tx(&mut self) -> TX_W<EMACCONFIG_SPEC> {
         TX_W::new(self, 3)
     }
     #[doc = "Bit 4 - Deferral Check."]
     #[inline(always)]
-    #[must_use]
     pub fn deferralcheck(&mut self) -> DEFERRALCHECK_W<EMACCONFIG_SPEC> {
         DEFERRALCHECK_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - The Back-Off limit determines the random integer number (r) of slot time delays (512 bit times for 10/100 Mbps) for which the MAC waits before rescheduling a transmission attempt during retries after a collision. This bit is applicable only in the half-duplex mode. 00: k= min (n 10). 01: k = min (n 8). 10: k = min (n 4). 11: k = min (n 1) n = retransmission attempt. The random integer r takes the value in the Range 0 ~ 2000."]
     #[inline(always)]
-    #[must_use]
     pub fn backofflimit(&mut self) -> BACKOFFLIMIT_W<EMACCONFIG_SPEC> {
         BACKOFFLIMIT_W::new(self, 5)
     }
     #[doc = "Bit 7 - When this bit is set the MAC strips the Pad or FCS field on the incoming frames only if the value of the length field is less than 1 536 bytes. All received frames with length field greater than or equal to 1 536 bytes are passed to the application without stripping the Pad or FCS field. When this bit is reset the MAC passes all incoming frames without modifying them to the Host."]
     #[inline(always)]
-    #[must_use]
     pub fn padcrcstrip(&mut self) -> PADCRCSTRIP_W<EMACCONFIG_SPEC> {
         PADCRCSTRIP_W::new(self, 7)
     }
     #[doc = "Bit 9 - When this bit is set the MAC attempts only one transmission. When a collision occurs on the MII interface the MAC ignores the current frame transmission and reports a Frame Abort with excessive collision error in the transmit frame status. When this bit is reset the MAC attempts retries based on the settings of the BL field (Bits \\[6:5\\]). This bit is applicable only in the half-duplex Mode."]
     #[inline(always)]
-    #[must_use]
     pub fn retry(&mut self) -> RETRY_W<EMACCONFIG_SPEC> {
         RETRY_W::new(self, 9)
     }
     #[doc = "Bit 10 - When this bit is set the MAC calculates the 16-bit one's complement of the one's complement sum of all received Ethernet frame payloads. It also checks whether the IPv4 Header checksum (assumed to be bytes 25/26 or 29/30 (VLAN-tagged) of the received Ethernet frame) is correct for the received frame and gives the status in the receive status word. The MAC also appends the 16-bit checksum calculated for the IP header datagram payload (bytes after the IPv4 header) and appends it to the Ethernet frame transferred to the application (when Type 2 COE is deselected). When this bit is reset this function is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn rxipcoffload(&mut self) -> RXIPCOFFLOAD_W<EMACCONFIG_SPEC> {
         RXIPCOFFLOAD_W::new(self, 10)
     }
     #[doc = "Bit 11 - When this bit is set the MAC operates in the full-duplex mode where it can transmit and receive simultaneously. This bit is read only with default value of 1'b1 in the full-duplex-mode."]
     #[inline(always)]
-    #[must_use]
     pub fn duplex(&mut self) -> DUPLEX_W<EMACCONFIG_SPEC> {
         DUPLEX_W::new(self, 11)
     }
     #[doc = "Bit 12 - When this bit is set the MAC operates in the loopback mode MII. The MII Receive clock input (CLK_RX) is required for the loopback to work properly because the transmit clock is not looped-back internally."]
     #[inline(always)]
-    #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<EMACCONFIG_SPEC> {
         LOOPBACK_W::new(self, 12)
     }
     #[doc = "Bit 13 - When this bit is set the MAC disables the reception of frames when the TX_EN is asserted in the half-duplex mode. When this bit is reset the MAC receives all packets that are given by the PHY while transmitting. This bit is not applicable if the MAC is operating in the full duplex mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rxown(&mut self) -> RXOWN_W<EMACCONFIG_SPEC> {
         RXOWN_W::new(self, 13)
     }
     #[doc = "Bit 14 - This bit selects the speed in the MII RMII interface. 0: 10 Mbps. 1: 100 Mbps."]
     #[inline(always)]
-    #[must_use]
     pub fn fespeed(&mut self) -> FESPEED_W<EMACCONFIG_SPEC> {
         FESPEED_W::new(self, 14)
     }
     #[doc = "Bit 15 - This bit selects the Ethernet line speed. It should be set to 1 for 10 or 100 Mbps operations.In 10 or 100 Mbps operations this bit along with FES(EMACFESPEED) bit it selects the exact linespeed. In the 10/100 Mbps-only operations the bit is always 1."]
     #[inline(always)]
-    #[must_use]
     pub fn mii(&mut self) -> MII_W<EMACCONFIG_SPEC> {
         MII_W::new(self, 15)
     }
     #[doc = "Bit 16 - When set high this bit makes the MAC transmitter ignore the MII CRS signal during frame transmission in the half-duplex mode. This request results in no errors generated because of Loss of Carrier or No Carrier during such transmission. When this bit is low the MAC transmitter generates such errors because of Carrier Sense and can even abort the transmissions."]
     #[inline(always)]
-    #[must_use]
     pub fn disablecrs(&mut self) -> DISABLECRS_W<EMACCONFIG_SPEC> {
         DISABLECRS_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - These bits control the minimum IFG between frames during transmission. 3'b000: 96 bit times. 3'b001: 88 bit times. 3'b010: 80 bit times. 3'b111: 40 bit times. In the half-duplex mode the minimum IFG can be configured only for 64 bit times (IFG = 100). Lower values are not considered."]
     #[inline(always)]
-    #[must_use]
     pub fn interframegap(&mut self) -> INTERFRAMEGAP_W<EMACCONFIG_SPEC> {
         INTERFRAMEGAP_W::new(self, 17)
     }
     #[doc = "Bit 20 - When this bit is set the MAC allows Jumbo frames of 9 018 bytes (9 022 bytes for VLAN tagged frames) without reporting a giant frame error in the receive frame status."]
     #[inline(always)]
-    #[must_use]
     pub fn jumboframe(&mut self) -> JUMBOFRAME_W<EMACCONFIG_SPEC> {
         JUMBOFRAME_W::new(self, 20)
     }
     #[doc = "Bit 22 - When this bit is set the MAC disables the jabber timer on the transmitter. The MAC can transfer frames of up to 16 383 bytes. When this bit is reset the MAC cuts off the transmitter if the application sends out more than 2 048 bytes of data (10 240 if JE is set high) during Transmission."]
     #[inline(always)]
-    #[must_use]
     pub fn jabber(&mut self) -> JABBER_W<EMACCONFIG_SPEC> {
         JABBER_W::new(self, 22)
     }
     #[doc = "Bit 23 - When this bit is set the MAC disables the watchdog timer on the receiver. The MAC can receive frames of up to 16 383 bytes. When this bit is reset the MAC does not allow a receive frame which more than 2 048 bytes (10 240 if JE is set high) or the value programmed in Register (Watchdog Timeout Register). The MAC cuts off any bytes received after the watchdog limit number of bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn watchdog(&mut self) -> WATCHDOG_W<EMACCONFIG_SPEC> {
         WATCHDOG_W::new(self, 23)
     }
     #[doc = "Bit 27 - When set the MAC considers all frames with up to 2 000 bytes length as normal packets.When Bit\\[20\\] (JE) is not set the MAC considers all received frames of size more than 2K bytes as Giant frames. When this bit is reset and Bit\\[20\\] (JE) is not set the MAC considers all received frames of size more than 1 518 bytes (1 522 bytes for tagged) as Giant frames. When Bit\\[20\\] is set setting this bit has no effect on Giant Frame status."]
     #[inline(always)]
-    #[must_use]
     pub fn ass2kp(&mut self) -> ASS2KP_W<EMACCONFIG_SPEC> {
         ASS2KP_W::new(self, 27)
     }
     #[doc = "Bits 28:30 - This field controls the source address insertion or replacement for all transmitted frames.Bit\\[30\\] specifies which MAC Address register (0 or 1) is used for source address insertion or replacement based on the values of Bits \\[29:28\\]: 2'b0x: The input signals mti_sa_ctrl_i and ati_sa_ctrl_i control the SA field generation. 2'b10: If Bit\\[30\\] is set to 0 the MAC inserts the content of the MAC Address 0 registers in the SA field of all transmitted frames. If Bit\\[30\\] is set to 1 the MAC inserts the content of the MAC Address 1 registers in the SA field of all transmitted frames. 2'b11: If Bit\\[30\\] is set to 0 the MAC replaces the content of the MAC Address 0 registers in the SA field of all transmitted frames. If Bit\\[30\\] is set to 1 the MAC replaces the content of the MAC Address 1 registers in the SA field of all transmitted frames."]
     #[inline(always)]
-    #[must_use]
     pub fn sairc(&mut self) -> SAIRC_W<EMACCONFIG_SPEC> {
         SAIRC_W::new(self, 28)
     }

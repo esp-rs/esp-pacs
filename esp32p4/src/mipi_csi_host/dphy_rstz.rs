@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn dphy_rstz(&mut self) -> DPHY_RSTZ_W<DPHY_RSTZ_SPEC> {
         DPHY_RSTZ_W::new(self, 0)
     }

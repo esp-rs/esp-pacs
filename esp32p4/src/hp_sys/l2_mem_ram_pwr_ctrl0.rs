@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - l2ram clk_gating force on"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_clk_force_on(
         &mut self,
     ) -> REG_L2_MEM_CLK_FORCE_ON_W<L2_MEM_RAM_PWR_CTRL0_SPEC> {

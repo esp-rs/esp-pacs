@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been transmitted to peripherals for Tx channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn out_done(&mut self) -> OUT_DONE_W<RAW_SPEC> {
         OUT_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when the last data pointed by one outlink descriptor has been read from memory for Tx channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<RAW_SPEC> {
         OUT_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when detecting outlink descriptor error including owner error and the second and third word error of outlink descriptor for Tx channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<RAW_SPEC> {
         OUT_DSCR_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when data corresponding a outlink (includes one link descriptor or few link descriptors) is transmitted out for Tx channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<RAW_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 3)
     }
     #[doc = "Bit 4 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l1_ovf(&mut self) -> OUTFIFO_L1_OVF_W<RAW_SPEC> {
         OUTFIFO_L1_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is underflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l1_udf(&mut self) -> OUTFIFO_L1_UDF_W<RAW_SPEC> {
         OUTFIFO_L1_UDF_W::new(self, 5)
     }
     #[doc = "Bit 6 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l2_ovf(&mut self) -> OUTFIFO_L2_OVF_W<RAW_SPEC> {
         OUTFIFO_L2_OVF_W::new(self, 6)
     }
     #[doc = "Bit 7 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is underflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l2_udf(&mut self) -> OUTFIFO_L2_UDF_W<RAW_SPEC> {
         OUTFIFO_L2_UDF_W::new(self, 7)
     }
     #[doc = "Bit 8 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l3_ovf(&mut self) -> OUTFIFO_L3_OVF_W<RAW_SPEC> {
         OUTFIFO_L3_OVF_W::new(self, 8)
     }
     #[doc = "Bit 9 - This raw interrupt bit turns to high level when level 1 fifo of Tx channel0 is underflow."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_l3_udf(&mut self) -> OUTFIFO_L3_UDF_W<RAW_SPEC> {
         OUTFIFO_L3_UDF_W::new(self, 9)
     }

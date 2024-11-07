@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map lcd_cam interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cam_int_map(&mut self) -> LCD_CAM_INT_MAP_W<LCD_CAM_INT_MAP_SPEC> {
         LCD_CAM_INT_MAP_W::new(self, 0)
     }

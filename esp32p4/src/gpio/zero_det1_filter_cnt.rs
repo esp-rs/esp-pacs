@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - GPIO analog comparator zero detect filter count"]
     #[inline(always)]
-    #[must_use]
     pub fn zero_det1_filter_cnt(&mut self) -> ZERO_DET1_FILTER_CNT_W<ZERO_DET1_FILTER_CNT_SPEC> {
         ZERO_DET1_FILTER_CNT_W::new(self, 0)
     }

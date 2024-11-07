@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register stores the Xon flow control char."]
     #[inline(always)]
-    #[must_use]
     pub fn xon_char(&mut self) -> XON_CHAR_W<SWFC_CONF0_SYNC_SPEC> {
         XON_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register stores the Xoff flow control char."]
     #[inline(always)]
-    #[must_use]
     pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SYNC_SPEC> {
         XOFF_CHAR_W::new(self, 8)
     }
     #[doc = "Bit 16 - In software flow control mode, UART Tx is disabled once UART Rx receives XOFF. In this status, UART Tx can not transmit XOFF even the received data number is larger than UART_XOFF_THRESHOLD. Set this bit to enable UART Tx can transmit XON/XOFF when UART Tx is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn xon_xoff_still_send(&mut self) -> XON_XOFF_STILL_SEND_W<SWFC_CONF0_SYNC_SPEC> {
         XON_XOFF_STILL_SEND_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<SWFC_CONF0_SYNC_SPEC> {
         SW_FLOW_CON_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
-    #[must_use]
     pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<SWFC_CONF0_SYNC_SPEC> {
         XONOFF_DEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to enable the transmitter to go on sending data."]
     #[inline(always)]
-    #[must_use]
     pub fn force_xon(&mut self) -> FORCE_XON_W<SWFC_CONF0_SYNC_SPEC> {
         FORCE_XON_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
-    #[must_use]
     pub fn force_xoff(&mut self) -> FORCE_XOFF_W<SWFC_CONF0_SYNC_SPEC> {
         FORCE_XOFF_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to send Xon char. It is cleared by hardware automatically."]
     #[inline(always)]
-    #[must_use]
     pub fn send_xon(&mut self) -> SEND_XON_W<SWFC_CONF0_SYNC_SPEC> {
         SEND_XON_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to send Xoff char. It is cleared by hardware automatically."]
     #[inline(always)]
-    #[must_use]
     pub fn send_xoff(&mut self) -> SEND_XOFF_W<SWFC_CONF0_SYNC_SPEC> {
         SEND_XOFF_W::new(self, 22)
     }

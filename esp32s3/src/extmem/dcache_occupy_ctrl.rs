@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable occupy operation. It will be cleared by hardware after issuing Auot-Invalidate Operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_occupy_ena(&mut self) -> DCACHE_OCCUPY_ENA_W<DCACHE_OCCUPY_CTRL_SPEC> {
         DCACHE_OCCUPY_ENA_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - This register is used to configure the timeout for receiving a data bit in APB clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<TO_SPEC> {
         TIME_OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 24 - This is the enable bit for time out control."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<TO_SPEC> {
         TIME_OUT_EN_W::new(self, 24)
     }

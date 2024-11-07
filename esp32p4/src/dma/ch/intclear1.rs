@@ -17,7 +17,6 @@ impl core::fmt::Debug for crate::generic::Reg<INTCLEAR1_SPEC> {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_clear_ecc_prot_chmem_correrr_intstat(
         &mut self,
     ) -> CH1_CLEAR_ECC_PROT_CHMEM_CORRERR_INTSTAT_W<INTCLEAR1_SPEC> {
@@ -25,7 +24,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_clear_ecc_prot_chmem_uncorrerr_intstat(
         &mut self,
     ) -> CH1_CLEAR_ECC_PROT_CHMEM_UNCORRERR_INTSTAT_W<INTCLEAR1_SPEC> {
@@ -33,7 +31,6 @@ impl W {
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_clear_ecc_prot_uidmem_correrr_intstat(
         &mut self,
     ) -> CH1_CLEAR_ECC_PROT_UIDMEM_CORRERR_INTSTAT_W<INTCLEAR1_SPEC> {
@@ -41,7 +38,6 @@ impl W {
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_clear_ecc_prot_uidmem_uncorrerr_intstat(
         &mut self,
     ) -> CH1_CLEAR_ECC_PROT_UIDMEM_UNCORRERR_INTSTAT_W<INTCLEAR1_SPEC> {

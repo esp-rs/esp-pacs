@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn fib_sel(&mut self) -> FIB_SEL_W<FIB_SEL_SPEC> {
         FIB_SEL_W::new(self, 0)
     }

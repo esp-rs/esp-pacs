@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the Block Number of plaintext or cipertext when the AES Accelerator operates under the DMA-AES working mode. For details, see Section 1.5.4."]
     #[inline(always)]
-    #[must_use]
     pub fn block_num(&mut self) -> BLOCK_NUM_W<BLOCK_NUM_SPEC> {
         BLOCK_NUM_W::new(self, 0)
     }

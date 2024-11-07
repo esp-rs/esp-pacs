@@ -70,7 +70,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_rx_clk_div_numerator(
         &mut self,
     ) -> PARLIO_RX_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL118_SPEC> {
@@ -78,7 +77,6 @@ impl W {
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_rx_clk_div_denominator(
         &mut self,
     ) -> PARLIO_RX_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL118_SPEC> {
@@ -86,19 +84,16 @@ impl W {
     }
     #[doc = "Bits 16:17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_tx_clk_src_sel(&mut self) -> PARLIO_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL118_SPEC> {
         PARLIO_TX_CLK_SRC_SEL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_tx_clk_en(&mut self) -> PARLIO_TX_CLK_EN_W<PERI_CLK_CTRL118_SPEC> {
         PARLIO_TX_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_tx_clk_div_num(&mut self) -> PARLIO_TX_CLK_DIV_NUM_W<PERI_CLK_CTRL118_SPEC> {
         PARLIO_TX_CLK_DIV_NUM_W::new(self, 19)
     }

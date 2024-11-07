@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map cache_core1_acs interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_core1_acs_int_map(
         &mut self,
     ) -> CACHE_CORE1_ACS_INT_MAP_W<CACHE_CORE1_ACS_INT_MAP_SPEC> {

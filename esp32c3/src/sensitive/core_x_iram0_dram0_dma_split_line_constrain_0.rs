@@ -29,7 +29,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - core_x_iram0_dram0_dma_split_line_constrain_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_iram0_dram0_dma_split_line_constrain_lock(
         &mut self,
     ) -> CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_W<

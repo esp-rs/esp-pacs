@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the number of 0 to be sent after the process of sending data is done. It is active when txd_brk is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<TXBRK_CONF_SYNC_SPEC> {
         TX_BRK_NUM_W::new(self, 0)
     }

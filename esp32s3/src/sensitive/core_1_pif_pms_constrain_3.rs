@@ -184,7 +184,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Core1 access spi_2 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_spi_2(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SPI_2_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -192,7 +191,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - Core1 access spi_3 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_spi_3(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SPI_3_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -200,7 +198,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - Core1 access apb_ctrl permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_apb_ctrl(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_APB_CTRL_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -208,7 +205,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - Core1 access i2c_ext1 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_i2c_ext1(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT1_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -216,7 +212,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - Core1 access sdio_host permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_sdio_host(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_SDIO_HOST_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -224,7 +219,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - Core1 access can permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_can(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_CAN_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -232,7 +226,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - Core1 access pwm1 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_pwm1(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWM1_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -240,7 +233,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - Core1 access i2s1 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_i2s1(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_I2S1_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -248,7 +240,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - Core1 access uart2 permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_uart2(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_UART2_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -256,7 +247,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - Core1 access rwbt permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_rwbt(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_RWBT_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -264,7 +254,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - Core1 access wifimac permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_wifimac(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_WIFIMAC_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {
@@ -272,7 +261,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - Core1 access pwr permission in world0."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_world_0_pwr(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_WORLD_0_PWR_W<CORE_1_PIF_PMS_CONSTRAIN_3_SPEC> {

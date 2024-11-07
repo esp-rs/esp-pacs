@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
-    #[must_use]
     pub fn out_data(&mut self) -> OUT_DATA_W<OUT_SPEC> {
         OUT_DATA_W::new(self, 0)
     }

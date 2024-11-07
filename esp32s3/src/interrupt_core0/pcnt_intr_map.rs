@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map pcnt interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn pcnt_intr_map(&mut self) -> PCNT_INTR_MAP_W<PCNT_INTR_MAP_SPEC> {
         PCNT_INTR_MAP_W::new(self, 0)
     }

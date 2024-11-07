@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn slow_clk_sel(&mut self) -> SLOW_CLK_SEL_W<LP_CLK_CONF_SPEC> {
         SLOW_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn fast_clk_sel(&mut self) -> FAST_CLK_SEL_W<LP_CLK_CONF_SPEC> {
         FAST_CLK_SEL_W::new(self, 2)
     }
     #[doc = "Bits 3:10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_peri_div_num(&mut self) -> LP_PERI_DIV_NUM_W<LP_CLK_CONF_SPEC> {
         LP_PERI_DIV_NUM_W::new(self, 3)
     }

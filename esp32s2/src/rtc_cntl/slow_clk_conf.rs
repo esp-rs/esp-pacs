@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 22 - Synchronizes the reg_rtc_ana_clk_div bus. Note that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
-    #[must_use]
     pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<SLOW_CLK_CONF_SPEC> {
         ANA_CLK_DIV_VLD_W::new(self, 22)
     }
     #[doc = "Bits 23:30 - Set the rtc_clk divider."]
     #[inline(always)]
-    #[must_use]
     pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<SLOW_CLK_CONF_SPEC> {
         ANA_CLK_DIV_W::new(self, 23)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<SLOW_CLK_CONF_SPEC> {
         SLOW_CLK_NEXT_EDGE_W::new(self, 31)
     }

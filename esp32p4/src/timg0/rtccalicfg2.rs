@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:6 - Cycles that release calibration timeout reset"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_timeout_rst_cnt(&mut self) -> RTC_CALI_TIMEOUT_RST_CNT_W<RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_RST_CNT_W::new(self, 3)
     }
     #[doc = "Bits 7:31 - Threshold value for the RTC calibration timer. If the calibration timer's value exceeds this threshold, a timeout is triggered."]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_timeout_thres(&mut self) -> RTC_CALI_TIMEOUT_THRES_W<RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_THRES_W::new(self, 7)
     }

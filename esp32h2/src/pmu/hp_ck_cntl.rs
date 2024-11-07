@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn modify_icg_cntl_wait(&mut self) -> MODIFY_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC> {
         MODIFY_ICG_CNTL_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn switch_icg_cntl_wait(&mut self) -> SWITCH_ICG_CNTL_WAIT_W<HP_CK_CNTL_SPEC> {
         SWITCH_ICG_CNTL_WAIT_W::new(self, 8)
     }

@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to clear interrupt that BackUp initiate illegal access."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_monitor_violate_clr(
         &mut self,
     ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_CLR_W<BACKUP_BUS_PMS_MONITOR_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - Set 1 to enable interrupt that BackUp initiate illegal access."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_monitor_violate_en(
         &mut self,
     ) -> BACKUP_BUS_PMS_MONITOR_VIOLATE_EN_W<BACKUP_BUS_PMS_MONITOR_1_SPEC> {

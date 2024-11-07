@@ -86,19 +86,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ADC1 Conversion is done, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_int_raw(&mut self) -> COCPU_SARADC1_INT_RAW_W<COCPU_INT_RAW_SPEC> {
         COCPU_SARADC1_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - ADC2 Conversion is done, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_int_raw(&mut self) -> COCPU_SARADC2_INT_RAW_W<COCPU_INT_RAW_SPEC> {
         COCPU_SARADC2_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - An errro occurs from ADC1, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_error_int_raw(
         &mut self,
     ) -> COCPU_SARADC1_ERROR_INT_RAW_W<COCPU_INT_RAW_SPEC> {
@@ -106,7 +103,6 @@ impl W {
     }
     #[doc = "Bit 3 - An errro occurs from ADC2, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_error_int_raw(
         &mut self,
     ) -> COCPU_SARADC2_ERROR_INT_RAW_W<COCPU_INT_RAW_SPEC> {
@@ -114,7 +110,6 @@ impl W {
     }
     #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_wake_int_raw(
         &mut self,
     ) -> COCPU_SARADC1_WAKE_INT_RAW_W<COCPU_INT_RAW_SPEC> {
@@ -122,7 +117,6 @@ impl W {
     }
     #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int raw."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_wake_int_raw(
         &mut self,
     ) -> COCPU_SARADC2_WAKE_INT_RAW_W<COCPU_INT_RAW_SPEC> {

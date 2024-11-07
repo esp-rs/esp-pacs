@@ -90,7 +90,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_tx_clk_div_numerator(
         &mut self,
     ) -> PARLIO_TX_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL119_SPEC> {
@@ -98,7 +97,6 @@ impl W {
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_tx_clk_div_denominator(
         &mut self,
     ) -> PARLIO_TX_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL119_SPEC> {
@@ -106,31 +104,26 @@ impl W {
     }
     #[doc = "Bits 16:17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c_mst_clk_src_sel(&mut self) -> I3C_MST_CLK_SRC_SEL_W<PERI_CLK_CTRL119_SPEC> {
         I3C_MST_CLK_SRC_SEL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c_mst_clk_en(&mut self) -> I3C_MST_CLK_EN_W<PERI_CLK_CTRL119_SPEC> {
         I3C_MST_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c_mst_clk_div_num(&mut self) -> I3C_MST_CLK_DIV_NUM_W<PERI_CLK_CTRL119_SPEC> {
         I3C_MST_CLK_DIV_NUM_W::new(self, 19)
     }
     #[doc = "Bits 27:28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_clk_src_sel(&mut self) -> CAM_CLK_SRC_SEL_W<PERI_CLK_CTRL119_SPEC> {
         CAM_CLK_SRC_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_clk_en(&mut self) -> CAM_CLK_EN_W<PERI_CLK_CTRL119_SPEC> {
         CAM_CLK_EN_W::new(self, 29)
     }

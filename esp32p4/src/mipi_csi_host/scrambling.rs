@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn scramble_enable(&mut self) -> SCRAMBLE_ENABLE_W<SCRAMBLING_SPEC> {
         SCRAMBLE_ENABLE_W::new(self, 0)
     }

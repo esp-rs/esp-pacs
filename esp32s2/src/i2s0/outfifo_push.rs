@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - APB out FIFO write data."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<OUTFIFO_PUSH_SPEC> {
         OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16 - APB out FIFO push."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<OUTFIFO_PUSH_SPEC> {
         OUTFIFO_PUSH_W::new(self, 16)
     }

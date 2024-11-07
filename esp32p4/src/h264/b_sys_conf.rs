@@ -50,7 +50,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures when to trigger video B H264_DB_TMP_READY_INT. When the (MB number of written db temp+1) is greater than this filed in first MB line, trigger H264_DB_TMP_READY_INT. Min is 3."]
     #[inline(always)]
-    #[must_use]
     pub fn b_db_tmp_ready_trigger_mb_num(
         &mut self,
     ) -> B_DB_TMP_READY_TRIGGER_MB_NUM_W<B_SYS_CONF_SPEC> {
@@ -58,7 +57,6 @@ impl W {
     }
     #[doc = "Bits 7:13 - Configures when to trigger video B H264_REC_READY_INT. When the MB line number of generated reconstruct pixel is greater than this filed, trigger H264_REC_READY_INT. Min is 4."]
     #[inline(always)]
-    #[must_use]
     pub fn b_rec_ready_trigger_mb_lines(
         &mut self,
     ) -> B_REC_READY_TRIGGER_MB_LINES_W<B_SYS_CONF_SPEC> {
@@ -66,7 +64,6 @@ impl W {
     }
     #[doc = "Bits 14:29 - Configures video B intra cost offset when I MB compared with P MB."]
     #[inline(always)]
-    #[must_use]
     pub fn b_intra_cost_cmp_offset(&mut self) -> B_INTRA_COST_CMP_OFFSET_W<B_SYS_CONF_SPEC> {
         B_INTRA_COST_CMP_OFFSET_W::new(self, 14)
     }

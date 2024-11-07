@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 17:19 - configure touch pad dac14"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad14_dac(&mut self) -> TOUCH_PAD14_DAC_W<TOUCH_DAC1_SPEC> {
         TOUCH_PAD14_DAC_W::new(self, 17)
     }
     #[doc = "Bits 20:22 - configure touch pad dac13"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad13_dac(&mut self) -> TOUCH_PAD13_DAC_W<TOUCH_DAC1_SPEC> {
         TOUCH_PAD13_DAC_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - configure touch pad dac12"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad12_dac(&mut self) -> TOUCH_PAD12_DAC_W<TOUCH_DAC1_SPEC> {
         TOUCH_PAD12_DAC_W::new(self, 23)
     }
     #[doc = "Bits 26:28 - configure touch pad dac11"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad11_dac(&mut self) -> TOUCH_PAD11_DAC_W<TOUCH_DAC1_SPEC> {
         TOUCH_PAD11_DAC_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - configure touch pad dac10"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_pad10_dac(&mut self) -> TOUCH_PAD10_DAC_W<TOUCH_DAC1_SPEC> {
         TOUCH_PAD10_DAC_W::new(self, 29)
     }

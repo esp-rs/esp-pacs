@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configure which SRAM Block will be occupied by Icache or Dcache."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cache_connect(&mut self) -> PRO_CACHE_CONNECT_W<PRO_CACHE_1_SPEC> {
         PRO_CACHE_CONNECT_W::new(self, 0)
     }

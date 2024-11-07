@@ -17,25 +17,21 @@ impl core::fmt::Debug for crate::generic::Reg<LC_DMA_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The clear bit for LCD frame end interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vsync_int_clr(&mut self) -> LCD_VSYNC_INT_CLR_W<LC_DMA_INT_CLR_SPEC> {
         LCD_VSYNC_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for lcd transfer end interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_trans_done_int_clr(&mut self) -> LCD_TRANS_DONE_INT_CLR_W<LC_DMA_INT_CLR_SPEC> {
         LCD_TRANS_DONE_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for Camera frame end interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_vsync_int_clr(&mut self) -> CAM_VSYNC_INT_CLR_W<LC_DMA_INT_CLR_SPEC> {
         CAM_VSYNC_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The clear bit for Camera line interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_hs_int_clr(&mut self) -> CAM_HS_INT_CLR_W<LC_DMA_INT_CLR_SPEC> {
         CAM_HS_INT_CLR_W::new(self, 3)
     }

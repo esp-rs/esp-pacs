@@ -21,7 +21,6 @@ impl core::fmt::Debug for crate::generic::Reg<CORE_TIMEOUT_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to clear hp_core0_ahb_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ahb_timeout_int_clr(
         &mut self,
     ) -> CORE0_AHB_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
@@ -29,7 +28,6 @@ impl W {
     }
     #[doc = "Bit 1 - Write 1 to clear hp_core1_ahb_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_ahb_timeout_int_clr(
         &mut self,
     ) -> CORE1_AHB_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
@@ -37,7 +35,6 @@ impl W {
     }
     #[doc = "Bit 2 - Write 1 to clear hp_core0_ibus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_timeout_int_clr(
         &mut self,
     ) -> CORE0_IBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
@@ -45,7 +42,6 @@ impl W {
     }
     #[doc = "Bit 3 - Write 1 to clear hp_core1_ibus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_ibus_timeout_int_clr(
         &mut self,
     ) -> CORE1_IBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
@@ -53,7 +49,6 @@ impl W {
     }
     #[doc = "Bit 4 - Write 1 to clear hp_core0_dbus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_timeout_int_clr(
         &mut self,
     ) -> CORE0_DBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
@@ -61,7 +56,6 @@ impl W {
     }
     #[doc = "Bit 5 - Write 1 to clear hp_core1_dbus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_dbus_timeout_int_clr(
         &mut self,
     ) -> CORE1_DBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {

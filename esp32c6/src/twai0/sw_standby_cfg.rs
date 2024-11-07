@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable standby pin."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_standby_en(&mut self) -> SW_STANDBY_EN_W<SW_STANDBY_CFG_SPEC> {
         SW_STANDBY_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear standby pin."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_standby_clr(&mut self) -> SW_STANDBY_CLR_W<SW_STANDBY_CFG_SPEC> {
         SW_STANDBY_CLR_W::new(self, 1)
     }

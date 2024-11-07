@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn cntl_date(&mut self) -> CNTL_DATE_W<CNTL_DATE_SPEC> {
         CNTL_DATE_W::new(self, 0)
     }

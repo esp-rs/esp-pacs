@@ -80,7 +80,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 6][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(256)
                 .add(16 * n)
@@ -92,7 +92,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn ch_gamma_wr_iter(&self) -> impl Iterator<Item = &CH_GAMMA_WR> {
         (0..6).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(256)
                 .add(16 * n)
@@ -135,7 +135,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 6][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(260)
                 .add(16 * n)
@@ -147,7 +147,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn ch_gamma_wr_addr_iter(&self) -> impl Iterator<Item = &CH_GAMMA_WR_ADDR> {
         (0..6).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(260)
                 .add(16 * n)
@@ -190,7 +190,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 6][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(264)
                 .add(16 * n)
@@ -202,7 +202,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn ch_gamma_rd_addr_iter(&self) -> impl Iterator<Item = &CH_GAMMA_RD_ADDR> {
         (0..6).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(264)
                 .add(16 * n)
@@ -245,7 +245,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 6][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(268)
                 .add(16 * n)
@@ -257,7 +257,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn ch_gamma_rd_data_iter(&self) -> impl Iterator<Item = &CH_GAMMA_RD_DATA> {
         (0..6).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(268)
                 .add(16 * n)

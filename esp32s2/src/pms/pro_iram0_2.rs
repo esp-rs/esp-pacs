@@ -87,43 +87,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - Configure the split address of SRAM Block 4-21 for IBUS access."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_spltaddr(&mut self) -> PRO_IRAM0_SRAM_4_SPLTADDR_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_SPLTADDR_W::new(self, 0)
     }
     #[doc = "Bit 17 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 low address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_l_f(&mut self) -> PRO_IRAM0_SRAM_4_L_F_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_L_F_W::new(self, 17)
     }
     #[doc = "Bit 18 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 low address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_l_r(&mut self) -> PRO_IRAM0_SRAM_4_L_R_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_L_R_W::new(self, 18)
     }
     #[doc = "Bit 19 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 low address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_l_w(&mut self) -> PRO_IRAM0_SRAM_4_L_W_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_L_W_W::new(self, 19)
     }
     #[doc = "Bit 20 - Setting to 1 grants IBUS permission to fetch SRAM Block 4-21 high address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_h_f(&mut self) -> PRO_IRAM0_SRAM_4_H_F_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_H_F_W::new(self, 20)
     }
     #[doc = "Bit 21 - Setting to 1 grants IBUS permission to read SRAM Block 4-21 high address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_h_r(&mut self) -> PRO_IRAM0_SRAM_4_H_R_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_H_R_W::new(self, 21)
     }
     #[doc = "Bit 22 - Setting to 1 grants IBUS permission to write SRAM Block 4-21 high address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_sram_4_h_w(&mut self) -> PRO_IRAM0_SRAM_4_H_W_W<PRO_IRAM0_2_SPEC> {
         PRO_IRAM0_SRAM_4_H_W_W::new(self, 22)
     }

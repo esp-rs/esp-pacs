@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 output clear register. If the value 1 is written to a bit here, the cor- responding bit in GPIO_OUT_REG will be cleared. Recommended operation: use this register to clear GPIO_OUT_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn out_w1tc(&mut self) -> OUT_W1TC_W<OUT_W1TC_SPEC> {
         OUT_W1TC_W::new(self, 0)
     }

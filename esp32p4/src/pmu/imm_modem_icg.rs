@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<IMM_MODEM_ICG_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn update_dig_icg_modem_en(&mut self) -> UPDATE_DIG_ICG_MODEM_EN_W<IMM_MODEM_ICG_SPEC> {
         UPDATE_DIG_ICG_MODEM_EN_W::new(self, 31)
     }

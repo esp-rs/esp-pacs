@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_SHA_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn sha_intr_map(&mut self) -> SHA_INTR_MAP_W<SHA_INTR_MAP_SPEC> {
         SHA_INTR_MAP_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn ifs_counter(&mut self) -> IFS_COUNTER_W<IFS_COUNTER_SPEC> {
         IFS_COUNTER_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<IFS_COUNTER_SPEC> {
         EN_W::new(self, 16)
     }

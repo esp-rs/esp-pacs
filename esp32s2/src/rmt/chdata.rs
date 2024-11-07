@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The read and write data register for CHANNEL%s by apb fifo access."]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DATA_W<CHDATA_SPEC> {
         DATA_W::new(self, 0)
     }

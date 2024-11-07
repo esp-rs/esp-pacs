@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable read access MMU memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_mmu_rd_acs(&mut self) -> PRO_MMU_RD_ACS_W<CACHE_MMU_ACCESS_1_SPEC> {
         PRO_MMU_RD_ACS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable write access MMU memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_mmu_wr_acs(&mut self) -> PRO_MMU_WR_ACS_W<CACHE_MMU_ACCESS_1_SPEC> {
         PRO_MMU_WR_ACS_W::new(self, 1)
     }

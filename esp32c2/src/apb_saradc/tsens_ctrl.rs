@@ -52,19 +52,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn in_inv(&mut self) -> IN_INV_W<TSENS_CTRL_SPEC> {
         IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_div(&mut self) -> CLK_DIV_W<TSENS_CTRL_SPEC> {
         CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn pu(&mut self) -> PU_W<TSENS_CTRL_SPEC> {
         PU_W::new(self, 22)
     }

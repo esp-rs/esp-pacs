@@ -49,7 +49,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn monitor_edg_mod_vt0_pd_site1_unit1(
         &mut self,
     ) -> MONITOR_EDG_MOD_VT0_PD_SITE1_UNIT1_W<COMB_PD_SITE1_UNIT1_VT0_CONF2_SPEC> {

@@ -258,7 +258,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_slvif_commonreg_dec_err_intsignal(
         &mut self,
     ) -> ENABLE_SLVIF_COMMONREG_DEC_ERR_INTSIGNAL_W<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {
@@ -266,7 +265,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_slvif_commonreg_wr2ro_err_intsignal(
         &mut self,
     ) -> ENABLE_SLVIF_COMMONREG_WR2RO_ERR_INTSIGNAL_W<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {
@@ -274,7 +272,6 @@ impl W {
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_slvif_commonreg_rd2wo_err_intsignal(
         &mut self,
     ) -> ENABLE_SLVIF_COMMONREG_RD2WO_ERR_INTSIGNAL_W<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {
@@ -282,7 +279,6 @@ impl W {
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_slvif_commonreg_wronhold_err_intsignal(
         &mut self,
     ) -> ENABLE_SLVIF_COMMONREG_WRONHOLD_ERR_INTSIGNAL_W<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {
@@ -290,7 +286,6 @@ impl W {
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn enable_slvif_undefinedreg_dec_err_intsignal(
         &mut self,
     ) -> ENABLE_SLVIF_UNDEFINEDREG_DEC_ERR_INTSIGNAL_W<COMMONREG_INTSIGNAL_ENABLE0_SPEC> {

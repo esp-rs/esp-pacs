@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:17 - DDR mode selecton,1 bit for each card. 0-Non-DDR mdoe. 1-DDR mdoe."]
     #[inline(always)]
-    #[must_use]
     pub fn ddr(&mut self) -> DDR_W<UHS_SPEC> {
         DDR_W::new(self, 16)
     }

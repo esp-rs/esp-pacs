@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn coding_scheme(&mut self) -> CODING_SCHEME_W<BLK0_WDATA6_SPEC> {
         CODING_SCHEME_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn console_debug_disable(&mut self) -> CONSOLE_DEBUG_DISABLE_W<BLK0_WDATA6_SPEC> {
         CONSOLE_DEBUG_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn disable_sdio_host(&mut self) -> DISABLE_SDIO_HOST_W<BLK0_WDATA6_SPEC> {
         DISABLE_SDIO_HOST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn abs_done_0(&mut self) -> ABS_DONE_0_W<BLK0_WDATA6_SPEC> {
         ABS_DONE_0_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn abs_done_1(&mut self) -> ABS_DONE_1_W<BLK0_WDATA6_SPEC> {
         ABS_DONE_1_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn disable_jtag(&mut self) -> DISABLE_JTAG_W<BLK0_WDATA6_SPEC> {
         DISABLE_JTAG_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn disable_dl_encrypt(&mut self) -> DISABLE_DL_ENCRYPT_W<BLK0_WDATA6_SPEC> {
         DISABLE_DL_ENCRYPT_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn disable_dl_decrypt(&mut self) -> DISABLE_DL_DECRYPT_W<BLK0_WDATA6_SPEC> {
         DISABLE_DL_DECRYPT_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn disable_dl_cache(&mut self) -> DISABLE_DL_CACHE_W<BLK0_WDATA6_SPEC> {
         DISABLE_DL_CACHE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn key_status(&mut self) -> KEY_STATUS_W<BLK0_WDATA6_SPEC> {
         KEY_STATUS_W::new(self, 10)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn detmode_sel(&mut self) -> DETMODE_SEL_W<VDD_SOURCE_CNTL_SPEC> {
         DETMODE_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn vbat_event_record_clr(&mut self) -> VBAT_EVENT_RECORD_CLR_W<VDD_SOURCE_CNTL_SPEC> {
         VBAT_EVENT_RECORD_CLR_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn bod_source_ena(&mut self) -> BOD_SOURCE_ENA_W<VDD_SOURCE_CNTL_SPEC> {
         BOD_SOURCE_ENA_W::new(self, 24)
     }

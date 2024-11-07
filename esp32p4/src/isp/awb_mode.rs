@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - this field configures awb algo sel. 00: none sellected. 01: sel algo0. 10: sel algo1. 11: sel both algo0 and algo1"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_mode(&mut self) -> AWB_MODE_W<AWB_MODE_SPEC> {
         AWB_MODE_W::new(self, 0)
     }
     #[doc = "Bit 4 - this bit configures awb sample location, 0:before ccm, 1:after ccm"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_sample(&mut self) -> AWB_SAMPLE_W<AWB_MODE_SPEC> {
         AWB_SAMPLE_W::new(self, 4)
     }

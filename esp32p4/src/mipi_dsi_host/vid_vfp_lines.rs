@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vfp_lines(&mut self) -> VFP_LINES_W<VID_VFP_LINES_SPEC> {
         VFP_LINES_W::new(self, 0)
     }

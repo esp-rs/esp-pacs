@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bits 1:31 - reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<START_SPEC> {
         START_W::new(self, 1)
     }

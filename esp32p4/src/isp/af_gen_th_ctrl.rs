@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - this field configures min threshold when use auto_threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn af_gen_threshold_min(&mut self) -> AF_GEN_THRESHOLD_MIN_W<AF_GEN_TH_CTRL_SPEC> {
         AF_GEN_THRESHOLD_MIN_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - this field configures max threshold when use auto_threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn af_gen_threshold_max(&mut self) -> AF_GEN_THRESHOLD_MAX_W<AF_GEN_TH_CTRL_SPEC> {
         AF_GEN_THRESHOLD_MAX_W::new(self, 16)
     }

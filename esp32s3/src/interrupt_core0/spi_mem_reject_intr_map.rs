@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map spi_mem_reject interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mem_reject_intr_map(
         &mut self,
     ) -> SPI_MEM_REJECT_INTR_MAP_W<SPI_MEM_REJECT_INTR_MAP_SPEC> {

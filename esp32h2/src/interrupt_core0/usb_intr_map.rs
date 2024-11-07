@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_USB_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_intr_map(&mut self) -> USB_INTR_MAP_W<USB_INTR_MAP_SPEC> {
         USB_INTR_MAP_W::new(self, 0)
     }

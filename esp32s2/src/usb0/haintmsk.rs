@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn haintmsk(&mut self) -> HAINTMSK_W<HAINTMSK_SPEC> {
         HAINTMSK_W::new(self, 0)
     }

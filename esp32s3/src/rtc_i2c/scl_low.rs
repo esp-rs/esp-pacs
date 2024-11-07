@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - time period that scl =0"]
     #[inline(always)]
-    #[must_use]
     pub fn period(&mut self) -> PERIOD_W<SCL_LOW_SPEC> {
         PERIOD_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 18:19 - Set the page size of the used MSPI flash. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_page_size(&mut self) -> FLASH_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
         FLASH_PAGE_SIZE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Set the page size of the used MSPI external RAM. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_page_size(&mut self) -> SRAM_PAGE_SIZE_W<SPI_MEM_ECC_CTRL_SPEC> {
         SRAM_PAGE_SIZE_W::new(self, 20)
     }

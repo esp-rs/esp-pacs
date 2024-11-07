@@ -290,151 +290,126 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i3cslv(&mut self) -> FORCE_NORST_I3CSLV_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I3CSLV_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i2c1(&mut self) -> FORCE_NORST_I2C1_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I2C1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i2c0(&mut self) -> FORCE_NORST_I2C0_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I2C0_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_rmt(&mut self) -> FORCE_NORST_RMT_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_RMT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_pwm0(&mut self) -> FORCE_NORST_PWM0_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PWM0_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_pwm1(&mut self) -> FORCE_NORST_PWM1_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PWM1_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_can0(&mut self) -> FORCE_NORST_CAN0_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_CAN0_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_can1(&mut self) -> FORCE_NORST_CAN1_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_CAN1_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_can2(&mut self) -> FORCE_NORST_CAN2_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_CAN2_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_ledc(&mut self) -> FORCE_NORST_LEDC_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_LEDC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_pcnt(&mut self) -> FORCE_NORST_PCNT_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PCNT_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_etm(&mut self) -> FORCE_NORST_ETM_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_ETM_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_intrmtx(&mut self) -> FORCE_NORST_INTRMTX_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_INTRMTX_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_parlio(&mut self) -> FORCE_NORST_PARLIO_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PARLIO_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_parlio_rx(&mut self) -> FORCE_NORST_PARLIO_RX_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PARLIO_RX_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_parlio_tx(&mut self) -> FORCE_NORST_PARLIO_TX_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_PARLIO_TX_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i2s0(&mut self) -> FORCE_NORST_I2S0_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I2S0_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i2s1(&mut self) -> FORCE_NORST_I2S1_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I2S1_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_i2s2(&mut self) -> FORCE_NORST_I2S2_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_I2S2_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_spi2(&mut self) -> FORCE_NORST_SPI2_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_SPI2_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_spi3(&mut self) -> FORCE_NORST_SPI3_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_SPI3_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_lcdcam(&mut self) -> FORCE_NORST_LCDCAM_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_LCDCAM_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_adc(&mut self) -> FORCE_NORST_ADC_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_ADC_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_bitsrambler(&mut self) -> FORCE_NORST_BITSRAMBLER_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_BITSRAMBLER_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_bitsrambler_rx(
         &mut self,
     ) -> FORCE_NORST_BITSRAMBLER_RX_W<HP_FORCE_NORST1_SPEC> {
@@ -442,7 +417,6 @@ impl W {
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_bitsrambler_tx(
         &mut self,
     ) -> FORCE_NORST_BITSRAMBLER_TX_W<HP_FORCE_NORST1_SPEC> {
@@ -450,7 +424,6 @@ impl W {
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn force_norst_h264(&mut self) -> FORCE_NORST_H264_W<HP_FORCE_NORST1_SPEC> {
         FORCE_NORST_H264_W::new(self, 26)
     }

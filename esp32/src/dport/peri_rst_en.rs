@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn peri_rst_en(&mut self) -> PERI_RST_EN_W<PERI_RST_EN_SPEC> {
         PERI_RST_EN_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures left coordinate of focus window b, must >= 2"]
     #[inline(always)]
-    #[must_use]
     pub fn af_rpoint_b(&mut self) -> AF_RPOINT_B_W<AF_HSCALE_B_SPEC> {
         AF_RPOINT_B_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures top coordinate of focus window b, must >= 2"]
     #[inline(always)]
-    #[must_use]
     pub fn af_lpoint_b(&mut self) -> AF_LPOINT_B_W<AF_HSCALE_B_SPEC> {
         AF_LPOINT_B_W::new(self, 16)
     }

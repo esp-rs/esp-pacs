@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - this field configures the the number of 64bits in a frame"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_raw_num_total(&mut self) -> DMA_RAW_NUM_TOTAL_W<DMA_RAW_DATA_SPEC> {
         DMA_RAW_NUM_TOTAL_W::new(self, 0)
     }
     #[doc = "Bit 31 - write 1 to update reg_dma_raw_num_total"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_raw_num_total_set(&mut self) -> DMA_RAW_NUM_TOTAL_SET_W<DMA_RAW_DATA_SPEC> {
         DMA_RAW_NUM_TOTAL_SET_W::new(self, 31)
     }

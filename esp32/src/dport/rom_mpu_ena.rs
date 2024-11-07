@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn share_rom_mpu_ena(&mut self) -> SHARE_ROM_MPU_ENA_W<ROM_MPU_ENA_SPEC> {
         SHARE_ROM_MPU_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_rom_mpu_ena(&mut self) -> PRO_ROM_MPU_ENA_W<ROM_MPU_ENA_SPEC> {
         PRO_ROM_MPU_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn app_rom_mpu_ena(&mut self) -> APP_ROM_MPU_ENA_W<ROM_MPU_ENA_SPEC> {
         APP_ROM_MPU_ENA_W::new(self, 2)
     }

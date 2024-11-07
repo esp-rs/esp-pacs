@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Pad compare interrupt clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pad_comp(&mut self) -> PAD_COMP_W<INT_CLR_SPEC> {
         PAD_COMP_W::new(self, 0)
     }

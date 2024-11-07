@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_lp_gpio_hold(&mut self) -> REG_LP_GPIO_HOLD_W<LP_PAD_HOLD_SPEC> {
         REG_LP_GPIO_HOLD_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_systimer_target2_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_target2_int_map(
         &mut self,
     ) -> SYSTIMER_TARGET2_INT_MAP_W<SYSTIMER_TARGET2_INT_MAP_SPEC> {

@@ -27,55 +27,46 @@ impl core::fmt::Debug for crate::generic::Reg<TOKEN_CON_SPEC> {
 impl W {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_token0_dec(&mut self) -> SLC0HOST_TOKEN0_DEC_W<TOKEN_CON_SPEC> {
         SLC0HOST_TOKEN0_DEC_W::new(self, 0)
     }
     #[doc = "Bit 1 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_token1_dec(&mut self) -> SLC0HOST_TOKEN1_DEC_W<TOKEN_CON_SPEC> {
         SLC0HOST_TOKEN1_DEC_W::new(self, 1)
     }
     #[doc = "Bit 2 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_token0_wr(&mut self) -> SLC0HOST_TOKEN0_WR_W<TOKEN_CON_SPEC> {
         SLC0HOST_TOKEN0_WR_W::new(self, 2)
     }
     #[doc = "Bit 3 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_token1_wr(&mut self) -> SLC0HOST_TOKEN1_WR_W<TOKEN_CON_SPEC> {
         SLC0HOST_TOKEN1_WR_W::new(self, 3)
     }
     #[doc = "Bit 4 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1host_token0_dec(&mut self) -> SLC1HOST_TOKEN0_DEC_W<TOKEN_CON_SPEC> {
         SLC1HOST_TOKEN0_DEC_W::new(self, 4)
     }
     #[doc = "Bit 5 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1host_token1_dec(&mut self) -> SLC1HOST_TOKEN1_DEC_W<TOKEN_CON_SPEC> {
         SLC1HOST_TOKEN1_DEC_W::new(self, 5)
     }
     #[doc = "Bit 6 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1host_token0_wr(&mut self) -> SLC1HOST_TOKEN0_WR_W<TOKEN_CON_SPEC> {
         SLC1HOST_TOKEN0_WR_W::new(self, 6)
     }
     #[doc = "Bit 7 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1host_token1_wr(&mut self) -> SLC1HOST_TOKEN1_WR_W<TOKEN_CON_SPEC> {
         SLC1HOST_TOKEN1_WR_W::new(self, 7)
     }
     #[doc = "Bit 8 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0host_len_wr(&mut self) -> SLC0HOST_LEN_WR_W<TOKEN_CON_SPEC> {
         SLC0HOST_LEN_WR_W::new(self, 8)
     }

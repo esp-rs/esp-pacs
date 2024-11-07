@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_fs(&mut self) -> TX_PDM_FS_W<PDM_FREQ_CONF_SPEC> {
         TX_PDM_FS_W::new(self, 0)
     }
     #[doc = "Bits 10:19"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_fp(&mut self) -> TX_PDM_FP_W<PDM_FREQ_CONF_SPEC> {
         TX_PDM_FP_W::new(self, 10)
     }

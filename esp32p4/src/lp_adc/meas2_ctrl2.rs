@@ -70,25 +70,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion."]
     #[inline(always)]
-    #[must_use]
     pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<MEAS2_CTRL2_SPEC> {
         MEAS2_START_SAR_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by SW."]
     #[inline(always)]
-    #[must_use]
     pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<MEAS2_CTRL2_SPEC> {
         MEAS2_START_FORCE_W::new(self, 18)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<MEAS2_CTRL2_SPEC> {
         SAR2_EN_PAD_W::new(self, 19)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by SW."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<MEAS2_CTRL2_SPEC> {
         SAR2_EN_PAD_FORCE_W::new(self, 31)
     }

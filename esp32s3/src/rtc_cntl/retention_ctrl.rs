@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:13 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_tag_mode(&mut self) -> RETENTION_TAG_MODE_W<RETENTION_CTRL_SPEC> {
         RETENTION_TAG_MODE_W::new(self, 10)
     }
     #[doc = "Bits 14:15 - congfigure retention target cpu and/or tag"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_target(&mut self) -> RETENTION_TARGET_W<RETENTION_CTRL_SPEC> {
         RETENTION_TARGET_W::new(self, 14)
     }
     #[doc = "Bit 16 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<RETENTION_CTRL_SPEC> {
         RETENTION_CLK_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - wait retention done cycle"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<RETENTION_CTRL_SPEC> {
         RETENTION_DONE_WAIT_W::new(self, 17)
     }
     #[doc = "Bits 20:23 - wait clk off cycle"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<RETENTION_CTRL_SPEC> {
         RETENTION_CLKOFF_WAIT_W::new(self, 20)
     }
     #[doc = "Bit 24 - enable retention"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_en(&mut self) -> RETENTION_EN_W<RETENTION_CTRL_SPEC> {
         RETENTION_EN_W::new(self, 24)
     }
     #[doc = "Bits 25:31 - wait cycles for rention operation"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<RETENTION_CTRL_SPEC> {
         RETENTION_WAIT_W::new(self, 25)
     }

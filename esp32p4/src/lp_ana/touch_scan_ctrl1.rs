@@ -57,13 +57,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_shield_pad_en(&mut self) -> TOUCH_SHIELD_PAD_EN_W<TOUCH_SCAN_CTRL1_SPEC> {
         TOUCH_SHIELD_PAD_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_inactive_connection(
         &mut self,
     ) -> TOUCH_INACTIVE_CONNECTION_W<TOUCH_SCAN_CTRL1_SPEC> {
@@ -71,13 +69,11 @@ impl W {
     }
     #[doc = "Bits 2:16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_scan_pad_map(&mut self) -> TOUCH_SCAN_PAD_MAP_W<TOUCH_SCAN_CTRL1_SPEC> {
         TOUCH_SCAN_PAD_MAP_W::new(self, 2)
     }
     #[doc = "Bits 17:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<TOUCH_SCAN_CTRL1_SPEC> {
         TOUCH_XPD_WAIT_W::new(self, 17)
     }

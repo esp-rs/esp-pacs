@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - For SPI0 In the spi sram mode spi dual I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
-    #[must_use]
     pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<CACHE_SCTRL_SPEC> {
         USR_SRAM_DIO_W::new(self, 1)
     }
     #[doc = "Bit 2 - For SPI0 In the spi sram mode spi quad I/O mode enable 1: enable 0:disable"]
     #[inline(always)]
-    #[must_use]
     pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<CACHE_SCTRL_SPEC> {
         USR_SRAM_QIO_W::new(self, 2)
     }
     #[doc = "Bit 3 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for write operations."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<CACHE_SCTRL_SPEC> {
         USR_WR_SRAM_DUMMY_W::new(self, 3)
     }
     #[doc = "Bit 4 - For SPI0 In the spi sram mode it is the enable bit of dummy phase for read operations."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<CACHE_SCTRL_SPEC> {
         USR_RD_SRAM_DUMMY_W::new(self, 4)
     }
     #[doc = "Bit 5 - For SPI0 In the spi sram mode cache read sram for user define command."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<CACHE_SCTRL_SPEC> {
         CACHE_SRAM_USR_RCMD_W::new(self, 5)
     }
     #[doc = "Bits 6:13 - For SPI0 In the sram mode it is the byte length of spi read sram data."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_bytes_len(&mut self) -> SRAM_BYTES_LEN_W<CACHE_SCTRL_SPEC> {
         SRAM_BYTES_LEN_W::new(self, 6)
     }
     #[doc = "Bits 14:21 - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_dummy_cyclelen(&mut self) -> SRAM_DUMMY_CYCLELEN_W<CACHE_SCTRL_SPEC> {
         SRAM_DUMMY_CYCLELEN_W::new(self, 14)
     }
     #[doc = "Bits 22:27 - For SPI0 In the sram mode it is the length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<CACHE_SCTRL_SPEC> {
         SRAM_ADDR_BITLEN_W::new(self, 22)
     }
     #[doc = "Bit 28 - For SPI0 In the spi sram mode cache write sram for user define command"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<CACHE_SCTRL_SPEC> {
         CACHE_SRAM_USR_WCMD_W::new(self, 28)
     }

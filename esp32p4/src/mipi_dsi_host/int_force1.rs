@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_to_hs_tx(&mut self) -> FORCE_TO_HS_TX_W<INT_FORCE1_SPEC> {
         FORCE_TO_HS_TX_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_to_lp_rx(&mut self) -> FORCE_TO_LP_RX_W<INT_FORCE1_SPEC> {
         FORCE_TO_LP_RX_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ecc_single_err(&mut self) -> FORCE_ECC_SINGLE_ERR_W<INT_FORCE1_SPEC> {
         FORCE_ECC_SINGLE_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ecc_milti_err(&mut self) -> FORCE_ECC_MILTI_ERR_W<INT_FORCE1_SPEC> {
         FORCE_ECC_MILTI_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_crc_err(&mut self) -> FORCE_CRC_ERR_W<INT_FORCE1_SPEC> {
         FORCE_CRC_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_pkt_size_err(&mut self) -> FORCE_PKT_SIZE_ERR_W<INT_FORCE1_SPEC> {
         FORCE_PKT_SIZE_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_eopt_err(&mut self) -> FORCE_EOPT_ERR_W<INT_FORCE1_SPEC> {
         FORCE_EOPT_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dpi_pld_wr_err(&mut self) -> FORCE_DPI_PLD_WR_ERR_W<INT_FORCE1_SPEC> {
         FORCE_DPI_PLD_WR_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_gen_cmd_wr_err(&mut self) -> FORCE_GEN_CMD_WR_ERR_W<INT_FORCE1_SPEC> {
         FORCE_GEN_CMD_WR_ERR_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_gen_pld_wr_err(&mut self) -> FORCE_GEN_PLD_WR_ERR_W<INT_FORCE1_SPEC> {
         FORCE_GEN_PLD_WR_ERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_gen_pld_send_err(&mut self) -> FORCE_GEN_PLD_SEND_ERR_W<INT_FORCE1_SPEC> {
         FORCE_GEN_PLD_SEND_ERR_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_gen_pld_rd_err(&mut self) -> FORCE_GEN_PLD_RD_ERR_W<INT_FORCE1_SPEC> {
         FORCE_GEN_PLD_RD_ERR_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_gen_pld_recev_err(&mut self) -> FORCE_GEN_PLD_RECEV_ERR_W<INT_FORCE1_SPEC> {
         FORCE_GEN_PLD_RECEV_ERR_W::new(self, 12)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dpi_buff_pld_under(&mut self) -> FORCE_DPI_BUFF_PLD_UNDER_W<INT_FORCE1_SPEC> {
         FORCE_DPI_BUFF_PLD_UNDER_W::new(self, 19)
     }

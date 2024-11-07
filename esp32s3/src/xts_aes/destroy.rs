@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<DESTROY_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to destroy encrypted result."]
     #[inline(always)]
-    #[must_use]
     pub fn destroy(&mut self) -> DESTROY_W<DESTROY_SPEC> {
         DESTROY_W::new(self, 0)
     }

@@ -62,25 +62,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - reg_wakeup_th_low"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_th_low(&mut self) -> WAKEUP_TH_LOW_W<TSENS_WAKE_SPEC> {
         WAKEUP_TH_LOW_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - reg_wakeup_th_high"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_th_high(&mut self) -> WAKEUP_TH_HIGH_W<TSENS_WAKE_SPEC> {
         WAKEUP_TH_HIGH_W::new(self, 8)
     }
     #[doc = "Bit 17 - reg_wakeup_mode"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_mode(&mut self) -> WAKEUP_MODE_W<TSENS_WAKE_SPEC> {
         WAKEUP_MODE_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_wakeup_en"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_en(&mut self) -> WAKEUP_EN_W<TSENS_WAKE_SPEC> {
         WAKEUP_EN_W::new(self, 18)
     }

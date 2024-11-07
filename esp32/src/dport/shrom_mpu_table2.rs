@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn shrom_mpu_table2(&mut self) -> SHROM_MPU_TABLE2_W<SHROM_MPU_TABLE2_SPEC> {
         SHROM_MPU_TABLE2_W::new(self, 0)
     }

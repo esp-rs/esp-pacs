@@ -146,85 +146,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - Configure the cycles for DOUT phase of LCD module. The cycles = this value + 1."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout_cyclelen(&mut self) -> LCD_DOUT_CYCLELEN_W<LCD_USER_SPEC> {
         LCD_DOUT_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bit 13 - LCD continues outputting data when LCD is in DOUT phase, till LCD_CAM_LCD_START is cleared or LCD_CAM_LCD_RESET is set."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_always_out_en(&mut self) -> LCD_ALWAYS_OUT_EN_W<LCD_USER_SPEC> {
         LCD_ALWAYS_OUT_EN_W::new(self, 13)
     }
     #[doc = "Bit 19 - 1: Swap every two data bytes, valid in 8-bit mode. 0: Do not swap."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_8bits_order(&mut self) -> LCD_8BITS_ORDER_W<LCD_USER_SPEC> {
         LCD_8BITS_ORDER_W::new(self, 19)
     }
     #[doc = "Bit 20 - 1: Update LCD registers. This bit is cleared by hardware. 0: Do not care."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_update(&mut self) -> LCD_UPDATE_W<LCD_USER_SPEC> {
         LCD_UPDATE_W::new(self, 20)
     }
     #[doc = "Bit 21 - 1: Change data bit order. Change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_bit_order(&mut self) -> LCD_BIT_ORDER_W<LCD_USER_SPEC> {
         LCD_BIT_ORDER_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not invert."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_byte_order(&mut self) -> LCD_BYTE_ORDER_W<LCD_USER_SPEC> {
         LCD_BYTE_ORDER_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: The width of output LCD data is 16 bits. 0: The width of output LCD data is 8 bits."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_2byte_en(&mut self) -> LCD_2BYTE_EN_W<LCD_USER_SPEC> {
         LCD_2BYTE_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout(&mut self) -> LCD_DOUT_W<LCD_USER_SPEC> {
         LCD_DOUT_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: Enable DUMMY phase in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dummy(&mut self) -> LCD_DUMMY_W<LCD_USER_SPEC> {
         LCD_DUMMY_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cmd(&mut self) -> LCD_CMD_W<LCD_USER_SPEC> {
         LCD_CMD_W::new(self, 26)
     }
     #[doc = "Bit 27 - LCD starts sending data enable signal, valid in high level."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_start(&mut self) -> LCD_START_W<LCD_USER_SPEC> {
         LCD_START_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reset LCD module."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_reset(&mut self) -> LCD_RESET_W<LCD_USER_SPEC> {
         LCD_RESET_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - Configure DUMMY cycles. DUMMY cycles = this value + 1."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dummy_cyclelen(&mut self) -> LCD_DUMMY_CYCLELEN_W<LCD_USER_SPEC> {
         LCD_DUMMY_CYCLELEN_W::new(self, 29)
     }
     #[doc = "Bit 31 - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cmd_2_cycle_en(&mut self) -> LCD_CMD_2_CYCLE_EN_W<LCD_USER_SPEC> {
         LCD_CMD_2_CYCLE_EN_W::new(self, 31)
     }

@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_src_sel(&mut self) -> I2C0_CLK_SRC_SEL_W<PERI_CLK_CTRL10_SPEC> {
         I2C0_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_en(&mut self) -> I2C0_CLK_EN_W<PERI_CLK_CTRL10_SPEC> {
         I2C0_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_div_num(&mut self) -> I2C0_CLK_DIV_NUM_W<PERI_CLK_CTRL10_SPEC> {
         I2C0_CLK_DIV_NUM_W::new(self, 2)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_div_numerator(&mut self) -> I2C0_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL10_SPEC> {
         I2C0_CLK_DIV_NUMERATOR_W::new(self, 10)
     }
     #[doc = "Bits 18:25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_div_denominator(&mut self) -> I2C0_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL10_SPEC> {
         I2C0_CLK_DIV_DENOMINATOR_W::new(self, 18)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c1_clk_src_sel(&mut self) -> I2C1_CLK_SRC_SEL_W<PERI_CLK_CTRL10_SPEC> {
         I2C1_CLK_SRC_SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c1_clk_en(&mut self) -> I2C1_CLK_EN_W<PERI_CLK_CTRL10_SPEC> {
         I2C1_CLK_EN_W::new(self, 27)
     }

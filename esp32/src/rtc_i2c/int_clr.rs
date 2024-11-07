@@ -56,31 +56,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_trans_complete(&mut self) -> SLAVE_TRANS_COMPLETE_W<INT_CLR_SPEC> {
         SLAVE_TRANS_COMPLETE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_CLR_SPEC> {
         ARBITRATION_LOST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn master_trans_complete(&mut self) -> MASTER_TRANS_COMPLETE_W<INT_CLR_SPEC> {
         MASTER_TRANS_COMPLETE_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_CLR_SPEC> {
         TRANS_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<INT_CLR_SPEC> {
         TIME_OUT_W::new(self, 8)
     }

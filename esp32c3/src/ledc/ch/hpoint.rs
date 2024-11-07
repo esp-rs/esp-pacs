@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - reg_hpoint_lsch0."]
     #[inline(always)]
-    #[must_use]
     pub fn hpoint(&mut self) -> HPOINT_W<HPOINT_SPEC> {
         HPOINT_W::new(self, 0)
     }

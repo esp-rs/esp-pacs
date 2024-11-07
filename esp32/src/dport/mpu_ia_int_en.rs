@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16"]
     #[inline(always)]
-    #[must_use]
     pub fn mpu_ia_int_en(&mut self) -> MPU_IA_INT_EN_W<MPU_IA_INT_EN_SPEC> {
         MPU_IA_INT_EN_W::new(self, 0)
     }

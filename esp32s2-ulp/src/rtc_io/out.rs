@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output register. Bit10 corresponds to GPIO0, bit11 corresponds to GPIO1, etc."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_out_data(&mut self) -> GPIO_OUT_DATA_W<OUT_SPEC> {
         GPIO_OUT_DATA_W::new(self, 10)
     }

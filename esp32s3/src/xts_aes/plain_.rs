@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the nth 32-bit piece of plaintext."]
     #[inline(always)]
-    #[must_use]
     pub fn plain(&mut self) -> PLAIN_W<PLAIN__SPEC> {
         PLAIN_W::new(self, 0)
     }

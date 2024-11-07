@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:26 - retention dma link base"]
     #[inline(always)]
-    #[must_use]
     pub fn link_base_addr(&mut self) -> LINK_BASE_ADDR_W<RETENTION_LINK_BASE_SPEC> {
         LINK_BASE_ADDR_W::new(self, 0)
     }

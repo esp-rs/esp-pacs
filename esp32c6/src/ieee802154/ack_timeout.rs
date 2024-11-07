@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn ack_timeout(&mut self) -> ACK_TIMEOUT_W<ACK_TIMEOUT_SPEC> {
         ACK_TIMEOUT_W::new(self, 0)
     }

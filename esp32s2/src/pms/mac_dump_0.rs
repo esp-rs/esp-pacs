@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks MAC dump permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn mac_dump_lock(&mut self) -> MAC_DUMP_LOCK_W<MAC_DUMP_0_SPEC> {
         MAC_DUMP_LOCK_W::new(self, 0)
     }

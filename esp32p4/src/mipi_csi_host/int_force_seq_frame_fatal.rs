@@ -174,67 +174,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc0(&mut self) -> FORCE_ERR_F_SEQ_VC0_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc1(&mut self) -> FORCE_ERR_F_SEQ_VC1_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC1_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc2(&mut self) -> FORCE_ERR_F_SEQ_VC2_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC2_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc3(&mut self) -> FORCE_ERR_F_SEQ_VC3_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC3_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc4(&mut self) -> FORCE_ERR_F_SEQ_VC4_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC4_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc5(&mut self) -> FORCE_ERR_F_SEQ_VC5_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC5_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc6(&mut self) -> FORCE_ERR_F_SEQ_VC6_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC6_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc7(&mut self) -> FORCE_ERR_F_SEQ_VC7_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC7_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc8(&mut self) -> FORCE_ERR_F_SEQ_VC8_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC8_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc9(&mut self) -> FORCE_ERR_F_SEQ_VC9_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
         FORCE_ERR_F_SEQ_VC9_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc10(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC10_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
@@ -242,7 +231,6 @@ impl W {
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc11(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC11_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
@@ -250,7 +238,6 @@ impl W {
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc12(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC12_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
@@ -258,7 +245,6 @@ impl W {
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc13(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC13_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
@@ -266,7 +252,6 @@ impl W {
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc14(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC14_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {
@@ -274,7 +259,6 @@ impl W {
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_f_seq_vc15(
         &mut self,
     ) -> FORCE_ERR_F_SEQ_VC15_W<INT_FORCE_SEQ_FRAME_FATAL_SPEC> {

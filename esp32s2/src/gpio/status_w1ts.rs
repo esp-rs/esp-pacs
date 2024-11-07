@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 interrupt status set register. If the value 1 is written to a bit here, the corresponding bit in GPIO_STATUS_INTERRUPT will be set to 1. Recommended operation: use this register to set GPIO_STATUS_INTERRUPT."]
     #[inline(always)]
-    #[must_use]
     pub fn status_w1ts(&mut self) -> STATUS_W1TS_W<STATUS_W1TS_SPEC> {
         STATUS_W1TS_W::new(self, 0)
     }

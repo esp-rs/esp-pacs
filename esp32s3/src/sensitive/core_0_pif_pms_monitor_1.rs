@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to clear interrupt that core0 initiate illegal PIF bus access."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_monitor_violate_clr(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_CLR_W<CORE_0_PIF_PMS_MONITOR_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - Set 1 to enable interrupt that core0 initiate illegal PIF bus access."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_monitor_violate_en(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_EN_W<CORE_0_PIF_PMS_MONITOR_1_SPEC> {

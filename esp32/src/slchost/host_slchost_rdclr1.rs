@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_slc1_bit7_clraddr(
         &mut self,
     ) -> HOST_SLCHOST_SLC1_BIT7_CLRADDR_W<HOST_SLCHOST_RDCLR1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 9:17"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_slc1_bit6_clraddr(
         &mut self,
     ) -> HOST_SLCHOST_SLC1_BIT6_CLRADDR_W<HOST_SLCHOST_RDCLR1_SPEC> {

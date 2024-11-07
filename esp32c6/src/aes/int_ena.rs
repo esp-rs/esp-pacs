@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable interrupt that occurs when DMA-AES calculation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn int_ena(&mut self) -> INT_ENA_W<INT_ENA_SPEC> {
         INT_ENA_W::new(self, 0)
     }

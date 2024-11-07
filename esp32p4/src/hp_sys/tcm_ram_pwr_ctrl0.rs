@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - hp_tcm clk gatig force on"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_hp_tcm_clk_force_on(&mut self) -> REG_HP_TCM_CLK_FORCE_ON_W<TCM_RAM_PWR_CTRL0_SPEC> {
         REG_HP_TCM_CLK_FORCE_ON_W::new(self, 0)
     }

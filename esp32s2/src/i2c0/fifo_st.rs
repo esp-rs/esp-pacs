@@ -58,13 +58,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - Write 0 or 1 to I2C_RX_UPDATE to update the value of I2C_RXFIFO_END_ADDR and I2C_RXFIFO_START_ADDR."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_update(&mut self) -> RX_UPDATE_W<FIFO_ST_SPEC> {
         RX_UPDATE_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write 0 or 1 to I2C_TX_UPDATE to update the value of I2C_TXFIFO_END_ADDR and I2C_TXFIFO_START_ADDR."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_update(&mut self) -> TX_UPDATE_W<FIFO_ST_SPEC> {
         TX_UPDATE_W::new(self, 21)
     }

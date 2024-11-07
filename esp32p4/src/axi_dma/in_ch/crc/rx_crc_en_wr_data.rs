@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register is used to enable rx ch0 crc 32bit on/off"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_crc_en_wr_data(&mut self) -> RX_CRC_EN_WR_DATA_W<RX_CRC_EN_WR_DATA_SPEC> {
         RX_CRC_EN_WR_DATA_W::new(self, 0)
     }

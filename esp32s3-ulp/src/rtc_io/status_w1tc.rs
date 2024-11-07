@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 interrupt status write 1 to clear"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_status_int_w1tc(&mut self) -> GPIO_STATUS_INT_W1TC_W<STATUS_W1TC_SPEC> {
         GPIO_STATUS_INT_W1TC_W::new(self, 10)
     }

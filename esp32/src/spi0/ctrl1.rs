@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:27 - Delay cycles of resume Flash when resume Flash is enable by spi clock."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_hold_delay_res(&mut self) -> CS_HOLD_DELAY_RES_W<CTRL1_SPEC> {
         CS_HOLD_DELAY_RES_W::new(self, 16)
     }
     #[doc = "Bits 28:31 - SPI cs signal is delayed by spi clock cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn cs_hold_delay(&mut self) -> CS_HOLD_DELAY_W<CTRL1_SPEC> {
         CS_HOLD_DELAY_W::new(self, 28)
     }

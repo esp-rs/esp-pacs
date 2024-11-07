@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In the slave mode it is the value of read-buffer command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdbuf_cmd_value(&mut self) -> SLV_RDBUF_CMD_VALUE_W<SLAVE3_SPEC> {
         SLV_RDBUF_CMD_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - In the slave mode it is the value of write-buffer command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrbuf_cmd_value(&mut self) -> SLV_WRBUF_CMD_VALUE_W<SLAVE3_SPEC> {
         SLV_WRBUF_CMD_VALUE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the value of read-status command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdsta_cmd_value(&mut self) -> SLV_RDSTA_CMD_VALUE_W<SLAVE3_SPEC> {
         SLV_RDSTA_CMD_VALUE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode it is the value of write-status command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrsta_cmd_value(&mut self) -> SLV_WRSTA_CMD_VALUE_W<SLAVE3_SPEC> {
         SLV_WRSTA_CMD_VALUE_W::new(self, 24)
     }

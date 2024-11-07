@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn pll_tick_num(&mut self) -> PLL_TICK_NUM_W<PLL_TICK_CONF_SPEC> {
         PLL_TICK_NUM_W::new(self, 0)
     }

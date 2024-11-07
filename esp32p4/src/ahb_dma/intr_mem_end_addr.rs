@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The end address of accessible address space. The access address beyond this range would lead to descriptor error."]
     #[inline(always)]
-    #[must_use]
     pub fn access_intr_mem_end_addr(
         &mut self,
     ) -> ACCESS_INTR_MEM_END_ADDR_W<INTR_MEM_END_ADDR_SPEC> {

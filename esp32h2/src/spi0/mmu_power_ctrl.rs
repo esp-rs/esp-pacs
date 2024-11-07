@@ -78,25 +78,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable mmu-memory clock force on"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mmu_mem_force_on(&mut self) -> SPI_MMU_MEM_FORCE_ON_W<MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force mmu-memory powerdown"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mmu_mem_force_pd(&mut self) -> SPI_MMU_MEM_FORCE_PD_W<MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mmu_mem_force_pu(&mut self) -> SPI_MMU_MEM_FORCE_PU_W<MMU_POWER_CTRL_SPEC> {
         SPI_MMU_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mmu_page_size(&mut self) -> SPI_MMU_PAGE_SIZE_W<MMU_POWER_CTRL_SPEC> {
         SPI_MMU_PAGE_SIZE_W::new(self, 3)
     }

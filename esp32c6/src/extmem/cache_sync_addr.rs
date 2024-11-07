@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the sync operation, which should be used together with CACHE_SYNC_SIZE_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sync_addr(&mut self) -> CACHE_SYNC_ADDR_W<CACHE_SYNC_ADDR_SPEC> {
         CACHE_SYNC_ADDR_W::new(self, 0)
     }

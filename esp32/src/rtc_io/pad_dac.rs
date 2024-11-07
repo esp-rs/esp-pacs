@@ -144,79 +144,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_xpd_force(&mut self) -> DAC_XPD_FORCE_W<PAD_DAC_SPEC> {
         DAC_XPD_FORCE_W::new(self, 10)
     }
     #[doc = "Bit 11 - the input enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<PAD_DAC_SPEC> {
         FUN_IE_W::new(self, 11)
     }
     #[doc = "Bit 12 - the output enable of the pad in sleep status"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_oe(&mut self) -> SLP_OE_W<PAD_DAC_SPEC> {
         SLP_OE_W::new(self, 12)
     }
     #[doc = "Bit 13 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_ie(&mut self) -> SLP_IE_W<PAD_DAC_SPEC> {
         SLP_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<PAD_DAC_SPEC> {
         SLP_SEL_W::new(self, 14)
     }
     #[doc = "Bits 15:16 - the functional selection signal of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_sel(&mut self) -> FUN_SEL_W<PAD_DAC_SPEC> {
         FUN_SEL_W::new(self, 15)
     }
     #[doc = "Bit 17 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    #[must_use]
     pub fn mux_sel(&mut self) -> MUX_SEL_W<PAD_DAC_SPEC> {
         MUX_SEL_W::new(self, 17)
     }
     #[doc = "Bit 18 - Power on DAC1. Usually we need to tristate PDAC1 if we power on the DAC i.e. IE=0 OE=0 RDE=0 RUE=0"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_dac(&mut self) -> XPD_DAC_W<PAD_DAC_SPEC> {
         XPD_DAC_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - PAD DAC1 control code."]
     #[inline(always)]
-    #[must_use]
     pub fn dac(&mut self) -> DAC_W<PAD_DAC_SPEC> {
         DAC_W::new(self, 19)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn rue(&mut self) -> RUE_W<PAD_DAC_SPEC> {
         RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn rde(&mut self) -> RDE_W<PAD_DAC_SPEC> {
         RDE_W::new(self, 28)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    #[must_use]
     pub fn hold(&mut self) -> HOLD_W<PAD_DAC_SPEC> {
         HOLD_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - the driver strength of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn drv(&mut self) -> DRV_W<PAD_DAC_SPEC> {
         DRV_W::new(self, 30)
     }

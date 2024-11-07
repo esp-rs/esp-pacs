@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_state(&mut self) -> TX_STATE_W<TX_STATUS_SPEC> {
         TX_STATE_W::new(self, 0)
     }
     #[doc = "Bits 4:8"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_abort_status(&mut self) -> TX_ABORT_STATUS_W<TX_STATUS_SPEC> {
         TX_ABORT_STATUS_W::new(self, 4)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_sec_error_code(&mut self) -> TX_SEC_ERROR_CODE_W<TX_STATUS_SPEC> {
         TX_SEC_ERROR_CODE_W::new(self, 16)
     }

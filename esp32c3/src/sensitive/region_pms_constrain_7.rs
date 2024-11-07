@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - region_pms_constrain_addr_4"]
     #[inline(always)]
-    #[must_use]
     pub fn region_pms_constrain_addr_4(
         &mut self,
     ) -> REGION_PMS_CONSTRAIN_ADDR_4_W<REGION_PMS_CONSTRAIN_7_SPEC> {

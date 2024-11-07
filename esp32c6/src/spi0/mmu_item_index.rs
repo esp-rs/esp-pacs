@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - MSPI-MMU item index"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mmu_item_index(&mut self) -> SPI_MMU_ITEM_INDEX_W<MMU_ITEM_INDEX_SPEC> {
         SPI_MMU_ITEM_INDEX_W::new(self, 0)
     }

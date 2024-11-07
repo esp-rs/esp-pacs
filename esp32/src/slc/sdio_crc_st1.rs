@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn err_cnt_clr(&mut self) -> ERR_CNT_CLR_W<SDIO_CRC_ST1_SPEC> {
         ERR_CNT_CLR_W::new(self, 31)
     }

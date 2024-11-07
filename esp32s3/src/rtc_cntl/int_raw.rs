@@ -184,7 +184,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - touch approach mode loop interrupt raw"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_approach_loop_done(&mut self) -> TOUCH_APPROACH_LOOP_DONE_W<INT_RAW_SPEC> {
         TOUCH_APPROACH_LOOP_DONE_W::new(self, 20)
     }

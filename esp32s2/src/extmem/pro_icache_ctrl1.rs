@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable ibus0, 0: enable, 1: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_mask_bus0(&mut self) -> PRO_ICACHE_MASK_BUS0_W<PRO_ICACHE_CTRL1_SPEC> {
         PRO_ICACHE_MASK_BUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable ibus1, 0: enable, 1: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_mask_bus1(&mut self) -> PRO_ICACHE_MASK_BUS1_W<PRO_ICACHE_CTRL1_SPEC> {
         PRO_ICACHE_MASK_BUS1_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to disable ibus2, 0: enable, 1: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_mask_bus2(&mut self) -> PRO_ICACHE_MASK_BUS2_W<PRO_ICACHE_CTRL1_SPEC> {
         PRO_ICACHE_MASK_BUS2_W::new(self, 2)
     }

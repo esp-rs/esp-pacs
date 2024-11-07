@@ -127,7 +127,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_neg_noise_disupdate_baseline_en(
         &mut self,
     ) -> TOUCH_NEG_NOISE_DISUPDATE_BASELINE_EN_W<TOUCH_FILTER1_SPEC> {
@@ -135,61 +134,51 @@ impl W {
     }
     #[doc = "Bits 1:2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<TOUCH_FILTER1_SPEC> {
         TOUCH_HYSTERESIS_W::new(self, 1)
     }
     #[doc = "Bits 3:4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<TOUCH_FILTER1_SPEC> {
         TOUCH_NEG_NOISE_THRES_W::new(self, 3)
     }
     #[doc = "Bits 5:6 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<TOUCH_FILTER1_SPEC> {
         TOUCH_NOISE_THRES_W::new(self, 5)
     }
     #[doc = "Bits 7:8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<TOUCH_FILTER1_SPEC> {
         TOUCH_SMOOTH_LVL_W::new(self, 7)
     }
     #[doc = "Bits 9:12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<TOUCH_FILTER1_SPEC> {
         TOUCH_JITTER_STEP_W::new(self, 9)
     }
     #[doc = "Bits 13:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<TOUCH_FILTER1_SPEC> {
         TOUCH_FILTER_MODE_W::new(self, 13)
     }
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<TOUCH_FILTER1_SPEC> {
         TOUCH_FILTER_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:20 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<TOUCH_FILTER1_SPEC> {
         TOUCH_NEG_NOISE_LIMIT_W::new(self, 17)
     }
     #[doc = "Bits 21:28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_approach_limit(&mut self) -> TOUCH_APPROACH_LIMIT_W<TOUCH_FILTER1_SPEC> {
         TOUCH_APPROACH_LIMIT_W::new(self, 21)
     }
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_debounce_limit(&mut self) -> TOUCH_DEBOUNCE_LIMIT_W<TOUCH_FILTER1_SPEC> {
         TOUCH_DEBOUNCE_LIMIT_W::new(self, 29)
     }

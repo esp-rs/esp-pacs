@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - RTC timer high 16 bits"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_value0_high(&mut self) -> TIMER_VALUE0_HIGH_W<TIME_HIGH0_SPEC> {
         TIMER_VALUE0_HIGH_W::new(self, 0)
     }

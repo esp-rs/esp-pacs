@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_min_speech_count(&mut self) -> PARAM_MIN_SPEECH_COUNT_W<VAD_PARAM1_SPEC> {
         PARAM_MIN_SPEECH_COUNT_W::new(self, 0)
     }
     #[doc = "Bits 4:10 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_max_speech_count(&mut self) -> PARAM_MAX_SPEECH_COUNT_W<VAD_PARAM1_SPEC> {
         PARAM_MAX_SPEECH_COUNT_W::new(self, 4)
     }
     #[doc = "Bits 11:15 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_hangover_speech(&mut self) -> PARAM_HANGOVER_SPEECH_W<VAD_PARAM1_SPEC> {
         PARAM_HANGOVER_SPEECH_W::new(self, 11)
     }
     #[doc = "Bits 16:23 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_hangover_silent(&mut self) -> PARAM_HANGOVER_SILENT_W<VAD_PARAM1_SPEC> {
         PARAM_HANGOVER_SILENT_W::new(self, 16)
     }
     #[doc = "Bits 24:30 - VAD parameter"]
     #[inline(always)]
-    #[must_use]
     pub fn param_max_offset(&mut self) -> PARAM_MAX_OFFSET_W<VAD_PARAM1_SPEC> {
         PARAM_MAX_OFFSET_W::new(self, 24)
     }
     #[doc = "Bit 31 - Set 1 to skip band energy check."]
     #[inline(always)]
-    #[must_use]
     pub fn param_skip_band_energy(&mut self) -> PARAM_SKIP_BAND_ENERGY_W<VAD_PARAM1_SPEC> {
         PARAM_SKIP_BAND_ENERGY_W::new(self, 31)
     }

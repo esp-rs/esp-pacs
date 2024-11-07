@@ -93,7 +93,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 denies PeriBus1 bus???s access to APB peripheral."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_apb_peripheral_forbid(
         &mut self,
     ) -> PRO_DPORT_APB_PERIPHERAL_FORBID_W<PRO_DPORT_1_SPEC> {
@@ -101,37 +100,31 @@ impl W {
     }
     #[doc = "Bits 1:11 - Configure the split address of RTC FAST for PeriBus1 access."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_rtcslow_spltaddr(&mut self) -> PRO_DPORT_RTCSLOW_SPLTADDR_W<PRO_DPORT_1_SPEC> {
         PRO_DPORT_RTCSLOW_SPLTADDR_W::new(self, 1)
     }
     #[doc = "Bit 12 - Setting to 1 grants PeriBus1 permission to read RTC FAST low address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_rtcslow_l_r(&mut self) -> PRO_DPORT_RTCSLOW_L_R_W<PRO_DPORT_1_SPEC> {
         PRO_DPORT_RTCSLOW_L_R_W::new(self, 12)
     }
     #[doc = "Bit 13 - Setting to 1 grants PeriBus1 permission to write RTC FAST low address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_rtcslow_l_w(&mut self) -> PRO_DPORT_RTCSLOW_L_W_W<PRO_DPORT_1_SPEC> {
         PRO_DPORT_RTCSLOW_L_W_W::new(self, 13)
     }
     #[doc = "Bit 14 - Setting to 1 grants PeriBus1 permission to read RTC FAST high address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_rtcslow_h_r(&mut self) -> PRO_DPORT_RTCSLOW_H_R_W<PRO_DPORT_1_SPEC> {
         PRO_DPORT_RTCSLOW_H_R_W::new(self, 14)
     }
     #[doc = "Bit 15 - Setting to 1 grants PeriBus1 permission to write RTC FAST high address region."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_rtcslow_h_w(&mut self) -> PRO_DPORT_RTCSLOW_H_W_W<PRO_DPORT_1_SPEC> {
         PRO_DPORT_RTCSLOW_H_W_W::new(self, 15)
     }
     #[doc = "Bits 16:19 - Configure whether to enable read protection for user-configured FIFO address."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_reserve_fifo_valid(
         &mut self,
     ) -> PRO_DPORT_RESERVE_FIFO_VALID_W<PRO_DPORT_1_SPEC> {

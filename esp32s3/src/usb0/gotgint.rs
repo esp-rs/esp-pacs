@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC> {
         SESENDDET_W::new(self, 2)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<GOTGINT_SPEC> {
         SESREQSUCSTSCHNG_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<GOTGINT_SPEC> {
         HSTNEGSUCSTSCHNG_W::new(self, 9)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn hstnegdet(&mut self) -> HSTNEGDET_W<GOTGINT_SPEC> {
         HSTNEGDET_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<GOTGINT_SPEC> {
         ADEVTOUTCHG_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
     pub fn dbncedone(&mut self) -> DBNCEDONE_W<GOTGINT_SPEC> {
         DBNCEDONE_W::new(self, 19)
     }

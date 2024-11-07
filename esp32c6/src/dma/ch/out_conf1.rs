@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<OUT_CONF1_SPEC> {
         OUT_CHECK_OWNER_W::new(self, 12)
     }

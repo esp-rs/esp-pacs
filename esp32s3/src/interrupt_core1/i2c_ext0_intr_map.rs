@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map i2c_ext0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_ext0_intr_map(&mut self) -> I2C_EXT0_INTR_MAP_W<I2C_EXT0_INTR_MAP_SPEC> {
         I2C_EXT0_INTR_MAP_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable atomic feature on L1-DCache when multiple cores access L1-DCache. 1: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_atomic_en(&mut self) -> L1_DCACHE_ATOMIC_EN_W<L1_CACHE_ATOMIC_CONF_SPEC> {
         L1_DCACHE_ATOMIC_EN_W::new(self, 0)
     }

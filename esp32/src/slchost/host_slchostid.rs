@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_id(&mut self) -> HOST_SLCHOST_ID_W<HOST_SLCHOSTID_SPEC> {
         HOST_SLCHOST_ID_W::new(self, 0)
     }

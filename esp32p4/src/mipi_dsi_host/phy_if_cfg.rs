@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn n_lanes(&mut self) -> N_LANES_W<PHY_IF_CFG_SPEC> {
         N_LANES_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_stop_wait_time(&mut self) -> PHY_STOP_WAIT_TIME_W<PHY_IF_CFG_SPEC> {
         PHY_STOP_WAIT_TIME_W::new(self, 8)
     }

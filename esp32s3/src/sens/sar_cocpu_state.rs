@@ -56,7 +56,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - trigger cocpu debug registers"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_cocpu_dbg_trigger(&mut self) -> SAR_COCPU_DBG_TRIGGER_W<SAR_COCPU_STATE_SPEC> {
         SAR_COCPU_DBG_TRIGGER_W::new(self, 25)
     }

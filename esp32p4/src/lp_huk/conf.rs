@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this field to choose the huk process. 1: process huk generate mode. 0: process huk recovery mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> MODE_W<CONF_SPEC> {
         MODE_W::new(self, 0)
     }

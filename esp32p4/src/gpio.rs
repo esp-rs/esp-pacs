@@ -208,6 +208,8 @@ impl RegisterBlock {
         self.pin.iter()
     }
     #[doc = "0x15c..0x554 - GPIO input function configuration register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `FUNC1_IN_SEL_CFG` register.</div>"]
     #[inline(always)]
     pub const fn func_in_sel_cfg(&self, n: usize) -> &FUNC_IN_SEL_CFG {
         &self.func_in_sel_cfg[n]

@@ -214,121 +214,101 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This interrupt raw bit turns to high level when receiver receives more data than what rxfifo_full_thrhd specifies."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<INT_RAW_SPEC> {
         RXFIFO_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1 - This interrupt raw bit turns to high level when the amount of data in Tx-FIFO is less than what txfifo_empty_thrhd specifies ."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<INT_RAW_SPEC> {
         TXFIFO_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 2 - This interrupt raw bit turns to high level when receiver detects a parity error in the data."]
     #[inline(always)]
-    #[must_use]
     pub fn parity_err(&mut self) -> PARITY_ERR_W<INT_RAW_SPEC> {
         PARITY_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - This interrupt raw bit turns to high level when receiver detects a data frame error ."]
     #[inline(always)]
-    #[must_use]
     pub fn frm_err(&mut self) -> FRM_ERR_W<INT_RAW_SPEC> {
         FRM_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - This interrupt raw bit turns to high level when receiver receives more data than the FIFO can store."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_RAW_SPEC> {
         RXFIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - This interrupt raw bit turns to high level when receiver detects the edge change of DSRn signal."]
     #[inline(always)]
-    #[must_use]
     pub fn dsr_chg(&mut self) -> DSR_CHG_W<INT_RAW_SPEC> {
         DSR_CHG_W::new(self, 5)
     }
     #[doc = "Bit 6 - This interrupt raw bit turns to high level when receiver detects the edge change of CTSn signal."]
     #[inline(always)]
-    #[must_use]
     pub fn cts_chg(&mut self) -> CTS_CHG_W<INT_RAW_SPEC> {
         CTS_CHG_W::new(self, 6)
     }
     #[doc = "Bit 7 - This interrupt raw bit turns to high level when receiver detects a 0 after the stop bit."]
     #[inline(always)]
-    #[must_use]
     pub fn brk_det(&mut self) -> BRK_DET_W<INT_RAW_SPEC> {
         BRK_DET_W::new(self, 7)
     }
     #[doc = "Bit 8 - This interrupt raw bit turns to high level when receiver takes more time than rx_tout_thrhd to receive a byte."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_tout(&mut self) -> RXFIFO_TOUT_W<INT_RAW_SPEC> {
         RXFIFO_TOUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - This interrupt raw bit turns to high level when receiver recevies Xon char when uart_sw_flow_con_en is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_xon(&mut self) -> SW_XON_W<INT_RAW_SPEC> {
         SW_XON_W::new(self, 9)
     }
     #[doc = "Bit 10 - This interrupt raw bit turns to high level when receiver receives Xoff char when uart_sw_flow_con_en is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_xoff(&mut self) -> SW_XOFF_W<INT_RAW_SPEC> {
         SW_XOFF_W::new(self, 10)
     }
     #[doc = "Bit 11 - This interrupt raw bit turns to high level when receiver detects a glitch in the middle of a start bit."]
     #[inline(always)]
-    #[must_use]
     pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_RAW_SPEC> {
         GLITCH_DET_W::new(self, 11)
     }
     #[doc = "Bit 12 - This interrupt raw bit turns to high level when transmitter completes sending NULL characters after all data in Tx-FIFO are sent."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_done(&mut self) -> TX_BRK_DONE_W<INT_RAW_SPEC> {
         TX_BRK_DONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - This interrupt raw bit turns to high level when transmitter has kept the shortest duration after sending the last data."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_idle_done(&mut self) -> TX_BRK_IDLE_DONE_W<INT_RAW_SPEC> {
         TX_BRK_IDLE_DONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - This interrupt raw bit turns to high level when transmitter has send out all data in FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_done(&mut self) -> TX_DONE_W<INT_RAW_SPEC> {
         TX_DONE_W::new(self, 14)
     }
     #[doc = "Bit 15 - This interrupt raw bit turns to high level when receiver detects a parity error from the echo of transmitter in rs485 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_parity_err(&mut self) -> RS485_PARITY_ERR_W<INT_RAW_SPEC> {
         RS485_PARITY_ERR_W::new(self, 15)
     }
     #[doc = "Bit 16 - This interrupt raw bit turns to high level when receiver detects a data frame error from the echo of transmitter in rs485 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_frm_err(&mut self) -> RS485_FRM_ERR_W<INT_RAW_SPEC> {
         RS485_FRM_ERR_W::new(self, 16)
     }
     #[doc = "Bit 17 - This interrupt raw bit turns to high level when detects a clash between transmitter and receiver in rs485 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_clash(&mut self) -> RS485_CLASH_W<INT_RAW_SPEC> {
         RS485_CLASH_W::new(self, 17)
     }
     #[doc = "Bit 18 - This interrupt raw bit turns to high level when receiver detects the configured at_cmd char."]
     #[inline(always)]
-    #[must_use]
     pub fn at_cmd_char_det(&mut self) -> AT_CMD_CHAR_DET_W<INT_RAW_SPEC> {
         AT_CMD_CHAR_DET_W::new(self, 18)
     }
     #[doc = "Bit 19 - This interrupt raw bit turns to high level when input rxd edge changes more times than what reg_active_threshold specifies in light sleeping mode."]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup(&mut self) -> WAKEUP_W<INT_RAW_SPEC> {
         WAKEUP_W::new(self, 19)
     }

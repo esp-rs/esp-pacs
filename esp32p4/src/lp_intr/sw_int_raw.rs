@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sw_int_raw(&mut self) -> LP_SW_INT_RAW_W<SW_INT_RAW_SPEC> {
         LP_SW_INT_RAW_W::new(self, 31)
     }

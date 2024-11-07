@@ -49,25 +49,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_pin8_wakeup_enable(&mut self) -> REG_GPIO_PIN8_WAKEUP_ENABLE_W<PIN8_SPEC> {
         REG_GPIO_PIN8_WAKEUP_ENABLE_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_pin8_int_type(&mut self) -> REG_GPIO_PIN8_INT_TYPE_W<PIN8_SPEC> {
         REG_GPIO_PIN8_INT_TYPE_W::new(self, 1)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_pin8_pad_driver(&mut self) -> REG_GPIO_PIN8_PAD_DRIVER_W<PIN8_SPEC> {
         REG_GPIO_PIN8_PAD_DRIVER_W::new(self, 4)
     }
     #[doc = "Bit 5 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpi8_pin0_edge_wakeup_clr(&mut self) -> REG_GPI8_PIN0_EDGE_WAKEUP_CLR_W<PIN8_SPEC> {
         REG_GPI8_PIN0_EDGE_WAKEUP_CLR_W::new(self, 5)
     }

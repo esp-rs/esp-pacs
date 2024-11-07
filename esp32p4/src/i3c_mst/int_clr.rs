@@ -41,97 +41,81 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_data_buf_thld(&mut self) -> TX_DATA_BUF_THLD_W<INT_CLR_SPEC> {
         TX_DATA_BUF_THLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_data_buf_thld(&mut self) -> RX_DATA_BUF_THLD_W<INT_CLR_SPEC> {
         RX_DATA_BUF_THLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ibi_status_thld(&mut self) -> IBI_STATUS_THLD_W<INT_CLR_SPEC> {
         IBI_STATUS_THLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn cmd_buf_empty_thld(&mut self) -> CMD_BUF_EMPTY_THLD_W<INT_CLR_SPEC> {
         CMD_BUF_EMPTY_THLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn resp_ready(&mut self) -> RESP_READY_W<INT_CLR_SPEC> {
         RESP_READY_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn nxt_cmd_req_err(&mut self) -> NXT_CMD_REQ_ERR_W<INT_CLR_SPEC> {
         NXT_CMD_REQ_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn transfer_err(&mut self) -> TRANSFER_ERR_W<INT_CLR_SPEC> {
         TRANSFER_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn transfer_complete(&mut self) -> TRANSFER_COMPLETE_W<INT_CLR_SPEC> {
         TRANSFER_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn command_done(&mut self) -> COMMAND_DONE_W<INT_CLR_SPEC> {
         COMMAND_DONE_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn detect_start(&mut self) -> DETECT_START_W<INT_CLR_SPEC> {
         DETECT_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn resp_buf_ovf(&mut self) -> RESP_BUF_OVF_W<INT_CLR_SPEC> {
         RESP_BUF_OVF_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ibi_data_buf_ovf(&mut self) -> IBI_DATA_BUF_OVF_W<INT_CLR_SPEC> {
         IBI_DATA_BUF_OVF_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ibi_status_buf_ovf(&mut self) -> IBI_STATUS_BUF_OVF_W<INT_CLR_SPEC> {
         IBI_STATUS_BUF_OVF_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ibi_handle_done(&mut self) -> IBI_HANDLE_DONE_W<INT_CLR_SPEC> {
         IBI_HANDLE_DONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ibi_detect(&mut self) -> IBI_DETECT_W<INT_CLR_SPEC> {
         IBI_DETECT_W::new(self, 14)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn cmd_ccc_mismatch(&mut self) -> CMD_CCC_MISMATCH_W<INT_CLR_SPEC> {
         CMD_CCC_MISMATCH_W::new(self, 15)
     }

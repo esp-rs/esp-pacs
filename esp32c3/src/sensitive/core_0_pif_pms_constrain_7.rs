@@ -111,7 +111,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - core_0_pif_pms_constrain_world_1_spi_2"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_spi_2(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -119,7 +118,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_apb_ctrl"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_apb_ctrl(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -127,7 +125,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_1_can"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_can(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -135,7 +132,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_1_i2s1"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_i2s1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -143,7 +139,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_1_rwbt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_rwbt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -151,7 +146,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_wifimac"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_wifimac(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
@@ -159,7 +153,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_1_pwr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_pwr(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {

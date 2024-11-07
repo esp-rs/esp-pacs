@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - timer taget0 low 32 bit"]
     #[inline(always)]
-    #[must_use]
     pub fn lo(&mut self) -> LO_W<LO_SPEC> {
         LO_W::new(self, 0)
     }

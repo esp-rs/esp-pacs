@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks boot remap permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_boot_location_lock(&mut self) -> PRO_BOOT_LOCATION_LOCK_W<PRO_BOOT_LOCATION_0_SPEC> {
         PRO_BOOT_LOCATION_LOCK_W::new(self, 0)
     }

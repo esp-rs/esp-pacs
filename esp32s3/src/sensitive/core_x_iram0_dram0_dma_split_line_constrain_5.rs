@@ -134,7 +134,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - category0 of core_x_iram0_dram_dma_line, if the splitaddress in block0 of SRAM, configured as 0x10, else if the splitaddress below block0 of SRAM, configured as 0x11, else if splitaddress higher than block0 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_0(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_0_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -143,7 +142,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_1(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_1_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -152,7 +150,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_2(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_2_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -161,7 +158,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_3(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_3_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -170,7 +166,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_4(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_4_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -179,7 +174,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_5(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_5_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -188,7 +182,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_6(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_6_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -197,7 +190,6 @@ impl W {
     }
     #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_splitaddr(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_SPLITADDR_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>

@@ -23,6 +23,7 @@ pub enum Interrupt {
     SWD_INT = 8,
 }
 #[doc = r" TryFromInterruptError"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Debug, Copy, Clone)]
 pub struct TryFromInterruptError(());
 impl Interrupt {

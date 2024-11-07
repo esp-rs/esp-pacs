@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    #[must_use]
     pub fn immu_table0(&mut self) -> IMMU_TABLE0_W<IMMU_TABLE0_SPEC> {
         IMMU_TABLE0_W::new(self, 0)
     }

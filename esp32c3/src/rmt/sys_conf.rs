@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_apb_fifo_mask."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<SYS_CONF_SPEC> {
         APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_mem_clk_force_on."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<SYS_CONF_SPEC> {
         MEM_CLK_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_rmt_mem_force_pd."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<SYS_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_rmt_mem_force_pu."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<SYS_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - reg_rmt_sclk_div_num."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<SYS_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:17 - reg_rmt_sclk_div_a."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<SYS_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bits 18:23 - reg_rmt_sclk_div_b."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<SYS_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 18)
     }
     #[doc = "Bits 24:25 - reg_rmt_sclk_sel."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<SYS_CONF_SPEC> {
         SCLK_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - reg_rmt_sclk_active."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<SYS_CONF_SPEC> {
         SCLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bit 31 - reg_clk_en."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<SYS_CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }

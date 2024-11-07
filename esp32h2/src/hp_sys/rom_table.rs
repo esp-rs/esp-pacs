@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - XXXX"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_table(&mut self) -> ROM_TABLE_W<ROM_TABLE_SPEC> {
         ROM_TABLE_W::new(self, 0)
     }

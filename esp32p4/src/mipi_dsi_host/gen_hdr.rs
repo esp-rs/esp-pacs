@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn gen_dt(&mut self) -> GEN_DT_W<GEN_HDR_SPEC> {
         GEN_DT_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn gen_vc(&mut self) -> GEN_VC_W<GEN_HDR_SPEC> {
         GEN_VC_W::new(self, 6)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn gen_wc_lsbyte(&mut self) -> GEN_WC_LSBYTE_W<GEN_HDR_SPEC> {
         GEN_WC_LSBYTE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn gen_wc_msbyte(&mut self) -> GEN_WC_MSBYTE_W<GEN_HDR_SPEC> {
         GEN_WC_MSBYTE_W::new(self, 16)
     }

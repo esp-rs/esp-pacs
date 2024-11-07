@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - l2mem sub block size 00=>32 01=>64 10=>128 11=>256"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_sub_blksize(&mut self) -> REG_L2_MEM_SUB_BLKSIZE_W<L2_MEM_SUBSIZE_SPEC> {
         REG_L2_MEM_SUB_BLKSIZE_W::new(self, 0)
     }

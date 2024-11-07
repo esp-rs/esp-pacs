@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_restart_cnt(&mut self) -> RX_RESTART_CNT_W<RX_RESTART_CNT_SPEC> {
         RX_RESTART_CNT_W::new(self, 0)
     }

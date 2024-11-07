@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - hp_peri1 apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
     #[inline(always)]
-    #[must_use]
     pub fn peri1_apb_postw_en(&mut self) -> PERI1_APB_POSTW_EN_W<PERI1_APB_POSTW_EN_SPEC> {
         PERI1_APB_POSTW_EN_W::new(self, 0)
     }

@@ -129,13 +129,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_div_num(&mut self) -> SDIO_LS_CLK_DIV_NUM_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_edge_cfg_update(
         &mut self,
     ) -> SDIO_LS_CLK_EDGE_CFG_UPDATE_W<PERI_CLK_CTRL02_SPEC> {
@@ -143,61 +141,51 @@ impl W {
     }
     #[doc = "Bits 9:12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_edge_l(&mut self) -> SDIO_LS_CLK_EDGE_L_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_CLK_EDGE_L_W::new(self, 9)
     }
     #[doc = "Bits 13:16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_edge_h(&mut self) -> SDIO_LS_CLK_EDGE_H_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_CLK_EDGE_H_W::new(self, 13)
     }
     #[doc = "Bits 17:20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_edge_n(&mut self) -> SDIO_LS_CLK_EDGE_N_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_CLK_EDGE_N_W::new(self, 17)
     }
     #[doc = "Bits 21:22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_slf_clk_edge_sel(&mut self) -> SDIO_LS_SLF_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_SLF_CLK_EDGE_SEL_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_drv_clk_edge_sel(&mut self) -> SDIO_LS_DRV_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_DRV_CLK_EDGE_SEL_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_sam_clk_edge_sel(&mut self) -> SDIO_LS_SAM_CLK_EDGE_SEL_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_SAM_CLK_EDGE_SEL_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_slf_clk_en(&mut self) -> SDIO_LS_SLF_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_SLF_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_drv_clk_en(&mut self) -> SDIO_LS_DRV_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_DRV_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_sam_clk_en(&mut self) -> SDIO_LS_SAM_CLK_EN_W<PERI_CLK_CTRL02_SPEC> {
         SDIO_LS_SAM_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dphy_clk_src_sel(
         &mut self,
     ) -> MIPI_DSI_DPHY_CLK_SRC_SEL_W<PERI_CLK_CTRL02_SPEC> {

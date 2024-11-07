@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This field indicates the controller current release type that is read by an application."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i3c_mst_ver_type(&mut self) -> REG_I3C_MST_VER_TYPE_W<VER_TYPE_SPEC> {
         REG_I3C_MST_VER_TYPE_W::new(self, 0)
     }

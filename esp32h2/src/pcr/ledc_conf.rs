@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable ledc apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<LEDC_CONF_SPEC> {
         LEDC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset ledc module"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_rst_en(&mut self) -> LEDC_RST_EN_W<LEDC_CONF_SPEC> {
         LEDC_RST_EN_W::new(self, 1)
     }

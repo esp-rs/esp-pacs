@@ -17,7 +17,7 @@ impl CRC {
     pub const fn in_crc_init_data(&self) -> &IN_CRC_INIT_DATA {
         &self.in_crc_init_data
     }
-    #[doc = "0x04 - This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32"]
+    #[doc = "0x04 - This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width <=8bit,2'b01 8<crc_width<=16 ,2'b10 mean 16<crc_width <=24,2'b11 mean 24<crc_width<=32"]
     #[inline(always)]
     pub const fn rx_crc_width(&self) -> &RX_CRC_WIDTH {
         &self.rx_crc_width
@@ -57,9 +57,9 @@ impl CRC {
 pub type IN_CRC_INIT_DATA = crate::Reg<in_crc_init_data::IN_CRC_INIT_DATA_SPEC>;
 #[doc = "This register is used to config ch0 crc initial data(max 32 bit)"]
 pub mod in_crc_init_data;
-#[doc = "RX_CRC_WIDTH (rw) register accessor: This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_crc_width::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_crc_width::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_width`] module"]
+#[doc = "RX_CRC_WIDTH (rw) register accessor: This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width <=8bit,2'b01 8<crc_width<=16 ,2'b10 mean 16<crc_width <=24,2'b11 mean 24<crc_width<=32\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_crc_width::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_crc_width::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_crc_width`] module"]
 pub type RX_CRC_WIDTH = crate::Reg<rx_crc_width::RX_CRC_WIDTH_SPEC>;
-#[doc = "This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width &lt;=8bit,2'b01 8&lt;crc_width&lt;=16 ,2'b10 mean 16&lt;crc_width &lt;=24,2'b11 mean 24&lt;crc_width&lt;=32"]
+#[doc = "This register is used to confiig rx ch0 crc result width,2'b00 mean crc_width <=8bit,2'b01 8<crc_width<=16 ,2'b10 mean 16<crc_width <=24,2'b11 mean 24<crc_width<=32"]
 pub mod rx_crc_width;
 #[doc = "IN_CRC_CLEAR (rw) register accessor: This register is used to clear ch0 crc result\n\nYou can [`read`](crate::Reg::read) this register and get [`in_crc_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_crc_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_crc_clear`] module"]
 pub type IN_CRC_CLEAR = crate::Reg<in_crc_clear::IN_CRC_CLEAR_SPEC>;

@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit to check header checksum when UHCI receives a data packet."]
     #[inline(always)]
-    #[must_use]
     pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<CONF1_SPEC> {
         CHECK_SUM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the enable bit to check sequence number when UHCI receives a data packet."]
     #[inline(always)]
-    #[must_use]
     pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<CONF1_SPEC> {
         CHECK_SEQ_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to support CRC calculation. Data Integrity check present bit in UHCI packet frame should be 1."]
     #[inline(always)]
-    #[must_use]
     pub fn crc_disable(&mut self) -> CRC_DISABLE_W<CONF1_SPEC> {
         CRC_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to save the packet header when UHCI receives a data packet."]
     #[inline(always)]
-    #[must_use]
     pub fn save_head(&mut self) -> SAVE_HEAD_W<CONF1_SPEC> {
         SAVE_HEAD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to encode the data packet with a checksum."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<CONF1_SPEC> {
         TX_CHECK_SUM_RE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to encode the data packet with an acknowledgement when a reliable packet is to be transmit."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<CONF1_SPEC> {
         TX_ACK_NUM_RE_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Check the link list descriptor when link list owner is DMA controller; 0: Always check link list descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn check_owner(&mut self) -> CHECK_OWNER_W<CONF1_SPEC> {
         CHECK_OWNER_W::new(self, 6)
     }
     #[doc = "Bit 7 - The UHCI encoder will jump to ST_SW_WAIT status if this register is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<CONF1_SPEC> {
         WAIT_SW_START_W::new(self, 7)
     }
     #[doc = "Bit 8 - If current UHCI_ENCODE_STATE is ST_SW_WAIT, the UHCI will start to send data packet out when this bit is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_start(&mut self) -> SW_START_W<CONF1_SPEC> {
         SW_START_W::new(self, 8)
     }
     #[doc = "Bits 9:20 - This field is used to generate the UHCI_DMA_INFIFO_FULL_WM_INT interrupt when the counter value of DMA RX FIFO exceeds the value of the register."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_infifo_full_thrs(&mut self) -> DMA_INFIFO_FULL_THRS_W<CONF1_SPEC> {
         DMA_INFIFO_FULL_THRS_W::new(self, 9)
     }

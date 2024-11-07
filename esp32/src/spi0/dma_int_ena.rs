@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable bit for lack of enough inlink descriptors."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_dscr_empty(&mut self) -> INLINK_DSCR_EMPTY_W<DMA_INT_ENA_SPEC> {
         INLINK_DSCR_EMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for outlink descriptor error."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_dscr_error(&mut self) -> OUTLINK_DSCR_ERROR_W<DMA_INT_ENA_SPEC> {
         OUTLINK_DSCR_ERROR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for inlink descriptor error."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_dscr_error(&mut self) -> INLINK_DSCR_ERROR_W<DMA_INT_ENA_SPEC> {
         INLINK_DSCR_ERROR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for completing usage of a inlink descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn in_done(&mut self) -> IN_DONE_W<DMA_INT_ENA_SPEC> {
         IN_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for receiving error."]
     #[inline(always)]
-    #[must_use]
     pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<DMA_INT_ENA_SPEC> {
         IN_ERR_EOF_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for completing receiving all the packets from host."]
     #[inline(always)]
-    #[must_use]
     pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<DMA_INT_ENA_SPEC> {
         IN_SUC_EOF_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for completing usage of a outlink descriptor ."]
     #[inline(always)]
-    #[must_use]
     pub fn out_done(&mut self) -> OUT_DONE_W<DMA_INT_ENA_SPEC> {
         OUT_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for sending a packet to host done."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<DMA_INT_ENA_SPEC> {
         OUT_EOF_W::new(self, 7)
     }
     #[doc = "Bit 8 - The enable bit for sending all the packets to host done."]
     #[inline(always)]
-    #[must_use]
     pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<DMA_INT_ENA_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 8)
     }

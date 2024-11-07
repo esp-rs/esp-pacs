@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - timer unit0 load high 20 bits"]
     #[inline(always)]
-    #[must_use]
     pub fn load_hi(&mut self) -> LOAD_HI_W<HI_SPEC> {
         LOAD_HI_W::new(self, 0)
     }

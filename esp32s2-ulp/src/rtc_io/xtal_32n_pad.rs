@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_fun_ie(&mut self) -> X32N_FUN_IE_W<XTAL_32N_PAD_SPEC> {
         X32N_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Output enable in sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_oe(&mut self) -> X32N_SLP_OE_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Input enable in sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_ie(&mut self) -> X32N_SLP_IE_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode. 0: no sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_sel(&mut self) -> X32N_SLP_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Function selection."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_fun_sel(&mut self) -> X32N_FUN_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO. 0: use digital GPIO."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_mux_sel(&mut self) -> X32N_MUX_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_rue(&mut self) -> X32N_RUE_W<XTAL_32N_PAD_SPEC> {
         X32N_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_rde(&mut self) -> X32N_RDE_W<XTAL_32N_PAD_SPEC> {
         X32N_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_drv(&mut self) -> X32N_DRV_W<XTAL_32N_PAD_SPEC> {
         X32N_DRV_W::new(self, 29)
     }

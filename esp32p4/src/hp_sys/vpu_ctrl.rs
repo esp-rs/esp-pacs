@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn ppa_lslp_mem_pd(&mut self) -> PPA_LSLP_MEM_PD_W<VPU_CTRL_SPEC> {
         PPA_LSLP_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn jpeg_sdslp_mem_pd(&mut self) -> JPEG_SDSLP_MEM_PD_W<VPU_CTRL_SPEC> {
         JPEG_SDSLP_MEM_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn jpeg_lslp_mem_pd(&mut self) -> JPEG_LSLP_MEM_PD_W<VPU_CTRL_SPEC> {
         JPEG_LSLP_MEM_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn jpeg_dslp_mem_pd(&mut self) -> JPEG_DSLP_MEM_PD_W<VPU_CTRL_SPEC> {
         JPEG_DSLP_MEM_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_lslp_mem_pd(&mut self) -> DMA2D_LSLP_MEM_PD_W<VPU_CTRL_SPEC> {
         DMA2D_LSLP_MEM_PD_W::new(self, 4)
     }

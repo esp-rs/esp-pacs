@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures the threshold pulse width to be filtered on SCL. When a pulse on the SCL input has smaller width than this register value, the I2C controller will ignore that pulse. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<FILTER_CFG_SPEC> {
         SCL_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Configures the threshold pulse width to be filtered on SDA. When a pulse on the SDA input has smaller width than this register value, the I2C controller will ignore that pulse. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<FILTER_CFG_SPEC> {
         SDA_FILTER_THRES_W::new(self, 4)
     }
     #[doc = "Bit 8 - Configures to enable the filter function for SCL."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<FILTER_CFG_SPEC> {
         SCL_FILTER_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures to enable the filter function for SDA."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<FILTER_CFG_SPEC> {
         SDA_FILTER_EN_W::new(self, 9)
     }

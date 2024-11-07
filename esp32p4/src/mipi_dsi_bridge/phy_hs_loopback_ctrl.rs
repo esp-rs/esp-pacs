@@ -115,13 +115,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - txdatahs_1 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_txdatahs_1(&mut self) -> PHY_HS_TXDATAHS_1_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_TXDATAHS_1_W::new(self, 0)
     }
     #[doc = "Bit 8 - txrequestdatahs_1 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_txrequestdatahs_1(
         &mut self,
     ) -> PHY_HS_TXREQUESTDATAHS_1_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
@@ -129,19 +127,16 @@ impl W {
     }
     #[doc = "Bit 9 - basedir_1 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_basedir_1(&mut self) -> PHY_HS_BASEDIR_1_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_BASEDIR_1_W::new(self, 9)
     }
     #[doc = "Bits 16:23 - txdatahs_0 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_txdatahs_0(&mut self) -> PHY_HS_TXDATAHS_0_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_TXDATAHS_0_W::new(self, 16)
     }
     #[doc = "Bit 24 - txrequestdatahs_0 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_txrequestdatahs_0(
         &mut self,
     ) -> PHY_HS_TXREQUESTDATAHS_0_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
@@ -149,25 +144,21 @@ impl W {
     }
     #[doc = "Bit 25 - basedir_0 ctrl when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_basedir_0(&mut self) -> PHY_HS_BASEDIR_0_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_BASEDIR_0_W::new(self, 25)
     }
     #[doc = "Bit 27 - txrequesthsclk when enable dsi phy hs_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_txrequesthsclk(&mut self) -> PHY_HS_TXREQUESTHSCLK_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_TXREQUESTHSCLK_W::new(self, 27)
     }
     #[doc = "Bit 28 - dsi phy hs_loopback test start check"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_loopback_check(&mut self) -> PHY_HS_LOOPBACK_CHECK_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_LOOPBACK_CHECK_W::new(self, 28)
     }
     #[doc = "Bit 30 - dsi phy hs_loopback ctrl en"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_hs_loopback_en(&mut self) -> PHY_HS_LOOPBACK_EN_W<PHY_HS_LOOPBACK_CTRL_SPEC> {
         PHY_HS_LOOPBACK_EN_W::new(self, 30)
     }

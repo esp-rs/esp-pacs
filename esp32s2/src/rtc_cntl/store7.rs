@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Reservation register 7."]
     #[inline(always)]
-    #[must_use]
     pub fn scratch7(&mut self) -> SCRATCH7_W<STORE7_SPEC> {
         SCRATCH7_W::new(self, 0)
     }

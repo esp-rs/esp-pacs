@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - the numerator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - the denominator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 14)
     }
     #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL;1-CLK_8MHz."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
         SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - The clock switch for i2c module"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<CLK_CONF_SPEC> {
         SCLK_ACTIVE_W::new(self, 21)
     }

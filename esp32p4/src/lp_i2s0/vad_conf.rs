@@ -28,19 +28,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - VAD enable register"]
     #[inline(always)]
-    #[must_use]
     pub fn vad_en(&mut self) -> VAD_EN_W<VAD_CONF_SPEC> {
         VAD_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - VAD reset register"]
     #[inline(always)]
-    #[must_use]
     pub fn vad_reset(&mut self) -> VAD_RESET_W<VAD_CONF_SPEC> {
         VAD_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - VAD force start register."]
     #[inline(always)]
-    #[must_use]
     pub fn vad_force_start(&mut self) -> VAD_FORCE_START_W<VAD_CONF_SPEC> {
         VAD_FORCE_START_W::new(self, 2)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 output data"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DATA_W<RTC_GPIO_OUT_SPEC> {
         DATA_W::new(self, 10)
     }

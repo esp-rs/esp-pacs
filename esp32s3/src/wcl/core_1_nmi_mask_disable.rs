@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<CORE_1_NMI_MASK_DISABLE_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - this field is used to disable NMI mask, it will not take effect immediately,only when the CPU executes to the trigger address will it start to cancel NMI mask"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_nmi_mask_disable(
         &mut self,
     ) -> CORE_1_NMI_MASK_DISABLE_W<CORE_1_NMI_MASK_DISABLE_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable addr interchange between psram and flash in axi matrix when hp cpu access through cache"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu(&mut self) -> CPU_W<PSRAM_FLASH_ADDR_INTERCHANGE_SPEC> {
         CPU_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable addr interchange between psram and flash in axi matrix when dma device access, lp core access and hp core access through ahb"]
     #[inline(always)]
-    #[must_use]
     pub fn dma(&mut self) -> DMA_W<PSRAM_FLASH_ADDR_INTERCHANGE_SPEC> {
         DMA_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The RX error counter register, reflects value changes under reception status."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_err_cnt(&mut self) -> RX_ERR_CNT_W<RX_ERR_CNT_SPEC> {
         RX_ERR_CNT_W::new(self, 0)
     }

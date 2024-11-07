@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_wifibb(&mut self) -> RST_WIFIBB_W<MODEM_RST_CONF_SPEC> {
         RST_WIFIBB_W::new(self, 8)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_wifimac(&mut self) -> RST_WIFIMAC_W<MODEM_RST_CONF_SPEC> {
         RST_WIFIMAC_W::new(self, 10)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_fe(&mut self) -> RST_FE_W<MODEM_RST_CONF_SPEC> {
         RST_FE_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_btmac_apb(&mut self) -> RST_BTMAC_APB_W<MODEM_RST_CONF_SPEC> {
         RST_BTMAC_APB_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_btmac(&mut self) -> RST_BTMAC_W<MODEM_RST_CONF_SPEC> {
         RST_BTMAC_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_btbb_apb(&mut self) -> RST_BTBB_APB_W<MODEM_RST_CONF_SPEC> {
         RST_BTBB_APB_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_btbb(&mut self) -> RST_BTBB_W<MODEM_RST_CONF_SPEC> {
         RST_BTBB_W::new(self, 18)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_etm(&mut self) -> RST_ETM_W<MODEM_RST_CONF_SPEC> {
         RST_ETM_W::new(self, 22)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_zbmac(&mut self) -> RST_ZBMAC_W<MODEM_RST_CONF_SPEC> {
         RST_ZBMAC_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_modem_ecb(&mut self) -> RST_MODEM_ECB_W<MODEM_RST_CONF_SPEC> {
         RST_MODEM_ECB_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_modem_ccm(&mut self) -> RST_MODEM_CCM_W<MODEM_RST_CONF_SPEC> {
         RST_MODEM_CCM_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_modem_bah(&mut self) -> RST_MODEM_BAH_W<MODEM_RST_CONF_SPEC> {
         RST_MODEM_BAH_W::new(self, 27)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_modem_sec(&mut self) -> RST_MODEM_SEC_W<MODEM_RST_CONF_SPEC> {
         RST_MODEM_SEC_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_ble_timer(&mut self) -> RST_BLE_TIMER_W<MODEM_RST_CONF_SPEC> {
         RST_BLE_TIMER_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_data_dump(&mut self) -> RST_DATA_DUMP_W<MODEM_RST_CONF_SPEC> {
         RST_DATA_DUMP_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the time between the positive edge of SCL and the positive edge of SDA, in I2C module clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SCL_STOP_SETUP_SPEC> {
         TIME_W::new(self, 0)
     }

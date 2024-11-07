@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - SPI1 flash PMS section %s address region is (SPI_FMEM_PMS%s_ADDR_S, SPI_FMEM_PMS%s_ADDR_S + SPI_FMEM_PMS%s_SIZE)"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_fmem_pms_size(&mut self) -> SPI_FMEM_PMS_SIZE_W<SPI_FMEM_PMS_SIZE_SPEC> {
         SPI_FMEM_PMS_SIZE_W::new(self, 0)
     }

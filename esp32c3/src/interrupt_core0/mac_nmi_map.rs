@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_mac_nmi_map"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_nmi_map(&mut self) -> MAC_NMI_MAP_W<MAC_NMI_MAP_SPEC> {
         MAC_NMI_MAP_W::new(self, 0)
     }

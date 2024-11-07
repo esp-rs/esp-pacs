@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - Finger threshold for touch pad 9"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_out_th9(&mut self) -> TOUCH_OUT_TH9_W<SAR_TOUCH_THRES9_SPEC> {
         TOUCH_OUT_TH9_W::new(self, 0)
     }

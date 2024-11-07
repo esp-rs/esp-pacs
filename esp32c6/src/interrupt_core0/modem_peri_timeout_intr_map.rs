@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_peri_timeout_intr_map(
         &mut self,
     ) -> MODEM_PERI_TIMEOUT_INTR_MAP_W<MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {

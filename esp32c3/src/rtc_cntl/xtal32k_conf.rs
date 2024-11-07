@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - cycles to wait to return noral xtal 32k"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_return_wait(&mut self) -> XTAL32K_RETURN_WAIT_W<XTAL32K_CONF_SPEC> {
         XTAL32K_RETURN_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 4:19 - cycles to wait to repower on xtal 32k"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_restart_wait(&mut self) -> XTAL32K_RESTART_WAIT_W<XTAL32K_CONF_SPEC> {
         XTAL32K_RESTART_WAIT_W::new(self, 4)
     }
     #[doc = "Bits 20:27 - If no clock detected for this amount of time"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_timeout(&mut self) -> XTAL32K_WDT_TIMEOUT_W<XTAL32K_CONF_SPEC> {
         XTAL32K_WDT_TIMEOUT_W::new(self, 20)
     }
     #[doc = "Bits 28:31 - if restarted xtal32k period is smaller than this"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_stable_thres(&mut self) -> XTAL32K_STABLE_THRES_W<XTAL32K_CONF_SPEC> {
         XTAL32K_STABLE_THRES_W::new(self, 28)
     }

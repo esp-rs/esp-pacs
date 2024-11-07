@@ -43,6 +43,8 @@ impl CH {
         &self.gen_force
     }
     #[doc = "0x14..0x1c - Actions triggered by events on PWMx%s"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `GENA` register.</div>"]
     #[inline(always)]
     pub const fn gen(&self, n: usize) -> &GEN {
         &self.gen[n]

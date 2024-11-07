@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_addr(&mut self) -> TXDMA_ADDR_W<TXDMA_ADDR_SPEC> {
         TXDMA_ADDR_W::new(self, 0)
     }

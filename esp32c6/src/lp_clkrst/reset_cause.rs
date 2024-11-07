@@ -36,19 +36,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_reset_cause_clr(&mut self) -> CORE0_RESET_CAUSE_CLR_W<RESET_CAUSE_SPEC> {
         CORE0_RESET_CAUSE_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_reset_flag_set(&mut self) -> CORE0_RESET_FLAG_SET_W<RESET_CAUSE_SPEC> {
         CORE0_RESET_FLAG_SET_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_reset_flag_clr(&mut self) -> CORE0_RESET_FLAG_CLR_W<RESET_CAUSE_SPEC> {
         CORE0_RESET_FLAG_CLR_W::new(self, 31)
     }

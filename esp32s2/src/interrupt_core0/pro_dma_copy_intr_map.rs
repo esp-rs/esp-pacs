@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map DMA_COPY_INTR interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dma_copy_intr_map(&mut self) -> PRO_DMA_COPY_INTR_MAP_W<PRO_DMA_COPY_INTR_MAP_SPEC> {
         PRO_DMA_COPY_INTR_MAP_W::new(self, 0)
     }

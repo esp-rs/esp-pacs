@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - set this field to select clock-source. 0(default): XTAL, 1: FOSC."]
     #[inline(always)]
-    #[must_use]
     pub fn twai0_func_clk_sel(&mut self) -> TWAI0_FUNC_CLK_SEL_W<TWAI0_FUNC_CLK_CONF_SPEC> {
         TWAI0_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable twai0 function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn twai0_func_clk_en(&mut self) -> TWAI0_FUNC_CLK_EN_W<TWAI0_FUNC_CLK_CONF_SPEC> {
         TWAI0_FUNC_CLK_EN_W::new(self, 22)
     }

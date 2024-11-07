@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_BT_BB_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_bb_intr_map(&mut self) -> BT_BB_INTR_MAP_W<BT_BB_INTR_MAP_SPEC> {
         BT_BB_INTR_MAP_W::new(self, 0)
     }

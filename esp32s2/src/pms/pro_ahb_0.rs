@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks PeriBus2 permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_ahb_lock(&mut self) -> PRO_AHB_LOCK_W<PRO_AHB_0_SPEC> {
         PRO_AHB_LOCK_W::new(self, 0)
     }

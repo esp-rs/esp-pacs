@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks PeriBus1 permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_lock(&mut self) -> PRO_DPORT_LOCK_W<PRO_DPORT_0_SPEC> {
         PRO_DPORT_LOCK_W::new(self, 0)
     }

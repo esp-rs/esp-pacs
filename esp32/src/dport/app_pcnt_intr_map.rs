@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_pcnt_intr_map(&mut self) -> APP_PCNT_INTR_MAP_W<APP_PCNT_INTR_MAP_SPEC> {
         APP_PCNT_INTR_MAP_W::new(self, 0)
     }

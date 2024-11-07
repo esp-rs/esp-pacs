@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - buffer almost full threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn csi_buf_afull_thrd(&mut self) -> CSI_BUF_AFULL_THRD_W<BUF_FLOW_CTL_SPEC> {
         CSI_BUF_AFULL_THRD_W::new(self, 0)
     }

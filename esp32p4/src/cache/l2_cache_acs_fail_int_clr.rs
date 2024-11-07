@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<L2_CACHE_ACS_FAIL_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 5 - The bit is used to clear interrupt of access fail that occurs in L2-Cache due to l1 cache accesses L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_fail_int_clr(
         &mut self,
     ) -> L2_CACHE_FAIL_INT_CLR_W<L2_CACHE_ACS_FAIL_INT_CLR_SPEC> {

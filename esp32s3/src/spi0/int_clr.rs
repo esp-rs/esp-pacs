@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 2 - The clear bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn total_trans_end(&mut self) -> TOTAL_TRANS_END_W<INT_CLR_SPEC> {
         TOTAL_TRANS_END_W::new(self, 2)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_ECC_ERR_INT interrupt. SPI_MEM_ECC_ERR_ADDR and SPI_MEM_ECC_ERR_CNT will be cleared by the pulse of this bit."]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_err(&mut self) -> ECC_ERR_W<INT_CLR_SPEC> {
         ECC_ERR_W::new(self, 4)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance mask register 0 with R/W Permission. In operation mode, it stores the 4th byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_byte_4(&mut self) -> TX_BYTE_4_W<DATA_4_SPEC> {
         TX_BYTE_4_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    #[must_use]
     pub fn ahb_access_grant_1(&mut self) -> AHB_ACCESS_GRANT_1_W<AHB_MPU_TABLE_1_SPEC> {
         AHB_ACCESS_GRANT_1_W::new(self, 0)
     }

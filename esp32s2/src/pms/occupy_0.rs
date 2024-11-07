@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks occupy permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn occupy_lock(&mut self) -> OCCUPY_LOCK_W<OCCUPY_0_SPEC> {
         OCCUPY_LOCK_W::new(self, 0)
     }

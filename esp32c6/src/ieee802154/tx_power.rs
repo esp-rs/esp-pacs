@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_power(&mut self) -> TX_POWER_W<TX_POWER_SPEC> {
         TX_POWER_W::new(self, 0)
     }

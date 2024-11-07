@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_START_MODEXP_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configure whether or not to start the modular exponentiation. 0: No effect 1: Start"]
     #[inline(always)]
-    #[must_use]
     pub fn set_start_modexp(&mut self) -> SET_START_MODEXP_W<SET_START_MODEXP_SPEC> {
         SET_START_MODEXP_W::new(self, 0)
     }

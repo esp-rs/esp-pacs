@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<LOAD_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - t0_load"]
     #[inline(always)]
-    #[must_use]
     pub fn load(&mut self) -> LOAD_W<LOAD_SPEC> {
         LOAD_W::new(self, 0)
     }

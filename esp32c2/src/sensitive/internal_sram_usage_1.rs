@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_usage_cpu_cache(
         &mut self,
     ) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 1:3 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_usage_cpu_sram(
         &mut self,
     ) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<INTERNAL_SRAM_USAGE_1_SPEC> {

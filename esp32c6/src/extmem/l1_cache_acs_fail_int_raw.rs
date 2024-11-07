@@ -64,7 +64,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit of the interrupt of access fail that occurs in L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_fail_int_raw(
         &mut self,
     ) -> L1_ICACHE0_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
@@ -72,7 +71,6 @@ impl W {
     }
     #[doc = "Bit 1 - The raw bit of the interrupt of access fail that occurs in L1-ICache1."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_fail_int_raw(
         &mut self,
     ) -> L1_ICACHE1_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
@@ -80,7 +78,6 @@ impl W {
     }
     #[doc = "Bit 2 - The raw bit of the interrupt of access fail that occurs in L1-ICache2."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache2_fail_int_raw(
         &mut self,
     ) -> L1_ICACHE2_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
@@ -88,7 +85,6 @@ impl W {
     }
     #[doc = "Bit 3 - The raw bit of the interrupt of access fail that occurs in L1-ICache3."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache3_fail_int_raw(
         &mut self,
     ) -> L1_ICACHE3_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
@@ -96,7 +92,6 @@ impl W {
     }
     #[doc = "Bit 4 - The raw bit of the interrupt of access fail that occurs in L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_fail_int_raw(
         &mut self,
     ) -> L1_CACHE_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {

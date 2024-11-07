@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq0_dcap_lpf(&mut self) -> TOUCH_FREQ0_DCAP_LPF_W<TOUCH_FREQ0_SCAN_PARA_SPEC> {
         TOUCH_FREQ0_DCAP_LPF_W::new(self, 0)
     }
     #[doc = "Bits 7:8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq0_dres_lpf(&mut self) -> TOUCH_FREQ0_DRES_LPF_W<TOUCH_FREQ0_SCAN_PARA_SPEC> {
         TOUCH_FREQ0_DRES_LPF_W::new(self, 7)
     }
     #[doc = "Bits 9:12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq0_drv_ls(&mut self) -> TOUCH_FREQ0_DRV_LS_W<TOUCH_FREQ0_SCAN_PARA_SPEC> {
         TOUCH_FREQ0_DRV_LS_W::new(self, 9)
     }
     #[doc = "Bits 13:17 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq0_drv_hs(&mut self) -> TOUCH_FREQ0_DRV_HS_W<TOUCH_FREQ0_SCAN_PARA_SPEC> {
         TOUCH_FREQ0_DRV_HS_W::new(self, 13)
     }
     #[doc = "Bits 18:22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq0_dbias(&mut self) -> TOUCH_FREQ0_DBIAS_W<TOUCH_FREQ0_SCAN_PARA_SPEC> {
         TOUCH_FREQ0_DBIAS_W::new(self, 18)
     }

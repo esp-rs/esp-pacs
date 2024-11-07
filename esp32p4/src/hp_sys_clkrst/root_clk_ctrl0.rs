@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cpuicm_delay_num(&mut self) -> CPUICM_DELAY_NUM_W<ROOT_CLK_CTRL0_SPEC> {
         CPUICM_DELAY_NUM_W::new(self, 0)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_clk_div_update(&mut self) -> SOC_CLK_DIV_UPDATE_W<ROOT_CLK_CTRL0_SPEC> {
         SOC_CLK_DIV_UPDATE_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_clk_div_num(&mut self) -> CPU_CLK_DIV_NUM_W<ROOT_CLK_CTRL0_SPEC> {
         CPU_CLK_DIV_NUM_W::new(self, 5)
     }
     #[doc = "Bits 13:20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_clk_div_numerator(&mut self) -> CPU_CLK_DIV_NUMERATOR_W<ROOT_CLK_CTRL0_SPEC> {
         CPU_CLK_DIV_NUMERATOR_W::new(self, 13)
     }
     #[doc = "Bits 21:28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_clk_div_denominator(&mut self) -> CPU_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL0_SPEC> {
         CPU_CLK_DIV_DENOMINATOR_W::new(self, 21)
     }

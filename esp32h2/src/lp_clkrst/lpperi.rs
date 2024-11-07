@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:23 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_bletimer_div_num(&mut self) -> LP_BLETIMER_DIV_NUM_W<LPPERI_SPEC> {
         LP_BLETIMER_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 24:25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_bletimer_32k_sel(&mut self) -> LP_BLETIMER_32K_SEL_W<LPPERI_SPEC> {
         LP_BLETIMER_32K_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sel_osc_slow(&mut self) -> LP_SEL_OSC_SLOW_W<LPPERI_SPEC> {
         LP_SEL_OSC_SLOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sel_osc_fast(&mut self) -> LP_SEL_OSC_FAST_W<LPPERI_SPEC> {
         LP_SEL_OSC_FAST_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sel_xtal(&mut self) -> LP_SEL_XTAL_W<LPPERI_SPEC> {
         LP_SEL_XTAL_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sel_xtal32k(&mut self) -> LP_SEL_XTAL32K_W<LPPERI_SPEC> {
         LP_SEL_XTAL32K_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC> {
         LP_I2C_CLK_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC> {
         LP_UART_CLK_SEL_W::new(self, 31)
     }

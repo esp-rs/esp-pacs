@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - In the slave mode, it is the status for master to read out."]
     #[inline(always)]
-    #[must_use]
     pub fn status(&mut self) -> STATUS_W<RD_STATUS_SPEC> {
         STATUS_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode, it is combined with spi_fastrd_mode bit."]
     #[inline(always)]
-    #[must_use]
     pub fn wb_mode(&mut self) -> WB_MODE_W<RD_STATUS_SPEC> {
         WB_MODE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode,it is the status for master to read out."]
     #[inline(always)]
-    #[must_use]
     pub fn status_ext(&mut self) -> STATUS_EXT_W<RD_STATUS_SPEC> {
         STATUS_EXT_W::new(self, 24)
     }

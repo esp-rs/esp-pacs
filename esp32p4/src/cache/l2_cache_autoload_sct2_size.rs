@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the third section for autoload operation on L2-Cache. Note that it should be used together with L2_CACHE_AUTOLOAD_SCT2_ADDR and L2_CACHE_AUTOLOAD_SCT2_ENA."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_autoload_sct2_size(
         &mut self,
     ) -> L2_CACHE_AUTOLOAD_SCT2_SIZE_W<L2_CACHE_AUTOLOAD_SCT2_SIZE_SPEC> {

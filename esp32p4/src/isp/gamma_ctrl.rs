@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Indicates that gamma register configuration is complete"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_update(&mut self) -> GAMMA_UPDATE_W<GAMMA_CTRL_SPEC> {
         GAMMA_UPDATE_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures enable of last b segment correcction. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_b_last_correct(&mut self) -> GAMMA_B_LAST_CORRECT_W<GAMMA_CTRL_SPEC> {
         GAMMA_B_LAST_CORRECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures enable of last g segment correcction. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_g_last_correct(&mut self) -> GAMMA_G_LAST_CORRECT_W<GAMMA_CTRL_SPEC> {
         GAMMA_G_LAST_CORRECT_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures enable of last r segment correcction. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_r_last_correct(&mut self) -> GAMMA_R_LAST_CORRECT_W<GAMMA_CTRL_SPEC> {
         GAMMA_R_LAST_CORRECT_W::new(self, 3)
     }

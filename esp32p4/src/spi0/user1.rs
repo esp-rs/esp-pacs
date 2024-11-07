@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The length in spi_mem_clk cycles of dummy phase. The register value shall be (cycle_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC> {
         USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bits 26:31 - The length in bits of address phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC> {
         USR_ADDR_BITLEN_W::new(self, 26)
     }

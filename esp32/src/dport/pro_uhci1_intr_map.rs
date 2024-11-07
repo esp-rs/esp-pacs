@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_uhci1_intr_map(&mut self) -> PRO_UHCI1_INTR_MAP_W<PRO_UHCI1_INTR_MAP_SPEC> {
         PRO_UHCI1_INTR_MAP_W::new(self, 0)
     }

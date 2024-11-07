@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<TOUCH_CLR_SPEC> {
 impl W {
     #[doc = "Bits 0:14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_channel_clr(&mut self) -> TOUCH_CHANNEL_CLR_W<TOUCH_CLR_SPEC> {
         TOUCH_CHANNEL_CLR_W::new(self, 0)
     }
     #[doc = "Bit 15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_status_clr(&mut self) -> TOUCH_STATUS_CLR_W<TOUCH_CLR_SPEC> {
         TOUCH_STATUS_CLR_W::new(self, 15)
     }

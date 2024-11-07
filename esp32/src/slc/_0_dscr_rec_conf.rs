@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_rx_dscr_rec_lim(&mut self) -> SLC0_RX_DSCR_REC_LIM_W<_0_DSCR_REC_CONF_SPEC> {
         SLC0_RX_DSCR_REC_LIM_W::new(self, 0)
     }

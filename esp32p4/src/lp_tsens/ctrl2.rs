@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W<CTRL2_SPEC> {
         XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_force(&mut self) -> XPD_FORCE_W<CTRL2_SPEC> {
         XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_inv(&mut self) -> CLK_INV_W<CTRL2_SPEC> {
         CLK_INV_W::new(self, 14)
     }

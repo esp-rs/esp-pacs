@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - erase flash delay time by system clock."]
     #[inline(always)]
-    #[must_use]
     pub fn t_erase_time(&mut self) -> T_ERASE_TIME_W<EXT1_SPEC> {
         T_ERASE_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - erase flash delay time shift."]
     #[inline(always)]
-    #[must_use]
     pub fn t_erase_shift(&mut self) -> T_ERASE_SHIFT_W<EXT1_SPEC> {
         T_ERASE_SHIFT_W::new(self, 16)
     }
     #[doc = "Bit 31 - erase flash delay enable."]
     #[inline(always)]
-    #[must_use]
     pub fn t_erase_ena(&mut self) -> T_ERASE_ENA_W<EXT1_SPEC> {
         T_ERASE_ENA_W::new(self, 31)
     }

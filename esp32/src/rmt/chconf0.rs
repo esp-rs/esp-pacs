@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the frequency divider's factor in channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn div_cnt(&mut self) -> DIV_CNT_W<CHCONF0_SPEC> {
         DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - In receive mode when no edge is detected on the input signal for longer than reg_idle_thres_ch0 then the receive process is done."]
     #[inline(always)]
-    #[must_use]
     pub fn idle_thres(&mut self) -> IDLE_THRES_W<CHCONF0_SPEC> {
         IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 24:27 - This register is used to configure the the amount of memory blocks allocated to channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_size(&mut self) -> MEM_SIZE_W<CHCONF0_SPEC> {
         MEM_SIZE_W::new(self, 24)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable control bit for channel0."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W<CHCONF0_SPEC> {
         CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit is used to configure the way carrier wave is modulated for channel0.1'b1:transmit on low output level 1'b0:transmit on high output level."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CHCONF0_SPEC> {
         CARRIER_OUT_LV_W::new(self, 29)
     }
     #[doc = "Bit 30 - This bit is used to reduce power consumed by mem. 1:mem is in low power state."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_pd(&mut self) -> MEM_PD_W<CHCONF0_SPEC> {
         MEM_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - This bit is used to control clock.when software config RMT internal registers it controls the register clock."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CHCONF0_SPEC> {
         CLK_EN_W::new(self, 31)
     }

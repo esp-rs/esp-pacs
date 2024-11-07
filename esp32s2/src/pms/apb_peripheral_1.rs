@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 splits the data phase of the last access and the address phase of following access."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_peripheral_split_burst(
         &mut self,
     ) -> APB_PERIPHERAL_SPLIT_BURST_W<APB_PERIPHERAL_1_SPEC> {

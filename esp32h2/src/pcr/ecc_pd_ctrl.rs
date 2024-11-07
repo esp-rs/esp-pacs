@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power down ecc internal memory."]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_mem_pd(&mut self) -> ECC_MEM_PD_W<ECC_PD_CTRL_SPEC> {
         ECC_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force power up ecc internal memory"]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_mem_force_pu(&mut self) -> ECC_MEM_FORCE_PU_W<ECC_PD_CTRL_SPEC> {
         ECC_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power down ecc internal memory."]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_mem_force_pd(&mut self) -> ECC_MEM_FORCE_PD_W<ECC_PD_CTRL_SPEC> {
         ECC_MEM_FORCE_PD_W::new(self, 2)
     }

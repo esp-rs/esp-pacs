@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address of the first section for autoload operation. It should be combined with dcache_autoload_sct0_ena."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_sct0_addr(
         &mut self,
     ) -> DCACHE_AUTOLOAD_SCT0_ADDR_W<DCACHE_AUTOLOAD_SCT0_ADDR_SPEC> {

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_shutdownz(&mut self) -> PHY_SHUTDOWNZ_W<PHY_RSTZ_SPEC> {
         PHY_SHUTDOWNZ_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_rstz(&mut self) -> PHY_RSTZ_W<PHY_RSTZ_SPEC> {
         PHY_RSTZ_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_enableclk(&mut self) -> PHY_ENABLECLK_W<PHY_RSTZ_SPEC> {
         PHY_ENABLECLK_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_forcepll(&mut self) -> PHY_FORCEPLL_W<PHY_RSTZ_SPEC> {
         PHY_FORCEPLL_W::new(self, 3)
     }

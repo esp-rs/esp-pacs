@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In the slave mode it is the length in spi_clk cycles of dummy phase for read-status operations. The register value shall be (cycle_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdsta_dummy_cyclelen(&mut self) -> SLV_RDSTA_DUMMY_CYCLELEN_W<SLAVE2_SPEC> {
         SLV_RDSTA_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - In the slave mode it is the length in spi_clk cycles of dummy phase for write-status operations. The register value shall be (cycle_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrsta_dummy_cyclelen(&mut self) -> SLV_WRSTA_DUMMY_CYCLELEN_W<SLAVE2_SPEC> {
         SLV_WRSTA_DUMMY_CYCLELEN_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the length in spi_clk cycles of dummy phase for read-buffer operations. The register value shall be (cycle_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdbuf_dummy_cyclelen(&mut self) -> SLV_RDBUF_DUMMY_CYCLELEN_W<SLAVE2_SPEC> {
         SLV_RDBUF_DUMMY_CYCLELEN_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode it is the length in spi_clk cycles of dummy phase for write-buffer operations. The register value shall be (cycle_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrbuf_dummy_cyclelen(&mut self) -> SLV_WRBUF_DUMMY_CYCLELEN_W<SLAVE2_SPEC> {
         SLV_WRBUF_DUMMY_CYCLELEN_W::new(self, 24)
     }

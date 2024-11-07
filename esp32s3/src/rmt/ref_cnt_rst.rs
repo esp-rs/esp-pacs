@@ -13,7 +13,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn ch(&mut self, n: u8) -> CH_W<REF_CNT_RST_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -21,49 +20,41 @@ impl W {
     }
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 0)
     }
     #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL2."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL3."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 3)
     }
     #[doc = "Bit 4 - This register is used to reset the clock divider of CHANNEL4."]
     #[inline(always)]
-    #[must_use]
     pub fn ch4(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 4)
     }
     #[doc = "Bit 5 - This register is used to reset the clock divider of CHANNEL5."]
     #[inline(always)]
-    #[must_use]
     pub fn ch5(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 5)
     }
     #[doc = "Bit 6 - This register is used to reset the clock divider of CHANNEL6."]
     #[inline(always)]
-    #[must_use]
     pub fn ch6(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 6)
     }
     #[doc = "Bit 7 - This register is used to reset the clock divider of CHANNEL7."]
     #[inline(always)]
-    #[must_use]
     pub fn ch7(&mut self) -> CH_W<REF_CNT_RST_SPEC> {
         CH_W::new(self, 7)
     }

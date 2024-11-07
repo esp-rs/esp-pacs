@@ -29,7 +29,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_core_0_iram0_pms_monitor_violate_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_iram0_pms_monitor_violate_intr_map(
         &mut self,
     ) -> CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_W<CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>

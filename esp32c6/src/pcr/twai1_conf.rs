@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable twai1 apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn twai1_clk_en(&mut self) -> TWAI1_CLK_EN_W<TWAI1_CONF_SPEC> {
         TWAI1_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset twai1 module"]
     #[inline(always)]
-    #[must_use]
     pub fn twai1_rst_en(&mut self) -> TWAI1_RST_EN_W<TWAI1_CONF_SPEC> {
         TWAI1_RST_EN_W::new(self, 1)
     }

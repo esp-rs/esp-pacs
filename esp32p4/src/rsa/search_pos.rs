@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Configures the starting address to start search. This field should be used together with RSA_SEARCH_ENABLE. The field is only valid when RSA_SEARCH_ENABLE is high."]
     #[inline(always)]
-    #[must_use]
     pub fn search_pos(&mut self) -> SEARCH_POS_W<SEARCH_POS_SPEC> {
         SEARCH_POS_W::new(self, 0)
     }

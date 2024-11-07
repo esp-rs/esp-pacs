@@ -132,67 +132,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_mem_pid_conf(&mut self) -> RTC_MEM_PID_CONF_W<BROWN_OUT_SPEC> {
         RTC_MEM_PID_CONF_W::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_mem_crc_start(&mut self) -> RTC_MEM_CRC_START_W<BROWN_OUT_SPEC> {
         RTC_MEM_CRC_START_W::new(self, 8)
     }
     #[doc = "Bits 9:19"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_mem_crc_addr(&mut self) -> RTC_MEM_CRC_ADDR_W<BROWN_OUT_SPEC> {
         RTC_MEM_CRC_ADDR_W::new(self, 9)
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
-    #[must_use]
     pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC> {
         CLOSE_FLASH_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<BROWN_OUT_SPEC> {
         PD_RF_ENA_W::new(self, 15)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_wait(&mut self) -> RST_WAIT_W<BROWN_OUT_SPEC> {
         RST_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 20:30"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_mem_crc_len(&mut self) -> RTC_MEM_CRC_LEN_W<BROWN_OUT_SPEC> {
         RTC_MEM_CRC_LEN_W::new(self, 20)
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_ena(&mut self) -> RST_ENA_W<BROWN_OUT_SPEC> {
         RST_ENA_W::new(self, 26)
     }
     #[doc = "Bits 27:29 - brown out threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn dbrown_out_thres(&mut self) -> DBROWN_OUT_THRES_W<BROWN_OUT_SPEC> {
         DBROWN_OUT_THRES_W::new(self, 27)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
-    #[must_use]
     pub fn ena(&mut self) -> ENA_W<BROWN_OUT_SPEC> {
         ENA_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_mem_crc_finish(&mut self) -> RTC_MEM_CRC_FINISH_W<BROWN_OUT_SPEC> {
         RTC_MEM_CRC_FINISH_W::new(self, 31)
     }

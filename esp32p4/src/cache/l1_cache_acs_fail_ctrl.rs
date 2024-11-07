@@ -79,7 +79,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to configure l1 icache0 access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_acs_fail_check_mode(
         &mut self,
     ) -> L1_ICACHE0_ACS_FAIL_CHECK_MODE_W<L1_CACHE_ACS_FAIL_CTRL_SPEC> {
@@ -87,7 +86,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to configure l1 icache1 access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_acs_fail_check_mode(
         &mut self,
     ) -> L1_ICACHE1_ACS_FAIL_CHECK_MODE_W<L1_CACHE_ACS_FAIL_CTRL_SPEC> {
@@ -95,7 +93,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to configure l1 icache2 access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache2_acs_fail_check_mode(
         &mut self,
     ) -> L1_ICACHE2_ACS_FAIL_CHECK_MODE_W<L1_CACHE_ACS_FAIL_CTRL_SPEC> {
@@ -103,7 +100,6 @@ impl W {
     }
     #[doc = "Bit 3 - The bit is used to configure l1 icache3 access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache3_acs_fail_check_mode(
         &mut self,
     ) -> L1_ICACHE3_ACS_FAIL_CHECK_MODE_W<L1_CACHE_ACS_FAIL_CTRL_SPEC> {
@@ -111,7 +107,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to configure l1 dcache access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_acs_fail_check_mode(
         &mut self,
     ) -> L1_DCACHE_ACS_FAIL_CHECK_MODE_W<L1_CACHE_ACS_FAIL_CTRL_SPEC> {

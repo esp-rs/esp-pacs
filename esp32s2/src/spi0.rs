@@ -137,12 +137,12 @@ impl RegisterBlock {
     #[doc = "0x40 - SPI Memory Cache SCTRL Register"]
     #[inline(always)]
     pub const fn cache_sctrl(&self) -> &CACHE_SCTRL {
-        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(64).cast() }
     }
     #[doc = "0x40 - SPI interrupt control register"]
     #[inline(always)]
     pub const fn slv_rd_byte(&self) -> &SLV_RD_BYTE {
-        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(64).cast() }
     }
     #[doc = "0x44 - SPI master status and DMA read byte control register"]
     #[inline(always)]
@@ -152,32 +152,32 @@ impl RegisterBlock {
     #[doc = "0x48 - SPI Memory SRAM DRD CMD Register"]
     #[inline(always)]
     pub const fn sram_drd_cmd(&self) -> &SRAM_DRD_CMD {
-        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(72).cast() }
     }
     #[doc = "0x48 - SPI hold register"]
     #[inline(always)]
     pub const fn hold(&self) -> &HOLD {
-        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(72).cast() }
     }
     #[doc = "0x4c - SPI Memory SRAM DWR CMD Register"]
     #[inline(always)]
     pub const fn sram_dwr_cmd(&self) -> &SRAM_DWR_CMD {
-        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(76).cast() }
     }
     #[doc = "0x4c - SPI DMA control register"]
     #[inline(always)]
     pub const fn dma_conf(&self) -> &DMA_CONF {
-        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(76).cast() }
     }
     #[doc = "0x50 - SPI Memory SRAM Clock Register"]
     #[inline(always)]
     pub const fn sram_clk(&self) -> &SRAM_CLK {
-        unsafe { &*(self as *const Self).cast::<u8>().add(80).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(80).cast() }
     }
     #[doc = "0x50 - SPI DMA TX link configuration"]
     #[inline(always)]
     pub const fn dma_out_link(&self) -> &DMA_OUT_LINK {
-        unsafe { &*(self as *const Self).cast::<u8>().add(80).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(80).cast() }
     }
     #[doc = "0x54 - SPI DMA RX link configuration"]
     #[inline(always)]

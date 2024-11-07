@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - this field configures the threshold whether dsi_bridge fifo can receive one more 64-bit, valid only when dsi_bridge as flow controller"]
     #[inline(always)]
-    #[must_use]
     pub fn credit_thrd(&mut self) -> CREDIT_THRD_W<RAW_BUF_CREDIT_CTL_SPEC> {
         CREDIT_THRD_W::new(self, 0)
     }
     #[doc = "Bits 16:30 - this field configures the threshold whether dsi_bridge fifo can receive one more dma burst, valid only when dsi_bridge as flow controller"]
     #[inline(always)]
-    #[must_use]
     pub fn credit_burst_thrd(&mut self) -> CREDIT_BURST_THRD_W<RAW_BUF_CREDIT_CTL_SPEC> {
         CREDIT_BURST_THRD_W::new(self, 16)
     }
     #[doc = "Bit 31 - this bit configures internal credit cnt clear, 0: non, 1: reset. valid only when dsi_bridge as flow controller"]
     #[inline(always)]
-    #[must_use]
     pub fn credit_reset(&mut self) -> CREDIT_RESET_W<RAW_BUF_CREDIT_CTL_SPEC> {
         CREDIT_RESET_W::new(self, 31)
     }

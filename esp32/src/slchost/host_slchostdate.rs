@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slchost_date(&mut self) -> HOST_SLCHOST_DATE_W<HOST_SLCHOSTDATE_SPEC> {
         HOST_SLCHOST_DATE_W::new(self, 0)
     }

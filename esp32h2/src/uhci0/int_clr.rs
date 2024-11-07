@@ -27,55 +27,46 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_start(&mut self) -> RX_START_W<INT_CLR_SPEC> {
         RX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<INT_CLR_SPEC> {
         TX_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_CLR_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_CLR_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<INT_CLR_SPEC> {
         SEND_S_REG_Q_W::new(self, 4)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<INT_CLR_SPEC> {
         SEND_A_REG_Q_W::new(self, 5)
     }
     #[doc = "Bit 6 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_eof_err(&mut self) -> OUTLINK_EOF_ERR_W<INT_CLR_SPEC> {
         OUTLINK_EOF_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl0(&mut self) -> APP_CTRL0_W<INT_CLR_SPEC> {
         APP_CTRL0_W::new(self, 7)
     }
     #[doc = "Bit 8 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl1(&mut self) -> APP_CTRL1_W<INT_CLR_SPEC> {
         APP_CTRL1_W::new(self, 8)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Sha t_length (used if and only if mode == SHA_512/t)."]
     #[inline(always)]
-    #[must_use]
     pub fn t_length(&mut self) -> T_LENGTH_W<T_LENGTH_SPEC> {
         T_LENGTH_W::new(self, 0)
     }

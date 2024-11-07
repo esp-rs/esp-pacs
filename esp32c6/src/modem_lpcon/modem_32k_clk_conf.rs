@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_32k_sel(&mut self) -> CLK_MODEM_32K_SEL_W<MODEM_32K_CLK_CONF_SPEC> {
         CLK_MODEM_32K_SEL_W::new(self, 0)
     }

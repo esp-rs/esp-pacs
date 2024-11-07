@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC> {
         APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC> {
         MEM_TX_WRAP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<APB_CONF_SPEC> {
         MEM_CLK_FORCE_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to power down RMT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<APB_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<APB_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<APB_CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }

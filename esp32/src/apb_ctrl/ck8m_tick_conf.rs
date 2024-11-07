@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<CK8M_TICK_CONF_SPEC> {
         CK8M_TICK_NUM_W::new(self, 0)
     }

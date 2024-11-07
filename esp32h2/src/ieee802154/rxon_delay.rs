@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    #[must_use]
     pub fn rxon_delay(&mut self) -> RXON_DELAY_W<RXON_DELAY_SPEC> {
         RXON_DELAY_W::new(self, 0)
     }

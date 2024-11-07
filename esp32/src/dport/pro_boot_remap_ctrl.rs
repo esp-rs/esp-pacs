@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_boot_remap(&mut self) -> PRO_BOOT_REMAP_W<PRO_BOOT_REMAP_CTRL_SPEC> {
         PRO_BOOT_REMAP_W::new(self, 0)
     }

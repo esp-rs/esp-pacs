@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - I2C_SCL_RSTART_SETUP_TIME"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_scl_rstart_setup_time(
         &mut self,
     ) -> REG_SCL_RSTART_SETUP_TIME_W<SCL_RSTART_SETUP_SPEC> {

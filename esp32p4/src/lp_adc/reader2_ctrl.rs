@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Clock divider."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<READER2_CTRL_SPEC> {
         SAR2_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - Wait arbit stable after sar_done."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_wait_arb_cycle(&mut self) -> SAR2_WAIT_ARB_CYCLE_W<READER2_CTRL_SPEC> {
         SAR2_WAIT_ARB_CYCLE_W::new(self, 16)
     }
     #[doc = "Bit 18 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<READER2_CTRL_SPEC> {
         SAR2_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<READER2_CTRL_SPEC> {
         SAR2_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bits 27:28 - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_pad_force_enable(&mut self) -> SAR2_EN_PAD_FORCE_ENABLE_W<READER2_CTRL_SPEC> {
         SAR2_EN_PAD_FORCE_ENABLE_W::new(self, 27)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<READER2_CTRL_SPEC> {
         SAR2_DATA_INV_W::new(self, 29)
     }
     #[doc = "Bit 30 - Enable saradc2 to send out interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_int_en(&mut self) -> SAR2_INT_EN_W<READER2_CTRL_SPEC> {
         SAR2_INT_EN_W::new(self, 30)
     }

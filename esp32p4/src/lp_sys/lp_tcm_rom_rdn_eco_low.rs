@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_tcm_rom_rdn_eco_low(
         &mut self,
     ) -> LP_TCM_ROM_RDN_ECO_LOW_W<LP_TCM_ROM_RDN_ECO_LOW_SPEC> {

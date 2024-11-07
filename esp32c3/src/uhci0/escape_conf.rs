@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_c0_esc_en(&mut self) -> TX_C0_ESC_EN_W<ESCAPE_CONF_SPEC> {
         TX_C0_ESC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_db_esc_en(&mut self) -> TX_DB_ESC_EN_W<ESCAPE_CONF_SPEC> {
         TX_DB_ESC_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_11_esc_en(&mut self) -> TX_11_ESC_EN_W<ESCAPE_CONF_SPEC> {
         TX_11_ESC_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_13_esc_en(&mut self) -> TX_13_ESC_EN_W<ESCAPE_CONF_SPEC> {
         TX_13_ESC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_c0_esc_en(&mut self) -> RX_C0_ESC_EN_W<ESCAPE_CONF_SPEC> {
         RX_C0_ESC_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_db_esc_en(&mut self) -> RX_DB_ESC_EN_W<ESCAPE_CONF_SPEC> {
         RX_DB_ESC_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_11_esc_en(&mut self) -> RX_11_ESC_EN_W<ESCAPE_CONF_SPEC> {
         RX_11_ESC_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_13_esc_en(&mut self) -> RX_13_ESC_EN_W<ESCAPE_CONF_SPEC> {
         RX_13_ESC_EN_W::new(self, 7)
     }

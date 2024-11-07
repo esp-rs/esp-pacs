@@ -145,73 +145,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - txdataesc_1 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txdataesc_1(&mut self) -> PHY_LP_TXDATAESC_1_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXDATAESC_1_W::new(self, 0)
     }
     #[doc = "Bit 8 - txrequestesc_1 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txrequestesc_1(&mut self) -> PHY_LP_TXREQUESTESC_1_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXREQUESTESC_1_W::new(self, 8)
     }
     #[doc = "Bit 9 - txvalidesc_1 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txvalidesc_1(&mut self) -> PHY_LP_TXVALIDESC_1_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXVALIDESC_1_W::new(self, 9)
     }
     #[doc = "Bit 10 - txlpdtesc_1 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txlpdtesc_1(&mut self) -> PHY_LP_TXLPDTESC_1_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXLPDTESC_1_W::new(self, 10)
     }
     #[doc = "Bit 11 - basedir_1 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_basedir_1(&mut self) -> PHY_LP_BASEDIR_1_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_BASEDIR_1_W::new(self, 11)
     }
     #[doc = "Bits 16:23 - txdataesc_0 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txdataesc_0(&mut self) -> PHY_LP_TXDATAESC_0_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXDATAESC_0_W::new(self, 16)
     }
     #[doc = "Bit 24 - txrequestesc_0 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txrequestesc_0(&mut self) -> PHY_LP_TXREQUESTESC_0_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXREQUESTESC_0_W::new(self, 24)
     }
     #[doc = "Bit 25 - txvalidesc_0 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txvalidesc_0(&mut self) -> PHY_LP_TXVALIDESC_0_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXVALIDESC_0_W::new(self, 25)
     }
     #[doc = "Bit 26 - txlpdtesc_0 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_txlpdtesc_0(&mut self) -> PHY_LP_TXLPDTESC_0_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_TXLPDTESC_0_W::new(self, 26)
     }
     #[doc = "Bit 27 - basedir_0 ctrl when enable dsi phy lp_loopback_test"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_basedir_0(&mut self) -> PHY_LP_BASEDIR_0_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_BASEDIR_0_W::new(self, 27)
     }
     #[doc = "Bit 28 - dsi phy lp_loopback test start check"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_loopback_check(&mut self) -> PHY_LP_LOOPBACK_CHECK_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_LOOPBACK_CHECK_W::new(self, 28)
     }
     #[doc = "Bit 30 - dsi phy lp_loopback ctrl en"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_lp_loopback_en(&mut self) -> PHY_LP_LOOPBACK_EN_W<PHY_LP_LOOPBACK_CTRL_SPEC> {
         PHY_LP_LOOPBACK_EN_W::new(self, 30)
     }

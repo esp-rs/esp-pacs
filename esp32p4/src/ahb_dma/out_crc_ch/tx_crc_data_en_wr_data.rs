@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_crc_data_en_wr_data(
         &mut self,
     ) -> TX_CRC_DATA_EN_WR_DATA_W<TX_CRC_DATA_EN_WR_DATA_SPEC> {

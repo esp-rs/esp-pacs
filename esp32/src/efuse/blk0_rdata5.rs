@@ -98,13 +98,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn rd_reserve_0_181(&mut self) -> RD_RESERVE_0_181_W<BLK0_RDATA5_SPEC> {
         RD_RESERVE_0_181_W::new(self, 21)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
-    #[must_use]
     pub fn rd_reserve_0_186(&mut self) -> RD_RESERVE_0_186_W<BLK0_RDATA5_SPEC> {
         RD_RESERVE_0_186_W::new(self, 26)
     }

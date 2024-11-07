@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_ICG_MODEM_SPEC> {
 impl W {
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_dig_icg_modem_code(
         &mut self,
     ) -> HP_MODEM_DIG_ICG_MODEM_CODE_W<HP_MODEM_ICG_MODEM_SPEC> {

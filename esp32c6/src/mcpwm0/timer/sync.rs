@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn synci_en(&mut self) -> SYNCI_EN_W<SYNC_SPEC> {
         SYNCI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Toggling this bit will trigger a software sync."]
     #[inline(always)]
-    #[must_use]
     pub fn sw(&mut self) -> SW_W<SYNC_SPEC> {
         SW_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - PWM timer0 sync_out selection, 0: sync_in, 1: TEZ, 2: TEP, and sync out will always generate when toggling the reg_timer0_sync_sw bit"]
     #[inline(always)]
-    #[must_use]
     pub fn synco_sel(&mut self) -> SYNCO_SEL_W<SYNC_SPEC> {
         SYNCO_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:19 - phase for timer reload on sync event"]
     #[inline(always)]
-    #[must_use]
     pub fn phase(&mut self) -> PHASE_W<SYNC_SPEC> {
         PHASE_W::new(self, 4)
     }
     #[doc = "Bit 20 - Configure the PWM timer0's direction when timer0 mode is up-down mode: 0-increase,1-decrease"]
     #[inline(always)]
-    #[must_use]
     pub fn phase_direction(&mut self) -> PHASE_DIRECTION_W<SYNC_SPEC> {
         PHASE_DIRECTION_W::new(self, 20)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable H264_DB_TMP_READY_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn db_tmp_ready(&mut self) -> DB_TMP_READY_W<INT_ENA_SPEC> {
         DB_TMP_READY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable H264_REC_READY_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn rec_ready(&mut self) -> REC_READY_W<INT_ENA_SPEC> {
         REC_READY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable H264_FRAME_DONE_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn frame_done(&mut self) -> FRAME_DONE_W<INT_ENA_SPEC> {
         FRAME_DONE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable bit: Write 1 to enable H264_DMA_MOVE_2MB_LINE_DONE_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_move_2mb_line_done(&mut self) -> DMA_MOVE_2MB_LINE_DONE_W<INT_ENA_SPEC> {
         DMA_MOVE_2MB_LINE_DONE_W::new(self, 3)
     }

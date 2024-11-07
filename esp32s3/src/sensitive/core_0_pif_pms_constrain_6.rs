@@ -210,7 +210,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Core0 access bt permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_bt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -218,7 +217,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - Core0 access i2c_ext0 permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_i2c_ext0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2C_EXT0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -226,7 +224,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - Core0 access uhci0 permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_uhci0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_UHCI0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -234,7 +231,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - Core0 access slchost permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_slchost(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SLCHOST_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -242,7 +238,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - Core0 access rmt permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_rmt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RMT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -250,7 +245,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - Core0 access pcnt permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_pcnt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PCNT_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -258,7 +252,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - Core0 access slc permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_slc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SLC_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -266,7 +259,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - Core0 access ledc permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_ledc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_LEDC_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -274,7 +266,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - Core0 access backup permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_backup(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BACKUP_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -282,7 +273,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - Core0 access bb permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_bb(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_BB_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -290,7 +280,6 @@ impl W {
     }
     #[doc = "Bits 24:25 - Core0 access pwm0 permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_pwm0(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWM0_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -298,7 +287,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - Core0 access timergroup permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_timergroup(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -306,7 +294,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - Core0 access timergroup1 permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_timergroup1(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_TIMERGROUP1_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {
@@ -314,7 +301,6 @@ impl W {
     }
     #[doc = "Bits 30:31 - Core0 access systimer permission in world1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_1_systimer(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SYSTIMER_W<CORE_0_PIF_PMS_CONSTRAIN_6_SPEC> {

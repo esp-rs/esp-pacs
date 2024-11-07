@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - force down I2C_RESET_POR"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_reset_por_force_pd(&mut self) -> I2C_RESET_POR_FORCE_PD_W<ANA_CONF_SPEC> {
         I2C_RESET_POR_FORCE_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - force on I2C_RESET_POR"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_reset_por_force_pu(&mut self) -> I2C_RESET_POR_FORCE_PU_W<ANA_CONF_SPEC> {
         I2C_RESET_POR_FORCE_PU_W::new(self, 19)
     }
     #[doc = "Bit 20 - enable clk glitch"]
     #[inline(always)]
-    #[must_use]
     pub fn glitch_rst_en(&mut self) -> GLITCH_RST_EN_W<ANA_CONF_SPEC> {
         GLITCH_RST_EN_W::new(self, 20)
     }
     #[doc = "Bit 22 - PLLA force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_pu(&mut self) -> SAR_I2C_PU_W<ANA_CONF_SPEC> {
         SAR_I2C_PU_W::new(self, 22)
     }
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
-    #[must_use]
     pub fn analog_top_iso_sleep(&mut self) -> ANALOG_TOP_ISO_SLEEP_W<ANA_CONF_SPEC> {
         ANALOG_TOP_ISO_SLEEP_W::new(self, 23)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn analog_top_iso_monitor(&mut self) -> ANALOG_TOP_ISO_MONITOR_W<ANA_CONF_SPEC> {
         ANALOG_TOP_ISO_MONITOR_W::new(self, 24)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W<ANA_CONF_SPEC> {
         BBPLL_CAL_SLP_START_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: PVTMON power up, otherwise power down"]
     #[inline(always)]
-    #[must_use]
     pub fn pvtmon_pu(&mut self) -> PVTMON_PU_W<ANA_CONF_SPEC> {
         PVTMON_PU_W::new(self, 26)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up, otherwise power down"]
     #[inline(always)]
-    #[must_use]
     pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W<ANA_CONF_SPEC> {
         TXRF_I2C_PU_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up, otherwise power down"]
     #[inline(always)]
-    #[must_use]
     pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W<ANA_CONF_SPEC> {
         RFRX_PBUS_PU_W::new(self, 28)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up, otherwise power down"]
     #[inline(always)]
-    #[must_use]
     pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W<ANA_CONF_SPEC> {
         CKGEN_I2C_PU_W::new(self, 30)
     }
     #[doc = "Bit 31 - power on pll i2c"]
     #[inline(always)]
-    #[must_use]
     pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W<ANA_CONF_SPEC> {
         PLL_I2C_PU_W::new(self, 31)
     }

@@ -179,7 +179,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Region 0 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_0(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -187,7 +186,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - Region 1 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_1(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -195,7 +193,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - Region 2 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_2(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -203,7 +200,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - Region 3 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_3(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -211,7 +207,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - Region 4 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_4(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -219,7 +214,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - Region 5 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_5(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -227,7 +221,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - Region 6 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_6(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -235,7 +228,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - Region 7 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_7(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_7_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -243,7 +235,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - Region 8 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_8(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_8_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -251,7 +242,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - Region 9 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_9(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_9_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {
@@ -259,7 +249,6 @@ impl W {
     }
     #[doc = "Bits 20:21 - Region 10 permission in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_world_0_area_10(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_0_AREA_10_W<CORE_1_REGION_PMS_CONSTRAIN_1_SPEC> {

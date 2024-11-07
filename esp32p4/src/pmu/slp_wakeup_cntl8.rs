@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_lite_wakeup_ena(&mut self) -> LP_LITE_WAKEUP_ENA_W<SLP_WAKEUP_CNTL8_SPEC> {
         LP_LITE_WAKEUP_ENA_W::new(self, 31)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - There are four high speed timers the two bits are used to select one of them for high speed channel0. 2'b00: seletc hstimer0. 2'b01: select hstimer1. 2'b10: select hstimer2. 2'b11: select hstimer3."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_sel(&mut self) -> TIMER_SEL_W<CONF0_SPEC> {
         TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This is the output enable control bit for high speed channel0"]
     #[inline(always)]
-    #[must_use]
     pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CONF0_SPEC> {
         SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control the output value when high speed channel0 is off."]
     #[inline(always)]
-    #[must_use]
     pub fn idle_lv(&mut self) -> IDLE_LV_W<CONF0_SPEC> {
         IDLE_LV_W::new(self, 3)
     }

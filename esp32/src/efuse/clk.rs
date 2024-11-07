@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn sel0(&mut self) -> SEL0_W<CLK_SPEC> {
         SEL0_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    #[must_use]
     pub fn sel1(&mut self) -> SEL1_W<CLK_SPEC> {
         SEL1_W::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CLK_SPEC> {
         EN_W::new(self, 16)
     }

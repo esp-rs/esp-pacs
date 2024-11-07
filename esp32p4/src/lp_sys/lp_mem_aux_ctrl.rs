@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_mem_aux_ctrl(&mut self) -> LP_MEM_AUX_CTRL_W<LP_MEM_AUX_CTRL_SPEC> {
         LP_MEM_AUX_CTRL_W::new(self, 0)
     }

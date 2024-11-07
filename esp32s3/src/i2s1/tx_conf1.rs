@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - The width of tx_ws_out in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[6:0\\] +1) * T_bck"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_tdm_ws_width(&mut self) -> TX_TDM_WS_WIDTH_W<TX_CONF1_SPEC> {
         TX_TDM_WS_WIDTH_W::new(self, 0)
     }
     #[doc = "Bits 7:12 - Bit clock configuration bits in transmitter mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_bck_div_num(&mut self) -> TX_BCK_DIV_NUM_W<TX_CONF1_SPEC> {
         TX_BCK_DIV_NUM_W::new(self, 7)
     }
     #[doc = "Bits 13:17 - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<TX_CONF1_SPEC> {
         TX_BITS_MOD_W::new(self, 13)
     }
     #[doc = "Bits 18:23 - I2S Tx half sample bits -1."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_half_sample_bits(&mut self) -> TX_HALF_SAMPLE_BITS_W<TX_CONF1_SPEC> {
         TX_HALF_SAMPLE_BITS_W::new(self, 18)
     }
     #[doc = "Bits 24:28 - The Tx bit number for each channel minus 1in TDM mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_tdm_chan_bits(&mut self) -> TX_TDM_CHAN_BITS_W<TX_CONF1_SPEC> {
         TX_TDM_CHAN_BITS_W::new(self, 24)
     }
     #[doc = "Bit 29 - Set this bit to enable transmitter in Phillips standard mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<TX_CONF1_SPEC> {
         TX_MSB_SHIFT_W::new(self, 29)
     }
     #[doc = "Bit 30 - 1: BCK is not delayed to generate pos/neg edge in master mode. 0: BCK is delayed to generate pos/neg edge in master mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_bck_no_dly(&mut self) -> TX_BCK_NO_DLY_W<TX_CONF1_SPEC> {
         TX_BCK_NO_DLY_W::new(self, 30)
     }

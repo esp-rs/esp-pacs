@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set this bit to enable clock gate"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLK_GATE_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - VAD clock gate force on register"]
     #[inline(always)]
-    #[must_use]
     pub fn vad_cg_force_on(&mut self) -> VAD_CG_FORCE_ON_W<CLK_GATE_SPEC> {
         VAD_CG_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - I2S rx mem clock gate force on register"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_mem_cg_force_on(&mut self) -> RX_MEM_CG_FORCE_ON_W<CLK_GATE_SPEC> {
         RX_MEM_CG_FORCE_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - I2S rx reg clock gate force on register"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_reg_cg_force_on(&mut self) -> RX_REG_CG_FORCE_ON_W<CLK_GATE_SPEC> {
         RX_REG_CG_FORCE_ON_W::new(self, 3)
     }

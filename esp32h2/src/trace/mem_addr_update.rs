@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<MEM_ADDR_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 0 - when set this reg, the current_mem_addr will update to start_addr"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_current_addr_update(&mut self) -> MEM_CURRENT_ADDR_UPDATE_W<MEM_ADDR_UPDATE_SPEC> {
         MEM_CURRENT_ADDR_UPDATE_W::new(self, 0)
     }

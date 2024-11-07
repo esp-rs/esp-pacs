@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the third section for autoload operation on L1-DCache. Note that it should be used together with L1_DCACHE_AUTOLOAD_SCT2_ADDR and L1_DCACHE_AUTOLOAD_SCT2_ENA."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_sct2_size(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_SCT2_SIZE_W<L1_DCACHE_AUTOLOAD_SCT2_SIZE_SPEC> {

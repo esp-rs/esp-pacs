@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - The bit is used to enable config-bus read L2-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_tag_mem_rd_en(
         &mut self,
     ) -> L2_CACHE_TAG_MEM_RD_EN_W<L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bit 21 - The bit is used to enable config-bus write L2-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_tag_mem_wr_en(
         &mut self,
     ) -> L2_CACHE_TAG_MEM_WR_EN_W<L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {

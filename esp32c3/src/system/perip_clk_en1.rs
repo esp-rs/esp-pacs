@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - reg_crypto_aes_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_AES_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_crypto_sha_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_crypto_rsa_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_RSA_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_crypto_ds_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_DS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_crypto_hmac_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         CRYPTO_HMAC_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_dma_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_sdio_host_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         SDIO_HOST_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_lcd_cam_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         LCD_CAM_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_uart2_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         UART2_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_tsens_clk_en"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
         TSENS_CLK_EN_W::new(self, 10)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn rx(&mut self) -> RX_W<GEN_VCID_SPEC> {
         RX_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn tear_auto(&mut self) -> TEAR_AUTO_W<GEN_VCID_SPEC> {
         TEAR_AUTO_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_auto(&mut self) -> TX_AUTO_W<GEN_VCID_SPEC> {
         TX_AUTO_W::new(self, 16)
     }

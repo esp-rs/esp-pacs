@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 19 - 1: Enable PDM2PCM RX mode. 0: DIsable."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pdm2pcm_en(&mut self) -> RX_PDM2PCM_EN_W<RX_PDM2PCM_CONF_SPEC> {
         RX_PDM2PCM_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configure the down sampling rate of PDM RX filter group1 module. 1: The down sampling rate is 128. 0: down sampling rate is 64."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pdm_sinc_dsr_16_en(&mut self) -> RX_PDM_SINC_DSR_16_EN_W<RX_PDM2PCM_CONF_SPEC> {
         RX_PDM_SINC_DSR_16_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:24 - Configure PDM RX amplify number."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pdm2pcm_amplify_num(&mut self) -> RX_PDM2PCM_AMPLIFY_NUM_W<RX_PDM2PCM_CONF_SPEC> {
         RX_PDM2PCM_AMPLIFY_NUM_W::new(self, 21)
     }
     #[doc = "Bit 25 - I2S PDM RX bypass hp filter or not."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pdm_hp_bypass(&mut self) -> RX_PDM_HP_BYPASS_W<RX_PDM2PCM_CONF_SPEC> {
         RX_PDM_HP_BYPASS_W::new(self, 25)
     }
     #[doc = "Bits 26:28 - The fourth parameter of PDM RX IIR_HP filter stage 2 is (504 + LP_I2S_RX_IIR_HP_MULT12_5\\[2:0\\])"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_iir_hp_mult12_5(&mut self) -> RX_IIR_HP_MULT12_5_W<RX_PDM2PCM_CONF_SPEC> {
         RX_IIR_HP_MULT12_5_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - The fourth parameter of PDM RX IIR_HP filter stage 1 is (504 + LP_I2S_RX_IIR_HP_MULT12_0\\[2:0\\])"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_iir_hp_mult12_0(&mut self) -> RX_IIR_HP_MULT12_0_W<RX_PDM2PCM_CONF_SPEC> {
         RX_IIR_HP_MULT12_0_W::new(self, 29)
     }

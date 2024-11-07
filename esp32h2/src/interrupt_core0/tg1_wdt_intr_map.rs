@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_TG1_WDT_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn tg1_wdt_intr_map(&mut self) -> TG1_WDT_INTR_MAP_W<TG1_WDT_INTR_MAP_SPEC> {
         TG1_WDT_INTR_MAP_W::new(self, 0)
     }

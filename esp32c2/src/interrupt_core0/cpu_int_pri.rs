@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn map(&mut self) -> MAP_W<CPU_INT_PRI_SPEC> {
         MAP_W::new(self, 0)
     }

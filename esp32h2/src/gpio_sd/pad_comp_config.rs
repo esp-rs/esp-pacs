@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Pad compare enable bit."]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_comp(&mut self) -> XPD_COMP_W<PAD_COMP_CONFIG_SPEC> {
         XPD_COMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1 to enable external reference from PAD\\[0\\]. 0 to enable internal reference, meanwhile PAD\\[0\\] can be used as a regular GPIO."]
     #[inline(always)]
-    #[must_use]
     pub fn mode_comp(&mut self) -> MODE_COMP_W<PAD_COMP_CONFIG_SPEC> {
         MODE_COMP_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - internal reference voltage tuning bit. 0V to 0.7*VDDPST step 0.1*VDDPST."]
     #[inline(always)]
-    #[must_use]
     pub fn dref_comp(&mut self) -> DREF_COMP_W<PAD_COMP_CONFIG_SPEC> {
         DREF_COMP_W::new(self, 2)
     }
     #[doc = "Bits 5:6 - Zero Detect mode select."]
     #[inline(always)]
-    #[must_use]
     pub fn zero_det_mode(&mut self) -> ZERO_DET_MODE_W<PAD_COMP_CONFIG_SPEC> {
         ZERO_DET_MODE_W::new(self, 5)
     }

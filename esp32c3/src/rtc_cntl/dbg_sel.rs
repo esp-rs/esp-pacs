@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_12m_no_gating(&mut self) -> DEBUG_12M_NO_GATING_W<DBG_SEL_SPEC> {
         DEBUG_12M_NO_GATING_W::new(self, 1)
     }
     #[doc = "Bits 2:6 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<DBG_SEL_SPEC> {
         DEBUG_BIT_SEL_W::new(self, 2)
     }
     #[doc = "Bits 7:11 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel0(&mut self) -> DEBUG_SEL0_W<DBG_SEL_SPEC> {
         DEBUG_SEL0_W::new(self, 7)
     }
     #[doc = "Bits 12:16 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel1(&mut self) -> DEBUG_SEL1_W<DBG_SEL_SPEC> {
         DEBUG_SEL1_W::new(self, 12)
     }
     #[doc = "Bits 17:21 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel2(&mut self) -> DEBUG_SEL2_W<DBG_SEL_SPEC> {
         DEBUG_SEL2_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel3(&mut self) -> DEBUG_SEL3_W<DBG_SEL_SPEC> {
         DEBUG_SEL3_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - use for debug"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<DBG_SEL_SPEC> {
         DEBUG_SEL4_W::new(self, 27)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable clock lane module of csi phy."]
     #[inline(always)]
-    #[must_use]
     pub fn csi_enableclk(&mut self) -> CSI_ENABLECLK_W<HOST_CTRL_SPEC> {
         CSI_ENABLECLK_W::new(self, 0)
     }
     #[doc = "Bit 1 - enable cfg_clk of csi host module."]
     #[inline(always)]
-    #[must_use]
     pub fn csi_cfg_clk_en(&mut self) -> CSI_CFG_CLK_EN_W<HOST_CTRL_SPEC> {
         CSI_CFG_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - for phy test by loopback dsi phy to csi phy."]
     #[inline(always)]
-    #[must_use]
     pub fn loopbk_test_en(&mut self) -> LOOPBK_TEST_EN_W<HOST_CTRL_SPEC> {
         LOOPBK_TEST_EN_W::new(self, 2)
     }

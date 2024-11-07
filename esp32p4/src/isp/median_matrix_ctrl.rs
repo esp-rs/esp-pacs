@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures median matrix padding data"]
     #[inline(always)]
-    #[must_use]
     pub fn median_padding_data(&mut self) -> MEDIAN_PADDING_DATA_W<MEDIAN_MATRIX_CTRL_SPEC> {
         MEDIAN_PADDING_DATA_W::new(self, 0)
     }
     #[doc = "Bit 8 - this bit configures the padding mode of median matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
     #[inline(always)]
-    #[must_use]
     pub fn median_padding_mode(&mut self) -> MEDIAN_PADDING_MODE_W<MEDIAN_MATRIX_CTRL_SPEC> {
         MEDIAN_PADDING_MODE_W::new(self, 8)
     }

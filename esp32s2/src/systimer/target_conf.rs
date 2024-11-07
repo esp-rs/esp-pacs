@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - Set alarm period for system timer target 0, only valid in periodic alarms mode."]
     #[inline(always)]
-    #[must_use]
     pub fn period(&mut self) -> PERIOD_W<TARGET_CONF_SPEC> {
         PERIOD_W::new(self, 0)
     }
     #[doc = "Bit 30 - Set work mode for system timer target 0. 0: work in a timedelay alarm mode; 1: work in periodic alarms mode."]
     #[inline(always)]
-    #[must_use]
     pub fn period_mode(&mut self) -> PERIOD_MODE_W<TARGET_CONF_SPEC> {
         PERIOD_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - System timer target 0 work enable."]
     #[inline(always)]
-    #[must_use]
     pub fn work_en(&mut self) -> WORK_EN_W<TARGET_CONF_SPEC> {
         WORK_EN_W::new(self, 31)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock i2s0 dma permission Configuration Register."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_i2s0_pms_constrain_lock(
         &mut self,
     ) -> DMA_APBPERI_I2S0_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_SPEC> {

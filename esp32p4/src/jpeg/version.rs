@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn jpeg_ver(&mut self) -> JPEG_VER_W<VERSION_SPEC> {
         JPEG_VER_W::new(self, 0)
     }

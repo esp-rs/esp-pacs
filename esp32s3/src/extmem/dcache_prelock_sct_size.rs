@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with DCACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_prelock_sct1_size(
         &mut self,
     ) -> DCACHE_PRELOCK_SCT1_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bits 16:31 - The bits are used to configure the first length of data locking, which is combined with DCACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_prelock_sct0_size(
         &mut self,
     ) -> DCACHE_PRELOCK_SCT0_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {

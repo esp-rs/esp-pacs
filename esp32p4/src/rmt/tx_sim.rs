@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    #[must_use]
     pub fn ch0(&mut self) -> CH0_W<TX_SIM_SPEC> {
         CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    #[must_use]
     pub fn ch1(&mut self) -> CH1_W<TX_SIM_SPEC> {
         CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable CHANNEL2 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    #[must_use]
     pub fn ch2(&mut self) -> CH2_W<TX_SIM_SPEC> {
         CH2_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable CHANNEL3 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    #[must_use]
     pub fn ch3(&mut self) -> CH3_W<TX_SIM_SPEC> {
         CH3_W::new(self, 3)
     }
     #[doc = "Bit 4 - This register is used to enable multiple of channels to start sending data synchronously."]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<TX_SIM_SPEC> {
         EN_W::new(self, 4)
     }

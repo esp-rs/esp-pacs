@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - apb_peripheral_access_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_peripheral_access_lock(
         &mut self,
     ) -> APB_PERIPHERAL_ACCESS_LOCK_W<APB_PERIPHERAL_ACCESS_0_SPEC> {

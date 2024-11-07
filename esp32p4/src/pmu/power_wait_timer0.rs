@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dg_hp_powerdown_timer(&mut self) -> DG_HP_POWERDOWN_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
         DG_HP_POWERDOWN_TIMER_W::new(self, 5)
     }
     #[doc = "Bits 14:22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dg_hp_powerup_timer(&mut self) -> DG_HP_POWERUP_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
         DG_HP_POWERUP_TIMER_W::new(self, 14)
     }
     #[doc = "Bits 23:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dg_hp_wait_timer(&mut self) -> DG_HP_WAIT_TIMER_W<POWER_WAIT_TIMER0_SPEC> {
         DG_HP_WAIT_TIMER_W::new(self, 23)
     }

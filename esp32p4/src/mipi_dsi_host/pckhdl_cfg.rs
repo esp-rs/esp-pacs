@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn eotp_tx_en(&mut self) -> EOTP_TX_EN_W<PCKHDL_CFG_SPEC> {
         EOTP_TX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn eotp_rx_en(&mut self) -> EOTP_RX_EN_W<PCKHDL_CFG_SPEC> {
         EOTP_RX_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn bta_en(&mut self) -> BTA_EN_W<PCKHDL_CFG_SPEC> {
         BTA_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_rx_en(&mut self) -> ECC_RX_EN_W<PCKHDL_CFG_SPEC> {
         ECC_RX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn crc_rx_en(&mut self) -> CRC_RX_EN_W<PCKHDL_CFG_SPEC> {
         CRC_RX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn eotp_tx_lp_en(&mut self) -> EOTP_TX_LP_EN_W<PCKHDL_CFG_SPEC> {
         EOTP_TX_LP_EN_W::new(self, 5)
     }

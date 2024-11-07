@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
-    #[must_use]
     pub fn wb_mode(&mut self) -> WB_MODE_W<RD_STATUS_SPEC> {
         WB_MODE_W::new(self, 16)
     }

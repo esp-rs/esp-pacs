@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_cycles_s4(&mut self) -> SLEEP_CYCLES_S4_W<ULP_CP_SLEEP_CYC4_SPEC> {
         SLEEP_CYCLES_S4_W::new(self, 0)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn txrx_state(&mut self) -> TXRX_STATE_W<TXRX_STATUS_SPEC> {
         TXRX_STATE_W::new(self, 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_proc(&mut self) -> TX_PROC_W<TXRX_STATUS_SPEC> {
         TX_PROC_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_proc(&mut self) -> RX_PROC_W<TXRX_STATUS_SPEC> {
         RX_PROC_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn ed_proc(&mut self) -> ED_PROC_W<TXRX_STATUS_SPEC> {
         ED_PROC_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn ed_trigger_tx_proc(&mut self) -> ED_TRIGGER_TX_PROC_W<TXRX_STATUS_SPEC> {
         ED_TRIGGER_TX_PROC_W::new(self, 11)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
     pub fn rf_ctrl_state(&mut self) -> RF_CTRL_STATE_W<TXRX_STATUS_SPEC> {
         RF_CTRL_STATE_W::new(self, 16)
     }

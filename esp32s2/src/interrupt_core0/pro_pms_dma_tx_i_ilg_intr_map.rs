@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map PMS_DMA_TX_I_ILG interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_pms_dma_tx_i_ilg_intr_map(
         &mut self,
     ) -> PRO_PMS_DMA_TX_I_ILG_INTR_MAP_W<PRO_PMS_DMA_TX_I_ILG_INTR_MAP_SPEC> {

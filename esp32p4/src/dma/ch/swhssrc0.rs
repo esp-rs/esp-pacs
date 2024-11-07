@@ -50,37 +50,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_req_src(&mut self) -> CH1_SWHS_REQ_SRC_W<SWHSSRC0_SPEC> {
         CH1_SWHS_REQ_SRC_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_req_src_we(&mut self) -> CH1_SWHS_REQ_SRC_WE_W<SWHSSRC0_SPEC> {
         CH1_SWHS_REQ_SRC_WE_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_sglreq_src(&mut self) -> CH1_SWHS_SGLREQ_SRC_W<SWHSSRC0_SPEC> {
         CH1_SWHS_SGLREQ_SRC_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_sglreq_src_we(&mut self) -> CH1_SWHS_SGLREQ_SRC_WE_W<SWHSSRC0_SPEC> {
         CH1_SWHS_SGLREQ_SRC_WE_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_lst_src(&mut self) -> CH1_SWHS_LST_SRC_W<SWHSSRC0_SPEC> {
         CH1_SWHS_LST_SRC_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_swhs_lst_src_we(&mut self) -> CH1_SWHS_LST_SRC_WE_W<SWHSSRC0_SPEC> {
         CH1_SWHS_LST_SRC_WE_W::new(self, 5)
     }

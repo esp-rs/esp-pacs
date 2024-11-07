@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - When channel0 sends more than reg_rmt_tx_lim_ch0 datas then channel0 produce the relative interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lim(&mut self) -> TX_LIM_W<CH_TX_LIM_SPEC> {
         TX_LIM_W::new(self, 0)
     }

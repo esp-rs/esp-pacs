@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0: enable clock gating. 1: disable clock gating, clock always on."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLK_EN_SPEC> {
         CLK_EN_W::new(self, 0)
     }

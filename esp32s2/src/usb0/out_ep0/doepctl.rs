@@ -88,31 +88,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn snp(&mut self) -> SNP_W<DOEPCTL_SPEC> {
         SNP_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn stall(&mut self) -> STALL_W<DOEPCTL_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn cnak(&mut self) -> CNAK_W<DOEPCTL_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn snak(&mut self) -> SNAK_W<DOEPCTL_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn epena(&mut self) -> EPENA_W<DOEPCTL_SPEC> {
         EPENA_W::new(self, 31)
     }

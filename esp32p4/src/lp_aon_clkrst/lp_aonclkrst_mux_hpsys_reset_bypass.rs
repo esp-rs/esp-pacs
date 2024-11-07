@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_mux_hpsys_reset_bypass(
         &mut self,
     ) -> LP_AONCLKRST_MUX_HPSYS_RESET_BYPASS_W<LP_AONCLKRST_MUX_HPSYS_RESET_BYPASS_SPEC> {

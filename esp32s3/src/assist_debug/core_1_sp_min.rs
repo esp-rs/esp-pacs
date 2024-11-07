@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - stack min value"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_sp_min(&mut self) -> CORE_1_SP_MIN_W<CORE_1_SP_MIN_SPEC> {
         CORE_1_SP_MIN_W::new(self, 0)
     }

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC> {
         CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC> {
         CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 9 - the bit combined with spi_mem_mosi_delay_mode bits to set mosi signal delay mode."]
     #[inline(always)]
-    #[must_use]
     pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
         CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
         USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
         USR_DUMMY_W::new(self, 29)
     }

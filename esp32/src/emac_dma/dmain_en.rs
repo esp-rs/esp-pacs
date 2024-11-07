@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When this bit is set with Normal Interrupt Summary Enable (Bit\\[16\\]) the Transmit Interrupt is enabled. When this bit is reset the Transmit Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_tie(&mut self) -> DMAIN_TIE_W<DMAIN_EN_SPEC> {
         DMAIN_TIE_W::new(self, 0)
     }
     #[doc = "Bit 1 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Transmission Stopped Interrupt is enabled. When this bit is reset the Transmission Stopped Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_tse(&mut self) -> DMAIN_TSE_W<DMAIN_EN_SPEC> {
         DMAIN_TSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set with Normal Interrupt Summary Enable (Bit 16) the Transmit Buffer Unavailable Interrupt is enabled. When this bit is reset the Transmit Buffer Unavailable Interrupt is Disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_tbue(&mut self) -> DMAIN_TBUE_W<DMAIN_EN_SPEC> {
         DMAIN_TBUE_W::new(self, 2)
     }
     #[doc = "Bit 3 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Transmit Jabber Timeout Interrupt is enabled. When this bit is reset the Transmit Jabber Timeout Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_tjte(&mut self) -> DMAIN_TJTE_W<DMAIN_EN_SPEC> {
         DMAIN_TJTE_W::new(self, 3)
     }
     #[doc = "Bit 4 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Receive Overflow Interrupt is enabled. When this bit is reset the Overflow Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_oie(&mut self) -> DMAIN_OIE_W<DMAIN_EN_SPEC> {
         DMAIN_OIE_W::new(self, 4)
     }
     #[doc = "Bit 5 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Transmit Underflow Interrupt is enabled. When this bit is reset the Underflow Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_uie(&mut self) -> DMAIN_UIE_W<DMAIN_EN_SPEC> {
         DMAIN_UIE_W::new(self, 5)
     }
     #[doc = "Bit 6 - When this bit is set with Normal Interrupt Summary Enable (Bit\\[16\\]) the Receive Interrupt is enabled. When this bit is reset the Receive Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_rie(&mut self) -> DMAIN_RIE_W<DMAIN_EN_SPEC> {
         DMAIN_RIE_W::new(self, 6)
     }
     #[doc = "Bit 7 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Receive Buffer Unavailable Interrupt is enabled. When this bit is reset the Receive Buffer Unavailable Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_rbue(&mut self) -> DMAIN_RBUE_W<DMAIN_EN_SPEC> {
         DMAIN_RBUE_W::new(self, 7)
     }
     #[doc = "Bit 8 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Receive Stopped Interrupt is enabled. When this bit is reset the Receive Stopped Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_rse(&mut self) -> DMAIN_RSE_W<DMAIN_EN_SPEC> {
         DMAIN_RSE_W::new(self, 8)
     }
     #[doc = "Bit 9 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Receive Watchdog Timeout Interrupt is enabled. When this bit is reset the Receive Watchdog Timeout Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_rwte(&mut self) -> DMAIN_RWTE_W<DMAIN_EN_SPEC> {
         DMAIN_RWTE_W::new(self, 9)
     }
     #[doc = "Bit 10 - When this bit is set with an Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Early Transmit Interrupt is enabled. When this bit is reset the Early Transmit Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_etie(&mut self) -> DMAIN_ETIE_W<DMAIN_EN_SPEC> {
         DMAIN_ETIE_W::new(self, 10)
     }
     #[doc = "Bit 13 - When this bit is set with Abnormal Interrupt Summary Enable (Bit\\[15\\]) the Fatal Bus Error Interrupt is enabled. When this bit is reset the Fatal Bus Error Enable Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_fbee(&mut self) -> DMAIN_FBEE_W<DMAIN_EN_SPEC> {
         DMAIN_FBEE_W::new(self, 13)
     }
     #[doc = "Bit 14 - When this bit is set with Normal Interrupt Summary Enable (Bit\\[16\\]) the Early Receive Interrupt is enabled. When this bit is reset the Early Receive Interrupt is disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_erie(&mut self) -> DMAIN_ERIE_W<DMAIN_EN_SPEC> {
         DMAIN_ERIE_W::new(self, 14)
     }
     #[doc = "Bit 15 - When this bit is set abnormal interrupt summary is enabled. When this bit is reset the abnormal interrupt summary is disabled. This bit enables the following interrupts in Status Register: Bit\\[1\\]: Transmit Process Stopped. Bit\\[3\\]: Transmit Jabber Timeout. Bit\\[4\\]: Receive Overflow. Bit\\[5\\]: Transmit Underflow. Bit\\[7\\]: Receive Buffer Unavailable. Bit\\[8\\]: Receive Process Stopped. Bit\\[9\\]: Receive Watchdog Timeout. Bit\\[10\\]: Early Transmit Interrupt. Bit\\[13\\]: Fatal Bus Error."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_aise(&mut self) -> DMAIN_AISE_W<DMAIN_EN_SPEC> {
         DMAIN_AISE_W::new(self, 15)
     }
     #[doc = "Bit 16 - When this bit is set normal interrupt summary is enabled. When this bit is reset normal interrupt summary is disabled. This bit enables the following interrupts in Status Register: Bit\\[0\\]: Transmit Interrupt. Bit\\[2\\]: Transmit Buffer Unavailable. Bit\\[6\\]: Receive Interrupt. Bit\\[14\\]: Early Receive Interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn dmain_nise(&mut self) -> DMAIN_NISE_W<DMAIN_EN_SPEC> {
         DMAIN_NISE_W::new(self, 16)
     }

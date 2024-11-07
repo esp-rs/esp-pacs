@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<TRIGGER_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to activate manual encryption."]
     #[inline(always)]
-    #[must_use]
     pub fn trigger(&mut self) -> TRIGGER_W<TRIGGER_SPEC> {
         TRIGGER_W::new(self, 0)
     }

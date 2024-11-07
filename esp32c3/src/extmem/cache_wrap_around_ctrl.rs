@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_flash_wrap_around(
         &mut self,
     ) -> CACHE_FLASH_WRAP_AROUND_W<CACHE_WRAP_AROUND_CTRL_SPEC> {

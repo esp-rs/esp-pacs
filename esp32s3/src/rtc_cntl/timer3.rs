@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC> {
         WIFI_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC> {
         WIFI_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_wait_timer(&mut self) -> BT_WAIT_TIMER_W<TIMER3_SPEC> {
         BT_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_powerup_timer(&mut self) -> BT_POWERUP_TIMER_W<TIMER3_SPEC> {
         BT_POWERUP_TIMER_W::new(self, 25)
     }

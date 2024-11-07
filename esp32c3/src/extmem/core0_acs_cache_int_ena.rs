@@ -74,7 +74,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable interrupt by cpu access icache while the corresponding ibus is disabled which include speculative access."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_acs_msk_ic(
         &mut self,
     ) -> CORE0_IBUS_ACS_MSK_IC_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
@@ -82,19 +81,16 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to enable interrupt by ibus trying to write icache"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_wr_ic(&mut self) -> CORE0_IBUS_WR_IC_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
         CORE0_IBUS_WR_IC_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_ibus_reject(&mut self) -> CORE0_IBUS_REJECT_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
         CORE0_IBUS_REJECT_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to enable interrupt by cpu access icache while the corresponding dbus is disabled which include speculative access."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_acs_msk_ic(
         &mut self,
     ) -> CORE0_DBUS_ACS_MSK_IC_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
@@ -102,13 +98,11 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to enable interrupt by authentication fail."]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_reject(&mut self) -> CORE0_DBUS_REJECT_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
         CORE0_DBUS_REJECT_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt by dbus trying to write icache"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dbus_wr_ic(&mut self) -> CORE0_DBUS_WR_IC_W<CORE0_ACS_CACHE_INT_ENA_SPEC> {
         CORE0_DBUS_WR_IC_W::new(self, 5)
     }

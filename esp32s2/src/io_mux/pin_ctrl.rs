@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT1. 15: disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn pin_clk_out1(&mut self) -> PIN_CLK_OUT1_W<PIN_CTRL_SPEC> {
         PIN_CLK_OUT1_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT2. 15: disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn pin_clk_out2(&mut self) -> PIN_CLK_OUT2_W<PIN_CTRL_SPEC> {
         PIN_CLK_OUT2_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - Configure I2S0 clock output. 0: output I2S0 clock to CLK_OUT3. 15: disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn pin_clk_out3(&mut self) -> PIN_CLK_OUT3_W<PIN_CTRL_SPEC> {
         PIN_CLK_OUT3_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - IO pin power switch delay, delay unit is one APB clock."]
     #[inline(always)]
-    #[must_use]
     pub fn switch_prt_num(&mut self) -> SWITCH_PRT_NUM_W<PIN_CTRL_SPEC> {
         SWITCH_PRT_NUM_W::new(self, 12)
     }
     #[doc = "Bit 15 - Select power voltage for GPIO33 ~ GPIO37. 1: select VDD_SPI 1.8 V. 0: select VDD3P3_CPU 3.3 V."]
     #[inline(always)]
-    #[must_use]
     pub fn pad_power_ctrl(&mut self) -> PAD_POWER_CTRL_W<PIN_CTRL_SPEC> {
         PAD_POWER_CTRL_W::new(self, 15)
     }

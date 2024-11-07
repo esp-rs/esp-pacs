@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - This filed is used to set the max value of clear write_buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_message_max(&mut self) -> CORE_0_MESSAGE_MAX_W<CORE_0_MESSAGE_MAX_SPEC> {
         CORE_0_MESSAGE_MAX_W::new(self, 0)
     }

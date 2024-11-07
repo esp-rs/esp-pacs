@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - reg_rmt_rx_lim_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_lim(&mut self) -> RX_LIM_W<CH_RX_LIM_SPEC> {
         RX_LIM_W::new(self, 0)
     }

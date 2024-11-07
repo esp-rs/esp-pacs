@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vid_hsa_time(&mut self) -> VID_HSA_TIME_W<VID_HSA_TIME_SPEC> {
         VID_HSA_TIME_W::new(self, 0)
     }

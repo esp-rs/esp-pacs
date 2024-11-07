@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn ack_num(&mut self) -> ACK_NUM_W<ACK_NUM_SPEC> {
         ACK_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn load(&mut self) -> LOAD_W<ACK_NUM_SPEC> {
         LOAD_W::new(self, 3)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set as one within (0,1,3,7) to generate clk_ahb drived by clk_hproot. The clk_ahb is div1(default)/div2/div4/div8 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_CPU_LS_DIV_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ahb_ls_div_num(&mut self) -> AHB_LS_DIV_NUM_W<AHB_FREQ_CONF_SPEC> {
         AHB_LS_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Set as one within (3,7,15) to generate clk_ahb drived by clk_hproot. The clk_ahb is div4(default)/div8/div16 of clk_hproot. This field is only avaliable for high-speed clock-source such as SPLL, and should be used together with PCR_CPU_HS_DIV_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ahb_hs_div_num(&mut self) -> AHB_HS_DIV_NUM_W<AHB_FREQ_CONF_SPEC> {
         AHB_HS_DIV_NUM_W::new(self, 8)
     }

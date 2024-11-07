@@ -90,37 +90,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - 1: Clear SPI_SLV_ADDR_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_addr_err_clr(&mut self) -> SLV_ADDR_ERR_CLR_W<SLAVE1_SPEC> {
         SLV_ADDR_ERR_CLR_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: Clear SPI_SLV_CMD_ERR. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmd_err_clr(&mut self) -> SLV_CMD_ERR_CLR_W<SLAVE1_SPEC> {
         SLV_CMD_ERR_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: spi slave QPI mode is not supported. 0: spi slave QPI mode is supported."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_no_qpi_en(&mut self) -> SLV_NO_QPI_EN_W<SLAVE1_SPEC> {
         SLV_NO_QPI_EN_W::new(self, 12)
     }
     #[doc = "Bit 15 - The interrupt raw bit for the completion of dma write operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wr_dma_done(&mut self) -> SLV_WR_DMA_DONE_W<SLAVE1_SPEC> {
         SLV_WR_DMA_DONE_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - In the slave mode it is the value of command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC> {
         SLV_LAST_COMMAND_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - In the slave mode it is the value of address."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC> {
         SLV_LAST_ADDR_W::new(self, 24)
     }

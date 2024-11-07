@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register is used to config ch0 of rx crc initial value"]
     #[inline(always)]
-    #[must_use]
     pub fn in_crc_init_data(&mut self) -> IN_CRC_INIT_DATA_W<IN_CRC_INIT_DATA_SPEC> {
         IN_CRC_INIT_DATA_W::new(self, 0)
     }

@@ -144,79 +144,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable bit for rxfifo_full_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<INT_ENA_SPEC> {
         RXFIFO_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for txfifo_empty_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<INT_ENA_SPEC> {
         TXFIFO_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for rxfifo_ovf_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_ENA_SPEC> {
         RXFIFO_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for end_detect_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn end_detect(&mut self) -> END_DETECT_W<INT_ENA_SPEC> {
         END_DETECT_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for slave_tran_comp_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_tran_comp(&mut self) -> SLAVE_TRAN_COMP_W<INT_ENA_SPEC> {
         SLAVE_TRAN_COMP_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for arbitration_lost_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_ENA_SPEC> {
         ARBITRATION_LOST_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for master_tran_comp_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn master_tran_comp(&mut self) -> MASTER_TRAN_COMP_W<INT_ENA_SPEC> {
         MASTER_TRAN_COMP_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for trans_complete_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_ENA_SPEC> {
         TRANS_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - The enable bit for time_out_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<INT_ENA_SPEC> {
         TIME_OUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - The enable bit for trans_start_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<INT_ENA_SPEC> {
         TRANS_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - The enable bit for ack_err_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn nack(&mut self) -> NACK_W<INT_ENA_SPEC> {
         NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - The enable bit for rx_rec_full_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_rec_full(&mut self) -> RX_REC_FULL_W<INT_ENA_SPEC> {
         RX_REC_FULL_W::new(self, 11)
     }
     #[doc = "Bit 12 - The enable bit for tx_send_empty_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_send_empty(&mut self) -> TX_SEND_EMPTY_W<INT_ENA_SPEC> {
         TX_SEND_EMPTY_W::new(self, 12)
     }

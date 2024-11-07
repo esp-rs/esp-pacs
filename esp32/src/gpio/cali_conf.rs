@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn cali_rtc_max(&mut self) -> CALI_RTC_MAX_W<CALI_CONF_SPEC> {
         CALI_RTC_MAX_W::new(self, 0)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn cali_start(&mut self) -> CALI_START_W<CALI_CONF_SPEC> {
         CALI_START_W::new(self, 31)
     }

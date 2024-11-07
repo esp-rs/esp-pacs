@@ -125,61 +125,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For SPI0, AXI master access enable, 1: enable, 0:disable."]
     #[inline(always)]
-    #[must_use]
     pub fn axi_req_en(&mut self) -> AXI_REQ_EN_W<CACHE_FCTRL_SPEC> {
         AXI_REQ_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - For SPI0, cache read flash with 4 bytes address, 1: enable, 0:disable."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_usr_addr_4byte(&mut self) -> CACHE_USR_ADDR_4BYTE_W<CACHE_FCTRL_SPEC> {
         CACHE_USR_ADDR_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 2 - For SPI0, cache read flash for user define command, 1: enable, 0:disable."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC> {
         CACHE_FLASH_USR_CMD_W::new(self, 2)
     }
     #[doc = "Bit 3 - For SPI0 flash, din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
-    #[must_use]
     pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<CACHE_FCTRL_SPEC> {
         FDIN_DUAL_W::new(self, 3)
     }
     #[doc = "Bit 4 - For SPI0 flash, dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
-    #[must_use]
     pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<CACHE_FCTRL_SPEC> {
         FDOUT_DUAL_W::new(self, 4)
     }
     #[doc = "Bit 5 - For SPI0 flash, address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_dio."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CACHE_FCTRL_SPEC> {
         FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - For SPI0 flash, din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
-    #[must_use]
     pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<CACHE_FCTRL_SPEC> {
         FDIN_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 7 - For SPI0 flash, dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
-    #[must_use]
     pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<CACHE_FCTRL_SPEC> {
         FDOUT_QUAD_W::new(self, 7)
     }
     #[doc = "Bit 8 - For SPI0 flash, address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_fread_qio."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CACHE_FCTRL_SPEC> {
         FADDR_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 31 - Set this bit to close AXI read/write transfer to MSPI, which means that only SLV_ERR will be replied to BRESP/RRESP."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_close_axi_inf_en(&mut self) -> SPI_CLOSE_AXI_INF_EN_W<CACHE_FCTRL_SPEC> {
         SPI_CLOSE_AXI_INF_EN_W::new(self, 31)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the black level of bottom right channel of bayer img"]
     #[inline(always)]
-    #[must_use]
     pub fn blc_r3_value(&mut self) -> BLC_R3_VALUE_W<BLC_VALUE_SPEC> {
         BLC_R3_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures the black level of bottom left channel of bayer img"]
     #[inline(always)]
-    #[must_use]
     pub fn blc_r2_value(&mut self) -> BLC_R2_VALUE_W<BLC_VALUE_SPEC> {
         BLC_R2_VALUE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures the black level of top right channel of bayer img"]
     #[inline(always)]
-    #[must_use]
     pub fn blc_r1_value(&mut self) -> BLC_R1_VALUE_W<BLC_VALUE_SPEC> {
         BLC_R1_VALUE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures the black level of top left channel of bayer img"]
     #[inline(always)]
-    #[must_use]
     pub fn blc_r0_value(&mut self) -> BLC_R0_VALUE_W<BLC_VALUE_SPEC> {
         BLC_R0_VALUE_W::new(self, 24)
     }

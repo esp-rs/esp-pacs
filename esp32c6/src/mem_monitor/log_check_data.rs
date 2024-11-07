@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The special check data, when write this special data, it will trigger logging."]
     #[inline(always)]
-    #[must_use]
     pub fn log_check_data(&mut self) -> LOG_CHECK_DATA_W<LOG_CHECK_DATA_SPEC> {
         LOG_CHECK_DATA_W::new(self, 0)
     }

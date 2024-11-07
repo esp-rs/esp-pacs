@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<CTRL2_SPEC> {
 impl W {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
-    #[must_use]
     pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC> {
         SYNC_RESET_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_hold0(&mut self) -> GPIO_HOLD0_W<GPIO_HOLD0_SPEC> {
         GPIO_HOLD0_W::new(self, 0)
     }

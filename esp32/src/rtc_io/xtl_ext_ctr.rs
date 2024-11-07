@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - select the external xtl power source Ó0Ó select GPIO0 Ó1Ó select GPIO2 ...Ò17Ó select GPIO17"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<XTL_EXT_CTR_SPEC> {
         SEL_W::new(self, 27)
     }

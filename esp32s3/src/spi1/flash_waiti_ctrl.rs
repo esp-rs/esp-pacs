@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-waiting flash idle operation when PP/SE/BE/CE/WRSR/PES command is sent."]
     #[inline(always)]
-    #[must_use]
     pub fn waiti_en(&mut self) -> WAITI_EN_W<FLASH_WAITI_CTRL_SPEC> {
         WAITI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable DUMMY phase in auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
-    #[must_use]
     pub fn waiti_dummy(&mut self) -> WAITI_DUMMY_W<FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_W::new(self, 1)
     }
     #[doc = "Bits 2:9 - The command value of auto wait flash idle transfer(RDSR)."]
     #[inline(always)]
-    #[must_use]
     pub fn waiti_cmd(&mut self) -> WAITI_CMD_W<FLASH_WAITI_CTRL_SPEC> {
         WAITI_CMD_W::new(self, 2)
     }
     #[doc = "Bits 10:15 - The dummy cycle length when wait flash idle(RDSR)."]
     #[inline(always)]
-    #[must_use]
     pub fn waiti_dummy_cyclelen(&mut self) -> WAITI_DUMMY_CYCLELEN_W<FLASH_WAITI_CTRL_SPEC> {
         WAITI_DUMMY_CYCLELEN_W::new(self, 10)
     }

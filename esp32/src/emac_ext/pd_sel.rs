@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_en(&mut self) -> RAM_PD_EN_W<PD_SEL_SPEC> {
         RAM_PD_EN_W::new(self, 0)
     }

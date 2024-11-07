@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_PAU_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn pau_intr_map(&mut self) -> PAU_INTR_MAP_W<PAU_INTR_MAP_SPEC> {
         PAU_INTR_MAP_W::new(self, 0)
     }

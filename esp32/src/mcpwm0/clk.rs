@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CLK_SPEC> {
         EN_W::new(self, 0)
     }

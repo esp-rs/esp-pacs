@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_MSPI_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn mspi_intr_map(&mut self) -> MSPI_INTR_MAP_W<MSPI_INTR_MAP_SPEC> {
         MSPI_INTR_MAP_W::new(self, 0)
     }

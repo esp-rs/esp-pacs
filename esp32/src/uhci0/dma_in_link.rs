@@ -72,31 +72,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register stores the least 20 bits of the first in link descriptor's address."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<DMA_IN_LINK_SPEC> {
         INLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 20 - 1:when a packet is wrong in link descriptor returns to the descriptor which is lately used."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<DMA_IN_LINK_SPEC> {
         INLINK_AUTO_RET_W::new(self, 20)
     }
     #[doc = "Bit 28 - Set this bit to stop dealing with the in link descriptors."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_stop(&mut self) -> INLINK_STOP_W<DMA_IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to start dealing with the in link descriptors."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_start(&mut self) -> INLINK_START_W<DMA_IN_LINK_SPEC> {
         INLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to mount on new in link descriptors"]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<DMA_IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 30)
     }

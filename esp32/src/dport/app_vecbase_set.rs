@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21"]
     #[inline(always)]
-    #[must_use]
     pub fn app_out_vecbase(&mut self) -> APP_OUT_VECBASE_W<APP_VECBASE_SET_SPEC> {
         APP_OUT_VECBASE_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map spi2_dma interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_dma_int_map(&mut self) -> SPI2_DMA_INT_MAP_W<SPI2_DMA_INT_MAP_SPEC> {
         SPI2_DMA_INT_MAP_W::new(self, 0)
     }

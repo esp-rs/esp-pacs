@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the hold time of RTC watchdog at level 3."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg2_hold(&mut self) -> WDT_STG2_HOLD_W<WDTCONFIG3_SPEC> {
         WDT_STG2_HOLD_W::new(self, 0)
     }

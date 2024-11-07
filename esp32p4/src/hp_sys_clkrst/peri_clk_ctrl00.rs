@@ -144,79 +144,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_clk_src_sel(&mut self) -> FLASH_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
         FLASH_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_pll_clk_en(&mut self) -> FLASH_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         FLASH_PLL_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_core_clk_en(&mut self) -> FLASH_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         FLASH_CORE_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_core_clk_div_num(&mut self) -> FLASH_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
         FLASH_CORE_CLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn psram_clk_src_sel(&mut self) -> PSRAM_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
         PSRAM_CLK_SRC_SEL_W::new(self, 12)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn psram_pll_clk_en(&mut self) -> PSRAM_PLL_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         PSRAM_PLL_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn psram_core_clk_en(&mut self) -> PSRAM_CORE_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         PSRAM_CORE_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn psram_core_clk_div_num(&mut self) -> PSRAM_CORE_CLK_DIV_NUM_W<PERI_CLK_CTRL00_SPEC> {
         PSRAM_CORE_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn pad_emac_ref_clk_en(&mut self) -> PAD_EMAC_REF_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         PAD_EMAC_REF_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bits 25:26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_rmii_clk_src_sel(&mut self) -> EMAC_RMII_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
         EMAC_RMII_CLK_SRC_SEL_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_rmii_clk_en(&mut self) -> EMAC_RMII_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         EMAC_RMII_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_rx_clk_src_sel(&mut self) -> EMAC_RX_CLK_SRC_SEL_W<PERI_CLK_CTRL00_SPEC> {
         EMAC_RX_CLK_SRC_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_rx_clk_en(&mut self) -> EMAC_RX_CLK_EN_W<PERI_CLK_CTRL00_SPEC> {
         EMAC_RX_CLK_EN_W::new(self, 29)
     }

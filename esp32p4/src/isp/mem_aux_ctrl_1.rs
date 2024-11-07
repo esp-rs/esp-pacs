@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures the mem_aux of lsc r gr lut memory"]
     #[inline(always)]
-    #[must_use]
     pub fn lsc_lut_r_gr_mem_aux_ctrl(
         &mut self,
     ) -> LSC_LUT_R_GR_MEM_AUX_CTRL_W<MEM_AUX_CTRL_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 16:29 - this field configures the mem_aux of lsc gb b lut memory"]
     #[inline(always)]
-    #[must_use]
     pub fn lsc_lut_gb_b_mem_aux_ctrl(
         &mut self,
     ) -> LSC_LUT_GB_B_MEM_AUX_CTRL_W<MEM_AUX_CTRL_1_SPEC> {

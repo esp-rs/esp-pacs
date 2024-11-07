@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_slc1_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_intr_map(&mut self) -> SLC1_INTR_MAP_W<SLC1_INTR_MAP_SPEC> {
         SLC1_INTR_MAP_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_abort_intr_ctrl(&mut self) -> RX_ABORT_INTR_CTRL_W<RX_ABORT_INTR_CTRL_SPEC> {
         RX_ABORT_INTR_CTRL_W::new(self, 0)
     }

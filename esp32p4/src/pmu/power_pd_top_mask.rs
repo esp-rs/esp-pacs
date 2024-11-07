@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_top_mask(&mut self) -> XPD_TOP_MASK_W<POWER_PD_TOP_MASK_SPEC> {
         XPD_TOP_MASK_W::new(self, 0)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_top_mask(&mut self) -> PD_TOP_MASK_W<POWER_PD_TOP_MASK_SPEC> {
         PD_TOP_MASK_W::new(self, 27)
     }

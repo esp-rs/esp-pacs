@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map SPI_INTR_1 interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_spi_intr_1_map(&mut self) -> PRO_SPI_INTR_1_MAP_W<PRO_SPI_INTR_1_MAP_SPEC> {
         PRO_SPI_INTR_1_MAP_W::new(self, 0)
     }

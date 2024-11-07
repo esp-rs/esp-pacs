@@ -161,7 +161,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_pld_done_int_raw(
         &mut self,
     ) -> L1_ICACHE0_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -169,7 +168,6 @@ impl W {
     }
     #[doc = "Bit 1 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_pld_done_int_raw(
         &mut self,
     ) -> L1_ICACHE1_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -177,7 +175,6 @@ impl W {
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache2_pld_done_int_raw(
         &mut self,
     ) -> L1_ICACHE2_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -185,7 +182,6 @@ impl W {
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache3_pld_done_int_raw(
         &mut self,
     ) -> L1_ICACHE3_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -193,7 +189,6 @@ impl W {
     }
     #[doc = "Bit 4 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_pld_done_int_raw(
         &mut self,
     ) -> L1_CACHE_PLD_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -201,7 +196,6 @@ impl W {
     }
     #[doc = "Bit 6 - The raw bit of the interrupt that occurs only when Cache sync-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sync_done_int_raw(
         &mut self,
     ) -> CACHE_SYNC_DONE_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -209,7 +203,6 @@ impl W {
     }
     #[doc = "Bit 7 - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_pld_err_int_raw(
         &mut self,
     ) -> L1_ICACHE0_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -217,7 +210,6 @@ impl W {
     }
     #[doc = "Bit 8 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_pld_err_int_raw(
         &mut self,
     ) -> L1_ICACHE1_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -225,7 +217,6 @@ impl W {
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache2_pld_err_int_raw(
         &mut self,
     ) -> L1_ICACHE2_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -233,7 +224,6 @@ impl W {
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache3_pld_err_int_raw(
         &mut self,
     ) -> L1_ICACHE3_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -241,7 +231,6 @@ impl W {
     }
     #[doc = "Bit 11 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_pld_err_int_raw(
         &mut self,
     ) -> L1_CACHE_PLD_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -249,7 +238,6 @@ impl W {
     }
     #[doc = "Bit 13 - The raw bit of the interrupt that occurs only when Cache sync-operation error occurs."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sync_err_int_raw(
         &mut self,
     ) -> CACHE_SYNC_ERR_INT_RAW_W<L1_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {

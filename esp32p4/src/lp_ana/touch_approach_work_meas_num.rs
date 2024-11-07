@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_approach_meas_num2(
         &mut self,
     ) -> TOUCH_APPROACH_MEAS_NUM2_W<TOUCH_APPROACH_WORK_MEAS_NUM_SPEC> {
@@ -52,7 +51,6 @@ impl W {
     }
     #[doc = "Bits 10:19 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_approach_meas_num1(
         &mut self,
     ) -> TOUCH_APPROACH_MEAS_NUM1_W<TOUCH_APPROACH_WORK_MEAS_NUM_SPEC> {
@@ -60,7 +58,6 @@ impl W {
     }
     #[doc = "Bits 20:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_approach_meas_num0(
         &mut self,
     ) -> TOUCH_APPROACH_MEAS_NUM0_W<TOUCH_APPROACH_WORK_MEAS_NUM_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - tx_trigger reverse. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_trigger_rev_en(&mut self) -> TX_TRIGGER_REV_EN_W<HOST_TRIGGER_REV_SPEC> {
         TX_TRIGGER_REV_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - rx_trigger reverse. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_trigger_rev_en(&mut self) -> RX_TRIGGER_REV_EN_W<HOST_TRIGGER_REV_SPEC> {
         RX_TRIGGER_REV_EN_W::new(self, 1)
     }

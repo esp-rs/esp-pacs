@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable the output of GPIOn in sleep mode. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enter sleep mode for GPIOn. 0: Not enter 1: Enter"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configure whether or not to enable pull-down resistor of GPIOn during sleep mode. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable pull-up resistor of GPIOn during sleep mode. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable the input of GPIOn during sleep mode. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Configures the drive strength of GPIOn during sleep mode. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - Configures whether or not to enable pull-down resistor of GPIOn. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not enable pull-up resistor of GPIOn. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable input of GPIOn. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Configures the drive strength of GPIOn. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Configures to select IO MUX function for this pin. 0: Select Function 0 1: Select Function 1 ......"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO_SPEC> {
         MCU_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Configures whether or not to enable filter for pin input signals. 0: Disable 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_en(&mut self) -> FILTER_EN_W<GPIO_SPEC> {
         FILTER_EN_W::new(self, 15)
     }

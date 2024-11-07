@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This bits stores text_in_0 that is a part of source text material."]
     #[inline(always)]
-    #[must_use]
     pub fn text_in(&mut self) -> TEXT_IN_W<TEXT_IN_SPEC> {
         TEXT_IN_W::new(self, 0)
     }

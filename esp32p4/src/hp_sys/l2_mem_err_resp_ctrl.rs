@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to turn on l2mem error response"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_mem_err_resp_en(&mut self) -> L2_MEM_ERR_RESP_EN_W<L2_MEM_ERR_RESP_CTRL_SPEC> {
         L2_MEM_ERR_RESP_EN_W::new(self, 0)
     }

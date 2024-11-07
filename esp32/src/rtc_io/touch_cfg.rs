@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:24 - touch sensor bias current. Should have option to tie with BIAS_SLEEP(When BIAS_SLEEP this setting is available"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_dcur(&mut self) -> TOUCH_DCUR_W<TOUCH_CFG_SPEC> {
         TOUCH_DCUR_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - touch sensor saw wave voltage range."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CFG_SPEC> {
         TOUCH_DRANGE_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - touch sensor saw wave bottom voltage."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CFG_SPEC> {
         TOUCH_DREFL_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - touch sensor saw wave top voltage."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CFG_SPEC> {
         TOUCH_DREFH_W::new(self, 29)
     }
     #[doc = "Bit 31 - touch sensor bias power on."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CFG_SPEC> {
         TOUCH_XPD_BIAS_W::new(self, 31)
     }

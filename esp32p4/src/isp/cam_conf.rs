@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this field configures data order of cam port, 0: cam_data_in, 1:{cam_data_in\\[7:0\\], cam_data_in\\[15:8\\]}"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_data_order(&mut self) -> CAM_DATA_ORDER_W<CAM_CONF_SPEC> {
         CAM_DATA_ORDER_W::new(self, 0)
     }
     #[doc = "Bit 1 - this field configures enable of cam 2 byte mode(input 2 bytes each clock). 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_2byte_mode(&mut self) -> CAM_2BYTE_MODE_W<CAM_CONF_SPEC> {
         CAM_2BYTE_MODE_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - this field configures idi data type for image data, 0x2a: RAW8, 0x2b: RAW10, 0x2c: RAW12"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_data_type(&mut self) -> CAM_DATA_TYPE_W<CAM_CONF_SPEC> {
         CAM_DATA_TYPE_W::new(self, 2)
     }
     #[doc = "Bit 8 - this bit configures cam data enable invert. 0: not invert, 1: invert"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_de_inv(&mut self) -> CAM_DE_INV_W<CAM_CONF_SPEC> {
         CAM_DE_INV_W::new(self, 8)
     }
     #[doc = "Bit 9 - this bit configures cam hsync invert. 0: not invert, 1: invert"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_hsync_inv(&mut self) -> CAM_HSYNC_INV_W<CAM_CONF_SPEC> {
         CAM_HSYNC_INV_W::new(self, 9)
     }
     #[doc = "Bit 10 - this bit configures cam vsync invert. 0: not invert, 1: invert"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_vsync_inv(&mut self) -> CAM_VSYNC_INV_W<CAM_CONF_SPEC> {
         CAM_VSYNC_INV_W::new(self, 10)
     }
     #[doc = "Bits 11:13 - this bit configures the number of clock of vsync filter length"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_vsync_filter_thres(&mut self) -> CAM_VSYNC_FILTER_THRES_W<CAM_CONF_SPEC> {
         CAM_VSYNC_FILTER_THRES_W::new(self, 11)
     }
     #[doc = "Bit 14 - this bit configures vsync filter en"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<CAM_CONF_SPEC> {
         CAM_VSYNC_FILTER_EN_W::new(self, 14)
     }

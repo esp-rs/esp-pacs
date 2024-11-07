@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are prepared for ECO."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_redcy_sig3(&mut self) -> CACHE_REDCY_SIG3_W<REDUNDANCY_SIG3_SPEC> {
         CACHE_REDCY_SIG3_W::new(self, 0)
     }

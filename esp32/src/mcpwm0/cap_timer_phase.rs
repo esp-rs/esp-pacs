@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn cap_timer_phase(&mut self) -> CAP_TIMER_PHASE_W<CAP_TIMER_PHASE_SPEC> {
         CAP_TIMER_PHASE_W::new(self, 0)
     }

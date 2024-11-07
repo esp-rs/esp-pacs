@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In operation mode, it stores the 8th byte of the data to be transmitted or received. In operation mode, writing writes to the transmit buffer while reading reads from the receive buffer."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_byte_8(&mut self) -> TX_BYTE_8_W<DATA_8_SPEC> {
         TX_BYTE_8_W::new(self, 0)
     }

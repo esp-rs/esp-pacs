@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Synchronizes the reg_ck8m_div_sel. Not that you have to invalidate the bus before switching clock, and validate the new clock."]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_div_sel_vld(&mut self) -> CK8M_DIV_SEL_VLD_W<CLK_CONF_SPEC> {
         CK8M_DIV_SEL_VLD_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Set the CK8M_D256_OUT divider. 00: divided by 128 01: divided by 256 10: divided by 512 11: divided by 1024."]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_div(&mut self) -> CK8M_DIV_W<CLK_CONF_SPEC> {
         CK8M_DIV_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to disable CK8M and CK8M_D256_OUT."]
     #[inline(always)]
-    #[must_use]
     pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<CLK_CONF_SPEC> {
         ENB_CK8M_W::new(self, 6)
     }
     #[doc = "Bit 7 - Selects the CK8M_D256_OUT. 1: CK8M 0: CK8M divided by 256."]
     #[inline(always)]
-    #[must_use]
     pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<CLK_CONF_SPEC> {
         ENB_CK8M_DIV_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to enable CK_XTAL_32K clock for the digital core."]
     #[inline(always)]
-    #[must_use]
     pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<CLK_CONF_SPEC> {
         DIG_XTAL32K_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to enable CK8M_D256_OUT clock for the digital core."]
     #[inline(always)]
-    #[must_use]
     pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<CLK_CONF_SPEC> {
         DIG_CLK8M_D256_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable 8 MHz clock for the digital core."]
     #[inline(always)]
-    #[must_use]
     pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<CLK_CONF_SPEC> {
         DIG_CLK8M_EN_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Stores the 8 MHz divider, which is reg_ck8m_div_sel + 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<CLK_CONF_SPEC> {
         CK8M_DIV_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Set this bit to force no gating to crystal during sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<CLK_CONF_SPEC> {
         XTAL_FORCE_NOGATING_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to disable force gating to 8 MHz crystal during sleep."]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<CLK_CONF_SPEC> {
         CK8M_FORCE_NOGATING_W::new(self, 16)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<CLK_CONF_SPEC> {
         CK8M_DFREQ_W::new(self, 17)
     }
     #[doc = "Bit 25 - Set this bit to FPD the 8 MHz clock."]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<CLK_CONF_SPEC> {
         CK8M_FORCE_PD_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to FPU the 8 MHz clock."]
     #[inline(always)]
-    #[must_use]
     pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<CLK_CONF_SPEC> {
         CK8M_FORCE_PU_W::new(self, 26)
     }
     #[doc = "Bit 29 - Set this bit to select the RTC fast clock. 0: XTAL div 4, 1: CK8M."]
     #[inline(always)]
-    #[must_use]
     pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
         FAST_CLK_RTC_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Set this bit to select the RTC slow clock. 0: 90K rtc_clk 1: 32k XTAL 2: 8md256."]
     #[inline(always)]
-    #[must_use]
     pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
         ANA_CLK_RTC_SEL_W::new(self, 30)
     }

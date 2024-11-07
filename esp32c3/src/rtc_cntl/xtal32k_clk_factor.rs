@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - xtal 32k watch dog backup clock factor"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_clk_factor(&mut self) -> XTAL32K_CLK_FACTOR_W<XTAL32K_CLK_FACTOR_SPEC> {
         XTAL32K_CLK_FACTOR_W::new(self, 0)
     }

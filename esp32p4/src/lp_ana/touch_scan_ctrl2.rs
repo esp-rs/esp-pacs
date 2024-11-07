@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 6:21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timeout_num(&mut self) -> TOUCH_TIMEOUT_NUM_W<TOUCH_SCAN_CTRL2_SPEC> {
         TOUCH_TIMEOUT_NUM_W::new(self, 6)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timeout_en(&mut self) -> TOUCH_TIMEOUT_EN_W<TOUCH_SCAN_CTRL2_SPEC> {
         TOUCH_TIMEOUT_EN_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_out_ring(&mut self) -> TOUCH_OUT_RING_W<TOUCH_SCAN_CTRL2_SPEC> {
         TOUCH_OUT_RING_W::new(self, 23)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn freq_scan_en(&mut self) -> FREQ_SCAN_EN_W<TOUCH_SCAN_CTRL2_SPEC> {
         FREQ_SCAN_EN_W::new(self, 27)
     }
     #[doc = "Bits 28:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn freq_scan_cnt_limit(&mut self) -> FREQ_SCAN_CNT_LIMIT_W<TOUCH_SCAN_CTRL2_SPEC> {
         FREQ_SCAN_CNT_LIMIT_W::new(self, 28)
     }

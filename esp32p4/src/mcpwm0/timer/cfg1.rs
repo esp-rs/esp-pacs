@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures whether or not to start/stop PWM timer%s.\\\\0: If PWM timer%s starts, then stops at TEZ\\\\1: If timer%s starts, then stops at TEP\\\\2: PWM timer%s starts and runs on\\\\3: Timer%s starts and stops at the next TEZ\\\\4: Timer0 starts and stops at the next TEP.\\\\TEP here and below means the event that happens when the timer equals to period"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<CFG1_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bits 3:4 - Configures the working mode of PWM timer%s.\\\\0: Freeze\\\\1: Increase mode\\\\2: Decrease mode\\\\3: Up-down mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mod_(&mut self) -> MOD_W<CFG1_SPEC> {
         MOD_W::new(self, 3)
     }

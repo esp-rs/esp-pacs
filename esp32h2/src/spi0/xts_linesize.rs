@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This bits stores the line-size parameter which will be used in manual encryption calculation. It decides how many bytes will be encrypted one time. 0: 16-bytes, 1: 32-bytes, 2: 64-bytes, 3:reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_xts_linesize(&mut self) -> SPI_XTS_LINESIZE_W<XTS_LINESIZE_SPEC> {
         SPI_XTS_LINESIZE_W::new(self, 0)
     }

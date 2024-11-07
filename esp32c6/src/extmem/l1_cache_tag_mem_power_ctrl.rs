@@ -185,7 +185,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - The bit is used to close clock gating of L1-Cache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_tag_mem_force_on(
         &mut self,
     ) -> L1_CACHE_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -193,7 +192,6 @@ impl W {
     }
     #[doc = "Bit 17 - The bit is used to power L1-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_tag_mem_force_pd(
         &mut self,
     ) -> L1_CACHE_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -201,7 +199,6 @@ impl W {
     }
     #[doc = "Bit 18 - The bit is used to power L1-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_tag_mem_force_pu(
         &mut self,
     ) -> L1_CACHE_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {

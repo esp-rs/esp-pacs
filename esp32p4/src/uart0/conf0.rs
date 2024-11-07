@@ -234,133 +234,111 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This register is used to configure the parity check mode."]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> PARITY_W<CONF0_SPEC> {
         PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable uart parity check."]
     #[inline(always)]
-    #[must_use]
     pub fn parity_en(&mut self) -> PARITY_EN_W<CONF0_SPEC> {
         PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - This register is used to set the length of data."]
     #[inline(always)]
-    #[must_use]
     pub fn bit_num(&mut self) -> BIT_NUM_W<CONF0_SPEC> {
         BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - This register is used to set the length of stop bit."]
     #[inline(always)]
-    #[must_use]
     pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<CONF0_SPEC> {
         STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to enbale transmitter to send NULL when the process of sending data is done."]
     #[inline(always)]
-    #[must_use]
     pub fn txd_brk(&mut self) -> TXD_BRK_W<CONF0_SPEC> {
         TXD_BRK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable IrDA loopback mode."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<CONF0_SPEC> {
         IRDA_DPLX_W::new(self, 7)
     }
     #[doc = "Bit 8 - This is the start enable bit for IrDA transmitter."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<CONF0_SPEC> {
         IRDA_TX_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1'h1: The IrDA transmitter's 11th bit is the same as 10th bit. 1'h0: Set IrDA transmitter's 11th bit to 0."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<CONF0_SPEC> {
         IRDA_WCTL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to invert the level of IrDA transmitter."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<CONF0_SPEC> {
         IRDA_TX_INV_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to invert the level of IrDA receiver."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<CONF0_SPEC> {
         IRDA_RX_INV_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to enable uart loopback test mode."]
     #[inline(always)]
-    #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<CONF0_SPEC> {
         LOOPBACK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to enable flow control function for transmitter."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<CONF0_SPEC> {
         TX_FLOW_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to enable IrDA protocol."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_en(&mut self) -> IRDA_EN_W<CONF0_SPEC> {
         IRDA_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to inverse the level value of uart rxd signal."]
     #[inline(always)]
-    #[must_use]
     pub fn rxd_inv(&mut self) -> RXD_INV_W<CONF0_SPEC> {
         RXD_INV_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to inverse the level value of uart txd signal."]
     #[inline(always)]
-    #[must_use]
     pub fn txd_inv(&mut self) -> TXD_INV_W<CONF0_SPEC> {
         TXD_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Disable UART Rx data overflow detect."]
     #[inline(always)]
-    #[must_use]
     pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF0_SPEC> {
         DIS_RX_DAT_OVF_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1'h1: Receiver stops storing data into FIFO when data is wrong. 1'h0: Receiver stores the data even if the received data is wrong."]
     #[inline(always)]
-    #[must_use]
     pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<CONF0_SPEC> {
         ERR_WR_MASK_W::new(self, 18)
     }
     #[doc = "Bit 19 - This is the enable bit for detecting baudrate."]
     #[inline(always)]
-    #[must_use]
     pub fn autobaud_en(&mut self) -> AUTOBAUD_EN_W<CONF0_SPEC> {
         AUTOBAUD_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - UART memory clock gate enable signal."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<CONF0_SPEC> {
         MEM_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - This register is used to configure the software rts signal which is used in software flow control."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_rts(&mut self) -> SW_RTS_W<CONF0_SPEC> {
         SW_RTS_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to reset the uart receive-FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CONF0_SPEC> {
         RXFIFO_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to reset the uart transmit-FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CONF0_SPEC> {
         TXFIFO_RST_W::new(self, 23)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_apb_adc_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_adc_int_map(&mut self) -> APB_ADC_INT_MAP_W<APB_ADC_INT_MAP_SPEC> {
         APB_ADC_INT_MAP_W::new(self, 0)
     }

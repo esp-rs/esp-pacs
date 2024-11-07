@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn per_end(&mut self) -> PER_END_W<INT_ENA_SPEC> {
         PER_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pes_end(&mut self) -> PES_END_W<INT_ENA_SPEC> {
         PES_END_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn total_trans_end(&mut self) -> TOTAL_TRANS_END_W<INT_ENA_SPEC> {
         TOTAL_TRANS_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_ENA_SPEC> {
         BROWN_OUT_W::new(self, 3)
     }

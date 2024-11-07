@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map bb_bt_nmi interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_bb_nmi_map(&mut self) -> BT_BB_NMI_MAP_W<BT_BB_NMI_MAP_SPEC> {
         BT_BB_NMI_MAP_W::new(self, 0)
     }

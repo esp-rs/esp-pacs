@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Program/Erase suspend command."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<FLASH_SUS_CMD_SPEC> {
         FLASH_PES_COMMAND_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Flash SUS/SUS1/SUS2 status bit read command. The command should be sent when SUS/SUS1/SUS2 bit should be checked to insure the suspend or resume status of flash."]
     #[inline(always)]
-    #[must_use]
     pub fn wait_pesr_command(&mut self) -> WAIT_PESR_COMMAND_W<FLASH_SUS_CMD_SPEC> {
         WAIT_PESR_COMMAND_W::new(self, 16)
     }

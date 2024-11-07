@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn gpspi2_intr_map(&mut self) -> GPSPI2_INTR_MAP_W<GPSPI2_INTR_MAP_SPEC> {
         GPSPI2_INTR_MAP_W::new(self, 0)
     }

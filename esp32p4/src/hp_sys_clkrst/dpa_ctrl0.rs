@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<DPA_CTRL0_SPEC> {
         SEC_DPA_LEVEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<DPA_CTRL0_SPEC> {
         SEC_DPA_CFG_SEL_W::new(self, 2)
     }

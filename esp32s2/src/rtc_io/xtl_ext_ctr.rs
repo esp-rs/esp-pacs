@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - Select the external crystal power down enable source to get into sleep mode. 0: select GPIO0. 1: select GPIO1, etc. The input value on this pin XOR RTC_CNTL_EXT_XTL_CONF_REG\\[30\\] is the crystal power down enable signal."]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<XTL_EXT_CTR_SPEC> {
         SEL_W::new(self, 27)
     }

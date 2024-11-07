@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_log_min"]
     #[inline(always)]
-    #[must_use]
     pub fn log_min(&mut self) -> LOG_MIN_W<LOG_MIN_SPEC> {
         LOG_MIN_W::new(self, 0)
     }

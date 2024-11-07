@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_usb_otg_endp_multi_proc_int_map(
         &mut self,
     ) -> CORE1_USB_OTG_ENDP_MULTI_PROC_INT_MAP_W<USB_OTG_ENDP_MULTI_PROC_INT_MAP_SPEC> {

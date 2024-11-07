@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Start of Descriptor List. Contains the base address of the First Descriptor. The LSB bits \\[1:0\\] are ignored and taken as all-zero by the IDMAC internally. Hence these LSB bits may be treated as read-only."]
     #[inline(always)]
-    #[must_use]
     pub fn dbaddr(&mut self) -> DBADDR_W<DBADDR_SPEC> {
         DBADDR_W::new(self, 0)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_encrypy_access_grant_config(
         &mut self,
     ) -> SPI_ENCRYPY_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_SPI_ENCRYPT_SPEC> {

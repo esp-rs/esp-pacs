@@ -137,37 +137,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<SAR_MEAS_CTRL2_SPEC> {
         SAR1_DAC_XPD_FSM_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_dac_xpd_fsm_idle(&mut self) -> SAR1_DAC_XPD_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         SAR1_DAC_XPD_FSM_IDLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar_amp_fsm_idle(&mut self) -> XPD_SAR_AMP_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         XPD_SAR_AMP_FSM_IDLE_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_rst_fb_fsm_idle(&mut self) -> AMP_RST_FB_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_RST_FB_FSM_IDLE_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_fsm_idle(&mut self) -> AMP_SHORT_REF_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_SHORT_REF_FSM_IDLE_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_gnd_fsm_idle(
         &mut self,
     ) -> AMP_SHORT_REF_GND_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
@@ -175,37 +169,31 @@ impl W {
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar_fsm_idle(&mut self) -> XPD_SAR_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         XPD_SAR_FSM_IDLE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_rstb_fsm_idle(&mut self) -> SAR_RSTB_FSM_IDLE_W<SAR_MEAS_CTRL2_SPEC> {
         SAR_RSTB_FSM_IDLE_W::new(self, 10)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W<SAR_MEAS_CTRL2_SPEC> {
         SAR2_RSTB_FORCE_W::new(self, 11)
     }
     #[doc = "Bits 13:14"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_rst_fb_force(&mut self) -> AMP_RST_FB_FORCE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_RST_FB_FORCE_W::new(self, 13)
     }
     #[doc = "Bits 15:16"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_force(&mut self) -> AMP_SHORT_REF_FORCE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_SHORT_REF_FORCE_W::new(self, 15)
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_gnd_force(&mut self) -> AMP_SHORT_REF_GND_FORCE_W<SAR_MEAS_CTRL2_SPEC> {
         AMP_SHORT_REF_GND_FORCE_W::new(self, 17)
     }

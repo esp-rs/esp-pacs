@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_etm_en(&mut self) -> CLK_ETM_EN_W<CLK_CONF_SPEC> {
         CLK_ETM_EN_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_zb_apb_en(&mut self) -> CLK_ZB_APB_EN_W<CLK_CONF_SPEC> {
         CLK_ZB_APB_EN_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_zb_mac_en(&mut self) -> CLK_ZB_MAC_EN_W<CLK_CONF_SPEC> {
         CLK_ZB_MAC_EN_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_ecb_en(&mut self) -> CLK_MODEM_SEC_ECB_EN_W<CLK_CONF_SPEC> {
         CLK_MODEM_SEC_ECB_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_ccm_en(&mut self) -> CLK_MODEM_SEC_CCM_EN_W<CLK_CONF_SPEC> {
         CLK_MODEM_SEC_CCM_EN_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_bah_en(&mut self) -> CLK_MODEM_SEC_BAH_EN_W<CLK_CONF_SPEC> {
         CLK_MODEM_SEC_BAH_EN_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_apb_en(&mut self) -> CLK_MODEM_SEC_APB_EN_W<CLK_CONF_SPEC> {
         CLK_MODEM_SEC_APB_EN_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_en(&mut self) -> CLK_MODEM_SEC_EN_W<CLK_CONF_SPEC> {
         CLK_MODEM_SEC_EN_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_ble_timer_apb_en(&mut self) -> CLK_BLE_TIMER_APB_EN_W<CLK_CONF_SPEC> {
         CLK_BLE_TIMER_APB_EN_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_ble_timer_en(&mut self) -> CLK_BLE_TIMER_EN_W<CLK_CONF_SPEC> {
         CLK_BLE_TIMER_EN_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_data_dump_en(&mut self) -> CLK_DATA_DUMP_EN_W<CLK_CONF_SPEC> {
         CLK_DATA_DUMP_EN_W::new(self, 31)
     }

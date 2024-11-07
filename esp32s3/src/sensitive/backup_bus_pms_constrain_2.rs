@@ -196,7 +196,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - BackUp access bt permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_bt(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -204,7 +203,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - BackUp access i2c_ext0 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_i2c_ext0(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -212,7 +210,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - BackUp access uhci0 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_uhci0(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -220,7 +217,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - BackUp access slchost permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_slchost(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SLCHOST_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -228,7 +224,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - BackUp access rmt permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_rmt(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -236,7 +231,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - BackUp access pcnt permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_pcnt(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_PCNT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -244,7 +238,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - BackUp access slc permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_slc(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SLC_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -252,7 +245,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - BackUp access ledc permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_ledc(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -260,7 +252,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - BackUp access backup permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_backup(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_BACKUP_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -268,7 +259,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - BackUp access bb permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_bb(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -276,7 +266,6 @@ impl W {
     }
     #[doc = "Bits 24:25 - BackUp access pwm0 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_pwm0(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_PWM0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -284,7 +273,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - BackUp access timergroup permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_timergroup(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -292,7 +280,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - BackUp access timergroup1 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_timergroup1(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
@@ -300,7 +287,6 @@ impl W {
     }
     #[doc = "Bits 30:31 - BackUp access systimer permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_systimer(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {

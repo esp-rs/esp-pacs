@@ -48,7 +48,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:17 - This field is used to select clock source. 0: XTAL, 1: SPLL, 2: FOSC, 3: reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<SYSCLK_CONF_SPEC> {
         SOC_CLK_SEL_W::new(self, 16)
     }

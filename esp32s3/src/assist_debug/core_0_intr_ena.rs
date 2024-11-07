@@ -174,7 +174,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core0 dram0 area0 read monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_0_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_0_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -182,7 +181,6 @@ impl W {
     }
     #[doc = "Bit 1 - Core0 dram0 area0 write monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_0_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_0_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -190,7 +188,6 @@ impl W {
     }
     #[doc = "Bit 2 - Core0 dram0 area1 read monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_1_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_1_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -198,7 +195,6 @@ impl W {
     }
     #[doc = "Bit 3 - Core0 dram0 area1 write monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_1_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_1_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -206,7 +202,6 @@ impl W {
     }
     #[doc = "Bit 4 - Core0 PIF area0 read monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_0_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_0_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -214,7 +209,6 @@ impl W {
     }
     #[doc = "Bit 5 - Core0 PIF area0 write monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_0_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_0_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -222,7 +216,6 @@ impl W {
     }
     #[doc = "Bit 6 - Core0 PIF area1 read monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_1_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_1_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -230,7 +223,6 @@ impl W {
     }
     #[doc = "Bit 7 - Core0 PIF area1 write monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_1_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_1_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -238,7 +230,6 @@ impl W {
     }
     #[doc = "Bit 8 - Core0 stackpoint overflow monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_min_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MIN_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -246,7 +237,6 @@ impl W {
     }
     #[doc = "Bit 9 - Core0 stackpoint underflow monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_max_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MAX_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -254,7 +244,6 @@ impl W {
     }
     #[doc = "Bit 10 - IBUS busy monitor interrupt enable"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_iram0_exception_monitor_intr_ena(
         &mut self,
     ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -262,7 +251,6 @@ impl W {
     }
     #[doc = "Bit 11 - DBUS busy monitor interrupt enbale"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_dram0_exception_monitor_intr_ena(
         &mut self,
     ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {

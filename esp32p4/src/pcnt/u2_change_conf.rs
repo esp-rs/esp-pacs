@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the step value for unit 2."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_step_u2(&mut self) -> CNT_STEP_U2_W<U2_CHANGE_CONF_SPEC> {
         CNT_STEP_U2_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Configures the step limit value for unit 2."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_step_lim_u2(&mut self) -> CNT_STEP_LIM_U2_W<U2_CHANGE_CONF_SPEC> {
         CNT_STEP_LIM_U2_W::new(self, 16)
     }

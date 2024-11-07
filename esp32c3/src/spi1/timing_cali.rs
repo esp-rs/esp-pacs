@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
-    #[must_use]
     pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC> {
         TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
-    #[must_use]
     pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC> {
         EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }

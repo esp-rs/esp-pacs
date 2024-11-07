@@ -62,25 +62,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC> {
         RTC_CALI_START_CYCLING_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - 0:rtc slow clock. 1:clk_8m, 2:xtal_32k."]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC> {
         RTC_CALI_CLK_SEL_W::new(self, 13)
     }
     #[doc = "Bits 16:30 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC> {
         RTC_CALI_MAX_W::new(self, 16)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC> {
         RTC_CALI_START_W::new(self, 31)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The priority of Rx channel 0. The larger of the value the higher of the priority."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pri(&mut self) -> RX_PRI_W<IN_PRI_SPEC> {
         RX_PRI_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - The weight of Rx channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ch_arb_weigh(&mut self) -> RX_CH_ARB_WEIGH_W<IN_PRI_SPEC> {
         RX_CH_ARB_WEIGH_W::new(self, 4)
     }
     #[doc = "Bit 8 - 0: mean not optimazation weight function ,1: mean optimazation"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_arb_weigh_opt_dir(&mut self) -> RX_ARB_WEIGH_OPT_DIR_W<IN_PRI_SPEC> {
         RX_ARB_WEIGH_OPT_DIR_W::new(self, 8)
     }

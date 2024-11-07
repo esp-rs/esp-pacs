@@ -37,7 +37,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - The bit is used to enable interrupt of L2-Cache preload-operation done."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_pld_done_int_ena(
         &mut self,
     ) -> L2_CACHE_PLD_DONE_INT_ENA_W<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
@@ -45,7 +44,6 @@ impl W {
     }
     #[doc = "Bit 12 - The bit is used to enable interrupt of L2-Cache preload-operation error."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_pld_err_int_ena(
         &mut self,
     ) -> L2_CACHE_PLD_ERR_INT_ENA_W<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {

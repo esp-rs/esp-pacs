@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map pwm0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_intr_map(&mut self) -> PWM0_INTR_MAP_W<PWM0_INTR_MAP_SPEC> {
         PWM0_INTR_MAP_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn txen_stop_dly(&mut self) -> TXEN_STOP_DLY_W<TXEN_STOP_DELAY_SPEC> {
         TXEN_STOP_DLY_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version control register."]
     #[inline(always)]
-    #[must_use]
     pub fn timers_date(&mut self) -> TIMERS_DATE_W<TIMERS_DATE_SPEC> {
         TIMERS_DATE_W::new(self, 0)
     }

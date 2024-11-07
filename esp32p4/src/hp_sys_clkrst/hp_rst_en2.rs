@@ -264,151 +264,126 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_intrmtx(&mut self) -> RST_EN_INTRMTX_W<HP_RST_EN2_SPEC> {
         RST_EN_INTRMTX_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_parlio(&mut self) -> RST_EN_PARLIO_W<HP_RST_EN2_SPEC> {
         RST_EN_PARLIO_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_parlio_rx(&mut self) -> RST_EN_PARLIO_RX_W<HP_RST_EN2_SPEC> {
         RST_EN_PARLIO_RX_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_parlio_tx(&mut self) -> RST_EN_PARLIO_TX_W<HP_RST_EN2_SPEC> {
         RST_EN_PARLIO_TX_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i2s0_apb(&mut self) -> RST_EN_I2S0_APB_W<HP_RST_EN2_SPEC> {
         RST_EN_I2S0_APB_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i2s1_apb(&mut self) -> RST_EN_I2S1_APB_W<HP_RST_EN2_SPEC> {
         RST_EN_I2S1_APB_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i2s2_apb(&mut self) -> RST_EN_I2S2_APB_W<HP_RST_EN2_SPEC> {
         RST_EN_I2S2_APB_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_spi2(&mut self) -> RST_EN_SPI2_W<HP_RST_EN2_SPEC> {
         RST_EN_SPI2_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_spi3(&mut self) -> RST_EN_SPI3_W<HP_RST_EN2_SPEC> {
         RST_EN_SPI3_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lcdcam(&mut self) -> RST_EN_LCDCAM_W<HP_RST_EN2_SPEC> {
         RST_EN_LCDCAM_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_adc(&mut self) -> RST_EN_ADC_W<HP_RST_EN2_SPEC> {
         RST_EN_ADC_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_bitsrambler(&mut self) -> RST_EN_BITSRAMBLER_W<HP_RST_EN2_SPEC> {
         RST_EN_BITSRAMBLER_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_bitsrambler_rx(&mut self) -> RST_EN_BITSRAMBLER_RX_W<HP_RST_EN2_SPEC> {
         RST_EN_BITSRAMBLER_RX_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_bitsrambler_tx(&mut self) -> RST_EN_BITSRAMBLER_TX_W<HP_RST_EN2_SPEC> {
         RST_EN_BITSRAMBLER_TX_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_crypto(&mut self) -> RST_EN_CRYPTO_W<HP_RST_EN2_SPEC> {
         RST_EN_CRYPTO_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_sec(&mut self) -> RST_EN_SEC_W<HP_RST_EN2_SPEC> {
         RST_EN_SEC_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_aes(&mut self) -> RST_EN_AES_W<HP_RST_EN2_SPEC> {
         RST_EN_AES_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ds(&mut self) -> RST_EN_DS_W<HP_RST_EN2_SPEC> {
         RST_EN_DS_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_sha(&mut self) -> RST_EN_SHA_W<HP_RST_EN2_SPEC> {
         RST_EN_SHA_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_hmac(&mut self) -> RST_EN_HMAC_W<HP_RST_EN2_SPEC> {
         RST_EN_HMAC_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ecdsa(&mut self) -> RST_EN_ECDSA_W<HP_RST_EN2_SPEC> {
         RST_EN_ECDSA_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_rsa(&mut self) -> RST_EN_RSA_W<HP_RST_EN2_SPEC> {
         RST_EN_RSA_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ecc(&mut self) -> RST_EN_ECC_W<HP_RST_EN2_SPEC> {
         RST_EN_ECC_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_km(&mut self) -> RST_EN_KM_W<HP_RST_EN2_SPEC> {
         RST_EN_KM_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_h264(&mut self) -> RST_EN_H264_W<HP_RST_EN2_SPEC> {
         RST_EN_H264_W::new(self, 24)
     }

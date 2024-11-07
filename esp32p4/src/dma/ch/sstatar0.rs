@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_sstatar0(&mut self) -> CH1_SSTATAR0_W<SSTATAR0_SPEC> {
         CH1_SSTATAR0_W::new(self, 0)
     }

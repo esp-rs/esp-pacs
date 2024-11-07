@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt status of TX_FIFO_REMPTY_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_rempty(&mut self) -> TX_FIFO_REMPTY_W<INT_RAW_SPEC> {
         TX_FIFO_REMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status of RX_FIFO_WOVF_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_wovf(&mut self) -> RX_FIFO_WOVF_W<INT_RAW_SPEC> {
         RX_FIFO_WOVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status of TX_EOF_INTR."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_eof(&mut self) -> TX_EOF_W<INT_RAW_SPEC> {
         TX_EOF_W::new(self, 2)
     }

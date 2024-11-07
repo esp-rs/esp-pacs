@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn no_rss_detect_cnt(&mut self) -> NO_RSS_DETECT_CNT_W<NO_RSS_DETECT_CNT_SPEC> {
         NO_RSS_DETECT_CNT_W::new(self, 0)
     }

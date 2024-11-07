@@ -39,19 +39,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_peri_timeout_thres(&mut self) -> LP_PERI_TIMEOUT_THRES_W<BUS_TIMEOUT_SPEC> {
         LP_PERI_TIMEOUT_THRES_W::new(self, 14)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_peri_timeout_int_clear(&mut self) -> LP_PERI_TIMEOUT_INT_CLEAR_W<BUS_TIMEOUT_SPEC> {
         LP_PERI_TIMEOUT_INT_CLEAR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_peri_timeout_protect_en(&mut self) -> LP_PERI_TIMEOUT_PROTECT_EN_W<BUS_TIMEOUT_SPEC> {
         LP_PERI_TIMEOUT_PROTECT_EN_W::new(self, 31)
     }

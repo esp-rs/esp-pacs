@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the first outlink descriptor's address."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<LINK_ADDR_SPEC> {
         OUTLINK_ADDR_W::new(self, 0)
     }

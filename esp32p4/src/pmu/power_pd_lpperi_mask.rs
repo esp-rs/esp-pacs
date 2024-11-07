@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_lp_peri_mask(&mut self) -> XPD_LP_PERI_MASK_W<POWER_PD_LPPERI_MASK_SPEC> {
         XPD_LP_PERI_MASK_W::new(self, 0)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_lp_peri_mask(&mut self) -> PD_LP_PERI_MASK_W<POWER_PD_LPPERI_MASK_SPEC> {
         PD_LP_PERI_MASK_W::new(self, 27)
     }

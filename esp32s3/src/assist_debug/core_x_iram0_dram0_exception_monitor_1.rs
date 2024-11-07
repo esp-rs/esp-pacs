@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - non busy cycle,for example: when cycle=100 and cycle=10,it means that in 100 cycle, if busy access success time less than 10, it will trigger interrutpt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_iram0_dram0_limit_cycle_1(
         &mut self,
     ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC> {

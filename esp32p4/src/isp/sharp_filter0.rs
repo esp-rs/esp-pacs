@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this field configures unsharp masking(usm) filter coefficient"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_filter_coe00(&mut self) -> SHARP_FILTER_COE00_W<SHARP_FILTER0_SPEC> {
         SHARP_FILTER_COE00_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - this field configures usm filter coefficient"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_filter_coe01(&mut self) -> SHARP_FILTER_COE01_W<SHARP_FILTER0_SPEC> {
         SHARP_FILTER_COE01_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - this field configures usm filter coefficient"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_filter_coe02(&mut self) -> SHARP_FILTER_COE02_W<SHARP_FILTER0_SPEC> {
         SHARP_FILTER_COE02_W::new(self, 10)
     }

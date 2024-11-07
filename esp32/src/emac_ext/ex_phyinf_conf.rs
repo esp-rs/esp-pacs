@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn int_revmii_rx_clk_sel(&mut self) -> INT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC> {
         INT_REVMII_RX_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_revmii_rx_clk_sel(&mut self) -> EXT_REVMII_RX_CLK_SEL_W<EX_PHYINF_CONF_SPEC> {
         EXT_REVMII_RX_CLK_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn sbd_flowctrl(&mut self) -> SBD_FLOWCTRL_W<EX_PHYINF_CONF_SPEC> {
         SBD_FLOWCTRL_W::new(self, 2)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
-    #[must_use]
     pub fn core_phy_addr(&mut self) -> CORE_PHY_ADDR_W<EX_PHYINF_CONF_SPEC> {
         CORE_PHY_ADDR_W::new(self, 3)
     }
     #[doc = "Bits 8:12"]
     #[inline(always)]
-    #[must_use]
     pub fn revmii_phy_addr(&mut self) -> REVMII_PHY_ADDR_W<EX_PHYINF_CONF_SPEC> {
         REVMII_PHY_ADDR_W::new(self, 8)
     }
     #[doc = "Bits 13:15"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_intf_sel(&mut self) -> PHY_INTF_SEL_W<EX_PHYINF_CONF_SPEC> {
         PHY_INTF_SEL_W::new(self, 13)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn ss_mode(&mut self) -> SS_MODE_W<EX_PHYINF_CONF_SPEC> {
         SS_MODE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn sbd_clk_gating_en(&mut self) -> SBD_CLK_GATING_EN_W<EX_PHYINF_CONF_SPEC> {
         SBD_CLK_GATING_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn pmt_ctrl_en(&mut self) -> PMT_CTRL_EN_W<EX_PHYINF_CONF_SPEC> {
         PMT_CTRL_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
     pub fn scr_smi_dly_rx_sync(&mut self) -> SCR_SMI_DLY_RX_SYNC_W<EX_PHYINF_CONF_SPEC> {
         SCR_SMI_DLY_RX_SYNC_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_err_out_en(&mut self) -> TX_ERR_OUT_EN_W<EX_PHYINF_CONF_SPEC> {
         TX_ERR_OUT_EN_W::new(self, 20)
     }

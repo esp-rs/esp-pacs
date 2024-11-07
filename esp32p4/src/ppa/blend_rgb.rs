@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - blue color for A4/A8 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_rx_b(&mut self) -> BLEND1_RX_B_W<BLEND_RGB_SPEC> {
         BLEND1_RX_B_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - green color for A4/A8 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_rx_g(&mut self) -> BLEND1_RX_G_W<BLEND_RGB_SPEC> {
         BLEND1_RX_G_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - red color for A4/A8 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_rx_r(&mut self) -> BLEND1_RX_R_W<BLEND_RGB_SPEC> {
         BLEND1_RX_R_W::new(self, 16)
     }

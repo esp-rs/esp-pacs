@@ -96,55 +96,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write this bit to enable the bitscrambler tx"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ena(&mut self) -> TX_ENA_W<TX_CTRL_SPEC> {
         TX_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - write this bit to pause the bitscrambler tx core"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pause(&mut self) -> TX_PAUSE_W<TX_CTRL_SPEC> {
         TX_PAUSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - write this bit to halt the bitscrambler tx core"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_halt(&mut self) -> TX_HALT_W<TX_CTRL_SPEC> {
         TX_HALT_W::new(self, 2)
     }
     #[doc = "Bit 3 - write this bit to ser the bitscrambler tx core EOF signal generating mode which is combined with reg_bitscrambler_tx_tailing_bits, 0: counter by read dma fifo, 0 counter by write peripheral buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_eof_mode(&mut self) -> TX_EOF_MODE_W<TX_CTRL_SPEC> {
         TX_EOF_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - write this bit to specify the LOOP instruction condition mode of bitscrambler tx core, 0: use the little than operator to get the condition, 1: use not equal operator to get the condition"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_cond_mode(&mut self) -> TX_COND_MODE_W<TX_CTRL_SPEC> {
         TX_COND_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - write this bit to set the bitscrambler tx core fetch instruction mode, 0: prefetch by reset, 1: fetch by instrutions"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fetch_mode(&mut self) -> TX_FETCH_MODE_W<TX_CTRL_SPEC> {
         TX_FETCH_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - write this bit to set the bitscrambler tx core halt mode when tx_halt is set, 0: wait write data back done, , 1: ignore write data back"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_halt_mode(&mut self) -> TX_HALT_MODE_W<TX_CTRL_SPEC> {
         TX_HALT_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - write this bit to set the bitscrambler tx core read data mode when EOF received.0: wait read data, 1: ignore read data"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_rd_dummy(&mut self) -> TX_RD_DUMMY_W<TX_CTRL_SPEC> {
         TX_RD_DUMMY_W::new(self, 7)
     }
     #[doc = "Bit 8 - write this bit to reset the bitscrambler tx fifo"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<TX_CTRL_SPEC> {
         TX_FIFO_RST_W::new(self, 8)
     }

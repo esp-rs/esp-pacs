@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_xpd_trx(&mut self) -> HP_ACTIVE_XPD_TRX_W<HP_ACTIVE_BIAS_SPEC> {
         HP_ACTIVE_XPD_TRX_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_xpd_bias(&mut self) -> HP_ACTIVE_XPD_BIAS_W<HP_ACTIVE_BIAS_SPEC> {
         HP_ACTIVE_XPD_BIAS_W::new(self, 25)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_pd_cur(&mut self) -> HP_ACTIVE_PD_CUR_W<HP_ACTIVE_BIAS_SPEC> {
         HP_ACTIVE_PD_CUR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep(&mut self) -> SLEEP_W<HP_ACTIVE_BIAS_SPEC> {
         SLEEP_W::new(self, 31)
     }

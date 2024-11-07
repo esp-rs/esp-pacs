@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for IBUS access interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_ilg_clr(&mut self) -> PRO_IRAM0_ILG_CLR_W<PRO_IRAM0_4_SPEC> {
         PRO_IRAM0_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for IBUS access interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_iram0_ilg_en(&mut self) -> PRO_IRAM0_ILG_EN_W<PRO_IRAM0_4_SPEC> {
         PRO_IRAM0_ILG_EN_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn rsa_pd(&mut self) -> RSA_PD_W<RSA_PD_CTRL_SPEC> {
         RSA_PD_W::new(self, 0)
     }

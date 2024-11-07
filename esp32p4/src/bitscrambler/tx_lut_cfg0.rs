@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - write this bits to specify the bytes position of LUT RAM based on reg_bitscrambler_tx_lut_mode"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lut_idx(&mut self) -> TX_LUT_IDX_W<TX_LUT_CFG0_SPEC> {
         TX_LUT_IDX_W::new(self, 0)
     }
     #[doc = "Bits 11:12 - write this bits to specify the bytes mode of LUT RAM, 0: 1 byte,1: 2bytes, 2: 4 bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lut_mode(&mut self) -> TX_LUT_MODE_W<TX_LUT_CFG0_SPEC> {
         TX_LUT_MODE_W::new(self, 11)
     }

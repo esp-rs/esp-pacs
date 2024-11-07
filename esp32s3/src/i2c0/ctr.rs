@@ -140,91 +140,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0: direct output; 1: open drain output."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 0: direct output; 1: open drain output."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to select the sample mode. 1: sample SDA data on the SCL low level. 0: sample SDA data on the SCL high level."]
     #[inline(always)]
-    #[must_use]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
         SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<CTR_SPEC> {
         RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to configure the module as an I2C Master. Clear this bit to configure the module as an I2C Slave."]
     #[inline(always)]
-    #[must_use]
     pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC> {
         MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to start sending the data in txfifo."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
         TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit; 0: send data from the most significant bit."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
         TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received data. 1: receive data from the least significant bit; 0: receive data from the most significant bit."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
         RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
         CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - This is the enable bit for arbitration_lost."]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<CTR_SPEC> {
         ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - This register is used to reset the scl FMS."]
     #[inline(always)]
-    #[must_use]
     pub fn fsm_rst(&mut self) -> FSM_RST_W<CTR_SPEC> {
         FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - synchronization bit"]
     #[inline(always)]
-    #[must_use]
     pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<CTR_SPEC> {
         CONF_UPGATE_W::new(self, 11)
     }
     #[doc = "Bit 12 - This is the enable bit for slave to send data automatically"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<CTR_SPEC> {
         SLV_TX_AUTO_START_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - This is the enable bit to check if the r/w bit of 10bit addressing consists with I2C protocol"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<CTR_SPEC> {
         ADDR_10BIT_RW_CHECK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - This is the enable bit to support the 7bit general call function."]
     #[inline(always)]
-    #[must_use]
     pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<CTR_SPEC> {
         ADDR_BROADCASTING_EN_W::new(self, 14)
     }

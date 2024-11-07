@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - The bit is used to configure the dbus permission control section boundary0"]
     #[inline(always)]
-    #[must_use]
     pub fn dbus_pms_boundary0(&mut self) -> DBUS_PMS_BOUNDARY0_W<DBUS_PMS_TBL_BOUNDARY0_SPEC> {
         DBUS_PMS_BOUNDARY0_W::new(self, 0)
     }

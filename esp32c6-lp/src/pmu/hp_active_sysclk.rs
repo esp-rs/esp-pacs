@@ -76,7 +76,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_dig_sys_clk_no_div(
         &mut self,
     ) -> HP_ACTIVE_DIG_SYS_CLK_NO_DIV_W<HP_ACTIVE_SYSCLK_SPEC> {
@@ -84,7 +83,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_icg_sys_clock_en(
         &mut self,
     ) -> HP_ACTIVE_ICG_SYS_CLOCK_EN_W<HP_ACTIVE_SYSCLK_SPEC> {
@@ -92,7 +90,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_sys_clk_slp_sel(
         &mut self,
     ) -> HP_ACTIVE_SYS_CLK_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {
@@ -100,13 +97,11 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_icg_slp_sel(&mut self) -> HP_ACTIVE_ICG_SLP_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {
         HP_ACTIVE_ICG_SLP_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_dig_sys_clk_sel(
         &mut self,
     ) -> HP_ACTIVE_DIG_SYS_CLK_SEL_W<HP_ACTIVE_SYSCLK_SPEC> {

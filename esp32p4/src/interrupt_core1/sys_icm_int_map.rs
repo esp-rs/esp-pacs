@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_sys_icm_int_map(&mut self) -> CORE1_SYS_ICM_INT_MAP_W<SYS_ICM_INT_MAP_SPEC> {
         CORE1_SYS_ICM_INT_MAP_W::new(self, 0)
     }

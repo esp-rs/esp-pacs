@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_uxint_clear(&mut self) -> CPU_UXINT_CLEAR_W<UXINT_CLEAR_SPEC> {
         CPU_UXINT_CLEAR_W::new(self, 0)
     }

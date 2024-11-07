@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn rdn_eco_en(&mut self) -> RDN_ECO_EN_W<RDN_ECO_CS_SPEC> {
         RDN_ECO_EN_W::new(self, 0)
     }

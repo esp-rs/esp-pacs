@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pad0(&mut self) -> PAD0_W<TOUCH_APPROACH_SPEC> {
         PAD0_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pad1(&mut self) -> PAD1_W<TOUCH_APPROACH_SPEC> {
         PAD1_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pad2(&mut self) -> PAD2_W<TOUCH_APPROACH_SPEC> {
         PAD2_W::new(self, 8)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<TOUCH_APPROACH_SPEC> {
         TOUCH_SLP_APPROACH_EN_W::new(self, 12)
     }

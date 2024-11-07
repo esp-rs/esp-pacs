@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Configures the threshold value of SCL_FSM state unchanged period. It should be no more than 23. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_st_to_i2c(&mut self) -> SCL_ST_TO_I2C_W<SCL_ST_TIME_OUT_SPEC> {
         SCL_ST_TO_I2C_W::new(self, 0)
     }

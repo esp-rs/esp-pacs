@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable uart1 apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<UART1_CONF_SPEC> {
         UART1_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset uart1 module"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_rst_en(&mut self) -> UART1_RST_EN_W<UART1_CONF_SPEC> {
         UART1_RST_EN_W::new(self, 1)
     }

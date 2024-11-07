@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_dig_icg_func_en(
         &mut self,
     ) -> HP_MODEM_DIG_ICG_FUNC_EN_W<HP_MODEM_ICG_HP_FUNC_SPEC> {

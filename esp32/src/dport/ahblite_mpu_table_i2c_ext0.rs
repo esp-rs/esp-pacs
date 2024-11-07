@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn i2cext0_access_grant_config(
         &mut self,
     ) -> I2CEXT0_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_I2C_EXT0_SPEC> {

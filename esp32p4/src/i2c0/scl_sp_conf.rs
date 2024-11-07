@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures to send out SCL pulses when I2C master is IDLE. The number of pulses equals to reg_scl_rst_slv_num\\[4:0\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_rst_slv_en(&mut self) -> SCL_RST_SLV_EN_W<SCL_SP_CONF_SPEC> {
         SCL_RST_SLV_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - Configure the pulses of SCL generated in I2C master mode. Valid when reg_scl_rst_slv_en is 1. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_rst_slv_num(&mut self) -> SCL_RST_SLV_NUM_W<SCL_SP_CONF_SPEC> {
         SCL_RST_SLV_NUM_W::new(self, 1)
     }
     #[doc = "Bit 6 - Configures to power down the I2C output SCL line. 0: Not power down. 1: Power down. Valid only when reg_scl_force_out is 1."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_pd_en(&mut self) -> SCL_PD_EN_W<SCL_SP_CONF_SPEC> {
         SCL_PD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures to power down the I2C output SDA line. 0: Not power down. 1: Power down. Valid only when reg_sda_force_out is 1."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_pd_en(&mut self) -> SDA_PD_EN_W<SCL_SP_CONF_SPEC> {
         SDA_PD_EN_W::new(self, 7)
     }

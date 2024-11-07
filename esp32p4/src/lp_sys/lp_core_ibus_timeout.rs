@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set this field to 1 to enable lp core ibus timeout handle"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<LP_CORE_IBUS_TIMEOUT_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:16 - This field used to set lp core ibus timeout threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn thres(&mut self) -> THRES_W<LP_CORE_IBUS_TIMEOUT_SPEC> {
         THRES_W::new(self, 1)
     }

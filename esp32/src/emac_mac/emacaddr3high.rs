@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits Bits\\[47:32\\] of the fourth 6-byte MAC address."]
     #[inline(always)]
-    #[must_use]
     pub fn mac_address3_hi(&mut self) -> MAC_ADDRESS3_HI_W<EMACADDR3HIGH_SPEC> {
         MAC_ADDRESS3_HI_W::new(self, 0)
     }
     #[doc = "Bits 24:29 - These bits are mask control bits for comparison of each of the EMACADDR3 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR3 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR3 High \\[15:8\\]. Bit\\[28\\]: EMACADDR3 High \\[7:0\\]. Bit\\[27\\]: EMACADDR3 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR3 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
     #[inline(always)]
-    #[must_use]
     pub fn mask_byte_control3(&mut self) -> MASK_BYTE_CONTROL3_W<EMACADDR3HIGH_SPEC> {
         MASK_BYTE_CONTROL3_W::new(self, 24)
     }
     #[doc = "Bit 30 - When this bit is set the EMACADDR3\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR3\\[47:0\\] is used to compare with the DA fields of the received frame."]
     #[inline(always)]
-    #[must_use]
     pub fn source_address3(&mut self) -> SOURCE_ADDRESS3_W<EMACADDR3HIGH_SPEC> {
         SOURCE_ADDRESS3_W::new(self, 30)
     }
     #[doc = "Bit 31 - When this bit is set the address filter module uses the fourth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
     #[inline(always)]
-    #[must_use]
     pub fn address_enable3(&mut self) -> ADDRESS_ENABLE3_W<EMACADDR3HIGH_SPEC> {
         ADDRESS_ENABLE3_W::new(self, 31)
     }

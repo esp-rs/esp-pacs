@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_fib_ena(&mut self) -> ANA_FIB_ENA_W<FIB_ENABLE_SPEC> {
         ANA_FIB_ENA_W::new(self, 0)
     }

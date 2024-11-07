@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to continue HUK Generator operation at LOAD/GAIN state."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<START_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to start HUK Generator at IDLE state."]
     #[inline(always)]
-    #[must_use]
     pub fn continue_(&mut self) -> CONTINUE_W<START_SPEC> {
         CONTINUE_W::new(self, 1)
     }

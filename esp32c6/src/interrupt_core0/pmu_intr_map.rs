@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn pmu_intr_map(&mut self) -> PMU_INTR_MAP_W<PMU_INTR_MAP_SPEC> {
         PMU_INTR_MAP_W::new(self, 0)
     }

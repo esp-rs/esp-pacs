@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures weight of subwindow 34"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_weight_34(&mut self) -> HIST_WEIGHT_34_W<HIST_WEIGHT4_SPEC> {
         HIST_WEIGHT_34_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures weight of subwindow 33"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_weight_33(&mut self) -> HIST_WEIGHT_33_W<HIST_WEIGHT4_SPEC> {
         HIST_WEIGHT_33_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures weight of subwindow 32"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_weight_32(&mut self) -> HIST_WEIGHT_32_W<HIST_WEIGHT4_SPEC> {
         HIST_WEIGHT_32_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures weight of subwindow 31"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_weight_31(&mut self) -> HIST_WEIGHT_31_W<HIST_WEIGHT4_SPEC> {
         HIST_WEIGHT_31_W::new(self, 24)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - High speed sdio pad bist send sequence"]
     #[inline(always)]
-    #[must_use]
     pub fn send_seq(&mut self) -> SEND_SEQ_W<SEND_SEQ_SPEC> {
         SEND_SEQ_W::new(self, 0)
     }

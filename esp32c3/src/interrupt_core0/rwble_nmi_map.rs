@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_rwble_nmi_map"]
     #[inline(always)]
-    #[must_use]
     pub fn rwble_nmi_map(&mut self) -> RWBLE_NMI_MAP_W<RWBLE_NMI_MAP_SPEC> {
         RWBLE_NMI_MAP_W::new(self, 0)
     }

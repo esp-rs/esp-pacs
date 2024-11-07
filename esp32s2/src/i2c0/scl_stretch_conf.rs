@@ -36,19 +36,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Configure the period of I2C slave stretching SCL line."]
     #[inline(always)]
-    #[must_use]
     pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC> {
         STRETCH_PROTECT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 10 - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the I2C slave SCL stretch function."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }

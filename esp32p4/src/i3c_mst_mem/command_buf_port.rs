@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Contains a Command Descriptor structure that depends on the requested transfer type. Command Descriptor structure is used to schedule the transfers to devices on I3C bus."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_command(&mut self) -> REG_COMMAND_W<COMMAND_BUF_PORT_SPEC> {
         REG_COMMAND_W::new(self, 0)
     }

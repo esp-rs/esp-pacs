@@ -204,115 +204,96 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the clk force on of isp reg. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLK_EN_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures the clk force on of blc. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_blc_force_on(&mut self) -> CLK_BLC_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_BLC_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures the clk force on of dpc. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_dpc_force_on(&mut self) -> CLK_DPC_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_DPC_FORCE_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures the clk force on of bf. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_bf_force_on(&mut self) -> CLK_BF_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_BF_FORCE_ON_W::new(self, 3)
     }
     #[doc = "Bit 4 - this bit configures the clk force on of lsc. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lsc_force_on(&mut self) -> CLK_LSC_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_LSC_FORCE_ON_W::new(self, 4)
     }
     #[doc = "Bit 5 - this bit configures the clk force on of demosaic. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_demosaic_force_on(&mut self) -> CLK_DEMOSAIC_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_DEMOSAIC_FORCE_ON_W::new(self, 5)
     }
     #[doc = "Bit 6 - this bit configures the clk force on of median. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_median_force_on(&mut self) -> CLK_MEDIAN_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_MEDIAN_FORCE_ON_W::new(self, 6)
     }
     #[doc = "Bit 7 - this bit configures the clk force on of ccm. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_ccm_force_on(&mut self) -> CLK_CCM_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_CCM_FORCE_ON_W::new(self, 7)
     }
     #[doc = "Bit 8 - this bit configures the clk force on of gamma. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_gamma_force_on(&mut self) -> CLK_GAMMA_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_GAMMA_FORCE_ON_W::new(self, 8)
     }
     #[doc = "Bit 9 - this bit configures the clk force on of rgb2yuv. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_rgb2yuv_force_on(&mut self) -> CLK_RGB2YUV_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_RGB2YUV_FORCE_ON_W::new(self, 9)
     }
     #[doc = "Bit 10 - this bit configures the clk force on of sharp. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_sharp_force_on(&mut self) -> CLK_SHARP_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_SHARP_FORCE_ON_W::new(self, 10)
     }
     #[doc = "Bit 11 - this bit configures the clk force on of color. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_color_force_on(&mut self) -> CLK_COLOR_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_COLOR_FORCE_ON_W::new(self, 11)
     }
     #[doc = "Bit 12 - this bit configures the clk force on of yuv2rgb. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_yuv2rgb_force_on(&mut self) -> CLK_YUV2RGB_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_YUV2RGB_FORCE_ON_W::new(self, 12)
     }
     #[doc = "Bit 13 - this bit configures the clk force on of ae. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_ae_force_on(&mut self) -> CLK_AE_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_AE_FORCE_ON_W::new(self, 13)
     }
     #[doc = "Bit 14 - this bit configures the clk force on of af. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_af_force_on(&mut self) -> CLK_AF_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_AF_FORCE_ON_W::new(self, 14)
     }
     #[doc = "Bit 15 - this bit configures the clk force on of awb. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_awb_force_on(&mut self) -> CLK_AWB_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_AWB_FORCE_ON_W::new(self, 15)
     }
     #[doc = "Bit 16 - this bit configures the clk force on of hist. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_hist_force_on(&mut self) -> CLK_HIST_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_HIST_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - this bit configures the clk force on of mipi idi input. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mipi_idi_force_on(&mut self) -> CLK_MIPI_IDI_FORCE_ON_W<CLK_EN_SPEC> {
         CLK_MIPI_IDI_FORCE_ON_W::new(self, 17)
     }
     #[doc = "Bit 18 - this bit configures the clk force on of all isp memory. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn isp_mem_clk_force_on(&mut self) -> ISP_MEM_CLK_FORCE_ON_W<CLK_EN_SPEC> {
         ISP_MEM_CLK_FORCE_ON_W::new(self, 18)
     }

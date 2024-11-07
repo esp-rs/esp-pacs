@@ -29,7 +29,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_core_0_pif_pms_monitor_violate_size_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_monitor_violate_size_intr_map(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_VIOLATE_SIZE_INTR_MAP_W<

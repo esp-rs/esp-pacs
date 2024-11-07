@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - item 0 ~ 3 for pattern table 2 (each item one byte)"]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_sar2_patt_tab1(
         &mut self,
     ) -> SARADC_SAR2_PATT_TAB1_W<APB_SARADC_SAR2_PATT_TAB_SPEC> {

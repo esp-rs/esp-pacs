@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures the mem_aux of sharp y line buffer memory"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_matrix_y_mem_aux_ctrl(
         &mut self,
     ) -> SHARP_MATRIX_Y_MEM_AUX_CTRL_W<MEM_AUX_CTRL_3_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 16:29 - this field configures the mem_aux of demosaic line buffer memory"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_matrix_mem_aux_ctrl(
         &mut self,
     ) -> DEMOSAIC_MATRIX_MEM_AUX_CTRL_W<MEM_AUX_CTRL_3_SPEC> {

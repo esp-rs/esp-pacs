@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_int_clear(&mut self) -> CPU_INT_CLEAR_W<CPU_INT_CLEAR_SPEC> {
         CPU_INT_CLEAR_W::new(self, 0)
     }

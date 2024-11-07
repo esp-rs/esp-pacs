@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         AGC_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         AGC_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         PBUS_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         PBUS_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_mst_mem_force_pu(&mut self) -> I2C_MST_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         I2C_MST_MEM_FORCE_PU_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_mst_mem_force_pd(&mut self) -> I2C_MST_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         I2C_MST_MEM_FORCE_PD_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn chan_freq_mem_force_pu(&mut self) -> CHAN_FREQ_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         CHAN_FREQ_MEM_FORCE_PU_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn chan_freq_mem_force_pd(&mut self) -> CHAN_FREQ_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         CHAN_FREQ_MEM_FORCE_PD_W::new(self, 11)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_pwr_mem_wp(&mut self) -> MODEM_PWR_MEM_WP_W<MEM_CONF_SPEC> {
         MODEM_PWR_MEM_WP_W::new(self, 12)
     }
     #[doc = "Bits 15:17"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_pwr_mem_wa(&mut self) -> MODEM_PWR_MEM_WA_W<MEM_CONF_SPEC> {
         MODEM_PWR_MEM_WA_W::new(self, 15)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_pwr_mem_ra(&mut self) -> MODEM_PWR_MEM_RA_W<MEM_CONF_SPEC> {
         MODEM_PWR_MEM_RA_W::new(self, 18)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    #[must_use]
     pub fn modem_pwr_mem_rm(&mut self) -> MODEM_PWR_MEM_RM_W<MEM_CONF_SPEC> {
         MODEM_PWR_MEM_RM_W::new(self, 20)
     }

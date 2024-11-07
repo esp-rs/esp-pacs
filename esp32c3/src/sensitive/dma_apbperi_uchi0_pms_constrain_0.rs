@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - dma_apbperi_uchi0_pms_constrain_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_uchi0_pms_constrain_lock(
         &mut self,
     ) -> DMA_APBPERI_UCHI0_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_SPEC> {

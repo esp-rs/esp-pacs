@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures weight of subwindow 44"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_weight_44(&mut self) -> HIST_WEIGHT_44_W<HIST_WEIGHT6_SPEC> {
         HIST_WEIGHT_44_W::new(self, 0)
     }

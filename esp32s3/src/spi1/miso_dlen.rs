@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - The length in bits of DIN phase. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_miso_dbitlen(&mut self) -> USR_MISO_DBITLEN_W<MISO_DLEN_SPEC> {
         USR_MISO_DBITLEN_W::new(self, 0)
     }

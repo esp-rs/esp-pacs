@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_alarm(&mut self) -> TIMER_ALARM_W<TIMER_ALARM_SPEC> {
         TIMER_ALARM_W::new(self, 0)
     }
