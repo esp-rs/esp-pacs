@@ -66,7 +66,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache pre-load done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_preload_int_ena(
         &mut self,
     ) -> PRO_ICACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
@@ -74,7 +73,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache pre-load done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_preload_int_clr(
         &mut self,
     ) -> PRO_ICACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
@@ -82,7 +80,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache pre-load done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_preload_int_ena(
         &mut self,
     ) -> PRO_DCACHE_PRELOAD_INT_ENA_W<CACHE_PRELOAD_INT_CTRL_SPEC> {
@@ -90,7 +87,6 @@ impl W {
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache pre-load done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_preload_int_clr(
         &mut self,
     ) -> PRO_DCACHE_PRELOAD_INT_CLR_W<CACHE_PRELOAD_INT_CTRL_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The LCD write command value of first cmd cycle."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_first_cmd_value(&mut self) -> LCD_FIRST_CMD_VALUE_W<LCD_FIRST_CMD_VAL_SPEC> {
         LCD_FIRST_CMD_VALUE_W::new(self, 0)
     }

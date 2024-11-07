@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The length in spi_clk cycles of dummy phase. The register value shall be (cycle_num-1). Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_dummy_cyclelen(&mut self) -> USR_DUMMY_CYCLELEN_W<USER1_SPEC> {
         USR_DUMMY_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bit 16 - 1: SPI transfer is ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode. 0: SPI transfer is not ended when SPI RX AFIFO wfull error is valid in GP-SPI master FD/HD-mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_wfull_err_end_en(&mut self) -> MST_WFULL_ERR_END_EN_W<USER1_SPEC> {
         MST_WFULL_ERR_END_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:21 - (cycles+1) of prepare phase by spi clock this bits are combined with spi_cs_setup bit. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<USER1_SPEC> {
         CS_SETUP_TIME_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - delay cycles of cs pin by spi clock this bits are combined with spi_cs_hold bit. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<USER1_SPEC> {
         CS_HOLD_TIME_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - The length in bits of address phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_addr_bitlen(&mut self) -> USR_ADDR_BITLEN_W<USER1_SPEC> {
         USR_ADDR_BITLEN_W::new(self, 27)
     }

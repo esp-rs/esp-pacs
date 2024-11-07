@@ -62,49 +62,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_abort(&mut self) -> CH1_ABORT_W<CHEN1_SPEC> {
         CH1_ABORT_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_abort(&mut self) -> CH2_ABORT_W<CHEN1_SPEC> {
         CH2_ABORT_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_abort(&mut self) -> CH3_ABORT_W<CHEN1_SPEC> {
         CH3_ABORT_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_abort(&mut self) -> CH4_ABORT_W<CHEN1_SPEC> {
         CH4_ABORT_W::new(self, 3)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_abort_we(&mut self) -> CH1_ABORT_WE_W<CHEN1_SPEC> {
         CH1_ABORT_WE_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_abort_we(&mut self) -> CH2_ABORT_WE_W<CHEN1_SPEC> {
         CH2_ABORT_WE_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_abort_we(&mut self) -> CH3_ABORT_WE_W<CHEN1_SPEC> {
         CH3_ABORT_WE_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_abort_we(&mut self) -> CH4_ABORT_WE_W<CHEN1_SPEC> {
         CH4_ABORT_WE_W::new(self, 11)
     }

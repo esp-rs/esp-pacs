@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - This register contains the mode of modular exponentiation."]
     #[inline(always)]
-    #[must_use]
     pub fn modexp_mode(&mut self) -> MODEXP_MODE_W<MODEXP_MODE_SPEC> {
         MODEXP_MODE_W::new(self, 0)
     }

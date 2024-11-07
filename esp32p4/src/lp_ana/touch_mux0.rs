@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_data_sel(&mut self) -> TOUCH_DATA_SEL_W<TOUCH_MUX0_SPEC> {
         TOUCH_DATA_SEL_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_freq_sel(&mut self) -> TOUCH_FREQ_SEL_W<TOUCH_MUX0_SPEC> {
         TOUCH_FREQ_SEL_W::new(self, 10)
     }
     #[doc = "Bits 12:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_bufsel(&mut self) -> TOUCH_BUFSEL_W<TOUCH_MUX0_SPEC> {
         TOUCH_BUFSEL_W::new(self, 12)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_done_en(&mut self) -> TOUCH_DONE_EN_W<TOUCH_MUX0_SPEC> {
         TOUCH_DONE_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_done_force(&mut self) -> TOUCH_DONE_FORCE_W<TOUCH_MUX0_SPEC> {
         TOUCH_DONE_FORCE_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_fsm_en(&mut self) -> TOUCH_FSM_EN_W<TOUCH_MUX0_SPEC> {
         TOUCH_FSM_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<TOUCH_MUX0_SPEC> {
         TOUCH_START_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<TOUCH_MUX0_SPEC> {
         TOUCH_START_FORCE_W::new(self, 31)
     }

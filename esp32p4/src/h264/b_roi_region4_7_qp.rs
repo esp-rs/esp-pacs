@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configure H264 ROI region4 qp in video B,fixed qp or delta qp."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_region4_qp(&mut self) -> B_ROI_REGION4_QP_W<B_ROI_REGION4_7_QP_SPEC> {
         B_ROI_REGION4_QP_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Configure H264 ROI region5 qp in video B,fixed qp or delta qp."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_region5_qp(&mut self) -> B_ROI_REGION5_QP_W<B_ROI_REGION4_7_QP_SPEC> {
         B_ROI_REGION5_QP_W::new(self, 7)
     }
     #[doc = "Bits 14:20 - Configure H264 ROI region6 qp in video B,fixed qp or delta qp."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_region6_qp(&mut self) -> B_ROI_REGION6_QP_W<B_ROI_REGION4_7_QP_SPEC> {
         B_ROI_REGION6_QP_W::new(self, 14)
     }
     #[doc = "Bits 21:27 - Configure H264 ROI region7 qp in video B,fixed qp or delta qp."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_region7_qp(&mut self) -> B_ROI_REGION7_QP_W<B_ROI_REGION4_7_QP_SPEC> {
         B_ROI_REGION7_QP_W::new(self, 21)
     }

@@ -122,7 +122,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_opposite(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<APP_DCACHE_DBUG3_SPEC> {
@@ -130,7 +129,6 @@ impl W {
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_dram1(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_DRAM1_W<APP_DCACHE_DBUG3_SPEC> {
@@ -138,7 +136,6 @@ impl W {
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_irom0(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_IROM0_W<APP_DCACHE_DBUG3_SPEC> {
@@ -146,7 +143,6 @@ impl W {
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_iram1(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_IRAM1_W<APP_DCACHE_DBUG3_SPEC> {
@@ -154,7 +150,6 @@ impl W {
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_iram0(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_IRAM0_W<APP_DCACHE_DBUG3_SPEC> {
@@ -162,7 +157,6 @@ impl W {
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cpu_disabled_cache_ia_drom0(
         &mut self,
     ) -> APP_CPU_DISABLED_CACHE_IA_DROM0_W<APP_DCACHE_DBUG3_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - reg_scl_low_period"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_low_period(&mut self) -> SCL_LOW_PERIOD_W<SCL_LOW_PERIOD_SPEC> {
         SCL_LOW_PERIOD_W::new(self, 0)
     }

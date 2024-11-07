@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 19 - connect the rtc pad input to digital pad input Ó0Ó is availbale"]
     #[inline(always)]
-    #[must_use]
     pub fn to_gpio(&mut self) -> TO_GPIO_W<TOUCH_PAD8_SPEC> {
         TO_GPIO_W::new(self, 19)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
-    #[must_use]
     pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD8_SPEC> {
         XPD_W::new(self, 20)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
-    #[must_use]
     pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD8_SPEC> {
         TIE_OPT_W::new(self, 21)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<TOUCH_PAD8_SPEC> {
         START_W::new(self, 22)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
-    #[must_use]
     pub fn dac(&mut self) -> DAC_W<TOUCH_PAD8_SPEC> {
         DAC_W::new(self, 23)
     }

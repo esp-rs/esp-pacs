@@ -144,79 +144,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_chip_reset_width(&mut self) -> WDT_CHIP_RESET_WIDTH_W<CONFIG0_SPEC> {
         WDT_CHIP_RESET_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_chip_reset_en(&mut self) -> WDT_CHIP_RESET_EN_W<CONFIG0_SPEC> {
         WDT_CHIP_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<CONFIG0_SPEC> {
         WDT_PAUSE_IN_SLP_W::new(self, 9)
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<CONFIG0_SPEC> {
         WDT_APPCPU_RESET_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<CONFIG0_SPEC> {
         WDT_PROCPU_RESET_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<CONFIG0_SPEC> {
         WDT_FLASHBOOT_MOD_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<CONFIG0_SPEC> {
         WDT_SYS_RESET_LENGTH_W::new(self, 13)
     }
     #[doc = "Bits 16:18 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<CONFIG0_SPEC> {
         WDT_CPU_RESET_LENGTH_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W<CONFIG0_SPEC> {
         WDT_STG3_W::new(self, 19)
     }
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W<CONFIG0_SPEC> {
         WDT_STG2_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W<CONFIG0_SPEC> {
         WDT_STG1_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W<CONFIG0_SPEC> {
         WDT_STG0_W::new(self, 28)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_en(&mut self) -> WDT_EN_W<CONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }

@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - open bias buf when system in active"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<BIAS_CONF_SPEC> {
         BIAS_BUF_IDLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - open bias buf when rtc in wakeup"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<BIAS_CONF_SPEC> {
         BIAS_BUF_WAKE_W::new(self, 11)
     }
     #[doc = "Bit 12 - open bias buf when rtc in deep sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<BIAS_CONF_SPEC> {
         BIAS_BUF_DEEP_SLP_W::new(self, 12)
     }
     #[doc = "Bit 13 - open bias buf when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<BIAS_CONF_SPEC> {
         BIAS_BUF_MONITOR_W::new(self, 13)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<BIAS_CONF_SPEC> {
         PD_CUR_DEEP_SLP_W::new(self, 14)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<BIAS_CONF_SPEC> {
         PD_CUR_MONITOR_W::new(self, 15)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<BIAS_CONF_SPEC> {
         BIAS_SLEEP_DEEP_SLP_W::new(self, 16)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<BIAS_CONF_SPEC> {
         BIAS_SLEEP_MONITOR_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<BIAS_CONF_SPEC> {
         DBG_ATTEN_DEEP_SLP_W::new(self, 18)
     }
     #[doc = "Bits 22:25 - DBG_ATTEN when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<BIAS_CONF_SPEC> {
         DBG_ATTEN_MONITOR_W::new(self, 22)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
-    #[must_use]
     pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<BIAS_CONF_SPEC> {
         ENB_SCK_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
-    #[must_use]
     pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<BIAS_CONF_SPEC> {
         INC_HEARTBEAT_REFRESH_W::new(self, 27)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
-    #[must_use]
     pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
         DEC_HEARTBEAT_PERIOD_W::new(self, 28)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
-    #[must_use]
     pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
         INC_HEARTBEAT_PERIOD_W::new(self, 29)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
-    #[must_use]
     pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<BIAS_CONF_SPEC> {
         DEC_HEARTBEAT_WIDTH_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<BIAS_CONF_SPEC> {
         RST_BIAS_I2C_W::new(self, 31)
     }

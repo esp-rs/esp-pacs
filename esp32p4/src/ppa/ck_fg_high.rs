@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - color key higher threshold of foreground b channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_fg_b_high(&mut self) -> COLORKEY_FG_B_HIGH_W<CK_FG_HIGH_SPEC> {
         COLORKEY_FG_B_HIGH_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - color key higher threshold of foreground g channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_fg_g_high(&mut self) -> COLORKEY_FG_G_HIGH_W<CK_FG_HIGH_SPEC> {
         COLORKEY_FG_G_HIGH_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - color key higher threshold of foreground r channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_fg_r_high(&mut self) -> COLORKEY_FG_R_HIGH_W<CK_FG_HIGH_SPEC> {
         COLORKEY_FG_R_HIGH_W::new(self, 16)
     }

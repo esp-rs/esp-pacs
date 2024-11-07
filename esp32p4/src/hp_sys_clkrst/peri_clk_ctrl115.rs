@@ -107,13 +107,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4_sclk_div_num(&mut self) -> UART4_SCLK_DIV_NUM_W<PERI_CLK_CTRL115_SPEC> {
         UART4_SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4_sclk_div_numerator(
         &mut self,
     ) -> UART4_SCLK_DIV_NUMERATOR_W<PERI_CLK_CTRL115_SPEC> {
@@ -121,7 +119,6 @@ impl W {
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4_sclk_div_denominator(
         &mut self,
     ) -> UART4_SCLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL115_SPEC> {
@@ -129,37 +126,31 @@ impl W {
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai0_clk_src_sel(&mut self) -> TWAI0_CLK_SRC_SEL_W<PERI_CLK_CTRL115_SPEC> {
         TWAI0_CLK_SRC_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai0_clk_en(&mut self) -> TWAI0_CLK_EN_W<PERI_CLK_CTRL115_SPEC> {
         TWAI0_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai1_clk_src_sel(&mut self) -> TWAI1_CLK_SRC_SEL_W<PERI_CLK_CTRL115_SPEC> {
         TWAI1_CLK_SRC_SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai1_clk_en(&mut self) -> TWAI1_CLK_EN_W<PERI_CLK_CTRL115_SPEC> {
         TWAI1_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai2_clk_src_sel(&mut self) -> TWAI2_CLK_SRC_SEL_W<PERI_CLK_CTRL115_SPEC> {
         TWAI2_CLK_SRC_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai2_clk_en(&mut self) -> TWAI2_CLK_EN_W<PERI_CLK_CTRL115_SPEC> {
         TWAI2_CLK_EN_W::new(self, 29)
     }

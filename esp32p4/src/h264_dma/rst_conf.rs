@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 then write 0 to this bit to reset axi master read data FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn inter_axim_rd_rst(&mut self) -> INTER_AXIM_RD_RST_W<RST_CONF_SPEC> {
         INTER_AXIM_RD_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 then write 0 to this bit to reset axi master write data FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn inter_axim_wr_rst(&mut self) -> INTER_AXIM_WR_RST_W<RST_CONF_SPEC> {
         INTER_AXIM_WR_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 then write 0 to this bit to reset axi master read data FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn exter_axim_rd_rst(&mut self) -> EXTER_AXIM_RD_RST_W<RST_CONF_SPEC> {
         EXTER_AXIM_RD_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 then write 0 to this bit to reset axi master write data FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn exter_axim_wr_rst(&mut self) -> EXTER_AXIM_WR_RST_W<RST_CONF_SPEC> {
         EXTER_AXIM_WR_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<RST_CONF_SPEC> {
         CLK_EN_W::new(self, 4)
     }

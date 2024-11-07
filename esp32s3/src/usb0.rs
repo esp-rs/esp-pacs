@@ -160,6 +160,8 @@ impl RegisterBlock {
         &self.hptxfsiz
     }
     #[doc = "0x104..0x114 - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `DIEPTXF1` register.</div>"]
     #[inline(always)]
     pub const fn dieptxf(&self, n: usize) -> &DIEPTXF {
         &self.dieptxf[n]
@@ -302,6 +304,8 @@ impl RegisterBlock {
         &self.in_ep0
     }
     #[doc = "0x920..0x9e0 - Device IN endpoints 1-6"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `IN_EP1` cluster.</div>"]
     #[inline(always)]
     pub const fn in_ep(&self, n: usize) -> &IN_EP {
         &self.in_ep[n]
@@ -348,6 +352,8 @@ impl RegisterBlock {
         &self.out_ep0
     }
     #[doc = "0xb20..0xbe0 - Device OUT endpoints 1-6"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `OUT_EP1` cluster.</div>"]
     #[inline(always)]
     pub const fn out_ep(&self, n: usize) -> &OUT_EP {
         &self.out_ep[n]
@@ -399,7 +405,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 16][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(4096)
                 .add(4096 * n)
@@ -411,7 +417,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn fifo_iter(&self) -> impl Iterator<Item = &FIFO> {
         (0..16).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(4096)
                 .add(4096 * n)

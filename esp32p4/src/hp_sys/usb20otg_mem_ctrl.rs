@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_usb20_mem_clk_force_on(
         &mut self,
     ) -> REG_USB20_MEM_CLK_FORCE_ON_W<USB20OTG_MEM_CTRL_SPEC> {

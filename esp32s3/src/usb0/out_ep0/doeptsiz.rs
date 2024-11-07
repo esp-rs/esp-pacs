@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    #[must_use]
     pub fn xfersize(&mut self) -> XFERSIZE_W<DOEPTSIZ_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
     pub fn pktcnt(&mut self) -> PKTCNT_W<DOEPTSIZ_SPEC> {
         PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
-    #[must_use]
     pub fn supcnt(&mut self) -> SUPCNT_W<DOEPTSIZ_SPEC> {
         SUPCNT_W::new(self, 29)
     }

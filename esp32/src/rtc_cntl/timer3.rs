@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_wait_timer(&mut self) -> WIFI_WAIT_TIMER_W<TIMER3_SPEC> {
         WIFI_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_powerup_timer(&mut self) -> WIFI_POWERUP_TIMER_W<TIMER3_SPEC> {
         WIFI_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_ram_wait_timer(&mut self) -> ROM_RAM_WAIT_TIMER_W<TIMER3_SPEC> {
         ROM_RAM_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_ram_powerup_timer(&mut self) -> ROM_RAM_POWERUP_TIMER_W<TIMER3_SPEC> {
         ROM_RAM_POWERUP_TIMER_W::new(self, 25)
     }

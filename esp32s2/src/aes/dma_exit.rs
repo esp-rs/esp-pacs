@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_EXIT_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to exit AES operation. This register is only effective for DMA-AES operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_exit(&mut self) -> DMA_EXIT_W<DMA_EXIT_SPEC> {
         DMA_EXIT_W::new(self, 0)
     }

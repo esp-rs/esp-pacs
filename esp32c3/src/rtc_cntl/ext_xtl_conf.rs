@@ -192,103 +192,86 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - xtal 32k watch dog enable"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_en(&mut self) -> XTAL32K_WDT_EN_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - xtal 32k watch dog clock force on"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_clk_fo(&mut self) -> XTAL32K_WDT_CLK_FO_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_CLK_FO_W::new(self, 1)
     }
     #[doc = "Bit 2 - xtal 32k watch dog sw reset"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_reset(&mut self) -> XTAL32K_WDT_RESET_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3 - xtal 32k external xtal clock force on"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_ext_clk_fo(&mut self) -> XTAL32K_EXT_CLK_FO_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_EXT_CLK_FO_W::new(self, 3)
     }
     #[doc = "Bit 4 - xtal 32k switch to back up clock when xtal is dead"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_backup(&mut self) -> XTAL32K_AUTO_BACKUP_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_BACKUP_W::new(self, 4)
     }
     #[doc = "Bit 5 - xtal 32k restart xtal when xtal is dead"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_restart(&mut self) -> XTAL32K_AUTO_RESTART_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_RESTART_W::new(self, 5)
     }
     #[doc = "Bit 6 - xtal 32k switch back xtal when xtal is restarted"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_return(&mut self) -> XTAL32K_AUTO_RETURN_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_RETURN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Xtal 32k xpd control by sw or fsm"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_xpd_force(&mut self) -> XTAL32K_XPD_FORCE_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_XPD_FORCE_W::new(self, 7)
     }
     #[doc = "Bit 8 - apply an internal clock to help xtal 32k to start"]
     #[inline(always)]
-    #[must_use]
     pub fn enckinit_xtal_32k(&mut self) -> ENCKINIT_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         ENCKINIT_XTAL_32K_W::new(self, 8)
     }
     #[doc = "Bit 9 - 0: single-end buffer 1: differential buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn dbuf_xtal_32k(&mut self) -> DBUF_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DBUF_XTAL_32K_W::new(self, 9)
     }
     #[doc = "Bits 10:12 - xtal_32k gm control"]
     #[inline(always)]
-    #[must_use]
     pub fn dgm_xtal_32k(&mut self) -> DGM_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DGM_XTAL_32K_W::new(self, 10)
     }
     #[doc = "Bits 13:15 - DRES_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn dres_xtal_32k(&mut self) -> DRES_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DRES_XTAL_32K_W::new(self, 13)
     }
     #[doc = "Bit 16 - XPD_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_xtal_32k(&mut self) -> XPD_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         XPD_XTAL_32K_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - DAC_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_xtal_32k(&mut self) -> DAC_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DAC_XTAL_32K_W::new(self, 17)
     }
     #[doc = "Bit 23 - XTAL_32K sel. 0: external XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_gpio_sel(&mut self) -> XTAL32K_GPIO_SEL_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_GPIO_SEL_W::new(self, 23)
     }
     #[doc = "Bit 30 - 0: power down XTAL at high level"]
     #[inline(always)]
-    #[must_use]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable gpio configure xtal power on"]
     #[inline(always)]
-    #[must_use]
     pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_EN_W::new(self, 31)
     }

@@ -334,193 +334,161 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_clic_clk_en(&mut self) -> CORE0_CLIC_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         CORE0_CLIC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_clic_clk_en(&mut self) -> CORE1_CLIC_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         CORE1_CLIC_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn misc_cpu_clk_en(&mut self) -> MISC_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         MISC_CPU_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_cpu_clk_en(&mut self) -> CORE0_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         CORE0_CPU_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_cpu_clk_en(&mut self) -> CORE1_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         CORE1_CPU_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tcm_cpu_clk_en(&mut self) -> TCM_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         TCM_CPU_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn busmon_cpu_clk_en(&mut self) -> BUSMON_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         BUSMON_CPU_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_cpu_clk_en(&mut self) -> L1CACHE_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_CPU_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_d_cpu_clk_en(&mut self) -> L1CACHE_D_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_D_CPU_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_i0_cpu_clk_en(&mut self) -> L1CACHE_I0_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_I0_CPU_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_i1_cpu_clk_en(&mut self) -> L1CACHE_I1_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_I1_CPU_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn trace_cpu_clk_en(&mut self) -> TRACE_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         TRACE_CPU_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_cpu_clk_en(&mut self) -> ICM_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         ICM_CPU_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma_cpu_clk_en(&mut self) -> GDMA_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         GDMA_CPU_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn vpu_cpu_clk_en(&mut self) -> VPU_CPU_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         VPU_CPU_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_mem_clk_en(&mut self) -> L1CACHE_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_MEM_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_d_mem_clk_en(&mut self) -> L1CACHE_D_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_D_MEM_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_i0_mem_clk_en(&mut self) -> L1CACHE_I0_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_I0_MEM_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l1cache_i1_mem_clk_en(&mut self) -> L1CACHE_I1_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L1CACHE_I1_MEM_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2cache_mem_clk_en(&mut self) -> L2CACHE_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2CACHE_MEM_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2mem_mem_clk_en(&mut self) -> L2MEM_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2MEM_MEM_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2memmon_mem_clk_en(&mut self) -> L2MEMMON_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2MEMMON_MEM_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_mem_clk_en(&mut self) -> ICM_MEM_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         ICM_MEM_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn misc_sys_clk_en(&mut self) -> MISC_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         MISC_SYS_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn trace_sys_clk_en(&mut self) -> TRACE_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         TRACE_SYS_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2cache_sys_clk_en(&mut self) -> L2CACHE_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2CACHE_SYS_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2mem_sys_clk_en(&mut self) -> L2MEM_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2MEM_SYS_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2memmon_sys_clk_en(&mut self) -> L2MEMMON_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         L2MEMMON_SYS_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tcmmon_sys_clk_en(&mut self) -> TCMMON_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         TCMMON_SYS_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_sys_clk_en(&mut self) -> ICM_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         ICM_SYS_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_sys_clk_en(&mut self) -> FLASH_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         FLASH_SYS_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn psram_sys_clk_en(&mut self) -> PSRAM_SYS_CLK_EN_W<SOC_CLK_CTRL0_SPEC> {
         PSRAM_SYS_CLK_EN_W::new(self, 31)
     }

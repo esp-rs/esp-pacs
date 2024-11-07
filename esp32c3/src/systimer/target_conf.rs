@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:25 - target0 period"]
     #[inline(always)]
-    #[must_use]
     pub fn period(&mut self) -> PERIOD_W<TARGET_CONF_SPEC> {
         PERIOD_W::new(self, 0)
     }
     #[doc = "Bit 30 - Set target0 to period mode"]
     #[inline(always)]
-    #[must_use]
     pub fn period_mode(&mut self) -> PERIOD_MODE_W<TARGET_CONF_SPEC> {
         PERIOD_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - select which unit to compare"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit_sel(&mut self) -> TIMER_UNIT_SEL_W<TARGET_CONF_SPEC> {
         TIMER_UNIT_SEL_W::new(self, 31)
     }

@@ -57,7 +57,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_bod_source_sel(
         &mut self,
     ) -> LP_SLEEP_BOD_SOURCE_SEL_W<LP_SLEEP_LP_DIG_POWER_SPEC> {
@@ -65,19 +64,16 @@ impl W {
     }
     #[doc = "Bits 28:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_vddbat_mode(&mut self) -> LP_SLEEP_VDDBAT_MODE_W<LP_SLEEP_LP_DIG_POWER_SPEC> {
         LP_SLEEP_VDDBAT_MODE_W::new(self, 28)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_lp_mem_dslp(&mut self) -> LP_SLEEP_LP_MEM_DSLP_W<LP_SLEEP_LP_DIG_POWER_SPEC> {
         LP_SLEEP_LP_MEM_DSLP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_pd_lp_peri_pd_en(
         &mut self,
     ) -> LP_SLEEP_PD_LP_PERI_PD_EN_W<LP_SLEEP_LP_DIG_POWER_SPEC> {

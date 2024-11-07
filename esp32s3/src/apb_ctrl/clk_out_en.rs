@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk20_oen(&mut self) -> CLK20_OEN_W<CLK_OUT_EN_SPEC> {
         CLK20_OEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk22_oen(&mut self) -> CLK22_OEN_W<CLK_OUT_EN_SPEC> {
         CLK22_OEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk44_oen(&mut self) -> CLK44_OEN_W<CLK_OUT_EN_SPEC> {
         CLK44_OEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_bb_oen(&mut self) -> CLK_BB_OEN_W<CLK_OUT_EN_SPEC> {
         CLK_BB_OEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk80_oen(&mut self) -> CLK80_OEN_W<CLK_OUT_EN_SPEC> {
         CLK80_OEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk160_oen(&mut self) -> CLK160_OEN_W<CLK_OUT_EN_SPEC> {
         CLK160_OEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_320m_oen(&mut self) -> CLK_320M_OEN_W<CLK_OUT_EN_SPEC> {
         CLK_320M_OEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W<CLK_OUT_EN_SPEC> {
         CLK_ADC_INF_OEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_dac_cpu_oen(&mut self) -> CLK_DAC_CPU_OEN_W<CLK_OUT_EN_SPEC> {
         CLK_DAC_CPU_OEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk40x_bb_oen(&mut self) -> CLK40X_BB_OEN_W<CLK_OUT_EN_SPEC> {
         CLK40X_BB_OEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W<CLK_OUT_EN_SPEC> {
         CLK_XTAL_OEN_W::new(self, 10)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Clock divider."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<READER1_CTRL_SPEC> {
         SAR1_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 18 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<READER1_CTRL_SPEC> {
         SAR1_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<READER1_CTRL_SPEC> {
         SAR1_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<READER1_CTRL_SPEC> {
         SAR1_DATA_INV_W::new(self, 28)
     }
     #[doc = "Bit 29 - Enable saradc1 to send out interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_int_en(&mut self) -> SAR1_INT_EN_W<READER1_CTRL_SPEC> {
         SAR1_INT_EN_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - Force enable adc en_pad to analog circuit 2'b11: force enable ."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_en_pad_force_enable(&mut self) -> SAR1_EN_PAD_FORCE_ENABLE_W<READER1_CTRL_SPEC> {
         SAR1_EN_PAD_FORCE_ENABLE_W::new(self, 30)
     }

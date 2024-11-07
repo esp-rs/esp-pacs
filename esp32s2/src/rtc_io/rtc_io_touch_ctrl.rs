@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn io_touch_bufsel(&mut self) -> IO_TOUCH_BUFSEL_W<RTC_IO_TOUCH_CTRL_SPEC> {
         IO_TOUCH_BUFSEL_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn io_touch_bufmode(&mut self) -> IO_TOUCH_BUFMODE_W<RTC_IO_TOUCH_CTRL_SPEC> {
         IO_TOUCH_BUFMODE_W::new(self, 4)
     }

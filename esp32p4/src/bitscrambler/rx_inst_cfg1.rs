@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - write this bits to update instruction which specified by BITSCRAMBLER_RX_INST_CFG0_REG, Read this bits to get instruction which specified by BITSCRAMBLER_RX_INST_CFG0_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_inst(&mut self) -> RX_INST_W<RX_INST_CFG1_SPEC> {
         RX_INST_W::new(self, 0)
     }

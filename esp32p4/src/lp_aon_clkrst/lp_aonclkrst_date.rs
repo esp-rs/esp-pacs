@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_en(&mut self) -> LP_AONCLKRST_CLK_EN_W<LP_AONCLKRST_DATE_SPEC> {
         LP_AONCLKRST_CLK_EN_W::new(self, 31)
     }

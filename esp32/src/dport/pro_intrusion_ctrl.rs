@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_intrusion_record_reset_n(
         &mut self,
     ) -> PRO_INTRUSION_RECORD_RESET_N_W<PRO_INTRUSION_CTRL_SPEC> {

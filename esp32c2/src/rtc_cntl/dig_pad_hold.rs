@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W<DIG_PAD_HOLD_SPEC> {
         DIG_PAD_HOLD_W::new(self, 0)
     }

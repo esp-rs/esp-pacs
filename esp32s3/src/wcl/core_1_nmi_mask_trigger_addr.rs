@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - this field to used to set trigger address"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_nmi_mask_trigger_addr(
         &mut self,
     ) -> CORE_1_NMI_MASK_TRIGGER_ADDR_W<CORE_1_NMI_MASK_TRIGGER_ADDR_SPEC> {

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map GPIO_INTERRUPT_PRO interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_gpio_interrupt_pro_map(
         &mut self,
     ) -> PRO_GPIO_INTERRUPT_PRO_MAP_W<PRO_GPIO_INTERRUPT_PRO_MAP_SPEC> {

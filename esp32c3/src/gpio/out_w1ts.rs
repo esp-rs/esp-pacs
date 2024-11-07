@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:25 - GPIO output set register for GPIO0-25"]
     #[inline(always)]
-    #[must_use]
     pub fn out_w1ts(&mut self) -> OUT_W1TS_W<OUT_W1TS_SPEC> {
         OUT_W1TS_W::new(self, 0)
     }

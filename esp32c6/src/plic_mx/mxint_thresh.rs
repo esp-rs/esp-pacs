@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_mxint_thresh(&mut self) -> CPU_MXINT_THRESH_W<MXINT_THRESH_SPEC> {
         CPU_MXINT_THRESH_W::new(self, 0)
     }

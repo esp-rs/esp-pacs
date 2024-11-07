@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn wrong_crc(&mut self) -> WRONG_CRC_W<TEST_CONTROL_SPEC> {
         WRONG_CRC_W::new(self, 0)
     }

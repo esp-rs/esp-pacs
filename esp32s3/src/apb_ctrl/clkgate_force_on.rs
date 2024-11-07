@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
         ROM_CLKGATE_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<CLKGATE_FORCE_ON_SPEC> {
         SRAM_CLKGATE_FORCE_ON_W::new(self, 3)
     }

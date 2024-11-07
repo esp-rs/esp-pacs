@@ -2,13 +2,13 @@
 pub type R = crate::R<DPC_MATRIX_CTRL_SPEC>;
 #[doc = "Register `DPC_MATRIX_CTRL` writer"]
 pub type W = crate::W<DPC_MATRIX_CTRL_SPEC>;
-#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DPC_TAIL_PIXEN_PULSE_TL_R = crate::FieldReader;
-#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DPC_TAIL_PIXEN_PULSE_TL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must < hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DPC_TAIL_PIXEN_PULSE_TH_R = crate::FieldReader;
-#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DPC_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must < hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DPC_TAIL_PIXEN_PULSE_TH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DPC_PADDING_DATA` reader - this field configures dpc matrix padding data"]
 pub type DPC_PADDING_DATA_R = crate::FieldReader;
@@ -19,12 +19,12 @@ pub type DPC_PADDING_MODE_R = crate::BitReader;
 #[doc = "Field `DPC_PADDING_MODE` writer - this bit configures the padding mode of dpc matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
 pub type DPC_PADDING_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn dpc_tail_pixen_pulse_tl(&self) -> DPC_TAIL_PIXEN_PULSE_TL_R {
         DPC_TAIL_PIXEN_PULSE_TL_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn dpc_tail_pixen_pulse_th(&self) -> DPC_TAIL_PIXEN_PULSE_TH_R {
         DPC_TAIL_PIXEN_PULSE_TH_R::new(((self.bits >> 8) & 0xff) as u8)
@@ -52,27 +52,23 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn dpc_tail_pixen_pulse_tl(&mut self) -> DPC_TAIL_PIXEN_PULSE_TL_W<DPC_MATRIX_CTRL_SPEC> {
         DPC_TAIL_PIXEN_PULSE_TL_W::new(self, 0)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th &lt; reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn dpc_tail_pixen_pulse_th(&mut self) -> DPC_TAIL_PIXEN_PULSE_TH_W<DPC_MATRIX_CTRL_SPEC> {
         DPC_TAIL_PIXEN_PULSE_TH_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures dpc matrix padding data"]
     #[inline(always)]
-    #[must_use]
     pub fn dpc_padding_data(&mut self) -> DPC_PADDING_DATA_W<DPC_MATRIX_CTRL_SPEC> {
         DPC_PADDING_DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - this bit configures the padding mode of dpc matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
     #[inline(always)]
-    #[must_use]
     pub fn dpc_padding_mode(&mut self) -> DPC_PADDING_MODE_W<DPC_MATRIX_CTRL_SPEC> {
         DPC_PADDING_MODE_W::new(self, 24)
     }

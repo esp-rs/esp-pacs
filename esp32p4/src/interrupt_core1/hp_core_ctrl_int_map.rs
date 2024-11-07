@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_hp_core_ctrl_int_map(
         &mut self,
     ) -> CORE1_HP_CORE_CTRL_INT_MAP_W<HP_CORE_CTRL_INT_MAP_SPEC> {

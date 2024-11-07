@@ -136,55 +136,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn prtconndet(&mut self) -> PRTCONNDET_W<HPRT_SPEC> {
         PRTCONNDET_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn prtena(&mut self) -> PRTENA_W<HPRT_SPEC> {
         PRTENA_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn prtenchng(&mut self) -> PRTENCHNG_W<HPRT_SPEC> {
         PRTENCHNG_W::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn prtovrcurrchng(&mut self) -> PRTOVRCURRCHNG_W<HPRT_SPEC> {
         PRTOVRCURRCHNG_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn prtres(&mut self) -> PRTRES_W<HPRT_SPEC> {
         PRTRES_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn prtsusp(&mut self) -> PRTSUSP_W<HPRT_SPEC> {
         PRTSUSP_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn prtrst(&mut self) -> PRTRST_W<HPRT_SPEC> {
         PRTRST_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn prtpwr(&mut self) -> PRTPWR_W<HPRT_SPEC> {
         PRTPWR_W::new(self, 12)
     }
     #[doc = "Bits 13:16"]
     #[inline(always)]
-    #[must_use]
     pub fn prttstctl(&mut self) -> PRTTSTCTL_W<HPRT_SPEC> {
         PRTTSTCTL_W::new(self, 13)
     }

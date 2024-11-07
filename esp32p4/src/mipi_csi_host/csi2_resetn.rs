@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn csi2_resetn(&mut self) -> CSI2_RESETN_W<CSI2_RESETN_SPEC> {
         CSI2_RESETN_W::new(self, 0)
     }

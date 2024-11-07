@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask toomanyexception."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_toomanyexceptions_m_override(
         &mut self,
     ) -> CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_W<CORE_0_TOOMANYEXCEPTIONS_M_OVERRIDE_1_SPEC> {

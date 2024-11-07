@@ -224,127 +224,106 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_0(&mut self) -> FORCE_ACK_WITH_ERR_0_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_1(&mut self) -> FORCE_ACK_WITH_ERR_1_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_1_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_2(&mut self) -> FORCE_ACK_WITH_ERR_2_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_2_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_3(&mut self) -> FORCE_ACK_WITH_ERR_3_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_3_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_4(&mut self) -> FORCE_ACK_WITH_ERR_4_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_4_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_5(&mut self) -> FORCE_ACK_WITH_ERR_5_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_5_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_6(&mut self) -> FORCE_ACK_WITH_ERR_6_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_6_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_7(&mut self) -> FORCE_ACK_WITH_ERR_7_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_7_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_8(&mut self) -> FORCE_ACK_WITH_ERR_8_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_8_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_9(&mut self) -> FORCE_ACK_WITH_ERR_9_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_9_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_10(&mut self) -> FORCE_ACK_WITH_ERR_10_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_10_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_11(&mut self) -> FORCE_ACK_WITH_ERR_11_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_11_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_12(&mut self) -> FORCE_ACK_WITH_ERR_12_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_12_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_13(&mut self) -> FORCE_ACK_WITH_ERR_13_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_13_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_14(&mut self) -> FORCE_ACK_WITH_ERR_14_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_14_W::new(self, 14)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_ack_with_err_15(&mut self) -> FORCE_ACK_WITH_ERR_15_W<INT_FORCE0_SPEC> {
         FORCE_ACK_WITH_ERR_15_W::new(self, 15)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dphy_errors_0(&mut self) -> FORCE_DPHY_ERRORS_0_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_0_W::new(self, 16)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dphy_errors_1(&mut self) -> FORCE_DPHY_ERRORS_1_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_1_W::new(self, 17)
     }
     #[doc = "Bit 18 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dphy_errors_2(&mut self) -> FORCE_DPHY_ERRORS_2_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_2_W::new(self, 18)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dphy_errors_3(&mut self) -> FORCE_DPHY_ERRORS_3_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_3_W::new(self, 19)
     }
     #[doc = "Bit 20 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_dphy_errors_4(&mut self) -> FORCE_DPHY_ERRORS_4_W<INT_FORCE0_SPEC> {
         FORCE_DPHY_ERRORS_4_W::new(self, 20)
     }

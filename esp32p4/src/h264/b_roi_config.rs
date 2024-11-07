@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure whether or not to enable ROI in video B.\\\\0:not enable ROI\\\\1:enable ROI."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_en(&mut self) -> B_ROI_EN_W<B_ROI_CONFIG_SPEC> {
         B_ROI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configure the mode of ROI in video B.\\\\0:fixed qp\\\\1:delta qp."]
     #[inline(always)]
-    #[must_use]
     pub fn b_roi_mode(&mut self) -> B_ROI_MODE_W<B_ROI_CONFIG_SPEC> {
         B_ROI_MODE_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_mac_crc_high(&mut self) -> WIFI_MAC_CRC_HIGH_W<BLK0_WDATA2_SPEC> {
         WIFI_MAC_CRC_HIGH_W::new(self, 0)
     }

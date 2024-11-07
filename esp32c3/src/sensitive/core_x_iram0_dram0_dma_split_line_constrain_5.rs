@@ -74,7 +74,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - core_x_dram0_dma_sram_line_1_category_0"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_0(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_0_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -83,7 +82,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - core_x_dram0_dma_sram_line_1_category_1"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_1(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_1_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -92,7 +90,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_x_dram0_dma_sram_line_1_category_2"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_category_2(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_CATEGORY_2_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>
@@ -101,7 +98,6 @@ impl W {
     }
     #[doc = "Bits 14:21 - core_x_dram0_dma_sram_line_1_splitaddr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_dma_sram_line_1_splitaddr(
         &mut self,
     ) -> CORE_X_DRAM0_DMA_SRAM_LINE_1_SPLITADDR_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_5_SPEC>

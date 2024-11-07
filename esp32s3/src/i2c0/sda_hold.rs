@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the time to hold the data after the negative edge of SCL, in I2C module clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SDA_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }

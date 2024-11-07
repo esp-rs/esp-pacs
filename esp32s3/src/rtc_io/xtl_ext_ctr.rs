@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - select RTC GPIO 0 ~ 17 to control XTAL"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<XTL_EXT_CTR_SPEC> {
         SEL_W::new(self, 27)
     }

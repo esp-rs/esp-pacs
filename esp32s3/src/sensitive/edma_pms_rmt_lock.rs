@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA-RMT permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn edma_pms_rmt_lock(&mut self) -> EDMA_PMS_RMT_LOCK_W<EDMA_PMS_RMT_LOCK_SPEC> {
         EDMA_PMS_RMT_LOCK_W::new(self, 0)
     }

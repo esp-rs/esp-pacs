@@ -142,7 +142,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - dma_apbperi_mac_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -151,7 +150,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - dma_apbperi_mac_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -160,7 +158,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - dma_apbperi_mac_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -169,7 +166,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - dma_apbperi_mac_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -178,7 +174,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - dma_apbperi_mac_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_1_pms_0(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -187,7 +182,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - dma_apbperi_mac_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_1_pms_1(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -196,7 +190,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - dma_apbperi_mac_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_1_pms_2(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>
@@ -205,7 +198,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - dma_apbperi_mac_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_mac_pms_constrain_sram_world_1_pms_3(
         &mut self,
     ) -> DMA_APBPERI_MAC_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>

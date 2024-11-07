@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn synci_en(&mut self) -> SYNCI_EN_W<SYNC_SPEC> {
         SYNCI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sw(&mut self) -> SW_W<SYNC_SPEC> {
         SW_W::new(self, 1)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    #[must_use]
     pub fn synco_sel(&mut self) -> SYNCO_SEL_W<SYNC_SPEC> {
         SYNCO_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:19"]
     #[inline(always)]
-    #[must_use]
     pub fn phase(&mut self) -> PHASE_W<SYNC_SPEC> {
         PHASE_W::new(self, 4)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn phase_direction(&mut self) -> PHASE_DIRECTION_W<SYNC_SPEC> {
         PHASE_DIRECTION_W::new(self, 20)
     }

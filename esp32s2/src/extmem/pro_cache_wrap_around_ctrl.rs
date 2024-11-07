@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable wrap around mode when read data from flash."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cache_flash_wrap_around(
         &mut self,
     ) -> PRO_CACHE_FLASH_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to enable wrap around mode when read data from spiram."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cache_sram_rd_wrap_around(
         &mut self,
     ) -> PRO_CACHE_SRAM_RD_WRAP_AROUND_W<PRO_CACHE_WRAP_AROUND_CTRL_SPEC> {

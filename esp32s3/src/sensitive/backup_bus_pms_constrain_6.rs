@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - BackUp access rtcfast_l permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_l(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 3:5 - BackUp access rtcfast_h permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_h(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {

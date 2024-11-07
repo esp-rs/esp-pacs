@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_enable(&mut self) -> DCACHE_ENABLE_W<DCACHE_CTRL_SPEC> {
         DCACHE_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 32KB, 1: 64KB"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_size_mode(&mut self) -> DCACHE_SIZE_MODE_W<DCACHE_CTRL_SPEC> {
         DCACHE_SIZE_MODE_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes,2: 64 bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_blocksize_mode(&mut self) -> DCACHE_BLOCKSIZE_MODE_W<DCACHE_CTRL_SPEC> {
         DCACHE_BLOCKSIZE_MODE_W::new(self, 3)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn in_ro_ram_clk_fo(&mut self) -> IN_RO_RAM_CLK_FO_W<RO_PD_CONF_SPEC> {
         IN_RO_RAM_CLK_FO_W::new(self, 6)
     }

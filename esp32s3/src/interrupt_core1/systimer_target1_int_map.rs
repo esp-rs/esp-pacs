@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map systimer_target1 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_target1_int_map(
         &mut self,
     ) -> SYSTIMER_TARGET1_INT_MAP_W<SYSTIMER_TARGET1_INT_MAP_SPEC> {

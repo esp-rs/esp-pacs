@@ -100,67 +100,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    #[must_use]
     pub fn mps(&mut self) -> MPS_W<DIEPCTL_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn usbactep(&mut self) -> USBACTEP_W<DIEPCTL_SPEC> {
         USBACTEP_W::new(self, 15)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    #[must_use]
     pub fn eptype(&mut self) -> EPTYPE_W<DIEPCTL_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn stall(&mut self) -> STALL_W<DIEPCTL_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bits 22:25"]
     #[inline(always)]
-    #[must_use]
     pub fn txfnum(&mut self) -> TXFNUM_W<DIEPCTL_SPEC> {
         TXFNUM_W::new(self, 22)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn cnak(&mut self) -> CNAK_W<DIEPCTL_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn snak(&mut self) -> SNAK_W<DIEPCTL_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn setd0pid(&mut self) -> SETD0PID_W<DIEPCTL_SPEC> {
         SETD0PID_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn setd1pid(&mut self) -> SETD1PID_W<DIEPCTL_SPEC> {
         SETD1PID_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn epdis(&mut self) -> EPDIS_W<DIEPCTL_SPEC> {
         EPDIS_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn epena(&mut self) -> EPENA_W<DIEPCTL_SPEC> {
         EPENA_W::new(self, 31)
     }

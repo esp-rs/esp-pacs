@@ -96,55 +96,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The integrated part of scaling coefficient in X direction."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_scal_x_int(&mut self) -> SR_SCAL_X_INT_W<SR_SCAL_ROTATE_SPEC> {
         SR_SCAL_X_INT_W::new(self, 0)
     }
     #[doc = "Bits 8:11 - The fragment part of scaling coefficient in X direction."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_scal_x_frag(&mut self) -> SR_SCAL_X_FRAG_W<SR_SCAL_ROTATE_SPEC> {
         SR_SCAL_X_FRAG_W::new(self, 8)
     }
     #[doc = "Bits 12:19 - The integrated part of scaling coefficient in Y direction."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_scal_y_int(&mut self) -> SR_SCAL_Y_INT_W<SR_SCAL_ROTATE_SPEC> {
         SR_SCAL_Y_INT_W::new(self, 12)
     }
     #[doc = "Bits 20:23 - The fragment part of scaling coefficient in Y direction."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_scal_y_frag(&mut self) -> SR_SCAL_Y_FRAG_W<SR_SCAL_ROTATE_SPEC> {
         SR_SCAL_Y_FRAG_W::new(self, 20)
     }
     #[doc = "Bits 24:25 - The rotate angle. 0: 0 degree. 1: 90 degree. 2: 180 degree. 3: 270 degree."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_rotate_angle(&mut self) -> SR_ROTATE_ANGLE_W<SR_SCAL_ROTATE_SPEC> {
         SR_ROTATE_ANGLE_W::new(self, 24)
     }
     #[doc = "Bit 26 - Write 1 then write 0 to this bit to reset scaling and rotating engine."]
     #[inline(always)]
-    #[must_use]
     pub fn scal_rotate_rst(&mut self) -> SCAL_ROTATE_RST_W<SR_SCAL_ROTATE_SPEC> {
         SCAL_ROTATE_RST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Write 1 to enable scaling and rotating engine after parameter is configured."]
     #[inline(always)]
-    #[must_use]
     pub fn scal_rotate_start(&mut self) -> SCAL_ROTATE_START_W<SR_SCAL_ROTATE_SPEC> {
         SCAL_ROTATE_START_W::new(self, 27)
     }
     #[doc = "Bit 28 - Image mirror in X direction. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sr_mirror_x(&mut self) -> SR_MIRROR_X_W<SR_SCAL_ROTATE_SPEC> {
         SR_MIRROR_X_W::new(self, 28)
     }
     #[doc = "Bit 29 - Image mirror in Y direction. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sr_mirror_y(&mut self) -> SR_MIRROR_Y_W<SR_SCAL_ROTATE_SPEC> {
         SR_MIRROR_Y_W::new(self, 29)
     }

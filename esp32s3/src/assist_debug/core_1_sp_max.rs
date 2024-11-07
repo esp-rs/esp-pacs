@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - stack max value"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_sp_max(&mut self) -> CORE_1_SP_MAX_W<CORE_1_SP_MAX_SPEC> {
         CORE_1_SP_MAX_W::new(self, 0)
     }

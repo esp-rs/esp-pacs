@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<LOAD_SPEC> {
 impl W {
     #[doc = "Bit 31 - Set this bit to 1, the value stored in SYSTIMER_TIMER_LOAD_HI and in SYSTIMER_TIMER_LOAD_LO will be loaded to system timer"]
     #[inline(always)]
-    #[must_use]
     pub fn load(&mut self) -> LOAD_W<LOAD_SPEC> {
         LOAD_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - cache apb register interface post write enable, 1 will speed up write, but will take some time to update value to register"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_cache_apb_postw_en(&mut self) -> REG_CACHE_APB_POSTW_EN_W<CACHE_APB_POSTW_EN_SPEC> {
         REG_CACHE_APB_POSTW_EN_W::new(self, 0)
     }

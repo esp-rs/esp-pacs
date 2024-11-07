@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - clear one time output data"]
     #[inline(always)]
-    #[must_use]
     pub fn status_w1tc(&mut self) -> STATUS_W1TC_W<STATUS_W1TC_SPEC> {
         STATUS_W1TC_W::new(self, 0)
     }

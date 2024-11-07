@@ -36,19 +36,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn comb_path_len_lvt(&mut self) -> COMB_PATH_LEN_LVT_W<COMB_PVT_LVT_CONF_SPEC> {
         COMB_PATH_LEN_LVT_W::new(self, 0)
     }
     #[doc = "Bit 5 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn comb_err_cnt_clr_lvt(&mut self) -> COMB_ERR_CNT_CLR_LVT_W<COMB_PVT_LVT_CONF_SPEC> {
         COMB_ERR_CNT_CLR_LVT_W::new(self, 5)
     }
     #[doc = "Bit 6 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn comb_pvt_monitor_en_lvt(&mut self) -> COMB_PVT_MONITOR_EN_LVT_W<COMB_PVT_LVT_CONF_SPEC> {
         COMB_PVT_MONITOR_EN_LVT_W::new(self, 6)
     }

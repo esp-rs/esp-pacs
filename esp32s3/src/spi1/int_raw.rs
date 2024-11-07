@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn per_end(&mut self) -> PER_END_W<INT_RAW_SPEC> {
         PER_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn pes_end(&mut self) -> PES_END_W<INT_RAW_SPEC> {
         PES_END_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt. 1: Triggered when SPI1 transfer is done and flash is already idle. When WRSR/PP/SE/BE/CE is sent and PES/PER command is sent, this bit is set when WRSR/PP/SE/BE/CE is success. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn total_trans_end(&mut self) -> TOTAL_TRANS_END_W<INT_RAW_SPEC> {
         TOTAL_TRANS_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_RAW_SPEC> {
         BROWN_OUT_W::new(self, 3)
     }

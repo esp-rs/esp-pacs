@@ -194,109 +194,91 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_wm(&mut self) -> RXFIFO_WM_W<INT_ENA_SPEC> {
         RXFIFO_WM_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for I2C_TXFIFO_WM_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_wm(&mut self) -> TXFIFO_WM_W<INT_ENA_SPEC> {
         TXFIFO_WM_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for I2C_RXFIFO_OVF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_ENA_SPEC> {
         RXFIFO_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn end_detect(&mut self) -> END_DETECT_W<INT_ENA_SPEC> {
         END_DETECT_W::new(self, 3)
     }
     #[doc = "Bit 4 - The interrupt enable bit for the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn byte_trans_done(&mut self) -> BYTE_TRANS_DONE_W<INT_ENA_SPEC> {
         BYTE_TRANS_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the I2C_ARBITRATION_LOST_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_ENA_SPEC> {
         ARBITRATION_LOST_W::new(self, 5)
     }
     #[doc = "Bit 6 - The interrupt enable bit for I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_txfifo_udf(&mut self) -> MST_TXFIFO_UDF_W<INT_ENA_SPEC> {
         MST_TXFIFO_UDF_W::new(self, 6)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_ENA_SPEC> {
         TRANS_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the I2C_TIME_OUT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<INT_ENA_SPEC> {
         TIME_OUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the I2C_TRANS_START_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<INT_ENA_SPEC> {
         TRANS_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn nack(&mut self) -> NACK_W<INT_ENA_SPEC> {
         NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - The interrupt enable bit for I2C_TXFIFO_OVF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_ovf(&mut self) -> TXFIFO_OVF_W<INT_ENA_SPEC> {
         TXFIFO_OVF_W::new(self, 11)
     }
     #[doc = "Bit 12 - The interrupt enable bit for I2C_RXFIFO_UDF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_udf(&mut self) -> RXFIFO_UDF_W<INT_ENA_SPEC> {
         RXFIFO_UDF_W::new(self, 12)
     }
     #[doc = "Bit 13 - The interrupt enable bit for I2C_SCL_ST_TO_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<INT_ENA_SPEC> {
         SCL_ST_TO_W::new(self, 13)
     }
     #[doc = "Bit 14 - The interrupt enable bit for I2C_SCL_MAIN_ST_TO_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<INT_ENA_SPEC> {
         SCL_MAIN_ST_TO_W::new(self, 14)
     }
     #[doc = "Bit 15 - The interrupt enable bit for I2C_DET_START_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn det_start(&mut self) -> DET_START_W<INT_ENA_SPEC> {
         DET_START_W::new(self, 15)
     }
     #[doc = "Bit 16 - The interrupt enable bit for I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_stretch(&mut self) -> SLAVE_STRETCH_W<INT_ENA_SPEC> {
         SLAVE_STRETCH_W::new(self, 16)
     }
     #[doc = "Bit 17 - The interrupt enable bit for I2C_GENARAL_CALL_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn general_call(&mut self) -> GENERAL_CALL_W<INT_ENA_SPEC> {
         GENERAL_CALL_W::new(self, 17)
     }

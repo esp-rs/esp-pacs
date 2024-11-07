@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 8"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_from_world_8(&mut self) -> CORE_1_FROM_WORLD_8_W<CORE_1_STATUSTABLE8_SPEC> {
         CORE_1_FROM_WORLD_8_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 8"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_from_entry_8(&mut self) -> CORE_1_FROM_ENTRY_8_W<CORE_1_STATUSTABLE8_SPEC> {
         CORE_1_FROM_ENTRY_8_W::new(self, 1)
     }
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 8"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_current_8(&mut self) -> CORE_1_CURRENT_8_W<CORE_1_STATUSTABLE8_SPEC> {
         CORE_1_CURRENT_8_W::new(self, 5)
     }

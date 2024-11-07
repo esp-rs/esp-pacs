@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - reg_system_reg_date"]
     #[inline(always)]
-    #[must_use]
     pub fn system_reg_date(&mut self) -> SYSTEM_REG_DATE_W<SYSTEM_REG_DATE_SPEC> {
         SYSTEM_REG_DATE_W::new(self, 0)
     }

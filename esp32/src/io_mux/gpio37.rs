@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output enable of the pad in sleep mode. 1: enable output; 0: disable output."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO37_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pad. Set to 1 to put the pad in sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO37_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Pull-down enable of the pad during sleep mode. 1: internal pull-down enabled; 0: internal pull-down disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO37_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled; 0: internal pull-up disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO37_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Input enable of the pad during sleep mode. 1: input enabled; 0: input disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO37_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Select the drive strength of the pad during sleep mode. A higher value corresponds with a higher strength."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO37_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - Pull-down enable of the pad. 1: internal pull-down enabled, 0: internal pull-down disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull-down circuitry, therefore, their FUN_WPD is always 0."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO37_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Pull-up enable of the pad. 1: internal pull-up enabled; 0: internal pull-up disabled. GPIO pins 34-39 are input-only. These pins do not feature an output driver or internal pull- up/pull- down circuitry, therefore, their FUN_WPU is always 0."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO37_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Input enable of the pad. 1: input enabled; 0: input disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO37_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pad. A higher value corresponds with a higher strength. For GPIO34-39, FUN_DRV is always 0. For detailed drive strength, please see note 8 in Table ”Notes on ESP32 Pin Lists”, in ESP32 Datasheet."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO37_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Select the IO_MUX function for this signal. 0 selects Function 0, 1 selects Function 1, etc."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO37_SPEC> {
         MCU_SEL_W::new(self, 12)
     }

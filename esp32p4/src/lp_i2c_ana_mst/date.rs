@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
         DATE_W::new(self, 0)
     }
     #[doc = "Bit 28 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_mst_clk_en(&mut self) -> I2C_MST_CLK_EN_W<DATE_SPEC> {
         I2C_MST_CLK_EN_W::new(self, 28)
     }

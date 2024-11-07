@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn sfd_timeout_cnt(&mut self) -> SFD_TIMEOUT_CNT_W<SFD_TIMEOUT_CNT_SPEC> {
         SFD_TIMEOUT_CNT_W::new(self, 0)
     }

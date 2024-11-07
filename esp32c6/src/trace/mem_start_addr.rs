@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The start address of trace memory"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_start_addr(&mut self) -> MEM_START_ADDR_W<MEM_START_ADDR_SPEC> {
         MEM_START_ADDR_W::new(self, 0)
     }

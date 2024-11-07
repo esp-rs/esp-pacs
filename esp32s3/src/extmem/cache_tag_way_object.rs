@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Set this bits to select which way of the tag-object will be accessed. 0: way0, 1: way1, 2: way2, 3: way3, .., 7: way7."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_tag_way_object(&mut self) -> CACHE_TAG_WAY_OBJECT_W<CACHE_TAG_WAY_OBJECT_SPEC> {
         CACHE_TAG_WAY_OBJECT_W::new(self, 0)
     }

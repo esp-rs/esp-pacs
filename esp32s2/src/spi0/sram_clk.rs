@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - For SPI0 SRAM interface, it must be equal to spi_mem_clkcnt_N."]
     #[inline(always)]
-    #[must_use]
     pub fn sclkcnt_l(&mut self) -> SCLKCNT_L_W<SRAM_CLK_SPEC> {
         SCLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - For SPI0 SRAM interface, it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn sclkcnt_h(&mut self) -> SCLKCNT_H_W<SRAM_CLK_SPEC> {
         SCLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - For SPI0 SRAM interface, it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)."]
     #[inline(always)]
-    #[must_use]
     pub fn sclkcnt_n(&mut self) -> SCLKCNT_N_W<SRAM_CLK_SPEC> {
         SCLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - For SPI0 SRAM interface, 1: spi_mem_clk is equal to system, 0: spi_mem_clk is divided from system clock."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_equ_sysclk(&mut self) -> SCLK_EQU_SYSCLK_W<SRAM_CLK_SPEC> {
         SCLK_EQU_SYSCLK_W::new(self, 31)
     }

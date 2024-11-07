@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - reg_carrier_low_thres_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_low_thres(&mut self) -> CARRIER_LOW_THRES_W<CH_RX_CARRIER_RM_SPEC> {
         CARRIER_LOW_THRES_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - reg_carrier_high_thres_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_high_thres(&mut self) -> CARRIER_HIGH_THRES_W<CH_RX_CARRIER_RM_SPEC> {
         CARRIER_HIGH_THRES_W::new(self, 16)
     }

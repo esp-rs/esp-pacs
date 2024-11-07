@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map efuse interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn efuse_int_map(&mut self) -> EFUSE_INT_MAP_W<EFUSE_INT_MAP_SPEC> {
         EFUSE_INT_MAP_W::new(self, 0)
     }

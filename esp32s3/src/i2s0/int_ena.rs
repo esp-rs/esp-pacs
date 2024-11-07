@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_done(&mut self) -> RX_DONE_W<INT_ENA_SPEC> {
         RX_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the i2s_tx_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_done(&mut self) -> TX_DONE_W<INT_ENA_SPEC> {
         TX_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_ENA_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_ENA_SPEC> {
         TX_HUNG_W::new(self, 3)
     }

@@ -118,7 +118,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_huk(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_HUK_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -126,7 +125,6 @@ impl W {
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_anaperi(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_ANAPERI_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -134,7 +132,6 @@ impl W {
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_wdt(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_WDT_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -142,7 +139,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_timer(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_TIMER_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -150,7 +146,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_rtc(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_RTC_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -158,7 +153,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_mailbox(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_MAILBOX_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -166,7 +160,6 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_aonefusereg(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_AONEFUSEREG_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
@@ -174,7 +167,6 @@ impl W {
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_lp_ram(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_LP_RAM_W<LP_AONCLKRST_LP_RST_EN_SPEC> {

@@ -274,157 +274,131 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This register is used to configure the parity check mode. 0:even 1:odd"]
     #[inline(always)]
-    #[must_use]
     pub fn parity(&mut self) -> PARITY_W<CONF0_SPEC> {
         PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable uart parity check."]
     #[inline(always)]
-    #[must_use]
     pub fn parity_en(&mut self) -> PARITY_EN_W<CONF0_SPEC> {
         PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - This registe is used to set the length of data: 0:5bits 1:6bits 2:7bits 3:8bits"]
     #[inline(always)]
-    #[must_use]
     pub fn bit_num(&mut self) -> BIT_NUM_W<CONF0_SPEC> {
         BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - This register is used to set the length of stop bit. 1:1bit 2:1.5bits 3:2bits"]
     #[inline(always)]
-    #[must_use]
     pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<CONF0_SPEC> {
         STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - This register is used to configure the software rts signal which is used in software flow control."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_rts(&mut self) -> SW_RTS_W<CONF0_SPEC> {
         SW_RTS_W::new(self, 6)
     }
     #[doc = "Bit 7 - This register is used to configure the software dtr signal which is used in software flow control.."]
     #[inline(always)]
-    #[must_use]
     pub fn sw_dtr(&mut self) -> SW_DTR_W<CONF0_SPEC> {
         SW_DTR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to enbale transmitter to send 0 when the process of sending data is done."]
     #[inline(always)]
-    #[must_use]
     pub fn txd_brk(&mut self) -> TXD_BRK_W<CONF0_SPEC> {
         TXD_BRK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to enable irda loopback mode."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_dplx(&mut self) -> IRDA_DPLX_W<CONF0_SPEC> {
         IRDA_DPLX_W::new(self, 9)
     }
     #[doc = "Bit 10 - This is the start enable bit for irda transmitter."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_tx_en(&mut self) -> IRDA_TX_EN_W<CONF0_SPEC> {
         IRDA_TX_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1.the irda transmitter's 11th bit is the same to the 10th bit. 0.set irda transmitter's 11th bit to 0."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_wctl(&mut self) -> IRDA_WCTL_W<CONF0_SPEC> {
         IRDA_WCTL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to inverse the level value of irda transmitter's level."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_tx_inv(&mut self) -> IRDA_TX_INV_W<CONF0_SPEC> {
         IRDA_TX_INV_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to inverse the level value of irda receiver's level."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_rx_inv(&mut self) -> IRDA_RX_INV_W<CONF0_SPEC> {
         IRDA_RX_INV_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to enable uart loopback test mode."]
     #[inline(always)]
-    #[must_use]
     pub fn loopback(&mut self) -> LOOPBACK_W<CONF0_SPEC> {
         LOOPBACK_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to enable transmitter's flow control function."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<CONF0_SPEC> {
         TX_FLOW_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to enable irda protocol."]
     #[inline(always)]
-    #[must_use]
     pub fn irda_en(&mut self) -> IRDA_EN_W<CONF0_SPEC> {
         IRDA_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to reset uart receiver's fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CONF0_SPEC> {
         RXFIFO_RST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to reset uart transmitter's fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CONF0_SPEC> {
         TXFIFO_RST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to inverse the level value of uart rxd signal."]
     #[inline(always)]
-    #[must_use]
     pub fn rxd_inv(&mut self) -> RXD_INV_W<CONF0_SPEC> {
         RXD_INV_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to inverse the level value of uart cts signal."]
     #[inline(always)]
-    #[must_use]
     pub fn cts_inv(&mut self) -> CTS_INV_W<CONF0_SPEC> {
         CTS_INV_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to inverse the level value of uart dsr signal."]
     #[inline(always)]
-    #[must_use]
     pub fn dsr_inv(&mut self) -> DSR_INV_W<CONF0_SPEC> {
         DSR_INV_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to inverse the level value of uart txd signal."]
     #[inline(always)]
-    #[must_use]
     pub fn txd_inv(&mut self) -> TXD_INV_W<CONF0_SPEC> {
         TXD_INV_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to inverse the level value of uart rts signal."]
     #[inline(always)]
-    #[must_use]
     pub fn rts_inv(&mut self) -> RTS_INV_W<CONF0_SPEC> {
         RTS_INV_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to inverse the level value of uart dtr signal."]
     #[inline(always)]
-    #[must_use]
     pub fn dtr_inv(&mut self) -> DTR_INV_W<CONF0_SPEC> {
         DTR_INV_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1.force clock on for registers.support clock only when write registers"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC> {
         CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1.receiver stops storing data int fifo when data is wrong. 0.receiver stores the data even if the received data is wrong."]
     #[inline(always)]
-    #[must_use]
     pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<CONF0_SPEC> {
         ERR_WR_MASK_W::new(self, 26)
     }
     #[doc = "Bit 27 - This register is used to select the clock.1.apb clock 0:ref_tick"]
     #[inline(always)]
-    #[must_use]
     pub fn tick_ref_always_on(&mut self) -> TICK_REF_ALWAYS_ON_W<CONF0_SPEC> {
         TICK_REF_ALWAYS_ON_W::new(self, 27)
     }

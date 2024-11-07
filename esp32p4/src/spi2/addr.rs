@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Address to slave. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_addr_value(&mut self) -> USR_ADDR_VALUE_W<ADDR_SPEC> {
         USR_ADDR_VALUE_W::new(self, 0)
     }

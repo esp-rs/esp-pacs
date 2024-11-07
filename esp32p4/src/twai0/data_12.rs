@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 12 and when software initiate read operation, it is rx data register 12."]
     #[inline(always)]
-    #[must_use]
     pub fn data_12(&mut self) -> DATA_12_W<DATA_12_SPEC> {
         DATA_12_W::new(self, 0)
     }

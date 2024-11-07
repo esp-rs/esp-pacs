@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 1 to let CRYPTO_ECC reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_ecc_rst(&mut self) -> CRYPTO_ECC_RST_W<PERIP_RST_EN1_SPEC> {
         CRYPTO_ECC_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to let CRYPTO_SHA reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC> {
         CRYPTO_SHA_RST_W::new(self, 2)
     }
     #[doc = "Bit 6 - Set 1 to let DMA reset"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rst(&mut self) -> DMA_RST_W<PERIP_RST_EN1_SPEC> {
         DMA_RST_W::new(self, 6)
     }
     #[doc = "Bit 10 - Set 1 to let TSENS reset"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_rst(&mut self) -> TSENS_RST_W<PERIP_RST_EN1_SPEC> {
         TSENS_RST_W::new(self, 10)
     }

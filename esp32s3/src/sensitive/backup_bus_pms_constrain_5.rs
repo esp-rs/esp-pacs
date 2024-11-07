@@ -30,7 +30,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - BackUp access rtcfast_spltaddr permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_rtcfast_spltaddr(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC> {

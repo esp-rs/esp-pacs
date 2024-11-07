@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_err(&mut self) -> TXDMA_ERR_W<TXDMA_ERR_SPEC> {
         TXDMA_ERR_W::new(self, 0)
     }

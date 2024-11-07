@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn crc_error_cnt(&mut self) -> CRC_ERROR_CNT_W<CRC_ERROR_CNT_SPEC> {
         CRC_ERROR_CNT_W::new(self, 0)
     }

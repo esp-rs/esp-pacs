@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - I2S_RX_TAKE_DATA_INT is triggered when the left and right channel data number in RX FIFO is larger than the value of I2S_RX_DATA_NUM\\[5:0\\]. (RX FIFO is almost full threshold.)"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_data_num(&mut self) -> RX_DATA_NUM_W<FIFO_CONF_SPEC> {
         RX_DATA_NUM_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - I2S_TX_PUT_DATA_INT is triggered when the left and right channel data number in TX FIFO is smaller than the value of I2S_TX_DATA_NUM\\[5:0\\]. (TX FIFO is almost empty threshold.)"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_data_num(&mut self) -> TX_DATA_NUM_W<FIFO_CONF_SPEC> {
         TX_DATA_NUM_W::new(self, 6)
     }
     #[doc = "Bit 12 - Set this bit to enable I2S DMA mode."]
     #[inline(always)]
-    #[must_use]
     pub fn dscr_en(&mut self) -> DSCR_EN_W<FIFO_CONF_SPEC> {
         DSCR_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:15 - Transmitter FIFO mode configuration bits"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_mod(&mut self) -> TX_FIFO_MOD_W<FIFO_CONF_SPEC> {
         TX_FIFO_MOD_W::new(self, 13)
     }
     #[doc = "Bits 16:18 - Receiver FIFO mode configuration bits"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_mod(&mut self) -> RX_FIFO_MOD_W<FIFO_CONF_SPEC> {
         RX_FIFO_MOD_W::new(self, 16)
     }
     #[doc = "Bit 19 - The bit should always be set to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_mod_force_en(&mut self) -> TX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
         TX_FIFO_MOD_FORCE_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - The bit should always be set to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_mod_force_en(&mut self) -> RX_FIFO_MOD_FORCE_EN_W<FIFO_CONF_SPEC> {
         RX_FIFO_MOD_FORCE_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - force write back rx data to memory"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_sync(&mut self) -> RX_FIFO_SYNC_W<FIFO_CONF_SPEC> {
         RX_FIFO_SYNC_W::new(self, 21)
     }
     #[doc = "Bit 22 - Only useful in rx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_24msb_en(&mut self) -> RX_24MSB_EN_W<FIFO_CONF_SPEC> {
         RX_24MSB_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Only useful in tx 24bit mode. 1: the high 24 bits are effective in i2s fifo 0: the low 24 bits are effective in i2s fifo"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_24msb_en(&mut self) -> TX_24MSB_EN_W<FIFO_CONF_SPEC> {
         TX_24MSB_EN_W::new(self, 23)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_rom_fo(&mut self) -> PRO_ROM_FO_W<ROM_FO_CTRL_SPEC> {
         PRO_ROM_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn app_rom_fo(&mut self) -> APP_ROM_FO_W<ROM_FO_CTRL_SPEC> {
         APP_ROM_FO_W::new(self, 1)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
-    #[must_use]
     pub fn share_rom_fo(&mut self) -> SHARE_ROM_FO_W<ROM_FO_CTRL_SPEC> {
         SHARE_ROM_FO_W::new(self, 2)
     }

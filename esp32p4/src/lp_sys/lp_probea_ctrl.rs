@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn probe_a_mod_sel(&mut self) -> PROBE_A_MOD_SEL_W<LP_PROBEA_CTRL_SPEC> {
         PROBE_A_MOD_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn probe_a_top_sel(&mut self) -> PROBE_A_TOP_SEL_W<LP_PROBEA_CTRL_SPEC> {
         PROBE_A_TOP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn probe_l_sel(&mut self) -> PROBE_L_SEL_W<LP_PROBEA_CTRL_SPEC> {
         PROBE_L_SEL_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn probe_h_sel(&mut self) -> PROBE_H_SEL_W<LP_PROBEA_CTRL_SPEC> {
         PROBE_H_SEL_W::new(self, 26)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn probe_global_en(&mut self) -> PROBE_GLOBAL_EN_W<LP_PROBEA_CTRL_SPEC> {
         PROBE_GLOBAL_EN_W::new(self, 28)
     }

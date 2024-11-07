@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_sel4(&mut self) -> DEBUG_SEL4_W<DEBUG_SEL1_SPEC> {
         DEBUG_SEL4_W::new(self, 0)
     }

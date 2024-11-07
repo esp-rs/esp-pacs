@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<PERI_BACKUP_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - reg_peri_backup_done_int_clr"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DONE_W<PERI_BACKUP_INT_CLR_SPEC> {
         DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_peri_backup_err_int_clr"]
     #[inline(always)]
-    #[must_use]
     pub fn err(&mut self) -> ERR_W<PERI_BACKUP_INT_CLR_SPEC> {
         ERR_W::new(self, 1)
     }

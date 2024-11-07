@@ -39,7 +39,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_peri_timeout_thres(
         &mut self,
     ) -> CPU_PERI_TIMEOUT_THRES_W<CPU_PERI_TIMEOUT_CONF_SPEC> {
@@ -47,7 +46,6 @@ impl W {
     }
     #[doc = "Bit 16 - Set this bit as 1 to clear timeout interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_peri_timeout_int_clear(
         &mut self,
     ) -> CPU_PERI_TIMEOUT_INT_CLEAR_W<CPU_PERI_TIMEOUT_CONF_SPEC> {
@@ -55,7 +53,6 @@ impl W {
     }
     #[doc = "Bit 17 - Set this bit as 1 to enable timeout protection for accessing cpu peripheral registers"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_peri_timeout_protect_en(
         &mut self,
     ) -> CPU_PERI_TIMEOUT_PROTECT_EN_W<CPU_PERI_TIMEOUT_CONF_SPEC> {

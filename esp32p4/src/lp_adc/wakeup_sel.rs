@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0: ADC1. 1: ADC2."]
     #[inline(always)]
-    #[must_use]
     pub fn sar_wakeup_sel(&mut self) -> SAR_WAKEUP_SEL_W<WAKEUP_SEL_SPEC> {
         SAR_WAKEUP_SEL_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if the address is validate. The auto operations will be issued if the address is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC1."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_memsync_addr(
         &mut self,
     ) -> PRO_ICACHE_MEMSYNC_ADDR_W<PRO_ICACHE_MEM_SYNC0_SPEC> {

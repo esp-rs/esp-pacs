@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 26:28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_factor1(&mut self) -> FILTER_FACTOR1_W<FILTER_CTRL1_SPEC> {
         FILTER_FACTOR1_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_factor0(&mut self) -> FILTER_FACTOR0_W<FILTER_CTRL1_SPEC> {
         FILTER_FACTOR0_W::new(self, 29)
     }

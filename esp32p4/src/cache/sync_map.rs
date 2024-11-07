@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Those bits are used to indicate which caches in the two-level cache structure will apply the sync operation. \\[0\\]: L1-ICache0, \\[1\\]: L1-ICache1, \\[2\\]: L1-ICache2, \\[3\\]: L1-ICache3, \\[4\\]: L1-DCache, \\[5\\]: L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn sync_map(&mut self) -> SYNC_MAP_W<SYNC_MAP_SPEC> {
         SYNC_MAP_W::new(self, 0)
     }

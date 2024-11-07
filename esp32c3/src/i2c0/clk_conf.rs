@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - reg_sclk_div_num"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<CLK_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - reg_sclk_div_a"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<CLK_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - reg_sclk_div_b"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<CLK_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 14)
     }
     #[doc = "Bit 20 - reg_sclk_sel"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<CLK_CONF_SPEC> {
         SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - reg_sclk_active"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<CLK_CONF_SPEC> {
         SCLK_ACTIVE_W::new(self, 21)
     }

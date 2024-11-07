@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn rnd_eco_low(&mut self) -> RND_ECO_LOW_W<RND_ECO_LOW_SPEC> {
         RND_ECO_LOW_W::new(self, 0)
     }

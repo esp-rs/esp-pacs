@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_len_lim(&mut self) -> SLC0_LEN_LIM_W<_0_LEN_LIM_CONF_SPEC> {
         SLC0_LEN_LIM_W::new(self, 0)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The source image color mode for background plane. 0: ARGB8888. 1: RGB888. 2: RGB565. 3: Reserved. 4: L8. 5: L4."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_rx_cm(&mut self) -> BLEND0_RX_CM_W<BLEND_COLOR_MODE_SPEC> {
         BLEND0_RX_CM_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - The source image color mode for foreground plane. 0: ARGB8888. 1: RGB888. 2: RGB565. 3: Reserved. 4: L8. 5: L4. 6: A8. 7: A4."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_rx_cm(&mut self) -> BLEND1_RX_CM_W<BLEND_COLOR_MODE_SPEC> {
         BLEND1_RX_CM_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - The destination image color mode for output of blender. 0: ARGB8888. 1: RGB888. 2: RGB565. 3: Reserved.."]
     #[inline(always)]
-    #[must_use]
     pub fn blend_tx_cm(&mut self) -> BLEND_TX_CM_W<BLEND_COLOR_MODE_SPEC> {
         BLEND_TX_CM_W::new(self, 8)
     }

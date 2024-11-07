@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit stores the destination. 0: flash(default). 1: reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn destination(&mut self) -> DESTINATION_W<DESTINATION_SPEC> {
         DESTINATION_W::new(self, 0)
     }

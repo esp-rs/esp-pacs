@@ -197,7 +197,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of L1-ICache0 tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_tag_mem_force_on(
         &mut self,
     ) -> L1_ICACHE0_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -205,7 +204,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to power L1-ICache0 tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_tag_mem_force_pd(
         &mut self,
     ) -> L1_ICACHE0_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -213,7 +211,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to power L1-ICache0 tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_tag_mem_force_pu(
         &mut self,
     ) -> L1_ICACHE0_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -221,7 +218,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to close clock gating of L1-ICache1 tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_tag_mem_force_on(
         &mut self,
     ) -> L1_ICACHE1_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -229,7 +225,6 @@ impl W {
     }
     #[doc = "Bit 5 - The bit is used to power L1-ICache1 tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_tag_mem_force_pd(
         &mut self,
     ) -> L1_ICACHE1_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -237,7 +232,6 @@ impl W {
     }
     #[doc = "Bit 6 - The bit is used to power L1-ICache1 tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_tag_mem_force_pu(
         &mut self,
     ) -> L1_ICACHE1_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -245,7 +239,6 @@ impl W {
     }
     #[doc = "Bit 16 - The bit is used to close clock gating of L1-DCache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_tag_mem_force_on(
         &mut self,
     ) -> L1_DCACHE_TAG_MEM_FORCE_ON_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -253,7 +246,6 @@ impl W {
     }
     #[doc = "Bit 17 - The bit is used to power L1-DCache tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_tag_mem_force_pd(
         &mut self,
     ) -> L1_DCACHE_TAG_MEM_FORCE_PD_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
@@ -261,7 +253,6 @@ impl W {
     }
     #[doc = "Bit 18 - The bit is used to power L1-DCache tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_tag_mem_force_pu(
         &mut self,
     ) -> L1_DCACHE_TAG_MEM_FORCE_PU_W<L1_CACHE_TAG_MEM_POWER_CTRL_SPEC> {

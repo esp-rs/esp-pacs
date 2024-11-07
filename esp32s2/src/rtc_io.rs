@@ -117,6 +117,8 @@ impl RegisterBlock {
         &self.xtal_32n_pad
     }
     #[doc = "0xc8..0xd0 - DAC%s configuration register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `PAD_DAC1` register.</div>"]
     #[inline(always)]
     pub const fn pad_dac(&self, n: usize) -> &PAD_DAC {
         &self.pad_dac[n]

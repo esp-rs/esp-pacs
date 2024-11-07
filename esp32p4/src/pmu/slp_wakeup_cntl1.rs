@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_WAKEUP_CNTL1_SPEC> {
         SLEEP_REJECT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_reject_en(&mut self) -> SLP_REJECT_EN_W<SLP_WAKEUP_CNTL1_SPEC> {
         SLP_REJECT_EN_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_scratch9(&mut self) -> LP_SCRATCH9_W<LP_STORE9_SPEC> {
         LP_SCRATCH9_W::new(self, 0)
     }

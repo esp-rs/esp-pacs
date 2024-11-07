@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Content of command 0. For more information, please refer to the register I2C_COMD0_REG in Chapter I²C Controller"]
     #[inline(always)]
-    #[must_use]
     pub fn command(&mut self) -> COMMAND_W<CMD_SPEC> {
         COMMAND_W::new(self, 0)
     }

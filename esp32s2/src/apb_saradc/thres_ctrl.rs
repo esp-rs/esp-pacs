@@ -6,13 +6,13 @@ pub type W = crate::W<THRES_CTRL_SPEC>;
 pub type CLK_EN_R = crate::BitReader;
 #[doc = "Field `CLK_EN` writer - Clock gate enable."]
 pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+#[doc = "Field `ADC2_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
 pub type ADC2_THRES_MODE_R = crate::BitReader;
-#[doc = "Field `ADC2_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+#[doc = "Field `ADC2_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
 pub type ADC2_THRES_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+#[doc = "Field `ADC1_THRES_MODE` reader - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
 pub type ADC1_THRES_MODE_R = crate::BitReader;
-#[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+#[doc = "Field `ADC1_THRES_MODE` writer - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
 pub type ADC1_THRES_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ADC2_THRES` reader - ADC2 threshold."]
 pub type ADC2_THRES_R = crate::FieldReader<u16>;
@@ -36,12 +36,12 @@ impl R {
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+    #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc2_thres_mode(&self) -> ADC2_THRES_MODE_R {
         ADC2_THRES_MODE_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+    #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
     pub fn adc1_thres_mode(&self) -> ADC1_THRES_MODE_R {
         ADC1_THRES_MODE_R::new(((self.bits >> 3) & 1) != 0)
@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<THRES_CTRL_SPEC> {
         CLK_EN_W::new(self, 0)
     }
-    #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+    #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<THRES_CTRL_SPEC> {
         ADC2_THRES_MODE_W::new(self, 2)
     }
-    #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA &lt; threshold, generate interrupt."]
+    #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<THRES_CTRL_SPEC> {
         ADC1_THRES_MODE_W::new(self, 3)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_thres(&mut self) -> ADC2_THRES_W<THRES_CTRL_SPEC> {
         ADC2_THRES_W::new(self, 4)
     }
     #[doc = "Bits 17:29 - ADC1 threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_thres(&mut self) -> ADC1_THRES_W<THRES_CTRL_SPEC> {
         ADC1_THRES_W::new(self, 17)
     }
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<THRES_CTRL_SPEC> {
         ADC2_THRES_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<THRES_CTRL_SPEC> {
         ADC1_THRES_EN_W::new(self, 31)
     }

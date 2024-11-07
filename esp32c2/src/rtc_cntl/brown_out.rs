@@ -117,61 +117,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:13 - brown out interrupt wait cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_int_wait(&mut self) -> BROWN_OUT_INT_WAIT_W<BROWN_OUT_SPEC> {
         BROWN_OUT_INT_WAIT_W::new(self, 4)
     }
     #[doc = "Bit 14 - enable close flash when brown out happens"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_close_flash_ena(&mut self) -> BROWN_OUT_CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC> {
         BROWN_OUT_CLOSE_FLASH_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - enable power down RF when brown out happens"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_pd_rf_ena(&mut self) -> BROWN_OUT_PD_RF_ENA_W<BROWN_OUT_SPEC> {
         BROWN_OUT_PD_RF_ENA_W::new(self, 15)
     }
     #[doc = "Bits 16:25 - brown out reset wait cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_rst_wait(&mut self) -> BROWN_OUT_RST_WAIT_W<BROWN_OUT_SPEC> {
         BROWN_OUT_RST_WAIT_W::new(self, 16)
     }
     #[doc = "Bit 26 - enable brown out reset"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_rst_ena(&mut self) -> BROWN_OUT_RST_ENA_W<BROWN_OUT_SPEC> {
         BROWN_OUT_RST_ENA_W::new(self, 26)
     }
     #[doc = "Bit 27 - 1: 4-pos reset"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_rst_sel(&mut self) -> BROWN_OUT_RST_SEL_W<BROWN_OUT_SPEC> {
         BROWN_OUT_RST_SEL_W::new(self, 27)
     }
     #[doc = "Bit 28 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_ana_rst_en(&mut self) -> BROWN_OUT_ANA_RST_EN_W<BROWN_OUT_SPEC> {
         BROWN_OUT_ANA_RST_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - clear brown out counter"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_cnt_clr(&mut self) -> BROWN_OUT_CNT_CLR_W<BROWN_OUT_SPEC> {
         BROWN_OUT_CNT_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable brown out"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out_ena(&mut self) -> BROWN_OUT_ENA_W<BROWN_OUT_SPEC> {
         BROWN_OUT_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn det(&mut self) -> DET_W<BROWN_OUT_SPEC> {
         DET_W::new(self, 31)
     }

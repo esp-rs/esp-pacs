@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the end virtual address of dbus to access flash. The register is used to give constraints to dbus access counter."]
     #[inline(always)]
-    #[must_use]
     pub fn dbus_to_flash_end_vaddr(
         &mut self,
     ) -> DBUS_TO_FLASH_END_VADDR_W<DBUS_TO_FLASH_END_VADDR_SPEC> {

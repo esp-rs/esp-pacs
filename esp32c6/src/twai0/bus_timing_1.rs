@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The number of clock cycles in TSEG1 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    #[must_use]
     pub fn time_seg1(&mut self) -> TIME_SEG1_W<BUS_TIMING_1_SPEC> {
         TIME_SEG1_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - The number of clock cycles in TSEG2 per bit timing. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    #[must_use]
     pub fn time_seg2(&mut self) -> TIME_SEG2_W<BUS_TIMING_1_SPEC> {
         TIME_SEG2_W::new(self, 4)
     }
     #[doc = "Bit 7 - 1: triple, the bus is sampled three times. 0: single, the bus is sampled once. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    #[must_use]
     pub fn time_samp(&mut self) -> TIME_SAMP_W<BUS_TIMING_1_SPEC> {
         TIME_SAMP_W::new(self, 7)
     }

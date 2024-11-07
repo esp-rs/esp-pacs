@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Only reserved for ECO."]
     #[inline(always)]
-    #[must_use]
     pub fn redcy_low(&mut self) -> REDCY_LOW_W<RND_ECO_LOW_SPEC> {
         REDCY_LOW_W::new(self, 0)
     }

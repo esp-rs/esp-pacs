@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - this field configures demosaic gradient select ratio"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_grad_ratio(&mut self) -> DEMOSAIC_GRAD_RATIO_W<DEMOSAIC_GRAD_RATIO_SPEC> {
         DEMOSAIC_GRAD_RATIO_W::new(self, 0)
     }

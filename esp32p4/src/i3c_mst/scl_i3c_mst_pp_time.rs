@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i3c_mst_pp_low_period(
         &mut self,
     ) -> REG_I3C_MST_PP_LOW_PERIOD_W<SCL_I3C_MST_PP_TIME_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i3c_mst_pp_high_period(
         &mut self,
     ) -> REG_I3C_MST_PP_HIGH_PERIOD_W<SCL_I3C_MST_PP_TIME_SPEC> {

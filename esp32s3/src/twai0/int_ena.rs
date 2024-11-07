@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable receive interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_int_ena(&mut self) -> RX_INT_ENA_W<INT_ENA_SPEC> {
         RX_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to 1 to enable transmit interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_int_ena(&mut self) -> TX_INT_ENA_W<INT_ENA_SPEC> {
         TX_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable error warning interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn err_warn_int_ena(&mut self) -> ERR_WARN_INT_ENA_W<INT_ENA_SPEC> {
         ERR_WARN_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to 1 to enable data overrun interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn overrun_int_ena(&mut self) -> OVERRUN_INT_ENA_W<INT_ENA_SPEC> {
         OVERRUN_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable error passive interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn err_passive_int_ena(&mut self) -> ERR_PASSIVE_INT_ENA_W<INT_ENA_SPEC> {
         ERR_PASSIVE_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to 1 to enable arbitration lost interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn arb_lost_int_ena(&mut self) -> ARB_LOST_INT_ENA_W<INT_ENA_SPEC> {
         ARB_LOST_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to 1 to enable error interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn bus_err_int_ena(&mut self) -> BUS_ERR_INT_ENA_W<INT_ENA_SPEC> {
         BUS_ERR_INT_ENA_W::new(self, 7)
     }

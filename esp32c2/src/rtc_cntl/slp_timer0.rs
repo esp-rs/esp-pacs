@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_val_lo(&mut self) -> SLP_VAL_LO_W<SLP_TIMER0_SPEC> {
         SLP_VAL_LO_W::new(self, 0)
     }

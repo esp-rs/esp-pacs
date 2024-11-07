@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_loc1(&mut self) -> CH1_LOC1_W<LLP1_SPEC> {
         CH1_LOC1_W::new(self, 0)
     }

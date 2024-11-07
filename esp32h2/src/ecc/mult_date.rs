@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - ECC mult version control register"]
     #[inline(always)]
-    #[must_use]
     pub fn date(&mut self) -> DATE_W<MULT_DATE_SPEC> {
         DATE_W::new(self, 0)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map TG1_WDT_LEVEL_INT interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tg1_wdt_level_int_map(
         &mut self,
     ) -> PRO_TG1_WDT_LEVEL_INT_MAP_W<PRO_TG1_WDT_LEVEL_INT_MAP_SPEC> {

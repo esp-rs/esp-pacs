@@ -53,7 +53,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of dcache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_tag_mem_force_on(
         &mut self,
     ) -> PRO_DCACHE_TAG_MEM_FORCE_ON_W<PRO_DCACHE_TAG_POWER_CTRL_SPEC> {
@@ -61,7 +60,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_tag_mem_force_pd(
         &mut self,
     ) -> PRO_DCACHE_TAG_MEM_FORCE_PD_W<PRO_DCACHE_TAG_POWER_CTRL_SPEC> {
@@ -69,7 +67,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to power dcache tag memory down, 0: follow rtc_lslp_pd, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_tag_mem_force_pu(
         &mut self,
     ) -> PRO_DCACHE_TAG_MEM_FORCE_PU_W<PRO_DCACHE_TAG_POWER_CTRL_SPEC> {

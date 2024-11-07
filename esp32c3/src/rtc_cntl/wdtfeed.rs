@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
 impl W {
     #[doc = "Bit 31 - sw feed rtc wdt"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_feed(&mut self) -> WDT_FEED_W<WDTFEED_SPEC> {
         WDT_FEED_W::new(self, 31)
     }

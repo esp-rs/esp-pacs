@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the second section for autoload operation on L2-Cache. Note that it should be used together with L2_CACHE_AUTOLOAD_SCT1_SIZE and L2_CACHE_AUTOLOAD_SCT1_ENA."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_autoload_sct1_addr(
         &mut self,
     ) -> L2_CACHE_AUTOLOAD_SCT1_ADDR_W<L2_CACHE_AUTOLOAD_SCT1_ADDR_SPEC> {

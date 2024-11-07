@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_timergrp1_wdt_int_map(
         &mut self,
     ) -> CORE0_TIMERGRP1_WDT_INT_MAP_W<TIMERGRP1_WDT_INT_MAP_SPEC> {

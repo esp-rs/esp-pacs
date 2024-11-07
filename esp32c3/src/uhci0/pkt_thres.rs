@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn pkt_thrs(&mut self) -> PKT_THRS_W<PKT_THRES_SPEC> {
         PKT_THRS_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Set this bit to reset tx fifo counter."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_cnt_rst(&mut self) -> TX_FIFO_CNT_RST_W<FIFO_CNT_SPEC> {
         TX_FIFO_CNT_RST_W::new(self, 31)
     }

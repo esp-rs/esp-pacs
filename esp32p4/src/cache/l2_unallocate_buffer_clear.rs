@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - The bit is used to clear the unallocate request buffer of l2 icache where the unallocate request is responsed but not completed."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_unalloc_clr(
         &mut self,
     ) -> L2_CACHE_UNALLOC_CLR_W<L2_UNALLOCATE_BUFFER_CLEAR_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_tx_triggers(&mut self) -> PHY_TX_TRIGGERS_W<PHY_TX_TRIGGERS_SPEC> {
         PHY_TX_TRIGGERS_W::new(self, 0)
     }

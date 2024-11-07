@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn start_force(&mut self) -> START_FORCE_W<CTRL_SPEC> {
         START_FORCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<CTRL_SPEC> {
         START_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - 0: single mode, 1: double mode, 2: alternate mode"]
     #[inline(always)]
-    #[must_use]
     pub fn work_mode(&mut self) -> WORK_MODE_W<CTRL_SPEC> {
         WORK_MODE_W::new(self, 2)
     }
     #[doc = "Bit 4 - 0: SAR1, 1: SAR2, only work for single SAR mode"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_sel(&mut self) -> SAR_SEL_W<CTRL_SPEC> {
         SAR_SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<CTRL_SPEC> {
         SAR_CLK_GATED_W::new(self, 5)
     }
     #[doc = "Bits 6:13 - SAR clock divider"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<CTRL_SPEC> {
         SAR_CLK_DIV_W::new(self, 6)
     }
     #[doc = "Bits 14:17 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_patt_len(&mut self) -> SAR1_PATT_LEN_W<CTRL_SPEC> {
         SAR1_PATT_LEN_W::new(self, 14)
     }
     #[doc = "Bits 18:21 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_patt_len(&mut self) -> SAR2_PATT_LEN_W<CTRL_SPEC> {
         SAR2_PATT_LEN_W::new(self, 18)
     }
     #[doc = "Bit 22 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_patt_p_clear(&mut self) -> SAR1_PATT_P_CLEAR_W<CTRL_SPEC> {
         SAR1_PATT_P_CLEAR_W::new(self, 22)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC2 CTRL"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_patt_p_clear(&mut self) -> SAR2_PATT_P_CLEAR_W<CTRL_SPEC> {
         SAR2_PATT_P_CLEAR_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: sar_sel will be coded by the MSB of the 16-bit output data, in this case the resolution should not be larger than 11 bits."]
     #[inline(always)]
-    #[must_use]
     pub fn data_sar_sel(&mut self) -> DATA_SAR_SEL_W<CTRL_SPEC> {
         DATA_SAR_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: I2S input data is from SAR ADC (for DMA), 0: I2S input data is from GPIO matrix"]
     #[inline(always)]
-    #[must_use]
     pub fn data_to_i2s(&mut self) -> DATA_TO_I2S_W<CTRL_SPEC> {
         DATA_TO_I2S_W::new(self, 25)
     }
     #[doc = "Bits 26:27 - force option to xpd sar1 blocks"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar1_force(&mut self) -> XPD_SAR1_FORCE_W<CTRL_SPEC> {
         XPD_SAR1_FORCE_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - force option to xpd sar2 blocks"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar2_force(&mut self) -> XPD_SAR2_FORCE_W<CTRL_SPEC> {
         XPD_SAR2_FORCE_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
-    #[must_use]
     pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<CTRL_SPEC> {
         WAIT_ARB_CYCLE_W::new(self, 30)
     }

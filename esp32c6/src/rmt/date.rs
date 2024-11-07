@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - This is the version register."]
     #[inline(always)]
-    #[must_use]
     pub fn rmt_date(&mut self) -> RMT_DATE_W<DATE_SPEC> {
         RMT_DATE_W::new(self, 0)
     }

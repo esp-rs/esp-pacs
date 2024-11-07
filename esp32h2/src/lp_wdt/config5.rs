@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn chip_reset_target(&mut self) -> CHIP_RESET_TARGET_W<CONFIG5_SPEC> {
         CHIP_RESET_TARGET_W::new(self, 0)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn chip_reset_en(&mut self) -> CHIP_RESET_EN_W<CONFIG5_SPEC> {
         CHIP_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn chip_reset_key(&mut self) -> CHIP_RESET_KEY_W<CONFIG5_SPEC> {
         CHIP_RESET_KEY_W::new(self, 9)
     }

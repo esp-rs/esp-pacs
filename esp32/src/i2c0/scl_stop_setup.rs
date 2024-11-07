@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the clock num between the posedge of SCL and the posedge of SDA."]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SCL_STOP_SETUP_SPEC> {
         TIME_W::new(self, 0)
     }

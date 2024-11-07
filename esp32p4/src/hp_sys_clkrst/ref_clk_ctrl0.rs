@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_50m_clk_div_num(&mut self) -> REF_50M_CLK_DIV_NUM_W<REF_CLK_CTRL0_SPEC> {
         REF_50M_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_25m_clk_div_num(&mut self) -> REF_25M_CLK_DIV_NUM_W<REF_CLK_CTRL0_SPEC> {
         REF_25M_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_240m_clk_div_num(&mut self) -> REF_240M_CLK_DIV_NUM_W<REF_CLK_CTRL0_SPEC> {
         REF_240M_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_160m_clk_div_num(&mut self) -> REF_160M_CLK_DIV_NUM_W<REF_CLK_CTRL0_SPEC> {
         REF_160M_CLK_DIV_NUM_W::new(self, 24)
     }

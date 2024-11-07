@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn ena(&mut self) -> ENA_W<CACHE_SYNC_INT_CTRL_SPEC> {
         ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn clr(&mut self) -> CLR_W<CACHE_SYNC_INT_CTRL_SPEC> {
         CLR_W::new(self, 2)
     }

@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 10:31 - RTC GPIO 0 ~ 21 output data write 1 to clear"]
     #[inline(always)]
-    #[must_use]
     pub fn out_data_w1tc(&mut self) -> OUT_DATA_W1TC_W<OUT_W1TC_SPEC> {
         OUT_DATA_W1TC_W::new(self, 10)
     }

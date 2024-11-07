@@ -52,7 +52,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of encrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_force_on_db_encrypt(
         &mut self,
     ) -> CLK_FORCE_ON_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
@@ -60,7 +59,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to close clock gating of decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_force_on_g0cb_decrypt(
         &mut self,
     ) -> CLK_FORCE_ON_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {
@@ -68,7 +66,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to close clock gating of encrypt and decrypt clock. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_force_on_automatic_encrypt_decrypt(
         &mut self,
     ) -> CLK_FORCE_ON_AUTOMATIC_ENCRYPT_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_CLK_FORCE_ON_SPEC> {

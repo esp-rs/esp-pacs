@@ -15,19 +15,16 @@ impl core::fmt::Debug for crate::generic::Reg<INTCLR_SPEC> {
 impl W {
     #[doc = "Bit 10 - Interrupt on STOP state on the bus. See Start as the preferred interrupt when needed. This interrupt may not trigger for quick STOP/START combination, as it relates to the state of being stopped."]
     #[inline(always)]
-    #[must_use]
     pub fn stop_clr(&mut self) -> STOP_CLR_W<INTCLR_SPEC> {
         STOP_CLR_W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt when receiving a message from Master, which is not being handled by the block (excludes CCCs being handled automatically). If FIFO, then RX fullness trigger. If DMA, then message end."]
     #[inline(always)]
-    #[must_use]
     pub fn rxpend_clr(&mut self) -> RXPEND_CLR_W<INTCLR_SPEC> {
         RXPEND_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn txsend_clr(&mut self) -> TXSEND_CLR_W<INTCLR_SPEC> {
         TXSEND_CLR_W::new(self, 12)
     }

@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mode(&mut self) -> CLK_MODE_W<SLAVE_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2 - {CPOL, CPHA},1: support spi clk mode 1 and 3, first edge output data B\\[0\\]/B\\[7\\]. 0: support spi clk mode 0 and 2, first edge output data B\\[1\\]/B\\[6\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mode_13(&mut self) -> CLK_MODE_13_W<SLAVE_SPEC> {
         CLK_MODE_13_W::new(self, 2)
     }
     #[doc = "Bit 3 - It saves half a cycle when tsck is the same as rsck. 1: output data at rsck posedge 0: output data at tsck posedge"]
     #[inline(always)]
-    #[must_use]
     pub fn rsck_data_out(&mut self) -> RSCK_DATA_OUT_W<SLAVE_SPEC> {
         RSCK_DATA_OUT_W::new(self, 3)
     }
     #[doc = "Bit 8 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rddma_bitlen_en(&mut self) -> SLV_RDDMA_BITLEN_EN_W<SLAVE_SPEC> {
         SLV_RDDMA_BITLEN_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrdma_bitlen_en(&mut self) -> SLV_WRDMA_BITLEN_EN_W<SLAVE_SPEC> {
         SLV_WRDMA_BITLEN_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdbuf_bitlen_en(&mut self) -> SLV_RDBUF_BITLEN_EN_W<SLAVE_SPEC> {
         SLV_RDBUF_BITLEN_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1: SPI_SLV_DATA_BITLEN stores data bit length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrbuf_bitlen_en(&mut self) -> SLV_WRBUF_BITLEN_EN_W<SLAVE_SPEC> {
         SLV_WRBUF_BITLEN_EN_W::new(self, 11)
     }
     #[doc = "Bit 26 - Set SPI work mode. 1: slave mode 0: master mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> MODE_W<SLAVE_SPEC> {
         MODE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Software reset enable, reset the spi clock line cs line and data lines. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn soft_reset(&mut self) -> SOFT_RESET_W<SLAVE_SPEC> {
         SOFT_RESET_W::new(self, 27)
     }
     #[doc = "Bit 29 - In master full-duplex mode, 1: GP-SPI will wait DMA TX data is ready before starting SPI transfer. 0: GP-SPI does not wait DMA TX data before starting SPI transfer."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_fd_wait_dma_tx_data(&mut self) -> MST_FD_WAIT_DMA_TX_DATA_W<SLAVE_SPEC> {
         MST_FD_WAIT_DMA_TX_DATA_W::new(self, 29)
     }

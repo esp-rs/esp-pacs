@@ -92,7 +92,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:3 - backup_bus_pms_constrain_usb_wrap"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_usb_wrap(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
@@ -100,7 +99,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_crypto_peri"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_peri(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
@@ -108,7 +106,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_crypto_dma"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_crypto_dma(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
@@ -116,7 +113,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - backup_bus_pms_constrain_apb_adc"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_apb_adc(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
@@ -124,7 +120,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - backup_bus_pms_constrain_bt_pwr"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_bt_pwr(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
@@ -132,7 +127,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_usb_device"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_usb_device(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {

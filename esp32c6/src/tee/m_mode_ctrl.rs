@@ -107,7 +107,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - M0 security level mode: 2'd3: ree_mode2. 2'd2: ree_mode1. 2'd1: ree_mode0. 2'd0: tee_mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> MODE_W<M_MODE_CTRL_SPEC> {
         MODE_W::new(self, 0)
     }

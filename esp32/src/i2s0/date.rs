@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn i2sdate(&mut self) -> I2SDATE_W<DATE_SPEC> {
         I2SDATE_W::new(self, 0)
     }

@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn value_update(&mut self) -> VALUE_UPDATE_W<VALUE_UPDATE_SPEC> {
         VALUE_UPDATE_W::new(self, 0)
     }
     #[doc = "Bit 1 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn bypass(&mut self) -> BYPASS_W<VALUE_UPDATE_SPEC> {
         BYPASS_W::new(self, 1)
     }

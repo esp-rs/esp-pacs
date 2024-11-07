@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Configures video B chroma MB decimate score. When chroma score is smaller than it, chroma decimate will be enable."]
     #[inline(always)]
-    #[must_use]
     pub fn b_c_deci_score(&mut self) -> B_C_DECI_SCORE_W<B_DECI_SCORE_SPEC> {
         B_C_DECI_SCORE_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - Configures video B luma MB decimate score. When luma score is smaller than it, luma decimate will be enable."]
     #[inline(always)]
-    #[must_use]
     pub fn b_l_deci_score(&mut self) -> B_L_DECI_SCORE_W<B_DECI_SCORE_SPEC> {
         B_L_DECI_SCORE_W::new(self, 10)
     }

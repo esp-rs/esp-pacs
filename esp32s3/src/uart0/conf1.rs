@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 10)
     }
     #[doc = "Bit 20 - Disable UART Rx data overflow detect."]
     #[inline(always)]
-    #[must_use]
     pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF1_SPEC> {
         DIS_RX_DAT_OVF_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<CONF1_SPEC> {
         RX_TOUT_FLOW_DIS_W::new(self, 21)
     }
     #[doc = "Bit 22 - This is the flow enable bit for UART receiver."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<CONF1_SPEC> {
         RX_FLOW_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<CONF1_SPEC> {
         RX_TOUT_EN_W::new(self, 23)
     }

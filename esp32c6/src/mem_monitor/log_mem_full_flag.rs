@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 1 to clr MEM_MONITOR_LOG_MEM_FULL_FLAG"]
     #[inline(always)]
-    #[must_use]
     pub fn clr_log_mem_full_flag(&mut self) -> CLR_LOG_MEM_FULL_FLAG_W<LOG_MEM_FULL_FLAG_SPEC> {
         CLR_LOG_MEM_FULL_FLAG_W::new(self, 1)
     }

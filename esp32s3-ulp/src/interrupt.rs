@@ -29,6 +29,7 @@ pub enum Interrupt {
     TOUCH_SCAN_DONE_INT = 11,
 }
 #[doc = r" TryFromInterruptError"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Debug, Copy, Clone)]
 pub struct TryFromInterruptError(());
 impl Interrupt {

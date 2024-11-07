@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_path_delay(&mut self) -> TX_PATH_DELAY_W<TXRX_PATH_DELAY_SPEC> {
         TX_PATH_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_path_delay(&mut self) -> RX_PATH_DELAY_W<TXRX_PATH_DELAY_SPEC> {
         RX_PATH_DELAY_W::new(self, 16)
     }

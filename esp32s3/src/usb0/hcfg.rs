@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC> {
         FSLSPCLKSEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn fslssupp(&mut self) -> FSLSSUPP_W<HCFG_SPEC> {
         FSLSSUPP_W::new(self, 2)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ena32khzs(&mut self) -> ENA32KHZS_W<HCFG_SPEC> {
         ENA32KHZS_W::new(self, 7)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
     pub fn descdma(&mut self) -> DESCDMA_W<HCFG_SPEC> {
         DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
     pub fn frlisten(&mut self) -> FRLISTEN_W<HCFG_SPEC> {
         FRLISTEN_W::new(self, 24)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn perschedena(&mut self) -> PERSCHEDENA_W<HCFG_SPEC> {
         PERSCHEDENA_W::new(self, 26)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn modechtimen(&mut self) -> MODECHTIMEN_W<HCFG_SPEC> {
         MODECHTIMEN_W::new(self, 31)
     }

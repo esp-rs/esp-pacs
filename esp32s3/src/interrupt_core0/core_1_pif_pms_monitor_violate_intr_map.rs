@@ -29,7 +29,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map core1_PIF_pms_monitor_violatile interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_monitor_violate_intr_map(
         &mut self,
     ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_INTR_MAP_W<CORE_1_PIF_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC>

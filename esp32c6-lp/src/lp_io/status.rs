@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - set lp gpio output data"]
     #[inline(always)]
-    #[must_use]
     pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS_SPEC> {
         INTERRUPT_W::new(self, 0)
     }

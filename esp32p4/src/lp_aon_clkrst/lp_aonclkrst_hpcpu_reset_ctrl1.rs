@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - HP core0 software stall when set to 8'h86"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_sw_stall_code(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_SW_STALL_CODE_W<LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 24:31 - HP core1 software stall when set to 8'h86"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_sw_stall_code(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_SW_STALL_CODE_W<LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {

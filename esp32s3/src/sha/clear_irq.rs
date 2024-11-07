@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<CLEAR_IRQ_SPEC> {
 impl W {
     #[doc = "Bit 0 - clear sha interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<CLEAR_IRQ_SPEC> {
         CLEAR_INTERRUPT_W::new(self, 0)
     }

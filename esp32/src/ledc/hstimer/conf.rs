@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register controls the range of the counter in high speed timer0. the counter range is \\[0 2**reg_hstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<CONF_SPEC> {
         DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in high speed timer0 the least significant eight bits represent the decimal part."]
     #[inline(always)]
-    #[must_use]
     pub fn div_num(&mut self) -> DIV_NUM_W<CONF_SPEC> {
         DIV_NUM_W::new(self, 5)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in high speed timer0"]
     #[inline(always)]
-    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<CONF_SPEC> {
         PAUSE_W::new(self, 23)
     }
     #[doc = "Bit 24 - This bit is used to reset high speed timer0 the counter will be 0 after reset."]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RST_W<CONF_SPEC> {
         RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - This bit is used to choose apb_clk or ref_tick for high speed timer0. 1'b1:apb_clk 0:ref_tick"]
     #[inline(always)]
-    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<CONF_SPEC> {
         TICK_SEL_W::new(self, 25)
     }

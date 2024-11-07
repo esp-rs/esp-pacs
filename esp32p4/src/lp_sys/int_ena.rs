@@ -93,43 +93,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable lp addrhole int"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_addrhole_int_ena(&mut self) -> LP_ADDRHOLE_INT_ENA_W<INT_ENA_SPEC> {
         LP_ADDRHOLE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable idbus addrhole int"]
     #[inline(always)]
-    #[must_use]
     pub fn idbus_addrhole_int_ena(&mut self) -> IDBUS_ADDRHOLE_INT_ENA_W<INT_ENA_SPEC> {
         IDBUS_ADDRHOLE_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable lp_core_ahb_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_ahb_timeout_int_ena(&mut self) -> LP_CORE_AHB_TIMEOUT_INT_ENA_W<INT_ENA_SPEC> {
         LP_CORE_AHB_TIMEOUT_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable lp_core_ibus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_ibus_timeout_int_ena(&mut self) -> LP_CORE_IBUS_TIMEOUT_INT_ENA_W<INT_ENA_SPEC> {
         LP_CORE_IBUS_TIMEOUT_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to enable lp_core_dbus_timeout int"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_dbus_timeout_int_ena(&mut self) -> LP_CORE_DBUS_TIMEOUT_INT_ENA_W<INT_ENA_SPEC> {
         LP_CORE_DBUS_TIMEOUT_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to enable etm task ulp int"]
     #[inline(always)]
-    #[must_use]
     pub fn etm_task_ulp_int_ena(&mut self) -> ETM_TASK_ULP_INT_ENA_W<INT_ENA_SPEC> {
         ETM_TASK_ULP_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to enable slow_clk_tick int"]
     #[inline(always)]
-    #[must_use]
     pub fn slow_clk_tick_int_ena(&mut self) -> SLOW_CLK_TICK_INT_ENA_W<INT_ENA_SPEC> {
         SLOW_CLK_TICK_INT_ENA_W::new(self, 6)
     }

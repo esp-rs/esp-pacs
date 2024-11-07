@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate dcache atomic operation protection. In this case, sync/lock/occupy operation can not interrupt miss-work. This feature does not work during invalidateAll operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_atomic_operate_ena(
         &mut self,
     ) -> DCACHE_ATOMIC_OPERATE_ENA_W<DCACHE_ATOMIC_OPERATE_ENA_SPEC> {

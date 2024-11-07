@@ -50,19 +50,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_pad_slp_sel(&mut self) -> TIE_HIGH_PAD_SLP_SEL_W<IMM_PAD_HOLD_ALL_SPEC> {
         TIE_HIGH_PAD_SLP_SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_pad_slp_sel(&mut self) -> TIE_LOW_PAD_SLP_SEL_W<IMM_PAD_HOLD_ALL_SPEC> {
         TIE_LOW_PAD_SLP_SEL_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_lp_pad_hold_all(
         &mut self,
     ) -> TIE_HIGH_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
@@ -70,13 +67,11 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_lp_pad_hold_all(&mut self) -> TIE_LOW_LP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
         TIE_LOW_LP_PAD_HOLD_ALL_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_hp_pad_hold_all(
         &mut self,
     ) -> TIE_HIGH_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
@@ -84,7 +79,6 @@ impl W {
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_hp_pad_hold_all(&mut self) -> TIE_LOW_HP_PAD_HOLD_ALL_W<IMM_PAD_HOLD_ALL_SPEC> {
         TIE_LOW_HP_PAD_HOLD_ALL_W::new(self, 31)
     }

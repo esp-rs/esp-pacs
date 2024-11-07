@@ -19,31 +19,26 @@ impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
 impl W {
     #[doc = "Bit 0 - 1: present, a message shall be transmitted. 0: absent"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_request(&mut self) -> TX_REQUEST_W<CMD_SPEC> {
         TX_REQUEST_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
     #[inline(always)]
-    #[must_use]
     pub fn abort_tx(&mut self) -> ABORT_TX_W<CMD_SPEC> {
         ABORT_TX_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
     #[inline(always)]
-    #[must_use]
     pub fn release_buffer(&mut self) -> RELEASE_BUFFER_W<CMD_SPEC> {
         RELEASE_BUFFER_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: clear, the data overrun status bit is cleared. 0: no action."]
     #[inline(always)]
-    #[must_use]
     pub fn clear_data_overrun(&mut self) -> CLEAR_DATA_OVERRUN_W<CMD_SPEC> {
         CLEAR_DATA_OVERRUN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
     #[inline(always)]
-    #[must_use]
     pub fn self_rx_request(&mut self) -> SELF_RX_REQUEST_W<CMD_SPEC> {
         SELF_RX_REQUEST_W::new(self, 4)
     }

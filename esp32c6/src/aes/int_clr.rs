@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the AES interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn int_clr(&mut self) -> INT_CLR_W<INT_CLR_SPEC> {
         INT_CLR_W::new(self, 0)
     }

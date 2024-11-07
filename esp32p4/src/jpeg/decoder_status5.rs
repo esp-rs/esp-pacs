@@ -80,7 +80,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - redundant control registers for jpeg"]
     #[inline(always)]
-    #[must_use]
     pub fn rdn_ena(&mut self) -> RDN_ENA_W<DECODER_STATUS5_SPEC> {
         RDN_ENA_W::new(self, 30)
     }

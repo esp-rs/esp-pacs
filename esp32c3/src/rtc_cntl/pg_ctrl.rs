@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 26:27 - power glitch desense"]
     #[inline(always)]
-    #[must_use]
     pub fn power_glitch_dsense(&mut self) -> POWER_GLITCH_DSENSE_W<PG_CTRL_SPEC> {
         POWER_GLITCH_DSENSE_W::new(self, 26)
     }
     #[doc = "Bit 28 - force disable power glitch"]
     #[inline(always)]
-    #[must_use]
     pub fn power_glitch_force_pd(&mut self) -> POWER_GLITCH_FORCE_PD_W<PG_CTRL_SPEC> {
         POWER_GLITCH_FORCE_PD_W::new(self, 28)
     }
     #[doc = "Bit 29 - force enable power glitch"]
     #[inline(always)]
-    #[must_use]
     pub fn power_glitch_force_pu(&mut self) -> POWER_GLITCH_FORCE_PU_W<PG_CTRL_SPEC> {
         POWER_GLITCH_FORCE_PU_W::new(self, 29)
     }
     #[doc = "Bit 30 - use efuse value control power glitch enable"]
     #[inline(always)]
-    #[must_use]
     pub fn power_glitch_efuse_sel(&mut self) -> POWER_GLITCH_EFUSE_SEL_W<PG_CTRL_SPEC> {
         POWER_GLITCH_EFUSE_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable power glitch"]
     #[inline(always)]
-    #[must_use]
     pub fn power_glitch_en(&mut self) -> POWER_GLITCH_EN_W<PG_CTRL_SPEC> {
         POWER_GLITCH_EN_W::new(self, 31)
     }

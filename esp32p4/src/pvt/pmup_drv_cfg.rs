@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - configure pvt charge xpd"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_en(&mut self) -> PUMP_EN_W<PMUP_DRV_CFG_SPEC> {
         PUMP_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - force register clken"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<PMUP_DRV_CFG_SPEC> {
         CLK_EN_W::new(self, 10)
     }
     #[doc = "Bits 11:14 - configure cmd4 drv"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_drv4(&mut self) -> PUMP_DRV4_W<PMUP_DRV_CFG_SPEC> {
         PUMP_DRV4_W::new(self, 11)
     }
     #[doc = "Bits 15:18 - configure cmd3 drv"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_drv3(&mut self) -> PUMP_DRV3_W<PMUP_DRV_CFG_SPEC> {
         PUMP_DRV3_W::new(self, 15)
     }
     #[doc = "Bits 19:22 - configure cmd2 drv"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_drv2(&mut self) -> PUMP_DRV2_W<PMUP_DRV_CFG_SPEC> {
         PUMP_DRV2_W::new(self, 19)
     }
     #[doc = "Bits 23:26 - configure cmd1 drv"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_drv1(&mut self) -> PUMP_DRV1_W<PMUP_DRV_CFG_SPEC> {
         PUMP_DRV1_W::new(self, 23)
     }
     #[doc = "Bits 27:30 - configure cmd0 drv"]
     #[inline(always)]
-    #[must_use]
     pub fn pump_drv0(&mut self) -> PUMP_DRV0_W<PMUP_DRV_CFG_SPEC> {
         PUMP_DRV0_W::new(self, 27)
     }

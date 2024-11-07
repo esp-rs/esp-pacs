@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This register is used to config arbiter weight function off/on"]
     #[inline(always)]
-    #[must_use]
     pub fn weight_en_rx(&mut self) -> WEIGHT_EN_RX_W<WEIGHT_EN_RX_SPEC> {
         WEIGHT_EN_RX_W::new(self, 0)
     }

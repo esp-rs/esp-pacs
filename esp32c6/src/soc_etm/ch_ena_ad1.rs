@@ -143,7 +143,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH_ENA32` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena(&mut self, n: u8) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 18][n as usize];
@@ -151,109 +150,91 @@ impl W {
     }
     #[doc = "Bit 0 - ch32 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena32(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - ch33 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena33(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - ch34 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena34(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - ch35 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena35(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - ch36 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena36(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - ch37 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena37(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - ch38 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena38(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - ch39 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena39(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - ch40 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena40(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - ch41 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena41(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - ch42 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena42(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - ch43 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena43(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 11)
     }
     #[doc = "Bit 12 - ch44 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena44(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 12)
     }
     #[doc = "Bit 13 - ch45 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena45(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 13)
     }
     #[doc = "Bit 14 - ch46 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena46(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - ch47 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena47(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 15)
     }
     #[doc = "Bit 16 - ch48 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena48(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 16)
     }
     #[doc = "Bit 17 - ch49 enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ch_ena49(&mut self) -> CH_ENA_W<CH_ENA_AD1_SPEC> {
         CH_ENA_W::new(self, 17)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to define the separate char that need to be encoded, default is 0xc0."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_char(&mut self) -> SEPER_CHAR_W<ESC_CONF_SPEC> {
         SEPER_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register is used to define the first char of slip escape sequence when encoding the separate char, default is 0xdb."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<ESC_CONF_SPEC> {
         SEPER_ESC_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - This register is used to define the second char of slip escape sequence when encoding the separate char, default is 0xdc."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<ESC_CONF_SPEC> {
         SEPER_ESC_CHAR1_W::new(self, 16)
     }

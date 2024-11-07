@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache tag permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_tag_access_lock(&mut self) -> CACHE_TAG_ACCESS_LOCK_W<CACHE_TAG_ACCESS_0_SPEC> {
         CACHE_TAG_ACCESS_LOCK_W::new(self, 0)
     }

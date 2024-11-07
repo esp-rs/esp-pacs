@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The content of the 2nd 32-bit RS code to be programmed."]
     #[inline(always)]
-    #[must_use]
     pub fn pgm_rs_data_2(&mut self) -> PGM_RS_DATA_2_W<PGM_CHECK_VALUE2_SPEC> {
         PGM_RS_DATA_2_W::new(self, 0)
     }

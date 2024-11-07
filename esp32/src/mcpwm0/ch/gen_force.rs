@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn cntuforce_upmethod(&mut self) -> CNTUFORCE_UPMETHOD_W<GEN_FORCE_SPEC> {
         CNTUFORCE_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
-    #[must_use]
     pub fn a_cntuforce_mode(&mut self) -> A_CNTUFORCE_MODE_W<GEN_FORCE_SPEC> {
         A_CNTUFORCE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    #[must_use]
     pub fn b_cntuforce_mode(&mut self) -> B_CNTUFORCE_MODE_W<GEN_FORCE_SPEC> {
         B_CNTUFORCE_MODE_W::new(self, 8)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn a_nciforce(&mut self) -> A_NCIFORCE_W<GEN_FORCE_SPEC> {
         A_NCIFORCE_W::new(self, 10)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    #[must_use]
     pub fn a_nciforce_mode(&mut self) -> A_NCIFORCE_MODE_W<GEN_FORCE_SPEC> {
         A_NCIFORCE_MODE_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn b_nciforce(&mut self) -> B_NCIFORCE_W<GEN_FORCE_SPEC> {
         B_NCIFORCE_W::new(self, 13)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
-    #[must_use]
     pub fn b_nciforce_mode(&mut self) -> B_NCIFORCE_MODE_W<GEN_FORCE_SPEC> {
         B_NCIFORCE_MODE_W::new(self, 14)
     }

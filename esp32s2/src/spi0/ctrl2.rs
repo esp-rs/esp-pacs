@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - (cycles+1) of prepare phase by spi clock this bits are combined with SPI_CS_SETUP bit. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_setup_time(&mut self) -> CS_SETUP_TIME_W<CTRL2_SPEC> {
         CS_SETUP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 13:25 - delay cycles of cs pin by spi clock this bits are combined with SPI_CS_HOLD bit. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_hold_time(&mut self) -> CS_HOLD_TIME_W<CTRL2_SPEC> {
         CS_HOLD_TIME_W::new(self, 13)
     }
     #[doc = "Bits 26:28 - spi_cs signal is delayed by spi_clk . 0: zero 1: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by half cycle else delayed by one cycle 2: if SPI_CK_OUT_EDGE or SPI_CK_IDLE_EDGE is set 1 delayed by one cycle, else delayed by half cycle 3: delayed one cycle. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_delay_mode(&mut self) -> CS_DELAY_MODE_W<CTRL2_SPEC> {
         CS_DELAY_MODE_W::new(self, 26)
     }
     #[doc = "Bits 29:30 - spi_cs signal is delayed by system clock cycles. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_delay_num(&mut self) -> CS_DELAY_NUM_W<CTRL2_SPEC> {
         CS_DELAY_NUM_W::new(self, 29)
     }

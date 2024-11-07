@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_apb_ctrl_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_ctrl_intr_map(&mut self) -> APB_CTRL_INTR_MAP_W<APB_CTRL_INTR_MAP_SPEC> {
         APB_CTRL_INTR_MAP_W::new(self, 0)
     }

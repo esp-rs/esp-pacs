@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This is the data that need to be pushed into TX FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<DMA_OUT_PUSH_SPEC> {
         OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16 - Set this bit to push data into TX FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<DMA_OUT_PUSH_SPEC> {
         OUTFIFO_PUSH_W::new(self, 16)
     }

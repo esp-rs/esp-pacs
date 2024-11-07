@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1'h1: access memory directly. 1'h0: access memory by FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<SYS_CONF_SPEC> {
         APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable the clock for RMT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<SYS_CONF_SPEC> {
         MEM_CLK_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to power down RMT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<SYS_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Disable RMT memory light sleep power down function. 0: Power down RMT memory when RMT is in light sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<SYS_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - the integral part of the fractional divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_num(&mut self) -> SCLK_DIV_NUM_W<SYS_CONF_SPEC> {
         SCLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:17 - the numerator of the fractional part of the fractional divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_a(&mut self) -> SCLK_DIV_A_W<SYS_CONF_SPEC> {
         SCLK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bits 18:23 - the denominator of the fractional part of the fractional divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_div_b(&mut self) -> SCLK_DIV_B_W<SYS_CONF_SPEC> {
         SCLK_DIV_B_W::new(self, 18)
     }
     #[doc = "Bits 24:25 - choose the clock source of rmt_sclk. 1:CLK_80Mhz;2:CLK_8MHz; 2:XTAL"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_sel(&mut self) -> SCLK_SEL_W<SYS_CONF_SPEC> {
         SCLK_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - rmt_sclk switch"]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_active(&mut self) -> SCLK_ACTIVE_W<SYS_CONF_SPEC> {
         SCLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bit 31 - RMT register clock gate enable signal. 1: Power up the drive clock of registers. 0: Power down the drive clock of registers"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<SYS_CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask world, then only world0_value will work."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_vecbase_world_mask(
         &mut self,
     ) -> CORE_1_VECBASE_WORLD_MASK_W<CORE_1_VECBASE_OVERRIDE_0_SPEC> {

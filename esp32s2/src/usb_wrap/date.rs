@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Date register"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_wrap_date(&mut self) -> USB_WRAP_DATE_W<DATE_SPEC> {
         USB_WRAP_DATE_W::new(self, 0)
     }

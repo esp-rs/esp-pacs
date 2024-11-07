@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_tg1_lact_edge_int_map(
         &mut self,
     ) -> APP_TG1_LACT_EDGE_INT_MAP_W<APP_TG1_LACT_EDGE_INT_MAP_SPEC> {

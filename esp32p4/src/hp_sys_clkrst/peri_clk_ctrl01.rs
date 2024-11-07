@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_rx_clk_div_num(&mut self) -> EMAC_RX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_RX_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_tx_clk_src_sel(&mut self) -> EMAC_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_TX_CLK_SRC_SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_tx_clk_en(&mut self) -> EMAC_TX_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_TX_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_tx_clk_div_num(&mut self) -> EMAC_TX_CLK_DIV_NUM_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_TX_CLK_DIV_NUM_W::new(self, 10)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_ptp_ref_clk_src_sel(&mut self) -> EMAC_PTP_REF_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_PTP_REF_CLK_SRC_SEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_ptp_ref_clk_en(&mut self) -> EMAC_PTP_REF_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_PTP_REF_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_unused0_clk_en(&mut self) -> EMAC_UNUSED0_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_UNUSED0_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn emac_unused1_clk_en(&mut self) -> EMAC_UNUSED1_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
         EMAC_UNUSED1_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_hs_mode(&mut self) -> SDIO_HS_MODE_W<PERI_CLK_CTRL01_SPEC> {
         SDIO_HS_MODE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_src_sel(&mut self) -> SDIO_LS_CLK_SRC_SEL_W<PERI_CLK_CTRL01_SPEC> {
         SDIO_LS_CLK_SRC_SEL_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ls_clk_en(&mut self) -> SDIO_LS_CLK_EN_W<PERI_CLK_CTRL01_SPEC> {
         SDIO_LS_CLK_EN_W::new(self, 24)
     }

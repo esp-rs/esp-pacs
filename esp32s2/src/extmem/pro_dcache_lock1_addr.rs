@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the second start virtual address of data locking, which is combined with PRO_DCACHE_LOCK1_SIZE_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_lock1_addr(&mut self) -> PRO_DCACHE_LOCK1_ADDR_W<PRO_DCACHE_LOCK1_ADDR_SPEC> {
         PRO_DCACHE_LOCK1_ADDR_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_gpio_interrupt_pro_map"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_interrupt_pro_map(
         &mut self,
     ) -> GPIO_INTERRUPT_PRO_MAP_W<GPIO_INTERRUPT_PRO_MAP_SPEC> {

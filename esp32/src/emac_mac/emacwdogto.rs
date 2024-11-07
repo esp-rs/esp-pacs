@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - When Bit\\[16\\] (PWE) is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset this field is used as watchdog timeout for a received frame. If the length of a received frame exceeds the value of this field such frame is terminated and declared as an error frame."]
     #[inline(always)]
-    #[must_use]
     pub fn wdogto(&mut self) -> WDOGTO_W<EMACWDOGTO_SPEC> {
         WDOGTO_W::new(self, 0)
     }
     #[doc = "Bit 16 - When this bit is set and Bit\\[23\\] (WD) of EMACCONFIG_REG is reset the WTO field (Bits\\[13:0\\]) is used as watchdog timeout for a received frame. When this bit is cleared the watchdog timeout for a received frame is controlled by the setting of Bit\\[23\\] (WD) and Bit\\[20\\] (JE) in EMACCONFIG_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn pwdogen(&mut self) -> PWDOGEN_W<EMACWDOGTO_SPEC> {
         PWDOGEN_W::new(self, 16)
     }

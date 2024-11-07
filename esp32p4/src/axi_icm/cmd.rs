@@ -85,37 +85,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_axi_cmd(&mut self) -> ICM_REG_AXI_CMD_W<CMD_SPEC> {
         ICM_REG_AXI_CMD_W::new(self, 0)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_rd_wr_chan(&mut self) -> ICM_REG_RD_WR_CHAN_W<CMD_SPEC> {
         ICM_REG_RD_WR_CHAN_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_axi_master_port(&mut self) -> ICM_REG_AXI_MASTER_PORT_W<CMD_SPEC> {
         ICM_REG_AXI_MASTER_PORT_W::new(self, 8)
     }
     #[doc = "Bit 29 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_axi_soft_reset_bit(&mut self) -> ICM_REG_AXI_SOFT_RESET_BIT_W<CMD_SPEC> {
         ICM_REG_AXI_SOFT_RESET_BIT_W::new(self, 29)
     }
     #[doc = "Bit 30 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_axi_rd_wr_cmd(&mut self) -> ICM_REG_AXI_RD_WR_CMD_W<CMD_SPEC> {
         ICM_REG_AXI_RD_WR_CMD_W::new(self, 30)
     }
     #[doc = "Bit 31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_reg_axi_cmd_en(&mut self) -> ICM_REG_AXI_CMD_EN_W<CMD_SPEC> {
         ICM_REG_AXI_CMD_EN_W::new(self, 31)
     }

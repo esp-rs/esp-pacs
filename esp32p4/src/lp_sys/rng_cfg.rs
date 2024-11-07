@@ -52,19 +52,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable rng timer"]
     #[inline(always)]
-    #[must_use]
     pub fn rng_timer_en(&mut self) -> RNG_TIMER_EN_W<RNG_CFG_SPEC> {
         RNG_TIMER_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - configure ng timer pscale"]
     #[inline(always)]
-    #[must_use]
     pub fn rng_timer_pscale(&mut self) -> RNG_TIMER_PSCALE_W<RNG_CFG_SPEC> {
         RNG_TIMER_PSCALE_W::new(self, 1)
     }
     #[doc = "Bit 9 - enable rng_saradc"]
     #[inline(always)]
-    #[must_use]
     pub fn rng_sar_enable(&mut self) -> RNG_SAR_ENABLE_W<RNG_CFG_SPEC> {
         RNG_SAR_ENABLE_W::new(self, 9)
     }

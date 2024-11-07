@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Generate dma_in_suc_eof when sample cnt = spi_eof_num."]
     #[inline(always)]
-    #[must_use]
     pub fn adc_eof_num(&mut self) -> ADC_EOF_NUM_W<DMA_CONF_SPEC> {
         ADC_EOF_NUM_W::new(self, 0)
     }
     #[doc = "Bit 30 - Reset DIG ADC CTRL status."]
     #[inline(always)]
-    #[must_use]
     pub fn adc_reset_fsm(&mut self) -> ADC_RESET_FSM_W<DMA_CONF_SPEC> {
         ADC_RESET_FSM_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit, DIG ADC CTRL uses SPI DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn adc_trans(&mut self) -> ADC_TRANS_W<DMA_CONF_SPEC> {
         ADC_TRANS_W::new(self, 31)
     }

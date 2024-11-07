@@ -35,79 +35,66 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the rxfifo_full_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_full(&mut self) -> RXFIFO_FULL_W<INT_CLR_SPEC> {
         RXFIFO_FULL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the txfifo_empty_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_empty(&mut self) -> TXFIFO_EMPTY_W<INT_CLR_SPEC> {
         TXFIFO_EMPTY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the rxfifo_ovf_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_CLR_SPEC> {
         RXFIFO_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the end_detect_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn end_detect(&mut self) -> END_DETECT_W<INT_CLR_SPEC> {
         END_DETECT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear the slave_tran_comp_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_tran_comp(&mut self) -> SLAVE_TRAN_COMP_W<INT_CLR_SPEC> {
         SLAVE_TRAN_COMP_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the arbitration_lost_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_CLR_SPEC> {
         ARBITRATION_LOST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear the master_tran_comp interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn master_tran_comp(&mut self) -> MASTER_TRAN_COMP_W<INT_CLR_SPEC> {
         MASTER_TRAN_COMP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear the trans_complete_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_CLR_SPEC> {
         TRANS_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to clear the time_out_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn time_out(&mut self) -> TIME_OUT_W<INT_CLR_SPEC> {
         TIME_OUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to clear the trans_start_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<INT_CLR_SPEC> {
         TRANS_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to clear the ack_err_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn nack(&mut self) -> NACK_W<INT_CLR_SPEC> {
         NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the rx_rec_full_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_rec_full(&mut self) -> RX_REC_FULL_W<INT_CLR_SPEC> {
         RX_REC_FULL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to clear the tx_send_empty_int interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_send_empty(&mut self) -> TX_SEND_EMPTY_W<INT_CLR_SPEC> {
         TX_SEND_EMPTY_W::new(self, 12)
     }

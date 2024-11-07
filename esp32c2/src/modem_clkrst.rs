@@ -27,12 +27,12 @@ impl RegisterBlock {
     #[doc = "0x0c - "]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
-        unsafe { &*(self as *const Self).cast::<u8>().add(12).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(12).cast() }
     }
     #[doc = "0x0c - "]
     #[inline(always)]
     pub const fn ble_timer_clk_conf(&self) -> &BLE_TIMER_CLK_CONF {
-        unsafe { &*(self as *const Self).cast::<u8>().add(12).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(12).cast() }
     }
     #[doc = "0x10 - "]
     #[inline(always)]

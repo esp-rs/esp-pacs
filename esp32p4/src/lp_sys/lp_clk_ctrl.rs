@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<LP_CLK_CTRL_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 14 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_fosc_hp_cken(&mut self) -> LP_FOSC_HP_CKEN_W<LP_CLK_CTRL_SPEC> {
         LP_FOSC_HP_CKEN_W::new(self, 14)
     }

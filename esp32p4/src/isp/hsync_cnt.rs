@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the number of clock before hsync and after vsync and line_end when decodes pix data from idi to isp"]
     #[inline(always)]
-    #[must_use]
     pub fn hsync_cnt(&mut self) -> HSYNC_CNT_W<HSYNC_CNT_SPEC> {
         HSYNC_CNT_W::new(self, 0)
     }

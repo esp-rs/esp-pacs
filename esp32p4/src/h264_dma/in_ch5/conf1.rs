@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - RX Channel 5 destination start address"]
     #[inline(always)]
-    #[must_use]
     pub fn block_start_addr(&mut self) -> BLOCK_START_ADDR_W<CONF1_SPEC> {
         BLOCK_START_ADDR_W::new(self, 0)
     }

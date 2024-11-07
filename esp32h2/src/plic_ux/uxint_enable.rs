@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_uxint_enable(&mut self) -> CPU_UXINT_ENABLE_W<UXINT_ENABLE_SPEC> {
         CPU_UXINT_ENABLE_W::new(self, 0)
     }

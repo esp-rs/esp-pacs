@@ -130,85 +130,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SW trigger dcdc on"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_on_req(&mut self) -> DCDC_ON_REQ_W<DCM_CTRL_SPEC> {
         DCDC_ON_REQ_W::new(self, 0)
     }
     #[doc = "Bit 1 - SW trigger dcdc off"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_off_req(&mut self) -> DCDC_OFF_REQ_W<DCM_CTRL_SPEC> {
         DCDC_OFF_REQ_W::new(self, 1)
     }
     #[doc = "Bit 2 - SW trigger dcdc enter lightsleep"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_lightslp_req(&mut self) -> DCDC_LIGHTSLP_REQ_W<DCM_CTRL_SPEC> {
         DCDC_LIGHTSLP_REQ_W::new(self, 2)
     }
     #[doc = "Bit 3 - SW trigger dcdc enter deepsleep"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_deepslp_req(&mut self) -> DCDC_DEEPSLP_REQ_W<DCM_CTRL_SPEC> {
         DCDC_DEEPSLP_REQ_W::new(self, 3)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_done_force(&mut self) -> DCDC_DONE_FORCE_W<DCM_CTRL_SPEC> {
         DCDC_DONE_FORCE_W::new(self, 7)
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_on_force_pu(&mut self) -> DCDC_ON_FORCE_PU_W<DCM_CTRL_SPEC> {
         DCDC_ON_FORCE_PU_W::new(self, 8)
     }
     #[doc = "Bit 9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_on_force_pd(&mut self) -> DCDC_ON_FORCE_PD_W<DCM_CTRL_SPEC> {
         DCDC_ON_FORCE_PD_W::new(self, 9)
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_fb_res_force_pu(&mut self) -> DCDC_FB_RES_FORCE_PU_W<DCM_CTRL_SPEC> {
         DCDC_FB_RES_FORCE_PU_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_fb_res_force_pd(&mut self) -> DCDC_FB_RES_FORCE_PD_W<DCM_CTRL_SPEC> {
         DCDC_FB_RES_FORCE_PD_W::new(self, 11)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_ls_force_pu(&mut self) -> DCDC_LS_FORCE_PU_W<DCM_CTRL_SPEC> {
         DCDC_LS_FORCE_PU_W::new(self, 12)
     }
     #[doc = "Bit 13 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_ls_force_pd(&mut self) -> DCDC_LS_FORCE_PD_W<DCM_CTRL_SPEC> {
         DCDC_LS_FORCE_PD_W::new(self, 13)
     }
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_ds_force_pu(&mut self) -> DCDC_DS_FORCE_PU_W<DCM_CTRL_SPEC> {
         DCDC_DS_FORCE_PU_W::new(self, 14)
     }
     #[doc = "Bit 15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_ds_force_pd(&mut self) -> DCDC_DS_FORCE_PD_W<DCM_CTRL_SPEC> {
         DCDC_DS_FORCE_PD_W::new(self, 15)
     }
     #[doc = "Bit 29 - Enable analog mux to pull PAD TEST_DCDC voltage signal"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_en_amux_test(&mut self) -> DCDC_EN_AMUX_TEST_W<DCM_CTRL_SPEC> {
         DCDC_EN_AMUX_TEST_W::new(self, 29)
     }

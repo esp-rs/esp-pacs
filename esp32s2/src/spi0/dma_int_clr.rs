@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear bit for lack of enough inlink descriptors. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_dscr_empty(&mut self) -> INLINK_DSCR_EMPTY_W<DMA_INT_CLR_SPEC> {
         INLINK_DSCR_EMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for outlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_dscr_error(&mut self) -> OUTLINK_DSCR_ERROR_W<DMA_INT_CLR_SPEC> {
         OUTLINK_DSCR_ERROR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for inlink descriptor error. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn inlink_dscr_error(&mut self) -> INLINK_DSCR_ERROR_W<DMA_INT_CLR_SPEC> {
         INLINK_DSCR_ERROR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The clear bit for completing usage of a inlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn in_done(&mut self) -> IN_DONE_W<DMA_INT_CLR_SPEC> {
         IN_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for receiving error. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<DMA_INT_CLR_SPEC> {
         IN_ERR_EOF_W::new(self, 4)
     }
     #[doc = "Bit 5 - The clear bit for completing receiving all the packets from host. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<DMA_INT_CLR_SPEC> {
         IN_SUC_EOF_W::new(self, 5)
     }
     #[doc = "Bit 6 - The clear bit for completing usage of a outlink descriptor. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn out_done(&mut self) -> OUT_DONE_W<DMA_INT_CLR_SPEC> {
         OUT_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - The clear bit for sending a packet to host done. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<DMA_INT_CLR_SPEC> {
         OUT_EOF_W::new(self, 7)
     }
     #[doc = "Bit 8 - The clear bit for sending all the packets to host done. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<DMA_INT_CLR_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: Clear SPI_INFIFO_FULL_ERR_INT_RAW. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_full_err(&mut self) -> INFIFO_FULL_ERR_W<DMA_INT_CLR_SPEC> {
         INFIFO_FULL_ERR_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: Clear SPI_OUTFIFO_EMPTY_ERR_INT_RAW signal. 0: not valid. Can be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_empty_err(&mut self) -> OUTFIFO_EMPTY_ERR_W<DMA_INT_CLR_SPEC> {
         OUTFIFO_EMPTY_ERR_W::new(self, 10)
     }
     #[doc = "Bit 11 - The clear bit for SPI slave CMD6 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmd6(&mut self) -> SLV_CMD6_W<DMA_INT_CLR_SPEC> {
         SLV_CMD6_W::new(self, 11)
     }
     #[doc = "Bit 12 - The clear bit for SPI slave CMD7 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmd7(&mut self) -> SLV_CMD7_W<DMA_INT_CLR_SPEC> {
         SLV_CMD7_W::new(self, 12)
     }
     #[doc = "Bit 13 - The clear bit for SPI slave CMD8 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmd8(&mut self) -> SLV_CMD8_W<DMA_INT_CLR_SPEC> {
         SLV_CMD8_W::new(self, 13)
     }
     #[doc = "Bit 14 - The clear bit for SPI slave CMD9 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmd9(&mut self) -> SLV_CMD9_W<DMA_INT_CLR_SPEC> {
         SLV_CMD9_W::new(self, 14)
     }
     #[doc = "Bit 15 - The clear bit for SPI slave CMDA interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_cmda(&mut self) -> SLV_CMDA_W<DMA_INT_CLR_SPEC> {
         SLV_CMDA_W::new(self, 15)
     }

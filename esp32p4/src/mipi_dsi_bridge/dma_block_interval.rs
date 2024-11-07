@@ -57,19 +57,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - this field configures the max block_slot_cnt"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_block_slot(&mut self) -> DMA_BLOCK_SLOT_W<DMA_BLOCK_INTERVAL_SPEC> {
         DMA_BLOCK_SLOT_W::new(self, 0)
     }
     #[doc = "Bits 10:27 - this field configures the max block_interval_cnt, block_interval_cnt increased by 1 when block_slot_cnt if full"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_block_interval(&mut self) -> DMA_BLOCK_INTERVAL_W<DMA_BLOCK_INTERVAL_SPEC> {
         DMA_BLOCK_INTERVAL_W::new(self, 10)
     }
     #[doc = "Bit 28 - this bit configures enable of auto reload reg_raw_num_total, 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn raw_num_total_auto_reload(
         &mut self,
     ) -> RAW_NUM_TOTAL_AUTO_RELOAD_W<DMA_BLOCK_INTERVAL_SPEC> {
@@ -77,7 +74,6 @@ impl W {
     }
     #[doc = "Bit 29 - this bit configures enable of interval between dma block transfer, 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<DMA_BLOCK_INTERVAL_SPEC> {
         EN_W::new(self, 29)
     }

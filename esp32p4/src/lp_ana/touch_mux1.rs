@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start(&mut self) -> TOUCH_START_W<TOUCH_MUX1_SPEC> {
         TOUCH_START_W::new(self, 0)
     }
     #[doc = "Bits 15:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_xpd(&mut self) -> TOUCH_XPD_W<TOUCH_MUX1_SPEC> {
         TOUCH_XPD_W::new(self, 15)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This register is for two SPI masters to share the same cs clock and data signals. The bits of one SPI are set if the other SPI is busy the SPI will be hold. 1(3): hold at ¡°idle¡± phase 2: hold at ¡°prepare¡± phase."]
     #[inline(always)]
-    #[must_use]
     pub fn int_hold_ena(&mut self) -> INT_HOLD_ENA_W<EXT3_SPEC> {
         INT_HOLD_ENA_W::new(self, 0)
     }

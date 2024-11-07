@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Link_mac_addr reg"]
     #[inline(always)]
-    #[must_use]
     pub fn link_addr_mac(&mut self) -> LINK_ADDR_MAC_W<REGDMA_LINK_MAC_ADDR_SPEC> {
         LINK_ADDR_MAC_W::new(self, 0)
     }

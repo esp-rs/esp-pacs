@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_xpd_wait(&mut self) -> TSENS_XPD_WAIT_W<SAR_TSENS_CTRL2_SPEC> {
         TSENS_XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_xpd_force(&mut self) -> TSENS_XPD_FORCE_W<SAR_TSENS_CTRL2_SPEC> {
         TSENS_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_clk_inv(&mut self) -> TSENS_CLK_INV_W<SAR_TSENS_CTRL2_SPEC> {
         TSENS_CLK_INV_W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable temperature sensor clock."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_clkgate_en(&mut self) -> TSENS_CLKGATE_EN_W<SAR_TSENS_CTRL2_SPEC> {
         TSENS_CLKGATE_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reset temperature sensor."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_reset(&mut self) -> TSENS_RESET_W<SAR_TSENS_CTRL2_SPEC> {
         TSENS_RESET_W::new(self, 16)
     }

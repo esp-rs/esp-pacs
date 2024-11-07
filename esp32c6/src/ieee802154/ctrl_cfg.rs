@@ -197,43 +197,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn hw_auto_ack_tx_en(&mut self) -> HW_AUTO_ACK_TX_EN_W<CTRL_CFG_SPEC> {
         HW_AUTO_ACK_TX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn hw_enhance_ack_tx_en(&mut self) -> HW_ENHANCE_ACK_TX_EN_W<CTRL_CFG_SPEC> {
         HW_ENHANCE_ACK_TX_EN_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn hw_auto_ack_rx_en(&mut self) -> HW_AUTO_ACK_RX_EN_W<CTRL_CFG_SPEC> {
         HW_AUTO_ACK_RX_EN_W::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn dis_ifs_control(&mut self) -> DIS_IFS_CONTROL_W<CTRL_CFG_SPEC> {
         DIS_IFS_CONTROL_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pan_coordinator(&mut self) -> PAN_COORDINATOR_W<CTRL_CFG_SPEC> {
         PAN_COORDINATOR_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn promiscuous_mode(&mut self) -> PROMISCUOUS_MODE_W<CTRL_CFG_SPEC> {
         PROMISCUOUS_MODE_W::new(self, 7)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn dis_frame_version_rsv_filter(
         &mut self,
     ) -> DIS_FRAME_VERSION_RSV_FILTER_W<CTRL_CFG_SPEC> {
@@ -241,67 +234,56 @@ impl W {
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn autopend_enhance(&mut self) -> AUTOPEND_ENHANCE_W<CTRL_CFG_SPEC> {
         AUTOPEND_ENHANCE_W::new(self, 12)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_enhance(&mut self) -> FILTER_ENHANCE_W<CTRL_CFG_SPEC> {
         FILTER_ENHANCE_W::new(self, 14)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    #[must_use]
     pub fn coex_arb_delay(&mut self) -> COEX_ARB_DELAY_W<CTRL_CFG_SPEC> {
         COEX_ARB_DELAY_W::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn bit_order(&mut self) -> BIT_ORDER_W<CTRL_CFG_SPEC> {
         BIT_ORDER_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn no_rss_trk_enb(&mut self) -> NO_RSS_TRK_ENB_W<CTRL_CFG_SPEC> {
         NO_RSS_TRK_ENB_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn force_rx_enb(&mut self) -> FORCE_RX_ENB_W<CTRL_CFG_SPEC> {
         FORCE_RX_ENB_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_done_trigger_idle(&mut self) -> RX_DONE_TRIGGER_IDLE_W<CTRL_CFG_SPEC> {
         RX_DONE_TRIGGER_IDLE_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf0_enable(&mut self) -> MAC_INF0_ENABLE_W<CTRL_CFG_SPEC> {
         MAC_INF0_ENABLE_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf1_enable(&mut self) -> MAC_INF1_ENABLE_W<CTRL_CFG_SPEC> {
         MAC_INF1_ENABLE_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf2_enable(&mut self) -> MAC_INF2_ENABLE_W<CTRL_CFG_SPEC> {
         MAC_INF2_ENABLE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf3_enable(&mut self) -> MAC_INF3_ENABLE_W<CTRL_CFG_SPEC> {
         MAC_INF3_ENABLE_W::new(self, 31)
     }

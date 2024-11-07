@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DONE_W<INT_CLR_SPEC> {
         DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn err(&mut self) -> ERR_W<INT_CLR_SPEC> {
         ERR_W::new(self, 1)
     }

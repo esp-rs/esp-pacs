@@ -110,97 +110,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_en(&mut self) -> CH1_EN_W<CHEN0_SPEC> {
         CH1_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_en(&mut self) -> CH2_EN_W<CHEN0_SPEC> {
         CH2_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_en(&mut self) -> CH3_EN_W<CHEN0_SPEC> {
         CH3_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_en(&mut self) -> CH4_EN_W<CHEN0_SPEC> {
         CH4_EN_W::new(self, 3)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_en_we(&mut self) -> CH1_EN_WE_W<CHEN0_SPEC> {
         CH1_EN_WE_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_en_we(&mut self) -> CH2_EN_WE_W<CHEN0_SPEC> {
         CH2_EN_WE_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_en_we(&mut self) -> CH3_EN_WE_W<CHEN0_SPEC> {
         CH3_EN_WE_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_en_we(&mut self) -> CH4_EN_WE_W<CHEN0_SPEC> {
         CH4_EN_WE_W::new(self, 11)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_susp(&mut self) -> CH1_SUSP_W<CHEN0_SPEC> {
         CH1_SUSP_W::new(self, 16)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_susp(&mut self) -> CH2_SUSP_W<CHEN0_SPEC> {
         CH2_SUSP_W::new(self, 17)
     }
     #[doc = "Bit 18 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_susp(&mut self) -> CH3_SUSP_W<CHEN0_SPEC> {
         CH3_SUSP_W::new(self, 18)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_susp(&mut self) -> CH4_SUSP_W<CHEN0_SPEC> {
         CH4_SUSP_W::new(self, 19)
     }
     #[doc = "Bit 24 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_susp_we(&mut self) -> CH1_SUSP_WE_W<CHEN0_SPEC> {
         CH1_SUSP_WE_W::new(self, 24)
     }
     #[doc = "Bit 25 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch2_susp_we(&mut self) -> CH2_SUSP_WE_W<CHEN0_SPEC> {
         CH2_SUSP_WE_W::new(self, 25)
     }
     #[doc = "Bit 26 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch3_susp_we(&mut self) -> CH3_SUSP_WE_W<CHEN0_SPEC> {
         CH3_SUSP_WE_W::new(self, 26)
     }
     #[doc = "Bit 27 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch4_susp_we(&mut self) -> CH4_SUSP_WE_W<CHEN0_SPEC> {
         CH4_SUSP_WE_W::new(self, 27)
     }

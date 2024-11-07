@@ -164,7 +164,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - core_x_dram0_pms_constrain_sram_world_0_pms_0"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_0(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -172,7 +171,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - core_x_dram0_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_1(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -180,7 +178,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_x_dram0_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_2(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -188,7 +185,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - core_x_dram0_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_3(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -196,7 +192,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - core_x_dram0_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_0(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -204,7 +199,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_x_dram0_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_1(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -212,7 +206,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - core_x_dram0_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_2(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -220,7 +213,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - core_x_dram0_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_3(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -228,7 +220,6 @@ impl W {
     }
     #[doc = "Bits 24:25 - core_x_dram0_pms_constrain_rom_world_0_pms"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_rom_world_0_pms(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
@@ -236,7 +227,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_x_dram0_pms_constrain_rom_world_1_pms"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_dram0_pms_constrain_rom_world_1_pms(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {

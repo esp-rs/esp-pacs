@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 permits read access to Icache tag memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_i_tag_rd_acs(&mut self) -> PRO_I_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
         PRO_I_TAG_RD_ACS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Setting to 1 permits write access to Icache tag memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_i_tag_wr_acs(&mut self) -> PRO_I_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
         PRO_I_TAG_WR_ACS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Setting to 1 permits read access to Dcache tag memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_d_tag_rd_acs(&mut self) -> PRO_D_TAG_RD_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
         PRO_D_TAG_RD_ACS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Setting to 1 permits write access to Dcache tag memory."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_d_tag_wr_acs(&mut self) -> PRO_D_TAG_WR_ACS_W<CACHE_TAG_ACCESS_1_SPEC> {
         PRO_D_TAG_WR_ACS_W::new(self, 3)
     }

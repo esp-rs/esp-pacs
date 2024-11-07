@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_wdt_divcnt_rst."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_divcnt_rst(&mut self) -> WDT_DIVCNT_RST_W<WDTCONFIG1_SPEC> {
         WDT_DIVCNT_RST_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - reg_wdt_clk_prescale."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC> {
         WDT_CLK_PRESCALE_W::new(self, 16)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i3c_mst_termn_t_ext_low_time(
         &mut self,
     ) -> REG_I3C_MST_TERMN_T_EXT_LOW_TIME_W<SCL_TERMN_T_EXT_LOW_TIME_SPEC> {

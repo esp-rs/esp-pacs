@@ -66,37 +66,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - reg_lstimer0_duty_res."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<CONF_SPEC> {
         DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 4:21 - reg_clk_div_lstimer0."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_div(&mut self) -> CLK_DIV_W<CONF_SPEC> {
         CLK_DIV_W::new(self, 4)
     }
     #[doc = "Bit 22 - reg_lstimer0_pause."]
     #[inline(always)]
-    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<CONF_SPEC> {
         PAUSE_W::new(self, 22)
     }
     #[doc = "Bit 23 - reg_lstimer0_rst."]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RST_W<CONF_SPEC> {
         RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - reg_tick_sel_lstimer0."]
     #[inline(always)]
-    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<CONF_SPEC> {
         TICK_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_lstimer0_para_up."]
     #[inline(always)]
-    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<CONF_SPEC> {
         PARA_UP_W::new(self, 25)
     }

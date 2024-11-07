@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable gdma clock"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma_clk_en(&mut self) -> GDMA_CLK_EN_W<GDMA_CONF_SPEC> {
         GDMA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset gdma module"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma_rst_en(&mut self) -> GDMA_RST_EN_W<GDMA_CONF_SPEC> {
         GDMA_RST_EN_W::new(self, 1)
     }

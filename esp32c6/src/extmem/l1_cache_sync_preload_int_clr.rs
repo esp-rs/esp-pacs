@@ -110,7 +110,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to clear interrupt that occurs only when L1-Cache preload-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_pld_done_int_clr(
         &mut self,
     ) -> L1_CACHE_PLD_DONE_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
@@ -118,7 +117,6 @@ impl W {
     }
     #[doc = "Bit 6 - The bit is used to clear interrupt that occurs only when Cache sync-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sync_done_int_clr(
         &mut self,
     ) -> CACHE_SYNC_DONE_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
@@ -126,7 +124,6 @@ impl W {
     }
     #[doc = "Bit 11 - The bit is used to clear interrupt of L1-Cache preload-operation error."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_pld_err_int_clr(
         &mut self,
     ) -> L1_CACHE_PLD_ERR_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
@@ -134,7 +131,6 @@ impl W {
     }
     #[doc = "Bit 13 - The bit is used to clear interrupt of Cache sync-operation error."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sync_err_int_clr(
         &mut self,
     ) -> CACHE_SYNC_ERR_INT_CLR_W<L1_CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {

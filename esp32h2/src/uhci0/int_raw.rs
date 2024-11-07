@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_start(&mut self) -> RX_START_W<INT_RAW_SPEC> {
         RX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<INT_RAW_SPEC> {
         TX_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_RAW_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_RAW_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
     #[doc = "Bit 4 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<INT_RAW_SPEC> {
         SEND_S_REG_Q_W::new(self, 4)
     }
     #[doc = "Bit 5 - a"]
     #[inline(always)]
-    #[must_use]
     pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<INT_RAW_SPEC> {
         SEND_A_REG_Q_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the interrupt raw bit. Triggered when there are some errors in EOF in the"]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<INT_RAW_SPEC> {
         OUT_EOF_W::new(self, 6)
     }
     #[doc = "Bit 7 - Soft control int raw bit."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl0(&mut self) -> APP_CTRL0_W<INT_RAW_SPEC> {
         APP_CTRL0_W::new(self, 7)
     }
     #[doc = "Bit 8 - Soft control int raw bit."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl1(&mut self) -> APP_CTRL1_W<INT_RAW_SPEC> {
         APP_CTRL1_W::new(self, 8)
     }

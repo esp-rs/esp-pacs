@@ -28,19 +28,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Ledc ch%s gamma entry num."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_gamma_entry_num(&mut self) -> CH_GAMMA_ENTRY_NUM_W<CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_ENTRY_NUM_W::new(self, 0)
     }
     #[doc = "Bit 5 - Ledc ch%s gamma pause, write 1 to pause."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_gamma_pause(&mut self) -> CH_GAMMA_PAUSE_W<CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_PAUSE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Ledc ch%s gamma resume, write 1 to resume."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_gamma_resume(&mut self) -> CH_GAMMA_RESUME_W<CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_RESUME_W::new(self, 6)
     }

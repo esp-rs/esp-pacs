@@ -80,13 +80,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - redundant registers for sdio_slave"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_slave_rdn_ena(&mut self) -> SDIO_SLAVE_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {
         SDIO_SLAVE_RDN_ENA_W::new(self, 1)
     }
     #[doc = "Bit 3 - redundant registers for sdio_slave"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_slave_sdio_clk_rdn_ena(
         &mut self,
     ) -> SDIO_SLAVE_SDIO_CLK_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {
@@ -94,7 +92,6 @@ impl W {
     }
     #[doc = "Bit 5 - redundant registers for sdio_slave"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_slave_sdclk_pad_rdn_ena(
         &mut self,
     ) -> SDIO_SLAVE_SDCLK_PAD_RDN_ENA_W<SDIO_SLAVE_ECO_CONF_SPEC> {

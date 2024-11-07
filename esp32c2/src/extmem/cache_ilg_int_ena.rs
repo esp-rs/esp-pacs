@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable interrupt by sync configurations fault."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_sync_op_fault(&mut self) -> ICACHE_SYNC_OP_FAULT_W<CACHE_ILG_INT_ENA_SPEC> {
         ICACHE_SYNC_OP_FAULT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable interrupt by preload configurations fault."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_preload_op_fault(&mut self) -> ICACHE_PRELOAD_OP_FAULT_W<CACHE_ILG_INT_ENA_SPEC> {
         ICACHE_PRELOAD_OP_FAULT_W::new(self, 1)
     }
     #[doc = "Bit 5 - The bit is used to enable interrupt by mmu entry fault."]
     #[inline(always)]
-    #[must_use]
     pub fn mmu_entry_fault(&mut self) -> MMU_ENTRY_FAULT_W<CACHE_ILG_INT_ENA_SPEC> {
         MMU_ENTRY_FAULT_W::new(self, 5)
     }
     #[doc = "Bit 7 - The bit is used to enable interrupt by ibus counter overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn ibus_cnt_ovf(&mut self) -> IBUS_CNT_OVF_W<CACHE_ILG_INT_ENA_SPEC> {
         IBUS_CNT_OVF_W::new(self, 7)
     }
     #[doc = "Bit 8 - The bit is used to enable interrupt by dbus counter overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn dbus_cnt_ovf(&mut self) -> DBUS_CNT_OVF_W<CACHE_ILG_INT_ENA_SPEC> {
         DBUS_CNT_OVF_W::new(self, 8)
     }

@@ -38,25 +38,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0\\] set 1 start trace."]
     #[inline(always)]
-    #[must_use]
     pub fn on(&mut self) -> ON_W<TRIGGER_SPEC> {
         ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - set 1 stop trace."]
     #[inline(always)]
-    #[must_use]
     pub fn off(&mut self) -> OFF_W<TRIGGER_SPEC> {
         OFF_W::new(self, 1)
     }
     #[doc = "Bit 2 - if this reg is 1, trace will loop wrtie trace_mem. If is 0, when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_loop(&mut self) -> MEM_LOOP_W<TRIGGER_SPEC> {
         MEM_LOOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - enable encoder auto-restart, when lost package, the encoder will end, if enable auto-restart, when fifo empty, encoder will restart and send a sync package."]
     #[inline(always)]
-    #[must_use]
     pub fn restart_ena(&mut self) -> RESTART_ENA_W<TRIGGER_SPEC> {
         RESTART_ENA_W::new(self, 3)
     }

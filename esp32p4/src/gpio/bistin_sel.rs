@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - High speed sdio pad bist in pad sel 0:pad39, 1: pad40..."]
     #[inline(always)]
-    #[must_use]
     pub fn bistin_sel(&mut self) -> BISTIN_SEL_W<BISTIN_SEL_SPEC> {
         BISTIN_SEL_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - The work mode bits of SHA Calculator in ECDSA Accelerator. 1: SHA-224. 2: SHA-256. Others: invalid."]
     #[inline(always)]
-    #[must_use]
     pub fn sha_mode(&mut self) -> SHA_MODE_W<SHA_MODE_SPEC> {
         SHA_MODE_W::new(self, 0)
     }

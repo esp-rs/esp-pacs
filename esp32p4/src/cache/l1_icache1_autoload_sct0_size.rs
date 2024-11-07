@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the first section for autoload operation on L1-ICache1. Note that it should be used together with L1_ICACHE1_AUTOLOAD_SCT0_ADDR and L1_ICACHE_AUTOLOAD_SCT0_ENA."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_autoload_sct0_size(
         &mut self,
     ) -> L1_ICACHE1_AUTOLOAD_SCT0_SIZE_W<L1_ICACHE1_AUTOLOAD_SCT0_SIZE_SPEC> {

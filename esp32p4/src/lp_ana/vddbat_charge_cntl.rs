@@ -71,19 +71,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn vddbat_charge_charger(&mut self) -> VDDBAT_CHARGE_CHARGER_W<VDDBAT_CHARGE_CNTL_SPEC> {
         VDDBAT_CHARGE_CHARGER_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn vddbat_charge_cnt_clr(&mut self) -> VDDBAT_CHARGE_CNT_CLR_W<VDDBAT_CHARGE_CNTL_SPEC> {
         VDDBAT_CHARGE_CNT_CLR_W::new(self, 11)
     }
     #[doc = "Bits 12:21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn vddbat_charge_upvoltage_target(
         &mut self,
     ) -> VDDBAT_CHARGE_UPVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC> {
@@ -91,7 +88,6 @@ impl W {
     }
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn vddbat_charge_undervoltage_target(
         &mut self,
     ) -> VDDBAT_CHARGE_UNDERVOLTAGE_TARGET_W<VDDBAT_CHARGE_CNTL_SPEC> {

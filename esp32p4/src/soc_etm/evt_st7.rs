@@ -135,49 +135,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents DMA2D_evt_in_suc_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_in_suc_eof_ch1_st(&mut self) -> DMA2D_EVT_IN_SUC_EOF_CH1_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_IN_SUC_EOF_CH1_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents DMA2D_evt_out_done_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_done_ch0_st(&mut self) -> DMA2D_EVT_OUT_DONE_CH0_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_DONE_CH0_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents DMA2D_evt_out_done_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_done_ch1_st(&mut self) -> DMA2D_EVT_OUT_DONE_CH1_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_DONE_CH1_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents DMA2D_evt_out_done_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_done_ch2_st(&mut self) -> DMA2D_EVT_OUT_DONE_CH2_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_DONE_CH2_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents DMA2D_evt_out_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_eof_ch0_st(&mut self) -> DMA2D_EVT_OUT_EOF_CH0_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_EOF_CH0_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents DMA2D_evt_out_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_eof_ch1_st(&mut self) -> DMA2D_EVT_OUT_EOF_CH1_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_EOF_CH1_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents DMA2D_evt_out_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_eof_ch2_st(&mut self) -> DMA2D_EVT_OUT_EOF_CH2_ST_W<EVT_ST7_SPEC> {
         DMA2D_EVT_OUT_EOF_CH2_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents DMA2D_evt_out_total_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_total_eof_ch0_st(
         &mut self,
     ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH0_ST_W<EVT_ST7_SPEC> {
@@ -185,7 +177,6 @@ impl W {
     }
     #[doc = "Bit 8 - Represents DMA2D_evt_out_total_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_total_eof_ch1_st(
         &mut self,
     ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH1_ST_W<EVT_ST7_SPEC> {
@@ -193,7 +184,6 @@ impl W {
     }
     #[doc = "Bit 9 - Represents DMA2D_evt_out_total_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_evt_out_total_eof_ch2_st(
         &mut self,
     ) -> DMA2D_EVT_OUT_TOTAL_EOF_CH2_ST_W<EVT_ST7_SPEC> {

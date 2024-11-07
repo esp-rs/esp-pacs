@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - These bits are used to configure frequency dividing coefficients of the external CLKOUT pin."]
     #[inline(always)]
-    #[must_use]
     pub fn cd(&mut self) -> CD_W<CLOCK_DIVIDER_SPEC> {
         CD_W::new(self, 0)
     }
     #[doc = "Bit 8 - This bit can be configured under reset mode. 1: Disable the external CLKOUT pin; 0: Enable the external CLKOUT pin"]
     #[inline(always)]
-    #[must_use]
     pub fn clock_off(&mut self) -> CLOCK_OFF_W<CLOCK_DIVIDER_SPEC> {
         CLOCK_OFF_W::new(self, 8)
     }

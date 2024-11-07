@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_min_slp_val(&mut self) -> LP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC> {
         LP_MIN_SLP_VAL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_min_slp_val(&mut self) -> HP_MIN_SLP_VAL_W<SLP_WAKEUP_CNTL3_SPEC> {
         HP_MIN_SLP_VAL_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_prt_sel(&mut self) -> SLEEP_PRT_SEL_W<SLP_WAKEUP_CNTL3_SPEC> {
         SLEEP_PRT_SEL_W::new(self, 16)
     }

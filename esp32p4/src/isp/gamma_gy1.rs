@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the point 3 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_g_y03(&mut self) -> GAMMA_G_Y03_W<GAMMA_GY1_SPEC> {
         GAMMA_G_Y03_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures the point 2 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_g_y02(&mut self) -> GAMMA_G_Y02_W<GAMMA_GY1_SPEC> {
         GAMMA_G_Y02_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures the point 1 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_g_y01(&mut self) -> GAMMA_G_Y01_W<GAMMA_GY1_SPEC> {
         GAMMA_G_Y01_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures the point 0 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_g_y00(&mut self) -> GAMMA_G_Y00_W<GAMMA_GY1_SPEC> {
         GAMMA_G_Y00_W::new(self, 24)
     }

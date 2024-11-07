@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tcm_parity_err_int_ena(&mut self) -> TCM_PARITY_ERR_INT_ENA_W<TCM_INT_ENA_SPEC> {
         TCM_PARITY_ERR_INT_ENA_W::new(self, 31)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The value would replace the alpha value in received pixel for Scaling and Rotating engine when PPA_SR_RX_ALPHA_CONF_EN is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_rx_fix_alpha(&mut self) -> SR_RX_FIX_ALPHA_W<SR_FIX_ALPHA_SPEC> {
         SR_RX_FIX_ALPHA_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Alpha mode. 0/3: not replace alpha. 1: replace alpha with PPA_SR_FIX_ALPHA. 2: Original alpha multiply with PPA_SR_FIX_ALPHA/256."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_rx_alpha_mod(&mut self) -> SR_RX_ALPHA_MOD_W<SR_FIX_ALPHA_SPEC> {
         SR_RX_ALPHA_MOD_W::new(self, 8)
     }
     #[doc = "Bit 10 - Set this bit to invert the original alpha value. When RX color mode is RGB565/RGB88. The original alpha value is 255."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_rx_alpha_inv(&mut self) -> SR_RX_ALPHA_INV_W<SR_FIX_ALPHA_SPEC> {
         SR_RX_ALPHA_INV_W::new(self, 10)
     }

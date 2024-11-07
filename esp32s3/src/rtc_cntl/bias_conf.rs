@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_idle(&mut self) -> BIAS_BUF_IDLE_W<BIAS_CONF_SPEC> {
         BIAS_BUF_IDLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_wake(&mut self) -> BIAS_BUF_WAKE_W<BIAS_CONF_SPEC> {
         BIAS_BUF_WAKE_W::new(self, 11)
     }
     #[doc = "Bit 12 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_deep_slp(&mut self) -> BIAS_BUF_DEEP_SLP_W<BIAS_CONF_SPEC> {
         BIAS_BUF_DEEP_SLP_W::new(self, 12)
     }
     #[doc = "Bit 13 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_buf_monitor(&mut self) -> BIAS_BUF_MONITOR_W<BIAS_CONF_SPEC> {
         BIAS_BUF_MONITOR_W::new(self, 13)
     }
     #[doc = "Bit 14 - xpd cur when rtc in sleep_state"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_cur_deep_slp(&mut self) -> PD_CUR_DEEP_SLP_W<BIAS_CONF_SPEC> {
         PD_CUR_DEEP_SLP_W::new(self, 14)
     }
     #[doc = "Bit 15 - xpd cur when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_cur_monitor(&mut self) -> PD_CUR_MONITOR_W<BIAS_CONF_SPEC> {
         PD_CUR_MONITOR_W::new(self, 15)
     }
     #[doc = "Bit 16 - bias_sleep when rtc in sleep_state"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_sleep_deep_slp(&mut self) -> BIAS_SLEEP_DEEP_SLP_W<BIAS_CONF_SPEC> {
         BIAS_SLEEP_DEEP_SLP_W::new(self, 16)
     }
     #[doc = "Bit 17 - bias_sleep when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn bias_sleep_monitor(&mut self) -> BIAS_SLEEP_MONITOR_W<BIAS_CONF_SPEC> {
         BIAS_SLEEP_MONITOR_W::new(self, 17)
     }
     #[doc = "Bits 18:21 - DBG_ATTEN when rtc in sleep state"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_atten_deep_slp(&mut self) -> DBG_ATTEN_DEEP_SLP_W<BIAS_CONF_SPEC> {
         DBG_ATTEN_DEEP_SLP_W::new(self, 18)
     }
     #[doc = "Bits 22:25 - DBG_ATTEN when rtc in monitor state"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_atten_monitor(&mut self) -> DBG_ATTEN_MONITOR_W<BIAS_CONF_SPEC> {
         DBG_ATTEN_MONITOR_W::new(self, 22)
     }
     #[doc = "Bits 26:29 - No public"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_atten_wakeup(&mut self) -> DBG_ATTEN_WAKEUP_W<BIAS_CONF_SPEC> {
         DBG_ATTEN_WAKEUP_W::new(self, 26)
     }

@@ -22,9 +22,9 @@ pub type SAR_TSENS_CLK_DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 pub type SAR_TSENS_POWER_UP_R = crate::BitReader;
 #[doc = "Field `SAR_TSENS_POWER_UP` writer - temperature sensor power up"]
 pub type SAR_TSENS_POWER_UP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SAR_TSENS_POWER_UP_FORCE` reader - 1: dump out &amp; power up controlled by SW 0: by FSM"]
+#[doc = "Field `SAR_TSENS_POWER_UP_FORCE` reader - 1: dump out & power up controlled by SW 0: by FSM"]
 pub type SAR_TSENS_POWER_UP_FORCE_R = crate::BitReader;
-#[doc = "Field `SAR_TSENS_POWER_UP_FORCE` writer - 1: dump out &amp; power up controlled by SW 0: by FSM"]
+#[doc = "Field `SAR_TSENS_POWER_UP_FORCE` writer - 1: dump out & power up controlled by SW 0: by FSM"]
 pub type SAR_TSENS_POWER_UP_FORCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SAR_TSENS_DUMP_OUT` reader - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
 pub type SAR_TSENS_DUMP_OUT_R = crate::BitReader;
@@ -61,7 +61,7 @@ impl R {
     pub fn sar_tsens_power_up(&self) -> SAR_TSENS_POWER_UP_R {
         SAR_TSENS_POWER_UP_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - 1: dump out &amp; power up controlled by SW 0: by FSM"]
+    #[doc = "Bit 23 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
     pub fn sar_tsens_power_up_force(&self) -> SAR_TSENS_POWER_UP_FORCE_R {
         SAR_TSENS_POWER_UP_FORCE_R::new(((self.bits >> 23) & 1) != 0)
@@ -90,37 +90,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - enable temperature sensor to send out interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_int_en(&mut self) -> SAR_TSENS_INT_EN_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_INT_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - invert temperature sensor data"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_in_inv(&mut self) -> SAR_TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - temperature sensor clock divider"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_clk_div(&mut self) -> SAR_TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - temperature sensor power up"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_power_up(&mut self) -> SAR_TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_POWER_UP_W::new(self, 22)
     }
-    #[doc = "Bit 23 - 1: dump out &amp; power up controlled by SW 0: by FSM"]
+    #[doc = "Bit 23 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_power_up_force(&mut self) -> SAR_TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_POWER_UP_FORCE_W::new(self, 23)
     }
     #[doc = "Bit 24 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_tsens_dump_out(&mut self) -> SAR_TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_DUMP_OUT_W::new(self, 24)
     }

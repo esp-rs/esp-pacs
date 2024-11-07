@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the second start virtual address of data prelock, which is combined with ICACHE_PRELOCK_SCT1_SIZE_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn icache_prelock_sct1_addr(
         &mut self,
     ) -> ICACHE_PRELOCK_SCT1_ADDR_W<ICACHE_PRELOCK_SCT1_ADDR_SPEC> {

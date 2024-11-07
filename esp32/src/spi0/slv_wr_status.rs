@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - In the slave mode this register are the status register for the master to write into. In the master mode this register are the higher 32bits in the 64 bits address condition."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wr_st(&mut self) -> SLV_WR_ST_W<SLV_WR_STATUS_SPEC> {
         SLV_WR_ST_W::new(self, 0)
     }

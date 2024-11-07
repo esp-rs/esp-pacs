@@ -13,7 +13,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn target(&mut self, n: u8) -> TARGET_W<INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
@@ -21,19 +20,16 @@ impl W {
     }
     #[doc = "Bit 0 - interupt0 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn target0(&mut self) -> TARGET_W<INT_CLR_SPEC> {
         TARGET_W::new(self, 0)
     }
     #[doc = "Bit 1 - interupt1 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn target1(&mut self) -> TARGET_W<INT_CLR_SPEC> {
         TARGET_W::new(self, 1)
     }
     #[doc = "Bit 2 - interupt2 clear"]
     #[inline(always)]
-    #[must_use]
     pub fn target2(&mut self) -> TARGET_W<INT_CLR_SPEC> {
         TARGET_W::new(self, 2)
     }
@@ -47,7 +43,7 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 impl crate::Writable for INT_CLR_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x07;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
 impl crate::Resettable for INT_CLR_SPEC {

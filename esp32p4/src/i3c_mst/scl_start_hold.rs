@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - I2C_SCL_START_HOLD_TIME"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_scl_start_hold_time(&mut self) -> REG_SCL_START_HOLD_TIME_W<SCL_START_HOLD_SPEC> {
         REG_SCL_START_HOLD_TIME_W::new(self, 0)
     }
     #[doc = "Bits 9:10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_start_det_hold_time(&mut self) -> REG_START_DET_HOLD_TIME_W<SCL_START_HOLD_SPEC> {
         REG_START_DET_HOLD_TIME_W::new(self, 9)
     }

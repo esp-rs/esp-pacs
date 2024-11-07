@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field indicates which one 32KHz clock will be used by MODEM_SYSTEM and timergroup. 0: OSC32K(default), 1: XTAL32K, 2/3: 32KHz from pad GPIO0."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_32k_sel(&mut self) -> CLK_32K_SEL_W<CTRL_32K_CONF_SPEC> {
         CLK_32K_SEL_W::new(self, 0)
     }

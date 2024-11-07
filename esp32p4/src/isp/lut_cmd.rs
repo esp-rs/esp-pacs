@@ -15,19 +15,16 @@ impl core::fmt::Debug for crate::generic::Reg<LUT_CMD_SPEC> {
 impl W {
     #[doc = "Bits 0:11 - this field configures the lut access addr, when select lsc lut, \\[11:10\\]:00 sel gb_b lut, 01 sel r_gr lut"]
     #[inline(always)]
-    #[must_use]
     pub fn lut_addr(&mut self) -> LUT_ADDR_W<LUT_CMD_SPEC> {
         LUT_ADDR_W::new(self, 0)
     }
     #[doc = "Bits 12:15 - this field configures the lut selection. 0000:LSC LUT 0001:DPC LUT"]
     #[inline(always)]
-    #[must_use]
     pub fn lut_num(&mut self) -> LUT_NUM_W<LUT_CMD_SPEC> {
         LUT_NUM_W::new(self, 12)
     }
     #[doc = "Bit 16 - this bit configures the access event of lut. 0:rd 1: wr"]
     #[inline(always)]
-    #[must_use]
     pub fn lut_cmd(&mut self) -> LUT_CMD_W<LUT_CMD_SPEC> {
         LUT_CMD_W::new(self, 16)
     }

@@ -90,7 +90,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO28_EN` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_en(&mut self, n: u8) -> GPIO_EN_W<ETM_TASK_P7_CFG_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
@@ -98,19 +97,16 @@ impl W {
     }
     #[doc = "Bit 0 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio28_en(&mut self) -> GPIO_EN_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_EN_W::new(self, 0)
     }
     #[doc = "Bit 8 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio29_en(&mut self) -> GPIO_EN_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_EN_W::new(self, 8)
     }
     #[doc = "Bit 16 - Enable bit of GPIO response etm task."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio30_en(&mut self) -> GPIO_EN_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_EN_W::new(self, 16)
     }
@@ -118,7 +114,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO28_SEL` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_sel(&mut self, n: u8) -> GPIO_SEL_W<ETM_TASK_P7_CFG_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
@@ -126,19 +121,16 @@ impl W {
     }
     #[doc = "Bits 1:3 - GPIO choose a etm task channel."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio28_sel(&mut self) -> GPIO_SEL_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_SEL_W::new(self, 1)
     }
     #[doc = "Bits 9:11 - GPIO choose a etm task channel."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio29_sel(&mut self) -> GPIO_SEL_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_SEL_W::new(self, 9)
     }
     #[doc = "Bits 17:19 - GPIO choose a etm task channel."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio30_sel(&mut self) -> GPIO_SEL_W<ETM_TASK_P7_CFG_SPEC> {
         GPIO_SEL_W::new(self, 17)
     }

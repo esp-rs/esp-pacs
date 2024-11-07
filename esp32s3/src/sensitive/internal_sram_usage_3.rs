@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by mac dump."]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_mac_dump_usage(
         &mut self,
     ) -> INTERNAL_SRAM_MAC_DUMP_USAGE_W<INTERNAL_SRAM_USAGE_3_SPEC> {

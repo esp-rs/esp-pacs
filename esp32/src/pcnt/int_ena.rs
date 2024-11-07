@@ -83,7 +83,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -91,49 +90,41 @@ impl W {
     }
     #[doc = "Bit 0 - This is the interrupt enable bit for channel0 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 0)
     }
     #[doc = "Bit 1 - This is the interrupt enable bit for channel1 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 1)
     }
     #[doc = "Bit 2 - This is the interrupt enable bit for channel2 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 2)
     }
     #[doc = "Bit 3 - This is the interrupt enable bit for channel3 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the interrupt enable bit for channel4 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u4(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is the interrupt enable bit for channel5 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u5(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the interrupt enable bit for channel6 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u6(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 6)
     }
     #[doc = "Bit 7 - This is the interrupt enable bit for channel7 event."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thr_event_u7(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 7)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_spi1_dma_int_map(&mut self) -> PRO_SPI1_DMA_INT_MAP_W<PRO_SPI1_DMA_INT_MAP_SPEC> {
         PRO_SPI1_DMA_INT_MAP_W::new(self, 0)
     }

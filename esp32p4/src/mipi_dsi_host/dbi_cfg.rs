@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn in_dbi_conf(&mut self) -> IN_DBI_CONF_W<DBI_CFG_SPEC> {
         IN_DBI_CONF_W::new(self, 0)
     }
     #[doc = "Bits 8:11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn out_dbi_conf(&mut self) -> OUT_DBI_CONF_W<DBI_CFG_SPEC> {
         OUT_DBI_CONF_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn lut_size_conf(&mut self) -> LUT_SIZE_CONF_W<DBI_CFG_SPEC> {
         LUT_SIZE_CONF_W::new(self, 16)
     }

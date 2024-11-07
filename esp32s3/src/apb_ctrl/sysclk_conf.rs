@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<SYSCLK_CONF_SPEC> {
         PRE_DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bit 10 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_320m_en(&mut self) -> CLK_320M_EN_W<SYSCLK_CONF_SPEC> {
         CLK_320M_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<SYSCLK_CONF_SPEC> {
         CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_tick_cnt(&mut self) -> RST_TICK_CNT_W<SYSCLK_CONF_SPEC> {
         RST_TICK_CNT_W::new(self, 12)
     }

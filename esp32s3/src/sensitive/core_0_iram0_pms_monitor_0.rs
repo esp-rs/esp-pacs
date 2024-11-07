@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core0 iram0 permission monitor register"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_iram0_pms_monitor_lock(
         &mut self,
     ) -> CORE_0_IRAM0_PMS_MONITOR_LOCK_W<CORE_0_IRAM0_PMS_MONITOR_0_SPEC> {

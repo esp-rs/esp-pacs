@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn sec_key0(&mut self) -> SEC_KEY0_W<SEC_KEY0_SPEC> {
         SEC_KEY0_W::new(self, 0)
     }

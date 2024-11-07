@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register stores the data that need to be pushed into DMA Tx FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_wdata_ch0(&mut self) -> OUTFIFO_WDATA_CH0_W<PUSH_SPEC> {
         OUTFIFO_WDATA_CH0_W::new(self, 0)
     }
     #[doc = "Bit 10 - Set this bit to push data into DMA Tx FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_push_ch0(&mut self) -> OUTFIFO_PUSH_CH0_W<PUSH_SPEC> {
         OUTFIFO_PUSH_CH0_W::new(self, 10)
     }

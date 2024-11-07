@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 22:31"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<SDIO_ACT_CONF_SPEC> {
         SDIO_ACT_DNUM_W::new(self, 22)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This register is used to clear ch0 of rx crc result"]
     #[inline(always)]
-    #[must_use]
     pub fn in_crc_clear(&mut self) -> IN_CRC_CLEAR_W<IN_CRC_CLEAR_SPEC> {
         IN_CRC_CLEAR_W::new(self, 0)
     }

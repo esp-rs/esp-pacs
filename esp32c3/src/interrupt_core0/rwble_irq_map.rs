@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_rwble_irq_map"]
     #[inline(always)]
-    #[must_use]
     pub fn rwble_irq_map(&mut self) -> RWBLE_IRQ_MAP_W<RWBLE_IRQ_MAP_SPEC> {
         RWBLE_IRQ_MAP_W::new(self, 0)
     }

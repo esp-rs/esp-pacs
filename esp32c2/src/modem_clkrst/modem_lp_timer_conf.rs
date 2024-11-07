@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_sel_rtc_slow(&mut self) -> LP_TIMER_SEL_RTC_SLOW_W<MODEM_LP_TIMER_CONF_SPEC> {
         LP_TIMER_SEL_RTC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_sel_8m(&mut self) -> LP_TIMER_SEL_8M_W<MODEM_LP_TIMER_CONF_SPEC> {
         LP_TIMER_SEL_8M_W::new(self, 1)
     }
     #[doc = "Bit 2 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_sel_xtal(&mut self) -> LP_TIMER_SEL_XTAL_W<MODEM_LP_TIMER_CONF_SPEC> {
         LP_TIMER_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_sel_xtal32k(&mut self) -> LP_TIMER_SEL_XTAL32K_W<MODEM_LP_TIMER_CONF_SPEC> {
         LP_TIMER_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_clk_div_num(&mut self) -> LP_TIMER_CLK_DIV_NUM_W<MODEM_LP_TIMER_CONF_SPEC> {
         LP_TIMER_CLK_DIV_NUM_W::new(self, 4)
     }

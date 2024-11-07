@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_water_level(&mut self) -> TXDMA_WATER_LEVEL_W<TXDMA_CTRL_STATE_SPEC> {
         TXDMA_WATER_LEVEL_W::new(self, 0)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_fill_entry(&mut self) -> TXDMA_FILL_ENTRY_W<TXDMA_CTRL_STATE_SPEC> {
         TXDMA_FILL_ENTRY_W::new(self, 4)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_state(&mut self) -> TXDMA_STATE_W<TXDMA_CTRL_STATE_SPEC> {
         TXDMA_STATE_W::new(self, 16)
     }
     #[doc = "Bits 24:30"]
     #[inline(always)]
-    #[must_use]
     pub fn txdma_fetch_byte_cnt(&mut self) -> TXDMA_FETCH_BYTE_CNT_W<TXDMA_CTRL_STATE_SPEC> {
         TXDMA_FETCH_BYTE_CNT_W::new(self, 24)
     }

@@ -67,13 +67,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_sclk_div_num(&mut self) -> UART2_SCLK_DIV_NUM_W<PERI_CLK_CTRL113_SPEC> {
         UART2_SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_sclk_div_numerator(
         &mut self,
     ) -> UART2_SCLK_DIV_NUMERATOR_W<PERI_CLK_CTRL113_SPEC> {
@@ -81,7 +79,6 @@ impl W {
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_sclk_div_denominator(
         &mut self,
     ) -> UART2_SCLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL113_SPEC> {
@@ -89,13 +86,11 @@ impl W {
     }
     #[doc = "Bits 24:25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart3_clk_src_sel(&mut self) -> UART3_CLK_SRC_SEL_W<PERI_CLK_CTRL113_SPEC> {
         UART3_CLK_SRC_SEL_W::new(self, 24)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart3_clk_en(&mut self) -> UART3_CLK_EN_W<PERI_CLK_CTRL113_SPEC> {
         UART3_CLK_EN_W::new(self, 26)
     }

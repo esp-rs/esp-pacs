@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register is used to configure how many cycles SCL remains high."]
     #[inline(always)]
-    #[must_use]
     pub fn period(&mut self) -> PERIOD_W<SCL_HIGH_SPEC> {
         PERIOD_W::new(self, 0)
     }

@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - This bits decides which one operation mode will be used. 3'd0: AES-EN-128, 3'd1: AES-EN-192, 3'd2: AES-EN-256, 3'd4: AES-DE-128, 3'd5: AES-DE-192, 3'd6: AES-DE-256."]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> MODE_W<MODE_SPEC> {
         MODE_W::new(self, 0)
     }

@@ -50,7 +50,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function on L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_prelock_sct0_en(
         &mut self,
     ) -> L1_ICACHE0_PRELOCK_SCT0_EN_W<L1_ICACHE0_PRELOCK_CONF_SPEC> {
@@ -58,7 +57,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function on L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_prelock_sct1_en(
         &mut self,
     ) -> L1_ICACHE0_PRELOCK_SCT1_EN_W<L1_ICACHE0_PRELOCK_CONF_SPEC> {
@@ -66,7 +64,6 @@ impl W {
     }
     #[doc = "Bits 2:5 - The bit is used to set the gid of l1 icache0 prelock."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_prelock_rgid(
         &mut self,
     ) -> L1_ICACHE0_PRELOCK_RGID_W<L1_ICACHE0_PRELOCK_CONF_SPEC> {

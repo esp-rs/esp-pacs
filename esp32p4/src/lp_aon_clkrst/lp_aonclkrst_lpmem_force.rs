@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lpmem_clk_force_on(
         &mut self,
     ) -> LP_AONCLKRST_LPMEM_CLK_FORCE_ON_W<LP_AONCLKRST_LPMEM_FORCE_SPEC> {

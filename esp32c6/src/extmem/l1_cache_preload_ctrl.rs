@@ -50,13 +50,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L1-Cache. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_preload_ena(&mut self) -> L1_CACHE_PRELOAD_ENA_W<L1_CACHE_PRELOAD_CTRL_SPEC> {
         L1_CACHE_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_preload_order(
         &mut self,
     ) -> L1_CACHE_PRELOAD_ORDER_W<L1_CACHE_PRELOAD_CTRL_SPEC> {

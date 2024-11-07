@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - When input SCL's pulse width is smaller than this register value I2C ignores this pulse."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_filter_thres(&mut self) -> SDA_FILTER_THRES_W<SDA_FILTER_CFG_SPEC> {
         SDA_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bit 3 - This is the filter enable bit for SDA."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_filter_en(&mut self) -> SDA_FILTER_EN_W<SDA_FILTER_CFG_SPEC> {
         SDA_FILTER_EN_W::new(self, 3)
     }

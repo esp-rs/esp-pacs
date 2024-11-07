@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register controls the range of the counter in low speed timer0. the counter range is \\[0 2**reg_lstimer0_lim\\] the max bit width for counter is 20."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<CONF_SPEC> {
         DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 5:22 - This register is used to configure parameter for divider in low speed timer0 the least significant eight bits represent the decimal part."]
     #[inline(always)]
-    #[must_use]
     pub fn div_num(&mut self) -> DIV_NUM_W<CONF_SPEC> {
         DIV_NUM_W::new(self, 5)
     }
     #[doc = "Bit 23 - This bit is used to pause the counter in low speed timer0."]
     #[inline(always)]
-    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<CONF_SPEC> {
         PAUSE_W::new(self, 23)
     }
     #[doc = "Bit 24 - This bit is used to reset low speed timer0 the counter will be 0 after reset."]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RST_W<CONF_SPEC> {
         RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - This bit is used to choose slow_clk or ref_tick for low speed timer0. 1'b1:slow_clk 0:ref_tick"]
     #[inline(always)]
-    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<CONF_SPEC> {
         TICK_SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to update reg_div_num_lstime0 and reg_lstimer0_lim."]
     #[inline(always)]
-    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<CONF_SPEC> {
         PARA_UP_W::new(self, 26)
     }

@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SHA1_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start an SHA-1 operation on the first message block."]
     #[inline(always)]
-    #[must_use]
     pub fn sha1_start(&mut self) -> SHA1_START_W<SHA1_START_SPEC> {
         SHA1_START_W::new(self, 0)
     }

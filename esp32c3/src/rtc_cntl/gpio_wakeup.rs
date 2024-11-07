@@ -162,85 +162,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - clear rtc gpio wakeup flag"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_wakeup_status_clr(&mut self) -> GPIO_WAKEUP_STATUS_CLR_W<GPIO_WAKEUP_SPEC> {
         GPIO_WAKEUP_STATUS_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - enable rtc io clk gate"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin_clk_gate(&mut self) -> GPIO_PIN_CLK_GATE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN_CLK_GATE_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin5_int_type(&mut self) -> GPIO_PIN5_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN5_INT_TYPE_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin4_int_type(&mut self) -> GPIO_PIN4_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN4_INT_TYPE_W::new(self, 11)
     }
     #[doc = "Bits 14:16 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin3_int_type(&mut self) -> GPIO_PIN3_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN3_INT_TYPE_W::new(self, 14)
     }
     #[doc = "Bits 17:19 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin2_int_type(&mut self) -> GPIO_PIN2_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN2_INT_TYPE_W::new(self, 17)
     }
     #[doc = "Bits 20:22 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin1_int_type(&mut self) -> GPIO_PIN1_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN1_INT_TYPE_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - configure gpio wakeup type"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin0_int_type(&mut self) -> GPIO_PIN0_INT_TYPE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN0_INT_TYPE_W::new(self, 23)
     }
     #[doc = "Bit 26 - enable wakeup from rtc gpio5"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin5_wakeup_enable(&mut self) -> GPIO_PIN5_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN5_WAKEUP_ENABLE_W::new(self, 26)
     }
     #[doc = "Bit 27 - enable wakeup from rtc gpio4"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin4_wakeup_enable(&mut self) -> GPIO_PIN4_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN4_WAKEUP_ENABLE_W::new(self, 27)
     }
     #[doc = "Bit 28 - enable wakeup from rtc gpio3"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin3_wakeup_enable(&mut self) -> GPIO_PIN3_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN3_WAKEUP_ENABLE_W::new(self, 28)
     }
     #[doc = "Bit 29 - enable wakeup from rtc gpio2"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin2_wakeup_enable(&mut self) -> GPIO_PIN2_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN2_WAKEUP_ENABLE_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable wakeup from rtc gpio1"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin1_wakeup_enable(&mut self) -> GPIO_PIN1_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN1_WAKEUP_ENABLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable wakeup from rtc gpio0"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin0_wakeup_enable(&mut self) -> GPIO_PIN0_WAKEUP_ENABLE_W<GPIO_WAKEUP_SPEC> {
         GPIO_PIN0_WAKEUP_ENABLE_W::new(self, 31)
     }

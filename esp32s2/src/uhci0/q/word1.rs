@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register is used as a quick_sent register when mode is specified by UHCI_ALWAYS_SEND_NUM or UHCI_SINGLE_SEND_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn send_word(&mut self) -> SEND_WORD_W<WORD1_SPEC> {
         SEND_WORD_W::new(self, 0)
     }

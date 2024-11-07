@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enbale sp underlow monitor interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_min_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MIN_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - enbale sp overflow monitor interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_max_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MAX_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {

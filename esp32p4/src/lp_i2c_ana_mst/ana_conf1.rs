@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_conf1(&mut self) -> ANA_CONF1_W<ANA_CONF1_SPEC> {
         ANA_CONF1_W::new(self, 0)
     }

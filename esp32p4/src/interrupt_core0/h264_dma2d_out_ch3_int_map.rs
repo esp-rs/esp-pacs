@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_h264_dma2d_out_ch3_int_map(
         &mut self,
     ) -> CORE0_H264_DMA2D_OUT_CH3_INT_MAP_W<H264_DMA2D_OUT_CH3_INT_MAP_SPEC> {

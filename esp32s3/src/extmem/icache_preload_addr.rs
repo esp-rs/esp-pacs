@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for preload operation. It should be combined with ICACHE_PRELOAD_SIZE_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_preload_addr(&mut self) -> ICACHE_PRELOAD_ADDR_W<ICACHE_PRELOAD_ADDR_SPEC> {
         ICACHE_PRELOAD_ADDR_W::new(self, 0)
     }

@@ -2,21 +2,21 @@
 pub type R = crate::R<AF_VSCALE_B_SPEC>;
 #[doc = "Register `AF_VSCALE_B` writer"]
 pub type W = crate::W<AF_VSCALE_B_SPEC>;
-#[doc = "Field `AF_BPOINT_B` reader - this field configures right coordinate of focus window b, must &lt;= hnum-2"]
+#[doc = "Field `AF_BPOINT_B` reader - this field configures right coordinate of focus window b, must <= hnum-2"]
 pub type AF_BPOINT_B_R = crate::FieldReader<u16>;
-#[doc = "Field `AF_BPOINT_B` writer - this field configures right coordinate of focus window b, must &lt;= hnum-2"]
+#[doc = "Field `AF_BPOINT_B` writer - this field configures right coordinate of focus window b, must <= hnum-2"]
 pub type AF_BPOINT_B_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
-#[doc = "Field `AF_TPOINT_B` reader - this field configures bottom coordinate of focus window b, must &lt;= hnum-2"]
+#[doc = "Field `AF_TPOINT_B` reader - this field configures bottom coordinate of focus window b, must <= hnum-2"]
 pub type AF_TPOINT_B_R = crate::FieldReader<u16>;
-#[doc = "Field `AF_TPOINT_B` writer - this field configures bottom coordinate of focus window b, must &lt;= hnum-2"]
+#[doc = "Field `AF_TPOINT_B` writer - this field configures bottom coordinate of focus window b, must <= hnum-2"]
 pub type AF_TPOINT_B_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
 impl R {
-    #[doc = "Bits 0:11 - this field configures right coordinate of focus window b, must &lt;= hnum-2"]
+    #[doc = "Bits 0:11 - this field configures right coordinate of focus window b, must <= hnum-2"]
     #[inline(always)]
     pub fn af_bpoint_b(&self) -> AF_BPOINT_B_R {
         AF_BPOINT_B_R::new((self.bits & 0x0fff) as u16)
     }
-    #[doc = "Bits 16:27 - this field configures bottom coordinate of focus window b, must &lt;= hnum-2"]
+    #[doc = "Bits 16:27 - this field configures bottom coordinate of focus window b, must <= hnum-2"]
     #[inline(always)]
     pub fn af_tpoint_b(&self) -> AF_TPOINT_B_R {
         AF_TPOINT_B_R::new(((self.bits >> 16) & 0x0fff) as u16)
@@ -32,15 +32,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - this field configures right coordinate of focus window b, must &lt;= hnum-2"]
+    #[doc = "Bits 0:11 - this field configures right coordinate of focus window b, must <= hnum-2"]
     #[inline(always)]
-    #[must_use]
     pub fn af_bpoint_b(&mut self) -> AF_BPOINT_B_W<AF_VSCALE_B_SPEC> {
         AF_BPOINT_B_W::new(self, 0)
     }
-    #[doc = "Bits 16:27 - this field configures bottom coordinate of focus window b, must &lt;= hnum-2"]
+    #[doc = "Bits 16:27 - this field configures bottom coordinate of focus window b, must <= hnum-2"]
     #[inline(always)]
-    #[must_use]
     pub fn af_tpoint_b(&mut self) -> AF_TPOINT_B_W<AF_VSCALE_B_SPEC> {
         AF_TPOINT_B_W::new(self, 16)
     }

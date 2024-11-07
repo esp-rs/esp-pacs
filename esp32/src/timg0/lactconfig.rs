@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_only(&mut self) -> RTC_ONLY_W<LACTCONFIG_SPEC> {
         RTC_ONLY_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn cpst_en(&mut self) -> CPST_EN_W<LACTCONFIG_SPEC> {
         CPST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn lac_en(&mut self) -> LAC_EN_W<LACTCONFIG_SPEC> {
         LAC_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn alarm_en(&mut self) -> ALARM_EN_W<LACTCONFIG_SPEC> {
         ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<LACTCONFIG_SPEC> {
         LEVEL_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<LACTCONFIG_SPEC> {
         EDGE_INT_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:28"]
     #[inline(always)]
-    #[must_use]
     pub fn divider(&mut self) -> DIVIDER_W<LACTCONFIG_SPEC> {
         DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn autoreload(&mut self) -> AUTORELOAD_W<LACTCONFIG_SPEC> {
         AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn increase(&mut self) -> INCREASE_W<LACTCONFIG_SPEC> {
         INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<LACTCONFIG_SPEC> {
         EN_W::new(self, 31)
     }

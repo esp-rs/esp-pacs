@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - This field is used to configure the boundary 1 of external RAM. The unit is 4K. For example, set this field to 0x80, then the address boundary 0 would be 0x3C080000 (0x3C000000 + 0x80 * 4K)."]
     #[inline(always)]
-    #[must_use]
     pub fn edma_boundary_1(&mut self) -> EDMA_BOUNDARY_1_W<EDMA_BOUNDARY_1_SPEC> {
         EDMA_BOUNDARY_1_W::new(self, 0)
     }

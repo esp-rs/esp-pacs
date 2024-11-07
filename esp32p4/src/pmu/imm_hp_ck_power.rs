@@ -58,85 +58,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_cali_xtal_icg(&mut self) -> TIE_LOW_CALI_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_CALI_XTAL_ICG_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_global_pll_icg(&mut self) -> TIE_LOW_GLOBAL_PLL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_GLOBAL_PLL_ICG_W::new(self, 1)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_global_xtal_icg(&mut self) -> TIE_LOW_GLOBAL_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_GLOBAL_XTAL_ICG_W::new(self, 5)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_i2c_retention(&mut self) -> TIE_LOW_I2C_RETENTION_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_I2C_RETENTION_W::new(self, 6)
     }
     #[doc = "Bits 7:10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_xpd_pll_i2c(&mut self) -> TIE_LOW_XPD_PLL_I2C_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_PLL_I2C_W::new(self, 7)
     }
     #[doc = "Bits 11:14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_xpd_pll(&mut self) -> TIE_LOW_XPD_PLL_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_PLL_W::new(self, 11)
     }
     #[doc = "Bit 15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_xpd_xtal(&mut self) -> TIE_LOW_XPD_XTAL_W<IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_XTAL_W::new(self, 15)
     }
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_cali_xtal_icg(&mut self) -> TIE_HIGH_CALI_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_CALI_XTAL_ICG_W::new(self, 16)
     }
     #[doc = "Bits 17:20 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_global_pll_icg(&mut self) -> TIE_HIGH_GLOBAL_PLL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_GLOBAL_PLL_ICG_W::new(self, 17)
     }
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_global_xtal_icg(&mut self) -> TIE_HIGH_GLOBAL_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_GLOBAL_XTAL_ICG_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_i2c_retention(&mut self) -> TIE_HIGH_I2C_RETENTION_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_I2C_RETENTION_W::new(self, 22)
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_xpd_pll_i2c(&mut self) -> TIE_HIGH_XPD_PLL_I2C_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_PLL_I2C_W::new(self, 23)
     }
     #[doc = "Bits 27:30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_xpd_pll(&mut self) -> TIE_HIGH_XPD_PLL_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_PLL_W::new(self, 27)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_xpd_xtal(&mut self) -> TIE_HIGH_XPD_XTAL_W<IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_XTAL_W::new(self, 31)
     }

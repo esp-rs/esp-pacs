@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_debug_sel0(&mut self) -> LP_DEBUG_SEL0_W<DEBUG_SEL0_SPEC> {
         LP_DEBUG_SEL0_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_debug_sel1(&mut self) -> LP_DEBUG_SEL1_W<DEBUG_SEL0_SPEC> {
         LP_DEBUG_SEL1_W::new(self, 7)
     }
     #[doc = "Bits 14:20 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_debug_sel2(&mut self) -> LP_DEBUG_SEL2_W<DEBUG_SEL0_SPEC> {
         LP_DEBUG_SEL2_W::new(self, 14)
     }
     #[doc = "Bits 21:27 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_debug_sel3(&mut self) -> LP_DEBUG_SEL3_W<DEBUG_SEL0_SPEC> {
         LP_DEBUG_SEL3_W::new(self, 21)
     }

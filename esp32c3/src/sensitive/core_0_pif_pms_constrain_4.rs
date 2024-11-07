@@ -221,7 +221,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:3 - core_0_pif_pms_constrain_world_0_usb_wrap"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_wrap(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_WRAP_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -229,7 +228,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_0_crypto_peri"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_peri(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_PERI_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -237,7 +235,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - core_0_pif_pms_constrain_world_0_crypto_dma"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_crypto_dma(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CRYPTO_DMA_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -245,7 +242,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - core_0_pif_pms_constrain_world_0_apb_adc"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_apb_adc(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_ADC_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -253,7 +249,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - core_0_pif_pms_constrain_world_0_bt_pwr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_bt_pwr(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_BT_PWR_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -261,7 +256,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_0_usb_device"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_usb_device(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_USB_DEVICE_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -269,7 +263,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - core_0_pif_pms_constrain_world_0_system"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_system(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SYSTEM_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -277,7 +270,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - core_0_pif_pms_constrain_world_0_sensitive"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_sensitive(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SENSITIVE_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -285,7 +277,6 @@ impl W {
     }
     #[doc = "Bits 20:21 - core_0_pif_pms_constrain_world_0_interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_interrupt(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_INTERRUPT_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -293,7 +284,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_0_dma_copy"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dma_copy(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DMA_COPY_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -301,7 +291,6 @@ impl W {
     }
     #[doc = "Bits 24:25 - core_0_pif_pms_constrain_world_0_cache_config"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_cache_config(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CACHE_CONFIG_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -309,7 +298,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_0_ad"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_ad(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_AD_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -317,7 +305,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_0_dio"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_dio(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_DIO_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {
@@ -325,7 +312,6 @@ impl W {
     }
     #[doc = "Bits 30:31 - core_0_pif_pms_constrain_world_0_world_controller"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_world_0_world_controller(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WORLD_CONTROLLER_W<CORE_0_PIF_PMS_CONSTRAIN_4_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - Number of host clocks (clk) used by debounce filter logic. The typical debounce time is 5 \\verb+~+ 25 ms to prevent the card instability when the card is inserted or removed."]
     #[inline(always)]
-    #[must_use]
     pub fn debounce_count(&mut self) -> DEBOUNCE_COUNT_W<DEBNCE_SPEC> {
         DEBOUNCE_COUNT_W::new(self, 0)
     }

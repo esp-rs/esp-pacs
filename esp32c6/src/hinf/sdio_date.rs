@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - sdio version date."]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_date(&mut self) -> SDIO_DATE_W<SDIO_DATE_SPEC> {
         SDIO_DATE_W::new(self, 0)
     }

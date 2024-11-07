@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field contains the 16-bit data value read from the PHY after a Management Read operation or the 16-bit data value to be written to the PHY before a Management Write operation."]
     #[inline(always)]
-    #[must_use]
     pub fn mii_data(&mut self) -> MII_DATA_W<EMACMIIDATA_SPEC> {
         MII_DATA_W::new(self, 0)
     }

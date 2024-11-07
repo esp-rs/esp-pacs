@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles for SCL to be high"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<SCL_HIGH_PERIOD_SPEC> {
         SCL_HIGH_PERIOD_W::new(self, 0)
     }

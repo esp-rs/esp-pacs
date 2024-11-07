@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - Set this bit as 1 to enable L2-Cache wrap around mode."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_wrap(&mut self) -> L2_CACHE_WRAP_W<L2_CACHE_WRAP_AROUND_CTRL_SPEC> {
         L2_CACHE_WRAP_W::new(self, 5)
     }

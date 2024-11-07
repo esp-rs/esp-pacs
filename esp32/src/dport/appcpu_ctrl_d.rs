@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn appcpu_boot_addr(&mut self) -> APPCPU_BOOT_ADDR_W<APPCPU_CTRL_D_SPEC> {
         APPCPU_BOOT_ADDR_W::new(self, 0)
     }

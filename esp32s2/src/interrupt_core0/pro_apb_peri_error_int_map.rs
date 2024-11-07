@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map APB_PERI_ERROR_INT interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_apb_peri_error_int_map(
         &mut self,
     ) -> PRO_APB_PERI_ERROR_INT_MAP_W<PRO_APB_PERI_ERROR_INT_MAP_SPEC> {

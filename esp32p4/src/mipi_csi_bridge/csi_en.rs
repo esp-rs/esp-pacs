@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0: disable csi bridge. 1: enable csi bridge."]
     #[inline(always)]
-    #[must_use]
     pub fn csi_brig_en(&mut self) -> CSI_BRIG_EN_W<CSI_EN_SPEC> {
         CSI_BRIG_EN_W::new(self, 0)
     }

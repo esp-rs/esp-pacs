@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn overflow_raw(&mut self) -> OVERFLOW_RAW_W<INT_RAW_SPEC> {
         OVERFLOW_RAW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC> {
         SOC_WAKEUP_INT_RAW_W::new(self, 31)
     }

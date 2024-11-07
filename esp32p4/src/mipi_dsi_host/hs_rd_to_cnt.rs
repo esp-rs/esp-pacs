@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn hs_rd_to_cnt(&mut self) -> HS_RD_TO_CNT_W<HS_RD_TO_CNT_SPEC> {
         HS_RD_TO_CNT_W::new(self, 0)
     }

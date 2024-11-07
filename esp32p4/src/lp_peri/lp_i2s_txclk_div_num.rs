@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2s_tx_clkm_div_num(
         &mut self,
     ) -> LP_I2S_TX_CLKM_DIV_NUM_W<LP_I2S_TXCLK_DIV_NUM_SPEC> {

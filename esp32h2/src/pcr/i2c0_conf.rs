@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable i2c apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_clk_en(&mut self) -> I2C0_CLK_EN_W<I2C0_CONF_SPEC> {
         I2C0_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset i2c module"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_rst_en(&mut self) -> I2C0_RST_EN_W<I2C0_CONF_SPEC> {
         I2C0_RST_EN_W::new(self, 1)
     }

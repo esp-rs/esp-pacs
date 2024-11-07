@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - If change its value from default then write protection is on."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_wkey(&mut self) -> WDT_WKEY_W<WDTWPROTECT_SPEC> {
         WDT_WKEY_W::new(self, 0)
     }

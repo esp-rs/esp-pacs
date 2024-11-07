@@ -70,25 +70,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - SAR ADC2 controller (in RTC) starts conversion only active when reg_meas2_start_force = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn meas2_start_sar(&mut self) -> MEAS2_START_SAR_W<SAR_MEAS_START2_SPEC> {
         MEAS2_START_SAR_W::new(self, 17)
     }
     #[doc = "Bit 18 - 1: SAR ADC2 controller (in RTC) is started by SW 0: SAR ADC2 controller is started by ULP-coprocessor"]
     #[inline(always)]
-    #[must_use]
     pub fn meas2_start_force(&mut self) -> MEAS2_START_FORCE_W<SAR_MEAS_START2_SPEC> {
         MEAS2_START_FORCE_W::new(self, 18)
     }
     #[doc = "Bits 19:30 - SAR ADC2 pad enable bitmap only active when reg_sar2_en_pad_force = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_pad(&mut self) -> SAR2_EN_PAD_W<SAR_MEAS_START2_SPEC> {
         SAR2_EN_PAD_W::new(self, 19)
     }
     #[doc = "Bit 31 - 1: SAR ADC2 pad enable bitmap is controlled by SW 0: SAR ADC2 pad enable bitmap is controlled by ULP-coprocessor"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_pad_force(&mut self) -> SAR2_EN_PAD_FORCE_W<SAR_MEAS_START2_SPEC> {
         SAR2_EN_PAD_FORCE_W::new(self, 31)
     }

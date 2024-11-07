@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slchost_conf56(&mut self) -> SLCHOST_CONF56_W<CONF_W14_SPEC> {
         SLCHOST_CONF56_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slchost_conf57(&mut self) -> SLCHOST_CONF57_W<CONF_W14_SPEC> {
         SLCHOST_CONF57_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slchost_conf58(&mut self) -> SLCHOST_CONF58_W<CONF_W14_SPEC> {
         SLCHOST_CONF58_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slchost_conf59(&mut self) -> SLCHOST_CONF59_W<CONF_W14_SPEC> {
         SLCHOST_CONF59_W::new(self, 24)
     }

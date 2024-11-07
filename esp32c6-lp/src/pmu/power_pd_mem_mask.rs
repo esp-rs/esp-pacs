@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem2_pd_mask(&mut self) -> PD_HP_MEM2_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM2_PD_MASK_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem1_pd_mask(&mut self) -> PD_HP_MEM1_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM1_PD_MASK_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem0_pd_mask(&mut self) -> PD_HP_MEM0_PD_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM0_PD_MASK_W::new(self, 10)
     }
     #[doc = "Bits 17:21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem2_mask(&mut self) -> PD_HP_MEM2_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM2_MASK_W::new(self, 17)
     }
     #[doc = "Bits 22:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem1_mask(&mut self) -> PD_HP_MEM1_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM1_MASK_W::new(self, 22)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_hp_mem0_mask(&mut self) -> PD_HP_MEM0_MASK_W<POWER_PD_MEM_MASK_SPEC> {
         PD_HP_MEM0_MASK_W::new(self, 27)
     }

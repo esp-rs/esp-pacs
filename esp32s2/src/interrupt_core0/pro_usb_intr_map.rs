@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map USB_INT interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_usb_intr_map(&mut self) -> PRO_USB_INTR_MAP_W<PRO_USB_INTR_MAP_SPEC> {
         PRO_USB_INTR_MAP_W::new(self, 0)
     }

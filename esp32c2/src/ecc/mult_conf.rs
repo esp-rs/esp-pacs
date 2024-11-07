@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset receiver"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<MULT_CONF_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset Rx AFIFO"]
     #[inline(always)]
-    #[must_use]
     pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC> {
         RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to start receiving data"]
     #[inline(always)]
-    #[must_use]
     pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC> {
         KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable slave receiver mode"]
     #[inline(always)]
-    #[must_use]
     pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC> {
         SECURITY_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - clk gate"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC> {
         CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC> {
         WORK_MODE_W::new(self, 5)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_txrequestclkhs(&mut self) -> PHY_TXREQUESTCLKHS_W<LPCLK_CTRL_SPEC> {
         PHY_TXREQUESTCLKHS_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn auto_clklane_ctrl(&mut self) -> AUTO_CLKLANE_CTRL_W<LPCLK_CTRL_SPEC> {
         AUTO_CLKLANE_CTRL_W::new(self, 1)
     }

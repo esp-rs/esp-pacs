@@ -126,49 +126,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable ibus0 counter in L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus0_cnt_ena(&mut self) -> L1_IBUS0_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_IBUS0_CNT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable ibus1 counter in L1-ICache1."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus1_cnt_ena(&mut self) -> L1_IBUS1_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_IBUS1_CNT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 4 - The bit is used to enable dbus0 counter in L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus0_cnt_ena(&mut self) -> L1_DBUS0_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_DBUS0_CNT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable dbus1 counter in L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus1_cnt_ena(&mut self) -> L1_DBUS1_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_DBUS1_CNT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 16 - The bit is used to clear ibus0 counter in L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus0_cnt_clr(&mut self) -> L1_IBUS0_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_IBUS0_CNT_CLR_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to clear ibus1 counter in L1-ICache1."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus1_cnt_clr(&mut self) -> L1_IBUS1_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_IBUS1_CNT_CLR_W::new(self, 17)
     }
     #[doc = "Bit 20 - The bit is used to clear dbus0 counter in L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus0_cnt_clr(&mut self) -> L1_DBUS0_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_DBUS0_CNT_CLR_W::new(self, 20)
     }
     #[doc = "Bit 21 - The bit is used to clear dbus1 counter in L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus1_cnt_clr(&mut self) -> L1_DBUS1_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_DBUS1_CNT_CLR_W::new(self, 21)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - GPIO0 ~ 31 input value. Each bit represents a pad input value, 1 for high level and 0 for low level."]
     #[inline(always)]
-    #[must_use]
     pub fn data_next(&mut self) -> DATA_NEXT_W<IN_SPEC> {
         DATA_NEXT_W::new(self, 0)
     }

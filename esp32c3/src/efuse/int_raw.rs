@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit signal for read_done interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn read_done(&mut self) -> READ_DONE_W<INT_RAW_SPEC> {
         READ_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit signal for pgm_done interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pgm_done(&mut self) -> PGM_DONE_W<INT_RAW_SPEC> {
         PGM_DONE_W::new(self, 1)
     }

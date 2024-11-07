@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:25 - {reg_sw_stall_appcpu_c1\\[5:0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_stall_appcpu_c1(&mut self) -> SW_STALL_APPCPU_C1_W<SW_CPU_STALL_SPEC> {
         SW_STALL_APPCPU_C1_W::new(self, 20)
     }
     #[doc = "Bits 26:31 - stall cpu by software"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_stall_procpu_c1(&mut self) -> SW_STALL_PROCPU_C1_W<SW_CPU_STALL_SPEC> {
         SW_STALL_PROCPU_C1_W::new(self, 26)
     }

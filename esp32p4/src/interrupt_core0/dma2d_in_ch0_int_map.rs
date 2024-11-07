@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dma2d_in_ch0_int_map(
         &mut self,
     ) -> CORE0_DMA2D_IN_CH0_INT_MAP_W<DMA2D_IN_CH0_INT_MAP_SPEC> {

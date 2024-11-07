@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - When access address space is ecc/aes area, this bit should be set to 1. In this case, the start address of square should be 16-bit aligned. The width of square multiply byte number of one pixel should be 16-bit aligned."]
     #[inline(always)]
-    #[must_use]
     pub fn in_ecc_aes_en(&mut self) -> IN_ECC_AES_EN_W<CONF0_SPEC> {
         IN_ECC_AES_EN_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Block size of Rx channel 1. 0: single 1: 16 bytes 2: 32 bytes 3: 64 bytes 4: 128 bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn in_mem_burst_length(&mut self) -> IN_MEM_BURST_LENGTH_W<CONF0_SPEC> {
         IN_MEM_BURST_LENGTH_W::new(self, 6)
     }
     #[doc = "Bit 12 - Set this bit to 1 to make sure AXI write data don't cross the address boundary which define by mem_burst_length"]
     #[inline(always)]
-    #[must_use]
     pub fn in_page_bound_en(&mut self) -> IN_PAGE_BOUND_EN_W<CONF0_SPEC> {
         IN_PAGE_BOUND_EN_W::new(self, 12)
     }
     #[doc = "Bit 24 - Write 1 then write 0 to this bit to reset Rx channel"]
     #[inline(always)]
-    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<CONF0_SPEC> {
         IN_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Write 1 before reset and write 0 after reset"]
     #[inline(always)]
-    #[must_use]
     pub fn in_cmd_disable(&mut self) -> IN_CMD_DISABLE_W<CONF0_SPEC> {
         IN_CMD_DISABLE_W::new(self, 25)
     }

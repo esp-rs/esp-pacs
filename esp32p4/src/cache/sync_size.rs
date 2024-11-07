@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Those bits are used to configure the size of the sync operation, which should be used together with CACHE_SYNC_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn sync_size(&mut self) -> SYNC_SIZE_W<SYNC_SIZE_SPEC> {
         SYNC_SIZE_W::new(self, 0)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn wr_dis(&mut self) -> WR_DIS_W<BLK0_WDATA0_SPEC> {
         WR_DIS_W::new(self, 0)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
     pub fn rd_dis(&mut self) -> RD_DIS_W<BLK0_WDATA0_SPEC> {
         RD_DIS_W::new(self, 16)
     }
     #[doc = "Bits 20:26"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_crypt_cnt(&mut self) -> FLASH_CRYPT_CNT_W<BLK0_WDATA0_SPEC> {
         FLASH_CRYPT_CNT_W::new(self, 20)
     }

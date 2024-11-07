@@ -96,55 +96,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - lp cpu disable"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_disable(&mut self) -> LP_CORE_DISABLE_W<SYS_CTRL_SPEC> {
         LP_CORE_DISABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - digital system software reset bit"]
     #[inline(always)]
-    #[must_use]
     pub fn sys_sw_rst(&mut self) -> SYS_SW_RST_W<SYS_CTRL_SPEC> {
         SYS_SW_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<SYS_CTRL_SPEC> {
         FORCE_DOWNLOAD_BOOT_W::new(self, 2)
     }
     #[doc = "Bits 3:10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_fib(&mut self) -> DIG_FIB_W<SYS_CTRL_SPEC> {
         DIG_FIB_W::new(self, 3)
     }
     #[doc = "Bit 11 - reset disable bit for LP IOMUX"]
     #[inline(always)]
-    #[must_use]
     pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<SYS_CTRL_SPEC> {
         IO_MUX_RESET_DISABLE_W::new(self, 11)
     }
     #[doc = "Bits 21:28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_fib_sel(&mut self) -> LP_FIB_SEL_W<SYS_CTRL_SPEC> {
         LP_FIB_SEL_W::new(self, 21)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_etm_wakeup_flag_clr(&mut self) -> LP_CORE_ETM_WAKEUP_FLAG_CLR_W<SYS_CTRL_SPEC> {
         LP_CORE_ETM_WAKEUP_FLAG_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_core_etm_wakeup_flag(&mut self) -> LP_CORE_ETM_WAKEUP_FLAG_W<SYS_CTRL_SPEC> {
         LP_CORE_ETM_WAKEUP_FLAG_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: use systimer_stall signal from hp_core0, 1: use systimer_stall signal from hp_core1"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_stall_sel(&mut self) -> SYSTIMER_STALL_SEL_W<SYS_CTRL_SPEC> {
         SYSTIMER_STALL_SEL_W::new(self, 31)
     }

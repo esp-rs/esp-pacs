@@ -70,31 +70,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_sel_osc_slow(&mut self) -> CLK_LP_TIMER_SEL_OSC_SLOW_W<LP_TIMER_CONF_SPEC> {
         CLK_LP_TIMER_SEL_OSC_SLOW_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_sel_osc_fast(&mut self) -> CLK_LP_TIMER_SEL_OSC_FAST_W<LP_TIMER_CONF_SPEC> {
         CLK_LP_TIMER_SEL_OSC_FAST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_sel_xtal(&mut self) -> CLK_LP_TIMER_SEL_XTAL_W<LP_TIMER_CONF_SPEC> {
         CLK_LP_TIMER_SEL_XTAL_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_sel_xtal32k(&mut self) -> CLK_LP_TIMER_SEL_XTAL32K_W<LP_TIMER_CONF_SPEC> {
         CLK_LP_TIMER_SEL_XTAL32K_W::new(self, 3)
     }
     #[doc = "Bits 4:15"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_div_num(&mut self) -> CLK_LP_TIMER_DIV_NUM_W<LP_TIMER_CONF_SPEC> {
         CLK_LP_TIMER_DIV_NUM_W::new(self, 4)
     }

@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<WDATAB_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn wdatab(&mut self) -> WDATAB_W<WDATAB_SPEC> {
         WDATAB_W::new(self, 0)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn wdata_end(&mut self) -> WDATA_END_W<WDATAB_SPEC> {
         WDATA_END_W::new(self, 8)
     }

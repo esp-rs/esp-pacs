@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_SIZE_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_prelock_sct0_addr(
         &mut self,
     ) -> L1_CACHE_PRELOCK_SCT0_ADDR_W<L1_CACHE_PRELOCK_SCT0_ADDR_SPEC> {

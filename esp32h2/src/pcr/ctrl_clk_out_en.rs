@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable 8m clock"]
     #[inline(always)]
-    #[must_use]
     pub fn clk8_oen(&mut self) -> CLK8_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK8_OEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable 16m clock"]
     #[inline(always)]
-    #[must_use]
     pub fn clk16_oen(&mut self) -> CLK16_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK16_OEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable 32m clock"]
     #[inline(always)]
-    #[must_use]
     pub fn clk32_oen(&mut self) -> CLK32_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK32_OEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_adc_inf_oen(&mut self) -> CLK_ADC_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK_ADC_INF_OEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_dfm_inf_oen(&mut self) -> CLK_DFM_INF_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK_DFM_INF_OEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_sdm_mod_oen(&mut self) -> CLK_SDM_MOD_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK_SDM_MOD_OEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to enable xtal clock"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_xtal_oen(&mut self) -> CLK_XTAL_OEN_W<CTRL_CLK_OUT_EN_SPEC> {
         CLK_XTAL_OEN_W::new(self, 6)
     }

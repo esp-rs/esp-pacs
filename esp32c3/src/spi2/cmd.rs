@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Define the APB cycles of SPI_CONF state. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn conf_bitlen(&mut self) -> CONF_BITLEN_W<CMD_SPEC> {
         CONF_BITLEN_W::new(self, 0)
     }
     #[doc = "Bit 23 - Set this bit to synchronize SPI registers from APB clock domain into SPI module clock domain, which is only used in SPI master mode."]
     #[inline(always)]
-    #[must_use]
     pub fn update(&mut self) -> UPDATE_W<CMD_SPEC> {
         UPDATE_W::new(self, 23)
     }
     #[doc = "Bit 24 - User define command enable. An operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable. Can not be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn usr(&mut self) -> USR_W<CMD_SPEC> {
         USR_W::new(self, 24)
     }

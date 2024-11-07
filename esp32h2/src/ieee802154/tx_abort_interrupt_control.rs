@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_abort_interrupt_control(
         &mut self,
     ) -> TX_ABORT_INTERRUPT_CONTROL_W<TX_ABORT_INTERRUPT_CONTROL_SPEC> {

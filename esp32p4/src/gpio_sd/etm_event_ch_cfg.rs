@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Etm event channel select gpio."]
     #[inline(always)]
-    #[must_use]
     pub fn event_sel(&mut self) -> EVENT_SEL_W<ETM_EVENT_CH_CFG_SPEC> {
         EVENT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 7 - Etm event send enable bit."]
     #[inline(always)]
-    #[must_use]
     pub fn event_en(&mut self) -> EVENT_EN_W<ETM_EVENT_CH_CFG_SPEC> {
         EVENT_EN_W::new(self, 7)
     }

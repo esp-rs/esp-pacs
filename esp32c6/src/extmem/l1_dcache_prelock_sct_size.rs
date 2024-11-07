@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Those bits are used to configure the size of the first section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_prelock_sct0_size(
         &mut self,
     ) -> L1_CACHE_PRELOCK_SCT0_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 16:29 - Those bits are used to configure the size of the second section of prelock on L1-Cache, which should be used together with L1_CACHE_PRELOCK_SCT1_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_prelock_sct1_size(
         &mut self,
     ) -> L1_CACHE_PRELOCK_SCT1_SIZE_W<L1_DCACHE_PRELOCK_SCT_SIZE_SPEC> {

@@ -42,7 +42,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn pif_access_monitor_nonword_violate_clr(
         &mut self,
     ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_CLR_W<PIF_ACCESS_MONITOR_1_SPEC> {
@@ -50,7 +49,6 @@ impl W {
     }
     #[doc = "Bit 1 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn pif_access_monitor_nonword_violate_en(
         &mut self,
     ) -> PIF_ACCESS_MONITOR_NONWORD_VIOLATE_EN_W<PIF_ACCESS_MONITOR_1_SPEC> {

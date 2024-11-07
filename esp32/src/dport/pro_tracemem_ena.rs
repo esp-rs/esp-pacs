@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tracemem_ena(&mut self) -> PRO_TRACEMEM_ENA_W<PRO_TRACEMEM_ENA_SPEC> {
         PRO_TRACEMEM_ENA_W::new(self, 0)
     }

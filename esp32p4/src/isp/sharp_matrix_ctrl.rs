@@ -2,13 +2,13 @@
 pub type R = crate::R<SHARP_MATRIX_CTRL_SPEC>;
 #[doc = "Register `SHARP_MATRIX_CTRL` writer"]
 pub type W = crate::W<SHARP_MATRIX_CTRL_SPEC>;
-#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type SHARP_TAIL_PIXEN_PULSE_TL_R = crate::FieldReader;
-#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type SHARP_TAIL_PIXEN_PULSE_TL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th &lt; reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must < hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th < reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type SHARP_TAIL_PIXEN_PULSE_TH_R = crate::FieldReader;
-#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th &lt; reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `SHARP_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must < hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th < reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type SHARP_TAIL_PIXEN_PULSE_TH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `SHARP_PADDING_DATA` reader - this field configures sharp padding data"]
 pub type SHARP_PADDING_DATA_R = crate::FieldReader;
@@ -19,12 +19,12 @@ pub type SHARP_PADDING_MODE_R = crate::BitReader;
 #[doc = "Field `SHARP_PADDING_MODE` writer - this field configures sharp padding mode"]
 pub type SHARP_PADDING_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn sharp_tail_pixen_pulse_tl(&self) -> SHARP_TAIL_PIXEN_PULSE_TL_R {
         SHARP_TAIL_PIXEN_PULSE_TL_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th &lt; reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th < reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn sharp_tail_pixen_pulse_th(&self) -> SHARP_TAIL_PIXEN_PULSE_TH_R {
         SHARP_TAIL_PIXEN_PULSE_TH_R::new(((self.bits >> 8) & 0xff) as u8)
@@ -58,17 +58,15 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_tail_pixen_pulse_tl(
         &mut self,
     ) -> SHARP_TAIL_PIXEN_PULSE_TL_W<SHARP_MATRIX_CTRL_SPEC> {
         SHARP_TAIL_PIXEN_PULSE_TL_W::new(self, 0)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th &lt; reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_sharp_tail_pixen_pulse_th!=0 and reg_sharp_tail_pixen_pulse_tl!=0 and reg_sharp_tail_pixen_pulse_th < reg_sharp_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_tail_pixen_pulse_th(
         &mut self,
     ) -> SHARP_TAIL_PIXEN_PULSE_TH_W<SHARP_MATRIX_CTRL_SPEC> {
@@ -76,13 +74,11 @@ impl W {
     }
     #[doc = "Bits 16:23 - this field configures sharp padding data"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_padding_data(&mut self) -> SHARP_PADDING_DATA_W<SHARP_MATRIX_CTRL_SPEC> {
         SHARP_PADDING_DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - this field configures sharp padding mode"]
     #[inline(always)]
-    #[must_use]
     pub fn sharp_padding_mode(&mut self) -> SHARP_PADDING_MODE_W<SHARP_MATRIX_CTRL_SPEC> {
         SHARP_PADDING_MODE_W::new(self, 24)
     }

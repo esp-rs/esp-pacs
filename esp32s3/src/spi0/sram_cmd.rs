@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI_CLK mode bits when SPI0 accesses to Ext_RAM. 0: SPI_CLK is off when CS inactive 1: SPI_CLK is delayed one cycle after CS inactive 2: SPI_CLK is delayed two cycles after CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
-    #[must_use]
     pub fn sclk_mode(&mut self) -> SCLK_MODE_W<SRAM_CMD_SPEC> {
         SCLK_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:9 - Mode bits when SPI0 accesses to Ext_RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn swb_mode(&mut self) -> SWB_MODE_W<SRAM_CMD_SPEC> {
         SWB_MODE_W::new(self, 2)
     }
     #[doc = "Bit 10 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdin_dual(&mut self) -> SDIN_DUAL_W<SRAM_CMD_SPEC> {
         SDIN_DUAL_W::new(self, 10)
     }
     #[doc = "Bit 11 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdout_dual(&mut self) -> SDOUT_DUAL_W<SRAM_CMD_SPEC> {
         SDOUT_DUAL_W::new(self, 11)
     }
     #[doc = "Bit 12 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
-    #[must_use]
     pub fn saddr_dual(&mut self) -> SADDR_DUAL_W<SRAM_CMD_SPEC> {
         SADDR_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 13 - When SPI0 accesses to Ext_RAM, set this bit to enable 2-bm in CMD phase."]
     #[inline(always)]
-    #[must_use]
     pub fn scmd_dual(&mut self) -> SCMD_DUAL_W<SRAM_CMD_SPEC> {
         SCMD_DUAL_W::new(self, 13)
     }
     #[doc = "Bit 14 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdin_quad(&mut self) -> SDIN_QUAD_W<SRAM_CMD_SPEC> {
         SDIN_QUAD_W::new(self, 14)
     }
     #[doc = "Bit 15 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdout_quad(&mut self) -> SDOUT_QUAD_W<SRAM_CMD_SPEC> {
         SDOUT_QUAD_W::new(self, 15)
     }
     #[doc = "Bit 16 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
-    #[must_use]
     pub fn saddr_quad(&mut self) -> SADDR_QUAD_W<SRAM_CMD_SPEC> {
         SADDR_QUAD_W::new(self, 16)
     }
     #[doc = "Bit 17 - When SPI0 accesses to Ext_RAM, set this bit to enable 4-bm in CMD phase."]
     #[inline(always)]
-    #[must_use]
     pub fn scmd_quad(&mut self) -> SCMD_QUAD_W<SRAM_CMD_SPEC> {
         SCMD_QUAD_W::new(self, 17)
     }
     #[doc = "Bit 18 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DIN phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdin_oct(&mut self) -> SDIN_OCT_W<SRAM_CMD_SPEC> {
         SDIN_OCT_W::new(self, 18)
     }
     #[doc = "Bit 19 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in DOUT phase."]
     #[inline(always)]
-    #[must_use]
     pub fn sdout_oct(&mut self) -> SDOUT_OCT_W<SRAM_CMD_SPEC> {
         SDOUT_OCT_W::new(self, 19)
     }
     #[doc = "Bit 20 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in ADDR phase."]
     #[inline(always)]
-    #[must_use]
     pub fn saddr_oct(&mut self) -> SADDR_OCT_W<SRAM_CMD_SPEC> {
         SADDR_OCT_W::new(self, 20)
     }
     #[doc = "Bit 21 - When SPI0 accesses to Ext_RAM, set this bit to enable 8-bm in CMD phase."]
     #[inline(always)]
-    #[must_use]
     pub fn scmd_oct(&mut self) -> SCMD_OCT_W<SRAM_CMD_SPEC> {
         SCMD_OCT_W::new(self, 21)
     }
     #[doc = "Bit 22 - When SPI0 accesses to Ext_RAM, in the DUMMY phase the signal level of SPI bus is output by the SPI0 controller."]
     #[inline(always)]
-    #[must_use]
     pub fn sdummy_out(&mut self) -> SDUMMY_OUT_W<SRAM_CMD_SPEC> {
         SDUMMY_OUT_W::new(self, 22)
     }

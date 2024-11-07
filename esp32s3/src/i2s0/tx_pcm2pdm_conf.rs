@@ -140,43 +140,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I2S TX PDM bypass hp filter or not. The option has been removed."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_hp_bypass(&mut self) -> TX_PDM_HP_BYPASS_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_HP_BYPASS_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - I2S TX PDM OSR2 value"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_sinc_osr2(&mut self) -> TX_PDM_SINC_OSR2_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_SINC_OSR2_W::new(self, 1)
     }
     #[doc = "Bits 5:12 - I2S TX PDM prescale for sigmadelta"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_prescale(&mut self) -> TX_PDM_PRESCALE_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_PRESCALE_W::new(self, 5)
     }
     #[doc = "Bits 13:14 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_hp_in_shift(&mut self) -> TX_PDM_HP_IN_SHIFT_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_HP_IN_SHIFT_W::new(self, 13)
     }
     #[doc = "Bits 15:16 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_lp_in_shift(&mut self) -> TX_PDM_LP_IN_SHIFT_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_LP_IN_SHIFT_W::new(self, 15)
     }
     #[doc = "Bits 17:18 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_sinc_in_shift(&mut self) -> TX_PDM_SINC_IN_SHIFT_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_SINC_IN_SHIFT_W::new(self, 17)
     }
     #[doc = "Bits 19:20 - I2S TX PDM sigmadelta scale shift number: 0:/2 , 1:x1 , 2:x2 , 3: x4"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_sigmadelta_in_shift(
         &mut self,
     ) -> TX_PDM_SIGMADELTA_IN_SHIFT_W<TX_PCM2PDM_CONF_SPEC> {
@@ -184,7 +177,6 @@ impl W {
     }
     #[doc = "Bit 21 - I2S TX PDM sigmadelta dither2 value"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_sigmadelta_dither2(
         &mut self,
     ) -> TX_PDM_SIGMADELTA_DITHER2_W<TX_PCM2PDM_CONF_SPEC> {
@@ -192,25 +184,21 @@ impl W {
     }
     #[doc = "Bit 22 - I2S TX PDM sigmadelta dither value"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_sigmadelta_dither(&mut self) -> TX_PDM_SIGMADELTA_DITHER_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_SIGMADELTA_DITHER_W::new(self, 22)
     }
     #[doc = "Bit 23 - I2S TX PDM dac mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_dac_2out_en(&mut self) -> TX_PDM_DAC_2OUT_EN_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_DAC_2OUT_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - I2S TX PDM dac 2channel enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pdm_dac_mode_en(&mut self) -> TX_PDM_DAC_MODE_EN_W<TX_PCM2PDM_CONF_SPEC> {
         TX_PDM_DAC_MODE_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - I2S TX PDM Converter enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pcm2pdm_conv_en(&mut self) -> PCM2PDM_CONV_EN_W<TX_PCM2PDM_CONF_SPEC> {
         PCM2PDM_CONV_EN_W::new(self, 25)
     }

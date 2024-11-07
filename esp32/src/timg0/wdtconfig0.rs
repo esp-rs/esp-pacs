@@ -469,61 +469,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - When set flash boot protection is enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<WDTCONFIG0_SPEC> {
         WDT_FLASHBOOT_MOD_EN_W::new(self, 14)
     }
     #[doc = "Bits 15:17 - length of system reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
         WDT_SYS_RESET_LENGTH_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - length of CPU reset selection. 0: 100ns 1: 200ns 2: 300ns 3: 400ns 4: 500ns 5: 800ns 6: 1.6us 7: 3.2us"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
         WDT_CPU_RESET_LENGTH_W::new(self, 18)
     }
     #[doc = "Bit 21 - When set level type interrupt generation is enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<WDTCONFIG0_SPEC> {
         WDT_LEVEL_INT_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - When set edge type interrupt generation is enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<WDTCONFIG0_SPEC> {
         WDT_EDGE_INT_EN_W::new(self, 22)
     }
     #[doc = "Bits 23:24 - Stage 3 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg3(&mut self) -> WDT_STG3_W<WDTCONFIG0_SPEC> {
         WDT_STG3_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - Stage 2 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg2(&mut self) -> WDT_STG2_W<WDTCONFIG0_SPEC> {
         WDT_STG2_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - Stage 1 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg1(&mut self) -> WDT_STG1_W<WDTCONFIG0_SPEC> {
         WDT_STG1_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - Stage 0 configuration. 0: off 1: interrupt 2: reset CPU 3: reset system"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg0(&mut self) -> WDT_STG0_W<WDTCONFIG0_SPEC> {
         WDT_STG0_W::new(self, 29)
     }
     #[doc = "Bit 31 - When set SWDT is enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }

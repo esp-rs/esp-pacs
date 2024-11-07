@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable pcnt clock"]
     #[inline(always)]
-    #[must_use]
     pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PCNT_CONF_SPEC> {
         PCNT_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset pcnt module"]
     #[inline(always)]
-    #[must_use]
     pub fn pcnt_rst_en(&mut self) -> PCNT_RST_EN_W<PCNT_CONF_SPEC> {
         PCNT_RST_EN_W::new(self, 1)
     }

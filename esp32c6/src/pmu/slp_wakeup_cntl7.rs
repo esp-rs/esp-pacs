@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_wait_target(&mut self) -> ANA_WAIT_TARGET_W<SLP_WAKEUP_CNTL7_SPEC> {
         ANA_WAIT_TARGET_W::new(self, 16)
     }

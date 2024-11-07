@@ -53,7 +53,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - The bit is used to close clock gating of L2-Cache data memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_data_mem_force_on(
         &mut self,
     ) -> L2_CACHE_DATA_MEM_FORCE_ON_W<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
@@ -61,7 +60,6 @@ impl W {
     }
     #[doc = "Bit 21 - The bit is used to power L2-Cache data memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_data_mem_force_pd(
         &mut self,
     ) -> L2_CACHE_DATA_MEM_FORCE_PD_W<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
@@ -69,7 +67,6 @@ impl W {
     }
     #[doc = "Bit 22 - The bit is used to power L2-Cache data memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_data_mem_force_pu(
         &mut self,
     ) -> L2_CACHE_DATA_MEM_FORCE_PU_W<L2_CACHE_DATA_MEM_POWER_CTRL_SPEC> {

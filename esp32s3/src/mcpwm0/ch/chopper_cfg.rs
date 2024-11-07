@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, carrier0 function is enabled. When cleared, carrier0 is bypassed"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CHOPPER_CFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - PWM carrier0 clock (PC_clk) prescale value. Period of PC_clk = period of PWM_clk * (PWM_CARRIER0_PRESCALE + 1)"]
     #[inline(always)]
-    #[must_use]
     pub fn prescale(&mut self) -> PRESCALE_W<CHOPPER_CFG_SPEC> {
         PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7 - carrier duty selection. Duty = PWM_CARRIER0_DUTY / 8"]
     #[inline(always)]
-    #[must_use]
     pub fn duty(&mut self) -> DUTY_W<CHOPPER_CFG_SPEC> {
         DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - width of the fist pulse in number of periods of the carrier"]
     #[inline(always)]
-    #[must_use]
     pub fn oshtwth(&mut self) -> OSHTWTH_W<CHOPPER_CFG_SPEC> {
         OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12 - when set, invert the output of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
-    #[must_use]
     pub fn out_invert(&mut self) -> OUT_INVERT_W<CHOPPER_CFG_SPEC> {
         OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13 - when set, invert the input of PWM0A and PWM0B for this submodule"]
     #[inline(always)]
-    #[must_use]
     pub fn in_invert(&mut self) -> IN_INVERT_W<CHOPPER_CFG_SPEC> {
         IN_INVERT_W::new(self, 13)
     }

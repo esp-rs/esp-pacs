@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configure the number of cycles before standby becomes high when TWAI_HW_STANDBY_EN is enabled."]
     #[inline(always)]
-    #[must_use]
     pub fn standby_wait_cnt(&mut self) -> STANDBY_WAIT_CNT_W<HW_STANDBY_CNT_SPEC> {
         STANDBY_WAIT_CNT_W::new(self, 0)
     }

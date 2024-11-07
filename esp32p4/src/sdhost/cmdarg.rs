@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Value indicates command argument to be passed to the card."]
     #[inline(always)]
-    #[must_use]
     pub fn cmdarg(&mut self) -> CMDARG_W<CMDARG_SPEC> {
         CMDARG_W::new(self, 0)
     }

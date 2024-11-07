@@ -220,103 +220,86 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - reg_0p1a_0_counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target0_reach_0_hp(&mut self) -> _0P1A_CNT_TARGET0_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P1A_CNT_TARGET0_REACH_0_HP_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_0p1a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target1_reach_0_hp(&mut self) -> _0P1A_CNT_TARGET1_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P1A_CNT_TARGET1_REACH_0_HP_W::new(self, 15)
     }
     #[doc = "Bit 16 - reg_0p1a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target0_reach_1_hp(&mut self) -> _0P1A_CNT_TARGET0_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P1A_CNT_TARGET0_REACH_1_HP_W::new(self, 16)
     }
     #[doc = "Bit 17 - reg_0p1a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p1a_cnt_target1_reach_1_hp(&mut self) -> _0P1A_CNT_TARGET1_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P1A_CNT_TARGET1_REACH_1_HP_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_0p2a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target0_reach_0_hp(&mut self) -> _0P2A_CNT_TARGET0_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P2A_CNT_TARGET0_REACH_0_HP_W::new(self, 18)
     }
     #[doc = "Bit 19 - reg_0p2a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target1_reach_0_hp(&mut self) -> _0P2A_CNT_TARGET1_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P2A_CNT_TARGET1_REACH_0_HP_W::new(self, 19)
     }
     #[doc = "Bit 20 - reg_0p2a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target0_reach_1_hp(&mut self) -> _0P2A_CNT_TARGET0_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P2A_CNT_TARGET0_REACH_1_HP_W::new(self, 20)
     }
     #[doc = "Bit 21 - reg_0p2a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p2a_cnt_target1_reach_1_hp(&mut self) -> _0P2A_CNT_TARGET1_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P2A_CNT_TARGET1_REACH_1_HP_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_0p3a_0 counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target0_reach_0_hp(&mut self) -> _0P3A_CNT_TARGET0_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P3A_CNT_TARGET0_REACH_0_HP_W::new(self, 22)
     }
     #[doc = "Bit 23 - reg_0p3a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target1_reach_0_hp(&mut self) -> _0P3A_CNT_TARGET1_REACH_0_HP_W<INT_RAW_SPEC> {
         _0P3A_CNT_TARGET1_REACH_0_HP_W::new(self, 23)
     }
     #[doc = "Bit 24 - reg_0p3a_0_counter after xpd reach target0"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target0_reach_1_hp(&mut self) -> _0P3A_CNT_TARGET0_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P3A_CNT_TARGET0_REACH_1_HP_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_0p3a_1_counter after xpd reach target1"]
     #[inline(always)]
-    #[must_use]
     pub fn _0p3a_cnt_target1_reach_1_hp(&mut self) -> _0P3A_CNT_TARGET1_REACH_1_HP_W<INT_RAW_SPEC> {
         _0P3A_CNT_TARGET1_REACH_1_HP_W::new(self, 25)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_cpu_exc(&mut self) -> LP_CPU_EXC_W<INT_RAW_SPEC> {
         LP_CPU_EXC_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_RAW_SPEC> {
         SDIO_IDLE_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sw(&mut self) -> SW_W<INT_RAW_SPEC> {
         SW_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_sleep_reject(&mut self) -> SOC_SLEEP_REJECT_W<INT_RAW_SPEC> {
         SOC_SLEEP_REJECT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<INT_RAW_SPEC> {
         SOC_WAKEUP_W::new(self, 31)
     }

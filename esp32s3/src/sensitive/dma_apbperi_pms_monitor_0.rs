@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock dma permission monitor Configuration Register."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_pms_monitor_lock(
         &mut self,
     ) -> DMA_APBPERI_PMS_MONITOR_LOCK_W<DMA_APBPERI_PMS_MONITOR_0_SPEC> {

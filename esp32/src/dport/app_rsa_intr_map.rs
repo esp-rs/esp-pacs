@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_rsa_intr_map(&mut self) -> APP_RSA_INTR_MAP_W<APP_RSA_INTR_MAP_SPEC> {
         APP_RSA_INTR_MAP_W::new(self, 0)
     }

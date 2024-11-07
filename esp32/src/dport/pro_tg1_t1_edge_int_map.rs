@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tg1_t1_edge_int_map(
         &mut self,
     ) -> PRO_TG1_T1_EDGE_INT_MAP_W<PRO_TG1_T1_EDGE_INT_MAP_SPEC> {

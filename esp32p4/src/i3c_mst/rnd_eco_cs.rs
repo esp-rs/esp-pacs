@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_rnd_eco_en(&mut self) -> REG_RND_ECO_EN_W<RND_ECO_CS_SPEC> {
         REG_RND_ECO_EN_W::new(self, 0)
     }

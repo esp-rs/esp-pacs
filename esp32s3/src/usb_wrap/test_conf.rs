@@ -78,25 +78,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable test of the USB pad"]
     #[inline(always)]
-    #[must_use]
     pub fn test_enable(&mut self) -> TEST_ENABLE_W<TEST_CONF_SPEC> {
         TEST_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - USB pad oen in test"]
     #[inline(always)]
-    #[must_use]
     pub fn test_usb_oe(&mut self) -> TEST_USB_OE_W<TEST_CONF_SPEC> {
         TEST_USB_OE_W::new(self, 1)
     }
     #[doc = "Bit 2 - USB D+ tx value in test"]
     #[inline(always)]
-    #[must_use]
     pub fn test_tx_dp(&mut self) -> TEST_TX_DP_W<TEST_CONF_SPEC> {
         TEST_TX_DP_W::new(self, 2)
     }
     #[doc = "Bit 3 - USB D- tx value in test"]
     #[inline(always)]
-    #[must_use]
     pub fn test_tx_dm(&mut self) -> TEST_TX_DM_W<TEST_CONF_SPEC> {
         TEST_TX_DM_W::new(self, 3)
     }

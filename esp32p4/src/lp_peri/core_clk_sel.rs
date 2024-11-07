@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2s_tx_clk_sel(&mut self) -> LP_I2S_TX_CLK_SEL_W<CORE_CLK_SEL_SPEC> {
         LP_I2S_TX_CLK_SEL_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2s_rx_clk_sel(&mut self) -> LP_I2S_RX_CLK_SEL_W<CORE_CLK_SEL_SPEC> {
         LP_I2S_RX_CLK_SEL_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<CORE_CLK_SEL_SPEC> {
         LP_I2C_CLK_SEL_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<CORE_CLK_SEL_SPEC> {
         LP_UART_CLK_SEL_W::new(self, 30)
     }

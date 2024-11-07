@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 0-3 is used as cache memory."]
     #[inline(always)]
-    #[must_use]
     pub fn occupy_cache(&mut self) -> OCCUPY_CACHE_W<OCCUPY_1_SPEC> {
         OCCUPY_CACHE_W::new(self, 0)
     }

@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 11:21 - wakeup enable bitmap"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_ena(&mut self) -> WAKEUP_ENA_W<WAKEUP_STATE_SPEC> {
         WAKEUP_ENA_W::new(self, 11)
     }
     #[doc = "Bit 22 - enable filter for gpio wakeup event"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_wakeup_filter(&mut self) -> GPIO_WAKEUP_FILTER_W<WAKEUP_STATE_SPEC> {
         GPIO_WAKEUP_FILTER_W::new(self, 22)
     }

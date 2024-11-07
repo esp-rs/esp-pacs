@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - AES key material register."]
     #[inline(always)]
-    #[must_use]
     pub fn key(&mut self) -> KEY_W<KEY_SPEC> {
         KEY_W::new(self, 0)
     }

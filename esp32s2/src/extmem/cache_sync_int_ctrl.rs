@@ -54,7 +54,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - The bit is used to enable the interrupt by icache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_sync_int_ena(
         &mut self,
     ) -> PRO_ICACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC> {
@@ -62,7 +61,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to clear the interrupt by icache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_sync_int_clr(
         &mut self,
     ) -> PRO_ICACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC> {
@@ -70,7 +68,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to enable the interrupt by dcache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_sync_int_ena(
         &mut self,
     ) -> PRO_DCACHE_SYNC_INT_ENA_W<CACHE_SYNC_INT_CTRL_SPEC> {
@@ -78,7 +75,6 @@ impl W {
     }
     #[doc = "Bit 5 - The bit is used to clear the interrupt by dcache sync done."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_sync_int_clr(
         &mut self,
     ) -> PRO_DCACHE_SYNC_INT_CLR_W<CACHE_SYNC_INT_CTRL_SPEC> {

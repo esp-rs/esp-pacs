@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Set this bit to pop data from DMA FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_pop(&mut self) -> INFIFO_POP_W<IN_POP_SPEC> {
         INFIFO_POP_W::new(self, 12)
     }

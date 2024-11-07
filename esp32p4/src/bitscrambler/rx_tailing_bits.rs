@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - write this bits to specify the extra data bit length after getting EOF"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tailing_bits(&mut self) -> RX_TAILING_BITS_W<RX_TAILING_BITS_SPEC> {
         RX_TAILING_BITS_W::new(self, 0)
     }

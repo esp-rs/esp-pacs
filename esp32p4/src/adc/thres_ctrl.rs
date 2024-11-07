@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn thres_all_en(&mut self) -> THRES_ALL_EN_W<THRES_CTRL_SPEC> {
         THRES_ALL_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn thres3_en(&mut self) -> THRES3_EN_W<THRES_CTRL_SPEC> {
         THRES3_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn thres2_en(&mut self) -> THRES2_EN_W<THRES_CTRL_SPEC> {
         THRES2_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn thres1_en(&mut self) -> THRES1_EN_W<THRES_CTRL_SPEC> {
         THRES1_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn thres0_en(&mut self) -> THRES0_EN_W<THRES_CTRL_SPEC> {
         THRES0_EN_W::new(self, 31)
     }

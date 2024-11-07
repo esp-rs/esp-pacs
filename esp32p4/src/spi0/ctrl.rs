@@ -204,115 +204,96 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - In the dummy phase of an MSPI write data transfer when accesses to flash, the level of SPI_DQS is output by the MSPI controller."]
     #[inline(always)]
-    #[must_use]
     pub fn wdummy_dqs_always_out(&mut self) -> WDUMMY_DQS_ALWAYS_OUT_W<CTRL_SPEC> {
         WDUMMY_DQS_ALWAYS_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - In the dummy phase of an MSPI write data transfer when accesses to flash, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
     #[inline(always)]
-    #[must_use]
     pub fn wdummy_always_out(&mut self) -> WDUMMY_ALWAYS_OUT_W<CTRL_SPEC> {
         WDUMMY_ALWAYS_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - In an MSPI read data transfer when accesses to flash, the level of SPI_IO\\[7:0\\] is output by the MSPI controller in the first half part of dummy phase. It is used to mask invalid SPI_DQS in the half part of dummy phase."]
     #[inline(always)]
-    #[must_use]
     pub fn fdummy_rin(&mut self) -> FDUMMY_RIN_W<CTRL_SPEC> {
         FDUMMY_RIN_W::new(self, 2)
     }
     #[doc = "Bit 3 - In an MSPI write data transfer when accesses to flash, the level of SPI_IO\\[7:0\\] is output by the MSPI controller in the second half part of dummy phase. It is used to pre-drive flash."]
     #[inline(always)]
-    #[must_use]
     pub fn fdummy_wout(&mut self) -> FDUMMY_WOUT_W<CTRL_SPEC> {
         FDUMMY_WOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Apply 8 signals during write-data phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<CTRL_SPEC> {
         FDOUT_OCT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Apply 8 signals during read-data phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fdin_oct(&mut self) -> FDIN_OCT_W<CTRL_SPEC> {
         FDIN_OCT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Apply 8 signals during address phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC> {
         FADDR_OCT_W::new(self, 6)
     }
     #[doc = "Bit 8 - Apply 4 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Apply 8 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC> {
         FCMD_OCT_W::new(self, 9)
     }
     #[doc = "Bit 13 - This bit enable the bits: SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QOUT and SPI_MEM_FREAD_DOUT. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
         FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
-    #[must_use]
     pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low"]
     #[inline(always)]
-    #[must_use]
     pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
     #[inline(always)]
-    #[must_use]
     pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
         WP_W::new(self, 21)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
         FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
         FREAD_QIO_W::new(self, 24)
     }
     #[doc = "Bit 30 - When accesses to flash, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn dqs_ie_always_on(&mut self) -> DQS_IE_ALWAYS_ON_W<CTRL_SPEC> {
         DQS_IE_ALWAYS_ON_W::new(self, 30)
     }
     #[doc = "Bit 31 - When accesses to flash, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
     #[inline(always)]
-    #[must_use]
     pub fn data_ie_always_on(&mut self) -> DATA_IE_ALWAYS_ON_W<CTRL_SPEC> {
         DATA_IE_ALWAYS_ON_W::new(self, 31)
     }

@@ -160,7 +160,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u(&mut self, n: u8) -> CNT_RST_U_W<CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -168,49 +167,41 @@ impl W {
     }
     #[doc = "Bit 0 - Set this bit to clear unit0's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u0(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to clear unit1's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u1(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 2)
     }
     #[doc = "Bit 4 - Set this bit to clear unit2's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u2(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to clear unit3's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u3(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 6)
     }
     #[doc = "Bit 8 - Set this bit to clear unit4's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u4(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 8)
     }
     #[doc = "Bit 10 - Set this bit to clear unit5's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u5(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 10)
     }
     #[doc = "Bit 12 - Set this bit to clear unit6's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u6(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 12)
     }
     #[doc = "Bit 14 - Set this bit to clear unit7's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u7(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 14)
     }
@@ -218,7 +209,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u(&mut self, n: u8) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -226,55 +216,46 @@ impl W {
     }
     #[doc = "Bit 1 - Set this bit to pause unit0's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 1)
     }
     #[doc = "Bit 3 - Set this bit to pause unit1's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to pause unit2's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 5)
     }
     #[doc = "Bit 7 - Set this bit to pause unit3's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 7)
     }
     #[doc = "Bit 9 - Set this bit to pause unit4's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u4(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 9)
     }
     #[doc = "Bit 11 - Set this bit to pause unit5's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u5(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 11)
     }
     #[doc = "Bit 13 - Set this bit to pause unit6's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u6(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 13)
     }
     #[doc = "Bit 15 - Set this bit to pause unit7's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u7(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_SPEC> {
         CLK_EN_W::new(self, 16)
     }

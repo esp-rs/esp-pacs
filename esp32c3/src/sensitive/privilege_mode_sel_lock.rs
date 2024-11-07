@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - privilege_mode_sel_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn privilege_mode_sel_lock(
         &mut self,
     ) -> PRIVILEGE_MODE_SEL_LOCK_W<PRIVILEGE_MODE_SEL_LOCK_SPEC> {

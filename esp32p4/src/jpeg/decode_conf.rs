@@ -82,37 +82,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - configure restart interval in DRI marker when decode"]
     #[inline(always)]
-    #[must_use]
     pub fn restart_interval(&mut self) -> RESTART_INTERVAL_W<DECODE_CONF_SPEC> {
         RESTART_INTERVAL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - configure number of components in frame when decode"]
     #[inline(always)]
-    #[must_use]
     pub fn component_num(&mut self) -> COMPONENT_NUM_W<DECODE_CONF_SPEC> {
         COMPONENT_NUM_W::new(self, 16)
     }
     #[doc = "Bits 25:26 - Configure the byte number to check next sos marker in the multi-scan picture after one scan is decoded down. The real check number is reg_sos_check_byte_num+1"]
     #[inline(always)]
-    #[must_use]
     pub fn sos_check_byte_num(&mut self) -> SOS_CHECK_BYTE_NUM_W<DECODE_CONF_SPEC> {
         SOS_CHECK_BYTE_NUM_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - Configure the byte number to check next rst marker after one rst interval is decoded down. The real check number is reg_rst_check_byte_num+1"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_check_byte_num(&mut self) -> RST_CHECK_BYTE_NUM_W<DECODE_CONF_SPEC> {
         RST_CHECK_BYTE_NUM_W::new(self, 27)
     }
     #[doc = "Bit 29 - reserved for decoder"]
     #[inline(always)]
-    #[must_use]
     pub fn multi_scan_err_check(&mut self) -> MULTI_SCAN_ERR_CHECK_W<DECODE_CONF_SPEC> {
         MULTI_SCAN_ERR_CHECK_W::new(self, 29)
     }
     #[doc = "Bit 30 - reserved for decoder"]
     #[inline(always)]
-    #[must_use]
     pub fn dezigzag_ready_ctl(&mut self) -> DEZIGZAG_READY_CTL_W<DECODE_CONF_SPEC> {
         DEZIGZAG_READY_CTL_W::new(self, 30)
     }

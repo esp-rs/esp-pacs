@@ -46,25 +46,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_st_end(&mut self) -> SLV_ST_END_W<INT_CLR_SPEC> {
         SLV_ST_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_st_end(&mut self) -> MST_ST_END_W<INT_CLR_SPEC> {
         MST_ST_END_W::new(self, 4)
     }
     #[doc = "Bit 6 - The clear bit for SPI_MEM_PMS_REJECT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pms_reject(&mut self) -> PMS_REJECT_W<INT_CLR_SPEC> {
         PMS_REJECT_W::new(self, 6)
     }
     #[doc = "Bit 7 - The clear bit for SPI_MEM_AXI_RADDR_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn axi_raddr_err(&mut self) -> AXI_RADDR_ERR_W<INT_CLR_SPEC> {
         AXI_RADDR_ERR_W::new(self, 7)
     }

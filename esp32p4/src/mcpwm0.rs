@@ -169,7 +169,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(300)
                 .add(8 * n)
@@ -181,7 +181,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn op_tstmp_e1_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E1> {
         (0..3).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(300)
                 .add(8 * n)
@@ -209,7 +209,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 3][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(304)
                 .add(8 * n)
@@ -221,7 +221,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn op_tstmp_e2_iter(&self) -> impl Iterator<Item = &OP_TSTMP_E2> {
         (0..3).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(304)
                 .add(8 * n)

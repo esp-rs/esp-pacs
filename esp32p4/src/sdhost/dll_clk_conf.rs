@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clock enable of cclk_in_slf when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_slf_en(&mut self) -> DLL_CCLK_IN_SLF_EN_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_SLF_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clock enable of cclk_in_drv when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_drv_en(&mut self) -> DLL_CCLK_IN_DRV_EN_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_DRV_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clock enable of cclk_in_sam when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_sam_en(&mut self) -> DLL_CCLK_IN_SAM_EN_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_SAM_EN_W::new(self, 2)
     }
     #[doc = "Bits 3:8 - It's used to control the phase of cclk_in_slf when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_slf_phase(&mut self) -> DLL_CCLK_IN_SLF_PHASE_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_SLF_PHASE_W::new(self, 3)
     }
     #[doc = "Bits 9:14 - It's used to control the phase of cclk_in_drv when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_drv_phase(&mut self) -> DLL_CCLK_IN_DRV_PHASE_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_DRV_PHASE_W::new(self, 9)
     }
     #[doc = "Bits 15:20 - It's used to control the phase of cclk_in_sam when ULTRA_HIGH_SPEED_MODE==1."]
     #[inline(always)]
-    #[must_use]
     pub fn dll_cclk_in_sam_phase(&mut self) -> DLL_CCLK_IN_SAM_PHASE_W<DLL_CLK_CONF_SPEC> {
         DLL_CCLK_IN_SAM_PHASE_W::new(self, 15)
     }

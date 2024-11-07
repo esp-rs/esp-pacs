@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - set hburst"]
     #[inline(always)]
-    #[must_use]
     pub fn hburst(&mut self) -> HBURST_W<AHB_CONFIG_SPEC> {
         HBURST_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - set max continuous access for incr mode"]
     #[inline(always)]
-    #[must_use]
     pub fn max_incr(&mut self) -> MAX_INCR_W<AHB_CONFIG_SPEC> {
         MAX_INCR_W::new(self, 3)
     }

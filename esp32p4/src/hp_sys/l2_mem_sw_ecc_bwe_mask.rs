@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask bwe hamming code bit"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_sw_ecc_bwe_mask_ctrl(
         &mut self,
     ) -> REG_L2_MEM_SW_ECC_BWE_MASK_CTRL_W<L2_MEM_SW_ECC_BWE_MASK_SPEC> {

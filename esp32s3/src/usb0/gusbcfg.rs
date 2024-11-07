@@ -140,67 +140,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC> {
         TOUTCAL_W::new(self, 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC> {
         PHYIF_W::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn fsintf(&mut self) -> FSINTF_W<GUSBCFG_SPEC> {
         FSINTF_W::new(self, 5)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC> {
         SRPCAP_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC> {
         HNPCAP_W::new(self, 9)
     }
     #[doc = "Bits 10:13"]
     #[inline(always)]
-    #[must_use]
     pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC> {
         USBTRDTIM_W::new(self, 10)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<GUSBCFG_SPEC> {
         TERMSELDLPULSE_W::new(self, 22)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    #[must_use]
     pub fn txenddelay(&mut self) -> TXENDDELAY_W<GUSBCFG_SPEC> {
         TXENDDELAY_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<GUSBCFG_SPEC> {
         FORCEHSTMODE_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<GUSBCFG_SPEC> {
         FORCEDEVMODE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<GUSBCFG_SPEC> {
         CORRUPTTXPKT_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vid_null_size(&mut self) -> VID_NULL_SIZE_W<VID_NULL_SIZE_SPEC> {
         VID_NULL_SIZE_W::new(self, 0)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the PPA_SR_EOF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_eof(&mut self) -> SR_EOF_W<INT_ENA_SPEC> {
         SR_EOF_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the PPA_BLEND_EOF_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn blend_eof(&mut self) -> BLEND_EOF_W<INT_ENA_SPEC> {
         BLEND_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the PPA_SR_RX_YSCAL_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<INT_ENA_SPEC> {
         SR_PARAM_CFG_ERR_W::new(self, 2)
     }

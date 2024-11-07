@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<EXTMEM_REJECT_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the EXTMEM_REJECT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn extmem_reject_int_clr(&mut self) -> EXTMEM_REJECT_INT_CLR_W<EXTMEM_REJECT_INT_CLR_SPEC> {
         EXTMEM_REJECT_INT_CLR_W::new(self, 0)
     }

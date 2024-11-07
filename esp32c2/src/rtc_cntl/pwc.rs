@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
-    #[must_use]
     pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<PWC_SPEC> {
         PAD_FORCE_HOLD_W::new(self, 21)
     }

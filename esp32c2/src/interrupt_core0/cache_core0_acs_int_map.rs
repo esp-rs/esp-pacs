@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_core0_acs_int_map(
         &mut self,
     ) -> CACHE_CORE0_ACS_INT_MAP_W<CACHE_CORE0_ACS_INT_MAP_SPEC> {

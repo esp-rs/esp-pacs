@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Select match which privilege level when \\hyperref\\[fielddesc:TRACEMATCHPRIVILEGE\\]{TRACE_MATCH_PRIVILEGE} is set. \\\\1: machine mode. \\\\0: user mode"]
     #[inline(always)]
-    #[must_use]
     pub fn match_choice_privilege(
         &mut self,
     ) -> MATCH_CHOICE_PRIVILEGE_W<FILTER_MATCH_CONTROL_SPEC> {
@@ -52,13 +51,11 @@ impl W {
     }
     #[doc = "Bit 1 - Select which match which itype when \\hyperref\\[fielddesc:TRACEMATCHINTERRUPT\\]{TRACE_MATCH_INTERRUP} is set. \\\\1: match itype of 2. \\\\0: match itype or 1."]
     #[inline(always)]
-    #[must_use]
     pub fn match_value_interrupt(&mut self) -> MATCH_VALUE_INTERRUPT_W<FILTER_MATCH_CONTROL_SPEC> {
         MATCH_VALUE_INTERRUPT_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - specified which ecause matched."]
     #[inline(always)]
-    #[must_use]
     pub fn match_choice_ecause(&mut self) -> MATCH_CHOICE_ECAUSE_W<FILTER_MATCH_CONTROL_SPEC> {
         MATCH_CHOICE_ECAUSE_W::new(self, 2)
     }

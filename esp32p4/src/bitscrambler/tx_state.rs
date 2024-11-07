@@ -72,7 +72,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - write this bit to clear reg_bitscrambler_tx_eof_overload and reg_bitscrambler_tx_eof_get_cnt registers"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_eof_trace_clr(&mut self) -> TX_EOF_TRACE_CLR_W<TX_STATE_SPEC> {
         TX_EOF_TRACE_CLR_W::new(self, 31)
     }

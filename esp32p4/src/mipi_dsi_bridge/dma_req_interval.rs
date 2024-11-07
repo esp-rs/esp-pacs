@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - this field configures the interval between dma req events"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_req_interval(&mut self) -> DMA_REQ_INTERVAL_W<DMA_REQ_INTERVAL_SPEC> {
         DMA_REQ_INTERVAL_W::new(self, 0)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_agc_mem_force_pu"]
     #[inline(always)]
-    #[must_use]
     pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
         AGC_MEM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_agc_mem_force_pd"]
     #[inline(always)]
-    #[must_use]
     pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
         AGC_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_pbus_mem_force_pu"]
     #[inline(always)]
-    #[must_use]
     pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
         PBUS_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_pbus_mem_force_pd"]
     #[inline(always)]
-    #[must_use]
     pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
         PBUS_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_dc_mem_force_pu"]
     #[inline(always)]
-    #[must_use]
     pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
         DC_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_dc_mem_force_pd"]
     #[inline(always)]
-    #[must_use]
     pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
         DC_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_freq_mem_force_pu"]
     #[inline(always)]
-    #[must_use]
     pub fn freq_mem_force_pu(&mut self) -> FREQ_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
         FREQ_MEM_FORCE_PU_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_freq_mem_force_pd"]
     #[inline(always)]
-    #[must_use]
     pub fn freq_mem_force_pd(&mut self) -> FREQ_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
         FREQ_MEM_FORCE_PD_W::new(self, 7)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_i2c_ext0_intr_map(&mut self) -> APP_I2C_EXT0_INTR_MAP_W<APP_I2C_EXT0_INTR_MAP_SPEC> {
         APP_I2C_EXT0_INTR_MAP_W::new(self, 0)
     }

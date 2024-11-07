@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Selection control for peripheral input signal m, selects a pad from the 54 GPIO matrix pads to connect this input signal. Or selects 0x38 for a constantly high input or 0x3C for a constantly low input."]
     #[inline(always)]
-    #[must_use]
     pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 6 - Invert the input value. 1: invert enabled; 0: invert disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         IN_INV_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Bypass GPIO matrix. 1: route signals via GPIO matrix, 0: connect signals directly to peripheral configured in IO_MUX."]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         SEL_W::new(self, 7)
     }

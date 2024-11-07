@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn bod_mode1_reset_ena(&mut self) -> BOD_MODE1_RESET_ENA_W<BOD_MODE1_CNTL_SPEC> {
         BOD_MODE1_RESET_ENA_W::new(self, 31)
     }

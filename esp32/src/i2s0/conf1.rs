@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<CONF1_SPEC> {
         TX_PCM_CONF_W::new(self, 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<CONF1_SPEC> {
         TX_PCM_BYPASS_W::new(self, 3)
     }
     #[doc = "Bits 4:6"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pcm_conf(&mut self) -> RX_PCM_CONF_W<CONF1_SPEC> {
         RX_PCM_CONF_W::new(self, 4)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_pcm_bypass(&mut self) -> RX_PCM_BYPASS_W<CONF1_SPEC> {
         RX_PCM_BYPASS_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<CONF1_SPEC> {
         TX_STOP_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_zeros_rm_en(&mut self) -> TX_ZEROS_RM_EN_W<CONF1_SPEC> {
         TX_ZEROS_RM_EN_W::new(self, 9)
     }

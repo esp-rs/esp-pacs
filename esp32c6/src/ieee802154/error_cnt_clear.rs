@@ -173,13 +173,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn cca_busy_cnt_clear(&mut self) -> CCA_BUSY_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         CCA_BUSY_CNT_CLEAR_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_security_error_cnt_clear(
         &mut self,
     ) -> TX_SECURITY_ERROR_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
@@ -187,19 +185,16 @@ impl W {
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_break_coex_cnt_clear(&mut self) -> TX_BREAK_COEX_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         TX_BREAK_COEX_CNT_CLEAR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ack_timeout_cnt_clear(&mut self) -> RX_ACK_TIMEOUT_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         RX_ACK_TIMEOUT_CNT_CLEAR_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ack_abort_coex_cnt_clear(
         &mut self,
     ) -> RX_ACK_ABORT_COEX_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
@@ -207,13 +202,11 @@ impl W {
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ed_scan_coex_cnt_clear(&mut self) -> ED_SCAN_COEX_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         ED_SCAN_COEX_CNT_CLEAR_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ack_abort_coex_cnt_clear(
         &mut self,
     ) -> TX_ACK_ABORT_COEX_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
@@ -221,49 +214,41 @@ impl W {
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_restart_cnt_clear(&mut self) -> RX_RESTART_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         RX_RESTART_CNT_CLEAR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_abort_coex_cnt_clear(&mut self) -> RX_ABORT_COEX_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         RX_ABORT_COEX_CNT_CLEAR_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn no_rss_detect_cnt_clear(&mut self) -> NO_RSS_DETECT_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         NO_RSS_DETECT_CNT_CLEAR_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_filter_fail_cnt_clear(&mut self) -> RX_FILTER_FAIL_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         RX_FILTER_FAIL_CNT_CLEAR_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn cca_fail_cnt_clear(&mut self) -> CCA_FAIL_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         CCA_FAIL_CNT_CLEAR_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn ed_abort_cnt_clear(&mut self) -> ED_ABORT_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         ED_ABORT_CNT_CLEAR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn crc_error_cnt_clear(&mut self) -> CRC_ERROR_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         CRC_ERROR_CNT_CLEAR_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn sfd_timeout_cnt_clear(&mut self) -> SFD_TIMEOUT_CNT_CLEAR_W<ERROR_CNT_CLEAR_SPEC> {
         SFD_TIMEOUT_CNT_CLEAR_W::new(self, 14)
     }

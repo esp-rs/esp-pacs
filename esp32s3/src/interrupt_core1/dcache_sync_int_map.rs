@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map dcache_sync interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_sync_int_map(&mut self) -> DCACHE_SYNC_INT_MAP_W<DCACHE_SYNC_INT_MAP_SPEC> {
         DCACHE_SYNC_INT_MAP_W::new(self, 0)
     }

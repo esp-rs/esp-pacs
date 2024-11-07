@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc0(&mut self) -> FORCE_ERR_CRC_VC0_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc1(&mut self) -> FORCE_ERR_CRC_VC1_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC1_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc2(&mut self) -> FORCE_ERR_CRC_VC2_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC2_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc3(&mut self) -> FORCE_ERR_CRC_VC3_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC3_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc4(&mut self) -> FORCE_ERR_CRC_VC4_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC4_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc5(&mut self) -> FORCE_ERR_CRC_VC5_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC5_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc6(&mut self) -> FORCE_ERR_CRC_VC6_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC6_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc7(&mut self) -> FORCE_ERR_CRC_VC7_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC7_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc8(&mut self) -> FORCE_ERR_CRC_VC8_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC8_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc9(&mut self) -> FORCE_ERR_CRC_VC9_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC9_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc10(&mut self) -> FORCE_ERR_CRC_VC10_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC10_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc11(&mut self) -> FORCE_ERR_CRC_VC11_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC11_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc12(&mut self) -> FORCE_ERR_CRC_VC12_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC12_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc13(&mut self) -> FORCE_ERR_CRC_VC13_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC13_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc14(&mut self) -> FORCE_ERR_CRC_VC14_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC14_W::new(self, 14)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn force_err_crc_vc15(&mut self) -> FORCE_ERR_CRC_VC15_W<INT_FORCE_PLD_CRC_FATAL_SPEC> {
         FORCE_ERR_CRC_VC15_W::new(self, 15)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - page program delay time by system clock."]
     #[inline(always)]
-    #[must_use]
     pub fn t_pp_time(&mut self) -> T_PP_TIME_W<EXT0_SPEC> {
         T_PP_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - page program delay time shift ."]
     #[inline(always)]
-    #[must_use]
     pub fn t_pp_shift(&mut self) -> T_PP_SHIFT_W<EXT0_SPEC> {
         T_PP_SHIFT_W::new(self, 16)
     }
     #[doc = "Bit 31 - page program delay enable."]
     #[inline(always)]
-    #[must_use]
     pub fn t_pp_ena(&mut self) -> T_PP_ENA_W<EXT0_SPEC> {
         T_PP_ENA_W::new(self, 31)
     }

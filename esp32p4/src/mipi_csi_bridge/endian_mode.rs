@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - endianness order in bytes. 2'h0 is normal mode and 2'h3 is useful to YUV420(Legacy) when isp is bapassed."]
     #[inline(always)]
-    #[must_use]
     pub fn byte_endian_order(&mut self) -> BYTE_ENDIAN_ORDER_W<ENDIAN_MODE_SPEC> {
         BYTE_ENDIAN_ORDER_W::new(self, 0)
     }
     #[doc = "Bit 1 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn bit_endian_order(&mut self) -> BIT_ENDIAN_ORDER_W<ENDIAN_MODE_SPEC> {
         BIT_ENDIAN_ORDER_W::new(self, 1)
     }

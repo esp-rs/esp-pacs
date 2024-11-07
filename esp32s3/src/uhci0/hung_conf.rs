@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register stores the timeout value. It will produce the UHCI_TX_HUNG_INT interrupt when DMA takes more time to receive data."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - This register is used to configure the tick count maximum value."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - This is the enable bit for Tx-FIFO receive-data timeout."]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - This register stores the timeout value. It will produce the UHCI_RX_HUNG_INT interrupt when DMA takes more time to read data from RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - This register is used to configure the tick count maximum value."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - This is the enable bit for DMA send-data timeout."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }

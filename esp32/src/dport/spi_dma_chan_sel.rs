@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn spi1_dma_chan_sel(&mut self) -> SPI1_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
         SPI1_DMA_CHAN_SEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_dma_chan_sel(&mut self) -> SPI2_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
         SPI2_DMA_CHAN_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    #[must_use]
     pub fn spi3_dma_chan_sel(&mut self) -> SPI3_DMA_CHAN_SEL_W<SPI_DMA_CHAN_SEL_SPEC> {
         SPI3_DMA_CHAN_SEL_W::new(self, 4)
     }

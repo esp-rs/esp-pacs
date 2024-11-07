@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn sram_pd_1(&mut self) -> SRAM_PD_1_W<SRAM_PD_CTRL_1_SPEC> {
         SRAM_PD_1_W::new(self, 0)
     }

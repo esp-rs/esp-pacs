@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn bta_to_cnt(&mut self) -> BTA_TO_CNT_W<BTA_TO_CNT_SPEC> {
         BTA_TO_CNT_W::new(self, 0)
     }

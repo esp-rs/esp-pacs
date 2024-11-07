@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin0_hold(&mut self) -> GPIO_PIN0_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN0_HOLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin1_hold(&mut self) -> GPIO_PIN1_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN1_HOLD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin2_hold(&mut self) -> GPIO_PIN2_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN2_HOLD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin3_hold(&mut self) -> GPIO_PIN3_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN3_HOLD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin4_hold(&mut self) -> GPIO_PIN4_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN4_HOLD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin5_hold(&mut self) -> GPIO_PIN5_HOLD_W<PAD_HOLD_SPEC> {
         GPIO_PIN5_HOLD_W::new(self, 5)
     }

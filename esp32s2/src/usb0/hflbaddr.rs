@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn hflbaddr(&mut self) -> HFLBADDR_W<HFLBADDR_SPEC> {
         HFLBADDR_W::new(self, 0)
     }

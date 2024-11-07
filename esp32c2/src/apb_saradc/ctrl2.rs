@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn meas_num_limit(&mut self) -> MEAS_NUM_LIMIT_W<CTRL2_SPEC> {
         MEAS_NUM_LIMIT_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - max conversion number"]
     #[inline(always)]
-    #[must_use]
     pub fn max_meas_num(&mut self) -> MAX_MEAS_NUM_W<CTRL2_SPEC> {
         MAX_MEAS_NUM_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: data to DIG ADC1 CTRL is inverted, otherwise not"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_inv(&mut self) -> SAR1_INV_W<CTRL2_SPEC> {
         SAR1_INV_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: data to DIG ADC2 CTRL is inverted, otherwise not"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_inv(&mut self) -> SAR2_INV_W<CTRL2_SPEC> {
         SAR2_INV_W::new(self, 10)
     }
     #[doc = "Bits 12:23 - to set saradc timer target"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_target(&mut self) -> TIMER_TARGET_W<CTRL2_SPEC> {
         TIMER_TARGET_W::new(self, 12)
     }
     #[doc = "Bit 24 - to enable saradc timer trigger"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_en(&mut self) -> TIMER_EN_W<CTRL2_SPEC> {
         TIMER_EN_W::new(self, 24)
     }

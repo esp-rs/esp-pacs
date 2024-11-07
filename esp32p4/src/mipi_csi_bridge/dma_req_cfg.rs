@@ -6,9 +6,9 @@ pub type W = crate::W<DMA_REQ_CFG_SPEC>;
 pub type DMA_BURST_LEN_R = crate::FieldReader<u16>;
 #[doc = "Field `DMA_BURST_LEN` writer - DMA burst length."]
 pub type DMA_BURST_LEN_W<'a, REG> = crate::FieldWriter<'a, REG, 12, u16>;
-#[doc = "Field `DMA_CFG_UPD_BY_BLK` reader - 1: reg_dma_burst_len &amp; reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
+#[doc = "Field `DMA_CFG_UPD_BY_BLK` reader - 1: reg_dma_burst_len & reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
 pub type DMA_CFG_UPD_BY_BLK_R = crate::BitReader;
-#[doc = "Field `DMA_CFG_UPD_BY_BLK` writer - 1: reg_dma_burst_len &amp; reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
+#[doc = "Field `DMA_CFG_UPD_BY_BLK` writer - 1: reg_dma_burst_len & reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
 pub type DMA_CFG_UPD_BY_BLK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DMA_FORCE_RD_STATUS` reader - 1: mask dma request when reading frame info. 0: disable mask."]
 pub type DMA_FORCE_RD_STATUS_R = crate::BitReader;
@@ -20,7 +20,7 @@ impl R {
     pub fn dma_burst_len(&self) -> DMA_BURST_LEN_R {
         DMA_BURST_LEN_R::new((self.bits & 0x0fff) as u16)
     }
-    #[doc = "Bit 12 - 1: reg_dma_burst_len &amp; reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
+    #[doc = "Bit 12 - 1: reg_dma_burst_len & reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
     #[inline(always)]
     pub fn dma_cfg_upd_by_blk(&self) -> DMA_CFG_UPD_BY_BLK_R {
         DMA_CFG_UPD_BY_BLK_R::new(((self.bits >> 12) & 1) != 0)
@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - DMA burst length."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<DMA_REQ_CFG_SPEC> {
         DMA_BURST_LEN_W::new(self, 0)
     }
-    #[doc = "Bit 12 - 1: reg_dma_burst_len &amp; reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
+    #[doc = "Bit 12 - 1: reg_dma_burst_len & reg_dma_burst_len will be updated by dma block finish. 0: updated by frame."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_cfg_upd_by_blk(&mut self) -> DMA_CFG_UPD_BY_BLK_W<DMA_REQ_CFG_SPEC> {
         DMA_CFG_UPD_BY_BLK_W::new(self, 12)
     }
     #[doc = "Bit 16 - 1: mask dma request when reading frame info. 0: disable mask."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_force_rd_status(&mut self) -> DMA_FORCE_RD_STATUS_W<DMA_REQ_CFG_SPEC> {
         DMA_FORCE_RD_STATUS_W::new(self, 16)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures ch0_task_id"]
     #[inline(always)]
-    #[must_use]
     pub fn task_id(&mut self) -> TASK_ID_W<TASK_ID_SPEC> {
         TASK_ID_W::new(self, 0)
     }

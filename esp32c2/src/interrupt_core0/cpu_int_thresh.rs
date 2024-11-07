@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<CPU_INT_THRESH_SPEC> {
         CPU_INT_THRESH_W::new(self, 0)
     }

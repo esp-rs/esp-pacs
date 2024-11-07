@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i2c_fm_low_period(&mut self) -> REG_I2C_FM_LOW_PERIOD_W<SCL_I2C_FM_TIME_SPEC> {
         REG_I2C_FM_LOW_PERIOD_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - The SCL open-drain low count timing for I2C Fast Mode transfers."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i2c_fm_high_period(&mut self) -> REG_I2C_FM_HIGH_PERIOD_W<SCL_I2C_FM_TIME_SPEC> {
         REG_I2C_FM_HIGH_PERIOD_W::new(self, 16)
     }

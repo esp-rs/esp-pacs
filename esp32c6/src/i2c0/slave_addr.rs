@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - When configured as an I2C Slave, this field is used to configure the slave address."]
     #[inline(always)]
-    #[must_use]
     pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<SLAVE_ADDR_SPEC> {
         SLAVE_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 31 - This field is used to enable the slave 10-bit addressing mode in master mode."]
     #[inline(always)]
-    #[must_use]
     pub fn addr_10bit_en(&mut self) -> ADDR_10BIT_EN_W<SLAVE_ADDR_SPEC> {
         ADDR_10BIT_EN_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In reset mode, reserved with RO. In operation mode, when software initiate write operation, it is tx data register 10 and when software initiate read operation, it is rx data register 10."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_byte_10(&mut self) -> TX_BYTE_10_W<DATA_10_SPEC> {
         TX_BYTE_10_W::new(self, 0)
     }

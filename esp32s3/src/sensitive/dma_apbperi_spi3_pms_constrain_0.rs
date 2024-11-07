@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock spi3 dma permission Configuration Register."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_spi3_pms_constrain_lock(
         &mut self,
     ) -> DMA_APBPERI_SPI3_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_SPI3_PMS_CONSTRAIN_0_SPEC> {

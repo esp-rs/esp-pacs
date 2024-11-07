@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10"]
     #[inline(always)]
-    #[must_use]
     pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_ENA_W::new(self, 11)
     }

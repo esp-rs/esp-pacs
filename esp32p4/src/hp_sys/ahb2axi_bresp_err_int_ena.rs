@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Write 1 to enable cpu_icm_h2x_bresp_err int"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_icm_h2x_bresp_err_int_ena(
         &mut self,
     ) -> CPU_ICM_H2X_BRESP_ERR_INT_ENA_W<AHB2AXI_BRESP_ERR_INT_ENA_SPEC> {

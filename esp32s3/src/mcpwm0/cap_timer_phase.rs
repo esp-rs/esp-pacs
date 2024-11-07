@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Phase value for capture timer sync operation."]
     #[inline(always)]
-    #[must_use]
     pub fn cap_phase(&mut self) -> CAP_PHASE_W<CAP_TIMER_PHASE_SPEC> {
         CAP_PHASE_W::new(self, 0)
     }

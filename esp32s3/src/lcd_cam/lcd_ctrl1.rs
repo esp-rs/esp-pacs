@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - It is the vertical blank front porch of a frame."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vb_front(&mut self) -> LCD_VB_FRONT_W<LCD_CTRL1_SPEC> {
         LCD_VB_FRONT_W::new(self, 0)
     }
     #[doc = "Bits 8:19 - It is the horizontal active width of a frame."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_ha_width(&mut self) -> LCD_HA_WIDTH_W<LCD_CTRL1_SPEC> {
         LCD_HA_WIDTH_W::new(self, 8)
     }
     #[doc = "Bits 20:31 - It is the horizontal total width of a frame."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_ht_width(&mut self) -> LCD_HT_WIDTH_W<LCD_CTRL1_SPEC> {
         LCD_HT_WIDTH_W::new(self, 20)
     }

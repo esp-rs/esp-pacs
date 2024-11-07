@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Every bit represents a dma in h264"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_dma_sel(&mut self) -> DBG_DMA_SEL_W<DEBUG_DMA_SEL_SPEC> {
         DBG_DMA_SEL_W::new(self, 0)
     }

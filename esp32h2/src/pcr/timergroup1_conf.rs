@@ -58,13 +58,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable timer_group1 apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn tg1_clk_en(&mut self) -> TG1_CLK_EN_W<TIMERGROUP1_CONF_SPEC> {
         TG1_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset timer_group1 module"]
     #[inline(always)]
-    #[must_use]
     pub fn tg1_rst_en(&mut self) -> TG1_RST_EN_W<TIMERGROUP1_CONF_SPEC> {
         TG1_RST_EN_W::new(self, 1)
     }

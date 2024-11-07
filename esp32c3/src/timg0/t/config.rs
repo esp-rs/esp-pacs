@@ -76,43 +76,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
-    #[must_use]
     pub fn use_xtal(&mut self) -> USE_XTAL_W<CONFIG_SPEC> {
         USE_XTAL_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_t0_alarm_en."]
     #[inline(always)]
-    #[must_use]
     pub fn alarm_en(&mut self) -> ALARM_EN_W<CONFIG_SPEC> {
         ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 12 - reg_t0_divcnt_rst."]
     #[inline(always)]
-    #[must_use]
     pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<CONFIG_SPEC> {
         DIVCNT_RST_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - reg_t0_divider."]
     #[inline(always)]
-    #[must_use]
     pub fn divider(&mut self) -> DIVIDER_W<CONFIG_SPEC> {
         DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - reg_t0_autoreload."]
     #[inline(always)]
-    #[must_use]
     pub fn autoreload(&mut self) -> AUTORELOAD_W<CONFIG_SPEC> {
         AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_t0_increase."]
     #[inline(always)]
-    #[must_use]
     pub fn increase(&mut self) -> INCREASE_W<CONFIG_SPEC> {
         INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_t0_en."]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CONFIG_SPEC> {
         EN_W::new(self, 31)
     }

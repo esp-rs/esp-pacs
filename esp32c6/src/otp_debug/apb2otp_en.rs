@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Debug mode enable signal."]
     #[inline(always)]
-    #[must_use]
     pub fn apb2otp_en(&mut self) -> APB2OTP_EN_W<APB2OTP_EN_SPEC> {
         APB2OTP_EN_W::new(self, 0)
     }

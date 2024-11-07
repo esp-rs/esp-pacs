@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Ledc ch%s gamma ram read address."]
     #[inline(always)]
-    #[must_use]
     pub fn ch_gamma_rd_addr(&mut self) -> CH_GAMMA_RD_ADDR_W<CH_GAMMA_RD_ADDR_SPEC> {
         CH_GAMMA_RD_ADDR_W::new(self, 0)
     }

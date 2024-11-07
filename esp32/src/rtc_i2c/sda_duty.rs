@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles SDA will switch after falling edge of SCL"]
     #[inline(always)]
-    #[must_use]
     pub fn sda_duty(&mut self) -> SDA_DUTY_W<SDA_DUTY_SPEC> {
         SDA_DUTY_W::new(self, 0)
     }

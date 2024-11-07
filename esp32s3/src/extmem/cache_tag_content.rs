@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag memory on the specified cache."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_tag_content(&mut self) -> CACHE_TAG_CONTENT_W<CACHE_TAG_CONTENT_SPEC> {
         CACHE_TAG_CONTENT_W::new(self, 0)
     }

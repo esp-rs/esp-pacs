@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:25 - hold control for gpio63~56"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_ded_hold(&mut self) -> REG_GPIO_DED_HOLD_W<GPIO_DED_HOLD_CTRL_SPEC> {
         REG_GPIO_DED_HOLD_W::new(self, 0)
     }

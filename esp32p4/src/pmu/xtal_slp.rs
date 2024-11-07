@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_target(&mut self) -> CNT_TARGET_W<XTAL_SLP_SPEC> {
         CNT_TARGET_W::new(self, 16)
     }

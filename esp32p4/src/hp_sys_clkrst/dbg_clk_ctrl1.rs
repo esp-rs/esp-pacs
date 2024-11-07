@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_ch1_div_num(&mut self) -> DBG_CH1_DIV_NUM_W<DBG_CLK_CTRL1_SPEC> {
         DBG_CH1_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_ch2_div_num(&mut self) -> DBG_CH2_DIV_NUM_W<DBG_CLK_CTRL1_SPEC> {
         DBG_CH2_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_ch0_en(&mut self) -> DBG_CH0_EN_W<DBG_CLK_CTRL1_SPEC> {
         DBG_CH0_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_ch1_en(&mut self) -> DBG_CH1_EN_W<DBG_CLK_CTRL1_SPEC> {
         DBG_CH1_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_ch2_en(&mut self) -> DBG_CH2_EN_W<DBG_CLK_CTRL1_SPEC> {
         DBG_CH2_EN_W::new(self, 18)
     }

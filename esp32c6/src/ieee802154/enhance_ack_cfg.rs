@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_enh_ack_generate_done_notify(
         &mut self,
     ) -> TX_ENH_ACK_GENERATE_DONE_NOTIFY_W<ENHANCE_ACK_CFG_SPEC> {

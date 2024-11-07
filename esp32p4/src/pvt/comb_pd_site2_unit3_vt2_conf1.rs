@@ -64,7 +64,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn monitor_en_vt2_pd_site2_unit3(
         &mut self,
     ) -> MONITOR_EN_VT2_PD_SITE2_UNIT3_W<COMB_PD_SITE2_UNIT3_VT2_CONF1_SPEC> {
@@ -72,7 +71,6 @@ impl W {
     }
     #[doc = "Bit 1 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn timing_err_cnt_clr_vt2_pd_site2_unit3(
         &mut self,
     ) -> TIMING_ERR_CNT_CLR_VT2_PD_SITE2_UNIT3_W<COMB_PD_SITE2_UNIT3_VT2_CONF1_SPEC> {
@@ -80,7 +78,6 @@ impl W {
     }
     #[doc = "Bits 2:9 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn delay_limit_vt2_pd_site2_unit3(
         &mut self,
     ) -> DELAY_LIMIT_VT2_PD_SITE2_UNIT3_W<COMB_PD_SITE2_UNIT3_VT2_CONF1_SPEC> {

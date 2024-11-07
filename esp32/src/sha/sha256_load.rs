@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SHA256_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-256 operation to calculate the final message hash."]
     #[inline(always)]
-    #[must_use]
     pub fn sha256_load(&mut self) -> SHA256_LOAD_W<SHA256_LOAD_SPEC> {
         SHA256_LOAD_W::new(self, 0)
     }

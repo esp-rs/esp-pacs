@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - 32-bit general purpose retention register"]
     #[inline(always)]
-    #[must_use]
     pub fn scratch7(&mut self) -> SCRATCH7_W<STORE7_SPEC> {
         SCRATCH7_W::new(self, 0)
     }

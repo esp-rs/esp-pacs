@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - this field configures the color correction matrix coefficient"]
     #[inline(always)]
-    #[must_use]
     pub fn ccm_br(&mut self) -> CCM_BR_W<CCM_COEF4_SPEC> {
         CCM_BR_W::new(self, 0)
     }
     #[doc = "Bits 13:25 - this field configures the color correction matrix coefficient"]
     #[inline(always)]
-    #[must_use]
     pub fn ccm_bg(&mut self) -> CCM_BG_W<CCM_COEF4_SPEC> {
         CCM_BG_W::new(self, 13)
     }

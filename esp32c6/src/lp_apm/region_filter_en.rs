@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Region filter enable"]
     #[inline(always)]
-    #[must_use]
     pub fn region_filter_en(&mut self) -> REGION_FILTER_EN_W<REGION_FILTER_EN_SPEC> {
         REGION_FILTER_EN_W::new(self, 0)
     }

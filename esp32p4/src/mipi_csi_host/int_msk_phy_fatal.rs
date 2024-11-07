@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mask_phy_errsotsynchs_0(&mut self) -> MASK_PHY_ERRSOTSYNCHS_0_W<INT_MSK_PHY_FATAL_SPEC> {
         MASK_PHY_ERRSOTSYNCHS_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mask_phy_errsotsynchs_1(&mut self) -> MASK_PHY_ERRSOTSYNCHS_1_W<INT_MSK_PHY_FATAL_SPEC> {
         MASK_PHY_ERRSOTSYNCHS_1_W::new(self, 1)
     }

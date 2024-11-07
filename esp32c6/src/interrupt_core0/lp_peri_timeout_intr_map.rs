@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_peri_timeout_intr_map(
         &mut self,
     ) -> LP_PERI_TIMEOUT_INTR_MAP_W<LP_PERI_TIMEOUT_INTR_MAP_SPEC> {

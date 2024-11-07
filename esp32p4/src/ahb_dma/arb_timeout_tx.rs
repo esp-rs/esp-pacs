@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to config arbiter time out value"]
     #[inline(always)]
-    #[must_use]
     pub fn arb_timeout_tx(&mut self) -> ARB_TIMEOUT_TX_W<ARB_TIMEOUT_TX_SPEC> {
         ARB_TIMEOUT_TX_W::new(self, 0)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable global update for all active registers in MCPWM module.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn global_up_en(&mut self) -> GLOBAL_UP_EN_W<UPDATE_CFG_SPEC> {
         GLOBAL_UP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the generation of global forced update for all active registers in MCPWM module. A toggle (software invert its value) will trigger a global forced update. Valid only when MCPWM_GLOBAL_UP_EN and MCPWM_OP0/1/2_UP_EN are both set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn global_force_up(&mut self) -> GLOBAL_FORCE_UP_W<UPDATE_CFG_SPEC> {
         GLOBAL_FORCE_UP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable update of active registers in PWM operator0. Valid only when PWM_GLOBAL_UP_EN is set to 1.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn op0_up_en(&mut self) -> OP0_UP_EN_W<UPDATE_CFG_SPEC> {
         OP0_UP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the generation of forced update for active registers in PWM operator0. A toggle (software invert its value) will trigger a forced update. Valid only when MCPWM_GLOBAL_UP_EN and MCPWM_OP0_UP_EN are both set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn op0_force_up(&mut self) -> OP0_FORCE_UP_W<UPDATE_CFG_SPEC> {
         OP0_FORCE_UP_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable update of active registers in PWM operator1. Valid only when PWM_GLOBAL_UP_EN is set to 1.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn op1_up_en(&mut self) -> OP1_UP_EN_W<UPDATE_CFG_SPEC> {
         OP1_UP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures the generation of forced update for active registers in PWM operator1. A toggle (software invert its value) will trigger a forced update. Valid only when MCPWM_GLOBAL_UP_EN and MCPWM_OP1_UP_EN are both set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn op1_force_up(&mut self) -> OP1_FORCE_UP_W<UPDATE_CFG_SPEC> {
         OP1_FORCE_UP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable update of active registers in PWM operator2. Valid only when PWM_GLOBAL_UP_EN is set to 1.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn op2_up_en(&mut self) -> OP2_UP_EN_W<UPDATE_CFG_SPEC> {
         OP2_UP_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures the generation of forced update for active registers in PWM operator2. A toggle (software invert its value) will trigger a forced update. Valid only when MCPWM_GLOBAL_UP_EN and MCPWM_OP2_UP_EN are both set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn op2_force_up(&mut self) -> OP2_FORCE_UP_W<UPDATE_CFG_SPEC> {
         OP2_FORCE_UP_W::new(self, 7)
     }

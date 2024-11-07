@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_axi_read_id_suffix(&mut self) -> CH1_AXI_READ_ID_SUFFIX_W<AXI_ID0_SPEC> {
         CH1_AXI_READ_ID_SUFFIX_W::new(self, 0)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_axi_write_id_suffix(&mut self) -> CH1_AXI_WRITE_ID_SUFFIX_W<AXI_ID0_SPEC> {
         CH1_AXI_WRITE_ID_SUFFIX_W::new(self, 16)
     }

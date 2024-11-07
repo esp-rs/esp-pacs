@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W<TSENS_CTRL2_SPEC> {
         XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_force(&mut self) -> XPD_FORCE_W<TSENS_CTRL2_SPEC> {
         XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_inv(&mut self) -> CLK_INV_W<TSENS_CTRL2_SPEC> {
         CLK_INV_W::new(self, 14)
     }
     #[doc = "Bit 15 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_sel(&mut self) -> CLK_SEL_W<TSENS_CTRL2_SPEC> {
         CLK_SEL_W::new(self, 15)
     }

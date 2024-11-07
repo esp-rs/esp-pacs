@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to send read command."]
     #[inline(always)]
-    #[must_use]
     pub fn read_cmd(&mut self) -> READ_CMD_W<CMD_SPEC> {
         READ_CMD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to send programming command."]
     #[inline(always)]
-    #[must_use]
     pub fn pgm_cmd(&mut self) -> PGM_CMD_W<CMD_SPEC> {
         PGM_CMD_W::new(self, 1)
     }
     #[doc = "Bits 2:5 - The serial number of the block to be programmed. Value 0-10 corresponds to block number 0-10, respectively."]
     #[inline(always)]
-    #[must_use]
     pub fn blk_num(&mut self) -> BLK_NUM_W<CMD_SPEC> {
         BLK_NUM_W::new(self, 2)
     }

@@ -224,127 +224,106 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - digital wrap power down"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_dig(&mut self) -> XPD_DIG_W<LOW_POWER_ST_SPEC> {
         XPD_DIG_W::new(self, 8)
     }
     #[doc = "Bit 9 - touch should start to work"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_state_start(&mut self) -> TOUCH_STATE_START_W<LOW_POWER_ST_SPEC> {
         TOUCH_STATE_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - touch is about to working. Switch rtc main state"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_state_switch(&mut self) -> TOUCH_STATE_SWITCH_W<LOW_POWER_ST_SPEC> {
         TOUCH_STATE_SWITCH_W::new(self, 10)
     }
     #[doc = "Bit 11 - touch is in sleep state"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_state_slp(&mut self) -> TOUCH_STATE_SLP_W<LOW_POWER_ST_SPEC> {
         TOUCH_STATE_SLP_W::new(self, 11)
     }
     #[doc = "Bit 12 - touch is done"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_state_done(&mut self) -> TOUCH_STATE_DONE_W<LOW_POWER_ST_SPEC> {
         TOUCH_STATE_DONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - ulp/cocpu should start to work"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_state_start(&mut self) -> COCPU_STATE_START_W<LOW_POWER_ST_SPEC> {
         COCPU_STATE_START_W::new(self, 13)
     }
     #[doc = "Bit 14 - ulp/cocpu is about to working. Switch rtc main state"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_state_switch(&mut self) -> COCPU_STATE_SWITCH_W<LOW_POWER_ST_SPEC> {
         COCPU_STATE_SWITCH_W::new(self, 14)
     }
     #[doc = "Bit 15 - ulp/cocpu is in sleep state"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_state_slp(&mut self) -> COCPU_STATE_SLP_W<LOW_POWER_ST_SPEC> {
         COCPU_STATE_SLP_W::new(self, 15)
     }
     #[doc = "Bit 16 - ulp/cocpu is done"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_state_done(&mut self) -> COCPU_STATE_DONE_W<LOW_POWER_ST_SPEC> {
         COCPU_STATE_DONE_W::new(self, 16)
     }
     #[doc = "Bit 17 - no use any more"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_xtal_iso(&mut self) -> MAIN_STATE_XTAL_ISO_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_XTAL_ISO_W::new(self, 17)
     }
     #[doc = "Bit 18 - rtc main state machine is in states that pll should be running"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_pll_on(&mut self) -> MAIN_STATE_PLL_ON_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_PLL_ON_W::new(self, 18)
     }
     #[doc = "Bit 19 - rtc is ready to receive wake up trigger from wake up source"]
     #[inline(always)]
-    #[must_use]
     pub fn rdy_for_wakeup(&mut self) -> RDY_FOR_WAKEUP_W<LOW_POWER_ST_SPEC> {
         RDY_FOR_WAKEUP_W::new(self, 19)
     }
     #[doc = "Bit 20 - rtc main state machine has been waited for some cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_wait_end(&mut self) -> MAIN_STATE_WAIT_END_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_WAIT_END_W::new(self, 20)
     }
     #[doc = "Bit 21 - rtc main state machine is in the states of wakeup process"]
     #[inline(always)]
-    #[must_use]
     pub fn in_wakeup_state(&mut self) -> IN_WAKEUP_STATE_W<LOW_POWER_ST_SPEC> {
         IN_WAKEUP_STATE_W::new(self, 21)
     }
     #[doc = "Bit 22 - rtc main state machine is in the states of low power"]
     #[inline(always)]
-    #[must_use]
     pub fn in_low_power_state(&mut self) -> IN_LOW_POWER_STATE_W<LOW_POWER_ST_SPEC> {
         IN_LOW_POWER_STATE_W::new(self, 22)
     }
     #[doc = "Bit 23 - rtc main state machine is in wait 8m state"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_in_wait_8m(&mut self) -> MAIN_STATE_IN_WAIT_8M_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_IN_WAIT_8M_W::new(self, 23)
     }
     #[doc = "Bit 24 - rtc main state machine is in wait pll state"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_in_wait_pll(&mut self) -> MAIN_STATE_IN_WAIT_PLL_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_IN_WAIT_PLL_W::new(self, 24)
     }
     #[doc = "Bit 25 - rtc main state machine is in wait xtal state"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_in_wait_xtl(&mut self) -> MAIN_STATE_IN_WAIT_XTL_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_IN_WAIT_XTL_W::new(self, 25)
     }
     #[doc = "Bit 26 - rtc main state machine is in sleep state"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_in_slp(&mut self) -> MAIN_STATE_IN_SLP_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_IN_SLP_W::new(self, 26)
     }
     #[doc = "Bit 27 - rtc main state machine is in idle state"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state_in_idle(&mut self) -> MAIN_STATE_IN_IDLE_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_IN_IDLE_W::new(self, 27)
     }
     #[doc = "Bits 28:31 - rtc main state machine status"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state(&mut self) -> MAIN_STATE_W<LOW_POWER_ST_SPEC> {
         MAIN_STATE_W::new(self, 28)
     }

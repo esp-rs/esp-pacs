@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - The enable bit for SPI_MEM_TOTAL_TRANS_END_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn total_trans_end(&mut self) -> TOTAL_TRANS_END_W<INT_ENA_SPEC> {
         TOTAL_TRANS_END_W::new(self, 2)
     }
     #[doc = "Bit 4 - The enable bit for SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_err(&mut self) -> ECC_ERR_W<INT_ENA_SPEC> {
         ECC_ERR_W::new(self, 4)
     }

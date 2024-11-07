@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map tg1_t0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn tg1_t0_int_map(&mut self) -> TG1_T0_INT_MAP_W<TG1_T0_INT_MAP_SPEC> {
         TG1_T0_INT_MAP_W::new(self, 0)
     }

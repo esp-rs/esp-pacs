@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - version"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_date(&mut self) -> I2C_DATE_W<DATE_SPEC> {
         I2C_DATE_W::new(self, 0)
     }

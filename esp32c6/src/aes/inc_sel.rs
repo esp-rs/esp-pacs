@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit decides the standard incrementing function. 0: INC32. 1: INC128."]
     #[inline(always)]
-    #[must_use]
     pub fn inc_sel(&mut self) -> INC_SEL_W<INC_SEL_SPEC> {
         INC_SEL_W::new(self, 0)
     }

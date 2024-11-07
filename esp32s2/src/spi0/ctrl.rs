@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Set the bit to hold spi. The bit is combined with SPI_USR_PREP_HOLD,SPI_USR_CMD_HOLD,SPI_USR_ADDR_HOLD,SPI_USR_DUMMY_HOLD,SPI_USR_DIN_HOLD,SPI_USR_DOUT_HOLD and SPI_USR_HOLD_POL. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn ext_hold_en(&mut self) -> EXT_HOLD_EN_W<CTRL_SPEC> {
         EXT_HOLD_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - In the dummy phase the signal level of spi is output by the spi controller. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dummy_out(&mut self) -> DUMMY_OUT_W<CTRL_SPEC> {
         DUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 5 - Apply 2-bit mode during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CTRL_SPEC> {
         FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Apply 4-bit mode during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CTRL_SPEC> {
         FADDR_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Apply 8-bit mode during addr phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC> {
         FADDR_OCT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Apply 2-bit mode during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
         FCMD_DUAL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Apply 4-bit mode during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Apply 8-bit mode during command phase 1:enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC> {
         FCMD_OCT_W::new(self, 10)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase is in 2-bit mode. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - In the read operations read-data phase is in 4-bit mode. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 15)
     }
     #[doc = "Bit 16 - In the read operations read-data phase is in 8-bit mode. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn fread_oct(&mut self) -> FREAD_OCT_W<CTRL_SPEC> {
         FREAD_OCT_W::new(self, 16)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
         WP_W::new(self, 21)
     }
     #[doc = "Bit 25 - In read-data (MISO) phase 1: LSB first 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC> {
         RD_BIT_ORDER_W::new(self, 25)
     }
     #[doc = "Bit 26 - In command address write-data (MOSI) phases 1: LSB firs 0: MSB first. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC> {
         WR_BIT_ORDER_W::new(self, 26)
     }

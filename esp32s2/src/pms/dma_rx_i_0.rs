@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks RX Copy DMA permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_i_lock(&mut self) -> DMA_RX_I_LOCK_W<DMA_RX_I_0_SPEC> {
         DMA_RX_I_LOCK_W::new(self, 0)
     }

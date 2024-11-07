@@ -124,6 +124,8 @@ impl RegisterBlock {
         &self.adc_pad
     }
     #[doc = "0x84..0x8c - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `PAD_DAC1` register.</div>"]
     #[inline(always)]
     pub const fn pad_dac(&self, n: usize) -> &PAD_DAC {
         &self.pad_dac[n]

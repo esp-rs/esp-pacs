@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable ecc clock"]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_clk_en(&mut self) -> ECC_CLK_EN_W<ECC_CONF_SPEC> {
         ECC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset ecc module"]
     #[inline(always)]
-    #[must_use]
     pub fn ecc_rst_en(&mut self) -> ECC_RST_EN_W<ECC_CONF_SPEC> {
         ECC_RST_EN_W::new(self, 1)
     }

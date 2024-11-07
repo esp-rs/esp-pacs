@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - when the data amount in receiver's fifo is more than this register value. it will send a xoff char with uart_sw_flow_con_en set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<SWFC_CONF_SPEC> {
         XON_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - When the data amount in receiver's fifo is less than this register value. it will send a xon char with uart_sw_flow_con_en set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF_SPEC> {
         XOFF_THRESHOLD_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - This register stores the xon flow control char."]
     #[inline(always)]
-    #[must_use]
     pub fn xon_char(&mut self) -> XON_CHAR_W<SWFC_CONF_SPEC> {
         XON_CHAR_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - This register stores the xoff flow control char."]
     #[inline(always)]
-    #[must_use]
     pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF_SPEC> {
         XOFF_CHAR_W::new(self, 24)
     }

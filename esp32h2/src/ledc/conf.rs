@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This bit is used to select clock source for the 4 timers . 2'd1: APB_CLK 2'd2: RTC8M_CLK 2'd3: XTAL_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC> {
         APB_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch0(&mut self) -> GAMMA_RAM_CLK_EN_CH0_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH0_W::new(self, 2)
     }
     #[doc = "Bit 3 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch1(&mut self) -> GAMMA_RAM_CLK_EN_CH1_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH1_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch2(&mut self) -> GAMMA_RAM_CLK_EN_CH2_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH2_W::new(self, 4)
     }
     #[doc = "Bit 5 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch3(&mut self) -> GAMMA_RAM_CLK_EN_CH3_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH3_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch4(&mut self) -> GAMMA_RAM_CLK_EN_CH4_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH4_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control clock. 1'b1: Force clock on for gamma ram. 1'h0: Support clock only when application writes or read gamma ram."]
     #[inline(always)]
-    #[must_use]
     pub fn gamma_ram_clk_en_ch5(&mut self) -> GAMMA_RAM_CLK_EN_CH5_W<CONF_SPEC> {
         GAMMA_RAM_CLK_EN_CH5_W::new(self, 7)
     }
     #[doc = "Bit 31 - This bit is used to control clock. 1'b1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the delimiter for encoding, default value is 0xC0."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_char(&mut self) -> SEPER_CHAR_W<ESC_CONF_SPEC> {
         SEPER_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the first char of SLIP escape character, default value is 0xDB."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<ESC_CONF_SPEC> {
         SEPER_ESC_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures the second char of SLIP escape character, default value is 0xDC."]
     #[inline(always)]
-    #[must_use]
     pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<ESC_CONF_SPEC> {
         SEPER_ESC_CHAR1_W::new(self, 16)
     }

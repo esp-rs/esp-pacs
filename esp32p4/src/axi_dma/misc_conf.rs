@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit then clear this bit to reset the internal axi_wr FSM."]
     #[inline(always)]
-    #[must_use]
     pub fn axim_rst_wr_inter(&mut self) -> AXIM_RST_WR_INTER_W<MISC_CONF_SPEC> {
         AXIM_RST_WR_INTER_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit then clear this bit to reset the internal axi_rd FSM."]
     #[inline(always)]
-    #[must_use]
     pub fn axim_rst_rd_inter(&mut self) -> AXIM_RST_RD_INTER_W<MISC_CONF_SPEC> {
         AXIM_RST_RD_INTER_W::new(self, 1)
     }
     #[doc = "Bit 3 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
-    #[must_use]
     pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<MISC_CONF_SPEC> {
         ARB_PRI_DIS_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<MISC_CONF_SPEC> {
         CLK_EN_W::new(self, 4)
     }

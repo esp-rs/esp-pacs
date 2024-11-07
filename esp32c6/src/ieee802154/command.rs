@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn opcode(&mut self) -> OPCODE_W<COMMAND_SPEC> {
         OPCODE_W::new(self, 0)
     }

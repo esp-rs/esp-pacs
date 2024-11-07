@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - If set to 1, enable boot remap function."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_boot_remap(&mut self) -> PRO_BOOT_REMAP_W<PRO_BOOT_LOCATION_1_SPEC> {
         PRO_BOOT_REMAP_W::new(self, 0)
     }

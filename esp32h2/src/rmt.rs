@@ -78,18 +78,31 @@ impl RegisterBlock {
         self.ch_tx_conf0(1)
     }
     #[doc = "0x18..0x20 - Channel %s configure register 0"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CONF0` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_conf0(&self, n: usize) -> &CH_RX_CONF0 {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(24)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x18..0x20 - Channel %s configure register 0"]
     #[inline(always)]
     pub fn ch_rx_conf0_iter(&self) -> impl Iterator<Item = &CH_RX_CONF0> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(24)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x18 - Channel 2 configure register 0"]
     #[inline(always)]
@@ -102,18 +115,31 @@ impl RegisterBlock {
         self.ch_rx_conf0(1)
     }
     #[doc = "0x1c..0x24 - Channel %s configure register 1"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CONF1` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_conf1(&self, n: usize) -> &CH_RX_CONF1 {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(28)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x1c..0x24 - Channel %s configure register 1"]
     #[inline(always)]
     pub fn ch_rx_conf1_iter(&self) -> impl Iterator<Item = &CH_RX_CONF1> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(28)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x1c - Channel 2 configure register 1"]
     #[inline(always)]

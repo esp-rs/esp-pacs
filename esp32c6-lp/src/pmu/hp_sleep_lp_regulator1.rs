@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 28:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_lp_regulator_drv_b(
         &mut self,
     ) -> HP_SLEEP_LP_REGULATOR_DRV_B_W<HP_SLEEP_LP_REGULATOR1_SPEC> {

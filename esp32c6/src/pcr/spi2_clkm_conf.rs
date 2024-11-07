@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 80MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_clkm_sel(&mut self) -> SPI2_CLKM_SEL_W<SPI2_CLKM_CONF_SPEC> {
         SPI2_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable spi2 function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_clkm_en(&mut self) -> SPI2_CLKM_EN_W<SPI2_CLKM_CONF_SPEC> {
         SPI2_CLKM_EN_W::new(self, 22)
     }

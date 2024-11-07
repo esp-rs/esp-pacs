@@ -60,7 +60,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func3_oe_inv_sel(
         &mut self,
     ) -> REG_GPIO_FUNC3_OE_INV_SEL_W<FUNC3_OUT_SEL_CFG_SPEC> {
@@ -68,13 +67,11 @@ impl W {
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func3_oe_sel(&mut self) -> REG_GPIO_FUNC3_OE_SEL_W<FUNC3_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC3_OE_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func3_out_inv_sel(
         &mut self,
     ) -> REG_GPIO_FUNC3_OUT_INV_SEL_W<FUNC3_OUT_SEL_CFG_SPEC> {
@@ -82,7 +79,6 @@ impl W {
     }
     #[doc = "Bits 3:8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func3_out_sel(&mut self) -> REG_GPIO_FUNC3_OUT_SEL_W<FUNC3_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC3_OUT_SEL_W::new(self, 3)
     }

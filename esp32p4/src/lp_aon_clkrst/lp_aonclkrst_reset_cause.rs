@@ -107,7 +107,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - 1'b0: enable lpcore pmu_lp_cpu_reset reset_cause, 1'b1: disable lpcore pmu_lp_cpu_reset reset_cause"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask(
         &mut self,
     ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -115,7 +114,6 @@ impl W {
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lpcore_reset_cause_clr(
         &mut self,
     ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -123,7 +121,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lpcore_reset_flag_clr(
         &mut self,
     ) -> LP_AONCLKRST_LPCORE_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -131,7 +128,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_reset_cause_clr(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -139,7 +135,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_reset_flag_clr(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -147,7 +142,6 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_reset_cause_clr(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
@@ -155,7 +149,6 @@ impl W {
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_reset_flag_clr(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_0p2a_mul_0(&mut self) -> ANA_0P2A_MUL_0_W<EXT_LDO_P0_0P2A_ANA_SPEC> {
         ANA_0P2A_MUL_0_W::new(self, 23)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_0p2a_en_vdet_0(&mut self) -> ANA_0P2A_EN_VDET_0_W<EXT_LDO_P0_0P2A_ANA_SPEC> {
         ANA_0P2A_EN_VDET_0_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_0p2a_en_cur_lim_0(&mut self) -> ANA_0P2A_EN_CUR_LIM_0_W<EXT_LDO_P0_0P2A_ANA_SPEC> {
         ANA_0P2A_EN_CUR_LIM_0_W::new(self, 27)
     }
     #[doc = "Bits 28:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_0p2a_dref_0(&mut self) -> ANA_0P2A_DREF_0_W<EXT_LDO_P0_0P2A_ANA_SPEC> {
         ANA_0P2A_DREF_0_W::new(self, 28)
     }

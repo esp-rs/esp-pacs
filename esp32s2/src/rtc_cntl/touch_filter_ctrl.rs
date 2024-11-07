@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 9:10 - 0: Raw data. 1: IIR1/2. 2: IIR1/4. 3: IIR1/8."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_SMOOTH_LVL_W::new(self, 9)
     }
     #[doc = "Bits 11:14 - Touch jitter step. Range: 0 – 15."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_JITTER_STEP_W::new(self, 11)
     }
     #[doc = "Bits 15:18 - Negative threshold counter limit."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NEG_NOISE_LIMIT_W::new(self, 15)
     }
     #[doc = "Bits 19:20 - Negative noise threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NEG_NOISE_THRES_W::new(self, 19)
     }
     #[doc = "Bits 21:22 - Active noise threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NOISE_THRES_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Touch hysteresis."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_HYSTERESIS_W::new(self, 23)
     }
     #[doc = "Bits 25:27 - Debounce counter."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_DEBOUNCE_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - Set filter mode. 0: IIR 1/2; 1: IIR 1/4; 2: IIR 1/8; 3: IIR 1/16; 4: IIR 1/32; 5: IIR 1/64; 6: IIR 1/128; 7: Jitter."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_FILTER_MODE_W::new(self, 28)
     }
     #[doc = "Bit 31 - Enable touch filter."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_FILTER_EN_W::new(self, 31)
     }

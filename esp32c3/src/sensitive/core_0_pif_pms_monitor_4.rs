@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - core_0_pif_pms_monitor_nonword_violate_clr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_monitor_nonword_violate_clr(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_W<CORE_0_PIF_PMS_MONITOR_4_SPEC> {
@@ -52,7 +51,6 @@ impl W {
     }
     #[doc = "Bit 1 - core_0_pif_pms_monitor_nonword_violate_en"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_monitor_nonword_violate_en(
         &mut self,
     ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_W<CORE_0_PIF_PMS_MONITOR_4_SPEC> {

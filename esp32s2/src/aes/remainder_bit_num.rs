@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Stores the Remainder Bit Number for the GCM operation."]
     #[inline(always)]
-    #[must_use]
     pub fn remainder_bit_num(&mut self) -> REMAINDER_BIT_NUM_W<REMAINDER_BIT_NUM_SPEC> {
         REMAINDER_BIT_NUM_W::new(self, 0)
     }

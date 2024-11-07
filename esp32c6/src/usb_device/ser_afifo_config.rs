@@ -76,7 +76,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to reset CDC_ACM IN async FIFO write clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn serial_in_afifo_reset_wr(
         &mut self,
     ) -> SERIAL_IN_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC> {
@@ -84,7 +83,6 @@ impl W {
     }
     #[doc = "Bit 1 - Write 1 to reset CDC_ACM IN async FIFO read clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn serial_in_afifo_reset_rd(
         &mut self,
     ) -> SERIAL_IN_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC> {
@@ -92,7 +90,6 @@ impl W {
     }
     #[doc = "Bit 2 - Write 1 to reset CDC_ACM OUT async FIFO write clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn serial_out_afifo_reset_wr(
         &mut self,
     ) -> SERIAL_OUT_AFIFO_RESET_WR_W<SER_AFIFO_CONFIG_SPEC> {
@@ -100,7 +97,6 @@ impl W {
     }
     #[doc = "Bit 3 - Write 1 to reset CDC_ACM OUT async FIFO read clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn serial_out_afifo_reset_rd(
         &mut self,
     ) -> SERIAL_OUT_AFIFO_RESET_RD_W<SER_AFIFO_CONFIG_SPEC> {

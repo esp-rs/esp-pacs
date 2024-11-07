@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_table_lock(&mut self) -> ROM_TABLE_LOCK_W<ROM_TABLE_LOCK_SPEC> {
         ROM_TABLE_LOCK_W::new(self, 0)
     }

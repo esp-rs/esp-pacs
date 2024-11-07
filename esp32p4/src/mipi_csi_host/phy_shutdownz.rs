@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_shutdownz(&mut self) -> PHY_SHUTDOWNZ_W<PHY_SHUTDOWNZ_SPEC> {
         PHY_SHUTDOWNZ_W::new(self, 0)
     }

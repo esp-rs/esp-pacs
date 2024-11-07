@@ -67,7 +67,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_lp_pad_slp_sel(
         &mut self,
     ) -> HP_SLEEP_LP_PAD_SLP_SEL_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
@@ -75,7 +74,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_bod_source_sel(
         &mut self,
     ) -> HP_SLEEP_BOD_SOURCE_SEL_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
@@ -83,19 +81,16 @@ impl W {
     }
     #[doc = "Bits 28:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_vddbat_mode(&mut self) -> HP_SLEEP_VDDBAT_MODE_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
         HP_SLEEP_VDDBAT_MODE_W::new(self, 28)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_lp_mem_dslp(&mut self) -> HP_SLEEP_LP_MEM_DSLP_W<HP_SLEEP_LP_DIG_POWER_SPEC> {
         HP_SLEEP_LP_MEM_DSLP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_pd_lp_peri_pd_en(
         &mut self,
     ) -> HP_SLEEP_PD_LP_PERI_PD_EN_W<HP_SLEEP_LP_DIG_POWER_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit for baud rate detection."]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<AUTOBAUD_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - When input pulse width is lower than this value, the pulse is ignored. This register is used in autobaud detection."]
     #[inline(always)]
-    #[must_use]
     pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<AUTOBAUD_SPEC> {
         GLITCH_FILT_W::new(self, 8)
     }

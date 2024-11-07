@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn etm_clk_sel(&mut self) -> ETM_CLK_SEL_W<ETM_CLK_CONF_SPEC> {
         ETM_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn etm_clk_active(&mut self) -> ETM_CLK_ACTIVE_W<ETM_CLK_CONF_SPEC> {
         ETM_CLK_ACTIVE_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The content of the %sth 32-bit data to be programmed."]
     #[inline(always)]
-    #[must_use]
     pub fn pgm_data(&mut self) -> PGM_DATA_W<PGM_DATA_SPEC> {
         PGM_DATA_W::new(self, 0)
     }

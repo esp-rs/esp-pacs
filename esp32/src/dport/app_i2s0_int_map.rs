@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_i2s0_int_map(&mut self) -> APP_I2S0_INT_MAP_W<APP_I2S0_INT_MAP_SPEC> {
         APP_I2S0_INT_MAP_W::new(self, 0)
     }

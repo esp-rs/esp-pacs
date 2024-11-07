@@ -100,49 +100,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1'b0: fifo mode to wr/rd clut0/clut1 RAM through register PPA_SR_CLUT_DATA_REG/PPA_BLEND0_CLUT_DATA_REG/PPA_BLEND1_CLUT_DATA_REG. 1'b1: memory mode to wr/rd sr/blend0/blend1 clut RAM. The bit 11 and 10 of the waddr should be 01 to access sr clut and should be 10 to access blend0 clut and should be 11 to access blend 1 clut in memory mode."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<CLUT_CONF_SPEC> {
         APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 then write 0 to this bit to reset BLEND0 CLUT."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_clut_mem_rst(&mut self) -> BLEND0_CLUT_MEM_RST_W<CLUT_CONF_SPEC> {
         BLEND0_CLUT_MEM_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 then write 0 to this bit to reset BLEND1 CLUT."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_clut_mem_rst(&mut self) -> BLEND1_CLUT_MEM_RST_W<CLUT_CONF_SPEC> {
         BLEND1_CLUT_MEM_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 then write 0 to reset the read address of BLEND0 CLUT in fifo mode."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_clut_mem_rdaddr_rst(&mut self) -> BLEND0_CLUT_MEM_RDADDR_RST_W<CLUT_CONF_SPEC> {
         BLEND0_CLUT_MEM_RDADDR_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 then write 0 to reset the read address of BLEND1 CLUT in fifo mode."]
     #[inline(always)]
-    #[must_use]
     pub fn blend1_clut_mem_rdaddr_rst(&mut self) -> BLEND1_CLUT_MEM_RDADDR_RST_W<CLUT_CONF_SPEC> {
         BLEND1_CLUT_MEM_RDADDR_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: force power down BLEND CLUT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_clut_mem_force_pd(&mut self) -> BLEND0_CLUT_MEM_FORCE_PD_W<CLUT_CONF_SPEC> {
         BLEND0_CLUT_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: force power up BLEND CLUT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_clut_mem_force_pu(&mut self) -> BLEND0_CLUT_MEM_FORCE_PU_W<CLUT_CONF_SPEC> {
         BLEND0_CLUT_MEM_FORCE_PU_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: Force clock on for BLEND CLUT memory."]
     #[inline(always)]
-    #[must_use]
     pub fn blend0_clut_mem_clk_ena(&mut self) -> BLEND0_CLUT_MEM_CLK_ENA_W<CLUT_CONF_SPEC> {
         BLEND0_CLUT_MEM_CLK_ENA_W::new(self, 7)
     }

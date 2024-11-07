@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn redundant_eco_drive(&mut self) -> REDUNDANT_ECO_DRIVE_W<REDUNDANT_ECO_CTRL_SPEC> {
         REDUNDANT_ECO_DRIVE_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - higher 32 bits of the value that will load into timer 0 time-base counter"]
     #[inline(always)]
-    #[must_use]
     pub fn load_hi(&mut self) -> LOAD_HI_W<LOADHI_SPEC> {
         LOAD_HI_W::new(self, 0)
     }

@@ -2,9 +2,9 @@
 pub type R = crate::R<I2S_TX_CLKM_CONF_SPEC>;
 #[doc = "Register `I2S_TX_CLKM_CONF` writer"]
 pub type W = crate::W<I2S_TX_CLKM_CONF_SPEC>;
-#[doc = "Field `I2S_TX_CLKM_DIV_NUM` reader - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
+#[doc = "Field `I2S_TX_CLKM_DIV_NUM` reader - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
 pub type I2S_TX_CLKM_DIV_NUM_R = crate::FieldReader;
-#[doc = "Field `I2S_TX_CLKM_DIV_NUM` writer - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
+#[doc = "Field `I2S_TX_CLKM_DIV_NUM` writer - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
 pub type I2S_TX_CLKM_DIV_NUM_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `I2S_TX_CLKM_SEL` reader - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
 pub type I2S_TX_CLKM_SEL_R = crate::FieldReader;
@@ -15,7 +15,7 @@ pub type I2S_TX_CLKM_EN_R = crate::BitReader;
 #[doc = "Field `I2S_TX_CLKM_EN` writer - Set 1 to enable i2s_tx function clock"]
 pub type I2S_TX_CLKM_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 12:19 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
+    #[doc = "Bits 12:19 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
     pub fn i2s_tx_clkm_div_num(&self) -> I2S_TX_CLKM_DIV_NUM_R {
         I2S_TX_CLKM_DIV_NUM_R::new(((self.bits >> 12) & 0xff) as u8)
@@ -42,21 +42,18 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 12:19 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b &lt;= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
+    #[doc = "Bits 12:19 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_tx_clkm_div_num(&mut self) -> I2S_TX_CLKM_DIV_NUM_W<I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_tx_clkm_sel(&mut self) -> I2S_TX_CLKM_SEL_W<I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2s_tx function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_tx_clkm_en(&mut self) -> I2S_TX_CLKM_EN_W<I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_EN_W::new(self, 22)
     }

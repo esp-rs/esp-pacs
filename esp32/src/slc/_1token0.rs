@@ -30,25 +30,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_token0_wdata(&mut self) -> SLC1_TOKEN0_WDATA_W<_1TOKEN0_SPEC> {
         SLC1_TOKEN0_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_token0_wr(&mut self) -> SLC1_TOKEN0_WR_W<_1TOKEN0_SPEC> {
         SLC1_TOKEN0_WR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_token0_inc(&mut self) -> SLC1_TOKEN0_INC_W<_1TOKEN0_SPEC> {
         SLC1_TOKEN0_INC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_token0_inc_more(&mut self) -> SLC1_TOKEN0_INC_MORE_W<_1TOKEN0_SPEC> {
         SLC1_TOKEN0_INC_MORE_W::new(self, 14)
     }

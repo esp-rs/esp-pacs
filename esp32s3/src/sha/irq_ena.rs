@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - sha interrupt enable register. 1'b0: disable(default) 1'b1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<IRQ_ENA_SPEC> {
         INTERRUPT_ENA_W::new(self, 0)
     }

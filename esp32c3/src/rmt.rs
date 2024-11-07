@@ -78,18 +78,31 @@ impl RegisterBlock {
         self.ch_tx_conf0(1)
     }
     #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CONF0` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_conf0(&self, n: usize) -> &CH_RX_CONF0 {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(24)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
     #[inline(always)]
     pub fn ch_rx_conf0_iter(&self) -> impl Iterator<Item = &CH_RX_CONF0> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(24).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(24)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x18 - RMT_CH2CONF0_REG."]
     #[inline(always)]
@@ -102,18 +115,31 @@ impl RegisterBlock {
         self.ch_rx_conf0(1)
     }
     #[doc = "0x1c..0x24 - RMT_CH2CONF1_REG."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CONF1` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_conf1(&self, n: usize) -> &CH_RX_CONF1 {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(28)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x1c..0x24 - RMT_CH2CONF1_REG."]
     #[inline(always)]
     pub fn ch_rx_conf1_iter(&self) -> impl Iterator<Item = &CH_RX_CONF1> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(28).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(28)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x1c - RMT_CH2CONF1_REG."]
     #[inline(always)]
@@ -147,6 +173,8 @@ impl RegisterBlock {
         self.ch_tx_status(1)
     }
     #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_STATUS` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_status(&self, n: usize) -> &CH_RX_STATUS {
         &self.ch_rx_status[n]
@@ -209,6 +237,8 @@ impl RegisterBlock {
         self.chcarrier_duty(1)
     }
     #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CARRIER_RM` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_carrier_rm(&self, n: usize) -> &CH_RX_CARRIER_RM {
         &self.ch_rx_carrier_rm[n]
@@ -251,6 +281,8 @@ impl RegisterBlock {
         self.ch_tx_lim(1)
     }
     #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_LIM` register.</div>"]
     #[inline(always)]
     pub const fn ch_rx_lim(&self, n: usize) -> &CH_RX_LIM {
         &self.ch_rx_lim[n]

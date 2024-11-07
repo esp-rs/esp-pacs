@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to clear the RSA interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn int_clr(&mut self) -> INT_CLR_W<INT_CLR_SPEC> {
         INT_CLR_W::new(self, 0)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - select sync input for PWM timer0, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
-    #[must_use]
     pub fn timer0_syncisel(&mut self) -> TIMER0_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
         TIMER0_SYNCISEL_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - select sync input for PWM timer1, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
-    #[must_use]
     pub fn timer1_syncisel(&mut self) -> TIMER1_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
         TIMER1_SYNCISEL_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - select sync input for PWM timer2, 1: PWM timer0 sync_out, 2: PWM timer1 sync_out, 3: PWM timer2 sync_out, 4: SYNC0 from GPIO matrix, 5: SYNC1 from GPIO matrix, 6: SYNC2 from GPIO matrix, other values: no sync input selected"]
     #[inline(always)]
-    #[must_use]
     pub fn timer2_syncisel(&mut self) -> TIMER2_SYNCISEL_W<TIMER_SYNCI_CFG_SPEC> {
         TIMER2_SYNCISEL_W::new(self, 6)
     }
     #[doc = "Bit 9 - invert SYNC0 from GPIO matrix"]
     #[inline(always)]
-    #[must_use]
     pub fn external_synci0_invert(&mut self) -> EXTERNAL_SYNCI0_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
         EXTERNAL_SYNCI0_INVERT_W::new(self, 9)
     }
     #[doc = "Bit 10 - invert SYNC1 from GPIO matrix"]
     #[inline(always)]
-    #[must_use]
     pub fn external_synci1_invert(&mut self) -> EXTERNAL_SYNCI1_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
         EXTERNAL_SYNCI1_INVERT_W::new(self, 10)
     }
     #[doc = "Bit 11 - invert SYNC2 from GPIO matrix"]
     #[inline(always)]
-    #[must_use]
     pub fn external_synci2_invert(&mut self) -> EXTERNAL_SYNCI2_INVERT_W<TIMER_SYNCI_CFG_SPEC> {
         EXTERNAL_SYNCI2_INVERT_W::new(self, 11)
     }

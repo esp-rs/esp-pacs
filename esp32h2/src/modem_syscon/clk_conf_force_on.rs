@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_etm_fo(&mut self) -> CLK_ETM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
         CLK_ETM_FO_W::new(self, 22)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_zb_fo(&mut self) -> CLK_ZB_FO_W<CLK_CONF_FORCE_ON_SPEC> {
         CLK_ZB_FO_W::new(self, 24)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_sec_fo(&mut self) -> CLK_MODEM_SEC_FO_W<CLK_CONF_FORCE_ON_SPEC> {
         CLK_MODEM_SEC_FO_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_ble_timer_fo(&mut self) -> CLK_BLE_TIMER_FO_W<CLK_CONF_FORCE_ON_SPEC> {
         CLK_BLE_TIMER_FO_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_data_dump_fo(&mut self) -> CLK_DATA_DUMP_FO_W<CLK_CONF_FORCE_ON_SPEC> {
         CLK_DATA_DUMP_FO_W::new(self, 31)
     }

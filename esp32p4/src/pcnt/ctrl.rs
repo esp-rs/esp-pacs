@@ -155,7 +155,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_RST_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u(&mut self, n: u8) -> CNT_RST_U_W<CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
@@ -163,25 +162,21 @@ impl W {
     }
     #[doc = "Bit 0 - Set this bit to clear unit 0's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u0(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to clear unit 1's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u1(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 2)
     }
     #[doc = "Bit 4 - Set this bit to clear unit 2's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u2(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to clear unit 3's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_rst_u3(&mut self) -> CNT_RST_U_W<CTRL_SPEC> {
         CNT_RST_U_W::new(self, 6)
     }
@@ -189,7 +184,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_PAUSE_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u(&mut self, n: u8) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
@@ -197,25 +191,21 @@ impl W {
     }
     #[doc = "Bit 1 - Set this bit to freeze unit 0's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u0(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 1)
     }
     #[doc = "Bit 3 - Set this bit to freeze unit 1's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u1(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to freeze unit 2's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u2(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 5)
     }
     #[doc = "Bit 7 - Set this bit to freeze unit 3's counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_pause_u3(&mut self) -> CNT_PAUSE_U_W<CTRL_SPEC> {
         CNT_PAUSE_U_W::new(self, 7)
     }
@@ -223,7 +213,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DALTA_CHANGE_EN_U0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn dalta_change_en_u(&mut self, n: u8) -> DALTA_CHANGE_EN_U_W<CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
@@ -231,31 +220,26 @@ impl W {
     }
     #[doc = "Bit 8 - Configures this bit to enable unit 0's step comparator."]
     #[inline(always)]
-    #[must_use]
     pub fn dalta_change_en_u0(&mut self) -> DALTA_CHANGE_EN_U_W<CTRL_SPEC> {
         DALTA_CHANGE_EN_U_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures this bit to enable unit 1's step comparator."]
     #[inline(always)]
-    #[must_use]
     pub fn dalta_change_en_u1(&mut self) -> DALTA_CHANGE_EN_U_W<CTRL_SPEC> {
         DALTA_CHANGE_EN_U_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures this bit to enable unit 2's step comparator."]
     #[inline(always)]
-    #[must_use]
     pub fn dalta_change_en_u2(&mut self) -> DALTA_CHANGE_EN_U_W<CTRL_SPEC> {
         DALTA_CHANGE_EN_U_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures this bit to enable unit 3's step comparator."]
     #[inline(always)]
-    #[must_use]
     pub fn dalta_change_en_u3(&mut self) -> DALTA_CHANGE_EN_U_W<CTRL_SPEC> {
         DALTA_CHANGE_EN_U_W::new(self, 11)
     }
     #[doc = "Bit 16 - The registers clock gate enable signal of PCNT module. 1: the registers can be read and written by application. 0: the registers can not be read or written by application"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_SPEC> {
         CLK_EN_W::new(self, 16)
     }

@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn redcy_sig1(&mut self) -> REDCY_SIG1_W<REDCY_SIG1_SPEC> {
         REDCY_SIG1_W::new(self, 0)
     }

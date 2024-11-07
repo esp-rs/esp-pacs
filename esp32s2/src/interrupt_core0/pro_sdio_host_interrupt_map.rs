@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map SDIO_HOST_INTERRUPT signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_sdio_host_interrupt_map(
         &mut self,
     ) -> PRO_SDIO_HOST_INTERRUPT_MAP_W<PRO_SDIO_HOST_INTERRUPT_MAP_SPEC> {

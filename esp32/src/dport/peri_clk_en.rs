@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn peri_clk_en(&mut self) -> PERI_CLK_EN_W<PERI_CLK_EN_SPEC> {
         PERI_CLK_EN_W::new(self, 0)
     }

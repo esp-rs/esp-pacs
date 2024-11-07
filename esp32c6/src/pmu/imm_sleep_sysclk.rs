@@ -17,25 +17,21 @@ impl core::fmt::Debug for crate::generic::Reg<IMM_SLEEP_SYSCLK_SPEC> {
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn update_dig_icg_switch(&mut self) -> UPDATE_DIG_ICG_SWITCH_W<IMM_SLEEP_SYSCLK_SPEC> {
         UPDATE_DIG_ICG_SWITCH_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_icg_slp_sel(&mut self) -> TIE_LOW_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
         TIE_LOW_ICG_SLP_SEL_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_icg_slp_sel(&mut self) -> TIE_HIGH_ICG_SLP_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
         TIE_HIGH_ICG_SLP_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn update_dig_sys_clk_sel(&mut self) -> UPDATE_DIG_SYS_CLK_SEL_W<IMM_SLEEP_SYSCLK_SPEC> {
         UPDATE_DIG_SYS_CLK_SEL_W::new(self, 31)
     }

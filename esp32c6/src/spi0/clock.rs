@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In the master mode it must be equal to spi_mem_clkcnt_N."]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - In the master mode it must be floor((spi_mem_clkcnt_N+1)/2-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - In the master mode it is the divider of spi_mem_clk. So spi_mem_clk frequency is system/(spi_mem_clkcnt_N+1)"]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - 1: 1-division mode, the frequency of SPI bus clock equals to that of MSPI module clock."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
         CLK_EQU_SYSCLK_W::new(self, 31)
     }

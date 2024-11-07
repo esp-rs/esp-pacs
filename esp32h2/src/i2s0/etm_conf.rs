@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - I2S ETM send x words event. When sending word number of reg_etm_tx_send_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]
-    #[must_use]
     pub fn etm_tx_send_word_num(&mut self) -> ETM_TX_SEND_WORD_NUM_W<ETM_CONF_SPEC> {
         ETM_TX_SEND_WORD_NUM_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - I2S ETM receive x words event. When receiving word number of reg_etm_rx_receive_word_num\\[9:0\\], i2s will trigger an etm event."]
     #[inline(always)]
-    #[must_use]
     pub fn etm_rx_receive_word_num(&mut self) -> ETM_RX_RECEIVE_WORD_NUM_W<ETM_CONF_SPEC> {
         ETM_RX_RECEIVE_WORD_NUM_W::new(self, 10)
     }

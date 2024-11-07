@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_win_access_en(&mut self) -> SDIO_WIN_ACCESS_EN_W<SDIO_CTRL_SPEC> {
         SDIO_WIN_ACCESS_EN_W::new(self, 0)
     }

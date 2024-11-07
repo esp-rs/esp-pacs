@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn appcpu_clkgate_en(&mut self) -> APPCPU_CLKGATE_EN_W<APPCPU_CTRL_B_SPEC> {
         APPCPU_CLKGATE_EN_W::new(self, 0)
     }

@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - 1:invert every two 8bits input data. 2. disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_8bits_data_inv(&mut self) -> LCD_CONV_8BITS_DATA_INV_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_8BITS_DATA_INV_W::new(self, 20)
     }
     #[doc = "Bit 21 - 0: txtorx mode off. 1: txtorx mode on."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_txtorx(&mut self) -> LCD_CONV_TXTORX_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_TXTORX_W::new(self, 21)
     }
     #[doc = "Bits 22:23 - 0: to yuv422. 1: to yuv420. 2: to yuv411. 3: disabled. To enable yuv2yuv mode, trans_mode must be set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_yuv2yuv_mode(&mut self) -> LCD_CONV_YUV2YUV_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_YUV2YUV_MODE_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - 0: yuv422. 1: yuv420. 2: yuv411. When in yuv2yuv mode, yuv_mode decides the yuv mode of Data_in"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_yuv_mode(&mut self) -> LCD_CONV_YUV_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_YUV_MODE_W::new(self, 24)
     }
     #[doc = "Bit 26 - 0:BT601. 1:BT709."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_protocol_mode(&mut self) -> LCD_CONV_PROTOCOL_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_PROTOCOL_MODE_W::new(self, 26)
     }
     #[doc = "Bit 27 - LIMIT or FULL mode of Data out. 0: limit. 1: full"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_data_out_mode(&mut self) -> LCD_CONV_DATA_OUT_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_DATA_OUT_MODE_W::new(self, 27)
     }
     #[doc = "Bit 28 - LIMIT or FULL mode of Data in. 0: limit. 1: full"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_data_in_mode(&mut self) -> LCD_CONV_DATA_IN_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_DATA_IN_MODE_W::new(self, 28)
     }
     #[doc = "Bit 29 - 0: 16bits mode. 1: 8bits mode."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_mode_8bits_on(&mut self) -> LCD_CONV_MODE_8BITS_ON_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_MODE_8BITS_ON_W::new(self, 29)
     }
     #[doc = "Bit 30 - 0: YUV to RGB. 1: RGB to YUV."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_trans_mode(&mut self) -> LCD_CONV_TRANS_MODE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_TRANS_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: Bypass converter. 1: Enable converter."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_conv_enable(&mut self) -> LCD_CONV_ENABLE_W<LCD_RGB_YUV_SPEC> {
         LCD_CONV_ENABLE_W::new(self, 31)
     }

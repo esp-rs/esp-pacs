@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_fun_ie(&mut self) -> X32N_FUN_IE_W<XTAL_32N_PAD_SPEC> {
         X32N_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_oe(&mut self) -> X32N_SLP_OE_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_ie(&mut self) -> X32N_SLP_IE_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_slp_sel(&mut self) -> X32N_SLP_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_fun_sel(&mut self) -> X32N_FUN_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_mux_sel(&mut self) -> X32N_MUX_SEL_W<XTAL_32N_PAD_SPEC> {
         X32N_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_rue(&mut self) -> X32N_RUE_W<XTAL_32N_PAD_SPEC> {
         X32N_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_rde(&mut self) -> X32N_RDE_W<XTAL_32N_PAD_SPEC> {
         X32N_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
-    #[must_use]
     pub fn x32n_drv(&mut self) -> X32N_DRV_W<XTAL_32N_PAD_SPEC> {
         X32N_DRV_W::new(self, 29)
     }

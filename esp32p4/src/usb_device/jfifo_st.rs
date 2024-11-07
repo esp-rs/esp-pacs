@@ -82,13 +82,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Write 1 to reset JTAG in fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn in_fifo_reset(&mut self) -> IN_FIFO_RESET_W<JFIFO_ST_SPEC> {
         IN_FIFO_RESET_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to reset JTAG out fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn out_fifo_reset(&mut self) -> OUT_FIFO_RESET_W<JFIFO_ST_SPEC> {
         OUT_FIFO_RESET_W::new(self, 9)
     }

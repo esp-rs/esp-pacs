@@ -15,7 +15,6 @@ impl core::fmt::Debug for crate::generic::Reg<L2_MEM_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_ecc_err_int_clr(
         &mut self,
     ) -> REG_L2_MEM_ECC_ERR_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {
@@ -23,7 +22,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_exceed_addr_int_clr(
         &mut self,
     ) -> REG_L2_MEM_EXCEED_ADDR_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {
@@ -31,7 +29,6 @@ impl W {
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_err_resp_int_clr(
         &mut self,
     ) -> REG_L2_MEM_ERR_RESP_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {

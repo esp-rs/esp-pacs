@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_clk_div_num(&mut self) -> SAR2_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
         SAR2_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - xxxx"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_clk_div_num(&mut self) -> SAR1_CLK_DIV_NUM_W<SAR_CLK_DIV_SPEC> {
         SAR1_CLK_DIV_NUM_W::new(self, 8)
     }

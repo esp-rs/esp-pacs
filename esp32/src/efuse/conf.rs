@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
         OP_CODE_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn force_no_wr_rd_dis(&mut self) -> FORCE_NO_WR_RD_DIS_W<CONF_SPEC> {
         FORCE_NO_WR_RD_DIS_W::new(self, 16)
     }

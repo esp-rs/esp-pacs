@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit initialization vector"]
     #[inline(always)]
-    #[must_use]
     pub fn iv(&mut self) -> IV_W<IV_MEM_SPEC> {
         IV_W::new(self, 0)
     }

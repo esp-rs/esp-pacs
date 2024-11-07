@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Indicates the raw interrupt of UHCI_RX_START_INT. Interrupt will be triggered when delimiter is sent successfully."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_start(&mut self) -> RX_START_W<INT_RAW_SPEC> {
         RX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Indicates the raw interrupt of UHCI_TX_START_INT. Interrupt will be triggered when DMA detects delimiter."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_start(&mut self) -> TX_START_W<INT_RAW_SPEC> {
         TX_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - Indicates the raw interrupt of UHCI_RX_HUNG_INT. Interrupt will be triggered when the required time of DMA receiving data exceeds the configuration value."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_RAW_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - Indicates the raw interrupt of UHCI_TX_HUNG_INT. Interrupt will be triggered when the required time of DMA reading RAM data exceeds the configuration value."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_RAW_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
     #[doc = "Bit 4 - Indicates the raw interrupt of UHCI_SEND_S_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with single_send mode."]
     #[inline(always)]
-    #[must_use]
     pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<INT_RAW_SPEC> {
         SEND_S_REG_Q_W::new(self, 4)
     }
     #[doc = "Bit 5 - Indicates the raw interrupt of UHCI_SEND_A_REG_Q_INT. Interrupt will be triggered when UHCI sends short packet successfully with always_send mode."]
     #[inline(always)]
-    #[must_use]
     pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<INT_RAW_SPEC> {
         SEND_A_REG_Q_W::new(self, 5)
     }
     #[doc = "Bit 6 - Indicates the raw interrupt of UHCI_OUT_EOF_INT. Interrupt will be triggered when there are errors in EOF."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<INT_RAW_SPEC> {
         OUT_EOF_W::new(self, 6)
     }
     #[doc = "Bit 7 - Indicates the raw interrupt of UHCI_APP_CTRL0_INT. Interrupt will be triggered when UHCI_APP_CTRL0_IN_SET is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl0(&mut self) -> APP_CTRL0_W<INT_RAW_SPEC> {
         APP_CTRL0_W::new(self, 7)
     }
     #[doc = "Bit 8 - Indicates the raw interrupt of UHCI_APP_CTRL1_INT. Interrupt will be triggered when UHCI_APP_CTRL1_IN_SET is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl1(&mut self) -> APP_CTRL1_W<INT_RAW_SPEC> {
         APP_CTRL1_W::new(self, 8)
     }

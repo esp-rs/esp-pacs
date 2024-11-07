@@ -77,7 +77,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<MISC_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
@@ -85,31 +84,26 @@ impl W {
     }
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    #[must_use]
     pub fn cs0_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
         CS_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    #[must_use]
     pub fn cs1_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
         CS_DIS_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when MSPI is idle. 0: SPI_CLK line is low when MSPI is idle."]
     #[inline(always)]
-    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to enable auto PER function. Hardware will sent out PER command if PES command is sent."]
     #[inline(always)]
-    #[must_use]
     pub fn auto_per(&mut self) -> AUTO_PER_W<MISC_SPEC> {
         AUTO_PER_W::new(self, 11)
     }

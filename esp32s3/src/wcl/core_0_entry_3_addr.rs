@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Core_0 Entry 3 address from WORLD1 to WORLD0"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_entry_3_addr(&mut self) -> CORE_0_ENTRY_3_ADDR_W<CORE_0_ENTRY_3_ADDR_SPEC> {
         CORE_0_ENTRY_3_ADDR_W::new(self, 0)
     }

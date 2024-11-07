@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn tg0_t1_intr_map(&mut self) -> TG0_T1_INTR_MAP_W<TG0_T1_INTR_MAP_SPEC> {
         TG0_T1_INTR_MAP_W::new(self, 0)
     }

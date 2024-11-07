@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures the delay after the STOP condition. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SCL_STOP_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write 1 to start recive camera data, write 0 to disable"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_en(&mut self) -> CAM_EN_W<CAM_CNTL_SPEC> {
         CAM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - write 1 to update ISP_CAM_CONF"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_update(&mut self) -> CAM_UPDATE_W<CAM_CNTL_SPEC> {
         CAM_UPDATE_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures cam clk domain reset, 1: reset cam input logic, 0: release reset"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_reset(&mut self) -> CAM_RESET_W<CAM_CNTL_SPEC> {
         CAM_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures the invertion of cam clk from pad. 0: not invert cam clk, 1: invert cam clk"]
     #[inline(always)]
-    #[must_use]
     pub fn cam_clk_inv(&mut self) -> CAM_CLK_INV_W<CAM_CNTL_SPEC> {
         CAM_CLK_INV_W::new(self, 3)
     }

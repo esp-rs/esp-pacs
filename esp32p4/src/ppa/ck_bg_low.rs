@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - color key lower threshold of background b channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_bg_b_low(&mut self) -> COLORKEY_BG_B_LOW_W<CK_BG_LOW_SPEC> {
         COLORKEY_BG_B_LOW_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - color key lower threshold of background g channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_bg_g_low(&mut self) -> COLORKEY_BG_G_LOW_W<CK_BG_LOW_SPEC> {
         COLORKEY_BG_G_LOW_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - color key lower threshold of background r channel"]
     #[inline(always)]
-    #[must_use]
     pub fn colorkey_bg_r_low(&mut self) -> COLORKEY_BG_R_LOW_W<CK_BG_LOW_SPEC> {
         COLORKEY_BG_R_LOW_W::new(self, 16)
     }

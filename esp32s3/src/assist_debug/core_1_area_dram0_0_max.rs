@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Core1 dram0 region0 end addr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_area_dram0_0_max(
         &mut self,
     ) -> CORE_1_AREA_DRAM0_0_MAX_W<CORE_1_AREA_DRAM0_0_MAX_SPEC> {

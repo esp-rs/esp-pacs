@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Pad driver selection. 0: normal output. 1: open drain."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin_pad_driver(&mut self) -> GPIO_PIN_PAD_DRIVER_W<PIN_SPEC> {
         GPIO_PIN_PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - GPIO interrupt type selection. 0: GPIO interrupt disabled. 1: rising edge trigger. 2: falling edge trigger. 3: any edge trigger. 4: low level trigger. 5: high level trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin_int_type(&mut self) -> GPIO_PIN_INT_TYPE_W<PIN_SPEC> {
         GPIO_PIN_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - GPIO wake-up enable. This will only wake up ESP32-S2 from Light-sleep."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_pin_wakeup_enable(&mut self) -> GPIO_PIN_WAKEUP_ENABLE_W<PIN_SPEC> {
         GPIO_PIN_WAKEUP_ENABLE_W::new(self, 10)
     }

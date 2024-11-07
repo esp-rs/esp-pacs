@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - The bits are used to configure the length of the first section for conditional pre-load operation. It should be combined with pro_dcache_autoload_sct0_ena."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_autoload_sct0_size(
         &mut self,
     ) -> PRO_DCACHE_AUTOLOAD_SCT0_SIZE_W<PRO_DCACHE_AUTOLOAD_SECTION0_SIZE_SPEC> {

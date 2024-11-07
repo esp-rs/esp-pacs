@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - 0x5A5A: Operate programming command 0x5AA5: Operate read command."]
     #[inline(always)]
-    #[must_use]
     pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
         OP_CODE_W::new(self, 0)
     }

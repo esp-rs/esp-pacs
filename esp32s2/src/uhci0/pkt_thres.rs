@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - This register is used to configure the maximum value of the packet length when UHCI_HEAD_EN is 0."]
     #[inline(always)]
-    #[must_use]
     pub fn pkt_thrs(&mut self) -> PKT_THRS_W<PKT_THRES_SPEC> {
         PKT_THRS_W::new(self, 0)
     }

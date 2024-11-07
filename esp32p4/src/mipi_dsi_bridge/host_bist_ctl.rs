@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - biston"]
     #[inline(always)]
-    #[must_use]
     pub fn biston(&mut self) -> BISTON_W<HOST_BIST_CTL_SPEC> {
         BISTON_W::new(self, 1)
     }

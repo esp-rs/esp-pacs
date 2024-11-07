@@ -83,7 +83,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SEL0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self, n: u8) -> SEL_W<OUT_CPU_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -91,49 +90,41 @@ impl W {
     }
     #[doc = "Bit 0 - Select GPIO out value configured by registers or CPU instructions for channel 0. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel0(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Select GPIO out value configured by registers or CPU instructions for channel 1. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel1(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Select GPIO out value configured by registers or CPU instructions for channel 2. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel2(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Select GPIO out value configured by registers or CPU instructions for channel 3. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel3(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Select GPIO out value configured by registers or CPU instructions for channel 4. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel4(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - Select GPIO out value configured by registers or CPU instructions for channel 5. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel5(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Select GPIO out value configured by registers or CPU instructions for channel 6. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel6(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - Select GPIO out value configured by registers or CPU instructions for channel 7. 0: Configured by registers. 1: configured by CPU instructions."]
     #[inline(always)]
-    #[must_use]
     pub fn sel7(&mut self) -> SEL_W<OUT_CPU_SPEC> {
         SEL_W::new(self, 7)
     }

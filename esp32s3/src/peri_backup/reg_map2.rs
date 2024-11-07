@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn map2(&mut self) -> MAP2_W<REG_MAP2_SPEC> {
         MAP2_W::new(self, 0)
     }

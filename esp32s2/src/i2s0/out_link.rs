@@ -62,25 +62,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The address of first outlink descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<OUT_LINK_SPEC> {
         OUTLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - Set this bit to stop outlink descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK_SPEC> {
         OUTLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to start outlink descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK_SPEC> {
         OUTLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to restart outlink descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK_SPEC> {
         OUTLINK_RESTART_W::new(self, 30)
     }

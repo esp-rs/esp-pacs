@@ -120,7 +120,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - usb otg20 adp reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_usb_otg20_adp(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_USB_OTG20_ADP_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -128,7 +127,6 @@ impl W {
     }
     #[doc = "Bit 1 - usb otg20 phy reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_usb_otg20_phy(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_USB_OTG20_PHY_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -136,7 +134,6 @@ impl W {
     }
     #[doc = "Bit 2 - usb otg20 reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_usb_otg20(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_USB_OTG20_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -144,7 +141,6 @@ impl W {
     }
     #[doc = "Bit 3 - usb org11 reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_usb_otg11(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_USB_OTG11_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -152,7 +148,6 @@ impl W {
     }
     #[doc = "Bit 4 - usb device reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_usb_device(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_USB_DEVICE_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -160,7 +155,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - usb otg20 hs phy src sel. 2'd0: 12m, 2'd1: 25m, 2'd2: pad_hsphy_refclk."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_usb_otg20_phyref_clk_src_sel(
         &mut self,
     ) -> LP_AONCLKRST_USB_OTG20_PHYREF_CLK_SRC_SEL_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -168,7 +162,6 @@ impl W {
     }
     #[doc = "Bit 30 - usb otg20 hs phy refclk enable."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_usb_otg20_phyref_clk_en(
         &mut self,
     ) -> LP_AONCLKRST_USB_OTG20_PHYREF_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {
@@ -176,7 +169,6 @@ impl W {
     }
     #[doc = "Bit 31 - usb otg20 ulpi clock enable."]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_usb_otg20_ulpi_clk_en(
         &mut self,
     ) -> LP_AONCLKRST_USB_OTG20_ULPI_CLK_EN_W<LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC> {

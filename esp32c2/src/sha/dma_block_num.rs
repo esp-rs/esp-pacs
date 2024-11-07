@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Dma-sha block number."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_block_num(&mut self) -> DMA_BLOCK_NUM_W<DMA_BLOCK_NUM_SPEC> {
         DMA_BLOCK_NUM_W::new(self, 0)
     }

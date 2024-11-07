@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc1host_rx_infor(
         &mut self,
     ) -> HOST_SLC1HOST_RX_INFOR_W<HOST_SLC1HOST_RX_INFOR_SPEC> {

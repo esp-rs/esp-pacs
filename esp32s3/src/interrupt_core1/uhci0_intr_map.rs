@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map uhci0 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn uhci0_intr_map(&mut self) -> UHCI0_INTR_MAP_W<UHCI0_INTR_MAP_SPEC> {
         UHCI0_INTR_MAP_W::new(self, 0)
     }

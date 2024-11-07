@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - RTC I2C control data. Active only when SENS_SAR_I2C_START_FORCE = 1."]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_ctrl(&mut self) -> SAR_I2C_CTRL_W<SAR_I2C_CTRL_SPEC> {
         SAR_I2C_CTRL_W::new(self, 0)
     }
     #[doc = "Bit 28 - Start RTC I2C. Active only when SENS_SAR_I2C_START_FORCE = 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_start(&mut self) -> SAR_I2C_START_W<SAR_I2C_CTRL_SPEC> {
         SAR_I2C_START_W::new(self, 28)
     }
     #[doc = "Bit 29 - 0: RTC I2C started by FSM. 1: RTC I2C started by software."]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_start_force(&mut self) -> SAR_I2C_START_FORCE_W<SAR_I2C_CTRL_SPEC> {
         SAR_I2C_START_FORCE_W::new(self, 29)
     }

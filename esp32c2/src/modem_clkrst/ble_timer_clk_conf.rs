@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn bletimer_use_xtal(&mut self) -> BLETIMER_USE_XTAL_W<BLE_TIMER_CLK_CONF_SPEC> {
         BLETIMER_USE_XTAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - ."]
     #[inline(always)]
-    #[must_use]
     pub fn bletimer_clk_is_active(&mut self) -> BLETIMER_CLK_IS_ACTIVE_W<BLE_TIMER_CLK_CONF_SPEC> {
         BLETIMER_CLK_IS_ACTIVE_W::new(self, 1)
     }

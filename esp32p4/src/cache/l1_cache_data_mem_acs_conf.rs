@@ -130,7 +130,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable config-bus read L1-ICache0 data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_data_mem_rd_en(
         &mut self,
     ) -> L1_ICACHE0_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -138,7 +137,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to enable config-bus write L1-ICache0 data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_data_mem_wr_en(
         &mut self,
     ) -> L1_ICACHE0_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -146,7 +144,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to enable config-bus read L1-ICache1 data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_data_mem_rd_en(
         &mut self,
     ) -> L1_ICACHE1_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -154,7 +151,6 @@ impl W {
     }
     #[doc = "Bit 5 - The bit is used to enable config-bus write L1-ICache1 data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_data_mem_wr_en(
         &mut self,
     ) -> L1_ICACHE1_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -162,7 +158,6 @@ impl W {
     }
     #[doc = "Bit 16 - The bit is used to enable config-bus read L1-DCache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_data_mem_rd_en(
         &mut self,
     ) -> L1_DCACHE_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -170,7 +165,6 @@ impl W {
     }
     #[doc = "Bit 17 - The bit is used to enable config-bus write L1-DCache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_data_mem_wr_en(
         &mut self,
     ) -> L1_DCACHE_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {

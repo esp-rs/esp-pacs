@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn d_ineptxfempmsk(&mut self) -> D_INEPTXFEMPMSK_W<DIEPEMPMSK_SPEC> {
         D_INEPTXFEMPMSK_W::new(self, 0)
     }

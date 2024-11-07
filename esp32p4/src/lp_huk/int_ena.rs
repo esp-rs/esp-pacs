@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the huk_prep_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn prep_done(&mut self) -> PREP_DONE_W<INT_ENA_SPEC> {
         PREP_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the huk_proc_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn proc_done(&mut self) -> PROC_DONE_W<INT_ENA_SPEC> {
         PROC_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the huk_post_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn post_done(&mut self) -> POST_DONE_W<INT_ENA_SPEC> {
         POST_DONE_W::new(self, 2)
     }

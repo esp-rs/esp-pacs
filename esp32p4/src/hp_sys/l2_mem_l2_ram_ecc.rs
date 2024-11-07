@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit0_ecc_en(&mut self) -> REG_L2_RAM_UNIT0_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT0_ECC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit1_ecc_en(&mut self) -> REG_L2_RAM_UNIT1_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT1_ECC_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit2_ecc_en(&mut self) -> REG_L2_RAM_UNIT2_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT2_ECC_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit3_ecc_en(&mut self) -> REG_L2_RAM_UNIT3_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT3_ECC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit4_ecc_en(&mut self) -> REG_L2_RAM_UNIT4_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT4_ECC_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_ram_unit5_ecc_en(&mut self) -> REG_L2_RAM_UNIT5_ECC_EN_W<L2_MEM_L2_RAM_ECC_SPEC> {
         REG_L2_RAM_UNIT5_ECC_EN_W::new(self, 5)
     }

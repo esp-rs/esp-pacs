@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - 1: SAR ADC1 controlled by DIG ADC1 CTRL."]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<MEAS1_MUX_SPEC> {
         SAR1_DIG_FORCE_W::new(self, 31)
     }

@@ -17,25 +17,21 @@ impl core::fmt::Debug for crate::generic::Reg<REF_CNT_RST_SPEC> {
 impl W {
     #[doc = "Bit 0 - This register is used to reset the clock divider of CHANNEL0."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ref_cnt_rst(&mut self) -> TX_REF_CNT_RST_W<REF_CNT_RST_SPEC> {
         TX_REF_CNT_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - This register is used to reset the clock divider of CHANNEL1."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ref_cnt_rst_ch1(&mut self) -> TX_REF_CNT_RST_CH1_W<REF_CNT_RST_SPEC> {
         TX_REF_CNT_RST_CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to reset the clock divider of CHANNEL2."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ref_cnt_rst_ch2(&mut self) -> RX_REF_CNT_RST_CH2_W<REF_CNT_RST_SPEC> {
         RX_REF_CNT_RST_CH2_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register is used to reset the clock divider of CHANNEL3."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_ref_cnt_rst_ch3(&mut self) -> RX_REF_CNT_RST_CH3_W<REF_CNT_RST_SPEC> {
         RX_REF_CNT_RST_CH3_W::new(self, 3)
     }

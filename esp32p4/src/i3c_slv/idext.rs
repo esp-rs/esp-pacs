@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn idext(&mut self) -> IDEXT_W<IDEXT_SPEC> {
         IDEXT_W::new(self, 0)
     }

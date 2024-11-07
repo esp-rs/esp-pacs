@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rc32k_dfreq(&mut self) -> RC32K_DFREQ_W<RC32K_CNTL_SPEC> {
         RC32K_DFREQ_W::new(self, 22)
     }

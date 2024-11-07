@@ -46,25 +46,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_sys_stall(&mut self) -> TIMER_SYS_STALL_W<TIME_UPDATE_SPEC> {
         TIMER_SYS_STALL_W::new(self, 27)
     }
     #[doc = "Bit 28 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_xtl_off(&mut self) -> TIMER_XTL_OFF_W<TIME_UPDATE_SPEC> {
         TIMER_XTL_OFF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_sys_rst(&mut self) -> TIMER_SYS_RST_W<TIME_UPDATE_SPEC> {
         TIMER_SYS_RST_W::new(self, 29)
     }
     #[doc = "Bit 31 - Selects the triggering condition for the RTC timer. See details in Table 1-2."]
     #[inline(always)]
-    #[must_use]
     pub fn time_update(&mut self) -> TIME_UPDATE_W<TIME_UPDATE_SPEC> {
         TIME_UPDATE_W::new(self, 31)
     }

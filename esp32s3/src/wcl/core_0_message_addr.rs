@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_message_addr(&mut self) -> CORE_0_MESSAGE_ADDR_W<CORE_0_MESSAGE_ADDR_SPEC> {
         CORE_0_MESSAGE_ADDR_W::new(self, 0)
     }
