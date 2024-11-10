@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the pending status of the user software interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn usip(&mut self) -> USIP_W<USIP_SPEC> {
         USIP_W::new(self, 0)
     }

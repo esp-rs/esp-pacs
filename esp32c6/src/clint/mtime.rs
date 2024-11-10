@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:63 - Configures the 64-bit CLINT timer counter value."]
     #[inline(always)]
-    #[must_use]
     pub fn mtime(&mut self) -> MTIME_W<MTIME_SPEC> {
         MTIME_W::new(self, 0)
     }

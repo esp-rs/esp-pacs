@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:63 - Configures the 64-bit user timer compare value."]
     #[inline(always)]
-    #[must_use]
     pub fn utimecmp(&mut self) -> UTIMECMP_W<UTIMECMP_SPEC> {
         UTIMECMP_W::new(self, 0)
     }
