@@ -215,6 +215,10 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
+    match chip { //TODO: replace with if target == Target::RISCV when all riscv chips has settings
+        Chip::Esp32c6 => config.settings = Some("esp32c6/settings.yaml".into()),
+        _ => (),
+    };
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;

@@ -1,0 +1,52 @@
+riscv_config:
+  core_interrupts:
+    - name: "MachineSoft"
+      value: 3
+      description: "Machine Software Interrupt"
+    - name: "MachineTimer"
+      value: 7
+      description: "Machine Timer Interrupt"
+    - name: "MachineExternal"
+      value: 11
+      description: "Machine External Interrupt"
+
+  priorities:
+    - name: "P0"
+      value: 0
+      description: "Priority level 0"
+    - name: "P1"
+      value: 1
+      description: "Priority level 1"
+    - name: "P2"
+      value: 2
+      description: "Priority level 2"
+    - name: "P3"
+      value: 3
+      description: "Priority level 3"
+    - name: "P4"
+      value: 4
+      description: "Priority level 4"
+    - name: "P5"
+      value: 5
+      description: "Priority level 5"
+    - name: "P6"
+      value: 6
+      description: "Priority level 6"
+    - name: "P7"
+      value: 7
+      description: "Priority level 7"
+
+  harts:
+    - name: "H0"
+      value: 0
+      description: "Hart 0"
+
+  clint:
+    name: "CLINT"
+    freq: 32768
+    async_delay: false
+
+#  plic:
+#    name: "PLIC"
+#    core_interrupt: "MachineExternal"
+#    hart_id: "H0"
