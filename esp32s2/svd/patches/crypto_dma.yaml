@@ -1,0 +1,611 @@
+_add:
+  CRYPTO_DMA:
+    description: Crypto DMA Controller
+    baseAddress: 0x3F43F000
+    addressBlock:
+      - offset: 0x0
+        size: 0x60
+        usage: "Registers"
+    registers:
+      CONF:
+        description: "DMA configuration register"
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x0100
+        fields:
+          IN_RST:
+            description: "This bit is used to reset crypto DMA in FSM and RX FIFO pointer."
+            bitOffset: 0
+            bitWidth: 1
+          OUT_RST:
+            description: "This bit is used to reset crypto DMA out FSM and TX FIFO pointer."
+            bitOffset: 1
+            bitWidth: 1
+          AHBM_FIFO_RST:
+            description: "This bit is used to reset crypto DMA AHB master FIFO pointer."
+            bitOffset: 2
+            bitWidth: 1
+          AHBM_RST:
+            description: "Reset crypto DMA AHB master."
+            bitOffset: 3
+            bitWidth: 1
+          IN_LOOP_TEST:
+            description: "Reserved"
+            bitOffset: 4
+            bitWidth: 1
+          OUT_LOOP_TEST:
+            description: "Reserved"
+            bitOffset: 5
+            bitWidth: 1
+          OUT_AUTO_WRBACK:
+            description: "Set this bit to enable automatic outlink-writeback when all the data in TX Buffer has been transmitted."
+            bitOffset: 6
+            bitWidth: 1
+          OUT_NO_RESTART_CLR:
+            description: "Reserved"
+            bitOffset: 7
+            bitWidth: 1
+          OUT_EOF_MODE:
+            description: "Out EOF flag generation mode of TX FIFO. 1: EOF flag of TX is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA; 0: EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA."
+            bitOffset: 8
+            bitWidth: 1
+          OUTDSCR_BURST_EN:
+            description: "Set this bit to enable INCR burst transfer when TX FIFO reads descriptor from internal RAM."
+            bitOffset: 9
+            bitWidth: 1
+          INDSCR_BURST_EN:
+            description: "Set this bit to enable INCR burst transfer when RX FIFO reads descriptor from internal RAM."
+            bitOffset: 10
+            bitWidth: 1
+          OUT_DATA_BURST_EN:
+            description: "Set this bit to enable INCR burst transfer when TX FIFO reads data from internal RAM."
+            bitOffset: 11
+            bitWidth: 1
+          MEM_TRANS_EN:
+            description: "Set this bit to enable automatic transmitting data from memory to memory via DMA."
+            bitOffset: 12
+            bitWidth: 1
+
+      OUT_LINK:
+        description: "Link descriptor address and control"
+        addressOffset: 0x24
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          OUTLINK_ADDR:
+            description: "This register stores the 20 least significant bits of the first transmit descriptor’s address."
+            bitOffset: 0
+            bitWidth: 20
+          OUTLINK_STOP:
+            description: "Set this bit to stop DMA from reading transmit descriptors after finishing the current data transaction."
+            bitOffset: 28
+            bitWidth: 1
+          OUTLINK_START:
+            description: "Set this bit to enable DMA to read transmit descriptors."
+            bitOffset: 29
+            bitWidth: 1
+          OUTLINK_RESTART:
+            description: "Set this bit to restart a new outlink from the last address."
+            bitOffset: 30
+            bitWidth: 1
+          OUTLINK_PARK:
+            description: "1: the transmit descriptor’s FSM is in idle state. 0: the transmit descriptor’s FSM is working."
+            bitOffset: 31
+            bitWidth: 1
+            access: read-only
+
+      IN_LINK:
+        description: "Link descriptor address and control"
+        addressOffset: 0x28
+        size: 32
+        access: read-write
+        resetValue: 0x100000
+        fields:
+          INLINK_ADDR:
+            description: "This register stores the 20 least significant bits of the first receive descriptor’s address."
+            bitOffset: 0
+            bitWidth: 20
+          INLINK_AUTO_RET:
+            description: "Reserved"
+            bitOffset: 20
+            bitWidth: 1
+          INLINK_STOP:
+            description: "Set this bit to stop DMA from reading receive descriptors after finishing the current data transaction."
+            bitOffset: 28
+            bitWidth: 1
+          INLINK_START:
+            description: "Set this bit to enable DMA to read receive descriptors."
+            bitOffset: 29
+            bitWidth: 1
+          INLINK_RESTART:
+            description: "Set this bit to mount a new receive descriptor."
+            bitOffset: 30
+            bitWidth: 1
+          INLINK_PARK:
+            description: "1: the receive descriptor’s FSM is in idle state. 0: the receive descriptor’s FSM is working."
+            bitOffset: 31
+            bitWidth: 1
+            access: read-only
+
+      CONF1:
+        description: "DMA configuration register"
+        addressOffset: 0x2C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          INFIFO_FULL_THRS:
+            description: "This register is used to generate the CRYPTO_DMA_INFIFO_FULL_WM_INT interrupt when the byte number is up to the value of the register."
+            bitOffset: 0
+            bitWidth: 12
+          CHECK_OWNER:
+            description: "Set this bit to enable checking the owner attribute of the link descriptor."
+            bitOffset: 12
+            bitWidth: 1
+          EXT_MEM_BK_SIZE:
+            description: "DMA access external memory block size. 0: 16 bytes; 1: 32 bytes; 2: 64 bytes; 3:Reserved."
+            bitOffset: 13
+            bitWidth: 2
+
+      AHB_TEST:
+        description: "AHB test register"
+        addressOffset: 0x48
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          AHB_TESTMODE:
+            description: "Reserved"
+            bitOffset: 0
+            bitWidth: 3
+          AHB_TESTADDR:
+            description: "Reserved"
+            bitOffset: 4
+            bitWidth: 2
+
+      AES_SHA_SELECT:
+        description: "AES/SHA select register"
+        addressOffset: 0x64
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SELECT:
+            description: "Select one between AES and SHA to use DMA. 0: AES. 1: SHA."
+            bitOffset: 0
+            bitWidth: 1
+
+      PD_CONF:
+        description: "Power control register"
+        addressOffset: 0x68
+        size: 32
+        access: read-write
+        resetValue: 0x20
+        fields:
+          RAM_FORCE_PD:
+            description: "Force power down signal to RAM. 0: force RAM power up; 1: only when CRYPTO_DMA_RAM_FORCE_PU is 0, power down RAM."
+            bitOffset: 4
+            bitWidth: 1
+          RAM_FORCE_PU:
+            description: "Force power up signal to RAM. 0: only when CRYPTO_DMA_RAM_FORCE_PD is 1, power down RAM; 1: force RAM power up."
+            bitOffset: 5
+            bitWidth: 1
+          RAM_CLK_FO:
+            description: "1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."
+            bitOffset: 6
+            bitWidth: 1
+
+      DATE:
+        description: "Crypto DMA version control register"
+        addressOffset: 0xFC
+        size: 32
+        access: read-write
+        resetValue: 0x19050700
+        fields:
+          DATE:
+            description: "This is the version control register."
+            bitOffset: 0
+            bitWidth: 32
+
+      INT_RAW:
+        description: "Raw interrupt status"
+        addressOffset: 0x04
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          IN_DONE:
+            description: "Set when the last data of one frame is received or the receive buffer is full indicated by receive descriptor."
+            bitOffset: 0
+            bitWidth: 1
+          IN_SUC_EOF:
+            description: " Set when the last data of one frame is received by Crypto DMA RX FIFO."
+            bitOffset: 1
+            bitWidth: 1
+          IN_ERR_EOF:
+            description: "Reserved"
+            bitOffset: 2
+            bitWidth: 1
+          OUT_DONE:
+            description: "Set when all data indicated by one transmit descriptor has been pushed into TX FIFO."
+            bitOffset: 3
+            bitWidth: 1
+          OUT_EOF:
+            description: "Set when Out EOF flag is generated."
+            bitOffset: 4
+            bitWidth: 1
+          IN_DSCR_ERR:
+            description: "Set when detecting receive descriptor error, including owner error, the second and third word error of receive descriptor."
+            bitOffset: 5
+            bitWidth: 1
+          OUT_DSCR_ERR:
+            description: "Set when detecting transmit descriptor error, including owner error, the second and third word error of transmit descriptor."
+            bitOffset: 6
+            bitWidth: 1
+          IN_DSCR_EMPTY:
+            description: "Set when receiving data is completed and no more receive descriptor."
+            bitOffset: 7
+            bitWidth: 1
+          OUT_TOTAL_EOF:
+            description: "Set when data corresponding to all transmit descriptor and the last descriptor with valid EOF is transmitted out."
+            bitOffset: 8
+            bitWidth: 1
+          INFIFO_FULL_WM:
+            description: "Set when received data byte number is up to threshold configured by CRYPTO_DMA_INFIFO_FULL_THRS in RX FIFO."
+            bitOffset: 9
+            bitWidth: 1
+
+      INT_ST:
+        description: "Masked interrupt status"
+        addressOffset: 0x08
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          IN_DONE:
+            description: "The masked interrupt status bit for the IN_DONE interrupt."
+            bitOffset: 0
+            bitWidth: 1
+          IN_SUC_EOF:
+            description: "The masked interrupt status bit for the IN_SUC_EOF interrupt."
+            bitOffset: 1
+            bitWidth: 1
+          IN_ERR_EOF:
+            description: "The masked interrupt status bit for the IN_ERR_EOF interrupt."
+            bitOffset: 2
+            bitWidth: 1
+          OUT_DONE:
+            description: "The masked interrupt status bit for the OUT_DONE interrupt."
+            bitOffset: 3
+            bitWidth: 1
+          OUT_EOF:
+            description: "The masked interrupt status bit for the OUT_EOF interrupt."
+            bitOffset: 4
+            bitWidth: 1
+          IN_DSCR_ERR:
+            description: "The masked interrupt status bit for the IN_DSCR_ERR interrupt."
+            bitOffset: 5
+            bitWidth: 1
+          OUT_DSCR_ERR:
+            description: "The masked interrupt status bit for the OUT_DSCR_ERR interrupt."
+            bitOffset: 6
+            bitWidth: 1
+          IN_DSCR_EMPTY:
+            description: "The masked interrupt status bit for the IN_DSCR_EMPTY interrupt."
+            bitOffset: 7
+            bitWidth: 1
+          OUT_TOTAL_EOF:
+            description: "The masked interrupt status bit for the OUT_TOTAL_EOF interrupt."
+            bitOffset: 8
+            bitWidth: 1
+          INFIFO_FULL_WM:
+            description: "The masked interrupt status bit for the INFIFO_FULL_WM interrupt."
+            bitOffset: 9
+            bitWidth: 1
+
+      INT_ENA:
+        description: "Interrupt enable bits"
+        addressOffset: 0x0C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          IN_DONE:
+            description: "The interrupt enable bit for the IN_DONE interrupt."
+            bitOffset: 0
+            bitWidth: 1
+          IN_SUC_EOF:
+            description: "The interrupt enable bit for the IN_SUC_EOF interrupt."
+            bitOffset: 1
+            bitWidth: 1
+          IN_ERR_EOF:
+            description: "The interrupt enable bit for the IN_ERR_EOF interrupt."
+            bitOffset: 2
+            bitWidth: 1
+          OUT_DONE:
+            description: "The interrupt enable bit for the OUT_DONE interrupt."
+            bitOffset: 3
+            bitWidth: 1
+          OUT_EOF:
+            description: "The interrupt enable bit for the OUT_EOF interrupt."
+            bitOffset: 4
+            bitWidth: 1
+          IN_DSCR_ERR:
+            description: "The interrupt enable bit for the IN_DSCR_ERR interrupt."
+            bitOffset: 5
+            bitWidth: 1
+          OUT_DSCR_ERR:
+            description: "The interrupt enable bit for the OUT_DSCR_ERR interrupt."
+            bitOffset: 6
+            bitWidth: 1
+          IN_DSCR_EMPTY:
+            description: "The interrupt enable bit for the IN_DSCR_EMPTY interrupt."
+            bitOffset: 7
+            bitWidth: 1
+          OUT_TOTAL_EOF:
+            description: "The interrupt enable bit for the OUT_TOTAL_EOF interrupt."
+            bitOffset: 8
+            bitWidth: 1
+          INFIFO_FULL_WM:
+            description: "The interrupt enable bit for the INFIFO_FULL_WM interrupt."
+            bitOffset: 9
+            bitWidth: 1
+
+      INT_CLR:
+        description: "Interrupt clear bits"
+        addressOffset: 0x10
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          IN_DONE:
+            description: "Set this bit to clear the IN_DONE interrupt."
+            bitOffset: 0
+            bitWidth: 1
+          IN_SUC_EOF:
+            description: "Set this bit to clear the IN_SUC_EOF interrupt."
+            bitOffset: 1
+            bitWidth: 1
+          IN_ERR_EOF:
+            description: "Set this bit to clear the IN_ERR_EOF interrupt."
+            bitOffset: 2
+            bitWidth: 1
+          OUT_DONE:
+            description: "Set this bit to clear the OUT_DONE interrupt."
+            bitOffset: 3
+            bitWidth: 1
+          OUT_EOF:
+            description: "Set this bit to clear the OUT_EOF interrupt."
+            bitOffset: 4
+            bitWidth: 1
+          IN_DSCR_ERR:
+            description: "Set this bit to clear the IN_DSCR_ERR interrupt."
+            bitOffset: 5
+            bitWidth: 1
+          OUT_DSCR_ERR:
+            description: "Set this bit to clear the OUT_DSCR_ERR interrupt."
+            bitOffset: 6
+            bitWidth: 1
+          IN_DSCR_EMPTY:
+            description: "Set this bit to clear the IN_DSCR_EMPTY interrupt."
+            bitOffset: 7
+            bitWidth: 1
+          OUT_TOTAL_EOF:
+            description: "Set this bit to clear the OUT_TOTAL_EOF interrupt."
+            bitOffset: 8
+            bitWidth: 1
+          INFIFO_FULL_WM:
+            description: "Set this bit to clear the INFIFO_FULL_WM interrupt."
+            bitOffset: 9
+            bitWidth: 1
+
+      OUT_STATUS:
+        description: "TX FIFO status register"
+        addressOffset: 0x14
+        size: 32
+        access: read-only
+        resetValue: 0x02
+        fields:
+          OUT_FULL:
+            description: "DMA TX FIFO is full."
+            bitOffset: 0
+            bitWidth: 1
+          OUT_EMPTY:
+            description: "DMA TX FIFO is empty."
+            bitOffset: 1
+            bitWidth: 1
+
+      IN_STATUS:
+        description: "RX FIFO status register"
+        addressOffset: 0x1C
+        size: 32
+        access: read-only
+        resetValue: 0x02
+        fields:
+          IN_FULL:
+            description: "DMA RX FIFO is full."
+            bitOffset: 0
+            bitWidth: 1
+          IN_EMPTY:
+            description: "DMA RX FIFO is empty."
+            bitOffset: 1
+            bitWidth: 1
+
+      STATE0:
+        description: "Status register of receiving data"
+        addressOffset: 0x30
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          INLINK_DSCR_ADDR:
+            description: "This register stores the current receive descriptor’s address."
+            bitOffset: 0
+            bitWidth: 18
+          IN_DSCR_STATE:
+            description: "Reserved"
+            bitOffset: 18
+            bitWidth: 2
+          IN_STATE:
+            description: "Reserved"
+            bitOffset: 20
+            bitWidth: 3
+          INFIFO_CNT_DEBUG:
+            description: "This register stores the byte number of the data in the receive descriptor’s FIFO."
+            bitOffset: 23
+            bitWidth: 4
+
+      STATE1:
+        description: "Status register of transmitting data"
+        addressOffset: 0x34
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          OUTLINK_DSCR_ADDR:
+            description: "This register stores the current transmit descriptor’s address."
+            bitOffset: 0
+            bitWidth: 18
+          OUT_DSCR_STATE:
+            description: "Reserved"
+            bitOffset: 18
+            bitWidth: 2
+          OUT_STATE:
+            description: "Reserved"
+            bitOffset: 20
+            bitWidth: 3
+          OUTFIFO_CNT_DEBUG:
+            description: "This register stores the byte number of the data in the transmit descriptor’s FIFO."
+            bitOffset: 23
+            bitWidth: 5
+
+      OUT_EOF_DES_ADDR:
+        description: "Transmit descriptor address when EOF occurs"
+        addressOffset: 0x38
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          OUT_EOF_DES_ADDR:
+            description: "This register stores the address of the transmit descriptor when the EOF bit in this descriptor is 1."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      IN_SUC_EOF_DES_ADDR:
+        description: "Receive descriptor address when EOF occurs"
+        addressOffset: 0x3C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          IN_SUC_EOF_DES_ADDR:
+            description: "This register stores the address of the receive descriptor when received successful EOF."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      IN_ERR_EOF_DES_ADDR:
+        description: "Receive descriptor address when errors occur"
+        addressOffset: 0x40
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          IN_ERR_EOF_DES_ADDR:
+            description: "This register stores the address of the receive descriptor when there are some errors in this descriptor."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      OUT_EOF_BFR_DES_ADDR:
+        description: "Transmit descriptor address before the last transmit descriptor"
+        addressOffset: 0x44
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          OUT_EOF_BFR_DES_ADDR:
+            description: "This register stores the address of the transmit descriptor before the last transmit descriptor."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      DMA_IN_DSCR:
+        description: "Address of current receive descriptor"
+        addressOffset: 0x4C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DMA_IN_DSCR:
+            description: "Address of the current receive descriptor x."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      DMA_IN_DSCR_BF0:
+        description: "Address of last receive descriptor"
+        addressOffset: 0x50
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DMA_IN_DSCR_BF0:
+            description: "Address of the last receive descriptor x-1."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+      DMA_OUT_DSCR:
+        description: "Address of current transmit descriptor"
+        addressOffset: 0x58
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DMA_OUT_DSCR:
+            description: "Address of the current transmit descriptor y."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+
+      DMA_OUT_DSCR_BF0:
+        description: "Address of last transmit descriptor"
+        addressOffset: 0x5C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          DMA_OUT_DSCR_BF0:
+            description: "Address of the last transmit descriptor y-1."
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+
+# We need to define enumeratedValues separately.
+CRYPTO_DMA:
+  CONF:
+    OUT_EOF_MODE:
+      ON_PUSH: [0, "EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA"]
+      ON_POP: [1, "EOF flag is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA"]
+  OUT_LINK:
+    OUTLINK_PARK:
+      IDLE: [1, "The transmit descriptor’s FSM is in idle state"]
+      WORKING: [0, "The transmit descriptor’s FSM is working"]
+  IN_LINK:
+    INLINK_PARK:
+      IDLE: [1, "The receive descriptor’s FSM is in idle state"]
+      WORKING: [0, "The receive descriptor’s FSM is working"]
+  CONF1:
+    EXT_MEM_BK_SIZE:
+      SIZE_16: [0, "DMA access external memory block size is 16 bytes"]
+      SIZE_32: [1, "DMA access external memory block size is 32 bytes"]
+      SIZE_64: [2, "DMA access external memory block size is 64 bytes"]
+  AES_SHA_SELECT:
+    SELECT:
+      AES: [0, "The AES peripheral uses the Crypto DMA"]
+      SHA: [1, "The SHA peripheral uses the Crypto DMA"]
