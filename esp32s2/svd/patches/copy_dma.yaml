@@ -416,7 +416,15 @@ _add:
 
 # We need to define enumeratedValues separately, becase svdtools has awesome UX.
 COPY_DMA:
+  OUT_LINK:
+    OUTLINK_PARK:
+      IDLE: [1, "The transmit descriptor’s FSM is in idle state"]
+      WORKING: [0, "The transmit descriptor’s FSM is working."]
   IN_LINK:
     INLINK_PARK:
       IDLE: [1, "The receive descriptor’s FSM is in idle state"]
       WORKING: [0, "The receive descriptor’s FSM is working."]
+  CONF:
+    CLK_EN:
+      FORCE: [1, "Force clock on for register"]
+      ON_WRITE: [0, "Support clock only when application writes registers"]
