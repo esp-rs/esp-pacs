@@ -1,5 +1,8 @@
 _svd: ../esp32s2.base.svd
 
+_include:
+  - copy_dma.yaml
+
 AES:
   _modify:
     IV_%s:

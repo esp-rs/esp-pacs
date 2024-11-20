@@ -1,0 +1,418 @@
+_add:
+  COPY_DMA:
+    description: Copy DMA Controller
+    baseAddress: 0x3F4C3000
+    addressBlock:
+      - offset: 0x0
+        size: 0x100
+        usage: "Registers"
+    registers:
+      CP_DMA_INT_RAW_REG:
+        description: "Raw interrupt status"
+        addressOffset: 0x0
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_DONE_INT_RAW:
+            description: "Triggered when the last data of frame is received or the receive buffer is full indicated by receive descriptor."
+            bitOffset: 0
+            bitWidth: 1
+          CP_DMA_IN_SUC_EOF_INT_RAW:
+            description: "Triggered when the last data of one frame is received."
+            bitOffset: 1
+            bitWidth: 1
+          CP_DMA_OUT_DONE_INT_RAW:
+            description: "Triggered when all data indicated by one transmit descriptor has been pushed into TX FIFO."
+            bitOffset: 2
+            bitWidth: 1
+          CP_DMA_OUT_EOF_INT_RAW:
+            description: "Triggered when the last data with EOF flag has been pushed into TX FIFO."
+            bitOffset: 3
+            bitWidth: 1
+          CP_DMA_IN_DSCR_ERR_INT_RAW:
+            description: "Triggered when detecting receive descriptor error, including owner error, the second and third word error of receive descriptor."
+            bitOffset: 4
+            bitWidth: 1
+          CP_DMA_OUT_DSCR_ERR_INT_RAW:
+            description: "Triggered when detecting transmit descriptor error, including owner error, the second and third word error of transmit descriptor."
+            bitOffset: 5
+            bitWidth: 1
+          CP_DMA_IN_DSCR_EMPTY_INT_RAW:
+            description: "Triggered when receiving data is completed and no more receive descriptor."
+            bitOffset: 6
+            bitWidth: 1
+          CP_DMA_OUT_TOTAL_EOF_INT_RAW:
+            description: "Triggered when data corresponding to all transmit descriptors and the last descriptor with valid EOF is transmitted out."
+            bitOffset: 7
+            bitWidth: 1
+
+      CP_DMA_INT_ST_REG:
+        description: "Masked interrupt status"
+        addressOffset: 0x4
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_DONE_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_IN_DONE_INT interrupt when CP_DMA_IN_DONE_INT_ENA is set."
+            bitOffset: 0
+            bitWidth: 1
+          CP_DMA_IN_SUC_EOF_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_IN_SUC_EOF_INT interrupt when CP_DMA_IN_SUC_EOF_INT_ENA is set."
+            bitOffset: 1
+            bitWidth: 1
+          CP_DMA_OUT_DONE_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_OUT_DONE_INT interrupt when CP_DMA_OUT_DONE_INT_ENA is set."
+            bitOffset: 2
+            bitWidth: 1
+          CP_DMA_OUT_EOF_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_OUT_EOF_INT interrupt when CP_DMA_OUT_EOF_INT_ENA is set."
+            bitOffset: 3
+            bitWidth: 1
+          CP_DMA_IN_DSCR_ERR_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_IN_DSCR_ERR_INT interrupt when CP_DMA_IN_DSCR_ERR_INT_ENA is set."
+            bitOffset: 4
+            bitWidth: 1
+          CP_DMA_OUT_DSCR_ERR_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_OUT_DSCR_ERR_INT interrupt when CP_DMA_OUT_DSCR_ERR_INT_ENA is set."
+            bitOffset: 5
+            bitWidth: 1
+          CP_DMA_IN_DSCR_EMPTY_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_IN_DSCR_EMPTY_INT interrupt when CP_DMA_IN_DSCR_EMPTY_INT_ENA is set."
+            bitOffset: 6
+            bitWidth: 1
+          CP_DMA_OUT_TOTAL_EOF_INT_ST:
+            description: "This is the masked interrupt bit for CP_DMA_OUT_TOTAL_EOF_INT interrupt when CP_DMA_OUT_TOTAL_EOF_INT_ENA is set."
+            bitOffset: 7
+            bitWidth: 1
+
+      CP_DMA_INT_ENA_REG:
+        description: "Interrupt enable bits"
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_DONE_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_IN_DONE_INT interrupt."
+            bitOffset: 0
+            bitWidth: 1
+          CP_DMA_IN_SUC_EOF_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_IN_SUC_EOF_INT interrupt."
+            bitOffset: 1
+            bitWidth: 1
+          CP_DMA_OUT_DONE_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_OUT_DONE_INT interrupt."
+            bitOffset: 2
+            bitWidth: 1
+          CP_DMA_OUT_EOF_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_OUT_EOF_INT interrupt."
+            bitOffset: 3
+            bitWidth: 1
+          CP_DMA_IN_DSCR_ERR_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_IN_DSCR_ERR_INT interrupt."
+            bitOffset: 4
+            bitWidth: 1
+          CP_DMA_OUT_DSCR_ERR_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_OUT_DSCR_ERR_INT interrupt."
+            bitOffset: 5
+            bitWidth: 1
+          CP_DMA_IN_DSCR_EMPTY_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_IN_DSCR_EMPTY_INT interrupt."
+            bitOffset: 6
+            bitWidth: 1
+          CP_DMA_OUT_TOTAL_EOF_INT_ENA:
+            description: "This is the interrupt enable bit for CP_DMA_OUT_TOTAL_EOF_INT interrupt."
+            bitOffset: 7
+            bitWidth: 1
+
+      CP_DMA_INT_CLR_REG:
+        description: "Interrupt clear bits"
+        addressOffset: 0xC
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_DONE_INT_CLR:
+            description: "Set this bit to clear CP_DMA_IN_DONE_INT interrupt."
+            bitOffset: 0
+            bitWidth: 1
+          CP_DMA_IN_SUC_EOF_INT_CLR:
+            description: "Set this bit to clear CP_DMA_IN_SUC_EOF_INT interrupt."
+            bitOffset: 1
+            bitWidth: 1
+          CP_DMA_OUT_DONE_INT_CLR:
+            description: "Set this bit to clear CP_DMA_OUT_DONE_INT interrupt."
+            bitOffset: 2
+            bitWidth: 1
+          CP_DMA_OUT_EOF_INT_CLR:
+            description: "Set this bit to clear CP_DMA_OUT_EOF_INT interrupt."
+            bitOffset: 3
+            bitWidth: 1
+          CP_DMA_IN_DSCR_ERR_INT_CLR:
+            description: "Set this bit to clear CP_DMA_IN_DSCR_ERR_INT interrupt."
+            bitOffset: 4
+            bitWidth: 1
+          CP_DMA_OUT_DSCR_ERR_INT_CLR:
+            description: "Set this bit to clear CP_DMA_OUT_DSCR_ERR_INT interrupt."
+            bitOffset: 5
+            bitWidth: 1
+          CP_DMA_IN_DSCR_EMPTY_INT_CLR:
+            description: "Set this bit to clear CP_DMA_IN_DSCR_EMPTY_INT interrupt."
+            bitOffset: 6
+            bitWidth: 1
+          CP_DMA_OUT_TOTAL_EOF_INT_CLR:
+            description: "Set this bit to clear CP_DMA_OUT_TOTAL_EOF_INT interrupt."
+            bitOffset: 7
+            bitWidth: 1
+
+      CP_DMA_OUT_LINK_REG:
+        description: "Link descriptor address and control"
+        addressOffset: 0x10
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUTLINK_ADDR:
+            description: "This register is used to specify the least significant 20 bits of the first transmit descriptor’s address."
+            bitOffset: 0
+            bitWidth: 20
+          CP_DMA_OUTLINK_STOP:
+            description: "Set this bit to stop DMA from reading transmit descriptors after finishing the current data transaction."
+            bitOffset: 28
+            bitWidth: 1
+          CP_DMA_OUTLINK_START:
+            description: "Set this bit to start a new transmit descriptor."
+            bitOffset: 29
+            bitWidth: 1
+          CP_DMA_OUTLINK_RESTART:
+            description: "Set this bit to restart the transmit descriptor from the last address."
+            bitOffset: 30
+            bitWidth: 1
+          CP_DMA_OUTLINK_PARK:
+            description: "1: the transmit descriptor’s FSM is in idle state. 0: the transmit descriptor’s FSM is working."
+            bitOffset: 31
+            bitWidth: 1
+            enumerateValues:
+              IDLE: [1, "The transmit descriptor’s FSM is in idle state"]
+              WORKING: [0, "The transmit descriptor’s FSM is working."]
+
+      CP_DMA_IN_LINK_REG:
+        description: "Link descriptor address and control"
+        addressOffset: 0x14
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          CP_DMA_INLINK_ADDR:
+            description: "This register is used to specify the least significant 20 bits of the first receive descriptor’s address."
+            bitOffset: 0
+            bitWidth: 20
+          CP_DMA_INLINK_STOP:
+            description: "Set this bit to stop DMA from reading receive descriptors after finishing the current data transaction."
+            bitOffset: 28
+            bitWidth: 1
+          CP_DMA_INLINK_START:
+            description: "Set this bit to enable DMA to read receive descriptor."
+            bitOffset: 29
+            bitWidth: 1
+          CP_DMA_INLINK_RESTART:
+            description: "Set this bit to restart new receive descriptors."
+            bitOffset: 30
+            bitWidth: 1
+          CP_DMA_INLINK_PARK:
+            description: "1: the receive descriptor’s FSM is in idle state. 0: the receive descriptor’s FSM is working."
+            bitOffset: 31
+            bitWidth: 1
+            enumerateValues:
+              IDLE: [1, "The receive descriptor’s FSM is in idle state"]
+              WORKING: [0, "The receive descriptor’s FSM is working."]
+
+      CP_DMA_CONF_REG:
+        description: "Copy DMA configuration register"
+        addressOffset: 0x3C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_RST:
+            description: "Set this bit to reset in DMA FSM."
+            bitOffset: 0
+            bitWidth: 1
+          CP_DMA_OUT_RST:
+            description: "Set this bit to reset out DMA FSM."
+            bitOffset: 1
+            bitWidth: 1
+          CP_DMA_CMDFIFO_RST:
+            description: "Set this bit to reset in_cmd FIFO and out_cmd FIFO."
+            bitOffset: 2
+            bitWidth: 1
+          CP_DMA_FIFO_RST:
+            description: "Set this bit to reset data in RX FIFO."
+            bitOffset: 3
+            bitWidth: 1
+          CP_DMA_OUT_OWNER:
+            description: "This is used to configure the owner bit in transmit descriptor. This is effective only when you set CP_DMA_OUT_AUTO_WRBACK."
+            bitOffset: 4
+            bitWidth: 1
+          CP_DMA_IN_OWNER:
+            description: "This is used to configure the owner bit in receive descriptor."
+            bitOffset: 5
+            bitWidth: 1
+          CP_DMA_OUT_AUTO_WRBACK:
+            description: "This bit is used to write back out descriptor when hardware has already used this descriptor."
+            bitOffset: 6
+            bitWidth: 1
+          CP_DMA_CHECK_OWNER:
+            description: "Set this bit to enable owner bit check in descriptor."
+            bitOffset: 7
+            bitWidth: 1
+          CP_DMA_CLK_EN:
+            description: "1’b1: Force clock on for register. 1’b0: Support clock only when application writes registers."
+            bitOffset: 31
+            bitWidth: 1
+
+      CP_DMA_OUT_EOF_DES_ADDR_REG:
+        description: "Transmit descriptor address when EOF occurs"
+        addressOffset: 0x18
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUT_EOF_DES_ADDR:
+            description: "This register stores the address of the transmit descriptor when the EOF bit in this descriptor is 1."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_IN_EOF_DES_ADDR_REG:
+        description: "Receive descriptor address when EOF occurs"
+        addressOffset: 0x1C
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_IN_SUC_EOF_DES_ADDR:
+            description: "This register stores the address of the receive descriptor when received successful EOF."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_OUT_EOF_BFR_DES_ADDR_REG:
+        description: "Transmit descriptor address before the last transmit descriptor"
+        addressOffset: 0x20
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUT_EOF_BFR_DES_ADDR:
+            description: "This register stores the address of the transmit descriptor before the last transmit descriptor."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_INLINK_DSCR_REG:
+        description: "Address of current receive descriptor"
+        addressOffset: 0x24
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_INLINK_DSCR:
+            description: "The address of the current receive descriptor x."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_INLINK_DSCR_BF0_REG:
+        description: "Address of last receive descriptor"
+        addressOffset: 0x28
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_INLINK_DSCR_BF0:
+            description: "The address of the last receive descriptor x-1."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_OUTLINK_DSCR_REG:
+        description: "Address of current transmit descriptor"
+        addressOffset: 0x30
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUTLINK_DSCR:
+            description: "The address of the current transmit descriptor y."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_OUTLINK_DSCR_BF0_REG:
+        description: "Address of last transmit descriptor"
+        addressOffset: 0x34
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUTLINK_DSCR_BF0:
+            description: "The address of the last transmit descriptor y-1."
+            bitOffset: 0
+            bitWidth: 32
+
+      CP_DMA_IN_ST_REG:
+        description: "Status register of receiving data"
+        addressOffset: 0x40
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_INLINK_DSCR_ADDR:
+            description: "This register stores the current receive descriptor’s address."
+            bitOffset: 0
+            bitWidth: 18
+          CP_DMA_IN_DSCR_STATE:
+            description: "Reserved"
+            bitOffset: 18
+            bitWidth: 2
+          CP_DMA_IN_STATE:
+            description: "Reserved"
+            bitOffset: 20
+            bitWidth: 3
+          CP_DMA_FIFO_EMPTY:
+            description: "Copy DMA FIFO empty signal."
+            bitOffset: 23
+            bitWidth: 1
+
+      CP_DMA_OUT_ST_REG:
+        description: "Status register of transmitting data"
+        addressOffset: 0x44
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          CP_DMA_OUTLINK_DSCR_ADDR:
+            description: "This register stores the current transmit descriptor’s address."
+            bitOffset: 0
+            bitWidth: 18
+          CP_DMA_OUT_DSCR_STATE:
+            description: "Reserved"
+            bitOffset: 18
+            bitWidth: 2
+          CP_DMA_OUT_STATE:
+            description: "Reserved"
+            bitOffset: 20
+            bitWidth: 3
+          CP_DMA_FIFO_FULL:
+            description: "Copy DMA FIFO full signal."
+            bitOffset: 23
+            bitWidth: 1
+
+      CP_DMA_DATE_REG:
+        description: "Copy DMA version control register"
+        addressOffset: 0xFC
+        size: 32
+        access: read-write
+        resetValue: 0x18082000
+        fields:
+          CP_DMA_DMA_DATE:
+            description: "This is the version control register."
+            bitOffset: 0
+            bitWidth: 32
