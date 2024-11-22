@@ -2610,7 +2610,7 @@ pub struct CRYPTO_DMA {
 unsafe impl Send for CRYPTO_DMA {}
 impl CRYPTO_DMA {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const crypto_dma::RegisterBlock = 0x3f43_f000 as *const _;
+    pub const PTR: *const crypto_dma::RegisterBlock = 0x6003_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const crypto_dma::RegisterBlock {

@@ -1,7 +1,7 @@
 _add:
   CRYPTO_DMA:
     description: Crypto DMA Controller
-    baseAddress: 0x3F43F000
+    baseAddress: 0x6003f000
     addressBlock:
       - offset: 0x0
         size: 0x60
