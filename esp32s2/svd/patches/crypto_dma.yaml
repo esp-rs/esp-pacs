@@ -609,3 +609,7 @@ CRYPTO_DMA:
     SELECT:
       AES: [0, "The AES peripheral uses the Crypto DMA"]
       SHA: [1, "The SHA peripheral uses the Crypto DMA"]
+  INT_CLR:
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear

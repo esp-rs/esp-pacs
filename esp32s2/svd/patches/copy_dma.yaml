@@ -428,3 +428,7 @@ COPY_DMA:
     CLK_EN:
       FORCE: [1, "Force clock on for register"]
       ON_WRITE: [0, "Support clock only when application writes registers"]
+  INT_CLR:
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
