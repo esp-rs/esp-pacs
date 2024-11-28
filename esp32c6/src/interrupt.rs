@@ -1,8 +1,96 @@
-#[doc = r"Enumeration of all the interrupts."]
+#[doc = r" Core interrupts. These interrupts are handled by the core itself."]
+# [riscv :: pac_enum (unsafe CoreInterruptNumber)]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Copy, Clone, Debug, PartialEq, Eq)]
-#[repr(u16)]
-pub enum Interrupt {
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CoreInterrupt {
+    #[doc = "0 - User Software Interrupt"]
+    UserSoft = 0,
+    #[doc = "1 - Supervisor Software Interrupt"]
+    SupervisorSoft = 1,
+    #[doc = "3 - Machine Software Interrupt"]
+    MachineSoft = 3,
+    #[doc = "4 - User Timer Interrupt"]
+    UserTimer = 4,
+    #[doc = "5 - Supervisor Timer Interrupt"]
+    SupervisorTimer = 5,
+    #[doc = "7 - Machine Timer Interrupt"]
+    MachineTimer = 7,
+    #[doc = "8 - User External Interrupt"]
+    UserExternal = 8,
+    #[doc = "9 - Supervisor External Interrupt"]
+    SupervisorExternal = 9,
+    #[doc = "11 - Machine External Interrupt"]
+    MachineExternal = 11,
+}
+pub use riscv::interrupt::Exception;
+#[doc = r" Priority levels in the device"]
+# [riscv :: pac_enum (unsafe PriorityNumber)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Priority {
+    #[doc = "1 - Priority level 1"]
+    P1 = 1,
+    #[doc = "2 - Priority level 2"]
+    P2 = 2,
+    #[doc = "3 - Priority level 3"]
+    P3 = 3,
+    #[doc = "4 - Priority level 4"]
+    P4 = 4,
+    #[doc = "5 - Priority level 5"]
+    P5 = 5,
+    #[doc = "6 - Priority level 6"]
+    P6 = 6,
+    #[doc = "7 - Priority level 7"]
+    P7 = 7,
+    #[doc = "8 - Priority level 8"]
+    P8 = 8,
+    #[doc = "9 - Priority level 9"]
+    P9 = 9,
+    #[doc = "10 - Priority level 10"]
+    P10 = 10,
+    #[doc = "11 - Priority level 11"]
+    P11 = 11,
+    #[doc = "12 - Priority level 12"]
+    P12 = 12,
+    #[doc = "13 - Priority level 13"]
+    P13 = 13,
+    #[doc = "14 - Priority level 14"]
+    P14 = 14,
+    #[doc = "15 - Priority level 15"]
+    P15 = 15,
+}
+#[doc = r" HARTs in the device"]
+# [riscv :: pac_enum (unsafe HartIdNumber)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Hart {
+    #[doc = "0 - Hart 0"]
+    H0 = 0,
+}
+pub use riscv::{
+    interrupt::{disable, enable, free, nested},
+    ExceptionNumber, HartIdNumber, InterruptNumber, PriorityNumber,
+};
+pub type Trap = riscv::interrupt::Trap<CoreInterrupt, Exception>;
+#[doc = r" Retrieves the cause of a trap in the current hart."]
+#[doc = r""]
+#[doc = r" If the raw cause is not a valid interrupt or exception for the target, it returns an error."]
+#[inline]
+pub fn try_cause() -> riscv::result::Result<Trap> {
+    riscv::interrupt::try_cause()
+}
+#[doc = r" Retrieves the cause of a trap in the current hart (machine mode)."]
+#[doc = r""]
+#[doc = r" If the raw cause is not a valid interrupt or exception for the target, it panics."]
+#[inline]
+pub fn cause() -> Trap {
+    try_cause().unwrap()
+}
+#[doc = r" External interrupts. These interrupts are handled by the external peripherals."]
+# [riscv :: pac_enum (unsafe ExternalInterruptNumber)]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum ExternalInterrupt {
     #[doc = "0 - WIFI_MAC"]
     WIFI_MAC = 0,
     #[doc = "1 - WIFI_MAC_NMI"]
@@ -158,131 +246,3 @@ pub enum Interrupt {
     #[doc = "76 - ECC"]
     ECC = 76,
 }
-#[doc = r" TryFromInterruptError"]
-#[cfg_attr(feature = "defmt", derive(defmt::Format))]
-#[derive(Debug, Copy, Clone)]
-pub struct TryFromInterruptError(());
-impl Interrupt {
-    #[doc = r" Attempt to convert a given value into an `Interrupt`"]
-    #[inline]
-    pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
-        match value {
-            0 => Ok(Interrupt::WIFI_MAC),
-            1 => Ok(Interrupt::WIFI_MAC_NMI),
-            2 => Ok(Interrupt::WIFI_PWR),
-            3 => Ok(Interrupt::WIFI_BB),
-            4 => Ok(Interrupt::BT_MAC),
-            5 => Ok(Interrupt::BT_BB),
-            6 => Ok(Interrupt::BT_BB_NMI),
-            7 => Ok(Interrupt::LP_TIMER),
-            8 => Ok(Interrupt::COEX),
-            9 => Ok(Interrupt::BLE_TIMER),
-            10 => Ok(Interrupt::BLE_SEC),
-            11 => Ok(Interrupt::I2C_MASTER),
-            12 => Ok(Interrupt::ZB_MAC),
-            13 => Ok(Interrupt::PMU),
-            14 => Ok(Interrupt::EFUSE),
-            15 => Ok(Interrupt::LP_RTC_TIMER),
-            16 => Ok(Interrupt::LP_UART),
-            17 => Ok(Interrupt::LP_I2C),
-            18 => Ok(Interrupt::LP_WDT),
-            19 => Ok(Interrupt::LP_PERI_TIMEOUT),
-            20 => Ok(Interrupt::LP_APM_M0),
-            21 => Ok(Interrupt::LP_APM_M1),
-            22 => Ok(Interrupt::FROM_CPU_INTR0),
-            23 => Ok(Interrupt::FROM_CPU_INTR1),
-            24 => Ok(Interrupt::FROM_CPU_INTR2),
-            25 => Ok(Interrupt::FROM_CPU_INTR3),
-            26 => Ok(Interrupt::ASSIST_DEBUG),
-            27 => Ok(Interrupt::TRACE),
-            28 => Ok(Interrupt::CACHE),
-            29 => Ok(Interrupt::CPU_PERI_TIMEOUT),
-            30 => Ok(Interrupt::GPIO),
-            31 => Ok(Interrupt::GPIO_NMI),
-            32 => Ok(Interrupt::PAU),
-            33 => Ok(Interrupt::HP_PERI_TIMEOUT),
-            34 => Ok(Interrupt::MODEM_PERI_TIMEOUT),
-            35 => Ok(Interrupt::HP_APM_M0),
-            36 => Ok(Interrupt::HP_APM_M1),
-            37 => Ok(Interrupt::HP_APM_M2),
-            38 => Ok(Interrupt::HP_APM_M3),
-            39 => Ok(Interrupt::LP_APM0),
-            40 => Ok(Interrupt::MSPI),
-            41 => Ok(Interrupt::I2S0),
-            42 => Ok(Interrupt::UHCI0),
-            43 => Ok(Interrupt::UART0),
-            44 => Ok(Interrupt::UART1),
-            45 => Ok(Interrupt::LEDC),
-            46 => Ok(Interrupt::TWAI0),
-            47 => Ok(Interrupt::TWAI1),
-            48 => Ok(Interrupt::USB_DEVICE),
-            49 => Ok(Interrupt::RMT),
-            50 => Ok(Interrupt::I2C_EXT0),
-            51 => Ok(Interrupt::TG0_T0_LEVEL),
-            52 => Ok(Interrupt::TG0_T1_LEVEL),
-            53 => Ok(Interrupt::TG0_WDT_LEVEL),
-            54 => Ok(Interrupt::TG1_T0_LEVEL),
-            55 => Ok(Interrupt::TG1_T1_LEVEL),
-            56 => Ok(Interrupt::TG1_WDT_LEVEL),
-            57 => Ok(Interrupt::SYSTIMER_TARGET0),
-            58 => Ok(Interrupt::SYSTIMER_TARGET1),
-            59 => Ok(Interrupt::SYSTIMER_TARGET2),
-            60 => Ok(Interrupt::APB_SARADC),
-            61 => Ok(Interrupt::MCPWM0),
-            62 => Ok(Interrupt::PCNT),
-            63 => Ok(Interrupt::PARL_IO),
-            64 => Ok(Interrupt::SLC0),
-            65 => Ok(Interrupt::SLC1),
-            66 => Ok(Interrupt::DMA_IN_CH0),
-            67 => Ok(Interrupt::DMA_IN_CH1),
-            68 => Ok(Interrupt::DMA_IN_CH2),
-            69 => Ok(Interrupt::DMA_OUT_CH0),
-            70 => Ok(Interrupt::DMA_OUT_CH1),
-            71 => Ok(Interrupt::DMA_OUT_CH2),
-            72 => Ok(Interrupt::SPI2),
-            73 => Ok(Interrupt::AES),
-            74 => Ok(Interrupt::SHA),
-            75 => Ok(Interrupt::RSA),
-            76 => Ok(Interrupt::ECC),
-            _ => Err(TryFromInterruptError(())),
-        }
-    }
-}
-#[cfg(feature = "rt")]
-#[macro_export]
-#[doc = r" Assigns a handler to an interrupt"]
-#[doc = r""]
-#[doc = r" This macro takes two arguments: the name of an interrupt and the path to the"]
-#[doc = r" function that will be used as the handler of that interrupt. That function"]
-#[doc = r" must have signature `fn()`."]
-#[doc = r""]
-#[doc = r" Optionally, a third argument may be used to declare interrupt local data."]
-#[doc = r" The handler will have exclusive access to these *local* variables on each"]
-#[doc = r" invocation. If the third argument is used then the signature of the handler"]
-#[doc = r" function must be `fn(&mut $NAME::Locals)` where `$NAME` is the first argument"]
-#[doc = r" passed to the macro."]
-#[doc = r""]
-#[doc = r" # Example"]
-#[doc = r""]
-#[doc = r" ``` ignore"]
-#[doc = r" interrupt!(TIM2, periodic);"]
-#[doc = r""]
-#[doc = r" fn periodic() {"]
-#[doc = r#"     print!(".");"#]
-#[doc = r" }"]
-#[doc = r""]
-#[doc = r" interrupt!(TIM3, tick, locals: {"]
-#[doc = r"     tick: bool = false;"]
-#[doc = r" });"]
-#[doc = r""]
-#[doc = r" fn tick(locals: &mut TIM3::Locals) {"]
-#[doc = r"     locals.tick = !locals.tick;"]
-#[doc = r""]
-#[doc = r"     if locals.tick {"]
-#[doc = r#"         println!("Tick");"#]
-#[doc = r"     } else {"]
-#[doc = r#"         println!("Tock");"#]
-#[doc = r"     }"]
-#[doc = r" }"]
-#[doc = r" ```"]
-macro_rules ! interrupt { ($ NAME : ident , $ path : path , locals : { $ ($ lvar : ident : $ lty : ty = $ lval : expr ;) * }) => { # [allow (non_snake_case)] mod $ NAME { pub struct Locals { $ (pub $ lvar : $ lty ,) * } } # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ($ lvar : $ lval ,) * } ; let f : fn (& mut self :: $ NAME :: Locals) = $ path ; f (unsafe { & mut LOCALS }) ; } } ; ($ NAME : ident , $ path : path) => { # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn () = $ path ; f () ; } } }

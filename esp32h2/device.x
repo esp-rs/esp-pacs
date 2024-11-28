@@ -1,3 +1,23 @@
+/* Core interrupt sources and trap handlers */
+PROVIDE(UserSoft = DefaultHandler);
+PROVIDE(_start_UserSoft_trap = _start_DefaultHandler_trap);
+PROVIDE(SupervisorSoft = DefaultHandler);
+PROVIDE(_start_SupervisorSoft_trap = _start_DefaultHandler_trap);
+PROVIDE(MachineSoft = DefaultHandler);
+PROVIDE(_start_MachineSoft_trap = _start_DefaultHandler_trap);
+PROVIDE(UserTimer = DefaultHandler);
+PROVIDE(_start_UserTimer_trap = _start_DefaultHandler_trap);
+PROVIDE(SupervisorTimer = DefaultHandler);
+PROVIDE(_start_SupervisorTimer_trap = _start_DefaultHandler_trap);
+PROVIDE(MachineTimer = DefaultHandler);
+PROVIDE(_start_MachineTimer_trap = _start_DefaultHandler_trap);
+PROVIDE(UserExternal = DefaultHandler);
+PROVIDE(_start_UserExternal_trap = _start_DefaultHandler_trap);
+PROVIDE(SupervisorExternal = DefaultHandler);
+PROVIDE(_start_SupervisorExternal_trap = _start_DefaultHandler_trap);
+PROVIDE(MachineExternal = DefaultHandler);
+PROVIDE(_start_MachineExternal_trap = _start_DefaultHandler_trap);
+/* External interrupt sources */
 PROVIDE(PMU = DefaultHandler);
 PROVIDE(EFUSE = DefaultHandler);
 PROVIDE(LP_RTC_TIMER = DefaultHandler);

@@ -1,0 +1,81 @@
+riscv_config:
+  core_interrupts:
+    - name: "UserSoft"
+      value: 0
+      description: "User Software Interrupt"
+    - name: "SupervisorSoft"
+      value: 1
+      description: "Supervisor Software Interrupt"
+    - name: "MachineSoft"
+      value: 3
+      description: "Machine Software Interrupt"
+    - name: "UserTimer"
+      value: 4
+      description: "User Timer Interrupt"
+    - name: "SupervisorTimer"
+      value: 5
+      description: "Supervisor Timer Interrupt"
+    - name: "MachineTimer"
+      value: 7
+      description: "Machine Timer Interrupt"
+    - name: "UserExternal"
+      value: 8
+      description: "User External Interrupt"
+    - name: "SupervisorExternal"
+      value: 9
+      description: "Supervisor External Interrupt"
+    - name: "MachineExternal"
+      value: 11
+      description: "Machine External Interrupt"
+
+  priorities:
+    - name: "P1"
+      value: 1
+      description: "Priority level 1"
+    - name: "P2"
+      value: 2
+      description: "Priority level 2"
+    - name: "P3"
+      value: 3
+      description: "Priority level 3"
+    - name: "P4"
+      value: 4
+      description: "Priority level 4"
+    - name: "P5"
+      value: 5
+      description: "Priority level 5"
+    - name: "P6"
+      value: 6
+      description: "Priority level 6"
+    - name: "P7"
+      value: 7
+      description: "Priority level 7"
+    - name: "P8"
+      value: 8
+      description: "Priority level 8"
+    - name: "P9"
+      value: 9
+      description: "Priority level 9"
+    - name: "P10"
+      value: 10
+      description: "Priority level 10"
+    - name: "P11"
+      value: 11
+      description: "Priority level 11"
+    - name: "P12"
+      value: 12
+      description: "Priority level 12"
+    - name: "P13"
+      value: 13
+      description: "Priority level 13"
+    - name: "P14"
+      value: 14
+      description: "Priority level 14"
+    - name: "P15"
+      value: 15
+      description: "Priority level 15"
+
+  harts:
+    - name: "H0"
+      value: 0
+      description: "Hart 0"
