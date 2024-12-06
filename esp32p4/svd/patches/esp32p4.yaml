@@ -1380,3 +1380,109 @@ HP_SYS:
         value: 81
       FROM_CPU_INTR3:
         value: 82
+
+_add:
+  CLIC:
+    description: "Core Local Interrupt Controller (CLIC)"
+    baseAddress: 0x20800000
+    groupName: CLIC
+    addressBlock:
+      offset: 0x0
+      size: 0x1000
+      usage: registers
+
+    registers:
+      INT_CONFIG:
+        description: "Interrupt configuration register"
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        fields:
+          INT_CONFIG_NMBITS:
+            description: "Number of mode bits for interrupt"
+            bitOffset: 5
+            bitWidth: 2
+            access: read-write
+          INT_CONFIG_NLBITS:
+            description: "Number of level bits for interrupt"
+            bitOffset: 1
+            bitWidth: 4
+            access: read-write
+          INT_CONFIG_NVBITS:
+            description: "Number of vector bits for interrupt"
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+
+      INT_INFO:
+        description: "Interrupt information register"
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        fields:
+          INT_INFO_CTLBITS:
+            description: "Control bits for interrupt"
+            bitOffset: 21
+            bitWidth: 4
+            access: read-write
+          INT_INFO_VERSION:
+            description: "Version of interrupt module"
+            bitOffset: 13
+            bitWidth: 8
+            access: read-write
+          INT_INFO_NUM_INT:
+            description: "Number of interrupts"
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+
+      INT_THRESH:
+        description: "Interrupt threshold register"
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        fields:
+          CPU_INT_THRESH:
+            description: "CPU interrupt threshold level"
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+
+      INT_CTRL%s:
+        description: "Interrupt control register for each interrupt source"
+        addressOffset: 0x1000
+        size: 32
+        access: read-write
+        dim: 48
+        dimIncrement: 0x4
+        fields:
+          INT_CTL:
+            description: "Control bits for interrupt"
+            bitOffset: 24
+            bitWidth: 8
+            access: read-write
+          INT_ATTR_MODE:
+            description: "Interrupt mode attribute"
+            bitOffset: 22
+            bitWidth: 2
+            access: read-write
+          INT_ATTR_TRIG:
+            description: "Trigger attribute for interrupt"
+            bitOffset: 17
+            bitWidth: 2
+            access: read-write
+          INT_ATTR_SHV:
+            description: "Shadow vector attribute"
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          INT_IE:
+            description: "Interrupt enable bit"
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          INT_IP:
+            description: "Pending interrupt bit"
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write

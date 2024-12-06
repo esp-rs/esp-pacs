@@ -4446,6 +4446,52 @@ impl core::fmt::Debug for USB_WRAP {
 }
 #[doc = "USB_WRAP Peripheral"]
 pub mod usb_wrap;
+#[doc = "Core Local Interrupt Controller (CLIC)"]
+pub struct CLIC {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for CLIC {}
+impl CLIC {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const clic::RegisterBlock = 0x2080_0000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const clic::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for CLIC {
+    type Target = clic::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for CLIC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLIC").finish()
+    }
+}
+#[doc = "Core Local Interrupt Controller (CLIC)"]
+pub mod clic;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -4629,6 +4675,8 @@ pub struct Peripherals {
     pub USB_DEVICE: USB_DEVICE,
     #[doc = "USB_WRAP"]
     pub USB_WRAP: USB_WRAP,
+    #[doc = "CLIC"]
+    pub CLIC: CLIC,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -4740,6 +4788,7 @@ impl Peripherals {
             UHCI0: UHCI0::steal(),
             USB_DEVICE: USB_DEVICE::steal(),
             USB_WRAP: USB_WRAP::steal(),
+            CLIC: CLIC::steal(),
         }
     }
 }
