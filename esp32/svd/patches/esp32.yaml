@@ -145,6 +145,29 @@ SPI0:
         bitOffset: 0
         bitWidth: 1
         access: read-write
+  SLAVE:
+    _delete: ["INT_EN"]
+    _add:
+      TRANS_INTEN:
+        description: "The interrupt enable bit for the SPI_TRANS_DONE_INT interrupt."
+        bitOffset: 9
+        bitWidth: 1
+      SLV_WR_STA_INTEN:
+        description: "The interrupt enable bit for the SPI_SLV_WR_STA_INT interrupt."
+        bitOffset: 8
+        bitWidth: 1
+      SLV_RD_STA_INTEN:
+        description: "The interrupt enable bit for the SPI_SLV_RD_STA_INT interrupt."
+        bitOffset: 7
+        bitWidth: 1
+      SLV_WR_BUF_INTEN:
+        description: "The interrupt enable bit for the SPI_SLV_WR_BUF_INT interrupt."
+        bitOffset: 6
+        bitWidth: 1
+      SLV_RD_BUF_INTEN:
+        description: "The interrupt enable bit for the SPI_SLV_RD_BUF_INT interrupt."
+        bitOffset: 5
+        bitWidth: 1
   _include:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml

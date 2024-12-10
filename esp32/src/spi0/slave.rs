@@ -22,10 +22,26 @@ pub type SLV_WR_STA_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type TRANS_DONE_R = crate::BitReader;
 #[doc = "Field `TRANS_DONE` writer - The interrupt raw bit for the completion of any operation in both the master mode and the slave mode."]
 pub type TRANS_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INT_EN` reader - Interrupt enable bits for the below 5 sources"]
-pub type INT_EN_R = crate::FieldReader;
-#[doc = "Field `INT_EN` writer - Interrupt enable bits for the below 5 sources"]
-pub type INT_EN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
+#[doc = "Field `SLV_RD_BUF_INTEN` reader - The interrupt enable bit for the SPI_SLV_RD_BUF_INT interrupt."]
+pub type SLV_RD_BUF_INTEN_R = crate::BitReader;
+#[doc = "Field `SLV_RD_BUF_INTEN` writer - The interrupt enable bit for the SPI_SLV_RD_BUF_INT interrupt."]
+pub type SLV_RD_BUF_INTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_WR_BUF_INTEN` reader - The interrupt enable bit for the SPI_SLV_WR_BUF_INT interrupt."]
+pub type SLV_WR_BUF_INTEN_R = crate::BitReader;
+#[doc = "Field `SLV_WR_BUF_INTEN` writer - The interrupt enable bit for the SPI_SLV_WR_BUF_INT interrupt."]
+pub type SLV_WR_BUF_INTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_RD_STA_INTEN` reader - The interrupt enable bit for the SPI_SLV_RD_STA_INT interrupt."]
+pub type SLV_RD_STA_INTEN_R = crate::BitReader;
+#[doc = "Field `SLV_RD_STA_INTEN` writer - The interrupt enable bit for the SPI_SLV_RD_STA_INT interrupt."]
+pub type SLV_RD_STA_INTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SLV_WR_STA_INTEN` reader - The interrupt enable bit for the SPI_SLV_WR_STA_INT interrupt."]
+pub type SLV_WR_STA_INTEN_R = crate::BitReader;
+#[doc = "Field `SLV_WR_STA_INTEN` writer - The interrupt enable bit for the SPI_SLV_WR_STA_INT interrupt."]
+pub type SLV_WR_STA_INTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TRANS_INTEN` reader - The interrupt enable bit for the SPI_TRANS_DONE_INT interrupt."]
+pub type TRANS_INTEN_R = crate::BitReader;
+#[doc = "Field `TRANS_INTEN` writer - The interrupt enable bit for the SPI_TRANS_DONE_INT interrupt."]
+pub type TRANS_INTEN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CS_I_MODE` reader - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
 pub type CS_I_MODE_R = crate::FieldReader;
 #[doc = "Field `CS_I_MODE` writer - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
@@ -82,10 +98,30 @@ impl R {
     pub fn trans_done(&self) -> TRANS_DONE_R {
         TRANS_DONE_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
+    #[doc = "Bit 5 - The interrupt enable bit for the SPI_SLV_RD_BUF_INT interrupt."]
     #[inline(always)]
-    pub fn int_en(&self) -> INT_EN_R {
-        INT_EN_R::new(((self.bits >> 5) & 0x1f) as u8)
+    pub fn slv_rd_buf_inten(&self) -> SLV_RD_BUF_INTEN_R {
+        SLV_RD_BUF_INTEN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - The interrupt enable bit for the SPI_SLV_WR_BUF_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_buf_inten(&self) -> SLV_WR_BUF_INTEN_R {
+        SLV_WR_BUF_INTEN_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - The interrupt enable bit for the SPI_SLV_RD_STA_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_sta_inten(&self) -> SLV_RD_STA_INTEN_R {
+        SLV_RD_STA_INTEN_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bit 8 - The interrupt enable bit for the SPI_SLV_WR_STA_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_sta_inten(&self) -> SLV_WR_STA_INTEN_R {
+        SLV_WR_STA_INTEN_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 9 - The interrupt enable bit for the SPI_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn trans_inten(&self) -> TRANS_INTEN_R {
+        TRANS_INTEN_R::new(((self.bits >> 9) & 1) != 0)
     }
     #[doc = "Bits 10:11 - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
     #[inline(always)]
@@ -142,7 +178,6 @@ impl core::fmt::Debug for R {
             .field("slv_rd_sta_done", &self.slv_rd_sta_done())
             .field("slv_wr_sta_done", &self.slv_wr_sta_done())
             .field("trans_done", &self.trans_done())
-            .field("int_en", &self.int_en())
             .field("cs_i_mode", &self.cs_i_mode())
             .field("slv_last_command", &self.slv_last_command())
             .field("slv_last_state", &self.slv_last_state())
@@ -152,6 +187,11 @@ impl core::fmt::Debug for R {
             .field("slv_wr_rd_buf_en", &self.slv_wr_rd_buf_en())
             .field("mode", &self.mode())
             .field("sync_reset", &self.sync_reset())
+            .field("trans_inten", &self.trans_inten())
+            .field("slv_wr_sta_inten", &self.slv_wr_sta_inten())
+            .field("slv_rd_sta_inten", &self.slv_rd_sta_inten())
+            .field("slv_wr_buf_inten", &self.slv_wr_buf_inten())
+            .field("slv_rd_buf_inten", &self.slv_rd_buf_inten())
             .finish()
     }
 }
@@ -181,10 +221,30 @@ impl W {
     pub fn trans_done(&mut self) -> TRANS_DONE_W<SLAVE_SPEC> {
         TRANS_DONE_W::new(self, 4)
     }
-    #[doc = "Bits 5:9 - Interrupt enable bits for the below 5 sources"]
+    #[doc = "Bit 5 - The interrupt enable bit for the SPI_SLV_RD_BUF_INT interrupt."]
     #[inline(always)]
-    pub fn int_en(&mut self) -> INT_EN_W<SLAVE_SPEC> {
-        INT_EN_W::new(self, 5)
+    pub fn slv_rd_buf_inten(&mut self) -> SLV_RD_BUF_INTEN_W<SLAVE_SPEC> {
+        SLV_RD_BUF_INTEN_W::new(self, 5)
+    }
+    #[doc = "Bit 6 - The interrupt enable bit for the SPI_SLV_WR_BUF_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_buf_inten(&mut self) -> SLV_WR_BUF_INTEN_W<SLAVE_SPEC> {
+        SLV_WR_BUF_INTEN_W::new(self, 6)
+    }
+    #[doc = "Bit 7 - The interrupt enable bit for the SPI_SLV_RD_STA_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_rd_sta_inten(&mut self) -> SLV_RD_STA_INTEN_W<SLAVE_SPEC> {
+        SLV_RD_STA_INTEN_W::new(self, 7)
+    }
+    #[doc = "Bit 8 - The interrupt enable bit for the SPI_SLV_WR_STA_INT interrupt."]
+    #[inline(always)]
+    pub fn slv_wr_sta_inten(&mut self) -> SLV_WR_STA_INTEN_W<SLAVE_SPEC> {
+        SLV_WR_STA_INTEN_W::new(self, 8)
+    }
+    #[doc = "Bit 9 - The interrupt enable bit for the SPI_TRANS_DONE_INT interrupt."]
+    #[inline(always)]
+    pub fn trans_inten(&mut self) -> TRANS_INTEN_W<SLAVE_SPEC> {
+        TRANS_INTEN_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - In the slave mode this bits used to synchronize the input spi cs signal and eliminate spi cs jitter."]
     #[inline(always)]
