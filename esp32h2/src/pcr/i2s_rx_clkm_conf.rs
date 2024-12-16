@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:19 - Integral I2S clock divider value"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_rx_clkm_sel(&mut self) -> I2S_RX_CLKM_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2s_rx function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_rx_clkm_en(&mut self) -> I2S_RX_CLKM_EN_W<I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - This field is used to select master-clock. 0(default): clk_i2s_rx, 1: clk_i2s_tx"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
         I2S_MCLK_SEL_W::new(self, 23)
     }

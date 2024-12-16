@@ -92,7 +92,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lp_rtc_xtal_force_on(
         &mut self,
     ) -> LP_AONCLKRST_LP_RTC_XTAL_FORCE_ON_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {
@@ -100,7 +99,6 @@ impl W {
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_ck_en_lp_ram(
         &mut self,
     ) -> LP_AONCLKRST_CK_EN_LP_RAM_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {
@@ -108,7 +106,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_etm_event_tick_en(
         &mut self,
     ) -> LP_AONCLKRST_ETM_EVENT_TICK_EN_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {
@@ -116,7 +113,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_pll8m_clk_force_on(
         &mut self,
     ) -> LP_AONCLKRST_PLL8M_CLK_FORCE_ON_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {
@@ -124,7 +120,6 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_xtal_clk_force_on(
         &mut self,
     ) -> LP_AONCLKRST_XTAL_CLK_FORCE_ON_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {
@@ -132,7 +127,6 @@ impl W {
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_fosc_clk_force_on(
         &mut self,
     ) -> LP_AONCLKRST_FOSC_CLK_FORCE_ON_W<LP_AONCLKRST_LP_CLK_EN_SPEC> {

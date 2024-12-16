@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - analog source reset bypass : wdt,brown out,super wdt,glitch"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_rst_bypass(&mut self) -> ANA_RST_BYPASS_W<LP_RST_CTRL_SPEC> {
         ANA_RST_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 1 - system source reset bypass : software reset,hp wdt,lp wdt,efuse"]
     #[inline(always)]
-    #[must_use]
     pub fn sys_rst_bypass(&mut self) -> SYS_RST_BYPASS_W<LP_RST_CTRL_SPEC> {
         SYS_RST_BYPASS_W::new(self, 1)
     }
     #[doc = "Bit 2 - efuse force no reset control"]
     #[inline(always)]
-    #[must_use]
     pub fn efuse_force_norst(&mut self) -> EFUSE_FORCE_NORST_W<LP_RST_CTRL_SPEC> {
         EFUSE_FORCE_NORST_W::new(self, 2)
     }

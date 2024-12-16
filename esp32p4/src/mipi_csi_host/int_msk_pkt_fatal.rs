@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mask_err_ecc_double(&mut self) -> MASK_ERR_ECC_DOUBLE_W<INT_MSK_PKT_FATAL_SPEC> {
         MASK_ERR_ECC_DOUBLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mask_shorter_payload(&mut self) -> MASK_SHORTER_PAYLOAD_W<INT_MSK_PKT_FATAL_SPEC> {
         MASK_SHORTER_PAYLOAD_W::new(self, 1)
     }

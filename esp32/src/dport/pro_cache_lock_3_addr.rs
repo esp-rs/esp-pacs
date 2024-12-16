@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13"]
     #[inline(always)]
-    #[must_use]
     pub fn pre(&mut self) -> PRE_W<PRO_CACHE_LOCK_3_ADDR_SPEC> {
         PRE_W::new(self, 0)
     }
     #[doc = "Bits 14:17"]
     #[inline(always)]
-    #[must_use]
     pub fn min(&mut self) -> MIN_W<PRO_CACHE_LOCK_3_ADDR_SPEC> {
         MIN_W::new(self, 14)
     }
     #[doc = "Bits 18:21"]
     #[inline(always)]
-    #[must_use]
     pub fn max(&mut self) -> MAX_W<PRO_CACHE_LOCK_3_ADDR_SPEC> {
         MAX_W::new(self, 18)
     }

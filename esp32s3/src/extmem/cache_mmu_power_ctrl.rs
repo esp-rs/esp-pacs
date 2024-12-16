@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable clock gating to save power when access mmu memory, 0: enable, 1: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_mmu_mem_force_on(
         &mut self,
     ) -> CACHE_MMU_MEM_FORCE_ON_W<CACHE_MMU_POWER_CTRL_SPEC> {
@@ -52,7 +51,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_mmu_mem_force_pd(
         &mut self,
     ) -> CACHE_MMU_MEM_FORCE_PD_W<CACHE_MMU_POWER_CTRL_SPEC> {
@@ -60,7 +58,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to power mmu memory down, 0: follow_rtc_lslp_pd, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_mmu_mem_force_pu(
         &mut self,
     ) -> CACHE_MMU_MEM_FORCE_PU_W<CACHE_MMU_POWER_CTRL_SPEC> {

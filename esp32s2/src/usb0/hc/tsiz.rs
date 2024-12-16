@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:18"]
     #[inline(always)]
-    #[must_use]
     pub fn xfersize(&mut self) -> XFERSIZE_W<TSIZ_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
-    #[must_use]
     pub fn pktcnt(&mut self) -> PKTCNT_W<TSIZ_SPEC> {
         PKTCNT_W::new(self, 19)
     }
     #[doc = "Bits 29:30"]
     #[inline(always)]
-    #[must_use]
     pub fn pid(&mut self) -> PID_W<TSIZ_SPEC> {
         PID_W::new(self, 29)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn dopng(&mut self) -> DOPNG_W<TSIZ_SPEC> {
         DOPNG_W::new(self, 31)
     }

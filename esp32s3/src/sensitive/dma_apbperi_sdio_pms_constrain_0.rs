@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock sdio dma permission Configuration Register."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_sdio_pms_constrain_lock(
         &mut self,
     ) -> DMA_APBPERI_SDIO_PMS_CONSTRAIN_LOCK_W<DMA_APBPERI_SDIO_PMS_CONSTRAIN_0_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable hardware automatic sampling."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_hw_read_en_i(&mut self) -> ADC1_HW_READ_EN_I_W<SAR1_HW_WAKEUP_SPEC> {
         ADC1_HW_READ_EN_I_W::new(self, 0)
     }
     #[doc = "Bits 1:16 - Hardware automatic sampling rate."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_hw_read_rate_i(&mut self) -> ADC1_HW_READ_RATE_I_W<SAR1_HW_WAKEUP_SPEC> {
         ADC1_HW_READ_RATE_I_W::new(self, 1)
     }

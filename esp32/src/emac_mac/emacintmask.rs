@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - When set this bit disables the assertion of the interrupt signal because of the setting of PMT Interrupt Status bit in Register (Interrupt Status Register)."]
     #[inline(always)]
-    #[must_use]
     pub fn pmtintmask(&mut self) -> PMTINTMASK_W<EMACINTMASK_SPEC> {
         PMTINTMASK_W::new(self, 3)
     }
     #[doc = "Bit 10 - When set this bit disables the assertion of the interrupt signal because of the setting of the LPI Interrupt Status bit in Register (Interrupt Status Register)."]
     #[inline(always)]
-    #[must_use]
     pub fn lpiintmask(&mut self) -> LPIINTMASK_W<EMACINTMASK_SPEC> {
         LPIINTMASK_W::new(self, 10)
     }

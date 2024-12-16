@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Set this field to sel peri with DMA RX interface to connec with bitscrambler: 4'h0 : lcd_cam, 4'h1: gpspi2, 4'h2: gpspi3, 4'h3: parl_io, 4'h4: aes, 4'h5: sha, 4'h6: adc, 4'h7: i2s0, 4'h8: i2s1, 4'h9: i2s2, 4'ha: i3c_mst, 4'hb: uhci0, 4'hc: RMT, else : none"]
     #[inline(always)]
-    #[must_use]
     pub fn bitscrambler_peri_rx_sel(
         &mut self,
     ) -> BITSCRAMBLER_PERI_RX_SEL_W<BITSCRAMBLER_PERI_SEL_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bits 4:7 - Set this field to sel peri with DMA TX interface to connec with bitscrambler: 4'h0 : lcd_cam, 4'h1: gpspi2, 4'h2: gpspi3, 4'h3: parl_io, 4'h4: aes, 4'h5: sha, 4'h6: adc, 4'h7: i2s0, 4'h8: i2s1, 4'h9: i2s2, 4'ha: i3c_mst, 4'hb: uhci0, 4'hc: RMT, else : none"]
     #[inline(always)]
-    #[must_use]
     pub fn bitscrambler_peri_tx_sel(
         &mut self,
     ) -> BITSCRAMBLER_PERI_TX_SEL_W<BITSCRAMBLER_PERI_SEL_SPEC> {

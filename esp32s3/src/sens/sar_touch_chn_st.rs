@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 15:29 - Clear touch channel"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_touch_channel_clr(&mut self) -> SAR_TOUCH_CHANNEL_CLR_W<SAR_TOUCH_CHN_ST_SPEC> {
         SAR_TOUCH_CHANNEL_CLR_W::new(self, 15)
     }

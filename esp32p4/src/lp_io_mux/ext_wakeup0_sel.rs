@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - select LP GPIO 0 ~ 15 to control XTAL"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_xtl_ext_ctr_sel(&mut self) -> REG_XTL_EXT_CTR_SEL_W<EXT_WAKEUP0_SEL_SPEC> {
         REG_XTL_EXT_CTR_SEL_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_ext_wakeup0_sel(&mut self) -> REG_EXT_WAKEUP0_SEL_W<EXT_WAKEUP0_SEL_SPEC> {
         REG_EXT_WAKEUP0_SEL_W::new(self, 5)
     }

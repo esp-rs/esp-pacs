@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - timer taget0 high 32 bit"]
     #[inline(always)]
-    #[must_use]
     pub fn hi(&mut self) -> HI_W<HI_SPEC> {
         HI_W::new(self, 0)
     }

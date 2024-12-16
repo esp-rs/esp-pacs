@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<IMM_I2C_ISO_SPEC> {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_high_i2c_iso_en(&mut self) -> TIE_HIGH_I2C_ISO_EN_W<IMM_I2C_ISO_SPEC> {
         TIE_HIGH_I2C_ISO_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn tie_low_i2c_iso_en(&mut self) -> TIE_LOW_I2C_ISO_EN_W<IMM_I2C_ISO_SPEC> {
         TIE_LOW_I2C_ISO_EN_W::new(self, 31)
     }

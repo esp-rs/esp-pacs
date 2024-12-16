@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Force Power Down for IQ Estimation"]
     #[inline(always)]
-    #[must_use]
     pub fn iq_est_force_pd(&mut self) -> IQ_EST_FORCE_PD_W<GEN_CTRL_SPEC> {
         IQ_EST_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force Power Up for IQ Estimation"]
     #[inline(always)]
-    #[must_use]
     pub fn iq_est_force_pu(&mut self) -> IQ_EST_FORCE_PU_W<GEN_CTRL_SPEC> {
         IQ_EST_FORCE_PU_W::new(self, 5)
     }

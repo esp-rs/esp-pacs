@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map DCACHE_SYNC_INT interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_sync_int_map(
         &mut self,
     ) -> PRO_DCACHE_SYNC_INT_MAP_W<PRO_DCACHE_SYNC_INT_MAP_SPEC> {

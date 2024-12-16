@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<APP_INT_SET_SPEC> {
 impl W {
     #[doc = "Bit 0 - This bit is software interrupt trigger source of UHCI_APP_CTRL0_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl0_int_set(&mut self) -> APP_CTRL0_INT_SET_W<APP_INT_SET_SPEC> {
         APP_CTRL0_INT_SET_W::new(self, 0)
     }
     #[doc = "Bit 1 - This bit is software interrupt trigger source of UHCI_APP_CTRL1_INT."]
     #[inline(always)]
-    #[must_use]
     pub fn app_ctrl1_int_set(&mut self) -> APP_CTRL1_INT_SET_W<APP_INT_SET_SPEC> {
         APP_CTRL1_INT_SET_W::new(self, 1)
     }

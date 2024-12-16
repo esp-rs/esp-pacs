@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - core0_mac_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_intr_map(&mut self) -> MAC_INTR_MAP_W<MAC_INTR_MAP_SPEC> {
         MAC_INTR_MAP_W::new(self, 0)
     }

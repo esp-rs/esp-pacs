@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_update(&mut self) -> REG_UPDATE_W<REG_UPDATE_SPEC> {
         REG_UPDATE_W::new(self, 0)
     }

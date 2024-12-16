@@ -44,7 +44,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to close clock gating of icache tag memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_tag_mem_force_on(
         &mut self,
     ) -> ICACHE_TAG_MEM_FORCE_ON_W<ICACHE_TAG_POWER_CTRL_SPEC> {
@@ -52,7 +51,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to power icache tag memory down, 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
-    #[must_use]
     pub fn icache_tag_mem_force_pd(
         &mut self,
     ) -> ICACHE_TAG_MEM_FORCE_PD_W<ICACHE_TAG_POWER_CTRL_SPEC> {
@@ -60,7 +58,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to power icache tag memory up, 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
-    #[must_use]
     pub fn icache_tag_mem_force_pu(
         &mut self,
     ) -> ICACHE_TAG_MEM_FORCE_PU_W<ICACHE_TAG_POWER_CTRL_SPEC> {

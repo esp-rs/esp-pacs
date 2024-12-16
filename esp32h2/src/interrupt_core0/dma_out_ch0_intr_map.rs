@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_DMA_OUT_CH0_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_out_ch0_intr_map(&mut self) -> DMA_OUT_CH0_INTR_MAP_W<DMA_OUT_CH0_INTR_MAP_SPEC> {
         DMA_OUT_CH0_INTR_MAP_W::new(self, 0)
     }

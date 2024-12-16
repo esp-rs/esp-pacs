@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - tx CH0 test mode enable.0 : H264_DMA work in normal mode.1 : H264_DMA work in test mode"]
     #[inline(always)]
-    #[must_use]
     pub fn out_test_mode_enable(&mut self) -> OUT_TEST_MODE_ENABLE_W<MODE_ENABLE_SPEC> {
         OUT_TEST_MODE_ENABLE_W::new(self, 0)
     }

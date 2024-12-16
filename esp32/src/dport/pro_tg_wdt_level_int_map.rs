@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tg_wdt_level_int_map(
         &mut self,
     ) -> PRO_TG_WDT_LEVEL_INT_MAP_W<PRO_TG_WDT_LEVEL_INT_MAP_SPEC> {

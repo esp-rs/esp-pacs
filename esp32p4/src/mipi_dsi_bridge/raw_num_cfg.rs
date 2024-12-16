@@ -36,19 +36,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - this field configures number of total pix bits/64"]
     #[inline(always)]
-    #[must_use]
     pub fn raw_num_total(&mut self) -> RAW_NUM_TOTAL_W<RAW_NUM_CFG_SPEC> {
         RAW_NUM_TOTAL_W::new(self, 0)
     }
     #[doc = "Bit 22 - this field configures whether the total pix bits is a multiple of 64bits. 0: align to 64-bit, 1: unalign to 64-bit"]
     #[inline(always)]
-    #[must_use]
     pub fn unalign_64bit_en(&mut self) -> UNALIGN_64BIT_EN_W<RAW_NUM_CFG_SPEC> {
         UNALIGN_64BIT_EN_W::new(self, 22)
     }
     #[doc = "Bit 31 - this bit configures enable of reload reg_raw_num_total to internal cnt. 0: disable, 1: enable. valid only when dsi_bridge as flow controller"]
     #[inline(always)]
-    #[must_use]
     pub fn raw_num_total_set(&mut self) -> RAW_NUM_TOTAL_SET_W<RAW_NUM_CFG_SPEC> {
         RAW_NUM_TOTAL_SET_W::new(self, 31)
     }

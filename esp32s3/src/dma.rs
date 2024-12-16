@@ -51,7 +51,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 5][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(972)
                 .add(8 * n)
@@ -63,7 +63,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn in_sram_size_ch_iter(&self) -> impl Iterator<Item = &IN_SRAM_SIZE_CH> {
         (0..5).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(972)
                 .add(8 * n)
@@ -76,7 +76,7 @@ impl RegisterBlock {
         #[allow(clippy::no_effect)]
         [(); 5][n];
         unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(976)
                 .add(8 * n)
@@ -88,7 +88,7 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn out_sram_size_ch_iter(&self) -> impl Iterator<Item = &OUT_SRAM_SIZE_CH> {
         (0..5).map(move |n| unsafe {
-            &*(self as *const Self)
+            &*core::ptr::from_ref(self)
                 .cast::<u8>()
                 .add(976)
                 .add(8 * n)

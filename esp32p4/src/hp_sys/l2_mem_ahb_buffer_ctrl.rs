@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to turn on l2mem ahb wr buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_mem_ahb_wrbuffer_en(
         &mut self,
     ) -> L2_MEM_AHB_WRBUFFER_EN_W<L2_MEM_AHB_BUFFER_CTRL_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bit 1 - Set 1 to turn on l2mem ahb rd buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_mem_ahb_rdbuffer_en(
         &mut self,
     ) -> L2_MEM_AHB_RDBUFFER_EN_W<L2_MEM_AHB_BUFFER_CTRL_SPEC> {

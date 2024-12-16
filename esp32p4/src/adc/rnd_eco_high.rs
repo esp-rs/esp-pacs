@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - rnd eco high"]
     #[inline(always)]
-    #[must_use]
     pub fn rnd_eco_high(&mut self) -> RND_ECO_HIGH_W<RND_ECO_HIGH_SPEC> {
         RND_ECO_HIGH_W::new(self, 0)
     }

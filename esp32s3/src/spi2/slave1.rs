@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - The transferred data bit length in SPI slave FD and HD mode."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<SLAVE1_SPEC> {
         SLV_DATA_BITLEN_W::new(self, 0)
     }
     #[doc = "Bits 18:25 - In the slave mode it is the value of command."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC> {
         SLV_LAST_COMMAND_W::new(self, 18)
     }
     #[doc = "Bits 26:31 - In the slave mode it is the value of address."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC> {
         SLV_LAST_ADDR_W::new(self, 26)
     }

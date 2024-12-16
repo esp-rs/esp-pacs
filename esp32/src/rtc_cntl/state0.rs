@@ -102,49 +102,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - touch controller force wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_wakeup_force_en(&mut self) -> TOUCH_WAKEUP_FORCE_EN_W<STATE0_SPEC> {
         TOUCH_WAKEUP_FORCE_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - ULP-coprocessor force wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_wakeup_force_en(&mut self) -> ULP_CP_WAKEUP_FORCE_EN_W<STATE0_SPEC> {
         ULP_CP_WAKEUP_FORCE_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge 0: APB to RTC using sync"]
     #[inline(always)]
-    #[must_use]
     pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<STATE0_SPEC> {
         APB2RTC_BRIDGE_SEL_W::new(self, 22)
     }
     #[doc = "Bit 23 - touch timer enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<STATE0_SPEC> {
         TOUCH_SLP_TIMER_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<STATE0_SPEC> {
         ULP_CP_SLP_TIMER_EN_W::new(self, 24)
     }
     #[doc = "Bit 29 - sleep wakeup bit"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<STATE0_SPEC> {
         SLP_WAKEUP_W::new(self, 29)
     }
     #[doc = "Bit 30 - sleep reject bit"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<STATE0_SPEC> {
         SLP_REJECT_W::new(self, 30)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep_en(&mut self) -> SLEEP_EN_W<STATE0_SPEC> {
         SLEEP_EN_W::new(self, 31)
     }

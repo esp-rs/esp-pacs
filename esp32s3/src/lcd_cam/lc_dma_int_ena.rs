@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable bit for LCD_CAM_LCD_VSYNC_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vsync_int_ena(&mut self) -> LCD_VSYNC_INT_ENA_W<LC_DMA_INT_ENA_SPEC> {
         LCD_VSYNC_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for LCD_CAM_LCD_TRANS_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_trans_done_int_ena(&mut self) -> LCD_TRANS_DONE_INT_ENA_W<LC_DMA_INT_ENA_SPEC> {
         LCD_TRANS_DONE_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for LCD_CAM_CAM_VSYNC_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_vsync_int_ena(&mut self) -> CAM_VSYNC_INT_ENA_W<LC_DMA_INT_ENA_SPEC> {
         CAM_VSYNC_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for LCD_CAM_CAM_HS_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_hs_int_ena(&mut self) -> CAM_HS_INT_ENA_W<LC_DMA_INT_ENA_SPEC> {
         CAM_HS_INT_ENA_W::new(self, 3)
     }

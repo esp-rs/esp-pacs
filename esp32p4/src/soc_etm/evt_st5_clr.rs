@@ -73,43 +73,36 @@ impl core::fmt::Debug for crate::generic::Reg<EVT_ST5_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear ULP_evt_err_intr trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_evt_err_intr_st_clr(&mut self) -> ULP_EVT_ERR_INTR_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         ULP_EVT_ERR_INTR_ST_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to clear ULP_evt_halt trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_evt_halt_st_clr(&mut self) -> ULP_EVT_HALT_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         ULP_EVT_HALT_ST_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to clear ULP_evt_start_intr trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_evt_start_intr_st_clr(&mut self) -> ULP_EVT_START_INTR_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         ULP_EVT_START_INTR_ST_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to clear RTC_evt_tick trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_evt_tick_st_clr(&mut self) -> RTC_EVT_TICK_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         RTC_EVT_TICK_ST_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to clear RTC_evt_ovf trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_evt_ovf_st_clr(&mut self) -> RTC_EVT_OVF_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         RTC_EVT_OVF_ST_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to clear RTC_evt_cmp trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_evt_cmp_st_clr(&mut self) -> RTC_EVT_CMP_ST_CLR_W<EVT_ST5_CLR_SPEC> {
         RTC_EVT_CMP_ST_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to clear PDMA_AHB_evt_in_done_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_done_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_DONE_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -117,7 +110,6 @@ impl W {
     }
     #[doc = "Bit 7 - Configures whether or not to clear PDMA_AHB_evt_in_done_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_done_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_DONE_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -125,7 +117,6 @@ impl W {
     }
     #[doc = "Bit 8 - Configures whether or not to clear PDMA_AHB_evt_in_done_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_done_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_DONE_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -133,7 +124,6 @@ impl W {
     }
     #[doc = "Bit 9 - Configures whether or not to clear PDMA_AHB_evt_in_suc_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_suc_eof_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -141,7 +131,6 @@ impl W {
     }
     #[doc = "Bit 10 - Configures whether or not to clear PDMA_AHB_evt_in_suc_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_suc_eof_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -149,7 +138,6 @@ impl W {
     }
     #[doc = "Bit 11 - Configures whether or not to clear PDMA_AHB_evt_in_suc_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_suc_eof_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -157,7 +145,6 @@ impl W {
     }
     #[doc = "Bit 12 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_empty_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_empty_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -165,7 +152,6 @@ impl W {
     }
     #[doc = "Bit 13 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_empty_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_empty_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -173,7 +159,6 @@ impl W {
     }
     #[doc = "Bit 14 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_empty_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_empty_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -181,7 +166,6 @@ impl W {
     }
     #[doc = "Bit 15 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_full_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_full_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -189,7 +173,6 @@ impl W {
     }
     #[doc = "Bit 16 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_full_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_full_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -197,7 +180,6 @@ impl W {
     }
     #[doc = "Bit 17 - Configures whether or not to clear PDMA_AHB_evt_in_fifo_full_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_in_fifo_full_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -205,7 +187,6 @@ impl W {
     }
     #[doc = "Bit 18 - Configures whether or not to clear PDMA_AHB_evt_out_done_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_done_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_DONE_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -213,7 +194,6 @@ impl W {
     }
     #[doc = "Bit 19 - Configures whether or not to clear PDMA_AHB_evt_out_done_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_done_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_DONE_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -221,7 +201,6 @@ impl W {
     }
     #[doc = "Bit 20 - Configures whether or not to clear PDMA_AHB_evt_out_done_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_done_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_DONE_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -229,7 +208,6 @@ impl W {
     }
     #[doc = "Bit 21 - Configures whether or not to clear PDMA_AHB_evt_out_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_eof_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_EOF_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -237,7 +215,6 @@ impl W {
     }
     #[doc = "Bit 22 - Configures whether or not to clear PDMA_AHB_evt_out_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_eof_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_EOF_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -245,7 +222,6 @@ impl W {
     }
     #[doc = "Bit 23 - Configures whether or not to clear PDMA_AHB_evt_out_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_eof_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_EOF_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -253,7 +229,6 @@ impl W {
     }
     #[doc = "Bit 24 - Configures whether or not to clear PDMA_AHB_evt_out_total_eof_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_total_eof_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -261,7 +236,6 @@ impl W {
     }
     #[doc = "Bit 25 - Configures whether or not to clear PDMA_AHB_evt_out_total_eof_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_total_eof_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -269,7 +243,6 @@ impl W {
     }
     #[doc = "Bit 26 - Configures whether or not to clear PDMA_AHB_evt_out_total_eof_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_total_eof_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -277,7 +250,6 @@ impl W {
     }
     #[doc = "Bit 27 - Configures whether or not to clear PDMA_AHB_evt_out_fifo_empty_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_fifo_empty_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -285,7 +257,6 @@ impl W {
     }
     #[doc = "Bit 28 - Configures whether or not to clear PDMA_AHB_evt_out_fifo_empty_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_fifo_empty_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -293,7 +264,6 @@ impl W {
     }
     #[doc = "Bit 29 - Configures whether or not to clear PDMA_AHB_evt_out_fifo_empty_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_fifo_empty_ch2_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH2_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -301,7 +271,6 @@ impl W {
     }
     #[doc = "Bit 30 - Configures whether or not to clear PDMA_AHB_evt_out_fifo_full_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_fifo_full_ch0_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH0_ST_CLR_W<EVT_ST5_CLR_SPEC> {
@@ -309,7 +278,6 @@ impl W {
     }
     #[doc = "Bit 31 - Configures whether or not to clear PDMA_AHB_evt_out_fifo_full_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_ahb_evt_out_fifo_full_ch1_st_clr(
         &mut self,
     ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH1_ST_CLR_W<EVT_ST5_CLR_SPEC> {

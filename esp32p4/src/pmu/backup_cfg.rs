@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_sys_clk_no_div(&mut self) -> BACKUP_SYS_CLK_NO_DIV_W<BACKUP_CFG_SPEC> {
         BACKUP_SYS_CLK_NO_DIV_W::new(self, 31)
     }

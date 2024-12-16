@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_scl_main_st_to_regno more than 23"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_main_st_to_i2c(&mut self) -> SCL_MAIN_ST_TO_I2C_W<SCL_MAIN_ST_TIME_OUT_SPEC> {
         SCL_MAIN_ST_TO_I2C_W::new(self, 0)
     }

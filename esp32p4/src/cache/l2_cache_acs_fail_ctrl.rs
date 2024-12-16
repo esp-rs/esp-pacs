@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to configure l2 cache access fail check mode. 0: the access fail is not propagated to the request, 1: the access fail is propagated to the request"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_acs_fail_check_mode(
         &mut self,
     ) -> L2_CACHE_ACS_FAIL_CHECK_MODE_W<L2_CACHE_ACS_FAIL_CTRL_SPEC> {

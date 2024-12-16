@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - world0 vecbase_override register, when core0 in world0 use this register to override vecbase register."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_vecbase_override_world0_value(
         &mut self,
     ) -> CORE_0_VECBASE_OVERRIDE_WORLD0_VALUE_W<CORE_0_VECBASE_OVERRIDE_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_vecbase_override_sel(
         &mut self,
     ) -> CORE_0_VECBASE_OVERRIDE_SEL_W<CORE_0_VECBASE_OVERRIDE_1_SPEC> {

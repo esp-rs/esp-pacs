@@ -103,7 +103,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<PIN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
@@ -111,49 +110,41 @@ impl W {
     }
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    #[must_use]
     pub fn cs0_dis(&mut self) -> CS_DIS_W<PIN_SPEC> {
         CS_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    #[must_use]
     pub fn cs1_dis(&mut self) -> CS_DIS_W<PIN_SPEC> {
         CS_DIS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to raise high SPI_CS2 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS2 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    #[must_use]
     pub fn cs2_dis(&mut self) -> CS_DIS_W<PIN_SPEC> {
         CS_DIS_W::new(self, 2)
     }
     #[doc = "Bit 5 - 1: spi clk out disable 0: spi clk out enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ck_dis(&mut self) -> CK_DIS_W<PIN_SPEC> {
         CK_DIS_W::new(self, 5)
     }
     #[doc = "Bits 6:8 - In the master mode the bits are the polarity of spi cs line the value is equivalent to spi_cs ^ spi_master_cs_pol."]
     #[inline(always)]
-    #[must_use]
     pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<PIN_SPEC> {
         MASTER_CS_POL_W::new(self, 6)
     }
     #[doc = "Bits 11:13 - In the master mode spi cs line is enable as spi clk it is combined with spi_cs0_dis spi_cs1_dis spi_cs2_dis."]
     #[inline(always)]
-    #[must_use]
     pub fn master_ck_sel(&mut self) -> MASTER_CK_SEL_W<PIN_SPEC> {
         MASTER_CK_SEL_W::new(self, 11)
     }
     #[doc = "Bit 29 - 1: spi clk line is high when idle 0: spi clk line is low when idle"]
     #[inline(always)]
-    #[must_use]
     pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<PIN_SPEC> {
         CK_IDLE_EDGE_W::new(self, 29)
     }
     #[doc = "Bit 30 - spi cs line keep low when the bit is set."]
     #[inline(always)]
-    #[must_use]
     pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<PIN_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 30)
     }

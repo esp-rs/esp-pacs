@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The start address of accessible address space."]
     #[inline(always)]
-    #[must_use]
     pub fn access_exter_mem_start_addr0(
         &mut self,
     ) -> ACCESS_EXTER_MEM_START_ADDR0_W<EXTER_MEM_START_ADDR0_SPEC> {

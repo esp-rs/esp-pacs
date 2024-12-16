@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set this field to generate clk_cpu drived by clk_hproot. The clk_cpu is div1(default)/div2/div4 of clk_hproot. This field is only avaliable for low-speed clock-source such as XTAL/FOSC, and should be used together with PCR_AHB_DIV_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_div_num(&mut self) -> CPU_DIV_NUM_W<CPU_FREQ_CONF_SPEC> {
         CPU_DIV_NUM_W::new(self, 0)
     }

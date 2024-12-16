@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - reg_div_cnt_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_RX_CONF0_SPEC> {
         DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:22 - reg_idle_thres_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn idle_thres(&mut self) -> IDLE_THRES_W<CH_RX_CONF0_SPEC> {
         IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 23:25 - reg_mem_size_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_RX_CONF0_SPEC> {
         MEM_SIZE_W::new(self, 23)
     }
     #[doc = "Bit 28 - reg_carrier_en_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_RX_CONF0_SPEC> {
         CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - reg_carrier_out_lv_ch2."]
     #[inline(always)]
-    #[must_use]
     pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_RX_CONF0_SPEC> {
         CARRIER_OUT_LV_W::new(self, 29)
     }

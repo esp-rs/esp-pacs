@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC> {
         LP_I2C_CLK_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC> {
         LP_UART_CLK_SEL_W::new(self, 31)
     }

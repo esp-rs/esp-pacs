@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tg1_t0_level_int_map(
         &mut self,
     ) -> PRO_TG1_T0_LEVEL_INT_MAP_W<PRO_TG1_T0_LEVEL_INT_MAP_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures awb window right coordinate"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_rpoint(&mut self) -> AWB_RPOINT_W<AWB_HSCALE_SPEC> {
         AWB_RPOINT_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures awb window left coordinate"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_lpoint(&mut self) -> AWB_LPOINT_W<AWB_HSCALE_SPEC> {
         AWB_LPOINT_W::new(self, 16)
     }

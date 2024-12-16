@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Defines t_string for calculating the initial Hash value for SHA-512/t."]
     #[inline(always)]
-    #[must_use]
     pub fn t_string(&mut self) -> T_STRING_W<T_STRING_SPEC> {
         T_STRING_W::new(self, 0)
     }

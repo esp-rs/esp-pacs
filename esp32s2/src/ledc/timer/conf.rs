@@ -66,37 +66,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - This register is used to control the range of the counter in timer %s."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_res(&mut self) -> DUTY_RES_W<CONF_SPEC> {
         DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 4:21 - This register is used to configure the divisor for the divider in timer %s. The least significant eight bits represent the fractional part."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_div(&mut self) -> CLK_DIV_W<CONF_SPEC> {
         CLK_DIV_W::new(self, 4)
     }
     #[doc = "Bit 22 - This bit is used to suspend the counter in timer %s."]
     #[inline(always)]
-    #[must_use]
     pub fn pause(&mut self) -> PAUSE_W<CONF_SPEC> {
         PAUSE_W::new(self, 22)
     }
     #[doc = "Bit 23 - This bit is used to reset timer %s. The counter will show 0 after reset."]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RST_W<CONF_SPEC> {
         RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - This bit is used to select clock for timer %s. When this bit is set to 1 LEDC_APB_CLK_SEL\\[1:0\\] should be 1, otherwise the timer clock may be not accurate. 0: LEDC_PWM_CLK. 1: REF_TICK."]
     #[inline(always)]
-    #[must_use]
     pub fn tick_sel(&mut self) -> TICK_SEL_W<CONF_SPEC> {
         TICK_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES."]
     #[inline(always)]
-    #[must_use]
     pub fn para_up(&mut self) -> PARA_UP_W<CONF_SPEC> {
         PARA_UP_W::new(self, 25)
     }

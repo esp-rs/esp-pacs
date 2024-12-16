@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - User identification register, value set by user. Can also be used as a scratchpad register by user."]
     #[inline(always)]
-    #[must_use]
     pub fn usrid(&mut self) -> USRID_W<USRID_SPEC> {
         USRID_W::new(self, 0)
     }

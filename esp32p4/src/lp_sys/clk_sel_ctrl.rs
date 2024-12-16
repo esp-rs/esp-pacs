@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ena_sw_sel_sys_clk(&mut self) -> ENA_SW_SEL_SYS_CLK_W<CLK_SEL_CTRL_SPEC> {
         ENA_SW_SEL_SYS_CLK_W::new(self, 16)
     }
     #[doc = "Bit 17 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_sys_clk_src_sel(&mut self) -> SW_SYS_CLK_SRC_SEL_W<CLK_SEL_CTRL_SPEC> {
         SW_SYS_CLK_SRC_SEL_W::new(self, 17)
     }

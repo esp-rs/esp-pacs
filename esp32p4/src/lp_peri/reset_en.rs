@@ -146,85 +146,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_tsens(&mut self) -> RST_EN_LP_TSENS_W<RESET_EN_SPEC> {
         RST_EN_LP_TSENS_W::new(self, 18)
     }
     #[doc = "Bit 19 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_pms(&mut self) -> RST_EN_LP_PMS_W<RESET_EN_SPEC> {
         RST_EN_LP_PMS_W::new(self, 19)
     }
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_efuse(&mut self) -> RST_EN_LP_EFUSE_W<RESET_EN_SPEC> {
         RST_EN_LP_EFUSE_W::new(self, 20)
     }
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_iomux(&mut self) -> RST_EN_LP_IOMUX_W<RESET_EN_SPEC> {
         RST_EN_LP_IOMUX_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_touch(&mut self) -> RST_EN_LP_TOUCH_W<RESET_EN_SPEC> {
         RST_EN_LP_TOUCH_W::new(self, 22)
     }
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_spi(&mut self) -> RST_EN_LP_SPI_W<RESET_EN_SPEC> {
         RST_EN_LP_SPI_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_adc(&mut self) -> RST_EN_LP_ADC_W<RESET_EN_SPEC> {
         RST_EN_LP_ADC_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_i2s(&mut self) -> RST_EN_LP_I2S_W<RESET_EN_SPEC> {
         RST_EN_LP_I2S_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_i2cmst(&mut self) -> RST_EN_LP_I2CMST_W<RESET_EN_SPEC> {
         RST_EN_LP_I2CMST_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_i2c(&mut self) -> RST_EN_LP_I2C_W<RESET_EN_SPEC> {
         RST_EN_LP_I2C_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_uart(&mut self) -> RST_EN_LP_UART_W<RESET_EN_SPEC> {
         RST_EN_LP_UART_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_intr(&mut self) -> RST_EN_LP_INTR_W<RESET_EN_SPEC> {
         RST_EN_LP_INTR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_rom(&mut self) -> RST_EN_LP_ROM_W<RESET_EN_SPEC> {
         RST_EN_LP_ROM_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_lp_core(&mut self) -> RST_EN_LP_CORE_W<RESET_EN_SPEC> {
         RST_EN_LP_CORE_W::new(self, 31)
     }

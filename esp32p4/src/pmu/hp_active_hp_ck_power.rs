@@ -54,13 +54,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_i2c_iso_en(&mut self) -> HP_ACTIVE_I2C_ISO_EN_W<HP_ACTIVE_HP_CK_POWER_SPEC> {
         HP_ACTIVE_I2C_ISO_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_i2c_retention(
         &mut self,
     ) -> HP_ACTIVE_I2C_RETENTION_W<HP_ACTIVE_HP_CK_POWER_SPEC> {
@@ -68,13 +66,11 @@ impl W {
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_xpd_pll_i2c(&mut self) -> HP_ACTIVE_XPD_PLL_I2C_W<HP_ACTIVE_HP_CK_POWER_SPEC> {
         HP_ACTIVE_XPD_PLL_I2C_W::new(self, 23)
     }
     #[doc = "Bits 27:30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_xpd_pll(&mut self) -> HP_ACTIVE_XPD_PLL_W<HP_ACTIVE_HP_CK_POWER_SPEC> {
         HP_ACTIVE_XPD_PLL_W::new(self, 27)
     }

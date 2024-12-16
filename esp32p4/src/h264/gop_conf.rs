@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable dual stream mode. When this field is set to 1, H264_FRAME_MODE field must be set to 1 too.\\\\0: Normal mode\\\\1: Dual stream mode"]
     #[inline(always)]
-    #[must_use]
     pub fn dual_stream_mode(&mut self) -> DUAL_STREAM_MODE_W<GOP_CONF_SPEC> {
         DUAL_STREAM_MODE_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Configures the frame number of one GOP.\\\\0: The frame number of one GOP is infinite\\\\Others: Actual frame number of one GOP"]
     #[inline(always)]
-    #[must_use]
     pub fn gop_num(&mut self) -> GOP_NUM_W<GOP_CONF_SPEC> {
         GOP_NUM_W::new(self, 1)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - The bits are used to choose which short packet"]
     #[inline(always)]
-    #[must_use]
     pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC> {
         SINGLE_SEND_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - Set this bit to enable send a short packet"]
     #[inline(always)]
-    #[must_use]
     pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC> {
         SINGLE_SEND_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - The bits are used to choose which short packet"]
     #[inline(always)]
-    #[must_use]
     pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC> {
         ALWAYS_SEND_NUM_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set this bit to enable continuously send the same short packet"]
     #[inline(always)]
-    #[must_use]
     pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC> {
         ALWAYS_SEND_EN_W::new(self, 7)
     }

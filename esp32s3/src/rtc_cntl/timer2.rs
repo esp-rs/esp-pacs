@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 15:23 - wait cycles in slow_clk_rtc before ULP-coprocessor / touch controller start to work"]
     #[inline(always)]
-    #[must_use]
     pub fn ulpcp_touch_start_wait(&mut self) -> ULPCP_TOUCH_START_WAIT_W<TIMER2_SPEC> {
         ULPCP_TOUCH_START_WAIT_W::new(self, 15)
     }
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
-    #[must_use]
     pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<TIMER2_SPEC> {
         MIN_TIME_CK8M_OFF_W::new(self, 24)
     }

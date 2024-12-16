@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:18 - The bits are used to configure the length for invalidate, flush, clean, lock and unlock operations. The manual operations will be issued if it is validate. The auto operations will be issued if it is invalidate. It should be combined with PRO_ICACHE_MEM_SYNC0."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_memsync_size(
         &mut self,
     ) -> PRO_ICACHE_MEMSYNC_SIZE_W<PRO_ICACHE_MEM_SYNC1_SPEC> {

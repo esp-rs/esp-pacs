@@ -100,67 +100,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the SDA output mode 1: Direct output, 0: Open drain output."]
     #[inline(always)]
-    #[must_use]
     pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the SCL output mode 1: Direct output, 0: Open drain output."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the sample mode for SDA. 1: Sample SDA data on the SCL low level. 0: Sample SDA data on the SCL high level."]
     #[inline(always)]
-    #[must_use]
     pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
         SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the ACK value that needs to be sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<CTR_SPEC> {
         RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 5 - Configures to start sending the data in txfifo for slave. 0: No effect 1: Start"]
     #[inline(always)]
-    #[must_use]
     pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
         TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures to control the sending order for data needing to be sent. 1: send data from the least significant bit, 0: send data from the most significant bit."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
         TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures to control the storage order for received data. 1: receive data from the least significant bit 0: receive data from the most significant bit."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
         RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether to gate clock signal for registers. 0: Force clock on for registers 1: Support clock only when registers are read or written to by software."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
         CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures to enable I2C bus arbitration detection. 0: No effect 1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<CTR_SPEC> {
         ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures to reset the SCL_FSM. 0: No effect 1: Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn fsm_rst(&mut self) -> FSM_RST_W<CTR_SPEC> {
         FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures this bit for synchronization 0: No effect 1: Synchronize"]
     #[inline(always)]
-    #[must_use]
     pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<CTR_SPEC> {
         CONF_UPGATE_W::new(self, 11)
     }

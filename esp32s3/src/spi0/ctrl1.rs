@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI Bus clock (SPI_CLK) mode bits. 0: SPI Bus clock (SPI_CLK) is off when CS inactive 1: SPI_CLK is delayed one cycle after SPI_CS inactive 2: SPI_CLK is delayed two cycles after SPI_CS inactive 3: SPI_CLK is always on."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_mode(&mut self) -> CLK_MODE_W<CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 30 - SPI0 RX FIFO reset signal. Set this bit and clear it before SPI0 transfer starts."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CTRL1_SPEC> {
         RXFIFO_RST_W::new(self, 30)
     }

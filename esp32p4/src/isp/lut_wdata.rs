@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - this field configures the write data of lut. please initial ISP_LUT_WDATA before write ISP_LUT_CMD register"]
     #[inline(always)]
-    #[must_use]
     pub fn lut_wdata(&mut self) -> LUT_WDATA_W<LUT_WDATA_SPEC> {
         LUT_WDATA_W::new(self, 0)
     }

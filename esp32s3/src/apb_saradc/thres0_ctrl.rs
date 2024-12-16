@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - configure which channel thres0 monitor"]
     #[inline(always)]
-    #[must_use]
     pub fn thres0_channel(&mut self) -> THRES0_CHANNEL_W<THRES0_CTRL_SPEC> {
         THRES0_CHANNEL_W::new(self, 0)
     }
     #[doc = "Bits 5:17 - thres0 monitor high thres"]
     #[inline(always)]
-    #[must_use]
     pub fn thres0_high(&mut self) -> THRES0_HIGH_W<THRES0_CTRL_SPEC> {
         THRES0_HIGH_W::new(self, 5)
     }
     #[doc = "Bits 18:30 - thres0 monitor low thres"]
     #[inline(always)]
-    #[must_use]
     pub fn thres0_low(&mut self) -> THRES0_LOW_W<THRES0_CTRL_SPEC> {
         THRES0_LOW_W::new(self, 18)
     }

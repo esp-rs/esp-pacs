@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_lp_anaperi_int_map(
         &mut self,
     ) -> CORE1_LP_ANAPERI_INT_MAP_W<LP_ANAPERI_INT_MAP_SPEC> {

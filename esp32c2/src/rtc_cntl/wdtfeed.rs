@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_feed(&mut self) -> WDT_FEED_W<WDTFEED_SPEC> {
         WDT_FEED_W::new(self, 31)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the second section for autoload operation on L1-ICache1. Note that it should be used together with L1_ICACHE1_AUTOLOAD_SCT1_SIZE and L1_ICACHE_AUTOLOAD_SCT1_ENA."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_autoload_sct1_addr(
         &mut self,
     ) -> L1_ICACHE1_AUTOLOAD_SCT1_ADDR_W<L1_ICACHE1_AUTOLOAD_SCT1_ADDR_SPEC> {

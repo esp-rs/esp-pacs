@@ -54,7 +54,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to clear counters overflow interrupt and counters in L1-ICache0 due to bus0 accesses L1-ICache0."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus0_ovf_int_clr(
         &mut self,
     ) -> L1_IBUS0_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
@@ -62,7 +61,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bit is used to clear counters overflow interrupt and counters in L1-ICache1 due to bus1 accesses L1-ICache1."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_ibus1_ovf_int_clr(
         &mut self,
     ) -> L1_IBUS1_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
@@ -70,7 +68,6 @@ impl W {
     }
     #[doc = "Bit 4 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus0 accesses L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus0_ovf_int_clr(
         &mut self,
     ) -> L1_DBUS0_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
@@ -78,7 +75,6 @@ impl W {
     }
     #[doc = "Bit 5 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus1 accesses L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dbus1_ovf_int_clr(
         &mut self,
     ) -> L1_DBUS1_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {

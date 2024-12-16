@@ -63,7 +63,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - hp sdmmc reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_sdmmc(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_SDMMC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
@@ -71,7 +70,6 @@ impl W {
     }
     #[doc = "Bit 29 - hp sdmmc force norst"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_force_norst_sdmmc(
         &mut self,
     ) -> LP_AONCLKRST_FORCE_NORST_SDMMC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
@@ -79,7 +77,6 @@ impl W {
     }
     #[doc = "Bit 30 - hp emac reset en"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rst_en_emac(
         &mut self,
     ) -> LP_AONCLKRST_RST_EN_EMAC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
@@ -87,7 +84,6 @@ impl W {
     }
     #[doc = "Bit 31 - hp emac force norst"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_force_norst_emac(
         &mut self,
     ) -> LP_AONCLKRST_FORCE_NORST_EMAC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {

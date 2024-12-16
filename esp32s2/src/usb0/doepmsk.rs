@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn xfercomplmsk(&mut self) -> XFERCOMPLMSK_W<DOEPMSK_SPEC> {
         XFERCOMPLMSK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn epdisbldmsk(&mut self) -> EPDISBLDMSK_W<DOEPMSK_SPEC> {
         EPDISBLDMSK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ahbermsk(&mut self) -> AHBERMSK_W<DOEPMSK_SPEC> {
         AHBERMSK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn setupmsk(&mut self) -> SETUPMSK_W<DOEPMSK_SPEC> {
         SETUPMSK_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn outtknepdismsk(&mut self) -> OUTTKNEPDISMSK_W<DOEPMSK_SPEC> {
         OUTTKNEPDISMSK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn stsphsercvdmsk(&mut self) -> STSPHSERCVDMSK_W<DOEPMSK_SPEC> {
         STSPHSERCVDMSK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn back2backsetup(&mut self) -> BACK2BACKSETUP_W<DOEPMSK_SPEC> {
         BACK2BACKSETUP_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn outpkterrmsk(&mut self) -> OUTPKTERRMSK_W<DOEPMSK_SPEC> {
         OUTPKTERRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn bnaoutintrmsk(&mut self) -> BNAOUTINTRMSK_W<DOEPMSK_SPEC> {
         BNAOUTINTRMSK_W::new(self, 9)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn bbleerrmsk(&mut self) -> BBLEERRMSK_W<DOEPMSK_SPEC> {
         BBLEERRMSK_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn nakmsk(&mut self) -> NAKMSK_W<DOEPMSK_SPEC> {
         NAKMSK_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn nyetmsk(&mut self) -> NYETMSK_W<DOEPMSK_SPEC> {
         NYETMSK_W::new(self, 14)
     }

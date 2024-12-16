@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores IV block data"]
     #[inline(always)]
-    #[must_use]
     pub fn iv(&mut self) -> IV_W<IV__SPEC> {
         IV_W::new(self, 0)
     }

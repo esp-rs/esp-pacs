@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Stored the 9th byte information of the data to be transmitted under operating mode."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_byte_9(&mut self) -> TX_BYTE_9_W<DATA_9_SPEC> {
         TX_BYTE_9_W::new(self, 0)
     }

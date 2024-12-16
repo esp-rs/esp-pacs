@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA boundary registers."]
     #[inline(always)]
-    #[must_use]
     pub fn edma_boundary_lock(&mut self) -> EDMA_BOUNDARY_LOCK_W<EDMA_BOUNDARY_LOCK_SPEC> {
         EDMA_BOUNDARY_LOCK_W::new(self, 0)
     }

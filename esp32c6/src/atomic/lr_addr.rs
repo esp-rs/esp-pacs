@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - backup gloable address"]
     #[inline(always)]
-    #[must_use]
     pub fn gloable_lr_addr(&mut self) -> GLOABLE_LR_ADDR_W<LR_ADDR_SPEC> {
         GLOABLE_LR_ADDR_W::new(self, 0)
     }

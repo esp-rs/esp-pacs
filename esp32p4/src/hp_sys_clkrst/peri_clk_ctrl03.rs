@@ -90,13 +90,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dphy_cfg_clk_en(&mut self) -> MIPI_DSI_DPHY_CFG_CLK_EN_W<PERI_CLK_CTRL03_SPEC> {
         MIPI_DSI_DPHY_CFG_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dphy_pll_refclk_en(
         &mut self,
     ) -> MIPI_DSI_DPHY_PLL_REFCLK_EN_W<PERI_CLK_CTRL03_SPEC> {
@@ -104,7 +102,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_csi_dphy_clk_src_sel(
         &mut self,
     ) -> MIPI_CSI_DPHY_CLK_SRC_SEL_W<PERI_CLK_CTRL03_SPEC> {
@@ -112,25 +109,21 @@ impl W {
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_csi_dphy_cfg_clk_en(&mut self) -> MIPI_CSI_DPHY_CFG_CLK_EN_W<PERI_CLK_CTRL03_SPEC> {
         MIPI_CSI_DPHY_CFG_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dpiclk_src_sel(&mut self) -> MIPI_DSI_DPICLK_SRC_SEL_W<PERI_CLK_CTRL03_SPEC> {
         MIPI_DSI_DPICLK_SRC_SEL_W::new(self, 5)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dpiclk_en(&mut self) -> MIPI_DSI_DPICLK_EN_W<PERI_CLK_CTRL03_SPEC> {
         MIPI_DSI_DPICLK_EN_W::new(self, 7)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mipi_dsi_dpiclk_div_num(&mut self) -> MIPI_DSI_DPICLK_DIV_NUM_W<PERI_CLK_CTRL03_SPEC> {
         MIPI_DSI_DPICLK_DIV_NUM_W::new(self, 8)
     }

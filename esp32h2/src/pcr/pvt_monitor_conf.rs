@@ -64,19 +64,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable apb clock of pvt module"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_clk_en(&mut self) -> PVT_MONITOR_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
         PVT_MONITOR_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset all pvt monitor module"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_rst_en(&mut self) -> PVT_MONITOR_RST_EN_W<PVT_MONITOR_CONF_SPEC> {
         PVT_MONITOR_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable function clock of modem pvt module"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_site1_clk_en(
         &mut self,
     ) -> PVT_MONITOR_SITE1_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
@@ -84,7 +81,6 @@ impl W {
     }
     #[doc = "Bit 3 - Set 1 to enable function clock of cpu pvt module"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_site2_clk_en(
         &mut self,
     ) -> PVT_MONITOR_SITE2_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {
@@ -92,7 +88,6 @@ impl W {
     }
     #[doc = "Bit 4 - Set 1 to enable function clock of hp_peri pvt module"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_site3_clk_en(
         &mut self,
     ) -> PVT_MONITOR_SITE3_CLK_EN_W<PVT_MONITOR_CONF_SPEC> {

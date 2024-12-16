@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_DRT_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure directive output value of 8-channel dedicated GPIO."]
     #[inline(always)]
-    #[must_use]
     pub fn value(&mut self) -> VALUE_W<OUT_DRT_SPEC> {
         VALUE_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - this field configures the bayer denoising level, valid data from 2 to 20"]
     #[inline(always)]
-    #[must_use]
     pub fn sigma(&mut self) -> SIGMA_W<BF_SIGMA_SPEC> {
         SIGMA_W::new(self, 0)
     }

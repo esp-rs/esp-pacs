@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn rxfdep(&mut self) -> RXFDEP_W<GRXFSIZ_SPEC> {
         RXFDEP_W::new(self, 0)
     }

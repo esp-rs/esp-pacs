@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 28:30 - SAR2_PWDET_CCT."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<MEAS2_MUX_SPEC> {
         SAR2_PWDET_CCT_W::new(self, 28)
     }
     #[doc = "Bit 31 - In sleep, force to use rtc to control ADC."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_rtc_force(&mut self) -> SAR2_RTC_FORCE_W<MEAS2_MUX_SPEC> {
         SAR2_RTC_FORCE_W::new(self, 31)
     }

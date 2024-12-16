@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_clk_div(&mut self) -> SAR1_CLK_DIV_W<SAR_READ_CTRL_SPEC> {
         SAR1_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - sample cycles for SAR ADC1"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_sample_cycle(&mut self) -> SAR1_SAMPLE_CYCLE_W<SAR_READ_CTRL_SPEC> {
         SAR1_SAMPLE_CYCLE_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_sample_bit(&mut self) -> SAR1_SAMPLE_BIT_W<SAR_READ_CTRL_SPEC> {
         SAR1_SAMPLE_BIT_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_clk_gated(&mut self) -> SAR1_CLK_GATED_W<SAR_READ_CTRL_SPEC> {
         SAR1_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_sample_num(&mut self) -> SAR1_SAMPLE_NUM_W<SAR_READ_CTRL_SPEC> {
         SAR1_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 27 - 1: SAR ADC1 controlled by DIG ADC1 CTRL 0: SAR ADC1 controlled by RTC ADC1 CTRL"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_dig_force(&mut self) -> SAR1_DIG_FORCE_W<SAR_READ_CTRL_SPEC> {
         SAR1_DIG_FORCE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Invert SAR ADC1 data"]
     #[inline(always)]
-    #[must_use]
     pub fn sar1_data_inv(&mut self) -> SAR1_DATA_INV_W<SAR_READ_CTRL_SPEC> {
         SAR1_DATA_INV_W::new(self, 28)
     }

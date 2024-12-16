@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the length for preload operation. The bits are the counts of cache block. It should be combined with DCACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_preload_size(&mut self) -> DCACHE_PRELOAD_SIZE_W<DCACHE_PRELOAD_SIZE_SPEC> {
         DCACHE_PRELOAD_SIZE_W::new(self, 0)
     }

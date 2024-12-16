@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:11 - The weight of Rx channel 0."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_weight(&mut self) -> RX_WEIGHT_W<IN_WIGHT_SPEC> {
         RX_WEIGHT_W::new(self, 8)
     }

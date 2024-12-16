@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_tx_div_n(&mut self) -> I2S1_TX_DIV_N_W<PERI_CLK_CTRL16_SPEC> {
         I2S1_TX_DIV_N_W::new(self, 0)
     }
     #[doc = "Bits 8:16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_tx_div_x(&mut self) -> I2S1_TX_DIV_X_W<PERI_CLK_CTRL16_SPEC> {
         I2S1_TX_DIV_X_W::new(self, 8)
     }
     #[doc = "Bits 17:25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_tx_div_y(&mut self) -> I2S1_TX_DIV_Y_W<PERI_CLK_CTRL16_SPEC> {
         I2S1_TX_DIV_Y_W::new(self, 17)
     }

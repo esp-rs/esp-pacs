@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:7 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<HWFC_CONF_SPEC> {
         RX_FLOW_THRHD_W::new(self, 3)
     }
     #[doc = "Bit 8 - This is the flow enable bit for UART receiver."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<HWFC_CONF_SPEC> {
         RX_FLOW_EN_W::new(self, 8)
     }

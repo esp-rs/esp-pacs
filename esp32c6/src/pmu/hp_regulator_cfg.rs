@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_regulator_en_cal(&mut self) -> DIG_REGULATOR_EN_CAL_W<HP_REGULATOR_CFG_SPEC> {
         DIG_REGULATOR_EN_CAL_W::new(self, 31)
     }

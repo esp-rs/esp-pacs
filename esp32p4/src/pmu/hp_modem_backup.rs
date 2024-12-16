@@ -21,7 +21,6 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_BACKUP_SPEC> {
 impl W {
     #[doc = "Bits 4:5 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep2modem_backup_modem_clk_code(
         &mut self,
     ) -> HP_SLEEP2MODEM_BACKUP_MODEM_CLK_CODE_W<HP_MODEM_BACKUP_SPEC> {
@@ -29,13 +28,11 @@ impl W {
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_retention_mode(&mut self) -> HP_MODEM_RETENTION_MODE_W<HP_MODEM_BACKUP_SPEC> {
         HP_MODEM_RETENTION_MODE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep2modem_retention_en(
         &mut self,
     ) -> HP_SLEEP2MODEM_RETENTION_EN_W<HP_MODEM_BACKUP_SPEC> {
@@ -43,7 +40,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep2modem_backup_clk_sel(
         &mut self,
     ) -> HP_SLEEP2MODEM_BACKUP_CLK_SEL_W<HP_MODEM_BACKUP_SPEC> {
@@ -51,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 20:22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep2modem_backup_mode(
         &mut self,
     ) -> HP_SLEEP2MODEM_BACKUP_MODE_W<HP_MODEM_BACKUP_SPEC> {
@@ -59,7 +54,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep2modem_backup_en(&mut self) -> HP_SLEEP2MODEM_BACKUP_EN_W<HP_MODEM_BACKUP_SPEC> {
         HP_SLEEP2MODEM_BACKUP_EN_W::new(self, 29)
     }

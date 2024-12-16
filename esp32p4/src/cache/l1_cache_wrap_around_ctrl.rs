@@ -60,19 +60,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit as 1 to enable L1-ICache0 wrap around mode."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache0_wrap(&mut self) -> L1_ICACHE0_WRAP_W<L1_CACHE_WRAP_AROUND_CTRL_SPEC> {
         L1_ICACHE0_WRAP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit as 1 to enable L1-ICache1 wrap around mode."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache1_wrap(&mut self) -> L1_ICACHE1_WRAP_W<L1_CACHE_WRAP_AROUND_CTRL_SPEC> {
         L1_ICACHE1_WRAP_W::new(self, 1)
     }
     #[doc = "Bit 4 - Set this bit as 1 to enable L1-DCache wrap around mode."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_wrap(&mut self) -> L1_DCACHE_WRAP_W<L1_CACHE_WRAP_AROUND_CTRL_SPEC> {
         L1_DCACHE_WRAP_W::new(self, 4)
     }

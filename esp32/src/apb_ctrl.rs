@@ -52,6 +52,8 @@ impl RegisterBlock {
         &self.apb_saradc_fsm
     }
     #[doc = "0x1c..0x2c - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `APB_SARADC_SAR1_PATT_TAB1` register.</div>"]
     #[inline(always)]
     pub const fn apb_saradc_sar1_patt_tab(&self, n: usize) -> &APB_SARADC_SAR1_PATT_TAB {
         &self.apb_saradc_sar1_patt_tab[n]
@@ -83,6 +85,8 @@ impl RegisterBlock {
         self.apb_saradc_sar1_patt_tab(3)
     }
     #[doc = "0x2c..0x3c - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `APB_SARADC_SAR2_PATT_TAB1` register.</div>"]
     #[inline(always)]
     pub const fn apb_saradc_sar2_patt_tab(&self, n: usize) -> &APB_SARADC_SAR2_PATT_TAB {
         &self.apb_saradc_sar2_patt_tab[n]

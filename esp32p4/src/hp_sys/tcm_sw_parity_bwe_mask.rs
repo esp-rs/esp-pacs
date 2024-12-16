@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to mask tcm bwe parity code bit"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_tcm_sw_parity_bwe_mask_ctrl(
         &mut self,
     ) -> REG_TCM_SW_PARITY_BWE_MASK_CTRL_W<TCM_SW_PARITY_BWE_MASK_SPEC> {

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_per(&mut self) -> FLASH_PER_W<FLASH_SUS_CMD_SPEC> {
         FLASH_PER_W::new(self, 0)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_pes(&mut self) -> FLASH_PES_W<FLASH_SUS_CMD_SPEC> {
         FLASH_PES_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to add delay time after program erase resume(PER) is sent."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<FLASH_SUS_CMD_SPEC> {
         FLASH_PER_WAIT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to add delay time after program erase suspend(PES) command is sent."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<FLASH_SUS_CMD_SPEC> {
         FLASH_PES_WAIT_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable PES transfer trigger PES transfer option."]
     #[inline(always)]
-    #[must_use]
     pub fn pes_per_en(&mut self) -> PES_PER_EN_W<FLASH_SUS_CMD_SPEC> {
         PES_PER_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Separate PER flash wait idle and PES flash wait idle. 0: Not separate."]
     #[inline(always)]
-    #[must_use]
     pub fn pesr_idle_en(&mut self) -> PESR_IDLE_EN_W<FLASH_SUS_CMD_SPEC> {
         PESR_IDLE_EN_W::new(self, 5)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_bt_bb_nmi_map(&mut self) -> APP_BT_BB_NMI_MAP_W<APP_BT_BB_NMI_MAP_SPEC> {
         APP_BT_BB_NMI_MAP_W::new(self, 0)
     }

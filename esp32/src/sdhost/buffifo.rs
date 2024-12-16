@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - CPU write and read transmit data by FIFO. This register points to the current Data FIFO ."]
     #[inline(always)]
-    #[must_use]
     pub fn buffifo(&mut self) -> BUFFIFO_W<BUFFIFO_SPEC> {
         BUFFIFO_W::new(self, 0)
     }

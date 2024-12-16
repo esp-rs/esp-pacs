@@ -135,7 +135,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_power_det_bypass(
         &mut self,
     ) -> HP_ACTIVE_HP_POWER_DET_BYPASS_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -143,7 +142,6 @@ impl W {
     }
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_regulator0_dbias_sel(
         &mut self,
     ) -> DIG_REGULATOR0_DBIAS_SEL_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -151,13 +149,11 @@ impl W {
     }
     #[doc = "Bit 15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_dbias_init(&mut self) -> DIG_DBIAS_INIT_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
         DIG_DBIAS_INIT_W::new(self, 15)
     }
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_slp_mem_xpd(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_SLP_MEM_XPD_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -165,7 +161,6 @@ impl W {
     }
     #[doc = "Bit 17 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_slp_logic_xpd(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_XPD_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -173,7 +168,6 @@ impl W {
     }
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_xpd(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_XPD_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -181,7 +175,6 @@ impl W {
     }
     #[doc = "Bits 19:22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_slp_mem_dbias(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_SLP_MEM_DBIAS_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -189,7 +182,6 @@ impl W {
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_slp_logic_dbias(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_SLP_LOGIC_DBIAS_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {
@@ -197,7 +189,6 @@ impl W {
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active_hp_regulator_dbias(
         &mut self,
     ) -> HP_ACTIVE_HP_REGULATOR_DBIAS_W<HP_ACTIVE_HP_REGULATOR0_SPEC> {

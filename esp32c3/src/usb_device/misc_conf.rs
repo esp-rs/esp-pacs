@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<MISC_CONF_SPEC> {
         CLK_EN_W::new(self, 0)
     }

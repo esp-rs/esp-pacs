@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - For Debug Probe Test on FPGA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_i3c_mst_fpga_debug_probe(
         &mut self,
     ) -> REG_I3C_MST_FPGA_DEBUG_PROBE_W<FPGA_DEBUG_PROBE_SPEC> {

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core1 region permission registers."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_region_pms_constrain_lock(
         &mut self,
     ) -> CORE_1_REGION_PMS_CONSTRAIN_LOCK_W<CORE_1_REGION_PMS_CONSTRAIN_0_SPEC> {

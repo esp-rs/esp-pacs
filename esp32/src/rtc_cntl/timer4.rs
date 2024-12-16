@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    #[must_use]
     pub fn wait_timer(&mut self) -> WAIT_TIMER_W<TIMER4_SPEC> {
         WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15"]
     #[inline(always)]
-    #[must_use]
     pub fn powerup_timer(&mut self) -> POWERUP_TIMER_W<TIMER4_SPEC> {
         POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    #[must_use]
     pub fn dg_wrap_wait_timer(&mut self) -> DG_WRAP_WAIT_TIMER_W<TIMER4_SPEC> {
         DG_WRAP_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
-    #[must_use]
     pub fn dg_wrap_powerup_timer(&mut self) -> DG_WRAP_POWERUP_TIMER_W<TIMER4_SPEC> {
         DG_WRAP_POWERUP_TIMER_W::new(self, 25)
     }

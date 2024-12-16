@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_cpu_exc(&mut self) -> LP_CPU_EXC_W<INT_ENA_SPEC> {
         LP_CPU_EXC_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_ENA_SPEC> {
         SDIO_IDLE_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sw(&mut self) -> SW_W<INT_ENA_SPEC> {
         SW_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_sleep_reject(&mut self) -> SOC_SLEEP_REJECT_W<INT_ENA_SPEC> {
         SOC_SLEEP_REJECT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<INT_ENA_SPEC> {
         SOC_WAKEUP_W::new(self, 31)
     }

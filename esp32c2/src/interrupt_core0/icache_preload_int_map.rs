@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn icache_preload_int_map(
         &mut self,
     ) -> ICACHE_PRELOAD_INT_MAP_W<ICACHE_PRELOAD_INT_MAP_SPEC> {

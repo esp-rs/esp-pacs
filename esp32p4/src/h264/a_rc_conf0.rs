@@ -6,9 +6,9 @@ pub type W = crate::W<A_RC_CONF0_SPEC>;
 pub type A_QP_R = crate::FieldReader;
 #[doc = "Field `A_QP` writer - Configures video A frame level initial luma QP value."]
 pub type A_QP_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
-#[doc = "Field `A_RATE_CTRL_U` reader - Configures video A parameter U value. U = int((float) u &lt;&lt; 8)."]
+#[doc = "Field `A_RATE_CTRL_U` reader - Configures video A parameter U value. U = int((float) u << 8)."]
 pub type A_RATE_CTRL_U_R = crate::FieldReader<u16>;
-#[doc = "Field `A_RATE_CTRL_U` writer - Configures video A parameter U value. U = int((float) u &lt;&lt; 8)."]
+#[doc = "Field `A_RATE_CTRL_U` writer - Configures video A parameter U value. U = int((float) u << 8)."]
 pub type A_RATE_CTRL_U_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `A_MB_RATE_CTRL_EN` reader - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
 pub type A_MB_RATE_CTRL_EN_R = crate::BitReader;
@@ -20,7 +20,7 @@ impl R {
     pub fn a_qp(&self) -> A_QP_R {
         A_QP_R::new((self.bits & 0x3f) as u8)
     }
-    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u &lt;&lt; 8)."]
+    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u << 8)."]
     #[inline(always)]
     pub fn a_rate_ctrl_u(&self) -> A_RATE_CTRL_U_R {
         A_RATE_CTRL_U_R::new(((self.bits >> 6) & 0xffff) as u16)
@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures video A frame level initial luma QP value."]
     #[inline(always)]
-    #[must_use]
     pub fn a_qp(&mut self) -> A_QP_W<A_RC_CONF0_SPEC> {
         A_QP_W::new(self, 0)
     }
-    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u &lt;&lt; 8)."]
+    #[doc = "Bits 6:21 - Configures video A parameter U value. U = int((float) u << 8)."]
     #[inline(always)]
-    #[must_use]
     pub fn a_rate_ctrl_u(&mut self) -> A_RATE_CTRL_U_W<A_RC_CONF0_SPEC> {
         A_RATE_CTRL_U_W::new(self, 6)
     }
     #[doc = "Bit 22 - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
     #[inline(always)]
-    #[must_use]
     pub fn a_mb_rate_ctrl_en(&mut self) -> A_MB_RATE_CTRL_EN_W<A_RC_CONF0_SPEC> {
         A_MB_RATE_CTRL_EN_W::new(self, 22)
     }

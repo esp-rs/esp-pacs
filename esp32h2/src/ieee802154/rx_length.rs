@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_length(&mut self) -> RX_LENGTH_W<RX_LENGTH_SPEC> {
         RX_LENGTH_W::new(self, 0)
     }

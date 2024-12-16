@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - this field configures the pixel number of each sub win"]
     #[inline(always)]
-    #[must_use]
     pub fn ae_subwin_pixnum(&mut self) -> AE_SUBWIN_PIXNUM_W<AE_WINPIXNUM_SPEC> {
         AE_SUBWIN_PIXNUM_W::new(self, 0)
     }

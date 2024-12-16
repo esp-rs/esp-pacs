@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register restores the specified wake up char1 to wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn wk_char1(&mut self) -> WK_CHAR1_W<SLEEP_CONF0_SPEC> {
         WK_CHAR1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register restores the specified wake up char2 to wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn wk_char2(&mut self) -> WK_CHAR2_W<SLEEP_CONF0_SPEC> {
         WK_CHAR2_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - This register restores the specified wake up char3 to wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn wk_char3(&mut self) -> WK_CHAR3_W<SLEEP_CONF0_SPEC> {
         WK_CHAR3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - This register restores the specified wake up char4 to wake up"]
     #[inline(always)]
-    #[must_use]
     pub fn wk_char4(&mut self) -> WK_CHAR4_W<SLEEP_CONF0_SPEC> {
         WK_CHAR4_W::new(self, 24)
     }

@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - this field configures number of total block pix bits/64"]
     #[inline(always)]
-    #[must_use]
     pub fn blk_raw_num_total(&mut self) -> BLK_RAW_NUM_TOTAL_W<BLK_RAW_NUM_CFG_SPEC> {
         BLK_RAW_NUM_TOTAL_W::new(self, 0)
     }
     #[doc = "Bit 31 - write 1 to reload reg_blk_raw_num_total to internal cnt"]
     #[inline(always)]
-    #[must_use]
     pub fn blk_raw_num_total_set(&mut self) -> BLK_RAW_NUM_TOTAL_SET_W<BLK_RAW_NUM_CFG_SPEC> {
         BLK_RAW_NUM_TOTAL_SET_W::new(self, 31)
     }

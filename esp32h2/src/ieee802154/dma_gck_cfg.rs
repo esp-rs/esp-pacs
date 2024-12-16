@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_gck_cfg(&mut self) -> DMA_GCK_CFG_W<DMA_GCK_CFG_SPEC> {
         DMA_GCK_CFG_W::new(self, 0)
     }

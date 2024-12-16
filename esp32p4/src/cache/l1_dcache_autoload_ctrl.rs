@@ -117,7 +117,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable and disable autoload operation on L1-DCache. 1: enable, 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_ena(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_ENA_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -125,7 +124,6 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-DCache. 0: ascending. 1: descending."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_order(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_ORDER_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -133,7 +131,6 @@ impl W {
     }
     #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-DCache. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_trigger_mode(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_TRIGGER_MODE_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -141,7 +138,6 @@ impl W {
     }
     #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_sct0_ena(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_SCT0_ENA_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -149,7 +145,6 @@ impl W {
     }
     #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_sct1_ena(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_SCT1_ENA_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -157,7 +152,6 @@ impl W {
     }
     #[doc = "Bit 10 - The bit is used to enable the third section for autoload operation on L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_sct2_ena(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_SCT2_ENA_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -165,7 +159,6 @@ impl W {
     }
     #[doc = "Bit 11 - The bit is used to enable the fourth section for autoload operation on L1-DCache."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_sct3_ena(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_SCT3_ENA_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -173,7 +166,6 @@ impl W {
     }
     #[doc = "Bits 12:15 - The bit is used to set the gid of l1 dcache autoload."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_dcache_autoload_rgid(
         &mut self,
     ) -> L1_DCACHE_AUTOLOAD_RGID_W<L1_DCACHE_AUTOLOAD_CTRL_SPEC> {

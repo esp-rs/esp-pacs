@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_bb_int_map(&mut self) -> WIFI_BB_INT_MAP_W<WIFI_BB_INT_MAP_SPEC> {
         WIFI_BB_INT_MAP_W::new(self, 0)
     }

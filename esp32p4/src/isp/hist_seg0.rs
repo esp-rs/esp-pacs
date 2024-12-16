@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures threshold of histogram bin 3 and bin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_seg_3_4(&mut self) -> HIST_SEG_3_4_W<HIST_SEG0_SPEC> {
         HIST_SEG_3_4_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures threshold of histogram bin 2 and bin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_seg_2_3(&mut self) -> HIST_SEG_2_3_W<HIST_SEG0_SPEC> {
         HIST_SEG_2_3_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures threshold of histogram bin 1 and bin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_seg_1_2(&mut self) -> HIST_SEG_1_2_W<HIST_SEG0_SPEC> {
         HIST_SEG_1_2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures threshold of histogram bin 0 and bin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn hist_seg_0_1(&mut self) -> HIST_SEG_0_1_W<HIST_SEG0_SPEC> {
         HIST_SEG_0_1_W::new(self, 24)
     }

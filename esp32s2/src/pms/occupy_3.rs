@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Configure one block of SRAM Block 4-21 is used as trace memory."]
     #[inline(always)]
-    #[must_use]
     pub fn occupy_pro_trace(&mut self) -> OCCUPY_PRO_TRACE_W<OCCUPY_3_SPEC> {
         OCCUPY_PRO_TRACE_W::new(self, 0)
     }

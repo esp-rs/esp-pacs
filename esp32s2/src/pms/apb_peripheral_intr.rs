@@ -42,7 +42,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for APB peripheral interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_peri_byte_error_clr(
         &mut self,
     ) -> APB_PERI_BYTE_ERROR_CLR_W<APB_PERIPHERAL_INTR_SPEC> {
@@ -50,7 +49,6 @@ impl W {
     }
     #[doc = "Bit 1 - The enable signal for APB peripheral access interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_peri_byte_error_en(&mut self) -> APB_PERI_BYTE_ERROR_EN_W<APB_PERIPHERAL_INTR_SPEC> {
         APB_PERI_BYTE_ERROR_EN_W::new(self, 1)
     }

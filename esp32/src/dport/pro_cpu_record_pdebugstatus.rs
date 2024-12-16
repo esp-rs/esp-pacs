@@ -48,7 +48,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugstatus_bbcause(
         &mut self,
     ) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
@@ -56,7 +55,6 @@ impl W {
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugstatus_insntype(
         &mut self,
     ) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn rxdma_water_level(&mut self) -> RXDMA_WATER_LEVEL_W<RXDMA_CTRL_STATE_SPEC> {
         RXDMA_WATER_LEVEL_W::new(self, 0)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    #[must_use]
     pub fn rxdma_state(&mut self) -> RXDMA_STATE_W<RXDMA_CTRL_STATE_SPEC> {
         RXDMA_STATE_W::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn rxdma_append_lqi_offset(&mut self) -> RXDMA_APPEND_LQI_OFFSET_W<RXDMA_CTRL_STATE_SPEC> {
         RXDMA_APPEND_LQI_OFFSET_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn rxdma_append_freq_offset(
         &mut self,
     ) -> RXDMA_APPEND_FREQ_OFFSET_W<RXDMA_CTRL_STATE_SPEC> {

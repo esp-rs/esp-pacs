@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_160m_clk_en(&mut self) -> REF_160M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         REF_160M_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_160m_clk_en(&mut self) -> TM_160M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_160M_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_120m_clk_en(&mut self) -> REF_120M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         REF_120M_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_120m_clk_en(&mut self) -> TM_120M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_120M_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_80m_clk_en(&mut self) -> REF_80M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         REF_80M_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_80m_clk_en(&mut self) -> TM_80M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_80M_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_60m_clk_en(&mut self) -> TM_60M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_60M_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_48m_clk_en(&mut self) -> TM_48M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_48M_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn ref_20m_clk_en(&mut self) -> REF_20M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         REF_20M_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tm_20m_clk_en(&mut self) -> TM_20M_CLK_EN_W<REF_CLK_CTRL2_SPEC> {
         TM_20M_CLK_EN_W::new(self, 9)
     }

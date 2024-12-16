@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC> {
         BT_LPCK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 12:23"]
     #[inline(always)]
-    #[must_use]
     pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC> {
         BT_LPCK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_RTC_SLOW_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_8M_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL32K_W::new(self, 27)
     }

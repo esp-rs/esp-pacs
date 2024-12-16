@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TC_SPEC> {
 impl W {
     #[doc = "Bits 10:31 - GPIO0 ~ 21 output enable clear register. If the value 1 is written to a bit here, the corresponding bit in RTCIO_RTC_GPIO_ENABLE_REG will be cleared. Recommended operation: use this register to clear RTCIO_RTC_GPIO_ENABLE_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_rtcio_reg_gpio_enable_w1tc(
         &mut self,
     ) -> REG_RTCIO_REG_GPIO_ENABLE_W1TC_W<ENABLE_W1TC_SPEC> {

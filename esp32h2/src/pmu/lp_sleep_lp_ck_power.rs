@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_xpd_lppll(&mut self) -> LP_SLEEP_XPD_LPPLL_W<LP_SLEEP_LP_CK_POWER_SPEC> {
         LP_SLEEP_XPD_LPPLL_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_xpd_xtal32k(&mut self) -> LP_SLEEP_XPD_XTAL32K_W<LP_SLEEP_LP_CK_POWER_SPEC> {
         LP_SLEEP_XPD_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_xpd_rc32k(&mut self) -> LP_SLEEP_XPD_RC32K_W<LP_SLEEP_LP_CK_POWER_SPEC> {
         LP_SLEEP_XPD_RC32K_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_xpd_fosc_clk(&mut self) -> LP_SLEEP_XPD_FOSC_CLK_W<LP_SLEEP_LP_CK_POWER_SPEC> {
         LP_SLEEP_XPD_FOSC_CLK_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_pd_osc_clk(&mut self) -> LP_SLEEP_PD_OSC_CLK_W<LP_SLEEP_LP_CK_POWER_SPEC> {
         LP_SLEEP_PD_OSC_CLK_W::new(self, 31)
     }

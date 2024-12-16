@@ -170,7 +170,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_core_0_area_dram0_0_rd_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_0_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_0_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -178,7 +177,6 @@ impl W {
     }
     #[doc = "Bit 1 - reg_core_0_area_dram0_0_wr_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_0_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_0_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -186,7 +184,6 @@ impl W {
     }
     #[doc = "Bit 2 - reg_core_0_area_dram0_1_rd_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_1_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_1_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -194,7 +191,6 @@ impl W {
     }
     #[doc = "Bit 3 - reg_core_0_area_dram0_1_wr_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_dram0_1_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_DRAM0_1_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -202,7 +198,6 @@ impl W {
     }
     #[doc = "Bit 4 - reg_core_0_area_pif_0_rd_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_0_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_0_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -210,7 +205,6 @@ impl W {
     }
     #[doc = "Bit 5 - reg_core_0_area_pif_0_wr_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_0_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_0_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -218,7 +212,6 @@ impl W {
     }
     #[doc = "Bit 6 - reg_core_0_area_pif_1_rd_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_1_rd_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_1_RD_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -226,7 +219,6 @@ impl W {
     }
     #[doc = "Bit 7 - reg_core_0_area_pif_1_wr_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_area_pif_1_wr_intr_ena(
         &mut self,
     ) -> CORE_0_AREA_PIF_1_WR_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -234,7 +226,6 @@ impl W {
     }
     #[doc = "Bit 8 - reg_core_0_sp_spill_min_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_min_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MIN_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -242,7 +233,6 @@ impl W {
     }
     #[doc = "Bit 9 - reg_core_0_sp_spill_max_intr_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_sp_spill_max_intr_ena(
         &mut self,
     ) -> CORE_0_SP_SPILL_MAX_INTR_ENA_W<CORE_0_INTR_ENA_SPEC> {
@@ -250,7 +240,6 @@ impl W {
     }
     #[doc = "Bit 10 - reg_core_0_iram0_exception_monitor_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_iram0_exception_monitor_rls(
         &mut self,
     ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_RLS_W<CORE_0_INTR_ENA_SPEC> {
@@ -258,7 +247,6 @@ impl W {
     }
     #[doc = "Bit 11 - reg_core_0_dram0_exception_monitor_ena"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_dram0_exception_monitor_rls(
         &mut self,
     ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_RLS_W<CORE_0_INTR_ENA_SPEC> {

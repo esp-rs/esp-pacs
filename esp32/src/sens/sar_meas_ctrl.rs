@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_MEAS_CTRL_SPEC> {
         XPD_SAR_AMP_FSM_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_MEAS_CTRL_SPEC> {
         AMP_RST_FB_FSM_W::new(self, 4)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_MEAS_CTRL_SPEC> {
         AMP_SHORT_REF_FSM_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    #[must_use]
     pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_MEAS_CTRL_SPEC> {
         AMP_SHORT_REF_GND_FSM_W::new(self, 12)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_MEAS_CTRL_SPEC> {
         XPD_SAR_FSM_W::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<SAR_MEAS_CTRL_SPEC> {
         SAR_RSTB_FSM_W::new(self, 20)
     }
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<SAR_MEAS_CTRL_SPEC> {
         SAR2_XPD_WAIT_W::new(self, 24)
     }

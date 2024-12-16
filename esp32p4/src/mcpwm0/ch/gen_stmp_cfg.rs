@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures the update method for PWM generator %s time stamp A's active register.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
     #[inline(always)]
-    #[must_use]
     pub fn a_upmethod(&mut self) -> A_UPMETHOD_W<GEN_STMP_CFG_SPEC> {
         A_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Configures the update method for PWM generator %s time stamp B's active register.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
     #[inline(always)]
-    #[must_use]
     pub fn b_upmethod(&mut self) -> B_UPMETHOD_W<GEN_STMP_CFG_SPEC> {
         B_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8 - Represents whether or not generator%s time stamp A's shadow reg is transferred.\\\\0: A's active reg has been updated with shadow register latest value.\\\\1: A's shadow reg is filled and waiting to be transferred to A's active reg"]
     #[inline(always)]
-    #[must_use]
     pub fn a_shdw_full(&mut self) -> A_SHDW_FULL_W<GEN_STMP_CFG_SPEC> {
         A_SHDW_FULL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents whether or not generator%s time stamp B's shadow reg is transferred.\\\\0: B's active reg has been updated with shadow register latest value.\\\\1: B's shadow reg is filled and waiting to be transferred to B's active reg"]
     #[inline(always)]
-    #[must_use]
     pub fn b_shdw_full(&mut self) -> B_SHDW_FULL_W<GEN_STMP_CFG_SPEC> {
         B_SHDW_FULL_W::new(self, 9)
     }

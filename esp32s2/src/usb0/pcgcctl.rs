@@ -80,31 +80,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn stoppclk(&mut self) -> STOPPCLK_W<PCGCCTL_SPEC> {
         STOPPCLK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn gatehclk(&mut self) -> GATEHCLK_W<PCGCCTL_SPEC> {
         GATEHCLK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pwrclmp(&mut self) -> PWRCLMP_W<PCGCCTL_SPEC> {
         PWRCLMP_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn rstpdwnmodule(&mut self) -> RSTPDWNMODULE_W<PCGCCTL_SPEC> {
         RSTPDWNMODULE_W::new(self, 3)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn resetaftersusp(&mut self) -> RESETAFTERSUSP_W<PCGCCTL_SPEC> {
         RESETAFTERSUSP_W::new(self, 8)
     }

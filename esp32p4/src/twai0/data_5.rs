@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - In reset mode, it is acceptance mask register 1 with R/W Permission. In operation mode, when software initiate write operation, it is tx data register 5 and when software initiate read operation, it is rx data register 5."]
     #[inline(always)]
-    #[must_use]
     pub fn data_5(&mut self) -> DATA_5_W<DATA_5_SPEC> {
         DATA_5_W::new(self, 0)
     }

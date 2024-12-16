@@ -47,7 +47,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func11_in_inv_sel(
         &mut self,
     ) -> REG_GPIO_FUNC11_IN_INV_SEL_W<FUNC11_IN_SEL_CFG_SPEC> {
@@ -55,13 +54,11 @@ impl W {
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_sig11_in_sel(&mut self) -> REG_GPIO_SIG11_IN_SEL_W<FUNC11_IN_SEL_CFG_SPEC> {
         REG_GPIO_SIG11_IN_SEL_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_func11_in_sel(&mut self) -> REG_GPIO_FUNC11_IN_SEL_W<FUNC11_IN_SEL_CFG_SPEC> {
         REG_GPIO_FUNC11_IN_SEL_W::new(self, 2)
     }

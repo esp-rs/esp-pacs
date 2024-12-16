@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - this field configures lower threshold of r+g+b"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_min_lum(&mut self) -> AWB_MIN_LUM_W<AWB_TH_LUM_SPEC> {
         AWB_MIN_LUM_W::new(self, 0)
     }
     #[doc = "Bits 16:25 - this field configures upper threshold of r+g+b"]
     #[inline(always)]
-    #[must_use]
     pub fn awb_max_lum(&mut self) -> AWB_MAX_LUM_W<AWB_TH_LUM_SPEC> {
         AWB_MAX_LUM_W::new(self, 16)
     }

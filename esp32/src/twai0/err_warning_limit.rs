@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Error warning threshold. In the case when any of a error counter value exceeds the threshold, or all the error counter values are below the threshold, an error warning interrupt will be triggered (given the enable signal is valid)."]
     #[inline(always)]
-    #[must_use]
     pub fn err_warning_limit(&mut self) -> ERR_WARNING_LIMIT_W<ERR_WARNING_LIMIT_SPEC> {
         ERR_WARNING_LIMIT_W::new(self, 0)
     }

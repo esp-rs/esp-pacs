@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Clock divider source for two SD cards is supported. Each card has two bits assigned to it. For example, bit\\[1:0\\] are assigned for card 0, bit\\[3:2\\] are assigned for card 1. Card 0 maps and internally routes clock divider\\[0:3\\] outputs to cclk_out\\[1:0\\] pins, depending on bit value. 00 : Clock divider 0; 01 : Clock divider 1; 10 : Clock divider 2; 11 : Clock divider 3."]
     #[inline(always)]
-    #[must_use]
     pub fn clksrc(&mut self) -> CLKSRC_W<CLKSRC_SPEC> {
         CLKSRC_W::new(self, 0)
     }

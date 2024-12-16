@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - this field configures pixnum used when calculating the autofocus threshold. Set to 0 to disable threshold calculation"]
     #[inline(always)]
-    #[must_use]
     pub fn af_thpixnum(&mut self) -> AF_THPIXNUM_W<AF_CTRL1_SPEC> {
         AF_THPIXNUM_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_rxfifo_wdata(&mut self) -> SLC1_RXFIFO_WDATA_W<_1RXFIFO_PUSH_SPEC> {
         SLC1_RXFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn slc1_rxfifo_push(&mut self) -> SLC1_RXFIFO_PUSH_W<_1RXFIFO_PUSH_SPEC> {
         SLC1_RXFIFO_PUSH_W::new(self, 16)
     }

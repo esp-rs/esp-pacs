@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 6:31 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_step_len(&mut self) -> RTC_STEP_LEN_W<LACTRTC_SPEC> {
         RTC_STEP_LEN_W::new(self, 6)
     }

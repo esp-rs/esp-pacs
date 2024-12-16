@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - RTC sleep timer high 16 bits"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_val_hi(&mut self) -> SLP_VAL_HI_W<SLP_TIMER1_SPEC> {
         SLP_VAL_HI_W::new(self, 0)
     }
     #[doc = "Bit 16 - timer alarm enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer_alarm_en(&mut self) -> MAIN_TIMER_ALARM_EN_W<SLP_TIMER1_SPEC> {
         MAIN_TIMER_ALARM_EN_W::new(self, 16)
     }

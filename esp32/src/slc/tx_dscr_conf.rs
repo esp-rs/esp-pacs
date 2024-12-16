@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    #[must_use]
     pub fn wr_retry_threshold(&mut self) -> WR_RETRY_THRESHOLD_W<TX_DSCR_CONF_SPEC> {
         WR_RETRY_THRESHOLD_W::new(self, 0)
     }

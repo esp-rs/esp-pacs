@@ -60,7 +60,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_icg_hp_xtal32k(
         &mut self,
     ) -> LP_AONCLKRST_ICG_HP_XTAL32K_W<LP_AONCLKRST_CLK_TO_HP_SPEC> {
@@ -68,7 +67,6 @@ impl W {
     }
     #[doc = "Bit 29 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_icg_hp_sosc(
         &mut self,
     ) -> LP_AONCLKRST_ICG_HP_SOSC_W<LP_AONCLKRST_CLK_TO_HP_SPEC> {
@@ -76,7 +74,6 @@ impl W {
     }
     #[doc = "Bit 30 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_icg_hp_osc32k(
         &mut self,
     ) -> LP_AONCLKRST_ICG_HP_OSC32K_W<LP_AONCLKRST_CLK_TO_HP_SPEC> {
@@ -84,7 +81,6 @@ impl W {
     }
     #[doc = "Bit 31 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_icg_hp_fosc(
         &mut self,
     ) -> LP_AONCLKRST_ICG_HP_FOSC_W<LP_AONCLKRST_CLK_TO_HP_SPEC> {

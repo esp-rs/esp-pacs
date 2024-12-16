@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map cpu_intr_from_cpu_3 interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_intr_from_cpu_3_map(
         &mut self,
     ) -> CPU_INTR_FROM_CPU_3_MAP_W<CPU_INTR_FROM_CPU_3_MAP_SPEC> {

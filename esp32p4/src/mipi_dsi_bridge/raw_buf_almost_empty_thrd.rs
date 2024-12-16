@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - this field configures the fifo almost empty threshold, is valid only when dmac as flow controller"]
     #[inline(always)]
-    #[must_use]
     pub fn dsi_raw_buf_almost_empty_thrd(
         &mut self,
     ) -> DSI_RAW_BUF_ALMOST_EMPTY_THRD_W<RAW_BUF_ALMOST_EMPTY_THRD_SPEC> {

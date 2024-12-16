@@ -83,7 +83,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INTR_MODE_CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch(&mut self, n: u8) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -91,49 +90,41 @@ impl W {
     }
     #[doc = "Bits 0:2 - Configure channel 0 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch0(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Configure channel 1 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch1(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - Configure channel 2 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch2(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - Configure channel 3 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch3(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - Configure channel 4 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch4(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - Configure channel 5 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch5(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Configure channel 6 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch6(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - Configure channel 7 interrupt generate mode. 0/1: do not generate interrupt. 2: low level trigger. 3: high level trigger. 4: falling edge trigger. 5: raising edge trigger. 6/7: falling and raising edge trigger."]
     #[inline(always)]
-    #[must_use]
     pub fn intr_mode_ch7(&mut self) -> INTR_MODE_CH_W<INTR_RCGN_SPEC> {
         INTR_MODE_CH_W::new(self, 21)
     }

@@ -66,7 +66,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_enable_spi_manual_encrypt(
         &mut self,
     ) -> REG_ENABLE_SPI_MANUAL_ENCRYPT_W<CRYPTO_CTRL_SPEC> {
@@ -74,7 +73,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_enable_download_db_encrypt(
         &mut self,
     ) -> REG_ENABLE_DOWNLOAD_DB_ENCRYPT_W<CRYPTO_CTRL_SPEC> {
@@ -82,7 +80,6 @@ impl W {
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_enable_download_g0cb_decrypt(
         &mut self,
     ) -> REG_ENABLE_DOWNLOAD_G0CB_DECRYPT_W<CRYPTO_CTRL_SPEC> {
@@ -90,7 +87,6 @@ impl W {
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_enable_download_manual_encrypt(
         &mut self,
     ) -> REG_ENABLE_DOWNLOAD_MANUAL_ENCRYPT_W<CRYPTO_CTRL_SPEC> {

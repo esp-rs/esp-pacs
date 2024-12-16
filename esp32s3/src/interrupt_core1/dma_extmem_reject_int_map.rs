@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map dma_extmem_reject interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_extmem_reject_int_map(
         &mut self,
     ) -> DMA_EXTMEM_REJECT_INT_MAP_W<DMA_EXTMEM_REJECT_INT_MAP_SPEC> {

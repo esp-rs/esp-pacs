@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - Physical address."]
     #[inline(always)]
-    #[must_use]
     pub fn physical_address(&mut self) -> PHYSICAL_ADDRESS_W<PHYSICAL_ADDRESS_SPEC> {
         PHYSICAL_ADDRESS_W::new(self, 0)
     }

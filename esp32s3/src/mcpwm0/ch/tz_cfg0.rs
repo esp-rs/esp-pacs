@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable register for software force cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_cbc(&mut self) -> SW_CBC_W<TZ_CFG0_SPEC> {
         SW_CBC_W::new(self, 0)
     }
     #[doc = "Bit 1 - event_f2 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f2_cbc(&mut self) -> F2_CBC_W<TZ_CFG0_SPEC> {
         F2_CBC_W::new(self, 1)
     }
     #[doc = "Bit 2 - event_f1 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f1_cbc(&mut self) -> F1_CBC_W<TZ_CFG0_SPEC> {
         F1_CBC_W::new(self, 2)
     }
     #[doc = "Bit 3 - event_f0 will trigger cycle-by-cycle mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f0_cbc(&mut self) -> F0_CBC_W<TZ_CFG0_SPEC> {
         F0_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable register for software force one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_ost(&mut self) -> SW_OST_W<TZ_CFG0_SPEC> {
         SW_OST_W::new(self, 4)
     }
     #[doc = "Bit 5 - event_f2 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f2_ost(&mut self) -> F2_OST_W<TZ_CFG0_SPEC> {
         F2_OST_W::new(self, 5)
     }
     #[doc = "Bit 6 - event_f1 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f1_ost(&mut self) -> F1_OST_W<TZ_CFG0_SPEC> {
         F1_OST_W::new(self, 6)
     }
     #[doc = "Bit 7 - event_f0 will trigger one-shot mode action. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn f0_ost(&mut self) -> F0_OST_W<TZ_CFG0_SPEC> {
         F0_OST_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn a_cbc_d(&mut self) -> A_CBC_D_W<TZ_CFG0_SPEC> {
         A_CBC_D_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Cycle-by-cycle mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn a_cbc_u(&mut self) -> A_CBC_U_W<TZ_CFG0_SPEC> {
         A_CBC_U_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - One-shot mode action on PWM0A when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn a_ost_d(&mut self) -> A_OST_D_W<TZ_CFG0_SPEC> {
         A_OST_D_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - One-shot mode action on PWM0A when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn a_ost_u(&mut self) -> A_OST_U_W<TZ_CFG0_SPEC> {
         A_OST_U_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn b_cbc_d(&mut self) -> B_CBC_D_W<TZ_CFG0_SPEC> {
         B_CBC_D_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Cycle-by-cycle mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn b_cbc_u(&mut self) -> B_CBC_U_W<TZ_CFG0_SPEC> {
         B_CBC_U_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - One-shot mode action on PWM0B when fault event occurs and timer is decreasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn b_ost_d(&mut self) -> B_OST_D_W<TZ_CFG0_SPEC> {
         B_OST_D_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - One-shot mode action on PWM0B when fault event occurs and timer is increasing. 0: do nothing, 1: force lo, 2: force hi, 3: toggle"]
     #[inline(always)]
-    #[must_use]
     pub fn b_ost_u(&mut self) -> B_OST_U_W<TZ_CFG0_SPEC> {
         B_OST_U_W::new(self, 22)
     }

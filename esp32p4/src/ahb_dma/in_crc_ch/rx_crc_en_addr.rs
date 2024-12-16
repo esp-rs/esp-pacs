@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_crc_en_addr(&mut self) -> RX_CRC_EN_ADDR_W<RX_CRC_EN_ADDR_SPEC> {
         RX_CRC_EN_ADDR_W::new(self, 0)
     }

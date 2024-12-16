@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_I2S1_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_intr_map(&mut self) -> I2S1_INTR_MAP_W<I2S1_INTR_MAP_SPEC> {
         I2S1_INTR_MAP_W::new(self, 0)
     }

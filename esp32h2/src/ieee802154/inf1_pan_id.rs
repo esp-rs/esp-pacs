@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf1_pan_id(&mut self) -> MAC_INF1_PAN_ID_W<INF1_PAN_ID_SPEC> {
         MAC_INF1_PAN_ID_W::new(self, 0)
     }

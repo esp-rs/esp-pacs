@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn v_active_lines(&mut self) -> V_ACTIVE_LINES_W<VID_VACTIVE_LINES_SPEC> {
         V_ACTIVE_LINES_W::new(self, 0)
     }

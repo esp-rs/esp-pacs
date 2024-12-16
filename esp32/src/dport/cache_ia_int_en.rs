@@ -150,43 +150,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Interrupt enable bits for various invalid cache access reasons"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_en(&mut self) -> CACHE_IA_INT_EN_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_EN_W::new(self, 0)
     }
     #[doc = "Bit 0 - APP CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_drom0(&mut self) -> CACHE_IA_INT_APP_DROM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_APP_DROM0_W::new(self, 0)
     }
     #[doc = "Bit 1 - APP CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_iram0(&mut self) -> CACHE_IA_INT_APP_IRAM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_APP_IRAM0_W::new(self, 1)
     }
     #[doc = "Bit 2 - APP CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_iram1(&mut self) -> CACHE_IA_INT_APP_IRAM1_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_APP_IRAM1_W::new(self, 2)
     }
     #[doc = "Bit 3 - APP CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_irom0(&mut self) -> CACHE_IA_INT_APP_IROM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_APP_IROM0_W::new(self, 3)
     }
     #[doc = "Bit 4 - APP CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_dram1(&mut self) -> CACHE_IA_INT_APP_DRAM1_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_APP_DRAM1_W::new(self, 4)
     }
     #[doc = "Bit 5 - APP CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_app_opposite(
         &mut self,
     ) -> CACHE_IA_INT_APP_OPPOSITE_W<CACHE_IA_INT_EN_SPEC> {
@@ -194,37 +187,31 @@ impl W {
     }
     #[doc = "Bit 14 - PRO CPU invalid access to DROM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_drom0(&mut self) -> CACHE_IA_INT_PRO_DROM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_PRO_DROM0_W::new(self, 14)
     }
     #[doc = "Bit 15 - PRO CPU invalid access to IRAM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_iram0(&mut self) -> CACHE_IA_INT_PRO_IRAM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_PRO_IRAM0_W::new(self, 15)
     }
     #[doc = "Bit 16 - PRO CPU invalid access to IRAM1 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_iram1(&mut self) -> CACHE_IA_INT_PRO_IRAM1_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_PRO_IRAM1_W::new(self, 16)
     }
     #[doc = "Bit 17 - PRO CPU invalid access to IROM0 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_irom0(&mut self) -> CACHE_IA_INT_PRO_IROM0_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_PRO_IROM0_W::new(self, 17)
     }
     #[doc = "Bit 18 - PRO CPU invalid access to DRAM1 when cache is disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_dram1(&mut self) -> CACHE_IA_INT_PRO_DRAM1_W<CACHE_IA_INT_EN_SPEC> {
         CACHE_IA_INT_PRO_DRAM1_W::new(self, 18)
     }
     #[doc = "Bit 19 - PRO CPU invalid access to APP CPU cache when cache disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_ia_int_pro_opposite(
         &mut self,
     ) -> CACHE_IA_INT_PRO_OPPOSITE_W<CACHE_IA_INT_EN_SPEC> {

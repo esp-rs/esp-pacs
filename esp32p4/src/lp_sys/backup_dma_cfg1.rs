@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn aon_bypass(&mut self) -> AON_BYPASS_W<BACKUP_DMA_CFG1_SPEC> {
         AON_BYPASS_W::new(self, 31)
     }

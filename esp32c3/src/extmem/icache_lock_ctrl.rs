@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_lock_ena(&mut self) -> ICACHE_LOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC> {
         ICACHE_LOCK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done."]
     #[inline(always)]
-    #[must_use]
     pub fn icache_unlock_ena(&mut self) -> ICACHE_UNLOCK_ENA_W<ICACHE_LOCK_CTRL_SPEC> {
         ICACHE_UNLOCK_ENA_W::new(self, 1)
     }

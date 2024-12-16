@@ -76,43 +76,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_core_soft_rst(&mut self) -> REG_CORE_SOFT_RST_W<RESET_CTRL_SPEC> {
         REG_CORE_SOFT_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_cmd_buf_rst(&mut self) -> REG_CMD_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_CMD_BUF_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_resp_buf_rst(&mut self) -> REG_RESP_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_RESP_BUF_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_tx_data_buf_buf_rst(&mut self) -> REG_TX_DATA_BUF_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_TX_DATA_BUF_BUF_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_rx_data_buf_rst(&mut self) -> REG_RX_DATA_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_RX_DATA_BUF_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_ibi_data_buf_rst(&mut self) -> REG_IBI_DATA_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_IBI_DATA_BUF_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_ibi_status_buf_rst(&mut self) -> REG_IBI_STATUS_BUF_RST_W<RESET_CTRL_SPEC> {
         REG_IBI_STATUS_BUF_RST_W::new(self, 6)
     }

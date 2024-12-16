@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The value of bCharFormat set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    #[must_use]
     pub fn get_bdata_bits(&mut self) -> GET_BDATA_BITS_W<GET_LINE_CODE_W1_SPEC> {
         GET_BDATA_BITS_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - The value of bParityTpye set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    #[must_use]
     pub fn get_bparity_type(&mut self) -> GET_BPARITY_TYPE_W<GET_LINE_CODE_W1_SPEC> {
         GET_BPARITY_TYPE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - The value of bDataBits set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    #[must_use]
     pub fn get_bchar_format(&mut self) -> GET_BCHAR_FORMAT_W<GET_LINE_CODE_W1_SPEC> {
         GET_BCHAR_FORMAT_W::new(self, 16)
     }

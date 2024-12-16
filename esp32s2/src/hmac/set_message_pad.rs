@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_PAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to let software do padding job."]
     #[inline(always)]
-    #[must_use]
     pub fn set_text_pad(&mut self) -> SET_TEXT_PAD_W<SET_MESSAGE_PAD_SPEC> {
         SET_TEXT_PAD_W::new(self, 0)
     }

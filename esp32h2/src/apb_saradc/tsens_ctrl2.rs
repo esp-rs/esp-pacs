@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - the time that power up tsens need wait"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W<TSENS_CTRL2_SPEC> {
         XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 12:13 - force power up tsens"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_force(&mut self) -> XPD_FORCE_W<TSENS_CTRL2_SPEC> {
         XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 14 - inv tsens clk"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_inv(&mut self) -> CLK_INV_W<TSENS_CTRL2_SPEC> {
         CLK_INV_W::new(self, 14)
     }
     #[doc = "Bit 15 - tsens clk select"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_sel(&mut self) -> CLK_SEL_W<TSENS_CTRL2_SPEC> {
         CLK_SEL_W::new(self, 15)
     }

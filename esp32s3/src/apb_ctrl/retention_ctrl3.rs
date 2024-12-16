@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:12 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn ret_dcache_size(&mut self) -> RET_DCACHE_SIZE_W<RETENTION_CTRL3_SPEC> {
         RET_DCACHE_SIZE_W::new(self, 4)
     }
     #[doc = "Bits 13:21 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn ret_dcache_vld_size(&mut self) -> RET_DCACHE_VLD_SIZE_W<RETENTION_CTRL3_SPEC> {
         RET_DCACHE_VLD_SIZE_W::new(self, 13)
     }
     #[doc = "Bits 22:30 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn ret_dcache_start_point(&mut self) -> RET_DCACHE_START_POINT_W<RETENTION_CTRL3_SPEC> {
         RET_DCACHE_START_POINT_W::new(self, 22)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn ret_dcache_enable(&mut self) -> RET_DCACHE_ENABLE_W<RETENTION_CTRL3_SPEC> {
         RET_DCACHE_ENABLE_W::new(self, 31)
     }

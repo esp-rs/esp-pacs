@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the value of PWM generator %s time stamp B's shadow register."]
     #[inline(always)]
-    #[must_use]
     pub fn b(&mut self) -> B_W<GEN_TSTMP_B_SPEC> {
         B_W::new(self, 0)
     }

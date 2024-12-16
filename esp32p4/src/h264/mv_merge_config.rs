@@ -62,25 +62,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configure mv merge type.\\\\0: merge p16x16 mv\\\\1: merge min mv\\\\2: merge max mv\\\\3: not valid."]
     #[inline(always)]
-    #[must_use]
     pub fn mv_merge_type(&mut self) -> MV_MERGE_TYPE_W<MV_MERGE_CONFIG_SPEC> {
         MV_MERGE_TYPE_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configure mv merge output integer part not zero mv or all part not zero mv.\\\\0: output all part not zero mv\\\\1: output integer part not zero mv."]
     #[inline(always)]
-    #[must_use]
     pub fn int_mv_out_en(&mut self) -> INT_MV_OUT_EN_W<MV_MERGE_CONFIG_SPEC> {
         INT_MV_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configure whether or not to enable video A mv merge.\\\\0: disable\\\\1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn a_mv_merge_en(&mut self) -> A_MV_MERGE_EN_W<MV_MERGE_CONFIG_SPEC> {
         A_MV_MERGE_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configure whether or not to enable video B mv merge.\\\\0: disable\\\\1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn b_mv_merge_en(&mut self) -> B_MV_MERGE_EN_W<MV_MERGE_CONFIG_SPEC> {
         B_MV_MERGE_EN_W::new(self, 4)
     }

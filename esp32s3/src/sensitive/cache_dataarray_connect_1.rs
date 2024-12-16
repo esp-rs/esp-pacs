@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Cache data array connection configuration."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_dataarray_connect_flatten(
         &mut self,
     ) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<CACHE_DATAARRAY_CONNECT_1_SPEC> {

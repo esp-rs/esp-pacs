@@ -334,193 +334,161 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ppa(&mut self) -> RST_EN_PPA_W<HP_RST_EN1_SPEC> {
         RST_EN_PPA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ahb_pdma(&mut self) -> RST_EN_AHB_PDMA_W<HP_RST_EN1_SPEC> {
         RST_EN_AHB_PDMA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_axi_pdma(&mut self) -> RST_EN_AXI_PDMA_W<HP_RST_EN1_SPEC> {
         RST_EN_AXI_PDMA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_iomux(&mut self) -> RST_EN_IOMUX_W<HP_RST_EN1_SPEC> {
         RST_EN_IOMUX_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_padbist(&mut self) -> RST_EN_PADBIST_W<HP_RST_EN1_SPEC> {
         RST_EN_PADBIST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_stimer(&mut self) -> RST_EN_STIMER_W<HP_RST_EN1_SPEC> {
         RST_EN_STIMER_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_timergrp0(&mut self) -> RST_EN_TIMERGRP0_W<HP_RST_EN1_SPEC> {
         RST_EN_TIMERGRP0_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_timergrp1(&mut self) -> RST_EN_TIMERGRP1_W<HP_RST_EN1_SPEC> {
         RST_EN_TIMERGRP1_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart0_core(&mut self) -> RST_EN_UART0_CORE_W<HP_RST_EN1_SPEC> {
         RST_EN_UART0_CORE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart1_core(&mut self) -> RST_EN_UART1_CORE_W<HP_RST_EN1_SPEC> {
         RST_EN_UART1_CORE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart2_core(&mut self) -> RST_EN_UART2_CORE_W<HP_RST_EN1_SPEC> {
         RST_EN_UART2_CORE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart3_core(&mut self) -> RST_EN_UART3_CORE_W<HP_RST_EN1_SPEC> {
         RST_EN_UART3_CORE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart4_core(&mut self) -> RST_EN_UART4_CORE_W<HP_RST_EN1_SPEC> {
         RST_EN_UART4_CORE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart0_apb(&mut self) -> RST_EN_UART0_APB_W<HP_RST_EN1_SPEC> {
         RST_EN_UART0_APB_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart1_apb(&mut self) -> RST_EN_UART1_APB_W<HP_RST_EN1_SPEC> {
         RST_EN_UART1_APB_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart2_apb(&mut self) -> RST_EN_UART2_APB_W<HP_RST_EN1_SPEC> {
         RST_EN_UART2_APB_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart3_apb(&mut self) -> RST_EN_UART3_APB_W<HP_RST_EN1_SPEC> {
         RST_EN_UART3_APB_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uart4_apb(&mut self) -> RST_EN_UART4_APB_W<HP_RST_EN1_SPEC> {
         RST_EN_UART4_APB_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_uhci(&mut self) -> RST_EN_UHCI_W<HP_RST_EN1_SPEC> {
         RST_EN_UHCI_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i3cmst(&mut self) -> RST_EN_I3CMST_W<HP_RST_EN1_SPEC> {
         RST_EN_I3CMST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i3cslv(&mut self) -> RST_EN_I3CSLV_W<HP_RST_EN1_SPEC> {
         RST_EN_I3CSLV_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i2c1(&mut self) -> RST_EN_I2C1_W<HP_RST_EN1_SPEC> {
         RST_EN_I2C1_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_i2c0(&mut self) -> RST_EN_I2C0_W<HP_RST_EN1_SPEC> {
         RST_EN_I2C0_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_rmt(&mut self) -> RST_EN_RMT_W<HP_RST_EN1_SPEC> {
         RST_EN_RMT_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_pwm0(&mut self) -> RST_EN_PWM0_W<HP_RST_EN1_SPEC> {
         RST_EN_PWM0_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_pwm1(&mut self) -> RST_EN_PWM1_W<HP_RST_EN1_SPEC> {
         RST_EN_PWM1_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_can0(&mut self) -> RST_EN_CAN0_W<HP_RST_EN1_SPEC> {
         RST_EN_CAN0_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_can1(&mut self) -> RST_EN_CAN1_W<HP_RST_EN1_SPEC> {
         RST_EN_CAN1_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_can2(&mut self) -> RST_EN_CAN2_W<HP_RST_EN1_SPEC> {
         RST_EN_CAN2_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_ledc(&mut self) -> RST_EN_LEDC_W<HP_RST_EN1_SPEC> {
         RST_EN_LEDC_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_pcnt(&mut self) -> RST_EN_PCNT_W<HP_RST_EN1_SPEC> {
         RST_EN_PCNT_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_etm(&mut self) -> RST_EN_ETM_W<HP_RST_EN1_SPEC> {
         RST_EN_ETM_W::new(self, 31)
     }

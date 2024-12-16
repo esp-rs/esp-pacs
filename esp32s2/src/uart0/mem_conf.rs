@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:3 - This register is used to configure the amount of RAM allocated for RX FIFO. The default number is 128 bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_size(&mut self) -> RX_SIZE_W<MEM_CONF_SPEC> {
         RX_SIZE_W::new(self, 1)
     }
     #[doc = "Bits 4:6 - This register is used to configure the amount of RAM allocated for TX FIFO. The default number is 128 bytes."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_size(&mut self) -> TX_SIZE_W<MEM_CONF_SPEC> {
         TX_SIZE_W::new(self, 4)
     }
     #[doc = "Bits 7:15 - This register is used to configure the maximum amount of data bytes that can be received when hardware flow control works."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<MEM_CONF_SPEC> {
         RX_FLOW_THRHD_W::new(self, 7)
     }
     #[doc = "Bits 16:25 - This register is used to configure the threshold time that the receiver takes to receive one byte, in the unit of bit time (the time it takes to transfer one bit). The UART_RXFIFO_TOUT_INT interrupt will be triggered when the receiver takes more time to receive one byte with UART RX_TOUT_EN set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<MEM_CONF_SPEC> {
         RX_TOUT_THRHD_W::new(self, 16)
     }
     #[doc = "Bit 26 - Set this bit to force power down UART RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<MEM_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to force power up UART RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<MEM_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 27)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn slc0_rx_pkt_h_dscr_addr(&mut self) -> SLC0_RX_PKT_H_DSCR_ADDR_W<_0_RXPKT_H_DSCR_SPEC> {
         SLC0_RX_PKT_H_DSCR_ADDR_W::new(self, 0)
     }

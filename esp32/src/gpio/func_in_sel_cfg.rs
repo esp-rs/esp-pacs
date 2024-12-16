@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - select one of the 256 inputs"]
     #[inline(always)]
-    #[must_use]
     pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 6 - revert the value of the input if you want to revert please set the value to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         IN_INV_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - if the slow signal bypass the io matrix or not if you want setting the value to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
         SEL_W::new(self, 7)
     }

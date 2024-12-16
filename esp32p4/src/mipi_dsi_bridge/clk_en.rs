@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures force_on of dsi_bridge register clock gate"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLK_EN_SPEC> {
         CLK_EN_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_COEX_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn coex_intr_map(&mut self) -> COEX_INTR_MAP_W<COEX_INTR_MAP_SPEC> {
         COEX_INTR_MAP_W::new(self, 0)
     }

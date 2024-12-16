@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn dis_pkt_gck(&mut self) -> DIS_PKT_GCK_W<CORE_GCK_CFG_SPEC> {
         DIS_PKT_GCK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn dis_ctrl_gck(&mut self) -> DIS_CTRL_GCK_W<CORE_GCK_CFG_SPEC> {
         DIS_CTRL_GCK_W::new(self, 1)
     }

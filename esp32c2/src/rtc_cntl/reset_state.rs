@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - reset cause of PRO CPU"]
     #[inline(always)]
-    #[must_use]
     pub fn reset_cause_procpu(&mut self) -> RESET_CAUSE_PROCPU_W<RESET_STATE_SPEC> {
         RESET_CAUSE_PROCPU_W::new(self, 0)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
-    #[must_use]
     pub fn stat_vector_sel_procpu(&mut self) -> STAT_VECTOR_SEL_PROCPU_W<RESET_STATE_SPEC> {
         STAT_VECTOR_SEL_PROCPU_W::new(self, 13)
     }
     #[doc = "Bit 19 - PROCPU OcdHaltOnReset"]
     #[inline(always)]
-    #[must_use]
     pub fn ocd_halt_on_reset_procpu(&mut self) -> OCD_HALT_ON_RESET_PROCPU_W<RESET_STATE_SPEC> {
         OCD_HALT_ON_RESET_PROCPU_W::new(self, 19)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dreset_mask_procpu(&mut self) -> DRESET_MASK_PROCPU_W<RESET_STATE_SPEC> {
         DRESET_MASK_PROCPU_W::new(self, 20)
     }

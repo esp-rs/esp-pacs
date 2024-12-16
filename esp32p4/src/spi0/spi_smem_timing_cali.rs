@@ -57,7 +57,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For sram, the bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_smem_timing_clk_ena(
         &mut self,
     ) -> SPI_SMEM_TIMING_CLK_ENA_W<SPI_SMEM_TIMING_CALI_SPEC> {
@@ -65,13 +64,11 @@ impl W {
     }
     #[doc = "Bit 1 - For sram, the bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_smem_timing_cali(&mut self) -> SPI_SMEM_TIMING_CALI_W<SPI_SMEM_TIMING_CALI_SPEC> {
         SPI_SMEM_TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - For sram, add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_smem_extra_dummy_cyclelen(
         &mut self,
     ) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<SPI_SMEM_TIMING_CALI_SPEC> {
@@ -79,7 +76,6 @@ impl W {
     }
     #[doc = "Bit 5 - Set this bit to enable DLL for timing calibration in DDR mode when accessed to EXT_RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_smem_dll_timing_cali(
         &mut self,
     ) -> SPI_SMEM_DLL_TIMING_CALI_W<SPI_SMEM_TIMING_CALI_SPEC> {

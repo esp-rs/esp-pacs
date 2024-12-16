@@ -37,7 +37,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_pld_done_int_raw(
         &mut self,
     ) -> L2_CACHE_PLD_DONE_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
@@ -45,7 +44,6 @@ impl W {
     }
     #[doc = "Bit 12 - The raw bit of the interrupt that occurs only when L2-Cache preload-operation error occurs."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_pld_err_int_raw(
         &mut self,
     ) -> L2_CACHE_PLD_ERR_INT_RAW_W<L2_CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {

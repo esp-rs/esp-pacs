@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version of this regfile"]
     #[inline(always)]
-    #[must_use]
     pub fn ntimers_date(&mut self) -> NTIMERS_DATE_W<NTIMERS_DATE_SPEC> {
         NTIMERS_DATE_W::new(self, 0)
     }

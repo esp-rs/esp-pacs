@@ -126,49 +126,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_tt_fc(&mut self) -> CH1_TT_FC_W<CFG1_SPEC> {
         CH1_TT_FC_W::new(self, 0)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_hs_sel_src(&mut self) -> CH1_HS_SEL_SRC_W<CFG1_SPEC> {
         CH1_HS_SEL_SRC_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_hs_sel_dst(&mut self) -> CH1_HS_SEL_DST_W<CFG1_SPEC> {
         CH1_HS_SEL_DST_W::new(self, 4)
     }
     #[doc = "Bits 7:8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_src_per(&mut self) -> CH1_SRC_PER_W<CFG1_SPEC> {
         CH1_SRC_PER_W::new(self, 7)
     }
     #[doc = "Bits 12:13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_dst_per(&mut self) -> CH1_DST_PER_W<CFG1_SPEC> {
         CH1_DST_PER_W::new(self, 12)
     }
     #[doc = "Bits 17:19 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_ch_prior(&mut self) -> CH1_CH_PRIOR_W<CFG1_SPEC> {
         CH1_CH_PRIOR_W::new(self, 17)
     }
     #[doc = "Bits 23:26 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_src_osr_lmt(&mut self) -> CH1_SRC_OSR_LMT_W<CFG1_SPEC> {
         CH1_SRC_OSR_LMT_W::new(self, 23)
     }
     #[doc = "Bits 27:30 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_dst_osr_lmt(&mut self) -> CH1_DST_OSR_LMT_W<CFG1_SPEC> {
         CH1_DST_OSR_LMT_W::new(self, 27)
     }

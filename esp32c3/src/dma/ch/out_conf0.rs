@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to reset DMA channel 0 Tx FSM and Tx FIFO pointer."]
     #[inline(always)]
-    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<OUT_CONF0_SPEC> {
         OUT_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<OUT_CONF0_SPEC> {
         OUT_LOOP_TEST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable automatic outlink-writeback when all the data in tx buffer has been transmitted."]
     #[inline(always)]
-    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<OUT_CONF0_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 2)
     }
     #[doc = "Bit 3 - EOF flag generation mode when transmitting data. 1: EOF flag for Tx channel 0 is generated when data need to transmit has been popped from FIFO in DMA"]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<OUT_CONF0_SPEC> {
         OUT_EOF_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<OUT_CONF0_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 transmitting data when accessing internal SRAM."]
     #[inline(always)]
-    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<OUT_CONF0_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 5)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - internal_sram_usage_log_sram"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_usage_log_sram(
         &mut self,
     ) -> INTERNAL_SRAM_USAGE_LOG_SRAM_W<INTERNAL_SRAM_USAGE_4_SPEC> {

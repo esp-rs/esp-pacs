@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_reset(&mut self) -> FORCE_TOP_RESET_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_iso(&mut self) -> FORCE_TOP_ISO_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_pu(&mut self) -> FORCE_TOP_PU_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_no_reset(&mut self) -> FORCE_TOP_NO_RESET_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_no_iso(&mut self) -> FORCE_TOP_NO_ISO_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn force_top_pd(&mut self) -> FORCE_TOP_PD_W<POWER_PD_TOP_CNTL_SPEC> {
         FORCE_TOP_PD_W::new(self, 5)
     }

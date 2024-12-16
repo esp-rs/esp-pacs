@@ -64,13 +64,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_i2c_iso_en(&mut self) -> HP_MODEM_I2C_ISO_EN_W<HP_MODEM_HP_CK_POWER_SPEC> {
         HP_MODEM_I2C_ISO_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_i2c_retention(
         &mut self,
     ) -> HP_MODEM_I2C_RETENTION_W<HP_MODEM_HP_CK_POWER_SPEC> {
@@ -78,13 +76,11 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_xpd_bb_i2c(&mut self) -> HP_MODEM_XPD_BB_I2C_W<HP_MODEM_HP_CK_POWER_SPEC> {
         HP_MODEM_XPD_BB_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_xpd_bbpll_i2c(
         &mut self,
     ) -> HP_MODEM_XPD_BBPLL_I2C_W<HP_MODEM_HP_CK_POWER_SPEC> {
@@ -92,7 +88,6 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_xpd_bbpll(&mut self) -> HP_MODEM_XPD_BBPLL_W<HP_MODEM_HP_CK_POWER_SPEC> {
         HP_MODEM_XPD_BBPLL_W::new(self, 30)
     }

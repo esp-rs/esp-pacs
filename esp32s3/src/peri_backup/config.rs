@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_map_mode(&mut self) -> ADDR_MAP_MODE_W<CONFIG_SPEC> {
         ADDR_MAP_MODE_W::new(self, 3)
     }
     #[doc = "Bits 4:8 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn burst_limit(&mut self) -> BURST_LIMIT_W<CONFIG_SPEC> {
         BURST_LIMIT_W::new(self, 4)
     }
     #[doc = "Bits 9:18 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn tout_thres(&mut self) -> TOUT_THRES_W<CONFIG_SPEC> {
         TOUT_THRES_W::new(self, 9)
     }
     #[doc = "Bits 19:28 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn size(&mut self) -> SIZE_W<CONFIG_SPEC> {
         SIZE_W::new(self, 19)
     }
     #[doc = "Bit 29 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<CONFIG_SPEC> {
         START_W::new(self, 29)
     }
     #[doc = "Bit 30 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn to_mem(&mut self) -> TO_MEM_W<CONFIG_SPEC> {
         TO_MEM_W::new(self, 30)
     }
     #[doc = "Bit 31 - x"]
     #[inline(always)]
-    #[must_use]
     pub fn ena(&mut self) -> ENA_W<CONFIG_SPEC> {
         ENA_W::new(self, 31)
     }

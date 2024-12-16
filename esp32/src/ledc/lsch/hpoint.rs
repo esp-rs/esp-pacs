@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The output value changes to high when lstimerx(x=\\[0 3\\]) selected by low speed channel0 has reached reg_hpoint_lsch0\\[19:0\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn hpoint(&mut self) -> HPOINT_W<HPOINT_SPEC> {
         HPOINT_W::new(self, 0)
     }

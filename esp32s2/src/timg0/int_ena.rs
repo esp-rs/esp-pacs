@@ -67,7 +67,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn t(&mut self, n: u8) -> T_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
@@ -75,25 +74,21 @@ impl W {
     }
     #[doc = "Bit 0 - The interrupt enable bit for the TIMG_T0_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn t0(&mut self) -> T_W<INT_ENA_SPEC> {
         T_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the TIMG_T1_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn t1(&mut self) -> T_W<INT_ENA_SPEC> {
         T_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the TIMG_WDT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt(&mut self) -> WDT_W<INT_ENA_SPEC> {
         WDT_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the TIMG_LACT_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn lact(&mut self) -> LACT_W<INT_ENA_SPEC> {
         LACT_W::new(self, 3)
     }

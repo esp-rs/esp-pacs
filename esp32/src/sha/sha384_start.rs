@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SHA384_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start an SHA-384 operation on the first message block."]
     #[inline(always)]
-    #[must_use]
     pub fn sha384_start(&mut self) -> SHA384_START_W<SHA384_START_SPEC> {
         SHA384_START_W::new(self, 0)
     }

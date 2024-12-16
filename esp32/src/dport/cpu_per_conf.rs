@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    #[must_use]
     pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PER_CONF_SPEC> {
         CPUPERIOD_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn lowspeed_clk_sel(&mut self) -> LOWSPEED_CLK_SEL_W<CPU_PER_CONF_SPEC> {
         LOWSPEED_CLK_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CPU_PER_CONF_SPEC> {
         FAST_CLK_RTC_SEL_W::new(self, 3)
     }

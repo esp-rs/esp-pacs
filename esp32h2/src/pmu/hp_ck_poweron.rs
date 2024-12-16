@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_por_wait_target(&mut self) -> I2C_POR_WAIT_TARGET_W<HP_CK_POWERON_SPEC> {
         I2C_POR_WAIT_TARGET_W::new(self, 0)
     }

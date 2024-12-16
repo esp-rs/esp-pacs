@@ -193,7 +193,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT16_MODE` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn dout_mode(&mut self, n: u8) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -201,73 +200,61 @@ impl W {
     }
     #[doc = "Bits 0:1 - The output data bit 16 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout16_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The output data bit 17 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout17_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - The output data bit 18 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout18_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - The output data bit 19 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout19_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - The output data bit 20 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout20_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - The output data bit 21 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout21_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - The output data bit 22 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout22_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - The output data bit 23 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    #[must_use]
     pub fn dout23_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         DOUT_MODE_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - The output LCD_CD is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cd_mode(&mut self) -> LCD_CD_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         LCD_CD_MODE_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - The output LCD_DE is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_de_mode(&mut self) -> LCD_DE_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         LCD_DE_MODE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - The output LCD_HSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_hsync_mode(&mut self) -> LCD_HSYNC_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         LCD_HSYNC_MODE_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - The output LCD_VSYNC is delayed by module clock LCD_CLK. 0: output without delayed. 1: delay by the positive edge of LCD_CLK. 2: delay by the negative edge of LCD_CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vsync_mode(&mut self) -> LCD_VSYNC_MODE_W<LCD_DLY_MODE_CFG1_SPEC> {
         LCD_VSYNC_MODE_W::new(self, 22)
     }

@@ -208,7 +208,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write 1 to enable hpcore0 lockup reset feature, write 0 to disable hpcore0 lockup reset feature"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_lockup_reset_en(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_LOCKUP_RESET_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -216,7 +215,6 @@ impl W {
     }
     #[doc = "Bits 1:3 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lp_wdt_hpcore0_reset_length(
         &mut self,
     ) -> LP_AONCLKRST_LP_WDT_HPCORE0_RESET_LENGTH_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -224,7 +222,6 @@ impl W {
     }
     #[doc = "Bit 4 - write 1 to enable lp_wdt reset hpcore0 feature, write 0 to disable lp_wdt reset hpcore0 feature"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lp_wdt_hpcore0_reset_en(
         &mut self,
     ) -> LP_AONCLKRST_LP_WDT_HPCORE0_RESET_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -232,7 +229,6 @@ impl W {
     }
     #[doc = "Bits 5:11 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_stall_wait(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_STALL_WAIT_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -240,7 +236,6 @@ impl W {
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_stall_en(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_STALL_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -248,7 +243,6 @@ impl W {
     }
     #[doc = "Bit 13 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_sw_reset(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_SW_RESET_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -256,7 +250,6 @@ impl W {
     }
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_ocd_halt_on_reset(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_OCD_HALT_ON_RESET_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -264,7 +257,6 @@ impl W {
     }
     #[doc = "Bit 15 - 1'b1: boot from HP TCM ROM: 0x4FC00000 1'b0: boot from LP TCM RAM: 0x50108000"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore0_stat_vector_sel(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE0_STAT_VECTOR_SEL_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -272,7 +264,6 @@ impl W {
     }
     #[doc = "Bit 16 - write 1 to enable hpcore1 lockup reset feature, write 0 to disable hpcore1 lockup reset feature"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_lockup_reset_en(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_LOCKUP_RESET_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -280,7 +271,6 @@ impl W {
     }
     #[doc = "Bits 17:19 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lp_wdt_hpcore1_reset_length(
         &mut self,
     ) -> LP_AONCLKRST_LP_WDT_HPCORE1_RESET_LENGTH_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -288,7 +278,6 @@ impl W {
     }
     #[doc = "Bit 20 - write 1 to enable lp_wdt reset hpcore1 feature, write 0 to disable lp_wdt reset hpcore1 feature"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_lp_wdt_hpcore1_reset_en(
         &mut self,
     ) -> LP_AONCLKRST_LP_WDT_HPCORE1_RESET_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -296,7 +285,6 @@ impl W {
     }
     #[doc = "Bits 21:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_stall_wait(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_STALL_WAIT_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -304,7 +292,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_stall_en(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_STALL_EN_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -312,7 +299,6 @@ impl W {
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_sw_reset(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_SW_RESET_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -320,7 +306,6 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_ocd_halt_on_reset(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_OCD_HALT_ON_RESET_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {
@@ -328,7 +313,6 @@ impl W {
     }
     #[doc = "Bit 31 - 1'b1: boot from HP TCM ROM: 0x4FC00000 1'b0: boot from LP TCM RAM: 0x50108000"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_hpcore1_stat_vector_sel(
         &mut self,
     ) -> LP_AONCLKRST_HPCORE1_STAT_VECTOR_SEL_W<LP_AONCLKRST_HPCPU_RESET_CTRL0_SPEC> {

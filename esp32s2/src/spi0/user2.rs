@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The value of command. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_command_value(&mut self) -> USR_COMMAND_VALUE_W<USER2_SPEC> {
         USR_COMMAND_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 28:31 - The length in bits of command phase. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_command_bitlen(&mut self) -> USR_COMMAND_BITLEN_W<USER2_SPEC> {
         USR_COMMAND_BITLEN_W::new(self, 28)
     }

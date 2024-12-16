@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Write any value will trigger a timer 0 time-base counter value update (timer 0 current value will be stored in registers above)"]
     #[inline(always)]
-    #[must_use]
     pub fn update(&mut self) -> UPDATE_W<UPDATE_SPEC> {
         UPDATE_W::new(self, 31)
     }

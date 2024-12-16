@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn aon_efuse_core_reset_en(&mut self) -> AON_EFUSE_CORE_RESET_EN_W<LP_RST_EN_SPEC> {
         AON_EFUSE_CORE_RESET_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_timer_reset_en(&mut self) -> LP_TIMER_RESET_EN_W<LP_RST_EN_SPEC> {
         LP_TIMER_RESET_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_reset_en(&mut self) -> WDT_RESET_EN_W<LP_RST_EN_SPEC> {
         WDT_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ana_peri_reset_en(&mut self) -> ANA_PERI_RESET_EN_W<LP_RST_EN_SPEC> {
         ANA_PERI_RESET_EN_W::new(self, 31)
     }

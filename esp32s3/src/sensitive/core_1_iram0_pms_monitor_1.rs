@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to clear core1 iram0 permission violated interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_iram0_pms_monitor_violate_clr(
         &mut self,
     ) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_CLR_W<CORE_1_IRAM0_PMS_MONITOR_1_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - Set 1 to enable core1 iram0 permission monitor, when core1_iram violated permission, will trigger interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_iram0_pms_monitor_violate_en(
         &mut self,
     ) -> CORE_1_IRAM0_PMS_MONITOR_VIOLATE_EN_W<CORE_1_IRAM0_PMS_MONITOR_1_SPEC> {

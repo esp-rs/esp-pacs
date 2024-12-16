@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_PARL_IO_RX_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn parl_io_rx_intr_map(&mut self) -> PARL_IO_RX_INTR_MAP_W<PARL_IO_RX_INTR_MAP_SPEC> {
         PARL_IO_RX_INTR_MAP_W::new(self, 0)
     }

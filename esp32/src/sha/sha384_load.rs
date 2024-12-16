@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SHA384_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to finish the SHA-384 operation to calculate the final message hash."]
     #[inline(always)]
-    #[must_use]
     pub fn sha384_load(&mut self) -> SHA384_LOAD_W<SHA384_LOAD_SPEC> {
         SHA384_LOAD_W::new(self, 0)
     }

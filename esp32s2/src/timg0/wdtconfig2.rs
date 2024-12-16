@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stage 0 timeout value, in MWDT clock cycles."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_stg0_hold(&mut self) -> WDT_STG0_HOLD_W<WDTCONFIG2_SPEC> {
         WDT_STG0_HOLD_W::new(self, 0)
     }

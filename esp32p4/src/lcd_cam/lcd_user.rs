@@ -172,25 +172,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - The output data cycles minus 1 of LCD module."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout_cyclelen(&mut self) -> LCD_DOUT_CYCLELEN_W<LCD_USER_SPEC> {
         LCD_DOUT_CYCLELEN_W::new(self, 0)
     }
     #[doc = "Bit 13 - LCD always output when LCD is in LCD_DOUT state, unless reg_lcd_start is cleared or reg_lcd_reset is set."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_always_out_en(&mut self) -> LCD_ALWAYS_OUT_EN_W<LCD_USER_SPEC> {
         LCD_ALWAYS_OUT_EN_W::new(self, 13)
     }
     #[doc = "Bits 14:16 - 0: ABAB->BABA. 1: ABC->ACB. 2: ABC->BAC. 3: ABC->BCA. 4:ABC->CAB. 5:ABC->CBA"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout_byte_swizzle_mode(&mut self) -> LCD_DOUT_BYTE_SWIZZLE_MODE_W<LCD_USER_SPEC> {
         LCD_DOUT_BYTE_SWIZZLE_MODE_W::new(self, 14)
     }
     #[doc = "Bit 17 - 1: enable byte swizzle 0: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout_byte_swizzle_enable(
         &mut self,
     ) -> LCD_DOUT_BYTE_SWIZZLE_ENABLE_W<LCD_USER_SPEC> {
@@ -198,73 +194,61 @@ impl W {
     }
     #[doc = "Bit 18 - 1: change bit order in every byte. 0: Not change."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout_bit_order(&mut self) -> LCD_DOUT_BIT_ORDER_W<LCD_USER_SPEC> {
         LCD_DOUT_BIT_ORDER_W::new(self, 18)
     }
     #[doc = "Bits 19:20 - 2: 24bit mode. 1: 16bit mode. 0: 8bit mode"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_byte_mode(&mut self) -> LCD_BYTE_MODE_W<LCD_USER_SPEC> {
         LCD_BYTE_MODE_W::new(self, 19)
     }
     #[doc = "Bit 21 - 1: Update LCD registers, will be cleared by hardware. 0 : Not care."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_update(&mut self) -> LCD_UPDATE_W<LCD_USER_SPEC> {
         LCD_UPDATE_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: Change data bit order, change LCD_DATA_out\\[7:0\\] to LCD_DATA_out\\[0:7\\] in one byte mode, and bits\\[15:0\\] to bits\\[0:15\\] in two byte mode. 0: Not change."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_bit_order(&mut self) -> LCD_BIT_ORDER_W<LCD_USER_SPEC> {
         LCD_BIT_ORDER_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: invert data byte order, only valid in 2 byte mode. 0: Not change."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_byte_order(&mut self) -> LCD_BYTE_ORDER_W<LCD_USER_SPEC> {
         LCD_BYTE_ORDER_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: Be able to send data out in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dout(&mut self) -> LCD_DOUT_W<LCD_USER_SPEC> {
         LCD_DOUT_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: Enable DUMMY phase in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dummy(&mut self) -> LCD_DUMMY_W<LCD_USER_SPEC> {
         LCD_DUMMY_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: Be able to send command in LCD sequence when LCD starts. 0: Disable."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cmd(&mut self) -> LCD_CMD_W<LCD_USER_SPEC> {
         LCD_CMD_W::new(self, 26)
     }
     #[doc = "Bit 27 - LCD start sending data enable signal, valid in high level."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_start(&mut self) -> LCD_START_W<LCD_USER_SPEC> {
         LCD_START_W::new(self, 27)
     }
     #[doc = "Bit 28 - The value of command."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_reset(&mut self) -> LCD_RESET_W<LCD_USER_SPEC> {
         LCD_RESET_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - The dummy cycle length minus 1."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_dummy_cyclelen(&mut self) -> LCD_DUMMY_CYCLELEN_W<LCD_USER_SPEC> {
         LCD_DUMMY_CYCLELEN_W::new(self, 29)
     }
     #[doc = "Bit 31 - The cycle length of command phase. 1: 2 cycles. 0: 1 cycle."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_cmd_2_cycle_en(&mut self) -> LCD_CMD_2_CYCLE_EN_W<LCD_USER_SPEC> {
         LCD_CMD_2_CYCLE_EN_W::new(self, 31)
     }

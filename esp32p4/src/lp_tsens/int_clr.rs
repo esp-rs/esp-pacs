@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Tsens wakeup interrupt clear."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_tsens_wake(&mut self) -> COCPU_TSENS_WAKE_W<INT_CLR_SPEC> {
         COCPU_TSENS_WAKE_W::new(self, 0)
     }

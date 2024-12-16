@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Configure read-protection address 2."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dport_reserve_fifo_2(&mut self) -> PRO_DPORT_RESERVE_FIFO_2_W<PRO_DPORT_4_SPEC> {
         PRO_DPORT_RESERVE_FIFO_2_W::new(self, 0)
     }

@@ -47,19 +47,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 15:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_outen(&mut self) -> TOUCH_OUTEN_W<TOUCH_FILTER2_SPEC> {
         TOUCH_OUTEN_W::new(self, 15)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_bypass_noise_thres(&mut self) -> TOUCH_BYPASS_NOISE_THRES_W<TOUCH_FILTER2_SPEC> {
         TOUCH_BYPASS_NOISE_THRES_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_bypass_neg_noise_thres(
         &mut self,
     ) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<TOUCH_FILTER2_SPEC> {

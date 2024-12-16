@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - It is the horizontal blank front porch of a frame. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<LCD_CTRL_SPEC> {
         LCD_HB_FRONT_W::new(self, 0)
     }
     #[doc = "Bits 11:20 - It is the vertical active height of a frame. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<LCD_CTRL_SPEC> {
         LCD_VA_HEIGHT_W::new(self, 11)
     }
     #[doc = "Bits 21:30 - It is the vertical total height of a frame. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<LCD_CTRL_SPEC> {
         LCD_VT_HEIGHT_W::new(self, 21)
     }
     #[doc = "Bit 31 - 1: Enable LCD mode output vsync, hsync, de. 0: Disable. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_mode_en(&mut self) -> LCD_MODE_EN_W<LCD_CTRL_SPEC> {
         LCD_MODE_EN_W::new(self, 31)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_lp_gpio_hys(&mut self) -> REG_LP_GPIO_HYS_W<LP_PAD_HYS_SPEC> {
         REG_LP_GPIO_HYS_W::new(self, 0)
     }

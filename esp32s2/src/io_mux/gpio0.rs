@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output enable of the pin in sleep mode. 1: Output enabled. 0: Output disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO0_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pin. Set to 1 to put the pin in sleep mode."]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO0_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Pull-down enable of the pin during sleep mode. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO0_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Pull-up enable of the pin during sleep mode. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO0_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Input enable of the pin during sleep mode. 1: Input enabled. 0: Input disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO0_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bit 7 - Pull-down enable of the pin. 1: Internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO0_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Pull-up enable of the pin. 1: Internal pull-up enabled. 0: Internal pull-up disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO0_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Input enable of the pin. 1: Input enabled. 0: Input disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO0_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pin. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
-    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO0_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2, etc."]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO0_SPEC> {
         MCU_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Enable filter for pin input signals. 1: Filter enabled. 2: Filter disabled."]
     #[inline(always)]
-    #[must_use]
     pub fn filter_en(&mut self) -> FILTER_EN_W<GPIO0_SPEC> {
         FILTER_EN_W::new(self, 15)
     }

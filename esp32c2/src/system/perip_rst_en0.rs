@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 1 to let SPI01 reset"]
     #[inline(always)]
-    #[must_use]
     pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN0_SPEC> {
         SPI01_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to let UART reset"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN0_SPEC> {
         UART_RST_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set 1 to let UART1 reset"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN0_SPEC> {
         UART1_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to let SPI2 reset"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN0_SPEC> {
         SPI2_RST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set 1 to let I2C_EXT0 reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN0_SPEC> {
         I2C_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 11 - Set 1 to let LEDC reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN0_SPEC> {
         LEDC_RST_W::new(self, 11)
     }
     #[doc = "Bit 13 - Set 1 to let TIMERGROUP reset"]
     #[inline(always)]
-    #[must_use]
     pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN0_SPEC> {
         TIMERGROUP_RST_W::new(self, 13)
     }
     #[doc = "Bit 24 - Set 1 to let UART_MEM reset"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN0_SPEC> {
         UART_MEM_RST_W::new(self, 24)
     }
     #[doc = "Bit 28 - Set 1 to let APB_SARADC reset"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<PERIP_RST_EN0_SPEC> {
         APB_SARADC_RST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set 1 to let SYSTIMER reset"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<PERIP_RST_EN0_SPEC> {
         SYSTIMER_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set 1 to let ADC2_ARB reset"]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<PERIP_RST_EN0_SPEC> {
         ADC2_ARB_RST_W::new(self, 30)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_spi_mask_pro(&mut self) -> SLAVE_SPI_MASK_PRO_W<SLAVE_SPI_CONFIG_SPEC> {
         SLAVE_SPI_MASK_PRO_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_spi_mask_app(&mut self) -> SLAVE_SPI_MASK_APP_W<SLAVE_SPI_CONFIG_SPEC> {
         SLAVE_SPI_MASK_APP_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_encrypt_enable(&mut self) -> SPI_ENCRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC> {
         SPI_ENCRYPT_ENABLE_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_decrypt_enable(&mut self) -> SPI_DECRYPT_ENABLE_W<SLAVE_SPI_CONFIG_SPEC> {
         SPI_DECRYPT_ENABLE_W::new(self, 12)
     }

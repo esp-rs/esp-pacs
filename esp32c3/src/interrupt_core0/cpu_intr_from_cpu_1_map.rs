@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_cpu_intr_from_cpu_1_map"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_intr_from_cpu_1_map(
         &mut self,
     ) -> CPU_INTR_FROM_CPU_1_MAP_W<CPU_INTR_FROM_CPU_1_MAP_SPEC> {

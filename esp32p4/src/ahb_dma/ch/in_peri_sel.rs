@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Rx channel 0. I3C. 1: Dummy. 2: UHCI0. 3: I2S0. 4: I2S1. 5: I2S2. 6: Dummy. 7: Dummy. 8: ADC_DAC. 9: Dummy. 10: RMT,11~15: Dummy"]
     #[inline(always)]
-    #[must_use]
     pub fn peri_in_sel(&mut self) -> PERI_IN_SEL_W<IN_PERI_SEL_SPEC> {
         PERI_IN_SEL_W::new(self, 0)
     }

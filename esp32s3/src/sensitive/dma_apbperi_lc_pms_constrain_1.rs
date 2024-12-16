@@ -106,7 +106,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - lc's permission(store,load) in data region0 of SRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_pms_0(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_PMS_0_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC> {
@@ -114,7 +113,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - lc's permission(store,load) in data region1 of SRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_pms_1(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_PMS_1_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC> {
@@ -122,7 +120,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - lc's permission(store,load) in data region2 of SRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_pms_2(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_PMS_2_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC> {
@@ -130,7 +127,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - lc's permission(store,load) in data region3 of SRAM"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_pms_3(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_PMS_3_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC> {
@@ -138,7 +134,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - lc's permission(store,load) in dcache data sram block0"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_cachedataarray_pms_0(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_0_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>
@@ -147,7 +142,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - lc's permission(store,load) in dcache data sram block1"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_apbperi_lc_pms_constrain_sram_cachedataarray_pms_1(
         &mut self,
     ) -> DMA_APBPERI_LC_PMS_CONSTRAIN_SRAM_CACHEDATAARRAY_PMS_1_W<DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>

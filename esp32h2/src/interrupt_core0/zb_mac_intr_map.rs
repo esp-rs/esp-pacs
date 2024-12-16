@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_ZB_MAC_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn zb_mac_intr_map(&mut self) -> ZB_MAC_INTR_MAP_W<ZB_MAC_INTR_MAP_SPEC> {
         ZB_MAC_INTR_MAP_W::new(self, 0)
     }

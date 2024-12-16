@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable Cache's access and SPI0's transfer."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC> {
         CACHE_REQ_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable SPI0 read flash with 32 bits address. The value of SPI_MEM_USR_ADDR_BITLEN should be 31."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<CACHE_FCTRL_SPEC> {
         CACHE_USR_CMD_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: The command value of SPI0 reads flash is SPI_MEM_USR_COMMAND_VALUE. 0: Hardware read command value, controlled by SPI_MEM_FREAD_QIO, SPI_MEM_FREAD_DIO, SPI_MEM_FREAD_QUAD, SPI_MEM_FREAD_DUAL and SPI_MEM_FASTRD_MODE bits."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC> {
         CACHE_FLASH_USR_CMD_W::new(self, 2)
     }
     #[doc = "Bit 3 - When SPI0 accesses to flash, set this bit to enable 2-bm in DIN phase."]
     #[inline(always)]
-    #[must_use]
     pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<CACHE_FCTRL_SPEC> {
         FDIN_DUAL_W::new(self, 3)
     }
     #[doc = "Bit 4 - When SPI0 accesses to flash, set this bit to enable 2-bm in DOUT phase."]
     #[inline(always)]
-    #[must_use]
     pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<CACHE_FCTRL_SPEC> {
         FDOUT_DUAL_W::new(self, 4)
     }
     #[doc = "Bit 5 - When SPI0 accesses to flash, set this bit to enable 2-bm in ADDR phase."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CACHE_FCTRL_SPEC> {
         FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - When SPI0 accesses to flash, set this bit to enable 4-bm in DIN phase."]
     #[inline(always)]
-    #[must_use]
     pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<CACHE_FCTRL_SPEC> {
         FDIN_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 7 - When SPI0 accesses to flash, set this bit to enable 4-bm in DOUT phase."]
     #[inline(always)]
-    #[must_use]
     pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<CACHE_FCTRL_SPEC> {
         FDOUT_QUAD_W::new(self, 7)
     }
     #[doc = "Bit 8 - When SPI0 accesses to flash, set this bit to enable 4-bm in ADDR phase."]
     #[inline(always)]
-    #[must_use]
     pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CACHE_FCTRL_SPEC> {
         FADDR_QUAD_W::new(self, 8)
     }

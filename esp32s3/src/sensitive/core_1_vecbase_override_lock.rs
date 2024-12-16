@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core1 vecbase configuration register"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_vecbase_override_lock(
         &mut self,
     ) -> CORE_1_VECBASE_OVERRIDE_LOCK_W<CORE_1_VECBASE_OVERRIDE_LOCK_SPEC> {

@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_PARA_FINISH_SPEC> {
 impl W {
     #[doc = "Bit 0 - Finish hmac configuration."]
     #[inline(always)]
-    #[must_use]
     pub fn set_para_end(&mut self) -> SET_PARA_END_W<SET_PARA_FINISH_SPEC> {
         SET_PARA_END_W::new(self, 0)
     }

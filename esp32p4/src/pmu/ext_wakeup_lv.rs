@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<EXT_WAKEUP_LV_SPEC> {
         EXT_WAKEUP_LV_W::new(self, 0)
     }

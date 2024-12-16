@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_hall(&mut self) -> XPD_HALL_W<SAR_HALL_CTRL_SPEC> {
         XPD_HALL_W::new(self, 28)
     }
     #[doc = "Bit 29 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<SAR_HALL_CTRL_SPEC> {
         XPD_HALL_FORCE_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
-    #[must_use]
     pub fn hall_phase(&mut self) -> HALL_PHASE_W<SAR_HALL_CTRL_SPEC> {
         HALL_PHASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    #[must_use]
     pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<SAR_HALL_CTRL_SPEC> {
         HALL_PHASE_FORCE_W::new(self, 31)
     }

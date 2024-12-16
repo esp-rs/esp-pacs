@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_wakeup0_lv(&mut self) -> EXT_WAKEUP0_LV_W<EXT_WAKEUP_CONF_SPEC> {
         EXT_WAKEUP0_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: external wakeup at low level 1: external wakeup at high level"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_wakeup1_lv(&mut self) -> EXT_WAKEUP1_LV_W<EXT_WAKEUP_CONF_SPEC> {
         EXT_WAKEUP1_LV_W::new(self, 31)
     }

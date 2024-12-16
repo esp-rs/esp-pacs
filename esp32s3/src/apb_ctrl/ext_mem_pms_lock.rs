@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn ext_mem_pms_lock(&mut self) -> EXT_MEM_PMS_LOCK_W<EXT_MEM_PMS_LOCK_SPEC> {
         EXT_MEM_PMS_LOCK_W::new(self, 0)
     }

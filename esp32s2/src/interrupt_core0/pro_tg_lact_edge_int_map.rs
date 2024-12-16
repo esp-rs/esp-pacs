@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map TG_LACT_EDGE_INT interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_tg_lact_edge_int_map(
         &mut self,
     ) -> PRO_TG_LACT_EDGE_INT_MAP_W<PRO_TG_LACT_EDGE_INT_MAP_SPEC> {

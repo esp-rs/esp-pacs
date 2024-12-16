@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_zb_st_map(&mut self) -> CLK_ZB_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_ZB_ST_MAP_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_fe_st_map(&mut self) -> CLK_FE_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_FE_ST_MAP_W::new(self, 12)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_bt_st_map(&mut self) -> CLK_BT_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_BT_ST_MAP_W::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_wifi_st_map(&mut self) -> CLK_WIFI_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_WIFI_ST_MAP_W::new(self, 20)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_peri_st_map(&mut self) -> CLK_MODEM_PERI_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_MODEM_PERI_ST_MAP_W::new(self, 24)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_modem_apb_st_map(&mut self) -> CLK_MODEM_APB_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
         CLK_MODEM_APB_ST_MAP_W::new(self, 28)
     }

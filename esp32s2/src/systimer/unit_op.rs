@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Update system timer value to registers."]
     #[inline(always)]
-    #[must_use]
     pub fn update(&mut self) -> UPDATE_W<UNIT_OP_SPEC> {
         UPDATE_W::new(self, 31)
     }

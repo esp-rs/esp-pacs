@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:26 - The bits are used to configure the length of the second section for autoload operation. It should be combined with dcache_autoload_sct1_ena."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_sct1_size(
         &mut self,
     ) -> DCACHE_AUTOLOAD_SCT1_SIZE_W<DCACHE_AUTOLOAD_SCT1_SIZE_SPEC> {

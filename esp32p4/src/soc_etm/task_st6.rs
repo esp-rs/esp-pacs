@@ -206,7 +206,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents PDMA_AXI_task_in_start_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_in_start_ch2_st(
         &mut self,
     ) -> PDMA_AXI_TASK_IN_START_CH2_ST_W<TASK_ST6_SPEC> {
@@ -214,7 +213,6 @@ impl W {
     }
     #[doc = "Bit 1 - Represents PDMA_AXI_task_out_start_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch0_st(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH0_ST_W<TASK_ST6_SPEC> {
@@ -222,7 +220,6 @@ impl W {
     }
     #[doc = "Bit 2 - Represents PDMA_AXI_task_out_start_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch1_st(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH1_ST_W<TASK_ST6_SPEC> {
@@ -230,7 +227,6 @@ impl W {
     }
     #[doc = "Bit 3 - Represents PDMA_AXI_task_out_start_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch2_st(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH2_ST_W<TASK_ST6_SPEC> {
@@ -238,25 +234,21 @@ impl W {
     }
     #[doc = "Bit 4 - Represents PMU_task_sleep_req trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn pmu_task_sleep_req_st(&mut self) -> PMU_TASK_SLEEP_REQ_ST_W<TASK_ST6_SPEC> {
         PMU_TASK_SLEEP_REQ_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents DMA2D_task_in_start_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_start_ch0_st(&mut self) -> DMA2D_TASK_IN_START_CH0_ST_W<TASK_ST6_SPEC> {
         DMA2D_TASK_IN_START_CH0_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents DMA2D_task_in_start_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_start_ch1_st(&mut self) -> DMA2D_TASK_IN_START_CH1_ST_W<TASK_ST6_SPEC> {
         DMA2D_TASK_IN_START_CH1_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents DMA2D_task_in_dscr_ready_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_dscr_ready_ch0_st(
         &mut self,
     ) -> DMA2D_TASK_IN_DSCR_READY_CH0_ST_W<TASK_ST6_SPEC> {
@@ -264,7 +256,6 @@ impl W {
     }
     #[doc = "Bit 8 - Represents DMA2D_task_in_dscr_ready_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_dscr_ready_ch1_st(
         &mut self,
     ) -> DMA2D_TASK_IN_DSCR_READY_CH1_ST_W<TASK_ST6_SPEC> {
@@ -272,25 +263,21 @@ impl W {
     }
     #[doc = "Bit 9 - Represents DMA2D_task_out_start_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch0_st(&mut self) -> DMA2D_TASK_OUT_START_CH0_ST_W<TASK_ST6_SPEC> {
         DMA2D_TASK_OUT_START_CH0_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents DMA2D_task_out_start_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch1_st(&mut self) -> DMA2D_TASK_OUT_START_CH1_ST_W<TASK_ST6_SPEC> {
         DMA2D_TASK_OUT_START_CH1_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents DMA2D_task_out_start_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch2_st(&mut self) -> DMA2D_TASK_OUT_START_CH2_ST_W<TASK_ST6_SPEC> {
         DMA2D_TASK_OUT_START_CH2_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents DMA2D_task_out_dscr_ready_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch0_st(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH0_ST_W<TASK_ST6_SPEC> {
@@ -298,7 +285,6 @@ impl W {
     }
     #[doc = "Bit 13 - Represents DMA2D_task_out_dscr_ready_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch1_st(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH1_ST_W<TASK_ST6_SPEC> {
@@ -306,7 +292,6 @@ impl W {
     }
     #[doc = "Bit 14 - Represents DMA2D_task_out_dscr_ready_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch2_st(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH2_ST_W<TASK_ST6_SPEC> {

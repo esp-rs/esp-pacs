@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in AXI_DMA. 0: A gate-clock will be used when accessing the RAM in AXI_DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn in_mem_clk_force_en(&mut self) -> IN_MEM_CLK_FORCE_EN_W<IN_MEM_CONF_SPEC> {
         IN_MEM_CLK_FORCE_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Force power up ram"]
     #[inline(always)]
-    #[must_use]
     pub fn in_mem_force_pu(&mut self) -> IN_MEM_FORCE_PU_W<IN_MEM_CONF_SPEC> {
         IN_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Force power down ram"]
     #[inline(always)]
-    #[must_use]
     pub fn in_mem_force_pd(&mut self) -> IN_MEM_FORCE_PD_W<IN_MEM_CONF_SPEC> {
         IN_MEM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in AXI_DMA. 0: A gate-clock will be used when accessing the RAM in AXI_DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn out_mem_clk_force_en(&mut self) -> OUT_MEM_CLK_FORCE_EN_W<IN_MEM_CONF_SPEC> {
         OUT_MEM_CLK_FORCE_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Force power up ram"]
     #[inline(always)]
-    #[must_use]
     pub fn out_mem_force_pu(&mut self) -> OUT_MEM_FORCE_PU_W<IN_MEM_CONF_SPEC> {
         OUT_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force power down ram"]
     #[inline(always)]
-    #[must_use]
     pub fn out_mem_force_pd(&mut self) -> OUT_MEM_FORCE_PD_W<IN_MEM_CONF_SPEC> {
         OUT_MEM_FORCE_PD_W::new(self, 5)
     }

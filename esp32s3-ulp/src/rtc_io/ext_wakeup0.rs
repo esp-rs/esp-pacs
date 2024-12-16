@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - ******* Description configure***"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP0_SPEC> {
         SEL_W::new(self, 27)
     }

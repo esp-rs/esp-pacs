@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - force chip entry download mode"]
     #[inline(always)]
-    #[must_use]
     pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<OPTION1_SPEC> {
         FORCE_DOWNLOAD_BOOT_W::new(self, 0)
     }

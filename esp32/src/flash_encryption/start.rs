@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - Set this bit to start encryption operation on data buffer."]
     #[inline(always)]
-    #[must_use]
     pub fn flash_start(&mut self) -> FLASH_START_W<START_SPEC> {
         FLASH_START_W::new(self, 0)
     }

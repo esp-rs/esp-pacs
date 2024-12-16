@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable sleep wakeup interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_ENA_RTC_W1TS_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - enable sleep reject interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_ENA_RTC_W1TS_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 3 - enable RTC WDT interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn wdt(&mut self) -> WDT_W<INT_ENA_RTC_W1TS_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 9 - enable brown out interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_ENA_RTC_W1TS_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10 - enable RTC main timer interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_ENA_RTC_W1TS_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
     #[doc = "Bit 15 - enable super watch dog interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn swd(&mut self) -> SWD_W<INT_ENA_RTC_W1TS_SPEC> {
         SWD_W::new(self, 15)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<INT_ENA_RTC_W1TS_SPEC> {
         BBPLL_CAL_W::new(self, 20)
     }

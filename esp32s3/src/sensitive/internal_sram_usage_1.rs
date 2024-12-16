@@ -50,7 +50,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by icache."]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_icache_usage(
         &mut self,
     ) -> INTERNAL_SRAM_ICACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
@@ -58,7 +57,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by dcache."]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_dcache_usage(
         &mut self,
     ) -> INTERNAL_SRAM_DCACHE_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
@@ -66,7 +64,6 @@ impl W {
     }
     #[doc = "Bits 4:10 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by cpu."]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_cpu_usage(
         &mut self,
     ) -> INTERNAL_SRAM_CPU_USAGE_W<INTERNAL_SRAM_USAGE_1_SPEC> {

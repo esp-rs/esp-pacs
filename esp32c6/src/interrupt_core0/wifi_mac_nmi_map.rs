@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_mac_nmi_map(&mut self) -> WIFI_MAC_NMI_MAP_W<WIFI_MAC_NMI_MAP_SPEC> {
         WIFI_MAC_NMI_MAP_W::new(self, 0)
     }

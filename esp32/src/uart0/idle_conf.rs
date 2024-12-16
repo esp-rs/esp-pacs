@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - when receiver takes more time than this register value to receive a byte data. it will produce frame end signal for uhci to stop receiving data."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<IDLE_CONF_SPEC> {
         RX_IDLE_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - This register is used to configure the duration time between transfers."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<IDLE_CONF_SPEC> {
         TX_IDLE_NUM_W::new(self, 10)
     }
     #[doc = "Bits 20:27 - This register is used to configure the num of 0 send after the process of sending data is done. it is active when txd_brk is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_brk_num(&mut self) -> TX_BRK_NUM_W<IDLE_CONF_SPEC> {
         TX_BRK_NUM_W::new(self, 20)
     }

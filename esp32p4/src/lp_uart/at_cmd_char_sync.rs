@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the content of at_cmd char."]
     #[inline(always)]
-    #[must_use]
     pub fn at_cmd_char(&mut self) -> AT_CMD_CHAR_W<AT_CMD_CHAR_SYNC_SPEC> {
         AT_CMD_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register is used to configure the num of continuous at_cmd chars received by receiver."]
     #[inline(always)]
-    #[must_use]
     pub fn char_num(&mut self) -> CHAR_NUM_W<AT_CMD_CHAR_SYNC_SPEC> {
         CHAR_NUM_W::new(self, 8)
     }

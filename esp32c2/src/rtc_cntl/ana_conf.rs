@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_reset_por_force_pd(&mut self) -> I2C_RESET_POR_FORCE_PD_W<ANA_CONF_SPEC> {
         I2C_RESET_POR_FORCE_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_reset_por_force_pu(&mut self) -> I2C_RESET_POR_FORCE_PU_W<ANA_CONF_SPEC> {
         I2C_RESET_POR_FORCE_PU_W::new(self, 19)
     }
     #[doc = "Bit 22 - PLLA force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_pu(&mut self) -> SAR_I2C_PU_W<ANA_CONF_SPEC> {
         SAR_I2C_PU_W::new(self, 22)
     }
     #[doc = "Bit 23 - PLLA force power down"]
     #[inline(always)]
-    #[must_use]
     pub fn plla_force_pd(&mut self) -> PLLA_FORCE_PD_W<ANA_CONF_SPEC> {
         PLLA_FORCE_PD_W::new(self, 23)
     }
     #[doc = "Bit 24 - PLLA force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn plla_force_pu(&mut self) -> PLLA_FORCE_PU_W<ANA_CONF_SPEC> {
         PLLA_FORCE_PU_W::new(self, 24)
     }
     #[doc = "Bit 25 - start BBPLL calibration during sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn bbpll_cal_slp_start(&mut self) -> BBPLL_CAL_SLP_START_W<ANA_CONF_SPEC> {
         BBPLL_CAL_SLP_START_W::new(self, 25)
     }
     #[doc = "Bit 27 - 1: TXRF_I2C power up"]
     #[inline(always)]
-    #[must_use]
     pub fn txrf_i2c_pu(&mut self) -> TXRF_I2C_PU_W<ANA_CONF_SPEC> {
         TXRF_I2C_PU_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: RFRX_PBUS power up"]
     #[inline(always)]
-    #[must_use]
     pub fn rfrx_pbus_pu(&mut self) -> RFRX_PBUS_PU_W<ANA_CONF_SPEC> {
         RFRX_PBUS_PU_W::new(self, 28)
     }
     #[doc = "Bit 30 - 1: CKGEN_I2C power up"]
     #[inline(always)]
-    #[must_use]
     pub fn ckgen_i2c_pu(&mut self) -> CKGEN_I2C_PU_W<ANA_CONF_SPEC> {
         CKGEN_I2C_PU_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn pll_i2c_pu(&mut self) -> PLL_I2C_PU_W<ANA_CONF_SPEC> {
         PLL_I2C_PU_W::new(self, 31)
     }

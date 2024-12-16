@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - core_0_pif_pms_constrain_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_pif_pms_constrain_lock(
         &mut self,
     ) -> CORE_0_PIF_PMS_CONSTRAIN_LOCK_W<CORE_0_PIF_PMS_CONSTRAIN_0_SPEC> {

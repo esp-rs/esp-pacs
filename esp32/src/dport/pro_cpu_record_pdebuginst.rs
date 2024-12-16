@@ -75,7 +75,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebuginst_sz(
         &mut self,
     ) -> RECORD_PDEBUGINST_SZ_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
@@ -83,7 +82,6 @@ impl W {
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebuginst_isrc(
         &mut self,
     ) -> RECORD_PDEBUGINST_ISRC_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
@@ -91,7 +89,6 @@ impl W {
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebuginst_loop_rep(
         &mut self,
     ) -> RECORD_PDEBUGINST_LOOP_REP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
@@ -99,7 +96,6 @@ impl W {
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebuginst_loop(
         &mut self,
     ) -> RECORD_PDEBUGINST_LOOP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
@@ -107,7 +103,6 @@ impl W {
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebuginst_cintl(
         &mut self,
     ) -> RECORD_PDEBUGINST_CINTL_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {

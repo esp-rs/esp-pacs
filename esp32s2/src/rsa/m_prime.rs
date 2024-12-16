@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores M'."]
     #[inline(always)]
-    #[must_use]
     pub fn m_prime(&mut self) -> M_PRIME_W<M_PRIME_SPEC> {
         M_PRIME_W::new(self, 0)
     }

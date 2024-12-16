@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf0_extend_addr1(&mut self) -> MAC_INF0_EXTEND_ADDR1_W<INF0_EXTEND_ADDR1_SPEC> {
         MAC_INF0_EXTEND_ADDR1_W::new(self, 0)
     }

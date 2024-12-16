@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - this field configures user setup env detect lum threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn af_env_user_threshold_lum(
         &mut self,
     ) -> AF_ENV_USER_THRESHOLD_LUM_W<AF_ENV_USER_TH_LUM_SPEC> {

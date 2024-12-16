@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vid(&mut self) -> VID_W<VENDORID_SPEC> {
         VID_W::new(self, 0)
     }

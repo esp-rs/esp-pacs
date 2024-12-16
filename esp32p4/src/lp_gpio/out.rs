@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_gpio_out_data(&mut self) -> REG_GPIO_OUT_DATA_W<OUT_SPEC> {
         REG_GPIO_OUT_DATA_W::new(self, 0)
     }

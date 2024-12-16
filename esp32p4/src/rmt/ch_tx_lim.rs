@@ -56,31 +56,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the maximum entries that CHANNEL%s can send out."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_lim_ch(&mut self) -> TX_LIM_CH_W<CH_TX_LIM_SPEC> {
         TX_LIM_CH_W::new(self, 0)
     }
     #[doc = "Bits 9:18 - This register is used to configure the maximum loop count when tx_conti_mode is valid."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_loop_num_ch(&mut self) -> TX_LOOP_NUM_CH_W<CH_TX_LIM_SPEC> {
         TX_LOOP_NUM_CH_W::new(self, 9)
     }
     #[doc = "Bit 19 - This register is the enabled bit for loop count."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_loop_cnt_en_ch(&mut self) -> TX_LOOP_CNT_EN_CH_W<CH_TX_LIM_SPEC> {
         TX_LOOP_CNT_EN_CH_W::new(self, 19)
     }
     #[doc = "Bit 20 - This register is used to reset the loop count when tx_conti_mode is valid."]
     #[inline(always)]
-    #[must_use]
     pub fn loop_count_reset_ch(&mut self) -> LOOP_COUNT_RESET_CH_W<CH_TX_LIM_SPEC> {
         LOOP_COUNT_RESET_CH_W::new(self, 20)
     }
     #[doc = "Bit 21 - This bit is used to enable the loop send stop function after the loop counter counts to loop number for CHANNEL%s."]
     #[inline(always)]
-    #[must_use]
     pub fn loop_stop_en_ch(&mut self) -> LOOP_STOP_EN_CH_W<CH_TX_LIM_SPEC> {
         LOOP_STOP_EN_CH_W::new(self, 21)
     }

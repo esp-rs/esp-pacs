@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The clear signal for read_done interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn read_done(&mut self) -> READ_DONE_W<INT_CLR_SPEC> {
         READ_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear signal for pgm_done interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn pgm_done(&mut self) -> PGM_DONE_W<INT_CLR_SPEC> {
         PGM_DONE_W::new(self, 1)
     }

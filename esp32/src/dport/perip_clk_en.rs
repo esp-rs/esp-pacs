@@ -284,163 +284,136 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn timers_clk_en(&mut self) -> TIMERS_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         TIMERS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn spi01_clk_en(&mut self) -> SPI01_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         SPI01_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_clk_en(&mut self) -> UART_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UART_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn wdg_clk_en(&mut self) -> WDG_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         WDG_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         I2S0_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_clk_en(&mut self) -> UART1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UART1_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn spi2_clk_en(&mut self) -> SPI2_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         SPI2_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_ext0_clk_en(&mut self) -> I2C0_EXT0_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         I2C0_EXT0_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn uhci0_clk_en(&mut self) -> UHCI0_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UHCI0_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         RMT_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn pcnt_clk_en(&mut self) -> PCNT_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         PCNT_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         LEDC_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn uhci1_clk_en(&mut self) -> UHCI1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UHCI1_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn timergroup_clk_en(&mut self) -> TIMERGROUP_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         TIMERGROUP_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn efuse_clk_en(&mut self) -> EFUSE_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         EFUSE_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn timergroup1_clk_en(&mut self) -> TIMERGROUP1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         TIMERGROUP1_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn spi3_clk_en(&mut self) -> SPI3_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         SPI3_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_clk_en(&mut self) -> PWM0_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         PWM0_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_ext1_clk_en(&mut self) -> I2C_EXT1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         I2C_EXT1_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    #[must_use]
     pub fn twai_clk_en(&mut self) -> TWAI_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         TWAI_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_clk_en(&mut self) -> PWM1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         PWM1_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_clk_en(&mut self) -> I2S1_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         I2S1_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_dma_clk_en(&mut self) -> SPI_DMA_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         SPI_DMA_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UART2_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    #[must_use]
     pub fn uart_mem_clk_en(&mut self) -> UART_MEM_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         UART_MEM_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_clk_en(&mut self) -> PWM2_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         PWM2_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_clk_en(&mut self) -> PWM3_CLK_EN_W<PERIP_CLK_EN_SPEC> {
         PWM3_CLK_EN_W::new(self, 26)
     }

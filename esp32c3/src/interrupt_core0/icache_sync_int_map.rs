@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_icache_sync_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn icache_sync_int_map(&mut self) -> ICACHE_SYNC_INT_MAP_W<ICACHE_SYNC_INT_MAP_SPEC> {
         ICACHE_SYNC_INT_MAP_W::new(self, 0)
     }

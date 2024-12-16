@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, WDT 's clock divider counter will be reset."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_divcnt_rst(&mut self) -> WDT_DIVCNT_RST_W<WDTCONFIG1_SPEC> {
         WDT_DIVCNT_RST_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - MWDT clock prescaler value. MWDT clock period = 12.5 ns * TIMG_WDT_CLK_PRESCALE."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC> {
         WDT_CLK_PRESCALE_W::new(self, 16)
     }

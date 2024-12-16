@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - set this bit to clear autoload-buffer inside L2-Cache. If this bit is active, autoload will not work in L2-Cache. This bit should not be active when autoload works in L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_ald_buf_clr(
         &mut self,
     ) -> L2_CACHE_ALD_BUF_CLR_W<L2_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {

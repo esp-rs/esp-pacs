@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable carrier%s.\\\\0: Bypassed\\\\1: Enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CARRIER_CFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - Configures the prescale value of PWM carrier%s clock (PC_clk), so that period of PC_clk = period of PWM_clk * (PWM_CARRIER%s_PRESCALE + 1)"]
     #[inline(always)]
-    #[must_use]
     pub fn prescale(&mut self) -> PRESCALE_W<CARRIER_CFG_SPEC> {
         PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7 - Configures carrier duty. Duty = PWM_CARRIER%s_DUTY / 8"]
     #[inline(always)]
-    #[must_use]
     pub fn duty(&mut self) -> DUTY_W<CARRIER_CFG_SPEC> {
         DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - Configures width of the first pulse. Measurement unit: Periods of the carrier."]
     #[inline(always)]
-    #[must_use]
     pub fn oshtwth(&mut self) -> OSHTWTH_W<CARRIER_CFG_SPEC> {
         OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12 - Configures whether or not to invert the output of PWM%s A and PWM%s B for this submodule.\\\\0: Normal\\\\1: Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn out_invert(&mut self) -> OUT_INVERT_W<CARRIER_CFG_SPEC> {
         OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to invert the input of PWM%s A and PWM%s B for this submodule.\\\\0: Normal\\\\1: Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn in_invert(&mut self) -> IN_INVERT_W<CARRIER_CFG_SPEC> {
         IN_INVERT_W::new(self, 13)
     }

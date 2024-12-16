@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<GPIO_MUX_SPEC> {
         SEL_W::new(self, 0)
     }

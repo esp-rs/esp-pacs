@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - reg_flash_ace1_size"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_ace1_size(&mut self) -> FLASH_ACE1_SIZE_W<FLASH_ACE1_SIZE_SPEC> {
         FLASH_ACE1_SIZE_W::new(self, 0)
     }

@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 7:11 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
-    #[must_use]
     pub fn cspi_lock_delay_time(&mut self) -> CSPI_LOCK_DELAY_TIME_W<FSM_SPEC> {
         CSPI_LOCK_DELAY_TIME_W::new(self, 7)
     }

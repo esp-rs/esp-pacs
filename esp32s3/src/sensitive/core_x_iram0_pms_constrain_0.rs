@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock corex iram0 permission configuration register"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_iram0_pms_constrain_lock(
         &mut self,
     ) -> CORE_X_IRAM0_PMS_CONSTRAIN_LOCK_W<CORE_X_IRAM0_PMS_CONSTRAIN_0_SPEC> {

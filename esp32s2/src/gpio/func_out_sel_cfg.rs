@@ -2,9 +2,9 @@
 pub type R = crate::R<FUNC_OUT_SEL_CFG_SPEC>;
 #[doc = "Register `FUNC%s_OUT_SEL_CFG` writer"]
 pub type W = crate::W<FUNC_OUT_SEL_CFG_SPEC>;
-#[doc = "Field `OUT_SEL` reader - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
+#[doc = "Field `OUT_SEL` reader - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
 pub type OUT_SEL_R = crate::FieldReader<u16>;
-#[doc = "Field `OUT_SEL` writer - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
+#[doc = "Field `OUT_SEL` writer - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
 pub type OUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 9, u16>;
 #[doc = "Field `INV_SEL` reader - 0: Do not invert the output value; 1: Invert the output value."]
 pub type INV_SEL_R = crate::BitReader;
@@ -19,7 +19,7 @@ pub type OEN_INV_SEL_R = crate::BitReader;
 #[doc = "Field `OEN_INV_SEL` writer - 0: Do not invert the output enable signal; 1: Invert the output enable signal."]
 pub type OEN_INV_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
+    #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
     #[inline(always)]
     pub fn out_sel(&self) -> OUT_SEL_R {
         OUT_SEL_R::new((self.bits & 0x01ff) as u16)
@@ -52,27 +52,23 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0&lt;=s&lt;256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
+    #[doc = "Bits 0:8 - Selection control for GPIO output n. If a value s (0<=s<256) is written to this field, the peripheral output signal s will be connected to GPIO output n. If a value 256 is written to this field, bit n of GPIO_OUT_REG/GPIO_OUT1_REG and GPIO_ENABLE_REG/GPIO_ENABLE1_REG will be selected as the output value and output enable."]
     #[inline(always)]
-    #[must_use]
     pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OUT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 9 - 0: Do not invert the output value; 1: Invert the output value."]
     #[inline(always)]
-    #[must_use]
     pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         INV_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - 0: Use output enable signal from peripheral; 1: Force the output enable signal to be sourced from bit n of GPIO_ENABLE_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OEN_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - 0: Do not invert the output enable signal; 1: Invert the output enable signal."]
     #[inline(always)]
-    #[must_use]
     pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OEN_INV_SEL_W::new(self, 11)
     }

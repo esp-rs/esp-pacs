@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_date(&mut self) -> RTC_DATE_W<DATE_SPEC> {
         RTC_DATE_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn rtc_clk_en(&mut self) -> RTC_CLK_EN_W<DATE_SPEC> {
         RTC_CLK_EN_W::new(self, 31)
     }

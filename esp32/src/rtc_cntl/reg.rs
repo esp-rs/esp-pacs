@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sck_dcap_force(&mut self) -> SCK_DCAP_FORCE_W<REG_SPEC> {
         SCK_DCAP_FORCE_W::new(self, 7)
     }
     #[doc = "Bits 8:10 - DIG_REG_DBIAS during sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_dbias_slp(&mut self) -> DIG_DBIAS_SLP_W<REG_SPEC> {
         DIG_DBIAS_SLP_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - DIG_REG_DBIAS during wakeup"]
     #[inline(always)]
-    #[must_use]
     pub fn dig_dbias_wak(&mut self) -> DIG_DBIAS_WAK_W<REG_SPEC> {
         DIG_DBIAS_WAK_W::new(self, 11)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
-    #[must_use]
     pub fn sck_dcap(&mut self) -> SCK_DCAP_W<REG_SPEC> {
         SCK_DCAP_W::new(self, 14)
     }
     #[doc = "Bits 22:24 - RTC_DBIAS during sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<REG_SPEC> {
         DBIAS_SLP_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - RTC_DBIAS during wakeup"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<REG_SPEC> {
         DBIAS_WAK_W::new(self, 25)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
-    #[must_use]
     pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<REG_SPEC> {
         DBOOST_FORCE_PD_W::new(self, 28)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<REG_SPEC> {
         DBOOST_FORCE_PU_W::new(self, 29)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    #[must_use]
     pub fn force_pd(&mut self) -> FORCE_PD_W<REG_SPEC> {
         FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - RTC_REG force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn force_pu(&mut self) -> FORCE_PU_W<REG_SPEC> {
         FORCE_PU_W::new(self, 31)
     }

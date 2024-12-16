@@ -192,103 +192,86 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable the 32 kHz crystal watchdog."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_en(&mut self) -> XTAL32K_WDT_EN_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to FPU the 32 kHz crystal watchdog clock."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_clk_fo(&mut self) -> XTAL32K_WDT_CLK_FO_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_CLK_FO_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset the 32 kHz crystal watchdog by SW."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_wdt_reset(&mut self) -> XTAL32K_WDT_RESET_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_WDT_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to FPU the external clock of 32 kHz crystal."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_ext_clk_fo(&mut self) -> XTAL32K_EXT_CLK_FO_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_EXT_CLK_FO_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to switch to the backup clock when the 32 kHz crystal is dead."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_backup(&mut self) -> XTAL32K_AUTO_BACKUP_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_BACKUP_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to restart the 32 kHz crystal automatically when the 32 kHz crystal is dead."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_restart(&mut self) -> XTAL32K_AUTO_RESTART_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_RESTART_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to switch back to 32 kHz crystal when the 32 kHz crystal is restarted."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_auto_return(&mut self) -> XTAL32K_AUTO_RETURN_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_AUTO_RETURN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set 1 to allow the software to FPD the 32 kHz crystal. Set 0 to allow the FSM to FPD the 32 kHz crystal. (R/W)"]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_xpd_force(&mut self) -> XTAL32K_XPD_FORCE_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_XPD_FORCE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Applies an internal clock to help the 32 kHz crystal to start."]
     #[inline(always)]
-    #[must_use]
     pub fn enckinit_xtal_32k(&mut self) -> ENCKINIT_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         ENCKINIT_XTAL_32K_W::new(self, 8)
     }
     #[doc = "Bit 9 - 0: single-end buffer 1: differential buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn dbuf_xtal_32k(&mut self) -> DBUF_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DBUF_XTAL_32K_W::new(self, 9)
     }
     #[doc = "Bits 10:12 - xtal_32k gm control"]
     #[inline(always)]
-    #[must_use]
     pub fn dgm_xtal_32k(&mut self) -> DGM_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DGM_XTAL_32K_W::new(self, 10)
     }
     #[doc = "Bits 13:15 - DRES_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn dres_xtal_32k(&mut self) -> DRES_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DRES_XTAL_32K_W::new(self, 13)
     }
     #[doc = "Bit 16 - XPD_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_xtal_32k(&mut self) -> XPD_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         XPD_XTAL_32K_W::new(self, 16)
     }
     #[doc = "Bits 17:19 - DAC_XTAL_32K"]
     #[inline(always)]
-    #[must_use]
     pub fn dac_xtal_32k(&mut self) -> DAC_XTAL_32K_W<EXT_XTL_CONF_SPEC> {
         DAC_XTAL_32K_W::new(self, 17)
     }
     #[doc = "Bit 23 - Selects the 32 kHz crystal clock. 0: selects the external 32 kHz clock. 1: selects clock from the RTC GPIO X32P_C."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_gpio_sel(&mut self) -> XTAL32K_GPIO_SEL_W<EXT_XTL_CONF_SPEC> {
         XTAL32K_GPIO_SEL_W::new(self, 23)
     }
     #[doc = "Bit 30 - 0: powers down XTAL at high level 1: powers down XTAL at low level"]
     #[inline(always)]
-    #[must_use]
     pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enables the GPIO to power down the crystal oscillator."]
     #[inline(always)]
-    #[must_use]
     pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_EN_W::new(self, 31)
     }

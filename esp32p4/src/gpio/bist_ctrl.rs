@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - High speed sdio pad bist out pad oe"]
     #[inline(always)]
-    #[must_use]
     pub fn bist_pad_oe(&mut self) -> BIST_PAD_OE_W<BIST_CTRL_SPEC> {
         BIST_PAD_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - High speed sdio pad bist start"]
     #[inline(always)]
-    #[must_use]
     pub fn bist_start(&mut self) -> BIST_START_W<BIST_CTRL_SPEC> {
         BIST_START_W::new(self, 1)
     }

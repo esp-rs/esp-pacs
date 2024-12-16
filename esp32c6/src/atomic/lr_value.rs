@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - backup gloable value"]
     #[inline(always)]
-    #[must_use]
     pub fn gloable_lr_value(&mut self) -> GLOABLE_LR_VALUE_W<LR_VALUE_SPEC> {
         GLOABLE_LR_VALUE_W::new(self, 0)
     }

@@ -171,7 +171,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit0_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT0_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -179,7 +178,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit1_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT1_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -187,7 +185,6 @@ impl W {
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit2_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT2_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -195,7 +192,6 @@ impl W {
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit3_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT3_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -203,7 +199,6 @@ impl W {
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit4_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT4_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -211,7 +206,6 @@ impl W {
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_unit5_refersh_en(
         &mut self,
     ) -> REG_L2_MEM_UNIT5_REFERSH_EN_W<L2_MEM_REFRESH_SPEC> {
@@ -219,7 +213,6 @@ impl W {
     }
     #[doc = "Bit 6 - Set 1 to reset l2mem_refresh_cnt"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_l2_mem_refersh_cnt_reset(
         &mut self,
     ) -> REG_L2_MEM_REFERSH_CNT_RESET_W<L2_MEM_REFRESH_SPEC> {

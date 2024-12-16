@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Fast RTC memory force no ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn fastmem_force_noiso(&mut self) -> FASTMEM_FORCE_NOISO_W<PWC_SPEC> {
         FASTMEM_FORCE_NOISO_W::new(self, 0)
     }
     #[doc = "Bit 1 - Fast RTC memory force ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn fastmem_force_iso(&mut self) -> FASTMEM_FORCE_ISO_W<PWC_SPEC> {
         FASTMEM_FORCE_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - RTC memory force no ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn slowmem_force_noiso(&mut self) -> SLOWMEM_FORCE_NOISO_W<PWC_SPEC> {
         SLOWMEM_FORCE_NOISO_W::new(self, 2)
     }
     #[doc = "Bit 3 - RTC memory force ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn slowmem_force_iso(&mut self) -> SLOWMEM_FORCE_ISO_W<PWC_SPEC> {
         SLOWMEM_FORCE_ISO_W::new(self, 3)
     }
     #[doc = "Bit 4 - rtc_peri force ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn force_iso(&mut self) -> FORCE_ISO_W<PWC_SPEC> {
         FORCE_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - rtc_peri force no ISO"]
     #[inline(always)]
-    #[must_use]
     pub fn force_noiso(&mut self) -> FORCE_NOISO_W<PWC_SPEC> {
         FORCE_NOISO_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Fast RTC memory PD following CPU, 0: fast RTC memory PD following RTC state machine"]
     #[inline(always)]
-    #[must_use]
     pub fn fastmem_folw_cpu(&mut self) -> FASTMEM_FOLW_CPU_W<PWC_SPEC> {
         FASTMEM_FOLW_CPU_W::new(self, 6)
     }
     #[doc = "Bit 7 - Fast RTC memory force PD"]
     #[inline(always)]
-    #[must_use]
     pub fn fastmem_force_lpd(&mut self) -> FASTMEM_FORCE_LPD_W<PWC_SPEC> {
         FASTMEM_FORCE_LPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Fast RTC memory force no PD"]
     #[inline(always)]
-    #[must_use]
     pub fn fastmem_force_lpu(&mut self) -> FASTMEM_FORCE_LPU_W<PWC_SPEC> {
         FASTMEM_FORCE_LPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: RTC memory PD following CPU, 0: RTC memory PD following RTC state machine"]
     #[inline(always)]
-    #[must_use]
     pub fn slowmem_folw_cpu(&mut self) -> SLOWMEM_FOLW_CPU_W<PWC_SPEC> {
         SLOWMEM_FOLW_CPU_W::new(self, 9)
     }
     #[doc = "Bit 10 - RTC memory force PD"]
     #[inline(always)]
-    #[must_use]
     pub fn slowmem_force_lpd(&mut self) -> SLOWMEM_FORCE_LPD_W<PWC_SPEC> {
         SLOWMEM_FORCE_LPD_W::new(self, 10)
     }
     #[doc = "Bit 11 - RTC memory force no PD"]
     #[inline(always)]
-    #[must_use]
     pub fn slowmem_force_lpu(&mut self) -> SLOWMEM_FORCE_LPU_W<PWC_SPEC> {
         SLOWMEM_FORCE_LPU_W::new(self, 11)
     }
     #[doc = "Bit 18 - rtc_peri force power down"]
     #[inline(always)]
-    #[must_use]
     pub fn force_pd(&mut self) -> FORCE_PD_W<PWC_SPEC> {
         FORCE_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - rtc_peri force power up"]
     #[inline(always)]
-    #[must_use]
     pub fn force_pu(&mut self) -> FORCE_PU_W<PWC_SPEC> {
         FORCE_PU_W::new(self, 19)
     }
     #[doc = "Bit 20 - enable power down rtc_peri in sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn pd_en(&mut self) -> PD_EN_W<PWC_SPEC> {
         PD_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - rtc pad force hold"]
     #[inline(always)]
-    #[must_use]
     pub fn pad_force_hold(&mut self) -> PAD_FORCE_HOLD_W<PWC_SPEC> {
         PAD_FORCE_HOLD_W::new(self, 21)
     }

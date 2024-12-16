@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:31 - Configures data value on tx bus when IDLE state."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_idle_value(&mut self) -> TX_IDLE_VALUE_W<TX_CFG1_SPEC> {
         TX_IDLE_VALUE_W::new(self, 16)
     }

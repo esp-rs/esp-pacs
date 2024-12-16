@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Pdebug record enable,set 1 to record core0 pdebug interface signal"]
     #[inline(always)]
-    #[must_use]
     pub fn core_0_rcd_recording(&mut self) -> CORE_0_RCD_RECORDING_W<CORE_0_RCD_RECORDING_SPEC> {
         CORE_0_RCD_RECORDING_W::new(self, 0)
     }

@@ -95,7 +95,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bits are used to enable the first section for autoload operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_sct0_ena(
         &mut self,
     ) -> DCACHE_AUTOLOAD_SCT0_ENA_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -103,7 +102,6 @@ impl W {
     }
     #[doc = "Bit 1 - The bits are used to enable the second section for autoload operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_sct1_ena(
         &mut self,
     ) -> DCACHE_AUTOLOAD_SCT1_ENA_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
@@ -111,31 +109,26 @@ impl W {
     }
     #[doc = "Bit 2 - The bit is used to enable and disable autoload operation. It is combined with dcache_autoload_done. 1: enable, 0: disable."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_ena(&mut self) -> DCACHE_AUTOLOAD_ENA_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
         DCACHE_AUTOLOAD_ENA_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bits are used to configure the direction of autoload. 1: descending, 0: ascending."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_order(&mut self) -> DCACHE_AUTOLOAD_ORDER_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
         DCACHE_AUTOLOAD_ORDER_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - The bits are used to configure trigger conditions for autoload. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_rqst(&mut self) -> DCACHE_AUTOLOAD_RQST_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
         DCACHE_AUTOLOAD_RQST_W::new(self, 5)
     }
     #[doc = "Bits 7:8 - The bits are used to configure the numbers of the cache block for the issuing autoload operation."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_size(&mut self) -> DCACHE_AUTOLOAD_SIZE_W<DCACHE_AUTOLOAD_CTRL_SPEC> {
         DCACHE_AUTOLOAD_SIZE_W::new(self, 7)
     }
     #[doc = "Bit 9 - The bit is used to clear autoload buffer in dcache."]
     #[inline(always)]
-    #[must_use]
     pub fn dcache_autoload_buffer_clear(
         &mut self,
     ) -> DCACHE_AUTOLOAD_BUFFER_CLEAR_W<DCACHE_AUTOLOAD_CTRL_SPEC> {

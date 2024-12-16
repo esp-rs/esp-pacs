@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn coex_pti(&mut self) -> COEX_PTI_W<COEX_PTI_SPEC> {
         COEX_PTI_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    #[must_use]
     pub fn coex_ack_pti(&mut self) -> COEX_ACK_PTI_W<COEX_PTI_SPEC> {
         COEX_ACK_PTI_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn close_rf_sel(&mut self) -> CLOSE_RF_SEL_W<COEX_PTI_SPEC> {
         CLOSE_RF_SEL_W::new(self, 8)
     }

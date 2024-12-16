@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - pad comp dref"]
     #[inline(always)]
-    #[must_use]
     pub fn dref_comp0(&mut self) -> DREF_COMP0_W<PAD_COMP0_SPEC> {
         DREF_COMP0_W::new(self, 0)
     }
     #[doc = "Bit 3 - pad comp mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mode_comp0(&mut self) -> MODE_COMP0_W<PAD_COMP0_SPEC> {
         MODE_COMP0_W::new(self, 3)
     }
     #[doc = "Bit 4 - pad comp xpd"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_comp0(&mut self) -> XPD_COMP0_W<PAD_COMP0_SPEC> {
         XPD_COMP0_W::new(self, 4)
     }

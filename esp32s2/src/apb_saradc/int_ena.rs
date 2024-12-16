@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - Enable bit of APB_SARADC_ADC2_THRES_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_thres(&mut self) -> ADC2_THRES_W<INT_ENA_SPEC> {
         ADC2_THRES_W::new(self, 28)
     }
     #[doc = "Bit 29 - Enable bit of APB_SARADC_ADC1_THRES_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_thres(&mut self) -> ADC1_THRES_W<INT_ENA_SPEC> {
         ADC1_THRES_W::new(self, 29)
     }
     #[doc = "Bit 30 - Enable bit of APB_SARADC_ADC2_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_ENA_SPEC> {
         ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable bit of APB_SARADC_ADC1_DONE_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_ENA_SPEC> {
         ADC1_DONE_W::new(self, 31)
     }

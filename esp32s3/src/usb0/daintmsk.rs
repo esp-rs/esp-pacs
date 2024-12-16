@@ -138,7 +138,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `INEPMSK0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk(&mut self, n: u8) -> INEPMSK_W<DAINTMSK_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 7][n as usize];
@@ -146,43 +145,36 @@ impl W {
     }
     #[doc = "Bit 0 - INEPMSK0"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk0(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 0)
     }
     #[doc = "Bit 1 - INEPMSK1"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk1(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 1)
     }
     #[doc = "Bit 2 - INEPMSK2"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk2(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 2)
     }
     #[doc = "Bit 3 - INEPMSK3"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk3(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 3)
     }
     #[doc = "Bit 4 - INEPMSK4"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk4(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 4)
     }
     #[doc = "Bit 5 - INEPMSK5"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk5(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 5)
     }
     #[doc = "Bit 6 - INEPMSK6"]
     #[inline(always)]
-    #[must_use]
     pub fn inepmsk6(&mut self) -> INEPMSK_W<DAINTMSK_SPEC> {
         INEPMSK_W::new(self, 6)
     }
@@ -190,7 +182,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OUTEPMSK0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk(&mut self, n: u8) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 7][n as usize];
@@ -198,43 +189,36 @@ impl W {
     }
     #[doc = "Bit 16 - OUTEPMSK0"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk0(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 16)
     }
     #[doc = "Bit 17 - OUTEPMSK1"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk1(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 17)
     }
     #[doc = "Bit 18 - OUTEPMSK2"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk2(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 18)
     }
     #[doc = "Bit 19 - OUTEPMSK3"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk3(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 19)
     }
     #[doc = "Bit 20 - OUTEPMSK4"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk4(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 20)
     }
     #[doc = "Bit 21 - OUTEPMSK5"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk5(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 21)
     }
     #[doc = "Bit 22 - OUTEPMSK6"]
     #[inline(always)]
-    #[must_use]
     pub fn outepmsk6(&mut self) -> OUTEPMSK_W<DAINTMSK_SPEC> {
         OUTEPMSK_W::new(self, 22)
     }

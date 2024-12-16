@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - This register is used to select peripheral for Tx channel 0. 0:SPI2. 1: SPI3. 2: UHCI0. 3: I2S0. 4: I2S1. 5: LCD_CAM. 6: AES. 7: SHA. 8: ADC_DAC. 9: RMT."]
     #[inline(always)]
-    #[must_use]
     pub fn peri_out_sel(&mut self) -> PERI_OUT_SEL_W<OUT_PERI_SEL_SPEC> {
         PERI_OUT_SEL_W::new(self, 0)
     }

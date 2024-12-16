@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - The bits are used to configure the length for manual pre-load operation. It should be combined with PRO_DCACHE_PRELOAD_ADDR_REG.."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_preload_size(
         &mut self,
     ) -> PRO_DCACHE_PRELOAD_SIZE_W<PRO_DCACHE_PRELOAD_SIZE_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bit 10 - The bits are used to configure the direction of manual pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_preload_order(
         &mut self,
     ) -> PRO_DCACHE_PRELOAD_ORDER_W<PRO_DCACHE_PRELOAD_SIZE_SPEC> {

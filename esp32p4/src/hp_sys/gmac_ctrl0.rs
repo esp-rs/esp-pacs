@@ -68,19 +68,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sbd_flowctrl(&mut self) -> SBD_FLOWCTRL_W<GMAC_CTRL0_SPEC> {
         SBD_FLOWCTRL_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_intf_sel(&mut self) -> PHY_INTF_SEL_W<GMAC_CTRL0_SPEC> {
         PHY_INTF_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn gmac_mem_clk_force_on(&mut self) -> GMAC_MEM_CLK_FORCE_ON_W<GMAC_CTRL0_SPEC> {
         GMAC_MEM_CLK_FORCE_ON_W::new(self, 5)
     }

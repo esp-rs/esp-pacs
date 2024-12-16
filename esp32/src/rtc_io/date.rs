@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - date"]
     #[inline(always)]
-    #[must_use]
     pub fn io_date(&mut self) -> IO_DATE_W<DATE_SPEC> {
         IO_DATE_W::new(self, 0)
     }

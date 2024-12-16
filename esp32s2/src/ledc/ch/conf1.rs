@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the changing step scale of duty on channel %s."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_scale(&mut self) -> DUTY_SCALE_W<CONF1_SPEC> {
         DUTY_SCALE_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - The duty will change every LEDC_DUTY_CYCLE_CH%s on channel %s."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<CONF1_SPEC> {
         DUTY_CYCLE_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - This register is used to control the number of times the duty cycle will be changed."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_num(&mut self) -> DUTY_NUM_W<CONF1_SPEC> {
         DUTY_NUM_W::new(self, 20)
     }
     #[doc = "Bit 30 - This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase. 0: Decrease."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_inc(&mut self) -> DUTY_INC_W<CONF1_SPEC> {
         DUTY_INC_W::new(self, 30)
     }
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_start(&mut self) -> DUTY_START_W<CONF1_SPEC> {
         DUTY_START_W::new(self, 31)
     }

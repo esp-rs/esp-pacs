@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_tx_div_x(&mut self) -> I2S2_TX_DIV_X_W<PERI_CLK_CTRL19_SPEC> {
         I2S2_TX_DIV_X_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_tx_div_y(&mut self) -> I2S2_TX_DIV_Y_W<PERI_CLK_CTRL19_SPEC> {
         I2S2_TX_DIV_Y_W::new(self, 9)
     }
     #[doc = "Bits 18:26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_tx_div_z(&mut self) -> I2S2_TX_DIV_Z_W<PERI_CLK_CTRL19_SPEC> {
         I2S2_TX_DIV_Z_W::new(self, 18)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_tx_div_yn1(&mut self) -> I2S2_TX_DIV_YN1_W<PERI_CLK_CTRL19_SPEC> {
         I2S2_TX_DIV_YN1_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_mst_clk_sel(&mut self) -> I2S2_MST_CLK_SEL_W<PERI_CLK_CTRL19_SPEC> {
         I2S2_MST_CLK_SEL_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_clk_src_sel(&mut self) -> LCD_CLK_SRC_SEL_W<PERI_CLK_CTRL19_SPEC> {
         LCD_CLK_SRC_SEL_W::new(self, 29)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_clk_en(&mut self) -> LCD_CLK_EN_W<PERI_CLK_CTRL19_SPEC> {
         LCD_CLK_EN_W::new(self, 31)
     }

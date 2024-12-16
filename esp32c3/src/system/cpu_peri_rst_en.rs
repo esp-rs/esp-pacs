@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - reg_rst_en_assist_debug"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_assist_debug(&mut self) -> RST_EN_ASSIST_DEBUG_W<CPU_PERI_RST_EN_SPEC> {
         RST_EN_ASSIST_DEBUG_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_rst_en_dedicated_gpio"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<CPU_PERI_RST_EN_SPEC> {
         RST_EN_DEDICATED_GPIO_W::new(self, 7)
     }

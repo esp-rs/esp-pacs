@@ -93,7 +93,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_mode(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_MODE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -101,7 +100,6 @@ impl W {
     }
     #[doc = "Bits 1:2 - Reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_step(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_STEP_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -109,7 +107,6 @@ impl W {
     }
     #[doc = "Bit 3 - The bits are used to configure the direction of conditional pre-load operation. 1: descending, 0: ascending."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_order(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_ORDER_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -117,7 +114,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - The bits are used to configure trigger conditions for conditional pre-load. 0/3: cache miss, 1: cache hit, 2: both cache miss and hit."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_rqst(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_RQST_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -125,7 +121,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - The bits are used to configure the numbers of the cache block for the issuing conditional pre-load operation."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_size(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_SIZE_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -133,7 +128,6 @@ impl W {
     }
     #[doc = "Bit 8 - The bits are used to enable the second section for conditional pre-load operation."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_sct0_ena(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_SCT0_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {
@@ -141,7 +135,6 @@ impl W {
     }
     #[doc = "Bit 9 - The bits are used to enable the first section for conditional pre-load operation."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_icache_autoload_sct1_ena(
         &mut self,
     ) -> PRO_ICACHE_AUTOLOAD_SCT1_ENA_W<PRO_ICACHE_AUTOLOAD_CFG_SPEC> {

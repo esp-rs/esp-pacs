@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_CACHE_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn cache_intr_map(&mut self) -> CACHE_INTR_MAP_W<CACHE_INTR_MAP_SPEC> {
         CACHE_INTR_MAP_W::new(self, 0)
     }

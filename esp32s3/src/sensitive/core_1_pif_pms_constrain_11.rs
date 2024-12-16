@@ -48,7 +48,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - RTCSlow_0 memory split address in world 0 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_spltaddr_world_0(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_0_W<CORE_1_PIF_PMS_CONSTRAIN_11_SPEC>
@@ -57,7 +56,6 @@ impl W {
     }
     #[doc = "Bits 11:21 - RTCSlow_0 memory split address in world 1 for core1."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_pif_pms_constrain_rtcslow_0_spltaddr_world_1(
         &mut self,
     ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCSLOW_0_SPLTADDR_WORLD_1_W<CORE_1_PIF_PMS_CONSTRAIN_11_SPEC>

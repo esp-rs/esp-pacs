@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_spi_intr_1_map"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_intr_1_map(&mut self) -> SPI_INTR_1_MAP_W<SPI_INTR_1_MAP_SPEC> {
         SPI_INTR_1_MAP_W::new(self, 0)
     }

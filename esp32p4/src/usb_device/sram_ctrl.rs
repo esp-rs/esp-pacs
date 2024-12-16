@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Control signals"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_aux_ctrl(&mut self) -> MEM_AUX_CTRL_W<SRAM_CTRL_SPEC> {
         MEM_AUX_CTRL_W::new(self, 0)
     }

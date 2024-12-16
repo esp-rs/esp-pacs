@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<SAR_READ_CTRL2_SPEC> {
         SAR2_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - sample cycles for SAR ADC2"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_sample_cycle(&mut self) -> SAR2_SAMPLE_CYCLE_W<SAR_READ_CTRL2_SPEC> {
         SAR2_SAMPLE_CYCLE_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - 00: for 9-bit width 01: for 10-bit width 10: for 11-bit width 11: for 12-bit width"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_sample_bit(&mut self) -> SAR2_SAMPLE_BIT_W<SAR_READ_CTRL2_SPEC> {
         SAR2_SAMPLE_BIT_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<SAR_READ_CTRL2_SPEC> {
         SAR2_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<SAR_READ_CTRL2_SPEC> {
         SAR2_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_pwdet_force(&mut self) -> SAR2_PWDET_FORCE_W<SAR_READ_CTRL2_SPEC> {
         SAR2_PWDET_FORCE_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: SAR ADC2 controlled by DIG ADC2 CTRL or PWDET CTRL 0: SAR ADC2 controlled by RTC ADC2 CTRL"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_dig_force(&mut self) -> SAR2_DIG_FORCE_W<SAR_READ_CTRL2_SPEC> {
         SAR2_DIG_FORCE_W::new(self, 28)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<SAR_READ_CTRL2_SPEC> {
         SAR2_DATA_INV_W::new(self, 29)
     }

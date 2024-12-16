@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map ASSIST_DEBUG_INTR interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_assist_debug_intr_map(
         &mut self,
     ) -> PRO_ASSIST_DEBUG_INTR_MAP_W<PRO_ASSIST_DEBUG_INTR_MAP_SPEC> {

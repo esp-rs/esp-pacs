@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: Enable the valid data input of I2S RX TDM or PDM channel 0. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tdm_pdm_chan0_en(&mut self) -> RX_TDM_PDM_CHAN0_EN_W<RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Enable the valid data input of I2S RX TDM or PDM channel 1. 0: Disable, just input 0 in this channel."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tdm_pdm_chan1_en(&mut self) -> RX_TDM_PDM_CHAN1_EN_W<RX_TDM_CTRL_SPEC> {
         RX_TDM_PDM_CHAN1_EN_W::new(self, 1)
     }
     #[doc = "Bits 16:19 - The total channel number of I2S TX TDM mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_tdm_tot_chan_num(&mut self) -> RX_TDM_TOT_CHAN_NUM_W<RX_TDM_CTRL_SPEC> {
         RX_TDM_TOT_CHAN_NUM_W::new(self, 16)
     }

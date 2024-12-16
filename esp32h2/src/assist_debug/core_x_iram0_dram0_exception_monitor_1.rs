@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - reg_core_x_iram0_dram0_limit_cycle_1"]
     #[inline(always)]
-    #[must_use]
     pub fn core_x_iram0_dram0_limit_cycle_1(
         &mut self,
     ) -> CORE_X_IRAM0_DRAM0_LIMIT_CYCLE_1_W<CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_1_SPEC> {

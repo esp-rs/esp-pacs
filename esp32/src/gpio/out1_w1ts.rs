@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - GPIO32~39 output value write 1 to set"]
     #[inline(always)]
-    #[must_use]
     pub fn out1_data_w1ts(&mut self) -> OUT1_DATA_W1TS_W<OUT1_W1TS_SPEC> {
         OUT1_DATA_W1TS_W::new(self, 0)
     }

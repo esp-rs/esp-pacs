@@ -27,7 +27,6 @@ impl core::fmt::Debug for crate::generic::Reg<HOST_SLCHOST_TOKEN_CON_SPEC> {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token0_dec(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN0_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -35,7 +34,6 @@ impl W {
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token1_dec(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN1_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -43,7 +41,6 @@ impl W {
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token0_wr(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN0_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -51,7 +48,6 @@ impl W {
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token1_wr(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN1_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -59,7 +55,6 @@ impl W {
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc1host_token0_dec(
         &mut self,
     ) -> HOST_SLC1HOST_TOKEN0_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -67,7 +62,6 @@ impl W {
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc1host_token1_dec(
         &mut self,
     ) -> HOST_SLC1HOST_TOKEN1_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -75,7 +69,6 @@ impl W {
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc1host_token0_wr(
         &mut self,
     ) -> HOST_SLC1HOST_TOKEN0_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -83,7 +76,6 @@ impl W {
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc1host_token1_wr(
         &mut self,
     ) -> HOST_SLC1HOST_TOKEN1_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
@@ -91,7 +83,6 @@ impl W {
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_len_wr(&mut self) -> HOST_SLC0HOST_LEN_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_LEN_WR_W::new(self, 8)
     }

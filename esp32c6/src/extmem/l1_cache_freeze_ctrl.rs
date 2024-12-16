@@ -138,13 +138,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - The bit is used to enable freeze operation on L1-Cache. It can be cleared by software."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_freeze_en(&mut self) -> L1_CACHE_FREEZE_EN_W<L1_CACHE_FREEZE_CTRL_SPEC> {
         L1_CACHE_FREEZE_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to configure mode of freeze operation L1-Cache. 0: a miss-access will not stuck. 1: a miss-access will stuck."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_freeze_mode(&mut self) -> L1_CACHE_FREEZE_MODE_W<L1_CACHE_FREEZE_CTRL_SPEC> {
         L1_CACHE_FREEZE_MODE_W::new(self, 17)
     }

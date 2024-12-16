@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - The threshold value of SCL_FSM state unchanged period."]
     #[inline(always)]
-    #[must_use]
     pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<SCL_ST_TIME_OUT_SPEC> {
         SCL_ST_TO_W::new(self, 0)
     }

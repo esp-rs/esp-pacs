@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_axi_awqos(&mut self) -> CH1_AXI_AWQOS_W<AXI_QOS0_SPEC> {
         CH1_AXI_AWQOS_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_axi_arqos(&mut self) -> CH1_AXI_ARQOS_W<AXI_QOS0_SPEC> {
         CH1_AXI_ARQOS_W::new(self, 4)
     }

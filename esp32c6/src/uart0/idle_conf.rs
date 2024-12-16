@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - It will produce frame end signal when receiver takes more time to receive one byte data than this register value."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_idle_thrhd(&mut self) -> RX_IDLE_THRHD_W<IDLE_CONF_SPEC> {
         RX_IDLE_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - This register is used to configure the duration time between transfers."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_idle_num(&mut self) -> TX_IDLE_NUM_W<IDLE_CONF_SPEC> {
         TX_IDLE_NUM_W::new(self, 10)
     }

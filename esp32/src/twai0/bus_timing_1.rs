@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The width of PBS1."]
     #[inline(always)]
-    #[must_use]
     pub fn time_seg1(&mut self) -> TIME_SEG1_W<BUS_TIMING_1_SPEC> {
         TIME_SEG1_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - The width of PBS2."]
     #[inline(always)]
-    #[must_use]
     pub fn time_seg2(&mut self) -> TIME_SEG2_W<BUS_TIMING_1_SPEC> {
         TIME_SEG2_W::new(self, 4)
     }
     #[doc = "Bit 7 - The number of sample points. 0: the bus is sampled once; 1: the bus is sampled three times"]
     #[inline(always)]
-    #[must_use]
     pub fn time_samp(&mut self) -> TIME_SAMP_W<BUS_TIMING_1_SPEC> {
         TIME_SAMP_W::new(self, 7)
     }

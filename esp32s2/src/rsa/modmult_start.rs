@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<MODMULT_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to start the modular multiplication."]
     #[inline(always)]
-    #[must_use]
     pub fn modmult_start(&mut self) -> MODMULT_START_W<MODMULT_START_SPEC> {
         MODMULT_START_W::new(self, 0)
     }

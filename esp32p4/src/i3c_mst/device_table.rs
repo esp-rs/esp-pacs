@@ -50,13 +50,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dct_daa_init_index(&mut self) -> REG_DCT_DAA_INIT_INDEX_W<DEVICE_TABLE_SPEC> {
         REG_DCT_DAA_INIT_INDEX_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dat_daa_init_index(&mut self) -> REG_DAT_DAA_INIT_INDEX_W<DEVICE_TABLE_SPEC> {
         REG_DAT_DAA_INIT_INDEX_W::new(self, 4)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map timer_int2 interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_int2_map(&mut self) -> TIMER_INT2_MAP_W<TIMER_INT2_MAP_SPEC> {
         TIMER_INT2_MAP_W::new(self, 0)
     }

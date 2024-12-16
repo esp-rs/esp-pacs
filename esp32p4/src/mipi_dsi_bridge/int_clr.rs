@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - write 1 to this bit to clear dpi_underrun_int_raw field of MIPI_DSI_BRG_INT_RAW_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn underrun(&mut self) -> UNDERRUN_W<INT_CLR_SPEC> {
         UNDERRUN_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_edma_clk_on"]
     #[inline(always)]
-    #[must_use]
     pub fn edma_clk_on(&mut self) -> EDMA_CLK_ON_W<EDMA_CTRL_SPEC> {
         EDMA_CLK_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_edma_reset"]
     #[inline(always)]
-    #[must_use]
     pub fn edma_reset(&mut self) -> EDMA_RESET_W<EDMA_CTRL_SPEC> {
         EDMA_RESET_W::new(self, 1)
     }

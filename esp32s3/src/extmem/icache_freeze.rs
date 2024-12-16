@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable icache freeze mode"]
     #[inline(always)]
-    #[must_use]
     pub fn ena(&mut self) -> ENA_W<ICACHE_FREEZE_SPEC> {
         ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to configure freeze mode, 0: assert busy if CPU miss 1: assert hit if CPU miss"]
     #[inline(always)]
-    #[must_use]
     pub fn mode(&mut self) -> MODE_W<ICACHE_FREEZE_SPEC> {
         MODE_W::new(self, 1)
     }

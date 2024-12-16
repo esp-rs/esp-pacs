@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock cache data array registers."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_dataarray_connect_lock(
         &mut self,
     ) -> CACHE_DATAARRAY_CONNECT_LOCK_W<CACHE_DATAARRAY_CONNECT_0_SPEC> {

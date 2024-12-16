@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - the start address of writing logging message"]
     #[inline(always)]
-    #[must_use]
     pub fn log_mem_start(&mut self) -> LOG_MEM_START_W<LOG_MEM_START_SPEC> {
         LOG_MEM_START_W::new(self, 0)
     }

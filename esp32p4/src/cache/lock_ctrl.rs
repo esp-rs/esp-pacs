@@ -52,19 +52,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable lock operation. It will be cleared by hardware after lock operation done. Note that (1) this bit and unlock_ena bit are mutually exclusive, that is, those bits can not be set to 1 at the same time. (2) lock operation can be applied on LL1-ICache, L1-DCache and L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn lock_ena(&mut self) -> LOCK_ENA_W<LOCK_CTRL_SPEC> {
         LOCK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable unlock operation. It will be cleared by hardware after unlock operation done. Note that (1) this bit and lock_ena bit are mutually exclusive, that is, those bits can not be set to 1 at the same time. (2) unlock operation can be applied on L1-ICache, L1-DCache and L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn unlock_ena(&mut self) -> UNLOCK_ENA_W<LOCK_CTRL_SPEC> {
         UNLOCK_ENA_W::new(self, 1)
     }
     #[doc = "Bits 3:6 - The bit is used to set the gid of cache lock/unlock."]
     #[inline(always)]
-    #[must_use]
     pub fn lock_rgid(&mut self) -> LOCK_RGID_W<LOCK_CTRL_SPEC> {
         LOCK_RGID_W::new(self, 3)
     }

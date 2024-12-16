@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_h264_reg_int_map(&mut self) -> CORE0_H264_REG_INT_MAP_W<H264_REG_INT_MAP_SPEC> {
         CORE0_H264_REG_INT_MAP_W::new(self, 0)
     }

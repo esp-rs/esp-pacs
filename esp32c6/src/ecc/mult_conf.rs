@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<MULT_CONF_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to reset ECC Accelerator."]
     #[inline(always)]
-    #[must_use]
     pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC> {
         RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
     #[inline(always)]
-    #[must_use]
     pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC> {
         KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC> {
         SECURITY_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to force on register clock gate."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC> {
         CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Division mode. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Reserved. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode."]
     #[inline(always)]
-    #[must_use]
     pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC> {
         WORK_MODE_W::new(self, 5)
     }
     #[doc = "Bit 31 - ECC memory clock gate force on register"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<MULT_CONF_SPEC> {
         MEM_CLOCK_GATE_FORCE_ON_W::new(self, 31)
     }

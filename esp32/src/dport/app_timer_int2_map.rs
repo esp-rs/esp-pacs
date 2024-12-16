@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_timer_int2_map(&mut self) -> APP_TIMER_INT2_MAP_W<APP_TIMER_INT2_MAP_SPEC> {
         APP_TIMER_INT2_MAP_W::new(self, 0)
     }

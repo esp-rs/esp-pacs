@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - internal_sram_usage_lock"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_usage_lock(
         &mut self,
     ) -> INTERNAL_SRAM_USAGE_LOCK_W<INTERNAL_SRAM_USAGE_0_SPEC> {

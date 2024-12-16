@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    #[must_use]
     pub fn mps(&mut self) -> MPS_W<CHAR_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bits 11:14"]
     #[inline(always)]
-    #[must_use]
     pub fn epnum(&mut self) -> EPNUM_W<CHAR_SPEC> {
         EPNUM_W::new(self, 11)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn epdir(&mut self) -> EPDIR_W<CHAR_SPEC> {
         EPDIR_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn lspddev(&mut self) -> LSPDDEV_W<CHAR_SPEC> {
         LSPDDEV_W::new(self, 17)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    #[must_use]
     pub fn eptype(&mut self) -> EPTYPE_W<CHAR_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    #[must_use]
     pub fn ec(&mut self) -> EC_W<CHAR_SPEC> {
         EC_W::new(self, 21)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
-    #[must_use]
     pub fn devaddr(&mut self) -> DEVADDR_W<CHAR_SPEC> {
         DEVADDR_W::new(self, 22)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    #[must_use]
     pub fn oddfrm(&mut self) -> ODDFRM_W<CHAR_SPEC> {
         ODDFRM_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    #[must_use]
     pub fn chdis(&mut self) -> CHDIS_W<CHAR_SPEC> {
         CHDIS_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn chena(&mut self) -> CHENA_W<CHAR_SPEC> {
         CHENA_W::new(self, 31)
     }

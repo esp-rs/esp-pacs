@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures setup time for efuse program."]
     #[inline(always)]
-    #[must_use]
     pub fn tsup_a(&mut self) -> TSUP_A_W<WR_TIM_CONF1_SPEC> {
         TSUP_A_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
-    #[must_use]
     pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<WR_TIM_CONF1_SPEC> {
         PWR_ON_NUM_W::new(self, 8)
     }

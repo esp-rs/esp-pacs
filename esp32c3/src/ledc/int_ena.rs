@@ -169,7 +169,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_ovf(&mut self, n: u8) -> TIMER_OVF_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
@@ -177,25 +176,21 @@ impl W {
     }
     #[doc = "Bit 0 - The interrupt enable bit for the TIMER0_OVF interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn timer0_ovf(&mut self) -> TIMER_OVF_W<INT_ENA_SPEC> {
         TIMER_OVF_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the TIMER1_OVF interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn timer1_ovf(&mut self) -> TIMER_OVF_W<INT_ENA_SPEC> {
         TIMER_OVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the TIMER2_OVF interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn timer2_ovf(&mut self) -> TIMER_OVF_W<INT_ENA_SPEC> {
         TIMER_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the TIMER3_OVF interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn timer3_ovf(&mut self) -> TIMER_OVF_W<INT_ENA_SPEC> {
         TIMER_OVF_W::new(self, 3)
     }
@@ -203,7 +198,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch(&mut self, n: u8) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 6][n as usize];
@@ -211,37 +205,31 @@ impl W {
     }
     #[doc = "Bit 4 - The interrupt enable bit for the DUTY_CHNG_END_CH0 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch0(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 4)
     }
     #[doc = "Bit 5 - The interrupt enable bit for the DUTY_CHNG_END_CH1 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch1(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 5)
     }
     #[doc = "Bit 6 - The interrupt enable bit for the DUTY_CHNG_END_CH2 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch2(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 6)
     }
     #[doc = "Bit 7 - The interrupt enable bit for the DUTY_CHNG_END_CH3 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch3(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 7)
     }
     #[doc = "Bit 8 - The interrupt enable bit for the DUTY_CHNG_END_CH4 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch4(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 8)
     }
     #[doc = "Bit 9 - The interrupt enable bit for the DUTY_CHNG_END_CH5 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch5(&mut self) -> DUTY_CHNG_END_CH_W<INT_ENA_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 9)
     }
@@ -249,7 +237,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch(&mut self, n: u8) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 6][n as usize];
@@ -257,37 +244,31 @@ impl W {
     }
     #[doc = "Bit 10 - The interrupt enable bit for the OVF_CNT_CH0 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch0(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 10)
     }
     #[doc = "Bit 11 - The interrupt enable bit for the OVF_CNT_CH1 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch1(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 11)
     }
     #[doc = "Bit 12 - The interrupt enable bit for the OVF_CNT_CH2 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch2(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 12)
     }
     #[doc = "Bit 13 - The interrupt enable bit for the OVF_CNT_CH3 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch3(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 13)
     }
     #[doc = "Bit 14 - The interrupt enable bit for the OVF_CNT_CH4 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch4(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 14)
     }
     #[doc = "Bit 15 - The interrupt enable bit for the OVF_CNT_CH5 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch5(&mut self) -> OVF_CNT_CH_W<INT_ENA_SPEC> {
         OVF_CNT_CH_W::new(self, 15)
     }

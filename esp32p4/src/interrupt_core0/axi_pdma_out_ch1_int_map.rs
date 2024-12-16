@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_axi_pdma_out_ch1_int_map(
         &mut self,
     ) -> CORE0_AXI_PDMA_OUT_CH1_INT_MAP_W<AXI_PDMA_OUT_CH1_INT_MAP_SPEC> {

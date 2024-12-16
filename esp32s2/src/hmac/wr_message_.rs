@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<WR_MESSAGE__SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Store the %sth 32-bit of message."]
     #[inline(always)]
-    #[must_use]
     pub fn wdata(&mut self) -> WDATA_W<WR_MESSAGE__SPEC> {
         WDATA_W::new(self, 0)
     }

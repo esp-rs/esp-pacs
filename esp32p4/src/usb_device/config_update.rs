@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<CONFIG_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to this register would update the value of configure registers from APB clock domain to 48MHz clock domain."]
     #[inline(always)]
-    #[must_use]
     pub fn config_update(&mut self) -> CONFIG_UPDATE_W<CONFIG_UPDATE_SPEC> {
         CONFIG_UPDATE_W::new(self, 0)
     }

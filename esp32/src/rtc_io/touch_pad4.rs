@@ -164,91 +164,76 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - connect the rtc pad input to digital pad input Ó0Ó is availbale.MTCK"]
     #[inline(always)]
-    #[must_use]
     pub fn to_gpio(&mut self) -> TO_GPIO_W<TOUCH_PAD4_SPEC> {
         TO_GPIO_W::new(self, 12)
     }
     #[doc = "Bit 13 - the input enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<TOUCH_PAD4_SPEC> {
         FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - the output enable of the pad in sleep status"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_oe(&mut self) -> SLP_OE_W<TOUCH_PAD4_SPEC> {
         SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_ie(&mut self) -> SLP_IE_W<TOUCH_PAD4_SPEC> {
         SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<TOUCH_PAD4_SPEC> {
         SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_sel(&mut self) -> FUN_SEL_W<TOUCH_PAD4_SPEC> {
         FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    #[must_use]
     pub fn mux_sel(&mut self) -> MUX_SEL_W<TOUCH_PAD4_SPEC> {
         MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - touch sensor power on."]
     #[inline(always)]
-    #[must_use]
     pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD4_SPEC> {
         XPD_W::new(self, 20)
     }
     #[doc = "Bit 21 - default touch sensor tie option. 0: tie low 1: tie high."]
     #[inline(always)]
-    #[must_use]
     pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD4_SPEC> {
         TIE_OPT_W::new(self, 21)
     }
     #[doc = "Bit 22 - start touch sensor."]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> START_W<TOUCH_PAD4_SPEC> {
         START_W::new(self, 22)
     }
     #[doc = "Bits 23:25 - touch sensor slope control. 3-bit for each touch panel default 100."]
     #[inline(always)]
-    #[must_use]
     pub fn dac(&mut self) -> DAC_W<TOUCH_PAD4_SPEC> {
         DAC_W::new(self, 23)
     }
     #[doc = "Bit 27 - the pull up enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn rue(&mut self) -> RUE_W<TOUCH_PAD4_SPEC> {
         RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - the pull down enable of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn rde(&mut self) -> RDE_W<TOUCH_PAD4_SPEC> {
         RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - the driver strength of the pad"]
     #[inline(always)]
-    #[must_use]
     pub fn drv(&mut self) -> DRV_W<TOUCH_PAD4_SPEC> {
         DRV_W::new(self, 29)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    #[must_use]
     pub fn hold(&mut self) -> HOLD_W<TOUCH_PAD4_SPEC> {
         HOLD_W::new(self, 31)
     }

@@ -48,7 +48,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable preload operation on L1-ICache3. It will be cleared by hardware automatically after preload operation is done."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_icache3_preload_ena(
         &mut self,
     ) -> L1_ICACHE3_PRELOAD_ENA_W<L1_ICACHE3_PRELOAD_CTRL_SPEC> {

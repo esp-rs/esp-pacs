@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_lslp_mem_pd_mask"]
     #[inline(always)]
-    #[must_use]
     pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<MEM_PD_MASK_SPEC> {
         LSLP_MEM_PD_MASK_W::new(self, 0)
     }

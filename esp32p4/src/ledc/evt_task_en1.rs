@@ -358,175 +358,146 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable ledc_timer0_res_update task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer0_res_update_en(&mut self) -> TASK_TIMER0_RES_UPDATE_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER0_RES_UPDATE_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable ledc_timer1_res_update task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer1_res_update_en(&mut self) -> TASK_TIMER1_RES_UPDATE_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER1_RES_UPDATE_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable ledc_timer2_res_update task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer2_res_update_en(&mut self) -> TASK_TIMER2_RES_UPDATE_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER2_RES_UPDATE_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable ledc_timer3_res_update task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer3_res_update_en(&mut self) -> TASK_TIMER3_RES_UPDATE_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER3_RES_UPDATE_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable ledc_timer0_cap task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer0_cap_en(&mut self) -> TASK_TIMER0_CAP_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER0_CAP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable ledc_timer1_cap task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer1_cap_en(&mut self) -> TASK_TIMER1_CAP_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER1_CAP_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable ledc_timer2_cap task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer2_cap_en(&mut self) -> TASK_TIMER2_CAP_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER2_CAP_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable ledc_timer3_cap task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer3_cap_en(&mut self) -> TASK_TIMER3_CAP_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER3_CAP_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable ledc_ch0_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch0_en(&mut self) -> TASK_SIG_OUT_DIS_CH0_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH0_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable ledc_ch1_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch1_en(&mut self) -> TASK_SIG_OUT_DIS_CH1_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH1_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable ledc_ch2_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch2_en(&mut self) -> TASK_SIG_OUT_DIS_CH2_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH2_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable ledc_ch3_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch3_en(&mut self) -> TASK_SIG_OUT_DIS_CH3_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH3_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable ledc_ch4_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch4_en(&mut self) -> TASK_SIG_OUT_DIS_CH4_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH4_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable ledc_ch5_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch5_en(&mut self) -> TASK_SIG_OUT_DIS_CH5_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH5_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable ledc_ch6_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch6_en(&mut self) -> TASK_SIG_OUT_DIS_CH6_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH6_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable ledc_ch7_sig_out_dis task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_sig_out_dis_ch7_en(&mut self) -> TASK_SIG_OUT_DIS_CH7_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_SIG_OUT_DIS_CH7_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable ledc_ch0_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch0_en(&mut self) -> TASK_OVF_CNT_RST_CH0_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH0_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable ledc_ch1_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch1_en(&mut self) -> TASK_OVF_CNT_RST_CH1_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH1_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable ledc_ch2_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch2_en(&mut self) -> TASK_OVF_CNT_RST_CH2_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH2_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable ledc_ch3_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch3_en(&mut self) -> TASK_OVF_CNT_RST_CH3_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH3_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable ledc_ch4_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch4_en(&mut self) -> TASK_OVF_CNT_RST_CH4_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH4_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable ledc_ch5_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch5_en(&mut self) -> TASK_OVF_CNT_RST_CH5_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH5_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to enable ledc_ch6_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch6_en(&mut self) -> TASK_OVF_CNT_RST_CH6_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH6_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to enable ledc_ch7_ovf_cnt_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_ovf_cnt_rst_ch7_en(&mut self) -> TASK_OVF_CNT_RST_CH7_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_OVF_CNT_RST_CH7_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to enable ledc_timer0_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer0_rst_en(&mut self) -> TASK_TIMER0_RST_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER0_RST_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable ledc_timer1_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer1_rst_en(&mut self) -> TASK_TIMER1_RST_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER1_RST_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to enable ledc_timer2_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer2_rst_en(&mut self) -> TASK_TIMER2_RST_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER2_RST_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not to enable ledc_timer3_rst task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer3_rst_en(&mut self) -> TASK_TIMER3_RST_EN_W<EVT_TASK_EN1_SPEC> {
         TASK_TIMER3_RST_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable ledc_timer0_pause_resume task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer0_pause_resume_en(
         &mut self,
     ) -> TASK_TIMER0_PAUSE_RESUME_EN_W<EVT_TASK_EN1_SPEC> {
@@ -534,7 +505,6 @@ impl W {
     }
     #[doc = "Bit 29 - Configures whether or not to enable ledc_timer1_pause_resume task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer1_pause_resume_en(
         &mut self,
     ) -> TASK_TIMER1_PAUSE_RESUME_EN_W<EVT_TASK_EN1_SPEC> {
@@ -542,7 +512,6 @@ impl W {
     }
     #[doc = "Bit 30 - Configures whether or not to enable ledc_timer2_pause_resume task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer2_pause_resume_en(
         &mut self,
     ) -> TASK_TIMER2_PAUSE_RESUME_EN_W<EVT_TASK_EN1_SPEC> {
@@ -550,7 +519,6 @@ impl W {
     }
     #[doc = "Bit 31 - Configures whether or not to enable ledc_timer3_pause_resume task.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn task_timer3_pause_resume_en(
         &mut self,
     ) -> TASK_TIMER3_PAUSE_RESUME_EN_W<EVT_TASK_EN1_SPEC> {

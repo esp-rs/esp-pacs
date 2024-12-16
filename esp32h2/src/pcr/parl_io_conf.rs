@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable parl apb clock"]
     #[inline(always)]
-    #[must_use]
     pub fn parl_clk_en(&mut self) -> PARL_CLK_EN_W<PARL_IO_CONF_SPEC> {
         PARL_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset parl apb reg"]
     #[inline(always)]
-    #[must_use]
     pub fn parl_rst_en(&mut self) -> PARL_RST_EN_W<PARL_IO_CONF_SPEC> {
         PARL_RST_EN_W::new(self, 1)
     }

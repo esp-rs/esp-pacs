@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - In the master mode it must be equal to SPI_CLKCNT_N. In the slave mode it must be 0. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - In the master mode it must be floor((SPI_CLKCNT_N+1)/2-1). In the slave mode it must be 0. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 6)
     }
     #[doc = "Bits 12:17 - In the master mode it is the divider of spi_clk. So spi_clk frequency is system/(SPI_CLKDIV_PRE+1)/(SPI_CLKCNT_N+1). Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 12)
     }
     #[doc = "Bits 18:30 - In the master mode it is pre-divider of spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clkdiv_pre(&mut self) -> CLKDIV_PRE_W<CLOCK_SPEC> {
         CLKDIV_PRE_W::new(self, 18)
     }
     #[doc = "Bit 31 - In the master mode 1: spi_clk is eqaul to system 0: spi_clk is divided from system clock. Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
         CLK_EQU_SYSCLK_W::new(self, 31)
     }

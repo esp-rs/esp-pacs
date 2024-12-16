@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable ETM task function"]
     #[inline(always)]
-    #[must_use]
     pub fn out_etm_en(&mut self) -> OUT_ETM_EN_W<ETM_CONF_SPEC> {
         OUT_ETM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - when this bit is 1, dscr can be processed after receiving a task"]
     #[inline(always)]
-    #[must_use]
     pub fn out_etm_loop_en(&mut self) -> OUT_ETM_LOOP_EN_W<ETM_CONF_SPEC> {
         OUT_ETM_LOOP_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - ETM dscr_ready maximum cache numbers"]
     #[inline(always)]
-    #[must_use]
     pub fn out_dscr_task_mak(&mut self) -> OUT_DSCR_TASK_MAK_W<ETM_CONF_SPEC> {
         OUT_DSCR_TASK_MAK_W::new(self, 2)
     }

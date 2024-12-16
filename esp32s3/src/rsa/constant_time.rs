@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Controls the CONSTANT_TIME option. 0: acceleration. 1: no acceleration(by default)."]
     #[inline(always)]
-    #[must_use]
     pub fn constant_time(&mut self) -> CONSTANT_TIME_W<CONSTANT_TIME_SPEC> {
         CONSTANT_TIME_W::new(self, 0)
     }

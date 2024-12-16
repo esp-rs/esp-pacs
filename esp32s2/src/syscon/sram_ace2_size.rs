@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn sram_ace2_size(&mut self) -> SRAM_ACE2_SIZE_W<SRAM_ACE2_SIZE_SPEC> {
         SRAM_ACE2_SIZE_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits (47:32) of the first 6-byte MAC address.The MAC uses this field for filtering the received frames and inserting the MAC address in the Transmit Flow Control (Pause) Frames."]
     #[inline(always)]
-    #[must_use]
     pub fn address0_hi(&mut self) -> ADDRESS0_HI_W<EMACADDR0HIGH_SPEC> {
         ADDRESS0_HI_W::new(self, 0)
     }
     #[doc = "Bit 31 - This bit is always set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn address_enable0(&mut self) -> ADDRESS_ENABLE0_W<EMACADDR0HIGH_SPEC> {
         ADDRESS_ENABLE0_W::new(self, 31)
     }

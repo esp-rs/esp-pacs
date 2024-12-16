@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - select one of the 256 output to 40 GPIO"]
     #[inline(always)]
-    #[must_use]
     pub fn out_sel(&mut self) -> OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OUT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 9 - invert the output value if you want to revert the output value setting the value to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn inv_sel(&mut self) -> INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         INV_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - weather using the logical oen signal or not using the value setting by the register"]
     #[inline(always)]
-    #[must_use]
     pub fn oen_sel(&mut self) -> OEN_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OEN_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - invert the output enable value if you want to revert the output enable value setting the value to 1"]
     #[inline(always)]
-    #[must_use]
     pub fn oen_inv_sel(&mut self) -> OEN_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
         OEN_INV_SEL_W::new(self, 11)
     }

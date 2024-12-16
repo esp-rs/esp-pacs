@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - If you want to output clock for I2S to CLK_OUT_out1, set this register to 0x0. CLK_OUT_out1 can be found in peripheral output signals."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_out1(&mut self) -> CLK_OUT1_W<PIN_CTRL_SPEC> {
         CLK_OUT1_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - If you want to output clock for I2S to CLK_OUT_out2, set this register to 0x0. CLK_OUT_out2 can be found in peripheral output signals."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_out2(&mut self) -> CLK_OUT2_W<PIN_CTRL_SPEC> {
         CLK_OUT2_W::new(self, 4)
     }
     #[doc = "Bits 8:11 - If you want to output clock for I2S to CLK_OUT_out3, set this register to 0x0. CLK_OUT_out3 can be found in peripheral output signals."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_out3(&mut self) -> CLK_OUT3_W<PIN_CTRL_SPEC> {
         CLK_OUT3_W::new(self, 8)
     }

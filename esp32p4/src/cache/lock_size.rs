@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Those bits are used to configure the size of the lock/unlock operation, which should be used together with CACHE_LOCK_ADDR_REG"]
     #[inline(always)]
-    #[must_use]
     pub fn lock_size(&mut self) -> LOCK_SIZE_W<LOCK_SIZE_SPEC> {
         LOCK_SIZE_W::new(self, 0)
     }

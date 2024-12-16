@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to generate CPU interrupt 3. This bit needs to be reset by software in the ISR process."]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_intr_from_cpu_3(&mut self) -> CPU_INTR_FROM_CPU_3_W<CPU_INTR_FROM_CPU_3_SPEC> {
         CPU_INTR_FROM_CPU_3_W::new(self, 0)
     }

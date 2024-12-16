@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Feature_sum threshold to determine noise_std max value when vad_tag=1, equal to ((noise_std_max)>>11)^2*5"]
     #[inline(always)]
-    #[must_use]
     pub fn param_noise_std_fs_thsl(&mut self) -> PARAM_NOISE_STD_FS_THSL_W<VAD_PARAM6_SPEC> {
         PARAM_NOISE_STD_FS_THSL_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - Feature_sum threshold to determine noise_std max value when vad_tag=0, equal to ((noise_std_max)>>11)^2*5"]
     #[inline(always)]
-    #[must_use]
     pub fn param_noise_std_fs_thsh(&mut self) -> PARAM_NOISE_STD_FS_THSH_W<VAD_PARAM6_SPEC> {
         PARAM_NOISE_STD_FS_THSH_W::new(self, 16)
     }

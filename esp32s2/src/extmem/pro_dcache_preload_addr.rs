@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for manual pre-load operation. It should be combined with PRO_DCACHE_PRELOAD_SIZE_REG."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_dcache_preload_addr(
         &mut self,
     ) -> PRO_DCACHE_PRELOAD_ADDR_W<PRO_DCACHE_PRELOAD_ADDR_SPEC> {

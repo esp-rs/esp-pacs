@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_BACKUP_CLK_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_backup_icg_func_en(
         &mut self,
     ) -> HP_MODEM_BACKUP_ICG_FUNC_EN_W<HP_MODEM_BACKUP_CLK_SPEC> {

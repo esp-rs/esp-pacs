@@ -40,13 +40,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2c_ana_mast_i2c_mat_date(&mut self) -> LP_I2C_ANA_MAST_I2C_MAT_DATE_W<DATE_SPEC> {
         LP_I2C_ANA_MAST_I2C_MAT_DATE_W::new(self, 0)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_i2c_ana_mast_i2c_mat_clk_en(
         &mut self,
     ) -> LP_I2C_ANA_MAST_I2C_MAT_CLK_EN_W<DATE_SPEC> {

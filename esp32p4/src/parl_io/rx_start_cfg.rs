@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Set this bit to start rx data sampling."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_start(&mut self) -> RX_START_W<RX_START_CFG_SPEC> {
         RX_START_W::new(self, 31)
     }

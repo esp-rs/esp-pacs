@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The value of an acknowledge signal on the bus"]
     #[inline(always)]
-    #[must_use]
     pub fn ack_val(&mut self) -> ACK_VAL_W<DEBUG_STATUS_SPEC> {
         ACK_VAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - When working as a slave, the value of R/W bit received"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_rw(&mut self) -> SLAVE_RW_W<DEBUG_STATUS_SPEC> {
         SLAVE_RW_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transfer has timed out"]
     #[inline(always)]
-    #[must_use]
     pub fn timed_out(&mut self) -> TIMED_OUT_W<DEBUG_STATUS_SPEC> {
         TIMED_OUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - When working as a master, lost control of I2C bus"]
     #[inline(always)]
-    #[must_use]
     pub fn arb_lost(&mut self) -> ARB_LOST_W<DEBUG_STATUS_SPEC> {
         ARB_LOST_W::new(self, 3)
     }
     #[doc = "Bit 4 - operation is in progress"]
     #[inline(always)]
-    #[must_use]
     pub fn bus_busy(&mut self) -> BUS_BUSY_W<DEBUG_STATUS_SPEC> {
         BUS_BUSY_W::new(self, 4)
     }
     #[doc = "Bit 5 - When working as a slave, whether address was matched"]
     #[inline(always)]
-    #[must_use]
     pub fn slave_addr_match(&mut self) -> SLAVE_ADDR_MATCH_W<DEBUG_STATUS_SPEC> {
         SLAVE_ADDR_MATCH_W::new(self, 5)
     }
     #[doc = "Bit 6 - 8 bit transmit done"]
     #[inline(always)]
-    #[must_use]
     pub fn byte_trans(&mut self) -> BYTE_TRANS_W<DEBUG_STATUS_SPEC> {
         BYTE_TRANS_W::new(self, 6)
     }
     #[doc = "Bits 25:27 - state of the main state machine"]
     #[inline(always)]
-    #[must_use]
     pub fn main_state(&mut self) -> MAIN_STATE_W<DEBUG_STATUS_SPEC> {
         MAIN_STATE_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - state of SCL state machine"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_state(&mut self) -> SCL_STATE_W<DEBUG_STATUS_SPEC> {
         SCL_STATE_W::new(self, 28)
     }

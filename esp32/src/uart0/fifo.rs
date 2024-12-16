@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register stores one byte data read by rx fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_rd_byte(&mut self) -> RXFIFO_RD_BYTE_W<FIFO_SPEC> {
         RXFIFO_RD_BYTE_W::new(self, 0)
     }

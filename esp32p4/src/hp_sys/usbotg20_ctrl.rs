@@ -132,67 +132,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:14 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_mem_aux_ctrl(&mut self) -> USB_MEM_AUX_CTRL_W<USBOTG20_CTRL_SPEC> {
         USB_MEM_AUX_CTRL_W::new(self, 1)
     }
     #[doc = "Bit 15 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_suspendm(&mut self) -> PHY_SUSPENDM_W<USBOTG20_CTRL_SPEC> {
         PHY_SUSPENDM_W::new(self, 15)
     }
     #[doc = "Bit 16 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_suspend_force_en(&mut self) -> PHY_SUSPEND_FORCE_EN_W<USBOTG20_CTRL_SPEC> {
         PHY_SUSPEND_FORCE_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_rstn(&mut self) -> PHY_RSTN_W<USBOTG20_CTRL_SPEC> {
         PHY_RSTN_W::new(self, 17)
     }
     #[doc = "Bit 18 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_reset_force_en(&mut self) -> PHY_RESET_FORCE_EN_W<USBOTG20_CTRL_SPEC> {
         PHY_RESET_FORCE_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_pll_force_en(&mut self) -> PHY_PLL_FORCE_EN_W<USBOTG20_CTRL_SPEC> {
         PHY_PLL_FORCE_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn phy_pll_en(&mut self) -> PHY_PLL_EN_W<USBOTG20_CTRL_SPEC> {
         PHY_PLL_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn otg_suspendm(&mut self) -> OTG_SUSPENDM_W<USBOTG20_CTRL_SPEC> {
         OTG_SUSPENDM_W::new(self, 21)
     }
     #[doc = "Bit 22 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn otg_phy_txbitstuff_en(&mut self) -> OTG_PHY_TXBITSTUFF_EN_W<USBOTG20_CTRL_SPEC> {
         OTG_PHY_TXBITSTUFF_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn otg_phy_refclk_mode(&mut self) -> OTG_PHY_REFCLK_MODE_W<USBOTG20_CTRL_SPEC> {
         OTG_PHY_REFCLK_MODE_W::new(self, 23)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn otg_phy_bisten(&mut self) -> OTG_PHY_BISTEN_W<USBOTG20_CTRL_SPEC> {
         OTG_PHY_BISTEN_W::new(self, 24)
     }

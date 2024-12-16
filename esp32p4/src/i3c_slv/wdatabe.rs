@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<WDATABE_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn wdatabe(&mut self) -> WDATABE_W<WDATABE_SPEC> {
         WDATABE_W::new(self, 0)
     }

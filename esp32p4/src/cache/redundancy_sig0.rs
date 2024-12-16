@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are prepared for ECO."]
     #[inline(always)]
-    #[must_use]
     pub fn redcy_sig0(&mut self) -> REDCY_SIG0_W<REDUNDANCY_SIG0_SPEC> {
         REDCY_SIG0_W::new(self, 0)
     }

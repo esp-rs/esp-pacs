@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map gpio_interrupt_pro_nmi interrupt to one of core0's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio_interrupt_pro_nmi_map(
         &mut self,
     ) -> GPIO_INTERRUPT_PRO_NMI_MAP_W<GPIO_INTERRUPT_PRO_NMI_MAP_SPEC> {

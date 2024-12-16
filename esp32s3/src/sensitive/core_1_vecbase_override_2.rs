@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - world1 vecbase_override register, when core1 in world1 use this register to override vecbase register."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_vecbase_override_world1_value(
         &mut self,
     ) -> CORE_1_VECBASE_OVERRIDE_WORLD1_VALUE_W<CORE_1_VECBASE_OVERRIDE_2_SPEC> {

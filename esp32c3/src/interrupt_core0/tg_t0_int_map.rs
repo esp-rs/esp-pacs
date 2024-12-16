@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_tg_t0_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn tg_t0_int_map(&mut self) -> TG_T0_INT_MAP_W<TG_T0_INT_MAP_SPEC> {
         TG_T0_INT_MAP_W::new(self, 0)
     }

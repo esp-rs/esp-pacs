@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_touch_buf_drv(&mut self) -> TOUCH_TOUCH_BUF_DRV_W<TOUCH_ANA_PARA_SPEC> {
         TOUCH_TOUCH_BUF_DRV_W::new(self, 0)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_touch_en_cal(&mut self) -> TOUCH_TOUCH_EN_CAL_W<TOUCH_ANA_PARA_SPEC> {
         TOUCH_TOUCH_EN_CAL_W::new(self, 3)
     }
     #[doc = "Bits 4:10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_touch_dcap_cal(&mut self) -> TOUCH_TOUCH_DCAP_CAL_W<TOUCH_ANA_PARA_SPEC> {
         TOUCH_TOUCH_DCAP_CAL_W::new(self, 4)
     }

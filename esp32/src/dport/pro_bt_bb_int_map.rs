@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_bt_bb_int_map(&mut self) -> PRO_BT_BB_INT_MAP_W<PRO_BT_BB_INT_MAP_SPEC> {
         PRO_BT_BB_INT_MAP_W::new(self, 0)
     }

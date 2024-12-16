@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_ME_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to this register to start DS operation."]
     #[inline(always)]
-    #[must_use]
     pub fn set_me(&mut self) -> SET_ME_W<SET_ME_SPEC> {
         SET_ME_W::new(self, 0)
     }

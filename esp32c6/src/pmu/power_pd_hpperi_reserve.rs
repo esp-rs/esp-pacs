@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<POWER_PD_HPPERI_RESERVE_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_peri_reserve(&mut self) -> HP_PERI_RESERVE_W<POWER_PD_HPPERI_RESERVE_SPEC> {
         HP_PERI_RESERVE_W::new(self, 0)
     }

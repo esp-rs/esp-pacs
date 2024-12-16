@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - the key of super wdt"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_wkey(&mut self) -> SWD_WKEY_W<SWD_WPROTECT_SPEC> {
         SWD_WKEY_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_ledc_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_int_map(&mut self) -> LEDC_INT_MAP_W<LEDC_INT_MAP_SPEC> {
         LEDC_INT_MAP_W::new(self, 0)
     }

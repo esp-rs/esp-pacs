@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_spi_mem_reject_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_mem_reject_intr_map(
         &mut self,
     ) -> SPI_MEM_REJECT_INTR_MAP_W<SPI_MEM_REJECT_INTR_MAP_SPEC> {

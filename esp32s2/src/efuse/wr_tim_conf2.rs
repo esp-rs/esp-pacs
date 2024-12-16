@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the power outage time for VDDQ."]
     #[inline(always)]
-    #[must_use]
     pub fn pwr_off_num(&mut self) -> PWR_OFF_NUM_W<WR_TIM_CONF2_SPEC> {
         PWR_OFF_NUM_W::new(self, 0)
     }

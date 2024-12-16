@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_amp_wait1(&mut self) -> SAR_AMP_WAIT1_W<SAR_MEAS_WAIT1_SPEC> {
         SAR_AMP_WAIT1_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_amp_wait2(&mut self) -> SAR_AMP_WAIT2_W<SAR_MEAS_WAIT1_SPEC> {
         SAR_AMP_WAIT2_W::new(self, 16)
     }

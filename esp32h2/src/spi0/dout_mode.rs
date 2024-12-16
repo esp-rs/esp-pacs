@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    #[must_use]
     pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<DOUT_MODE_SPEC> {
         DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    #[must_use]
     pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<DOUT_MODE_SPEC> {
         DOUT1_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    #[must_use]
     pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<DOUT_MODE_SPEC> {
         DOUT2_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    #[must_use]
     pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<DOUT_MODE_SPEC> {
         DOUT3_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
     #[inline(always)]
-    #[must_use]
     pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<DOUT_MODE_SPEC> {
         DOUT4_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
     #[inline(always)]
-    #[must_use]
     pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<DOUT_MODE_SPEC> {
         DOUT5_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
     #[inline(always)]
-    #[must_use]
     pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<DOUT_MODE_SPEC> {
         DOUT6_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
     #[inline(always)]
-    #[must_use]
     pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<DOUT_MODE_SPEC> {
         DOUT7_MODE_W::new(self, 7)
     }
     #[doc = "Bit 8 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk"]
     #[inline(always)]
-    #[must_use]
     pub fn douts_mode(&mut self) -> DOUTS_MODE_W<DOUT_MODE_SPEC> {
         DOUTS_MODE_W::new(self, 8)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn debug_ch_num(&mut self) -> DEBUG_CH_NUM_W<GDMA_CTRL_SPEC> {
         DEBUG_CH_NUM_W::new(self, 0)
     }

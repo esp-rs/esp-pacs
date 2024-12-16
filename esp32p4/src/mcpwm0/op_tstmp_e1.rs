@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures generator%s timer stamp E1 value register"]
     #[inline(always)]
-    #[must_use]
     pub fn op_tstmp_e1(&mut self) -> OP_TSTMP_E1_W<OP_TSTMP_E1_SPEC> {
         OP_TSTMP_E1_W::new(self, 0)
     }

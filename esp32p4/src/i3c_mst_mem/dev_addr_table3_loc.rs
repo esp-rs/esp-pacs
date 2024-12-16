@@ -60,7 +60,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dat_dev3_static_addr(
         &mut self,
     ) -> REG_DAT_DEV3_STATIC_ADDR_W<DEV_ADDR_TABLE3_LOC_SPEC> {
@@ -68,7 +67,6 @@ impl W {
     }
     #[doc = "Bits 16:23 - Device Dynamic Address with parity, The MSB,bit\\[23\\], should be programmed with parity of dynamic address."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dat_dev3_dynamic_addr(
         &mut self,
     ) -> REG_DAT_DEV3_DYNAMIC_ADDR_W<DEV_ADDR_TABLE3_LOC_SPEC> {
@@ -76,7 +74,6 @@ impl W {
     }
     #[doc = "Bits 29:30 - This field is used to set the Device NACK Retry count for the particular device. If the Device NACK's for the device address, the controller automatically retries the same device until this count expires. If the Slave does not ACK for the mentioned number of retries, then controller generates an error response and move to the Halt state."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dat_dev3_nack_retry_cnt(
         &mut self,
     ) -> REG_DAT_DEV3_NACK_RETRY_CNT_W<DEV_ADDR_TABLE3_LOC_SPEC> {
@@ -84,7 +81,6 @@ impl W {
     }
     #[doc = "Bit 31 - Legacy I2C device or not. This bit should be set to 1 if the device is a legacy I2C device."]
     #[inline(always)]
-    #[must_use]
     pub fn reg_dat_dev3_i2c(&mut self) -> REG_DAT_DEV3_I2C_W<DEV_ADDR_TABLE3_LOC_SPEC> {
         REG_DAT_DEV3_I2C_W::new(self, 31)
     }

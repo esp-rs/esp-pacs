@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This field is only used to generate include file in c case. This field is useless. Please do not use this field."]
     #[inline(always)]
-    #[must_use]
     pub fn spi_xts_plain(&mut self) -> SPI_XTS_PLAIN_W<XTS_PLAIN_BASE_SPEC> {
         SPI_XTS_PLAIN_W::new(self, 0)
     }

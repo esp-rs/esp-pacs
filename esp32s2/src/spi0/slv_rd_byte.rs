@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The full-duplex or half-duplex data byte length of the last SPI transfer in slave mode. In half-duplex mode, this value is controlled by bits \\[23:20\\]."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_data_bytelen(&mut self) -> SLV_DATA_BYTELEN_W<SLV_RD_BYTE_SPEC> {
         SLV_DATA_BYTELEN_W::new(self, 0)
     }
     #[doc = "Bit 20 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in DMA controlled mode(Rd_DMA). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rddma_bytelen_en(&mut self) -> SLV_RDDMA_BYTELEN_EN_W<SLV_RD_BYTE_SPEC> {
         SLV_RDDMA_BYTELEN_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in DMA controlled mode(Wr_DMA). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrdma_bytelen_en(&mut self) -> SLV_WRDMA_BYTELEN_EN_W<SLV_RD_BYTE_SPEC> {
         SLV_WRDMA_BYTELEN_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-read-slave data length in CPU controlled mode(Rd_BUF). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rdbuf_bytelen_en(&mut self) -> SLV_RDBUF_BYTELEN_EN_W<SLV_RD_BYTE_SPEC> {
         SLV_RDBUF_BYTELEN_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: SPI_SLV_DATA_BYTELEN stores data byte length of master-write-to-slave data length in CPU controlled mode(Wr_BUF). 0: others"]
     #[inline(always)]
-    #[must_use]
     pub fn slv_wrbuf_bytelen_en(&mut self) -> SLV_WRBUF_BYTELEN_EN_W<SLV_RD_BYTE_SPEC> {
         SLV_WRBUF_BYTELEN_EN_W::new(self, 23)
     }
     #[doc = "Bits 24:27 - The magic value of BM table in master DMA seg-trans."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_seg_magic_value(&mut self) -> DMA_SEG_MAGIC_VALUE_W<SLV_RD_BYTE_SPEC> {
         DMA_SEG_MAGIC_VALUE_W::new(self, 24)
     }
     #[doc = "Bit 30 - The interrupt raw bit for the completion of Rd-DMA operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rd_dma_done(&mut self) -> SLV_RD_DMA_DONE_W<SLV_RD_BYTE_SPEC> {
         SLV_RD_DMA_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: Enable the DMA CONF phase of current seg-trans operation, which means seg-trans will start. 0: This is not seg-trans mode."]
     #[inline(always)]
-    #[must_use]
     pub fn usr_conf(&mut self) -> USR_CONF_W<SLV_RD_BYTE_SPEC> {
         USR_CONF_W::new(self, 31)
     }

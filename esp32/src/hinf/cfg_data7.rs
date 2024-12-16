@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC> {
         PIN_STATE_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    #[must_use]
     pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC> {
         CHIP_STATE_W::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC> {
         SDIO_RST_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC> {
         SDIO_IOREADY0_W::new(self, 17)
     }

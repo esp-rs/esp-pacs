@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:15 - Sets the minimal sleep cycles (using the RTC slow clock)."]
     #[inline(always)]
-    #[must_use]
     pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<TIMER5_SPEC> {
         MIN_SLP_VAL_W::new(self, 8)
     }
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcmem_wait_timer(&mut self) -> RTCMEM_WAIT_TIMER_W<TIMER5_SPEC> {
         RTCMEM_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
-    #[must_use]
     pub fn rtcmem_powerup_timer(&mut self) -> RTCMEM_POWERUP_TIMER_W<TIMER5_SPEC> {
         RTCMEM_POWERUP_TIMER_W::new(self, 25)
     }

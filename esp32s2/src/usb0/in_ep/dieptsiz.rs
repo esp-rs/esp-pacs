@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:18"]
     #[inline(always)]
-    #[must_use]
     pub fn xfersize(&mut self) -> XFERSIZE_W<DIEPTSIZ_SPEC> {
         XFERSIZE_W::new(self, 0)
     }
     #[doc = "Bits 19:28"]
     #[inline(always)]
-    #[must_use]
     pub fn pktcnt(&mut self) -> PKTCNT_W<DIEPTSIZ_SPEC> {
         PKTCNT_W::new(self, 19)
     }

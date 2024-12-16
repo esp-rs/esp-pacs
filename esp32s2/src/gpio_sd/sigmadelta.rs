@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This field is used to configure the duty cycle of sigma delta modulation output."]
     #[inline(always)]
-    #[must_use]
     pub fn in_(&mut self) -> IN_W<SIGMADELTA_SPEC> {
         IN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This field is used to set a divider value to divide APB clock."]
     #[inline(always)]
-    #[must_use]
     pub fn prescale(&mut self) -> PRESCALE_W<SIGMADELTA_SPEC> {
         PRESCALE_W::new(self, 8)
     }

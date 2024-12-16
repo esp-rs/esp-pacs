@@ -362,7 +362,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_block_tfr_done_intsignal(
         &mut self,
     ) -> CH1_ENABLE_BLOCK_TFR_DONE_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -370,7 +369,6 @@ impl W {
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_dma_tfr_done_intsignal(
         &mut self,
     ) -> CH1_ENABLE_DMA_TFR_DONE_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -378,7 +376,6 @@ impl W {
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_src_transcomp_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SRC_TRANSCOMP_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -386,7 +383,6 @@ impl W {
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_dst_transcomp_intsignal(
         &mut self,
     ) -> CH1_ENABLE_DST_TRANSCOMP_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -394,7 +390,6 @@ impl W {
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_src_dec_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SRC_DEC_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -402,7 +397,6 @@ impl W {
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_dst_dec_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_DST_DEC_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -410,7 +404,6 @@ impl W {
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_src_slv_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SRC_SLV_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -418,7 +411,6 @@ impl W {
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_dst_slv_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_DST_SLV_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -426,7 +418,6 @@ impl W {
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_lli_rd_dec_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_LLI_RD_DEC_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -434,7 +425,6 @@ impl W {
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_lli_wr_dec_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_LLI_WR_DEC_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -442,7 +432,6 @@ impl W {
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_lli_rd_slv_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_LLI_RD_SLV_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -450,7 +439,6 @@ impl W {
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_lli_wr_slv_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_LLI_WR_SLV_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -458,7 +446,6 @@ impl W {
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_shadowreg_or_lli_invalid_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -466,7 +453,6 @@ impl W {
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_multiblktype_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -474,7 +460,6 @@ impl W {
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_dec_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_DEC_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -482,7 +467,6 @@ impl W {
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_wr2ro_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_WR2RO_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -490,7 +474,6 @@ impl W {
     }
     #[doc = "Bit 18 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_rd2rwo_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -498,7 +481,6 @@ impl W {
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_wronchen_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -506,7 +488,6 @@ impl W {
     }
     #[doc = "Bit 20 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_shadowreg_wron_valid_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -514,7 +495,6 @@ impl W {
     }
     #[doc = "Bit 21 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_slvif_wronhold_err_intsignal(
         &mut self,
     ) -> CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -522,7 +502,6 @@ impl W {
     }
     #[doc = "Bit 27 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_ch_lock_cleared_intsignal(
         &mut self,
     ) -> CH1_ENABLE_CH_LOCK_CLEARED_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -530,7 +509,6 @@ impl W {
     }
     #[doc = "Bit 28 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_ch_src_suspended_intsignal(
         &mut self,
     ) -> CH1_ENABLE_CH_SRC_SUSPENDED_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -538,7 +516,6 @@ impl W {
     }
     #[doc = "Bit 29 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_ch_suspended_intsignal(
         &mut self,
     ) -> CH1_ENABLE_CH_SUSPENDED_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -546,7 +523,6 @@ impl W {
     }
     #[doc = "Bit 30 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_ch_disabled_intsignal(
         &mut self,
     ) -> CH1_ENABLE_CH_DISABLED_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {
@@ -554,7 +530,6 @@ impl W {
     }
     #[doc = "Bit 31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_enable_ch_aborted_intsignal(
         &mut self,
     ) -> CH1_ENABLE_CH_ABORTED_INTSIGNAL_W<INTSIGNAL_ENABLE0_SPEC> {

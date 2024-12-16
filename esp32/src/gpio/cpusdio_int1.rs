@@ -72,31 +72,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_pad_driver(&mut self) -> PIN_PAD_DRIVER_W<CPUSDIO_INT1_SPEC> {
         PIN_PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_int_type(&mut self) -> PIN_INT_TYPE_W<CPUSDIO_INT1_SPEC> {
         PIN_INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_wakeup_enable(&mut self) -> PIN_WAKEUP_ENABLE_W<CPUSDIO_INT1_SPEC> {
         PIN_WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_config(&mut self) -> PIN_CONFIG_W<CPUSDIO_INT1_SPEC> {
         PIN_CONFIG_W::new(self, 11)
     }
     #[doc = "Bits 13:17"]
     #[inline(always)]
-    #[must_use]
     pub fn pin_int_ena(&mut self) -> PIN_INT_ENA_W<CPUSDIO_INT1_SPEC> {
         PIN_INT_ENA_W::new(self, 13)
     }

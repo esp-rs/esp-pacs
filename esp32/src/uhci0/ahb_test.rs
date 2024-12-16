@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - bit2 is ahb bus test enable ,bit1 is used to choose wrtie(1) or read(0) mode. bit0 is used to choose test only once(1) or continue(0)"]
     #[inline(always)]
-    #[must_use]
     pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W<AHB_TEST_SPEC> {
         AHB_TESTMODE_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - The two bits represent ahb bus address bit\\[20:19\\]"]
     #[inline(always)]
-    #[must_use]
     pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W<AHB_TEST_SPEC> {
         AHB_TESTADDR_W::new(self, 4)
     }

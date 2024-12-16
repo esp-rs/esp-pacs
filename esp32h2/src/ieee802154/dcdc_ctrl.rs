@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_pre_up_delay(&mut self) -> DCDC_PRE_UP_DELAY_W<DCDC_CTRL_SPEC> {
         DCDC_PRE_UP_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    #[must_use]
     pub fn dcdc_down_delay(&mut self) -> DCDC_DOWN_DELAY_W<DCDC_CTRL_SPEC> {
         DCDC_DOWN_DELAY_W::new(self, 8)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<DCDC_CTRL_SPEC> {
         EN_W::new(self, 16)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_dcdc_up(&mut self) -> TX_DCDC_UP_W<DCDC_CTRL_SPEC> {
         TX_DCDC_UP_W::new(self, 31)
     }

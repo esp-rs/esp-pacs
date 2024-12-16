@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn dpi_vcid(&mut self) -> DPI_VCID_W<DPI_VCID_SPEC> {
         DPI_VCID_W::new(self, 0)
     }

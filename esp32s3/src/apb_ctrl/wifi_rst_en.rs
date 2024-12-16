@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn wifi_rst(&mut self) -> WIFI_RST_W<WIFI_RST_EN_SPEC> {
         WIFI_RST_W::new(self, 0)
     }

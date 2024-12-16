@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout0_num(&mut self) -> DOUT0_NUM_W<DOUT_NUM_SPEC> {
         DOUT0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout1_num(&mut self) -> DOUT1_NUM_W<DOUT_NUM_SPEC> {
         DOUT1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout2_num(&mut self) -> DOUT2_NUM_W<DOUT_NUM_SPEC> {
         DOUT2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout3_num(&mut self) -> DOUT3_NUM_W<DOUT_NUM_SPEC> {
         DOUT3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout4_num(&mut self) -> DOUT4_NUM_W<DOUT_NUM_SPEC> {
         DOUT4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout5_num(&mut self) -> DOUT5_NUM_W<DOUT_NUM_SPEC> {
         DOUT5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout6_num(&mut self) -> DOUT6_NUM_W<DOUT_NUM_SPEC> {
         DOUT6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - the output signals are delayed by system clock cycles, 0: delayed by 1 cycle, 1: delayed by 2 cycles,... Can be configured in CONF state."]
     #[inline(always)]
-    #[must_use]
     pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC> {
         DOUT7_NUM_W::new(self, 14)
     }

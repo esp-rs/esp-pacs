@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - This field is used to set the integer number of the divider value."]
     #[inline(always)]
-    #[must_use]
     pub fn lpck_div_num(&mut self) -> LPCK_DIV_NUM_W<LPCK_DIV_INT_SPEC> {
         LPCK_DIV_NUM_W::new(self, 0)
     }

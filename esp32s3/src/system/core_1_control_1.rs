@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - it's only a R/W register, no function, software can write any value"]
     #[inline(always)]
-    #[must_use]
     pub fn control_core_1_message(&mut self) -> CONTROL_CORE_1_MESSAGE_W<CORE_1_CONTROL_1_SPEC> {
         CONTROL_CORE_1_MESSAGE_W::new(self, 0)
     }

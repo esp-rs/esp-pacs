@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reset ADC2 filter."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_filter_reset(&mut self) -> ADC2_FILTER_RESET_W<FILTER_CTRL_SPEC> {
         ADC2_FILTER_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reset ADC1 filter."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_filter_reset(&mut self) -> ADC1_FILTER_RESET_W<FILTER_CTRL_SPEC> {
         ADC1_FILTER_RESET_W::new(self, 1)
     }
     #[doc = "Bits 16:22 - Set filter factor for DIG ADC2 CRTL."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_filter_factor(&mut self) -> ADC2_FILTER_FACTOR_W<FILTER_CTRL_SPEC> {
         ADC2_FILTER_FACTOR_W::new(self, 16)
     }
     #[doc = "Bits 23:29 - Set filter factor for DIG ADC1 CRTL."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_filter_factor(&mut self) -> ADC1_FILTER_FACTOR_W<FILTER_CTRL_SPEC> {
         ADC1_FILTER_FACTOR_W::new(self, 23)
     }
     #[doc = "Bit 30 - Enable DIG ADC2 CRTL filter."]
     #[inline(always)]
-    #[must_use]
     pub fn adc2_filter_en(&mut self) -> ADC2_FILTER_EN_W<FILTER_CTRL_SPEC> {
         ADC2_FILTER_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable DIG ADC1 CRTL filter."]
     #[inline(always)]
-    #[must_use]
     pub fn adc1_filter_en(&mut self) -> ADC1_FILTER_EN_W<FILTER_CTRL_SPEC> {
         ADC1_FILTER_EN_W::new(self, 31)
     }

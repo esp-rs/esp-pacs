@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This is the version control register."]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_date(&mut self) -> LEDC_DATE_W<DATE_SPEC> {
         LEDC_DATE_W::new(self, 0)
     }

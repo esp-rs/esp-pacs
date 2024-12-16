@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_wifipwr_en(&mut self) -> CLK_WIFIPWR_EN_W<CLK_CONF_SPEC> {
         CLK_WIFIPWR_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_coex_en(&mut self) -> CLK_COEX_EN_W<CLK_CONF_SPEC> {
         CLK_COEX_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_i2c_mst_en(&mut self) -> CLK_I2C_MST_EN_W<CLK_CONF_SPEC> {
         CLK_I2C_MST_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_lp_timer_en(&mut self) -> CLK_LP_TIMER_EN_W<CLK_CONF_SPEC> {
         CLK_LP_TIMER_EN_W::new(self, 3)
     }

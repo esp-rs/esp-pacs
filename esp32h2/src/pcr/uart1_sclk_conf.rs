@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_sclk_div_a(&mut self) -> UART1_SCLK_DIV_A_W<UART1_SCLK_CONF_SPEC> {
         UART1_SCLK_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_sclk_div_b(&mut self) -> UART1_SCLK_DIV_B_W<UART1_SCLK_CONF_SPEC> {
         UART1_SCLK_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the uart1 function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_sclk_div_num(&mut self) -> UART1_SCLK_DIV_NUM_W<UART1_SCLK_CONF_SPEC> {
         UART1_SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - set this field to select clock-source. 0: do not select anyone clock, 1: 80MHz, 2: FOSC, 3(default): XTAL."]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_sclk_sel(&mut self) -> UART1_SCLK_SEL_W<UART1_SCLK_CONF_SPEC> {
         UART1_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable uart0 function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_sclk_en(&mut self) -> UART1_SCLK_EN_W<UART1_SCLK_CONF_SPEC> {
         UART1_SCLK_EN_W::new(self, 22)
     }

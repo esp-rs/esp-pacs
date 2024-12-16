@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:29 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<CNTL_SENSOR_CTRL_SPEC> {
         SAR2_PWDET_CCT_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<CNTL_SENSOR_CTRL_SPEC> {
         FORCE_XPD_SAR_W::new(self, 30)
     }

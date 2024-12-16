@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the ecdsa_calc_done_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn calc_done(&mut self) -> CALC_DONE_W<INT_ENA_SPEC> {
         CALC_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the ecdsa_sha_release_int interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn sha_release(&mut self) -> SHA_RELEASE_W<INT_ENA_SPEC> {
         SHA_RELEASE_W::new(self, 1)
     }

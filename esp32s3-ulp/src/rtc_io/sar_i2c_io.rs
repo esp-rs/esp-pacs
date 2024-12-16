@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:27 - ******* Description configure***"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<SAR_I2C_IO_SPEC> {
         SAR_DEBUG_BIT_SEL_W::new(self, 23)
     }
     #[doc = "Bits 28:29 - ******* Description configure***"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<SAR_I2C_IO_SPEC> {
         SAR_I2C_SCL_SEL_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - ******* Description configure***"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<SAR_I2C_IO_SPEC> {
         SAR_I2C_SDA_SEL_W::new(self, 30)
     }

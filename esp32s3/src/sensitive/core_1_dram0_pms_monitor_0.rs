@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock core1 dram0 permission monitor configuration register."]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_dram0_pms_monitor_lock(
         &mut self,
     ) -> CORE_1_DRAM0_PMS_MONITOR_LOCK_W<CORE_1_DRAM0_PMS_MONITOR_0_SPEC> {

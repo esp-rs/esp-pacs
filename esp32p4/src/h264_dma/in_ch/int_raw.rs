@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been transmitted to peripherals for Rx channel 0."]
     #[inline(always)]
-    #[must_use]
     pub fn in_done(&mut self) -> IN_DONE_W<INT_RAW_SPEC> {
         IN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and no data error is detected for Rx channel 0."]
     #[inline(always)]
-    #[must_use]
     pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<INT_RAW_SPEC> {
         IN_SUC_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when the last data pointed by one inlink descriptor has been received and data error is detected"]
     #[inline(always)]
-    #[must_use]
     pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<INT_RAW_SPEC> {
         IN_ERR_EOF_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when detecting inlink descriptor error, including owner error, the second and third word error of inlink descriptor for Rx channel 0."]
     #[inline(always)]
-    #[must_use]
     pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<INT_RAW_SPEC> {
         IN_DSCR_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt bit turns to high level when fifo of Rx channel is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_ovf_l1(&mut self) -> INFIFO_OVF_L1_W<INT_RAW_SPEC> {
         INFIFO_OVF_L1_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt bit turns to high level when fifo of Rx channel is underflow."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_udf_l1(&mut self) -> INFIFO_UDF_L1_W<INT_RAW_SPEC> {
         INFIFO_UDF_L1_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw interrupt bit turns to high level when fifo of Rx channel is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_ovf_l2(&mut self) -> INFIFO_OVF_L2_W<INT_RAW_SPEC> {
         INFIFO_OVF_L2_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw interrupt bit turns to high level when fifo of Rx channel is underflow."]
     #[inline(always)]
-    #[must_use]
     pub fn infifo_udf_l2(&mut self) -> INFIFO_UDF_L2_W<INT_RAW_SPEC> {
         INFIFO_UDF_L2_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw interrupt bit turns to high level when the last descriptor is done but fifo also remain data."]
     #[inline(always)]
-    #[must_use]
     pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<INT_RAW_SPEC> {
         IN_DSCR_EMPTY_W::new(self, 8)
     }
     #[doc = "Bit 9 - The raw interrupt bit turns to high level when dscr ready task fifo is overflow."]
     #[inline(always)]
-    #[must_use]
     pub fn in_dscr_task_ovf(&mut self) -> IN_DSCR_TASK_OVF_W<INT_RAW_SPEC> {
         IN_DSCR_TASK_OVF_W::new(self, 9)
     }

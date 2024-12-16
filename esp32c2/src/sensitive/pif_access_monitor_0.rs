@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn pif_access_monitor_lock(
         &mut self,
     ) -> PIF_ACCESS_MONITOR_LOCK_W<PIF_ACCESS_MONITOR_0_SPEC> {

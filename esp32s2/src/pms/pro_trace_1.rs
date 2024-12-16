@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 disables the trace memory function."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_trace_disable(&mut self) -> PRO_TRACE_DISABLE_W<PRO_TRACE_1_SPEC> {
         PRO_TRACE_DISABLE_W::new(self, 0)
     }

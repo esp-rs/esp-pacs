@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks cache access permission control registers."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_source_lock(&mut self) -> CACHE_SOURCE_LOCK_W<CACHE_SOURCE_0_SPEC> {
         CACHE_SOURCE_LOCK_W::new(self, 0)
     }

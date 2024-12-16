@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by log bus."]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_log_usage(
         &mut self,
     ) -> INTERNAL_SRAM_LOG_USAGE_W<INTERNAL_SRAM_USAGE_4_SPEC> {

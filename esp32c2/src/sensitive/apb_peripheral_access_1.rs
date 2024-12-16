@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_peripheral_access_split_burst(
         &mut self,
     ) -> APB_PERIPHERAL_ACCESS_SPLIT_BURST_W<APB_PERIPHERAL_ACCESS_1_SPEC> {

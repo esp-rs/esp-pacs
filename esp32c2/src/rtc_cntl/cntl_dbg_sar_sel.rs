@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - Need add desc"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_debug_sel(&mut self) -> SAR_DEBUG_SEL_W<CNTL_DBG_SAR_SEL_SPEC> {
         SAR_DEBUG_SEL_W::new(self, 27)
     }

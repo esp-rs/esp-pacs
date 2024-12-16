@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - hp_mb_int is generated after writing 32'h20200721 to core0_lp_intr_flag."]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_uxint_claim(&mut self) -> CPU_UXINT_CLAIM_W<UXINT_CLAIM_SPEC> {
         CPU_UXINT_CLAIM_W::new(self, 0)
     }

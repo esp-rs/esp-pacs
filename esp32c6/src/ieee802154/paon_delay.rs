@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn paon_delay(&mut self) -> PAON_DELAY_W<PAON_DELAY_SPEC> {
         PAON_DELAY_W::new(self, 0)
     }

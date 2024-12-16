@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - The raw bit of the interrupt of access fail that occurs in L2-Cache."]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_fail_int_raw(
         &mut self,
     ) -> L2_CACHE_FAIL_INT_RAW_W<L2_CACHE_ACS_FAIL_INT_RAW_SPEC> {

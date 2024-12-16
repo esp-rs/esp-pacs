@@ -53,7 +53,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn target(&mut self, n: u8) -> TARGET_W<INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
@@ -61,19 +60,16 @@ impl W {
     }
     #[doc = "Bit 0 - Interrupt enable bit of system timer target 0."]
     #[inline(always)]
-    #[must_use]
     pub fn target0(&mut self) -> TARGET_W<INT_ENA_SPEC> {
         TARGET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Interrupt enable bit of system timer target 1."]
     #[inline(always)]
-    #[must_use]
     pub fn target1(&mut self) -> TARGET_W<INT_ENA_SPEC> {
         TARGET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt enable bit of system timer target 2."]
     #[inline(always)]
-    #[must_use]
     pub fn target2(&mut self) -> TARGET_W<INT_ENA_SPEC> {
         TARGET_W::new(self, 2)
     }

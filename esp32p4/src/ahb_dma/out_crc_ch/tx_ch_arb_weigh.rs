@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ch_arb_weigh(&mut self) -> TX_CH_ARB_WEIGH_W<TX_CH_ARB_WEIGH_SPEC> {
         TX_CH_ARB_WEIGH_W::new(self, 0)
     }

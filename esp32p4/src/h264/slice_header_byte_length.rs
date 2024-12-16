@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures Slice Header byte number"]
     #[inline(always)]
-    #[must_use]
     pub fn slice_byte_length(&mut self) -> SLICE_BYTE_LENGTH_W<SLICE_HEADER_BYTE_LENGTH_SPEC> {
         SLICE_BYTE_LENGTH_W::new(self, 0)
     }

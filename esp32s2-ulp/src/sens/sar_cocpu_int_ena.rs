@@ -110,7 +110,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TOUCH_DONE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_touch_done_int_ena(
         &mut self,
     ) -> COCPU_TOUCH_DONE_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
@@ -118,7 +117,6 @@ impl W {
     }
     #[doc = "Bit 1 - TOUCH_INACTIVE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_touch_inactive_int_ena(
         &mut self,
     ) -> COCPU_TOUCH_INACTIVE_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
@@ -126,7 +124,6 @@ impl W {
     }
     #[doc = "Bit 2 - TOUCH_ACTIVE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_touch_active_int_ena(
         &mut self,
     ) -> COCPU_TOUCH_ACTIVE_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
@@ -134,37 +131,31 @@ impl W {
     }
     #[doc = "Bit 3 - SARADC1_DONE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_int_ena(&mut self) -> COCPU_SARADC1_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_SARADC1_INT_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - SARADC2_DONE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_int_ena(&mut self) -> COCPU_SARADC2_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_SARADC2_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - TSENS_DONE_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_tsens_int_ena(&mut self) -> COCPU_TSENS_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_TSENS_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - RISCV_START_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_start_int_ena(&mut self) -> COCPU_START_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_START_INT_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - SW_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_sw_int_ena(&mut self) -> COCPU_SW_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_SW_INT_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - SWD_INT interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_swd_int_ena(&mut self) -> COCPU_SWD_INT_ENA_W<SAR_COCPU_INT_ENA_SPEC> {
         COCPU_SWD_INT_ENA_W::new(self, 8)
     }

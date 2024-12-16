@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_esc_clk_division(&mut self) -> TX_ESC_CLK_DIVISION_W<CLKMGR_CFG_SPEC> {
         TX_ESC_CLK_DIVISION_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn to_clk_division(&mut self) -> TO_CLK_DIVISION_W<CLKMGR_CFG_SPEC> {
         TO_CLK_DIVISION_W::new(self, 8)
     }

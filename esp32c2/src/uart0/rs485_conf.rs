@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to choose the rs485 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_en(&mut self) -> RS485_EN_W<RS485_CONF_SPEC> {
         RS485_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
-    #[must_use]
     pub fn dl0_en(&mut self) -> DL0_EN_W<RS485_CONF_SPEC> {
         DL0_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to delay the stop bit by 1 bit."]
     #[inline(always)]
-    #[must_use]
     pub fn dl1_en(&mut self) -> DL1_EN_W<RS485_CONF_SPEC> {
         DL1_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable receiver could receive data when the transmitter is transmitting data in rs485 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485tx_rx_en(&mut self) -> RS485TX_RX_EN_W<RS485_CONF_SPEC> {
         RS485TX_RX_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1'h1: enable rs485 transmitter to send data when rs485 receiver line is busy."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485rxby_tx_en(&mut self) -> RS485RXBY_TX_EN_W<RS485_CONF_SPEC> {
         RS485RXBY_TX_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - This register is used to delay the receiver's internal data signal."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_rx_dly_num(&mut self) -> RS485_RX_DLY_NUM_W<RS485_CONF_SPEC> {
         RS485_RX_DLY_NUM_W::new(self, 5)
     }
     #[doc = "Bits 6:9 - This register is used to delay the transmitter's internal data signal."]
     #[inline(always)]
-    #[must_use]
     pub fn rs485_tx_dly_num(&mut self) -> RS485_TX_DLY_NUM_W<RS485_CONF_SPEC> {
         RS485_TX_DLY_NUM_W::new(self, 6)
     }

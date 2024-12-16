@@ -2,12 +2,12 @@
 pub type R = crate::R<ENDIAN_SPEC>;
 #[doc = "Register `ENDIAN` writer"]
 pub type W = crate::W<ENDIAN_SPEC>;
-#[doc = "Field `ENDIAN` reader - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
+#[doc = "Field `ENDIAN` reader - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
 pub type ENDIAN_R = crate::FieldReader;
-#[doc = "Field `ENDIAN` writer - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
+#[doc = "Field `ENDIAN` writer - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
 pub type ENDIAN_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
-    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
+    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
     #[inline(always)]
     pub fn endian(&self) -> ENDIAN_R {
         ENDIAN_R::new((self.bits & 0x3f) as u8)
@@ -22,9 +22,8 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. &amp; \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &amp;"]
+    #[doc = "Bits 0:5 - Defines the endianness of input and output texts. & \\[1:0\\] key endian # \\[3:2\\] text_in endian or in_stream endian # \\[5:4\\] text_out endian or out_stream endian # &"]
     #[inline(always)]
-    #[must_use]
     pub fn endian(&mut self) -> ENDIAN_W<ENDIAN_SPEC> {
         ENDIAN_W::new(self, 0)
     }

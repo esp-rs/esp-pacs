@@ -13,13 +13,11 @@ impl core::fmt::Debug for crate::generic::Reg<LP_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<LP_INT_CLR_SPEC> {
         MAIN_TIMER_OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer(&mut self) -> MAIN_TIMER_W<LP_INT_CLR_SPEC> {
         MAIN_TIMER_W::new(self, 31)
     }

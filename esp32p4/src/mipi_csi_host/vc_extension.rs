@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vcx(&mut self) -> VCX_W<VC_EXTENSION_SPEC> {
         VCX_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to disable rtc coprocessor."]
     #[inline(always)]
-    #[must_use]
     pub fn dis_rtc_cpu(&mut self) -> DIS_RTC_CPU_W<RTC_PMS_SPEC> {
         DIS_RTC_CPU_W::new(self, 0)
     }

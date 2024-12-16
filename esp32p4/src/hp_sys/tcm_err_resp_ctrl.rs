@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to turn on tcm error response"]
     #[inline(always)]
-    #[must_use]
     pub fn tcm_err_resp_en(&mut self) -> TCM_ERR_RESP_EN_W<TCM_ERR_RESP_CTRL_SPEC> {
         TCM_ERR_RESP_EN_W::new(self, 0)
     }

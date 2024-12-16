@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - *******Description***********"]
     #[inline(always)]
-    #[must_use]
     pub fn slc_func2_int(&mut self) -> SLC_FUNC2_INT_W<FUNC2_0_SPEC> {
         SLC_FUNC2_INT_W::new(self, 24)
     }

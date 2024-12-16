@@ -21,7 +21,6 @@ impl core::fmt::Debug for crate::generic::Reg<INT_ENA_W1TC_SPEC> {
 impl W {
     #[doc = "Bit 0 - ADC1 Conversion is done, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC1_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
@@ -29,7 +28,6 @@ impl W {
     }
     #[doc = "Bit 1 - ADC2 Conversion is done, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC2_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
@@ -37,7 +35,6 @@ impl W {
     }
     #[doc = "Bit 2 - An errro occurs from ADC1, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_error_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC1_ERROR_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
@@ -45,7 +42,6 @@ impl W {
     }
     #[doc = "Bit 3 - An errro occurs from ADC2, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_error_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC2_ERROR_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
@@ -53,7 +49,6 @@ impl W {
     }
     #[doc = "Bit 4 - A wakeup event is triggered from ADC1, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc1_wake_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC1_WAKE_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {
@@ -61,7 +56,6 @@ impl W {
     }
     #[doc = "Bit 5 - A wakeup event is triggered from ADC2, write 1 to deassert int enable."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_saradc2_wake_int_ena_w1tc(
         &mut self,
     ) -> COCPU_SARADC2_WAKE_INT_ENA_W1TC_W<INT_ENA_W1TC_SPEC> {

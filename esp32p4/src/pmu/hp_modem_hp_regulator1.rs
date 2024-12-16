@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_REGULATOR1_SPEC> {
 impl W {
     #[doc = "Bits 8:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_drv_b(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_DRV_B_W<HP_MODEM_HP_REGULATOR1_SPEC> {

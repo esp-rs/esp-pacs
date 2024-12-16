@@ -26,13 +26,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write 1 to this bit triggers one statistic event"]
     #[inline(always)]
-    #[must_use]
     pub fn ae_update(&mut self) -> AE_UPDATE_W<AE_CTRL_SPEC> {
         AE_UPDATE_W::new(self, 0)
     }
     #[doc = "Bit 1 - this field configures ae input data source, 0: data from median, 1: data from gama"]
     #[inline(always)]
-    #[must_use]
     pub fn ae_select(&mut self) -> AE_SELECT_W<AE_CTRL_SPEC> {
         AE_SELECT_W::new(self, 1)
     }

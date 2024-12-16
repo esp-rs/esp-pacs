@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the thres0 value for unit %s."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thres0(&mut self) -> CNT_THRES0_W<CONF1_SPEC> {
         CNT_THRES0_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - This register is used to configure the thres1 value for unit %s."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_thres1(&mut self) -> CNT_THRES1_W<CONF1_SPEC> {
         CNT_THRES1_W::new(self, 16)
     }

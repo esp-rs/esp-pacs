@@ -1,6 +1,120 @@
 _svd: "../esp32h2.base.svd"
 
 _add:
+  CLINT:
+    description: Core Local Interrupts
+    groupName: CLINT
+    baseAddress: 0x20000000
+    addressBlocks:
+      - offset: 0x0
+        size: 0x180
+        usage: registers
+    registers:
+      MSIP:
+        addressOffset: 0x1800
+        size: 0x20
+        resetValue: 0x0
+        fields:
+          MSIP:
+            description: Configures the pending status of the machine software interrupt.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      MTIMECTL:
+        addressOffset: 0x1804
+        size: 0x20
+        resetValue: 0x0
+        fields:
+          MTCE:
+            description: Configures whether to enable the CLINT timer counter.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          MTIE:
+            description: Write 1 to enable the machine timer interrupt.
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          MTIP:
+            description: Represents the pending status of the machine timer interrupt.
+            bitOffset: 2
+            bitWidth: 1
+            access: read-only
+          MTOF:
+            description: Configures whether the machine timer overflows.
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      MTIME:
+        addressOffset: 0x1808
+        size: 0x40
+        resetValue: 0x0
+        fields:
+          MTIME:
+            description: Configures the 64-bit CLINT timer counter value.
+            bitOffset: 0
+            bitWidth: 64
+            access: read-write
+      MTIMECMP:
+        addressOffset: 0x1810
+        size: 0x40
+        resetValue: 0x0
+        fields:
+          MTIMECMP:
+            description: Configures the 64-bit machine timer compare value.
+            bitOffset: 0
+            bitWidth: 64
+            access: read-write
+      USIP:
+        addressOffset: 0x1C00
+        size: 0x20
+        resetValue: 0x0
+        fields:
+          USIP:
+            description: Configures the pending status of the user software interrupt.
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      UTIMECTL:
+        addressOffset: 0x1C04
+        size: 0x20
+        resetValue: 0x0
+        fields:
+          UTIE:
+            description: Write 1 to enable the user timer interrupt.
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          UTIP:
+            description: Represents the pending status of the user timer interrupt.
+            bitOffset: 2
+            bitWidth: 1
+            access: read-only
+          UTOF:
+            description: Configures whether the user timer overflows.
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      UTIME:
+        addressOffset: 0x1C08
+        size: 0x40
+        resetValue: 0x0
+        fields:
+          UTIME:
+            description: Represents the read-only 64-bit CLINT timer counter value.
+            bitOffset: 0
+            bitWidth: 64
+            access: read-only
+      UTIMECMP:
+        addressOffset: 0x1C10
+        size: 0x40
+        resetValue: 0x0
+        fields:
+          UTIMECMP:
+            description: Configures the 64-bit user timer compare value.
+            bitOffset: 0
+            bitWidth: 64
+            access: read-write
   PLIC_MX:
     description: PLIC Peripheral
     baseAddress: 0x20001000
@@ -89,6 +203,7 @@ _add:
             bitOffset: 0
             bitWidth: 32
             access: read-write
+
   PLIC_UX:
     description: PLIC Peripheral
     baseAddress: 0x20001400
@@ -506,3 +621,8 @@ TWAI*:
     _modify:
       SELF_RX_REQUEST:
         name: SELF_RX_REQ
+
+  ERR_CODE_CAP:
+    _modify:
+      ERR_CAPTURE_CODE_DIRECTION:
+        name: ECC_DIRECTION

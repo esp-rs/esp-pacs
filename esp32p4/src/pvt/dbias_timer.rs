@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 15:30 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_target(&mut self) -> TIMER_TARGET_W<DBIAS_TIMER_SPEC> {
         TIMER_TARGET_W::new(self, 15)
     }
     #[doc = "Bit 31 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_en(&mut self) -> TIMER_EN_W<DBIAS_TIMER_SPEC> {
         TIMER_EN_W::new(self, 31)
     }

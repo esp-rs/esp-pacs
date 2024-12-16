@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the content of short packet's first dword"]
     #[inline(always)]
-    #[must_use]
     pub fn send_word(&mut self) -> SEND_WORD_W<WORD0_SPEC> {
         SEND_WORD_W::new(self, 0)
     }

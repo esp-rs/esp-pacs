@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures module enable of dsi_bridge. 0: disable, 1: enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dsi_en(&mut self) -> DSI_EN_W<EN_SPEC> {
         DSI_EN_W::new(self, 0)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_rmt_tx_sim_ch0."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_sim_ch0(&mut self) -> TX_SIM_CH0_W<TX_SIM_SPEC> {
         TX_SIM_CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_rmt_tx_sim_ch1."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_sim_ch1(&mut self) -> TX_SIM_CH1_W<TX_SIM_SPEC> {
         TX_SIM_CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_rmt_tx_sim_en."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_sim_en(&mut self) -> TX_SIM_EN_W<TX_SIM_SPEC> {
         TX_SIM_EN_W::new(self, 2)
     }

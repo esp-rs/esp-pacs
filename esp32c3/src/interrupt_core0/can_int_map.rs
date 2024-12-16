@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_can_int_map"]
     #[inline(always)]
-    #[must_use]
     pub fn can_int_map(&mut self) -> CAN_INT_MAP_W<CAN_INT_MAP_SPEC> {
         CAN_INT_MAP_W::new(self, 0)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - Interrupt on STOP state on the bus. See Start as the preferred interrupt when needed. This interrupt may not trigger for quick STOP/START combination, as it relates to the state of being stopped."]
     #[inline(always)]
-    #[must_use]
     pub fn stop_ena(&mut self) -> STOP_ENA_W<INTSET_SPEC> {
         STOP_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt when receiving a message from Master, which is not being handled by the block (excludes CCCs being handled automatically). If FIFO, then RX fullness trigger. If DMA, then message end."]
     #[inline(always)]
-    #[must_use]
     pub fn rxpend_ena(&mut self) -> RXPEND_ENA_W<INTSET_SPEC> {
         RXPEND_ENA_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn txsend_ena(&mut self) -> TXSEND_ENA_W<INTSET_SPEC> {
         TXSEND_ENA_W::new(self, 12)
     }

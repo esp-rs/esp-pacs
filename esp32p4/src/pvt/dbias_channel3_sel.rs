@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - needs field desc"]
     #[inline(always)]
-    #[must_use]
     pub fn dbias_channel3_cfg(&mut self) -> DBIAS_CHANNEL3_CFG_W<DBIAS_CHANNEL3_SEL_SPEC> {
         DBIAS_CHANNEL3_CFG_W::new(self, 0)
     }

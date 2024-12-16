@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - dma reorder ram power down"]
     #[inline(always)]
-    #[must_use]
     pub fn out_ro_ram_force_pd(&mut self) -> OUT_RO_RAM_FORCE_PD_W<RO_PD_CONF_SPEC> {
         OUT_RO_RAM_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - dma reorder ram power up"]
     #[inline(always)]
-    #[must_use]
     pub fn out_ro_ram_force_pu(&mut self) -> OUT_RO_RAM_FORCE_PU_W<RO_PD_CONF_SPEC> {
         OUT_RO_RAM_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
-    #[must_use]
     pub fn out_ro_ram_clk_fo(&mut self) -> OUT_RO_RAM_CLK_FO_W<RO_PD_CONF_SPEC> {
         OUT_RO_RAM_CLK_FO_W::new(self, 6)
     }

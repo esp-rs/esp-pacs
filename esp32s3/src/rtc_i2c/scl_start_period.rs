@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - time period for SCL to toggle after I2C start is triggered"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_start_period(&mut self) -> SCL_START_PERIOD_W<SCL_START_PERIOD_SPEC> {
         SCL_START_PERIOD_W::new(self, 0)
     }

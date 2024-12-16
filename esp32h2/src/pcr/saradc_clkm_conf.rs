@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_clkm_div_a(&mut self) -> SARADC_CLKM_DIV_A_W<SARADC_CLKM_CONF_SPEC> {
         SARADC_CLKM_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_clkm_div_b(&mut self) -> SARADC_CLKM_DIV_B_W<SARADC_CLKM_CONF_SPEC> {
         SARADC_CLKM_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the saradc function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_clkm_div_num(&mut self) -> SARADC_CLKM_DIV_NUM_W<SARADC_CLKM_CONF_SPEC> {
         SARADC_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): XTAL, 1: 240MHz, 2: FOSC, 3: reserved."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_clkm_sel(&mut self) -> SARADC_CLKM_SEL_W<SARADC_CLKM_CONF_SPEC> {
         SARADC_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable saradc function clock"]
     #[inline(always)]
-    #[must_use]
     pub fn saradc_clkm_en(&mut self) -> SARADC_CLKM_EN_W<SARADC_CLKM_CONF_SPEC> {
         SARADC_CLKM_EN_W::new(self, 22)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - saradc_xpd_wait"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_wait(&mut self) -> XPD_WAIT_W<FSM_WAIT_SPEC> {
         XPD_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - saradc_rstb_wait"]
     #[inline(always)]
-    #[must_use]
     pub fn rstb_wait(&mut self) -> RSTB_WAIT_W<FSM_WAIT_SPEC> {
         RSTB_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - saradc_standby_wait"]
     #[inline(always)]
-    #[must_use]
     pub fn standby_wait(&mut self) -> STANDBY_WAIT_W<FSM_WAIT_SPEC> {
         STANDBY_WAIT_W::new(self, 16)
     }

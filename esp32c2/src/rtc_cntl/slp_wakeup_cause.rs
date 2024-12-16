@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - sleep wakeup cause"]
     #[inline(always)]
-    #[must_use]
     pub fn wakeup_cause(&mut self) -> WAKEUP_CAUSE_W<SLP_WAKEUP_CAUSE_SPEC> {
         WAKEUP_CAUSE_W::new(self, 0)
     }

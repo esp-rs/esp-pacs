@@ -136,67 +136,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - systimer clock force on"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_clk_fo(&mut self) -> SYSTIMER_CLK_FO_W<CONF_SPEC> {
         SYSTIMER_CLK_FO_W::new(self, 0)
     }
     #[doc = "Bit 22 - target2 work enable"]
     #[inline(always)]
-    #[must_use]
     pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<CONF_SPEC> {
         TARGET2_WORK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - target1 work enable"]
     #[inline(always)]
-    #[must_use]
     pub fn target1_work_en(&mut self) -> TARGET1_WORK_EN_W<CONF_SPEC> {
         TARGET1_WORK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - target0 work enable"]
     #[inline(always)]
-    #[must_use]
     pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<CONF_SPEC> {
         TARGET0_WORK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - If timer unit1 is stalled when core1 stalled"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT1_CORE1_STALL_EN_W<CONF_SPEC> {
         TIMER_UNIT1_CORE1_STALL_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - If timer unit1 is stalled when core0 stalled"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT1_CORE0_STALL_EN_W<CONF_SPEC> {
         TIMER_UNIT1_CORE0_STALL_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - If timer unit0 is stalled when core1 stalled"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT0_CORE1_STALL_EN_W<CONF_SPEC> {
         TIMER_UNIT0_CORE1_STALL_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - If timer unit0 is stalled when core0 stalled"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT0_CORE0_STALL_EN_W<CONF_SPEC> {
         TIMER_UNIT0_CORE0_STALL_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - timer unit1 work enable"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT1_WORK_EN_W<CONF_SPEC> {
         TIMER_UNIT1_WORK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - timer unit0 work enable"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT0_WORK_EN_W<CONF_SPEC> {
         TIMER_UNIT0_WORK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - register file clk gating"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }

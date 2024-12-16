@@ -32,7 +32,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - command0"]
     #[inline(always)]
-    #[must_use]
     pub fn command(&mut self) -> COMMAND_W<CMD_SPEC> {
         COMMAND_W::new(self, 0)
     }

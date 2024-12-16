@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_dig_icg_modem_code(
         &mut self,
     ) -> HP_SLEEP_DIG_ICG_MODEM_CODE_W<HP_SLEEP_ICG_MODEM_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn efuse_intr_map(&mut self) -> EFUSE_INTR_MAP_W<EFUSE_INTR_MAP_SPEC> {
         EFUSE_INTR_MAP_W::new(self, 0)
     }

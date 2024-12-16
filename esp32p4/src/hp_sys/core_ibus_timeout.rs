@@ -2,21 +2,21 @@
 pub type R = crate::R<CORE_IBUS_TIMEOUT_SPEC>;
 #[doc = "Register `CORE_IBUS_TIMEOUT` writer"]
 pub type W = crate::W<CORE_IBUS_TIMEOUT_SPEC>;
-#[doc = "Field `EN` reader - set this field to 1 to enable hp core0&amp;1 ibus timeout handle"]
+#[doc = "Field `EN` reader - set this field to 1 to enable hp core0&1 ibus timeout handle"]
 pub type EN_R = crate::BitReader;
-#[doc = "Field `EN` writer - set this field to 1 to enable hp core0&amp;1 ibus timeout handle"]
+#[doc = "Field `EN` writer - set this field to 1 to enable hp core0&1 ibus timeout handle"]
 pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `THRES` reader - This field used to set hp core0&amp;1 ibus timeout threshold"]
+#[doc = "Field `THRES` reader - This field used to set hp core0&1 ibus timeout threshold"]
 pub type THRES_R = crate::FieldReader<u16>;
-#[doc = "Field `THRES` writer - This field used to set hp core0&amp;1 ibus timeout threshold"]
+#[doc = "Field `THRES` writer - This field used to set hp core0&1 ibus timeout threshold"]
 pub type THRES_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
-    #[doc = "Bit 0 - set this field to 1 to enable hp core0&amp;1 ibus timeout handle"]
+    #[doc = "Bit 0 - set this field to 1 to enable hp core0&1 ibus timeout handle"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:16 - This field used to set hp core0&amp;1 ibus timeout threshold"]
+    #[doc = "Bits 1:16 - This field used to set hp core0&1 ibus timeout threshold"]
     #[inline(always)]
     pub fn thres(&self) -> THRES_R {
         THRES_R::new(((self.bits >> 1) & 0xffff) as u16)
@@ -32,15 +32,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - set this field to 1 to enable hp core0&amp;1 ibus timeout handle"]
+    #[doc = "Bit 0 - set this field to 1 to enable hp core0&1 ibus timeout handle"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EN_W<CORE_IBUS_TIMEOUT_SPEC> {
         EN_W::new(self, 0)
     }
-    #[doc = "Bits 1:16 - This field used to set hp core0&amp;1 ibus timeout threshold"]
+    #[doc = "Bits 1:16 - This field used to set hp core0&1 ibus timeout threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn thres(&mut self) -> THRES_W<CORE_IBUS_TIMEOUT_SPEC> {
         THRES_W::new(self, 1)
     }

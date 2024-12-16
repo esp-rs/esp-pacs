@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - reg_mem_path_len"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_path_len(&mut self) -> MEM_PATH_LEN_W<MEM_PVT_SPEC> {
         MEM_PATH_LEN_W::new(self, 0)
     }
     #[doc = "Bit 4 - reg_mem_err_cnt_clr"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_err_cnt_clr(&mut self) -> MEM_ERR_CNT_CLR_W<MEM_PVT_SPEC> {
         MEM_ERR_CNT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_mem_pvt_monitor_en"]
     #[inline(always)]
-    #[must_use]
     pub fn monitor_en(&mut self) -> MONITOR_EN_W<MEM_PVT_SPEC> {
         MONITOR_EN_W::new(self, 5)
     }
     #[doc = "Bits 22:23 - reg_mem_vt_sel"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_vt_sel(&mut self) -> MEM_VT_SEL_W<MEM_PVT_SPEC> {
         MEM_VT_SEL_W::new(self, 22)
     }

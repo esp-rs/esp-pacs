@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ******* Description ***********"]
     #[inline(always)]
-    #[must_use]
     pub fn s(&mut self) -> S_W<FLASH_ACE0_ADDR_SPEC> {
         S_W::new(self, 0)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Set DAC timer target."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_target(&mut self) -> TIMER_TARGET_W<APB_DAC_CTRL_SPEC> {
         TIMER_TARGET_W::new(self, 0)
     }
     #[doc = "Bit 12 - Enable read dac data."]
     #[inline(always)]
-    #[must_use]
     pub fn timer_en(&mut self) -> TIMER_EN_W<APB_DAC_CTRL_SPEC> {
         TIMER_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable DAC alter mode."]
     #[inline(always)]
-    #[must_use]
     pub fn alter_mode(&mut self) -> ALTER_MODE_W<APB_DAC_CTRL_SPEC> {
         ALTER_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable DMA_DAC."]
     #[inline(always)]
-    #[must_use]
     pub fn trans(&mut self) -> TRANS_W<APB_DAC_CTRL_SPEC> {
         TRANS_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reset DIG DAC FIFO."]
     #[inline(always)]
-    #[must_use]
     pub fn reset_fifo(&mut self) -> RESET_FIFO_W<APB_DAC_CTRL_SPEC> {
         RESET_FIFO_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reset DIG DAC by software."]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RST_W<APB_DAC_CTRL_SPEC> {
         RST_W::new(self, 16)
     }

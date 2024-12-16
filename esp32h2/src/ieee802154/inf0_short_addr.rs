@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_inf0_short_addr(&mut self) -> MAC_INF0_SHORT_ADDR_W<INF0_SHORT_ADDR_SPEC> {
         MAC_INF0_SHORT_ADDR_W::new(self, 0)
     }

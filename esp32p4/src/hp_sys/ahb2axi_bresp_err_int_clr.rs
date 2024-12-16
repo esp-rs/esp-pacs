@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<AHB2AXI_BRESP_ERR_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 31 - Write 1 to clear cpu_icm_h2x_bresp_err int"]
     #[inline(always)]
-    #[must_use]
     pub fn cpu_icm_h2x_bresp_err_int_clr(
         &mut self,
     ) -> CPU_ICM_H2X_BRESP_ERR_INT_CLR_W<AHB2AXI_BRESP_ERR_INT_CLR_SPEC> {

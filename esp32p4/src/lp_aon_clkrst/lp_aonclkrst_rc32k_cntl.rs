@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_rc32k_dfreq(
         &mut self,
     ) -> LP_AONCLKRST_RC32K_DFREQ_W<LP_AONCLKRST_RC32K_CNTL_SPEC> {

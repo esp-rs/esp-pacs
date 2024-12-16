@@ -56,31 +56,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<SWD_CONFIG_SPEC> {
         SWD_AUTO_FEED_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<SWD_CONFIG_SPEC> {
         SWD_RST_FLAG_CLR_W::new(self, 19)
     }
     #[doc = "Bits 20:29 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<SWD_CONFIG_SPEC> {
         SWD_SIGNAL_WIDTH_W::new(self, 20)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_disable(&mut self) -> SWD_DISABLE_W<SWD_CONFIG_SPEC> {
         SWD_DISABLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn swd_feed(&mut self) -> SWD_FEED_W<SWD_CONFIG_SPEC> {
         SWD_FEED_W::new(self, 31)
     }

@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - For SPI0, when cache mode is enabled, it is the write command value of the command phase for SRAM."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sram_usr_wr_cmd_value(
         &mut self,
     ) -> CACHE_SRAM_USR_WR_CMD_VALUE_W<SRAM_DWR_CMD_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bits 28:31 - For SPI0, when cache mode is enabled, it is the length in bits of the command phase for SRAM. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    #[must_use]
     pub fn cache_sram_usr_wr_cmd_bitlen(
         &mut self,
     ) -> CACHE_SRAM_USR_WR_CMD_BITLEN_W<SRAM_DWR_CMD_SPEC> {

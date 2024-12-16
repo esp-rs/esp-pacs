@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the prescaler value of clock, so that the period of PWM_clk = 6.25ns * (PWM_CLK_PRESCALE + 1)."]
     #[inline(always)]
-    #[must_use]
     pub fn clk_prescale(&mut self) -> CLK_PRESCALE_W<CLK_CFG_SPEC> {
         CLK_PRESCALE_W::new(self, 0)
     }

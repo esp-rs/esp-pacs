@@ -90,37 +90,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Enable temperature sensor to send out interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_int_en(&mut self) -> TSENS_INT_EN_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_INT_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Invert temperature sensor data."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_in_inv(&mut self) -> TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - Temperature sensor clock divider."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_clk_div(&mut self) -> TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - Temperature sensor power up."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_power_up(&mut self) -> TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_POWER_UP_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: dump out and power up controlled by software. 0: by FSM."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_power_up_force(&mut self) -> TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_POWER_UP_FORCE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Temperature sensor dump out only active when SENS_TSENS_POWER_UP_FORCE = 1."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens_dump_out(&mut self) -> TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC> {
         TSENS_DUMP_OUT_W::new(self, 24)
     }

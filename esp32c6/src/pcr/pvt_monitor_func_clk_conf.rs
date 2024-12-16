@@ -47,7 +47,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The integral part of the frequency divider factor of the pvt_monitor function clock."]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_func_clk_div_num(
         &mut self,
     ) -> PVT_MONITOR_FUNC_CLK_DIV_NUM_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
@@ -55,7 +54,6 @@ impl W {
     }
     #[doc = "Bit 20 - set this field to select clock-source. 0: XTAL, 1(default): 160MHz drived by SPLL divided by 3."]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_func_clk_sel(
         &mut self,
     ) -> PVT_MONITOR_FUNC_CLK_SEL_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
@@ -63,7 +61,6 @@ impl W {
     }
     #[doc = "Bit 22 - Set 1 to enable source clock of pvt sitex"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_monitor_func_clk_en(
         &mut self,
     ) -> PVT_MONITOR_FUNC_CLK_EN_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {

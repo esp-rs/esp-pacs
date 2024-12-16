@@ -21,37 +21,31 @@ impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the OUT_DONE_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn out_done(&mut self) -> OUT_DONE_W<CLR_SPEC> {
         OUT_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the OUT_EOF_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof(&mut self) -> OUT_EOF_W<CLR_SPEC> {
         OUT_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the OUT_DSCR_ERR_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<CLR_SPEC> {
         OUT_DSCR_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the OUT_TOTAL_EOF_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<CLR_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear the OUTFIFO_OVF_L1_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_ovf(&mut self) -> OUTFIFO_OVF_W<CLR_SPEC> {
         OUTFIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the OUTFIFO_UDF_L1_CH_INT interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn outfifo_udf(&mut self) -> OUTFIFO_UDF_W<CLR_SPEC> {
         OUTFIFO_UDF_W::new(self, 5)
     }

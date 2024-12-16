@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to disable DMA access L2-Cache, 0: enable, 1: disable"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_shut_dma(&mut self) -> L2_CACHE_SHUT_DMA_W<L2_CACHE_CTRL_SPEC> {
         L2_CACHE_SHUT_DMA_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn l2_cache_undef_op(&mut self) -> L2_CACHE_UNDEF_OP_W<L2_CACHE_CTRL_SPEC> {
         L2_CACHE_UNDEF_OP_W::new(self, 8)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this field to 1 to enable debug runstall feature between HP-core and LP-core."]
     #[inline(always)]
-    #[must_use]
     pub fn core_debug_runstall_enable(
         &mut self,
     ) -> CORE_DEBUG_RUNSTALL_ENABLE_W<CORE_DEBUG_RUNSTALL_CONF_SPEC> {

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    #[must_use]
     pub fn core_rst(&mut self) -> CORE_RST_W<CORE_RST_EN_SPEC> {
         CORE_RST_W::new(self, 0)
     }

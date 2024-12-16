@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn app_pwm0_intr_map(&mut self) -> APP_PWM0_INTR_MAP_W<APP_PWM0_INTR_MAP_SPEC> {
         APP_PWM0_INTR_MAP_W::new(self, 0)
     }

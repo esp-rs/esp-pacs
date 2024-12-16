@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn ed_scan_coex_cnt(&mut self) -> ED_SCAN_COEX_CNT_W<ED_SCAN_COEX_CNT_SPEC> {
         ED_SCAN_COEX_CNT_W::new(self, 0)
     }

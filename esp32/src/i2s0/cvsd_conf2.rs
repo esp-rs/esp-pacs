@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_k(&mut self) -> CVSD_K_W<CVSD_CONF2_SPEC> {
         CVSD_K_W::new(self, 0)
     }
     #[doc = "Bits 3:5"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_j(&mut self) -> CVSD_J_W<CVSD_CONF2_SPEC> {
         CVSD_J_W::new(self, 3)
     }
     #[doc = "Bits 6:15"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_beta(&mut self) -> CVSD_BETA_W<CVSD_CONF2_SPEC> {
         CVSD_BETA_W::new(self, 6)
     }
     #[doc = "Bits 16:18"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_h(&mut self) -> CVSD_H_W<CVSD_CONF2_SPEC> {
         CVSD_H_W::new(self, 16)
     }

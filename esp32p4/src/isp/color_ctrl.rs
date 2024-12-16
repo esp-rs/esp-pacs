@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the color saturation value"]
     #[inline(always)]
-    #[must_use]
     pub fn color_saturation(&mut self) -> COLOR_SATURATION_W<COLOR_CTRL_SPEC> {
         COLOR_SATURATION_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures the color hue angle"]
     #[inline(always)]
-    #[must_use]
     pub fn color_hue(&mut self) -> COLOR_HUE_W<COLOR_CTRL_SPEC> {
         COLOR_HUE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures the color contrast value"]
     #[inline(always)]
-    #[must_use]
     pub fn color_contrast(&mut self) -> COLOR_CONTRAST_W<COLOR_CTRL_SPEC> {
         COLOR_CONTRAST_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures the color brightness value, signed 2's complement"]
     #[inline(always)]
-    #[must_use]
     pub fn color_brightness(&mut self) -> COLOR_BRIGHTNESS_W<COLOR_CTRL_SPEC> {
         COLOR_BRIGHTNESS_W::new(self, 24)
     }

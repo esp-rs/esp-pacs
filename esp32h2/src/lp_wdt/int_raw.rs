@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn super_wdt(&mut self) -> SUPER_WDT_W<INT_RAW_SPEC> {
         SUPER_WDT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_wdt(&mut self) -> LP_WDT_W<INT_RAW_SPEC> {
         LP_WDT_W::new(self, 31)
     }

@@ -73,7 +73,6 @@ impl core::fmt::Debug for crate::generic::Reg<TASK_ST2_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear LEDC_task_timer0_pause trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer0_pause_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER0_PAUSE_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -81,7 +80,6 @@ impl W {
     }
     #[doc = "Bit 1 - Configures whether or not to clear LEDC_task_timer1_pause trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer1_pause_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER1_PAUSE_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -89,7 +87,6 @@ impl W {
     }
     #[doc = "Bit 2 - Configures whether or not to clear LEDC_task_timer2_pause trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer2_pause_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER2_PAUSE_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -97,7 +94,6 @@ impl W {
     }
     #[doc = "Bit 3 - Configures whether or not to clear LEDC_task_timer3_pause trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer3_pause_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER3_PAUSE_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -105,7 +101,6 @@ impl W {
     }
     #[doc = "Bit 4 - Configures whether or not to clear LEDC_task_gamma_restart_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch0_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -113,7 +108,6 @@ impl W {
     }
     #[doc = "Bit 5 - Configures whether or not to clear LEDC_task_gamma_restart_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch1_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH1_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -121,7 +115,6 @@ impl W {
     }
     #[doc = "Bit 6 - Configures whether or not to clear LEDC_task_gamma_restart_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch2_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH2_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -129,7 +122,6 @@ impl W {
     }
     #[doc = "Bit 7 - Configures whether or not to clear LEDC_task_gamma_restart_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch3_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH3_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -137,7 +129,6 @@ impl W {
     }
     #[doc = "Bit 8 - Configures whether or not to clear LEDC_task_gamma_restart_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH4_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -145,7 +136,6 @@ impl W {
     }
     #[doc = "Bit 9 - Configures whether or not to clear LEDC_task_gamma_restart_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH5_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -153,7 +143,6 @@ impl W {
     }
     #[doc = "Bit 10 - Configures whether or not to clear LEDC_task_gamma_restart_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH6_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -161,7 +150,6 @@ impl W {
     }
     #[doc = "Bit 11 - Configures whether or not to clear LEDC_task_gamma_restart_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_restart_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESTART_CH7_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -169,7 +157,6 @@ impl W {
     }
     #[doc = "Bit 12 - Configures whether or not to clear LEDC_task_gamma_pause_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch0_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -177,7 +164,6 @@ impl W {
     }
     #[doc = "Bit 13 - Configures whether or not to clear LEDC_task_gamma_pause_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch1_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH1_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -185,7 +171,6 @@ impl W {
     }
     #[doc = "Bit 14 - Configures whether or not to clear LEDC_task_gamma_pause_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch2_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH2_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -193,7 +178,6 @@ impl W {
     }
     #[doc = "Bit 15 - Configures whether or not to clear LEDC_task_gamma_pause_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch3_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH3_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -201,7 +185,6 @@ impl W {
     }
     #[doc = "Bit 16 - Configures whether or not to clear LEDC_task_gamma_pause_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH4_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -209,7 +192,6 @@ impl W {
     }
     #[doc = "Bit 17 - Configures whether or not to clear LEDC_task_gamma_pause_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH5_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -217,7 +199,6 @@ impl W {
     }
     #[doc = "Bit 18 - Configures whether or not to clear LEDC_task_gamma_pause_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH6_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -225,7 +206,6 @@ impl W {
     }
     #[doc = "Bit 19 - Configures whether or not to clear LEDC_task_gamma_pause_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_pause_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_PAUSE_CH7_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -233,7 +213,6 @@ impl W {
     }
     #[doc = "Bit 20 - Configures whether or not to clear LEDC_task_gamma_resume_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch0_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -241,7 +220,6 @@ impl W {
     }
     #[doc = "Bit 21 - Configures whether or not to clear LEDC_task_gamma_resume_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch1_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH1_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -249,7 +227,6 @@ impl W {
     }
     #[doc = "Bit 22 - Configures whether or not to clear LEDC_task_gamma_resume_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch2_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH2_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -257,7 +234,6 @@ impl W {
     }
     #[doc = "Bit 23 - Configures whether or not to clear LEDC_task_gamma_resume_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch3_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH3_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -265,7 +241,6 @@ impl W {
     }
     #[doc = "Bit 24 - Configures whether or not to clear LEDC_task_gamma_resume_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH4_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -273,7 +248,6 @@ impl W {
     }
     #[doc = "Bit 25 - Configures whether or not to clear LEDC_task_gamma_resume_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH5_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -281,7 +255,6 @@ impl W {
     }
     #[doc = "Bit 26 - Configures whether or not to clear LEDC_task_gamma_resume_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH6_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -289,7 +262,6 @@ impl W {
     }
     #[doc = "Bit 27 - Configures whether or not to clear LEDC_task_gamma_resume_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_gamma_resume_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_GAMMA_RESUME_CH7_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -297,7 +269,6 @@ impl W {
     }
     #[doc = "Bit 28 - Configures whether or not to clear TG0_task_cnt_start_timer0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tg0_task_cnt_start_timer0_st_clr(
         &mut self,
     ) -> TG0_TASK_CNT_START_TIMER0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -305,7 +276,6 @@ impl W {
     }
     #[doc = "Bit 29 - Configures whether or not to clear TG0_task_alarm_start_timer0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tg0_task_alarm_start_timer0_st_clr(
         &mut self,
     ) -> TG0_TASK_ALARM_START_TIMER0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -313,7 +283,6 @@ impl W {
     }
     #[doc = "Bit 30 - Configures whether or not to clear TG0_task_cnt_stop_timer0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tg0_task_cnt_stop_timer0_st_clr(
         &mut self,
     ) -> TG0_TASK_CNT_STOP_TIMER0_ST_CLR_W<TASK_ST2_CLR_SPEC> {
@@ -321,7 +290,6 @@ impl W {
     }
     #[doc = "Bit 31 - Configures whether or not to clear TG0_task_cnt_reload_timer0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tg0_task_cnt_reload_timer0_st_clr(
         &mut self,
     ) -> TG0_TASK_CNT_RELOAD_TIMER0_ST_CLR_W<TASK_ST2_CLR_SPEC> {

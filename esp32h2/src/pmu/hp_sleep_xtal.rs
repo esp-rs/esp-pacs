@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_xpd_xtal(&mut self) -> HP_SLEEP_XPD_XTAL_W<HP_SLEEP_XTAL_SPEC> {
         HP_SLEEP_XPD_XTAL_W::new(self, 31)
     }

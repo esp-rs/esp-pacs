@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - this field configures index 22 of gausian template"]
     #[inline(always)]
-    #[must_use]
     pub fn gau_template22(&mut self) -> GAU_TEMPLATE22_W<BF_GAU1_SPEC> {
         GAU_TEMPLATE22_W::new(self, 0)
     }

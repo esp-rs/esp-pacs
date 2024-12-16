@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Control for start bit detection mechanism duration of start bit.Each bit refers to one slot.Set this bit to 1 for eMMC4.5 and above,set to 0 for SD applications.For eMMC4.5,start bit can be: 1'b0-Full cycle. 1'b1-less than one full cycle."]
     #[inline(always)]
-    #[must_use]
     pub fn halfstartbit(&mut self) -> HALFSTARTBIT_W<EMMCDDR_SPEC> {
         HALFSTARTBIT_W::new(self, 0)
     }
     #[doc = "Bit 31 - Set 1 to enable HS400 mode."]
     #[inline(always)]
-    #[must_use]
     pub fn hs400_mode(&mut self) -> HS400_MODE_W<EMMCDDR_SPEC> {
         HS400_MODE_W::new(self, 31)
     }

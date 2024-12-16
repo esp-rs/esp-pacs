@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to configure the permission of AES accessing address, which is larger than boundary 0 and less than boundary 1, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
-    #[must_use]
     pub fn attr1(&mut self) -> ATTR1_W<EDMA_PMS_AES_SPEC> {
         ATTR1_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - This field is used to configure the permission of AES accessing address, which is larger than boundary 1 and less than boundary 2, through EDMA. Bit 0: set this bit to enable read permission. Bit 1: set this bit to enable write permission."]
     #[inline(always)]
-    #[must_use]
     pub fn attr2(&mut self) -> ATTR2_W<EDMA_PMS_AES_SPEC> {
         ATTR2_W::new(self, 2)
     }

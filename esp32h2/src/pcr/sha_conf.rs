@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable sha clock"]
     #[inline(always)]
-    #[must_use]
     pub fn sha_clk_en(&mut self) -> SHA_CLK_EN_W<SHA_CONF_SPEC> {
         SHA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset sha module"]
     #[inline(always)]
-    #[must_use]
     pub fn sha_rst_en(&mut self) -> SHA_RST_EN_W<SHA_CONF_SPEC> {
         SHA_RST_EN_W::new(self, 1)
     }

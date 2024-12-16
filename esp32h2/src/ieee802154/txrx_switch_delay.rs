@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9"]
     #[inline(always)]
-    #[must_use]
     pub fn txrx_switch_delay(&mut self) -> TXRX_SWITCH_DELAY_W<TXRX_SWITCH_DELAY_SPEC> {
         TXRX_SWITCH_DELAY_W::new(self, 0)
     }

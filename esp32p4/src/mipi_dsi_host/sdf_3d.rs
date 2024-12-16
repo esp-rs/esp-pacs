@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn mode_3d(&mut self) -> MODE_3D_W<SDF_3D_SPEC> {
         MODE_3D_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn format_3d(&mut self) -> FORMAT_3D_W<SDF_3D_SPEC> {
         FORMAT_3D_W::new(self, 2)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn second_vsync(&mut self) -> SECOND_VSYNC_W<SDF_3D_SPEC> {
         SECOND_VSYNC_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn right_first(&mut self) -> RIGHT_FIRST_W<SDF_3D_SPEC> {
         RIGHT_FIRST_W::new(self, 5)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn send_3d_cfg(&mut self) -> SEND_3D_CFG_W<SDF_3D_SPEC> {
         SEND_3D_CFG_W::new(self, 16)
     }

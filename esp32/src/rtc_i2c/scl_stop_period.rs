@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Number of FAST_CLK cycles to wait before generating stop condition"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_stop_period(&mut self) -> SCL_STOP_PERIOD_W<SCL_STOP_PERIOD_SPEC> {
         SCL_STOP_PERIOD_W::new(self, 0)
     }

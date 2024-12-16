@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RSA interrupt status register. Will read 1 once an operation has completed."]
     #[inline(always)]
-    #[must_use]
     pub fn interrupt(&mut self) -> INTERRUPT_W<INTERRUPT_SPEC> {
         INTERRUPT_W::new(self, 0)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - this field controls the pixel data sent to dsi_host when dsi_bridge fifo underflow"]
     #[inline(always)]
-    #[must_use]
     pub fn dpi_rsv_data(&mut self) -> DPI_RSV_DATA_W<DPI_RSV_DPI_DATA_SPEC> {
         DPI_RSV_DATA_W::new(self, 0)
     }

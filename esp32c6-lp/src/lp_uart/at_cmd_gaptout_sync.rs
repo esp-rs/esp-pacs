@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the duration time between the at_cmd chars."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_gap_tout(&mut self) -> RX_GAP_TOUT_W<AT_CMD_GAPTOUT_SYNC_SPEC> {
         RX_GAP_TOUT_W::new(self, 0)
     }

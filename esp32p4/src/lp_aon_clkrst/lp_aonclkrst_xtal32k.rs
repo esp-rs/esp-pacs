@@ -60,7 +60,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_dres_xtal32k(
         &mut self,
     ) -> LP_AONCLKRST_DRES_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
@@ -68,7 +67,6 @@ impl W {
     }
     #[doc = "Bits 25:27 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_dgm_xtal32k(
         &mut self,
     ) -> LP_AONCLKRST_DGM_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
@@ -76,7 +74,6 @@ impl W {
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_dbuf_xtal32k(
         &mut self,
     ) -> LP_AONCLKRST_DBUF_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
@@ -84,7 +81,6 @@ impl W {
     }
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_dac_xtal32k(
         &mut self,
     ) -> LP_AONCLKRST_DAC_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {

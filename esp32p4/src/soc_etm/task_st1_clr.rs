@@ -73,7 +73,6 @@ impl core::fmt::Debug for crate::generic::Reg<TASK_ST1_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear LEDC_task_duty_scale_update_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_duty_scale_update_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH4_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -81,7 +80,6 @@ impl W {
     }
     #[doc = "Bit 1 - Configures whether or not to clear LEDC_task_duty_scale_update_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_duty_scale_update_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH5_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -89,7 +87,6 @@ impl W {
     }
     #[doc = "Bit 2 - Configures whether or not to clear LEDC_task_duty_scale_update_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_duty_scale_update_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH6_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -97,7 +94,6 @@ impl W {
     }
     #[doc = "Bit 3 - Configures whether or not to clear LEDC_task_duty_scale_update_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_duty_scale_update_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_DUTY_SCALE_UPDATE_CH7_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -105,7 +101,6 @@ impl W {
     }
     #[doc = "Bit 4 - Configures whether or not to clear LEDC_task_timer0_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer0_cap_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER0_CAP_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -113,7 +108,6 @@ impl W {
     }
     #[doc = "Bit 5 - Configures whether or not to clear LEDC_task_timer1_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer1_cap_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER1_CAP_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -121,7 +115,6 @@ impl W {
     }
     #[doc = "Bit 6 - Configures whether or not to clear LEDC_task_timer2_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer2_cap_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER2_CAP_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -129,7 +122,6 @@ impl W {
     }
     #[doc = "Bit 7 - Configures whether or not to clear LEDC_task_timer3_cap trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer3_cap_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER3_CAP_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -137,7 +129,6 @@ impl W {
     }
     #[doc = "Bit 8 - Configures whether or not to clear LEDC_task_sig_out_dis_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch0_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH0_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -145,7 +136,6 @@ impl W {
     }
     #[doc = "Bit 9 - Configures whether or not to clear LEDC_task_sig_out_dis_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch1_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH1_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -153,7 +143,6 @@ impl W {
     }
     #[doc = "Bit 10 - Configures whether or not to clear LEDC_task_sig_out_dis_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch2_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH2_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -161,7 +150,6 @@ impl W {
     }
     #[doc = "Bit 11 - Configures whether or not to clear LEDC_task_sig_out_dis_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch3_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH3_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -169,7 +157,6 @@ impl W {
     }
     #[doc = "Bit 12 - Configures whether or not to clear LEDC_task_sig_out_dis_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH4_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -177,7 +164,6 @@ impl W {
     }
     #[doc = "Bit 13 - Configures whether or not to clear LEDC_task_sig_out_dis_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH5_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -185,7 +171,6 @@ impl W {
     }
     #[doc = "Bit 14 - Configures whether or not to clear LEDC_task_sig_out_dis_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH6_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -193,7 +178,6 @@ impl W {
     }
     #[doc = "Bit 15 - Configures whether or not to clear LEDC_task_sig_out_dis_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_sig_out_dis_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_SIG_OUT_DIS_CH7_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -201,7 +185,6 @@ impl W {
     }
     #[doc = "Bit 16 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch0_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH0_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -209,7 +192,6 @@ impl W {
     }
     #[doc = "Bit 17 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch1_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH1_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -217,7 +199,6 @@ impl W {
     }
     #[doc = "Bit 18 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch2_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH2_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -225,7 +206,6 @@ impl W {
     }
     #[doc = "Bit 19 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch3 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch3_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH3_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -233,7 +213,6 @@ impl W {
     }
     #[doc = "Bit 20 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch4 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch4_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH4_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -241,7 +220,6 @@ impl W {
     }
     #[doc = "Bit 21 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch5 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch5_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH5_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -249,7 +227,6 @@ impl W {
     }
     #[doc = "Bit 22 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch6 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch6_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH6_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -257,7 +234,6 @@ impl W {
     }
     #[doc = "Bit 23 - Configures whether or not to clear LEDC_task_ovf_cnt_rst_ch7 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_ovf_cnt_rst_ch7_st_clr(
         &mut self,
     ) -> LEDC_TASK_OVF_CNT_RST_CH7_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -265,7 +241,6 @@ impl W {
     }
     #[doc = "Bit 24 - Configures whether or not to clear LEDC_task_timer0_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer0_rst_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER0_RST_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -273,7 +248,6 @@ impl W {
     }
     #[doc = "Bit 25 - Configures whether or not to clear LEDC_task_timer1_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer1_rst_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER1_RST_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -281,7 +255,6 @@ impl W {
     }
     #[doc = "Bit 26 - Configures whether or not to clear LEDC_task_timer2_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer2_rst_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER2_RST_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -289,7 +262,6 @@ impl W {
     }
     #[doc = "Bit 27 - Configures whether or not to clear LEDC_task_timer3_rst trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer3_rst_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER3_RST_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -297,7 +269,6 @@ impl W {
     }
     #[doc = "Bit 28 - Configures whether or not to clear LEDC_task_timer0_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer0_resume_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER0_RESUME_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -305,7 +276,6 @@ impl W {
     }
     #[doc = "Bit 29 - Configures whether or not to clear LEDC_task_timer1_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer1_resume_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER1_RESUME_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -313,7 +283,6 @@ impl W {
     }
     #[doc = "Bit 30 - Configures whether or not to clear LEDC_task_timer2_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer2_resume_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER2_RESUME_ST_CLR_W<TASK_ST1_CLR_SPEC> {
@@ -321,7 +290,6 @@ impl W {
     }
     #[doc = "Bit 31 - Configures whether or not to clear LEDC_task_timer3_resume trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ledc_task_timer3_resume_st_clr(
         &mut self,
     ) -> LEDC_TASK_TIMER3_RESUME_ST_CLR_W<TASK_ST1_CLR_SPEC> {

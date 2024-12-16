@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map aes interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn aes_int_map(&mut self) -> AES_INT_MAP_W<AES_INT_MAP_SPEC> {
         AES_INT_MAP_W::new(self, 0)
     }

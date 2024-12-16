@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1'b0: use wdt0 to reset hpcore0, 1'b1: use wdt1 to reset hpcore0"]
     #[inline(always)]
-    #[must_use]
     pub fn hpcore0_wdt_reset_source_sel(
         &mut self,
     ) -> HPCORE0_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 1 - 1'b0: use wdt0 to reset hpcore1, 1'b1: use wdt1 to reset hpcore1"]
     #[inline(always)]
-    #[must_use]
     pub fn hpcore1_wdt_reset_source_sel(
         &mut self,
     ) -> HPCORE1_WDT_RESET_SOURCE_SEL_W<HPCORE_WDT_RESET_SOURCE0_SPEC> {

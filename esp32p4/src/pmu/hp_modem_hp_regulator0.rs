@@ -21,7 +21,6 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_HP_REGULATOR0_SPEC> {
 impl W {
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_slp_mem_xpd(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_SLP_MEM_XPD_W<HP_MODEM_HP_REGULATOR0_SPEC> {
@@ -29,7 +28,6 @@ impl W {
     }
     #[doc = "Bit 17 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_slp_logic_xpd(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_SLP_LOGIC_XPD_W<HP_MODEM_HP_REGULATOR0_SPEC> {
@@ -37,7 +35,6 @@ impl W {
     }
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_xpd(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_XPD_W<HP_MODEM_HP_REGULATOR0_SPEC> {
@@ -45,7 +42,6 @@ impl W {
     }
     #[doc = "Bits 19:22 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_slp_mem_dbias(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_SLP_MEM_DBIAS_W<HP_MODEM_HP_REGULATOR0_SPEC> {
@@ -53,7 +49,6 @@ impl W {
     }
     #[doc = "Bits 23:26 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_slp_logic_dbias(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_SLP_LOGIC_DBIAS_W<HP_MODEM_HP_REGULATOR0_SPEC> {
@@ -61,7 +56,6 @@ impl W {
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem_hp_regulator_dbias(
         &mut self,
     ) -> HP_MODEM_HP_REGULATOR_DBIAS_W<HP_MODEM_HP_REGULATOR0_SPEC> {

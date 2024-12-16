@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 18:21 - configure filter1 to adc channel"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<FILTER_CTRL0_SPEC> {
         FILTER_CHANNEL1_W::new(self, 18)
     }
     #[doc = "Bits 22:25 - configure filter0 to adc channel"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<FILTER_CTRL0_SPEC> {
         FILTER_CHANNEL0_W::new(self, 22)
     }
     #[doc = "Bit 31 - enable apb_adc1_filter"]
     #[inline(always)]
-    #[must_use]
     pub fn filter_reset(&mut self) -> FILTER_RESET_W<FILTER_CTRL0_SPEC> {
         FILTER_RESET_W::new(self, 31)
     }

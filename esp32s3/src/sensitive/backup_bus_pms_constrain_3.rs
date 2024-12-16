@@ -170,7 +170,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - BackUp access spi_2 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_spi_2(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -178,7 +177,6 @@ impl W {
     }
     #[doc = "Bits 2:3 - BackUp access spi_3 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_spi_3(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SPI_3_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -186,7 +184,6 @@ impl W {
     }
     #[doc = "Bits 4:5 - BackUp access apb_ctrl permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_apb_ctrl(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_CTRL_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -194,7 +191,6 @@ impl W {
     }
     #[doc = "Bits 6:7 - BackUp access i2c_ext1 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_i2c_ext1(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -202,7 +198,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - BackUp access sdio_host permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_sdio_host(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_SDIO_HOST_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -210,7 +205,6 @@ impl W {
     }
     #[doc = "Bits 10:11 - BackUp access can permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_can(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_CAN_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -218,7 +212,6 @@ impl W {
     }
     #[doc = "Bits 12:13 - BackUp access pwm1 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_pwm1(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_PWM1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -226,7 +219,6 @@ impl W {
     }
     #[doc = "Bits 14:15 - BackUp access i2s1 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_i2s1(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_I2S1_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -234,7 +226,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - BackUp access uart2 permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_uart2(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_UART2_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -242,7 +233,6 @@ impl W {
     }
     #[doc = "Bits 22:23 - BackUp access rwbt permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_rwbt(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_RWBT_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -250,7 +240,6 @@ impl W {
     }
     #[doc = "Bits 26:27 - BackUp access wifimac permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_wifimac(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_WIFIMAC_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {
@@ -258,7 +247,6 @@ impl W {
     }
     #[doc = "Bits 28:29 - BackUp access pwr permission."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_pwr(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_3_SPEC> {

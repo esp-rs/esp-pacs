@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - this field configures user setup env detect sum threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn af_env_user_threshold_sum(
         &mut self,
     ) -> AF_ENV_USER_THRESHOLD_SUM_W<AF_ENV_USER_TH_SUM_SPEC> {

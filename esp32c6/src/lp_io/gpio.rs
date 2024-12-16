@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO_SPEC> {
         MCU_SEL_W::new(self, 12)
     }

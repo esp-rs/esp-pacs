@@ -76,14 +76,25 @@ impl RegisterBlock {
     pub const fn chconf0(&self, n: usize) -> &CHCONF0 {
         #[allow(clippy::no_effect)]
         [(); 8][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(32)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x20..0x40 - "]
     #[inline(always)]
     pub fn chconf0_iter(&self) -> impl Iterator<Item = &CHCONF0> {
-        (0..8)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() })
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(32)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x20 - CH0CONF0"]
     #[inline(always)]
@@ -130,14 +141,25 @@ impl RegisterBlock {
     pub const fn chconf1(&self, n: usize) -> &CHCONF1 {
         #[allow(clippy::no_effect)]
         [(); 8][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x24..0x44 - "]
     #[inline(always)]
     pub fn chconf1_iter(&self) -> impl Iterator<Item = &CHCONF1> {
-        (0..8)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() })
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x24 - CH0CONF1"]
     #[inline(always)]

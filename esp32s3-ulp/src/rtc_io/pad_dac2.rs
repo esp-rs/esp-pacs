@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:10 - PDAC2_DAC"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_dac(&mut self) -> PDAC2_DAC_W<PAD_DAC2_SPEC> {
         PDAC2_DAC_W::new(self, 3)
     }
     #[doc = "Bit 11 - PDAC2_XPD_DAC"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_xpd_dac(&mut self) -> PDAC2_XPD_DAC_W<PAD_DAC2_SPEC> {
         PDAC2_XPD_DAC_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: use reg_pdac2_xpd_dac to control PDAC2_XPD_DAC,0: use SAR ADC FSM to control PDAC2_XPD_DAC"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_dac_xpd_force(&mut self) -> PDAC2_DAC_XPD_FORCE_W<PAD_DAC2_SPEC> {
         PDAC2_DAC_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_fun_ie(&mut self) -> PDAC2_FUN_IE_W<PAD_DAC2_SPEC> {
         PDAC2_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_slp_oe(&mut self) -> PDAC2_SLP_OE_W<PAD_DAC2_SPEC> {
         PDAC2_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_slp_ie(&mut self) -> PDAC2_SLP_IE_W<PAD_DAC2_SPEC> {
         PDAC2_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_slp_sel(&mut self) -> PDAC2_SLP_SEL_W<PAD_DAC2_SPEC> {
         PDAC2_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - PDAC1 function sel"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_fun_sel(&mut self) -> PDAC2_FUN_SEL_W<PAD_DAC2_SPEC> {
         PDAC2_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_mux_sel(&mut self) -> PDAC2_MUX_SEL_W<PAD_DAC2_SPEC> {
         PDAC2_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - PDAC2_RUE"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_rue(&mut self) -> PDAC2_RUE_W<PAD_DAC2_SPEC> {
         PDAC2_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - PDAC2_RDE"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_rde(&mut self) -> PDAC2_RDE_W<PAD_DAC2_SPEC> {
         PDAC2_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - PDAC2_DRV"]
     #[inline(always)]
-    #[must_use]
     pub fn pdac2_drv(&mut self) -> PDAC2_DRV_W<PAD_DAC2_SPEC> {
         PDAC2_DRV_W::new(self, 29)
     }

@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_rxfifo_wm_thrhd"]
     #[inline(always)]
-    #[must_use]
     pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
         RXFIFO_WM_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - reg_txfifo_wm_thrhd"]
     #[inline(always)]
-    #[must_use]
     pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
         TXFIFO_WM_THRHD_W::new(self, 5)
     }
     #[doc = "Bit 10 - reg_nonfifo_en"]
     #[inline(always)]
-    #[must_use]
     pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC> {
         NONFIFO_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_fifo_addr_cfg_en"]
     #[inline(always)]
-    #[must_use]
     pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<FIFO_CONF_SPEC> {
         FIFO_ADDR_CFG_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_rx_fifo_rst"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC> {
         RX_FIFO_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_tx_fifo_rst"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC> {
         TX_FIFO_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_fifo_prt_en"]
     #[inline(always)]
-    #[must_use]
     pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<FIFO_CONF_SPEC> {
         FIFO_PRT_EN_W::new(self, 14)
     }

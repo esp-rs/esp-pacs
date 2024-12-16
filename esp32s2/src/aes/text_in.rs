@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the source data when the AES Accelerator operates in the Typical AES working mode."]
     #[inline(always)]
-    #[must_use]
     pub fn text_in(&mut self) -> TEXT_IN_W<TEXT_IN_SPEC> {
         TEXT_IN_W::new(self, 0)
     }

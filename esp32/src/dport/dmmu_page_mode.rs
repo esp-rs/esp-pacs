@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_dmmu_ena(&mut self) -> INTERNAL_SRAM_DMMU_ENA_W<DMMU_PAGE_MODE_SPEC> {
         INTERNAL_SRAM_DMMU_ENA_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    #[must_use]
     pub fn dmmu_page_mode(&mut self) -> DMMU_PAGE_MODE_W<DMMU_PAGE_MODE_SPEC> {
         DMMU_PAGE_MODE_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    #[must_use]
     pub fn mac_date(&mut self) -> MAC_DATE_W<MAC_DATE_SPEC> {
         MAC_DATE_W::new(self, 0)
     }

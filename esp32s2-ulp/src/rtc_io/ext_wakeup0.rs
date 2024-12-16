@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - GPIO\\[0-17\\] can be used to wake up the chip when the chip is in the sleep mode. This register prompts the pad source to wake up the chip when the latter is indeep/light sleep mode. 0: select GPIO0; 1: select GPIO2, etc"]
     #[inline(always)]
-    #[must_use]
     pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP0_SPEC> {
         SEL_W::new(self, 27)
     }

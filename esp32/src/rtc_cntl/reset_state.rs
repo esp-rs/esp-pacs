@@ -50,13 +50,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - APP CPU state vector sel"]
     #[inline(always)]
-    #[must_use]
     pub fn appcpu_stat_vector_sel(&mut self) -> APPCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC> {
         APPCPU_STAT_VECTOR_SEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - PRO CPU state vector sel"]
     #[inline(always)]
-    #[must_use]
     pub fn procpu_stat_vector_sel(&mut self) -> PROCPU_STAT_VECTOR_SEL_W<RESET_STATE_SPEC> {
         PROCPU_STAT_VECTOR_SEL_W::new(self, 13)
     }

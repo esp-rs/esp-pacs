@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to continue AES operation."]
     #[inline(always)]
-    #[must_use]
     pub fn continue_(&mut self) -> CONTINUE_W<CONTINUE_SPEC> {
         CONTINUE_W::new(self, 0)
     }

@@ -2,13 +2,13 @@
 pub type R = crate::R<DEMOSAIC_MATRIX_CTRL_SPEC>;
 #[doc = "Register `DEMOSAIC_MATRIX_CTRL` writer"]
 pub type W = crate::W<DEMOSAIC_MATRIX_CTRL_SPEC>;
-#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TL` reader - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DEMOSAIC_TAIL_PIXEN_PULSE_TL_R = crate::FieldReader;
-#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TL` writer - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DEMOSAIC_TAIL_PIXEN_PULSE_TL_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TH` reader - matrix tail pixen high level threshold, must < hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DEMOSAIC_TAIL_PIXEN_PULSE_TH_R = crate::FieldReader;
-#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+#[doc = "Field `DEMOSAIC_TAIL_PIXEN_PULSE_TH` writer - matrix tail pixen high level threshold, must < hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
 pub type DEMOSAIC_TAIL_PIXEN_PULSE_TH_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `DEMOSAIC_PADDING_DATA` reader - this field configures demosaic matrix padding data"]
 pub type DEMOSAIC_PADDING_DATA_R = crate::FieldReader;
@@ -19,12 +19,12 @@ pub type DEMOSAIC_PADDING_MODE_R = crate::BitReader;
 #[doc = "Field `DEMOSAIC_PADDING_MODE` writer - this bit configures the padding mode of demosaic matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
 pub type DEMOSAIC_PADDING_MODE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn demosaic_tail_pixen_pulse_tl(&self) -> DEMOSAIC_TAIL_PIXEN_PULSE_TL_R {
         DEMOSAIC_TAIL_PIXEN_PULSE_TL_R::new((self.bits & 0xff) as u8)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
     pub fn demosaic_tail_pixen_pulse_th(&self) -> DEMOSAIC_TAIL_PIXEN_PULSE_TH_R {
         DEMOSAIC_TAIL_PIXEN_PULSE_TH_R::new(((self.bits >> 8) & 0xff) as u8)
@@ -58,17 +58,15 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_tail_pixen_pulse_tl(
         &mut self,
     ) -> DEMOSAIC_TAIL_PIXEN_PULSE_TL_W<DEMOSAIC_MATRIX_CTRL_SPEC> {
         DEMOSAIC_TAIL_PIXEN_PULSE_TL_W::new(self, 0)
     }
-    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must &lt; hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th &lt; reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
+    #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_demosaic_tail_pixen_pulse_th!=0 and reg_demosaic_tail_pixen_pulse_tl!=0 and reg_demosaic_tail_pixen_pulse_th < reg_demosaic_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_tail_pixen_pulse_th(
         &mut self,
     ) -> DEMOSAIC_TAIL_PIXEN_PULSE_TH_W<DEMOSAIC_MATRIX_CTRL_SPEC> {
@@ -76,13 +74,11 @@ impl W {
     }
     #[doc = "Bits 16:23 - this field configures demosaic matrix padding data"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_padding_data(&mut self) -> DEMOSAIC_PADDING_DATA_W<DEMOSAIC_MATRIX_CTRL_SPEC> {
         DEMOSAIC_PADDING_DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - this bit configures the padding mode of demosaic matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
     #[inline(always)]
-    #[must_use]
     pub fn demosaic_padding_mode(&mut self) -> DEMOSAIC_PADDING_MODE_W<DEMOSAIC_MATRIX_CTRL_SPEC> {
         DEMOSAIC_PADDING_MODE_W::new(self, 24)
     }

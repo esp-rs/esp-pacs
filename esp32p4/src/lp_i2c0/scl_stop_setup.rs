@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures the time between the rising edge of SCL and the rising edge of SDA. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    #[must_use]
     pub fn time(&mut self) -> TIME_W<SCL_STOP_SETUP_SPEC> {
         TIME_W::new(self, 0)
     }

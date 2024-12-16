@@ -92,43 +92,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - RTC control pwdet enable."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_pwdet_cal_en(&mut self) -> SAR2_PWDET_CAL_EN_W<MEAS2_CTRL1_SPEC> {
         SAR2_PWDET_CAL_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - RTC control pkdet enable."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_pkdet_cal_en(&mut self) -> SAR2_PKDET_CAL_EN_W<MEAS2_CTRL1_SPEC> {
         SAR2_PKDET_CAL_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - SAR2_EN_TEST."]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<MEAS2_CTRL1_SPEC> {
         SAR2_EN_TEST_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_rstb_force(&mut self) -> SAR2_RSTB_FORCE_W<MEAS2_CTRL1_SPEC> {
         SAR2_RSTB_FORCE_W::new(self, 6)
     }
     #[doc = "Bits 8:15 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_standby_wait(&mut self) -> SAR2_STANDBY_WAIT_W<MEAS2_CTRL1_SPEC> {
         SAR2_STANDBY_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_rstb_wait(&mut self) -> SAR2_RSTB_WAIT_W<MEAS2_CTRL1_SPEC> {
         SAR2_RSTB_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - N/A"]
     #[inline(always)]
-    #[must_use]
     pub fn sar2_xpd_wait(&mut self) -> SAR2_XPD_WAIT_W<MEAS2_CTRL1_SPEC> {
         SAR2_XPD_WAIT_W::new(self, 24)
     }

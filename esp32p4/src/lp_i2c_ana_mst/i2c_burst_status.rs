@@ -51,7 +51,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:31 - need des"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c_mst_burst_timeout_cnt(
         &mut self,
     ) -> I2C_MST_BURST_TIMEOUT_CNT_W<I2C_BURST_STATUS_SPEC> {

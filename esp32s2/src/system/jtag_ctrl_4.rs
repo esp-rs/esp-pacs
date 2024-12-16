@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<JTAG_CTRL_4_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Stores the 128 to 159 bits of the 256 bits register used to cancel the temporary disable of eFuse to JTAG."]
     #[inline(always)]
-    #[must_use]
     pub fn cancel_efuse_disable_jtag_temporary_4(
         &mut self,
     ) -> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_4_W<JTAG_CTRL_4_SPEC> {

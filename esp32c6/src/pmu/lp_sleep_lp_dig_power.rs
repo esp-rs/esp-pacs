@@ -37,13 +37,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_lp_mem_dslp(&mut self) -> LP_SLEEP_LP_MEM_DSLP_W<LP_SLEEP_LP_DIG_POWER_SPEC> {
         LP_SLEEP_LP_MEM_DSLP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_sleep_pd_lp_peri_pd_en(
         &mut self,
     ) -> LP_SLEEP_PD_LP_PERI_PD_EN_W<LP_SLEEP_LP_DIG_POWER_SPEC> {

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures video A chroma DC QP offset based on Chroma QP. Chroma DC QP = Chroma QP(after map) + reg_chroma_dc_qp_delta."]
     #[inline(always)]
-    #[must_use]
     pub fn a_chroma_dc_qp_delta(&mut self) -> A_CHROMA_DC_QP_DELTA_W<A_RC_CONF1_SPEC> {
         A_CHROMA_DC_QP_DELTA_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - Configures video A chroma QP offset based on luma QP. Chroma QP(before map) = Luma QP + reg_chroma_qp_delta."]
     #[inline(always)]
-    #[must_use]
     pub fn a_chroma_qp_delta(&mut self) -> A_CHROMA_QP_DELTA_W<A_RC_CONF1_SPEC> {
         A_CHROMA_QP_DELTA_W::new(self, 3)
     }
     #[doc = "Bits 7:12 - Configures video A allowed luma QP min value."]
     #[inline(always)]
-    #[must_use]
     pub fn a_qp_min(&mut self) -> A_QP_MIN_W<A_RC_CONF1_SPEC> {
         A_QP_MIN_W::new(self, 7)
     }
     #[doc = "Bits 13:18 - Configures video A allowed luma QP max value."]
     #[inline(always)]
-    #[must_use]
     pub fn a_qp_max(&mut self) -> A_QP_MAX_W<A_RC_CONF1_SPEC> {
         A_QP_MAX_W::new(self, 13)
     }
     #[doc = "Bits 19:30 - Configures vdieo A frame level predicted MB MAD value."]
     #[inline(always)]
-    #[must_use]
     pub fn a_mad_frame_pred(&mut self) -> A_MAD_FRAME_PRED_W<A_RC_CONF1_SPEC> {
         A_MAD_FRAME_PRED_W::new(self, 19)
     }

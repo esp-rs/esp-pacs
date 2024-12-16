@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock BackUp permission configuration registers."]
     #[inline(always)]
-    #[must_use]
     pub fn backup_bus_pms_constrain_lock(
         &mut self,
     ) -> BACKUP_BUS_PMS_CONSTRAIN_LOCK_W<BACKUP_BUS_PMS_CONSTRAIN_0_SPEC> {

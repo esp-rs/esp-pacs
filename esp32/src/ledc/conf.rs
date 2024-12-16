@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to set the frequency of slow_clk. 1'b1:80mhz 1'b0:8mhz"]
     #[inline(always)]
-    #[must_use]
     pub fn apb_clk_sel(&mut self) -> APB_CLK_SEL_W<CONF_SPEC> {
         APB_CLK_SEL_W::new(self, 0)
     }

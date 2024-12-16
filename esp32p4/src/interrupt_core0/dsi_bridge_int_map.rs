@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_dsi_bridge_int_map(
         &mut self,
     ) -> CORE0_DSI_BRIDGE_INT_MAP_W<DSI_BRIDGE_INT_MAP_SPEC> {

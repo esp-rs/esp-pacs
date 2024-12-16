@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map usb_device interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_device_int_map(&mut self) -> USB_DEVICE_INT_MAP_W<USB_DEVICE_INT_MAP_SPEC> {
         USB_DEVICE_INT_MAP_W::new(self, 0)
     }

@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<SET_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - set this bit to continue DS operation."]
     #[inline(always)]
-    #[must_use]
     pub fn set_continue(&mut self) -> SET_CONTINUE_W<SET_CONTINUE_SPEC> {
         SET_CONTINUE_W::new(self, 0)
     }

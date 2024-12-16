@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_sel(&mut self) -> SDIO_SEL_W<SDIO_SELECT_SPEC> {
         SDIO_SEL_W::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Reverse phase of hall sensor"]
     #[inline(always)]
-    #[must_use]
     pub fn hall_phase(&mut self) -> HALL_PHASE_W<HALL_SENS_SPEC> {
         HALL_PHASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Power on hall sensor and connect to VP and VN"]
     #[inline(always)]
-    #[must_use]
     pub fn xpd_hall(&mut self) -> XPD_HALL_W<HALL_SENS_SPEC> {
         XPD_HALL_W::new(self, 31)
     }

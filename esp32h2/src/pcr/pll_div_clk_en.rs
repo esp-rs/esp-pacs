@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This field is used to open 96 MHz clock (SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_240m_clk_en(&mut self) -> PLL_240M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_240M_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - This field is used to open 64 MHz clock (div3 of SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_160m_clk_en(&mut self) -> PLL_160M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_160M_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - This field is used to open 48 MHz clock (div4 of SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_120m_clk_en(&mut self) -> PLL_120M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_120M_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - This field is used to open 32 MHz clock (div6 of SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_80m_clk_en(&mut self) -> PLL_80M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_80M_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - This field is used to open 16 MHz clock (div10 of SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_48m_clk_en(&mut self) -> PLL_48M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_48M_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - This field is used to open 8 MHz clock (div12 of SPLL) drived from SPLL. 0: close, 1: open(default). Only avaliable when high-speed clock-source SPLL is active."]
     #[inline(always)]
-    #[must_use]
     pub fn pll_40m_clk_en(&mut self) -> PLL_40M_CLK_EN_W<PLL_DIV_CLK_EN_SPEC> {
         PLL_40M_CLK_EN_W::new(self, 5)
     }

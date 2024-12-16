@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:31 - Configures the initial read time of eFuse."]
     #[inline(always)]
-    #[must_use]
     pub fn read_init_num(&mut self) -> READ_INIT_NUM_W<RD_TIM_CONF_SPEC> {
         READ_INIT_NUM_W::new(self, 24)
     }

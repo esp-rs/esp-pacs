@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cache_tag_force_on(&mut self) -> PRO_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC> {
         PRO_CACHE_TAG_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cache_tag_pd(&mut self) -> PRO_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC> {
         PRO_CACHE_TAG_PD_W::new(self, 1)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_tag_force_on(&mut self) -> APP_CACHE_TAG_FORCE_ON_W<TAG_FO_CTRL_SPEC> {
         APP_CACHE_TAG_FORCE_ON_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn app_cache_tag_pd(&mut self) -> APP_CACHE_TAG_PD_W<TAG_FO_CTRL_SPEC> {
         APP_CACHE_TAG_PD_W::new(self, 9)
     }

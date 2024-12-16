@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - t0_update"]
     #[inline(always)]
-    #[must_use]
     pub fn update(&mut self) -> UPDATE_W<UPDATE_SPEC> {
         UPDATE_W::new(self, 31)
     }

@@ -42,13 +42,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for TX Copy DMA access interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_tx_i_ilg_clr(&mut self) -> DMA_TX_I_ILG_CLR_W<DMA_TX_I_2_SPEC> {
         DMA_TX_I_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for TX Copy DMA access interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_tx_i_ilg_en(&mut self) -> DMA_TX_I_ILG_EN_W<DMA_TX_I_2_SPEC> {
         DMA_TX_I_ILG_EN_W::new(self, 1)
     }

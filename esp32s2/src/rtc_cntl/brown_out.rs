@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enables the brown_out2 to initiate a chip reset."]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out2_ena(&mut self) -> BROWN_OUT2_ENA_W<BROWN_OUT_SPEC> {
         BROWN_OUT2_ENA_W::new(self, 0)
     }
     #[doc = "Bits 4:13 - Configures the waiting cycle before sending an interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn int_wait(&mut self) -> INT_WAIT_W<BROWN_OUT_SPEC> {
         INT_WAIT_W::new(self, 4)
     }
     #[doc = "Bit 14 - Set this bit to enable PD the flash when a brown-out happens."]
     #[inline(always)]
-    #[must_use]
     pub fn close_flash_ena(&mut self) -> CLOSE_FLASH_ENA_W<BROWN_OUT_SPEC> {
         CLOSE_FLASH_ENA_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to enable PD the RF circuits when a brown-out happens."]
     #[inline(always)]
-    #[must_use]
     pub fn pd_rf_ena(&mut self) -> PD_RF_ENA_W<BROWN_OUT_SPEC> {
         PD_RF_ENA_W::new(self, 15)
     }
     #[doc = "Bits 16:25 - Configures the waiting cycle before the reset after a brown-out."]
     #[inline(always)]
-    #[must_use]
     pub fn rst_wait(&mut self) -> RST_WAIT_W<BROWN_OUT_SPEC> {
         RST_WAIT_W::new(self, 16)
     }
     #[doc = "Bit 26 - Enables to reset brown-out."]
     #[inline(always)]
-    #[must_use]
     pub fn rst_ena(&mut self) -> RST_ENA_W<BROWN_OUT_SPEC> {
         RST_ENA_W::new(self, 26)
     }
     #[doc = "Bit 27 - Selects the reset type when a brown-out happens. 1: chip reset 0: system reset."]
     #[inline(always)]
-    #[must_use]
     pub fn rst_sel(&mut self) -> RST_SEL_W<BROWN_OUT_SPEC> {
         RST_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - Clears the brown-out counter."]
     #[inline(always)]
-    #[must_use]
     pub fn cnt_clr(&mut self) -> CNT_CLR_W<BROWN_OUT_SPEC> {
         CNT_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to enable brown-out detection."]
     #[inline(always)]
-    #[must_use]
     pub fn ena(&mut self) -> ENA_W<BROWN_OUT_SPEC> {
         ENA_W::new(self, 30)
     }

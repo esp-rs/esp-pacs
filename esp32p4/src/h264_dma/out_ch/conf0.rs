@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable automatic outlink-writeback when all the data pointed by outlink descriptor has been received."]
     #[inline(always)]
-    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<CONF0_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 0)
     }
     #[doc = "Bit 1 - EOF flag generation mode when receiving data. 1: EOF flag for Tx channel 0 is generated when data need to read has been popped from FIFO in DMA"]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<CONF0_SPEC> {
         OUT_EOF_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to 1 to enable INCR burst transfer for Tx channel 0 reading link descriptor when accessing internal SRAM."]
     #[inline(always)]
-    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<CONF0_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - When access address space is ecc/aes area, this bit should be set to 1. In this case, the start address of square should be 16-bit aligned. The width of square multiply byte number of one pixel should be 16-bit aligned."]
     #[inline(always)]
-    #[must_use]
     pub fn out_ecc_aes_en(&mut self) -> OUT_ECC_AES_EN_W<CONF0_SPEC> {
         OUT_ECC_AES_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    #[must_use]
     pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<CONF0_SPEC> {
         OUT_CHECK_OWNER_W::new(self, 4)
     }
     #[doc = "Bits 6:8 - Block size of Tx channel 0. 0: single 1: 16 bytes 2: 32 bytes 3: 64 bytes 4: 128 bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn out_mem_burst_length(&mut self) -> OUT_MEM_BURST_LENGTH_W<CONF0_SPEC> {
         OUT_MEM_BURST_LENGTH_W::new(self, 6)
     }
     #[doc = "Bit 12 - Set this bit to 1 to make sure AXI read data don't cross the address boundary which define by mem_burst_length"]
     #[inline(always)]
-    #[must_use]
     pub fn out_page_bound_en(&mut self) -> OUT_PAGE_BOUND_EN_W<CONF0_SPEC> {
         OUT_PAGE_BOUND_EN_W::new(self, 12)
     }
     #[doc = "Bit 16 - Enable TX channel 0 macro block reorder when set to 1, only channel0 have this selection"]
     #[inline(always)]
-    #[must_use]
     pub fn out_reorder_en(&mut self) -> OUT_REORDER_EN_W<CONF0_SPEC> {
         OUT_REORDER_EN_W::new(self, 16)
     }
     #[doc = "Bit 24 - Write 1 then write 0 to this bit to reset TX channel"]
     #[inline(always)]
-    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<CONF0_SPEC> {
         OUT_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Write 1 before reset and write 0 after reset"]
     #[inline(always)]
-    #[must_use]
     pub fn out_cmd_disable(&mut self) -> OUT_CMD_DISABLE_W<CONF0_SPEC> {
         OUT_CMD_DISABLE_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to 1 to disable arbiter optimum weight function."]
     #[inline(always)]
-    #[must_use]
     pub fn out_arb_weight_opt_dis(&mut self) -> OUT_ARB_WEIGHT_OPT_DIS_W<CONF0_SPEC> {
         OUT_ARB_WEIGHT_OPT_DIS_W::new(self, 26)
     }

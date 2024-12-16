@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:16 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn cfg(&mut self) -> CFG_W<CALI_SPEC> {
         CFG_W::new(self, 0)
     }

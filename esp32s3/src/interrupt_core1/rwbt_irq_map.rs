@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map rwbt_irq interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn rwbt_irq_map(&mut self) -> RWBT_IRQ_MAP_W<RWBT_IRQ_MAP_SPEC> {
         RWBT_IRQ_MAP_W::new(self, 0)
     }

@@ -151,7 +151,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 6:7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem2sleep_backup_modem_clk_code(
         &mut self,
     ) -> HP_MODEM2SLEEP_BACKUP_MODEM_CLK_CODE_W<HP_SLEEP_BACKUP_SPEC> {
@@ -159,7 +158,6 @@ impl W {
     }
     #[doc = "Bits 8:9 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active2sleep_backup_modem_clk_code(
         &mut self,
     ) -> HP_ACTIVE2SLEEP_BACKUP_MODEM_CLK_CODE_W<HP_SLEEP_BACKUP_SPEC> {
@@ -167,13 +165,11 @@ impl W {
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_sleep_retention_mode(&mut self) -> HP_SLEEP_RETENTION_MODE_W<HP_SLEEP_BACKUP_SPEC> {
         HP_SLEEP_RETENTION_MODE_W::new(self, 10)
     }
     #[doc = "Bit 12 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem2sleep_retention_en(
         &mut self,
     ) -> HP_MODEM2SLEEP_RETENTION_EN_W<HP_SLEEP_BACKUP_SPEC> {
@@ -181,7 +177,6 @@ impl W {
     }
     #[doc = "Bit 13 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active2sleep_retention_en(
         &mut self,
     ) -> HP_ACTIVE2SLEEP_RETENTION_EN_W<HP_SLEEP_BACKUP_SPEC> {
@@ -189,7 +184,6 @@ impl W {
     }
     #[doc = "Bits 16:17 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem2sleep_backup_clk_sel(
         &mut self,
     ) -> HP_MODEM2SLEEP_BACKUP_CLK_SEL_W<HP_SLEEP_BACKUP_SPEC> {
@@ -197,7 +191,6 @@ impl W {
     }
     #[doc = "Bits 18:19 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active2sleep_backup_clk_sel(
         &mut self,
     ) -> HP_ACTIVE2SLEEP_BACKUP_CLK_SEL_W<HP_SLEEP_BACKUP_SPEC> {
@@ -205,7 +198,6 @@ impl W {
     }
     #[doc = "Bits 23:25 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem2sleep_backup_mode(
         &mut self,
     ) -> HP_MODEM2SLEEP_BACKUP_MODE_W<HP_SLEEP_BACKUP_SPEC> {
@@ -213,7 +205,6 @@ impl W {
     }
     #[doc = "Bits 26:28 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active2sleep_backup_mode(
         &mut self,
     ) -> HP_ACTIVE2SLEEP_BACKUP_MODE_W<HP_SLEEP_BACKUP_SPEC> {
@@ -221,13 +212,11 @@ impl W {
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_modem2sleep_backup_en(&mut self) -> HP_MODEM2SLEEP_BACKUP_EN_W<HP_SLEEP_BACKUP_SPEC> {
         HP_MODEM2SLEEP_BACKUP_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_active2sleep_backup_en(
         &mut self,
     ) -> HP_ACTIVE2SLEEP_BACKUP_EN_W<HP_SLEEP_BACKUP_SPEC> {

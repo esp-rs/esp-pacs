@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_625us_cnt(&mut self) -> CLK_625US_CNT_W<CLK_COUNTER_SPEC> {
         CLK_625US_CNT_W::new(self, 0)
     }

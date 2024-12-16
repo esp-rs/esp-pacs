@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the type of the external memory. Currently, it must be set to 0, as the Manual Encryption block only supports flash encryption. Errors may occurs if users write 1. 0:flash. 1: external RAM."]
     #[inline(always)]
-    #[must_use]
     pub fn destination(&mut self) -> DESTINATION_W<DESTINATION_SPEC> {
         DESTINATION_W::new(self, 0)
     }

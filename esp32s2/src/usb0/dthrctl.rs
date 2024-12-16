@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn nonisothren(&mut self) -> NONISOTHREN_W<DTHRCTL_SPEC> {
         NONISOTHREN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn isothren(&mut self) -> ISOTHREN_W<DTHRCTL_SPEC> {
         ISOTHREN_W::new(self, 1)
     }
     #[doc = "Bits 2:10"]
     #[inline(always)]
-    #[must_use]
     pub fn txthrlen(&mut self) -> TXTHRLEN_W<DTHRCTL_SPEC> {
         TXTHRLEN_W::new(self, 2)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    #[must_use]
     pub fn ahbthrratio(&mut self) -> AHBTHRRATIO_W<DTHRCTL_SPEC> {
         AHBTHRRATIO_W::new(self, 11)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn rxthren(&mut self) -> RXTHREN_W<DTHRCTL_SPEC> {
         RXTHREN_W::new(self, 16)
     }
     #[doc = "Bits 17:25"]
     #[inline(always)]
-    #[must_use]
     pub fn rxthrlen(&mut self) -> RXTHRLEN_W<DTHRCTL_SPEC> {
         RXTHRLEN_W::new(self, 17)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    #[must_use]
     pub fn arbprken(&mut self) -> ARBPRKEN_W<DTHRCTL_SPEC> {
         ARBPRKEN_W::new(self, 27)
     }

@@ -11,7 +11,6 @@ impl core::fmt::Debug for crate::generic::Reg<BLK_TFR_RESUMEREQ0_SPEC> {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn ch1_blk_tfr_resumereq(&mut self) -> CH1_BLK_TFR_RESUMEREQ_W<BLK_TFR_RESUMEREQ0_SPEC> {
         CH1_BLK_TFR_RESUMEREQ_W::new(self, 0)
     }

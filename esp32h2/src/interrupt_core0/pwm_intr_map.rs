@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - CORE0_PWM_INTR mapping register"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm_intr_map(&mut self) -> PWM_INTR_MAP_W<PWM_INTR_MAP_SPEC> {
         PWM_INTR_MAP_W::new(self, 0)
     }

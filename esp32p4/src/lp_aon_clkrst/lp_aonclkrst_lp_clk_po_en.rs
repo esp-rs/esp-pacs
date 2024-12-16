@@ -144,7 +144,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_core_efuse_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_CORE_EFUSE_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -152,7 +151,6 @@ impl W {
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_lp_bus_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_LP_BUS_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -160,7 +158,6 @@ impl W {
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_aon_slow_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_AON_SLOW_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -168,7 +165,6 @@ impl W {
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_aon_fast_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_AON_FAST_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -176,7 +172,6 @@ impl W {
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_slow_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_SLOW_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -184,7 +179,6 @@ impl W {
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_fast_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_FAST_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -192,7 +186,6 @@ impl W {
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_fosc_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_FOSC_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -200,7 +193,6 @@ impl W {
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_rc32k_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_RC32K_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -208,7 +200,6 @@ impl W {
     }
     #[doc = "Bit 8 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_sxtal_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_SXTAL_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {
@@ -216,7 +207,6 @@ impl W {
     }
     #[doc = "Bit 9 - 1'b1: probe sosc clk on 1'b0: probe sosc clk off"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_aonclkrst_clk_sosc_oen(
         &mut self,
     ) -> LP_AONCLKRST_CLK_SOSC_OEN_W<LP_AONCLKRST_LP_CLK_PO_EN_SPEC> {

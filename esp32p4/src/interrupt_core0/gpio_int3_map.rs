@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core0_gpio_int3_map(&mut self) -> CORE0_GPIO_INT3_MAP_W<GPIO_INT3_MAP_SPEC> {
         CORE0_GPIO_INT3_MAP_W::new(self, 0)
     }

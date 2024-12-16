@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - the threshold for touch pad 9"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_out_th9(&mut self) -> TOUCH_OUT_TH9_W<SAR_TOUCH_THRES5_SPEC> {
         TOUCH_OUT_TH9_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - the threshold for touch pad 8"]
     #[inline(always)]
-    #[must_use]
     pub fn touch_out_th8(&mut self) -> TOUCH_OUT_TH8_W<SAR_TOUCH_THRES5_SPEC> {
         TOUCH_OUT_TH8_W::new(self, 16)
     }

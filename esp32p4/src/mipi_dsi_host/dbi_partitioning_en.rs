@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn partitioning_en(&mut self) -> PARTITIONING_EN_W<DBI_PARTITIONING_EN_SPEC> {
         PARTITIONING_EN_W::new(self, 0)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - This register is used to map CPU_INTR_FROM_CPU_3 interrupt signal to one of the CPU interrupts."]
     #[inline(always)]
-    #[must_use]
     pub fn pro_cpu_intr_from_cpu_3_map(
         &mut self,
     ) -> PRO_CPU_INTR_FROM_CPU_3_MAP_W<PRO_CPU_INTR_FROM_CPU_3_MAP_SPEC> {

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Set 1 to let rom power down"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_power_down(&mut self) -> ROM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC> {
         ROM_POWER_DOWN_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - Set 1 to let sram power down"]
     #[inline(always)]
-    #[must_use]
     pub fn sram_power_down(&mut self) -> SRAM_POWER_DOWN_W<MEM_POWER_DOWN_SPEC> {
         SRAM_POWER_DOWN_W::new(self, 3)
     }

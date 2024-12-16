@@ -334,193 +334,161 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn rmt_sys_clk_en(&mut self) -> RMT_SYS_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         RMT_SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn hp_clkrst_apb_clk_en(&mut self) -> HP_CLKRST_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         HP_CLKRST_APB_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn sysreg_apb_clk_en(&mut self) -> SYSREG_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         SYSREG_APB_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn icm_apb_clk_en(&mut self) -> ICM_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         ICM_APB_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn intrmtx_apb_clk_en(&mut self) -> INTRMTX_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         INTRMTX_APB_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_apb_clk_en(&mut self) -> ADC_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         ADC_APB_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uhci_apb_clk_en(&mut self) -> UHCI_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UHCI_APB_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart0_apb_clk_en(&mut self) -> UART0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UART0_APB_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_apb_clk_en(&mut self) -> UART1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UART1_APB_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_apb_clk_en(&mut self) -> UART2_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UART2_APB_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart3_apb_clk_en(&mut self) -> UART3_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UART3_APB_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4_apb_clk_en(&mut self) -> UART4_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         UART4_APB_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_apb_clk_en(&mut self) -> I2C0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I2C0_APB_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c1_apb_clk_en(&mut self) -> I2C1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I2C1_APB_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s0_apb_clk_en(&mut self) -> I2S0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I2S0_APB_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s1_apb_clk_en(&mut self) -> I2S1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I2S1_APB_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i2s2_apb_clk_en(&mut self) -> I2S2_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I2S2_APB_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c_mst_apb_clk_en(&mut self) -> I3C_MST_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I3C_MST_APB_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c_slv_apb_clk_en(&mut self) -> I3C_SLV_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         I3C_SLV_APB_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn gpspi2_apb_clk_en(&mut self) -> GPSPI2_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         GPSPI2_APB_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn gpspi3_apb_clk_en(&mut self) -> GPSPI3_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         GPSPI3_APB_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn timergrp0_apb_clk_en(&mut self) -> TIMERGRP0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         TIMERGRP0_APB_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn timergrp1_apb_clk_en(&mut self) -> TIMERGRP1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         TIMERGRP1_APB_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn systimer_apb_clk_en(&mut self) -> SYSTIMER_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         SYSTIMER_APB_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai0_apb_clk_en(&mut self) -> TWAI0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         TWAI0_APB_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai1_apb_clk_en(&mut self) -> TWAI1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         TWAI1_APB_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn twai2_apb_clk_en(&mut self) -> TWAI2_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         TWAI2_APB_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mcpwm0_apb_clk_en(&mut self) -> MCPWM0_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         MCPWM0_APB_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn mcpwm1_apb_clk_en(&mut self) -> MCPWM1_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         MCPWM1_APB_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn usb_device_apb_clk_en(&mut self) -> USB_DEVICE_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         USB_DEVICE_APB_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn pcnt_apb_clk_en(&mut self) -> PCNT_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         PCNT_APB_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn parlio_apb_clk_en(&mut self) -> PARLIO_APB_CLK_EN_W<SOC_CLK_CTRL2_SPEC> {
         PARLIO_APB_CLK_EN_W::new(self, 31)
     }

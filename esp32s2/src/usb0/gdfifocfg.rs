@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn gdfifocfg(&mut self) -> GDFIFOCFG_W<GDFIFOCFG_SPEC> {
         GDFIFOCFG_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    #[must_use]
     pub fn epinfobaseaddr(&mut self) -> EPINFOBASEADDR_W<GDFIFOCFG_SPEC> {
         EPINFOBASEADDR_W::new(self, 16)
     }

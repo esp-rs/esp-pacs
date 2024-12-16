@@ -34,7 +34,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token0_wd(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN0_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {
@@ -42,7 +41,6 @@ impl W {
     }
     #[doc = "Bits 16:27"]
     #[inline(always)]
-    #[must_use]
     pub fn host_slc0host_token1_wd(
         &mut self,
     ) -> HOST_SLC0HOST_TOKEN1_WD_W<HOST_SLC0HOST_TOKEN_WDATA_SPEC> {

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When this bit is set the Address Filter module passes all incoming frames irrespective of the destination or source address. The SA or DA Filter Fails status bits of the Receive Status Word are always cleared when PR(PRI_RATIO) is set."]
     #[inline(always)]
-    #[must_use]
     pub fn pmode(&mut self) -> PMODE_W<EMACFF_SPEC> {
         PMODE_W::new(self, 0)
     }
     #[doc = "Bit 3 - When this bit is set the Address Check block operates in inverse filtering mode for the DA address comparison for both unicast and multicast frames. When reset normal filtering of frames is performed."]
     #[inline(always)]
-    #[must_use]
     pub fn daif(&mut self) -> DAIF_W<EMACFF_SPEC> {
         DAIF_W::new(self, 3)
     }
     #[doc = "Bit 4 - When set this bit indicates that all received frames with a multicast destination address (first bit in the destination address field is '1') are passed."]
     #[inline(always)]
-    #[must_use]
     pub fn pam(&mut self) -> PAM_W<EMACFF_SPEC> {
         PAM_W::new(self, 4)
     }
     #[doc = "Bit 5 - When this bit is set the AFM(Address Filtering Module) module blocks all incoming broadcast frames. In addition it overrides all other filter settings. When this bit is reset the AFM module passes all received broadcast Frames."]
     #[inline(always)]
-    #[must_use]
     pub fn dbf(&mut self) -> DBF_W<EMACFF_SPEC> {
         DBF_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - These bits control the forwarding of all control frames (including unicast and multicast Pause frames). 2'b00: MAC filters all control frames from reaching the application. 2'b01: MAC forwards all control frames except Pause frames to application even if they fail the Address filter. 2'b10: MAC forwards all control frames to application even if they fail the Address Filter. 2'b11: MAC forwards control frames that pass the Address Filter.The following conditions should be true for the Pause frames processing: Condition 1: The MAC is in the full-duplex mode and flow control is enabled by setting Bit 2 (RFE) of Register (Flow Control Register) to 1. Condition 2: The destination address (DA) of the received frame matches the special multicast address or the MAC Address 0 when Bit 3 (UP) of the Register(Flow Control Register) is set. Condition 3: The Type field of the received frame is 0x8808 and the OPCODE field is 0x0001."]
     #[inline(always)]
-    #[must_use]
     pub fn pcf(&mut self) -> PCF_W<EMACFF_SPEC> {
         PCF_W::new(self, 6)
     }
     #[doc = "Bit 8 - When this bit is set the Address Check block operates in inverse filtering mode for the SA address comparison. The frames whose SA matches the SA registers are marked as failing the SA Address filter. When this bit is reset frames whose SA does not match the SA registers are marked as failing the SA Address filter."]
     #[inline(always)]
-    #[must_use]
     pub fn saif(&mut self) -> SAIF_W<EMACFF_SPEC> {
         SAIF_W::new(self, 8)
     }
     #[doc = "Bit 9 - When this bit is set the MAC compares the SA field of the received frames with the values programmed in the enabled SA registers. If the comparison fails the MAC drops the frame. When this bit is reset the MAC forwards the received frame to the application with updated SAF bit of the Rx Status depending on the SA address comparison."]
     #[inline(always)]
-    #[must_use]
     pub fn safe(&mut self) -> SAFE_W<EMACFF_SPEC> {
         SAFE_W::new(self, 9)
     }
     #[doc = "Bit 31 - When this bit is set the MAC Receiver module passes all received frames irrespective of whether they pass the address filter or not to the Application. The result of the SA or DA filtering is updated (pass or fail) in the corresponding bits in the Receive Status Word. When this bit is reset the Receiver module passes only those frames to the Application that pass the SA or DA address Filter."]
     #[inline(always)]
-    #[must_use]
     pub fn receive_all(&mut self) -> RECEIVE_ALL_W<EMACFF_SPEC> {
         RECEIVE_ALL_W::new(self, 31)
     }

@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn core1_gpio_pad_comp_int_map(
         &mut self,
     ) -> CORE1_GPIO_PAD_COMP_INT_MAP_W<GPIO_PAD_COMP_INT_MAP_SPEC> {

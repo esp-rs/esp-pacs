@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Is used to configure the starting address when the acceleration option of search is used."]
     #[inline(always)]
-    #[must_use]
     pub fn search_pos(&mut self) -> SEARCH_POS_W<SEARCH_POS_SPEC> {
         SEARCH_POS_W::new(self, 0)
     }

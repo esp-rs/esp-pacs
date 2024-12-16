@@ -40,7 +40,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_usage_mac_dump_sram(
         &mut self,
     ) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<INTERNAL_SRAM_USAGE_3_SPEC> {
@@ -48,7 +47,6 @@ impl W {
     }
     #[doc = "Bit 3 - Need add description"]
     #[inline(always)]
-    #[must_use]
     pub fn internal_sram_alloc_mac_dump(
         &mut self,
     ) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<INTERNAL_SRAM_USAGE_3_SPEC> {

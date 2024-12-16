@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    #[must_use]
     pub fn esco_en(&mut self) -> ESCO_EN_W<ESCO_CONF0_SPEC> {
         ESCO_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    #[must_use]
     pub fn esco_chan_mod(&mut self) -> ESCO_CHAN_MOD_W<ESCO_CONF0_SPEC> {
         ESCO_CHAN_MOD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn esco_cvsd_dec_pack_err(&mut self) -> ESCO_CVSD_DEC_PACK_ERR_W<ESCO_CONF0_SPEC> {
         ESCO_CVSD_DEC_PACK_ERR_W::new(self, 2)
     }
     #[doc = "Bits 3:7"]
     #[inline(always)]
-    #[must_use]
     pub fn esco_cvsd_pack_len_8k(&mut self) -> ESCO_CVSD_PACK_LEN_8K_W<ESCO_CONF0_SPEC> {
         ESCO_CVSD_PACK_LEN_8K_W::new(self, 3)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn esco_cvsd_inf_en(&mut self) -> ESCO_CVSD_INF_EN_W<ESCO_CONF0_SPEC> {
         ESCO_CVSD_INF_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_dec_start(&mut self) -> CVSD_DEC_START_W<ESCO_CONF0_SPEC> {
         CVSD_DEC_START_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn cvsd_dec_reset(&mut self) -> CVSD_DEC_RESET_W<ESCO_CONF0_SPEC> {
         CVSD_DEC_RESET_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    #[must_use]
     pub fn plc_en(&mut self) -> PLC_EN_W<ESCO_CONF0_SPEC> {
         PLC_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn plc2dma_en(&mut self) -> PLC2DMA_EN_W<ESCO_CONF0_SPEC> {
         PLC2DMA_EN_W::new(self, 12)
     }

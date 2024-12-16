@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - In the slave mode it is the length in bytes for read operations. The register value shall be byte_num."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_dma_rd_bytelen(&mut self) -> SLV_DMA_RD_BYTELEN_W<SLV_RDBUF_DLEN_SPEC> {
         SLV_DMA_RD_BYTELEN_W::new(self, 0)
     }
     #[doc = "Bit 24 - The interrupt raw bit for the completion of read-buffer operation in the slave mode. Can not be changed by CONF_buf."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<SLV_RDBUF_DLEN_SPEC> {
         SLV_RD_BUF_DONE_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: The recent magic value in CONF buffer is not right in master DMA seg-trans mode. 0: others."]
     #[inline(always)]
-    #[must_use]
     pub fn seg_magic_err(&mut self) -> SEG_MAGIC_ERR_W<SLV_RDBUF_DLEN_SPEC> {
         SEG_MAGIC_ERR_W::new(self, 25)
     }

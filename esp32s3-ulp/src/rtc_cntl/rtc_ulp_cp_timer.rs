@@ -46,25 +46,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - ULP-coprocessor PC initial address"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<RTC_ULP_CP_TIMER_SPEC> {
         ULP_CP_PC_INIT_W::new(self, 0)
     }
     #[doc = "Bit 29 - ULP-coprocessor wakeup by GPIO enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<RTC_ULP_CP_TIMER_SPEC> {
         ULP_CP_GPIO_WAKEUP_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - ULP-coprocessor wakeup by GPIO state clear"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<RTC_ULP_CP_TIMER_SPEC> {
         ULP_CP_GPIO_WAKEUP_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - ULP-coprocessor timer enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<RTC_ULP_CP_TIMER_SPEC> {
         ULP_CP_SLP_TIMER_EN_W::new(self, 31)
     }

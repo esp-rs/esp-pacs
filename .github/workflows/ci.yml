@@ -5,6 +5,7 @@ on:
     paths-ignore:
       - "**/README.md"
   push:
+  merge_group:
   workflow_dispatch:
 
 env:

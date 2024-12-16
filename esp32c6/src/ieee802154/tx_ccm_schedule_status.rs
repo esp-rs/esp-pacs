@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_ccm_schedule_status(
         &mut self,
     ) -> TX_CCM_SCHEDULE_STATUS_W<TX_CCM_SCHEDULE_STATUS_SPEC> {

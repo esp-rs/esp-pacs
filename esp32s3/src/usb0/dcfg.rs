@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    #[must_use]
     pub fn nzstsouthshk(&mut self) -> NZSTSOUTHSHK_W<DCFG_SPEC> {
         NZSTSOUTHSHK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ena32khzsusp(&mut self) -> ENA32KHZSUSP_W<DCFG_SPEC> {
         ENA32KHZSUSP_W::new(self, 3)
     }
     #[doc = "Bits 4:10"]
     #[inline(always)]
-    #[must_use]
     pub fn devaddr(&mut self) -> DEVADDR_W<DCFG_SPEC> {
         DEVADDR_W::new(self, 4)
     }
     #[doc = "Bits 11:12"]
     #[inline(always)]
-    #[must_use]
     pub fn perfrlint(&mut self) -> PERFRLINT_W<DCFG_SPEC> {
         PERFRLINT_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn endevoutnak(&mut self) -> ENDEVOUTNAK_W<DCFG_SPEC> {
         ENDEVOUTNAK_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    #[must_use]
     pub fn xcvrdly(&mut self) -> XCVRDLY_W<DCFG_SPEC> {
         XCVRDLY_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    #[must_use]
     pub fn erraticintmsk(&mut self) -> ERRATICINTMSK_W<DCFG_SPEC> {
         ERRATICINTMSK_W::new(self, 15)
     }
     #[doc = "Bits 18:22"]
     #[inline(always)]
-    #[must_use]
     pub fn epmiscnt(&mut self) -> EPMISCNT_W<DCFG_SPEC> {
         EPMISCNT_W::new(self, 18)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    #[must_use]
     pub fn descdma(&mut self) -> DESCDMA_W<DCFG_SPEC> {
         DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
     pub fn perschintvl(&mut self) -> PERSCHINTVL_W<DCFG_SPEC> {
         PERSCHINTVL_W::new(self, 24)
     }
     #[doc = "Bits 26:31"]
     #[inline(always)]
-    #[must_use]
     pub fn resvalid(&mut self) -> RESVALID_W<DCFG_SPEC> {
         RESVALID_W::new(self, 26)
     }

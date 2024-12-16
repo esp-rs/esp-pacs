@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The configure fix pixel in fix pixel filling mode for blender engine."]
     #[inline(always)]
-    #[must_use]
     pub fn blend_tx_fix_pixel(&mut self) -> BLEND_TX_FIX_PIXEL_W<BLEND_FIX_PIXEL_SPEC> {
         BLEND_TX_FIX_PIXEL_W::new(self, 0)
     }

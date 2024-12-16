@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn dtm_tx_pkt_threshold(&mut self) -> DTM_TX_PKT_THRESHOLD_W<DTM_TX_PKT_CONFIG_SPEC> {
         DTM_TX_PKT_THRESHOLD_W::new(self, 0)
     }

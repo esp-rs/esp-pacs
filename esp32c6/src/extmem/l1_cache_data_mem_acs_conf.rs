@@ -122,7 +122,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - The bit is used to enable config-bus read L1-Cache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_data_mem_rd_en(
         &mut self,
     ) -> L1_CACHE_DATA_MEM_RD_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {
@@ -130,7 +129,6 @@ impl W {
     }
     #[doc = "Bit 17 - The bit is used to enable config-bus write L1-Cache data memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_data_mem_wr_en(
         &mut self,
     ) -> L1_CACHE_DATA_MEM_WR_EN_W<L1_CACHE_DATA_MEM_ACS_CONF_SPEC> {

@@ -98,13 +98,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Set this bit to set L1-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_tag_object(&mut self) -> L1_CACHE_TAG_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_CACHE_TAG_OBJECT_W::new(self, 4)
     }
     #[doc = "Bit 10 - Set this bit to set L1-Cache data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    #[must_use]
     pub fn l1_cache_mem_object(&mut self) -> L1_CACHE_MEM_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_CACHE_MEM_OBJECT_W::new(self, 10)
     }

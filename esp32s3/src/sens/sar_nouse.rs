@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - no public"]
     #[inline(always)]
-    #[must_use]
     pub fn sar_nouse(&mut self) -> SAR_NOUSE_W<SAR_NOUSE_SPEC> {
         SAR_NOUSE_W::new(self, 0)
     }

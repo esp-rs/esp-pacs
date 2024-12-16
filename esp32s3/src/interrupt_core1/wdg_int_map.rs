@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this register used to map wdg interrupt to one of core1's external interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn wdg_int_map(&mut self) -> WDG_INT_MAP_W<WDG_INT_MAP_SPEC> {
         WDG_INT_MAP_W::new(self, 0)
     }

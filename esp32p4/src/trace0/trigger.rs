@@ -38,25 +38,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure whether or not start trace.\\\\1: start trace \\\\0: invalid\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn on(&mut self) -> ON_W<TRIGGER_SPEC> {
         ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configure whether or not stop trace.\\\\1: stop trace \\\\0: invalid\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn off(&mut self) -> OFF_W<TRIGGER_SPEC> {
         OFF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configure memory loop mode. \\\\1: trace will loop wrtie trace_mem. \\\\0: when mem_current_addr at mem_end_addr, it will stop at the mem_end_addr\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn mem_loop(&mut self) -> MEM_LOOP_W<TRIGGER_SPEC> {
         MEM_LOOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configure whether or not enable auto-restart.\\\\1: enable\\\\0: disable\\\\"]
     #[inline(always)]
-    #[must_use]
     pub fn restart_ena(&mut self) -> RESTART_ENA_W<TRIGGER_SPEC> {
         RESTART_ENA_W::new(self, 3)
     }

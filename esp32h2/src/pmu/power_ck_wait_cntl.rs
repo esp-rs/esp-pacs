@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wait_xtl_stable(&mut self) -> WAIT_XTL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC> {
         WAIT_XTL_STABLE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - need_des"]
     #[inline(always)]
-    #[must_use]
     pub fn wait_pll_stable(&mut self) -> WAIT_PLL_STABLE_W<POWER_CK_WAIT_CNTL_SPEC> {
         WAIT_PLL_STABLE_W::new(self, 16)
     }

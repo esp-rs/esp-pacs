@@ -174,97 +174,81 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:3 - TOUCH attenuation."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drange(&mut self) -> TOUCH_DRANGE_W<TOUCH_CTRL2_SPEC> {
         TOUCH_DRANGE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - TOUCH reference voltage low. 0: 0.5 V 1: 0.6 V 2: 0.7 V 3: 0.8 V."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drefl(&mut self) -> TOUCH_DREFL_W<TOUCH_CTRL2_SPEC> {
         TOUCH_DREFL_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - TOUCH reference voltage high. 0: 2.4 V 1: 2.5 V 2: 2.6 V 3: 2.7 V."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_drefh(&mut self) -> TOUCH_DREFH_W<TOUCH_CTRL2_SPEC> {
         TOUCH_DREFH_W::new(self, 6)
     }
     #[doc = "Bit 8 - TOUCH BIAS power switch."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_xpd_bias(&mut self) -> TOUCH_XPD_BIAS_W<TOUCH_CTRL2_SPEC> {
         TOUCH_XPD_BIAS_W::new(self, 8)
     }
     #[doc = "Bits 9:11 - Touch pad 0 reference capacitance."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_refc(&mut self) -> TOUCH_REFC_W<TOUCH_CTRL2_SPEC> {
         TOUCH_REFC_W::new(self, 9)
     }
     #[doc = "Bit 12 - 0: Use bandgap bias. 1: Use self bias."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_dbias(&mut self) -> TOUCH_DBIAS_W<TOUCH_CTRL2_SPEC> {
         TOUCH_DBIAS_W::new(self, 12)
     }
     #[doc = "Bit 13 - Touch timer enable bit."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_slp_timer_en(&mut self) -> TOUCH_SLP_TIMER_EN_W<TOUCH_CTRL2_SPEC> {
         TOUCH_SLP_TIMER_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - 0: TOUCH_START and TOUCH_XPD are controlled by soft- ware. 1: TOUCH_START and TOUCH_XPD are controlled by the Touch FSM."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start_fsm_en(&mut self) -> TOUCH_START_FSM_EN_W<TOUCH_CTRL2_SPEC> {
         TOUCH_START_FSM_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - 1: Start the Touch FSM, only valid when RTC_CNTL_TOUCH_START_FORCE = 1."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start_en(&mut self) -> TOUCH_START_EN_W<TOUCH_CTRL2_SPEC> {
         TOUCH_START_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - 0: Start the Touch FSM by timer. 1: Start Touch FSM by software."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_start_force(&mut self) -> TOUCH_START_FORCE_W<TOUCH_CTRL2_SPEC> {
         TOUCH_START_FORCE_W::new(self, 16)
     }
     #[doc = "Bits 17:24 - The waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<TOUCH_CTRL2_SPEC> {
         TOUCH_XPD_WAIT_W::new(self, 17)
     }
     #[doc = "Bits 25:26 - When a touch pad is active, sleep cycle could be divided by this number."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_slp_cyc_div(&mut self) -> TOUCH_SLP_CYC_DIV_W<TOUCH_CTRL2_SPEC> {
         TOUCH_SLP_CYC_DIV_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - Force touch timer done."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timer_force_done(&mut self) -> TOUCH_TIMER_FORCE_DONE_W<TOUCH_CTRL2_SPEC> {
         TOUCH_TIMER_FORCE_DONE_W::new(self, 27)
     }
     #[doc = "Bit 29 - Reset TOUCH FSM via software."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_reset(&mut self) -> TOUCH_RESET_W<TOUCH_CTRL2_SPEC> {
         TOUCH_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - Touch clock force on."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_clk_fo(&mut self) -> TOUCH_CLK_FO_W<TOUCH_CTRL2_SPEC> {
         TOUCH_CLK_FO_W::new(self, 30)
     }
     #[doc = "Bit 31 - Touch clock enable bit."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_clkgate_en(&mut self) -> TOUCH_CLKGATE_EN_W<TOUCH_CTRL2_SPEC> {
         TOUCH_CLKGATE_EN_W::new(self, 31)
     }

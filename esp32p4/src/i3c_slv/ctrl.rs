@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - If set to non-0, will request an event. Once requested, STATUS.EVENT and EVDET will show the status as it progresses. Once completed, the field will automatically return to 0. Once non-0, only 0 can be written(to cancel) until done. 0: Normal mode. If set to 0 after was a non-0 value, will cancel if not already in flight. 1: start an IBI. This will try to push through an IBI on the bus. If data associate with the IBI, it will be drawn from the IBIDATA field. Note that if Time control is enabled, this will include anytime control related bytes further, the IBIDATA byte will have bit7 set to 1."]
     #[inline(always)]
-    #[must_use]
     pub fn slv_event(&mut self) -> SLV_EVENT_W<CTRL_SPEC> {
         SLV_EVENT_W::new(self, 0)
     }
     #[doc = "Bit 3 - reserved"]
     #[inline(always)]
-    #[must_use]
     pub fn extdata(&mut self) -> EXTDATA_W<CTRL_SPEC> {
         EXTDATA_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - Index of Dynamic Address that IBI is for. This is 0 for the main or base Dynamic Address, or can be any valid index."]
     #[inline(always)]
-    #[must_use]
     pub fn mapidx(&mut self) -> MAPIDX_W<CTRL_SPEC> {
         MAPIDX_W::new(self, 4)
     }
     #[doc = "Bits 8:15 - Data byte to go with an IBI, if enabled for it. If enabled (was in BCR), then it is required."]
     #[inline(always)]
-    #[must_use]
     pub fn ibidata(&mut self) -> IBIDATA_W<CTRL_SPEC> {
         IBIDATA_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - Should be set to the pending interrupt that GETSTATUS CCC will return. This should be maintained by the application if used and configured, as the Master will read this. If not configured, the GETSTATUS field will return 1 if an IBI is pending, and 0 otherwise."]
     #[inline(always)]
-    #[must_use]
     pub fn pendint(&mut self) -> PENDINT_W<CTRL_SPEC> {
         PENDINT_W::new(self, 16)
     }
     #[doc = "Bits 20:21 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn actstate(&mut self) -> ACTSTATE_W<CTRL_SPEC> {
         ACTSTATE_W::new(self, 20)
     }
     #[doc = "Bits 24:31 - NA"]
     #[inline(always)]
-    #[must_use]
     pub fn vendinfo(&mut self) -> VENDINFO_W<CTRL_SPEC> {
         VENDINFO_W::new(self, 24)
     }

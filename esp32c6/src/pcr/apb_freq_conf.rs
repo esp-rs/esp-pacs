@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - If this field's value is grater than PCR_APB_DIV_NUM, the clk_apb will be automatically down to clk_apb_decrease only when no access is on apb-bus, and will recover to the previous frequency when a new access appears on apb-bus. Set as one within (0,1,3) to set clk_apb_decrease as div1/div2/div4(default) of clk_ahb. Note that enable this function will reduce performance. Users can set this field as zero to disable the auto-decrease-apb-freq function. By default, this function is disable."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_decrease_div_num(&mut self) -> APB_DECREASE_DIV_NUM_W<APB_FREQ_CONF_SPEC> {
         APB_DECREASE_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Set as one within (0,1,3) to generate clk_apb drived by clk_ahb. The clk_apb is div1(default)/div2/div4 of clk_ahb."]
     #[inline(always)]
-    #[must_use]
     pub fn apb_div_num(&mut self) -> APB_DIV_NUM_W<APB_FREQ_CONF_SPEC> {
         APB_DIV_NUM_W::new(self, 8)
     }

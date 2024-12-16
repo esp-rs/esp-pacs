@@ -49,121 +49,101 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clears the interrupt triggered when the chip wakes up from sleep."]
     #[inline(always)]
-    #[must_use]
     pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_CLR_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clears the interrupt triggered when the chip rejects to go to sleep."]
     #[inline(always)]
-    #[must_use]
     pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_CLR_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clears the interrupt triggered when the SDIO idles."]
     #[inline(always)]
-    #[must_use]
     pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_CLR_SPEC> {
         SDIO_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Enables the RTC watchdog interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn wdt(&mut self) -> WDT_W<INT_CLR_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clears the interrupt triggered upon the completion of a touch scanning."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_scan_done(&mut self) -> TOUCH_SCAN_DONE_W<INT_CLR_SPEC> {
         TOUCH_SCAN_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Enables the ULP co-processor interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn ulp_cp(&mut self) -> ULP_CP_W<INT_CLR_SPEC> {
         ULP_CP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clears the interrupt triggered upon the completion of a single touch."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_done(&mut self) -> TOUCH_DONE_W<INT_CLR_SPEC> {
         TOUCH_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clears the interrupt triggered when a touch is detected."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_active(&mut self) -> TOUCH_ACTIVE_W<INT_CLR_SPEC> {
         TOUCH_ACTIVE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clears the interrupt triggered when a touch is released."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_inactive(&mut self) -> TOUCH_INACTIVE_W<INT_CLR_SPEC> {
         TOUCH_INACTIVE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clears the brown out interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_CLR_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clears the RTC main timer interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_CLR_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clears the SAR ADC 1 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc1(&mut self) -> SARADC1_W<INT_CLR_SPEC> {
         SARADC1_W::new(self, 11)
     }
     #[doc = "Bit 12 - Clears the touch sensor interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn tsens(&mut self) -> TSENS_W<INT_CLR_SPEC> {
         TSENS_W::new(self, 12)
     }
     #[doc = "Bit 13 - Clears the ULP-RISCV interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu(&mut self) -> COCPU_W<INT_CLR_SPEC> {
         COCPU_W::new(self, 13)
     }
     #[doc = "Bit 14 - Clears the SAR ADC 2 interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn saradc2(&mut self) -> SARADC2_W<INT_CLR_SPEC> {
         SARADC2_W::new(self, 14)
     }
     #[doc = "Bit 15 - Clears the super watchdog interrupt."]
     #[inline(always)]
-    #[must_use]
     pub fn swd(&mut self) -> SWD_W<INT_CLR_SPEC> {
         SWD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Clears the interrupt triggered when the 32 kHz crystal is dead."]
     #[inline(always)]
-    #[must_use]
     pub fn xtal32k_dead(&mut self) -> XTAL32K_DEAD_W<INT_CLR_SPEC> {
         XTAL32K_DEAD_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clears the interrupt triggered when the ULP-RISCV is trapped."]
     #[inline(always)]
-    #[must_use]
     pub fn cocpu_trap(&mut self) -> COCPU_TRAP_W<INT_CLR_SPEC> {
         COCPU_TRAP_W::new(self, 17)
     }
     #[doc = "Bit 18 - Clears the interrupt triggered when touch sensor times out."]
     #[inline(always)]
-    #[must_use]
     pub fn touch_timeout(&mut self) -> TOUCH_TIMEOUT_W<INT_CLR_SPEC> {
         TOUCH_TIMEOUT_W::new(self, 18)
     }
     #[doc = "Bit 19 - Clears the interrupt triggered when a glitch is detected."]
     #[inline(always)]
-    #[must_use]
     pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_CLR_SPEC> {
         GLITCH_DET_W::new(self, 19)
     }

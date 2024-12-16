@@ -83,7 +83,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio(&mut self, n: u8) -> GPIO_W<INTR_RLS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -91,49 +90,41 @@ impl W {
     }
     #[doc = "Bit 0 - The enable bit for DEDIC_GPIO0_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio0(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for DEDIC_GPIO1_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio1(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for DEDIC_GPIO2_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio2(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for DEDIC_GPIO3_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio3(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for DEDIC_GPIO4_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio4(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 4)
     }
     #[doc = "Bit 5 - The enable bit for DEDIC_GPIO5_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio5(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 5)
     }
     #[doc = "Bit 6 - The enable bit for DEDIC_GPIO6_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio6(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 6)
     }
     #[doc = "Bit 7 - The enable bit for DEDIC_GPIO7_INT_ST register."]
     #[inline(always)]
-    #[must_use]
     pub fn gpio7(&mut self) -> GPIO_W<INTR_RLS_SPEC> {
         GPIO_W::new(self, 7)
     }

@@ -39,7 +39,6 @@ impl core::fmt::Debug for crate::generic::Reg<TASK_ST6_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear PDMA_AXI_task_in_start_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_in_start_ch2_st_clr(
         &mut self,
     ) -> PDMA_AXI_TASK_IN_START_CH2_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -47,7 +46,6 @@ impl W {
     }
     #[doc = "Bit 1 - Configures whether or not to clear PDMA_AXI_task_out_start_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch0_st_clr(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH0_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -55,7 +53,6 @@ impl W {
     }
     #[doc = "Bit 2 - Configures whether or not to clear PDMA_AXI_task_out_start_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch1_st_clr(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH1_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -63,7 +60,6 @@ impl W {
     }
     #[doc = "Bit 3 - Configures whether or not to clear PDMA_AXI_task_out_start_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pdma_axi_task_out_start_ch2_st_clr(
         &mut self,
     ) -> PDMA_AXI_TASK_OUT_START_CH2_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -71,13 +67,11 @@ impl W {
     }
     #[doc = "Bit 4 - Configures whether or not to clear PMU_task_sleep_req trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn pmu_task_sleep_req_st_clr(&mut self) -> PMU_TASK_SLEEP_REQ_ST_CLR_W<TASK_ST6_CLR_SPEC> {
         PMU_TASK_SLEEP_REQ_ST_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to clear DMA2D_task_in_start_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_start_ch0_st_clr(
         &mut self,
     ) -> DMA2D_TASK_IN_START_CH0_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -85,7 +79,6 @@ impl W {
     }
     #[doc = "Bit 6 - Configures whether or not to clear DMA2D_task_in_start_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_start_ch1_st_clr(
         &mut self,
     ) -> DMA2D_TASK_IN_START_CH1_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -93,7 +86,6 @@ impl W {
     }
     #[doc = "Bit 7 - Configures whether or not to clear DMA2D_task_in_dscr_ready_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_dscr_ready_ch0_st_clr(
         &mut self,
     ) -> DMA2D_TASK_IN_DSCR_READY_CH0_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -101,7 +93,6 @@ impl W {
     }
     #[doc = "Bit 8 - Configures whether or not to clear DMA2D_task_in_dscr_ready_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_in_dscr_ready_ch1_st_clr(
         &mut self,
     ) -> DMA2D_TASK_IN_DSCR_READY_CH1_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -109,7 +100,6 @@ impl W {
     }
     #[doc = "Bit 9 - Configures whether or not to clear DMA2D_task_out_start_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch0_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_START_CH0_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -117,7 +107,6 @@ impl W {
     }
     #[doc = "Bit 10 - Configures whether or not to clear DMA2D_task_out_start_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch1_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_START_CH1_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -125,7 +114,6 @@ impl W {
     }
     #[doc = "Bit 11 - Configures whether or not to clear DMA2D_task_out_start_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_start_ch2_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_START_CH2_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -133,7 +121,6 @@ impl W {
     }
     #[doc = "Bit 12 - Configures whether or not to clear DMA2D_task_out_dscr_ready_ch0 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch0_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH0_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -141,7 +128,6 @@ impl W {
     }
     #[doc = "Bit 13 - Configures whether or not to clear DMA2D_task_out_dscr_ready_ch1 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch1_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH1_ST_CLR_W<TASK_ST6_CLR_SPEC> {
@@ -149,7 +135,6 @@ impl W {
     }
     #[doc = "Bit 14 - Configures whether or not to clear DMA2D_task_out_dscr_ready_ch2 trigger status.\\\\0: Invalid, No effect\\\\1: Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn dma2d_task_out_dscr_ready_ch2_st_clr(
         &mut self,
     ) -> DMA2D_TASK_OUT_DSCR_READY_CH2_ST_CLR_W<TASK_ST6_CLR_SPEC> {

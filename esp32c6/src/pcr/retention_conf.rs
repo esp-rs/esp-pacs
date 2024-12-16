@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable retention clock"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_clk_en(&mut self) -> RETENTION_CLK_EN_W<RETENTION_CONF_SPEC> {
         RETENTION_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset retention module"]
     #[inline(always)]
-    #[must_use]
     pub fn retention_rst_en(&mut self) -> RETENTION_RST_EN_W<RETENTION_CONF_SPEC> {
         RETENTION_RST_EN_W::new(self, 1)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - version register"]
     #[inline(always)]
-    #[must_use]
     pub fn interrupt_date(&mut self) -> INTERRUPT_DATE_W<DATE_SPEC> {
         INTERRUPT_DATE_W::new(self, 0)
     }

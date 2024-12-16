@@ -131,7 +131,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_type(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_TYPE_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -139,7 +138,6 @@ impl W {
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_sz(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_SZ_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -147,7 +145,6 @@ impl W {
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_dtlbm(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_DTLBM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -155,7 +152,6 @@ impl W {
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_dcm(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_DCM_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -163,7 +159,6 @@ impl W {
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_dch(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_DCH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -171,7 +166,6 @@ impl W {
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_uc(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_UC_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -179,7 +173,6 @@ impl W {
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_wb(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_WB_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -187,7 +180,6 @@ impl W {
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_coh(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_COH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -195,7 +187,6 @@ impl W {
     }
     #[doc = "Bits 17:18"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_stcoh(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_STCOH_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {
@@ -203,7 +194,6 @@ impl W {
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    #[must_use]
     pub fn record_pdebugls0stat_tgt(
         &mut self,
     ) -> RECORD_PDEBUGLS0STAT_TGT_W<PRO_CPU_RECORD_PDEBUGLS0STAT_SPEC> {

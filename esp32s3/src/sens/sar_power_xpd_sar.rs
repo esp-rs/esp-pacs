@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 29:30 - force power on/off saradc"]
     #[inline(always)]
-    #[must_use]
     pub fn force_xpd_sar(&mut self) -> FORCE_XPD_SAR_W<SAR_POWER_XPD_SAR_SPEC> {
         FORCE_XPD_SAR_W::new(self, 29)
     }
     #[doc = "Bit 31 - no public"]
     #[inline(always)]
-    #[must_use]
     pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_POWER_XPD_SAR_SPEC> {
         SARCLK_EN_W::new(self, 31)
     }

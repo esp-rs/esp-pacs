@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
-    #[must_use]
     pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W<CONF_CHAN_SPEC> {
         TX_CHAN_MOD_W::new(self, 0)
     }
     #[doc = "Bits 3:4 - I2S receiver channel mode configuration bits."]
     #[inline(always)]
-    #[must_use]
     pub fn rx_chan_mod(&mut self) -> RX_CHAN_MOD_W<CONF_CHAN_SPEC> {
         RX_CHAN_MOD_W::new(self, 3)
     }

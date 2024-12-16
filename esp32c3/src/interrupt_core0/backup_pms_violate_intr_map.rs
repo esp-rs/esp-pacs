@@ -27,7 +27,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_core0_backup_pms_violate_intr_map"]
     #[inline(always)]
-    #[must_use]
     pub fn backup_pms_violate_intr_map(
         &mut self,
     ) -> BACKUP_PMS_VIOLATE_INTR_MAP_W<BACKUP_PMS_VIOLATE_INTR_MAP_SPEC> {

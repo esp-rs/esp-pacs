@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when accessing external RAM is rejected by permission control."]
     #[inline(always)]
-    #[must_use]
     pub fn extmem_reject_int_raw(&mut self) -> EXTMEM_REJECT_INT_RAW_W<EXTMEM_REJECT_INT_RAW_SPEC> {
         EXTMEM_REJECT_INT_RAW_W::new(self, 0)
     }

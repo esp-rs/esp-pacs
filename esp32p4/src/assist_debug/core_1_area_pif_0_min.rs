@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Core1 PIF region0 start addr"]
     #[inline(always)]
-    #[must_use]
     pub fn core_1_area_pif_0_min(&mut self) -> CORE_1_AREA_PIF_0_MIN_W<CORE_1_AREA_PIF_0_MIN_SPEC> {
         CORE_1_AREA_PIF_0_MIN_W::new(self, 0)
     }

@@ -193,7 +193,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn timer_ovf(&mut self, n: u8) -> TIMER_OVF_W<INT_RAW_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
@@ -201,25 +200,21 @@ impl W {
     }
     #[doc = "Bit 0 - Triggered when the timer0 has reached its maximum counter value."]
     #[inline(always)]
-    #[must_use]
     pub fn timer0_ovf(&mut self) -> TIMER_OVF_W<INT_RAW_SPEC> {
         TIMER_OVF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Triggered when the timer1 has reached its maximum counter value."]
     #[inline(always)]
-    #[must_use]
     pub fn timer1_ovf(&mut self) -> TIMER_OVF_W<INT_RAW_SPEC> {
         TIMER_OVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Triggered when the timer2 has reached its maximum counter value."]
     #[inline(always)]
-    #[must_use]
     pub fn timer2_ovf(&mut self) -> TIMER_OVF_W<INT_RAW_SPEC> {
         TIMER_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Triggered when the timer3 has reached its maximum counter value."]
     #[inline(always)]
-    #[must_use]
     pub fn timer3_ovf(&mut self) -> TIMER_OVF_W<INT_RAW_SPEC> {
         TIMER_OVF_W::new(self, 3)
     }
@@ -227,7 +222,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch(&mut self, n: u8) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -235,49 +229,41 @@ impl W {
     }
     #[doc = "Bit 4 - Interrupt raw bit for channel 0. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch0(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 4)
     }
     #[doc = "Bit 5 - Interrupt raw bit for channel 1. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch1(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt raw bit for channel 2. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch2(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt raw bit for channel 3. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch3(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt raw bit for channel 4. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch4(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt raw bit for channel 5. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch5(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 9)
     }
     #[doc = "Bit 10 - Interrupt raw bit for channel 6. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch6(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 10)
     }
     #[doc = "Bit 11 - Interrupt raw bit for channel 7. Triggered when the gradual change of duty has finished."]
     #[inline(always)]
-    #[must_use]
     pub fn duty_chng_end_ch7(&mut self) -> DUTY_CHNG_END_CH_W<INT_RAW_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 11)
     }
@@ -285,7 +271,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch(&mut self, n: u8) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -293,49 +278,41 @@ impl W {
     }
     #[doc = "Bit 12 - Interrupt raw bit for channel 0. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch0(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 12)
     }
     #[doc = "Bit 13 - Interrupt raw bit for channel 1. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch1(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 13)
     }
     #[doc = "Bit 14 - Interrupt raw bit for channel 2. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch2(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 14)
     }
     #[doc = "Bit 15 - Interrupt raw bit for channel 3. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch3(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 15)
     }
     #[doc = "Bit 16 - Interrupt raw bit for channel 4. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch4(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 16)
     }
     #[doc = "Bit 17 - Interrupt raw bit for channel 5. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch5(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 17)
     }
     #[doc = "Bit 18 - Interrupt raw bit for channel 6. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch6(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 18)
     }
     #[doc = "Bit 19 - Interrupt raw bit for channel 7. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM."]
     #[inline(always)]
-    #[must_use]
     pub fn ovf_cnt_ch7(&mut self) -> OVF_CNT_CH_W<INT_RAW_SPEC> {
         OVF_CNT_CH_W::new(self, 19)
     }

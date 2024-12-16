@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable clk gate"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLK_GATE_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to power on the SPI module clock."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_clk_active(&mut self) -> MST_CLK_ACTIVE_W<CLK_GATE_SPEC> {
         MST_CLK_ACTIVE_W::new(self, 1)
     }
     #[doc = "Bit 2 - This bit is used to select SPI module clock source in master mode. 1: PLL_CLK_80M. 0: XTAL CLK."]
     #[inline(always)]
-    #[must_use]
     pub fn mst_clk_sel(&mut self) -> MST_CLK_SEL_W<CLK_GATE_SPEC> {
         MST_CLK_SEL_W::new(self, 2)
     }

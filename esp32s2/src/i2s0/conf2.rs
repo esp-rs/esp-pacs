@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable camera mode."]
     #[inline(always)]
-    #[must_use]
     pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC> {
         CAMERA_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - LCD WR double for one datum."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC> {
         LCD_TX_WRX2_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to duplicate data pairs (Frame Form 2) in LCD mode."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC> {
         LCD_TX_SDX2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - for debug camera mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC> {
         DATA_ENABLE_TEST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - for debug camera mode enable"]
     #[inline(always)]
-    #[must_use]
     pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC> {
         DATA_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable LCD mode."]
     #[inline(always)]
-    #[must_use]
     pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC> {
         LCD_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable the function that ADC mode is triggered by external signal."]
     #[inline(always)]
-    #[must_use]
     pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC> {
         EXT_ADC_START_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable camera VGA reducing-resolution mode: only receive two consecutive cycle data in four consecutive clocks."]
     #[inline(always)]
-    #[must_use]
     pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC> {
         INTER_VALID_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to reset FIFO in camera mode."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_sync_fifo_reset(&mut self) -> CAM_SYNC_FIFO_RESET_W<CONF2_SPEC> {
         CAM_SYNC_FIFO_RESET_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to loopback PCLK from I2S0I_WS_out."]
     #[inline(always)]
-    #[must_use]
     pub fn cam_clk_loopback(&mut self) -> CAM_CLK_LOOPBACK_W<CONF2_SPEC> {
         CAM_CLK_LOOPBACK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable I2S VSYNC filter function."]
     #[inline(always)]
-    #[must_use]
     pub fn vsync_filter_en(&mut self) -> VSYNC_FILTER_EN_W<CONF2_SPEC> {
         VSYNC_FILTER_EN_W::new(self, 10)
     }
     #[doc = "Bits 11:13 - Configure the I2S VSYNC filter threshold value."]
     #[inline(always)]
-    #[must_use]
     pub fn vsync_filter_thres(&mut self) -> VSYNC_FILTER_THRES_W<CONF2_SPEC> {
         VSYNC_FILTER_THRES_W::new(self, 11)
     }

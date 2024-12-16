@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
-    #[must_use]
     pub fn in_rst(&mut self) -> IN_RST_W<DMA_CONF_SPEC> {
         IN_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
-    #[must_use]
     pub fn out_rst(&mut self) -> OUT_RST_W<DMA_CONF_SPEC> {
         OUT_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - reset spi dma ahb master fifo pointer."]
     #[inline(always)]
-    #[must_use]
     pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<DMA_CONF_SPEC> {
         AHBM_FIFO_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - reset spi dma ahb master."]
     #[inline(always)]
-    #[must_use]
     pub fn ahbm_rst(&mut self) -> AHBM_RST_W<DMA_CONF_SPEC> {
         AHBM_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
-    #[must_use]
     pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<DMA_CONF_SPEC> {
         IN_LOOP_TEST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
-    #[must_use]
     pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<DMA_CONF_SPEC> {
         OUT_LOOP_TEST_W::new(self, 7)
     }
     #[doc = "Bit 8 - when the link is empty jump to next automatically."]
     #[inline(always)]
-    #[must_use]
     pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<DMA_CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 8)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
-    #[must_use]
     pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<DMA_CONF_SPEC> {
         OUT_EOF_MODE_W::new(self, 9)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
-    #[must_use]
     pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<DMA_CONF_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
-    #[must_use]
     pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<DMA_CONF_SPEC> {
         INDSCR_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
-    #[must_use]
     pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<DMA_CONF_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<DMA_CONF_SPEC> {
         DMA_RX_STOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<DMA_CONF_SPEC> {
         DMA_TX_STOP_W::new(self, 15)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
-    #[must_use]
     pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONF_SPEC> {
         DMA_CONTINUE_W::new(self, 16)
     }
