@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Length of packet (in bytes)"]
     #[inline(always)]
-    #[must_use]
     pub fn len(&mut self) -> LEN_W<PLCP1_SPEC> {
         LEN_W::new(self, 0)
     }
     #[doc = "Bits 12:16 - Packet rate (see wifi_phy_rate_t)"]
     #[inline(always)]
-    #[must_use]
     pub fn rate(&mut self) -> RATE_W<PLCP1_SPEC> {
         RATE_W::new(self, 12)
     }
     #[doc = "Bit 25 - Bit indicating if this is 802.11n"]
     #[inline(always)]
-    #[must_use]
     pub fn is_80211_n(&mut self) -> IS_80211_N_W<PLCP1_SPEC> {
         IS_80211_N_W::new(self, 25)
     }
     #[doc = "Bits 28:29 - meaning unknown, set to one for TX"]
     #[inline(always)]
-    #[must_use]
     pub fn unknown_enable(&mut self) -> UNKNOWN_ENABLE_W<PLCP1_SPEC> {
         UNKNOWN_ENABLE_W::new(self, 28)
     }

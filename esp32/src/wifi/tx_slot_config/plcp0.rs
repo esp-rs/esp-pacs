@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Bottom bits of address of dma_item"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_addr(&mut self) -> DMA_ADDR_W<PLCP0_SPEC> {
         DMA_ADDR_W::new(self, 0)
     }
     #[doc = "Bits 20:31 - Flags for the SLOT"]
     #[inline(always)]
-    #[must_use]
     pub fn flags(&mut self) -> FLAGS_W<PLCP0_SPEC> {
         FLAGS_W::new(self, 20)
     }

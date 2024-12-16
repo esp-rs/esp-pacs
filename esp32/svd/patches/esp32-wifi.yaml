@@ -318,29 +318,3 @@ WIFI:
                     PMD:
                         addressOffset: 0x18
                         access: read-write
-            CRYPTO_KEY_ENTRY%s:
-                dim: 16
-                dimIncrement: 40
-                addressOffset: 0x1400
-                access: read-write
-                description: The cryptographic keys, to be used by the MAC
-                registers:
-                    ADDR_LOW:
-                        addressOffset: 0x0
-                        access: read-write
-                    ADDR_HIGH:
-                        addressOffset: 0x4
-                        access: read-write
-                        fields:
-                            ADDR:
-                                bitOffset: 0x0
-                                bitWidth: 0x10
-                            ALGORITHM:
-                                bitOffset: 0x12
-                                bitWidth: 0x3
-                            INTERFACE:
-                                bitOffset: 0x18
-                                bitWidth: 0x2
-                            SUPPLICANT_KEY_INDEX:
-                                bitOffset: 0x1e
-                                bitWidth: 0x2

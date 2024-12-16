@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Instruct the hardware to reload the RX descriptors"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_descr_reload(&mut self) -> RX_DESCR_RELOAD_W<RX_CTRL_SPEC> {
         RX_DESCR_RELOAD_W::new(self, 0)
     }
     #[doc = "Bit 31 - Enable frame reception"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_enable(&mut self) -> RX_ENABLE_W<RX_CTRL_SPEC> {
         RX_ENABLE_W::new(self, 31)
     }

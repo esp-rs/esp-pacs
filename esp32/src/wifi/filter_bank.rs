@@ -17,56 +17,88 @@ impl FILTER_BANK {
     pub const fn addr_low(&self, n: usize) -> &ADDR_LOW {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).add(8 * n).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(8 * n).cast() }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x00..0x08 - First 4 bytes of BSSID MAC address filter"]
     #[inline(always)]
     pub fn addr_low_iter(&self) -> impl Iterator<Item = &ADDR_LOW> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(0).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(8 * n).cast() })
     }
     #[doc = "0x04..0x0c - last 2 bytes of BSSID MAC address filter"]
     #[inline(always)]
     pub const fn addr_high(&self, n: usize) -> &ADDR_HIGH {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x04..0x0c - last 2 bytes of BSSID MAC address filter"]
     #[inline(always)]
     pub fn addr_high_iter(&self) -> impl Iterator<Item = &ADDR_HIGH> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(4).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x20..0x28 - First 4 bytes of BSSID MAC address filter mask"]
     #[inline(always)]
     pub const fn mask_low(&self, n: usize) -> &MASK_LOW {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(32)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x20..0x28 - First 4 bytes of BSSID MAC address filter mask"]
     #[inline(always)]
     pub fn mask_low_iter(&self) -> impl Iterator<Item = &MASK_LOW> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(32).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(32)
+                .add(8 * n)
+                .cast()
+        })
     }
     #[doc = "0x24..0x2c - last 2 bytes of BSSID MAC address filter mask"]
     #[inline(always)]
     pub const fn mask_high(&self, n: usize) -> &MASK_HIGH {
         #[allow(clippy::no_effect)]
         [(); 2][n];
-        unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() }
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x24..0x2c - last 2 bytes of BSSID MAC address filter mask"]
     #[inline(always)]
     pub fn mask_high_iter(&self) -> impl Iterator<Item = &MASK_HIGH> {
-        (0..2)
-            .map(move |n| unsafe { &*(self as *const Self).cast::<u8>().add(36).add(8 * n).cast() })
+        (0..2).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(36)
+                .add(8 * n)
+                .cast()
+        })
     }
 }
 #[doc = "ADDR_LOW (rw) register accessor: First 4 bytes of BSSID MAC address filter\n\nYou can [`read`](crate::Reg::read) this register and get [`addr_low::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr_low::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@addr_low`] module"]

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn addr(&mut self) -> ADDR_W<ADDR_HIGH_SPEC> {
         ADDR_W::new(self, 0)
     }
     #[doc = "Bits 18:20"]
     #[inline(always)]
-    #[must_use]
     pub fn algorithm(&mut self) -> ALGORITHM_W<ADDR_HIGH_SPEC> {
         ALGORITHM_W::new(self, 18)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    #[must_use]
     pub fn interface(&mut self) -> INTERFACE_W<ADDR_HIGH_SPEC> {
         INTERFACE_W::new(self, 24)
     }
     #[doc = "Bits 30:31"]
     #[inline(always)]
-    #[must_use]
     pub fn supplicant_key_index(&mut self) -> SUPPLICANT_KEY_INDEX_W<ADDR_HIGH_SPEC> {
         SUPPLICANT_KEY_INDEX_W::new(self, 30)
     }

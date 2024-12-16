@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn slot_collision(&mut self) -> SLOT_COLLISION_W<TX_ERROR_STATUS_SPEC> {
         SLOT_COLLISION_W::new(self, 0)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    #[must_use]
     pub fn slot_timeout(&mut self) -> SLOT_TIMEOUT_W<TX_ERROR_STATUS_SPEC> {
         SLOT_TIMEOUT_W::new(self, 16)
     }

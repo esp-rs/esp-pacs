@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    #[must_use]
     pub fn mask(&mut self) -> MASK_W<MASK_HIGH_SPEC> {
         MASK_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    #[must_use]
     pub fn enabled(&mut self) -> ENABLED_W<MASK_HIGH_SPEC> {
         ENABLED_W::new(self, 16)
     }

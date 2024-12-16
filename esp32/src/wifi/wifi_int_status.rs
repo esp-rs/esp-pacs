@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - Indicates the completion of a transmission"]
     #[inline(always)]
-    #[must_use]
     pub fn txq_complete(&mut self) -> TXQ_COMPLETE_W<WIFI_INT_STATUS_SPEC> {
         TXQ_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Indicates a collision, while transmitting"]
     #[inline(always)]
-    #[must_use]
     pub fn txq_collision(&mut self) -> TXQ_COLLISION_W<WIFI_INT_STATUS_SPEC> {
         TXQ_COLLISION_W::new(self, 8)
     }
     #[doc = "Bit 19 - Indicates a timeout, while transmitting"]
     #[inline(always)]
-    #[must_use]
     pub fn txq_timeout(&mut self) -> TXQ_TIMEOUT_W<WIFI_INT_STATUS_SPEC> {
         TXQ_TIMEOUT_W::new(self, 19)
     }

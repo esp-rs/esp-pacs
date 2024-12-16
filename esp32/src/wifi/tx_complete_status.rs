@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    #[must_use]
     pub fn slots(&mut self) -> SLOTS_W<TX_COMPLETE_STATUS_SPEC> {
         SLOTS_W::new(self, 0)
     }

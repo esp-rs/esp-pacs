@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The length of the PPDU"]
     #[inline(always)]
-    #[must_use]
     pub fn length(&mut self) -> LENGTH_W<HT_UNKNOWN_SPEC> {
         LENGTH_W::new(self, 0)
     }
