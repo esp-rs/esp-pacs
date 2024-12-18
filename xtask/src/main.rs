@@ -117,8 +117,8 @@ enum Commands {
 // Application
 
 fn main() -> Result<()> {
-    env_logger::Builder::new()
-        .filter_module("xtask", log::LevelFilter::Info)
+    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info"))
+        .filter_module("form", log::LevelFilter::Warn)
         .init();
 
     // The directory containing the cargo manifest for the 'xtask' package is a
@@ -215,6 +215,13 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     config.ident_formats_theme = Some(IdentFormatsTheme::Legacy);
     config.max_cluster_size = true;
     config.impl_defmt = Some("defmt".into());
+
+    if target == Target::RISCV {
+        let settings = path.join("settings.yaml");
+        if settings.exists() && settings.is_file() {
+            config.settings = Some(settings);
+        }
+    }
 
     let input = fs::read_to_string(svd_file)?;
     let device = svd2rust::load_from(&input, &config)?;
