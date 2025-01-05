@@ -15,42 +15,14 @@ _add:
             size: 0x2100
             usage: registers
         registers:
-
             RX_CTRL:
-                description: Controls the reception of frames
                 addressOffset: 0x84
-                access: read-write
-                fields:
-                    RX_DESCR_RELOAD:
-                        bitOffset: 0
-                        bitWidth: 1
-                        description: Instruct the hardware to reload the RX descriptors
-                    RX_ENABLE:
-                        bitOffset: 31
-                        bitWidth: 1
-                        description: Enable frame reception
-
-            RX_DESCR_BASE:
-                description: base address of the RX DMA list
-                addressOffset: 0x88
-                acccess: read-write
-
-            RX_DESCR_NEXT:
-                description: next item in the RX DMA list
-                addressOffset: 0x8c
-                access: read-write
-
-            RX_DESCR_LAST:
-                description: last item in RX DMA list
-                addressOffset: 0x90
-                access: read-write
-
             UNKNOWN_RX_POLICY%s:
-                dim: 2
+                dim: 4
                 dimIncrement: 4
                 addressOffset: 0xd8
                 access: read-write
-  
+
             HW_STAT_ACK_INT:
                 addressOffset: 0x2bc
                 access: read
@@ -74,11 +46,11 @@ _add:
             HW_STAT_RX_END:
                 addressOffset: 0x2d0
                 access: read
-            
+
             HW_STAT_HOP_ERR:
                 addressOffset: 0x2d8
                 access: read
-            
+
             HW_STAT_FULL2:
                 addressOffset: 0x2dc
                 access: read
@@ -86,7 +58,7 @@ _add:
             HW_STAT_BLOCK_ERR:
                 addressOffset: 0x2e0
                 access: read
-            
+
             WIFI_INT_STATUS:
                 description: Interrupt status of WIFI peripheral
                 addressOffset: 0xc48
@@ -114,48 +86,6 @@ _add:
                 description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8
                 access: read-write
-
-            TX_ERROR_CLEAR:
-                description:  Clear the error status of a slot
-                addressOffset: 0xcbc
-                access: write
-                fields:
-                    SLOT_COLLISION:
-                        bitOffset: 0
-                        bitWidth: 5
-                    SLOT_TIMEOUT:
-                        bitOffset: 0x10
-                        bitWidth: 5
-
-            TX_ERROR_STATUS:
-                description: Error status of a slot
-                addressOffset: 0xcc0
-                access: read
-                fields:
-                    SLOT_COLLISION:
-                        bitOffset: 0
-                        bitWidth: 5
-                    SLOT_TIMEOUT:
-                        bitOffset: 0x10
-                        bitWidth: 5
-
-            TX_COMPLETE_CLEAR:
-                description: Clear the completion status of a slot
-                addressOffset: 0xcc4
-                access: write
-                fields: 
-                    SLOTS:
-                        bitOffset: 0
-                        bitWidth: 5
-
-            TX_COMPLETE_STATUS:
-                description: Completion status of a slot
-                addressOffset: 0xcc8
-                access: read
-                fields:
-                    SLOTS:
-                        bitOffset: 0
-                        bitWidth: 5
 
             HW_STAT_TX_RTS:
                 addressOffset: 0xd58
@@ -188,6 +118,11 @@ _add:
 WIFI:
     _add:
         _clusters:
+            RX_DMA_LIST:
+                addressOffset: 0x88
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
             FILTER_BANK%s:
                 dim: 2
                 dimIncrement: 0x40
@@ -197,78 +132,29 @@ WIFI:
                     Each filter bank has registers for two interfaces.
                     "
                 registers:
-                    ADDR_LOW%s:
-                        dim: 2
-                        dimIncrement: 0x8
-                        description: First 4 bytes of BSSID MAC address filter
+                    DUMMY:
                         addressOffset: 0x0
-                        access: read-write
-                    ADDR_HIGH%s:
-                        dim: 2
-                        dimIncrement: 0x8
-                        description: last 2 bytes of BSSID MAC address filter
-                        addressOffset: 0x4
-                        access: read-write
-                        fields:
-                            ADDR:
-                                bitOffset: 0
-                                bitWidth: 16
-                                access: read-write
-                    MASK_LOW%s:
-                        dim: 2
-                        dimIncrement: 0x8
-                        description: First 4 bytes of BSSID MAC address filter mask
-                        addressOffset: 0x20
-                        access: read-write
-                    MASK_HIGH%s:
-                        dim: 2
-                        dimIncrement: 0x8
-                        description: last 2 bytes of BSSID MAC address filter mask
-                        addressOffset: 0x24
-                        access: read-write
-                        fields:
-                            MASK:
-                                bitOffset: 0
-                                bitWidth: 16
-                                access: read-write
-                            ENABLED:
-                                bitOffset: 16
-                                bitWidth: 1
-                                access: read-write
+            TXQ_STATE:
+                addressOffset: 0xcbc
+                description: State of transmission queues
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
             TX_SLOT_CONFIG%s:
                 dim: 5
                 dimIncrement: 0x8
                 description: Used to configure the TX slot.
                 addressOffset: 0xcfc
-                access: read-write
                 registers:
-                    CONFIG:
-                        description: Config
+                    DUMMY:
                         addressOffset: 0x0
-                        access: read-write  
-                    PLCP0:
-                        description: PLCP0
-                        addressOffset: 0x4
-                        access: read-write
-                        fields:
-                            DMA_ADDR:
-                                description: Bottom bits of address of dma_item
-                                bitOffset: 0
-                                bitWidth: 20
-                                access: write
-                            FLAGS:
-                                description: Flags for the SLOT
-                                bitOffset: 20
-                                bitWidth: 12
-                                access: read-write
             TX_SLOT_PARAMETERS%s:
                 dim: 5
                 dimIncrement: 0x3c
                 addressOffset: 0x1168
                 description: Used to set transmission parameters for the slot
                 registers:
-                    PLCP1:
-                        description: PLCP1
+                    DUMMY:
                         addressOffset: 0x0
                         access: read-write
                         fields:

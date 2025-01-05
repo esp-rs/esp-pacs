@@ -1,11 +1,10 @@
 #[repr(C)]
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
-#[doc = "Used to configure the TX slot."]
-pub struct TX_SLOT_CONFIG {
+#[doc = "RX_DMA_LIST"]
+pub struct RX_DMA_LIST {
     dummy: DUMMY,
-    _reserved_end: [u8; 0x04],
 }
-impl TX_SLOT_CONFIG {
+impl RX_DMA_LIST {
     #[doc = "0x00 - "]
     #[inline(always)]
     pub const fn dummy(&self) -> &DUMMY {

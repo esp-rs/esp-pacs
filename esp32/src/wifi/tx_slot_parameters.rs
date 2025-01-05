@@ -2,7 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Used to set transmission parameters for the slot"]
 pub struct TX_SLOT_PARAMETERS {
-    plcp1: PLCP1,
+    dummy: DUMMY,
     plcp2: PLCP2,
     ht_sig: HT_SIG,
     ht_unknown: HT_UNKNOWN,
@@ -12,10 +12,10 @@ pub struct TX_SLOT_PARAMETERS {
     _reserved_end: [u8; 0x20],
 }
 impl TX_SLOT_PARAMETERS {
-    #[doc = "0x00 - PLCP1"]
+    #[doc = "0x00 - "]
     #[inline(always)]
-    pub const fn plcp1(&self) -> &PLCP1 {
-        &self.plcp1
+    pub const fn dummy(&self) -> &DUMMY {
+        &self.dummy
     }
     #[doc = "0x04 - PLCP2"]
     #[inline(always)]
@@ -43,10 +43,10 @@ impl TX_SLOT_PARAMETERS {
         &self.pmd
     }
 }
-#[doc = "PLCP1 (rw) register accessor: PLCP1\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp1`] module"]
-pub type PLCP1 = crate::Reg<plcp1::PLCP1_SPEC>;
-#[doc = "PLCP1"]
-pub mod plcp1;
+#[doc = "DUMMY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dummy::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dummy::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dummy`] module"]
+pub type DUMMY = crate::Reg<dummy::DUMMY_SPEC>;
+#[doc = ""]
+pub mod dummy;
 #[doc = "PLCP2 (rw) register accessor: PLCP2\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp2`] module"]
 pub type PLCP2 = crate::Reg<plcp2::PLCP2_SPEC>;
 #[doc = "PLCP2"]

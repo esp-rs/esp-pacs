@@ -1,0 +1,43 @@
+WIFI:
+    FILTER_BANK%s:
+        _delete: DUMMY
+        _add:
+            ADDR_LOW%s:
+                dim: 4
+                dimIncrement: 0x8
+                description: First 4 bytes of BSSID MAC address filter
+                addressOffset: 0x0
+                access: read-write
+            ADDR_HIGH%s:
+                dim: 4
+                dimIncrement: 0x8
+                description: last 2 bytes of BSSID MAC address filter
+                addressOffset: 0x4
+                access: read-write
+                fields:
+                    ADDR:
+                        bitOffset: 0
+                        bitWidth: 16
+                        access: read-write
+            MASK_LOW%s:
+                dim: 4
+                dimIncrement: 0x8
+                description: First 4 bytes of BSSID MAC address filter mask
+                addressOffset: 0x20
+                access: read-write
+            MASK_HIGH%s:
+                dim: 4
+                dimIncrement: 0x8
+                description: last 2 bytes of BSSID MAC address filter mask
+                addressOffset: 0x24
+                access: read-write
+                fields:
+                    MASK:
+                        bitOffset: 0
+                        bitWidth: 16
+                        access: read-write
+                    ENABLED:
+                        bitOffset: 16
+                        bitWidth: 1
+                        access: read-write
+

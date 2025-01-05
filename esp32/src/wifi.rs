@@ -5,34 +5,29 @@ pub struct RegisterBlock {
     filter_bank: [FILTER_BANK; 2],
     _reserved1: [u8; 0x04],
     rx_ctrl: RX_CTRL,
-    rx_descr_base: RX_DESCR_BASE,
-    rx_descr_next: RX_DESCR_NEXT,
-    rx_descr_last: RX_DESCR_LAST,
-    _reserved5: [u8; 0x44],
-    unknown_rx_policy: [UNKNOWN_RX_POLICY; 2],
-    _reserved6: [u8; 0x01dc],
+    rx_dma_list: RX_DMA_LIST,
+    _reserved3: [u8; 0x4c],
+    unknown_rx_policy: [UNKNOWN_RX_POLICY; 4],
+    _reserved4: [u8; 0x01d4],
     hw_stat_ack_int: HW_STAT_ACK_INT,
     hw_stat_rts_int: HW_STAT_RTS_INT,
     hw_stat_cts_int: HW_STAT_CTS_INT,
     hw_stat_rifs_int: HW_STAT_RIFS_INT,
     hw_stat_rx_success: HW_STAT_RX_SUCCESS,
     hw_stat_rx_end: HW_STAT_RX_END,
-    _reserved12: [u8; 0x04],
+    _reserved10: [u8; 0x04],
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
-    _reserved15: [u8; 0x0964],
+    _reserved13: [u8; 0x0964],
     wifi_int_status: WIFI_INT_STATUS,
     wifi_int_clear: WIFI_INT_CLEAR,
-    _reserved17: [u8; 0x68],
+    _reserved15: [u8; 0x68],
     ctrl: CTRL,
-    tx_error_clear: TX_ERROR_CLEAR,
-    tx_error_status: TX_ERROR_STATUS,
-    tx_complete_clear: TX_COMPLETE_CLEAR,
-    tx_complete_status: TX_COMPLETE_STATUS,
-    _reserved22: [u8; 0x30],
+    txq_state: TXQ_STATE,
+    _reserved17: [u8; 0x3c],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved23: [u8; 0x34],
+    _reserved18: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -40,10 +35,8 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved30: [u8; 0x03f4],
+    _reserved25: [u8; 0x03f4],
     tx_slot_parameters: [TX_SLOT_PARAMETERS; 5],
-    _reserved31: [u8; 0x016c],
-    crypto_key_entry: [CRYPTO_KEY_ENTRY; 16],
 }
 impl RegisterBlock {
     #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
@@ -57,33 +50,23 @@ impl RegisterBlock {
     pub fn filter_bank_iter(&self) -> impl Iterator<Item = &FILTER_BANK> {
         self.filter_bank.iter()
     }
-    #[doc = "0x84 - Controls the reception of frames"]
+    #[doc = "0x84 - "]
     #[inline(always)]
     pub const fn rx_ctrl(&self) -> &RX_CTRL {
         &self.rx_ctrl
     }
-    #[doc = "0x88 - base address of the RX DMA list"]
+    #[doc = "0x88 - RX_DMA_LIST"]
     #[inline(always)]
-    pub const fn rx_descr_base(&self) -> &RX_DESCR_BASE {
-        &self.rx_descr_base
+    pub const fn rx_dma_list(&self) -> &RX_DMA_LIST {
+        &self.rx_dma_list
     }
-    #[doc = "0x8c - next item in the RX DMA list"]
-    #[inline(always)]
-    pub const fn rx_descr_next(&self) -> &RX_DESCR_NEXT {
-        &self.rx_descr_next
-    }
-    #[doc = "0x90 - last item in RX DMA list"]
-    #[inline(always)]
-    pub const fn rx_descr_last(&self) -> &RX_DESCR_LAST {
-        &self.rx_descr_last
-    }
-    #[doc = "0xd8..0xe0 - "]
+    #[doc = "0xd8..0xe8 - "]
     #[inline(always)]
     pub const fn unknown_rx_policy(&self, n: usize) -> &UNKNOWN_RX_POLICY {
         &self.unknown_rx_policy[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xd8..0xe0 - "]
+    #[doc = "0xd8..0xe8 - "]
     #[inline(always)]
     pub fn unknown_rx_policy_iter(&self) -> impl Iterator<Item = &UNKNOWN_RX_POLICY> {
         self.unknown_rx_policy.iter()
@@ -148,25 +131,10 @@ impl RegisterBlock {
     pub const fn ctrl(&self) -> &CTRL {
         &self.ctrl
     }
-    #[doc = "0xcbc - Clear the error status of a slot"]
+    #[doc = "0xcbc - State of transmission queues"]
     #[inline(always)]
-    pub const fn tx_error_clear(&self) -> &TX_ERROR_CLEAR {
-        &self.tx_error_clear
-    }
-    #[doc = "0xcc0 - Error status of a slot"]
-    #[inline(always)]
-    pub const fn tx_error_status(&self) -> &TX_ERROR_STATUS {
-        &self.tx_error_status
-    }
-    #[doc = "0xcc4 - Clear the completion status of a slot"]
-    #[inline(always)]
-    pub const fn tx_complete_clear(&self) -> &TX_COMPLETE_CLEAR {
-        &self.tx_complete_clear
-    }
-    #[doc = "0xcc8 - Completion status of a slot"]
-    #[inline(always)]
-    pub const fn tx_complete_status(&self) -> &TX_COMPLETE_STATUS {
-        &self.tx_complete_status
+    pub const fn txq_state(&self) -> &TXQ_STATE {
+        &self.txq_state
     }
     #[doc = "0xcfc..0xd24 - Used to configure the TX slot."]
     #[inline(always)]
@@ -225,34 +193,11 @@ impl RegisterBlock {
     pub fn tx_slot_parameters_iter(&self) -> impl Iterator<Item = &TX_SLOT_PARAMETERS> {
         self.tx_slot_parameters.iter()
     }
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
-    #[inline(always)]
-    pub const fn crypto_key_entry(&self, n: usize) -> &CRYPTO_KEY_ENTRY {
-        &self.crypto_key_entry[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
-    #[inline(always)]
-    pub fn crypto_key_entry_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_ENTRY> {
-        self.crypto_key_entry.iter()
-    }
 }
-#[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
+#[doc = "RX_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
-#[doc = "Controls the reception of frames"]
+#[doc = ""]
 pub mod rx_ctrl;
-#[doc = "RX_DESCR_BASE (rw) register accessor: base address of the RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_base::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_base::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_base`] module"]
-pub type RX_DESCR_BASE = crate::Reg<rx_descr_base::RX_DESCR_BASE_SPEC>;
-#[doc = "base address of the RX DMA list"]
-pub mod rx_descr_base;
-#[doc = "RX_DESCR_NEXT (rw) register accessor: next item in the RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_next::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_next::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_next`] module"]
-pub type RX_DESCR_NEXT = crate::Reg<rx_descr_next::RX_DESCR_NEXT_SPEC>;
-#[doc = "next item in the RX DMA list"]
-pub mod rx_descr_next;
-#[doc = "RX_DESCR_LAST (rw) register accessor: last item in RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_last::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_last::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_last`] module"]
-pub type RX_DESCR_LAST = crate::Reg<rx_descr_last::RX_DESCR_LAST_SPEC>;
-#[doc = "last item in RX DMA list"]
-pub mod rx_descr_last;
 #[doc = "UNKNOWN_RX_POLICY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`unknown_rx_policy::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unknown_rx_policy::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unknown_rx_policy`] module"]
 pub type UNKNOWN_RX_POLICY = crate::Reg<unknown_rx_policy::UNKNOWN_RX_POLICY_SPEC>;
 #[doc = ""]
@@ -305,22 +250,6 @@ pub mod wifi_int_clear;
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Exact name and meaning unknown, used for initializing the MAC"]
 pub mod ctrl;
-#[doc = "TX_ERROR_CLEAR (rw) register accessor: Clear the error status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_error_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_error_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_error_clear`] module"]
-pub type TX_ERROR_CLEAR = crate::Reg<tx_error_clear::TX_ERROR_CLEAR_SPEC>;
-#[doc = "Clear the error status of a slot"]
-pub mod tx_error_clear;
-#[doc = "TX_ERROR_STATUS (rw) register accessor: Error status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_error_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_error_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_error_status`] module"]
-pub type TX_ERROR_STATUS = crate::Reg<tx_error_status::TX_ERROR_STATUS_SPEC>;
-#[doc = "Error status of a slot"]
-pub mod tx_error_status;
-#[doc = "TX_COMPLETE_CLEAR (rw) register accessor: Clear the completion status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_complete_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_complete_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_complete_clear`] module"]
-pub type TX_COMPLETE_CLEAR = crate::Reg<tx_complete_clear::TX_COMPLETE_CLEAR_SPEC>;
-#[doc = "Clear the completion status of a slot"]
-pub mod tx_complete_clear;
-#[doc = "TX_COMPLETE_STATUS (rw) register accessor: Completion status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_complete_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_complete_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_complete_status`] module"]
-pub type TX_COMPLETE_STATUS = crate::Reg<tx_complete_status::TX_COMPLETE_STATUS_SPEC>;
-#[doc = "Completion status of a slot"]
-pub mod tx_complete_status;
 #[doc = "HW_STAT_TX_RTS (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_tx_rts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_tx_rts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_tx_rts`] module"]
 pub type HW_STAT_TX_RTS = crate::Reg<hw_stat_tx_rts::HW_STAT_TX_RTS_SPEC>;
 #[doc = ""]
@@ -349,11 +278,21 @@ pub mod hw_stat_tx_hung;
 pub type HW_STAT_PANIC = crate::Reg<hw_stat_panic::HW_STAT_PANIC_SPEC>;
 #[doc = ""]
 pub mod hw_stat_panic;
+#[doc = "RX_DMA_LIST"]
+pub use self::rx_dma_list::RX_DMA_LIST;
+#[doc = r"Cluster"]
+#[doc = "RX_DMA_LIST"]
+pub mod rx_dma_list;
 #[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
 pub use self::filter_bank::FILTER_BANK;
 #[doc = r"Cluster"]
 #[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
 pub mod filter_bank;
+#[doc = "State of transmission queues"]
+pub use self::txq_state::TXQ_STATE;
+#[doc = r"Cluster"]
+#[doc = "State of transmission queues"]
+pub mod txq_state;
 #[doc = "Used to configure the TX slot."]
 pub use self::tx_slot_config::TX_SLOT_CONFIG;
 #[doc = r"Cluster"]
@@ -364,8 +303,3 @@ pub use self::tx_slot_parameters::TX_SLOT_PARAMETERS;
 #[doc = r"Cluster"]
 #[doc = "Used to set transmission parameters for the slot"]
 pub mod tx_slot_parameters;
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub use self::crypto_key_entry::CRYPTO_KEY_ENTRY;
-#[doc = r"Cluster"]
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub mod crypto_key_entry;

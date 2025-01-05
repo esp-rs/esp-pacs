@@ -1,0 +1,31 @@
+WIFI:
+    _modify:
+        RX_CTRL:
+            description: Controls the reception of frames
+            access: read-write
+            fields:
+                RX_DESCR_RELOAD:
+                    bitOffset: 0
+                    bitWidth: 1
+                    description: Instruct the hardware to reload the RX descriptors
+                RX_ENABLE:
+                    bitOffset: 31
+                    bitWidth: 1
+                    description: Enable frame reception
+    RX_DMA_LIST:
+        _delete: DUMMY
+        _add:
+            RX_DESCR_BASE:
+                description: base address of the RX DMA list
+                addressOffset: 0x0
+                acccess: read-write
+
+            RX_DESCR_NEXT:
+                description: next item in the RX DMA list
+                addressOffset: 0x4
+                access: read-write
+
+            RX_DESCR_LAST:
+                description: last item in RX DMA list
+                addressOffset: 0x8
+                access: read-write
