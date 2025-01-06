@@ -269,3 +269,9 @@ _add:
         bitWidth: 32
         writeConstraint: [0, 0xffffffff]
         access: read-write
+
+"HCCHAR?":
+  _modify:
+    EC:
+      bitOffset: 20
+      bitWidth: 2
