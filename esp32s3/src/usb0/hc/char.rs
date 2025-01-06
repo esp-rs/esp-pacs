@@ -23,9 +23,9 @@ pub type EPTYPE_R = crate::FieldReader;
 #[doc = "Field `EPTYPE` writer - "]
 pub type EPTYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `EC` reader - "]
-pub type EC_R = crate::BitReader;
+pub type EC_R = crate::FieldReader;
 #[doc = "Field `EC` writer - "]
-pub type EC_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type EC_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `DEVADDR` reader - "]
 pub type DEVADDR_R = crate::FieldReader;
 #[doc = "Field `DEVADDR` writer - "]
@@ -68,10 +68,10 @@ impl R {
     pub fn eptype(&self) -> EPTYPE_R {
         EPTYPE_R::new(((self.bits >> 18) & 3) as u8)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn ec(&self) -> EC_R {
-        EC_R::new(((self.bits >> 21) & 1) != 0)
+        EC_R::new(((self.bits >> 20) & 3) as u8)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
@@ -137,10 +137,10 @@ impl W {
     pub fn eptype(&mut self) -> EPTYPE_W<CHAR_SPEC> {
         EPTYPE_W::new(self, 18)
     }
-    #[doc = "Bit 21"]
+    #[doc = "Bits 20:21"]
     #[inline(always)]
     pub fn ec(&mut self) -> EC_W<CHAR_SPEC> {
-        EC_W::new(self, 21)
+        EC_W::new(self, 20)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
