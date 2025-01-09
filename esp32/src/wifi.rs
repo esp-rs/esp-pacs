@@ -6,8 +6,8 @@ pub struct RegisterBlock {
     _reserved1: [u8; 0x04],
     rx_ctrl: RX_CTRL,
     rx_dma_list: RX_DMA_LIST,
-    _reserved3: [u8; 0x4c],
-    unknown_rx_policy: [UNKNOWN_RX_POLICY; 4],
+    _reserved3: [u8; 0x44],
+    interface_rx_control: [INTERFACE_RX_CONTROL; 4],
     _reserved4: [u8; 0x01d4],
     hw_stat_ack_int: HW_STAT_ACK_INT,
     hw_stat_rts_int: HW_STAT_RTS_INT,
@@ -20,14 +20,13 @@ pub struct RegisterBlock {
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
     _reserved13: [u8; 0x0964],
-    wifi_int_status: WIFI_INT_STATUS,
-    wifi_int_clear: WIFI_INT_CLEAR,
-    _reserved15: [u8; 0x68],
+    mac_interrupt: MAC_INTERRUPT,
+    _reserved14: [u8; 0x68],
     ctrl: CTRL,
     txq_state: TXQ_STATE,
-    _reserved17: [u8; 0x3c],
+    _reserved16: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved18: [u8; 0x34],
+    _reserved17: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -35,7 +34,7 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved25: [u8; 0x03f4],
+    _reserved24: [u8; 0x03f4],
     tx_slot_parameters: [TX_SLOT_PARAMETERS; 5],
 }
 impl RegisterBlock {
@@ -50,26 +49,26 @@ impl RegisterBlock {
     pub fn filter_bank_iter(&self) -> impl Iterator<Item = &FILTER_BANK> {
         self.filter_bank.iter()
     }
-    #[doc = "0x84 - "]
+    #[doc = "0x84 - Controls the reception of frames"]
     #[inline(always)]
     pub const fn rx_ctrl(&self) -> &RX_CTRL {
         &self.rx_ctrl
     }
-    #[doc = "0x88 - RX_DMA_LIST"]
+    #[doc = "0x88..0x94 - RX_DMA_LIST"]
     #[inline(always)]
     pub const fn rx_dma_list(&self) -> &RX_DMA_LIST {
         &self.rx_dma_list
     }
-    #[doc = "0xd8..0xe8 - "]
+    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
     #[inline(always)]
-    pub const fn unknown_rx_policy(&self, n: usize) -> &UNKNOWN_RX_POLICY {
-        &self.unknown_rx_policy[n]
+    pub const fn interface_rx_control(&self, n: usize) -> &INTERFACE_RX_CONTROL {
+        &self.interface_rx_control[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xd8..0xe8 - "]
+    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
     #[inline(always)]
-    pub fn unknown_rx_policy_iter(&self) -> impl Iterator<Item = &UNKNOWN_RX_POLICY> {
-        self.unknown_rx_policy.iter()
+    pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
+        self.interface_rx_control.iter()
     }
     #[doc = "0x2bc - "]
     #[inline(always)]
@@ -116,22 +115,17 @@ impl RegisterBlock {
     pub const fn hw_stat_block_err(&self) -> &HW_STAT_BLOCK_ERR {
         &self.hw_stat_block_err
     }
-    #[doc = "0xc48 - Interrupt status of WIFI peripheral"]
+    #[doc = "0xc48..0xc50 - Status and clear for the Wi-Fi MAC interrupt"]
     #[inline(always)]
-    pub const fn wifi_int_status(&self) -> &WIFI_INT_STATUS {
-        &self.wifi_int_status
-    }
-    #[doc = "0xc4c - Interrupt status clear of WIFI peripheral"]
-    #[inline(always)]
-    pub const fn wifi_int_clear(&self) -> &WIFI_INT_CLEAR {
-        &self.wifi_int_clear
+    pub const fn mac_interrupt(&self) -> &MAC_INTERRUPT {
+        &self.mac_interrupt
     }
     #[doc = "0xcb8 - Exact name and meaning unknown, used for initializing the MAC"]
     #[inline(always)]
     pub const fn ctrl(&self) -> &CTRL {
         &self.ctrl
     }
-    #[doc = "0xcbc - State of transmission queues"]
+    #[doc = "0xcbc..0xccc - State of transmission queues"]
     #[inline(always)]
     pub const fn txq_state(&self) -> &TXQ_STATE {
         &self.txq_state
@@ -194,14 +188,14 @@ impl RegisterBlock {
         self.tx_slot_parameters.iter()
     }
 }
-#[doc = "RX_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
+#[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
-#[doc = ""]
+#[doc = "Controls the reception of frames"]
 pub mod rx_ctrl;
-#[doc = "UNKNOWN_RX_POLICY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`unknown_rx_policy::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unknown_rx_policy::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unknown_rx_policy`] module"]
-pub type UNKNOWN_RX_POLICY = crate::Reg<unknown_rx_policy::UNKNOWN_RX_POLICY_SPEC>;
-#[doc = ""]
-pub mod unknown_rx_policy;
+#[doc = "INTERFACE_RX_CONTROL (rw) register accessor: Controls RX for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`interface_rx_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interface_rx_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interface_rx_control`] module"]
+pub type INTERFACE_RX_CONTROL = crate::Reg<interface_rx_control::INTERFACE_RX_CONTROL_SPEC>;
+#[doc = "Controls RX for an interface"]
+pub mod interface_rx_control;
 #[doc = "HW_STAT_ACK_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_ack_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_ack_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_ack_int`] module"]
 pub type HW_STAT_ACK_INT = crate::Reg<hw_stat_ack_int::HW_STAT_ACK_INT_SPEC>;
 #[doc = ""]
@@ -238,14 +232,6 @@ pub mod hw_stat_full2;
 pub type HW_STAT_BLOCK_ERR = crate::Reg<hw_stat_block_err::HW_STAT_BLOCK_ERR_SPEC>;
 #[doc = ""]
 pub mod hw_stat_block_err;
-#[doc = "WIFI_INT_STATUS (rw) register accessor: Interrupt status of WIFI peripheral\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_int_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_int_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_int_status`] module"]
-pub type WIFI_INT_STATUS = crate::Reg<wifi_int_status::WIFI_INT_STATUS_SPEC>;
-#[doc = "Interrupt status of WIFI peripheral"]
-pub mod wifi_int_status;
-#[doc = "WIFI_INT_CLEAR (rw) register accessor: Interrupt status clear of WIFI peripheral\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_int_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_int_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_int_clear`] module"]
-pub type WIFI_INT_CLEAR = crate::Reg<wifi_int_clear::WIFI_INT_CLEAR_SPEC>;
-#[doc = "Interrupt status clear of WIFI peripheral"]
-pub mod wifi_int_clear;
 #[doc = "CTRL (rw) register accessor: Exact name and meaning unknown, used for initializing the MAC\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Exact name and meaning unknown, used for initializing the MAC"]
@@ -278,16 +264,21 @@ pub mod hw_stat_tx_hung;
 pub type HW_STAT_PANIC = crate::Reg<hw_stat_panic::HW_STAT_PANIC_SPEC>;
 #[doc = ""]
 pub mod hw_stat_panic;
-#[doc = "RX_DMA_LIST"]
-pub use self::rx_dma_list::RX_DMA_LIST;
-#[doc = r"Cluster"]
-#[doc = "RX_DMA_LIST"]
-pub mod rx_dma_list;
 #[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
 pub use self::filter_bank::FILTER_BANK;
 #[doc = r"Cluster"]
 #[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
 pub mod filter_bank;
+#[doc = "RX_DMA_LIST"]
+pub use self::rx_dma_list::RX_DMA_LIST;
+#[doc = r"Cluster"]
+#[doc = "RX_DMA_LIST"]
+pub mod rx_dma_list;
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub use self::mac_interrupt::MAC_INTERRUPT;
+#[doc = r"Cluster"]
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub mod mac_interrupt;
 #[doc = "State of transmission queues"]
 pub use self::txq_state::TXQ_STATE;
 #[doc = r"Cluster"]

@@ -50,6 +50,19 @@ WIFI:
                 description: Config
                 addressOffset: 0x0
                 access: read-write
+                fields:
+                    TIMEOUT:
+                        bitOffset: 0
+                        bitWidth: 12
+                        access: read-write
+                    BACKOFF_TIME:
+                        bitOffset: 12
+                        bitWidth: 10
+                        access: read-write
+                    AIFSN:
+                        bitOffset: 24
+                        bitWidth: 4
+                        access: read-write
             PLCP0:
                 description: PLCP0
                 addressOffset: 0x4
@@ -60,10 +73,24 @@ WIFI:
                         bitOffset: 0
                         bitWidth: 20
                         access: read-write
-                    FLAGS:
-                        description: Flags for the SLOT
-                        bitOffset: 20
-                        bitWidth: 12
+                    CTS_UNKNOWN:
+                        bitOffset: 27
+                        bitWidth: 1
+                        access: read-write
+                    WAIT_FOR_ACK:
+                        description: Enables ACK timeouts
+                        bitOffset: 28
+                        bitWidth: 1
+                        access: read-write
+                    SLOT_VALID:
+                        description: Marks this slot as valid
+                        bitOffset: 30
+                        bitWidth: 1
+                        access: read-write
+                    SLOT_ENABLED:
+                        description: Marks this slot as ready for transmission
+                        bitOffset: 31
+                        bitWidth: 1
                         access: read-write
     TX_SLOT_PARAMETERS%s:
         _delete: DUMMY
@@ -77,18 +104,32 @@ WIFI:
                         description: Length of packet (in bytes)
                         bitOffset: 0
                         bitWidth: 12
+                        access: read-write
                     RATE:
                         description: Packet rate (see wifi_phy_rate_t)
                         bitOffset: 12
                         bitWidth: 5
+                        access: read-write
+                    KEY_SLOT_ID:
+                        description: Key slot to use for encryption
+                        bitOffset: 17
+                        bitWidth: 5
+                        access: read-write
                     IS_80211_N:
                         description: Bit indicating if this is 802.11n
                         bitOffset: 25
                         bitWidth: 1
-                    UNKNOWN_ENABLE:
-                        description: meaning unknown, set to one for TX
+                        access: read-write
+                    BANDWIDTH:
+                        description: Zero indicates 20MHz and one indicates 40MHz
                         bitOffset: 28
+                        bitWidth: 1
+                        access: read-write
+                    INTERFACE_ID:
+                        description: ID of the interface this transmission is from
+                        bitOffset: 30
                         bitWidth: 2
+                        access: read-write
             PLCP2:
                 description: PLCP2
                 addressOffset: 0x4

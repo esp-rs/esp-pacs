@@ -1,4 +1,24 @@
 WIFI:
+    _modify:
+        INTERFACE_RX_CONTROL%s:
+            acccess: read-write
+            description: Controls RX for an interface
+            fields:
+                BSSID_CHECK:
+                    bitOffset: 1
+                    bitWidth: 1
+                    access: read-write
+                    description: Check BSSID for filtering
+                SCAN_MODE:
+                    bitOffset: 4
+                    bitWidth: 1
+                    access: read-write
+                    description: Receive beacon frames
+                DATA_AND_MGMT_MODE:
+                    bitOffset: 8
+                    bitWidth: 1
+                    access: read-write
+                    description: Receive everything except control frames
     FILTER_BANK%s:
         _delete: DUMMY
         _add:
