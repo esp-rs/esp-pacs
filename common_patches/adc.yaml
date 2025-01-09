@@ -16,7 +16,7 @@ ARB_CTRL:
     - TSENS_
 "?~CALI":
   _modify:
-    CALI_CFG:
+    "CFG,CALI_CFG":
       name: CFG
 "INT_*":
   _modify:

@@ -42,8 +42,6 @@ pub struct RegisterBlock {
     hw_stat_panic: HW_STAT_PANIC,
     _reserved30: [u8; 0x03f4],
     tx_slot_parameters: [TX_SLOT_PARAMETERS; 5],
-    _reserved31: [u8; 0x016c],
-    crypto_key_entry: [CRYPTO_KEY_ENTRY; 16],
 }
 impl RegisterBlock {
     #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
@@ -225,17 +223,6 @@ impl RegisterBlock {
     pub fn tx_slot_parameters_iter(&self) -> impl Iterator<Item = &TX_SLOT_PARAMETERS> {
         self.tx_slot_parameters.iter()
     }
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
-    #[inline(always)]
-    pub const fn crypto_key_entry(&self, n: usize) -> &CRYPTO_KEY_ENTRY {
-        &self.crypto_key_entry[n]
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
-    #[inline(always)]
-    pub fn crypto_key_entry_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_ENTRY> {
-        self.crypto_key_entry.iter()
-    }
 }
 #[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
@@ -364,8 +351,3 @@ pub use self::tx_slot_parameters::TX_SLOT_PARAMETERS;
 #[doc = r"Cluster"]
 #[doc = "Used to set transmission parameters for the slot"]
 pub mod tx_slot_parameters;
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub use self::crypto_key_entry::CRYPTO_KEY_ENTRY;
-#[doc = r"Cluster"]
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub mod crypto_key_entry;

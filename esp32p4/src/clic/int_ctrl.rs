@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Pending interrupt bit"]
     #[inline(always)]
-    #[must_use]
     pub fn int_ip(&mut self) -> INT_IP_W<INT_CTRL_SPEC> {
         INT_IP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Interrupt enable bit"]
     #[inline(always)]
-    #[must_use]
     pub fn int_ie(&mut self) -> INT_IE_W<INT_CTRL_SPEC> {
         INT_IE_W::new(self, 8)
     }
     #[doc = "Bit 16 - Shadow vector attribute"]
     #[inline(always)]
-    #[must_use]
     pub fn int_attr_shv(&mut self) -> INT_ATTR_SHV_W<INT_CTRL_SPEC> {
         INT_ATTR_SHV_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Trigger attribute for interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn int_attr_trig(&mut self) -> INT_ATTR_TRIG_W<INT_CTRL_SPEC> {
         INT_ATTR_TRIG_W::new(self, 17)
     }
     #[doc = "Bits 22:23 - Interrupt mode attribute"]
     #[inline(always)]
-    #[must_use]
     pub fn int_attr_mode(&mut self) -> INT_ATTR_MODE_W<INT_CTRL_SPEC> {
         INT_ATTR_MODE_W::new(self, 22)
     }
     #[doc = "Bits 24:31 - Control bits for interrupt"]
     #[inline(always)]
-    #[must_use]
     pub fn int_ctl(&mut self) -> INT_CTL_W<INT_CTRL_SPEC> {
         INT_CTL_W::new(self, 24)
     }
