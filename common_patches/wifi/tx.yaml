@@ -73,10 +73,6 @@ WIFI:
                         bitOffset: 0
                         bitWidth: 20
                         access: read-write
-                    CTS_UNKNOWN:
-                        bitOffset: 27
-                        bitWidth: 1
-                        access: read-write
                     WAIT_FOR_ACK:
                         description: Enables ACK timeouts
                         bitOffset: 28

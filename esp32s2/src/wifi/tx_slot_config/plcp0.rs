@@ -6,10 +6,6 @@ pub type W = crate::W<PLCP0_SPEC>;
 pub type DMA_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `DMA_ADDR` writer - Bottom bits of address of dma_item"]
 pub type DMA_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
-#[doc = "Field `CTS_UNKNOWN` reader - "]
-pub type CTS_UNKNOWN_R = crate::BitReader;
-#[doc = "Field `CTS_UNKNOWN` writer - "]
-pub type CTS_UNKNOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WAIT_FOR_ACK` reader - Enables ACK timeouts"]
 pub type WAIT_FOR_ACK_R = crate::BitReader;
 #[doc = "Field `WAIT_FOR_ACK` writer - Enables ACK timeouts"]
@@ -27,11 +23,6 @@ impl R {
     #[inline(always)]
     pub fn dma_addr(&self) -> DMA_ADDR_R {
         DMA_ADDR_R::new(self.bits & 0x000f_ffff)
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn cts_unknown(&self) -> CTS_UNKNOWN_R {
-        CTS_UNKNOWN_R::new(((self.bits >> 27) & 1) != 0)
     }
     #[doc = "Bit 28 - Enables ACK timeouts"]
     #[inline(always)]
@@ -54,7 +45,6 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("PLCP0")
             .field("dma_addr", &self.dma_addr())
-            .field("cts_unknown", &self.cts_unknown())
             .field("wait_for_ack", &self.wait_for_ack())
             .field("slot_valid", &self.slot_valid())
             .field("slot_enabled", &self.slot_enabled())
@@ -66,11 +56,6 @@ impl W {
     #[inline(always)]
     pub fn dma_addr(&mut self) -> DMA_ADDR_W<PLCP0_SPEC> {
         DMA_ADDR_W::new(self, 0)
-    }
-    #[doc = "Bit 27"]
-    #[inline(always)]
-    pub fn cts_unknown(&mut self) -> CTS_UNKNOWN_W<PLCP0_SPEC> {
-        CTS_UNKNOWN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Enables ACK timeouts"]
     #[inline(always)]
