@@ -57,6 +57,30 @@ _add:
                 description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8
                 access: read-write
+            PLCP1%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1168
+            PLCP2%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x116c
+            HT_SIG%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1170
+            HT_UNKNOWN%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1174
+            DURATION%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1178
+            PMD%s:
+                dim: 5
+                dimIncrement: 0x3c
+                addressOffset: 0x1180
 
             HW_STAT_TX_RTS:
                 addressOffset: 0xd58
@@ -122,14 +146,6 @@ WIFI:
                 dimIncrement: 0x8
                 description: Used to configure the TX slot.
                 addressOffset: 0xcfc
-                registers:
-                    DUMMY:
-                        addressOffset: 0x0
-            TX_SLOT_PARAMETERS%s:
-                dim: 5
-                dimIncrement: 0x3c
-                addressOffset: 0x1168
-                description: Used to set transmission parameters for the slot
                 registers:
                     DUMMY:
                         addressOffset: 0x0

@@ -1,6 +1,6 @@
-#[doc = "Register `DURATION` reader"]
+#[doc = "Register `DURATION%s` reader"]
 pub type R = crate::R<DURATION_SPEC>;
-#[doc = "Register `DURATION` writer"]
+#[doc = "Register `DURATION%s` writer"]
 pub type W = crate::W<DURATION_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -22,7 +22,7 @@ impl crate::Writable for DURATION_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets DURATION to value 0"]
+#[doc = "`reset()` method sets DURATION%s to value 0"]
 impl crate::Resettable for DURATION_SPEC {
     const RESET_VALUE: u32 = 0;
 }

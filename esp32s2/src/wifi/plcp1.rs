@@ -1,6 +1,6 @@
-#[doc = "Register `PLCP1` reader"]
+#[doc = "Register `PLCP1%s` reader"]
 pub type R = crate::R<PLCP1_SPEC>;
-#[doc = "Register `PLCP1` writer"]
+#[doc = "Register `PLCP1%s` writer"]
 pub type W = crate::W<PLCP1_SPEC>;
 #[doc = "Field `LEN` reader - Length of packet (in bytes)"]
 pub type LEN_R = crate::FieldReader<u16>;
@@ -116,7 +116,7 @@ impl crate::Writable for PLCP1_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PLCP1 to value 0"]
+#[doc = "`reset()` method sets PLCP1%s to value 0"]
 impl crate::Resettable for PLCP1_SPEC {
     const RESET_VALUE: u32 = 0;
 }

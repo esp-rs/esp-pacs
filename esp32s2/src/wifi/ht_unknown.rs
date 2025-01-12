@@ -1,6 +1,6 @@
-#[doc = "Register `HT_UNKNOWN` reader"]
+#[doc = "Register `HT_UNKNOWN%s` reader"]
 pub type R = crate::R<HT_UNKNOWN_SPEC>;
-#[doc = "Register `HT_UNKNOWN` writer"]
+#[doc = "Register `HT_UNKNOWN%s` writer"]
 pub type W = crate::W<HT_UNKNOWN_SPEC>;
 #[doc = "Field `LENGTH` reader - The length of the PPDU"]
 pub type LENGTH_R = crate::FieldReader<u32>;
@@ -41,7 +41,7 @@ impl crate::Writable for HT_UNKNOWN_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets HT_UNKNOWN to value 0"]
+#[doc = "`reset()` method sets HT_UNKNOWN%s to value 0"]
 impl crate::Resettable for HT_UNKNOWN_SPEC {
     const RESET_VALUE: u32 = 0;
 }

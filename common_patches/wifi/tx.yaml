@@ -88,71 +88,63 @@ WIFI:
                         bitOffset: 31
                         bitWidth: 1
                         access: read-write
-    TX_SLOT_PARAMETERS%s:
-        _delete: DUMMY
-        _add:
-            PLCP1:
-                description: PLCP1
-                addressOffset: 0x0
-                access: read-write
-                fields:
-                    LEN:
-                        description: Length of packet (in bytes)
-                        bitOffset: 0
-                        bitWidth: 12
-                        access: read-write
-                    RATE:
-                        description: Packet rate (see wifi_phy_rate_t)
-                        bitOffset: 12
-                        bitWidth: 5
-                        access: read-write
-                    KEY_SLOT_ID:
-                        description: Key slot to use for encryption
-                        bitOffset: 17
-                        bitWidth: 5
-                        access: read-write
-                    IS_80211_N:
-                        description: Bit indicating if this is 802.11n
-                        bitOffset: 25
-                        bitWidth: 1
-                        access: read-write
-                    BANDWIDTH:
-                        description: Zero indicates 20MHz and one indicates 40MHz
-                        bitOffset: 28
-                        bitWidth: 1
-                        access: read-write
-                    INTERFACE_ID:
-                        description: ID of the interface this transmission is from
-                        bitOffset: 30
-                        bitWidth: 2
-                        access: read-write
-            PLCP2:
-                description: PLCP2
-                addressOffset: 0x4
-                access: read-write
-                fields:
-                    UNKNOWN:
-                        description: meaning unknown, set to one for TX
-                        bitOffset: 5
-                        bitWidth: 1
-            HT_SIG:
-                description: HT-SIG field in HT preamble
-                addressOffset: 0x8
-                access: read-write
-            HT_UNKNOWN:
-                description: exact meaning and name unknown, related to HT
-                addressOffset: 0xc
-                access: read-write
-                fields:
-                    LENGTH:
-                        description: The length of the PPDU
-                        bitOffset: 0x0
-                        bitWidth: 20
-                        access: write
-            DURATION:
-                description: duration of the frame exchange
-                addressOffset: 0x10
-                access: read-write
-            PMD:
-                addressOffset: 0x18
-                access: read-write
+    _modify:
+        PLCP1%s:
+            description: PLCP1
+            access: read-write
+            fields:
+                LEN:
+                    description: Length of packet (in bytes)
+                    bitOffset: 0
+                    bitWidth: 12
+                    access: read-write
+                RATE:
+                    description: Packet rate (see wifi_phy_rate_t)
+                    bitOffset: 12
+                    bitWidth: 5
+                    access: read-write
+                KEY_SLOT_ID:
+                    description: Key slot to use for encryption
+                    bitOffset: 17
+                    bitWidth: 5
+                    access: read-write
+                IS_80211_N:
+                    description: Bit indicating if this is 802.11n
+                    bitOffset: 25
+                    bitWidth: 1
+                    access: read-write
+                BANDWIDTH:
+                    description: Zero indicates 20MHz and one indicates 40MHz
+                    bitOffset: 28
+                    bitWidth: 1
+                    access: read-write
+                INTERFACE_ID:
+                    description: ID of the interface this transmission is from
+                    bitOffset: 30
+                    bitWidth: 2
+                    access: read-write
+        PLCP2%s:
+            description: PLCP2
+            access: read-write
+            fields:
+                UNKNOWN:
+                    description: meaning unknown, set to one for TX
+                    bitOffset: 5
+                    bitWidth: 1
+        HT_SIG%s:
+            description: HT-SIG field in HT preamble
+            access: read-write
+        HT_UNKNOWN%s:
+            description: exact meaning and name unknown, related to HT
+            access: read-write
+            fields:
+                LENGTH:
+                    description: The length of the PPDU
+                    bitOffset: 0x0
+                    bitWidth: 20
+                    access: write
+        DURATION%s:
+            description: duration of the frame exchange
+            access: read-write
+        PMD%s:
+            access: read-write
