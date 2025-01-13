@@ -1,6 +1,6 @@
-#[doc = "Register `PLCP2` reader"]
+#[doc = "Register `PLCP2%s` reader"]
 pub type R = crate::R<PLCP2_SPEC>;
-#[doc = "Register `PLCP2` writer"]
+#[doc = "Register `PLCP2%s` writer"]
 pub type W = crate::W<PLCP2_SPEC>;
 #[doc = "Field `UNKNOWN` reader - meaning unknown, set to one for TX"]
 pub type UNKNOWN_R = crate::BitReader;
@@ -41,7 +41,7 @@ impl crate::Writable for PLCP2_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PLCP2 to value 0"]
+#[doc = "`reset()` method sets PLCP2%s to value 0"]
 impl crate::Resettable for PLCP2_SPEC {
     const RESET_VALUE: u32 = 0;
 }

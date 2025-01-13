@@ -1,6 +1,6 @@
-#[doc = "Register `PMD` reader"]
+#[doc = "Register `PMD%s` reader"]
 pub type R = crate::R<PMD_SPEC>;
-#[doc = "Register `PMD` writer"]
+#[doc = "Register `PMD%s` writer"]
 pub type W = crate::W<PMD_SPEC>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
@@ -22,7 +22,7 @@ impl crate::Writable for PMD_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets PMD to value 0"]
+#[doc = "`reset()` method sets PMD%s to value 0"]
 impl crate::Resettable for PMD_SPEC {
     const RESET_VALUE: u32 = 0;
 }

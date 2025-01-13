@@ -1,0 +1,13 @@
+WIFI:
+    PWR_INTERRUPT:
+        _delete: DUMMY
+        _add:
+            PWR_INT_STATUS:
+                addressOffset: 0x0
+                description: Interrupt status for the WIFI_PWR interrupt
+                access: read
+
+            PWR_INT_CLEAR:
+                addressOffset: 0x4
+                description: Interrupt status clear for the WIFI_PWR interrupt
+                access: write

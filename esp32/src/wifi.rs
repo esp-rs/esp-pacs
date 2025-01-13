@@ -5,34 +5,28 @@ pub struct RegisterBlock {
     filter_bank: [FILTER_BANK; 2],
     _reserved1: [u8; 0x04],
     rx_ctrl: RX_CTRL,
-    rx_descr_base: RX_DESCR_BASE,
-    rx_descr_next: RX_DESCR_NEXT,
-    rx_descr_last: RX_DESCR_LAST,
-    _reserved5: [u8; 0x44],
-    unknown_rx_policy: [UNKNOWN_RX_POLICY; 2],
-    _reserved6: [u8; 0x01dc],
+    rx_dma_list: RX_DMA_LIST,
+    _reserved3: [u8; 0x44],
+    interface_rx_control: [INTERFACE_RX_CONTROL; 4],
+    _reserved4: [u8; 0x01d4],
     hw_stat_ack_int: HW_STAT_ACK_INT,
     hw_stat_rts_int: HW_STAT_RTS_INT,
     hw_stat_cts_int: HW_STAT_CTS_INT,
     hw_stat_rifs_int: HW_STAT_RIFS_INT,
     hw_stat_rx_success: HW_STAT_RX_SUCCESS,
     hw_stat_rx_end: HW_STAT_RX_END,
-    _reserved12: [u8; 0x04],
+    _reserved10: [u8; 0x04],
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
-    _reserved15: [u8; 0x0964],
-    wifi_int_status: WIFI_INT_STATUS,
-    wifi_int_clear: WIFI_INT_CLEAR,
-    _reserved17: [u8; 0x68],
+    _reserved13: [u8; 0x0964],
+    mac_interrupt: MAC_INTERRUPT,
+    _reserved14: [u8; 0x68],
     ctrl: CTRL,
-    tx_error_clear: TX_ERROR_CLEAR,
-    tx_error_status: TX_ERROR_STATUS,
-    tx_complete_clear: TX_COMPLETE_CLEAR,
-    tx_complete_status: TX_COMPLETE_STATUS,
-    _reserved22: [u8; 0x30],
+    txq_state: TXQ_STATE,
+    _reserved16: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved23: [u8; 0x34],
+    _reserved17: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -40,10 +34,18 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved30: [u8; 0x03f4],
-    tx_slot_parameters: [TX_SLOT_PARAMETERS; 5],
-    _reserved31: [u8; 0x016c],
-    crypto_key_entry: [CRYPTO_KEY_ENTRY; 16],
+    _reserved24: [u8; 0x03f4],
+    plcp1: (),
+    _reserved25: [u8; 0x04],
+    plcp2: (),
+    _reserved26: [u8; 0x04],
+    ht_sig: (),
+    _reserved27: [u8; 0x04],
+    ht_unknown: (),
+    _reserved28: [u8; 0x04],
+    duration: (),
+    _reserved29: [u8; 0x08],
+    pmd: (),
 }
 impl RegisterBlock {
     #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
@@ -62,31 +64,21 @@ impl RegisterBlock {
     pub const fn rx_ctrl(&self) -> &RX_CTRL {
         &self.rx_ctrl
     }
-    #[doc = "0x88 - base address of the RX DMA list"]
+    #[doc = "0x88..0x94 - RX_DMA_LIST"]
     #[inline(always)]
-    pub const fn rx_descr_base(&self) -> &RX_DESCR_BASE {
-        &self.rx_descr_base
+    pub const fn rx_dma_list(&self) -> &RX_DMA_LIST {
+        &self.rx_dma_list
     }
-    #[doc = "0x8c - next item in the RX DMA list"]
+    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
     #[inline(always)]
-    pub const fn rx_descr_next(&self) -> &RX_DESCR_NEXT {
-        &self.rx_descr_next
-    }
-    #[doc = "0x90 - last item in RX DMA list"]
-    #[inline(always)]
-    pub const fn rx_descr_last(&self) -> &RX_DESCR_LAST {
-        &self.rx_descr_last
-    }
-    #[doc = "0xd8..0xe0 - "]
-    #[inline(always)]
-    pub const fn unknown_rx_policy(&self, n: usize) -> &UNKNOWN_RX_POLICY {
-        &self.unknown_rx_policy[n]
+    pub const fn interface_rx_control(&self, n: usize) -> &INTERFACE_RX_CONTROL {
+        &self.interface_rx_control[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xd8..0xe0 - "]
+    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
     #[inline(always)]
-    pub fn unknown_rx_policy_iter(&self) -> impl Iterator<Item = &UNKNOWN_RX_POLICY> {
-        self.unknown_rx_policy.iter()
+    pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
+        self.interface_rx_control.iter()
     }
     #[doc = "0x2bc - "]
     #[inline(always)]
@@ -133,40 +125,20 @@ impl RegisterBlock {
     pub const fn hw_stat_block_err(&self) -> &HW_STAT_BLOCK_ERR {
         &self.hw_stat_block_err
     }
-    #[doc = "0xc48 - Interrupt status of WIFI peripheral"]
+    #[doc = "0xc48..0xc50 - Status and clear for the Wi-Fi MAC interrupt"]
     #[inline(always)]
-    pub const fn wifi_int_status(&self) -> &WIFI_INT_STATUS {
-        &self.wifi_int_status
-    }
-    #[doc = "0xc4c - Interrupt status clear of WIFI peripheral"]
-    #[inline(always)]
-    pub const fn wifi_int_clear(&self) -> &WIFI_INT_CLEAR {
-        &self.wifi_int_clear
+    pub const fn mac_interrupt(&self) -> &MAC_INTERRUPT {
+        &self.mac_interrupt
     }
     #[doc = "0xcb8 - Exact name and meaning unknown, used for initializing the MAC"]
     #[inline(always)]
     pub const fn ctrl(&self) -> &CTRL {
         &self.ctrl
     }
-    #[doc = "0xcbc - Clear the error status of a slot"]
+    #[doc = "0xcbc..0xccc - State of transmission queues"]
     #[inline(always)]
-    pub const fn tx_error_clear(&self) -> &TX_ERROR_CLEAR {
-        &self.tx_error_clear
-    }
-    #[doc = "0xcc0 - Error status of a slot"]
-    #[inline(always)]
-    pub const fn tx_error_status(&self) -> &TX_ERROR_STATUS {
-        &self.tx_error_status
-    }
-    #[doc = "0xcc4 - Clear the completion status of a slot"]
-    #[inline(always)]
-    pub const fn tx_complete_clear(&self) -> &TX_COMPLETE_CLEAR {
-        &self.tx_complete_clear
-    }
-    #[doc = "0xcc8 - Completion status of a slot"]
-    #[inline(always)]
-    pub const fn tx_complete_status(&self) -> &TX_COMPLETE_STATUS {
-        &self.tx_complete_status
+    pub const fn txq_state(&self) -> &TXQ_STATE {
+        &self.txq_state
     }
     #[doc = "0xcfc..0xd24 - Used to configure the TX slot."]
     #[inline(always)]
@@ -214,49 +186,165 @@ impl RegisterBlock {
     pub const fn hw_stat_panic(&self) -> &HW_STAT_PANIC {
         &self.hw_stat_panic
     }
-    #[doc = "0x1168..0x1294 - Used to set transmission parameters for the slot"]
+    #[doc = "0x1168..0x117c - PLCP1"]
     #[inline(always)]
-    pub const fn tx_slot_parameters(&self, n: usize) -> &TX_SLOT_PARAMETERS {
-        &self.tx_slot_parameters[n]
+    pub const fn plcp1(&self, n: usize) -> &PLCP1 {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4456)
+                .add(60 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x1168..0x1294 - Used to set transmission parameters for the slot"]
+    #[doc = "0x1168..0x117c - PLCP1"]
     #[inline(always)]
-    pub fn tx_slot_parameters_iter(&self) -> impl Iterator<Item = &TX_SLOT_PARAMETERS> {
-        self.tx_slot_parameters.iter()
+    pub fn plcp1_iter(&self) -> impl Iterator<Item = &PLCP1> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4456)
+                .add(60 * n)
+                .cast()
+        })
     }
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
+    #[doc = "0x116c..0x1180 - PLCP2"]
     #[inline(always)]
-    pub const fn crypto_key_entry(&self, n: usize) -> &CRYPTO_KEY_ENTRY {
-        &self.crypto_key_entry[n]
+    pub const fn plcp2(&self, n: usize) -> &PLCP2 {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4460)
+                .add(60 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x1400..0x1680 - The cryptographic keys, to be used by the MAC"]
+    #[doc = "0x116c..0x1180 - PLCP2"]
     #[inline(always)]
-    pub fn crypto_key_entry_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_ENTRY> {
-        self.crypto_key_entry.iter()
+    pub fn plcp2_iter(&self) -> impl Iterator<Item = &PLCP2> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4460)
+                .add(60 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x1170..0x1184 - HT-SIG field in HT preamble"]
+    #[inline(always)]
+    pub const fn ht_sig(&self, n: usize) -> &HT_SIG {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4464)
+                .add(60 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1170..0x1184 - HT-SIG field in HT preamble"]
+    #[inline(always)]
+    pub fn ht_sig_iter(&self) -> impl Iterator<Item = &HT_SIG> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4464)
+                .add(60 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x1174..0x1188 - exact meaning and name unknown, related to HT"]
+    #[inline(always)]
+    pub const fn ht_unknown(&self, n: usize) -> &HT_UNKNOWN {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4468)
+                .add(60 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1174..0x1188 - exact meaning and name unknown, related to HT"]
+    #[inline(always)]
+    pub fn ht_unknown_iter(&self) -> impl Iterator<Item = &HT_UNKNOWN> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4468)
+                .add(60 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x1178..0x118c - duration of the frame exchange"]
+    #[inline(always)]
+    pub const fn duration(&self, n: usize) -> &DURATION {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4472)
+                .add(60 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1178..0x118c - duration of the frame exchange"]
+    #[inline(always)]
+    pub fn duration_iter(&self) -> impl Iterator<Item = &DURATION> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4472)
+                .add(60 * n)
+                .cast()
+        })
+    }
+    #[doc = "0x1180..0x1194 - "]
+    #[inline(always)]
+    pub const fn pmd(&self, n: usize) -> &PMD {
+        #[allow(clippy::no_effect)]
+        [(); 5][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4480)
+                .add(60 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1180..0x1194 - "]
+    #[inline(always)]
+    pub fn pmd_iter(&self) -> impl Iterator<Item = &PMD> {
+        (0..5).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4480)
+                .add(60 * n)
+                .cast()
+        })
     }
 }
 #[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
 #[doc = "Controls the reception of frames"]
 pub mod rx_ctrl;
-#[doc = "RX_DESCR_BASE (rw) register accessor: base address of the RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_base::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_base::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_base`] module"]
-pub type RX_DESCR_BASE = crate::Reg<rx_descr_base::RX_DESCR_BASE_SPEC>;
-#[doc = "base address of the RX DMA list"]
-pub mod rx_descr_base;
-#[doc = "RX_DESCR_NEXT (rw) register accessor: next item in the RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_next::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_next::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_next`] module"]
-pub type RX_DESCR_NEXT = crate::Reg<rx_descr_next::RX_DESCR_NEXT_SPEC>;
-#[doc = "next item in the RX DMA list"]
-pub mod rx_descr_next;
-#[doc = "RX_DESCR_LAST (rw) register accessor: last item in RX DMA list\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_descr_last::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_descr_last::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_descr_last`] module"]
-pub type RX_DESCR_LAST = crate::Reg<rx_descr_last::RX_DESCR_LAST_SPEC>;
-#[doc = "last item in RX DMA list"]
-pub mod rx_descr_last;
-#[doc = "UNKNOWN_RX_POLICY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`unknown_rx_policy::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`unknown_rx_policy::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@unknown_rx_policy`] module"]
-pub type UNKNOWN_RX_POLICY = crate::Reg<unknown_rx_policy::UNKNOWN_RX_POLICY_SPEC>;
-#[doc = ""]
-pub mod unknown_rx_policy;
+#[doc = "INTERFACE_RX_CONTROL (rw) register accessor: Controls RX for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`interface_rx_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interface_rx_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interface_rx_control`] module"]
+pub type INTERFACE_RX_CONTROL = crate::Reg<interface_rx_control::INTERFACE_RX_CONTROL_SPEC>;
+#[doc = "Controls RX for an interface"]
+pub mod interface_rx_control;
 #[doc = "HW_STAT_ACK_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_ack_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_ack_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_ack_int`] module"]
 pub type HW_STAT_ACK_INT = crate::Reg<hw_stat_ack_int::HW_STAT_ACK_INT_SPEC>;
 #[doc = ""]
@@ -293,34 +381,34 @@ pub mod hw_stat_full2;
 pub type HW_STAT_BLOCK_ERR = crate::Reg<hw_stat_block_err::HW_STAT_BLOCK_ERR_SPEC>;
 #[doc = ""]
 pub mod hw_stat_block_err;
-#[doc = "WIFI_INT_STATUS (rw) register accessor: Interrupt status of WIFI peripheral\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_int_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_int_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_int_status`] module"]
-pub type WIFI_INT_STATUS = crate::Reg<wifi_int_status::WIFI_INT_STATUS_SPEC>;
-#[doc = "Interrupt status of WIFI peripheral"]
-pub mod wifi_int_status;
-#[doc = "WIFI_INT_CLEAR (rw) register accessor: Interrupt status clear of WIFI peripheral\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_int_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_int_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_int_clear`] module"]
-pub type WIFI_INT_CLEAR = crate::Reg<wifi_int_clear::WIFI_INT_CLEAR_SPEC>;
-#[doc = "Interrupt status clear of WIFI peripheral"]
-pub mod wifi_int_clear;
 #[doc = "CTRL (rw) register accessor: Exact name and meaning unknown, used for initializing the MAC\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Exact name and meaning unknown, used for initializing the MAC"]
 pub mod ctrl;
-#[doc = "TX_ERROR_CLEAR (rw) register accessor: Clear the error status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_error_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_error_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_error_clear`] module"]
-pub type TX_ERROR_CLEAR = crate::Reg<tx_error_clear::TX_ERROR_CLEAR_SPEC>;
-#[doc = "Clear the error status of a slot"]
-pub mod tx_error_clear;
-#[doc = "TX_ERROR_STATUS (rw) register accessor: Error status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_error_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_error_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_error_status`] module"]
-pub type TX_ERROR_STATUS = crate::Reg<tx_error_status::TX_ERROR_STATUS_SPEC>;
-#[doc = "Error status of a slot"]
-pub mod tx_error_status;
-#[doc = "TX_COMPLETE_CLEAR (rw) register accessor: Clear the completion status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_complete_clear::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_complete_clear::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_complete_clear`] module"]
-pub type TX_COMPLETE_CLEAR = crate::Reg<tx_complete_clear::TX_COMPLETE_CLEAR_SPEC>;
-#[doc = "Clear the completion status of a slot"]
-pub mod tx_complete_clear;
-#[doc = "TX_COMPLETE_STATUS (rw) register accessor: Completion status of a slot\n\nYou can [`read`](crate::Reg::read) this register and get [`tx_complete_status::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tx_complete_status::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tx_complete_status`] module"]
-pub type TX_COMPLETE_STATUS = crate::Reg<tx_complete_status::TX_COMPLETE_STATUS_SPEC>;
-#[doc = "Completion status of a slot"]
-pub mod tx_complete_status;
+#[doc = "PLCP1 (rw) register accessor: PLCP1\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp1`] module"]
+pub type PLCP1 = crate::Reg<plcp1::PLCP1_SPEC>;
+#[doc = "PLCP1"]
+pub mod plcp1;
+#[doc = "PLCP2 (rw) register accessor: PLCP2\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp2`] module"]
+pub type PLCP2 = crate::Reg<plcp2::PLCP2_SPEC>;
+#[doc = "PLCP2"]
+pub mod plcp2;
+#[doc = "HT_SIG (rw) register accessor: HT-SIG field in HT preamble\n\nYou can [`read`](crate::Reg::read) this register and get [`ht_sig::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ht_sig::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ht_sig`] module"]
+pub type HT_SIG = crate::Reg<ht_sig::HT_SIG_SPEC>;
+#[doc = "HT-SIG field in HT preamble"]
+pub mod ht_sig;
+#[doc = "HT_UNKNOWN (rw) register accessor: exact meaning and name unknown, related to HT\n\nYou can [`read`](crate::Reg::read) this register and get [`ht_unknown::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ht_unknown::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ht_unknown`] module"]
+pub type HT_UNKNOWN = crate::Reg<ht_unknown::HT_UNKNOWN_SPEC>;
+#[doc = "exact meaning and name unknown, related to HT"]
+pub mod ht_unknown;
+#[doc = "DURATION (rw) register accessor: duration of the frame exchange\n\nYou can [`read`](crate::Reg::read) this register and get [`duration::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`duration::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@duration`] module"]
+pub type DURATION = crate::Reg<duration::DURATION_SPEC>;
+#[doc = "duration of the frame exchange"]
+pub mod duration;
+#[doc = "PMD (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pmd`] module"]
+pub type PMD = crate::Reg<pmd::PMD_SPEC>;
+#[doc = ""]
+pub mod pmd;
 #[doc = "HW_STAT_TX_RTS (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_tx_rts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_tx_rts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_tx_rts`] module"]
 pub type HW_STAT_TX_RTS = crate::Reg<hw_stat_tx_rts::HW_STAT_TX_RTS_SPEC>;
 #[doc = ""]
@@ -354,18 +442,23 @@ pub use self::filter_bank::FILTER_BANK;
 #[doc = r"Cluster"]
 #[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
 pub mod filter_bank;
+#[doc = "RX_DMA_LIST"]
+pub use self::rx_dma_list::RX_DMA_LIST;
+#[doc = r"Cluster"]
+#[doc = "RX_DMA_LIST"]
+pub mod rx_dma_list;
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub use self::mac_interrupt::MAC_INTERRUPT;
+#[doc = r"Cluster"]
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub mod mac_interrupt;
+#[doc = "State of transmission queues"]
+pub use self::txq_state::TXQ_STATE;
+#[doc = r"Cluster"]
+#[doc = "State of transmission queues"]
+pub mod txq_state;
 #[doc = "Used to configure the TX slot."]
 pub use self::tx_slot_config::TX_SLOT_CONFIG;
 #[doc = r"Cluster"]
 #[doc = "Used to configure the TX slot."]
 pub mod tx_slot_config;
-#[doc = "Used to set transmission parameters for the slot"]
-pub use self::tx_slot_parameters::TX_SLOT_PARAMETERS;
-#[doc = r"Cluster"]
-#[doc = "Used to set transmission parameters for the slot"]
-pub mod tx_slot_parameters;
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub use self::crypto_key_entry::CRYPTO_KEY_ENTRY;
-#[doc = r"Cluster"]
-#[doc = "The cryptographic keys, to be used by the MAC"]
-pub mod crypto_key_entry;

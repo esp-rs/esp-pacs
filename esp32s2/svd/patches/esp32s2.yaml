@@ -1409,3 +1409,5 @@ RSA:
     _modify:
       INTERRUPT_ENA:
         name: INT_ENA
+_include:
+    - "esp32s2-wifi.yaml"

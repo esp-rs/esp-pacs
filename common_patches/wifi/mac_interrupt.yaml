@@ -1,0 +1,14 @@
+WIFI:
+    MAC_INTERRUPT:
+        _delete: DUMMY
+        _add:
+            WIFI_INT_STATUS:
+                addressOffset: 0x0
+                description: Interrupt status of WIFI peripheral
+                access: read
+
+            WIFI_INT_CLEAR:
+                addressOffset: 0x4
+                description: Interrupt status clear of WIFI peripheral
+                access: write
+
