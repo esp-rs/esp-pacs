@@ -1124,9 +1124,9 @@ dependencies = [
 
 [[package]]
 name = "svd2rust"
-version = "0.34.0"
+version = "0.35.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "af630fcf8c439ece7721da084eaf1bc13d7730723435383904baa22863c9ca63"
+checksum = "af28e1ba5f77e5990cd87508a20db32b78cc9679b2abcf92eaee0a06566a533a"
 dependencies = [
  "anyhow",
  "inflections",

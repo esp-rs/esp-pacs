@@ -12,6 +12,6 @@ form       = "0.12.1"
 log        = "0.4.25"
 semver     = "1.0.25"
 strum      = { version = "0.26.3", features = ["derive"] }
-svd2rust   = { version = "0.34.0", features = ["serde", "yaml"], default-features = false }
+svd2rust   = { version = "0.35.0", features = ["serde", "yaml"], default-features = false }
 svdtools   = "0.4.3"
 toml_edit  = "0.22.23"
