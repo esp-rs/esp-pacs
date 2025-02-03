@@ -92,11 +92,13 @@ extern "C" {
     fn PMS_DMA_RX_I_ILG();
     fn PMS_DMA_TX_I_ILG();
     fn SPI0_REJECT_CACHE();
+    fn DMA_COPY();
     fn SPI4_DMA();
     fn SPI4();
     fn ICACHE_PRELOAD();
     fn DCACHE_PRELOAD();
     fn APB_ADC();
+    fn CRYPTO_DMA();
     fn CPU_PERI_ERR();
     fn APB_PERI_ERR();
     fn DCACHE_SYNC();
@@ -272,7 +274,7 @@ pub static __INTERRUPTS: [Vector; 95] = [
     Vector {
         _handler: SPI0_REJECT_CACHE,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: DMA_COPY },
     Vector { _handler: SPI4_DMA },
     Vector { _handler: SPI4 },
     Vector {
@@ -282,7 +284,9 @@ pub static __INTERRUPTS: [Vector; 95] = [
         _handler: DCACHE_PRELOAD,
     },
     Vector { _handler: APB_ADC },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: CRYPTO_DMA,
+    },
     Vector {
         _handler: CPU_PERI_ERR,
     },
@@ -459,6 +463,8 @@ pub enum Interrupt {
     PMS_DMA_TX_I_ILG = 82,
     #[doc = "83 - SPI0_REJECT_CACHE"]
     SPI0_REJECT_CACHE = 83,
+    #[doc = "84 - DMA_COPY"]
+    DMA_COPY = 84,
     #[doc = "85 - SPI4_DMA"]
     SPI4_DMA = 85,
     #[doc = "86 - SPI4"]
@@ -469,6 +475,8 @@ pub enum Interrupt {
     DCACHE_PRELOAD = 88,
     #[doc = "89 - APB_ADC"]
     APB_ADC = 89,
+    #[doc = "90 - CRYPTO_DMA"]
+    CRYPTO_DMA = 90,
     #[doc = "91 - CPU_PERI_ERR"]
     CPU_PERI_ERR = 91,
     #[doc = "92 - APB_PERI_ERR"]
@@ -566,11 +574,13 @@ impl Interrupt {
             81 => Ok(Interrupt::PMS_DMA_RX_I_ILG),
             82 => Ok(Interrupt::PMS_DMA_TX_I_ILG),
             83 => Ok(Interrupt::SPI0_REJECT_CACHE),
+            84 => Ok(Interrupt::DMA_COPY),
             85 => Ok(Interrupt::SPI4_DMA),
             86 => Ok(Interrupt::SPI4),
             87 => Ok(Interrupt::ICACHE_PRELOAD),
             88 => Ok(Interrupt::DCACHE_PRELOAD),
             89 => Ok(Interrupt::APB_ADC),
+            90 => Ok(Interrupt::CRYPTO_DMA),
             91 => Ok(Interrupt::CPU_PERI_ERR),
             92 => Ok(Interrupt::APB_PERI_ERR),
             93 => Ok(Interrupt::DCACHE_SYNC),
