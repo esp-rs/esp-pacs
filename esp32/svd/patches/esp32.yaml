@@ -250,3 +250,30 @@ TWAI0:
         bitWidth: 1
 _include:
   - "esp32-wifi.yaml"
+
+DPORT:
+  _delete: CORE_RST_EN
+  _add:
+    WIFI_RST_EN:
+      description: "Wifi peripheral reset control"
+      addressOffset: 0xD0
+      size: 32
+      access: read-write
+      resetValue: 0x0
+      fields:
+        EMAC_RST:
+          description: "Set this bit to reset Ethernet MAC module. Clear the bit to release Ethernet MAC module."
+          bitOffset: 7
+          bitWidth: 1
+        SDIO_HOST_RST:
+          description: "Set this bit to reset SD/MMC module. Clear the bit to release SD/MMC module."
+          bitOffset: 6
+          bitWidth: 1
+        SDIO_RST:
+          description: "Set this bit to reset SDIO module. Clear the bit to release SDIO module."
+          bitOffset: 5
+          bitWidth: 1
+        MAC_RST:
+          description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
+          bitOffset: 2
+          bitWidth: 1

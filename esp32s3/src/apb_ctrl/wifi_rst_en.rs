@@ -2,30 +2,30 @@
 pub type R = crate::R<WIFI_RST_EN_SPEC>;
 #[doc = "Register `WIFI_RST_EN` writer"]
 pub type W = crate::W<WIFI_RST_EN_SPEC>;
-#[doc = "Field `WIFI_RST` reader - ******* Description ***********"]
-pub type WIFI_RST_R = crate::FieldReader<u32>;
-#[doc = "Field `WIFI_RST` writer - ******* Description ***********"]
-pub type WIFI_RST_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `MAC_RST` reader - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+pub type MAC_RST_R = crate::BitReader;
+#[doc = "Field `MAC_RST` writer - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+pub type MAC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
-    pub fn wifi_rst(&self) -> WIFI_RST_R {
-        WIFI_RST_R::new(self.bits)
+    pub fn mac_rst(&self) -> MAC_RST_R {
+        MAC_RST_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("WIFI_RST_EN")
-            .field("wifi_rst", &self.wifi_rst())
+            .field("mac_rst", &self.mac_rst())
             .finish()
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - ******* Description ***********"]
+    #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
-    pub fn wifi_rst(&mut self) -> WIFI_RST_W<WIFI_RST_EN_SPEC> {
-        WIFI_RST_W::new(self, 0)
+    pub fn mac_rst(&mut self) -> MAC_RST_W<WIFI_RST_EN_SPEC> {
+        MAC_RST_W::new(self, 2)
     }
 }
 #[doc = "******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_rst_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_rst_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

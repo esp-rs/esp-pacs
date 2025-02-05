@@ -201,6 +201,13 @@ APB_CTRL:
     _modify:
       "*":
         modifiedWriteValues: oneToClear
+  WIFI_RST_EN:
+    _delete: WIFI_RST
+    _add:
+      MAC_RST:
+        description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
+        bitOffset: 2
+        bitWidth: 1
 
 EXTMEM:
   _include: ../../../common_patches/extmem_cache_int_strip.yaml

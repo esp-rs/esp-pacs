@@ -1419,3 +1419,12 @@ RSA:
         name: INT_ENA
 _include:
     - "esp32s2-wifi.yaml"
+
+SYSCON:
+  WIFI_RST_EN:
+    _delete: WIFI_RST
+    _add:
+      MAC_RST:
+        description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
+        bitOffset: 2
+        bitWidth: 1
