@@ -54,7 +54,7 @@ pub struct RegisterBlock {
     perip_rst_en: PERIP_RST_EN,
     slave_spi_config: SLAVE_SPI_CONFIG,
     wifi_clk_en: WIFI_CLK_EN,
-    core_rst_en: CORE_RST_EN,
+    wifi_rst_en: WIFI_RST_EN,
     bt_lpck_div_int: BT_LPCK_DIV_INT,
     bt_lpck_div_frac: BT_LPCK_DIV_FRAC,
     cpu_intr_from_cpu_0: CPU_INTR_FROM_CPU_0,
@@ -633,10 +633,10 @@ impl RegisterBlock {
     pub const fn wifi_clk_en(&self) -> &WIFI_CLK_EN {
         &self.wifi_clk_en
     }
-    #[doc = "0xd0 - "]
+    #[doc = "0xd0 - Wifi peripheral reset control"]
     #[inline(always)]
-    pub const fn core_rst_en(&self) -> &CORE_RST_EN {
-        &self.core_rst_en
+    pub const fn wifi_rst_en(&self) -> &WIFI_RST_EN {
+        &self.wifi_rst_en
     }
     #[doc = "0xd4 - "]
     #[inline(always)]
@@ -2422,10 +2422,6 @@ pub mod slave_spi_config;
 pub type WIFI_CLK_EN = crate::Reg<wifi_clk_en::WIFI_CLK_EN_SPEC>;
 #[doc = ""]
 pub mod wifi_clk_en;
-#[doc = "CORE_RST_EN (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`core_rst_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`core_rst_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_rst_en`] module"]
-pub type CORE_RST_EN = crate::Reg<core_rst_en::CORE_RST_EN_SPEC>;
-#[doc = ""]
-pub mod core_rst_en;
 #[doc = "BT_LPCK_DIV_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`bt_lpck_div_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`bt_lpck_div_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@bt_lpck_div_int`] module"]
 pub type BT_LPCK_DIV_INT = crate::Reg<bt_lpck_div_int::BT_LPCK_DIV_INT_SPEC>;
 #[doc = ""]
@@ -3758,3 +3754,7 @@ pub mod app_vecbase_set;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = ""]
 pub mod date;
+#[doc = "WIFI_RST_EN (rw) register accessor: Wifi peripheral reset control\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_rst_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_rst_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wifi_rst_en`] module"]
+pub type WIFI_RST_EN = crate::Reg<wifi_rst_en::WIFI_RST_EN_SPEC>;
+#[doc = "Wifi peripheral reset control"]
+pub mod wifi_rst_en;
