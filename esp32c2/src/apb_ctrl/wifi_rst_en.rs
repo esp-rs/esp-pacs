@@ -6,9 +6,9 @@ pub type W = crate::W<WIFI_RST_EN_SPEC>;
 pub type MAC_RST_R = crate::BitReader;
 #[doc = "Field `MAC_RST` writer - Set this bit to reset MAC module. Clear the bit to release MAC module."]
 pub type MAC_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `BLE_RPA_RST` reader - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+#[doc = "Field `BLE_RPA_RST` reader - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
 pub type BLE_RPA_RST_R = crate::BitReader;
-#[doc = "Field `BLE_RPA_RST` writer - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+#[doc = "Field `BLE_RPA_RST` writer - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
 pub type BLE_RPA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
@@ -16,10 +16,10 @@ impl R {
     pub fn mac_rst(&self) -> MAC_RST_R {
         MAC_RST_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+    #[doc = "Bit 27 - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
     #[inline(always)]
     pub fn ble_rpa_rst(&self) -> BLE_RPA_RST_R {
-        BLE_RPA_RST_R::new(((self.bits >> 3) & 1) != 0)
+        BLE_RPA_RST_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -37,10 +37,10 @@ impl W {
     pub fn mac_rst(&mut self) -> MAC_RST_W<WIFI_RST_EN_SPEC> {
         MAC_RST_W::new(self, 2)
     }
-    #[doc = "Bit 3 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
+    #[doc = "Bit 27 - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
     #[inline(always)]
     pub fn ble_rpa_rst(&mut self) -> BLE_RPA_RST_W<WIFI_RST_EN_SPEC> {
-        BLE_RPA_RST_W::new(self, 3)
+        BLE_RPA_RST_W::new(self, 27)
     }
 }
 #[doc = "APB_CTRL_WIFI_RST_EN_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`wifi_rst_en::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wifi_rst_en::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
