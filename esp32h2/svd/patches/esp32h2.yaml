@@ -385,6 +385,9 @@ INTPRI:
 PCNT:
   _include: ../../../common_patches/pcnt.yaml
 
+PCR:
+  _include: ../../../common_patches/pcr.yaml
+
 SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
 
