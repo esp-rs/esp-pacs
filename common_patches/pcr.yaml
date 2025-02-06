@@ -1,0 +1,20 @@
+UART?_CONF:
+  _strip: 
+    UART?_
+
+UART?_SCLK_CONF:
+  _strip: 
+    UART?_
+
+UART?_PD_CTRL:
+  _strip: 
+    UART?_
+
+_cluster:
+  UART%s:
+    UART?_CONF:
+      name: CONF
+    UART?_SCLK_CONF:
+      name: CLK_CONF
+    UART?_PD_CTRL:
+      name: PD_CTRL
