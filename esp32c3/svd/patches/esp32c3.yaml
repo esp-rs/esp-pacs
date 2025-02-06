@@ -106,6 +106,68 @@ _add:
             bitOffset: 9
             bitWidth: 1
             access: read-write
+  I2C_ANA_MST:
+    description: I2C_MST_ANA Peripheral
+    baseAddress: 0x6000E040
+    addressBlock:
+      - offset: 0x0
+        size: 0x0C
+        usage: "Registers"
+    registers:
+      ANA_CONF0:
+        description: "ANA_CONF0 register"
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0
+        fields:
+          BBPLL_STOP_FORCE_HIGH:
+            description: "?"
+            bitOffset: 2
+            bitWidth: 1
+          BBPLL_STOP_FORCE_LOW:
+            description: "?"
+            bitOffset: 3
+            bitWidth: 1
+          BBPLL_CAL_DONE:
+            description: "?"
+            bitOffset: 24
+            bitWidth: 1
+      ANA_CONFIG:
+        description: "ANA_CONFIG register"
+        addressOffset: 0x4
+        size: 32
+        access: read-write
+        resetValue: 0
+        fields:
+          BBPLL_PD:
+            description: "Clear to enable BBPLL"
+            bitOffset: 17
+            bitWidth: 1
+          SAR_FORCE_PD:
+            description: "?"
+            bitOffset: 18
+            bitWidth: 1
+          SAR_FORCE_PU:
+            description: "?"
+            bitOffset: 16
+            bitWidth: 1
+      ANA_CONFIG2:
+        description: "ANA_CONFIG2 register"
+        addressOffset: 0x8
+        size: 32
+        access: read-write
+        resetValue: 0x00
+        fields:
+          SAR_FORCE_PD:
+            description: "?"
+            bitOffset: 18
+            bitWidth: 1
+          SAR_FORCE_PU:
+            description: "?"
+            bitOffset: 16
+            bitWidth: 1
+
 
 _modify:
   SPI?:
