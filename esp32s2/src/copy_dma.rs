@@ -134,7 +134,7 @@ pub mod out_link;
 pub type IN_LINK = crate::Reg<in_link::IN_LINK_SPEC>;
 #[doc = "Link descriptor address and control"]
 pub mod in_link;
-#[doc = "CONF (r) register accessor: Copy DMA configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
+#[doc = "CONF (rw) register accessor: Copy DMA configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@conf`] module"]
 pub type CONF = crate::Reg<conf::CONF_SPEC>;
 #[doc = "Copy DMA configuration register"]
 pub mod conf;

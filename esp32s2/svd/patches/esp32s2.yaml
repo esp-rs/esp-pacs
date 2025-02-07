@@ -236,7 +236,7 @@ _add:
         description: "Copy DMA configuration register"
         addressOffset: 0x3C
         size: 32
-        access: read-only
+        access: read-write
         resetValue: 0x0
         fields:
           IN_RST:
@@ -997,7 +997,6 @@ _add:
             bitWidth: 32
             access: read-only
 
-
       DMA_OUT_DSCR_BF0:
         description: "Address of last transmit descriptor"
         addressOffset: 0x5C
@@ -1034,8 +1033,16 @@ COPY_DMA:
 CRYPTO_DMA:
   CONF:
     OUT_EOF_MODE:
-      ON_PUSH: [0, "EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA"]
-      ON_POP: [1, "EOF flag is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA"]
+      ON_PUSH:
+        [
+          0,
+          "EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA",
+        ]
+      ON_POP:
+        [
+          1,
+          "EOF flag is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA",
+        ]
   OUT_LINK:
     OUTLINK_PARK:
       IDLE: [1, "The transmit descriptor’s FSM is in idle state"]
@@ -1418,7 +1425,7 @@ RSA:
       INTERRUPT_ENA:
         name: INT_ENA
 _include:
-    - "esp32s2-wifi.yaml"
+  - "esp32s2-wifi.yaml"
 
 SYSCON:
   WIFI_RST_EN:
