@@ -604,6 +604,403 @@ _add:
             description: "?"
             bitOffset: 28
             bitWidth: 1
+  LP_APM0:
+    description: LP_APM0 Peripheral
+    groupName: LP_APM0
+    baseAddress: 0x60099800
+    addressBlocks:
+      - offset: 0x0
+        size: 0x54
+        usage: registers
+    registers:
+      REGION_FILTER_EN:
+        description: Region filter enable register
+        addressOffset: 0x0
+        size: 0x20
+        resetValue: 0x00000001
+        fields:
+          REGION_FILTER_EN:
+            description: Region filter enable
+            bitOffset: 0
+            bitWidth: 4
+            access: read-write
+      REGION0_ADDR_START:
+        description: Region address register
+        addressOffset: 0x4
+        size: 0x20
+        fields:
+          REGION0_ADDR_START:
+            description: Start address of region0
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION0_ADDR_END:
+        description: Region address register
+        addressOffset: 0x8
+        size: 0x20
+        resetValue: 0xFFFFFFFF
+        fields:
+          REGION0_ADDR_END:
+            description: End address of region0
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION0_PMS_ATTR:
+        description: Region access authority attribute register
+        addressOffset: 0xC
+        size: 0x20
+        fields:
+          REGION0_R0_PMS_X:
+            description: Region execute authority in REE_MODE0
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REGION0_R0_PMS_W:
+            description: Region write authority in REE_MODE0
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REGION0_R0_PMS_R:
+            description: Region read authority in REE_MODE0
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REGION0_R1_PMS_X:
+            description: Region execute authority in REE_MODE1
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REGION0_R1_PMS_W:
+            description: Region write authority in REE_MODE1
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          REGION0_R1_PMS_R:
+            description: Region read authority in REE_MODE1
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          REGION0_R2_PMS_X:
+            description: Region execute authority in REE_MODE2
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          REGION0_R2_PMS_W:
+            description: Region write authority in REE_MODE2
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          REGION0_R2_PMS_R:
+            description: Region read authority in REE_MODE2
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+      REGION1_ADDR_START:
+        description: Region address register
+        addressOffset: 0x10
+        size: 0x20
+        fields:
+          REGION1_ADDR_START:
+            description: Start address of region1
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION1_ADDR_END:
+        description: Region address register
+        addressOffset: 0x14
+        size: 0x20
+        resetValue: 0xFFFFFFFF
+        fields:
+          REGION1_ADDR_END:
+            description: End address of region1
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION1_PMS_ATTR:
+        description: Region access authority attribute register
+        addressOffset: 0x18
+        size: 0x20
+        fields:
+          REGION1_R0_PMS_X:
+            description: Region execute authority in REE_MODE0
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REGION1_R0_PMS_W:
+            description: Region write authority in REE_MODE0
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REGION1_R0_PMS_R:
+            description: Region read authority in REE_MODE0
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REGION1_R1_PMS_X:
+            description: Region execute authority in REE_MODE1
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REGION1_R1_PMS_W:
+            description: Region write authority in REE_MODE1
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          REGION1_R1_PMS_R:
+            description: Region read authority in REE_MODE1
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          REGION1_R2_PMS_X:
+            description: Region execute authority in REE_MODE2
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          REGION1_R2_PMS_W:
+            description: Region write authority in REE_MODE2
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          REGION1_R2_PMS_R:
+            description: Region read authority in REE_MODE2
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+      REGION2_ADDR_START:
+        description: Region address register
+        addressOffset: 0x1C
+        size: 0x20
+        fields:
+          REGION2_ADDR_START:
+            description: Start address of region2
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION2_ADDR_END:
+        description: Region address register
+        addressOffset: 0x20
+        size: 0x20
+        resetValue: 0xFFFFFFFF
+        fields:
+          REGION2_ADDR_END:
+            description: End address of region2
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION2_PMS_ATTR:
+        description: Region access authority attribute register
+        addressOffset: 0x24
+        size: 0x20
+        fields:
+          REGION2_R0_PMS_X:
+            description: Region execute authority in REE_MODE0
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REGION2_R0_PMS_W:
+            description: Region write authority in REE_MODE0
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REGION2_R0_PMS_R:
+            description: Region read authority in REE_MODE0
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REGION2_R1_PMS_X:
+            description: Region execute authority in REE_MODE1
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REGION2_R1_PMS_W:
+            description: Region write authority in REE_MODE1
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          REGION2_R1_PMS_R:
+            description: Region read authority in REE_MODE1
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          REGION2_R2_PMS_X:
+            description: Region execute authority in REE_MODE2
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          REGION2_R2_PMS_W:
+            description: Region write authority in REE_MODE2
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          REGION2_R2_PMS_R:
+            description: Region read authority in REE_MODE2
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+      REGION3_ADDR_START:
+        description: Region address register
+        addressOffset: 0x28
+        size: 0x20
+        fields:
+          REGION3_ADDR_START:
+            description: Start address of region3
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION3_ADDR_END:
+        description: Region address register
+        addressOffset: 0x2C
+        size: 0x20
+        resetValue: 0xFFFFFFFF
+        fields:
+          REGION3_ADDR_END:
+            description: End address of region3
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      REGION3_PMS_ATTR:
+        description: Region access authority attribute register
+        addressOffset: 0x30
+        size: 0x20
+        fields:
+          REGION3_R0_PMS_X:
+            description: Region execute authority in REE_MODE0
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+          REGION3_R0_PMS_W:
+            description: Region write authority in REE_MODE0
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          REGION3_R0_PMS_R:
+            description: Region read authority in REE_MODE0
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          REGION3_R1_PMS_X:
+            description: Region execute authority in REE_MODE1
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          REGION3_R1_PMS_W:
+            description: Region write authority in REE_MODE1
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          REGION3_R1_PMS_R:
+            description: Region read authority in REE_MODE1
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          REGION3_R2_PMS_X:
+            description: Region execute authority in REE_MODE2
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          REGION3_R2_PMS_W:
+            description: Region write authority in REE_MODE2
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          REGION3_R2_PMS_R:
+            description: Region read authority in REE_MODE2
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+      FUNC_CTRL:
+        description: PMS function control register
+        addressOffset: 0xC4
+        size: 0x20
+        resetValue: 0x00000001
+        fields:
+          M0_PMS_FUNC_EN:
+            description: PMS M0 function enable
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      M0_STATUS:
+        description: M0 status register
+        addressOffset: 0xC8
+        size: 0x20
+        fields:
+          M0_EXCEPTION_STATUS:
+            description: Exception status
+            bitOffset: 0
+            bitWidth: 2
+            access: read-only
+      M0_STATUS_CLR:
+        description: M0 status clear register
+        addressOffset: 0xCC
+        size: 0x20
+        fields:
+          M0_REGION_STATUS_CLR:
+            description: Clear exception status
+            bitOffset: 0
+            bitWidth: 1
+            access: write-only
+      M0_EXCEPTION_INFO0:
+        description: M0 exception_info0 register
+        addressOffset: 0xD0
+        size: 0x20
+        fields:
+          M0_EXCEPTION_REGION:
+            description: Exception region
+            bitOffset: 0
+            bitWidth: 4
+            access: read-only
+          M0_EXCEPTION_MODE:
+            description: Exception mode
+            bitOffset: 16
+            bitWidth: 2
+            access: read-only
+          M0_EXCEPTION_ID:
+            description: Exception id information
+            bitOffset: 18
+            bitWidth: 5
+            access: read-only
+      M0_EXCEPTION_INFO1:
+        description: M0 exception_info1 register
+        addressOffset: 0xD4
+        size: 0x20
+        fields:
+          M0_EXCEPTION_ADDR:
+            description: Exception addr
+            bitOffset: 0
+            bitWidth: 32
+            access: read-only
+      INT_EN:
+        description: APM interrupt enable register
+        addressOffset: 0xD8
+        size: 0x20
+        fields:
+          M0_APM_INT_EN:
+            description: APM M0 interrupt enable
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      CLOCK_GATE:
+        description: clock gating register
+        addressOffset: 0xDC
+        size: 0x20
+        resetValue: 0x00000001
+        fields:
+          CLK_EN:
+            description: reg_clk_en
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      DATE:
+        description: Version register
+        addressOffset: 0x7FC
+        size: 0x20
+        resetValue: 0x02205240
+        fields:
+          DATE:
+            description: reg_date
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
 
 _modify:
   IEEE802154:

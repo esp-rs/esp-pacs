@@ -2939,6 +2939,52 @@ impl core::fmt::Debug for I2C_ANA_MST {
 }
 #[doc = "I2C_ANA_MST Peripheral"]
 pub mod i2c_ana_mst;
+#[doc = "LP_APM0 Peripheral"]
+pub struct LP_APM0 {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for LP_APM0 {}
+impl LP_APM0 {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const lp_apm0::RegisterBlock = 0x6009_9800 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const lp_apm0::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for LP_APM0 {
+    type Target = lp_apm0::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for LP_APM0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("LP_APM0").finish()
+    }
+}
+#[doc = "LP_APM0 Peripheral"]
+pub mod lp_apm0;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -3062,6 +3108,8 @@ pub struct Peripherals {
     pub PLIC_UX: PLIC_UX,
     #[doc = "I2C_ANA_MST"]
     pub I2C_ANA_MST: I2C_ANA_MST,
+    #[doc = "LP_APM0"]
+    pub LP_APM0: LP_APM0,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -3143,6 +3191,7 @@ impl Peripherals {
             PLIC_MX: PLIC_MX::steal(),
             PLIC_UX: PLIC_UX::steal(),
             I2C_ANA_MST: I2C_ANA_MST::steal(),
+            LP_APM0: LP_APM0::steal(),
         }
     }
 }
