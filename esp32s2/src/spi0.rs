@@ -40,7 +40,7 @@ pub struct RegisterBlock {
     outlink_dscr_bf1: OUTLINK_DSCR_BF1,
     dma_outstatus: DMA_OUTSTATUS,
     dma_instatus: DMA_INSTATUS,
-    w: [W; 18],
+    _reserved_38_w: [u8; 0x48],
     din_mode: DIN_MODE,
     din_num: DIN_NUM,
     dout_mode: DOUT_MODE,
@@ -267,13 +267,32 @@ impl RegisterBlock {
     #[doc = "0x98..0xe0 - Data buffer %s"]
     #[inline(always)]
     pub const fn w(&self, n: usize) -> &W {
-        &self.w[n]
+        #[allow(clippy::no_effect)]
+        [(); 18][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(152)
+                .add(4 * n)
+                .cast()
+        }
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x98..0xe0 - Data buffer %s"]
     #[inline(always)]
     pub fn w_iter(&self) -> impl Iterator<Item = &W> {
-        self.w.iter()
+        (0..18).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(152)
+                .add(4 * n)
+                .cast()
+        })
+    }
+    #[doc = "0xdc - SPI Memory Clock Gate Register"]
+    #[inline(always)]
+    pub const fn clock_gate(&self) -> &CLOCK_GATE {
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(220).cast() }
     }
     #[doc = "0xe0 - SPI input delay mode configuration"]
     #[inline(always)]
@@ -538,3 +557,7 @@ pub mod sram_drd_cmd;
 pub type SRAM_CLK = crate::Reg<sram_clk::SRAM_CLK_SPEC>;
 #[doc = "SPI Memory SRAM Clock Register"]
 pub mod sram_clk;
+#[doc = "CLOCK_GATE (rw) register accessor: SPI Memory Clock Gate Register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
+pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
+#[doc = "SPI Memory Clock Gate Register"]
+pub mod clock_gate;
