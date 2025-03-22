@@ -37,6 +37,9 @@ _cluster:
       name: CHAR
     HCINT?:
       name: INT
+      _modify:
+        '*':
+          modifiedWriteValues: oneToClear
     HCINTMSK?:
       name: INTMSK
     HCTSIZ?:
@@ -275,3 +278,19 @@ _add:
     EC:
       bitOffset: 20
       bitWidth: 2
+
+HPRT:
+  _modify:
+    PRTOVRCURRCHNG:
+      modifiedWriteValues: oneToClear
+    PRTENCHNG:
+      modifiedWriteValues: oneToClear
+    PRTENA:
+      modifiedWriteValues: oneToClear
+    PRTCONNDET:
+      modifiedWriteValues: oneToClear
+
+GINTSTS:
+  _modify:
+    '*':
+      modifiedWriteValues: oneToClear
