@@ -7,21 +7,21 @@ pub type PRTCONNSTS_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` reader - "]
 pub type PRTCONNDET_R = crate::BitReader;
 #[doc = "Field `PRTCONNDET` writer - "]
-pub type PRTCONNDET_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PRTCONNDET_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `PRTENA` reader - "]
 pub type PRTENA_R = crate::BitReader;
 #[doc = "Field `PRTENA` writer - "]
-pub type PRTENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PRTENA_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `PRTENCHNG` reader - "]
 pub type PRTENCHNG_R = crate::BitReader;
 #[doc = "Field `PRTENCHNG` writer - "]
-pub type PRTENCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PRTENCHNG_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `PRTOVRCURRACT` reader - "]
 pub type PRTOVRCURRACT_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` reader - "]
 pub type PRTOVRCURRCHNG_R = crate::BitReader;
 #[doc = "Field `PRTOVRCURRCHNG` writer - "]
-pub type PRTOVRCURRCHNG_W<'a, REG> = crate::BitWriter<'a, REG>;
+pub type PRTOVRCURRCHNG_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `PRTRES` reader - "]
 pub type PRTRES_R = crate::BitReader;
 #[doc = "Field `PRTRES` writer - "]
@@ -191,7 +191,7 @@ impl crate::Readable for HPRT_SPEC {}
 impl crate::Writable for HPRT_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x2e;
 }
 #[doc = "`reset()` method sets HPRT to value 0"]
 impl crate::Resettable for HPRT_SPEC {
