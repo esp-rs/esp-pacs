@@ -2574,7 +2574,7 @@ pub struct NRX {
 unsafe impl Send for NRX {}
 impl NRX {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const nrx::RegisterBlock = 0x3f41_c000 as *const _;
+    pub const PTR: *const nrx::RegisterBlock = 0x3f41_cc00 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
     pub const fn ptr() -> *const nrx::RegisterBlock {

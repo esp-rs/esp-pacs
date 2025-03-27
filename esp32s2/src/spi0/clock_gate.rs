@@ -2,12 +2,12 @@
 pub type R = crate::R<CLOCK_GATE_SPEC>;
 #[doc = "Register `CLOCK_GATE` writer"]
 pub type W = crate::W<CLOCK_GATE_SPEC>;
-#[doc = "Field `CLK_EN` reader - "]
+#[doc = "Field `CLK_EN` reader - Register clock gate enable signal. 1: Enable. 0. Disable."]
 pub type CLK_EN_R = crate::BitReader;
-#[doc = "Field `CLK_EN` writer - "]
+#[doc = "Field `CLK_EN` writer - Register clock gate enable signal. 1: Enable. 0. Disable."]
 pub type CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0. Disable."]
     #[inline(always)]
     pub fn clk_en(&self) -> CLK_EN_R {
         CLK_EN_R::new((self.bits & 1) != 0)
@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0"]
+    #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0. Disable."]
     #[inline(always)]
     pub fn clk_en(&mut self) -> CLK_EN_W<CLOCK_GATE_SPEC> {
         CLK_EN_W::new(self, 0)

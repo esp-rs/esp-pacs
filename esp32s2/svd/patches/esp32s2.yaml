@@ -1416,7 +1416,7 @@ SPI0:
       access: read-write
       fields:
         CLK_EN:
-          description: ""
+          description: "Register clock gate enable signal. 1: Enable. 0. Disable."
           bitOffset: 0
           bitWidth: 1
           access: read-write
