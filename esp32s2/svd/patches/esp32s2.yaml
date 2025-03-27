@@ -3,7 +3,7 @@ _svd: ../esp32s2.base.svd
 _add:
   NRX:
     description: NRX Peripheral
-    baseAddress: 0x3F41C000
+    baseAddress: 0x3F41CC00
     groupName: NRX
     addressBlock:
       offset: 0x0
