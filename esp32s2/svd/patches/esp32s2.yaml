@@ -1,6 +1,111 @@
 _svd: ../esp32s2.base.svd
 
 _add:
+  NRX:
+    description: NRX Peripheral
+    baseAddress: 0x3F41CC00
+    groupName: NRX
+    addressBlock:
+      offset: 0x0
+      size: 0x4
+      usage: registers
+    registers:
+      NRXPD_CTRL:
+        description: "NRX Power Down Control Register"
+        addressOffset: 0xD4
+        size: 0x4
+        access: read-write
+        fields:
+          CHAN_EST_FORCE_PU:
+            description: "Force Power Up for Channel Estimation"
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          CHAN_EST_FORCE_PD:
+            description: "Force Power Down for Channel Estimation"
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          RX_ROT_FORCE_PU:
+            description: "Force Power Up for RX Rotation"
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          RX_ROT_FORCE_PD:
+            description: "Force Power Down for RX Rotation"
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          VIT_FORCE_PU:
+            description: "Force Power Up for Viterbi Decoder"
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          VIT_FORCE_PD:
+            description: "Force Power Down for Viterbi Decoder"
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          DEMAP_FORCE_PU:
+            description: "Force Power Up for Demapper"
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          DEMAP_FORCE_PD:
+            description: "Force Power Down for Demapper"
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+  FE:
+    description: FE Peripheral
+    baseAddress: 0x3F406000
+    groupName: FE
+    addressBlock:
+      offset: 0x0
+      size: 0x4
+      usage: registers
+    registers:
+      GEN_CTRL:
+        description: "FE General Control Register"
+        addressOffset: 0x0090
+        size: 0x2
+        access: read-write
+        fields:
+          IQ_EST_FORCE_PU:
+            description: "Force Power Up for IQ Estimation"
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          IQ_EST_FORCE_PD:
+            description: "Force Power Down for IQ Estimation"
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+  FE2:
+    description: FE2 Peripheral
+    baseAddress: 0x3F405000
+    groupName: FE
+    addressBlock:
+      offset: 0x0
+      size: 0x4
+      usage: registers
+    registers:
+      TX_INTERP_CTRL:
+        description: "FE2 TX Interpolation Control Register"
+        addressOffset: 0x00f0
+        size: 0x20
+        access: read-write
+        fields:
+          TX_INF_FORCE_PU:
+            description: "Force Power Up field"
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          TX_INF_FORCE_PD:
+            description: "Force Power Down field"
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
   COPY_DMA:
     description: Copy DMA Controller
     baseAddress: 0x3F4C3000
@@ -1303,6 +1408,17 @@ SPI0:
           description: "For SPI0 SRAM interface, it must be equal to spi_mem_clkcnt_N."
           bitOffset: 0
           bitWidth: 8
+          access: read-write
+    CLOCK_GATE:
+      description: "SPI Memory Clock Gate Register"
+      addressOffset: 0xDC
+      size: 0x20
+      access: read-write
+      fields:
+        CLK_EN:
+          description: "Register clock gate enable signal. 1: Enable. 0. Disable."
+          bitOffset: 0
+          bitWidth: 1
           access: read-write
   MISC:
     _delete: ["CS0_DIS", "CS1_DIS", "CS2_DIS", "CS3_DIS", "CS4_DIS", "CS5_DIS"]
