@@ -1572,6 +1572,7 @@ I2C0:
       name: INT_ST
   _include:
     - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
 
 GPIO:
   _modify:
