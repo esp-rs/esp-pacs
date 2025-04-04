@@ -50,6 +50,11 @@ LP_ANA:
 I2C0:
   _include:
     - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+I2C1:
+  _include:
+    - ../../../common_patches/i2c_st_timeouts.yaml
 
 SPI[01]:
   _strip: SPI_MEM_

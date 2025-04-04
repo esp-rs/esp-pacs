@@ -142,6 +142,7 @@ I2C0:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
 
 RTC_I2C:
   CMD*:

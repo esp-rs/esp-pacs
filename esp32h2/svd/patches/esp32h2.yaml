@@ -1029,6 +1029,11 @@ I2C0:
       name: INT_ST
   _include:
     - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+I2C1:
+  _include:
+    - ../../../common_patches/i2c_st_timeouts.yaml
 
 HP_APM,LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
