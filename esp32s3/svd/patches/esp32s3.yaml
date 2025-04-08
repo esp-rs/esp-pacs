@@ -164,6 +164,10 @@ RTC_IO:
     _strip: "X32P_"
   XTAL_32N_PAD:
     _strip: "X32N_"
+  PAD_DAC1:
+    _strip: "PDAC1_"
+  PAD_DAC2:
+    _strip: "PDAC2_"
 
 RTC_CNTL:
   PAD_HOLD:
