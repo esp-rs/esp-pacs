@@ -1363,6 +1363,10 @@ RTC_IO:
     _modify:
       GPIO_OUT_DATA_W1TS:
         name: RTC_GPIO_OUT_DATA_W1TS
+  XTAL_32P_PAD:
+    _strip: "X32P_"
+  XTAL_32N_PAD:
+    _strip: "X32N_"
 
 "EFUSE,I2C0,I2S0,UART0,RTC_I2C":
   _include: ../../../common_patches/int_strip.yaml

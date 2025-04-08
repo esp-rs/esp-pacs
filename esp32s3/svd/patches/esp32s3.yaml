@@ -160,6 +160,10 @@ RTC_IO:
   _array:
     TOUCH_PAD*:
       name: TOUCH_PAD%s
+  XTAL_32P_PAD:
+    _strip: "X32P_"
+  XTAL_32N_PAD:
+    _strip: "X32N_"
 
 RTC_CNTL:
   PAD_HOLD:
