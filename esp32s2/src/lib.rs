@@ -2797,6 +2797,52 @@ impl core::fmt::Debug for CRYPTO_DMA {
 }
 #[doc = "Crypto DMA Controller"]
 pub mod crypto_dma;
+#[doc = "I2C Analog Master"]
+pub struct I2C_ANA_MST {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for I2C_ANA_MST {}
+impl I2C_ANA_MST {
+    #[doc = r"Pointer to the register block"]
+    pub const PTR: *const i2c_ana_mst::RegisterBlock = 0x6000_e000 as *const _;
+    #[doc = r"Return the pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const i2c_ana_mst::RegisterBlock {
+        Self::PTR
+    }
+    #[doc = r" Steal an instance of this peripheral"]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Ensure that the new instance of the peripheral cannot be used in a way"]
+    #[doc = r" that may race with any existing instances, for example by only"]
+    #[doc = r" accessing read-only or write-only registers, or by consuming the"]
+    #[doc = r" original peripheral and using critical sections to coordinate"]
+    #[doc = r" access between multiple new instances."]
+    #[doc = r""]
+    #[doc = r" Additionally, other software such as HALs may rely on only one"]
+    #[doc = r" peripheral instance existing to ensure memory safety; ensure"]
+    #[doc = r" no stolen instances are passed to such software."]
+    pub unsafe fn steal() -> Self {
+        Self {
+            _marker: PhantomData,
+        }
+    }
+}
+impl Deref for I2C_ANA_MST {
+    type Target = i2c_ana_mst::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*Self::PTR }
+    }
+}
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C Analog Master"]
+pub mod i2c_ana_mst;
 #[doc = "MAC controller for Wi-Fi peripheral"]
 pub struct WIFI {
     _marker: PhantomData<*const ()>,
@@ -2944,6 +2990,8 @@ pub struct Peripherals {
     pub COPY_DMA: COPY_DMA,
     #[doc = "CRYPTO_DMA"]
     pub CRYPTO_DMA: CRYPTO_DMA,
+    #[doc = "I2C_ANA_MST"]
+    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "WIFI"]
     pub WIFI: WIFI,
 }
@@ -3016,6 +3064,7 @@ impl Peripherals {
             FE2: FE2::steal(),
             COPY_DMA: COPY_DMA::steal(),
             CRYPTO_DMA: CRYPTO_DMA::steal(),
+            I2C_ANA_MST: I2C_ANA_MST::steal(),
             WIFI: WIFI::steal(),
         }
     }
