@@ -1344,6 +1344,8 @@ RTC_CNTL:
       name: INT_ENA
     INT_CLR_RTC:
       name: INT_CLR
+  PAD_HOLD:
+    _strip_end: _HOLD
   _include: ../../../common_patches/int_strip.yaml
 
 RTC_IO:

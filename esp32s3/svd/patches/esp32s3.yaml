@@ -162,6 +162,8 @@ RTC_IO:
       name: TOUCH_PAD%s
 
 RTC_CNTL:
+  PAD_HOLD:
+    _strip_end: _HOLD
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
 "EFUSE,I2S0,UART0,USB_DEVICE,SPI1,I2S1,PERI_BACKUP,SPI0":
