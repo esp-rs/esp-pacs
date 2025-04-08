@@ -1115,6 +1115,98 @@ _add:
             bitWidth: 32
             access: read-only
 
+  I2C_ANA_MST:
+    description: I2C Analog Master
+    baseAddress: 0x6000e000
+    addressBlock:
+      - offset: 0x0
+        size: 0xC
+        usage: "Registers"
+    registers:
+
+      CONFIG2:
+        description: "I2C RTC Configuration register 2"
+        addressOffset: 0x0
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SLAVE_ID:
+            description: "I2C RTC Slave ID"
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+          ADDR:
+            description: "I2C RTC Address"
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          DATA:
+            description: "I2C RTC Data"
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          WR_CNTL:
+            description: "I2C RTC Write Control"
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          BUSY:
+            description: "I2C RTC Busy"
+            bitOffset: 25
+            bitWidth: 1
+            access: read-only
+          SAR_MASK:
+            description: "I2C RTC SAR Mask"
+            bitOffset: 18
+            bitWidth: 1
+          BOD_MASK:
+            description: "I2C RTC BOD Mask"
+            bitOffset: 22
+            bitWidth: 1
+      CONFIG1:
+        description: "I2C RTC Configuration register 1"
+        addressOffset: 0x44
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          MAGIC_CTRL:
+            description: "I2C RTC Magic Control"
+            bitOffset: 4
+            bitWidth: 13
+          ALL_MASK:
+            description: "I2C RTC All Mask"
+            bitOffset: 8
+            bitWidth: 15
+          APLL:
+            description: "I2C RTC APLL Mask"
+            bitOffset: 14
+            bitWidth: 1
+          BBPLL:
+            description: "I2C RTC BBPLL Mask"
+            bitOffset: 17
+            bitWidth: 1
+          SAR:
+            description: "I2C RTC SAR Mask"
+            bitOffset: 18
+            bitWidth: 1
+          BOD:
+            description: "I2C RTC BOD Mask"
+            bitOffset: 22
+            bitWidth: 1
+      CONFIG0:
+        description: "I2C RTC Configuration register 0"
+        addressOffset: 0x48
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          MAGIC_CTRL:
+            description: "I2C RTC Magic Control"
+            bitOffset: 4
+            bitWidth: 13
+
 # We need to define enumeratedValues separately, becase svdtools has awesome UX.
 COPY_DMA:
   OUT_LINK:
@@ -1550,4 +1642,11 @@ SYSCON:
       MAC_RST:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
+        bitWidth: 1
+  WIFI_CLK_EN:
+     _delete: WIFI_CLK_EN
+     _add:
+      MAC_CLK_EN:
+        description: "Set this bit to enable MAC module clock. Clear the bit to disable MAC module clock."
+        bitOffset: 18
         bitWidth: 1
