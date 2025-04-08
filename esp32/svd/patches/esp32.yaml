@@ -32,6 +32,10 @@ RTC_I2C:
 RTC_IO:
   _include: ../../../common_patches/rtc_io.yaml
 
+RTC_CNTL:
+  HOLD_FORCE:
+    _strip_end: _HOLD_FORCE
+
 "EFUSE,I2C0,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
   _include: ../../../common_patches/int_strip.yaml
 
