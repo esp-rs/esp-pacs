@@ -19,14 +19,16 @@ pub struct RegisterBlock {
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
-    _reserved13: [u8; 0x0964],
+    _reserved13: [u8; 0x011c],
+    crypto_control: CRYPTO_CONTROL,
+    _reserved14: [u8; 0x0830],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved14: [u8; 0x68],
+    _reserved15: [u8; 0x68],
     ctrl: CTRL,
     txq_state: TXQ_STATE,
-    _reserved16: [u8; 0x30],
+    _reserved17: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved17: [u8; 0x34],
+    _reserved18: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -34,18 +36,20 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved24: [u8; 0x03f4],
+    _reserved25: [u8; 0x03f4],
     plcp1: (),
-    _reserved25: [u8; 0x04],
-    plcp2: (),
     _reserved26: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved27: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved28: [u8; 0x04],
+    ht_unknown: (),
+    _reserved29: [u8; 0x04],
     duration: (),
-    _reserved29: [u8; 0x08],
+    _reserved30: [u8; 0x08],
     pmd: (),
+    _reserved31: [u8; 0x0280],
+    crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
 }
 impl RegisterBlock {
     #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
@@ -124,6 +128,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn hw_stat_block_err(&self) -> &HW_STAT_BLOCK_ERR {
         &self.hw_stat_block_err
+    }
+    #[doc = "0x400..0x418 - Control registers for hardware crypto"]
+    #[inline(always)]
+    pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
+        &self.crypto_control
     }
     #[doc = "0xc48..0xc50 - Status and clear for the Wi-Fi MAC interrupt"]
     #[inline(always)]
@@ -336,6 +345,17 @@ impl RegisterBlock {
                 .cast()
         })
     }
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub const fn crypto_key_slot(&self, n: usize) -> &CRYPTO_KEY_SLOT {
+        &self.crypto_key_slot[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub fn crypto_key_slot_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_SLOT> {
+        self.crypto_key_slot.iter()
+    }
 }
 #[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
@@ -462,3 +482,13 @@ pub use self::tx_slot_config::TX_SLOT_CONFIG;
 #[doc = r"Cluster"]
 #[doc = "Used to configure the TX slot."]
 pub mod tx_slot_config;
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub use self::crypto_key_slot::CRYPTO_KEY_SLOT;
+#[doc = r"Cluster"]
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub mod crypto_key_slot;
+#[doc = "Control registers for hardware crypto"]
+pub use self::crypto_control::CRYPTO_CONTROL;
+#[doc = r"Cluster"]
+#[doc = "Control registers for hardware crypto"]
+pub mod crypto_control;

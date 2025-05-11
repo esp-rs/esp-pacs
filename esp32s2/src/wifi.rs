@@ -9,27 +9,31 @@ pub struct RegisterBlock {
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
     interface_rx_control: [INTERFACE_RX_CONTROL; 4],
-    _reserved4: [u8; 0x0b4c],
+    _reserved4: [u8; 0x0310],
+    crypto_control: CRYPTO_CONTROL,
+    _reserved5: [u8; 0x0824],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved5: [u8; 0x58],
+    _reserved6: [u8; 0x58],
     txq_state: TXQ_STATE,
-    _reserved6: [u8; 0x0c],
+    _reserved7: [u8; 0x0c],
     ctrl: CTRL,
-    _reserved7: [u8; 0x20],
+    _reserved8: [u8; 0x20],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved8: [u8; 0x0464],
+    _reserved9: [u8; 0x0464],
     plcp1: (),
-    _reserved9: [u8; 0x04],
-    plcp2: (),
     _reserved10: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved11: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved12: [u8; 0x04],
+    ht_unknown: (),
+    _reserved13: [u8; 0x04],
     duration: (),
-    _reserved13: [u8; 0x08],
+    _reserved14: [u8; 0x08],
     pmd: (),
-    _reserved14: [u8; 0x1020],
+    _reserved15: [u8; 0x0280],
+    crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
+    _reserved16: [u8; 0x09b8],
     pwr_interrupt: PWR_INTERRUPT,
 }
 impl RegisterBlock {
@@ -64,6 +68,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
         self.interface_rx_control.iter()
+    }
+    #[doc = "0x400..0x418 - Control registers for hardware crypto"]
+    #[inline(always)]
+    pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
+        &self.crypto_control
     }
     #[doc = "0xc3c..0xc44 - Status and clear for the WIFI_MAC interrupt"]
     #[inline(always)]
@@ -241,6 +250,17 @@ impl RegisterBlock {
                 .cast()
         })
     }
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub const fn crypto_key_slot(&self, n: usize) -> &CRYPTO_KEY_SLOT {
+        &self.crypto_key_slot[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub fn crypto_key_slot_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_SLOT> {
+        self.crypto_key_slot.iter()
+    }
     #[doc = "0x21a0..0x21a8 - Status and clear for the WIFI_PWR interrupt"]
     #[inline(always)]
     pub const fn pwr_interrupt(&self) -> &PWR_INTERRUPT {
@@ -313,3 +333,13 @@ pub use self::tx_slot_config::TX_SLOT_CONFIG;
 #[doc = r"Cluster"]
 #[doc = "Used to configure the TX slot."]
 pub mod tx_slot_config;
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub use self::crypto_key_slot::CRYPTO_KEY_SLOT;
+#[doc = r"Cluster"]
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub mod crypto_key_slot;
+#[doc = "Control registers for hardware crypto"]
+pub use self::crypto_control::CRYPTO_CONTROL;
+#[doc = r"Cluster"]
+#[doc = "Control registers for hardware crypto"]
+pub mod crypto_control;
