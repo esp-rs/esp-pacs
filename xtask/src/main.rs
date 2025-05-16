@@ -17,6 +17,7 @@ use svd2rust::{
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::DocumentMut;
+use rayon::prelude::*;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
 #[strum(serialize_all = "kebab-case")]
@@ -130,23 +131,23 @@ fn main() -> Result<()> {
         Commands::Html { chips } => generate_html(&workspace, chips),
 
         Commands::Patch { chips } => chips
-            .iter()
+            .par_iter()
             .try_for_each(|chip| patch_svd(&workspace, chip)),
 
         Commands::Generate { chips } => chips
-            .iter()
+            .par_iter()
             .try_for_each(|chip: &Chip| generate_package(&workspace, chip)),
 
         Commands::Build { chips } => chips
-            .iter()
+            .par_iter()
             .try_for_each(|chip| build_package(&workspace, chip)),
 
         Commands::BumpVersion { chips, amount } => chips
-            .iter()
+            .par_iter()
             .try_for_each(|chip| bump_version(&workspace, chip, amount)),
 
         Commands::Publish { dry_run, chips } => chips
-            .iter()
+            .par_iter()
             .try_for_each(|chip| publish_package(&workspace, chip, dry_run)),
     }
 }
@@ -198,7 +199,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     }
 
     let svd_file = path.join("svd").join(format!("{chip}.svd"));
-    log::info!("generating PAC from '{}'", svd_file.display());
+    log::info!("generating PAC for {chip} from '{}'", svd_file.display());
 
     let target = if build_target(&path)?.contains("riscv") {
         Target::RISCV
@@ -253,7 +254,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
         svd2rust::util::build_rs()
     )?;
 
-    format(&path)?;
+    format(&path, chip)?;
 
     Ok(())
 }
@@ -386,8 +387,8 @@ fn extract_toml_value(path: &Path, keys: &[&str]) -> Result<String> {
     Ok(item)
 }
 
-fn format(path: &Path) -> Result<()> {
-    log::info!("running `form` and `rustfmt` on PAC");
+fn format(path: &Path, chip: &Chip) -> Result<()> {
+    log::info!("running `form` and `rustfmt` on PAC for {chip}");
     let lib_file = path.join("lib.rs");
 
     let base_dir = path.join("src");
