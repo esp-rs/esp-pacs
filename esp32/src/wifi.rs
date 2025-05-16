@@ -19,9 +19,9 @@ pub struct RegisterBlock {
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
-    _reserved13: [u8; 0x011c],
+    _reserved13: [u8; 0x051c],
     crypto_control: CRYPTO_CONTROL,
-    _reserved14: [u8; 0x07e8],
+    _reserved14: [u8; 0x03e8],
     mac_time: MAC_TIME,
     _reserved15: [u8; 0x44],
     mac_interrupt: MAC_INTERRUPT,
@@ -131,7 +131,7 @@ impl RegisterBlock {
     pub const fn hw_stat_block_err(&self) -> &HW_STAT_BLOCK_ERR {
         &self.hw_stat_block_err
     }
-    #[doc = "0x400..0x418 - Control registers for hardware crypto"]
+    #[doc = "0x800..0x818 - Control registers for hardware crypto"]
     #[inline(always)]
     pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
         &self.crypto_control

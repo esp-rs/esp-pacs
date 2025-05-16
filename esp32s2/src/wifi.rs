@@ -9,9 +9,9 @@ pub struct RegisterBlock {
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
     interface_rx_control: [INTERFACE_RX_CONTROL; 4],
-    _reserved4: [u8; 0x0310],
+    _reserved4: [u8; 0x0710],
     crypto_control: CRYPTO_CONTROL,
-    _reserved5: [u8; 0x0824],
+    _reserved5: [u8; 0x0424],
     mac_interrupt: MAC_INTERRUPT,
     _reserved6: [u8; 0x58],
     txq_state: TXQ_STATE,
@@ -71,7 +71,7 @@ impl RegisterBlock {
     pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
         self.interface_rx_control.iter()
     }
-    #[doc = "0x400..0x418 - Control registers for hardware crypto"]
+    #[doc = "0x800..0x818 - Control registers for hardware crypto"]
     #[inline(always)]
     pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
         &self.crypto_control

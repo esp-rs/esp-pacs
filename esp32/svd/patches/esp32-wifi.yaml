@@ -162,7 +162,7 @@ WIFI:
                     DUMMY:
                         addressOffset: 0x0
             CRYPTO_CONTROL:
-                addressOffset: 0x400
+                addressOffset: 0x800
                 description: Control registers for hardware crypto
                 registers:
                     DUMMY:
