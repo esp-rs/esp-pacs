@@ -21,14 +21,16 @@ pub struct RegisterBlock {
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
     _reserved13: [u8; 0x011c],
     crypto_control: CRYPTO_CONTROL,
-    _reserved14: [u8; 0x0830],
+    _reserved14: [u8; 0x07e8],
+    mac_time: MAC_TIME,
+    _reserved15: [u8; 0x44],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved15: [u8; 0x68],
+    _reserved16: [u8; 0x68],
     ctrl: CTRL,
     txq_state: TXQ_STATE,
-    _reserved17: [u8; 0x30],
+    _reserved18: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved18: [u8; 0x34],
+    _reserved19: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -36,19 +38,19 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved25: [u8; 0x03f4],
+    _reserved26: [u8; 0x03f4],
     plcp1: (),
-    _reserved26: [u8; 0x04],
-    plcp2: (),
     _reserved27: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved28: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved29: [u8; 0x04],
+    ht_unknown: (),
+    _reserved30: [u8; 0x04],
     duration: (),
-    _reserved30: [u8; 0x08],
+    _reserved31: [u8; 0x08],
     pmd: (),
-    _reserved31: [u8; 0x0280],
+    _reserved32: [u8; 0x0280],
     crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
 }
 impl RegisterBlock {
@@ -133,6 +135,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
         &self.crypto_control
+    }
+    #[doc = "0xc00 - Current value of the MAC timer"]
+    #[inline(always)]
+    pub const fn mac_time(&self) -> &MAC_TIME {
+        &self.mac_time
     }
     #[doc = "0xc48..0xc50 - Status and clear for the Wi-Fi MAC interrupt"]
     #[inline(always)]
@@ -401,6 +408,10 @@ pub mod hw_stat_full2;
 pub type HW_STAT_BLOCK_ERR = crate::Reg<hw_stat_block_err::HW_STAT_BLOCK_ERR_SPEC>;
 #[doc = ""]
 pub mod hw_stat_block_err;
+#[doc = "MAC_TIME (rw) register accessor: Current value of the MAC timer\n\nYou can [`read`](crate::Reg::read) this register and get [`mac_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_time`] module"]
+pub type MAC_TIME = crate::Reg<mac_time::MAC_TIME_SPEC>;
+#[doc = "Current value of the MAC timer"]
+pub mod mac_time;
 #[doc = "CTRL (rw) register accessor: Exact name and meaning unknown, used for initializing the MAC\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Exact name and meaning unknown, used for initializing the MAC"]

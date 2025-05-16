@@ -275,11 +275,5 @@ DPORT:
           description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
           bitOffset: 2
           bitWidth: 1
-_modify:
-    NRX:
-        size: 32
-        addressBlock:
-            size: 0x400
 _include: 
     - "esp32-wifi.yaml"
-    - ../../../common_patches/wifi/nrx/csi.yaml

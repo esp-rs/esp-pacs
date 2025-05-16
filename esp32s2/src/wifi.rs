@@ -33,17 +33,19 @@ pub struct RegisterBlock {
     pmd: (),
     _reserved15: [u8; 0x0280],
     crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
-    _reserved16: [u8; 0x09b8],
+    _reserved16: [u8; 0x0818],
+    mac_time: MAC_TIME,
+    _reserved17: [u8; 0x019c],
     pwr_interrupt: PWR_INTERRUPT,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
     #[inline(always)]
     pub const fn filter_bank(&self, n: usize) -> &FILTER_BANK {
         &self.filter_bank[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
     #[inline(always)]
     pub fn filter_bank_iter(&self) -> impl Iterator<Item = &FILTER_BANK> {
         self.filter_bank.iter()
@@ -261,6 +263,11 @@ impl RegisterBlock {
     pub fn crypto_key_slot_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_SLOT> {
         self.crypto_key_slot.iter()
     }
+    #[doc = "0x2000 - Current value of the MAC timer"]
+    #[inline(always)]
+    pub const fn mac_time(&self) -> &MAC_TIME {
+        &self.mac_time
+    }
     #[doc = "0x21a0..0x21a8 - Status and clear for the WIFI_PWR interrupt"]
     #[inline(always)]
     pub const fn pwr_interrupt(&self) -> &PWR_INTERRUPT {
@@ -303,10 +310,14 @@ pub mod duration;
 pub type PMD = crate::Reg<pmd::PMD_SPEC>;
 #[doc = ""]
 pub mod pmd;
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+#[doc = "MAC_TIME (rw) register accessor: Current value of the MAC timer\n\nYou can [`read`](crate::Reg::read) this register and get [`mac_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_time`] module"]
+pub type MAC_TIME = crate::Reg<mac_time::MAC_TIME_SPEC>;
+#[doc = "Current value of the MAC timer"]
+pub mod mac_time;
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
 pub use self::filter_bank::FILTER_BANK;
 #[doc = r"Cluster"]
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
 pub mod filter_bank;
 #[doc = "RX_DMA_LIST"]
 pub use self::rx_dma_list::RX_DMA_LIST;

@@ -24,10 +24,10 @@ impl R {
     pub fn dma_addr(&self) -> DMA_ADDR_R {
         DMA_ADDR_R::new(self.bits & 0x000f_ffff)
     }
-    #[doc = "Bit 28 - Enables ACK timeouts"]
+    #[doc = "Bit 24 - Enables ACK timeouts"]
     #[inline(always)]
     pub fn wait_for_ack(&self) -> WAIT_FOR_ACK_R {
-        WAIT_FOR_ACK_R::new(((self.bits >> 28) & 1) != 0)
+        WAIT_FOR_ACK_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 30 - Marks this slot as valid"]
     #[inline(always)]
@@ -57,10 +57,10 @@ impl W {
     pub fn dma_addr(&mut self) -> DMA_ADDR_W<PLCP0_SPEC> {
         DMA_ADDR_W::new(self, 0)
     }
-    #[doc = "Bit 28 - Enables ACK timeouts"]
+    #[doc = "Bit 24 - Enables ACK timeouts"]
     #[inline(always)]
     pub fn wait_for_ack(&mut self) -> WAIT_FOR_ACK_W<PLCP0_SPEC> {
-        WAIT_FOR_ACK_W::new(self, 28)
+        WAIT_FOR_ACK_W::new(self, 24)
     }
     #[doc = "Bit 30 - Marks this slot as valid"]
     #[inline(always)]

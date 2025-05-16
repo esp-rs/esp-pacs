@@ -36,8 +36,8 @@ WIFI:
                 access: read-write
                 fields:
                     ADDR:
-                        bitOffset: 0
-                        bitWidth: 16
+                        bitOffset: 0x0
+                        bitWidth: 0x10
                         access: read-write
             MASK_LOW%s:
                 dim: 4
@@ -53,11 +53,11 @@ WIFI:
                 access: read-write
                 fields:
                     MASK:
-                        bitOffset: 0
-                        bitWidth: 16
+                        bitOffset: 0x0
+                        bitWidth: 0x10
                         access: read-write
                     ENABLED:
-                        bitOffset: 16
-                        bitWidth: 1
+                        bitOffset: 0x10
+                        bitWidth: 0x1
                         access: read-write
 

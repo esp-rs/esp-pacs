@@ -53,6 +53,10 @@ _add:
                 addressOffset: 0x2e0
                 access: read
 
+            MAC_TIME:
+                addressOffset: 0xc00
+                access: read
+                description: Current value of the MAC timer
             CTRL:
                 description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8

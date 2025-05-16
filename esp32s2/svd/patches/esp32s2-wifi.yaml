@@ -43,6 +43,11 @@ _add:
                 dim: 5
                 dimIncrement: 0x3c
                 addressOffset: 0x1180
+            MAC_TIME:
+                addressOffset: 0x2000
+                access: read
+                description: Current value of the MAC timer
+
 WIFI:
     _add:
         _clusters:
@@ -52,7 +57,7 @@ WIFI:
                 addressOffset: 0x0
                 description: "
                     Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA.
-                    Each filter bank has registers for two interfaces.
+                    Each filter bank has registers for four interfaces.
                     "
                 registers:
                     DUMMY:

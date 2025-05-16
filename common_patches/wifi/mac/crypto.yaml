@@ -39,6 +39,10 @@ WIFI:
                         bitOffset: 0x18
                         bitWidth: 0x2
                         description: Index of the interface using the key
+                    BITS_256:
+                        bitOffset: 0x1a
+                        bitWidth: 0x1
+                        description: Key length is 256 bits
                     KEY_ID:
                         bitOffset: 0x1e
                         bitWidth: 0x2
@@ -75,6 +79,10 @@ WIFI:
                         bitOffset: 0x1f
                         bitWidth: 0x1
                         description: Cipher is SMS4
+            GENERAL_CRYPTO_CONTROL:
+                addressOffset: 0x10
+                description: Control over the whole crypto unit
+                access: read-write
             CRYPTO_KEY_SLOT_STATE:
                 addressOffset: 0x14
                 description: State of cryptographic key slots

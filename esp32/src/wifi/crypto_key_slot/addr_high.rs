@@ -30,6 +30,10 @@ pub type PAIRWISE_KEY_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type INTERFACE_ID_R = crate::FieldReader;
 #[doc = "Field `INTERFACE_ID` writer - Index of the interface using the key"]
 pub type INTERFACE_ID_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+#[doc = "Field `BITS_256` reader - Key length is 256 bits"]
+pub type BITS_256_R = crate::BitReader;
+#[doc = "Field `BITS_256` writer - Key length is 256 bits"]
+pub type BITS_256_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KEY_ID` reader - Protocol identifier of the key"]
 pub type KEY_ID_R = crate::FieldReader;
 #[doc = "Field `KEY_ID` writer - Protocol identifier of the key"]
@@ -70,6 +74,11 @@ impl R {
     pub fn interface_id(&self) -> INTERFACE_ID_R {
         INTERFACE_ID_R::new(((self.bits >> 24) & 3) as u8)
     }
+    #[doc = "Bit 26 - Key length is 256 bits"]
+    #[inline(always)]
+    pub fn bits_256(&self) -> BITS_256_R {
+        BITS_256_R::new(((self.bits >> 26) & 1) != 0)
+    }
     #[doc = "Bits 30:31 - Protocol identifier of the key"]
     #[inline(always)]
     pub fn key_id(&self) -> KEY_ID_R {
@@ -87,6 +96,7 @@ impl core::fmt::Debug for R {
             .field("unknown", &self.unknown())
             .field("pairwise_key", &self.pairwise_key())
             .field("interface_id", &self.interface_id())
+            .field("bits_256", &self.bits_256())
             .field("key_id", &self.key_id())
             .finish()
     }
@@ -126,6 +136,11 @@ impl W {
     #[inline(always)]
     pub fn interface_id(&mut self) -> INTERFACE_ID_W<ADDR_HIGH_SPEC> {
         INTERFACE_ID_W::new(self, 24)
+    }
+    #[doc = "Bit 26 - Key length is 256 bits"]
+    #[inline(always)]
+    pub fn bits_256(&mut self) -> BITS_256_W<ADDR_HIGH_SPEC> {
+        BITS_256_W::new(self, 26)
     }
     #[doc = "Bits 30:31 - Protocol identifier of the key"]
     #[inline(always)]
