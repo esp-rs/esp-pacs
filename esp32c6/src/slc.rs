@@ -29,7 +29,7 @@ pub struct RegisterBlock {
     slc_rx_dscr_conf: SLC_RX_DSCR_CONF,
     _reserved20: [u8; 0x48],
     slc0_len_conf: SLC0_LEN_CONF,
-    slc10_length: SLC10_LENGTH,
+    slc0_length: SLC0_LENGTH,
     _reserved22: [u8; 0x50],
     slc1int_st1: SLC1INT_ST1,
     slc1int_ena1: SLC1INT_ENA1,
@@ -152,8 +152,8 @@ impl RegisterBlock {
     }
     #[doc = "0xf8 - Length of transmitting packets"]
     #[inline(always)]
-    pub const fn slc10_length(&self) -> &SLC10_LENGTH {
-        &self.slc10_length
+    pub const fn slc0_length(&self) -> &SLC0_LENGTH {
+        &self.slc0_length
     }
     #[doc = "0x14c - SLC1 to slave masked interrupt status"]
     #[inline(always)]
@@ -339,7 +339,7 @@ pub mod slc1int_st1;
 pub type SLC1INT_ENA1 = crate::Reg<slc1int_ena1::SLC1INT_ENA1_SPEC>;
 #[doc = "SLC1 to slave interrupt enable"]
 pub mod slc1int_ena1;
-#[doc = "SLC10_LENGTH (r) register accessor: Length of transmitting packets\n\nYou can [`read`](crate::Reg::read) this register and get [`slc10_length::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slc10_length`] module"]
-pub type SLC10_LENGTH = crate::Reg<slc10_length::SLC10_LENGTH_SPEC>;
+#[doc = "SLC0_LENGTH (r) register accessor: Length of transmitting packets\n\nYou can [`read`](crate::Reg::read) this register and get [`slc0_length::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@slc0_length`] module"]
+pub type SLC0_LENGTH = crate::Reg<slc0_length::SLC0_LENGTH_SPEC>;
 #[doc = "Length of transmitting packets"]
-pub mod slc10_length;
+pub mod slc0_length;
