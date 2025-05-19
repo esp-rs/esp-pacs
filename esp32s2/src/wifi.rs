@@ -9,37 +9,43 @@ pub struct RegisterBlock {
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
     interface_rx_control: [INTERFACE_RX_CONTROL; 4],
-    _reserved4: [u8; 0x0b4c],
+    _reserved4: [u8; 0x0710],
+    crypto_control: CRYPTO_CONTROL,
+    _reserved5: [u8; 0x0424],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved5: [u8; 0x58],
+    _reserved6: [u8; 0x58],
     txq_state: TXQ_STATE,
-    _reserved6: [u8; 0x0c],
+    _reserved7: [u8; 0x0c],
     ctrl: CTRL,
-    _reserved7: [u8; 0x20],
+    _reserved8: [u8; 0x20],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved8: [u8; 0x0464],
+    _reserved9: [u8; 0x0464],
     plcp1: (),
-    _reserved9: [u8; 0x04],
-    plcp2: (),
     _reserved10: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved11: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved12: [u8; 0x04],
+    ht_unknown: (),
+    _reserved13: [u8; 0x04],
     duration: (),
-    _reserved13: [u8; 0x08],
+    _reserved14: [u8; 0x08],
     pmd: (),
-    _reserved14: [u8; 0x1020],
+    _reserved15: [u8; 0x0280],
+    crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
+    _reserved16: [u8; 0x0818],
+    mac_time: MAC_TIME,
+    _reserved17: [u8; 0x019c],
     pwr_interrupt: PWR_INTERRUPT,
 }
 impl RegisterBlock {
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
     #[inline(always)]
     pub const fn filter_bank(&self, n: usize) -> &FILTER_BANK {
         &self.filter_bank[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+    #[doc = "0x00..0x80 - Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
     #[inline(always)]
     pub fn filter_bank_iter(&self) -> impl Iterator<Item = &FILTER_BANK> {
         self.filter_bank.iter()
@@ -64,6 +70,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
         self.interface_rx_control.iter()
+    }
+    #[doc = "0x800..0x818 - Control registers for hardware crypto"]
+    #[inline(always)]
+    pub const fn crypto_control(&self) -> &CRYPTO_CONTROL {
+        &self.crypto_control
     }
     #[doc = "0xc3c..0xc44 - Status and clear for the WIFI_MAC interrupt"]
     #[inline(always)]
@@ -241,6 +252,22 @@ impl RegisterBlock {
                 .cast()
         })
     }
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub const fn crypto_key_slot(&self, n: usize) -> &CRYPTO_KEY_SLOT {
+        &self.crypto_key_slot[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x1400..0x17e8 - Cryptographic keys for MPDU encapsulation and decapsulation"]
+    #[inline(always)]
+    pub fn crypto_key_slot_iter(&self) -> impl Iterator<Item = &CRYPTO_KEY_SLOT> {
+        self.crypto_key_slot.iter()
+    }
+    #[doc = "0x2000 - Current value of the MAC timer"]
+    #[inline(always)]
+    pub const fn mac_time(&self) -> &MAC_TIME {
+        &self.mac_time
+    }
     #[doc = "0x21a0..0x21a8 - Status and clear for the WIFI_PWR interrupt"]
     #[inline(always)]
     pub const fn pwr_interrupt(&self) -> &PWR_INTERRUPT {
@@ -283,10 +310,14 @@ pub mod duration;
 pub type PMD = crate::Reg<pmd::PMD_SPEC>;
 #[doc = ""]
 pub mod pmd;
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+#[doc = "MAC_TIME (rw) register accessor: Current value of the MAC timer\n\nYou can [`read`](crate::Reg::read) this register and get [`mac_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_time`] module"]
+pub type MAC_TIME = crate::Reg<mac_time::MAC_TIME_SPEC>;
+#[doc = "Current value of the MAC timer"]
+pub mod mac_time;
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
 pub use self::filter_bank::FILTER_BANK;
 #[doc = r"Cluster"]
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for four interfaces."]
 pub mod filter_bank;
 #[doc = "RX_DMA_LIST"]
 pub use self::rx_dma_list::RX_DMA_LIST;
@@ -313,3 +344,13 @@ pub use self::tx_slot_config::TX_SLOT_CONFIG;
 #[doc = r"Cluster"]
 #[doc = "Used to configure the TX slot."]
 pub mod tx_slot_config;
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub use self::crypto_key_slot::CRYPTO_KEY_SLOT;
+#[doc = r"Cluster"]
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub mod crypto_key_slot;
+#[doc = "Control registers for hardware crypto"]
+pub use self::crypto_control::CRYPTO_CONTROL;
+#[doc = r"Cluster"]
+#[doc = "Control registers for hardware crypto"]
+pub mod crypto_control;

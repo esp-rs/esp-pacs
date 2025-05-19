@@ -5,9 +5,10 @@ _add:
     description: NRX Peripheral
     baseAddress: 0x3F41CC00
     groupName: NRX
+    size: 32
     addressBlock:
       offset: 0x0
-      size: 0x4
+      size: 0x400
       usage: registers
     registers:
       NRXPD_CTRL:
@@ -1638,8 +1639,6 @@ RSA:
     _modify:
       INTERRUPT_ENA:
         name: INT_ENA
-_include:
-  - "esp32s2-wifi.yaml"
 
 SYSCON:
   WIFI_RST_EN:
@@ -1656,3 +1655,7 @@ SYSCON:
         description: "Set this bit to enable MAC module clock. Clear the bit to disable MAC module clock."
         bitOffset: 18
         bitWidth: 1
+
+
+_include: 
+    - "esp32s2-wifi.yaml"

@@ -1,0 +1,96 @@
+WIFI:
+    CRYPTO_KEY_SLOT%s:
+        _delete: DUMMY
+        _add:
+            ADDR_LOW:
+                addressOffset: 0x0
+                access: read-write
+                description: Lower four octets of the MAC address
+            ADDR_HIGH:
+                addressOffset: 0x4
+                access: read-write
+                description: Higher two octets of the MAC address and config bits
+                fields:
+                    ADDR:
+                        bitOffset: 0x0
+                        bitWidth: 0x10
+                        description: Higher two octets of the MAC address
+                    WEP_104:
+                        bitOffset: 0x10
+                        bitWidth: 0x1
+                        description: Is the cipher WEP104
+                    ALGORITHM:
+                        bitOffset: 0x12
+                        bitWidth: 0x3
+                        description: In use algorithm
+                    GROUP_KEY:
+                        bitOffset: 0x15
+                        bitWidth: 0x1
+                        description: Is this a group key
+                    UNKNOWN:
+                        bitOffset: 0x16
+                        bitWidth: 0x1
+                        description: Meaning unknown set to 1 for all algorithms
+                    PAIRWISE_KEY:
+                        bitOffset: 0x17
+                        bitWidth: 0x1
+                        description: Is this a pairwise key
+                    INTERFACE_ID:
+                        bitOffset: 0x18
+                        bitWidth: 0x2
+                        description: Index of the interface using the key
+                    BITS_256:
+                        bitOffset: 0x1a
+                        bitWidth: 0x1
+                        description: Key length is 256 bits
+                    KEY_ID:
+                        bitOffset: 0x1e
+                        bitWidth: 0x2
+                        description: Protocol identifier of the key
+            KEY_VALUE%s:
+                dim: 8
+                dimIncrement: 4
+                addressOffset: 0x8
+                description: Actual key data
+                access: read-write
+    CRYPTO_CONTROL:
+        _delete: DUMMY
+        _add:
+            INTERFACE_CRYPTO_CONTROL%s:
+                dim: 4
+                dimIncrement: 4
+                addressOffset: 0x0
+                description: Control over cryptographic parameters for a specific interface
+                access: read-write
+                fields:
+                    SPP_ENABLE:
+                        bitOffset: 0x9
+                        bitWidth: 0x1
+                        description: Enable Signaling and Payload Protection (SPP) for A-MSDUs
+                    PMF_DISABLE:
+                        bitOffset: 0x11
+                        bitWidth: 0x1
+                        description: Disable Protected Management Frames (PMF)
+                    AEAD_CIPHER:
+                        bitOffset: 0x1c
+                        bitWidth: 0x1
+                        description: Does the cipher employ Authenticated Encryption with Associated Data (AEAD)
+                    SMS4:
+                        bitOffset: 0x1f
+                        bitWidth: 0x1
+                        description: Cipher is SMS4
+            GENERAL_CRYPTO_CONTROL:
+                addressOffset: 0x10
+                description: Control over the whole crypto unit
+                access: read-write
+            CRYPTO_KEY_SLOT_STATE:
+                addressOffset: 0x14
+                description: State of cryptographic key slots
+                access: read-write
+                fields:
+                    KEY_SLOT_ENABLE%s:
+                        dim: 25
+                        dimIncrement: 1
+                        bitOffset: 0x0
+                        bitWidth: 0x1
+                        description: Enable the key slot corresponding to this bit

@@ -53,6 +53,10 @@ _add:
                 addressOffset: 0x2e0
                 access: read
 
+            MAC_TIME:
+                addressOffset: 0xc00
+                access: read
+                description: Current value of the MAC timer
             CTRL:
                 description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8
@@ -149,8 +153,24 @@ WIFI:
                 registers:
                     DUMMY:
                         addressOffset: 0x0
+            CRYPTO_KEY_SLOT%s:
+                dim: 25
+                dimIncrement: 40
+                addressOffset: 0x1400
+                description: Cryptographic keys for MPDU encapsulation and decapsulation
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+            CRYPTO_CONTROL:
+                addressOffset: 0x800
+                description: Control registers for hardware crypto
+                registers:
+                    DUMMY:
+                        addressOffset: 0x0
+
 _include:
-    - "../../../common_patches/wifi/rx.yaml"
-    - "../../../common_patches/wifi/rx_filter_masked.yaml"
-    - "../../../common_patches/wifi/tx.yaml"
-    - "../../../common_patches/wifi/mac_interrupt.yaml"
+    - "../../../common_patches/wifi/mac/rx.yaml"
+    - "../../../common_patches/wifi/mac/rx_filter_masked.yaml"
+    - "../../../common_patches/wifi/mac/tx.yaml"
+    - "../../../common_patches/wifi/mac/mac_interrupt.yaml"
+    - "../../../common_patches/wifi/mac/crypto.yaml"
