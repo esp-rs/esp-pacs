@@ -26,7 +26,7 @@ WIFI:
                     PAIRWISE_KEY:
                         bitOffset: 0x15
                         bitWidth: 0x1
-                        description: Is this a group key
+                        description: Is this a pairwise key
                     UNKNOWN:
                         bitOffset: 0x16
                         bitWidth: 0x1
@@ -34,7 +34,7 @@ WIFI:
                     GROUP_KEY:
                         bitOffset: 0x17
                         bitWidth: 0x1
-                        description: Is this a pairwise key
+                        description: Is this a group key
                     INTERFACE_ID:
                         bitOffset: 0x18
                         bitWidth: 0x2

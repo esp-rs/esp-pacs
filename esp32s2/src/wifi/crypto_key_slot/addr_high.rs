@@ -14,17 +14,17 @@ pub type WEP_104_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ALGORITHM_R = crate::FieldReader;
 #[doc = "Field `ALGORITHM` writer - In use algorithm"]
 pub type ALGORITHM_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `PAIRWISE_KEY` reader - Is this a group key"]
+#[doc = "Field `PAIRWISE_KEY` reader - Is this a pairwise key"]
 pub type PAIRWISE_KEY_R = crate::BitReader;
-#[doc = "Field `PAIRWISE_KEY` writer - Is this a group key"]
+#[doc = "Field `PAIRWISE_KEY` writer - Is this a pairwise key"]
 pub type PAIRWISE_KEY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UNKNOWN` reader - Meaning unknown set to 1 for all algorithms"]
 pub type UNKNOWN_R = crate::BitReader;
 #[doc = "Field `UNKNOWN` writer - Meaning unknown set to 1 for all algorithms"]
 pub type UNKNOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `GROUP_KEY` reader - Is this a pairwise key"]
+#[doc = "Field `GROUP_KEY` reader - Is this a group key"]
 pub type GROUP_KEY_R = crate::BitReader;
-#[doc = "Field `GROUP_KEY` writer - Is this a pairwise key"]
+#[doc = "Field `GROUP_KEY` writer - Is this a group key"]
 pub type GROUP_KEY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTERFACE_ID` reader - Index of the interface using the key"]
 pub type INTERFACE_ID_R = crate::FieldReader;
@@ -54,7 +54,7 @@ impl R {
     pub fn algorithm(&self) -> ALGORITHM_R {
         ALGORITHM_R::new(((self.bits >> 18) & 7) as u8)
     }
-    #[doc = "Bit 21 - Is this a group key"]
+    #[doc = "Bit 21 - Is this a pairwise key"]
     #[inline(always)]
     pub fn pairwise_key(&self) -> PAIRWISE_KEY_R {
         PAIRWISE_KEY_R::new(((self.bits >> 21) & 1) != 0)
@@ -64,7 +64,7 @@ impl R {
     pub fn unknown(&self) -> UNKNOWN_R {
         UNKNOWN_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "Bit 23 - Is this a pairwise key"]
+    #[doc = "Bit 23 - Is this a group key"]
     #[inline(always)]
     pub fn group_key(&self) -> GROUP_KEY_R {
         GROUP_KEY_R::new(((self.bits >> 23) & 1) != 0)
@@ -117,7 +117,7 @@ impl W {
     pub fn algorithm(&mut self) -> ALGORITHM_W<ADDR_HIGH_SPEC> {
         ALGORITHM_W::new(self, 18)
     }
-    #[doc = "Bit 21 - Is this a group key"]
+    #[doc = "Bit 21 - Is this a pairwise key"]
     #[inline(always)]
     pub fn pairwise_key(&mut self) -> PAIRWISE_KEY_W<ADDR_HIGH_SPEC> {
         PAIRWISE_KEY_W::new(self, 21)
@@ -127,7 +127,7 @@ impl W {
     pub fn unknown(&mut self) -> UNKNOWN_W<ADDR_HIGH_SPEC> {
         UNKNOWN_W::new(self, 22)
     }
-    #[doc = "Bit 23 - Is this a pairwise key"]
+    #[doc = "Bit 23 - Is this a group key"]
     #[inline(always)]
     pub fn group_key(&mut self) -> GROUP_KEY_W<ADDR_HIGH_SPEC> {
         GROUP_KEY_W::new(self, 23)
