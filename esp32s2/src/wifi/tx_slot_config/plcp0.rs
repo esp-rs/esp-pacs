@@ -10,6 +10,10 @@ pub type DMA_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 20, u32>;
 pub type WAIT_FOR_ACK_R = crate::BitReader;
 #[doc = "Field `WAIT_FOR_ACK` writer - Enables ACK timeouts"]
 pub type WAIT_FOR_ACK_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SEND_CTS_TO_SELF` reader - Send a CTS-to-Self frame before transmission"]
+pub type SEND_CTS_TO_SELF_R = crate::BitReader;
+#[doc = "Field `SEND_CTS_TO_SELF` writer - Send a CTS-to-Self frame before transmission"]
+pub type SEND_CTS_TO_SELF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SLOT_VALID` reader - Marks this slot as valid"]
 pub type SLOT_VALID_R = crate::BitReader;
 #[doc = "Field `SLOT_VALID` writer - Marks this slot as valid"]
@@ -29,6 +33,11 @@ impl R {
     pub fn wait_for_ack(&self) -> WAIT_FOR_ACK_R {
         WAIT_FOR_ACK_R::new(((self.bits >> 24) & 1) != 0)
     }
+    #[doc = "Bit 28 - Send a CTS-to-Self frame before transmission"]
+    #[inline(always)]
+    pub fn send_cts_to_self(&self) -> SEND_CTS_TO_SELF_R {
+        SEND_CTS_TO_SELF_R::new(((self.bits >> 28) & 1) != 0)
+    }
     #[doc = "Bit 30 - Marks this slot as valid"]
     #[inline(always)]
     pub fn slot_valid(&self) -> SLOT_VALID_R {
@@ -46,6 +55,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("PLCP0")
             .field("dma_addr", &self.dma_addr())
             .field("wait_for_ack", &self.wait_for_ack())
+            .field("send_cts_to_self", &self.send_cts_to_self())
             .field("slot_valid", &self.slot_valid())
             .field("slot_enabled", &self.slot_enabled())
             .finish()
@@ -61,6 +71,11 @@ impl W {
     #[inline(always)]
     pub fn wait_for_ack(&mut self) -> WAIT_FOR_ACK_W<PLCP0_SPEC> {
         WAIT_FOR_ACK_W::new(self, 24)
+    }
+    #[doc = "Bit 28 - Send a CTS-to-Self frame before transmission"]
+    #[inline(always)]
+    pub fn send_cts_to_self(&mut self) -> SEND_CTS_TO_SELF_W<PLCP0_SPEC> {
+        SEND_CTS_TO_SELF_W::new(self, 28)
     }
     #[doc = "Bit 30 - Marks this slot as valid"]
     #[inline(always)]
