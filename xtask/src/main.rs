@@ -25,6 +25,7 @@ enum Chip {
     Esp32,
     Esp32c2,
     Esp32c3,
+    Esp32c5,
     Esp32c6,
     Esp32c6Lp,
     Esp32h2,
@@ -119,7 +120,7 @@ enum Commands {
 
 fn main() -> Result<()> {
     env_logger::Builder::new()
-        .filter_module("xtask", log::LevelFilter::Info)
+        .filter_module("xtask", log::LevelFilter::Trace)
         .init();
 
     // The directory containing the cargo manifest for the 'xtask' package is a
