@@ -1657,5 +1657,28 @@ SYSCON:
         bitWidth: 1
 
 
+IO_MUX:
+  # Add dummy registers so that we can collect them into an array
+  _copy:
+    GPIO22:
+      _from: GPIO21
+      description: Configuration register for pin GPIO22
+      addressOffset: 0x5C
+    GPIO23:
+      _from: GPIO21
+      description: "Configuration register for pin GPIO23"
+      addressOffset: 0x60
+    GPIO24:
+      _from: GPIO21
+      description: "Configuration register for pin GPIO24"
+      addressOffset: 0x64
+    GPIO25:
+      _from: GPIO21
+      description: "Configuration register for pin GPIO25"
+      addressOffset: 0x68
+  _array:
+    GPIO*:
+      dimIncrement: 4
+
 _include: 
     - "esp32s2-wifi.yaml"
