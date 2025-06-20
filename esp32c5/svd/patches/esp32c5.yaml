@@ -62,6 +62,23 @@ DS:
       dimIncrement: 0x4
       size: 0x20
 
+GPIO:
+  FUNC*_OUT_SEL_CFG:
+    _modify:
+      FUNC*_OUT_SEL:
+        name: OUT_SEL
+      FUNC*_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC*_OE_SEL:
+        name: OEN_SEL
+      FUNC*_OE_INV_SEL:
+        name: OEN_INV_SEL
+
+  # _modify:
+  #   "FUNC%s_OUT_SEL_CFG":
+  #     dim: 30
+
+
 HMAC:
   _modify:
     "WR_MESSAGE_MEM*":
@@ -323,30 +340,17 @@ SYSTIMER:
     - ../../../common_patches/systimer_real_target.yaml
 
 TIMERG0:
-  _modify:
-    T%sCONFIG:
-      name: T0CONFIG
-    T%sLO:
-      name: T0LO
-    T%sHI:
-      name: T0HI
-    T%sUPDATE:
-      name: T0UPDATE
-    T%sALARMLO:
-      name: T0ALARMLO
-    T%sALARMHI:
-      name: T0ALARMHI
-    T%sLOADLO:
-      name: T0LOADLO
-    T%sLOADHI:
-      name: T0LOADHI
-    T%sLOAD:
-      name: T0LOAD
+  "T0*":
+    _strip:
+      - "T0_"
+  "T1*":
+    _strip:
+      - "T1_"
   _include: ../../../common_patches/tim_collect.yaml
 
-TIMERG[01]:
-  "*":
-    _strip: "T_"
+# TIMERG[01]:
+#   "*":
+#     _strip: "T_"
 
 UART0:
   _strip_end: "_SYNC"

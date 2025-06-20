@@ -1,1 +1,180 @@
-# [doc = r"Enumeration of all the interrupts."] # [cfg_attr (feature = "defmt" , derive (defmt :: Format))] # [derive (Copy , Clone , Debug , PartialEq , Eq)] # [repr (u16)] pub enum Interrupt { # [doc = "11 - I2C_MASTER"] I2C_MASTER = 11 , # [doc = "13 - PMU"] PMU = 13 , # [doc = "14 - EFUSE"] EFUSE = 14 , # [doc = "15 - LP_RTC_TIMER"] LP_RTC_TIMER = 15 , # [doc = "16 - LP_UART"] LP_UART = 16 , # [doc = "17 - LP_I2C"] LP_I2C = 17 , # [doc = "18 - LP_WDT"] LP_WDT = 18 , # [doc = "20 - LP_APM_M0"] LP_APM_M0 = 20 , # [doc = "21 - LP_APM_M1"] LP_APM_M1 = 21 , # [doc = "22 - HUK"] HUK = 22 , # [doc = "28 - TRACE"] TRACE = 28 , # [doc = "31 - GPIO"] GPIO = 31 , # [doc = "33 - PAU"] PAU = 33 , # [doc = "36 - HP_APM_M0"] HP_APM_M0 = 36 , # [doc = "37 - HP_APM_M1"] HP_APM_M1 = 37 , # [doc = "38 - HP_APM_M2"] HP_APM_M2 = 38 , # [doc = "39 - HP_APM_M3"] HP_APM_M3 = 39 , # [doc = "40 - HP_APM_M4"] HP_APM_M4 = 40 , # [doc = "41 - LP_APM0"] LP_APM0 = 41 , # [doc = "45 - I2S"] I2S = 45 , # [doc = "47 - UART0"] UART0 = 47 , # [doc = "48 - UART1"] UART1 = 48 , # [doc = "49 - LEDC"] LEDC = 49 , # [doc = "54 - USB_SERIAL_JTAG"] USB_SERIAL_JTAG = 54 , # [doc = "55 - RMT"] RMT = 55 , # [doc = "57 - TG0_T0_LEVEL"] TG0_T0_LEVEL = 57 , # [doc = "58 - TG0_WDT_LEVEL"] TG0_WDT_LEVEL = 58 , # [doc = "59 - TG1_T0_LEVEL"] TG1_T0_LEVEL = 59 , # [doc = "60 - TG1_WDT_LEVEL"] TG1_WDT_LEVEL = 60 , # [doc = "61 - SYSTIMER_TARGET0"] SYSTIMER_TARGET0 = 61 , # [doc = "62 - SYSTIMER_TARGET1"] SYSTIMER_TARGET1 = 62 , # [doc = "63 - SYSTIMER_TARGET2"] SYSTIMER_TARGET2 = 63 , # [doc = "64 - APB_ADC"] APB_ADC = 64 , # [doc = "65 - MCPWM0"] MCPWM0 = 65 , # [doc = "66 - PCNT"] PCNT = 66 , # [doc = "67 - PARL_IO_TX"] PARL_IO_TX = 67 , # [doc = "68 - PARL_IO_RX"] PARL_IO_RX = 68 , # [doc = "78 - AES"] AES = 78 , # [doc = "79 - SHA"] SHA = 79 , # [doc = "80 - RSA"] RSA = 80 , # [doc = "81 - ECC"] ECC = 81 , } # [doc = r" TryFromInterruptError"] # [cfg_attr (feature = "defmt" , derive (defmt :: Format))] # [derive (Debug , Copy , Clone)] pub struct TryFromInterruptError (()) ; impl Interrupt { # [doc = r" Attempt to convert a given value into an `Interrupt`"] # [inline] pub fn try_from (value : u8) -> Result < Self , TryFromInterruptError > { match value { 11 => Ok (Interrupt :: I2C_MASTER) , 13 => Ok (Interrupt :: PMU) , 14 => Ok (Interrupt :: EFUSE) , 15 => Ok (Interrupt :: LP_RTC_TIMER) , 16 => Ok (Interrupt :: LP_UART) , 17 => Ok (Interrupt :: LP_I2C) , 18 => Ok (Interrupt :: LP_WDT) , 20 => Ok (Interrupt :: LP_APM_M0) , 21 => Ok (Interrupt :: LP_APM_M1) , 22 => Ok (Interrupt :: HUK) , 28 => Ok (Interrupt :: TRACE) , 31 => Ok (Interrupt :: GPIO) , 33 => Ok (Interrupt :: PAU) , 36 => Ok (Interrupt :: HP_APM_M0) , 37 => Ok (Interrupt :: HP_APM_M1) , 38 => Ok (Interrupt :: HP_APM_M2) , 39 => Ok (Interrupt :: HP_APM_M3) , 40 => Ok (Interrupt :: HP_APM_M4) , 41 => Ok (Interrupt :: LP_APM0) , 45 => Ok (Interrupt :: I2S) , 47 => Ok (Interrupt :: UART0) , 48 => Ok (Interrupt :: UART1) , 49 => Ok (Interrupt :: LEDC) , 54 => Ok (Interrupt :: USB_SERIAL_JTAG) , 55 => Ok (Interrupt :: RMT) , 57 => Ok (Interrupt :: TG0_T0_LEVEL) , 58 => Ok (Interrupt :: TG0_WDT_LEVEL) , 59 => Ok (Interrupt :: TG1_T0_LEVEL) , 60 => Ok (Interrupt :: TG1_WDT_LEVEL) , 61 => Ok (Interrupt :: SYSTIMER_TARGET0) , 62 => Ok (Interrupt :: SYSTIMER_TARGET1) , 63 => Ok (Interrupt :: SYSTIMER_TARGET2) , 64 => Ok (Interrupt :: APB_ADC) , 65 => Ok (Interrupt :: MCPWM0) , 66 => Ok (Interrupt :: PCNT) , 67 => Ok (Interrupt :: PARL_IO_TX) , 68 => Ok (Interrupt :: PARL_IO_RX) , 78 => Ok (Interrupt :: AES) , 79 => Ok (Interrupt :: SHA) , 80 => Ok (Interrupt :: RSA) , 81 => Ok (Interrupt :: ECC) , _ => Err (TryFromInterruptError (())) , } } } # [cfg (feature = "rt")] # [macro_export] # [doc = r" Assigns a handler to an interrupt"] # [doc = r""] # [doc = r" This macro takes two arguments: the name of an interrupt and the path to the"] # [doc = r" function that will be used as the handler of that interrupt. That function"] # [doc = r" must have signature `fn()`."] # [doc = r""] # [doc = r" Optionally, a third argument may be used to declare interrupt local data."] # [doc = r" The handler will have exclusive access to these *local* variables on each"] # [doc = r" invocation. If the third argument is used then the signature of the handler"] # [doc = r" function must be `fn(&mut $NAME::Locals)` where `$NAME` is the first argument"] # [doc = r" passed to the macro."] # [doc = r""] # [doc = r" # Example"] # [doc = r""] # [doc = r" ``` ignore"] # [doc = r" interrupt!(TIM2, periodic);"] # [doc = r""] # [doc = r" fn periodic() {"] # [doc = r#"     print!(".");"#] # [doc = r" }"] # [doc = r""] # [doc = r" interrupt!(TIM3, tick, locals: {"] # [doc = r"     tick: bool = false;"] # [doc = r" });"] # [doc = r""] # [doc = r" fn tick(locals: &mut TIM3::Locals) {"] # [doc = r"     locals.tick = !locals.tick;"] # [doc = r""] # [doc = r"     if locals.tick {"] # [doc = r#"         println!("Tick");"#] # [doc = r"     } else {"] # [doc = r#"         println!("Tock");"#] # [doc = r"     }"] # [doc = r" }"] # [doc = r" ```"] macro_rules ! interrupt { ($ NAME : ident , $ path : path , locals : { $ ($ lvar : ident : $ lty : ty = $ lval : expr ;) * }) => { # [allow (non_snake_case)] mod $ NAME { pub struct Locals { $ (pub $ lvar : $ lty ,) * } } # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ($ lvar : $ lval ,) * } ; let f : fn (& mut self :: $ NAME :: Locals) = $ path ; f (unsafe { & mut LOCALS }) ; } } ; ($ NAME : ident , $ path : path) => { # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn () = $ path ; f () ; } } }
+#[doc = r"Enumeration of all the interrupts."]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Copy, Clone, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum Interrupt {
+    #[doc = "11 - I2C_MASTER"]
+    I2C_MASTER = 11,
+    #[doc = "13 - PMU"]
+    PMU = 13,
+    #[doc = "14 - EFUSE"]
+    EFUSE = 14,
+    #[doc = "15 - LP_RTC_TIMER"]
+    LP_RTC_TIMER = 15,
+    #[doc = "16 - LP_UART"]
+    LP_UART = 16,
+    #[doc = "17 - LP_I2C"]
+    LP_I2C = 17,
+    #[doc = "18 - LP_WDT"]
+    LP_WDT = 18,
+    #[doc = "20 - LP_APM_M0"]
+    LP_APM_M0 = 20,
+    #[doc = "21 - LP_APM_M1"]
+    LP_APM_M1 = 21,
+    #[doc = "22 - HUK"]
+    HUK = 22,
+    #[doc = "28 - TRACE"]
+    TRACE = 28,
+    #[doc = "31 - GPIO"]
+    GPIO = 31,
+    #[doc = "33 - PAU"]
+    PAU = 33,
+    #[doc = "36 - HP_APM_M0"]
+    HP_APM_M0 = 36,
+    #[doc = "37 - HP_APM_M1"]
+    HP_APM_M1 = 37,
+    #[doc = "38 - HP_APM_M2"]
+    HP_APM_M2 = 38,
+    #[doc = "39 - HP_APM_M3"]
+    HP_APM_M3 = 39,
+    #[doc = "40 - HP_APM_M4"]
+    HP_APM_M4 = 40,
+    #[doc = "41 - LP_APM0"]
+    LP_APM0 = 41,
+    #[doc = "45 - I2S"]
+    I2S = 45,
+    #[doc = "47 - UART0"]
+    UART0 = 47,
+    #[doc = "48 - UART1"]
+    UART1 = 48,
+    #[doc = "49 - LEDC"]
+    LEDC = 49,
+    #[doc = "54 - USB_SERIAL_JTAG"]
+    USB_SERIAL_JTAG = 54,
+    #[doc = "55 - RMT"]
+    RMT = 55,
+    #[doc = "57 - TG0_T0_LEVEL"]
+    TG0_T0_LEVEL = 57,
+    #[doc = "58 - TG0_WDT_LEVEL"]
+    TG0_WDT_LEVEL = 58,
+    #[doc = "59 - TG1_T0_LEVEL"]
+    TG1_T0_LEVEL = 59,
+    #[doc = "60 - TG1_WDT_LEVEL"]
+    TG1_WDT_LEVEL = 60,
+    #[doc = "61 - SYSTIMER_TARGET0"]
+    SYSTIMER_TARGET0 = 61,
+    #[doc = "62 - SYSTIMER_TARGET1"]
+    SYSTIMER_TARGET1 = 62,
+    #[doc = "63 - SYSTIMER_TARGET2"]
+    SYSTIMER_TARGET2 = 63,
+    #[doc = "64 - APB_ADC"]
+    APB_ADC = 64,
+    #[doc = "65 - MCPWM0"]
+    MCPWM0 = 65,
+    #[doc = "66 - PCNT"]
+    PCNT = 66,
+    #[doc = "67 - PARL_IO_TX"]
+    PARL_IO_TX = 67,
+    #[doc = "68 - PARL_IO_RX"]
+    PARL_IO_RX = 68,
+    #[doc = "78 - AES"]
+    AES = 78,
+    #[doc = "79 - SHA"]
+    SHA = 79,
+    #[doc = "80 - RSA"]
+    RSA = 80,
+    #[doc = "81 - ECC"]
+    ECC = 81,
+}
+#[doc = r" TryFromInterruptError"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Debug, Copy, Clone)]
+pub struct TryFromInterruptError(());
+impl Interrupt {
+    #[doc = r" Attempt to convert a given value into an `Interrupt`"]
+    #[inline]
+    pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
+        match value {
+            11 => Ok(Interrupt::I2C_MASTER),
+            13 => Ok(Interrupt::PMU),
+            14 => Ok(Interrupt::EFUSE),
+            15 => Ok(Interrupt::LP_RTC_TIMER),
+            16 => Ok(Interrupt::LP_UART),
+            17 => Ok(Interrupt::LP_I2C),
+            18 => Ok(Interrupt::LP_WDT),
+            20 => Ok(Interrupt::LP_APM_M0),
+            21 => Ok(Interrupt::LP_APM_M1),
+            22 => Ok(Interrupt::HUK),
+            28 => Ok(Interrupt::TRACE),
+            31 => Ok(Interrupt::GPIO),
+            33 => Ok(Interrupt::PAU),
+            36 => Ok(Interrupt::HP_APM_M0),
+            37 => Ok(Interrupt::HP_APM_M1),
+            38 => Ok(Interrupt::HP_APM_M2),
+            39 => Ok(Interrupt::HP_APM_M3),
+            40 => Ok(Interrupt::HP_APM_M4),
+            41 => Ok(Interrupt::LP_APM0),
+            45 => Ok(Interrupt::I2S),
+            47 => Ok(Interrupt::UART0),
+            48 => Ok(Interrupt::UART1),
+            49 => Ok(Interrupt::LEDC),
+            54 => Ok(Interrupt::USB_SERIAL_JTAG),
+            55 => Ok(Interrupt::RMT),
+            57 => Ok(Interrupt::TG0_T0_LEVEL),
+            58 => Ok(Interrupt::TG0_WDT_LEVEL),
+            59 => Ok(Interrupt::TG1_T0_LEVEL),
+            60 => Ok(Interrupt::TG1_WDT_LEVEL),
+            61 => Ok(Interrupt::SYSTIMER_TARGET0),
+            62 => Ok(Interrupt::SYSTIMER_TARGET1),
+            63 => Ok(Interrupt::SYSTIMER_TARGET2),
+            64 => Ok(Interrupt::APB_ADC),
+            65 => Ok(Interrupt::MCPWM0),
+            66 => Ok(Interrupt::PCNT),
+            67 => Ok(Interrupt::PARL_IO_TX),
+            68 => Ok(Interrupt::PARL_IO_RX),
+            78 => Ok(Interrupt::AES),
+            79 => Ok(Interrupt::SHA),
+            80 => Ok(Interrupt::RSA),
+            81 => Ok(Interrupt::ECC),
+            _ => Err(TryFromInterruptError(())),
+        }
+    }
+}
+#[cfg(feature = "rt")]
+#[macro_export]
+#[doc = r" Assigns a handler to an interrupt"]
+#[doc = r""]
+#[doc = r" This macro takes two arguments: the name of an interrupt and the path to the"]
+#[doc = r" function that will be used as the handler of that interrupt. That function"]
+#[doc = r" must have signature `fn()`."]
+#[doc = r""]
+#[doc = r" Optionally, a third argument may be used to declare interrupt local data."]
+#[doc = r" The handler will have exclusive access to these *local* variables on each"]
+#[doc = r" invocation. If the third argument is used then the signature of the handler"]
+#[doc = r" function must be `fn(&mut $NAME::Locals)` where `$NAME` is the first argument"]
+#[doc = r" passed to the macro."]
+#[doc = r""]
+#[doc = r" # Example"]
+#[doc = r""]
+#[doc = r" ``` ignore"]
+#[doc = r" interrupt!(TIM2, periodic);"]
+#[doc = r""]
+#[doc = r" fn periodic() {"]
+#[doc = r#"     print!(".");"#]
+#[doc = r" }"]
+#[doc = r""]
+#[doc = r" interrupt!(TIM3, tick, locals: {"]
+#[doc = r"     tick: bool = false;"]
+#[doc = r" });"]
+#[doc = r""]
+#[doc = r" fn tick(locals: &mut TIM3::Locals) {"]
+#[doc = r"     locals.tick = !locals.tick;"]
+#[doc = r""]
+#[doc = r"     if locals.tick {"]
+#[doc = r#"         println!("Tick");"#]
+#[doc = r"     } else {"]
+#[doc = r#"         println!("Tock");"#]
+#[doc = r"     }"]
+#[doc = r" }"]
+#[doc = r" ```"]
+macro_rules ! interrupt { ($ NAME : ident , $ path : path , locals : { $ ($ lvar : ident : $ lty : ty = $ lval : expr ;) * }) => { # [allow (non_snake_case)] mod $ NAME { pub struct Locals { $ (pub $ lvar : $ lty ,) * } } # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; static mut LOCALS : self :: $ NAME :: Locals = self :: $ NAME :: Locals { $ ($ lvar : $ lval ,) * } ; let f : fn (& mut self :: $ NAME :: Locals) = $ path ; f (unsafe { & mut LOCALS }) ; } } ; ($ NAME : ident , $ path : path) => { # [allow (non_snake_case)] # [no_mangle] pub extern "C" fn $ NAME () { let _ = $ crate :: interrupt :: Interrupt :: $ NAME ; let f : fn () = $ path ; f () ; } } }

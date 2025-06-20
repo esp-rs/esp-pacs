@@ -1,6 +1,6 @@
 [package]
-name = "esp32c6"
-version = "0.20.0"
+name = "esp32c5"
+version = "0.0.0"
 edition = "2021"
 rust-version = "1.76"
 description = "Peripheral access crate for the ESP32-C6"
