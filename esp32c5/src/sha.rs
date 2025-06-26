@@ -15,8 +15,8 @@ pub struct RegisterBlock {
     irq_ena: IRQ_ENA,
     date: DATE,
     _reserved12: [u8; 0x10],
-    h_mem: [H_MEM; 64],
-    m_mem: [M_MEM; 64],
+    h_mem: [H_MEM; 16],
+    m_mem: [M_MEM; 16],
     _reserved14: [u8; 0x0740],
     _3_mode: _3_MODE,
     _3_clean_m: _3_CLEAN_M,
@@ -212,11 +212,11 @@ pub mod t_length;
 pub type DMA_BLOCK_NUM = crate::Reg<dma_block_num::DMA_BLOCK_NUM_SPEC>;
 #[doc = "Block number register (only effective for DMA-SHA)"]
 pub mod dma_block_num;
-#[doc = "START (r) register accessor: Starts the SHA accelerator for Typical SHA operation\n\nYou can [`read`](crate::Reg::read) this register and get [`start::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
+#[doc = "START (w) register accessor: Starts the SHA accelerator for Typical SHA operation\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`start::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@start`] module"]
 pub type START = crate::Reg<start::START_SPEC>;
 #[doc = "Starts the SHA accelerator for Typical SHA operation"]
 pub mod start;
-#[doc = "CONTINUE (r) register accessor: Continues SHA operation (only effective in Typical SHA mode)\n\nYou can [`read`](crate::Reg::read) this register and get [`continue_::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_`] module"]
+#[doc = "CONTINUE (w) register accessor: Continues SHA operation (only effective in Typical SHA mode)\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`continue_::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@continue_`] module"]
 pub type CONTINUE = crate::Reg<continue_::CONTINUE_SPEC>;
 #[doc = "Continues SHA operation (only effective in Typical SHA mode)"]
 pub mod continue_;

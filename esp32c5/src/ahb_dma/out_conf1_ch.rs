@@ -2,30 +2,30 @@
 pub type R = crate::R<OUT_CONF1_CH_SPEC>;
 #[doc = "Register `OUT_CONF1_CH%s` writer"]
 pub type W = crate::W<OUT_CONF1_CH_SPEC>;
-#[doc = "Field `OUT_CHECK_OWNER_CH` reader - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type OUT_CHECK_OWNER_CH_R = crate::BitReader;
-#[doc = "Field `OUT_CHECK_OWNER_CH` writer - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
-pub type OUT_CHECK_OWNER_CH_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUT_CHECK_OWNER` reader - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
+pub type OUT_CHECK_OWNER_R = crate::BitReader;
+#[doc = "Field `OUT_CHECK_OWNER` writer - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
+pub type OUT_CHECK_OWNER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 12 - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn out_check_owner_ch(&self) -> OUT_CHECK_OWNER_CH_R {
-        OUT_CHECK_OWNER_CH_R::new(((self.bits >> 12) & 1) != 0)
+    pub fn out_check_owner(&self) -> OUT_CHECK_OWNER_R {
+        OUT_CHECK_OWNER_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_CONF1_CH")
-            .field("out_check_owner_ch", &self.out_check_owner_ch())
+            .field("out_check_owner", &self.out_check_owner())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 12 - Configures whether or not to enable owner bit check for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn out_check_owner_ch(&mut self) -> OUT_CHECK_OWNER_CH_W<OUT_CONF1_CH_SPEC> {
-        OUT_CHECK_OWNER_CH_W::new(self, 12)
+    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<OUT_CONF1_CH_SPEC> {
+        OUT_CHECK_OWNER_W::new(self, 12)
     }
 }
 #[doc = "Configuration register 1 of TX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`out_conf1_ch::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_conf1_ch::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

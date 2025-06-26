@@ -25,6 +25,7 @@ extern "C" {
     fn HUK();
     fn TRACE();
     fn GPIO();
+    fn GPIO_EXT();
     fn PAU();
     fn HP_APM_M0();
     fn HP_APM_M1();
@@ -32,12 +33,19 @@ extern "C" {
     fn HP_APM_M3();
     fn HP_APM_M4();
     fn LP_APM0();
+    fn MSPI();
     fn I2S();
+    fn UHCI0();
     fn UART0();
     fn UART1();
     fn LEDC();
+    fn TWAI0();
+    fn TWAI0_TIMER();
+    fn TWAI1();
+    fn TWAI1_TIMER();
     fn USB_SERIAL_JTAG();
     fn RMT();
+    fn I2C_EXT0();
     fn TG0_T0_LEVEL();
     fn TG0_WDT_LEVEL();
     fn TG1_T0_LEVEL();
@@ -50,6 +58,7 @@ extern "C" {
     fn PCNT();
     fn PARL_IO_TX();
     fn PARL_IO_RX();
+    fn GPSPI2();
     fn AES();
     fn SHA();
     fn RSA();
@@ -106,7 +115,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 82] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _handler: GPIO },
-    Vector { _reserved: 0 },
+    Vector { _handler: GPIO_EXT },
     Vector { _handler: PAU },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -128,21 +137,25 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 82] = [
     Vector { _handler: LP_APM0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: MSPI },
     Vector { _handler: I2S },
-    Vector { _reserved: 0 },
+    Vector { _handler: UHCI0 },
     Vector { _handler: UART0 },
     Vector { _handler: UART1 },
     Vector { _handler: LEDC },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: TWAI0 },
+    Vector {
+        _handler: TWAI0_TIMER,
+    },
+    Vector { _handler: TWAI1 },
+    Vector {
+        _handler: TWAI1_TIMER,
+    },
     Vector {
         _handler: USB_SERIAL_JTAG,
     },
     Vector { _handler: RMT },
-    Vector { _reserved: 0 },
+    Vector { _handler: I2C_EXT0 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -181,7 +194,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 82] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: GPSPI2 },
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _handler: RSA },
@@ -880,17 +893,17 @@ impl core::fmt::Debug for HUK {
 }
 #[doc = "HUK Peripheral"]
 pub mod huk;
-#[doc = "I2C Peripheral"]
-pub struct I2C {
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
+pub struct I2C0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for I2C {}
-impl I2C {
+unsafe impl Send for I2C0 {}
+impl I2C0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i2c::RegisterBlock = 0x6000_4000 as *const _;
+    pub const PTR: *const i2c0::RegisterBlock = 0x6000_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i2c::RegisterBlock {
+    pub const fn ptr() -> *const i2c0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -912,31 +925,31 @@ impl I2C {
         }
     }
 }
-impl Deref for I2C {
-    type Target = i2c::RegisterBlock;
+impl Deref for I2C0 {
+    type Target = i2c0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for I2C {
+impl core::fmt::Debug for I2C0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C").finish()
+        f.debug_struct("I2C0").finish()
     }
 }
-#[doc = "I2C Peripheral"]
-pub mod i2c;
-#[doc = "I2S Peripheral"]
-pub struct I2S {
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
+pub mod i2c0;
+#[doc = "I2S (Inter-IC Sound) Controller 0"]
+pub struct I2S0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for I2S {}
-impl I2S {
+unsafe impl Send for I2S0 {}
+impl I2S0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i2s::RegisterBlock = 0x6000_c000 as *const _;
+    pub const PTR: *const i2s0::RegisterBlock = 0x6000_c000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i2s::RegisterBlock {
+    pub const fn ptr() -> *const i2s0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -958,20 +971,20 @@ impl I2S {
         }
     }
 }
-impl Deref for I2S {
-    type Target = i2s::RegisterBlock;
+impl Deref for I2S0 {
+    type Target = i2s0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for I2S {
+impl core::fmt::Debug for I2S0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2S").finish()
+        f.debug_struct("I2S0").finish()
     }
 }
-#[doc = "I2S Peripheral"]
-pub mod i2s;
+#[doc = "I2S (Inter-IC Sound) Controller 0"]
+pub mod i2s0;
 #[doc = "INTPRI Peripheral"]
 pub struct INTPRI {
     _marker: PhantomData<*const ()>,
@@ -1294,17 +1307,17 @@ impl core::fmt::Debug for LP_AON {
 }
 #[doc = "LP_AON Peripheral"]
 pub mod lp_aon;
-#[doc = "Low-power Access Permission Management Controller"]
-pub struct LP_APM {
+#[doc = "LP_APM0 Peripheral"]
+pub struct LP_APM0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LP_APM {}
-impl LP_APM {
+unsafe impl Send for LP_APM0 {}
+impl LP_APM0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lp_apm::RegisterBlock = 0x600b_3800 as *const _;
+    pub const PTR: *const lp_apm0::RegisterBlock = 0x600b_3800 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lp_apm::RegisterBlock {
+    pub const fn ptr() -> *const lp_apm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1326,20 +1339,20 @@ impl LP_APM {
         }
     }
 }
-impl Deref for LP_APM {
-    type Target = lp_apm::RegisterBlock;
+impl Deref for LP_APM0 {
+    type Target = lp_apm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LP_APM {
+impl core::fmt::Debug for LP_APM0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_APM").finish()
+        f.debug_struct("LP_APM0").finish()
     }
 }
-#[doc = "Low-power Access Permission Management Controller"]
-pub mod lp_apm;
+#[doc = "LP_APM0 Peripheral"]
+pub mod lp_apm0;
 #[doc = "LP_CLKRST Peripheral"]
 pub struct LP_CLKRST {
     _marker: PhantomData<*const ()>,
@@ -1432,17 +1445,17 @@ impl core::fmt::Debug for LP_GPIO {
 }
 #[doc = "Low-power General Purpose Input/Output"]
 pub mod lp_gpio;
-#[doc = "LP_I2C Peripheral"]
-pub struct LP_I2C {
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub struct LP_I2C0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for LP_I2C {}
-impl LP_I2C {
+unsafe impl Send for LP_I2C0 {}
+impl LP_I2C0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const lp_i2c::RegisterBlock = 0x600b_1800 as *const _;
+    pub const PTR: *const lp_i2c0::RegisterBlock = 0x600b_1800 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const lp_i2c::RegisterBlock {
+    pub const fn ptr() -> *const lp_i2c0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1464,20 +1477,20 @@ impl LP_I2C {
         }
     }
 }
-impl Deref for LP_I2C {
-    type Target = lp_i2c::RegisterBlock;
+impl Deref for LP_I2C0 {
+    type Target = lp_i2c0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for LP_I2C {
+impl core::fmt::Debug for LP_I2C0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_I2C").finish()
+        f.debug_struct("LP_I2C0").finish()
     }
 }
-#[doc = "LP_I2C Peripheral"]
-pub mod lp_i2c;
+#[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
+pub mod lp_i2c0;
 #[doc = "LP_I2C_ANA_MST Peripheral"]
 pub struct LP_I2C_ANA_MST {
     _marker: PhantomData<*const ()>,
@@ -1754,17 +1767,17 @@ impl core::fmt::Debug for LP_WDT {
 }
 #[doc = "Low-power Watchdog Timer"]
 pub mod lp_wdt;
-#[doc = "MCPWM Peripheral"]
-pub struct MCPWM {
+#[doc = "Motor Control Pulse-Width Modulation 0"]
+pub struct MCPWM0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for MCPWM {}
-impl MCPWM {
+unsafe impl Send for MCPWM0 {}
+impl MCPWM0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mcpwm::RegisterBlock = 0x6001_4000 as *const _;
+    pub const PTR: *const mcpwm0::RegisterBlock = 0x6001_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mcpwm::RegisterBlock {
+    pub const fn ptr() -> *const mcpwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1786,20 +1799,20 @@ impl MCPWM {
         }
     }
 }
-impl Deref for MCPWM {
-    type Target = mcpwm::RegisterBlock;
+impl Deref for MCPWM0 {
+    type Target = mcpwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for MCPWM {
+impl core::fmt::Debug for MCPWM0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("MCPWM").finish()
+        f.debug_struct("MCPWM0").finish()
     }
 }
-#[doc = "MCPWM Peripheral"]
-pub mod mcpwm;
+#[doc = "Motor Control Pulse-Width Modulation 0"]
+pub mod mcpwm0;
 #[doc = "MEM_MONITOR Peripheral"]
 pub struct MEM_MONITOR {
     _marker: PhantomData<*const ()>,
@@ -2536,17 +2549,17 @@ impl core::fmt::Debug for TEE {
 }
 #[doc = "TEE Peripheral"]
 pub mod tee;
-#[doc = "TIMERG0 Peripheral"]
-pub struct TIMERG0 {
+#[doc = "Timer Group 0"]
+pub struct TIMG0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TIMERG0 {}
-impl TIMERG0 {
+unsafe impl Send for TIMG0 {}
+impl TIMG0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const timerg0::RegisterBlock = 0x6000_8000 as *const _;
+    pub const PTR: *const timg0::RegisterBlock = 0x6000_8000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const timerg0::RegisterBlock {
+    pub const fn ptr() -> *const timg0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2568,31 +2581,31 @@ impl TIMERG0 {
         }
     }
 }
-impl Deref for TIMERG0 {
-    type Target = timerg0::RegisterBlock;
+impl Deref for TIMG0 {
+    type Target = timg0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TIMERG0 {
+impl core::fmt::Debug for TIMG0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMERG0").finish()
+        f.debug_struct("TIMG0").finish()
     }
 }
-#[doc = "TIMERG0 Peripheral"]
-pub mod timerg0;
-#[doc = "TIMERG1 Peripheral"]
-pub struct TIMERG1 {
+#[doc = "Timer Group 0"]
+pub mod timg0;
+#[doc = "Timer Group 1"]
+pub struct TIMG1 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TIMERG1 {}
-impl TIMERG1 {
+unsafe impl Send for TIMG1 {}
+impl TIMG1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const timerg0::RegisterBlock = 0x6000_9000 as *const _;
+    pub const PTR: *const timg0::RegisterBlock = 0x6000_9000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const timerg0::RegisterBlock {
+    pub const fn ptr() -> *const timg0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2614,20 +2627,20 @@ impl TIMERG1 {
         }
     }
 }
-impl Deref for TIMERG1 {
-    type Target = timerg0::RegisterBlock;
+impl Deref for TIMG1 {
+    type Target = timg0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TIMERG1 {
+impl core::fmt::Debug for TIMG1 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMERG1").finish()
+        f.debug_struct("TIMG1").finish()
     }
 }
-#[doc = "TIMERG1 Peripheral"]
-pub use self::timerg0 as timerg1;
+#[doc = "Timer Group 1"]
+pub use self::timg0 as timg1;
 #[doc = "RISC-V Trace Encoder"]
 pub struct TRACE {
     _marker: PhantomData<*const ()>,
@@ -2858,17 +2871,17 @@ impl core::fmt::Debug for UART1 {
 }
 #[doc = "UART (Universal Asynchronous Receiver-Transmitter) Controller 1"]
 pub use self::uart0 as uart1;
-#[doc = "UHCI Peripheral"]
-pub struct UHCI {
+#[doc = "Universal Host Controller Interface 0"]
+pub struct UHCI0 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for UHCI {}
-impl UHCI {
+unsafe impl Send for UHCI0 {}
+impl UHCI0 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const uhci::RegisterBlock = 0x6000_5000 as *const _;
+    pub const PTR: *const uhci0::RegisterBlock = 0x6000_5000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const uhci::RegisterBlock {
+    pub const fn ptr() -> *const uhci0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2890,31 +2903,31 @@ impl UHCI {
         }
     }
 }
-impl Deref for UHCI {
-    type Target = uhci::RegisterBlock;
+impl Deref for UHCI0 {
+    type Target = uhci0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for UHCI {
+impl core::fmt::Debug for UHCI0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UHCI").finish()
+        f.debug_struct("UHCI0").finish()
     }
 }
-#[doc = "UHCI Peripheral"]
-pub mod uhci;
-#[doc = "USB_SERIAL_JTAG Peripheral"]
-pub struct USB_SERIAL_JTAG {
+#[doc = "Universal Host Controller Interface 0"]
+pub mod uhci0;
+#[doc = "Full-speed USB Serial/JTAG Controller"]
+pub struct USB_DEVICE {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for USB_SERIAL_JTAG {}
-impl USB_SERIAL_JTAG {
+unsafe impl Send for USB_DEVICE {}
+impl USB_DEVICE {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const usb_serial_jtag::RegisterBlock = 0x6000_f000 as *const _;
+    pub const PTR: *const usb_device::RegisterBlock = 0x6000_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const usb_serial_jtag::RegisterBlock {
+    pub const fn ptr() -> *const usb_device::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2936,20 +2949,20 @@ impl USB_SERIAL_JTAG {
         }
     }
 }
-impl Deref for USB_SERIAL_JTAG {
-    type Target = usb_serial_jtag::RegisterBlock;
+impl Deref for USB_DEVICE {
+    type Target = usb_device::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for USB_SERIAL_JTAG {
+impl core::fmt::Debug for USB_DEVICE {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("USB_SERIAL_JTAG").finish()
+        f.debug_struct("USB_DEVICE").finish()
     }
 }
-#[doc = "USB_SERIAL_JTAG Peripheral"]
-pub mod usb_serial_jtag;
+#[doc = "Full-speed USB Serial/JTAG Controller"]
+pub mod usb_device;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -2985,10 +2998,10 @@ pub struct Peripherals {
     pub HP_SYSTEM: HP_SYSTEM,
     #[doc = "HUK"]
     pub HUK: HUK,
-    #[doc = "I2C"]
-    pub I2C: I2C,
-    #[doc = "I2S"]
-    pub I2S: I2S,
+    #[doc = "I2C0"]
+    pub I2C0: I2C0,
+    #[doc = "I2S0"]
+    pub I2S0: I2S0,
     #[doc = "INTPRI"]
     pub INTPRI: INTPRI,
     #[doc = "IO_MUX"]
@@ -3003,14 +3016,14 @@ pub struct Peripherals {
     pub LP_ANA: LP_ANA,
     #[doc = "LP_AON"]
     pub LP_AON: LP_AON,
-    #[doc = "LP_APM"]
-    pub LP_APM: LP_APM,
+    #[doc = "LP_APM0"]
+    pub LP_APM0: LP_APM0,
     #[doc = "LP_CLKRST"]
     pub LP_CLKRST: LP_CLKRST,
     #[doc = "LP_GPIO"]
     pub LP_GPIO: LP_GPIO,
-    #[doc = "LP_I2C"]
-    pub LP_I2C: LP_I2C,
+    #[doc = "LP_I2C0"]
+    pub LP_I2C0: LP_I2C0,
     #[doc = "LP_I2C_ANA_MST"]
     pub LP_I2C_ANA_MST: LP_I2C_ANA_MST,
     #[doc = "LP_IO_MUX"]
@@ -3023,8 +3036,8 @@ pub struct Peripherals {
     pub LP_UART: LP_UART,
     #[doc = "LP_WDT"]
     pub LP_WDT: LP_WDT,
-    #[doc = "MCPWM"]
-    pub MCPWM: MCPWM,
+    #[doc = "MCPWM0"]
+    pub MCPWM0: MCPWM0,
     #[doc = "MEM_MONITOR"]
     pub MEM_MONITOR: MEM_MONITOR,
     #[doc = "PARL_IO"]
@@ -3057,10 +3070,10 @@ pub struct Peripherals {
     pub SYSTIMER: SYSTIMER,
     #[doc = "TEE"]
     pub TEE: TEE,
-    #[doc = "TIMERG0"]
-    pub TIMERG0: TIMERG0,
-    #[doc = "TIMERG1"]
-    pub TIMERG1: TIMERG1,
+    #[doc = "TIMG0"]
+    pub TIMG0: TIMG0,
+    #[doc = "TIMG1"]
+    pub TIMG1: TIMG1,
     #[doc = "TRACE"]
     pub TRACE: TRACE,
     #[doc = "TWAI0"]
@@ -3071,10 +3084,10 @@ pub struct Peripherals {
     pub UART0: UART0,
     #[doc = "UART1"]
     pub UART1: UART1,
-    #[doc = "UHCI"]
-    pub UHCI: UHCI,
-    #[doc = "USB_SERIAL_JTAG"]
-    pub USB_SERIAL_JTAG: USB_SERIAL_JTAG,
+    #[doc = "UHCI0"]
+    pub UHCI0: UHCI0,
+    #[doc = "USB_DEVICE"]
+    pub USB_DEVICE: USB_DEVICE,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -3112,8 +3125,8 @@ impl Peripherals {
             HP_APM: HP_APM::steal(),
             HP_SYSTEM: HP_SYSTEM::steal(),
             HUK: HUK::steal(),
-            I2C: I2C::steal(),
-            I2S: I2S::steal(),
+            I2C0: I2C0::steal(),
+            I2S0: I2S0::steal(),
             INTPRI: INTPRI::steal(),
             IO_MUX: IO_MUX::steal(),
             KEYMNG: KEYMNG::steal(),
@@ -3121,17 +3134,17 @@ impl Peripherals {
             LPPERI: LPPERI::steal(),
             LP_ANA: LP_ANA::steal(),
             LP_AON: LP_AON::steal(),
-            LP_APM: LP_APM::steal(),
+            LP_APM0: LP_APM0::steal(),
             LP_CLKRST: LP_CLKRST::steal(),
             LP_GPIO: LP_GPIO::steal(),
-            LP_I2C: LP_I2C::steal(),
+            LP_I2C0: LP_I2C0::steal(),
             LP_I2C_ANA_MST: LP_I2C_ANA_MST::steal(),
             LP_IO_MUX: LP_IO_MUX::steal(),
             LP_TEE: LP_TEE::steal(),
             LP_TIMER: LP_TIMER::steal(),
             LP_UART: LP_UART::steal(),
             LP_WDT: LP_WDT::steal(),
-            MCPWM: MCPWM::steal(),
+            MCPWM0: MCPWM0::steal(),
             MEM_MONITOR: MEM_MONITOR::steal(),
             PARL_IO: PARL_IO::steal(),
             PAU: PAU::steal(),
@@ -3148,15 +3161,15 @@ impl Peripherals {
             SPI2: SPI2::steal(),
             SYSTIMER: SYSTIMER::steal(),
             TEE: TEE::steal(),
-            TIMERG0: TIMERG0::steal(),
-            TIMERG1: TIMERG1::steal(),
+            TIMG0: TIMG0::steal(),
+            TIMG1: TIMG1::steal(),
             TRACE: TRACE::steal(),
             TWAI0: TWAI0::steal(),
             TWAI1: TWAI1::steal(),
             UART0: UART0::steal(),
             UART1: UART1::steal(),
-            UHCI: UHCI::steal(),
-            USB_SERIAL_JTAG: USB_SERIAL_JTAG::steal(),
+            UHCI0: UHCI0::steal(),
+            USB_DEVICE: USB_DEVICE::steal(),
         }
     }
 }

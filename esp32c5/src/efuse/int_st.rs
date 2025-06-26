@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `READ_DONE_INT_ST` reader - The status signal for read_done interrupt."]
-pub type READ_DONE_INT_ST_R = crate::BitReader;
-#[doc = "Field `PGM_DONE_INT_ST` reader - The status signal for pgm_done interrupt."]
-pub type PGM_DONE_INT_ST_R = crate::BitReader;
+#[doc = "Field `READ_DONE` reader - The status signal for read_done interrupt."]
+pub type READ_DONE_R = crate::BitReader;
+#[doc = "Field `PGM_DONE` reader - The status signal for pgm_done interrupt."]
+pub type PGM_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - The status signal for read_done interrupt."]
     #[inline(always)]
-    pub fn read_done_int_st(&self) -> READ_DONE_INT_ST_R {
-        READ_DONE_INT_ST_R::new((self.bits & 1) != 0)
+    pub fn read_done(&self) -> READ_DONE_R {
+        READ_DONE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - The status signal for pgm_done interrupt."]
     #[inline(always)]
-    pub fn pgm_done_int_st(&self) -> PGM_DONE_INT_ST_R {
-        PGM_DONE_INT_ST_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn pgm_done(&self) -> PGM_DONE_R {
+        PGM_DONE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("read_done_int_st", &self.read_done_int_st())
-            .field("pgm_done_int_st", &self.pgm_done_int_st())
+            .field("read_done", &self.read_done())
+            .field("pgm_done", &self.pgm_done())
             .finish()
     }
 }

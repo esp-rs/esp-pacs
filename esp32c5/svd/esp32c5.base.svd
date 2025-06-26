@@ -10191,6 +10191,10 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
         <size>0x90</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>GPIO_EXT</name>
+        <value>32</value>
+      </interrupt>
       <registers>
         <register>
           <name>CLOCK_GATE</name>
@@ -12983,8 +12987,8 @@ HP_SYSTEM_ROM_TABLE_LOCK is 0.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2C</name>
-      <description>I2C Peripheral</description>
+      <name>I2C0</name>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60004000</baseAddress>
       <addressBlock>
@@ -12995,6 +12999,10 @@ HP_SYSTEM_ROM_TABLE_LOCK is 0.</description>
       <interrupt>
         <name>I2C_MASTER</name>
         <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C_EXT0</name>
+        <value>56</value>
       </interrupt>
       <registers>
         <register>
@@ -14597,8 +14605,8 @@ Measurement unit: i2c_sclk \\</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2S</name>
-      <description>I2S Peripheral</description>
+      <name>I2S0</name>
+      <description>I2S (Inter-IC Sound) Controller 0</description>
       <groupName>I2S</groupName>
       <baseAddress>0x6000C000</baseAddress>
       <addressBlock>
@@ -19552,8 +19560,8 @@ Others : no operation</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>LP_APM</name>
-      <description>Low-power Access Permission Management Controller</description>
+      <name>LP_APM0</name>
+      <description>LP_APM0 Peripheral</description>
       <groupName>LP_APM</groupName>
       <baseAddress>0x600B3800</baseAddress>
       <addressBlock>
@@ -21315,8 +21323,8 @@ This function is disabled when PD_LP_PERI is powered off.\\</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>LP_I2C</name>
-      <description>LP_I2C Peripheral</description>
+      <name>LP_I2C0</name>
+      <description>Low-power I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>LP_I2C</groupName>
       <baseAddress>0x600B1800</baseAddress>
       <addressBlock>
@@ -25307,8 +25315,8 @@ Measurement unit: byte.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>MCPWM</name>
-      <description>MCPWM Peripheral</description>
+      <name>MCPWM0</name>
+      <description>Motor Control Pulse-Width Modulation 0</description>
       <groupName>MCPWM</groupName>
       <baseAddress>0x60014000</baseAddress>
       <addressBlock>
@@ -47934,6 +47942,10 @@ This option should be used together with RSA_SEARCH_POS_REG.</description>
         <size>0x174</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>MSPI</name>
+        <value>44</value>
+      </interrupt>
       <registers>
         <register>
           <name>MEM_CMD</name>
@@ -53138,6 +53150,10 @@ This option should be used together with RSA_SEARCH_POS_REG.</description>
         <size>0x98</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>GPSPI2</name>
+        <value>77</value>
+      </interrupt>
       <registers>
         <register>
           <name>SPI_CMD</name>
@@ -56311,8 +56327,8 @@ Can be configured in CONF state.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>TIMERG0</name>
-      <description>TIMERG0 Peripheral</description>
+      <name>TIMG0</name>
+      <description>Timer Group 0</description>
       <groupName>TIMG</groupName>
       <baseAddress>0x60008000</baseAddress>
       <addressBlock>
@@ -57266,9 +57282,9 @@ Measurement unit: XTAL_CLK  \\</description>
         </register>
       </registers>
     </peripheral>
-    <peripheral derivedFrom="TIMERG0">
-      <name>TIMERG1</name>
-      <description>TIMERG1 Peripheral</description>
+    <peripheral derivedFrom="TIMG0">
+      <name>TIMG1</name>
+      <description>Timer Group 1</description>
       <baseAddress>0x60009000</baseAddress>
       <interrupt>
         <name>TG1_T0_LEVEL</name>
@@ -57781,6 +57797,14 @@ Measurement unit: XTAL_CLK  \\</description>
         <size>0xC8</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>TWAI0</name>
+        <value>50</value>
+      </interrupt>
+      <interrupt>
+        <name>TWAI0_TIMER</name>
+        <value>51</value>
+      </interrupt>
       <registers>
         <register>
           <name>DEVICE_ID_VERSION</name>
@@ -60111,6 +60135,14 @@ If timestamp valid bit-width less than 33, this field is ignored.</description>
       <name>TWAI1</name>
       <description>Two-Wire Automotive Interface</description>
       <baseAddress>0x6000D000</baseAddress>
+      <interrupt>
+        <name>TWAI1</name>
+        <value>52</value>
+      </interrupt>
+      <interrupt>
+        <name>TWAI1_TIMER</name>
+        <value>53</value>
+      </interrupt>
     </peripheral>
     <peripheral>
       <name>UART0</name>
@@ -61895,8 +61927,8 @@ Measurement unit: byte.</description>
       </interrupt>
     </peripheral>
     <peripheral>
-      <name>UHCI</name>
-      <description>UHCI Peripheral</description>
+      <name>UHCI0</name>
+      <description>Universal Host Controller Interface 0</description>
       <groupName>UHCI</groupName>
       <baseAddress>0x60005000</baseAddress>
       <addressBlock>
@@ -61904,6 +61936,10 @@ Measurement unit: byte.</description>
         <size>0x84</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>UHCI0</name>
+        <value>46</value>
+      </interrupt>
       <registers>
         <register>
           <name>CONF0</name>
@@ -63012,8 +63048,8 @@ Valid only when the Data Integrity Check Present bit in UHCI packet is 1.\\</des
       </registers>
     </peripheral>
     <peripheral>
-      <name>USB_SERIAL_JTAG</name>
-      <description>USB_SERIAL_JTAG Peripheral</description>
+      <name>USB_DEVICE</name>
+      <description>Full-speed USB Serial/JTAG Controller</description>
       <groupName>USB_SERIAL_JTAG</groupName>
       <baseAddress>0x6000F000</baseAddress>
       <addressBlock>

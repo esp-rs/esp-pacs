@@ -1,19 +1,19 @@
 #[doc = "Register `IN_DSCR_BF1_CH%s` reader"]
 pub type R = crate::R<IN_DSCR_BF1_CH_SPEC>;
-#[doc = "Field `INLINK_DSCR_BF1_CH` reader - Represents the address of the previous receive descriptor x-1 that has already been fetched."]
-pub type INLINK_DSCR_BF1_CH_R = crate::FieldReader<u32>;
+#[doc = "Field `INLINK_DSCR_BF1` reader - Represents the address of the previous receive descriptor x-1 that has already been fetched."]
+pub type INLINK_DSCR_BF1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Represents the address of the previous receive descriptor x-1 that has already been fetched."]
     #[inline(always)]
-    pub fn inlink_dscr_bf1_ch(&self) -> INLINK_DSCR_BF1_CH_R {
-        INLINK_DSCR_BF1_CH_R::new(self.bits)
+    pub fn inlink_dscr_bf1(&self) -> INLINK_DSCR_BF1_R {
+        INLINK_DSCR_BF1_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IN_DSCR_BF1_CH")
-            .field("inlink_dscr_bf1_ch", &self.inlink_dscr_bf1_ch())
+            .field("inlink_dscr_bf1", &self.inlink_dscr_bf1())
             .finish()
     }
 }

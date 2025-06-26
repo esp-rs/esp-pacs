@@ -2,30 +2,30 @@
 pub type R = crate::R<OUT_PERI_SEL_CH_SPEC>;
 #[doc = "Register `OUT_PERI_SEL_CH%s` writer"]
 pub type W = crate::W<OUT_PERI_SEL_CH_SPEC>;
-#[doc = "Field `PERI_OUT_SEL_CH` reader - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
-pub type PERI_OUT_SEL_CH_R = crate::FieldReader;
-#[doc = "Field `PERI_OUT_SEL_CH` writer - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
-pub type PERI_OUT_SEL_CH_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `PERI_OUT_SEL` reader - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
+pub type PERI_OUT_SEL_R = crate::FieldReader;
+#[doc = "Field `PERI_OUT_SEL` writer - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
+pub type PERI_OUT_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5 - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
     #[inline(always)]
-    pub fn peri_out_sel_ch(&self) -> PERI_OUT_SEL_CH_R {
-        PERI_OUT_SEL_CH_R::new((self.bits & 0x3f) as u8)
+    pub fn peri_out_sel(&self) -> PERI_OUT_SEL_R {
+        PERI_OUT_SEL_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("OUT_PERI_SEL_CH")
-            .field("peri_out_sel_ch", &self.peri_out_sel_ch())
+            .field("peri_out_sel", &self.peri_out_sel())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5 - Configures the peripheral connected to TX channel %s.\\\\ 0: Dummy\\\\ 1: SPI2\\\\ 2: UHCI0\\\\ 3: I2S0\\\\ 4: Dummy\\\\ 5: Dummy\\\\ 6: AES\\\\ 7: SHA\\\\ 8: ADC_DAC\\\\ 9: PARL_IO\\\\ 10: Dummy\\\\ 11~15: Dummy\\\\"]
     #[inline(always)]
-    pub fn peri_out_sel_ch(&mut self) -> PERI_OUT_SEL_CH_W<OUT_PERI_SEL_CH_SPEC> {
-        PERI_OUT_SEL_CH_W::new(self, 0)
+    pub fn peri_out_sel(&mut self) -> PERI_OUT_SEL_W<OUT_PERI_SEL_CH_SPEC> {
+        PERI_OUT_SEL_W::new(self, 0)
     }
 }
 #[doc = "Peripheral selection register of TX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`out_peri_sel_ch::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`out_peri_sel_ch::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
