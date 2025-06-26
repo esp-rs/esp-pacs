@@ -8,6 +8,7 @@ use std::{
 
 use anyhow::{Error, Result};
 use clap::{Parser, Subcommand, ValueEnum};
+use rayon::prelude::*;
 use strum::{Display, EnumIter, IntoEnumIterator};
 use svd2rust::{
     config::{IdentFormats, IdentFormatsTheme},
@@ -17,7 +18,6 @@ use svd2rust::{
 };
 use svdtools::{html::html_cli::svd2html, patch::Config as PatchConfig};
 use toml_edit::DocumentMut;
-use rayon::prelude::*;
 
 #[derive(Debug, Clone, Display, EnumIter, ValueEnum)]
 #[strum(serialize_all = "kebab-case")]
@@ -251,7 +251,7 @@ fn generate_package(workspace: &Path, chip: &Chip) -> Result<()> {
     writeln!(
         File::create(path.join("build.rs"))?,
         "{}",
-        svd2rust::util::build_rs()
+        svd2rust::util::build_rs(&config)
     )?;
 
     format(&path, chip)?;
