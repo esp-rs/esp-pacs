@@ -53,8 +53,6 @@ impl crate::Readable for PARL_IO_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`parl_io_conf::W`](W) writer structure"]
 impl crate::Writable for PARL_IO_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PARL_IO_CONF to value 0x01"]
 impl crate::Resettable for PARL_IO_CONF_SPEC {

@@ -364,10 +364,20 @@ impl RegisterBlock {
         self.crypto_key_slot.iter()
     }
 }
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+pub use self::filter_bank::FILTER_BANK;
+#[doc = r"Cluster"]
+#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
+pub mod filter_bank;
 #[doc = "RX_CTRL (rw) register accessor: Controls the reception of frames\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl`] module"]
 pub type RX_CTRL = crate::Reg<rx_ctrl::RX_CTRL_SPEC>;
 #[doc = "Controls the reception of frames"]
 pub mod rx_ctrl;
+#[doc = "RX_DMA_LIST"]
+pub use self::rx_dma_list::RX_DMA_LIST;
+#[doc = r"Cluster"]
+#[doc = "RX_DMA_LIST"]
+pub mod rx_dma_list;
 #[doc = "INTERFACE_RX_CONTROL (rw) register accessor: Controls RX for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`interface_rx_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interface_rx_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interface_rx_control`] module"]
 pub type INTERFACE_RX_CONTROL = crate::Reg<interface_rx_control::INTERFACE_RX_CONTROL_SPEC>;
 #[doc = "Controls RX for an interface"]
@@ -408,14 +418,34 @@ pub mod hw_stat_full2;
 pub type HW_STAT_BLOCK_ERR = crate::Reg<hw_stat_block_err::HW_STAT_BLOCK_ERR_SPEC>;
 #[doc = ""]
 pub mod hw_stat_block_err;
+#[doc = "Control registers for hardware crypto"]
+pub use self::crypto_control::CRYPTO_CONTROL;
+#[doc = r"Cluster"]
+#[doc = "Control registers for hardware crypto"]
+pub mod crypto_control;
 #[doc = "MAC_TIME (rw) register accessor: Current value of the MAC timer\n\nYou can [`read`](crate::Reg::read) this register and get [`mac_time::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_time::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_time`] module"]
 pub type MAC_TIME = crate::Reg<mac_time::MAC_TIME_SPEC>;
 #[doc = "Current value of the MAC timer"]
 pub mod mac_time;
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub use self::mac_interrupt::MAC_INTERRUPT;
+#[doc = r"Cluster"]
+#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
+pub mod mac_interrupt;
 #[doc = "CTRL (rw) register accessor: Exact name and meaning unknown, used for initializing the MAC\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Exact name and meaning unknown, used for initializing the MAC"]
 pub mod ctrl;
+#[doc = "State of transmission queues"]
+pub use self::txq_state::TXQ_STATE;
+#[doc = r"Cluster"]
+#[doc = "State of transmission queues"]
+pub mod txq_state;
+#[doc = "Used to configure the TX slot."]
+pub use self::tx_slot_config::TX_SLOT_CONFIG;
+#[doc = r"Cluster"]
+#[doc = "Used to configure the TX slot."]
+pub mod tx_slot_config;
 #[doc = "PLCP1 (rw) register accessor: PLCP1\n\nYou can [`read`](crate::Reg::read) this register and get [`plcp1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`plcp1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@plcp1`] module"]
 pub type PLCP1 = crate::Reg<plcp1::PLCP1_SPEC>;
 #[doc = "PLCP1"]
@@ -440,6 +470,11 @@ pub mod duration;
 pub type PMD = crate::Reg<pmd::PMD_SPEC>;
 #[doc = ""]
 pub mod pmd;
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub use self::crypto_key_slot::CRYPTO_KEY_SLOT;
+#[doc = r"Cluster"]
+#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
+pub mod crypto_key_slot;
 #[doc = "HW_STAT_TX_RTS (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_tx_rts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_tx_rts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_tx_rts`] module"]
 pub type HW_STAT_TX_RTS = crate::Reg<hw_stat_tx_rts::HW_STAT_TX_RTS_SPEC>;
 #[doc = ""]
@@ -468,38 +503,3 @@ pub mod hw_stat_tx_hung;
 pub type HW_STAT_PANIC = crate::Reg<hw_stat_panic::HW_STAT_PANIC_SPEC>;
 #[doc = ""]
 pub mod hw_stat_panic;
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
-pub use self::filter_bank::FILTER_BANK;
-#[doc = r"Cluster"]
-#[doc = "Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA. Each filter bank has registers for two interfaces."]
-pub mod filter_bank;
-#[doc = "RX_DMA_LIST"]
-pub use self::rx_dma_list::RX_DMA_LIST;
-#[doc = r"Cluster"]
-#[doc = "RX_DMA_LIST"]
-pub mod rx_dma_list;
-#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
-pub use self::mac_interrupt::MAC_INTERRUPT;
-#[doc = r"Cluster"]
-#[doc = "Status and clear for the Wi-Fi MAC interrupt"]
-pub mod mac_interrupt;
-#[doc = "State of transmission queues"]
-pub use self::txq_state::TXQ_STATE;
-#[doc = r"Cluster"]
-#[doc = "State of transmission queues"]
-pub mod txq_state;
-#[doc = "Used to configure the TX slot."]
-pub use self::tx_slot_config::TX_SLOT_CONFIG;
-#[doc = r"Cluster"]
-#[doc = "Used to configure the TX slot."]
-pub mod tx_slot_config;
-#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
-pub use self::crypto_key_slot::CRYPTO_KEY_SLOT;
-#[doc = r"Cluster"]
-#[doc = "Cryptographic keys for MPDU encapsulation and decapsulation"]
-pub mod crypto_key_slot;
-#[doc = "Control registers for hardware crypto"]
-pub use self::crypto_control::CRYPTO_CONTROL;
-#[doc = r"Cluster"]
-#[doc = "Control registers for hardware crypto"]
-pub mod crypto_control;

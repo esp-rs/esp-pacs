@@ -25,6 +25,4 @@ impl crate::RegisterSpec for CPU_INT_EIP_STATUS_SPEC {
 #[doc = "`read()` method returns [`cpu_int_eip_status::R`](R) reader structure"]
 impl crate::Readable for CPU_INT_EIP_STATUS_SPEC {}
 #[doc = "`reset()` method sets CPU_INT_EIP_STATUS to value 0"]
-impl crate::Resettable for CPU_INT_EIP_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CPU_INT_EIP_STATUS_SPEC {}

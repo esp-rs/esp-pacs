@@ -25,6 +25,4 @@ impl crate::RegisterSpec for WRTPRT_SPEC {
 #[doc = "`read()` method returns [`wrtprt::R`](R) reader structure"]
 impl crate::Readable for WRTPRT_SPEC {}
 #[doc = "`reset()` method sets WRTPRT to value 0"]
-impl crate::Resettable for WRTPRT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for WRTPRT_SPEC {}

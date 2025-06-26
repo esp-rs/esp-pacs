@@ -7,7 +7,7 @@ pub struct CH {
     cmpr_value1: CMPR_VALUE1,
     gen_cfg0: GEN_CFG0,
     gen_force: GEN_FORCE,
-    gen: [GEN; 2],
+    gen_: [GEN; 2],
     db_cfg: DB_CFG,
     db_fed_cfg: DB_FED_CFG,
     db_red_cfg: DB_RED_CFG,
@@ -46,24 +46,24 @@ impl CH {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `GENA` register.</div>"]
     #[inline(always)]
-    pub const fn gen(&self, n: usize) -> &GEN {
-        &self.gen[n]
+    pub const fn gen_(&self, n: usize) -> &GEN {
+        &self.gen_[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x14..0x1c - Actions triggered by events on PWMx%s"]
     #[inline(always)]
-    pub fn gen_iter(&self) -> impl Iterator<Item = &GEN> {
-        self.gen.iter()
+    pub fn gen__iter(&self) -> impl Iterator<Item = &GEN> {
+        self.gen_.iter()
     }
     #[doc = "0x14 - Actions triggered by events on PWMxA"]
     #[inline(always)]
     pub const fn gena(&self) -> &GEN {
-        self.gen(0)
+        self.gen_(0)
     }
     #[doc = "0x18 - Actions triggered by events on PWMxB"]
     #[inline(always)]
     pub const fn genb(&self) -> &GEN {
-        self.gen(1)
+        self.gen_(1)
     }
     #[doc = "0x1c - dead time type selection and configuration"]
     #[inline(always)]
@@ -121,10 +121,10 @@ pub mod gen_cfg0;
 pub type GEN_FORCE = crate::Reg<gen_force::GEN_FORCE_SPEC>;
 #[doc = "Permissives to force PWMxA and PWMxB outputs by software"]
 pub mod gen_force;
-#[doc = "GEN (rw) register accessor: Actions triggered by events on PWMx%s\n\nYou can [`read`](crate::Reg::read) this register and get [`gen::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gen`] module"]
-pub type GEN = crate::Reg<gen::GEN_SPEC>;
+#[doc = "GEN (rw) register accessor: Actions triggered by events on PWMx%s\n\nYou can [`read`](crate::Reg::read) this register and get [`gen_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gen_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gen_`] module"]
+pub type GEN = crate::Reg<gen_::GEN_SPEC>;
 #[doc = "Actions triggered by events on PWMx%s"]
-pub mod gen;
+pub mod gen_;
 #[doc = "DB_CFG (rw) register accessor: dead time type selection and configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`db_cfg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`db_cfg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@db_cfg`] module"]
 pub type DB_CFG = crate::Reg<db_cfg::DB_CFG_SPEC>;
 #[doc = "dead time type selection and configuration"]

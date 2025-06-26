@@ -23,10 +23,6 @@ impl crate::RegisterSpec for SET_PARA_FINISH_SPEC {
 #[doc = "`write(|w| ..)` method takes [`set_para_finish::W`](W) writer structure"]
 impl crate::Writable for SET_PARA_FINISH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SET_PARA_FINISH to value 0"]
-impl crate::Resettable for SET_PARA_FINISH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SET_PARA_FINISH_SPEC {}

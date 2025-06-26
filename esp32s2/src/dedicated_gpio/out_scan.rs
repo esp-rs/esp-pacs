@@ -25,6 +25,4 @@ impl crate::RegisterSpec for OUT_SCAN_SPEC {
 #[doc = "`read()` method returns [`out_scan::R`](R) reader structure"]
 impl crate::Readable for OUT_SCAN_SPEC {}
 #[doc = "`reset()` method sets OUT_SCAN to value 0"]
-impl crate::Resettable for OUT_SCAN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OUT_SCAN_SPEC {}

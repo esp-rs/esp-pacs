@@ -277,8 +277,6 @@ impl crate::Readable for CORE_1_PIF_PMS_CONSTRAIN_3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_1_pif_pms_constrain_3::W`](W) writer structure"]
 impl crate::Writable for CORE_1_PIF_PMS_CONSTRAIN_3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_1_PIF_PMS_CONSTRAIN_3 to value 0x3cc3_ffff"]
 impl crate::Resettable for CORE_1_PIF_PMS_CONSTRAIN_3_SPEC {

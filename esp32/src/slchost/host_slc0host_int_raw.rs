@@ -294,6 +294,4 @@ impl crate::RegisterSpec for HOST_SLC0HOST_INT_RAW_SPEC {
 #[doc = "`read()` method returns [`host_slc0host_int_raw::R`](R) reader structure"]
 impl crate::Readable for HOST_SLC0HOST_INT_RAW_SPEC {}
 #[doc = "`reset()` method sets HOST_SLC0HOST_INT_RAW to value 0"]
-impl crate::Resettable for HOST_SLC0HOST_INT_RAW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_SLC0HOST_INT_RAW_SPEC {}

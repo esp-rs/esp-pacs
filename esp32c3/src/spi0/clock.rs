@@ -83,8 +83,6 @@ impl crate::Readable for CLOCK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clock::W`](W) writer structure"]
 impl crate::Writable for CLOCK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLOCK to value 0x0003_0103"]
 impl crate::Resettable for CLOCK_SPEC {

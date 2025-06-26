@@ -38,8 +38,6 @@ impl crate::Readable for RC32K_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rc32k_cntl::W`](W) writer structure"]
 impl crate::Writable for RC32K_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RC32K_CNTL to value 0xa280_0000"]
 impl crate::Resettable for RC32K_CNTL_SPEC {

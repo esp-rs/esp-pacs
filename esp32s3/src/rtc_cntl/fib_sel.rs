@@ -38,8 +38,6 @@ impl crate::Readable for FIB_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fib_sel::W`](W) writer structure"]
 impl crate::Writable for FIB_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FIB_SEL to value 0x07"]
 impl crate::Resettable for FIB_SEL_SPEC {

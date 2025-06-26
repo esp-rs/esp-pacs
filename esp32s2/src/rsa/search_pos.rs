@@ -38,10 +38,6 @@ impl crate::Readable for SEARCH_POS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`search_pos::W`](W) writer structure"]
 impl crate::Writable for SEARCH_POS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SEARCH_POS to value 0"]
-impl crate::Resettable for SEARCH_POS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SEARCH_POS_SPEC {}

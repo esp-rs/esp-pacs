@@ -158,8 +158,6 @@ impl crate::Readable for RTC_PAD19_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtc_pad19::W`](W) writer structure"]
 impl crate::Writable for RTC_PAD19_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RTC_PAD19 to value 0x5000_0000"]
 impl crate::Resettable for RTC_PAD19_SPEC {

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SLC0_LENGTH_SPEC {
 #[doc = "`read()` method returns [`slc0_length::R`](R) reader structure"]
 impl crate::Readable for SLC0_LENGTH_SPEC {}
 #[doc = "`reset()` method sets SLC0_LENGTH to value 0"]
-impl crate::Resettable for SLC0_LENGTH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLC0_LENGTH_SPEC {}

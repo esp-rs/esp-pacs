@@ -173,10 +173,6 @@ impl crate::Readable for APP_DCACHE_DBUG3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`app_dcache_dbug3::W`](W) writer structure"]
 impl crate::Writable for APP_DCACHE_DBUG3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APP_DCACHE_DBUG3 to value 0"]
-impl crate::Resettable for APP_DCACHE_DBUG3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APP_DCACHE_DBUG3_SPEC {}

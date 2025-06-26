@@ -383,8 +383,6 @@ impl crate::Readable for DIG_ISO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dig_iso::W`](W) writer structure"]
 impl crate::Writable for DIG_ISO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIG_ISO to value 0xaaaa_5000"]
 impl crate::Resettable for DIG_ISO_SPEC {

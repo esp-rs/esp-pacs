@@ -38,8 +38,6 @@ impl crate::Readable for FLASH_ACE1_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`flash_ace1_size::W`](W) writer structure"]
 impl crate::Writable for FLASH_ACE1_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLASH_ACE1_SIZE to value 0x0400"]
 impl crate::Resettable for FLASH_ACE1_SIZE_SPEC {

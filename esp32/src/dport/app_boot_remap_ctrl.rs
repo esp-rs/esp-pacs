@@ -38,10 +38,6 @@ impl crate::Readable for APP_BOOT_REMAP_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`app_boot_remap_ctrl::W`](W) writer structure"]
 impl crate::Writable for APP_BOOT_REMAP_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APP_BOOT_REMAP_CTRL to value 0"]
-impl crate::Resettable for APP_BOOT_REMAP_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APP_BOOT_REMAP_CTRL_SPEC {}

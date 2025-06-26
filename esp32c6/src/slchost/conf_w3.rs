@@ -83,8 +83,6 @@ impl crate::Readable for CONF_W3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`conf_w3::W`](W) writer structure"]
 impl crate::Writable for CONF_W3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONF_W3 to value 0xc0"]
 impl crate::Resettable for CONF_W3_SPEC {

@@ -53,8 +53,6 @@ impl crate::Readable for SPI_MEM_ECC_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_mem_ecc_ctrl::W`](W) writer structure"]
 impl crate::Writable for SPI_MEM_ECC_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_MEM_ECC_CTRL to value 0x0020_0000"]
 impl crate::Resettable for SPI_MEM_ECC_CTRL_SPEC {

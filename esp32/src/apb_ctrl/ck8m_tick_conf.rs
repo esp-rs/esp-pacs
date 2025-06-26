@@ -38,8 +38,6 @@ impl crate::Readable for CK8M_TICK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ck8m_tick_conf::W`](W) writer structure"]
 impl crate::Writable for CK8M_TICK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CK8M_TICK_CONF to value 0x0b"]
 impl crate::Resettable for CK8M_TICK_CONF_SPEC {

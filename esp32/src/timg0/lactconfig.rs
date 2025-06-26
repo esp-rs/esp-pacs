@@ -173,8 +173,6 @@ impl crate::Readable for LACTCONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lactconfig::W`](W) writer structure"]
 impl crate::Writable for LACTCONFIG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LACTCONFIG to value 0x6000_2300"]
 impl crate::Resettable for LACTCONFIG_SPEC {

@@ -108,10 +108,6 @@ impl crate::Readable for L1_CACHE_ACS_FAIL_INT_RAW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_cache_acs_fail_int_raw::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_ACS_FAIL_INT_RAW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_CACHE_ACS_FAIL_INT_RAW to value 0"]
-impl crate::Resettable for L1_CACHE_ACS_FAIL_INT_RAW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_CACHE_ACS_FAIL_INT_RAW_SPEC {}

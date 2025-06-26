@@ -41,6 +41,4 @@ impl crate::RegisterSpec for OUT_EP2_ST_SPEC {
 #[doc = "`read()` method returns [`out_ep2_st::R`](R) reader structure"]
 impl crate::Readable for OUT_EP2_ST_SPEC {}
 #[doc = "`reset()` method sets OUT_EP2_ST to value 0"]
-impl crate::Resettable for OUT_EP2_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OUT_EP2_ST_SPEC {}

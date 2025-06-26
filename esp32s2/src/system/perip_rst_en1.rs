@@ -113,8 +113,6 @@ impl crate::Readable for PERIP_RST_EN1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`perip_rst_en1::W`](W) writer structure"]
 impl crate::Writable for PERIP_RST_EN1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PERIP_RST_EN1 to value 0x7e"]
 impl crate::Resettable for PERIP_RST_EN1_SPEC {

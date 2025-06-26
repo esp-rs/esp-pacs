@@ -53,8 +53,6 @@ impl crate::Readable for PDM_FREQ_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pdm_freq_conf::W`](W) writer structure"]
 impl crate::Writable for PDM_FREQ_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PDM_FREQ_CONF to value 0x000f_01e0"]
 impl crate::Resettable for PDM_FREQ_CONF_SPEC {

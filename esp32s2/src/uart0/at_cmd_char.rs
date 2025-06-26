@@ -53,8 +53,6 @@ impl crate::Readable for AT_CMD_CHAR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`at_cmd_char::W`](W) writer structure"]
 impl crate::Writable for AT_CMD_CHAR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_CHAR to value 0x032b"]
 impl crate::Resettable for AT_CMD_CHAR_SPEC {

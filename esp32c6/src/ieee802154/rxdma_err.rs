@@ -38,10 +38,6 @@ impl crate::Readable for RXDMA_ERR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rxdma_err::W`](W) writer structure"]
 impl crate::Writable for RXDMA_ERR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RXDMA_ERR to value 0"]
-impl crate::Resettable for RXDMA_ERR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RXDMA_ERR_SPEC {}

@@ -98,8 +98,6 @@ impl crate::Readable for SAR_MEAS_WAIT2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_meas_wait2::W`](W) writer structure"]
 impl crate::Writable for SAR_MEAS_WAIT2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_MEAS_WAIT2 to value 0x0020_000a"]
 impl crate::Resettable for SAR_MEAS_WAIT2_SPEC {

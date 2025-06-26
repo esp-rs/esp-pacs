@@ -38,8 +38,6 @@ impl crate::Readable for SAR_PATT_TAB2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_patt_tab2::W`](W) writer structure"]
 impl crate::Writable for SAR_PATT_TAB2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_PATT_TAB2 to value 0x00ff_ffff"]
 impl crate::Resettable for SAR_PATT_TAB2_SPEC {

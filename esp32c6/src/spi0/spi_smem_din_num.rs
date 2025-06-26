@@ -89,6 +89,4 @@ impl crate::RegisterSpec for SPI_SMEM_DIN_NUM_SPEC {
 #[doc = "`read()` method returns [`spi_smem_din_num::R`](R) reader structure"]
 impl crate::Readable for SPI_SMEM_DIN_NUM_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_DIN_NUM to value 0"]
-impl crate::Resettable for SPI_SMEM_DIN_NUM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPI_SMEM_DIN_NUM_SPEC {}

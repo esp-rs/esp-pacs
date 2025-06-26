@@ -36,6 +36,4 @@ impl crate::RegisterSpec for PKT_LEN2_SPEC {
 #[doc = "`read()` method returns [`pkt_len2::R`](R) reader structure"]
 impl crate::Readable for PKT_LEN2_SPEC {}
 #[doc = "`reset()` method sets PKT_LEN2 to value 0"]
-impl crate::Resettable for PKT_LEN2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PKT_LEN2_SPEC {}

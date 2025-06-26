@@ -203,6 +203,4 @@ impl crate::RegisterSpec for SLC0INT_ST_SPEC {
 #[doc = "`read()` method returns [`slc0int_st::R`](R) reader structure"]
 impl crate::Readable for SLC0INT_ST_SPEC {}
 #[doc = "`reset()` method sets SLC0INT_ST to value 0"]
-impl crate::Resettable for SLC0INT_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLC0INT_ST_SPEC {}

@@ -23,10 +23,6 @@ impl crate::RegisterSpec for WR_MESSAGE__SPEC {
 #[doc = "`write(|w| ..)` method takes [`wr_message_::W`](W) writer structure"]
 impl crate::Writable for WR_MESSAGE__SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WR_MESSAGE_%s to value 0"]
-impl crate::Resettable for WR_MESSAGE__SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for WR_MESSAGE__SPEC {}

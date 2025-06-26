@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SLP_REJECT_CAUSE_SPEC {
 #[doc = "`read()` method returns [`slp_reject_cause::R`](R) reader structure"]
 impl crate::Readable for SLP_REJECT_CAUSE_SPEC {}
 #[doc = "`reset()` method sets SLP_REJECT_CAUSE to value 0"]
-impl crate::Resettable for SLP_REJECT_CAUSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLP_REJECT_CAUSE_SPEC {}

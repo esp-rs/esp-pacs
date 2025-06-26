@@ -43,8 +43,6 @@ impl crate::Readable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icache_atomic_operate_ena::W`](W) writer structure"]
 impl crate::Writable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICACHE_ATOMIC_OPERATE_ENA to value 0x01"]
 impl crate::Resettable for ICACHE_ATOMIC_OPERATE_ENA_SPEC {

@@ -23,10 +23,6 @@ impl crate::RegisterSpec for SET_INVALIDATE_DS_SPEC {
 #[doc = "`write(|w| ..)` method takes [`set_invalidate_ds::W`](W) writer structure"]
 impl crate::Writable for SET_INVALIDATE_DS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SET_INVALIDATE_DS to value 0"]
-impl crate::Resettable for SET_INVALIDATE_DS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SET_INVALIDATE_DS_SPEC {}

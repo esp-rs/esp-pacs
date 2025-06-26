@@ -83,8 +83,6 @@ impl crate::Readable for HP_MODEM_BIAS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_modem_bias::W`](W) writer structure"]
 impl crate::Writable for HP_MODEM_BIAS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HP_MODEM_BIAS to value 0x0100_0000"]
 impl crate::Resettable for HP_MODEM_BIAS_SPEC {

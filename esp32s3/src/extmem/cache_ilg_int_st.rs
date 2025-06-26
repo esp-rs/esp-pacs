@@ -119,6 +119,4 @@ impl crate::RegisterSpec for CACHE_ILG_INT_ST_SPEC {
 #[doc = "`read()` method returns [`cache_ilg_int_st::R`](R) reader structure"]
 impl crate::Readable for CACHE_ILG_INT_ST_SPEC {}
 #[doc = "`reset()` method sets CACHE_ILG_INT_ST to value 0"]
-impl crate::Resettable for CACHE_ILG_INT_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CACHE_ILG_INT_ST_SPEC {}

@@ -101,8 +101,6 @@ impl crate::Readable for JFIFO_ST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`jfifo_st::W`](W) writer structure"]
 impl crate::Writable for JFIFO_ST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets JFIFO_ST to value 0x44"]
 impl crate::Resettable for JFIFO_ST_SPEC {

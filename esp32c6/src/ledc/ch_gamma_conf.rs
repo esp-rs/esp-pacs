@@ -52,10 +52,6 @@ impl crate::Readable for CH_GAMMA_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch_gamma_conf::W`](W) writer structure"]
 impl crate::Writable for CH_GAMMA_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CH%s_GAMMA_CONF to value 0"]
-impl crate::Resettable for CH_GAMMA_CONF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CH_GAMMA_CONF_SPEC {}

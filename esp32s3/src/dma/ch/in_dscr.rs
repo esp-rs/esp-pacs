@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IN_DSCR_SPEC {
 #[doc = "`read()` method returns [`in_dscr::R`](R) reader structure"]
 impl crate::Readable for IN_DSCR_SPEC {}
 #[doc = "`reset()` method sets IN_DSCR to value 0"]
-impl crate::Resettable for IN_DSCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IN_DSCR_SPEC {}

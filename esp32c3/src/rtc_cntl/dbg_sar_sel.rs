@@ -38,10 +38,6 @@ impl crate::Readable for DBG_SAR_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dbg_sar_sel::W`](W) writer structure"]
 impl crate::Writable for DBG_SAR_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DBG_SAR_SEL to value 0"]
-impl crate::Resettable for DBG_SAR_SEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DBG_SAR_SEL_SPEC {}

@@ -49,6 +49,4 @@ impl crate::RegisterSpec for DIN_NUM_SPEC {
 #[doc = "`read()` method returns [`din_num::R`](R) reader structure"]
 impl crate::Readable for DIN_NUM_SPEC {}
 #[doc = "`reset()` method sets DIN_NUM to value 0"]
-impl crate::Resettable for DIN_NUM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIN_NUM_SPEC {}

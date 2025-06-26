@@ -38,10 +38,6 @@ impl crate::Readable for TIME0_THRESHOLD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`time0_threshold::W`](W) writer structure"]
 impl crate::Writable for TIME0_THRESHOLD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIME0_THRESHOLD to value 0"]
-impl crate::Resettable for TIME0_THRESHOLD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TIME0_THRESHOLD_SPEC {}

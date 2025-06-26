@@ -226,10 +226,6 @@ impl crate::Readable for DIEPINT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`diepint::W`](W) writer structure"]
 impl crate::Writable for DIEPINT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIEPINT to value 0"]
-impl crate::Resettable for DIEPINT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIEPINT_SPEC {}

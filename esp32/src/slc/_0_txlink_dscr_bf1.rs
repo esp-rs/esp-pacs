@@ -25,6 +25,4 @@ impl crate::RegisterSpec for _0_TXLINK_DSCR_BF1_SPEC {
 #[doc = "`read()` method returns [`_0_txlink_dscr_bf1::R`](R) reader structure"]
 impl crate::Readable for _0_TXLINK_DSCR_BF1_SPEC {}
 #[doc = "`reset()` method sets _0_TXLINK_DSCR_BF1 to value 0"]
-impl crate::Resettable for _0_TXLINK_DSCR_BF1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for _0_TXLINK_DSCR_BF1_SPEC {}

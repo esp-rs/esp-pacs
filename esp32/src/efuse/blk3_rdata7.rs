@@ -25,6 +25,4 @@ impl crate::RegisterSpec for BLK3_RDATA7_SPEC {
 #[doc = "`read()` method returns [`blk3_rdata7::R`](R) reader structure"]
 impl crate::Readable for BLK3_RDATA7_SPEC {}
 #[doc = "`reset()` method sets BLK3_RDATA7 to value 0"]
-impl crate::Resettable for BLK3_RDATA7_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLK3_RDATA7_SPEC {}

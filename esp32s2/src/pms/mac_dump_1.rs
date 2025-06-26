@@ -38,8 +38,6 @@ impl crate::Readable for MAC_DUMP_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mac_dump_1::W`](W) writer structure"]
 impl crate::Writable for MAC_DUMP_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MAC_DUMP_1 to value 0xe4"]
 impl crate::Resettable for MAC_DUMP_1_SPEC {

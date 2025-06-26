@@ -176,8 +176,6 @@ impl crate::Readable for BROWN_OUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`brown_out::W`](W) writer structure"]
 impl crate::Writable for BROWN_OUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BROWN_OUT to value 0x43ff_0010"]
 impl crate::Resettable for BROWN_OUT_SPEC {

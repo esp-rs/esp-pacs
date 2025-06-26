@@ -53,8 +53,6 @@ impl crate::Readable for POWER_CK_WAIT_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`power_ck_wait_cntl::W`](W) writer structure"]
 impl crate::Writable for POWER_CK_WAIT_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POWER_CK_WAIT_CNTL to value 0x0100_0100"]
 impl crate::Resettable for POWER_CK_WAIT_CNTL_SPEC {

@@ -143,8 +143,6 @@ impl crate::Readable for ESCAPE_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`escape_conf::W`](W) writer structure"]
 impl crate::Writable for ESCAPE_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESCAPE_CONF to value 0x33"]
 impl crate::Resettable for ESCAPE_CONF_SPEC {

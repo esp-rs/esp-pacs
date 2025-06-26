@@ -203,8 +203,6 @@ impl crate::Readable for INT_RAW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_raw::W`](W) writer structure"]
 impl crate::Writable for INT_RAW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INT_RAW to value 0x08"]
 impl crate::Resettable for INT_RAW_SPEC {

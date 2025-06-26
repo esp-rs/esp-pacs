@@ -248,8 +248,6 @@ impl crate::Readable for MEM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mem_conf::W`](W) writer structure"]
 impl crate::Writable for MEM_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MEM_CONF to value 0x0002_0015"]
 impl crate::Resettable for MEM_CONF_SPEC {

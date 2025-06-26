@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SPI_MEM_REJECT_ADDR_SPEC {
 #[doc = "`read()` method returns [`spi_mem_reject_addr::R`](R) reader structure"]
 impl crate::Readable for SPI_MEM_REJECT_ADDR_SPEC {}
 #[doc = "`reset()` method sets SPI_MEM_REJECT_ADDR to value 0"]
-impl crate::Resettable for SPI_MEM_REJECT_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPI_MEM_REJECT_ADDR_SPEC {}

@@ -128,8 +128,6 @@ impl crate::Readable for DTHRCTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dthrctl::W`](W) writer structure"]
 impl crate::Writable for DTHRCTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DTHRCTL to value 0x0802_0020"]
 impl crate::Resettable for DTHRCTL_SPEC {

@@ -38,8 +38,6 @@ impl crate::Readable for CIS_CONF_W1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cis_conf_w1::W`](W) writer structure"]
 impl crate::Writable for CIS_CONF_W1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CIS_CONF_W1 to value 0xffff_ffff"]
 impl crate::Resettable for CIS_CONF_W1_SPEC {

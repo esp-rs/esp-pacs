@@ -25,6 +25,4 @@ impl crate::RegisterSpec for HOST_SLCHOST_GPIO_STATUS0_SPEC {
 #[doc = "`read()` method returns [`host_slchost_gpio_status0::R`](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_GPIO_STATUS0_SPEC {}
 #[doc = "`reset()` method sets HOST_SLCHOST_GPIO_STATUS0 to value 0"]
-impl crate::Resettable for HOST_SLCHOST_GPIO_STATUS0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_SLCHOST_GPIO_STATUS0_SPEC {}

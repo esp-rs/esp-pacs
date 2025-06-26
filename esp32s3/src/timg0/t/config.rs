@@ -113,8 +113,6 @@ impl crate::Readable for CONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`config::W`](W) writer structure"]
 impl crate::Writable for CONFIG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONFIG to value 0x6000_2000"]
 impl crate::Resettable for CONFIG_SPEC {

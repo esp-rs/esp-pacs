@@ -33,6 +33,4 @@ impl crate::RegisterSpec for RD_MAC_SPI_SYS_3_SPEC {
 #[doc = "`read()` method returns [`rd_mac_spi_sys_3::R`](R) reader structure"]
 impl crate::Readable for RD_MAC_SPI_SYS_3_SPEC {}
 #[doc = "`reset()` method sets RD_MAC_SPI_SYS_3 to value 0"]
-impl crate::Resettable for RD_MAC_SPI_SYS_3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RD_MAC_SPI_SYS_3_SPEC {}

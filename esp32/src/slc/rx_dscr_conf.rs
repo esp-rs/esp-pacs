@@ -203,8 +203,6 @@ impl crate::Readable for RX_DSCR_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_dscr_conf::W`](W) writer structure"]
 impl crate::Writable for RX_DSCR_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_DSCR_CONF to value 0x101b_101a"]
 impl crate::Resettable for RX_DSCR_CONF_SPEC {

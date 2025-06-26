@@ -25,6 +25,4 @@ impl crate::RegisterSpec for EUIP_STATUS_SPEC {
 #[doc = "`read()` method returns [`euip_status::R`](R) reader structure"]
 impl crate::Readable for EUIP_STATUS_SPEC {}
 #[doc = "`reset()` method sets EUIP_STATUS to value 0"]
-impl crate::Resettable for EUIP_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EUIP_STATUS_SPEC {}

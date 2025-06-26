@@ -52,6 +52,4 @@ impl crate::RegisterSpec for CORE_0_MESSAGE_PHASE_SPEC {
 #[doc = "`read()` method returns [`core_0_message_phase::R`](R) reader structure"]
 impl crate::Readable for CORE_0_MESSAGE_PHASE_SPEC {}
 #[doc = "`reset()` method sets Core_0_MESSAGE_PHASE to value 0"]
-impl crate::Resettable for CORE_0_MESSAGE_PHASE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CORE_0_MESSAGE_PHASE_SPEC {}

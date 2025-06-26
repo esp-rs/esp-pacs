@@ -188,10 +188,6 @@ impl crate::Readable for GPIO38_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio38::W`](W) writer structure"]
 impl crate::Writable for GPIO38_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPIO38 to value 0"]
-impl crate::Resettable for GPIO38_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GPIO38_SPEC {}

@@ -53,8 +53,6 @@ impl crate::Readable for TIMERGROUP1_TIMER_CLK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timergroup1_timer_clk_conf::W`](W) writer structure"]
 impl crate::Writable for TIMERGROUP1_TIMER_CLK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMERGROUP1_TIMER_CLK_CONF to value 0x0040_0000"]
 impl crate::Resettable for TIMERGROUP1_TIMER_CLK_CONF_SPEC {

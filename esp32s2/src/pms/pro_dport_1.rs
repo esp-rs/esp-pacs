@@ -141,8 +141,6 @@ impl crate::Readable for PRO_DPORT_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_dport_1::W`](W) writer structure"]
 impl crate::Writable for PRO_DPORT_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_DPORT_1 to value 0xf000"]
 impl crate::Resettable for PRO_DPORT_1_SPEC {

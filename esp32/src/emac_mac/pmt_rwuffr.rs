@@ -14,6 +14,4 @@ impl crate::RegisterSpec for PMT_RWUFFR_SPEC {
 #[doc = "`read()` method returns [`pmt_rwuffr::R`](R) reader structure"]
 impl crate::Readable for PMT_RWUFFR_SPEC {}
 #[doc = "`reset()` method sets PMT_RWUFFR to value 0"]
-impl crate::Resettable for PMT_RWUFFR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PMT_RWUFFR_SPEC {}

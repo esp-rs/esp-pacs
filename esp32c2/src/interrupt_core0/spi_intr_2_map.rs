@@ -38,10 +38,6 @@ impl crate::Readable for SPI_INTR_2_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_intr_2_map::W`](W) writer structure"]
 impl crate::Writable for SPI_INTR_2_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_INTR_2_MAP to value 0"]
-impl crate::Resettable for SPI_INTR_2_MAP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPI_INTR_2_MAP_SPEC {}

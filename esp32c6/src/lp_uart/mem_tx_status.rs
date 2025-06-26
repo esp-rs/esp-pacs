@@ -33,6 +33,4 @@ impl crate::RegisterSpec for MEM_TX_STATUS_SPEC {
 #[doc = "`read()` method returns [`mem_tx_status::R`](R) reader structure"]
 impl crate::Readable for MEM_TX_STATUS_SPEC {}
 #[doc = "`reset()` method sets MEM_TX_STATUS to value 0"]
-impl crate::Resettable for MEM_TX_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MEM_TX_STATUS_SPEC {}

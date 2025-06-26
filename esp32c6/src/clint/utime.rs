@@ -25,6 +25,4 @@ impl crate::RegisterSpec for UTIME_SPEC {
 #[doc = "`read()` method returns [`utime::R`](R) reader structure"]
 impl crate::Readable for UTIME_SPEC {}
 #[doc = "`reset()` method sets UTIME to value 0"]
-impl crate::Resettable for UTIME_SPEC {
-    const RESET_VALUE: u64 = 0;
-}
+impl crate::Resettable for UTIME_SPEC {}

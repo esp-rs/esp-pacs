@@ -61,10 +61,6 @@ impl crate::Readable for ICACHE_FREEZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icache_freeze::W`](W) writer structure"]
 impl crate::Writable for ICACHE_FREEZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ICACHE_FREEZE to value 0"]
-impl crate::Resettable for ICACHE_FREEZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ICACHE_FREEZE_SPEC {}

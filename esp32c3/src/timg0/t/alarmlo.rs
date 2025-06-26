@@ -38,10 +38,6 @@ impl crate::Readable for ALARMLO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`alarmlo::W`](W) writer structure"]
 impl crate::Writable for ALARMLO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ALARMLO to value 0"]
-impl crate::Resettable for ALARMLO_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ALARMLO_SPEC {}

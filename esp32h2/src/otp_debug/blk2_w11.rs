@@ -25,6 +25,4 @@ impl crate::RegisterSpec for BLK2_W11_SPEC {
 #[doc = "`read()` method returns [`blk2_w11::R`](R) reader structure"]
 impl crate::Readable for BLK2_W11_SPEC {}
 #[doc = "`reset()` method sets BLK2_W11 to value 0"]
-impl crate::Resettable for BLK2_W11_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLK2_W11_SPEC {}

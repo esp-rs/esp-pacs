@@ -91,8 +91,6 @@ impl crate::Readable for MSPI_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mspi_conf::W`](W) writer structure"]
 impl crate::Writable for MSPI_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MSPI_CONF to value 0x25"]
 impl crate::Resettable for MSPI_CONF_SPEC {

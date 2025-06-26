@@ -23,10 +23,6 @@ impl crate::RegisterSpec for SET_PARA_KEY_SPEC {
 #[doc = "`write(|w| ..)` method takes [`set_para_key::W`](W) writer structure"]
 impl crate::Writable for SET_PARA_KEY_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SET_PARA_KEY to value 0"]
-impl crate::Resettable for SET_PARA_KEY_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SET_PARA_KEY_SPEC {}

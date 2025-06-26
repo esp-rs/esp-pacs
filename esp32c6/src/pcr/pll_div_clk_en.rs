@@ -128,8 +128,6 @@ impl crate::Readable for PLL_DIV_CLK_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pll_div_clk_en::W`](W) writer structure"]
 impl crate::Writable for PLL_DIV_CLK_EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLL_DIV_CLK_EN to value 0x7f"]
 impl crate::Resettable for PLL_DIV_CLK_EN_SPEC {

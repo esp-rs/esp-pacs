@@ -38,8 +38,6 @@ impl crate::Readable for IMMU_TABLE11_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`immu_table11::W`](W) writer structure"]
 impl crate::Writable for IMMU_TABLE11_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IMMU_TABLE11 to value 0x0b"]
 impl crate::Resettable for IMMU_TABLE11_SPEC {

@@ -38,10 +38,6 @@ impl crate::Readable for ED_SCAN_COEX_CNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ed_scan_coex_cnt::W`](W) writer structure"]
 impl crate::Writable for ED_SCAN_COEX_CNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ED_SCAN_COEX_CNT to value 0"]
-impl crate::Resettable for ED_SCAN_COEX_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ED_SCAN_COEX_CNT_SPEC {}

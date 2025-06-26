@@ -25,6 +25,4 @@ impl crate::RegisterSpec for PRO_CPU_RECORD_STATUS_SPEC {
 #[doc = "`read()` method returns [`pro_cpu_record_status::R`](R) reader structure"]
 impl crate::Readable for PRO_CPU_RECORD_STATUS_SPEC {}
 #[doc = "`reset()` method sets PRO_CPU_RECORD_STATUS to value 0"]
-impl crate::Resettable for PRO_CPU_RECORD_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PRO_CPU_RECORD_STATUS_SPEC {}

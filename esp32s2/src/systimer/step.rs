@@ -53,8 +53,6 @@ impl crate::Readable for STEP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`step::W`](W) writer structure"]
 impl crate::Writable for STEP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STEP to value 0x0450"]
 impl crate::Resettable for STEP_SPEC {

@@ -53,10 +53,6 @@ impl crate::Readable for APB_FREQ_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb_freq_conf::W`](W) writer structure"]
 impl crate::Writable for APB_FREQ_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB_FREQ_CONF to value 0"]
-impl crate::Resettable for APB_FREQ_CONF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB_FREQ_CONF_SPEC {}

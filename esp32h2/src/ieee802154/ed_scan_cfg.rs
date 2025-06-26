@@ -113,10 +113,6 @@ impl crate::Readable for ED_SCAN_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ed_scan_cfg::W`](W) writer structure"]
 impl crate::Writable for ED_SCAN_CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ED_SCAN_CFG to value 0"]
-impl crate::Resettable for ED_SCAN_CFG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ED_SCAN_CFG_SPEC {}

@@ -98,8 +98,6 @@ impl crate::Readable for CLKM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkm_conf::W`](W) writer structure"]
 impl crate::Writable for CLKM_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKM_CONF to value 0x04"]
 impl crate::Resettable for CLKM_CONF_SPEC {

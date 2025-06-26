@@ -83,8 +83,6 @@ impl crate::Readable for REGDMA_BKP_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`regdma_bkp_conf::W`](W) writer structure"]
 impl crate::Writable for REGDMA_BKP_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGDMA_BKP_CONF to value 0x7d10_1920"]
 impl crate::Resettable for REGDMA_BKP_CONF_SPEC {

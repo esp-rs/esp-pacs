@@ -101,8 +101,6 @@ impl crate::Readable for PRO_DRAM0_2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_dram0_2::W`](W) writer structure"]
 impl crate::Writable for PRO_DRAM0_2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_DRAM0_2 to value 0x7800"]
 impl crate::Resettable for PRO_DRAM0_2_SPEC {

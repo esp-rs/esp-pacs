@@ -53,10 +53,6 @@ impl crate::Readable for EMACADDR0HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`emacaddr0high::W`](W) writer structure"]
 impl crate::Writable for EMACADDR0HIGH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EMACADDR0HIGH to value 0"]
-impl crate::Resettable for EMACADDR0HIGH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EMACADDR0HIGH_SPEC {}

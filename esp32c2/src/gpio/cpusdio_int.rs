@@ -25,6 +25,4 @@ impl crate::RegisterSpec for CPUSDIO_INT_SPEC {
 #[doc = "`read()` method returns [`cpusdio_int::R`](R) reader structure"]
 impl crate::Readable for CPUSDIO_INT_SPEC {}
 #[doc = "`reset()` method sets CPUSDIO_INT to value 0"]
-impl crate::Resettable for CPUSDIO_INT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CPUSDIO_INT_SPEC {}

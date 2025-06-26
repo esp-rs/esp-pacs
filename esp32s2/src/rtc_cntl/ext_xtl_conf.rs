@@ -286,8 +286,6 @@ impl crate::Readable for EXT_XTL_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext_xtl_conf::W`](W) writer structure"]
 impl crate::Writable for EXT_XTL_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXT_XTL_CONF to value 0x0006_6c80"]
 impl crate::Resettable for EXT_XTL_CONF_SPEC {

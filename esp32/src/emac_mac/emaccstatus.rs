@@ -41,6 +41,4 @@ impl crate::RegisterSpec for EMACCSTATUS_SPEC {
 #[doc = "`read()` method returns [`emaccstatus::R`](R) reader structure"]
 impl crate::Readable for EMACCSTATUS_SPEC {}
 #[doc = "`reset()` method sets EMACCSTATUS to value 0"]
-impl crate::Resettable for EMACCSTATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EMACCSTATUS_SPEC {}

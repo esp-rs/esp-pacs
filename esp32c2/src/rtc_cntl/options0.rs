@@ -278,8 +278,6 @@ impl crate::Readable for OPTIONS0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`options0::W`](W) writer structure"]
 impl crate::Writable for OPTIONS0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OPTIONS0 to value 0x1000_a000"]
 impl crate::Resettable for OPTIONS0_SPEC {

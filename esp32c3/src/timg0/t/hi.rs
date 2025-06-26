@@ -23,6 +23,4 @@ impl crate::RegisterSpec for HI_SPEC {
 #[doc = "`read()` method returns [`hi::R`](R) reader structure"]
 impl crate::Readable for HI_SPEC {}
 #[doc = "`reset()` method sets HI to value 0"]
-impl crate::Resettable for HI_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HI_SPEC {}

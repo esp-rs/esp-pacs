@@ -38,10 +38,6 @@ impl crate::Readable for EXT_MEM_PMS_LOCK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ext_mem_pms_lock::W`](W) writer structure"]
 impl crate::Writable for EXT_MEM_PMS_LOCK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXT_MEM_PMS_LOCK to value 0"]
-impl crate::Resettable for EXT_MEM_PMS_LOCK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXT_MEM_PMS_LOCK_SPEC {}

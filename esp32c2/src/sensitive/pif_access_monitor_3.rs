@@ -30,6 +30,4 @@ impl crate::RegisterSpec for PIF_ACCESS_MONITOR_3_SPEC {
 #[doc = "`read()` method returns [`pif_access_monitor_3::R`](R) reader structure"]
 impl crate::Readable for PIF_ACCESS_MONITOR_3_SPEC {}
 #[doc = "`reset()` method sets PIF_ACCESS_MONITOR_3 to value 0"]
-impl crate::Resettable for PIF_ACCESS_MONITOR_3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PIF_ACCESS_MONITOR_3_SPEC {}

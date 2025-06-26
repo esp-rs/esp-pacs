@@ -81,6 +81,4 @@ impl crate::RegisterSpec for INTERRUPT_SPEC {
 #[doc = "`read()` method returns [`interrupt::R`](R) reader structure"]
 impl crate::Readable for INTERRUPT_SPEC {}
 #[doc = "`reset()` method sets INTERRUPT to value 0"]
-impl crate::Resettable for INTERRUPT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTERRUPT_SPEC {}

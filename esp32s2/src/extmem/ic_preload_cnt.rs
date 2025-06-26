@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IC_PRELOAD_CNT_SPEC {
 #[doc = "`read()` method returns [`ic_preload_cnt::R`](R) reader structure"]
 impl crate::Readable for IC_PRELOAD_CNT_SPEC {}
 #[doc = "`reset()` method sets IC_PRELOAD_CNT to value 0"]
-impl crate::Resettable for IC_PRELOAD_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IC_PRELOAD_CNT_SPEC {}

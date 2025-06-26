@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SLC_APBWIN_RDATA_SPEC {
 #[doc = "`read()` method returns [`slc_apbwin_rdata::R`](R) reader structure"]
 impl crate::Readable for SLC_APBWIN_RDATA_SPEC {}
 #[doc = "`reset()` method sets SLC_APBWIN_RDATA to value 0"]
-impl crate::Resettable for SLC_APBWIN_RDATA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLC_APBWIN_RDATA_SPEC {}

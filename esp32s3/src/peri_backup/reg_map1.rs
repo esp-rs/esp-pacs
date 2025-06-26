@@ -38,10 +38,6 @@ impl crate::Readable for REG_MAP1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reg_map1::W`](W) writer structure"]
 impl crate::Writable for REG_MAP1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REG_MAP1 to value 0"]
-impl crate::Resettable for REG_MAP1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REG_MAP1_SPEC {}

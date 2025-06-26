@@ -53,8 +53,6 @@ impl crate::Readable for HFIR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hfir::W`](W) writer structure"]
 impl crate::Writable for HFIR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HFIR to value 0x17d7"]
 impl crate::Resettable for HFIR_SPEC {

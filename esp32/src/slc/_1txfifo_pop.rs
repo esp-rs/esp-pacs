@@ -46,10 +46,6 @@ impl crate::Readable for _1TXFIFO_POP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`_1txfifo_pop::W`](W) writer structure"]
 impl crate::Writable for _1TXFIFO_POP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets _1TXFIFO_POP to value 0"]
-impl crate::Resettable for _1TXFIFO_POP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for _1TXFIFO_POP_SPEC {}

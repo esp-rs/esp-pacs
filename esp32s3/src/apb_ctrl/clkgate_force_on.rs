@@ -53,8 +53,6 @@ impl crate::Readable for CLKGATE_FORCE_ON_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkgate_force_on::W`](W) writer structure"]
 impl crate::Writable for CLKGATE_FORCE_ON_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKGATE_FORCE_ON to value 0x3fff"]
 impl crate::Resettable for CLKGATE_FORCE_ON_SPEC {

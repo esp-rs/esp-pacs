@@ -158,8 +158,6 @@ impl crate::Readable for CLK_EDGE_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_edge_sel::W`](W) writer structure"]
 impl crate::Writable for CLK_EDGE_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLK_EDGE_SEL to value 0x0082_0200"]
 impl crate::Resettable for CLK_EDGE_SEL_SPEC {

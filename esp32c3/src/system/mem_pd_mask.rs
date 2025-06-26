@@ -38,8 +38,6 @@ impl crate::Readable for MEM_PD_MASK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mem_pd_mask::W`](W) writer structure"]
 impl crate::Writable for MEM_PD_MASK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MEM_PD_MASK to value 0x01"]
 impl crate::Resettable for MEM_PD_MASK_SPEC {

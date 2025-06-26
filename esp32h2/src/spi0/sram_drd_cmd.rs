@@ -39,6 +39,4 @@ impl crate::RegisterSpec for SRAM_DRD_CMD_SPEC {
 #[doc = "`read()` method returns [`sram_drd_cmd::R`](R) reader structure"]
 impl crate::Readable for SRAM_DRD_CMD_SPEC {}
 #[doc = "`reset()` method sets SRAM_DRD_CMD to value 0"]
-impl crate::Resettable for SRAM_DRD_CMD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SRAM_DRD_CMD_SPEC {}

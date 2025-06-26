@@ -65,8 +65,6 @@ impl crate::Readable for PIF_ACCESS_MONITOR_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pif_access_monitor_1::W`](W) writer structure"]
 impl crate::Writable for PIF_ACCESS_MONITOR_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PIF_ACCESS_MONITOR_1 to value 0x03"]
 impl crate::Resettable for PIF_ACCESS_MONITOR_1_SPEC {

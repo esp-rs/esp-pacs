@@ -40,10 +40,6 @@ impl crate::Readable for AHBLITE_MPU_TABLE_FE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahblite_mpu_table_fe::W`](W) writer structure"]
 impl crate::Writable for AHBLITE_MPU_TABLE_FE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHBLITE_MPU_TABLE_FE to value 0"]
-impl crate::Resettable for AHBLITE_MPU_TABLE_FE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHBLITE_MPU_TABLE_FE_SPEC {}

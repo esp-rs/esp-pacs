@@ -34,10 +34,6 @@ impl crate::RegisterSpec for PRO_CACHE_ACS_CNT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`pro_cache_acs_cnt_clr::W`](W) writer structure"]
 impl crate::Writable for PRO_CACHE_ACS_CNT_CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_CACHE_ACS_CNT_CLR to value 0"]
-impl crate::Resettable for PRO_CACHE_ACS_CNT_CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PRO_CACHE_ACS_CNT_CLR_SPEC {}

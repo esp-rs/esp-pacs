@@ -119,10 +119,6 @@ impl crate::Readable for PRO_CPU_RECORD_PDEBUGINST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_cpu_record_pdebuginst::W`](W) writer structure"]
 impl crate::Writable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_CPU_RECORD_PDEBUGINST to value 0"]
-impl crate::Resettable for PRO_CPU_RECORD_PDEBUGINST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PRO_CPU_RECORD_PDEBUGINST_SPEC {}

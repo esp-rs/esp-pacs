@@ -41,6 +41,4 @@ impl crate::RegisterSpec for CAP_STATUS_SPEC {
 #[doc = "`read()` method returns [`cap_status::R`](R) reader structure"]
 impl crate::Readable for CAP_STATUS_SPEC {}
 #[doc = "`reset()` method sets CAP_STATUS to value 0"]
-impl crate::Resettable for CAP_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CAP_STATUS_SPEC {}

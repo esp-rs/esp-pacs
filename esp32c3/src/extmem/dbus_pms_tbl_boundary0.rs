@@ -38,10 +38,6 @@ impl crate::Readable for DBUS_PMS_TBL_BOUNDARY0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dbus_pms_tbl_boundary0::W`](W) writer structure"]
 impl crate::Writable for DBUS_PMS_TBL_BOUNDARY0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DBUS_PMS_TBL_BOUNDARY0 to value 0"]
-impl crate::Resettable for DBUS_PMS_TBL_BOUNDARY0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DBUS_PMS_TBL_BOUNDARY0_SPEC {}

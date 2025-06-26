@@ -53,8 +53,6 @@ impl crate::Readable for SLV_WRBUF_DLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slv_wrbuf_dlen::W`](W) writer structure"]
 impl crate::Writable for SLV_WRBUF_DLEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLV_WRBUF_DLEN to value 0xd800_0000"]
 impl crate::Resettable for SLV_WRBUF_DLEN_SPEC {

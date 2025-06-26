@@ -89,6 +89,4 @@ impl crate::RegisterSpec for SPI_SMEM_DOUT_MODE_SPEC {
 #[doc = "`read()` method returns [`spi_smem_dout_mode::R`](R) reader structure"]
 impl crate::Readable for SPI_SMEM_DOUT_MODE_SPEC {}
 #[doc = "`reset()` method sets SPI_SMEM_DOUT_MODE to value 0"]
-impl crate::Resettable for SPI_SMEM_DOUT_MODE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SPI_SMEM_DOUT_MODE_SPEC {}

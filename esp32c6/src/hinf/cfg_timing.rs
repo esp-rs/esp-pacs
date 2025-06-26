@@ -98,8 +98,6 @@ impl crate::Readable for CFG_TIMING_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg_timing::W`](W) writer structure"]
 impl crate::Writable for CFG_TIMING_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG_TIMING to value 0x1578_0812"]
 impl crate::Resettable for CFG_TIMING_SPEC {

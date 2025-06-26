@@ -38,10 +38,6 @@ impl crate::Readable for UTIMECMP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`utimecmp::W`](W) writer structure"]
 impl crate::Writable for UTIMECMP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u64 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u64 = 0;
 }
 #[doc = "`reset()` method sets UTIMECMP to value 0"]
-impl crate::Resettable for UTIMECMP_SPEC {
-    const RESET_VALUE: u64 = 0;
-}
+impl crate::Resettable for UTIMECMP_SPEC {}

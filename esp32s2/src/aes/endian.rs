@@ -38,10 +38,6 @@ impl crate::Readable for ENDIAN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`endian::W`](W) writer structure"]
 impl crate::Writable for ENDIAN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ENDIAN to value 0"]
-impl crate::Resettable for ENDIAN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ENDIAN_SPEC {}

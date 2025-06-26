@@ -83,8 +83,6 @@ impl crate::Readable for MEM_PVT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mem_pvt::W`](W) writer structure"]
 impl crate::Writable for MEM_PVT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MEM_PVT to value 0x03"]
 impl crate::Resettable for MEM_PVT_SPEC {

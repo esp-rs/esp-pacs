@@ -53,8 +53,6 @@ impl crate::Readable for BLE_TIMER_CLK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ble_timer_clk_conf::W`](W) writer structure"]
 impl crate::Writable for BLE_TIMER_CLK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BLE_TIMER_CLK_CONF to value 0x03"]
 impl crate::Resettable for BLE_TIMER_CLK_CONF_SPEC {

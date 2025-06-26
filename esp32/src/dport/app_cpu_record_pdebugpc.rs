@@ -25,6 +25,4 @@ impl crate::RegisterSpec for APP_CPU_RECORD_PDEBUGPC_SPEC {
 #[doc = "`read()` method returns [`app_cpu_record_pdebugpc::R`](R) reader structure"]
 impl crate::Readable for APP_CPU_RECORD_PDEBUGPC_SPEC {}
 #[doc = "`reset()` method sets APP_CPU_RECORD_PDEBUGPC to value 0"]
-impl crate::Resettable for APP_CPU_RECORD_PDEBUGPC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APP_CPU_RECORD_PDEBUGPC_SPEC {}

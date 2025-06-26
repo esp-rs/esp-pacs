@@ -221,8 +221,6 @@ impl crate::Readable for DMA_APB_I_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_apb_i_1::W`](W) writer structure"]
 impl crate::Writable for DMA_APB_I_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_APB_I_1 to value 0x1e00_00ff"]
 impl crate::Resettable for DMA_APB_I_1_SPEC {

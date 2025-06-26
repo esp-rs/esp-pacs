@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SLC0_HOST_PF_SPEC {
 #[doc = "`read()` method returns [`slc0_host_pf::R`](R) reader structure"]
 impl crate::Readable for SLC0_HOST_PF_SPEC {}
 #[doc = "`reset()` method sets SLC0_HOST_PF to value 0"]
-impl crate::Resettable for SLC0_HOST_PF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLC0_HOST_PF_SPEC {}

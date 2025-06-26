@@ -171,8 +171,6 @@ impl crate::Readable for SPI_SMEM_AC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_smem_ac::W`](W) writer structure"]
 impl crate::Writable for SPI_SMEM_AC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_SMEM_AC to value 0xb084"]
 impl crate::Resettable for SPI_SMEM_AC_SPEC {

@@ -38,8 +38,6 @@ impl crate::Readable for CNTL_DATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cntl_date::W`](W) writer structure"]
 impl crate::Writable for CNTL_DATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CNTL_DATE to value 0x0210_7190"]
 impl crate::Resettable for CNTL_DATE_SPEC {

@@ -68,8 +68,6 @@ impl crate::Readable for IDLE_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`idle_conf::W`](W) writer structure"]
 impl crate::Writable for IDLE_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IDLE_CONF to value 0x00a4_0100"]
 impl crate::Resettable for IDLE_CONF_SPEC {

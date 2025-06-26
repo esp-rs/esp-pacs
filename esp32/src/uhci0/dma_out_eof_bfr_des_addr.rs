@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DMA_OUT_EOF_BFR_DES_ADDR_SPEC {
 #[doc = "`read()` method returns [`dma_out_eof_bfr_des_addr::R`](R) reader structure"]
 impl crate::Readable for DMA_OUT_EOF_BFR_DES_ADDR_SPEC {}
 #[doc = "`reset()` method sets DMA_OUT_EOF_BFR_DES_ADDR to value 0"]
-impl crate::Resettable for DMA_OUT_EOF_BFR_DES_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_OUT_EOF_BFR_DES_ADDR_SPEC {}

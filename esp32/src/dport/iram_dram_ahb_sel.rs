@@ -113,10 +113,6 @@ impl crate::Readable for IRAM_DRAM_AHB_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`iram_dram_ahb_sel::W`](W) writer structure"]
 impl crate::Writable for IRAM_DRAM_AHB_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IRAM_DRAM_AHB_SEL to value 0"]
-impl crate::Resettable for IRAM_DRAM_AHB_SEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IRAM_DRAM_AHB_SEL_SPEC {}

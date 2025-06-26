@@ -38,8 +38,6 @@ impl crate::Readable for RD_TIM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rd_tim_conf::W`](W) writer structure"]
 impl crate::Writable for RD_TIM_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RD_TIM_CONF to value 0x1200_0000"]
 impl crate::Resettable for RD_TIM_CONF_SPEC {
