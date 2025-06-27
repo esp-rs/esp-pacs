@@ -43,8 +43,6 @@ impl crate::Readable for PRO_SYSTIMER_TARGET2_INT_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_systimer_target2_int_map::W`](W) writer structure"]
 impl crate::Writable for PRO_SYSTIMER_TARGET2_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_SYSTIMER_TARGET2_INT_MAP to value 0x10"]
 impl crate::Resettable for PRO_SYSTIMER_TARGET2_INT_MAP_SPEC {

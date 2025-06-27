@@ -413,6 +413,10 @@ pub mod slv_rdbuf_dlen;
 pub type SLV_RD_BYTE = crate::Reg<slv_rd_byte::SLV_RD_BYTE_SPEC>;
 #[doc = "SPI interrupt control register"]
 pub mod slv_rd_byte;
+#[doc = "CACHE_SCTRL (rw) register accessor: SPI Memory Cache SCTRL Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_sctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_sctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_sctrl`] module"]
+pub type CACHE_SCTRL = crate::Reg<cache_sctrl::CACHE_SCTRL_SPEC>;
+#[doc = "SPI Memory Cache SCTRL Register"]
+pub mod cache_sctrl;
 #[doc = "FSM (rw) register accessor: SPI master status and DMA read byte control register\n\nYou can [`read`](crate::Reg::read) this register and get [`fsm::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fsm::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@fsm`] module"]
 pub type FSM = crate::Reg<fsm::FSM_SPEC>;
 #[doc = "SPI master status and DMA read byte control register"]
@@ -421,14 +425,26 @@ pub mod fsm;
 pub type HOLD = crate::Reg<hold::HOLD_SPEC>;
 #[doc = "SPI hold register"]
 pub mod hold;
+#[doc = "SRAM_DRD_CMD (rw) register accessor: SPI Memory SRAM DRD CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_drd_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_drd_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_drd_cmd`] module"]
+pub type SRAM_DRD_CMD = crate::Reg<sram_drd_cmd::SRAM_DRD_CMD_SPEC>;
+#[doc = "SPI Memory SRAM DRD CMD Register"]
+pub mod sram_drd_cmd;
 #[doc = "DMA_CONF (rw) register accessor: SPI DMA control register\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_conf`] module"]
 pub type DMA_CONF = crate::Reg<dma_conf::DMA_CONF_SPEC>;
 #[doc = "SPI DMA control register"]
 pub mod dma_conf;
+#[doc = "SRAM_DWR_CMD (rw) register accessor: SPI Memory SRAM DWR CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_dwr_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_dwr_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_dwr_cmd`] module"]
+pub type SRAM_DWR_CMD = crate::Reg<sram_dwr_cmd::SRAM_DWR_CMD_SPEC>;
+#[doc = "SPI Memory SRAM DWR CMD Register"]
+pub mod sram_dwr_cmd;
 #[doc = "DMA_OUT_LINK (rw) register accessor: SPI DMA TX link configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_out_link::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_out_link::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_out_link`] module"]
 pub type DMA_OUT_LINK = crate::Reg<dma_out_link::DMA_OUT_LINK_SPEC>;
 #[doc = "SPI DMA TX link configuration"]
 pub mod dma_out_link;
+#[doc = "SRAM_CLK (rw) register accessor: SPI Memory SRAM Clock Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_clk`] module"]
+pub type SRAM_CLK = crate::Reg<sram_clk::SRAM_CLK_SPEC>;
+#[doc = "SPI Memory SRAM Clock Register"]
+pub mod sram_clk;
 #[doc = "DMA_IN_LINK (rw) register accessor: SPI DMA RX link configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_in_link::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_in_link::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_in_link`] module"]
 pub type DMA_IN_LINK = crate::Reg<dma_in_link::DMA_IN_LINK_SPEC>;
 #[doc = "SPI DMA RX link configuration"]
@@ -501,6 +517,10 @@ pub mod dma_instatus;
 pub type W = crate::Reg<w::W_SPEC>;
 #[doc = "Data buffer %s"]
 pub mod w;
+#[doc = "CLOCK_GATE (rw) register accessor: SPI Memory Clock Gate Register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
+pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
+#[doc = "SPI Memory Clock Gate Register"]
+pub mod clock_gate;
 #[doc = "DIN_MODE (rw) register accessor: SPI input delay mode configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`din_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`din_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@din_mode`] module"]
 pub type DIN_MODE = crate::Reg<din_mode::DIN_MODE_SPEC>;
 #[doc = "SPI input delay mode configuration"]
@@ -541,23 +561,3 @@ pub mod lcd_d_num;
 pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
 #[doc = "SPI version control"]
 pub mod reg_date;
-#[doc = "CACHE_SCTRL (rw) register accessor: SPI Memory Cache SCTRL Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_sctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_sctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_sctrl`] module"]
-pub type CACHE_SCTRL = crate::Reg<cache_sctrl::CACHE_SCTRL_SPEC>;
-#[doc = "SPI Memory Cache SCTRL Register"]
-pub mod cache_sctrl;
-#[doc = "SRAM_DWR_CMD (rw) register accessor: SPI Memory SRAM DWR CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_dwr_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_dwr_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_dwr_cmd`] module"]
-pub type SRAM_DWR_CMD = crate::Reg<sram_dwr_cmd::SRAM_DWR_CMD_SPEC>;
-#[doc = "SPI Memory SRAM DWR CMD Register"]
-pub mod sram_dwr_cmd;
-#[doc = "SRAM_DRD_CMD (rw) register accessor: SPI Memory SRAM DRD CMD Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_drd_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_drd_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_drd_cmd`] module"]
-pub type SRAM_DRD_CMD = crate::Reg<sram_drd_cmd::SRAM_DRD_CMD_SPEC>;
-#[doc = "SPI Memory SRAM DRD CMD Register"]
-pub mod sram_drd_cmd;
-#[doc = "SRAM_CLK (rw) register accessor: SPI Memory SRAM Clock Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sram_clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_clk`] module"]
-pub type SRAM_CLK = crate::Reg<sram_clk::SRAM_CLK_SPEC>;
-#[doc = "SPI Memory SRAM Clock Register"]
-pub mod sram_clk;
-#[doc = "CLOCK_GATE (rw) register accessor: SPI Memory Clock Gate Register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
-pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
-#[doc = "SPI Memory Clock Gate Register"]
-pub mod clock_gate;

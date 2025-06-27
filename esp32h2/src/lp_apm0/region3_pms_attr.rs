@@ -158,10 +158,6 @@ impl crate::Readable for REGION3_PMS_ATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`region3_pms_attr::W`](W) writer structure"]
 impl crate::Writable for REGION3_PMS_ATTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGION3_PMS_ATTR to value 0"]
-impl crate::Resettable for REGION3_PMS_ATTR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REGION3_PMS_ATTR_SPEC {}

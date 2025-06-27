@@ -38,10 +38,6 @@ impl crate::Readable for SEC_KEY0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sec_key0::W`](W) writer structure"]
 impl crate::Writable for SEC_KEY0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SEC_KEY0 to value 0"]
-impl crate::Resettable for SEC_KEY0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SEC_KEY0_SPEC {}

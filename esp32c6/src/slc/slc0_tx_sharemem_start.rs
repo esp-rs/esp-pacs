@@ -43,10 +43,6 @@ impl crate::Readable for SLC0_TX_SHAREMEM_START_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slc0_tx_sharemem_start::W`](W) writer structure"]
 impl crate::Writable for SLC0_TX_SHAREMEM_START_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLC0_TX_SHAREMEM_START to value 0"]
-impl crate::Resettable for SLC0_TX_SHAREMEM_START_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLC0_TX_SHAREMEM_START_SPEC {}

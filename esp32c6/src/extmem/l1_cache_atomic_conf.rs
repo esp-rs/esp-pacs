@@ -25,6 +25,4 @@ impl crate::RegisterSpec for L1_CACHE_ATOMIC_CONF_SPEC {
 #[doc = "`read()` method returns [`l1_cache_atomic_conf::R`](R) reader structure"]
 impl crate::Readable for L1_CACHE_ATOMIC_CONF_SPEC {}
 #[doc = "`reset()` method sets L1_CACHE_ATOMIC_CONF to value 0"]
-impl crate::Resettable for L1_CACHE_ATOMIC_CONF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_CACHE_ATOMIC_CONF_SPEC {}

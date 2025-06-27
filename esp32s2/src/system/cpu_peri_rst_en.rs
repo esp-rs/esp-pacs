@@ -38,8 +38,6 @@ impl crate::Readable for CPU_PERI_RST_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cpu_peri_rst_en::W`](W) writer structure"]
 impl crate::Writable for CPU_PERI_RST_EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CPU_PERI_RST_EN to value 0x80"]
 impl crate::Resettable for CPU_PERI_RST_EN_SPEC {

@@ -28,6 +28,4 @@ impl crate::RegisterSpec for _0_TXPKTU_H_DSCR_SPEC {
 #[doc = "`read()` method returns [`_0_txpktu_h_dscr::R`](R) reader structure"]
 impl crate::Readable for _0_TXPKTU_H_DSCR_SPEC {}
 #[doc = "`reset()` method sets _0_TXPKTU_H_DSCR to value 0"]
-impl crate::Resettable for _0_TXPKTU_H_DSCR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for _0_TXPKTU_H_DSCR_SPEC {}

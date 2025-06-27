@@ -366,10 +366,7 @@ impl crate::Readable for GINTSTS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gintsts::W`](W) writer structure"]
 impl crate::Writable for GINTSTS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xf0f2_fc0a;
 }
 #[doc = "`reset()` method sets GINTSTS to value 0"]
-impl crate::Resettable for GINTSTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GINTSTS_SPEC {}

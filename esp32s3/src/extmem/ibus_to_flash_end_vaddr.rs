@@ -40,8 +40,6 @@ impl crate::Readable for IBUS_TO_FLASH_END_VADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ibus_to_flash_end_vaddr::W`](W) writer structure"]
 impl crate::Writable for IBUS_TO_FLASH_END_VADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IBUS_TO_FLASH_END_VADDR to value 0x47ff_ffff"]
 impl crate::Resettable for IBUS_TO_FLASH_END_VADDR_SPEC {

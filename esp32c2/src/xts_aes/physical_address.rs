@@ -38,10 +38,6 @@ impl crate::Readable for PHYSICAL_ADDRESS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`physical_address::W`](W) writer structure"]
 impl crate::Writable for PHYSICAL_ADDRESS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PHYSICAL_ADDRESS to value 0"]
-impl crate::Resettable for PHYSICAL_ADDRESS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PHYSICAL_ADDRESS_SPEC {}

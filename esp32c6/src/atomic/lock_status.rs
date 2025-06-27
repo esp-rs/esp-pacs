@@ -25,6 +25,4 @@ impl crate::RegisterSpec for LOCK_STATUS_SPEC {
 #[doc = "`read()` method returns [`lock_status::R`](R) reader structure"]
 impl crate::Readable for LOCK_STATUS_SPEC {}
 #[doc = "`reset()` method sets LOCK_STATUS to value 0"]
-impl crate::Resettable for LOCK_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LOCK_STATUS_SPEC {}

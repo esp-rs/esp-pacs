@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DMA_TSTATUS_SPEC {
 #[doc = "`read()` method returns [`dma_tstatus::R`](R) reader structure"]
 impl crate::Readable for DMA_TSTATUS_SPEC {}
 #[doc = "`reset()` method sets DMA_TSTATUS to value 0"]
-impl crate::Resettable for DMA_TSTATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_TSTATUS_SPEC {}

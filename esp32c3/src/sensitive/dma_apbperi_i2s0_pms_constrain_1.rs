@@ -215,8 +215,6 @@ impl crate::Readable for DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_apbperi_i2s0_pms_constrain_1::W`](W) writer structure"]
 impl crate::Writable for DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 to value 0x000f_f0ff"]
 impl crate::Resettable for DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC {

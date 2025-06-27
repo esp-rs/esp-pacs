@@ -38,8 +38,6 @@ impl crate::Readable for ULP_CP_SLEEP_CYC3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ulp_cp_sleep_cyc3::W`](W) writer structure"]
 impl crate::Writable for ULP_CP_SLEEP_CYC3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ULP_CP_SLEEP_CYC3 to value 0x28"]
 impl crate::Resettable for ULP_CP_SLEEP_CYC3_SPEC {

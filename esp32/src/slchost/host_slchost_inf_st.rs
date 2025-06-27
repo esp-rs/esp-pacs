@@ -41,6 +41,4 @@ impl crate::RegisterSpec for HOST_SLCHOST_INF_ST_SPEC {
 #[doc = "`read()` method returns [`host_slchost_inf_st::R`](R) reader structure"]
 impl crate::Readable for HOST_SLCHOST_INF_ST_SPEC {}
 #[doc = "`reset()` method sets HOST_SLCHOST_INF_ST to value 0"]
-impl crate::Resettable for HOST_SLCHOST_INF_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_SLCHOST_INF_ST_SPEC {}

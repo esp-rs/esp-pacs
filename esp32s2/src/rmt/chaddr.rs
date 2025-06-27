@@ -33,6 +33,4 @@ impl crate::RegisterSpec for CHADDR_SPEC {
 #[doc = "`read()` method returns [`chaddr::R`](R) reader structure"]
 impl crate::Readable for CHADDR_SPEC {}
 #[doc = "`reset()` method sets CH%sADDR to value 0"]
-impl crate::Resettable for CHADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CHADDR_SPEC {}

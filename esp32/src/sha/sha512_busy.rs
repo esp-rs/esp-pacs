@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SHA512_BUSY_SPEC {
 #[doc = "`read()` method returns [`sha512_busy::R`](R) reader structure"]
 impl crate::Readable for SHA512_BUSY_SPEC {}
 #[doc = "`reset()` method sets SHA512_BUSY to value 0"]
-impl crate::Resettable for SHA512_BUSY_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SHA512_BUSY_SPEC {}

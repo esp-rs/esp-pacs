@@ -150,6 +150,10 @@ pub mod rb_mem;
 pub type BOX_MEM = crate::Reg<box_mem::BOX_MEM_SPEC>;
 #[doc = "memory that stores BOX"]
 pub mod box_mem;
+#[doc = "IV_MEM (rw) register accessor: IV block data\n\nYou can [`read`](crate::Reg::read) this register and get [`iv_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
+pub type IV_MEM = crate::Reg<iv_mem::IV_MEM_SPEC>;
+#[doc = "IV block data"]
+pub mod iv_mem;
 #[doc = "X_MEM (rw) register accessor: memory that stores X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
 pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
 #[doc = "memory that stores X"]
@@ -186,7 +190,3 @@ pub mod query_check;
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "DS version control register"]
 pub mod date;
-#[doc = "IV_MEM (rw) register accessor: IV block data\n\nYou can [`read`](crate::Reg::read) this register and get [`iv_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`iv_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@iv_mem`] module"]
-pub type IV_MEM = crate::Reg<iv_mem::IV_MEM_SPEC>;
-#[doc = "IV block data"]
-pub mod iv_mem;

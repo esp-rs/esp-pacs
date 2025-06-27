@@ -113,8 +113,6 @@ impl crate::Readable for BRIDGE_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bridge_conf::W`](W) writer structure"]
 impl crate::Writable for BRIDGE_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BRIDGE_CONF to value 0x000a_7720"]
 impl crate::Resettable for BRIDGE_CONF_SPEC {

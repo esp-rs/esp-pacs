@@ -38,10 +38,6 @@ impl crate::Readable for LCD_CMD_VAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lcd_cmd_val::W`](W) writer structure"]
 impl crate::Writable for LCD_CMD_VAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LCD_CMD_VAL to value 0"]
-impl crate::Resettable for LCD_CMD_VAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LCD_CMD_VAL_SPEC {}

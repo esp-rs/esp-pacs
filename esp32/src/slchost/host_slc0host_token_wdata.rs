@@ -57,10 +57,6 @@ impl crate::Readable for HOST_SLC0HOST_TOKEN_WDATA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`host_slc0host_token_wdata::W`](W) writer structure"]
 impl crate::Writable for HOST_SLC0HOST_TOKEN_WDATA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HOST_SLC0HOST_TOKEN_WDATA to value 0"]
-impl crate::Resettable for HOST_SLC0HOST_TOKEN_WDATA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_SLC0HOST_TOKEN_WDATA_SPEC {}

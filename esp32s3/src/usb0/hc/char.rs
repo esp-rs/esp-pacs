@@ -173,10 +173,6 @@ impl crate::Readable for CHAR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`char::W`](W) writer structure"]
 impl crate::Writable for CHAR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CHAR to value 0"]
-impl crate::Resettable for CHAR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CHAR_SPEC {}

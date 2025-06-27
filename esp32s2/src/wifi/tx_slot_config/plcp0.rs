@@ -83,10 +83,6 @@ impl crate::Readable for PLCP0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`plcp0::W`](W) writer structure"]
 impl crate::Writable for PLCP0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLCP0 to value 0"]
-impl crate::Resettable for PLCP0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PLCP0_SPEC {}

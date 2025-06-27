@@ -61,10 +61,6 @@ impl crate::RegisterSpec for CORE1_ACS_CACHE_INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`core1_acs_cache_int_clr::W`](W) writer structure"]
 impl crate::Writable for CORE1_ACS_CACHE_INT_CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE1_ACS_CACHE_INT_CLR to value 0"]
-impl crate::Resettable for CORE1_ACS_CACHE_INT_CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CORE1_ACS_CACHE_INT_CLR_SPEC {}

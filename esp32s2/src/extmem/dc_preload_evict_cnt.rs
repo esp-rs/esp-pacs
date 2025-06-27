@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DC_PRELOAD_EVICT_CNT_SPEC {
 #[doc = "`read()` method returns [`dc_preload_evict_cnt::R`](R) reader structure"]
 impl crate::Readable for DC_PRELOAD_EVICT_CNT_SPEC {}
 #[doc = "`reset()` method sets DC_PRELOAD_EVICT_CNT to value 0"]
-impl crate::Resettable for DC_PRELOAD_EVICT_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DC_PRELOAD_EVICT_CNT_SPEC {}

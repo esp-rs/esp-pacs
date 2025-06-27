@@ -25,6 +25,4 @@ impl crate::RegisterSpec for APB_SARADC2_DATA_STATUS_SPEC {
 #[doc = "`read()` method returns [`apb_saradc2_data_status::R`](R) reader structure"]
 impl crate::Readable for APB_SARADC2_DATA_STATUS_SPEC {}
 #[doc = "`reset()` method sets APB_SARADC2_DATA_STATUS to value 0"]
-impl crate::Resettable for APB_SARADC2_DATA_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB_SARADC2_DATA_STATUS_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for REGDMA_BACKUP_ADDR_SPEC {
 #[doc = "`read()` method returns [`regdma_backup_addr::R`](R) reader structure"]
 impl crate::Readable for REGDMA_BACKUP_ADDR_SPEC {}
 #[doc = "`reset()` method sets REGDMA_BACKUP_ADDR to value 0"]
-impl crate::Resettable for REGDMA_BACKUP_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REGDMA_BACKUP_ADDR_SPEC {}

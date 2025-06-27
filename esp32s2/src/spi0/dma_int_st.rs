@@ -186,10 +186,6 @@ impl crate::Readable for DMA_INT_ST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_int_st::W`](W) writer structure"]
 impl crate::Writable for DMA_INT_ST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_INT_ST to value 0"]
-impl crate::Resettable for DMA_INT_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_INT_ST_SPEC {}

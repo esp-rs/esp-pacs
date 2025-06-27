@@ -53,8 +53,6 @@ impl crate::Readable for SEQ_POSITION_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`seq_position::W`](W) writer structure"]
 impl crate::Writable for SEQ_POSITION_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SEQ_POSITION to value 0x0509"]
 impl crate::Resettable for SEQ_POSITION_SPEC {

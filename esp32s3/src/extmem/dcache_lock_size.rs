@@ -38,10 +38,6 @@ impl crate::Readable for DCACHE_LOCK_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcache_lock_size::W`](W) writer structure"]
 impl crate::Writable for DCACHE_LOCK_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCACHE_LOCK_SIZE to value 0"]
-impl crate::Resettable for DCACHE_LOCK_SIZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DCACHE_LOCK_SIZE_SPEC {}

@@ -61,8 +61,6 @@ impl crate::Readable for RMT_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rmt_conf::W`](W) writer structure"]
 impl crate::Writable for RMT_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RMT_CONF to value 0x05"]
 impl crate::Resettable for RMT_CONF_SPEC {

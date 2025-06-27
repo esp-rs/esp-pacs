@@ -46,8 +46,6 @@ impl crate::Readable for CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_0_iram0_pms_monitor_violate_intr_map::W`](W) writer structure"]
 impl crate::Writable for CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP to value 0x10"]
 impl crate::Resettable for CORE_0_IRAM0_PMS_MONITOR_VIOLATE_INTR_MAP_SPEC {

@@ -98,8 +98,6 @@ impl crate::Readable for PLC_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`plc_conf1::W`](W) writer structure"]
 impl crate::Writable for PLC_CONF1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PLC_CONF1 to value 0xa017_8a05"]
 impl crate::Resettable for PLC_CONF1_SPEC {

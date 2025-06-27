@@ -128,8 +128,6 @@ impl crate::Readable for TX_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_conf1::W`](W) writer structure"]
 impl crate::Writable for TX_CONF1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_CONF1 to value 0x6f3d_e300"]
 impl crate::Resettable for TX_CONF1_SPEC {

@@ -43,6 +43,4 @@ impl crate::RegisterSpec for DMA_APBPERI_PMS_MONITOR_3_SPEC {
 #[doc = "`read()` method returns [`dma_apbperi_pms_monitor_3::R`](R) reader structure"]
 impl crate::Readable for DMA_APBPERI_PMS_MONITOR_3_SPEC {}
 #[doc = "`reset()` method sets DMA_APBPERI_PMS_MONITOR_3 to value 0"]
-impl crate::Resettable for DMA_APBPERI_PMS_MONITOR_3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMA_APBPERI_PMS_MONITOR_3_SPEC {}

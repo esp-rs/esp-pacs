@@ -25,6 +25,4 @@ impl crate::RegisterSpec for QUERY_ERROR_SPEC {
 #[doc = "`read()` method returns [`query_error::R`](R) reader structure"]
 impl crate::Readable for QUERY_ERROR_SPEC {}
 #[doc = "`reset()` method sets QUERY_ERROR to value 0"]
-impl crate::Resettable for QUERY_ERROR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for QUERY_ERROR_SPEC {}

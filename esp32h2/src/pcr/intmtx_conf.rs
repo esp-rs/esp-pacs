@@ -61,8 +61,6 @@ impl crate::Readable for INTMTX_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intmtx_conf::W`](W) writer structure"]
 impl crate::Writable for INTMTX_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTMTX_CONF to value 0x05"]
 impl crate::Resettable for INTMTX_CONF_SPEC {

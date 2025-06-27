@@ -25,6 +25,4 @@ impl crate::RegisterSpec for EXTMEM_REJECT_ADDR_SPEC {
 #[doc = "`read()` method returns [`extmem_reject_addr::R`](R) reader structure"]
 impl crate::Readable for EXTMEM_REJECT_ADDR_SPEC {}
 #[doc = "`reset()` method sets EXTMEM_REJECT_ADDR to value 0"]
-impl crate::Resettable for EXTMEM_REJECT_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXTMEM_REJECT_ADDR_SPEC {}

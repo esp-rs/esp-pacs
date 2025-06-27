@@ -323,10 +323,6 @@ impl crate::Readable for DMASTATUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmastatus::W`](W) writer structure"]
 impl crate::Writable for DMASTATUS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMASTATUS to value 0"]
-impl crate::Resettable for DMASTATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMASTATUS_SPEC {}

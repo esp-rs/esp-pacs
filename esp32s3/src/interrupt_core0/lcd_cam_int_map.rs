@@ -38,8 +38,6 @@ impl crate::Readable for LCD_CAM_INT_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lcd_cam_int_map::W`](W) writer structure"]
 impl crate::Writable for LCD_CAM_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LCD_CAM_INT_MAP to value 0x10"]
 impl crate::Resettable for LCD_CAM_INT_MAP_SPEC {

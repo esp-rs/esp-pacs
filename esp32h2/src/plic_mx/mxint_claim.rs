@@ -38,10 +38,6 @@ impl crate::Readable for MXINT_CLAIM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mxint_claim::W`](W) writer structure"]
 impl crate::Writable for MXINT_CLAIM_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MXINT_CLAIM to value 0"]
-impl crate::Resettable for MXINT_CLAIM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MXINT_CLAIM_SPEC {}

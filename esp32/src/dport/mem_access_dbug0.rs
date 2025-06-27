@@ -92,6 +92,4 @@ impl crate::RegisterSpec for MEM_ACCESS_DBUG0_SPEC {
 #[doc = "`read()` method returns [`mem_access_dbug0::R`](R) reader structure"]
 impl crate::Readable for MEM_ACCESS_DBUG0_SPEC {}
 #[doc = "`reset()` method sets MEM_ACCESS_DBUG0 to value 0"]
-impl crate::Resettable for MEM_ACCESS_DBUG0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MEM_ACCESS_DBUG0_SPEC {}

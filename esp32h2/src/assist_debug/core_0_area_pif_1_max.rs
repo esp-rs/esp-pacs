@@ -38,10 +38,6 @@ impl crate::Readable for CORE_0_AREA_PIF_1_MAX_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_0_area_pif_1_max::W`](W) writer structure"]
 impl crate::Writable for CORE_0_AREA_PIF_1_MAX_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_0_AREA_PIF_1_MAX to value 0"]
-impl crate::Resettable for CORE_0_AREA_PIF_1_MAX_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CORE_0_AREA_PIF_1_MAX_SPEC {}

@@ -53,8 +53,6 @@ impl crate::Readable for EDMA_PMS_I2S0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`edma_pms_i2s0::W`](W) writer structure"]
 impl crate::Writable for EDMA_PMS_I2S0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EDMA_PMS_I2S0 to value 0x0f"]
 impl crate::Resettable for EDMA_PMS_I2S0_SPEC {

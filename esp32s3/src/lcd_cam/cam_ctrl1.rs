@@ -187,10 +187,6 @@ impl crate::Readable for CAM_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cam_ctrl1::W`](W) writer structure"]
 impl crate::Writable for CAM_CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CAM_CTRL1 to value 0"]
-impl crate::Resettable for CAM_CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CAM_CTRL1_SPEC {}

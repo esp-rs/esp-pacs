@@ -44,10 +44,6 @@ impl crate::RegisterSpec for REGDMA_ETM_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [`regdma_etm_ctrl::W`](W) writer structure"]
 impl crate::Writable for REGDMA_ETM_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGDMA_ETM_CTRL to value 0"]
-impl crate::Resettable for REGDMA_ETM_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REGDMA_ETM_CTRL_SPEC {}

@@ -38,8 +38,6 @@ impl crate::Readable for AT_CMD_PRECNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`at_cmd_precnt::W`](W) writer structure"]
 impl crate::Writable for AT_CMD_PRECNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AT_CMD_PRECNT to value 0x0018_6a00"]
 impl crate::Resettable for AT_CMD_PRECNT_SPEC {

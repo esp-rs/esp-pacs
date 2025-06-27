@@ -25,6 +25,4 @@ impl crate::RegisterSpec for BUFADDR_SPEC {
 #[doc = "`read()` method returns [`bufaddr::R`](R) reader structure"]
 impl crate::Readable for BUFADDR_SPEC {}
 #[doc = "`reset()` method sets BUFADDR to value 0"]
-impl crate::Resettable for BUFADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BUFADDR_SPEC {}

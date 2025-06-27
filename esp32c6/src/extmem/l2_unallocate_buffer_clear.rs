@@ -25,6 +25,4 @@ impl crate::RegisterSpec for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {
 #[doc = "`read()` method returns [`l2_unallocate_buffer_clear::R`](R) reader structure"]
 impl crate::Readable for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {}
 #[doc = "`reset()` method sets L2_UNALLOCATE_BUFFER_CLEAR to value 0"]
-impl crate::Resettable for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L2_UNALLOCATE_BUFFER_CLEAR_SPEC {}

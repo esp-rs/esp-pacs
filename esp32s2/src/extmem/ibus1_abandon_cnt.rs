@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IBUS1_ABANDON_CNT_SPEC {
 #[doc = "`read()` method returns [`ibus1_abandon_cnt::R`](R) reader structure"]
 impl crate::Readable for IBUS1_ABANDON_CNT_SPEC {}
 #[doc = "`reset()` method sets IBUS1_ABANDON_CNT to value 0"]
-impl crate::Resettable for IBUS1_ABANDON_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IBUS1_ABANDON_CNT_SPEC {}

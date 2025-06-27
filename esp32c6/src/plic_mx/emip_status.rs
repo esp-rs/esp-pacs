@@ -25,6 +25,4 @@ impl crate::RegisterSpec for EMIP_STATUS_SPEC {
 #[doc = "`read()` method returns [`emip_status::R`](R) reader structure"]
 impl crate::Readable for EMIP_STATUS_SPEC {}
 #[doc = "`reset()` method sets EMIP_STATUS to value 0"]
-impl crate::Resettable for EMIP_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EMIP_STATUS_SPEC {}

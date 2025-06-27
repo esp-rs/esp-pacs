@@ -38,10 +38,6 @@ impl crate::Readable for PD_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pd_sel::W`](W) writer structure"]
 impl crate::Writable for PD_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PD_SEL to value 0"]
-impl crate::Resettable for PD_SEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PD_SEL_SPEC {}

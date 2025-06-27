@@ -38,10 +38,6 @@ impl crate::Readable for SLP_WAKEUP_CAUSE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slp_wakeup_cause::W`](W) writer structure"]
 impl crate::Writable for SLP_WAKEUP_CAUSE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLP_WAKEUP_CAUSE to value 0"]
-impl crate::Resettable for SLP_WAKEUP_CAUSE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLP_WAKEUP_CAUSE_SPEC {}

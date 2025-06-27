@@ -14,6 +14,4 @@ impl crate::RegisterSpec for DMATXPOLLDEMAND_SPEC {
 #[doc = "`read()` method returns [`dmatxpolldemand::R`](R) reader structure"]
 impl crate::Readable for DMATXPOLLDEMAND_SPEC {}
 #[doc = "`reset()` method sets DMATXPOLLDEMAND to value 0"]
-impl crate::Resettable for DMATXPOLLDEMAND_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMATXPOLLDEMAND_SPEC {}

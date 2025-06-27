@@ -25,6 +25,4 @@ impl crate::RegisterSpec for M0_STATUS_SPEC {
 #[doc = "`read()` method returns [`m0_status::R`](R) reader structure"]
 impl crate::Readable for M0_STATUS_SPEC {}
 #[doc = "`reset()` method sets M0_STATUS to value 0"]
-impl crate::Resettable for M0_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for M0_STATUS_SPEC {}

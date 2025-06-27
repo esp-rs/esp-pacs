@@ -25,6 +25,4 @@ impl crate::RegisterSpec for _0_TX_ERREOF_DES_ADDR_SPEC {
 #[doc = "`read()` method returns [`_0_tx_erreof_des_addr::R`](R) reader structure"]
 impl crate::Readable for _0_TX_ERREOF_DES_ADDR_SPEC {}
 #[doc = "`reset()` method sets _0_TX_ERREOF_DES_ADDR to value 0"]
-impl crate::Resettable for _0_TX_ERREOF_DES_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for _0_TX_ERREOF_DES_ADDR_SPEC {}

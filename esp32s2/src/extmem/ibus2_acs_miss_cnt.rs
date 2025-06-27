@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IBUS2_ACS_MISS_CNT_SPEC {
 #[doc = "`read()` method returns [`ibus2_acs_miss_cnt::R`](R) reader structure"]
 impl crate::Readable for IBUS2_ACS_MISS_CNT_SPEC {}
 #[doc = "`reset()` method sets IBUS2_ACS_MISS_CNT to value 0"]
-impl crate::Resettable for IBUS2_ACS_MISS_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IBUS2_ACS_MISS_CNT_SPEC {}

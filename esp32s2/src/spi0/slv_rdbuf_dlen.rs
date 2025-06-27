@@ -68,10 +68,6 @@ impl crate::Readable for SLV_RDBUF_DLEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slv_rdbuf_dlen::W`](W) writer structure"]
 impl crate::Writable for SLV_RDBUF_DLEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLV_RDBUF_DLEN to value 0"]
-impl crate::Resettable for SLV_RDBUF_DLEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SLV_RDBUF_DLEN_SPEC {}

@@ -53,10 +53,6 @@ impl crate::Readable for AHB_TEST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ahb_test::W`](W) writer structure"]
 impl crate::Writable for AHB_TEST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AHB_TEST to value 0"]
-impl crate::Resettable for AHB_TEST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHB_TEST_SPEC {}

@@ -33,6 +33,4 @@ impl crate::RegisterSpec for TOKEN_LAT_SPEC {
 #[doc = "`read()` method returns [`token_lat::R`](R) reader structure"]
 impl crate::Readable for TOKEN_LAT_SPEC {}
 #[doc = "`reset()` method sets TOKEN_LAT to value 0"]
-impl crate::Resettable for TOKEN_LAT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TOKEN_LAT_SPEC {}

@@ -214,8 +214,6 @@ impl crate::Readable for CFG_DATA1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg_data1::W`](W) writer structure"]
 impl crate::Writable for CFG_DATA1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG_DATA1 to value 0x0111_0011"]
 impl crate::Resettable for CFG_DATA1_SPEC {

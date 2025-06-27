@@ -25,6 +25,4 @@ impl crate::RegisterSpec for PRO_CACHE_3_SPEC {
 #[doc = "`read()` method returns [`pro_cache_3::R`](R) reader structure"]
 impl crate::Readable for PRO_CACHE_3_SPEC {}
 #[doc = "`reset()` method sets PRO_CACHE_3 to value 0"]
-impl crate::Resettable for PRO_CACHE_3_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PRO_CACHE_3_SPEC {}

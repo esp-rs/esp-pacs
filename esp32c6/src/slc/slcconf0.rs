@@ -383,8 +383,6 @@ impl crate::Readable for SLCCONF0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slcconf0::W`](W) writer structure"]
 impl crate::Writable for SLCCONF0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLCCONF0 to value 0xff3c_ff00"]
 impl crate::Resettable for SLCCONF0_SPEC {

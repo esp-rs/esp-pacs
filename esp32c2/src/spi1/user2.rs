@@ -53,8 +53,6 @@ impl crate::Readable for USER2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`user2::W`](W) writer structure"]
 impl crate::Writable for USER2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets USER2 to value 0x7000_0000"]
 impl crate::Resettable for USER2_SPEC {

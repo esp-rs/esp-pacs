@@ -103,8 +103,6 @@ impl crate::Readable for SLC_BURST_LEN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slc_burst_len::W`](W) writer structure"]
 impl crate::Writable for SLC_BURST_LEN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLC_BURST_LEN to value 0x0f"]
 impl crate::Resettable for SLC_BURST_LEN_SPEC {

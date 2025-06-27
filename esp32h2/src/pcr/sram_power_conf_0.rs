@@ -68,8 +68,6 @@ impl crate::Readable for SRAM_POWER_CONF_0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sram_power_conf_0::W`](W) writer structure"]
 impl crate::Writable for SRAM_POWER_CONF_0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRAM_POWER_CONF_0 to value 0x6000"]
 impl crate::Resettable for SRAM_POWER_CONF_0_SPEC {

@@ -113,8 +113,6 @@ impl crate::Readable for FILTER_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_ctrl::W`](W) writer structure"]
 impl crate::Writable for FILTER_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FILTER_CTRL to value 0x2040_0000"]
 impl crate::Resettable for FILTER_CTRL_SPEC {

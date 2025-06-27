@@ -57,6 +57,4 @@ impl crate::RegisterSpec for L1_BYPASS_CACHE_CONF_SPEC {
 #[doc = "`read()` method returns [`l1_bypass_cache_conf::R`](R) reader structure"]
 impl crate::Readable for L1_BYPASS_CACHE_CONF_SPEC {}
 #[doc = "`reset()` method sets L1_BYPASS_CACHE_CONF to value 0"]
-impl crate::Resettable for L1_BYPASS_CACHE_CONF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_BYPASS_CACHE_CONF_SPEC {}

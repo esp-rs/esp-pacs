@@ -143,8 +143,6 @@ impl crate::Readable for FRONT_END_MEM_PD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`front_end_mem_pd::W`](W) writer structure"]
 impl crate::Writable for FRONT_END_MEM_PD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRONT_END_MEM_PD to value 0x55"]
 impl crate::Resettable for FRONT_END_MEM_PD_SPEC {

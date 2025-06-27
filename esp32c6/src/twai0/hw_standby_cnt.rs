@@ -38,8 +38,6 @@ impl crate::Readable for HW_STANDBY_CNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hw_standby_cnt::W`](W) writer structure"]
 impl crate::Writable for HW_STANDBY_CNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HW_STANDBY_CNT to value 0x01"]
 impl crate::Resettable for HW_STANDBY_CNT_SPEC {

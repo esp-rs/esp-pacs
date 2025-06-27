@@ -98,8 +98,6 @@ impl crate::Readable for SWD_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`swd_conf::W`](W) writer structure"]
 impl crate::Writable for SWD_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SWD_CONF to value 0x04b0_0000"]
 impl crate::Resettable for SWD_CONF_SPEC {

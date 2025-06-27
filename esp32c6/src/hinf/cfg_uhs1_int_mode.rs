@@ -83,10 +83,6 @@ impl crate::Readable for CFG_UHS1_INT_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cfg_uhs1_int_mode::W`](W) writer structure"]
 impl crate::Writable for CFG_UHS1_INT_MODE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CFG_UHS1_INT_MODE to value 0"]
-impl crate::Resettable for CFG_UHS1_INT_MODE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CFG_UHS1_INT_MODE_SPEC {}

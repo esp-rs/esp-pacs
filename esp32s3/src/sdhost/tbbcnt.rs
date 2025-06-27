@@ -25,6 +25,4 @@ impl crate::RegisterSpec for TBBCNT_SPEC {
 #[doc = "`read()` method returns [`tbbcnt::R`](R) reader structure"]
 impl crate::Readable for TBBCNT_SPEC {}
 #[doc = "`reset()` method sets TBBCNT to value 0"]
-impl crate::Resettable for TBBCNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TBBCNT_SPEC {}

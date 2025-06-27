@@ -38,8 +38,6 @@ impl crate::Readable for FLASH_ACE0_ATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`flash_ace0_attr::W`](W) writer structure"]
 impl crate::Writable for FLASH_ACE0_ATTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLASH_ACE0_ATTR to value 0x07"]
 impl crate::Resettable for FLASH_ACE0_ATTR_SPEC {

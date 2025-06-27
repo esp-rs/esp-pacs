@@ -25,6 +25,4 @@ impl crate::RegisterSpec for ARB_LOST_CAP_SPEC {
 #[doc = "`read()` method returns [`arb_lost_cap::R`](R) reader structure"]
 impl crate::Readable for ARB_LOST_CAP_SPEC {}
 #[doc = "`reset()` method sets ARB_LOST_CAP to value 0"]
-impl crate::Resettable for ARB_LOST_CAP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ARB_LOST_CAP_SPEC {}

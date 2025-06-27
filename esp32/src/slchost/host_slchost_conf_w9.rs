@@ -83,10 +83,6 @@ impl crate::Readable for HOST_SLCHOST_CONF_W9_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`host_slchost_conf_w9::W`](W) writer structure"]
 impl crate::Writable for HOST_SLCHOST_CONF_W9_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HOST_SLCHOST_CONF_W9 to value 0"]
-impl crate::Resettable for HOST_SLCHOST_CONF_W9_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_SLCHOST_CONF_W9_SPEC {}

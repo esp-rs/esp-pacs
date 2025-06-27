@@ -243,8 +243,6 @@ impl crate::Readable for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`core_x_dram0_pms_constrain_1::W`](W) writer structure"]
 impl crate::Writable for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CORE_X_DRAM0_PMS_CONSTRAIN_1 to value 0x0f0f_f0ff"]
 impl crate::Resettable for CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC {

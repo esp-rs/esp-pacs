@@ -83,8 +83,6 @@ impl crate::Readable for XTAL32K_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xtal32k_conf::W`](W) writer structure"]
 impl crate::Writable for XTAL32K_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XTAL32K_CONF to value 0x0ff0_0000"]
 impl crate::Resettable for XTAL32K_CONF_SPEC {

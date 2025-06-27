@@ -130,10 +130,6 @@ impl crate::Readable for DIN_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`din_mode::W`](W) writer structure"]
 impl crate::Writable for DIN_MODE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DIN_MODE to value 0"]
-impl crate::Resettable for DIN_MODE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DIN_MODE_SPEC {}

@@ -23,6 +23,4 @@ impl crate::RegisterSpec for T0_MEM_SPEC {
 #[doc = "`read()` method returns [`t0_mem::R`](R) reader structure"]
 impl crate::Readable for T0_MEM_SPEC {}
 #[doc = "`reset()` method sets T0_MEM[%s] to value 0"]
-impl crate::Resettable for T0_MEM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for T0_MEM_SPEC {}

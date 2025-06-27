@@ -128,10 +128,7 @@ impl crate::Readable for INT_ENA_RTC_W1TS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_ena_rtc_w1ts::W`](W) writer structure"]
 impl crate::Writable for INT_ENA_RTC_W1TS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0010_860b;
 }
 #[doc = "`reset()` method sets INT_ENA_RTC_W1TS to value 0"]
-impl crate::Resettable for INT_ENA_RTC_W1TS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INT_ENA_RTC_W1TS_SPEC {}

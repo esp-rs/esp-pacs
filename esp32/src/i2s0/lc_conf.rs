@@ -233,8 +233,6 @@ impl crate::Readable for LC_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lc_conf::W`](W) writer structure"]
 impl crate::Writable for LC_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LC_CONF to value 0x0100"]
 impl crate::Resettable for LC_CONF_SPEC {

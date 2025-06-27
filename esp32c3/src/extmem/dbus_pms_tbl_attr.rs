@@ -53,8 +53,6 @@ impl crate::Readable for DBUS_PMS_TBL_ATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dbus_pms_tbl_attr::W`](W) writer structure"]
 impl crate::Writable for DBUS_PMS_TBL_ATTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DBUS_PMS_TBL_ATTR to value 0x0f"]
 impl crate::Resettable for DBUS_PMS_TBL_ATTR_SPEC {

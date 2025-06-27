@@ -49,6 +49,4 @@ impl crate::RegisterSpec for DOUT_MODE_SPEC {
 #[doc = "`read()` method returns [`dout_mode::R`](R) reader structure"]
 impl crate::Readable for DOUT_MODE_SPEC {}
 #[doc = "`reset()` method sets DOUT_MODE to value 0"]
-impl crate::Resettable for DOUT_MODE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DOUT_MODE_SPEC {}

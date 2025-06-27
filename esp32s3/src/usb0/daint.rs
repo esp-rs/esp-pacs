@@ -135,6 +135,4 @@ impl crate::RegisterSpec for DAINT_SPEC {
 #[doc = "`read()` method returns [`daint::R`](R) reader structure"]
 impl crate::Readable for DAINT_SPEC {}
 #[doc = "`reset()` method sets DAINT to value 0"]
-impl crate::Resettable for DAINT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DAINT_SPEC {}

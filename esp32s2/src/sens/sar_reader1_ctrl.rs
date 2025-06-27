@@ -98,8 +98,6 @@ impl crate::Readable for SAR_READER1_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_reader1_ctrl::W`](W) writer structure"]
 impl crate::Writable for SAR_READER1_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_READER1_CTRL to value 0x2004_0002"]
 impl crate::Resettable for SAR_READER1_CTRL_SPEC {

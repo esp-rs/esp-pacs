@@ -38,8 +38,6 @@ impl crate::Readable for GRXFSIZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`grxfsiz::W`](W) writer structure"]
 impl crate::Writable for GRXFSIZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GRXFSIZ to value 0x0100"]
 impl crate::Resettable for GRXFSIZ_SPEC {

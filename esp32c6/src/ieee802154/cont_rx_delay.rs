@@ -38,10 +38,6 @@ impl crate::Readable for CONT_RX_DELAY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cont_rx_delay::W`](W) writer structure"]
 impl crate::Writable for CONT_RX_DELAY_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONT_RX_DELAY to value 0"]
-impl crate::Resettable for CONT_RX_DELAY_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CONT_RX_DELAY_SPEC {}

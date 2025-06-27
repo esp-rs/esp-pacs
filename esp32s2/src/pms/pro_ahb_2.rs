@@ -131,8 +131,6 @@ impl crate::Readable for PRO_AHB_2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pro_ahb_2::W`](W) writer structure"]
 impl crate::Writable for PRO_AHB_2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PRO_AHB_2 to value 0x0001_f800"]
 impl crate::Resettable for PRO_AHB_2_SPEC {

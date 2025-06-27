@@ -25,6 +25,4 @@ impl crate::RegisterSpec for APP_DCACHE_DBUG7_SPEC {
 #[doc = "`read()` method returns [`app_dcache_dbug7::R`](R) reader structure"]
 impl crate::Readable for APP_DCACHE_DBUG7_SPEC {}
 #[doc = "`reset()` method sets APP_DCACHE_DBUG7 to value 0"]
-impl crate::Resettable for APP_DCACHE_DBUG7_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APP_DCACHE_DBUG7_SPEC {}

@@ -225,10 +225,6 @@ impl crate::Readable for LCD_USER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lcd_user::W`](W) writer structure"]
 impl crate::Writable for LCD_USER_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LCD_USER to value 0"]
-impl crate::Resettable for LCD_USER_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LCD_USER_SPEC {}

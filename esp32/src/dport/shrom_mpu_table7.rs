@@ -38,8 +38,6 @@ impl crate::Readable for SHROM_MPU_TABLE7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`shrom_mpu_table7::W`](W) writer structure"]
 impl crate::Writable for SHROM_MPU_TABLE7_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SHROM_MPU_TABLE7 to value 0x01"]
 impl crate::Resettable for SHROM_MPU_TABLE7_SPEC {

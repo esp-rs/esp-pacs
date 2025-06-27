@@ -25,6 +25,4 @@ impl crate::RegisterSpec for PRO_DRAM0_4_SPEC {
 #[doc = "`read()` method returns [`pro_dram0_4::R`](R) reader structure"]
 impl crate::Readable for PRO_DRAM0_4_SPEC {}
 #[doc = "`reset()` method sets PRO_DRAM0_4 to value 0"]
-impl crate::Resettable for PRO_DRAM0_4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PRO_DRAM0_4_SPEC {}

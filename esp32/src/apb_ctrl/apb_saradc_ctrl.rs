@@ -218,8 +218,6 @@ impl crate::Readable for APB_SARADC_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`apb_saradc_ctrl::W`](W) writer structure"]
 impl crate::Writable for APB_SARADC_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APB_SARADC_CTRL to value 0x007f_8240"]
 impl crate::Resettable for APB_SARADC_CTRL_SPEC {

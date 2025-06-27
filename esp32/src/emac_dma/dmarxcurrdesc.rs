@@ -14,6 +14,4 @@ impl crate::RegisterSpec for DMARXCURRDESC_SPEC {
 #[doc = "`read()` method returns [`dmarxcurrdesc::R`](R) reader structure"]
 impl crate::Readable for DMARXCURRDESC_SPEC {}
 #[doc = "`reset()` method sets DMARXCURRDESC to value 0"]
-impl crate::Resettable for DMARXCURRDESC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DMARXCURRDESC_SPEC {}

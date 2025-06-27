@@ -83,8 +83,6 @@ impl crate::Readable for TAG_FO_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tag_fo_ctrl::W`](W) writer structure"]
 impl crate::Writable for TAG_FO_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAG_FO_CTRL to value 0x0101"]
 impl crate::Resettable for TAG_FO_CTRL_SPEC {

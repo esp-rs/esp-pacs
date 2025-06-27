@@ -28,6 +28,4 @@ impl crate::RegisterSpec for COMB_PVT_ERR_HVT_SITE2_SPEC {
 #[doc = "`read()` method returns [`comb_pvt_err_hvt_site2::R`](R) reader structure"]
 impl crate::Readable for COMB_PVT_ERR_HVT_SITE2_SPEC {}
 #[doc = "`reset()` method sets COMB_PVT_ERR_HVT_SITE2 to value 0"]
-impl crate::Resettable for COMB_PVT_ERR_HVT_SITE2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for COMB_PVT_ERR_HVT_SITE2_SPEC {}

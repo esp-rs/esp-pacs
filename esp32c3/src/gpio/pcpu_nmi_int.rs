@@ -25,6 +25,4 @@ impl crate::RegisterSpec for PCPU_NMI_INT_SPEC {
 #[doc = "`read()` method returns [`pcpu_nmi_int::R`](R) reader structure"]
 impl crate::Readable for PCPU_NMI_INT_SPEC {}
 #[doc = "`reset()` method sets PCPU_NMI_INT to value 0"]
-impl crate::Resettable for PCPU_NMI_INT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PCPU_NMI_INT_SPEC {}

@@ -158,8 +158,6 @@ impl crate::Readable for CACHE_SCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cache_sctrl::W`](W) writer structure"]
 impl crate::Writable for CACHE_SCTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CACHE_SCTRL to value 0x15c0_4830"]
 impl crate::Resettable for CACHE_SCTRL_SPEC {

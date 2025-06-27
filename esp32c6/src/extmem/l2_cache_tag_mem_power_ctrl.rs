@@ -50,6 +50,4 @@ impl crate::RegisterSpec for L2_CACHE_TAG_MEM_POWER_CTRL_SPEC {
 #[doc = "`read()` method returns [`l2_cache_tag_mem_power_ctrl::R`](R) reader structure"]
 impl crate::Readable for L2_CACHE_TAG_MEM_POWER_CTRL_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_TAG_MEM_POWER_CTRL to value 0"]
-impl crate::Resettable for L2_CACHE_TAG_MEM_POWER_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L2_CACHE_TAG_MEM_POWER_CTRL_SPEC {}

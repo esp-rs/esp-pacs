@@ -38,8 +38,6 @@ impl crate::Readable for SCL_ST_TIME_OUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scl_st_time_out::W`](W) writer structure"]
 impl crate::Writable for SCL_ST_TIME_OUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCL_ST_TIME_OUT to value 0x10"]
 impl crate::Resettable for SCL_ST_TIME_OUT_SPEC {

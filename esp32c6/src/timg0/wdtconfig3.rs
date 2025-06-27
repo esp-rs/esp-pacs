@@ -38,8 +38,6 @@ impl crate::Readable for WDTCONFIG3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdtconfig3::W`](W) writer structure"]
 impl crate::Writable for WDTCONFIG3_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WDTCONFIG3 to value 0x07ff_ffff"]
 impl crate::Resettable for WDTCONFIG3_SPEC {

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DBUS2_ACS_WB_CNT_SPEC {
 #[doc = "`read()` method returns [`dbus2_acs_wb_cnt::R`](R) reader structure"]
 impl crate::Readable for DBUS2_ACS_WB_CNT_SPEC {}
 #[doc = "`reset()` method sets DBUS2_ACS_WB_CNT to value 0"]
-impl crate::Resettable for DBUS2_ACS_WB_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DBUS2_ACS_WB_CNT_SPEC {}

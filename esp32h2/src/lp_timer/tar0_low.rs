@@ -38,10 +38,6 @@ impl crate::Readable for TAR0_LOW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tar0_low::W`](W) writer structure"]
 impl crate::Writable for TAR0_LOW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TAR0_LOW to value 0"]
-impl crate::Resettable for TAR0_LOW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TAR0_LOW_SPEC {}

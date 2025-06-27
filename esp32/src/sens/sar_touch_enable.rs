@@ -68,8 +68,6 @@ impl crate::Readable for SAR_TOUCH_ENABLE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_touch_enable::W`](W) writer structure"]
 impl crate::Writable for SAR_TOUCH_ENABLE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_TOUCH_ENABLE to value 0x3fff_ffff"]
 impl crate::Resettable for SAR_TOUCH_ENABLE_SPEC {

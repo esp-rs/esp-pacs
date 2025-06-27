@@ -60,8 +60,6 @@ impl crate::Readable for COMB_PVT_NVT_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`comb_pvt_nvt_conf::W`](W) writer structure"]
 impl crate::Writable for COMB_PVT_NVT_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COMB_PVT_NVT_CONF to value 0x03"]
 impl crate::Resettable for COMB_PVT_NVT_CONF_SPEC {

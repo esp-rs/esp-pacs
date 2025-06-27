@@ -25,6 +25,4 @@ impl crate::RegisterSpec for LOG_MEM_WRITING_ADDR_SPEC {
 #[doc = "`read()` method returns [`log_mem_writing_addr::R`](R) reader structure"]
 impl crate::Readable for LOG_MEM_WRITING_ADDR_SPEC {}
 #[doc = "`reset()` method sets LOG_MEM_WRITING_ADDR to value 0"]
-impl crate::Resettable for LOG_MEM_WRITING_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LOG_MEM_WRITING_ADDR_SPEC {}

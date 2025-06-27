@@ -89,6 +89,4 @@ impl crate::RegisterSpec for EMACLPI_CRS_SPEC {
 #[doc = "`read()` method returns [`emaclpi_crs::R`](R) reader structure"]
 impl crate::Readable for EMACLPI_CRS_SPEC {}
 #[doc = "`reset()` method sets EMACLPI_CRS to value 0"]
-impl crate::Resettable for EMACLPI_CRS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EMACLPI_CRS_SPEC {}

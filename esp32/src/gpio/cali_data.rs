@@ -41,6 +41,4 @@ impl crate::RegisterSpec for CALI_DATA_SPEC {
 #[doc = "`read()` method returns [`cali_data::R`](R) reader structure"]
 impl crate::Readable for CALI_DATA_SPEC {}
 #[doc = "`reset()` method sets cali_data to value 0"]
-impl crate::Resettable for CALI_DATA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CALI_DATA_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for FRAM_NUM_SPEC {
 #[doc = "`read()` method returns [`fram_num::R`](R) reader structure"]
 impl crate::Readable for FRAM_NUM_SPEC {}
 #[doc = "`reset()` method sets FRAM_NUM to value 0"]
-impl crate::Resettable for FRAM_NUM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FRAM_NUM_SPEC {}

@@ -38,10 +38,6 @@ impl crate::Readable for CACHE_MMU_OWNER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cache_mmu_owner::W`](W) writer structure"]
 impl crate::Writable for CACHE_MMU_OWNER_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CACHE_MMU_OWNER to value 0"]
-impl crate::Resettable for CACHE_MMU_OWNER_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CACHE_MMU_OWNER_SPEC {}

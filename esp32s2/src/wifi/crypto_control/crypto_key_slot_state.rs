@@ -326,10 +326,6 @@ impl crate::Readable for CRYPTO_KEY_SLOT_STATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`crypto_key_slot_state::W`](W) writer structure"]
 impl crate::Writable for CRYPTO_KEY_SLOT_STATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CRYPTO_KEY_SLOT_STATE to value 0"]
-impl crate::Resettable for CRYPTO_KEY_SLOT_STATE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CRYPTO_KEY_SLOT_STATE_SPEC {}

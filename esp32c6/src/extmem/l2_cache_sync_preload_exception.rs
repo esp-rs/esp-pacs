@@ -25,6 +25,4 @@ impl crate::RegisterSpec for L2_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {
 #[doc = "`read()` method returns [`l2_cache_sync_preload_exception::R`](R) reader structure"]
 impl crate::Readable for L2_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {}
 #[doc = "`reset()` method sets L2_CACHE_SYNC_PRELOAD_EXCEPTION to value 0"]
-impl crate::Resettable for L2_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L2_CACHE_SYNC_PRELOAD_EXCEPTION_SPEC {}

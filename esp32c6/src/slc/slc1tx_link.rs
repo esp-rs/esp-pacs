@@ -83,8 +83,6 @@ impl crate::Readable for SLC1TX_LINK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`slc1tx_link::W`](W) writer structure"]
 impl crate::Writable for SLC1TX_LINK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLC1TX_LINK to value 0x8000_0000"]
 impl crate::Resettable for SLC1TX_LINK_SPEC {

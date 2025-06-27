@@ -38,10 +38,6 @@ impl crate::Readable for EXTMEM_REJECT_INT_RAW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`extmem_reject_int_raw::W`](W) writer structure"]
 impl crate::Writable for EXTMEM_REJECT_INT_RAW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EXTMEM_REJECT_INT_RAW to value 0"]
-impl crate::Resettable for EXTMEM_REJECT_INT_RAW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXTMEM_REJECT_INT_RAW_SPEC {}

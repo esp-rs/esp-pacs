@@ -338,10 +338,6 @@ impl crate::Readable for LOW_POWER_ST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`low_power_st::W`](W) writer structure"]
 impl crate::Writable for LOW_POWER_ST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LOW_POWER_ST to value 0"]
-impl crate::Resettable for LOW_POWER_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LOW_POWER_ST_SPEC {}

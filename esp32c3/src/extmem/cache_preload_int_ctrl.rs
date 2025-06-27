@@ -53,10 +53,7 @@ impl crate::Readable for CACHE_PRELOAD_INT_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cache_preload_int_ctrl::W`](W) writer structure"]
 impl crate::Writable for CACHE_PRELOAD_INT_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x04;
 }
 #[doc = "`reset()` method sets CACHE_PRELOAD_INT_CTRL to value 0"]
-impl crate::Resettable for CACHE_PRELOAD_INT_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CACHE_PRELOAD_INT_CTRL_SPEC {}

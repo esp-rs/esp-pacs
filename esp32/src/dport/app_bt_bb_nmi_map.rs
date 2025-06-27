@@ -38,8 +38,6 @@ impl crate::Readable for APP_BT_BB_NMI_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`app_bt_bb_nmi_map::W`](W) writer structure"]
 impl crate::Writable for APP_BT_BB_NMI_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets APP_BT_BB_NMI_MAP to value 0x10"]
 impl crate::Resettable for APP_BT_BB_NMI_MAP_SPEC {
