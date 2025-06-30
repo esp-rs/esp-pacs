@@ -279,5 +279,14 @@ DPORT:
           description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
           bitOffset: 2
           bitWidth: 1
-_include: 
+  PERIP_CLK_EN:
+    _modify:
+      I2C0_EXT0_CLK_EN:
+        name: I2C_EXT0_CLK_EN
+  PERIP_RST_EN:
+    _modify:
+      I2C0_EXT0_RST:
+        name: I2C_EXT0_RST
+
+_include:
     - "esp32-wifi.yaml"
