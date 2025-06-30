@@ -6,9 +6,9 @@ pub type W = crate::W<PERI_RST_EN_SPEC>;
 pub type CRYPTO_AES_RST_R = crate::BitReader;
 #[doc = "Field `CRYPTO_AES_RST` writer - Set the bit to reset AES module. Clear the bit to release AES module."]
 pub type CRYPTO_AES_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CRYPTO_SHA_RST` reader - Set the bit to reset SHA module. Clear the bit to release HA module."]
+#[doc = "Field `CRYPTO_SHA_RST` reader - Set the bit to reset SHA module. Clear the bit to release SHA module."]
 pub type CRYPTO_SHA_RST_R = crate::BitReader;
-#[doc = "Field `CRYPTO_SHA_RST` writer - Set the bit to reset SHA module. Clear the bit to release HA module."]
+#[doc = "Field `CRYPTO_SHA_RST` writer - Set the bit to reset SHA module. Clear the bit to release SHA module."]
 pub type CRYPTO_SHA_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CRYPTO_RSA_RST` reader - Set the bit to reset RSA module. Clear the bit to release RSA module."]
 pub type CRYPTO_RSA_RST_R = crate::BitReader;
@@ -20,7 +20,7 @@ impl R {
     pub fn crypto_aes_rst(&self) -> CRYPTO_AES_RST_R {
         CRYPTO_AES_RST_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Set the bit to reset SHA module. Clear the bit to release HA module."]
+    #[doc = "Bit 1 - Set the bit to reset SHA module. Clear the bit to release SHA module."]
     #[inline(always)]
     pub fn crypto_sha_rst(&self) -> CRYPTO_SHA_RST_R {
         CRYPTO_SHA_RST_R::new(((self.bits >> 1) & 1) != 0)
@@ -47,7 +47,7 @@ impl W {
     pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<PERI_RST_EN_SPEC> {
         CRYPTO_AES_RST_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Set the bit to reset SHA module. Clear the bit to release HA module."]
+    #[doc = "Bit 1 - Set the bit to reset SHA module. Clear the bit to release SHA module."]
     #[inline(always)]
     pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERI_RST_EN_SPEC> {
         CRYPTO_SHA_RST_W::new(self, 1)
