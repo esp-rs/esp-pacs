@@ -30,10 +30,10 @@ pub type UART1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SPI2_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_RST` writer - "]
 pub type SPI2_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2C0_EXT0_RST` reader - "]
-pub type I2C0_EXT0_RST_R = crate::BitReader;
-#[doc = "Field `I2C0_EXT0_RST` writer - "]
-pub type I2C0_EXT0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2C_EXT0_RST` reader - "]
+pub type I2C_EXT0_RST_R = crate::BitReader;
+#[doc = "Field `I2C_EXT0_RST` writer - "]
+pub type I2C_EXT0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UHCI0_RST` reader - "]
 pub type UHCI0_RST_R = crate::BitReader;
 #[doc = "Field `UHCI0_RST` writer - "]
@@ -148,8 +148,8 @@ impl R {
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn i2c0_ext0_rst(&self) -> I2C0_EXT0_RST_R {
-        I2C0_EXT0_RST_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn i2c_ext0_rst(&self) -> I2C_EXT0_RST_R {
+        I2C_EXT0_RST_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
@@ -258,7 +258,7 @@ impl core::fmt::Debug for R {
             .field("i2s0_rst", &self.i2s0_rst())
             .field("uart1_rst", &self.uart1_rst())
             .field("spi2_rst", &self.spi2_rst())
-            .field("i2c0_ext0_rst", &self.i2c0_ext0_rst())
+            .field("i2c_ext0_rst", &self.i2c_ext0_rst())
             .field("uhci0_rst", &self.uhci0_rst())
             .field("rmt_rst", &self.rmt_rst())
             .field("pcnt_rst", &self.pcnt_rst())
@@ -319,8 +319,8 @@ impl W {
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn i2c0_ext0_rst(&mut self) -> I2C0_EXT0_RST_W<PERIP_RST_EN_SPEC> {
-        I2C0_EXT0_RST_W::new(self, 7)
+    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN_SPEC> {
+        I2C_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]

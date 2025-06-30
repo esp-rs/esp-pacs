@@ -86,10 +86,10 @@ pub type TWAI_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type PWM1_RST_R = crate::BitReader;
 #[doc = "Field `PWM1_RST` writer - reg_pwm1_rst"]
 pub type PWM1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S1_RST` reader - reg_i2s1_rst"]
-pub type I2S1_RST_R = crate::BitReader;
-#[doc = "Field `I2S1_RST` writer - reg_i2s1_rst"]
-pub type I2S1_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2S0_RST` reader - reg_i2s1_rst"]
+pub type I2S0_RST_R = crate::BitReader;
+#[doc = "Field `I2S0_RST` writer - reg_i2s1_rst"]
+pub type I2S0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_DMA_RST` reader - reg_spi2_dma_rst"]
 pub type SPI2_DMA_RST_R = crate::BitReader;
 #[doc = "Field `SPI2_DMA_RST` writer - reg_spi2_dma_rst"]
@@ -238,8 +238,8 @@ impl R {
     }
     #[doc = "Bit 21 - reg_i2s1_rst"]
     #[inline(always)]
-    pub fn i2s1_rst(&self) -> I2S1_RST_R {
-        I2S1_RST_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn i2s0_rst(&self) -> I2S0_RST_R {
+        I2S0_RST_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - reg_spi2_dma_rst"]
     #[inline(always)]
@@ -317,7 +317,7 @@ impl core::fmt::Debug for R {
             .field("ext1_rst", &self.ext1_rst())
             .field("twai_rst", &self.twai_rst())
             .field("pwm1_rst", &self.pwm1_rst())
-            .field("i2s1_rst", &self.i2s1_rst())
+            .field("i2s0_rst", &self.i2s0_rst())
             .field("spi2_dma_rst", &self.spi2_dma_rst())
             .field("usb_device_rst", &self.usb_device_rst())
             .field("uart_mem_rst", &self.uart_mem_rst())
@@ -439,8 +439,8 @@ impl W {
     }
     #[doc = "Bit 21 - reg_i2s1_rst"]
     #[inline(always)]
-    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN0_SPEC> {
-        I2S1_RST_W::new(self, 21)
+    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC> {
+        I2S0_RST_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_spi2_dma_rst"]
     #[inline(always)]
