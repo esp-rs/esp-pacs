@@ -18,10 +18,6 @@ pub type UART_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type WDG_CLK_EN_R = crate::BitReader;
 #[doc = "Field `WDG_CLK_EN` writer - reg_wdg_clk_en"]
 pub type WDG_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S0_CLK_EN` reader - reg_i2s0_clk_en"]
-pub type I2S0_CLK_EN_R = crate::BitReader;
-#[doc = "Field `I2S0_CLK_EN` writer - reg_i2s0_clk_en"]
-pub type I2S0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_CLK_EN` reader - reg_uart1_clk_en"]
 pub type UART1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `UART1_CLK_EN` writer - reg_uart1_clk_en"]
@@ -86,10 +82,10 @@ pub type TWAI_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type PWM1_CLK_EN_R = crate::BitReader;
 #[doc = "Field `PWM1_CLK_EN` writer - reg_pwm1_clk_en"]
 pub type PWM1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S1_CLK_EN` reader - reg_i2s1_clk_en"]
-pub type I2S1_CLK_EN_R = crate::BitReader;
-#[doc = "Field `I2S1_CLK_EN` writer - reg_i2s1_clk_en"]
-pub type I2S1_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I2S0_CLK_EN` reader - reg_i2s1_clk_en"]
+pub type I2S0_CLK_EN_R = crate::BitReader;
+#[doc = "Field `I2S0_CLK_EN` writer - reg_i2s1_clk_en"]
+pub type I2S0_CLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPI2_DMA_CLK_EN` reader - reg_spi2_dma_clk_en"]
 pub type SPI2_DMA_CLK_EN_R = crate::BitReader;
 #[doc = "Field `SPI2_DMA_CLK_EN` writer - reg_spi2_dma_clk_en"]
@@ -150,11 +146,6 @@ impl R {
     #[inline(always)]
     pub fn wdg_clk_en(&self) -> WDG_CLK_EN_R {
         WDG_CLK_EN_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - reg_i2s0_clk_en"]
-    #[inline(always)]
-    pub fn i2s0_clk_en(&self) -> I2S0_CLK_EN_R {
-        I2S0_CLK_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_uart1_clk_en"]
     #[inline(always)]
@@ -238,8 +229,8 @@ impl R {
     }
     #[doc = "Bit 21 - reg_i2s1_clk_en"]
     #[inline(always)]
-    pub fn i2s1_clk_en(&self) -> I2S1_CLK_EN_R {
-        I2S1_CLK_EN_R::new(((self.bits >> 21) & 1) != 0)
+    pub fn i2s0_clk_en(&self) -> I2S0_CLK_EN_R {
+        I2S0_CLK_EN_R::new(((self.bits >> 21) & 1) != 0)
     }
     #[doc = "Bit 22 - reg_spi2_dma_clk_en"]
     #[inline(always)]
@@ -300,7 +291,6 @@ impl core::fmt::Debug for R {
             .field("spi01_clk_en", &self.spi01_clk_en())
             .field("uart_clk_en", &self.uart_clk_en())
             .field("wdg_clk_en", &self.wdg_clk_en())
-            .field("i2s0_clk_en", &self.i2s0_clk_en())
             .field("uart1_clk_en", &self.uart1_clk_en())
             .field("spi2_clk_en", &self.spi2_clk_en())
             .field("i2c_ext0_clk_en", &self.i2c_ext0_clk_en())
@@ -317,7 +307,7 @@ impl core::fmt::Debug for R {
             .field("ext1_clk_en", &self.ext1_clk_en())
             .field("twai_clk_en", &self.twai_clk_en())
             .field("pwm1_clk_en", &self.pwm1_clk_en())
-            .field("i2s1_clk_en", &self.i2s1_clk_en())
+            .field("i2s0_clk_en", &self.i2s0_clk_en())
             .field("spi2_dma_clk_en", &self.spi2_dma_clk_en())
             .field("usb_device_clk_en", &self.usb_device_clk_en())
             .field("uart_mem_clk_en", &self.uart_mem_clk_en())
@@ -351,11 +341,6 @@ impl W {
     #[inline(always)]
     pub fn wdg_clk_en(&mut self) -> WDG_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
         WDG_CLK_EN_W::new(self, 3)
-    }
-    #[doc = "Bit 4 - reg_i2s0_clk_en"]
-    #[inline(always)]
-    pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
-        I2S0_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_uart1_clk_en"]
     #[inline(always)]
@@ -439,8 +424,8 @@ impl W {
     }
     #[doc = "Bit 21 - reg_i2s1_clk_en"]
     #[inline(always)]
-    pub fn i2s1_clk_en(&mut self) -> I2S1_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
-        I2S1_CLK_EN_W::new(self, 21)
+    pub fn i2s0_clk_en(&mut self) -> I2S0_CLK_EN_W<PERIP_CLK_EN0_SPEC> {
+        I2S0_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_spi2_dma_clk_en"]
     #[inline(always)]

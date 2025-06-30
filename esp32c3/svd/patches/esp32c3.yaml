@@ -297,6 +297,13 @@ INTERRUPT_CORE0:
   _array:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
+  _modify:
+    I2S1_INT_MAP:
+      name: I2S0_INT_MAP
+  I2S0_INT_MAP:
+    _modify:
+      I2S1_INT_MAP:
+        name: I2S0_INT_MAP
 
 TIMG0:
   _include: ../../../common_patches/tim_collect.yaml
@@ -415,3 +422,17 @@ RSA:
       CLEAR_INTERRUPT:
         name: INT_CLR
         access: read-write
+
+SYSTEM:
+  PERIP_CLK_EN0:
+    _delete:
+      I2S0_CLK_EN
+    _modify:
+      I2S1_CLK_EN:
+        name: I2S0_CLK_EN
+  PERIP_RST_EN0:
+    _delete:
+      I2S0_RST
+    _modify:
+      I2S1_RST:
+        name: I2S0_RST

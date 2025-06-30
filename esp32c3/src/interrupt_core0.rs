@@ -22,7 +22,7 @@ pub struct RegisterBlock {
     gpio_interrupt_pro_nmi_map: GPIO_INTERRUPT_PRO_NMI_MAP,
     spi_intr_1_map: SPI_INTR_1_MAP,
     spi_intr_2_map: SPI_INTR_2_MAP,
-    i2s1_int_map: I2S1_INT_MAP,
+    i2s0_int_map: I2S0_INT_MAP,
     uart_intr_map: UART_INTR_MAP,
     uart1_intr_map: UART1_INTR_MAP,
     ledc_int_map: LEDC_INT_MAP,
@@ -179,8 +179,8 @@ impl RegisterBlock {
     }
     #[doc = "0x50 - spi2 intr map register"]
     #[inline(always)]
-    pub const fn i2s1_int_map(&self) -> &I2S1_INT_MAP {
-        &self.i2s1_int_map
+    pub const fn i2s0_int_map(&self) -> &I2S0_INT_MAP {
+        &self.i2s0_int_map
     }
     #[doc = "0x54 - i2s1 intr map register"]
     #[inline(always)]
@@ -535,10 +535,10 @@ pub mod spi_intr_1_map;
 pub type SPI_INTR_2_MAP = crate::Reg<spi_intr_2_map::SPI_INTR_2_MAP_SPEC>;
 #[doc = "spi1 intr map register"]
 pub mod spi_intr_2_map;
-#[doc = "I2S1_INT_MAP (rw) register accessor: spi2 intr map register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2s1_int_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2s1_int_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2s1_int_map`] module"]
-pub type I2S1_INT_MAP = crate::Reg<i2s1_int_map::I2S1_INT_MAP_SPEC>;
+#[doc = "I2S0_INT_MAP (rw) register accessor: spi2 intr map register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2s0_int_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2s0_int_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2s0_int_map`] module"]
+pub type I2S0_INT_MAP = crate::Reg<i2s0_int_map::I2S0_INT_MAP_SPEC>;
 #[doc = "spi2 intr map register"]
-pub mod i2s1_int_map;
+pub mod i2s0_int_map;
 #[doc = "UART_INTR_MAP (rw) register accessor: i2s1 intr map register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart_intr_map::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart_intr_map::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart_intr_map`] module"]
 pub type UART_INTR_MAP = crate::Reg<uart_intr_map::UART_INTR_MAP_SPEC>;
 #[doc = "i2s1 intr map register"]
