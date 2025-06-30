@@ -18,10 +18,6 @@ pub type UART_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type WDG_RST_R = crate::BitReader;
 #[doc = "Field `WDG_RST` writer - reg_wdg_rst"]
 pub type WDG_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `I2S0_RST` reader - reg_i2s0_rst"]
-pub type I2S0_RST_R = crate::BitReader;
-#[doc = "Field `I2S0_RST` writer - reg_i2s0_rst"]
-pub type I2S0_RST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UART1_RST` reader - reg_uart1_rst"]
 pub type UART1_RST_R = crate::BitReader;
 #[doc = "Field `UART1_RST` writer - reg_uart1_rst"]
@@ -150,11 +146,6 @@ impl R {
     #[inline(always)]
     pub fn wdg_rst(&self) -> WDG_RST_R {
         WDG_RST_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - reg_i2s0_rst"]
-    #[inline(always)]
-    pub fn i2s0_rst(&self) -> I2S0_RST_R {
-        I2S0_RST_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - reg_uart1_rst"]
     #[inline(always)]
@@ -300,7 +291,6 @@ impl core::fmt::Debug for R {
             .field("spi01_rst", &self.spi01_rst())
             .field("uart_rst", &self.uart_rst())
             .field("wdg_rst", &self.wdg_rst())
-            .field("i2s0_rst", &self.i2s0_rst())
             .field("uart1_rst", &self.uart1_rst())
             .field("spi2_rst", &self.spi2_rst())
             .field("i2c_ext0_rst", &self.i2c_ext0_rst())
@@ -351,11 +341,6 @@ impl W {
     #[inline(always)]
     pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN0_SPEC> {
         WDG_RST_W::new(self, 3)
-    }
-    #[doc = "Bit 4 - reg_i2s0_rst"]
-    #[inline(always)]
-    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC> {
-        I2S0_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_uart1_rst"]
     #[inline(always)]
