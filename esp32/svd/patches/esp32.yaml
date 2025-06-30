@@ -287,6 +287,22 @@ DPORT:
     _modify:
       I2C0_EXT0_RST:
         name: I2C_EXT0_RST
+  PERI_RST_EN:
+    _delete:
+      PERI_RST_EN
+    _add:
+      CRYPTO_AES_RST:
+        description: "Set the bit to reset AES module. Clear the bit to release AES module."
+        bitOffset: 0
+        bitWidth: 1
+      CRYPTO_SHA_RST:
+        description: "Set the bit to reset SHA module. Clear the bit to release HA module."
+        bitOffset: 1
+        bitWidth: 1
+      CRYPTO_RSA_RST:
+        description: "Set the bit to reset RSA module. Clear the bit to release RSA module."
+        bitOffset: 2
+        bitWidth: 1
 
 _include:
     - "esp32-wifi.yaml"
