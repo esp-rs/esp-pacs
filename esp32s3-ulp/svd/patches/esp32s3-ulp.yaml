@@ -1,5 +1,9 @@
 _svd: "../esp32s3-ulp.base.svd"
 
+_include:
+  - ./_rtc_cntl.yml
+  - ./_sens.yml
+
 RTC_CNTL:
   _modify:
     RTC_COCPU_CTRL:
