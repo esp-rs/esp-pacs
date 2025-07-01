@@ -45,6 +45,10 @@ _add:
   SPI0:
     description: "SPI (Serial Peripheral Interface) Controller 0 (MEMSPI)"
     baseAddress: 0x3f403000
+    interrupts:
+      SPI0_REJECT_CACHE:
+        description: SPI0_REJECT_CACHE
+        value: 83
     registers:
       CMD:
         description: "SPI Memory Command Register"
