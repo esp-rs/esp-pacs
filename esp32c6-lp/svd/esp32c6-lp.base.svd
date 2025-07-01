@@ -3,10 +3,10 @@
   <vendor>ESPRESSIF SYSTEMS (SHANGHAI) CO., LTD.</vendor>
   <vendorID>ESPRESSIF</vendorID>
   <name>ESP32-C6-LP</name>
-  <series>ESP32 Series</series>
-  <version>2</version>
+  <series>ESP32 C-Series</series>
+  <version>3</version>
   <description>32-bit RISC-V MCU</description>
-  <licenseText>Copyright 2024 Espressif Systems (Shanghai) PTE LTD
+  <licenseText>Copyright 2025 Espressif Systems (Shanghai) PTE LTD
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -3711,7 +3711,7 @@ Information.</description>
       </addressBlock>
       <registers>
         <register>
-          <name>OUT</name>
+          <name>OUT_DATA</name>
           <description>need des</description>
           <addressOffset>0x0</addressOffset>
           <size>0x20</size>
@@ -3726,7 +3726,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_W1TS</name>
+          <name>OUT_DATA_W1TS</name>
           <description>need des</description>
           <addressOffset>0x4</addressOffset>
           <size>0x20</size>
@@ -3741,7 +3741,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>OUT_W1TC</name>
+          <name>OUT_DATA_W1TC</name>
           <description>need des</description>
           <addressOffset>0x8</addressOffset>
           <size>0x20</size>
@@ -3756,7 +3756,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>ENABLE</name>
+          <name>OUT_ENABLE</name>
           <description>need des</description>
           <addressOffset>0xC</addressOffset>
           <size>0x20</size>
@@ -3771,7 +3771,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>ENABLE_W1TS</name>
+          <name>OUT_ENABLE_W1TS</name>
           <description>need des</description>
           <addressOffset>0x10</addressOffset>
           <size>0x20</size>
@@ -3786,7 +3786,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>ENABLE_W1TC</name>
+          <name>OUT_ENABLE_W1TC</name>
           <description>need des</description>
           <addressOffset>0x14</addressOffset>
           <size>0x20</size>
@@ -3861,10 +3861,7 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <dim>8</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <dimIndex>0-7</dimIndex>
-          <name>PIN%s</name>
+          <name>PIN0</name>
           <description>need des</description>
           <addressOffset>0x28</addressOffset>
           <size>0x20</size>
@@ -3914,10 +3911,357 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <dim>8</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <dimIndex>0-7</dimIndex>
-          <name>GPIO%s</name>
+          <name>PIN1</name>
+          <description>need des</description>
+          <addressOffset>0x2C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN2</name>
+          <description>need des</description>
+          <addressOffset>0x30</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN3</name>
+          <description>need des</description>
+          <addressOffset>0x34</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN4</name>
+          <description>need des</description>
+          <addressOffset>0x38</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN5</name>
+          <description>need des</description>
+          <addressOffset>0x3C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN6</name>
+          <description>need des</description>
+          <addressOffset>0x40</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PIN7</name>
+          <description>need des</description>
+          <addressOffset>0x44</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>SYNC_BYPASS</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>PAD_DRIVER</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>EDGE_WAKEUP_CLR</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>INT_TYPE</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_ENABLE</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FILTER_EN</name>
+              <description>need des</description>
+              <bitOffset>11</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO0</name>
           <description>need des</description>
           <addressOffset>0x48</addressOffset>
           <size>0x20</size>
@@ -3993,7 +4337,7 @@ Information.</description>
               <access>read-write</access>
             </field>
             <field>
-              <name>FUN_SEL</name>
+              <name>MCU_SEL</name>
               <description>need des</description>
               <bitOffset>12</bitOffset>
               <bitWidth>3</bitWidth>
@@ -4002,7 +4346,602 @@ Information.</description>
           </fields>
         </register>
         <register>
-          <name>STATUS_INT</name>
+          <name>GPIO1</name>
+          <description>need des</description>
+          <addressOffset>0x4C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO2</name>
+          <description>need des</description>
+          <addressOffset>0x50</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO3</name>
+          <description>need des</description>
+          <addressOffset>0x54</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO4</name>
+          <description>need des</description>
+          <addressOffset>0x58</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO5</name>
+          <description>need des</description>
+          <addressOffset>0x5C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO6</name>
+          <description>need des</description>
+          <addressOffset>0x60</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO7</name>
+          <description>need des</description>
+          <addressOffset>0x64</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>MCU_OE</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SLP_SEL</name>
+              <description>need des</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPD</name>
+              <description>need des</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_WPU</name>
+              <description>need des</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_IE</name>
+              <description>need des</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_DRV</name>
+              <description>need des</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPD</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_WPU</name>
+              <description>need des</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_IE</name>
+              <description>need des</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>FUN_DRV</name>
+              <description>need des</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>MCU_SEL</name>
+              <description>need des</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>STATUS_INTERRUPT</name>
           <description>need des</description>
           <addressOffset>0x68</addressOffset>
           <size>0x20</size>
@@ -4013,6 +4952,80 @@ Information.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
               <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEBUG_SEL0</name>
+          <description>need des</description>
+          <addressOffset>0x6C</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>LP_DEBUG_SEL0</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LP_DEBUG_SEL1</name>
+              <description>need des</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LP_DEBUG_SEL2</name>
+              <description>need des</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LP_DEBUG_SEL3</name>
+              <description>need des</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DEBUG_SEL1</name>
+          <description>need des</description>
+          <addressOffset>0x70</addressOffset>
+          <size>0x20</size>
+          <fields>
+            <field>
+              <name>LP_DEBUG_SEL4</name>
+              <description>need des</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>7</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LPI2C</name>
+          <description>need des</description>
+          <addressOffset>0x74</addressOffset>
+          <size>0x20</size>
+          <resetValue>0xC0000000</resetValue>
+          <fields>
+            <field>
+              <name>LP_I2C_SDA_IE</name>
+              <description>need des</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>LP_I2C_SCL_IE</name>
+              <description>need des</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
             </field>
           </fields>
         </register>
@@ -4544,7 +5557,7 @@ Information.</description>
               <description>UART 0 accesses FIFO via this register.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>8</bitWidth>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>

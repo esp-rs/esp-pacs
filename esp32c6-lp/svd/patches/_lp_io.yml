@@ -1,0 +1,36 @@
+LP_IO:
+  "*":
+    _strip: "LP_GPIO_"
+
+  _array:
+    "GPIO*": {}
+    "PIN*": {}
+
+  _modify:
+    OUT_DATA:
+      name: OUT
+    OUT_DATA_W1TC:
+      name: OUT_W1TC
+    OUT_DATA_W1TS:
+      name: OUT_W1TS
+    OUT_ENABLE:
+      name: ENABLE
+    OUT_ENABLE_W1TC:
+      name: ENABLE_W1TC
+    OUT_ENABLE_W1TS:
+      name: ENABLE_W1TS
+    STATUS_INTERRUPT:
+      name: STATUS_INT
+
+  _delete:
+    - DEBUG_SEL0
+    - DEBUG_SEL1
+    - LPI2C
+
+  GPIO0:
+    _strip: "LP_GPIO0_"
+    _modify:
+      MCU_SEL:
+        name: FUN_SEL
+  PIN0:
+    _strip: "LP_GPIO0_"
