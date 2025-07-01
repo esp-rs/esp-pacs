@@ -173,8 +173,6 @@ impl crate::Readable for PAD0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pad0::W`](W) writer structure"]
 impl crate::Writable for PAD0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PAD0 to value 0x02"]
 impl crate::Resettable for PAD0_SPEC {

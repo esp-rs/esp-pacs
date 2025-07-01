@@ -94,8 +94,6 @@ impl crate::Readable for COMB_PD_SITE0_UNIT3_VT1_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`comb_pd_site0_unit3_vt1_conf1::W`](W) writer structure"]
 impl crate::Writable for COMB_PD_SITE0_UNIT3_VT1_CONF1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COMB_PD_SITE0_UNIT3_VT1_CONF1 to value 0x50"]
 impl crate::Resettable for COMB_PD_SITE0_UNIT3_VT1_CONF1_SPEC {

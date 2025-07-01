@@ -263,10 +263,6 @@ impl crate::Readable for INT_FORCE_PLD_CRC_FATAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_force_pld_crc_fatal::W`](W) writer structure"]
 impl crate::Writable for INT_FORCE_PLD_CRC_FATAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INT_FORCE_PLD_CRC_FATAL to value 0"]
-impl crate::Resettable for INT_FORCE_PLD_CRC_FATAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INT_FORCE_PLD_CRC_FATAL_SPEC {}

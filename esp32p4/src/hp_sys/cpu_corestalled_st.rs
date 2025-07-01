@@ -33,6 +33,4 @@ impl crate::RegisterSpec for CPU_CORESTALLED_ST_SPEC {
 #[doc = "`read()` method returns [`cpu_corestalled_st::R`](R) reader structure"]
 impl crate::Readable for CPU_CORESTALLED_ST_SPEC {}
 #[doc = "`reset()` method sets CPU_CORESTALLED_ST to value 0"]
-impl crate::Resettable for CPU_CORESTALLED_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CPU_CORESTALLED_ST_SPEC {}

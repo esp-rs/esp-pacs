@@ -38,8 +38,6 @@ impl crate::Readable for DMABLK_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dmablk_size::W`](W) writer structure"]
 impl crate::Writable for DMABLK_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMABLK_SIZE to value 0x1fff"]
 impl crate::Resettable for DMABLK_SIZE_SPEC {

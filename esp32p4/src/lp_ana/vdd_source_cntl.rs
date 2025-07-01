@@ -68,8 +68,6 @@ impl crate::Readable for VDD_SOURCE_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vdd_source_cntl::W`](W) writer structure"]
 impl crate::Writable for VDD_SOURCE_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VDD_SOURCE_CNTL to value 0x0400_00ff"]
 impl crate::Resettable for VDD_SOURCE_CNTL_SPEC {

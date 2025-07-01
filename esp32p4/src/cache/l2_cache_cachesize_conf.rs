@@ -154,8 +154,6 @@ impl crate::Readable for L2_CACHE_CACHESIZE_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l2_cache_cachesize_conf::W`](W) writer structure"]
 impl crate::Writable for L2_CACHE_CACHESIZE_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L2_CACHE_CACHESIZE_CONF to value 0x0400"]
 impl crate::Resettable for L2_CACHE_CACHESIZE_CONF_SPEC {

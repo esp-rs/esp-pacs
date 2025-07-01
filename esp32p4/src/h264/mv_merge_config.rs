@@ -91,10 +91,6 @@ impl crate::Readable for MV_MERGE_CONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mv_merge_config::W`](W) writer structure"]
 impl crate::Writable for MV_MERGE_CONFIG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MV_MERGE_CONFIG to value 0"]
-impl crate::Resettable for MV_MERGE_CONFIG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MV_MERGE_CONFIG_SPEC {}

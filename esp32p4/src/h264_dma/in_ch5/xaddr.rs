@@ -25,6 +25,4 @@ impl crate::RegisterSpec for XADDR_SPEC {
 #[doc = "`read()` method returns [`xaddr::R`](R) reader structure"]
 impl crate::Readable for XADDR_SPEC {}
 #[doc = "`reset()` method sets XADDR to value 0"]
-impl crate::Resettable for XADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for XADDR_SPEC {}

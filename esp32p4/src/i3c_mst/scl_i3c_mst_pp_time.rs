@@ -63,8 +63,6 @@ impl crate::Readable for SCL_I3C_MST_PP_TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scl_i3c_mst_pp_time::W`](W) writer structure"]
 impl crate::Writable for SCL_I3C_MST_PP_TIME_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCL_I3C_MST_PP_TIME to value 0x0005_0005"]
 impl crate::Resettable for SCL_I3C_MST_PP_TIME_SPEC {

@@ -40,8 +40,6 @@ impl crate::Readable for LP_AONCLKRST_FOSC_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_fosc_cntl::W`](W) writer structure"]
 impl crate::Writable for LP_AONCLKRST_FOSC_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_AONCLKRST_FOSC_CNTL to value 0x6400_0000"]
 impl crate::Resettable for LP_AONCLKRST_FOSC_CNTL_SPEC {

@@ -68,8 +68,6 @@ impl crate::Readable for CK_BG_LOW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ck_bg_low::W`](W) writer structure"]
 impl crate::Writable for CK_BG_LOW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CK_BG_LOW to value 0x00ff_ffff"]
 impl crate::Resettable for CK_BG_LOW_SPEC {

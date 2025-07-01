@@ -79,10 +79,7 @@ impl crate::RegisterSpec for INT_CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`int_clr::W`](W) writer structure"]
 impl crate::Writable for INT_CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x01ff;
 }
 #[doc = "`reset()` method sets INT_CLR to value 0"]
-impl crate::Resettable for INT_CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INT_CLR_SPEC {}

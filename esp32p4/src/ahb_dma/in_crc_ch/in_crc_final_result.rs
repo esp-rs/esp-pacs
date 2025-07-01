@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IN_CRC_FINAL_RESULT_SPEC {
 #[doc = "`read()` method returns [`in_crc_final_result::R`](R) reader structure"]
 impl crate::Readable for IN_CRC_FINAL_RESULT_SPEC {}
 #[doc = "`reset()` method sets IN_CRC_FINAL_RESULT to value 0"]
-impl crate::Resettable for IN_CRC_FINAL_RESULT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IN_CRC_FINAL_RESULT_SPEC {}

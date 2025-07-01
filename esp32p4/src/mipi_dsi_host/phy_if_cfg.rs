@@ -53,8 +53,6 @@ impl crate::Readable for PHY_IF_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`phy_if_cfg::W`](W) writer structure"]
 impl crate::Writable for PHY_IF_CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PHY_IF_CFG to value 0x01"]
 impl crate::Resettable for PHY_IF_CFG_SPEC {

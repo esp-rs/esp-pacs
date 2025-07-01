@@ -38,8 +38,6 @@ impl crate::Readable for TIMESTAMP_PRESCALER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timestamp_prescaler::W`](W) writer structure"]
 impl crate::Writable for TIMESTAMP_PRESCALER_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMESTAMP_PRESCALER to value 0x1f"]
 impl crate::Resettable for TIMESTAMP_PRESCALER_SPEC {

@@ -41,6 +41,4 @@ impl crate::RegisterSpec for INTMASKED_SPEC {
 #[doc = "`read()` method returns [`intmasked::R`](R) reader structure"]
 impl crate::Readable for INTMASKED_SPEC {}
 #[doc = "`reset()` method sets INTMASKED to value 0"]
-impl crate::Resettable for INTMASKED_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTMASKED_SPEC {}

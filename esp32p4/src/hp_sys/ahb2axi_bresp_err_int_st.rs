@@ -28,6 +28,4 @@ impl crate::RegisterSpec for AHB2AXI_BRESP_ERR_INT_ST_SPEC {
 #[doc = "`read()` method returns [`ahb2axi_bresp_err_int_st::R`](R) reader structure"]
 impl crate::Readable for AHB2AXI_BRESP_ERR_INT_ST_SPEC {}
 #[doc = "`reset()` method sets AHB2AXI_BRESP_ERR_INT_ST to value 0"]
-impl crate::Resettable for AHB2AXI_BRESP_ERR_INT_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AHB2AXI_BRESP_ERR_INT_ST_SPEC {}

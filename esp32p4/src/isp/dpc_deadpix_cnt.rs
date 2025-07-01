@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DPC_DEADPIX_CNT_SPEC {
 #[doc = "`read()` method returns [`dpc_deadpix_cnt::R`](R) reader structure"]
 impl crate::Readable for DPC_DEADPIX_CNT_SPEC {}
 #[doc = "`reset()` method sets DPC_DEADPIX_CNT to value 0"]
-impl crate::Resettable for DPC_DEADPIX_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DPC_DEADPIX_CNT_SPEC {}

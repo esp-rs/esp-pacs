@@ -147,8 +147,6 @@ impl crate::Readable for LP_CPU_PWR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_cpu_pwr0::W`](W) writer structure"]
 impl crate::Writable for LP_CPU_PWR0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_CPU_PWR0 to value 0x1ff0_0000"]
 impl crate::Resettable for LP_CPU_PWR0_SPEC {

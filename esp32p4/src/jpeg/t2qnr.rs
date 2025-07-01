@@ -25,6 +25,4 @@ impl crate::RegisterSpec for T2QNR_SPEC {
 #[doc = "`read()` method returns [`t2qnr::R`](R) reader structure"]
 impl crate::Readable for T2QNR_SPEC {}
 #[doc = "`reset()` method sets T2QNR to value 0"]
-impl crate::Resettable for T2QNR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for T2QNR_SPEC {}

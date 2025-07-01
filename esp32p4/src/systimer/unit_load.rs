@@ -23,10 +23,6 @@ impl crate::RegisterSpec for UNIT_LOAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [`unit_load::W`](W) writer structure"]
 impl crate::Writable for UNIT_LOAD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UNIT%s_LOAD to value 0"]
-impl crate::Resettable for UNIT_LOAD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for UNIT_LOAD_SPEC {}

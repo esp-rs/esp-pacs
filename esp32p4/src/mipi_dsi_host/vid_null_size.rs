@@ -38,10 +38,6 @@ impl crate::Readable for VID_NULL_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vid_null_size::W`](W) writer structure"]
 impl crate::Writable for VID_NULL_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VID_NULL_SIZE to value 0"]
-impl crate::Resettable for VID_NULL_SIZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VID_NULL_SIZE_SPEC {}

@@ -53,8 +53,6 @@ impl crate::Readable for AF_GEN_TH_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`af_gen_th_ctrl::W`](W) writer structure"]
 impl crate::Writable for AF_GEN_TH_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AF_GEN_TH_CTRL to value 0x0440_0080"]
 impl crate::Resettable for AF_GEN_TH_CTRL_SPEC {

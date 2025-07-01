@@ -173,8 +173,6 @@ impl crate::Readable for PHY_HS_LOOPBACK_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`phy_hs_loopback_ctrl::W`](W) writer structure"]
 impl crate::Writable for PHY_HS_LOOPBACK_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PHY_HS_LOOPBACK_CTRL to value 0x0200"]
 impl crate::Resettable for PHY_HS_LOOPBACK_CTRL_SPEC {

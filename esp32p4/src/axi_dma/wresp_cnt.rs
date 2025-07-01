@@ -25,6 +25,4 @@ impl crate::RegisterSpec for WRESP_CNT_SPEC {
 #[doc = "`read()` method returns [`wresp_cnt::R`](R) reader structure"]
 impl crate::Readable for WRESP_CNT_SPEC {}
 #[doc = "`reset()` method sets WRESP_CNT to value 0"]
-impl crate::Resettable for WRESP_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for WRESP_CNT_SPEC {}

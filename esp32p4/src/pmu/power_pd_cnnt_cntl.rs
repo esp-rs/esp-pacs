@@ -113,8 +113,6 @@ impl crate::Readable for POWER_PD_CNNT_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`power_pd_cnnt_cntl::W`](W) writer structure"]
 impl crate::Writable for POWER_PD_CNNT_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POWER_PD_CNNT_CNTL to value 0x1c"]
 impl crate::Resettable for POWER_PD_CNNT_CNTL_SPEC {

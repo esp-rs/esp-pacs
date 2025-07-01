@@ -25,6 +25,4 @@ impl crate::RegisterSpec for FIFO_CNT_SPEC {
 #[doc = "`read()` method returns [`fifo_cnt::R`](R) reader structure"]
 impl crate::Readable for FIFO_CNT_SPEC {}
 #[doc = "`reset()` method sets FIFO_CNT to value 0"]
-impl crate::Resettable for FIFO_CNT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FIFO_CNT_SPEC {}

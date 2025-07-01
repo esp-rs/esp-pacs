@@ -83,8 +83,6 @@ impl crate::Readable for DHT_INFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dht_info::W`](W) writer structure"]
 impl crate::Writable for DHT_INFO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DHT_INFO to value 0x1010"]
 impl crate::Resettable for DHT_INFO_SPEC {

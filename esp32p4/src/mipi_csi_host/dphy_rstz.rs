@@ -38,10 +38,6 @@ impl crate::Readable for DPHY_RSTZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dphy_rstz::W`](W) writer structure"]
 impl crate::Writable for DPHY_RSTZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DPHY_RSTZ to value 0"]
-impl crate::Resettable for DPHY_RSTZ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DPHY_RSTZ_SPEC {}

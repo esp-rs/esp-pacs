@@ -25,6 +25,4 @@ impl crate::RegisterSpec for GMAC_CTRL2_SPEC {
 #[doc = "`read()` method returns [`gmac_ctrl2::R`](R) reader structure"]
 impl crate::Readable for GMAC_CTRL2_SPEC {}
 #[doc = "`reset()` method sets GMAC_CTRL2 to value 0"]
-impl crate::Resettable for GMAC_CTRL2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GMAC_CTRL2_SPEC {}

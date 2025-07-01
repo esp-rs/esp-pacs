@@ -88,8 +88,6 @@ impl crate::Readable for TOUCH_SCAN_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`touch_scan_ctrl1::W`](W) writer structure"]
 impl crate::Writable for TOUCH_SCAN_CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOUCH_SCAN_CTRL1 to value 0x0008_0000"]
 impl crate::Resettable for TOUCH_SCAN_CTRL1_SPEC {

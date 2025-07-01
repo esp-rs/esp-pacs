@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RAW_INTS_SPEC {
 #[doc = "`read()` method returns [`raw_ints::R`](R) reader structure"]
 impl crate::Readable for RAW_INTS_SPEC {}
 #[doc = "`reset()` method sets RAW_INTS to value 0"]
-impl crate::Resettable for RAW_INTS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RAW_INTS_SPEC {}

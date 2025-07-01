@@ -37,10 +37,6 @@ impl crate::RegisterSpec for LUT_CMD_SPEC {
 #[doc = "`write(|w| ..)` method takes [`lut_cmd::W`](W) writer structure"]
 impl crate::Writable for LUT_CMD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LUT_CMD to value 0"]
-impl crate::Resettable for LUT_CMD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LUT_CMD_SPEC {}

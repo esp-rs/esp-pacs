@@ -25,6 +25,4 @@ impl crate::RegisterSpec for LP_PROBE_OUT_SPEC {
 #[doc = "`read()` method returns [`lp_probe_out::R`](R) reader structure"]
 impl crate::Readable for LP_PROBE_OUT_SPEC {}
 #[doc = "`reset()` method sets LP_PROBE_OUT to value 0"]
-impl crate::Resettable for LP_PROBE_OUT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LP_PROBE_OUT_SPEC {}

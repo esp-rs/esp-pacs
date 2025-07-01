@@ -509,8 +509,6 @@ impl crate::Readable for SOC_CLK_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`soc_clk_ctrl1::W`](W) writer structure"]
 impl crate::Writable for SOC_CLK_CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SOC_CLK_CTRL1 to value 0x7c7f_801f"]
 impl crate::Resettable for SOC_CLK_CTRL1_SPEC {

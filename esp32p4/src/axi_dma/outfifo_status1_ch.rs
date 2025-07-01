@@ -33,6 +33,4 @@ impl crate::RegisterSpec for OUTFIFO_STATUS1_CH_SPEC {
 #[doc = "`read()` method returns [`outfifo_status1_ch::R`](R) reader structure"]
 impl crate::Readable for OUTFIFO_STATUS1_CH_SPEC {}
 #[doc = "`reset()` method sets OUTFIFO_STATUS1_CH%s to value 0"]
-impl crate::Resettable for OUTFIFO_STATUS1_CH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OUTFIFO_STATUS1_CH_SPEC {}

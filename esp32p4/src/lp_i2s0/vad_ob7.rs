@@ -25,6 +25,4 @@ impl crate::RegisterSpec for VAD_OB7_SPEC {
 #[doc = "`read()` method returns [`vad_ob7::R`](R) reader structure"]
 impl crate::Readable for VAD_OB7_SPEC {}
 #[doc = "`reset()` method sets VAD_OB7 to value 0"]
-impl crate::Resettable for VAD_OB7_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VAD_OB7_SPEC {}

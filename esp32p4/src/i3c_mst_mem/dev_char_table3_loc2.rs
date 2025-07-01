@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DEV_CHAR_TABLE3_LOC2_SPEC {
 #[doc = "`read()` method returns [`dev_char_table3_loc2::R`](R) reader structure"]
 impl crate::Readable for DEV_CHAR_TABLE3_LOC2_SPEC {}
 #[doc = "`reset()` method sets DEV_CHAR_TABLE3_LOC2 to value 0"]
-impl crate::Resettable for DEV_CHAR_TABLE3_LOC2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DEV_CHAR_TABLE3_LOC2_SPEC {}

@@ -43,10 +43,6 @@ impl crate::Readable for L2_MEM_SW_ECC_BWE_MASK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l2_mem_sw_ecc_bwe_mask::W`](W) writer structure"]
 impl crate::Writable for L2_MEM_SW_ECC_BWE_MASK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L2_MEM_SW_ECC_BWE_MASK to value 0"]
-impl crate::Resettable for L2_MEM_SW_ECC_BWE_MASK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L2_MEM_SW_ECC_BWE_MASK_SPEC {}

@@ -68,10 +68,6 @@ impl crate::Readable for DPI_LCD_CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dpi_lcd_ctl::W`](W) writer structure"]
 impl crate::Writable for DPI_LCD_CTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DPI_LCD_CTL to value 0"]
-impl crate::Resettable for DPI_LCD_CTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DPI_LCD_CTL_SPEC {}

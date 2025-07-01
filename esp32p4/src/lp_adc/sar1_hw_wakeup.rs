@@ -53,8 +53,6 @@ impl crate::Readable for SAR1_HW_WAKEUP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar1_hw_wakeup::W`](W) writer structure"]
 impl crate::Writable for SAR1_HW_WAKEUP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR1_HW_WAKEUP to value 0xc8"]
 impl crate::Resettable for SAR1_HW_WAKEUP_SPEC {

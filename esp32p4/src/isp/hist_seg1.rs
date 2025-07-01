@@ -83,8 +83,6 @@ impl crate::Readable for HIST_SEG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hist_seg1::W`](W) writer structure"]
 impl crate::Writable for HIST_SEG1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HIST_SEG1 to value 0x5060_7080"]
 impl crate::Resettable for HIST_SEG1_SPEC {

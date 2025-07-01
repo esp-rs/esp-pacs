@@ -25,6 +25,4 @@ impl crate::RegisterSpec for VID_PKT_SIZE_ACT_SPEC {
 #[doc = "`read()` method returns [`vid_pkt_size_act::R`](R) reader structure"]
 impl crate::Readable for VID_PKT_SIZE_ACT_SPEC {}
 #[doc = "`reset()` method sets VID_PKT_SIZE_ACT to value 0"]
-impl crate::Resettable for VID_PKT_SIZE_ACT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VID_PKT_SIZE_ACT_SPEC {}

@@ -180,8 +180,6 @@ impl crate::Readable for COCPU_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cocpu_ctrl::W`](W) writer structure"]
 impl crate::Writable for COCPU_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COCPU_CTRL to value 0x008a_0810"]
 impl crate::Resettable for COCPU_CTRL_SPEC {

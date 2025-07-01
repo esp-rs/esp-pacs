@@ -38,8 +38,6 @@ impl crate::Readable for HP_MEM_AUX_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_mem_aux_ctrl::W`](W) writer structure"]
 impl crate::Writable for HP_MEM_AUX_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HP_MEM_AUX_CTRL to value 0x2070"]
 impl crate::Resettable for HP_MEM_AUX_CTRL_SPEC {

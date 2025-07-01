@@ -53,8 +53,6 @@ impl crate::Readable for SCL_I2C_FM_TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scl_i2c_fm_time::W`](W) writer structure"]
 impl crate::Writable for SCL_I2C_FM_TIME_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCL_I2C_FM_TIME to value 0x004b_00a3"]
 impl crate::Resettable for SCL_I2C_FM_TIME_SPEC {

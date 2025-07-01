@@ -38,10 +38,6 @@ impl crate::Readable for DBIAS_CMD2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dbias_cmd2::W`](W) writer structure"]
 impl crate::Writable for DBIAS_CMD2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DBIAS_CMD2 to value 0"]
-impl crate::Resettable for DBIAS_CMD2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DBIAS_CMD2_SPEC {}

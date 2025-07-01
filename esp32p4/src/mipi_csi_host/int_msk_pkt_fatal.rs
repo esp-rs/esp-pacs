@@ -53,10 +53,6 @@ impl crate::Readable for INT_MSK_PKT_FATAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`int_msk_pkt_fatal::W`](W) writer structure"]
 impl crate::Writable for INT_MSK_PKT_FATAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INT_MSK_PKT_FATAL to value 0"]
-impl crate::Resettable for INT_MSK_PKT_FATAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INT_MSK_PKT_FATAL_SPEC {}

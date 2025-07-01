@@ -38,8 +38,6 @@ impl crate::Readable for SAMPLE_RATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sample_rate::W`](W) writer structure"]
 impl crate::Writable for SAMPLE_RATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAMPLE_RATE to value 0x14"]
 impl crate::Resettable for SAMPLE_RATE_SPEC {

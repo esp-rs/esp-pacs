@@ -38,10 +38,6 @@ impl crate::Readable for DESIGN_FOR_VERIFICATION0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`design_for_verification0::W`](W) writer structure"]
 impl crate::Writable for DESIGN_FOR_VERIFICATION0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DESIGN_FOR_VERIFICATION0 to value 0"]
-impl crate::Resettable for DESIGN_FOR_VERIFICATION0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DESIGN_FOR_VERIFICATION0_SPEC {}

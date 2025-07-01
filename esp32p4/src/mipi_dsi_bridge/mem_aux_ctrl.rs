@@ -38,8 +38,6 @@ impl crate::Readable for MEM_AUX_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mem_aux_ctrl::W`](W) writer structure"]
 impl crate::Writable for MEM_AUX_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MEM_AUX_CTRL to value 0x1320"]
 impl crate::Resettable for MEM_AUX_CTRL_SPEC {

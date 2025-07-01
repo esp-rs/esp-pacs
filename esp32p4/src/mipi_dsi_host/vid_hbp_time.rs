@@ -38,10 +38,6 @@ impl crate::Readable for VID_HBP_TIME_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vid_hbp_time::W`](W) writer structure"]
 impl crate::Writable for VID_HBP_TIME_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VID_HBP_TIME to value 0"]
-impl crate::Resettable for VID_HBP_TIME_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VID_HBP_TIME_SPEC {}

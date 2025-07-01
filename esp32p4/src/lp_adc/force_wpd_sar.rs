@@ -53,10 +53,6 @@ impl crate::Readable for FORCE_WPD_SAR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`force_wpd_sar::W`](W) writer structure"]
 impl crate::Writable for FORCE_WPD_SAR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FORCE_WPD_SAR to value 0"]
-impl crate::Resettable for FORCE_WPD_SAR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FORCE_WPD_SAR_SPEC {}

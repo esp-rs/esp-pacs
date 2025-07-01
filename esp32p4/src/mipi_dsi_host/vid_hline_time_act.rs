@@ -25,6 +25,4 @@ impl crate::RegisterSpec for VID_HLINE_TIME_ACT_SPEC {
 #[doc = "`read()` method returns [`vid_hline_time_act::R`](R) reader structure"]
 impl crate::Readable for VID_HLINE_TIME_ACT_SPEC {}
 #[doc = "`reset()` method sets VID_HLINE_TIME_ACT to value 0"]
-impl crate::Resettable for VID_HLINE_TIME_ACT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VID_HLINE_TIME_ACT_SPEC {}

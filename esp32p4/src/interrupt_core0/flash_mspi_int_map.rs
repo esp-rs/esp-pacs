@@ -40,10 +40,6 @@ impl crate::Readable for FLASH_MSPI_INT_MAP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`flash_mspi_int_map::W`](W) writer structure"]
 impl crate::Writable for FLASH_MSPI_INT_MAP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLASH_MSPI_INT_MAP to value 0"]
-impl crate::Resettable for FLASH_MSPI_INT_MAP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FLASH_MSPI_INT_MAP_SPEC {}

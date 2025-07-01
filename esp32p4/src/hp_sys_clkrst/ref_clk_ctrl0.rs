@@ -83,8 +83,6 @@ impl crate::Readable for REF_CLK_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ref_clk_ctrl0::W`](W) writer structure"]
 impl crate::Writable for REF_CLK_CTRL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REF_CLK_CTRL0 to value 0x0201_1309"]
 impl crate::Resettable for REF_CLK_CTRL0_SPEC {

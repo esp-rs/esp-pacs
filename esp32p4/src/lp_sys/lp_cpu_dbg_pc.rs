@@ -25,6 +25,4 @@ impl crate::RegisterSpec for LP_CPU_DBG_PC_SPEC {
 #[doc = "`read()` method returns [`lp_cpu_dbg_pc::R`](R) reader structure"]
 impl crate::Readable for LP_CPU_DBG_PC_SPEC {}
 #[doc = "`reset()` method sets LP_CPU_DBG_PC to value 0"]
-impl crate::Resettable for LP_CPU_DBG_PC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LP_CPU_DBG_PC_SPEC {}

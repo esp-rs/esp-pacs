@@ -90,10 +90,6 @@ impl crate::Readable for L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_cache_autoload_buf_clr_ctrl::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_CACHE_AUTOLOAD_BUF_CLR_CTRL to value 0"]
-impl crate::Resettable for L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC {}

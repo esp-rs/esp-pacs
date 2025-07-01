@@ -33,6 +33,4 @@ impl crate::RegisterSpec for L1_ICACHE2_ACS_FAIL_ID_ATTR_SPEC {
 #[doc = "`read()` method returns [`l1_icache2_acs_fail_id_attr::R`](R) reader structure"]
 impl crate::Readable for L1_ICACHE2_ACS_FAIL_ID_ATTR_SPEC {}
 #[doc = "`reset()` method sets L1_ICACHE2_ACS_FAIL_ID_ATTR to value 0"]
-impl crate::Resettable for L1_ICACHE2_ACS_FAIL_ID_ATTR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_ICACHE2_ACS_FAIL_ID_ATTR_SPEC {}

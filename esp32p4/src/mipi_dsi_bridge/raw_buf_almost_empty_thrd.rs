@@ -43,8 +43,6 @@ impl crate::Readable for RAW_BUF_ALMOST_EMPTY_THRD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`raw_buf_almost_empty_thrd::W`](W) writer structure"]
 impl crate::Writable for RAW_BUF_ALMOST_EMPTY_THRD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RAW_BUF_ALMOST_EMPTY_THRD to value 0x0200"]
 impl crate::Resettable for RAW_BUF_ALMOST_EMPTY_THRD_SPEC {

@@ -38,10 +38,6 @@ impl crate::Readable for TX_CRC_DATA_EN_ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_crc_data_en_addr::W`](W) writer structure"]
 impl crate::Writable for TX_CRC_DATA_EN_ADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_CRC_DATA_EN_ADDR to value 0"]
-impl crate::Resettable for TX_CRC_DATA_EN_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TX_CRC_DATA_EN_ADDR_SPEC {}

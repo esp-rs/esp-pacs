@@ -143,8 +143,6 @@ impl crate::Readable for BF_GAU0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bf_gau0::W`](W) writer structure"]
 impl crate::Writable for BF_GAU0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BF_GAU0 to value 0xffff_ffff"]
 impl crate::Resettable for BF_GAU0_SPEC {

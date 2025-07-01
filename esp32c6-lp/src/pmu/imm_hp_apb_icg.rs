@@ -23,10 +23,6 @@ impl crate::RegisterSpec for IMM_HP_APB_ICG_SPEC {
 #[doc = "`write(|w| ..)` method takes [`imm_hp_apb_icg::W`](W) writer structure"]
 impl crate::Writable for IMM_HP_APB_ICG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IMM_HP_APB_ICG to value 0"]
-impl crate::Resettable for IMM_HP_APB_ICG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IMM_HP_APB_ICG_SPEC {}

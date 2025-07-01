@@ -72,10 +72,6 @@ impl crate::RegisterSpec for REF_CNT_RST_SPEC {
 #[doc = "`write(|w| ..)` method takes [`ref_cnt_rst::W`](W) writer structure"]
 impl crate::Writable for REF_CNT_RST_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REF_CNT_RST to value 0"]
-impl crate::Resettable for REF_CNT_RST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REF_CNT_RST_SPEC {}

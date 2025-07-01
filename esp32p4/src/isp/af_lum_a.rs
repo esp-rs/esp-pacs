@@ -25,6 +25,4 @@ impl crate::RegisterSpec for AF_LUM_A_SPEC {
 #[doc = "`read()` method returns [`af_lum_a::R`](R) reader structure"]
 impl crate::Readable for AF_LUM_A_SPEC {}
 #[doc = "`reset()` method sets AF_LUM_A to value 0"]
-impl crate::Resettable for AF_LUM_A_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AF_LUM_A_SPEC {}

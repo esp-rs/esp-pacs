@@ -158,8 +158,6 @@ impl crate::Readable for CAM_RGB_YUV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`cam_rgb_yuv::W`](W) writer structure"]
 impl crate::Writable for CAM_RGB_YUV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CAM_RGB_YUV to value 0x00c0_0000"]
 impl crate::Resettable for CAM_RGB_YUV_SPEC {

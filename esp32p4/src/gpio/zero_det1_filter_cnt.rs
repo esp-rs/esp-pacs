@@ -38,8 +38,6 @@ impl crate::Readable for ZERO_DET1_FILTER_CNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`zero_det1_filter_cnt::W`](W) writer structure"]
 impl crate::Writable for ZERO_DET1_FILTER_CNT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ZERO_DET1_FILTER_CNT to value 0xffff_ffff"]
 impl crate::Resettable for ZERO_DET1_FILTER_CNT_SPEC {

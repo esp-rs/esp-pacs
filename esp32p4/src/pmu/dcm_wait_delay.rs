@@ -68,8 +68,6 @@ impl crate::Readable for DCM_WAIT_DELAY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcm_wait_delay::W`](W) writer structure"]
 impl crate::Writable for DCM_WAIT_DELAY_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCM_WAIT_DELAY to value 0x004b_0205"]
 impl crate::Resettable for DCM_WAIT_DELAY_SPEC {

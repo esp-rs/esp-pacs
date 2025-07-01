@@ -25,6 +25,4 @@ impl crate::RegisterSpec for CDETECT_SPEC {
 #[doc = "`read()` method returns [`cdetect::R`](R) reader structure"]
 impl crate::Readable for CDETECT_SPEC {}
 #[doc = "`reset()` method sets CDETECT to value 0"]
-impl crate::Resettable for CDETECT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CDETECT_SPEC {}

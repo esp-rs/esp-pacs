@@ -38,8 +38,6 @@ impl crate::Readable for VERSION_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`version::W`](W) writer structure"]
 impl crate::Writable for VERSION_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VERSION to value 0x0230_3240"]
 impl crate::Resettable for VERSION_SPEC {

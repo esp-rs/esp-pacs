@@ -83,8 +83,6 @@ impl crate::Readable for GAMMA_BY2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gamma_by2::W`](W) writer structure"]
 impl crate::Writable for GAMMA_BY2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GAMMA_BY2 to value 0x5060_7080"]
 impl crate::Resettable for GAMMA_BY2_SPEC {

@@ -53,10 +53,6 @@ impl crate::Readable for HOST_TRIGGER_REV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`host_trigger_rev::W`](W) writer structure"]
 impl crate::Writable for HOST_TRIGGER_REV_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HOST_TRIGGER_REV to value 0"]
-impl crate::Resettable for HOST_TRIGGER_REV_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HOST_TRIGGER_REV_SPEC {}

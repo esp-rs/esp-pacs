@@ -53,8 +53,6 @@ impl crate::Readable for DATA_BUFFER_THLD_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`data_buffer_thld_ctrl::W`](W) writer structure"]
 impl crate::Writable for DATA_BUFFER_THLD_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATA_BUFFER_THLD_CTRL to value 0x09"]
 impl crate::Resettable for DATA_BUFFER_THLD_CTRL_SPEC {

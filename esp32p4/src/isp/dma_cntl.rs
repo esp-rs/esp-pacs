@@ -90,8 +90,6 @@ impl crate::Readable for DMA_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_cntl::W`](W) writer structure"]
 impl crate::Writable for DMA_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_CNTL to value 0x0010_80a8"]
 impl crate::Resettable for DMA_CNTL_SPEC {

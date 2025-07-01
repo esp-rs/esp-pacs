@@ -53,8 +53,6 @@ impl crate::Readable for VAD_PARAM7_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vad_param7::W`](W) writer structure"]
 impl crate::Writable for VAD_PARAM7_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VAD_PARAM7 to value 0x0148_7eb8"]
 impl crate::Resettable for VAD_PARAM7_SPEC {

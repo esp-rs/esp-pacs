@@ -53,8 +53,6 @@ impl crate::Readable for HP_CK_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hp_ck_cntl::W`](W) writer structure"]
 impl crate::Writable for HP_CK_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HP_CK_CNTL to value 0x0a0a"]
 impl crate::Resettable for HP_CK_CNTL_SPEC {

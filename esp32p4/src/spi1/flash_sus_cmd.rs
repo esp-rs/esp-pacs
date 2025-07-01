@@ -53,8 +53,6 @@ impl crate::Readable for FLASH_SUS_CMD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`flash_sus_cmd::W`](W) writer structure"]
 impl crate::Writable for FLASH_SUS_CMD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLASH_SUS_CMD to value 0x0005_7575"]
 impl crate::Resettable for FLASH_SUS_CMD_SPEC {

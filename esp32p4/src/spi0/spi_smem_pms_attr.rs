@@ -68,8 +68,6 @@ impl crate::Readable for SPI_SMEM_PMS_ATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_smem_pms_attr::W`](W) writer structure"]
 impl crate::Writable for SPI_SMEM_PMS_ATTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_SMEM_PMS%s_ATTR to value 0x03"]
 impl crate::Resettable for SPI_SMEM_PMS_ATTR_SPEC {

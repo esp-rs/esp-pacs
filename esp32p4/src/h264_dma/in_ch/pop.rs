@@ -46,8 +46,6 @@ impl crate::Readable for POP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pop::W`](W) writer structure"]
 impl crate::Writable for POP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POP to value 0x0400"]
 impl crate::Resettable for POP_SPEC {

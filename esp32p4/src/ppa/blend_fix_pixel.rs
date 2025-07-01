@@ -38,10 +38,6 @@ impl crate::Readable for BLEND_FIX_PIXEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`blend_fix_pixel::W`](W) writer structure"]
 impl crate::Writable for BLEND_FIX_PIXEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BLEND_FIX_PIXEL to value 0"]
-impl crate::Resettable for BLEND_FIX_PIXEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLEND_FIX_PIXEL_SPEC {}

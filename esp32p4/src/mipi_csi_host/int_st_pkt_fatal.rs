@@ -33,6 +33,4 @@ impl crate::RegisterSpec for INT_ST_PKT_FATAL_SPEC {
 #[doc = "`read()` method returns [`int_st_pkt_fatal::R`](R) reader structure"]
 impl crate::Readable for INT_ST_PKT_FATAL_SPEC {}
 #[doc = "`reset()` method sets INT_ST_PKT_FATAL to value 0"]
-impl crate::Resettable for INT_ST_PKT_FATAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INT_ST_PKT_FATAL_SPEC {}

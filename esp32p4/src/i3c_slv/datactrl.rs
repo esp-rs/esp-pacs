@@ -106,8 +106,6 @@ impl crate::Readable for DATACTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`datactrl::W`](W) writer structure"]
 impl crate::Writable for DATACTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATACTRL to value 0xb0"]
 impl crate::Resettable for DATACTRL_SPEC {

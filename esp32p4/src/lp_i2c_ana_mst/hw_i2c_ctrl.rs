@@ -68,8 +68,6 @@ impl crate::Readable for HW_I2C_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hw_i2c_ctrl::W`](W) writer structure"]
 impl crate::Writable for HW_I2C_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HW_I2C_CTRL to value 0x42"]
 impl crate::Resettable for HW_I2C_CTRL_SPEC {

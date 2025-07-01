@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DHT_CODEMIN_AC0_SPEC {
 #[doc = "`read()` method returns [`dht_codemin_ac0::R`](R) reader structure"]
 impl crate::Readable for DHT_CODEMIN_AC0_SPEC {}
 #[doc = "`reset()` method sets DHT_CODEMIN_AC0 to value 0"]
-impl crate::Resettable for DHT_CODEMIN_AC0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DHT_CODEMIN_AC0_SPEC {}
