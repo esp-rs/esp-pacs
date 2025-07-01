@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RX_CH0_COUNTER_SPEC {
 #[doc = "`read()` method returns [`rx_ch0_counter::R`](R) reader structure"]
 impl crate::Readable for RX_CH0_COUNTER_SPEC {}
 #[doc = "`reset()` method sets RX_CH0_COUNTER to value 0"]
-impl crate::Resettable for RX_CH0_COUNTER_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RX_CH0_COUNTER_SPEC {}

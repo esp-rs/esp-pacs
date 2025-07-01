@@ -25,6 +25,4 @@ impl crate::RegisterSpec for BLOCK_BUF_LEN_SPEC {
 #[doc = "`read()` method returns [`block_buf_len::R`](R) reader structure"]
 impl crate::Readable for BLOCK_BUF_LEN_SPEC {}
 #[doc = "`reset()` method sets BLOCK_BUF_LEN to value 0"]
-impl crate::Resettable for BLOCK_BUF_LEN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLOCK_BUF_LEN_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for IBI_DATA_BUF_SPEC {
 #[doc = "`read()` method returns [`ibi_data_buf::R`](R) reader structure"]
 impl crate::Readable for IBI_DATA_BUF_SPEC {}
 #[doc = "`reset()` method sets IBI_DATA_BUF to value 0"]
-impl crate::Resettable for IBI_DATA_BUF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IBI_DATA_BUF_SPEC {}

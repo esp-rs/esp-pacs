@@ -83,8 +83,6 @@ impl crate::Readable for TX_PCM2PDM_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_pcm2pdm_conf1::W`](W) writer structure"]
 impl crate::Writable for TX_PCM2PDM_CONF1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_PCM2PDM_CONF1 to value 0x03f7_83c0"]
 impl crate::Resettable for TX_PCM2PDM_CONF1_SPEC {

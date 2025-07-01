@@ -49,6 +49,4 @@ impl crate::RegisterSpec for AE_BLOCK_MEAN_2_SPEC {
 #[doc = "`read()` method returns [`ae_block_mean_2::R`](R) reader structure"]
 impl crate::Readable for AE_BLOCK_MEAN_2_SPEC {}
 #[doc = "`reset()` method sets AE_BLOCK_MEAN_2 to value 0"]
-impl crate::Resettable for AE_BLOCK_MEAN_2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AE_BLOCK_MEAN_2_SPEC {}

@@ -53,10 +53,6 @@ impl crate::Readable for EMMCDDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`emmcddr::W`](W) writer structure"]
 impl crate::Writable for EMMCDDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EMMCDDR to value 0"]
-impl crate::Resettable for EMMCDDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EMMCDDR_SPEC {}

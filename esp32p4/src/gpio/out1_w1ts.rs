@@ -23,10 +23,6 @@ impl crate::RegisterSpec for OUT1_W1TS_SPEC {
 #[doc = "`write(|w| ..)` method takes [`out1_w1ts::W`](W) writer structure"]
 impl crate::Writable for OUT1_W1TS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OUT1_W1TS to value 0"]
-impl crate::Resettable for OUT1_W1TS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for OUT1_W1TS_SPEC {}

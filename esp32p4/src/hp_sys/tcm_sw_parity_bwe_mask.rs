@@ -43,10 +43,6 @@ impl crate::Readable for TCM_SW_PARITY_BWE_MASK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tcm_sw_parity_bwe_mask::W`](W) writer structure"]
 impl crate::Writable for TCM_SW_PARITY_BWE_MASK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TCM_SW_PARITY_BWE_MASK to value 0"]
-impl crate::Resettable for TCM_SW_PARITY_BWE_MASK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TCM_SW_PARITY_BWE_MASK_SPEC {}

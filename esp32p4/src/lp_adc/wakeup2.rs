@@ -94,8 +94,6 @@ impl crate::Readable for WAKEUP2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wakeup2::W`](W) writer structure"]
 impl crate::Writable for WAKEUP2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets WAKEUP2 to value 0x03ff_c000"]
 impl crate::Resettable for WAKEUP2_SPEC {

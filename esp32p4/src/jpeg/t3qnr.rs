@@ -25,6 +25,4 @@ impl crate::RegisterSpec for T3QNR_SPEC {
 #[doc = "`read()` method returns [`t3qnr::R`](R) reader structure"]
 impl crate::Readable for T3QNR_SPEC {}
 #[doc = "`reset()` method sets T3QNR to value 0"]
-impl crate::Resettable for T3QNR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for T3QNR_SPEC {}

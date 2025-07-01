@@ -83,8 +83,6 @@ impl crate::Readable for COLOR_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`color_ctrl::W`](W) writer structure"]
 impl crate::Writable for COLOR_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets COLOR_CTRL to value 0x0080_0080"]
 impl crate::Resettable for COLOR_CTRL_SPEC {

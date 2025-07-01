@@ -43,10 +43,6 @@ impl crate::Readable for LP_SLEEP_LP_REGULATOR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_sleep_lp_regulator1::W`](W) writer structure"]
 impl crate::Writable for LP_SLEEP_LP_REGULATOR1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_SLEEP_LP_REGULATOR1 to value 0"]
-impl crate::Resettable for LP_SLEEP_LP_REGULATOR1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for LP_SLEEP_LP_REGULATOR1_SPEC {}

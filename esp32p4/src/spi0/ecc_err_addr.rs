@@ -25,6 +25,4 @@ impl crate::RegisterSpec for ECC_ERR_ADDR_SPEC {
 #[doc = "`read()` method returns [`ecc_err_addr::R`](R) reader structure"]
 impl crate::Readable for ECC_ERR_ADDR_SPEC {}
 #[doc = "`reset()` method sets ECC_ERR_ADDR to value 0"]
-impl crate::Resettable for ECC_ERR_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ECC_ERR_ADDR_SPEC {}

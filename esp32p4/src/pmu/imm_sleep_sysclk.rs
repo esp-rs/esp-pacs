@@ -44,10 +44,6 @@ impl crate::RegisterSpec for IMM_SLEEP_SYSCLK_SPEC {
 #[doc = "`write(|w| ..)` method takes [`imm_sleep_sysclk::W`](W) writer structure"]
 impl crate::Writable for IMM_SLEEP_SYSCLK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IMM_SLEEP_SYSCLK to value 0"]
-impl crate::Resettable for IMM_SLEEP_SYSCLK_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for IMM_SLEEP_SYSCLK_SPEC {}

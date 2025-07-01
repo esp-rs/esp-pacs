@@ -113,10 +113,6 @@ impl crate::Readable for PERI_CLK_CTRL13_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`peri_clk_ctrl13::W`](W) writer structure"]
 impl crate::Writable for PERI_CLK_CTRL13_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PERI_CLK_CTRL13 to value 0"]
-impl crate::Resettable for PERI_CLK_CTRL13_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PERI_CLK_CTRL13_SPEC {}

@@ -83,8 +83,6 @@ impl crate::Readable for DMA_FRAME_INTERVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dma_frame_interval::W`](W) writer structure"]
 impl crate::Writable for DMA_FRAME_INTERVAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DMA_FRAME_INTERVAL to value 0x2000_2409"]
 impl crate::Resettable for DMA_FRAME_INTERVAL_SPEC {

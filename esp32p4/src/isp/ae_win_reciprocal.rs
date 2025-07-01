@@ -38,10 +38,6 @@ impl crate::Readable for AE_WIN_RECIPROCAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ae_win_reciprocal::W`](W) writer structure"]
 impl crate::Writable for AE_WIN_RECIPROCAL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AE_WIN_RECIPROCAL to value 0"]
-impl crate::Resettable for AE_WIN_RECIPROCAL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AE_WIN_RECIPROCAL_SPEC {}

@@ -68,10 +68,6 @@ impl crate::Readable for GET_LINE_CODE_W1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`get_line_code_w1::W`](W) writer structure"]
 impl crate::Writable for GET_LINE_CODE_W1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GET_LINE_CODE_W1 to value 0"]
-impl crate::Resettable for GET_LINE_CODE_W1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GET_LINE_CODE_W1_SPEC {}

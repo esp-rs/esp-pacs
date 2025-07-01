@@ -38,8 +38,6 @@ impl crate::Readable for LSC_TABLESIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lsc_tablesize::W`](W) writer structure"]
 impl crate::Writable for LSC_TABLESIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LSC_TABLESIZE to value 0x1f"]
 impl crate::Resettable for LSC_TABLESIZE_SPEC {

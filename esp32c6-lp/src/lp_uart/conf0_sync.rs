@@ -248,8 +248,6 @@ impl crate::Readable for CONF0_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`conf0_sync::W`](W) writer structure"]
 impl crate::Writable for CONF0_SYNC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CONF0_SYNC to value 0x0010_001c"]
 impl crate::Resettable for CONF0_SYNC_SPEC {

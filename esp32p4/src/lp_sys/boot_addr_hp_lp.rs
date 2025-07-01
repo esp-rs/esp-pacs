@@ -38,10 +38,6 @@ impl crate::Readable for BOOT_ADDR_HP_LP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`boot_addr_hp_lp::W`](W) writer structure"]
 impl crate::Writable for BOOT_ADDR_HP_LP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BOOT_ADDR_HP_LP to value 0"]
-impl crate::Resettable for BOOT_ADDR_HP_LP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BOOT_ADDR_HP_LP_SPEC {}

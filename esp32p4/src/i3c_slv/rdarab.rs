@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RDARAB_SPEC {
 #[doc = "`read()` method returns [`rdarab::R`](R) reader structure"]
 impl crate::Readable for RDARAB_SPEC {}
 #[doc = "`reset()` method sets RDARAB to value 0"]
-impl crate::Resettable for RDARAB_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RDARAB_SPEC {}

@@ -83,8 +83,6 @@ impl crate::Readable for FRAME_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`frame_cfg::W`](W) writer structure"]
 impl crate::Writable for FRAME_CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRAME_CFG to value 0x011e_01e0"]
 impl crate::Resettable for FRAME_CFG_SPEC {

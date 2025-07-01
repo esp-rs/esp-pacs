@@ -83,8 +83,6 @@ impl crate::Readable for TOUCH_PWR_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`touch_pwr_cntl::W`](W) writer structure"]
 impl crate::Writable for TOUCH_PWR_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TOUCH_PWR_CNTL to value 0x0019_0140"]
 impl crate::Resettable for TOUCH_PWR_CNTL_SPEC {

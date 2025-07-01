@@ -86,10 +86,7 @@ impl crate::RegisterSpec for CLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clr::W`](W) writer structure"]
 impl crate::Writable for CLR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x03ff;
 }
 #[doc = "`reset()` method sets CLR to value 0"]
-impl crate::Resettable for CLR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLR_SPEC {}

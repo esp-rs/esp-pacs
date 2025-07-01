@@ -38,10 +38,6 @@ impl crate::Readable for RX_TAILING_BITS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_tailing_bits::W`](W) writer structure"]
 impl crate::Writable for RX_TAILING_BITS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_TAILING_BITS to value 0"]
-impl crate::Resettable for RX_TAILING_BITS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RX_TAILING_BITS_SPEC {}

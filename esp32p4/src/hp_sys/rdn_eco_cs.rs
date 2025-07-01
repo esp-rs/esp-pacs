@@ -49,10 +49,6 @@ impl crate::Readable for RDN_ECO_CS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rdn_eco_cs::W`](W) writer structure"]
 impl crate::Writable for RDN_ECO_CS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RDN_ECO_CS to value 0"]
-impl crate::Resettable for RDN_ECO_CS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RDN_ECO_CS_SPEC {}

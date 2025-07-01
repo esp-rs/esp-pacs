@@ -40,10 +40,6 @@ impl crate::Readable for L1_DCACHE_PRELOAD_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_dcache_preload_size::W`](W) writer structure"]
 impl crate::Writable for L1_DCACHE_PRELOAD_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_DCACHE_PRELOAD_SIZE to value 0"]
-impl crate::Resettable for L1_DCACHE_PRELOAD_SIZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for L1_DCACHE_PRELOAD_SIZE_SPEC {}

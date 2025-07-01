@@ -25,6 +25,4 @@ impl crate::RegisterSpec for REDUNDANCY_SIG4_SPEC {
 #[doc = "`read()` method returns [`redundancy_sig4::R`](R) reader structure"]
 impl crate::Readable for REDUNDANCY_SIG4_SPEC {}
 #[doc = "`reset()` method sets REDUNDANCY_SIG4 to value 0"]
-impl crate::Resettable for REDUNDANCY_SIG4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REDUNDANCY_SIG4_SPEC {}

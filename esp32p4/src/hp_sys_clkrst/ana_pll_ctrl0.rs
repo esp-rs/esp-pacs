@@ -138,10 +138,6 @@ impl crate::Readable for ANA_PLL_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ana_pll_ctrl0::W`](W) writer structure"]
 impl crate::Writable for ANA_PLL_CTRL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ANA_PLL_CTRL0 to value 0"]
-impl crate::Resettable for ANA_PLL_CTRL0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for ANA_PLL_CTRL0_SPEC {}

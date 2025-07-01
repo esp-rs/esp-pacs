@@ -236,8 +236,6 @@ impl crate::Readable for DDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ddr::W`](W) writer structure"]
 impl crate::Writable for DDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DDR to value 0x20"]
 impl crate::Resettable for DDR_SPEC {

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for AWB0_ACC_R_SPEC {
 #[doc = "`read()` method returns [`awb0_acc_r::R`](R) reader structure"]
 impl crate::Readable for AWB0_ACC_R_SPEC {}
 #[doc = "`reset()` method sets AWB0_ACC_R to value 0"]
-impl crate::Resettable for AWB0_ACC_R_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for AWB0_ACC_R_SPEC {}

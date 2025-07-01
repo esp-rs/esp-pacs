@@ -38,10 +38,6 @@ impl crate::Readable for SCL_LOW_PERIOD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`scl_low_period::W`](W) writer structure"]
 impl crate::Writable for SCL_LOW_PERIOD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SCL_LOW_PERIOD to value 0"]
-impl crate::Resettable for SCL_LOW_PERIOD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SCL_LOW_PERIOD_SPEC {}

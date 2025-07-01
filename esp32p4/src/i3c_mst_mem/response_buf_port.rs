@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RESPONSE_BUF_PORT_SPEC {
 #[doc = "`read()` method returns [`response_buf_port::R`](R) reader structure"]
 impl crate::Readable for RESPONSE_BUF_PORT_SPEC {}
 #[doc = "`reset()` method sets RESPONSE_BUF_PORT to value 0"]
-impl crate::Resettable for RESPONSE_BUF_PORT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RESPONSE_BUF_PORT_SPEC {}

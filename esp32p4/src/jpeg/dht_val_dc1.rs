@@ -25,6 +25,4 @@ impl crate::RegisterSpec for DHT_VAL_DC1_SPEC {
 #[doc = "`read()` method returns [`dht_val_dc1::R`](R) reader structure"]
 impl crate::Readable for DHT_VAL_DC1_SPEC {}
 #[doc = "`reset()` method sets DHT_VAl_DC1 to value 0"]
-impl crate::Resettable for DHT_VAL_DC1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DHT_VAL_DC1_SPEC {}

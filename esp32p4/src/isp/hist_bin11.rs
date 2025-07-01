@@ -25,6 +25,4 @@ impl crate::RegisterSpec for HIST_BIN11_SPEC {
 #[doc = "`read()` method returns [`hist_bin11::R`](R) reader structure"]
 impl crate::Readable for HIST_BIN11_SPEC {}
 #[doc = "`reset()` method sets HIST_BIN11 to value 0"]
-impl crate::Resettable for HIST_BIN11_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HIST_BIN11_SPEC {}

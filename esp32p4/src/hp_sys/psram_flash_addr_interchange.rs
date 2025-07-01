@@ -53,10 +53,6 @@ impl crate::Readable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`psram_flash_addr_interchange::W`](W) writer structure"]
 impl crate::Writable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSRAM_FLASH_ADDR_INTERCHANGE to value 0"]
-impl crate::Resettable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PSRAM_FLASH_ADDR_INTERCHANGE_SPEC {}

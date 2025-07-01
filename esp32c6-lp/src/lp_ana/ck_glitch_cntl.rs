@@ -38,10 +38,6 @@ impl crate::Readable for CK_GLITCH_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ck_glitch_cntl::W`](W) writer structure"]
 impl crate::Writable for CK_GLITCH_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CK_GLITCH_CNTL to value 0"]
-impl crate::Resettable for CK_GLITCH_CNTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CK_GLITCH_CNTL_SPEC {}

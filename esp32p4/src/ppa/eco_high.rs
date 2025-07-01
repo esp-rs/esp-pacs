@@ -38,8 +38,6 @@ impl crate::Readable for ECO_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`eco_high::W`](W) writer structure"]
 impl crate::Writable for ECO_HIGH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ECO_HIGH to value 0xffff_ffff"]
 impl crate::Resettable for ECO_HIGH_SPEC {

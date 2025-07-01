@@ -33,6 +33,4 @@ impl crate::RegisterSpec for FH_STATUS_SPEC {
 #[doc = "`read()` method returns [`fh_status::R`](R) reader structure"]
 impl crate::Readable for FH_STATUS_SPEC {}
 #[doc = "`reset()` method sets FH_STATUS to value 0"]
-impl crate::Resettable for FH_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FH_STATUS_SPEC {}

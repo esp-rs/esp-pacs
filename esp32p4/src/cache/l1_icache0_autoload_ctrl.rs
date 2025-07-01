@@ -145,8 +145,6 @@ impl crate::Readable for L1_ICACHE0_AUTOLOAD_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_icache0_autoload_ctrl::W`](W) writer structure"]
 impl crate::Writable for L1_ICACHE0_AUTOLOAD_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_ICACHE0_AUTOLOAD_CTRL to value 0x02"]
 impl crate::Resettable for L1_ICACHE0_AUTOLOAD_CTRL_SPEC {

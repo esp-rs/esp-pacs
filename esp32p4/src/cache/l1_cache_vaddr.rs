@@ -38,8 +38,6 @@ impl crate::Readable for L1_CACHE_VADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l1_cache_vaddr::W`](W) writer structure"]
 impl crate::Writable for L1_CACHE_VADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L1_CACHE_VADDR to value 0x4000_0000"]
 impl crate::Resettable for L1_CACHE_VADDR_SPEC {

@@ -173,8 +173,6 @@ impl crate::Readable for TCM_RAM_WRR_CONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tcm_ram_wrr_config::W`](W) writer structure"]
 impl crate::Writable for TCM_RAM_WRR_CONFIG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TCM_RAM_WRR_CONFIG to value 0x826e_d93f"]
 impl crate::Resettable for TCM_RAM_WRR_CONFIG_SPEC {

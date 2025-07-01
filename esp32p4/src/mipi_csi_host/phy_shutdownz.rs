@@ -38,10 +38,6 @@ impl crate::Readable for PHY_SHUTDOWNZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`phy_shutdownz::W`](W) writer structure"]
 impl crate::Writable for PHY_SHUTDOWNZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PHY_SHUTDOWNZ to value 0"]
-impl crate::Resettable for PHY_SHUTDOWNZ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PHY_SHUTDOWNZ_SPEC {}

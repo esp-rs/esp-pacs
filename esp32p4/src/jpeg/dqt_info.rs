@@ -83,8 +83,6 @@ impl crate::Readable for DQT_INFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dqt_info::W`](W) writer structure"]
 impl crate::Writable for DQT_INFO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DQT_INFO to value 0x0302_0100"]
 impl crate::Resettable for DQT_INFO_SPEC {

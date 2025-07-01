@@ -68,8 +68,6 @@ impl crate::Readable for SR_FIX_ALPHA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sr_fix_alpha::W`](W) writer structure"]
 impl crate::Writable for SR_FIX_ALPHA_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SR_FIX_ALPHA to value 0x80"]
 impl crate::Resettable for SR_FIX_ALPHA_SPEC {

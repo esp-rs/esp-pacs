@@ -38,10 +38,6 @@ impl crate::Readable for DBI_VCID_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dbi_vcid::W`](W) writer structure"]
 impl crate::Writable for DBI_VCID_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DBI_VCID to value 0"]
-impl crate::Resettable for DBI_VCID_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DBI_VCID_SPEC {}

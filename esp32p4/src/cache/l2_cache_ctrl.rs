@@ -53,8 +53,6 @@ impl crate::Readable for L2_CACHE_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`l2_cache_ctrl::W`](W) writer structure"]
 impl crate::Writable for L2_CACHE_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets L2_CACHE_CTRL to value 0x10"]
 impl crate::Resettable for L2_CACHE_CTRL_SPEC {

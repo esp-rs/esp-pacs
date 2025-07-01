@@ -38,8 +38,6 @@ impl crate::Readable for SPI_FMEM_PMS_SIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_fmem_pms_size::W`](W) writer structure"]
 impl crate::Writable for SPI_FMEM_PMS_SIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPI_FMEM_PMS%s_SIZE to value 0x1000"]
 impl crate::Resettable for SPI_FMEM_PMS_SIZE_SPEC {

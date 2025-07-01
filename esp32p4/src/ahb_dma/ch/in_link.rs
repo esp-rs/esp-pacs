@@ -67,8 +67,6 @@ impl crate::Readable for IN_LINK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`in_link::W`](W) writer structure"]
 impl crate::Writable for IN_LINK_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IN_LINK to value 0x11"]
 impl crate::Resettable for IN_LINK_SPEC {

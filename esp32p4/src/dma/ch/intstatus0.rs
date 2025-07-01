@@ -283,6 +283,4 @@ impl crate::RegisterSpec for INTSTATUS0_SPEC {
 #[doc = "`read()` method returns [`intstatus0::R`](R) reader structure"]
 impl crate::Readable for INTSTATUS0_SPEC {}
 #[doc = "`reset()` method sets INTSTATUS0 to value 0"]
-impl crate::Resettable for INTSTATUS0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for INTSTATUS0_SPEC {}

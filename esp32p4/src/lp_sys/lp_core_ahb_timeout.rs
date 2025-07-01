@@ -85,8 +85,6 @@ impl crate::Readable for LP_CORE_AHB_TIMEOUT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_core_ahb_timeout::W`](W) writer structure"]
 impl crate::Writable for LP_CORE_AHB_TIMEOUT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_CORE_AHB_TIMEOUT to value 0x007f_ffff"]
 impl crate::Resettable for LP_CORE_AHB_TIMEOUT_SPEC {

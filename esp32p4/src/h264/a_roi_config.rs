@@ -53,10 +53,6 @@ impl crate::Readable for A_ROI_CONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`a_roi_config::W`](W) writer structure"]
 impl crate::Writable for A_ROI_CONFIG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets A_ROI_CONFIG to value 0"]
-impl crate::Resettable for A_ROI_CONFIG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for A_ROI_CONFIG_SPEC {}

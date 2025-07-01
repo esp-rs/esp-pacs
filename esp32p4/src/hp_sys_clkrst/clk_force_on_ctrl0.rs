@@ -336,8 +336,6 @@ impl crate::Readable for CLK_FORCE_ON_CTRL0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_force_on_ctrl0::W`](W) writer structure"]
 impl crate::Writable for CLK_FORCE_ON_CTRL0_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLK_FORCE_ON_CTRL0 to value 0x0003_ffff"]
 impl crate::Resettable for CLK_FORCE_ON_CTRL0_SPEC {

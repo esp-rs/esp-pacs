@@ -38,10 +38,6 @@ impl crate::Readable for MMU_ITEM_INDEX_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mmu_item_index::W`](W) writer structure"]
 impl crate::Writable for MMU_ITEM_INDEX_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MMU_ITEM_INDEX to value 0"]
-impl crate::Resettable for MMU_ITEM_INDEX_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MMU_ITEM_INDEX_SPEC {}

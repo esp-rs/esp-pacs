@@ -49,6 +49,4 @@ impl crate::RegisterSpec for DECODER_STATUS4_SPEC {
 #[doc = "`read()` method returns [`decoder_status4::R`](R) reader structure"]
 impl crate::Readable for DECODER_STATUS4_SPEC {}
 #[doc = "`reset()` method sets DECODER_STATUS4 to value 0"]
-impl crate::Resettable for DECODER_STATUS4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DECODER_STATUS4_SPEC {}

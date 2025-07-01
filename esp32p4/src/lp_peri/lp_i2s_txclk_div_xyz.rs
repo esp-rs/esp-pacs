@@ -85,8 +85,6 @@ impl crate::Readable for LP_I2S_TXCLK_DIV_XYZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_i2s_txclk_div_xyz::W`](W) writer structure"]
 impl crate::Writable for LP_I2S_TXCLK_DIV_XYZ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_I2S_TXCLK_DIV_XYZ to value 0x4000"]
 impl crate::Resettable for LP_I2S_TXCLK_DIV_XYZ_SPEC {

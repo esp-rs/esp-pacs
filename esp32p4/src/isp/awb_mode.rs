@@ -53,8 +53,6 @@ impl crate::Readable for AWB_MODE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`awb_mode::W`](W) writer structure"]
 impl crate::Writable for AWB_MODE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets AWB_MODE to value 0x03"]
 impl crate::Resettable for AWB_MODE_SPEC {

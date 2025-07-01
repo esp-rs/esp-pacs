@@ -38,10 +38,6 @@ impl crate::Readable for VID_VFP_LINES_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vid_vfp_lines::W`](W) writer structure"]
 impl crate::Writable for VID_VFP_LINES_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VID_VFP_LINES to value 0"]
-impl crate::Resettable for VID_VFP_LINES_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for VID_VFP_LINES_SPEC {}

@@ -68,8 +68,6 @@ impl crate::Readable for RAW_BUF_CREDIT_CTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`raw_buf_credit_ctl::W`](W) writer structure"]
 impl crate::Writable for RAW_BUF_CREDIT_CTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RAW_BUF_CREDIT_CTL to value 0x0320_0400"]
 impl crate::Resettable for RAW_BUF_CREDIT_CTL_SPEC {

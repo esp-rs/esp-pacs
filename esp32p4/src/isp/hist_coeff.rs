@@ -68,8 +68,6 @@ impl crate::Readable for HIST_COEFF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`hist_coeff::W`](W) writer structure"]
 impl crate::Writable for HIST_COEFF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets HIST_COEFF to value 0x0055_5555"]
 impl crate::Resettable for HIST_COEFF_SPEC {

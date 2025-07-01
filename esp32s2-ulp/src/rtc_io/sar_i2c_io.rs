@@ -68,10 +68,6 @@ impl crate::Readable for SAR_I2C_IO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_i2c_io::W`](W) writer structure"]
 impl crate::Writable for SAR_I2C_IO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_I2C_IO to value 0"]
-impl crate::Resettable for SAR_I2C_IO_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SAR_I2C_IO_SPEC {}

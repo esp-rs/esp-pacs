@@ -25,6 +25,4 @@ impl crate::RegisterSpec for CORE_1_RCD_PDEBUGSP_SPEC {
 #[doc = "`read()` method returns [`core_1_rcd_pdebugsp::R`](R) reader structure"]
 impl crate::Readable for CORE_1_RCD_PDEBUGSP_SPEC {}
 #[doc = "`reset()` method sets CORE_1_RCD_PDEBUGSP to value 0"]
-impl crate::Resettable for CORE_1_RCD_PDEBUGSP_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CORE_1_RCD_PDEBUGSP_SPEC {}

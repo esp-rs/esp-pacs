@@ -185,8 +185,6 @@ impl crate::Readable for LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_aonclkrst_hp_usb_clkrst_ctrl1::W`](W) writer structure"]
 impl crate::Writable for LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_AONCLKRST_HP_USB_CLKRST_CTRL1 to value 0xc000_0000"]
 impl crate::Resettable for LP_AONCLKRST_HP_USB_CLKRST_CTRL1_SPEC {

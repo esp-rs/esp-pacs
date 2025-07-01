@@ -33,6 +33,4 @@ impl crate::RegisterSpec for RDATAH_SPEC {
 #[doc = "`read()` method returns [`rdatah::R`](R) reader structure"]
 impl crate::Readable for RDATAH_SPEC {}
 #[doc = "`reset()` method sets RDATAH to value 0"]
-impl crate::Resettable for RDATAH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RDATAH_SPEC {}

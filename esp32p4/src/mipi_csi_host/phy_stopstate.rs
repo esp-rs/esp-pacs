@@ -41,6 +41,4 @@ impl crate::RegisterSpec for PHY_STOPSTATE_SPEC {
 #[doc = "`read()` method returns [`phy_stopstate::R`](R) reader structure"]
 impl crate::Readable for PHY_STOPSTATE_SPEC {}
 #[doc = "`reset()` method sets PHY_STOPSTATE to value 0"]
-impl crate::Resettable for PHY_STOPSTATE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PHY_STOPSTATE_SPEC {}

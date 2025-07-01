@@ -131,6 +131,4 @@ impl crate::RegisterSpec for CORE_1_INTR_RAW_SPEC {
 #[doc = "`read()` method returns [`core_1_intr_raw::R`](R) reader structure"]
 impl crate::Readable for CORE_1_INTR_RAW_SPEC {}
 #[doc = "`reset()` method sets CORE_1_INTR_RAW to value 0"]
-impl crate::Resettable for CORE_1_INTR_RAW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CORE_1_INTR_RAW_SPEC {}

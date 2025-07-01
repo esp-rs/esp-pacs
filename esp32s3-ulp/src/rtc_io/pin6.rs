@@ -68,10 +68,6 @@ impl crate::Readable for PIN6_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pin6::W`](W) writer structure"]
 impl crate::Writable for PIN6_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PIN6 to value 0"]
-impl crate::Resettable for PIN6_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PIN6_SPEC {}

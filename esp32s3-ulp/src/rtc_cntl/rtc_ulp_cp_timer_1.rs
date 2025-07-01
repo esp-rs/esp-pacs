@@ -38,8 +38,6 @@ impl crate::Readable for RTC_ULP_CP_TIMER_1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rtc_ulp_cp_timer_1::W`](W) writer structure"]
 impl crate::Writable for RTC_ULP_CP_TIMER_1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RTC_ULP_CP_TIMER_1 to value 0xc800"]
 impl crate::Resettable for RTC_ULP_CP_TIMER_1_SPEC {

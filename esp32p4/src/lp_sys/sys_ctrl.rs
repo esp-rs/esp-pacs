@@ -150,8 +150,6 @@ impl crate::Readable for SYS_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sys_ctrl::W`](W) writer structure"]
 impl crate::Writable for SYS_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYS_CTRL to value 0x1fff_c7f8"]
 impl crate::Resettable for SYS_CTRL_SPEC {

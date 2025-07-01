@@ -209,8 +209,6 @@ impl crate::Readable for DCM_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`dcm_ctrl::W`](W) writer structure"]
 impl crate::Writable for DCM_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DCM_CTRL to value 0x0001_0000"]
 impl crate::Resettable for DCM_CTRL_SPEC {

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for TX_CHDATA_SPEC {
 #[doc = "`read()` method returns [`tx_chdata::R`](R) reader structure"]
 impl crate::Readable for TX_CHDATA_SPEC {}
 #[doc = "`reset()` method sets TX_CH%sDATA to value 0"]
-impl crate::Resettable for TX_CHDATA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TX_CHDATA_SPEC {}

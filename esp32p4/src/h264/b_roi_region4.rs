@@ -98,10 +98,6 @@ impl crate::Readable for B_ROI_REGION4_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`b_roi_region4::W`](W) writer structure"]
 impl crate::Writable for B_ROI_REGION4_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets B_ROI_REGION4 to value 0"]
-impl crate::Resettable for B_ROI_REGION4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for B_ROI_REGION4_SPEC {}

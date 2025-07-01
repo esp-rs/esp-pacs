@@ -68,8 +68,6 @@ impl crate::Readable for LP_RST_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lp_rst_ctrl::W`](W) writer structure"]
 impl crate::Writable for LP_RST_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LP_RST_CTRL to value 0x03"]
 impl crate::Resettable for LP_RST_CTRL_SPEC {

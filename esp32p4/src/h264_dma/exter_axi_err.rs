@@ -73,6 +73,4 @@ impl crate::RegisterSpec for EXTER_AXI_ERR_SPEC {
 #[doc = "`read()` method returns [`exter_axi_err::R`](R) reader structure"]
 impl crate::Readable for EXTER_AXI_ERR_SPEC {}
 #[doc = "`reset()` method sets EXTER_AXI_ERR to value 0"]
-impl crate::Resettable for EXTER_AXI_ERR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for EXTER_AXI_ERR_SPEC {}

@@ -49,6 +49,4 @@ impl crate::RegisterSpec for BLC_MEAN_SPEC {
 #[doc = "`read()` method returns [`blc_mean::R`](R) reader structure"]
 impl crate::Readable for BLC_MEAN_SPEC {}
 #[doc = "`reset()` method sets BLC_MEAN to value 0"]
-impl crate::Resettable for BLC_MEAN_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BLC_MEAN_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for FIFO_FLOW_STATUS_SPEC {
 #[doc = "`read()` method returns [`fifo_flow_status::R`](R) reader structure"]
 impl crate::Readable for FIFO_FLOW_STATUS_SPEC {}
 #[doc = "`reset()` method sets FIFO_FLOW_STATUS to value 0"]
-impl crate::Resettable for FIFO_FLOW_STATUS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FIFO_FLOW_STATUS_SPEC {}
