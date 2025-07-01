@@ -76,7 +76,6 @@ PROVIDE(PMS_PRO_CACHE_ILG = DefaultHandler);
 PROVIDE(PMS_DMA_APB_I_ILG = DefaultHandler);
 PROVIDE(PMS_DMA_RX_I_ILG = DefaultHandler);
 PROVIDE(PMS_DMA_TX_I_ILG = DefaultHandler);
-PROVIDE(SPI0_REJECT_CACHE = DefaultHandler);
 PROVIDE(DMA_COPY = DefaultHandler);
 PROVIDE(SPI4_DMA = DefaultHandler);
 PROVIDE(SPI4 = DefaultHandler);
