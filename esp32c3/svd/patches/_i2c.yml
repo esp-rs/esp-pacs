@@ -1,0 +1,9 @@
+I2C0:
+  _modify:
+    FIFO_DATA:
+      name: DATA
+
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write

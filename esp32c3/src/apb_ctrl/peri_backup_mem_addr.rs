@@ -28,7 +28,7 @@ impl W {
         BACKUP_MEM_START_ADDR_W::new(self, 0)
     }
 }
-#[doc = "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_mem_addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_mem_addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_mem_addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_mem_addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERI_BACKUP_MEM_ADDR_SPEC;
 impl crate::RegisterSpec for PERI_BACKUP_MEM_ADDR_SPEC {
     type Ux = u32;

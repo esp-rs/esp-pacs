@@ -1,0 +1,22 @@
+RTC_CNTL:
+  _strip: "RTC_"
+
+  "*":
+    _strip: "RTC_"
+
+  _modify:
+    RTC:
+      name: RTC_CNTL
+
+  ANA_CONF:
+    _add:
+      PLLA_FORCE_PD:
+        description: PLLA force power down
+        bitOffset: 23
+        bitWidth: 1
+        access: read-write
+      PLLA_FORCE_PU:
+        description: PLLA force power up
+        bitOffset: 24
+        bitWidth: 1
+        access: read-write

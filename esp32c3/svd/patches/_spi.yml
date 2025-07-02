@@ -1,0 +1,30 @@
+"SPI[01]":
+  _strip: SPI_MEM_
+
+  "*":
+    _strip: SPI_MEM_
+
+SPI1:
+  FLASH_SUS_CTRL:
+    _modify:
+      SPI_FMEM_RD_SUS_2B:
+        name: RD_SUS_2B
+        
+  _include: ../../../common_patches/int_strip.yaml
+
+SPI2:
+  _strip: SPI_
+
+  "*":
+    _strip: SPI_
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
+

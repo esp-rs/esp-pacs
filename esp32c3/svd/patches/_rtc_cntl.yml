@@ -1,0 +1,13 @@
+RTC_CNTL:
+  _strip:
+    - RTC_CNTL_
+    - RTC_
+
+  "*":
+    _strip:
+      - RTC_CNTL_
+      - RTC_
+
+  _modify:
+    RTC:
+      name: RTC_CNTL

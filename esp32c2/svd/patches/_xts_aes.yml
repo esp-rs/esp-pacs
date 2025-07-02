@@ -1,0 +1,6 @@
+XTS_AES:
+  _modify:
+    "PLAIN_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20

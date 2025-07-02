@@ -1,0 +1,10 @@
+EFUSE:
+  _modify:
+    WR_TIM_CONF1:
+      description: Configuration register 1 of eFuse programming timing parameters.
+    WR_TIM_CONF2:
+      description: Configuration register 2 of eFuse programming timing parameters.
+    CLK:
+      description: eFuse clock configuration register.
+    CONF:
+      description: eFuse operation mode configuration register.

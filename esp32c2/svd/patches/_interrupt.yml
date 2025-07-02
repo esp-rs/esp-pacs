@@ -1,0 +1,4 @@
+INTERRUPT_CORE0:
+  _modify:
+    WIFI_MAC_INT_MAP:
+      name: MAC_INTR_MAP

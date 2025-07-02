@@ -1,0 +1,31 @@
+DS:
+  _delete:
+    _registers:
+      - "C_MEM*"
+      - "IV_MEM*"
+
+  _modify:
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "RB_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "BOX_MEM*":
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
