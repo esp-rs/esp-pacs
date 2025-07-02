@@ -5,7 +5,7 @@
 #![no_std]
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 #[doc = r"Number available in the NVIC for configuring priority"]
-pub const NVIC_PRIO_BITS: u8 = 4;
+pub const NVIC_PRIO_BITS: u8 = 0;
 #[allow(unused_imports)]
 use generic::*;
 #[doc = r"Common register and bit access and modify traits"]

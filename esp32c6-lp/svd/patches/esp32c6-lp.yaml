@@ -1,5 +1,9 @@
 _svd: "../esp32c6-lp.base.svd"
 
+_include:
+  - ./_lp_io.yml
+  - ./_lp_uart.yml
+
 _modify:
   LP_ANA_PERI:
     name: LP_ANA
@@ -41,5 +45,5 @@ LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
 
 _copy:
-    PMU:
-        from: ../../../esp32c6/svd/esp32c6.svd:PMU
+  PMU:
+    from: ../../../esp32c6/svd/esp32c6.svd:PMU
