@@ -1,0 +1,9 @@
+TIMG0:
+  "T%s*":
+    _strip:
+      - "T_"
+
+TIMG1:
+  "T%s*":
+    _strip:
+      - "T_"

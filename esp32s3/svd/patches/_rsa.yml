@@ -1,0 +1,22 @@
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+      access: write-only

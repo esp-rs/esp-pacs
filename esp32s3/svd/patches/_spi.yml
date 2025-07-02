@@ -1,0 +1,49 @@
+SPI[01]:
+  _strip: "SPI_MEM_"
+
+  "*":
+    _strip: "SPI_MEM_"
+
+  _include: ../../../common_patches/int_strip.yaml
+
+SPI[23]:
+  _strip: "SPI_"
+
+  "*":
+    _strip: "SPI_"
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+SPI0:
+  MISC:
+    _add:
+      CS%s_DIS:
+        dim: 2
+        dimIndex: 0-1
+        dimIncrement: 0x1
+        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+
+SPI1:
+  MISC:
+    _delete: ["CS0_DIS", "CS1_DIS"]
+    _add:
+      CS%s_DIS:
+        dim: 2
+        dimIndex: 0-1
+        dimIncrement: 0x1
+        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
+        bitOffset: 0
+        bitWidth: 1
+        access: read-write
+
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
+
+SPI2:
+  _include: ../../../common_patches/spi_dma_int_strip.yaml

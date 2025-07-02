@@ -1,0 +1,8 @@
+DMA:
+  "*":
+    _strip_end:
+      - "_CH"
+      - "_CH_INT_CLR"
+      - "_CH_INT_ENA"
+      - "_CH_INT_RAW"
+      - "_CH_INT_ST"

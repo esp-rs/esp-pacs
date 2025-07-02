@@ -34,9 +34,9 @@ COMD*:
       bitWidth: 8
       access: read-write
   OPCODE:
-      _name: Opcode
-      Write: [1, WRITE opcode]
-      Read: [3, READ opcode]
-      Stop: [2, STOP opcode]
-      End: [4, END opcode]
-      Rstart: [6, RSTART opcode]
+    _name: Opcode
+    Write: [1, WRITE opcode]
+    Read: [3, READ opcode]
+    Stop: [2, STOP opcode]
+    End: [4, END opcode]
+    Rstart: [6, RSTART opcode]

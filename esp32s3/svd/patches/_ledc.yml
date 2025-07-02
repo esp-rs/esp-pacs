@@ -1,0 +1,10 @@
+LEDC:
+  "*":
+    _strip_end: "_CH"
+
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+    _strip_end: "_TIMER"
+
+  "TIMER%s_VALUE":
+    _strip: "TIMER_"
