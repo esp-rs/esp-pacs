@@ -1,0 +1,8 @@
+HP_SYS_CLKRST:
+  "*":
+    _strip: "REG_"
+
+  ROOT_CLK_CTRL0:
+    _modify:
+      SOC_CLK_DIV_UPDATE:
+        access: read-write

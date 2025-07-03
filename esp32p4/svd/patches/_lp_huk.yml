@@ -1,0 +1,6 @@
+LP_HUK:
+  _modify:
+    "INFO_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20

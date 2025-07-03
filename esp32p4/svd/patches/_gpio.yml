@@ -1,0 +1,36 @@
+GPIO:
+  _delete:
+    - FUNC*_IN_SEL_CFG
+  _add:
+    FUNC%s_IN_SEL_CFG:
+      dim: 254
+      dimIncrement: 0x04
+      dimIndex: 1-255
+      description: GPIO input function configuration register
+      addressOffset: 0x15c
+      access: read-write
+      reset-value: 0x0000003F
+      size: 0x20
+      fields:
+        IN_SEL:
+          description: "set this value: s=0-56: connect GPIO[s] to this port. s=0x3F: set this port always high level. s=0x3E: set this port always low level."
+          bitOffset: 0
+          bitWidth: 6
+        IN_INV_SEL:
+          description: "set this bit to invert input signal. 1:invert. 0:not invert."
+          bitOffset: 6
+          bitWidth: 1
+        SEL:
+          description: "set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."
+          bitOffset: 7
+          bitWidth: 1
+  FUNC%s_OUT_SEL_CFG:
+    _modify:
+      FUNC_OUT_SEL:
+        name: OUT_SEL
+      FUNC_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC_OEN_SEL:
+        name: OEN_SEL
+      FUNC_OEN_INV_SEL:
+        name: OEN_INV_SEL

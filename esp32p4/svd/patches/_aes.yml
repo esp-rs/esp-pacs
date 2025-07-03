@@ -1,0 +1,18 @@
+AES:
+  _modify:
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "H_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "J0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "T0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20

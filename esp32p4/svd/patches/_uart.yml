@@ -1,0 +1,7 @@
+UART0:
+  _strip_end: "_SYNC"
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
