@@ -1,5 +1,32 @@
 _svd: "../esp32h2.base.svd"
 
+_include:
+  - "_aes.yml"
+  - "_dma.yml"
+  - "_ds.yml"
+  - "_ecc.yml"
+  - "_gpio.yml"
+  - "_hmac.yml"
+  - "_i2c.yml"
+  - "_interrupt.yml"
+  - "_ledc.yml"
+  - "_lp_wdt.yml"
+  - "_pcnt.yml"
+  - "_pcr.yml"
+  - "_pmu.yml"
+  - "_rmt.yml"
+  - "_rsa.yml"
+  - "_sha.yml"
+  - "_spi.yml"
+  - "_timg.yml"
+  - "_uart.yml"
+
+RNG:
+  _modify:
+    DATA:
+      access: read-only
+      addressOffset: 8
+
 _add:
   CLINT:
     description: Core Local Interrupts
@@ -1038,25 +1065,7 @@ I2C1:
 HP_APM,LP_APM:
   _include: ../../../common_patches/hp_apm.yaml
 
-LP_WDT:
-  _modify:
-    INT_ST_RTC:
-      name: INT_ST
-    INT_ENA_RTC:
-      name: INT_ENA
-    INT_CLR_RTC:
-      name: INT_CLR
-  WDTFEED:
-    _modify:
-      RTC_WDT_FEED:
-        name: WDT_FEED
-
-SPI[01]:
-  _strip: SPI_MEM_
-  "*":
-    _strip: SPI_MEM_
-
-"EFUSE,I2C0,I2S0,UART0,SPI[01],LP_WDT,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,PARL_IO,PAU,GPIO_SD,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -1096,21 +1105,8 @@ INTPRI:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
 
-PCNT:
-  _include: ../../../common_patches/pcnt.yaml
-
 PCR:
   _include: ../../../common_patches/pcr.yaml
-
-SPI[12]:
-  _include: ../../../common_patches/spi_w.yaml
-
-SPI2:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
-  _modify:
-    _interrupts:
-      GPSPI2:
-        name: SPI2
 
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
