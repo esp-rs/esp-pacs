@@ -1,0 +1,36 @@
+MCPWM0:
+  TIMER0_SYNC:
+    _modify:
+      TIMER0_PHASE:
+        bitWidth: 16
+
+    _add:
+      TIMER0_PHASE_DIRECTION:
+        description: "Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+
+  TIMER1_SYNC:
+    _modify:
+      TIMER1_PHASE:
+        bitWidth: 16
+
+    _add:
+      TIMER1_PHASE_DIRECTION:
+        description: "Configure the PWM timer1's direction when timer1 mode is up-down mode. 0: increase; 1: decrease."
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write
+
+  TIMER2_SYNC:
+    _modify:
+      TIMER2_PHASE:
+        bitWidth: 16
+
+    _add:
+      TIMER2_PHASE_DIRECTION:
+        description: "Configure the PWM timer2's direction when timer2 mode is up-down mode. 0: increase; 1: decrease."
+        bitOffset: 20
+        bitWidth: 1
+        access: read-write

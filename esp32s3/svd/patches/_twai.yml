@@ -1,0 +1,5 @@
+TWAI0:
+  DATA_*:
+    _modify:
+      TX_BYTE_*:
+        access: read-write

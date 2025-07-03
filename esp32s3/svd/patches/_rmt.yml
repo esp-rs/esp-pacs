@@ -1,0 +1,100 @@
+RMT:
+  _delete: "RX_CH%sDATA"
+
+  _modify:
+    "TX_CH%sDATA":
+      dim: 8
+      name: "CH%sDATA"
+    "TX_CH%sCONF0":
+      name: CH%s_TX_CONF0
+    "RX_CH%sCONF0":
+      dimIndex: 4-7
+      name: CH%s_RX_CONF0
+    "RX_CH%sCONF1":
+      dimIndex: 4-7
+      name: CH%s_RX_CONF1
+    "TX_CH%sSTATUS":
+      name: CH%s_TX_STATUS
+    "RX_CH%sSTATUS":
+      name: CH%s_RX_STATUS
+
+  "*":
+    _strip_end: "_CH"
+
+  "CH%sDATA":
+    _modify:
+      CHDATA:
+        name: DATA
+        access: read-write
+
+  "CH*CONF0":
+    _strip_end:
+      - "_CH0"
+      - "_CH4"
+  "CH*CONF1":
+    _strip_end: "_CH4"
+
+  "CH*STATUS":
+    _strip_end:
+      - "_CH0"
+      - "_CH4"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+    _array:
+      "CH?_TX_END": {}
+      "TX_CH?_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "RX_CH?_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+    _array:
+      "CH?_TX_END": {}
+      "TX_CH?_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "RX_CH?_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+    _array:
+      "CH?_TX_END": {}
+      "TX_CH?_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "CH?_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+    _array:
+      "CH?_TX_END": {}
+      "TX_CH?_ERR":
+        name: CH%s_TX_ERR
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+      "CH?_RX_END": {}
+      "RX_CH?_ERR":
+        name: CH%s_RX_ERR
+      "CH?_RX_THR_EVENT": {}
+
+  REF_CNT_RST:
+    _strip:
+      - "TX_"
+      - "RX_"
+    _array:
+      "REF_CNT_RST_CH?":
+        name: CH%s

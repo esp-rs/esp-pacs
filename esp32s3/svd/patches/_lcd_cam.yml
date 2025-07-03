@@ -1,0 +1,24 @@
+LCD_CAM:
+  CAM_CTRL:
+    _modify:
+      CAM_BYTE_ORDER:
+        description: "1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."
+      CAM_BIT_ORDER:
+        description: "1: Change data bit order, change CAM_DATA_in[7:0] to CAM_DATA_in[0:7] in 8-bit mode, and bits[15:0] to bits[0:15] in 16-bit mode. 0: Do not change."
+
+  LCD_RGB_YUV:
+    _modify:
+      LCD_CONV_8BITS_DATA_INV:
+        description: "Swap every two 8-bit input data. 1: Enabled. 0: Disabled."
+
+  LCD_USER:
+    _modify:
+      LCD_RESET:
+        description: "Reset LCD module."
+
+  LCD_CTRL2:
+    _modify:
+      LCD_VSYNC_WIDTH:
+        description: "It is the width of LCD_VSYNC active pulse in a line."
+      LCD_HSYNC_WIDTH:
+        description: "It is the width of LCD_HSYNC active pulse in a line."

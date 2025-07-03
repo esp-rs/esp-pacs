@@ -1,0 +1,25 @@
+AES:
+  _modify:
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "H_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "J0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "T0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_IN_%s:
+      name: "TEXT_IN[%s]"
+    TEXT_OUT_%s:
+      name: "TEXT_OUT[%s]"

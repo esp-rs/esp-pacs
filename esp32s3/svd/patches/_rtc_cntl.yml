@@ -1,0 +1,5 @@
+RTC_CNTL:
+  _strip: "RTC_"
+
+  "*":
+    _strip: "RTC_"

@@ -1,0 +1,23 @@
+SENS:
+  "SAR_MEAS1_MUX":
+    _strip: "SAR_"
+  "SAR_MEAS1_CTRL2":
+    _strip: "SAR_"
+  "SAR_ATTEN2":
+    _strip: "SAR_"
+  "SAR_MEAS2_MUX":
+    _strip: "SAR_"
+  "SAR_MEAS2_CTRL2":
+    _strip: "SAR_"
+  "SAR_HALL_CTRL":
+    _strip: "SAR_"
+  "SAR_PERI_CLK_GATE_CONF":
+    _strip: "SAR_"
+  "SAR_POWER_XPD_SAR":
+    _strip: "SAR_"
+  "SAR_MEAS1_CTRL1":
+    _strip: "SAR_"
+  "SAR_AMP_CTRL3":
+    _strip: "SAR_"
+  "SAR_ATTEN1":
+    _strip: "SAR_"

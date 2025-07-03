@@ -8,11 +8,11 @@ pub type CH_TX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_TX_LOOP(0-3)` writer - Set this bit to clear theCH%s_TX_LOOP_INT interrupt."]
 pub type CH_TX_LOOP_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_END(4-7)` writer - Set this bit to clear theCH4_RX_END_INT interrupt."]
+#[doc = "Field `CH_RX_END(4-7)` writer - Set this bit to clear theCH%s_RX_END_INT interrupt."]
 pub type CH_RX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_ERR(4-7)` writer - Set this bit to clear theCH4_ERR_INT interrupt."]
+#[doc = "Field `CH_RX_ERR(4-7)` writer - Set this bit to clear theCH%s_ERR_INT interrupt."]
 pub type CH_RX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_THR_EVENT(4-7)` writer - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+#[doc = "Field `CH_RX_THR_EVENT(4-7)` writer - Set this bit to clear theCH%s_RX_THR_EVENT_INT interrupt."]
 pub type CH_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_CH3_DMA_ACCESS_FAIL` writer - Set this bit to clear the CH3_DMA_ACCESS_FAIL_INT interrupt."]
 pub type TX_CH3_DMA_ACCESS_FAIL_W<'a, REG> = crate::BitWriter<'a, REG>;
@@ -141,7 +141,7 @@ impl W {
     pub fn ch3_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
         CH_TX_LOOP_W::new(self, 15)
     }
-    #[doc = "Set this bit to clear theCH4_RX_END_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(4-7)_RX_END_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH4_RX_END` field.</div>"]
     #[inline(always)]
@@ -155,22 +155,22 @@ impl W {
     pub fn ch4_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 16)
     }
-    #[doc = "Bit 17 - Set this bit to clear theCH4_RX_END_INT interrupt."]
+    #[doc = "Bit 17 - Set this bit to clear theCH5_RX_END_INT interrupt."]
     #[inline(always)]
     pub fn ch5_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 17)
     }
-    #[doc = "Bit 18 - Set this bit to clear theCH4_RX_END_INT interrupt."]
+    #[doc = "Bit 18 - Set this bit to clear theCH6_RX_END_INT interrupt."]
     #[inline(always)]
     pub fn ch6_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 18)
     }
-    #[doc = "Bit 19 - Set this bit to clear theCH4_RX_END_INT interrupt."]
+    #[doc = "Bit 19 - Set this bit to clear theCH7_RX_END_INT interrupt."]
     #[inline(always)]
     pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 19)
     }
-    #[doc = "Set this bit to clear theCH4_ERR_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(4-7)_ERR_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH4_RX_ERR` field.</div>"]
     #[inline(always)]
@@ -184,22 +184,22 @@ impl W {
     pub fn ch4_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 20)
     }
-    #[doc = "Bit 21 - Set this bit to clear theCH4_ERR_INT interrupt."]
+    #[doc = "Bit 21 - Set this bit to clear theCH5_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ch5_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 21)
     }
-    #[doc = "Bit 22 - Set this bit to clear theCH4_ERR_INT interrupt."]
+    #[doc = "Bit 22 - Set this bit to clear theCH6_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ch6_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 22)
     }
-    #[doc = "Bit 23 - Set this bit to clear theCH4_ERR_INT interrupt."]
+    #[doc = "Bit 23 - Set this bit to clear theCH7_ERR_INT interrupt."]
     #[inline(always)]
     pub fn ch7_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 23)
     }
-    #[doc = "Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+    #[doc = "Set this bit to clear theCH(4-7)_RX_THR_EVENT_INT interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH4_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
@@ -213,17 +213,17 @@ impl W {
     pub fn ch4_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 24)
     }
-    #[doc = "Bit 25 - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+    #[doc = "Bit 25 - Set this bit to clear theCH5_RX_THR_EVENT_INT interrupt."]
     #[inline(always)]
     pub fn ch5_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 25)
     }
-    #[doc = "Bit 26 - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+    #[doc = "Bit 26 - Set this bit to clear theCH6_RX_THR_EVENT_INT interrupt."]
     #[inline(always)]
     pub fn ch6_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 26)
     }
-    #[doc = "Bit 27 - Set this bit to clear theCH4_RX_THR_EVENT_INT interrupt."]
+    #[doc = "Bit 27 - Set this bit to clear theCH7_RX_THR_EVENT_INT interrupt."]
     #[inline(always)]
     pub fn ch7_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 27)

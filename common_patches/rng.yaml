@@ -1,0 +1,3 @@
+_modify:
+  DATA:
+    access: read-only

@@ -1,5 +1,32 @@
 _svd: ../esp32s3.base.svd
 
+_include:
+  - _aes.yml
+  - _apb_saradc.yml
+  - _assist_debug.yml
+  - _dma.yml
+  - _ds.yml
+  - _gpio.yml
+  - _hmac.yml
+  - _i2c.yml
+  - _i2s.yml
+  - _interrupts.yml
+  - _lcd_cam.yml
+  - _ledc.yml
+  - _mcpwm.yml
+  - _pcnt.yml
+  - _rmt.yml
+  - _rsa.yml
+  - _rtc_cntl.yml
+  - _rtc_io.yml
+  - _sens.yml
+  - _sha.yml
+  - _spi.yml
+  - _system.yml
+  - _timg.yml
+  - _twai.yml
+  - _uart.yml
+
 _add:
   NRX:
     description: NRX Peripheral
@@ -174,7 +201,7 @@ RTC_CNTL:
     _strip_end: _HOLD
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2S0,UART0,USB_DEVICE,SPI1,I2S1,PERI_BACKUP,SPI0":
+"EFUSE,I2S0,UART0,USB_DEVICE,PERI_BACKUP":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -201,40 +228,6 @@ UHCI0:
 
 TIMG0:
   _include: ../../../common_patches/tim_expand_and_collect.yaml
-
-PCNT:
-  _include: ../../../common_patches/pcnt.yaml
-
-SPI0:
-  MISC:
-    _add:
-      CS%s_DIS:
-        dim: 2
-        dimIndex: 0-1
-        dimIncrement: 0x1
-        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
-        bitOffset: 0
-        bitWidth: 1
-        access: read-write
-
-SPI1:
-  MISC:
-    _delete: ["CS0_DIS", "CS1_DIS"]
-    _add:
-      CS%s_DIS:
-        dim: 2
-        dimIndex: 0-1
-        dimIncrement: 0x1
-        description: "Set this bit to raise high SPI_CS%s pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS%s is in low level when SPI1 transfer starts"
-        bitOffset: 0
-        bitWidth: 1
-        access: read-write
-
-SPI[12]:
-  _include: ../../../common_patches/spi_w.yaml
-
-SPI2:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
 
 SYSTIMER:
   _include:
@@ -489,3 +482,6 @@ APB_CTRL:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
         bitWidth: 1
+
+RNG:
+  _include: ../../../common_patches/rng.yaml
