@@ -1,0 +1,14 @@
+ECC:
+  _modify:
+    "K_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20

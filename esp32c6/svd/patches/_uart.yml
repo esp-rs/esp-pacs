@@ -1,0 +1,12 @@
+"*UART*":
+  _strip_end: "_SYNC"
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write

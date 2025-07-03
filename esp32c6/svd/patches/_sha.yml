@@ -1,0 +1,20 @@
+SHA:
+  _modify:
+    "H_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+
+  START:
+    _modify:
+      START:
+        access: write-only
+
+  CONTINUE:
+    _modify:
+      CONTINUE:
+        access: write-only

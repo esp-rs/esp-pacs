@@ -1,0 +1,10 @@
+HMAC:
+  _modify:
+    "WR_MESSAGE_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "RD_RESULT_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20

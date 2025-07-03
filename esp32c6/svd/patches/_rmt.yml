@@ -1,0 +1,140 @@
+RMT:
+  _delete: "RX_CH%sDATA"
+
+  _modify:
+    "TX_CH%sDATA":
+      name: "CH%sDATA"
+    "TX_CH%sCONF0":
+      name: CH%s_TX_CONF0
+    "RX_CH%sCONF0":
+      dimIndex: 2-3
+      name: CH%s_RX_CONF0
+    "RX_CH%sCONF1":
+      dimIndex: 2-3
+      name: CH%s_RX_CONF1
+    "TX_CH%sSTATUS":
+      name: CH%s_TX_STATUS
+    "RX_CH%sSTATUS":
+      name: CH%s_RX_STATUS
+
+  "CH%sDATA":
+    _modify:
+      CHDATA:
+        name: DATA
+        access: read-write
+
+  "CH*CONF0":
+    _strip_end:
+      - "_CH0"
+      - "_CH2"
+  "CH*CONF1":
+    _strip_end: "_CH2"
+
+  "CH*STATUS":
+    _strip_end:
+      - "_CH0"
+      - "_CH2"
+
+  "CH*CARRIER_DUTY":
+    _strip_end:
+      - "_CH"
+
+  "CH*CARRIER_RM":
+    _strip_end:
+      - "_CH"
+
+  "CH*_TX_LIM":
+    _strip_end:
+      - "_CH"
+
+  "CH*_RX_LIM":
+    _strip_end:
+      - "_CH2"
+
+  "REF_CNT_RST":
+    _strip_end:
+      - "_CH0"
+
+  "SYS_CONF":
+    _delete: ["RMT_SCLK_DIV_NUM", "RMT_SCLK_DIV_A", "RMT_SCLK_DIV_B", "RMT_SCLK_SEL", "RMT_SCLK_ACTIVE"]
+    _strip: "RMT_"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "TX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: todo
+      "TX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: todo
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_TX_LOOP"
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "RX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: todo
+      "RX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: todo
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_X_LOOP"
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: todo
+      "CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: todo
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_X_LOOP"
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "RX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: todo
+      "RX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: todo
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_TX_LOOP"

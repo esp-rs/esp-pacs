@@ -1,0 +1,12 @@
+SPI2:
+  _strip: "SPI_"
+  "*":
+    _strip: "SPI_"
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+  _include: 
+    - ../../../common_patches/spi_w.yaml
+    - ../../../common_patches/spi_dma_int_strip.yaml
