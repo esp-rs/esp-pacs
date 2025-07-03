@@ -1,5 +1,31 @@
 _svd: "../esp32c6.base.svd"
 
+_include:
+  - "_aes.yml"
+  - "_dma.yml"
+  - "_ds.yml"
+  - "_ecc.yml"
+  - "_gpio.yml"
+  - "_hmac.yml"
+  - "_i2c.yml"
+  - "_interrupt.yml"
+  - "_ledc.yml"
+  - "_pcr.yml"
+  - "_pmu.yml"
+  - "_rmt.yml"
+  - "_rsa.yml"
+  - "_sha.yml"
+  - "_spi2.yml"
+  - "_timg.yml"
+  - "_twai.yml"
+  - "_uart.yml"
+  - "_wdt.yml"
+
+RNG:
+  _modify:
+    DATA:
+      access: read-only
+
 _add:
   CLINT:
     description: Core Local Interrupts
@@ -1612,13 +1638,6 @@ LP_IO:
     PIN?: {}
 
 LP_WDT:
-  _modify:
-    INT_ST_RTC:
-      name: INT_ST
-    INT_ENA_RTC:
-      name: INT_ENA
-    INT_CLR_RTC:
-      name: INT_CLR
   WDTFEED:
     _modify:
       RTC_WDT_FEED:
@@ -1691,17 +1710,29 @@ INTPRI:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
 
-TIMG0:
-  _include: ../../../common_patches/tim_collect.yaml
 
 PCNT:
+  "*":
+    _strip_end: "_U"
+  "CTRL":
+    _strip: "PULSE_"
+  "U%s_STATUS":
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT"
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+  "U%s_CNT":
+    _strip: "PULSE_"
   _include: ../../../common_patches/pcnt.yaml
 
-SPI[12]:
+SPI1:
   _include: ../../../common_patches/spi_w.yaml
-
-SPI2:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
 
 MCPWM0:
   _include: ../../../common_patches/mcpwm_collect.yaml
@@ -1842,14 +1873,6 @@ DMA:
 ASSIST_DEBUG:
   _include: ../../../common_patches/assist_debug.yaml
 
-RMT:
-  SYS_CONF:
-    _delete:
-      - SCLK_DIV_NUM
-      - SCLK_DIV_A
-      - SCLK_DIV_B
-      - SCLK_SEL
-      - SCLK_ACTIVE
 
 RSA:
   INT_CLR:

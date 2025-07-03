@@ -1,0 +1,27 @@
+GPIO:
+  _array:
+    FUNC*_IN_SEL_CFG: {}
+
+  FUNC*_IN_SEL_CFG:
+    _modify:
+      FUNC*_IN_SEL:
+        name: IN_SEL
+      FUNC*_IN_INV_SEL:
+        name: IN_INV_SEL
+      SIG*_IN_SEL:
+        name: SEL
+
+  FUNC*_OUT_SEL_CFG:
+    _modify:
+      FUNC_OUT_SEL:
+        name: OUT_SEL
+      FUNC_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC_OEN_SEL:
+        name: OEN_SEL
+      FUNC_OEN_INV_SEL:
+        name: OEN_INV_SEL
+
+  _modify:
+    "FUNC%s_OUT_SEL_CFG":
+      dim: 30

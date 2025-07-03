@@ -1,0 +1,9 @@
+I2C0:
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+
+LP_I2C0:
+  FIFO_CONF:
+    _strip: "I2C_"

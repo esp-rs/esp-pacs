@@ -1,0 +1,13 @@
+PCR:
+  RMT_SCLK_CONF:
+    _strip: "RMT_"
+
+  _modify:
+    I2C_CONF:
+      name: I2C0_CONF
+  I2C0_CONF:
+    _modify:
+      I2C_CLK_EN:
+        name: I2C0_CLK_EN
+      I2C_RST_EN:
+        name: I2C0_RST_EN

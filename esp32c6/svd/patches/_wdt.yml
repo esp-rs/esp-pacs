@@ -1,0 +1,22 @@
+LP_WDT:
+  _modify:
+    "CONFIG0":
+      name: "WDTCONFIG0"
+    "WPROTECT":
+      name: "WDTWPROTECT"
+    "SWD_CONFIG":
+      name: "SWD_CONF"
+    "FEED":
+      name: "WDTFEED"
+  "INT_ENA":
+    _modify:
+      "LP_WDT_INT_ENA":
+        name: "WDT_INT_ENA"
+  "INT_CLR":
+    _modify:
+      "LP_WDT_INT_CLR":
+        name: "WDT_INT_CLR"
+  "INT_ST":
+    _modify:
+      "LP_WDT_INT_ST":
+        name: "WDT_INT_ST"
