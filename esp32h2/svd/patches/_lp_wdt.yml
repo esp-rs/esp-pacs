@@ -1,0 +1,35 @@
+LP_WDT:
+  _modify:
+    CONFIG0:
+      name: WDTCONFIG0
+
+    FEED:
+      name: WDTFEED
+
+    SWD_CONFIG:
+      name: SWD_CONF
+
+    WPROTECT:
+      name: WDTWPROTECT
+
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
+
+  _include: ../../../common_patches/int_strip.yaml
+
+  INT_ST:
+    _modify:
+      LP_WDT:
+        name: WDT
+
+  INT_ENA:
+    _modify:
+      LP_WDT:
+        name: WDT
+
+  INT_CLR:
+    _modify:
+      LP_WDT:
+        name: WDT

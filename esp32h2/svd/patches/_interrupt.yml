@@ -1,0 +1,16 @@
+INTERRUPT_CORE0:
+  _modify:
+    INT_STATUS_REG_0:
+      name: INTR_STATUS_REG_0
+    INT_STATUS_REG_1:
+      name: INTR_STATUS_REG_1
+
+  INTR_STATUS_REG_0:
+    _modify:
+      INT_STATUS_0:
+        name: INTR_STATUS_0
+
+  INTR_STATUS_REG_1:
+    _modify:
+      INT_STATUS_1:
+        name: INTR_STATUS_1

@@ -1,0 +1,38 @@
+ECC:
+  _add:
+    _registers:
+      QX_MEM%s:
+        dim: 8
+        dimIncrement: 0x4
+        description: The memory that stores Qx
+        addressOffset: 0x160
+        size: 0x20
+        access: read-write
+      QY_MEM%s:
+        dim: 8
+        dimIncrement: 0x4
+        description: The memory that stores Qy
+        addressOffset: 0x180
+        size: 0x20
+        access: read-write
+      QZ_MEM%s:
+        dim: 8
+        dimIncrement: 0x4
+        description: The memory that stores Qz
+        addressOffset: 0x1A0
+        size: 0x20
+        access: read-write
+
+  _modify:
+    "K_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PX_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+    "PY_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
