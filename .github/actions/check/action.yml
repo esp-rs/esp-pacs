@@ -27,10 +27,9 @@ runs:
         target: ${{ inputs.target }}
         components: rust-src
 
-    - uses: esp-rs/xtensa-toolchain@v1.5
+    - uses: esp-rs/xtensa-toolchain@v1.6
       if: startsWith(inputs.target, 'xtensa')
       with:
-        ldproxy: false
         buildtargets: ${{ inputs.package }}
         override: false
 
@@ -50,11 +49,10 @@ runs:
         target: ${{ inputs.target }}
         components: rust-src
 
-    - uses: esp-rs/xtensa-toolchain@v1.5
+    - uses: esp-rs/xtensa-toolchain@v1.6
       if: startsWith(inputs.target, 'xtensa')
       with:
         default: true
-        ldproxy: false
         buildtargets: ${{ inputs.package }}
         override: false
         version: ${{ inputs.msrv }}
