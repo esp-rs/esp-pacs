@@ -36,7 +36,7 @@ impl W {
         REDCY_SIG1_W::new(self, 0)
     }
 }
-#[doc = "APB_CTRL_REDCY_SIG1_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "APB_CTRL_REDCY_SIG1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REDCY_SIG1_SPEC;
 impl crate::RegisterSpec for REDCY_SIG1_SPEC {
     type Ux = u32;

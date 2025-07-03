@@ -1,0 +1,46 @@
+LEDC:
+  "*":
+    _strip:
+      # - "TIMER_"
+      - "TIMER0_"
+    _strip_end:
+      - "_CH"
+      - "_CH0"
+      - "_TIMER"
+      - "_TIMER0"
+
+  "TIMER%s_CONF":
+    _modify:
+      TIMER_PARA_UP:
+        name: PARA_UP
+      TIMER_DUTY_RES:
+        name: DUTY_RES
+      TIMER_PAUSE:
+        name: PAUSE
+      TIMER_RST:
+        name: RST
+
+  "TIMER%s_VALUE":
+    _modify:
+      TIMER_CNT:
+        name: CNT
+
+  INT_RAW:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ENA:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_ST:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  INT_CLR:
+    _modify:
+      OVF:
+        name: TIMER0_OVF
+  _include:
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml

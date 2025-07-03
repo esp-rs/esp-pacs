@@ -6,25 +6,25 @@ pub type W = crate::W<INT_ENA_SPEC>;
 pub type CH_TX_END_R = crate::BitReader;
 #[doc = "Field `CH_TX_END(0-1)` writer - reg_ch%s_tx_end_int_ena."]
 pub type CH_TX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_END(2-3)` reader - reg_ch2_rx_end_int_ena."]
+#[doc = "Field `CH_RX_END(2-3)` reader - reg_ch%s_rx_end_int_ena."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_RX_END(2-3)` writer - reg_ch2_rx_end_int_ena."]
+#[doc = "Field `CH_RX_END(2-3)` writer - reg_ch%s_rx_end_int_ena."]
 pub type CH_RX_END_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_TX_ERR(0-1)` reader - reg_ch%s_err_int_ena."]
 pub type CH_TX_ERR_R = crate::BitReader;
 #[doc = "Field `CH_TX_ERR(0-1)` writer - reg_ch%s_err_int_ena."]
 pub type CH_TX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_ERR(2-3)` reader - reg_ch2_err_int_ena."]
+#[doc = "Field `CH_RX_ERR(2-3)` reader - reg_ch%s_err_int_ena."]
 pub type CH_RX_ERR_R = crate::BitReader;
-#[doc = "Field `CH_RX_ERR(2-3)` writer - reg_ch2_err_int_ena."]
+#[doc = "Field `CH_RX_ERR(2-3)` writer - reg_ch%s_err_int_ena."]
 pub type CH_RX_ERR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_TX_THR_EVENT(0-1)` reader - reg_ch%s_tx_thr_event_int_ena."]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 #[doc = "Field `CH_TX_THR_EVENT(0-1)` writer - reg_ch%s_tx_thr_event_int_ena."]
 pub type CH_TX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CH_RX_THR_EVENT(2-3)` reader - reg_ch2_rx_thr_event_int_ena."]
+#[doc = "Field `CH_RX_THR_EVENT(2-3)` reader - reg_ch%s_rx_thr_event_int_ena."]
 pub type CH_RX_THR_EVENT_R = crate::BitReader;
-#[doc = "Field `CH_RX_THR_EVENT(2-3)` writer - reg_ch2_rx_thr_event_int_ena."]
+#[doc = "Field `CH_RX_THR_EVENT(2-3)` writer - reg_ch%s_rx_thr_event_int_ena."]
 pub type CH_RX_THR_EVENT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CH_TX_LOOP(0-1)` reader - reg_ch%s_tx_loop_int_ena."]
 pub type CH_TX_LOOP_R = crate::BitReader;
@@ -56,7 +56,7 @@ impl R {
     pub fn ch1_tx_end(&self) -> CH_TX_END_R {
         CH_TX_END_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "reg_ch2_rx_end_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_end_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field.</div>"]
     #[inline(always)]
@@ -66,7 +66,7 @@ impl R {
         CH_RX_END_R::new(((self.bits >> (n + 2)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch2_rx_end_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_end_int_ena."]
     #[inline(always)]
     pub fn ch_rx_end_iter(&self) -> impl Iterator<Item = CH_RX_END_R> + '_ {
         (0..2).map(move |n| CH_RX_END_R::new(((self.bits >> (n + 2)) & 1) != 0))
@@ -76,7 +76,7 @@ impl R {
     pub fn ch2_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - reg_ch2_rx_end_int_ena."]
+    #[doc = "Bit 3 - reg_ch3_rx_end_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 3) & 1) != 0)
@@ -106,7 +106,7 @@ impl R {
     pub fn ch1_tx_err(&self) -> CH_TX_ERR_R {
         CH_TX_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "reg_ch2_err_int_ena."]
+    #[doc = "reg_ch(2-3)_err_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field.</div>"]
     #[inline(always)]
@@ -116,7 +116,7 @@ impl R {
         CH_RX_ERR_R::new(((self.bits >> (n + 6)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch2_err_int_ena."]
+    #[doc = "reg_ch(2-3)_err_int_ena."]
     #[inline(always)]
     pub fn ch_rx_err_iter(&self) -> impl Iterator<Item = CH_RX_ERR_R> + '_ {
         (0..2).map(move |n| CH_RX_ERR_R::new(((self.bits >> (n + 6)) & 1) != 0))
@@ -126,7 +126,7 @@ impl R {
     pub fn ch2_rx_err(&self) -> CH_RX_ERR_R {
         CH_RX_ERR_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - reg_ch2_err_int_ena."]
+    #[doc = "Bit 7 - reg_ch3_err_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_err(&self) -> CH_RX_ERR_R {
         CH_RX_ERR_R::new(((self.bits >> 7) & 1) != 0)
@@ -156,7 +156,7 @@ impl R {
     pub fn ch1_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "reg_ch2_rx_thr_event_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_thr_event_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
@@ -166,7 +166,7 @@ impl R {
         CH_RX_THR_EVENT_R::new(((self.bits >> (n + 10)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "reg_ch2_rx_thr_event_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch_rx_thr_event_iter(&self) -> impl Iterator<Item = CH_RX_THR_EVENT_R> + '_ {
         (0..2).map(move |n| CH_RX_THR_EVENT_R::new(((self.bits >> (n + 10)) & 1) != 0))
@@ -176,7 +176,7 @@ impl R {
     pub fn ch2_rx_thr_event(&self) -> CH_RX_THR_EVENT_R {
         CH_RX_THR_EVENT_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - reg_ch2_rx_thr_event_int_ena."]
+    #[doc = "Bit 11 - reg_ch3_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_thr_event(&self) -> CH_RX_THR_EVENT_R {
         CH_RX_THR_EVENT_R::new(((self.bits >> 11) & 1) != 0)
@@ -248,7 +248,7 @@ impl W {
     pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 1)
     }
-    #[doc = "reg_ch2_rx_end_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_end_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field.</div>"]
     #[inline(always)]
@@ -262,7 +262,7 @@ impl W {
     pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 2)
     }
-    #[doc = "Bit 3 - reg_ch2_rx_end_int_ena."]
+    #[doc = "Bit 3 - reg_ch3_rx_end_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 3)
@@ -286,7 +286,7 @@ impl W {
     pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<INT_ENA_SPEC> {
         CH_TX_ERR_W::new(self, 5)
     }
-    #[doc = "reg_ch2_err_int_ena."]
+    #[doc = "reg_ch(2-3)_err_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field.</div>"]
     #[inline(always)]
@@ -300,7 +300,7 @@ impl W {
     pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<INT_ENA_SPEC> {
         CH_RX_ERR_W::new(self, 6)
     }
-    #[doc = "Bit 7 - reg_ch2_err_int_ena."]
+    #[doc = "Bit 7 - reg_ch3_err_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<INT_ENA_SPEC> {
         CH_RX_ERR_W::new(self, 7)
@@ -324,7 +324,7 @@ impl W {
     pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 9)
     }
-    #[doc = "reg_ch2_rx_thr_event_int_ena."]
+    #[doc = "reg_ch(2-3)_rx_thr_event_int_ena."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
@@ -338,7 +338,7 @@ impl W {
     pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 10)
     }
-    #[doc = "Bit 11 - reg_ch2_rx_thr_event_int_ena."]
+    #[doc = "Bit 11 - reg_ch3_rx_thr_event_int_ena."]
     #[inline(always)]
     pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_ENA_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 11)

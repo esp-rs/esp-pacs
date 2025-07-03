@@ -56,13 +56,13 @@ impl RegisterBlock {
     pub const fn ch3data(&self) -> &CHDATA {
         self.chdata(3)
     }
-    #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
+    #[doc = "0x10..0x18 - RMT_CH%sCONF0_REG."]
     #[inline(always)]
     pub const fn ch_tx_conf0(&self, n: usize) -> &CH_TX_CONF0 {
         &self.ch_tx_conf0[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x10..0x18 - RMT_CH%sCONF%s_REG."]
+    #[doc = "0x10..0x18 - RMT_CH%sCONF0_REG."]
     #[inline(always)]
     pub fn ch_tx_conf0_iter(&self) -> impl Iterator<Item = &CH_TX_CONF0> {
         self.ch_tx_conf0.iter()
@@ -72,12 +72,12 @@ impl RegisterBlock {
     pub const fn ch0_tx_conf0(&self) -> &CH_TX_CONF0 {
         self.ch_tx_conf0(0)
     }
-    #[doc = "0x14 - RMT_CH1CONF1_REG."]
+    #[doc = "0x14 - RMT_CH1CONF0_REG."]
     #[inline(always)]
     pub const fn ch1_tx_conf0(&self) -> &CH_TX_CONF0 {
         self.ch_tx_conf0(1)
     }
-    #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
+    #[doc = "0x18..0x20 - RMT_CH%sCONF0_REG."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CONF0` register.</div>"]
     #[inline(always)]
@@ -93,7 +93,7 @@ impl RegisterBlock {
         }
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x18..0x20 - RMT_CH2CONF0_REG."]
+    #[doc = "0x18..0x20 - RMT_CH%sCONF0_REG."]
     #[inline(always)]
     pub fn ch_rx_conf0_iter(&self) -> impl Iterator<Item = &CH_RX_CONF0> {
         (0..2).map(move |n| unsafe {
@@ -109,7 +109,7 @@ impl RegisterBlock {
     pub const fn ch2_rx_conf0(&self) -> &CH_RX_CONF0 {
         self.ch_rx_conf0(0)
     }
-    #[doc = "0x20 - RMT_CH2CONF0_REG."]
+    #[doc = "0x20 - RMT_CH3CONF0_REG."]
     #[inline(always)]
     pub const fn ch3_rx_conf0(&self) -> &CH_RX_CONF0 {
         self.ch_rx_conf0(1)
@@ -172,7 +172,7 @@ impl RegisterBlock {
     pub const fn ch1_tx_status(&self) -> &CH_TX_STATUS {
         self.ch_tx_status(1)
     }
-    #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
+    #[doc = "0x30..0x38 - RMT_CH%sSTATUS_REG."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_STATUS` register.</div>"]
     #[inline(always)]
@@ -180,7 +180,7 @@ impl RegisterBlock {
         &self.ch_rx_status[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x30..0x38 - RMT_CH2STATUS_REG."]
+    #[doc = "0x30..0x38 - RMT_CH%sSTATUS_REG."]
     #[inline(always)]
     pub fn ch_rx_status_iter(&self) -> impl Iterator<Item = &CH_RX_STATUS> {
         self.ch_rx_status.iter()
@@ -190,7 +190,7 @@ impl RegisterBlock {
     pub const fn ch2_rx_status(&self) -> &CH_RX_STATUS {
         self.ch_rx_status(0)
     }
-    #[doc = "0x34 - RMT_CH2STATUS_REG."]
+    #[doc = "0x34 - RMT_CH3STATUS_REG."]
     #[inline(always)]
     pub const fn ch3_rx_status(&self) -> &CH_RX_STATUS {
         self.ch_rx_status(1)
@@ -236,7 +236,7 @@ impl RegisterBlock {
     pub const fn ch1carrier_duty(&self) -> &CHCARRIER_DUTY {
         self.chcarrier_duty(1)
     }
-    #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[doc = "0x50..0x58 - RMT_CH%s_RX_CARRIER_RM_REG."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_CARRIER_RM` register.</div>"]
     #[inline(always)]
@@ -244,7 +244,7 @@ impl RegisterBlock {
         &self.ch_rx_carrier_rm[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x50..0x58 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[doc = "0x50..0x58 - RMT_CH%s_RX_CARRIER_RM_REG."]
     #[inline(always)]
     pub fn ch_rx_carrier_rm_iter(&self) -> impl Iterator<Item = &CH_RX_CARRIER_RM> {
         self.ch_rx_carrier_rm.iter()
@@ -254,7 +254,7 @@ impl RegisterBlock {
     pub const fn ch2_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
         self.ch_rx_carrier_rm(0)
     }
-    #[doc = "0x54 - RMT_CH2_RX_CARRIER_RM_REG."]
+    #[doc = "0x54 - RMT_CH3_RX_CARRIER_RM_REG."]
     #[inline(always)]
     pub const fn ch3_rx_carrier_rm(&self) -> &CH_RX_CARRIER_RM {
         self.ch_rx_carrier_rm(1)
@@ -280,7 +280,7 @@ impl RegisterBlock {
     pub const fn ch1_tx_lim(&self) -> &CH_TX_LIM {
         self.ch_tx_lim(1)
     }
-    #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
+    #[doc = "0x60..0x68 - RMT_CH%s_RX_LIM_REG."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `CH2_RX_LIM` register.</div>"]
     #[inline(always)]
@@ -288,7 +288,7 @@ impl RegisterBlock {
         &self.ch_rx_lim[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x60..0x68 - RMT_CH2_RX_LIM_REG."]
+    #[doc = "0x60..0x68 - RMT_CH%s_RX_LIM_REG."]
     #[inline(always)]
     pub fn ch_rx_lim_iter(&self) -> impl Iterator<Item = &CH_RX_LIM> {
         self.ch_rx_lim.iter()
@@ -298,7 +298,7 @@ impl RegisterBlock {
     pub const fn ch2_rx_lim(&self) -> &CH_RX_LIM {
         self.ch_rx_lim(0)
     }
-    #[doc = "0x64 - RMT_CH2_RX_LIM_REG."]
+    #[doc = "0x64 - RMT_CH3_RX_LIM_REG."]
     #[inline(always)]
     pub const fn ch3_rx_lim(&self) -> &CH_RX_LIM {
         self.ch_rx_lim(1)
@@ -328,13 +328,13 @@ impl RegisterBlock {
 pub type CHDATA = crate::Reg<chdata::CHDATA_SPEC>;
 #[doc = "RMT_CH%sDATA_REG."]
 pub mod chdata;
-#[doc = "CH_TX_CONF0 (rw) register accessor: RMT_CH%sCONF%s_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_tx_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_tx_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_tx_conf0`] module"]
+#[doc = "CH_TX_CONF0 (rw) register accessor: RMT_CH%sCONF0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_tx_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_tx_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_tx_conf0`] module"]
 pub type CH_TX_CONF0 = crate::Reg<ch_tx_conf0::CH_TX_CONF0_SPEC>;
-#[doc = "RMT_CH%sCONF%s_REG."]
+#[doc = "RMT_CH%sCONF0_REG."]
 pub mod ch_tx_conf0;
-#[doc = "CH_RX_CONF0 (rw) register accessor: RMT_CH2CONF0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_conf0`] module"]
+#[doc = "CH_RX_CONF0 (rw) register accessor: RMT_CH%sCONF0_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_conf0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_conf0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_conf0`] module"]
 pub type CH_RX_CONF0 = crate::Reg<ch_rx_conf0::CH_RX_CONF0_SPEC>;
-#[doc = "RMT_CH2CONF0_REG."]
+#[doc = "RMT_CH%sCONF0_REG."]
 pub mod ch_rx_conf0;
 #[doc = "CH_RX_CONF1 (rw) register accessor: RMT_CH2CONF1_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_conf1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_conf1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_conf1`] module"]
 pub type CH_RX_CONF1 = crate::Reg<ch_rx_conf1::CH_RX_CONF1_SPEC>;
@@ -344,9 +344,9 @@ pub mod ch_rx_conf1;
 pub type CH_TX_STATUS = crate::Reg<ch_tx_status::CH_TX_STATUS_SPEC>;
 #[doc = "RMT_CH%sSTATUS_REG."]
 pub mod ch_tx_status;
-#[doc = "CH_RX_STATUS (r) register accessor: RMT_CH2STATUS_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_status`] module"]
+#[doc = "CH_RX_STATUS (r) register accessor: RMT_CH%sSTATUS_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_status`] module"]
 pub type CH_RX_STATUS = crate::Reg<ch_rx_status::CH_RX_STATUS_SPEC>;
-#[doc = "RMT_CH2STATUS_REG."]
+#[doc = "RMT_CH%sSTATUS_REG."]
 pub mod ch_rx_status;
 #[doc = "INT_RAW (rw) register accessor: RMT_INT_RAW_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
@@ -368,17 +368,17 @@ pub mod int_clr;
 pub type CHCARRIER_DUTY = crate::Reg<chcarrier_duty::CHCARRIER_DUTY_SPEC>;
 #[doc = "RMT_CH%sCARRIER_DUTY_REG."]
 pub mod chcarrier_duty;
-#[doc = "CH_RX_CARRIER_RM (rw) register accessor: RMT_CH2_RX_CARRIER_RM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_carrier_rm::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_carrier_rm::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_carrier_rm`] module"]
+#[doc = "CH_RX_CARRIER_RM (rw) register accessor: RMT_CH%s_RX_CARRIER_RM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_carrier_rm::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_carrier_rm::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_carrier_rm`] module"]
 pub type CH_RX_CARRIER_RM = crate::Reg<ch_rx_carrier_rm::CH_RX_CARRIER_RM_SPEC>;
-#[doc = "RMT_CH2_RX_CARRIER_RM_REG."]
+#[doc = "RMT_CH%s_RX_CARRIER_RM_REG."]
 pub mod ch_rx_carrier_rm;
 #[doc = "CH_TX_LIM (rw) register accessor: RMT_CH%s_TX_LIM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_tx_lim::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_tx_lim::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_tx_lim`] module"]
 pub type CH_TX_LIM = crate::Reg<ch_tx_lim::CH_TX_LIM_SPEC>;
 #[doc = "RMT_CH%s_TX_LIM_REG."]
 pub mod ch_tx_lim;
-#[doc = "CH_RX_LIM (rw) register accessor: RMT_CH2_RX_LIM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_lim::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_lim::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_lim`] module"]
+#[doc = "CH_RX_LIM (rw) register accessor: RMT_CH%s_RX_LIM_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`ch_rx_lim::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_rx_lim::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ch_rx_lim`] module"]
 pub type CH_RX_LIM = crate::Reg<ch_rx_lim::CH_RX_LIM_SPEC>;
-#[doc = "RMT_CH2_RX_LIM_REG."]
+#[doc = "RMT_CH%s_RX_LIM_REG."]
 pub mod ch_rx_lim;
 #[doc = "SYS_CONF (rw) register accessor: RMT_SYS_CONF_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`sys_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sys_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sys_conf`] module"]
 pub type SYS_CONF = crate::Reg<sys_conf::SYS_CONF_SPEC>;

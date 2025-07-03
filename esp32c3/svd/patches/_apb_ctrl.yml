@@ -1,0 +1,14 @@
+APB_CTRL:
+  _modify:
+    REDCY_SIG0:
+      description: "APB_CTRL_REDCY_SIG0_REG"
+    REDCY_SIG1:
+      description: "APB_CTRL_REDCY_SIG1_REG"
+    PERI_BACKUP_CONFIG:
+      description: "APB_CTRL_PERI_BACKUP_CONFIG_REG"
+    PERI_BACKUP_APB_ADDR:
+      description: "APB_CTRL_PERI_BACKUP_APB_ADDR_REG"
+    PERI_BACKUP_MEM_ADDR:
+      description: "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG"
+
+  _strip_end: "_REG"

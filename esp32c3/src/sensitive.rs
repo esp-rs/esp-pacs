@@ -575,7 +575,7 @@ impl RegisterBlock {
     pub const fn backup_bus_pms_monitor_3(&self) -> &BACKUP_BUS_PMS_MONITOR_3 {
         &self.backup_bus_pms_monitor_3
     }
-    #[doc = "0x170 - SENSITIVE_CLOCK_GATE_REG_REG"]
+    #[doc = "0x170 - SENSITIVE_CLOCK_GATE_REG"]
     #[inline(always)]
     pub const fn clock_gate(&self) -> &CLOCK_GATE {
         &self.clock_gate
@@ -1019,9 +1019,9 @@ pub type BACKUP_BUS_PMS_MONITOR_3 =
     crate::Reg<backup_bus_pms_monitor_3::BACKUP_BUS_PMS_MONITOR_3_SPEC>;
 #[doc = "SENSITIVE_BACKUP_BUS_PMS_MONITOR_3_REG"]
 pub mod backup_bus_pms_monitor_3;
-#[doc = "CLOCK_GATE (rw) register accessor: SENSITIVE_CLOCK_GATE_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
+#[doc = "CLOCK_GATE (rw) register accessor: SENSITIVE_CLOCK_GATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
-#[doc = "SENSITIVE_CLOCK_GATE_REG_REG"]
+#[doc = "SENSITIVE_CLOCK_GATE_REG"]
 pub mod clock_gate;
 #[doc = "DATE (rw) register accessor: SENSITIVE_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;

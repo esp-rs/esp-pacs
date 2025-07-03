@@ -1,0 +1,6 @@
+SENSITIVE:
+  _modify:
+    CLOCK_GATE:
+      description: "SENSITIVE_CLOCK_GATE_REG"
+
+  _strip_end: "_REG"

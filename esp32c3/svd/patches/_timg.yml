@@ -1,0 +1,15 @@
+"TIMG*":
+  _modify:
+    INT_RAW_TIMG:
+      name: "INT_RAW"
+    INT_CLR_TIMG:
+      name: "INT_CLR"
+    INT_ENA_TIMG:
+      name: "INT_ENA"
+    INT_ST_TIMG:
+      name: "INT_ST"
+
+  "T0*":
+    _strip:
+      - "T0_"
+  _include: ../../../common_patches/tim_collect.yaml

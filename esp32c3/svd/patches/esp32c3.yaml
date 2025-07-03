@@ -1,5 +1,32 @@
 _svd: ../esp32c3.base.svd
 
+_include:
+  - "_aes.yml"
+  - "_apb_ctrl.yml"
+  - "_assist_debug.yml"
+  - "_dma.yml"
+  - "_ds.yml"
+  - "_efuse.yml"
+  - "_gpio.yml"
+  - "_hmac.yml"
+  - "_i2c.yml"
+  - "_ledc.yml"
+  - "_rmt.yml"
+  - "_rsa.yml"
+  - "_rtc_cntl.yml"
+  - "_sensitive.yml"
+  - "_sha.yml"
+  - "_spi.yml"
+  - "_system.yml"
+  - "_timg.yml"
+  - "_twai.yml"
+  - "_xts_aes.yml"
+
+RNG:
+  _modify:
+    DATA:
+      access: read-only
+
 _add:
   NRX:
     description: NRX Peripheral
@@ -192,61 +219,8 @@ I2C0:
 RTC_CNTL:
   _include: ../../../common_patches/rtc_cntl_int_strip.yaml
 
-"EFUSE,I2C0,I2S0,UART0,SPI1,UHCI0,USB_DEVICE":
+"EFUSE,I2C0,I2S0,UART0,UHCI0,USB_DEVICE":
   _include: ../../../common_patches/int_strip.yaml
-
-LEDC:
-  _include: ../../../common_patches/ledc_collect.yaml
-  INT_RAW:
-    _strip_end: _INT_RAW
-    _array:
-      LSTIMER?_OVF:
-        name: TIMER%s_OVF
-      DUTY_CHNG_END_LSCH?:
-        name: DUTY_CHNG_END_CH%s
-        description: Interrupt raw bit for channel %s. Triggered when the gradual change of duty has finished.
-      OVF_CNT_LSCH?:
-        name: OVF_CNT_CH%s
-        description: Interrupt raw bit for channel %s. Triggered when the OVF_CNT has reached the value specified by LEDC.CHx.CONF0.OVF_NUM.
-  INT_ST:
-    _strip_end: _INT_ST
-    _array:
-      LSTIMER?_OVF:
-        name: TIMER%s_OVF
-        description: This is the masked interrupt status bit for the TIMER%s_OVF interrupt when LEDC.INT_ENA.TIMERx_OVF is set to 1.
-      DUTY_CHNG_END_LSCH?:
-        name: DUTY_CHNG_END_CH%s
-        description: This is the masked interrupt status bit for the DUTY_CHNG_END_CH%s interrupt when LEDC.INT_ENA.DUTY_CHNG_END_CHx is set to 1.
-      OVF_CNT_LSCH?:
-        name: OVF_CNT_CH%s
-        description: This is the masked interrupt status bit for the LEDC.INT_RAW.OVF_CNT_CH%s interrupt when LEDC.INT_ENA.OVF_CNT_CHx is set to 1.
-  INT_ENA:
-    _strip_end: _INT_ENA
-    _array:
-      LSTIMER?_OVF:
-        name: TIMER%s_OVF
-        description: The interrupt enable bit for the TIMER%s_OVF interrupt.
-      DUTY_CHNG_END_LSCH?:
-        name: DUTY_CHNG_END_CH%s
-        description: The interrupt enable bit for the DUTY_CHNG_END_CH%s interrupt.
-      OVF_CNT_LSCH?:
-        name: OVF_CNT_CH%s
-        description: The interrupt enable bit for the OVF_CNT_CH%s interrupt.
-  INT_CLR:
-    _strip_end: _INT_CLR
-    _array:
-      LSTIMER?_OVF:
-        name: TIMER%s_OVF
-        description: Set this bit to clear the TIMER%s_OVF interrupt.
-      DUTY_CHNG_END_LSCH?:
-        name: DUTY_CHNG_END_CH%s
-        description: Set this bit to clear the DUTY_CHNG_END_CH%s interrupt.
-      OVF_CNT_LSCH?:
-        name: OVF_CNT_CH%s
-        description: Set this bit to clear the OVF_CNT_CH%s interrupt.
-    _modify:
-      "*":
-        modifiedWriteValues: oneToClear
 
 APB_CTRL:
   PERI_BACKUP_INT_RAW:
@@ -282,7 +256,7 @@ GPIO_SD:
     SIGMADELTA_VERSION:
       name: VERSION
   SIGMADELTA%s:
-    _strip: SD0_
+    _strip: SD_
 
 UHCI0:
   _include:
@@ -305,15 +279,6 @@ INTERRUPT_CORE0:
       I2S1_INT_MAP:
         name: I2S0_INT_MAP
 
-TIMG0:
-  _include: ../../../common_patches/tim_collect.yaml
-
-SPI[12]:
-  _include: ../../../common_patches/spi_w.yaml
-
-SPI2:
-  _include: ../../../common_patches/spi_dma_int_strip.yaml
-
 DS:
   _add:
     IV_MEM%s:
@@ -328,93 +293,6 @@ SYSTIMER:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
-
-DMA:
-  _expand_array:
-    INT_RAW_CH%s: {}
-    INT_ENA_CH%s: {}
-    INT_CLR_CH%s: {}
-    IN_CONF0_CH%s: {}
-    IN_LINK_CH%s: {}
-    IN_DSCR_BF0_CH%s: {}
-    IN_PRI_CH%s: {}
-    IN_PERI_SEL_CH%s: {}
-    OUT_CONF0_CH%s: {}
-    OUT_CONF1_CH%s: {}
-    OUT_LINK_CH%s: {}
-    OUT_EOF_DES_ADDR_CH%s: {}
-    OUT_PRI_CH%s: {}
-    OUT_PERI_SEL_CH%s: {}
-
-  _cluster:
-    INT_CH%s:
-      INT_RAW_CH?:
-        name: RAW
-      INT_ST_CH?:
-        name: ST
-      INT_ENA_CH?:
-        name: ENA
-      INT_CLR_CH?:
-        name: CLR
-        _modify:
-          "*":
-            modifiedWriteValues: oneToClear
-    CH%s:
-      IN_CONF0_CH?:
-        name: IN_CONF0
-      IN_CONF1_CH?:
-        name: IN_CONF1
-      INFIFO_STATUS_CH?:
-        name: INFIFO_STATUS
-      IN_POP_CH?:
-        name: IN_POP
-      IN_LINK_CH?:
-        name: IN_LINK
-      IN_STATE_CH?:
-        name: IN_STATE
-      IN_SUC_EOF_DES_ADDR_CH?:
-        name: IN_SUC_EOF_DES_ADDR
-      IN_ERR_EOF_DES_ADDR_CH?:
-        name: IN_ERR_EOF_DES_ADDR
-      IN_DSCR_CH?:
-        name: IN_DSCR
-      IN_DSCR_BF0_CH?:
-        name: IN_DSCR_BF0
-      IN_DSCR_BF1_CH?:
-        name: IN_DSCR_BF1
-      IN_PRI_CH?:
-        name: IN_PRI
-      IN_PERI_SEL_CH?:
-        name: IN_PERI_SEL
-      OUT_CONF0_CH?:
-        name: OUT_CONF0
-      OUT_CONF1_CH?:
-        name: OUT_CONF1
-      OUTFIFO_STATUS_CH?:
-        name: OUTFIFO_STATUS
-      OUT_PUSH_CH?:
-        name: OUT_PUSH
-      OUT_LINK_CH?:
-        name: OUT_LINK
-      OUT_STATE_CH?:
-        name: OUT_STATE
-      OUT_EOF_DES_ADDR_CH?:
-        name: OUT_EOF_DES_ADDR
-      OUT_EOF_BFR_DES_ADDR_CH?:
-        name: OUT_EOF_BFR_DES_ADDR
-      OUT_DSCR_CH?:
-        name: OUT_DSCR
-      OUT_DSCR_BF0_CH?:
-        name: OUT_DSCR_BF0
-      OUT_DSCR_BF1_CH?:
-        name: OUT_DSCR_BF1
-      OUT_PRI_CH?:
-        name: OUT_PRI
-      OUT_PERI_SEL_CH?:
-        name: OUT_PERI_SEL
-
-ASSIST_DEBUG:
-  _include: ../../../common_patches/assist_debug.yaml
 
 RSA:
   INT_CLR:

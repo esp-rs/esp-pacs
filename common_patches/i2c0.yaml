@@ -1,5 +1,12 @@
-COMD%s:
-  _delete: ["COMMAND"]
+_array:
+  COMD*: {}
+  
+COMD*:
+  _modify:
+    COMMAND?_DONE:
+      name: COMMAND_DONE
+
+  _delete: ["COMMAND?"]
   _add:
     OPCODE:
       description: "Opcode part of command %s."

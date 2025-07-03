@@ -168,12 +168,12 @@ impl RegisterBlock {
     pub const fn sdio_ctrl(&self) -> &SDIO_CTRL {
         &self.sdio_ctrl
     }
-    #[doc = "0x94 - APB_CTRL_REDCY_SIG0_REG_REG"]
+    #[doc = "0x94 - APB_CTRL_REDCY_SIG0_REG"]
     #[inline(always)]
     pub const fn redcy_sig0(&self) -> &REDCY_SIG0 {
         &self.redcy_sig0
     }
-    #[doc = "0x98 - APB_CTRL_REDCY_SIG1_REG_REG"]
+    #[doc = "0x98 - APB_CTRL_REDCY_SIG1_REG"]
     #[inline(always)]
     pub const fn redcy_sig1(&self) -> &REDCY_SIG1 {
         &self.redcy_sig1
@@ -208,17 +208,17 @@ impl RegisterBlock {
     pub const fn rnd_data(&self) -> &RND_DATA {
         &self.rnd_data
     }
-    #[doc = "0xb4 - APB_CTRL_PERI_BACKUP_CONFIG_REG_REG"]
+    #[doc = "0xb4 - APB_CTRL_PERI_BACKUP_CONFIG_REG"]
     #[inline(always)]
     pub const fn peri_backup_config(&self) -> &PERI_BACKUP_CONFIG {
         &self.peri_backup_config
     }
-    #[doc = "0xb8 - APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG"]
+    #[doc = "0xb8 - APB_CTRL_PERI_BACKUP_APB_ADDR_REG"]
     #[inline(always)]
     pub const fn peri_backup_apb_addr(&self) -> &PERI_BACKUP_APB_ADDR {
         &self.peri_backup_apb_addr
     }
-    #[doc = "0xbc - APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG"]
+    #[doc = "0xbc - APB_CTRL_PERI_BACKUP_MEM_ADDR_REG"]
     #[inline(always)]
     pub const fn peri_backup_mem_addr(&self) -> &PERI_BACKUP_MEM_ADDR {
         &self.peri_backup_mem_addr
@@ -345,13 +345,13 @@ pub mod spi_mem_reject_addr;
 pub type SDIO_CTRL = crate::Reg<sdio_ctrl::SDIO_CTRL_SPEC>;
 #[doc = "APB_CTRL_SDIO_CTRL_REG"]
 pub mod sdio_ctrl;
-#[doc = "REDCY_SIG0 (rw) register accessor: APB_CTRL_REDCY_SIG0_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@redcy_sig0`] module"]
+#[doc = "REDCY_SIG0 (rw) register accessor: APB_CTRL_REDCY_SIG0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@redcy_sig0`] module"]
 pub type REDCY_SIG0 = crate::Reg<redcy_sig0::REDCY_SIG0_SPEC>;
-#[doc = "APB_CTRL_REDCY_SIG0_REG_REG"]
+#[doc = "APB_CTRL_REDCY_SIG0_REG"]
 pub mod redcy_sig0;
-#[doc = "REDCY_SIG1 (rw) register accessor: APB_CTRL_REDCY_SIG1_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@redcy_sig1`] module"]
+#[doc = "REDCY_SIG1 (rw) register accessor: APB_CTRL_REDCY_SIG1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`redcy_sig1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`redcy_sig1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@redcy_sig1`] module"]
 pub type REDCY_SIG1 = crate::Reg<redcy_sig1::REDCY_SIG1_SPEC>;
-#[doc = "APB_CTRL_REDCY_SIG1_REG_REG"]
+#[doc = "APB_CTRL_REDCY_SIG1_REG"]
 pub mod redcy_sig1;
 #[doc = "FRONT_END_MEM_PD (rw) register accessor: APB_CTRL_FRONT_END_MEM_PD_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`front_end_mem_pd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`front_end_mem_pd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@front_end_mem_pd`] module"]
 pub type FRONT_END_MEM_PD = crate::Reg<front_end_mem_pd::FRONT_END_MEM_PD_SPEC>;
@@ -377,17 +377,17 @@ pub mod mem_power_up;
 pub type RND_DATA = crate::Reg<rnd_data::RND_DATA_SPEC>;
 #[doc = "APB_CTRL_RND_DATA_REG"]
 pub mod rnd_data;
-#[doc = "PERI_BACKUP_CONFIG (rw) register accessor: APB_CTRL_PERI_BACKUP_CONFIG_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_config`] module"]
+#[doc = "PERI_BACKUP_CONFIG (rw) register accessor: APB_CTRL_PERI_BACKUP_CONFIG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_config`] module"]
 pub type PERI_BACKUP_CONFIG = crate::Reg<peri_backup_config::PERI_BACKUP_CONFIG_SPEC>;
-#[doc = "APB_CTRL_PERI_BACKUP_CONFIG_REG_REG"]
+#[doc = "APB_CTRL_PERI_BACKUP_CONFIG_REG"]
 pub mod peri_backup_config;
-#[doc = "PERI_BACKUP_APB_ADDR (rw) register accessor: APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_apb_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_apb_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_apb_addr`] module"]
+#[doc = "PERI_BACKUP_APB_ADDR (rw) register accessor: APB_CTRL_PERI_BACKUP_APB_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_apb_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_apb_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_apb_addr`] module"]
 pub type PERI_BACKUP_APB_ADDR = crate::Reg<peri_backup_apb_addr::PERI_BACKUP_APB_ADDR_SPEC>;
-#[doc = "APB_CTRL_PERI_BACKUP_APB_ADDR_REG_REG"]
+#[doc = "APB_CTRL_PERI_BACKUP_APB_ADDR_REG"]
 pub mod peri_backup_apb_addr;
-#[doc = "PERI_BACKUP_MEM_ADDR (rw) register accessor: APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_mem_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_mem_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_mem_addr`] module"]
+#[doc = "PERI_BACKUP_MEM_ADDR (rw) register accessor: APB_CTRL_PERI_BACKUP_MEM_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_mem_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peri_backup_mem_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_mem_addr`] module"]
 pub type PERI_BACKUP_MEM_ADDR = crate::Reg<peri_backup_mem_addr::PERI_BACKUP_MEM_ADDR_SPEC>;
-#[doc = "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG_REG"]
+#[doc = "APB_CTRL_PERI_BACKUP_MEM_ADDR_REG"]
 pub mod peri_backup_mem_addr;
 #[doc = "PERI_BACKUP_INT_RAW (r) register accessor: APB_CTRL_PERI_BACKUP_INT_RAW_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`peri_backup_int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peri_backup_int_raw`] module"]
 pub type PERI_BACKUP_INT_RAW = crate::Reg<peri_backup_int_raw::PERI_BACKUP_INT_RAW_SPEC>;

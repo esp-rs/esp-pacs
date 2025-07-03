@@ -1,0 +1,30 @@
+SPI*:
+  _strip: "SPI_MEM_"
+
+  "*":
+    _strip: "SPI_MEM_"
+
+SPI2:
+  _strip: "SPI_"
+
+  "*":
+    _strip: "SPI_"
+  
+  _modify:
+    _interrupts:
+      SPI_INTR_2:
+        name: SPI2
+      SPI_INTR_1:
+        name: SPI1
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
+
+SPI1:
+  _include: ../../../common_patches/int_strip.yaml
+
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
