@@ -1,0 +1,62 @@
+IO_MUX:
+  _delete:
+    - gpio*
+  _add:
+    GPIO%s:
+      dim: 54
+      dimIncrement: 0x04
+      dimIndex: 0-54
+      description: IO_MUX Control Register
+      addressOffset: 0x4
+      access: read-write
+      reset-value: 0x800
+      size: 0x20
+      fields:
+        MCU_OE:
+          description: "Configures whether or not to enable the output of GPIOn in sleep mode. 0: Disable 1: Enable"
+          bitOffset: 0
+          bitWidth: 1
+        SLP_SEL:
+          description: "Configures whether or not to enter sleep mode for GPIOn. 0: Not enter 1: Enter"
+          bitOffset: 1
+          bitWidth: 1
+        MCU_WPD:
+          description: "Configure whether or not to enable pull-down resistor of GPIOn during sleep mode. 0: Disable 1: Enable"
+          bitOffset: 2
+          bitWidth: 1
+        MCU_WPU:
+          description: "Configures whether or not to enable pull-up resistor of GPIOn during sleep mode. 0: Disable 1: Enable"
+          bitOffset: 3
+          bitWidth: 1
+        MCU_IE:
+          description: "Configures whether or not to enable the input of GPIOn during sleep mode. 0: Disable 1: Enable"
+          bitOffset: 4
+          bitWidth: 1
+        MCU_DRV:
+          description: "Configures the drive strength of GPIOn during sleep mode. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"
+          bitOffset: 5
+          bitWidth: 2
+        FUN_WPD:
+          description: "Configures whether or not to enable pull-down resistor of GPIOn. 0: Disable 1: Enable"
+          bitOffset: 7
+          bitWidth: 1
+        FUN_WPU:
+          description: "Configures whether or not enable pull-up resistor of GPIOn. 0: Disable 1: Enable"
+          bitOffset: 8
+          bitWidth: 1
+        FUN_IE:
+          description: "Configures whether or not to enable input of GPIOn. 0: Disable 1: Enable"
+          bitOffset: 9
+          bitWidth: 1
+        FUN_DRV:
+          description: "Configures the drive strength of GPIOn. 0: ~5 mA 1: ~10 mA 2: ~20 mA 3: ~40 mA"
+          bitOffset: 10
+          bitWidth: 2
+        MCU_SEL:
+          description: "Configures to select IO MUX function for this pin. 0: Select Function 0 1: Select Function 1 ......"
+          bitOffset: 12
+          bitWidth: 3
+        FILTER_EN:
+          description: "Configures whether or not to enable filter for pin input signals. 0: Disable 1: Enable"
+          bitOffset: 15
+          bitWidth: 1

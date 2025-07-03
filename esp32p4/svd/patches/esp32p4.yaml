@@ -1,5 +1,22 @@
 _svd: "../esp32p4.base.svd"
 
+_include:
+  - "_aes.yml"
+  - "_ds.yml"
+  - "_ecc.yml"
+  - "_ecdsa.yml"
+  - "_gpio.yml"
+  - "_hmac.yml"
+  - "_hp_sys_clkrst.yml"
+  - "_hp_sys.yml"
+  - "_io_mux.yml"
+  - "_lp_huk.yml"
+  - "_rsa.yml"
+  - "_sha.yml"
+  - "_timg.yml"
+  - "_uart.yml"
+  - "_usb_device.yml"
+
 _modify:
   SPI?:
     groupName: SPI
@@ -27,13 +44,20 @@ ADC:
         name: ADC2_DONE
   _include: ../../../common_patches/int_strip.yaml
 
+BITSCRAMBLER:
+  _modify:
+    TX_STATE:
+      resetValue: 0x01
+    VERSION:
+      resetValue: 0x02303240
+
 LP_ANA:
   _strip: LP_ANA_
   "*":
     _strip: LP_ANA_
   _include: ../../../common_patches/lpana_int_strip.yaml
 
-"I2C0,LP_I2C0":
+LP_I2C0:
   _modify:
     INT_STATUS:
       name: INT_ST
@@ -48,7 +72,11 @@ LP_ANA:
   _include: ../../../common_patches/int_strip.yaml
 
 I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
   _include:
+    - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/i2c0.yaml
     - ../../../common_patches/i2c_st_timeouts.yaml
 
