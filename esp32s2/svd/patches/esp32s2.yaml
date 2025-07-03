@@ -1,5 +1,34 @@
 _svd: ../esp32s2.base.svd
 
+_include:
+  - "_aes.yml"
+  - "_ds.yml"
+  - "_gpio.yml"
+  - "_hmac.yml"
+  - "_i2c.yml"
+  - "_io_mux.yml"
+  - "_interrupt.yml"
+  - "_ledc.yml"
+  - "_pcnt.yml"
+  - "_rmt.yml"
+  - "_rsa.yml"
+  - "_rtc_cntl.yml"
+  - "_rtc_i2c.yml"
+  - "_rtc_io.yml"
+  - "_sha.yml"
+  - "_syscon.yml"
+  - "_system.yml"
+  - "_systimer.yml"
+  - "_timg.yml"
+  - "_twai.yml"
+  - "_uart.yml"
+  - "esp32s2-wifi.yaml"
+
+RNG:
+  _modify:
+    DATA:
+      access: read-only
+
 _add:
   NRX:
     description: NRX Peripheral
@@ -1327,13 +1356,6 @@ DEDICATED_GPIO:
     _array:
       GPIO?: {}
 
-I2C0:
-  _modify:
-    INT_STATUS:
-      name: INT_ST
-  _include:
-    - ../../../common_patches/i2c0.yaml
-    - ../../../common_patches/i2c_opcode.yaml
 
 RTC_CNTL:
   _modify:
@@ -1369,7 +1391,7 @@ RTC_IO:
   XTAL_32N_PAD:
     _strip: "X32N_"
 
-"EFUSE,I2C0,I2S0,UART0,RTC_I2C":
+"EFUSE,I2S0,UART0":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -1380,9 +1402,6 @@ LEDC:
     _modify:
       "*":
         access: read-write
-
-PCNT:
-  _include: ../../../common_patches/pcnt.yaml
 
 SENS:
   _include: ../../../common_patches/sens.yaml
@@ -1566,59 +1585,6 @@ UHCI0:
   _array:
     ESC_CONF?: {}
 
-SYSTIMER:
-  INT_RAW:
-    _modify:
-      INT0_RAW:
-        name: TARGET0
-      INT1_RAW:
-        name: TARGET1
-      INT2_RAW:
-        name: TARGET2
-  INT_ENA:
-    _strip_end: _INT_ENA
-  INT_CLR:
-    _strip_end: _INT_CLR
-    _modify:
-      "*":
-        modifiedWriteValues: oneToClear
-
-  "LOAD,STEP":
-    _strip: TIMER_
-  "LOAD_HI,LOAD_LO":
-    _strip: TIMER_
-    "LOAD_HI,LOAD_LO": [0, 0xffff_ffff]
-  "TARGET?_HI,TARGET?_LO":
-    _strip: TIMER_TARGET?_
-    "HI,LO": [0, 0xffff_ffff]
-  TARGET?_CONF:
-    _strip: TARGET?_
-  UNIT?_OP:
-    _strip: TIMER_UNIT?_
-  "UNIT?_VALUE_HI,UNIT?_VALUE_LO":
-    _strip: TIMER_
-    "VALUE_HI,VALUE_LO": [0, 0xffff_ffff]
-
-  "INT_ENA,INT_RAW,INT_CLR":
-    _array:
-      TARGET?: {}
-
-  _array:
-    UNIT?_OP:
-      dimIncrement: 4
-    TARGET?_CONF: {}
-  _cluster:
-    TRGT%s:
-      TARGET?_HI:
-        name: HI
-      TARGET?_LO:
-        name: LO
-    UNIT%s_VALUE:
-      dimIncrement: 8
-      UNIT?_VALUE_HI:
-        name: HI
-      UNIT?_VALUE_LO:
-        name: LO
 
 USB0:
   _include: ../../../common_patches/usb0.yaml
@@ -1680,5 +1646,3 @@ IO_MUX:
     GPIO*:
       dimIncrement: 4
 
-_include: 
-    - "esp32s2-wifi.yaml"

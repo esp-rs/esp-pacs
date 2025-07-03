@@ -1,0 +1,13 @@
+INTERRUPT_CORE0:
+  _strip: INTERRUPT_
+
+  "*":
+    _strip: INTERRUPT_
+
+  _modify:
+    PRO_INTR_STATUS_REG_0:
+      name: "PRO_INTR_STATUS_0"
+    PRO_INTR_STATUS_REG_1:
+      name: "PRO_INTR_STATUS_1"
+    PRO_INTR_STATUS_REG_2:
+      name: "PRO_INTR_STATUS_2"

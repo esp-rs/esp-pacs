@@ -1,0 +1,46 @@
+RMT:
+  "CH%sDATA":
+    _modify:
+      "CH_DATA":
+        name: DATA
+        access: read-write
+
+  "*CH%s*":
+    _strip_end:
+      - "_CH"
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+    _array:
+      "CH?_TX_END": {}
+      "CH?_RX_END": {}
+      "CH?_ERR": {}
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+    _array:
+      "CH?_TX_END": {}
+      "CH?_RX_END": {}
+      "CH?_ERR": {}
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+    _array:
+      "CH?_TX_END": {}
+      "CH?_RX_END": {}
+      "CH?_ERR": {}
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+    _array:
+      "CH?_TX_END": {}
+      "CH?_RX_END": {}
+      "CH?_ERR": {}
+      "CH?_TX_THR_EVENT": {}
+      "CH?_TX_LOOP": {}

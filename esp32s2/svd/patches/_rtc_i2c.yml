@@ -1,0 +1,15 @@
+RTC_I2C:
+  _modify: 
+    CMD*:
+      resetValue: 0x00000903
+  CMD*:
+    _modify:
+      COMMAND*_DONE:
+        name: COMMAND_DONE
+      "COMMAND[0123456789],COMMAND10,COMMAND11,COMMAND12,COMMAND13,COMMAND14,COMMAND15":
+        name: COMMAND
+  _array:
+    CMD*: {}
+
+  _include: 
+    - ../../../common_patches/int_strip.yaml

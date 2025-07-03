@@ -1,0 +1,53 @@
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
+  _array:
+    COMD*: {}
+    
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: "read-write"
+  
+  _include: ../../../common_patches/int_strip.yaml
+
+  COMD*:
+    _delete: COMMAND0
+    _modify:
+      COMMAND*_DONE:
+        name: COMMAND_DONE
+    _add:
+      OPCODE:
+        description: "Opcode part of command %s."
+        bitOffset: 11
+        bitWidth: 3
+        access: read-write
+      ACK_VALUE:
+        description: "Acknowledge value for command %s."
+        bitOffset: 10
+        bitWidth: 1
+        access: read-write
+      ACK_EXP:
+        description: "Acknowledge expected for command %s."
+        bitOffset: 9
+        bitWidth: 1
+        access: read-write
+      ACK_CHECK_EN:
+        description: "Acknowledge check enable for command %s."
+        bitOffset: 8
+        bitWidth: 1
+        access: read-write
+      BYTE_NUM:
+        description: "Number of bytes to be sent or received for command %s."
+        bitOffset: 0
+        bitWidth: 8
+        access: read-write
+    OPCODE:
+      _name: Opcode
+      Rstart: [0, RSTART opcode]
+      Write: [1, WRITE opcode]
+      Read: [2, READ opcode]
+      Stop: [3, STOP opcode]
+      End: [4, END opcode]

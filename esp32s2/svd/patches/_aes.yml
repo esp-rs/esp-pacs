@@ -1,0 +1,8 @@
+AES:
+  _modify:
+    KEY_%s:
+      name: "KEY[%s]"
+    TEXT_IN_%s:
+      name: "TEXT_IN[%s]"
+    TEXT_OUT_%s:
+      name: "TEXT_OUT[%s]"

@@ -1,0 +1,14 @@
+RTC_CNTL:
+  BROWN_OUT:
+    _modify:
+      RTC_BROWN_OUT_DET:
+        name: "DET"
+
+  _modify:
+    OPTION1:
+      name: "OPTIONS1"
+
+  "*":
+    _strip: "RTC_"
+
+  _strip: "RTC_"
