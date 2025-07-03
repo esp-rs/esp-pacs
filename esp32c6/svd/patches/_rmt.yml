@@ -56,7 +56,7 @@ RMT:
       - "_CH0"
 
   "SYS_CONF":
-    _delete: ["SCLK_DIV_NUM", "SCLK_DIV_A", "SCLK_DIV_B", "SCLK_SEL", "SCLK_ACTIVE"]
+    _delete: ["RMT_SCLK_DIV_NUM", "RMT_SCLK_DIV_A", "RMT_SCLK_DIV_B", "RMT_SCLK_SEL", "RMT_SCLK_ACTIVE"]
     _strip: "RMT_"
 
   INT_RAW:
