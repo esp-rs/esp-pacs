@@ -1,0 +1,48 @@
+"TIMG*":
+  "T0*":
+    _strip:
+      - "T0_"
+  "T1*":
+    _strip:
+      - "T1_"
+
+  WDTCONFIG0:
+    WDT_SYS_RESET_LENGTH:
+      NS100: [0, "100ns"]
+      NS200: [1, "200ns"]
+      NS300: [2, "300ns"]
+      NS400: [3, "400ns"]
+      NS500: [4, "500ns"]
+      NS800: [5, "800ns"]
+      NS1600: [6, "1.6us"]
+      NS3200: [7, "3.2us"]
+    WDT_CPU_RESET_LENGTH:
+      NS100: [0, "100ns"]
+      NS200: [1, "200ns"]
+      NS300: [2, "300ns"]
+      NS400: [3, "400ns"]
+      NS500: [4, "500ns"]
+      NS800: [5, "800ns"]
+      NS1600: [6, "1.6us"]
+      NS3200: [7, "3.2us"]
+    "WDT_STG*":
+      OFF: [0, "Off"]
+      INTERRUPT: [1, "Interrupt"]
+      RESET: [2, "Reset CPU"]
+      RESET_SYS: [3, "Reset system"]
+
+  _include: ../../../common_patches/tim_collect.yaml
+  T0UPDATE:
+    _modify:
+      UPDATE:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+  T1UPDATE:
+    _modify:
+      UPDATE:
+        bitOffset: 31
+        bitWidth: 1
+        access: read-write
+  "LACT*":
+    _strip: LACT_

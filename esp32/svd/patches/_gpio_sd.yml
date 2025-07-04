@@ -1,0 +1,22 @@
+GPIO_SD:
+  _strip: "GPIO_"
+
+  "*":
+    _strip: "GPIO_"
+
+  _array:
+    "SIGMADELTA?":
+      _strip: SD0_
+
+  _modify:
+    CG:
+      name: CLOCK_GATE
+    MISC:
+      name: SIGMADELTA_MISC
+ 
+  CLOCK_GATE:
+    _strip: SD_
+  VERSION:
+    _modify:
+      SD_DATE:
+        name: GPIO_SD_DATE

@@ -1,0 +1,26 @@
+RTC_CNTL:
+  CLK_CONF:
+    ANA_CLK_RTC_SEL:
+      SLOW_CK: [0, "SLOW_CK"]
+      CK_XTAL_32K: [1, "CK_XTAL_32K"]
+      CK8M_D256_OUT: [2, "CK8M_D256_OUT"]
+
+    FAST_CLK_RTC_SEL:
+      XTAL_DIV_4: [0, "XTAL_DIV_4"]
+      CK8M: [1, "CK8M"]
+
+    SOC_CLK_SEL:
+      XTAL: [0, "XTAL"]
+      PLL: [1, "PLL"]
+      CK8M: [2, "CK8M"]
+      APLL: [3, "APLL"]
+
+    ENB_CK8M_DIV:
+      CK8M_DIV_256: [0, "CK8M_DIV_256"]
+      CK8M: [1, "CK8M"]
+
+    CK8M_DIV:
+      DIV128: [0, "DIV128"]
+      DIV256: [1, "DIV256"]
+      DIV512: [2, "DIV512"]
+      DIV1024: [3, "DIV1024"]

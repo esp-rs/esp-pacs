@@ -1,0 +1,4 @@
+APB_CTRL:
+  _array:
+    "APB_SARADC_SAR1_PATT_TAB*": {}
+    "APB_SARADC_SAR2_PATT_TAB*": {}

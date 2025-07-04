@@ -4,9 +4,9 @@ pub type R = crate::R<INT_RAW_SPEC>;
 pub type CH_TX_END_R = crate::BitReader;
 #[doc = "Field `CH_RX_END(0-7)` reader - The interrupt raw bit for channel %s turns to high level when the receive process is done."]
 pub type CH_RX_END_R = crate::BitReader;
-#[doc = "Field `CH_ERR(0-7)` reader - The interrupt raw bit for channel %s turns to high level when channle %s detects some errors."]
+#[doc = "Field `CH_ERR(0-7)` reader - todo"]
 pub type CH_ERR_R = crate::BitReader;
-#[doc = "Field `CH_TX_THR_EVENT(0-7)` reader - The interrupt raw bit for channel %s turns to high level when transmitter in channle%s have send datas more than reg_rmt_tx_lim_ch%s after detecting this interrupt software can updata the old datas with new datas."]
+#[doc = "Field `CH_TX_THR_EVENT(0-7)` reader - todo"]
 pub type CH_TX_THR_EVENT_R = crate::BitReader;
 impl R {
     #[doc = "The interrupt raw bit for channel (0-7) turns to high level when the transmit process is done."]
@@ -119,7 +119,7 @@ impl R {
     pub fn ch7_rx_end(&self) -> CH_RX_END_R {
         CH_RX_END_R::new(((self.bits >> 22) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when channle (0-7) detects some errors."]
+    #[doc = "todo"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field.</div>"]
     #[inline(always)]
@@ -129,52 +129,52 @@ impl R {
         CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when channle (0-7) detects some errors."]
+    #[doc = "todo"]
     #[inline(always)]
     pub fn ch_err_iter(&self) -> impl Iterator<Item = CH_ERR_R> + '_ {
         (0..8).map(move |n| CH_ERR_R::new(((self.bits >> (n * 3 + 2)) & 1) != 0))
     }
-    #[doc = "Bit 2 - The interrupt raw bit for channel 0 turns to high level when channle 0 detects some errors."]
+    #[doc = "Bit 2 - todo"]
     #[inline(always)]
     pub fn ch0_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 5 - The interrupt raw bit for channel 1 turns to high level when channle 1 detects some errors."]
+    #[doc = "Bit 5 - todo"]
     #[inline(always)]
     pub fn ch1_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 8 - The interrupt raw bit for channel 2 turns to high level when channle 2 detects some errors."]
+    #[doc = "Bit 8 - todo"]
     #[inline(always)]
     pub fn ch2_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 11 - The interrupt raw bit for channel 3 turns to high level when channle 3 detects some errors."]
+    #[doc = "Bit 11 - todo"]
     #[inline(always)]
     pub fn ch3_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 14 - The interrupt raw bit for channel 4 turns to high level when channle 4 detects some errors."]
+    #[doc = "Bit 14 - todo"]
     #[inline(always)]
     pub fn ch4_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 17 - The interrupt raw bit for channel 5 turns to high level when channle 5 detects some errors."]
+    #[doc = "Bit 17 - todo"]
     #[inline(always)]
     pub fn ch5_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 20 - The interrupt raw bit for channel 6 turns to high level when channle 6 detects some errors."]
+    #[doc = "Bit 20 - todo"]
     #[inline(always)]
     pub fn ch6_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 23 - The interrupt raw bit for channel 7 turns to high level when channle 7 detects some errors."]
+    #[doc = "Bit 23 - todo"]
     #[inline(always)]
     pub fn ch7_err(&self) -> CH_ERR_R {
         CH_ERR_R::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when transmitter in channle(0-7) have send datas more than reg_rmt_tx_lim_ch(0-7) after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "todo"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
@@ -184,47 +184,47 @@ impl R {
         CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0)
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "The interrupt raw bit for channel (0-7) turns to high level when transmitter in channle(0-7) have send datas more than reg_rmt_tx_lim_ch(0-7) after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "todo"]
     #[inline(always)]
     pub fn ch_tx_thr_event_iter(&self) -> impl Iterator<Item = CH_TX_THR_EVENT_R> + '_ {
         (0..8).map(move |n| CH_TX_THR_EVENT_R::new(((self.bits >> (n + 24)) & 1) != 0))
     }
-    #[doc = "Bit 24 - The interrupt raw bit for channel 0 turns to high level when transmitter in channle0 have send datas more than reg_rmt_tx_lim_ch0 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 24 - todo"]
     #[inline(always)]
     pub fn ch0_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 24) & 1) != 0)
     }
-    #[doc = "Bit 25 - The interrupt raw bit for channel 1 turns to high level when transmitter in channle1 have send datas more than reg_rmt_tx_lim_ch1 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 25 - todo"]
     #[inline(always)]
     pub fn ch1_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 25) & 1) != 0)
     }
-    #[doc = "Bit 26 - The interrupt raw bit for channel 2 turns to high level when transmitter in channle2 have send datas more than reg_rmt_tx_lim_ch2 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 26 - todo"]
     #[inline(always)]
     pub fn ch2_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bit 27 - The interrupt raw bit for channel 3 turns to high level when transmitter in channle3 have send datas more than reg_rmt_tx_lim_ch3 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 27 - todo"]
     #[inline(always)]
     pub fn ch3_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 27) & 1) != 0)
     }
-    #[doc = "Bit 28 - The interrupt raw bit for channel 4 turns to high level when transmitter in channle4 have send datas more than reg_rmt_tx_lim_ch4 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 28 - todo"]
     #[inline(always)]
     pub fn ch4_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 28) & 1) != 0)
     }
-    #[doc = "Bit 29 - The interrupt raw bit for channel 5 turns to high level when transmitter in channle5 have send datas more than reg_rmt_tx_lim_ch5 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 29 - todo"]
     #[inline(always)]
     pub fn ch5_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 29) & 1) != 0)
     }
-    #[doc = "Bit 30 - The interrupt raw bit for channel 6 turns to high level when transmitter in channle6 have send datas more than reg_rmt_tx_lim_ch6 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 30 - todo"]
     #[inline(always)]
     pub fn ch6_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - The interrupt raw bit for channel 7 turns to high level when transmitter in channle7 have send datas more than reg_rmt_tx_lim_ch7 after detecting this interrupt software can updata the old datas with new datas."]
+    #[doc = "Bit 31 - todo"]
     #[inline(always)]
     pub fn ch7_tx_thr_event(&self) -> CH_TX_THR_EVENT_R {
         CH_TX_THR_EVENT_R::new(((self.bits >> 31) & 1) != 0)
