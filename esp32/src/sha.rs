@@ -137,14 +137,14 @@ pub mod sha1_busy;
 pub type SHA256_START = crate::Reg<sha256_start::SHA256_START_SPEC>;
 #[doc = ""]
 pub mod sha256_start;
-#[doc = "SHA256_LOAD (w) register accessor: \n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha256_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha256_load`] module"]
-pub type SHA256_LOAD = crate::Reg<sha256_load::SHA256_LOAD_SPEC>;
-#[doc = ""]
-pub mod sha256_load;
 #[doc = "SHA256_CONTINUE (w) register accessor: \n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha256_continue::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha256_continue`] module"]
 pub type SHA256_CONTINUE = crate::Reg<sha256_continue::SHA256_CONTINUE_SPEC>;
 #[doc = ""]
 pub mod sha256_continue;
+#[doc = "SHA256_LOAD (w) register accessor: \n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sha256_load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha256_load`] module"]
+pub type SHA256_LOAD = crate::Reg<sha256_load::SHA256_LOAD_SPEC>;
+#[doc = ""]
+pub mod sha256_load;
 #[doc = "SHA256_BUSY (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sha256_busy::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sha256_busy`] module"]
 pub type SHA256_BUSY = crate::Reg<sha256_busy::SHA256_BUSY_SPEC>;
 #[doc = ""]

@@ -1,0 +1,10 @@
+RTC_IO:
+  _strip: "RTC_IO_"
+
+  "*":
+    _strip: "RTC_IO_"
+
+  _array:
+    "PIN*": {}
+    
+  _include: ../../../common_patches/rtc_io.yaml

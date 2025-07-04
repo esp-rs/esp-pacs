@@ -1,0 +1,97 @@
+EMAC_DMA:
+  _modify:
+    DMABUSMODE:
+      description: "Bus mode configuration"
+    DMATXPOLLDEMAND:
+      access: read-only
+    DMARXPOLLDEMAND:
+      access: read-only
+    DMASTATUS:
+      description: "State of interrupts, errors and other events"
+    DMAOPERATION_MODE:
+      description: "Receive and Transmit operating modes and command"
+    DMAIN_EN:
+      description: "Enable / disable interrupts"
+    DMAMISSEDFR:
+      description: "Missed Frame and Buffer Overflow Counter Register"
+    DMARINTWDTIMER:
+      description: "Watchdog timer count on receive"
+    DMATXCURRDESC:
+      access: read-only
+    DMARXCURRDESC:
+      access: read-only
+    DMATXCURRADDR_BUF:
+      access: read-only
+    DMARXCURRADDR_BUF:
+      access: read-only
+
+EMAC_EXT:
+  _modify:
+    EX_CLKOUT_CONF:
+      description: "RMII clock divider setting"
+    EX_OSCCLK_CONF:
+      description: "RMII clock half and whole divider settings"
+    EX_CLK_CTRL:
+      description: "Clock enable and external/internal clock selection"
+    EX_PHYINF_CONF:
+      description: "Selection of MII/RMII phy"
+    PD_SEL:
+      description: "Ethernet RAM power-down enable"
+
+EMAC_MAC:
+  _modify:
+    GMACCONFIG:
+      name: EMACCONFIG
+      description: "MAC configuration"
+    GMACFF:
+      name: "EMACFF"
+      description: "Frame filter settings"
+    EMACGMIIADDR:
+      description: "PHY configuration access"
+    EMACMIIDATA:
+      description: "PHY data read write"
+    GMACFC:
+      name: "EMACFC"
+      description: "Frame flow control"
+    EMACDEBUG:
+      description: "Status debugging bits"
+      access: read-only
+    PMT_RWUFFR:
+      access: read-only
+    PMT_CSR:
+      description: "PMT Control and Status"
+      access: read-only
+    GMACLPI_CRS:
+      name: "EMACLPI_CRS"
+      description: "LPI Control and Status"
+      access: read-only
+    GMACLPITIMERSCONTROL:
+      name: "EMACLPITIMERSCONTROL"
+      description: "LPI Timers Control"
+      access: read-only
+    EMACINTS:
+      description: "Interrupt status"
+      access: read-only
+    EMACINTMASK:
+      description: "Interrupt mask"
+    EMACADDR0HIGH:
+      description: "Upper 16 bits of the first 6-byte MAC address"
+    EMACADDR1HIGH:
+      description: "Upper 16 bits of the second 6-byte MAC address"
+    EMACADDR2HIGH:
+      description: "Upper 16 bits of the third 6-byte MAC address"
+    EMACADDR3HIGH:
+      description: "Upper 16 bits of the fourth 6-byte MAC address"
+    EMACADDR4HIGH:
+      description: "Upper 16 bits of the fifth 6-byte MAC address"
+    EMACADDR5HIGH:
+      description: "Upper 16 bits of the sixth 6-byte MAC address"
+    EMACADDR6HIGH:
+      description: "Upper 16 bits of the seventh 6-byte MAC address"
+    EMACADDR7HIGH:
+      description: "Upper 16 bits of the eighth 6-byte MAC address"
+    EMACCSTATUS:
+      description: "Link communication status"
+      access: read-only
+    EMACWDOGTO:
+      description: "Watchdog timeout control"
