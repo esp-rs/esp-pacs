@@ -2,12 +2,12 @@
 pub type R = crate::R<ADDR_SPEC>;
 #[doc = "Register `ADDR` writer"]
 pub type W = crate::W<ADDR_SPEC>;
-#[doc = "Field `USR_ADDR_VALUE` reader - 31:8\\]:address to slave, \\[7:0\\]:Reserved. Can be configured in CONF state."]
+#[doc = "Field `USR_ADDR_VALUE` reader - "]
 pub type USR_ADDR_VALUE_R = crate::FieldReader<u32>;
-#[doc = "Field `USR_ADDR_VALUE` writer - 31:8\\]:address to slave, \\[7:0\\]:Reserved. Can be configured in CONF state."]
+#[doc = "Field `USR_ADDR_VALUE` writer - "]
 pub type USR_ADDR_VALUE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - 31:8\\]:address to slave, \\[7:0\\]:Reserved. Can be configured in CONF state."]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn usr_addr_value(&self) -> USR_ADDR_VALUE_R {
         USR_ADDR_VALUE_R::new(self.bits)
@@ -22,13 +22,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - 31:8\\]:address to slave, \\[7:0\\]:Reserved. Can be configured in CONF state."]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn usr_addr_value(&mut self) -> USR_ADDR_VALUE_W<ADDR_SPEC> {
         USR_ADDR_VALUE_W::new(self, 0)
     }
 }
-#[doc = "Address value\n\nYou can [`read`](crate::Reg::read) this register and get [`addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "SPI Memory Address Register\n\nYou can [`read`](crate::Reg::read) this register and get [`addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ADDR_SPEC;
 impl crate::RegisterSpec for ADDR_SPEC {
     type Ux = u32;

@@ -2,12 +2,12 @@
 pub type R = crate::R<W_SPEC>;
 #[doc = "Register `W%s` writer"]
 pub type W = crate::W<W_SPEC>;
-#[doc = "Field `BUF` reader - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
+#[doc = "Field `BUF` reader - "]
 pub type BUF_R = crate::FieldReader<u32>;
-#[doc = "Field `BUF` writer - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
+#[doc = "Field `BUF` writer - "]
 pub type BUF_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32, crate::Safe>;
 impl R {
-    #[doc = "Bits 0:31 - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn buf(&self) -> BUF_R {
         BUF_R::new(self.bits)
@@ -20,13 +20,13 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - 32 bits data buffer 0, transferred in the unit of byte. Byte addressable in slave half-duplex mode."]
+    #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn buf(&mut self) -> BUF_W<W_SPEC> {
         BUF_W::new(self, 0)
     }
 }
-#[doc = "Data buffer %s\n\nYou can [`read`](crate::Reg::read) this register and get [`w::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`w::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`w::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`w::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct W_SPEC;
 impl crate::RegisterSpec for W_SPEC {
     type Ux = u32;

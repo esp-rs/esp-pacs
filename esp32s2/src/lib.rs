@@ -885,15 +885,15 @@ impl core::fmt::Debug for SHA {
 }
 #[doc = "SHA (Secure Hash Algorithm) Accelerator"]
 pub mod sha;
-#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
-pub type SPI0 = crate::Periph<spi0::RegisterBlock, 0x3f40_3000>;
-impl core::fmt::Debug for SPI0 {
+#[doc = "SPI (Serial Peripheral Interface) Controller 2 (GPSPI)"]
+pub type SPI2 = crate::Periph<spi2::RegisterBlock, 0x3f42_4000>;
+impl core::fmt::Debug for SPI2 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SPI0").finish()
+        f.debug_struct("SPI2").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller 0"]
-pub mod spi0;
+#[doc = "SPI (Serial Peripheral Interface) Controller 2 (GPSPI)"]
+pub mod spi2;
 #[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub type SPI1 = crate::Periph<spi0::RegisterBlock, 0x3f40_2000>;
 impl core::fmt::Debug for SPI1 {
@@ -903,33 +903,33 @@ impl core::fmt::Debug for SPI1 {
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 1"]
 pub use self::spi0 as spi1;
-#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
-pub type SPI2 = crate::Periph<spi0::RegisterBlock, 0x3f42_4000>;
-impl core::fmt::Debug for SPI2 {
+#[doc = "SPI (Serial Peripheral Interface) Controller 0 (MEMSPI)"]
+pub type SPI0 = crate::Periph<spi0::RegisterBlock, 0x3f40_3000>;
+impl core::fmt::Debug for SPI0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("SPI2").finish()
+        f.debug_struct("SPI0").finish()
     }
 }
-#[doc = "SPI (Serial Peripheral Interface) Controller 2"]
-pub use self::spi0 as spi2;
+#[doc = "SPI (Serial Peripheral Interface) Controller 0 (MEMSPI)"]
+pub mod spi0;
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub type SPI3 = crate::Periph<spi0::RegisterBlock, 0x3f42_5000>;
+pub type SPI3 = crate::Periph<spi2::RegisterBlock, 0x3f42_5000>;
 impl core::fmt::Debug for SPI3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI3").finish()
     }
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 3"]
-pub use self::spi0 as spi3;
+pub use self::spi2 as spi3;
 #[doc = "SPI (Serial Peripheral Interface) Controller 4"]
-pub type SPI4 = crate::Periph<spi0::RegisterBlock, 0x3f43_7000>;
+pub type SPI4 = crate::Periph<spi2::RegisterBlock, 0x3f43_7000>;
 impl core::fmt::Debug for SPI4 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SPI4").finish()
     }
 }
 #[doc = "SPI (Serial Peripheral Interface) Controller 4"]
-pub use self::spi0 as spi4;
+pub use self::spi2 as spi4;
 #[doc = "SYSCON Peripheral"]
 pub type SYSCON = crate::Periph<syscon::RegisterBlock, 0x3f42_6000>;
 impl core::fmt::Debug for SYSCON {
@@ -1109,12 +1109,12 @@ pub struct Peripherals {
     pub SENS: SENS,
     #[doc = "SHA"]
     pub SHA: SHA,
-    #[doc = "SPI0"]
-    pub SPI0: SPI0,
-    #[doc = "SPI1"]
-    pub SPI1: SPI1,
     #[doc = "SPI2"]
     pub SPI2: SPI2,
+    #[doc = "SPI1"]
+    pub SPI1: SPI1,
+    #[doc = "SPI0"]
+    pub SPI0: SPI0,
     #[doc = "SPI3"]
     pub SPI3: SPI3,
     #[doc = "SPI4"]
@@ -1198,9 +1198,9 @@ impl Peripherals {
             RTC_I2C: RTC_I2C::steal(),
             SENS: SENS::steal(),
             SHA: SHA::steal(),
-            SPI0: SPI0::steal(),
-            SPI1: SPI1::steal(),
             SPI2: SPI2::steal(),
+            SPI1: SPI1::steal(),
+            SPI0: SPI0::steal(),
             SPI3: SPI3::steal(),
             SPI4: SPI4::steal(),
             SYSCON: SYSCON::steal(),
