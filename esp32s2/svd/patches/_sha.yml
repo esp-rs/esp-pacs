@@ -1,0 +1,18 @@
+SHA:
+  _strip_end: "_OP"
+
+  _modify:
+    "M_%s":
+      name: "M_MEM%s"
+    "H_%s":
+      name: "H_MEM%s"
+
+  START:
+    _modify:
+      START:
+        access: write-only
+
+  CONTINUE:
+    _modify:
+      CONTINUE_OP:
+        access: write-only

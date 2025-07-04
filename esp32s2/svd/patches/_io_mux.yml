@@ -1,0 +1,125 @@
+IO_MUX:
+  _modify:
+    GPIO15:
+      description: "Configuration register for pin GPIO15"
+      addressOffset: 0x40
+    GPIO16:
+      description: "Configuration register for pin GPIO16"
+      addressOffset: 0x44
+    GPIO17:
+      description: "Configuration register for pin GPIO17"
+      addressOffset: 0x48
+    GPIO18:
+      description: "Configuration register for pin GPIO18"
+      addressOffset: 0x4C
+    GPIO26:
+      description: "Configuration register for pin GPIO26"
+      addressOffset: 0x6C
+    GPIO27:
+      description: "Configuration register for pin GPIO27"
+      addressOffset: 0x70
+    GPIO28:
+      description: "Configuration register for pin GPIO28"
+      addressOffset: 0x74
+    GPIO29:
+      description: "Configuration register for pin GPIO29"
+      addressOffset: 0x78
+    GPIO30:
+      description: "Configuration register for pin GPIO30"
+      addressOffset: 0x7C
+    GPIO31:
+      description: "Configuration register for pin GPIO31"
+      addressOffset: 0x80
+    GPIO32:
+      description: "Configuration register for pin GPIO32"
+      addressOffset: 0x84
+    GPIO39:
+      description: "Configuration register for pin GPIO39"
+      addressOffset: 0xA0
+    GPIO40:
+      description: "Configuration register for pin GPIO40"
+      addressOffset: 0xA4
+    GPIO41:
+      description: "Configuration register for pin GPIO41"
+      addressOffset: 0xA8
+    GPIO42:
+      description: "Configuration register for pin GPIO42"
+      addressOffset: 0xAC
+    GPIO43:
+      description: "Configuration register for pin GPIO43"
+      addressOffset: 0xB0
+    GPIO44:
+      description: "Configuration register for pin GPIO44"
+      addressOffset: 0xB4
+
+    GPIO_33:
+      name: GPIO33
+    GPIO_34:
+      name: GPIO34
+    GPIO_35:
+      name: GPIO35
+    GPIO_36:
+      name: GPIO36
+    GPIO_37:
+      name: GPIO37
+    GPIO_38:
+      name: GPIO38
+    GPIO_45:
+      name: GPIO45
+    GPIO_46:
+      name: GPIO46
+
+  _delete:
+    - XTAL_32K_P
+    - XTAL_32K_N
+    - DAC_1
+    - DAC_2
+    - SPICS1
+    - SPIHD
+    - SPIWP
+    - SPICS0
+    - SPIQ
+    - SPID
+    - MTCK
+    - MTDO
+    - MTDI
+    - MTMS
+    - U0TXD
+    - U0RXD
+    - SPICLK
+
+  _copy:
+    GPIO15:
+      _from: GPIO14
+    GPIO16:
+      _from: GPIO14
+    GPIO17:
+      _from: GPIO14
+    GPIO18:
+      _from: GPIO14
+    GPIO26:
+      _from: GPIO14
+    GPIO27:
+      _from: GPIO14
+    GPIO28:
+      _from: GPIO14
+    GPIO29:
+      _from: GPIO14
+    GPIO30:
+      _from: GPIO14
+    GPIO31:
+      _from: GPIO14
+    GPIO32:
+      _from: GPIO14
+    GPIO39:
+      _from: GPIO14
+    GPIO40:
+      _from: GPIO14
+    GPIO41:
+      _from: GPIO14
+    GPIO42:
+      _from: GPIO14
+    GPIO43:
+      _from: GPIO14
+    GPIO44:
+      _from: GPIO14

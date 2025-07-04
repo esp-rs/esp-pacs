@@ -1,0 +1,30 @@
+RSA:
+  _add:
+    "M_MEM[%s]":
+      dim: 128
+      dimIncrement: 0x4
+      description: "Represents M"
+      addressOffset: 0x0
+      size: 0x20
+      access: write-only
+    "Z_MEM[%s]":
+      dim: 128
+      dimIncrement: 0x4
+      description: "Represents Z"
+      addressOffset: 0x200
+      size: 0x20
+      access: read-write
+    "Y_MEM[%s]":
+      dim: 128
+      dimIncrement: 0x4
+      description: "Represents Y"
+      addressOffset: 0x400
+      size: 0x20
+      access: write-only
+    "X_MEM[%s]":
+      dim: 128
+      dimIncrement: 0x4
+      description: "Represents X"
+      addressOffset: 0x600
+      size: 0x20
+      access: write-only

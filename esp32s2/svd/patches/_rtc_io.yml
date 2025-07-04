@@ -1,0 +1,16 @@
+RTC_IO:
+  _modify:
+    RTC_GPIO_ENABLE_W1TC:
+      name: ENABLE_W1TC
+    "RTC_GPIO_PIN%s":
+      name: "PIN%s"
+
+  "PIN%s":
+    _modify:
+      GPIO_PIN_PAD_DRIVER:
+        name: PAD_DRIVER
+
+  ENABLE_W1TC:
+    _modify:
+      REG_RTCIO_REG_GPIO_ENABLE_W1TC:
+        name: ENABLE_W1TC

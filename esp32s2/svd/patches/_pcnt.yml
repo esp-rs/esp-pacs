@@ -1,0 +1,30 @@
+PCNT:
+  "*":
+    _strip_end: "_U"
+
+  "U%s_CNT":
+    _modify:
+      PULSE_CNT:
+        name: CNT
+
+  CTRL:
+    _strip: "PULSE_"
+
+  "U%s_STATUS":
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT"
+
+    _modify:
+      ZERO_MODE:
+        name: ZERO_MODE
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+
+  _include: ../../../common_patches/pcnt.yaml
