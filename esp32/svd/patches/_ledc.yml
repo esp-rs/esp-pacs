@@ -1,0 +1,70 @@
+LEDC:
+  "*":
+    _strip_end:
+      - "_HSCH0"
+      - "_LSCH0"
+      - "_HSCH1"
+      - "_LSCH1"
+      - "_HSCH2"
+      - "_LSCH2"
+      - "_HSCH3"
+      - "_LSCH3"
+      - "_HSCH4"
+      - "_LSCH4"
+      - "_HSCH5"
+      - "_LSCH5"
+      - "_HSCH6"
+      - "_LSCH6"
+      - "_HSCH7"
+      - "_LSCH7"
+
+  "HSCH0_CONF0":
+    _delete: "CLK_EN"
+
+  "HSCH*_DUTY_R":
+    _add:
+      DUTY_R:
+        description: "This register represents the current duty cycle of the output signal for high-speed channel %s"
+        bitOffset: 0
+        bitWidth: 25
+        access: read-only
+
+  _modify:
+    "HSCH*_DUTY":
+      access: read-write
+    "LSCH*_DUTY":
+      access: read-write
+
+  "HSCH*_DUTY":
+    _modify:
+      DUTY:
+        access: read-write
+
+  "LSCH*_DUTY":
+    _modify:
+      DUTY:
+        access: read-write
+
+  "LSCH*_DUTY_R":
+    _add:
+      DUTY_R:
+        description: "This register represents the current duty cycle of the output signal for low-speed channel %s"
+        bitOffset: 0
+        bitWidth: 25
+        access: read-only
+
+  "HSTIMER*_CONF":
+    _strip: "HSTIMER0_"
+    _strip_end: "_HSTIMER0"
+    _delete: "HSTIMER*_LIM"
+
+  "HSTIMER*_VALUE":
+    _strip: "HSTIMER0_"
+
+  "LSTIMER*_CONF":
+    _strip: "LSTIMER0_"
+    _strip_end: "_LSTIMER0"
+    _delete: "LSTIMER*_LIM"
+
+  "LSTIMER*_VALUE":
+    _strip: "LSTIMER0_"

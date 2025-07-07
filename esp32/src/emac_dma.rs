@@ -54,7 +54,7 @@ impl RegisterBlock {
     pub const fn dmaoperation_mode(&self) -> &DMAOPERATION_MODE {
         &self.dmaoperation_mode
     }
-    #[doc = "0x1c - "]
+    #[doc = "0x1c - Enable / disable interrupts"]
     #[inline(always)]
     pub const fn dmain_en(&self) -> &DMAIN_EN {
         &self.dmain_en
@@ -118,9 +118,9 @@ pub mod dmastatus;
 pub type DMAOPERATION_MODE = crate::Reg<dmaoperation_mode::DMAOPERATION_MODE_SPEC>;
 #[doc = "Receive and Transmit operating modes and command"]
 pub mod dmaoperation_mode;
-#[doc = "DMAIN_EN (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmain_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmain_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmain_en`] module"]
+#[doc = "DMAIN_EN (rw) register accessor: Enable / disable interrupts\n\nYou can [`read`](crate::Reg::read) this register and get [`dmain_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmain_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmain_en`] module"]
 pub type DMAIN_EN = crate::Reg<dmain_en::DMAIN_EN_SPEC>;
-#[doc = ""]
+#[doc = "Enable / disable interrupts"]
 pub mod dmain_en;
 #[doc = "DMAMISSEDFR (rw) register accessor: Missed Frame and Buffer Overflow Counter Register\n\nYou can [`read`](crate::Reg::read) this register and get [`dmamissedfr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmamissedfr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmamissedfr`] module"]
 pub type DMAMISSEDFR = crate::Reg<dmamissedfr::DMAMISSEDFR_SPEC>;

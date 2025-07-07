@@ -1,0 +1,31 @@
+GPIO:
+  "FUNC*_IN_SEL_CFG":
+    _modify:
+      FUNC*_IN_SEL:
+        name: "IN_SEL"
+      FUNC*_IN_INV_SEL:
+        name: "IN_INV_SEL"
+      SIG*_IN_SEL:
+        name: "SEL"
+
+  "FUNC*_OUT_SEL_CFG":
+    _modify:
+      FUNC*_OUT_SEL:
+        name: "OUT_SEL"
+      FUNC*_OUT_INV_SEL:
+        name: "INV_SEL"
+      FUNC*_OEN_SEL:
+        name: "OEN_SEL"
+      FUNC*_OEN_INV_SEL:
+        name: "OEN_INV_SEL"
+
+  _array:
+    "FUNC*_IN_SEL_CFG": {}
+    "FUNC*_OUT_SEL_CFG": {}
+    "PIN*": {}
+
+  "IN*":
+    _modify:
+      DATA:
+        name: "DATA_NEXT"
+        access: read-write

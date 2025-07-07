@@ -1,55 +1,33 @@
 _svd: ../esp32.base.svd
 
-I2C0:
-  _modify:
-    INT_STATUS:
-      name: INT_ST
-  INT_ENA:
-    _modify:
-      ACK_ERR_INT_ENA:
-        name: NACK_INT_ENA
-  INT_RAW:
-    _modify:
-      ACK_ERR_INT_RAW:
-        name: NACK_INT_RAW
-  INT_CLR:
-    _modify:
-      ACK_ERR_INT_CLR:
-        name: NACK_INT_CLR
-  INT_ST:
-    _modify:
-      ACK_ERR_INT_ST:
-        name: NACK_INT_ST
-  _include:
-    - ../../../common_patches/i2c0.yaml
-    - ../../../common_patches/i2c_opcode.yaml
+_include:
+  - "_apb_ctrl.yml"
+  - "_emac.yml"
+  - "_gpio_sd.yml"
+  - "_gpio.yml"
+  - "_i2c.yml"
+  - "_ledc.yml"
+  - "_pcnt.yml"
+  - "_rmt.yml"
+  - "_rsa.yml"
+  - "_rtc_cntl.yml"
+  - "_rtc_io.yml"
+  - "_timg.yml"
+  - "esp32-wifi.yaml"
 
-RTC_I2C:
+RNG:
   _modify:
-    INT_EN:
-      name: INT_ENA
-
-RTC_IO:
-  _include: ../../../common_patches/rtc_io.yaml
+    DATA:
+      access: read-only
 
 RTC_CNTL:
   HOLD_FORCE:
     _strip_end: _HOLD_FORCE
 
-"EFUSE,I2C0,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
+"EFUSE,I2S0,RTC_CNTL,RTC_I2C,UART0,UHCI0":
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
-  _expand_array:
-    "?SCH%s_CONF0": {}
-    "?SCH%s_HPOINT": {}
-    "?SCH%s_DUTY": {}
-    "?SCH%s_CONF1": {}
-    "?SCH%s_DUTY_R": {}
-
-    "?STIMER%s_CONF": {}
-    "?STIMER%s_VALUE": {}
-
   _cluster:
     HSCH%s:
       HSCH?_CONF0:
@@ -120,12 +98,6 @@ LEDC:
       "*":
         modifiedWriteValues: oneToClear
 
-PCNT:
-  U%s_STATUS:
-    _modify:
-      CORE_STATUS_U0:
-        name: CORE_STATUS
-  _include: ../../../common_patches/pcnt.yaml
 
 SENS:
   _include: ../../../common_patches/sens.yaml
@@ -176,38 +148,6 @@ SPI0:
     - ../../../common_patches/spi_dma_int_strip.yaml
     - ../../../common_patches/spi_w.yaml
 
-TIMG0:
-  _include: ../../../common_patches/tim_collect.yaml
-  T0UPDATE:
-    _modify:
-      UPDATE:
-        bitOffset: 31
-        bitWidth: 1
-        access: read-write
-  T1UPDATE:
-    _modify:
-      UPDATE:
-        bitOffset: 31
-        bitWidth: 1
-        access: read-write
-  "LACT*":
-    _strip: LACT_
-
-GPIO_SD:
-  _modify:
-    CG:
-      name: CLOCK_GATE
-    MISC:
-      name: SIGMADELTA_MISC
-  SIGMADELTA%s:
-    _strip: SD0_
-  CLOCK_GATE:
-    _strip: SD_
-  VERSION:
-    _modify:
-      SD_DATE:
-        name: GPIO_SD_DATE
-
 UHCI0:
   _include: ../../../common_patches/int_strip.yaml
   Q?_WORD?:
@@ -255,6 +195,9 @@ TWAI0:
 
 DPORT:
   _delete: CORE_RST_EN
+  _modify:
+    PERIP_CLK_EN:
+      resetValue: 0xF9C1E06F
   _add:
     WIFI_RST_EN:
       description: "Wifi peripheral reset control"
@@ -322,6 +265,3 @@ DPORT:
         bitOffset: 2
         bitWidth: 1
         access: read-write
-
-_include:
-    - "esp32-wifi.yaml"

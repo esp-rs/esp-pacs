@@ -99,6 +99,22 @@ impl RegisterBlock {
         &self.clean
     }
 }
+#[doc = "M_MEM (rw) register accessor: Represents M\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
+pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
+#[doc = "Represents M"]
+pub mod m_mem;
+#[doc = "Z_MEM (rw) register accessor: Represents Z\n\nYou can [`read`](crate::Reg::read) this register and get [`z_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
+pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
+#[doc = "Represents Z"]
+pub mod z_mem;
+#[doc = "Y_MEM (rw) register accessor: Represents Y\n\nYou can [`read`](crate::Reg::read) this register and get [`y_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
+pub type Y_MEM = crate::Reg<y_mem::Y_MEM_SPEC>;
+#[doc = "Represents Y"]
+pub mod y_mem;
+#[doc = "X_MEM (rw) register accessor: Represents X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
+pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
+#[doc = "Represents X"]
+pub mod x_mem;
 #[doc = "M_PRIME (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`m_prime::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_prime::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_prime`] module"]
 pub type M_PRIME = crate::Reg<m_prime::M_PRIME_SPEC>;
 #[doc = ""]
@@ -127,19 +143,3 @@ pub mod interrupt;
 pub type CLEAN = crate::Reg<clean::CLEAN_SPEC>;
 #[doc = ""]
 pub mod clean;
-#[doc = "M_MEM (rw) register accessor: Represents M\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mem`] module"]
-pub type M_MEM = crate::Reg<m_mem::M_MEM_SPEC>;
-#[doc = "Represents M"]
-pub mod m_mem;
-#[doc = "Z_MEM (rw) register accessor: Represents Z\n\nYou can [`read`](crate::Reg::read) this register and get [`z_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`z_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@z_mem`] module"]
-pub type Z_MEM = crate::Reg<z_mem::Z_MEM_SPEC>;
-#[doc = "Represents Z"]
-pub mod z_mem;
-#[doc = "Y_MEM (rw) register accessor: Represents Y\n\nYou can [`read`](crate::Reg::read) this register and get [`y_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`y_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@y_mem`] module"]
-pub type Y_MEM = crate::Reg<y_mem::Y_MEM_SPEC>;
-#[doc = "Represents Y"]
-pub mod y_mem;
-#[doc = "X_MEM (rw) register accessor: Represents X\n\nYou can [`read`](crate::Reg::read) this register and get [`x_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`x_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@x_mem`] module"]
-pub type X_MEM = crate::Reg<x_mem::X_MEM_SPEC>;
-#[doc = "Represents X"]
-pub mod x_mem;
