@@ -29,7 +29,1245 @@ RNG:
     DATA:
       access: read-only
 
+_delete: SPI2 
+_modify:
+  SPI0:
+    name: SPI2
+    baseAddress: 0x3f424000
+    description: SPI (Serial Peripheral Interface) Controller 2 (GPSPI)
+
+  SPI1:
+    derivedFrom: SPI0
+  SPI[34]:
+    derivedFrom: SPI2
+
 _add:
+  SPI0:
+    description: "SPI (Serial Peripheral Interface) Controller 0 (MEMSPI)"
+    baseAddress: 0x3f403000
+    interrupts:
+      SPI0_REJECT_CACHE:
+        description: SPI0_REJECT_CACHE
+        value: 83
+    registers:
+      CMD:
+        description: "SPI Memory Command Register"
+        addressOffset: 0x000
+        size: 32
+        access: read-write
+        fields:
+          FLASH_READ:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          FLASH_WREN:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          FLASH_WRDI:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          FLASH_RDID:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          FLASH_RDSR:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          FLASH_WRSR:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+          FLASH_PP:
+            bitOffset: 25
+            bitWidth: 1
+            access: read-write
+          FLASH_SE:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          FLASH_BE:
+            bitOffset: 23
+            bitWidth: 1
+            access: read-write
+          FLASH_CE:
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          FLASH_DP:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          FLASH_RES:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          FLASH_HPM:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          USR:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          FLASH_PE:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+      ADDR:
+        description: "SPI Memory Address Register"
+        addressOffset: 0x004
+        size: 32
+        access: read-write
+        fields:
+          USR_ADDR_VALUE:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CTRL:
+        description: "SPI Memory Control Register"
+        addressOffset: 0x008
+        size: 32
+        access: read-write
+        fields:
+          FREAD_QIO:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          FREAD_DIO:
+            bitOffset: 23
+            bitWidth: 1
+            access: read-write
+          WRSR_2B:
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          WP_REG:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          FREAD_QUAD:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          D_POL:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          Q_POL:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          RESANDRES:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          FREAD_DUAL:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          FASTRD_MODE:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          TX_CRC_EN:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          FCS_CRC_EN:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          FCMD_OCT:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          FCMD_QUAD:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          FCMD_DUAL:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          FADDR_OCT:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          FDIN_OCT:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          FDOUT_OCT:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          FDUMMY_OUT:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+      CTRL1:
+        description: "SPI Memory Control1 Register"
+        addressOffset: 0x00C
+        size: 32
+        access: read-write
+        fields:
+          CS_DLY_EDGE:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          CS_DLY_MODE:
+            bitOffset: 28
+            bitWidth: 3
+            access: read-write
+          CS_DLY_NUM:
+            bitOffset: 26
+            bitWidth: 2
+            access: read-write
+          CS_HOLD_DLY:
+            bitOffset: 14
+            bitWidth: 12
+            access: read-write
+          CS_HOLD_DLY_RES:
+            bitOffset: 2
+            bitWidth: 12
+            access: read-write
+          CLK_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      CTRL2:
+        description: "SPI Memory Control2 Register"
+        addressOffset: 0x010
+        size: 32
+        access: read-write
+        fields:
+          SYNC_RESET:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          CS_HOLD_TIME:
+            bitOffset: 13
+            bitWidth: 13
+            access: read-write
+          CS_SETUP_TIME:
+            bitOffset: 0
+            bitWidth: 13
+            access: read-write
+      CLOCK:
+        description: "SPI Memory Clock Register"
+        addressOffset: 0x014
+        size: 32
+        access: read-write
+        fields:
+          CLK_EQU_SYSCLK:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          CLKCNT_N:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          CLKCNT_H:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          CLKCNT_L:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      USER:
+        description: "SPI Memory User Register"
+        addressOffset: 0x018
+        size: 32
+        access: read-write
+        fields:
+          USR_COMMAND:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          USR_ADDR:
+            bitOffset: 30
+            bitWidth: 1
+            access: read-write
+          USR_DUMMY:
+            bitOffset: 29
+            bitWidth: 1
+            access: read-write
+          USR_MISO:
+            bitOffset: 28
+            bitWidth: 1
+            access: read-write
+          USR_MOSI:
+            bitOffset: 27
+            bitWidth: 1
+            access: read-write
+          USR_DUMMY_IDLE:
+            bitOffset: 26
+            bitWidth: 1
+            access: read-write
+          USR_MOSI_HIGHPART:
+            bitOffset: 25
+            bitWidth: 1
+            access: read-write
+          USR_MISO_HIGHPART:
+            bitOffset: 24
+            bitWidth: 1
+            access: read-write
+          FWRITE_QIO:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          FWRITE_DIO:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          FWRITE_QUAD:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          FWRITE_DUAL:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          CK_OUT_EDGE:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          CS_SETUP:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          CS_HOLD:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+      USER1:
+        description: "SPI Memory User1 Register"
+        addressOffset: 0x01C
+        size: 32
+        access: read-write
+        fields:
+          USR_ADDR_BITLEN:
+            bitOffset: 26
+            bitWidth: 6
+            access: read-write
+          USR_DUMMY_CYCLELEN:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      USER2:
+        description: "SPI Memory User2 Register"
+        addressOffset: 0x020
+        size: 32
+        access: read-write
+        fields:
+          USR_COMMAND_BITLEN:
+            bitOffset: 28
+            bitWidth: 4
+            access: read-write
+          USR_COMMAND_VALUE:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      MOSI_DLEN:
+        description: "SPI Memory MOSI Data Length Register"
+        addressOffset: 0x024
+        size: 32
+        access: read-write
+        fields:
+          USR_MOSI_DBITLEN:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-write
+      MISO_DLEN:
+        description: "SPI Memory MISO Data Length Register"
+        addressOffset: 0x028
+        size: 32
+        access: read-write
+        fields:
+          USR_MISO_DBITLEN:
+            bitOffset: 0
+            bitWidth: 11
+            access: read-write
+      RD_STATUS:
+        description: "SPI Memory Read Status Register"
+        addressOffset: 0x02C
+        size: 32
+        access: read-write
+        fields:
+          WB_MODE:
+            bitOffset: 16
+            bitWidth: 16
+            access: read-write
+          STATUS:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      EXT_ADDR:
+        description: "SPI Memory External Address Register"
+        addressOffset: 0x030
+        size: 32
+        access: read-write
+        fields:
+          EXT_ADDR:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      MISC:
+        description: "SPI Memory Miscellaneous Register"
+        addressOffset: 0x034
+        size: 32
+        access: read-write
+        fields:
+          AUTO_PER:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          CS_KEEP_ACTIVE:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          CK_IDLE_EDGE:
+            bitOffset: 9
+            bitWidth: 1
+            access: read-write
+          SSUB_PIN:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          FSUB_PIN:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          CS_POL:
+            bitOffset: 5
+            bitWidth: 2
+            access: read-write
+          TRANS_END_INT_ENA:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          TRANS_END:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          CS1_DIS:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          CS0_DIS:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      TX_CRC:
+        description: "SPI Memory Transmit CRC Register"
+        addressOffset: 0x038
+        size: 32
+        access: read-write
+        fields:
+          TX_CRC_DATA:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+      CACHE_FCTRL:
+        description: "SPI Memory Cache Flash Control Register"
+        addressOffset: 0x03C
+        size: 32
+        access: read-write
+        fields:
+          FADDR_QUAD:
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+          FDOUT_QUAD:
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          FDIN_QUAD:
+            bitOffset: 6
+            bitWidth: 1
+            access: read-write
+          FADDR_DUAL:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          FDOUT_DUAL:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          FDIN_DUAL:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          CACHE_FLASH_USR_CMD:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          CACHE_USR_CMD_4BYTE:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          CACHE_REQ_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      CACHE_SCTRL:
+        description: "SPI Memory Cache SCTRL Register"
+        addressOffset: 0x040
+        size: 32
+        access: read-write
+        fields:
+          SRAM_WDUMMY_CYCLELEN:
+            bitOffset: 22
+            bitWidth: 8
+            access: read-write
+          SRAM_OCT:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          CACHE_SRAM_USR_WCMD:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          SRAM_ADDR_BITLEN:
+            bitOffset: 14
+            bitWidth: 6
+            access: read-write
+          SRAM_RDUMMY_CYCLELEN:
+            bitOffset: 6
+            bitWidth: 8
+            access: read-write
+          CACHE_SRAM_USR_RCMD:
+            bitOffset: 5
+            bitWidth: 1
+            access: read-write
+          USR_RD_SRAM_DUMMY:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          USR_WR_SRAM_DUMMY:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          USR_SRAM_QIO:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          USR_SRAM_DIO:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          CACHE_USR_SCMD_4BYTE:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      SRAM_CMD:
+        description: "SPI Memory SRAM Command Register"
+        addressOffset: 0x044
+        size: 32
+        access: read-write
+        fields:
+          SDUMMY_OUT:
+            bitOffset: 22
+            bitWidth: 1
+            access: read-write
+          SCMD_OCT:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          SADDR_OCT:
+            bitOffset: 20
+            bitWidth: 1
+            access: read-write
+          SDOUT_OCT:
+            bitOffset: 19
+            bitWidth: 1
+            access: read-write
+          SDIN_OCT:
+            bitOffset: 18
+            bitWidth: 1
+            access: read-write
+          SCMD_QUAD:
+            bitOffset: 17
+            bitWidth: 1
+            access: read-write
+          SADDR_QUAD:
+            bitOffset: 16
+            bitWidth: 1
+            access: read-write
+          SDOUT_QUAD:
+            bitOffset: 15
+            bitWidth: 1
+            access: read-write
+          SDIN_QUAD:
+            bitOffset: 14
+            bitWidth: 1
+            access: read-write
+          SCMD_DUAL:
+            bitOffset: 13
+            bitWidth: 1
+            access: read-write
+          SADDR_DUAL:
+            bitOffset: 12
+            bitWidth: 1
+            access: read-write
+          SDOUT_DUAL:
+            bitOffset: 11
+            bitWidth: 1
+            access: read-write
+          SDIN_DUAL:
+            bitOffset: 10
+            bitWidth: 1
+            access: read-write
+          SWB_MODE:
+            bitOffset: 2
+            bitWidth: 8
+            access: read-write
+          SCLK_MODE:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      SRAM_DRD_CMD:
+        description: "SPI Memory SRAM Read Command Register"
+        addressOffset: 0x048
+        size: 32
+        access: read-write
+        fields:
+          CACHE_SRAM_USR_RD_CMD_BITLEN:
+            bitOffset: 28
+            bitWidth: 4
+            access: read-write
+          CACHE_SRAM_USR_RD_CMD_VALUE:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      SRAM_DWR_CMD:
+        description: "SPI Memory SRAM Write Command Register"
+        addressOffset: 0x04C
+        size: 32
+        access: read-write
+        fields:
+          CACHE_SRAM_USR_WR_CMD_BITLEN:
+            bitOffset: 28
+            bitWidth: 4
+            access: read-write
+          CACHE_SRAM_USR_WR_CMD_VALUE:
+            bitOffset: 0
+            bitWidth: 16
+            access: read-write
+      SRAM_CLK:
+        description: "SPI Memory SRAM Clock Register"
+        addressOffset: 0x050
+        size: 32
+        access: read-write
+        fields:
+          SCLK_EQU_SYSCLK:
+            bitOffset: 31
+            bitWidth: 1
+            access: read-write
+          SCLKCNT_N:
+            bitOffset: 16
+            bitWidth: 8
+            access: read-write
+          SCLKCNT_H:
+            bitOffset: 8
+            bitWidth: 8
+            access: read-write
+          SCLKCNT_L:
+            bitOffset: 0
+            bitWidth: 8
+            access: read-write
+      FSM:
+        description: "SPI Memory FSM Register"
+        addressOffset: 0x054
+        size: 32
+        access: read-only # Assumed read-only for FSM state
+        fields:
+          ST:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-only
+      
+      W%s:
+        size: 32
+        addressOffset: 0x058
+        dim: 16
+        dimIndex: 0-15
+        dimIncrement: 0x4
+        access: read-write
+        fields:
+          BUF:
+            bitOffset: 0
+            bitWidth: 32
+            access: read-write
+            writeConstraint: [0, 0xFFFFFFFF]
+    
+      FLASH_WAITI_CTRL:
+        description: "SPI Memory Flash Wait Idle Control Register"
+        addressOffset: 0x098
+        size: 32
+        access: read-write
+        fields:
+          WAITI_DUMMY_CYCLELEN:
+            bitOffset: 10
+            bitWidth: 8
+            access: read-write
+          WAITI_CMD:
+            bitOffset: 2
+            bitWidth: 8
+            access: read-write
+          WAITI_DUMMY:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          WAITI_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      FLASH_SUS_CMD:
+        description: "SPI Memory Flash Suspend Command Register"
+        addressOffset: 0x09C
+        size: 0x20
+        access: read-write
+        fields:
+          FLASH_PES:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          FLASH_PER:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      FLASH_SUS_CTRL:
+        description: "SPI Memory Flash Suspend Control Register"
+        addressOffset: 0x0A0
+        size: 32
+        access: read-write
+        fields:
+          FLASH_PES_COMMAND:
+            bitOffset: 9
+            bitWidth: 8
+            access: read-write
+          FLASH_PER_COMMAND:
+            bitOffset: 1
+            bitWidth: 8
+            access: read-write
+          FLASH_PES_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      SUS_STATUS:
+        description: "SPI Memory Suspend Status Register"
+        addressOffset: 0x0A4
+        size: 0x20
+        access: read-only
+        fields:
+          FLASH_SUS:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-only
+      TIMING_CALI:
+        description: "SPI Memory Timing Calibration Register"
+        addressOffset: 0x0A8
+        size: 0x20
+        access: read-write
+        fields:
+          EXTRA_DUMMY_CYCLELEN:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          TIMING_CALI:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          TIMING_CLK_ENA:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      DIN_MODE:
+        description: "SPI Memory Data In Mode Register"
+        addressOffset: 0x0AC
+        size: 32
+        access: read-write
+        fields:
+          DINS_MODE:
+            bitOffset: 24
+            bitWidth: 3
+            access: read-write
+          DIN7_MODE:
+            bitOffset: 21
+            bitWidth: 3
+            access: read-write
+          DIN6_MODE:
+            bitOffset: 18
+            bitWidth: 3
+            access: read-write
+          DIN5_MODE:
+            bitOffset: 15
+            bitWidth: 3
+            access: read-write
+          DIN4_MODE:
+            bitOffset: 12
+            bitWidth: 3
+            access: read-write
+          DIN3_MODE:
+            bitOffset: 9
+            bitWidth: 3
+            access: read-write
+          DIN2_MODE:
+            bitOffset: 6
+            bitWidth: 3
+            access: read-write
+          DIN1_MODE:
+            bitOffset: 3
+            bitWidth: 3
+            access: read-write
+          DIN0_MODE:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+      DIN_NUM:
+        description: "SPI Memory Data In Number Register"
+        addressOffset: 0x0B0
+        size: 32
+        access: read-write
+        fields:
+          DINS_NUM:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-write
+          DIN7_NUM:
+            bitOffset: 14
+            bitWidth: 2
+            access: read-write
+          DIN6_NUM:
+            bitOffset: 12
+            bitWidth: 2
+            access: read-write
+          DIN5_NUM:
+            bitOffset: 10
+            bitWidth: 2
+            access: read-write
+          DIN4_NUM:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+          DIN3_NUM:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+          DIN2_NUM:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          DIN1_NUM:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          DIN0_NUM:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      DOUT_MODE:
+        description: "SPI Memory Data Out Mode Register"
+        addressOffset: 0x0B4
+        size: 32
+        access: read-write
+        fields:
+          DOUTS_MODE:
+            bitOffset: 24
+            bitWidth: 3
+            access: read-write
+          DOUT7_MODE:
+            bitOffset: 21
+            bitWidth: 3
+            access: read-write
+          DOUT6_MODE:
+            bitOffset: 18
+            bitWidth: 3
+            access: read-write
+          DOUT5_MODE:
+            bitOffset: 15
+            bitWidth: 3
+            access: read-write
+          DOUT4_MODE:
+            bitOffset: 12
+            bitWidth: 3
+            access: read-write
+          DOUT3_MODE:
+            bitOffset: 9
+            bitWidth: 3
+            access: read-write
+          DOUT2_MODE:
+            bitOffset: 6
+            bitWidth: 3
+            access: read-write
+          DOUT1_MODE:
+            bitOffset: 3
+            bitWidth: 3
+            access: read-write
+          DOUT0_MODE:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+      DOUT_NUM:
+        description: "SPI Memory Data Out Number Register"
+        addressOffset: 0x0B8
+        size: 32
+        access: read-write
+        fields:
+          DOUTS_NUM:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-write
+          DOUT7_NUM:
+            bitOffset: 14
+            bitWidth: 2
+            access: read-write
+          DOUT6_NUM:
+            bitOffset: 12
+            bitWidth: 2
+            access: read-write
+          DOUT5_NUM:
+            bitOffset: 10
+            bitWidth: 2
+            access: read-write
+          DOUT4_NUM:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+          DOUT3_NUM:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+          DOUT2_NUM:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          DOUT1_NUM:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          DOUT0_NUM:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      SPI_SMEM_TIMING_CALI:
+        description: "SPI Memory SRAM Timing Calibration Register"
+        addressOffset: 0x0BC
+        size: 0x20
+        access: read-write
+        fields:
+          SPI_SMEM_EXTRA_DUMMY_CYCLELEN:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_TIMING_CALI:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_TIMING_CLK_ENA:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      SPI_SMEM_DIN_MODE:
+        description: "SPI Memory SRAM Data In Mode Register"
+        addressOffset: 0x0C0
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_DINS_MODE:
+            bitOffset: 24
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN7_MODE:
+            bitOffset: 21
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN6_MODE:
+            bitOffset: 18
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN5_MODE:
+            bitOffset: 15
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN4_MODE:
+            bitOffset: 12
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN3_MODE:
+            bitOffset: 9
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN2_MODE:
+            bitOffset: 6
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN1_MODE:
+            bitOffset: 3
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DIN0_MODE:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+      SPI_SMEM_DIN_NUM:
+        description: "SPI Memory SRAM Data In Number Register"
+        addressOffset: 0x0C4
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_DINS_NUM:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN7_NUM:
+            bitOffset: 14
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN6_NUM:
+            bitOffset: 12
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN5_NUM:
+            bitOffset: 10
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN4_NUM:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN3_NUM:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN2_NUM:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN1_NUM:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DIN0_NUM:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      SPI_SMEM_DOUT_MODE:
+        description: "SPI Memory SRAM Data Out Mode Register"
+        addressOffset: 0x0C8
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_DOUTS_MODE:
+            bitOffset: 24
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT7_MODE:
+            bitOffset: 21
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT6_MODE:
+            bitOffset: 18
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT5_MODE:
+            bitOffset: 15
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT4_MODE:
+            bitOffset: 12
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT3_MODE:
+            bitOffset: 9
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT2_MODE:
+            bitOffset: 6
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT1_MODE:
+            bitOffset: 3
+            bitWidth: 3
+            access: read-write
+          SPI_SMEM_DOUT0_MODE:
+            bitOffset: 0
+            bitWidth: 3
+            access: read-write
+      SPI_SMEM_DOUT_NUM:
+        description: "SPI Memory SRAM Data Out Number Register"
+        addressOffset: 0x0CC
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_DOUTS_NUM:
+            bitOffset: 16
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT7_NUM:
+            bitOffset: 14
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT6_NUM:
+            bitOffset: 12
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT5_NUM:
+            bitOffset: 10
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT4_NUM:
+            bitOffset: 8
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT3_NUM:
+            bitOffset: 6
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT2_NUM:
+            bitOffset: 4
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT1_NUM:
+            bitOffset: 2
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DOUT0_NUM:
+            bitOffset: 0
+            bitWidth: 2
+            access: read-write
+      SPI_SMEM_AC:
+        description: "SPI Memory SRAM Access Register"
+        addressOffset: 0x0D0
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_CS_HOLD_TIME:
+            bitOffset: 15
+            bitWidth: 13
+            access: read-write
+          SPI_SMEM_CS_SETUP_TIME:
+            bitOffset: 2
+            bitWidth: 13
+            access: read-write
+          SPI_SMEM_CS_HOLD:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_CS_SETUP:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      DDR:
+        description: "SPI Memory DDR Register"
+        addressOffset: 0x0D4
+        size: 32
+        access: read-write
+        fields:
+          SPI_FMEM_DDR_DQS_LOOP_MODE:
+            bitOffset: 22
+            bitWidth: 2
+            access: read-write
+          SPI_FMEM_DDR_DQS_LOOP:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          SPI_FMEM_USR_DDR_DQS_THD:
+            bitOffset: 13
+            bitWidth: 8
+            access: read-write
+          SPI_FMEM_OUTMINBYTELEN:
+            bitOffset: 5
+            bitWidth: 8
+            access: read-write
+          SPI_FMEM_DDR_CMD_DIS:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          SPI_FMEM_DDR_WDAT_SWP:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          SPI_FMEM_DDR_RDAT_SWP:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SPI_FMEM_VAR_DUMMY:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SPI_FMEM_DDR_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      SPI_SMEM_DDR:
+        description: "SPI Memory SRAM DDR Register"
+        addressOffset: 0x0D8
+        size: 32
+        access: read-write
+        fields:
+          SPI_SMEM_DDR_DQS_LOOP_MODE:
+            bitOffset: 22
+            bitWidth: 2
+            access: read-write
+          SPI_SMEM_DDR_DQS_LOOP:
+            bitOffset: 21
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_USR_DDR_DQS_THD:
+            bitOffset: 13
+            bitWidth: 8
+            access: read-write
+          SPI_SMEM_OUTMINBYTELEN:
+            bitOffset: 5
+            bitWidth: 8
+            access: read-write
+          SPI_SMEM_DDR_CMD_DIS:
+            bitOffset: 4
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_DDR_WDAT_SWP:
+            bitOffset: 3
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_DDR_RDAT_SWP:
+            bitOffset: 2
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_VAR_DUMMY:
+            bitOffset: 1
+            bitWidth: 1
+            access: read-write
+          SPI_SMEM_DDR_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      CLOCK_GATE:
+        description: "SPI Memory Clock Gate Register"
+        addressOffset: 0x0DC
+        size: 32
+        access: read-write
+        fields:
+          CLK_EN:
+            bitOffset: 0
+            bitWidth: 1
+            access: read-write
+      DATE:
+        description: "SPI Memory Date Register"
+        addressOffset: 0x3FC
+        size: 32
+        access: read-write
+        fields:
+          DATE:
+            bitOffset: 0
+            bitWidth: 28
+            access: read-write
+
   NRX:
     description: NRX Peripheral
     baseAddress: 0x3F41CC00
@@ -1237,6 +2475,7 @@ _add:
             bitOffset: 4
             bitWidth: 13
 
+
 # We need to define enumeratedValues separately, becase svdtools has awesome UX.
 COPY_DMA:
   OUT_LINK:
@@ -1406,8 +2645,15 @@ LEDC:
 SENS:
   _include: ../../../common_patches/sens.yaml
 
-SPI0:
+SPI2:
+  _delete:
+    _interrupts: SPI0_REJECT_CACHE
   _add:
+    _interrupts:
+      SPI2:
+        value: 33
+      SPI2_DMA:
+        value: 57
     CACHE_SCTRL:
       description: "SPI Memory Cache SCTRL Register"
       addressOffset: 0x40
