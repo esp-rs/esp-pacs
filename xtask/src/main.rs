@@ -120,7 +120,7 @@ enum Commands {
 
 fn main() -> Result<()> {
     env_logger::Builder::new()
-        .filter_module("xtask", log::LevelFilter::Trace)
+        .filter_module("xtask", log::LevelFilter::Info)
         .init();
 
     // The directory containing the cargo manifest for the 'xtask' package is a
