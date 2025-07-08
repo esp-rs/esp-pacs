@@ -63,6 +63,7 @@ extern "C" {
     fn SHA();
     fn RSA();
     fn ECC();
+    fn ECDSA();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -74,7 +75,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 82] = [
+pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -199,6 +200,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 82] = [
     Vector { _handler: SHA },
     Vector { _handler: RSA },
     Vector { _handler: ECC },
+    Vector { _handler: ECDSA },
 ];
 #[doc(hidden)]
 pub mod interrupt;

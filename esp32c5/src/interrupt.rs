@@ -103,6 +103,8 @@ pub enum Interrupt {
     RSA = 80,
     #[doc = "81 - ECC"]
     ECC = 81,
+    #[doc = "82 - ECDSA"]
+    ECDSA = 82,
 }
 #[doc = r" TryFromInterruptError"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
@@ -163,6 +165,7 @@ impl Interrupt {
             79 => Ok(Interrupt::SHA),
             80 => Ok(Interrupt::RSA),
             81 => Ok(Interrupt::ECC),
+            82 => Ok(Interrupt::ECDSA),
             _ => Err(TryFromInterruptError(())),
         }
     }

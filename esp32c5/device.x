@@ -48,4 +48,5 @@ PROVIDE(AES = DefaultHandler);
 PROVIDE(SHA = DefaultHandler);
 PROVIDE(RSA = DefaultHandler);
 PROVIDE(ECC = DefaultHandler);
+PROVIDE(ECDSA = DefaultHandler);
 
