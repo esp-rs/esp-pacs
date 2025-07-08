@@ -1,0 +1,7 @@
+_svd: "../esp32c61.base.svd"
+
+TIMG0:
+  "*":
+    _strip: "T_"
+    
+  _include: ../../../common_patches/tim_collect.yaml

@@ -27,6 +27,7 @@ enum Chip {
     Esp32c3,
     Esp32c5,
     Esp32c6,
+    Esp32c61,
     Esp32c6Lp,
     Esp32h2,
     Esp32p4,
