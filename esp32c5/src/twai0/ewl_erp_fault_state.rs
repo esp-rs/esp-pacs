@@ -77,8 +77,6 @@ impl crate::Readable for EWL_ERP_FAULT_STATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ewl_erp_fault_state::W`](W) writer structure"]
 impl crate::Writable for EWL_ERP_FAULT_STATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EWL_ERP_FAULT_STATE to value 0x0004_8060"]
 impl crate::Resettable for EWL_ERP_FAULT_STATE_SPEC {

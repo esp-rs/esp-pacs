@@ -53,8 +53,6 @@ impl crate::Readable for RESET_EVENT_BYPASS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reset_event_bypass::W`](W) writer structure"]
 impl crate::Writable for RESET_EVENT_BYPASS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RESET_EVENT_BYPASS to value 0x02"]
 impl crate::Resettable for RESET_EVENT_BYPASS_SPEC {

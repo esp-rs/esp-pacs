@@ -77,8 +77,6 @@ impl crate::Readable for SYSCLK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sysclk_conf::W`](W) writer structure"]
 impl crate::Writable for SYSCLK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYSCLK_CONF to value 0xa800_0200"]
 impl crate::Resettable for SYSCLK_CONF_SPEC {

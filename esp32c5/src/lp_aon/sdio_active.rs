@@ -38,8 +38,6 @@ impl crate::Readable for SDIO_ACTIVE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sdio_active::W`](W) writer structure"]
 impl crate::Writable for SDIO_ACTIVE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SDIO_ACTIVE to value 0x0280_0000"]
 impl crate::Resettable for SDIO_ACTIVE_SPEC {

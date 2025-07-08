@@ -108,8 +108,6 @@ impl crate::Readable for TX_COMMAND_TXTB_INFO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_command_txtb_info::W`](W) writer structure"]
 impl crate::Writable for TX_COMMAND_TXTB_INFO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_COMMAND_TXTB_INFO to value 0x0004_0000"]
 impl crate::Resettable for TX_COMMAND_TXTB_INFO_SPEC {

@@ -38,10 +38,6 @@ impl crate::Readable for FILTER_RAN_HIGH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_ran_high::W`](W) writer structure"]
 impl crate::Writable for FILTER_RAN_HIGH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FILTER_RAN_HIGH to value 0"]
-impl crate::Resettable for FILTER_RAN_HIGH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FILTER_RAN_HIGH_SPEC {}

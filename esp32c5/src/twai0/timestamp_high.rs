@@ -25,6 +25,4 @@ impl crate::RegisterSpec for TIMESTAMP_HIGH_SPEC {
 #[doc = "`read()` method returns [`timestamp_high::R`](R) reader structure"]
 impl crate::Readable for TIMESTAMP_HIGH_SPEC {}
 #[doc = "`reset()` method sets TIMESTAMP_HIGH to value 0"]
-impl crate::Resettable for TIMESTAMP_HIGH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TIMESTAMP_HIGH_SPEC {}

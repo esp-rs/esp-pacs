@@ -98,8 +98,6 @@ impl crate::Readable for UART1_SCLK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uart1_sclk_conf::W`](W) writer structure"]
 impl crate::Writable for UART1_SCLK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets UART1_SCLK_CONF to value 0x0040_0000"]
 impl crate::Resettable for UART1_SCLK_CONF_SPEC {

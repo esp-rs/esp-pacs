@@ -89,6 +89,4 @@ impl crate::RegisterSpec for SMEM_DIN_HEX_NUM_SPEC {
 #[doc = "`read()` method returns [`smem_din_hex_num::R`](R) reader structure"]
 impl crate::Readable for SMEM_DIN_HEX_NUM_SPEC {}
 #[doc = "`reset()` method sets SMEM_DIN_HEX_NUM to value 0"]
-impl crate::Resettable for SMEM_DIN_HEX_NUM_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SMEM_DIN_HEX_NUM_SPEC {}

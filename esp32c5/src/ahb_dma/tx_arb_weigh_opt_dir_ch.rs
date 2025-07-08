@@ -40,10 +40,6 @@ impl crate::Readable for TX_ARB_WEIGH_OPT_DIR_CH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`tx_arb_weigh_opt_dir_ch::W`](W) writer structure"]
 impl crate::Writable for TX_ARB_WEIGH_OPT_DIR_CH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TX_ARB_WEIGH_OPT_DIR_CH%s to value 0"]
-impl crate::Resettable for TX_ARB_WEIGH_OPT_DIR_CH_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TX_ARB_WEIGH_OPT_DIR_CH_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for I2C_DATA_SPEC {
 #[doc = "`read()` method returns [`i2c_data::R`](R) reader structure"]
 impl crate::Readable for I2C_DATA_SPEC {}
 #[doc = "`reset()` method sets I2C_DATA to value 0"]
-impl crate::Resettable for I2C_DATA_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for I2C_DATA_SPEC {}

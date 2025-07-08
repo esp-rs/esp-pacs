@@ -28,6 +28,4 @@ impl crate::RegisterSpec for APB2OTP_BLK0_BACKUP4_W2_SPEC {
 #[doc = "`read()` method returns [`apb2otp_blk0_backup4_w2::R`](R) reader structure"]
 impl crate::Readable for APB2OTP_BLK0_BACKUP4_W2_SPEC {}
 #[doc = "`reset()` method sets APB2OTP_BLK0_BACKUP4_W2 to value 0"]
-impl crate::Resettable for APB2OTP_BLK0_BACKUP4_W2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2OTP_BLK0_BACKUP4_W2_SPEC {}

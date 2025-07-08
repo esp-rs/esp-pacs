@@ -61,8 +61,6 @@ impl crate::Readable for PCNT_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pcnt_conf::W`](W) writer structure"]
 impl crate::Writable for PCNT_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PCNT_CONF to value 0x04"]
 impl crate::Resettable for PCNT_CONF_SPEC {

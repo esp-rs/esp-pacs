@@ -118,8 +118,6 @@ impl crate::Readable for SMEM_TIMING_CALI_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`smem_timing_cali::W`](W) writer structure"]
 impl crate::Writable for SMEM_TIMING_CALI_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SMEM_TIMING_CALI to value 0x0281"]
 impl crate::Resettable for SMEM_TIMING_CALI_SPEC {

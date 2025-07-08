@@ -25,6 +25,4 @@ impl crate::RegisterSpec for APB2OTP_BLK10_W10_SPEC {
 #[doc = "`read()` method returns [`apb2otp_blk10_w10::R`](R) reader structure"]
 impl crate::Readable for APB2OTP_BLK10_W10_SPEC {}
 #[doc = "`reset()` method sets APB2OTP_BLK10_W10 to value 0"]
-impl crate::Resettable for APB2OTP_BLK10_W10_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for APB2OTP_BLK10_W10_SPEC {}

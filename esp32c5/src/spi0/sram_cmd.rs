@@ -327,8 +327,6 @@ impl crate::Readable for SRAM_CMD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sram_cmd::W`](W) writer structure"]
 impl crate::Writable for SRAM_CMD_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SRAM_CMD to value 0x80c0_0000"]
 impl crate::Resettable for SRAM_CMD_SPEC {

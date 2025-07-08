@@ -55,10 +55,6 @@ impl crate::Readable for FLASH_WAITI_CTRL1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`flash_waiti_ctrl1::W`](W) writer structure"]
 impl crate::Writable for FLASH_WAITI_CTRL1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLASH_WAITI_CTRL1 to value 0"]
-impl crate::Resettable for FLASH_WAITI_CTRL1_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for FLASH_WAITI_CTRL1_SPEC {}

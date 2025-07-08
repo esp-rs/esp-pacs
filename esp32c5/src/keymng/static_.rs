@@ -98,8 +98,6 @@ impl crate::Readable for STATIC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`static_::W`](W) writer structure"]
 impl crate::Writable for STATIC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets STATIC to value 0x01e0"]
 impl crate::Resettable for STATIC_SPEC {

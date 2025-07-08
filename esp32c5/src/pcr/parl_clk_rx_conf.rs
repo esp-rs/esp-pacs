@@ -83,10 +83,6 @@ impl crate::Readable for PARL_CLK_RX_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`parl_clk_rx_conf::W`](W) writer structure"]
 impl crate::Writable for PARL_CLK_RX_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PARL_CLK_RX_CONF to value 0"]
-impl crate::Resettable for PARL_CLK_RX_CONF_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PARL_CLK_RX_CONF_SPEC {}

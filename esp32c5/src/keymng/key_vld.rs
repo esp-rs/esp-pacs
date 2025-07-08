@@ -57,6 +57,4 @@ impl crate::RegisterSpec for KEY_VLD_SPEC {
 #[doc = "`read()` method returns [`key_vld::R`](R) reader structure"]
 impl crate::Readable for KEY_VLD_SPEC {}
 #[doc = "`reset()` method sets KEY_VLD to value 0"]
-impl crate::Resettable for KEY_VLD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for KEY_VLD_SPEC {}

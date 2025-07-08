@@ -38,10 +38,6 @@ impl crate::Readable for TEXT_OUT__SPEC {}
 #[doc = "`write(|w| ..)` method takes [`text_out_::W`](W) writer structure"]
 impl crate::Writable for TEXT_OUT__SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TEXT_OUT_%s to value 0"]
-impl crate::Resettable for TEXT_OUT__SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for TEXT_OUT__SPEC {}

@@ -113,8 +113,6 @@ impl crate::Readable for RX_PDM2PCM_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_pdm2pcm_conf::W`](W) writer structure"]
 impl crate::Writable for RX_PDM2PCM_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RX_PDM2PCM_CONF to value 0xf820_0000"]
 impl crate::Resettable for RX_PDM2PCM_CONF_SPEC {

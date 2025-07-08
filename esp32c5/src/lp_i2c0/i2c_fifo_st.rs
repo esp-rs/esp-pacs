@@ -49,6 +49,4 @@ impl crate::RegisterSpec for I2C_FIFO_ST_SPEC {
 #[doc = "`read()` method returns [`i2c_fifo_st::R`](R) reader structure"]
 impl crate::Readable for I2C_FIFO_ST_SPEC {}
 #[doc = "`reset()` method sets I2C_FIFO_ST to value 0"]
-impl crate::Resettable for I2C_FIFO_ST_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for I2C_FIFO_ST_SPEC {}

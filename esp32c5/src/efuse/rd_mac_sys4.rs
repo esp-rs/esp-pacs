@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RD_MAC_SYS4_SPEC {
 #[doc = "`read()` method returns [`rd_mac_sys4::R`](R) reader structure"]
 impl crate::Readable for RD_MAC_SYS4_SPEC {}
 #[doc = "`reset()` method sets RD_MAC_SYS4 to value 0"]
-impl crate::Resettable for RD_MAC_SYS4_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RD_MAC_SYS4_SPEC {}

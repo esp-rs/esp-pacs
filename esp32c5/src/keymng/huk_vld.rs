@@ -25,6 +25,4 @@ impl crate::RegisterSpec for HUK_VLD_SPEC {
 #[doc = "`read()` method returns [`huk_vld::R`](R) reader structure"]
 impl crate::Readable for HUK_VLD_SPEC {}
 #[doc = "`reset()` method sets HUK_VLD to value 0"]
-impl crate::Resettable for HUK_VLD_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for HUK_VLD_SPEC {}

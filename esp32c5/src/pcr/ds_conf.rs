@@ -61,8 +61,6 @@ impl crate::Readable for DS_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ds_conf::W`](W) writer structure"]
 impl crate::Writable for DS_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DS_CONF to value 0x04"]
 impl crate::Resettable for DS_CONF_SPEC {

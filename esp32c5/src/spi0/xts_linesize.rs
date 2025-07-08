@@ -38,10 +38,6 @@ impl crate::Readable for XTS_LINESIZE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xts_linesize::W`](W) writer structure"]
 impl crate::Writable for XTS_LINESIZE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XTS_LINESIZE to value 0"]
-impl crate::Resettable for XTS_LINESIZE_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for XTS_LINESIZE_SPEC {}

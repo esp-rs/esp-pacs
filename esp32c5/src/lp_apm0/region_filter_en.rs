@@ -38,8 +38,6 @@ impl crate::Readable for REGION_FILTER_EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`region_filter_en::W`](W) writer structure"]
 impl crate::Writable for REGION_FILTER_EN_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets REGION_FILTER_EN to value 0x01"]
 impl crate::Resettable for REGION_FILTER_EN_SPEC {

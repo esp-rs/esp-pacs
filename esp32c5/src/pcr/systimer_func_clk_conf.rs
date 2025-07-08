@@ -55,8 +55,6 @@ impl crate::Readable for SYSTIMER_FUNC_CLK_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`systimer_func_clk_conf::W`](W) writer structure"]
 impl crate::Writable for SYSTIMER_FUNC_CLK_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SYSTIMER_FUNC_CLK_CONF to value 0x0040_0000"]
 impl crate::Resettable for SYSTIMER_FUNC_CLK_CONF_SPEC {

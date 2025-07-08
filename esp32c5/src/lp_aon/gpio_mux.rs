@@ -38,10 +38,6 @@ impl crate::Readable for GPIO_MUX_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio_mux::W`](W) writer structure"]
 impl crate::Writable for GPIO_MUX_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets GPIO_MUX to value 0"]
-impl crate::Resettable for GPIO_MUX_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for GPIO_MUX_SPEC {}

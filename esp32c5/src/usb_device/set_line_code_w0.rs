@@ -25,6 +25,4 @@ impl crate::RegisterSpec for SET_LINE_CODE_W0_SPEC {
 #[doc = "`read()` method returns [`set_line_code_w0::R`](R) reader structure"]
 impl crate::Readable for SET_LINE_CODE_W0_SPEC {}
 #[doc = "`reset()` method sets SET_LINE_CODE_W0 to value 0"]
-impl crate::Resettable for SET_LINE_CODE_W0_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SET_LINE_CODE_W0_SPEC {}

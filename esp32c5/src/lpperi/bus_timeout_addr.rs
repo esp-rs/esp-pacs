@@ -25,6 +25,4 @@ impl crate::RegisterSpec for BUS_TIMEOUT_ADDR_SPEC {
 #[doc = "`read()` method returns [`bus_timeout_addr::R`](R) reader structure"]
 impl crate::Readable for BUS_TIMEOUT_ADDR_SPEC {}
 #[doc = "`reset()` method sets BUS_TIMEOUT_ADDR to value 0"]
-impl crate::Resettable for BUS_TIMEOUT_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BUS_TIMEOUT_ADDR_SPEC {}

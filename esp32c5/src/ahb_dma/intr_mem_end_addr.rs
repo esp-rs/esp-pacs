@@ -40,8 +40,6 @@ impl crate::Readable for INTR_MEM_END_ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intr_mem_end_addr::W`](W) writer structure"]
 impl crate::Writable for INTR_MEM_END_ADDR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTR_MEM_END_ADDR to value 0xffff_ffff"]
 impl crate::Resettable for INTR_MEM_END_ADDR_SPEC {

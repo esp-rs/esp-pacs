@@ -83,8 +83,6 @@ impl crate::Readable for PSEUDO_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pseudo::W`](W) writer structure"]
 impl crate::Writable for PSEUDO_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PSEUDO to value 0x03c4"]
 impl crate::Resettable for PSEUDO_SPEC {

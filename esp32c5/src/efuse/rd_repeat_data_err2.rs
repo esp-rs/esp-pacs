@@ -95,6 +95,4 @@ impl crate::RegisterSpec for RD_REPEAT_DATA_ERR2_SPEC {
 #[doc = "`read()` method returns [`rd_repeat_data_err2::R`](R) reader structure"]
 impl crate::Readable for RD_REPEAT_DATA_ERR2_SPEC {}
 #[doc = "`reset()` method sets RD_REPEAT_DATA_ERR2 to value 0"]
-impl crate::Resettable for RD_REPEAT_DATA_ERR2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RD_REPEAT_DATA_ERR2_SPEC {}

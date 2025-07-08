@@ -38,8 +38,6 @@ impl crate::Readable for TIMER_CT_VAL_H_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timer_ct_val_h::W`](W) writer structure"]
 impl crate::Writable for TIMER_CT_VAL_H_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets TIMER_CT_VAL_H to value 0xffff_ffff"]
 impl crate::Resettable for TIMER_CT_VAL_H_SPEC {

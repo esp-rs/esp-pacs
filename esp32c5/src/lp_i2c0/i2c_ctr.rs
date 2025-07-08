@@ -164,8 +164,6 @@ impl crate::Readable for I2C_CTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`i2c_ctr::W`](W) writer structure"]
 impl crate::Writable for I2C_CTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets I2C_CTR to value 0x0208"]
 impl crate::Resettable for I2C_CTR_SPEC {

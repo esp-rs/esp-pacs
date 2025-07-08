@@ -38,8 +38,6 @@ impl crate::Readable for SERIAL_EP_TIMEOUT1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`serial_ep_timeout1::W`](W) writer structure"]
 impl crate::Writable for SERIAL_EP_TIMEOUT1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SERIAL_EP_TIMEOUT1 to value 0x0049_4100"]
 impl crate::Resettable for SERIAL_EP_TIMEOUT1_SPEC {

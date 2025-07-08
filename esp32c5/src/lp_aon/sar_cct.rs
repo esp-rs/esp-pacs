@@ -38,10 +38,6 @@ impl crate::Readable for SAR_CCT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sar_cct::W`](W) writer structure"]
 impl crate::Writable for SAR_CCT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SAR_CCT to value 0"]
-impl crate::Resettable for SAR_CCT_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for SAR_CCT_SPEC {}

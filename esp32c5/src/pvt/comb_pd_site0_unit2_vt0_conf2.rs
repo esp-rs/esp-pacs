@@ -50,6 +50,4 @@ impl crate::RegisterSpec for COMB_PD_SITE0_UNIT2_VT0_CONF2_SPEC {
 #[doc = "`read()` method returns [`comb_pd_site0_unit2_vt0_conf2::R`](R) reader structure"]
 impl crate::Readable for COMB_PD_SITE0_UNIT2_VT0_CONF2_SPEC {}
 #[doc = "`reset()` method sets COMB_PD_SITE0_UNIT2_VT0_CONF2 to value 0"]
-impl crate::Resettable for COMB_PD_SITE0_UNIT2_VT0_CONF2_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for COMB_PD_SITE0_UNIT2_VT0_CONF2_SPEC {}

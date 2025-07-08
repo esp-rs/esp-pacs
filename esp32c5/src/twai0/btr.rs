@@ -98,8 +98,6 @@ impl crate::Readable for BTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`btr::W`](W) writer structure"]
 impl crate::Writable for BTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BTR to value 0x1050_a185"]
 impl crate::Resettable for BTR_SPEC {

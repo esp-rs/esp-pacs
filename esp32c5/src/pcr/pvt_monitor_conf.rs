@@ -104,8 +104,6 @@ impl crate::Readable for PVT_MONITOR_CONF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`pvt_monitor_conf::W`](W) writer structure"]
 impl crate::Writable for PVT_MONITOR_CONF_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets PVT_MONITOR_CONF to value 0x1c"]
 impl crate::Resettable for PVT_MONITOR_CONF_SPEC {

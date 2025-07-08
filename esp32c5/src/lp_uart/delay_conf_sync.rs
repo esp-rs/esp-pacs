@@ -53,10 +53,6 @@ impl crate::Readable for DELAY_CONF_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`delay_conf_sync::W`](W) writer structure"]
 impl crate::Writable for DELAY_CONF_SYNC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DELAY_CONF_SYNC to value 0"]
-impl crate::Resettable for DELAY_CONF_SYNC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DELAY_CONF_SYNC_SPEC {}

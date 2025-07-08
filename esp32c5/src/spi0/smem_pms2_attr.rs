@@ -68,8 +68,6 @@ impl crate::Readable for SMEM_PMS2_ATTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`smem_pms2_attr::W`](W) writer structure"]
 impl crate::Writable for SMEM_PMS2_ATTR_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SMEM_PMS2_ATTR to value 0x03"]
 impl crate::Resettable for SMEM_PMS2_ATTR_SPEC {

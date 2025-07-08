@@ -33,6 +33,4 @@ impl crate::RegisterSpec for REC_TEC_SPEC {
 #[doc = "`read()` method returns [`rec_tec::R`](R) reader structure"]
 impl crate::Readable for REC_TEC_SPEC {}
 #[doc = "`reset()` method sets REC_TEC to value 0"]
-impl crate::Resettable for REC_TEC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for REC_TEC_SPEC {}

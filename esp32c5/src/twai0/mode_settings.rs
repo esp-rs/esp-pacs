@@ -330,8 +330,6 @@ impl crate::Readable for MODE_SETTINGS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mode_settings::W`](W) writer structure"]
 impl crate::Writable for MODE_SETTINGS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MODE_SETTINGS to value 0x0200_0210"]
 impl crate::Resettable for MODE_SETTINGS_SPEC {

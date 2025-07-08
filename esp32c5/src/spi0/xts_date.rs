@@ -38,8 +38,6 @@ impl crate::Readable for XTS_DATE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`xts_date::W`](W) writer structure"]
 impl crate::Writable for XTS_DATE_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets XTS_DATE to value 0x2021_0907"]
 impl crate::Resettable for XTS_DATE_SPEC {

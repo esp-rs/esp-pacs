@@ -23,10 +23,6 @@ impl crate::RegisterSpec for CLEAR_IRQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [`clear_irq::W`](W) writer structure"]
 impl crate::Writable for CLEAR_IRQ_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLEAR_IRQ to value 0"]
-impl crate::Resettable for CLEAR_IRQ_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CLEAR_IRQ_SPEC {}

@@ -98,8 +98,6 @@ impl crate::Readable for LOG_SETTING_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`log_setting::W`](W) writer structure"]
 impl crate::Writable for LOG_SETTING_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LOG_SETTING to value 0x10"]
 impl crate::Resettable for LOG_SETTING_SPEC {

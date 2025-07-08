@@ -25,6 +25,4 @@ impl crate::RegisterSpec for MEM_CURRENT_ADDR_SPEC {
 #[doc = "`read()` method returns [`mem_current_addr::R`](R) reader structure"]
 impl crate::Readable for MEM_CURRENT_ADDR_SPEC {}
 #[doc = "`reset()` method sets MEM_CURRENT_ADDR to value 0"]
-impl crate::Resettable for MEM_CURRENT_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MEM_CURRENT_ADDR_SPEC {}

@@ -68,8 +68,6 @@ impl crate::Readable for ESC_CONF1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`esc_conf1::W`](W) writer structure"]
 impl crate::Writable for ESC_CONF1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets ESC_CONF1 to value 0x00dd_dbdb"]
 impl crate::Resettable for ESC_CONF1_SPEC {

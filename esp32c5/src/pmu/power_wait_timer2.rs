@@ -83,8 +83,6 @@ impl crate::Readable for POWER_WAIT_TIMER2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`power_wait_timer2::W`](W) writer structure"]
 impl crate::Writable for POWER_WAIT_TIMER2_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets POWER_WAIT_TIMER2 to value 0xffff_ffff"]
 impl crate::Resettable for POWER_WAIT_TIMER2_SPEC {

@@ -61,8 +61,6 @@ impl crate::Readable for LPBUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`lpbus::W`](W) writer structure"]
 impl crate::Writable for LPBUS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets LPBUS to value 0xb000_0000"]
 impl crate::Resettable for LPBUS_SPEC {

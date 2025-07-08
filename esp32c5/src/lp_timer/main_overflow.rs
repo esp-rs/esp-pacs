@@ -23,10 +23,6 @@ impl crate::RegisterSpec for MAIN_OVERFLOW_SPEC {
 #[doc = "`write(|w| ..)` method takes [`main_overflow::W`](W) writer structure"]
 impl crate::Writable for MAIN_OVERFLOW_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets MAIN_OVERFLOW to value 0"]
-impl crate::Resettable for MAIN_OVERFLOW_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for MAIN_OVERFLOW_SPEC {}

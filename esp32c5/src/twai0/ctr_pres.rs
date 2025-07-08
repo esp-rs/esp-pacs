@@ -51,10 +51,6 @@ impl crate::RegisterSpec for CTR_PRES_SPEC {
 #[doc = "`write(|w| ..)` method takes [`ctr_pres::W`](W) writer structure"]
 impl crate::Writable for CTR_PRES_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTR_PRES to value 0"]
-impl crate::Resettable for CTR_PRES_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for CTR_PRES_SPEC {}

@@ -53,10 +53,6 @@ impl crate::Readable for BITSCRAMBLER_PERI_SEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bitscrambler_peri_sel::W`](W) writer structure"]
 impl crate::Writable for BITSCRAMBLER_PERI_SEL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BITSCRAMBLER_PERI_SEL to value 0"]
-impl crate::Resettable for BITSCRAMBLER_PERI_SEL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BITSCRAMBLER_PERI_SEL_SPEC {}

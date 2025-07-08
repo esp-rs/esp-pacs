@@ -38,8 +38,6 @@ impl crate::Readable for SPRAM_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spram_ctrl::W`](W) writer structure"]
 impl crate::Writable for SPRAM_CTRL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SPRAM_CTRL to value 0x2070"]
 impl crate::Resettable for SPRAM_CTRL_SPEC {

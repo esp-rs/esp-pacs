@@ -53,8 +53,6 @@ impl crate::Readable for CLKDIV_SYNC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clkdiv_sync::W`](W) writer structure"]
 impl crate::Writable for CLKDIV_SYNC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLKDIV_SYNC to value 0x02b6"]
 impl crate::Resettable for CLKDIV_SYNC_SPEC {

@@ -158,8 +158,6 @@ impl crate::Readable for RF_PWC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rf_pwc::W`](W) writer structure"]
 impl crate::Writable for RF_PWC_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RF_PWC to value 0x0800_0000"]
 impl crate::Resettable for RF_PWC_SPEC {

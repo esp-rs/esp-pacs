@@ -38,10 +38,6 @@ impl crate::Readable for BOD_MODE1_CNTL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bod_mode1_cntl::W`](W) writer structure"]
 impl crate::Writable for BOD_MODE1_CNTL_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BOD_MODE1_CNTL to value 0"]
-impl crate::Resettable for BOD_MODE1_CNTL_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for BOD_MODE1_CNTL_SPEC {}

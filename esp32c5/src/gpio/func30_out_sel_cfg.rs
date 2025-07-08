@@ -83,8 +83,6 @@ impl crate::Readable for FUNC30_OUT_SEL_CFG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`func30_out_sel_cfg::W`](W) writer structure"]
 impl crate::Writable for FUNC30_OUT_SEL_CFG_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FUNC30_OUT_SEL_CFG to value 0x0100"]
 impl crate::Resettable for FUNC30_OUT_SEL_CFG_SPEC {

@@ -88,8 +88,6 @@ impl crate::Readable for BACKUP_DMA_CFG1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`backup_dma_cfg1::W`](W) writer structure"]
 impl crate::Writable for BACKUP_DMA_CFG1_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets BACKUP_DMA_CFG1 to value 0x0641_9064"]
 impl crate::Resettable for BACKUP_DMA_CFG1_SPEC {

@@ -137,6 +137,4 @@ impl crate::RegisterSpec for DEBUG_SPEC {
 #[doc = "`read()` method returns [`debug::R`](R) reader structure"]
 impl crate::Readable for DEBUG_SPEC {}
 #[doc = "`reset()` method sets DEBUG to value 0"]
-impl crate::Resettable for DEBUG_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for DEBUG_SPEC {}

@@ -25,6 +25,4 @@ impl crate::RegisterSpec for PMS_REJECT_ADDR_SPEC {
 #[doc = "`read()` method returns [`pms_reject_addr::R`](R) reader structure"]
 impl crate::Readable for PMS_REJECT_ADDR_SPEC {}
 #[doc = "`reset()` method sets PMS_REJECT_ADDR to value 0"]
-impl crate::Resettable for PMS_REJECT_ADDR_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for PMS_REJECT_ADDR_SPEC {}

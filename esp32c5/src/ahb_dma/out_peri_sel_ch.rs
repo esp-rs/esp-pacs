@@ -38,8 +38,6 @@ impl crate::Readable for OUT_PERI_SEL_CH_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`out_peri_sel_ch::W`](W) writer structure"]
 impl crate::Writable for OUT_PERI_SEL_CH_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets OUT_PERI_SEL_CH%s to value 0x3f"]
 impl crate::Resettable for OUT_PERI_SEL_CH_SPEC {

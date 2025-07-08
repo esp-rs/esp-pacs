@@ -295,8 +295,6 @@ impl crate::Readable for FILTER_CONTROL_FILTER_STATUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`filter_control_filter_status::W`](W) writer structure"]
 impl crate::Writable for FILTER_CONTROL_FILTER_STATUS_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FILTER_CONTROL_FILTER_STATUS to value 0x000f_000f"]
 impl crate::Resettable for FILTER_CONTROL_FILTER_STATUS_SPEC {

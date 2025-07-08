@@ -68,8 +68,6 @@ impl crate::Readable for FSM_WAIT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fsm_wait::W`](W) writer structure"]
 impl crate::Writable for FSM_WAIT_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FSM_WAIT to value 0x00ff_0808"]
 impl crate::Resettable for FSM_WAIT_SPEC {

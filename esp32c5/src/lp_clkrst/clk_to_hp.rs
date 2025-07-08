@@ -83,8 +83,6 @@ impl crate::Readable for CLK_TO_HP_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_to_hp::W`](W) writer structure"]
 impl crate::Writable for CLK_TO_HP_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLK_TO_HP to value 0xf000_0000"]
 impl crate::Resettable for CLK_TO_HP_SPEC {

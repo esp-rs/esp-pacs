@@ -25,6 +25,4 @@ impl crate::RegisterSpec for RNG_DATA_SYNC_SPEC {
 #[doc = "`read()` method returns [`rng_data_sync::R`](R) reader structure"]
 impl crate::Readable for RNG_DATA_SYNC_SPEC {}
 #[doc = "`reset()` method sets RNG_DATA_SYNC to value 0"]
-impl crate::Resettable for RNG_DATA_SYNC_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RNG_DATA_SYNC_SPEC {}

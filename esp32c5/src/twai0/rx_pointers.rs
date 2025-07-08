@@ -33,6 +33,4 @@ impl crate::RegisterSpec for RX_POINTERS_SPEC {
 #[doc = "`read()` method returns [`rx_pointers::R`](R) reader structure"]
 impl crate::Readable for RX_POINTERS_SPEC {}
 #[doc = "`reset()` method sets RX_POINTERS to value 0"]
-impl crate::Resettable for RX_POINTERS_SPEC {
-    const RESET_VALUE: u32 = 0;
-}
+impl crate::Resettable for RX_POINTERS_SPEC {}

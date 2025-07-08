@@ -38,8 +38,6 @@ impl crate::Readable for DATE_VER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`date_ver::W`](W) writer structure"]
 impl crate::Writable for DATE_VER_SPEC {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets DATE_VER to value 0x0231_2150"]
 impl crate::Resettable for DATE_VER_SPEC {
