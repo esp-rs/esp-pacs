@@ -1,0 +1,688 @@
+_svd: ../esp32c5.base.svd
+
+AES:
+  _modify:
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "H_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "J0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "T0_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+
+APB_SARADC:
+  _modify:
+    APB_TSENS_WAKE:
+      name: TSENS_WAKE
+    APB_TSENS_SAMPLE:
+      name: TSENS_SAMPLE
+  TSENS_SAMPLE:
+    _strip: TSENS_SAMPLE_
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
+
+AHB_DMA:
+  IN_INT_RAW_CH?:
+    _strip_end: _CH_INT_RAW
+  IN_INT_ST_CH%s:
+    _strip_end: _CH_INT_ST
+  IN_INT_ENA_CH%s:
+    _strip_end: _CH_INT_ENA
+  IN_INT_CLR_CH%s:
+    _strip_end: _CH_INT_CLR
+  OUT_INT_RAW_CH%s:
+    _strip_end: _CH_INT_RAW
+  OUT_INT_ST_CH%s:
+    _strip_end: _CH_INT_ST
+  OUT_INT_ENA_CH%s:
+    _strip_end: _CH_INT_ENA
+  OUT_INT_CLR_CH%s:
+    _strip_end: _CH_INT_CLR
+
+  IN_CONF0_CH%s:
+    _strip_end: _CH
+  IN_CONF1_CH%s:
+    _strip_end: _CH
+  INFIFO_STATUS_CH%s:
+    _strip_end: _CH
+  IN_POP_CH%s:
+    _strip_end: _CH
+  IN_STATE_CH%s:
+    _strip_end: _CH
+  IN_SUC_EOF_DES_ADDR_CH%s:
+    _strip_end: _CH
+  IN_ERR_EOF_DES_ADDR_CH%s:
+    _strip_end: _CH
+  IN_DSCR_CH%s:
+    _strip_end: _CH
+  IN_DSCR_BF0_CH%s:
+    _strip_end: _CH
+  IN_DSCR_BF1_CH%s:
+    _strip_end: _CH
+  IN_PRI_CH%s:
+    _strip_end: _CH
+  IN_PERI_SEL_CH%s:
+    _strip_end: _CH
+  OUT_CONF0_CH?:
+    _strip_end: _CH
+  OUT_CONF1_CH%s:
+    _strip_end: _CH
+  OUTFIFO_STATUS_CH%s:
+    _strip_end: _CH
+  OUT_PUSH_CH%s:
+    _strip_end: _CH
+  OUT_LINK_CH%s:
+    _strip_end: _CH
+  OUT_STATE_CH%s:
+    _strip_end: _CH
+  OUT_EOF_DES_ADDR_CH%s:
+    _strip_end: _CH
+  OUT_EOF_BFR_DES_ADDR_CH%s:
+    _strip_end: _CH
+  OUT_DSCR_CH%s:
+    _strip_end: _CH
+  OUT_DSCR_BF0_CH%s:
+    _strip_end: _CH
+  OUT_DSCR_BF1_CH%s:
+    _strip_end: _CH
+  OUT_PRI_CH%s:
+    _strip_end: _CH
+  OUT_PERI_SEL_CH%s:
+    _strip_end: _CH
+
+  IN_LINK_ADDR_CH%s:
+    _strip_end: _CH
+  OUT_LINK_ADDR_CH%s:
+    _strip_end: _CH
+
+DS:
+  _modify:
+    "Y_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "RB_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "BOX_MEM*":
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    "IV_MEM*":
+      dim: 4
+      dimIncrement: 0x4
+      size: 0x20
+    "X_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+    "Z_MEM*":
+      dim: 128
+      dimIncrement: 0x4
+      size: 0x20
+
+ECC:
+  _modify:
+    K_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    PX_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    PY_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    QX_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    QY_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    QZ_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+  INT_RAW:
+    _strip_end: _INT_RAW
+  INT_ST:
+    _strip_end: _INT_ST
+  INT_ENA:
+    _strip_end: _INT_ENA
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
+ECDSA:
+  _modify:
+    MESSAGE_MEM*:
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    R_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    S_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    Z_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    QAX_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+    QAY_MEM*:
+      dim: 12
+      dimIncrement: 0x4
+      size: 0x20
+  _include: ../../../common_patches/int_strip.yaml
+
+EFUSE:
+  _include: ../../../common_patches/int_strip.yaml
+
+
+
+GPIO:
+  _delete: "FUNC*_IN_SEL_CFG"
+
+  _add:
+    FUNC%s_IN_SEL_CFG:
+        dim: 128
+        dimIncrement: 0x4
+        description: ""
+        addressOffset: 0x2c4
+        size: 32
+        fields:
+          IN_SEL:
+            description: ""
+            bitOffset: 0
+            bitWidth: 7
+            access: read-write
+          IN_INV_SEL:
+            description: ""
+            bitOffset: 7
+            bitWidth: 1
+            access: read-write
+          SEL:
+            description: ""
+            bitOffset: 8
+            bitWidth: 1
+            access: read-write
+
+  FUNC*_OUT_SEL_CFG:
+    _modify:
+      FUNC*_OUT_SEL:
+        name: OUT_SEL
+      FUNC*_OUT_INV_SEL:
+        name: INV_SEL
+      FUNC*_OE_SEL:
+        name: OEN_SEL
+      FUNC*_OE_INV_SEL:
+        name: OEN_INV_SEL
+
+  # _modify:
+  #   "FUNC%s_OUT_SEL_CFG":
+  #     dim: 30
+
+
+HMAC:
+  _modify:
+    "WR_MESSAGE_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "RD_RESULT_MEM*":
+      dim: 8
+      dimIncrement: 0x4
+      size: 0x20
+
+HP_APM:
+  _cluster:
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
+
+
+  FUNC_CTRL:
+      _array:
+        M?_FUNC_EN: {}
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+
+RMT:
+  _delete: "RX_CH%sDATA"
+  _modify:
+    "TX_CH%sDATA":
+      name: "CH%sDATA"
+    "TX_CH%sCONF0":
+      name: CH%s_TX_CONF0
+    "RX_CH%sCONF0":
+      dimIndex: 2-3
+      name: CH%s_RX_CONF0
+    "RX_CH%sCONF1":
+      dimIndex: 2-3
+      name: CH%s_RX_CONF1
+    "TX_CH%sSTATUS":
+      name: CH%s_TX_STATUS
+    "RX_CH%sSTATUS":
+      name: CH%s_RX_STATUS
+
+  "CH%sDATA":
+    _modify:
+      CHDATA:
+        name: DATA
+        access: read-write
+
+  "CH*CONF0":
+    _strip_end:
+      - "_CH0"
+      - "_CH2"
+  "CH*CONF1":
+    _strip_end: "_CH2"
+
+  "CH*STATUS":
+    _strip_end:
+      - "_CH0"
+      - "_CH2"
+
+  "CH*CARRIER_DUTY":
+    _strip_end:
+      - "_CH"
+
+  "CH*CARRIER_RM":
+    _strip_end:
+      - "_CH"
+
+  "CH*_TX_LIM":
+    _strip_end:
+      - "_CH"
+
+  "CH*_RX_LIM":
+    _strip_end:
+      - "_CH2"
+
+  "REF_CNT_RST":
+    _strip_end:
+      - "_CH0"
+
+  SYS_CONF:
+    _strip: RMT_
+    _delete: # TODO: doesn't work so far, I love svdtools <3
+      - SCLK_DIV_NUM
+      - SCLK_DIV_A
+      - SCLK_DIV_B
+      - SCLK_SEL
+      - SCLK_ACTIVE
+
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "TX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: TODO
+      "TX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: TODO
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_TX_LOOP"
+
+  INT_ST:
+    _strip_end: "_INT_ST"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "RX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: TODO
+      "RX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: TODO
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_X_LOOP"
+
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: TODO
+      "CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: TODO
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_X_LOOP"
+
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+    _array:
+      "CH?_TX_END":
+        name: "CH%s_TX_END"
+      "CH?_RX_END":
+        name: "CH%s_RX_END"
+      "RX_CH[01]_ERR":
+        name: "CH%s_TX_ERR"
+        description: TODO
+      "RX_CH[23]_ERR":
+        name: "CH%s_RX_ERR"
+        description: TODO
+      "CH?_TX_THR_EVENT":
+        name: "CH%s_TX_THR_EVENT"
+      "CH?_RX_THR_EVENT":
+        name: "CH%s_RX_THR_EVENT"
+      "CH?_TX_LOOP":
+        name: "CH%s_TX_LOOP"
+
+
+LP_WDT:
+  _modify:
+    CONFIG0:
+      name: WDTCONFIG0
+    WPROTECT:
+      name: WDTWPROTECT
+    SWD_CONFIG:
+      name: SWD_CONF
+    FEED:
+      name: WDTFEED
+    WDTFEED:
+      _modify:
+        RTC_WDT_FEED:
+          name: WDT_FEED
+  INT_ENA:
+    _modify:
+      LP_WDT_INT_ENA:
+        name: WDT_INT_ENA
+  INT_CLR:
+    _modify:
+      LP_WDT_INT_CLR:
+        name: WDT_INT_CLR
+  INT_ST:
+    _modify:
+      LP_WDT_INT_ST:
+        name: WDT_INT_ST
+
+RSA:
+  _modify:
+    "M_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+    "Z_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+    "Y_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+    "X_MEM*":
+      dim: 96
+      dimIncrement: 0x4
+      size: 0x20
+      access: read-write
+
+
+I2C0:
+  _array:
+    COMD*: {}
+
+  "COMD0":
+    _modify:
+      COMMAND0:
+        name: COMMAND
+      COMMAND0_DONE:
+        name: COMMAND_DONE
+
+  DATA:
+    _modify:
+      FIFO_RDATA:
+        access: read-write
+
+I2S0: 
+  _include: ../../../common_patches/int_strip.yaml
+
+LEDC:
+  "*":
+    _strip_end: "_CH"
+
+  "TIMER%s_CONF":
+    _strip: "TIMER_"
+
+    _modify:
+      TICK_SEL_TIMER:
+        name: TICK_SEL
+      CLK_DIV_TIMER:
+        name: CLK_DIV
+  _include: 
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
+
+LP_APM0:
+  _cluster:
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
+
+
+  FUNC_CTRL:
+      _array:
+        M?_FUNC_EN: {}
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+LP_I2C0:
+  _modify:
+    I2C_FIFO_CONF:
+      name: FIFO_CONF
+
+  FIFO_CONF:
+    _strip: "I2C_"
+
+PARL_IO:
+  _include: ../../../common_patches/int_strip.yaml
+
+PCNT:
+  "*":
+    _strip_end: "_U"
+  CTRL:
+    _strip: "PULSE_"
+  U%s_STATUS:
+    _strip: "CNT_THR_"
+    _strip_end: "_LAT"
+  INT_RAW:
+    _strip_end: "_INT_RAW"
+  INT_ENA:
+    _strip_end: "_INT_ENA"
+  INT_ST:
+    _strip_end: "_INT_ST"
+  INT_CLR:
+    _strip_end: "_INT_CLR"
+  U%s_CNT:
+    _strip: "PULSE_"
+
+  _include: ../../../common_patches/pcnt.yaml
+
+MCPWM0:
+  _include: ../../../common_patches/int_strip.yaml
+
+SHA: 
+  _modify:
+    "H_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+    "M_MEM*":
+      dim: 16
+      dimIncrement: 0x4
+      size: 0x20
+
+  START:
+    _modify:
+      START:
+        access: write-only
+
+  CONTINUE:
+    _modify:
+      CONTINUE:
+        access: write-only
+
+SOC_ETM:
+  CH_ENA_AD?:
+    _array:
+      CH_ENABLED*: {}
+  CH_ENA_AD?_SET:
+    _array:
+      CH_ENABLE*: {}
+  CH_ENA_AD?_CLR:
+    _array:
+      CH_DISABLE*: {}
+
+SPI0:
+  _strip: MEM_
+  "*":
+    _strip: MEM_
+
+SPI1:
+  _strip: SPI_MEM_
+  "*":
+    _strip: SPI_MEM_
+
+SPI2:
+  _strip: SPI_
+  "*":
+    _strip: SPI_
+  _include: ../../../common_patches/spi_dma_int_strip.yaml
+
+SPI[12]:
+  _include: ../../../common_patches/spi_w.yaml
+
+SPI[01]:
+  _include: ../../../common_patches/int_strip.yaml
+
+SYSTIMER:
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
+
+TEE:
+  M%s_MODE_CTRL:
+    _strip: M_
+    MODE:
+      _name: SecurityMode
+      Tee: [0, "Tee mode"]
+      Ree0: [1, "Ree0 mode"]
+      Ree1: [2, "Ree1 mode"]
+      Ree2: [3, "Ree2 mode"]
+
+TIMG0:
+  "T0*":
+    _strip:
+      - "T0_"
+  "T1*":
+    _strip:
+      - "T1_"
+  _include: ../../../common_patches/tim_collect.yaml
+
+# TIMERG[01]:
+#   "*":
+#     _strip: "T_"
+
+UART0:
+  _strip_end: "_SYNC"
+
+  CLKDIV:
+    _modify:
+      CLKDIV_FRAG:
+        name: FRAG
+
+  FIFO:
+    _modify:
+      RXFIFO_RD_BYTE:
+        access: read-write
+  _include: ../../../common_patches/int_strip.yaml
+
+
+
+_modify:
+  SPI?:
+    groupName: SPI

@@ -448,14 +448,6 @@ DMA:
         name: INTCLEAR1
 
 AHB_DMA:
-  _delete: ["OUT_CONF0_CH0"]
-  _modify:
-    OUT_CONF0_CH%s:
-      description: Configure 0 register of Tx channel %s
-      addressOffset: 0xD0
-      dim: 3
-      dimIndex: 0-2
-
   _expand_array:
     IN_INT_RAW_CH%s: {}
     IN_INT_ST_CH%s: {}
