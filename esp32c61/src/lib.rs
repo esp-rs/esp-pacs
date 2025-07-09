@@ -11,7 +11,57 @@ use generic::*;
 #[doc = r"Common register and bit access and modify traits"]
 pub mod generic;
 #[cfg(feature = "rt")]
-extern "C" {}
+extern "C" {
+    fn WIFI_MAC();
+    fn WIFI_MAC_NMI();
+    fn WIFI_PWR();
+    fn WIFI_BB();
+    fn BT_MAC();
+    fn BT_BB();
+    fn BT_BB_NMI();
+    fn LP_TIMER();
+    fn COEX();
+    fn BLE_TIMER();
+    fn BLE_SEC();
+    fn ZB_MAC();
+    fn PMU();
+    fn EFUSE();
+    fn LP_RTC_TIMER();
+    fn LP_WDT();
+    fn LP_APM_M0();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
+    fn TRACE();
+    fn CACHE();
+    fn CPU_PERI_TIMEOUT();
+    fn GPIO();
+    fn GPIO_EXT();
+    fn PAU();
+    fn HP_APM_M0();
+    fn HP_APM_M1();
+    fn HP_APM_M2();
+    fn HP_APM_M3();
+    fn MSPI();
+    fn UART0();
+    fn UART1();
+    fn UART2();
+    fn LEDC();
+    fn USB_DEVICE();
+    fn TG0_T0_LEVEL();
+    fn TG0_T1_LEVEL();
+    fn TG0_WDT_LEVEL();
+    fn TG1_T0_LEVEL();
+    fn TG1_T1_LEVEL();
+    fn TG1_WDT_LEVEL();
+    fn SYSTIMER_TARGET0();
+    fn SYSTIMER_TARGET1();
+    fn SYSTIMER_TARGET2();
+    fn SPI2();
+    fn SHA();
+    fn ECDSA();
+}
 #[doc(hidden)]
 #[repr(C)]
 pub union Vector {
@@ -22,7 +72,125 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".rwtext"]
 #[no_mangle]
-pub static __EXTERNAL_INTERRUPTS: [Vector; 0] = [];
+pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
+    Vector { _handler: WIFI_MAC },
+    Vector {
+        _handler: WIFI_MAC_NMI,
+    },
+    Vector { _handler: WIFI_PWR },
+    Vector { _handler: WIFI_BB },
+    Vector { _handler: BT_MAC },
+    Vector { _handler: BT_BB },
+    Vector {
+        _handler: BT_BB_NMI,
+    },
+    Vector { _handler: LP_TIMER },
+    Vector { _handler: COEX },
+    Vector {
+        _handler: BLE_TIMER,
+    },
+    Vector { _handler: BLE_SEC },
+    Vector { _reserved: 0 },
+    Vector { _handler: ZB_MAC },
+    Vector { _handler: PMU },
+    Vector { _handler: EFUSE },
+    Vector {
+        _handler: LP_RTC_TIMER,
+    },
+    Vector { _handler: LP_WDT },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: LP_APM_M0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
+    Vector { _reserved: 0 },
+    Vector { _handler: TRACE },
+    Vector { _handler: CACHE },
+    Vector {
+        _handler: CPU_PERI_TIMEOUT,
+    },
+    Vector { _handler: GPIO },
+    Vector { _handler: GPIO_EXT },
+    Vector { _handler: PAU },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: HP_APM_M0,
+    },
+    Vector {
+        _handler: HP_APM_M1,
+    },
+    Vector {
+        _handler: HP_APM_M2,
+    },
+    Vector {
+        _handler: HP_APM_M3,
+    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: MSPI },
+    Vector { _reserved: 0 },
+    Vector { _handler: UART0 },
+    Vector { _handler: UART1 },
+    Vector { _handler: UART2 },
+    Vector { _handler: LEDC },
+    Vector {
+        _handler: USB_DEVICE,
+    },
+    Vector { _reserved: 0 },
+    Vector {
+        _handler: TG0_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG0_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG0_WDT_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T0_LEVEL,
+    },
+    Vector {
+        _handler: TG1_T1_LEVEL,
+    },
+    Vector {
+        _handler: TG1_WDT_LEVEL,
+    },
+    Vector {
+        _handler: SYSTIMER_TARGET0,
+    },
+    Vector {
+        _handler: SYSTIMER_TARGET1,
+    },
+    Vector {
+        _handler: SYSTIMER_TARGET2,
+    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: SPI2 },
+    Vector { _handler: SHA },
+    Vector { _reserved: 0 },
+    Vector { _handler: ECDSA },
+];
+#[doc(hidden)]
+pub mod interrupt;
+pub use self::interrupt::Interrupt;
 #[doc = "AHB_DMA Peripheral"]
 pub type AHB_DMA = crate::Periph<ahb_dma::RegisterBlock, 0x6008_0000>;
 impl core::fmt::Debug for AHB_DMA {
@@ -131,6 +299,15 @@ impl core::fmt::Debug for I2S {
 }
 #[doc = "I2S Peripheral"]
 pub mod i2s;
+#[doc = "Interrupt Controller (Core 0)"]
+pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x6001_0000>;
+impl core::fmt::Debug for INTERRUPT_CORE0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_CORE0").finish()
+    }
+}
+#[doc = "Interrupt Controller (Core 0)"]
+pub mod interrupt_core0;
 #[doc = "INTPRI Peripheral"]
 pub type INTPRI = crate::Periph<intpri::RegisterBlock, 0x600c_5000>;
 impl core::fmt::Debug for INTPRI {
@@ -448,6 +625,8 @@ pub struct Peripherals {
     pub I2C: I2C,
     #[doc = "I2S"]
     pub I2S: I2S,
+    #[doc = "INTERRUPT_CORE0"]
+    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
     pub INTPRI: INTPRI,
     #[doc = "IO_MUX"]
@@ -546,6 +725,7 @@ impl Peripherals {
             HP_SYSTEM: HP_SYSTEM::steal(),
             I2C: I2C::steal(),
             I2S: I2S::steal(),
+            INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             INTPRI: INTPRI::steal(),
             IO_MUX: IO_MUX::steal(),
             LEDC: LEDC::steal(),
