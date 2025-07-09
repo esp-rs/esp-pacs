@@ -2862,6 +2862,995 @@
       </registers>
     </peripheral>
     <peripheral>
+      <name>APB_SARADC</name>
+      <description>SAR (Successive Approximation Register) Analog-to-Digital Converter</description>
+      <groupName>APB_SARADC</groupName>
+      <baseAddress>0x6000e000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x70</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>APB_SARADC</name>
+        <value>55</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>CTRL</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <resetValue>0x40038240</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_START_FORCE</name>
+              <description>select software enable saradc sample</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_START</name>
+              <description>software enable saradc sample</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR_CLK_GATED</name>
+              <description>SAR clock gated</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR_CLK_DIV</name>
+              <description>SAR clock divider</description>
+              <bitOffset>7</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR_PATT_LEN</name>
+              <description>0 ~ 15 means length 1 ~ 16</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR_PATT_P_CLEAR</name>
+              <description>clear the pointer of pattern table for DIG ADC1 CTRL</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_XPD_SAR_FORCE</name>
+              <description>force option to xpd sar blocks</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC2_PWDET_DRV</name>
+              <description>enable saradc2 power detect driven func.</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_WAIT_ARB_CYCLE</name>
+              <description>wait arbit signal stable after sar_done</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CTRL2</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <resetValue>0xa1fe</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_MEAS_NUM_LIMIT</name>
+              <description>enable max meas num</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_MAX_MEAS_NUM</name>
+              <description>max conversion number</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR1_INV</name>
+              <description>1: data to DIG ADC1 CTRL is inverted, otherwise not</description>
+              <bitOffset>9</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_SAR2_INV</name>
+              <description>1: data to DIG ADC2 CTRL is inverted, otherwise not</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_TIMER_TARGET</name>
+              <description>to set saradc timer target</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_TIMER_EN</name>
+              <description>to enable saradc timer trigger</description>
+              <bitOffset>24</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FILTER_CTRL1</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_FILTER_FACTOR1</name>
+              <description>Factor of saradc filter1</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_FILTER_FACTOR0</name>
+              <description>Factor of saradc filter0</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>3</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FSM_WAIT</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0xc</addressOffset>
+          <size>32</size>
+          <resetValue>0xff0808</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_XPD_WAIT</name>
+              <description>saradc_xpd_wait</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_RSTB_WAIT</name>
+              <description>saradc_rstb_wait</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_STANDBY_WAIT</name>
+              <description>saradc_standby_wait</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR1_STATUS</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>32</size>
+          <resetValue>0x20000000</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_SAR1_STATUS</name>
+              <description>saradc1 status about data and channel</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR2_STATUS</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>32</size>
+          <resetValue>0x20000000</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_SAR2_STATUS</name>
+              <description>saradc2 status about data and channel</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR_PATT_TAB1</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>32</size>
+          <resetValue>0xffffff</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_SAR_PATT_TAB1</name>
+              <description>item 0 ~ 3 for pattern table 1 (each item one byte)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>24</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR_PATT_TAB2</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x1c</addressOffset>
+          <size>32</size>
+          <resetValue>0xffffff</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_SAR_PATT_TAB2</name>
+              <description>Item 4 ~ 7 for pattern table 1 (each item one byte)</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>24</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ONETIME_SAMPLE</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>32</size>
+          <resetValue>0x1a000000</resetValue>
+          <fields>
+            <field>
+              <name>SARADC_ONETIME_ATTEN</name>
+              <description>configure onetime atten</description>
+              <bitOffset>23</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_ONETIME_CHANNEL</name>
+              <description>configure onetime channel</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC_ONETIME_START</name>
+              <description>trigger adc onetime sample</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC2_ONETIME_SAMPLE</name>
+              <description>enable adc2 onetime sample</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>SARADC1_ONETIME_SAMPLE</name>
+              <description>enable adc1 onetime sample</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ARB_CTRL</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>32</size>
+          <resetValue>0x900</resetValue>
+          <fields>
+            <field>
+              <name>ADC_ARB_APB_FORCE</name>
+              <description>adc2 arbiter force to enableapb controller</description>
+              <bitOffset>2</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_RTC_FORCE</name>
+              <description>adc2 arbiter force to enable rtc controller</description>
+              <bitOffset>3</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_WIFI_FORCE</name>
+              <description>adc2 arbiter force to enable wifi controller</description>
+              <bitOffset>4</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_GRANT_FORCE</name>
+              <description>adc2 arbiter force grant</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_APB_PRIORITY</name>
+              <description>Set adc2 arbiterapb priority</description>
+              <bitOffset>6</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_RTC_PRIORITY</name>
+              <description>Set adc2 arbiter rtc priority</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_WIFI_PRIORITY</name>
+              <description>Set adc2 arbiter wifi priority</description>
+              <bitOffset>10</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>ADC_ARB_FIX_PRIORITY</name>
+              <description>adc2 arbiter uses fixed priority</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>FILTER_CTRL0</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>32</size>
+          <resetValue>0x3740000</resetValue>
+          <fields>
+            <field>
+              <name>APB_SARADC_FILTER_CHANNEL1</name>
+              <description>configure filter1 to adc channel</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_FILTER_CHANNEL0</name>
+              <description>configure filter0 to adc channel</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_FILTER_RESET</name>
+              <description>enable apb_adc1_filter</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR1DATA_STATUS</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x2c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC1_DATA</name>
+              <description>saradc1 data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>17</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SAR2DATA_STATUS</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC2_DATA</name>
+              <description>saradc2 data</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>17</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>THRES0_CTRL</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>32</size>
+          <resetValue>0x3ffed</resetValue>
+          <fields>
+            <field>
+              <name>APB_SARADC_THRES0_CHANNEL</name>
+              <description>configure thres0 to adc channel</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_HIGH</name>
+              <description>saradc thres0 monitor thres</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>13</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_LOW</name>
+              <description>saradc thres0 monitor thres</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>13</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>THRES1_CTRL</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>32</size>
+          <resetValue>0x3ffed</resetValue>
+          <fields>
+            <field>
+              <name>APB_SARADC_THRES1_CHANNEL</name>
+              <description>configure thres1 to adc channel</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_HIGH</name>
+              <description>saradc thres1 monitor thres</description>
+              <bitOffset>5</bitOffset>
+              <bitWidth>13</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_LOW</name>
+              <description>saradc thres1 monitor thres</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>13</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>THRES_CTRL</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x3c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_THRES_ALL_EN</name>
+              <description>enable thres to all channel</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_EN</name>
+              <description>enable thres1</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_EN</name>
+              <description>enable thres0</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_ENA</name>
+          <description>digital saradc int register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_TSENS_INT_ENA</name>
+              <description>tsens low  interrupt enable</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_LOW_INT_ENA</name>
+              <description>saradc thres1 low  interrupt enable</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_LOW_INT_ENA</name>
+              <description>saradc thres0 low interrupt enable</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_HIGH_INT_ENA</name>
+              <description>saradc thres1 high interrupt enable</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_HIGH_INT_ENA</name>
+              <description>saradc thres0 high interrupt enable</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC2_DONE_INT_ENA</name>
+              <description>saradc2 done interrupt enable</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC1_DONE_INT_ENA</name>
+              <description>saradc1 done interrupt enable</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_RAW</name>
+          <description>digital saradc int register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_TSENS_INT_RAW</name>
+              <description>saradc tsens  interrupt raw</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_LOW_INT_RAW</name>
+              <description>saradc thres1 low  interrupt raw</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_LOW_INT_RAW</name>
+              <description>saradc thres0 low interrupt raw</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_HIGH_INT_RAW</name>
+              <description>saradc thres1 high interrupt raw</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_HIGH_INT_RAW</name>
+              <description>saradc thres0 high interrupt raw</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC2_DONE_INT_RAW</name>
+              <description>saradc2 done interrupt raw</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_SARADC1_DONE_INT_RAW</name>
+              <description>saradc1 done interrupt raw</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_ST</name>
+          <description>digital saradc int register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_TSENS_INT_ST</name>
+              <description>saradc tsens  interrupt state</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_LOW_INT_ST</name>
+              <description>saradc thres1 low  interrupt state</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_LOW_INT_ST</name>
+              <description>saradc thres0 low interrupt state</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_HIGH_INT_ST</name>
+              <description>saradc thres1 high interrupt state</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_HIGH_INT_ST</name>
+              <description>saradc thres0 high interrupt state</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC2_DONE_INT_ST</name>
+              <description>saradc2 done interrupt state</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC1_DONE_INT_ST</name>
+              <description>saradc1 done interrupt state</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_CLR</name>
+          <description>digital saradc int register</description>
+          <addressOffset>0x4c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_SARADC_TSENS_INT_CLR</name>
+              <description>saradc tsens  interrupt clear</description>
+              <bitOffset>25</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_LOW_INT_CLR</name>
+              <description>saradc thres1 low  interrupt clear</description>
+              <bitOffset>26</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_LOW_INT_CLR</name>
+              <description>saradc thres0 low interrupt clear</description>
+              <bitOffset>27</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES1_HIGH_INT_CLR</name>
+              <description>saradc thres1 high interrupt clear</description>
+              <bitOffset>28</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC_THRES0_HIGH_INT_CLR</name>
+              <description>saradc thres0 high interrupt clear</description>
+              <bitOffset>29</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC2_DONE_INT_CLR</name>
+              <description>saradc2 done interrupt clear</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+            <field>
+              <name>APB_SARADC1_DONE_INT_CLR</name>
+              <description>saradc1 done interrupt clear</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>write-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_CONF</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>32</size>
+          <resetValue>0xff</resetValue>
+          <fields>
+            <field>
+              <name>APB_ADC_EOF_NUM</name>
+              <description>the dma_in_suc_eof gen when sample cnt = spi_eof_num</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_ADC_RESET_FSM</name>
+              <description>reset_apb_adc_state</description>
+              <bitOffset>30</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>APB_ADC_TRANS</name>
+              <description>enable apb_adc use spi_dma</description>
+              <bitOffset>31</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLKM_CONF</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>32</size>
+          <resetValue>0x4</resetValue>
+          <fields>
+            <field>
+              <name>CLKM_DIV_NUM</name>
+              <description>Integral I2S clock divider value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLKM_DIV_B</name>
+              <description>Fractional clock divider numerator value</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLKM_DIV_A</name>
+              <description>Fractional clock divider denominator value</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_EN</name>
+              <description>reg clk en</description>
+              <bitOffset>20</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CLK_SEL</name>
+              <description>Set this bit to enable clk_apll</description>
+              <bitOffset>21</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB_TSENS_CTRL</name>
+          <description>digital tsens configure register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>32</size>
+          <resetValue>0x18080</resetValue>
+          <fields>
+            <field>
+              <name>TSENS_OUT</name>
+              <description>temperature sensor data out</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>TSENS_IN_INV</name>
+              <description>invert temperature sensor data</description>
+              <bitOffset>13</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_CLK_DIV</name>
+              <description>temperature sensor clock divider</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_PU</name>
+              <description>temperature sensor power up</description>
+              <bitOffset>22</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TSENS_CTRL2</name>
+          <description>digital tsens configure register</description>
+          <addressOffset>0x5c</addressOffset>
+          <size>32</size>
+          <resetValue>0x4002</resetValue>
+          <fields>
+            <field>
+              <name>TSENS_XPD_WAIT</name>
+              <description>the time that power up tsens need wait</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>12</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_XPD_FORCE</name>
+              <description>force power up tsens</description>
+              <bitOffset>12</bitOffset>
+              <bitWidth>2</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_CLK_INV</name>
+              <description>inv tsens clk</description>
+              <bitOffset>14</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_CLK_SEL</name>
+              <description>tsens clk select</description>
+              <bitOffset>15</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CALI</name>
+          <description>digital saradc configure register</description>
+          <addressOffset>0x60</addressOffset>
+          <size>32</size>
+          <resetValue>0x8000</resetValue>
+          <fields>
+            <field>
+              <name>APB_SARADC_CALI_CFG</name>
+              <description>saradc cali factor</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>17</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB_TSENS_WAKE</name>
+          <description>digital tsens configure register</description>
+          <addressOffset>0x64</addressOffset>
+          <size>32</size>
+          <resetValue>0xff00</resetValue>
+          <fields>
+            <field>
+              <name>WAKEUP_TH_LOW</name>
+              <description>reg_wakeup_th_low</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_TH_HIGH</name>
+              <description>reg_wakeup_th_high</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_OVER_UPPER_TH</name>
+              <description>reg_wakeup_over_upper_th</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-only</access>
+            </field>
+            <field>
+              <name>WAKEUP_MODE</name>
+              <description>reg_wakeup_mode</description>
+              <bitOffset>17</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>WAKEUP_EN</name>
+              <description>reg_wakeup_en</description>
+              <bitOffset>18</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB_TSENS_SAMPLE</name>
+          <description>digital tsens configure register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>32</size>
+          <resetValue>0x14</resetValue>
+          <fields>
+            <field>
+              <name>TSENS_SAMPLE_RATE</name>
+              <description>HW sample rate</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>TSENS_SAMPLE_EN</name>
+              <description>HW sample en</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CTRL_DATE</name>
+          <description>version</description>
+          <addressOffset>0x3fc</addressOffset>
+          <size>32</size>
+          <resetValue>0x2206240</resetValue>
+          <fields>
+            <field>
+              <name>DATE</name>
+              <description>version</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
       <name>BUS_MONITOR</name>
       <description>BUS_MONITOR Peripheral</description>
       <groupName>BUS_MONITOR</groupName>
@@ -10309,8 +11298,8 @@ Other: Inactive status\\</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>ECC_MULT</name>
-      <description>ECC_MULT Peripheral</description>
+      <name>ECC</name>
+      <description>ECC (ECC Hardware Accelerator)</description>
       <groupName>ECC_MULT</groupName>
       <baseAddress>0x6008b000</baseAddress>
       <addressBlock>
@@ -10318,6 +11307,10 @@ Other: Inactive status\\</description>
         <size>0xd8</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>ECC</name>
+        <value>64</value>
+      </interrupt>
       <registers>
         <register>
           <name>INT_RAW</name>
@@ -18362,8 +19355,8 @@ HP_SYSTEM_ROM_TABLE_LOCK is 0.</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2C</name>
-      <description>I2C Peripheral</description>
+      <name>I2C0</name>
+      <description>I2C (Inter-Integrated Circuit) Controller 0</description>
       <groupName>I2C</groupName>
       <baseAddress>0x60004000</baseAddress>
       <addressBlock>
@@ -18371,6 +19364,14 @@ HP_SYSTEM_ROM_TABLE_LOCK is 0.</description>
         <size>0x90</size>
         <usage>registers</usage>
       </addressBlock>
+      <interrupt>
+        <name>I2C_MASTER</name>
+        <value>11</value>
+      </interrupt>
+      <interrupt>
+        <name>I2C_EXT0</name>
+        <value>45</value>
+      </interrupt>
       <registers>
         <register>
           <name>SCL_LOW_PERIOD</name>

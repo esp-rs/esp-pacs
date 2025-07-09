@@ -23,6 +23,7 @@ extern "C" {
     fn COEX();
     fn BLE_TIMER();
     fn BLE_SEC();
+    fn I2C_MASTER();
     fn ZB_MAC();
     fn PMU();
     fn EFUSE();
@@ -49,6 +50,7 @@ extern "C" {
     fn UART2();
     fn LEDC();
     fn USB_DEVICE();
+    fn I2C_EXT0();
     fn TG0_T0_LEVEL();
     fn TG0_T1_LEVEL();
     fn TG0_WDT_LEVEL();
@@ -58,8 +60,10 @@ extern "C" {
     fn SYSTIMER_TARGET0();
     fn SYSTIMER_TARGET1();
     fn SYSTIMER_TARGET2();
+    fn APB_SARADC();
     fn SPI2();
     fn SHA();
+    fn ECC();
     fn ECDSA();
 }
 #[doc(hidden)]
@@ -90,7 +94,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
         _handler: BLE_TIMER,
     },
     Vector { _handler: BLE_SEC },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: I2C_MASTER,
+    },
     Vector { _handler: ZB_MAC },
     Vector { _handler: PMU },
     Vector { _handler: EFUSE },
@@ -148,7 +154,7 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
     Vector {
         _handler: USB_DEVICE,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: I2C_EXT0 },
     Vector {
         _handler: TG0_T0_LEVEL,
     },
@@ -176,7 +182,9 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
     Vector {
         _handler: SYSTIMER_TARGET2,
     },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: APB_SARADC,
+    },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
@@ -185,12 +193,21 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 66] = [
     Vector { _reserved: 0 },
     Vector { _handler: SPI2 },
     Vector { _handler: SHA },
-    Vector { _reserved: 0 },
+    Vector { _handler: ECC },
     Vector { _handler: ECDSA },
 ];
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
+#[doc = "Core Local Interrupts"]
+pub type CLINT = crate::Periph<clint::RegisterBlock, 0x2000_0000>;
+impl core::fmt::Debug for CLINT {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("CLINT").finish()
+    }
+}
+#[doc = "Core Local Interrupts"]
+pub mod clint;
 #[doc = "AHB_DMA Peripheral"]
 pub type AHB_DMA = crate::Periph<ahb_dma::RegisterBlock, 0x6008_0000>;
 impl core::fmt::Debug for AHB_DMA {
@@ -200,6 +217,15 @@ impl core::fmt::Debug for AHB_DMA {
 }
 #[doc = "AHB_DMA Peripheral"]
 pub mod ahb_dma;
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
+pub type APB_SARADC = crate::Periph<apb_saradc::RegisterBlock, 0x6000_e000>;
+impl core::fmt::Debug for APB_SARADC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("APB_SARADC").finish()
+    }
+}
+#[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
+pub mod apb_saradc;
 #[doc = "BUS_MONITOR Peripheral"]
 pub type BUS_MONITOR = crate::Periph<bus_monitor::RegisterBlock, 0x600c_2000>;
 impl core::fmt::Debug for BUS_MONITOR {
@@ -218,15 +244,15 @@ impl core::fmt::Debug for CACHE {
 }
 #[doc = "CACHE Peripheral"]
 pub mod cache;
-#[doc = "ECC_MULT Peripheral"]
-pub type ECC_MULT = crate::Periph<ecc_mult::RegisterBlock, 0x6008_b000>;
-impl core::fmt::Debug for ECC_MULT {
+#[doc = "ECC (ECC Hardware Accelerator)"]
+pub type ECC = crate::Periph<ecc::RegisterBlock, 0x6008_b000>;
+impl core::fmt::Debug for ECC {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("ECC_MULT").finish()
+        f.debug_struct("ECC").finish()
     }
 }
-#[doc = "ECC_MULT Peripheral"]
-pub mod ecc_mult;
+#[doc = "ECC (ECC Hardware Accelerator)"]
+pub mod ecc;
 #[doc = "ECDSA (Elliptic Curve Digital Signature Algorithm) Accelerator"]
 pub type ECDSA = crate::Periph<ecdsa::RegisterBlock, 0x6008_e000>;
 impl core::fmt::Debug for ECDSA {
@@ -272,6 +298,15 @@ impl core::fmt::Debug for HP_APM {
 }
 #[doc = "HP_APM Peripheral"]
 pub mod hp_apm;
+#[doc = "I2C_ANA_MST Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x600a_f800>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_ANA_MST Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "HP_SYSTEM Peripheral"]
 pub type HP_SYSTEM = crate::Periph<hp_system::RegisterBlock, 0x6009_5000>;
 impl core::fmt::Debug for HP_SYSTEM {
@@ -281,15 +316,15 @@ impl core::fmt::Debug for HP_SYSTEM {
 }
 #[doc = "HP_SYSTEM Peripheral"]
 pub mod hp_system;
-#[doc = "I2C Peripheral"]
-pub type I2C = crate::Periph<i2c::RegisterBlock, 0x6000_4000>;
-impl core::fmt::Debug for I2C {
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
+pub type I2C0 = crate::Periph<i2c0::RegisterBlock, 0x6000_4000>;
+impl core::fmt::Debug for I2C0 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C").finish()
+        f.debug_struct("I2C0").finish()
     }
 }
-#[doc = "I2C Peripheral"]
-pub mod i2c;
+#[doc = "I2C (Inter-Integrated Circuit) Controller 0"]
+pub mod i2c0;
 #[doc = "I2S Peripheral"]
 pub type I2S = crate::Periph<i2s::RegisterBlock, 0x6000_c000>;
 impl core::fmt::Debug for I2S {
@@ -488,6 +523,15 @@ impl core::fmt::Debug for SOC_ETM {
 }
 #[doc = "Event Task Matrix"]
 pub mod soc_etm;
+#[doc = "SDIO SLC"]
+pub type SLC = crate::Periph<slc::RegisterBlock, 0x6001_7000>;
+impl core::fmt::Debug for SLC {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SLC").finish()
+    }
+}
+#[doc = "SDIO SLC"]
+pub mod slc;
 #[doc = "SPI (Serial Peripheral Interface) Controller 0"]
 pub type SPI0 = crate::Periph<spi0::RegisterBlock, 0x6000_2000>;
 impl core::fmt::Debug for SPI0 {
@@ -601,14 +645,18 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
 #[allow(non_snake_case)]
 pub struct Peripherals {
+    #[doc = "CLINT"]
+    pub CLINT: CLINT,
     #[doc = "AHB_DMA"]
     pub AHB_DMA: AHB_DMA,
+    #[doc = "APB_SARADC"]
+    pub APB_SARADC: APB_SARADC,
     #[doc = "BUS_MONITOR"]
     pub BUS_MONITOR: BUS_MONITOR,
     #[doc = "CACHE"]
     pub CACHE: CACHE,
-    #[doc = "ECC_MULT"]
-    pub ECC_MULT: ECC_MULT,
+    #[doc = "ECC"]
+    pub ECC: ECC,
     #[doc = "ECDSA"]
     pub ECDSA: ECDSA,
     #[doc = "EFUSE"]
@@ -619,10 +667,12 @@ pub struct Peripherals {
     pub GPIO_EXT: GPIO_EXT,
     #[doc = "HP_APM"]
     pub HP_APM: HP_APM,
+    #[doc = "I2C_ANA_MST"]
+    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "HP_SYSTEM"]
     pub HP_SYSTEM: HP_SYSTEM,
-    #[doc = "I2C"]
-    pub I2C: I2C,
+    #[doc = "I2C0"]
+    pub I2C0: I2C0,
     #[doc = "I2S"]
     pub I2S: I2S,
     #[doc = "INTERRUPT_CORE0"]
@@ -667,6 +717,8 @@ pub struct Peripherals {
     pub SHA: SHA,
     #[doc = "SOC_ETM"]
     pub SOC_ETM: SOC_ETM,
+    #[doc = "SLC"]
+    pub SLC: SLC,
     #[doc = "SPI0"]
     pub SPI0: SPI0,
     #[doc = "SPI2"]
@@ -713,17 +765,20 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
+            CLINT: CLINT::steal(),
             AHB_DMA: AHB_DMA::steal(),
+            APB_SARADC: APB_SARADC::steal(),
             BUS_MONITOR: BUS_MONITOR::steal(),
             CACHE: CACHE::steal(),
-            ECC_MULT: ECC_MULT::steal(),
+            ECC: ECC::steal(),
             ECDSA: ECDSA::steal(),
             EFUSE: EFUSE::steal(),
             GPIO: GPIO::steal(),
             GPIO_EXT: GPIO_EXT::steal(),
             HP_APM: HP_APM::steal(),
+            I2C_ANA_MST: I2C_ANA_MST::steal(),
             HP_SYSTEM: HP_SYSTEM::steal(),
-            I2C: I2C::steal(),
+            I2C0: I2C0::steal(),
             I2S: I2S::steal(),
             INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             INTPRI: INTPRI::steal(),
@@ -746,6 +801,7 @@ impl Peripherals {
             PVT: PVT::steal(),
             SHA: SHA::steal(),
             SOC_ETM: SOC_ETM::steal(),
+            SLC: SLC::steal(),
             SPI0: SPI0::steal(),
             SPI2: SPI2::steal(),
             SPI1: SPI1::steal(),

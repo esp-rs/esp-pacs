@@ -7,7 +7,7 @@ pub struct RegisterBlock {
     config2: CONFIG2,
     config3: CONFIG3,
     config4: CONFIG4,
-    feed: FEED,
+    wdtfeed: WDTFEED,
     wprotect: WPROTECT,
     swd_config: SWD_CONFIG,
     swd_wprotect: SWD_WPROTECT,
@@ -46,8 +46,8 @@ impl RegisterBlock {
     }
     #[doc = "0x14 - Configure the feed function of RWDT"]
     #[inline(always)]
-    pub const fn feed(&self) -> &FEED {
-        &self.feed
+    pub const fn wdtfeed(&self) -> &WDTFEED {
+        &self.wdtfeed
     }
     #[doc = "0x18 - Configure the lock function of SWD"]
     #[inline(always)]
@@ -110,10 +110,10 @@ pub mod config3;
 pub type CONFIG4 = crate::Reg<config4::CONFIG4_SPEC>;
 #[doc = "Configure the RWDT timeout of stage3"]
 pub mod config4;
-#[doc = "FEED (w) register accessor: Configure the feed function of RWDT\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`feed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@feed`] module"]
-pub type FEED = crate::Reg<feed::FEED_SPEC>;
+#[doc = "WDTFEED (w) register accessor: Configure the feed function of RWDT\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtfeed`] module"]
+pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "Configure the feed function of RWDT"]
-pub mod feed;
+pub mod wdtfeed;
 #[doc = "WPROTECT (rw) register accessor: Configure the lock function of SWD\n\nYou can [`read`](crate::Reg::read) this register and get [`wprotect::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wprotect::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wprotect`] module"]
 pub type WPROTECT = crate::Reg<wprotect::WPROTECT_SPEC>;
 #[doc = "Configure the lock function of SWD"]

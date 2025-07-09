@@ -1,7 +1,7 @@
 #[doc = "Register `SMEM_AXI_ADDR_CTRL` reader"]
 pub type R = crate::R<SMEM_AXI_ADDR_CTRL_SPEC>;
-#[doc = "Field `MEM_ALL_FIFO_EMPTY` reader - The empty status of all AFIFO and SYNC_FIFO in MSPI module. 1: All AXI transfers and SPI0 transfers are done. 0: Others."]
-pub type MEM_ALL_FIFO_EMPTY_R = crate::BitReader;
+#[doc = "Field `ALL_FIFO_EMPTY` reader - The empty status of all AFIFO and SYNC_FIFO in MSPI module. 1: All AXI transfers and SPI0 transfers are done. 0: Others."]
+pub type ALL_FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `RDATA_AFIFO_REMPTY` reader - 1: RDATA_AFIFO is empty. 0: At least one AXI read transfer is pending."]
 pub type RDATA_AFIFO_REMPTY_R = crate::BitReader;
 #[doc = "Field `RADDR_AFIFO_REMPTY` reader - 1: AXI_RADDR_CTL_AFIFO is empty. 0: At least one AXI read transfer is pending."]
@@ -15,8 +15,8 @@ pub type ALL_AXI_TRANS_AFIFO_EMPTY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 26 - The empty status of all AFIFO and SYNC_FIFO in MSPI module. 1: All AXI transfers and SPI0 transfers are done. 0: Others."]
     #[inline(always)]
-    pub fn mem_all_fifo_empty(&self) -> MEM_ALL_FIFO_EMPTY_R {
-        MEM_ALL_FIFO_EMPTY_R::new(((self.bits >> 26) & 1) != 0)
+    pub fn all_fifo_empty(&self) -> ALL_FIFO_EMPTY_R {
+        ALL_FIFO_EMPTY_R::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - 1: RDATA_AFIFO is empty. 0: At least one AXI read transfer is pending."]
     #[inline(always)]
@@ -48,7 +48,7 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SMEM_AXI_ADDR_CTRL")
-            .field("mem_all_fifo_empty", &self.mem_all_fifo_empty())
+            .field("all_fifo_empty", &self.all_fifo_empty())
             .field("rdata_afifo_rempty", &self.rdata_afifo_rempty())
             .field("raddr_afifo_rempty", &self.raddr_afifo_rempty())
             .field("wdata_afifo_rempty", &self.wdata_afifo_rempty())

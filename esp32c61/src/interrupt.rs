@@ -25,6 +25,8 @@ pub enum Interrupt {
     BLE_TIMER = 9,
     #[doc = "10 - BLE_SEC"]
     BLE_SEC = 10,
+    #[doc = "11 - I2C_MASTER"]
+    I2C_MASTER = 11,
     #[doc = "12 - ZB_MAC"]
     ZB_MAC = 12,
     #[doc = "13 - PMU"]
@@ -77,6 +79,8 @@ pub enum Interrupt {
     LEDC = 43,
     #[doc = "44 - USB_DEVICE"]
     USB_DEVICE = 44,
+    #[doc = "45 - I2C_EXT0"]
+    I2C_EXT0 = 45,
     #[doc = "46 - TG0_T0_LEVEL"]
     TG0_T0_LEVEL = 46,
     #[doc = "47 - TG0_T1_LEVEL"]
@@ -95,10 +99,14 @@ pub enum Interrupt {
     SYSTIMER_TARGET1 = 53,
     #[doc = "54 - SYSTIMER_TARGET2"]
     SYSTIMER_TARGET2 = 54,
+    #[doc = "55 - APB_SARADC"]
+    APB_SARADC = 55,
     #[doc = "62 - SPI2"]
     SPI2 = 62,
     #[doc = "63 - SHA"]
     SHA = 63,
+    #[doc = "64 - ECC"]
+    ECC = 64,
     #[doc = "65 - ECDSA"]
     ECDSA = 65,
 }
@@ -122,6 +130,7 @@ impl Interrupt {
             8 => Ok(Interrupt::COEX),
             9 => Ok(Interrupt::BLE_TIMER),
             10 => Ok(Interrupt::BLE_SEC),
+            11 => Ok(Interrupt::I2C_MASTER),
             12 => Ok(Interrupt::ZB_MAC),
             13 => Ok(Interrupt::PMU),
             14 => Ok(Interrupt::EFUSE),
@@ -148,6 +157,7 @@ impl Interrupt {
             42 => Ok(Interrupt::UART2),
             43 => Ok(Interrupt::LEDC),
             44 => Ok(Interrupt::USB_DEVICE),
+            45 => Ok(Interrupt::I2C_EXT0),
             46 => Ok(Interrupt::TG0_T0_LEVEL),
             47 => Ok(Interrupt::TG0_T1_LEVEL),
             48 => Ok(Interrupt::TG0_WDT_LEVEL),
@@ -157,8 +167,10 @@ impl Interrupt {
             52 => Ok(Interrupt::SYSTIMER_TARGET0),
             53 => Ok(Interrupt::SYSTIMER_TARGET1),
             54 => Ok(Interrupt::SYSTIMER_TARGET2),
+            55 => Ok(Interrupt::APB_SARADC),
             62 => Ok(Interrupt::SPI2),
             63 => Ok(Interrupt::SHA),
+            64 => Ok(Interrupt::ECC),
             65 => Ok(Interrupt::ECDSA),
             _ => Err(TryFromInterruptError(())),
         }

@@ -3,21 +3,14 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     region_filter_en: REGION_FILTER_EN,
-    region_addr_start: (),
-    _reserved2: [u8; 0x04],
-    region_addr_end: (),
-    _reserved3: [u8; 0x04],
-    region_attr: (),
-    _reserved4: [u8; 0xb8],
+    region: [REGION; 4],
+    _reserved2: [u8; 0x90],
     func_ctrl: FUNC_CTRL,
-    m0_status: M0_STATUS,
-    m0_status_clr: M0_STATUS_CLR,
-    m0_exception_info0: M0_EXCEPTION_INFO0,
-    m0_exception_info1: M0_EXCEPTION_INFO1,
-    _reserved9: [u8; 0x10],
+    m: [M; 1],
+    _reserved4: [u8; 0x10],
     int_en: INT_EN,
     clock_gate: CLOCK_GATE,
-    _reserved11: [u8; 0x0c],
+    _reserved6: [u8; 0x0c],
     date: DATE,
 }
 impl RegisterBlock {
@@ -26,165 +19,32 @@ impl RegisterBlock {
     pub const fn region_filter_en(&self) -> &REGION_FILTER_EN {
         &self.region_filter_en
     }
-    #[doc = "0x04..0x14 - Region address register"]
+    #[doc = "0x04..0x34 - Cluster REGION%s, containing REGION*_ADDR_START, REGION*_ADDR_END, REGION*_ATTR"]
     #[inline(always)]
-    pub const fn region_addr_start(&self, n: usize) -> &REGION_ADDR_START {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(4)
-                .add(12 * n)
-                .cast()
-        }
+    pub const fn region(&self, n: usize) -> &REGION {
+        &self.region[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x04..0x14 - Region address register"]
+    #[doc = "0x04..0x34 - Cluster REGION%s, containing REGION*_ADDR_START, REGION*_ADDR_END, REGION*_ATTR"]
     #[inline(always)]
-    pub fn region_addr_start_iter(&self) -> impl Iterator<Item = &REGION_ADDR_START> {
-        (0..4).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(4)
-                .add(12 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x04 - Region address register"]
-    #[inline(always)]
-    pub const fn region0_addr_start(&self) -> &REGION_ADDR_START {
-        self.region_addr_start(0)
-    }
-    #[doc = "0x10 - Region address register"]
-    #[inline(always)]
-    pub const fn region1_addr_start(&self) -> &REGION_ADDR_START {
-        self.region_addr_start(1)
-    }
-    #[doc = "0x1c - Region address register"]
-    #[inline(always)]
-    pub const fn region2_addr_start(&self) -> &REGION_ADDR_START {
-        self.region_addr_start(2)
-    }
-    #[doc = "0x28 - Region address register"]
-    #[inline(always)]
-    pub const fn region3_addr_start(&self) -> &REGION_ADDR_START {
-        self.region_addr_start(3)
-    }
-    #[doc = "0x08..0x18 - Region address register"]
-    #[inline(always)]
-    pub const fn region_addr_end(&self, n: usize) -> &REGION_ADDR_END {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(8)
-                .add(12 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x08..0x18 - Region address register"]
-    #[inline(always)]
-    pub fn region_addr_end_iter(&self) -> impl Iterator<Item = &REGION_ADDR_END> {
-        (0..4).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(8)
-                .add(12 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x08 - Region address register"]
-    #[inline(always)]
-    pub const fn region0_addr_end(&self) -> &REGION_ADDR_END {
-        self.region_addr_end(0)
-    }
-    #[doc = "0x14 - Region address register"]
-    #[inline(always)]
-    pub const fn region1_addr_end(&self) -> &REGION_ADDR_END {
-        self.region_addr_end(1)
-    }
-    #[doc = "0x20 - Region address register"]
-    #[inline(always)]
-    pub const fn region2_addr_end(&self) -> &REGION_ADDR_END {
-        self.region_addr_end(2)
-    }
-    #[doc = "0x2c - Region address register"]
-    #[inline(always)]
-    pub const fn region3_addr_end(&self) -> &REGION_ADDR_END {
-        self.region_addr_end(3)
-    }
-    #[doc = "0x0c..0x1c - Region access authority attribute register"]
-    #[inline(always)]
-    pub const fn region_attr(&self, n: usize) -> &REGION_ATTR {
-        #[allow(clippy::no_effect)]
-        [(); 4][n];
-        unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(12)
-                .add(12 * n)
-                .cast()
-        }
-    }
-    #[doc = "Iterator for array of:"]
-    #[doc = "0x0c..0x1c - Region access authority attribute register"]
-    #[inline(always)]
-    pub fn region_attr_iter(&self) -> impl Iterator<Item = &REGION_ATTR> {
-        (0..4).map(move |n| unsafe {
-            &*core::ptr::from_ref(self)
-                .cast::<u8>()
-                .add(12)
-                .add(12 * n)
-                .cast()
-        })
-    }
-    #[doc = "0x0c - Region access authority attribute register"]
-    #[inline(always)]
-    pub const fn region0_attr(&self) -> &REGION_ATTR {
-        self.region_attr(0)
-    }
-    #[doc = "0x18 - Region access authority attribute register"]
-    #[inline(always)]
-    pub const fn region1_attr(&self) -> &REGION_ATTR {
-        self.region_attr(1)
-    }
-    #[doc = "0x24 - Region access authority attribute register"]
-    #[inline(always)]
-    pub const fn region2_attr(&self) -> &REGION_ATTR {
-        self.region_attr(2)
-    }
-    #[doc = "0x30 - Region access authority attribute register"]
-    #[inline(always)]
-    pub const fn region3_attr(&self) -> &REGION_ATTR {
-        self.region_attr(3)
+    pub fn region_iter(&self) -> impl Iterator<Item = &REGION> {
+        self.region.iter()
     }
     #[doc = "0xc4 - APM function control register"]
     #[inline(always)]
     pub const fn func_ctrl(&self) -> &FUNC_CTRL {
         &self.func_ctrl
     }
-    #[doc = "0xc8 - M0 status register"]
+    #[doc = "0xc8..0xd8 - Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
     #[inline(always)]
-    pub const fn m0_status(&self) -> &M0_STATUS {
-        &self.m0_status
+    pub const fn m(&self, n: usize) -> &M {
+        &self.m[n]
     }
-    #[doc = "0xcc - M0 status clear register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xc8..0xd8 - Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
     #[inline(always)]
-    pub const fn m0_status_clr(&self) -> &M0_STATUS_CLR {
-        &self.m0_status_clr
-    }
-    #[doc = "0xd0 - M0 exception_info0 register"]
-    #[inline(always)]
-    pub const fn m0_exception_info0(&self) -> &M0_EXCEPTION_INFO0 {
-        &self.m0_exception_info0
-    }
-    #[doc = "0xd4 - M0 exception_info1 register"]
-    #[inline(always)]
-    pub const fn m0_exception_info1(&self) -> &M0_EXCEPTION_INFO1 {
-        &self.m0_exception_info1
+    pub fn m_iter(&self) -> impl Iterator<Item = &M> {
+        self.m.iter()
     }
     #[doc = "0xe8 - APM interrupt enable register"]
     #[inline(always)]
@@ -206,38 +66,20 @@ impl RegisterBlock {
 pub type REGION_FILTER_EN = crate::Reg<region_filter_en::REGION_FILTER_EN_SPEC>;
 #[doc = "Region filter enable register"]
 pub mod region_filter_en;
-#[doc = "REGION_ADDR_START (rw) register accessor: Region address register\n\nYou can [`read`](crate::Reg::read) this register and get [`region_addr_start::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`region_addr_start::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@region_addr_start`] module"]
-pub type REGION_ADDR_START = crate::Reg<region_addr_start::REGION_ADDR_START_SPEC>;
-#[doc = "Region address register"]
-pub mod region_addr_start;
-#[doc = "REGION_ADDR_END (rw) register accessor: Region address register\n\nYou can [`read`](crate::Reg::read) this register and get [`region_addr_end::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`region_addr_end::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@region_addr_end`] module"]
-pub type REGION_ADDR_END = crate::Reg<region_addr_end::REGION_ADDR_END_SPEC>;
-#[doc = "Region address register"]
-pub mod region_addr_end;
-#[doc = "REGION_ATTR (rw) register accessor: Region access authority attribute register\n\nYou can [`read`](crate::Reg::read) this register and get [`region_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`region_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@region_attr`] module"]
-pub type REGION_ATTR = crate::Reg<region_attr::REGION_ATTR_SPEC>;
-#[doc = "Region access authority attribute register"]
-pub mod region_attr;
+#[doc = "Cluster REGION%s, containing REGION*_ADDR_START, REGION*_ADDR_END, REGION*_ATTR"]
+pub use self::region::REGION;
+#[doc = r"Cluster"]
+#[doc = "Cluster REGION%s, containing REGION*_ADDR_START, REGION*_ADDR_END, REGION*_ATTR"]
+pub mod region;
 #[doc = "FUNC_CTRL (rw) register accessor: APM function control register\n\nYou can [`read`](crate::Reg::read) this register and get [`func_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`func_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@func_ctrl`] module"]
 pub type FUNC_CTRL = crate::Reg<func_ctrl::FUNC_CTRL_SPEC>;
 #[doc = "APM function control register"]
 pub mod func_ctrl;
-#[doc = "M0_STATUS (r) register accessor: M0 status register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_status`] module"]
-pub type M0_STATUS = crate::Reg<m0_status::M0_STATUS_SPEC>;
-#[doc = "M0 status register"]
-pub mod m0_status;
-#[doc = "M0_STATUS_CLR (w) register accessor: M0 status clear register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m0_status_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_status_clr`] module"]
-pub type M0_STATUS_CLR = crate::Reg<m0_status_clr::M0_STATUS_CLR_SPEC>;
-#[doc = "M0 status clear register"]
-pub mod m0_status_clr;
-#[doc = "M0_EXCEPTION_INFO0 (r) register accessor: M0 exception_info0 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_exception_info0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_exception_info0`] module"]
-pub type M0_EXCEPTION_INFO0 = crate::Reg<m0_exception_info0::M0_EXCEPTION_INFO0_SPEC>;
-#[doc = "M0 exception_info0 register"]
-pub mod m0_exception_info0;
-#[doc = "M0_EXCEPTION_INFO1 (r) register accessor: M0 exception_info1 register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_exception_info1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_exception_info1`] module"]
-pub type M0_EXCEPTION_INFO1 = crate::Reg<m0_exception_info1::M0_EXCEPTION_INFO1_SPEC>;
-#[doc = "M0 exception_info1 register"]
-pub mod m0_exception_info1;
+#[doc = "Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
+pub use self::m::M;
+#[doc = r"Cluster"]
+#[doc = "Cluster M%s, containing M?_STATUS, M?_STATUS_CLR, M?_EXCEPTION_INFO0, M?_EXCEPTION_INFO1"]
+pub mod m;
 #[doc = "INT_EN (rw) register accessor: APM interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_en::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_en::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_en`] module"]
 pub type INT_EN = crate::Reg<int_en::INT_EN_SPEC>;
 #[doc = "APM interrupt enable register"]

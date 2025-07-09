@@ -1,7 +1,138 @@
 _svd: "../esp32c61.base.svd"
 
+_include: 
+  - ../../../common_patches/clint.yaml
+  - ../../../common_patches/i2c_ana_mst.yaml
+  - ../../../common_patches/slc.yaml
+
 TIMG0:
   "*":
     _strip: "T_"
     
   _include: ../../../common_patches/tim_collect.yaml
+
+_modify:
+  SPI?:
+    groupName: SPI
+
+APB_SARADC:
+  _modify:
+    APB_TSENS_WAKE:
+      name: TSENS_WAKE
+    APB_TSENS_SAMPLE:
+      name: TSENS_SAMPLE
+  TSENS_SAMPLE:
+    _strip: TSENS_SAMPLE_
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+  _include:
+    - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+GPIO_EXT:
+  ETM_EVENT_CH%s_CFG:
+    _strip: ETM_CH0_
+  ETM_TASK_P*_CFG:
+    _strip: ETM_TASK_
+    _array:
+      GPIO*_EN: {}
+      GPIO*_SEL: {}
+
+HP_APM,LP_APM:
+  _expand_array:
+    REGION*_ADDR_START: {}
+    REGION*_ADDR_END: {}
+    REGION*_ATTR: {}
+
+  _cluster:
+    REGION%s:
+      REGION*_ADDR_START:
+        name: ADDR_START
+        _strip: REGION_
+      REGION*_ADDR_END:
+        name: ADDR_END
+        _strip: REGION_
+      REGION*_ATTR:
+        name: PMS_ATTR
+        _strip: REGION_
+        _array:
+          R?_X:
+            name: R%s_PMS_X
+          R?_W:
+            name: R%s_PMS_W
+          R?_R:
+            name: R%s_PMS_R
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
+
+  FUNC_CTRL:
+    _array:
+      M?_FUNC_EN:
+        name: M%s_PMS_FUNC_EN
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+LP_WDT:
+  _modify:
+    FEED:
+      name: WDTFEED
+
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
+
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+
+SPI[01]:
+  _strip: MEM_
+  "*":
+    _strip: MEM_
+
+PCR:
+  _include: ../../../common_patches/pcr.yaml
+
+# "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+#   _include: ../../../common_patches/int_strip.yaml
+
+
+LEDC:
+  _include:
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
+
+ECC:
+  INT_RAW:
+    _strip_end: _INT_RAW
+  INT_ST:
+    _strip_end: _INT_ST
+  INT_ENA:
+    _strip_end: _INT_ENA
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
+

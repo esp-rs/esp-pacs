@@ -91,9 +91,9 @@ pub struct RegisterBlock {
     rf_pwc: RF_PWC,
     backup_cfg: BACKUP_CFG,
     int_raw: INT_RAW,
-    hp_int_st: HP_INT_ST,
-    hp_int_ena: HP_INT_ENA,
-    hp_int_clr: HP_INT_CLR,
+    int_st: INT_ST,
+    int_ena: INT_ENA,
+    int_clr: INT_CLR,
     lp_int_raw: LP_INT_RAW,
     lp_int_st: LP_INT_ST,
     lp_int_ena: LP_INT_ENA,
@@ -558,18 +558,18 @@ impl RegisterBlock {
     }
     #[doc = "0x164 - need_des"]
     #[inline(always)]
-    pub const fn hp_int_st(&self) -> &HP_INT_ST {
-        &self.hp_int_st
+    pub const fn int_st(&self) -> &INT_ST {
+        &self.int_st
     }
     #[doc = "0x168 - need_des"]
     #[inline(always)]
-    pub const fn hp_int_ena(&self) -> &HP_INT_ENA {
-        &self.hp_int_ena
+    pub const fn int_ena(&self) -> &INT_ENA {
+        &self.int_ena
     }
     #[doc = "0x16c - need_des"]
     #[inline(always)]
-    pub const fn hp_int_clr(&self) -> &HP_INT_CLR {
-        &self.hp_int_clr
+    pub const fn int_clr(&self) -> &INT_CLR {
+        &self.int_clr
     }
     #[doc = "0x170 - need_des"]
     #[inline(always)]
@@ -1007,18 +1007,18 @@ pub mod backup_cfg;
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "need_des"]
 pub mod int_raw;
-#[doc = "HP_INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_st`] module"]
-pub type HP_INT_ST = crate::Reg<hp_int_st::HP_INT_ST_SPEC>;
+#[doc = "INT_ST (r) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_st::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_st`] module"]
+pub type INT_ST = crate::Reg<int_st::INT_ST_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_st;
-#[doc = "HP_INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`hp_int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_ena`] module"]
-pub type HP_INT_ENA = crate::Reg<hp_int_ena::HP_INT_ENA_SPEC>;
+pub mod int_st;
+#[doc = "INT_ENA (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`int_ena::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_ena::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_ena`] module"]
+pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_ena;
-#[doc = "HP_INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hp_int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hp_int_clr`] module"]
-pub type HP_INT_CLR = crate::Reg<hp_int_clr::HP_INT_CLR_SPEC>;
+pub mod int_ena;
+#[doc = "INT_CLR (w) register accessor: need_des\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_clr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_clr`] module"]
+pub type INT_CLR = crate::Reg<int_clr::INT_CLR_SPEC>;
 #[doc = "need_des"]
-pub mod hp_int_clr;
+pub mod int_clr;
 #[doc = "LP_INT_RAW (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`lp_int_raw::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lp_int_raw::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lp_int_raw`] module"]
 pub type LP_INT_RAW = crate::Reg<lp_int_raw::LP_INT_RAW_SPEC>;
 #[doc = "need_des"]
