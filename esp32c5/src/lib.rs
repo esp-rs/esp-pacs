@@ -244,6 +244,24 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
 #[doc(hidden)]
 pub mod interrupt;
 pub use self::interrupt::Interrupt;
+#[doc = "PLIC Peripheral"]
+pub type PLIC_MX = crate::Periph<plic_mx::RegisterBlock, 0x2000_1000>;
+impl core::fmt::Debug for PLIC_MX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_MX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_mx;
+#[doc = "PLIC Peripheral"]
+pub type PLIC_UX = crate::Periph<plic_ux::RegisterBlock, 0x2000_1400>;
+impl core::fmt::Debug for PLIC_UX {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("PLIC_UX").finish()
+    }
+}
+#[doc = "PLIC Peripheral"]
+pub mod plic_ux;
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub type AES = crate::Periph<aes::RegisterBlock, 0x6008_8000>;
 impl core::fmt::Debug for AES {
@@ -798,6 +816,10 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
 #[allow(non_snake_case)]
 pub struct Peripherals {
+    #[doc = "PLIC_MX"]
+    pub PLIC_MX: PLIC_MX,
+    #[doc = "PLIC_UX"]
+    pub PLIC_UX: PLIC_UX,
     #[doc = "AES"]
     pub AES: AES,
     #[doc = "AHB_DMA"]
@@ -942,6 +964,8 @@ impl Peripherals {
     pub unsafe fn steal() -> Self {
         DEVICE_PERIPHERALS = true;
         Peripherals {
+            PLIC_MX: PLIC_MX::steal(),
+            PLIC_UX: PLIC_UX::steal(),
             AES: AES::steal(),
             AHB_DMA: AHB_DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),

@@ -1,5 +1,8 @@
 _svd: ../esp32c5.base.svd
 
+_include:
+  - ../../../common_patches/plic.yaml
+
 AES:
   _modify:
     "IV_MEM*":
@@ -205,34 +208,32 @@ ECDSA:
 EFUSE:
   _include: ../../../common_patches/int_strip.yaml
 
-
-
 GPIO:
   _delete: "FUNC*_IN_SEL_CFG"
 
   _add:
     FUNC%s_IN_SEL_CFG:
-        dim: 128
-        dimIncrement: 0x4
-        description: ""
-        addressOffset: 0x2c4
-        size: 32
-        fields:
-          IN_SEL:
-            description: ""
-            bitOffset: 0
-            bitWidth: 7
-            access: read-write
-          IN_INV_SEL:
-            description: ""
-            bitOffset: 7
-            bitWidth: 1
-            access: read-write
-          SEL:
-            description: ""
-            bitOffset: 8
-            bitWidth: 1
-            access: read-write
+      dim: 128
+      dimIncrement: 0x4
+      description: ""
+      addressOffset: 0x2c4
+      size: 32
+      fields:
+        IN_SEL:
+          description: ""
+          bitOffset: 0
+          bitWidth: 7
+          access: read-write
+        IN_INV_SEL:
+          description: ""
+          bitOffset: 7
+          bitWidth: 1
+          access: read-write
+        SEL:
+          description: ""
+          bitOffset: 8
+          bitWidth: 1
+          access: read-write
 
   FUNC*_OUT_SEL_CFG:
     _modify:
@@ -248,7 +249,6 @@ GPIO:
   # _modify:
   #   "FUNC%s_OUT_SEL_CFG":
   #     dim: 30
-
 
 HMAC:
   _modify:
@@ -278,15 +278,13 @@ HP_APM:
         name: EXCEPTION_INFO1
         _strip: M0_
 
-
   FUNC_CTRL:
-      _array:
-        M?_FUNC_EN: {}
+    _array:
+      M?_FUNC_EN: {}
   INT_EN:
     _array:
       M?_APM_INT_EN:
         name: M%s_APM
-
 
 RMT:
   _delete: "RX_CH%sDATA"
@@ -433,7 +431,6 @@ RMT:
       "CH?_TX_LOOP":
         name: "CH%s_TX_LOOP"
 
-
 LP_WDT:
   _modify:
     CONFIG0:
@@ -484,7 +481,6 @@ RSA:
       size: 0x20
       access: read-write
 
-
 I2C0:
   _array:
     COMD*: {}
@@ -501,7 +497,7 @@ I2C0:
       FIFO_RDATA:
         access: read-write
 
-I2S0: 
+I2S0:
   _include: ../../../common_patches/int_strip.yaml
 
 LEDC:
@@ -516,7 +512,7 @@ LEDC:
         name: TICK_SEL
       CLK_DIV_TIMER:
         name: CLK_DIV
-  _include: 
+  _include:
     - ../../../common_patches/ledc_collect.yaml
     - ../../../common_patches/ledc_int.yaml
 
@@ -537,10 +533,9 @@ LP_APM0:
         name: EXCEPTION_INFO1
         _strip: M0_
 
-
   FUNC_CTRL:
-      _array:
-        M?_FUNC_EN: {}
+    _array:
+      M?_FUNC_EN: {}
   INT_EN:
     _array:
       M?_APM_INT_EN:
@@ -584,7 +579,7 @@ PCNT:
 MCPWM0:
   _include: ../../../common_patches/int_strip.yaml
 
-SHA: 
+SHA:
   _modify:
     "H_MEM*":
       dim: 16
@@ -680,8 +675,6 @@ UART0:
       RXFIFO_RD_BYTE:
         access: read-write
   _include: ../../../common_patches/int_strip.yaml
-
-
 
 _modify:
   SPI?:
