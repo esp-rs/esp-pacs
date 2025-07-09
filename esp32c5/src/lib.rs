@@ -12,7 +12,19 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
+    fn WIFI_MAC();
+    fn WIFI_MAC_NMI();
+    fn WIFI_PWR();
+    fn WIFI_BB();
+    fn BT_MAC();
+    fn BT_BB();
+    fn BT_BB_NMI();
+    fn LP_TIMER();
+    fn COEX();
+    fn BLE_TIMER();
+    fn BLE_SEC();
     fn I2C_MASTER();
+    fn ZB_MAC();
     fn PMU();
     fn EFUSE();
     fn LP_RTC_TIMER();
@@ -22,7 +34,13 @@ extern "C" {
     fn LP_APM_M0();
     fn LP_APM_M1();
     fn HUK();
+    fn FROM_CPU_INTR0();
+    fn FROM_CPU_INTR1();
+    fn FROM_CPU_INTR2();
+    fn FROM_CPU_INTR3();
     fn TRACE();
+    fn CACHE();
+    fn CPU_PERI_TIMEOUT();
     fn GPIO();
     fn GPIO_EXT();
     fn PAU();
@@ -32,6 +50,8 @@ extern "C" {
     fn HP_APM_M3();
     fn HP_APM_M4();
     fn LP_APM0();
+    fn CPU_APM_M0();
+    fn CPU_APM_M1();
     fn MSPI();
     fn I2S();
     fn UHCI0();
@@ -75,21 +95,27 @@ pub union Vector {
 #[link_section = ".rwtext"]
 #[no_mangle]
 pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: WIFI_MAC },
+    Vector {
+        _handler: WIFI_MAC_NMI,
+    },
+    Vector { _handler: WIFI_PWR },
+    Vector { _handler: WIFI_BB },
+    Vector { _handler: BT_MAC },
+    Vector { _handler: BT_BB },
+    Vector {
+        _handler: BT_BB_NMI,
+    },
+    Vector { _handler: LP_TIMER },
+    Vector { _handler: COEX },
+    Vector {
+        _handler: BLE_TIMER,
+    },
+    Vector { _handler: BLE_SEC },
     Vector {
         _handler: I2C_MASTER,
     },
-    Vector { _reserved: 0 },
+    Vector { _handler: ZB_MAC },
     Vector { _handler: PMU },
     Vector { _handler: EFUSE },
     Vector {
@@ -106,14 +132,24 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
         _handler: LP_APM_M1,
     },
     Vector { _handler: HUK },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: FROM_CPU_INTR0,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR1,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR2,
+    },
+    Vector {
+        _handler: FROM_CPU_INTR3,
+    },
     Vector { _reserved: 0 },
     Vector { _handler: TRACE },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: CACHE },
+    Vector {
+        _handler: CPU_PERI_TIMEOUT,
+    },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_EXT },
     Vector { _handler: PAU },
@@ -135,8 +171,12 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
         _handler: HP_APM_M4,
     },
     Vector { _handler: LP_APM0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: CPU_APM_M0,
+    },
+    Vector {
+        _handler: CPU_APM_M1,
+    },
     Vector { _handler: MSPI },
     Vector { _handler: I2S },
     Vector { _handler: UHCI0 },
@@ -357,6 +397,15 @@ impl core::fmt::Debug for I2S0 {
 }
 #[doc = "I2S (Inter-IC Sound) Controller 0"]
 pub mod i2s0;
+#[doc = "Interrupt Controller (Core 0)"]
+pub type INTERRUPT_CORE0 = crate::Periph<interrupt_core0::RegisterBlock, 0x6001_0000>;
+impl core::fmt::Debug for INTERRUPT_CORE0 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("INTERRUPT_CORE0").finish()
+    }
+}
+#[doc = "Interrupt Controller (Core 0)"]
+pub mod interrupt_core0;
 #[doc = "INTPRI Peripheral"]
 pub type INTPRI = crate::Periph<intpri::RegisterBlock, 0x600c_5000>;
 impl core::fmt::Debug for INTPRI {
@@ -783,6 +832,8 @@ pub struct Peripherals {
     pub I2C0: I2C0,
     #[doc = "I2S0"]
     pub I2S0: I2S0,
+    #[doc = "INTERRUPT_CORE0"]
+    pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "INTPRI"]
     pub INTPRI: INTPRI,
     #[doc = "IO_MUX"]
@@ -908,6 +959,7 @@ impl Peripherals {
             HUK: HUK::steal(),
             I2C0: I2C0::steal(),
             I2S0: I2S0::steal(),
+            INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             INTPRI: INTPRI::steal(),
             IO_MUX: IO_MUX::steal(),
             KEYMNG: KEYMNG::steal(),
