@@ -5,18 +5,18 @@
   <name>ESP32-C5</name>
   <series>ESP32 C-Series</series>
   <version>1</version>
-  <description>TODO</description>
+  <description>32-bit RISC-V MCU &amp; 2.4 and 5 GHz Wi-Fi 6 &amp; Bluetooth 5 (LE) &amp; IEEE 802.15.4 </description>
   <licenseText>
     Copyright 2025 Espressif Systems (Shanghai) PTE LTD
 
-    Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+    Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
         http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+    distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
@@ -261,7 +261,7 @@ In DMA-AES working mode:\\
           <fields>
             <field>
               <name>BLOCK_NUM</name>
-              <description>Represents the Block Number of plaintext or ciphertext when the AES accelerator operates under the DMA-AES working mode. For details, see Section &lt;a href=sec:aes-block-number&quot;&gt;link&lt;/a&gt;. &quot;</description>
+              <description>Represents the Block Number of plaintext or ciphertext when the AES accelerator operates under the DMA-AES working mode. For details, see Section &lt;a href=sec:aes-block-number"&gt;link&lt;/a&gt;. "</description>
               <bitOffset>0</bitOffset>
               <bitWidth>32</bitWidth>
               <access>read-write</access>
@@ -10226,8 +10226,8 @@ Or\\
 Or\\
 256: Bit %s of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
-&quot;</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
+"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10279,8 +10279,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
-&quot;</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
+"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10332,8 +10332,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
-&quot;</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
+"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10385,8 +10385,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
-&quot;</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
+"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -10438,8 +10438,8 @@ For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-
 Or\\
 256: Bit 0 of GPIO_OUT_REG and GPIO_ENABLE_REG are selected as the output value and output enable.
 
-For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix&quot;&gt;link&lt;/a&gt;.
-&quot;</description>
+For the detailed signal list, see Table &lt;a href=tab:iomuxgpio-periph-signals-via-gpio-matrix"&gt;link&lt;/a&gt;.
+"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>9</bitWidth>
               <access>read-write</access>
@@ -14569,7 +14569,7 @@ op_code is the command\\
 4: END\\
 6: RSTART\\
 Byte_num represents the number of bytes that need to be sent or received.\\
-ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure &lt;a href=fig:i2c-cmd-structure&quot;&gt;link&lt;/a&gt; for more information. \\\tododone{for CJ, please add a hyperlink for I2C CMD structure.CJ: done.}&quot;</description>
+ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure &lt;a href=fig:i2c-cmd-structure"&gt;link&lt;/a&gt; for more information. \\\tododone{for CJ, please add a hyperlink for I2C CMD structure.CJ: done.}"</description>
               <bitOffset>0</bitOffset>
               <bitWidth>14</bitWidth>
               <access>read-write</access>
@@ -16384,6 +16384,1381 @@ Measurement unit: i2c_sclk \\</description>
             <field>
               <name>DATE</name>
               <description>I2S version control register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>28</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>INTERRUPT_CORE0</name>
+      <description>Interrupt Controller (Core 0)</description>
+      <groupName>INTERRUPT_CORE0</groupName>
+      <baseAddress>0x60010000</baseAddress>
+      <addressBlock>
+        <offset>0x0</offset>
+        <size>0x154</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <interrupt>
+        <name>WIFI_MAC</name>
+        <value>0</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_MAC_NMI</name>
+        <value>1</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_PWR</name>
+        <value>2</value>
+      </interrupt>
+      <interrupt>
+        <name>WIFI_BB</name>
+        <value>3</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_MAC</name>
+        <value>4</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB</name>
+        <value>5</value>
+      </interrupt>
+      <interrupt>
+        <name>BT_BB_NMI</name>
+        <value>6</value>
+      </interrupt>
+      <interrupt>
+        <name>LP_TIMER</name>
+        <value>7</value>
+      </interrupt>
+      <interrupt>
+        <name>COEX</name>
+        <value>8</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_TIMER</name>
+        <value>9</value>
+      </interrupt>
+      <interrupt>
+        <name>BLE_SEC</name>
+        <value>10</value>
+      </interrupt>
+      <interrupt>
+        <name>ZB_MAC</name>
+        <value>12</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR0</name>
+        <value>23</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR1</name>
+        <value>24</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR2</name>
+        <value>25</value>
+      </interrupt>
+      <interrupt>
+        <name>FROM_CPU_INTR3</name>
+        <value>26</value>
+      </interrupt>
+      <interrupt>
+        <name>CACHE</name>
+        <value>29</value>
+      </interrupt>
+      <interrupt>
+        <name>CPU_PERI_TIMEOUT</name>
+        <value>30</value>
+      </interrupt>
+      <interrupt>
+        <name>CPU_APM_M0</name>
+        <value>42</value>
+      </interrupt>
+      <interrupt>
+        <name>CPU_APM_M1</name>
+        <value>43</value>
+      </interrupt>
+      <registers>
+        <register>
+          <name>WIFI_MAC_INTR_MAP</name>
+          <description>WIFI_MAC_INTR mapping register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>WIFI_MAC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WIFI_MAC_NMI_MAP</name>
+          <description>WIFI_MAC_NMI mapping register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>WIFI_MAC_NMI_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WIFI_PWR_INTR_MAP</name>
+          <description>WIFI_PWR_INTR mapping register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>WIFI_PWR_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>WIFI_BB_INTR_MAP</name>
+          <description>WIFI_BB_INTR mapping register</description>
+          <addressOffset>0xc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>WIFI_BB_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BT_MAC_INTR_MAP</name>
+          <description>BT_MAC_INTR mapping register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BT_MAC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BT_BB_INTR_MAP</name>
+          <description>BT_BB_INTR mapping register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BT_BB_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BT_BB_NMI_MAP</name>
+          <description>BT_BB_NMI mapping register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BT_BB_NMI_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_TIMER_INTR_MAP</name>
+          <description>LP_TIMER_INTR mapping register</description>
+          <addressOffset>0x1c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_TIMER_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>COEX_INTR_MAP</name>
+          <description>COEX_INTR mapping register</description>
+          <addressOffset>0x20</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>COEX_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BLE_TIMER_INTR_MAP</name>
+          <description>BLE_TIMER_INTR mapping register</description>
+          <addressOffset>0x24</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BLE_TIMER_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BLE_SEC_INTR_MAP</name>
+          <description>BLE_SEC_INTR mapping register</description>
+          <addressOffset>0x28</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BLE_SEC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_MST_INTR_MAP</name>
+          <description>I2C_MST_INTR mapping register</description>
+          <addressOffset>0x2c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_MST_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ZB_MAC_INTR_MAP</name>
+          <description>ZB_MAC_INTR mapping register</description>
+          <addressOffset>0x30</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ZB_MAC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PMU_INTR_MAP</name>
+          <description>PMU_INTR mapping register</description>
+          <addressOffset>0x34</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PMU_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>EFUSE_INTR_MAP</name>
+          <description>EFUSE_INTR mapping register</description>
+          <addressOffset>0x38</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>EFUSE_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_RTC_TIMER_INTR_MAP</name>
+          <description>LP_RTC_TIMER_INTR mapping register</description>
+          <addressOffset>0x3c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_RTC_TIMER_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_UART_INTR_MAP</name>
+          <description>LP_UART_INTR mapping register</description>
+          <addressOffset>0x40</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_UART_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_I2C_INTR_MAP</name>
+          <description>LP_I2C_INTR mapping register</description>
+          <addressOffset>0x44</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_I2C_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_WDT_INTR_MAP</name>
+          <description>LP_WDT_INTR mapping register</description>
+          <addressOffset>0x48</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_WDT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_PERI_TIMEOUT_INTR_MAP</name>
+          <description>LP_PERI_TIMEOUT_INTR mapping register</description>
+          <addressOffset>0x4c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_PERI_TIMEOUT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_APM_M0_INTR_MAP</name>
+          <description>LP_APM_M0_INTR mapping register</description>
+          <addressOffset>0x50</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_APM_M0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_APM_M1_INTR_MAP</name>
+          <description>LP_APM_M1_INTR mapping register</description>
+          <addressOffset>0x54</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_APM_M1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HUK_INTR_MAP</name>
+          <description>HUK_INTR mapping register</description>
+          <addressOffset>0x58</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HUK_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_0_MAP</name>
+          <description>CPU_INTR_FROM_CPU_0 mapping register</description>
+          <addressOffset>0x5c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_0_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_1_MAP</name>
+          <description>CPU_INTR_FROM_CPU_1 mapping register</description>
+          <addressOffset>0x60</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_1_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_2_MAP</name>
+          <description>CPU_INTR_FROM_CPU_2 mapping register</description>
+          <addressOffset>0x64</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_2_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_3_MAP</name>
+          <description>CPU_INTR_FROM_CPU_3 mapping register</description>
+          <addressOffset>0x68</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_3_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>BUS_MONITOR_INTR_MAP</name>
+          <description>BUS_MONITOR_INTR mapping register</description>
+          <addressOffset>0x6c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>BUS_MONITOR_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TRACE_INTR_MAP</name>
+          <description>TRACE_INTR mapping register</description>
+          <addressOffset>0x70</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TRACE_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CACHE_INTR_MAP</name>
+          <description>CACHE_INTR mapping register</description>
+          <addressOffset>0x74</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CACHE_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_PERI_TIMEOUT_INTR_MAP</name>
+          <description>CPU_PERI_TIMEOUT_INTR mapping register</description>
+          <addressOffset>0x78</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_PERI_TIMEOUT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO_INTERRUPT_PRO_MAP</name>
+          <description>GPIO_INTERRUPT_PRO mapping register</description>
+          <addressOffset>0x7c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>GPIO_INTERRUPT_PRO_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPIO_INTERRUPT_EXT_MAP</name>
+          <description>GPIO_INTERRUPT_EXT mapping register</description>
+          <addressOffset>0x80</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>GPIO_INTERRUPT_EXT_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PAU_INTR_MAP</name>
+          <description>PAU_INTR mapping register</description>
+          <addressOffset>0x84</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PAU_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_PERI_TIMEOUT_INTR_MAP</name>
+          <description>HP_PERI_TIMEOUT_INTR mapping register</description>
+          <addressOffset>0x88</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_PERI_TIMEOUT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MODEM_PERI_TIMEOUT_INTR_MAP</name>
+          <description>MODEM_PERI_TIMEOUT_INTR mapping register</description>
+          <addressOffset>0x8c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>MODEM_PERI_TIMEOUT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_APM_M0_INTR_MAP</name>
+          <description>HP_APM_M0_INTR mapping register</description>
+          <addressOffset>0x90</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_APM_M0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_APM_M1_INTR_MAP</name>
+          <description>HP_APM_M1_INTR mapping register</description>
+          <addressOffset>0x94</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_APM_M1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_APM_M2_INTR_MAP</name>
+          <description>HP_APM_M2_INTR mapping register</description>
+          <addressOffset>0x98</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_APM_M2_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_APM_M3_INTR_MAP</name>
+          <description>HP_APM_M3_INTR mapping register</description>
+          <addressOffset>0x9c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_APM_M3_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>HP_APM_M4_INTR_MAP</name>
+          <description>HP_APM_M4_INTR mapping register</description>
+          <addressOffset>0xa0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>HP_APM_M4_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LP_APM0_INTR_MAP</name>
+          <description>LP_APM0_INTR mapping register</description>
+          <addressOffset>0xa4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LP_APM0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>MSPI_INTR_MAP</name>
+          <description>MSPI_INTR mapping register</description>
+          <addressOffset>0xa8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>MSPI_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2S_INTR_MAP</name>
+          <description>I2S_INTR mapping register</description>
+          <addressOffset>0xac</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2S_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UHCI0_INTR_MAP</name>
+          <description>UHCI0_INTR mapping register</description>
+          <addressOffset>0xb0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>UHCI0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UART0_INTR_MAP</name>
+          <description>UART0_INTR mapping register</description>
+          <addressOffset>0xb4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>UART0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>UART1_INTR_MAP</name>
+          <description>UART1_INTR mapping register</description>
+          <addressOffset>0xb8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>UART1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>LEDC_INTR_MAP</name>
+          <description>LEDC_INTR mapping register</description>
+          <addressOffset>0xbc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>LEDC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TWAI0_INTR_MAP</name>
+          <description>TWAI0_INTR mapping register</description>
+          <addressOffset>0xc0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TWAI0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TWAI0_TIMER_INTR_MAP</name>
+          <description>TWAI0_TIMER_INTR mapping register</description>
+          <addressOffset>0xc4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TWAI0_TIMER_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TWAI1_INTR_MAP</name>
+          <description>TWAI1_INTR mapping register</description>
+          <addressOffset>0xc8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TWAI1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TWAI1_TIMER_INTR_MAP</name>
+          <description>TWAI1_TIMER_INTR mapping register</description>
+          <addressOffset>0xcc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TWAI1_TIMER_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>USB_SERIAL_JTAG_INTR_MAP</name>
+          <description>USB_SERIAL_JTAG_INTR mapping register</description>
+          <addressOffset>0xd0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>USB_SERIAL_JTAG_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RMT_INTR_MAP</name>
+          <description>RMT_INTR mapping register</description>
+          <addressOffset>0xd4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>RMT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>I2C_EXT0_INTR_MAP</name>
+          <description>I2C_EXT0_INTR mapping register</description>
+          <addressOffset>0xd8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>I2C_EXT0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TG0_T0_INTR_MAP</name>
+          <description>TG0_T0_INTR mapping register</description>
+          <addressOffset>0xdc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TG0_T0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TG0_WDT_INTR_MAP</name>
+          <description>TG0_WDT_INTR mapping register</description>
+          <addressOffset>0xe0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TG0_WDT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TG1_T0_INTR_MAP</name>
+          <description>TG1_T0_INTR mapping register</description>
+          <addressOffset>0xe4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TG1_T0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>TG1_WDT_INTR_MAP</name>
+          <description>TG1_WDT_INTR mapping register</description>
+          <addressOffset>0xe8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>TG1_WDT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSTIMER_TARGET0_INTR_MAP</name>
+          <description>SYSTIMER_TARGET0_INTR mapping register</description>
+          <addressOffset>0xec</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SYSTIMER_TARGET0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSTIMER_TARGET1_INTR_MAP</name>
+          <description>SYSTIMER_TARGET1_INTR mapping register</description>
+          <addressOffset>0xf0</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SYSTIMER_TARGET1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SYSTIMER_TARGET2_INTR_MAP</name>
+          <description>SYSTIMER_TARGET2_INTR mapping register</description>
+          <addressOffset>0xf4</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SYSTIMER_TARGET2_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>APB_ADC_INTR_MAP</name>
+          <description>APB_ADC_INTR mapping register</description>
+          <addressOffset>0xf8</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>APB_ADC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PWM_INTR_MAP</name>
+          <description>PWM_INTR mapping register</description>
+          <addressOffset>0xfc</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PWM_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PCNT_INTR_MAP</name>
+          <description>PCNT_INTR mapping register</description>
+          <addressOffset>0x100</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PCNT_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PARL_IO_TX_INTR_MAP</name>
+          <description>PARL_IO_TX_INTR mapping register</description>
+          <addressOffset>0x104</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PARL_IO_TX_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>PARL_IO_RX_INTR_MAP</name>
+          <description>PARL_IO_RX_INTR mapping register</description>
+          <addressOffset>0x108</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>PARL_IO_RX_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_IN_CH0_INTR_MAP</name>
+          <description>DMA_IN_CH0_INTR mapping register</description>
+          <addressOffset>0x10c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_IN_CH0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_IN_CH1_INTR_MAP</name>
+          <description>DMA_IN_CH1_INTR mapping register</description>
+          <addressOffset>0x110</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_IN_CH1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_IN_CH2_INTR_MAP</name>
+          <description>DMA_IN_CH2_INTR mapping register</description>
+          <addressOffset>0x114</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_IN_CH2_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_OUT_CH0_INTR_MAP</name>
+          <description>DMA_OUT_CH0_INTR mapping register</description>
+          <addressOffset>0x118</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_OUT_CH0_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_OUT_CH1_INTR_MAP</name>
+          <description>DMA_OUT_CH1_INTR mapping register</description>
+          <addressOffset>0x11c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_OUT_CH1_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>DMA_OUT_CH2_INTR_MAP</name>
+          <description>DMA_OUT_CH2_INTR mapping register</description>
+          <addressOffset>0x120</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>DMA_OUT_CH2_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>GPSPI2_INTR_MAP</name>
+          <description>GPSPI2_INTR mapping register</description>
+          <addressOffset>0x124</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>GPSPI2_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>AES_INTR_MAP</name>
+          <description>AES_INTR mapping register</description>
+          <addressOffset>0x128</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>AES_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>SHA_INTR_MAP</name>
+          <description>SHA_INTR mapping register</description>
+          <addressOffset>0x12c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>SHA_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>RSA_INTR_MAP</name>
+          <description>RSA_INTR mapping register</description>
+          <addressOffset>0x130</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>RSA_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ECC_INTR_MAP</name>
+          <description>ECC_INTR mapping register</description>
+          <addressOffset>0x134</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ECC_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>ECDSA_INTR_MAP</name>
+          <description>ECDSA_INTR mapping register</description>
+          <addressOffset>0x138</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>ECDSA_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>KM_INTR_MAP</name>
+          <description>KM_INTR mapping register</description>
+          <addressOffset>0x13c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>KM_INTR_MAP</name>
+              <description>Configures the interrupt source into one CPU interrupt.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>6</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_STATUS_0</name>
+          <description>Status register for interrupt sources 0 ~ 31</description>
+          <addressOffset>0x140</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>INT_STATUS_0</name>
+              <description>Represents the status of the interrupt sources numbered from .Each bit corresponds to one interrupt source
+0:The corresponding interrupt source triggered an interrupt
+1:No interrupt triggered</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_STATUS_1</name>
+          <description>Status register for interrupt sources 32 ~ 63</description>
+          <addressOffset>0x144</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>INT_STATUS_1</name>
+              <description>Represents the status of the interrupt sources numbered from .Each bit corresponds to one interrupt source
+0:The corresponding interrupt source triggered an interrupt
+1:No interrupt triggered</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INT_STATUS_2</name>
+          <description>Status register for interrupt sources 64 ~ 95</description>
+          <addressOffset>0x148</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>INT_STATUS_2</name>
+              <description>Represents the status of the interrupt sources numbered from .Each bit corresponds to one interrupt source
+0:The corresponding interrupt source triggered an interrupt
+1:No interrupt triggered</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>32</bitWidth>
+              <access>read-only</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CLOCK_GATE</name>
+          <description>Interrupt clock gating configure register</description>
+          <addressOffset>0x14c</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>REG_CLK_EN</name>
+              <description>Interrupt clock gating configure register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>INTERRUPT_DATE</name>
+          <description>Version control register</description>
+          <addressOffset>0x7fc</addressOffset>
+          <size>32</size>
+          <resetValue>0x2312061</resetValue>
+          <fields>
+            <field>
+              <name>INTERRUPT_DATE</name>
+              <description>Version control register</description>
               <bitOffset>0</bitOffset>
               <bitWidth>28</bitWidth>
               <access>read-write</access>
@@ -53834,7 +55209,7 @@ Can be configured in CONF state.</description>
             <field>
               <name>SPI_CK_OUT_EDGE</name>
               <description>Configures SPI clock mode together with SPI_CK_IDLE_EDGE.
-Can be configured in CONF state. For more information, see Section &lt;a href=&quot;GP-SPI2 master clock control&quot;&gt;link&lt;/a&gt;.</description>
+Can be configured in CONF state. For more information, see Section &lt;a href="GP-SPI2 master clock control"&gt;link&lt;/a&gt;.</description>
               <bitOffset>9</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -54576,7 +55951,7 @@ Can be configured in CONF state.</description>
             </field>
             <field>
               <name>SPI_RX_AFIFO_RST</name>
-              <description>Configures whether or not to reset spi_rx_afifo as shown in Figure &lt;a href=&quot;fig:spi-master-data-flow-control&quot;&gt;link&lt;/a&gt; and in Figure  &lt;a href=&quot;fig:spi-slave-data-flow-control&quot;&gt;link&lt;/a&gt;.\\
+              <description>Configures whether or not to reset spi_rx_afifo as shown in Figure &lt;a href="fig:spi-master-data-flow-control"&gt;link&lt;/a&gt; and in Figure  &lt;a href="fig:spi-slave-data-flow-control"&gt;link&lt;/a&gt;.\\
 0: Not reset\\
 1: Reset\\
 spi_rx_afifo is used to receive data in SPI master and slave transfer.</description>
@@ -54586,7 +55961,7 @@ spi_rx_afifo is used to receive data in SPI master and slave transfer.</descript
             </field>
             <field>
               <name>SPI_BUF_AFIFO_RST</name>
-              <description>Configures whether or not to reset buf_tx_afifo as shown in Figure &lt;a href=&quot;fig:spi-master-data-flow-control&quot;&gt;link&lt;/a&gt; and in Figure  &lt;a href=&quot;fig:spi-slave-data-flow-control&quot;&gt;link&lt;/a&gt;.\\
+              <description>Configures whether or not to reset buf_tx_afifo as shown in Figure &lt;a href="fig:spi-master-data-flow-control"&gt;link&lt;/a&gt; and in Figure  &lt;a href="fig:spi-slave-data-flow-control"&gt;link&lt;/a&gt;.\\
 0: Not reset\\
 1: Reset\\
 buf_tx_afifo is used to send data out in CPU-controlled master and slave transfer.</description>
@@ -54596,7 +55971,7 @@ buf_tx_afifo is used to send data out in CPU-controlled master and slave transfe
             </field>
             <field>
               <name>SPI_DMA_AFIFO_RST</name>
-              <description>Configures whether or not to reset dma_tx_afifo as shown in Figure &lt;a href=&quot;fig:spi-master-data-flow-control&quot;&gt;link&lt;/a&gt; and in Figure  &lt;a href=&quot;fig:spi-slave-data-flow-control&quot;&gt;link&lt;/a&gt;.\\
+              <description>Configures whether or not to reset dma_tx_afifo as shown in Figure &lt;a href="fig:spi-master-data-flow-control"&gt;link&lt;/a&gt; and in Figure  &lt;a href="fig:spi-slave-data-flow-control"&gt;link&lt;/a&gt;.\\
 0: Not reset\\
 1: Reset\\
 dma_tx_afifo is used to send data out in DMA-controlled slave transfer.</description>
@@ -55643,8 +57018,8 @@ Can be configured in CONF state.</description>
             <field>
               <name>SPI_CLK_MODE_13</name>
               <description>Configure clock mode.\\
-0: Support SPI clock mode 0 or 2. See Table &lt;a href=&quot;table:clock_pol_slave&quot;&gt;link&lt;/a&gt;.\\
-1: Support SPI clock mode 1 or 3. See Table &lt;a href=&quot;table:clock_pol_slave&quot;&gt;link&lt;/a&gt;.\\</description>
+0: Support SPI clock mode 0 or 2. See Table &lt;a href="table:clock_pol_slave"&gt;link&lt;/a&gt;.\\
+1: Support SPI clock mode 1 or 3. See Table &lt;a href="table:clock_pol_slave"&gt;link&lt;/a&gt;.\\</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -58346,10 +59721,10 @@ exception. This should be modified only when SETTINGS[ENA] = ’0’.
             </field>
             <field>
               <name>TBFBO</name>
-              <description>All TXT buffers shall go to &quot;TX failed&quot; state when CTU CAN FD becomes bus-off.
-0b0 - TXTBUF_FAILED_BUS_OFF_DISABLED - TXT Buffers dont go to &quot;TX failed&quot; state when CTU CAN
+              <description>All TXT buffers shall go to "TX failed" state when CTU CAN FD becomes bus-off.
+0b0 - TXTBUF_FAILED_BUS_OFF_DISABLED - TXT Buffers dont go to "TX failed" state when CTU CAN
 FD becomes bus-off.
-0b1 - TXTBUF_FAILED_BUS_OFF_ENABLED - TXT Buffers go to &quot;TX failed&quot; state when CTU CAN FD
+0b1 - TXTBUF_FAILED_BUS_OFF_ENABLED - TXT Buffers go to "TX failed" state when CTU CAN FD
 becomes bus-off.</description>
               <bitOffset>25</bitOffset>
               <bitWidth>1</bitWidth>
@@ -58401,7 +59776,7 @@ cleared by COMMAND[RRB].
             </field>
             <field>
               <name>TXNF</name>
-              <description>TXT buffers status. This bit is set if at least one TXT buffer is in &quot;Empty&quot; state.
+              <description>TXT buffers status. This bit is set if at least one TXT buffer is in "Empty" state.
 0: not full
 1: full</description>
               <bitOffset>2</bitOffset>
@@ -58477,7 +59852,7 @@ Buffer.</description>
             </field>
             <field>
               <name>TXDPE</name>
-              <description>TXT Buffer double parity error. Set in TXT Buffer Backup mode when parity error is detected in &quot;backup&quot;
+              <description>TXT Buffer double parity error. Set in TXT Buffer Backup mode when parity error is detected in "backup"
 TXT Buffer.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
@@ -58694,7 +60069,7 @@ will re-activate the interrupt.</description>
               <name>TXBHCI_INT_ST</name>
               <description>The masked interrupt status of TWAIFD_TXBHCI_INT.
 TXT buffer HW command interrupt. Anytime TXT buffer receives HW command from CAN Core which
-changes TXT buffer state to &quot;TX OK&quot;, &quot;Error&quot; or &quot;Aborted&quot;, this interrupt will be generated.</description>
+changes TXT buffer state to "TX OK", "Error" or "Aborted", this interrupt will be generated.</description>
               <bitOffset>11</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
@@ -59713,13 +61088,13 @@ FRAME_FORMAT_W, next IDENTIFIER_W etc. This register shall be read by 32 bit acc
               <description>Status of TXT buffer 1.
 0b0000 - TXT_NOT_EXIST - TXT buffer does not exist in the core (applies only to TXT buffers 3-8, when CTU
 CAN FD was synthesized with less than 8 TXT buffers).
-0b0001 - TXT_RDY - TXT buffer is in &quot;Ready&quot; state, it is waiting for CTU CAN FD to start transmission from it.
-0b0010 - TXT_TRAN - TXT buffer is in &quot;TX in progress&quot; state. CTU CAN FD is transmitting frame.
-0b0011 - TXT_ABTP - TXT buffer is in &quot;Abort in progress&quot; state.
-0b0100 - TXT_TOK - TXT buffer is in &quot;TX OK&quot; state.
-0b0110 - TXT_ERR - TXT buffer is in &quot;Failed&quot; state.
-0b0111 - TXT_ABT - TXT buffer is in &quot;Aborted&quot; state.
-0b1000 - TXT_ETY - TXT buffer is in &quot;Empty&quot; state.</description>
+0b0001 - TXT_RDY - TXT buffer is in "Ready" state, it is waiting for CTU CAN FD to start transmission from it.
+0b0010 - TXT_TRAN - TXT buffer is in "TX in progress" state. CTU CAN FD is transmitting frame.
+0b0011 - TXT_ABTP - TXT buffer is in "Abort in progress" state.
+0b0100 - TXT_TOK - TXT buffer is in "TX OK" state.
+0b0110 - TXT_ERR - TXT buffer is in "Failed" state.
+0b0111 - TXT_ABT - TXT buffer is in "Aborted" state.
+0b1000 - TXT_ETY - TXT buffer is in "Empty" state.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>4</bitWidth>
               <access>read-only</access>
@@ -59784,21 +61159,21 @@ CAN FD was synthesized with less than 8 TXT buffers).
           <fields>
             <field>
               <name>TXCE</name>
-              <description>Issues &quot;set empty&quot; command.</description>
+              <description>Issues "set empty" command.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
               <name>TXCR</name>
-              <description>Issues &quot;set ready&quot; command.</description>
+              <description>Issues "set ready" command.</description>
               <bitOffset>1</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>
             </field>
             <field>
               <name>TXCA</name>
-              <description>Issues &quot;set abort&quot; command.</description>
+              <description>Issues "set abort" command.</description>
               <bitOffset>2</bitOffset>
               <bitWidth>1</bitWidth>
               <access>write-only</access>

@@ -3,8 +3,32 @@
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
+    #[doc = "0 - WIFI_MAC"]
+    WIFI_MAC = 0,
+    #[doc = "1 - WIFI_MAC_NMI"]
+    WIFI_MAC_NMI = 1,
+    #[doc = "2 - WIFI_PWR"]
+    WIFI_PWR = 2,
+    #[doc = "3 - WIFI_BB"]
+    WIFI_BB = 3,
+    #[doc = "4 - BT_MAC"]
+    BT_MAC = 4,
+    #[doc = "5 - BT_BB"]
+    BT_BB = 5,
+    #[doc = "6 - BT_BB_NMI"]
+    BT_BB_NMI = 6,
+    #[doc = "7 - LP_TIMER"]
+    LP_TIMER = 7,
+    #[doc = "8 - COEX"]
+    COEX = 8,
+    #[doc = "9 - BLE_TIMER"]
+    BLE_TIMER = 9,
+    #[doc = "10 - BLE_SEC"]
+    BLE_SEC = 10,
     #[doc = "11 - I2C_MASTER"]
     I2C_MASTER = 11,
+    #[doc = "12 - ZB_MAC"]
+    ZB_MAC = 12,
     #[doc = "13 - PMU"]
     PMU = 13,
     #[doc = "14 - EFUSE"]
@@ -23,8 +47,20 @@ pub enum Interrupt {
     LP_APM_M1 = 21,
     #[doc = "22 - HUK"]
     HUK = 22,
+    #[doc = "23 - FROM_CPU_INTR0"]
+    FROM_CPU_INTR0 = 23,
+    #[doc = "24 - FROM_CPU_INTR1"]
+    FROM_CPU_INTR1 = 24,
+    #[doc = "25 - FROM_CPU_INTR2"]
+    FROM_CPU_INTR2 = 25,
+    #[doc = "26 - FROM_CPU_INTR3"]
+    FROM_CPU_INTR3 = 26,
     #[doc = "28 - TRACE"]
     TRACE = 28,
+    #[doc = "29 - CACHE"]
+    CACHE = 29,
+    #[doc = "30 - CPU_PERI_TIMEOUT"]
+    CPU_PERI_TIMEOUT = 30,
     #[doc = "31 - GPIO"]
     GPIO = 31,
     #[doc = "32 - GPIO_EXT"]
@@ -43,6 +79,10 @@ pub enum Interrupt {
     HP_APM_M4 = 40,
     #[doc = "41 - LP_APM0"]
     LP_APM0 = 41,
+    #[doc = "42 - CPU_APM_M0"]
+    CPU_APM_M0 = 42,
+    #[doc = "43 - CPU_APM_M1"]
+    CPU_APM_M1 = 43,
     #[doc = "44 - MSPI"]
     MSPI = 44,
     #[doc = "45 - I2S"]
@@ -115,7 +155,19 @@ impl Interrupt {
     #[inline]
     pub fn try_from(value: u8) -> Result<Self, TryFromInterruptError> {
         match value {
+            0 => Ok(Interrupt::WIFI_MAC),
+            1 => Ok(Interrupt::WIFI_MAC_NMI),
+            2 => Ok(Interrupt::WIFI_PWR),
+            3 => Ok(Interrupt::WIFI_BB),
+            4 => Ok(Interrupt::BT_MAC),
+            5 => Ok(Interrupt::BT_BB),
+            6 => Ok(Interrupt::BT_BB_NMI),
+            7 => Ok(Interrupt::LP_TIMER),
+            8 => Ok(Interrupt::COEX),
+            9 => Ok(Interrupt::BLE_TIMER),
+            10 => Ok(Interrupt::BLE_SEC),
             11 => Ok(Interrupt::I2C_MASTER),
+            12 => Ok(Interrupt::ZB_MAC),
             13 => Ok(Interrupt::PMU),
             14 => Ok(Interrupt::EFUSE),
             15 => Ok(Interrupt::LP_RTC_TIMER),
@@ -125,7 +177,13 @@ impl Interrupt {
             20 => Ok(Interrupt::LP_APM_M0),
             21 => Ok(Interrupt::LP_APM_M1),
             22 => Ok(Interrupt::HUK),
+            23 => Ok(Interrupt::FROM_CPU_INTR0),
+            24 => Ok(Interrupt::FROM_CPU_INTR1),
+            25 => Ok(Interrupt::FROM_CPU_INTR2),
+            26 => Ok(Interrupt::FROM_CPU_INTR3),
             28 => Ok(Interrupt::TRACE),
+            29 => Ok(Interrupt::CACHE),
+            30 => Ok(Interrupt::CPU_PERI_TIMEOUT),
             31 => Ok(Interrupt::GPIO),
             32 => Ok(Interrupt::GPIO_EXT),
             33 => Ok(Interrupt::PAU),
@@ -135,6 +193,8 @@ impl Interrupt {
             39 => Ok(Interrupt::HP_APM_M3),
             40 => Ok(Interrupt::HP_APM_M4),
             41 => Ok(Interrupt::LP_APM0),
+            42 => Ok(Interrupt::CPU_APM_M0),
+            43 => Ok(Interrupt::CPU_APM_M1),
             44 => Ok(Interrupt::MSPI),
             45 => Ok(Interrupt::I2S),
             46 => Ok(Interrupt::UHCI0),
