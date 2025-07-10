@@ -209,14 +209,14 @@ impl core::fmt::Debug for CLINT {
 #[doc = "Core Local Interrupts"]
 pub mod clint;
 #[doc = "AHB_DMA Peripheral"]
-pub type AHB_DMA = crate::Periph<ahb_dma::RegisterBlock, 0x6008_0000>;
-impl core::fmt::Debug for AHB_DMA {
+pub type DMA = crate::Periph<dma::RegisterBlock, 0x6008_0000>;
+impl core::fmt::Debug for DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AHB_DMA").finish()
+        f.debug_struct("DMA").finish()
     }
 }
 #[doc = "AHB_DMA Peripheral"]
-pub mod ahb_dma;
+pub mod dma;
 #[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub type APB_SARADC = crate::Periph<apb_saradc::RegisterBlock, 0x6000_e000>;
 impl core::fmt::Debug for APB_SARADC {
@@ -647,8 +647,8 @@ static mut DEVICE_PERIPHERALS: bool = false;
 pub struct Peripherals {
     #[doc = "CLINT"]
     pub CLINT: CLINT,
-    #[doc = "AHB_DMA"]
-    pub AHB_DMA: AHB_DMA,
+    #[doc = "DMA"]
+    pub DMA: DMA,
     #[doc = "APB_SARADC"]
     pub APB_SARADC: APB_SARADC,
     #[doc = "BUS_MONITOR"]
@@ -766,7 +766,7 @@ impl Peripherals {
         DEVICE_PERIPHERALS = true;
         Peripherals {
             CLINT: CLINT::steal(),
-            AHB_DMA: AHB_DMA::steal(),
+            DMA: DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),
             BUS_MONITOR: BUS_MONITOR::steal(),
             CACHE: CACHE::steal(),

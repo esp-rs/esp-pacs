@@ -2,45 +2,45 @@
 pub type R = crate::R<INT_RAW_SPEC>;
 #[doc = "Register `INT_RAW` writer"]
 pub type W = crate::W<INT_RAW_SPEC>;
-#[doc = "Field `OVERFLOW_RAW` reader - Triggered when counter register of RTC main timer overflow."]
-pub type OVERFLOW_RAW_R = crate::BitReader;
-#[doc = "Field `OVERFLOW_RAW` writer - Triggered when counter register of RTC main timer overflow."]
-pub type OVERFLOW_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SOC_WAKEUP_INT_RAW` reader - Triggered when RTC main timer reach the target value."]
-pub type SOC_WAKEUP_INT_RAW_R = crate::BitReader;
-#[doc = "Field `SOC_WAKEUP_INT_RAW` writer - Triggered when RTC main timer reach the target value."]
-pub type SOC_WAKEUP_INT_RAW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OVERFLOW` reader - Triggered when counter register of RTC main timer overflow."]
+pub type OVERFLOW_R = crate::BitReader;
+#[doc = "Field `OVERFLOW` writer - Triggered when counter register of RTC main timer overflow."]
+pub type OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SOC_WAKEUP` reader - Triggered when RTC main timer reach the target value."]
+pub type SOC_WAKEUP_R = crate::BitReader;
+#[doc = "Field `SOC_WAKEUP` writer - Triggered when RTC main timer reach the target value."]
+pub type SOC_WAKEUP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 30 - Triggered when counter register of RTC main timer overflow."]
     #[inline(always)]
-    pub fn overflow_raw(&self) -> OVERFLOW_RAW_R {
-        OVERFLOW_RAW_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn overflow(&self) -> OVERFLOW_R {
+        OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Triggered when RTC main timer reach the target value."]
     #[inline(always)]
-    pub fn soc_wakeup_int_raw(&self) -> SOC_WAKEUP_INT_RAW_R {
-        SOC_WAKEUP_INT_RAW_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn soc_wakeup(&self) -> SOC_WAKEUP_R {
+        SOC_WAKEUP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_RAW")
-            .field("overflow_raw", &self.overflow_raw())
-            .field("soc_wakeup_int_raw", &self.soc_wakeup_int_raw())
+            .field("overflow", &self.overflow())
+            .field("soc_wakeup", &self.soc_wakeup())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 30 - Triggered when counter register of RTC main timer overflow."]
     #[inline(always)]
-    pub fn overflow_raw(&mut self) -> OVERFLOW_RAW_W<INT_RAW_SPEC> {
-        OVERFLOW_RAW_W::new(self, 30)
+    pub fn overflow(&mut self) -> OVERFLOW_W<INT_RAW_SPEC> {
+        OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Triggered when RTC main timer reach the target value."]
     #[inline(always)]
-    pub fn soc_wakeup_int_raw(&mut self) -> SOC_WAKEUP_INT_RAW_W<INT_RAW_SPEC> {
-        SOC_WAKEUP_INT_RAW_W::new(self, 31)
+    pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<INT_RAW_SPEC> {
+        SOC_WAKEUP_W::new(self, 31)
     }
 }
 #[doc = "RTC timer interrupt raw register\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`int_raw::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

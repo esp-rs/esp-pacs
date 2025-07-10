@@ -1,27 +1,27 @@
 #[doc = "Register `INT_ST` reader"]
 pub type R = crate::R<INT_ST_SPEC>;
-#[doc = "Field `OVERFLOW_ST` reader - Status of RTC main timer overflow interrupt ."]
-pub type OVERFLOW_ST_R = crate::BitReader;
-#[doc = "Field `SOC_WAKEUP_INT_ST` reader - Status of RTC main timer interrupt ."]
-pub type SOC_WAKEUP_INT_ST_R = crate::BitReader;
+#[doc = "Field `OVERFLOW` reader - Status of RTC main timer overflow interrupt ."]
+pub type OVERFLOW_R = crate::BitReader;
+#[doc = "Field `SOC_WAKEUP` reader - Status of RTC main timer interrupt ."]
+pub type SOC_WAKEUP_R = crate::BitReader;
 impl R {
     #[doc = "Bit 30 - Status of RTC main timer overflow interrupt ."]
     #[inline(always)]
-    pub fn overflow_st(&self) -> OVERFLOW_ST_R {
-        OVERFLOW_ST_R::new(((self.bits >> 30) & 1) != 0)
+    pub fn overflow(&self) -> OVERFLOW_R {
+        OVERFLOW_R::new(((self.bits >> 30) & 1) != 0)
     }
     #[doc = "Bit 31 - Status of RTC main timer interrupt ."]
     #[inline(always)]
-    pub fn soc_wakeup_int_st(&self) -> SOC_WAKEUP_INT_ST_R {
-        SOC_WAKEUP_INT_ST_R::new(((self.bits >> 31) & 1) != 0)
+    pub fn soc_wakeup(&self) -> SOC_WAKEUP_R {
+        SOC_WAKEUP_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INT_ST")
-            .field("overflow_st", &self.overflow_st())
-            .field("soc_wakeup_int_st", &self.soc_wakeup_int_st())
+            .field("overflow", &self.overflow())
+            .field("soc_wakeup", &self.soc_wakeup())
             .finish()
     }
 }

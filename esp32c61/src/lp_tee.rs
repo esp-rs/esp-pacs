@@ -2,7 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    m0_mode_ctrl: M0_MODE_CTRL,
+    m_mode_ctrl: [M_MODE_CTRL; 1],
     clock_gate: CLOCK_GATE,
     _reserved2: [u8; 0x88],
     force_acc_hp: FORCE_ACC_HP,
@@ -12,8 +12,19 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x00 - TEE mode control register"]
     #[inline(always)]
-    pub const fn m0_mode_ctrl(&self) -> &M0_MODE_CTRL {
-        &self.m0_mode_ctrl
+    pub const fn m_mode_ctrl(&self, n: usize) -> &M_MODE_CTRL {
+        &self.m_mode_ctrl[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00 - TEE mode control register"]
+    #[inline(always)]
+    pub fn m_mode_ctrl_iter(&self) -> impl Iterator<Item = &M_MODE_CTRL> {
+        self.m_mode_ctrl.iter()
+    }
+    #[doc = "0x00 - TEE mode control register"]
+    #[inline(always)]
+    pub const fn m0_mode_ctrl(&self) -> &M_MODE_CTRL {
+        self.m_mode_ctrl(0)
     }
     #[doc = "0x04 - Clock gating register"]
     #[inline(always)]
@@ -31,10 +42,10 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "M0_MODE_CTRL (rw) register accessor: TEE mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`m0_mode_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m0_mode_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m0_mode_ctrl`] module"]
-pub type M0_MODE_CTRL = crate::Reg<m0_mode_ctrl::M0_MODE_CTRL_SPEC>;
+#[doc = "M_MODE_CTRL (rw) register accessor: TEE mode control register\n\nYou can [`read`](crate::Reg::read) this register and get [`m_mode_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`m_mode_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@m_mode_ctrl`] module"]
+pub type M_MODE_CTRL = crate::Reg<m_mode_ctrl::M_MODE_CTRL_SPEC>;
 #[doc = "TEE mode control register"]
-pub mod m0_mode_ctrl;
+pub mod m_mode_ctrl;
 #[doc = "CLOCK_GATE (rw) register accessor: Clock gating register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Clock gating register"]

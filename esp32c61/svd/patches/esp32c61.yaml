@@ -14,6 +14,8 @@ TIMG0:
 _modify:
   SPI?:
     groupName: SPI
+  AHB_DMA:
+    name: DMA
 
 APB_SARADC:
   _modify:
@@ -135,4 +137,143 @@ ECC:
       "*":
         modifiedWriteValues: oneToClear
 
+LP_ANA:
+  _include: ../../../common_patches/lpana_int_strip.yaml
 
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+TEE,LP_TEE:
+  M*_MODE_CTRL:
+    _strip: ["M?_", "M_"]
+    MODE:
+      _name: SecurityMode
+      Tee: [0, "Tee mode"]
+      Ree0: [1, "Ree0 mode"]
+      Ree1: [2, "Ree1 mode"]
+      Ree2: [3, "Ree2 mode"]
+
+LP_TEE:
+  _array:
+    M*_MODE_CTRL:
+      dimIncrement: 4
+
+SPI1:
+  _include: ../../../common_patches/spi_w.yaml
+
+SOC_ETM:
+  CH_ENA_AD?:
+    _array:
+      CH_ENABLED*:
+        name: CH_ENA%s
+  CH_ENA_AD?_SET:
+    _array:
+      CH_ENABLE*:
+        name: CH_SET%s
+  CH_ENA_AD?_CLR:
+    _array:
+      CH_DISABLE*:
+        name: CH_CLR%s
+
+  _cluster:
+    CH%s:
+      "CH*_EVT_ID":
+        name: EVT_ID
+        _modify:
+          "CH*_EVT_ID":
+            name: EVT_ID
+      "CH*_TASK_ID":
+        name: TASK_ID
+        _modify:
+          "CH*_TASK_ID":
+            name: TASK_ID
+
+SYSTIMER:
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
+
+DMA:
+  _cluster:
+    IN_INT_CH%s:
+      IN_INT_RAW_CH?:
+        name: RAW
+      IN_INT_ST_CH?:
+        name: ST
+      IN_INT_ENA_CH?:
+        name: ENA
+      IN_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    OUT_INT_CH%s:
+      OUT_INT_RAW_CH?:
+        name: RAW
+      OUT_INT_ST_CH?:
+        name: ST
+      OUT_INT_ENA_CH?:
+        name: ENA
+      OUT_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    CH%s:
+      IN_CONF0_CH?:
+        name: IN_CONF0
+      IN_CONF1_CH?:
+        name: IN_CONF1
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+      IN_POP_CH?:
+        name: IN_POP
+      IN_LINK_CH?:
+        name: IN_LINK
+      IN_STATE_CH?:
+        name: IN_STATE
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+      IN_DSCR_CH?:
+        name: IN_DSCR
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+      OUT_LINK_CH?:
+        name: OUT_LINK
+      OUT_STATE_CH?:
+        name: OUT_STATE
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
+
+
+I2C_ANA_MST:
+  _array:
+    I2C?_CTRL: {}
+    I2C?_CTRL1: {}
