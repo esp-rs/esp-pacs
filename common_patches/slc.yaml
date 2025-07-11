@@ -1,0 +1,939 @@
+_add:
+  SLC:
+    description: SDIO SLC
+    baseAddress: 0x60017000
+    groupName: SDIO
+    addressBlock:
+      offset: 0x0
+      size: 0x1000
+      usage: registers
+    registers:
+      # Configuration registers
+      SLCCONF0:
+        description: "DMA configuration"
+        addressOffset: 0x0000
+        size: 32
+        access: read-write
+        resetValue: 0xFF3CFF00
+        fields:
+          SDIO_SLC0_TX_RST:
+            description: "Configures whether to reset TX (host to slave) FSM (finite state machine) in SLC0."
+            bitOffset: 0
+            bitWidth: 1
+          SDIO_SLC0_RX_RST:
+            description: "Configures whether to reset RX (slave to host) FSM in SCL0."
+            bitOffset: 1
+            bitWidth: 1
+          SDIO_SLC0_TX_LOOP_TEST:
+            description: "Configures whether SCL0 loops around when the slave buffer finishes receiving packets from the host."
+            bitOffset: 4
+            bitWidth: 1
+          SDIO_SLC0_RX_LOOP_TEST:
+            description: "Configures whether SCL0 loops around when the slave buffer finishes sending packets to the host."
+            bitOffset: 5
+            bitWidth: 1
+          SDIO_SLC0_RX_AUTO_WRBACK:
+            description: "Configures whether SCL0 changes the owner bit of RX linked list."
+            bitOffset: 6
+            bitWidth: 1
+          SDIO_SLC0_RX_NO_RESTART_CLR:
+            description: "Please initialize to 1, and do not modify it."
+            bitOffset: 7
+            bitWidth: 1
+          SDIO_SLC0_RXDSCR_BURST_EN:
+            description: "Configures whether SCL0 can use AHB burst operation when reading the RX linked list from memory."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC0_RXDATA_BURST_EN:
+            description: "Configures whether SCL0 can use AHB burst operation when read data from memory."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC0_TXDSCR_BURST_EN:
+            description: "Configures whether SCL0 can use AHB burst operation when read the TX linked list from memory."
+            bitOffset: 12
+            bitWidth: 1
+          SDIO_SLC0_TXDATA_BURST_EN:
+            description: "Configures whether SCL0 can use AHB burst operation when send data to memory."
+            bitOffset: 13
+            bitWidth: 1
+          SDIO_SLC0_TOKEN_AUTO_CLR:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC1_TX_RST:
+            description: "Configures whether to reset TX FSM in SLC1."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC1_RX_RST:
+            description: "Configures whether to reset RX FSM in SLC1."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC1_TX_LOOP_TEST:
+            description: "Configures whether SCL1 loops around when the slave buffer finishes receiving packets from the host."
+            bitOffset: 20
+            bitWidth: 1
+          SDIO_SLC1_RX_LOOP_TEST:
+            description: "Configures whether SCL1 loops around when the slave buffer finishes sending packets to the host."
+            bitOffset: 21
+            bitWidth: 1
+          SDIO_SLC1_RX_AUTO_WRBACK:
+            description: "Configures whether SCL1 changes the owner bit of the RX linked list."
+            bitOffset: 22
+            bitWidth: 1
+          SDIO_SLC1_RX_NO_RESTART_CLR:
+            description: "Please initialize to 1, and do not modify it."
+            bitOffset: 23
+            bitWidth: 1
+          SDIO_SLC1_RXDSCR_BURST_EN:
+            description: "Configures whether SCL1 can use AHB burst operation when read the RX linked list from memory."
+            bitOffset: 24
+            bitWidth: 1
+          SDIO_SLC1_RXDATA_BURST_EN:
+            description: "Configures whether SCL1 can use AHB burst operation when reading data from memory."
+            bitOffset: 25
+            bitWidth: 1
+          SDIO_SLC1_TXDSCR_BURST_EN:
+            description: "Configures whether SCL1 can use AHB burst operation when read the TX linked list from memory."
+            bitOffset: 28
+            bitWidth: 1
+          SDIO_SLC1_TXDATA_BURST_EN:
+            description: "Configures whether SCL1 can use AHB burst operation when send data to memory."
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_SLC1_TOKEN_AUTO_CLR:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 30
+            bitWidth: 1
+
+      SLC0RX_LINK:
+        description: "SLC0 RX linked list configuration"
+        addressOffset: 0x003C
+        size: 32
+        access: read-write
+        resetValue: 0x80000000
+        fields:
+          SDIO_SLC0_RXLINK_STOP:
+            description: "Configures whether to stop SLC0 RX linked list operation."
+            bitOffset: 28
+            bitWidth: 1
+          SDIO_SLC0_RXLINK_START:
+            description: "Configures whether to start SLC0 RX linked list operation from the address indicated by SDIO_SLC0_RXLINK_ADDR."
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_SLC0_RXLINK_RESTART:
+            description: "Configures whether to restart and continue SLC0 RX linked list operation."
+            bitOffset: 30
+            bitWidth: 1
+          SDIO_SLC0_RXLINK_PARK:
+            description: "Represents SLC0 RX linked list FSM state."
+            bitOffset: 31
+            bitWidth: 1
+      SLC0RX_LINK_ADDR:
+        description: "SLC0 RX linked list address"
+        addressOffset: 0x0040
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC0_RXLINK_ADDR:
+            description: "Configures SLC0 RX linked list initial address."
+            bitOffset: 0
+            bitWidth: 32
+      SLC0TX_LINK:
+        description: "SLC0 TX linked list configuration"
+        addressOffset: 0x0044
+        size: 32
+        access: read-write
+        resetValue: 0x80000000
+        fields:
+          SDIO_SLC0_TXLINK_STOP:
+            description: "Configures whether to stop SLC0 TX linked list operation."
+            bitOffset: 28
+            bitWidth: 1
+          SDIO_SLC0_TXLINK_START:
+            description: "Configures whether to start SLC0 TX linked list operation from the address indicated by SDIO_SLC0_TXLINK_ADDR."
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_SLC0_TXLINK_RESTART:
+            description: "Configures whether to restart and continue SLC0 TX linked list operation."
+            bitOffset: 30
+            bitWidth: 1
+          SDIO_SLC0_TXLINK_PARK:
+            description: "Represents SLC0 TX linked list FSM state."
+            bitOffset: 31
+            bitWidth: 1
+      SLC0TX_LINK_ADDR:
+        description: "SLC0 TX linked list address"
+        addressOffset: 0x0048
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC0_TXLINK_ADDR:
+            description: "Configures SLC0 TX linked list initial address."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1RX_LINK:
+        description: "SLC1 RX linked list configuration"
+        addressOffset: 0x004C
+        size: 32
+        access: read-write
+        resetValue: 0x80000000
+        fields:
+          SDIO_SLC1_RXLINK_STOP:
+            description: "Configures whether to stop SLC1 RX linked list operation."
+            bitOffset: 28
+            bitWidth: 1
+          SDIO_SLC1_RXLINK_START:
+            description: "Configures whether to start SLC1 RX linked list operation from the address indicated by SDIO_SLC1_RXLINK_ADDR."
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_SLC1_RXLINK_RESTART:
+            description: "Configures whether to restart and continue SLC1 RX linked list operation."
+            bitOffset: 30
+            bitWidth: 1
+          SDIO_SLC1_RXLINK_PARK:
+            description: "Represents SLC1 RX linked list FSM state."
+            bitOffset: 31
+            bitWidth: 1
+      SLC1RX_LINK_ADDR:
+        description: "SLC1 RX linked list address"
+        addressOffset: 0x0050
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC1_RXLINK_ADDR:
+            description: "Configures SLC1 RX linked list initial address."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1TX_LINK:
+        description: "SLC1 TX linked list configuration"
+        addressOffset: 0x0054
+        size: 32
+        access: read-write
+        resetValue: 0x80000000
+        fields:
+          SDIO_SLC1_TXLINK_STOP:
+            description: "Configures whether to stop SLC1 TX linked list operation."
+            bitOffset: 28
+            bitWidth: 1
+          SDIO_SLC1_TXLINK_START:
+            description: "Configures whether to start SLC1 TX linked list operation from the address indicated by SDIO_SLC1_TXLINK_ADDR."
+            bitOffset: 29
+            bitWidth: 1
+          SDIO_SLC1_TXLINK_RESTART:
+            description: "Configures whether to restart and continue SLC1 TX linked list operation."
+            bitOffset: 30
+            bitWidth: 1
+          SDIO_SLC1_TXLINK_PARK:
+            description: "Represents SLC1 TX linked list FSM state."
+            bitOffset: 31
+            bitWidth: 1
+      SLC1TX_LINK_ADDR:
+        description: "SLC1 TX linked list address"
+        addressOffset: 0x0058
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC1_TXLINK_ADDR:
+            description: "Configures SLC1 TX linked list initial address."
+            bitOffset: 0
+            bitWidth: 32
+      SLC0TOKEN1:
+        description: "SLC0 receiving buffer configuration"
+        addressOffset: 0x0064
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC0_TOKEN1_WDATA:
+            description: "Configures SLC0 token 1 value."
+            bitOffset: 0
+            bitWidth: 11
+            access: write-only
+          SDIO_SLC0_TOKEN1_WR:
+            description: "Configures this bit to 1 to write SDIO_SLC0_TOKEN1_WDATA into SDIO_SLC0_TOKEN1."
+            bitOffset: 12
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1_INC:
+            description: "Configures this bit to 1 to add 1 to SDIO_SLC0_TOKEN1."
+            bitOffset: 13
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1_INC_MORE:
+            description: "Configures this bit to 1 to add the value of SDIO_SLC0_TOKEN1_WDATA to SDIO_SLC0_TOKEN1."
+            bitOffset: 14
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1:
+            description: "Represents the SLC0 accumulated number of buffers for receiving packets."
+            bitOffset: 16
+            bitWidth: 12
+            access: read-only
+      SLC1TOKEN1:
+        description: "SLC1 receiving buffer configuration"
+        addressOffset: 0x006C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC1_TOKEN1_WDATA:
+            description: "Configures SLC1 token1 value."
+            bitOffset: 0
+            bitWidth: 11
+            access: write-only
+          SDIO_SLC0_TOKEN1_WR:
+            description: "Configures this bit to 1 to write SDIO_SLC1_TOKEN1_WDATA into SDIO_SLC1_TOKEN1."
+            bitOffset: 12
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1_INC:
+            description: "Configures this bit to 1 to add 1 to SDIO_SLC1_TOKEN1."
+            bitOffset: 13
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1_INC_MORE:
+            description: "Configures this bit to 1 to add the value of SDIO_SLC1_TOKEN1_WDATA to SDIO_SLC1_TOKEN1."
+            bitOffset: 14
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_TOKEN1:
+            description: "Represents the SLC1 accumulated number of buffers for receiving packets."
+            bitOffset: 16
+            bitWidth: 12
+            access: read-only
+      SLCCONF1:
+        description: "DMA configuration"
+        addressOffset: 0x0070
+        size: 32
+        access: read-write
+        resetValue: 0x300078
+        fields:
+          SDIO_SDIO_CMD_HOLD_EN:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 3
+            bitWidth: 1
+          SDIO_SLC0_LEN_AUTO_CLR:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 4
+            bitWidth: 1
+          SDIO_SLC0_TX_STITCH_EN:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 5
+            bitWidth: 1
+          SDIO_SLC0_RX_STITCH_EN:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 6
+            bitWidth: 1
+          SDIO_HOST_INT_LEVEL_SEL:
+            description: "Configures the polarity of interrupt to host."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC1_TX_STITCH_EN:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 20
+            bitWidth: 1
+          SDIO_SLC1_RX_STITCH_EN:
+            description: "Please initialize to 0, and do not modify it."
+            bitOffset: 21
+            bitWidth: 1
+      SLC_RX_DSCR_CONF:
+        description: "DMA slave to host configuration register"
+        addressOffset: 0x00A8
+        size: 32
+        access: read-write
+        resetValue: 0x203701a
+        fields:
+          SDIO_SLC0_TOKEN_NO_REPLACE:
+            description: "Please initialize to 1, and do not modify it."
+            bitOffset: 1
+            bitWidth: 1
+      SLC0_LEN_CONF:
+        description: "Length control of transmitting packets"
+        addressOffset: 0x00F4
+        size: 32
+        access: write-only
+        resetValue: 0x20000000
+        fields:
+          SDIO_SLC0_LEN_WDATA:
+            description: "Configures the length of the data that the slave wants to send."
+            bitOffset: 0
+            bitWidth: 20
+            access: write-only
+          SDIO_SLC0_LEN_WR:
+            description: "Configures this bit to 1 to write SDIO_SLC0_LEN_WDATA into SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."
+            bitOffset: 20
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_LEN_INC:
+            description: "Configures this bit to 1 to add 1 to SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."
+            bitOffset: 21
+            bitWidth: 1
+            access: write-only
+          SDIO_SLC0_LEN_INC_MORE:
+            description: "Configures this bit to 1 to add the value of SDIO_SLC0_LEN_WDATA to SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."
+            bitOffset: 22
+            bitWidth: 1
+            access: write-only
+      SLC0_TX_SHAREMEM_START:
+        description: "SLC0 AHB TX start address range"
+        addressOffset: 0x0154
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SDIO_SLC0_TX_SHAREMEM_START_ADDR:
+            description: "Configures SLC0 host to slave channel AHB start address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC0_TX_SHAREMEM_END:
+        description: "SLC0 AHB TX end address range"
+        addressOffset: 0x0158
+        size: 32
+        access: read-write
+        resetValue: 0xFFFFFFFF
+        fields:
+          SDIO_SDIO_SLC0_TX_SHAREMEM_END_ADDR:
+            description: "Configures SLC0 host to slave channel AHB end address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC0_RX_SHAREMEM_START:
+        description: "SLC0 AHB RX start address range"
+        addressOffset: 0x015C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SDIO_SLC0_RX_SHAREMEM_START_ADDR:
+            description: "Configures SLC0 slave to host channel AHB start address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC0_RX_SHAREMEM_END:
+        description: "SLC0 AHB RX end address range"
+        addressOffset: 0x0160
+        size: 32
+        access: read-write
+        resetValue: 0xFFFFFFFF
+        fields:
+          SDIO_SDIO_SLC0_RX_SHAREMEM_END_ADDR:
+            description: "Configures SLC0 slave to host channel AHB end address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1_TX_SHAREMEM_START:
+        description: "SLC1 AHB TX start address range"
+        addressOffset: 0x0164
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SDIO_SLC0_RX_SHAREMEM_START_ADDR:
+            description: "Configures SLC0 slave to host channel AHB start address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1_TX_SHAREMEM_END:
+        description: "SLC1 AHB TX end address range"
+        addressOffset: 0x0168
+        size: 32
+        access: read-write
+        resetValue: 0xFFFFFFFF
+        fields:
+          SDIO_SDIO_SLC1_TX_SHAREMEM_END_ADDR:
+            description: "Configures SLC1 host to slave channel AHB end address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1_RX_SHAREMEM_START:
+        description: "SLC1 AHB RX start address range"
+        addressOffset: 0x016C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SDIO_SLC1_RX_SHAREMEM_START_ADDR:
+            description: "Configures SLC1 slave to host channel AHB start address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC1_RX_SHAREMEM_END:
+        description: "SLC1 AHB RX end address range"
+        addressOffset: 0x0170
+        size: 32
+        access: read-write
+        resetValue: 0xFFFFFFFF
+        fields:
+          SDIO_SDIO_SLC1_RX_SHAREMEM_END_ADDR:
+            description: "Configures SLC1 slave to host channel AHB end address boundary."
+            bitOffset: 0
+            bitWidth: 32
+      SLC_BURST_LEN:
+        description: "DMA AHB burst type configuration"
+        addressOffset: 0x017C
+        size: 32
+        access: read-write
+        resetValue: 0xf
+        fields:
+          SDIO_SLC0_TXDATA_BURST_LEN:
+            description: "Configures SLC0 host to slave channel AHB burst type."
+            bitOffset: 0
+            bitWidth: 1
+          SDIO_SLC0_RXDATA_BURST_LEN:
+            description: "Configures SLC0 slave to host channel AHB burst type."
+            bitOffset: 1
+            bitWidth: 1
+          SDIO_SLC1_TXDATA_BURST_LEN:
+            description: "Configures SLC1 host to slave channel AHB burst type."
+            bitOffset: 2
+            bitWidth: 1
+          SDIO_SLC1_RXDATA_BURST_LEN:
+            description: "Configures SLC1 slave to host channel AHB burst type."
+            bitOffset: 3
+            bitWidth: 1
+      # Interrupt registers
+      SLC0INT_RAW:
+        description: "SLC0 to slave raw interrupt status"
+        addressOffset: 0x0004
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_RAW:
+            description: "The raw interrupt status of SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC0_RX_START_INT_RAW:
+            description: "The raw interrupt status of SLC0_RX_START_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC0_TX_START_INT_RAW:
+            description: "The raw interrupt status of SLC0_TX_START_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC0_RX_UDF_INT_RAW:
+            description: "The raw interrupt status of SLC0_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC0_TX_OVF_INT_RAW:
+            description: "The raw interrupt status of SLC0_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC0_TX_DONE_INT_RAW:
+            description: "The raw interrupt status of SLC0_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC0_TX_SUC_EOF_INT_RAW:
+            description: "The raw interrupt status of SLC0_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC0_RX_DONE_INT_RAW:
+            description: "The raw interrupt status of SLC0_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC0_RX_EOF_INT_RAW:
+            description: "The raw interrupt status of SLC0_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC0_TX_DSCR_ERR_INT_RAW:
+            description: "The raw interrupt status of SLC0_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC0_RX_DSCR_ERR_INT_RAW:
+            description: "The raw interrupt status of SLC0_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC0INT_ST:
+        description: "SLC0 to slave masked interrupt status"
+        addressOffset: 0x0008
+        size: 32
+        access: read-only
+        resetValue: 0x0
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_ST:
+            description: "The masked interrupt status of SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC0_RX_START_INT_ST:
+            description: "The masked interrupt status of SLC0_RX_START_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC0_TX_START_INT_ST:
+            description: "The masked interrupt status of SLC0_TX_START_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC0_RX_UDF_INT_ST:
+            description: "The masked interrupt status of SLC0_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC0_TX_OVF_INT_ST:
+            description: "The masked interrupt status of SLC0_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC0_TX_DONE_INT_ST:
+            description: "The masked interrupt status of SLC0_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC0_TX_SUC_EOF_INT_ST:
+            description: "The masked interrupt status of SLC0_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC0_RX_DONE_INT_ST:
+            description: "The masked interrupt status of SLC0_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC0_RX_EOF_INT_ST:
+            description: "The masked interrupt status of SLC0_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC0_TX_DSCR_ERR_INT_ST:
+            description: "The masked interrupt status of SLC0_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC0_RX_DSCR_ERR_INT_ST:
+            description: "The masked interrupt status of SLC0_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC0INT_ENA:
+        description: "SLC0 to slave interrupt enable"
+        addressOffset: 0x000C
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_ENA:
+            description: "Write 1 to enable interrupt SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC0_RX_ENAART_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_RX_ENAART_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC0_TX_ENAART_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_TX_ENAART_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC0_RX_UDF_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC0_TX_OVF_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC0_TX_DONE_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC0_TX_SUC_EOF_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC0_RX_DONE_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC0_RX_EOF_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC0_TX_DSCR_ERR_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC0_RX_DSCR_ERR_INT_ENA:
+            description: "Write 1 to enable interrupt SLC0_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC0INT_CLR:
+        description: "SLC0 to slave interrupt clear"
+        addressOffset: 0x0010
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_CLR:
+            description: "Write 1 to clear interrupt SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC0_RX_CLRART_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_RX_CLRART_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC0_TX_CLRART_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_TX_CLRART_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC0_RX_UDF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC0_TX_OVF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC0_TX_DONE_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC0_TX_SUC_EOF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC0_RX_DONE_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC0_RX_EOF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC0_TX_DSCR_ERR_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC0_RX_DSCR_ERR_INT_CLR:
+            description: "Write 1 to clear interrupt SLC0_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC1INT_RAW:
+        description: "SLC1 to slave raw interrupt status"
+        addressOffset: 0x0014
+        size: 32
+        access: read-write
+        resetValue: 0x0
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_RAW:
+            description: "The raw interrupt status of SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC1_RX_START_INT_RAW:
+            description: "The raw interrupt status of SLC1_RX_START_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC1_TX_START_INT_RAW:
+            description: "The raw interrupt status of SLC1_TX_START_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC1_RX_UDF_INT_RAW:
+            description: "The raw interrupt status of SLC1_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC1_TX_OVF_INT_RAW:
+            description: "The raw interrupt status of SLC1_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC1_TX_DONE_INT_RAW:
+            description: "The raw interrupt status of SLC1_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC1_TX_SUC_EOF_INT_RAW:
+            description: "The raw interrupt status of SLC1_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC1_RX_DONE_INT_RAW:
+            description: "The raw interrupt status of SLC1_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC1_RX_EOF_INT_RAW:
+            description: "The raw interrupt status of SLC1_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC1_TX_DSCR_ERR_INT_RAW:
+            description: "The raw interrupt status of SLC1_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC1_RX_DSCR_ERR_INT_RAW:
+            description: "The raw interrupt status of SLC1_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC1INT_CLR:
+        description: "SLC1 to slave interrupt clear"
+        addressOffset: 0x0020
+        size: 32
+        access: write-only
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_CLR:
+            description: "Write 1 to clear interrupt SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC1_RX_CLRART_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_RX_CLRART_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC1_TX_CLRART_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_TX_CLRART_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC1_RX_UDF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC1_TX_OVF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC1_TX_DONE_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC1_TX_SUC_EOF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC1_RX_DONE_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC1_RX_EOF_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC1_TX_DSCR_ERR_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC1_RX_DSCR_ERR_INT_CLR:
+            description: "Write 1 to clear interrupt SLC1_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLCINTVEC_TOHOST:
+        description: "Slave to host interrupt vector set"
+        addressOffset: 0x005C
+        size: 32
+        access: write-only
+        resetValue: 0x0
+        fields:
+          SDIO_SLC0_TOHOST_INTVEC:
+            description: "The interrupt set bit of SLCHOST_SLC0_TOHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 8
+          SDIO_SLC1_TOHOST_INTVEC:
+            description: "The interrupt set bit of SLCHOST_SLC1_TOHOST_BITn_INT (n: 0-7)."
+            bitOffset: 16
+            bitWidth: 8
+      SLC1INT_ST1:
+        description: "SLC1 to slave masked interrupt status"
+        addressOffset: 0x014C
+        size: 32
+        access: read-only
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_ST1:
+            description: "The masked interrupt status of SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC1_RX_START_INT_ST1:
+            description: "The masked interrupt status of SLC1_RX_START_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC1_TX_START_INT_ST1:
+            description: "The masked interrupt status of SLC1_TX_START_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC1_RX_UDF_INT_ST1:
+            description: "The masked interrupt status of SLC1_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC1_TX_OVF_INT_ST1:
+            description: "The masked interrupt status of SLC1_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC1_TX_DONE_INT_ST1:
+            description: "The masked interrupt status of SLC1_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC1_TX_SUC_EOF_INT_ST1:
+            description: "The masked interrupt status of SLC1_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC1_RX_DONE_INT_ST1:
+            description: "The masked interrupt status of SLC1_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC1_RX_EOF_INT_ST1:
+            description: "The masked interrupt status of SLC1_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC1_TX_DSCR_ERR_INT_ST1:
+            description: "The masked interrupt status of SLC1_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC1_RX_DSCR_ERR_INT_ST1:
+            description: "The masked interrupt status of SLC1_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      SLC1INT_ENA1:
+        description: "SLC1 to slave interrupt enable"
+        addressOffset: 0x0150
+        size: 32
+        access: read-write
+        fields:
+          SDIO_SLC_FRHOST_BIT%s_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC_FRHOST_BITn_INT (n: 0-7)."
+            bitOffset: 0
+            bitWidth: 1
+            dim: 8
+            dimIncrement: 1
+          SDIO_SLC1_RX_ENAART_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_RX_ENAART_INT."
+            bitOffset: 8
+            bitWidth: 1
+          SDIO_SLC1_TX_ENAART_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_TX_ENAART_INT."
+            bitOffset: 9
+            bitWidth: 1
+          SDIO_SLC1_RX_UDF_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_RX_UDF_INT."
+            bitOffset: 10
+            bitWidth: 1
+          SDIO_SLC1_TX_OVF_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_TX_OVF_INT."
+            bitOffset: 11
+            bitWidth: 1
+          SDIO_SLC1_TX_DONE_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_TX_DONE_INT."
+            bitOffset: 14
+            bitWidth: 1
+          SDIO_SLC1_TX_SUC_EOF_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_TX_SUC_EOF_INT."
+            bitOffset: 15
+            bitWidth: 1
+          SDIO_SLC1_RX_DONE_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_RX_DONE_INT."
+            bitOffset: 16
+            bitWidth: 1
+          SDIO_SLC1_RX_EOF_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_RX_EOF_INT."
+            bitOffset: 17
+            bitWidth: 1
+          SDIO_SLC1_TX_DSCR_ERR_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_TX_DSCR_ERR_INT."
+            bitOffset: 19
+            bitWidth: 1
+          SDIO_SLC1_RX_DSCR_ERR_INT_ENA1:
+            description: "Write 1 to enable interrupt SLC1_RX_DSCR_ERR_INT."
+            bitOffset: 20
+            bitWidth: 1
+      # Status registers
+      SLC0_LENGTH:
+        description: "Length of transmitting packets"
+        addressOffset: 0x00F8
+        size: 32
+        access: read-only
+        fields:
+          SDIO_SLC0_LEN:
+            description: "Represents the accumulated length of data that the slave wants to send."
+            bitOffset: 0
+            bitWidth: 20
