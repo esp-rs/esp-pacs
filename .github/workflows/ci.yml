@@ -43,6 +43,7 @@ jobs:
             { package: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { package: "esp32c5", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32c6", target: "riscv32imac-unknown-none-elf" },
+            { package: "esp32c61", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32h2", target: "riscv32imac-unknown-none-elf" },
             { package: "esp32p4", target: "riscv32imafc-unknown-none-elf" },
 
