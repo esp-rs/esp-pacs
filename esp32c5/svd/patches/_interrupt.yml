@@ -1,18 +1,17 @@
 INTERRUPT_CORE0:
-  _modify:
-    INT_STATUS_0:
-      name: INTR_STATUS_REG_0
-    INT_STATUS_1:
-      name: INTR_STATUS_REG_1
-    INT_STATUS_2:
-      name: INT_STATUS_REG_2
+  _array:
+    INT_STATUS_*:
+      name: CORE_0_INTR_STATUS%s
+      description: "Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"
 
-  INTR_STATUS_REG_0:
-    _modify:
-      INT_STATUS_0:
-        name: INTR_STATUS_0
+  _delete:
+    - "*_MAP"
 
-  INTR_STATUS_REG_1:
-    _modify:
-      INT_STATUS_1:
-        name: INTR_STATUS_1
+  _add:
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0
+      dim: 80 # last register is at 0x13C
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 0

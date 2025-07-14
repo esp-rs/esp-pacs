@@ -10,6 +10,7 @@ _include:
   - "_gpio.yml"
   - "_hmac.yml"
   - "_i2c.yml"
+  - "_interrupt.yml"
   - "_ledc.yml"
   - "_rmt.yml"
   - "_rsa.yml"
@@ -262,22 +263,6 @@ UHCI0:
   _include:
     - ../../../common_patches/uhci_collect.yaml
     - ../../../common_patches/int_strip.yaml
-
-INTERRUPT_CORE0:
-  CPU_INT_PRI_*:
-    _modify:
-      CPU_PRI_*_MAP:
-        name: MAP
-  _array:
-    CPU_INT_PRI_*:
-      name: CPU_INT_PRI%s
-  _modify:
-    I2S1_INT_MAP:
-      name: I2S0_INT_MAP
-  I2S0_INT_MAP:
-    _modify:
-      I2S1_INT_MAP:
-        name: I2S0_INT_MAP
 
 DS:
   _add:
