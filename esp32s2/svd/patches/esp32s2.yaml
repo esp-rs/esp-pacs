@@ -1,6 +1,7 @@
 _svd: ../esp32s2.base.svd
 
 _include:
+  - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_ds.yml"
   - "_gpio.yml"
@@ -20,7 +21,6 @@ _include:
   - "_system.yml"
   - "_systimer.yml"
   - "_timg.yml"
-  - "_twai.yml"
   - "_uart.yml"
   - "esp32s2-wifi.yaml"
 
@@ -29,7 +29,7 @@ RNG:
     DATA:
       access: read-only
 
-_delete: SPI2 
+_delete: SPI2
 _modify:
   SPI0:
     name: SPI2

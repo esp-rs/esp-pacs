@@ -5,6 +5,7 @@ _include:
   - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
+  - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_dma.yml"
   - "_ds.yml"

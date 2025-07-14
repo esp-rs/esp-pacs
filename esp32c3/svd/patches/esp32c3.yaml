@@ -1,6 +1,7 @@
 _svd: ../esp32c3.base.svd
 
 _include:
+  - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_apb_ctrl.yml"
   - "_assist_debug.yml"
@@ -19,7 +20,6 @@ _include:
   - "_spi.yml"
   - "_system.yml"
   - "_timg.yml"
-  - "_twai.yml"
   - "_xts_aes.yml"
 
 RNG:

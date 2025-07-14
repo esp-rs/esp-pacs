@@ -31,55 +31,6 @@ TWAI[01]:
       TIME_SAMPLING:
         name: TIME_SAMP
 
-  DATA_0:
-    _modify:
-      DATA_0:
-        name: TX_BYTE_0
-  DATA_1:
-    _modify:
-      DATA_1:
-        name: TX_BYTE_1
-  DATA_2:
-    _modify:
-      DATA_2:
-        name: TX_BYTE_2
-  DATA_3:
-    _modify:
-      DATA_3:
-        name: TX_BYTE_3
-  DATA_4:
-    _modify:
-      DATA_4:
-        name: TX_BYTE_4
-  DATA_5:
-    _modify:
-      DATA_5:
-        name: TX_BYTE_5
-  DATA_6:
-    _modify:
-      DATA_6:
-        name: TX_BYTE_6
-  DATA_7:
-    _modify:
-      DATA_7:
-        name: TX_BYTE_7
-  DATA_8:
-    _modify:
-      DATA_8:
-        name: TX_BYTE_8
-  DATA_10:
-    _modify:
-      DATA_10:
-        name: TX_BYTE_10
-  DATA_11:
-    _modify:
-      DATA_11:
-        name: TX_BYTE_11
-  DATA_12:
-    _modify:
-      DATA_12:
-        name: TX_BYTE_12
-
   _modify:
     RX_MESSAGE_COUNTER:
       name: RX_MESSAGE_CNT
