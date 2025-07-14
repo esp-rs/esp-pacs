@@ -5,7 +5,7 @@
 ![Crates.io](https://img.shields.io/crates/l/esp32c61?labelColor=1C2C2E&style=flat-square)
 [![Matrix](https://img.shields.io/matrix/esp-rs:matrix.org?label=join%20matrix&labelColor=1C2C2E&color=BEC5C9&logo=matrix&style=flat-square)](https://matrix.to/#/#esp-rs:matrix.org)
 
-A **P**eripheral **A**ccess **C**rate (**PAC**) for the **ESP32-c61** from Espressif. See the [svd2rust] repository for more information on how to use this crate.
+A **P**eripheral **A**ccess **C**rate (**PAC**) for the **ESP32-C61** from Espressif. See the [svd2rust] repository for more information on how to use this crate.
 
 If you find any problems with the included SVD file please open an issue in the [espressif/svd] repository so that the fixes can be applied upstream.
 
