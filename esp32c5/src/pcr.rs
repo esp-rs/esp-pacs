@@ -2,12 +2,7 @@
 #[cfg_attr(feature = "impl-register-debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    uart0_conf: UART0_CONF,
-    uart0_sclk_conf: UART0_SCLK_CONF,
-    uart0_pd_ctrl: UART0_PD_CTRL,
-    uart1_conf: UART1_CONF,
-    uart1_sclk_conf: UART1_SCLK_CONF,
-    uart1_pd_ctrl: UART1_PD_CTRL,
+    uart: [UART; 2],
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
     i2c_conf: I2C_CONF,
@@ -97,41 +92,22 @@ pub struct RegisterBlock {
     psram_mem_monitor_conf: PSRAM_MEM_MONITOR_CONF,
     reset_event_bypass: RESET_EVENT_BYPASS,
     hpcore_0_pd_ctrl: HPCORE_0_PD_CTRL,
-    _reserved95: [u8; 0x0e78],
+    _reserved90: [u8; 0x0e78],
     fpga_debug: FPGA_DEBUG,
     clock_gate: CLOCK_GATE,
     date: DATE,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - UART0 configuration register"]
+    #[doc = "0x00..0x18 - Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
     #[inline(always)]
-    pub const fn uart0_conf(&self) -> &UART0_CONF {
-        &self.uart0_conf
+    pub const fn uart(&self, n: usize) -> &UART {
+        &self.uart[n]
     }
-    #[doc = "0x04 - UART0_SCLK configuration register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x18 - Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
     #[inline(always)]
-    pub const fn uart0_sclk_conf(&self) -> &UART0_SCLK_CONF {
-        &self.uart0_sclk_conf
-    }
-    #[doc = "0x08 - UART0 power control register"]
-    #[inline(always)]
-    pub const fn uart0_pd_ctrl(&self) -> &UART0_PD_CTRL {
-        &self.uart0_pd_ctrl
-    }
-    #[doc = "0x0c - UART1 configuration register"]
-    #[inline(always)]
-    pub const fn uart1_conf(&self) -> &UART1_CONF {
-        &self.uart1_conf
-    }
-    #[doc = "0x10 - UART1_SCLK configuration register"]
-    #[inline(always)]
-    pub const fn uart1_sclk_conf(&self) -> &UART1_SCLK_CONF {
-        &self.uart1_sclk_conf
-    }
-    #[doc = "0x14 - UART1 power control register"]
-    #[inline(always)]
-    pub const fn uart1_pd_ctrl(&self) -> &UART1_PD_CTRL {
-        &self.uart1_pd_ctrl
+    pub fn uart_iter(&self) -> impl Iterator<Item = &UART> {
+        self.uart.iter()
     }
     #[doc = "0x18 - MSPI configuration register"]
     #[inline(always)]
@@ -594,30 +570,11 @@ impl RegisterBlock {
         &self.date
     }
 }
-#[doc = "UART0_CONF (rw) register accessor: UART0 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_conf`] module"]
-pub type UART0_CONF = crate::Reg<uart0_conf::UART0_CONF_SPEC>;
-#[doc = "UART0 configuration register"]
-pub mod uart0_conf;
-#[doc = "UART0_SCLK_CONF (rw) register accessor: UART0_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_sclk_conf`] module"]
-pub type UART0_SCLK_CONF = crate::Reg<uart0_sclk_conf::UART0_SCLK_CONF_SPEC>;
-#[doc = "UART0_SCLK configuration register"]
-pub mod uart0_sclk_conf;
-#[doc = "UART0_PD_CTRL (rw) register accessor: UART0 power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart0_pd_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart0_pd_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart0_pd_ctrl`] module"]
-pub type UART0_PD_CTRL = crate::Reg<uart0_pd_ctrl::UART0_PD_CTRL_SPEC>;
-#[doc = "UART0 power control register"]
-pub mod uart0_pd_ctrl;
-#[doc = "UART1_CONF (rw) register accessor: UART1 configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_conf`] module"]
-pub type UART1_CONF = crate::Reg<uart1_conf::UART1_CONF_SPEC>;
-#[doc = "UART1 configuration register"]
-pub mod uart1_conf;
-#[doc = "UART1_SCLK_CONF (rw) register accessor: UART1_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_sclk_conf`] module"]
-pub type UART1_SCLK_CONF = crate::Reg<uart1_sclk_conf::UART1_SCLK_CONF_SPEC>;
-#[doc = "UART1_SCLK configuration register"]
-pub mod uart1_sclk_conf;
-#[doc = "UART1_PD_CTRL (rw) register accessor: UART1 power control register\n\nYou can [`read`](crate::Reg::read) this register and get [`uart1_pd_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uart1_pd_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uart1_pd_ctrl`] module"]
-pub type UART1_PD_CTRL = crate::Reg<uart1_pd_ctrl::UART1_PD_CTRL_SPEC>;
-#[doc = "UART1 power control register"]
-pub mod uart1_pd_ctrl;
+#[doc = "Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
+pub use self::uart::UART;
+#[doc = r"Cluster"]
+#[doc = "Cluster UART%s, containing UART?_CONF, UART?_SCLK_CONF, UART?_PD_CTRL"]
+pub mod uart;
 #[doc = "MSPI_CONF (rw) register accessor: MSPI configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`mspi_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mspi_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mspi_conf`] module"]
 pub type MSPI_CONF = crate::Reg<mspi_conf::MSPI_CONF_SPEC>;
 #[doc = "MSPI configuration register"]

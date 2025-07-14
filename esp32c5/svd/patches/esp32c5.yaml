@@ -5,6 +5,10 @@ _include:
   - _gpio.yml
   - _interrupt.yml
   - _lp_io.yml
+  - _uart.yml
+
+PCR:
+  _include: ../../../common_patches/pcr.yaml
 
 AES:
   _modify:
@@ -660,10 +664,6 @@ TIMG0:
     _strip:
       - "T1_"
   _include: ../../../common_patches/tim_collect.yaml
-
-# TIMERG[01]:
-#   "*":
-#     _strip: "T_"
 
 UART0:
   _strip_end: "_SYNC"
