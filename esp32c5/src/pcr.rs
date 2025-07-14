@@ -5,7 +5,7 @@ pub struct RegisterBlock {
     uart: [UART; 2],
     mspi_conf: MSPI_CONF,
     mspi_clk_conf: MSPI_CLK_CONF,
-    i2c_conf: I2C_CONF,
+    i2c0_conf: I2C0_CONF,
     i2c_sclk_conf: I2C_SCLK_CONF,
     twai0_conf: TWAI0_CONF,
     twai0_func_clk_conf: TWAI0_FUNC_CLK_CONF,
@@ -121,8 +121,8 @@ impl RegisterBlock {
     }
     #[doc = "0x20 - I2C configuration register"]
     #[inline(always)]
-    pub const fn i2c_conf(&self) -> &I2C_CONF {
-        &self.i2c_conf
+    pub const fn i2c0_conf(&self) -> &I2C0_CONF {
+        &self.i2c0_conf
     }
     #[doc = "0x24 - I2C_SCLK configuration register"]
     #[inline(always)]
@@ -583,10 +583,10 @@ pub mod mspi_conf;
 pub type MSPI_CLK_CONF = crate::Reg<mspi_clk_conf::MSPI_CLK_CONF_SPEC>;
 #[doc = "MSPI_CLK configuration register"]
 pub mod mspi_clk_conf;
-#[doc = "I2C_CONF (rw) register accessor: I2C configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_conf`] module"]
-pub type I2C_CONF = crate::Reg<i2c_conf::I2C_CONF_SPEC>;
+#[doc = "I2C0_CONF (rw) register accessor: I2C configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c0_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c0_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c0_conf`] module"]
+pub type I2C0_CONF = crate::Reg<i2c0_conf::I2C0_CONF_SPEC>;
 #[doc = "I2C configuration register"]
-pub mod i2c_conf;
+pub mod i2c0_conf;
 #[doc = "I2C_SCLK_CONF (rw) register accessor: I2C_SCLK configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`i2c_sclk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`i2c_sclk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@i2c_sclk_conf`] module"]
 pub type I2C_SCLK_CONF = crate::Reg<i2c_sclk_conf::I2C_SCLK_CONF_SPEC>;
 #[doc = "I2C_SCLK configuration register"]
