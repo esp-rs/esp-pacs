@@ -17779,16 +17779,59 @@ Measurement unit: i2c_sclk \\</description>
       </addressBlock>
       <registers>
         <register>
-          <dim>4</dim>
-          <dimIncrement>0x4</dimIncrement>
-          <name>CPU_INTR_FROM_CPU_%s</name>
-          <description>CPU_INTR_FROM_CPU_%s mapping register</description>
+          <name>CPU_INTR_FROM_CPU_0</name>
+          <description>CPU_INTR_FROM_CPU_0 mapping register</description>
           <addressOffset>0x90</addressOffset>
           <size>32</size>
           <fields>
             <field>
-              <name>CPU_INTR_FROM_CPU</name>
-              <description>CPU_INTR_FROM_CPU_%s mapping register.</description>
+              <name>CPU_INTR_FROM_CPU_0</name>
+              <description>CPU_INTR_FROM_CPU_0 mapping register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_1</name>
+          <description>CPU_INTR_FROM_CPU_1 mapping register</description>
+          <addressOffset>0x94</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_1</name>
+              <description>CPU_INTR_FROM_CPU_1 mapping register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_2</name>
+          <description>CPU_INTR_FROM_CPU_2 mapping register</description>
+          <addressOffset>0x98</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_2</name>
+              <description>CPU_INTR_FROM_CPU_2 mapping register.</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>1</bitWidth>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>CPU_INTR_FROM_CPU_3</name>
+          <description>CPU_INTR_FROM_CPU_3 mapping register</description>
+          <addressOffset>0x9b</addressOffset>
+          <size>32</size>
+          <fields>
+            <field>
+              <name>CPU_INTR_FROM_CPU_3</name>
+              <description>CPU_INTR_FROM_CPU_3 mapping register.</description>
               <bitOffset>0</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
