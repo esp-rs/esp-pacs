@@ -1,5 +1,0 @@
-TWAI0:
-  "DATA_*":
-    _modify:
-      "*":
-        access: read-write

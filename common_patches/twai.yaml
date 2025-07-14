@@ -1,0 +1,14 @@
+TWAI*:
+  # Collect DATA registers into a single array
+  _array:
+    DATA_*:
+      name: DATA%s
+      dimIncrement: 4
+
+  # Make sure the DATA register fields are read-write and have a consistent name.
+  DATA_*:
+    _modify:
+      TX_BYTE_*,DATA_*:
+        name: TX_BYTE
+        description: "In reset mode, it is acceptance code register n with R/W Permission. In operation mode, it stores the nth byte information of the data to be transmitted under operating mode."
+        access: read-write

@@ -1,6 +1,7 @@
 _svd: "../esp32p4.base.svd"
 
 _include:
+  - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_ds.yml"
   - "_ecc.yml"

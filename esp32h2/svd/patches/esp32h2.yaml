@@ -2,6 +2,8 @@ _svd: "../esp32h2.base.svd"
 
 _include:
   - ../../../common_patches/plic.yaml
+  - ../../../common_patches/twai.yaml
+  - "_aes.yml"
   - "_aes.yml"
   - "_dma.yml"
   - "_ds.yml"
