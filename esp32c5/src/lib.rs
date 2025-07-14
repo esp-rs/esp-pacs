@@ -505,15 +505,15 @@ impl core::fmt::Debug for LP_CLKRST {
 }
 #[doc = "LP_CLKRST Peripheral"]
 pub mod lp_clkrst;
-#[doc = "Low-power General Purpose Input/Output"]
-pub type LP_GPIO = crate::Periph<lp_gpio::RegisterBlock, 0x600b_4400>;
-impl core::fmt::Debug for LP_GPIO {
+#[doc = "LP_IO Peripheral"]
+pub type LP_IO = crate::Periph<lp_io::RegisterBlock, 0x600b_4400>;
+impl core::fmt::Debug for LP_IO {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("LP_GPIO").finish()
+        f.debug_struct("LP_IO").finish()
     }
 }
-#[doc = "Low-power General Purpose Input/Output"]
-pub mod lp_gpio;
+#[doc = "LP_IO Peripheral"]
+pub mod lp_io;
 #[doc = "Low-power I2C (Inter-Integrated Circuit) Controller 0"]
 pub type LP_I2C0 = crate::Periph<lp_i2c0::RegisterBlock, 0x600b_1800>;
 impl core::fmt::Debug for LP_I2C0 {
@@ -874,8 +874,8 @@ pub struct Peripherals {
     pub LP_APM0: LP_APM0,
     #[doc = "LP_CLKRST"]
     pub LP_CLKRST: LP_CLKRST,
-    #[doc = "LP_GPIO"]
-    pub LP_GPIO: LP_GPIO,
+    #[doc = "LP_IO"]
+    pub LP_IO: LP_IO,
     #[doc = "LP_I2C0"]
     pub LP_I2C0: LP_I2C0,
     #[doc = "LP_I2C_ANA_MST"]
@@ -993,7 +993,7 @@ impl Peripherals {
             LP_AON: LP_AON::steal(),
             LP_APM0: LP_APM0::steal(),
             LP_CLKRST: LP_CLKRST::steal(),
-            LP_GPIO: LP_GPIO::steal(),
+            LP_IO: LP_IO::steal(),
             LP_I2C0: LP_I2C0::steal(),
             LP_I2C_ANA_MST: LP_I2C_ANA_MST::steal(),
             LP_IO_MUX: LP_IO_MUX::steal(),

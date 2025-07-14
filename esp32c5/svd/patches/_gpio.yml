@@ -1,0 +1,4 @@
+GPIO:
+  _modify:
+    PROCPU_INT:
+      name: PCPU_INT

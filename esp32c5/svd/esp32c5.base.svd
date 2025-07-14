@@ -22215,8 +22215,8 @@ Measurement unit: LP_DYN_FAST_CLK</description>
       </registers>
     </peripheral>
     <peripheral>
-      <name>LP_GPIO</name>
-      <description>Low-power General Purpose Input/Output</description>
+      <name>LP_IO</name>
+      <description>LP_IO Peripheral</description>
       <groupName>LP_GPIO</groupName>
       <baseAddress>0x600b4400</baseAddress>
       <addressBlock>
