@@ -1,0 +1,279 @@
+_svd: "../esp32c61.base.svd"
+
+_include: 
+  - ../../../common_patches/clint.yaml
+  - ../../../common_patches/i2c_ana_mst.yaml
+  - ../../../common_patches/slc.yaml
+
+TIMG0:
+  "*":
+    _strip: "T_"
+    
+  _include: ../../../common_patches/tim_collect.yaml
+
+_modify:
+  SPI?:
+    groupName: SPI
+  AHB_DMA:
+    name: DMA
+
+APB_SARADC:
+  _modify:
+    APB_TSENS_WAKE:
+      name: TSENS_WAKE
+    APB_TSENS_SAMPLE:
+      name: TSENS_SAMPLE
+  TSENS_SAMPLE:
+    _strip: TSENS_SAMPLE_
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/adc.yaml
+
+I2C0:
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+  _include:
+    - ../../../common_patches/i2c0.yaml
+    - ../../../common_patches/i2c_st_timeouts.yaml
+
+GPIO_EXT:
+  ETM_EVENT_CH%s_CFG:
+    _strip: ETM_CH0_
+  ETM_TASK_P*_CFG:
+    _strip: ETM_TASK_
+    _array:
+      GPIO*_EN: {}
+      GPIO*_SEL: {}
+
+HP_APM,LP_APM:
+  _expand_array:
+    REGION*_ADDR_START: {}
+    REGION*_ADDR_END: {}
+    REGION*_ATTR: {}
+
+  _cluster:
+    REGION%s:
+      REGION*_ADDR_START:
+        name: ADDR_START
+        _strip: REGION_
+      REGION*_ADDR_END:
+        name: ADDR_END
+        _strip: REGION_
+      REGION*_ATTR:
+        name: PMS_ATTR
+        _strip: REGION_
+        _array:
+          R?_X:
+            name: R%s_PMS_X
+          R?_W:
+            name: R%s_PMS_W
+          R?_R:
+            name: R%s_PMS_R
+    M%s:
+      dimIncrement: 16
+      M?_STATUS:
+        name: STATUS
+        _strip: M0_
+      M?_STATUS_CLR:
+        name: STATUS_CLR
+        _strip: M0_
+      M?_EXCEPTION_INFO0:
+        name: EXCEPTION_INFO0
+        _strip: M0_
+      M?_EXCEPTION_INFO1:
+        name: EXCEPTION_INFO1
+        _strip: M0_
+
+  FUNC_CTRL:
+    _array:
+      M?_FUNC_EN:
+        name: M%s_PMS_FUNC_EN
+  INT_EN:
+    _array:
+      M?_APM_INT_EN:
+        name: M%s_APM
+
+LP_WDT:
+  _modify:
+    FEED:
+      name: WDTFEED
+
+  WDTFEED:
+    _modify:
+      RTC_WDT_FEED:
+        name: WDT_FEED
+
+PMU:
+  _include: ../../../common_patches/pmu_int_strip.yaml
+
+SPI[01]:
+  _strip: MEM_
+  "*":
+    _strip: MEM_
+
+PCR:
+  _include: ../../../common_patches/pcr.yaml
+
+# "EFUSE,I2C0,I2S0,UART0,SPI[01],USB_DEVICE,LP_UART,LP_WDT,PARL_IO,PAU,PMU":
+#   _include: ../../../common_patches/int_strip.yaml
+
+
+LEDC:
+  _include:
+    - ../../../common_patches/ledc_collect.yaml
+    - ../../../common_patches/ledc_int.yaml
+
+ECC:
+  INT_RAW:
+    _strip_end: _INT_RAW
+  INT_ST:
+    _strip_end: _INT_ST
+  INT_ENA:
+    _strip_end: _INT_ENA
+  INT_CLR:
+    _strip_end: _INT_CLR
+    _modify:
+      "*":
+        modifiedWriteValues: oneToClear
+
+LP_ANA:
+  _include: ../../../common_patches/lpana_int_strip.yaml
+
+LP_TIMER:
+  _include: ../../../common_patches/lptim_int_strip.yaml
+
+TEE,LP_TEE:
+  M*_MODE_CTRL:
+    _strip: ["M?_", "M_"]
+    MODE:
+      _name: SecurityMode
+      Tee: [0, "Tee mode"]
+      Ree0: [1, "Ree0 mode"]
+      Ree1: [2, "Ree1 mode"]
+      Ree2: [3, "Ree2 mode"]
+
+LP_TEE:
+  _array:
+    M*_MODE_CTRL:
+      dimIncrement: 4
+
+SPI1:
+  _include: ../../../common_patches/spi_w.yaml
+
+SOC_ETM:
+  CH_ENA_AD?:
+    _array:
+      CH_ENABLED*:
+        name: CH_ENA%s
+  CH_ENA_AD?_SET:
+    _array:
+      CH_ENABLE*:
+        name: CH_SET%s
+  CH_ENA_AD?_CLR:
+    _array:
+      CH_DISABLE*:
+        name: CH_CLR%s
+
+  _cluster:
+    CH%s:
+      "CH*_EVT_ID":
+        name: EVT_ID
+        _modify:
+          "CH*_EVT_ID":
+            name: EVT_ID
+      "CH*_TASK_ID":
+        name: TASK_ID
+        _modify:
+          "CH*_TASK_ID":
+            name: TASK_ID
+
+SYSTIMER:
+  _include:
+    - ../../../common_patches/int_strip.yaml
+    - ../../../common_patches/systimer.yaml
+    - ../../../common_patches/systimer_real_target.yaml
+
+DMA:
+  _cluster:
+    IN_INT_CH%s:
+      IN_INT_RAW_CH?:
+        name: RAW
+      IN_INT_ST_CH?:
+        name: ST
+      IN_INT_ENA_CH?:
+        name: ENA
+      IN_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    OUT_INT_CH%s:
+      OUT_INT_RAW_CH?:
+        name: RAW
+      OUT_INT_ST_CH?:
+        name: ST
+      OUT_INT_ENA_CH?:
+        name: ENA
+      OUT_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    CH%s:
+      IN_CONF0_CH?:
+        name: IN_CONF0
+      IN_CONF1_CH?:
+        name: IN_CONF1
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+      IN_POP_CH?:
+        name: IN_POP
+      IN_LINK_CH?:
+        name: IN_LINK
+      IN_STATE_CH?:
+        name: IN_STATE
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+      IN_DSCR_CH?:
+        name: IN_DSCR
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+      OUT_LINK_CH?:
+        name: OUT_LINK
+      OUT_STATE_CH?:
+        name: OUT_STATE
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
+
+
+I2C_ANA_MST:
+  _array:
+    I2C?_CTRL: {}
+    I2C?_CTRL1: {}
