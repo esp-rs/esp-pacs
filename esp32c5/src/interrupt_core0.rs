@@ -82,9 +82,9 @@ pub struct RegisterBlock {
     ecc_intr_map: ECC_INTR_MAP,
     ecdsa_intr_map: ECDSA_INTR_MAP,
     km_intr_map: KM_INTR_MAP,
-    int_status_0: INT_STATUS_0,
-    int_status_1: INT_STATUS_1,
-    int_status_2: INT_STATUS_2,
+    intr_status_reg_0: INTR_STATUS_REG_0,
+    intr_status_reg_1: INTR_STATUS_REG_1,
+    int_status_reg_2: INT_STATUS_REG_2,
     clock_gate: CLOCK_GATE,
     _reserved84: [u8; 0x06ac],
     interrupt_date: INTERRUPT_DATE,
@@ -492,18 +492,18 @@ impl RegisterBlock {
     }
     #[doc = "0x140 - Status register for interrupt sources 0 ~ 31"]
     #[inline(always)]
-    pub const fn int_status_0(&self) -> &INT_STATUS_0 {
-        &self.int_status_0
+    pub const fn intr_status_reg_0(&self) -> &INTR_STATUS_REG_0 {
+        &self.intr_status_reg_0
     }
     #[doc = "0x144 - Status register for interrupt sources 32 ~ 63"]
     #[inline(always)]
-    pub const fn int_status_1(&self) -> &INT_STATUS_1 {
-        &self.int_status_1
+    pub const fn intr_status_reg_1(&self) -> &INTR_STATUS_REG_1 {
+        &self.intr_status_reg_1
     }
     #[doc = "0x148 - Status register for interrupt sources 64 ~ 95"]
     #[inline(always)]
-    pub const fn int_status_2(&self) -> &INT_STATUS_2 {
-        &self.int_status_2
+    pub const fn int_status_reg_2(&self) -> &INT_STATUS_REG_2 {
+        &self.int_status_reg_2
     }
     #[doc = "0x14c - Interrupt clock gating configure register"]
     #[inline(always)]
@@ -848,18 +848,18 @@ pub mod ecdsa_intr_map;
 pub type KM_INTR_MAP = crate::Reg<km_intr_map::KM_INTR_MAP_SPEC>;
 #[doc = "KM_INTR mapping register"]
 pub mod km_intr_map;
-#[doc = "INT_STATUS_0 (r) register accessor: Status register for interrupt sources 0 ~ 31\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status_0`] module"]
-pub type INT_STATUS_0 = crate::Reg<int_status_0::INT_STATUS_0_SPEC>;
+#[doc = "INTR_STATUS_REG_0 (r) register accessor: Status register for interrupt sources 0 ~ 31\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_status_reg_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_status_reg_0`] module"]
+pub type INTR_STATUS_REG_0 = crate::Reg<intr_status_reg_0::INTR_STATUS_REG_0_SPEC>;
 #[doc = "Status register for interrupt sources 0 ~ 31"]
-pub mod int_status_0;
-#[doc = "INT_STATUS_1 (r) register accessor: Status register for interrupt sources 32 ~ 63\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status_1`] module"]
-pub type INT_STATUS_1 = crate::Reg<int_status_1::INT_STATUS_1_SPEC>;
+pub mod intr_status_reg_0;
+#[doc = "INTR_STATUS_REG_1 (r) register accessor: Status register for interrupt sources 32 ~ 63\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_status_reg_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@intr_status_reg_1`] module"]
+pub type INTR_STATUS_REG_1 = crate::Reg<intr_status_reg_1::INTR_STATUS_REG_1_SPEC>;
 #[doc = "Status register for interrupt sources 32 ~ 63"]
-pub mod int_status_1;
-#[doc = "INT_STATUS_2 (r) register accessor: Status register for interrupt sources 64 ~ 95\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status_2`] module"]
-pub type INT_STATUS_2 = crate::Reg<int_status_2::INT_STATUS_2_SPEC>;
+pub mod intr_status_reg_1;
+#[doc = "INT_STATUS_REG_2 (r) register accessor: Status register for interrupt sources 64 ~ 95\n\nYou can [`read`](crate::Reg::read) this register and get [`int_status_reg_2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_status_reg_2`] module"]
+pub type INT_STATUS_REG_2 = crate::Reg<int_status_reg_2::INT_STATUS_REG_2_SPEC>;
 #[doc = "Status register for interrupt sources 64 ~ 95"]
-pub mod int_status_2;
+pub mod int_status_reg_2;
 #[doc = "CLOCK_GATE (rw) register accessor: Interrupt clock gating configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "Interrupt clock gating configure register"]

@@ -2,6 +2,7 @@ _svd: ../esp32c5.base.svd
 
 _include:
   - ../../../common_patches/plic.yaml
+  - _interrupt.yml
 
 AES:
   _modify:
