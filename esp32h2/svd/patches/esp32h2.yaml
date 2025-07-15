@@ -1147,6 +1147,10 @@ I2C_ANA_MST:
 
 LP_AON:
   # Make sure the STORE registers are the same type
+  STORE0:
+    _modify:
+      "LP_AON_STORE0":
+        name: "DATA"
   _derive:
     STORE[1-9]:
       _from: STORE0

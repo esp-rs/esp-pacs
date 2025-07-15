@@ -73,7 +73,11 @@ HP_APM,LP_APM,LP_APM0:
   _include: ../../../common_patches/hp_apm.yaml
 
 LP_AON:
-  # Make sure the STORE registers are the same type
+  # Make sure the STORE registers are the same type  
+  STORE0:
+    _modify:
+      "LP_AON_STORE0":
+        name: "DATA"
   _derive:
     STORE[1-9]:
       _from: STORE0

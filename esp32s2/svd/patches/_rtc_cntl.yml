@@ -8,12 +8,16 @@ RTC_CNTL:
     OPTION1:
       name: "OPTIONS1"
 
-  # Make sure the STORE registers are the same type
-  _derive:
-    STORE[1-7]:
-      _from: STORE0
-
   "*":
     _strip: "RTC_"
 
   _strip: "RTC_"
+
+  # Make sure the STORE registers are the same type
+  STORE0:
+    _modify:
+      "SCRATCH0":
+        name: "DATA"
+  _derive:
+    STORE[1-7]:
+      _from: STORE0
