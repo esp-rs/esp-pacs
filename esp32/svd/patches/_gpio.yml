@@ -29,3 +29,10 @@ GPIO:
       DATA:
         name: "DATA_NEXT"
         access: read-write
+
+IO_MUX:
+  _derive:
+    GPIO[1-9]:
+      _from: GPIO0
+    GPIO??:
+      _from: GPIO0
