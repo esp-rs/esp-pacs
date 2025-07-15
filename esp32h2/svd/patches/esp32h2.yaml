@@ -931,6 +931,7 @@ INTPRI:
   _array:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
+  _include: ../../../common_patches/sw_interrupts.yaml
 
 PCR:
   _include: ../../../common_patches/pcr.yaml

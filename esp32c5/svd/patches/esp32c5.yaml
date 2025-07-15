@@ -305,6 +305,12 @@ HP_APM:
       M?_APM_INT_EN:
         name: M%s_APM
 
+INTPRI:
+  _modify:
+    CPU_INTR_FROM_CPU_3:
+      addressOffset: 0x9c
+  _include: ../../../common_patches/sw_interrupts.yaml
+
 RMT:
   _delete: "RX_CH%sDATA"
   _modify:

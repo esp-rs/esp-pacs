@@ -485,3 +485,6 @@ APB_CTRL:
 
 RNG:
   _include: ../../../common_patches/rng.yaml
+
+SYSTEM:
+  _include: ../../../common_patches/sw_interrupts.yaml

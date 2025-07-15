@@ -289,3 +289,5 @@ DPORT:
       name: CORE_0_INTR_STATUS%s
     APP_INTR_STATUS_*:
       name: CORE_1_INTR_STATUS%s
+
+  _include: ../../../common_patches/sw_interrupts.yaml

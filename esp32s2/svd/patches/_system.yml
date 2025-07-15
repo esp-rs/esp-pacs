@@ -7,3 +7,5 @@ SYSTEM:
     _modify:
       CAN_RST:
         name: TWAI_RST
+
+  _include: ../../../common_patches/sw_interrupts.yaml

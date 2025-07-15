@@ -299,3 +299,5 @@ SYSTEM:
     _modify:
       I2S1_RST:
         name: I2S0_RST
+
+  _include: ../../../common_patches/sw_interrupts.yaml

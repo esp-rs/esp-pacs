@@ -100,6 +100,9 @@ SYSTIMER:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
 
+SYSTEM:
+  _include: ../../../common_patches/sw_interrupts.yaml
+
 _add:
   I2C_ANA_MST:
     description: I2C_ANA_MST Peripheral

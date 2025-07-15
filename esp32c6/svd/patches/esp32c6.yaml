@@ -170,6 +170,8 @@ INTPRI:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
 
+  _include: ../../../common_patches/sw_interrupts.yaml
+
 PCNT:
   "*":
     _strip_end: "_U"
