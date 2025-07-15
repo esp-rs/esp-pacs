@@ -1,19 +1,19 @@
 #[doc = "Register `RCD_PDEBUGLS0ADDR` reader"]
 pub type R = crate::R<RCD_PDEBUGLS0ADDR_SPEC>;
-#[doc = "Field `CORE_0_RCD_PDEBUGLS0ADDR` reader - core0_pdebug_s0addr"]
-pub type CORE_0_RCD_PDEBUGLS0ADDR_R = crate::FieldReader<u32>;
+#[doc = "Field `RCD_PDEBUGLS0ADDR` reader - core0_pdebug_s0addr"]
+pub type RCD_PDEBUGLS0ADDR_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - core0_pdebug_s0addr"]
     #[inline(always)]
-    pub fn core_0_rcd_pdebugls0addr(&self) -> CORE_0_RCD_PDEBUGLS0ADDR_R {
-        CORE_0_RCD_PDEBUGLS0ADDR_R::new(self.bits)
+    pub fn rcd_pdebugls0addr(&self) -> RCD_PDEBUGLS0ADDR_R {
+        RCD_PDEBUGLS0ADDR_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCD_PDEBUGLS0ADDR")
-            .field("core_0_rcd_pdebugls0addr", &self.core_0_rcd_pdebugls0addr())
+            .field("rcd_pdebugls0addr", &self.rcd_pdebugls0addr())
             .finish()
     }
 }

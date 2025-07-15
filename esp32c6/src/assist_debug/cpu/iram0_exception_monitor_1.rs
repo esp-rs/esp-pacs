@@ -1,43 +1,37 @@
 #[doc = "Register `IRAM0_EXCEPTION_MONITOR_1` reader"]
 pub type R = crate::R<IRAM0_EXCEPTION_MONITOR_1_SPEC>;
-#[doc = "Field `CORE_0_IRAM0_RECORDING_ADDR_1` reader - reg_core_0_iram0_recording_addr_1"]
-pub type CORE_0_IRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32>;
-#[doc = "Field `CORE_0_IRAM0_RECORDING_WR_1` reader - reg_core_0_iram0_recording_wr_1"]
-pub type CORE_0_IRAM0_RECORDING_WR_1_R = crate::BitReader;
-#[doc = "Field `CORE_0_IRAM0_RECORDING_LOADSTORE_1` reader - reg_core_0_iram0_recording_loadstore_1"]
-pub type CORE_0_IRAM0_RECORDING_LOADSTORE_1_R = crate::BitReader;
+#[doc = "Field `IRAM0_RECORDING_ADDR_1` reader - reg_core_0_iram0_recording_addr_1"]
+pub type IRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32>;
+#[doc = "Field `IRAM0_RECORDING_WR_1` reader - reg_core_0_iram0_recording_wr_1"]
+pub type IRAM0_RECORDING_WR_1_R = crate::BitReader;
+#[doc = "Field `IRAM0_RECORDING_LOADSTORE_1` reader - reg_core_0_iram0_recording_loadstore_1"]
+pub type IRAM0_RECORDING_LOADSTORE_1_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:23 - reg_core_0_iram0_recording_addr_1"]
     #[inline(always)]
-    pub fn core_0_iram0_recording_addr_1(&self) -> CORE_0_IRAM0_RECORDING_ADDR_1_R {
-        CORE_0_IRAM0_RECORDING_ADDR_1_R::new(self.bits & 0x00ff_ffff)
+    pub fn iram0_recording_addr_1(&self) -> IRAM0_RECORDING_ADDR_1_R {
+        IRAM0_RECORDING_ADDR_1_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bit 24 - reg_core_0_iram0_recording_wr_1"]
     #[inline(always)]
-    pub fn core_0_iram0_recording_wr_1(&self) -> CORE_0_IRAM0_RECORDING_WR_1_R {
-        CORE_0_IRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn iram0_recording_wr_1(&self) -> IRAM0_RECORDING_WR_1_R {
+        IRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 25 - reg_core_0_iram0_recording_loadstore_1"]
     #[inline(always)]
-    pub fn core_0_iram0_recording_loadstore_1(&self) -> CORE_0_IRAM0_RECORDING_LOADSTORE_1_R {
-        CORE_0_IRAM0_RECORDING_LOADSTORE_1_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn iram0_recording_loadstore_1(&self) -> IRAM0_RECORDING_LOADSTORE_1_R {
+        IRAM0_RECORDING_LOADSTORE_1_R::new(((self.bits >> 25) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("IRAM0_EXCEPTION_MONITOR_1")
+            .field("iram0_recording_addr_1", &self.iram0_recording_addr_1())
+            .field("iram0_recording_wr_1", &self.iram0_recording_wr_1())
             .field(
-                "core_0_iram0_recording_addr_1",
-                &self.core_0_iram0_recording_addr_1(),
-            )
-            .field(
-                "core_0_iram0_recording_wr_1",
-                &self.core_0_iram0_recording_wr_1(),
-            )
-            .field(
-                "core_0_iram0_recording_loadstore_1",
-                &self.core_0_iram0_recording_loadstore_1(),
+                "iram0_recording_loadstore_1",
+                &self.iram0_recording_loadstore_1(),
             )
             .finish()
     }

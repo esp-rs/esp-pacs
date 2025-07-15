@@ -79,73 +79,109 @@ ASSIST_DEBUG:
     CPU%s:
       CORE_?_AREA_DRAM0_0_MAX:
         name: AREA_DRAM0_0_MAX
+        _strip: CORE_?_
       CORE_?_AREA_DRAM0_0_MIN:
         name: AREA_DRAM0_0_MIN
+        _strip: CORE_?_
       CORE_?_AREA_DRAM0_1_MAX:
         name: AREA_DRAM0_1_MAX
+        _strip: CORE_?_
       CORE_?_AREA_DRAM0_1_MIN:
         name: AREA_DRAM0_1_MIN
+        _strip: CORE_?_
       CORE_?_AREA_PC:
         name: AREA_PC
+        _strip: CORE_?_
       CORE_?_AREA_PIF_0_MAX:
         name: AREA_PIF_0_MAX
+        _strip: CORE_?_
       CORE_?_AREA_PIF_0_MIN:
         name: AREA_PIF_0_MIN
+        _strip: CORE_?_
       CORE_?_AREA_PIF_1_MAX:
         name: AREA_PIF_1_MAX
+        _strip: CORE_?_
       CORE_?_AREA_PIF_1_MIN:
         name: AREA_PIF_1_MIN
+        _strip: CORE_?_
       CORE_?_AREA_SP:
         name: AREA_SP
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_0:
         name: DRAM0_EXCEPTION_MONITOR_0
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_1:
         name: DRAM0_EXCEPTION_MONITOR_1
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_2:
         name: DRAM0_EXCEPTION_MONITOR_2
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_3:
         name: DRAM0_EXCEPTION_MONITOR_3
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_4:
         name: DRAM0_EXCEPTION_MONITOR_4
+        _strip: CORE_?_
       CORE_?_DRAM0_EXCEPTION_MONITOR_5:
         name: DRAM0_EXCEPTION_MONITOR_5
+        _strip: CORE_?_
       CORE_?_INTR_CLR:
         name: INTR_CLR
+        _strip: CORE_?_
       CORE_?_INTR_ENA:
         name: INTR_ENA
+        _strip: CORE_?_
       CORE_?_INTR_RAW:
         name: INTR_RAW
+        _strip: CORE_?_
       CORE_?_IRAM0_EXCEPTION_MONITOR_0:
         name: IRAM0_EXCEPTION_MONITOR_0
+        _strip: CORE_?_
       CORE_?_IRAM0_EXCEPTION_MONITOR_1:
         name: IRAM0_EXCEPTION_MONITOR_1
+        _strip: CORE_?_
       CORE_?_MONTR_ENA:
         name: MONTR_ENA
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGDATA:
         name: RCD_PDEBUGDATA
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGENABLE:
         name: RCD_PDEBUGENABLE
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGINST:
         name: RCD_PDEBUGINST
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGLS0ADDR:
         name: RCD_PDEBUGLS0ADDR
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGLS0DATA:
         name: RCD_PDEBUGLS0DATA
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGLS0STAT:
         name: RCD_PDEBUGLS0STAT
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGPC:
         name: RCD_PDEBUGPC
+        _strip: CORE_?_
       CORE_?_RCD_PDEBUGSTATUS:
         name: RCD_PDEBUGSTATUS
+        _strip: CORE_?_
       CORE_?_RCD_RECORDING:
         name: RCD_RECORDING
+        _strip: CORE_?_
       CORE_?_RCD_SP:
         name: RCD_SP
+        _strip: CORE_?_
       CORE_?_SP_MAX:
         name: SP_MAX
+        _strip: CORE_?_
       CORE_?_SP_MIN:
         name: SP_MIN
+        _strip: CORE_?_
       CORE_?_SP_PC:
         name: SP_PC
+        _strip: CORE_?_
       CORE_?_SP_UNSTABLE:
         name: SP_UNSTABLE
+        _strip: CORE_?_

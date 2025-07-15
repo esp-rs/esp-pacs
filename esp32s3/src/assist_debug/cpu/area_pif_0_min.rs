@@ -2,30 +2,30 @@
 pub type R = crate::R<AREA_PIF_0_MIN_SPEC>;
 #[doc = "Register `AREA_PIF_0_MIN` writer"]
 pub type W = crate::W<AREA_PIF_0_MIN_SPEC>;
-#[doc = "Field `CORE_0_AREA_PIF_0_MIN` reader - Core0 PIF region0 start addr"]
-pub type CORE_0_AREA_PIF_0_MIN_R = crate::FieldReader<u32>;
-#[doc = "Field `CORE_0_AREA_PIF_0_MIN` writer - Core0 PIF region0 start addr"]
-pub type CORE_0_AREA_PIF_0_MIN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `AREA_PIF_0_MIN` reader - Core0 PIF region0 start addr"]
+pub type AREA_PIF_0_MIN_R = crate::FieldReader<u32>;
+#[doc = "Field `AREA_PIF_0_MIN` writer - Core0 PIF region0 start addr"]
+pub type AREA_PIF_0_MIN_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Core0 PIF region0 start addr"]
     #[inline(always)]
-    pub fn core_0_area_pif_0_min(&self) -> CORE_0_AREA_PIF_0_MIN_R {
-        CORE_0_AREA_PIF_0_MIN_R::new(self.bits)
+    pub fn area_pif_0_min(&self) -> AREA_PIF_0_MIN_R {
+        AREA_PIF_0_MIN_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AREA_PIF_0_MIN")
-            .field("core_0_area_pif_0_min", &self.core_0_area_pif_0_min())
+            .field("area_pif_0_min", &self.area_pif_0_min())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:31 - Core0 PIF region0 start addr"]
     #[inline(always)]
-    pub fn core_0_area_pif_0_min(&mut self) -> CORE_0_AREA_PIF_0_MIN_W<AREA_PIF_0_MIN_SPEC> {
-        CORE_0_AREA_PIF_0_MIN_W::new(self, 0)
+    pub fn area_pif_0_min(&mut self) -> AREA_PIF_0_MIN_W<AREA_PIF_0_MIN_SPEC> {
+        AREA_PIF_0_MIN_W::new(self, 0)
     }
 }
 #[doc = "core0 PIF region0 addr configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`area_pif_0_min::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`area_pif_0_min::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

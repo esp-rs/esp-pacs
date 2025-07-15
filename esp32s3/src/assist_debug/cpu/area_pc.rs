@@ -1,19 +1,19 @@
 #[doc = "Register `AREA_PC` reader"]
 pub type R = crate::R<AREA_PC_SPEC>;
-#[doc = "Field `CORE_0_AREA_PC` reader - the PC when first touch region monitor interrupt"]
-pub type CORE_0_AREA_PC_R = crate::FieldReader<u32>;
+#[doc = "Field `AREA_PC` reader - the PC when first touch region monitor interrupt"]
+pub type AREA_PC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - the PC when first touch region monitor interrupt"]
     #[inline(always)]
-    pub fn core_0_area_pc(&self) -> CORE_0_AREA_PC_R {
-        CORE_0_AREA_PC_R::new(self.bits)
+    pub fn area_pc(&self) -> AREA_PC_R {
+        AREA_PC_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AREA_PC")
-            .field("core_0_area_pc", &self.core_0_area_pc())
+            .field("area_pc", &self.area_pc())
             .finish()
     }
 }

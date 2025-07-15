@@ -1,19 +1,19 @@
 #[doc = "Register `SP_PC` reader"]
 pub type R = crate::R<SP_PC_SPEC>;
-#[doc = "Field `CORE_0_SP_PC` reader - reg_core_0_sp_pc"]
-pub type CORE_0_SP_PC_R = crate::FieldReader<u32>;
+#[doc = "Field `SP_PC` reader - reg_core_0_sp_pc"]
+pub type SP_PC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_sp_pc"]
     #[inline(always)]
-    pub fn core_0_sp_pc(&self) -> CORE_0_SP_PC_R {
-        CORE_0_SP_PC_R::new(self.bits)
+    pub fn sp_pc(&self) -> SP_PC_R {
+        SP_PC_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("SP_PC")
-            .field("core_0_sp_pc", &self.core_0_sp_pc())
+            .field("sp_pc", &self.sp_pc())
             .finish()
     }
 }

@@ -1,19 +1,19 @@
 #[doc = "Register `RCD_PDEBUGLS0STAT` reader"]
 pub type R = crate::R<RCD_PDEBUGLS0STAT_SPEC>;
-#[doc = "Field `CORE_0_RCD_PDEBUGLS0STAT` reader - core0_pdebug_s0stat"]
-pub type CORE_0_RCD_PDEBUGLS0STAT_R = crate::FieldReader<u32>;
+#[doc = "Field `RCD_PDEBUGLS0STAT` reader - core0_pdebug_s0stat"]
+pub type RCD_PDEBUGLS0STAT_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - core0_pdebug_s0stat"]
     #[inline(always)]
-    pub fn core_0_rcd_pdebugls0stat(&self) -> CORE_0_RCD_PDEBUGLS0STAT_R {
-        CORE_0_RCD_PDEBUGLS0STAT_R::new(self.bits)
+    pub fn rcd_pdebugls0stat(&self) -> RCD_PDEBUGLS0STAT_R {
+        RCD_PDEBUGLS0STAT_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCD_PDEBUGLS0STAT")
-            .field("core_0_rcd_pdebugls0stat", &self.core_0_rcd_pdebugls0stat())
+            .field("rcd_pdebugls0stat", &self.rcd_pdebugls0stat())
             .finish()
     }
 }

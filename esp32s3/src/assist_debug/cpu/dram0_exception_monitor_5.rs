@@ -1,22 +1,19 @@
 #[doc = "Register `DRAM0_EXCEPTION_MONITOR_5` reader"]
 pub type R = crate::R<DRAM0_EXCEPTION_MONITOR_5_SPEC>;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_PC_1` reader - The second dram0's PC status when trigger DRAM busy interrupt"]
-pub type CORE_0_DRAM0_RECORDING_PC_1_R = crate::FieldReader<u32>;
+#[doc = "Field `DRAM0_RECORDING_PC_1` reader - The second dram0's PC status when trigger DRAM busy interrupt"]
+pub type DRAM0_RECORDING_PC_1_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - The second dram0's PC status when trigger DRAM busy interrupt"]
     #[inline(always)]
-    pub fn core_0_dram0_recording_pc_1(&self) -> CORE_0_DRAM0_RECORDING_PC_1_R {
-        CORE_0_DRAM0_RECORDING_PC_1_R::new(self.bits)
+    pub fn dram0_recording_pc_1(&self) -> DRAM0_RECORDING_PC_1_R {
+        DRAM0_RECORDING_PC_1_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DRAM0_EXCEPTION_MONITOR_5")
-            .field(
-                "core_0_dram0_recording_pc_1",
-                &self.core_0_dram0_recording_pc_1(),
-            )
+            .field("dram0_recording_pc_1", &self.dram0_recording_pc_1())
             .finish()
     }
 }

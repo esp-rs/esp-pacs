@@ -2,55 +2,45 @@
 pub type R = crate::R<INTR_ENA_SPEC>;
 #[doc = "Register `INTR_ENA` writer"]
 pub type W = crate::W<INTR_ENA_SPEC>;
-#[doc = "Field `CORE_0_SP_SPILL_MIN_INTR_ENA` reader - enbale sp underlow monitor interrupt"]
-pub type CORE_0_SP_SPILL_MIN_INTR_ENA_R = crate::BitReader;
-#[doc = "Field `CORE_0_SP_SPILL_MIN_INTR_ENA` writer - enbale sp underlow monitor interrupt"]
-pub type CORE_0_SP_SPILL_MIN_INTR_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CORE_0_SP_SPILL_MAX_INTR_ENA` reader - enbale sp overflow monitor interrupt"]
-pub type CORE_0_SP_SPILL_MAX_INTR_ENA_R = crate::BitReader;
-#[doc = "Field `CORE_0_SP_SPILL_MAX_INTR_ENA` writer - enbale sp overflow monitor interrupt"]
-pub type CORE_0_SP_SPILL_MAX_INTR_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SP_SPILL_MIN_INTR_ENA` reader - enbale sp underlow monitor interrupt"]
+pub type SP_SPILL_MIN_INTR_ENA_R = crate::BitReader;
+#[doc = "Field `SP_SPILL_MIN_INTR_ENA` writer - enbale sp underlow monitor interrupt"]
+pub type SP_SPILL_MIN_INTR_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SP_SPILL_MAX_INTR_ENA` reader - enbale sp overflow monitor interrupt"]
+pub type SP_SPILL_MAX_INTR_ENA_R = crate::BitReader;
+#[doc = "Field `SP_SPILL_MAX_INTR_ENA` writer - enbale sp overflow monitor interrupt"]
+pub type SP_SPILL_MAX_INTR_ENA_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - enbale sp underlow monitor interrupt"]
     #[inline(always)]
-    pub fn core_0_sp_spill_min_intr_ena(&self) -> CORE_0_SP_SPILL_MIN_INTR_ENA_R {
-        CORE_0_SP_SPILL_MIN_INTR_ENA_R::new((self.bits & 1) != 0)
+    pub fn sp_spill_min_intr_ena(&self) -> SP_SPILL_MIN_INTR_ENA_R {
+        SP_SPILL_MIN_INTR_ENA_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - enbale sp overflow monitor interrupt"]
     #[inline(always)]
-    pub fn core_0_sp_spill_max_intr_ena(&self) -> CORE_0_SP_SPILL_MAX_INTR_ENA_R {
-        CORE_0_SP_SPILL_MAX_INTR_ENA_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn sp_spill_max_intr_ena(&self) -> SP_SPILL_MAX_INTR_ENA_R {
+        SP_SPILL_MAX_INTR_ENA_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("INTR_ENA")
-            .field(
-                "core_0_sp_spill_min_intr_ena",
-                &self.core_0_sp_spill_min_intr_ena(),
-            )
-            .field(
-                "core_0_sp_spill_max_intr_ena",
-                &self.core_0_sp_spill_max_intr_ena(),
-            )
+            .field("sp_spill_min_intr_ena", &self.sp_spill_min_intr_ena())
+            .field("sp_spill_max_intr_ena", &self.sp_spill_max_intr_ena())
             .finish()
     }
 }
 impl W {
     #[doc = "Bit 0 - enbale sp underlow monitor interrupt"]
     #[inline(always)]
-    pub fn core_0_sp_spill_min_intr_ena(
-        &mut self,
-    ) -> CORE_0_SP_SPILL_MIN_INTR_ENA_W<INTR_ENA_SPEC> {
-        CORE_0_SP_SPILL_MIN_INTR_ENA_W::new(self, 0)
+    pub fn sp_spill_min_intr_ena(&mut self) -> SP_SPILL_MIN_INTR_ENA_W<INTR_ENA_SPEC> {
+        SP_SPILL_MIN_INTR_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - enbale sp overflow monitor interrupt"]
     #[inline(always)]
-    pub fn core_0_sp_spill_max_intr_ena(
-        &mut self,
-    ) -> CORE_0_SP_SPILL_MAX_INTR_ENA_W<INTR_ENA_SPEC> {
-        CORE_0_SP_SPILL_MAX_INTR_ENA_W::new(self, 1)
+    pub fn sp_spill_max_intr_ena(&mut self) -> SP_SPILL_MAX_INTR_ENA_W<INTR_ENA_SPEC> {
+        SP_SPILL_MAX_INTR_ENA_W::new(self, 1)
     }
 }
 #[doc = "core0 monitor interrupt enable register\n\nYou can [`read`](crate::Reg::read) this register and get [`intr_ena::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr_ena::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

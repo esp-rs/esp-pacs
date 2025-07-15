@@ -2,30 +2,30 @@
 pub type R = crate::R<AREA_DRAM0_0_MAX_SPEC>;
 #[doc = "Register `AREA_DRAM0_0_MAX` writer"]
 pub type W = crate::W<AREA_DRAM0_0_MAX_SPEC>;
-#[doc = "Field `CORE_0_AREA_DRAM0_0_MAX` reader - reg_core_0_area_dram0_0_max"]
-pub type CORE_0_AREA_DRAM0_0_MAX_R = crate::FieldReader<u32>;
-#[doc = "Field `CORE_0_AREA_DRAM0_0_MAX` writer - reg_core_0_area_dram0_0_max"]
-pub type CORE_0_AREA_DRAM0_0_MAX_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `AREA_DRAM0_0_MAX` reader - reg_core_0_area_dram0_0_max"]
+pub type AREA_DRAM0_0_MAX_R = crate::FieldReader<u32>;
+#[doc = "Field `AREA_DRAM0_0_MAX` writer - reg_core_0_area_dram0_0_max"]
+pub type AREA_DRAM0_0_MAX_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - reg_core_0_area_dram0_0_max"]
     #[inline(always)]
-    pub fn core_0_area_dram0_0_max(&self) -> CORE_0_AREA_DRAM0_0_MAX_R {
-        CORE_0_AREA_DRAM0_0_MAX_R::new(self.bits)
+    pub fn area_dram0_0_max(&self) -> AREA_DRAM0_0_MAX_R {
+        AREA_DRAM0_0_MAX_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AREA_DRAM0_0_MAX")
-            .field("core_0_area_dram0_0_max", &self.core_0_area_dram0_0_max())
+            .field("area_dram0_0_max", &self.area_dram0_0_max())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:31 - reg_core_0_area_dram0_0_max"]
     #[inline(always)]
-    pub fn core_0_area_dram0_0_max(&mut self) -> CORE_0_AREA_DRAM0_0_MAX_W<AREA_DRAM0_0_MAX_SPEC> {
-        CORE_0_AREA_DRAM0_0_MAX_W::new(self, 0)
+    pub fn area_dram0_0_max(&mut self) -> AREA_DRAM0_0_MAX_W<AREA_DRAM0_0_MAX_SPEC> {
+        AREA_DRAM0_0_MAX_W::new(self, 0)
     }
 }
 #[doc = "ASSIST_DEBUG_CORE_0_AREA_DRAM0_0_MAX_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`area_dram0_0_max::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`area_dram0_0_max::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

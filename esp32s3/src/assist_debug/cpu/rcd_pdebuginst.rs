@@ -1,19 +1,19 @@
 #[doc = "Register `RCD_PDEBUGINST` reader"]
 pub type R = crate::R<RCD_PDEBUGINST_SPEC>;
-#[doc = "Field `CORE_0_RCD_PDEBUGINST` reader - core0 pdebuginst"]
-pub type CORE_0_RCD_PDEBUGINST_R = crate::FieldReader<u32>;
+#[doc = "Field `RCD_PDEBUGINST` reader - core0 pdebuginst"]
+pub type RCD_PDEBUGINST_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - core0 pdebuginst"]
     #[inline(always)]
-    pub fn core_0_rcd_pdebuginst(&self) -> CORE_0_RCD_PDEBUGINST_R {
-        CORE_0_RCD_PDEBUGINST_R::new(self.bits)
+    pub fn rcd_pdebuginst(&self) -> RCD_PDEBUGINST_R {
+        RCD_PDEBUGINST_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("RCD_PDEBUGINST")
-            .field("core_0_rcd_pdebuginst", &self.core_0_rcd_pdebuginst())
+            .field("rcd_pdebuginst", &self.rcd_pdebuginst())
             .finish()
     }
 }

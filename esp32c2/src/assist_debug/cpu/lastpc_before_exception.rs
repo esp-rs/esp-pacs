@@ -1,19 +1,19 @@
 #[doc = "Register `LASTPC_BEFORE_EXCEPTION` reader"]
 pub type R = crate::R<LASTPC_BEFORE_EXCEPTION_SPEC>;
-#[doc = "Field `CORE_0_LASTPC_BEFORE_EXC` reader - cpu's lastpc before exception"]
-pub type CORE_0_LASTPC_BEFORE_EXC_R = crate::FieldReader<u32>;
+#[doc = "Field `LASTPC_BEFORE_EXC` reader - cpu's lastpc before exception"]
+pub type LASTPC_BEFORE_EXC_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - cpu's lastpc before exception"]
     #[inline(always)]
-    pub fn core_0_lastpc_before_exc(&self) -> CORE_0_LASTPC_BEFORE_EXC_R {
-        CORE_0_LASTPC_BEFORE_EXC_R::new(self.bits)
+    pub fn lastpc_before_exc(&self) -> LASTPC_BEFORE_EXC_R {
+        LASTPC_BEFORE_EXC_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LASTPC_BEFORE_EXCEPTION")
-            .field("core_0_lastpc_before_exc", &self.core_0_lastpc_before_exc())
+            .field("lastpc_before_exc", &self.lastpc_before_exc())
             .finish()
     }
 }

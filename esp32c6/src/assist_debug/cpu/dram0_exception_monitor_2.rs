@@ -1,44 +1,35 @@
 #[doc = "Register `DRAM0_EXCEPTION_MONITOR_2` reader"]
 pub type R = crate::R<DRAM0_EXCEPTION_MONITOR_2_SPEC>;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_ADDR_1` reader - reg_core_0_dram0_recording_addr_1"]
-pub type CORE_0_DRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32>;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_WR_1` reader - reg_core_0_dram0_recording_wr_1"]
-pub type CORE_0_DRAM0_RECORDING_WR_1_R = crate::BitReader;
-#[doc = "Field `CORE_0_DRAM0_RECORDING_BYTEEN_1` reader - reg_core_0_dram0_recording_byteen_1"]
-pub type CORE_0_DRAM0_RECORDING_BYTEEN_1_R = crate::FieldReader;
+#[doc = "Field `DRAM0_RECORDING_ADDR_1` reader - reg_core_0_dram0_recording_addr_1"]
+pub type DRAM0_RECORDING_ADDR_1_R = crate::FieldReader<u32>;
+#[doc = "Field `DRAM0_RECORDING_WR_1` reader - reg_core_0_dram0_recording_wr_1"]
+pub type DRAM0_RECORDING_WR_1_R = crate::BitReader;
+#[doc = "Field `DRAM0_RECORDING_BYTEEN_1` reader - reg_core_0_dram0_recording_byteen_1"]
+pub type DRAM0_RECORDING_BYTEEN_1_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:23 - reg_core_0_dram0_recording_addr_1"]
     #[inline(always)]
-    pub fn core_0_dram0_recording_addr_1(&self) -> CORE_0_DRAM0_RECORDING_ADDR_1_R {
-        CORE_0_DRAM0_RECORDING_ADDR_1_R::new(self.bits & 0x00ff_ffff)
+    pub fn dram0_recording_addr_1(&self) -> DRAM0_RECORDING_ADDR_1_R {
+        DRAM0_RECORDING_ADDR_1_R::new(self.bits & 0x00ff_ffff)
     }
     #[doc = "Bit 24 - reg_core_0_dram0_recording_wr_1"]
     #[inline(always)]
-    pub fn core_0_dram0_recording_wr_1(&self) -> CORE_0_DRAM0_RECORDING_WR_1_R {
-        CORE_0_DRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 1) != 0)
+    pub fn dram0_recording_wr_1(&self) -> DRAM0_RECORDING_WR_1_R {
+        DRAM0_RECORDING_WR_1_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bits 25:28 - reg_core_0_dram0_recording_byteen_1"]
     #[inline(always)]
-    pub fn core_0_dram0_recording_byteen_1(&self) -> CORE_0_DRAM0_RECORDING_BYTEEN_1_R {
-        CORE_0_DRAM0_RECORDING_BYTEEN_1_R::new(((self.bits >> 25) & 0x0f) as u8)
+    pub fn dram0_recording_byteen_1(&self) -> DRAM0_RECORDING_BYTEEN_1_R {
+        DRAM0_RECORDING_BYTEEN_1_R::new(((self.bits >> 25) & 0x0f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DRAM0_EXCEPTION_MONITOR_2")
-            .field(
-                "core_0_dram0_recording_addr_1",
-                &self.core_0_dram0_recording_addr_1(),
-            )
-            .field(
-                "core_0_dram0_recording_wr_1",
-                &self.core_0_dram0_recording_wr_1(),
-            )
-            .field(
-                "core_0_dram0_recording_byteen_1",
-                &self.core_0_dram0_recording_byteen_1(),
-            )
+            .field("dram0_recording_addr_1", &self.dram0_recording_addr_1())
+            .field("dram0_recording_wr_1", &self.dram0_recording_wr_1())
+            .field("dram0_recording_byteen_1", &self.dram0_recording_byteen_1())
             .finish()
     }
 }

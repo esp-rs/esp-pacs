@@ -1,30 +1,27 @@
 #[doc = "Register `DEBUG_MODE` reader"]
 pub type R = crate::R<DEBUG_MODE_SPEC>;
-#[doc = "Field `CORE_0_DEBUG_MODE` reader - cpu debug mode status, 1 means cpu enter debug mode."]
-pub type CORE_0_DEBUG_MODE_R = crate::BitReader;
-#[doc = "Field `CORE_0_DEBUG_MODULE_ACTIVE` reader - cpu debug_module active status"]
-pub type CORE_0_DEBUG_MODULE_ACTIVE_R = crate::BitReader;
+#[doc = "Field `DEBUG_MODE` reader - cpu debug mode status, 1 means cpu enter debug mode."]
+pub type DEBUG_MODE_R = crate::BitReader;
+#[doc = "Field `DEBUG_MODULE_ACTIVE` reader - cpu debug_module active status"]
+pub type DEBUG_MODULE_ACTIVE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - cpu debug mode status, 1 means cpu enter debug mode."]
     #[inline(always)]
-    pub fn core_0_debug_mode(&self) -> CORE_0_DEBUG_MODE_R {
-        CORE_0_DEBUG_MODE_R::new((self.bits & 1) != 0)
+    pub fn debug_mode(&self) -> DEBUG_MODE_R {
+        DEBUG_MODE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - cpu debug_module active status"]
     #[inline(always)]
-    pub fn core_0_debug_module_active(&self) -> CORE_0_DEBUG_MODULE_ACTIVE_R {
-        CORE_0_DEBUG_MODULE_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
+    pub fn debug_module_active(&self) -> DEBUG_MODULE_ACTIVE_R {
+        DEBUG_MODULE_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEBUG_MODE")
-            .field("core_0_debug_mode", &self.core_0_debug_mode())
-            .field(
-                "core_0_debug_module_active",
-                &self.core_0_debug_module_active(),
-            )
+            .field("debug_mode", &self.debug_mode())
+            .field("debug_module_active", &self.debug_module_active())
             .finish()
     }
 }
