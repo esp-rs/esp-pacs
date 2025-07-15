@@ -7,6 +7,7 @@ _include:
   - ../../../common_patches/slc.yaml
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
+  - "_assist_debug.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_ecc.yml"
@@ -330,9 +331,6 @@ DMA:
         name: OUT_PRI
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
-
-ASSIST_DEBUG:
-  _include: ../../../common_patches/assist_debug.yaml
 
 RSA:
   INT_CLR:

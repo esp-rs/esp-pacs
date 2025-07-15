@@ -4,3 +4,64 @@ ASSIST_DEBUG:
       name: CORE_0_MONTR_ENA
 
   _include: ../../../common_patches/assist_debug.yaml
+
+  _cluster:
+    CPU%s:
+      dimIncrement: 156
+      CORE_?_DEBUG_MODE:
+        name: DEBUG_MODE
+        _strip: CORE_?_
+      CORE_?_AREA_DRAM0_0_MAX:
+        name: AREA_DRAM0_0_MAX
+      CORE_?_AREA_DRAM0_0_MIN:
+        name: AREA_DRAM0_0_MIN
+      CORE_?_AREA_DRAM0_1_MAX:
+        name: AREA_DRAM0_1_MAX
+      CORE_?_AREA_DRAM0_1_MIN:
+        name: AREA_DRAM0_1_MIN
+      CORE_?_AREA_PC:
+        name: AREA_PC
+      CORE_?_AREA_PIF_0_MAX:
+        name: AREA_PIF_0_MAX
+      CORE_?_AREA_PIF_0_MIN:
+        name: AREA_PIF_0_MIN
+      CORE_?_AREA_PIF_1_MAX:
+        name: AREA_PIF_1_MAX
+      CORE_?_AREA_PIF_1_MIN:
+        name: AREA_PIF_1_MIN
+      CORE_?_AREA_SP:
+        name: AREA_SP
+      CORE_?_DRAM0_EXCEPTION_MONITOR_0:
+        name: DRAM0_EXCEPTION_MONITOR_0
+      CORE_?_DRAM0_EXCEPTION_MONITOR_1:
+        name: DRAM0_EXCEPTION_MONITOR_1
+      CORE_?_DRAM0_EXCEPTION_MONITOR_2:
+        name: DRAM0_EXCEPTION_MONITOR_2
+      CORE_?_DRAM0_EXCEPTION_MONITOR_3:
+        name: DRAM0_EXCEPTION_MONITOR_3
+      CORE_?_INTR_CLR:
+        name: INTR_CLR
+      CORE_?_INTR_ENA:
+        name: INTR_ENA
+      CORE_?_INTR_RAW:
+        name: INTR_RAW
+      CORE_?_IRAM0_EXCEPTION_MONITOR_0:
+        name: IRAM0_EXCEPTION_MONITOR_0
+      CORE_?_IRAM0_EXCEPTION_MONITOR_1:
+        name: IRAM0_EXCEPTION_MONITOR_1
+      CORE_?_LASTPC_BEFORE_EXCEPTION:
+        name: LASTPC_BEFORE_EXCEPTION
+      CORE_?_MONTR_ENA:
+        name: MONTR_ENA
+      CORE_?_RCD_EN:
+        name: RCD_EN
+      CORE_?_RCD_PDEBUGPC:
+        name: RCD_PDEBUGPC
+      CORE_?_RCD_PDEBUGSP:
+        name: RCD_PDEBUGSP
+      CORE_?_SP_MAX:
+        name: SP_MAX
+      CORE_?_SP_MIN:
+        name: SP_MIN
+      CORE_?_SP_PC:
+        name: SP_PC

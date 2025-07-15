@@ -28,3 +28,31 @@ ASSIST_DEBUG:
         name: CORE_0_SP_SPILL_MIN_CLR
       CORE_0_AREA_DRAM0_0_WR_CLR:
         name: CORE_0_SP_SPILL_MAX_CLR
+
+  _cluster:
+    CPU%s:
+      dimIncrement: 48
+      CORE_?_DEBUG_MODE:
+        name: DEBUG_MODE
+      CORE_?_INTR_CLR:
+        name: INTR_CLR
+      CORE_?_INTR_ENA:
+        name: INTR_ENA
+      CORE_?_INTR_RAW:
+        name: INTR_RAW
+      CORE_?_LASTPC_BEFORE_EXCEPTION:
+        name: LASTPC_BEFORE_EXCEPTION
+      CORE_?_MONTR_ENA:
+        name: MONTR_ENA
+      CORE_?_RCD_EN:
+        name: RCD_EN
+      CORE_?_RCD_PDEBUGPC:
+        name: RCD_PDEBUGPC
+      CORE_?_RCD_PDEBUGSP:
+        name: RCD_PDEBUGSP
+      CORE_?_SP_MAX:
+        name: SP_MAX
+      CORE_?_SP_MIN:
+        name: SP_MIN
+      CORE_?_SP_PC:
+        name: SP_PC

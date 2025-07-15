@@ -8,4 +8,8 @@ _modify:
   "CORE_0_MONTR_ENA":
     description: "ASSIST_DEBUG_CORE_0_MONTR_ENA_REG"
 
-
+_array:
+  CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR_?:
+    name: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR%s
+    description: "`¯\\_(ツ)_/¯`"
+    _strip: CORE_X_IRAM0_DRAM0_
