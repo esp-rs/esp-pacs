@@ -27,7 +27,7 @@ pub struct RegisterBlock {
     status1_w1ts: STATUS1_W1TS,
     status1_w1tc: STATUS1_W1TC,
     _reserved21: [u8; 0x18],
-    procpu_int: PROCPU_INT,
+    pcpu_int: PCPU_INT,
     procpu_int1: PROCPU_INT1,
     _reserved23: [u8; 0x08],
     status_next: STATUS_NEXT,
@@ -158,8 +158,8 @@ impl RegisterBlock {
     }
     #[doc = "0xa4 - GPIO_PROCPU_INT interrupt status register for GPIO0-31"]
     #[inline(always)]
-    pub const fn procpu_int(&self) -> &PROCPU_INT {
-        &self.procpu_int
+    pub const fn pcpu_int(&self) -> &PCPU_INT {
+        &self.pcpu_int
     }
     #[doc = "0xa8 - GPIO_PROCPU_INT interrupt status register for GPIO32-32"]
     #[inline(always)]
@@ -1129,10 +1129,10 @@ pub mod status1_w1ts;
 pub type STATUS1_W1TC = crate::Reg<status1_w1tc::STATUS1_W1TC_SPEC>;
 #[doc = "GPIO interrupt status clear register for GPIO32-32"]
 pub mod status1_w1tc;
-#[doc = "PROCPU_INT (r) register accessor: GPIO_PROCPU_INT interrupt status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int`] module"]
-pub type PROCPU_INT = crate::Reg<procpu_int::PROCPU_INT_SPEC>;
+#[doc = "PCPU_INT (r) register accessor: GPIO_PROCPU_INT interrupt status register for GPIO0-31\n\nYou can [`read`](crate::Reg::read) this register and get [`pcpu_int::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pcpu_int`] module"]
+pub type PCPU_INT = crate::Reg<pcpu_int::PCPU_INT_SPEC>;
 #[doc = "GPIO_PROCPU_INT interrupt status register for GPIO0-31"]
-pub mod procpu_int;
+pub mod pcpu_int;
 #[doc = "PROCPU_INT1 (r) register accessor: GPIO_PROCPU_INT interrupt status register for GPIO32-32\n\nYou can [`read`](crate::Reg::read) this register and get [`procpu_int1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@procpu_int1`] module"]
 pub type PROCPU_INT1 = crate::Reg<procpu_int1::PROCPU_INT1_SPEC>;
 #[doc = "GPIO_PROCPU_INT interrupt status register for GPIO32-32"]

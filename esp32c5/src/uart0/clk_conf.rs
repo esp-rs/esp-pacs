@@ -6,18 +6,18 @@ pub type W = crate::W<CLK_CONF_SPEC>;
 pub type TX_SCLK_EN_R = crate::BitReader;
 #[doc = "Field `TX_SCLK_EN` writer - Configures whether or not to enable UART TX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
 pub type TX_SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_SCLK_EN` reader - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type RX_SCLK_EN_R = crate::BitReader;
-#[doc = "Field `RX_SCLK_EN` writer - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
-pub type RX_SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SCLK_EN` reader - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
+pub type SCLK_EN_R = crate::BitReader;
+#[doc = "Field `SCLK_EN` writer - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
+pub type SCLK_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TX_RST_CORE` reader - Write 1 and then write 0 to reset UART TX."]
 pub type TX_RST_CORE_R = crate::BitReader;
 #[doc = "Field `TX_RST_CORE` writer - Write 1 and then write 0 to reset UART TX."]
 pub type TX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RX_RST_CORE` reader - Write 1 and then write 0 to reset UART RX."]
-pub type RX_RST_CORE_R = crate::BitReader;
-#[doc = "Field `RX_RST_CORE` writer - Write 1 and then write 0 to reset UART RX."]
-pub type RX_RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `RST_CORE` reader - Write 1 and then write 0 to reset UART RX."]
+pub type RST_CORE_R = crate::BitReader;
+#[doc = "Field `RST_CORE` writer - Write 1 and then write 0 to reset UART RX."]
+pub type RST_CORE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 24 - Configures whether or not to enable UART TX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
@@ -26,8 +26,8 @@ impl R {
     }
     #[doc = "Bit 25 - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rx_sclk_en(&self) -> RX_SCLK_EN_R {
-        RX_SCLK_EN_R::new(((self.bits >> 25) & 1) != 0)
+    pub fn sclk_en(&self) -> SCLK_EN_R {
+        SCLK_EN_R::new(((self.bits >> 25) & 1) != 0)
     }
     #[doc = "Bit 26 - Write 1 and then write 0 to reset UART TX."]
     #[inline(always)]
@@ -36,8 +36,8 @@ impl R {
     }
     #[doc = "Bit 27 - Write 1 and then write 0 to reset UART RX."]
     #[inline(always)]
-    pub fn rx_rst_core(&self) -> RX_RST_CORE_R {
-        RX_RST_CORE_R::new(((self.bits >> 27) & 1) != 0)
+    pub fn rst_core(&self) -> RST_CORE_R {
+        RST_CORE_R::new(((self.bits >> 27) & 1) != 0)
     }
 }
 #[cfg(feature = "impl-register-debug")]
@@ -45,9 +45,9 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("CLK_CONF")
             .field("tx_sclk_en", &self.tx_sclk_en())
-            .field("rx_sclk_en", &self.rx_sclk_en())
+            .field("sclk_en", &self.sclk_en())
             .field("tx_rst_core", &self.tx_rst_core())
-            .field("rx_rst_core", &self.rx_rst_core())
+            .field("rst_core", &self.rst_core())
             .finish()
     }
 }
@@ -59,8 +59,8 @@ impl W {
     }
     #[doc = "Bit 25 - Configures whether or not to enable UART RX clock.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rx_sclk_en(&mut self) -> RX_SCLK_EN_W<CLK_CONF_SPEC> {
-        RX_SCLK_EN_W::new(self, 25)
+    pub fn sclk_en(&mut self) -> SCLK_EN_W<CLK_CONF_SPEC> {
+        SCLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 1 and then write 0 to reset UART TX."]
     #[inline(always)]
@@ -69,8 +69,8 @@ impl W {
     }
     #[doc = "Bit 27 - Write 1 and then write 0 to reset UART RX."]
     #[inline(always)]
-    pub fn rx_rst_core(&mut self) -> RX_RST_CORE_W<CLK_CONF_SPEC> {
-        RX_RST_CORE_W::new(self, 27)
+    pub fn rst_core(&mut self) -> RST_CORE_W<CLK_CONF_SPEC> {
+        RST_CORE_W::new(self, 27)
     }
 }
 #[doc = "UART core clock configuration\n\nYou can [`read`](crate::Reg::read) this register and get [`clk_conf::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_conf::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

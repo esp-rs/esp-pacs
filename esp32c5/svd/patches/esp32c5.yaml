@@ -2,7 +2,25 @@ _svd: ../esp32c5.base.svd
 
 _include:
   - ../../../common_patches/plic.yaml
+  - _gpio.yml
+  - _i2c.yml
   - _interrupt.yml
+  - _lp_io.yml
+  - _uart.yml
+
+PCR:
+  _include: ../../../common_patches/pcr.yaml
+
+  _modify:
+    I2C_CONF:
+      name: I2C0_CONF
+
+  I2C0_CONF:
+    _modify:
+      I2C_CLK_EN:
+        name: I2C0_CLK_EN
+      I2C_RST_EN:
+        name: I2C0_RST_EN
 
 AES:
   _modify:
@@ -483,6 +501,12 @@ RSA:
       access: read-write
 
 I2C0:
+  _include: ../../../common_patches/int_strip.yaml
+
+  _modify:
+    INT_STATUS:
+      name: INT_ST
+
   _array:
     COMD*: {}
 
@@ -658,10 +682,6 @@ TIMG0:
     _strip:
       - "T1_"
   _include: ../../../common_patches/tim_collect.yaml
-
-# TIMERG[01]:
-#   "*":
-#     _strip: "T_"
 
 UART0:
   _strip_end: "_SYNC"
