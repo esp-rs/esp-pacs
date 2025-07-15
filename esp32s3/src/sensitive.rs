@@ -16,36 +16,7 @@ pub struct RegisterBlock {
     cache_tag_access_1: CACHE_TAG_ACCESS_1,
     cache_mmu_access_0: CACHE_MMU_ACCESS_0,
     cache_mmu_access_1: CACHE_MMU_ACCESS_1,
-    dma_apbperi_spi2_pms_constrain_0: DMA_APBPERI_SPI2_PMS_CONSTRAIN_0,
-    dma_apbperi_spi2_pms_constrain_1: DMA_APBPERI_SPI2_PMS_CONSTRAIN_1,
-    dma_apbperi_spi3_pms_constrain_0: DMA_APBPERI_SPI3_PMS_CONSTRAIN_0,
-    dma_apbperi_spi3_pms_constrain_1: DMA_APBPERI_SPI3_PMS_CONSTRAIN_1,
-    dma_apbperi_uhci0_pms_constrain_0: DMA_APBPERI_UHCI0_PMS_CONSTRAIN_0,
-    dma_apbperi_uhci0_pms_constrain_1: DMA_APBPERI_UHCI0_PMS_CONSTRAIN_1,
-    dma_apbperi_i2s0_pms_constrain_0: DMA_APBPERI_I2S0_PMS_CONSTRAIN_0,
-    dma_apbperi_i2s0_pms_constrain_1: DMA_APBPERI_I2S0_PMS_CONSTRAIN_1,
-    dma_apbperi_i2s1_pms_constrain_0: DMA_APBPERI_I2S1_PMS_CONSTRAIN_0,
-    dma_apbperi_i2s1_pms_constrain_1: DMA_APBPERI_I2S1_PMS_CONSTRAIN_1,
-    dma_apbperi_mac_pms_constrain_0: DMA_APBPERI_MAC_PMS_CONSTRAIN_0,
-    dma_apbperi_mac_pms_constrain_1: DMA_APBPERI_MAC_PMS_CONSTRAIN_1,
-    dma_apbperi_backup_pms_constrain_0: DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0,
-    dma_apbperi_backup_pms_constrain_1: DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1,
-    dma_apbperi_aes_pms_constrain_0: DMA_APBPERI_AES_PMS_CONSTRAIN_0,
-    dma_apbperi_aes_pms_constrain_1: DMA_APBPERI_AES_PMS_CONSTRAIN_1,
-    dma_apbperi_sha_pms_constrain_0: DMA_APBPERI_SHA_PMS_CONSTRAIN_0,
-    dma_apbperi_sha_pms_constrain_1: DMA_APBPERI_SHA_PMS_CONSTRAIN_1,
-    dma_apbperi_adc_dac_pms_constrain_0: DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0,
-    dma_apbperi_adc_dac_pms_constrain_1: DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1,
-    dma_apbperi_rmt_pms_constrain_0: DMA_APBPERI_RMT_PMS_CONSTRAIN_0,
-    dma_apbperi_rmt_pms_constrain_1: DMA_APBPERI_RMT_PMS_CONSTRAIN_1,
-    dma_apbperi_lcd_cam_pms_constrain_0: DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0,
-    dma_apbperi_lcd_cam_pms_constrain_1: DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_1,
-    dma_apbperi_usb_pms_constrain_0: DMA_APBPERI_USB_PMS_CONSTRAIN_0,
-    dma_apbperi_usb_pms_constrain_1: DMA_APBPERI_USB_PMS_CONSTRAIN_1,
-    dma_apbperi_lc_pms_constrain_0: DMA_APBPERI_LC_PMS_CONSTRAIN_0,
-    dma_apbperi_lc_pms_constrain_1: DMA_APBPERI_LC_PMS_CONSTRAIN_1,
-    dma_apbperi_sdio_pms_constrain_0: DMA_APBPERI_SDIO_PMS_CONSTRAIN_0,
-    dma_apbperi_sdio_pms_constrain_1: DMA_APBPERI_SDIO_PMS_CONSTRAIN_1,
+    dma_apbperi: [DMA_APBPERI; 15],
     dma_apbperi_pms_monitor_0: DMA_APBPERI_PMS_MONITOR_0,
     dma_apbperi_pms_monitor_1: DMA_APBPERI_PMS_MONITOR_1,
     dma_apbperi_pms_monitor_2: DMA_APBPERI_PMS_MONITOR_2,
@@ -198,7 +169,7 @@ pub struct RegisterBlock {
     edma_pms_rmt: EDMA_PMS_RMT,
     clock_gate: CLOCK_GATE,
     rtc_pms: RTC_PMS,
-    _reserved196: [u8; 0x0cec],
+    _reserved167: [u8; 0x0cec],
     date: DATE,
 }
 impl RegisterBlock {
@@ -272,163 +243,93 @@ impl RegisterBlock {
     pub const fn cache_mmu_access_1(&self) -> &CACHE_MMU_ACCESS_1 {
         &self.cache_mmu_access_1
     }
-    #[doc = "0x38 - spi2 dma permission configuration register 0."]
+    #[doc = "0x38..0xb0 - Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `DMA_APBPERI_SPI2` cluster.</div>"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi2_pms_constrain_0(&self) -> &DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_spi2_pms_constrain_0
+    pub const fn dma_apbperi(&self, n: usize) -> &DMA_APBPERI {
+        &self.dma_apbperi[n]
     }
-    #[doc = "0x3c - spi2 dma permission configuration register 1."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x38..0xb0 - Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi2_pms_constrain_1(&self) -> &DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_spi2_pms_constrain_1
+    pub fn dma_apbperi_iter(&self) -> impl Iterator<Item = &DMA_APBPERI> {
+        self.dma_apbperi.iter()
     }
-    #[doc = "0x40 - spi3 dma permission configuration register 0."]
+    #[doc = "0x38..0x40 - Cluster DMA_APBPERI_SPI2, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi3_pms_constrain_0(&self) -> &DMA_APBPERI_SPI3_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_spi3_pms_constrain_0
+    pub const fn dma_apbperi_spi2(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(0)
     }
-    #[doc = "0x44 - spi3 dma permission configuration register 1."]
+    #[doc = "0x40..0x48 - Cluster DMA_APBPERI_SPI3, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi3_pms_constrain_1(&self) -> &DMA_APBPERI_SPI3_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_spi3_pms_constrain_1
+    pub const fn dma_apbperi_spi3(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(1)
     }
-    #[doc = "0x48 - uhci0 dma permission configuration register 0."]
+    #[doc = "0x48..0x50 - Cluster DMA_APBPERI_UHCI0, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_uhci0_pms_constrain_0(&self) -> &DMA_APBPERI_UHCI0_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_uhci0_pms_constrain_0
+    pub const fn dma_apbperi_uhci0(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(2)
     }
-    #[doc = "0x4c - uhci0 dma permission configuration register 1."]
+    #[doc = "0x50..0x58 - Cluster DMA_APBPERI_I2S0, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_uhci0_pms_constrain_1(&self) -> &DMA_APBPERI_UHCI0_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_uhci0_pms_constrain_1
+    pub const fn dma_apbperi_i2s0(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(3)
     }
-    #[doc = "0x50 - i2s0 dma permission configuration register 0."]
+    #[doc = "0x58..0x60 - Cluster DMA_APBPERI_I2S1, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s0_pms_constrain_0(&self) -> &DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_i2s0_pms_constrain_0
+    pub const fn dma_apbperi_i2s1(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(4)
     }
-    #[doc = "0x54 - i2s0 dma permission configuration register 1."]
+    #[doc = "0x60..0x68 - Cluster DMA_APBPERI_MAC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s0_pms_constrain_1(&self) -> &DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_i2s0_pms_constrain_1
+    pub const fn dma_apbperi_mac(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(5)
     }
-    #[doc = "0x58 - i2s1 dma permission configuration register 0."]
+    #[doc = "0x68..0x70 - Cluster DMA_APBPERI_BACKUP, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s1_pms_constrain_0(&self) -> &DMA_APBPERI_I2S1_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_i2s1_pms_constrain_0
+    pub const fn dma_apbperi_backup(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(6)
     }
-    #[doc = "0x5c - i2s1 dma permission configuration register 1."]
+    #[doc = "0x70..0x78 - Cluster DMA_APBPERI_AES, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s1_pms_constrain_1(&self) -> &DMA_APBPERI_I2S1_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_i2s1_pms_constrain_1
+    pub const fn dma_apbperi_aes(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(7)
     }
-    #[doc = "0x60 - mac dma permission configuration register 0."]
+    #[doc = "0x78..0x80 - Cluster DMA_APBPERI_SHA, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_mac_pms_constrain_0(&self) -> &DMA_APBPERI_MAC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_mac_pms_constrain_0
+    pub const fn dma_apbperi_sha(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(8)
     }
-    #[doc = "0x64 - mac dma permission configuration register 1."]
+    #[doc = "0x80..0x88 - Cluster DMA_APBPERI_ADC_DAC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_mac_pms_constrain_1(&self) -> &DMA_APBPERI_MAC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_mac_pms_constrain_1
+    pub const fn dma_apbperi_adc_dac(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(9)
     }
-    #[doc = "0x68 - backup dma permission configuration register 0."]
+    #[doc = "0x88..0x90 - Cluster DMA_APBPERI_RMT, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_backup_pms_constrain_0(&self) -> &DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_backup_pms_constrain_0
+    pub const fn dma_apbperi_rmt(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(10)
     }
-    #[doc = "0x6c - backup dma permission configuration register 1."]
+    #[doc = "0x90..0x98 - Cluster DMA_APBPERI_LCD_CAM, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_backup_pms_constrain_1(&self) -> &DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_backup_pms_constrain_1
+    pub const fn dma_apbperi_lcd_cam(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(11)
     }
-    #[doc = "0x70 - aes dma permission configuration register 0."]
+    #[doc = "0x98..0xa0 - Cluster DMA_APBPERI_USB, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_aes_pms_constrain_0(&self) -> &DMA_APBPERI_AES_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_aes_pms_constrain_0
+    pub const fn dma_apbperi_usb(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(12)
     }
-    #[doc = "0x74 - aes dma permission configuration register 1."]
+    #[doc = "0xa0..0xa8 - Cluster DMA_APBPERI_LC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_aes_pms_constrain_1(&self) -> &DMA_APBPERI_AES_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_aes_pms_constrain_1
+    pub const fn dma_apbperi_lc(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(13)
     }
-    #[doc = "0x78 - sha dma permission configuration register 0."]
+    #[doc = "0xa8..0xb0 - Cluster DMA_APBPERI_SDIO, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_sha_pms_constrain_0(&self) -> &DMA_APBPERI_SHA_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_sha_pms_constrain_0
-    }
-    #[doc = "0x7c - sha dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_sha_pms_constrain_1(&self) -> &DMA_APBPERI_SHA_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_sha_pms_constrain_1
-    }
-    #[doc = "0x80 - adc_dac dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_adc_dac_pms_constrain_0(
-        &self,
-    ) -> &DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_adc_dac_pms_constrain_0
-    }
-    #[doc = "0x84 - adc_dac dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_adc_dac_pms_constrain_1(
-        &self,
-    ) -> &DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_adc_dac_pms_constrain_1
-    }
-    #[doc = "0x88 - rmt dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_rmt_pms_constrain_0(&self) -> &DMA_APBPERI_RMT_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_rmt_pms_constrain_0
-    }
-    #[doc = "0x8c - rmt dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_rmt_pms_constrain_1(&self) -> &DMA_APBPERI_RMT_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_rmt_pms_constrain_1
-    }
-    #[doc = "0x90 - lcd_cam dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_lcd_cam_pms_constrain_0(
-        &self,
-    ) -> &DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_lcd_cam_pms_constrain_0
-    }
-    #[doc = "0x94 - lcd_cam dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_lcd_cam_pms_constrain_1(
-        &self,
-    ) -> &DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_lcd_cam_pms_constrain_1
-    }
-    #[doc = "0x98 - usb dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_usb_pms_constrain_0(&self) -> &DMA_APBPERI_USB_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_usb_pms_constrain_0
-    }
-    #[doc = "0x9c - usb dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_usb_pms_constrain_1(&self) -> &DMA_APBPERI_USB_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_usb_pms_constrain_1
-    }
-    #[doc = "0xa0 - lc dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_lc_pms_constrain_0(&self) -> &DMA_APBPERI_LC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_lc_pms_constrain_0
-    }
-    #[doc = "0xa4 - lc dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_lc_pms_constrain_1(&self) -> &DMA_APBPERI_LC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_lc_pms_constrain_1
-    }
-    #[doc = "0xa8 - sdio dma permission configuration register 0."]
-    #[inline(always)]
-    pub const fn dma_apbperi_sdio_pms_constrain_0(&self) -> &DMA_APBPERI_SDIO_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_sdio_pms_constrain_0
-    }
-    #[doc = "0xac - sdio dma permission configuration register 1."]
-    #[inline(always)]
-    pub const fn dma_apbperi_sdio_pms_constrain_1(&self) -> &DMA_APBPERI_SDIO_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_sdio_pms_constrain_1
+    pub const fn dma_apbperi_sdio(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(14)
     }
     #[doc = "0xb0 - dma permission monitor configuration register 0."]
     #[inline(always)]
@@ -1276,156 +1177,11 @@ pub mod cache_mmu_access_0;
 pub type CACHE_MMU_ACCESS_1 = crate::Reg<cache_mmu_access_1::CACHE_MMU_ACCESS_1_SPEC>;
 #[doc = "Cache MMU configuration register 1."]
 pub mod cache_mmu_access_1;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 (rw) register accessor: spi2 dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi2_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_spi2_pms_constrain_0::DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "spi2 dma permission configuration register 0."]
-pub mod dma_apbperi_spi2_pms_constrain_0;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 (rw) register accessor: spi2 dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi2_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_spi2_pms_constrain_1::DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "spi2 dma permission configuration register 1."]
-pub mod dma_apbperi_spi2_pms_constrain_1;
-#[doc = "DMA_APBPERI_SPI3_PMS_CONSTRAIN_0 (rw) register accessor: spi3 dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi3_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi3_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi3_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SPI3_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_spi3_pms_constrain_0::DMA_APBPERI_SPI3_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "spi3 dma permission configuration register 0."]
-pub mod dma_apbperi_spi3_pms_constrain_0;
-#[doc = "DMA_APBPERI_SPI3_PMS_CONSTRAIN_1 (rw) register accessor: spi3 dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi3_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi3_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi3_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SPI3_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_spi3_pms_constrain_1::DMA_APBPERI_SPI3_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "spi3 dma permission configuration register 1."]
-pub mod dma_apbperi_spi3_pms_constrain_1;
-#[doc = "DMA_APBPERI_UHCI0_PMS_CONSTRAIN_0 (rw) register accessor: uhci0 dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_uhci0_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_uhci0_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_uhci0_pms_constrain_0`] module"]
-pub type DMA_APBPERI_UHCI0_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_uhci0_pms_constrain_0::DMA_APBPERI_UHCI0_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "uhci0 dma permission configuration register 0."]
-pub mod dma_apbperi_uhci0_pms_constrain_0;
-#[doc = "DMA_APBPERI_UHCI0_PMS_CONSTRAIN_1 (rw) register accessor: uhci0 dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_uhci0_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_uhci0_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_uhci0_pms_constrain_1`] module"]
-pub type DMA_APBPERI_UHCI0_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_uhci0_pms_constrain_1::DMA_APBPERI_UHCI0_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "uhci0 dma permission configuration register 1."]
-pub mod dma_apbperi_uhci0_pms_constrain_1;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 (rw) register accessor: i2s0 dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s0_pms_constrain_0`] module"]
-pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_i2s0_pms_constrain_0::DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "i2s0 dma permission configuration register 0."]
-pub mod dma_apbperi_i2s0_pms_constrain_0;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 (rw) register accessor: i2s0 dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s0_pms_constrain_1`] module"]
-pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_i2s0_pms_constrain_1::DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "i2s0 dma permission configuration register 1."]
-pub mod dma_apbperi_i2s0_pms_constrain_1;
-#[doc = "DMA_APBPERI_I2S1_PMS_CONSTRAIN_0 (rw) register accessor: i2s1 dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s1_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s1_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s1_pms_constrain_0`] module"]
-pub type DMA_APBPERI_I2S1_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_i2s1_pms_constrain_0::DMA_APBPERI_I2S1_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "i2s1 dma permission configuration register 0."]
-pub mod dma_apbperi_i2s1_pms_constrain_0;
-#[doc = "DMA_APBPERI_I2S1_PMS_CONSTRAIN_1 (rw) register accessor: i2s1 dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s1_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s1_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s1_pms_constrain_1`] module"]
-pub type DMA_APBPERI_I2S1_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_i2s1_pms_constrain_1::DMA_APBPERI_I2S1_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "i2s1 dma permission configuration register 1."]
-pub mod dma_apbperi_i2s1_pms_constrain_1;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_0 (rw) register accessor: mac dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_mac_pms_constrain_0`] module"]
-pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_mac_pms_constrain_0::DMA_APBPERI_MAC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "mac dma permission configuration register 0."]
-pub mod dma_apbperi_mac_pms_constrain_0;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_1 (rw) register accessor: mac dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_mac_pms_constrain_1`] module"]
-pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_mac_pms_constrain_1::DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "mac dma permission configuration register 1."]
-pub mod dma_apbperi_mac_pms_constrain_1;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 (rw) register accessor: backup dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_backup_pms_constrain_0`] module"]
-pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_backup_pms_constrain_0::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "backup dma permission configuration register 0."]
-pub mod dma_apbperi_backup_pms_constrain_0;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 (rw) register accessor: backup dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_backup_pms_constrain_1`] module"]
-pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_backup_pms_constrain_1::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "backup dma permission configuration register 1."]
-pub mod dma_apbperi_backup_pms_constrain_1;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_0 (rw) register accessor: aes dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_aes_pms_constrain_0`] module"]
-pub type DMA_APBPERI_AES_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_aes_pms_constrain_0::DMA_APBPERI_AES_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "aes dma permission configuration register 0."]
-pub mod dma_apbperi_aes_pms_constrain_0;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_1 (rw) register accessor: aes dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_aes_pms_constrain_1`] module"]
-pub type DMA_APBPERI_AES_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_aes_pms_constrain_1::DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "aes dma permission configuration register 1."]
-pub mod dma_apbperi_aes_pms_constrain_1;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_0 (rw) register accessor: sha dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sha_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_sha_pms_constrain_0::DMA_APBPERI_SHA_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "sha dma permission configuration register 0."]
-pub mod dma_apbperi_sha_pms_constrain_0;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_1 (rw) register accessor: sha dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sha_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_sha_pms_constrain_1::DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "sha dma permission configuration register 1."]
-pub mod dma_apbperi_sha_pms_constrain_1;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 (rw) register accessor: adc_dac dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_adc_dac_pms_constrain_0`] module"]
-pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_adc_dac_pms_constrain_0::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "adc_dac dma permission configuration register 0."]
-pub mod dma_apbperi_adc_dac_pms_constrain_0;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 (rw) register accessor: adc_dac dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_adc_dac_pms_constrain_1`] module"]
-pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_adc_dac_pms_constrain_1::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "adc_dac dma permission configuration register 1."]
-pub mod dma_apbperi_adc_dac_pms_constrain_1;
-#[doc = "DMA_APBPERI_RMT_PMS_CONSTRAIN_0 (rw) register accessor: rmt dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_rmt_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_rmt_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_rmt_pms_constrain_0`] module"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_rmt_pms_constrain_0::DMA_APBPERI_RMT_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "rmt dma permission configuration register 0."]
-pub mod dma_apbperi_rmt_pms_constrain_0;
-#[doc = "DMA_APBPERI_RMT_PMS_CONSTRAIN_1 (rw) register accessor: rmt dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_rmt_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_rmt_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_rmt_pms_constrain_1`] module"]
-pub type DMA_APBPERI_RMT_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_rmt_pms_constrain_1::DMA_APBPERI_RMT_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "rmt dma permission configuration register 1."]
-pub mod dma_apbperi_rmt_pms_constrain_1;
-#[doc = "DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0 (rw) register accessor: lcd_cam dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lcd_cam_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lcd_cam_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lcd_cam_pms_constrain_0`] module"]
-pub type DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_lcd_cam_pms_constrain_0::DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "lcd_cam dma permission configuration register 0."]
-pub mod dma_apbperi_lcd_cam_pms_constrain_0;
-#[doc = "DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_1 (rw) register accessor: lcd_cam dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lcd_cam_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lcd_cam_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lcd_cam_pms_constrain_1`] module"]
-pub type DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_lcd_cam_pms_constrain_1::DMA_APBPERI_LCD_CAM_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "lcd_cam dma permission configuration register 1."]
-pub mod dma_apbperi_lcd_cam_pms_constrain_1;
-#[doc = "DMA_APBPERI_USB_PMS_CONSTRAIN_0 (rw) register accessor: usb dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_usb_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_usb_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_usb_pms_constrain_0`] module"]
-pub type DMA_APBPERI_USB_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_usb_pms_constrain_0::DMA_APBPERI_USB_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "usb dma permission configuration register 0."]
-pub mod dma_apbperi_usb_pms_constrain_0;
-#[doc = "DMA_APBPERI_USB_PMS_CONSTRAIN_1 (rw) register accessor: usb dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_usb_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_usb_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_usb_pms_constrain_1`] module"]
-pub type DMA_APBPERI_USB_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_usb_pms_constrain_1::DMA_APBPERI_USB_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "usb dma permission configuration register 1."]
-pub mod dma_apbperi_usb_pms_constrain_1;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_0 (rw) register accessor: lc dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lc_pms_constrain_0`] module"]
-pub type DMA_APBPERI_LC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_lc_pms_constrain_0::DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "lc dma permission configuration register 0."]
-pub mod dma_apbperi_lc_pms_constrain_0;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_1 (rw) register accessor: lc dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lc_pms_constrain_1`] module"]
-pub type DMA_APBPERI_LC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_lc_pms_constrain_1::DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "lc dma permission configuration register 1."]
-pub mod dma_apbperi_lc_pms_constrain_1;
-#[doc = "DMA_APBPERI_SDIO_PMS_CONSTRAIN_0 (rw) register accessor: sdio dma permission configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sdio_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sdio_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sdio_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SDIO_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_sdio_pms_constrain_0::DMA_APBPERI_SDIO_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "sdio dma permission configuration register 0."]
-pub mod dma_apbperi_sdio_pms_constrain_0;
-#[doc = "DMA_APBPERI_SDIO_PMS_CONSTRAIN_1 (rw) register accessor: sdio dma permission configuration register 1.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sdio_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sdio_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sdio_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SDIO_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_sdio_pms_constrain_1::DMA_APBPERI_SDIO_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "sdio dma permission configuration register 1."]
-pub mod dma_apbperi_sdio_pms_constrain_1;
+#[doc = "Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+pub use self::dma_apbperi::DMA_APBPERI;
+#[doc = r"Cluster"]
+#[doc = "Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+pub mod dma_apbperi;
 #[doc = "DMA_APBPERI_PMS_MONITOR_0 (rw) register accessor: dma permission monitor configuration register 0.\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_pms_monitor_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_pms_monitor_0`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_0 =
     crate::Reg<dma_apbperi_pms_monitor_0::DMA_APBPERI_PMS_MONITOR_0_SPEC>;

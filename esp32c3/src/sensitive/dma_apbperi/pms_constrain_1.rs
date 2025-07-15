@@ -1,7 +1,7 @@
-#[doc = "Register `DMA_APBPERI_SPI2_PMS_CONSTRAIN_1` reader"]
-pub type R = crate::R<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "Register `DMA_APBPERI_SPI2_PMS_CONSTRAIN_1` writer"]
-pub type W = crate::W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>;
+#[doc = "Register `PMS_CONSTRAIN_1` reader"]
+pub type R = crate::R<PMS_CONSTRAIN_1_SPEC>;
+#[doc = "Register `PMS_CONSTRAIN_1` writer"]
+pub type W = crate::W<PMS_CONSTRAIN_1_SPEC>;
 #[doc = "Field `DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` reader - dma_apbperi_spi2_pms_constrain_sram_world_0_pms_0"]
 pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_R = crate::FieldReader;
 #[doc = "Field `DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0` writer - dma_apbperi_spi2_pms_constrain_sram_world_0_pms_0"]
@@ -103,7 +103,7 @@ impl R {
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("DMA_APBPERI_SPI2_PMS_CONSTRAIN_1")
+        f.debug_struct("PMS_CONSTRAIN_1")
             .field(
                 "dma_apbperi_spi2_pms_constrain_sram_world_0_pms_0",
                 &self.dma_apbperi_spi2_pms_constrain_sram_world_0_pms_0(),
@@ -144,79 +144,71 @@ impl W {
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_0_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - dma_apbperi_spi2_pms_constrain_sram_world_0_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_0_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - dma_apbperi_spi2_pms_constrain_sram_world_0_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_0_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - dma_apbperi_spi2_pms_constrain_sram_world_0_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_0_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 12:13 - dma_apbperi_spi2_pms_constrain_sram_world_1_pms_0"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_1_pms_0(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - dma_apbperi_spi2_pms_constrain_sram_world_1_pms_1"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_1_pms_1(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - dma_apbperi_spi2_pms_constrain_sram_world_1_pms_2"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_1_pms_2(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - dma_apbperi_spi2_pms_constrain_sram_world_1_pms_3"]
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_sram_world_1_pms_3(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>
-    {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<PMS_CONSTRAIN_1_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self, 18)
     }
 }
-#[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC;
-impl crate::RegisterSpec for DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC {
+#[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`pms_constrain_1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pms_constrain_1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct PMS_CONSTRAIN_1_SPEC;
+impl crate::RegisterSpec for PMS_CONSTRAIN_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`dma_apbperi_spi2_pms_constrain_1::R`](R) reader structure"]
-impl crate::Readable for DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`dma_apbperi_spi2_pms_constrain_1::W`](W) writer structure"]
-impl crate::Writable for DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC {
+#[doc = "`read()` method returns [`pms_constrain_1::R`](R) reader structure"]
+impl crate::Readable for PMS_CONSTRAIN_1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`pms_constrain_1::W`](W) writer structure"]
+impl crate::Writable for PMS_CONSTRAIN_1_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 to value 0x000f_f0ff"]
-impl crate::Resettable for DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC {
+#[doc = "`reset()` method sets PMS_CONSTRAIN_1 to value 0x000f_f0ff"]
+impl crate::Resettable for PMS_CONSTRAIN_1_SPEC {
     const RESET_VALUE: u32 = 0x000f_f0ff;
 }
