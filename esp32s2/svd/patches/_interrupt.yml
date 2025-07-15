@@ -4,10 +4,18 @@ INTERRUPT_CORE0:
   "*":
     _strip: INTERRUPT_
 
-  _modify:
-    PRO_INTR_STATUS_REG_0:
-      name: "PRO_INTR_STATUS_0"
-    PRO_INTR_STATUS_REG_1:
-      name: "PRO_INTR_STATUS_1"
-    PRO_INTR_STATUS_REG_2:
-      name: "PRO_INTR_STATUS_2"
+  _array:
+    PRO_INTR_STATUS_REG_*:
+      name: CORE_0_INTR_STATUS%s
+
+  _delete:
+    - "*_MAP"
+
+  _add:
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0
+      dim: 95 # last register is at 0x178
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 16

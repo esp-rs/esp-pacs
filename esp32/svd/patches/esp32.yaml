@@ -195,7 +195,9 @@ TWAI0:
         bitWidth: 1
 
 DPORT:
-  _delete: CORE_RST_EN
+  _delete:
+    - CORE_RST_EN
+    - "*_MAP"
   _modify:
     PERIP_CLK_EN:
       resetValue: 0xF9C1E06F
@@ -223,6 +225,21 @@ DPORT:
           description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
           bitOffset: 2
           bitWidth: 1
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0x104
+      dim: 69 # last register is at 0x214
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 16
+    CORE_1_INTR_MAP%s:
+      addressOffset: 0x218
+      dim: 69 # last register is at 0x328
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 16
+
   PERIP_CLK_EN:
     _modify:
       I2C0_EXT0_CLK_EN:
@@ -266,3 +283,9 @@ DPORT:
         bitOffset: 2
         bitWidth: 1
         access: read-write
+
+  _array:
+    PRO_INTR_STATUS_*:
+      name: CORE_0_INTR_STATUS%s
+    APP_INTR_STATUS_*:
+      name: CORE_1_INTR_STATUS%s

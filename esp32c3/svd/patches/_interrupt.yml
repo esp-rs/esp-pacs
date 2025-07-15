@@ -1,6 +1,13 @@
 INTERRUPT_CORE0:
+  CPU_INT_PRI_*:
+    _modify:
+      CPU_PRI_*_MAP:
+        name: MAP
   _array:
-    INT_STATUS_REG_*:
+    CPU_INT_PRI_*:
+      name: CPU_INT_PRI%s
+
+    INTR_STATUS_*:
       name: CORE_0_INTR_STATUS%s
 
   _delete:
@@ -9,7 +16,7 @@ INTERRUPT_CORE0:
   _add:
     CORE_0_INTR_MAP%s:
       addressOffset: 0
-      dim: 65 # last register is at 0x100
+      dim: 62 # last register is at 0xF4
       dimIncrement: 4
       access: read-write
       size: 32

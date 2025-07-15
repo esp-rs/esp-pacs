@@ -1,16 +1,16 @@
 INTERRUPT_CORE0:
-  _modify:
-    INT_STATUS_REG_0:
-      name: INTR_STATUS_REG_0
-    INT_STATUS_REG_1:
-      name: INTR_STATUS_REG_1
+  _array:
+    INT_STATUS_REG_*:
+      name: CORE_0_INTR_STATUS%s
 
-  INTR_STATUS_REG_0:
-    _modify:
-      INT_STATUS_0:
-        name: INTR_STATUS_0
+  _delete:
+    - "*_MAP"
 
-  INTR_STATUS_REG_1:
-    _modify:
-      INT_STATUS_1:
-        name: INTR_STATUS_1
+  _add:
+    CORE_0_INTR_MAP%s:
+      addressOffset: 0
+      dim: 77 # last register is at 0x130
+      dimIncrement: 4
+      access: read-write
+      size: 32
+      reset-value: 0
