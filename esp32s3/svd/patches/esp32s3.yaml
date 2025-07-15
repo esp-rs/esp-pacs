@@ -26,6 +26,7 @@ _include:
   - _system.yml
   - _timg.yml
   - _uart.yml
+  - _wcl.yml
 
 _add:
   NRX:

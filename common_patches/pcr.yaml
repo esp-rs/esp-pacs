@@ -1,13 +1,13 @@
 UART?_CONF:
-  _strip: 
+  _strip:
     UART?_
 
 UART?_SCLK_CONF:
-  _strip: 
+  _strip:
     UART?_
 
 UART?_PD_CTRL:
-  _strip: 
+  _strip:
     UART?_
 
 _cluster:

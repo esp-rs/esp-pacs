@@ -1,0 +1,43 @@
+#[doc = "Register `MESSAGE_ADDR` reader"]
+pub type R = crate::R<MESSAGE_ADDR_SPEC>;
+#[doc = "Register `MESSAGE_ADDR` writer"]
+pub type W = crate::W<MESSAGE_ADDR_SPEC>;
+#[doc = "Field `MESSAGE_ADDR` reader - This field is used to set address that need to write when enter WORLD0"]
+pub type MESSAGE_ADDR_R = crate::FieldReader<u32>;
+#[doc = "Field `MESSAGE_ADDR` writer - This field is used to set address that need to write when enter WORLD0"]
+pub type MESSAGE_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
+    #[inline(always)]
+    pub fn message_addr(&self) -> MESSAGE_ADDR_R {
+        MESSAGE_ADDR_R::new(self.bits)
+    }
+}
+#[cfg(feature = "impl-register-debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("MESSAGE_ADDR")
+            .field("message_addr", &self.message_addr())
+            .finish()
+    }
+}
+impl W {
+    #[doc = "Bits 0:31 - This field is used to set address that need to write when enter WORLD0"]
+    #[inline(always)]
+    pub fn message_addr(&mut self) -> MESSAGE_ADDR_W<MESSAGE_ADDR_SPEC> {
+        MESSAGE_ADDR_W::new(self, 0)
+    }
+}
+#[doc = "Clear writer_buffer write address configuration register\n\nYou can [`read`](crate::Reg::read) this register and get [`message_addr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`message_addr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct MESSAGE_ADDR_SPEC;
+impl crate::RegisterSpec for MESSAGE_ADDR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [`message_addr::R`](R) reader structure"]
+impl crate::Readable for MESSAGE_ADDR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`message_addr::W`](W) writer structure"]
+impl crate::Writable for MESSAGE_ADDR_SPEC {
+    type Safety = crate::Unsafe;
+}
+#[doc = "`reset()` method sets MESSAGE_ADDR to value 0"]
+impl crate::Resettable for MESSAGE_ADDR_SPEC {}

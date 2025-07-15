@@ -1,0 +1,84 @@
+WCL:
+  _modify:
+    # while we could rename in the `_cluster` section, this actually prevents mistakenly collecting
+    # these in the `_array` section
+    Core_0_STATUSTABLE_CURRENT:
+      name: CORE_0_STATUSTABLE_CURRENT
+    Core_1_STATUSTABLE_CURRENT:
+      name: CORE_1_STATUSTABLE_CURRENT
+  _array:
+    # These start at index 1, this will not be confusing at all... (`entry_addr1() == entry_addr(0)`)
+    Core_0_ENTRY_*_ADDR:
+      name: CORE_0_ENTRY_ADDR%s
+      _strip_end: _1
+    Core_1_ENTRY_*_ADDR:
+      name: CORE_1_ENTRY_ADDR%s
+      _strip_end: _1
+    Core_0_STATUSTABLE*:
+      name: CORE_0_STATUSTABLE%s
+      _strip_end: _1
+    Core_1_STATUSTABLE*:
+      name: CORE_1_STATUSTABLE%s
+      _strip_end: _1
+  _cluster:
+    CPU%s:
+      CORE_?_ENTRY_ADDR%s:
+        name: ENTRY_ADDR%s
+        _strip: CORE_?_
+      Core_?_ENTRY_CHECK:
+        name: ENTRY_CHECK
+        _strip: CORE_?_
+      Core_?_MESSAGE_ADDR:
+        name: MESSAGE_ADDR
+        _strip: CORE_?_
+      Core_?_MESSAGE_MAX:
+        name: MESSAGE_MAX
+        _strip: CORE_?_
+      Core_?_MESSAGE_PHASE:
+        name: MESSAGE_PHASE
+        _strip: CORE_?_
+      Core_?_NMI_MASK:
+        name: NMI_MASK
+        _strip: CORE_?_
+      Core_?_NMI_MASK_CANCLE: # sic
+        name: NMI_MASK_CANCEL
+        _strip: CORE_?_
+      Core_?_NMI_MASK_DISABLE:
+        name: NMI_MASK_DISABLE
+        _strip: CORE_?_
+      Core_?_NMI_MASK_ENABLE:
+        name: NMI_MASK_ENABLE
+        _strip: CORE_?_
+      Core_?_NMI_MASK_PHASE:
+        name: NMI_MASK_PHASE
+        _strip: CORE_?_
+      Core_?_NMI_MASK_TRIGGER_ADDR:
+        name: NMI_MASK_TRIGGER_ADDR
+        _strip: CORE_?_
+      CORE_?_STATUSTABLE%s:
+        name: STATUSTABLE%s
+        _strip: CORE_?_
+      CORE_?_STATUSTABLE_CURRENT:
+        name: STATUSTABLE_CURRENT
+        _strip: CORE_?_
+      Core_?_World_Cancel:
+        name: WORLD_CANCEL
+        _strip: CORE_?_
+      Core_?_World_DRam0_PIF:
+        name: WORLD_DRAM0_PIF
+        _strip: CORE_?_
+      Core_?_World_IRam0:
+        name: WORLD_IRAM0
+        _strip: CORE_?_
+      Core_?_World_Phase:
+        name: WORLD_PHASE
+        _strip: CORE_?_
+      Core_?_World_PREPARE:
+        name: WORLD_PREPARE
+        _strip: CORE_?_
+      Core_?_World_TRIGGER_ADDR:
+        name: WORLD_TRIGGER_ADDR
+        _strip: CORE_?_
+      Core_?_World_UPDATE:
+        name: WORLD_UPDATE
+        _strip: CORE_?_
