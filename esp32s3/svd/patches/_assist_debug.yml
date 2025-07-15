@@ -74,6 +74,9 @@ ASSIST_DEBUG:
       name: CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR%s
       description: "`¯\\_(ツ)_/¯`"
       _strip: CORE_X_IRAM0_DRAM0_
+    LOG_DATA_?:
+      name: LOG_DATA%s
+      _strip_end: _0
 
   _cluster:
     CPU%s:

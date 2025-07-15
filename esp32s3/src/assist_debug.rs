@@ -5,10 +5,7 @@ pub struct RegisterBlock {
     cpu: [CPU; 2],
     core_x_iram0_dram0_exception_monitor: [CORE_X_IRAM0_DRAM0_EXCEPTION_MONITOR; 2],
     log_setting: LOG_SETTING,
-    log_data_0: LOG_DATA_0,
-    log_data_1: LOG_DATA_1,
-    log_data_2: LOG_DATA_2,
-    log_data_3: LOG_DATA_3,
+    log_data: [LOG_DATA; 4],
     log_data_mask: LOG_DATA_MASK,
     log_min: LOG_MIN,
     log_max: LOG_MAX,
@@ -16,7 +13,7 @@ pub struct RegisterBlock {
     log_mem_end: LOG_MEM_END,
     log_mem_writing_addr: LOG_MEM_WRITING_ADDR,
     log_mem_full_flag: LOG_MEM_FULL_FLAG,
-    _reserved14: [u8; 0xa4],
+    _reserved11: [u8; 0xa4],
     date: DATE,
 }
 impl RegisterBlock {
@@ -52,25 +49,16 @@ impl RegisterBlock {
     pub const fn log_setting(&self) -> &LOG_SETTING {
         &self.log_setting
     }
-    #[doc = "0x12c - log check data register"]
+    #[doc = "0x12c..0x13c - log check data register"]
     #[inline(always)]
-    pub const fn log_data_0(&self) -> &LOG_DATA_0 {
-        &self.log_data_0
+    pub const fn log_data(&self, n: usize) -> &LOG_DATA {
+        &self.log_data[n]
     }
-    #[doc = "0x130 - log check data register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x12c..0x13c - log check data register"]
     #[inline(always)]
-    pub const fn log_data_1(&self) -> &LOG_DATA_1 {
-        &self.log_data_1
-    }
-    #[doc = "0x134 - log check data register"]
-    #[inline(always)]
-    pub const fn log_data_2(&self) -> &LOG_DATA_2 {
-        &self.log_data_2
-    }
-    #[doc = "0x138 - log check data register"]
-    #[inline(always)]
-    pub const fn log_data_3(&self) -> &LOG_DATA_3 {
-        &self.log_data_3
+    pub fn log_data_iter(&self) -> impl Iterator<Item = &LOG_DATA> {
+        self.log_data.iter()
     }
     #[doc = "0x13c - log check data mask register"]
     #[inline(always)]
@@ -127,22 +115,10 @@ pub mod core_x_iram0_dram0_exception_monitor;
 pub type LOG_SETTING = crate::Reg<log_setting::LOG_SETTING_SPEC>;
 #[doc = "log set register"]
 pub mod log_setting;
-#[doc = "LOG_DATA_0 (rw) register accessor: log check data register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data_0`] module"]
-pub type LOG_DATA_0 = crate::Reg<log_data_0::LOG_DATA_0_SPEC>;
+#[doc = "LOG_DATA (rw) register accessor: log check data register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data`] module"]
+pub type LOG_DATA = crate::Reg<log_data::LOG_DATA_SPEC>;
 #[doc = "log check data register"]
-pub mod log_data_0;
-#[doc = "LOG_DATA_1 (rw) register accessor: log check data register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data_1`] module"]
-pub type LOG_DATA_1 = crate::Reg<log_data_1::LOG_DATA_1_SPEC>;
-#[doc = "log check data register"]
-pub mod log_data_1;
-#[doc = "LOG_DATA_2 (rw) register accessor: log check data register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data_2`] module"]
-pub type LOG_DATA_2 = crate::Reg<log_data_2::LOG_DATA_2_SPEC>;
-#[doc = "log check data register"]
-pub mod log_data_2;
-#[doc = "LOG_DATA_3 (rw) register accessor: log check data register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data_3`] module"]
-pub type LOG_DATA_3 = crate::Reg<log_data_3::LOG_DATA_3_SPEC>;
-#[doc = "log check data register"]
-pub mod log_data_3;
+pub mod log_data;
 #[doc = "LOG_DATA_MASK (rw) register accessor: log check data mask register\n\nYou can [`read`](crate::Reg::read) this register and get [`log_data_mask::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`log_data_mask::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@log_data_mask`] module"]
 pub type LOG_DATA_MASK = crate::Reg<log_data_mask::LOG_DATA_MASK_SPEC>;
 #[doc = "log check data mask register"]
