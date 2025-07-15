@@ -24,7 +24,7 @@ pub struct RegisterBlock {
     perip_rst_en1: PERIP_RST_EN1,
     lpck_div_int: LPCK_DIV_INT,
     bt_lpck_div_frac: BT_LPCK_DIV_FRAC,
-    cpu_intr_from_cpu_: [CPU_INTR_FROM_CPU_; 4],
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     rsa_pd_ctrl: RSA_PD_CTRL,
     bustoextmem_ena: BUSTOEXTMEM_ENA,
     cache_control: CACHE_CONTROL,
@@ -151,14 +151,14 @@ impl RegisterBlock {
     }
     #[doc = "0x58..0x68 - CPU interrupt controlling register %s"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_(&self, n: usize) -> &CPU_INTR_FROM_CPU_ {
-        &self.cpu_intr_from_cpu_[n]
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x58..0x68 - CPU interrupt controlling register %s"]
     #[inline(always)]
-    pub fn cpu_intr_from_cpu__iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU_> {
-        self.cpu_intr_from_cpu_.iter()
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0x68 - RSA memory remapping register"]
     #[inline(always)]
@@ -306,10 +306,10 @@ pub mod lpck_div_int;
 pub type BT_LPCK_DIV_FRAC = crate::Reg<bt_lpck_div_frac::BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = "Divider fraction configuration register for low-power clock"]
 pub mod bt_lpck_div_frac;
-#[doc = "CPU_INTR_FROM_CPU_ (rw) register accessor: CPU interrupt controlling register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_`] module"]
-pub type CPU_INTR_FROM_CPU_ = crate::Reg<cpu_intr_from_cpu_::CPU_INTR_FROM_CPU__SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: CPU interrupt controlling register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "CPU interrupt controlling register %s"]
-pub mod cpu_intr_from_cpu_;
+pub mod cpu_intr_from_cpu;
 #[doc = "RSA_PD_CTRL (rw) register accessor: RSA memory remapping register\n\nYou can [`read`](crate::Reg::read) this register and get [`rsa_pd_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rsa_pd_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rsa_pd_ctrl`] module"]
 pub type RSA_PD_CTRL = crate::Reg<rsa_pd_ctrl::RSA_PD_CTRL_SPEC>;
 #[doc = "RSA memory remapping register"]

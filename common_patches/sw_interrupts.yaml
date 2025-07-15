@@ -1,2 +1,4 @@
 _array:
-  CPU_INTR_FROM_CPU_?: {}
+  CPU_INTR_FROM_CPU_?:
+    name: CPU_INTR_FROM_CPU%s
+    _strip_end: _FROM_CPU_?

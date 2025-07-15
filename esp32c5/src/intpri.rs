@@ -3,7 +3,7 @@
 #[doc = "Register block"]
 pub struct RegisterBlock {
     _reserved0: [u8; 0x90],
-    cpu_intr_from_cpu_: [CPU_INTR_FROM_CPU_; 4],
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     date: DATE,
     clock_gate: CLOCK_GATE,
     _reserved3: [u8; 0x04],
@@ -15,14 +15,14 @@ pub struct RegisterBlock {
 impl RegisterBlock {
     #[doc = "0x90..0xa0 - CPU_INTR_FROM_CPU_%s mapping register"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_(&self, n: usize) -> &CPU_INTR_FROM_CPU_ {
-        &self.cpu_intr_from_cpu_[n]
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0x90..0xa0 - CPU_INTR_FROM_CPU_%s mapping register"]
     #[inline(always)]
-    pub fn cpu_intr_from_cpu__iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU_> {
-        self.cpu_intr_from_cpu_.iter()
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0xa0 - Version control register"]
     #[inline(always)]
@@ -50,10 +50,10 @@ impl RegisterBlock {
         &self.rnd_eco_high
     }
 }
-#[doc = "CPU_INTR_FROM_CPU_ (rw) register accessor: CPU_INTR_FROM_CPU_%s mapping register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_`] module"]
-pub type CPU_INTR_FROM_CPU_ = crate::Reg<cpu_intr_from_cpu_::CPU_INTR_FROM_CPU__SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: CPU_INTR_FROM_CPU_%s mapping register\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "CPU_INTR_FROM_CPU_%s mapping register"]
-pub mod cpu_intr_from_cpu_;
+pub mod cpu_intr_from_cpu;
 #[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]

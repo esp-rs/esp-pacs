@@ -57,7 +57,7 @@ pub struct RegisterBlock {
     wifi_rst_en: WIFI_RST_EN,
     bt_lpck_div_int: BT_LPCK_DIV_INT,
     bt_lpck_div_frac: BT_LPCK_DIV_FRAC,
-    cpu_intr_from_cpu_: [CPU_INTR_FROM_CPU_; 4],
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     core_0_intr_status: [CORE_0_INTR_STATUS; 3],
     core_1_intr_status: [CORE_1_INTR_STATUS; 3],
     core_0_intr_map: [CORE_0_INTR_MAP; 69],
@@ -507,14 +507,14 @@ impl RegisterBlock {
     }
     #[doc = "0xdc..0xec - "]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_(&self, n: usize) -> &CPU_INTR_FROM_CPU_ {
-        &self.cpu_intr_from_cpu_[n]
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
     #[doc = "Iterator for array of:"]
     #[doc = "0xdc..0xec - "]
     #[inline(always)]
-    pub fn cpu_intr_from_cpu__iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU_> {
-        self.cpu_intr_from_cpu_.iter()
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0xec..0xf8 - "]
     #[inline(always)]
@@ -1606,10 +1606,10 @@ pub mod bt_lpck_div_int;
 pub type BT_LPCK_DIV_FRAC = crate::Reg<bt_lpck_div_frac::BT_LPCK_DIV_FRAC_SPEC>;
 #[doc = ""]
 pub mod bt_lpck_div_frac;
-#[doc = "CPU_INTR_FROM_CPU_ (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_`] module"]
-pub type CPU_INTR_FROM_CPU_ = crate::Reg<cpu_intr_from_cpu_::CPU_INTR_FROM_CPU__SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = ""]
-pub mod cpu_intr_from_cpu_;
+pub mod cpu_intr_from_cpu;
 #[doc = "CORE_0_INTR_STATUS (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`core_0_intr_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@core_0_intr_status`] module"]
 pub type CORE_0_INTR_STATUS = crate::Reg<core_0_intr_status::CORE_0_INTR_STATUS_SPEC>;
 #[doc = ""]
