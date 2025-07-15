@@ -706,3 +706,9 @@ UART0:
 _modify:
   SPI?:
     groupName: SPI
+
+LP_AON:
+  # Make sure the STORE registers are the same type
+  _derive:
+    STORE[1-9]:
+      _from: STORE0

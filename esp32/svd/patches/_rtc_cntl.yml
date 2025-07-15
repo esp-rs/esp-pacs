@@ -24,3 +24,8 @@ RTC_CNTL:
       DIV256: [1, "DIV256"]
       DIV512: [2, "DIV512"]
       DIV1024: [3, "DIV1024"]
+
+  # Make sure the STORE registers are the same type
+  _derive:
+    STORE[1-7]:
+      _from: STORE0

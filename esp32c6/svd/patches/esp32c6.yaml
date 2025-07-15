@@ -72,6 +72,12 @@ GPIO_SD:
 HP_APM,LP_APM,LP_APM0:
   _include: ../../../common_patches/hp_apm.yaml
 
+LP_AON:
+  # Make sure the STORE registers are the same type
+  _derive:
+    STORE[1-9]:
+      _from: STORE0
+
 LP_I2C0:
   _strip: "I2C_"
   "*":

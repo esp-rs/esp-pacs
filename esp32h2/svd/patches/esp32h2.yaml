@@ -1144,3 +1144,9 @@ I2C_ANA_MST:
   _array:
     I2C?_CTRL: {}
     I2C?_CTRL1: {}
+
+LP_AON:
+  # Make sure the STORE registers are the same type
+  _derive:
+    STORE[1-9]:
+      _from: STORE0

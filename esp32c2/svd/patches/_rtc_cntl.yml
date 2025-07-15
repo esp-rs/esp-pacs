@@ -20,3 +20,8 @@ RTC_CNTL:
         bitOffset: 24
         bitWidth: 1
         access: read-write
+
+  # Make sure the STORE registers are the same type
+  _derive:
+    STORE[1-7]:
+      _from: STORE0
