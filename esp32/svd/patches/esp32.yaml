@@ -240,6 +240,16 @@ DPORT:
       size: 32
       reset-value: 16
 
+  AHBLITE_MPU_TABLE_BB:
+    _strip:
+      - BB_
+
+  _derive:
+    AHBLITE_MPU_TABLE_BT:
+      _from: AHBLITE_MPU_TABLE_BB
+    AHBLITE_MPU_TABLE_[^B]*:
+      _from: AHBLITE_MPU_TABLE_BB
+
   PERIP_CLK_EN:
     _modify:
       I2C0_EXT0_CLK_EN:
