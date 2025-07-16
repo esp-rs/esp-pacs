@@ -79,6 +79,13 @@ APB_CTRL:
         description: "Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."
         bitOffset: 27
         bitWidth: 1
+  _derive:
+    FLASH_ACE[1-3]_ADDR:
+      _from: FLASH_ACE0_ADDR
+    FLASH_ACE[1-3]_ATTR:
+      _from: FLASH_ACE0_ATTR
+    FLASH_ACE[1-3]_SIZE:
+      _from: FLASH_ACE0_SIZE
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml

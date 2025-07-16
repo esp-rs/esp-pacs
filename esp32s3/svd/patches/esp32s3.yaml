@@ -483,6 +483,13 @@ APB_CTRL:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
         bitWidth: 1
+  _derive:
+    FLASH_ACE[1-3]_ADDR:
+      _from: FLASH_ACE0_ADDR
+    FLASH_ACE[1-3]_ATTR:
+      _from: FLASH_ACE0_ATTR
+    FLASH_ACE[1-3]_SIZE:
+      _from: FLASH_ACE0_SIZE
 
 RNG:
   _include: ../../../common_patches/rng.yaml
