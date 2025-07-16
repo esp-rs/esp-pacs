@@ -326,62 +326,36 @@ pub mod mem_pvt;
 pub type COMB_PVT_LVT_CONF = crate::Reg<comb_pvt_lvt_conf::COMB_PVT_LVT_CONF_SPEC>;
 #[doc = "mem pvt register"]
 pub mod comb_pvt_lvt_conf;
-#[doc = "COMB_PVT_NVT_CONF (rw) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_nvt_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comb_pvt_nvt_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_nvt_conf`] module"]
-pub type COMB_PVT_NVT_CONF = crate::Reg<comb_pvt_nvt_conf::COMB_PVT_NVT_CONF_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_nvt_conf;
-#[doc = "COMB_PVT_HVT_CONF (rw) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_hvt_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`comb_pvt_hvt_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_hvt_conf`] module"]
-pub type COMB_PVT_HVT_CONF = crate::Reg<comb_pvt_hvt_conf::COMB_PVT_HVT_CONF_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_hvt_conf;
+pub use comb_pvt_lvt_conf as comb_pvt_nvt_conf;
+pub use comb_pvt_lvt_conf as comb_pvt_hvt_conf;
+pub use COMB_PVT_LVT_CONF as COMB_PVT_NVT_CONF;
+pub use COMB_PVT_LVT_CONF as COMB_PVT_HVT_CONF;
 #[doc = "COMB_PVT_ERR_LVT_SITE0 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_lvt_site0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_lvt_site0`] module"]
 pub type COMB_PVT_ERR_LVT_SITE0 = crate::Reg<comb_pvt_err_lvt_site0::COMB_PVT_ERR_LVT_SITE0_SPEC>;
 #[doc = "mem pvt register"]
 pub mod comb_pvt_err_lvt_site0;
-#[doc = "COMB_PVT_ERR_NVT_SITE0 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_nvt_site0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_nvt_site0`] module"]
-pub type COMB_PVT_ERR_NVT_SITE0 = crate::Reg<comb_pvt_err_nvt_site0::COMB_PVT_ERR_NVT_SITE0_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_nvt_site0;
-#[doc = "COMB_PVT_ERR_HVT_SITE0 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_hvt_site0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_hvt_site0`] module"]
-pub type COMB_PVT_ERR_HVT_SITE0 = crate::Reg<comb_pvt_err_hvt_site0::COMB_PVT_ERR_HVT_SITE0_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_hvt_site0;
-#[doc = "COMB_PVT_ERR_LVT_SITE1 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_lvt_site1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_lvt_site1`] module"]
-pub type COMB_PVT_ERR_LVT_SITE1 = crate::Reg<comb_pvt_err_lvt_site1::COMB_PVT_ERR_LVT_SITE1_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_lvt_site1;
-#[doc = "COMB_PVT_ERR_NVT_SITE1 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_nvt_site1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_nvt_site1`] module"]
-pub type COMB_PVT_ERR_NVT_SITE1 = crate::Reg<comb_pvt_err_nvt_site1::COMB_PVT_ERR_NVT_SITE1_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_nvt_site1;
-#[doc = "COMB_PVT_ERR_HVT_SITE1 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_hvt_site1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_hvt_site1`] module"]
-pub type COMB_PVT_ERR_HVT_SITE1 = crate::Reg<comb_pvt_err_hvt_site1::COMB_PVT_ERR_HVT_SITE1_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_hvt_site1;
-#[doc = "COMB_PVT_ERR_LVT_SITE2 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_lvt_site2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_lvt_site2`] module"]
-pub type COMB_PVT_ERR_LVT_SITE2 = crate::Reg<comb_pvt_err_lvt_site2::COMB_PVT_ERR_LVT_SITE2_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_lvt_site2;
-#[doc = "COMB_PVT_ERR_NVT_SITE2 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_nvt_site2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_nvt_site2`] module"]
-pub type COMB_PVT_ERR_NVT_SITE2 = crate::Reg<comb_pvt_err_nvt_site2::COMB_PVT_ERR_NVT_SITE2_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_nvt_site2;
-#[doc = "COMB_PVT_ERR_HVT_SITE2 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_hvt_site2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_hvt_site2`] module"]
-pub type COMB_PVT_ERR_HVT_SITE2 = crate::Reg<comb_pvt_err_hvt_site2::COMB_PVT_ERR_HVT_SITE2_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_hvt_site2;
-#[doc = "COMB_PVT_ERR_LVT_SITE3 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_lvt_site3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_lvt_site3`] module"]
-pub type COMB_PVT_ERR_LVT_SITE3 = crate::Reg<comb_pvt_err_lvt_site3::COMB_PVT_ERR_LVT_SITE3_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_lvt_site3;
-#[doc = "COMB_PVT_ERR_NVT_SITE3 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_nvt_site3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_nvt_site3`] module"]
-pub type COMB_PVT_ERR_NVT_SITE3 = crate::Reg<comb_pvt_err_nvt_site3::COMB_PVT_ERR_NVT_SITE3_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_nvt_site3;
-#[doc = "COMB_PVT_ERR_HVT_SITE3 (r) register accessor: mem pvt register\n\nYou can [`read`](crate::Reg::read) this register and get [`comb_pvt_err_hvt_site3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@comb_pvt_err_hvt_site3`] module"]
-pub type COMB_PVT_ERR_HVT_SITE3 = crate::Reg<comb_pvt_err_hvt_site3::COMB_PVT_ERR_HVT_SITE3_SPEC>;
-#[doc = "mem pvt register"]
-pub mod comb_pvt_err_hvt_site3;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site0;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site0;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_lvt_site1;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site1;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site1;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_lvt_site2;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site2;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site2;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_lvt_site3;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site3;
+pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site3;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE0;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE0;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_LVT_SITE1;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE1;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE1;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_LVT_SITE2;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE2;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE2;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_LVT_SITE3;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE3;
+pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE3;
 #[doc = "REG_DATE (rw) register accessor: Version register\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_date`] module"]
 pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
 #[doc = "Version register"]

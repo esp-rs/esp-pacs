@@ -17,3 +17,25 @@ SYSTEM:
         name: TWAI_RST
       EXT0_RST:
         name: "I2C_EXT0_RST"
+
+  COMB_PVT_ERR_LVT_SITE0:
+    _modify:
+      COMB_TIMING_ERR_CNT_LVT_SITE0:
+        name: ERR_CNT
+        description: "Error counter"
+
+  COMB_PVT_LVT_CONF:
+    _strip_end: "_LVT"
+
+  _derive:
+    COMB_PVT_NVT_CONF:
+      _from: COMB_PVT_LVT_CONF
+    COMB_PVT_HVT_CONF:
+      _from: COMB_PVT_LVT_CONF
+    # These are all counters with the same format
+    COMB_PVT_ERR_LVT_SITE[1-9]:
+      _from: COMB_PVT_ERR_LVT_SITE0
+    COMB_PVT_ERR_NVT_SITE?:
+      _from: COMB_PVT_ERR_LVT_SITE0
+    COMB_PVT_ERR_HVT_SITE?:
+      _from: COMB_PVT_ERR_LVT_SITE0
