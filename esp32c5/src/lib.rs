@@ -77,7 +77,13 @@ extern "C" {
     fn PCNT();
     fn PARL_IO_TX();
     fn PARL_IO_RX();
-    fn GPSPI2();
+    fn DMA_IN_CH0();
+    fn DMA_IN_CH1();
+    fn DMA_IN_CH2();
+    fn DMA_OUT_CH0();
+    fn DMA_OUT_CH1();
+    fn DMA_OUT_CH2();
+    fn SPI2();
     fn AES();
     fn SHA();
     fn RSA();
@@ -228,13 +234,25 @@ pub static __EXTERNAL_INTERRUPTS: [Vector; 83] = [
     },
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _handler: GPSPI2 },
+    Vector {
+        _handler: DMA_IN_CH0,
+    },
+    Vector {
+        _handler: DMA_IN_CH1,
+    },
+    Vector {
+        _handler: DMA_IN_CH2,
+    },
+    Vector {
+        _handler: DMA_OUT_CH0,
+    },
+    Vector {
+        _handler: DMA_OUT_CH1,
+    },
+    Vector {
+        _handler: DMA_OUT_CH2,
+    },
+    Vector { _handler: SPI2 },
     Vector { _handler: AES },
     Vector { _handler: SHA },
     Vector { _handler: RSA },
@@ -272,14 +290,14 @@ impl core::fmt::Debug for AES {
 #[doc = "AES (Advanced Encryption Standard) Accelerator"]
 pub mod aes;
 #[doc = "AHB_DMA Peripheral"]
-pub type AHB_DMA = crate::Periph<ahb_dma::RegisterBlock, 0x6008_0000>;
-impl core::fmt::Debug for AHB_DMA {
+pub type DMA = crate::Periph<dma::RegisterBlock, 0x6008_0000>;
+impl core::fmt::Debug for DMA {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("AHB_DMA").finish()
+        f.debug_struct("DMA").finish()
     }
 }
 #[doc = "AHB_DMA Peripheral"]
-pub mod ahb_dma;
+pub mod dma;
 #[doc = "SAR (Successive Approximation Register) Analog-to-Digital Converter"]
 pub type APB_SARADC = crate::Periph<apb_saradc::RegisterBlock, 0x6000_e000>;
 impl core::fmt::Debug for APB_SARADC {
@@ -822,8 +840,8 @@ pub struct Peripherals {
     pub PLIC_UX: PLIC_UX,
     #[doc = "AES"]
     pub AES: AES,
-    #[doc = "AHB_DMA"]
-    pub AHB_DMA: AHB_DMA,
+    #[doc = "DMA"]
+    pub DMA: DMA,
     #[doc = "APB_SARADC"]
     pub APB_SARADC: APB_SARADC,
     #[doc = "BITSCRAMBLER"]
@@ -967,7 +985,7 @@ impl Peripherals {
             PLIC_MX: PLIC_MX::steal(),
             PLIC_UX: PLIC_UX::steal(),
             AES: AES::steal(),
-            AHB_DMA: AHB_DMA::steal(),
+            DMA: DMA::steal(),
             APB_SARADC: APB_SARADC::steal(),
             BITSCRAMBLER: BITSCRAMBLER::steal(),
             BUS_MONITOR: BUS_MONITOR::steal(),
