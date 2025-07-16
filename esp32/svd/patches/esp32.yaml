@@ -299,5 +299,8 @@ DPORT:
       name: CORE_0_INTR_STATUS%s
     APP_INTR_STATUS_*:
       name: CORE_1_INTR_STATUS%s
+    DMMU_TABLE*: {}
+    IMMU_TABLE*: {}
+    SHROM_MPU_TABLE*: {}
 
   _include: ../../../common_patches/sw_interrupts.yaml

@@ -156,62 +156,9 @@ pub struct RegisterBlock {
     rom_mpu_table1: ROM_MPU_TABLE1,
     rom_mpu_table2: ROM_MPU_TABLE2,
     rom_mpu_table3: ROM_MPU_TABLE3,
-    shrom_mpu_table0: SHROM_MPU_TABLE0,
-    shrom_mpu_table1: SHROM_MPU_TABLE1,
-    shrom_mpu_table2: SHROM_MPU_TABLE2,
-    shrom_mpu_table3: SHROM_MPU_TABLE3,
-    shrom_mpu_table4: SHROM_MPU_TABLE4,
-    shrom_mpu_table5: SHROM_MPU_TABLE5,
-    shrom_mpu_table6: SHROM_MPU_TABLE6,
-    shrom_mpu_table7: SHROM_MPU_TABLE7,
-    shrom_mpu_table8: SHROM_MPU_TABLE8,
-    shrom_mpu_table9: SHROM_MPU_TABLE9,
-    shrom_mpu_table10: SHROM_MPU_TABLE10,
-    shrom_mpu_table11: SHROM_MPU_TABLE11,
-    shrom_mpu_table12: SHROM_MPU_TABLE12,
-    shrom_mpu_table13: SHROM_MPU_TABLE13,
-    shrom_mpu_table14: SHROM_MPU_TABLE14,
-    shrom_mpu_table15: SHROM_MPU_TABLE15,
-    shrom_mpu_table16: SHROM_MPU_TABLE16,
-    shrom_mpu_table17: SHROM_MPU_TABLE17,
-    shrom_mpu_table18: SHROM_MPU_TABLE18,
-    shrom_mpu_table19: SHROM_MPU_TABLE19,
-    shrom_mpu_table20: SHROM_MPU_TABLE20,
-    shrom_mpu_table21: SHROM_MPU_TABLE21,
-    shrom_mpu_table22: SHROM_MPU_TABLE22,
-    shrom_mpu_table23: SHROM_MPU_TABLE23,
-    immu_table0: IMMU_TABLE0,
-    immu_table1: IMMU_TABLE1,
-    immu_table2: IMMU_TABLE2,
-    immu_table3: IMMU_TABLE3,
-    immu_table4: IMMU_TABLE4,
-    immu_table5: IMMU_TABLE5,
-    immu_table6: IMMU_TABLE6,
-    immu_table7: IMMU_TABLE7,
-    immu_table8: IMMU_TABLE8,
-    immu_table9: IMMU_TABLE9,
-    immu_table10: IMMU_TABLE10,
-    immu_table11: IMMU_TABLE11,
-    immu_table12: IMMU_TABLE12,
-    immu_table13: IMMU_TABLE13,
-    immu_table14: IMMU_TABLE14,
-    immu_table15: IMMU_TABLE15,
-    dmmu_table0: DMMU_TABLE0,
-    dmmu_table1: DMMU_TABLE1,
-    dmmu_table2: DMMU_TABLE2,
-    dmmu_table3: DMMU_TABLE3,
-    dmmu_table4: DMMU_TABLE4,
-    dmmu_table5: DMMU_TABLE5,
-    dmmu_table6: DMMU_TABLE6,
-    dmmu_table7: DMMU_TABLE7,
-    dmmu_table8: DMMU_TABLE8,
-    dmmu_table9: DMMU_TABLE9,
-    dmmu_table10: DMMU_TABLE10,
-    dmmu_table11: DMMU_TABLE11,
-    dmmu_table12: DMMU_TABLE12,
-    dmmu_table13: DMMU_TABLE13,
-    dmmu_table14: DMMU_TABLE14,
-    dmmu_table15: DMMU_TABLE15,
+    shrom_mpu_table: [SHROM_MPU_TABLE; 24],
+    immu_table: [IMMU_TABLE; 16],
+    dmmu_table: [DMMU_TABLE; 16],
     pro_intrusion_ctrl: PRO_INTRUSION_CTRL,
     pro_intrusion_status: PRO_INTRUSION_STATUS,
     app_intrusion_ctrl: APP_INTRUSION_CTRL,
@@ -226,7 +173,7 @@ pub struct RegisterBlock {
     pro_vecbase_set: PRO_VECBASE_SET,
     app_vecbase_ctrl: APP_VECBASE_CTRL,
     app_vecbase_set: APP_VECBASE_SET,
-    _reserved224: [u8; 0x0a40],
+    _reserved171: [u8; 0x0a40],
     date: DATE,
 }
 impl RegisterBlock {
@@ -1030,285 +977,38 @@ impl RegisterBlock {
     pub const fn rom_mpu_table3(&self) -> &ROM_MPU_TABLE3 {
         &self.rom_mpu_table3
     }
-    #[doc = "0x4a4 - "]
+    #[doc = "0x4a4..0x504 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table0(&self) -> &SHROM_MPU_TABLE0 {
-        &self.shrom_mpu_table0
+    pub const fn shrom_mpu_table(&self, n: usize) -> &SHROM_MPU_TABLE {
+        &self.shrom_mpu_table[n]
     }
-    #[doc = "0x4a8 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x4a4..0x504 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table1(&self) -> &SHROM_MPU_TABLE1 {
-        &self.shrom_mpu_table1
+    pub fn shrom_mpu_table_iter(&self) -> impl Iterator<Item = &SHROM_MPU_TABLE> {
+        self.shrom_mpu_table.iter()
     }
-    #[doc = "0x4ac - "]
+    #[doc = "0x504..0x544 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table2(&self) -> &SHROM_MPU_TABLE2 {
-        &self.shrom_mpu_table2
+    pub const fn immu_table(&self, n: usize) -> &IMMU_TABLE {
+        &self.immu_table[n]
     }
-    #[doc = "0x4b0 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x504..0x544 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table3(&self) -> &SHROM_MPU_TABLE3 {
-        &self.shrom_mpu_table3
+    pub fn immu_table_iter(&self) -> impl Iterator<Item = &IMMU_TABLE> {
+        self.immu_table.iter()
     }
-    #[doc = "0x4b4 - "]
+    #[doc = "0x544..0x584 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table4(&self) -> &SHROM_MPU_TABLE4 {
-        &self.shrom_mpu_table4
+    pub const fn dmmu_table(&self, n: usize) -> &DMMU_TABLE {
+        &self.dmmu_table[n]
     }
-    #[doc = "0x4b8 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x544..0x584 - "]
     #[inline(always)]
-    pub const fn shrom_mpu_table5(&self) -> &SHROM_MPU_TABLE5 {
-        &self.shrom_mpu_table5
-    }
-    #[doc = "0x4bc - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table6(&self) -> &SHROM_MPU_TABLE6 {
-        &self.shrom_mpu_table6
-    }
-    #[doc = "0x4c0 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table7(&self) -> &SHROM_MPU_TABLE7 {
-        &self.shrom_mpu_table7
-    }
-    #[doc = "0x4c4 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table8(&self) -> &SHROM_MPU_TABLE8 {
-        &self.shrom_mpu_table8
-    }
-    #[doc = "0x4c8 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table9(&self) -> &SHROM_MPU_TABLE9 {
-        &self.shrom_mpu_table9
-    }
-    #[doc = "0x4cc - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table10(&self) -> &SHROM_MPU_TABLE10 {
-        &self.shrom_mpu_table10
-    }
-    #[doc = "0x4d0 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table11(&self) -> &SHROM_MPU_TABLE11 {
-        &self.shrom_mpu_table11
-    }
-    #[doc = "0x4d4 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table12(&self) -> &SHROM_MPU_TABLE12 {
-        &self.shrom_mpu_table12
-    }
-    #[doc = "0x4d8 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table13(&self) -> &SHROM_MPU_TABLE13 {
-        &self.shrom_mpu_table13
-    }
-    #[doc = "0x4dc - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table14(&self) -> &SHROM_MPU_TABLE14 {
-        &self.shrom_mpu_table14
-    }
-    #[doc = "0x4e0 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table15(&self) -> &SHROM_MPU_TABLE15 {
-        &self.shrom_mpu_table15
-    }
-    #[doc = "0x4e4 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table16(&self) -> &SHROM_MPU_TABLE16 {
-        &self.shrom_mpu_table16
-    }
-    #[doc = "0x4e8 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table17(&self) -> &SHROM_MPU_TABLE17 {
-        &self.shrom_mpu_table17
-    }
-    #[doc = "0x4ec - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table18(&self) -> &SHROM_MPU_TABLE18 {
-        &self.shrom_mpu_table18
-    }
-    #[doc = "0x4f0 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table19(&self) -> &SHROM_MPU_TABLE19 {
-        &self.shrom_mpu_table19
-    }
-    #[doc = "0x4f4 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table20(&self) -> &SHROM_MPU_TABLE20 {
-        &self.shrom_mpu_table20
-    }
-    #[doc = "0x4f8 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table21(&self) -> &SHROM_MPU_TABLE21 {
-        &self.shrom_mpu_table21
-    }
-    #[doc = "0x4fc - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table22(&self) -> &SHROM_MPU_TABLE22 {
-        &self.shrom_mpu_table22
-    }
-    #[doc = "0x500 - "]
-    #[inline(always)]
-    pub const fn shrom_mpu_table23(&self) -> &SHROM_MPU_TABLE23 {
-        &self.shrom_mpu_table23
-    }
-    #[doc = "0x504 - "]
-    #[inline(always)]
-    pub const fn immu_table0(&self) -> &IMMU_TABLE0 {
-        &self.immu_table0
-    }
-    #[doc = "0x508 - "]
-    #[inline(always)]
-    pub const fn immu_table1(&self) -> &IMMU_TABLE1 {
-        &self.immu_table1
-    }
-    #[doc = "0x50c - "]
-    #[inline(always)]
-    pub const fn immu_table2(&self) -> &IMMU_TABLE2 {
-        &self.immu_table2
-    }
-    #[doc = "0x510 - "]
-    #[inline(always)]
-    pub const fn immu_table3(&self) -> &IMMU_TABLE3 {
-        &self.immu_table3
-    }
-    #[doc = "0x514 - "]
-    #[inline(always)]
-    pub const fn immu_table4(&self) -> &IMMU_TABLE4 {
-        &self.immu_table4
-    }
-    #[doc = "0x518 - "]
-    #[inline(always)]
-    pub const fn immu_table5(&self) -> &IMMU_TABLE5 {
-        &self.immu_table5
-    }
-    #[doc = "0x51c - "]
-    #[inline(always)]
-    pub const fn immu_table6(&self) -> &IMMU_TABLE6 {
-        &self.immu_table6
-    }
-    #[doc = "0x520 - "]
-    #[inline(always)]
-    pub const fn immu_table7(&self) -> &IMMU_TABLE7 {
-        &self.immu_table7
-    }
-    #[doc = "0x524 - "]
-    #[inline(always)]
-    pub const fn immu_table8(&self) -> &IMMU_TABLE8 {
-        &self.immu_table8
-    }
-    #[doc = "0x528 - "]
-    #[inline(always)]
-    pub const fn immu_table9(&self) -> &IMMU_TABLE9 {
-        &self.immu_table9
-    }
-    #[doc = "0x52c - "]
-    #[inline(always)]
-    pub const fn immu_table10(&self) -> &IMMU_TABLE10 {
-        &self.immu_table10
-    }
-    #[doc = "0x530 - "]
-    #[inline(always)]
-    pub const fn immu_table11(&self) -> &IMMU_TABLE11 {
-        &self.immu_table11
-    }
-    #[doc = "0x534 - "]
-    #[inline(always)]
-    pub const fn immu_table12(&self) -> &IMMU_TABLE12 {
-        &self.immu_table12
-    }
-    #[doc = "0x538 - "]
-    #[inline(always)]
-    pub const fn immu_table13(&self) -> &IMMU_TABLE13 {
-        &self.immu_table13
-    }
-    #[doc = "0x53c - "]
-    #[inline(always)]
-    pub const fn immu_table14(&self) -> &IMMU_TABLE14 {
-        &self.immu_table14
-    }
-    #[doc = "0x540 - "]
-    #[inline(always)]
-    pub const fn immu_table15(&self) -> &IMMU_TABLE15 {
-        &self.immu_table15
-    }
-    #[doc = "0x544 - "]
-    #[inline(always)]
-    pub const fn dmmu_table0(&self) -> &DMMU_TABLE0 {
-        &self.dmmu_table0
-    }
-    #[doc = "0x548 - "]
-    #[inline(always)]
-    pub const fn dmmu_table1(&self) -> &DMMU_TABLE1 {
-        &self.dmmu_table1
-    }
-    #[doc = "0x54c - "]
-    #[inline(always)]
-    pub const fn dmmu_table2(&self) -> &DMMU_TABLE2 {
-        &self.dmmu_table2
-    }
-    #[doc = "0x550 - "]
-    #[inline(always)]
-    pub const fn dmmu_table3(&self) -> &DMMU_TABLE3 {
-        &self.dmmu_table3
-    }
-    #[doc = "0x554 - "]
-    #[inline(always)]
-    pub const fn dmmu_table4(&self) -> &DMMU_TABLE4 {
-        &self.dmmu_table4
-    }
-    #[doc = "0x558 - "]
-    #[inline(always)]
-    pub const fn dmmu_table5(&self) -> &DMMU_TABLE5 {
-        &self.dmmu_table5
-    }
-    #[doc = "0x55c - "]
-    #[inline(always)]
-    pub const fn dmmu_table6(&self) -> &DMMU_TABLE6 {
-        &self.dmmu_table6
-    }
-    #[doc = "0x560 - "]
-    #[inline(always)]
-    pub const fn dmmu_table7(&self) -> &DMMU_TABLE7 {
-        &self.dmmu_table7
-    }
-    #[doc = "0x564 - "]
-    #[inline(always)]
-    pub const fn dmmu_table8(&self) -> &DMMU_TABLE8 {
-        &self.dmmu_table8
-    }
-    #[doc = "0x568 - "]
-    #[inline(always)]
-    pub const fn dmmu_table9(&self) -> &DMMU_TABLE9 {
-        &self.dmmu_table9
-    }
-    #[doc = "0x56c - "]
-    #[inline(always)]
-    pub const fn dmmu_table10(&self) -> &DMMU_TABLE10 {
-        &self.dmmu_table10
-    }
-    #[doc = "0x570 - "]
-    #[inline(always)]
-    pub const fn dmmu_table11(&self) -> &DMMU_TABLE11 {
-        &self.dmmu_table11
-    }
-    #[doc = "0x574 - "]
-    #[inline(always)]
-    pub const fn dmmu_table12(&self) -> &DMMU_TABLE12 {
-        &self.dmmu_table12
-    }
-    #[doc = "0x578 - "]
-    #[inline(always)]
-    pub const fn dmmu_table13(&self) -> &DMMU_TABLE13 {
-        &self.dmmu_table13
-    }
-    #[doc = "0x57c - "]
-    #[inline(always)]
-    pub const fn dmmu_table14(&self) -> &DMMU_TABLE14 {
-        &self.dmmu_table14
-    }
-    #[doc = "0x580 - "]
-    #[inline(always)]
-    pub const fn dmmu_table15(&self) -> &DMMU_TABLE15 {
-        &self.dmmu_table15
+    pub fn dmmu_table_iter(&self) -> impl Iterator<Item = &DMMU_TABLE> {
+        self.dmmu_table.iter()
     }
     #[doc = "0x584 - "]
     #[inline(always)]
@@ -1930,230 +1630,18 @@ pub mod rom_mpu_table2;
 pub type ROM_MPU_TABLE3 = crate::Reg<rom_mpu_table3::ROM_MPU_TABLE3_SPEC>;
 #[doc = ""]
 pub mod rom_mpu_table3;
-#[doc = "SHROM_MPU_TABLE0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table0`] module"]
-pub type SHROM_MPU_TABLE0 = crate::Reg<shrom_mpu_table0::SHROM_MPU_TABLE0_SPEC>;
+#[doc = "SHROM_MPU_TABLE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table`] module"]
+pub type SHROM_MPU_TABLE = crate::Reg<shrom_mpu_table::SHROM_MPU_TABLE_SPEC>;
 #[doc = ""]
-pub mod shrom_mpu_table0;
-#[doc = "SHROM_MPU_TABLE1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table1`] module"]
-pub type SHROM_MPU_TABLE1 = crate::Reg<shrom_mpu_table1::SHROM_MPU_TABLE1_SPEC>;
+pub mod shrom_mpu_table;
+#[doc = "IMMU_TABLE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table`] module"]
+pub type IMMU_TABLE = crate::Reg<immu_table::IMMU_TABLE_SPEC>;
 #[doc = ""]
-pub mod shrom_mpu_table1;
-#[doc = "SHROM_MPU_TABLE2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table2`] module"]
-pub type SHROM_MPU_TABLE2 = crate::Reg<shrom_mpu_table2::SHROM_MPU_TABLE2_SPEC>;
+pub mod immu_table;
+#[doc = "DMMU_TABLE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table`] module"]
+pub type DMMU_TABLE = crate::Reg<dmmu_table::DMMU_TABLE_SPEC>;
 #[doc = ""]
-pub mod shrom_mpu_table2;
-#[doc = "SHROM_MPU_TABLE3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table3`] module"]
-pub type SHROM_MPU_TABLE3 = crate::Reg<shrom_mpu_table3::SHROM_MPU_TABLE3_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table3;
-#[doc = "SHROM_MPU_TABLE4 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table4`] module"]
-pub type SHROM_MPU_TABLE4 = crate::Reg<shrom_mpu_table4::SHROM_MPU_TABLE4_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table4;
-#[doc = "SHROM_MPU_TABLE5 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table5`] module"]
-pub type SHROM_MPU_TABLE5 = crate::Reg<shrom_mpu_table5::SHROM_MPU_TABLE5_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table5;
-#[doc = "SHROM_MPU_TABLE6 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table6`] module"]
-pub type SHROM_MPU_TABLE6 = crate::Reg<shrom_mpu_table6::SHROM_MPU_TABLE6_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table6;
-#[doc = "SHROM_MPU_TABLE7 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table7`] module"]
-pub type SHROM_MPU_TABLE7 = crate::Reg<shrom_mpu_table7::SHROM_MPU_TABLE7_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table7;
-#[doc = "SHROM_MPU_TABLE8 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table8`] module"]
-pub type SHROM_MPU_TABLE8 = crate::Reg<shrom_mpu_table8::SHROM_MPU_TABLE8_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table8;
-#[doc = "SHROM_MPU_TABLE9 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table9`] module"]
-pub type SHROM_MPU_TABLE9 = crate::Reg<shrom_mpu_table9::SHROM_MPU_TABLE9_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table9;
-#[doc = "SHROM_MPU_TABLE10 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table10`] module"]
-pub type SHROM_MPU_TABLE10 = crate::Reg<shrom_mpu_table10::SHROM_MPU_TABLE10_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table10;
-#[doc = "SHROM_MPU_TABLE11 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table11`] module"]
-pub type SHROM_MPU_TABLE11 = crate::Reg<shrom_mpu_table11::SHROM_MPU_TABLE11_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table11;
-#[doc = "SHROM_MPU_TABLE12 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table12`] module"]
-pub type SHROM_MPU_TABLE12 = crate::Reg<shrom_mpu_table12::SHROM_MPU_TABLE12_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table12;
-#[doc = "SHROM_MPU_TABLE13 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table13`] module"]
-pub type SHROM_MPU_TABLE13 = crate::Reg<shrom_mpu_table13::SHROM_MPU_TABLE13_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table13;
-#[doc = "SHROM_MPU_TABLE14 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table14`] module"]
-pub type SHROM_MPU_TABLE14 = crate::Reg<shrom_mpu_table14::SHROM_MPU_TABLE14_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table14;
-#[doc = "SHROM_MPU_TABLE15 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table15::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table15::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table15`] module"]
-pub type SHROM_MPU_TABLE15 = crate::Reg<shrom_mpu_table15::SHROM_MPU_TABLE15_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table15;
-#[doc = "SHROM_MPU_TABLE16 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table16::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table16::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table16`] module"]
-pub type SHROM_MPU_TABLE16 = crate::Reg<shrom_mpu_table16::SHROM_MPU_TABLE16_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table16;
-#[doc = "SHROM_MPU_TABLE17 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table17::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table17::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table17`] module"]
-pub type SHROM_MPU_TABLE17 = crate::Reg<shrom_mpu_table17::SHROM_MPU_TABLE17_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table17;
-#[doc = "SHROM_MPU_TABLE18 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table18::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table18::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table18`] module"]
-pub type SHROM_MPU_TABLE18 = crate::Reg<shrom_mpu_table18::SHROM_MPU_TABLE18_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table18;
-#[doc = "SHROM_MPU_TABLE19 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table19::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table19::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table19`] module"]
-pub type SHROM_MPU_TABLE19 = crate::Reg<shrom_mpu_table19::SHROM_MPU_TABLE19_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table19;
-#[doc = "SHROM_MPU_TABLE20 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table20::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table20::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table20`] module"]
-pub type SHROM_MPU_TABLE20 = crate::Reg<shrom_mpu_table20::SHROM_MPU_TABLE20_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table20;
-#[doc = "SHROM_MPU_TABLE21 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table21::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table21::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table21`] module"]
-pub type SHROM_MPU_TABLE21 = crate::Reg<shrom_mpu_table21::SHROM_MPU_TABLE21_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table21;
-#[doc = "SHROM_MPU_TABLE22 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table22::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table22::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table22`] module"]
-pub type SHROM_MPU_TABLE22 = crate::Reg<shrom_mpu_table22::SHROM_MPU_TABLE22_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table22;
-#[doc = "SHROM_MPU_TABLE23 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`shrom_mpu_table23::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`shrom_mpu_table23::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@shrom_mpu_table23`] module"]
-pub type SHROM_MPU_TABLE23 = crate::Reg<shrom_mpu_table23::SHROM_MPU_TABLE23_SPEC>;
-#[doc = ""]
-pub mod shrom_mpu_table23;
-#[doc = "IMMU_TABLE0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table0`] module"]
-pub type IMMU_TABLE0 = crate::Reg<immu_table0::IMMU_TABLE0_SPEC>;
-#[doc = ""]
-pub mod immu_table0;
-#[doc = "IMMU_TABLE1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table1`] module"]
-pub type IMMU_TABLE1 = crate::Reg<immu_table1::IMMU_TABLE1_SPEC>;
-#[doc = ""]
-pub mod immu_table1;
-#[doc = "IMMU_TABLE2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table2`] module"]
-pub type IMMU_TABLE2 = crate::Reg<immu_table2::IMMU_TABLE2_SPEC>;
-#[doc = ""]
-pub mod immu_table2;
-#[doc = "IMMU_TABLE3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table3`] module"]
-pub type IMMU_TABLE3 = crate::Reg<immu_table3::IMMU_TABLE3_SPEC>;
-#[doc = ""]
-pub mod immu_table3;
-#[doc = "IMMU_TABLE4 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table4`] module"]
-pub type IMMU_TABLE4 = crate::Reg<immu_table4::IMMU_TABLE4_SPEC>;
-#[doc = ""]
-pub mod immu_table4;
-#[doc = "IMMU_TABLE5 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table5`] module"]
-pub type IMMU_TABLE5 = crate::Reg<immu_table5::IMMU_TABLE5_SPEC>;
-#[doc = ""]
-pub mod immu_table5;
-#[doc = "IMMU_TABLE6 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table6`] module"]
-pub type IMMU_TABLE6 = crate::Reg<immu_table6::IMMU_TABLE6_SPEC>;
-#[doc = ""]
-pub mod immu_table6;
-#[doc = "IMMU_TABLE7 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table7`] module"]
-pub type IMMU_TABLE7 = crate::Reg<immu_table7::IMMU_TABLE7_SPEC>;
-#[doc = ""]
-pub mod immu_table7;
-#[doc = "IMMU_TABLE8 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table8`] module"]
-pub type IMMU_TABLE8 = crate::Reg<immu_table8::IMMU_TABLE8_SPEC>;
-#[doc = ""]
-pub mod immu_table8;
-#[doc = "IMMU_TABLE9 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table9`] module"]
-pub type IMMU_TABLE9 = crate::Reg<immu_table9::IMMU_TABLE9_SPEC>;
-#[doc = ""]
-pub mod immu_table9;
-#[doc = "IMMU_TABLE10 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table10`] module"]
-pub type IMMU_TABLE10 = crate::Reg<immu_table10::IMMU_TABLE10_SPEC>;
-#[doc = ""]
-pub mod immu_table10;
-#[doc = "IMMU_TABLE11 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table11`] module"]
-pub type IMMU_TABLE11 = crate::Reg<immu_table11::IMMU_TABLE11_SPEC>;
-#[doc = ""]
-pub mod immu_table11;
-#[doc = "IMMU_TABLE12 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table12`] module"]
-pub type IMMU_TABLE12 = crate::Reg<immu_table12::IMMU_TABLE12_SPEC>;
-#[doc = ""]
-pub mod immu_table12;
-#[doc = "IMMU_TABLE13 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table13`] module"]
-pub type IMMU_TABLE13 = crate::Reg<immu_table13::IMMU_TABLE13_SPEC>;
-#[doc = ""]
-pub mod immu_table13;
-#[doc = "IMMU_TABLE14 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table14`] module"]
-pub type IMMU_TABLE14 = crate::Reg<immu_table14::IMMU_TABLE14_SPEC>;
-#[doc = ""]
-pub mod immu_table14;
-#[doc = "IMMU_TABLE15 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`immu_table15::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`immu_table15::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@immu_table15`] module"]
-pub type IMMU_TABLE15 = crate::Reg<immu_table15::IMMU_TABLE15_SPEC>;
-#[doc = ""]
-pub mod immu_table15;
-#[doc = "DMMU_TABLE0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table0`] module"]
-pub type DMMU_TABLE0 = crate::Reg<dmmu_table0::DMMU_TABLE0_SPEC>;
-#[doc = ""]
-pub mod dmmu_table0;
-#[doc = "DMMU_TABLE1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table1`] module"]
-pub type DMMU_TABLE1 = crate::Reg<dmmu_table1::DMMU_TABLE1_SPEC>;
-#[doc = ""]
-pub mod dmmu_table1;
-#[doc = "DMMU_TABLE2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table2`] module"]
-pub type DMMU_TABLE2 = crate::Reg<dmmu_table2::DMMU_TABLE2_SPEC>;
-#[doc = ""]
-pub mod dmmu_table2;
-#[doc = "DMMU_TABLE3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table3`] module"]
-pub type DMMU_TABLE3 = crate::Reg<dmmu_table3::DMMU_TABLE3_SPEC>;
-#[doc = ""]
-pub mod dmmu_table3;
-#[doc = "DMMU_TABLE4 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table4`] module"]
-pub type DMMU_TABLE4 = crate::Reg<dmmu_table4::DMMU_TABLE4_SPEC>;
-#[doc = ""]
-pub mod dmmu_table4;
-#[doc = "DMMU_TABLE5 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table5`] module"]
-pub type DMMU_TABLE5 = crate::Reg<dmmu_table5::DMMU_TABLE5_SPEC>;
-#[doc = ""]
-pub mod dmmu_table5;
-#[doc = "DMMU_TABLE6 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table6`] module"]
-pub type DMMU_TABLE6 = crate::Reg<dmmu_table6::DMMU_TABLE6_SPEC>;
-#[doc = ""]
-pub mod dmmu_table6;
-#[doc = "DMMU_TABLE7 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table7`] module"]
-pub type DMMU_TABLE7 = crate::Reg<dmmu_table7::DMMU_TABLE7_SPEC>;
-#[doc = ""]
-pub mod dmmu_table7;
-#[doc = "DMMU_TABLE8 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table8`] module"]
-pub type DMMU_TABLE8 = crate::Reg<dmmu_table8::DMMU_TABLE8_SPEC>;
-#[doc = ""]
-pub mod dmmu_table8;
-#[doc = "DMMU_TABLE9 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table9`] module"]
-pub type DMMU_TABLE9 = crate::Reg<dmmu_table9::DMMU_TABLE9_SPEC>;
-#[doc = ""]
-pub mod dmmu_table9;
-#[doc = "DMMU_TABLE10 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table10`] module"]
-pub type DMMU_TABLE10 = crate::Reg<dmmu_table10::DMMU_TABLE10_SPEC>;
-#[doc = ""]
-pub mod dmmu_table10;
-#[doc = "DMMU_TABLE11 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table11`] module"]
-pub type DMMU_TABLE11 = crate::Reg<dmmu_table11::DMMU_TABLE11_SPEC>;
-#[doc = ""]
-pub mod dmmu_table11;
-#[doc = "DMMU_TABLE12 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table12`] module"]
-pub type DMMU_TABLE12 = crate::Reg<dmmu_table12::DMMU_TABLE12_SPEC>;
-#[doc = ""]
-pub mod dmmu_table12;
-#[doc = "DMMU_TABLE13 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table13`] module"]
-pub type DMMU_TABLE13 = crate::Reg<dmmu_table13::DMMU_TABLE13_SPEC>;
-#[doc = ""]
-pub mod dmmu_table13;
-#[doc = "DMMU_TABLE14 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table14`] module"]
-pub type DMMU_TABLE14 = crate::Reg<dmmu_table14::DMMU_TABLE14_SPEC>;
-#[doc = ""]
-pub mod dmmu_table14;
-#[doc = "DMMU_TABLE15 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`dmmu_table15::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dmmu_table15::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dmmu_table15`] module"]
-pub type DMMU_TABLE15 = crate::Reg<dmmu_table15::DMMU_TABLE15_SPEC>;
-#[doc = ""]
-pub mod dmmu_table15;
+pub mod dmmu_table;
 #[doc = "PRO_INTRUSION_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_intrusion_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_intrusion_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_intrusion_ctrl`] module"]
 pub type PRO_INTRUSION_CTRL = crate::Reg<pro_intrusion_ctrl::PRO_INTRUSION_CTRL_SPEC>;
 #[doc = ""]
