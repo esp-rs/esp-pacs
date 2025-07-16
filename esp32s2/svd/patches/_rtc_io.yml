@@ -10,6 +10,12 @@ RTC_IO:
       GPIO_PIN_PAD_DRIVER:
         name: PAD_DRIVER
 
+  _derive:
+    XTAL_32?_PAD:
+      _from: RTC_PAD19
+    RTC_PAD2?:
+      _from: RTC_PAD19
+
   ENABLE_W1TC:
     _modify:
       REG_RTCIO_REG_GPIO_ENABLE_W1TC:

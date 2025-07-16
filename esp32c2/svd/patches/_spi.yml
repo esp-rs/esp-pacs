@@ -9,7 +9,7 @@ SPI2:
 
   "*":
     _strip: "SPI_"
-  
+
   _modify:
     _interrupts:
       SPI_INTR_2:

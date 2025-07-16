@@ -4,7 +4,13 @@ RTC_IO:
   "*":
     _strip: "RTC_IO_"
 
+  _derive:
+    TOUCH_PAD[1-7]:
+      _from: TOUCH_PAD0
+    TOUCH_PAD9:
+      _from: TOUCH_PAD8
+
   _array:
-    "PIN*": {}
-    
+    PIN*: {}
+
   _include: ../../../common_patches/rtc_io.yaml

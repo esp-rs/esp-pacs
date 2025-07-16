@@ -1,8 +1,4 @@
 ASSIST_DEBUG:
-  _modify:
-    C0RE_0_MONTR_ENA:
-      name: CORE_0_MONTR_ENA
-
   _include: ../../../common_patches/assist_debug.yaml
 
   _cluster:

@@ -6,6 +6,15 @@ RTC_IO:
   _array:
     RTC_GPIO_PIN*:
       name: PIN%s
+    PAD_DAC*:
+      name: PAD_DAC%s
+      description: "DAC%s configuration register"
+
+  _derive:
+    XTAL_32?_PAD:
+      _from: RTC_PAD19
+    RTC_PAD2?:
+      _from: RTC_PAD19
 
   ENABLE_W1TC:
     _modify:

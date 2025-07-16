@@ -3,6 +3,7 @@ _svd: ../esp32s2.base.svd
 _include:
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
+  - "_date.yml"
   - "_ds.yml"
   - "_gpio.yml"
   - "_hmac.yml"
@@ -2644,6 +2645,20 @@ LEDC:
 
 SENS:
   _include: ../../../common_patches/sens.yaml
+  _modify:
+    SAR_TOUCH_STATUS0:
+      name: SAR_TOUCH_SCAN_STATUS
+    SAR_TOUCH_STATUS16:
+      name: SAR_TOUCH_APPR_STATUS
+
+  _array:
+    SAR_TOUCH_STATUS*:
+      description: Touch channel status
+      _strip: "TOUCH_PAD1_"
+    SAR_TOUCH_THRES*:
+      _modify:
+        TOUCH_OUT_TH1:
+          name: THRESHOLD
 
 SPI2:
   _delete:

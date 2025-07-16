@@ -22,3 +22,11 @@ SYSCON:
       - DPORT_WIFI_CLK_WIFI_BT_COMMON
       - DPORT_WIFI_RST
       - DPORT_WIFI_CLK_BT_EN
+
+  _derive:
+    FLASH_ACE[1-3]_ADDR:
+      _from: FLASH_ACE0_ADDR
+    FLASH_ACE[1-3]_ATTR:
+      _from: FLASH_ACE0_ATTR
+    FLASH_ACE[1-3]_SIZE:
+      _from: FLASH_ACE0_SIZE

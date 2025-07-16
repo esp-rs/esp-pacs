@@ -5,6 +5,7 @@ _include:
   - _aes.yml
   - _apb_saradc.yml
   - _assist_debug.yml
+  - _date.yml
   - _dma.yml
   - _ds.yml
   - _gpio.yml
@@ -26,6 +27,7 @@ _include:
   - _system.yml
   - _timg.yml
   - _uart.yml
+  - _wcl.yml
 
 _add:
   NRX:
@@ -482,6 +484,30 @@ APB_CTRL:
         description: "Set this bit to reset MAC module. Clear the bit to release MAC module."
         bitOffset: 2
         bitWidth: 1
+  _derive:
+    FLASH_ACE[1-3]_ADDR:
+      _from: FLASH_ACE0_ADDR
+    FLASH_ACE[1-3]_ATTR:
+      _from: FLASH_ACE0_ATTR
+    FLASH_ACE[1-3]_SIZE:
+      _from: FLASH_ACE0_SIZE
 
 RNG:
   _include: ../../../common_patches/rng.yaml
+
+SYSTEM:
+  _include: ../../../common_patches/sw_interrupts.yaml
+
+SENSITIVE:
+  _cluster:
+    DMA_APBPERI%s:
+      DMA_APBPERI*_PMS_CONSTRAIN_0:
+        name: PMS_CONSTRAIN_0
+      DMA_APBPERI*_PMS_CONSTRAIN_1:
+        name: PMS_CONSTRAIN_1
+
+PERI_BACKUP:
+  _array:
+    REG_MAP?:
+      name: REG_MAP%s
+      _strip_end: "0"
