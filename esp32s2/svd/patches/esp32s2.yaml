@@ -3,6 +3,7 @@ _svd: ../esp32s2.base.svd
 _include:
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
+  - "_date.yml"
   - "_ds.yml"
   - "_gpio.yml"
   - "_hmac.yml"

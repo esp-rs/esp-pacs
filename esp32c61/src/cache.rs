@@ -2671,7 +2671,5 @@ pub mod cache_redundancy_sig3;
 pub type CACHE_REDUNDANCY_SIG4 = crate::Reg<cache_redundancy_sig4::CACHE_REDUNDANCY_SIG4_SPEC>;
 #[doc = "Cache redundancy signal 0 register"]
 pub mod cache_redundancy_sig4;
-#[doc = "CACHE_DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`cache_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cache_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cache_date`] module"]
-pub type CACHE_DATE = crate::Reg<cache_date::CACHE_DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod cache_date;
+pub use crate::dma::date as cache_date;
+pub use crate::dma::DATE as CACHE_DATE;

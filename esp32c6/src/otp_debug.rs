@@ -1321,7 +1321,5 @@ pub mod clk;
 pub type APB2OTP_EN = crate::Reg<apb2otp_en::APB2OTP_EN_SPEC>;
 #[doc = "Otp_debuger apb2otp enable configuration register."]
 pub mod apb2otp_en;
-#[doc = "DATE (rw) register accessor: eFuse version register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "eFuse version register."]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

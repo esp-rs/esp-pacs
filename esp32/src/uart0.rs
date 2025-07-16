@@ -298,10 +298,8 @@ pub mod pospulse;
 pub type NEGPULSE = crate::Reg<negpulse::NEGPULSE_SPEC>;
 #[doc = ""]
 pub mod negpulse;
-#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = ""]
-pub mod date;
+pub use crate::apb_ctrl::date;
+pub use crate::apb_ctrl::DATE;
 #[doc = "ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@id`] module"]
 pub type ID = crate::Reg<id::ID_SPEC>;
 #[doc = ""]

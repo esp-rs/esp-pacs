@@ -557,7 +557,5 @@ pub mod lcd_d_mode;
 pub type LCD_D_NUM = crate::Reg<lcd_d_num::LCD_D_NUM_SPEC>;
 #[doc = "LCD delay mode"]
 pub mod lcd_d_num;
-#[doc = "REG_DATE (rw) register accessor: SPI version control\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_date`] module"]
-pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
-#[doc = "SPI version control"]
-pub mod reg_date;
+pub use crate::aes::date as reg_date;
+pub use crate::aes::DATE as REG_DATE;

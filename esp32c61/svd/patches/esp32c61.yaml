@@ -4,6 +4,7 @@ _include:
   - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
+  - _date.yml
 
 TIMG0:
   "*":

@@ -573,7 +573,7 @@ impl RegisterBlock {
     pub const fn debug_sel_cfg1(&self) -> &DEBUG_SEL_CFG1 {
         &self.debug_sel_cfg1
     }
-    #[doc = "0x18c - "]
+    #[doc = "0x18c - Version control register"]
     #[inline(always)]
     pub const fn mac_date(&self) -> &MAC_DATE {
         &self.mac_date
@@ -956,7 +956,5 @@ pub mod debug_sel_cfg0;
 pub type DEBUG_SEL_CFG1 = crate::Reg<debug_sel_cfg1::DEBUG_SEL_CFG1_SPEC>;
 #[doc = ""]
 pub mod debug_sel_cfg1;
-#[doc = "MAC_DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mac_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_date`] module"]
-pub type MAC_DATE = crate::Reg<mac_date::MAC_DATE_SPEC>;
-#[doc = ""]
-pub mod mac_date;
+pub use crate::dma::date as mac_date;
+pub use crate::dma::DATE as MAC_DATE;

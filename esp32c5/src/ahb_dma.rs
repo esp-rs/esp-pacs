@@ -1157,10 +1157,8 @@ pub mod ahb_test;
 pub type MISC_CONF = crate::Reg<misc_conf::MISC_CONF_SPEC>;
 #[doc = "Miscellaneous register"]
 pub mod misc_conf;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
 #[doc = "IN_CONF0_CH (rw) register accessor: Configuration register 0 of RX channel %s\n\nYou can [`read`](crate::Reg::read) this register and get [`in_conf0_ch::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`in_conf0_ch::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@in_conf0_ch`] module"]
 pub type IN_CONF0_CH = crate::Reg<in_conf0_ch::IN_CONF0_CH_SPEC>;
 #[doc = "Configuration register 0 of RX channel %s"]

@@ -215,7 +215,5 @@ pub mod sdio_slave_eco_conf;
 pub type SDIO_SLAVE_LDO_CONF = crate::Reg<sdio_slave_ldo_conf::SDIO_SLAVE_LDO_CONF_SPEC>;
 #[doc = "sdio slave ldo control register"]
 pub mod sdio_slave_ldo_conf;
-#[doc = "SDIO_DATE (rw) register accessor: ******* Description ***********\n\nYou can [`read`](crate::Reg::read) this register and get [`sdio_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sdio_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sdio_date`] module"]
-pub type SDIO_DATE = crate::Reg<sdio_date::SDIO_DATE_SPEC>;
-#[doc = "******* Description ***********"]
-pub mod sdio_date;
+pub use crate::aes::date as sdio_date;
+pub use crate::aes::DATE as SDIO_DATE;

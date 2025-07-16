@@ -468,7 +468,7 @@ impl RegisterBlock {
     pub const fn ulp_cp_timer_1(&self) -> &ULP_CP_TIMER_1 {
         &self.ulp_cp_timer_1
     }
-    #[doc = "0x138 - "]
+    #[doc = "0x138 - Version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
@@ -768,7 +768,5 @@ pub mod slp_wakeup_cause;
 pub type ULP_CP_TIMER_1 = crate::Reg<ulp_cp_timer_1::ULP_CP_TIMER_1_SPEC>;
 #[doc = "Configure sleep cycle of the timer"]
 pub mod ulp_cp_timer_1;
-#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = ""]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

@@ -387,7 +387,5 @@ pub mod peri_backup_int_ena;
 pub type PERI_BACKUP_INT_CLR = crate::Reg<peri_backup_int_clr::PERI_BACKUP_INT_CLR_SPEC>;
 #[doc = "APB_CTRL_PERI_BACKUP_INT_CLR_REG"]
 pub mod peri_backup_int_clr;
-#[doc = "DATE (rw) register accessor: APB_CTRL_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "APB_CTRL_DATE_REG"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

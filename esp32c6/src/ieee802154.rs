@@ -561,7 +561,7 @@ impl RegisterBlock {
     pub const fn error_cnt_clear(&self) -> &ERROR_CNT_CLEAR {
         &self.error_cnt_clear
     }
-    #[doc = "0x184 - "]
+    #[doc = "0x184 - AES version control register"]
     #[inline(always)]
     pub const fn mac_date(&self) -> &MAC_DATE {
         &self.mac_date
@@ -936,7 +936,5 @@ pub mod cca_busy_cnt;
 pub type ERROR_CNT_CLEAR = crate::Reg<error_cnt_clear::ERROR_CNT_CLEAR_SPEC>;
 #[doc = ""]
 pub mod error_cnt_clear;
-#[doc = "MAC_DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mac_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_date`] module"]
-pub type MAC_DATE = crate::Reg<mac_date::MAC_DATE_SPEC>;
-#[doc = ""]
-pub mod mac_date;
+pub use crate::aes::date as mac_date;
+pub use crate::aes::DATE as MAC_DATE;

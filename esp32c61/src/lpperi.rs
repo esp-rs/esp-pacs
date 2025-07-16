@@ -113,7 +113,5 @@ pub mod rng_cfg;
 pub type RNG_DATA_SYNC = crate::Reg<rng_data_sync::RNG_DATA_SYNC_SPEC>;
 #[doc = "need_des"]
 pub mod rng_data_sync;
-#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "need_des"]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;

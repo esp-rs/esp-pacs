@@ -1,0 +1,15 @@
+# DATE registers are peripheral version registers. While they tend to have fields with different
+# widths, they are generally not important enough to warrant a separate definition.
+AES:
+  _modify:
+    DATE:
+      access: read-only # technically RW but that would be crazy to do
+  DATE:
+    _delete: DATE
+
+"APB_SARADC,[^A]*": # everything but AES
+  _derive:
+    "?~*_DATE":
+      _from: AES.DATE
+    "?~DATE":
+      _from: AES.DATE

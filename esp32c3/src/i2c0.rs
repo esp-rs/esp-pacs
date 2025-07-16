@@ -293,10 +293,8 @@ pub mod scl_sp_conf;
 pub type SCL_STRETCH_CONF = crate::Reg<scl_stretch_conf::SCL_STRETCH_CONF_SPEC>;
 #[doc = "I2C_SCL_STRETCH_CONF_REG"]
 pub mod scl_stretch_conf;
-#[doc = "DATE (rw) register accessor: I2C_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "I2C_DATE_REG"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
 #[doc = "TXFIFO_START_ADDR (r) register accessor: I2C_TXFIFO_START_ADDR_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`txfifo_start_addr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@txfifo_start_addr`] module"]
 pub type TXFIFO_START_ADDR = crate::Reg<txfifo_start_addr::TXFIFO_START_ADDR_SPEC>;
 #[doc = "I2C_TXFIFO_START_ADDR_REG"]

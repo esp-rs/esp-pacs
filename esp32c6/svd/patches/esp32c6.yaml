@@ -8,6 +8,7 @@ _include:
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_ecc.yml"
@@ -73,7 +74,7 @@ HP_APM,LP_APM,LP_APM0:
   _include: ../../../common_patches/hp_apm.yaml
 
 LP_AON:
-  # Make sure the STORE registers are the same type  
+  # Make sure the STORE registers are the same type
   STORE0:
     _modify:
       "LP_AON_STORE0":

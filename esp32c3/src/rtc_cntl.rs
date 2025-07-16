@@ -738,7 +738,5 @@ pub mod dbg_sar_sel;
 pub type PG_CTRL = crate::Reg<pg_ctrl::PG_CTRL_SPEC>;
 #[doc = "rtc configure register"]
 pub mod pg_ctrl;
-#[doc = "DATE (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "rtc configure register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

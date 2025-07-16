@@ -1,0 +1,15 @@
+# DATE registers are peripheral version registers. While they tend to have fields with different
+# widths, they are generally not important enough to warrant a separate definition.
+DMA:
+  _modify:
+    DATE:
+      access: read-only # technically RW but that would be crazy to do
+  DATE:
+    _delete: DATE
+
+"DS,[^D]*": # everything but DMA
+  _derive:
+    "?~*_DATE":
+      _from: DMA.DATE
+    "?~DATE":
+      _from: DMA.DATE

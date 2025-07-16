@@ -678,7 +678,5 @@ pub mod cntl_sensor_ctrl;
 pub type CNTL_DBG_SAR_SEL = crate::Reg<cntl_dbg_sar_sel::CNTL_DBG_SAR_SEL_SPEC>;
 #[doc = "register description"]
 pub mod cntl_dbg_sar_sel;
-#[doc = "CNTL_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cntl_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cntl_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cntl_date`] module"]
-pub type CNTL_DATE = crate::Reg<cntl_date::CNTL_DATE_SPEC>;
-#[doc = "register description"]
-pub mod cntl_date;
+pub use crate::apb_ctrl::date as cntl_date;
+pub use crate::apb_ctrl::DATE as CNTL_DATE;

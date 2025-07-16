@@ -5,6 +5,7 @@ _include:
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
   - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_ecc.yml"

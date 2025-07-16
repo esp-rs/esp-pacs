@@ -3,6 +3,7 @@ _svd: ../esp32.base.svd
 _include:
   - ../../../common_patches/twai.yaml
   - "_apb_ctrl.yml"
+  - "_date.yml"
   - "_emac.yml"
   - "_gpio_sd.yml"
   - "_gpio.yml"

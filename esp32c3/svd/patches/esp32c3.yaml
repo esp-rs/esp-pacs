@@ -5,6 +5,7 @@ _include:
   - "_aes.yml"
   - "_apb_ctrl.yml"
   - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_efuse.yml"

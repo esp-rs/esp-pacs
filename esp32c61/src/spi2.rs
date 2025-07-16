@@ -384,7 +384,5 @@ pub mod spi_slave1;
 pub type SPI_CLK_GATE = crate::Reg<spi_clk_gate::SPI_CLK_GATE_SPEC>;
 #[doc = "SPI module clock and register clock control"]
 pub mod spi_clk_gate;
-#[doc = "SPI_DATE (rw) register accessor: Version control\n\nYou can [`read`](crate::Reg::read) this register and get [`spi_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@spi_date`] module"]
-pub type SPI_DATE = crate::Reg<spi_date::SPI_DATE_SPEC>;
-#[doc = "Version control"]
-pub mod spi_date;
+pub use crate::dma::date as spi_date;
+pub use crate::dma::DATE as SPI_DATE;

@@ -264,7 +264,5 @@ pub mod sar_i2c_io;
 pub type RTC_IO_TOUCH_CTRL = crate::Reg<rtc_io_touch_ctrl::RTC_IO_TOUCH_CTRL_SPEC>;
 #[doc = "Touch control register"]
 pub mod rtc_io_touch_ctrl;
-#[doc = "RTC_IO_DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`rtc_io_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rtc_io_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rtc_io_date`] module"]
-pub type RTC_IO_DATE = crate::Reg<rtc_io_date::RTC_IO_DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod rtc_io_date;
+pub use crate::aes::date as rtc_io_date;
+pub use crate::aes::DATE as RTC_IO_DATE;

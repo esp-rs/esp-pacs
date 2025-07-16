@@ -259,7 +259,7 @@ pub mod int_clr;
 pub type INT_ENA = crate::Reg<int_ena::INT_ENA_SPEC>;
 #[doc = "DMA-AES interrupt enable register"]
 pub mod int_ena;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (r) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
 #[doc = "Version control register"]
 pub mod date;

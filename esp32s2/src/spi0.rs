@@ -428,7 +428,5 @@ pub mod spi_smem_ddr;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SPI Memory Clock Gate Register"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: SPI Memory Date Register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "SPI Memory Date Register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

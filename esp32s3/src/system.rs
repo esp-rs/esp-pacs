@@ -354,6 +354,8 @@ pub use COMB_PVT_LVT_CONF as COMB_PVT_HVT_CONF;
 pub type COMB_PVT_ERR_LVT_SITE0 = crate::Reg<comb_pvt_err_lvt_site0::COMB_PVT_ERR_LVT_SITE0_SPEC>;
 #[doc = "******* Description ***********"]
 pub mod comb_pvt_err_lvt_site0;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_nvt_site0;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_hvt_site0;
 pub use comb_pvt_err_lvt_site0 as comb_pvt_err_lvt_site1;
@@ -376,7 +378,3 @@ pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE2;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_LVT_SITE3;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_NVT_SITE3;
 pub use COMB_PVT_ERR_LVT_SITE0 as COMB_PVT_ERR_HVT_SITE3;
-#[doc = "DATE (rw) register accessor: version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "version register"]
-pub mod date;

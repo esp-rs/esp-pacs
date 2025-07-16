@@ -1930,7 +1930,5 @@ pub mod func_out_sel_cfg;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "GPIO clock gating register"]
 pub mod clock_gate;
-#[doc = "REG_DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@reg_date`] module"]
-pub type REG_DATE = crate::Reg<reg_date::REG_DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod reg_date;
+pub use crate::aes::date as reg_date;
+pub use crate::aes::DATE as REG_DATE;

@@ -185,10 +185,8 @@ pub mod int_clr;
 pub type RTCCALICFG2 = crate::Reg<rtccalicfg2::RTCCALICFG2_SPEC>;
 #[doc = "RTC frequency calculation configuration register 2"]
 pub mod rtccalicfg2;
-#[doc = "NTIMERS_DATE (rw) register accessor: Timer version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`ntimers_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ntimers_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ntimers_date`] module"]
-pub type NTIMERS_DATE = crate::Reg<ntimers_date::NTIMERS_DATE_SPEC>;
-#[doc = "Timer version control register"]
-pub mod ntimers_date;
+pub use crate::dma::date as ntimers_date;
+pub use crate::dma::DATE as NTIMERS_DATE;
 #[doc = "REGCLK (rw) register accessor: Timer group clock gate register\n\nYou can [`read`](crate::Reg::read) this register and get [`regclk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`regclk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@regclk`] module"]
 pub type REGCLK = crate::Reg<regclk::REGCLK_SPEC>;
 #[doc = "Timer group clock gate register"]
