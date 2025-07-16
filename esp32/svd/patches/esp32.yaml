@@ -302,5 +302,9 @@ DPORT:
     DMMU_TABLE*: {}
     IMMU_TABLE*: {}
     SHROM_MPU_TABLE*: {}
+    PRO_CACHE_LOCK_?_ADDR:
+      name: PRO_CACHE_LOCK_ADDR%s
+    APP_CACHE_LOCK_?_ADDR:
+      name: APP_CACHE_LOCK_ADDR%s
 
   _include: ../../../common_patches/sw_interrupts.yaml

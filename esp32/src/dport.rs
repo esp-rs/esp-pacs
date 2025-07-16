@@ -20,16 +20,10 @@ pub struct RegisterBlock {
     cpu_per_conf: CPU_PER_CONF,
     pro_cache_ctrl: PRO_CACHE_CTRL,
     pro_cache_ctrl1: PRO_CACHE_CTRL1,
-    pro_cache_lock_0_addr: PRO_CACHE_LOCK_0_ADDR,
-    pro_cache_lock_1_addr: PRO_CACHE_LOCK_1_ADDR,
-    pro_cache_lock_2_addr: PRO_CACHE_LOCK_2_ADDR,
-    pro_cache_lock_3_addr: PRO_CACHE_LOCK_3_ADDR,
+    pro_cache_lock_addr: [PRO_CACHE_LOCK_ADDR; 4],
     app_cache_ctrl: APP_CACHE_CTRL,
     app_cache_ctrl1: APP_CACHE_CTRL1,
-    app_cache_lock_0_addr: APP_CACHE_LOCK_0_ADDR,
-    app_cache_lock_1_addr: APP_CACHE_LOCK_1_ADDR,
-    app_cache_lock_2_addr: APP_CACHE_LOCK_2_ADDR,
-    app_cache_lock_3_addr: APP_CACHE_LOCK_3_ADDR,
+    app_cache_lock_addr: [APP_CACHE_LOCK_ADDR; 4],
     tracemem_mux_mode: TRACEMEM_MUX_MODE,
     pro_tracemem_ena: PRO_TRACEMEM_ENA,
     app_tracemem_ena: APP_TRACEMEM_ENA,
@@ -173,7 +167,7 @@ pub struct RegisterBlock {
     pro_vecbase_set: PRO_VECBASE_SET,
     app_vecbase_ctrl: APP_VECBASE_CTRL,
     app_vecbase_set: APP_VECBASE_SET,
-    _reserved171: [u8; 0x0a40],
+    _reserved165: [u8; 0x0a40],
     date: DATE,
 }
 impl RegisterBlock {
@@ -267,25 +261,16 @@ impl RegisterBlock {
     pub const fn pro_cache_ctrl1(&self) -> &PRO_CACHE_CTRL1 {
         &self.pro_cache_ctrl1
     }
-    #[doc = "0x48 - "]
+    #[doc = "0x48..0x58 - "]
     #[inline(always)]
-    pub const fn pro_cache_lock_0_addr(&self) -> &PRO_CACHE_LOCK_0_ADDR {
-        &self.pro_cache_lock_0_addr
+    pub const fn pro_cache_lock_addr(&self, n: usize) -> &PRO_CACHE_LOCK_ADDR {
+        &self.pro_cache_lock_addr[n]
     }
-    #[doc = "0x4c - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x48..0x58 - "]
     #[inline(always)]
-    pub const fn pro_cache_lock_1_addr(&self) -> &PRO_CACHE_LOCK_1_ADDR {
-        &self.pro_cache_lock_1_addr
-    }
-    #[doc = "0x50 - "]
-    #[inline(always)]
-    pub const fn pro_cache_lock_2_addr(&self) -> &PRO_CACHE_LOCK_2_ADDR {
-        &self.pro_cache_lock_2_addr
-    }
-    #[doc = "0x54 - "]
-    #[inline(always)]
-    pub const fn pro_cache_lock_3_addr(&self) -> &PRO_CACHE_LOCK_3_ADDR {
-        &self.pro_cache_lock_3_addr
+    pub fn pro_cache_lock_addr_iter(&self) -> impl Iterator<Item = &PRO_CACHE_LOCK_ADDR> {
+        self.pro_cache_lock_addr.iter()
     }
     #[doc = "0x58 - "]
     #[inline(always)]
@@ -297,25 +282,16 @@ impl RegisterBlock {
     pub const fn app_cache_ctrl1(&self) -> &APP_CACHE_CTRL1 {
         &self.app_cache_ctrl1
     }
-    #[doc = "0x60 - "]
+    #[doc = "0x60..0x70 - "]
     #[inline(always)]
-    pub const fn app_cache_lock_0_addr(&self) -> &APP_CACHE_LOCK_0_ADDR {
-        &self.app_cache_lock_0_addr
+    pub const fn app_cache_lock_addr(&self, n: usize) -> &APP_CACHE_LOCK_ADDR {
+        &self.app_cache_lock_addr[n]
     }
-    #[doc = "0x64 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x60..0x70 - "]
     #[inline(always)]
-    pub const fn app_cache_lock_1_addr(&self) -> &APP_CACHE_LOCK_1_ADDR {
-        &self.app_cache_lock_1_addr
-    }
-    #[doc = "0x68 - "]
-    #[inline(always)]
-    pub const fn app_cache_lock_2_addr(&self) -> &APP_CACHE_LOCK_2_ADDR {
-        &self.app_cache_lock_2_addr
-    }
-    #[doc = "0x6c - "]
-    #[inline(always)]
-    pub const fn app_cache_lock_3_addr(&self) -> &APP_CACHE_LOCK_3_ADDR {
-        &self.app_cache_lock_3_addr
+    pub fn app_cache_lock_addr_iter(&self) -> impl Iterator<Item = &APP_CACHE_LOCK_ADDR> {
+        self.app_cache_lock_addr.iter()
     }
     #[doc = "0x70 - "]
     #[inline(always)]
@@ -1158,22 +1134,10 @@ pub mod pro_cache_ctrl;
 pub type PRO_CACHE_CTRL1 = crate::Reg<pro_cache_ctrl1::PRO_CACHE_CTRL1_SPEC>;
 #[doc = ""]
 pub mod pro_cache_ctrl1;
-#[doc = "PRO_CACHE_LOCK_0_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_lock_0_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_cache_lock_0_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_cache_lock_0_addr`] module"]
-pub type PRO_CACHE_LOCK_0_ADDR = crate::Reg<pro_cache_lock_0_addr::PRO_CACHE_LOCK_0_ADDR_SPEC>;
+#[doc = "PRO_CACHE_LOCK_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_lock_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_cache_lock_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_cache_lock_addr`] module"]
+pub type PRO_CACHE_LOCK_ADDR = crate::Reg<pro_cache_lock_addr::PRO_CACHE_LOCK_ADDR_SPEC>;
 #[doc = ""]
-pub mod pro_cache_lock_0_addr;
-#[doc = "PRO_CACHE_LOCK_1_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_lock_1_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_cache_lock_1_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_cache_lock_1_addr`] module"]
-pub type PRO_CACHE_LOCK_1_ADDR = crate::Reg<pro_cache_lock_1_addr::PRO_CACHE_LOCK_1_ADDR_SPEC>;
-#[doc = ""]
-pub mod pro_cache_lock_1_addr;
-#[doc = "PRO_CACHE_LOCK_2_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_lock_2_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_cache_lock_2_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_cache_lock_2_addr`] module"]
-pub type PRO_CACHE_LOCK_2_ADDR = crate::Reg<pro_cache_lock_2_addr::PRO_CACHE_LOCK_2_ADDR_SPEC>;
-#[doc = ""]
-pub mod pro_cache_lock_2_addr;
-#[doc = "PRO_CACHE_LOCK_3_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`pro_cache_lock_3_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_cache_lock_3_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_cache_lock_3_addr`] module"]
-pub type PRO_CACHE_LOCK_3_ADDR = crate::Reg<pro_cache_lock_3_addr::PRO_CACHE_LOCK_3_ADDR_SPEC>;
-#[doc = ""]
-pub mod pro_cache_lock_3_addr;
+pub mod pro_cache_lock_addr;
 #[doc = "APP_CACHE_CTRL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_ctrl`] module"]
 pub type APP_CACHE_CTRL = crate::Reg<app_cache_ctrl::APP_CACHE_CTRL_SPEC>;
 #[doc = ""]
@@ -1182,22 +1146,10 @@ pub mod app_cache_ctrl;
 pub type APP_CACHE_CTRL1 = crate::Reg<app_cache_ctrl1::APP_CACHE_CTRL1_SPEC>;
 #[doc = ""]
 pub mod app_cache_ctrl1;
-#[doc = "APP_CACHE_LOCK_0_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_lock_0_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_lock_0_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_lock_0_addr`] module"]
-pub type APP_CACHE_LOCK_0_ADDR = crate::Reg<app_cache_lock_0_addr::APP_CACHE_LOCK_0_ADDR_SPEC>;
+#[doc = "APP_CACHE_LOCK_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_lock_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_lock_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_lock_addr`] module"]
+pub type APP_CACHE_LOCK_ADDR = crate::Reg<app_cache_lock_addr::APP_CACHE_LOCK_ADDR_SPEC>;
 #[doc = ""]
-pub mod app_cache_lock_0_addr;
-#[doc = "APP_CACHE_LOCK_1_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_lock_1_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_lock_1_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_lock_1_addr`] module"]
-pub type APP_CACHE_LOCK_1_ADDR = crate::Reg<app_cache_lock_1_addr::APP_CACHE_LOCK_1_ADDR_SPEC>;
-#[doc = ""]
-pub mod app_cache_lock_1_addr;
-#[doc = "APP_CACHE_LOCK_2_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_lock_2_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_lock_2_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_lock_2_addr`] module"]
-pub type APP_CACHE_LOCK_2_ADDR = crate::Reg<app_cache_lock_2_addr::APP_CACHE_LOCK_2_ADDR_SPEC>;
-#[doc = ""]
-pub mod app_cache_lock_2_addr;
-#[doc = "APP_CACHE_LOCK_3_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`app_cache_lock_3_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`app_cache_lock_3_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@app_cache_lock_3_addr`] module"]
-pub type APP_CACHE_LOCK_3_ADDR = crate::Reg<app_cache_lock_3_addr::APP_CACHE_LOCK_3_ADDR_SPEC>;
-#[doc = ""]
-pub mod app_cache_lock_3_addr;
+pub mod app_cache_lock_addr;
 #[doc = "TRACEMEM_MUX_MODE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`tracemem_mux_mode::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`tracemem_mux_mode::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@tracemem_mux_mode`] module"]
 pub type TRACEMEM_MUX_MODE = crate::Reg<tracemem_mux_mode::TRACEMEM_MUX_MODE_SPEC>;
 #[doc = ""]
