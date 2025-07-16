@@ -7,16 +7,13 @@ pub struct RegisterBlock {
     cpu_int_eip_status: CPU_INT_EIP_STATUS,
     cpu_int_pri: [CPU_INT_PRI; 32],
     cpu_int_thresh: CPU_INT_THRESH,
-    cpu_intr_from_cpu_0: CPU_INTR_FROM_CPU_0,
-    cpu_intr_from_cpu_1: CPU_INTR_FROM_CPU_1,
-    cpu_intr_from_cpu_2: CPU_INTR_FROM_CPU_2,
-    cpu_intr_from_cpu_3: CPU_INTR_FROM_CPU_3,
+    cpu_intr_from_cpu: [CPU_INTR_FROM_CPU; 4],
     date: DATE,
     clock_gate: CLOCK_GATE,
     cpu_int_clear: CPU_INT_CLEAR,
     rnd_eco: RND_ECO,
     rnd_eco_low: RND_ECO_LOW,
-    _reserved14: [u8; 0x0348],
+    _reserved11: [u8; 0x0348],
     rnd_eco_high: RND_ECO_HIGH,
 }
 impl RegisterBlock {
@@ -51,25 +48,16 @@ impl RegisterBlock {
     pub const fn cpu_int_thresh(&self) -> &CPU_INT_THRESH {
         &self.cpu_int_thresh
     }
-    #[doc = "0x90 - register description"]
+    #[doc = "0x90..0xa0 - register description"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_0(&self) -> &CPU_INTR_FROM_CPU_0 {
-        &self.cpu_intr_from_cpu_0
+    pub const fn cpu_intr_from_cpu(&self, n: usize) -> &CPU_INTR_FROM_CPU {
+        &self.cpu_intr_from_cpu[n]
     }
-    #[doc = "0x94 - register description"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x90..0xa0 - register description"]
     #[inline(always)]
-    pub const fn cpu_intr_from_cpu_1(&self) -> &CPU_INTR_FROM_CPU_1 {
-        &self.cpu_intr_from_cpu_1
-    }
-    #[doc = "0x98 - register description"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_2(&self) -> &CPU_INTR_FROM_CPU_2 {
-        &self.cpu_intr_from_cpu_2
-    }
-    #[doc = "0x9c - register description"]
-    #[inline(always)]
-    pub const fn cpu_intr_from_cpu_3(&self) -> &CPU_INTR_FROM_CPU_3 {
-        &self.cpu_intr_from_cpu_3
+    pub fn cpu_intr_from_cpu_iter(&self) -> impl Iterator<Item = &CPU_INTR_FROM_CPU> {
+        self.cpu_intr_from_cpu.iter()
     }
     #[doc = "0xa0 - register description"]
     #[inline(always)]
@@ -122,26 +110,12 @@ pub mod cpu_int_pri;
 pub type CPU_INT_THRESH = crate::Reg<cpu_int_thresh::CPU_INT_THRESH_SPEC>;
 #[doc = "register description"]
 pub mod cpu_int_thresh;
-#[doc = "CPU_INTR_FROM_CPU_0 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_0`] module"]
-pub type CPU_INTR_FROM_CPU_0 = crate::Reg<cpu_intr_from_cpu_0::CPU_INTR_FROM_CPU_0_SPEC>;
+#[doc = "CPU_INTR_FROM_CPU (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu`] module"]
+pub type CPU_INTR_FROM_CPU = crate::Reg<cpu_intr_from_cpu::CPU_INTR_FROM_CPU_SPEC>;
 #[doc = "register description"]
-pub mod cpu_intr_from_cpu_0;
-#[doc = "CPU_INTR_FROM_CPU_1 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_1`] module"]
-pub type CPU_INTR_FROM_CPU_1 = crate::Reg<cpu_intr_from_cpu_1::CPU_INTR_FROM_CPU_1_SPEC>;
-#[doc = "register description"]
-pub mod cpu_intr_from_cpu_1;
-#[doc = "CPU_INTR_FROM_CPU_2 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_2`] module"]
-pub type CPU_INTR_FROM_CPU_2 = crate::Reg<cpu_intr_from_cpu_2::CPU_INTR_FROM_CPU_2_SPEC>;
-#[doc = "register description"]
-pub mod cpu_intr_from_cpu_2;
-#[doc = "CPU_INTR_FROM_CPU_3 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cpu_intr_from_cpu_3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cpu_intr_from_cpu_3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cpu_intr_from_cpu_3`] module"]
-pub type CPU_INTR_FROM_CPU_3 = crate::Reg<cpu_intr_from_cpu_3::CPU_INTR_FROM_CPU_3_SPEC>;
-#[doc = "register description"]
-pub mod cpu_intr_from_cpu_3;
-#[doc = "DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "register description"]
-pub mod date;
+pub mod cpu_intr_from_cpu;
+pub use crate::dma::date;
+pub use crate::dma::DATE;
 #[doc = "CLOCK_GATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`clock_gate::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clock_gate::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clock_gate`] module"]
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]

@@ -282,7 +282,5 @@ pub mod ser_afifo_config;
 pub type BUS_RESET_ST = crate::Reg<bus_reset_st::BUS_RESET_ST_SPEC>;
 #[doc = "USB Bus reset status register"]
 pub mod bus_reset_st;
-#[doc = "DATE (rw) register accessor: Date register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Date register"]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;

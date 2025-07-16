@@ -49,7 +49,5 @@ pub mod gpio;
 pub type MODEM_DIAG_EN = crate::Reg<modem_diag_en::MODEM_DIAG_EN_SPEC>;
 #[doc = "GPIO MATRIX Configure Register for modem diag"]
 pub mod modem_diag_en;
-#[doc = "DATE (rw) register accessor: IO MUX Version Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "IO MUX Version Control Register"]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;

@@ -1238,10 +1238,8 @@ pub mod rd_rs_data_err0;
 pub type RD_RS_DATA_ERR1 = crate::Reg<rd_rs_data_err1::RD_RS_DATA_ERR1_SPEC>;
 #[doc = "Represents rd_rs_data_err"]
 pub mod rd_rs_data_err1;
-#[doc = "DATE (rw) register accessor: eFuse version register.\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "eFuse version register."]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;
 #[doc = "CLK (rw) register accessor: eFuse clcok configuration register.\n\nYou can [`read`](crate::Reg::read) this register and get [`clk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk`] module"]
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = "eFuse clcok configuration register."]

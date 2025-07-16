@@ -117,10 +117,8 @@ pub mod state;
 pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "HUK Generator HUK status register"]
 pub mod status;
-#[doc = "DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
 #[doc = "INFO_MEM (rw) register accessor: The memory that stores HUK info.\n\nYou can [`read`](crate::Reg::read) this register and get [`info_mem::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`info_mem::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@info_mem`] module"]
 pub type INFO_MEM = crate::Reg<info_mem::INFO_MEM_SPEC>;
 #[doc = "The memory that stores HUK info."]

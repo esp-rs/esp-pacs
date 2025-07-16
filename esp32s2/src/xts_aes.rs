@@ -98,7 +98,5 @@ pub mod destroy;
 pub type STATE = crate::Reg<state::STATE_SPEC>;
 #[doc = "Status register"]
 pub mod state;
-#[doc = "DATE (r) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

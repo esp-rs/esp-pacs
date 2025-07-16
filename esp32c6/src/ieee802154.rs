@@ -4,22 +4,7 @@
 pub struct RegisterBlock {
     command: COMMAND,
     ctrl_cfg: CTRL_CFG,
-    inf0_short_addr: INF0_SHORT_ADDR,
-    inf0_pan_id: INF0_PAN_ID,
-    inf0_extend_addr0: INF0_EXTEND_ADDR0,
-    inf0_extend_addr1: INF0_EXTEND_ADDR1,
-    inf1_short_addr: INF1_SHORT_ADDR,
-    inf1_pan_id: INF1_PAN_ID,
-    inf1_extend_addr0: INF1_EXTEND_ADDR0,
-    inf1_extend_addr1: INF1_EXTEND_ADDR1,
-    inf2_short_addr: INF2_SHORT_ADDR,
-    inf2_pan_id: INF2_PAN_ID,
-    inf2_extend_addr0: INF2_EXTEND_ADDR0,
-    inf2_extend_addr1: INF2_EXTEND_ADDR1,
-    inf3_short_addr: INF3_SHORT_ADDR,
-    inf3_pan_id: INF3_PAN_ID,
-    inf3_extend_addr0: INF3_EXTEND_ADDR0,
-    inf3_extend_addr1: INF3_EXTEND_ADDR1,
+    inf: [INF; 4],
     channel: CHANNEL,
     tx_power: TX_POWER,
     ed_scan_duration: ED_SCAN_DURATION,
@@ -44,10 +29,7 @@ pub struct RegisterBlock {
     dtm_tx_pkt_config: DTM_TX_PKT_CONFIG,
     dtm_pkt_counter: DTM_PKT_COUNTER,
     rx_length: RX_LENGTH,
-    time0_threshold: TIME0_THRESHOLD,
-    time0_value: TIME0_VALUE,
-    time1_threshold: TIME1_THRESHOLD,
-    time1_value: TIME1_VALUE,
+    time: [TIME; 2],
     clk_counter_match_val: CLK_COUNTER_MATCH_VAL,
     clk_counter: CLK_COUNTER,
     ifs_counter: IFS_COUNTER,
@@ -57,14 +39,14 @@ pub struct RegisterBlock {
     txdma_addr: TXDMA_ADDR,
     txdma_ctrl_state: TXDMA_CTRL_STATE,
     txdma_err: TXDMA_ERR,
-    _reserved55: [u8; 0x04],
+    _reserved37: [u8; 0x04],
     rxdma_addr: RXDMA_ADDR,
     rxdma_ctrl_state: RXDMA_CTRL_STATE,
     rxdma_err: RXDMA_ERR,
-    _reserved58: [u8; 0x04],
+    _reserved40: [u8; 0x04],
     dma_gck_cfg: DMA_GCK_CFG,
     dma_dummy: DMA_DUMMY,
-    _reserved60: [u8; 0x08],
+    _reserved42: [u8; 0x08],
     paon_delay: PAON_DELAY,
     txon_delay: TXON_DELAY,
     txen_stop_delay: TXEN_STOP_DELAY,
@@ -74,14 +56,11 @@ pub struct RegisterBlock {
     cont_rx_delay: CONT_RX_DELAY,
     dcdc_ctrl: DCDC_CTRL,
     debug_ctrl: DEBUG_CTRL,
-    _reserved69: [u8; 0x04],
+    _reserved51: [u8; 0x04],
     sec_ctrl: SEC_CTRL,
     sec_extend_address0: SEC_EXTEND_ADDRESS0,
     sec_extend_address1: SEC_EXTEND_ADDRESS1,
-    sec_key0: SEC_KEY0,
-    sec_key1: SEC_KEY1,
-    sec_key2: SEC_KEY2,
-    sec_key3: SEC_KEY3,
+    sec_key: [SEC_KEY; 4],
     sfd_timeout_cnt: SFD_TIMEOUT_CNT,
     crc_error_cnt: CRC_ERROR_CNT,
     ed_abort_cnt: ED_ABORT_CNT,
@@ -111,85 +90,16 @@ impl RegisterBlock {
     pub const fn ctrl_cfg(&self) -> &CTRL_CFG {
         &self.ctrl_cfg
     }
-    #[doc = "0x08 - "]
+    #[doc = "0x08..0x48 - Cluster INF%s, containing INF?_EXTEND_ADDR0, INF?_EXTEND_ADDR1, INF?_PAN_ID, INF?_SHORT_ADDR"]
     #[inline(always)]
-    pub const fn inf0_short_addr(&self) -> &INF0_SHORT_ADDR {
-        &self.inf0_short_addr
+    pub const fn inf(&self, n: usize) -> &INF {
+        &self.inf[n]
     }
-    #[doc = "0x0c - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x08..0x48 - Cluster INF%s, containing INF?_EXTEND_ADDR0, INF?_EXTEND_ADDR1, INF?_PAN_ID, INF?_SHORT_ADDR"]
     #[inline(always)]
-    pub const fn inf0_pan_id(&self) -> &INF0_PAN_ID {
-        &self.inf0_pan_id
-    }
-    #[doc = "0x10 - "]
-    #[inline(always)]
-    pub const fn inf0_extend_addr0(&self) -> &INF0_EXTEND_ADDR0 {
-        &self.inf0_extend_addr0
-    }
-    #[doc = "0x14 - "]
-    #[inline(always)]
-    pub const fn inf0_extend_addr1(&self) -> &INF0_EXTEND_ADDR1 {
-        &self.inf0_extend_addr1
-    }
-    #[doc = "0x18 - "]
-    #[inline(always)]
-    pub const fn inf1_short_addr(&self) -> &INF1_SHORT_ADDR {
-        &self.inf1_short_addr
-    }
-    #[doc = "0x1c - "]
-    #[inline(always)]
-    pub const fn inf1_pan_id(&self) -> &INF1_PAN_ID {
-        &self.inf1_pan_id
-    }
-    #[doc = "0x20 - "]
-    #[inline(always)]
-    pub const fn inf1_extend_addr0(&self) -> &INF1_EXTEND_ADDR0 {
-        &self.inf1_extend_addr0
-    }
-    #[doc = "0x24 - "]
-    #[inline(always)]
-    pub const fn inf1_extend_addr1(&self) -> &INF1_EXTEND_ADDR1 {
-        &self.inf1_extend_addr1
-    }
-    #[doc = "0x28 - "]
-    #[inline(always)]
-    pub const fn inf2_short_addr(&self) -> &INF2_SHORT_ADDR {
-        &self.inf2_short_addr
-    }
-    #[doc = "0x2c - "]
-    #[inline(always)]
-    pub const fn inf2_pan_id(&self) -> &INF2_PAN_ID {
-        &self.inf2_pan_id
-    }
-    #[doc = "0x30 - "]
-    #[inline(always)]
-    pub const fn inf2_extend_addr0(&self) -> &INF2_EXTEND_ADDR0 {
-        &self.inf2_extend_addr0
-    }
-    #[doc = "0x34 - "]
-    #[inline(always)]
-    pub const fn inf2_extend_addr1(&self) -> &INF2_EXTEND_ADDR1 {
-        &self.inf2_extend_addr1
-    }
-    #[doc = "0x38 - "]
-    #[inline(always)]
-    pub const fn inf3_short_addr(&self) -> &INF3_SHORT_ADDR {
-        &self.inf3_short_addr
-    }
-    #[doc = "0x3c - "]
-    #[inline(always)]
-    pub const fn inf3_pan_id(&self) -> &INF3_PAN_ID {
-        &self.inf3_pan_id
-    }
-    #[doc = "0x40 - "]
-    #[inline(always)]
-    pub const fn inf3_extend_addr0(&self) -> &INF3_EXTEND_ADDR0 {
-        &self.inf3_extend_addr0
-    }
-    #[doc = "0x44 - "]
-    #[inline(always)]
-    pub const fn inf3_extend_addr1(&self) -> &INF3_EXTEND_ADDR1 {
-        &self.inf3_extend_addr1
+    pub fn inf_iter(&self) -> impl Iterator<Item = &INF> {
+        self.inf.iter()
     }
     #[doc = "0x48 - "]
     #[inline(always)]
@@ -311,25 +221,16 @@ impl RegisterBlock {
     pub const fn rx_length(&self) -> &RX_LENGTH {
         &self.rx_length
     }
-    #[doc = "0xa8 - "]
+    #[doc = "0xa8..0xb8 - Cluster TIME%s, containing TIME?_THRESHOLD, TIME?_VALUE"]
     #[inline(always)]
-    pub const fn time0_threshold(&self) -> &TIME0_THRESHOLD {
-        &self.time0_threshold
+    pub const fn time(&self, n: usize) -> &TIME {
+        &self.time[n]
     }
-    #[doc = "0xac - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa8..0xb8 - Cluster TIME%s, containing TIME?_THRESHOLD, TIME?_VALUE"]
     #[inline(always)]
-    pub const fn time0_value(&self) -> &TIME0_VALUE {
-        &self.time0_value
-    }
-    #[doc = "0xb0 - "]
-    #[inline(always)]
-    pub const fn time1_threshold(&self) -> &TIME1_THRESHOLD {
-        &self.time1_threshold
-    }
-    #[doc = "0xb4 - "]
-    #[inline(always)]
-    pub const fn time1_value(&self) -> &TIME1_VALUE {
-        &self.time1_value
+    pub fn time_iter(&self) -> impl Iterator<Item = &TIME> {
+        self.time.iter()
     }
     #[doc = "0xb8 - "]
     #[inline(always)]
@@ -461,25 +362,16 @@ impl RegisterBlock {
     pub const fn sec_extend_address1(&self) -> &SEC_EXTEND_ADDRESS1 {
         &self.sec_extend_address1
     }
-    #[doc = "0x134 - "]
+    #[doc = "0x134..0x144 - "]
     #[inline(always)]
-    pub const fn sec_key0(&self) -> &SEC_KEY0 {
-        &self.sec_key0
+    pub const fn sec_key(&self, n: usize) -> &SEC_KEY {
+        &self.sec_key[n]
     }
-    #[doc = "0x138 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x134..0x144 - "]
     #[inline(always)]
-    pub const fn sec_key1(&self) -> &SEC_KEY1 {
-        &self.sec_key1
-    }
-    #[doc = "0x13c - "]
-    #[inline(always)]
-    pub const fn sec_key2(&self) -> &SEC_KEY2 {
-        &self.sec_key2
-    }
-    #[doc = "0x140 - "]
-    #[inline(always)]
-    pub const fn sec_key3(&self) -> &SEC_KEY3 {
-        &self.sec_key3
+    pub fn sec_key_iter(&self) -> impl Iterator<Item = &SEC_KEY> {
+        self.sec_key.iter()
     }
     #[doc = "0x144 - "]
     #[inline(always)]
@@ -561,7 +453,7 @@ impl RegisterBlock {
     pub const fn error_cnt_clear(&self) -> &ERROR_CNT_CLEAR {
         &self.error_cnt_clear
     }
-    #[doc = "0x184 - "]
+    #[doc = "0x184 - AES version control register"]
     #[inline(always)]
     pub const fn mac_date(&self) -> &MAC_DATE {
         &self.mac_date
@@ -575,70 +467,11 @@ pub mod command;
 pub type CTRL_CFG = crate::Reg<ctrl_cfg::CTRL_CFG_SPEC>;
 #[doc = ""]
 pub mod ctrl_cfg;
-#[doc = "INF0_SHORT_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf0_short_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf0_short_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf0_short_addr`] module"]
-pub type INF0_SHORT_ADDR = crate::Reg<inf0_short_addr::INF0_SHORT_ADDR_SPEC>;
-#[doc = ""]
-pub mod inf0_short_addr;
-#[doc = "INF0_PAN_ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf0_pan_id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf0_pan_id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf0_pan_id`] module"]
-pub type INF0_PAN_ID = crate::Reg<inf0_pan_id::INF0_PAN_ID_SPEC>;
-#[doc = ""]
-pub mod inf0_pan_id;
-#[doc = "INF0_EXTEND_ADDR0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf0_extend_addr0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf0_extend_addr0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf0_extend_addr0`] module"]
-pub type INF0_EXTEND_ADDR0 = crate::Reg<inf0_extend_addr0::INF0_EXTEND_ADDR0_SPEC>;
-#[doc = ""]
-pub mod inf0_extend_addr0;
-#[doc = "INF0_EXTEND_ADDR1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf0_extend_addr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf0_extend_addr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf0_extend_addr1`] module"]
-pub type INF0_EXTEND_ADDR1 = crate::Reg<inf0_extend_addr1::INF0_EXTEND_ADDR1_SPEC>;
-#[doc = ""]
-pub mod inf0_extend_addr1;
-#[doc = "INF1_SHORT_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf1_short_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf1_short_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf1_short_addr`] module"]
-pub type INF1_SHORT_ADDR = crate::Reg<inf1_short_addr::INF1_SHORT_ADDR_SPEC>;
-#[doc = ""]
-pub mod inf1_short_addr;
-#[doc = "INF1_PAN_ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf1_pan_id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf1_pan_id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf1_pan_id`] module"]
-pub type INF1_PAN_ID = crate::Reg<inf1_pan_id::INF1_PAN_ID_SPEC>;
-#[doc = ""]
-pub mod inf1_pan_id;
-#[doc = "INF1_EXTEND_ADDR0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf1_extend_addr0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf1_extend_addr0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf1_extend_addr0`] module"]
-pub type INF1_EXTEND_ADDR0 = crate::Reg<inf1_extend_addr0::INF1_EXTEND_ADDR0_SPEC>;
-#[doc = ""]
-pub mod inf1_extend_addr0;
-#[doc = "INF1_EXTEND_ADDR1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf1_extend_addr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf1_extend_addr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf1_extend_addr1`] module"]
-pub type INF1_EXTEND_ADDR1 = crate::Reg<inf1_extend_addr1::INF1_EXTEND_ADDR1_SPEC>;
-#[doc = ""]
-pub mod inf1_extend_addr1;
-#[doc = "INF2_SHORT_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf2_short_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf2_short_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf2_short_addr`] module"]
-pub type INF2_SHORT_ADDR = crate::Reg<inf2_short_addr::INF2_SHORT_ADDR_SPEC>;
-#[doc = ""]
-pub mod inf2_short_addr;
-#[doc = "INF2_PAN_ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf2_pan_id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf2_pan_id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf2_pan_id`] module"]
-pub type INF2_PAN_ID = crate::Reg<inf2_pan_id::INF2_PAN_ID_SPEC>;
-#[doc = ""]
-pub mod inf2_pan_id;
-#[doc = "INF2_EXTEND_ADDR0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf2_extend_addr0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf2_extend_addr0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf2_extend_addr0`] module"]
-pub type INF2_EXTEND_ADDR0 = crate::Reg<inf2_extend_addr0::INF2_EXTEND_ADDR0_SPEC>;
-#[doc = ""]
-pub mod inf2_extend_addr0;
-#[doc = "INF2_EXTEND_ADDR1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf2_extend_addr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf2_extend_addr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf2_extend_addr1`] module"]
-pub type INF2_EXTEND_ADDR1 = crate::Reg<inf2_extend_addr1::INF2_EXTEND_ADDR1_SPEC>;
-#[doc = ""]
-pub mod inf2_extend_addr1;
-#[doc = "INF3_SHORT_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf3_short_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf3_short_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf3_short_addr`] module"]
-pub type INF3_SHORT_ADDR = crate::Reg<inf3_short_addr::INF3_SHORT_ADDR_SPEC>;
-#[doc = ""]
-pub mod inf3_short_addr;
-#[doc = "INF3_PAN_ID (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf3_pan_id::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf3_pan_id::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf3_pan_id`] module"]
-pub type INF3_PAN_ID = crate::Reg<inf3_pan_id::INF3_PAN_ID_SPEC>;
-#[doc = ""]
-pub mod inf3_pan_id;
-#[doc = "INF3_EXTEND_ADDR0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf3_extend_addr0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf3_extend_addr0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf3_extend_addr0`] module"]
-pub type INF3_EXTEND_ADDR0 = crate::Reg<inf3_extend_addr0::INF3_EXTEND_ADDR0_SPEC>;
-#[doc = ""]
-pub mod inf3_extend_addr0;
-#[doc = "INF3_EXTEND_ADDR1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`inf3_extend_addr1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inf3_extend_addr1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@inf3_extend_addr1`] module"]
-pub type INF3_EXTEND_ADDR1 = crate::Reg<inf3_extend_addr1::INF3_EXTEND_ADDR1_SPEC>;
-#[doc = ""]
-pub mod inf3_extend_addr1;
+#[doc = "Cluster INF%s, containing INF?_EXTEND_ADDR0, INF?_EXTEND_ADDR1, INF?_PAN_ID, INF?_SHORT_ADDR"]
+pub use self::inf::INF;
+#[doc = r"Cluster"]
+#[doc = "Cluster INF%s, containing INF?_EXTEND_ADDR0, INF?_EXTEND_ADDR1, INF?_PAN_ID, INF?_SHORT_ADDR"]
+pub mod inf;
 #[doc = "CHANNEL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`channel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`channel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@channel`] module"]
 pub type CHANNEL = crate::Reg<channel::CHANNEL_SPEC>;
 #[doc = ""]
@@ -736,22 +569,11 @@ pub mod dtm_pkt_counter;
 pub type RX_LENGTH = crate::Reg<rx_length::RX_LENGTH_SPEC>;
 #[doc = ""]
 pub mod rx_length;
-#[doc = "TIME0_THRESHOLD (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`time0_threshold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time0_threshold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@time0_threshold`] module"]
-pub type TIME0_THRESHOLD = crate::Reg<time0_threshold::TIME0_THRESHOLD_SPEC>;
-#[doc = ""]
-pub mod time0_threshold;
-#[doc = "TIME0_VALUE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`time0_value::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time0_value::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@time0_value`] module"]
-pub type TIME0_VALUE = crate::Reg<time0_value::TIME0_VALUE_SPEC>;
-#[doc = ""]
-pub mod time0_value;
-#[doc = "TIME1_THRESHOLD (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`time1_threshold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time1_threshold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@time1_threshold`] module"]
-pub type TIME1_THRESHOLD = crate::Reg<time1_threshold::TIME1_THRESHOLD_SPEC>;
-#[doc = ""]
-pub mod time1_threshold;
-#[doc = "TIME1_VALUE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`time1_value::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`time1_value::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@time1_value`] module"]
-pub type TIME1_VALUE = crate::Reg<time1_value::TIME1_VALUE_SPEC>;
-#[doc = ""]
-pub mod time1_value;
+#[doc = "Cluster TIME%s, containing TIME?_THRESHOLD, TIME?_VALUE"]
+pub use self::time::TIME;
+#[doc = r"Cluster"]
+#[doc = "Cluster TIME%s, containing TIME?_THRESHOLD, TIME?_VALUE"]
+pub mod time;
 #[doc = "CLK_COUNTER_MATCH_VAL (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`clk_counter_match_val::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_counter_match_val::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@clk_counter_match_val`] module"]
 pub type CLK_COUNTER_MATCH_VAL = crate::Reg<clk_counter_match_val::CLK_COUNTER_MATCH_VAL_SPEC>;
 #[doc = ""]
@@ -856,22 +678,10 @@ pub mod sec_extend_address0;
 pub type SEC_EXTEND_ADDRESS1 = crate::Reg<sec_extend_address1::SEC_EXTEND_ADDRESS1_SPEC>;
 #[doc = ""]
 pub mod sec_extend_address1;
-#[doc = "SEC_KEY0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sec_key0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sec_key0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sec_key0`] module"]
-pub type SEC_KEY0 = crate::Reg<sec_key0::SEC_KEY0_SPEC>;
+#[doc = "SEC_KEY (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sec_key::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sec_key::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sec_key`] module"]
+pub type SEC_KEY = crate::Reg<sec_key::SEC_KEY_SPEC>;
 #[doc = ""]
-pub mod sec_key0;
-#[doc = "SEC_KEY1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sec_key1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sec_key1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sec_key1`] module"]
-pub type SEC_KEY1 = crate::Reg<sec_key1::SEC_KEY1_SPEC>;
-#[doc = ""]
-pub mod sec_key1;
-#[doc = "SEC_KEY2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sec_key2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sec_key2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sec_key2`] module"]
-pub type SEC_KEY2 = crate::Reg<sec_key2::SEC_KEY2_SPEC>;
-#[doc = ""]
-pub mod sec_key2;
-#[doc = "SEC_KEY3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sec_key3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sec_key3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sec_key3`] module"]
-pub type SEC_KEY3 = crate::Reg<sec_key3::SEC_KEY3_SPEC>;
-#[doc = ""]
-pub mod sec_key3;
+pub mod sec_key;
 #[doc = "SFD_TIMEOUT_CNT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sfd_timeout_cnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sfd_timeout_cnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sfd_timeout_cnt`] module"]
 pub type SFD_TIMEOUT_CNT = crate::Reg<sfd_timeout_cnt::SFD_TIMEOUT_CNT_SPEC>;
 #[doc = ""]
@@ -936,7 +746,5 @@ pub mod cca_busy_cnt;
 pub type ERROR_CNT_CLEAR = crate::Reg<error_cnt_clear::ERROR_CNT_CLEAR_SPEC>;
 #[doc = ""]
 pub mod error_cnt_clear;
-#[doc = "MAC_DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`mac_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mac_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mac_date`] module"]
-pub type MAC_DATE = crate::Reg<mac_date::MAC_DATE_SPEC>;
-#[doc = ""]
-pub mod mac_date;
+pub use crate::aes::date as mac_date;
+pub use crate::aes::DATE as MAC_DATE;

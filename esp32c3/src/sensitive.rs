@@ -16,24 +16,7 @@ pub struct RegisterBlock {
     cache_tag_access_1: CACHE_TAG_ACCESS_1,
     cache_mmu_access_0: CACHE_MMU_ACCESS_0,
     cache_mmu_access_1: CACHE_MMU_ACCESS_1,
-    dma_apbperi_spi2_pms_constrain_0: DMA_APBPERI_SPI2_PMS_CONSTRAIN_0,
-    dma_apbperi_spi2_pms_constrain_1: DMA_APBPERI_SPI2_PMS_CONSTRAIN_1,
-    dma_apbperi_uchi0_pms_constrain_0: DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0,
-    dma_apbperi_uchi0_pms_constrain_1: DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1,
-    dma_apbperi_i2s0_pms_constrain_0: DMA_APBPERI_I2S0_PMS_CONSTRAIN_0,
-    dma_apbperi_i2s0_pms_constrain_1: DMA_APBPERI_I2S0_PMS_CONSTRAIN_1,
-    dma_apbperi_mac_pms_constrain_0: DMA_APBPERI_MAC_PMS_CONSTRAIN_0,
-    dma_apbperi_mac_pms_constrain_1: DMA_APBPERI_MAC_PMS_CONSTRAIN_1,
-    dma_apbperi_backup_pms_constrain_0: DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0,
-    dma_apbperi_backup_pms_constrain_1: DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1,
-    dma_apbperi_lc_pms_constrain_0: DMA_APBPERI_LC_PMS_CONSTRAIN_0,
-    dma_apbperi_lc_pms_constrain_1: DMA_APBPERI_LC_PMS_CONSTRAIN_1,
-    dma_apbperi_aes_pms_constrain_0: DMA_APBPERI_AES_PMS_CONSTRAIN_0,
-    dma_apbperi_aes_pms_constrain_1: DMA_APBPERI_AES_PMS_CONSTRAIN_1,
-    dma_apbperi_sha_pms_constrain_0: DMA_APBPERI_SHA_PMS_CONSTRAIN_0,
-    dma_apbperi_sha_pms_constrain_1: DMA_APBPERI_SHA_PMS_CONSTRAIN_1,
-    dma_apbperi_adc_dac_pms_constrain_0: DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0,
-    dma_apbperi_adc_dac_pms_constrain_1: DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1,
+    dma_apbperi: [DMA_APBPERI; 9],
     dma_apbperi_pms_monitor_0: DMA_APBPERI_PMS_MONITOR_0,
     dma_apbperi_pms_monitor_1: DMA_APBPERI_PMS_MONITOR_1,
     dma_apbperi_pms_monitor_2: DMA_APBPERI_PMS_MONITOR_2,
@@ -95,7 +78,7 @@ pub struct RegisterBlock {
     backup_bus_pms_monitor_2: BACKUP_BUS_PMS_MONITOR_2,
     backup_bus_pms_monitor_3: BACKUP_BUS_PMS_MONITOR_3,
     clock_gate: CLOCK_GATE,
-    _reserved93: [u8; 0x0e88],
+    _reserved76: [u8; 0x0e88],
     date: DATE,
 }
 impl RegisterBlock {
@@ -169,99 +152,63 @@ impl RegisterBlock {
     pub const fn cache_mmu_access_1(&self) -> &CACHE_MMU_ACCESS_1 {
         &self.cache_mmu_access_1
     }
-    #[doc = "0x38 - SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x38..0x80 - Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of cluster in the array. `n == 0` corresponds to `DMA_APBPERI_SPI2` cluster.</div>"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi2_pms_constrain_0(&self) -> &DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_spi2_pms_constrain_0
+    pub const fn dma_apbperi(&self, n: usize) -> &DMA_APBPERI {
+        &self.dma_apbperi[n]
     }
-    #[doc = "0x3c - SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x38..0x80 - Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_spi2_pms_constrain_1(&self) -> &DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_spi2_pms_constrain_1
+    pub fn dma_apbperi_iter(&self) -> impl Iterator<Item = &DMA_APBPERI> {
+        self.dma_apbperi.iter()
     }
-    #[doc = "0x40 - SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x38..0x40 - Cluster DMA_APBPERI_SPI2, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_uchi0_pms_constrain_0(&self) -> &DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_uchi0_pms_constrain_0
+    pub const fn dma_apbperi_spi2(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(0)
     }
-    #[doc = "0x44 - SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_REG"]
+    #[doc = "0x40..0x48 - Cluster DMA_APBPERI_UCHI0, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_uchi0_pms_constrain_1(&self) -> &DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_uchi0_pms_constrain_1
+    pub const fn dma_apbperi_uchi0(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(1)
     }
-    #[doc = "0x48 - SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x48..0x50 - Cluster DMA_APBPERI_I2S0, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s0_pms_constrain_0(&self) -> &DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_i2s0_pms_constrain_0
+    pub const fn dma_apbperi_i2s0(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(2)
     }
-    #[doc = "0x4c - SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_REG"]
+    #[doc = "0x50..0x58 - Cluster DMA_APBPERI_MAC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_i2s0_pms_constrain_1(&self) -> &DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_i2s0_pms_constrain_1
+    pub const fn dma_apbperi_mac(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(3)
     }
-    #[doc = "0x50 - SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x58..0x60 - Cluster DMA_APBPERI_BACKUP, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_mac_pms_constrain_0(&self) -> &DMA_APBPERI_MAC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_mac_pms_constrain_0
+    pub const fn dma_apbperi_backup(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(4)
     }
-    #[doc = "0x54 - SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_1_REG"]
+    #[doc = "0x60..0x68 - Cluster DMA_APBPERI_LC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_mac_pms_constrain_1(&self) -> &DMA_APBPERI_MAC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_mac_pms_constrain_1
+    pub const fn dma_apbperi_lc(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(5)
     }
-    #[doc = "0x58 - SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x68..0x70 - Cluster DMA_APBPERI_AES, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_backup_pms_constrain_0(&self) -> &DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_backup_pms_constrain_0
+    pub const fn dma_apbperi_aes(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(6)
     }
-    #[doc = "0x5c - SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_REG"]
+    #[doc = "0x70..0x78 - Cluster DMA_APBPERI_SHA, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_backup_pms_constrain_1(&self) -> &DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_backup_pms_constrain_1
+    pub const fn dma_apbperi_sha(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(7)
     }
-    #[doc = "0x60 - SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_0_REG"]
+    #[doc = "0x78..0x80 - Cluster DMA_APBPERI_ADC_DAC, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
     #[inline(always)]
-    pub const fn dma_apbperi_lc_pms_constrain_0(&self) -> &DMA_APBPERI_LC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_lc_pms_constrain_0
-    }
-    #[doc = "0x64 - SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_1_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_lc_pms_constrain_1(&self) -> &DMA_APBPERI_LC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_lc_pms_constrain_1
-    }
-    #[doc = "0x68 - SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_0_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_aes_pms_constrain_0(&self) -> &DMA_APBPERI_AES_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_aes_pms_constrain_0
-    }
-    #[doc = "0x6c - SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_1_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_aes_pms_constrain_1(&self) -> &DMA_APBPERI_AES_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_aes_pms_constrain_1
-    }
-    #[doc = "0x70 - SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_0_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_sha_pms_constrain_0(&self) -> &DMA_APBPERI_SHA_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_sha_pms_constrain_0
-    }
-    #[doc = "0x74 - SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_1_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_sha_pms_constrain_1(&self) -> &DMA_APBPERI_SHA_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_sha_pms_constrain_1
-    }
-    #[doc = "0x78 - SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_adc_dac_pms_constrain_0(
-        &self,
-    ) -> &DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 {
-        &self.dma_apbperi_adc_dac_pms_constrain_0
-    }
-    #[doc = "0x7c - SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_REG"]
-    #[inline(always)]
-    pub const fn dma_apbperi_adc_dac_pms_constrain_1(
-        &self,
-    ) -> &DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 {
-        &self.dma_apbperi_adc_dac_pms_constrain_1
+    pub const fn dma_apbperi_adc_dac(&self) -> &DMA_APBPERI {
+        self.dma_apbperi(8)
     }
     #[doc = "0x80 - SENSITIVE_DMA_APBPERI_PMS_MONITOR_0_REG"]
     #[inline(always)]
@@ -645,96 +592,11 @@ pub mod cache_mmu_access_0;
 pub type CACHE_MMU_ACCESS_1 = crate::Reg<cache_mmu_access_1::CACHE_MMU_ACCESS_1_SPEC>;
 #[doc = "SENSITIVE_CACHE_MMU_ACCESS_1_REG"]
 pub mod cache_mmu_access_1;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi2_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_spi2_pms_constrain_0::DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_spi2_pms_constrain_0;
-#[doc = "DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_spi2_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_spi2_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_spi2_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SPI2_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_spi2_pms_constrain_1::DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_SPI2_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_spi2_pms_constrain_1;
-#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_uchi0_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_uchi0_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_uchi0_pms_constrain_0`] module"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_uchi0_pms_constrain_0::DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_uchi0_pms_constrain_0;
-#[doc = "DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_uchi0_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_uchi0_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_uchi0_pms_constrain_1`] module"]
-pub type DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_uchi0_pms_constrain_1::DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_UCHI0_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_uchi0_pms_constrain_1;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s0_pms_constrain_0`] module"]
-pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_i2s0_pms_constrain_0::DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_i2s0_pms_constrain_0;
-#[doc = "DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_i2s0_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_i2s0_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_i2s0_pms_constrain_1`] module"]
-pub type DMA_APBPERI_I2S0_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_i2s0_pms_constrain_1::DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_I2S0_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_i2s0_pms_constrain_1;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_mac_pms_constrain_0`] module"]
-pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_mac_pms_constrain_0::DMA_APBPERI_MAC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_mac_pms_constrain_0;
-#[doc = "DMA_APBPERI_MAC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_mac_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_mac_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_mac_pms_constrain_1`] module"]
-pub type DMA_APBPERI_MAC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_mac_pms_constrain_1::DMA_APBPERI_MAC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_MAC_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_mac_pms_constrain_1;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_backup_pms_constrain_0`] module"]
-pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_backup_pms_constrain_0::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_backup_pms_constrain_0;
-#[doc = "DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_backup_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_backup_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_backup_pms_constrain_1`] module"]
-pub type DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_backup_pms_constrain_1::DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_BACKUP_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_backup_pms_constrain_1;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lc_pms_constrain_0`] module"]
-pub type DMA_APBPERI_LC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_lc_pms_constrain_0::DMA_APBPERI_LC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_lc_pms_constrain_0;
-#[doc = "DMA_APBPERI_LC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_lc_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_lc_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_lc_pms_constrain_1`] module"]
-pub type DMA_APBPERI_LC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_lc_pms_constrain_1::DMA_APBPERI_LC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_LC_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_lc_pms_constrain_1;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_aes_pms_constrain_0`] module"]
-pub type DMA_APBPERI_AES_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_aes_pms_constrain_0::DMA_APBPERI_AES_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_aes_pms_constrain_0;
-#[doc = "DMA_APBPERI_AES_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_aes_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_aes_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_aes_pms_constrain_1`] module"]
-pub type DMA_APBPERI_AES_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_aes_pms_constrain_1::DMA_APBPERI_AES_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_AES_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_aes_pms_constrain_1;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sha_pms_constrain_0`] module"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_sha_pms_constrain_0::DMA_APBPERI_SHA_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_sha_pms_constrain_0;
-#[doc = "DMA_APBPERI_SHA_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_sha_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_sha_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_sha_pms_constrain_1`] module"]
-pub type DMA_APBPERI_SHA_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_sha_pms_constrain_1::DMA_APBPERI_SHA_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_SHA_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_sha_pms_constrain_1;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_adc_dac_pms_constrain_0`] module"]
-pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0 =
-    crate::Reg<dma_apbperi_adc_dac_pms_constrain_0::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_0_REG"]
-pub mod dma_apbperi_adc_dac_pms_constrain_0;
-#[doc = "DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 (rw) register accessor: SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_adc_dac_pms_constrain_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_adc_dac_pms_constrain_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_adc_dac_pms_constrain_1`] module"]
-pub type DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1 =
-    crate::Reg<dma_apbperi_adc_dac_pms_constrain_1::DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_SPEC>;
-#[doc = "SENSITIVE_DMA_APBPERI_ADC_DAC_PMS_CONSTRAIN_1_REG"]
-pub mod dma_apbperi_adc_dac_pms_constrain_1;
+#[doc = "Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+pub use self::dma_apbperi::DMA_APBPERI;
+#[doc = r"Cluster"]
+#[doc = "Cluster DMA_APBPERI%s, containing DMA_APBPERI*_PMS_CONSTRAIN_0, DMA_APBPERI*_PMS_CONSTRAIN_1"]
+pub mod dma_apbperi;
 #[doc = "DMA_APBPERI_PMS_MONITOR_0 (rw) register accessor: SENSITIVE_DMA_APBPERI_PMS_MONITOR_0_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`dma_apbperi_pms_monitor_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dma_apbperi_pms_monitor_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@dma_apbperi_pms_monitor_0`] module"]
 pub type DMA_APBPERI_PMS_MONITOR_0 =
     crate::Reg<dma_apbperi_pms_monitor_0::DMA_APBPERI_PMS_MONITOR_0_SPEC>;
@@ -1023,7 +885,5 @@ pub mod backup_bus_pms_monitor_3;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "SENSITIVE_CLOCK_GATE_REG"]
 pub mod clock_gate;
-#[doc = "DATE (rw) register accessor: SENSITIVE_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "SENSITIVE_DATE_REG"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

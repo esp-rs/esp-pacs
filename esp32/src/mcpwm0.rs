@@ -222,7 +222,5 @@ pub mod int_clr;
 pub type CLK = crate::Reg<clk::CLK_SPEC>;
 #[doc = ""]
 pub mod clk;
-#[doc = "VERSION (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
-pub type VERSION = crate::Reg<version::VERSION_SPEC>;
-#[doc = ""]
-pub mod version;
+pub use crate::apb_ctrl::date as version;
+pub use crate::apb_ctrl::DATE as VERSION;

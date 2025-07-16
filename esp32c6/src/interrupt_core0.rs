@@ -54,7 +54,5 @@ pub mod core_0_intr_status;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-#[doc = "INTERRUPT_REG_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`interrupt_reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interrupt_reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interrupt_reg_date`] module"]
-pub type INTERRUPT_REG_DATE = crate::Reg<interrupt_reg_date::INTERRUPT_REG_DATE_SPEC>;
-#[doc = "register description"]
-pub mod interrupt_reg_date;
+pub use crate::aes::date as interrupt_reg_date;
+pub use crate::aes::DATE as INTERRUPT_REG_DATE;

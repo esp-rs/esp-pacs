@@ -134,7 +134,5 @@ pub mod ana_conf2;
 pub type I2C_CTRL1 = crate::Reg<i2c_ctrl1::I2C_CTRL1_SPEC>;
 #[doc = "I2C%s_CTRL1 register"]
 pub mod i2c_ctrl1;
-#[doc = "DATE (rw) register accessor: DATE register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "DATE register"]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;

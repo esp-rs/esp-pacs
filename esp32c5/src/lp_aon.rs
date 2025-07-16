@@ -203,42 +203,24 @@ impl RegisterBlock {
 pub type STORE0 = crate::Reg<store0::STORE0_SPEC>;
 #[doc = "store the software massege0 in always-on field"]
 pub mod store0;
-#[doc = "STORE1 (rw) register accessor: store the software massege1 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store1`] module"]
-pub type STORE1 = crate::Reg<store1::STORE1_SPEC>;
-#[doc = "store the software massege1 in always-on field"]
-pub mod store1;
-#[doc = "STORE2 (rw) register accessor: store the software massege2 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store2`] module"]
-pub type STORE2 = crate::Reg<store2::STORE2_SPEC>;
-#[doc = "store the software massege2 in always-on field"]
-pub mod store2;
-#[doc = "STORE3 (rw) register accessor: store the software massege3 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store3`] module"]
-pub type STORE3 = crate::Reg<store3::STORE3_SPEC>;
-#[doc = "store the software massege3 in always-on field"]
-pub mod store3;
-#[doc = "STORE4 (rw) register accessor: store the software massege4 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store4`] module"]
-pub type STORE4 = crate::Reg<store4::STORE4_SPEC>;
-#[doc = "store the software massege4 in always-on field"]
-pub mod store4;
-#[doc = "STORE5 (rw) register accessor: store the software massege5 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store5`] module"]
-pub type STORE5 = crate::Reg<store5::STORE5_SPEC>;
-#[doc = "store the software massege5 in always-on field"]
-pub mod store5;
-#[doc = "STORE6 (rw) register accessor: store the software massege6 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store6`] module"]
-pub type STORE6 = crate::Reg<store6::STORE6_SPEC>;
-#[doc = "store the software massege6 in always-on field"]
-pub mod store6;
-#[doc = "STORE7 (rw) register accessor: store the software massege7 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store7`] module"]
-pub type STORE7 = crate::Reg<store7::STORE7_SPEC>;
-#[doc = "store the software massege7 in always-on field"]
-pub mod store7;
-#[doc = "STORE8 (rw) register accessor: store the software massege8 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store8`] module"]
-pub type STORE8 = crate::Reg<store8::STORE8_SPEC>;
-#[doc = "store the software massege8 in always-on field"]
-pub mod store8;
-#[doc = "STORE9 (rw) register accessor: store the software massege9 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store9`] module"]
-pub type STORE9 = crate::Reg<store9::STORE9_SPEC>;
-#[doc = "store the software massege9 in always-on field"]
-pub mod store9;
+pub use store0 as store1;
+pub use store0 as store2;
+pub use store0 as store3;
+pub use store0 as store4;
+pub use store0 as store5;
+pub use store0 as store6;
+pub use store0 as store7;
+pub use store0 as store8;
+pub use store0 as store9;
+pub use STORE0 as STORE1;
+pub use STORE0 as STORE2;
+pub use STORE0 as STORE3;
+pub use STORE0 as STORE4;
+pub use STORE0 as STORE5;
+pub use STORE0 as STORE6;
+pub use STORE0 as STORE7;
+pub use STORE0 as STORE8;
+pub use STORE0 as STORE9;
 #[doc = "GPIO_MUX (rw) register accessor: select the lp io controlled by hp iomux or lp iomux\n\nYou can [`read`](crate::Reg::read) this register and get [`gpio_mux::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio_mux::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpio_mux`] module"]
 pub type GPIO_MUX = crate::Reg<gpio_mux::GPIO_MUX_SPEC>;
 #[doc = "select the lp io controlled by hp iomux or lp iomux"]
@@ -323,7 +305,5 @@ pub mod backup_dma_cfg2;
 pub type MEM_CTRL = crate::Reg<mem_ctrl::MEM_CTRL_SPEC>;
 #[doc = "configure rmemory power in lp system register"]
 pub mod mem_ctrl;
-#[doc = "DATE (rw) register accessor: reserved\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "reserved"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
