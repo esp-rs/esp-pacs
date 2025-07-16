@@ -1,11 +1,11 @@
 INTERRUPT_CORE0:
-  _array:
-    INT_STATUS_*:
-      name: CORE_0_INTR_STATUS%s
-      description: "Represents the status of the interrupt sources. Each bit corresponds to one interrupt source"
-
   _delete:
     - "*_MAP"
+
+  _array:
+    INT_STATUS_?:
+      name: CORE_0_INTR_STATUS%s
+      description: ""
 
   _add:
     CORE_0_INTR_MAP%s:

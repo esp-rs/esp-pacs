@@ -53,26 +53,62 @@ APB_SARADC:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/adc.yaml
 
-AHB_DMA:
+DMA:
+  _add:
+    _interrupts:
+      DMA_IN_CH0:
+        value: 71
+      DMA_IN_CH1:
+        value: 72
+      DMA_IN_CH2:
+        value: 73
+      DMA_OUT_CH0:
+        value: 74
+      DMA_OUT_CH1:
+        value: 75
+      DMA_OUT_CH2:
+        value: 76
+
   IN_INT_RAW_CH?:
-    _strip_end: _CH_INT_RAW
+    _strip_end:
+      - _CH_INT_RAW
+      - _CH?_INT_RAW
   IN_INT_ST_CH%s:
-    _strip_end: _CH_INT_ST
+    _strip_end:
+      - _CH_INT_ST
+      - _CH?_INT_ST
   IN_INT_ENA_CH%s:
-    _strip_end: _CH_INT_ENA
+    _strip_end:
+      - _CH_INT_ENA
+      - _CH?_INT_ENA
   IN_INT_CLR_CH%s:
-    _strip_end: _CH_INT_CLR
+    _strip_end:
+      - _CH_INT_CLR
+      - _CH?_INT_CLR
   OUT_INT_RAW_CH%s:
-    _strip_end: _CH_INT_RAW
+    _strip_end:
+      - _CH_INT_RAW
+      - _CH?_INT_RAW
   OUT_INT_ST_CH%s:
-    _strip_end: _CH_INT_ST
+    _strip_end:
+      - _CH_INT_ST
+      - _CH?_INT_ST
   OUT_INT_ENA_CH%s:
-    _strip_end: _CH_INT_ENA
+    _strip_end:
+      - _CH_INT_ENA
+      - _CH?_INT_ENA
   OUT_INT_CLR_CH%s:
-    _strip_end: _CH_INT_CLR
+    _strip_end:
+      - _CH_INT_CLR
+      - _CH?_INT_CLR
 
   IN_CONF0_CH%s:
     _strip_end: _CH
+    _add:
+      IN_DATA_BURST_EN:
+        bitOffset: 3
+        bitWidth: 1
+        description: Configures whether or not to enable INCR burst transfer for RX channel %s
   IN_CONF1_CH%s:
     _strip_end: _CH
   INFIFO_STATUS_CH%s:
@@ -91,12 +127,20 @@ AHB_DMA:
     _strip_end: _CH
   IN_DSCR_BF1_CH%s:
     _strip_end: _CH
+  IN_LINK_CH%s:
+    _strip_end: _CH
   IN_PRI_CH%s:
     _strip_end: _CH
   IN_PERI_SEL_CH%s:
     _strip_end: _CH
-  OUT_CONF0_CH?:
+  OUT_CONF0_CH%s:
     _strip_end: _CH
+    _add:
+      OUT_DATA_BURST_EN:
+        bitOffset: 5
+        bitWidth: 1
+        description: Configures whether or not to enable INCR burst transfer for TX channel %s
+
   OUT_CONF1_CH%s:
     _strip_end: _CH
   OUTFIFO_STATUS_CH%s:
@@ -126,6 +170,124 @@ AHB_DMA:
     _strip_end: _CH
   OUT_LINK_ADDR_CH%s:
     _strip_end: _CH
+
+  _expand_array:
+    IN_INT_ST_CH%s: {}
+    IN_INT_ENA_CH%s: {}
+    IN_INT_CLR_CH%s: {}
+
+    OUT_INT_RAW_CH%s: {}
+    OUT_INT_ST_CH%s: {}
+    OUT_INT_ENA_CH%s: {}
+    OUT_INT_CLR_CH%s: {}
+
+    IN_CONF0_CH%s: {}
+    IN_CONF1_CH%s: {}
+    INFIFO_STATUS_CH%s: {}
+    IN_POP_CH%s: {}
+    IN_LINK_CH%s: {}
+    IN_STATE_CH%s: {}
+    IN_SUC_EOF_DES_ADDR_CH%s: {}
+    IN_ERR_EOF_DES_ADDR_CH%s: {}
+    IN_DSCR_CH%s: {}
+    IN_DSCR_BF0_CH%s: {}
+    IN_DSCR_BF1_CH%s: {}
+    IN_PRI_CH%s: {}
+    IN_PERI_SEL_CH%s: {}
+    OUT_CONF0_CH%s: {}
+    OUT_CONF1_CH%s: {}
+    OUTFIFO_STATUS_CH%s: {}
+    OUT_PUSH_CH%s: {}
+    OUT_LINK_CH%s: {}
+    OUT_STATE_CH%s: {}
+    OUT_EOF_DES_ADDR_CH%s: {}
+    OUT_EOF_BFR_DES_ADDR_CH%s: {}
+    OUT_DSCR_CH%s: {}
+    OUT_DSCR_BF0_CH%s: {}
+    OUT_DSCR_BF1_CH%s: {}
+    OUT_PRI_CH%s: {}
+    OUT_PERI_SEL_CH%s: {}
+
+  _cluster:
+    IN_INT_CH%s:
+      IN_INT_RAW_CH?:
+        name: RAW
+      IN_INT_ST_CH?:
+        name: ST
+      IN_INT_ENA_CH?:
+        name: ENA
+      IN_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    OUT_INT_CH%s:
+      OUT_INT_RAW_CH?:
+        name: RAW
+      OUT_INT_ST_CH?:
+        name: ST
+      OUT_INT_ENA_CH?:
+        name: ENA
+      OUT_INT_CLR_CH?:
+        name: CLR
+        _modify:
+          "*":
+            modifiedWriteValues: oneToClear
+
+    CH%s:
+      IN_CONF0_CH?:
+        name: IN_CONF0
+      IN_CONF1_CH?:
+        name: IN_CONF1
+      INFIFO_STATUS_CH?:
+        name: INFIFO_STATUS
+      IN_POP_CH?:
+        name: IN_POP
+      IN_LINK_CH?:
+        name: IN_LINK
+      IN_STATE_CH?:
+        name: IN_STATE
+      IN_SUC_EOF_DES_ADDR_CH?:
+        name: IN_SUC_EOF_DES_ADDR
+      IN_ERR_EOF_DES_ADDR_CH?:
+        name: IN_ERR_EOF_DES_ADDR
+      IN_DSCR_CH?:
+        name: IN_DSCR
+      IN_DSCR_BF0_CH?:
+        name: IN_DSCR_BF0
+      IN_DSCR_BF1_CH?:
+        name: IN_DSCR_BF1
+      IN_PRI_CH?:
+        name: IN_PRI
+      IN_PERI_SEL_CH?:
+        name: IN_PERI_SEL
+      OUT_CONF0_CH?:
+        name: OUT_CONF0
+      OUT_CONF1_CH?:
+        name: OUT_CONF1
+      OUTFIFO_STATUS_CH?:
+        name: OUTFIFO_STATUS
+      OUT_PUSH_CH?:
+        name: OUT_PUSH
+      OUT_LINK_CH?:
+        name: OUT_LINK
+      OUT_STATE_CH?:
+        name: OUT_STATE
+      OUT_EOF_DES_ADDR_CH?:
+        name: OUT_EOF_DES_ADDR
+      OUT_EOF_BFR_DES_ADDR_CH?:
+        name: OUT_EOF_BFR_DES_ADDR
+      OUT_DSCR_CH?:
+        name: OUT_DSCR
+      OUT_DSCR_BF0_CH?:
+        name: OUT_DSCR_BF0
+      OUT_DSCR_BF1_CH?:
+        name: OUT_DSCR_BF1
+      OUT_PRI_CH?:
+        name: OUT_PRI
+      OUT_PERI_SEL_CH?:
+        name: OUT_PERI_SEL
 
 DS:
   _modify:
@@ -651,6 +813,15 @@ SPI2:
   "*":
     _strip: SPI_
   _include: ../../../common_patches/spi_dma_int_strip.yaml
+  _modify:
+    _interrupts:
+      GPSPI2:
+        name: SPI2
+
+  CMD:
+    _modify:
+      UPDATE:
+        access: read-write
 
 SPI[12]:
   _include: ../../../common_patches/spi_w.yaml
@@ -698,5 +869,8 @@ UART0:
   _include: ../../../common_patches/int_strip.yaml
 
 _modify:
+  AHB_DMA:
+    name: DMA
+
   SPI?:
     groupName: SPI
