@@ -6,10 +6,7 @@ pub struct RegisterBlock {
     _reserved1: [u8; 0x24],
     wdtconfig0: WDTCONFIG0,
     wdtconfig1: WDTCONFIG1,
-    wdtconfig2: WDTCONFIG2,
-    wdtconfig3: WDTCONFIG3,
-    wdtconfig4: WDTCONFIG4,
-    wdtconfig5: WDTCONFIG5,
+    wdtconfig: [WDTCONFIG; 4],
     wdtfeed: WDTFEED,
     wdtwprotect: WDTWPROTECT,
     rtccalicfg: RTCCALICFG,
@@ -19,7 +16,7 @@ pub struct RegisterBlock {
     int_st: INT_ST,
     int_clr: INT_CLR,
     rtccalicfg2: RTCCALICFG2,
-    _reserved16: [u8; 0x74],
+    _reserved13: [u8; 0x74],
     ntimg_date: NTIMG_DATE,
     regclk: REGCLK,
 }
@@ -45,25 +42,38 @@ impl RegisterBlock {
     pub const fn wdtconfig1(&self) -> &WDTCONFIG1 {
         &self.wdtconfig1
     }
-    #[doc = "0x50 - TIMG_WDTCONFIG2_REG."]
+    #[doc = "0x50..0x60 - Watchdog timer stage timeout value"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WDTCONFIG2` register.</div>"]
     #[inline(always)]
-    pub const fn wdtconfig2(&self) -> &WDTCONFIG2 {
-        &self.wdtconfig2
+    pub const fn wdtconfig(&self, n: usize) -> &WDTCONFIG {
+        &self.wdtconfig[n]
     }
-    #[doc = "0x54 - TIMG_WDTCONFIG3_REG."]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x50..0x60 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig3(&self) -> &WDTCONFIG3 {
-        &self.wdtconfig3
+    pub fn wdtconfig_iter(&self) -> impl Iterator<Item = &WDTCONFIG> {
+        self.wdtconfig.iter()
     }
-    #[doc = "0x58 - TIMG_WDTCONFIG4_REG."]
+    #[doc = "0x50 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig4(&self) -> &WDTCONFIG4 {
-        &self.wdtconfig4
+    pub const fn wdtconfig2(&self) -> &WDTCONFIG {
+        self.wdtconfig(0)
     }
-    #[doc = "0x5c - TIMG_WDTCONFIG5_REG."]
+    #[doc = "0x54 - Watchdog timer stage timeout value"]
     #[inline(always)]
-    pub const fn wdtconfig5(&self) -> &WDTCONFIG5 {
-        &self.wdtconfig5
+    pub const fn wdtconfig3(&self) -> &WDTCONFIG {
+        self.wdtconfig(1)
+    }
+    #[doc = "0x58 - Watchdog timer stage timeout value"]
+    #[inline(always)]
+    pub const fn wdtconfig4(&self) -> &WDTCONFIG {
+        self.wdtconfig(2)
+    }
+    #[doc = "0x5c - Watchdog timer stage timeout value"]
+    #[inline(always)]
+    pub const fn wdtconfig5(&self) -> &WDTCONFIG {
+        self.wdtconfig(3)
     }
     #[doc = "0x60 - TIMG_WDTFEED_REG."]
     #[inline(always)]
@@ -134,22 +144,10 @@ pub mod wdtconfig0;
 pub type WDTCONFIG1 = crate::Reg<wdtconfig1::WDTCONFIG1_SPEC>;
 #[doc = "TIMG_WDTCONFIG1_REG."]
 pub mod wdtconfig1;
-#[doc = "WDTCONFIG2 (rw) register accessor: TIMG_WDTCONFIG2_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig2`] module"]
-pub type WDTCONFIG2 = crate::Reg<wdtconfig2::WDTCONFIG2_SPEC>;
-#[doc = "TIMG_WDTCONFIG2_REG."]
-pub mod wdtconfig2;
-#[doc = "WDTCONFIG3 (rw) register accessor: TIMG_WDTCONFIG3_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig3`] module"]
-pub type WDTCONFIG3 = crate::Reg<wdtconfig3::WDTCONFIG3_SPEC>;
-#[doc = "TIMG_WDTCONFIG3_REG."]
-pub mod wdtconfig3;
-#[doc = "WDTCONFIG4 (rw) register accessor: TIMG_WDTCONFIG4_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig4`] module"]
-pub type WDTCONFIG4 = crate::Reg<wdtconfig4::WDTCONFIG4_SPEC>;
-#[doc = "TIMG_WDTCONFIG4_REG."]
-pub mod wdtconfig4;
-#[doc = "WDTCONFIG5 (rw) register accessor: TIMG_WDTCONFIG5_REG.\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig5`] module"]
-pub type WDTCONFIG5 = crate::Reg<wdtconfig5::WDTCONFIG5_SPEC>;
-#[doc = "TIMG_WDTCONFIG5_REG."]
-pub mod wdtconfig5;
+#[doc = "WDTCONFIG (rw) register accessor: Watchdog timer stage timeout value\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig`] module"]
+pub type WDTCONFIG = crate::Reg<wdtconfig::WDTCONFIG_SPEC>;
+#[doc = "Watchdog timer stage timeout value"]
+pub mod wdtconfig;
 #[doc = "WDTFEED (w) register accessor: TIMG_WDTFEED_REG.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtfeed`] module"]
 pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "TIMG_WDTFEED_REG."]
