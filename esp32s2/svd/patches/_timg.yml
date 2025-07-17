@@ -2,15 +2,13 @@ TIMG0:
   "T%s*":
     _strip:
       - "T_"
-  WDTCONFIG1:
-    _modify:
-      WDT_CLK_PRESCALER:
-        name: WDT_CLK_PRESCALE
 
 TIMG1:
   "T%s*":
     _strip:
       - "T_"
+
+TIMG?:
   WDTCONFIG1:
     _modify:
       WDT_CLK_PRESCALER:

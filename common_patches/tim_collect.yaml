@@ -34,3 +34,11 @@ INT_CLR:
     T?: {}
 
 _include: tim_int_strip.yaml
+
+_array:
+  WDTCONFIG[2-5]:
+    name: WDTCONFIG%s
+    description: Watchdog timer stage timeout value
+    _modify:
+      WDT_STG0_HOLD:
+        name: HOLD
