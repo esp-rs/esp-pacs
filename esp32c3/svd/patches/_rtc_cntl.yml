@@ -20,3 +20,10 @@ RTC_CNTL:
   _derive:
     STORE[1-7]:
       _from: STORE0
+
+  _array:
+    WDTCONFIG[1-4]:
+      name: WDTCONFIG%s
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD

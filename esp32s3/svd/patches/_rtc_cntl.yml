@@ -12,3 +12,11 @@ RTC_CNTL:
   _derive:
     STORE[1-9]:
       _from: STORE0
+
+  _array:
+    WDTCONFIG[1-4]:
+      name: WDTCONFIG%s
+      description: WDT configuration register
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD

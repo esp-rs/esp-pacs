@@ -2,13 +2,10 @@ LP_WDT:
   _modify:
     CONFIG0:
       name: WDTCONFIG0
-
     FEED:
       name: WDTFEED
-
     SWD_CONFIG:
       name: SWD_CONF
-
     WPROTECT:
       name: WDTWPROTECT
 
@@ -23,13 +20,18 @@ LP_WDT:
     _modify:
       LP_WDT:
         name: WDT
-
   INT_ENA:
     _modify:
       LP_WDT:
         name: WDT
-
   INT_CLR:
     _modify:
       LP_WDT:
         name: WDT
+
+  _array:
+    CONFIG[1-4]:
+      name: WDTCONFIG%s
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD

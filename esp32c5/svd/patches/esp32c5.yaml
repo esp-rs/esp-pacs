@@ -645,6 +645,14 @@ LP_WDT:
     _modify:
       LP_WDT_INT_ST:
         name: WDT_INT_ST
+  _array:
+    CONFIG[1-4]:
+      name: WDTCONFIG%s
+      description: WDT configuration register
+      _modify:
+        WDT_STG0_HOLD:
+          name: HOLD
+
 
 RSA:
   _modify:

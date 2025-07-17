@@ -39,10 +39,7 @@ pub struct RegisterBlock {
     dig_pwc: DIG_PWC,
     dig_iso: DIG_ISO,
     wdtconfig0: WDTCONFIG0,
-    wdtconfig1: WDTCONFIG1,
-    wdtconfig2: WDTCONFIG2,
-    wdtconfig3: WDTCONFIG3,
-    wdtconfig4: WDTCONFIG4,
+    wdtconfig: [WDTCONFIG; 4],
     wdtfeed: WDTFEED,
     wdtwprotect: WDTWPROTECT,
     swd_conf: SWD_CONF,
@@ -76,7 +73,7 @@ pub struct RegisterBlock {
     sensor_ctrl: SENSOR_CTRL,
     dbg_sar_sel: DBG_SAR_SEL,
     pg_ctrl: PG_CTRL,
-    _reserved74: [u8; 0xd4],
+    _reserved71: [u8; 0xd4],
     date: DATE,
 }
 impl RegisterBlock {
@@ -265,25 +262,38 @@ impl RegisterBlock {
     pub const fn wdtconfig0(&self) -> &WDTCONFIG0 {
         &self.wdtconfig0
     }
+    #[doc = "0x94..0xa4 - rtc configure register"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WDTCONFIG1` register.</div>"]
+    #[inline(always)]
+    pub const fn wdtconfig(&self, n: usize) -> &WDTCONFIG {
+        &self.wdtconfig[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x94..0xa4 - rtc configure register"]
+    #[inline(always)]
+    pub fn wdtconfig_iter(&self) -> impl Iterator<Item = &WDTCONFIG> {
+        self.wdtconfig.iter()
+    }
     #[doc = "0x94 - rtc configure register"]
     #[inline(always)]
-    pub const fn wdtconfig1(&self) -> &WDTCONFIG1 {
-        &self.wdtconfig1
+    pub const fn wdtconfig1(&self) -> &WDTCONFIG {
+        self.wdtconfig(0)
     }
     #[doc = "0x98 - rtc configure register"]
     #[inline(always)]
-    pub const fn wdtconfig2(&self) -> &WDTCONFIG2 {
-        &self.wdtconfig2
+    pub const fn wdtconfig2(&self) -> &WDTCONFIG {
+        self.wdtconfig(1)
     }
     #[doc = "0x9c - rtc configure register"]
     #[inline(always)]
-    pub const fn wdtconfig3(&self) -> &WDTCONFIG3 {
-        &self.wdtconfig3
+    pub const fn wdtconfig3(&self) -> &WDTCONFIG {
+        self.wdtconfig(2)
     }
     #[doc = "0xa0 - rtc configure register"]
     #[inline(always)]
-    pub const fn wdtconfig4(&self) -> &WDTCONFIG4 {
-        &self.wdtconfig4
+    pub const fn wdtconfig4(&self) -> &WDTCONFIG {
+        self.wdtconfig(3)
     }
     #[doc = "0xa4 - rtc configure register"]
     #[inline(always)]
@@ -598,22 +608,10 @@ pub mod dig_iso;
 pub type WDTCONFIG0 = crate::Reg<wdtconfig0::WDTCONFIG0_SPEC>;
 #[doc = "rtc configure register"]
 pub mod wdtconfig0;
-#[doc = "WDTCONFIG1 (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig1`] module"]
-pub type WDTCONFIG1 = crate::Reg<wdtconfig1::WDTCONFIG1_SPEC>;
+#[doc = "WDTCONFIG (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig`] module"]
+pub type WDTCONFIG = crate::Reg<wdtconfig::WDTCONFIG_SPEC>;
 #[doc = "rtc configure register"]
-pub mod wdtconfig1;
-#[doc = "WDTCONFIG2 (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig2`] module"]
-pub type WDTCONFIG2 = crate::Reg<wdtconfig2::WDTCONFIG2_SPEC>;
-#[doc = "rtc configure register"]
-pub mod wdtconfig2;
-#[doc = "WDTCONFIG3 (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig3`] module"]
-pub type WDTCONFIG3 = crate::Reg<wdtconfig3::WDTCONFIG3_SPEC>;
-#[doc = "rtc configure register"]
-pub mod wdtconfig3;
-#[doc = "WDTCONFIG4 (rw) register accessor: rtc configure register\n\nYou can [`read`](crate::Reg::read) this register and get [`wdtconfig4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtconfig4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtconfig4`] module"]
-pub type WDTCONFIG4 = crate::Reg<wdtconfig4::WDTCONFIG4_SPEC>;
-#[doc = "rtc configure register"]
-pub mod wdtconfig4;
+pub mod wdtconfig;
 #[doc = "WDTFEED (w) register accessor: rtc configure register\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wdtfeed::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wdtfeed`] module"]
 pub type WDTFEED = crate::Reg<wdtfeed::WDTFEED_SPEC>;
 #[doc = "rtc configure register"]

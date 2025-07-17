@@ -1,6 +1,6 @@
 _svd: "../esp32c61.base.svd"
 
-_include: 
+_include:
   - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
   - ../../../common_patches/slc.yaml
@@ -9,7 +9,7 @@ _include:
 TIMG0:
   "*":
     _strip: "T_"
-    
+
   _include: ../../../common_patches/tim_collect.yaml
 
 _modify:
