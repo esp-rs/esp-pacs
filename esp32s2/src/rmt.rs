@@ -400,7 +400,5 @@ pub mod ref_cnt_rst;
 pub type CH_RX_CARRIER_RM = crate::Reg<ch_rx_carrier_rm::CH_RX_CARRIER_RM_SPEC>;
 #[doc = "Channel %s carrier remove register"]
 pub mod ch_rx_carrier_rm;
-#[doc = "DATE (rw) register accessor: RMT version register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "RMT version register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

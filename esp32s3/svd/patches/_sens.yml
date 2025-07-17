@@ -21,3 +21,18 @@ SENS:
     _strip: "SAR_"
   "SAR_ATTEN1":
     _strip: "SAR_"
+
+  _modify:
+    SAR_TOUCH_STATUS0:
+      name: SAR_TOUCH_SCAN_STATUS
+    SAR_TOUCH_STATUS16:
+      name: SAR_TOUCH_APPR_STATUS
+
+  _array:
+    SAR_TOUCH_STATUS*:
+      description: Touch channel status
+      _strip: "SAR_TOUCH_PAD1_"
+    SAR_TOUCH_THRES*:
+      _modify:
+        SAR_TOUCH_OUT_TH1:
+          name: THRESHOLD

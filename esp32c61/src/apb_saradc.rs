@@ -282,7 +282,5 @@ pub mod tsens_wake;
 pub type TSENS_SAMPLE = crate::Reg<tsens_sample::TSENS_SAMPLE_SPEC>;
 #[doc = "digital tsens configure register"]
 pub mod tsens_sample;
-#[doc = "CTRL_DATE (rw) register accessor: version\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl_date`] module"]
-pub type CTRL_DATE = crate::Reg<ctrl_date::CTRL_DATE_SPEC>;
-#[doc = "version"]
-pub mod ctrl_date;
+pub use crate::dma::date as ctrl_date;
+pub use crate::dma::DATE as CTRL_DATE;

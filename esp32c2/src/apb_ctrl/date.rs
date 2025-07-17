@@ -2,30 +2,13 @@
 pub type R = crate::R<DATE_SPEC>;
 #[doc = "Register `DATE` writer"]
 pub type W = crate::W<DATE_SPEC>;
-#[doc = "Field `DATE` reader - reg_dateVersion control"]
-pub type DATE_R = crate::FieldReader<u32>;
-#[doc = "Field `DATE` writer - reg_dateVersion control"]
-pub type DATE_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
-impl R {
-    #[doc = "Bits 0:31 - reg_dateVersion control"]
-    #[inline(always)]
-    pub fn date(&self) -> DATE_R {
-        DATE_R::new(self.bits)
-    }
-}
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("DATE").field("date", &self.date()).finish()
+        write!(f, "{}", self.bits())
     }
 }
-impl W {
-    #[doc = "Bits 0:31 - reg_dateVersion control"]
-    #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
-        DATE_W::new(self, 0)
-    }
-}
+impl W {}
 #[doc = "APB_CTRL_DATE_REG\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DATE_SPEC;
 impl crate::RegisterSpec for DATE_SPEC {
@@ -37,7 +20,5 @@ impl crate::Readable for DATE_SPEC {}
 impl crate::Writable for DATE_SPEC {
     type Safety = crate::Unsafe;
 }
-#[doc = "`reset()` method sets DATE to value 0x0210_6080"]
-impl crate::Resettable for DATE_SPEC {
-    const RESET_VALUE: u32 = 0x0210_6080;
-}
+#[doc = "`reset()` method sets DATE to value 0"]
+impl crate::Resettable for DATE_SPEC {}

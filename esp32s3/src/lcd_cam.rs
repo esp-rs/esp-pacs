@@ -185,7 +185,5 @@ pub mod lc_dma_int_st;
 pub type LC_DMA_INT_CLR = crate::Reg<lc_dma_int_clr::LC_DMA_INT_CLR_SPEC>;
 #[doc = "LCD_CAM GDMA interrupt clear register"]
 pub mod lc_dma_int_clr;
-#[doc = "LC_REG_DATE (rw) register accessor: Version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`lc_reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`lc_reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@lc_reg_date`] module"]
-pub type LC_REG_DATE = crate::Reg<lc_reg_date::LC_REG_DATE_SPEC>;
-#[doc = "Version control register"]
-pub mod lc_reg_date;
+pub use crate::aes::date as lc_reg_date;
+pub use crate::aes::DATE as LC_REG_DATE;

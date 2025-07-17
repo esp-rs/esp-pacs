@@ -27,38 +27,11 @@ pub struct RegisterBlock {
     sar_i2c_ctrl: SAR_I2C_CTRL,
     sar_touch_conf: SAR_TOUCH_CONF,
     sar_touch_denoise: SAR_TOUCH_DENOISE,
-    sar_touch_thres1: SAR_TOUCH_THRES1,
-    sar_touch_thres2: SAR_TOUCH_THRES2,
-    sar_touch_thres3: SAR_TOUCH_THRES3,
-    sar_touch_thres4: SAR_TOUCH_THRES4,
-    sar_touch_thres5: SAR_TOUCH_THRES5,
-    sar_touch_thres6: SAR_TOUCH_THRES6,
-    sar_touch_thres7: SAR_TOUCH_THRES7,
-    sar_touch_thres8: SAR_TOUCH_THRES8,
-    sar_touch_thres9: SAR_TOUCH_THRES9,
-    sar_touch_thres10: SAR_TOUCH_THRES10,
-    sar_touch_thres11: SAR_TOUCH_THRES11,
-    sar_touch_thres12: SAR_TOUCH_THRES12,
-    sar_touch_thres13: SAR_TOUCH_THRES13,
-    sar_touch_thres14: SAR_TOUCH_THRES14,
+    sar_touch_thres: [SAR_TOUCH_THRES; 14],
     sar_touch_chn_st: SAR_TOUCH_CHN_ST,
-    sar_touch_status0: SAR_TOUCH_STATUS0,
-    sar_touch_status1: SAR_TOUCH_STATUS1,
-    sar_touch_status2: SAR_TOUCH_STATUS2,
-    sar_touch_status3: SAR_TOUCH_STATUS3,
-    sar_touch_status4: SAR_TOUCH_STATUS4,
-    sar_touch_status5: SAR_TOUCH_STATUS5,
-    sar_touch_status6: SAR_TOUCH_STATUS6,
-    sar_touch_status7: SAR_TOUCH_STATUS7,
-    sar_touch_status8: SAR_TOUCH_STATUS8,
-    sar_touch_status9: SAR_TOUCH_STATUS9,
-    sar_touch_status10: SAR_TOUCH_STATUS10,
-    sar_touch_status11: SAR_TOUCH_STATUS11,
-    sar_touch_status12: SAR_TOUCH_STATUS12,
-    sar_touch_status13: SAR_TOUCH_STATUS13,
-    sar_touch_status14: SAR_TOUCH_STATUS14,
-    sar_touch_status15: SAR_TOUCH_STATUS15,
-    sar_touch_status16: SAR_TOUCH_STATUS16,
+    sar_touch_scan_status: SAR_TOUCH_SCAN_STATUS,
+    sar_touch_status: [SAR_TOUCH_STATUS; 15],
+    sar_touch_appr_status: SAR_TOUCH_APPR_STATUS,
     sar_cocpu_state: SAR_COCPU_STATE,
     sar_cocpu_int_raw: SAR_COCPU_INT_RAW,
     sar_cocpu_int_ena: SAR_COCPU_INT_ENA,
@@ -72,7 +45,7 @@ pub struct RegisterBlock {
     sar_cocpu_int_ena_w1ts: SAR_COCPU_INT_ENA_W1TS,
     sar_cocpu_int_ena_w1tc: SAR_COCPU_INT_ENA_W1TC,
     sar_debug_conf: SAR_DEBUG_CONF,
-    _reserved70: [u8; 0xe4],
+    _reserved43: [u8; 0xe4],
     sar_sardate: SAR_SARDATE,
 }
 impl RegisterBlock {
@@ -201,75 +174,88 @@ impl RegisterBlock {
     pub const fn sar_touch_denoise(&self) -> &SAR_TOUCH_DENOISE {
         &self.sar_touch_denoise
     }
+    #[doc = "0x64..0x9c - configure touch thres of touch pad"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `SAR_TOUCH_THRES1` register.</div>"]
+    #[inline(always)]
+    pub const fn sar_touch_thres(&self, n: usize) -> &SAR_TOUCH_THRES {
+        &self.sar_touch_thres[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x64..0x9c - configure touch thres of touch pad"]
+    #[inline(always)]
+    pub fn sar_touch_thres_iter(&self) -> impl Iterator<Item = &SAR_TOUCH_THRES> {
+        self.sar_touch_thres.iter()
+    }
     #[doc = "0x64 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres1(&self) -> &SAR_TOUCH_THRES1 {
-        &self.sar_touch_thres1
+    pub const fn sar_touch_thres1(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(0)
     }
     #[doc = "0x68 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres2(&self) -> &SAR_TOUCH_THRES2 {
-        &self.sar_touch_thres2
+    pub const fn sar_touch_thres2(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(1)
     }
     #[doc = "0x6c - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres3(&self) -> &SAR_TOUCH_THRES3 {
-        &self.sar_touch_thres3
+    pub const fn sar_touch_thres3(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(2)
     }
     #[doc = "0x70 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres4(&self) -> &SAR_TOUCH_THRES4 {
-        &self.sar_touch_thres4
+    pub const fn sar_touch_thres4(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(3)
     }
     #[doc = "0x74 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres5(&self) -> &SAR_TOUCH_THRES5 {
-        &self.sar_touch_thres5
+    pub const fn sar_touch_thres5(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(4)
     }
     #[doc = "0x78 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres6(&self) -> &SAR_TOUCH_THRES6 {
-        &self.sar_touch_thres6
+    pub const fn sar_touch_thres6(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(5)
     }
     #[doc = "0x7c - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres7(&self) -> &SAR_TOUCH_THRES7 {
-        &self.sar_touch_thres7
+    pub const fn sar_touch_thres7(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(6)
     }
     #[doc = "0x80 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres8(&self) -> &SAR_TOUCH_THRES8 {
-        &self.sar_touch_thres8
+    pub const fn sar_touch_thres8(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(7)
     }
     #[doc = "0x84 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres9(&self) -> &SAR_TOUCH_THRES9 {
-        &self.sar_touch_thres9
+    pub const fn sar_touch_thres9(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(8)
     }
     #[doc = "0x88 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres10(&self) -> &SAR_TOUCH_THRES10 {
-        &self.sar_touch_thres10
+    pub const fn sar_touch_thres10(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(9)
     }
     #[doc = "0x8c - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres11(&self) -> &SAR_TOUCH_THRES11 {
-        &self.sar_touch_thres11
+    pub const fn sar_touch_thres11(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(10)
     }
     #[doc = "0x90 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres12(&self) -> &SAR_TOUCH_THRES12 {
-        &self.sar_touch_thres12
+    pub const fn sar_touch_thres12(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(11)
     }
     #[doc = "0x94 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres13(&self) -> &SAR_TOUCH_THRES13 {
-        &self.sar_touch_thres13
+    pub const fn sar_touch_thres13(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(12)
     }
     #[doc = "0x98 - configure touch thres of touch pad"]
     #[inline(always)]
-    pub const fn sar_touch_thres14(&self) -> &SAR_TOUCH_THRES14 {
-        &self.sar_touch_thres14
+    pub const fn sar_touch_thres14(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(13)
     }
     #[doc = "0x9c - Get touch channel status"]
     #[inline(always)]
@@ -278,88 +264,101 @@ impl RegisterBlock {
     }
     #[doc = "0xa0 - get touch scan status"]
     #[inline(always)]
-    pub const fn sar_touch_status0(&self) -> &SAR_TOUCH_STATUS0 {
-        &self.sar_touch_status0
+    pub const fn sar_touch_scan_status(&self) -> &SAR_TOUCH_SCAN_STATUS {
+        &self.sar_touch_scan_status
     }
-    #[doc = "0xa4 - touch channel status of touch pad 1"]
+    #[doc = "0xa4..0xe0 - Touch channel status"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `SAR_TOUCH_STATUS1` register.</div>"]
     #[inline(always)]
-    pub const fn sar_touch_status1(&self) -> &SAR_TOUCH_STATUS1 {
-        &self.sar_touch_status1
+    pub const fn sar_touch_status(&self, n: usize) -> &SAR_TOUCH_STATUS {
+        &self.sar_touch_status[n]
     }
-    #[doc = "0xa8 - touch channel status of touch pad 2"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xa4..0xe0 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status2(&self) -> &SAR_TOUCH_STATUS2 {
-        &self.sar_touch_status2
+    pub fn sar_touch_status_iter(&self) -> impl Iterator<Item = &SAR_TOUCH_STATUS> {
+        self.sar_touch_status.iter()
     }
-    #[doc = "0xac - touch channel status of touch pad 3"]
+    #[doc = "0xa4 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status3(&self) -> &SAR_TOUCH_STATUS3 {
-        &self.sar_touch_status3
+    pub const fn sar_touch_status1(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(0)
     }
-    #[doc = "0xb0 - touch channel status of touch pad 4"]
+    #[doc = "0xa8 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status4(&self) -> &SAR_TOUCH_STATUS4 {
-        &self.sar_touch_status4
+    pub const fn sar_touch_status2(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(1)
     }
-    #[doc = "0xb4 - touch channel status of touch pad 5"]
+    #[doc = "0xac - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status5(&self) -> &SAR_TOUCH_STATUS5 {
-        &self.sar_touch_status5
+    pub const fn sar_touch_status3(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(2)
     }
-    #[doc = "0xb8 - touch channel status of touch pad 6"]
+    #[doc = "0xb0 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status6(&self) -> &SAR_TOUCH_STATUS6 {
-        &self.sar_touch_status6
+    pub const fn sar_touch_status4(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(3)
     }
-    #[doc = "0xbc - touch channel status of touch pad 7"]
+    #[doc = "0xb4 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status7(&self) -> &SAR_TOUCH_STATUS7 {
-        &self.sar_touch_status7
+    pub const fn sar_touch_status5(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(4)
     }
-    #[doc = "0xc0 - touch channel status of touch pad 8"]
+    #[doc = "0xb8 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status8(&self) -> &SAR_TOUCH_STATUS8 {
-        &self.sar_touch_status8
+    pub const fn sar_touch_status6(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(5)
     }
-    #[doc = "0xc4 - touch channel status of touch pad 9"]
+    #[doc = "0xbc - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status9(&self) -> &SAR_TOUCH_STATUS9 {
-        &self.sar_touch_status9
+    pub const fn sar_touch_status7(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(6)
     }
-    #[doc = "0xc8 - touch channel status of touch pad 10"]
+    #[doc = "0xc0 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status10(&self) -> &SAR_TOUCH_STATUS10 {
-        &self.sar_touch_status10
+    pub const fn sar_touch_status8(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(7)
     }
-    #[doc = "0xcc - touch channel status of touch pad 11"]
+    #[doc = "0xc4 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status11(&self) -> &SAR_TOUCH_STATUS11 {
-        &self.sar_touch_status11
+    pub const fn sar_touch_status9(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(8)
     }
-    #[doc = "0xd0 - touch channel status of touch pad 12"]
+    #[doc = "0xc8 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status12(&self) -> &SAR_TOUCH_STATUS12 {
-        &self.sar_touch_status12
+    pub const fn sar_touch_status10(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(9)
     }
-    #[doc = "0xd4 - touch channel status of touch pad 13"]
+    #[doc = "0xcc - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status13(&self) -> &SAR_TOUCH_STATUS13 {
-        &self.sar_touch_status13
+    pub const fn sar_touch_status11(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(10)
     }
-    #[doc = "0xd8 - touch channel status of touch pad 14"]
+    #[doc = "0xd0 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status14(&self) -> &SAR_TOUCH_STATUS14 {
-        &self.sar_touch_status14
+    pub const fn sar_touch_status12(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(11)
     }
-    #[doc = "0xdc - touch channel status of sleep pad"]
+    #[doc = "0xd4 - Touch channel status"]
     #[inline(always)]
-    pub const fn sar_touch_status15(&self) -> &SAR_TOUCH_STATUS15 {
-        &self.sar_touch_status15
+    pub const fn sar_touch_status13(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(12)
+    }
+    #[doc = "0xd8 - Touch channel status"]
+    #[inline(always)]
+    pub const fn sar_touch_status14(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(13)
+    }
+    #[doc = "0xdc - Touch channel status"]
+    #[inline(always)]
+    pub const fn sar_touch_status15(&self) -> &SAR_TOUCH_STATUS {
+        self.sar_touch_status(14)
     }
     #[doc = "0xe0 - touch channel status of approach mode"]
     #[inline(always)]
-    pub const fn sar_touch_status16(&self) -> &SAR_TOUCH_STATUS16 {
-        &self.sar_touch_status16
+    pub const fn sar_touch_appr_status(&self) -> &SAR_TOUCH_APPR_STATUS {
+        &self.sar_touch_appr_status
     }
     #[doc = "0xe4 - get cocpu status"]
     #[inline(always)]
@@ -532,134 +531,26 @@ pub mod sar_touch_conf;
 pub type SAR_TOUCH_DENOISE = crate::Reg<sar_touch_denoise::SAR_TOUCH_DENOISE_SPEC>;
 #[doc = "configure touch controller"]
 pub mod sar_touch_denoise;
-#[doc = "SAR_TOUCH_THRES1 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres1`] module"]
-pub type SAR_TOUCH_THRES1 = crate::Reg<sar_touch_thres1::SAR_TOUCH_THRES1_SPEC>;
+#[doc = "SAR_TOUCH_THRES (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres`] module"]
+pub type SAR_TOUCH_THRES = crate::Reg<sar_touch_thres::SAR_TOUCH_THRES_SPEC>;
 #[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres1;
-#[doc = "SAR_TOUCH_THRES2 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres2`] module"]
-pub type SAR_TOUCH_THRES2 = crate::Reg<sar_touch_thres2::SAR_TOUCH_THRES2_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres2;
-#[doc = "SAR_TOUCH_THRES3 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres3`] module"]
-pub type SAR_TOUCH_THRES3 = crate::Reg<sar_touch_thres3::SAR_TOUCH_THRES3_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres3;
-#[doc = "SAR_TOUCH_THRES4 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres4`] module"]
-pub type SAR_TOUCH_THRES4 = crate::Reg<sar_touch_thres4::SAR_TOUCH_THRES4_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres4;
-#[doc = "SAR_TOUCH_THRES5 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres5`] module"]
-pub type SAR_TOUCH_THRES5 = crate::Reg<sar_touch_thres5::SAR_TOUCH_THRES5_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres5;
-#[doc = "SAR_TOUCH_THRES6 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres6`] module"]
-pub type SAR_TOUCH_THRES6 = crate::Reg<sar_touch_thres6::SAR_TOUCH_THRES6_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres6;
-#[doc = "SAR_TOUCH_THRES7 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres7`] module"]
-pub type SAR_TOUCH_THRES7 = crate::Reg<sar_touch_thres7::SAR_TOUCH_THRES7_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres7;
-#[doc = "SAR_TOUCH_THRES8 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres8`] module"]
-pub type SAR_TOUCH_THRES8 = crate::Reg<sar_touch_thres8::SAR_TOUCH_THRES8_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres8;
-#[doc = "SAR_TOUCH_THRES9 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres9`] module"]
-pub type SAR_TOUCH_THRES9 = crate::Reg<sar_touch_thres9::SAR_TOUCH_THRES9_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres9;
-#[doc = "SAR_TOUCH_THRES10 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres10::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres10::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres10`] module"]
-pub type SAR_TOUCH_THRES10 = crate::Reg<sar_touch_thres10::SAR_TOUCH_THRES10_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres10;
-#[doc = "SAR_TOUCH_THRES11 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres11::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres11::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres11`] module"]
-pub type SAR_TOUCH_THRES11 = crate::Reg<sar_touch_thres11::SAR_TOUCH_THRES11_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres11;
-#[doc = "SAR_TOUCH_THRES12 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres12::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres12::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres12`] module"]
-pub type SAR_TOUCH_THRES12 = crate::Reg<sar_touch_thres12::SAR_TOUCH_THRES12_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres12;
-#[doc = "SAR_TOUCH_THRES13 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres13::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres13::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres13`] module"]
-pub type SAR_TOUCH_THRES13 = crate::Reg<sar_touch_thres13::SAR_TOUCH_THRES13_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres13;
-#[doc = "SAR_TOUCH_THRES14 (rw) register accessor: configure touch thres of touch pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres14::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres14::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres14`] module"]
-pub type SAR_TOUCH_THRES14 = crate::Reg<sar_touch_thres14::SAR_TOUCH_THRES14_SPEC>;
-#[doc = "configure touch thres of touch pad"]
-pub mod sar_touch_thres14;
+pub mod sar_touch_thres;
 #[doc = "SAR_TOUCH_CHN_ST (rw) register accessor: Get touch channel status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_chn_st::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_chn_st::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_chn_st`] module"]
 pub type SAR_TOUCH_CHN_ST = crate::Reg<sar_touch_chn_st::SAR_TOUCH_CHN_ST_SPEC>;
 #[doc = "Get touch channel status"]
 pub mod sar_touch_chn_st;
-#[doc = "SAR_TOUCH_STATUS0 (r) register accessor: get touch scan status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status0`] module"]
-pub type SAR_TOUCH_STATUS0 = crate::Reg<sar_touch_status0::SAR_TOUCH_STATUS0_SPEC>;
+#[doc = "SAR_TOUCH_SCAN_STATUS (r) register accessor: get touch scan status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_scan_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_scan_status`] module"]
+pub type SAR_TOUCH_SCAN_STATUS = crate::Reg<sar_touch_scan_status::SAR_TOUCH_SCAN_STATUS_SPEC>;
 #[doc = "get touch scan status"]
-pub mod sar_touch_status0;
-#[doc = "SAR_TOUCH_STATUS1 (r) register accessor: touch channel status of touch pad 1\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status1`] module"]
-pub type SAR_TOUCH_STATUS1 = crate::Reg<sar_touch_status1::SAR_TOUCH_STATUS1_SPEC>;
-#[doc = "touch channel status of touch pad 1"]
-pub mod sar_touch_status1;
-#[doc = "SAR_TOUCH_STATUS2 (r) register accessor: touch channel status of touch pad 2\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status2`] module"]
-pub type SAR_TOUCH_STATUS2 = crate::Reg<sar_touch_status2::SAR_TOUCH_STATUS2_SPEC>;
-#[doc = "touch channel status of touch pad 2"]
-pub mod sar_touch_status2;
-#[doc = "SAR_TOUCH_STATUS3 (r) register accessor: touch channel status of touch pad 3\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status3`] module"]
-pub type SAR_TOUCH_STATUS3 = crate::Reg<sar_touch_status3::SAR_TOUCH_STATUS3_SPEC>;
-#[doc = "touch channel status of touch pad 3"]
-pub mod sar_touch_status3;
-#[doc = "SAR_TOUCH_STATUS4 (r) register accessor: touch channel status of touch pad 4\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status4`] module"]
-pub type SAR_TOUCH_STATUS4 = crate::Reg<sar_touch_status4::SAR_TOUCH_STATUS4_SPEC>;
-#[doc = "touch channel status of touch pad 4"]
-pub mod sar_touch_status4;
-#[doc = "SAR_TOUCH_STATUS5 (r) register accessor: touch channel status of touch pad 5\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status5`] module"]
-pub type SAR_TOUCH_STATUS5 = crate::Reg<sar_touch_status5::SAR_TOUCH_STATUS5_SPEC>;
-#[doc = "touch channel status of touch pad 5"]
-pub mod sar_touch_status5;
-#[doc = "SAR_TOUCH_STATUS6 (r) register accessor: touch channel status of touch pad 6\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status6::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status6`] module"]
-pub type SAR_TOUCH_STATUS6 = crate::Reg<sar_touch_status6::SAR_TOUCH_STATUS6_SPEC>;
-#[doc = "touch channel status of touch pad 6"]
-pub mod sar_touch_status6;
-#[doc = "SAR_TOUCH_STATUS7 (r) register accessor: touch channel status of touch pad 7\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status7::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status7`] module"]
-pub type SAR_TOUCH_STATUS7 = crate::Reg<sar_touch_status7::SAR_TOUCH_STATUS7_SPEC>;
-#[doc = "touch channel status of touch pad 7"]
-pub mod sar_touch_status7;
-#[doc = "SAR_TOUCH_STATUS8 (r) register accessor: touch channel status of touch pad 8\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status8::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status8`] module"]
-pub type SAR_TOUCH_STATUS8 = crate::Reg<sar_touch_status8::SAR_TOUCH_STATUS8_SPEC>;
-#[doc = "touch channel status of touch pad 8"]
-pub mod sar_touch_status8;
-#[doc = "SAR_TOUCH_STATUS9 (r) register accessor: touch channel status of touch pad 9\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status9::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status9`] module"]
-pub type SAR_TOUCH_STATUS9 = crate::Reg<sar_touch_status9::SAR_TOUCH_STATUS9_SPEC>;
-#[doc = "touch channel status of touch pad 9"]
-pub mod sar_touch_status9;
-#[doc = "SAR_TOUCH_STATUS10 (r) register accessor: touch channel status of touch pad 10\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status10`] module"]
-pub type SAR_TOUCH_STATUS10 = crate::Reg<sar_touch_status10::SAR_TOUCH_STATUS10_SPEC>;
-#[doc = "touch channel status of touch pad 10"]
-pub mod sar_touch_status10;
-#[doc = "SAR_TOUCH_STATUS11 (r) register accessor: touch channel status of touch pad 11\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status11::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status11`] module"]
-pub type SAR_TOUCH_STATUS11 = crate::Reg<sar_touch_status11::SAR_TOUCH_STATUS11_SPEC>;
-#[doc = "touch channel status of touch pad 11"]
-pub mod sar_touch_status11;
-#[doc = "SAR_TOUCH_STATUS12 (r) register accessor: touch channel status of touch pad 12\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status12::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status12`] module"]
-pub type SAR_TOUCH_STATUS12 = crate::Reg<sar_touch_status12::SAR_TOUCH_STATUS12_SPEC>;
-#[doc = "touch channel status of touch pad 12"]
-pub mod sar_touch_status12;
-#[doc = "SAR_TOUCH_STATUS13 (r) register accessor: touch channel status of touch pad 13\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status13::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status13`] module"]
-pub type SAR_TOUCH_STATUS13 = crate::Reg<sar_touch_status13::SAR_TOUCH_STATUS13_SPEC>;
-#[doc = "touch channel status of touch pad 13"]
-pub mod sar_touch_status13;
-#[doc = "SAR_TOUCH_STATUS14 (r) register accessor: touch channel status of touch pad 14\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status14::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status14`] module"]
-pub type SAR_TOUCH_STATUS14 = crate::Reg<sar_touch_status14::SAR_TOUCH_STATUS14_SPEC>;
-#[doc = "touch channel status of touch pad 14"]
-pub mod sar_touch_status14;
-#[doc = "SAR_TOUCH_STATUS15 (r) register accessor: touch channel status of sleep pad\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status15::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status15`] module"]
-pub type SAR_TOUCH_STATUS15 = crate::Reg<sar_touch_status15::SAR_TOUCH_STATUS15_SPEC>;
-#[doc = "touch channel status of sleep pad"]
-pub mod sar_touch_status15;
-#[doc = "SAR_TOUCH_STATUS16 (r) register accessor: touch channel status of approach mode\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status16::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status16`] module"]
-pub type SAR_TOUCH_STATUS16 = crate::Reg<sar_touch_status16::SAR_TOUCH_STATUS16_SPEC>;
+pub mod sar_touch_scan_status;
+#[doc = "SAR_TOUCH_STATUS (r) register accessor: Touch channel status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_status`] module"]
+pub type SAR_TOUCH_STATUS = crate::Reg<sar_touch_status::SAR_TOUCH_STATUS_SPEC>;
+#[doc = "Touch channel status"]
+pub mod sar_touch_status;
+#[doc = "SAR_TOUCH_APPR_STATUS (r) register accessor: touch channel status of approach mode\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_appr_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_appr_status`] module"]
+pub type SAR_TOUCH_APPR_STATUS = crate::Reg<sar_touch_appr_status::SAR_TOUCH_APPR_STATUS_SPEC>;
 #[doc = "touch channel status of approach mode"]
-pub mod sar_touch_status16;
+pub mod sar_touch_appr_status;
 #[doc = "SAR_COCPU_STATE (rw) register accessor: get cocpu status\n\nYou can [`read`](crate::Reg::read) this register and get [`sar_cocpu_state::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_cocpu_state::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_cocpu_state`] module"]
 pub type SAR_COCPU_STATE = crate::Reg<sar_cocpu_state::SAR_COCPU_STATE_SPEC>;
 #[doc = "get cocpu status"]

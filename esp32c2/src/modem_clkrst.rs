@@ -24,7 +24,7 @@ impl RegisterBlock {
     pub const fn coex_lp_clk_conf(&self) -> &COEX_LP_CLK_CONF {
         &self.coex_lp_clk_conf
     }
-    #[doc = "0x0c - "]
+    #[doc = "0x0c - APB_CTRL_DATE_REG"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(12).cast() }
@@ -56,10 +56,8 @@ pub mod coex_lp_clk_conf;
 pub type BLE_TIMER_CLK_CONF = crate::Reg<ble_timer_clk_conf::BLE_TIMER_CLK_CONF_SPEC>;
 #[doc = ""]
 pub mod ble_timer_clk_conf;
-#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = ""]
-pub mod date;
+pub use crate::apb_ctrl::date;
+pub use crate::apb_ctrl::DATE;
 #[doc = "ETM_CLK_CONF (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`etm_clk_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`etm_clk_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@etm_clk_conf`] module"]
 pub type ETM_CLK_CONF = crate::Reg<etm_clk_conf::ETM_CLK_CONF_SPEC>;
 #[doc = ""]

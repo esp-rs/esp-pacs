@@ -898,10 +898,8 @@ pub mod xts_destroy;
 pub type XTS_STATE = crate::Reg<xts_state::XTS_STATE_SPEC>;
 #[doc = "Manual Encryption physical address register"]
 pub mod xts_state;
-#[doc = "XTS_DATE (rw) register accessor: Manual Encryption version register\n\nYou can [`read`](crate::Reg::read) this register and get [`xts_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`xts_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@xts_date`] module"]
-pub type XTS_DATE = crate::Reg<xts_date::XTS_DATE_SPEC>;
-#[doc = "Manual Encryption version register"]
-pub mod xts_date;
+pub use crate::dma::date as xts_date;
+pub use crate::dma::DATE as XTS_DATE;
 #[doc = "MMU_ITEM_CONTENT (rw) register accessor: MSPI-MMU item content register\n\nYou can [`read`](crate::Reg::read) this register and get [`mmu_item_content::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mmu_item_content::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mmu_item_content`] module"]
 pub type MMU_ITEM_CONTENT = crate::Reg<mmu_item_content::MMU_ITEM_CONTENT_SPEC>;
 #[doc = "MSPI-MMU item content register"]
@@ -930,7 +928,5 @@ pub mod registerrnd_eco_high;
 pub type REGISTERRND_ECO_LOW = crate::Reg<registerrnd_eco_low::REGISTERRND_ECO_LOW_SPEC>;
 #[doc = "MSPI ECO low register"]
 pub mod registerrnd_eco_low;
-#[doc = "DATE (rw) register accessor: SPI0 version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "SPI0 version control register"]
-pub mod date;
+pub use crate::dma::date;
+pub use crate::dma::DATE;

@@ -2,32 +2,30 @@
 pub type R = crate::R<AHBLITE_MPU_TABLE_BB_SPEC>;
 #[doc = "Register `AHBLITE_MPU_TABLE_BB` writer"]
 pub type W = crate::W<AHBLITE_MPU_TABLE_BB_SPEC>;
-#[doc = "Field `BB_ACCESS_GRANT_CONFIG` reader - "]
-pub type BB_ACCESS_GRANT_CONFIG_R = crate::FieldReader;
-#[doc = "Field `BB_ACCESS_GRANT_CONFIG` writer - "]
-pub type BB_ACCESS_GRANT_CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
+#[doc = "Field `ACCESS_GRANT_CONFIG` reader - "]
+pub type ACCESS_GRANT_CONFIG_R = crate::FieldReader;
+#[doc = "Field `ACCESS_GRANT_CONFIG` writer - "]
+pub type ACCESS_GRANT_CONFIG_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn bb_access_grant_config(&self) -> BB_ACCESS_GRANT_CONFIG_R {
-        BB_ACCESS_GRANT_CONFIG_R::new((self.bits & 0x3f) as u8)
+    pub fn access_grant_config(&self) -> ACCESS_GRANT_CONFIG_R {
+        ACCESS_GRANT_CONFIG_R::new((self.bits & 0x3f) as u8)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("AHBLITE_MPU_TABLE_BB")
-            .field("bb_access_grant_config", &self.bb_access_grant_config())
+            .field("access_grant_config", &self.access_grant_config())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn bb_access_grant_config(
-        &mut self,
-    ) -> BB_ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_BB_SPEC> {
-        BB_ACCESS_GRANT_CONFIG_W::new(self, 0)
+    pub fn access_grant_config(&mut self) -> ACCESS_GRANT_CONFIG_W<AHBLITE_MPU_TABLE_BB_SPEC> {
+        ACCESS_GRANT_CONFIG_W::new(self, 0)
     }
 }
 #[doc = "\n\nYou can [`read`](crate::Reg::read) this register and get [`ahblite_mpu_table_bb::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ahblite_mpu_table_bb::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

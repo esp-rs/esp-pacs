@@ -496,18 +496,12 @@ pub mod int_clr;
 pub type STORE0 = crate::Reg<store0::STORE0_SPEC>;
 #[doc = "register description"]
 pub mod store0;
-#[doc = "STORE1 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store1`] module"]
-pub type STORE1 = crate::Reg<store1::STORE1_SPEC>;
-#[doc = "register description"]
-pub mod store1;
-#[doc = "STORE2 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store2`] module"]
-pub type STORE2 = crate::Reg<store2::STORE2_SPEC>;
-#[doc = "register description"]
-pub mod store2;
-#[doc = "STORE3 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store3`] module"]
-pub type STORE3 = crate::Reg<store3::STORE3_SPEC>;
-#[doc = "register description"]
-pub mod store3;
+pub use store0 as store1;
+pub use store0 as store2;
+pub use store0 as store3;
+pub use STORE0 as STORE1;
+pub use STORE0 as STORE2;
+pub use STORE0 as STORE3;
 #[doc = "EXT_XTL_CONF (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`ext_xtl_conf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_xtl_conf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ext_xtl_conf`] module"]
 pub type EXT_XTL_CONF = crate::Reg<ext_xtl_conf::EXT_XTL_CONF_SPEC>;
 #[doc = "register description"]
@@ -592,22 +586,14 @@ pub mod swd_wprotect;
 pub type SW_CPU_STALL = crate::Reg<sw_cpu_stall::SW_CPU_STALL_SPEC>;
 #[doc = "register description"]
 pub mod sw_cpu_stall;
-#[doc = "STORE4 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store4`] module"]
-pub type STORE4 = crate::Reg<store4::STORE4_SPEC>;
-#[doc = "register description"]
-pub mod store4;
-#[doc = "STORE5 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store5`] module"]
-pub type STORE5 = crate::Reg<store5::STORE5_SPEC>;
-#[doc = "register description"]
-pub mod store5;
-#[doc = "STORE6 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store6`] module"]
-pub type STORE6 = crate::Reg<store6::STORE6_SPEC>;
-#[doc = "register description"]
-pub mod store6;
-#[doc = "STORE7 (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`store7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@store7`] module"]
-pub type STORE7 = crate::Reg<store7::STORE7_SPEC>;
-#[doc = "register description"]
-pub mod store7;
+pub use store0 as store4;
+pub use store0 as store5;
+pub use store0 as store6;
+pub use store0 as store7;
+pub use STORE0 as STORE4;
+pub use STORE0 as STORE5;
+pub use STORE0 as STORE6;
+pub use STORE0 as STORE7;
 #[doc = "LOW_POWER_ST (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`low_power_st::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`low_power_st::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@low_power_st`] module"]
 pub type LOW_POWER_ST = crate::Reg<low_power_st::LOW_POWER_ST_SPEC>;
 #[doc = "register description"]
@@ -692,7 +678,5 @@ pub mod cntl_sensor_ctrl;
 pub type CNTL_DBG_SAR_SEL = crate::Reg<cntl_dbg_sar_sel::CNTL_DBG_SAR_SEL_SPEC>;
 #[doc = "register description"]
 pub mod cntl_dbg_sar_sel;
-#[doc = "CNTL_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`cntl_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cntl_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cntl_date`] module"]
-pub type CNTL_DATE = crate::Reg<cntl_date::CNTL_DATE_SPEC>;
-#[doc = "register description"]
-pub mod cntl_date;
+pub use crate::apb_ctrl::date as cntl_date;
+pub use crate::apb_ctrl::DATE as CNTL_DATE;

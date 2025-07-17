@@ -2,30 +2,30 @@
 pub type R = crate::R<STORE0_SPEC>;
 #[doc = "Register `STORE0` writer"]
 pub type W = crate::W<STORE0_SPEC>;
-#[doc = "Field `LP_AON_STORE0` reader - store the software massege0 in always-on field"]
-pub type LP_AON_STORE0_R = crate::FieldReader<u32>;
-#[doc = "Field `LP_AON_STORE0` writer - store the software massege0 in always-on field"]
-pub type LP_AON_STORE0_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+#[doc = "Field `DATA` reader - store the software massege0 in always-on field"]
+pub type DATA_R = crate::FieldReader<u32>;
+#[doc = "Field `DATA` writer - store the software massege0 in always-on field"]
+pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
     #[doc = "Bits 0:31 - store the software massege0 in always-on field"]
     #[inline(always)]
-    pub fn lp_aon_store0(&self) -> LP_AON_STORE0_R {
-        LP_AON_STORE0_R::new(self.bits)
+    pub fn data(&self) -> DATA_R {
+        DATA_R::new(self.bits)
     }
 }
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("STORE0")
-            .field("lp_aon_store0", &self.lp_aon_store0())
+            .field("data", &self.data())
             .finish()
     }
 }
 impl W {
     #[doc = "Bits 0:31 - store the software massege0 in always-on field"]
     #[inline(always)]
-    pub fn lp_aon_store0(&mut self) -> LP_AON_STORE0_W<STORE0_SPEC> {
-        LP_AON_STORE0_W::new(self, 0)
+    pub fn data(&mut self) -> DATA_W<STORE0_SPEC> {
+        DATA_W::new(self, 0)
     }
 }
 #[doc = "store the software massege0 in always-on field\n\nYou can [`read`](crate::Reg::read) this register and get [`store0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`store0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

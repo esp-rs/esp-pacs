@@ -162,7 +162,5 @@ pub mod rx_state;
 pub type SYS = crate::Reg<sys::SYS_SPEC>;
 #[doc = "Control and configuration registers"]
 pub mod sys;
-#[doc = "VERSION (rw) register accessor: Control and configuration registers\n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
-pub type VERSION = crate::Reg<version::VERSION_SPEC>;
-#[doc = "Control and configuration registers"]
-pub mod version;
+pub use crate::aes::date as version;
+pub use crate::aes::DATE as VERSION;

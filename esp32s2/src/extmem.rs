@@ -829,7 +829,5 @@ pub mod cache_conf_misc;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-#[doc = "PRO_EXTMEM_REG_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`pro_extmem_reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pro_extmem_reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pro_extmem_reg_date`] module"]
-pub type PRO_EXTMEM_REG_DATE = crate::Reg<pro_extmem_reg_date::PRO_EXTMEM_REG_DATE_SPEC>;
-#[doc = "register description"]
-pub mod pro_extmem_reg_date;
+pub use crate::aes::date as pro_extmem_reg_date;
+pub use crate::aes::DATE as PRO_EXTMEM_REG_DATE;

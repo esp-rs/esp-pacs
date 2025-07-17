@@ -3,6 +3,7 @@ _svd: ../esp32c2.base.svd
 _include:
   - "_apb_saradc.yml"
   - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ecc.yml"
   - "_gpio.yml"
@@ -79,6 +80,13 @@ APB_CTRL:
         description: "Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."
         bitOffset: 27
         bitWidth: 1
+  _derive:
+    FLASH_ACE[1-3]_ADDR:
+      _from: FLASH_ACE0_ADDR
+    FLASH_ACE[1-3]_ATTR:
+      _from: FLASH_ACE0_ATTR
+    FLASH_ACE[1-3]_SIZE:
+      _from: FLASH_ACE0_SIZE
 
 ECC:
   _include: ../../../common_patches/ecc_int_strip.yaml
@@ -99,6 +107,31 @@ SYSTIMER:
   _include:
     - ../../../common_patches/int_strip.yaml
     - ../../../common_patches/systimer.yaml
+
+SYSTEM:
+  _include: ../../../common_patches/sw_interrupts.yaml
+  COMB_PVT_ERR_LVT_SITE0:
+    _modify:
+      COMB_TIMING_ERR_CNT_LVT_SITE0:
+        name: ERR_CNT
+        description: "Error counter"
+
+  COMB_PVT_LVT_CONF:
+    _strip_end: "_LVT"
+
+  _derive:
+    COMB_PVT_NVT_CONF:
+      _from: COMB_PVT_LVT_CONF
+    COMB_PVT_HVT_CONF:
+      _from: COMB_PVT_LVT_CONF
+    # These are all counters with the same format
+    COMB_PVT_ERR_LVT_SITE[1-9]:
+      _from: COMB_PVT_ERR_LVT_SITE0
+    COMB_PVT_ERR_NVT_SITE?:
+      _from: COMB_PVT_ERR_LVT_SITE0
+    COMB_PVT_ERR_HVT_SITE?:
+      _from: COMB_PVT_ERR_LVT_SITE0
+
 
 _add:
   I2C_ANA_MST:

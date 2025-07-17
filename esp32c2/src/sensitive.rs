@@ -184,7 +184,5 @@ pub mod xts_aes_key_update;
 pub type CLOCK_GATE = crate::Reg<clock_gate::CLOCK_GATE_SPEC>;
 #[doc = "register description"]
 pub mod clock_gate;
-#[doc = "SENSITIVE_REG_DATE (rw) register accessor: register description\n\nYou can [`read`](crate::Reg::read) this register and get [`sensitive_reg_date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sensitive_reg_date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sensitive_reg_date`] module"]
-pub type SENSITIVE_REG_DATE = crate::Reg<sensitive_reg_date::SENSITIVE_REG_DATE_SPEC>;
-#[doc = "register description"]
-pub mod sensitive_reg_date;
+pub use crate::apb_ctrl::date as sensitive_reg_date;
+pub use crate::apb_ctrl::DATE as SENSITIVE_REG_DATE;

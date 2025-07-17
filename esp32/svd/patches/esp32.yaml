@@ -3,6 +3,7 @@ _svd: ../esp32.base.svd
 _include:
   - ../../../common_patches/twai.yaml
   - "_apb_ctrl.yml"
+  - "_date.yml"
   - "_emac.yml"
   - "_gpio_sd.yml"
   - "_gpio.yml"
@@ -103,10 +104,11 @@ LEDC:
 SENS:
   _include: ../../../common_patches/sens.yaml
 
+  _array:
+    SAR_TOUCH_OUT*: {}
+    SAR_TOUCH_THRES*: {}
+
 SPI0:
-  _modify:
-    DATE:
-      access: read-write
   USER1:
     _modify:
       USR_ADDR_BITLEN:
@@ -240,6 +242,16 @@ DPORT:
       size: 32
       reset-value: 16
 
+  AHBLITE_MPU_TABLE_BB:
+    _strip:
+      - BB_
+
+  _derive:
+    AHBLITE_MPU_TABLE_BT:
+      _from: AHBLITE_MPU_TABLE_BB
+    AHBLITE_MPU_TABLE_[^B]*:
+      _from: AHBLITE_MPU_TABLE_BB
+
   PERIP_CLK_EN:
     _modify:
       I2C0_EXT0_CLK_EN:
@@ -289,3 +301,12 @@ DPORT:
       name: CORE_0_INTR_STATUS%s
     APP_INTR_STATUS_*:
       name: CORE_1_INTR_STATUS%s
+    DMMU_TABLE*: {}
+    IMMU_TABLE*: {}
+    SHROM_MPU_TABLE*: {}
+    PRO_CACHE_LOCK_?_ADDR:
+      name: PRO_CACHE_LOCK_ADDR%s
+    APP_CACHE_LOCK_?_ADDR:
+      name: APP_CACHE_LOCK_ADDR%s
+
+  _include: ../../../common_patches/sw_interrupts.yaml

@@ -240,7 +240,7 @@ impl RegisterBlock {
     pub const fn front_end_mem_pd(&self) -> &FRONT_END_MEM_PD {
         &self.front_end_mem_pd
     }
-    #[doc = "0x3fc - "]
+    #[doc = "0x3fc - Version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
@@ -270,50 +270,32 @@ pub mod ext_mem_pms_lock;
 pub type FLASH_ACE0_ATTR = crate::Reg<flash_ace0_attr::FLASH_ACE0_ATTR_SPEC>;
 #[doc = ""]
 pub mod flash_ace0_attr;
-#[doc = "FLASH_ACE1_ATTR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace1_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace1_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace1_attr`] module"]
-pub type FLASH_ACE1_ATTR = crate::Reg<flash_ace1_attr::FLASH_ACE1_ATTR_SPEC>;
-#[doc = ""]
-pub mod flash_ace1_attr;
-#[doc = "FLASH_ACE2_ATTR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace2_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace2_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace2_attr`] module"]
-pub type FLASH_ACE2_ATTR = crate::Reg<flash_ace2_attr::FLASH_ACE2_ATTR_SPEC>;
-#[doc = ""]
-pub mod flash_ace2_attr;
-#[doc = "FLASH_ACE3_ATTR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace3_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace3_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace3_attr`] module"]
-pub type FLASH_ACE3_ATTR = crate::Reg<flash_ace3_attr::FLASH_ACE3_ATTR_SPEC>;
-#[doc = ""]
-pub mod flash_ace3_attr;
+pub use flash_ace0_attr as flash_ace1_attr;
+pub use flash_ace0_attr as flash_ace2_attr;
+pub use flash_ace0_attr as flash_ace3_attr;
+pub use FLASH_ACE0_ATTR as FLASH_ACE1_ATTR;
+pub use FLASH_ACE0_ATTR as FLASH_ACE2_ATTR;
+pub use FLASH_ACE0_ATTR as FLASH_ACE3_ATTR;
 #[doc = "FLASH_ACE0_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace0_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace0_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace0_addr`] module"]
 pub type FLASH_ACE0_ADDR = crate::Reg<flash_ace0_addr::FLASH_ACE0_ADDR_SPEC>;
 #[doc = ""]
 pub mod flash_ace0_addr;
-#[doc = "FLASH_ACE1_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace1_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace1_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace1_addr`] module"]
-pub type FLASH_ACE1_ADDR = crate::Reg<flash_ace1_addr::FLASH_ACE1_ADDR_SPEC>;
-#[doc = ""]
-pub mod flash_ace1_addr;
-#[doc = "FLASH_ACE2_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace2_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace2_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace2_addr`] module"]
-pub type FLASH_ACE2_ADDR = crate::Reg<flash_ace2_addr::FLASH_ACE2_ADDR_SPEC>;
-#[doc = ""]
-pub mod flash_ace2_addr;
-#[doc = "FLASH_ACE3_ADDR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace3_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace3_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace3_addr`] module"]
-pub type FLASH_ACE3_ADDR = crate::Reg<flash_ace3_addr::FLASH_ACE3_ADDR_SPEC>;
-#[doc = ""]
-pub mod flash_ace3_addr;
+pub use flash_ace0_addr as flash_ace1_addr;
+pub use flash_ace0_addr as flash_ace2_addr;
+pub use flash_ace0_addr as flash_ace3_addr;
+pub use FLASH_ACE0_ADDR as FLASH_ACE1_ADDR;
+pub use FLASH_ACE0_ADDR as FLASH_ACE2_ADDR;
+pub use FLASH_ACE0_ADDR as FLASH_ACE3_ADDR;
 #[doc = "FLASH_ACE0_SIZE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace0_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace0_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace0_size`] module"]
 pub type FLASH_ACE0_SIZE = crate::Reg<flash_ace0_size::FLASH_ACE0_SIZE_SPEC>;
 #[doc = ""]
 pub mod flash_ace0_size;
-#[doc = "FLASH_ACE1_SIZE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace1_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace1_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace1_size`] module"]
-pub type FLASH_ACE1_SIZE = crate::Reg<flash_ace1_size::FLASH_ACE1_SIZE_SPEC>;
-#[doc = ""]
-pub mod flash_ace1_size;
-#[doc = "FLASH_ACE2_SIZE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace2_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace2_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace2_size`] module"]
-pub type FLASH_ACE2_SIZE = crate::Reg<flash_ace2_size::FLASH_ACE2_SIZE_SPEC>;
-#[doc = ""]
-pub mod flash_ace2_size;
-#[doc = "FLASH_ACE3_SIZE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`flash_ace3_size::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flash_ace3_size::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@flash_ace3_size`] module"]
-pub type FLASH_ACE3_SIZE = crate::Reg<flash_ace3_size::FLASH_ACE3_SIZE_SPEC>;
-#[doc = ""]
-pub mod flash_ace3_size;
+pub use flash_ace0_size as flash_ace1_size;
+pub use flash_ace0_size as flash_ace2_size;
+pub use flash_ace0_size as flash_ace3_size;
+pub use FLASH_ACE0_SIZE as FLASH_ACE1_SIZE;
+pub use FLASH_ACE0_SIZE as FLASH_ACE2_SIZE;
+pub use FLASH_ACE0_SIZE as FLASH_ACE3_SIZE;
 #[doc = "SRAM_ACE0_ATTR (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sram_ace0_attr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sram_ace0_attr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sram_ace0_attr`] module"]
 pub type SRAM_ACE0_ATTR = crate::Reg<sram_ace0_attr::SRAM_ACE0_ATTR_SPEC>;
 #[doc = ""]
@@ -402,7 +384,5 @@ pub mod wifi_rst_en;
 pub type FRONT_END_MEM_PD = crate::Reg<front_end_mem_pd::FRONT_END_MEM_PD_SPEC>;
 #[doc = ""]
 pub mod front_end_mem_pd;
-#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = ""]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;

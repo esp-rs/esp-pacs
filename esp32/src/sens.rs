@@ -25,25 +25,17 @@ pub struct RegisterBlock {
     sar_i2c_ctrl: SAR_I2C_CTRL,
     sar_meas_start1: SAR_MEAS_START1,
     sar_touch_ctrl1: SAR_TOUCH_CTRL1,
-    sar_touch_thres1: SAR_TOUCH_THRES1,
-    sar_touch_thres2: SAR_TOUCH_THRES2,
-    sar_touch_thres3: SAR_TOUCH_THRES3,
-    sar_touch_thres4: SAR_TOUCH_THRES4,
-    sar_touch_thres5: SAR_TOUCH_THRES5,
-    sar_touch_out1: SAR_TOUCH_OUT1,
-    sar_touch_out2: SAR_TOUCH_OUT2,
-    sar_touch_out3: SAR_TOUCH_OUT3,
-    sar_touch_out4: SAR_TOUCH_OUT4,
-    sar_touch_out5: SAR_TOUCH_OUT5,
+    sar_touch_thres: [SAR_TOUCH_THRES; 5],
+    sar_touch_out: [SAR_TOUCH_OUT; 5],
     sar_touch_ctrl2: SAR_TOUCH_CTRL2,
-    _reserved34: [u8; 0x04],
+    _reserved26: [u8; 0x04],
     sar_touch_enable: SAR_TOUCH_ENABLE,
     sar_read_ctrl2: SAR_READ_CTRL2,
     sar_meas_start2: SAR_MEAS_START2,
     sar_dac_ctrl1: SAR_DAC_CTRL1,
     sar_dac_ctrl2: SAR_DAC_CTRL2,
     sar_meas_ctrl2: SAR_MEAS_CTRL2,
-    _reserved40: [u8; 0x54],
+    _reserved32: [u8; 0x54],
     sar_nouse: SAR_NOUSE,
     sardate: SARDATE,
 }
@@ -163,55 +155,81 @@ impl RegisterBlock {
     pub const fn sar_touch_ctrl1(&self) -> &SAR_TOUCH_CTRL1 {
         &self.sar_touch_ctrl1
     }
-    #[doc = "0x5c - "]
+    #[doc = "0x5c..0x70 - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `SAR_TOUCH_THRES1` register.</div>"]
     #[inline(always)]
-    pub const fn sar_touch_thres1(&self) -> &SAR_TOUCH_THRES1 {
-        &self.sar_touch_thres1
+    pub const fn sar_touch_thres(&self, n: usize) -> &SAR_TOUCH_THRES {
+        &self.sar_touch_thres[n]
     }
-    #[doc = "0x60 - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x5c..0x70 - "]
     #[inline(always)]
-    pub const fn sar_touch_thres2(&self) -> &SAR_TOUCH_THRES2 {
-        &self.sar_touch_thres2
+    pub fn sar_touch_thres_iter(&self) -> impl Iterator<Item = &SAR_TOUCH_THRES> {
+        self.sar_touch_thres.iter()
     }
-    #[doc = "0x64 - "]
+    #[doc = "0x5c - SAR_TOUCH_THRES1"]
     #[inline(always)]
-    pub const fn sar_touch_thres3(&self) -> &SAR_TOUCH_THRES3 {
-        &self.sar_touch_thres3
+    pub const fn sar_touch_thres1(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(0)
     }
-    #[doc = "0x68 - "]
+    #[doc = "0x60 - SAR_TOUCH_THRES2"]
     #[inline(always)]
-    pub const fn sar_touch_thres4(&self) -> &SAR_TOUCH_THRES4 {
-        &self.sar_touch_thres4
+    pub const fn sar_touch_thres2(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(1)
     }
-    #[doc = "0x6c - "]
+    #[doc = "0x64 - SAR_TOUCH_THRES3"]
     #[inline(always)]
-    pub const fn sar_touch_thres5(&self) -> &SAR_TOUCH_THRES5 {
-        &self.sar_touch_thres5
+    pub const fn sar_touch_thres3(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(2)
     }
-    #[doc = "0x70 - "]
+    #[doc = "0x68 - SAR_TOUCH_THRES4"]
     #[inline(always)]
-    pub const fn sar_touch_out1(&self) -> &SAR_TOUCH_OUT1 {
-        &self.sar_touch_out1
+    pub const fn sar_touch_thres4(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(3)
     }
-    #[doc = "0x74 - "]
+    #[doc = "0x6c - SAR_TOUCH_THRES5"]
     #[inline(always)]
-    pub const fn sar_touch_out2(&self) -> &SAR_TOUCH_OUT2 {
-        &self.sar_touch_out2
+    pub const fn sar_touch_thres5(&self) -> &SAR_TOUCH_THRES {
+        self.sar_touch_thres(4)
     }
-    #[doc = "0x78 - "]
+    #[doc = "0x70..0x84 - "]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `SAR_TOUCH_OUT1` register.</div>"]
     #[inline(always)]
-    pub const fn sar_touch_out3(&self) -> &SAR_TOUCH_OUT3 {
-        &self.sar_touch_out3
+    pub const fn sar_touch_out(&self, n: usize) -> &SAR_TOUCH_OUT {
+        &self.sar_touch_out[n]
     }
-    #[doc = "0x7c - "]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x70..0x84 - "]
     #[inline(always)]
-    pub const fn sar_touch_out4(&self) -> &SAR_TOUCH_OUT4 {
-        &self.sar_touch_out4
+    pub fn sar_touch_out_iter(&self) -> impl Iterator<Item = &SAR_TOUCH_OUT> {
+        self.sar_touch_out.iter()
     }
-    #[doc = "0x80 - "]
+    #[doc = "0x70 - SAR_TOUCH_OUT1"]
     #[inline(always)]
-    pub const fn sar_touch_out5(&self) -> &SAR_TOUCH_OUT5 {
-        &self.sar_touch_out5
+    pub const fn sar_touch_out1(&self) -> &SAR_TOUCH_OUT {
+        self.sar_touch_out(0)
+    }
+    #[doc = "0x74 - SAR_TOUCH_OUT2"]
+    #[inline(always)]
+    pub const fn sar_touch_out2(&self) -> &SAR_TOUCH_OUT {
+        self.sar_touch_out(1)
+    }
+    #[doc = "0x78 - SAR_TOUCH_OUT3"]
+    #[inline(always)]
+    pub const fn sar_touch_out3(&self) -> &SAR_TOUCH_OUT {
+        self.sar_touch_out(2)
+    }
+    #[doc = "0x7c - SAR_TOUCH_OUT4"]
+    #[inline(always)]
+    pub const fn sar_touch_out4(&self) -> &SAR_TOUCH_OUT {
+        self.sar_touch_out(3)
+    }
+    #[doc = "0x80 - SAR_TOUCH_OUT5"]
+    #[inline(always)]
+    pub const fn sar_touch_out5(&self) -> &SAR_TOUCH_OUT {
+        self.sar_touch_out(4)
     }
     #[doc = "0x84 - "]
     #[inline(always)]
@@ -351,46 +369,14 @@ pub mod sar_meas_start1;
 pub type SAR_TOUCH_CTRL1 = crate::Reg<sar_touch_ctrl1::SAR_TOUCH_CTRL1_SPEC>;
 #[doc = ""]
 pub mod sar_touch_ctrl1;
-#[doc = "SAR_TOUCH_THRES1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres1`] module"]
-pub type SAR_TOUCH_THRES1 = crate::Reg<sar_touch_thres1::SAR_TOUCH_THRES1_SPEC>;
+#[doc = "SAR_TOUCH_THRES (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres`] module"]
+pub type SAR_TOUCH_THRES = crate::Reg<sar_touch_thres::SAR_TOUCH_THRES_SPEC>;
 #[doc = ""]
-pub mod sar_touch_thres1;
-#[doc = "SAR_TOUCH_THRES2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres2`] module"]
-pub type SAR_TOUCH_THRES2 = crate::Reg<sar_touch_thres2::SAR_TOUCH_THRES2_SPEC>;
+pub mod sar_touch_thres;
+#[doc = "SAR_TOUCH_OUT (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out`] module"]
+pub type SAR_TOUCH_OUT = crate::Reg<sar_touch_out::SAR_TOUCH_OUT_SPEC>;
 #[doc = ""]
-pub mod sar_touch_thres2;
-#[doc = "SAR_TOUCH_THRES3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres3`] module"]
-pub type SAR_TOUCH_THRES3 = crate::Reg<sar_touch_thres3::SAR_TOUCH_THRES3_SPEC>;
-#[doc = ""]
-pub mod sar_touch_thres3;
-#[doc = "SAR_TOUCH_THRES4 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres4`] module"]
-pub type SAR_TOUCH_THRES4 = crate::Reg<sar_touch_thres4::SAR_TOUCH_THRES4_SPEC>;
-#[doc = ""]
-pub mod sar_touch_thres4;
-#[doc = "SAR_TOUCH_THRES5 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_thres5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_thres5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_thres5`] module"]
-pub type SAR_TOUCH_THRES5 = crate::Reg<sar_touch_thres5::SAR_TOUCH_THRES5_SPEC>;
-#[doc = ""]
-pub mod sar_touch_thres5;
-#[doc = "SAR_TOUCH_OUT1 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out1`] module"]
-pub type SAR_TOUCH_OUT1 = crate::Reg<sar_touch_out1::SAR_TOUCH_OUT1_SPEC>;
-#[doc = ""]
-pub mod sar_touch_out1;
-#[doc = "SAR_TOUCH_OUT2 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out2::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out2`] module"]
-pub type SAR_TOUCH_OUT2 = crate::Reg<sar_touch_out2::SAR_TOUCH_OUT2_SPEC>;
-#[doc = ""]
-pub mod sar_touch_out2;
-#[doc = "SAR_TOUCH_OUT3 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out3::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out3`] module"]
-pub type SAR_TOUCH_OUT3 = crate::Reg<sar_touch_out3::SAR_TOUCH_OUT3_SPEC>;
-#[doc = ""]
-pub mod sar_touch_out3;
-#[doc = "SAR_TOUCH_OUT4 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out4::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out4`] module"]
-pub type SAR_TOUCH_OUT4 = crate::Reg<sar_touch_out4::SAR_TOUCH_OUT4_SPEC>;
-#[doc = ""]
-pub mod sar_touch_out4;
-#[doc = "SAR_TOUCH_OUT5 (r) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_out5::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_out5`] module"]
-pub type SAR_TOUCH_OUT5 = crate::Reg<sar_touch_out5::SAR_TOUCH_OUT5_SPEC>;
-#[doc = ""]
-pub mod sar_touch_out5;
+pub mod sar_touch_out;
 #[doc = "SAR_TOUCH_CTRL2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`sar_touch_ctrl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sar_touch_ctrl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@sar_touch_ctrl2`] module"]
 pub type SAR_TOUCH_CTRL2 = crate::Reg<sar_touch_ctrl2::SAR_TOUCH_CTRL2_SPEC>;
 #[doc = ""]

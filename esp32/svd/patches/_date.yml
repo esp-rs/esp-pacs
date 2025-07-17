@@ -1,0 +1,18 @@
+# DATE registers are peripheral version registers. While they tend to have fields with different
+# widths, they are generally not important enough to warrant a separate definition.
+APB_CTRL:
+  _modify:
+    DATE:
+      access: read-write
+      resetValue: 0
+  DATE:
+    _delete: DATE
+
+"AES,[^A]*": # match all peripherals that are not starting with A.
+  _derive:
+    "?~*_DATE":
+      _from: APB_CTRL.DATE
+    "?~DATE":
+      _from: APB_CTRL.DATE
+    "?~VERSION":
+      _from: APB_CTRL.DATE

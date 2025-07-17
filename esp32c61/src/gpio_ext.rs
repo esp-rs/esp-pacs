@@ -212,7 +212,5 @@ pub mod int_clr;
 pub type PIN_CTRL = crate::Reg<pin_ctrl::PIN_CTRL_SPEC>;
 #[doc = "Clock Output Configuration Register"]
 pub mod pin_ctrl;
-#[doc = "VERSION (rw) register accessor: Version Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`version::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`version::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@version`] module"]
-pub type VERSION = crate::Reg<version::VERSION_SPEC>;
-#[doc = "Version Control Register"]
-pub mod version;
+pub use crate::dma::date as version;
+pub use crate::dma::DATE as VERSION;

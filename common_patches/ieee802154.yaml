@@ -1,0 +1,23 @@
+IEEE802154:
+  _cluster:
+    INF%s:
+      INF?_EXTEND_ADDR0:
+        name: EXTEND_ADDR0
+        _strip: "MAC_INF0_"
+      INF?_EXTEND_ADDR1:
+        name: EXTEND_ADDR1
+        _strip: "MAC_INF0_"
+      INF?_PAN_ID:
+        name: PAN_ID
+        _strip: "MAC_INF0_"
+      INF?_SHORT_ADDR:
+        name: SHORT_ADDR
+        _strip: "MAC_INF0_"
+    TIME%s:
+      TIME?_THRESHOLD:
+        name: THRESHOLD
+      TIME?_VALUE:
+        name: VALUE
+
+  _array:
+    SEC_KEY?: {}

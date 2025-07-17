@@ -5,6 +5,7 @@ _include:
   - "_aes.yml"
   - "_apb_ctrl.yml"
   - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_efuse.yml"
@@ -299,3 +300,13 @@ SYSTEM:
     _modify:
       I2S1_RST:
         name: I2S0_RST
+
+  _include: ../../../common_patches/sw_interrupts.yaml
+
+SENSITIVE:
+  _cluster:
+    DMA_APBPERI%s:
+      DMA_APBPERI*_PMS_CONSTRAIN_0:
+        name: PMS_CONSTRAIN_0
+      DMA_APBPERI*_PMS_CONSTRAIN_1:
+        name: PMS_CONSTRAIN_1

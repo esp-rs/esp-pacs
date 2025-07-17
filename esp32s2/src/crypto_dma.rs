@@ -182,10 +182,8 @@ pub mod aes_sha_select;
 pub type PD_CONF = crate::Reg<pd_conf::PD_CONF_SPEC>;
 #[doc = "Power control register"]
 pub mod pd_conf;
-#[doc = "DATE (rw) register accessor: Crypto DMA version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "Crypto DMA version control register"]
-pub mod date;
+pub use crate::aes::date;
+pub use crate::aes::DATE;
 #[doc = "INT_RAW (r) register accessor: Raw interrupt status\n\nYou can [`read`](crate::Reg::read) this register and get [`int_raw::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@int_raw`] module"]
 pub type INT_RAW = crate::Reg<int_raw::INT_RAW_SPEC>;
 #[doc = "Raw interrupt status"]

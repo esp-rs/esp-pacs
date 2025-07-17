@@ -4,9 +4,12 @@ _include:
   - ../../../common_patches/plic.yaml
   - ../../../common_patches/clint.yaml
   - ../../../common_patches/i2c_ana_mst.yaml
+  - ../../../common_patches/ieee802154.yaml
   - ../../../common_patches/slc.yaml
   - ../../../common_patches/twai.yaml
   - "_aes.yml"
+  - "_assist_debug.yml"
+  - "_date.yml"
   - "_dma.yml"
   - "_ds.yml"
   - "_ecc.yml"
@@ -70,6 +73,16 @@ GPIO_SD:
 
 HP_APM,LP_APM,LP_APM0:
   _include: ../../../common_patches/hp_apm.yaml
+
+LP_AON:
+  # Make sure the STORE registers are the same type
+  STORE0:
+    _modify:
+      "LP_AON_STORE0":
+        name: "DATA"
+  _derive:
+    STORE[1-9]:
+      _from: STORE0
 
 LP_I2C0:
   _strip: "I2C_"
@@ -169,6 +182,8 @@ INTPRI:
   _array:
     CPU_INT_PRI_*:
       name: CPU_INT_PRI%s
+
+  _include: ../../../common_patches/sw_interrupts.yaml
 
 PCNT:
   "*":
@@ -329,9 +344,6 @@ DMA:
       OUT_PERI_SEL_CH?:
         name: OUT_PERI_SEL
 
-ASSIST_DEBUG:
-  _include: ../../../common_patches/assist_debug.yaml
-
 RSA:
   INT_CLR:
     _modify:
@@ -354,3 +366,10 @@ I2C_ANA_MST:
   _array:
     I2C?_CTRL: {}
     I2C?_CTRL1: {}
+
+HINF:
+  _array:
+    CIS_CONF_W*:
+      _modify:
+        CIS_CONF_W0:
+          name: CIS_CONF_W

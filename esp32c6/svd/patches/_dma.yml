@@ -21,7 +21,6 @@ DMA:
     _strip_end: "_CH_INT_ENA"
   "OUT_INT_ST_CH%s":
     _strip_end: "_CH_INT_ST"
-  
 
   _modify:
     "OUT_CONF0_CH%s":

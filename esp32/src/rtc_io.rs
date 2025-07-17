@@ -307,42 +307,26 @@ pub mod touch_cfg;
 pub type TOUCH_PAD0 = crate::Reg<touch_pad0::TOUCH_PAD0_SPEC>;
 #[doc = ""]
 pub mod touch_pad0;
-#[doc = "TOUCH_PAD1 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad1`] module"]
-pub type TOUCH_PAD1 = crate::Reg<touch_pad1::TOUCH_PAD1_SPEC>;
-#[doc = ""]
-pub mod touch_pad1;
-#[doc = "TOUCH_PAD2 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad2`] module"]
-pub type TOUCH_PAD2 = crate::Reg<touch_pad2::TOUCH_PAD2_SPEC>;
-#[doc = ""]
-pub mod touch_pad2;
-#[doc = "TOUCH_PAD3 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad3`] module"]
-pub type TOUCH_PAD3 = crate::Reg<touch_pad3::TOUCH_PAD3_SPEC>;
-#[doc = ""]
-pub mod touch_pad3;
-#[doc = "TOUCH_PAD4 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad4`] module"]
-pub type TOUCH_PAD4 = crate::Reg<touch_pad4::TOUCH_PAD4_SPEC>;
-#[doc = ""]
-pub mod touch_pad4;
-#[doc = "TOUCH_PAD5 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad5`] module"]
-pub type TOUCH_PAD5 = crate::Reg<touch_pad5::TOUCH_PAD5_SPEC>;
-#[doc = ""]
-pub mod touch_pad5;
-#[doc = "TOUCH_PAD6 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad6`] module"]
-pub type TOUCH_PAD6 = crate::Reg<touch_pad6::TOUCH_PAD6_SPEC>;
-#[doc = ""]
-pub mod touch_pad6;
-#[doc = "TOUCH_PAD7 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad7`] module"]
-pub type TOUCH_PAD7 = crate::Reg<touch_pad7::TOUCH_PAD7_SPEC>;
-#[doc = ""]
-pub mod touch_pad7;
+pub use touch_pad0 as touch_pad1;
+pub use touch_pad0 as touch_pad2;
+pub use touch_pad0 as touch_pad3;
+pub use touch_pad0 as touch_pad4;
+pub use touch_pad0 as touch_pad5;
+pub use touch_pad0 as touch_pad6;
+pub use touch_pad0 as touch_pad7;
+pub use TOUCH_PAD0 as TOUCH_PAD1;
+pub use TOUCH_PAD0 as TOUCH_PAD2;
+pub use TOUCH_PAD0 as TOUCH_PAD3;
+pub use TOUCH_PAD0 as TOUCH_PAD4;
+pub use TOUCH_PAD0 as TOUCH_PAD5;
+pub use TOUCH_PAD0 as TOUCH_PAD6;
+pub use TOUCH_PAD0 as TOUCH_PAD7;
 #[doc = "TOUCH_PAD8 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad8`] module"]
 pub type TOUCH_PAD8 = crate::Reg<touch_pad8::TOUCH_PAD8_SPEC>;
 #[doc = ""]
 pub mod touch_pad8;
-#[doc = "TOUCH_PAD9 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`touch_pad9::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`touch_pad9::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@touch_pad9`] module"]
-pub type TOUCH_PAD9 = crate::Reg<touch_pad9::TOUCH_PAD9_SPEC>;
-#[doc = ""]
-pub mod touch_pad9;
+pub use touch_pad8 as touch_pad9;
+pub use TOUCH_PAD8 as TOUCH_PAD9;
 #[doc = "EXT_WAKEUP0 (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`ext_wakeup0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ext_wakeup0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ext_wakeup0`] module"]
 pub type EXT_WAKEUP0 = crate::Reg<ext_wakeup0::EXT_WAKEUP0_SPEC>;
 #[doc = ""]
@@ -355,7 +339,5 @@ pub mod xtl_ext_ctr;
 pub type SAR_I2C_IO = crate::Reg<sar_i2c_io::SAR_I2C_IO_SPEC>;
 #[doc = ""]
 pub mod sar_i2c_io;
-#[doc = "DATE (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
-pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = ""]
-pub mod date;
+pub use crate::apb_ctrl::date;
+pub use crate::apb_ctrl::DATE;

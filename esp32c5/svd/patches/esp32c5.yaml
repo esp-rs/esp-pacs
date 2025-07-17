@@ -2,6 +2,7 @@ _svd: ../esp32c5.base.svd
 
 _include:
   - ../../../common_patches/plic.yaml
+  - _date.yml
   - _gpio.yml
   - _i2c.yml
   - _interrupt.yml
@@ -467,6 +468,12 @@ HP_APM:
       M?_APM_INT_EN:
         name: M%s_APM
 
+INTPRI:
+  _modify:
+    CPU_INTR_FROM_CPU_3:
+      addressOffset: 0x9c
+  _include: ../../../common_patches/sw_interrupts.yaml
+
 RMT:
   _delete: "RX_CH%sDATA"
   _modify:
@@ -874,3 +881,13 @@ _modify:
 
   SPI?:
     groupName: SPI
+
+LP_AON:
+  # Make sure the STORE registers are the same type
+  STORE0:
+    _modify:
+      "LP_AON_STORE0":
+        name: "DATA"
+  _derive:
+    STORE[1-9]:
+      _from: STORE0
