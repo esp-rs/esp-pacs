@@ -1,14 +1,24 @@
 WIFI:
     _modify:
-        INTERFACE_RX_CONTROL%s:
+        FILTER_CONTROL%s:
             acccess: read-write
-            description: Controls RX for an interface
+            description: Controls the RX filter for an interface
             fields:
+                BLOCK_UNICAST:
+                    bitOffset: 0          
+                    bitWidth: 1
+                    access: read-write
+                    description: Block unicast frames not matching the address filter
                 BSSID_CHECK:
                     bitOffset: 1
                     bitWidth: 1
                     access: read-write
                     description: Check BSSID for filtering
+                BLOCK_MULTICAST:
+                    bitOffset: 2          
+                    bitWidth: 1
+                    access: read-write
+                    description: Block multicast frames not matching the address filter
                 SCAN_MODE:
                     bitOffset: 4
                     bitWidth: 1
@@ -19,6 +29,57 @@ WIFI:
                     bitWidth: 1
                     access: read-write
                     description: Receive everything except control frames
+        RX_CTRL_FILTER%s:
+            access: read-write
+            description: Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter.
+            fields:
+                CONTROL_WRAPPER:
+                    bitOffset: 23
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter Control Wrapper frames
+                BLOCK_ACK_REQUEST:
+                    bitOffset: 24
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter Block ACK Request frames
+                BLOCK_ACK:
+                    bitOffset: 25
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter Block ACK frames
+                PS_POLL:
+                    bitOffset: 26
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter PS-Poll frames
+                RTS:
+                    bitOffset: 27
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter RTS frames
+                CTS:
+                    bitOffset: 28
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter CTS frames
+                ACK:
+                    bitOffset: 29
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter ACK frames
+                CF_END:
+                    bitOffset: 30
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter CF-End frames
+                CF_END_CF_ACK:
+                    bitOffset: 31
+                    bitWidth: 1
+                    access: read-write
+                    description: Filter CF-End+CF-Ack frames
+                
+
     FILTER_BANK%s:
         _delete: DUMMY
         _add:
