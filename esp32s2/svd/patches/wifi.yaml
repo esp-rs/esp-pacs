@@ -18,7 +18,7 @@ _add:
             RX_CTRL_FILTER%s:
                 dim: 4
                 dimIncrement: 4
-                addressOffset: 0xf8
+                addressOffset: 0x108
                 access: read-write
             CTRL:
                 description: Exact name and meaning unknown, used for initializing the MAC
