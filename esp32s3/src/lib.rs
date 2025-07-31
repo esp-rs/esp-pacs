@@ -85,6 +85,7 @@ extern "C" {
     fn DMA_OUT_CH3();
     fn DMA_OUT_CH4();
     fn RSA();
+    fn AES();
     fn SHA();
     fn FROM_CPU_INTR0();
     fn FROM_CPU_INTR1();
@@ -254,8 +255,8 @@ pub static __INTERRUPTS: [Vector; 99] = [
         _handler: DMA_OUT_CH4,
     },
     Vector { _handler: RSA },
+    Vector { _handler: AES },
     Vector { _handler: SHA },
-    Vector { _reserved: 0 },
     Vector {
         _handler: FROM_CPU_INTR0,
     },
@@ -468,8 +469,10 @@ pub enum Interrupt {
     DMA_OUT_CH4 = 75,
     #[doc = "76 - RSA"]
     RSA = 76,
-    #[doc = "77 - SHA"]
-    SHA = 77,
+    #[doc = "77 - AES"]
+    AES = 77,
+    #[doc = "78 - SHA"]
+    SHA = 78,
     #[doc = "79 - FROM_CPU_INTR0"]
     FROM_CPU_INTR0 = 79,
     #[doc = "80 - FROM_CPU_INTR1"]
@@ -593,7 +596,8 @@ impl Interrupt {
             74 => Ok(Interrupt::DMA_OUT_CH3),
             75 => Ok(Interrupt::DMA_OUT_CH4),
             76 => Ok(Interrupt::RSA),
-            77 => Ok(Interrupt::SHA),
+            77 => Ok(Interrupt::AES),
+            78 => Ok(Interrupt::SHA),
             79 => Ok(Interrupt::FROM_CPU_INTR0),
             80 => Ok(Interrupt::FROM_CPU_INTR1),
             81 => Ok(Interrupt::FROM_CPU_INTR2),
