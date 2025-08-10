@@ -9,9 +9,9 @@ pub struct RegisterBlock {
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
     filter_control: [FILTER_CONTROL; 4],
-    _reserved4: [u8; 0x08],
+    _reserved4: [u8; 0x18],
     rx_ctrl_filter: [RX_CTRL_FILTER; 4],
-    _reserved5: [u8; 0x06f8],
+    _reserved5: [u8; 0x06e8],
     crypto_control: CRYPTO_CONTROL,
     _reserved6: [u8; 0x0424],
     mac_interrupt: MAC_INTERRUPT,
@@ -73,13 +73,13 @@ impl RegisterBlock {
     pub fn filter_control_iter(&self) -> impl Iterator<Item = &FILTER_CONTROL> {
         self.filter_control.iter()
     }
-    #[doc = "0xf8..0x108 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[doc = "0x108..0x118 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
     #[inline(always)]
     pub const fn rx_ctrl_filter(&self, n: usize) -> &RX_CTRL_FILTER {
         &self.rx_ctrl_filter[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xf8..0x108 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[doc = "0x108..0x118 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
     #[inline(always)]
     pub fn rx_ctrl_filter_iter(&self) -> impl Iterator<Item = &RX_CTRL_FILTER> {
         self.rx_ctrl_filter.iter()
