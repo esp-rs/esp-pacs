@@ -71,6 +71,7 @@ PROVIDE(DMA_OUT_CH2 = DefaultHandler);
 PROVIDE(DMA_OUT_CH3 = DefaultHandler);
 PROVIDE(DMA_OUT_CH4 = DefaultHandler);
 PROVIDE(RSA = DefaultHandler);
+PROVIDE(AES = DefaultHandler);
 PROVIDE(SHA = DefaultHandler);
 PROVIDE(FROM_CPU_INTR0 = DefaultHandler);
 PROVIDE(FROM_CPU_INTR1 = DefaultHandler);

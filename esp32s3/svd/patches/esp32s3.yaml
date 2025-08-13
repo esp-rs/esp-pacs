@@ -144,6 +144,12 @@ _modify:
   MCPWM0:
     groupName: MCPWM
 
+SHA:
+  _modify:
+    _interrupts:
+      SHA:
+        value: 78
+
 AES:
   "KEY*":
     KEY: [0, 0xffff_ffff]
@@ -153,6 +159,10 @@ AES:
     _modify:
       INT_CLEAR:
         name: INT_CLR
+  _add:
+    _interrupts:
+      AES:
+        value: 77
 
 APB_SARADC:
   _modify:
