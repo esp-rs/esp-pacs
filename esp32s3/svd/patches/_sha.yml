@@ -10,11 +10,21 @@ SHA:
       size: 0x20
 
   START:
-    _modify:
+    _delete:
+      START
+    _add:
       START:
+        description: "Write 1 to start Typical SHA calculation."
+        bitOffset: 0
+        bitWidth: 1
         access: write-only
 
   CONTINUE:
-    _modify:
+    _delete:
+      CONTINUE
+    _add:
       CONTINUE:
+        description: "Write 1 to continue Typical SHA calculation."
+        bitOffset: 0
+        bitWidth: 1
         access: write-only

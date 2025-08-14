@@ -1,7 +1,7 @@
 #[doc = "Register `START` writer"]
 pub type W = crate::W<START_SPEC>;
-#[doc = "Field `START` writer - reserved."]
-pub type START_W<'a, REG> = crate::FieldWriter<'a, REG, 31, u32>;
+#[doc = "Field `START` writer - Write 1 to start Typical SHA calculation."]
+pub type START_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[cfg(feature = "impl-register-debug")]
 impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
@@ -9,10 +9,10 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
     }
 }
 impl W {
-    #[doc = "Bits 1:31 - reserved."]
+    #[doc = "Bit 0 - Write 1 to start Typical SHA calculation."]
     #[inline(always)]
     pub fn start(&mut self) -> START_W<START_SPEC> {
-        START_W::new(self, 1)
+        START_W::new(self, 0)
     }
 }
 #[doc = "Typical SHA configuration register 0.\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`start::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
