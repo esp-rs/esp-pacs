@@ -8,34 +8,36 @@ pub struct RegisterBlock {
     _reserved2: [u8; 0x04],
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
-    interface_rx_control: [INTERFACE_RX_CONTROL; 4],
-    _reserved4: [u8; 0x0710],
+    filter_control: [FILTER_CONTROL; 4],
+    _reserved4: [u8; 0x18],
+    rx_ctrl_filter: [RX_CTRL_FILTER; 4],
+    _reserved5: [u8; 0x06e8],
     crypto_control: CRYPTO_CONTROL,
-    _reserved5: [u8; 0x0424],
+    _reserved6: [u8; 0x0424],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved6: [u8; 0x58],
+    _reserved7: [u8; 0x58],
     txq_state: TXQ_STATE,
-    _reserved7: [u8; 0x0c],
+    _reserved8: [u8; 0x0c],
     ctrl: CTRL,
-    _reserved8: [u8; 0x20],
+    _reserved9: [u8; 0x20],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved9: [u8; 0x0464],
+    _reserved10: [u8; 0x0464],
     plcp1: (),
-    _reserved10: [u8; 0x04],
-    plcp2: (),
     _reserved11: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved12: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved13: [u8; 0x04],
+    ht_unknown: (),
+    _reserved14: [u8; 0x04],
     duration: (),
-    _reserved14: [u8; 0x08],
+    _reserved15: [u8; 0x08],
     pmd: (),
-    _reserved15: [u8; 0x0280],
+    _reserved16: [u8; 0x0280],
     crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
-    _reserved16: [u8; 0x0818],
+    _reserved17: [u8; 0x0818],
     mac_time: MAC_TIME,
-    _reserved17: [u8; 0x019c],
+    _reserved18: [u8; 0x019c],
     pwr_interrupt: PWR_INTERRUPT,
 }
 impl RegisterBlock {
@@ -60,16 +62,27 @@ impl RegisterBlock {
     pub const fn rx_dma_list(&self) -> &RX_DMA_LIST {
         &self.rx_dma_list
     }
-    #[doc = "0xe0..0xf0 - Controls RX for an interface"]
+    #[doc = "0xe0..0xf0 - Controls the RX filter for an interface"]
     #[inline(always)]
-    pub const fn interface_rx_control(&self, n: usize) -> &INTERFACE_RX_CONTROL {
-        &self.interface_rx_control[n]
+    pub const fn filter_control(&self, n: usize) -> &FILTER_CONTROL {
+        &self.filter_control[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xe0..0xf0 - Controls RX for an interface"]
+    #[doc = "0xe0..0xf0 - Controls the RX filter for an interface"]
     #[inline(always)]
-    pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
-        self.interface_rx_control.iter()
+    pub fn filter_control_iter(&self) -> impl Iterator<Item = &FILTER_CONTROL> {
+        self.filter_control.iter()
+    }
+    #[doc = "0x108..0x118 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[inline(always)]
+    pub const fn rx_ctrl_filter(&self, n: usize) -> &RX_CTRL_FILTER {
+        &self.rx_ctrl_filter[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x108..0x118 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[inline(always)]
+    pub fn rx_ctrl_filter_iter(&self) -> impl Iterator<Item = &RX_CTRL_FILTER> {
+        self.rx_ctrl_filter.iter()
     }
     #[doc = "0x800..0x818 - Control registers for hardware crypto"]
     #[inline(always)]
@@ -288,10 +301,14 @@ pub use self::rx_dma_list::RX_DMA_LIST;
 #[doc = r"Cluster"]
 #[doc = "RX_DMA_LIST"]
 pub mod rx_dma_list;
-#[doc = "INTERFACE_RX_CONTROL (rw) register accessor: Controls RX for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`interface_rx_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interface_rx_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interface_rx_control`] module"]
-pub type INTERFACE_RX_CONTROL = crate::Reg<interface_rx_control::INTERFACE_RX_CONTROL_SPEC>;
-#[doc = "Controls RX for an interface"]
-pub mod interface_rx_control;
+#[doc = "FILTER_CONTROL (rw) register accessor: Controls the RX filter for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`filter_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`filter_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@filter_control`] module"]
+pub type FILTER_CONTROL = crate::Reg<filter_control::FILTER_CONTROL_SPEC>;
+#[doc = "Controls the RX filter for an interface"]
+pub mod filter_control;
+#[doc = "RX_CTRL_FILTER (rw) register accessor: Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl_filter::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl_filter::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl_filter`] module"]
+pub type RX_CTRL_FILTER = crate::Reg<rx_ctrl_filter::RX_CTRL_FILTER_SPEC>;
+#[doc = "Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+pub mod rx_ctrl_filter;
 #[doc = "Control registers for hardware crypto"]
 pub use self::crypto_control::CRYPTO_CONTROL;
 #[doc = r"Cluster"]

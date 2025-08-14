@@ -15,7 +15,7 @@ _include:
   - "_rtc_cntl.yml"
   - "_rtc_io.yml"
   - "_timg.yml"
-  - "esp32-wifi.yaml"
+  - "wifi.yaml"
 
 RNG:
   _modify:
