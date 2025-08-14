@@ -1,4 +1,11 @@
 TWAI[01]:
+  _modify:
+    RX_MESSAGE_COUNTER:
+      name: RX_MESSAGE_CNT
+    INTERRUPT_ENABLE:
+      name: INT_ENA
+    INTERRUPT:
+      name: INT_RAW
   MODE:
     _modify:
       ACCEPTANCE_FILTER_MODE:
@@ -31,6 +38,22 @@ TWAI[01]:
       TIME_SAMPLING:
         name: TIME_SAMP
 
-  _modify:
-    RX_MESSAGE_COUNTER:
-      name: RX_MESSAGE_CNT
+  INT_ENA:
+    _modify:
+      EXT_RECEIVE_INT_ENA:
+        name: RX_INT_ENA
+      EXT_TRANSMIT_INT_ENA:
+        name: TX_INT_ENA
+      BUS_ERR_INT_ENA:
+        name: BUS_ERR_INT_ENA
+      ARBITRATION_LOST_INT_ENA:
+        name: ARB_LOST_INT_ENA
+
+  INT_RAW:
+    _modify:
+      TRANSMIT_INT_ST:
+        name: TX_INT_ST
+      RECEIVE_INT_ST:
+        name: RX_INT_ST
+
+     

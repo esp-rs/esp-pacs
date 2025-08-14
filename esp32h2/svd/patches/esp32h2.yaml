@@ -1078,6 +1078,10 @@ TWAI0:
   _modify:
     RX_MESSAGE_COUNTER:
       name: RX_MESSAGE_CNT
+    INTERRUPT_ENABLE:
+      name: INT_ENA
+    INTERRUPT:
+      name: INT_RAW
 
   MODE:
     _modify:
@@ -1141,6 +1145,24 @@ TWAI*:
     _modify:
       ERR_CAPTURE_CODE_DIRECTION:
         name: ECC_DIRECTION
+  
+  INT_ENA:
+    _modify:
+      EXT_RECEIVE_INT_ENA:
+        name: RX_INT_ENA
+      EXT_TRANSMIT_INT_ENA:
+        name: TX_INT_ENA
+      BUS_ERR_INT_ENA:
+        name: BUS_ERR_INT_ENA
+      ARBITRATION_LOST_INT_ENA:
+        name: ARB_LOST_INT_ENA
+
+  INT_RAW:
+    _modify:
+      TRANSMIT_INT_ST:
+        name: TX_INT_ST
+      RECEIVE_INT_ST:
+        name: RX_INT_ST
 
 I2C_ANA_MST:
   _array:
