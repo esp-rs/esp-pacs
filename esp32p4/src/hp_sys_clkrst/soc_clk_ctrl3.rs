@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn ledc_apb_clk_en(&mut self) -> LEDC_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+    pub fn ledc_apb_clk_en(&mut self) -> LEDC_APB_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
         LEDC_APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn lcdcam_apb_clk_en(&mut self) -> LCDCAM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+    pub fn lcdcam_apb_clk_en(&mut self) -> LCDCAM_APB_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
         LCDCAM_APB_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn etm_apb_clk_en(&mut self) -> ETM_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+    pub fn etm_apb_clk_en(&mut self) -> ETM_APB_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
         ETM_APB_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn iomux_apb_clk_en(&mut self) -> IOMUX_APB_CLK_EN_W<SOC_CLK_CTRL3_SPEC> {
+    pub fn iomux_apb_clk_en(&mut self) -> IOMUX_APB_CLK_EN_W<'_, SOC_CLK_CTRL3_SPEC> {
         IOMUX_APB_CLK_EN_W::new(self, 3)
     }
 }

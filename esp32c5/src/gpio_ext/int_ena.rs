@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - analog comparator pos edge interrupt enable"]
     #[inline(always)]
-    pub fn comp_neg_0_int_ena(&mut self) -> COMP_NEG_0_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn comp_neg_0_int_ena(&mut self) -> COMP_NEG_0_INT_ENA_W<'_, INT_ENA_SPEC> {
         COMP_NEG_0_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - analog comparator neg edge interrupt enable"]
     #[inline(always)]
-    pub fn comp_pos_0_int_ena(&mut self) -> COMP_POS_0_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn comp_pos_0_int_ena(&mut self) -> COMP_POS_0_INT_ENA_W<'_, INT_ENA_SPEC> {
         COMP_POS_0_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - analog comparator neg or pos edge interrupt enable"]
     #[inline(always)]
-    pub fn comp_all_0_int_ena(&mut self) -> COMP_ALL_0_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn comp_all_0_int_ena(&mut self) -> COMP_ALL_0_INT_ENA_W<'_, INT_ENA_SPEC> {
         COMP_ALL_0_INT_ENA_W::new(self, 2)
     }
 }

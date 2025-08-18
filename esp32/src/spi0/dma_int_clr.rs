@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear bit for lack of enough inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_dscr_empty(&mut self) -> INLINK_DSCR_EMPTY_W<DMA_INT_CLR_SPEC> {
+    pub fn inlink_dscr_empty(&mut self) -> INLINK_DSCR_EMPTY_W<'_, DMA_INT_CLR_SPEC> {
         INLINK_DSCR_EMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for outlink descriptor error."]
     #[inline(always)]
-    pub fn outlink_dscr_error(&mut self) -> OUTLINK_DSCR_ERROR_W<DMA_INT_CLR_SPEC> {
+    pub fn outlink_dscr_error(&mut self) -> OUTLINK_DSCR_ERROR_W<'_, DMA_INT_CLR_SPEC> {
         OUTLINK_DSCR_ERROR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for inlink descriptor error."]
     #[inline(always)]
-    pub fn inlink_dscr_error(&mut self) -> INLINK_DSCR_ERROR_W<DMA_INT_CLR_SPEC> {
+    pub fn inlink_dscr_error(&mut self) -> INLINK_DSCR_ERROR_W<'_, DMA_INT_CLR_SPEC> {
         INLINK_DSCR_ERROR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The clear bit for completing usage of a inlink descriptor."]
     #[inline(always)]
-    pub fn in_done(&mut self) -> IN_DONE_W<DMA_INT_CLR_SPEC> {
+    pub fn in_done(&mut self) -> IN_DONE_W<'_, DMA_INT_CLR_SPEC> {
         IN_DONE_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for receiving error."]
     #[inline(always)]
-    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<DMA_INT_CLR_SPEC> {
+    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<'_, DMA_INT_CLR_SPEC> {
         IN_ERR_EOF_W::new(self, 4)
     }
     #[doc = "Bit 5 - The clear bit for completing receiving all the packets from host."]
     #[inline(always)]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<DMA_INT_CLR_SPEC> {
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, DMA_INT_CLR_SPEC> {
         IN_SUC_EOF_W::new(self, 5)
     }
     #[doc = "Bit 6 - The clear bit for completing usage of a outlink descriptor."]
     #[inline(always)]
-    pub fn out_done(&mut self) -> OUT_DONE_W<DMA_INT_CLR_SPEC> {
+    pub fn out_done(&mut self) -> OUT_DONE_W<'_, DMA_INT_CLR_SPEC> {
         OUT_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - The clear bit for sending a packet to host done."]
     #[inline(always)]
-    pub fn out_eof(&mut self) -> OUT_EOF_W<DMA_INT_CLR_SPEC> {
+    pub fn out_eof(&mut self) -> OUT_EOF_W<'_, DMA_INT_CLR_SPEC> {
         OUT_EOF_W::new(self, 7)
     }
     #[doc = "Bit 8 - The clear bit for sending all the packets to host done."]
     #[inline(always)]
-    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<DMA_INT_CLR_SPEC> {
+    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<'_, DMA_INT_CLR_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 8)
     }
 }

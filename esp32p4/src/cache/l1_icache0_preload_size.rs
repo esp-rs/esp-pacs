@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn l1_icache0_preload_size(
         &mut self,
-    ) -> L1_ICACHE0_PRELOAD_SIZE_W<L1_ICACHE0_PRELOAD_SIZE_SPEC> {
+    ) -> L1_ICACHE0_PRELOAD_SIZE_W<'_, L1_ICACHE0_PRELOAD_SIZE_SPEC> {
         L1_ICACHE0_PRELOAD_SIZE_W::new(self, 0)
     }
 }

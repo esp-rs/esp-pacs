@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
-    pub fn map(&mut self) -> MAP_W<REG_MAP_SPEC> {
+    pub fn map(&mut self) -> MAP_W<'_, REG_MAP_SPEC> {
         MAP_W::new(self, 0)
     }
 }

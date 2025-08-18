@@ -204,97 +204,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<CONF_SPEC> {
+    pub fn tx_reset(&mut self) -> TX_RESET_W<'_, CONF_SPEC> {
         TX_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn rx_reset(&mut self) -> RX_RESET_W<CONF_SPEC> {
+    pub fn rx_reset(&mut self) -> RX_RESET_W<'_, CONF_SPEC> {
         RX_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<CONF_SPEC> {
+    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<'_, CONF_SPEC> {
         TX_FIFO_RESET_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<CONF_SPEC> {
+    pub fn rx_fifo_reset(&mut self) -> RX_FIFO_RESET_W<'_, CONF_SPEC> {
         RX_FIFO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<CONF_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, CONF_SPEC> {
         TX_START_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn rx_start(&mut self) -> RX_START_W<CONF_SPEC> {
+    pub fn rx_start(&mut self) -> RX_START_W<'_, CONF_SPEC> {
         RX_START_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<CONF_SPEC> {
+    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<'_, CONF_SPEC> {
         TX_SLAVE_MOD_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<CONF_SPEC> {
+    pub fn rx_slave_mod(&mut self) -> RX_SLAVE_MOD_W<'_, CONF_SPEC> {
         RX_SLAVE_MOD_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<CONF_SPEC> {
+    pub fn tx_right_first(&mut self) -> TX_RIGHT_FIRST_W<'_, CONF_SPEC> {
         TX_RIGHT_FIRST_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<CONF_SPEC> {
+    pub fn rx_right_first(&mut self) -> RX_RIGHT_FIRST_W<'_, CONF_SPEC> {
         RX_RIGHT_FIRST_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<CONF_SPEC> {
+    pub fn tx_msb_shift(&mut self) -> TX_MSB_SHIFT_W<'_, CONF_SPEC> {
         TX_MSB_SHIFT_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<CONF_SPEC> {
+    pub fn rx_msb_shift(&mut self) -> RX_MSB_SHIFT_W<'_, CONF_SPEC> {
         RX_MSB_SHIFT_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<CONF_SPEC> {
+    pub fn tx_short_sync(&mut self) -> TX_SHORT_SYNC_W<'_, CONF_SPEC> {
         TX_SHORT_SYNC_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<CONF_SPEC> {
+    pub fn rx_short_sync(&mut self) -> RX_SHORT_SYNC_W<'_, CONF_SPEC> {
         RX_SHORT_SYNC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn tx_mono(&mut self) -> TX_MONO_W<CONF_SPEC> {
+    pub fn tx_mono(&mut self) -> TX_MONO_W<'_, CONF_SPEC> {
         TX_MONO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn rx_mono(&mut self) -> RX_MONO_W<CONF_SPEC> {
+    pub fn rx_mono(&mut self) -> RX_MONO_W<'_, CONF_SPEC> {
         RX_MONO_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<CONF_SPEC> {
+    pub fn tx_msb_right(&mut self) -> TX_MSB_RIGHT_W<'_, CONF_SPEC> {
         TX_MSB_RIGHT_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<CONF_SPEC> {
+    pub fn rx_msb_right(&mut self) -> RX_MSB_RIGHT_W<'_, CONF_SPEC> {
         RX_MSB_RIGHT_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<CONF_SPEC> {
+    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<'_, CONF_SPEC> {
         SIG_LOOPBACK_W::new(self, 18)
     }
 }

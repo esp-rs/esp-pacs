@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn pmu_lp_sleep_lp_bias_reserve(
         &mut self,
-    ) -> PMU_LP_SLEEP_LP_BIAS_RESERVE_W<LP_SLEEP_LP_BIAS_RESERVE_SPEC> {
+    ) -> PMU_LP_SLEEP_LP_BIAS_RESERVE_W<'_, LP_SLEEP_LP_BIAS_RESERVE_SPEC> {
         PMU_LP_SLEEP_LP_BIAS_RESERVE_W::new(self, 0)
     }
 }

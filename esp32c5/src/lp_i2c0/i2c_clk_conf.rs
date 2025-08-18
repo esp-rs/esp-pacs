@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - the integral part of the fractional divisor for i2c module"]
     #[inline(always)]
-    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<I2C_CLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_num(&mut self) -> I2C_SCLK_DIV_NUM_W<'_, I2C_CLK_CONF_SPEC> {
         I2C_SCLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:13 - the numerator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
-    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<I2C_CLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_a(&mut self) -> I2C_SCLK_DIV_A_W<'_, I2C_CLK_CONF_SPEC> {
         I2C_SCLK_DIV_A_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - the denominator of the fractional part of the fractional divisor for i2c module"]
     #[inline(always)]
-    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<I2C_CLK_CONF_SPEC> {
+    pub fn i2c_sclk_div_b(&mut self) -> I2C_SCLK_DIV_B_W<'_, I2C_CLK_CONF_SPEC> {
         I2C_SCLK_DIV_B_W::new(self, 14)
     }
     #[doc = "Bit 20 - The clock selection for i2c module:0-XTAL,1-CLK_8MHz."]
     #[inline(always)]
-    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<I2C_CLK_CONF_SPEC> {
+    pub fn i2c_sclk_sel(&mut self) -> I2C_SCLK_SEL_W<'_, I2C_CLK_CONF_SPEC> {
         I2C_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 21 - The clock switch for i2c module"]
     #[inline(always)]
-    pub fn i2c_sclk_active(&mut self) -> I2C_SCLK_ACTIVE_W<I2C_CLK_CONF_SPEC> {
+    pub fn i2c_sclk_active(&mut self) -> I2C_SCLK_ACTIVE_W<'_, I2C_CLK_CONF_SPEC> {
         I2C_SCLK_ACTIVE_W::new(self, 21)
     }
 }

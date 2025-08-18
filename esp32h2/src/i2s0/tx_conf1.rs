@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - The width of tx_ws_out at idle level in TDM mode is (I2S_TX_TDM_WS_WIDTH\\[8:0\\] +1) * T_bck"]
     #[inline(always)]
-    pub fn tx_tdm_ws_width(&mut self) -> TX_TDM_WS_WIDTH_W<TX_CONF1_SPEC> {
+    pub fn tx_tdm_ws_width(&mut self) -> TX_TDM_WS_WIDTH_W<'_, TX_CONF1_SPEC> {
         TX_TDM_WS_WIDTH_W::new(self, 0)
     }
     #[doc = "Bits 14:18 - Set the bits to configure the valid data bit length of I2S transmitter channel. 7: all the valid channel data is in 8-bit-mode. 15: all the valid channel data is in 16-bit-mode. 23: all the valid channel data is in 24-bit-mode. 31:all the valid channel data is in 32-bit-mode."]
     #[inline(always)]
-    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<TX_CONF1_SPEC> {
+    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<'_, TX_CONF1_SPEC> {
         TX_BITS_MOD_W::new(self, 14)
     }
     #[doc = "Bits 19:26 - I2S Tx half sample bits -1."]
     #[inline(always)]
-    pub fn tx_half_sample_bits(&mut self) -> TX_HALF_SAMPLE_BITS_W<TX_CONF1_SPEC> {
+    pub fn tx_half_sample_bits(&mut self) -> TX_HALF_SAMPLE_BITS_W<'_, TX_CONF1_SPEC> {
         TX_HALF_SAMPLE_BITS_W::new(self, 19)
     }
     #[doc = "Bits 27:31 - The Tx bit number for each channel minus 1in TDM mode."]
     #[inline(always)]
-    pub fn tx_tdm_chan_bits(&mut self) -> TX_TDM_CHAN_BITS_W<TX_CONF1_SPEC> {
+    pub fn tx_tdm_chan_bits(&mut self) -> TX_TDM_CHAN_BITS_W<'_, TX_CONF1_SPEC> {
         TX_TDM_CHAN_BITS_W::new(self, 27)
     }
 }

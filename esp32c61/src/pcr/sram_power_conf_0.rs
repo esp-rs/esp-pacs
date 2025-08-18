@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Set this bit to force power up ROM"]
     #[inline(always)]
-    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<SRAM_POWER_CONF_0_SPEC> {
+    pub fn rom_force_pu(&mut self) -> ROM_FORCE_PU_W<'_, SRAM_POWER_CONF_0_SPEC> {
         ROM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Set this bit to force power down ROM."]
     #[inline(always)]
-    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<SRAM_POWER_CONF_0_SPEC> {
+    pub fn rom_force_pd(&mut self) -> ROM_FORCE_PD_W<'_, SRAM_POWER_CONF_0_SPEC> {
         ROM_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - 1: Force to open the clock and bypass the gate-clock when accessing the ROM. 0: A gate-clock will be used when accessing the ROM."]
     #[inline(always)]
-    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_0_SPEC> {
+    pub fn rom_clkgate_force_on(&mut self) -> ROM_CLKGATE_FORCE_ON_W<'_, SRAM_POWER_CONF_0_SPEC> {
         ROM_CLKGATE_FORCE_ON_W::new(self, 4)
     }
 }

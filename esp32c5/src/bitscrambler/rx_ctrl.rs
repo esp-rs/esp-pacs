@@ -96,47 +96,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write this bit to enable the bitscrambler rx"]
     #[inline(always)]
-    pub fn rx_ena(&mut self) -> RX_ENA_W<RX_CTRL_SPEC> {
+    pub fn rx_ena(&mut self) -> RX_ENA_W<'_, RX_CTRL_SPEC> {
         RX_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - write this bit to pause the bitscrambler rx core"]
     #[inline(always)]
-    pub fn rx_pause(&mut self) -> RX_PAUSE_W<RX_CTRL_SPEC> {
+    pub fn rx_pause(&mut self) -> RX_PAUSE_W<'_, RX_CTRL_SPEC> {
         RX_PAUSE_W::new(self, 1)
     }
     #[doc = "Bit 2 - write this bit to halt the bitscrambler rx core"]
     #[inline(always)]
-    pub fn rx_halt(&mut self) -> RX_HALT_W<RX_CTRL_SPEC> {
+    pub fn rx_halt(&mut self) -> RX_HALT_W<'_, RX_CTRL_SPEC> {
         RX_HALT_W::new(self, 2)
     }
     #[doc = "Bit 3 - write this bit to ser the bitscrambler rx core EOF signal generating mode which is combined with reg_bitscrambler_rx_tailing_bits, 0: counter by read peripheral buffer, 0 counter by write dma fifo"]
     #[inline(always)]
-    pub fn rx_eof_mode(&mut self) -> RX_EOF_MODE_W<RX_CTRL_SPEC> {
+    pub fn rx_eof_mode(&mut self) -> RX_EOF_MODE_W<'_, RX_CTRL_SPEC> {
         RX_EOF_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - write this bit to specify the LOOP instruction condition mode of bitscrambler rx core, 0: use the little than operator to get the condition, 1: use not equal operator to get the condition"]
     #[inline(always)]
-    pub fn rx_cond_mode(&mut self) -> RX_COND_MODE_W<RX_CTRL_SPEC> {
+    pub fn rx_cond_mode(&mut self) -> RX_COND_MODE_W<'_, RX_CTRL_SPEC> {
         RX_COND_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - write this bit to set the bitscrambler rx core fetch instruction mode, 0: prefetch by reset, 1: fetch by instrutions"]
     #[inline(always)]
-    pub fn rx_fetch_mode(&mut self) -> RX_FETCH_MODE_W<RX_CTRL_SPEC> {
+    pub fn rx_fetch_mode(&mut self) -> RX_FETCH_MODE_W<'_, RX_CTRL_SPEC> {
         RX_FETCH_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - write this bit to set the bitscrambler rx core halt mode when rx_halt is set, 0: wait write data back done, , 1: ignore write data back"]
     #[inline(always)]
-    pub fn rx_halt_mode(&mut self) -> RX_HALT_MODE_W<RX_CTRL_SPEC> {
+    pub fn rx_halt_mode(&mut self) -> RX_HALT_MODE_W<'_, RX_CTRL_SPEC> {
         RX_HALT_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - write this bit to set the bitscrambler rx core read data mode when EOF received.0: wait read data, 1: ignore read data"]
     #[inline(always)]
-    pub fn rx_rd_dummy(&mut self) -> RX_RD_DUMMY_W<RX_CTRL_SPEC> {
+    pub fn rx_rd_dummy(&mut self) -> RX_RD_DUMMY_W<'_, RX_CTRL_SPEC> {
         RX_RD_DUMMY_W::new(self, 7)
     }
     #[doc = "Bit 8 - write this bit to reset the bitscrambler rx fifo"]
     #[inline(always)]
-    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<RX_CTRL_SPEC> {
+    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<'_, RX_CTRL_SPEC> {
         RX_FIFO_RST_W::new(self, 8)
     }
 }

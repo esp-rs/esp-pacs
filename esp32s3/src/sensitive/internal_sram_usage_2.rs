@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_core0_trace_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE0_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+    ) -> INTERNAL_SRAM_CORE0_TRACE_USAGE_W<'_, INTERNAL_SRAM_USAGE_2_SPEC> {
         INTERNAL_SRAM_CORE0_TRACE_USAGE_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Set 1 to someone bit means corresponding internal SRAM level can be accessed by core1 trace bus."]
     #[inline(always)]
     pub fn internal_sram_core1_trace_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE1_TRACE_USAGE_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+    ) -> INTERNAL_SRAM_CORE1_TRACE_USAGE_W<'_, INTERNAL_SRAM_USAGE_2_SPEC> {
         INTERNAL_SRAM_CORE1_TRACE_USAGE_W::new(self, 7)
     }
     #[doc = "Bits 14:15 - Which internal SRAM bank (16KB) of 64KB can be accessed by core0 trace bus."]
     #[inline(always)]
     pub fn internal_sram_core0_trace_alloc(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+    ) -> INTERNAL_SRAM_CORE0_TRACE_ALLOC_W<'_, INTERNAL_SRAM_USAGE_2_SPEC> {
         INTERNAL_SRAM_CORE0_TRACE_ALLOC_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Which internal SRAM bank (16KB) of 64KB can be accessed by core1 trace bus."]
     #[inline(always)]
     pub fn internal_sram_core1_trace_alloc(
         &mut self,
-    ) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<INTERNAL_SRAM_USAGE_2_SPEC> {
+    ) -> INTERNAL_SRAM_CORE1_TRACE_ALLOC_W<'_, INTERNAL_SRAM_USAGE_2_SPEC> {
         INTERNAL_SRAM_CORE1_TRACE_ALLOC_W::new(self, 16)
     }
 }

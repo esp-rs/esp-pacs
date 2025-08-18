@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:24"]
     #[inline(always)]
-    pub fn dg_dcdc_wait_timer(&mut self) -> DG_DCDC_WAIT_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_dcdc_wait_timer(&mut self) -> DG_DCDC_WAIT_TIMER_W<'_, TIMER6_SPEC> {
         DG_DCDC_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31"]
     #[inline(always)]
-    pub fn dg_dcdc_powerup_timer(&mut self) -> DG_DCDC_POWERUP_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_dcdc_powerup_timer(&mut self) -> DG_DCDC_POWERUP_TIMER_W<'_, TIMER6_SPEC> {
         DG_DCDC_POWERUP_TIMER_W::new(self, 25)
     }
 }

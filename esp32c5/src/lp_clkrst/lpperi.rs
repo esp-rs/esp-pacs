@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - Configures the source clk of HUK 0: 0: RC_FAST_CLK 1: XTAL_D2_CLK"]
     #[inline(always)]
-    pub fn huk_clk_sel(&mut self) -> HUK_CLK_SEL_W<LPPERI_SPEC> {
+    pub fn huk_clk_sel(&mut self) -> HUK_CLK_SEL_W<'_, LPPERI_SPEC> {
         HUK_CLK_SEL_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures the source clk of LP I2C. 0: LP_FAST_CLK 1: XTAL_D2_CLK"]
     #[inline(always)]
-    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<LPPERI_SPEC> {
+    pub fn lp_i2c_clk_sel(&mut self) -> LP_I2C_CLK_SEL_W<'_, LPPERI_SPEC> {
         LP_I2C_CLK_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures the source clk of LP UART. 0: LP_FAST_CLK 1: XTAL_D2_CLK"]
     #[inline(always)]
-    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<LPPERI_SPEC> {
+    pub fn lp_uart_clk_sel(&mut self) -> LP_UART_CLK_SEL_W<'_, LPPERI_SPEC> {
         LP_UART_CLK_SEL_W::new(self, 31)
     }
 }

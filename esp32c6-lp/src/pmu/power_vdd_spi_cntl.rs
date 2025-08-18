@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 18:28 - need_des"]
     #[inline(always)]
-    pub fn vdd_spi_pwr_wait(&mut self) -> VDD_SPI_PWR_WAIT_W<POWER_VDD_SPI_CNTL_SPEC> {
+    pub fn vdd_spi_pwr_wait(&mut self) -> VDD_SPI_PWR_WAIT_W<'_, POWER_VDD_SPI_CNTL_SPEC> {
         VDD_SPI_PWR_WAIT_W::new(self, 18)
     }
     #[doc = "Bits 29:30 - need_des"]
     #[inline(always)]
-    pub fn vdd_spi_pwr_sw(&mut self) -> VDD_SPI_PWR_SW_W<POWER_VDD_SPI_CNTL_SPEC> {
+    pub fn vdd_spi_pwr_sw(&mut self) -> VDD_SPI_PWR_SW_W<'_, POWER_VDD_SPI_CNTL_SPEC> {
         VDD_SPI_PWR_SW_W::new(self, 29)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn vdd_spi_pwr_sel_sw(&mut self) -> VDD_SPI_PWR_SEL_SW_W<POWER_VDD_SPI_CNTL_SPEC> {
+    pub fn vdd_spi_pwr_sel_sw(&mut self) -> VDD_SPI_PWR_SEL_SW_W<'_, POWER_VDD_SPI_CNTL_SPEC> {
         VDD_SPI_PWR_SEL_SW_W::new(self, 31)
     }
 }

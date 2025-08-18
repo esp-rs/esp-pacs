@@ -44,14 +44,14 @@ impl W {
     #[inline(always)]
     pub fn tcm_mem_monitor_clk_en(
         &mut self,
-    ) -> TCM_MEM_MONITOR_CLK_EN_W<TCM_MEM_MONITOR_CONF_SPEC> {
+    ) -> TCM_MEM_MONITOR_CLK_EN_W<'_, TCM_MEM_MONITOR_CONF_SPEC> {
         TCM_MEM_MONITOR_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset tcm_mem_monitor module"]
     #[inline(always)]
     pub fn tcm_mem_monitor_rst_en(
         &mut self,
-    ) -> TCM_MEM_MONITOR_RST_EN_W<TCM_MEM_MONITOR_CONF_SPEC> {
+    ) -> TCM_MEM_MONITOR_RST_EN_W<'_, TCM_MEM_MONITOR_CONF_SPEC> {
         TCM_MEM_MONITOR_RST_EN_W::new(self, 1)
     }
 }

@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI_D output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - SPI_Q output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT1_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI_WP output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT2_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - SPI_HD output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT3_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - SPI_IO4 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout4_mode(&mut self) -> DOUT4_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT4_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - SPI_IO5 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout5_mode(&mut self) -> DOUT5_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT5_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - SPI_IO6 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout6_mode(&mut self) -> DOUT6_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT6_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - SPI_IO7 output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout7_mode(&mut self) -> DOUT7_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT7_MODE_W::new(self, 7)
     }
     #[doc = "Bit 8 - SPI_DQS output delay mode. 0: No delay. 1: Delay one cycle at MSPI_CORE_CLK negative edge."]
     #[inline(always)]
-    pub fn douts_mode(&mut self) -> DOUTS_MODE_W<DOUT_MODE_SPEC> {
+    pub fn douts_mode(&mut self) -> DOUTS_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUTS_MODE_W::new(self, 8)
     }
 }

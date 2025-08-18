@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_cpu_int_from_cpu_3_map(
         &mut self,
-    ) -> CORE0_CPU_INT_FROM_CPU_3_MAP_W<CPU_INT_FROM_CPU_3_MAP_SPEC> {
+    ) -> CORE0_CPU_INT_FROM_CPU_3_MAP_W<'_, CPU_INT_FROM_CPU_3_MAP_SPEC> {
         CORE0_CPU_INT_FROM_CPU_3_MAP_W::new(self, 0)
     }
 }

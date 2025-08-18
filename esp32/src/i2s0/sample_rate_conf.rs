@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn tx_bck_div_num(&mut self) -> TX_BCK_DIV_NUM_W<SAMPLE_RATE_CONF_SPEC> {
+    pub fn tx_bck_div_num(&mut self) -> TX_BCK_DIV_NUM_W<'_, SAMPLE_RATE_CONF_SPEC> {
         TX_BCK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 6:11"]
     #[inline(always)]
-    pub fn rx_bck_div_num(&mut self) -> RX_BCK_DIV_NUM_W<SAMPLE_RATE_CONF_SPEC> {
+    pub fn rx_bck_div_num(&mut self) -> RX_BCK_DIV_NUM_W<'_, SAMPLE_RATE_CONF_SPEC> {
         RX_BCK_DIV_NUM_W::new(self, 6)
     }
     #[doc = "Bits 12:17"]
     #[inline(always)]
-    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<SAMPLE_RATE_CONF_SPEC> {
+    pub fn tx_bits_mod(&mut self) -> TX_BITS_MOD_W<'_, SAMPLE_RATE_CONF_SPEC> {
         TX_BITS_MOD_W::new(self, 12)
     }
     #[doc = "Bits 18:23"]
     #[inline(always)]
-    pub fn rx_bits_mod(&mut self) -> RX_BITS_MOD_W<SAMPLE_RATE_CONF_SPEC> {
+    pub fn rx_bits_mod(&mut self) -> RX_BITS_MOD_W<'_, SAMPLE_RATE_CONF_SPEC> {
         RX_BITS_MOD_W::new(self, 18)
     }
 }

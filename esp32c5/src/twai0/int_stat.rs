@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The masked interrupt status of TWAIFD_RXI_INT. Frame received interrupt."]
     #[inline(always)]
-    pub fn rxi_int_st(&mut self) -> RXI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn rxi_int_st(&mut self) -> RXI_INT_ST_W<'_, INT_STAT_SPEC> {
         RXI_INT_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - The masked interrupt status of TWAIFD_TXI_INT. Frame transmitted interrupt."]
     #[inline(always)]
-    pub fn txi_int_st(&mut self) -> TXI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn txi_int_st(&mut self) -> TXI_INT_ST_W<'_, INT_STAT_SPEC> {
         TXI_INT_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - The masked interrupt status of TWAIFD_EWLI_INT. Error warning limit interrupt. When both TEC and REC are lower than EWL and one of the becomes equal to or higher than EWL, or when both TEC and REC become less than EWL, this interrupt is generated. When Interrupt is cleared and REC, or TEC is still equal to or higher than EWL, Interrupt is not generated again."]
     #[inline(always)]
-    pub fn ewli_int_st(&mut self) -> EWLI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn ewli_int_st(&mut self) -> EWLI_INT_ST_W<'_, INT_STAT_SPEC> {
         EWLI_INT_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - The masked interrupt status of TWAIFD_DOI_INT. Data overrun interrupt. Before this Interrupt is cleared , STATUS\\[DOR\\] must be cleared to avoid setting of this Interrupt again."]
     #[inline(always)]
-    pub fn doi_int_st(&mut self) -> DOI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn doi_int_st(&mut self) -> DOI_INT_ST_W<'_, INT_STAT_SPEC> {
         DOI_INT_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - The masked interrupt status of TWAIFD_FCSI_INT. Fault confinement state changed interrupt. Interrupt is set when node turns error-passive (from error-active), bus-off (from error-passive) or error-active (from bus-off after reintegration or from error-passive)."]
     #[inline(always)]
-    pub fn fcsi_int_st(&mut self) -> FCSI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn fcsi_int_st(&mut self) -> FCSI_INT_ST_W<'_, INT_STAT_SPEC> {
         FCSI_INT_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - The masked interrupt status of TWAIFD_ALI_INT. Arbitration lost interrupt."]
     #[inline(always)]
-    pub fn ali_int_st(&mut self) -> ALI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn ali_int_st(&mut self) -> ALI_INT_ST_W<'_, INT_STAT_SPEC> {
         ALI_INT_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - The masked interrupt status of TWAIFD_BEI_INT. Bus error interrupt."]
     #[inline(always)]
-    pub fn bei_int_st(&mut self) -> BEI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn bei_int_st(&mut self) -> BEI_INT_ST_W<'_, INT_STAT_SPEC> {
         BEI_INT_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - The masked interrupt status of TWAIFD_OFI_INT. Overload frame interrupt."]
     #[inline(always)]
-    pub fn ofi_int_st(&mut self) -> OFI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn ofi_int_st(&mut self) -> OFI_INT_ST_W<'_, INT_STAT_SPEC> {
         OFI_INT_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - The masked interrupt status of TWAIFD_RXFI_INT. RX buffer full interrupt."]
     #[inline(always)]
-    pub fn rxfi_int_st(&mut self) -> RXFI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn rxfi_int_st(&mut self) -> RXFI_INT_ST_W<'_, INT_STAT_SPEC> {
         RXFI_INT_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - The masked interrupt status of TWAIFD_BSI_INT. Bit rate shifted interrupt."]
     #[inline(always)]
-    pub fn bsi_int_st(&mut self) -> BSI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn bsi_int_st(&mut self) -> BSI_INT_ST_W<'_, INT_STAT_SPEC> {
         BSI_INT_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - The masked interrupt status of TWAIFD_RBNEI_INT. RX buffer not empty interrupt. Clearing this interrupt and not reading out content of RX Buffer via RX_DATA will re-activate the interrupt."]
     #[inline(always)]
-    pub fn rbnei_int_st(&mut self) -> RBNEI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn rbnei_int_st(&mut self) -> RBNEI_INT_ST_W<'_, INT_STAT_SPEC> {
         RBNEI_INT_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - The masked interrupt status of TWAIFD_TXBHCI_INT. TXT buffer HW command interrupt. Anytime TXT buffer receives HW command from CAN Core which changes TXT buffer state to \"TX OK\", \"Error\" or \"Aborted\", this interrupt will be generated."]
     #[inline(always)]
-    pub fn txbhci_int_st(&mut self) -> TXBHCI_INT_ST_W<INT_STAT_SPEC> {
+    pub fn txbhci_int_st(&mut self) -> TXBHCI_INT_ST_W<'_, INT_STAT_SPEC> {
         TXBHCI_INT_ST_W::new(self, 11)
     }
 }

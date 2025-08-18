@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn clk_fe_16m_en(&mut self) -> CLK_FE_16M_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_fe_16m_en(&mut self) -> CLK_FE_16M_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_FE_16M_EN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn clk_fe_32m_en(&mut self) -> CLK_FE_32M_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_fe_32m_en(&mut self) -> CLK_FE_32M_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_FE_32M_EN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn clk_fe_sdm_en(&mut self) -> CLK_FE_SDM_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_fe_sdm_en(&mut self) -> CLK_FE_SDM_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_FE_SDM_EN_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn clk_fe_adc_en(&mut self) -> CLK_FE_ADC_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_fe_adc_en(&mut self) -> CLK_FE_ADC_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_FE_ADC_EN_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn clk_fe_apb_en(&mut self) -> CLK_FE_APB_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_fe_apb_en(&mut self) -> CLK_FE_APB_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_FE_APB_EN_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn clk_bt_apb_en(&mut self) -> CLK_BT_APB_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_bt_apb_en(&mut self) -> CLK_BT_APB_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_BT_APB_EN_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn clk_bt_en(&mut self) -> CLK_BT_EN_W<CLK_CONF1_SPEC> {
+    pub fn clk_bt_en(&mut self) -> CLK_BT_EN_W<'_, CLK_CONF1_SPEC> {
         CLK_BT_EN_W::new(self, 18)
     }
 }

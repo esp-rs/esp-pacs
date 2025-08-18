@@ -74,32 +74,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_hs_clk_div_num(&mut self) -> GPSPI3_HS_CLK_DIV_NUM_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn gpspi3_hs_clk_div_num(&mut self) -> GPSPI3_HS_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL117_SPEC> {
         GPSPI3_HS_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_mst_clk_div_num(&mut self) -> GPSPI3_MST_CLK_DIV_NUM_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn gpspi3_mst_clk_div_num(
+        &mut self,
+    ) -> GPSPI3_MST_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL117_SPEC> {
         GPSPI3_MST_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_mst_clk_en(&mut self) -> GPSPI3_MST_CLK_EN_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn gpspi3_mst_clk_en(&mut self) -> GPSPI3_MST_CLK_EN_W<'_, PERI_CLK_CTRL117_SPEC> {
         GPSPI3_MST_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Reserved"]
     #[inline(always)]
-    pub fn parlio_rx_clk_src_sel(&mut self) -> PARLIO_RX_CLK_SRC_SEL_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn parlio_rx_clk_src_sel(&mut self) -> PARLIO_RX_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL117_SPEC> {
         PARLIO_RX_CLK_SRC_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn parlio_rx_clk_en(&mut self) -> PARLIO_RX_CLK_EN_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn parlio_rx_clk_en(&mut self) -> PARLIO_RX_CLK_EN_W<'_, PERI_CLK_CTRL117_SPEC> {
         PARLIO_RX_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bits 20:27 - Reserved"]
     #[inline(always)]
-    pub fn parlio_rx_clk_div_num(&mut self) -> PARLIO_RX_CLK_DIV_NUM_W<PERI_CLK_CTRL117_SPEC> {
+    pub fn parlio_rx_clk_div_num(&mut self) -> PARLIO_RX_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL117_SPEC> {
         PARLIO_RX_CLK_DIV_NUM_W::new(self, 20)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - select the lp io 0~7 controlled by hp iomux or lp iomux 1: controlled by lp iomux 0: controlled by hp iomux"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<GPIO_MUX_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, GPIO_MUX_SPEC> {
         SEL_W::new(self, 0)
     }
 }

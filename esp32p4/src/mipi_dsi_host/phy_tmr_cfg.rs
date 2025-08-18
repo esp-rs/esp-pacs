@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - NA"]
     #[inline(always)]
-    pub fn phy_lp2hs_time(&mut self) -> PHY_LP2HS_TIME_W<PHY_TMR_CFG_SPEC> {
+    pub fn phy_lp2hs_time(&mut self) -> PHY_LP2HS_TIME_W<'_, PHY_TMR_CFG_SPEC> {
         PHY_LP2HS_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:25 - NA"]
     #[inline(always)]
-    pub fn phy_hs2lp_time(&mut self) -> PHY_HS2LP_TIME_W<PHY_TMR_CFG_SPEC> {
+    pub fn phy_hs2lp_time(&mut self) -> PHY_HS2LP_TIME_W<'_, PHY_TMR_CFG_SPEC> {
         PHY_HS2LP_TIME_W::new(self, 16)
     }
 }

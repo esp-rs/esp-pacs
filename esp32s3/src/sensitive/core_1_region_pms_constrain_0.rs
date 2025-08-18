@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_region_pms_constrain_lock(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_LOCK_W<CORE_1_REGION_PMS_CONSTRAIN_0_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_LOCK_W<'_, CORE_1_REGION_PMS_CONSTRAIN_0_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
 }

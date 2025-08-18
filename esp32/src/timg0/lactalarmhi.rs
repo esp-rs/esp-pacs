@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn alarm_hi(&mut self) -> ALARM_HI_W<LACTALARMHI_SPEC> {
+    pub fn alarm_hi(&mut self) -> ALARM_HI_W<'_, LACTALARMHI_SPEC> {
         ALARM_HI_W::new(self, 0)
     }
 }

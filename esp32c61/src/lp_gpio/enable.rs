@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures whether or not to enable the output of LP_GPIO0 ~ LP_GPIO6.\\\\ 0: Not enable\\\\ 1: Enable\\\\ Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid.\\\\"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<ENABLE_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, ENABLE_SPEC> {
         DATA_W::new(self, 0)
     }
 }

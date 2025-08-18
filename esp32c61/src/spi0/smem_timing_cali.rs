@@ -77,34 +77,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For sram, the bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
-    pub fn smem_timing_clk_ena(&mut self) -> SMEM_TIMING_CLK_ENA_W<SMEM_TIMING_CALI_SPEC> {
+    pub fn smem_timing_clk_ena(&mut self) -> SMEM_TIMING_CLK_ENA_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_TIMING_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - For sram, the bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
-    pub fn smem_timing_cali(&mut self) -> SMEM_TIMING_CALI_W<SMEM_TIMING_CALI_SPEC> {
+    pub fn smem_timing_cali(&mut self) -> SMEM_TIMING_CALI_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - For sram, add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
     pub fn smem_extra_dummy_cyclelen(
         &mut self,
-    ) -> SMEM_EXTRA_DUMMY_CYCLELEN_W<SMEM_TIMING_CALI_SPEC> {
+    ) -> SMEM_EXTRA_DUMMY_CYCLELEN_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set this bit to enable DLL for timing calibration in DDR mode when accessed to EXT_RAM."]
     #[inline(always)]
-    pub fn smem_dll_timing_cali(&mut self) -> SMEM_DLL_TIMING_CALI_W<SMEM_TIMING_CALI_SPEC> {
+    pub fn smem_dll_timing_cali(&mut self) -> SMEM_DLL_TIMING_CALI_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_DLL_TIMING_CALI_W::new(self, 5)
     }
     #[doc = "Bits 7:8 - Set these bits to delay dqs signal & invert delayed signal for DLL timing adjust. 2'd0: 0.5ns, 2'd1: 1.0ns, 2'd2: 1.5ns 2'd3: 2.0ns."]
     #[inline(always)]
-    pub fn smem_dqs0_270_sel(&mut self) -> SMEM_DQS0_270_SEL_W<SMEM_TIMING_CALI_SPEC> {
+    pub fn smem_dqs0_270_sel(&mut self) -> SMEM_DQS0_270_SEL_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_DQS0_270_SEL_W::new(self, 7)
     }
     #[doc = "Bits 9:10 - Set these bits to delay dqs signal for DLL timing adjust. 2'd0: 0.5ns, 2'd1: 1.0ns, 2'd2: 1.5ns 2'd3: 2.0ns."]
     #[inline(always)]
-    pub fn smem_dqs0_90_sel(&mut self) -> SMEM_DQS0_90_SEL_W<SMEM_TIMING_CALI_SPEC> {
+    pub fn smem_dqs0_90_sel(&mut self) -> SMEM_DQS0_90_SEL_W<'_, SMEM_TIMING_CALI_SPEC> {
         SMEM_DQS0_90_SEL_W::new(self, 9)
     }
 }

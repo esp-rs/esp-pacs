@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the message."]
     #[inline(always)]
-    pub fn m(&mut self) -> M_W<M_MEM_SPEC> {
+    pub fn m(&mut self) -> M_W<'_, M_MEM_SPEC> {
         M_W::new(self, 0)
     }
 }

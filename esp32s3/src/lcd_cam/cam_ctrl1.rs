@@ -118,62 +118,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configure camera received data byte length. When the length of received data reaches this value + 1, GDMA in_suc_eof_int is triggered."]
     #[inline(always)]
-    pub fn cam_rec_data_bytelen(&mut self) -> CAM_REC_DATA_BYTELEN_W<CAM_CTRL1_SPEC> {
+    pub fn cam_rec_data_bytelen(&mut self) -> CAM_REC_DATA_BYTELEN_W<'_, CAM_CTRL1_SPEC> {
         CAM_REC_DATA_BYTELEN_W::new(self, 0)
     }
     #[doc = "Bits 16:21 - Configure line number. When the number of received lines reaches this value + 1, LCD_CAM_CAM_HS_INT is triggered."]
     #[inline(always)]
-    pub fn cam_line_int_num(&mut self) -> CAM_LINE_INT_NUM_W<CAM_CTRL1_SPEC> {
+    pub fn cam_line_int_num(&mut self) -> CAM_LINE_INT_NUM_W<'_, CAM_CTRL1_SPEC> {
         CAM_LINE_INT_NUM_W::new(self, 16)
     }
     #[doc = "Bit 22 - 1: Invert the input signal CAM_PCLK. 0: Do not invert."]
     #[inline(always)]
-    pub fn cam_clk_inv(&mut self) -> CAM_CLK_INV_W<CAM_CTRL1_SPEC> {
+    pub fn cam_clk_inv(&mut self) -> CAM_CLK_INV_W<'_, CAM_CTRL1_SPEC> {
         CAM_CLK_INV_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: Enable CAM_VSYNC filter function. 0: Bypass."]
     #[inline(always)]
-    pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<CAM_CTRL1_SPEC> {
+    pub fn cam_vsync_filter_en(&mut self) -> CAM_VSYNC_FILTER_EN_W<'_, CAM_CTRL1_SPEC> {
         CAM_VSYNC_FILTER_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: The width of input data is 16 bits. 0: The width of input data is 8 bits."]
     #[inline(always)]
-    pub fn cam_2byte_en(&mut self) -> CAM_2BYTE_EN_W<CAM_CTRL1_SPEC> {
+    pub fn cam_2byte_en(&mut self) -> CAM_2BYTE_EN_W<'_, CAM_CTRL1_SPEC> {
         CAM_2BYTE_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - CAM_DE invert enable signal, valid in high level."]
     #[inline(always)]
-    pub fn cam_de_inv(&mut self) -> CAM_DE_INV_W<CAM_CTRL1_SPEC> {
+    pub fn cam_de_inv(&mut self) -> CAM_DE_INV_W<'_, CAM_CTRL1_SPEC> {
         CAM_DE_INV_W::new(self, 25)
     }
     #[doc = "Bit 26 - CAM_HSYNC invert enable signal, valid in high level."]
     #[inline(always)]
-    pub fn cam_hsync_inv(&mut self) -> CAM_HSYNC_INV_W<CAM_CTRL1_SPEC> {
+    pub fn cam_hsync_inv(&mut self) -> CAM_HSYNC_INV_W<'_, CAM_CTRL1_SPEC> {
         CAM_HSYNC_INV_W::new(self, 26)
     }
     #[doc = "Bit 27 - CAM_VSYNC invert enable signal, valid in high level."]
     #[inline(always)]
-    pub fn cam_vsync_inv(&mut self) -> CAM_VSYNC_INV_W<CAM_CTRL1_SPEC> {
+    pub fn cam_vsync_inv(&mut self) -> CAM_VSYNC_INV_W<'_, CAM_CTRL1_SPEC> {
         CAM_VSYNC_INV_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: Input control signals are CAM_DE and CAM_HSYNC. CAM_VSYNC is 1. 0: Input control signals are CAM_DE and CAM_VSYNC. CAM_HSYNC and CAM_DE are all 1 at the the same time."]
     #[inline(always)]
-    pub fn cam_vh_de_mode_en(&mut self) -> CAM_VH_DE_MODE_EN_W<CAM_CTRL1_SPEC> {
+    pub fn cam_vh_de_mode_en(&mut self) -> CAM_VH_DE_MODE_EN_W<'_, CAM_CTRL1_SPEC> {
         CAM_VH_DE_MODE_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Camera module start signal."]
     #[inline(always)]
-    pub fn cam_start(&mut self) -> CAM_START_W<CAM_CTRL1_SPEC> {
+    pub fn cam_start(&mut self) -> CAM_START_W<'_, CAM_CTRL1_SPEC> {
         CAM_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Camera module reset signal."]
     #[inline(always)]
-    pub fn cam_reset(&mut self) -> CAM_RESET_W<CAM_CTRL1_SPEC> {
+    pub fn cam_reset(&mut self) -> CAM_RESET_W<'_, CAM_CTRL1_SPEC> {
         CAM_RESET_W::new(self, 30)
     }
     #[doc = "Bit 31 - Camera Async Rx FIFO reset signal."]
     #[inline(always)]
-    pub fn cam_afifo_reset(&mut self) -> CAM_AFIFO_RESET_W<CAM_CTRL1_SPEC> {
+    pub fn cam_afifo_reset(&mut self) -> CAM_AFIFO_RESET_W<'_, CAM_CTRL1_SPEC> {
         CAM_AFIFO_RESET_W::new(self, 31)
     }
 }

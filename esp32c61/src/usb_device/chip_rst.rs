@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Set this bit to disable chip reset from usb serial channel to reset chip."]
     #[inline(always)]
-    pub fn usb_uart_chip_rst_dis(&mut self) -> USB_UART_CHIP_RST_DIS_W<CHIP_RST_SPEC> {
+    pub fn usb_uart_chip_rst_dis(&mut self) -> USB_UART_CHIP_RST_DIS_W<'_, CHIP_RST_SPEC> {
         USB_UART_CHIP_RST_DIS_W::new(self, 2)
     }
 }

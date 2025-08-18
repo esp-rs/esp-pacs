@@ -88,28 +88,28 @@ impl W {
     #[inline(always)]
     pub fn cache_pld_done_int_clr(
         &mut self,
-    ) -> CACHE_PLD_DONE_INT_CLR_W<CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
+    ) -> CACHE_PLD_DONE_INT_CLR_W<'_, CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
         CACHE_PLD_DONE_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 6 - The bit is used to clear interrupt that occurs only when Cache sync-operation is done."]
     #[inline(always)]
     pub fn cache_sync_done_int_clr(
         &mut self,
-    ) -> CACHE_SYNC_DONE_INT_CLR_W<CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
+    ) -> CACHE_SYNC_DONE_INT_CLR_W<'_, CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
         CACHE_SYNC_DONE_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 11 - The bit is used to clear interrupt of L1-Cache preload-operation error."]
     #[inline(always)]
     pub fn cache_pld_err_int_clr(
         &mut self,
-    ) -> CACHE_PLD_ERR_INT_CLR_W<CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
+    ) -> CACHE_PLD_ERR_INT_CLR_W<'_, CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
         CACHE_PLD_ERR_INT_CLR_W::new(self, 11)
     }
     #[doc = "Bit 13 - The bit is used to clear interrupt of Cache sync-operation error."]
     #[inline(always)]
     pub fn cache_sync_err_int_clr(
         &mut self,
-    ) -> CACHE_SYNC_ERR_INT_CLR_W<CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
+    ) -> CACHE_SYNC_ERR_INT_CLR_W<'_, CACHE_SYNC_PRELOAD_INT_CLR_SPEC> {
         CACHE_SYNC_ERR_INT_CLR_W::new(self, 13)
     }
 }

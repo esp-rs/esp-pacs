@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_hp_core_ctrl_int_map(
         &mut self,
-    ) -> CORE1_HP_CORE_CTRL_INT_MAP_W<HP_CORE_CTRL_INT_MAP_SPEC> {
+    ) -> CORE1_HP_CORE_CTRL_INT_MAP_W<'_, HP_CORE_CTRL_INT_MAP_SPEC> {
         CORE1_HP_CORE_CTRL_INT_MAP_W::new(self, 0)
     }
 }

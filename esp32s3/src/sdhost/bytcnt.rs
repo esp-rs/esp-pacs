@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Number of bytes to be transferred, should be an integral multiple of Block Size for block transfers. For data transfers of undefined byte lengths, byte count should be set to 0. When byte count is set to 0, it is the responsibility of host to explicitly send stop/abort command to terminate data transfer."]
     #[inline(always)]
-    pub fn byte_count(&mut self) -> BYTE_COUNT_W<BYTCNT_SPEC> {
+    pub fn byte_count(&mut self) -> BYTE_COUNT_W<'_, BYTCNT_SPEC> {
         BYTE_COUNT_W::new(self, 0)
     }
 }

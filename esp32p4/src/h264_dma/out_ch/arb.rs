@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Set the max number of token count of arbiter"]
     #[inline(always)]
-    pub fn out_arb_token_num(&mut self) -> OUT_ARB_TOKEN_NUM_W<ARB_SPEC> {
+    pub fn out_arb_token_num(&mut self) -> OUT_ARB_TOKEN_NUM_W<'_, ARB_SPEC> {
         OUT_ARB_TOKEN_NUM_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Set the priority of channel"]
     #[inline(always)]
-    pub fn exter_out_arb_priority(&mut self) -> EXTER_OUT_ARB_PRIORITY_W<ARB_SPEC> {
+    pub fn exter_out_arb_priority(&mut self) -> EXTER_OUT_ARB_PRIORITY_W<'_, ARB_SPEC> {
         EXTER_OUT_ARB_PRIORITY_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set the priority of channel"]
     #[inline(always)]
-    pub fn inter_out_arb_priority(&mut self) -> INTER_OUT_ARB_PRIORITY_W<ARB_SPEC> {
+    pub fn inter_out_arb_priority(&mut self) -> INTER_OUT_ARB_PRIORITY_W<'_, ARB_SPEC> {
         INTER_OUT_ARB_PRIORITY_W::new(self, 6)
     }
 }

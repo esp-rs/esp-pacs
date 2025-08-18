@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
-    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<TX_CLKM_CONF_SPEC> {
+    pub fn tx_clkm_div_num(&mut self) -> TX_CLKM_DIV_NUM_W<'_, TX_CLKM_CONF_SPEC> {
         TX_CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 26 - I2S Tx module clock enable signal."]
     #[inline(always)]
-    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<TX_CLKM_CONF_SPEC> {
+    pub fn tx_clk_active(&mut self) -> TX_CLK_ACTIVE_W<'_, TX_CLKM_CONF_SPEC> {
         TX_CLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - Select I2S Tx module source clock. 0: XTAL clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
-    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<TX_CLKM_CONF_SPEC> {
+    pub fn tx_clk_sel(&mut self) -> TX_CLK_SEL_W<'_, TX_CLKM_CONF_SPEC> {
         TX_CLK_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - Set this bit to enable clk gate"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<TX_CLKM_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, TX_CLKM_CONF_SPEC> {
         CLK_EN_W::new(self, 29)
     }
 }

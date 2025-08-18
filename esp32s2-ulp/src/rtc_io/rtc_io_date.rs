@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version control register"]
     #[inline(always)]
-    pub fn io_date(&mut self) -> IO_DATE_W<RTC_IO_DATE_SPEC> {
+    pub fn io_date(&mut self) -> IO_DATE_W<'_, RTC_IO_DATE_SPEC> {
         IO_DATE_W::new(self, 0)
     }
 }

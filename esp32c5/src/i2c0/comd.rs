@@ -180,37 +180,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Configures command 0. \\\\ It consists of three parts:\\\\ op_code is the command\\\\ 1: WRITE\\\\ 2: STOP\\\\ 3: READ\\\\ 4: END\\\\ 6: RSTART\\\\ Byte_num represents the number of bytes that need to be sent or received.\\\\ ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure <a href=fig:i2c-cmd-structure\">link</a> for more information. \\\\\\tododone{for CJ, please add a hyperlink for I2C CMD structure.CJ: done.}\""]
     #[inline(always)]
-    pub fn command(&mut self) -> COMMAND_W<COMD_SPEC> {
+    pub fn command(&mut self) -> COMMAND_W<'_, COMD_SPEC> {
         COMMAND_W::new(self, 0)
     }
     #[doc = "Bits 0:7 - Number of bytes to be sent or received for command %s."]
     #[inline(always)]
-    pub fn byte_num(&mut self) -> BYTE_NUM_W<COMD_SPEC> {
+    pub fn byte_num(&mut self) -> BYTE_NUM_W<'_, COMD_SPEC> {
         BYTE_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Acknowledge check enable for command %s."]
     #[inline(always)]
-    pub fn ack_check_en(&mut self) -> ACK_CHECK_EN_W<COMD_SPEC> {
+    pub fn ack_check_en(&mut self) -> ACK_CHECK_EN_W<'_, COMD_SPEC> {
         ACK_CHECK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Acknowledge expected for command %s."]
     #[inline(always)]
-    pub fn ack_exp(&mut self) -> ACK_EXP_W<COMD_SPEC> {
+    pub fn ack_exp(&mut self) -> ACK_EXP_W<'_, COMD_SPEC> {
         ACK_EXP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Acknowledge value for command %s."]
     #[inline(always)]
-    pub fn ack_value(&mut self) -> ACK_VALUE_W<COMD_SPEC> {
+    pub fn ack_value(&mut self) -> ACK_VALUE_W<'_, COMD_SPEC> {
         ACK_VALUE_W::new(self, 10)
     }
     #[doc = "Bits 11:13 - Opcode part of command %s."]
     #[inline(always)]
-    pub fn opcode(&mut self) -> OPCODE_W<COMD_SPEC> {
+    pub fn opcode(&mut self) -> OPCODE_W<'_, COMD_SPEC> {
         OPCODE_W::new(self, 11)
     }
     #[doc = "Bit 31 - Represents whether command 0 is done in I2C Master mode.\\\\ 0: Not done \\\\ 1: Done \\\\"]
     #[inline(always)]
-    pub fn command_done(&mut self) -> COMMAND_DONE_W<COMD_SPEC> {
+    pub fn command_done(&mut self) -> COMMAND_DONE_W<'_, COMD_SPEC> {
         COMMAND_DONE_W::new(self, 31)
     }
 }

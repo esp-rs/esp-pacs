@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 17 - bypass super watch dog reset"]
     #[inline(always)]
-    pub fn swd_bypass_rst(&mut self) -> SWD_BYPASS_RST_W<SWD_CONF_SPEC> {
+    pub fn swd_bypass_rst(&mut self) -> SWD_BYPASS_RST_W<'_, SWD_CONF_SPEC> {
         SWD_BYPASS_RST_W::new(self, 17)
     }
     #[doc = "Bits 18:27 - adjust signal width send to swd"]
     #[inline(always)]
-    pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<SWD_CONF_SPEC> {
+    pub fn swd_signal_width(&mut self) -> SWD_SIGNAL_WIDTH_W<'_, SWD_CONF_SPEC> {
         SWD_SIGNAL_WIDTH_W::new(self, 18)
     }
     #[doc = "Bit 28 - reset swd reset flag"]
     #[inline(always)]
-    pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<SWD_CONF_SPEC> {
+    pub fn swd_rst_flag_clr(&mut self) -> SWD_RST_FLAG_CLR_W<'_, SWD_CONF_SPEC> {
         SWD_RST_FLAG_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - Sw feed swd"]
     #[inline(always)]
-    pub fn swd_feed(&mut self) -> SWD_FEED_W<SWD_CONF_SPEC> {
+    pub fn swd_feed(&mut self) -> SWD_FEED_W<'_, SWD_CONF_SPEC> {
         SWD_FEED_W::new(self, 29)
     }
     #[doc = "Bit 30 - disabel SWD"]
     #[inline(always)]
-    pub fn swd_disable(&mut self) -> SWD_DISABLE_W<SWD_CONF_SPEC> {
+    pub fn swd_disable(&mut self) -> SWD_DISABLE_W<'_, SWD_CONF_SPEC> {
         SWD_DISABLE_W::new(self, 30)
     }
     #[doc = "Bit 31 - automatically feed swd when int comes"]
     #[inline(always)]
-    pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<SWD_CONF_SPEC> {
+    pub fn swd_auto_feed_en(&mut self) -> SWD_AUTO_FEED_EN_W<'_, SWD_CONF_SPEC> {
         SWD_AUTO_FEED_EN_W::new(self, 31)
     }
 }

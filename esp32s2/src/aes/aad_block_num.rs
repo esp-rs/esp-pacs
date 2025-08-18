@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the ADD Block Number for the GCM operation."]
     #[inline(always)]
-    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<AAD_BLOCK_NUM_SPEC> {
+    pub fn aad_block_num(&mut self) -> AAD_BLOCK_NUM_W<'_, AAD_BLOCK_NUM_SPEC> {
         AAD_BLOCK_NUM_W::new(self, 0)
     }
 }

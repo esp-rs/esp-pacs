@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - Set the threshold for touch sleep pad."]
     #[inline(always)]
-    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<TOUCH_SLP_THRES_SPEC> {
+    pub fn touch_slp_th(&mut self) -> TOUCH_SLP_TH_W<'_, TOUCH_SLP_THRES_SPEC> {
         TOUCH_SLP_TH_W::new(self, 0)
     }
     #[doc = "Bit 26 - Enable the proximity mode of touch sleep pad."]
     #[inline(always)]
-    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<TOUCH_SLP_THRES_SPEC> {
+    pub fn touch_slp_approach_en(&mut self) -> TOUCH_SLP_APPROACH_EN_W<'_, TOUCH_SLP_THRES_SPEC> {
         TOUCH_SLP_APPROACH_EN_W::new(self, 26)
     }
     #[doc = "Bits 27:31 - Select sleep pad."]
     #[inline(always)]
-    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<TOUCH_SLP_THRES_SPEC> {
+    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<'_, TOUCH_SLP_THRES_SPEC> {
         TOUCH_SLP_PAD_W::new(self, 27)
     }
 }

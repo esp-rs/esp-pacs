@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This bits stores key_0 that is a part of key material."]
     #[inline(always)]
-    pub fn key_0(&mut self) -> KEY_0_W<KEY__SPEC> {
+    pub fn key_0(&mut self) -> KEY_0_W<'_, KEY__SPEC> {
         KEY_0_W::new(self, 0)
     }
 }

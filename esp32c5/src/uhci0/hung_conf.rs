@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the timeout value for DMA data reception.\\\\Measurement unit: ms."]
     #[inline(always)]
-    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout(&mut self) -> TXFIFO_TIMEOUT_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - Configures the upper limit of the timeout counter for TX FIFO."]
     #[inline(always)]
-    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout_shift(&mut self) -> TXFIFO_TIMEOUT_SHIFT_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - Configures whether or not to enable the data reception timeout for TX FIFO.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+    pub fn txfifo_timeout_ena(&mut self) -> TXFIFO_TIMEOUT_ENA_W<'_, HUNG_CONF_SPEC> {
         TXFIFO_TIMEOUT_ENA_W::new(self, 11)
     }
     #[doc = "Bits 12:19 - Configures the timeout value for DMA to read data from RAM.\\\\Measurement unit: ms."]
     #[inline(always)]
-    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout(&mut self) -> RXFIFO_TIMEOUT_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_W::new(self, 12)
     }
     #[doc = "Bits 20:22 - Configures the upper limit of the timeout counter for RX FIFO."]
     #[inline(always)]
-    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout_shift(&mut self) -> RXFIFO_TIMEOUT_SHIFT_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_SHIFT_W::new(self, 20)
     }
     #[doc = "Bit 23 - Configures whether or not to enable the DMA data transmission timeout.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<HUNG_CONF_SPEC> {
+    pub fn rxfifo_timeout_ena(&mut self) -> RXFIFO_TIMEOUT_ENA_W<'_, HUNG_CONF_SPEC> {
         RXFIFO_TIMEOUT_ENA_W::new(self, 23)
     }
 }

@@ -140,76 +140,76 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_DC1` field.</div>"]
     #[inline(always)]
-    pub fn dac_dc(&mut self, n: u8) -> DAC_DC_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_dc(&mut self, n: u8) -> DAC_DC_W<'_, SAR_DAC_CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         DAC_DC_W::new(self, n * 8)
     }
     #[doc = "Bits 0:7 - DC offset for DAC1 CW generator."]
     #[inline(always)]
-    pub fn dac_dc1(&mut self) -> DAC_DC_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_dc1(&mut self) -> DAC_DC_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_DC_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DC offset for DAC2 CW generator."]
     #[inline(always)]
-    pub fn dac_dc2(&mut self) -> DAC_DC_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_dc2(&mut self) -> DAC_DC_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_DC_W::new(self, 8)
     }
     #[doc = "DAC(1-2) scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_SCALE1` field.</div>"]
     #[inline(always)]
-    pub fn dac_scale(&mut self, n: u8) -> DAC_SCALE_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_scale(&mut self, n: u8) -> DAC_SCALE_W<'_, SAR_DAC_CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         DAC_SCALE_W::new(self, n * 2 + 16)
     }
     #[doc = "Bits 16:17 - DAC1 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
-    pub fn dac_scale1(&mut self) -> DAC_SCALE_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_scale1(&mut self) -> DAC_SCALE_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_SCALE_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - DAC2 scaling. 00: no scale. 01: scale to 1/2. 10: scale to 1/4. 11: scale to 1/8."]
     #[inline(always)]
-    pub fn dac_scale2(&mut self) -> DAC_SCALE_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_scale2(&mut self) -> DAC_SCALE_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_SCALE_W::new(self, 18)
     }
     #[doc = "Invert DAC(1-2). 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_INV1` field.</div>"]
     #[inline(always)]
-    pub fn dac_inv(&mut self, n: u8) -> DAC_INV_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_inv(&mut self, n: u8) -> DAC_INV_W<'_, SAR_DAC_CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         DAC_INV_W::new(self, n * 2 + 20)
     }
     #[doc = "Bits 20:21 - Invert DAC1. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
-    pub fn dac_inv1(&mut self) -> DAC_INV_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_inv1(&mut self) -> DAC_INV_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_INV_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - Invert DAC2. 00: do not invert any bits. 01: invert all bits. 10: invert MSB. 11: invert all bits except MSB."]
     #[inline(always)]
-    pub fn dac_inv2(&mut self) -> DAC_INV_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_inv2(&mut self) -> DAC_INV_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_INV_W::new(self, 22)
     }
     #[doc = "1: to select CW generator as source to PDAC(1-2)_DAC\\[7:0\\] 0: to select register reg_pdac(1-2)_dac\\[7:0\\] as source to PDAC(1-2)_DAC\\[7:0\\]"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DAC_CW_EN1` field.</div>"]
     #[inline(always)]
-    pub fn dac_cw_en(&mut self, n: u8) -> DAC_CW_EN_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_cw_en(&mut self, n: u8) -> DAC_CW_EN_W<'_, SAR_DAC_CTRL2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         DAC_CW_EN_W::new(self, n + 24)
     }
     #[doc = "Bit 24 - 1: to select CW generator as source to PDAC1_DAC\\[7:0\\] 0: to select register reg_pdac1_dac\\[7:0\\] as source to PDAC1_DAC\\[7:0\\]"]
     #[inline(always)]
-    pub fn dac_cw_en1(&mut self) -> DAC_CW_EN_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_cw_en1(&mut self) -> DAC_CW_EN_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_CW_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: to select CW generator as source to PDAC2_DAC\\[7:0\\] 0: to select register reg_pdac2_dac\\[7:0\\] as source to PDAC2_DAC\\[7:0\\]"]
     #[inline(always)]
-    pub fn dac_cw_en2(&mut self) -> DAC_CW_EN_W<SAR_DAC_CTRL2_SPEC> {
+    pub fn dac_cw_en2(&mut self) -> DAC_CW_EN_W<'_, SAR_DAC_CTRL2_SPEC> {
         DAC_CW_EN_W::new(self, 25)
     }
 }

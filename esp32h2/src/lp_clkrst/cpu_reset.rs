@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
-    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<CPU_RESET_SPEC> {
+    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<'_, CPU_RESET_SPEC> {
         RTC_WDT_CPU_RESET_LENGTH_W::new(self, 22)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<CPU_RESET_SPEC> {
+    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<'_, CPU_RESET_SPEC> {
         RTC_WDT_CPU_RESET_EN_W::new(self, 25)
     }
     #[doc = "Bits 26:30 - need_des"]
     #[inline(always)]
-    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<CPU_RESET_SPEC> {
+    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<'_, CPU_RESET_SPEC> {
         CPU_STALL_WAIT_W::new(self, 26)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<CPU_RESET_SPEC> {
+    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<'_, CPU_RESET_SPEC> {
         CPU_STALL_EN_W::new(self, 31)
     }
 }

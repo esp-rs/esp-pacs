@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Higher two octets of the MAC address"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W<ADDR_HIGH_SPEC> {
+    pub fn addr(&mut self) -> ADDR_W<'_, ADDR_HIGH_SPEC> {
         ADDR_W::new(self, 0)
     }
     #[doc = "Bit 16 - Is the cipher WEP104"]
     #[inline(always)]
-    pub fn wep_104(&mut self) -> WEP_104_W<ADDR_HIGH_SPEC> {
+    pub fn wep_104(&mut self) -> WEP_104_W<'_, ADDR_HIGH_SPEC> {
         WEP_104_W::new(self, 16)
     }
     #[doc = "Bits 18:20 - In use algorithm"]
     #[inline(always)]
-    pub fn algorithm(&mut self) -> ALGORITHM_W<ADDR_HIGH_SPEC> {
+    pub fn algorithm(&mut self) -> ALGORITHM_W<'_, ADDR_HIGH_SPEC> {
         ALGORITHM_W::new(self, 18)
     }
     #[doc = "Bit 21 - Is this a pairwise key"]
     #[inline(always)]
-    pub fn pairwise_key(&mut self) -> PAIRWISE_KEY_W<ADDR_HIGH_SPEC> {
+    pub fn pairwise_key(&mut self) -> PAIRWISE_KEY_W<'_, ADDR_HIGH_SPEC> {
         PAIRWISE_KEY_W::new(self, 21)
     }
     #[doc = "Bit 22 - Meaning unknown set to 1 for all algorithms"]
     #[inline(always)]
-    pub fn unknown(&mut self) -> UNKNOWN_W<ADDR_HIGH_SPEC> {
+    pub fn unknown(&mut self) -> UNKNOWN_W<'_, ADDR_HIGH_SPEC> {
         UNKNOWN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Is this a group key"]
     #[inline(always)]
-    pub fn group_key(&mut self) -> GROUP_KEY_W<ADDR_HIGH_SPEC> {
+    pub fn group_key(&mut self) -> GROUP_KEY_W<'_, ADDR_HIGH_SPEC> {
         GROUP_KEY_W::new(self, 23)
     }
     #[doc = "Bits 24:25 - Index of the interface using the key"]
     #[inline(always)]
-    pub fn interface_id(&mut self) -> INTERFACE_ID_W<ADDR_HIGH_SPEC> {
+    pub fn interface_id(&mut self) -> INTERFACE_ID_W<'_, ADDR_HIGH_SPEC> {
         INTERFACE_ID_W::new(self, 24)
     }
     #[doc = "Bit 26 - Key length is 256 bits"]
     #[inline(always)]
-    pub fn bits_256(&mut self) -> BITS_256_W<ADDR_HIGH_SPEC> {
+    pub fn bits_256(&mut self) -> BITS_256_W<'_, ADDR_HIGH_SPEC> {
         BITS_256_W::new(self, 26)
     }
     #[doc = "Bits 30:31 - Protocol identifier of the key"]
     #[inline(always)]
-    pub fn key_id(&mut self) -> KEY_ID_W<ADDR_HIGH_SPEC> {
+    pub fn key_id(&mut self) -> KEY_ID_W<'_, ADDR_HIGH_SPEC> {
         KEY_ID_W::new(self, 30)
     }
 }

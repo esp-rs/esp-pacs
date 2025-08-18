@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - Enable Signaling and Payload Protection (SPP) for A-MSDUs"]
     #[inline(always)]
-    pub fn spp_enable(&mut self) -> SPP_ENABLE_W<INTERFACE_CRYPTO_CONTROL_SPEC> {
+    pub fn spp_enable(&mut self) -> SPP_ENABLE_W<'_, INTERFACE_CRYPTO_CONTROL_SPEC> {
         SPP_ENABLE_W::new(self, 9)
     }
     #[doc = "Bit 17 - Disable Protected Management Frames (PMF)"]
     #[inline(always)]
-    pub fn pmf_disable(&mut self) -> PMF_DISABLE_W<INTERFACE_CRYPTO_CONTROL_SPEC> {
+    pub fn pmf_disable(&mut self) -> PMF_DISABLE_W<'_, INTERFACE_CRYPTO_CONTROL_SPEC> {
         PMF_DISABLE_W::new(self, 17)
     }
     #[doc = "Bit 28 - Does the cipher employ Authenticated Encryption with Associated Data (AEAD)"]
     #[inline(always)]
-    pub fn aead_cipher(&mut self) -> AEAD_CIPHER_W<INTERFACE_CRYPTO_CONTROL_SPEC> {
+    pub fn aead_cipher(&mut self) -> AEAD_CIPHER_W<'_, INTERFACE_CRYPTO_CONTROL_SPEC> {
         AEAD_CIPHER_W::new(self, 28)
     }
     #[doc = "Bit 31 - Cipher is SMS4"]
     #[inline(always)]
-    pub fn sms4(&mut self) -> SMS4_W<INTERFACE_CRYPTO_CONTROL_SPEC> {
+    pub fn sms4(&mut self) -> SMS4_W<'_, INTERFACE_CRYPTO_CONTROL_SPEC> {
         SMS4_W::new(self, 31)
     }
 }

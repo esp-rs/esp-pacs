@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    pub fn touch_slp_th0(&mut self) -> TOUCH_SLP_TH0_W<TOUCH_SLP0_SPEC> {
+    pub fn touch_slp_th0(&mut self) -> TOUCH_SLP_TH0_W<'_, TOUCH_SLP0_SPEC> {
         TOUCH_SLP_TH0_W::new(self, 0)
     }
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<TOUCH_SLP0_SPEC> {
+    pub fn touch_slp_channel_clr(&mut self) -> TOUCH_SLP_CHANNEL_CLR_W<'_, TOUCH_SLP0_SPEC> {
         TOUCH_SLP_CHANNEL_CLR_W::new(self, 16)
     }
     #[doc = "Bits 17:20 - need_des"]
     #[inline(always)]
-    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<TOUCH_SLP0_SPEC> {
+    pub fn touch_slp_pad(&mut self) -> TOUCH_SLP_PAD_W<'_, TOUCH_SLP0_SPEC> {
         TOUCH_SLP_PAD_W::new(self, 17)
     }
 }

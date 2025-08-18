@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 and then write 0 to reset the decoder state machine."]
     #[inline(always)]
-    pub fn tx_rst(&mut self) -> TX_RST_W<CONF0_SPEC> {
+    pub fn tx_rst(&mut self) -> TX_RST_W<'_, CONF0_SPEC> {
         TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 and then write 0 to reset the encoder state machine."]
     #[inline(always)]
-    pub fn rx_rst(&mut self) -> RX_RST_W<CONF0_SPEC> {
+    pub fn rx_rst(&mut self) -> RX_RST_W<'_, CONF0_SPEC> {
         RX_RST_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Configures to select which uart to connect with UHCI.\\\\ 0: UART0\\\\ 1: UART1\\\\"]
     #[inline(always)]
-    pub fn uart_sel(&mut self) -> UART_SEL_W<CONF0_SPEC> {
+    pub fn uart_sel(&mut self) -> UART_SEL_W<'_, CONF0_SPEC> {
         UART_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5 - Configures whether or not to separate the data frame with a special character.\\\\ 0: Not separate\\\\ 1: Separate\\\\"]
     #[inline(always)]
-    pub fn seper_en(&mut self) -> SEPER_EN_W<CONF0_SPEC> {
+    pub fn seper_en(&mut self) -> SEPER_EN_W<'_, CONF0_SPEC> {
         SEPER_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to encode the data packet with a formatting header.\\\\ 0: Not use formatting header\\\\ 1: Use formatting header\\\\"]
     #[inline(always)]
-    pub fn head_en(&mut self) -> HEAD_EN_W<CONF0_SPEC> {
+    pub fn head_en(&mut self) -> HEAD_EN_W<'_, CONF0_SPEC> {
         HEAD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable the reception of the 16-bit CRC.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<CONF0_SPEC> {
+    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<'_, CONF0_SPEC> {
         CRC_REC_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to stop receiving data when UART is idle.\\\\ 0: Not stop\\\\ 1: Stop\\\\"]
     #[inline(always)]
-    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<CONF0_SPEC> {
+    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<'_, CONF0_SPEC> {
         UART_IDLE_EOF_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures when the UHCI decoder stops receiving data.\\\\ 0: Stops after receiving 0xC0\\\\ 1: Stops when the number of received data bytes reach the specified value. When UHCI_HEAD_EN is 1, the specified value is the data length indicated by the UHCI packet header. when UHCI_HEAD_EN is 0, the specified value is the configured value.\\\\"]
     #[inline(always)]
-    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<CONF0_SPEC> {
+    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<'_, CONF0_SPEC> {
         LEN_EOF_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable data integrity check by appending a 16 bit CCITT-CRC to the end of the data.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<CONF0_SPEC> {
+    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<'_, CONF0_SPEC> {
         ENCODE_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures clock gating.\\\\ 0: Support clock only when the application writes registers.\\\\ 1: Always force the clock on for registers.\\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF0_SPEC> {
         CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to stop UHCI from receiving data after UART has received a NULL frame.\\\\ 0: Not stop\\\\ 1: Stop\\\\"]
     #[inline(always)]
-    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<CONF0_SPEC> {
+    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<'_, CONF0_SPEC> {
         UART_RX_BRK_EOF_EN_W::new(self, 12)
     }
 }

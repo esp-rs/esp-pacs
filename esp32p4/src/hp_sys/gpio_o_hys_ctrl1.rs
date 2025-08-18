@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - hys control for gpio56~48"]
     #[inline(always)]
-    pub fn reg_gpio_0_hys_high(&mut self) -> REG_GPIO_0_HYS_HIGH_W<GPIO_O_HYS_CTRL1_SPEC> {
+    pub fn reg_gpio_0_hys_high(&mut self) -> REG_GPIO_0_HYS_HIGH_W<'_, GPIO_O_HYS_CTRL1_SPEC> {
         REG_GPIO_0_HYS_HIGH_W::new(self, 0)
     }
 }

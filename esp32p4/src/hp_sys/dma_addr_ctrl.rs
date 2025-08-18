@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 0 means dma access extmem use 8xxx_xxxx else use 4xxx_xxxx"]
     #[inline(always)]
-    pub fn reg_sys_dma_addr_sel(&mut self) -> REG_SYS_DMA_ADDR_SEL_W<DMA_ADDR_CTRL_SPEC> {
+    pub fn reg_sys_dma_addr_sel(&mut self) -> REG_SYS_DMA_ADDR_SEL_W<'_, DMA_ADDR_CTRL_SPEC> {
         REG_SYS_DMA_ADDR_SEL_W::new(self, 0)
     }
 }

@@ -86,22 +86,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures the delays to input signal FSPID based on the setting of SPI_DIN0_MODE.\\\\ 0: Delayed by 1 clock cycle\\\\ 1: Delayed by 2 clock cycles\\\\ 2: Delayed by 3 clock cycles\\\\ 3: Delayed by 4 clock cycles\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din0_num(&mut self) -> SPI_DIN0_NUM_W<SPI_DIN_NUM_SPEC> {
+    pub fn spi_din0_num(&mut self) -> SPI_DIN0_NUM_W<'_, SPI_DIN_NUM_SPEC> {
         SPI_DIN0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Configures the delays to input signal FSPIQ based on the setting of SPI_DIN1_MODE.\\\\ 0: Delayed by 1 clock cycle\\\\ 1: Delayed by 2 clock cycles\\\\ 2: Delayed by 3 clock cycles\\\\ 3: Delayed by 4 clock cycles\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din1_num(&mut self) -> SPI_DIN1_NUM_W<SPI_DIN_NUM_SPEC> {
+    pub fn spi_din1_num(&mut self) -> SPI_DIN1_NUM_W<'_, SPI_DIN_NUM_SPEC> {
         SPI_DIN1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configures the delays to input signal FSPIWP based on the setting of SPI_DIN2_MODE.\\\\ 0: Delayed by 1 clock cycle\\\\ 1: Delayed by 2 clock cycles\\\\ 2: Delayed by 3 clock cycles\\\\ 3: Delayed by 4 clock cycles\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din2_num(&mut self) -> SPI_DIN2_NUM_W<SPI_DIN_NUM_SPEC> {
+    pub fn spi_din2_num(&mut self) -> SPI_DIN2_NUM_W<'_, SPI_DIN_NUM_SPEC> {
         SPI_DIN2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Configures the delays to input signal FSPIHD based on the setting of SPI_DIN3_MODE.\\\\ 0: Delayed by 1 clock cycle\\\\ 1: Delayed by 2 clock cycles\\\\ 2: Delayed by 3 clock cycles\\\\ 3: Delayed by 4 clock cycles\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_din3_num(&mut self) -> SPI_DIN3_NUM_W<SPI_DIN_NUM_SPEC> {
+    pub fn spi_din3_num(&mut self) -> SPI_DIN3_NUM_W<'_, SPI_DIN_NUM_SPEC> {
         SPI_DIN3_NUM_W::new(self, 6)
     }
 }

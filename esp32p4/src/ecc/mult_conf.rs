@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to start caculation of ECC Accelerator. This bit will be self-cleared after the caculatrion is done."]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<MULT_CONF_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, MULT_CONF_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to reset ECC Accelerator."]
     #[inline(always)]
-    pub fn reset(&mut self) -> RESET_W<MULT_CONF_SPEC> {
+    pub fn reset(&mut self) -> RESET_W<'_, MULT_CONF_SPEC> {
         RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - The key length mode bit of ECC Accelerator. 0: P-192. 1: P-256."]
     #[inline(always)]
-    pub fn key_length(&mut self) -> KEY_LENGTH_W<MULT_CONF_SPEC> {
+    pub fn key_length(&mut self) -> KEY_LENGTH_W<'_, MULT_CONF_SPEC> {
         KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - The mod base of mod operation, only valid in work_mode 8-11. 0: n(order of curve). 1: p(mod base of curve)"]
     #[inline(always)]
-    pub fn mod_base(&mut self) -> MOD_BASE_W<MULT_CONF_SPEC> {
+    pub fn mod_base(&mut self) -> MOD_BASE_W<'_, MULT_CONF_SPEC> {
         MOD_BASE_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - The work mode bits of ECC Accelerator. 0: Point Mult Mode. 1: Reserved. 2: Point verification mode. 3: Point Verif+mult mode. 4: Jacobian Point Mult Mode. 5: Point Add Mode. 6: Jacobian Point Verification Mode. 7: Point Verif + Jacobian Mult Mode. 8: mod addition. 9. mod substraction. 10: mod multiplication. 11: mod division."]
     #[inline(always)]
-    pub fn work_mode(&mut self) -> WORK_MODE_W<MULT_CONF_SPEC> {
+    pub fn work_mode(&mut self) -> WORK_MODE_W<'_, MULT_CONF_SPEC> {
         WORK_MODE_W::new(self, 4)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn security_mode(&mut self) -> SECURITY_MODE_W<MULT_CONF_SPEC> {
+    pub fn security_mode(&mut self) -> SECURITY_MODE_W<'_, MULT_CONF_SPEC> {
         SECURITY_MODE_W::new(self, 8)
     }
     #[doc = "Bit 30 - Write 1 to force on register clock gate."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<MULT_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, MULT_CONF_SPEC> {
         CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - ECC memory clock gate force on register"]
     #[inline(always)]
-    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<MULT_CONF_SPEC> {
+    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<'_, MULT_CONF_SPEC> {
         MEM_CLOCK_GATE_FORCE_ON_W::new(self, 31)
     }
 }

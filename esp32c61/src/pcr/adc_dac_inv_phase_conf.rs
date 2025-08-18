@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn clk_rx_adc_inv_phase_ena(
         &mut self,
-    ) -> CLK_RX_ADC_INV_PHASE_ENA_W<ADC_DAC_INV_PHASE_CONF_SPEC> {
+    ) -> CLK_RX_ADC_INV_PHASE_ENA_W<'_, ADC_DAC_INV_PHASE_CONF_SPEC> {
         CLK_RX_ADC_INV_PHASE_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - xxxx"]
     #[inline(always)]
     pub fn clk_tx_dac_inv_phase_ena(
         &mut self,
-    ) -> CLK_TX_DAC_INV_PHASE_ENA_W<ADC_DAC_INV_PHASE_CONF_SPEC> {
+    ) -> CLK_TX_DAC_INV_PHASE_ENA_W<'_, ADC_DAC_INV_PHASE_CONF_SPEC> {
         CLK_TX_DAC_INV_PHASE_ENA_W::new(self, 1)
     }
 }

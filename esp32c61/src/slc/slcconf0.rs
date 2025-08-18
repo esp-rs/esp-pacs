@@ -264,112 +264,116 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to reset TX (host to slave) FSM (finite state machine) in SLC0."]
     #[inline(always)]
-    pub fn sdio_slc0_tx_rst(&mut self) -> SDIO_SLC0_TX_RST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_tx_rst(&mut self) -> SDIO_SLC0_TX_RST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether to reset RX (slave to host) FSM in SCL0."]
     #[inline(always)]
-    pub fn sdio_slc0_rx_rst(&mut self) -> SDIO_SLC0_RX_RST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rx_rst(&mut self) -> SDIO_SLC0_RX_RST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RX_RST_W::new(self, 1)
     }
     #[doc = "Bit 4 - Configures whether SCL0 loops around when the slave buffer finishes receiving packets from the host."]
     #[inline(always)]
-    pub fn sdio_slc0_tx_loop_test(&mut self) -> SDIO_SLC0_TX_LOOP_TEST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_tx_loop_test(&mut self) -> SDIO_SLC0_TX_LOOP_TEST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_TX_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether SCL0 loops around when the slave buffer finishes sending packets to the host."]
     #[inline(always)]
-    pub fn sdio_slc0_rx_loop_test(&mut self) -> SDIO_SLC0_RX_LOOP_TEST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rx_loop_test(&mut self) -> SDIO_SLC0_RX_LOOP_TEST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RX_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether SCL0 changes the owner bit of RX linked list."]
     #[inline(always)]
-    pub fn sdio_slc0_rx_auto_wrback(&mut self) -> SDIO_SLC0_RX_AUTO_WRBACK_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rx_auto_wrback(&mut self) -> SDIO_SLC0_RX_AUTO_WRBACK_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RX_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Please initialize to 1, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc0_rx_no_restart_clr(&mut self) -> SDIO_SLC0_RX_NO_RESTART_CLR_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rx_no_restart_clr(
+        &mut self,
+    ) -> SDIO_SLC0_RX_NO_RESTART_CLR_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RX_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether SCL0 can use AHB burst operation when reading the RX linked list from memory."]
     #[inline(always)]
-    pub fn sdio_slc0_rxdscr_burst_en(&mut self) -> SDIO_SLC0_RXDSCR_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rxdscr_burst_en(&mut self) -> SDIO_SLC0_RXDSCR_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RXDSCR_BURST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether SCL0 can use AHB burst operation when read data from memory."]
     #[inline(always)]
-    pub fn sdio_slc0_rxdata_burst_en(&mut self) -> SDIO_SLC0_RXDATA_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_rxdata_burst_en(&mut self) -> SDIO_SLC0_RXDATA_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_RXDATA_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 12 - Configures whether SCL0 can use AHB burst operation when read the TX linked list from memory."]
     #[inline(always)]
-    pub fn sdio_slc0_txdscr_burst_en(&mut self) -> SDIO_SLC0_TXDSCR_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_txdscr_burst_en(&mut self) -> SDIO_SLC0_TXDSCR_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_TXDSCR_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether SCL0 can use AHB burst operation when send data to memory."]
     #[inline(always)]
-    pub fn sdio_slc0_txdata_burst_en(&mut self) -> SDIO_SLC0_TXDATA_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_txdata_burst_en(&mut self) -> SDIO_SLC0_TXDATA_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_TXDATA_BURST_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc0_token_auto_clr(&mut self) -> SDIO_SLC0_TOKEN_AUTO_CLR_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc0_token_auto_clr(&mut self) -> SDIO_SLC0_TOKEN_AUTO_CLR_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC0_TOKEN_AUTO_CLR_W::new(self, 14)
     }
     #[doc = "Bit 16 - Configures whether to reset TX FSM in SLC1."]
     #[inline(always)]
-    pub fn sdio_slc1_tx_rst(&mut self) -> SDIO_SLC1_TX_RST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_tx_rst(&mut self) -> SDIO_SLC1_TX_RST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_TX_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether to reset RX FSM in SLC1."]
     #[inline(always)]
-    pub fn sdio_slc1_rx_rst(&mut self) -> SDIO_SLC1_RX_RST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rx_rst(&mut self) -> SDIO_SLC1_RX_RST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RX_RST_W::new(self, 17)
     }
     #[doc = "Bit 20 - Configures whether SCL1 loops around when the slave buffer finishes receiving packets from the host."]
     #[inline(always)]
-    pub fn sdio_slc1_tx_loop_test(&mut self) -> SDIO_SLC1_TX_LOOP_TEST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_tx_loop_test(&mut self) -> SDIO_SLC1_TX_LOOP_TEST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_TX_LOOP_TEST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether SCL1 loops around when the slave buffer finishes sending packets to the host."]
     #[inline(always)]
-    pub fn sdio_slc1_rx_loop_test(&mut self) -> SDIO_SLC1_RX_LOOP_TEST_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rx_loop_test(&mut self) -> SDIO_SLC1_RX_LOOP_TEST_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RX_LOOP_TEST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether SCL1 changes the owner bit of the RX linked list."]
     #[inline(always)]
-    pub fn sdio_slc1_rx_auto_wrback(&mut self) -> SDIO_SLC1_RX_AUTO_WRBACK_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rx_auto_wrback(&mut self) -> SDIO_SLC1_RX_AUTO_WRBACK_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RX_AUTO_WRBACK_W::new(self, 22)
     }
     #[doc = "Bit 23 - Please initialize to 1, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc1_rx_no_restart_clr(&mut self) -> SDIO_SLC1_RX_NO_RESTART_CLR_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rx_no_restart_clr(
+        &mut self,
+    ) -> SDIO_SLC1_RX_NO_RESTART_CLR_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RX_NO_RESTART_CLR_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether SCL1 can use AHB burst operation when read the RX linked list from memory."]
     #[inline(always)]
-    pub fn sdio_slc1_rxdscr_burst_en(&mut self) -> SDIO_SLC1_RXDSCR_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rxdscr_burst_en(&mut self) -> SDIO_SLC1_RXDSCR_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RXDSCR_BURST_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether SCL1 can use AHB burst operation when reading data from memory."]
     #[inline(always)]
-    pub fn sdio_slc1_rxdata_burst_en(&mut self) -> SDIO_SLC1_RXDATA_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_rxdata_burst_en(&mut self) -> SDIO_SLC1_RXDATA_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_RXDATA_BURST_EN_W::new(self, 25)
     }
     #[doc = "Bit 28 - Configures whether SCL1 can use AHB burst operation when read the TX linked list from memory."]
     #[inline(always)]
-    pub fn sdio_slc1_txdscr_burst_en(&mut self) -> SDIO_SLC1_TXDSCR_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_txdscr_burst_en(&mut self) -> SDIO_SLC1_TXDSCR_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_TXDSCR_BURST_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether SCL1 can use AHB burst operation when send data to memory."]
     #[inline(always)]
-    pub fn sdio_slc1_txdata_burst_en(&mut self) -> SDIO_SLC1_TXDATA_BURST_EN_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_txdata_burst_en(&mut self) -> SDIO_SLC1_TXDATA_BURST_EN_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_TXDATA_BURST_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc1_token_auto_clr(&mut self) -> SDIO_SLC1_TOKEN_AUTO_CLR_W<SLCCONF0_SPEC> {
+    pub fn sdio_slc1_token_auto_clr(&mut self) -> SDIO_SLC1_TOKEN_AUTO_CLR_W<'_, SLCCONF0_SPEC> {
         SDIO_SLC1_TOKEN_AUTO_CLR_W::new(self, 30)
     }
 }

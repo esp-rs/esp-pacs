@@ -201,100 +201,100 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents GDMA_evt_out_done_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_done_ch0_st(&mut self) -> GDMA_EVT_OUT_DONE_CH0_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_done_ch0_st(&mut self) -> GDMA_EVT_OUT_DONE_CH0_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_DONE_CH0_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents GDMA_evt_out_done_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_done_ch1_st(&mut self) -> GDMA_EVT_OUT_DONE_CH1_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_done_ch1_st(&mut self) -> GDMA_EVT_OUT_DONE_CH1_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_DONE_CH1_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents GDMA_evt_out_done_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_done_ch2_st(&mut self) -> GDMA_EVT_OUT_DONE_CH2_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_done_ch2_st(&mut self) -> GDMA_EVT_OUT_DONE_CH2_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_DONE_CH2_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents GDMA_evt_out_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_eof_ch0_st(&mut self) -> GDMA_EVT_OUT_EOF_CH0_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_eof_ch0_st(&mut self) -> GDMA_EVT_OUT_EOF_CH0_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_EOF_CH0_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents GDMA_evt_out_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_eof_ch1_st(&mut self) -> GDMA_EVT_OUT_EOF_CH1_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_eof_ch1_st(&mut self) -> GDMA_EVT_OUT_EOF_CH1_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_EOF_CH1_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents GDMA_evt_out_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn gdma_evt_out_eof_ch2_st(&mut self) -> GDMA_EVT_OUT_EOF_CH2_ST_W<EVT_ST4_SPEC> {
+    pub fn gdma_evt_out_eof_ch2_st(&mut self) -> GDMA_EVT_OUT_EOF_CH2_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_EOF_CH2_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents GDMA_evt_out_total_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_total_eof_ch0_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH0_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH0_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_TOTAL_EOF_CH0_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents GDMA_evt_out_total_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_total_eof_ch1_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH1_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH1_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_TOTAL_EOF_CH1_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents GDMA_evt_out_total_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_total_eof_ch2_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH2_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_TOTAL_EOF_CH2_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_TOTAL_EOF_CH2_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents GDMA_evt_out_fifo_empty_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_empty_ch0_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH0_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH0_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_EMPTY_CH0_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents GDMA_evt_out_fifo_empty_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_empty_ch1_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH1_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH1_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_EMPTY_CH1_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents GDMA_evt_out_fifo_empty_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_empty_ch2_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH2_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_EMPTY_CH2_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_EMPTY_CH2_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents GDMA_evt_out_fifo_full_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_full_ch0_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_FULL_CH0_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_FULL_CH0_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_FULL_CH0_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents GDMA_evt_out_fifo_full_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_full_ch1_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_FULL_CH1_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_FULL_CH1_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_FULL_CH1_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents GDMA_evt_out_fifo_full_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_evt_out_fifo_full_ch2_st(
         &mut self,
-    ) -> GDMA_EVT_OUT_FIFO_FULL_CH2_ST_W<EVT_ST4_SPEC> {
+    ) -> GDMA_EVT_OUT_FIFO_FULL_CH2_ST_W<'_, EVT_ST4_SPEC> {
         GDMA_EVT_OUT_FIFO_FULL_CH2_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents PMU_evt_sleep_weekup trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pmu_evt_sleep_weekup_st(&mut self) -> PMU_EVT_SLEEP_WEEKUP_ST_W<EVT_ST4_SPEC> {
+    pub fn pmu_evt_sleep_weekup_st(&mut self) -> PMU_EVT_SLEEP_WEEKUP_ST_W<'_, EVT_ST4_SPEC> {
         PMU_EVT_SLEEP_WEEKUP_ST_W::new(self, 15)
     }
 }

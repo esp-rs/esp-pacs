@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn core_1_vecbase_override_world0_value(
         &mut self,
-    ) -> CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<CORE_1_VECBASE_OVERRIDE_1_SPEC> {
+    ) -> CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W<'_, CORE_1_VECBASE_OVERRIDE_1_SPEC> {
         CORE_1_VECBASE_OVERRIDE_WORLD0_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 22:23 - Set 0x3 to sel vecbase_override to override vecbase register."]
     #[inline(always)]
     pub fn core_1_vecbase_override_sel(
         &mut self,
-    ) -> CORE_1_VECBASE_OVERRIDE_SEL_W<CORE_1_VECBASE_OVERRIDE_1_SPEC> {
+    ) -> CORE_1_VECBASE_OVERRIDE_SEL_W<'_, CORE_1_VECBASE_OVERRIDE_1_SPEC> {
         CORE_1_VECBASE_OVERRIDE_SEL_W::new(self, 22)
     }
 }

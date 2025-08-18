@@ -30,22 +30,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to start encoding one frame.\\\\0: Invalid. No effect\\\\1: Start encoding one frame"]
     #[inline(always)]
-    pub fn frame_start(&mut self) -> FRAME_START_W<SYS_CTRL_SPEC> {
+    pub fn frame_start(&mut self) -> FRAME_START_W<'_, SYS_CTRL_SPEC> {
         FRAME_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to start moving reference data from external mem.\\\\0: Invalid. No effect\\\\1: H264 start moving two MB lines of reference frame from external mem to internal mem"]
     #[inline(always)]
-    pub fn dma_move_start(&mut self) -> DMA_MOVE_START_W<SYS_CTRL_SPEC> {
+    pub fn dma_move_start(&mut self) -> DMA_MOVE_START_W<'_, SYS_CTRL_SPEC> {
         DMA_MOVE_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures H264 running mode. When field H264_DUAL_STREAM_MODE is set to 1, this field must be set to 1 too.\\\\0: GOP mode. Before every GOP first frame start, need reconfig reference frame DMA\\\\1: Frame mode. Before every frame start, need reconfig reference frame DMA"]
     #[inline(always)]
-    pub fn frame_mode(&mut self) -> FRAME_MODE_W<SYS_CTRL_SPEC> {
+    pub fn frame_mode(&mut self) -> FRAME_MODE_W<'_, SYS_CTRL_SPEC> {
         FRAME_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to reset H264 ip.\\\\0: Invalid. No effect\\\\1: Reset H264 ip"]
     #[inline(always)]
-    pub fn sys_rst_pulse(&mut self) -> SYS_RST_PULSE_W<SYS_CTRL_SPEC> {
+    pub fn sys_rst_pulse(&mut self) -> SYS_RST_PULSE_W<'_, SYS_CTRL_SPEC> {
         SYS_RST_PULSE_W::new(self, 3)
     }
 }

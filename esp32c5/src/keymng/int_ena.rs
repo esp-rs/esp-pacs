@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the km_prep_done_int interrupt"]
     #[inline(always)]
-    pub fn prep_done_int_ena(&mut self) -> PREP_DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn prep_done_int_ena(&mut self) -> PREP_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         PREP_DONE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the km_proc_done_int interrupt"]
     #[inline(always)]
-    pub fn proc_done_int_ena(&mut self) -> PROC_DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn proc_done_int_ena(&mut self) -> PROC_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         PROC_DONE_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the km_post_done_int interrupt"]
     #[inline(always)]
-    pub fn post_done_int_ena(&mut self) -> POST_DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn post_done_int_ena(&mut self) -> POST_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         POST_DONE_INT_ENA_W::new(self, 2)
     }
 }

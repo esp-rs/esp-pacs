@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn pro_dcache_memsync_addr(
         &mut self,
-    ) -> PRO_DCACHE_MEMSYNC_ADDR_W<PRO_DCACHE_MEM_SYNC0_SPEC> {
+    ) -> PRO_DCACHE_MEMSYNC_ADDR_W<'_, PRO_DCACHE_MEM_SYNC0_SPEC> {
         PRO_DCACHE_MEMSYNC_ADDR_W::new(self, 0)
     }
 }

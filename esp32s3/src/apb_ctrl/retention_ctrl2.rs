@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:11 - ******* Description ***********"]
     #[inline(always)]
-    pub fn ret_icache_size(&mut self) -> RET_ICACHE_SIZE_W<RETENTION_CTRL2_SPEC> {
+    pub fn ret_icache_size(&mut self) -> RET_ICACHE_SIZE_W<'_, RETENTION_CTRL2_SPEC> {
         RET_ICACHE_SIZE_W::new(self, 4)
     }
     #[doc = "Bits 13:20 - ******* Description ***********"]
     #[inline(always)]
-    pub fn ret_icache_vld_size(&mut self) -> RET_ICACHE_VLD_SIZE_W<RETENTION_CTRL2_SPEC> {
+    pub fn ret_icache_vld_size(&mut self) -> RET_ICACHE_VLD_SIZE_W<'_, RETENTION_CTRL2_SPEC> {
         RET_ICACHE_VLD_SIZE_W::new(self, 13)
     }
     #[doc = "Bits 22:29 - ******* Description ***********"]
     #[inline(always)]
-    pub fn ret_icache_start_point(&mut self) -> RET_ICACHE_START_POINT_W<RETENTION_CTRL2_SPEC> {
+    pub fn ret_icache_start_point(&mut self) -> RET_ICACHE_START_POINT_W<'_, RETENTION_CTRL2_SPEC> {
         RET_ICACHE_START_POINT_W::new(self, 22)
     }
     #[doc = "Bit 31 - ******* Description ***********"]
     #[inline(always)]
-    pub fn ret_icache_enable(&mut self) -> RET_ICACHE_ENABLE_W<RETENTION_CTRL2_SPEC> {
+    pub fn ret_icache_enable(&mut self) -> RET_ICACHE_ENABLE_W<'_, RETENTION_CTRL2_SPEC> {
         RET_ICACHE_ENABLE_W::new(self, 31)
     }
 }

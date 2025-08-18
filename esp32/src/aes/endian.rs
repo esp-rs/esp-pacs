@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Endianness selection register. See Table 22-2 for details."]
     #[inline(always)]
-    pub fn endian(&mut self) -> ENDIAN_W<ENDIAN_SPEC> {
+    pub fn endian(&mut self) -> ENDIAN_W<'_, ENDIAN_SPEC> {
         ENDIAN_W::new(self, 0)
     }
 }

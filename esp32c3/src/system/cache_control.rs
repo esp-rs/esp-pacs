@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_icache_clk_on"]
     #[inline(always)]
-    pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+    pub fn icache_clk_on(&mut self) -> ICACHE_CLK_ON_W<'_, CACHE_CONTROL_SPEC> {
         ICACHE_CLK_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_icache_reset"]
     #[inline(always)]
-    pub fn icache_reset(&mut self) -> ICACHE_RESET_W<CACHE_CONTROL_SPEC> {
+    pub fn icache_reset(&mut self) -> ICACHE_RESET_W<'_, CACHE_CONTROL_SPEC> {
         ICACHE_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_dcache_clk_on"]
     #[inline(always)]
-    pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+    pub fn dcache_clk_on(&mut self) -> DCACHE_CLK_ON_W<'_, CACHE_CONTROL_SPEC> {
         DCACHE_CLK_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_dcache_reset"]
     #[inline(always)]
-    pub fn dcache_reset(&mut self) -> DCACHE_RESET_W<CACHE_CONTROL_SPEC> {
+    pub fn dcache_reset(&mut self) -> DCACHE_RESET_W<'_, CACHE_CONTROL_SPEC> {
         DCACHE_RESET_W::new(self, 3)
     }
 }

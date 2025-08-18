@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W<PLC_CONF2_SPEC> {
+    pub fn cvsd_seg_mod(&mut self) -> CVSD_SEG_MOD_W<'_, PLC_CONF2_SPEC> {
         CVSD_SEG_MOD_W::new(self, 0)
     }
     #[doc = "Bits 2:6"]
     #[inline(always)]
-    pub fn min_period(&mut self) -> MIN_PERIOD_W<PLC_CONF2_SPEC> {
+    pub fn min_period(&mut self) -> MIN_PERIOD_W<'_, PLC_CONF2_SPEC> {
         MIN_PERIOD_W::new(self, 2)
     }
 }

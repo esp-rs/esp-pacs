@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<CONF_SIGLE_DATA_SPEC> {
+    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<'_, CONF_SIGLE_DATA_SPEC> {
         SIGLE_DATA_W::new(self, 0)
     }
 }

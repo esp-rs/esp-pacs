@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<TIMING_CALI_SPEC> {
+    pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<'_, TIMING_CALI_SPEC> {
         TIMING_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC> {
+    pub fn timing_cali(&mut self) -> TIMING_CALI_W<'_, TIMING_CALI_SPEC> {
         TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC> {
+    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<'_, TIMING_CALI_SPEC> {
         EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
 }

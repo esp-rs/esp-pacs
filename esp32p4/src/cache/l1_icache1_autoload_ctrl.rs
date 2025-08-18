@@ -96,42 +96,42 @@ impl W {
     #[inline(always)]
     pub fn l1_icache1_autoload_ena(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_ENA_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_ENA_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of autoload operation on L1-ICache1. 0: ascending. 1: descending."]
     #[inline(always)]
     pub fn l1_icache1_autoload_order(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_ORDER_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_ORDER_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - The field is used to configure trigger mode of autoload operation on L1-ICache1. 0/3: miss-trigger, 1: hit-trigger, 2: miss-hit-trigger."]
     #[inline(always)]
     pub fn l1_icache1_autoload_trigger_mode(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_TRIGGER_MODE_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_TRIGGER_MODE_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_TRIGGER_MODE_W::new(self, 3)
     }
     #[doc = "Bit 8 - The bit is used to enable the first section for autoload operation on L1-ICache1."]
     #[inline(always)]
     pub fn l1_icache1_autoload_sct0_ena(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_SCT0_ENA_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_SCT0_ENA_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_SCT0_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - The bit is used to enable the second section for autoload operation on L1-ICache1."]
     #[inline(always)]
     pub fn l1_icache1_autoload_sct1_ena(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_SCT1_ENA_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_SCT1_ENA_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_SCT1_ENA_W::new(self, 9)
     }
     #[doc = "Bits 10:13 - The bit is used to set the gid of l1 icache1 autoload."]
     #[inline(always)]
     pub fn l1_icache1_autoload_rgid(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_RGID_W<L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_RGID_W<'_, L1_ICACHE1_AUTOLOAD_CTRL_SPEC> {
         L1_ICACHE1_AUTOLOAD_RGID_W::new(self, 10)
     }
 }

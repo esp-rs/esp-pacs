@@ -65,22 +65,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Lower threshold."]
     #[inline(always)]
-    pub fn sar1_wakeup_th_low(&mut self) -> SAR1_WAKEUP_TH_LOW_W<WAKEUP1_SPEC> {
+    pub fn sar1_wakeup_th_low(&mut self) -> SAR1_WAKEUP_TH_LOW_W<'_, WAKEUP1_SPEC> {
         SAR1_WAKEUP_TH_LOW_W::new(self, 0)
     }
     #[doc = "Bits 14:25 - Upper threshold."]
     #[inline(always)]
-    pub fn sar1_wakeup_th_high(&mut self) -> SAR1_WAKEUP_TH_HIGH_W<WAKEUP1_SPEC> {
+    pub fn sar1_wakeup_th_high(&mut self) -> SAR1_WAKEUP_TH_HIGH_W<'_, WAKEUP1_SPEC> {
         SAR1_WAKEUP_TH_HIGH_W::new(self, 14)
     }
     #[doc = "Bit 30 - Wakeup function enable."]
     #[inline(always)]
-    pub fn sar1_wakeup_en(&mut self) -> SAR1_WAKEUP_EN_W<WAKEUP1_SPEC> {
+    pub fn sar1_wakeup_en(&mut self) -> SAR1_WAKEUP_EN_W<'_, WAKEUP1_SPEC> {
         SAR1_WAKEUP_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0:absolute value comparison mode. 1: relative value comparison mode."]
     #[inline(always)]
-    pub fn sar1_wakeup_mode(&mut self) -> SAR1_WAKEUP_MODE_W<WAKEUP1_SPEC> {
+    pub fn sar1_wakeup_mode(&mut self) -> SAR1_WAKEUP_MODE_W<'_, WAKEUP1_SPEC> {
         SAR1_WAKEUP_MODE_W::new(self, 31)
     }
 }

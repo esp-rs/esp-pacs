@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores AES keys."]
     #[inline(always)]
-    pub fn key(&mut self) -> KEY_W<KEY_SPEC> {
+    pub fn key(&mut self) -> KEY_W<'_, KEY_SPEC> {
         KEY_W::new(self, 0)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<TIMER_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The clear signal for read_done interrupt."]
     #[inline(always)]
-    pub fn timer_overflow_int_clr(&mut self) -> TIMER_OVERFLOW_INT_CLR_W<TIMER_INT_CLR_SPEC> {
+    pub fn timer_overflow_int_clr(&mut self) -> TIMER_OVERFLOW_INT_CLR_W<'_, TIMER_INT_CLR_SPEC> {
         TIMER_OVERFLOW_INT_CLR_W::new(self, 0)
     }
 }

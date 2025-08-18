@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<LACTLOAD_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W<LACTLOAD_SPEC> {
+    pub fn load(&mut self) -> LOAD_W<'_, LACTLOAD_SPEC> {
         LOAD_W::new(self, 0)
     }
 }

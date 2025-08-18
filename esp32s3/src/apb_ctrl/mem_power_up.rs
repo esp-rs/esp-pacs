@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - ******* Description ***********"]
     #[inline(always)]
-    pub fn rom_power_up(&mut self) -> ROM_POWER_UP_W<MEM_POWER_UP_SPEC> {
+    pub fn rom_power_up(&mut self) -> ROM_POWER_UP_W<'_, MEM_POWER_UP_SPEC> {
         ROM_POWER_UP_W::new(self, 0)
     }
     #[doc = "Bits 3:13 - ******* Description ***********"]
     #[inline(always)]
-    pub fn sram_power_up(&mut self) -> SRAM_POWER_UP_W<MEM_POWER_UP_SPEC> {
+    pub fn sram_power_up(&mut self) -> SRAM_POWER_UP_W<'_, MEM_POWER_UP_SPEC> {
         SRAM_POWER_UP_W::new(self, 3)
     }
 }

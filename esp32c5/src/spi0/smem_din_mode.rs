@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din0_mode(&mut self) -> SMEM_DIN0_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din0_mode(&mut self) -> SMEM_DIN0_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din1_mode(&mut self) -> SMEM_DIN1_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din1_mode(&mut self) -> SMEM_DIN1_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN1_MODE_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din2_mode(&mut self) -> SMEM_DIN2_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din2_mode(&mut self) -> SMEM_DIN2_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN2_MODE_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din3_mode(&mut self) -> SMEM_DIN3_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din3_mode(&mut self) -> SMEM_DIN3_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN3_MODE_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din4_mode(&mut self) -> SMEM_DIN4_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din4_mode(&mut self) -> SMEM_DIN4_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN4_MODE_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din5_mode(&mut self) -> SMEM_DIN5_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din5_mode(&mut self) -> SMEM_DIN5_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN5_MODE_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din6_mode(&mut self) -> SMEM_DIN6_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din6_mode(&mut self) -> SMEM_DIN6_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN6_MODE_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_din7_mode(&mut self) -> SMEM_DIN7_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_din7_mode(&mut self) -> SMEM_DIN7_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DIN7_MODE_W::new(self, 21)
     }
     #[doc = "Bits 24:26 - the input signals are delayed by system clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the posedge of clk_160, 4 input with the negedge of clk_160, 5: input with the spi_clk high edge, 6: input with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dins_mode(&mut self) -> SMEM_DINS_MODE_W<SMEM_DIN_MODE_SPEC> {
+    pub fn smem_dins_mode(&mut self) -> SMEM_DINS_MODE_W<'_, SMEM_DIN_MODE_SPEC> {
         SMEM_DINS_MODE_W::new(self, 24)
     }
 }

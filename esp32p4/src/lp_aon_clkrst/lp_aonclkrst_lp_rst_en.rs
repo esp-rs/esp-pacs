@@ -120,56 +120,56 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_huk(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_HUK_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_HUK_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_HUK_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_anaperi(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_ANAPERI_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_ANAPERI_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_ANAPERI_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_wdt(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_WDT_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_WDT_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_WDT_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_timer(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_TIMER_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_TIMER_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_TIMER_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_rtc(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_RTC_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_RTC_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_RTC_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_mailbox(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_MAILBOX_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_MAILBOX_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_MAILBOX_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_aonefusereg(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_AONEFUSEREG_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_AONEFUSEREG_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_AONEFUSEREG_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_lp_ram(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_LP_RAM_W<LP_AONCLKRST_LP_RST_EN_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_LP_RAM_W<'_, LP_AONCLKRST_LP_RST_EN_SPEC> {
         LP_AONCLKRST_RST_EN_LP_RAM_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the interval between changing the SDA output level and the falling edge of SCL, in I2C module clock cycles."]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<SDA_HOLD_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, SDA_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }
 }

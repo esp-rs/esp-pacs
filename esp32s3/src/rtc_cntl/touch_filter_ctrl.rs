@@ -129,59 +129,59 @@ impl W {
     #[inline(always)]
     pub fn touch_bypass_neg_noise_thres(
         &mut self,
-    ) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+    ) -> TOUCH_BYPASS_NEG_NOISE_THRES_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_BYPASS_NEG_NOISE_THRES_W::new(self, 7)
     }
     #[doc = "Bit 8 - bypaas noise thres"]
     #[inline(always)]
     pub fn touch_bypass_noise_thres(
         &mut self,
-    ) -> TOUCH_BYPASS_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+    ) -> TOUCH_BYPASS_NOISE_THRES_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_BYPASS_NOISE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - smooth filter factor"]
     #[inline(always)]
-    pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_smooth_lvl(&mut self) -> TOUCH_SMOOTH_LVL_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_SMOOTH_LVL_W::new(self, 9)
     }
     #[doc = "Bits 11:14 - touch jitter step"]
     #[inline(always)]
-    pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_jitter_step(&mut self) -> TOUCH_JITTER_STEP_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_JITTER_STEP_W::new(self, 11)
     }
     #[doc = "Bits 15:18 - negative threshold counter limit"]
     #[inline(always)]
-    pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_neg_noise_limit(&mut self) -> TOUCH_NEG_NOISE_LIMIT_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NEG_NOISE_LIMIT_W::new(self, 15)
     }
     #[doc = "Bits 19:20 - neg noise thres"]
     #[inline(always)]
-    pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_neg_noise_thres(&mut self) -> TOUCH_NEG_NOISE_THRES_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NEG_NOISE_THRES_W::new(self, 19)
     }
     #[doc = "Bits 21:22 - noise thres"]
     #[inline(always)]
-    pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_noise_thres(&mut self) -> TOUCH_NOISE_THRES_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_NOISE_THRES_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - hysteresis"]
     #[inline(always)]
-    pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_hysteresis(&mut self) -> TOUCH_HYSTERESIS_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_HYSTERESIS_W::new(self, 23)
     }
     #[doc = "Bits 25:27 - debounce counter"]
     #[inline(always)]
-    pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_debounce(&mut self) -> TOUCH_DEBOUNCE_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_DEBOUNCE_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - 0: IIR ? 1: IIR ? 2: IIR 1/8 3: Jitter"]
     #[inline(always)]
-    pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_filter_mode(&mut self) -> TOUCH_FILTER_MODE_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_FILTER_MODE_W::new(self, 28)
     }
     #[doc = "Bit 31 - touch filter enable"]
     #[inline(always)]
-    pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<TOUCH_FILTER_CTRL_SPEC> {
+    pub fn touch_filter_en(&mut self) -> TOUCH_FILTER_EN_W<'_, TOUCH_FILTER_CTRL_SPEC> {
         TOUCH_FILTER_EN_W::new(self, 31)
     }
 }

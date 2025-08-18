@@ -104,27 +104,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn plla_cal_stop(&mut self) -> PLLA_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+    pub fn plla_cal_stop(&mut self) -> PLLA_CAL_STOP_W<'_, ANA_PLL_CTRL0_SPEC> {
         PLLA_CAL_STOP_W::new(self, 1)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn cpu_pll_cal_stop(&mut self) -> CPU_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+    pub fn cpu_pll_cal_stop(&mut self) -> CPU_PLL_CAL_STOP_W<'_, ANA_PLL_CTRL0_SPEC> {
         CPU_PLL_CAL_STOP_W::new(self, 3)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    pub fn sdio_pll_cal_stop(&mut self) -> SDIO_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+    pub fn sdio_pll_cal_stop(&mut self) -> SDIO_PLL_CAL_STOP_W<'_, ANA_PLL_CTRL0_SPEC> {
         SDIO_PLL_CAL_STOP_W::new(self, 5)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn sys_pll_cal_stop(&mut self) -> SYS_PLL_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+    pub fn sys_pll_cal_stop(&mut self) -> SYS_PLL_CAL_STOP_W<'_, ANA_PLL_CTRL0_SPEC> {
         SYS_PLL_CAL_STOP_W::new(self, 7)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn mspi_cal_stop(&mut self) -> MSPI_CAL_STOP_W<ANA_PLL_CTRL0_SPEC> {
+    pub fn mspi_cal_stop(&mut self) -> MSPI_CAL_STOP_W<'_, ANA_PLL_CTRL0_SPEC> {
         MSPI_CAL_STOP_W::new(self, 9)
     }
 }

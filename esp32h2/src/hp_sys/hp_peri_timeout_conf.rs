@@ -39,21 +39,23 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Set the timeout threshold for bus access, corresponding to the number of clock cycles of the clock domain."]
     #[inline(always)]
-    pub fn hp_peri_timeout_thres(&mut self) -> HP_PERI_TIMEOUT_THRES_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+    pub fn hp_peri_timeout_thres(
+        &mut self,
+    ) -> HP_PERI_TIMEOUT_THRES_W<'_, HP_PERI_TIMEOUT_CONF_SPEC> {
         HP_PERI_TIMEOUT_THRES_W::new(self, 0)
     }
     #[doc = "Bit 16 - Set this bit as 1 to clear timeout interrupt"]
     #[inline(always)]
     pub fn hp_peri_timeout_int_clear(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_INT_CLEAR_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> HP_PERI_TIMEOUT_INT_CLEAR_W<'_, HP_PERI_TIMEOUT_CONF_SPEC> {
         HP_PERI_TIMEOUT_INT_CLEAR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit as 1 to enable timeout protection for accessing hp peripheral registers"]
     #[inline(always)]
     pub fn hp_peri_timeout_protect_en(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_PROTECT_EN_W<HP_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> HP_PERI_TIMEOUT_PROTECT_EN_W<'_, HP_PERI_TIMEOUT_CONF_SPEC> {
         HP_PERI_TIMEOUT_PROTECT_EN_W::new(self, 17)
     }
 }

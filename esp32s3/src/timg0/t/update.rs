@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - After writing 0 or 1 to TIMG_T%sUPDATE_REG, the counter value is latched."]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<UPDATE_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, UPDATE_SPEC> {
         UPDATE_W::new(self, 31)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_PARA_PURPOSE_SPEC> {
 impl W {
     #[doc = "Bits 0:3 - Set hmac parameter purpose."]
     #[inline(always)]
-    pub fn purpose_set(&mut self) -> PURPOSE_SET_W<SET_PARA_PURPOSE_SPEC> {
+    pub fn purpose_set(&mut self) -> PURPOSE_SET_W<'_, SET_PARA_PURPOSE_SPEC> {
         PURPOSE_SET_W::new(self, 0)
     }
 }

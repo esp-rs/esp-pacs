@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Set this bit to reset tx bck counter."]
     #[inline(always)]
-    pub fn tx_bck_cnt_rst(&mut self) -> TX_BCK_CNT_RST_W<BCK_CNT_SPEC> {
+    pub fn tx_bck_cnt_rst(&mut self) -> TX_BCK_CNT_RST_W<'_, BCK_CNT_SPEC> {
         TX_BCK_CNT_RST_W::new(self, 31)
     }
 }

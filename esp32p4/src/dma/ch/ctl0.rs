@@ -127,57 +127,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn ch1_sms(&mut self) -> CH1_SMS_W<CTL0_SPEC> {
+    pub fn ch1_sms(&mut self) -> CH1_SMS_W<'_, CTL0_SPEC> {
         CH1_SMS_W::new(self, 0)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn ch1_dms(&mut self) -> CH1_DMS_W<CTL0_SPEC> {
+    pub fn ch1_dms(&mut self) -> CH1_DMS_W<'_, CTL0_SPEC> {
         CH1_DMS_W::new(self, 2)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn ch1_sinc(&mut self) -> CH1_SINC_W<CTL0_SPEC> {
+    pub fn ch1_sinc(&mut self) -> CH1_SINC_W<'_, CTL0_SPEC> {
         CH1_SINC_W::new(self, 4)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    pub fn ch1_dinc(&mut self) -> CH1_DINC_W<CTL0_SPEC> {
+    pub fn ch1_dinc(&mut self) -> CH1_DINC_W<'_, CTL0_SPEC> {
         CH1_DINC_W::new(self, 6)
     }
     #[doc = "Bits 8:10 - NA"]
     #[inline(always)]
-    pub fn ch1_src_tr_width(&mut self) -> CH1_SRC_TR_WIDTH_W<CTL0_SPEC> {
+    pub fn ch1_src_tr_width(&mut self) -> CH1_SRC_TR_WIDTH_W<'_, CTL0_SPEC> {
         CH1_SRC_TR_WIDTH_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - NA"]
     #[inline(always)]
-    pub fn ch1_dst_tr_width(&mut self) -> CH1_DST_TR_WIDTH_W<CTL0_SPEC> {
+    pub fn ch1_dst_tr_width(&mut self) -> CH1_DST_TR_WIDTH_W<'_, CTL0_SPEC> {
         CH1_DST_TR_WIDTH_W::new(self, 11)
     }
     #[doc = "Bits 14:17 - NA"]
     #[inline(always)]
-    pub fn ch1_src_msize(&mut self) -> CH1_SRC_MSIZE_W<CTL0_SPEC> {
+    pub fn ch1_src_msize(&mut self) -> CH1_SRC_MSIZE_W<'_, CTL0_SPEC> {
         CH1_SRC_MSIZE_W::new(self, 14)
     }
     #[doc = "Bits 18:21 - NA"]
     #[inline(always)]
-    pub fn ch1_dst_msize(&mut self) -> CH1_DST_MSIZE_W<CTL0_SPEC> {
+    pub fn ch1_dst_msize(&mut self) -> CH1_DST_MSIZE_W<'_, CTL0_SPEC> {
         CH1_DST_MSIZE_W::new(self, 18)
     }
     #[doc = "Bits 22:25 - NA"]
     #[inline(always)]
-    pub fn ch1_ar_cache(&mut self) -> CH1_AR_CACHE_W<CTL0_SPEC> {
+    pub fn ch1_ar_cache(&mut self) -> CH1_AR_CACHE_W<'_, CTL0_SPEC> {
         CH1_AR_CACHE_W::new(self, 22)
     }
     #[doc = "Bits 26:29 - NA"]
     #[inline(always)]
-    pub fn ch1_aw_cache(&mut self) -> CH1_AW_CACHE_W<CTL0_SPEC> {
+    pub fn ch1_aw_cache(&mut self) -> CH1_AW_CACHE_W<'_, CTL0_SPEC> {
         CH1_AW_CACHE_W::new(self, 26)
     }
     #[doc = "Bit 30 - NA"]
     #[inline(always)]
-    pub fn ch1_nonposted_lastwrite_en(&mut self) -> CH1_NONPOSTED_LASTWRITE_EN_W<CTL0_SPEC> {
+    pub fn ch1_nonposted_lastwrite_en(&mut self) -> CH1_NONPOSTED_LASTWRITE_EN_W<'_, CTL0_SPEC> {
         CH1_NONPOSTED_LASTWRITE_EN_W::new(self, 30)
     }
 }

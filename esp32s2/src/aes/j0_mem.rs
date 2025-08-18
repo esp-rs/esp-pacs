@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the %sth 32-bit piece of 128-bit J0"]
     #[inline(always)]
-    pub fn j0(&mut self) -> J0_W<J0_MEM_SPEC> {
+    pub fn j0(&mut self) -> J0_W<'_, J0_MEM_SPEC> {
         J0_W::new(self, 0)
     }
 }

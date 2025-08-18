@@ -27,47 +27,47 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - clear slave transit complete interrupt"]
     #[inline(always)]
-    pub fn slave_tran_comp(&mut self) -> SLAVE_TRAN_COMP_W<INT_CLR_SPEC> {
+    pub fn slave_tran_comp(&mut self) -> SLAVE_TRAN_COMP_W<'_, INT_CLR_SPEC> {
         SLAVE_TRAN_COMP_W::new(self, 0)
     }
     #[doc = "Bit 1 - clear arbitration lost interrupt"]
     #[inline(always)]
-    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_CLR_SPEC> {
+    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<'_, INT_CLR_SPEC> {
         ARBITRATION_LOST_W::new(self, 1)
     }
     #[doc = "Bit 2 - clear master transit complete interrupt"]
     #[inline(always)]
-    pub fn master_tran_comp(&mut self) -> MASTER_TRAN_COMP_W<INT_CLR_SPEC> {
+    pub fn master_tran_comp(&mut self) -> MASTER_TRAN_COMP_W<'_, INT_CLR_SPEC> {
         MASTER_TRAN_COMP_W::new(self, 2)
     }
     #[doc = "Bit 3 - clear transit complete interrupt"]
     #[inline(always)]
-    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_CLR_SPEC> {
+    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<'_, INT_CLR_SPEC> {
         TRANS_COMPLETE_W::new(self, 3)
     }
     #[doc = "Bit 4 - clear time out interrupt"]
     #[inline(always)]
-    pub fn time_out(&mut self) -> TIME_OUT_W<INT_CLR_SPEC> {
+    pub fn time_out(&mut self) -> TIME_OUT_W<'_, INT_CLR_SPEC> {
         TIME_OUT_W::new(self, 4)
     }
     #[doc = "Bit 5 - clear ack error interrupt"]
     #[inline(always)]
-    pub fn ack_err(&mut self) -> ACK_ERR_W<INT_CLR_SPEC> {
+    pub fn ack_err(&mut self) -> ACK_ERR_W<'_, INT_CLR_SPEC> {
         ACK_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - clear receive data interrupt"]
     #[inline(always)]
-    pub fn rx_data(&mut self) -> RX_DATA_W<INT_CLR_SPEC> {
+    pub fn rx_data(&mut self) -> RX_DATA_W<'_, INT_CLR_SPEC> {
         RX_DATA_W::new(self, 6)
     }
     #[doc = "Bit 7 - clear transit load data complete interrupt"]
     #[inline(always)]
-    pub fn tx_data(&mut self) -> TX_DATA_W<INT_CLR_SPEC> {
+    pub fn tx_data(&mut self) -> TX_DATA_W<'_, INT_CLR_SPEC> {
         TX_DATA_W::new(self, 7)
     }
     #[doc = "Bit 8 - clear detect start interrupt"]
     #[inline(always)]
-    pub fn detect_start(&mut self) -> DETECT_START_W<INT_CLR_SPEC> {
+    pub fn detect_start(&mut self) -> DETECT_START_W<'_, INT_CLR_SPEC> {
         DETECT_START_W::new(self, 8)
     }
 }

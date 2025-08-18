@@ -49,19 +49,21 @@ impl W {
     #[inline(always)]
     pub fn spi_smem_timing_clk_ena(
         &mut self,
-    ) -> SPI_SMEM_TIMING_CLK_ENA_W<SPI_SMEM_TIMING_CALI_SPEC> {
+    ) -> SPI_SMEM_TIMING_CLK_ENA_W<'_, SPI_SMEM_TIMING_CALI_SPEC> {
         SPI_SMEM_TIMING_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to add extra SPI_CLK cycles in DUMMY phase for all reading operations."]
     #[inline(always)]
-    pub fn spi_smem_timing_cali(&mut self) -> SPI_SMEM_TIMING_CALI_W<SPI_SMEM_TIMING_CALI_SPEC> {
+    pub fn spi_smem_timing_cali(
+        &mut self,
+    ) -> SPI_SMEM_TIMING_CALI_W<'_, SPI_SMEM_TIMING_CALI_SPEC> {
         SPI_SMEM_TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Extra SPI_CLK cycles added in DUMMY phase for timing compensation, when SPI0 accesses to Ext_RAM. Active when SPI_SMEM_TIMING_CALI bit is set."]
     #[inline(always)]
     pub fn spi_smem_extra_dummy_cyclelen(
         &mut self,
-    ) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<SPI_SMEM_TIMING_CALI_SPEC> {
+    ) -> SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W<'_, SPI_SMEM_TIMING_CALI_SPEC> {
         SPI_SMEM_EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
 }

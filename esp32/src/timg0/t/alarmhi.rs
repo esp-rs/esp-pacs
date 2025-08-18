@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Timer 0 time-base counter value higher 32 bits that will trigger the alarm"]
     #[inline(always)]
-    pub fn alarm_hi(&mut self) -> ALARM_HI_W<ALARMHI_SPEC> {
+    pub fn alarm_hi(&mut self) -> ALARM_HI_W<'_, ALARMHI_SPEC> {
         ALARM_HI_W::new(self, 0)
     }
 }

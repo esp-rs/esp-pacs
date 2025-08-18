@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn cpu_icm_h2x_bresp_err_int_clr(
         &mut self,
-    ) -> CPU_ICM_H2X_BRESP_ERR_INT_CLR_W<AHB2AXI_BRESP_ERR_INT_CLR_SPEC> {
+    ) -> CPU_ICM_H2X_BRESP_ERR_INT_CLR_W<'_, AHB2AXI_BRESP_ERR_INT_CLR_SPEC> {
         CPU_ICM_H2X_BRESP_ERR_INT_CLR_W::new(self, 31)
     }
 }

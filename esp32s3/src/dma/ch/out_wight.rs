@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:11 - The weight of Tx channel 0."]
     #[inline(always)]
-    pub fn tx_weight(&mut self) -> TX_WEIGHT_W<OUT_WIGHT_SPEC> {
+    pub fn tx_weight(&mut self) -> TX_WEIGHT_W<'_, OUT_WIGHT_SPEC> {
         TX_WEIGHT_W::new(self, 8)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - Retention clk sel"]
     #[inline(always)]
-    pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_clk_sel(&mut self) -> RETENTION_CLK_SEL_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_CLK_SEL_W::new(self, 18)
     }
     #[doc = "Bits 19:21 - Retention done wait time"]
     #[inline(always)]
-    pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_done_wait(&mut self) -> RETENTION_DONE_WAIT_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_DONE_WAIT_W::new(self, 19)
     }
     #[doc = "Bits 22:25 - Retention clkoff wait time"]
     #[inline(always)]
-    pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_clkoff_wait(&mut self) -> RETENTION_CLKOFF_WAIT_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_CLKOFF_WAIT_W::new(self, 22)
     }
     #[doc = "Bit 26 - enable cpu retention when light sleep"]
     #[inline(always)]
-    pub fn retention_en(&mut self) -> RETENTION_EN_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_en(&mut self) -> RETENTION_EN_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_EN_W::new(self, 26)
     }
     #[doc = "Bits 27:31 - wait cycles for rention operation"]
     #[inline(always)]
-    pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_wait(&mut self) -> RETENTION_WAIT_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_WAIT_W::new(self, 27)
     }
 }

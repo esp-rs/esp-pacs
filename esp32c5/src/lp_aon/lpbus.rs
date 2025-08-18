@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - enable reg_fast_mem_sel configure 1: enable 0: no operation"]
     #[inline(always)]
-    pub fn fast_mem_mux_sel_update(&mut self) -> FAST_MEM_MUX_SEL_UPDATE_W<LPBUS_SPEC> {
+    pub fn fast_mem_mux_sel_update(&mut self) -> FAST_MEM_MUX_SEL_UPDATE_W<'_, LPBUS_SPEC> {
         FAST_MEM_MUX_SEL_UPDATE_W::new(self, 30)
     }
     #[doc = "Bit 31 - select lp memory bus is high speed mode or low speed mode 1: high speed from hp system ahb 0: low speed from lp system"]
     #[inline(always)]
-    pub fn fast_mem_mux_sel(&mut self) -> FAST_MEM_MUX_SEL_W<LPBUS_SPEC> {
+    pub fn fast_mem_mux_sel(&mut self) -> FAST_MEM_MUX_SEL_W<'_, LPBUS_SPEC> {
         FAST_MEM_MUX_SEL_W::new(self, 31)
     }
 }

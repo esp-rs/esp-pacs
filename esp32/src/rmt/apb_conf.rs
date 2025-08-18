@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to disable apb fifo access"]
     #[inline(always)]
-    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<APB_CONF_SPEC> {
+    pub fn apb_fifo_mask(&mut self) -> APB_FIFO_MASK_W<'_, APB_CONF_SPEC> {
         APB_FIFO_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - when datas need to be send is more than channel's mem can store then set this bit to enable reusage of mem this bit is used together with reg_rmt_tx_lim_chn."]
     #[inline(always)]
-    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<APB_CONF_SPEC> {
+    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<'_, APB_CONF_SPEC> {
         MEM_TX_WRAP_EN_W::new(self, 1)
     }
 }

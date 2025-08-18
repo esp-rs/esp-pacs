@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn core_dummy_data(&mut self) -> CORE_DUMMY_DATA_W<CORE_DUMMY_DATA_SPEC> {
+    pub fn core_dummy_data(&mut self) -> CORE_DUMMY_DATA_W<'_, CORE_DUMMY_DATA_SPEC> {
         CORE_DUMMY_DATA_W::new(self, 0)
     }
 }

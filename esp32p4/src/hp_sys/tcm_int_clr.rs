@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<TCM_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn tcm_parity_err_int_clr(&mut self) -> TCM_PARITY_ERR_INT_CLR_W<TCM_INT_CLR_SPEC> {
+    pub fn tcm_parity_err_int_clr(&mut self) -> TCM_PARITY_ERR_INT_CLR_W<'_, TCM_INT_CLR_SPEC> {
         TCM_PARITY_ERR_INT_CLR_W::new(self, 31)
     }
 }

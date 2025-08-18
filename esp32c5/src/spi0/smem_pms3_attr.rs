@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: SPI1 external RAM PMS section 3 read accessible. 0: Not allowed."]
     #[inline(always)]
-    pub fn smem_pms3_rd_attr(&mut self) -> SMEM_PMS3_RD_ATTR_W<SMEM_PMS3_ATTR_SPEC> {
+    pub fn smem_pms3_rd_attr(&mut self) -> SMEM_PMS3_RD_ATTR_W<'_, SMEM_PMS3_ATTR_SPEC> {
         SMEM_PMS3_RD_ATTR_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: SPI1 external RAM PMS section 3 write accessible. 0: Not allowed."]
     #[inline(always)]
-    pub fn smem_pms3_wr_attr(&mut self) -> SMEM_PMS3_WR_ATTR_W<SMEM_PMS3_ATTR_SPEC> {
+    pub fn smem_pms3_wr_attr(&mut self) -> SMEM_PMS3_WR_ATTR_W<'_, SMEM_PMS3_ATTR_SPEC> {
         SMEM_PMS3_WR_ATTR_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI1 external RAM PMS section 3 ECC mode, 1: enable ECC mode. 0: Disable it. The external RAM PMS section 3 is configured by registers SPI_SMEM_PMS3_ADDR_REG and SPI_SMEM_PMS3_SIZE_REG."]
     #[inline(always)]
-    pub fn smem_pms3_ecc(&mut self) -> SMEM_PMS3_ECC_W<SMEM_PMS3_ATTR_SPEC> {
+    pub fn smem_pms3_ecc(&mut self) -> SMEM_PMS3_ECC_W<'_, SMEM_PMS3_ATTR_SPEC> {
         SMEM_PMS3_ECC_W::new(self, 2)
     }
 }

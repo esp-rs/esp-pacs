@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - Input enable in normal execution."]
     #[inline(always)]
-    pub fn x32p_fun_ie(&mut self) -> X32P_FUN_IE_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_fun_ie(&mut self) -> X32P_FUN_IE_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode."]
     #[inline(always)]
-    pub fn x32p_slp_oe(&mut self) -> X32P_SLP_OE_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_slp_oe(&mut self) -> X32P_SLP_OE_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode."]
     #[inline(always)]
-    pub fn x32p_slp_ie(&mut self) -> X32P_SLP_IE_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_slp_ie(&mut self) -> X32P_SLP_IE_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode. 0: no sleep mode."]
     #[inline(always)]
-    pub fn x32p_slp_sel(&mut self) -> X32P_SLP_SEL_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_slp_sel(&mut self) -> X32P_SLP_SEL_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - Function selection."]
     #[inline(always)]
-    pub fn x32p_fun_sel(&mut self) -> X32P_FUN_SEL_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_fun_sel(&mut self) -> X32P_FUN_SEL_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO. 0: use digital GPIO."]
     #[inline(always)]
-    pub fn x32p_mux_sel(&mut self) -> X32P_MUX_SEL_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_mux_sel(&mut self) -> X32P_MUX_SEL_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    pub fn x32p_rue(&mut self) -> X32P_RUE_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_rue(&mut self) -> X32P_RUE_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
-    pub fn x32p_rde(&mut self) -> X32P_RDE_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_rde(&mut self) -> X32P_RDE_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - Select the drive strength of the pad. 0: ~5 mA. 1: ~10 mA. 2: ~20 mA. 3: ~40 mA."]
     #[inline(always)]
-    pub fn x32p_drv(&mut self) -> X32P_DRV_W<XTAL_32P_PAD_SPEC> {
+    pub fn x32p_drv(&mut self) -> X32P_DRV_W<'_, XTAL_32P_PAD_SPEC> {
         X32P_DRV_W::new(self, 29)
     }
 }

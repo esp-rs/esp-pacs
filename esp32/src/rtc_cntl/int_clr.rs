@@ -27,47 +27,47 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_CLR_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, INT_CLR_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_CLR_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, INT_CLR_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear SDIO idle interrupt state"]
     #[inline(always)]
-    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_CLR_SPEC> {
+    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<'_, INT_CLR_SPEC> {
         SDIO_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_CLR_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_CLR_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Clear RTC time valid interrupt state"]
     #[inline(always)]
-    pub fn time_valid(&mut self) -> TIME_VALID_W<INT_CLR_SPEC> {
+    pub fn time_valid(&mut self) -> TIME_VALID_W<'_, INT_CLR_SPEC> {
         TIME_VALID_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear ULP-coprocessor interrupt state"]
     #[inline(always)]
-    pub fn sar(&mut self) -> SAR_W<INT_CLR_SPEC> {
+    pub fn sar(&mut self) -> SAR_W<'_, INT_CLR_SPEC> {
         SAR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear touch interrupt state"]
     #[inline(always)]
-    pub fn touch(&mut self) -> TOUCH_W<INT_CLR_SPEC> {
+    pub fn touch(&mut self) -> TOUCH_W<'_, INT_CLR_SPEC> {
         TOUCH_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clear brown out interrupt state"]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_CLR_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_CLR_SPEC> {
         BROWN_OUT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_CLR_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, INT_CLR_SPEC> {
         MAIN_TIMER_W::new(self, 8)
     }
 }

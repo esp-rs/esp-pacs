@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - core1 sp pc status register"]
     #[inline(always)]
-    pub fn core_1_sp_max(&mut self) -> CORE_1_SP_MAX_W<CORE_1_SP_MAX_SPEC> {
+    pub fn core_1_sp_max(&mut self) -> CORE_1_SP_MAX_W<'_, CORE_1_SP_MAX_SPEC> {
         CORE_1_SP_MAX_W::new(self, 0)
     }
 }

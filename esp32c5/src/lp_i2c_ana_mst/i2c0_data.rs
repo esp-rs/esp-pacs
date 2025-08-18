@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:10 - need_des"]
     #[inline(always)]
-    pub fn i2c0_clk_sel(&mut self) -> I2C0_CLK_SEL_W<I2C0_DATA_SPEC> {
+    pub fn i2c0_clk_sel(&mut self) -> I2C0_CLK_SEL_W<'_, I2C0_DATA_SPEC> {
         I2C0_CLK_SEL_W::new(self, 8)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn i2c_mst_sel(&mut self) -> I2C_MST_SEL_W<I2C0_DATA_SPEC> {
+    pub fn i2c_mst_sel(&mut self) -> I2C_MST_SEL_W<'_, I2C0_DATA_SPEC> {
         I2C_MST_SEL_W::new(self, 11)
     }
 }

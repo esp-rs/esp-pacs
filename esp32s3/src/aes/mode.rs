@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Defines the key length and the encryption/decryption of the AES accelerator."]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<MODE_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, MODE_SPEC> {
         MODE_W::new(self, 0)
     }
 }

@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit Interrupt. Indicates that data transmission is finished for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn ti(&mut self) -> TI_W<IDSTS_SPEC> {
+    pub fn ti(&mut self) -> TI_W<'_, IDSTS_SPEC> {
         TI_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receive Interrupt. Indicates the completion of data reception for a descriptor. Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn ri(&mut self) -> RI_W<IDSTS_SPEC> {
+    pub fn ri(&mut self) -> RI_W<'_, IDSTS_SPEC> {
         RI_W::new(self, 1)
     }
     #[doc = "Bit 2 - Fatal Bus Error Interrupt. Indicates that a Bus Error occurred (IDSTS\\[12:10\\]) . When this bit is set, the DMA disables all its bus accesses. Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn fbe(&mut self) -> FBE_W<IDSTS_SPEC> {
+    pub fn fbe(&mut self) -> FBE_W<'_, IDSTS_SPEC> {
         FBE_W::new(self, 2)
     }
     #[doc = "Bit 4 - Descriptor Unavailable Interrupt. This bit is set when the descriptor is unavailable due to OWNER bit = 0 (DES0\\[31\\] = 0). Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn du(&mut self) -> DU_W<IDSTS_SPEC> {
+    pub fn du(&mut self) -> DU_W<'_, IDSTS_SPEC> {
         DU_W::new(self, 4)
     }
     #[doc = "Bit 5 - Card Error Summary. Indicates the status of the transaction to/from the card, also present in RINTSTS. Indicates the logical OR of the following bits: EBE : End Bit Error; RTO : Response Timeout/Boot Ack Timeout; RCRC : Response CRC; SBE : Start Bit Error; DRTO : Data Read Timeout/BDS timeout; DCRC : Data CRC for Receive; RE : Response Error. Writing 1 clears this bit. The abort condition of the IDMAC depends on the setting of this CES bit. If the CES bit is enabled, then the IDMAC aborts on a response error."]
     #[inline(always)]
-    pub fn ces(&mut self) -> CES_W<IDSTS_SPEC> {
+    pub fn ces(&mut self) -> CES_W<'_, IDSTS_SPEC> {
         CES_W::new(self, 5)
     }
     #[doc = "Bit 8 - Normal Interrupt Summary. Logical OR of the following: IDSTS\\[0\\] : Transmit Interrupt, IDSTS\\[1\\] : Receive Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes NIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn nis(&mut self) -> NIS_W<IDSTS_SPEC> {
+    pub fn nis(&mut self) -> NIS_W<'_, IDSTS_SPEC> {
         NIS_W::new(self, 8)
     }
     #[doc = "Bit 9 - Abnormal Interrupt Summary. Logical OR of the following: IDSTS\\[2\\] : Fatal Bus Interrupt, IDSTS\\[4\\] : DU bit Interrupt. Only unmasked bits affect this bit. This is a sticky bit and must be cleared each time a corresponding bit that causes AIS to be set is cleared. Writing 1 clears this bit."]
     #[inline(always)]
-    pub fn ais(&mut self) -> AIS_W<IDSTS_SPEC> {
+    pub fn ais(&mut self) -> AIS_W<'_, IDSTS_SPEC> {
         AIS_W::new(self, 9)
     }
     #[doc = "Bits 10:12 - Fatal Bus Error Code. Indicates the type of error that caused a Bus Error. Valid only when the Fatal Bus Error bit IDSTS\\[2\\] is set. This field does not generate an interrupt. 001: Host Abort received during transmission; 010: Host Abort received during reception; Others: Reserved."]
     #[inline(always)]
-    pub fn fbe_code(&mut self) -> FBE_CODE_W<IDSTS_SPEC> {
+    pub fn fbe_code(&mut self) -> FBE_CODE_W<'_, IDSTS_SPEC> {
         FBE_CODE_W::new(self, 10)
     }
     #[doc = "Bits 13:16 - DMAC FSM present state. 0: DMA_IDLE (idle state); 1: DMA_SUSPEND (suspend state); 2: DESC_RD (descriptor reading state); 3: DESC_CHK (descriptor checking state); 4: DMA_RD_REQ_WAIT (read-data request waiting state); 5: DMA_WR_REQ_WAIT (write-data request waiting state); 6: DMA_RD (data-read state); 7: DMA_WR (data-write state); 8: DESC_CLOSE (descriptor close state)."]
     #[inline(always)]
-    pub fn fsm(&mut self) -> FSM_W<IDSTS_SPEC> {
+    pub fn fsm(&mut self) -> FSM_W<'_, IDSTS_SPEC> {
         FSM_W::new(self, 13)
     }
 }

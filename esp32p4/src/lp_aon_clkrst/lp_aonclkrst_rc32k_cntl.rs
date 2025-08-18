@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_rc32k_dfreq(
         &mut self,
-    ) -> LP_AONCLKRST_RC32K_DFREQ_W<LP_AONCLKRST_RC32K_CNTL_SPEC> {
+    ) -> LP_AONCLKRST_RC32K_DFREQ_W<'_, LP_AONCLKRST_RC32K_CNTL_SPEC> {
         LP_AONCLKRST_RC32K_DFREQ_W::new(self, 0)
     }
 }

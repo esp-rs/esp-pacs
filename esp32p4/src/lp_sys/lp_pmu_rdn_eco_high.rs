@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn pmu_rdn_eco_high(&mut self) -> PMU_RDN_ECO_HIGH_W<LP_PMU_RDN_ECO_HIGH_SPEC> {
+    pub fn pmu_rdn_eco_high(&mut self) -> PMU_RDN_ECO_HIGH_W<'_, LP_PMU_RDN_ECO_HIGH_SPEC> {
         PMU_RDN_ECO_HIGH_W::new(self, 0)
     }
 }

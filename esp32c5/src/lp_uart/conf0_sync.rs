@@ -164,77 +164,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the parity check mode.\\\\ 0: Even parity\\\\ 1: Odd parity\\\\"]
     #[inline(always)]
-    pub fn parity(&mut self) -> PARITY_W<CONF0_SYNC_SPEC> {
+    pub fn parity(&mut self) -> PARITY_W<'_, CONF0_SYNC_SPEC> {
         PARITY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable LP UART parity check.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn parity_en(&mut self) -> PARITY_EN_W<CONF0_SYNC_SPEC> {
+    pub fn parity_en(&mut self) -> PARITY_EN_W<'_, CONF0_SYNC_SPEC> {
         PARITY_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Configures the number of data bits.\\\\ 0: 5 bits\\\\ 1: 6 bits\\\\ 2: 7 bits\\\\ 3: 8 bits\\\\"]
     #[inline(always)]
-    pub fn bit_num(&mut self) -> BIT_NUM_W<CONF0_SYNC_SPEC> {
+    pub fn bit_num(&mut self) -> BIT_NUM_W<'_, CONF0_SYNC_SPEC> {
         BIT_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configures the number of stop bits.\\\\ 0: Invalid. No effect\\\\ 1: 1 bits\\\\ 2: 1.5 bits\\\\ 3: 2 bits\\\\"]
     #[inline(always)]
-    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<CONF0_SYNC_SPEC> {
+    pub fn stop_bit_num(&mut self) -> STOP_BIT_NUM_W<'_, CONF0_SYNC_SPEC> {
         STOP_BIT_NUM_W::new(self, 4)
     }
     #[doc = "Bit 6 - Configures whether or not to send NULL characters when finishing data transmission.\\\\ 0: Not send\\\\ 1: Send\\\\"]
     #[inline(always)]
-    pub fn txd_brk(&mut self) -> TXD_BRK_W<CONF0_SYNC_SPEC> {
+    pub fn txd_brk(&mut self) -> TXD_BRK_W<'_, CONF0_SYNC_SPEC> {
         TXD_BRK_W::new(self, 6)
     }
     #[doc = "Bit 12 - Configures whether or not to enable LP UART loopback test.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn loopback(&mut self) -> LOOPBACK_W<CONF0_SYNC_SPEC> {
+    pub fn loopback(&mut self) -> LOOPBACK_W<'_, CONF0_SYNC_SPEC> {
         LOOPBACK_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable flow control for the transmitter.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<CONF0_SYNC_SPEC> {
+    pub fn tx_flow_en(&mut self) -> TX_FLOW_EN_W<'_, CONF0_SYNC_SPEC> {
         TX_FLOW_EN_W::new(self, 13)
     }
     #[doc = "Bit 15 - Configures whether or not to invert the level of LP UART RXD signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn rxd_inv(&mut self) -> RXD_INV_W<CONF0_SYNC_SPEC> {
+    pub fn rxd_inv(&mut self) -> RXD_INV_W<'_, CONF0_SYNC_SPEC> {
         RXD_INV_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to invert the level of LP UART TXD signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn txd_inv(&mut self) -> TXD_INV_W<CONF0_SYNC_SPEC> {
+    pub fn txd_inv(&mut self) -> TXD_INV_W<'_, CONF0_SYNC_SPEC> {
         TXD_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to disable data overflow detection for the LP UART receiver.\\\\ 0: Enable\\\\ 1: Disable\\\\"]
     #[inline(always)]
-    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<CONF0_SYNC_SPEC> {
+    pub fn dis_rx_dat_ovf(&mut self) -> DIS_RX_DAT_OVF_W<'_, CONF0_SYNC_SPEC> {
         DIS_RX_DAT_OVF_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to store the received data with errors into FIFO.\\\\ 0: Store\\\\ 1: Not store\\\\"]
     #[inline(always)]
-    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<CONF0_SYNC_SPEC> {
+    pub fn err_wr_mask(&mut self) -> ERR_WR_MASK_W<'_, CONF0_SYNC_SPEC> {
         ERR_WR_MASK_W::new(self, 18)
     }
     #[doc = "Bit 20 - Configures whether or not to enable clock gating for LP UART memory.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<CONF0_SYNC_SPEC> {
+    pub fn mem_clk_en(&mut self) -> MEM_CLK_EN_W<'_, CONF0_SYNC_SPEC> {
         MEM_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures the RTS signal used in software flow control.\\\\ 0: The LP UART transmitter is allowed to send data.\\\\ 1: The LP UART transmitted is not allowed to send data.\\\\"]
     #[inline(always)]
-    pub fn sw_rts(&mut self) -> SW_RTS_W<CONF0_SYNC_SPEC> {
+    pub fn sw_rts(&mut self) -> SW_RTS_W<'_, CONF0_SYNC_SPEC> {
         SW_RTS_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to reset the LP UART RX FIFO.\\\\ 0: Not reset\\\\ 1: Reset\\\\"]
     #[inline(always)]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CONF0_SYNC_SPEC> {
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<'_, CONF0_SYNC_SPEC> {
         RXFIFO_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to reset the LP UART TX FIFO.\\\\ 0: Not reset\\\\ 1: Reset\\\\"]
     #[inline(always)]
-    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<CONF0_SYNC_SPEC> {
+    pub fn txfifo_rst(&mut self) -> TXFIFO_RST_W<'_, CONF0_SYNC_SPEC> {
         TXFIFO_RST_W::new(self, 23)
     }
 }

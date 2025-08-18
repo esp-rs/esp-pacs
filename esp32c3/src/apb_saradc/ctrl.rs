@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - select software enable saradc sample"]
     #[inline(always)]
-    pub fn start_force(&mut self) -> START_FORCE_W<CTRL_SPEC> {
+    pub fn start_force(&mut self) -> START_FORCE_W<'_, CTRL_SPEC> {
         START_FORCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - software enable saradc sample"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<CTRL_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, CTRL_SPEC> {
         START_W::new(self, 1)
     }
     #[doc = "Bit 6 - SAR clock gated"]
     #[inline(always)]
-    pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<CTRL_SPEC> {
+    pub fn sar_clk_gated(&mut self) -> SAR_CLK_GATED_W<'_, CTRL_SPEC> {
         SAR_CLK_GATED_W::new(self, 6)
     }
     #[doc = "Bits 7:14 - SAR clock divider"]
     #[inline(always)]
-    pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<CTRL_SPEC> {
+    pub fn sar_clk_div(&mut self) -> SAR_CLK_DIV_W<'_, CTRL_SPEC> {
         SAR_CLK_DIV_W::new(self, 7)
     }
     #[doc = "Bits 15:17 - 0 ~ 15 means length 1 ~ 16"]
     #[inline(always)]
-    pub fn sar_patt_len(&mut self) -> SAR_PATT_LEN_W<CTRL_SPEC> {
+    pub fn sar_patt_len(&mut self) -> SAR_PATT_LEN_W<'_, CTRL_SPEC> {
         SAR_PATT_LEN_W::new(self, 15)
     }
     #[doc = "Bit 23 - clear the pointer of pattern table for DIG ADC1 CTRL"]
     #[inline(always)]
-    pub fn sar_patt_p_clear(&mut self) -> SAR_PATT_P_CLEAR_W<CTRL_SPEC> {
+    pub fn sar_patt_p_clear(&mut self) -> SAR_PATT_P_CLEAR_W<'_, CTRL_SPEC> {
         SAR_PATT_P_CLEAR_W::new(self, 23)
     }
     #[doc = "Bits 27:28 - force option to xpd sar blocks"]
     #[inline(always)]
-    pub fn xpd_sar_force(&mut self) -> XPD_SAR_FORCE_W<CTRL_SPEC> {
+    pub fn xpd_sar_force(&mut self) -> XPD_SAR_FORCE_W<'_, CTRL_SPEC> {
         XPD_SAR_FORCE_W::new(self, 27)
     }
     #[doc = "Bits 30:31 - wait arbit signal stable after sar_done"]
     #[inline(always)]
-    pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<CTRL_SPEC> {
+    pub fn wait_arb_cycle(&mut self) -> WAIT_ARB_CYCLE_W<'_, CTRL_SPEC> {
         WAIT_ARB_CYCLE_W::new(self, 30)
     }
 }

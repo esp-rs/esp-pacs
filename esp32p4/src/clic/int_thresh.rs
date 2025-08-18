@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:31 - CPU interrupt threshold level"]
     #[inline(always)]
-    pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<INT_THRESH_SPEC> {
+    pub fn cpu_int_thresh(&mut self) -> CPU_INT_THRESH_W<'_, INT_THRESH_SPEC> {
         CPU_INT_THRESH_W::new(self, 24)
     }
 }

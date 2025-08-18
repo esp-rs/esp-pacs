@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores the 20 least significant bits of the first inlink descriptor's address."]
     #[inline(always)]
-    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<IN_LINK2_SPEC> {
+    pub fn inlink_addr(&mut self) -> INLINK_ADDR_W<'_, IN_LINK2_SPEC> {
         INLINK_ADDR_W::new(self, 0)
     }
 }

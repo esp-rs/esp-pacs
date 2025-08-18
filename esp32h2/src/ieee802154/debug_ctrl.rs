@@ -96,39 +96,45 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn debug_signal_sel(&mut self) -> DEBUG_SIGNAL_SEL_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_signal_sel(&mut self) -> DEBUG_SIGNAL_SEL_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_SIGNAL_SEL_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn debug_trigger_state_select(&mut self) -> DEBUG_TRIGGER_STATE_SELECT_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_trigger_state_select(
+        &mut self,
+    ) -> DEBUG_TRIGGER_STATE_SELECT_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_TRIGGER_STATE_SELECT_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn debug_ser_debug_sel(&mut self) -> DEBUG_SER_DEBUG_SEL_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_ser_debug_sel(&mut self) -> DEBUG_SER_DEBUG_SEL_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_SER_DEBUG_SEL_W::new(self, 12)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
     pub fn debug_trigger_state_match_value(
         &mut self,
-    ) -> DEBUG_TRIGGER_STATE_MATCH_VALUE_W<DEBUG_CTRL_SPEC> {
+    ) -> DEBUG_TRIGGER_STATE_MATCH_VALUE_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_TRIGGER_STATE_MATCH_VALUE_W::new(self, 16)
     }
     #[doc = "Bits 24:26"]
     #[inline(always)]
-    pub fn debug_trigger_pulse_select(&mut self) -> DEBUG_TRIGGER_PULSE_SELECT_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_trigger_pulse_select(
+        &mut self,
+    ) -> DEBUG_TRIGGER_PULSE_SELECT_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_TRIGGER_PULSE_SELECT_W::new(self, 24)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn debug_state_match_dump_en(&mut self) -> DEBUG_STATE_MATCH_DUMP_EN_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_state_match_dump_en(
+        &mut self,
+    ) -> DEBUG_STATE_MATCH_DUMP_EN_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_STATE_MATCH_DUMP_EN_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn debug_trigger_dump_en(&mut self) -> DEBUG_TRIGGER_DUMP_EN_W<DEBUG_CTRL_SPEC> {
+    pub fn debug_trigger_dump_en(&mut self) -> DEBUG_TRIGGER_DUMP_EN_W<'_, DEBUG_CTRL_SPEC> {
         DEBUG_TRIGGER_DUMP_EN_W::new(self, 31)
     }
 }

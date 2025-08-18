@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ack_frame_pending_en(&mut self) -> ACK_FRAME_PENDING_EN_W<ACK_FRAME_PENDING_EN_SPEC> {
+    pub fn ack_frame_pending_en(
+        &mut self,
+    ) -> ACK_FRAME_PENDING_EN_W<'_, ACK_FRAME_PENDING_EN_SPEC> {
         ACK_FRAME_PENDING_EN_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn ack_tx_ack_timeout(&mut self) -> ACK_TX_ACK_TIMEOUT_W<ACK_FRAME_PENDING_EN_SPEC> {
+    pub fn ack_tx_ack_timeout(&mut self) -> ACK_TX_ACK_TIMEOUT_W<'_, ACK_FRAME_PENDING_EN_SPEC> {
         ACK_TX_ACK_TIMEOUT_W::new(self, 16)
     }
 }

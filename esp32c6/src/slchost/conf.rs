@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - *******Description***********"]
     #[inline(always)]
-    pub fn frc_sdio11(&mut self) -> FRC_SDIO11_W<CONF_SPEC> {
+    pub fn frc_sdio11(&mut self) -> FRC_SDIO11_W<'_, CONF_SPEC> {
         FRC_SDIO11_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - *******Description***********"]
     #[inline(always)]
-    pub fn frc_sdio20(&mut self) -> FRC_SDIO20_W<CONF_SPEC> {
+    pub fn frc_sdio20(&mut self) -> FRC_SDIO20_W<'_, CONF_SPEC> {
         FRC_SDIO20_W::new(self, 5)
     }
     #[doc = "Bits 10:14 - *******Description***********"]
     #[inline(always)]
-    pub fn frc_neg_samp(&mut self) -> FRC_NEG_SAMP_W<CONF_SPEC> {
+    pub fn frc_neg_samp(&mut self) -> FRC_NEG_SAMP_W<'_, CONF_SPEC> {
         FRC_NEG_SAMP_W::new(self, 10)
     }
     #[doc = "Bits 15:19 - *******Description***********"]
     #[inline(always)]
-    pub fn frc_pos_samp(&mut self) -> FRC_POS_SAMP_W<CONF_SPEC> {
+    pub fn frc_pos_samp(&mut self) -> FRC_POS_SAMP_W<'_, CONF_SPEC> {
         FRC_POS_SAMP_W::new(self, 15)
     }
     #[doc = "Bits 20:24 - *******Description***********"]
     #[inline(always)]
-    pub fn frc_quick_in(&mut self) -> FRC_QUICK_IN_W<CONF_SPEC> {
+    pub fn frc_quick_in(&mut self) -> FRC_QUICK_IN_W<'_, CONF_SPEC> {
         FRC_QUICK_IN_W::new(self, 20)
     }
     #[doc = "Bit 25 - *******Description***********"]
     #[inline(always)]
-    pub fn sdio20_int_delay(&mut self) -> SDIO20_INT_DELAY_W<CONF_SPEC> {
+    pub fn sdio20_int_delay(&mut self) -> SDIO20_INT_DELAY_W<'_, CONF_SPEC> {
         SDIO20_INT_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 26 - *******Description***********"]
     #[inline(always)]
-    pub fn sdio_pad_pullup(&mut self) -> SDIO_PAD_PULLUP_W<CONF_SPEC> {
+    pub fn sdio_pad_pullup(&mut self) -> SDIO_PAD_PULLUP_W<'_, CONF_SPEC> {
         SDIO_PAD_PULLUP_W::new(self, 26)
     }
     #[doc = "Bit 27 - *******Description***********"]
     #[inline(always)]
-    pub fn hspeed_con_en(&mut self) -> HSPEED_CON_EN_W<CONF_SPEC> {
+    pub fn hspeed_con_en(&mut self) -> HSPEED_CON_EN_W<'_, CONF_SPEC> {
         HSPEED_CON_EN_W::new(self, 27)
     }
 }

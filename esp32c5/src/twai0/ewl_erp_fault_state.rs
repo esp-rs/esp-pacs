@@ -58,12 +58,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Error warning limit. If error warning limit is reached interrupt can be generated. Error warning limit indicates heavily disturbed bus."]
     #[inline(always)]
-    pub fn ew_limit(&mut self) -> EW_LIMIT_W<EWL_ERP_FAULT_STATE_SPEC> {
+    pub fn ew_limit(&mut self) -> EW_LIMIT_W<'_, EWL_ERP_FAULT_STATE_SPEC> {
         EW_LIMIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Error Passive Limit. When one of error counters (REC/TEC) exceeds this value, Fault confinement state changes to error-passive."]
     #[inline(always)]
-    pub fn erp_limit(&mut self) -> ERP_LIMIT_W<EWL_ERP_FAULT_STATE_SPEC> {
+    pub fn erp_limit(&mut self) -> ERP_LIMIT_W<'_, EWL_ERP_FAULT_STATE_SPEC> {
         ERP_LIMIT_W::new(self, 8)
     }
 }

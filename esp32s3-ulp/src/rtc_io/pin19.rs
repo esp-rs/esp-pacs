@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - if set to 0: normal output, if set to 1: open drain"]
     #[inline(always)]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN19_SPEC> {
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<'_, PIN19_SPEC> {
         PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 7:9 - if set to 0: GPIO interrupt disable, if set to 1: rising edge trigger, if set to 2: falling edge trigger, if set to 3: any edge trigger, if set to 4: low level trigger, if set to 5: high level trigger"]
     #[inline(always)]
-    pub fn int_type(&mut self) -> INT_TYPE_W<PIN19_SPEC> {
+    pub fn int_type(&mut self) -> INT_TYPE_W<'_, PIN19_SPEC> {
         INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - RTC GPIO wakeup enable bit"]
     #[inline(always)]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN19_SPEC> {
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<'_, PIN19_SPEC> {
         WAKEUP_ENABLE_W::new(self, 10)
     }
 }

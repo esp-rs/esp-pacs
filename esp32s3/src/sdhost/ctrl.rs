@@ -117,52 +117,54 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - To reset controller, firmware should set this bit. This bit is auto-cleared after two AHB and two sdhost_cclk_in clock cycles."]
     #[inline(always)]
-    pub fn controller_reset(&mut self) -> CONTROLLER_RESET_W<CTRL_SPEC> {
+    pub fn controller_reset(&mut self) -> CONTROLLER_RESET_W<'_, CTRL_SPEC> {
         CONTROLLER_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - To reset FIFO, firmware should set bit to 1. This bit is auto-cleared after completion of reset operation. Note: FIFO pointers will be out of reset after 2 cycles of system clocks in addition to synchronization delay (2 cycles of card clock), after the fifo_reset is cleared."]
     #[inline(always)]
-    pub fn fifo_reset(&mut self) -> FIFO_RESET_W<CTRL_SPEC> {
+    pub fn fifo_reset(&mut self) -> FIFO_RESET_W<'_, CTRL_SPEC> {
         FIFO_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - To reset DMA interface, firmware should set bit to 1. This bit is auto-cleared after two AHB clocks."]
     #[inline(always)]
-    pub fn dma_reset(&mut self) -> DMA_RESET_W<CTRL_SPEC> {
+    pub fn dma_reset(&mut self) -> DMA_RESET_W<'_, CTRL_SPEC> {
         DMA_RESET_W::new(self, 2)
     }
     #[doc = "Bit 4 - Global interrupt enable/disable bit. 0: Disable; 1: Enable."]
     #[inline(always)]
-    pub fn int_enable(&mut self) -> INT_ENABLE_W<CTRL_SPEC> {
+    pub fn int_enable(&mut self) -> INT_ENABLE_W<'_, CTRL_SPEC> {
         INT_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 6 - For sending read-wait to SDIO cards."]
     #[inline(always)]
-    pub fn read_wait(&mut self) -> READ_WAIT_W<CTRL_SPEC> {
+    pub fn read_wait(&mut self) -> READ_WAIT_W<'_, CTRL_SPEC> {
         READ_WAIT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Bit automatically clears once response is sent. To wait for MMC card interrupts, host issues CMD40 and waits for interrupt response from MMC card(s). In the meantime, if host wants SD/MMC to exit waiting for interrupt state, it can set this bit, at which time SD/MMC command state-machine sends CMD40 response on bus and returns to idle state."]
     #[inline(always)]
-    pub fn send_irq_response(&mut self) -> SEND_IRQ_RESPONSE_W<CTRL_SPEC> {
+    pub fn send_irq_response(&mut self) -> SEND_IRQ_RESPONSE_W<'_, CTRL_SPEC> {
         SEND_IRQ_RESPONSE_W::new(self, 7)
     }
     #[doc = "Bit 8 - After a suspend-command is issued during a read-operation, software polls the card to find when the suspend-event occurred. Once the suspend-event has occurred, software sets the bit which will reset the data state machine that is waiting for the next block of data. This bit is automatically cleared once the data state machine is reset to idle."]
     #[inline(always)]
-    pub fn abort_read_data(&mut self) -> ABORT_READ_DATA_W<CTRL_SPEC> {
+    pub fn abort_read_data(&mut self) -> ABORT_READ_DATA_W<'_, CTRL_SPEC> {
         ABORT_READ_DATA_W::new(self, 8)
     }
     #[doc = "Bit 9 - When set, SD/MMC sends CCSD to the CE-ATA device. Software sets this bit only if the current command is expecting CCS (that is, RW_BLK), and if interrupts are enabled for the CE-ATA device. Once the CCSD pattern is sent to the device, SD/MMC automatically clears the SDHOST_SEND_CCSD bit. It also sets the Command Done (CD) bit in the SDHOST_RINTSTS_REG register, and generates an interrupt for the host, in case the Command Done interrupt is not masked. NOTE: Once the SDHOST_SEND_CCSD bit is set, it takes two card clock cycles to drive the CCSD on the CMD line. Due to this, within the boundary conditions the CCSD may be sent to the CE-ATA device, even if the device has signalled CCS."]
     #[inline(always)]
-    pub fn send_ccsd(&mut self) -> SEND_CCSD_W<CTRL_SPEC> {
+    pub fn send_ccsd(&mut self) -> SEND_CCSD_W<'_, CTRL_SPEC> {
         SEND_CCSD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Always Set SDHOST_SEND_AUTO_STOP_CCSD and SDHOST_SEND_CCSD bits together; SDHOST_SEND_AUTO_STOP_CCSD should not be set independently of send_ccsd. When set, SD/MMC automatically sends an internally-generated STOP command (CMD12) to the CE-ATA device. After sending this internally-generated STOP command, the Auto Command Done (ACD) bit in SDHOST_RINTSTS_REG is set and an interrupt is generated for the host, in case the ACD interrupt is not masked. After sending the Command Completion Signal Disable (CCSD), SD/MMC automatically clears the SDHOST_SEND_AUTO_STOP_CCSD bit."]
     #[inline(always)]
-    pub fn send_auto_stop_ccsd(&mut self) -> SEND_AUTO_STOP_CCSD_W<CTRL_SPEC> {
+    pub fn send_auto_stop_ccsd(&mut self) -> SEND_AUTO_STOP_CCSD_W<'_, CTRL_SPEC> {
         SEND_AUTO_STOP_CCSD_W::new(self, 10)
     }
     #[doc = "Bit 11 - Software should appropriately write to this bit after the power-on reset or any other reset to the CE-ATA device. After reset, the CE-ATA device's interrupt is usually disabled (nIEN = 1). If the host enables the CE-ATA device's interrupt, then software should set this bit."]
     #[inline(always)]
-    pub fn ceata_device_interrupt_status(&mut self) -> CEATA_DEVICE_INTERRUPT_STATUS_W<CTRL_SPEC> {
+    pub fn ceata_device_interrupt_status(
+        &mut self,
+    ) -> CEATA_DEVICE_INTERRUPT_STATUS_W<'_, CTRL_SPEC> {
         CEATA_DEVICE_INTERRUPT_STATUS_W::new(self, 11)
     }
 }

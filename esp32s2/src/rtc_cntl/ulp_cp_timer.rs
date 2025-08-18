@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - ULP coprocessor PC initial address"]
     #[inline(always)]
-    pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<ULP_CP_TIMER_SPEC> {
+    pub fn ulp_cp_pc_init(&mut self) -> ULP_CP_PC_INIT_W<'_, ULP_CP_TIMER_SPEC> {
         ULP_CP_PC_INIT_W::new(self, 0)
     }
     #[doc = "Bit 29 - Enable the option of ULP coprocessor woken up by RTC GPIO"]
     #[inline(always)]
-    pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<ULP_CP_TIMER_SPEC> {
+    pub fn ulp_cp_gpio_wakeup_ena(&mut self) -> ULP_CP_GPIO_WAKEUP_ENA_W<'_, ULP_CP_TIMER_SPEC> {
         ULP_CP_GPIO_WAKEUP_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - Disable the option of ULP coprocessor woken up by RTC GPIO"]
     #[inline(always)]
-    pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<ULP_CP_TIMER_SPEC> {
+    pub fn ulp_cp_gpio_wakeup_clr(&mut self) -> ULP_CP_GPIO_WAKEUP_CLR_W<'_, ULP_CP_TIMER_SPEC> {
         ULP_CP_GPIO_WAKEUP_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - ULP coprocessor timer enable bit. 0: Disable hardware Timer. 1: Enable hardware timer"]
     #[inline(always)]
-    pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<ULP_CP_TIMER_SPEC> {
+    pub fn ulp_cp_slp_timer_en(&mut self) -> ULP_CP_SLP_TIMER_EN_W<'_, ULP_CP_TIMER_SPEC> {
         ULP_CP_SLP_TIMER_EN_W::new(self, 31)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - tx CH0 test mode y value"]
     #[inline(always)]
-    pub fn out_test_y_value(&mut self) -> OUT_TEST_Y_VALUE_W<MODE_YUV_SPEC> {
+    pub fn out_test_y_value(&mut self) -> OUT_TEST_Y_VALUE_W<'_, MODE_YUV_SPEC> {
         OUT_TEST_Y_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - tx CH0 test mode u value"]
     #[inline(always)]
-    pub fn out_test_u_value(&mut self) -> OUT_TEST_U_VALUE_W<MODE_YUV_SPEC> {
+    pub fn out_test_u_value(&mut self) -> OUT_TEST_U_VALUE_W<'_, MODE_YUV_SPEC> {
         OUT_TEST_U_VALUE_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - tx CH0 test mode v value"]
     #[inline(always)]
-    pub fn out_test_v_value(&mut self) -> OUT_TEST_V_VALUE_W<MODE_YUV_SPEC> {
+    pub fn out_test_v_value(&mut self) -> OUT_TEST_V_VALUE_W<'_, MODE_YUV_SPEC> {
         OUT_TEST_V_VALUE_W::new(self, 16)
     }
 }

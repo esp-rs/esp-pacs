@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Only reserved for ECO."]
     #[inline(always)]
-    pub fn redcy_ena(&mut self) -> REDCY_ENA_W<RND_ECO_SPEC> {
+    pub fn redcy_ena(&mut self) -> REDCY_ENA_W<'_, RND_ECO_SPEC> {
         REDCY_ENA_W::new(self, 0)
     }
 }

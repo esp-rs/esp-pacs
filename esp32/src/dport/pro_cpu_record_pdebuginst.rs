@@ -77,35 +77,35 @@ impl W {
     #[inline(always)]
     pub fn record_pdebuginst_sz(
         &mut self,
-    ) -> RECORD_PDEBUGINST_SZ_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    ) -> RECORD_PDEBUGINST_SZ_W<'_, PRO_CPU_RECORD_PDEBUGINST_SPEC> {
         RECORD_PDEBUGINST_SZ_W::new(self, 0)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
     pub fn record_pdebuginst_isrc(
         &mut self,
-    ) -> RECORD_PDEBUGINST_ISRC_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    ) -> RECORD_PDEBUGINST_ISRC_W<'_, PRO_CPU_RECORD_PDEBUGINST_SPEC> {
         RECORD_PDEBUGINST_ISRC_W::new(self, 12)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     pub fn record_pdebuginst_loop_rep(
         &mut self,
-    ) -> RECORD_PDEBUGINST_LOOP_REP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    ) -> RECORD_PDEBUGINST_LOOP_REP_W<'_, PRO_CPU_RECORD_PDEBUGINST_SPEC> {
         RECORD_PDEBUGINST_LOOP_REP_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     pub fn record_pdebuginst_loop(
         &mut self,
-    ) -> RECORD_PDEBUGINST_LOOP_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    ) -> RECORD_PDEBUGINST_LOOP_W<'_, PRO_CPU_RECORD_PDEBUGINST_SPEC> {
         RECORD_PDEBUGINST_LOOP_W::new(self, 21)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
     pub fn record_pdebuginst_cintl(
         &mut self,
-    ) -> RECORD_PDEBUGINST_CINTL_W<PRO_CPU_RECORD_PDEBUGINST_SPEC> {
+    ) -> RECORD_PDEBUGINST_CINTL_W<'_, PRO_CPU_RECORD_PDEBUGINST_SPEC> {
         RECORD_PDEBUGINST_CINTL_W::new(self, 24)
     }
 }

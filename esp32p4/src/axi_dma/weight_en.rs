@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This register is used to config tx arbiter weight function off/on"]
     #[inline(always)]
-    pub fn tx(&mut self) -> TX_W<WEIGHT_EN_SPEC> {
+    pub fn tx(&mut self) -> TX_W<'_, WEIGHT_EN_SPEC> {
         TX_W::new(self, 0)
     }
     #[doc = "Bit 1 - This register is used to config rx arbiter weight function off/on"]
     #[inline(always)]
-    pub fn rx(&mut self) -> RX_W<WEIGHT_EN_SPEC> {
+    pub fn rx(&mut self) -> RX_W<'_, WEIGHT_EN_SPEC> {
         RX_W::new(self, 1)
     }
 }

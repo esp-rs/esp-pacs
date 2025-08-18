@@ -58,7 +58,7 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_unalloc_clr(
         &mut self,
-    ) -> L1_CACHE_UNALLOC_CLR_W<L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    ) -> L1_CACHE_UNALLOC_CLR_W<'_, L1_UNALLOCATE_BUFFER_CLEAR_SPEC> {
         L1_CACHE_UNALLOC_CLR_W::new(self, 4)
     }
 }

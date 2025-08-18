@@ -358,175 +358,175 @@ impl W {
     #[inline(always)]
     pub fn ch1_enable_block_tfr_done_intstat(
         &mut self,
-    ) -> CH1_ENABLE_BLOCK_TFR_DONE_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_BLOCK_TFR_DONE_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_BLOCK_TFR_DONE_INTSTAT_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
     pub fn ch1_enable_dma_tfr_done_intstat(
         &mut self,
-    ) -> CH1_ENABLE_DMA_TFR_DONE_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_DMA_TFR_DONE_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_DMA_TFR_DONE_INTSTAT_W::new(self, 1)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
     pub fn ch1_enable_src_transcomp_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SRC_TRANSCOMP_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SRC_TRANSCOMP_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SRC_TRANSCOMP_INTSTAT_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
     pub fn ch1_enable_dst_transcomp_intstat(
         &mut self,
-    ) -> CH1_ENABLE_DST_TRANSCOMP_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_DST_TRANSCOMP_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_DST_TRANSCOMP_INTSTAT_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
     pub fn ch1_enable_src_dec_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SRC_DEC_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SRC_DEC_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SRC_DEC_ERR_INTSTAT_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
     pub fn ch1_enable_dst_dec_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_DST_DEC_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_DST_DEC_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_DST_DEC_ERR_INTSTAT_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
     pub fn ch1_enable_src_slv_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SRC_SLV_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SRC_SLV_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SRC_SLV_ERR_INTSTAT_W::new(self, 7)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
     pub fn ch1_enable_dst_slv_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_DST_SLV_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_DST_SLV_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_DST_SLV_ERR_INTSTAT_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
     pub fn ch1_enable_lli_rd_dec_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_LLI_RD_DEC_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_LLI_RD_DEC_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_LLI_RD_DEC_ERR_INTSTAT_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
     pub fn ch1_enable_lli_wr_dec_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_LLI_WR_DEC_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_LLI_WR_DEC_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_LLI_WR_DEC_ERR_INTSTAT_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
     pub fn ch1_enable_lli_rd_slv_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_LLI_RD_SLV_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_LLI_RD_SLV_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_LLI_RD_SLV_ERR_INTSTAT_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
     pub fn ch1_enable_lli_wr_slv_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_LLI_WR_SLV_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_LLI_WR_SLV_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_LLI_WR_SLV_ERR_INTSTAT_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
     pub fn ch1_enable_shadowreg_or_lli_invalid_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SHADOWREG_OR_LLI_INVALID_ERR_INTSTAT_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_multiblktype_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_MULTIBLKTYPE_ERR_INTSTAT_W::new(self, 14)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_dec_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_DEC_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_DEC_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_DEC_ERR_INTSTAT_W::new(self, 16)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_wr2ro_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_WR2RO_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_WR2RO_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_WR2RO_ERR_INTSTAT_W::new(self, 17)
     }
     #[doc = "Bit 18 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_rd2rwo_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_RD2RWO_ERR_INTSTAT_W::new(self, 18)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_wronchen_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_WRONCHEN_ERR_INTSTAT_W::new(self, 19)
     }
     #[doc = "Bit 20 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_shadowreg_wron_valid_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_SHADOWREG_WRON_VALID_ERR_INTSTAT_W::new(self, 20)
     }
     #[doc = "Bit 21 - NA"]
     #[inline(always)]
     pub fn ch1_enable_slvif_wronhold_err_intstat(
         &mut self,
-    ) -> CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_SLVIF_WRONHOLD_ERR_INTSTAT_W::new(self, 21)
     }
     #[doc = "Bit 27 - NA"]
     #[inline(always)]
     pub fn ch1_enable_ch_lock_cleared_intstat(
         &mut self,
-    ) -> CH1_ENABLE_CH_LOCK_CLEARED_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_CH_LOCK_CLEARED_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_CH_LOCK_CLEARED_INTSTAT_W::new(self, 27)
     }
     #[doc = "Bit 28 - NA"]
     #[inline(always)]
     pub fn ch1_enable_ch_src_suspended_intstat(
         &mut self,
-    ) -> CH1_ENABLE_CH_SRC_SUSPENDED_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_CH_SRC_SUSPENDED_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_CH_SRC_SUSPENDED_INTSTAT_W::new(self, 28)
     }
     #[doc = "Bit 29 - NA"]
     #[inline(always)]
     pub fn ch1_enable_ch_suspended_intstat(
         &mut self,
-    ) -> CH1_ENABLE_CH_SUSPENDED_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_CH_SUSPENDED_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_CH_SUSPENDED_INTSTAT_W::new(self, 29)
     }
     #[doc = "Bit 30 - NA"]
     #[inline(always)]
     pub fn ch1_enable_ch_disabled_intstat(
         &mut self,
-    ) -> CH1_ENABLE_CH_DISABLED_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_CH_DISABLED_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_CH_DISABLED_INTSTAT_W::new(self, 30)
     }
     #[doc = "Bit 31 - NA"]
     #[inline(always)]
     pub fn ch1_enable_ch_aborted_intstat(
         &mut self,
-    ) -> CH1_ENABLE_CH_ABORTED_INTSTAT_W<INTSTATUS_ENABLE0_SPEC> {
+    ) -> CH1_ENABLE_CH_ABORTED_INTSTAT_W<'_, INTSTATUS_ENABLE0_SPEC> {
         CH1_ENABLE_CH_ABORTED_INTSTAT_W::new(self, 31)
     }
 }

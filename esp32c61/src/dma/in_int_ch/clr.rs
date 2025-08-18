@@ -25,42 +25,44 @@ impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to clear AHB_DMA_IN_DONE_CH0_INT"]
     #[inline(always)]
-    pub fn in_done_ch0_int_clr(&mut self) -> IN_DONE_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_done_ch0_int_clr(&mut self) -> IN_DONE_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_DONE_CH0_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to clear AHB_DMA_IN_SUC_EOF_CH0_INT"]
     #[inline(always)]
-    pub fn in_suc_eof_ch0_int_clr(&mut self) -> IN_SUC_EOF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_suc_eof_ch0_int_clr(&mut self) -> IN_SUC_EOF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_SUC_EOF_CH0_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear AHB_DMA_IN_ERR_EOF_CH0_INT"]
     #[inline(always)]
-    pub fn in_err_eof_ch0_int_clr(&mut self) -> IN_ERR_EOF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_err_eof_ch0_int_clr(&mut self) -> IN_ERR_EOF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_ERR_EOF_CH0_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to clear AHB_DMA_IN_DSCR_ERR_CH0_INT"]
     #[inline(always)]
-    pub fn in_dscr_err_ch0_int_clr(&mut self) -> IN_DSCR_ERR_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_dscr_err_ch0_int_clr(&mut self) -> IN_DSCR_ERR_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_DSCR_ERR_CH0_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to clear AHB_DMA_IN_DSCR_EMPTY_CH0_INT"]
     #[inline(always)]
-    pub fn in_dscr_empty_ch0_int_clr(&mut self) -> IN_DSCR_EMPTY_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_dscr_empty_ch0_int_clr(&mut self) -> IN_DSCR_EMPTY_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_DSCR_EMPTY_CH0_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to clear AHB_DMA_INFIFO_OVF_CH0_INT"]
     #[inline(always)]
-    pub fn infifo_ovf_ch0_int_clr(&mut self) -> INFIFO_OVF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn infifo_ovf_ch0_int_clr(&mut self) -> INFIFO_OVF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         INFIFO_OVF_CH0_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to clear AHB_DMA_INFIFO_UDF_CH0_INT"]
     #[inline(always)]
-    pub fn infifo_udf_ch0_int_clr(&mut self) -> INFIFO_UDF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn infifo_udf_ch0_int_clr(&mut self) -> INFIFO_UDF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         INFIFO_UDF_CH0_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to clear AHB_DMA_IN_RESP_ERR_CH0_INT"]
     #[inline(always)]
-    pub fn in_ahbinf_resp_err_ch0_int_clr(&mut self) -> IN_AHBINF_RESP_ERR_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn in_ahbinf_resp_err_ch0_int_clr(
+        &mut self,
+    ) -> IN_AHBINF_RESP_ERR_CH0_INT_CLR_W<'_, CLR_SPEC> {
         IN_AHBINF_RESP_ERR_CH0_INT_CLR_W::new(self, 7)
     }
 }

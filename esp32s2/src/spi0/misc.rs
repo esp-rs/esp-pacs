@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<'_, MISC_SPEC> {
         CS0_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<'_, MISC_SPEC> {
         CS1_DIS_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn trans_end(&mut self) -> TRANS_END_W<MISC_SPEC> {
+    pub fn trans_end(&mut self) -> TRANS_END_W<'_, MISC_SPEC> {
         TRANS_END_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<MISC_SPEC> {
+    pub fn trans_end_int_ena(&mut self) -> TRANS_END_INT_ENA_W<'_, MISC_SPEC> {
         TRANS_END_INT_ENA_W::new(self, 4)
     }
     #[doc = "Bits 5:6"]
     #[inline(always)]
-    pub fn cs_pol(&mut self) -> CS_POL_W<MISC_SPEC> {
+    pub fn cs_pol(&mut self) -> CS_POL_W<'_, MISC_SPEC> {
         CS_POL_W::new(self, 5)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn fsub_pin(&mut self) -> FSUB_PIN_W<MISC_SPEC> {
+    pub fn fsub_pin(&mut self) -> FSUB_PIN_W<'_, MISC_SPEC> {
         FSUB_PIN_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn ssub_pin(&mut self) -> SSUB_PIN_W<MISC_SPEC> {
+    pub fn ssub_pin(&mut self) -> SSUB_PIN_W<'_, MISC_SPEC> {
         SSUB_PIN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<'_, MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<'_, MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn auto_per(&mut self) -> AUTO_PER_W<MISC_SPEC> {
+    pub fn auto_per(&mut self) -> AUTO_PER_W<'_, MISC_SPEC> {
         AUTO_PER_W::new(self, 11)
     }
 }

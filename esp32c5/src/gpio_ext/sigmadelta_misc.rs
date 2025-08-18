@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable the clock for sigma delta modulation.\\\\ 0: Not enable\\\\ 1: Enable\\\\%\\label{fielddesc:GPIOSDSPISWAP}- \\[GPIOSD_SPI_SWAP\\] Reserved."]
     #[inline(always)]
-    pub fn sigmadelta_clk_en(&mut self) -> SIGMADELTA_CLK_EN_W<SIGMADELTA_MISC_SPEC> {
+    pub fn sigmadelta_clk_en(&mut self) -> SIGMADELTA_CLK_EN_W<'_, SIGMADELTA_MISC_SPEC> {
         SIGMADELTA_CLK_EN_W::new(self, 0)
     }
 }

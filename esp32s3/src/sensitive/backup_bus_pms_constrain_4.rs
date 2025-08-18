@@ -226,112 +226,112 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb_device(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - BackUp access usb_wrap permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb_wrap(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - BackUp access crypto_peri permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_crypto_peri(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - BackUp access crypto_dma permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_crypto_dma(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - BackUp access apb_adc permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_apb_adc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - BackUp access lcd_cam permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_lcd_cam(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_LCD_CAM_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_LCD_CAM_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_LCD_CAM_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - BackUp access bt_pwr permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_bt_pwr(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - BackUp access usb permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - BackUp access system permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_system(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTEM_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTEM_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_SYSTEM_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - BackUp access sensitive permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_sensitive(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SENSITIVE_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SENSITIVE_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_SENSITIVE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - BackUp access interrupt permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_interrupt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_INTERRUPT_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_INTERRUPT_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_INTERRUPT_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - BackUp access dma_copy permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_dma_copy(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_DMA_COPY_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_DMA_COPY_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_DMA_COPY_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - BackUp access cache_config permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_cache_config(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CACHE_CONFIG_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CACHE_CONFIG_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_CACHE_CONFIG_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - BackUp access ad permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_ad(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_AD_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_AD_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_AD_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - BackUp access dio permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_dio(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_DIO_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_DIO_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_DIO_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - BackUp access world_controller permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_world_controller(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_WORLD_CONTROLLER_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_WORLD_CONTROLLER_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_WORLD_CONTROLLER_W::new(self, 30)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the clock division number of timestamp counter."]
     #[inline(always)]
-    pub fn ts_div_num(&mut self) -> TS_DIV_NUM_W<TIMESTAMP_PRESCALER_SPEC> {
+    pub fn ts_div_num(&mut self) -> TS_DIV_NUM_W<'_, TIMESTAMP_PRESCALER_SPEC> {
         TS_DIV_NUM_W::new(self, 0)
     }
 }

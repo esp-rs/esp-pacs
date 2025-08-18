@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - Configures whether to stop SLC1 RX linked list operation."]
     #[inline(always)]
-    pub fn sdio_slc1_rxlink_stop(&mut self) -> SDIO_SLC1_RXLINK_STOP_W<SLC1RX_LINK_SPEC> {
+    pub fn sdio_slc1_rxlink_stop(&mut self) -> SDIO_SLC1_RXLINK_STOP_W<'_, SLC1RX_LINK_SPEC> {
         SDIO_SLC1_RXLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether to start SLC1 RX linked list operation from the address indicated by SDIO_SLC1_RXLINK_ADDR."]
     #[inline(always)]
-    pub fn sdio_slc1_rxlink_start(&mut self) -> SDIO_SLC1_RXLINK_START_W<SLC1RX_LINK_SPEC> {
+    pub fn sdio_slc1_rxlink_start(&mut self) -> SDIO_SLC1_RXLINK_START_W<'_, SLC1RX_LINK_SPEC> {
         SDIO_SLC1_RXLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether to restart and continue SLC1 RX linked list operation."]
     #[inline(always)]
-    pub fn sdio_slc1_rxlink_restart(&mut self) -> SDIO_SLC1_RXLINK_RESTART_W<SLC1RX_LINK_SPEC> {
+    pub fn sdio_slc1_rxlink_restart(&mut self) -> SDIO_SLC1_RXLINK_RESTART_W<'_, SLC1RX_LINK_SPEC> {
         SDIO_SLC1_RXLINK_RESTART_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents SLC1 RX linked list FSM state."]
     #[inline(always)]
-    pub fn sdio_slc1_rxlink_park(&mut self) -> SDIO_SLC1_RXLINK_PARK_W<SLC1RX_LINK_SPEC> {
+    pub fn sdio_slc1_rxlink_park(&mut self) -> SDIO_SLC1_RXLINK_PARK_W<'_, SLC1RX_LINK_SPEC> {
         SDIO_SLC1_RXLINK_PARK_W::new(self, 31)
     }
 }

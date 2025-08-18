@@ -34,14 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - SPI1 wait idle gap time configuration. SPI1 slv fsm will count during SPI1 IDLE."]
     #[inline(always)]
-    pub fn waiti_idle_delay_time(&mut self) -> WAITI_IDLE_DELAY_TIME_W<FLASH_WAITI_CTRL1_SPEC> {
+    pub fn waiti_idle_delay_time(&mut self) -> WAITI_IDLE_DELAY_TIME_W<'_, FLASH_WAITI_CTRL1_SPEC> {
         WAITI_IDLE_DELAY_TIME_W::new(self, 0)
     }
     #[doc = "Bit 10 - Enable SPI1 wait idle gap time count functon. 1: Enable. 0: Disable."]
     #[inline(always)]
     pub fn waiti_idle_delay_time_en(
         &mut self,
-    ) -> WAITI_IDLE_DELAY_TIME_EN_W<FLASH_WAITI_CTRL1_SPEC> {
+    ) -> WAITI_IDLE_DELAY_TIME_EN_W<'_, FLASH_WAITI_CTRL1_SPEC> {
         WAITI_IDLE_DELAY_TIME_EN_W::new(self, 10)
     }
 }

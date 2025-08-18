@@ -88,47 +88,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - lp bus reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn bus_reset_en(&mut self) -> BUS_RESET_EN_W<'_, RESET_EN_SPEC> {
         BUS_RESET_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - lp rng reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn lp_rng_reset_en(&mut self) -> LP_RNG_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_rng_reset_en(&mut self) -> LP_RNG_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_RNG_RESET_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - lp optdebug reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn otp_dbg_reset_en(&mut self) -> OTP_DBG_RESET_EN_W<'_, RESET_EN_SPEC> {
         OTP_DBG_RESET_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - lp uart reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_uart_reset_en(&mut self) -> LP_UART_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_UART_RESET_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - lp io reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_io_reset_en(&mut self) -> LP_IO_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_IO_RESET_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - lp ext i2c reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_ext_i2c_reset_en(&mut self) -> LP_EXT_I2C_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_EXT_I2C_RESET_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - lp analog peri reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_ana_i2c_reset_en(&mut self) -> LP_ANA_I2C_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_ANA_I2C_RESET_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - efuse core reset enable 1: enable reset 0: disable reset"]
     #[inline(always)]
-    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn efuse_reset_en(&mut self) -> EFUSE_RESET_EN_W<'_, RESET_EN_SPEC> {
         EFUSE_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - force on lp cpu reset enable 1: enable cpu reset 0: cpu reset is controlled by pmu"]
     #[inline(always)]
-    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<RESET_EN_SPEC> {
+    pub fn lp_cpu_reset_en(&mut self) -> LP_CPU_RESET_EN_W<'_, RESET_EN_SPEC> {
         LP_CPU_RESET_EN_W::new(self, 31)
     }
 }

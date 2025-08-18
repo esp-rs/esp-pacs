@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the generation of software one-shot mode action clear. A toggle (software negate its value) triggers a clear for on going one-shot mode action."]
     #[inline(always)]
-    pub fn tz_clr_ost(&mut self) -> TZ_CLR_OST_W<FH_CFG1_SPEC> {
+    pub fn tz_clr_ost(&mut self) -> TZ_CLR_OST_W<'_, FH_CFG1_SPEC> {
         TZ_CLR_OST_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Configures the refresh moment selection of cycle-by-cycle mode action.\\\\0: Select nothing, will not refresh\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP"]
     #[inline(always)]
-    pub fn tz_cbcpulse(&mut self) -> TZ_CBCPULSE_W<FH_CFG1_SPEC> {
+    pub fn tz_cbcpulse(&mut self) -> TZ_CBCPULSE_W<'_, FH_CFG1_SPEC> {
         TZ_CBCPULSE_W::new(self, 1)
     }
     #[doc = "Bit 3 - Configures the generation of software cycle-by-cycle mode action. A toggle (software negate its value) triggers a cycle-by-cycle mode action."]
     #[inline(always)]
-    pub fn tz_force_cbc(&mut self) -> TZ_FORCE_CBC_W<FH_CFG1_SPEC> {
+    pub fn tz_force_cbc(&mut self) -> TZ_FORCE_CBC_W<'_, FH_CFG1_SPEC> {
         TZ_FORCE_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures the generation of software one-shot mode action. A toggle (software negate its value) triggers a one-shot mode action."]
     #[inline(always)]
-    pub fn tz_force_ost(&mut self) -> TZ_FORCE_OST_W<FH_CFG1_SPEC> {
+    pub fn tz_force_ost(&mut self) -> TZ_FORCE_OST_W<'_, FH_CFG1_SPEC> {
         TZ_FORCE_OST_W::new(self, 4)
     }
 }

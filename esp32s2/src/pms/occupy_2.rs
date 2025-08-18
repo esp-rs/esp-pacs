@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configure whether SRAM Block 18-21 is used as mac dump."]
     #[inline(always)]
-    pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W<OCCUPY_2_SPEC> {
+    pub fn occupy_mac_dump(&mut self) -> OCCUPY_MAC_DUMP_W<'_, OCCUPY_2_SPEC> {
         OCCUPY_MAC_DUMP_W::new(self, 0)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core1_usb_device_int_map(
         &mut self,
-    ) -> CORE1_USB_DEVICE_INT_MAP_W<USB_DEVICE_INT_MAP_SPEC> {
+    ) -> CORE1_USB_DEVICE_INT_MAP_W<'_, USB_DEVICE_INT_MAP_SPEC> {
         CORE1_USB_DEVICE_INT_MAP_W::new(self, 0)
     }
 }

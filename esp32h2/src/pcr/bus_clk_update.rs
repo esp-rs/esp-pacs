@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
-    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<BUS_CLK_UPDATE_SPEC> {
+    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<'_, BUS_CLK_UPDATE_SPEC> {
         BUS_CLOCK_UPDATE_W::new(self, 0)
     }
 }

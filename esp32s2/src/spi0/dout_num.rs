@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn dout0_num(&mut self) -> DOUT0_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout0_num(&mut self) -> DOUT0_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT0_NUM_W::new(self, 0)
     }
     #[doc = "Bits 2:3"]
     #[inline(always)]
-    pub fn dout1_num(&mut self) -> DOUT1_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout1_num(&mut self) -> DOUT1_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT1_NUM_W::new(self, 2)
     }
     #[doc = "Bits 4:5"]
     #[inline(always)]
-    pub fn dout2_num(&mut self) -> DOUT2_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout2_num(&mut self) -> DOUT2_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT2_NUM_W::new(self, 4)
     }
     #[doc = "Bits 6:7"]
     #[inline(always)]
-    pub fn dout3_num(&mut self) -> DOUT3_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout3_num(&mut self) -> DOUT3_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT3_NUM_W::new(self, 6)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
-    pub fn dout4_num(&mut self) -> DOUT4_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout4_num(&mut self) -> DOUT4_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT4_NUM_W::new(self, 8)
     }
     #[doc = "Bits 10:11"]
     #[inline(always)]
-    pub fn dout5_num(&mut self) -> DOUT5_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout5_num(&mut self) -> DOUT5_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT5_NUM_W::new(self, 10)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
-    pub fn dout6_num(&mut self) -> DOUT6_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout6_num(&mut self) -> DOUT6_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT6_NUM_W::new(self, 12)
     }
     #[doc = "Bits 14:15"]
     #[inline(always)]
-    pub fn dout7_num(&mut self) -> DOUT7_NUM_W<DOUT_NUM_SPEC> {
+    pub fn dout7_num(&mut self) -> DOUT7_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUT7_NUM_W::new(self, 14)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
-    pub fn douts_num(&mut self) -> DOUTS_NUM_W<DOUT_NUM_SPEC> {
+    pub fn douts_num(&mut self) -> DOUTS_NUM_W<'_, DOUT_NUM_SPEC> {
         DOUTS_NUM_W::new(self, 16)
     }
 }

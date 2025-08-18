@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field indicates the number of frames missed by the controller because of the Host Receive Buffer being unavailable. This counter is incremented each time the DMA discards an incoming frame. The counter is cleared when this register is read."]
     #[inline(always)]
-    pub fn missed_fc(&mut self) -> MISSED_FC_W<DMAMISSEDFR_SPEC> {
+    pub fn missed_fc(&mut self) -> MISSED_FC_W<'_, DMAMISSEDFR_SPEC> {
         MISSED_FC_W::new(self, 0)
     }
     #[doc = "Bit 16 - This bit is set every time Missed Frame Counter (Bits\\[15:0\\]) overflows that is the DMA discards an incoming frame because of the Host Receive Buffer being unavailable with the missed frame counter at maximum value. In such a scenario the Missed frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
     #[inline(always)]
-    pub fn overflow_bmfc(&mut self) -> OVERFLOW_BMFC_W<DMAMISSEDFR_SPEC> {
+    pub fn overflow_bmfc(&mut self) -> OVERFLOW_BMFC_W<'_, DMAMISSEDFR_SPEC> {
         OVERFLOW_BMFC_W::new(self, 16)
     }
     #[doc = "Bits 17:27 - This field indicates the number of frames missed by the application. This counter is incremented each time the MTL FIFO overflows. The counter is cleared when this register is read."]
     #[inline(always)]
-    pub fn overflow_fc(&mut self) -> OVERFLOW_FC_W<DMAMISSEDFR_SPEC> {
+    pub fn overflow_fc(&mut self) -> OVERFLOW_FC_W<'_, DMAMISSEDFR_SPEC> {
         OVERFLOW_FC_W::new(self, 17)
     }
     #[doc = "Bit 28 - This bit is set every time the Overflow Frame Counter (Bits\\[27:17\\]) overflows that is the Rx FIFO overflows with the overflow frame counter at maximum value. In such a scenario the overflow frame counter is reset to all-zeros and this bit indicates that the rollover happened."]
     #[inline(always)]
-    pub fn overflow_bfoc(&mut self) -> OVERFLOW_BFOC_W<DMAMISSEDFR_SPEC> {
+    pub fn overflow_bfoc(&mut self) -> OVERFLOW_BFOC_W<'_, DMAMISSEDFR_SPEC> {
         OVERFLOW_BFOC_W::new(self, 28)
     }
 }

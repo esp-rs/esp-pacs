@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:30 - enable powerglitch or not"]
     #[inline(always)]
-    pub fn pwr_glitch_reset_ena(&mut self) -> PWR_GLITCH_RESET_ENA_W<CK_GLITCH_CNTL_SPEC> {
+    pub fn pwr_glitch_reset_ena(&mut self) -> PWR_GLITCH_RESET_ENA_W<'_, CK_GLITCH_CNTL_SPEC> {
         PWR_GLITCH_RESET_ENA_W::new(self, 27)
     }
     #[doc = "Bit 31 - reserved"]
     #[inline(always)]
-    pub fn ck_glitch_reset_ena(&mut self) -> CK_GLITCH_RESET_ENA_W<CK_GLITCH_CNTL_SPEC> {
+    pub fn ck_glitch_reset_ena(&mut self) -> CK_GLITCH_RESET_ENA_W<'_, CK_GLITCH_CNTL_SPEC> {
         CK_GLITCH_RESET_ENA_W::new(self, 31)
     }
 }

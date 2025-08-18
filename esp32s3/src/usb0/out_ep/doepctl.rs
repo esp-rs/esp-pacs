@@ -100,57 +100,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn mps(&mut self) -> MPS_W<DOEPCTL_SPEC> {
+    pub fn mps(&mut self) -> MPS_W<'_, DOEPCTL_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn usbactep(&mut self) -> USBACTEP_W<DOEPCTL_SPEC> {
+    pub fn usbactep(&mut self) -> USBACTEP_W<'_, DOEPCTL_SPEC> {
         USBACTEP_W::new(self, 15)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn eptype(&mut self) -> EPTYPE_W<DOEPCTL_SPEC> {
+    pub fn eptype(&mut self) -> EPTYPE_W<'_, DOEPCTL_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn snp(&mut self) -> SNP_W<DOEPCTL_SPEC> {
+    pub fn snp(&mut self) -> SNP_W<'_, DOEPCTL_SPEC> {
         SNP_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn stall(&mut self) -> STALL_W<DOEPCTL_SPEC> {
+    pub fn stall(&mut self) -> STALL_W<'_, DOEPCTL_SPEC> {
         STALL_W::new(self, 21)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn cnak(&mut self) -> CNAK_W<DOEPCTL_SPEC> {
+    pub fn cnak(&mut self) -> CNAK_W<'_, DOEPCTL_SPEC> {
         CNAK_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn snak(&mut self) -> SNAK_W<DOEPCTL_SPEC> {
+    pub fn snak(&mut self) -> SNAK_W<'_, DOEPCTL_SPEC> {
         SNAK_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn setd0pid(&mut self) -> SETD0PID_W<DOEPCTL_SPEC> {
+    pub fn setd0pid(&mut self) -> SETD0PID_W<'_, DOEPCTL_SPEC> {
         SETD0PID_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn setd1pid(&mut self) -> SETD1PID_W<DOEPCTL_SPEC> {
+    pub fn setd1pid(&mut self) -> SETD1PID_W<'_, DOEPCTL_SPEC> {
         SETD1PID_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn epdis(&mut self) -> EPDIS_W<DOEPCTL_SPEC> {
+    pub fn epdis(&mut self) -> EPDIS_W<'_, DOEPCTL_SPEC> {
         EPDIS_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn epena(&mut self) -> EPENA_W<DOEPCTL_SPEC> {
+    pub fn epena(&mut self) -> EPENA_W<'_, DOEPCTL_SPEC> {
         EPENA_W::new(self, 31)
     }
 }

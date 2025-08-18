@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn rom_mpu_table3(&mut self) -> ROM_MPU_TABLE3_W<ROM_MPU_TABLE3_SPEC> {
+    pub fn rom_mpu_table3(&mut self) -> ROM_MPU_TABLE3_W<'_, ROM_MPU_TABLE3_SPEC> {
         ROM_MPU_TABLE3_W::new(self, 0)
     }
 }

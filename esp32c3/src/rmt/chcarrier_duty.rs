@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - reg_carrier_low_ch0."]
     #[inline(always)]
-    pub fn carrier_low(&mut self) -> CARRIER_LOW_W<CHCARRIER_DUTY_SPEC> {
+    pub fn carrier_low(&mut self) -> CARRIER_LOW_W<'_, CHCARRIER_DUTY_SPEC> {
         CARRIER_LOW_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - reg_carrier_high_ch0."]
     #[inline(always)]
-    pub fn carrier_high(&mut self) -> CARRIER_HIGH_W<CHCARRIER_DUTY_SPEC> {
+    pub fn carrier_high(&mut self) -> CARRIER_HIGH_W<'_, CHCARRIER_DUTY_SPEC> {
         CARRIER_HIGH_W::new(self, 16)
     }
 }

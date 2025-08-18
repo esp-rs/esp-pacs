@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<TX_RESET_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset tx_fifo under dma_aes working mode."]
     #[inline(always)]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<TX_RESET_SPEC> {
+    pub fn tx_reset(&mut self) -> TX_RESET_W<'_, TX_RESET_SPEC> {
         TX_RESET_W::new(self, 0)
     }
 }

@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21 - Swap every two 8-bit input data. 1: Enabled. 0: Disabled."]
     #[inline(always)]
-    pub fn cam_conv_8bits_data_inv(&mut self) -> CAM_CONV_8BITS_DATA_INV_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_8bits_data_inv(&mut self) -> CAM_CONV_8BITS_DATA_INV_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_8BITS_DATA_INV_W::new(self, 21)
     }
     #[doc = "Bits 22:23 - In YUV-to-YUV mode, 0: data is converted to YUV422 format. 1: data is converted to YUV420 format. 2: data is converted to YUV411 format. 3: disabled. To enable YUV-to-YUV mode, LCD_CAM_CAM_CONV_TRANS_MODE must be set to 1."]
     #[inline(always)]
-    pub fn cam_conv_yuv2yuv_mode(&mut self) -> CAM_CONV_YUV2YUV_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_yuv2yuv_mode(&mut self) -> CAM_CONV_YUV2YUV_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_YUV2YUV_MODE_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - In YUV-to-YUV mode and YUV-to-RGB mode, LCD_CAM_CAM_CONV_YUV_MODE decides the YUV mode of input data. 0: input data is in YUV422 format. 1: input data is in YUV420 format. 2: input data is in YUV411 format. In RGB-to-YUV mode, 0: data is converted to YUV422 format. 1: data is converted to YUV420 format. 2: data is converted to YUV411 format."]
     #[inline(always)]
-    pub fn cam_conv_yuv_mode(&mut self) -> CAM_CONV_YUV_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_yuv_mode(&mut self) -> CAM_CONV_YUV_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_YUV_MODE_W::new(self, 24)
     }
     #[doc = "Bit 26 - 0: BT601. 1: BT709."]
     #[inline(always)]
-    pub fn cam_conv_protocol_mode(&mut self) -> CAM_CONV_PROTOCOL_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_protocol_mode(&mut self) -> CAM_CONV_PROTOCOL_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_PROTOCOL_MODE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configure color range for output data. 0: limited color range. 1: full color range."]
     #[inline(always)]
-    pub fn cam_conv_data_out_mode(&mut self) -> CAM_CONV_DATA_OUT_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_data_out_mode(&mut self) -> CAM_CONV_DATA_OUT_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_DATA_OUT_MODE_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configure color range for input data. 0: limited color range. 1: full color range."]
     #[inline(always)]
-    pub fn cam_conv_data_in_mode(&mut self) -> CAM_CONV_DATA_IN_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_data_in_mode(&mut self) -> CAM_CONV_DATA_IN_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_DATA_IN_MODE_W::new(self, 28)
     }
     #[doc = "Bit 29 - 0: 16-bit mode. 1: 8-bit mode."]
     #[inline(always)]
-    pub fn cam_conv_mode_8bits_on(&mut self) -> CAM_CONV_MODE_8BITS_ON_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_mode_8bits_on(&mut self) -> CAM_CONV_MODE_8BITS_ON_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_MODE_8BITS_ON_W::new(self, 29)
     }
     #[doc = "Bit 30 - 0: converted to RGB format. 1: converted to YUV format."]
     #[inline(always)]
-    pub fn cam_conv_trans_mode(&mut self) -> CAM_CONV_TRANS_MODE_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_trans_mode(&mut self) -> CAM_CONV_TRANS_MODE_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_TRANS_MODE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 0: Bypass converter. 1: Enable converter."]
     #[inline(always)]
-    pub fn cam_conv_bypass(&mut self) -> CAM_CONV_BYPASS_W<CAM_RGB_YUV_SPEC> {
+    pub fn cam_conv_bypass(&mut self) -> CAM_CONV_BYPASS_W<'_, CAM_RGB_YUV_SPEC> {
         CAM_CONV_BYPASS_W::new(self, 31)
     }
 }

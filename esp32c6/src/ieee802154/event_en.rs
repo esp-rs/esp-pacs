@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12"]
     #[inline(always)]
-    pub fn event_en(&mut self) -> EVENT_EN_W<EVENT_EN_SPEC> {
+    pub fn event_en(&mut self) -> EVENT_EN_W<'_, EVENT_EN_SPEC> {
         EVENT_EN_W::new(self, 0)
     }
 }

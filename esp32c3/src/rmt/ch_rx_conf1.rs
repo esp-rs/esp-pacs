@@ -72,47 +72,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_rx_en_ch2."]
     #[inline(always)]
-    pub fn rx_en(&mut self) -> RX_EN_W<CH_RX_CONF1_SPEC> {
+    pub fn rx_en(&mut self) -> RX_EN_W<'_, CH_RX_CONF1_SPEC> {
         RX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_mem_wr_rst_ch2."]
     #[inline(always)]
-    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CH_RX_CONF1_SPEC> {
+    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<'_, CH_RX_CONF1_SPEC> {
         MEM_WR_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_apb_mem_rst_ch2."]
     #[inline(always)]
-    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_RX_CONF1_SPEC> {
+    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<'_, CH_RX_CONF1_SPEC> {
         APB_MEM_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_mem_owner_ch2."]
     #[inline(always)]
-    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CH_RX_CONF1_SPEC> {
+    pub fn mem_owner(&mut self) -> MEM_OWNER_W<'_, CH_RX_CONF1_SPEC> {
         MEM_OWNER_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_rx_filter_en_ch2."]
     #[inline(always)]
-    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CH_RX_CONF1_SPEC> {
+    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<'_, CH_RX_CONF1_SPEC> {
         RX_FILTER_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:12 - reg_rx_filter_thres_ch2."]
     #[inline(always)]
-    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CH_RX_CONF1_SPEC> {
+    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<'_, CH_RX_CONF1_SPEC> {
         RX_FILTER_THRES_W::new(self, 5)
     }
     #[doc = "Bit 13 - reg_mem_rx_wrap_en_ch2."]
     #[inline(always)]
-    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<CH_RX_CONF1_SPEC> {
+    pub fn mem_rx_wrap_en(&mut self) -> MEM_RX_WRAP_EN_W<'_, CH_RX_CONF1_SPEC> {
         MEM_RX_WRAP_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_afifo_rst_ch2."]
     #[inline(always)]
-    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_RX_CONF1_SPEC> {
+    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<'_, CH_RX_CONF1_SPEC> {
         AFIFO_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_conf_update_ch2."]
     #[inline(always)]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_RX_CONF1_SPEC> {
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<'_, CH_RX_CONF1_SPEC> {
         CONF_UPDATE_W::new(self, 15)
     }
 }

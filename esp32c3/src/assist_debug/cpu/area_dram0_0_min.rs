@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_core_0_area_dram0_0_min"]
     #[inline(always)]
-    pub fn area_dram0_0_min(&mut self) -> AREA_DRAM0_0_MIN_W<AREA_DRAM0_0_MIN_SPEC> {
+    pub fn area_dram0_0_min(&mut self) -> AREA_DRAM0_0_MIN_W<'_, AREA_DRAM0_0_MIN_SPEC> {
         AREA_DRAM0_0_MIN_W::new(self, 0)
     }
 }

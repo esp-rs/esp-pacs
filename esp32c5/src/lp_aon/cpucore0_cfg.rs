@@ -62,29 +62,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - enable cpu entry stall status 0x86: entry stall status Others : no operation"]
     #[inline(always)]
-    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_SW_STALL_W::new(self, 0)
     }
     #[doc = "Bit 28 - enable core reset by software 1: reset 0: no operation"]
     #[inline(always)]
-    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_SW_RESET_W::new(self, 28)
     }
     #[doc = "Bit 29 - reserved"]
     #[inline(always)]
     pub fn cpu_core0_ocd_halt_on_reset(
         &mut self,
-    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<CPUCORE0_CFG_SPEC> {
+    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_OCD_HALT_ON_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - configure core boot address 1: ROM 0: lp memory"]
     #[inline(always)]
-    pub fn cpu_core0_stat_vector_sel(&mut self) -> CPU_CORE0_STAT_VECTOR_SEL_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_stat_vector_sel(
+        &mut self,
+    ) -> CPU_CORE0_STAT_VECTOR_SEL_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_STAT_VECTOR_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - disable bypass core dreset 1: enable bypass 0: disable bypass"]
     #[inline(always)]
-    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_DRESET_MASK_W::new(self, 31)
     }
 }

@@ -274,132 +274,132 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to open register clock gate.\\\\0: Open the clock gate only when application writes registers\\\\1: Force open the clock gate for register"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to open the clock gate for rec ram2.\\\\0: Open the clock gate only when application writes or reads rec ram2\\\\1: Force open the clock gate for rec ram2"]
     #[inline(always)]
-    pub fn rec_ram_clk_en2(&mut self) -> REC_RAM_CLK_EN2_W<CONF_SPEC> {
+    pub fn rec_ram_clk_en2(&mut self) -> REC_RAM_CLK_EN2_W<'_, CONF_SPEC> {
         REC_RAM_CLK_EN2_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to open the clock gate for rec ram1.\\\\0: Open the clock gate only when application writes or reads rec ram1\\\\1: Force open the clock gate for rec ram1"]
     #[inline(always)]
-    pub fn rec_ram_clk_en1(&mut self) -> REC_RAM_CLK_EN1_W<CONF_SPEC> {
+    pub fn rec_ram_clk_en1(&mut self) -> REC_RAM_CLK_EN1_W<'_, CONF_SPEC> {
         REC_RAM_CLK_EN1_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to open the clock gate for quant ram2.\\\\0: Open the clock gate only when application writes or reads quant ram2\\\\1: Force open the clock gate for quant ram2"]
     #[inline(always)]
-    pub fn quant_ram_clk_en2(&mut self) -> QUANT_RAM_CLK_EN2_W<CONF_SPEC> {
+    pub fn quant_ram_clk_en2(&mut self) -> QUANT_RAM_CLK_EN2_W<'_, CONF_SPEC> {
         QUANT_RAM_CLK_EN2_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to open the clock gate for quant ram1.\\\\0: Open the clock gate only when application writes or reads quant ram1\\\\1: Force open the clock gate for quant ram1"]
     #[inline(always)]
-    pub fn quant_ram_clk_en1(&mut self) -> QUANT_RAM_CLK_EN1_W<CONF_SPEC> {
+    pub fn quant_ram_clk_en1(&mut self) -> QUANT_RAM_CLK_EN1_W<'_, CONF_SPEC> {
         QUANT_RAM_CLK_EN1_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to open the clock gate for pre ram.\\\\0: Open the clock gate only when application writes or reads pre ram\\\\1: Force open the clock gate for pre ram"]
     #[inline(always)]
-    pub fn pre_ram_clk_en(&mut self) -> PRE_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn pre_ram_clk_en(&mut self) -> PRE_RAM_CLK_EN_W<'_, CONF_SPEC> {
         PRE_RAM_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to open the clock gate for mvd ram.\\\\0: Open the clock gate only when application writes or reads mvd ram\\\\1: Force open the clock gate for mvd ram"]
     #[inline(always)]
-    pub fn mvd_ram_clk_en(&mut self) -> MVD_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn mvd_ram_clk_en(&mut self) -> MVD_RAM_CLK_EN_W<'_, CONF_SPEC> {
         MVD_RAM_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to open the clock gate for mc ram.\\\\0: Open the clock gate only when application writes or reads mc ram\\\\1: Force open the clock gate for mc ram"]
     #[inline(always)]
-    pub fn mc_ram_clk_en(&mut self) -> MC_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn mc_ram_clk_en(&mut self) -> MC_RAM_CLK_EN_W<'_, CONF_SPEC> {
         MC_RAM_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to open the clock gate for ref ram.\\\\0: Open the clock gate only when application writes or reads ref ram\\\\1: Force open the clock gate for ref ram"]
     #[inline(always)]
-    pub fn ref_ram_clk_en(&mut self) -> REF_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn ref_ram_clk_en(&mut self) -> REF_RAM_CLK_EN_W<'_, CONF_SPEC> {
         REF_RAM_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to open the clock gate for i4x4_mode ram.\\\\0: Open the clock gate only when application writes or reads i4x4_mode ram\\\\1: Force open the clock gate for i4x4_mode ram"]
     #[inline(always)]
-    pub fn i4x4_ref_ram_clk_en(&mut self) -> I4X4_REF_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn i4x4_ref_ram_clk_en(&mut self) -> I4X4_REF_RAM_CLK_EN_W<'_, CONF_SPEC> {
         I4X4_REF_RAM_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to open the clock gate for ime ram.\\\\0: Open the clock gate only when application writes or reads ime ram\\\\1: Force open the clock gate for ime ram"]
     #[inline(always)]
-    pub fn ime_ram_clk_en(&mut self) -> IME_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn ime_ram_clk_en(&mut self) -> IME_RAM_CLK_EN_W<'_, CONF_SPEC> {
         IME_RAM_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to open the clock gate for fme ram.\\\\0: Open the clock gate only when application writes or readsfme ram\\\\1: Force open the clock gate for fme ram"]
     #[inline(always)]
-    pub fn fme_ram_clk_en(&mut self) -> FME_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn fme_ram_clk_en(&mut self) -> FME_RAM_CLK_EN_W<'_, CONF_SPEC> {
         FME_RAM_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to open the clock gate for fetch ram.\\\\0: Open the clock gate only when application writes or reads fetch ram\\\\1: Force open the clock gate for fetch ram"]
     #[inline(always)]
-    pub fn fetch_ram_clk_en(&mut self) -> FETCH_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn fetch_ram_clk_en(&mut self) -> FETCH_RAM_CLK_EN_W<'_, CONF_SPEC> {
         FETCH_RAM_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to open the clock gate for db ram.\\\\0: Open the clock gate only when application writes or reads db ram\\\\1: Force open the clock gate for db ram"]
     #[inline(always)]
-    pub fn db_ram_clk_en(&mut self) -> DB_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn db_ram_clk_en(&mut self) -> DB_RAM_CLK_EN_W<'_, CONF_SPEC> {
         DB_RAM_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to open the clock gate for cur_mb ram.\\\\0: Open the clock gate only when application writes or reads cur_mb ram\\\\1: Force open the clock gate for cur_mb ram"]
     #[inline(always)]
-    pub fn cur_mb_ram_clk_en(&mut self) -> CUR_MB_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn cur_mb_ram_clk_en(&mut self) -> CUR_MB_RAM_CLK_EN_W<'_, CONF_SPEC> {
         CUR_MB_RAM_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to open the clock gate for cavlc ram.\\\\0: Open the clock gate only when application writes or reads cavlc ram\\\\1: Force open the clock gate for cavlc ram"]
     #[inline(always)]
-    pub fn cavlc_ram_clk_en(&mut self) -> CAVLC_RAM_CLK_EN_W<CONF_SPEC> {
+    pub fn cavlc_ram_clk_en(&mut self) -> CAVLC_RAM_CLK_EN_W<'_, CONF_SPEC> {
         CAVLC_RAM_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to open the clock gate for ime.\\\\0: Open the clock gate only when ime work\\\\1: Force open the clock gate for ime"]
     #[inline(always)]
-    pub fn ime_clk_en(&mut self) -> IME_CLK_EN_W<CONF_SPEC> {
+    pub fn ime_clk_en(&mut self) -> IME_CLK_EN_W<'_, CONF_SPEC> {
         IME_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to open the clock gate for fme.\\\\0: Open the clock gate only when fme work\\\\1: Force open the clock gate for fme"]
     #[inline(always)]
-    pub fn fme_clk_en(&mut self) -> FME_CLK_EN_W<CONF_SPEC> {
+    pub fn fme_clk_en(&mut self) -> FME_CLK_EN_W<'_, CONF_SPEC> {
         FME_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to open the clock gate for mc.\\\\0: Open the clock gate only when mc work\\\\1: Force open the clock gate for mc"]
     #[inline(always)]
-    pub fn mc_clk_en(&mut self) -> MC_CLK_EN_W<CONF_SPEC> {
+    pub fn mc_clk_en(&mut self) -> MC_CLK_EN_W<'_, CONF_SPEC> {
         MC_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to open the clock gate for interpolator.\\\\0: Open the clock gate only when interpolator work\\\\1: Force open the clock gate for interpolator"]
     #[inline(always)]
-    pub fn interpolator_clk_en(&mut self) -> INTERPOLATOR_CLK_EN_W<CONF_SPEC> {
+    pub fn interpolator_clk_en(&mut self) -> INTERPOLATOR_CLK_EN_W<'_, CONF_SPEC> {
         INTERPOLATOR_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to open the clock gate for deblocking filter.\\\\0: Open the clock gate only when deblocking filter work\\\\1: Force open the clock gate for deblocking filter"]
     #[inline(always)]
-    pub fn db_clk_en(&mut self) -> DB_CLK_EN_W<CONF_SPEC> {
+    pub fn db_clk_en(&mut self) -> DB_CLK_EN_W<'_, CONF_SPEC> {
         DB_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to open the clock gate for cavlc.\\\\0: Open the clock gate only when cavlc work\\\\1: Force open the clock gate for cavlc"]
     #[inline(always)]
-    pub fn clavlc_clk_en(&mut self) -> CLAVLC_CLK_EN_W<CONF_SPEC> {
+    pub fn clavlc_clk_en(&mut self) -> CLAVLC_CLK_EN_W<'_, CONF_SPEC> {
         CLAVLC_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to open the clock gate for intra.\\\\0: Open the clock gate only when intra work\\\\1: Force open the clock gate for intra"]
     #[inline(always)]
-    pub fn intra_clk_en(&mut self) -> INTRA_CLK_EN_W<CONF_SPEC> {
+    pub fn intra_clk_en(&mut self) -> INTRA_CLK_EN_W<'_, CONF_SPEC> {
         INTRA_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to open the clock gate for decimate.\\\\0: Open the clock gate only when decimate work\\\\1: Force open the clock gate for decimate"]
     #[inline(always)]
-    pub fn deci_clk_en(&mut self) -> DECI_CLK_EN_W<CONF_SPEC> {
+    pub fn deci_clk_en(&mut self) -> DECI_CLK_EN_W<'_, CONF_SPEC> {
         DECI_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to open the clock gate for bs buffer.\\\\0: Open the clock gate only when bs buffer work\\\\1: Force open the clock gate for bs buffer"]
     #[inline(always)]
-    pub fn bs_clk_en(&mut self) -> BS_CLK_EN_W<CONF_SPEC> {
+    pub fn bs_clk_en(&mut self) -> BS_CLK_EN_W<'_, CONF_SPEC> {
         BS_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to open the clock gate for mv merge.\\\\0: Open the clock gate only when mv merge work\\\\1: Force open the clock gate for mv merge"]
     #[inline(always)]
-    pub fn mv_merge_clk_en(&mut self) -> MV_MERGE_CLK_EN_W<CONF_SPEC> {
+    pub fn mv_merge_clk_en(&mut self) -> MV_MERGE_CLK_EN_W<'_, CONF_SPEC> {
         MV_MERGE_CLK_EN_W::new(self, 25)
     }
 }

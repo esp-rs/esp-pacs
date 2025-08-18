@@ -84,37 +84,39 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_clk_src_sel(&mut self) -> GPSPI2_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi2_clk_src_sel(&mut self) -> GPSPI2_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI2_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_hs_clk_en(&mut self) -> GPSPI2_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi2_hs_clk_en(&mut self) -> GPSPI2_HS_CLK_EN_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI2_HS_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:11 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_hs_clk_div_num(&mut self) -> GPSPI2_HS_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi2_hs_clk_div_num(&mut self) -> GPSPI2_HS_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI2_HS_CLK_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bits 12:19 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_mst_clk_div_num(&mut self) -> GPSPI2_MST_CLK_DIV_NUM_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi2_mst_clk_div_num(
+        &mut self,
+    ) -> GPSPI2_MST_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI2_MST_CLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_mst_clk_en(&mut self) -> GPSPI2_MST_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi2_mst_clk_en(&mut self) -> GPSPI2_MST_CLK_EN_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI2_MST_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:23 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_clk_src_sel(&mut self) -> GPSPI3_CLK_SRC_SEL_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi3_clk_src_sel(&mut self) -> GPSPI3_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI3_CLK_SRC_SEL_W::new(self, 21)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_hs_clk_en(&mut self) -> GPSPI3_HS_CLK_EN_W<PERI_CLK_CTRL116_SPEC> {
+    pub fn gpspi3_hs_clk_en(&mut self) -> GPSPI3_HS_CLK_EN_W<'_, PERI_CLK_CTRL116_SPEC> {
         GPSPI3_HS_CLK_EN_W::new(self, 24)
     }
 }

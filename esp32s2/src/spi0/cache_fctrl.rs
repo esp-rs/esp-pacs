@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_req_en(&mut self) -> CACHE_REQ_EN_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_REQ_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_usr_cmd_4byte(&mut self) -> CACHE_USR_CMD_4BYTE_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_USR_CMD_4BYTE_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<CACHE_FCTRL_SPEC> {
+    pub fn cache_flash_usr_cmd(&mut self) -> CACHE_FLASH_USR_CMD_W<'_, CACHE_FCTRL_SPEC> {
         CACHE_FLASH_USR_CMD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<CACHE_FCTRL_SPEC> {
+    pub fn fdin_dual(&mut self) -> FDIN_DUAL_W<'_, CACHE_FCTRL_SPEC> {
         FDIN_DUAL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<CACHE_FCTRL_SPEC> {
+    pub fn fdout_dual(&mut self) -> FDOUT_DUAL_W<'_, CACHE_FCTRL_SPEC> {
         FDOUT_DUAL_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CACHE_FCTRL_SPEC> {
+    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<'_, CACHE_FCTRL_SPEC> {
         FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<CACHE_FCTRL_SPEC> {
+    pub fn fdin_quad(&mut self) -> FDIN_QUAD_W<'_, CACHE_FCTRL_SPEC> {
         FDIN_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<CACHE_FCTRL_SPEC> {
+    pub fn fdout_quad(&mut self) -> FDOUT_QUAD_W<'_, CACHE_FCTRL_SPEC> {
         FDOUT_QUAD_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CACHE_FCTRL_SPEC> {
+    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<'_, CACHE_FCTRL_SPEC> {
         FADDR_QUAD_W::new(self, 8)
     }
 }

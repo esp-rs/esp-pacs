@@ -234,112 +234,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable PWM generator0 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr0_a_up_en(&mut self) -> TASK_CMPR0_A_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr0_a_up_en(&mut self) -> TASK_CMPR0_A_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR0_A_UP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable PWM generator1 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr1_a_up_en(&mut self) -> TASK_CMPR1_A_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr1_a_up_en(&mut self) -> TASK_CMPR1_A_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR1_A_UP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable PWM generator2 timer stamp A's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr2_a_up_en(&mut self) -> TASK_CMPR2_A_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr2_a_up_en(&mut self) -> TASK_CMPR2_A_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR2_A_UP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable PWM generator0 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr0_b_up_en(&mut self) -> TASK_CMPR0_B_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr0_b_up_en(&mut self) -> TASK_CMPR0_B_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR0_B_UP_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable PWM generator1 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr1_b_up_en(&mut self) -> TASK_CMPR1_B_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr1_b_up_en(&mut self) -> TASK_CMPR1_B_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR1_B_UP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable PWM generator2 timer stamp B's shadow register update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cmpr2_b_up_en(&mut self) -> TASK_CMPR2_B_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_cmpr2_b_up_en(&mut self) -> TASK_CMPR2_B_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_CMPR2_B_UP_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable all PWM generate stop task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_gen_stop_en(&mut self) -> TASK_GEN_STOP_EN_W<TASK_EN_SPEC> {
+    pub fn task_gen_stop_en(&mut self) -> TASK_GEN_STOP_EN_W<'_, TASK_EN_SPEC> {
         TASK_GEN_STOP_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer0 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer0_sync_en(&mut self) -> TASK_TIMER0_SYNC_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer0_sync_en(&mut self) -> TASK_TIMER0_SYNC_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER0_SYNC_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer1 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer1_sync_en(&mut self) -> TASK_TIMER1_SYNC_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer1_sync_en(&mut self) -> TASK_TIMER1_SYNC_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER1_SYNC_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable timer2 sync task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer2_sync_en(&mut self) -> TASK_TIMER2_SYNC_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer2_sync_en(&mut self) -> TASK_TIMER2_SYNC_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER2_SYNC_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable timer0 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer0_period_up_en(&mut self) -> TASK_TIMER0_PERIOD_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer0_period_up_en(&mut self) -> TASK_TIMER0_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER0_PERIOD_UP_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable timer1 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer1_period_up_en(&mut self) -> TASK_TIMER1_PERIOD_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer1_period_up_en(&mut self) -> TASK_TIMER1_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER1_PERIOD_UP_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable timer2 period update task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_timer2_period_up_en(&mut self) -> TASK_TIMER2_PERIOD_UP_EN_W<TASK_EN_SPEC> {
+    pub fn task_timer2_period_up_en(&mut self) -> TASK_TIMER2_PERIOD_UP_EN_W<'_, TASK_EN_SPEC> {
         TASK_TIMER2_PERIOD_UP_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable one shot trip0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz0_ost_en(&mut self) -> TASK_TZ0_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_tz0_ost_en(&mut self) -> TASK_TZ0_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_TZ0_OST_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable one shot trip1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz1_ost_en(&mut self) -> TASK_TZ1_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_tz1_ost_en(&mut self) -> TASK_TZ1_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_TZ1_OST_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable one shot trip2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_tz2_ost_en(&mut self) -> TASK_TZ2_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_tz2_ost_en(&mut self) -> TASK_TZ2_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_TZ2_OST_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable one shot trip0 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr0_ost_en(&mut self) -> TASK_CLR0_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_clr0_ost_en(&mut self) -> TASK_CLR0_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_CLR0_OST_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable one shot trip1 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr1_ost_en(&mut self) -> TASK_CLR1_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_clr1_ost_en(&mut self) -> TASK_CLR1_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_CLR1_OST_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable one shot trip2 clear task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_clr2_ost_en(&mut self) -> TASK_CLR2_OST_EN_W<TASK_EN_SPEC> {
+    pub fn task_clr2_ost_en(&mut self) -> TASK_CLR2_OST_EN_W<'_, TASK_EN_SPEC> {
         TASK_CLR2_OST_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable capture0 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap0_en(&mut self) -> TASK_CAP0_EN_W<TASK_EN_SPEC> {
+    pub fn task_cap0_en(&mut self) -> TASK_CAP0_EN_W<'_, TASK_EN_SPEC> {
         TASK_CAP0_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable capture1 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap1_en(&mut self) -> TASK_CAP1_EN_W<TASK_EN_SPEC> {
+    pub fn task_cap1_en(&mut self) -> TASK_CAP1_EN_W<'_, TASK_EN_SPEC> {
         TASK_CAP1_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable capture2 task receive.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn task_cap2_en(&mut self) -> TASK_CAP2_EN_W<TASK_EN_SPEC> {
+    pub fn task_cap2_en(&mut self) -> TASK_CAP2_EN_W<'_, TASK_EN_SPEC> {
         TASK_CAP2_EN_W::new(self, 21)
     }
 }

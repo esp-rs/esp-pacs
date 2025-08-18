@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Bitmap defining the working set during the measurement."]
     #[inline(always)]
-    pub fn touch_pad_worken(&mut self) -> TOUCH_PAD_WORKEN_W<SAR_TOUCH_ENABLE_SPEC> {
+    pub fn touch_pad_worken(&mut self) -> TOUCH_PAD_WORKEN_W<'_, SAR_TOUCH_ENABLE_SPEC> {
         TOUCH_PAD_WORKEN_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - Bitmap defining SET2 for generating wakeup interrupt. SET2 is \"touched\" only if at least one of touch pad in SET2 is \"touched\"."]
     #[inline(always)]
-    pub fn touch_pad_outen2(&mut self) -> TOUCH_PAD_OUTEN2_W<SAR_TOUCH_ENABLE_SPEC> {
+    pub fn touch_pad_outen2(&mut self) -> TOUCH_PAD_OUTEN2_W<'_, SAR_TOUCH_ENABLE_SPEC> {
         TOUCH_PAD_OUTEN2_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - Bitmap defining SET1 for generating wakeup interrupt. SET1 is \"touched\" only if at least one of touch pad in SET1 is \"touched\"."]
     #[inline(always)]
-    pub fn touch_pad_outen1(&mut self) -> TOUCH_PAD_OUTEN1_W<SAR_TOUCH_ENABLE_SPEC> {
+    pub fn touch_pad_outen1(&mut self) -> TOUCH_PAD_OUTEN1_W<'_, SAR_TOUCH_ENABLE_SPEC> {
         TOUCH_PAD_OUTEN1_W::new(self, 20)
     }
 }

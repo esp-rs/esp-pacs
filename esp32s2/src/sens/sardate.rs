@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Version Control Register"]
     #[inline(always)]
-    pub fn sar_date(&mut self) -> SAR_DATE_W<SARDATE_SPEC> {
+    pub fn sar_date(&mut self) -> SAR_DATE_W<'_, SARDATE_SPEC> {
         SAR_DATE_W::new(self, 0)
     }
 }

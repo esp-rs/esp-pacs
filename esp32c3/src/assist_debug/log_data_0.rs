@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_log_data_0"]
     #[inline(always)]
-    pub fn log_data_0(&mut self) -> LOG_DATA_0_W<LOG_DATA_0_SPEC> {
+    pub fn log_data_0(&mut self) -> LOG_DATA_0_W<'_, LOG_DATA_0_SPEC> {
         LOG_DATA_0_W::new(self, 0)
     }
 }

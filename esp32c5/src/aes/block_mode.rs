@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures the block cipher mode of the AES accelerator operating under the DMA-AES working mode. \\\\ 0: ECB (Electronic Code Block)\\\\ 1: CBC (Cipher Block Chaining)\\\\ 2: OFB (Output FeedBack)\\\\ 3: CTR (Counter)\\\\ 4: CFB8 (8-bit Cipher FeedBack)\\\\ 5: CFB128 (128-bit Cipher FeedBack)\\\\ 6: GCM\\\\ 7: Reserved\\\\"]
     #[inline(always)]
-    pub fn block_mode(&mut self) -> BLOCK_MODE_W<BLOCK_MODE_SPEC> {
+    pub fn block_mode(&mut self) -> BLOCK_MODE_W<'_, BLOCK_MODE_SPEC> {
         BLOCK_MODE_W::new(self, 0)
     }
 }

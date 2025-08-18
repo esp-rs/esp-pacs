@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - needs field desc"]
     #[inline(always)]
-    pub fn clk_chain_en(&mut self) -> CLK_CHAIN_EN_W<BYPASS_CHAIN_SPEC> {
+    pub fn clk_chain_en(&mut self) -> CLK_CHAIN_EN_W<'_, BYPASS_CHAIN_SPEC> {
         CLK_CHAIN_EN_W::new(self, 0)
     }
 }

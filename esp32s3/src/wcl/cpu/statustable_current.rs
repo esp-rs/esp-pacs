@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:13 - This field is used to quickly read and rewrite the current field of all STATUSTABLE registers,for example,bit 1 represents the current field of STATUSTABLE1,bit2 represents the current field of STATUSTABLE2"]
     #[inline(always)]
-    pub fn statustable_current(&mut self) -> STATUSTABLE_CURRENT_W<STATUSTABLE_CURRENT_SPEC> {
+    pub fn statustable_current(&mut self) -> STATUSTABLE_CURRENT_W<'_, STATUSTABLE_CURRENT_SPEC> {
         STATUSTABLE_CURRENT_W::new(self, 1)
     }
 }

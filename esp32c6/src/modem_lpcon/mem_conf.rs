@@ -164,77 +164,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         DC_MEM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         DC_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         AGC_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         AGC_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         PBUS_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         PBUS_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn bc_mem_force_pu(&mut self) -> BC_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn bc_mem_force_pu(&mut self) -> BC_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         BC_MEM_FORCE_PU_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn bc_mem_force_pd(&mut self) -> BC_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn bc_mem_force_pd(&mut self) -> BC_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         BC_MEM_FORCE_PD_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn i2c_mst_mem_force_pu(&mut self) -> I2C_MST_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn i2c_mst_mem_force_pu(&mut self) -> I2C_MST_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         I2C_MST_MEM_FORCE_PU_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn i2c_mst_mem_force_pd(&mut self) -> I2C_MST_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn i2c_mst_mem_force_pd(&mut self) -> I2C_MST_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         I2C_MST_MEM_FORCE_PD_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn chan_freq_mem_force_pu(&mut self) -> CHAN_FREQ_MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn chan_freq_mem_force_pu(&mut self) -> CHAN_FREQ_MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         CHAN_FREQ_MEM_FORCE_PU_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn chan_freq_mem_force_pd(&mut self) -> CHAN_FREQ_MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn chan_freq_mem_force_pd(&mut self) -> CHAN_FREQ_MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         CHAN_FREQ_MEM_FORCE_PD_W::new(self, 11)
     }
     #[doc = "Bits 12:14"]
     #[inline(always)]
-    pub fn modem_pwr_mem_wp(&mut self) -> MODEM_PWR_MEM_WP_W<MEM_CONF_SPEC> {
+    pub fn modem_pwr_mem_wp(&mut self) -> MODEM_PWR_MEM_WP_W<'_, MEM_CONF_SPEC> {
         MODEM_PWR_MEM_WP_W::new(self, 12)
     }
     #[doc = "Bits 15:17"]
     #[inline(always)]
-    pub fn modem_pwr_mem_wa(&mut self) -> MODEM_PWR_MEM_WA_W<MEM_CONF_SPEC> {
+    pub fn modem_pwr_mem_wa(&mut self) -> MODEM_PWR_MEM_WA_W<'_, MEM_CONF_SPEC> {
         MODEM_PWR_MEM_WA_W::new(self, 15)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn modem_pwr_mem_ra(&mut self) -> MODEM_PWR_MEM_RA_W<MEM_CONF_SPEC> {
+    pub fn modem_pwr_mem_ra(&mut self) -> MODEM_PWR_MEM_RA_W<'_, MEM_CONF_SPEC> {
         MODEM_PWR_MEM_RA_W::new(self, 18)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the character that needs to be decoded. The default value is 0x13 used as a flow control character."]
     #[inline(always)]
-    pub fn esc_seq2(&mut self) -> ESC_SEQ2_W<ESC_CONF3_SPEC> {
+    pub fn esc_seq2(&mut self) -> ESC_SEQ2_W<'_, ESC_CONF3_SPEC> {
         ESC_SEQ2_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the first character of SLIP escape sequence. The default value is 0xDB."]
     #[inline(always)]
-    pub fn esc_seq2_char0(&mut self) -> ESC_SEQ2_CHAR0_W<ESC_CONF3_SPEC> {
+    pub fn esc_seq2_char0(&mut self) -> ESC_SEQ2_CHAR0_W<'_, ESC_CONF3_SPEC> {
         ESC_SEQ2_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures the second character of SLIP escape sequence. The default value is 0xDF."]
     #[inline(always)]
-    pub fn esc_seq2_char1(&mut self) -> ESC_SEQ2_CHAR1_W<ESC_CONF3_SPEC> {
+    pub fn esc_seq2_char1(&mut self) -> ESC_SEQ2_CHAR1_W<'_, ESC_CONF3_SPEC> {
         ESC_SEQ2_CHAR1_W::new(self, 16)
     }
 }

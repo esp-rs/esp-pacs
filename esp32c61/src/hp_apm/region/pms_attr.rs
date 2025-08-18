@@ -137,77 +137,77 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_x(&mut self, n: u8) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_x(&mut self, n: u8) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_X_W::new(self, n * 4)
     }
     #[doc = "Bit 0 - Configures the execution authority of REE_MODE 0 in region 0."]
     #[inline(always)]
-    pub fn r0_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 0)
     }
     #[doc = "Bit 4 - Configures the execution authority of REE_MODE 1 in region 1."]
     #[inline(always)]
-    pub fn r1_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 4)
     }
     #[doc = "Bit 8 - Configures the execution authority of REE_MODE 2 in region 2."]
     #[inline(always)]
-    pub fn r2_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 8)
     }
     #[doc = "Configures the write authority of REE_MODE (0-2) in region (0-2)."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_w(&mut self, n: u8) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_w(&mut self, n: u8) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_W_W::new(self, n * 4 + 1)
     }
     #[doc = "Bit 1 - Configures the write authority of REE_MODE 0 in region 0."]
     #[inline(always)]
-    pub fn r0_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 1)
     }
     #[doc = "Bit 5 - Configures the write authority of REE_MODE 1 in region 1."]
     #[inline(always)]
-    pub fn r1_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 5)
     }
     #[doc = "Bit 9 - Configures the write authority of REE_MODE 2 in region 2."]
     #[inline(always)]
-    pub fn r2_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 9)
     }
     #[doc = "Configures the read authority of REE_MODE (0-2) in region (0-2)."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_r(&mut self, n: u8) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_r(&mut self, n: u8) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_R_W::new(self, n * 4 + 2)
     }
     #[doc = "Bit 2 - Configures the read authority of REE_MODE 0 in region 0."]
     #[inline(always)]
-    pub fn r0_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 2)
     }
     #[doc = "Bit 6 - Configures the read authority of REE_MODE 1 in region 1."]
     #[inline(always)]
-    pub fn r1_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 6)
     }
     #[doc = "Bit 10 - Configures the read authority of REE_MODE 2 in region 2."]
     #[inline(always)]
-    pub fn r2_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set 1 to lock region0 configuration"]
     #[inline(always)]
-    pub fn lock(&mut self) -> LOCK_W<PMS_ATTR_SPEC> {
+    pub fn lock(&mut self) -> LOCK_W<'_, PMS_ATTR_SPEC> {
         LOCK_W::new(self, 11)
     }
 }

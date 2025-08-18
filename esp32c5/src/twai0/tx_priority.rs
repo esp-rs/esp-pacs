@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Priority of TXT buffer 1."]
     #[inline(always)]
-    pub fn txt1p(&mut self) -> TXT1P_W<TX_PRIORITY_SPEC> {
+    pub fn txt1p(&mut self) -> TXT1P_W<'_, TX_PRIORITY_SPEC> {
         TXT1P_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - Priority of TXT buffer 2."]
     #[inline(always)]
-    pub fn txt2p(&mut self) -> TXT2P_W<TX_PRIORITY_SPEC> {
+    pub fn txt2p(&mut self) -> TXT2P_W<'_, TX_PRIORITY_SPEC> {
         TXT2P_W::new(self, 4)
     }
     #[doc = "Bits 8:10 - Priority of TXT buffer 3. If number of TXT Buffers is less than 3, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt3p(&mut self) -> TXT3P_W<TX_PRIORITY_SPEC> {
+    pub fn txt3p(&mut self) -> TXT3P_W<'_, TX_PRIORITY_SPEC> {
         TXT3P_W::new(self, 8)
     }
     #[doc = "Bits 12:14 - Priority of TXT buffer 4. If number of TXT Buffers is less than 4, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt4p(&mut self) -> TXT4P_W<TX_PRIORITY_SPEC> {
+    pub fn txt4p(&mut self) -> TXT4P_W<'_, TX_PRIORITY_SPEC> {
         TXT4P_W::new(self, 12)
     }
     #[doc = "Bits 16:18 - Priority of TXT buffer 5. If number of TXT Buffers is less than 5, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt5p(&mut self) -> TXT5P_W<TX_PRIORITY_SPEC> {
+    pub fn txt5p(&mut self) -> TXT5P_W<'_, TX_PRIORITY_SPEC> {
         TXT5P_W::new(self, 16)
     }
     #[doc = "Bits 20:22 - Priority of TXT buffer 6. If number of TXT Buffers is less than 6, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt6p(&mut self) -> TXT6P_W<TX_PRIORITY_SPEC> {
+    pub fn txt6p(&mut self) -> TXT6P_W<'_, TX_PRIORITY_SPEC> {
         TXT6P_W::new(self, 20)
     }
     #[doc = "Bits 24:26 - Priority of TXT buffer 7. If number of TXT Buffers is less than 7, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt7p(&mut self) -> TXT7P_W<TX_PRIORITY_SPEC> {
+    pub fn txt7p(&mut self) -> TXT7P_W<'_, TX_PRIORITY_SPEC> {
         TXT7P_W::new(self, 24)
     }
     #[doc = "Bits 28:30 - Priority of TXT buffer 8. If number of TXT Buffers is less than 8, this field is reserved and has no function."]
     #[inline(always)]
-    pub fn txt8p(&mut self) -> TXT8P_W<TX_PRIORITY_SPEC> {
+    pub fn txt8p(&mut self) -> TXT8P_W<'_, TX_PRIORITY_SPEC> {
         TXT8P_W::new(self, 28)
     }
 }

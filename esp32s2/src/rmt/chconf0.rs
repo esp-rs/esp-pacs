@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<CHCONF0_SPEC> {
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<'_, CHCONF0_SPEC> {
         DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - When no edge is detected on the input signal and continuous clock cycles is longer than this register value, received process is finished."]
     #[inline(always)]
-    pub fn idle_thres(&mut self) -> IDLE_THRES_W<CHCONF0_SPEC> {
+    pub fn idle_thres(&mut self) -> IDLE_THRES_W<'_, CHCONF0_SPEC> {
         IDLE_THRES_W::new(self, 8)
     }
     #[doc = "Bits 24:26 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<CHCONF0_SPEC> {
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<'_, CHCONF0_SPEC> {
         MEM_SIZE_W::new(self, 24)
     }
     #[doc = "Bit 27 - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
     #[inline(always)]
-    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<CHCONF0_SPEC> {
+    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<'_, CHCONF0_SPEC> {
         CARRIER_EFF_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CHCONF0_SPEC> {
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<'_, CHCONF0_SPEC> {
         CARRIER_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CHCONF0_SPEC> {
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<'_, CHCONF0_SPEC> {
         CARRIER_OUT_LV_W::new(self, 29)
     }
 }

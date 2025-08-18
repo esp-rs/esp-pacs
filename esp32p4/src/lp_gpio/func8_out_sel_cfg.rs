@@ -62,24 +62,26 @@ impl W {
     #[inline(always)]
     pub fn reg_gpio_func8_oe_inv_sel(
         &mut self,
-    ) -> REG_GPIO_FUNC8_OE_INV_SEL_W<FUNC8_OUT_SEL_CFG_SPEC> {
+    ) -> REG_GPIO_FUNC8_OE_INV_SEL_W<'_, FUNC8_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC8_OE_INV_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_func8_oe_sel(&mut self) -> REG_GPIO_FUNC8_OE_SEL_W<FUNC8_OUT_SEL_CFG_SPEC> {
+    pub fn reg_gpio_func8_oe_sel(&mut self) -> REG_GPIO_FUNC8_OE_SEL_W<'_, FUNC8_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC8_OE_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     pub fn reg_gpio_func8_out_inv_sel(
         &mut self,
-    ) -> REG_GPIO_FUNC8_OUT_INV_SEL_W<FUNC8_OUT_SEL_CFG_SPEC> {
+    ) -> REG_GPIO_FUNC8_OUT_INV_SEL_W<'_, FUNC8_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC8_OUT_INV_SEL_W::new(self, 2)
     }
     #[doc = "Bits 3:8 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_func8_out_sel(&mut self) -> REG_GPIO_FUNC8_OUT_SEL_W<FUNC8_OUT_SEL_CFG_SPEC> {
+    pub fn reg_gpio_func8_out_sel(
+        &mut self,
+    ) -> REG_GPIO_FUNC8_OUT_SEL_W<'_, FUNC8_OUT_SEL_CFG_SPEC> {
         REG_GPIO_FUNC8_OUT_SEL_W::new(self, 3)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure whether to enable the trigger signal.\\\\0: Disable\\\\1:enable\\\\"]
     #[inline(always)]
-    pub fn dm_trigger_ena(&mut self) -> DM_TRIGGER_ENA_W<CONFIG_SPEC> {
+    pub fn dm_trigger_ena(&mut self) -> DM_TRIGGER_ENA_W<'_, CONFIG_SPEC> {
         DM_TRIGGER_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configure whether to reset, when enabeld, if cpu have reset, the encoder will output a packet to report the address of the last instruction, and upon reset deassertion, the encoder start again.\\\\0: Disable\\\\0: Enable\\\\"]
     #[inline(always)]
-    pub fn reset_ena(&mut self) -> RESET_ENA_W<CONFIG_SPEC> {
+    pub fn reset_ena(&mut self) -> RESET_ENA_W<'_, CONFIG_SPEC> {
         RESET_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configure whether to enable the halt signal. \\\\1: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn halt_ena(&mut self) -> HALT_ENA_W<CONFIG_SPEC> {
+    pub fn halt_ena(&mut self) -> HALT_ENA_W<'_, CONFIG_SPEC> {
         HALT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configure whether to enable the stall signal. \\\\0: Disable.\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn stall_ena(&mut self) -> STALL_ENA_W<CONFIG_SPEC> {
+    pub fn stall_ena(&mut self) -> STALL_ENA_W<'_, CONFIG_SPEC> {
         STALL_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configure the address mode.\\\\0: Delta address mode.\\\\1: Full address mode.\\\\"]
     #[inline(always)]
-    pub fn full_address(&mut self) -> FULL_ADDRESS_W<CONFIG_SPEC> {
+    pub fn full_address(&mut self) -> FULL_ADDRESS_W<'_, CONFIG_SPEC> {
         FULL_ADDRESS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configure whether or not enabel implicit exception mode. When enabled,, do not sent exception address, only exception cause in exception packets.\\\\1: enabled\\\\0: disabled\\\\"]
     #[inline(always)]
-    pub fn implicit_except(&mut self) -> IMPLICIT_EXCEPT_W<CONFIG_SPEC> {
+    pub fn implicit_except(&mut self) -> IMPLICIT_EXCEPT_W<'_, CONFIG_SPEC> {
         IMPLICIT_EXCEPT_W::new(self, 5)
     }
 }

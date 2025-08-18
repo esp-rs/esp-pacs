@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE1_W1TC_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear the output enable register GPIO_ENABLE_REG of GPIO32 ~ GPIO32. \\\\ 0: Not clear\\\\ 1: The corresponding bit in GPIO_ENABLE_REG will be cleared\\\\ Recommended operation: use this register to clear GPIO_ENABLE1_REG.\\\\"]
     #[inline(always)]
-    pub fn enable1_w1tc(&mut self) -> ENABLE1_W1TC_W<ENABLE1_W1TC_SPEC> {
+    pub fn enable1_w1tc(&mut self) -> ENABLE1_W1TC_W<'_, ENABLE1_W1TC_SPEC> {
         ENABLE1_W1TC_W::new(self, 0)
     }
 }

@@ -136,84 +136,84 @@ impl W {
     #[inline(always)]
     pub fn icache0_pld_done_int_raw(
         &mut self,
-    ) -> ICACHE0_PLD_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE0_PLD_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE0_PLD_DONE_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation is done."]
     #[inline(always)]
     pub fn icache1_pld_done_int_raw(
         &mut self,
-    ) -> ICACHE1_PLD_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE1_PLD_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE1_PLD_DONE_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     pub fn icache2_pld_done_int_raw(
         &mut self,
-    ) -> ICACHE2_PLD_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE2_PLD_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE2_PLD_DONE_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     pub fn icache3_pld_done_int_raw(
         &mut self,
-    ) -> ICACHE3_PLD_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE3_PLD_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE3_PLD_DONE_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation is done."]
     #[inline(always)]
     pub fn cache_pld_done_int_raw(
         &mut self,
-    ) -> CACHE_PLD_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> CACHE_PLD_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         CACHE_PLD_DONE_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 6 - The raw bit of the interrupt that occurs only when Cache sync-operation is done."]
     #[inline(always)]
     pub fn cache_sync_done_int_raw(
         &mut self,
-    ) -> CACHE_SYNC_DONE_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> CACHE_SYNC_DONE_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         CACHE_SYNC_DONE_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw bit of the interrupt that occurs only when L1-ICache0 preload-operation error occurs."]
     #[inline(always)]
     pub fn icache0_pld_err_int_raw(
         &mut self,
-    ) -> ICACHE0_PLD_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE0_PLD_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE0_PLD_ERR_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw bit of the interrupt that occurs only when L1-ICache1 preload-operation error occurs."]
     #[inline(always)]
     pub fn icache1_pld_err_int_raw(
         &mut self,
-    ) -> ICACHE1_PLD_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE1_PLD_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE1_PLD_ERR_INT_RAW_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
     pub fn icache2_pld_err_int_raw(
         &mut self,
-    ) -> ICACHE2_PLD_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE2_PLD_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE2_PLD_ERR_INT_RAW_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
     pub fn icache3_pld_err_int_raw(
         &mut self,
-    ) -> ICACHE3_PLD_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> ICACHE3_PLD_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         ICACHE3_PLD_ERR_INT_RAW_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw bit of the interrupt that occurs only when L1-Cache preload-operation error occurs."]
     #[inline(always)]
     pub fn cache_pld_err_int_raw(
         &mut self,
-    ) -> CACHE_PLD_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> CACHE_PLD_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         CACHE_PLD_ERR_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 13 - The raw bit of the interrupt that occurs only when Cache sync-operation error occurs."]
     #[inline(always)]
     pub fn cache_sync_err_int_raw(
         &mut self,
-    ) -> CACHE_SYNC_ERR_INT_RAW_W<CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
+    ) -> CACHE_SYNC_ERR_INT_RAW_W<'_, CACHE_SYNC_PRELOAD_INT_RAW_SPEC> {
         CACHE_SYNC_ERR_INT_RAW_W::new(self, 13)
     }
 }

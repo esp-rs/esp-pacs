@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to activate the data cache. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_enable(&mut self) -> ICACHE_ENABLE_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to configure cache way mode.0: 4-way, 1: 8-way"]
     #[inline(always)]
-    pub fn icache_way_mode(&mut self) -> ICACHE_WAY_MODE_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_way_mode(&mut self) -> ICACHE_WAY_MODE_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_WAY_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to configure cache memory size.0: 16KB, 1: 32KB"]
     #[inline(always)]
-    pub fn icache_size_mode(&mut self) -> ICACHE_SIZE_MODE_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_size_mode(&mut self) -> ICACHE_SIZE_MODE_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_SIZE_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to configure cache block size.0: 16 bytes, 1: 32 bytes"]
     #[inline(always)]
-    pub fn icache_blocksize_mode(&mut self) -> ICACHE_BLOCKSIZE_MODE_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_blocksize_mode(&mut self) -> ICACHE_BLOCKSIZE_MODE_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_BLOCKSIZE_MODE_W::new(self, 3)
     }
 }

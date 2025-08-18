@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn spi_swap(&mut self) -> SPI_SWAP_W<SIGMADELTA_MISC_SPEC> {
+    pub fn spi_swap(&mut self) -> SPI_SWAP_W<'_, SIGMADELTA_MISC_SPEC> {
         SPI_SWAP_W::new(self, 31)
     }
 }

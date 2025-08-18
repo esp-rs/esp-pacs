@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_backup_icg_func_en(
         &mut self,
-    ) -> HP_SLEEP_BACKUP_ICG_FUNC_EN_W<HP_SLEEP_BACKUP_CLK_SPEC> {
+    ) -> HP_SLEEP_BACKUP_ICG_FUNC_EN_W<'_, HP_SLEEP_BACKUP_CLK_SPEC> {
         HP_SLEEP_BACKUP_ICG_FUNC_EN_W::new(self, 0)
     }
 }

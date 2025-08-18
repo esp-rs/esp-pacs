@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Force clock enable for this regfile"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<TIMGCLK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, TIMGCLK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn clk_wifipwr_fo(&mut self) -> CLK_WIFIPWR_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_wifipwr_fo(&mut self) -> CLK_WIFIPWR_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_WIFIPWR_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_coex_fo(&mut self) -> CLK_COEX_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_COEX_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_i2c_mst_fo(&mut self) -> CLK_I2C_MST_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_I2C_MST_FO_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn clk_lp_timer_fo(&mut self) -> CLK_LP_TIMER_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_lp_timer_fo(&mut self) -> CLK_LP_TIMER_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_LP_TIMER_FO_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn clk_bcmem_fo(&mut self) -> CLK_BCMEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_bcmem_fo(&mut self) -> CLK_BCMEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_BCMEM_FO_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn clk_i2c_mst_mem_fo(&mut self) -> CLK_I2C_MST_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_i2c_mst_mem_fo(&mut self) -> CLK_I2C_MST_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_I2C_MST_MEM_FO_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn clk_chan_freq_mem_fo(&mut self) -> CLK_CHAN_FREQ_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_chan_freq_mem_fo(&mut self) -> CLK_CHAN_FREQ_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_CHAN_FREQ_MEM_FO_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn clk_pbus_mem_fo(&mut self) -> CLK_PBUS_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_pbus_mem_fo(&mut self) -> CLK_PBUS_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_PBUS_MEM_FO_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn clk_agc_mem_fo(&mut self) -> CLK_AGC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_agc_mem_fo(&mut self) -> CLK_AGC_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_AGC_MEM_FO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn clk_dc_mem_fo(&mut self) -> CLK_DC_MEM_FO_W<CLK_CONF_FORCE_ON_SPEC> {
+    pub fn clk_dc_mem_fo(&mut self) -> CLK_DC_MEM_FO_W<'_, CLK_CONF_FORCE_ON_SPEC> {
         CLK_DC_MEM_FO_W::new(self, 9)
     }
 }

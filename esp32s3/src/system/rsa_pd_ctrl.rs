@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to power down RSA memory. This bit has the lowest priority.When Digital Signature occupies the RSA, this bit is invalid."]
     #[inline(always)]
-    pub fn rsa_mem_pd(&mut self) -> RSA_MEM_PD_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_pd(&mut self) -> RSA_MEM_PD_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to force power up RSA memory, this bit has the second highest priority."]
     #[inline(always)]
-    pub fn rsa_mem_force_pu(&mut self) -> RSA_MEM_FORCE_PU_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_force_pu(&mut self) -> RSA_MEM_FORCE_PU_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to force power down RSA memory,this bit has the highest priority."]
     #[inline(always)]
-    pub fn rsa_mem_force_pd(&mut self) -> RSA_MEM_FORCE_PD_W<RSA_PD_CTRL_SPEC> {
+    pub fn rsa_mem_force_pd(&mut self) -> RSA_MEM_FORCE_PD_W<'_, RSA_PD_CTRL_SPEC> {
         RSA_MEM_FORCE_PD_W::new(self, 2)
     }
 }

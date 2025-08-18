@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for clean operations. It should be combined with ICACHE_SYNC_SIZE_REG."]
     #[inline(always)]
-    pub fn icache_sync_addr(&mut self) -> ICACHE_SYNC_ADDR_W<ICACHE_SYNC_ADDR_SPEC> {
+    pub fn icache_sync_addr(&mut self) -> ICACHE_SYNC_ADDR_W<'_, ICACHE_SYNC_ADDR_SPEC> {
         ICACHE_SYNC_ADDR_W::new(self, 0)
     }
 }

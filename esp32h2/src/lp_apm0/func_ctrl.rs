@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
-    pub fn m0_pms_func_en(&mut self) -> M0_PMS_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m0_pms_func_en(&mut self) -> M0_PMS_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M0_PMS_FUNC_EN_W::new(self, 0)
     }
 }

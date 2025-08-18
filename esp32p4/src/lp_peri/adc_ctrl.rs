@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    pub fn sar2_clk_force_on(&mut self) -> SAR2_CLK_FORCE_ON_W<ADC_CTRL_SPEC> {
+    pub fn sar2_clk_force_on(&mut self) -> SAR2_CLK_FORCE_ON_W<'_, ADC_CTRL_SPEC> {
         SAR2_CLK_FORCE_ON_W::new(self, 6)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    pub fn sar1_clk_force_on(&mut self) -> SAR1_CLK_FORCE_ON_W<ADC_CTRL_SPEC> {
+    pub fn sar1_clk_force_on(&mut self) -> SAR1_CLK_FORCE_ON_W<'_, ADC_CTRL_SPEC> {
         SAR1_CLK_FORCE_ON_W::new(self, 7)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
-    pub fn lpadc_func_div_num(&mut self) -> LPADC_FUNC_DIV_NUM_W<ADC_CTRL_SPEC> {
+    pub fn lpadc_func_div_num(&mut self) -> LPADC_FUNC_DIV_NUM_W<'_, ADC_CTRL_SPEC> {
         LPADC_FUNC_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    pub fn lpadc_sar2_div_num(&mut self) -> LPADC_SAR2_DIV_NUM_W<ADC_CTRL_SPEC> {
+    pub fn lpadc_sar2_div_num(&mut self) -> LPADC_SAR2_DIV_NUM_W<'_, ADC_CTRL_SPEC> {
         LPADC_SAR2_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    pub fn lpadc_sar1_div_num(&mut self) -> LPADC_SAR1_DIV_NUM_W<ADC_CTRL_SPEC> {
+    pub fn lpadc_sar1_div_num(&mut self) -> LPADC_SAR1_DIV_NUM_W<'_, ADC_CTRL_SPEC> {
         LPADC_SAR1_DIV_NUM_W::new(self, 24)
     }
 }

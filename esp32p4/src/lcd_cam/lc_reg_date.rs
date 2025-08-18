@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - LCD_CAM version control register"]
     #[inline(always)]
-    pub fn lc_date(&mut self) -> LC_DATE_W<LC_REG_DATE_SPEC> {
+    pub fn lc_date(&mut self) -> LC_DATE_W<'_, LC_REG_DATE_SPEC> {
         LC_DATE_W::new(self, 0)
     }
 }

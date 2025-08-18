@@ -34,12 +34,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable the first section of prelock function."]
     #[inline(always)]
-    pub fn icache_prelock_sct0_en(&mut self) -> ICACHE_PRELOCK_SCT0_EN_W<ICACHE_PRELOCK_CTRL_SPEC> {
+    pub fn icache_prelock_sct0_en(
+        &mut self,
+    ) -> ICACHE_PRELOCK_SCT0_EN_W<'_, ICACHE_PRELOCK_CTRL_SPEC> {
         ICACHE_PRELOCK_SCT0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function."]
     #[inline(always)]
-    pub fn icache_prelock_sct1_en(&mut self) -> ICACHE_PRELOCK_SCT1_EN_W<ICACHE_PRELOCK_CTRL_SPEC> {
+    pub fn icache_prelock_sct1_en(
+        &mut self,
+    ) -> ICACHE_PRELOCK_SCT1_EN_W<'_, ICACHE_PRELOCK_CTRL_SPEC> {
         ICACHE_PRELOCK_SCT1_EN_W::new(self, 1)
     }
 }

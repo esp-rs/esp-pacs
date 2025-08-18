@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures which byte(s) in MEM_MONITOR_LOG_CHECK_DATA_REG to mask.bit\\[0\\]: Configures whether to mask the least significant byte of MEM_MONITOR_LOG_CHECK_DATA_REG.\\\\ 0: Not mask \\\\ 1: Mask\\\\ bit\\[1\\]: Configures whether to mask the second least significant byte of MEM_MONITOR_LOG_CHECK_DATA_REG. \\\\ 0: Not mask \\\\ 1: Mask\\\\ bit\\[2\\]: Configures whether to mask the second most significant byte of MEM_MONITOR_LOG_CHECK_DATA_REG. \\\\ 0: Not mask \\\\ 1: Mask\\\\ bit\\[3\\]: Configures whether to mask the most significant byte of MEM_MONITOR_LOG_CHECK_DATA_REG. \\\\ 0: Not mask \\\\ 1: Mask\\\\"]
     #[inline(always)]
-    pub fn log_data_mask(&mut self) -> LOG_DATA_MASK_W<LOG_DATA_MASK_SPEC> {
+    pub fn log_data_mask(&mut self) -> LOG_DATA_MASK_W<'_, LOG_DATA_MASK_SPEC> {
         LOG_DATA_MASK_W::new(self, 0)
     }
 }

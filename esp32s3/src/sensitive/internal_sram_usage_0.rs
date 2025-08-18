@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_usage_lock(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_LOCK_W<INTERNAL_SRAM_USAGE_0_SPEC> {
+    ) -> INTERNAL_SRAM_USAGE_LOCK_W<'_, INTERNAL_SRAM_USAGE_0_SPEC> {
         INTERNAL_SRAM_USAGE_LOCK_W::new(self, 0)
     }
 }

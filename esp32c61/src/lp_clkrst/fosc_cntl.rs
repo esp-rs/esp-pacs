@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 22:31 - Configures the RC_FAST_CLK frequency,the clock frequency will increase with this field"]
     #[inline(always)]
-    pub fn fosc_dfreq(&mut self) -> FOSC_DFREQ_W<FOSC_CNTL_SPEC> {
+    pub fn fosc_dfreq(&mut self) -> FOSC_DFREQ_W<'_, FOSC_CNTL_SPEC> {
         FOSC_DFREQ_W::new(self, 22)
     }
 }

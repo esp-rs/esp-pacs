@@ -75,7 +75,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 18:19 - Set the page size of the flash accessed by MSPI. 0: 256 bytes. 1: 512 bytes. 2: 1024 bytes. 3: 2048 bytes."]
     #[inline(always)]
-    pub fn spi_fmem_page_size(&mut self) -> SPI_FMEM_PAGE_SIZE_W<ECC_CTRL_SPEC> {
+    pub fn spi_fmem_page_size(&mut self) -> SPI_FMEM_PAGE_SIZE_W<'_, ECC_CTRL_SPEC> {
         SPI_FMEM_PAGE_SIZE_W::new(self, 18)
     }
 }

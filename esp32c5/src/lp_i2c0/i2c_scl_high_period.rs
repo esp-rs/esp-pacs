@@ -34,14 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure for how long SCL setup to high level and remains high in master mode, in I2C module clock cycles."]
     #[inline(always)]
-    pub fn i2c_scl_high_period(&mut self) -> I2C_SCL_HIGH_PERIOD_W<I2C_SCL_HIGH_PERIOD_SPEC> {
+    pub fn i2c_scl_high_period(&mut self) -> I2C_SCL_HIGH_PERIOD_W<'_, I2C_SCL_HIGH_PERIOD_SPEC> {
         I2C_SCL_HIGH_PERIOD_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - This register is used to configure for the SCL_FSM's waiting period for SCL high level in master mode, in I2C module clock cycles."]
     #[inline(always)]
     pub fn i2c_scl_wait_high_period(
         &mut self,
-    ) -> I2C_SCL_WAIT_HIGH_PERIOD_W<I2C_SCL_HIGH_PERIOD_SPEC> {
+    ) -> I2C_SCL_WAIT_HIGH_PERIOD_W<'_, I2C_SCL_HIGH_PERIOD_SPEC> {
         I2C_SCL_WAIT_HIGH_PERIOD_W::new(self, 9)
     }
 }

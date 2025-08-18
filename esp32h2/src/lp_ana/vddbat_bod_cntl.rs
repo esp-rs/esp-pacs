@@ -65,24 +65,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
-    pub fn vddbat_charger(&mut self) -> VDDBAT_CHARGER_W<VDDBAT_BOD_CNTL_SPEC> {
+    pub fn vddbat_charger(&mut self) -> VDDBAT_CHARGER_W<'_, VDDBAT_BOD_CNTL_SPEC> {
         VDDBAT_CHARGER_W::new(self, 10)
     }
     #[doc = "Bit 11 - need_des"]
     #[inline(always)]
-    pub fn vddbat_cnt_clr(&mut self) -> VDDBAT_CNT_CLR_W<VDDBAT_BOD_CNTL_SPEC> {
+    pub fn vddbat_cnt_clr(&mut self) -> VDDBAT_CNT_CLR_W<'_, VDDBAT_BOD_CNTL_SPEC> {
         VDDBAT_CNT_CLR_W::new(self, 11)
     }
     #[doc = "Bits 12:21 - need_des"]
     #[inline(always)]
-    pub fn vddbat_upvoltage_target(&mut self) -> VDDBAT_UPVOLTAGE_TARGET_W<VDDBAT_BOD_CNTL_SPEC> {
+    pub fn vddbat_upvoltage_target(
+        &mut self,
+    ) -> VDDBAT_UPVOLTAGE_TARGET_W<'_, VDDBAT_BOD_CNTL_SPEC> {
         VDDBAT_UPVOLTAGE_TARGET_W::new(self, 12)
     }
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
     pub fn vddbat_undervoltage_target(
         &mut self,
-    ) -> VDDBAT_UNDERVOLTAGE_TARGET_W<VDDBAT_BOD_CNTL_SPEC> {
+    ) -> VDDBAT_UNDERVOLTAGE_TARGET_W<'_, VDDBAT_BOD_CNTL_SPEC> {
         VDDBAT_UNDERVOLTAGE_TARGET_W::new(self, 22)
     }
 }

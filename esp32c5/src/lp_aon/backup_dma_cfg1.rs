@@ -57,24 +57,28 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Set this field to configure the number of consecutive links of link list."]
     #[inline(always)]
-    pub fn link_wait_tout_thres_aon(&mut self) -> LINK_WAIT_TOUT_THRES_AON_W<BACKUP_DMA_CFG1_SPEC> {
+    pub fn link_wait_tout_thres_aon(
+        &mut self,
+    ) -> LINK_WAIT_TOUT_THRES_AON_W<'_, BACKUP_DMA_CFG1_SPEC> {
         LINK_WAIT_TOUT_THRES_AON_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - Set this field to configure maximum waiting time in waiting mode."]
     #[inline(always)]
-    pub fn link_work_tout_thres_aon(&mut self) -> LINK_WORK_TOUT_THRES_AON_W<BACKUP_DMA_CFG1_SPEC> {
+    pub fn link_work_tout_thres_aon(
+        &mut self,
+    ) -> LINK_WORK_TOUT_THRES_AON_W<'_, BACKUP_DMA_CFG1_SPEC> {
         LINK_WORK_TOUT_THRES_AON_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - Set this field to configure maximum waiting time in backup mode."]
     #[inline(always)]
     pub fn link_backup_tout_thres_aon(
         &mut self,
-    ) -> LINK_BACKUP_TOUT_THRES_AON_W<BACKUP_DMA_CFG1_SPEC> {
+    ) -> LINK_BACKUP_TOUT_THRES_AON_W<'_, BACKUP_DMA_CFG1_SPEC> {
         LINK_BACKUP_TOUT_THRES_AON_W::new(self, 20)
     }
     #[doc = "Bit 31 - reserved"]
     #[inline(always)]
-    pub fn aon_bypass(&mut self) -> AON_BYPASS_W<BACKUP_DMA_CFG1_SPEC> {
+    pub fn aon_bypass(&mut self) -> AON_BYPASS_W<'_, BACKUP_DMA_CFG1_SPEC> {
         AON_BYPASS_W::new(self, 31)
     }
 }

@@ -636,7 +636,7 @@ impl RegisterBlock {
     pub const fn vdd_spi_status(&self) -> &VDD_SPI_STATUS {
         &self.vdd_spi_status
     }
-    #[doc = "0x3fc - need_des"]
+    #[doc = "0x3fc - PMU version control register"]
     #[inline(always)]
     pub const fn date(&self) -> &DATE {
         &self.date
@@ -1067,7 +1067,7 @@ pub mod clk_state2;
 pub type VDD_SPI_STATUS = crate::Reg<vdd_spi_status::VDD_SPI_STATUS_SPEC>;
 #[doc = "need_des"]
 pub mod vdd_spi_status;
-#[doc = "DATE (rw) register accessor: need_des\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
+#[doc = "DATE (rw) register accessor: PMU version control register\n\nYou can [`read`](crate::Reg::read) this register and get [`date::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`date::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@date`] module"]
 pub type DATE = crate::Reg<date::DATE_SPEC>;
-#[doc = "need_des"]
+#[doc = "PMU version control register"]
 pub mod date;

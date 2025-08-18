@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<HCFG_SPEC> {
+    pub fn fslspclksel(&mut self) -> FSLSPCLKSEL_W<'_, HCFG_SPEC> {
         FSLSPCLKSEL_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn fslssupp(&mut self) -> FSLSSUPP_W<HCFG_SPEC> {
+    pub fn fslssupp(&mut self) -> FSLSSUPP_W<'_, HCFG_SPEC> {
         FSLSSUPP_W::new(self, 2)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn ena32khzs(&mut self) -> ENA32KHZS_W<HCFG_SPEC> {
+    pub fn ena32khzs(&mut self) -> ENA32KHZS_W<'_, HCFG_SPEC> {
         ENA32KHZS_W::new(self, 7)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn descdma(&mut self) -> DESCDMA_W<HCFG_SPEC> {
+    pub fn descdma(&mut self) -> DESCDMA_W<'_, HCFG_SPEC> {
         DESCDMA_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn frlisten(&mut self) -> FRLISTEN_W<HCFG_SPEC> {
+    pub fn frlisten(&mut self) -> FRLISTEN_W<'_, HCFG_SPEC> {
         FRLISTEN_W::new(self, 24)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn perschedena(&mut self) -> PERSCHEDENA_W<HCFG_SPEC> {
+    pub fn perschedena(&mut self) -> PERSCHEDENA_W<'_, HCFG_SPEC> {
         PERSCHEDENA_W::new(self, 26)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn modechtimen(&mut self) -> MODECHTIMEN_W<HCFG_SPEC> {
+    pub fn modechtimen(&mut self) -> MODECHTIMEN_W<'_, HCFG_SPEC> {
         MODECHTIMEN_W::new(self, 31)
     }
 }

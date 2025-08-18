@@ -340,162 +340,166 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn gpspi2_sys_clk_en(&mut self) -> GPSPI2_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn gpspi2_sys_clk_en(&mut self) -> GPSPI2_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         GPSPI2_SYS_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn gpspi3_sys_clk_en(&mut self) -> GPSPI3_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn gpspi3_sys_clk_en(&mut self) -> GPSPI3_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         GPSPI3_SYS_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn regdma_sys_clk_en(&mut self) -> REGDMA_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn regdma_sys_clk_en(&mut self) -> REGDMA_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         REGDMA_SYS_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn ahb_pdma_sys_clk_en(&mut self) -> AHB_PDMA_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn ahb_pdma_sys_clk_en(&mut self) -> AHB_PDMA_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         AHB_PDMA_SYS_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    pub fn axi_pdma_sys_clk_en(&mut self) -> AXI_PDMA_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn axi_pdma_sys_clk_en(&mut self) -> AXI_PDMA_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         AXI_PDMA_SYS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    pub fn gdma_sys_clk_en(&mut self) -> GDMA_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn gdma_sys_clk_en(&mut self) -> GDMA_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         GDMA_SYS_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
-    pub fn dma2d_sys_clk_en(&mut self) -> DMA2D_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn dma2d_sys_clk_en(&mut self) -> DMA2D_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         DMA2D_SYS_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn vpu_sys_clk_en(&mut self) -> VPU_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn vpu_sys_clk_en(&mut self) -> VPU_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         VPU_SYS_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn jpeg_sys_clk_en(&mut self) -> JPEG_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn jpeg_sys_clk_en(&mut self) -> JPEG_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         JPEG_SYS_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn ppa_sys_clk_en(&mut self) -> PPA_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn ppa_sys_clk_en(&mut self) -> PPA_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         PPA_SYS_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
-    pub fn csi_brg_sys_clk_en(&mut self) -> CSI_BRG_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn csi_brg_sys_clk_en(&mut self) -> CSI_BRG_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         CSI_BRG_SYS_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
-    pub fn csi_host_sys_clk_en(&mut self) -> CSI_HOST_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn csi_host_sys_clk_en(&mut self) -> CSI_HOST_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         CSI_HOST_SYS_CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
-    pub fn dsi_sys_clk_en(&mut self) -> DSI_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn dsi_sys_clk_en(&mut self) -> DSI_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         DSI_SYS_CLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
-    pub fn emac_sys_clk_en(&mut self) -> EMAC_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn emac_sys_clk_en(&mut self) -> EMAC_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         EMAC_SYS_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    pub fn sdmmc_sys_clk_en(&mut self) -> SDMMC_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn sdmmc_sys_clk_en(&mut self) -> SDMMC_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         SDMMC_SYS_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    pub fn usb_otg11_sys_clk_en(&mut self) -> USB_OTG11_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn usb_otg11_sys_clk_en(&mut self) -> USB_OTG11_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         USB_OTG11_SYS_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    pub fn usb_otg20_sys_clk_en(&mut self) -> USB_OTG20_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn usb_otg20_sys_clk_en(&mut self) -> USB_OTG20_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         USB_OTG20_SYS_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    pub fn uhci_sys_clk_en(&mut self) -> UHCI_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uhci_sys_clk_en(&mut self) -> UHCI_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UHCI_SYS_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    pub fn uart0_sys_clk_en(&mut self) -> UART0_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uart0_sys_clk_en(&mut self) -> UART0_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UART0_SYS_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn uart1_sys_clk_en(&mut self) -> UART1_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uart1_sys_clk_en(&mut self) -> UART1_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UART1_SYS_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Reserved"]
     #[inline(always)]
-    pub fn uart2_sys_clk_en(&mut self) -> UART2_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uart2_sys_clk_en(&mut self) -> UART2_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UART2_SYS_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Reserved"]
     #[inline(always)]
-    pub fn uart3_sys_clk_en(&mut self) -> UART3_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uart3_sys_clk_en(&mut self) -> UART3_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UART3_SYS_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Reserved"]
     #[inline(always)]
-    pub fn uart4_sys_clk_en(&mut self) -> UART4_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn uart4_sys_clk_en(&mut self) -> UART4_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         UART4_SYS_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    pub fn parlio_sys_clk_en(&mut self) -> PARLIO_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn parlio_sys_clk_en(&mut self) -> PARLIO_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         PARLIO_SYS_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn etm_sys_clk_en(&mut self) -> ETM_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn etm_sys_clk_en(&mut self) -> ETM_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         ETM_SYS_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn pvt_sys_clk_en(&mut self) -> PVT_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn pvt_sys_clk_en(&mut self) -> PVT_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         PVT_SYS_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    pub fn crypto_sys_clk_en(&mut self) -> CRYPTO_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn crypto_sys_clk_en(&mut self) -> CRYPTO_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         CRYPTO_SYS_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    pub fn key_manager_sys_clk_en(&mut self) -> KEY_MANAGER_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn key_manager_sys_clk_en(&mut self) -> KEY_MANAGER_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         KEY_MANAGER_SYS_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_sys_clk_en(&mut self) -> BITSRAMBLER_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn bitsrambler_sys_clk_en(&mut self) -> BITSRAMBLER_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         BITSRAMBLER_SYS_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_rx_sys_clk_en(&mut self) -> BITSRAMBLER_RX_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn bitsrambler_rx_sys_clk_en(
+        &mut self,
+    ) -> BITSRAMBLER_RX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         BITSRAMBLER_RX_SYS_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    pub fn bitsrambler_tx_sys_clk_en(&mut self) -> BITSRAMBLER_TX_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn bitsrambler_tx_sys_clk_en(
+        &mut self,
+    ) -> BITSRAMBLER_TX_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         BITSRAMBLER_TX_SYS_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    pub fn h264_sys_clk_en(&mut self) -> H264_SYS_CLK_EN_W<SOC_CLK_CTRL1_SPEC> {
+    pub fn h264_sys_clk_en(&mut self) -> H264_SYS_CLK_EN_W<'_, SOC_CLK_CTRL1_SPEC> {
         H264_SYS_CLK_EN_W::new(self, 31)
     }
 }

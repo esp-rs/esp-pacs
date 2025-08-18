@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_core_0_rcd_recorden"]
     #[inline(always)]
-    pub fn rcd_recorden(&mut self) -> RCD_RECORDEN_W<RCD_EN_SPEC> {
+    pub fn rcd_recorden(&mut self) -> RCD_RECORDEN_W<'_, RCD_EN_SPEC> {
         RCD_RECORDEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_core_0_rcd_pdebugen"]
     #[inline(always)]
-    pub fn rcd_pdebugen(&mut self) -> RCD_PDEBUGEN_W<RCD_EN_SPEC> {
+    pub fn rcd_pdebugen(&mut self) -> RCD_PDEBUGEN_W<'_, RCD_EN_SPEC> {
         RCD_PDEBUGEN_W::new(self, 1)
     }
 }

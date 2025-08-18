@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_PARA_KEY_SPEC> {
 impl W {
     #[doc = "Bits 0:2 - Set hmac parameter key."]
     #[inline(always)]
-    pub fn key_set(&mut self) -> KEY_SET_W<SET_PARA_KEY_SPEC> {
+    pub fn key_set(&mut self) -> KEY_SET_W<'_, SET_PARA_KEY_SPEC> {
         KEY_SET_W::new(self, 0)
     }
 }

@@ -90,32 +90,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - enable temperature sensor to send out interrupt"]
     #[inline(always)]
-    pub fn sar_tsens_int_en(&mut self) -> SAR_TSENS_INT_EN_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_int_en(&mut self) -> SAR_TSENS_INT_EN_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_INT_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - invert temperature sensor data"]
     #[inline(always)]
-    pub fn sar_tsens_in_inv(&mut self) -> SAR_TSENS_IN_INV_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_in_inv(&mut self) -> SAR_TSENS_IN_INV_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_IN_INV_W::new(self, 13)
     }
     #[doc = "Bits 14:21 - temperature sensor clock divider"]
     #[inline(always)]
-    pub fn sar_tsens_clk_div(&mut self) -> SAR_TSENS_CLK_DIV_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_clk_div(&mut self) -> SAR_TSENS_CLK_DIV_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_CLK_DIV_W::new(self, 14)
     }
     #[doc = "Bit 22 - temperature sensor power up"]
     #[inline(always)]
-    pub fn sar_tsens_power_up(&mut self) -> SAR_TSENS_POWER_UP_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_power_up(&mut self) -> SAR_TSENS_POWER_UP_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_POWER_UP_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: dump out & power up controlled by SW 0: by FSM"]
     #[inline(always)]
-    pub fn sar_tsens_power_up_force(&mut self) -> SAR_TSENS_POWER_UP_FORCE_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_power_up_force(
+        &mut self,
+    ) -> SAR_TSENS_POWER_UP_FORCE_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_POWER_UP_FORCE_W::new(self, 23)
     }
     #[doc = "Bit 24 - temperature sensor dump out only active when reg_tsens_power_up_force = 1"]
     #[inline(always)]
-    pub fn sar_tsens_dump_out(&mut self) -> SAR_TSENS_DUMP_OUT_W<SAR_TSENS_CTRL_SPEC> {
+    pub fn sar_tsens_dump_out(&mut self) -> SAR_TSENS_DUMP_OUT_W<'_, SAR_TSENS_CTRL_SPEC> {
         SAR_TSENS_DUMP_OUT_W::new(self, 24)
     }
 }

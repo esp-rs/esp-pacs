@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable software flow control. It is used with register sw_xon or sw_xoff."]
     #[inline(always)]
-    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<FLOW_CONF_SPEC> {
+    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<'_, FLOW_CONF_SPEC> {
         SW_FLOW_CON_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to remove flow control char from the received data."]
     #[inline(always)]
-    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<FLOW_CONF_SPEC> {
+    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<'_, FLOW_CONF_SPEC> {
         XONOFF_DEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable the transmitter to go on sending data."]
     #[inline(always)]
-    pub fn force_xon(&mut self) -> FORCE_XON_W<FLOW_CONF_SPEC> {
+    pub fn force_xon(&mut self) -> FORCE_XON_W<'_, FLOW_CONF_SPEC> {
         FORCE_XON_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to stop the transmitter from sending data."]
     #[inline(always)]
-    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<FLOW_CONF_SPEC> {
+    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<'_, FLOW_CONF_SPEC> {
         FORCE_XOFF_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to send Xon char. It is cleared by hardware automatically."]
     #[inline(always)]
-    pub fn send_xon(&mut self) -> SEND_XON_W<FLOW_CONF_SPEC> {
+    pub fn send_xon(&mut self) -> SEND_XON_W<'_, FLOW_CONF_SPEC> {
         SEND_XON_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to send Xoff char. It is cleared by hardware automatically."]
     #[inline(always)]
-    pub fn send_xoff(&mut self) -> SEND_XOFF_W<FLOW_CONF_SPEC> {
+    pub fn send_xoff(&mut self) -> SEND_XOFF_W<'_, FLOW_CONF_SPEC> {
         SEND_XOFF_W::new(self, 5)
     }
 }

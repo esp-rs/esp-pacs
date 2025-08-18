@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable function that hardware control standby pin."]
     #[inline(always)]
-    pub fn hw_standby_en(&mut self) -> HW_STANDBY_EN_W<HW_CFG_SPEC> {
+    pub fn hw_standby_en(&mut self) -> HW_STANDBY_EN_W<'_, HW_CFG_SPEC> {
         HW_STANDBY_EN_W::new(self, 0)
     }
 }

@@ -217,112 +217,118 @@ impl W {
     #[inline(always)]
     pub fn cpuicm_gated_clk_force_on(
         &mut self,
-    ) -> CPUICM_GATED_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> CPUICM_GATED_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         CPUICM_GATED_CLK_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
-    pub fn tcm_cpu_clk_force_on(&mut self) -> TCM_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn tcm_cpu_clk_force_on(&mut self) -> TCM_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         TCM_CPU_CLK_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
     pub fn busmon_cpu_clk_force_on(
         &mut self,
-    ) -> BUSMON_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> BUSMON_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         BUSMON_CPU_CLK_FORCE_ON_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
     pub fn l1cache_cpu_clk_force_on(
         &mut self,
-    ) -> L1CACHE_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_CPU_CLK_FORCE_ON_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
     pub fn l1cache_d_cpu_clk_force_on(
         &mut self,
-    ) -> L1CACHE_D_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_D_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_D_CPU_CLK_FORCE_ON_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
     pub fn l1cache_i0_cpu_clk_force_on(
         &mut self,
-    ) -> L1CACHE_I0_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_I0_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_I0_CPU_CLK_FORCE_ON_W::new(self, 5)
     }
     #[doc = "Bit 6 - Reserved"]
     #[inline(always)]
     pub fn l1cache_i1_cpu_clk_force_on(
         &mut self,
-    ) -> L1CACHE_I1_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_I1_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_I1_CPU_CLK_FORCE_ON_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn trace_cpu_clk_force_on(&mut self) -> TRACE_CPU_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn trace_cpu_clk_force_on(
+        &mut self,
+    ) -> TRACE_CPU_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         TRACE_CPU_CLK_FORCE_ON_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn trace_sys_clk_force_on(&mut self) -> TRACE_SYS_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn trace_sys_clk_force_on(
+        &mut self,
+    ) -> TRACE_SYS_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         TRACE_SYS_CLK_FORCE_ON_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
     pub fn l1cache_mem_clk_force_on(
         &mut self,
-    ) -> L1CACHE_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_MEM_CLK_FORCE_ON_W::new(self, 9)
     }
     #[doc = "Bit 10 - Reserved"]
     #[inline(always)]
     pub fn l1cache_d_mem_clk_force_on(
         &mut self,
-    ) -> L1CACHE_D_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_D_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_D_MEM_CLK_FORCE_ON_W::new(self, 10)
     }
     #[doc = "Bit 11 - Reserved"]
     #[inline(always)]
     pub fn l1cache_i0_mem_clk_force_on(
         &mut self,
-    ) -> L1CACHE_I0_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_I0_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_I0_MEM_CLK_FORCE_ON_W::new(self, 11)
     }
     #[doc = "Bit 12 - Reserved"]
     #[inline(always)]
     pub fn l1cache_i1_mem_clk_force_on(
         &mut self,
-    ) -> L1CACHE_I1_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L1CACHE_I1_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L1CACHE_I1_MEM_CLK_FORCE_ON_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved"]
     #[inline(always)]
     pub fn l2cache_mem_clk_force_on(
         &mut self,
-    ) -> L2CACHE_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    ) -> L2CACHE_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L2CACHE_MEM_CLK_FORCE_ON_W::new(self, 13)
     }
     #[doc = "Bit 14 - Reserved"]
     #[inline(always)]
-    pub fn l2mem_mem_clk_force_on(&mut self) -> L2MEM_MEM_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn l2mem_mem_clk_force_on(
+        &mut self,
+    ) -> L2MEM_MEM_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         L2MEM_MEM_CLK_FORCE_ON_W::new(self, 14)
     }
     #[doc = "Bit 15 - Reserved"]
     #[inline(always)]
-    pub fn sar1_clk_force_on(&mut self) -> SAR1_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn sar1_clk_force_on(&mut self) -> SAR1_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         SAR1_CLK_FORCE_ON_W::new(self, 15)
     }
     #[doc = "Bit 16 - Reserved"]
     #[inline(always)]
-    pub fn sar2_clk_force_on(&mut self) -> SAR2_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn sar2_clk_force_on(&mut self) -> SAR2_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         SAR2_CLK_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - Reserved"]
     #[inline(always)]
-    pub fn gmac_tx_clk_force_on(&mut self) -> GMAC_TX_CLK_FORCE_ON_W<CLK_FORCE_ON_CTRL0_SPEC> {
+    pub fn gmac_tx_clk_force_on(&mut self) -> GMAC_TX_CLK_FORCE_ON_W<'_, CLK_FORCE_ON_CTRL0_SPEC> {
         GMAC_TX_CLK_FORCE_ON_W::new(self, 17)
     }
 }

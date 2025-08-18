@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<RELEASE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to grant SPI1 access to encrypted result."]
     #[inline(always)]
-    pub fn release(&mut self) -> RELEASE_W<RELEASE_SPEC> {
+    pub fn release(&mut self) -> RELEASE_W<'_, RELEASE_SPEC> {
         RELEASE_W::new(self, 0)
     }
 }

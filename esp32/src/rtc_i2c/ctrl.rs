@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SDA is push-pull (1) or open-drain (0)"]
     #[inline(always)]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC> {
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<'_, CTRL_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - SCL is push-pull (1) or open-drain (0)"]
     #[inline(always)]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC> {
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<'_, CTRL_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 4 - Master (1) or slave (0)"]
     #[inline(always)]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC> {
+    pub fn ms_mode(&mut self) -> MS_MODE_W<'_, CTRL_SPEC> {
         MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force to generate start condition"]
     #[inline(always)]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<'_, CTRL_SPEC> {
         TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - Send LSB first"]
     #[inline(always)]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC> {
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<'_, CTRL_SPEC> {
         TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Receive LSB first"]
     #[inline(always)]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC> {
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<'_, CTRL_SPEC> {
         RX_LSB_FIRST_W::new(self, 7)
     }
 }

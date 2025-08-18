@@ -13,49 +13,49 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `GPIO0` field.</div>"]
     #[inline(always)]
-    pub fn gpio(&mut self, n: u8) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio(&mut self, n: u8) -> GPIO_W<'_, INTR_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         GPIO_W::new(self, n)
     }
     #[doc = "Bit 0 - Set this bit to clear the DEDIC_GPIO0_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio0(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio0(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the DEDIC_GPIO1_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio1(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio1(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the DEDIC_GPIO2_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio2(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio2(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the DEDIC_GPIO3_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio3(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio3(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear the DEDIC_GPIO4_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio4(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio4(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the DEDIC_GPIO5_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio5(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio5(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear the DEDIC_GPIO6_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio6(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio6(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear the DEDIC_GPIO7_INT_RAW interrupt."]
     #[inline(always)]
-    pub fn gpio7(&mut self) -> GPIO_W<INTR_CLR_SPEC> {
+    pub fn gpio7(&mut self) -> GPIO_W<'_, INTR_CLR_SPEC> {
         GPIO_W::new(self, 7)
     }
 }

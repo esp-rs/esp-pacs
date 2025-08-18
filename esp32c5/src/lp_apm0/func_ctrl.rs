@@ -47,19 +47,19 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_FUNC_EN` field.</div>"]
     #[inline(always)]
-    pub fn m_func_en(&mut self, n: u8) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m_func_en(&mut self, n: u8) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         M_FUNC_EN_W::new(self, n)
     }
     #[doc = "Bit 0 - PMS M0 function enable"]
     #[inline(always)]
-    pub fn m0_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m0_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - PMS M1 function enable"]
     #[inline(always)]
-    pub fn m1_func_en(&mut self) -> M_FUNC_EN_W<FUNC_CTRL_SPEC> {
+    pub fn m1_func_en(&mut self) -> M_FUNC_EN_W<'_, FUNC_CTRL_SPEC> {
         M_FUNC_EN_W::new(self, 1)
     }
 }

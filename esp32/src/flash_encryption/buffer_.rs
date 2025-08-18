@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<BUFFER__SPEC> {
 impl W {
     #[doc = "Bits 0:7 - Data buffers for encryption."]
     #[inline(always)]
-    pub fn buffer(&mut self) -> BUFFER_W<BUFFER__SPEC> {
+    pub fn buffer(&mut self) -> BUFFER_W<'_, BUFFER__SPEC> {
         BUFFER_W::new(self, 0)
     }
 }

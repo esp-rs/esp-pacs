@@ -412,196 +412,214 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents ULP_evt_err_intr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_err_intr_st(&mut self) -> ULP_EVT_ERR_INTR_ST_W<EVT_ST5_SPEC> {
+    pub fn ulp_evt_err_intr_st(&mut self) -> ULP_EVT_ERR_INTR_ST_W<'_, EVT_ST5_SPEC> {
         ULP_EVT_ERR_INTR_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents ULP_evt_halt trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_halt_st(&mut self) -> ULP_EVT_HALT_ST_W<EVT_ST5_SPEC> {
+    pub fn ulp_evt_halt_st(&mut self) -> ULP_EVT_HALT_ST_W<'_, EVT_ST5_SPEC> {
         ULP_EVT_HALT_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents ULP_evt_start_intr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_evt_start_intr_st(&mut self) -> ULP_EVT_START_INTR_ST_W<EVT_ST5_SPEC> {
+    pub fn ulp_evt_start_intr_st(&mut self) -> ULP_EVT_START_INTR_ST_W<'_, EVT_ST5_SPEC> {
         ULP_EVT_START_INTR_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents RTC_evt_tick trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_tick_st(&mut self) -> RTC_EVT_TICK_ST_W<EVT_ST5_SPEC> {
+    pub fn rtc_evt_tick_st(&mut self) -> RTC_EVT_TICK_ST_W<'_, EVT_ST5_SPEC> {
         RTC_EVT_TICK_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents RTC_evt_ovf trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_ovf_st(&mut self) -> RTC_EVT_OVF_ST_W<EVT_ST5_SPEC> {
+    pub fn rtc_evt_ovf_st(&mut self) -> RTC_EVT_OVF_ST_W<'_, EVT_ST5_SPEC> {
         RTC_EVT_OVF_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents RTC_evt_cmp trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_evt_cmp_st(&mut self) -> RTC_EVT_CMP_ST_W<EVT_ST5_SPEC> {
+    pub fn rtc_evt_cmp_st(&mut self) -> RTC_EVT_CMP_ST_W<'_, EVT_ST5_SPEC> {
         RTC_EVT_CMP_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents PDMA_AHB_evt_in_done_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_in_done_ch0_st(&mut self) -> PDMA_AHB_EVT_IN_DONE_CH0_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_in_done_ch0_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_IN_DONE_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_DONE_CH0_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents PDMA_AHB_evt_in_done_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_in_done_ch1_st(&mut self) -> PDMA_AHB_EVT_IN_DONE_CH1_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_in_done_ch1_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_IN_DONE_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_DONE_CH1_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents PDMA_AHB_evt_in_done_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_in_done_ch2_st(&mut self) -> PDMA_AHB_EVT_IN_DONE_CH2_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_in_done_ch2_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_IN_DONE_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_DONE_CH2_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents PDMA_AHB_evt_in_suc_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_suc_eof_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_SUC_EOF_CH0_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents PDMA_AHB_evt_in_suc_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_suc_eof_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_SUC_EOF_CH1_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents PDMA_AHB_evt_in_suc_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_suc_eof_ch2_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH2_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_SUC_EOF_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_SUC_EOF_CH2_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents PDMA_AHB_evt_in_fifo_empty_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_empty_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_EMPTY_CH0_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents PDMA_AHB_evt_in_fifo_empty_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_empty_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_EMPTY_CH1_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents PDMA_AHB_evt_in_fifo_empty_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_empty_ch2_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH2_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_EMPTY_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_EMPTY_CH2_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents PDMA_AHB_evt_in_fifo_full_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_full_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_FULL_CH0_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents PDMA_AHB_evt_in_fifo_full_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_full_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_FULL_CH1_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents PDMA_AHB_evt_in_fifo_full_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_in_fifo_full_ch2_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH2_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_IN_FIFO_FULL_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_IN_FIFO_FULL_CH2_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents PDMA_AHB_evt_out_done_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_done_ch0_st(&mut self) -> PDMA_AHB_EVT_OUT_DONE_CH0_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_done_ch0_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_DONE_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_DONE_CH0_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents PDMA_AHB_evt_out_done_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_done_ch1_st(&mut self) -> PDMA_AHB_EVT_OUT_DONE_CH1_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_done_ch1_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_DONE_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_DONE_CH1_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents PDMA_AHB_evt_out_done_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_done_ch2_st(&mut self) -> PDMA_AHB_EVT_OUT_DONE_CH2_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_done_ch2_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_DONE_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_DONE_CH2_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents PDMA_AHB_evt_out_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_eof_ch0_st(&mut self) -> PDMA_AHB_EVT_OUT_EOF_CH0_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_eof_ch0_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_EOF_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_EOF_CH0_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents PDMA_AHB_evt_out_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_eof_ch1_st(&mut self) -> PDMA_AHB_EVT_OUT_EOF_CH1_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_eof_ch1_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_EOF_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_EOF_CH1_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents PDMA_AHB_evt_out_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pdma_ahb_evt_out_eof_ch2_st(&mut self) -> PDMA_AHB_EVT_OUT_EOF_CH2_ST_W<EVT_ST5_SPEC> {
+    pub fn pdma_ahb_evt_out_eof_ch2_st(
+        &mut self,
+    ) -> PDMA_AHB_EVT_OUT_EOF_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_EOF_CH2_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents PDMA_AHB_evt_out_total_eof_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_total_eof_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_TOTAL_EOF_CH0_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents PDMA_AHB_evt_out_total_eof_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_total_eof_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_TOTAL_EOF_CH1_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents PDMA_AHB_evt_out_total_eof_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_total_eof_ch2_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH2_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_TOTAL_EOF_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_TOTAL_EOF_CH2_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents PDMA_AHB_evt_out_fifo_empty_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_fifo_empty_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH0_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents PDMA_AHB_evt_out_fifo_empty_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_fifo_empty_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH1_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents PDMA_AHB_evt_out_fifo_empty_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_fifo_empty_ch2_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH2_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH2_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_FIFO_EMPTY_CH2_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents PDMA_AHB_evt_out_fifo_full_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_fifo_full_ch0_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH0_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH0_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_FIFO_FULL_CH0_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents PDMA_AHB_evt_out_fifo_full_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn pdma_ahb_evt_out_fifo_full_ch1_st(
         &mut self,
-    ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH1_ST_W<EVT_ST5_SPEC> {
+    ) -> PDMA_AHB_EVT_OUT_FIFO_FULL_CH1_ST_W<'_, EVT_ST5_SPEC> {
         PDMA_AHB_EVT_OUT_FIFO_FULL_CH1_ST_W::new(self, 31)
     }
 }

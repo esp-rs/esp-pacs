@@ -124,77 +124,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to start sending data on CHANNEL%s."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<CH_TX_CONF0_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, CH_TX_CONF0_SPEC> {
         TX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset read ram address for CHANNEL%s by accessing transmitter."]
     #[inline(always)]
-    pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<CH_TX_CONF0_SPEC> {
+    pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<'_, CH_TX_CONF0_SPEC> {
         MEM_RD_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset W/R ram address for CHANNEL%s by accessing apb fifo."]
     #[inline(always)]
-    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CH_TX_CONF0_SPEC> {
+    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<'_, CH_TX_CONF0_SPEC> {
         APB_MEM_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to restart transmission from the first data to the last data in CHANNEL%s."]
     #[inline(always)]
-    pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<CH_TX_CONF0_SPEC> {
+    pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<'_, CH_TX_CONF0_SPEC> {
         TX_CONTI_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - This is the channel %s enable bit for wraparound mode: it will resume sending at the start when the data to be sent is more than its memory size."]
     #[inline(always)]
-    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<CH_TX_CONF0_SPEC> {
+    pub fn mem_tx_wrap_en(&mut self) -> MEM_TX_WRAP_EN_W<'_, CH_TX_CONF0_SPEC> {
         MEM_TX_WRAP_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - This bit configures the level of output signal in CHANNEL%s when the latter is in IDLE state."]
     #[inline(always)]
-    pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<CH_TX_CONF0_SPEC> {
+    pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<'_, CH_TX_CONF0_SPEC> {
         IDLE_OUT_LV_W::new(self, 5)
     }
     #[doc = "Bit 6 - This is the output enable-control bit for CHANNEL%s in IDLE state."]
     #[inline(always)]
-    pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<CH_TX_CONF0_SPEC> {
+    pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<'_, CH_TX_CONF0_SPEC> {
         IDLE_OUT_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to stop the transmitter of CHANNEL%s sending data out."]
     #[inline(always)]
-    pub fn tx_stop(&mut self) -> TX_STOP_W<CH_TX_CONF0_SPEC> {
+    pub fn tx_stop(&mut self) -> TX_STOP_W<'_, CH_TX_CONF0_SPEC> {
         TX_STOP_W::new(self, 7)
     }
     #[doc = "Bits 8:15 - This register is used to configure the divider for clock of CHANNEL%s."]
     #[inline(always)]
-    pub fn div_cnt(&mut self) -> DIV_CNT_W<CH_TX_CONF0_SPEC> {
+    pub fn div_cnt(&mut self) -> DIV_CNT_W<'_, CH_TX_CONF0_SPEC> {
         DIV_CNT_W::new(self, 8)
     }
     #[doc = "Bits 16:19 - This register is used to configure the maximum size of memory allocated to CHANNEL%s."]
     #[inline(always)]
-    pub fn mem_size(&mut self) -> MEM_SIZE_W<CH_TX_CONF0_SPEC> {
+    pub fn mem_size(&mut self) -> MEM_SIZE_W<'_, CH_TX_CONF0_SPEC> {
         MEM_SIZE_W::new(self, 16)
     }
     #[doc = "Bit 20 - 1: Add carrier modulation on the output signal only at the send data state for CHANNEL%s. 0: Add carrier modulation on the output signal at all state for CHANNEL%s. Only valid when RMT_CARRIER_EN_CH%s is 1."]
     #[inline(always)]
-    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<CH_TX_CONF0_SPEC> {
+    pub fn carrier_eff_en(&mut self) -> CARRIER_EFF_EN_W<'_, CH_TX_CONF0_SPEC> {
         CARRIER_EFF_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - This is the carrier modulation enable-control bit for CHANNEL%s. 1: Add carrier modulation in the output signal. 0: No carrier modulation in sig_out."]
     #[inline(always)]
-    pub fn carrier_en(&mut self) -> CARRIER_EN_W<CH_TX_CONF0_SPEC> {
+    pub fn carrier_en(&mut self) -> CARRIER_EN_W<'_, CH_TX_CONF0_SPEC> {
         CARRIER_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - This bit is used to configure the position of carrier wave for CHANNEL%s. 1'h0: add carrier wave on low level. 1'h1: add carrier wave on high level."]
     #[inline(always)]
-    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<CH_TX_CONF0_SPEC> {
+    pub fn carrier_out_lv(&mut self) -> CARRIER_OUT_LV_W<'_, CH_TX_CONF0_SPEC> {
         CARRIER_OUT_LV_W::new(self, 22)
     }
     #[doc = "Bit 23 - Reserved"]
     #[inline(always)]
-    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<CH_TX_CONF0_SPEC> {
+    pub fn afifo_rst(&mut self) -> AFIFO_RST_W<'_, CH_TX_CONF0_SPEC> {
         AFIFO_RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - synchronization bit for CHANNEL%s"]
     #[inline(always)]
-    pub fn conf_update(&mut self) -> CONF_UPDATE_W<CH_TX_CONF0_SPEC> {
+    pub fn conf_update(&mut self) -> CONF_UPDATE_W<'_, CH_TX_CONF0_SPEC> {
         CONF_UPDATE_W::new(self, 24)
     }
 }

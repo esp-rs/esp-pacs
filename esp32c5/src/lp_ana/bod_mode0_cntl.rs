@@ -99,42 +99,42 @@ impl W {
     #[inline(always)]
     pub fn bod_mode0_close_flash_ena(
         &mut self,
-    ) -> BOD_MODE0_CLOSE_FLASH_ENA_W<BOD_MODE0_CNTL_SPEC> {
+    ) -> BOD_MODE0_CLOSE_FLASH_ENA_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_CLOSE_FLASH_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - enable power down RF when brownout interrupt or not 1:enable 0:disable"]
     #[inline(always)]
-    pub fn bod_mode0_pd_rf_ena(&mut self) -> BOD_MODE0_PD_RF_ENA_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_pd_rf_ena(&mut self) -> BOD_MODE0_PD_RF_ENA_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_PD_RF_ENA_W::new(self, 7)
     }
     #[doc = "Bits 8:17 - set the undervoltage hold time for triggering brownout interrupt"]
     #[inline(always)]
-    pub fn bod_mode0_intr_wait(&mut self) -> BOD_MODE0_INTR_WAIT_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_intr_wait(&mut self) -> BOD_MODE0_INTR_WAIT_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_INTR_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 18:27 - set the undervoltage hold time for triggering brownout reset"]
     #[inline(always)]
-    pub fn bod_mode0_reset_wait(&mut self) -> BOD_MODE0_RESET_WAIT_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_reset_wait(&mut self) -> BOD_MODE0_RESET_WAIT_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_RESET_WAIT_W::new(self, 18)
     }
     #[doc = "Bit 28 - clear brownout count or not 1: clear 0: no operation"]
     #[inline(always)]
-    pub fn bod_mode0_cnt_clr(&mut self) -> BOD_MODE0_CNT_CLR_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_cnt_clr(&mut self) -> BOD_MODE0_CNT_CLR_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_CNT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - enable brownout interrupt or not 1: enable 0: disable"]
     #[inline(always)]
-    pub fn bod_mode0_intr_ena(&mut self) -> BOD_MODE0_INTR_ENA_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_intr_ena(&mut self) -> BOD_MODE0_INTR_ENA_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_INTR_ENA_W::new(self, 29)
     }
     #[doc = "Bit 30 - select brownout reset level 1: system reset 0: chip reset"]
     #[inline(always)]
-    pub fn bod_mode0_reset_sel(&mut self) -> BOD_MODE0_RESET_SEL_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_reset_sel(&mut self) -> BOD_MODE0_RESET_SEL_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_RESET_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable brownout reset or not 1: enable 0: disable"]
     #[inline(always)]
-    pub fn bod_mode0_reset_ena(&mut self) -> BOD_MODE0_RESET_ENA_W<BOD_MODE0_CNTL_SPEC> {
+    pub fn bod_mode0_reset_ena(&mut self) -> BOD_MODE0_RESET_ENA_W<'_, BOD_MODE0_CNTL_SPEC> {
         BOD_MODE0_RESET_ENA_W::new(self, 31)
     }
 }

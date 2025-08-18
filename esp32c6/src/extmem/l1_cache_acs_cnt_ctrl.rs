@@ -134,22 +134,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to enable dbus0 counter in L1-DCache."]
     #[inline(always)]
-    pub fn l1_bus0_cnt_ena(&mut self) -> L1_BUS0_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l1_bus0_cnt_ena(&mut self) -> L1_BUS0_CNT_ENA_W<'_, L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_BUS0_CNT_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to enable dbus1 counter in L1-DCache."]
     #[inline(always)]
-    pub fn l1_bus1_cnt_ena(&mut self) -> L1_BUS1_CNT_ENA_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l1_bus1_cnt_ena(&mut self) -> L1_BUS1_CNT_ENA_W<'_, L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_BUS1_CNT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 20 - The bit is used to clear dbus0 counter in L1-DCache."]
     #[inline(always)]
-    pub fn l1_bus0_cnt_clr(&mut self) -> L1_BUS0_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l1_bus0_cnt_clr(&mut self) -> L1_BUS0_CNT_CLR_W<'_, L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_BUS0_CNT_CLR_W::new(self, 20)
     }
     #[doc = "Bit 21 - The bit is used to clear dbus1 counter in L1-DCache."]
     #[inline(always)]
-    pub fn l1_bus1_cnt_clr(&mut self) -> L1_BUS1_CNT_CLR_W<L1_CACHE_ACS_CNT_CTRL_SPEC> {
+    pub fn l1_bus1_cnt_clr(&mut self) -> L1_BUS1_CNT_CLR_W<'_, L1_CACHE_ACS_CNT_CTRL_SPEC> {
         L1_BUS1_CNT_CLR_W::new(self, 21)
     }
 }

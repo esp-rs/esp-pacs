@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - write this bits to update LUT which specified by BITSCRAMBLER_TX_LUT_CFG0_REG, Read this bits to get LUT which specified by BITSCRAMBLER_TX_LUT_CFG0_REG"]
     #[inline(always)]
-    pub fn tx_lut(&mut self) -> TX_LUT_W<TX_LUT_CFG1_SPEC> {
+    pub fn tx_lut(&mut self) -> TX_LUT_W<'_, TX_LUT_CFG1_SPEC> {
         TX_LUT_W::new(self, 0)
     }
 }

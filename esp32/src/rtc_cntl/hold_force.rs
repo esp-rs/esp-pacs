@@ -194,92 +194,92 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn adc1(&mut self) -> ADC1_W<HOLD_FORCE_SPEC> {
+    pub fn adc1(&mut self) -> ADC1_W<'_, HOLD_FORCE_SPEC> {
         ADC1_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn adc2(&mut self) -> ADC2_W<HOLD_FORCE_SPEC> {
+    pub fn adc2(&mut self) -> ADC2_W<'_, HOLD_FORCE_SPEC> {
         ADC2_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn pdac1(&mut self) -> PDAC1_W<HOLD_FORCE_SPEC> {
+    pub fn pdac1(&mut self) -> PDAC1_W<'_, HOLD_FORCE_SPEC> {
         PDAC1_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn pdac2(&mut self) -> PDAC2_W<HOLD_FORCE_SPEC> {
+    pub fn pdac2(&mut self) -> PDAC2_W<'_, HOLD_FORCE_SPEC> {
         PDAC2_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn sense1(&mut self) -> SENSE1_W<HOLD_FORCE_SPEC> {
+    pub fn sense1(&mut self) -> SENSE1_W<'_, HOLD_FORCE_SPEC> {
         SENSE1_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn sense2(&mut self) -> SENSE2_W<HOLD_FORCE_SPEC> {
+    pub fn sense2(&mut self) -> SENSE2_W<'_, HOLD_FORCE_SPEC> {
         SENSE2_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn sense3(&mut self) -> SENSE3_W<HOLD_FORCE_SPEC> {
+    pub fn sense3(&mut self) -> SENSE3_W<'_, HOLD_FORCE_SPEC> {
         SENSE3_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn sense4(&mut self) -> SENSE4_W<HOLD_FORCE_SPEC> {
+    pub fn sense4(&mut self) -> SENSE4_W<'_, HOLD_FORCE_SPEC> {
         SENSE4_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn touch_pad0(&mut self) -> TOUCH_PAD0_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad0(&mut self) -> TOUCH_PAD0_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD0_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn touch_pad1(&mut self) -> TOUCH_PAD1_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad1(&mut self) -> TOUCH_PAD1_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD1_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn touch_pad2(&mut self) -> TOUCH_PAD2_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad2(&mut self) -> TOUCH_PAD2_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD2_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn touch_pad3(&mut self) -> TOUCH_PAD3_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad3(&mut self) -> TOUCH_PAD3_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD3_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn touch_pad4(&mut self) -> TOUCH_PAD4_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad4(&mut self) -> TOUCH_PAD4_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD4_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn touch_pad5(&mut self) -> TOUCH_PAD5_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad5(&mut self) -> TOUCH_PAD5_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD5_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn touch_pad6(&mut self) -> TOUCH_PAD6_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad6(&mut self) -> TOUCH_PAD6_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD6_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn touch_pad7(&mut self) -> TOUCH_PAD7_W<HOLD_FORCE_SPEC> {
+    pub fn touch_pad7(&mut self) -> TOUCH_PAD7_W<'_, HOLD_FORCE_SPEC> {
         TOUCH_PAD7_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn x32p(&mut self) -> X32P_W<HOLD_FORCE_SPEC> {
+    pub fn x32p(&mut self) -> X32P_W<'_, HOLD_FORCE_SPEC> {
         X32P_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn x32n(&mut self) -> X32N_W<HOLD_FORCE_SPEC> {
+    pub fn x32n(&mut self) -> X32N_W<'_, HOLD_FORCE_SPEC> {
         X32N_W::new(self, 17)
     }
 }

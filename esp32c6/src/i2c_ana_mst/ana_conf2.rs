@@ -102,42 +102,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Configures which I2C master the following analog modules uses. If the corresponding bit is set to 1, I2C0 master is used for communication; if set to 0, I2C1 master is used."]
     #[inline(always)]
-    pub fn bias_mst_sel(&mut self) -> BIAS_MST_SEL_W<ANA_CONF2_SPEC> {
+    pub fn bias_mst_sel(&mut self) -> BIAS_MST_SEL_W<'_, ANA_CONF2_SPEC> {
         BIAS_MST_SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures which I2C master the following analog modules uses. If the corresponding bit is set to 1, I2C0 master is used for communication; if set to 0, I2C1 master is used."]
     #[inline(always)]
-    pub fn bbpll_mst_sel(&mut self) -> BBPLL_MST_SEL_W<ANA_CONF2_SPEC> {
+    pub fn bbpll_mst_sel(&mut self) -> BBPLL_MST_SEL_W<'_, ANA_CONF2_SPEC> {
         BBPLL_MST_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures which I2C master the following analog modules uses. If the corresponding bit is set to 1, I2C0 master is used for communication; if set to 0, I2C1 master is used."]
     #[inline(always)]
-    pub fn ulp_cal_mst_sel(&mut self) -> ULP_CAL_MST_SEL_W<ANA_CONF2_SPEC> {
+    pub fn ulp_cal_mst_sel(&mut self) -> ULP_CAL_MST_SEL_W<'_, ANA_CONF2_SPEC> {
         ULP_CAL_MST_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures which I2C master the following analog modules uses. If the corresponding bit is set to 1, I2C0 master is used for communication; if set to 0, I2C1 master is used."]
     #[inline(always)]
-    pub fn sar_i2c_mst_sel(&mut self) -> SAR_I2C_MST_SEL_W<ANA_CONF2_SPEC> {
+    pub fn sar_i2c_mst_sel(&mut self) -> SAR_I2C_MST_SEL_W<'_, ANA_CONF2_SPEC> {
         SAR_I2C_MST_SEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures which I2C master the following analog modules uses. If the corresponding bit is set to 1, I2C0 master is used for communication; if set to 0, I2C1 master is used."]
     #[inline(always)]
-    pub fn dig_reg_mst_sel(&mut self) -> DIG_REG_MST_SEL_W<ANA_CONF2_SPEC> {
+    pub fn dig_reg_mst_sel(&mut self) -> DIG_REG_MST_SEL_W<'_, ANA_CONF2_SPEC> {
         DIG_REG_MST_SEL_W::new(self, 12)
     }
     #[doc = "Bit 16 - ?"]
     #[inline(always)]
-    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<ANA_CONF2_SPEC> {
+    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<'_, ANA_CONF2_SPEC> {
         SAR_FORCE_PU_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clear to enable BBPLL"]
     #[inline(always)]
-    pub fn bbpll_m(&mut self) -> BBPLL_M_W<ANA_CONF2_SPEC> {
+    pub fn bbpll_m(&mut self) -> BBPLL_M_W<'_, ANA_CONF2_SPEC> {
         BBPLL_M_W::new(self, 17)
     }
     #[doc = "Bit 18 - ?"]
     #[inline(always)]
-    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<ANA_CONF2_SPEC> {
+    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<'_, ANA_CONF2_SPEC> {
         SAR_FORCE_PD_W::new(self, 18)
     }
 }

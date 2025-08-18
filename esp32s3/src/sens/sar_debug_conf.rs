@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - no public"]
     #[inline(always)]
-    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<SAR_DEBUG_CONF_SPEC> {
+    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<'_, SAR_DEBUG_CONF_SPEC> {
         SAR_DEBUG_BIT_SEL_W::new(self, 0)
     }
 }

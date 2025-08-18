@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - ******* Description ***********"]
     #[inline(always)]
-    pub fn redcy_sig0(&mut self) -> REDCY_SIG0_W<REDCY_SIG0_SPEC> {
+    pub fn redcy_sig0(&mut self) -> REDCY_SIG0_W<'_, REDCY_SIG0_SPEC> {
         REDCY_SIG0_W::new(self, 0)
     }
 }

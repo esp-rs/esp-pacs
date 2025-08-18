@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
-    pub fn slc0_rxlink_addr(&mut self) -> SLC0_RXLINK_ADDR_W<_0RX_LINK_SPEC> {
+    pub fn slc0_rxlink_addr(&mut self) -> SLC0_RXLINK_ADDR_W<'_, _0RX_LINK_SPEC> {
         SLC0_RXLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn slc0_rxlink_stop(&mut self) -> SLC0_RXLINK_STOP_W<_0RX_LINK_SPEC> {
+    pub fn slc0_rxlink_stop(&mut self) -> SLC0_RXLINK_STOP_W<'_, _0RX_LINK_SPEC> {
         SLC0_RXLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn slc0_rxlink_start(&mut self) -> SLC0_RXLINK_START_W<_0RX_LINK_SPEC> {
+    pub fn slc0_rxlink_start(&mut self) -> SLC0_RXLINK_START_W<'_, _0RX_LINK_SPEC> {
         SLC0_RXLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn slc0_rxlink_restart(&mut self) -> SLC0_RXLINK_RESTART_W<_0RX_LINK_SPEC> {
+    pub fn slc0_rxlink_restart(&mut self) -> SLC0_RXLINK_RESTART_W<'_, _0RX_LINK_SPEC> {
         SLC0_RXLINK_RESTART_W::new(self, 30)
     }
 }

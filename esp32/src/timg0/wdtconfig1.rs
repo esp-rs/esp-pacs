@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:31 - SWDT clock prescale value. Period = 12.5ns * value stored in this register"]
     #[inline(always)]
-    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<WDTCONFIG1_SPEC> {
+    pub fn wdt_clk_prescale(&mut self) -> WDT_CLK_PRESCALE_W<'_, WDTCONFIG1_SPEC> {
         WDT_CLK_PRESCALE_W::new(self, 16)
     }
 }

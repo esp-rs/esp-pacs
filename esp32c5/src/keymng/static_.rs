@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Set each bit to choose efuse key instead of key manager deployed key. Each bit stands for a key type:bit 4 for psram_key; bit 3 for ds_key; bit 2 for hmac_key; bit 1 for flash_key; bit 0 for ecdsa_key"]
     #[inline(always)]
-    pub fn use_efuse_key(&mut self) -> USE_EFUSE_KEY_W<STATIC_SPEC> {
+    pub fn use_efuse_key(&mut self) -> USE_EFUSE_KEY_W<'_, STATIC_SPEC> {
         USE_EFUSE_KEY_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - The core clock cycle number to sample one rng input data. Please set it bigger than the clock cycle ratio: T_rng/T_km"]
     #[inline(always)]
-    pub fn rnd_switch_cycle(&mut self) -> RND_SWITCH_CYCLE_W<STATIC_SPEC> {
+    pub fn rnd_switch_cycle(&mut self) -> RND_SWITCH_CYCLE_W<'_, STATIC_SPEC> {
         RND_SWITCH_CYCLE_W::new(self, 5)
     }
     #[doc = "Bit 10 - Set this bit to use software written init key instead of efuse_init_key."]
     #[inline(always)]
-    pub fn use_sw_init_key(&mut self) -> USE_SW_INIT_KEY_W<STATIC_SPEC> {
+    pub fn use_sw_init_key(&mut self) -> USE_SW_INIT_KEY_W<'_, STATIC_SPEC> {
         USE_SW_INIT_KEY_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to choose flash crypt using xts-aes-256 or xts-aes-128. 1: use xts-aes-256. 0: use xts-aes-128."]
     #[inline(always)]
-    pub fn flash_key_len(&mut self) -> FLASH_KEY_LEN_W<STATIC_SPEC> {
+    pub fn flash_key_len(&mut self) -> FLASH_KEY_LEN_W<'_, STATIC_SPEC> {
         FLASH_KEY_LEN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to choose psram crypt using xts-aes-256 or xts-aes-128. 1: use xts-aes-256. 0: use xts-aes-128."]
     #[inline(always)]
-    pub fn psram_key_len(&mut self) -> PSRAM_KEY_LEN_W<STATIC_SPEC> {
+    pub fn psram_key_len(&mut self) -> PSRAM_KEY_LEN_W<'_, STATIC_SPEC> {
         PSRAM_KEY_LEN_W::new(self, 12)
     }
 }

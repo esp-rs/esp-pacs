@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable km clock"]
     #[inline(always)]
-    pub fn km_clk_en(&mut self) -> KM_CLK_EN_W<KM_CONF_SPEC> {
+    pub fn km_clk_en(&mut self) -> KM_CLK_EN_W<'_, KM_CONF_SPEC> {
         KM_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset km module"]
     #[inline(always)]
-    pub fn km_rst_en(&mut self) -> KM_RST_EN_W<KM_CONF_SPEC> {
+    pub fn km_rst_en(&mut self) -> KM_RST_EN_W<'_, KM_CONF_SPEC> {
         KM_RST_EN_W::new(self, 1)
     }
 }

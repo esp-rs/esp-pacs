@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - The uart is activated from light sleeping mode when the input rxd edge changes more times than this register value."]
     #[inline(always)]
-    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF2_SPEC> {
+    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<'_, SLEEP_CONF2_SPEC> {
         ACTIVE_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 10:17 - In wake up mode 1 this field is used to set the received data number threshold to wake up chip."]
     #[inline(always)]
-    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<SLEEP_CONF2_SPEC> {
+    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<'_, SLEEP_CONF2_SPEC> {
         RX_WAKE_UP_THRHD_W::new(self, 10)
     }
     #[doc = "Bits 18:20 - This register is used to select number of wake up char."]
     #[inline(always)]
-    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<'_, SLEEP_CONF2_SPEC> {
         WK_CHAR_NUM_W::new(self, 18)
     }
     #[doc = "Bits 21:25 - This register is used to mask wake up char."]
     #[inline(always)]
-    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<'_, SLEEP_CONF2_SPEC> {
         WK_CHAR_MASK_W::new(self, 21)
     }
     #[doc = "Bits 26:27 - This register is used to select wake up mode. 0: RXD toggling to wake up. 1: received data number larger than"]
     #[inline(always)]
-    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<'_, SLEEP_CONF2_SPEC> {
         WK_MODE_SEL_W::new(self, 26)
     }
 }

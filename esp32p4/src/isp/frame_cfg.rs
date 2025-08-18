@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures input image size in y-direction, image row number - 1"]
     #[inline(always)]
-    pub fn vadr_num(&mut self) -> VADR_NUM_W<FRAME_CFG_SPEC> {
+    pub fn vadr_num(&mut self) -> VADR_NUM_W<'_, FRAME_CFG_SPEC> {
         VADR_NUM_W::new(self, 0)
     }
     #[doc = "Bits 12:23 - this field configures input image size in x-direction, image line number - 1"]
     #[inline(always)]
-    pub fn hadr_num(&mut self) -> HADR_NUM_W<FRAME_CFG_SPEC> {
+    pub fn hadr_num(&mut self) -> HADR_NUM_W<'_, FRAME_CFG_SPEC> {
         HADR_NUM_W::new(self, 12)
     }
     #[doc = "Bits 27:28 - this field configures the bayer mode of input pixel. 00 : BG/GR 01 : GB/RG 10 : GR/BG 11 : RG/GB"]
     #[inline(always)]
-    pub fn bayer_mode(&mut self) -> BAYER_MODE_W<FRAME_CFG_SPEC> {
+    pub fn bayer_mode(&mut self) -> BAYER_MODE_W<'_, FRAME_CFG_SPEC> {
         BAYER_MODE_W::new(self, 27)
     }
     #[doc = "Bit 29 - this bit configures the line end packet exist or not. 0: not exist, 1: exist"]
     #[inline(always)]
-    pub fn hsync_start_exist(&mut self) -> HSYNC_START_EXIST_W<FRAME_CFG_SPEC> {
+    pub fn hsync_start_exist(&mut self) -> HSYNC_START_EXIST_W<'_, FRAME_CFG_SPEC> {
         HSYNC_START_EXIST_W::new(self, 29)
     }
     #[doc = "Bit 30 - this bit configures the line start packet exist or not. 0: not exist, 1: exist"]
     #[inline(always)]
-    pub fn hsync_end_exist(&mut self) -> HSYNC_END_EXIST_W<FRAME_CFG_SPEC> {
+    pub fn hsync_end_exist(&mut self) -> HSYNC_END_EXIST_W<'_, FRAME_CFG_SPEC> {
         HSYNC_END_EXIST_W::new(self, 30)
     }
 }

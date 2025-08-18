@@ -72,29 +72,33 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_dig_sys_clk_no_div(
         &mut self,
-    ) -> HP_SLEEP_DIG_SYS_CLK_NO_DIV_W<HP_SLEEP_SYSCLK_SPEC> {
+    ) -> HP_SLEEP_DIG_SYS_CLK_NO_DIV_W<'_, HP_SLEEP_SYSCLK_SPEC> {
         HP_SLEEP_DIG_SYS_CLK_NO_DIV_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     pub fn hp_sleep_icg_sys_clock_en(
         &mut self,
-    ) -> HP_SLEEP_ICG_SYS_CLOCK_EN_W<HP_SLEEP_SYSCLK_SPEC> {
+    ) -> HP_SLEEP_ICG_SYS_CLOCK_EN_W<'_, HP_SLEEP_SYSCLK_SPEC> {
         HP_SLEEP_ICG_SYS_CLOCK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn hp_sleep_sys_clk_slp_sel(&mut self) -> HP_SLEEP_SYS_CLK_SLP_SEL_W<HP_SLEEP_SYSCLK_SPEC> {
+    pub fn hp_sleep_sys_clk_slp_sel(
+        &mut self,
+    ) -> HP_SLEEP_SYS_CLK_SLP_SEL_W<'_, HP_SLEEP_SYSCLK_SPEC> {
         HP_SLEEP_SYS_CLK_SLP_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn hp_sleep_icg_slp_sel(&mut self) -> HP_SLEEP_ICG_SLP_SEL_W<HP_SLEEP_SYSCLK_SPEC> {
+    pub fn hp_sleep_icg_slp_sel(&mut self) -> HP_SLEEP_ICG_SLP_SEL_W<'_, HP_SLEEP_SYSCLK_SPEC> {
         HP_SLEEP_ICG_SLP_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - need_des"]
     #[inline(always)]
-    pub fn hp_sleep_dig_sys_clk_sel(&mut self) -> HP_SLEEP_DIG_SYS_CLK_SEL_W<HP_SLEEP_SYSCLK_SPEC> {
+    pub fn hp_sleep_dig_sys_clk_sel(
+        &mut self,
+    ) -> HP_SLEEP_DIG_SYS_CLK_SEL_W<'_, HP_SLEEP_SYSCLK_SPEC> {
         HP_SLEEP_DIG_SYS_CLK_SEL_W::new(self, 30)
     }
 }

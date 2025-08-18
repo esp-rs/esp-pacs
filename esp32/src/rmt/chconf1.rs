@@ -144,67 +144,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to start sending data for channel0."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<CHCONF1_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, CHCONF1_SPEC> {
         TX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enbale receving data for channel0."]
     #[inline(always)]
-    pub fn rx_en(&mut self) -> RX_EN_W<CHCONF1_SPEC> {
+    pub fn rx_en(&mut self) -> RX_EN_W<'_, CHCONF1_SPEC> {
         RX_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset write ram address for channel0 by receiver access."]
     #[inline(always)]
-    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<CHCONF1_SPEC> {
+    pub fn mem_wr_rst(&mut self) -> MEM_WR_RST_W<'_, CHCONF1_SPEC> {
         MEM_WR_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset read ram address for channel0 by transmitter access."]
     #[inline(always)]
-    pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<CHCONF1_SPEC> {
+    pub fn mem_rd_rst(&mut self) -> MEM_RD_RST_W<'_, CHCONF1_SPEC> {
         MEM_RD_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to reset W/R ram address for channel0 by apb fifo access"]
     #[inline(always)]
-    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<CHCONF1_SPEC> {
+    pub fn apb_mem_rst(&mut self) -> APB_MEM_RST_W<'_, CHCONF1_SPEC> {
         APB_MEM_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - This is the mark of channel0's ram usage right.1'b1：receiver uses the ram 0：transmitter uses the ram"]
     #[inline(always)]
-    pub fn mem_owner(&mut self) -> MEM_OWNER_W<CHCONF1_SPEC> {
+    pub fn mem_owner(&mut self) -> MEM_OWNER_W<'_, CHCONF1_SPEC> {
         MEM_OWNER_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to continue sending from the first data to the last data in channel0 again and again."]
     #[inline(always)]
-    pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<CHCONF1_SPEC> {
+    pub fn tx_conti_mode(&mut self) -> TX_CONTI_MODE_W<'_, CHCONF1_SPEC> {
         TX_CONTI_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - This is the receive filter enable bit for channel0."]
     #[inline(always)]
-    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<CHCONF1_SPEC> {
+    pub fn rx_filter_en(&mut self) -> RX_FILTER_EN_W<'_, CHCONF1_SPEC> {
         RX_FILTER_EN_W::new(self, 7)
     }
     #[doc = "Bits 8:15 - in receive mode channel0 ignore input pulse when the pulse width is smaller then this value."]
     #[inline(always)]
-    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<CHCONF1_SPEC> {
+    pub fn rx_filter_thres(&mut self) -> RX_FILTER_THRES_W<'_, CHCONF1_SPEC> {
         RX_FILTER_THRES_W::new(self, 8)
     }
     #[doc = "Bit 16 - This bit is used to reset divider in channel0."]
     #[inline(always)]
-    pub fn ref_cnt_rst(&mut self) -> REF_CNT_RST_W<CHCONF1_SPEC> {
+    pub fn ref_cnt_rst(&mut self) -> REF_CNT_RST_W<'_, CHCONF1_SPEC> {
         REF_CNT_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - This bit is used to select base clock. 1'b1:clk_apb 1'b0:clk_ref"]
     #[inline(always)]
-    pub fn ref_always_on(&mut self) -> REF_ALWAYS_ON_W<CHCONF1_SPEC> {
+    pub fn ref_always_on(&mut self) -> REF_ALWAYS_ON_W<'_, CHCONF1_SPEC> {
         REF_ALWAYS_ON_W::new(self, 17)
     }
     #[doc = "Bit 18 - This bit configures the output signal's level for channel0 in IDLE state."]
     #[inline(always)]
-    pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<CHCONF1_SPEC> {
+    pub fn idle_out_lv(&mut self) -> IDLE_OUT_LV_W<'_, CHCONF1_SPEC> {
         IDLE_OUT_LV_W::new(self, 18)
     }
     #[doc = "Bit 19 - This is the output enable control bit for channel0 in IDLE state."]
     #[inline(always)]
-    pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<CHCONF1_SPEC> {
+    pub fn idle_out_en(&mut self) -> IDLE_OUT_EN_W<'_, CHCONF1_SPEC> {
         IDLE_OUT_EN_W::new(self, 19)
     }
 }

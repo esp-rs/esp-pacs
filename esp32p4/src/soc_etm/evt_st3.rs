@@ -340,162 +340,162 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Represents MCPWM1_evt_timer1_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer1_stop_st(&mut self) -> MCPWM1_EVT_TIMER1_STOP_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer1_stop_st(&mut self) -> MCPWM1_EVT_TIMER1_STOP_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER1_STOP_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents MCPWM1_evt_timer2_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer2_stop_st(&mut self) -> MCPWM1_EVT_TIMER2_STOP_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer2_stop_st(&mut self) -> MCPWM1_EVT_TIMER2_STOP_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER2_STOP_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents MCPWM1_evt_timer0_tez trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer0_tez_st(&mut self) -> MCPWM1_EVT_TIMER0_TEZ_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer0_tez_st(&mut self) -> MCPWM1_EVT_TIMER0_TEZ_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER0_TEZ_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents MCPWM1_evt_timer1_tez trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer1_tez_st(&mut self) -> MCPWM1_EVT_TIMER1_TEZ_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer1_tez_st(&mut self) -> MCPWM1_EVT_TIMER1_TEZ_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER1_TEZ_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents MCPWM1_evt_timer2_tez trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer2_tez_st(&mut self) -> MCPWM1_EVT_TIMER2_TEZ_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer2_tez_st(&mut self) -> MCPWM1_EVT_TIMER2_TEZ_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER2_TEZ_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents MCPWM1_evt_timer0_tep trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer0_tep_st(&mut self) -> MCPWM1_EVT_TIMER0_TEP_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer0_tep_st(&mut self) -> MCPWM1_EVT_TIMER0_TEP_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER0_TEP_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents MCPWM1_evt_timer1_tep trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer1_tep_st(&mut self) -> MCPWM1_EVT_TIMER1_TEP_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer1_tep_st(&mut self) -> MCPWM1_EVT_TIMER1_TEP_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER1_TEP_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents MCPWM1_evt_timer2_tep trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_timer2_tep_st(&mut self) -> MCPWM1_EVT_TIMER2_TEP_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_timer2_tep_st(&mut self) -> MCPWM1_EVT_TIMER2_TEP_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TIMER2_TEP_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents MCPWM1_evt_op0_tea trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op0_tea_st(&mut self) -> MCPWM1_EVT_OP0_TEA_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op0_tea_st(&mut self) -> MCPWM1_EVT_OP0_TEA_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP0_TEA_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents MCPWM1_evt_op1_tea trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op1_tea_st(&mut self) -> MCPWM1_EVT_OP1_TEA_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op1_tea_st(&mut self) -> MCPWM1_EVT_OP1_TEA_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP1_TEA_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents MCPWM1_evt_op2_tea trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op2_tea_st(&mut self) -> MCPWM1_EVT_OP2_TEA_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op2_tea_st(&mut self) -> MCPWM1_EVT_OP2_TEA_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP2_TEA_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents MCPWM1_evt_op0_teb trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op0_teb_st(&mut self) -> MCPWM1_EVT_OP0_TEB_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op0_teb_st(&mut self) -> MCPWM1_EVT_OP0_TEB_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP0_TEB_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents MCPWM1_evt_op1_teb trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op1_teb_st(&mut self) -> MCPWM1_EVT_OP1_TEB_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op1_teb_st(&mut self) -> MCPWM1_EVT_OP1_TEB_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP1_TEB_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents MCPWM1_evt_op2_teb trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op2_teb_st(&mut self) -> MCPWM1_EVT_OP2_TEB_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op2_teb_st(&mut self) -> MCPWM1_EVT_OP2_TEB_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP2_TEB_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents MCPWM1_evt_f0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f0_st(&mut self) -> MCPWM1_EVT_F0_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f0_st(&mut self) -> MCPWM1_EVT_F0_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F0_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents MCPWM1_evt_f1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f1_st(&mut self) -> MCPWM1_EVT_F1_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f1_st(&mut self) -> MCPWM1_EVT_F1_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F1_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents MCPWM1_evt_f2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f2_st(&mut self) -> MCPWM1_EVT_F2_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f2_st(&mut self) -> MCPWM1_EVT_F2_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F2_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents MCPWM1_evt_f0_clr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f0_clr_st(&mut self) -> MCPWM1_EVT_F0_CLR_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f0_clr_st(&mut self) -> MCPWM1_EVT_F0_CLR_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F0_CLR_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents MCPWM1_evt_f1_clr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f1_clr_st(&mut self) -> MCPWM1_EVT_F1_CLR_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f1_clr_st(&mut self) -> MCPWM1_EVT_F1_CLR_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F1_CLR_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents MCPWM1_evt_f2_clr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_f2_clr_st(&mut self) -> MCPWM1_EVT_F2_CLR_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_f2_clr_st(&mut self) -> MCPWM1_EVT_F2_CLR_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_F2_CLR_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents MCPWM1_evt_tz0_cbc trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz0_cbc_st(&mut self) -> MCPWM1_EVT_TZ0_CBC_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz0_cbc_st(&mut self) -> MCPWM1_EVT_TZ0_CBC_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ0_CBC_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents MCPWM1_evt_tz1_cbc trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz1_cbc_st(&mut self) -> MCPWM1_EVT_TZ1_CBC_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz1_cbc_st(&mut self) -> MCPWM1_EVT_TZ1_CBC_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ1_CBC_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents MCPWM1_evt_tz2_cbc trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz2_cbc_st(&mut self) -> MCPWM1_EVT_TZ2_CBC_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz2_cbc_st(&mut self) -> MCPWM1_EVT_TZ2_CBC_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ2_CBC_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents MCPWM1_evt_tz0_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz0_ost_st(&mut self) -> MCPWM1_EVT_TZ0_OST_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz0_ost_st(&mut self) -> MCPWM1_EVT_TZ0_OST_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ0_OST_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents MCPWM1_evt_tz1_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz1_ost_st(&mut self) -> MCPWM1_EVT_TZ1_OST_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz1_ost_st(&mut self) -> MCPWM1_EVT_TZ1_OST_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ1_OST_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents MCPWM1_evt_tz2_ost trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_tz2_ost_st(&mut self) -> MCPWM1_EVT_TZ2_OST_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_tz2_ost_st(&mut self) -> MCPWM1_EVT_TZ2_OST_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_TZ2_OST_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents MCPWM1_evt_cap0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_cap0_st(&mut self) -> MCPWM1_EVT_CAP0_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_cap0_st(&mut self) -> MCPWM1_EVT_CAP0_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_CAP0_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents MCPWM1_evt_cap1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_cap1_st(&mut self) -> MCPWM1_EVT_CAP1_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_cap1_st(&mut self) -> MCPWM1_EVT_CAP1_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_CAP1_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents MCPWM1_evt_cap2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_cap2_st(&mut self) -> MCPWM1_EVT_CAP2_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_cap2_st(&mut self) -> MCPWM1_EVT_CAP2_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_CAP2_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents MCPWM1_evt_op0_tee1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op0_tee1_st(&mut self) -> MCPWM1_EVT_OP0_TEE1_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op0_tee1_st(&mut self) -> MCPWM1_EVT_OP0_TEE1_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP0_TEE1_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents MCPWM1_evt_op1_tee1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op1_tee1_st(&mut self) -> MCPWM1_EVT_OP1_TEE1_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op1_tee1_st(&mut self) -> MCPWM1_EVT_OP1_TEE1_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP1_TEE1_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents MCPWM1_evt_op2_tee1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn mcpwm1_evt_op2_tee1_st(&mut self) -> MCPWM1_EVT_OP2_TEE1_ST_W<EVT_ST3_SPEC> {
+    pub fn mcpwm1_evt_op2_tee1_st(&mut self) -> MCPWM1_EVT_OP2_TEE1_ST_W<'_, EVT_ST3_SPEC> {
         MCPWM1_EVT_OP2_TEE1_ST_W::new(self, 31)
     }
 }

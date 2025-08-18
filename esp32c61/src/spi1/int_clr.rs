@@ -21,32 +21,32 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The clear bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
-    pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn per_end_int_clr(&mut self) -> PER_END_INT_CLR_W<'_, INT_CLR_SPEC> {
         PER_END_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The clear bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
-    pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn pes_end_int_clr(&mut self) -> PES_END_INT_CLR_W<'_, INT_CLR_SPEC> {
         PES_END_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The clear bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
-    pub fn wpe_end_int_clr(&mut self) -> WPE_END_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn wpe_end_int_clr(&mut self) -> WPE_END_INT_CLR_W<'_, INT_CLR_SPEC> {
         WPE_END_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The clear bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn slv_st_end_int_clr(&mut self) -> SLV_ST_END_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn slv_st_end_int_clr(&mut self) -> SLV_ST_END_INT_CLR_W<'_, INT_CLR_SPEC> {
         SLV_ST_END_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - The clear bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn mst_st_end_int_clr(&mut self) -> MST_ST_END_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn mst_st_end_int_clr(&mut self) -> MST_ST_END_INT_CLR_W<'_, INT_CLR_SPEC> {
         MST_ST_END_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 10 - The status bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
-    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn brown_out_int_clr(&mut self) -> BROWN_OUT_INT_CLR_W<'_, INT_CLR_SPEC> {
         BROWN_OUT_INT_CLR_W::new(self, 10)
     }
 }

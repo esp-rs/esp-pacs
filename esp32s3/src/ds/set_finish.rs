@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_FINISH_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to this register to end DS operation."]
     #[inline(always)]
-    pub fn set_finish(&mut self) -> SET_FINISH_W<SET_FINISH_SPEC> {
+    pub fn set_finish(&mut self) -> SET_FINISH_W<'_, SET_FINISH_SPEC> {
         SET_FINISH_W::new(self, 0)
     }
 }

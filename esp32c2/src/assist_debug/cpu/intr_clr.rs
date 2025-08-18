@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INTR_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - clr sp underlow monitor interrupt"]
     #[inline(always)]
-    pub fn sp_spill_min_clr(&mut self) -> SP_SPILL_MIN_CLR_W<INTR_CLR_SPEC> {
+    pub fn sp_spill_min_clr(&mut self) -> SP_SPILL_MIN_CLR_W<'_, INTR_CLR_SPEC> {
         SP_SPILL_MIN_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - clr sp overflow monitor interrupt"]
     #[inline(always)]
-    pub fn sp_spill_max_clr(&mut self) -> SP_SPILL_MAX_CLR_W<INTR_CLR_SPEC> {
+    pub fn sp_spill_max_clr(&mut self) -> SP_SPILL_MAX_CLR_W<'_, INTR_CLR_SPEC> {
         SP_SPILL_MAX_CLR_W::new(self, 1)
     }
 }

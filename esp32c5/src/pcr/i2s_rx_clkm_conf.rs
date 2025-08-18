@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:19 - Integral I2S clock divider value"]
     #[inline(always)]
-    pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<I2S_RX_CLKM_CONF_SPEC> {
+    pub fn i2s_rx_clkm_div_num(&mut self) -> I2S_RX_CLKM_DIV_NUM_W<'_, I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Configures the clock source of I2S RX.\\\\ 0 (default): XTAL_CLK\\\\ 1: PLL_F240M_CLK\\\\ 2: PLL_F160M_CLK\\\\ 3: I2S_MCLK_in\\\\"]
     #[inline(always)]
-    pub fn i2s_rx_clkm_sel(&mut self) -> I2S_RX_CLKM_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
+    pub fn i2s_rx_clkm_sel(&mut self) -> I2S_RX_CLKM_SEL_W<'_, I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2s_rx function clock"]
     #[inline(always)]
-    pub fn i2s_rx_clkm_en(&mut self) -> I2S_RX_CLKM_EN_W<I2S_RX_CLKM_CONF_SPEC> {
+    pub fn i2s_rx_clkm_en(&mut self) -> I2S_RX_CLKM_EN_W<'_, I2S_RX_CLKM_CONF_SPEC> {
         I2S_RX_CLKM_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures to select master clock.\\\\ 0 (default): I2S_TX_CLK\\\\ 1: I2S_RX_CLK\\\\"]
     #[inline(always)]
-    pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<I2S_RX_CLKM_CONF_SPEC> {
+    pub fn i2s_mclk_sel(&mut self) -> I2S_MCLK_SEL_W<'_, I2S_RX_CLKM_CONF_SPEC> {
         I2S_MCLK_SEL_W::new(self, 23)
     }
 }

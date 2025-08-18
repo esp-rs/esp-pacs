@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures update method for continuous software force of PWM generator%s.\\\\0: Immediately\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: TEA\\\\Bit3 is set to 1: TEB\\\\Bit4 is set to 1: Sync\\\\Bit5 is set to 1: Disable update. TEA/B here and below means an event generated when the timer's value equals to that of register A/B."]
     #[inline(always)]
-    pub fn gen_cntuforce_upmethod(&mut self) -> GEN_CNTUFORCE_UPMETHOD_W<GEN_FORCE_SPEC> {
+    pub fn gen_cntuforce_upmethod(&mut self) -> GEN_CNTUFORCE_UPMETHOD_W<'_, GEN_FORCE_SPEC> {
         GEN_CNTUFORCE_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - Configures continuous software force mode for PWM%s A.\\\\0: Disabled\\\\1: Low\\\\2: High\\\\3: Disabled"]
     #[inline(always)]
-    pub fn gen_a_cntuforce_mode(&mut self) -> GEN_A_CNTUFORCE_MODE_W<GEN_FORCE_SPEC> {
+    pub fn gen_a_cntuforce_mode(&mut self) -> GEN_A_CNTUFORCE_MODE_W<'_, GEN_FORCE_SPEC> {
         GEN_A_CNTUFORCE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Configures continuous software force mode for PWM%s B.\\\\0: Disabled\\\\1: Low\\\\2: High\\\\3: Disabled"]
     #[inline(always)]
-    pub fn gen_b_cntuforce_mode(&mut self) -> GEN_B_CNTUFORCE_MODE_W<GEN_FORCE_SPEC> {
+    pub fn gen_b_cntuforce_mode(&mut self) -> GEN_B_CNTUFORCE_MODE_W<'_, GEN_FORCE_SPEC> {
         GEN_B_CNTUFORCE_MODE_W::new(self, 8)
     }
     #[doc = "Bit 10 - Configures the generation of non-continuous immediate software-force event for PWM%s A, a toggle will trigger a force event."]
     #[inline(always)]
-    pub fn gen_a_nciforce(&mut self) -> GEN_A_NCIFORCE_W<GEN_FORCE_SPEC> {
+    pub fn gen_a_nciforce(&mut self) -> GEN_A_NCIFORCE_W<'_, GEN_FORCE_SPEC> {
         GEN_A_NCIFORCE_W::new(self, 10)
     }
     #[doc = "Bits 11:12 - Configures non-continuous immediate software force mode for PWM%s A.\\\\0: Disabled\\\\1: Low\\\\2: High\\\\3: Disabled"]
     #[inline(always)]
-    pub fn gen_a_nciforce_mode(&mut self) -> GEN_A_NCIFORCE_MODE_W<GEN_FORCE_SPEC> {
+    pub fn gen_a_nciforce_mode(&mut self) -> GEN_A_NCIFORCE_MODE_W<'_, GEN_FORCE_SPEC> {
         GEN_A_NCIFORCE_MODE_W::new(self, 11)
     }
     #[doc = "Bit 13 - Configures the generation of non-continuous immediate software-force event for PWM%s B, a toggle will trigger a force event."]
     #[inline(always)]
-    pub fn gen_b_nciforce(&mut self) -> GEN_B_NCIFORCE_W<GEN_FORCE_SPEC> {
+    pub fn gen_b_nciforce(&mut self) -> GEN_B_NCIFORCE_W<'_, GEN_FORCE_SPEC> {
         GEN_B_NCIFORCE_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - Configures non-continuous immediate software force mode for PWM%s B.\\\\0: Disabled\\\\1: Low\\\\2: High\\\\3: Disabled"]
     #[inline(always)]
-    pub fn gen_b_nciforce_mode(&mut self) -> GEN_B_NCIFORCE_MODE_W<GEN_FORCE_SPEC> {
+    pub fn gen_b_nciforce_mode(&mut self) -> GEN_B_NCIFORCE_MODE_W<'_, GEN_FORCE_SPEC> {
         GEN_B_NCIFORCE_MODE_W::new(self, 14)
     }
 }

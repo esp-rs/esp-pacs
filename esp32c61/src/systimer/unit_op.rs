@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Configures whether or not to update timer UNIT0, i.e., reads the UNIT0 count value to SYSTIMER_TIMER_UNIT0_VALUE_HI and SYSTIMER_TIMER_UNIT0_VALUE_LO. \\\\ 0: No effect\\\\ 1: Update timer UNIT0 \\\\"]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<UNIT_OP_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, UNIT_OP_SPEC> {
         UPDATE_W::new(self, 30)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - enable brownout mode1 reset or not 1: enable 0: disable"]
     #[inline(always)]
-    pub fn bod_mode1_reset_ena(&mut self) -> BOD_MODE1_RESET_ENA_W<BOD_MODE1_CNTL_SPEC> {
+    pub fn bod_mode1_reset_ena(&mut self) -> BOD_MODE1_RESET_ENA_W<'_, BOD_MODE1_CNTL_SPEC> {
         BOD_MODE1_RESET_ENA_W::new(self, 31)
     }
 }

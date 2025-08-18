@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn pro_intrusion_record_reset_n(
         &mut self,
-    ) -> PRO_INTRUSION_RECORD_RESET_N_W<PRO_INTRUSION_CTRL_SPEC> {
+    ) -> PRO_INTRUSION_RECORD_RESET_N_W<'_, PRO_INTRUSION_CTRL_SPEC> {
         PRO_INTRUSION_RECORD_RESET_N_W::new(self, 0)
     }
 }

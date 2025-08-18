@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - Configures high 22 bits of the value that a reload will load onto timer 0 time-base counter. \\\\ Measurement unit: T0_clk \\\\"]
     #[inline(always)]
-    pub fn t0_load_hi(&mut self) -> T0_LOAD_HI_W<LOADHI_SPEC> {
+    pub fn t0_load_hi(&mut self) -> T0_LOAD_HI_W<'_, LOADHI_SPEC> {
         T0_LOAD_HI_W::new(self, 0)
     }
 }

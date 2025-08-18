@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - a"]
     #[inline(always)]
-    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC> {
+    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<'_, QUICK_SENT_SPEC> {
         SINGLE_SEND_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - a"]
     #[inline(always)]
-    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC> {
+    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<'_, QUICK_SENT_SPEC> {
         SINGLE_SEND_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - a"]
     #[inline(always)]
-    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC> {
+    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<'_, QUICK_SENT_SPEC> {
         ALWAYS_SEND_NUM_W::new(self, 4)
     }
     #[doc = "Bit 7 - a"]
     #[inline(always)]
-    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC> {
+    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<'_, QUICK_SENT_SPEC> {
         ALWAYS_SEND_EN_W::new(self, 7)
     }
 }

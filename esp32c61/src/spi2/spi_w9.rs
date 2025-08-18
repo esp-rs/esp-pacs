@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - 32-bit data buffer 0."]
     #[inline(always)]
-    pub fn spi_buf9(&mut self) -> SPI_BUF9_W<SPI_W9_SPEC> {
+    pub fn spi_buf9(&mut self) -> SPI_BUF9_W<'_, SPI_W9_SPEC> {
         SPI_BUF9_W::new(self, 0)
     }
 }

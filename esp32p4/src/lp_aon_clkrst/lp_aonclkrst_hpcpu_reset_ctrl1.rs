@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore0_sw_stall_code(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE0_SW_STALL_CODE_W<LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE0_SW_STALL_CODE_W<'_, LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
         LP_AONCLKRST_HPCORE0_SW_STALL_CODE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - HP core1 software stall when set to 8'h86"]
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore1_sw_stall_code(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE1_SW_STALL_CODE_W<LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE1_SW_STALL_CODE_W<'_, LP_AONCLKRST_HPCPU_RESET_CTRL1_SPEC> {
         LP_AONCLKRST_HPCORE1_SW_STALL_CODE_W::new(self, 24)
     }
 }

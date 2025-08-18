@@ -15,14 +15,14 @@ impl W {
     #[inline(always)]
     pub fn pro_dcache_acs_cnt_clr(
         &mut self,
-    ) -> PRO_DCACHE_ACS_CNT_CLR_W<PRO_CACHE_ACS_CNT_CLR_SPEC> {
+    ) -> PRO_DCACHE_ACS_CNT_CLR_W<'_, PRO_CACHE_ACS_CNT_CLR_SPEC> {
         PRO_DCACHE_ACS_CNT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear icache counter which include IC_PRELOAD_CNT_REG, IC_PRELOAD_MISS_CNT_REG, IBUS0-2_ABANDON_CNT_REG, IBUS0-2_ACS_MISS_CNT_REG and IBUS0-2_ACS_CNT_REG."]
     #[inline(always)]
     pub fn pro_icache_acs_cnt_clr(
         &mut self,
-    ) -> PRO_ICACHE_ACS_CNT_CLR_W<PRO_CACHE_ACS_CNT_CLR_SPEC> {
+    ) -> PRO_ICACHE_ACS_CNT_CLR_W<'_, PRO_CACHE_ACS_CNT_CLR_SPEC> {
         PRO_ICACHE_ACS_CNT_CLR_W::new(self, 1)
     }
 }

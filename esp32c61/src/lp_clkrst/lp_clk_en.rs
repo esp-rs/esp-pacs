@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Configures the clock gate to LP_FAST_CLK 0: Invalid. The clock gate controlled by hardware fsm 1: Force the clk pass clock gate"]
     #[inline(always)]
-    pub fn fast_ori_gate(&mut self) -> FAST_ORI_GATE_W<LP_CLK_EN_SPEC> {
+    pub fn fast_ori_gate(&mut self) -> FAST_ORI_GATE_W<'_, LP_CLK_EN_SPEC> {
         FAST_ORI_GATE_W::new(self, 31)
     }
 }

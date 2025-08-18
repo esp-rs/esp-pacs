@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable i2s apb clock"]
     #[inline(always)]
-    pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<I2S_CONF_SPEC> {
+    pub fn i2s_clk_en(&mut self) -> I2S_CLK_EN_W<'_, I2S_CONF_SPEC> {
         I2S_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset i2s module"]
     #[inline(always)]
-    pub fn i2s_rst_en(&mut self) -> I2S_RST_EN_W<I2S_CONF_SPEC> {
+    pub fn i2s_rst_en(&mut self) -> I2S_RST_EN_W<'_, I2S_CONF_SPEC> {
         I2S_RST_EN_W::new(self, 1)
     }
 }

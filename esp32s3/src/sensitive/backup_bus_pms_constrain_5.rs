@@ -32,7 +32,7 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_spltaddr(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<BACKUP_BUS_PMS_CONSTRAIN_5_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W<'_, BACKUP_BUS_PMS_CONSTRAIN_5_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_SPLTADDR_W::new(self, 0)
     }
 }

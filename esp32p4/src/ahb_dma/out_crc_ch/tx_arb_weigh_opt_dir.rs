@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reserved"]
     #[inline(always)]
-    pub fn tx_arb_weigh_opt_dir(&mut self) -> TX_ARB_WEIGH_OPT_DIR_W<TX_ARB_WEIGH_OPT_DIR_SPEC> {
+    pub fn tx_arb_weigh_opt_dir(
+        &mut self,
+    ) -> TX_ARB_WEIGH_OPT_DIR_W<'_, TX_ARB_WEIGH_OPT_DIR_SPEC> {
         TX_ARB_WEIGH_OPT_DIR_W::new(self, 0)
     }
 }

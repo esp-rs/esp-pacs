@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures the AHB burst mode. \\\\0: SIGNLE \\\\1: INCR(length not defined) \\\\2:INCR4 \\\\4:INCR8 \\\\Others:Invalid"]
     #[inline(always)]
-    pub fn hburst(&mut self) -> HBURST_W<AHB_CONFIG_SPEC> {
+    pub fn hburst(&mut self) -> HBURST_W<'_, AHB_CONFIG_SPEC> {
         HBURST_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Configures the maximum burst length for INCR mode"]
     #[inline(always)]
-    pub fn max_incr(&mut self) -> MAX_INCR_W<AHB_CONFIG_SPEC> {
+    pub fn max_incr(&mut self) -> MAX_INCR_W<'_, AHB_CONFIG_SPEC> {
         MAX_INCR_W::new(self, 3)
     }
 }

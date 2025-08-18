@@ -44,17 +44,19 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn cam_clk_div_num(&mut self) -> CAM_CLK_DIV_NUM_W<PERI_CLK_CTRL120_SPEC> {
+    pub fn cam_clk_div_num(&mut self) -> CAM_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL120_SPEC> {
         CAM_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn cam_clk_div_numerator(&mut self) -> CAM_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL120_SPEC> {
+    pub fn cam_clk_div_numerator(&mut self) -> CAM_CLK_DIV_NUMERATOR_W<'_, PERI_CLK_CTRL120_SPEC> {
         CAM_CLK_DIV_NUMERATOR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn cam_clk_div_denominator(&mut self) -> CAM_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL120_SPEC> {
+    pub fn cam_clk_div_denominator(
+        &mut self,
+    ) -> CAM_CLK_DIV_DENOMINATOR_W<'_, PERI_CLK_CTRL120_SPEC> {
         CAM_CLK_DIV_DENOMINATOR_W::new(self, 16)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the interrupt status of GPIO0 ~ GPIO7.\\\\ 0: No interrupt\\\\ 1: Interrupt is triggered\\\\ Bit0 is corresponding to GPIO0, bit1 is corresponding to GPIO1, and etc. This register is used together LP_IO_PIN0_INT_TYPE in register LP_IO_PIN0_REG.\\\\"]
     #[inline(always)]
-    pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS_SPEC> {
+    pub fn interrupt(&mut self) -> INTERRUPT_W<'_, STATUS_SPEC> {
         INTERRUPT_W::new(self, 0)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<FEED_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn feed(&mut self) -> FEED_W<FEED_SPEC> {
+    pub fn feed(&mut self) -> FEED_W<'_, FEED_SPEC> {
         FEED_W::new(self, 31)
     }
 }

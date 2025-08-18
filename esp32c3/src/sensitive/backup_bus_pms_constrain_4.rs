@@ -94,42 +94,42 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb_wrap(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_WRAP_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_crypto_peri"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_crypto_peri(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_PERI_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_crypto_dma"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_crypto_dma(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_CRYPTO_DMA_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - backup_bus_pms_constrain_apb_adc"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_apb_adc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_APB_ADC_W::new(self, 8)
     }
     #[doc = "Bits 12:13 - backup_bus_pms_constrain_bt_pwr"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_bt_pwr(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_PWR_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - backup_bus_pms_constrain_usb_device"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_usb_device(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W<'_, BACKUP_BUS_PMS_CONSTRAIN_4_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_USB_DEVICE_W::new(self, 14)
     }
 }

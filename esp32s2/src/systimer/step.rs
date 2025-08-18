@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Set system timer increment step when using XTAL_CLK."]
     #[inline(always)]
-    pub fn xtal_step(&mut self) -> XTAL_STEP_W<STEP_SPEC> {
+    pub fn xtal_step(&mut self) -> XTAL_STEP_W<'_, STEP_SPEC> {
         XTAL_STEP_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - Set system timer increment step when using PLL_CLK"]
     #[inline(always)]
-    pub fn pll_step(&mut self) -> PLL_STEP_W<STEP_SPEC> {
+    pub fn pll_step(&mut self) -> PLL_STEP_W<'_, STEP_SPEC> {
         PLL_STEP_W::new(self, 10)
     }
 }

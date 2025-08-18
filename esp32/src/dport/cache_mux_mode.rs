@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn cache_mux_mode(&mut self) -> CACHE_MUX_MODE_W<CACHE_MUX_MODE_SPEC> {
+    pub fn cache_mux_mode(&mut self) -> CACHE_MUX_MODE_W<'_, CACHE_MUX_MODE_SPEC> {
         CACHE_MUX_MODE_W::new(self, 0)
     }
 }

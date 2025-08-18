@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<LOAD_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Write any value to trigger a timer 0 time-base counter reload."]
     #[inline(always)]
-    pub fn t0_load(&mut self) -> T0_LOAD_W<LOAD_SPEC> {
+    pub fn t0_load(&mut self) -> T0_LOAD_W<'_, LOAD_SPEC> {
         T0_LOAD_W::new(self, 0)
     }
 }

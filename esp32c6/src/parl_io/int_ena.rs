@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable TX_FIFO_REMPTY_INTR."]
     #[inline(always)]
-    pub fn tx_fifo_rempty(&mut self) -> TX_FIFO_REMPTY_W<INT_ENA_SPEC> {
+    pub fn tx_fifo_rempty(&mut self) -> TX_FIFO_REMPTY_W<'_, INT_ENA_SPEC> {
         TX_FIFO_REMPTY_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable RX_FIFO_WOVF_INTR."]
     #[inline(always)]
-    pub fn rx_fifo_wovf(&mut self) -> RX_FIFO_WOVF_W<INT_ENA_SPEC> {
+    pub fn rx_fifo_wovf(&mut self) -> RX_FIFO_WOVF_W<'_, INT_ENA_SPEC> {
         RX_FIFO_WOVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable TX_EOF_INTR."]
     #[inline(always)]
-    pub fn tx_eof(&mut self) -> TX_EOF_W<INT_ENA_SPEC> {
+    pub fn tx_eof(&mut self) -> TX_EOF_W<'_, INT_ENA_SPEC> {
         TX_EOF_W::new(self, 2)
     }
 }

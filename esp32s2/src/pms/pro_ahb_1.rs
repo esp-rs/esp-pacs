@@ -87,37 +87,39 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - Configure the split address of RTCSlow_0 for PeriBus2 access."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_spltaddr(&mut self) -> PRO_AHB_RTCSLOW_0_SPLTADDR_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_spltaddr(
+        &mut self,
+    ) -> PRO_AHB_RTCSLOW_0_SPLTADDR_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_SPLTADDR_W::new(self, 0)
     }
     #[doc = "Bit 11 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 low address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_l_f(&mut self) -> PRO_AHB_RTCSLOW_0_L_F_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_l_f(&mut self) -> PRO_AHB_RTCSLOW_0_L_F_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_L_F_W::new(self, 11)
     }
     #[doc = "Bit 12 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 low address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_l_r(&mut self) -> PRO_AHB_RTCSLOW_0_L_R_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_l_r(&mut self) -> PRO_AHB_RTCSLOW_0_L_R_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_L_R_W::new(self, 12)
     }
     #[doc = "Bit 13 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 low address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_l_w(&mut self) -> PRO_AHB_RTCSLOW_0_L_W_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_l_w(&mut self) -> PRO_AHB_RTCSLOW_0_L_W_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_L_W_W::new(self, 13)
     }
     #[doc = "Bit 14 - Setting to 1 grants PeriBus2 permission to fetch RTCSlow_0 high address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_h_f(&mut self) -> PRO_AHB_RTCSLOW_0_H_F_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_h_f(&mut self) -> PRO_AHB_RTCSLOW_0_H_F_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_H_F_W::new(self, 14)
     }
     #[doc = "Bit 15 - Setting to 1 grants PeriBus2 permission to read RTCSlow_0 high address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_h_r(&mut self) -> PRO_AHB_RTCSLOW_0_H_R_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_h_r(&mut self) -> PRO_AHB_RTCSLOW_0_H_R_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_H_R_W::new(self, 15)
     }
     #[doc = "Bit 16 - Setting to 1 grants PeriBus2 permission to write RTCSlow_0 high address region."]
     #[inline(always)]
-    pub fn pro_ahb_rtcslow_0_h_w(&mut self) -> PRO_AHB_RTCSLOW_0_H_W_W<PRO_AHB_1_SPEC> {
+    pub fn pro_ahb_rtcslow_0_h_w(&mut self) -> PRO_AHB_RTCSLOW_0_H_W_W<'_, PRO_AHB_1_SPEC> {
         PRO_AHB_RTCSLOW_0_H_W_W::new(self, 16)
     }
 }

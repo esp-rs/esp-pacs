@@ -65,28 +65,28 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_sdmmc(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_SDMMC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_SDMMC_W<'_, LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
         LP_AONCLKRST_RST_EN_SDMMC_W::new(self, 28)
     }
     #[doc = "Bit 29 - hp sdmmc force norst"]
     #[inline(always)]
     pub fn lp_aonclkrst_force_norst_sdmmc(
         &mut self,
-    ) -> LP_AONCLKRST_FORCE_NORST_SDMMC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_FORCE_NORST_SDMMC_W<'_, LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
         LP_AONCLKRST_FORCE_NORST_SDMMC_W::new(self, 29)
     }
     #[doc = "Bit 30 - hp emac reset en"]
     #[inline(always)]
     pub fn lp_aonclkrst_rst_en_emac(
         &mut self,
-    ) -> LP_AONCLKRST_RST_EN_EMAC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_RST_EN_EMAC_W<'_, LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
         LP_AONCLKRST_RST_EN_EMAC_W::new(self, 30)
     }
     #[doc = "Bit 31 - hp emac force norst"]
     #[inline(always)]
     pub fn lp_aonclkrst_force_norst_emac(
         &mut self,
-    ) -> LP_AONCLKRST_FORCE_NORST_EMAC_W<LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_FORCE_NORST_EMAC_W<'_, LP_AONCLKRST_HP_SDMMC_EMAC_RST_CTRL_SPEC> {
         LP_AONCLKRST_FORCE_NORST_EMAC_W::new(self, 31)
     }
 }

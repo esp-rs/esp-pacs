@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Set this field to choose the key generator deployment mode. 0: random mode. 1: AES mode. 2: ECDH0 mode. 3: ECDH1 mode. 4: recover mode. 5: export mode. 6-7: reserved."]
     #[inline(always)]
-    pub fn kgen_mode(&mut self) -> KGEN_MODE_W<CONF_SPEC> {
+    pub fn kgen_mode(&mut self) -> KGEN_MODE_W<'_, CONF_SPEC> {
         KGEN_MODE_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - Set this field to choose the key purpose. 1: ecdsa_key 2: flash_256_1_key. 3: flash_256_2_key. 4: flash_128_key. 6: hmac_key. 7: ds_key. 8: psram_256_1_key. 9: psram_256_2_key. 10: psram_128_key. Others: reserved."]
     #[inline(always)]
-    pub fn key_purpose(&mut self) -> KEY_PURPOSE_W<CONF_SPEC> {
+    pub fn key_purpose(&mut self) -> KEY_PURPOSE_W<'_, CONF_SPEC> {
         KEY_PURPOSE_W::new(self, 3)
     }
 }

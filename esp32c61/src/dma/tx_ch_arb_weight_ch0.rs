@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn tx_arb_weight_value_ch0(
         &mut self,
-    ) -> TX_ARB_WEIGHT_VALUE_CH0_W<TX_CH_ARB_WEIGHT_CH0_SPEC> {
+    ) -> TX_ARB_WEIGHT_VALUE_CH0_W<'_, TX_CH_ARB_WEIGHT_CH0_SPEC> {
         TX_ARB_WEIGHT_VALUE_CH0_W::new(self, 0)
     }
 }

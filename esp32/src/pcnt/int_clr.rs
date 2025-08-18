@@ -13,49 +13,49 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field.</div>"]
     #[inline(always)]
-    pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CNT_THR_EVENT_U_W::new(self, n)
     }
     #[doc = "Bit 0 - Set this bit to clear channel0 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear channel1 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear channel2 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear channel3 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear channel4 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u4(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u4(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear channel5 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u5(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u5(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear channel6 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u6(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u6(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear channel7 event interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u7(&mut self) -> CNT_THR_EVENT_U_W<INT_CLR_SPEC> {
+    pub fn cnt_thr_event_u7(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_CLR_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 7)
     }
 }

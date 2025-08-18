@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - 0: power down XTAL at high level 1: power down XTAL at low level"]
     #[inline(always)]
-    pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<EXT_XTL_CONF_SPEC> {
+    pub fn xtl_ext_ctr_lv(&mut self) -> XTL_EXT_CTR_LV_W<'_, EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_LV_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable control XTAL by external pads"]
     #[inline(always)]
-    pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<EXT_XTL_CONF_SPEC> {
+    pub fn xtl_ext_ctr_en(&mut self) -> XTL_EXT_CTR_EN_W<'_, EXT_XTL_CONF_SPEC> {
         XTL_EXT_CTR_EN_W::new(self, 31)
     }
 }

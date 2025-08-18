@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_gpio_pad_comp_int_map(
         &mut self,
-    ) -> CORE1_GPIO_PAD_COMP_INT_MAP_W<GPIO_PAD_COMP_INT_MAP_SPEC> {
+    ) -> CORE1_GPIO_PAD_COMP_INT_MAP_W<'_, GPIO_PAD_COMP_INT_MAP_SPEC> {
         CORE1_GPIO_PAD_COMP_INT_MAP_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Set this bit to enable checking the owner attribute of the link descriptor."]
     #[inline(always)]
-    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<OUT_CONF1_SPEC> {
+    pub fn out_check_owner(&mut self) -> OUT_CHECK_OWNER_W<'_, OUT_CONF1_SPEC> {
         OUT_CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Block size of Tx channel 0 when DMA access external SRAM. 0: 16 bytes 1: 32 bytes 2/3:reserved"]
     #[inline(always)]
-    pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<OUT_CONF1_SPEC> {
+    pub fn out_ext_mem_bk_size(&mut self) -> OUT_EXT_MEM_BK_SIZE_W<'_, OUT_CONF1_SPEC> {
         OUT_EXT_MEM_BK_SIZE_W::new(self, 13)
     }
 }

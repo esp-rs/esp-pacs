@@ -186,84 +186,84 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_spi_2(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_2_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_2_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_2_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Core0 access spi_3 permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_spi_3(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_3_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_3_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SPI_3_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Core0 access apb_ctrl permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_apb_ctrl(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_CTRL_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_CTRL_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_APB_CTRL_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Core0 access i2c_ext1 permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_i2c_ext1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT1_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT1_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2C_EXT1_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Core0 access sdio_host permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_sdio_host(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SDIO_HOST_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SDIO_HOST_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_SDIO_HOST_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Core0 access can permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_can(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CAN_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CAN_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_CAN_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Core0 access pwm1 permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_pwm1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWM1_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWM1_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWM1_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Core0 access i2s1 permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_i2s1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2S1_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2S1_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_I2S1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Core0 access uart2 permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_uart2(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UART2_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UART2_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_UART2_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - Core0 access rwbt permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_rwbt(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RWBT_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RWBT_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_RWBT_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - Core0 access wifimac permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_wifimac(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WIFIMAC_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WIFIMAC_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_WIFIMAC_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - Core0 access pwr permission in world0."]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_0_pwr(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWR_W<CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWR_W<'_, CORE_0_PIF_PMS_CONSTRAIN_3_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_0_PWR_W::new(self, 28)
     }
 }

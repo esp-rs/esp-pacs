@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - this field configures the reciprocal of each subwin_pixnum, 20bit fraction"]
     #[inline(always)]
-    pub fn ae_subwin_recip(&mut self) -> AE_SUBWIN_RECIP_W<AE_WIN_RECIPROCAL_SPEC> {
+    pub fn ae_subwin_recip(&mut self) -> AE_SUBWIN_RECIP_W<'_, AE_WIN_RECIPROCAL_SPEC> {
         AE_SUBWIN_RECIP_W::new(self, 0)
     }
 }

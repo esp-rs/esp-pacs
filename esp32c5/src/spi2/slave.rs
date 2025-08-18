@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures SPI clock mode.\\\\ 0: SPI clock is off when CS becomes inactive.\\\\ 1: SPI clock is delayed one cycle after CS becomes inactive.\\\\ 2: SPI clock is delayed two cycles after CS becomes inactive.\\\\ 3: SPI clock is always on.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<SLAVE_SPEC> {
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, SLAVE_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configure clock mode.\\\\ 0: Support SPI clock mode 0 or 2. See Table <a href=\"table:clock_pol_slave\">link</a>.\\\\ 1: Support SPI clock mode 1 or 3. See Table <a href=\"table:clock_pol_slave\">link</a>.\\\\"]
     #[inline(always)]
-    pub fn clk_mode_13(&mut self) -> CLK_MODE_13_W<SLAVE_SPEC> {
+    pub fn clk_mode_13(&mut self) -> CLK_MODE_13_W<'_, SLAVE_SPEC> {
         CLK_MODE_13_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the edge of output data.\\\\ 0: Output data at TSCK rising edge.\\\\ 1: Output data at RSCK rising edge.\\\\"]
     #[inline(always)]
-    pub fn rsck_data_out(&mut self) -> RSCK_DATA_OUT_W<SLAVE_SPEC> {
+    pub fn rsck_data_out(&mut self) -> RSCK_DATA_OUT_W<'_, SLAVE_SPEC> {
         RSCK_DATA_OUT_W::new(self, 3)
     }
     #[doc = "Bit 8 - Configures whether or not to use SPI_SLV_DATA_BITLEN to store the data bit length of Rd_DMA transfer.\\\\ 0: Not use\\\\ 1: Use\\\\"]
     #[inline(always)]
-    pub fn slv_rddma_bitlen_en(&mut self) -> SLV_RDDMA_BITLEN_EN_W<SLAVE_SPEC> {
+    pub fn slv_rddma_bitlen_en(&mut self) -> SLV_RDDMA_BITLEN_EN_W<'_, SLAVE_SPEC> {
         SLV_RDDMA_BITLEN_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to use SPI_SLV_DATA_BITLEN to store the data bit length of Wr_DMA transfer.\\\\ 0: Not use\\\\ 1: Use\\\\"]
     #[inline(always)]
-    pub fn slv_wrdma_bitlen_en(&mut self) -> SLV_WRDMA_BITLEN_EN_W<SLAVE_SPEC> {
+    pub fn slv_wrdma_bitlen_en(&mut self) -> SLV_WRDMA_BITLEN_EN_W<'_, SLAVE_SPEC> {
         SLV_WRDMA_BITLEN_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to use SPI_SLV_DATA_BITLEN to store the data bit length of Rd_BUF transfer.\\\\ 0: Not use\\\\ 1: Use\\\\"]
     #[inline(always)]
-    pub fn slv_rdbuf_bitlen_en(&mut self) -> SLV_RDBUF_BITLEN_EN_W<SLAVE_SPEC> {
+    pub fn slv_rdbuf_bitlen_en(&mut self) -> SLV_RDBUF_BITLEN_EN_W<'_, SLAVE_SPEC> {
         SLV_RDBUF_BITLEN_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to use SPI_SLV_DATA_BITLEN to store the data bit length of Wr_BUF transfer.\\\\ 0: Not use\\\\ 1: Use\\\\"]
     #[inline(always)]
-    pub fn slv_wrbuf_bitlen_en(&mut self) -> SLV_WRBUF_BITLEN_EN_W<SLAVE_SPEC> {
+    pub fn slv_wrbuf_bitlen_en(&mut self) -> SLV_WRBUF_BITLEN_EN_W<'_, SLAVE_SPEC> {
         SLV_WRBUF_BITLEN_EN_W::new(self, 11)
     }
     #[doc = "Bits 22:25 - Configures the magic value of BM table in DMA-controlled configurable segmented transfer."]
     #[inline(always)]
-    pub fn dma_seg_magic_value(&mut self) -> DMA_SEG_MAGIC_VALUE_W<SLAVE_SPEC> {
+    pub fn dma_seg_magic_value(&mut self) -> DMA_SEG_MAGIC_VALUE_W<'_, SLAVE_SPEC> {
         DMA_SEG_MAGIC_VALUE_W::new(self, 22)
     }
     #[doc = "Bit 26 - Configures SPI work mode.\\\\ 0: Master\\\\ 1: Slave\\\\"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<SLAVE_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, SLAVE_SPEC> {
         MODE_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether to reset the SPI clock line, CS line, and data line via software.\\\\ 0: Not reset\\\\ 1: Reset\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn soft_reset(&mut self) -> SOFT_RESET_W<SLAVE_SPEC> {
+    pub fn soft_reset(&mut self) -> SOFT_RESET_W<'_, SLAVE_SPEC> {
         SOFT_RESET_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable the CONF state of current DMA-controlled configurable segmented transfer.\\\\ 0: No effect, which means the current transfer is not a configurable segmented transfer.\\\\ 1: Enable, which means a configurable segmented transfer is started.\\\\"]
     #[inline(always)]
-    pub fn usr_conf(&mut self) -> USR_CONF_W<SLAVE_SPEC> {
+    pub fn usr_conf(&mut self) -> USR_CONF_W<'_, SLAVE_SPEC> {
         USR_CONF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to wait DMA TX data gets ready before starting SPI transfer in master full-duplex transfer.\\\\ 0: Not wait\\\\ 1: Wait\\\\"]
     #[inline(always)]
-    pub fn mst_fd_wait_dma_tx_data(&mut self) -> MST_FD_WAIT_DMA_TX_DATA_W<SLAVE_SPEC> {
+    pub fn mst_fd_wait_dma_tx_data(&mut self) -> MST_FD_WAIT_DMA_TX_DATA_W<'_, SLAVE_SPEC> {
         MST_FD_WAIT_DMA_TX_DATA_W::new(self, 29)
     }
 }

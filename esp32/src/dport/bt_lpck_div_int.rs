@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn bt_lpck_div_num(&mut self) -> BT_LPCK_DIV_NUM_W<BT_LPCK_DIV_INT_SPEC> {
+    pub fn bt_lpck_div_num(&mut self) -> BT_LPCK_DIV_NUM_W<'_, BT_LPCK_DIV_INT_SPEC> {
         BT_LPCK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn btextwakeup_req(&mut self) -> BTEXTWAKEUP_REQ_W<BT_LPCK_DIV_INT_SPEC> {
+    pub fn btextwakeup_req(&mut self) -> BTEXTWAKEUP_REQ_W<'_, BT_LPCK_DIV_INT_SPEC> {
         BTEXTWAKEUP_REQ_W::new(self, 12)
     }
 }

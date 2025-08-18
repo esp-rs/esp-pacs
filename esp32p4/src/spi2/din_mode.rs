@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din0_mode(&mut self) -> DIN0_MODE_W<DIN_MODE_SPEC> {
+    pub fn din0_mode(&mut self) -> DIN0_MODE_W<'_, DIN_MODE_SPEC> {
         DIN0_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din1_mode(&mut self) -> DIN1_MODE_W<DIN_MODE_SPEC> {
+    pub fn din1_mode(&mut self) -> DIN1_MODE_W<'_, DIN_MODE_SPEC> {
         DIN1_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din2_mode(&mut self) -> DIN2_MODE_W<DIN_MODE_SPEC> {
+    pub fn din2_mode(&mut self) -> DIN2_MODE_W<'_, DIN_MODE_SPEC> {
         DIN2_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din3_mode(&mut self) -> DIN3_MODE_W<DIN_MODE_SPEC> {
+    pub fn din3_mode(&mut self) -> DIN3_MODE_W<'_, DIN_MODE_SPEC> {
         DIN3_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din4_mode(&mut self) -> DIN4_MODE_W<DIN_MODE_SPEC> {
+    pub fn din4_mode(&mut self) -> DIN4_MODE_W<'_, DIN_MODE_SPEC> {
         DIN4_MODE_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din5_mode(&mut self) -> DIN5_MODE_W<DIN_MODE_SPEC> {
+    pub fn din5_mode(&mut self) -> DIN5_MODE_W<'_, DIN_MODE_SPEC> {
         DIN5_MODE_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din6_mode(&mut self) -> DIN6_MODE_W<DIN_MODE_SPEC> {
+    pub fn din6_mode(&mut self) -> DIN6_MODE_W<'_, DIN_MODE_SPEC> {
         DIN6_MODE_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - the input signals are delayed by SPI module clock cycles, 0: input without delayed, 1: input with the posedge of clk_apb,2 input with the negedge of clk_apb, 3: input with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn din7_mode(&mut self) -> DIN7_MODE_W<DIN_MODE_SPEC> {
+    pub fn din7_mode(&mut self) -> DIN7_MODE_W<'_, DIN_MODE_SPEC> {
         DIN7_MODE_W::new(self, 14)
     }
     #[doc = "Bit 16 - 1:enable hclk in SPI input timing module. 0: disable it. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn timing_hclk_active(&mut self) -> TIMING_HCLK_ACTIVE_W<DIN_MODE_SPEC> {
+    pub fn timing_hclk_active(&mut self) -> TIMING_HCLK_ACTIVE_W<'_, DIN_MODE_SPEC> {
         TIMING_HCLK_ACTIVE_W::new(self, 16)
     }
 }

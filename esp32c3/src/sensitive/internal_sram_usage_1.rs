@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_usage_cpu_cache(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+    ) -> INTERNAL_SRAM_USAGE_CPU_CACHE_W<'_, INTERNAL_SRAM_USAGE_1_SPEC> {
         INTERNAL_SRAM_USAGE_CPU_CACHE_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - internal_sram_usage_cpu_sram"]
     #[inline(always)]
     pub fn internal_sram_usage_cpu_sram(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<INTERNAL_SRAM_USAGE_1_SPEC> {
+    ) -> INTERNAL_SRAM_USAGE_CPU_SRAM_W<'_, INTERNAL_SRAM_USAGE_1_SPEC> {
         INTERNAL_SRAM_USAGE_CPU_SRAM_W::new(self, 1)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - TWAI FD timer pre-load value register, high part. If timestamp valid bit-width less than 33, this field is ignored."]
     #[inline(always)]
-    pub fn timer_ld_val_h(&mut self) -> TIMER_LD_VAL_H_W<TIMER_LD_VAL_H_SPEC> {
+    pub fn timer_ld_val_h(&mut self) -> TIMER_LD_VAL_H_W<'_, TIMER_LD_VAL_H_SPEC> {
         TIMER_LD_VAL_H_W::new(self, 0)
     }
 }

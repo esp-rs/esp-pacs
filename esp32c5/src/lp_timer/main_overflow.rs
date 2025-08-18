@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<MAIN_OVERFLOW_SPEC> {
 impl W {
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn main_timer_alarm_load(&mut self) -> MAIN_TIMER_ALARM_LOAD_W<MAIN_OVERFLOW_SPEC> {
+    pub fn main_timer_alarm_load(&mut self) -> MAIN_TIMER_ALARM_LOAD_W<'_, MAIN_OVERFLOW_SPEC> {
         MAIN_TIMER_ALARM_LOAD_W::new(self, 31)
     }
 }

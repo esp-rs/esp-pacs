@@ -57,22 +57,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - The driver of SPI_CLK PAD is controlled by the bits SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to external RAM."]
     #[inline(always)]
-    pub fn spi_smem_spiclk_fun_drv(&mut self) -> SPI_SMEM_SPICLK_FUN_DRV_W<DATE_SPEC> {
+    pub fn spi_smem_spiclk_fun_drv(&mut self) -> SPI_SMEM_SPICLK_FUN_DRV_W<'_, DATE_SPEC> {
         SPI_SMEM_SPICLK_FUN_DRV_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] when the bit SPI_SPICLK_PAD_DRV_CTL_EN is set and MSPI accesses to flash."]
     #[inline(always)]
-    pub fn spi_fmem_spiclk_fun_drv(&mut self) -> SPI_FMEM_SPICLK_FUN_DRV_W<DATE_SPEC> {
+    pub fn spi_fmem_spiclk_fun_drv(&mut self) -> SPI_FMEM_SPICLK_FUN_DRV_W<'_, DATE_SPEC> {
         SPI_FMEM_SPICLK_FUN_DRV_W::new(self, 2)
     }
     #[doc = "Bit 4 - SPI_CLK PAD driver control signal. 1: The driver of SPI_CLK PAD is controlled by the bits SPI_FMEM_SPICLK_FUN_DRV\\[1:0\\] and SPI_SMEM_SPICLK_FUN_DRV\\[1:0\\]. 0: The driver of SPI_CLK PAD is controlled by the bits IO_MUX_FUNC_DRV\\[1:0\\] of SPICLK PAD."]
     #[inline(always)]
-    pub fn spi_spiclk_pad_drv_ctl_en(&mut self) -> SPI_SPICLK_PAD_DRV_CTL_EN_W<DATE_SPEC> {
+    pub fn spi_spiclk_pad_drv_ctl_en(&mut self) -> SPI_SPICLK_PAD_DRV_CTL_EN_W<'_, DATE_SPEC> {
         SPI_SPICLK_PAD_DRV_CTL_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:27 - SPI register version."]
     #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
+    pub fn date(&mut self) -> DATE_W<'_, DATE_SPEC> {
         DATE_W::new(self, 5)
     }
 }

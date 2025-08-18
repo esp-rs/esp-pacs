@@ -130,57 +130,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - NA"]
     #[inline(always)]
-    pub fn ch1_ar_prot(&mut self) -> CH1_AR_PROT_W<CTL1_SPEC> {
+    pub fn ch1_ar_prot(&mut self) -> CH1_AR_PROT_W<'_, CTL1_SPEC> {
         CH1_AR_PROT_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - NA"]
     #[inline(always)]
-    pub fn ch1_aw_prot(&mut self) -> CH1_AW_PROT_W<CTL1_SPEC> {
+    pub fn ch1_aw_prot(&mut self) -> CH1_AW_PROT_W<'_, CTL1_SPEC> {
         CH1_AW_PROT_W::new(self, 3)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    pub fn ch1_arlen_en(&mut self) -> CH1_ARLEN_EN_W<CTL1_SPEC> {
+    pub fn ch1_arlen_en(&mut self) -> CH1_ARLEN_EN_W<'_, CTL1_SPEC> {
         CH1_ARLEN_EN_W::new(self, 6)
     }
     #[doc = "Bits 7:14 - NA"]
     #[inline(always)]
-    pub fn ch1_arlen(&mut self) -> CH1_ARLEN_W<CTL1_SPEC> {
+    pub fn ch1_arlen(&mut self) -> CH1_ARLEN_W<'_, CTL1_SPEC> {
         CH1_ARLEN_W::new(self, 7)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    pub fn ch1_awlen_en(&mut self) -> CH1_AWLEN_EN_W<CTL1_SPEC> {
+    pub fn ch1_awlen_en(&mut self) -> CH1_AWLEN_EN_W<'_, CTL1_SPEC> {
         CH1_AWLEN_EN_W::new(self, 15)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    pub fn ch1_awlen(&mut self) -> CH1_AWLEN_W<CTL1_SPEC> {
+    pub fn ch1_awlen(&mut self) -> CH1_AWLEN_W<'_, CTL1_SPEC> {
         CH1_AWLEN_W::new(self, 16)
     }
     #[doc = "Bit 24 - NA"]
     #[inline(always)]
-    pub fn ch1_src_stat_en(&mut self) -> CH1_SRC_STAT_EN_W<CTL1_SPEC> {
+    pub fn ch1_src_stat_en(&mut self) -> CH1_SRC_STAT_EN_W<'_, CTL1_SPEC> {
         CH1_SRC_STAT_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - NA"]
     #[inline(always)]
-    pub fn ch1_dst_stat_en(&mut self) -> CH1_DST_STAT_EN_W<CTL1_SPEC> {
+    pub fn ch1_dst_stat_en(&mut self) -> CH1_DST_STAT_EN_W<'_, CTL1_SPEC> {
         CH1_DST_STAT_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - NA"]
     #[inline(always)]
-    pub fn ch1_ioc_blktfr(&mut self) -> CH1_IOC_BLKTFR_W<CTL1_SPEC> {
+    pub fn ch1_ioc_blktfr(&mut self) -> CH1_IOC_BLKTFR_W<'_, CTL1_SPEC> {
         CH1_IOC_BLKTFR_W::new(self, 26)
     }
     #[doc = "Bit 30 - NA"]
     #[inline(always)]
-    pub fn ch1_shadowreg_or_lli_last(&mut self) -> CH1_SHADOWREG_OR_LLI_LAST_W<CTL1_SPEC> {
+    pub fn ch1_shadowreg_or_lli_last(&mut self) -> CH1_SHADOWREG_OR_LLI_LAST_W<'_, CTL1_SPEC> {
         CH1_SHADOWREG_OR_LLI_LAST_W::new(self, 30)
     }
     #[doc = "Bit 31 - NA"]
     #[inline(always)]
-    pub fn ch1_shadowreg_or_lli_valid(&mut self) -> CH1_SHADOWREG_OR_LLI_VALID_W<CTL1_SPEC> {
+    pub fn ch1_shadowreg_or_lli_valid(&mut self) -> CH1_SHADOWREG_OR_LLI_VALID_W<'_, CTL1_SPEC> {
         CH1_SHADOWREG_OR_LLI_VALID_W::new(self, 31)
     }
 }

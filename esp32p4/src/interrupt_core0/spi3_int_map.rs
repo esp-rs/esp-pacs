@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_spi3_int_map(&mut self) -> CORE0_SPI3_INT_MAP_W<SPI3_INT_MAP_SPEC> {
+    pub fn core0_spi3_int_map(&mut self) -> CORE0_SPI3_INT_MAP_W<'_, SPI3_INT_MAP_SPEC> {
         CORE0_SPI3_INT_MAP_W::new(self, 0)
     }
 }

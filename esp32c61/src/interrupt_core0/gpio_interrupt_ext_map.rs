@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn gpio_interrupt_ext_map(
         &mut self,
-    ) -> GPIO_INTERRUPT_EXT_MAP_W<GPIO_INTERRUPT_EXT_MAP_SPEC> {
+    ) -> GPIO_INTERRUPT_EXT_MAP_W<'_, GPIO_INTERRUPT_EXT_MAP_SPEC> {
         GPIO_INTERRUPT_EXT_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn gpio_interrupt_ext_pass_in_sec(
         &mut self,
-    ) -> GPIO_INTERRUPT_EXT_PASS_IN_SEC_W<GPIO_INTERRUPT_EXT_MAP_SPEC> {
+    ) -> GPIO_INTERRUPT_EXT_PASS_IN_SEC_W<'_, GPIO_INTERRUPT_EXT_MAP_SPEC> {
         GPIO_INTERRUPT_EXT_PASS_IN_SEC_W::new(self, 8)
     }
 }

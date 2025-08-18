@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures the propagation segment of nominal bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn prop(&mut self) -> PROP_W<BTR_SPEC> {
+    pub fn prop(&mut self) -> PROP_W<'_, BTR_SPEC> {
         PROP_W::new(self, 0)
     }
     #[doc = "Bits 7:12 - Configures the phase 1 segment of nominal bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn ph1(&mut self) -> PH1_W<BTR_SPEC> {
+    pub fn ph1(&mut self) -> PH1_W<'_, BTR_SPEC> {
         PH1_W::new(self, 7)
     }
     #[doc = "Bits 13:18 - Configures the phase 2 segment of nominal bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn ph2(&mut self) -> PH2_W<BTR_SPEC> {
+    pub fn ph2(&mut self) -> PH2_W<'_, BTR_SPEC> {
         PH2_W::new(self, 13)
     }
     #[doc = "Bits 19:26 - Configures the baud-rate prescaler of nominal bit rate. Measurement unit: cycle of core clock."]
     #[inline(always)]
-    pub fn brp(&mut self) -> BRP_W<BTR_SPEC> {
+    pub fn brp(&mut self) -> BRP_W<'_, BTR_SPEC> {
         BRP_W::new(self, 19)
     }
     #[doc = "Bits 27:31 - Represents the synchronization jump width in nominal bit time. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn sjw(&mut self) -> SJW_W<BTR_SPEC> {
+    pub fn sjw(&mut self) -> SJW_W<'_, BTR_SPEC> {
         SJW_W::new(self, 27)
     }
 }

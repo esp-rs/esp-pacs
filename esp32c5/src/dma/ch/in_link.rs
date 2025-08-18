@@ -38,22 +38,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to return to current receive descriptor's address when there are some errors in current receiving data.\\\\0: Not return\\\\1: Return\\\\"]
     #[inline(always)]
-    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<IN_LINK_SPEC> {
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<'_, IN_LINK_SPEC> {
         INLINK_AUTO_RET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to stop AHB_DMA's RX channel %s from receiving data.\\\\0: Invalid. No effect\\\\1: Stop\\\\"]
     #[inline(always)]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<IN_LINK_SPEC> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<'_, IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable AHB_DMA's RX channel %s for data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<IN_LINK_SPEC> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<'_, IN_LINK_SPEC> {
         INLINK_START_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to restart RX channel %s for AHB_DMA transfer.\\\\0: Invalid. No effect\\\\1: Restart\\\\"]
     #[inline(always)]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<IN_LINK_SPEC> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<'_, IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 3)
     }
 }

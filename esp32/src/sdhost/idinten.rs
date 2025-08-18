@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit Interrupt Enable. When set with Normal Interrupt Summary Enable, Transmit Interrupt is enabled. When reset, Transmit Interrupt is disabled."]
     #[inline(always)]
-    pub fn ti(&mut self) -> TI_W<IDINTEN_SPEC> {
+    pub fn ti(&mut self) -> TI_W<'_, IDINTEN_SPEC> {
         TI_W::new(self, 0)
     }
     #[doc = "Bit 1 - Receive Interrupt Enable. When set with Normal Interrupt Summary Enable, Receive Interrupt is enabled. When reset, Receive Interrupt is disabled."]
     #[inline(always)]
-    pub fn ri(&mut self) -> RI_W<IDINTEN_SPEC> {
+    pub fn ri(&mut self) -> RI_W<'_, IDINTEN_SPEC> {
         RI_W::new(self, 1)
     }
     #[doc = "Bit 2 - Fatal Bus Error Enable. When set with Abnormal Interrupt Summary Enable, the Fatal Bus Error Interrupt is enabled. When reset, Fatal Bus Error Enable Interrupt is disabled."]
     #[inline(always)]
-    pub fn fbe(&mut self) -> FBE_W<IDINTEN_SPEC> {
+    pub fn fbe(&mut self) -> FBE_W<'_, IDINTEN_SPEC> {
         FBE_W::new(self, 2)
     }
     #[doc = "Bit 4 - Descriptor Unavailable Interrupt. When set along with Abnormal Interrupt Summary Enable, the DU interrupt is enabled."]
     #[inline(always)]
-    pub fn du(&mut self) -> DU_W<IDINTEN_SPEC> {
+    pub fn du(&mut self) -> DU_W<'_, IDINTEN_SPEC> {
         DU_W::new(self, 4)
     }
     #[doc = "Bit 5 - Card Error summary Interrupt Enable. When set, it enables the Card Interrupt summary."]
     #[inline(always)]
-    pub fn ces(&mut self) -> CES_W<IDINTEN_SPEC> {
+    pub fn ces(&mut self) -> CES_W<'_, IDINTEN_SPEC> {
         CES_W::new(self, 5)
     }
     #[doc = "Bit 8 - Normal Interrupt Summary Enable. When set, a normal interrupt is enabled. When reset, a normal interrupt is disabled. This bit enables the following bits: IDINTEN\\[0\\]: Transmit Interrupt; IDINTEN\\[1\\]: Receive Interrupt."]
     #[inline(always)]
-    pub fn ni(&mut self) -> NI_W<IDINTEN_SPEC> {
+    pub fn ni(&mut self) -> NI_W<'_, IDINTEN_SPEC> {
         NI_W::new(self, 8)
     }
     #[doc = "Bit 9 - Abnormal Interrupt Summary Enable. When set, an abnormal interrupt is enabled. This bit enables the following bits: IDINTEN\\[2\\]: Fatal Bus Error Interrupt; IDINTEN\\[4\\]: DU Interrupt."]
     #[inline(always)]
-    pub fn ai(&mut self) -> AI_W<IDINTEN_SPEC> {
+    pub fn ai(&mut self) -> AI_W<'_, IDINTEN_SPEC> {
         AI_W::new(self, 9)
     }
 }

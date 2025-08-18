@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for internal DMA access interrupt."]
     #[inline(always)]
-    pub fn dma_apb_i_ilg_clr(&mut self) -> DMA_APB_I_ILG_CLR_W<DMA_APB_I_2_SPEC> {
+    pub fn dma_apb_i_ilg_clr(&mut self) -> DMA_APB_I_ILG_CLR_W<'_, DMA_APB_I_2_SPEC> {
         DMA_APB_I_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for internal DMA access interrupt."]
     #[inline(always)]
-    pub fn dma_apb_i_ilg_en(&mut self) -> DMA_APB_I_ILG_EN_W<DMA_APB_I_2_SPEC> {
+    pub fn dma_apb_i_ilg_en(&mut self) -> DMA_APB_I_ILG_EN_W<'_, DMA_APB_I_2_SPEC> {
         DMA_APB_I_ILG_EN_W::new(self, 1)
     }
 }

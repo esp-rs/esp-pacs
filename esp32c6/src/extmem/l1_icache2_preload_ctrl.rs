@@ -50,7 +50,7 @@ impl W {
     #[inline(always)]
     pub fn l1_icache2_preload_ena(
         &mut self,
-    ) -> L1_ICACHE2_PRELOAD_ENA_W<L1_ICACHE2_PRELOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE2_PRELOAD_ENA_W<'_, L1_ICACHE2_PRELOAD_CTRL_SPEC> {
         L1_ICACHE2_PRELOAD_ENA_W::new(self, 0)
     }
 }

@@ -19,27 +19,35 @@ impl core::fmt::Debug for crate::generic::Reg<CACHE_ACS_FAIL_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The bit is used to clear interrupt of access fail that occurs in L1-ICache0 due to cpu accesses L1-ICache0."]
     #[inline(always)]
-    pub fn icache0_fail_int_clr(&mut self) -> ICACHE0_FAIL_INT_CLR_W<CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    pub fn icache0_fail_int_clr(
+        &mut self,
+    ) -> ICACHE0_FAIL_INT_CLR_W<'_, CACHE_ACS_FAIL_INT_CLR_SPEC> {
         ICACHE0_FAIL_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear interrupt of access fail that occurs in L1-ICache1 due to cpu accesses L1-ICache1."]
     #[inline(always)]
-    pub fn icache1_fail_int_clr(&mut self) -> ICACHE1_FAIL_INT_CLR_W<CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    pub fn icache1_fail_int_clr(
+        &mut self,
+    ) -> ICACHE1_FAIL_INT_CLR_W<'_, CACHE_ACS_FAIL_INT_CLR_SPEC> {
         ICACHE1_FAIL_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn icache2_fail_int_clr(&mut self) -> ICACHE2_FAIL_INT_CLR_W<CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    pub fn icache2_fail_int_clr(
+        &mut self,
+    ) -> ICACHE2_FAIL_INT_CLR_W<'_, CACHE_ACS_FAIL_INT_CLR_SPEC> {
         ICACHE2_FAIL_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn icache3_fail_int_clr(&mut self) -> ICACHE3_FAIL_INT_CLR_W<CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    pub fn icache3_fail_int_clr(
+        &mut self,
+    ) -> ICACHE3_FAIL_INT_CLR_W<'_, CACHE_ACS_FAIL_INT_CLR_SPEC> {
         ICACHE3_FAIL_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - The bit is used to clear interrupt of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
     #[inline(always)]
-    pub fn cache_fail_int_clr(&mut self) -> CACHE_FAIL_INT_CLR_W<CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    pub fn cache_fail_int_clr(&mut self) -> CACHE_FAIL_INT_CLR_W<'_, CACHE_ACS_FAIL_INT_CLR_SPEC> {
         CACHE_FAIL_INT_CLR_W::new(self, 4)
     }
 }

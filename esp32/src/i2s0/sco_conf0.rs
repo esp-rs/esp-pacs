@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W<SCO_CONF0_SPEC> {
+    pub fn sco_with_i2s_en(&mut self) -> SCO_WITH_I2S_EN_W<'_, SCO_CONF0_SPEC> {
         SCO_WITH_I2S_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W<SCO_CONF0_SPEC> {
+    pub fn sco_no_i2s_en(&mut self) -> SCO_NO_I2S_EN_W<'_, SCO_CONF0_SPEC> {
         SCO_NO_I2S_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W<SCO_CONF0_SPEC> {
+    pub fn cvsd_enc_start(&mut self) -> CVSD_ENC_START_W<'_, SCO_CONF0_SPEC> {
         CVSD_ENC_START_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W<SCO_CONF0_SPEC> {
+    pub fn cvsd_enc_reset(&mut self) -> CVSD_ENC_RESET_W<'_, SCO_CONF0_SPEC> {
         CVSD_ENC_RESET_W::new(self, 3)
     }
 }

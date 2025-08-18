@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - csv version"]
     #[inline(always)]
-    pub fn ver_data(&mut self) -> VER_DATA_W<VER_DATE_SPEC> {
+    pub fn ver_data(&mut self) -> VER_DATA_W<'_, VER_DATE_SPEC> {
         VER_DATA_W::new(self, 0)
     }
 }

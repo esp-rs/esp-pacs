@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<ENABLE_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - GPIO output enable set register for GPIO0-31"]
     #[inline(always)]
-    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<ENABLE_W1TS_SPEC> {
+    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<'_, ENABLE_W1TS_SPEC> {
         ENABLE_W1TS_W::new(self, 0)
     }
 }

@@ -33,62 +33,68 @@ impl core::fmt::Debug for crate::generic::Reg<LP_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_wakeup(&mut self) -> LP_CPU_WAKEUP_W<LP_INT_CLR_SPEC> {
+    pub fn lp_cpu_wakeup(&mut self) -> LP_CPU_WAKEUP_W<'_, LP_INT_CLR_SPEC> {
         LP_CPU_WAKEUP_W::new(self, 20)
     }
     #[doc = "Bit 21 - need_des"]
     #[inline(always)]
-    pub fn modem_switch_active_end(&mut self) -> MODEM_SWITCH_ACTIVE_END_W<LP_INT_CLR_SPEC> {
+    pub fn modem_switch_active_end(&mut self) -> MODEM_SWITCH_ACTIVE_END_W<'_, LP_INT_CLR_SPEC> {
         MODEM_SWITCH_ACTIVE_END_W::new(self, 21)
     }
     #[doc = "Bit 22 - need_des"]
     #[inline(always)]
-    pub fn sleep_switch_active_end(&mut self) -> SLEEP_SWITCH_ACTIVE_END_W<LP_INT_CLR_SPEC> {
+    pub fn sleep_switch_active_end(&mut self) -> SLEEP_SWITCH_ACTIVE_END_W<'_, LP_INT_CLR_SPEC> {
         SLEEP_SWITCH_ACTIVE_END_W::new(self, 22)
     }
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
-    pub fn sleep_switch_modem_end(&mut self) -> SLEEP_SWITCH_MODEM_END_W<LP_INT_CLR_SPEC> {
+    pub fn sleep_switch_modem_end(&mut self) -> SLEEP_SWITCH_MODEM_END_W<'_, LP_INT_CLR_SPEC> {
         SLEEP_SWITCH_MODEM_END_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn modem_switch_sleep_end(&mut self) -> MODEM_SWITCH_SLEEP_END_W<LP_INT_CLR_SPEC> {
+    pub fn modem_switch_sleep_end(&mut self) -> MODEM_SWITCH_SLEEP_END_W<'_, LP_INT_CLR_SPEC> {
         MODEM_SWITCH_SLEEP_END_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn active_switch_sleep_end(&mut self) -> ACTIVE_SWITCH_SLEEP_END_W<LP_INT_CLR_SPEC> {
+    pub fn active_switch_sleep_end(&mut self) -> ACTIVE_SWITCH_SLEEP_END_W<'_, LP_INT_CLR_SPEC> {
         ACTIVE_SWITCH_SLEEP_END_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn modem_switch_active_start(&mut self) -> MODEM_SWITCH_ACTIVE_START_W<LP_INT_CLR_SPEC> {
+    pub fn modem_switch_active_start(
+        &mut self,
+    ) -> MODEM_SWITCH_ACTIVE_START_W<'_, LP_INT_CLR_SPEC> {
         MODEM_SWITCH_ACTIVE_START_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn sleep_switch_active_start(&mut self) -> SLEEP_SWITCH_ACTIVE_START_W<LP_INT_CLR_SPEC> {
+    pub fn sleep_switch_active_start(
+        &mut self,
+    ) -> SLEEP_SWITCH_ACTIVE_START_W<'_, LP_INT_CLR_SPEC> {
         SLEEP_SWITCH_ACTIVE_START_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn sleep_switch_modem_start(&mut self) -> SLEEP_SWITCH_MODEM_START_W<LP_INT_CLR_SPEC> {
+    pub fn sleep_switch_modem_start(&mut self) -> SLEEP_SWITCH_MODEM_START_W<'_, LP_INT_CLR_SPEC> {
         SLEEP_SWITCH_MODEM_START_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn modem_switch_sleep_start(&mut self) -> MODEM_SWITCH_SLEEP_START_W<LP_INT_CLR_SPEC> {
+    pub fn modem_switch_sleep_start(&mut self) -> MODEM_SWITCH_SLEEP_START_W<'_, LP_INT_CLR_SPEC> {
         MODEM_SWITCH_SLEEP_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn active_switch_sleep_start(&mut self) -> ACTIVE_SWITCH_SLEEP_START_W<LP_INT_CLR_SPEC> {
+    pub fn active_switch_sleep_start(
+        &mut self,
+    ) -> ACTIVE_SWITCH_SLEEP_START_W<'_, LP_INT_CLR_SPEC> {
         ACTIVE_SWITCH_SLEEP_START_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn hp_sw_trigger(&mut self) -> HP_SW_TRIGGER_W<LP_INT_CLR_SPEC> {
+    pub fn hp_sw_trigger(&mut self) -> HP_SW_TRIGGER_W<'_, LP_INT_CLR_SPEC> {
         HP_SW_TRIGGER_W::new(self, 31)
     }
 }

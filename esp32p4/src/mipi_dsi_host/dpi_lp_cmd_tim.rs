@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    pub fn invact_lpcmd_time(&mut self) -> INVACT_LPCMD_TIME_W<DPI_LP_CMD_TIM_SPEC> {
+    pub fn invact_lpcmd_time(&mut self) -> INVACT_LPCMD_TIME_W<'_, DPI_LP_CMD_TIM_SPEC> {
         INVACT_LPCMD_TIME_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    pub fn outvact_lpcmd_time(&mut self) -> OUTVACT_LPCMD_TIME_W<DPI_LP_CMD_TIM_SPEC> {
+    pub fn outvact_lpcmd_time(&mut self) -> OUTVACT_LPCMD_TIME_W<'_, DPI_LP_CMD_TIM_SPEC> {
         OUTVACT_LPCMD_TIME_W::new(self, 16)
     }
 }

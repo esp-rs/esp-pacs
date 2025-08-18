@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to continue GCM operation."]
     #[inline(always)]
-    pub fn continue_(&mut self) -> CONTINUE_W<CONTINUE_SPEC> {
+    pub fn continue_(&mut self) -> CONTINUE_W<'_, CONTINUE_SPEC> {
         CONTINUE_W::new(self, 0)
     }
 }

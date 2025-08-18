@@ -314,152 +314,152 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable timer0 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<EVT_EN_SPEC> {
+    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<'_, EVT_EN_SPEC> {
         TIMER0_STOP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable timer1 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<EVT_EN_SPEC> {
+    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<'_, EVT_EN_SPEC> {
         TIMER1_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable timer2 stop event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<EVT_EN_SPEC> {
+    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<'_, EVT_EN_SPEC> {
         TIMER2_STOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to enable timer0 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<EVT_EN_SPEC> {
+    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<'_, EVT_EN_SPEC> {
         TIMER0_TEZ_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable timer1 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<EVT_EN_SPEC> {
+    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<'_, EVT_EN_SPEC> {
         TIMER1_TEZ_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable timer2 equal zero event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<EVT_EN_SPEC> {
+    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<'_, EVT_EN_SPEC> {
         TIMER2_TEZ_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable timer0 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<EVT_EN_SPEC> {
+    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<'_, EVT_EN_SPEC> {
         TIMER0_TEP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether or not to enable timer1 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<EVT_EN_SPEC> {
+    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<'_, EVT_EN_SPEC> {
         TIMER1_TEP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether or not to enable timer2 equal period event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<EVT_EN_SPEC> {
+    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<'_, EVT_EN_SPEC> {
         TIMER2_TEP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable PWM generator0 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op0_tea(&mut self) -> OP0_TEA_W<EVT_EN_SPEC> {
+    pub fn op0_tea(&mut self) -> OP0_TEA_W<'_, EVT_EN_SPEC> {
         OP0_TEA_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to enable PWM generator1 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op1_tea(&mut self) -> OP1_TEA_W<EVT_EN_SPEC> {
+    pub fn op1_tea(&mut self) -> OP1_TEA_W<'_, EVT_EN_SPEC> {
         OP1_TEA_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to enable PWM generator2 timer equal a event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op2_tea(&mut self) -> OP2_TEA_W<EVT_EN_SPEC> {
+    pub fn op2_tea(&mut self) -> OP2_TEA_W<'_, EVT_EN_SPEC> {
         OP2_TEA_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to enable PWM generator0 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op0_teb(&mut self) -> OP0_TEB_W<EVT_EN_SPEC> {
+    pub fn op0_teb(&mut self) -> OP0_TEB_W<'_, EVT_EN_SPEC> {
         OP0_TEB_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to enable PWM generator1 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op1_teb(&mut self) -> OP1_TEB_W<EVT_EN_SPEC> {
+    pub fn op1_teb(&mut self) -> OP1_TEB_W<'_, EVT_EN_SPEC> {
         OP1_TEB_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures whether or not to enable PWM generator2 timer equal b event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn op2_teb(&mut self) -> OP2_TEB_W<EVT_EN_SPEC> {
+    pub fn op2_teb(&mut self) -> OP2_TEB_W<'_, EVT_EN_SPEC> {
         OP2_TEB_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable fault0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f0(&mut self) -> F0_W<EVT_EN_SPEC> {
+    pub fn f0(&mut self) -> F0_W<'_, EVT_EN_SPEC> {
         F0_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures whether or not to enable fault1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f1(&mut self) -> F1_W<EVT_EN_SPEC> {
+    pub fn f1(&mut self) -> F1_W<'_, EVT_EN_SPEC> {
         F1_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable fault2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f2(&mut self) -> F2_W<EVT_EN_SPEC> {
+    pub fn f2(&mut self) -> F2_W<'_, EVT_EN_SPEC> {
         F2_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to enable fault0 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f0_clr(&mut self) -> F0_CLR_W<EVT_EN_SPEC> {
+    pub fn f0_clr(&mut self) -> F0_CLR_W<'_, EVT_EN_SPEC> {
         F0_CLR_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to enable fault1 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f1_clr(&mut self) -> F1_CLR_W<EVT_EN_SPEC> {
+    pub fn f1_clr(&mut self) -> F1_CLR_W<'_, EVT_EN_SPEC> {
         F1_CLR_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to enable fault2 clear event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn f2_clr(&mut self) -> F2_CLR_W<EVT_EN_SPEC> {
+    pub fn f2_clr(&mut self) -> F2_CLR_W<'_, EVT_EN_SPEC> {
         F2_CLR_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to enable cycle-by-cycle trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz0_cbc(&mut self) -> TZ0_CBC_W<EVT_EN_SPEC> {
+    pub fn tz0_cbc(&mut self) -> TZ0_CBC_W<'_, EVT_EN_SPEC> {
         TZ0_CBC_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to enable cycle-by-cycle trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz1_cbc(&mut self) -> TZ1_CBC_W<EVT_EN_SPEC> {
+    pub fn tz1_cbc(&mut self) -> TZ1_CBC_W<'_, EVT_EN_SPEC> {
         TZ1_CBC_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to enable cycle-by-cycle trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz2_cbc(&mut self) -> TZ2_CBC_W<EVT_EN_SPEC> {
+    pub fn tz2_cbc(&mut self) -> TZ2_CBC_W<'_, EVT_EN_SPEC> {
         TZ2_CBC_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to enable one-shot trip0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz0_ost(&mut self) -> TZ0_OST_W<EVT_EN_SPEC> {
+    pub fn tz0_ost(&mut self) -> TZ0_OST_W<'_, EVT_EN_SPEC> {
         TZ0_OST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not to enable one-shot trip1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz1_ost(&mut self) -> TZ1_OST_W<EVT_EN_SPEC> {
+    pub fn tz1_ost(&mut self) -> TZ1_OST_W<'_, EVT_EN_SPEC> {
         TZ1_OST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to enable one-shot trip2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn tz2_ost(&mut self) -> TZ2_OST_W<EVT_EN_SPEC> {
+    pub fn tz2_ost(&mut self) -> TZ2_OST_W<'_, EVT_EN_SPEC> {
         TZ2_OST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not to enable capture0 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn cap0(&mut self) -> CAP0_W<EVT_EN_SPEC> {
+    pub fn cap0(&mut self) -> CAP0_W<'_, EVT_EN_SPEC> {
         CAP0_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to enable capture1 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn cap1(&mut self) -> CAP1_W<EVT_EN_SPEC> {
+    pub fn cap1(&mut self) -> CAP1_W<'_, EVT_EN_SPEC> {
         CAP1_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to enable capture2 event generate.\\\\0: Disable\\\\1: Enable"]
     #[inline(always)]
-    pub fn cap2(&mut self) -> CAP2_W<EVT_EN_SPEC> {
+    pub fn cap2(&mut self) -> CAP2_W<'_, EVT_EN_SPEC> {
         CAP2_W::new(self, 29)
     }
 }

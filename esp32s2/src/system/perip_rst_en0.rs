@@ -334,162 +334,162 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset timers."]
     #[inline(always)]
-    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timers_rst(&mut self) -> TIMERS_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERS_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset SPI0 and SPI1."]
     #[inline(always)]
-    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi01_rst(&mut self) -> SPI01_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI01_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset UART0."]
     #[inline(always)]
-    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart_rst(&mut self) -> UART_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset WDG."]
     #[inline(always)]
-    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn wdg_rst(&mut self) -> WDG_RST_W<'_, PERIP_RST_EN0_SPEC> {
         WDG_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to reset I2S0."]
     #[inline(always)]
-    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2S0_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to reset UART1."]
     #[inline(always)]
-    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart1_rst(&mut self) -> UART1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART1_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to reset SPI2."]
     #[inline(always)]
-    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi2_rst(&mut self) -> SPI2_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI2_RST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to reset I2C EXT0."]
     #[inline(always)]
-    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2C_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to reset UHCI0."]
     #[inline(always)]
-    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UHCI0_RST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to reset remote controller."]
     #[inline(always)]
-    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn rmt_rst(&mut self) -> RMT_RST_W<'_, PERIP_RST_EN0_SPEC> {
         RMT_RST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to reset pulse count."]
     #[inline(always)]
-    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PCNT_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to reset LED PWM."]
     #[inline(always)]
-    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn ledc_rst(&mut self) -> LEDC_RST_W<'_, PERIP_RST_EN0_SPEC> {
         LEDC_RST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to reset UHCI1."]
     #[inline(always)]
-    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UHCI1_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to reset timer group0."]
     #[inline(always)]
-    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERGROUP_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to reset eFuse."]
     #[inline(always)]
-    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<'_, PERIP_RST_EN0_SPEC> {
         EFUSE_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to reset timer group1."]
     #[inline(always)]
-    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERGROUP1_RST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to reset SPI3."]
     #[inline(always)]
-    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi3_rst(&mut self) -> SPI3_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI3_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to reset PWM0."]
     #[inline(always)]
-    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM0_RST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to reset I2C EXT1."]
     #[inline(always)]
-    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2c_ext1_rst(&mut self) -> I2C_EXT1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2C_EXT1_RST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to reset CAN."]
     #[inline(always)]
-    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TWAI_RST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to reset PWM1."]
     #[inline(always)]
-    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM1_RST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to reset I2S1."]
     #[inline(always)]
-    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2s1_rst(&mut self) -> I2S1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2S1_RST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to reset SPI2 DMA."]
     #[inline(always)]
-    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI2_DMA_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to reset USB."]
     #[inline(always)]
-    pub fn usb_rst(&mut self) -> USB_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn usb_rst(&mut self) -> USB_RST_W<'_, PERIP_RST_EN0_SPEC> {
         USB_RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to reset UART memory."]
     #[inline(always)]
-    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART_MEM_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to reset PWM2."]
     #[inline(always)]
-    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM2_RST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to reset PWM3."]
     #[inline(always)]
-    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM3_RST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to reset SPI3 DMA."]
     #[inline(always)]
-    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI3_DMA_RST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to reset SAR ADC."]
     #[inline(always)]
-    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<'_, PERIP_RST_EN0_SPEC> {
         APB_SARADC_RST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to reset system timer."]
     #[inline(always)]
-    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SYSTIMER_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to reset aribiter of ADC2."]
     #[inline(always)]
-    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<'_, PERIP_RST_EN0_SPEC> {
         ADC2_ARB_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset SPI4."]
     #[inline(always)]
-    pub fn spi4_rst(&mut self) -> SPI4_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi4_rst(&mut self) -> SPI4_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI4_RST_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - need_des"]
     #[inline(always)]
-    pub fn reg_l1_cache_mem_fo(&mut self) -> REG_L1_CACHE_MEM_FO_W<L1_CACHE_PWR_CTRL_SPEC> {
+    pub fn reg_l1_cache_mem_fo(&mut self) -> REG_L1_CACHE_MEM_FO_W<'_, L1_CACHE_PWR_CTRL_SPEC> {
         REG_L1_CACHE_MEM_FO_W::new(self, 0)
     }
 }

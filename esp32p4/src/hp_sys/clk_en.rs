@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<CLK_EN_SPEC> {
+    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<'_, CLK_EN_SPEC> {
         REG_CLK_EN_W::new(self, 0)
     }
 }

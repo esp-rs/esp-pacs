@@ -52,24 +52,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_pin14_wakeup_enable(&mut self) -> REG_GPIO_PIN14_WAKEUP_ENABLE_W<PIN14_SPEC> {
+    pub fn reg_gpio_pin14_wakeup_enable(
+        &mut self,
+    ) -> REG_GPIO_PIN14_WAKEUP_ENABLE_W<'_, PIN14_SPEC> {
         REG_GPIO_PIN14_WAKEUP_ENABLE_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_pin14_int_type(&mut self) -> REG_GPIO_PIN14_INT_TYPE_W<PIN14_SPEC> {
+    pub fn reg_gpio_pin14_int_type(&mut self) -> REG_GPIO_PIN14_INT_TYPE_W<'_, PIN14_SPEC> {
         REG_GPIO_PIN14_INT_TYPE_W::new(self, 1)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    pub fn reg_gpio_pin14_pad_driver(&mut self) -> REG_GPIO_PIN14_PAD_DRIVER_W<PIN14_SPEC> {
+    pub fn reg_gpio_pin14_pad_driver(&mut self) -> REG_GPIO_PIN14_PAD_DRIVER_W<'_, PIN14_SPEC> {
         REG_GPIO_PIN14_PAD_DRIVER_W::new(self, 4)
     }
     #[doc = "Bit 5 - need des"]
     #[inline(always)]
     pub fn reg_gpi14_pin0_edge_wakeup_clr(
         &mut self,
-    ) -> REG_GPI14_PIN0_EDGE_WAKEUP_CLR_W<PIN14_SPEC> {
+    ) -> REG_GPI14_PIN0_EDGE_WAKEUP_CLR_W<'_, PIN14_SPEC> {
         REG_GPI14_PIN0_EDGE_WAKEUP_CLR_W::new(self, 5)
     }
 }

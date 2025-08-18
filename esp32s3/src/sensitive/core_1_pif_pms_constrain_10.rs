@@ -76,28 +76,28 @@ impl W {
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_world_0_l(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W<CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W<'_, CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_L_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - RTCFast memory high region permission in world 0 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_world_0_h(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W<CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W<'_, CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_0_H_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - RTCFast memory low region permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_world_1_l(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W<CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W<'_, CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_L_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - RTCFast memory high region permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_pif_pms_constrain_rtcfast_world_1_h(
         &mut self,
-    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_W<CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
+    ) -> CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_W<'_, CORE_1_PIF_PMS_CONSTRAIN_10_SPEC> {
         CORE_1_PIF_PMS_CONSTRAIN_RTCFAST_WORLD_1_H_W::new(self, 9)
     }
 }

@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - PWM generator 0 time stamp B's shadow register"]
     #[inline(always)]
-    pub fn b(&mut self) -> B_W<CMPR_VALUE1_SPEC> {
+    pub fn b(&mut self) -> B_W<'_, CMPR_VALUE1_SPEC> {
         B_W::new(self, 0)
     }
 }

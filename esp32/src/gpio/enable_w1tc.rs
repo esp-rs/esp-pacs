@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - GPIO0~31 output enable write 1 to clear"]
     #[inline(always)]
-    pub fn enable_data_w1tc(&mut self) -> ENABLE_DATA_W1TC_W<ENABLE_W1TC_SPEC> {
+    pub fn enable_data_w1tc(&mut self) -> ENABLE_DATA_W1TC_W<'_, ENABLE_W1TC_SPEC> {
         ENABLE_DATA_W1TC_W::new(self, 0)
     }
 }

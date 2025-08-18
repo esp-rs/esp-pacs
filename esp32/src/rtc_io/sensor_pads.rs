@@ -254,122 +254,122 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - the input enable of the pad"]
     #[inline(always)]
-    pub fn sense4_fun_ie(&mut self) -> SENSE4_FUN_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_fun_ie(&mut self) -> SENSE4_FUN_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_FUN_IE_W::new(self, 4)
     }
     #[doc = "Bit 5 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    pub fn sense4_slp_ie(&mut self) -> SENSE4_SLP_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_slp_ie(&mut self) -> SENSE4_SLP_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_SLP_IE_W::new(self, 5)
     }
     #[doc = "Bit 6 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    pub fn sense4_slp_sel(&mut self) -> SENSE4_SLP_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_slp_sel(&mut self) -> SENSE4_SLP_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_SLP_SEL_W::new(self, 6)
     }
     #[doc = "Bits 7:8 - the functional selection signal of the pad"]
     #[inline(always)]
-    pub fn sense4_fun_sel(&mut self) -> SENSE4_FUN_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_fun_sel(&mut self) -> SENSE4_FUN_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_FUN_SEL_W::new(self, 7)
     }
     #[doc = "Bit 9 - the input enable of the pad"]
     #[inline(always)]
-    pub fn sense3_fun_ie(&mut self) -> SENSE3_FUN_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_fun_ie(&mut self) -> SENSE3_FUN_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_FUN_IE_W::new(self, 9)
     }
     #[doc = "Bit 10 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    pub fn sense3_slp_ie(&mut self) -> SENSE3_SLP_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_slp_ie(&mut self) -> SENSE3_SLP_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_SLP_IE_W::new(self, 10)
     }
     #[doc = "Bit 11 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    pub fn sense3_slp_sel(&mut self) -> SENSE3_SLP_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_slp_sel(&mut self) -> SENSE3_SLP_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_SLP_SEL_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - the functional selection signal of the pad"]
     #[inline(always)]
-    pub fn sense3_fun_sel(&mut self) -> SENSE3_FUN_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_fun_sel(&mut self) -> SENSE3_FUN_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_FUN_SEL_W::new(self, 12)
     }
     #[doc = "Bit 14 - the input enable of the pad"]
     #[inline(always)]
-    pub fn sense2_fun_ie(&mut self) -> SENSE2_FUN_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_fun_ie(&mut self) -> SENSE2_FUN_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_FUN_IE_W::new(self, 14)
     }
     #[doc = "Bit 15 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    pub fn sense2_slp_ie(&mut self) -> SENSE2_SLP_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_slp_ie(&mut self) -> SENSE2_SLP_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    pub fn sense2_slp_sel(&mut self) -> SENSE2_SLP_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_slp_sel(&mut self) -> SENSE2_SLP_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - the functional selection signal of the pad"]
     #[inline(always)]
-    pub fn sense2_fun_sel(&mut self) -> SENSE2_FUN_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_fun_sel(&mut self) -> SENSE2_FUN_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - the input enable of the pad"]
     #[inline(always)]
-    pub fn sense1_fun_ie(&mut self) -> SENSE1_FUN_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_fun_ie(&mut self) -> SENSE1_FUN_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_FUN_IE_W::new(self, 19)
     }
     #[doc = "Bit 20 - the input enable of the pad in sleep status"]
     #[inline(always)]
-    pub fn sense1_slp_ie(&mut self) -> SENSE1_SLP_IE_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_slp_ie(&mut self) -> SENSE1_SLP_IE_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_SLP_IE_W::new(self, 20)
     }
     #[doc = "Bit 21 - the sleep status selection signal of the pad"]
     #[inline(always)]
-    pub fn sense1_slp_sel(&mut self) -> SENSE1_SLP_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_slp_sel(&mut self) -> SENSE1_SLP_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_SLP_SEL_W::new(self, 21)
     }
     #[doc = "Bits 22:23 - the functional selection signal of the pad"]
     #[inline(always)]
-    pub fn sense1_fun_sel(&mut self) -> SENSE1_FUN_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_fun_sel(&mut self) -> SENSE1_FUN_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_FUN_SEL_W::new(self, 22)
     }
     #[doc = "Bit 24 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    pub fn sense4_mux_sel(&mut self) -> SENSE4_MUX_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_mux_sel(&mut self) -> SENSE4_MUX_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_MUX_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    pub fn sense3_mux_sel(&mut self) -> SENSE3_MUX_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_mux_sel(&mut self) -> SENSE3_MUX_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_MUX_SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    pub fn sense2_mux_sel(&mut self) -> SENSE2_MUX_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_mux_sel(&mut self) -> SENSE2_MUX_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_MUX_SEL_W::new(self, 26)
     }
     #[doc = "Bit 27 - Ò1Ó select the digital function Ó0Óslection the rtc function"]
     #[inline(always)]
-    pub fn sense1_mux_sel(&mut self) -> SENSE1_MUX_SEL_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_mux_sel(&mut self) -> SENSE1_MUX_SEL_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_MUX_SEL_W::new(self, 27)
     }
     #[doc = "Bit 28 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    pub fn sense4_hold(&mut self) -> SENSE4_HOLD_W<SENSOR_PADS_SPEC> {
+    pub fn sense4_hold(&mut self) -> SENSE4_HOLD_W<'_, SENSOR_PADS_SPEC> {
         SENSE4_HOLD_W::new(self, 28)
     }
     #[doc = "Bit 29 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    pub fn sense3_hold(&mut self) -> SENSE3_HOLD_W<SENSOR_PADS_SPEC> {
+    pub fn sense3_hold(&mut self) -> SENSE3_HOLD_W<'_, SENSOR_PADS_SPEC> {
         SENSE3_HOLD_W::new(self, 29)
     }
     #[doc = "Bit 30 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    pub fn sense2_hold(&mut self) -> SENSE2_HOLD_W<SENSOR_PADS_SPEC> {
+    pub fn sense2_hold(&mut self) -> SENSE2_HOLD_W<'_, SENSOR_PADS_SPEC> {
         SENSE2_HOLD_W::new(self, 30)
     }
     #[doc = "Bit 31 - hold the current value of the output when setting the hold to Ò1Ó"]
     #[inline(always)]
-    pub fn sense1_hold(&mut self) -> SENSE1_HOLD_W<SENSOR_PADS_SPEC> {
+    pub fn sense1_hold(&mut self) -> SENSE1_HOLD_W<'_, SENSOR_PADS_SPEC> {
         SENSE1_HOLD_W::new(self, 31)
     }
 }

@@ -46,14 +46,14 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_nonword_violate_clr(
         &mut self,
-    ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_W<CORE_0_PIF_PMS_MONITOR_4_SPEC> {
+    ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_W<'_, CORE_0_PIF_PMS_MONITOR_4_SPEC> {
         CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable interrupt that core0 initiate unsupported access type."]
     #[inline(always)]
     pub fn core_0_pif_pms_monitor_nonword_violate_en(
         &mut self,
-    ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_W<CORE_0_PIF_PMS_MONITOR_4_SPEC> {
+    ) -> CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_W<'_, CORE_0_PIF_PMS_MONITOR_4_SPEC> {
         CORE_0_PIF_PMS_MONITOR_NONWORD_VIOLATE_EN_W::new(self, 1)
     }
 }

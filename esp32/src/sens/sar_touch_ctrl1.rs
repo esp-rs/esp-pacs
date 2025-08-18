@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - the meas length (in 8MHz)"]
     #[inline(always)]
-    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn touch_meas_delay(&mut self) -> TOUCH_MEAS_DELAY_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         TOUCH_MEAS_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - the waiting cycles (in 8MHz) between TOUCH_START and TOUCH_XPD"]
     #[inline(always)]
-    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn touch_xpd_wait(&mut self) -> TOUCH_XPD_WAIT_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         TOUCH_XPD_WAIT_W::new(self, 16)
     }
     #[doc = "Bit 24 - 1: when the counter is greater then the threshold the touch pad is considered as \"touched\" 0: when the counter is less than the threshold the touch pad is considered as \"touched\""]
     #[inline(always)]
-    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         TOUCH_OUT_SEL_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: wakeup interrupt is generated if SET1 is \"touched\" 0: wakeup interrupt is generated only if SET1 & SET2 is both \"touched\""]
     #[inline(always)]
-    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn touch_out_1en(&mut self) -> TOUCH_OUT_1EN_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         TOUCH_OUT_1EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: XPD HALL is controlled by SW. 0: XPD HALL is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn xpd_hall_force(&mut self) -> XPD_HALL_FORCE_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         XPD_HALL_FORCE_W::new(self, 26)
     }
     #[doc = "Bit 27 - 1: HALL PHASE is controlled by SW 0: HALL PHASE is controlled by FSM in ULP-coprocessor"]
     #[inline(always)]
-    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<SAR_TOUCH_CTRL1_SPEC> {
+    pub fn hall_phase_force(&mut self) -> HALL_PHASE_FORCE_W<'_, SAR_TOUCH_CTRL1_SPEC> {
         HALL_PHASE_FORCE_W::new(self, 27)
     }
 }

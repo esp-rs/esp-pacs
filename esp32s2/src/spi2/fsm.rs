@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:31 - Define the master DMA read byte length in non seg-conf-trans or seg-conf-trans mode. Invalid when SPI_RX_EOF_EN is 0. Can be configured in CONF state.."]
     #[inline(always)]
-    pub fn mst_dma_rd_bytelen(&mut self) -> MST_DMA_RD_BYTELEN_W<FSM_SPEC> {
+    pub fn mst_dma_rd_bytelen(&mut self) -> MST_DMA_RD_BYTELEN_W<'_, FSM_SPEC> {
         MST_DMA_RD_BYTELEN_W::new(self, 12)
     }
 }

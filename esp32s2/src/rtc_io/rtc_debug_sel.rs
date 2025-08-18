@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_sel0(&mut self) -> RTC_DEBUG_SEL0_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_SEL0_W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_sel1(&mut self) -> RTC_DEBUG_SEL1_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_SEL1_W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_sel2(&mut self) -> RTC_DEBUG_SEL2_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_SEL2_W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_sel3(&mut self) -> RTC_DEBUG_SEL3_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_SEL3_W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_sel4(&mut self) -> RTC_DEBUG_SEL4_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_SEL4_W::new(self, 20)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<RTC_DEBUG_SEL_SPEC> {
+    pub fn rtc_debug_12m_no_gating(&mut self) -> RTC_DEBUG_12M_NO_GATING_W<'_, RTC_DEBUG_SEL_SPEC> {
         RTC_DEBUG_12M_NO_GATING_W::new(self, 25)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn debug_field4_sel(&mut self) -> DEBUG_FIELD4_SEL_W<DEBUG_SEL_CFG1_SPEC> {
+    pub fn debug_field4_sel(&mut self) -> DEBUG_FIELD4_SEL_W<'_, DEBUG_SEL_CFG1_SPEC> {
         DEBUG_FIELD4_SEL_W::new(self, 0)
     }
     #[doc = "Bits 8:12"]
     #[inline(always)]
-    pub fn debug_field5_sel(&mut self) -> DEBUG_FIELD5_SEL_W<DEBUG_SEL_CFG1_SPEC> {
+    pub fn debug_field5_sel(&mut self) -> DEBUG_FIELD5_SEL_W<'_, DEBUG_SEL_CFG1_SPEC> {
         DEBUG_FIELD5_SEL_W::new(self, 8)
     }
     #[doc = "Bits 16:20"]
     #[inline(always)]
-    pub fn debug_field6_sel(&mut self) -> DEBUG_FIELD6_SEL_W<DEBUG_SEL_CFG1_SPEC> {
+    pub fn debug_field6_sel(&mut self) -> DEBUG_FIELD6_SEL_W<'_, DEBUG_SEL_CFG1_SPEC> {
         DEBUG_FIELD6_SEL_W::new(self, 16)
     }
     #[doc = "Bits 24:28"]
     #[inline(always)]
-    pub fn debug_field7_sel(&mut self) -> DEBUG_FIELD7_SEL_W<DEBUG_SEL_CFG1_SPEC> {
+    pub fn debug_field7_sel(&mut self) -> DEBUG_FIELD7_SEL_W<'_, DEBUG_SEL_CFG1_SPEC> {
         DEBUG_FIELD7_SEL_W::new(self, 24)
     }
 }

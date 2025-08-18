@@ -19,27 +19,27 @@ impl core::fmt::Debug for crate::generic::Reg<HP_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_exc_int_clr(&mut self) -> LP_CPU_EXC_INT_CLR_W<HP_INT_CLR_SPEC> {
+    pub fn lp_cpu_exc_int_clr(&mut self) -> LP_CPU_EXC_INT_CLR_W<'_, HP_INT_CLR_SPEC> {
         LP_CPU_EXC_INT_CLR_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn sdio_idle_int_clr(&mut self) -> SDIO_IDLE_INT_CLR_W<HP_INT_CLR_SPEC> {
+    pub fn sdio_idle_int_clr(&mut self) -> SDIO_IDLE_INT_CLR_W<'_, HP_INT_CLR_SPEC> {
         SDIO_IDLE_INT_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn sw_int_clr(&mut self) -> SW_INT_CLR_W<HP_INT_CLR_SPEC> {
+    pub fn sw_int_clr(&mut self) -> SW_INT_CLR_W<'_, HP_INT_CLR_SPEC> {
         SW_INT_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn soc_sleep_reject_int_clr(&mut self) -> SOC_SLEEP_REJECT_INT_CLR_W<HP_INT_CLR_SPEC> {
+    pub fn soc_sleep_reject_int_clr(&mut self) -> SOC_SLEEP_REJECT_INT_CLR_W<'_, HP_INT_CLR_SPEC> {
         SOC_SLEEP_REJECT_INT_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_clr(&mut self) -> SOC_WAKEUP_INT_CLR_W<HP_INT_CLR_SPEC> {
+    pub fn soc_wakeup_int_clr(&mut self) -> SOC_WAKEUP_INT_CLR_W<'_, HP_INT_CLR_SPEC> {
         SOC_WAKEUP_INT_CLR_W::new(self, 31)
     }
 }

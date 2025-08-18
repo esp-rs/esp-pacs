@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn reg_rtcio_reg_gpio_enable_w1tc(
         &mut self,
-    ) -> REG_RTCIO_REG_GPIO_ENABLE_W1TC_W<ENABLE_W1TC_SPEC> {
+    ) -> REG_RTCIO_REG_GPIO_ENABLE_W1TC_W<'_, ENABLE_W1TC_SPEC> {
         REG_RTCIO_REG_GPIO_ENABLE_W1TC_W::new(self, 10)
     }
 }

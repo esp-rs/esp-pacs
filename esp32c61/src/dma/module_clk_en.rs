@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures whether to force on ahb_apb_sync 1~0 module clock. For bit n:\\\\0 : Not force on ahb_apb_sync n clock \\\\1 : Force on ahb_apb_sync n clock\\\\"]
     #[inline(always)]
-    pub fn ahb_apb_sync_clk_en(&mut self) -> AHB_APB_SYNC_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn ahb_apb_sync_clk_en(&mut self) -> AHB_APB_SYNC_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         AHB_APB_SYNC_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Configures whether to force on out_dscr 1~0 module clock. For bit n:\\\\0 : Not force on out_dscr n clock \\\\1 : Force on out_dscr n clock\\\\"]
     #[inline(always)]
-    pub fn out_dscr_clk_en(&mut self) -> OUT_DSCR_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn out_dscr_clk_en(&mut self) -> OUT_DSCR_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         OUT_DSCR_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Configures whether to force on out_ctrl 1~0 module clock. For bit n:\\\\0 : Not force on out_ctrl n clock \\\\1 : Force on out_ctrl n clock\\\\"]
     #[inline(always)]
-    pub fn out_ctrl_clk_en(&mut self) -> OUT_CTRL_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn out_ctrl_clk_en(&mut self) -> OUT_CTRL_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         OUT_CTRL_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Configures whether to force on in_dscr 1~0 module clock. For bit n:\\\\0 : Not force on in_dscr n clock \\\\1 : Force on in_dscr n clock\\\\"]
     #[inline(always)]
-    pub fn in_dscr_clk_en(&mut self) -> IN_DSCR_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn in_dscr_clk_en(&mut self) -> IN_DSCR_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         IN_DSCR_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Configures whether to force on in_ctrl 1~0 module clock. For bit n:\\\\0 : Not force on in_ctrl n clock \\\\1 : Force on in_ctrl n clock\\\\"]
     #[inline(always)]
-    pub fn in_ctrl_clk_en(&mut self) -> IN_CTRL_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn in_ctrl_clk_en(&mut self) -> IN_CTRL_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         IN_CTRL_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 27 - Configures whether to force on cmd_arb module clock. \\\\0 : Not force on cmd_arb clock \\\\1 : Force on cmd_arb clock\\\\"]
     #[inline(always)]
-    pub fn cmd_arb_clk_en(&mut self) -> CMD_ARB_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn cmd_arb_clk_en(&mut self) -> CMD_ARB_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         CMD_ARB_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether to force on ahbinf module clock. \\\\0 : Not force on ahbinf clock \\\\1 : Force on ahbinf clock\\\\"]
     #[inline(always)]
-    pub fn ahbinf_clk_en(&mut self) -> AHBINF_CLK_EN_W<MODULE_CLK_EN_SPEC> {
+    pub fn ahbinf_clk_en(&mut self) -> AHBINF_CLK_EN_W<'_, MODULE_CLK_EN_SPEC> {
         AHBINF_CLK_EN_W::new(self, 28)
     }
 }

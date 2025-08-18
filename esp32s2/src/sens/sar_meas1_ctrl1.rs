@@ -74,32 +74,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 22 - SAR ADC software reset."]
     #[inline(always)]
-    pub fn rtc_saradc_reset(&mut self) -> RTC_SARADC_RESET_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn rtc_saradc_reset(&mut self) -> RTC_SARADC_RESET_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         RTC_SARADC_RESET_W::new(self, 22)
     }
     #[doc = "Bit 23 - Enable bit of SAR ADC clock gate."]
     #[inline(always)]
-    pub fn rtc_saradc_clkgate_en(&mut self) -> RTC_SARADC_CLKGATE_EN_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn rtc_saradc_clkgate_en(&mut self) -> RTC_SARADC_CLKGATE_EN_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         RTC_SARADC_CLKGATE_EN_W::new(self, 23)
     }
     #[doc = "Bits 24:25"]
     #[inline(always)]
-    pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn force_xpd_amp(&mut self) -> FORCE_XPD_AMP_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         FORCE_XPD_AMP_W::new(self, 24)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
-    pub fn amp_rst_fb_force(&mut self) -> AMP_RST_FB_FORCE_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn amp_rst_fb_force(&mut self) -> AMP_RST_FB_FORCE_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         AMP_RST_FB_FORCE_W::new(self, 26)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
-    pub fn amp_short_ref_force(&mut self) -> AMP_SHORT_REF_FORCE_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn amp_short_ref_force(&mut self) -> AMP_SHORT_REF_FORCE_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         AMP_SHORT_REF_FORCE_W::new(self, 28)
     }
     #[doc = "Bits 30:31"]
     #[inline(always)]
-    pub fn amp_short_ref_gnd_force(&mut self) -> AMP_SHORT_REF_GND_FORCE_W<SAR_MEAS1_CTRL1_SPEC> {
+    pub fn amp_short_ref_gnd_force(
+        &mut self,
+    ) -> AMP_SHORT_REF_GND_FORCE_W<'_, SAR_MEAS1_CTRL1_SPEC> {
         AMP_SHORT_REF_GND_FORCE_W::new(self, 30)
     }
 }

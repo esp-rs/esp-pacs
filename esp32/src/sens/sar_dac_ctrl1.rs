@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - frequency step for CW generator can be used to adjust the frequency"]
     #[inline(always)]
-    pub fn sw_fstep(&mut self) -> SW_FSTEP_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn sw_fstep(&mut self) -> SW_FSTEP_W<'_, SAR_DAC_CTRL1_SPEC> {
         SW_FSTEP_W::new(self, 0)
     }
     #[doc = "Bit 16 - 1: enable CW generator 0: disable CW generator"]
     #[inline(always)]
-    pub fn sw_tone_en(&mut self) -> SW_TONE_EN_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn sw_tone_en(&mut self) -> SW_TONE_EN_W<'_, SAR_DAC_CTRL1_SPEC> {
         SW_TONE_EN_W::new(self, 16)
     }
     #[doc = "Bits 17:21"]
     #[inline(always)]
-    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn debug_bit_sel(&mut self) -> DEBUG_BIT_SEL_W<'_, SAR_DAC_CTRL1_SPEC> {
         DEBUG_BIT_SEL_W::new(self, 17)
     }
     #[doc = "Bit 22 - 1: DAC1 & DAC2 use DMA 0: DAC1 & DAC2 do not use DMA"]
     #[inline(always)]
-    pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn dac_dig_force(&mut self) -> DAC_DIG_FORCE_W<'_, SAR_DAC_CTRL1_SPEC> {
         DAC_DIG_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: force PDAC_CLK to low"]
     #[inline(always)]
-    pub fn dac_clk_force_low(&mut self) -> DAC_CLK_FORCE_LOW_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn dac_clk_force_low(&mut self) -> DAC_CLK_FORCE_LOW_W<'_, SAR_DAC_CTRL1_SPEC> {
         DAC_CLK_FORCE_LOW_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: force PDAC_CLK to high"]
     #[inline(always)]
-    pub fn dac_clk_force_high(&mut self) -> DAC_CLK_FORCE_HIGH_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn dac_clk_force_high(&mut self) -> DAC_CLK_FORCE_HIGH_W<'_, SAR_DAC_CTRL1_SPEC> {
         DAC_CLK_FORCE_HIGH_W::new(self, 24)
     }
     #[doc = "Bit 25 - 1: invert PDAC_CLK"]
     #[inline(always)]
-    pub fn dac_clk_inv(&mut self) -> DAC_CLK_INV_W<SAR_DAC_CTRL1_SPEC> {
+    pub fn dac_clk_inv(&mut self) -> DAC_CLK_INV_W<'_, SAR_DAC_CTRL1_SPEC> {
         DAC_CLK_INV_W::new(self, 25)
     }
 }

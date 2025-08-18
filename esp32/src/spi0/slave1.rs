@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - In the slave mode it is the enable bit of dummy phase for read-buffer operations."]
     #[inline(always)]
-    pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W<SLAVE1_SPEC> {
+    pub fn slv_rdbuf_dummy_en(&mut self) -> SLV_RDBUF_DUMMY_EN_W<'_, SLAVE1_SPEC> {
         SLV_RDBUF_DUMMY_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - In the slave mode it is the enable bit of dummy phase for write-buffer operations."]
     #[inline(always)]
-    pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W<SLAVE1_SPEC> {
+    pub fn slv_wrbuf_dummy_en(&mut self) -> SLV_WRBUF_DUMMY_EN_W<'_, SLAVE1_SPEC> {
         SLV_WRBUF_DUMMY_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - In the slave mode it is the enable bit of dummy phase for read-status operations."]
     #[inline(always)]
-    pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W<SLAVE1_SPEC> {
+    pub fn slv_rdsta_dummy_en(&mut self) -> SLV_RDSTA_DUMMY_EN_W<'_, SLAVE1_SPEC> {
         SLV_RDSTA_DUMMY_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - In the slave mode it is the enable bit of dummy phase for write-status operations."]
     #[inline(always)]
-    pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W<SLAVE1_SPEC> {
+    pub fn slv_wrsta_dummy_en(&mut self) -> SLV_WRSTA_DUMMY_EN_W<'_, SLAVE1_SPEC> {
         SLV_WRSTA_DUMMY_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:9 - In the slave mode it is the address length in bits for write-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W<SLAVE1_SPEC> {
+    pub fn slv_wr_addr_bitlen(&mut self) -> SLV_WR_ADDR_BITLEN_W<'_, SLAVE1_SPEC> {
         SLV_WR_ADDR_BITLEN_W::new(self, 4)
     }
     #[doc = "Bits 10:15 - In the slave mode it is the address length in bits for read-buffer operation. The register value shall be (bit_num-1)."]
     #[inline(always)]
-    pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W<SLAVE1_SPEC> {
+    pub fn slv_rd_addr_bitlen(&mut self) -> SLV_RD_ADDR_BITLEN_W<'_, SLAVE1_SPEC> {
         SLV_RD_ADDR_BITLEN_W::new(self, 10)
     }
     #[doc = "Bit 25 - In the slave mode 1:read register of SPI_SLV_WR_STATUS 0: read register of SPI_RD_STATUS."]
     #[inline(always)]
-    pub fn slv_status_readback(&mut self) -> SLV_STATUS_READBACK_W<SLAVE1_SPEC> {
+    pub fn slv_status_readback(&mut self) -> SLV_STATUS_READBACK_W<'_, SLAVE1_SPEC> {
         SLV_STATUS_READBACK_W::new(self, 25)
     }
     #[doc = "Bit 26 - In the slave mode enable fast read status."]
     #[inline(always)]
-    pub fn slv_status_fast_en(&mut self) -> SLV_STATUS_FAST_EN_W<SLAVE1_SPEC> {
+    pub fn slv_status_fast_en(&mut self) -> SLV_STATUS_FAST_EN_W<'_, SLAVE1_SPEC> {
         SLV_STATUS_FAST_EN_W::new(self, 26)
     }
     #[doc = "Bits 27:31 - In the slave mode it is the length of status bit."]
     #[inline(always)]
-    pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W<SLAVE1_SPEC> {
+    pub fn slv_status_bitlen(&mut self) -> SLV_STATUS_BITLEN_W<'_, SLAVE1_SPEC> {
         SLV_STATUS_BITLEN_W::new(self, 27)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn link_addr_aon(&mut self) -> LINK_ADDR_AON_W<BACKUP_DMA_CFG2_SPEC> {
+    pub fn link_addr_aon(&mut self) -> LINK_ADDR_AON_W<'_, BACKUP_DMA_CFG2_SPEC> {
         LINK_ADDR_AON_W::new(self, 0)
     }
 }

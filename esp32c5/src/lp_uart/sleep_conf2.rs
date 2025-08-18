@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Configures the number of RXD edge changes to wake up the chip in wakeup mode 0."]
     #[inline(always)]
-    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF2_SPEC> {
+    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<'_, SLEEP_CONF2_SPEC> {
         ACTIVE_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 13:17 - Configures the number of received data bytes to wake up the chip in wakeup mode 1."]
     #[inline(always)]
-    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<SLEEP_CONF2_SPEC> {
+    pub fn rx_wake_up_thrhd(&mut self) -> RX_WAKE_UP_THRHD_W<'_, SLEEP_CONF2_SPEC> {
         RX_WAKE_UP_THRHD_W::new(self, 13)
     }
     #[doc = "Bits 18:20 - Configures the number of wakeup characters."]
     #[inline(always)]
-    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_char_num(&mut self) -> WK_CHAR_NUM_W<'_, SLEEP_CONF2_SPEC> {
         WK_CHAR_NUM_W::new(self, 18)
     }
     #[doc = "Bits 21:25 - Configures whether or not to mask wakeup characters.\\\\ 0: Not mask\\\\ 1: Mask\\\\"]
     #[inline(always)]
-    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_char_mask(&mut self) -> WK_CHAR_MASK_W<'_, SLEEP_CONF2_SPEC> {
         WK_CHAR_MASK_W::new(self, 21)
     }
     #[doc = "Bits 26:27 - Configures which wakeup mode to select.\\\\ 0: Mode 0\\\\ 1: Mode 1\\\\ 2: Mode 2\\\\ 3: Mode 3\\\\"]
     #[inline(always)]
-    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<SLEEP_CONF2_SPEC> {
+    pub fn wk_mode_sel(&mut self) -> WK_MODE_SEL_W<'_, SLEEP_CONF2_SPEC> {
         WK_MODE_SEL_W::new(self, 26)
     }
 }

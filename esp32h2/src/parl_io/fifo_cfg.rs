@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Set this bit to reset async fifo in tx module."]
     #[inline(always)]
-    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<FIFO_CFG_SPEC> {
+    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<'_, FIFO_CFG_SPEC> {
         TX_FIFO_SRST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset async fifo in rx module."]
     #[inline(always)]
-    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<FIFO_CFG_SPEC> {
+    pub fn rx_fifo_srst(&mut self) -> RX_FIFO_SRST_W<'_, FIFO_CFG_SPEC> {
         RX_FIFO_SRST_W::new(self, 31)
     }
 }

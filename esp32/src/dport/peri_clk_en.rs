@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERI_CLK_EN_SPEC> {
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<'_, PERI_CLK_EN_SPEC> {
         CRYPTO_AES_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERI_CLK_EN_SPEC> {
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<'_, PERI_CLK_EN_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERI_CLK_EN_SPEC> {
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<'_, PERI_CLK_EN_SPEC> {
         CRYPTO_RSA_CLK_EN_W::new(self, 2)
     }
 }

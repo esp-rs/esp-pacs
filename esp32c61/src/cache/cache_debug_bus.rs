@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This is a constant place where we can write data to or read data from the tag/data memory on the specified cache."]
     #[inline(always)]
-    pub fn cache_debug_bus(&mut self) -> CACHE_DEBUG_BUS_W<CACHE_DEBUG_BUS_SPEC> {
+    pub fn cache_debug_bus(&mut self) -> CACHE_DEBUG_BUS_W<'_, CACHE_DEBUG_BUS_SPEC> {
         CACHE_DEBUG_BUS_W::new(self, 0)
     }
 }

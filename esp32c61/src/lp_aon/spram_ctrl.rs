@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn spram_mem_aux_ctrl(&mut self) -> SPRAM_MEM_AUX_CTRL_W<SPRAM_CTRL_SPEC> {
+    pub fn spram_mem_aux_ctrl(&mut self) -> SPRAM_MEM_AUX_CTRL_W<'_, SPRAM_CTRL_SPEC> {
         SPRAM_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

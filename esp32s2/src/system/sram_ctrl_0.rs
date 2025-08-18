@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - This field is used to force on clock gate of internal SRAM."]
     #[inline(always)]
-    pub fn sram_fo(&mut self) -> SRAM_FO_W<SRAM_CTRL_0_SPEC> {
+    pub fn sram_fo(&mut self) -> SRAM_FO_W<'_, SRAM_CTRL_0_SPEC> {
         SRAM_FO_W::new(self, 0)
     }
 }

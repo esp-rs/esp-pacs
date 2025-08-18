@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - The bit is used to enable interrupt of access fail that occurs in L1-DCache due to cpu accesses L1-DCache."]
     #[inline(always)]
-    pub fn cache_fail_int_ena(&mut self) -> CACHE_FAIL_INT_ENA_W<CACHE_ACS_FAIL_INT_ENA_SPEC> {
+    pub fn cache_fail_int_ena(&mut self) -> CACHE_FAIL_INT_ENA_W<'_, CACHE_ACS_FAIL_INT_ENA_SPEC> {
         CACHE_FAIL_INT_ENA_W::new(self, 4)
     }
 }

@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<TOUCH_PAD11_SPEC> {
+    pub fn fun_ie(&mut self) -> FUN_IE_W<'_, TOUCH_PAD11_SPEC> {
         FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
-    pub fn slp_oe(&mut self) -> SLP_OE_W<TOUCH_PAD11_SPEC> {
+    pub fn slp_oe(&mut self) -> SLP_OE_W<'_, TOUCH_PAD11_SPEC> {
         SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
-    pub fn slp_ie(&mut self) -> SLP_IE_W<TOUCH_PAD11_SPEC> {
+    pub fn slp_ie(&mut self) -> SLP_IE_W<'_, TOUCH_PAD11_SPEC> {
         SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<TOUCH_PAD11_SPEC> {
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<'_, TOUCH_PAD11_SPEC> {
         SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - function sel"]
     #[inline(always)]
-    pub fn fun_sel(&mut self) -> FUN_SEL_W<TOUCH_PAD11_SPEC> {
+    pub fn fun_sel(&mut self) -> FUN_SEL_W<'_, TOUCH_PAD11_SPEC> {
         FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
-    pub fn mux_sel(&mut self) -> MUX_SEL_W<TOUCH_PAD11_SPEC> {
+    pub fn mux_sel(&mut self) -> MUX_SEL_W<'_, TOUCH_PAD11_SPEC> {
         MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - TOUCH_XPD"]
     #[inline(always)]
-    pub fn xpd(&mut self) -> XPD_W<TOUCH_PAD11_SPEC> {
+    pub fn xpd(&mut self) -> XPD_W<'_, TOUCH_PAD11_SPEC> {
         XPD_W::new(self, 20)
     }
     #[doc = "Bit 21 - TOUCH_TIE_OPT"]
     #[inline(always)]
-    pub fn tie_opt(&mut self) -> TIE_OPT_W<TOUCH_PAD11_SPEC> {
+    pub fn tie_opt(&mut self) -> TIE_OPT_W<'_, TOUCH_PAD11_SPEC> {
         TIE_OPT_W::new(self, 21)
     }
     #[doc = "Bit 22 - TOUCH_START"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<TOUCH_PAD11_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, TOUCH_PAD11_SPEC> {
         START_W::new(self, 22)
     }
     #[doc = "Bit 27 - RUE"]
     #[inline(always)]
-    pub fn rue(&mut self) -> RUE_W<TOUCH_PAD11_SPEC> {
+    pub fn rue(&mut self) -> RUE_W<'_, TOUCH_PAD11_SPEC> {
         RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - RDE"]
     #[inline(always)]
-    pub fn rde(&mut self) -> RDE_W<TOUCH_PAD11_SPEC> {
+    pub fn rde(&mut self) -> RDE_W<'_, TOUCH_PAD11_SPEC> {
         RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - DRV"]
     #[inline(always)]
-    pub fn drv(&mut self) -> DRV_W<TOUCH_PAD11_SPEC> {
+    pub fn drv(&mut self) -> DRV_W<'_, TOUCH_PAD11_SPEC> {
         DRV_W::new(self, 29)
     }
 }

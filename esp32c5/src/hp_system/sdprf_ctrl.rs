@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reserved"]
     #[inline(always)]
-    pub fn sdprf_mem_aux_ctrl(&mut self) -> SDPRF_MEM_AUX_CTRL_W<SDPRF_CTRL_SPEC> {
+    pub fn sdprf_mem_aux_ctrl(&mut self) -> SDPRF_MEM_AUX_CTRL_W<'_, SDPRF_CTRL_SPEC> {
         SDPRF_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

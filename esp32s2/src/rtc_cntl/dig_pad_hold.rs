@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Set GPIO 21 to GPIO 45 to hold. (See bitmap to locate any GPIO)."]
     #[inline(always)]
-    pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W<DIG_PAD_HOLD_SPEC> {
+    pub fn dig_pad_hold(&mut self) -> DIG_PAD_HOLD_W<'_, DIG_PAD_HOLD_SPEC> {
         DIG_PAD_HOLD_W::new(self, 0)
     }
 }

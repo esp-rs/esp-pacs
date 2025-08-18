@@ -90,32 +90,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn csftrst(&mut self) -> CSFTRST_W<GRSTCTL_SPEC> {
+    pub fn csftrst(&mut self) -> CSFTRST_W<'_, GRSTCTL_SPEC> {
         CSFTRST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<GRSTCTL_SPEC> {
+    pub fn piufssftrst(&mut self) -> PIUFSSFTRST_W<'_, GRSTCTL_SPEC> {
         PIUFSSFTRST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<GRSTCTL_SPEC> {
+    pub fn frmcntrrst(&mut self) -> FRMCNTRRST_W<'_, GRSTCTL_SPEC> {
         FRMCNTRRST_W::new(self, 2)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn rxfflsh(&mut self) -> RXFFLSH_W<GRSTCTL_SPEC> {
+    pub fn rxfflsh(&mut self) -> RXFFLSH_W<'_, GRSTCTL_SPEC> {
         RXFFLSH_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn txfflsh(&mut self) -> TXFFLSH_W<GRSTCTL_SPEC> {
+    pub fn txfflsh(&mut self) -> TXFFLSH_W<'_, GRSTCTL_SPEC> {
         TXFFLSH_W::new(self, 5)
     }
     #[doc = "Bits 6:10"]
     #[inline(always)]
-    pub fn txfnum(&mut self) -> TXFNUM_W<GRSTCTL_SPEC> {
+    pub fn txfnum(&mut self) -> TXFNUM_W<'_, GRSTCTL_SPEC> {
         TXFNUM_W::new(self, 6)
     }
 }

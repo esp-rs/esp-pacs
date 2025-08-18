@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - Selects a RTC GPIO to be the EXT1 wakeup source."]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP1_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, EXT_WAKEUP1_SPEC> {
         SEL_W::new(self, 0)
     }
     #[doc = "Bit 22 - Clears the EXT1 wakeup status."]
     #[inline(always)]
-    pub fn status_clr(&mut self) -> STATUS_CLR_W<EXT_WAKEUP1_SPEC> {
+    pub fn status_clr(&mut self) -> STATUS_CLR_W<'_, EXT_WAKEUP1_SPEC> {
         STATUS_CLR_W::new(self, 22)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn sdio_sdio_slc0_tx_sharemem_end_addr(
         &mut self,
-    ) -> SDIO_SDIO_SLC0_TX_SHAREMEM_END_ADDR_W<SLC0_TX_SHAREMEM_END_SPEC> {
+    ) -> SDIO_SDIO_SLC0_TX_SHAREMEM_END_ADDR_W<'_, SLC0_TX_SHAREMEM_END_SPEC> {
         SDIO_SDIO_SLC0_TX_SHAREMEM_END_ADDR_W::new(self, 0)
     }
 }

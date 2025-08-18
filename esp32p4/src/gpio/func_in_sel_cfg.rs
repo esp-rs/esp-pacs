@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - set this value: s=0-56: connect GPIO\\[s\\] to this port. s=0x3F: set this port always high level. s=0x3E: set this port always low level."]
     #[inline(always)]
-    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn in_sel(&mut self) -> IN_SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 6 - set this bit to invert input signal. 1:invert. 0:not invert."]
     #[inline(always)]
-    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         IN_INV_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - set this bit to bypass GPIO. 1:do not bypass GPIO. 0:bypass GPIO."]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         SEL_W::new(self, 7)
     }
 }

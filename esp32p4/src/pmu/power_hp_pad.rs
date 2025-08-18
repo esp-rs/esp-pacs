@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn force_hp_pad_no_iso_all(&mut self) -> FORCE_HP_PAD_NO_ISO_ALL_W<POWER_HP_PAD_SPEC> {
+    pub fn force_hp_pad_no_iso_all(&mut self) -> FORCE_HP_PAD_NO_ISO_ALL_W<'_, POWER_HP_PAD_SPEC> {
         FORCE_HP_PAD_NO_ISO_ALL_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn force_hp_pad_iso_all(&mut self) -> FORCE_HP_PAD_ISO_ALL_W<POWER_HP_PAD_SPEC> {
+    pub fn force_hp_pad_iso_all(&mut self) -> FORCE_HP_PAD_ISO_ALL_W<'_, POWER_HP_PAD_SPEC> {
         FORCE_HP_PAD_ISO_ALL_W::new(self, 1)
     }
 }

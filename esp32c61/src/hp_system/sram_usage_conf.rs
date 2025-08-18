@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:12 - 0: cpu use hp-memory. 1:mac-dump accessing hp-memory."]
     #[inline(always)]
-    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<SRAM_USAGE_CONF_SPEC> {
+    pub fn sram_usage(&mut self) -> SRAM_USAGE_W<'_, SRAM_USAGE_CONF_SPEC> {
         SRAM_USAGE_W::new(self, 8)
     }
     #[doc = "Bit 16 - Set this bit as 1 to add an offset (64KB) when mac-dump accessing hp-memory."]
     #[inline(always)]
-    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<SRAM_USAGE_CONF_SPEC> {
+    pub fn mac_dump_alloc(&mut self) -> MAC_DUMP_ALLOC_W<'_, SRAM_USAGE_CONF_SPEC> {
         MAC_DUMP_ALLOC_W::new(self, 16)
     }
 }

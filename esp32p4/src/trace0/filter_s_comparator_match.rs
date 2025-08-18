@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - secondary comparator match value"]
     #[inline(always)]
-    pub fn s_match(&mut self) -> S_MATCH_W<FILTER_S_COMPARATOR_MATCH_SPEC> {
+    pub fn s_match(&mut self) -> S_MATCH_W<'_, FILTER_S_COMPARATOR_MATCH_SPEC> {
         S_MATCH_W::new(self, 0)
     }
 }

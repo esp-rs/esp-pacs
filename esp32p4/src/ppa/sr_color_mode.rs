@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - The source image color mode for Scaling and Rotating engine Rx. 0: ARGB8888. 1: RGB888. 2: RGB565. 8: YUV420. others: Reserved."]
     #[inline(always)]
-    pub fn sr_rx_cm(&mut self) -> SR_RX_CM_W<SR_COLOR_MODE_SPEC> {
+    pub fn sr_rx_cm(&mut self) -> SR_RX_CM_W<'_, SR_COLOR_MODE_SPEC> {
         SR_RX_CM_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - The destination image color mode for Scaling and Rotating engine Tx. 0: ARGB8888. 1: RGB888. 2: RGB565. 8: YUV420. others: Reserved."]
     #[inline(always)]
-    pub fn sr_tx_cm(&mut self) -> SR_TX_CM_W<SR_COLOR_MODE_SPEC> {
+    pub fn sr_tx_cm(&mut self) -> SR_TX_CM_W<'_, SR_COLOR_MODE_SPEC> {
         SR_TX_CM_W::new(self, 4)
     }
     #[doc = "Bit 8 - YUV input range when reg_sr_rx_cm is 4'd8. 0: limit range. 1: full range"]
     #[inline(always)]
-    pub fn yuv_rx_range(&mut self) -> YUV_RX_RANGE_W<SR_COLOR_MODE_SPEC> {
+    pub fn yuv_rx_range(&mut self) -> YUV_RX_RANGE_W<'_, SR_COLOR_MODE_SPEC> {
         YUV_RX_RANGE_W::new(self, 8)
     }
     #[doc = "Bit 9 - YUV output range when reg_sr_tx_cm is 4'd8. 0: limit range. 1: full range"]
     #[inline(always)]
-    pub fn yuv_tx_range(&mut self) -> YUV_TX_RANGE_W<SR_COLOR_MODE_SPEC> {
+    pub fn yuv_tx_range(&mut self) -> YUV_TX_RANGE_W<'_, SR_COLOR_MODE_SPEC> {
         YUV_TX_RANGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - YUV to RGB protocal when reg_sr_rx_cm is 4'd8. 0: BT601. 1: BT709"]
     #[inline(always)]
-    pub fn yuv2rgb_protocal(&mut self) -> YUV2RGB_PROTOCAL_W<SR_COLOR_MODE_SPEC> {
+    pub fn yuv2rgb_protocal(&mut self) -> YUV2RGB_PROTOCAL_W<'_, SR_COLOR_MODE_SPEC> {
         YUV2RGB_PROTOCAL_W::new(self, 10)
     }
     #[doc = "Bit 11 - RGB to YUV protocal when reg_sr_tx_cm is 4'd8. 0: BT601. 1: BT709"]
     #[inline(always)]
-    pub fn rgb2yuv_protocal(&mut self) -> RGB2YUV_PROTOCAL_W<SR_COLOR_MODE_SPEC> {
+    pub fn rgb2yuv_protocal(&mut self) -> RGB2YUV_PROTOCAL_W<'_, SR_COLOR_MODE_SPEC> {
         RGB2YUV_PROTOCAL_W::new(self, 11)
     }
 }

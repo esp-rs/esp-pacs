@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn app_boot_remap(&mut self) -> APP_BOOT_REMAP_W<APP_BOOT_REMAP_CTRL_SPEC> {
+    pub fn app_boot_remap(&mut self) -> APP_BOOT_REMAP_W<'_, APP_BOOT_REMAP_CTRL_SPEC> {
         APP_BOOT_REMAP_W::new(self, 0)
     }
 }

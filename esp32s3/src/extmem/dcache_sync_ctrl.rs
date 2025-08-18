@@ -52,17 +52,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable invalidate operation. It will be cleared by hardware after invalidate operation done."]
     #[inline(always)]
-    pub fn dcache_invalidate_ena(&mut self) -> DCACHE_INVALIDATE_ENA_W<DCACHE_SYNC_CTRL_SPEC> {
+    pub fn dcache_invalidate_ena(&mut self) -> DCACHE_INVALIDATE_ENA_W<'_, DCACHE_SYNC_CTRL_SPEC> {
         DCACHE_INVALIDATE_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable writeback operation. It will be cleared by hardware after writeback operation done."]
     #[inline(always)]
-    pub fn dcache_writeback_ena(&mut self) -> DCACHE_WRITEBACK_ENA_W<DCACHE_SYNC_CTRL_SPEC> {
+    pub fn dcache_writeback_ena(&mut self) -> DCACHE_WRITEBACK_ENA_W<'_, DCACHE_SYNC_CTRL_SPEC> {
         DCACHE_WRITEBACK_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable clean operation. It will be cleared by hardware after clean operation done."]
     #[inline(always)]
-    pub fn dcache_clean_ena(&mut self) -> DCACHE_CLEAN_ENA_W<DCACHE_SYNC_CTRL_SPEC> {
+    pub fn dcache_clean_ena(&mut self) -> DCACHE_CLEAN_ENA_W<'_, DCACHE_SYNC_CTRL_SPEC> {
         DCACHE_CLEAN_ENA_W::new(self, 2)
     }
 }

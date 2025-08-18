@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the ecc_calc_done_int interrupt"]
     #[inline(always)]
-    pub fn calc_done(&mut self) -> CALC_DONE_W<MULT_INT_ENA_SPEC> {
+    pub fn calc_done(&mut self) -> CALC_DONE_W<'_, MULT_INT_ENA_SPEC> {
         CALC_DONE_W::new(self, 0)
     }
 }

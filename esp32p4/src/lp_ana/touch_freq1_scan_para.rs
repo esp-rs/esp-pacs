@@ -64,27 +64,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - need_des"]
     #[inline(always)]
-    pub fn touch_freq1_dcap_lpf(&mut self) -> TOUCH_FREQ1_DCAP_LPF_W<TOUCH_FREQ1_SCAN_PARA_SPEC> {
+    pub fn touch_freq1_dcap_lpf(
+        &mut self,
+    ) -> TOUCH_FREQ1_DCAP_LPF_W<'_, TOUCH_FREQ1_SCAN_PARA_SPEC> {
         TOUCH_FREQ1_DCAP_LPF_W::new(self, 0)
     }
     #[doc = "Bits 7:8 - need_des"]
     #[inline(always)]
-    pub fn touch_freq1_dres_lpf(&mut self) -> TOUCH_FREQ1_DRES_LPF_W<TOUCH_FREQ1_SCAN_PARA_SPEC> {
+    pub fn touch_freq1_dres_lpf(
+        &mut self,
+    ) -> TOUCH_FREQ1_DRES_LPF_W<'_, TOUCH_FREQ1_SCAN_PARA_SPEC> {
         TOUCH_FREQ1_DRES_LPF_W::new(self, 7)
     }
     #[doc = "Bits 9:12 - need_des"]
     #[inline(always)]
-    pub fn touch_freq1_drv_ls(&mut self) -> TOUCH_FREQ1_DRV_LS_W<TOUCH_FREQ1_SCAN_PARA_SPEC> {
+    pub fn touch_freq1_drv_ls(&mut self) -> TOUCH_FREQ1_DRV_LS_W<'_, TOUCH_FREQ1_SCAN_PARA_SPEC> {
         TOUCH_FREQ1_DRV_LS_W::new(self, 9)
     }
     #[doc = "Bits 13:17 - need_des"]
     #[inline(always)]
-    pub fn touch_freq1_drv_hs(&mut self) -> TOUCH_FREQ1_DRV_HS_W<TOUCH_FREQ1_SCAN_PARA_SPEC> {
+    pub fn touch_freq1_drv_hs(&mut self) -> TOUCH_FREQ1_DRV_HS_W<'_, TOUCH_FREQ1_SCAN_PARA_SPEC> {
         TOUCH_FREQ1_DRV_HS_W::new(self, 13)
     }
     #[doc = "Bits 18:22 - need_des"]
     #[inline(always)]
-    pub fn touch_freq1_dbias(&mut self) -> TOUCH_FREQ1_DBIAS_W<TOUCH_FREQ1_SCAN_PARA_SPEC> {
+    pub fn touch_freq1_dbias(&mut self) -> TOUCH_FREQ1_DBIAS_W<'_, TOUCH_FREQ1_SCAN_PARA_SPEC> {
         TOUCH_FREQ1_DBIAS_W::new(self, 18)
     }
 }

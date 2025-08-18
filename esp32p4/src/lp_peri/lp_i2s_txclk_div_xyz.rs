@@ -56,22 +56,28 @@ impl W {
     #[inline(always)]
     pub fn lp_i2s_tx_clkm_div_yn1(
         &mut self,
-    ) -> LP_I2S_TX_CLKM_DIV_YN1_W<LP_I2S_TXCLK_DIV_XYZ_SPEC> {
+    ) -> LP_I2S_TX_CLKM_DIV_YN1_W<'_, LP_I2S_TXCLK_DIV_XYZ_SPEC> {
         LP_I2S_TX_CLKM_DIV_YN1_W::new(self, 4)
     }
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
-    pub fn lp_i2s_tx_clkm_div_z(&mut self) -> LP_I2S_TX_CLKM_DIV_Z_W<LP_I2S_TXCLK_DIV_XYZ_SPEC> {
+    pub fn lp_i2s_tx_clkm_div_z(
+        &mut self,
+    ) -> LP_I2S_TX_CLKM_DIV_Z_W<'_, LP_I2S_TXCLK_DIV_XYZ_SPEC> {
         LP_I2S_TX_CLKM_DIV_Z_W::new(self, 5)
     }
     #[doc = "Bits 14:22 - need_des"]
     #[inline(always)]
-    pub fn lp_i2s_tx_clkm_div_y(&mut self) -> LP_I2S_TX_CLKM_DIV_Y_W<LP_I2S_TXCLK_DIV_XYZ_SPEC> {
+    pub fn lp_i2s_tx_clkm_div_y(
+        &mut self,
+    ) -> LP_I2S_TX_CLKM_DIV_Y_W<'_, LP_I2S_TXCLK_DIV_XYZ_SPEC> {
         LP_I2S_TX_CLKM_DIV_Y_W::new(self, 14)
     }
     #[doc = "Bits 23:31 - need_des"]
     #[inline(always)]
-    pub fn lp_i2s_tx_clkm_div_x(&mut self) -> LP_I2S_TX_CLKM_DIV_X_W<LP_I2S_TXCLK_DIV_XYZ_SPEC> {
+    pub fn lp_i2s_tx_clkm_div_x(
+        &mut self,
+    ) -> LP_I2S_TX_CLKM_DIV_X_W<'_, LP_I2S_TXCLK_DIV_XYZ_SPEC> {
         LP_I2S_TX_CLKM_DIV_X_W::new(self, 23)
     }
 }

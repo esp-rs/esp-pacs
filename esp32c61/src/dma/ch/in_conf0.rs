@@ -77,32 +77,34 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 and then 0 to reset AHB_DMA channel 0 RX FSM and RX FIFO pointer."]
     #[inline(always)]
-    pub fn in_rst_ch0(&mut self) -> IN_RST_CH0_W<IN_CONF0_SPEC> {
+    pub fn in_rst_ch0(&mut self) -> IN_RST_CH0_W<'_, IN_CONF0_SPEC> {
         IN_RST_CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - reserved"]
     #[inline(always)]
-    pub fn in_loop_test_ch0(&mut self) -> IN_LOOP_TEST_CH0_W<IN_CONF0_SPEC> {
+    pub fn in_loop_test_ch0(&mut self) -> IN_LOOP_TEST_CH0_W<'_, IN_CONF0_SPEC> {
         IN_LOOP_TEST_CH0_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether to enable INCR burst transfer for RX channel 0 to read descriptors.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn indscr_burst_en_ch0(&mut self) -> INDSCR_BURST_EN_CH0_W<IN_CONF0_SPEC> {
+    pub fn indscr_burst_en_ch0(&mut self) -> INDSCR_BURST_EN_CH0_W<'_, IN_CONF0_SPEC> {
         INDSCR_BURST_EN_CH0_W::new(self, 2)
     }
     #[doc = "Bit 4 - Configures whether to enable memory-to-memory data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn mem_trans_en_ch0(&mut self) -> MEM_TRANS_EN_CH0_W<IN_CONF0_SPEC> {
+    pub fn mem_trans_en_ch0(&mut self) -> MEM_TRANS_EN_CH0_W<'_, IN_CONF0_SPEC> {
         MEM_TRANS_EN_CH0_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether to enable ETM control for RX channel0.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn in_etm_en_ch0(&mut self) -> IN_ETM_EN_CH0_W<IN_CONF0_SPEC> {
+    pub fn in_etm_en_ch0(&mut self) -> IN_ETM_EN_CH0_W<'_, IN_CONF0_SPEC> {
         IN_ETM_EN_CH0_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Configures max burst size for Rx channel0.\\\\2'b00: single\\\\ 2'b01: incr4\\\\ 2'b10: incr8\\\\ 2'b11: incr16\\\\"]
     #[inline(always)]
-    pub fn in_data_burst_mode_sel_ch0(&mut self) -> IN_DATA_BURST_MODE_SEL_CH0_W<IN_CONF0_SPEC> {
+    pub fn in_data_burst_mode_sel_ch0(
+        &mut self,
+    ) -> IN_DATA_BURST_MODE_SEL_CH0_W<'_, IN_CONF0_SPEC> {
         IN_DATA_BURST_MODE_SEL_CH0_W::new(self, 6)
     }
 }

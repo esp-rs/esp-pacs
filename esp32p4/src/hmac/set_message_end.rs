@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_END_SPEC> {
 impl W {
     #[doc = "Bit 0 - Start hardware padding."]
     #[inline(always)]
-    pub fn set_text_end(&mut self) -> SET_TEXT_END_W<SET_MESSAGE_END_SPEC> {
+    pub fn set_text_end(&mut self) -> SET_TEXT_END_W<'_, SET_MESSAGE_END_SPEC> {
         SET_TEXT_END_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set the error times of MSPI ECC read to generate MSPI SPI_MEM_ECC_ERR_INT interrupt."]
     #[inline(always)]
-    pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W<ECC_CTRL_SPEC> {
+    pub fn ecc_err_int_num(&mut self) -> ECC_ERR_INT_NUM_W<'_, ECC_CTRL_SPEC> {
         ECC_ERR_INT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Set this bit to calculate the error times of MSPI ECC read when accesses to flash."]
     #[inline(always)]
-    pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W<ECC_CTRL_SPEC> {
+    pub fn spi_fmem_ecc_err_int_en(&mut self) -> SPI_FMEM_ECC_ERR_INT_EN_W<'_, ECC_CTRL_SPEC> {
         SPI_FMEM_ECC_ERR_INT_EN_W::new(self, 8)
     }
 }

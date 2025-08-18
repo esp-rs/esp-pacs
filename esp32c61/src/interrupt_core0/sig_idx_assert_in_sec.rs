@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn int_sig_idx_assert_in_sec(
         &mut self,
-    ) -> INT_SIG_IDX_ASSERT_IN_SEC_W<SIG_IDX_ASSERT_IN_SEC_SPEC> {
+    ) -> INT_SIG_IDX_ASSERT_IN_SEC_W<'_, SIG_IDX_ASSERT_IN_SEC_SPEC> {
         INT_SIG_IDX_ASSERT_IN_SEC_W::new(self, 0)
     }
 }

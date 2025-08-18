@@ -19,27 +19,27 @@ impl core::fmt::Debug for crate::generic::Reg<CTR_PRES_SPEC> {
 impl W {
     #[doc = "Bits 0:8 - Configures the pre-defined value to set the error counter."]
     #[inline(always)]
-    pub fn ctpv(&mut self) -> CTPV_W<CTR_PRES_SPEC> {
+    pub fn ctpv(&mut self) -> CTPV_W<'_, CTR_PRES_SPEC> {
         CTPV_W::new(self, 0)
     }
     #[doc = "Bit 9 - Configures whether or not to set the receiver error counter into the value of pre-defined value. 0: invalid 1: set"]
     #[inline(always)]
-    pub fn ptx(&mut self) -> PTX_W<CTR_PRES_SPEC> {
+    pub fn ptx(&mut self) -> PTX_W<'_, CTR_PRES_SPEC> {
         PTX_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures whether or not to set the transmitter error counter into the value of pre-defined value. 0: invalid 1: set"]
     #[inline(always)]
-    pub fn prx(&mut self) -> PRX_W<CTR_PRES_SPEC> {
+    pub fn prx(&mut self) -> PRX_W<'_, CTR_PRES_SPEC> {
         PRX_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures whether or not to erase the error counter of nominal bit time. 0: invalid 1: erase"]
     #[inline(always)]
-    pub fn enorm(&mut self) -> ENORM_W<CTR_PRES_SPEC> {
+    pub fn enorm(&mut self) -> ENORM_W<'_, CTR_PRES_SPEC> {
         ENORM_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures whether or not to erase the error counter of data bit time. 0: invalid 1: erase"]
     #[inline(always)]
-    pub fn efd(&mut self) -> EFD_W<CTR_PRES_SPEC> {
+    pub fn efd(&mut self) -> EFD_W<'_, CTR_PRES_SPEC> {
         EFD_W::new(self, 12)
     }
 }

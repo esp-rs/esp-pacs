@@ -86,42 +86,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable header checksum validation when UHCI receives a data packet.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<CONF1_SPEC> {
+    pub fn check_sum_en(&mut self) -> CHECK_SUM_EN_W<'_, CONF1_SPEC> {
         CHECK_SUM_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable the sequence number check when UHCI receives a data packet.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<CONF1_SPEC> {
+    pub fn check_seq_en(&mut self) -> CHECK_SEQ_EN_W<'_, CONF1_SPEC> {
         CHECK_SEQ_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable CRC calculation.\\\\ 0: Disable\\\\ 1: Enable\\\\ Valid only when the Data Integrity Check Present bit in UHCI packet is 1.\\\\"]
     #[inline(always)]
-    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<CONF1_SPEC> {
+    pub fn crc_disable(&mut self) -> CRC_DISABLE_W<'_, CONF1_SPEC> {
         CRC_DISABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to save the packet header when UHCI receives a data packet.\\\\ 0: Not save\\\\ 1: Save\\\\"]
     #[inline(always)]
-    pub fn save_head(&mut self) -> SAVE_HEAD_W<CONF1_SPEC> {
+    pub fn save_head(&mut self) -> SAVE_HEAD_W<'_, CONF1_SPEC> {
         SAVE_HEAD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to encode the data packet with a checksum.\\\\ 0: Not use checksum\\\\ 1: Use checksum\\\\"]
     #[inline(always)]
-    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<CONF1_SPEC> {
+    pub fn tx_check_sum_re(&mut self) -> TX_CHECK_SUM_RE_W<'_, CONF1_SPEC> {
         TX_CHECK_SUM_RE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to encode the data packet with an acknowledgment when a reliable packet is to be transmitted.\\\\ 0: Not use acknowledgement\\\\ 1: Use acknowledgement\\\\"]
     #[inline(always)]
-    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<CONF1_SPEC> {
+    pub fn tx_ack_num_re(&mut self) -> TX_ACK_NUM_RE_W<'_, CONF1_SPEC> {
         TX_ACK_NUM_RE_W::new(self, 5)
     }
     #[doc = "Bit 7 - Configures whether or not to put the UHCI encoder state machine to ST_SW_WAIT state.\\\\ 0: No\\\\ 1: Yes\\\\"]
     #[inline(always)]
-    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<CONF1_SPEC> {
+    pub fn wait_sw_start(&mut self) -> WAIT_SW_START_W<'_, CONF1_SPEC> {
         WAIT_SW_START_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to send data packets when the encoder state machine is in ST_SW_WAIT state."]
     #[inline(always)]
-    pub fn sw_start(&mut self) -> SW_START_W<CONF1_SPEC> {
+    pub fn sw_start(&mut self) -> SW_START_W<'_, CONF1_SPEC> {
         SW_START_W::new(self, 8)
     }
 }

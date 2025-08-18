@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn icache_shut_core0_bus(&mut self) -> ICACHE_SHUT_CORE0_BUS_W<ICACHE_CTRL1_SPEC> {
+    pub fn icache_shut_core0_bus(&mut self) -> ICACHE_SHUT_CORE0_BUS_W<'_, ICACHE_CTRL1_SPEC> {
         ICACHE_SHUT_CORE0_BUS_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn icache_shut_core1_bus(&mut self) -> ICACHE_SHUT_CORE1_BUS_W<ICACHE_CTRL1_SPEC> {
+    pub fn icache_shut_core1_bus(&mut self) -> ICACHE_SHUT_CORE1_BUS_W<'_, ICACHE_CTRL1_SPEC> {
         ICACHE_SHUT_CORE1_BUS_W::new(self, 1)
     }
 }

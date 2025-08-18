@@ -113,49 +113,49 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_spi_2(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_SPI_2_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - core_0_pif_pms_constrain_world_1_apb_ctrl"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_apb_ctrl(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_APB_CTRL_W::new(self, 4)
     }
     #[doc = "Bits 10:11 - core_0_pif_pms_constrain_world_1_can"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_can(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_CAN_W::new(self, 10)
     }
     #[doc = "Bits 14:15 - core_0_pif_pms_constrain_world_1_i2s1"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_i2s1(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_I2S1_W::new(self, 14)
     }
     #[doc = "Bits 22:23 - core_0_pif_pms_constrain_world_1_rwbt"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_rwbt(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_RWBT_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - core_0_pif_pms_constrain_world_1_wifimac"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_wifimac(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_WIFIMAC_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - core_0_pif_pms_constrain_world_1_pwr"]
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_world_1_pwr(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W<CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W<'_, CORE_0_PIF_PMS_CONSTRAIN_7_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_WORLD_1_PWR_W::new(self, 28)
     }
 }

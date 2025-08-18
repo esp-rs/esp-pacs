@@ -200,67 +200,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn sesreq(&mut self) -> SESREQ_W<GOTGCTL_SPEC> {
+    pub fn sesreq(&mut self) -> SESREQ_W<'_, GOTGCTL_SPEC> {
         SESREQ_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<GOTGCTL_SPEC> {
+    pub fn vbvalidoven(&mut self) -> VBVALIDOVEN_W<'_, GOTGCTL_SPEC> {
         VBVALIDOVEN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<GOTGCTL_SPEC> {
+    pub fn vbvalidovval(&mut self) -> VBVALIDOVVAL_W<'_, GOTGCTL_SPEC> {
         VBVALIDOVVAL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn avalidoven(&mut self) -> AVALIDOVEN_W<GOTGCTL_SPEC> {
+    pub fn avalidoven(&mut self) -> AVALIDOVEN_W<'_, GOTGCTL_SPEC> {
         AVALIDOVEN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<GOTGCTL_SPEC> {
+    pub fn avalidovval(&mut self) -> AVALIDOVVAL_W<'_, GOTGCTL_SPEC> {
         AVALIDOVVAL_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<GOTGCTL_SPEC> {
+    pub fn bvalidoven(&mut self) -> BVALIDOVEN_W<'_, GOTGCTL_SPEC> {
         BVALIDOVEN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<GOTGCTL_SPEC> {
+    pub fn bvalidovval(&mut self) -> BVALIDOVVAL_W<'_, GOTGCTL_SPEC> {
         BVALIDOVVAL_W::new(self, 7)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn hnpreq(&mut self) -> HNPREQ_W<GOTGCTL_SPEC> {
+    pub fn hnpreq(&mut self) -> HNPREQ_W<'_, GOTGCTL_SPEC> {
         HNPREQ_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<GOTGCTL_SPEC> {
+    pub fn hstsethnpen(&mut self) -> HSTSETHNPEN_W<'_, GOTGCTL_SPEC> {
         HSTSETHNPEN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn devhnpen(&mut self) -> DEVHNPEN_W<GOTGCTL_SPEC> {
+    pub fn devhnpen(&mut self) -> DEVHNPEN_W<'_, GOTGCTL_SPEC> {
         DEVHNPEN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn ehen(&mut self) -> EHEN_W<GOTGCTL_SPEC> {
+    pub fn ehen(&mut self) -> EHEN_W<'_, GOTGCTL_SPEC> {
         EHEN_W::new(self, 12)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<GOTGCTL_SPEC> {
+    pub fn dbncefltrbypass(&mut self) -> DBNCEFLTRBYPASS_W<'_, GOTGCTL_SPEC> {
         DBNCEFLTRBYPASS_W::new(self, 15)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn otgver(&mut self) -> OTGVER_W<GOTGCTL_SPEC> {
+    pub fn otgver(&mut self) -> OTGVER_W<'_, GOTGCTL_SPEC> {
         OTGVER_W::new(self, 20)
     }
 }

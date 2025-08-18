@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Other configured fields in LEDC_CH%s_CONF1_REG will start to take effect when this bit is set to 1."]
     #[inline(always)]
-    pub fn duty_start(&mut self) -> DUTY_START_W<CONF1_SPEC> {
+    pub fn duty_start(&mut self) -> DUTY_START_W<'_, CONF1_SPEC> {
         DUTY_START_W::new(self, 31)
     }
 }

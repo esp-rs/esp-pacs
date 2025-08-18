@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - This field is used to power down internal SRAM."]
     #[inline(always)]
-    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<SRAM_CTRL_1_SPEC> {
+    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<'_, SRAM_CTRL_1_SPEC> {
         SRAM_FORCE_PD_W::new(self, 0)
     }
 }

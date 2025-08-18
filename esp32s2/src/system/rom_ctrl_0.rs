@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field is used to force on clock gate of internal ROM."]
     #[inline(always)]
-    pub fn rom_fo(&mut self) -> ROM_FO_W<ROM_CTRL_0_SPEC> {
+    pub fn rom_fo(&mut self) -> ROM_FO_W<'_, ROM_CTRL_0_SPEC> {
         ROM_FO_W::new(self, 0)
     }
 }

@@ -94,42 +94,42 @@ impl W {
     #[inline(always)]
     pub fn pro_cache_i_source_pro_iram1(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_IRAM1_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_I_SOURCE_PRO_IRAM1_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_I_SOURCE_PRO_IRAM1_W::new(self, 0)
     }
     #[doc = "Bit 1 - xx"]
     #[inline(always)]
     pub fn pro_cache_i_source_pro_irom0(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_IROM0_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_I_SOURCE_PRO_IROM0_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_I_SOURCE_PRO_IROM0_W::new(self, 1)
     }
     #[doc = "Bit 2 - xx"]
     #[inline(always)]
     pub fn pro_cache_i_source_pro_drom0(
         &mut self,
-    ) -> PRO_CACHE_I_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_I_SOURCE_PRO_DROM0_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_I_SOURCE_PRO_DROM0_W::new(self, 2)
     }
     #[doc = "Bit 3 - xx"]
     #[inline(always)]
     pub fn pro_cache_d_source_pro_dram0(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DRAM0_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_D_SOURCE_PRO_DRAM0_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_D_SOURCE_PRO_DRAM0_W::new(self, 3)
     }
     #[doc = "Bit 4 - xx"]
     #[inline(always)]
     pub fn pro_cache_d_source_pro_dport(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DPORT_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_D_SOURCE_PRO_DPORT_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_D_SOURCE_PRO_DPORT_W::new(self, 4)
     }
     #[doc = "Bit 5 - xx"]
     #[inline(always)]
     pub fn pro_cache_d_source_pro_drom0(
         &mut self,
-    ) -> PRO_CACHE_D_SOURCE_PRO_DROM0_W<CACHE_SOURCE_1_SPEC> {
+    ) -> PRO_CACHE_D_SOURCE_PRO_DROM0_W<'_, CACHE_SOURCE_1_SPEC> {
         PRO_CACHE_D_SOURCE_PRO_DROM0_W::new(self, 5)
     }
 }

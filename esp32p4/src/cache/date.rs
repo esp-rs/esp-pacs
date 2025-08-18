@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - version control register. Note that this default value stored is the latest date when the hardware logic was updated."]
     #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
+    pub fn date(&mut self) -> DATE_W<'_, DATE_SPEC> {
         DATE_W::new(self, 0)
     }
 }

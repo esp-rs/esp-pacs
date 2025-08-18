@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Core1 PIF region0 end addr"]
     #[inline(always)]
-    pub fn core_1_area_pif_0_max(&mut self) -> CORE_1_AREA_PIF_0_MAX_W<CORE_1_AREA_PIF_0_MAX_SPEC> {
+    pub fn core_1_area_pif_0_max(
+        &mut self,
+    ) -> CORE_1_AREA_PIF_0_MAX_W<'_, CORE_1_AREA_PIF_0_MAX_SPEC> {
         CORE_1_AREA_PIF_0_MAX_W::new(self, 0)
     }
 }

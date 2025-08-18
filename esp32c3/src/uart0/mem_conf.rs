@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:3 - This register is used to configure the amount of mem allocated for receive-FIFO. The default number is 128 bytes."]
     #[inline(always)]
-    pub fn rx_size(&mut self) -> RX_SIZE_W<MEM_CONF_SPEC> {
+    pub fn rx_size(&mut self) -> RX_SIZE_W<'_, MEM_CONF_SPEC> {
         RX_SIZE_W::new(self, 1)
     }
     #[doc = "Bits 4:6 - This register is used to configure the amount of mem allocated for transmit-FIFO. The default number is 128 bytes."]
     #[inline(always)]
-    pub fn tx_size(&mut self) -> TX_SIZE_W<MEM_CONF_SPEC> {
+    pub fn tx_size(&mut self) -> TX_SIZE_W<'_, MEM_CONF_SPEC> {
         TX_SIZE_W::new(self, 4)
     }
     #[doc = "Bits 7:15 - This register is used to configure the maximum amount of data that can be received when hardware flow control works."]
     #[inline(always)]
-    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<MEM_CONF_SPEC> {
+    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<'_, MEM_CONF_SPEC> {
         RX_FLOW_THRHD_W::new(self, 7)
     }
     #[doc = "Bits 16:25 - This register is used to configure the threshold time that receiver takes to receive one byte. The rxfifo_tout_int interrupt will be trigger when the receiver takes more time to receive one byte with rx_tout_en set to 1."]
     #[inline(always)]
-    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<MEM_CONF_SPEC> {
+    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<'_, MEM_CONF_SPEC> {
         RX_TOUT_THRHD_W::new(self, 16)
     }
     #[doc = "Bit 26 - Set this bit to force power down UART memory."]
     #[inline(always)]
-    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<MEM_CONF_SPEC> {
+    pub fn mem_force_pd(&mut self) -> MEM_FORCE_PD_W<'_, MEM_CONF_SPEC> {
         MEM_FORCE_PD_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to force power up UART memory."]
     #[inline(always)]
-    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<MEM_CONF_SPEC> {
+    pub fn mem_force_pu(&mut self) -> MEM_FORCE_PU_W<'_, MEM_CONF_SPEC> {
         MEM_FORCE_PU_W::new(self, 27)
     }
 }

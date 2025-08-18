@@ -207,97 +207,99 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - efuse_clk_force_gating"]
     #[inline(always)]
-    pub fn efuse_clk_force_gating(&mut self) -> EFUSE_CLK_FORCE_GATING_W<CLK_CONF_SPEC> {
+    pub fn efuse_clk_force_gating(&mut self) -> EFUSE_CLK_FORCE_GATING_W<'_, CLK_CONF_SPEC> {
         EFUSE_CLK_FORCE_GATING_W::new(self, 1)
     }
     #[doc = "Bit 2 - efuse_clk_force_nogating"]
     #[inline(always)]
-    pub fn efuse_clk_force_nogating(&mut self) -> EFUSE_CLK_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn efuse_clk_force_nogating(&mut self) -> EFUSE_CLK_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         EFUSE_CLK_FORCE_NOGATING_W::new(self, 2)
     }
     #[doc = "Bit 3 - used to sync reg_ck8m_div_sel bus. Clear vld before set reg_ck8m_div_sel"]
     #[inline(always)]
-    pub fn ck8m_div_sel_vld(&mut self) -> CK8M_DIV_SEL_VLD_W<CLK_CONF_SPEC> {
+    pub fn ck8m_div_sel_vld(&mut self) -> CK8M_DIV_SEL_VLD_W<'_, CLK_CONF_SPEC> {
         CK8M_DIV_SEL_VLD_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - CK8M_D256_OUT divider. 00: div128"]
     #[inline(always)]
-    pub fn ck8m_div(&mut self) -> CK8M_DIV_W<CLK_CONF_SPEC> {
+    pub fn ck8m_div(&mut self) -> CK8M_DIV_W<'_, CLK_CONF_SPEC> {
         CK8M_DIV_W::new(self, 4)
     }
     #[doc = "Bit 6 - disable CK8M and CK8M_D256_OUT"]
     #[inline(always)]
-    pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<CLK_CONF_SPEC> {
+    pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<'_, CLK_CONF_SPEC> {
         ENB_CK8M_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: CK8M_D256_OUT is actually CK8M"]
     #[inline(always)]
-    pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<CLK_CONF_SPEC> {
+    pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<'_, CLK_CONF_SPEC> {
         ENB_CK8M_DIV_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<'_, CLK_CONF_SPEC> {
         DIG_XTAL32K_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<'_, CLK_CONF_SPEC> {
         DIG_CLK8M_D256_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - enable CK8M for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<'_, CLK_CONF_SPEC> {
         DIG_CLK8M_EN_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - divider = reg_ck8m_div_sel + 1"]
     #[inline(always)]
-    pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<CLK_CONF_SPEC> {
+    pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<'_, CLK_CONF_SPEC> {
         CK8M_DIV_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - XTAL force no gating during sleep"]
     #[inline(always)]
-    pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         XTAL_FORCE_NOGATING_W::new(self, 15)
     }
     #[doc = "Bit 16 - CK8M force no gating during sleep"]
     #[inline(always)]
-    pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_NOGATING_W::new(self, 16)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
-    pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<CLK_CONF_SPEC> {
+    pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<'_, CLK_CONF_SPEC> {
         CK8M_DFREQ_W::new(self, 17)
     }
     #[doc = "Bit 25 - CK8M force power down"]
     #[inline(always)]
-    pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_PD_W::new(self, 25)
     }
     #[doc = "Bit 26 - CK8M force power up"]
     #[inline(always)]
-    pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_PU_W::new(self, 26)
     }
     #[doc = "Bit 27 - force enable xtal clk gating"]
     #[inline(always)]
-    pub fn xtal_global_force_gating(&mut self) -> XTAL_GLOBAL_FORCE_GATING_W<CLK_CONF_SPEC> {
+    pub fn xtal_global_force_gating(&mut self) -> XTAL_GLOBAL_FORCE_GATING_W<'_, CLK_CONF_SPEC> {
         XTAL_GLOBAL_FORCE_GATING_W::new(self, 27)
     }
     #[doc = "Bit 28 - force bypass xtal clk gating"]
     #[inline(always)]
-    pub fn xtal_global_force_nogating(&mut self) -> XTAL_GLOBAL_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn xtal_global_force_nogating(
+        &mut self,
+    ) -> XTAL_GLOBAL_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         XTAL_GLOBAL_FORCE_NOGATING_W::new(self, 28)
     }
     #[doc = "Bit 29 - fast_clk_rtc sel. 0: XTAL div 4"]
     #[inline(always)]
-    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
+    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<'_, CLK_CONF_SPEC> {
         FAST_CLK_RTC_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - slelect rtc slow clk"]
     #[inline(always)]
-    pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
+    pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<'_, CLK_CONF_SPEC> {
         ANA_CLK_RTC_SEL_W::new(self, 30)
     }
 }

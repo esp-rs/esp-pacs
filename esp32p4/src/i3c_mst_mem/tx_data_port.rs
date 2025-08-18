@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Transmit Data Port. Transmit data is mapped to the Tx-data buffer and transmit data is always packed in 4-byte aligned data words. If the length of data transfer is not aligned to 4-bytes boundary, then there will be extra(unused) bytes(the additional data bytes have to be ignored) at the end of the transferred data. The valid data must be identified using the DATA_LENGTH filed in the Response Descriptor."]
     #[inline(always)]
-    pub fn reg_tx_data_port(&mut self) -> REG_TX_DATA_PORT_W<TX_DATA_PORT_SPEC> {
+    pub fn reg_tx_data_port(&mut self) -> REG_TX_DATA_PORT_W<'_, TX_DATA_PORT_SPEC> {
         REG_TX_DATA_PORT_W::new(self, 0)
     }
 }

@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Bitmap to select RTC pads for ext wakeup1"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP1_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, EXT_WAKEUP1_SPEC> {
         SEL_W::new(self, 0)
     }
     #[doc = "Bit 18 - clear ext wakeup1 status"]
     #[inline(always)]
-    pub fn status_clr(&mut self) -> STATUS_CLR_W<EXT_WAKEUP1_SPEC> {
+    pub fn status_clr(&mut self) -> STATUS_CLR_W<'_, EXT_WAKEUP1_SPEC> {
         STATUS_CLR_W::new(self, 18)
     }
 }

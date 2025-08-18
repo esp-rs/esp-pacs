@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_unalloc_clr(
         &mut self,
-    ) -> L2_CACHE_UNALLOC_CLR_W<L2_UNALLOCATE_BUFFER_CLEAR_SPEC> {
+    ) -> L2_CACHE_UNALLOC_CLR_W<'_, L2_UNALLOCATE_BUFFER_CLEAR_SPEC> {
         L2_CACHE_UNALLOC_CLR_W::new(self, 5)
     }
 }

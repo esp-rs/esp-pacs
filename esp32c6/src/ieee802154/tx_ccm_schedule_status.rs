@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn tx_ccm_schedule_status(
         &mut self,
-    ) -> TX_CCM_SCHEDULE_STATUS_W<TX_CCM_SCHEDULE_STATUS_SPEC> {
+    ) -> TX_CCM_SCHEDULE_STATUS_W<'_, TX_CCM_SCHEDULE_STATUS_SPEC> {
         TX_CCM_SCHEDULE_STATUS_W::new(self, 0)
     }
 }

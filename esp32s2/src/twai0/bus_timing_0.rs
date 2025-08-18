@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Baud Rate Prescaler, determines the frequency dividing ratio."]
     #[inline(always)]
-    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<BUS_TIMING_0_SPEC> {
+    pub fn baud_presc(&mut self) -> BAUD_PRESC_W<'_, BUS_TIMING_0_SPEC> {
         BAUD_PRESC_W::new(self, 0)
     }
     #[doc = "Bits 14:15 - Synchronization Jump Width (SJW), 1 \\verb+~+ 14 Tq wide."]
     #[inline(always)]
-    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<BUS_TIMING_0_SPEC> {
+    pub fn sync_jump_width(&mut self) -> SYNC_JUMP_WIDTH_W<'_, BUS_TIMING_0_SPEC> {
         SYNC_JUMP_WIDTH_W::new(self, 14)
     }
 }

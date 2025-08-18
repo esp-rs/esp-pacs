@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for DBUS0 access interrupt."]
     #[inline(always)]
-    pub fn pro_dram0_ilg_clr(&mut self) -> PRO_DRAM0_ILG_CLR_W<PRO_DRAM0_3_SPEC> {
+    pub fn pro_dram0_ilg_clr(&mut self) -> PRO_DRAM0_ILG_CLR_W<'_, PRO_DRAM0_3_SPEC> {
         PRO_DRAM0_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for DBUS0 access interrupt."]
     #[inline(always)]
-    pub fn pro_dram0_ilg_en(&mut self) -> PRO_DRAM0_ILG_EN_W<PRO_DRAM0_3_SPEC> {
+    pub fn pro_dram0_ilg_en(&mut self) -> PRO_DRAM0_ILG_EN_W<'_, PRO_DRAM0_3_SPEC> {
         PRO_DRAM0_ILG_EN_W::new(self, 1)
     }
 }

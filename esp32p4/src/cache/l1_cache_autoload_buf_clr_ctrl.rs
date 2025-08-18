@@ -62,21 +62,21 @@ impl W {
     #[inline(always)]
     pub fn l1_icache0_ald_buf_clr(
         &mut self,
-    ) -> L1_ICACHE0_ALD_BUF_CLR_W<L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
+    ) -> L1_ICACHE0_ALD_BUF_CLR_W<'_, L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
         L1_ICACHE0_ALD_BUF_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - set this bit to clear autoload-buffer inside L1-ICache1. If this bit is active, autoload will not work in L1-ICache1. This bit should not be active when autoload works in L1-ICache1."]
     #[inline(always)]
     pub fn l1_icache1_ald_buf_clr(
         &mut self,
-    ) -> L1_ICACHE1_ALD_BUF_CLR_W<L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
+    ) -> L1_ICACHE1_ALD_BUF_CLR_W<'_, L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
         L1_ICACHE1_ALD_BUF_CLR_W::new(self, 1)
     }
     #[doc = "Bit 4 - set this bit to clear autoload-buffer inside L1-DCache. If this bit is active, autoload will not work in L1-DCache. This bit should not be active when autoload works in L1-DCache."]
     #[inline(always)]
     pub fn l1_dcache_ald_buf_clr(
         &mut self,
-    ) -> L1_DCACHE_ALD_BUF_CLR_W<L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
+    ) -> L1_DCACHE_ALD_BUF_CLR_W<'_, L1_CACHE_AUTOLOAD_BUF_CLR_CTRL_SPEC> {
         L1_DCACHE_ALD_BUF_CLR_W::new(self, 4)
     }
 }

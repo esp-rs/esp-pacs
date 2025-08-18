@@ -45,14 +45,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn cpu_icm_h2x_post_wr_en(&mut self) -> CPU_ICM_H2X_POST_WR_EN_W<ICM_CPU_H2X_CFG_SPEC> {
+    pub fn cpu_icm_h2x_post_wr_en(&mut self) -> CPU_ICM_H2X_POST_WR_EN_W<'_, ICM_CPU_H2X_CFG_SPEC> {
         CPU_ICM_H2X_POST_WR_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
     pub fn cpu_icm_h2x_cut_through_en(
         &mut self,
-    ) -> CPU_ICM_H2X_CUT_THROUGH_EN_W<ICM_CPU_H2X_CFG_SPEC> {
+    ) -> CPU_ICM_H2X_CUT_THROUGH_EN_W<'_, ICM_CPU_H2X_CFG_SPEC> {
         CPU_ICM_H2X_CUT_THROUGH_EN_W::new(self, 1)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn tx_arb_weigh_opt_dir_ch(
         &mut self,
-    ) -> TX_ARB_WEIGH_OPT_DIR_CH_W<TX_ARB_WEIGH_OPT_DIR_CH_SPEC> {
+    ) -> TX_ARB_WEIGH_OPT_DIR_CH_W<'_, TX_ARB_WEIGH_OPT_DIR_CH_SPEC> {
         TX_ARB_WEIGH_OPT_DIR_CH_W::new(self, 0)
     }
 }

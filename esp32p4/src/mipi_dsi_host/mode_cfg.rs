@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn cmd_video_mode(&mut self) -> CMD_VIDEO_MODE_W<MODE_CFG_SPEC> {
+    pub fn cmd_video_mode(&mut self) -> CMD_VIDEO_MODE_W<'_, MODE_CFG_SPEC> {
         CMD_VIDEO_MODE_W::new(self, 0)
     }
 }

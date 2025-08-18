@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn overflow_ena(&mut self) -> OVERFLOW_ENA_W<INT_ENA_SPEC> {
+    pub fn overflow_ena(&mut self) -> OVERFLOW_ENA_W<'_, INT_ENA_SPEC> {
         OVERFLOW_ENA_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn soc_wakeup_int_ena(&mut self) -> SOC_WAKEUP_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn soc_wakeup_int_ena(&mut self) -> SOC_WAKEUP_INT_ENA_W<'_, INT_ENA_SPEC> {
         SOC_WAKEUP_INT_ENA_W::new(self, 31)
     }
 }

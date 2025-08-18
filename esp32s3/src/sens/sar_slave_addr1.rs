@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - configure i2c slave address1"]
     #[inline(always)]
-    pub fn sar_i2c_slave_addr1(&mut self) -> SAR_I2C_SLAVE_ADDR1_W<SAR_SLAVE_ADDR1_SPEC> {
+    pub fn sar_i2c_slave_addr1(&mut self) -> SAR_I2C_SLAVE_ADDR1_W<'_, SAR_SLAVE_ADDR1_SPEC> {
         SAR_I2C_SLAVE_ADDR1_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - configure i2c slave address0"]
     #[inline(always)]
-    pub fn sar_i2c_slave_addr0(&mut self) -> SAR_I2C_SLAVE_ADDR0_W<SAR_SLAVE_ADDR1_SPEC> {
+    pub fn sar_i2c_slave_addr0(&mut self) -> SAR_I2C_SLAVE_ADDR0_W<'_, SAR_SLAVE_ADDR1_SPEC> {
         SAR_I2C_SLAVE_ADDR0_W::new(self, 11)
     }
 }

@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 30 - Clear the RTC main timer overflow raw interrupt.."]
     #[inline(always)]
-    pub fn overflow(&mut self) -> OVERFLOW_W<INT_CLR_SPEC> {
+    pub fn overflow(&mut self) -> OVERFLOW_W<'_, INT_CLR_SPEC> {
         OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Clear the RTC main timer raw interrupt.."]
     #[inline(always)]
-    pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<INT_CLR_SPEC> {
+    pub fn soc_wakeup(&mut self) -> SOC_WAKEUP_W<'_, INT_CLR_SPEC> {
         SOC_WAKEUP_W::new(self, 31)
     }
 }

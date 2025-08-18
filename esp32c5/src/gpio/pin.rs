@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures whether or not to synchronize GPIO input data on either edge of IO MUX operating clock for the second-level synchronization.\\\\ 0: Not synchronize\\\\ 1: Synchronize on falling edge\\\\ 2: Synchronize on rising edge\\\\ 3: Synchronize on rising edge\\\\"]
     #[inline(always)]
-    pub fn sync2_bypass(&mut self) -> SYNC2_BYPASS_W<PIN_SPEC> {
+    pub fn sync2_bypass(&mut self) -> SYNC2_BYPASS_W<'_, PIN_SPEC> {
         SYNC2_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configures to select pin drive mode. \\\\ 0: Normal output\\\\ 1: Open drain output \\\\"]
     #[inline(always)]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC> {
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<'_, PIN_SPEC> {
         PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - Configures whether or not to synchronize GPIO input data on either edge of IO MUX operating clock for the first-level synchronization.\\\\ 0: Not synchronize\\\\ 1: Synchronize on falling edge\\\\ 2: Synchronize on rising edge\\\\ 3: Synchronize on rising edge\\\\"]
     #[inline(always)]
-    pub fn sync1_bypass(&mut self) -> SYNC1_BYPASS_W<PIN_SPEC> {
+    pub fn sync1_bypass(&mut self) -> SYNC1_BYPASS_W<'_, PIN_SPEC> {
         SYNC1_BYPASS_W::new(self, 3)
     }
     #[doc = "Bits 7:9 - Configures GPIO interrupt type.\\\\ 0: GPIO interrupt disabled\\\\ 1: Rising edge trigger\\\\ 2: Falling edge trigger\\\\ 3: Any edge trigger\\\\ 4: Low level trigger\\\\ 5: High level trigger\\\\"]
     #[inline(always)]
-    pub fn int_type(&mut self) -> INT_TYPE_W<PIN_SPEC> {
+    pub fn int_type(&mut self) -> INT_TYPE_W<'_, PIN_SPEC> {
         INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - Configures whether or not to enable GPIO wake-up function.\\\\ 0: Disable\\\\ 1: Enable\\\\ This function only wakes up the CPU from Light-sleep. \\\\"]
     #[inline(always)]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN_SPEC> {
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<'_, PIN_SPEC> {
         WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bits 13:17 - Configures whether or not to enable CPU interrupt or CPU non-maskable interrupt. - bit13: Configures whether or not to enable CPU interrupt:\\\\ 0: Disable\\\\ 1: Enable\\\\ - bit14 ~ bit17: invalid"]
     #[inline(always)]
-    pub fn int_ena(&mut self) -> INT_ENA_W<PIN_SPEC> {
+    pub fn int_ena(&mut self) -> INT_ENA_W<'_, PIN_SPEC> {
         INT_ENA_W::new(self, 13)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Write 1 to invert the input Rx core clock."]
     #[inline(always)]
-    pub fn rx_clk_i_inv(&mut self) -> RX_CLK_I_INV_W<RX_CLK_CFG_SPEC> {
+    pub fn rx_clk_i_inv(&mut self) -> RX_CLK_I_INV_W<'_, RX_CLK_CFG_SPEC> {
         RX_CLK_I_INV_W::new(self, 30)
     }
     #[doc = "Bit 31 - Write 1 to invert the output Rx core clock."]
     #[inline(always)]
-    pub fn rx_clk_o_inv(&mut self) -> RX_CLK_O_INV_W<RX_CLK_CFG_SPEC> {
+    pub fn rx_clk_o_inv(&mut self) -> RX_CLK_O_INV_W<'_, RX_CLK_CFG_SPEC> {
         RX_CLK_O_INV_W::new(self, 31)
     }
 }

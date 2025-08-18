@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Triggered when counter register of RTC main timer overflow"]
     #[inline(always)]
-    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<LP_INT_RAW_SPEC> {
+    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<'_, LP_INT_RAW_SPEC> {
         MAIN_TIMER_OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Triggered when RTC main timer reach the target value"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<LP_INT_RAW_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, LP_INT_RAW_SPEC> {
         MAIN_TIMER_W::new(self, 31)
     }
 }

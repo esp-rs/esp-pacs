@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit initiates a Pause frame in the full-duplex mode and activates the backpressure function in the half-duplex mode if the TFCE bit is set. In the full-duplex mode this bit should be read as 1'b0 before writing to the Flow Control register. To initiate a Pause frame the Application must set this bit to 1'b1. During a transfer of the Control Frame this bit continues to be set to signify that a frame transmission is in progress. After the completion of Pause frame transmission the MAC resets this bit to 1'b0. The Flow Control register should not be written to until this bit is cleared. In the half-duplex mode when this bit is set (and TFCE is set) then backpressure is asserted by the MAC. During backpressure when the MAC receives a new frame the transmitter starts sending a JAM pattern resulting in a collision. When the MAC is configured for the full-duplex mode the BPA(backpressure activate) is automatically disabled."]
     #[inline(always)]
-    pub fn fcbba(&mut self) -> FCBBA_W<EMACFC_SPEC> {
+    pub fn fcbba(&mut self) -> FCBBA_W<'_, EMACFC_SPEC> {
         FCBBA_W::new(self, 0)
     }
     #[doc = "Bit 1 - In the full-duplex mode when this bit is set the MAC enables the flow control operation to transmit Pause frames. When this bit is reset the flow control operation in the MAC is disabled and the MAC does not transmit any Pause frames. In the half-duplex mode when this bit is set the MAC enables the backpressure operation. When this bit is reset the backpressure feature is Disabled."]
     #[inline(always)]
-    pub fn tfce(&mut self) -> TFCE_W<EMACFC_SPEC> {
+    pub fn tfce(&mut self) -> TFCE_W<'_, EMACFC_SPEC> {
         TFCE_W::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set the MAC decodes the received Pause frame and disables its transmitter for a specified (Pause) time. When this bit is reset the decode function of the Pause frame is disabled."]
     #[inline(always)]
-    pub fn rfce(&mut self) -> RFCE_W<EMACFC_SPEC> {
+    pub fn rfce(&mut self) -> RFCE_W<'_, EMACFC_SPEC> {
         RFCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - A pause frame is processed when it has the unique multicast address specified in the IEEE Std 802.3. When this bit is set the MAC can also detect Pause frames with unicast address of the station. This unicast address should be as specified in the EMACADDR0 High Register and EMACADDR0 Low Register. When this bit is reset the MAC only detects Pause frames with unique multicast address."]
     #[inline(always)]
-    pub fn upfd(&mut self) -> UPFD_W<EMACFC_SPEC> {
+    pub fn upfd(&mut self) -> UPFD_W<'_, EMACFC_SPEC> {
         UPFD_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - This field configures the threshold of the Pause timer automatic retransmission of the Pause frame.The threshold values should be always less than the Pause Time configured in Bits\\[31:16\\]. For example if PT = 100H (256 slot-times) and PLT = 01 then a second Pause frame is automatically transmitted at 228 (256-28) slot times after the first Pause frame is transmitted. The following list provides the threshold values for different values: 2'b00: The threshold is Pause time minus 4 slot times (PT-4 slot times). 2'b01: The threshold is Pause time minus 28 slot times (PT-28 slot times). 2'b10: The threshold is Pause time minus 144 slot times (PT-144 slot times). 2'b11: The threshold is Pause time minus 256 slot times (PT-256 slot times). The slot time is defined as the time taken to transmit 512 bits (64 bytes) on the MII interface."]
     #[inline(always)]
-    pub fn plt(&mut self) -> PLT_W<EMACFC_SPEC> {
+    pub fn plt(&mut self) -> PLT_W<'_, EMACFC_SPEC> {
         PLT_W::new(self, 4)
     }
     #[doc = "Bit 7 - When this bit is set it disables the automatic generation of the Zero-Quanta Pause frames on the de-assertion of the flow-control signal from the FIFO layer. When this bit is reset normal operation with automatic Zero-Quanta Pause frame generation is enabled."]
     #[inline(always)]
-    pub fn dzpq(&mut self) -> DZPQ_W<EMACFC_SPEC> {
+    pub fn dzpq(&mut self) -> DZPQ_W<'_, EMACFC_SPEC> {
         DZPQ_W::new(self, 7)
     }
     #[doc = "Bits 16:31 - This field holds the value to be used in the Pause Time field in the transmit control frame. If the Pause Time bits is configured to be double-synchronized to the MII clock domain then consecutive writes to this register should be performed only after at least four clock cycles in the destination clock domain."]
     #[inline(always)]
-    pub fn pause_time(&mut self) -> PAUSE_TIME_W<EMACFC_SPEC> {
+    pub fn pause_time(&mut self) -> PAUSE_TIME_W<'_, EMACFC_SPEC> {
         PAUSE_TIME_W::new(self, 16)
     }
 }

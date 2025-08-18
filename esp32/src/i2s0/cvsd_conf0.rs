@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn cvsd_y_max(&mut self) -> CVSD_Y_MAX_W<CVSD_CONF0_SPEC> {
+    pub fn cvsd_y_max(&mut self) -> CVSD_Y_MAX_W<'_, CVSD_CONF0_SPEC> {
         CVSD_Y_MAX_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn cvsd_y_min(&mut self) -> CVSD_Y_MIN_W<CVSD_CONF0_SPEC> {
+    pub fn cvsd_y_min(&mut self) -> CVSD_Y_MIN_W<'_, CVSD_CONF0_SPEC> {
         CVSD_Y_MIN_W::new(self, 16)
     }
 }

@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn icache_prelock_sct1_addr(
         &mut self,
-    ) -> ICACHE_PRELOCK_SCT1_ADDR_W<ICACHE_PRELOCK_SCT1_ADDR_SPEC> {
+    ) -> ICACHE_PRELOCK_SCT1_ADDR_W<'_, ICACHE_PRELOCK_SCT1_ADDR_SPEC> {
         ICACHE_PRELOCK_SCT1_ADDR_W::new(self, 0)
     }
 }

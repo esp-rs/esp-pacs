@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable i2s rx data recombination."]
     #[inline(always)]
-    pub fn rx_recomb_en(&mut self) -> RX_RECOMB_EN_W<RX_RECOMB_CTRL_SPEC> {
+    pub fn rx_recomb_en(&mut self) -> RX_RECOMB_EN_W<'_, RX_RECOMB_CTRL_SPEC> {
         RX_RECOMB_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - The channel number that i2s will extract the data into."]
     #[inline(always)]
-    pub fn rx_recomb_ext_ch_num(&mut self) -> RX_RECOMB_EXT_CH_NUM_W<RX_RECOMB_CTRL_SPEC> {
+    pub fn rx_recomb_ext_ch_num(&mut self) -> RX_RECOMB_EXT_CH_NUM_W<'_, RX_RECOMB_CTRL_SPEC> {
         RX_RECOMB_EXT_CH_NUM_W::new(self, 1)
     }
     #[doc = "Bit 31 - Set this bit to update i2s data recombination configuration, must be performed after changing the config of any recombined-dma-channel."]
     #[inline(always)]
-    pub fn rx_recomb_update(&mut self) -> RX_RECOMB_UPDATE_W<RX_RECOMB_CTRL_SPEC> {
+    pub fn rx_recomb_update(&mut self) -> RX_RECOMB_UPDATE_W<'_, RX_RECOMB_CTRL_SPEC> {
         RX_RECOMB_UPDATE_W::new(self, 31)
     }
 }

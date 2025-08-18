@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - set this field to select clock-source. 0(default): FOSC, 1: XTAL."]
     #[inline(always)]
-    pub fn tsens_clk_sel(&mut self) -> TSENS_CLK_SEL_W<TSENS_CLK_CONF_SPEC> {
+    pub fn tsens_clk_sel(&mut self) -> TSENS_CLK_SEL_W<'_, TSENS_CLK_CONF_SPEC> {
         TSENS_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable tsens clock"]
     #[inline(always)]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<TSENS_CLK_CONF_SPEC> {
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<'_, TSENS_CLK_CONF_SPEC> {
         TSENS_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set 0 to reset tsens module"]
     #[inline(always)]
-    pub fn tsens_rst_en(&mut self) -> TSENS_RST_EN_W<TSENS_CLK_CONF_SPEC> {
+    pub fn tsens_rst_en(&mut self) -> TSENS_RST_EN_W<'_, TSENS_CLK_CONF_SPEC> {
         TSENS_RST_EN_W::new(self, 23)
     }
 }

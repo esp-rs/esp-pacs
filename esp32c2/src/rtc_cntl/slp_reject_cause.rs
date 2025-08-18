@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - sleep reject cause"]
     #[inline(always)]
-    pub fn reject_cause(&mut self) -> REJECT_CAUSE_W<SLP_REJECT_CAUSE_SPEC> {
+    pub fn reject_cause(&mut self) -> REJECT_CAUSE_W<'_, SLP_REJECT_CAUSE_SPEC> {
         REJECT_CAUSE_W::new(self, 0)
     }
 }

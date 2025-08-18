@@ -254,122 +254,128 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn clk_wifibb_22m_fo(&mut self) -> CLK_WIFIBB_22M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_22m_fo(&mut self) -> CLK_WIFIBB_22M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_22M_FO_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn clk_wifibb_40m_fo(&mut self) -> CLK_WIFIBB_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_40m_fo(&mut self) -> CLK_WIFIBB_40M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_40M_FO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn clk_wifibb_44m_fo(&mut self) -> CLK_WIFIBB_44M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_44m_fo(&mut self) -> CLK_WIFIBB_44M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_44M_FO_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn clk_wifibb_80m_fo(&mut self) -> CLK_WIFIBB_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_80m_fo(&mut self) -> CLK_WIFIBB_80M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_80M_FO_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn clk_wifibb_40x_fo(&mut self) -> CLK_WIFIBB_40X_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_40x_fo(&mut self) -> CLK_WIFIBB_40X_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_40X_FO_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn clk_wifibb_80x_fo(&mut self) -> CLK_WIFIBB_80X_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_80x_fo(&mut self) -> CLK_WIFIBB_80X_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_80X_FO_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn clk_wifibb_40x1_fo(&mut self) -> CLK_WIFIBB_40X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_40x1_fo(&mut self) -> CLK_WIFIBB_40X1_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_40X1_FO_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn clk_wifibb_80x1_fo(&mut self) -> CLK_WIFIBB_80X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_80x1_fo(&mut self) -> CLK_WIFIBB_80X1_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_80X1_FO_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn clk_wifibb_160x1_fo(&mut self) -> CLK_WIFIBB_160X1_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_160x1_fo(&mut self) -> CLK_WIFIBB_160X1_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_160X1_FO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn clk_wifimac_fo(&mut self) -> CLK_WIFIMAC_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifimac_fo(&mut self) -> CLK_WIFIMAC_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIMAC_FO_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn clk_wifi_apb_fo(&mut self) -> CLK_WIFI_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifi_apb_fo(&mut self) -> CLK_WIFI_APB_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFI_APB_FO_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn clk_fe_20m_fo(&mut self) -> CLK_FE_20M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_20m_fo(&mut self) -> CLK_FE_20M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_20M_FO_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn clk_fe_40m_fo(&mut self) -> CLK_FE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_40m_fo(&mut self) -> CLK_FE_40M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_40M_FO_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn clk_fe_80m_fo(&mut self) -> CLK_FE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_80m_fo(&mut self) -> CLK_FE_80M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_80M_FO_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn clk_fe_160m_fo(&mut self) -> CLK_FE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_160m_fo(&mut self) -> CLK_FE_160M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_160M_FO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn clk_fe_cal_160m_fo(&mut self) -> CLK_FE_CAL_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_cal_160m_fo(&mut self) -> CLK_FE_CAL_160M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_CAL_160M_FO_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn clk_fe_apb_fo(&mut self) -> CLK_FE_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_apb_fo(&mut self) -> CLK_FE_APB_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_APB_FO_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn clk_bt_apb_fo(&mut self) -> CLK_BT_APB_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_bt_apb_fo(&mut self) -> CLK_BT_APB_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_BT_APB_FO_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_BT_FO_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn clk_wifibb_480m_fo(&mut self) -> CLK_WIFIBB_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_wifibb_480m_fo(&mut self) -> CLK_WIFIBB_480M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_WIFIBB_480M_FO_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn clk_fe_480m_fo(&mut self) -> CLK_FE_480M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_480m_fo(&mut self) -> CLK_FE_480M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_480M_FO_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn clk_fe_anamode_40m_fo(&mut self) -> CLK_FE_ANAMODE_40M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_anamode_40m_fo(
+        &mut self,
+    ) -> CLK_FE_ANAMODE_40M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_ANAMODE_40M_FO_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn clk_fe_anamode_80m_fo(&mut self) -> CLK_FE_ANAMODE_80M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_anamode_80m_fo(
+        &mut self,
+    ) -> CLK_FE_ANAMODE_80M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_ANAMODE_80M_FO_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn clk_fe_anamode_160m_fo(&mut self) -> CLK_FE_ANAMODE_160M_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_anamode_160m_fo(
+        &mut self,
+    ) -> CLK_FE_ANAMODE_160M_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_ANAMODE_160M_FO_W::new(self, 23)
     }
 }

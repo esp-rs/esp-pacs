@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:29 - sleep reject enable"]
     #[inline(always)]
-    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<SLP_REJECT_CONF_SPEC> {
+    pub fn sleep_reject_ena(&mut self) -> SLEEP_REJECT_ENA_W<'_, SLP_REJECT_CONF_SPEC> {
         SLEEP_REJECT_ENA_W::new(self, 12)
     }
     #[doc = "Bit 30 - enable reject for light sleep"]
     #[inline(always)]
-    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn light_slp_reject_en(&mut self) -> LIGHT_SLP_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         LIGHT_SLP_REJECT_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable reject for deep sleep"]
     #[inline(always)]
-    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<SLP_REJECT_CONF_SPEC> {
+    pub fn deep_slp_reject_en(&mut self) -> DEEP_SLP_REJECT_EN_W<'_, SLP_REJECT_CONF_SPEC> {
         DEEP_SLP_REJECT_EN_W::new(self, 31)
     }
 }

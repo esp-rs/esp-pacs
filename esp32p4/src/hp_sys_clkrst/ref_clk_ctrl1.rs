@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn ref_120m_clk_div_num(&mut self) -> REF_120M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_120m_clk_div_num(&mut self) -> REF_120M_CLK_DIV_NUM_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_120M_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn ref_80m_clk_div_num(&mut self) -> REF_80M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_80m_clk_div_num(&mut self) -> REF_80M_CLK_DIV_NUM_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_80M_CLK_DIV_NUM_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn ref_20m_clk_div_num(&mut self) -> REF_20M_CLK_DIV_NUM_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_20m_clk_div_num(&mut self) -> REF_20M_CLK_DIV_NUM_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_20M_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bit 24 - Reserved"]
     #[inline(always)]
-    pub fn tm_400m_clk_en(&mut self) -> TM_400M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn tm_400m_clk_en(&mut self) -> TM_400M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         TM_400M_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Reserved"]
     #[inline(always)]
-    pub fn tm_200m_clk_en(&mut self) -> TM_200M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn tm_200m_clk_en(&mut self) -> TM_200M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         TM_200M_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Reserved"]
     #[inline(always)]
-    pub fn tm_100m_clk_en(&mut self) -> TM_100M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn tm_100m_clk_en(&mut self) -> TM_100M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         TM_100M_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Reserved"]
     #[inline(always)]
-    pub fn ref_50m_clk_en(&mut self) -> REF_50M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_50m_clk_en(&mut self) -> REF_50M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_50M_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn ref_25m_clk_en(&mut self) -> REF_25M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_25m_clk_en(&mut self) -> REF_25M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_25M_CLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn tm_480m_clk_en(&mut self) -> TM_480M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn tm_480m_clk_en(&mut self) -> TM_480M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         TM_480M_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Reserved"]
     #[inline(always)]
-    pub fn ref_240m_clk_en(&mut self) -> REF_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn ref_240m_clk_en(&mut self) -> REF_240M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         REF_240M_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Reserved"]
     #[inline(always)]
-    pub fn tm_240m_clk_en(&mut self) -> TM_240M_CLK_EN_W<REF_CLK_CTRL1_SPEC> {
+    pub fn tm_240m_clk_en(&mut self) -> TM_240M_CLK_EN_W<'_, REF_CLK_CTRL1_SPEC> {
         TM_240M_CLK_EN_W::new(self, 31)
     }
 }

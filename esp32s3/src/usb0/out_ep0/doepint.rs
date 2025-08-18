@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn xfercompl(&mut self) -> XFERCOMPL_W<DOEPINT_SPEC> {
+    pub fn xfercompl(&mut self) -> XFERCOMPL_W<'_, DOEPINT_SPEC> {
         XFERCOMPL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn epdisbld(&mut self) -> EPDISBLD_W<DOEPINT_SPEC> {
+    pub fn epdisbld(&mut self) -> EPDISBLD_W<'_, DOEPINT_SPEC> {
         EPDISBLD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ahberr(&mut self) -> AHBERR_W<DOEPINT_SPEC> {
+    pub fn ahberr(&mut self) -> AHBERR_W<'_, DOEPINT_SPEC> {
         AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn setup(&mut self) -> SETUP_W<DOEPINT_SPEC> {
+    pub fn setup(&mut self) -> SETUP_W<'_, DOEPINT_SPEC> {
         SETUP_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn outtknepdis(&mut self) -> OUTTKNEPDIS_W<DOEPINT_SPEC> {
+    pub fn outtknepdis(&mut self) -> OUTTKNEPDIS_W<'_, DOEPINT_SPEC> {
         OUTTKNEPDIS_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn stsphsercvd(&mut self) -> STSPHSERCVD_W<DOEPINT_SPEC> {
+    pub fn stsphsercvd(&mut self) -> STSPHSERCVD_W<'_, DOEPINT_SPEC> {
         STSPHSERCVD_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn back2backsetup(&mut self) -> BACK2BACKSETUP_W<DOEPINT_SPEC> {
+    pub fn back2backsetup(&mut self) -> BACK2BACKSETUP_W<'_, DOEPINT_SPEC> {
         BACK2BACKSETUP_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn outpkterr(&mut self) -> OUTPKTERR_W<DOEPINT_SPEC> {
+    pub fn outpkterr(&mut self) -> OUTPKTERR_W<'_, DOEPINT_SPEC> {
         OUTPKTERR_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn bnaintr(&mut self) -> BNAINTR_W<DOEPINT_SPEC> {
+    pub fn bnaintr(&mut self) -> BNAINTR_W<'_, DOEPINT_SPEC> {
         BNAINTR_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DOEPINT_SPEC> {
+    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<'_, DOEPINT_SPEC> {
         PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn bbleerr(&mut self) -> BBLEERR_W<DOEPINT_SPEC> {
+    pub fn bbleerr(&mut self) -> BBLEERR_W<'_, DOEPINT_SPEC> {
         BBLEERR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn nakintrpt(&mut self) -> NAKINTRPT_W<DOEPINT_SPEC> {
+    pub fn nakintrpt(&mut self) -> NAKINTRPT_W<'_, DOEPINT_SPEC> {
         NAKINTRPT_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn nyepintrpt(&mut self) -> NYEPINTRPT_W<DOEPINT_SPEC> {
+    pub fn nyepintrpt(&mut self) -> NYEPINTRPT_W<'_, DOEPINT_SPEC> {
         NYEPINTRPT_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn stuppktrcvd(&mut self) -> STUPPKTRCVD_W<DOEPINT_SPEC> {
+    pub fn stuppktrcvd(&mut self) -> STUPPKTRCVD_W<'_, DOEPINT_SPEC> {
         STUPPKTRCVD_W::new(self, 15)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures wakeup character 1."]
     #[inline(always)]
-    pub fn wk_char1(&mut self) -> WK_CHAR1_W<SLEEP_CONF0_SPEC> {
+    pub fn wk_char1(&mut self) -> WK_CHAR1_W<'_, SLEEP_CONF0_SPEC> {
         WK_CHAR1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures wakeup character 2."]
     #[inline(always)]
-    pub fn wk_char2(&mut self) -> WK_CHAR2_W<SLEEP_CONF0_SPEC> {
+    pub fn wk_char2(&mut self) -> WK_CHAR2_W<'_, SLEEP_CONF0_SPEC> {
         WK_CHAR2_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configures wakeup character 3."]
     #[inline(always)]
-    pub fn wk_char3(&mut self) -> WK_CHAR3_W<SLEEP_CONF0_SPEC> {
+    pub fn wk_char3(&mut self) -> WK_CHAR3_W<'_, SLEEP_CONF0_SPEC> {
         WK_CHAR3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Configures wakeup character 4."]
     #[inline(always)]
-    pub fn wk_char4(&mut self) -> WK_CHAR4_W<SLEEP_CONF0_SPEC> {
+    pub fn wk_char4(&mut self) -> WK_CHAR4_W<'_, SLEEP_CONF0_SPEC> {
         WK_CHAR4_W::new(self, 24)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
     #[inline(always)]
-    pub fn cache_lock_addr(&mut self) -> CACHE_LOCK_ADDR_W<CACHE_LOCK_ADDR_SPEC> {
+    pub fn cache_lock_addr(&mut self) -> CACHE_LOCK_ADDR_W<'_, CACHE_LOCK_ADDR_SPEC> {
         CACHE_LOCK_ADDR_W::new(self, 0)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable carrier%s.\\\\0: Bypassed\\\\1: Enabled"]
     #[inline(always)]
-    pub fn chopper_en(&mut self) -> CHOPPER_EN_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_en(&mut self) -> CHOPPER_EN_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - Configures the prescale value of PWM carrier%s clock (PC_clk), so that period of PC_clk = period of PWM_clk * (PWM_CARRIER%s_PRESCALE + 1)"]
     #[inline(always)]
-    pub fn chopper_prescale(&mut self) -> CHOPPER_PRESCALE_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_prescale(&mut self) -> CHOPPER_PRESCALE_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7 - Configures carrier duty. Duty = PWM_CARRIER%s_DUTY / 8"]
     #[inline(always)]
-    pub fn chopper_duty(&mut self) -> CHOPPER_DUTY_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_duty(&mut self) -> CHOPPER_DUTY_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11 - Configures width of the first pulse. Measurement unit: Periods of the carrier."]
     #[inline(always)]
-    pub fn chopper_oshtwth(&mut self) -> CHOPPER_OSHTWTH_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_oshtwth(&mut self) -> CHOPPER_OSHTWTH_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12 - Configures whether or not to invert the output of PWM%s A and PWM%s B for this submodule.\\\\0: Normal\\\\1: Invert"]
     #[inline(always)]
-    pub fn chopper_out_invert(&mut self) -> CHOPPER_OUT_INVERT_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_out_invert(&mut self) -> CHOPPER_OUT_INVERT_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures whether or not to invert the input of PWM%s A and PWM%s B for this submodule.\\\\0: Normal\\\\1: Invert"]
     #[inline(always)]
-    pub fn chopper_in_invert(&mut self) -> CHOPPER_IN_INVERT_W<CARRIER_CFG_SPEC> {
+    pub fn chopper_in_invert(&mut self) -> CHOPPER_IN_INVERT_W<'_, CARRIER_CFG_SPEC> {
         CHOPPER_IN_INVERT_W::new(self, 13)
     }
 }

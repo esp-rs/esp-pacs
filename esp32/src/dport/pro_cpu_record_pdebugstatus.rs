@@ -50,14 +50,14 @@ impl W {
     #[inline(always)]
     pub fn record_pdebugstatus_bbcause(
         &mut self,
-    ) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
+    ) -> RECORD_PDEBUGSTATUS_BBCAUSE_W<'_, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
         RECORD_PDEBUGSTATUS_BBCAUSE_W::new(self, 0)
     }
     #[doc = "Bits 0:5"]
     #[inline(always)]
     pub fn record_pdebugstatus_insntype(
         &mut self,
-    ) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
+    ) -> RECORD_PDEBUGSTATUS_INSNTYPE_W<'_, PRO_CPU_RECORD_PDEBUGSTATUS_SPEC> {
         RECORD_PDEBUGSTATUS_INSNTYPE_W::new(self, 0)
     }
 }

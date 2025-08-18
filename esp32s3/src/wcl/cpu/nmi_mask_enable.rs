@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<NMI_MASK_ENABLE_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - this field is used to set NMI mask,it can write any value,when write this register,the hardware start masking NMI interrupt"]
     #[inline(always)]
-    pub fn nmi_mask_enable(&mut self) -> NMI_MASK_ENABLE_W<NMI_MASK_ENABLE_SPEC> {
+    pub fn nmi_mask_enable(&mut self) -> NMI_MASK_ENABLE_W<'_, NMI_MASK_ENABLE_SPEC> {
         NMI_MASK_ENABLE_W::new(self, 0)
     }
 }

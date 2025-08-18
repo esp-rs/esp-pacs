@@ -234,112 +234,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to enable the software over-ride of srp session end signal. 1'b0: the signal is controlled by the chip input. 1'b1: the signal is controlled by the software."]
     #[inline(always)]
-    pub fn srp_sessend_override(&mut self) -> SRP_SESSEND_OVERRIDE_W<OTG_CONF_SPEC> {
+    pub fn srp_sessend_override(&mut self) -> SRP_SESSEND_OVERRIDE_W<'_, OTG_CONF_SPEC> {
         SRP_SESSEND_OVERRIDE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Software over-ride value of srp session end signal."]
     #[inline(always)]
-    pub fn srp_sessend_value(&mut self) -> SRP_SESSEND_VALUE_W<OTG_CONF_SPEC> {
+    pub fn srp_sessend_value(&mut self) -> SRP_SESSEND_VALUE_W<'_, OTG_CONF_SPEC> {
         SRP_SESSEND_VALUE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Select internal external PHY. 1'b0: Select internal PHY. 1'b1: Select external PHY."]
     #[inline(always)]
-    pub fn phy_sel(&mut self) -> PHY_SEL_W<OTG_CONF_SPEC> {
+    pub fn phy_sel(&mut self) -> PHY_SEL_W<'_, OTG_CONF_SPEC> {
         PHY_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Force the dfifo to go into low power mode. The data in dfifo will not lost."]
     #[inline(always)]
-    pub fn dfifo_force_pd(&mut self) -> DFIFO_FORCE_PD_W<OTG_CONF_SPEC> {
+    pub fn dfifo_force_pd(&mut self) -> DFIFO_FORCE_PD_W<'_, OTG_CONF_SPEC> {
         DFIFO_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - Bypass Debounce filters for avalid,bvalid,vbusvalid,session end, id signals"]
     #[inline(always)]
-    pub fn dbnce_fltr_bypass(&mut self) -> DBNCE_FLTR_BYPASS_W<OTG_CONF_SPEC> {
+    pub fn dbnce_fltr_bypass(&mut self) -> DBNCE_FLTR_BYPASS_W<'_, OTG_CONF_SPEC> {
         DBNCE_FLTR_BYPASS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable software controlle USB D+ D- exchange"]
     #[inline(always)]
-    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<OTG_CONF_SPEC> {
+    pub fn exchg_pins_override(&mut self) -> EXCHG_PINS_OVERRIDE_W<'_, OTG_CONF_SPEC> {
         EXCHG_PINS_OVERRIDE_W::new(self, 5)
     }
     #[doc = "Bit 6 - USB D+ D- exchange. 1'b0: don't change. 1'b1: exchange D+ D-"]
     #[inline(always)]
-    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<OTG_CONF_SPEC> {
+    pub fn exchg_pins(&mut self) -> EXCHG_PINS_W<'_, OTG_CONF_SPEC> {
         EXCHG_PINS_W::new(self, 6)
     }
     #[doc = "Bits 7:8 - Control single-end input high threshold,1.76V to 2V, step 80mV"]
     #[inline(always)]
-    pub fn vrefh(&mut self) -> VREFH_W<OTG_CONF_SPEC> {
+    pub fn vrefh(&mut self) -> VREFH_W<'_, OTG_CONF_SPEC> {
         VREFH_W::new(self, 7)
     }
     #[doc = "Bits 9:10 - Control single-end input low threshold,0.8V to 1.04V, step 80mV"]
     #[inline(always)]
-    pub fn vrefl(&mut self) -> VREFL_W<OTG_CONF_SPEC> {
+    pub fn vrefl(&mut self) -> VREFL_W<'_, OTG_CONF_SPEC> {
         VREFL_W::new(self, 9)
     }
     #[doc = "Bit 11 - Enable software controlle input threshold"]
     #[inline(always)]
-    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<OTG_CONF_SPEC> {
+    pub fn vref_override(&mut self) -> VREF_OVERRIDE_W<'_, OTG_CONF_SPEC> {
         VREF_OVERRIDE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable software controlle USB D+ D- pullup pulldown"]
     #[inline(always)]
-    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<OTG_CONF_SPEC> {
+    pub fn pad_pull_override(&mut self) -> PAD_PULL_OVERRIDE_W<'_, OTG_CONF_SPEC> {
         PAD_PULL_OVERRIDE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Controlle USB D+ pullup"]
     #[inline(always)]
-    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<OTG_CONF_SPEC> {
+    pub fn dp_pullup(&mut self) -> DP_PULLUP_W<'_, OTG_CONF_SPEC> {
         DP_PULLUP_W::new(self, 13)
     }
     #[doc = "Bit 14 - Controlle USB D+ pulldown"]
     #[inline(always)]
-    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<OTG_CONF_SPEC> {
+    pub fn dp_pulldown(&mut self) -> DP_PULLDOWN_W<'_, OTG_CONF_SPEC> {
         DP_PULLDOWN_W::new(self, 14)
     }
     #[doc = "Bit 15 - Controlle USB D+ pullup"]
     #[inline(always)]
-    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<OTG_CONF_SPEC> {
+    pub fn dm_pullup(&mut self) -> DM_PULLUP_W<'_, OTG_CONF_SPEC> {
         DM_PULLUP_W::new(self, 15)
     }
     #[doc = "Bit 16 - Controlle USB D+ pulldown"]
     #[inline(always)]
-    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<OTG_CONF_SPEC> {
+    pub fn dm_pulldown(&mut self) -> DM_PULLDOWN_W<'_, OTG_CONF_SPEC> {
         DM_PULLDOWN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Controlle pullup value. 1'b0: typical value is 2.4K. 1'b1: typical value is 1.2K."]
     #[inline(always)]
-    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<OTG_CONF_SPEC> {
+    pub fn pullup_value(&mut self) -> PULLUP_VALUE_W<'_, OTG_CONF_SPEC> {
         PULLUP_VALUE_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable USB pad function"]
     #[inline(always)]
-    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<OTG_CONF_SPEC> {
+    pub fn usb_pad_enable(&mut self) -> USB_PAD_ENABLE_W<'_, OTG_CONF_SPEC> {
         USB_PAD_ENABLE_W::new(self, 18)
     }
     #[doc = "Bit 19 - Force ahb clock always on"]
     #[inline(always)]
-    pub fn ahb_clk_force_on(&mut self) -> AHB_CLK_FORCE_ON_W<OTG_CONF_SPEC> {
+    pub fn ahb_clk_force_on(&mut self) -> AHB_CLK_FORCE_ON_W<'_, OTG_CONF_SPEC> {
         AHB_CLK_FORCE_ON_W::new(self, 19)
     }
     #[doc = "Bit 20 - Force phy clock always on"]
     #[inline(always)]
-    pub fn phy_clk_force_on(&mut self) -> PHY_CLK_FORCE_ON_W<OTG_CONF_SPEC> {
+    pub fn phy_clk_force_on(&mut self) -> PHY_CLK_FORCE_ON_W<'_, OTG_CONF_SPEC> {
         PHY_CLK_FORCE_ON_W::new(self, 20)
     }
     #[doc = "Bit 21 - Select phy tx signal output clock edge. 1'b0: negedge. 1'b1: posedge."]
     #[inline(always)]
-    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<OTG_CONF_SPEC> {
+    pub fn phy_tx_edge_sel(&mut self) -> PHY_TX_EDGE_SEL_W<'_, OTG_CONF_SPEC> {
         PHY_TX_EDGE_SEL_W::new(self, 21)
     }
     #[doc = "Bit 22 - Disable the dfifo to go into low power mode. The data in dfifo will not lost."]
     #[inline(always)]
-    pub fn dfifo_force_pu(&mut self) -> DFIFO_FORCE_PU_W<OTG_CONF_SPEC> {
+    pub fn dfifo_force_pu(&mut self) -> DFIFO_FORCE_PU_W<'_, OTG_CONF_SPEC> {
         DFIFO_FORCE_PU_W::new(self, 22)
     }
     #[doc = "Bit 31 - Disable auto clock gating of CSR registers"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<OTG_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, OTG_CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

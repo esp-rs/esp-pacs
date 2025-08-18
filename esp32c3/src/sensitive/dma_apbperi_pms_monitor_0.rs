@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn dma_apbperi_pms_monitor_lock(
         &mut self,
-    ) -> DMA_APBPERI_PMS_MONITOR_LOCK_W<DMA_APBPERI_PMS_MONITOR_0_SPEC> {
+    ) -> DMA_APBPERI_PMS_MONITOR_LOCK_W<'_, DMA_APBPERI_PMS_MONITOR_0_SPEC> {
         DMA_APBPERI_PMS_MONITOR_LOCK_W::new(self, 0)
     }
 }

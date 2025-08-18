@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable clock of i-cache."]
     #[inline(always)]
-    pub fn pro_icache_clk_on(&mut self) -> PRO_ICACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+    pub fn pro_icache_clk_on(&mut self) -> PRO_ICACHE_CLK_ON_W<'_, CACHE_CONTROL_SPEC> {
         PRO_ICACHE_CLK_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable clock of d-cache."]
     #[inline(always)]
-    pub fn pro_dcache_clk_on(&mut self) -> PRO_DCACHE_CLK_ON_W<CACHE_CONTROL_SPEC> {
+    pub fn pro_dcache_clk_on(&mut self) -> PRO_DCACHE_CLK_ON_W<'_, CACHE_CONTROL_SPEC> {
         PRO_DCACHE_CLK_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset cache."]
     #[inline(always)]
-    pub fn pro_cache_reset(&mut self) -> PRO_CACHE_RESET_W<CACHE_CONTROL_SPEC> {
+    pub fn pro_cache_reset(&mut self) -> PRO_CACHE_RESET_W<'_, CACHE_CONTROL_SPEC> {
         PRO_CACHE_RESET_W::new(self, 2)
     }
 }

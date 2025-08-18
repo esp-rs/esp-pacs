@@ -133,63 +133,63 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_bt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BT_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_BT_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - backup_bus_pms_constrain_i2c_ext0"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_i2c_ext0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_I2C_EXT0_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - backup_bus_pms_constrain_uhci0"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_uhci0(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_UHCI0_W::new(self, 6)
     }
     #[doc = "Bits 10:11 - backup_bus_pms_constrain_rmt"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rmt(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RMT_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_RMT_W::new(self, 10)
     }
     #[doc = "Bits 16:17 - backup_bus_pms_constrain_ledc"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_ledc(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_LEDC_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_LEDC_W::new(self, 16)
     }
     #[doc = "Bits 22:23 - backup_bus_pms_constrain_bb"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_bb(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_BB_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_BB_W::new(self, 22)
     }
     #[doc = "Bits 26:27 - backup_bus_pms_constrain_timergroup"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_timergroup(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - backup_bus_pms_constrain_timergroup1"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_timergroup1(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_TIMERGROUP1_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - backup_bus_pms_constrain_systimer"]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_systimer(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W<'_, BACKUP_BUS_PMS_CONSTRAIN_2_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_SYSTIMER_W::new(self, 30)
     }
 }

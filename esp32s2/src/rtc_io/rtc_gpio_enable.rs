@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn reg_rtcio_reg_gpio_enable(
         &mut self,
-    ) -> REG_RTCIO_REG_GPIO_ENABLE_W<RTC_GPIO_ENABLE_SPEC> {
+    ) -> REG_RTCIO_REG_GPIO_ENABLE_W<'_, RTC_GPIO_ENABLE_SPEC> {
         REG_RTCIO_REG_GPIO_ENABLE_W::new(self, 10)
     }
 }

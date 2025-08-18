@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_div_num(&mut self) -> PWDET_SAR_CLK_DIV_NUM_W<PWDET_SAR_CLK_CONF_SPEC> {
+    pub fn pwdet_sar_clk_div_num(
+        &mut self,
+    ) -> PWDET_SAR_CLK_DIV_NUM_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
         PWDET_SAR_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - xxxx"]
     #[inline(always)]
-    pub fn pwdet_sar_clk_en(&mut self) -> PWDET_SAR_CLK_EN_W<PWDET_SAR_CLK_CONF_SPEC> {
+    pub fn pwdet_sar_clk_en(&mut self) -> PWDET_SAR_CLK_EN_W<'_, PWDET_SAR_CLK_CONF_SPEC> {
         PWDET_SAR_CLK_EN_W::new(self, 8)
     }
 }

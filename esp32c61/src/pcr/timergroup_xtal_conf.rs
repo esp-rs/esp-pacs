@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to reset timer_group0 xtal clock domain"]
     #[inline(always)]
-    pub fn tg0_xtal_rst_en(&mut self) -> TG0_XTAL_RST_EN_W<TIMERGROUP_XTAL_CONF_SPEC> {
+    pub fn tg0_xtal_rst_en(&mut self) -> TG0_XTAL_RST_EN_W<'_, TIMERGROUP_XTAL_CONF_SPEC> {
         TG0_XTAL_RST_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset timer_group1 xtal clock domain"]
     #[inline(always)]
-    pub fn tg1_xtal_rst_en(&mut self) -> TG1_XTAL_RST_EN_W<TIMERGROUP_XTAL_CONF_SPEC> {
+    pub fn tg1_xtal_rst_en(&mut self) -> TG1_XTAL_RST_EN_W<'_, TIMERGROUP_XTAL_CONF_SPEC> {
         TG1_XTAL_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable tg0 xtal clock"]
     #[inline(always)]
-    pub fn tg0_xtal_clk_en(&mut self) -> TG0_XTAL_CLK_EN_W<TIMERGROUP_XTAL_CONF_SPEC> {
+    pub fn tg0_xtal_clk_en(&mut self) -> TG0_XTAL_CLK_EN_W<'_, TIMERGROUP_XTAL_CONF_SPEC> {
         TG0_XTAL_CLK_EN_W::new(self, 2)
     }
 }

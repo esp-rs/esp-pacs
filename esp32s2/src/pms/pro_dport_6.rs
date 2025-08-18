@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The clear signal for PeriBus1 access interrupt."]
     #[inline(always)]
-    pub fn pro_dport_ilg_clr(&mut self) -> PRO_DPORT_ILG_CLR_W<PRO_DPORT_6_SPEC> {
+    pub fn pro_dport_ilg_clr(&mut self) -> PRO_DPORT_ILG_CLR_W<'_, PRO_DPORT_6_SPEC> {
         PRO_DPORT_ILG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for PeriBus1 access interrupt."]
     #[inline(always)]
-    pub fn pro_dport_ilg_en(&mut self) -> PRO_DPORT_ILG_EN_W<PRO_DPORT_6_SPEC> {
+    pub fn pro_dport_ilg_en(&mut self) -> PRO_DPORT_ILG_EN_W<'_, PRO_DPORT_6_SPEC> {
         PRO_DPORT_ILG_EN_W::new(self, 1)
     }
 }

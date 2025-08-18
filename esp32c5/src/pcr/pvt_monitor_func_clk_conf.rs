@@ -49,21 +49,21 @@ impl W {
     #[inline(always)]
     pub fn pvt_monitor_func_clk_div_num(
         &mut self,
-    ) -> PVT_MONITOR_FUNC_CLK_DIV_NUM_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
+    ) -> PVT_MONITOR_FUNC_CLK_DIV_NUM_W<'_, PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
         PVT_MONITOR_FUNC_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 20 - Configures the clock source of PVT MONITER.\\\\ 0 (default): XTAL_CLK\\\\ 1: PLL_F160M_CLK\\\\"]
     #[inline(always)]
     pub fn pvt_monitor_func_clk_sel(
         &mut self,
-    ) -> PVT_MONITOR_FUNC_CLK_SEL_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
+    ) -> PVT_MONITOR_FUNC_CLK_SEL_W<'_, PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
         PVT_MONITOR_FUNC_CLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable source clock of pvt sitex"]
     #[inline(always)]
     pub fn pvt_monitor_func_clk_en(
         &mut self,
-    ) -> PVT_MONITOR_FUNC_CLK_EN_W<PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
+    ) -> PVT_MONITOR_FUNC_CLK_EN_W<'_, PVT_MONITOR_FUNC_CLK_CONF_SPEC> {
         PVT_MONITOR_FUNC_CLK_EN_W::new(self, 22)
     }
 }

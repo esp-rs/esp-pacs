@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:15 - data sent by slave"]
     #[inline(always)]
-    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<DATA_SPEC> {
+    pub fn slave_tx_data(&mut self) -> SLAVE_TX_DATA_W<'_, DATA_SPEC> {
         SLAVE_TX_DATA_W::new(self, 8)
     }
 }

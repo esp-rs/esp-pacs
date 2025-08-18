@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the spi2_mst clock."]
     #[inline(always)]
-    pub fn spi2_clkm_div_num(&mut self) -> SPI2_CLKM_DIV_NUM_W<SPI2_CLKM_CONF_SPEC> {
+    pub fn spi2_clkm_div_num(&mut self) -> SPI2_CLKM_DIV_NUM_W<'_, SPI2_CLKM_CONF_SPEC> {
         SPI2_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Configures the clock source of SPI2.\\\\ 0 (default): XTAL_CLK\\\\ 1: PLL_F160M_CLK\\\\ 2: RC_FAST_CLK\\\\ 3: PLL_F120M_CLK\\\\"]
     #[inline(always)]
-    pub fn spi2_clkm_sel(&mut self) -> SPI2_CLKM_SEL_W<SPI2_CLKM_CONF_SPEC> {
+    pub fn spi2_clkm_sel(&mut self) -> SPI2_CLKM_SEL_W<'_, SPI2_CLKM_CONF_SPEC> {
         SPI2_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable spi2 function clock"]
     #[inline(always)]
-    pub fn spi2_clkm_en(&mut self) -> SPI2_CLKM_EN_W<SPI2_CLKM_CONF_SPEC> {
+    pub fn spi2_clkm_en(&mut self) -> SPI2_CLKM_EN_W<'_, SPI2_CLKM_CONF_SPEC> {
         SPI2_CLKM_EN_W::new(self, 22)
     }
 }

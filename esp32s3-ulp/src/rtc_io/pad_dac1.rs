@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:10 - PDAC1_DAC"]
     #[inline(always)]
-    pub fn pdac1_dac(&mut self) -> PDAC1_DAC_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_dac(&mut self) -> PDAC1_DAC_W<'_, PAD_DAC1_SPEC> {
         PDAC1_DAC_W::new(self, 3)
     }
     #[doc = "Bit 11 - PDAC1_XPD_DAC"]
     #[inline(always)]
-    pub fn pdac1_xpd_dac(&mut self) -> PDAC1_XPD_DAC_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_xpd_dac(&mut self) -> PDAC1_XPD_DAC_W<'_, PAD_DAC1_SPEC> {
         PDAC1_XPD_DAC_W::new(self, 11)
     }
     #[doc = "Bit 12 - 1: use reg_pdac1_xpd_dac to control PDAC1_XPD_DAC,0: use SAR ADC FSM to control PDAC1_XPD_DAC"]
     #[inline(always)]
-    pub fn pdac1_dac_xpd_force(&mut self) -> PDAC1_DAC_XPD_FORCE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_dac_xpd_force(&mut self) -> PDAC1_DAC_XPD_FORCE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_DAC_XPD_FORCE_W::new(self, 12)
     }
     #[doc = "Bit 13 - input enable in work mode"]
     #[inline(always)]
-    pub fn pdac1_fun_ie(&mut self) -> PDAC1_FUN_IE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_fun_ie(&mut self) -> PDAC1_FUN_IE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_FUN_IE_W::new(self, 13)
     }
     #[doc = "Bit 14 - output enable in sleep mode"]
     #[inline(always)]
-    pub fn pdac1_slp_oe(&mut self) -> PDAC1_SLP_OE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_slp_oe(&mut self) -> PDAC1_SLP_OE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_SLP_OE_W::new(self, 14)
     }
     #[doc = "Bit 15 - input enable in sleep mode"]
     #[inline(always)]
-    pub fn pdac1_slp_ie(&mut self) -> PDAC1_SLP_IE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_slp_ie(&mut self) -> PDAC1_SLP_IE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_SLP_IE_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: enable sleep mode during sleep,0: no sleep mode"]
     #[inline(always)]
-    pub fn pdac1_slp_sel(&mut self) -> PDAC1_SLP_SEL_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_slp_sel(&mut self) -> PDAC1_SLP_SEL_W<'_, PAD_DAC1_SPEC> {
         PDAC1_SLP_SEL_W::new(self, 16)
     }
     #[doc = "Bits 17:18 - PDAC1 function sel"]
     #[inline(always)]
-    pub fn pdac1_fun_sel(&mut self) -> PDAC1_FUN_SEL_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_fun_sel(&mut self) -> PDAC1_FUN_SEL_W<'_, PAD_DAC1_SPEC> {
         PDAC1_FUN_SEL_W::new(self, 17)
     }
     #[doc = "Bit 19 - 1: use RTC GPIO,0: use digital GPIO"]
     #[inline(always)]
-    pub fn pdac1_mux_sel(&mut self) -> PDAC1_MUX_SEL_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_mux_sel(&mut self) -> PDAC1_MUX_SEL_W<'_, PAD_DAC1_SPEC> {
         PDAC1_MUX_SEL_W::new(self, 19)
     }
     #[doc = "Bit 27 - PDAC1_RUE"]
     #[inline(always)]
-    pub fn pdac1_rue(&mut self) -> PDAC1_RUE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_rue(&mut self) -> PDAC1_RUE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_RUE_W::new(self, 27)
     }
     #[doc = "Bit 28 - PDAC1_RDE"]
     #[inline(always)]
-    pub fn pdac1_rde(&mut self) -> PDAC1_RDE_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_rde(&mut self) -> PDAC1_RDE_W<'_, PAD_DAC1_SPEC> {
         PDAC1_RDE_W::new(self, 28)
     }
     #[doc = "Bits 29:30 - PDAC1_DRV"]
     #[inline(always)]
-    pub fn pdac1_drv(&mut self) -> PDAC1_DRV_W<PAD_DAC1_SPEC> {
+    pub fn pdac1_drv(&mut self) -> PDAC1_DRV_W<'_, PAD_DAC1_SPEC> {
         PDAC1_DRV_W::new(self, 29)
     }
 }

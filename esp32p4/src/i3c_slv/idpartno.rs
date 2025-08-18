@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn partno(&mut self) -> PARTNO_W<IDPARTNO_SPEC> {
+    pub fn partno(&mut self) -> PARTNO_W<'_, IDPARTNO_SPEC> {
         PARTNO_W::new(self, 0)
     }
 }

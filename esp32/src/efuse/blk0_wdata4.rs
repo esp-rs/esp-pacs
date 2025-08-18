@@ -76,17 +76,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:12"]
     #[inline(always)]
-    pub fn adc_vref(&mut self) -> ADC_VREF_W<BLK0_WDATA4_SPEC> {
+    pub fn adc_vref(&mut self) -> ADC_VREF_W<'_, BLK0_WDATA4_SPEC> {
         ADC_VREF_W::new(self, 8)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn reserve_0_141(&mut self) -> RESERVE_0_141_W<BLK0_WDATA4_SPEC> {
+    pub fn reserve_0_141(&mut self) -> RESERVE_0_141_W<'_, BLK0_WDATA4_SPEC> {
         RESERVE_0_141_W::new(self, 13)
     }
     #[doc = "Bits 17:31"]
     #[inline(always)]
-    pub fn reserve_0_145(&mut self) -> RESERVE_0_145_W<BLK0_WDATA4_SPEC> {
+    pub fn reserve_0_145(&mut self) -> RESERVE_0_145_W<'_, BLK0_WDATA4_SPEC> {
         RESERVE_0_145_W::new(self, 17)
     }
 }

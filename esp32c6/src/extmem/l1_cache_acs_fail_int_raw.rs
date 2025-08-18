@@ -66,35 +66,35 @@ impl W {
     #[inline(always)]
     pub fn l1_icache0_fail_int_raw(
         &mut self,
-    ) -> L1_ICACHE0_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> L1_ICACHE0_FAIL_INT_RAW_W<'_, L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         L1_ICACHE0_FAIL_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit of the interrupt of access fail that occurs in L1-ICache1."]
     #[inline(always)]
     pub fn l1_icache1_fail_int_raw(
         &mut self,
-    ) -> L1_ICACHE1_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> L1_ICACHE1_FAIL_INT_RAW_W<'_, L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         L1_ICACHE1_FAIL_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit of the interrupt of access fail that occurs in L1-ICache2."]
     #[inline(always)]
     pub fn l1_icache2_fail_int_raw(
         &mut self,
-    ) -> L1_ICACHE2_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> L1_ICACHE2_FAIL_INT_RAW_W<'_, L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         L1_ICACHE2_FAIL_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit of the interrupt of access fail that occurs in L1-ICache3."]
     #[inline(always)]
     pub fn l1_icache3_fail_int_raw(
         &mut self,
-    ) -> L1_ICACHE3_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> L1_ICACHE3_FAIL_INT_RAW_W<'_, L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         L1_ICACHE3_FAIL_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit of the interrupt of access fail that occurs in L1-DCache."]
     #[inline(always)]
     pub fn l1_cache_fail_int_raw(
         &mut self,
-    ) -> L1_CACHE_FAIL_INT_RAW_W<L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
+    ) -> L1_CACHE_FAIL_INT_RAW_W<'_, L1_CACHE_ACS_FAIL_INT_RAW_SPEC> {
         L1_CACHE_FAIL_INT_RAW_W::new(self, 4)
     }
 }

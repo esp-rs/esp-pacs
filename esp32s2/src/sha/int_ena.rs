@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enables DMA-SHA interrupt."]
     #[inline(always)]
-    pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<INT_ENA_SPEC> {
+    pub fn interrupt_ena(&mut self) -> INTERRUPT_ENA_W<'_, INT_ENA_SPEC> {
         INTERRUPT_ENA_W::new(self, 0)
     }
 }

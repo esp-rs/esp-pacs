@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<_3_CLEAN_M_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clean Message."]
     #[inline(always)]
-    pub fn _3_clean_m(&mut self) -> _3_CLEAN_M_W<_3_CLEAN_M_SPEC> {
+    pub fn _3_clean_m(&mut self) -> _3_CLEAN_M_W<'_, _3_CLEAN_M_SPEC> {
         _3_CLEAN_M_W::new(self, 0)
     }
 }

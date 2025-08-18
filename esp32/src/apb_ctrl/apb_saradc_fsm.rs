@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<APB_SARADC_FSM_SPEC> {
+    pub fn saradc_rstb_wait(&mut self) -> SARADC_RSTB_WAIT_W<'_, APB_SARADC_FSM_SPEC> {
         SARADC_RSTB_WAIT_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<APB_SARADC_FSM_SPEC> {
+    pub fn saradc_standby_wait(&mut self) -> SARADC_STANDBY_WAIT_W<'_, APB_SARADC_FSM_SPEC> {
         SARADC_STANDBY_WAIT_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W<APB_SARADC_FSM_SPEC> {
+    pub fn saradc_start_wait(&mut self) -> SARADC_START_WAIT_W<'_, APB_SARADC_FSM_SPEC> {
         SARADC_START_WAIT_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - sample cycles"]
     #[inline(always)]
-    pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W<APB_SARADC_FSM_SPEC> {
+    pub fn saradc_sample_cycle(&mut self) -> SARADC_SAMPLE_CYCLE_W<'_, APB_SARADC_FSM_SPEC> {
         SARADC_SAMPLE_CYCLE_W::new(self, 24)
     }
 }

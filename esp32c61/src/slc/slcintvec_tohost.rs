@@ -13,12 +13,16 @@ impl core::fmt::Debug for crate::generic::Reg<SLCINTVEC_TOHOST_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - The interrupt set bit of SLCHOST_SLC0_TOHOST_BITn_INT (n: 0-7)."]
     #[inline(always)]
-    pub fn sdio_slc0_tohost_intvec(&mut self) -> SDIO_SLC0_TOHOST_INTVEC_W<SLCINTVEC_TOHOST_SPEC> {
+    pub fn sdio_slc0_tohost_intvec(
+        &mut self,
+    ) -> SDIO_SLC0_TOHOST_INTVEC_W<'_, SLCINTVEC_TOHOST_SPEC> {
         SDIO_SLC0_TOHOST_INTVEC_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - The interrupt set bit of SLCHOST_SLC1_TOHOST_BITn_INT (n: 0-7)."]
     #[inline(always)]
-    pub fn sdio_slc1_tohost_intvec(&mut self) -> SDIO_SLC1_TOHOST_INTVEC_W<SLCINTVEC_TOHOST_SPEC> {
+    pub fn sdio_slc1_tohost_intvec(
+        &mut self,
+    ) -> SDIO_SLC1_TOHOST_INTVEC_W<'_, SLCINTVEC_TOHOST_SPEC> {
         SDIO_SLC1_TOHOST_INTVEC_W::new(self, 16)
     }
 }

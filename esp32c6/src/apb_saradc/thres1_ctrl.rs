@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - configure thres1 to adc channel"]
     #[inline(always)]
-    pub fn thres1_channel(&mut self) -> THRES1_CHANNEL_W<THRES1_CTRL_SPEC> {
+    pub fn thres1_channel(&mut self) -> THRES1_CHANNEL_W<'_, THRES1_CTRL_SPEC> {
         THRES1_CHANNEL_W::new(self, 0)
     }
     #[doc = "Bits 5:17 - saradc thres1 monitor thres"]
     #[inline(always)]
-    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<THRES1_CTRL_SPEC> {
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<'_, THRES1_CTRL_SPEC> {
         THRES1_HIGH_W::new(self, 5)
     }
     #[doc = "Bits 18:30 - saradc thres1 monitor thres"]
     #[inline(always)]
-    pub fn thres1_low(&mut self) -> THRES1_LOW_W<THRES1_CTRL_SPEC> {
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<'_, THRES1_CTRL_SPEC> {
         THRES1_LOW_W::new(self, 18)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<LOG_MEM_ADDR_UPDATE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether to update the value in MEM_MONITOR_LOG_MEM_START_REG to MEM_MONITOR_LOG_MEM_CURRENT_ADDR_REG.\\raggedright1: Update \\\\ 0: Not update (default) \\\\"]
     #[inline(always)]
-    pub fn log_mem_addr_update(&mut self) -> LOG_MEM_ADDR_UPDATE_W<LOG_MEM_ADDR_UPDATE_SPEC> {
+    pub fn log_mem_addr_update(&mut self) -> LOG_MEM_ADDR_UPDATE_W<'_, LOG_MEM_ADDR_UPDATE_SPEC> {
         LOG_MEM_ADDR_UPDATE_W::new(self, 0)
     }
 }

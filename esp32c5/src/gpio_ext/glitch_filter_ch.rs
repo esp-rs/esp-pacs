@@ -54,22 +54,28 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable channel %s of Glitch Filter.\\\\ 0: Not enable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn filter_ch0_en(&mut self) -> FILTER_CH0_EN_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn filter_ch0_en(&mut self) -> FILTER_CH0_EN_W<'_, GLITCH_FILTER_CH_SPEC> {
         FILTER_CH0_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:6 - Configures to select the input GPIO for Glitch Filter. \\\\ 0: Select GPIO0\\\\ 1: Select GPIO1\\\\ ......\\\\ 27: Select GPIO27\\\\ 28: Select GPIO28\\\\ 29 ~ 63: Reserved\\\\"]
     #[inline(always)]
-    pub fn filter_ch0_input_io_num(&mut self) -> FILTER_CH0_INPUT_IO_NUM_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn filter_ch0_input_io_num(
+        &mut self,
+    ) -> FILTER_CH0_INPUT_IO_NUM_W<'_, GLITCH_FILTER_CH_SPEC> {
         FILTER_CH0_INPUT_IO_NUM_W::new(self, 1)
     }
     #[doc = "Bits 8:13 - Configures the window threshold for Glitch Filter. The window threshold should be less than or equal to GPIOSD_FILTER_CH%s_WINDOW_WIDTH.\\\\ %see DOC-4768\\\\ Measurement unit: IO MUX operating clock cycle\\\\"]
     #[inline(always)]
-    pub fn filter_ch0_window_thres(&mut self) -> FILTER_CH0_WINDOW_THRES_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn filter_ch0_window_thres(
+        &mut self,
+    ) -> FILTER_CH0_WINDOW_THRES_W<'_, GLITCH_FILTER_CH_SPEC> {
         FILTER_CH0_WINDOW_THRES_W::new(self, 8)
     }
     #[doc = "Bits 14:19 - Configures the window width for Glitch Filter. The effective value of window width is 0 ~ 63. \\\\ Measurement unit: IO MUX operating clock cycle\\\\"]
     #[inline(always)]
-    pub fn filter_ch0_window_width(&mut self) -> FILTER_CH0_WINDOW_WIDTH_W<GLITCH_FILTER_CH_SPEC> {
+    pub fn filter_ch0_window_width(
+        &mut self,
+    ) -> FILTER_CH0_WINDOW_WIDTH_W<'_, GLITCH_FILTER_CH_SPEC> {
         FILTER_CH0_WINDOW_WIDTH_W::new(self, 14)
     }
 }

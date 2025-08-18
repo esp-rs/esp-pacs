@@ -38,22 +38,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to return to current inlink descriptor's address when there are some errors in current receiving data."]
     #[inline(always)]
-    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<IN_LINK_SPEC> {
+    pub fn inlink_auto_ret(&mut self) -> INLINK_AUTO_RET_W<'_, IN_LINK_SPEC> {
         INLINK_AUTO_RET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to stop dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<IN_LINK_SPEC> {
+    pub fn inlink_stop(&mut self) -> INLINK_STOP_W<'_, IN_LINK_SPEC> {
         INLINK_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to start dealing with the inlink descriptors."]
     #[inline(always)]
-    pub fn inlink_start(&mut self) -> INLINK_START_W<IN_LINK_SPEC> {
+    pub fn inlink_start(&mut self) -> INLINK_START_W<'_, IN_LINK_SPEC> {
         INLINK_START_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to mount a new inlink descriptor."]
     #[inline(always)]
-    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<IN_LINK_SPEC> {
+    pub fn inlink_restart(&mut self) -> INLINK_RESTART_W<'_, IN_LINK_SPEC> {
         INLINK_RESTART_W::new(self, 3)
     }
 }

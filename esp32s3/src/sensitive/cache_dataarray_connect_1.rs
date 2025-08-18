@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn cache_dataarray_connect_flatten(
         &mut self,
-    ) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<CACHE_DATAARRAY_CONNECT_1_SPEC> {
+    ) -> CACHE_DATAARRAY_CONNECT_FLATTEN_W<'_, CACHE_DATAARRAY_CONNECT_1_SPEC> {
         CACHE_DATAARRAY_CONNECT_FLATTEN_W::new(self, 0)
     }
 }

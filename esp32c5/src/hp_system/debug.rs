@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reserved"]
     #[inline(always)]
-    pub fn fpga_debug(&mut self) -> FPGA_DEBUG_W<DEBUG_SPEC> {
+    pub fn fpga_debug(&mut self) -> FPGA_DEBUG_W<'_, DEBUG_SPEC> {
         FPGA_DEBUG_W::new(self, 0)
     }
 }

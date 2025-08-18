@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<XTS_DESTROY_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to destroy encrypted result. This action should be asserted only when manual encryption status is 3. After this action, manual encryption status will become 0."]
     #[inline(always)]
-    pub fn xts_destroy(&mut self) -> XTS_DESTROY_W<XTS_DESTROY_SPEC> {
+    pub fn xts_destroy(&mut self) -> XTS_DESTROY_W<'_, XTS_DESTROY_SPEC> {
         XTS_DESTROY_W::new(self, 0)
     }
 }

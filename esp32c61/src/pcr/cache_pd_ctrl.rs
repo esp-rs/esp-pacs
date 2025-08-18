@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to force power down CACHE memory."]
     #[inline(always)]
-    pub fn cache_mem_force_pu(&mut self) -> CACHE_MEM_FORCE_PU_W<CACHE_PD_CTRL_SPEC> {
+    pub fn cache_mem_force_pu(&mut self) -> CACHE_MEM_FORCE_PU_W<'_, CACHE_PD_CTRL_SPEC> {
         CACHE_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power up CACHE memory."]
     #[inline(always)]
-    pub fn cache_mem_force_pd(&mut self) -> CACHE_MEM_FORCE_PD_W<CACHE_PD_CTRL_SPEC> {
+    pub fn cache_mem_force_pd(&mut self) -> CACHE_MEM_FORCE_PD_W<'_, CACHE_PD_CTRL_SPEC> {
         CACHE_MEM_FORCE_PD_W::new(self, 2)
     }
 }

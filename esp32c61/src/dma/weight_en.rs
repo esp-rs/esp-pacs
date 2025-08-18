@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to enable weight arbitration.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn weight_en(&mut self) -> WEIGHT_EN_W<WEIGHT_EN_SPEC> {
+    pub fn weight_en(&mut self) -> WEIGHT_EN_W<'_, WEIGHT_EN_SPEC> {
         WEIGHT_EN_W::new(self, 0)
     }
 }

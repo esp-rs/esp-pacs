@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - Timeout threshold"]
     #[inline(always)]
-    pub fn time_out(&mut self) -> TIME_OUT_W<TO_SPEC> {
+    pub fn time_out(&mut self) -> TIME_OUT_W<'_, TO_SPEC> {
         TIME_OUT_W::new(self, 0)
     }
 }

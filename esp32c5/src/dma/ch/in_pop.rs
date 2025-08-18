@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Configures whether or not to pop data from AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Pop\\\\"]
     #[inline(always)]
-    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<IN_POP_SPEC> {
+    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<'_, IN_POP_SPEC> {
         INFIFO_POP_W::new(self, 12)
     }
 }

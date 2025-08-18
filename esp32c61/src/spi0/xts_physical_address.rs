@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - This bits stores the physical-address parameter which will be used in manual encryption calculation. This value should aligned with byte number decided by line-size parameter."]
     #[inline(always)]
-    pub fn xts_physical_address(&mut self) -> XTS_PHYSICAL_ADDRESS_W<XTS_PHYSICAL_ADDRESS_SPEC> {
+    pub fn xts_physical_address(
+        &mut self,
+    ) -> XTS_PHYSICAL_ADDRESS_W<'_, XTS_PHYSICAL_ADDRESS_SPEC> {
         XTS_PHYSICAL_ADDRESS_W::new(self, 0)
     }
 }

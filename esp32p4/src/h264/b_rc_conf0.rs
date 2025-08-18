@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures video B frame level initial luma QP value."]
     #[inline(always)]
-    pub fn b_qp(&mut self) -> B_QP_W<B_RC_CONF0_SPEC> {
+    pub fn b_qp(&mut self) -> B_QP_W<'_, B_RC_CONF0_SPEC> {
         B_QP_W::new(self, 0)
     }
     #[doc = "Bits 6:21 - Configures video B parameter U value. U = int((float) u << 8)."]
     #[inline(always)]
-    pub fn b_rate_ctrl_u(&mut self) -> B_RATE_CTRL_U_W<B_RC_CONF0_SPEC> {
+    pub fn b_rate_ctrl_u(&mut self) -> B_RATE_CTRL_U_W<'_, B_RC_CONF0_SPEC> {
         B_RATE_CTRL_U_W::new(self, 6)
     }
     #[doc = "Bit 22 - Configures video A whether or not to open macro block rate ctrl.\\\\1:Open the macro block rate ctrl\\\\1:Close the macro block rate ctrl."]
     #[inline(always)]
-    pub fn b_mb_rate_ctrl_en(&mut self) -> B_MB_RATE_CTRL_EN_W<B_RC_CONF0_SPEC> {
+    pub fn b_mb_rate_ctrl_en(&mut self) -> B_MB_RATE_CTRL_EN_W<'_, B_RC_CONF0_SPEC> {
         B_MB_RATE_CTRL_EN_W::new(self, 22)
     }
 }

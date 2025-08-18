@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is alwasy on."]
     #[inline(always)]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<CTRL1_SPEC> {
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bit 30 - SPI0 RX FIFO reset signal."]
     #[inline(always)]
-    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<CTRL1_SPEC> {
+    pub fn rxfifo_rst(&mut self) -> RXFIFO_RST_W<'_, CTRL1_SPEC> {
         RXFIFO_RST_W::new(self, 30)
     }
 }

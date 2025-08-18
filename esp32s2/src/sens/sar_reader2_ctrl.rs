@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - clock divider"]
     #[inline(always)]
-    pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_clk_div(&mut self) -> SAR2_CLK_DIV_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - wait arbit stable after sar_done"]
     #[inline(always)]
-    pub fn sar2_wait_arb_cycle(&mut self) -> SAR2_WAIT_ARB_CYCLE_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_wait_arb_cycle(&mut self) -> SAR2_WAIT_ARB_CYCLE_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_WAIT_ARB_CYCLE_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_clk_gated(&mut self) -> SAR2_CLK_GATED_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_CLK_GATED_W::new(self, 18)
     }
     #[doc = "Bits 19:26"]
     #[inline(always)]
-    pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_sample_num(&mut self) -> SAR2_SAMPLE_NUM_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_SAMPLE_NUM_W::new(self, 19)
     }
     #[doc = "Bit 29 - Invert SAR ADC2 data"]
     #[inline(always)]
-    pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_data_inv(&mut self) -> SAR2_DATA_INV_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_DATA_INV_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable saradc2 to send out interrupt"]
     #[inline(always)]
-    pub fn sar2_int_en(&mut self) -> SAR2_INT_EN_W<SAR_READER2_CTRL_SPEC> {
+    pub fn sar2_int_en(&mut self) -> SAR2_INT_EN_W<'_, SAR_READER2_CTRL_SPEC> {
         SAR2_INT_EN_W::new(self, 30)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SHA256_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to continue the SHA-256 operation with subsequent blocks."]
     #[inline(always)]
-    pub fn sha256_continue(&mut self) -> SHA256_CONTINUE_W<SHA256_CONTINUE_SPEC> {
+    pub fn sha256_continue(&mut self) -> SHA256_CONTINUE_W<'_, SHA256_CONTINUE_SPEC> {
         SHA256_CONTINUE_W::new(self, 0)
     }
 }

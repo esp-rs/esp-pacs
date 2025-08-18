@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 9:27 - Configures expected byte number of sent data."]
     #[inline(always)]
-    pub fn tx_bitlen(&mut self) -> TX_BITLEN_W<TX_DATA_CFG_SPEC> {
+    pub fn tx_bitlen(&mut self) -> TX_BITLEN_W<'_, TX_DATA_CFG_SPEC> {
         TX_BITLEN_W::new(self, 9)
     }
     #[doc = "Bit 28 - Write 1 to invert bit order of one byte sent from TX_FIFO to IO data."]
     #[inline(always)]
-    pub fn tx_data_order_inv(&mut self) -> TX_DATA_ORDER_INV_W<TX_DATA_CFG_SPEC> {
+    pub fn tx_data_order_inv(&mut self) -> TX_DATA_ORDER_INV_W<'_, TX_DATA_CFG_SPEC> {
         TX_DATA_ORDER_INV_W::new(self, 28)
     }
     #[doc = "Bits 29:31 - Configures the txd bus width. 0: bus width is 1. 1: bus width is 2. 2: bus width is 4. 3: bus width is 8."]
     #[inline(always)]
-    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<TX_DATA_CFG_SPEC> {
+    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<'_, TX_DATA_CFG_SPEC> {
         TX_BUS_WID_SEL_W::new(self, 29)
     }
 }

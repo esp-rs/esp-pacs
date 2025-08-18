@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Register clock gate signal. 1: Registers can be read and written to by software. 0: Registers can not be read or written to by software."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, REGCLK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

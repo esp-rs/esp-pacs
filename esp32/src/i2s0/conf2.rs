@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn camera_en(&mut self) -> CAMERA_EN_W<CONF2_SPEC> {
+    pub fn camera_en(&mut self) -> CAMERA_EN_W<'_, CONF2_SPEC> {
         CAMERA_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<CONF2_SPEC> {
+    pub fn lcd_tx_wrx2_en(&mut self) -> LCD_TX_WRX2_EN_W<'_, CONF2_SPEC> {
         LCD_TX_WRX2_EN_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<CONF2_SPEC> {
+    pub fn lcd_tx_sdx2_en(&mut self) -> LCD_TX_SDX2_EN_W<'_, CONF2_SPEC> {
         LCD_TX_SDX2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<CONF2_SPEC> {
+    pub fn data_enable_test_en(&mut self) -> DATA_ENABLE_TEST_EN_W<'_, CONF2_SPEC> {
         DATA_ENABLE_TEST_EN_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn data_enable(&mut self) -> DATA_ENABLE_W<CONF2_SPEC> {
+    pub fn data_enable(&mut self) -> DATA_ENABLE_W<'_, CONF2_SPEC> {
         DATA_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn lcd_en(&mut self) -> LCD_EN_W<CONF2_SPEC> {
+    pub fn lcd_en(&mut self) -> LCD_EN_W<'_, CONF2_SPEC> {
         LCD_EN_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<CONF2_SPEC> {
+    pub fn ext_adc_start_en(&mut self) -> EXT_ADC_START_EN_W<'_, CONF2_SPEC> {
         EXT_ADC_START_EN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<CONF2_SPEC> {
+    pub fn inter_valid_en(&mut self) -> INTER_VALID_EN_W<'_, CONF2_SPEC> {
         INTER_VALID_EN_W::new(self, 7)
     }
 }

@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn cancel_efuse_disable_jtag_temporary_2(
         &mut self,
-    ) -> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W<JTAG_CTRL_2_SPEC> {
+    ) -> CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W<'_, JTAG_CTRL_2_SPEC> {
         CANCEL_EFUSE_DISABLE_JTAG_TEMPORARY_2_W::new(self, 0)
     }
 }

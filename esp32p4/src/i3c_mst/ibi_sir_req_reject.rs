@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The application of controller can decide whether to send ACK or NACK for Slave request received from any I3C device. A device specific response control bit is provided to select the response option, Master will ACK/NACK the Master Request based on programming of control bit, corresponding to the interrupting device. 0:ACK the SIR Request 1:NACK and send direct auto disable CCC"]
     #[inline(always)]
-    pub fn reg_sir_req_reject(&mut self) -> REG_SIR_REQ_REJECT_W<IBI_SIR_REQ_REJECT_SPEC> {
+    pub fn reg_sir_req_reject(&mut self) -> REG_SIR_REQ_REJECT_W<'_, IBI_SIR_REQ_REJECT_SPEC> {
         REG_SIR_REQ_REJECT_W::new(self, 0)
     }
 }

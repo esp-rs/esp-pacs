@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The configured constant channel data to be sent out."]
     #[inline(always)]
-    pub fn single_data(&mut self) -> SINGLE_DATA_W<CONF_SIGLE_DATA_SPEC> {
+    pub fn single_data(&mut self) -> SINGLE_DATA_W<'_, CONF_SIGLE_DATA_SPEC> {
         SINGLE_DATA_W::new(self, 0)
     }
 }

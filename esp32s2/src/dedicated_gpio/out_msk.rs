@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_MSK_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - This register is used to configure updated output value of 8-channel dedicated GPIO."]
     #[inline(always)]
-    pub fn out_value(&mut self) -> OUT_VALUE_W<OUT_MSK_SPEC> {
+    pub fn out_value(&mut self) -> OUT_VALUE_W<'_, OUT_MSK_SPEC> {
         OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register is used to configure channels which would be updated. 1: corresponding channel's output would be updated."]
     #[inline(always)]
-    pub fn out_msk(&mut self) -> OUT_MSK_W<OUT_MSK_SPEC> {
+    pub fn out_msk(&mut self) -> OUT_MSK_W<'_, OUT_MSK_SPEC> {
         OUT_MSK_W::new(self, 8)
     }
 }

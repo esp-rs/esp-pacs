@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_l(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W<'_, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_L_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - BackUp access rtcfast_h permission."]
     #[inline(always)]
     pub fn backup_bus_pms_constrain_rtcfast_h(
         &mut self,
-    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
+    ) -> BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W<'_, BACKUP_BUS_PMS_CONSTRAIN_6_SPEC> {
         BACKUP_BUS_PMS_CONSTRAIN_RTCFAST_H_W::new(self, 3)
     }
 }

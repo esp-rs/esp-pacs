@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<LPCORE_SPEC> {
+    pub fn etm_wakeup_flag_clr(&mut self) -> ETM_WAKEUP_FLAG_CLR_W<'_, LPCORE_SPEC> {
         ETM_WAKEUP_FLAG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<LPCORE_SPEC> {
+    pub fn etm_wakeup_flag(&mut self) -> ETM_WAKEUP_FLAG_W<'_, LPCORE_SPEC> {
         ETM_WAKEUP_FLAG_W::new(self, 1)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn disable(&mut self) -> DISABLE_W<LPCORE_SPEC> {
+    pub fn disable(&mut self) -> DISABLE_W<'_, LPCORE_SPEC> {
         DISABLE_W::new(self, 31)
     }
 }

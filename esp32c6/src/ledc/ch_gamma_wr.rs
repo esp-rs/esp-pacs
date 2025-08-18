@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Ledc ch%s gamma duty inc of current ram write address.This register is used to increase or decrease the duty of output signal on channel %s. 1: Increase 0: Decrease."]
     #[inline(always)]
-    pub fn ch_gamma_duty_inc(&mut self) -> CH_GAMMA_DUTY_INC_W<CH_GAMMA_WR_SPEC> {
+    pub fn ch_gamma_duty_inc(&mut self) -> CH_GAMMA_DUTY_INC_W<'_, CH_GAMMA_WR_SPEC> {
         CH_GAMMA_DUTY_INC_W::new(self, 0)
     }
     #[doc = "Bits 1:10 - Ledc ch%s gamma duty cycle of current ram write address.The duty will change every LEDC_CH%s_GAMMA_DUTY_CYCLE on channel %s."]
     #[inline(always)]
-    pub fn ch_gamma_duty_cycle(&mut self) -> CH_GAMMA_DUTY_CYCLE_W<CH_GAMMA_WR_SPEC> {
+    pub fn ch_gamma_duty_cycle(&mut self) -> CH_GAMMA_DUTY_CYCLE_W<'_, CH_GAMMA_WR_SPEC> {
         CH_GAMMA_DUTY_CYCLE_W::new(self, 1)
     }
     #[doc = "Bits 11:20 - Ledc ch%s gamma scale of current ram write address.This register is used to configure the changing step scale of duty on channel %s."]
     #[inline(always)]
-    pub fn ch_gamma_scale(&mut self) -> CH_GAMMA_SCALE_W<CH_GAMMA_WR_SPEC> {
+    pub fn ch_gamma_scale(&mut self) -> CH_GAMMA_SCALE_W<'_, CH_GAMMA_WR_SPEC> {
         CH_GAMMA_SCALE_W::new(self, 11)
     }
     #[doc = "Bits 21:30 - Ledc ch%s gamma duty num of current ram write address.This register is used to control the number of times the duty cycle will be changed."]
     #[inline(always)]
-    pub fn ch_gamma_duty_num(&mut self) -> CH_GAMMA_DUTY_NUM_W<CH_GAMMA_WR_SPEC> {
+    pub fn ch_gamma_duty_num(&mut self) -> CH_GAMMA_DUTY_NUM_W<'_, CH_GAMMA_WR_SPEC> {
         CH_GAMMA_DUTY_NUM_W::new(self, 21)
     }
 }

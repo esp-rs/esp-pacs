@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - this field configures y direction size of subwindow"]
     #[inline(always)]
-    pub fn hist_y_size(&mut self) -> HIST_Y_SIZE_W<HIST_SIZE_SPEC> {
+    pub fn hist_y_size(&mut self) -> HIST_Y_SIZE_W<'_, HIST_SIZE_SPEC> {
         HIST_Y_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:24 - this field configures x direction size of subwindow"]
     #[inline(always)]
-    pub fn hist_x_size(&mut self) -> HIST_X_SIZE_W<HIST_SIZE_SPEC> {
+    pub fn hist_x_size(&mut self) -> HIST_X_SIZE_W<'_, HIST_SIZE_SPEC> {
         HIST_X_SIZE_W::new(self, 16)
     }
 }

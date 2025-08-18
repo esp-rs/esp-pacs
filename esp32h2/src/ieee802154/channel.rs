@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn hop(&mut self) -> HOP_W<CHANNEL_SPEC> {
+    pub fn hop(&mut self) -> HOP_W<'_, CHANNEL_SPEC> {
         HOP_W::new(self, 0)
     }
 }

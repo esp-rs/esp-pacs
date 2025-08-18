@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits stores the virtual address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]
-    pub fn cache_vaddr(&mut self) -> CACHE_VADDR_W<CACHE_VADDR_SPEC> {
+    pub fn cache_vaddr(&mut self) -> CACHE_VADDR_W<'_, CACHE_VADDR_SPEC> {
         CACHE_VADDR_W::new(self, 0)
     }
 }

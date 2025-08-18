@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn timeout(&mut self) -> TIMEOUT_W<CONFIG_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, CONFIG_SPEC> {
         TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 12:21"]
     #[inline(always)]
-    pub fn backoff_time(&mut self) -> BACKOFF_TIME_W<CONFIG_SPEC> {
+    pub fn backoff_time(&mut self) -> BACKOFF_TIME_W<'_, CONFIG_SPEC> {
         BACKOFF_TIME_W::new(self, 12)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn aifsn(&mut self) -> AIFSN_W<CONFIG_SPEC> {
+    pub fn aifsn(&mut self) -> AIFSN_W<'_, CONFIG_SPEC> {
         AIFSN_W::new(self, 24)
     }
 }

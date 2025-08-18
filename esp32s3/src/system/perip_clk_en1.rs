@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable BACKUP clock"]
     #[inline(always)]
-    pub fn peri_backup_clk_en(&mut self) -> PERI_BACKUP_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn peri_backup_clk_en(&mut self) -> PERI_BACKUP_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         PERI_BACKUP_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable AES clock"]
     #[inline(always)]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_AES_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 1 to enable SHA clock"]
     #[inline(always)]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set 1 to enable RSA clock"]
     #[inline(always)]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_RSA_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set 1 to enable DS clock"]
     #[inline(always)]
-    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_DS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set 1 to enable HMAC clock"]
     #[inline(always)]
-    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_HMAC_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set 1 to enable DMA clock"]
     #[inline(always)]
-    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn dma_clk_en(&mut self) -> DMA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         DMA_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set 1 to enable SDIO_HOST clock"]
     #[inline(always)]
-    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn sdio_host_clk_en(&mut self) -> SDIO_HOST_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         SDIO_HOST_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set 1 to enable LCD_CAM clock"]
     #[inline(always)]
-    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn lcd_cam_clk_en(&mut self) -> LCD_CAM_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         LCD_CAM_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set 1 to enable UART2 clock"]
     #[inline(always)]
-    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn uart2_clk_en(&mut self) -> UART2_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         UART2_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set 1 to enable USB_DEVICE clock"]
     #[inline(always)]
-    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn usb_device_clk_en(&mut self) -> USB_DEVICE_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         USB_DEVICE_CLK_EN_W::new(self, 10)
     }
 }

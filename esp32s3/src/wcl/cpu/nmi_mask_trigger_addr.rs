@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - this field to used to set trigger address, when CPU executes to this address,NMI mask automatically fails"]
     #[inline(always)]
-    pub fn nmi_mask_trigger_addr(&mut self) -> NMI_MASK_TRIGGER_ADDR_W<NMI_MASK_TRIGGER_ADDR_SPEC> {
+    pub fn nmi_mask_trigger_addr(
+        &mut self,
+    ) -> NMI_MASK_TRIGGER_ADDR_W<'_, NMI_MASK_TRIGGER_ADDR_SPEC> {
         NMI_MASK_TRIGGER_ADDR_W::new(self, 0)
     }
 }

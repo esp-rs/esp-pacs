@@ -223,97 +223,99 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SPI clock mode bits. 0: SPI clock is off when CS inactive 1: SPI clock is delayed one cycle after CS inactive 2: SPI clock is delayed two cycles after CS inactive 3: SPI clock is always on."]
     #[inline(always)]
-    pub fn sclk_mode(&mut self) -> SCLK_MODE_W<SRAM_CMD_SPEC> {
+    pub fn sclk_mode(&mut self) -> SCLK_MODE_W<'_, SRAM_CMD_SPEC> {
         SCLK_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:9 - Mode bits in the external RAM fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
-    pub fn swb_mode(&mut self) -> SWB_MODE_W<SRAM_CMD_SPEC> {
+    pub fn swb_mode(&mut self) -> SWB_MODE_W<'_, SRAM_CMD_SPEC> {
         SWB_MODE_W::new(self, 2)
     }
     #[doc = "Bit 10 - For SPI0 external RAM , din phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
     #[inline(always)]
-    pub fn sdin_dual(&mut self) -> SDIN_DUAL_W<SRAM_CMD_SPEC> {
+    pub fn sdin_dual(&mut self) -> SDIN_DUAL_W<'_, SRAM_CMD_SPEC> {
         SDIN_DUAL_W::new(self, 10)
     }
     #[doc = "Bit 11 - For SPI0 external RAM , dout phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
     #[inline(always)]
-    pub fn sdout_dual(&mut self) -> SDOUT_DUAL_W<SRAM_CMD_SPEC> {
+    pub fn sdout_dual(&mut self) -> SDOUT_DUAL_W<'_, SRAM_CMD_SPEC> {
         SDOUT_DUAL_W::new(self, 11)
     }
     #[doc = "Bit 12 - For SPI0 external RAM , address phase apply 2 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_dio."]
     #[inline(always)]
-    pub fn saddr_dual(&mut self) -> SADDR_DUAL_W<SRAM_CMD_SPEC> {
+    pub fn saddr_dual(&mut self) -> SADDR_DUAL_W<'_, SRAM_CMD_SPEC> {
         SADDR_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 14 - For SPI0 external RAM , din phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
     #[inline(always)]
-    pub fn sdin_quad(&mut self) -> SDIN_QUAD_W<SRAM_CMD_SPEC> {
+    pub fn sdin_quad(&mut self) -> SDIN_QUAD_W<'_, SRAM_CMD_SPEC> {
         SDIN_QUAD_W::new(self, 14)
     }
     #[doc = "Bit 15 - For SPI0 external RAM , dout phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
     #[inline(always)]
-    pub fn sdout_quad(&mut self) -> SDOUT_QUAD_W<SRAM_CMD_SPEC> {
+    pub fn sdout_quad(&mut self) -> SDOUT_QUAD_W<'_, SRAM_CMD_SPEC> {
         SDOUT_QUAD_W::new(self, 15)
     }
     #[doc = "Bit 16 - For SPI0 external RAM , address phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
     #[inline(always)]
-    pub fn saddr_quad(&mut self) -> SADDR_QUAD_W<SRAM_CMD_SPEC> {
+    pub fn saddr_quad(&mut self) -> SADDR_QUAD_W<'_, SRAM_CMD_SPEC> {
         SADDR_QUAD_W::new(self, 16)
     }
     #[doc = "Bit 17 - For SPI0 external RAM , cmd phase apply 4 signals. 1: enable 0: disable. The bit is the same with spi_mem_usr_sram_qio."]
     #[inline(always)]
-    pub fn scmd_quad(&mut self) -> SCMD_QUAD_W<SRAM_CMD_SPEC> {
+    pub fn scmd_quad(&mut self) -> SCMD_QUAD_W<'_, SRAM_CMD_SPEC> {
         SCMD_QUAD_W::new(self, 17)
     }
     #[doc = "Bit 18 - For SPI0 external RAM , din phase apply 8 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn sdin_oct(&mut self) -> SDIN_OCT_W<SRAM_CMD_SPEC> {
+    pub fn sdin_oct(&mut self) -> SDIN_OCT_W<'_, SRAM_CMD_SPEC> {
         SDIN_OCT_W::new(self, 18)
     }
     #[doc = "Bit 19 - For SPI0 external RAM , dout phase apply 8 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn sdout_oct(&mut self) -> SDOUT_OCT_W<SRAM_CMD_SPEC> {
+    pub fn sdout_oct(&mut self) -> SDOUT_OCT_W<'_, SRAM_CMD_SPEC> {
         SDOUT_OCT_W::new(self, 19)
     }
     #[doc = "Bit 20 - For SPI0 external RAM , address phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn saddr_oct(&mut self) -> SADDR_OCT_W<SRAM_CMD_SPEC> {
+    pub fn saddr_oct(&mut self) -> SADDR_OCT_W<'_, SRAM_CMD_SPEC> {
         SADDR_OCT_W::new(self, 20)
     }
     #[doc = "Bit 21 - For SPI0 external RAM , cmd phase apply 8 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn scmd_oct(&mut self) -> SCMD_OCT_W<SRAM_CMD_SPEC> {
+    pub fn scmd_oct(&mut self) -> SCMD_OCT_W<'_, SRAM_CMD_SPEC> {
         SCMD_OCT_W::new(self, 21)
     }
     #[doc = "Bit 22 - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
-    pub fn sdummy_rin(&mut self) -> SDUMMY_RIN_W<SRAM_CMD_SPEC> {
+    pub fn sdummy_rin(&mut self) -> SDUMMY_RIN_W<'_, SRAM_CMD_SPEC> {
         SDUMMY_RIN_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the dummy phase of a MSPI write data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
-    pub fn sdummy_wout(&mut self) -> SDUMMY_WOUT_W<SRAM_CMD_SPEC> {
+    pub fn sdummy_wout(&mut self) -> SDUMMY_WOUT_W<'_, SRAM_CMD_SPEC> {
         SDUMMY_WOUT_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_DQS is output by the MSPI controller."]
     #[inline(always)]
-    pub fn smem_wdummy_dqs_always_out(&mut self) -> SMEM_WDUMMY_DQS_ALWAYS_OUT_W<SRAM_CMD_SPEC> {
+    pub fn smem_wdummy_dqs_always_out(
+        &mut self,
+    ) -> SMEM_WDUMMY_DQS_ALWAYS_OUT_W<'_, SRAM_CMD_SPEC> {
         SMEM_WDUMMY_DQS_ALWAYS_OUT_W::new(self, 24)
     }
     #[doc = "Bit 25 - In the dummy phase of an MSPI write data transfer when accesses to external RAM, the level of SPI_IO\\[7:0\\] is output by the MSPI controller."]
     #[inline(always)]
-    pub fn smem_wdummy_always_out(&mut self) -> SMEM_WDUMMY_ALWAYS_OUT_W<SRAM_CMD_SPEC> {
+    pub fn smem_wdummy_always_out(&mut self) -> SMEM_WDUMMY_ALWAYS_OUT_W<'_, SRAM_CMD_SPEC> {
         SMEM_WDUMMY_ALWAYS_OUT_W::new(self, 25)
     }
     #[doc = "Bit 30 - When accesses to external RAM, 1: the IE signals of pads connected to SPI_DQS are always 1. 0: Others."]
     #[inline(always)]
-    pub fn smem_dqs_ie_always_on(&mut self) -> SMEM_DQS_IE_ALWAYS_ON_W<SRAM_CMD_SPEC> {
+    pub fn smem_dqs_ie_always_on(&mut self) -> SMEM_DQS_IE_ALWAYS_ON_W<'_, SRAM_CMD_SPEC> {
         SMEM_DQS_IE_ALWAYS_ON_W::new(self, 30)
     }
     #[doc = "Bit 31 - When accesses to external RAM, 1: the IE signals of pads connected to SPI_IO\\[7:0\\] are always 1. 0: Others."]
     #[inline(always)]
-    pub fn smem_data_ie_always_on(&mut self) -> SMEM_DATA_IE_ALWAYS_ON_W<SRAM_CMD_SPEC> {
+    pub fn smem_data_ie_always_on(&mut self) -> SMEM_DATA_IE_ALWAYS_ON_W<'_, SRAM_CMD_SPEC> {
         SMEM_DATA_IE_ALWAYS_ON_W::new(self, 31)
     }
 }

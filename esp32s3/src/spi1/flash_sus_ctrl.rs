@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable auto-suspend function."]
     #[inline(always)]
-    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PES_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - Program/Erase resume command value."]
     #[inline(always)]
-    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PER_COMMAND_W::new(self, 1)
     }
     #[doc = "Bits 9:16 - Program/Erase suspend command value."]
     #[inline(always)]
-    pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_pes_command(&mut self) -> FLASH_PES_COMMAND_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PES_COMMAND_W::new(self, 9)
     }
 }

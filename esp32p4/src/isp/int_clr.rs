@@ -67,147 +67,147 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - write 1 to clear input data type error"]
     #[inline(always)]
-    pub fn isp_data_type_err(&mut self) -> ISP_DATA_TYPE_ERR_W<INT_CLR_SPEC> {
+    pub fn isp_data_type_err(&mut self) -> ISP_DATA_TYPE_ERR_W<'_, INT_CLR_SPEC> {
         ISP_DATA_TYPE_ERR_W::new(self, 0)
     }
     #[doc = "Bit 1 - write 1 to clear isp input fifo overflow"]
     #[inline(always)]
-    pub fn isp_async_fifo_ovf(&mut self) -> ISP_ASYNC_FIFO_OVF_W<INT_CLR_SPEC> {
+    pub fn isp_async_fifo_ovf(&mut self) -> ISP_ASYNC_FIFO_OVF_W<'_, INT_CLR_SPEC> {
         ISP_ASYNC_FIFO_OVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - write 1 to clear isp input buffer full"]
     #[inline(always)]
-    pub fn isp_buf_full(&mut self) -> ISP_BUF_FULL_W<INT_CLR_SPEC> {
+    pub fn isp_buf_full(&mut self) -> ISP_BUF_FULL_W<'_, INT_CLR_SPEC> {
         ISP_BUF_FULL_W::new(self, 2)
     }
     #[doc = "Bit 3 - write 1 to clear hnum and vnum setting format error"]
     #[inline(always)]
-    pub fn isp_hvnum_setting_err(&mut self) -> ISP_HVNUM_SETTING_ERR_W<INT_CLR_SPEC> {
+    pub fn isp_hvnum_setting_err(&mut self) -> ISP_HVNUM_SETTING_ERR_W<'_, INT_CLR_SPEC> {
         ISP_HVNUM_SETTING_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - write 1 to clear setting invalid reg_data_type"]
     #[inline(always)]
-    pub fn isp_data_type_setting_err(&mut self) -> ISP_DATA_TYPE_SETTING_ERR_W<INT_CLR_SPEC> {
+    pub fn isp_data_type_setting_err(&mut self) -> ISP_DATA_TYPE_SETTING_ERR_W<'_, INT_CLR_SPEC> {
         ISP_DATA_TYPE_SETTING_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - write 1 to clear hnum setting unmatch with mipi input"]
     #[inline(always)]
-    pub fn isp_mipi_hnum_unmatch(&mut self) -> ISP_MIPI_HNUM_UNMATCH_W<INT_CLR_SPEC> {
+    pub fn isp_mipi_hnum_unmatch(&mut self) -> ISP_MIPI_HNUM_UNMATCH_W<'_, INT_CLR_SPEC> {
         ISP_MIPI_HNUM_UNMATCH_W::new(self, 5)
     }
     #[doc = "Bit 6 - write 1 to clear dpc check done"]
     #[inline(always)]
-    pub fn dpc_check_done(&mut self) -> DPC_CHECK_DONE_W<INT_CLR_SPEC> {
+    pub fn dpc_check_done(&mut self) -> DPC_CHECK_DONE_W<'_, INT_CLR_SPEC> {
         DPC_CHECK_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - write 1 to clear gamma setting error"]
     #[inline(always)]
-    pub fn gamma_xcoord_err(&mut self) -> GAMMA_XCOORD_ERR_W<INT_CLR_SPEC> {
+    pub fn gamma_xcoord_err(&mut self) -> GAMMA_XCOORD_ERR_W<'_, INT_CLR_SPEC> {
         GAMMA_XCOORD_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - write 1 to clear ae monitor"]
     #[inline(always)]
-    pub fn ae_monitor(&mut self) -> AE_MONITOR_W<INT_CLR_SPEC> {
+    pub fn ae_monitor(&mut self) -> AE_MONITOR_W<'_, INT_CLR_SPEC> {
         AE_MONITOR_W::new(self, 8)
     }
     #[doc = "Bit 9 - write 1 to clear ae"]
     #[inline(always)]
-    pub fn ae_frame_done(&mut self) -> AE_FRAME_DONE_W<INT_CLR_SPEC> {
+    pub fn ae_frame_done(&mut self) -> AE_FRAME_DONE_W<'_, INT_CLR_SPEC> {
         AE_FRAME_DONE_W::new(self, 9)
     }
     #[doc = "Bit 10 - write 1 to clear af statistic"]
     #[inline(always)]
-    pub fn af_fdone(&mut self) -> AF_FDONE_W<INT_CLR_SPEC> {
+    pub fn af_fdone(&mut self) -> AF_FDONE_W<'_, INT_CLR_SPEC> {
         AF_FDONE_W::new(self, 10)
     }
     #[doc = "Bit 11 - write 1 to clear af monitor"]
     #[inline(always)]
-    pub fn af_env(&mut self) -> AF_ENV_W<INT_CLR_SPEC> {
+    pub fn af_env(&mut self) -> AF_ENV_W<'_, INT_CLR_SPEC> {
         AF_ENV_W::new(self, 11)
     }
     #[doc = "Bit 12 - write 1 to clear awb"]
     #[inline(always)]
-    pub fn awb_fdone(&mut self) -> AWB_FDONE_W<INT_CLR_SPEC> {
+    pub fn awb_fdone(&mut self) -> AWB_FDONE_W<'_, INT_CLR_SPEC> {
         AWB_FDONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - write 1 to clear histogram"]
     #[inline(always)]
-    pub fn hist_fdone(&mut self) -> HIST_FDONE_W<INT_CLR_SPEC> {
+    pub fn hist_fdone(&mut self) -> HIST_FDONE_W<'_, INT_CLR_SPEC> {
         HIST_FDONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - write 1 to clear isp frame end"]
     #[inline(always)]
-    pub fn frame(&mut self) -> FRAME_W<INT_CLR_SPEC> {
+    pub fn frame(&mut self) -> FRAME_W<'_, INT_CLR_SPEC> {
         FRAME_W::new(self, 14)
     }
     #[doc = "Bit 15 - write 1 to clear blc frame done"]
     #[inline(always)]
-    pub fn blc_frame(&mut self) -> BLC_FRAME_W<INT_CLR_SPEC> {
+    pub fn blc_frame(&mut self) -> BLC_FRAME_W<'_, INT_CLR_SPEC> {
         BLC_FRAME_W::new(self, 15)
     }
     #[doc = "Bit 16 - write 1 to clear lsc frame done"]
     #[inline(always)]
-    pub fn lsc_frame(&mut self) -> LSC_FRAME_W<INT_CLR_SPEC> {
+    pub fn lsc_frame(&mut self) -> LSC_FRAME_W<'_, INT_CLR_SPEC> {
         LSC_FRAME_W::new(self, 16)
     }
     #[doc = "Bit 17 - write 1 to clear dpc frame done"]
     #[inline(always)]
-    pub fn dpc_frame(&mut self) -> DPC_FRAME_W<INT_CLR_SPEC> {
+    pub fn dpc_frame(&mut self) -> DPC_FRAME_W<'_, INT_CLR_SPEC> {
         DPC_FRAME_W::new(self, 17)
     }
     #[doc = "Bit 18 - write 1 to clear bf frame done"]
     #[inline(always)]
-    pub fn bf_frame(&mut self) -> BF_FRAME_W<INT_CLR_SPEC> {
+    pub fn bf_frame(&mut self) -> BF_FRAME_W<'_, INT_CLR_SPEC> {
         BF_FRAME_W::new(self, 18)
     }
     #[doc = "Bit 19 - write 1 to clear demosaic frame done"]
     #[inline(always)]
-    pub fn demosaic_frame(&mut self) -> DEMOSAIC_FRAME_W<INT_CLR_SPEC> {
+    pub fn demosaic_frame(&mut self) -> DEMOSAIC_FRAME_W<'_, INT_CLR_SPEC> {
         DEMOSAIC_FRAME_W::new(self, 19)
     }
     #[doc = "Bit 20 - write 1 to clear median frame done"]
     #[inline(always)]
-    pub fn median_frame(&mut self) -> MEDIAN_FRAME_W<INT_CLR_SPEC> {
+    pub fn median_frame(&mut self) -> MEDIAN_FRAME_W<'_, INT_CLR_SPEC> {
         MEDIAN_FRAME_W::new(self, 20)
     }
     #[doc = "Bit 21 - write 1 to clear ccm frame done"]
     #[inline(always)]
-    pub fn ccm_frame(&mut self) -> CCM_FRAME_W<INT_CLR_SPEC> {
+    pub fn ccm_frame(&mut self) -> CCM_FRAME_W<'_, INT_CLR_SPEC> {
         CCM_FRAME_W::new(self, 21)
     }
     #[doc = "Bit 22 - write 1 to clear gamma frame done"]
     #[inline(always)]
-    pub fn gamma_frame(&mut self) -> GAMMA_FRAME_W<INT_CLR_SPEC> {
+    pub fn gamma_frame(&mut self) -> GAMMA_FRAME_W<'_, INT_CLR_SPEC> {
         GAMMA_FRAME_W::new(self, 22)
     }
     #[doc = "Bit 23 - write 1 to clear rgb2yuv frame done"]
     #[inline(always)]
-    pub fn rgb2yuv_frame(&mut self) -> RGB2YUV_FRAME_W<INT_CLR_SPEC> {
+    pub fn rgb2yuv_frame(&mut self) -> RGB2YUV_FRAME_W<'_, INT_CLR_SPEC> {
         RGB2YUV_FRAME_W::new(self, 23)
     }
     #[doc = "Bit 24 - write 1 to clear sharp frame done"]
     #[inline(always)]
-    pub fn sharp_frame(&mut self) -> SHARP_FRAME_W<INT_CLR_SPEC> {
+    pub fn sharp_frame(&mut self) -> SHARP_FRAME_W<'_, INT_CLR_SPEC> {
         SHARP_FRAME_W::new(self, 24)
     }
     #[doc = "Bit 25 - write 1 to clear color frame done"]
     #[inline(always)]
-    pub fn color_frame(&mut self) -> COLOR_FRAME_W<INT_CLR_SPEC> {
+    pub fn color_frame(&mut self) -> COLOR_FRAME_W<'_, INT_CLR_SPEC> {
         COLOR_FRAME_W::new(self, 25)
     }
     #[doc = "Bit 26 - write 1 to clear yuv2rgb frame done"]
     #[inline(always)]
-    pub fn yuv2rgb_frame(&mut self) -> YUV2RGB_FRAME_W<INT_CLR_SPEC> {
+    pub fn yuv2rgb_frame(&mut self) -> YUV2RGB_FRAME_W<'_, INT_CLR_SPEC> {
         YUV2RGB_FRAME_W::new(self, 26)
     }
     #[doc = "Bit 27 - write 1 to clear isp_tail idi frame_end"]
     #[inline(always)]
-    pub fn tail_idi_frame(&mut self) -> TAIL_IDI_FRAME_W<INT_CLR_SPEC> {
+    pub fn tail_idi_frame(&mut self) -> TAIL_IDI_FRAME_W<'_, INT_CLR_SPEC> {
         TAIL_IDI_FRAME_W::new(self, 27)
     }
     #[doc = "Bit 28 - write 1 to clear real input frame end of isp_input"]
     #[inline(always)]
-    pub fn header_idi_frame(&mut self) -> HEADER_IDI_FRAME_W<INT_CLR_SPEC> {
+    pub fn header_idi_frame(&mut self) -> HEADER_IDI_FRAME_W<'_, INT_CLR_SPEC> {
         HEADER_IDI_FRAME_W::new(self, 28)
     }
 }

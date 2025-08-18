@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_log_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_LOG_USAGE_W<INTERNAL_SRAM_USAGE_4_SPEC> {
+    ) -> INTERNAL_SRAM_LOG_USAGE_W<'_, INTERNAL_SRAM_USAGE_4_SPEC> {
         INTERNAL_SRAM_LOG_USAGE_W::new(self, 0)
     }
 }

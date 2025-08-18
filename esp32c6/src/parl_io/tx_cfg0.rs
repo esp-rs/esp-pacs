@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:17 - Configures tx sending data byte length."]
     #[inline(always)]
-    pub fn tx_bytelen(&mut self) -> TX_BYTELEN_W<TX_CFG0_SPEC> {
+    pub fn tx_bytelen(&mut self) -> TX_BYTELEN_W<'_, TX_CFG0_SPEC> {
         TX_BYTELEN_W::new(self, 2)
     }
     #[doc = "Bit 18 - Write 1 to enable output tx clock gating."]
     #[inline(always)]
-    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<TX_CFG0_SPEC> {
+    pub fn tx_gating_en(&mut self) -> TX_GATING_EN_W<'_, TX_CFG0_SPEC> {
         TX_GATING_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Write 1 to start tx global data output."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<TX_CFG0_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, TX_CFG0_SPEC> {
         TX_START_W::new(self, 19)
     }
     #[doc = "Bit 20 - Write 1 to enable tx hardware data valid signal."]
     #[inline(always)]
-    pub fn tx_hw_valid_en(&mut self) -> TX_HW_VALID_EN_W<TX_CFG0_SPEC> {
+    pub fn tx_hw_valid_en(&mut self) -> TX_HW_VALID_EN_W<'_, TX_CFG0_SPEC> {
         TX_HW_VALID_EN_W::new(self, 20)
     }
     #[doc = "Bit 25 - Write 0 to enable sampling data on the rising edge of tx clock. Write 0 to enable sampling data on the falling edge of tx clock."]
     #[inline(always)]
-    pub fn tx_smp_edge_sel(&mut self) -> TX_SMP_EDGE_SEL_W<TX_CFG0_SPEC> {
+    pub fn tx_smp_edge_sel(&mut self) -> TX_SMP_EDGE_SEL_W<'_, TX_CFG0_SPEC> {
         TX_SMP_EDGE_SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - Write 0 to unpack bits from 1byte from MSB when data bus width is 4/2/1 bits. Write 0 to unpack bits from 1byte from LSB when data bus width is 4/2/1 bits."]
     #[inline(always)]
-    pub fn tx_bit_unpack_order(&mut self) -> TX_BIT_UNPACK_ORDER_W<TX_CFG0_SPEC> {
+    pub fn tx_bit_unpack_order(&mut self) -> TX_BIT_UNPACK_ORDER_W<'_, TX_CFG0_SPEC> {
         TX_BIT_UNPACK_ORDER_W::new(self, 26)
     }
     #[doc = "Bits 27:29 - Tx data bus width selection. 100: bus width is 1 bit 011: bus width is 2 bits 010: bus width is 4 bits 001: bus width is 8 bits 000: bus width is 16 bits"]
     #[inline(always)]
-    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<TX_CFG0_SPEC> {
+    pub fn tx_bus_wid_sel(&mut self) -> TX_BUS_WID_SEL_W<'_, TX_CFG0_SPEC> {
         TX_BUS_WID_SEL_W::new(self, 27)
     }
     #[doc = "Bit 30 - Write 1 to enable soft reset of async fifo in tx module."]
     #[inline(always)]
-    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<TX_CFG0_SPEC> {
+    pub fn tx_fifo_srst(&mut self) -> TX_FIFO_SRST_W<'_, TX_CFG0_SPEC> {
         TX_FIFO_SRST_W::new(self, 30)
     }
 }

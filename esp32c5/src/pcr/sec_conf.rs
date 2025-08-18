@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures the clock source for the External Memory Encryption and Decryption module.\\\\ 0(default): XTAL_CLK\\\\ 1 RC_FAST_CLK\\\\ 2: PLL_F480M_CLK\\\\"]
     #[inline(always)]
-    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<SEC_CONF_SPEC> {
+    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<'_, SEC_CONF_SPEC> {
         SEC_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set 0 to reset sec module"]
     #[inline(always)]
-    pub fn sec_rst_en(&mut self) -> SEC_RST_EN_W<SEC_CONF_SPEC> {
+    pub fn sec_rst_en(&mut self) -> SEC_RST_EN_W<'_, SEC_CONF_SPEC> {
         SEC_RST_EN_W::new(self, 2)
     }
 }

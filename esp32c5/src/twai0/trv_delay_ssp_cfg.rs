@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - Secondary sampling point offset. Value is given as multiple of minimal Time quanta."]
     #[inline(always)]
-    pub fn ssp_offset(&mut self) -> SSP_OFFSET_W<TRV_DELAY_SSP_CFG_SPEC> {
+    pub fn ssp_offset(&mut self) -> SSP_OFFSET_W<'_, TRV_DELAY_SSP_CFG_SPEC> {
         SSP_OFFSET_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Source of Secondary sampling point. 0b00 - SSP_SRC_MEAS_N_OFFSET - SSP position = TRV_DELAY (Measured Transmitter delay) + SSP_OFFSET. 0b01 - SSP_SRC_NO_SSP - SSP is not used. Transmitter uses regular Sampling Point during data bit rate. 0b10 - SSP_SRC_OFFSET - SSP position = SSP_OFFSET. Measured Transmitter delay value is ignored."]
     #[inline(always)]
-    pub fn ssp_src(&mut self) -> SSP_SRC_W<TRV_DELAY_SSP_CFG_SPEC> {
+    pub fn ssp_src(&mut self) -> SSP_SRC_W<'_, TRV_DELAY_SSP_CFG_SPEC> {
         SSP_SRC_W::new(self, 24)
     }
 }

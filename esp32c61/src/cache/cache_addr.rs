@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits stores the address which will decide where inside the specified tag memory object will be accessed."]
     #[inline(always)]
-    pub fn cache_addr(&mut self) -> CACHE_ADDR_W<CACHE_ADDR_SPEC> {
+    pub fn cache_addr(&mut self) -> CACHE_ADDR_W<'_, CACHE_ADDR_SPEC> {
         CACHE_ADDR_W::new(self, 0)
     }
 }

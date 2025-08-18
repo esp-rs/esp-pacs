@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - local slave address"]
     #[inline(always)]
-    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<SLAVE_ADDR_SPEC> {
+    pub fn slave_addr(&mut self) -> SLAVE_ADDR_W<'_, SLAVE_ADDR_SPEC> {
         SLAVE_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 31 - Set if local slave address is 10-bit"]
     #[inline(always)]
-    pub fn _10bit(&mut self) -> _10BIT_W<SLAVE_ADDR_SPEC> {
+    pub fn _10bit(&mut self) -> _10BIT_W<'_, SLAVE_ADDR_SPEC> {
         _10BIT_W::new(self, 31)
     }
 }

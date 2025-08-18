@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_comb_path_len_lvt"]
     #[inline(always)]
-    pub fn comb_path_len(&mut self) -> COMB_PATH_LEN_W<COMB_PVT_LVT_CONF_SPEC> {
+    pub fn comb_path_len(&mut self) -> COMB_PATH_LEN_W<'_, COMB_PVT_LVT_CONF_SPEC> {
         COMB_PATH_LEN_W::new(self, 0)
     }
     #[doc = "Bit 5 - reg_comb_err_cnt_clr_lvt"]
     #[inline(always)]
-    pub fn comb_err_cnt_clr(&mut self) -> COMB_ERR_CNT_CLR_W<COMB_PVT_LVT_CONF_SPEC> {
+    pub fn comb_err_cnt_clr(&mut self) -> COMB_ERR_CNT_CLR_W<'_, COMB_PVT_LVT_CONF_SPEC> {
         COMB_ERR_CNT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_comb_pvt_monitor_en_lvt"]
     #[inline(always)]
-    pub fn comb_pvt_monitor_en(&mut self) -> COMB_PVT_MONITOR_EN_W<COMB_PVT_LVT_CONF_SPEC> {
+    pub fn comb_pvt_monitor_en(&mut self) -> COMB_PVT_MONITOR_EN_W<'_, COMB_PVT_LVT_CONF_SPEC> {
         COMB_PVT_MONITOR_EN_W::new(self, 6)
     }
 }

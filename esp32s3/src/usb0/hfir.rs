@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn frint(&mut self) -> FRINT_W<HFIR_SPEC> {
+    pub fn frint(&mut self) -> FRINT_W<'_, HFIR_SPEC> {
         FRINT_W::new(self, 0)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn hfirrldctrl(&mut self) -> HFIRRLDCTRL_W<HFIR_SPEC> {
+    pub fn hfirrldctrl(&mut self) -> HFIRRLDCTRL_W<'_, HFIR_SPEC> {
         HFIRRLDCTRL_W::new(self, 16)
     }
 }

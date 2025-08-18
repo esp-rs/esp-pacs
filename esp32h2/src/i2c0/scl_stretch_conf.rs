@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Configure the period of I2C slave stretching SCL line."]
     #[inline(always)]
-    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<'_, SCL_STRETCH_CONF_SPEC> {
         STRETCH_PROTECT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 10 - The enable bit for slave SCL stretch function. 1: Enable. 0: Disable. The SCL output line will be stretched low when reg_slave_scl_stretch_en is 1 and stretch event happens. The stretch cause can be seen in reg_stretch_cause."]
     #[inline(always)]
-    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the I2C slave SCL stretch function."]
     #[inline(always)]
-    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - The enable bit for slave to control ACK level function."]
     #[inline(always)]
-    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_CTL_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables."]
     #[inline(always)]
-    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_LVL_W::new(self, 13)
     }
 }

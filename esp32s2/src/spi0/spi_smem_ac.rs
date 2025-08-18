@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn spi_smem_cs_setup(&mut self) -> SPI_SMEM_CS_SETUP_W<SPI_SMEM_AC_SPEC> {
+    pub fn spi_smem_cs_setup(&mut self) -> SPI_SMEM_CS_SETUP_W<'_, SPI_SMEM_AC_SPEC> {
         SPI_SMEM_CS_SETUP_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn spi_smem_cs_hold(&mut self) -> SPI_SMEM_CS_HOLD_W<SPI_SMEM_AC_SPEC> {
+    pub fn spi_smem_cs_hold(&mut self) -> SPI_SMEM_CS_HOLD_W<'_, SPI_SMEM_AC_SPEC> {
         SPI_SMEM_CS_HOLD_W::new(self, 1)
     }
     #[doc = "Bits 2:14"]
     #[inline(always)]
-    pub fn spi_smem_cs_setup_time(&mut self) -> SPI_SMEM_CS_SETUP_TIME_W<SPI_SMEM_AC_SPEC> {
+    pub fn spi_smem_cs_setup_time(&mut self) -> SPI_SMEM_CS_SETUP_TIME_W<'_, SPI_SMEM_AC_SPEC> {
         SPI_SMEM_CS_SETUP_TIME_W::new(self, 2)
     }
     #[doc = "Bits 15:27"]
     #[inline(always)]
-    pub fn spi_smem_cs_hold_time(&mut self) -> SPI_SMEM_CS_HOLD_TIME_W<SPI_SMEM_AC_SPEC> {
+    pub fn spi_smem_cs_hold_time(&mut self) -> SPI_SMEM_CS_HOLD_TIME_W<'_, SPI_SMEM_AC_SPEC> {
         SPI_SMEM_CS_HOLD_TIME_W::new(self, 15)
     }
 }

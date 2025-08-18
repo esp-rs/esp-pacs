@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to force clock enable of scaling and rotating engine's data memory."]
     #[inline(always)]
-    pub fn sr_mem_clk_ena(&mut self) -> SR_MEM_CLK_ENA_W<SR_MEM_PD_SPEC> {
+    pub fn sr_mem_clk_ena(&mut self) -> SR_MEM_CLK_ENA_W<'_, SR_MEM_PD_SPEC> {
         SR_MEM_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force power down scaling and rotating engine's data memory."]
     #[inline(always)]
-    pub fn sr_mem_force_pd(&mut self) -> SR_MEM_FORCE_PD_W<SR_MEM_PD_SPEC> {
+    pub fn sr_mem_force_pd(&mut self) -> SR_MEM_FORCE_PD_W<'_, SR_MEM_PD_SPEC> {
         SR_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power up scaling and rotating engine's data memory."]
     #[inline(always)]
-    pub fn sr_mem_force_pu(&mut self) -> SR_MEM_FORCE_PU_W<SR_MEM_PD_SPEC> {
+    pub fn sr_mem_force_pu(&mut self) -> SR_MEM_FORCE_PU_W<'_, SR_MEM_PD_SPEC> {
         SR_MEM_FORCE_PU_W::new(self, 2)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - configure the sleep time"]
     #[inline(always)]
-    pub fn slp_val_lo(&mut self) -> SLP_VAL_LO_W<SLP_TIMER0_SPEC> {
+    pub fn slp_val_lo(&mut self) -> SLP_VAL_LO_W<'_, SLP_TIMER0_SPEC> {
         SLP_VAL_LO_W::new(self, 0)
     }
 }

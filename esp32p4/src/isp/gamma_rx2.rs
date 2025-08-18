@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - this field configures the point 15 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0f(&mut self) -> GAMMA_R_X0F_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0f(&mut self) -> GAMMA_R_X0F_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0F_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - this field configures the point 14 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0e(&mut self) -> GAMMA_R_X0E_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0e(&mut self) -> GAMMA_R_X0E_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0E_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - this field configures the point 13 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0d(&mut self) -> GAMMA_R_X0D_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0d(&mut self) -> GAMMA_R_X0D_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0D_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - this field configures the point 12 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0c(&mut self) -> GAMMA_R_X0C_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0c(&mut self) -> GAMMA_R_X0C_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0C_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - this field configures the point 11 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0b(&mut self) -> GAMMA_R_X0B_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0b(&mut self) -> GAMMA_R_X0B_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0B_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - this field configures the point 10 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x0a(&mut self) -> GAMMA_R_X0A_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x0a(&mut self) -> GAMMA_R_X0A_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X0A_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - this field configures the point 9 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x09(&mut self) -> GAMMA_R_X09_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x09(&mut self) -> GAMMA_R_X09_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X09_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - this field configures the point 8 of X-axis of r channel gamma curve, it represents the power of the distance from the previous point"]
     #[inline(always)]
-    pub fn gamma_r_x08(&mut self) -> GAMMA_R_X08_W<GAMMA_RX2_SPEC> {
+    pub fn gamma_r_x08(&mut self) -> GAMMA_R_X08_W<'_, GAMMA_RX2_SPEC> {
         GAMMA_R_X08_W::new(self, 21)
     }
 }

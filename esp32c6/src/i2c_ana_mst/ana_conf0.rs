@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - ?"]
     #[inline(always)]
-    pub fn bbpll_stop_force_high(&mut self) -> BBPLL_STOP_FORCE_HIGH_W<ANA_CONF0_SPEC> {
+    pub fn bbpll_stop_force_high(&mut self) -> BBPLL_STOP_FORCE_HIGH_W<'_, ANA_CONF0_SPEC> {
         BBPLL_STOP_FORCE_HIGH_W::new(self, 2)
     }
     #[doc = "Bit 3 - ?"]
     #[inline(always)]
-    pub fn bbpll_stop_force_low(&mut self) -> BBPLL_STOP_FORCE_LOW_W<ANA_CONF0_SPEC> {
+    pub fn bbpll_stop_force_low(&mut self) -> BBPLL_STOP_FORCE_LOW_W<'_, ANA_CONF0_SPEC> {
         BBPLL_STOP_FORCE_LOW_W::new(self, 3)
     }
 }

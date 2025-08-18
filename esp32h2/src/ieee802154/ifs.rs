@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn sifs(&mut self) -> SIFS_W<IFS_SPEC> {
+    pub fn sifs(&mut self) -> SIFS_W<'_, IFS_SPEC> {
         SIFS_W::new(self, 0)
     }
     #[doc = "Bits 16:25"]
     #[inline(always)]
-    pub fn lifs(&mut self) -> LIFS_W<IFS_SPEC> {
+    pub fn lifs(&mut self) -> LIFS_W<'_, IFS_SPEC> {
         LIFS_W::new(self, 16)
     }
 }

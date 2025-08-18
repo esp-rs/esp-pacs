@@ -72,27 +72,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flushes the from-bus buffer/FIFO. Not normally used"]
     #[inline(always)]
-    pub fn flushtb(&mut self) -> FLUSHTB_W<DATACTRL_SPEC> {
+    pub fn flushtb(&mut self) -> FLUSHTB_W<'_, DATACTRL_SPEC> {
         FLUSHTB_W::new(self, 0)
     }
     #[doc = "Bit 1 - Flushes the to-bus buffer/FIFO. Used when Master terminates a to-bus (read) message prematurely"]
     #[inline(always)]
-    pub fn flushfb(&mut self) -> FLUSHFB_W<DATACTRL_SPEC> {
+    pub fn flushfb(&mut self) -> FLUSHFB_W<'_, DATACTRL_SPEC> {
         FLUSHFB_W::new(self, 1)
     }
     #[doc = "Bit 3 - If this bit is not written 1, the register bits from 7 to 4 are not changed on write."]
     #[inline(always)]
-    pub fn unlock(&mut self) -> UNLOCK_W<DATACTRL_SPEC> {
+    pub fn unlock(&mut self) -> UNLOCK_W<'_, DATACTRL_SPEC> {
         UNLOCK_W::new(self, 3)
     }
     #[doc = "Bits 4:5 - Trigger level for tx emptiness when FIFOed, Affects interrupt and DMA(if enabled). The defaults is 3"]
     #[inline(always)]
-    pub fn txtrig(&mut self) -> TXTRIG_W<DATACTRL_SPEC> {
+    pub fn txtrig(&mut self) -> TXTRIG_W<'_, DATACTRL_SPEC> {
         TXTRIG_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Trigger level for rx fulless when FIFOed, Affects interrupt and DMA(if enabled). The defaults is 3"]
     #[inline(always)]
-    pub fn rxtrig(&mut self) -> RXTRIG_W<DATACTRL_SPEC> {
+    pub fn rxtrig(&mut self) -> RXTRIG_W<'_, DATACTRL_SPEC> {
         RXTRIG_W::new(self, 6)
     }
 }

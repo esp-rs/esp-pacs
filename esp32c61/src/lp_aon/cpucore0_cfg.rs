@@ -62,29 +62,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_sw_stall(&mut self) -> CPU_CORE0_SW_STALL_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_SW_STALL_W::new(self, 0)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_sw_reset(&mut self) -> CPU_CORE0_SW_RESET_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_SW_RESET_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     pub fn cpu_core0_ocd_halt_on_reset(
         &mut self,
-    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<CPUCORE0_CFG_SPEC> {
+    ) -> CPU_CORE0_OCD_HALT_ON_RESET_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_OCD_HALT_ON_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn cpu_core0_stat_vector_sel(&mut self) -> CPU_CORE0_STAT_VECTOR_SEL_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_stat_vector_sel(
+        &mut self,
+    ) -> CPU_CORE0_STAT_VECTOR_SEL_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_STAT_VECTOR_SEL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<CPUCORE0_CFG_SPEC> {
+    pub fn cpu_core0_dreset_mask(&mut self) -> CPU_CORE0_DRESET_MASK_W<'_, CPUCORE0_CFG_SPEC> {
         CPU_CORE0_DRESET_MASK_W::new(self, 31)
     }
 }

@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write 1 to triger dma to get 1 frame"]
     #[inline(always)]
-    pub fn dma_en(&mut self) -> DMA_EN_W<DMA_CNTL_SPEC> {
+    pub fn dma_en(&mut self) -> DMA_EN_W<'_, DMA_CNTL_SPEC> {
         DMA_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - write 1 to update reg_dma_burst_len & reg_dma_data_type"]
     #[inline(always)]
-    pub fn dma_update(&mut self) -> DMA_UPDATE_W<DMA_CNTL_SPEC> {
+    pub fn dma_update(&mut self) -> DMA_UPDATE_W<'_, DMA_CNTL_SPEC> {
         DMA_UPDATE_W::new(self, 1)
     }
     #[doc = "Bits 2:7 - this field configures the idi data type for image data"]
     #[inline(always)]
-    pub fn dma_data_type(&mut self) -> DMA_DATA_TYPE_W<DMA_CNTL_SPEC> {
+    pub fn dma_data_type(&mut self) -> DMA_DATA_TYPE_W<'_, DMA_CNTL_SPEC> {
         DMA_DATA_TYPE_W::new(self, 2)
     }
     #[doc = "Bits 8:19 - this field configures dma burst len when data source is dma. set according to dma_msize, it is the number of 64bits in a dma transfer"]
     #[inline(always)]
-    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<DMA_CNTL_SPEC> {
+    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<'_, DMA_CNTL_SPEC> {
         DMA_BURST_LEN_W::new(self, 8)
     }
     #[doc = "Bits 20:31 - this field configures dma req interval, 12'b1: 1 cycle, 12'b11 2 cycle ..."]
     #[inline(always)]
-    pub fn dma_interval(&mut self) -> DMA_INTERVAL_W<DMA_CNTL_SPEC> {
+    pub fn dma_interval(&mut self) -> DMA_INTERVAL_W<'_, DMA_CNTL_SPEC> {
         DMA_INTERVAL_W::new(self, 20)
     }
 }

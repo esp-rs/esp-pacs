@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SW_INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_sw_int_clr(&mut self) -> LP_SW_INT_CLR_W<SW_INT_CLR_SPEC> {
+    pub fn lp_sw_int_clr(&mut self) -> LP_SW_INT_CLR_W<'_, SW_INT_CLR_SPEC> {
         LP_SW_INT_CLR_W::new(self, 31)
     }
 }

@@ -34,12 +34,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Transmit Buffer Threshold Value. This field controls the number of empty locations in the Transmit FIFO that trigger the TX_THLD_STAT interrupt. Supports values: 000:2 001:4 010:8 011:16 100:31, else:31"]
     #[inline(always)]
-    pub fn reg_tx_data_buf_thld(&mut self) -> REG_TX_DATA_BUF_THLD_W<DATA_BUFFER_THLD_CTRL_SPEC> {
+    pub fn reg_tx_data_buf_thld(
+        &mut self,
+    ) -> REG_TX_DATA_BUF_THLD_W<'_, DATA_BUFFER_THLD_CTRL_SPEC> {
         REG_TX_DATA_BUF_THLD_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - Receive Buffer Threshold Value. This field controls the number of empty locations in the Receive FIFO that trigger the RX_THLD_STAT interrupt. Supports: 000:2 001:4 010:8 011:16 100:31, else:31"]
     #[inline(always)]
-    pub fn reg_rx_data_buf_thld(&mut self) -> REG_RX_DATA_BUF_THLD_W<DATA_BUFFER_THLD_CTRL_SPEC> {
+    pub fn reg_rx_data_buf_thld(
+        &mut self,
+    ) -> REG_RX_DATA_BUF_THLD_W<'_, DATA_BUFFER_THLD_CTRL_SPEC> {
         REG_RX_DATA_BUF_THLD_W::new(self, 3)
     }
 }

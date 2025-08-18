@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_region_pms_constrain_addr_7(
         &mut self,
-    ) -> CORE_0_REGION_PMS_CONSTRAIN_ADDR_7_W<CORE_0_REGION_PMS_CONSTRAIN_10_SPEC> {
+    ) -> CORE_0_REGION_PMS_CONSTRAIN_ADDR_7_W<'_, CORE_0_REGION_PMS_CONSTRAIN_10_SPEC> {
         CORE_0_REGION_PMS_CONSTRAIN_ADDR_7_W::new(self, 0)
     }
 }

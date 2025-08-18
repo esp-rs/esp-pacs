@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the XON character for flow control."]
     #[inline(always)]
-    pub fn xon_char(&mut self) -> XON_CHAR_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn xon_char(&mut self) -> XON_CHAR_W<'_, SWFC_CONF0_SYNC_SPEC> {
         XON_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the XOFF character for flow control."]
     #[inline(always)]
-    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<'_, SWFC_CONF0_SYNC_SPEC> {
         XOFF_CHAR_W::new(self, 8)
     }
     #[doc = "Bit 16 - Configures whether the UART transmitter can send XON or XOFF characters when it is disabled.\\\\ 0: Cannot send\\\\ 1: Can send\\\\"]
     #[inline(always)]
-    pub fn xon_xoff_still_send(&mut self) -> XON_XOFF_STILL_SEND_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn xon_xoff_still_send(&mut self) -> XON_XOFF_STILL_SEND_W<'_, SWFC_CONF0_SYNC_SPEC> {
         XON_XOFF_STILL_SEND_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable software flow control.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn sw_flow_con_en(&mut self) -> SW_FLOW_CON_EN_W<'_, SWFC_CONF0_SYNC_SPEC> {
         SW_FLOW_CON_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to remove flow control characters from the received data.\\\\ 0: Not move\\\\ 1: Move\\\\"]
     #[inline(always)]
-    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn xonoff_del(&mut self) -> XONOFF_DEL_W<'_, SWFC_CONF0_SYNC_SPEC> {
         XONOFF_DEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether the transmitter continues to sending data.\\\\ 0: Not send\\\\ 1: Send\\\\"]
     #[inline(always)]
-    pub fn force_xon(&mut self) -> FORCE_XON_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn force_xon(&mut self) -> FORCE_XON_W<'_, SWFC_CONF0_SYNC_SPEC> {
         FORCE_XON_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures whether or not to stop the transmitter from sending data.\\\\ 0: Not stop\\\\ 1: Stop\\\\"]
     #[inline(always)]
-    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn force_xoff(&mut self) -> FORCE_XOFF_W<'_, SWFC_CONF0_SYNC_SPEC> {
         FORCE_XOFF_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures whether or not to send XON characters.\\\\ 0: Not send\\\\ 1: Send\\\\"]
     #[inline(always)]
-    pub fn send_xon(&mut self) -> SEND_XON_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn send_xon(&mut self) -> SEND_XON_W<'_, SWFC_CONF0_SYNC_SPEC> {
         SEND_XON_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures whether or not to send XOFF characters.\\\\ 0: Not send\\\\ 1: Send\\\\"]
     #[inline(always)]
-    pub fn send_xoff(&mut self) -> SEND_XOFF_W<SWFC_CONF0_SYNC_SPEC> {
+    pub fn send_xoff(&mut self) -> SEND_XOFF_W<'_, SWFC_CONF0_SYNC_SPEC> {
         SEND_XOFF_W::new(self, 22)
     }
 }

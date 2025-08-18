@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - reg_pre_div_cnt"]
     #[inline(always)]
-    pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<SYSCLK_CONF_SPEC> {
+    pub fn pre_div_cnt(&mut self) -> PRE_DIV_CNT_W<'_, SYSCLK_CONF_SPEC> {
         PRE_DIV_CNT_W::new(self, 0)
     }
     #[doc = "Bits 10:11 - reg_soc_clk_sel"]
     #[inline(always)]
-    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<SYSCLK_CONF_SPEC> {
+    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<'_, SYSCLK_CONF_SPEC> {
         SOC_CLK_SEL_W::new(self, 10)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_rx_div_y(&mut self) -> I2S2_RX_DIV_Y_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_rx_div_y(&mut self) -> I2S2_RX_DIV_Y_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_RX_DIV_Y_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_rx_div_z(&mut self) -> I2S2_RX_DIV_Z_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_rx_div_z(&mut self) -> I2S2_RX_DIV_Z_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_RX_DIV_Z_W::new(self, 9)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_rx_div_yn1(&mut self) -> I2S2_RX_DIV_YN1_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_rx_div_yn1(&mut self) -> I2S2_RX_DIV_YN1_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_RX_DIV_YN1_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_tx_clk_en(&mut self) -> I2S2_TX_CLK_EN_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_tx_clk_en(&mut self) -> I2S2_TX_CLK_EN_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_TX_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bits 20:21 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_tx_clk_src_sel(&mut self) -> I2S2_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_tx_clk_src_sel(&mut self) -> I2S2_TX_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_TX_CLK_SRC_SEL_W::new(self, 20)
     }
     #[doc = "Bits 22:29 - Reserved"]
     #[inline(always)]
-    pub fn i2s2_tx_div_n(&mut self) -> I2S2_TX_DIV_N_W<PERI_CLK_CTRL18_SPEC> {
+    pub fn i2s2_tx_div_n(&mut self) -> I2S2_TX_DIV_N_W<'_, PERI_CLK_CTRL18_SPEC> {
         I2S2_TX_DIV_N_W::new(self, 22)
     }
 }

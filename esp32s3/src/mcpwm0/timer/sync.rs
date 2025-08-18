@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - When set, timer reloading with phase on sync input event is enabled."]
     #[inline(always)]
-    pub fn synci_en(&mut self) -> SYNCI_EN_W<SYNC_SPEC> {
+    pub fn synci_en(&mut self) -> SYNCI_EN_W<'_, SYNC_SPEC> {
         SYNCI_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Toggling this bit will trigger a software sync."]
     #[inline(always)]
-    pub fn sw(&mut self) -> SW_W<SYNC_SPEC> {
+    pub fn sw(&mut self) -> SW_W<'_, SYNC_SPEC> {
         SW_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - PWM timer0 sync_out selection, 0: synci, 1: TEZ, 2: TEP, otherwise:sync out is software sync"]
     #[inline(always)]
-    pub fn synco_sel(&mut self) -> SYNCO_SEL_W<SYNC_SPEC> {
+    pub fn synco_sel(&mut self) -> SYNCO_SEL_W<'_, SYNC_SPEC> {
         SYNCO_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:19 - phase for timer reload on sync event"]
     #[inline(always)]
-    pub fn phase(&mut self) -> PHASE_W<SYNC_SPEC> {
+    pub fn phase(&mut self) -> PHASE_W<'_, SYNC_SPEC> {
         PHASE_W::new(self, 4)
     }
     #[doc = "Bit 20 - Configure the PWM timer0's direction when timer0 mode is up-down mode. 0: increase; 1: decrease."]
     #[inline(always)]
-    pub fn phase_direction(&mut self) -> PHASE_DIRECTION_W<SYNC_SPEC> {
+    pub fn phase_direction(&mut self) -> PHASE_DIRECTION_W<'_, SYNC_SPEC> {
         PHASE_DIRECTION_W::new(self, 20)
     }
 }

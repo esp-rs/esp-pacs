@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - Set this bit to pop data in in link descriptor's fifo."]
     #[inline(always)]
-    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<DMA_IN_POP_SPEC> {
+    pub fn infifo_pop(&mut self) -> INFIFO_POP_W<'_, DMA_IN_POP_SPEC> {
         INFIFO_POP_W::new(self, 16)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<XTS_RELEASE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to release encrypted result to mspi. This action should only be asserted when manual encryption status is 2. After this action, manual encryption status will become 3."]
     #[inline(always)]
-    pub fn xts_release(&mut self) -> XTS_RELEASE_W<XTS_RELEASE_SPEC> {
+    pub fn xts_release(&mut self) -> XTS_RELEASE_W<'_, XTS_RELEASE_SPEC> {
         XTS_RELEASE_W::new(self, 0)
     }
 }

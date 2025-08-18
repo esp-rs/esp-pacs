@@ -54,21 +54,21 @@ impl W {
     #[inline(always)]
     pub fn l1_icache1_preload_ena(
         &mut self,
-    ) -> L1_ICACHE1_PRELOAD_ENA_W<L1_ICACHE1_PRELOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_PRELOAD_ENA_W<'_, L1_ICACHE1_PRELOAD_CTRL_SPEC> {
         L1_ICACHE1_PRELOAD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 2 - The bit is used to configure the direction of preload operation. 0: ascending, 1: descending."]
     #[inline(always)]
     pub fn l1_icache1_preload_order(
         &mut self,
-    ) -> L1_ICACHE1_PRELOAD_ORDER_W<L1_ICACHE1_PRELOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_PRELOAD_ORDER_W<'_, L1_ICACHE1_PRELOAD_CTRL_SPEC> {
         L1_ICACHE1_PRELOAD_ORDER_W::new(self, 2)
     }
     #[doc = "Bits 3:6 - The bit is used to set the gid of l1 icache1 preload."]
     #[inline(always)]
     pub fn l1_icache1_preload_rgid(
         &mut self,
-    ) -> L1_ICACHE1_PRELOAD_RGID_W<L1_ICACHE1_PRELOAD_CTRL_SPEC> {
+    ) -> L1_ICACHE1_PRELOAD_RGID_W<'_, L1_ICACHE1_PRELOAD_CTRL_SPEC> {
         L1_ICACHE1_PRELOAD_RGID_W::new(self, 3)
     }
 }

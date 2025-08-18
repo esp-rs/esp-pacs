@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout0_mode(&mut self) -> SMEM_DOUT0_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout0_mode(&mut self) -> SMEM_DOUT0_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout1_mode(&mut self) -> SMEM_DOUT1_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout1_mode(&mut self) -> SMEM_DOUT1_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT1_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout2_mode(&mut self) -> SMEM_DOUT2_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout2_mode(&mut self) -> SMEM_DOUT2_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT2_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout3_mode(&mut self) -> SMEM_DOUT3_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout3_mode(&mut self) -> SMEM_DOUT3_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT3_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout4_mode(&mut self) -> SMEM_DOUT4_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout4_mode(&mut self) -> SMEM_DOUT4_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT4_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout5_mode(&mut self) -> SMEM_DOUT5_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout5_mode(&mut self) -> SMEM_DOUT5_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT5_MODE_W::new(self, 5)
     }
     #[doc = "Bit 6 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout6_mode(&mut self) -> SMEM_DOUT6_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout6_mode(&mut self) -> SMEM_DOUT6_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT6_MODE_W::new(self, 6)
     }
     #[doc = "Bit 7 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_dout7_mode(&mut self) -> SMEM_DOUT7_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_dout7_mode(&mut self) -> SMEM_DOUT7_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUT7_MODE_W::new(self, 7)
     }
     #[doc = "Bit 8 - the output signals are delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the posedge of clk_160,4 output with the negedge of clk_160,5: output with the spi_clk high edge ,6: output with the spi_clk low edge"]
     #[inline(always)]
-    pub fn smem_douts_mode(&mut self) -> SMEM_DOUTS_MODE_W<SMEM_DOUT_MODE_SPEC> {
+    pub fn smem_douts_mode(&mut self) -> SMEM_DOUTS_MODE_W<'_, SMEM_DOUT_MODE_SPEC> {
         SMEM_DOUTS_MODE_W::new(self, 8)
     }
 }

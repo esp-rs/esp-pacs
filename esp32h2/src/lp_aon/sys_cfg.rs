@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<SYS_CFG_SPEC> {
+    pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<'_, SYS_CFG_SPEC> {
         FORCE_DOWNLOAD_BOOT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn hpsys_sw_reset(&mut self) -> HPSYS_SW_RESET_W<SYS_CFG_SPEC> {
+    pub fn hpsys_sw_reset(&mut self) -> HPSYS_SW_RESET_W<'_, SYS_CFG_SPEC> {
         HPSYS_SW_RESET_W::new(self, 31)
     }
 }

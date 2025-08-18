@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn value(&mut self) -> VALUE_W<TIMER_LOAD_SPEC> {
+    pub fn value(&mut self) -> VALUE_W<'_, TIMER_LOAD_SPEC> {
         VALUE_W::new(self, 0)
     }
 }

@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CAP_CH_CFG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CAP_CH_CFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<CAP_CH_CFG_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, CAP_CH_CFG_SPEC> {
         MODE_W::new(self, 1)
     }
     #[doc = "Bits 3:10"]
     #[inline(always)]
-    pub fn prescale(&mut self) -> PRESCALE_W<CAP_CH_CFG_SPEC> {
+    pub fn prescale(&mut self) -> PRESCALE_W<'_, CAP_CH_CFG_SPEC> {
         PRESCALE_W::new(self, 3)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn in_invert(&mut self) -> IN_INVERT_W<CAP_CH_CFG_SPEC> {
+    pub fn in_invert(&mut self) -> IN_INVERT_W<'_, CAP_CH_CFG_SPEC> {
         IN_INVERT_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn sw(&mut self) -> SW_W<CAP_CH_CFG_SPEC> {
+    pub fn sw(&mut self) -> SW_W<'_, CAP_CH_CFG_SPEC> {
         SW_W::new(self, 12)
     }
 }

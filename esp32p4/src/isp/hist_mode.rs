@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - this field configures statistic mode. 0: RAW_B, 1: RAW_GB, 2: RAW_GR 3: RAW_R, 4: RGB, 5:YUV_Y, 6:YUV_U, 7:YUV_V"]
     #[inline(always)]
-    pub fn hist_mode(&mut self) -> HIST_MODE_W<HIST_MODE_SPEC> {
+    pub fn hist_mode(&mut self) -> HIST_MODE_W<'_, HIST_MODE_SPEC> {
         HIST_MODE_W::new(self, 0)
     }
 }

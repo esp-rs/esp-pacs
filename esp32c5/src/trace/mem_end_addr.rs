@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the end address of the trace memory."]
     #[inline(always)]
-    pub fn mem_end_addr(&mut self) -> MEM_END_ADDR_W<MEM_END_ADDR_SPEC> {
+    pub fn mem_end_addr(&mut self) -> MEM_END_ADDR_W<'_, MEM_END_ADDR_SPEC> {
         MEM_END_ADDR_W::new(self, 0)
     }
 }

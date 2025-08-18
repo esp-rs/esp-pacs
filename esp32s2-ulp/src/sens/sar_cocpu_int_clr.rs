@@ -29,51 +29,51 @@ impl W {
     #[inline(always)]
     pub fn cocpu_touch_done_int_clr(
         &mut self,
-    ) -> COCPU_TOUCH_DONE_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    ) -> COCPU_TOUCH_DONE_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_TOUCH_DONE_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - TOUCH_INACTIVE_INT interrupt clear bit"]
     #[inline(always)]
     pub fn cocpu_touch_inactive_int_clr(
         &mut self,
-    ) -> COCPU_TOUCH_INACTIVE_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    ) -> COCPU_TOUCH_INACTIVE_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_TOUCH_INACTIVE_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - TOUCH_ACTIVE_INT interrupt clear bit"]
     #[inline(always)]
     pub fn cocpu_touch_active_int_clr(
         &mut self,
-    ) -> COCPU_TOUCH_ACTIVE_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    ) -> COCPU_TOUCH_ACTIVE_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_TOUCH_ACTIVE_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - SARADC1_DONE_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_saradc1_int_clr(&mut self) -> COCPU_SARADC1_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_saradc1_int_clr(&mut self) -> COCPU_SARADC1_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_SARADC1_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - SARADC2_DONE_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_saradc2_int_clr(&mut self) -> COCPU_SARADC2_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_saradc2_int_clr(&mut self) -> COCPU_SARADC2_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_SARADC2_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - TSENS_DONE_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_tsens_int_clr(&mut self) -> COCPU_TSENS_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_tsens_int_clr(&mut self) -> COCPU_TSENS_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_TSENS_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - RISCV_START_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_start_int_clr(&mut self) -> COCPU_START_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_start_int_clr(&mut self) -> COCPU_START_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_START_INT_CLR_W::new(self, 6)
     }
     #[doc = "Bit 7 - SW_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_sw_int_clr(&mut self) -> COCPU_SW_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_sw_int_clr(&mut self) -> COCPU_SW_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_SW_INT_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - SWD_INT interrupt clear bit"]
     #[inline(always)]
-    pub fn cocpu_swd_int_clr(&mut self) -> COCPU_SWD_INT_CLR_W<SAR_COCPU_INT_CLR_SPEC> {
+    pub fn cocpu_swd_int_clr(&mut self) -> COCPU_SWD_INT_CLR_W<'_, SAR_COCPU_INT_CLR_SPEC> {
         COCPU_SWD_INT_CLR_W::new(self, 8)
     }
 }

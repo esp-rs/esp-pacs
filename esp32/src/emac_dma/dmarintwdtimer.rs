@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This bit indicates the number of system clock cycles multiplied by 256 for which the watchdog timer is set. The watchdog timer gets triggered with the programmed value after the Rx DMA completes the transfer of a frame for which the RI(RECV_INT) status bit is not set because of the setting in the corresponding descriptor RDES1\\[31\\]. When the watchdog timer runs out the RI bit is set and the timer is stopped. The watchdog timer is reset when the RI bit is set high because of automatic setting of RI as per RDES1\\[31\\] of any received frame."]
     #[inline(always)]
-    pub fn riwtc(&mut self) -> RIWTC_W<DMARINTWDTIMER_SPEC> {
+    pub fn riwtc(&mut self) -> RIWTC_W<'_, DMARINTWDTIMER_SPEC> {
         RIWTC_W::new(self, 0)
     }
 }

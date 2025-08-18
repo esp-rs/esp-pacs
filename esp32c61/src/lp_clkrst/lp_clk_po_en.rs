@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the clock gate to pad of the LP_DYN_SLOW_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn aon_slow_oen(&mut self) -> AON_SLOW_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn aon_slow_oen(&mut self) -> AON_SLOW_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         AON_SLOW_OEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the clock gate to pad of the LP_DYN_FAST_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn aon_fast_oen(&mut self) -> AON_FAST_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn aon_fast_oen(&mut self) -> AON_FAST_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         AON_FAST_OEN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the clock gate to pad of the OSC_SLOW_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn sosc_oen(&mut self) -> SOSC_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn sosc_oen(&mut self) -> SOSC_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         SOSC_OEN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the clock gate to pad of the RC_FAST_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn fosc_oen(&mut self) -> FOSC_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn fosc_oen(&mut self) -> FOSC_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         FOSC_OEN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures the clock gate to pad of the RC32K_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn osc32k_oen(&mut self) -> OSC32K_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn osc32k_oen(&mut self) -> OSC32K_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         OSC32K_OEN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures the clock gate to pad of the XTAL32K_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn xtal32k_oen(&mut self) -> XTAL32K_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn xtal32k_oen(&mut self) -> XTAL32K_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         XTAL32K_OEN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures the clock gate to pad of the EFUSE_CTRL clock. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn core_efuse_oen(&mut self) -> CORE_EFUSE_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn core_efuse_oen(&mut self) -> CORE_EFUSE_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         CORE_EFUSE_OEN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures the clock gate to pad of the LP_SLOW_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn slow_oen(&mut self) -> SLOW_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn slow_oen(&mut self) -> SLOW_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         SLOW_OEN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures the clock gate to pad of the LP_FAST_CLK. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn fast_oen(&mut self) -> FAST_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn fast_oen(&mut self) -> FAST_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         FAST_OEN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures the clock gate to pad of the RNG clk. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn rng_oen(&mut self) -> RNG_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn rng_oen(&mut self) -> RNG_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         RNG_OEN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures the clock gate to pad of the LP bus clk. 0: Disable the clk pass clock gate 1: Enable the clk pass clock gate"]
     #[inline(always)]
-    pub fn lpbus_oen(&mut self) -> LPBUS_OEN_W<LP_CLK_PO_EN_SPEC> {
+    pub fn lpbus_oen(&mut self) -> LPBUS_OEN_W<'_, LP_CLK_PO_EN_SPEC> {
         LPBUS_OEN_W::new(self, 10)
     }
 }

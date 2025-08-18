@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - NA"]
     #[inline(always)]
-    pub fn vbp_lines(&mut self) -> VBP_LINES_W<VID_VBP_LINES_SPEC> {
+    pub fn vbp_lines(&mut self) -> VBP_LINES_W<'_, VID_VBP_LINES_SPEC> {
         VBP_LINES_W::new(self, 0)
     }
 }

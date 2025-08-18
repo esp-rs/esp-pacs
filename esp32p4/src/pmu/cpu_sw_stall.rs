@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    pub fn hpcore1_sw_stall_code(&mut self) -> HPCORE1_SW_STALL_CODE_W<CPU_SW_STALL_SPEC> {
+    pub fn hpcore1_sw_stall_code(&mut self) -> HPCORE1_SW_STALL_CODE_W<'_, CPU_SW_STALL_SPEC> {
         HPCORE1_SW_STALL_CODE_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    pub fn hpcore0_sw_stall_code(&mut self) -> HPCORE0_SW_STALL_CODE_W<CPU_SW_STALL_SPEC> {
+    pub fn hpcore0_sw_stall_code(&mut self) -> HPCORE0_SW_STALL_CODE_W<'_, CPU_SW_STALL_SPEC> {
         HPCORE0_SW_STALL_CODE_W::new(self, 24)
     }
 }

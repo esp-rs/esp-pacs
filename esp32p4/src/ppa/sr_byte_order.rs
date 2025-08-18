@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 the data into Rx channel 0 would be swapped in byte. The Byte0 and Byte1 would be swapped while byte 2 and byte 3 would be swappped."]
     #[inline(always)]
-    pub fn sr_rx_byte_swap_en(&mut self) -> SR_RX_BYTE_SWAP_EN_W<SR_BYTE_ORDER_SPEC> {
+    pub fn sr_rx_byte_swap_en(&mut self) -> SR_RX_BYTE_SWAP_EN_W<'_, SR_BYTE_ORDER_SPEC> {
         SR_RX_BYTE_SWAP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to 1 the data into Rx channel 0 would be swapped in rgb. It means rgb would be swap to bgr."]
     #[inline(always)]
-    pub fn sr_rx_rgb_swap_en(&mut self) -> SR_RX_RGB_SWAP_EN_W<SR_BYTE_ORDER_SPEC> {
+    pub fn sr_rx_rgb_swap_en(&mut self) -> SR_RX_RGB_SWAP_EN_W<'_, SR_BYTE_ORDER_SPEC> {
         SR_RX_RGB_SWAP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to 1 to bypass the macro block order function. This function is used to improve efficient accessing external memory."]
     #[inline(always)]
-    pub fn sr_macro_bk_ro_bypass(&mut self) -> SR_MACRO_BK_RO_BYPASS_W<SR_BYTE_ORDER_SPEC> {
+    pub fn sr_macro_bk_ro_bypass(&mut self) -> SR_MACRO_BK_RO_BYPASS_W<'_, SR_BYTE_ORDER_SPEC> {
         SR_MACRO_BK_RO_BYPASS_W::new(self, 2)
     }
 }

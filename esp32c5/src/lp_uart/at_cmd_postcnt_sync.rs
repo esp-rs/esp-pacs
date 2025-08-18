@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the interval between the last AT_CMD and subsequent data.\\\\Measurement unit: bit time (the time to transmit 1 bit)."]
     #[inline(always)]
-    pub fn post_idle_num(&mut self) -> POST_IDLE_NUM_W<AT_CMD_POSTCNT_SYNC_SPEC> {
+    pub fn post_idle_num(&mut self) -> POST_IDLE_NUM_W<'_, AT_CMD_POSTCNT_SYNC_SPEC> {
         POST_IDLE_NUM_W::new(self, 0)
     }
 }

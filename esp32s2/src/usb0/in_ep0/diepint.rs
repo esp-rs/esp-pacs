@@ -152,67 +152,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn xfercompl(&mut self) -> XFERCOMPL_W<DIEPINT_SPEC> {
+    pub fn xfercompl(&mut self) -> XFERCOMPL_W<'_, DIEPINT_SPEC> {
         XFERCOMPL_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn epdisbld(&mut self) -> EPDISBLD_W<DIEPINT_SPEC> {
+    pub fn epdisbld(&mut self) -> EPDISBLD_W<'_, DIEPINT_SPEC> {
         EPDISBLD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ahberr(&mut self) -> AHBERR_W<DIEPINT_SPEC> {
+    pub fn ahberr(&mut self) -> AHBERR_W<'_, DIEPINT_SPEC> {
         AHBERR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn timeout(&mut self) -> TIMEOUT_W<DIEPINT_SPEC> {
+    pub fn timeout(&mut self) -> TIMEOUT_W<'_, DIEPINT_SPEC> {
         TIMEOUT_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<DIEPINT_SPEC> {
+    pub fn intkntxfemp(&mut self) -> INTKNTXFEMP_W<'_, DIEPINT_SPEC> {
         INTKNTXFEMP_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn intknepmis(&mut self) -> INTKNEPMIS_W<DIEPINT_SPEC> {
+    pub fn intknepmis(&mut self) -> INTKNEPMIS_W<'_, DIEPINT_SPEC> {
         INTKNEPMIS_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn inepnakeff(&mut self) -> INEPNAKEFF_W<DIEPINT_SPEC> {
+    pub fn inepnakeff(&mut self) -> INEPNAKEFF_W<'_, DIEPINT_SPEC> {
         INEPNAKEFF_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<DIEPINT_SPEC> {
+    pub fn txfifoundrn(&mut self) -> TXFIFOUNDRN_W<'_, DIEPINT_SPEC> {
         TXFIFOUNDRN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn bnaintr(&mut self) -> BNAINTR_W<DIEPINT_SPEC> {
+    pub fn bnaintr(&mut self) -> BNAINTR_W<'_, DIEPINT_SPEC> {
         BNAINTR_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<DIEPINT_SPEC> {
+    pub fn pktdrpsts(&mut self) -> PKTDRPSTS_W<'_, DIEPINT_SPEC> {
         PKTDRPSTS_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn bbleerr(&mut self) -> BBLEERR_W<DIEPINT_SPEC> {
+    pub fn bbleerr(&mut self) -> BBLEERR_W<'_, DIEPINT_SPEC> {
         BBLEERR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn nakintrpt(&mut self) -> NAKINTRPT_W<DIEPINT_SPEC> {
+    pub fn nakintrpt(&mut self) -> NAKINTRPT_W<'_, DIEPINT_SPEC> {
         NAKINTRPT_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn nyetintrpt(&mut self) -> NYETINTRPT_W<DIEPINT_SPEC> {
+    pub fn nyetintrpt(&mut self) -> NYETINTRPT_W<'_, DIEPINT_SPEC> {
         NYETINTRPT_W::new(self, 14)
     }
 }

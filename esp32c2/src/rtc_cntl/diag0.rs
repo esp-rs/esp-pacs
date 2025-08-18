@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Need add desc"]
     #[inline(always)]
-    pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<DIAG0_SPEC> {
+    pub fn low_power_diag1(&mut self) -> LOW_POWER_DIAG1_W<'_, DIAG0_SPEC> {
         LOW_POWER_DIAG1_W::new(self, 0)
     }
 }

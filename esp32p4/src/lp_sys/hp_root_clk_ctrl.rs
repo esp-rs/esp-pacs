@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - clock gate enable for hp cpu root 400M clk"]
     #[inline(always)]
-    pub fn cpu_clk_en(&mut self) -> CPU_CLK_EN_W<HP_ROOT_CLK_CTRL_SPEC> {
+    pub fn cpu_clk_en(&mut self) -> CPU_CLK_EN_W<'_, HP_ROOT_CLK_CTRL_SPEC> {
         CPU_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - clock gate enable for hp sys root 480M clk"]
     #[inline(always)]
-    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<HP_ROOT_CLK_CTRL_SPEC> {
+    pub fn sys_clk_en(&mut self) -> SYS_CLK_EN_W<'_, HP_ROOT_CLK_CTRL_SPEC> {
         SYS_CLK_EN_W::new(self, 1)
     }
 }

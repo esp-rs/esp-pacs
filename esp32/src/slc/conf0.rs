@@ -334,162 +334,162 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn slc0_tx_rst(&mut self) -> SLC0_TX_RST_W<CONF0_SPEC> {
+    pub fn slc0_tx_rst(&mut self) -> SLC0_TX_RST_W<'_, CONF0_SPEC> {
         SLC0_TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn slc0_rx_rst(&mut self) -> SLC0_RX_RST_W<CONF0_SPEC> {
+    pub fn slc0_rx_rst(&mut self) -> SLC0_RX_RST_W<'_, CONF0_SPEC> {
         SLC0_RX_RST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<CONF0_SPEC> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<'_, CONF0_SPEC> {
         AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<CONF0_SPEC> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<'_, CONF0_SPEC> {
         AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn slc0_tx_loop_test(&mut self) -> SLC0_TX_LOOP_TEST_W<CONF0_SPEC> {
+    pub fn slc0_tx_loop_test(&mut self) -> SLC0_TX_LOOP_TEST_W<'_, CONF0_SPEC> {
         SLC0_TX_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn slc0_rx_loop_test(&mut self) -> SLC0_RX_LOOP_TEST_W<CONF0_SPEC> {
+    pub fn slc0_rx_loop_test(&mut self) -> SLC0_RX_LOOP_TEST_W<'_, CONF0_SPEC> {
         SLC0_RX_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn slc0_rx_auto_wrback(&mut self) -> SLC0_RX_AUTO_WRBACK_W<CONF0_SPEC> {
+    pub fn slc0_rx_auto_wrback(&mut self) -> SLC0_RX_AUTO_WRBACK_W<'_, CONF0_SPEC> {
         SLC0_RX_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn slc0_rx_no_restart_clr(&mut self) -> SLC0_RX_NO_RESTART_CLR_W<CONF0_SPEC> {
+    pub fn slc0_rx_no_restart_clr(&mut self) -> SLC0_RX_NO_RESTART_CLR_W<'_, CONF0_SPEC> {
         SLC0_RX_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn slc0_rxdscr_burst_en(&mut self) -> SLC0_RXDSCR_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc0_rxdscr_burst_en(&mut self) -> SLC0_RXDSCR_BURST_EN_W<'_, CONF0_SPEC> {
         SLC0_RXDSCR_BURST_EN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn slc0_rxdata_burst_en(&mut self) -> SLC0_RXDATA_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc0_rxdata_burst_en(&mut self) -> SLC0_RXDATA_BURST_EN_W<'_, CONF0_SPEC> {
         SLC0_RXDATA_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn slc0_rxlink_auto_ret(&mut self) -> SLC0_RXLINK_AUTO_RET_W<CONF0_SPEC> {
+    pub fn slc0_rxlink_auto_ret(&mut self) -> SLC0_RXLINK_AUTO_RET_W<'_, CONF0_SPEC> {
         SLC0_RXLINK_AUTO_RET_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn slc0_txlink_auto_ret(&mut self) -> SLC0_TXLINK_AUTO_RET_W<CONF0_SPEC> {
+    pub fn slc0_txlink_auto_ret(&mut self) -> SLC0_TXLINK_AUTO_RET_W<'_, CONF0_SPEC> {
         SLC0_TXLINK_AUTO_RET_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn slc0_txdscr_burst_en(&mut self) -> SLC0_TXDSCR_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc0_txdscr_burst_en(&mut self) -> SLC0_TXDSCR_BURST_EN_W<'_, CONF0_SPEC> {
         SLC0_TXDSCR_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn slc0_txdata_burst_en(&mut self) -> SLC0_TXDATA_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc0_txdata_burst_en(&mut self) -> SLC0_TXDATA_BURST_EN_W<'_, CONF0_SPEC> {
         SLC0_TXDATA_BURST_EN_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn slc0_token_auto_clr(&mut self) -> SLC0_TOKEN_AUTO_CLR_W<CONF0_SPEC> {
+    pub fn slc0_token_auto_clr(&mut self) -> SLC0_TOKEN_AUTO_CLR_W<'_, CONF0_SPEC> {
         SLC0_TOKEN_AUTO_CLR_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn slc0_token_sel(&mut self) -> SLC0_TOKEN_SEL_W<CONF0_SPEC> {
+    pub fn slc0_token_sel(&mut self) -> SLC0_TOKEN_SEL_W<'_, CONF0_SPEC> {
         SLC0_TOKEN_SEL_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn slc1_tx_rst(&mut self) -> SLC1_TX_RST_W<CONF0_SPEC> {
+    pub fn slc1_tx_rst(&mut self) -> SLC1_TX_RST_W<'_, CONF0_SPEC> {
         SLC1_TX_RST_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn slc1_rx_rst(&mut self) -> SLC1_RX_RST_W<CONF0_SPEC> {
+    pub fn slc1_rx_rst(&mut self) -> SLC1_RX_RST_W<'_, CONF0_SPEC> {
         SLC1_RX_RST_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn slc0_wr_retry_mask_en(&mut self) -> SLC0_WR_RETRY_MASK_EN_W<CONF0_SPEC> {
+    pub fn slc0_wr_retry_mask_en(&mut self) -> SLC0_WR_RETRY_MASK_EN_W<'_, CONF0_SPEC> {
         SLC0_WR_RETRY_MASK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn slc1_wr_retry_mask_en(&mut self) -> SLC1_WR_RETRY_MASK_EN_W<CONF0_SPEC> {
+    pub fn slc1_wr_retry_mask_en(&mut self) -> SLC1_WR_RETRY_MASK_EN_W<'_, CONF0_SPEC> {
         SLC1_WR_RETRY_MASK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn slc1_tx_loop_test(&mut self) -> SLC1_TX_LOOP_TEST_W<CONF0_SPEC> {
+    pub fn slc1_tx_loop_test(&mut self) -> SLC1_TX_LOOP_TEST_W<'_, CONF0_SPEC> {
         SLC1_TX_LOOP_TEST_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn slc1_rx_loop_test(&mut self) -> SLC1_RX_LOOP_TEST_W<CONF0_SPEC> {
+    pub fn slc1_rx_loop_test(&mut self) -> SLC1_RX_LOOP_TEST_W<'_, CONF0_SPEC> {
         SLC1_RX_LOOP_TEST_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn slc1_rx_auto_wrback(&mut self) -> SLC1_RX_AUTO_WRBACK_W<CONF0_SPEC> {
+    pub fn slc1_rx_auto_wrback(&mut self) -> SLC1_RX_AUTO_WRBACK_W<'_, CONF0_SPEC> {
         SLC1_RX_AUTO_WRBACK_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn slc1_rx_no_restart_clr(&mut self) -> SLC1_RX_NO_RESTART_CLR_W<CONF0_SPEC> {
+    pub fn slc1_rx_no_restart_clr(&mut self) -> SLC1_RX_NO_RESTART_CLR_W<'_, CONF0_SPEC> {
         SLC1_RX_NO_RESTART_CLR_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn slc1_rxdscr_burst_en(&mut self) -> SLC1_RXDSCR_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc1_rxdscr_burst_en(&mut self) -> SLC1_RXDSCR_BURST_EN_W<'_, CONF0_SPEC> {
         SLC1_RXDSCR_BURST_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn slc1_rxdata_burst_en(&mut self) -> SLC1_RXDATA_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc1_rxdata_burst_en(&mut self) -> SLC1_RXDATA_BURST_EN_W<'_, CONF0_SPEC> {
         SLC1_RXDATA_BURST_EN_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn slc1_rxlink_auto_ret(&mut self) -> SLC1_RXLINK_AUTO_RET_W<CONF0_SPEC> {
+    pub fn slc1_rxlink_auto_ret(&mut self) -> SLC1_RXLINK_AUTO_RET_W<'_, CONF0_SPEC> {
         SLC1_RXLINK_AUTO_RET_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn slc1_txlink_auto_ret(&mut self) -> SLC1_TXLINK_AUTO_RET_W<CONF0_SPEC> {
+    pub fn slc1_txlink_auto_ret(&mut self) -> SLC1_TXLINK_AUTO_RET_W<'_, CONF0_SPEC> {
         SLC1_TXLINK_AUTO_RET_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn slc1_txdscr_burst_en(&mut self) -> SLC1_TXDSCR_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc1_txdscr_burst_en(&mut self) -> SLC1_TXDSCR_BURST_EN_W<'_, CONF0_SPEC> {
         SLC1_TXDSCR_BURST_EN_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn slc1_txdata_burst_en(&mut self) -> SLC1_TXDATA_BURST_EN_W<CONF0_SPEC> {
+    pub fn slc1_txdata_burst_en(&mut self) -> SLC1_TXDATA_BURST_EN_W<'_, CONF0_SPEC> {
         SLC1_TXDATA_BURST_EN_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn slc1_token_auto_clr(&mut self) -> SLC1_TOKEN_AUTO_CLR_W<CONF0_SPEC> {
+    pub fn slc1_token_auto_clr(&mut self) -> SLC1_TOKEN_AUTO_CLR_W<'_, CONF0_SPEC> {
         SLC1_TOKEN_AUTO_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn slc1_token_sel(&mut self) -> SLC1_TOKEN_SEL_W<CONF0_SPEC> {
+    pub fn slc1_token_sel(&mut self) -> SLC1_TOKEN_SEL_W<'_, CONF0_SPEC> {
         SLC1_TOKEN_SEL_W::new(self, 31)
     }
 }

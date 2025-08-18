@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn systimer_target1_intr_map(
         &mut self,
-    ) -> SYSTIMER_TARGET1_INTR_MAP_W<SYSTIMER_TARGET1_INTR_MAP_SPEC> {
+    ) -> SYSTIMER_TARGET1_INTR_MAP_W<'_, SYSTIMER_TARGET1_INTR_MAP_SPEC> {
         SYSTIMER_TARGET1_INTR_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn systimer_target1_intr_pass_in_sec(
         &mut self,
-    ) -> SYSTIMER_TARGET1_INTR_PASS_IN_SEC_W<SYSTIMER_TARGET1_INTR_MAP_SPEC> {
+    ) -> SYSTIMER_TARGET1_INTR_PASS_IN_SEC_W<'_, SYSTIMER_TARGET1_INTR_MAP_SPEC> {
         SYSTIMER_TARGET1_INTR_PASS_IN_SEC_W::new(self, 8)
     }
 }

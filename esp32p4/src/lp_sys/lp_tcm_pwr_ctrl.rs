@@ -34,12 +34,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn lp_tcm_rom_clk_force_on(&mut self) -> LP_TCM_ROM_CLK_FORCE_ON_W<LP_TCM_PWR_CTRL_SPEC> {
+    pub fn lp_tcm_rom_clk_force_on(
+        &mut self,
+    ) -> LP_TCM_ROM_CLK_FORCE_ON_W<'_, LP_TCM_PWR_CTRL_SPEC> {
         LP_TCM_ROM_CLK_FORCE_ON_W::new(self, 5)
     }
     #[doc = "Bit 7 - need_des"]
     #[inline(always)]
-    pub fn lp_tcm_ram_clk_force_on(&mut self) -> LP_TCM_RAM_CLK_FORCE_ON_W<LP_TCM_PWR_CTRL_SPEC> {
+    pub fn lp_tcm_ram_clk_force_on(
+        &mut self,
+    ) -> LP_TCM_RAM_CLK_FORCE_ON_W<'_, LP_TCM_PWR_CTRL_SPEC> {
         LP_TCM_RAM_CLK_FORCE_ON_W::new(self, 7)
     }
 }

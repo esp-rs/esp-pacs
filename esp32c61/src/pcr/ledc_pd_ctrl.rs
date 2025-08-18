@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to force power down LEDC memory."]
     #[inline(always)]
-    pub fn ledc_mem_force_pu(&mut self) -> LEDC_MEM_FORCE_PU_W<LEDC_PD_CTRL_SPEC> {
+    pub fn ledc_mem_force_pu(&mut self) -> LEDC_MEM_FORCE_PU_W<'_, LEDC_PD_CTRL_SPEC> {
         LEDC_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power up LEDC memory."]
     #[inline(always)]
-    pub fn ledc_mem_force_pd(&mut self) -> LEDC_MEM_FORCE_PD_W<LEDC_PD_CTRL_SPEC> {
+    pub fn ledc_mem_force_pd(&mut self) -> LEDC_MEM_FORCE_PD_W<'_, LEDC_PD_CTRL_SPEC> {
         LEDC_MEM_FORCE_PD_W::new(self, 2)
     }
 }

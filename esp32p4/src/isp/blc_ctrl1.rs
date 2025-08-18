@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - this field configures blc average calculation window top"]
     #[inline(always)]
-    pub fn blc_window_top(&mut self) -> BLC_WINDOW_TOP_W<BLC_CTRL1_SPEC> {
+    pub fn blc_window_top(&mut self) -> BLC_WINDOW_TOP_W<'_, BLC_CTRL1_SPEC> {
         BLC_WINDOW_TOP_W::new(self, 0)
     }
     #[doc = "Bits 11:21 - this field configures blc average calculation window left"]
     #[inline(always)]
-    pub fn blc_window_left(&mut self) -> BLC_WINDOW_LEFT_W<BLC_CTRL1_SPEC> {
+    pub fn blc_window_left(&mut self) -> BLC_WINDOW_LEFT_W<'_, BLC_CTRL1_SPEC> {
         BLC_WINDOW_LEFT_W::new(self, 11)
     }
     #[doc = "Bits 22:25 - this field configures blc average calculation window vnum"]
     #[inline(always)]
-    pub fn blc_window_vnum(&mut self) -> BLC_WINDOW_VNUM_W<BLC_CTRL1_SPEC> {
+    pub fn blc_window_vnum(&mut self) -> BLC_WINDOW_VNUM_W<'_, BLC_CTRL1_SPEC> {
         BLC_WINDOW_VNUM_W::new(self, 22)
     }
     #[doc = "Bits 26:29 - this field configures blc average calculation window hnum"]
     #[inline(always)]
-    pub fn blc_window_hnum(&mut self) -> BLC_WINDOW_HNUM_W<BLC_CTRL1_SPEC> {
+    pub fn blc_window_hnum(&mut self) -> BLC_WINDOW_HNUM_W<'_, BLC_CTRL1_SPEC> {
         BLC_WINDOW_HNUM_W::new(self, 26)
     }
     #[doc = "Bit 30 - this bit configures enable blc average input filter. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn blc_filter_en(&mut self) -> BLC_FILTER_EN_W<BLC_CTRL1_SPEC> {
+    pub fn blc_filter_en(&mut self) -> BLC_FILTER_EN_W<'_, BLC_CTRL1_SPEC> {
         BLC_FILTER_EN_W::new(self, 30)
     }
 }

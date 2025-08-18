@@ -94,44 +94,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn force_hp_wifi_reset(&mut self) -> FORCE_HP_WIFI_RESET_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn force_hp_wifi_reset(&mut self) -> FORCE_HP_WIFI_RESET_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn force_hp_wifi_iso(&mut self) -> FORCE_HP_WIFI_ISO_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn force_hp_wifi_iso(&mut self) -> FORCE_HP_WIFI_ISO_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn force_hp_wifi_pu(&mut self) -> FORCE_HP_WIFI_PU_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn force_hp_wifi_pu(&mut self) -> FORCE_HP_WIFI_PU_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
     pub fn force_hp_wifi_no_reset(
         &mut self,
-    ) -> FORCE_HP_WIFI_NO_RESET_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    ) -> FORCE_HP_WIFI_NO_RESET_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn force_hp_wifi_no_iso(&mut self) -> FORCE_HP_WIFI_NO_ISO_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn force_hp_wifi_no_iso(
+        &mut self,
+    ) -> FORCE_HP_WIFI_NO_ISO_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn force_hp_wifi_pd(&mut self) -> FORCE_HP_WIFI_PD_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn force_hp_wifi_pd(&mut self) -> FORCE_HP_WIFI_PD_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         FORCE_HP_WIFI_PD_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_wifi_mask(&mut self) -> PD_HP_WIFI_MASK_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn pd_hp_wifi_mask(&mut self) -> PD_HP_WIFI_MASK_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         PD_HP_WIFI_MASK_W::new(self, 6)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_wifi_pd_mask(&mut self) -> PD_HP_WIFI_PD_MASK_W<POWER_PD_HPWIFI_CNTL_SPEC> {
+    pub fn pd_hp_wifi_pd_mask(&mut self) -> PD_HP_WIFI_PD_MASK_W<'_, POWER_PD_HPWIFI_CNTL_SPEC> {
         PD_HP_WIFI_PD_MASK_W::new(self, 27)
     }
 }

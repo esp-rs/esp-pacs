@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:31 - minimal cycles in slow_clk_rtc for CK8M in power down state"]
     #[inline(always)]
-    pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<TIMER2_SPEC> {
+    pub fn min_time_ck8m_off(&mut self) -> MIN_TIME_CK8M_OFF_W<'_, TIMER2_SPEC> {
         MIN_TIME_CK8M_OFF_W::new(self, 24)
     }
 }

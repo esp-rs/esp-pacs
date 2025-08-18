@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures black threshold when get blc average of bottom right channel"]
     #[inline(always)]
-    pub fn blc_r3_th(&mut self) -> BLC_R3_TH_W<BLC_CTRL2_SPEC> {
+    pub fn blc_r3_th(&mut self) -> BLC_R3_TH_W<'_, BLC_CTRL2_SPEC> {
         BLC_R3_TH_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures black threshold when get blc average of bottom left channel"]
     #[inline(always)]
-    pub fn blc_r2_th(&mut self) -> BLC_R2_TH_W<BLC_CTRL2_SPEC> {
+    pub fn blc_r2_th(&mut self) -> BLC_R2_TH_W<'_, BLC_CTRL2_SPEC> {
         BLC_R2_TH_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures black threshold when get blc average of top right channel"]
     #[inline(always)]
-    pub fn blc_r1_th(&mut self) -> BLC_R1_TH_W<BLC_CTRL2_SPEC> {
+    pub fn blc_r1_th(&mut self) -> BLC_R1_TH_W<'_, BLC_CTRL2_SPEC> {
         BLC_R1_TH_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures black threshold when get blc average of top left channel"]
     #[inline(always)]
-    pub fn blc_r0_th(&mut self) -> BLC_R0_TH_W<BLC_CTRL2_SPEC> {
+    pub fn blc_r0_th(&mut self) -> BLC_R0_TH_W<'_, BLC_CTRL2_SPEC> {
         BLC_R0_TH_W::new(self, 24)
     }
 }

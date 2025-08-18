@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to invert the output value.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn func_out_inv_sel(&mut self) -> FUNC_OUT_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_out_inv_sel(&mut self) -> FUNC_OUT_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OUT_INV_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configures whether or not to invert the output enable signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn func_oe_inv_sel(&mut self) -> FUNC_OE_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_oe_inv_sel(&mut self) -> FUNC_OE_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OE_INV_SEL_W::new(self, 2)
     }
 }

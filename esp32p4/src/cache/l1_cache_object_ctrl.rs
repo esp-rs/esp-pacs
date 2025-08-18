@@ -106,32 +106,44 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to set L1-ICache0 tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_icache0_tag_object(&mut self) -> L1_ICACHE0_TAG_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_icache0_tag_object(
+        &mut self,
+    ) -> L1_ICACHE0_TAG_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_ICACHE0_TAG_OBJECT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to set L1-ICache1 tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_icache1_tag_object(&mut self) -> L1_ICACHE1_TAG_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_icache1_tag_object(
+        &mut self,
+    ) -> L1_ICACHE1_TAG_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_ICACHE1_TAG_OBJECT_W::new(self, 1)
     }
     #[doc = "Bit 4 - Set this bit to set L1-DCache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_dcache_tag_object(&mut self) -> L1_DCACHE_TAG_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_dcache_tag_object(
+        &mut self,
+    ) -> L1_DCACHE_TAG_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_DCACHE_TAG_OBJECT_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to set L1-ICache0 data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_icache0_mem_object(&mut self) -> L1_ICACHE0_MEM_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_icache0_mem_object(
+        &mut self,
+    ) -> L1_ICACHE0_MEM_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_ICACHE0_MEM_OBJECT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to set L1-ICache1 data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_icache1_mem_object(&mut self) -> L1_ICACHE1_MEM_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_icache1_mem_object(
+        &mut self,
+    ) -> L1_ICACHE1_MEM_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_ICACHE1_MEM_OBJECT_W::new(self, 7)
     }
     #[doc = "Bit 10 - Set this bit to set L1-DCache data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn l1_dcache_mem_object(&mut self) -> L1_DCACHE_MEM_OBJECT_W<L1_CACHE_OBJECT_CTRL_SPEC> {
+    pub fn l1_dcache_mem_object(
+        &mut self,
+    ) -> L1_DCACHE_MEM_OBJECT_W<'_, L1_CACHE_OBJECT_CTRL_SPEC> {
         L1_DCACHE_MEM_OBJECT_W::new(self, 10)
     }
 }

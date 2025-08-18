@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - reg_clr_log_mem_full_flag"]
     #[inline(always)]
-    pub fn clr_log_mem_full_flag(&mut self) -> CLR_LOG_MEM_FULL_FLAG_W<LOG_MEM_FULL_FLAG_SPEC> {
+    pub fn clr_log_mem_full_flag(&mut self) -> CLR_LOG_MEM_FULL_FLAG_W<'_, LOG_MEM_FULL_FLAG_SPEC> {
         CLR_LOG_MEM_FULL_FLAG_W::new(self, 1)
     }
 }

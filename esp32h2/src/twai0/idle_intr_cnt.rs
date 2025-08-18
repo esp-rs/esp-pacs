@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configure the number of cycles before triggering idle interrupt."]
     #[inline(always)]
-    pub fn idle_intr_cnt(&mut self) -> IDLE_INTR_CNT_W<IDLE_INTR_CNT_SPEC> {
+    pub fn idle_intr_cnt(&mut self) -> IDLE_INTR_CNT_W<'_, IDLE_INTR_CNT_SPEC> {
         IDLE_INTR_CNT_W::new(self, 0)
     }
 }

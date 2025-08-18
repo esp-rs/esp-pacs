@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<CACHE_ACS_CNT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - The bit is used to clear ibus counter."]
     #[inline(always)]
-    pub fn ibus_acs_cnt_clr(&mut self) -> IBUS_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC> {
+    pub fn ibus_acs_cnt_clr(&mut self) -> IBUS_ACS_CNT_CLR_W<'_, CACHE_ACS_CNT_CLR_SPEC> {
         IBUS_ACS_CNT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear dbus counter."]
     #[inline(always)]
-    pub fn dbus_acs_cnt_clr(&mut self) -> DBUS_ACS_CNT_CLR_W<CACHE_ACS_CNT_CLR_SPEC> {
+    pub fn dbus_acs_cnt_clr(&mut self) -> DBUS_ACS_CNT_CLR_W<'_, CACHE_ACS_CNT_CLR_SPEC> {
         DBUS_ACS_CNT_CLR_W::new(self, 1)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - sar nouse"]
     #[inline(always)]
-    pub fn sar_nouse(&mut self) -> SAR_NOUSE_W<SAR_NOUSE_SPEC> {
+    pub fn sar_nouse(&mut self) -> SAR_NOUSE_W<'_, SAR_NOUSE_SPEC> {
         SAR_NOUSE_W::new(self, 0)
     }
 }

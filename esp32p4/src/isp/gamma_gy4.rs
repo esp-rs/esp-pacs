@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the point 15 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    pub fn gamma_g_y0f(&mut self) -> GAMMA_G_Y0F_W<GAMMA_GY4_SPEC> {
+    pub fn gamma_g_y0f(&mut self) -> GAMMA_G_Y0F_W<'_, GAMMA_GY4_SPEC> {
         GAMMA_G_Y0F_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures the point 14 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    pub fn gamma_g_y0e(&mut self) -> GAMMA_G_Y0E_W<GAMMA_GY4_SPEC> {
+    pub fn gamma_g_y0e(&mut self) -> GAMMA_G_Y0E_W<'_, GAMMA_GY4_SPEC> {
         GAMMA_G_Y0E_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures the point 13 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    pub fn gamma_g_y0d(&mut self) -> GAMMA_G_Y0D_W<GAMMA_GY4_SPEC> {
+    pub fn gamma_g_y0d(&mut self) -> GAMMA_G_Y0D_W<'_, GAMMA_GY4_SPEC> {
         GAMMA_G_Y0D_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures the point 12 of Y-axis of g channel gamma curve"]
     #[inline(always)]
-    pub fn gamma_g_y0c(&mut self) -> GAMMA_G_Y0C_W<GAMMA_GY4_SPEC> {
+    pub fn gamma_g_y0c(&mut self) -> GAMMA_G_Y0C_W<'_, GAMMA_GY4_SPEC> {
         GAMMA_G_Y0C_W::new(self, 24)
     }
 }

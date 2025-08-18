@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<DMA_DUMMY_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, DMA_DUMMY_SPEC> {
         DATA_W::new(self, 0)
     }
 }

@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - need_des"]
     #[inline(always)]
-    pub fn lp_touch_ck_en(&mut self) -> LP_TOUCH_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_touch_ck_en(&mut self) -> LP_TOUCH_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_TOUCH_CK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn rng_ck_en(&mut self) -> RNG_CK_EN_W<CLK_EN_SPEC> {
+    pub fn rng_ck_en(&mut self) -> RNG_CK_EN_W<'_, CLK_EN_SPEC> {
         RNG_CK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn otp_dbg_ck_en(&mut self) -> OTP_DBG_CK_EN_W<CLK_EN_SPEC> {
+    pub fn otp_dbg_ck_en(&mut self) -> OTP_DBG_CK_EN_W<'_, CLK_EN_SPEC> {
         OTP_DBG_CK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn lp_uart_ck_en(&mut self) -> LP_UART_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_uart_ck_en(&mut self) -> LP_UART_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_UART_CK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn lp_io_ck_en(&mut self) -> LP_IO_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_io_ck_en(&mut self) -> LP_IO_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_IO_CK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn lp_ext_i2c_ck_en(&mut self) -> LP_EXT_I2C_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_ext_i2c_ck_en(&mut self) -> LP_EXT_I2C_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_EXT_I2C_CK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn lp_ana_i2c_ck_en(&mut self) -> LP_ANA_I2C_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_ana_i2c_ck_en(&mut self) -> LP_ANA_I2C_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_ANA_I2C_CK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn efuse_ck_en(&mut self) -> EFUSE_CK_EN_W<CLK_EN_SPEC> {
+    pub fn efuse_ck_en(&mut self) -> EFUSE_CK_EN_W<'_, CLK_EN_SPEC> {
         EFUSE_CK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_ck_en(&mut self) -> LP_CPU_CK_EN_W<CLK_EN_SPEC> {
+    pub fn lp_cpu_ck_en(&mut self) -> LP_CPU_CK_EN_W<'_, CLK_EN_SPEC> {
         LP_CPU_CK_EN_W::new(self, 31)
     }
 }

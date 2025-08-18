@@ -62,42 +62,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19"]
     #[inline(always)]
-    pub fn slc0_len_wdata(&mut self) -> SLC0_LEN_WDATA_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_len_wdata(&mut self) -> SLC0_LEN_WDATA_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_LEN_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn slc0_len_wr(&mut self) -> SLC0_LEN_WR_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_len_wr(&mut self) -> SLC0_LEN_WR_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_LEN_WR_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn slc0_len_inc(&mut self) -> SLC0_LEN_INC_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_len_inc(&mut self) -> SLC0_LEN_INC_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_LEN_INC_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn slc0_len_inc_more(&mut self) -> SLC0_LEN_INC_MORE_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_len_inc_more(&mut self) -> SLC0_LEN_INC_MORE_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_LEN_INC_MORE_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn slc0_rx_packet_load_en(&mut self) -> SLC0_RX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_rx_packet_load_en(&mut self) -> SLC0_RX_PACKET_LOAD_EN_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_RX_PACKET_LOAD_EN_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn slc0_tx_packet_load_en(&mut self) -> SLC0_TX_PACKET_LOAD_EN_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_tx_packet_load_en(&mut self) -> SLC0_TX_PACKET_LOAD_EN_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_TX_PACKET_LOAD_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn slc0_rx_get_used_dscr(&mut self) -> SLC0_RX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_rx_get_used_dscr(&mut self) -> SLC0_RX_GET_USED_DSCR_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_RX_GET_USED_DSCR_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn slc0_tx_get_used_dscr(&mut self) -> SLC0_TX_GET_USED_DSCR_W<_0_LEN_CONF_SPEC> {
+    pub fn slc0_tx_get_used_dscr(&mut self) -> SLC0_TX_GET_USED_DSCR_W<'_, _0_LEN_CONF_SPEC> {
         SLC0_TX_GET_USED_DSCR_W::new(self, 26)
     }
 }

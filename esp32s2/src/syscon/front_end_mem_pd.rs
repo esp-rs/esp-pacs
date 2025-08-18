@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn agc_mem_force_pu(&mut self) -> AGC_MEM_FORCE_PU_W<'_, FRONT_END_MEM_PD_SPEC> {
         AGC_MEM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn agc_mem_force_pd(&mut self) -> AGC_MEM_FORCE_PD_W<'_, FRONT_END_MEM_PD_SPEC> {
         AGC_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn pbus_mem_force_pu(&mut self) -> PBUS_MEM_FORCE_PU_W<'_, FRONT_END_MEM_PD_SPEC> {
         PBUS_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn pbus_mem_force_pd(&mut self) -> PBUS_MEM_FORCE_PD_W<'_, FRONT_END_MEM_PD_SPEC> {
         PBUS_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn dc_mem_force_pu(&mut self) -> DC_MEM_FORCE_PU_W<'_, FRONT_END_MEM_PD_SPEC> {
         DC_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<FRONT_END_MEM_PD_SPEC> {
+    pub fn dc_mem_force_pd(&mut self) -> DC_MEM_FORCE_PD_W<'_, FRONT_END_MEM_PD_SPEC> {
         DC_MEM_FORCE_PD_W::new(self, 5)
     }
 }

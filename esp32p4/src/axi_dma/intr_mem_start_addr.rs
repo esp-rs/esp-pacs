@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn access_intr_mem_start_addr(
         &mut self,
-    ) -> ACCESS_INTR_MEM_START_ADDR_W<INTR_MEM_START_ADDR_SPEC> {
+    ) -> ACCESS_INTR_MEM_START_ADDR_W<'_, INTR_MEM_START_ADDR_SPEC> {
         ACCESS_INTR_MEM_START_ADDR_W::new(self, 0)
     }
 }

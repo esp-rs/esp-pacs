@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 then write 0 to this bit to reset decode state machine."]
     #[inline(always)]
-    pub fn tx_rst(&mut self) -> TX_RST_W<CONF0_SPEC> {
+    pub fn tx_rst(&mut self) -> TX_RST_W<'_, CONF0_SPEC> {
         TX_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 then write 0 to this bit to reset encode state machine."]
     #[inline(always)]
-    pub fn rx_rst(&mut self) -> RX_RST_W<CONF0_SPEC> {
+    pub fn rx_rst(&mut self) -> RX_RST_W<'_, CONF0_SPEC> {
         RX_RST_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Select which uart to connect with GDMA."]
     #[inline(always)]
-    pub fn uart_sel(&mut self) -> UART_SEL_W<CONF0_SPEC> {
+    pub fn uart_sel(&mut self) -> UART_SEL_W<'_, CONF0_SPEC> {
         UART_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set this bit to separate the data frame using a special char."]
     #[inline(always)]
-    pub fn seper_en(&mut self) -> SEPER_EN_W<CONF0_SPEC> {
+    pub fn seper_en(&mut self) -> SEPER_EN_W<'_, CONF0_SPEC> {
         SEPER_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to encode the data packet with a formatting header."]
     #[inline(always)]
-    pub fn head_en(&mut self) -> HEAD_EN_W<CONF0_SPEC> {
+    pub fn head_en(&mut self) -> HEAD_EN_W<'_, CONF0_SPEC> {
         HEAD_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable UHCI to receive the 16 bit CRC."]
     #[inline(always)]
-    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<CONF0_SPEC> {
+    pub fn crc_rec_en(&mut self) -> CRC_REC_EN_W<'_, CONF0_SPEC> {
         CRC_REC_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - If this bit is set to 1 UHCI will end the payload receiving process when UART has been in idle state."]
     #[inline(always)]
-    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<CONF0_SPEC> {
+    pub fn uart_idle_eof_en(&mut self) -> UART_IDLE_EOF_EN_W<'_, CONF0_SPEC> {
         UART_IDLE_EOF_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - If this bit is set to 1 UHCI decoder receiving payload data is end when the receiving byte count has reached the specified value. The value is payload length indicated by UHCI packet header when UHCI_HEAD_EN is 1 or the value is configuration value when UHCI_HEAD_EN is 0. If this bit is set to 0 UHCI decoder receiving payload data is end when 0xc0 is received."]
     #[inline(always)]
-    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<CONF0_SPEC> {
+    pub fn len_eof_en(&mut self) -> LEN_EOF_EN_W<'_, CONF0_SPEC> {
         LEN_EOF_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable data integrity checking by appending a 16 bit CCITT-CRC to end of the payload."]
     #[inline(always)]
-    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<CONF0_SPEC> {
+    pub fn encode_crc_en(&mut self) -> ENCODE_CRC_EN_W<'_, CONF0_SPEC> {
         ENCODE_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - 1'b1: Force clock on for register. 1'b0: Support clock only when application writes registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF0_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF0_SPEC> {
         CLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - If this bit is set to 1 UHCI will end payload receive process when NULL frame is received by UART."]
     #[inline(always)]
-    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<CONF0_SPEC> {
+    pub fn uart_rx_brk_eof_en(&mut self) -> UART_RX_BRK_EOF_EN_W<'_, CONF0_SPEC> {
         UART_RX_BRK_EOF_EN_W::new(self, 12)
     }
 }

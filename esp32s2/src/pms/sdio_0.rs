@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks SDIO permission control registers."]
     #[inline(always)]
-    pub fn sdio_lock(&mut self) -> SDIO_LOCK_W<SDIO_0_SPEC> {
+    pub fn sdio_lock(&mut self) -> SDIO_LOCK_W<'_, SDIO_0_SPEC> {
         SDIO_LOCK_W::new(self, 0)
     }
 }

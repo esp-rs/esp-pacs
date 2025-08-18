@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 7:18 - The lock delay time of SPI0/1 arbiter by spi0_slv_st, after PER is sent by SPI1."]
     #[inline(always)]
-    pub fn lock_delay_time(&mut self) -> LOCK_DELAY_TIME_W<FSM_SPEC> {
+    pub fn lock_delay_time(&mut self) -> LOCK_DELAY_TIME_W<'_, FSM_SPEC> {
         LOCK_DELAY_TIME_W::new(self, 7)
     }
     #[doc = "Bit 19 - The lock enable for FLASH to lock spi0 trans req.1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn flash_lock_en(&mut self) -> FLASH_LOCK_EN_W<FSM_SPEC> {
+    pub fn flash_lock_en(&mut self) -> FLASH_LOCK_EN_W<'_, FSM_SPEC> {
         FLASH_LOCK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - The lock enable for external RAM to lock spi0 trans req.1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn sram_lock_en(&mut self) -> SRAM_LOCK_EN_W<FSM_SPEC> {
+    pub fn sram_lock_en(&mut self) -> SRAM_LOCK_EN_W<'_, FSM_SPEC> {
         SRAM_LOCK_EN_W::new(self, 20)
     }
 }

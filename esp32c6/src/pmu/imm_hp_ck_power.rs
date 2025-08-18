@@ -39,74 +39,80 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn tie_low_global_bbpll_icg(&mut self) -> TIE_LOW_GLOBAL_BBPLL_ICG_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_global_bbpll_icg(
+        &mut self,
+    ) -> TIE_LOW_GLOBAL_BBPLL_ICG_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_GLOBAL_BBPLL_ICG_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn tie_low_global_xtal_icg(&mut self) -> TIE_LOW_GLOBAL_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_global_xtal_icg(
+        &mut self,
+    ) -> TIE_LOW_GLOBAL_XTAL_ICG_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_GLOBAL_XTAL_ICG_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn tie_low_i2c_retention(&mut self) -> TIE_LOW_I2C_RETENTION_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_i2c_retention(&mut self) -> TIE_LOW_I2C_RETENTION_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_I2C_RETENTION_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn tie_low_xpd_bb_i2c(&mut self) -> TIE_LOW_XPD_BB_I2C_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_xpd_bb_i2c(&mut self) -> TIE_LOW_XPD_BB_I2C_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_BB_I2C_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn tie_low_xpd_bbpll_i2c(&mut self) -> TIE_LOW_XPD_BBPLL_I2C_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_xpd_bbpll_i2c(&mut self) -> TIE_LOW_XPD_BBPLL_I2C_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_BBPLL_I2C_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn tie_low_xpd_bbpll(&mut self) -> TIE_LOW_XPD_BBPLL_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_xpd_bbpll(&mut self) -> TIE_LOW_XPD_BBPLL_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_BBPLL_W::new(self, 5)
     }
     #[doc = "Bit 6 - need_des"]
     #[inline(always)]
-    pub fn tie_low_xpd_xtal(&mut self) -> TIE_LOW_XPD_XTAL_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_low_xpd_xtal(&mut self) -> TIE_LOW_XPD_XTAL_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_LOW_XPD_XTAL_W::new(self, 6)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
     pub fn tie_high_global_bbpll_icg(
         &mut self,
-    ) -> TIE_HIGH_GLOBAL_BBPLL_ICG_W<IMM_HP_CK_POWER_SPEC> {
+    ) -> TIE_HIGH_GLOBAL_BBPLL_ICG_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_GLOBAL_BBPLL_ICG_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn tie_high_global_xtal_icg(&mut self) -> TIE_HIGH_GLOBAL_XTAL_ICG_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_global_xtal_icg(
+        &mut self,
+    ) -> TIE_HIGH_GLOBAL_XTAL_ICG_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_GLOBAL_XTAL_ICG_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn tie_high_i2c_retention(&mut self) -> TIE_HIGH_I2C_RETENTION_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_i2c_retention(&mut self) -> TIE_HIGH_I2C_RETENTION_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_I2C_RETENTION_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn tie_high_xpd_bb_i2c(&mut self) -> TIE_HIGH_XPD_BB_I2C_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_xpd_bb_i2c(&mut self) -> TIE_HIGH_XPD_BB_I2C_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_BB_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn tie_high_xpd_bbpll_i2c(&mut self) -> TIE_HIGH_XPD_BBPLL_I2C_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_xpd_bbpll_i2c(&mut self) -> TIE_HIGH_XPD_BBPLL_I2C_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_BBPLL_I2C_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn tie_high_xpd_bbpll(&mut self) -> TIE_HIGH_XPD_BBPLL_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_xpd_bbpll(&mut self) -> TIE_HIGH_XPD_BBPLL_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_BBPLL_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn tie_high_xpd_xtal(&mut self) -> TIE_HIGH_XPD_XTAL_W<IMM_HP_CK_POWER_SPEC> {
+    pub fn tie_high_xpd_xtal(&mut self) -> TIE_HIGH_XPD_XTAL_W<'_, IMM_HP_CK_POWER_SPEC> {
         TIE_HIGH_XPD_XTAL_W::new(self, 31)
     }
 }

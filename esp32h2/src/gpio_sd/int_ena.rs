@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Pad compare interrupt enable"]
     #[inline(always)]
-    pub fn pad_comp(&mut self) -> PAD_COMP_W<INT_ENA_SPEC> {
+    pub fn pad_comp(&mut self) -> PAD_COMP_W<'_, INT_ENA_SPEC> {
         PAD_COMP_W::new(self, 0)
     }
 }

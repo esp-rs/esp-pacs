@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to force power up HP CORE0 memory."]
     #[inline(always)]
-    pub fn hpcore_0_mem_force_pu(&mut self) -> HPCORE_0_MEM_FORCE_PU_W<HPCORE_0_PD_CTRL_SPEC> {
+    pub fn hpcore_0_mem_force_pu(&mut self) -> HPCORE_0_MEM_FORCE_PU_W<'_, HPCORE_0_PD_CTRL_SPEC> {
         HPCORE_0_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power down HP CORE0 memory."]
     #[inline(always)]
-    pub fn hpcore_0_mem_force_pd(&mut self) -> HPCORE_0_MEM_FORCE_PD_W<HPCORE_0_PD_CTRL_SPEC> {
+    pub fn hpcore_0_mem_force_pd(&mut self) -> HPCORE_0_MEM_FORCE_PD_W<'_, HPCORE_0_PD_CTRL_SPEC> {
         HPCORE_0_MEM_FORCE_PD_W::new(self, 2)
     }
 }

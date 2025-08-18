@@ -55,21 +55,21 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_tag_mem_force_on(
         &mut self,
-    ) -> L2_CACHE_TAG_MEM_FORCE_ON_W<L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+    ) -> L2_CACHE_TAG_MEM_FORCE_ON_W<'_, L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
         L2_CACHE_TAG_MEM_FORCE_ON_W::new(self, 20)
     }
     #[doc = "Bit 21 - The bit is used to power L2-Cache tag memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     pub fn l2_cache_tag_mem_force_pd(
         &mut self,
-    ) -> L2_CACHE_TAG_MEM_FORCE_PD_W<L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+    ) -> L2_CACHE_TAG_MEM_FORCE_PD_W<'_, L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
         L2_CACHE_TAG_MEM_FORCE_PD_W::new(self, 21)
     }
     #[doc = "Bit 22 - The bit is used to power L2-Cache tag memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     pub fn l2_cache_tag_mem_force_pu(
         &mut self,
-    ) -> L2_CACHE_TAG_MEM_FORCE_PU_W<L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
+    ) -> L2_CACHE_TAG_MEM_FORCE_PU_W<'_, L2_CACHE_TAG_MEM_POWER_CTRL_SPEC> {
         L2_CACHE_TAG_MEM_FORCE_PU_W::new(self, 22)
     }
 }

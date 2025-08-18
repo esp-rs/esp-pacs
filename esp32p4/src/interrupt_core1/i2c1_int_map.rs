@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_i2c1_int_map(&mut self) -> CORE1_I2C1_INT_MAP_W<I2C1_INT_MAP_SPEC> {
+    pub fn core1_i2c1_int_map(&mut self) -> CORE1_I2C1_INT_MAP_W<'_, I2C1_INT_MAP_SPEC> {
         CORE1_I2C1_INT_MAP_W::new(self, 0)
     }
 }

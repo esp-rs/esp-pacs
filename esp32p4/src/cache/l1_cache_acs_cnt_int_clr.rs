@@ -56,28 +56,28 @@ impl W {
     #[inline(always)]
     pub fn l1_ibus0_ovf_int_clr(
         &mut self,
-    ) -> L1_IBUS0_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
+    ) -> L1_IBUS0_OVF_INT_CLR_W<'_, L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
         L1_IBUS0_OVF_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to clear counters overflow interrupt and counters in L1-ICache1 due to bus1 accesses L1-ICache1."]
     #[inline(always)]
     pub fn l1_ibus1_ovf_int_clr(
         &mut self,
-    ) -> L1_IBUS1_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
+    ) -> L1_IBUS1_OVF_INT_CLR_W<'_, L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
         L1_IBUS1_OVF_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 4 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus0 accesses L1-DCache."]
     #[inline(always)]
     pub fn l1_dbus0_ovf_int_clr(
         &mut self,
-    ) -> L1_DBUS0_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
+    ) -> L1_DBUS0_OVF_INT_CLR_W<'_, L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
         L1_DBUS0_OVF_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to clear counters overflow interrupt and counters in L1-DCache due to bus1 accesses L1-DCache."]
     #[inline(always)]
     pub fn l1_dbus1_ovf_int_clr(
         &mut self,
-    ) -> L1_DBUS1_OVF_INT_CLR_W<L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
+    ) -> L1_DBUS1_OVF_INT_CLR_W<'_, L1_CACHE_ACS_CNT_INT_CLR_SPEC> {
         L1_DBUS1_OVF_INT_CLR_W::new(self, 5)
     }
 }

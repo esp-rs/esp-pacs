@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn hp_po_cnnt_rstn_bypass_ctrl(
         &mut self,
-    ) -> HP_PO_CNNT_RSTN_BYPASS_CTRL_W<HP_POR_RST_BYPASS_CTRL_SPEC> {
+    ) -> HP_PO_CNNT_RSTN_BYPASS_CTRL_W<'_, HP_POR_RST_BYPASS_CTRL_SPEC> {
         HP_PO_CNNT_RSTN_BYPASS_CTRL_W::new(self, 8)
     }
     #[doc = "Bits 24:31 - 31\\] 1'b1: po_rstn bypass sys_sw_rstn \\[30\\] 1'b1: po_rstn bypass hp_wdt_sys_rstn \\[29\\] 1'b1: po_rstn bypass hp_cpu_intrusion_rstn \\[28\\] 1'b1: po_rstn bypass hp_sdio_sys_rstn \\[27\\] 1'b1: po_rstn bypass usb_jtag_chip_rst \\[26\\] 1'b1: po_rstn bypass usb_uart_chip_rst \\[25\\] 1'b1: po_rstn bypass lp_wdt_hp_sys_rstn \\[24\\] 1'b1: po_rstn bypass efuse_err_rstn"]
     #[inline(always)]
     pub fn hp_po_rstn_bypass_ctrl(
         &mut self,
-    ) -> HP_PO_RSTN_BYPASS_CTRL_W<HP_POR_RST_BYPASS_CTRL_SPEC> {
+    ) -> HP_PO_RSTN_BYPASS_CTRL_W<'_, HP_POR_RST_BYPASS_CTRL_SPEC> {
         HP_PO_RSTN_BYPASS_CTRL_W::new(self, 24)
     }
 }

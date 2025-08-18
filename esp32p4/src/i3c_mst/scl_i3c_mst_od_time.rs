@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn reg_i3c_mst_od_low_period(
         &mut self,
-    ) -> REG_I3C_MST_OD_LOW_PERIOD_W<SCL_I3C_MST_OD_TIME_SPEC> {
+    ) -> REG_I3C_MST_OD_LOW_PERIOD_W<'_, SCL_I3C_MST_OD_TIME_SPEC> {
         REG_I3C_MST_OD_LOW_PERIOD_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - SCL Open-Drain High count for I3C transfers targeted to I3C devices."]
     #[inline(always)]
     pub fn reg_i3c_mst_od_high_period(
         &mut self,
-    ) -> REG_I3C_MST_OD_HIGH_PERIOD_W<SCL_I3C_MST_OD_TIME_SPEC> {
+    ) -> REG_I3C_MST_OD_HIGH_PERIOD_W<'_, SCL_I3C_MST_OD_TIME_SPEC> {
         REG_I3C_MST_OD_HIGH_PERIOD_W::new(self, 16)
     }
 }

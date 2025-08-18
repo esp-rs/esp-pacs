@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn l1_dcache_autoload_sct2_size(
         &mut self,
-    ) -> L1_DCACHE_AUTOLOAD_SCT2_SIZE_W<L1_DCACHE_AUTOLOAD_SCT2_SIZE_SPEC> {
+    ) -> L1_DCACHE_AUTOLOAD_SCT2_SIZE_W<'_, L1_DCACHE_AUTOLOAD_SCT2_SIZE_SPEC> {
         L1_DCACHE_AUTOLOAD_SCT2_SIZE_W::new(self, 0)
     }
 }

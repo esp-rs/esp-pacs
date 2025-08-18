@@ -346,113 +346,113 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This sets the maximum threshold, in APB_CLK cycles, for the filter. Any pulses with width less than this will be ignored when the filter is enabled."]
     #[inline(always)]
-    pub fn filter_thres(&mut self) -> FILTER_THRES_W<CONF0_SPEC> {
+    pub fn filter_thres(&mut self) -> FILTER_THRES_W<'_, CONF0_SPEC> {
         FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bit 10 - This is the enable bit for unit %s's input filter."]
     #[inline(always)]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<CONF0_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<'_, CONF0_SPEC> {
         FILTER_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - This is the enable bit for unit %s's zero comparator."]
     #[inline(always)]
-    pub fn thr_zero_en(&mut self) -> THR_ZERO_EN_W<CONF0_SPEC> {
+    pub fn thr_zero_en(&mut self) -> THR_ZERO_EN_W<'_, CONF0_SPEC> {
         THR_ZERO_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - This is the enable bit for unit %s's thr_h_lim comparator. Configures it to enable the high limit interrupt."]
     #[inline(always)]
-    pub fn thr_h_lim_en(&mut self) -> THR_H_LIM_EN_W<CONF0_SPEC> {
+    pub fn thr_h_lim_en(&mut self) -> THR_H_LIM_EN_W<'_, CONF0_SPEC> {
         THR_H_LIM_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - This is the enable bit for unit %s's thr_l_lim comparator. Configures it to enable the low limit interrupt."]
     #[inline(always)]
-    pub fn thr_l_lim_en(&mut self) -> THR_L_LIM_EN_W<CONF0_SPEC> {
+    pub fn thr_l_lim_en(&mut self) -> THR_L_LIM_EN_W<'_, CONF0_SPEC> {
         THR_L_LIM_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - This is the enable bit for unit %s's thres0 comparator."]
     #[inline(always)]
-    pub fn thr_thres0_en(&mut self) -> THR_THRES0_EN_W<CONF0_SPEC> {
+    pub fn thr_thres0_en(&mut self) -> THR_THRES0_EN_W<'_, CONF0_SPEC> {
         THR_THRES0_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - This is the enable bit for unit %s's thres1 comparator."]
     #[inline(always)]
-    pub fn thr_thres1_en(&mut self) -> THR_THRES1_EN_W<CONF0_SPEC> {
+    pub fn thr_thres1_en(&mut self) -> THR_THRES1_EN_W<'_, CONF0_SPEC> {
         THR_THRES1_EN_W::new(self, 15)
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a negative edge."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_NEG_MODE` field.</div>"]
     #[inline(always)]
-    pub fn ch_neg_mode(&mut self, n: u8) -> CH_NEG_MODE_W<CONF0_SPEC> {
+    pub fn ch_neg_mode(&mut self, n: u8) -> CH_NEG_MODE_W<'_, CONF0_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_NEG_MODE_W::new(self, n * 8 + 16)
     }
     #[doc = "Bits 16:17 - Configures the behavior when the signal input of channel 0 detects a negative edge."]
     #[inline(always)]
-    pub fn ch0_neg_mode(&mut self) -> CH_NEG_MODE_W<CONF0_SPEC> {
+    pub fn ch0_neg_mode(&mut self) -> CH_NEG_MODE_W<'_, CONF0_SPEC> {
         CH_NEG_MODE_W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Configures the behavior when the signal input of channel 1 detects a negative edge."]
     #[inline(always)]
-    pub fn ch1_neg_mode(&mut self) -> CH_NEG_MODE_W<CONF0_SPEC> {
+    pub fn ch1_neg_mode(&mut self) -> CH_NEG_MODE_W<'_, CONF0_SPEC> {
         CH_NEG_MODE_W::new(self, 24)
     }
     #[doc = "Configures the behavior when the signal input of channel (0-1) detects a positive edge."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_POS_MODE` field.</div>"]
     #[inline(always)]
-    pub fn ch_pos_mode(&mut self, n: u8) -> CH_POS_MODE_W<CONF0_SPEC> {
+    pub fn ch_pos_mode(&mut self, n: u8) -> CH_POS_MODE_W<'_, CONF0_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_POS_MODE_W::new(self, n * 8 + 18)
     }
     #[doc = "Bits 18:19 - Configures the behavior when the signal input of channel 0 detects a positive edge."]
     #[inline(always)]
-    pub fn ch0_pos_mode(&mut self) -> CH_POS_MODE_W<CONF0_SPEC> {
+    pub fn ch0_pos_mode(&mut self) -> CH_POS_MODE_W<'_, CONF0_SPEC> {
         CH_POS_MODE_W::new(self, 18)
     }
     #[doc = "Bits 26:27 - Configures the behavior when the signal input of channel 1 detects a positive edge."]
     #[inline(always)]
-    pub fn ch1_pos_mode(&mut self) -> CH_POS_MODE_W<CONF0_SPEC> {
+    pub fn ch1_pos_mode(&mut self) -> CH_POS_MODE_W<'_, CONF0_SPEC> {
         CH_POS_MODE_W::new(self, 26)
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_HCTRL_MODE` field.</div>"]
     #[inline(always)]
-    pub fn ch_hctrl_mode(&mut self, n: u8) -> CH_HCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch_hctrl_mode(&mut self, n: u8) -> CH_HCTRL_MODE_W<'_, CONF0_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_HCTRL_MODE_W::new(self, n * 8 + 20)
     }
     #[doc = "Bits 20:21 - Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high."]
     #[inline(always)]
-    pub fn ch0_hctrl_mode(&mut self) -> CH_HCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch0_hctrl_mode(&mut self) -> CH_HCTRL_MODE_W<'_, CONF0_SPEC> {
         CH_HCTRL_MODE_W::new(self, 20)
     }
     #[doc = "Bits 28:29 - Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is high."]
     #[inline(always)]
-    pub fn ch1_hctrl_mode(&mut self) -> CH_HCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch1_hctrl_mode(&mut self) -> CH_HCTRL_MODE_W<'_, CONF0_SPEC> {
         CH_HCTRL_MODE_W::new(self, 28)
     }
     #[doc = "Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_LCTRL_MODE` field.</div>"]
     #[inline(always)]
-    pub fn ch_lctrl_mode(&mut self, n: u8) -> CH_LCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch_lctrl_mode(&mut self, n: u8) -> CH_LCTRL_MODE_W<'_, CONF0_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_LCTRL_MODE_W::new(self, n * 8 + 22)
     }
     #[doc = "Bits 22:23 - Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low."]
     #[inline(always)]
-    pub fn ch0_lctrl_mode(&mut self) -> CH_LCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch0_lctrl_mode(&mut self) -> CH_LCTRL_MODE_W<'_, CONF0_SPEC> {
         CH_LCTRL_MODE_W::new(self, 22)
     }
     #[doc = "Bits 30:31 - Configures how the CHn_POS_MODE/CHn_NEG_MODE settings will be modified when the control signal is low."]
     #[inline(always)]
-    pub fn ch1_lctrl_mode(&mut self) -> CH_LCTRL_MODE_W<CONF0_SPEC> {
+    pub fn ch1_lctrl_mode(&mut self) -> CH_LCTRL_MODE_W<'_, CONF0_SPEC> {
         CH_LCTRL_MODE_W::new(self, 30)
     }
 }

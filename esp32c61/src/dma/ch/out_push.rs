@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures whether to push data into AHB_DMA FIFO.\\\\0: Invalid. No effect\\\\1: Push\\\\"]
     #[inline(always)]
-    pub fn outfifo_wdata_ch0(&mut self) -> OUTFIFO_WDATA_CH0_W<OUT_PUSH_SPEC> {
+    pub fn outfifo_wdata_ch0(&mut self) -> OUTFIFO_WDATA_CH0_W<'_, OUT_PUSH_SPEC> {
         OUTFIFO_WDATA_CH0_W::new(self, 0)
     }
     #[doc = "Bit 9 - Configures the data that need to be pushed into AHB_DMA FIFO."]
     #[inline(always)]
-    pub fn outfifo_push_ch0(&mut self) -> OUTFIFO_PUSH_CH0_W<OUT_PUSH_SPEC> {
+    pub fn outfifo_push_ch0(&mut self) -> OUTFIFO_PUSH_CH0_W<'_, OUT_PUSH_SPEC> {
         OUTFIFO_PUSH_CH0_W::new(self, 9)
     }
 }

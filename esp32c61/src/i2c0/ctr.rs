@@ -140,77 +140,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the SDA output mode.\\\\ 0: Open drain output \\\\ 1: Direct output \\\\"]
     #[inline(always)]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTR_SPEC> {
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<'_, CTR_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the SCL output mode.\\\\ 0: Open drain output \\\\ 1: Direct output \\\\"]
     #[inline(always)]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTR_SPEC> {
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<'_, CTR_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the sample mode for SDA.\\\\ 0: Sample SDA data on the SCL high level \\\\ 1: Sample SDA data on the SCL low level \\\\"]
     #[inline(always)]
-    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<CTR_SPEC> {
+    pub fn sample_scl_level(&mut self) -> SAMPLE_SCL_LEVEL_W<'_, CTR_SPEC> {
         SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the ACK value that needs to be sent by master when the rx_fifo_cnt has reached the threshold.\\\\"]
     #[inline(always)]
-    pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<CTR_SPEC> {
+    pub fn rx_full_ack_level(&mut self) -> RX_FULL_ACK_LEVEL_W<'_, CTR_SPEC> {
         RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures the module as an I2C Master or Slave.\\\\ 0: Slave \\\\ 1: Master \\\\"]
     #[inline(always)]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTR_SPEC> {
+    pub fn ms_mode(&mut self) -> MS_MODE_W<'_, CTR_SPEC> {
         MS_MODE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether the slave starts sending the data in txfifo.\\\\ 0: No effect \\\\ 1: Start"]
     #[inline(always)]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTR_SPEC> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<'_, CTR_SPEC> {
         TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures to control the sending order for data needing to be sent.\\\\ 0: send data from the most significant bit \\\\ 1: send data from the least significant bit \\\\"]
     #[inline(always)]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTR_SPEC> {
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<'_, CTR_SPEC> {
         TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures to control the storage order for received data.\\\\ 0: receive data from the most significant bit \\\\ 1: receive data from the least significant bit \\\\"]
     #[inline(always)]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTR_SPEC> {
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<'_, CTR_SPEC> {
         RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether to gate clock signal for registers.\\\\ 0: Support clock only when registers are read or written to by software \\\\ 1: Force clock on for registers \\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTR_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CTR_SPEC> {
         CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures to enable I2C bus arbitration detection.\\\\ 0: No effect \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<CTR_SPEC> {
+    pub fn arbitration_en(&mut self) -> ARBITRATION_EN_W<'_, CTR_SPEC> {
         ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures to reset the SCL_FSM.\\\\ 0: No effect \\\\ 1: Reset"]
     #[inline(always)]
-    pub fn fsm_rst(&mut self) -> FSM_RST_W<CTR_SPEC> {
+    pub fn fsm_rst(&mut self) -> FSM_RST_W<'_, CTR_SPEC> {
         FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures this bit for synchronization.\\\\ 0: No effect \\\\ 1: Synchronize"]
     #[inline(always)]
-    pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<CTR_SPEC> {
+    pub fn conf_upgate(&mut self) -> CONF_UPGATE_W<'_, CTR_SPEC> {
         CONF_UPGATE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures to enable slave to send data automatically\\\\ 0: Disable\\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<CTR_SPEC> {
+    pub fn slv_tx_auto_start_en(&mut self) -> SLV_TX_AUTO_START_EN_W<'_, CTR_SPEC> {
         SLV_TX_AUTO_START_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures to check if the r/w bit of 10bit addressing consists with I2C protocol.\\\\ 0: Not check\\\\ 1: Check"]
     #[inline(always)]
-    pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<CTR_SPEC> {
+    pub fn addr_10bit_rw_check_en(&mut self) -> ADDR_10BIT_RW_CHECK_EN_W<'_, CTR_SPEC> {
         ADDR_10BIT_RW_CHECK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures to support the 7 bit general call function.\\\\ 0: Not support \\\\ 1: Support \\\\"]
     #[inline(always)]
-    pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<CTR_SPEC> {
+    pub fn addr_broadcasting_en(&mut self) -> ADDR_BROADCASTING_EN_W<'_, CTR_SPEC> {
         ADDR_BROADCASTING_EN_W::new(self, 14)
     }
 }

@@ -144,67 +144,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn xfercomplmsk(&mut self) -> XFERCOMPLMSK_W<INTMSK_SPEC> {
+    pub fn xfercomplmsk(&mut self) -> XFERCOMPLMSK_W<'_, INTMSK_SPEC> {
         XFERCOMPLMSK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn chhltdmsk(&mut self) -> CHHLTDMSK_W<INTMSK_SPEC> {
+    pub fn chhltdmsk(&mut self) -> CHHLTDMSK_W<'_, INTMSK_SPEC> {
         CHHLTDMSK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<INTMSK_SPEC> {
+    pub fn ahberrmsk(&mut self) -> AHBERRMSK_W<'_, INTMSK_SPEC> {
         AHBERRMSK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn stallmsk(&mut self) -> STALLMSK_W<INTMSK_SPEC> {
+    pub fn stallmsk(&mut self) -> STALLMSK_W<'_, INTMSK_SPEC> {
         STALLMSK_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn nakmsk(&mut self) -> NAKMSK_W<INTMSK_SPEC> {
+    pub fn nakmsk(&mut self) -> NAKMSK_W<'_, INTMSK_SPEC> {
         NAKMSK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn ackmsk(&mut self) -> ACKMSK_W<INTMSK_SPEC> {
+    pub fn ackmsk(&mut self) -> ACKMSK_W<'_, INTMSK_SPEC> {
         ACKMSK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn nyetmsk(&mut self) -> NYETMSK_W<INTMSK_SPEC> {
+    pub fn nyetmsk(&mut self) -> NYETMSK_W<'_, INTMSK_SPEC> {
         NYETMSK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn xacterrmsk(&mut self) -> XACTERRMSK_W<INTMSK_SPEC> {
+    pub fn xacterrmsk(&mut self) -> XACTERRMSK_W<'_, INTMSK_SPEC> {
         XACTERRMSK_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn bblerrmsk(&mut self) -> BBLERRMSK_W<INTMSK_SPEC> {
+    pub fn bblerrmsk(&mut self) -> BBLERRMSK_W<'_, INTMSK_SPEC> {
         BBLERRMSK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn frmovrunmsk(&mut self) -> FRMOVRUNMSK_W<INTMSK_SPEC> {
+    pub fn frmovrunmsk(&mut self) -> FRMOVRUNMSK_W<'_, INTMSK_SPEC> {
         FRMOVRUNMSK_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn datatglerrmsk(&mut self) -> DATATGLERRMSK_W<INTMSK_SPEC> {
+    pub fn datatglerrmsk(&mut self) -> DATATGLERRMSK_W<'_, INTMSK_SPEC> {
         DATATGLERRMSK_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn bnaintrmsk(&mut self) -> BNAINTRMSK_W<INTMSK_SPEC> {
+    pub fn bnaintrmsk(&mut self) -> BNAINTRMSK_W<'_, INTMSK_SPEC> {
         BNAINTRMSK_W::new(self, 11)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn desc_lst_rollintrmsk(&mut self) -> DESC_LST_ROLLINTRMSK_W<INTMSK_SPEC> {
+    pub fn desc_lst_rollintrmsk(&mut self) -> DESC_LST_ROLLINTRMSK_W<'_, INTMSK_SPEC> {
         DESC_LST_ROLLINTRMSK_W::new(self, 13)
     }
 }

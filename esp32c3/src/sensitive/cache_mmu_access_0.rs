@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - cache_mmu_access_lock"]
     #[inline(always)]
-    pub fn cache_mmu_access_lock(&mut self) -> CACHE_MMU_ACCESS_LOCK_W<CACHE_MMU_ACCESS_0_SPEC> {
+    pub fn cache_mmu_access_lock(
+        &mut self,
+    ) -> CACHE_MMU_ACCESS_LOCK_W<'_, CACHE_MMU_ACCESS_0_SPEC> {
         CACHE_MMU_ACCESS_LOCK_W::new(self, 0)
     }
 }

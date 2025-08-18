@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_usb_otg_int_map(&mut self) -> CORE1_USB_OTG_INT_MAP_W<USB_OTG_INT_MAP_SPEC> {
+    pub fn core1_usb_otg_int_map(&mut self) -> CORE1_USB_OTG_INT_MAP_W<'_, USB_OTG_INT_MAP_SPEC> {
         CORE1_USB_OTG_INT_MAP_W::new(self, 0)
     }
 }

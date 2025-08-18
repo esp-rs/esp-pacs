@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the value of PWM generator %s time stamp A's shadow register."]
     #[inline(always)]
-    pub fn cmpr_a(&mut self) -> CMPR_A_W<GEN_TSTMP_A_SPEC> {
+    pub fn cmpr_a(&mut self) -> CMPR_A_W<'_, GEN_TSTMP_A_SPEC> {
         CMPR_A_W::new(self, 0)
     }
 }

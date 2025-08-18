@@ -150,42 +150,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Sdio clock enable"]
     #[inline(always)]
-    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn sdio_enable(&mut self) -> SDIO_ENABLE_W<'_, CFG_DATA1_SPEC> {
         SDIO_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - sdio function1 io ready signal in cis"]
     #[inline(always)]
-    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ioready1(&mut self) -> SDIO_IOREADY1_W<'_, CFG_DATA1_SPEC> {
         SDIO_IOREADY1_W::new(self, 1)
     }
     #[doc = "Bit 2 - Highspeed enable in cccr"]
     #[inline(always)]
-    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn highspeed_enable(&mut self) -> HIGHSPEED_ENABLE_W<'_, CFG_DATA1_SPEC> {
         HIGHSPEED_ENABLE_W::new(self, 2)
     }
     #[doc = "Bit 4 - sdio card detect enable"]
     #[inline(always)]
-    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<CFG_DATA1_SPEC> {
+    pub fn sdio_cd_enable(&mut self) -> SDIO_CD_ENABLE_W<'_, CFG_DATA1_SPEC> {
         SDIO_CD_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5 - sdio function1 io ready signal in cis"]
     #[inline(always)]
-    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ioready2(&mut self) -> SDIO_IOREADY2_W<'_, CFG_DATA1_SPEC> {
         SDIO_IOREADY2_W::new(self, 5)
     }
     #[doc = "Bit 6 - mask sdio interrupt in cccr, high active"]
     #[inline(always)]
-    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<CFG_DATA1_SPEC> {
+    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<'_, CFG_DATA1_SPEC> {
         SDIO_INT_MASK_W::new(self, 6)
     }
     #[doc = "Bits 12:23 - sdio version in cccr"]
     #[inline(always)]
-    pub fn sdio_ver(&mut self) -> SDIO_VER_W<CFG_DATA1_SPEC> {
+    pub fn sdio_ver(&mut self) -> SDIO_VER_W<'_, CFG_DATA1_SPEC> {
         SDIO_VER_W::new(self, 12)
     }
     #[doc = "Bits 25:31 - 29\\],sdio negedge sample enablel.\\[30\\],sdio posedge sample enable.\\[31\\],sdio cmd/dat in delayed cycles control,0:no delay, 1:delay 1 cycle. \\[25\\]: sdio1.1 dat/cmd sending out edge control,1:negedge,0:posedge when highseed mode. \\[26\\]: sdio2.0 dat/cmd sending out edge control,1:negedge when \\[12\\]=0,0:negedge when \\[12\\]=0,posedge when highspeed mode enable. \\[27\\]: sdio interrupt sending out delay control,1:delay one cycle, 0: no delay. \\[28\\]: sdio data pad pull up enable"]
     #[inline(always)]
-    pub fn sdio20_conf(&mut self) -> SDIO20_CONF_W<CFG_DATA1_SPEC> {
+    pub fn sdio20_conf(&mut self) -> SDIO20_CONF_W<'_, CFG_DATA1_SPEC> {
         SDIO20_CONF_W::new(self, 25)
     }
 }

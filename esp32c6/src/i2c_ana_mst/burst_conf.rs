@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - ?"]
     #[inline(always)]
-    pub fn burst_ctrl(&mut self) -> BURST_CTRL_W<BURST_CONF_SPEC> {
+    pub fn burst_ctrl(&mut self) -> BURST_CTRL_W<'_, BURST_CONF_SPEC> {
         BURST_CTRL_W::new(self, 0)
     }
 }

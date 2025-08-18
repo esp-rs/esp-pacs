@@ -36,19 +36,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - USB serial out ep timeout enable. When a timeout event occurs, serial out ep buffer is automatically cleared and reg_serial_timeout_status is asserted."]
     #[inline(always)]
-    pub fn serial_timeout_en(&mut self) -> SERIAL_TIMEOUT_EN_W<SERIAL_EP_TIMEOUT0_SPEC> {
+    pub fn serial_timeout_en(&mut self) -> SERIAL_TIMEOUT_EN_W<'_, SERIAL_EP_TIMEOUT0_SPEC> {
         SERIAL_TIMEOUT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Serial out ep triggers a timeout event."]
     #[inline(always)]
-    pub fn serial_timeout_status(&mut self) -> SERIAL_TIMEOUT_STATUS_W<SERIAL_EP_TIMEOUT0_SPEC> {
+    pub fn serial_timeout_status(
+        &mut self,
+    ) -> SERIAL_TIMEOUT_STATUS_W<'_, SERIAL_EP_TIMEOUT0_SPEC> {
         SERIAL_TIMEOUT_STATUS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear reg_serial_timeout_status."]
     #[inline(always)]
     pub fn serial_timeout_status_clr(
         &mut self,
-    ) -> SERIAL_TIMEOUT_STATUS_CLR_W<SERIAL_EP_TIMEOUT0_SPEC> {
+    ) -> SERIAL_TIMEOUT_STATUS_CLR_W<'_, SERIAL_EP_TIMEOUT0_SPEC> {
         SERIAL_TIMEOUT_STATUS_CLR_W::new(self, 2)
     }
 }

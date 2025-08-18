@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Link read_interval"]
     #[inline(always)]
-    pub fn read_interval(&mut self) -> READ_INTERVAL_W<REGDMA_BKP_CONF_SPEC> {
+    pub fn read_interval(&mut self) -> READ_INTERVAL_W<'_, REGDMA_BKP_CONF_SPEC> {
         READ_INTERVAL_W::new(self, 0)
     }
     #[doc = "Bits 7:16 - link wait timeout threshold"]
     #[inline(always)]
-    pub fn link_tout_thres(&mut self) -> LINK_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC> {
+    pub fn link_tout_thres(&mut self) -> LINK_TOUT_THRES_W<'_, REGDMA_BKP_CONF_SPEC> {
         LINK_TOUT_THRES_W::new(self, 7)
     }
     #[doc = "Bits 17:21 - burst limit"]
     #[inline(always)]
-    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<REGDMA_BKP_CONF_SPEC> {
+    pub fn burst_limit(&mut self) -> BURST_LIMIT_W<'_, REGDMA_BKP_CONF_SPEC> {
         BURST_LIMIT_W::new(self, 17)
     }
     #[doc = "Bits 22:31 - Backup timeout threshold"]
     #[inline(always)]
-    pub fn backup_tout_thres(&mut self) -> BACKUP_TOUT_THRES_W<REGDMA_BKP_CONF_SPEC> {
+    pub fn backup_tout_thres(&mut self) -> BACKUP_TOUT_THRES_W<'_, REGDMA_BKP_CONF_SPEC> {
         BACKUP_TOUT_THRES_W::new(self, 22)
     }
 }

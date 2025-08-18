@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn sharp_matrix_uv_mem_aux_ctrl(
         &mut self,
-    ) -> SHARP_MATRIX_UV_MEM_AUX_CTRL_W<MEM_AUX_CTRL_4_SPEC> {
+    ) -> SHARP_MATRIX_UV_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_4_SPEC> {
         SHARP_MATRIX_UV_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

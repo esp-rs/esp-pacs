@@ -32,6 +32,7 @@ impl W {
     pub fn core_x_iram0_dram0_dma_split_line_constrain_lock(
         &mut self,
     ) -> CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_W<
+        '_,
         CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_0_SPEC,
     > {
         CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_LOCK_W::new(self, 0)

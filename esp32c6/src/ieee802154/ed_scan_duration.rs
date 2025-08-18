@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23"]
     #[inline(always)]
-    pub fn ed_scan_duration(&mut self) -> ED_SCAN_DURATION_W<ED_SCAN_DURATION_SPEC> {
+    pub fn ed_scan_duration(&mut self) -> ED_SCAN_DURATION_W<'_, ED_SCAN_DURATION_SPEC> {
         ED_SCAN_DURATION_W::new(self, 0)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn ed_scan_wait_dly(&mut self) -> ED_SCAN_WAIT_DLY_W<ED_SCAN_DURATION_SPEC> {
+    pub fn ed_scan_wait_dly(&mut self) -> ED_SCAN_WAIT_DLY_W<'_, ED_SCAN_DURATION_SPEC> {
         ED_SCAN_WAIT_DLY_W::new(self, 24)
     }
 }

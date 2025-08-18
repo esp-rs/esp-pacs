@@ -204,97 +204,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - In the dummy phase of a MSPI read data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
-    pub fn fdummy_rin(&mut self) -> FDUMMY_RIN_W<CTRL_SPEC> {
+    pub fn fdummy_rin(&mut self) -> FDUMMY_RIN_W<'_, CTRL_SPEC> {
         FDUMMY_RIN_W::new(self, 2)
     }
     #[doc = "Bit 3 - In the dummy phase of a MSPI write data transfer when accesses to flash, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
-    pub fn fdummy_wout(&mut self) -> FDUMMY_WOUT_W<CTRL_SPEC> {
+    pub fn fdummy_wout(&mut self) -> FDUMMY_WOUT_W<'_, CTRL_SPEC> {
         FDUMMY_WOUT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Apply 8 signals during write-data phase 1:enable 0: disable"]
     #[inline(always)]
-    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<CTRL_SPEC> {
+    pub fn fdout_oct(&mut self) -> FDOUT_OCT_W<'_, CTRL_SPEC> {
         FDOUT_OCT_W::new(self, 4)
     }
     #[doc = "Bit 5 - Apply 8 signals during read-data phase 1:enable 0: disable"]
     #[inline(always)]
-    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<CTRL_SPEC> {
+    pub fn fdin_oct(&mut self) -> FDIN_OCT_W<'_, CTRL_SPEC> {
         FDIN_OCT_W::new(self, 5)
     }
     #[doc = "Bit 6 - Apply 8 signals during address phase 1:enable 0: disable"]
     #[inline(always)]
-    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<CTRL_SPEC> {
+    pub fn faddr_oct(&mut self) -> FADDR_OCT_W<'_, CTRL_SPEC> {
         FADDR_OCT_W::new(self, 6)
     }
     #[doc = "Bit 8 - Apply 4 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
+    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<'_, CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Apply 8 signals during command phase 1:enable 0: disable"]
     #[inline(always)]
-    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<CTRL_SPEC> {
+    pub fn fcmd_oct(&mut self) -> FCMD_OCT_W<'_, CTRL_SPEC> {
         FCMD_OCT_W::new(self, 9)
     }
     #[doc = "Bit 10 - For SPI1, initialize crc32 module before writing encrypted data to flash. Active low."]
     #[inline(always)]
-    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<CTRL_SPEC> {
+    pub fn fcs_crc_en(&mut self) -> FCS_CRC_EN_W<'_, CTRL_SPEC> {
         FCS_CRC_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - For SPI1, enable crc32 when writing encrypted data to flash. 1: enable 0:disable"]
     #[inline(always)]
-    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<CTRL_SPEC> {
+    pub fn tx_crc_en(&mut self) -> TX_CRC_EN_W<'_, CTRL_SPEC> {
         TX_CRC_EN_W::new(self, 11)
     }
     #[doc = "Bit 13 - This bit enable the bits: spi_mem_fread_qio, spi_mem_fread_dio, spi_mem_fread_qout and spi_mem_fread_dout. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<CTRL_SPEC> {
+    pub fn fastrd_mode(&mut self) -> FASTRD_MODE_W<'_, CTRL_SPEC> {
         FASTRD_MODE_W::new(self, 13)
     }
     #[doc = "Bit 14 - In the read operations, read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<'_, CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - The Device ID is read out to SPI_MEM_RD_STATUS register, this bit combine with spi_mem_flash_res bit. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn resandres(&mut self) -> RESANDRES_W<CTRL_SPEC> {
+    pub fn resandres(&mut self) -> RESANDRES_W<'_, CTRL_SPEC> {
         RESANDRES_W::new(self, 15)
     }
     #[doc = "Bit 18 - The bit is used to set MISO line polarity, 1: high 0, low"]
     #[inline(always)]
-    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
+    pub fn q_pol(&mut self) -> Q_POL_W<'_, CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - The bit is used to set MOSI line polarity, 1: high 0, low"]
     #[inline(always)]
-    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
+    pub fn d_pol(&mut self) -> D_POL_W<'_, CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - In the read operations read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<'_, CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 20)
     }
     #[doc = "Bit 21 - Write protect signal output when SPI is idle. 1: output high, 0: output low."]
     #[inline(always)]
-    pub fn wp(&mut self) -> WP_W<CTRL_SPEC> {
+    pub fn wp(&mut self) -> WP_W<'_, CTRL_SPEC> {
         WP_W::new(self, 21)
     }
     #[doc = "Bit 22 - two bytes data will be written to status register when it is set. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<CTRL_SPEC> {
+    pub fn wrsr_2b(&mut self) -> WRSR_2B_W<'_, CTRL_SPEC> {
         WRSR_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - In the read operations address phase and read-data phase apply 2 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn fread_dio(&mut self) -> FREAD_DIO_W<CTRL_SPEC> {
+    pub fn fread_dio(&mut self) -> FREAD_DIO_W<'_, CTRL_SPEC> {
         FREAD_DIO_W::new(self, 23)
     }
     #[doc = "Bit 24 - In the read operations address phase and read-data phase apply 4 signals. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn fread_qio(&mut self) -> FREAD_QIO_W<CTRL_SPEC> {
+    pub fn fread_qio(&mut self) -> FREAD_QIO_W<'_, CTRL_SPEC> {
         FREAD_QIO_W::new(self, 24)
     }
 }

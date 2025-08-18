@@ -200,107 +200,107 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - {reg_sw_stall_appcpu_c1\\[5:0\\] , reg_sw_stall_appcpu_c0\\[1:0\\]} == 0x86 will stall APP CPU"]
     #[inline(always)]
-    pub fn sw_stall_appcpu_c0(&mut self) -> SW_STALL_APPCPU_C0_W<OPTIONS0_SPEC> {
+    pub fn sw_stall_appcpu_c0(&mut self) -> SW_STALL_APPCPU_C0_W<'_, OPTIONS0_SPEC> {
         SW_STALL_APPCPU_C0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - When RTC_CNTL_REG_SW_STALL_PROCPU_C1 is configured to 0x21, setting this bit to 0x2 stalls the CPU by SW."]
     #[inline(always)]
-    pub fn sw_stall_procpu_c0(&mut self) -> SW_STALL_PROCPU_C0_W<OPTIONS0_SPEC> {
+    pub fn sw_stall_procpu_c0(&mut self) -> SW_STALL_PROCPU_C0_W<'_, OPTIONS0_SPEC> {
         SW_STALL_PROCPU_C0_W::new(self, 2)
     }
     #[doc = "Bit 4 - APP CPU SW reset. (Note, we don’t have APP CPU for ESP32-S2)"]
     #[inline(always)]
-    pub fn sw_appcpu_rst(&mut self) -> SW_APPCPU_RST_W<OPTIONS0_SPEC> {
+    pub fn sw_appcpu_rst(&mut self) -> SW_APPCPU_RST_W<'_, OPTIONS0_SPEC> {
         SW_APPCPU_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to reset the CPU by SW."]
     #[inline(always)]
-    pub fn sw_procpu_rst(&mut self) -> SW_PROCPU_RST_W<OPTIONS0_SPEC> {
+    pub fn sw_procpu_rst(&mut self) -> SW_PROCPU_RST_W<'_, OPTIONS0_SPEC> {
         SW_PROCPU_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to FPD BB_I2C."]
     #[inline(always)]
-    pub fn bb_i2c_force_pd(&mut self) -> BB_I2C_FORCE_PD_W<OPTIONS0_SPEC> {
+    pub fn bb_i2c_force_pd(&mut self) -> BB_I2C_FORCE_PD_W<'_, OPTIONS0_SPEC> {
         BB_I2C_FORCE_PD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to FPU BB_I2C."]
     #[inline(always)]
-    pub fn bb_i2c_force_pu(&mut self) -> BB_I2C_FORCE_PU_W<OPTIONS0_SPEC> {
+    pub fn bb_i2c_force_pu(&mut self) -> BB_I2C_FORCE_PU_W<'_, OPTIONS0_SPEC> {
         BB_I2C_FORCE_PU_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to FPD BB_PLL _I2C."]
     #[inline(always)]
-    pub fn bbpll_i2c_force_pd(&mut self) -> BBPLL_I2C_FORCE_PD_W<OPTIONS0_SPEC> {
+    pub fn bbpll_i2c_force_pd(&mut self) -> BBPLL_I2C_FORCE_PD_W<'_, OPTIONS0_SPEC> {
         BBPLL_I2C_FORCE_PD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to FPU BB_PLL _I2C."]
     #[inline(always)]
-    pub fn bbpll_i2c_force_pu(&mut self) -> BBPLL_I2C_FORCE_PU_W<OPTIONS0_SPEC> {
+    pub fn bbpll_i2c_force_pu(&mut self) -> BBPLL_I2C_FORCE_PU_W<'_, OPTIONS0_SPEC> {
         BBPLL_I2C_FORCE_PU_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to FPD BB_PLL."]
     #[inline(always)]
-    pub fn bbpll_force_pd(&mut self) -> BBPLL_FORCE_PD_W<OPTIONS0_SPEC> {
+    pub fn bbpll_force_pd(&mut self) -> BBPLL_FORCE_PD_W<'_, OPTIONS0_SPEC> {
         BBPLL_FORCE_PD_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to FPU BB_PLL."]
     #[inline(always)]
-    pub fn bbpll_force_pu(&mut self) -> BBPLL_FORCE_PU_W<OPTIONS0_SPEC> {
+    pub fn bbpll_force_pu(&mut self) -> BBPLL_FORCE_PU_W<'_, OPTIONS0_SPEC> {
         BBPLL_FORCE_PU_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to FPD the crystal oscillator."]
     #[inline(always)]
-    pub fn xtl_force_pd(&mut self) -> XTL_FORCE_PD_W<OPTIONS0_SPEC> {
+    pub fn xtl_force_pd(&mut self) -> XTL_FORCE_PD_W<'_, OPTIONS0_SPEC> {
         XTL_FORCE_PD_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to FPU the crystal oscillator."]
     #[inline(always)]
-    pub fn xtl_force_pu(&mut self) -> XTL_FORCE_PU_W<OPTIONS0_SPEC> {
+    pub fn xtl_force_pu(&mut self) -> XTL_FORCE_PU_W<'_, OPTIONS0_SPEC> {
         XTL_FORCE_PU_W::new(self, 13)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn xtl_force_iso(&mut self) -> XTL_FORCE_ISO_W<OPTIONS0_SPEC> {
+    pub fn xtl_force_iso(&mut self) -> XTL_FORCE_ISO_W<'_, OPTIONS0_SPEC> {
         XTL_FORCE_ISO_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn pll_force_iso(&mut self) -> PLL_FORCE_ISO_W<OPTIONS0_SPEC> {
+    pub fn pll_force_iso(&mut self) -> PLL_FORCE_ISO_W<'_, OPTIONS0_SPEC> {
         PLL_FORCE_ISO_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn analog_force_iso(&mut self) -> ANALOG_FORCE_ISO_W<OPTIONS0_SPEC> {
+    pub fn analog_force_iso(&mut self) -> ANALOG_FORCE_ISO_W<'_, OPTIONS0_SPEC> {
         ANALOG_FORCE_ISO_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn xtl_force_noiso(&mut self) -> XTL_FORCE_NOISO_W<OPTIONS0_SPEC> {
+    pub fn xtl_force_noiso(&mut self) -> XTL_FORCE_NOISO_W<'_, OPTIONS0_SPEC> {
         XTL_FORCE_NOISO_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn pll_force_noiso(&mut self) -> PLL_FORCE_NOISO_W<OPTIONS0_SPEC> {
+    pub fn pll_force_noiso(&mut self) -> PLL_FORCE_NOISO_W<'_, OPTIONS0_SPEC> {
         PLL_FORCE_NOISO_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn analog_force_noiso(&mut self) -> ANALOG_FORCE_NOISO_W<OPTIONS0_SPEC> {
+    pub fn analog_force_noiso(&mut self) -> ANALOG_FORCE_NOISO_W<'_, OPTIONS0_SPEC> {
         ANALOG_FORCE_NOISO_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to force reset the digital system in deep-sleep."]
     #[inline(always)]
-    pub fn dg_wrap_force_rst(&mut self) -> DG_WRAP_FORCE_RST_W<OPTIONS0_SPEC> {
+    pub fn dg_wrap_force_rst(&mut self) -> DG_WRAP_FORCE_RST_W<'_, OPTIONS0_SPEC> {
         DG_WRAP_FORCE_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to disable force reset to digital system in deep-sleep."]
     #[inline(always)]
-    pub fn dg_wrap_force_norst(&mut self) -> DG_WRAP_FORCE_NORST_W<OPTIONS0_SPEC> {
+    pub fn dg_wrap_force_norst(&mut self) -> DG_WRAP_FORCE_NORST_W<'_, OPTIONS0_SPEC> {
         DG_WRAP_FORCE_NORST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to reset the system via SW."]
     #[inline(always)]
-    pub fn sw_sys_rst(&mut self) -> SW_SYS_RST_W<OPTIONS0_SPEC> {
+    pub fn sw_sys_rst(&mut self) -> SW_SYS_RST_W<'_, OPTIONS0_SPEC> {
         SW_SYS_RST_W::new(self, 31)
     }
 }

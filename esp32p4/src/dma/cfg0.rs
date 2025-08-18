@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn dmac_en(&mut self) -> DMAC_EN_W<CFG0_SPEC> {
+    pub fn dmac_en(&mut self) -> DMAC_EN_W<'_, CFG0_SPEC> {
         DMAC_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn int_en(&mut self) -> INT_EN_W<CFG0_SPEC> {
+    pub fn int_en(&mut self) -> INT_EN_W<'_, CFG0_SPEC> {
         INT_EN_W::new(self, 1)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - CPU sel option"]
     #[inline(always)]
-    pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<CPU_PERIOD_CONF_SPEC> {
+    pub fn cpusel_conf(&mut self) -> CPUSEL_CONF_W<'_, CPU_PERIOD_CONF_SPEC> {
         CPUSEL_CONF_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - CPU period sel"]
     #[inline(always)]
-    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<CPU_PERIOD_CONF_SPEC> {
+    pub fn cpuperiod_sel(&mut self) -> CPUPERIOD_SEL_W<'_, CPU_PERIOD_CONF_SPEC> {
         CPUPERIOD_SEL_W::new(self, 30)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to allow LP CPU to force access to HP_MEM regardless of permission management.\\\\ 0: disable force access HP_MEM \\\\ 1: enable force access HP_MEM \\\\"]
     #[inline(always)]
-    pub fn force_acc_hpmem_en(&mut self) -> FORCE_ACC_HPMEM_EN_W<FORCE_ACC_HP_SPEC> {
+    pub fn force_acc_hpmem_en(&mut self) -> FORCE_ACC_HPMEM_EN_W<'_, FORCE_ACC_HP_SPEC> {
         FORCE_ACC_HPMEM_EN_W::new(self, 0)
     }
 }

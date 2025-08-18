@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_hpsys_0_reset_bypass(
         &mut self,
-    ) -> LP_AONCLKRST_HPSYS_0_RESET_BYPASS_W<LP_AONCLKRST_HPSYS_0_RESET_BYPASS_SPEC> {
+    ) -> LP_AONCLKRST_HPSYS_0_RESET_BYPASS_W<'_, LP_AONCLKRST_HPSYS_0_RESET_BYPASS_SPEC> {
         LP_AONCLKRST_HPSYS_0_RESET_BYPASS_W::new(self, 0)
     }
 }

@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn host_frc_sdio11(&mut self) -> HOST_FRC_SDIO11_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_frc_sdio11(&mut self) -> HOST_FRC_SDIO11_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_FRC_SDIO11_W::new(self, 0)
     }
     #[doc = "Bits 5:9"]
     #[inline(always)]
-    pub fn host_frc_sdio20(&mut self) -> HOST_FRC_SDIO20_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_frc_sdio20(&mut self) -> HOST_FRC_SDIO20_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_FRC_SDIO20_W::new(self, 5)
     }
     #[doc = "Bits 10:14"]
     #[inline(always)]
-    pub fn host_frc_neg_samp(&mut self) -> HOST_FRC_NEG_SAMP_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_frc_neg_samp(&mut self) -> HOST_FRC_NEG_SAMP_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_FRC_NEG_SAMP_W::new(self, 10)
     }
     #[doc = "Bits 15:19"]
     #[inline(always)]
-    pub fn host_frc_pos_samp(&mut self) -> HOST_FRC_POS_SAMP_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_frc_pos_samp(&mut self) -> HOST_FRC_POS_SAMP_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_FRC_POS_SAMP_W::new(self, 15)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn host_frc_quick_in(&mut self) -> HOST_FRC_QUICK_IN_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_frc_quick_in(&mut self) -> HOST_FRC_QUICK_IN_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_FRC_QUICK_IN_W::new(self, 20)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn host_sdio20_int_delay(&mut self) -> HOST_SDIO20_INT_DELAY_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_sdio20_int_delay(&mut self) -> HOST_SDIO20_INT_DELAY_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_SDIO20_INT_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
-    pub fn host_sdio_pad_pullup(&mut self) -> HOST_SDIO_PAD_PULLUP_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_sdio_pad_pullup(&mut self) -> HOST_SDIO_PAD_PULLUP_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_SDIO_PAD_PULLUP_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
-    pub fn host_hspeed_con_en(&mut self) -> HOST_HSPEED_CON_EN_W<HOST_SLCHOST_CONF_SPEC> {
+    pub fn host_hspeed_con_en(&mut self) -> HOST_HSPEED_CON_EN_W<'_, HOST_SLCHOST_CONF_SPEC> {
         HOST_HSPEED_CON_EN_W::new(self, 27)
     }
 }

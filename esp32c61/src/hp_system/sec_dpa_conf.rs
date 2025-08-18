@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures whether or not to enable anti-DPA attack. Valid only when HP_SYSTEM_SEC_DPA_CFG_SEL is 0. \\\\ 0: Disable\\\\ 1-3: Enable. The larger the number, the higher the security level, which represents the ability to resist DPA attacks, with increased computational overhead of the hardware crypto-accelerators at the same time. \\\\"]
     #[inline(always)]
-    pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<SEC_DPA_CONF_SPEC> {
+    pub fn sec_dpa_level(&mut self) -> SEC_DPA_LEVEL_W<'_, SEC_DPA_CONF_SPEC> {
         SEC_DPA_LEVEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Configures whether to select HP_SYSTEM_SEC_DPA_LEVEL or EFUSE_SEC_DPA_LEVEL (from eFuse) to control DPA level. \\\\ 0: Select EFUSE_SEC_DPA_LEVEL\\\\ 1: Select HP_SYSTEM_SEC_DPA_LEVEL\\\\"]
     #[inline(always)]
-    pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<SEC_DPA_CONF_SPEC> {
+    pub fn sec_dpa_cfg_sel(&mut self) -> SEC_DPA_CFG_SEL_W<'_, SEC_DPA_CONF_SPEC> {
         SEC_DPA_CFG_SEL_W::new(self, 2)
     }
 }

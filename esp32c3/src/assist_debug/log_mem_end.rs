@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_log_mem_end"]
     #[inline(always)]
-    pub fn log_mem_end(&mut self) -> LOG_MEM_END_W<LOG_MEM_END_SPEC> {
+    pub fn log_mem_end(&mut self) -> LOG_MEM_END_W<'_, LOG_MEM_END_SPEC> {
         LOG_MEM_END_W::new(self, 0)
     }
 }

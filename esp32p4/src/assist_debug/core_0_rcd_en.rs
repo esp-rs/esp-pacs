@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable record PC"]
     #[inline(always)]
-    pub fn core_0_rcd_recorden(&mut self) -> CORE_0_RCD_RECORDEN_W<CORE_0_RCD_EN_SPEC> {
+    pub fn core_0_rcd_recorden(&mut self) -> CORE_0_RCD_RECORDEN_W<'_, CORE_0_RCD_EN_SPEC> {
         CORE_0_RCD_RECORDEN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable cpu pdebug function, must set this bit can get cpu PC"]
     #[inline(always)]
-    pub fn core_0_rcd_pdebugen(&mut self) -> CORE_0_RCD_PDEBUGEN_W<CORE_0_RCD_EN_SPEC> {
+    pub fn core_0_rcd_pdebugen(&mut self) -> CORE_0_RCD_PDEBUGEN_W<'_, CORE_0_RCD_EN_SPEC> {
         CORE_0_RCD_PDEBUGEN_W::new(self, 1)
     }
 }

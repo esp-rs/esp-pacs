@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - meaning unknown, set to one for TX"]
     #[inline(always)]
-    pub fn unknown(&mut self) -> UNKNOWN_W<PLCP2_SPEC> {
+    pub fn unknown(&mut self) -> UNKNOWN_W<'_, PLCP2_SPEC> {
         UNKNOWN_W::new(self, 5)
     }
 }

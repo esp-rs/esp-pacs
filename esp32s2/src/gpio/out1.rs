@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:21 - GPIO32 ~ 53 output value in simple GPIO output mode. The values of bit0 ~ bit13 correspond to GPIO32 ~ GPIO45. Bit14 ~ bit21 are invalid."]
     #[inline(always)]
-    pub fn data_orig(&mut self) -> DATA_ORIG_W<OUT1_SPEC> {
+    pub fn data_orig(&mut self) -> DATA_ORIG_W<'_, OUT1_SPEC> {
         DATA_ORIG_W::new(self, 0)
     }
 }

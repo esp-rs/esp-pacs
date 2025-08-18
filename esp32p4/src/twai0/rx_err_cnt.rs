@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The RX error counter register reflects the current value of the transmit error counter. Software has R/W permission in reset mode and RO in operation mode."]
     #[inline(always)]
-    pub fn rx_err_cnt(&mut self) -> RX_ERR_CNT_W<RX_ERR_CNT_SPEC> {
+    pub fn rx_err_cnt(&mut self) -> RX_ERR_CNT_W<'_, RX_ERR_CNT_SPEC> {
         RX_ERR_CNT_W::new(self, 0)
     }
 }

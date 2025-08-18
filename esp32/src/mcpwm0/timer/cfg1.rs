@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<CFG1_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, CFG1_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bits 3:4"]
     #[inline(always)]
-    pub fn mod_(&mut self) -> MOD_W<CFG1_SPEC> {
+    pub fn mod_(&mut self) -> MOD_W<'_, CFG1_SPEC> {
         MOD_W::new(self, 3)
     }
 }

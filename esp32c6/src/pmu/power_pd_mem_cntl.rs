@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - need_des"]
     #[inline(always)]
-    pub fn force_hp_mem_iso(&mut self) -> FORCE_HP_MEM_ISO_W<POWER_PD_MEM_CNTL_SPEC> {
+    pub fn force_hp_mem_iso(&mut self) -> FORCE_HP_MEM_ISO_W<'_, POWER_PD_MEM_CNTL_SPEC> {
         FORCE_HP_MEM_ISO_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - need_des"]
     #[inline(always)]
-    pub fn force_hp_mem_pd(&mut self) -> FORCE_HP_MEM_PD_W<POWER_PD_MEM_CNTL_SPEC> {
+    pub fn force_hp_mem_pd(&mut self) -> FORCE_HP_MEM_PD_W<'_, POWER_PD_MEM_CNTL_SPEC> {
         FORCE_HP_MEM_PD_W::new(self, 4)
     }
     #[doc = "Bits 24:27 - need_des"]
     #[inline(always)]
-    pub fn force_hp_mem_no_iso(&mut self) -> FORCE_HP_MEM_NO_ISO_W<POWER_PD_MEM_CNTL_SPEC> {
+    pub fn force_hp_mem_no_iso(&mut self) -> FORCE_HP_MEM_NO_ISO_W<'_, POWER_PD_MEM_CNTL_SPEC> {
         FORCE_HP_MEM_NO_ISO_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - need_des"]
     #[inline(always)]
-    pub fn force_hp_mem_pu(&mut self) -> FORCE_HP_MEM_PU_W<POWER_PD_MEM_CNTL_SPEC> {
+    pub fn force_hp_mem_pu(&mut self) -> FORCE_HP_MEM_PU_W<'_, POWER_PD_MEM_CNTL_SPEC> {
         FORCE_HP_MEM_PU_W::new(self, 28)
     }
 }

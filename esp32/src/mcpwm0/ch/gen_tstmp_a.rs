@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn a(&mut self) -> A_W<GEN_TSTMP_A_SPEC> {
+    pub fn a(&mut self) -> A_W<'_, GEN_TSTMP_A_SPEC> {
         A_W::new(self, 0)
     }
 }

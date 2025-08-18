@@ -1,9 +1,9 @@
 #[doc = "Register `QUERY_CLEAN` reader"]
 pub type R = crate::R<QUERY_CLEAN_SPEC>;
-#[doc = "Field `QUERY_CLEAN` reader - Represents whether or not the RSA memory completes initialization. 0: Not complete 1: Completed"]
+#[doc = "Field `QUERY_CLEAN` reader - Represents whether or not the RSA memory completes initialization.\\\\ 0: Not complete\\\\ 1: Completed\\\\"]
 pub type QUERY_CLEAN_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Represents whether or not the RSA memory completes initialization. 0: Not complete 1: Completed"]
+    #[doc = "Bit 0 - Represents whether or not the RSA memory completes initialization.\\\\ 0: Not complete\\\\ 1: Completed\\\\"]
     #[inline(always)]
     pub fn query_clean(&self) -> QUERY_CLEAN_R {
         QUERY_CLEAN_R::new((self.bits & 1) != 0)
@@ -17,7 +17,7 @@ impl core::fmt::Debug for R {
             .finish()
     }
 }
-#[doc = "RSA clean register\n\nYou can [`read`](crate::Reg::read) this register and get [`query_clean::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+#[doc = "RSA initialization status\n\nYou can [`read`](crate::Reg::read) this register and get [`query_clean::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct QUERY_CLEAN_SPEC;
 impl crate::RegisterSpec for QUERY_CLEAN_SPEC {
     type Ux = u32;

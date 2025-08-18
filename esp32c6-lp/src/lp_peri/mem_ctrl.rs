@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn uart_wakeup_flag_clr(&mut self) -> UART_WAKEUP_FLAG_CLR_W<MEM_CTRL_SPEC> {
+    pub fn uart_wakeup_flag_clr(&mut self) -> UART_WAKEUP_FLAG_CLR_W<'_, MEM_CTRL_SPEC> {
         UART_WAKEUP_FLAG_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn uart_wakeup_flag(&mut self) -> UART_WAKEUP_FLAG_W<MEM_CTRL_SPEC> {
+    pub fn uart_wakeup_flag(&mut self) -> UART_WAKEUP_FLAG_W<'_, MEM_CTRL_SPEC> {
         UART_WAKEUP_FLAG_W::new(self, 1)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn uart_wakeup_en(&mut self) -> UART_WAKEUP_EN_W<MEM_CTRL_SPEC> {
+    pub fn uart_wakeup_en(&mut self) -> UART_WAKEUP_EN_W<'_, MEM_CTRL_SPEC> {
         UART_WAKEUP_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<MEM_CTRL_SPEC> {
+    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<'_, MEM_CTRL_SPEC> {
         UART_MEM_FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<MEM_CTRL_SPEC> {
+    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<'_, MEM_CTRL_SPEC> {
         UART_MEM_FORCE_PU_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_t0_alarm_lo."]
     #[inline(always)]
-    pub fn alarm_lo(&mut self) -> ALARM_LO_W<ALARMLO_SPEC> {
+    pub fn alarm_lo(&mut self) -> ALARM_LO_W<'_, ALARMLO_SPEC> {
         ALARM_LO_W::new(self, 0)
     }
 }

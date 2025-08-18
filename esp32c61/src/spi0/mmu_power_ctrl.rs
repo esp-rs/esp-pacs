@@ -82,32 +82,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable mmu-memory clock force on"]
     #[inline(always)]
-    pub fn mmu_mem_force_on(&mut self) -> MMU_MEM_FORCE_ON_W<MMU_POWER_CTRL_SPEC> {
+    pub fn mmu_mem_force_on(&mut self) -> MMU_MEM_FORCE_ON_W<'_, MMU_POWER_CTRL_SPEC> {
         MMU_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force mmu-memory powerdown"]
     #[inline(always)]
-    pub fn mmu_mem_force_pd(&mut self) -> MMU_MEM_FORCE_PD_W<MMU_POWER_CTRL_SPEC> {
+    pub fn mmu_mem_force_pd(&mut self) -> MMU_MEM_FORCE_PD_W<'_, MMU_POWER_CTRL_SPEC> {
         MMU_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force mmu-memory powerup, in this case, the power should also be controlled by rtc."]
     #[inline(always)]
-    pub fn mmu_mem_force_pu(&mut self) -> MMU_MEM_FORCE_PU_W<MMU_POWER_CTRL_SPEC> {
+    pub fn mmu_mem_force_pu(&mut self) -> MMU_MEM_FORCE_PU_W<'_, MMU_POWER_CTRL_SPEC> {
         MMU_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - 0: Max page size , 1: Max page size/2 , 2: Max page size/4, 3: Max page size/8"]
     #[inline(always)]
-    pub fn mmu_page_size(&mut self) -> MMU_PAGE_SIZE_W<MMU_POWER_CTRL_SPEC> {
+    pub fn mmu_page_size(&mut self) -> MMU_PAGE_SIZE_W<'_, MMU_POWER_CTRL_SPEC> {
         MMU_PAGE_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 16:29 - MMU PSRAM aux control register"]
     #[inline(always)]
-    pub fn aux_ctrl(&mut self) -> AUX_CTRL_W<MMU_POWER_CTRL_SPEC> {
+    pub fn aux_ctrl(&mut self) -> AUX_CTRL_W<'_, MMU_POWER_CTRL_SPEC> {
         AUX_CTRL_W::new(self, 16)
     }
     #[doc = "Bit 30 - ECO register enable bit"]
     #[inline(always)]
-    pub fn rdn_ena(&mut self) -> RDN_ENA_W<MMU_POWER_CTRL_SPEC> {
+    pub fn rdn_ena(&mut self) -> RDN_ENA_W<'_, MMU_POWER_CTRL_SPEC> {
         RDN_ENA_W::new(self, 30)
     }
 }

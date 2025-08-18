@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SDA output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
-    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<CTRL_SPEC> {
+    pub fn sda_force_out(&mut self) -> SDA_FORCE_OUT_W<'_, CTRL_SPEC> {
         SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - SCL output mode. 0: open drain. 1: push pull."]
     #[inline(always)]
-    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<CTRL_SPEC> {
+    pub fn scl_force_out(&mut self) -> SCL_FORCE_OUT_W<'_, CTRL_SPEC> {
         SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to configure RTC I²C as a master."]
     #[inline(always)]
-    pub fn ms_mode(&mut self) -> MS_MODE_W<CTRL_SPEC> {
+    pub fn ms_mode(&mut self) -> MS_MODE_W<'_, CTRL_SPEC> {
         MS_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to 1, RTC I2C starts sending data."]
     #[inline(always)]
-    pub fn trans_start(&mut self) -> TRANS_START_W<CTRL_SPEC> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<'_, CTRL_SPEC> {
         TRANS_START_W::new(self, 3)
     }
     #[doc = "Bit 4 - This bit is used to control the sending mode. 0: send data from the most significant bit. 1: send data from the least significant bit."]
     #[inline(always)]
-    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<CTRL_SPEC> {
+    pub fn tx_lsb_first(&mut self) -> TX_LSB_FIRST_W<'_, CTRL_SPEC> {
         TX_LSB_FIRST_W::new(self, 4)
     }
     #[doc = "Bit 5 - This bit is used to control the storage mode for received data. 0: receive data from the most significant bit. 1: receive data from the least significant bit."]
     #[inline(always)]
-    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<CTRL_SPEC> {
+    pub fn rx_lsb_first(&mut self) -> RX_LSB_FIRST_W<'_, CTRL_SPEC> {
         RX_LSB_FIRST_W::new(self, 5)
     }
     #[doc = "Bit 29 - RTC I²C controller clock gate."]
     #[inline(always)]
-    pub fn clk_gate_en(&mut self) -> CLK_GATE_EN_W<CTRL_SPEC> {
+    pub fn clk_gate_en(&mut self) -> CLK_GATE_EN_W<'_, CTRL_SPEC> {
         CLK_GATE_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - RTC I²C software reset."]
     #[inline(always)]
-    pub fn reset(&mut self) -> RESET_W<CTRL_SPEC> {
+    pub fn reset(&mut self) -> RESET_W<'_, CTRL_SPEC> {
         RESET_W::new(self, 30)
     }
     #[doc = "Bit 31 - rtc i2c reg clk gating"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CTRL_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

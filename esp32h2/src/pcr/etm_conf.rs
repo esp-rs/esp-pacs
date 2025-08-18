@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable etm clock"]
     #[inline(always)]
-    pub fn etm_clk_en(&mut self) -> ETM_CLK_EN_W<ETM_CONF_SPEC> {
+    pub fn etm_clk_en(&mut self) -> ETM_CLK_EN_W<'_, ETM_CONF_SPEC> {
         ETM_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset etm module"]
     #[inline(always)]
-    pub fn etm_rst_en(&mut self) -> ETM_RST_EN_W<ETM_CONF_SPEC> {
+    pub fn etm_rst_en(&mut self) -> ETM_RST_EN_W<'_, ETM_CONF_SPEC> {
         ETM_RST_EN_W::new(self, 1)
     }
 }

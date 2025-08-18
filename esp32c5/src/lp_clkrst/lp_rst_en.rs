@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - Configures whether or not to reset HUK 0: Invalid.No effect 1: Reset"]
     #[inline(always)]
-    pub fn huk_reset_en(&mut self) -> HUK_RESET_EN_W<LP_RST_EN_SPEC> {
+    pub fn huk_reset_en(&mut self) -> HUK_RESET_EN_W<'_, LP_RST_EN_SPEC> {
         HUK_RESET_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not to reset EFUSE_CTRL always-on part 0: Invalid.No effect 1: Reset"]
     #[inline(always)]
-    pub fn aon_efuse_core_reset_en(&mut self) -> AON_EFUSE_CORE_RESET_EN_W<LP_RST_EN_SPEC> {
+    pub fn aon_efuse_core_reset_en(&mut self) -> AON_EFUSE_CORE_RESET_EN_W<'_, LP_RST_EN_SPEC> {
         AON_EFUSE_CORE_RESET_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to reset LP_TIMER 0: Invalid.No effect 1: Reset"]
     #[inline(always)]
-    pub fn lp_timer_reset_en(&mut self) -> LP_TIMER_RESET_EN_W<LP_RST_EN_SPEC> {
+    pub fn lp_timer_reset_en(&mut self) -> LP_TIMER_RESET_EN_W<'_, LP_RST_EN_SPEC> {
         LP_TIMER_RESET_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether or not to reset LP_WDT and super watch dog 0: Invalid.No effect 1: Reset"]
     #[inline(always)]
-    pub fn wdt_reset_en(&mut self) -> WDT_RESET_EN_W<LP_RST_EN_SPEC> {
+    pub fn wdt_reset_en(&mut self) -> WDT_RESET_EN_W<'_, LP_RST_EN_SPEC> {
         WDT_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures whether or not to reset analog peri, include brownout controller 0: Invalid.No effect 1: Reset"]
     #[inline(always)]
-    pub fn ana_peri_reset_en(&mut self) -> ANA_PERI_RESET_EN_W<LP_RST_EN_SPEC> {
+    pub fn ana_peri_reset_en(&mut self) -> ANA_PERI_RESET_EN_W<'_, LP_RST_EN_SPEC> {
         ANA_PERI_RESET_EN_W::new(self, 31)
     }
 }

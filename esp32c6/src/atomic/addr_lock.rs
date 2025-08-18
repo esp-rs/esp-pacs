@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - read to acquire hardware lock, write to release hardware lock"]
     #[inline(always)]
-    pub fn lock(&mut self) -> LOCK_W<ADDR_LOCK_SPEC> {
+    pub fn lock(&mut self) -> LOCK_W<'_, ADDR_LOCK_SPEC> {
         LOCK_W::new(self, 0)
     }
 }

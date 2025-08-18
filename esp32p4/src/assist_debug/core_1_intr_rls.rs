@@ -154,72 +154,84 @@ impl W {
     #[inline(always)]
     pub fn core_1_area_dram0_0_rd_rls(
         &mut self,
-    ) -> CORE_1_AREA_DRAM0_0_RD_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_AREA_DRAM0_0_RD_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_DRAM0_0_RD_RLS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Core1 dram0 area0 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_0_wr_rls(
         &mut self,
-    ) -> CORE_1_AREA_DRAM0_0_WR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_AREA_DRAM0_0_WR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_DRAM0_0_WR_RLS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Core1 dram0 area1 read monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_1_rd_rls(
         &mut self,
-    ) -> CORE_1_AREA_DRAM0_1_RD_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_AREA_DRAM0_1_RD_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_DRAM0_1_RD_RLS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Core1 dram0 area1 write monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_area_dram0_1_wr_rls(
         &mut self,
-    ) -> CORE_1_AREA_DRAM0_1_WR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_AREA_DRAM0_1_WR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_DRAM0_1_WR_RLS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Core1 PIF area0 read monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_area_pif_0_rd_rls(&mut self) -> CORE_1_AREA_PIF_0_RD_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_area_pif_0_rd_rls(
+        &mut self,
+    ) -> CORE_1_AREA_PIF_0_RD_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_PIF_0_RD_RLS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Core1 PIF area0 write monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_area_pif_0_wr_rls(&mut self) -> CORE_1_AREA_PIF_0_WR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_area_pif_0_wr_rls(
+        &mut self,
+    ) -> CORE_1_AREA_PIF_0_WR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_PIF_0_WR_RLS_W::new(self, 5)
     }
     #[doc = "Bit 6 - Core1 PIF area1 read monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_area_pif_1_rd_rls(&mut self) -> CORE_1_AREA_PIF_1_RD_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_area_pif_1_rd_rls(
+        &mut self,
+    ) -> CORE_1_AREA_PIF_1_RD_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_PIF_1_RD_RLS_W::new(self, 6)
     }
     #[doc = "Bit 7 - Core1 PIF area1 write monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_area_pif_1_wr_rls(&mut self) -> CORE_1_AREA_PIF_1_WR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_area_pif_1_wr_rls(
+        &mut self,
+    ) -> CORE_1_AREA_PIF_1_WR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_AREA_PIF_1_WR_RLS_W::new(self, 7)
     }
     #[doc = "Bit 8 - Core1 stackpoint underflow monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_sp_spill_min_rls(&mut self) -> CORE_1_SP_SPILL_MIN_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_sp_spill_min_rls(
+        &mut self,
+    ) -> CORE_1_SP_SPILL_MIN_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_SP_SPILL_MIN_RLS_W::new(self, 8)
     }
     #[doc = "Bit 9 - Core1 stackpoint overflow monitor interrupt enable"]
     #[inline(always)]
-    pub fn core_1_sp_spill_max_rls(&mut self) -> CORE_1_SP_SPILL_MAX_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    pub fn core_1_sp_spill_max_rls(
+        &mut self,
+    ) -> CORE_1_SP_SPILL_MAX_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_SP_SPILL_MAX_RLS_W::new(self, 9)
     }
     #[doc = "Bit 10 - IBUS busy monitor interrupt enable"]
     #[inline(always)]
     pub fn core_1_iram0_exception_monitor_rls(
         &mut self,
-    ) -> CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_IRAM0_EXCEPTION_MONITOR_RLS_W::new(self, 10)
     }
     #[doc = "Bit 11 - DBUS busy monitor interrupt enbale"]
     #[inline(always)]
     pub fn core_1_dram0_exception_monitor_rls(
         &mut self,
-    ) -> CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W<CORE_1_INTR_RLS_SPEC> {
+    ) -> CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W<'_, CORE_1_INTR_RLS_SPEC> {
         CORE_1_DRAM0_EXCEPTION_MONITOR_RLS_W::new(self, 11)
     }
 }

@@ -25,133 +25,133 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_END_W::new(self, n)
     }
     #[doc = "Bit 0 - reg_ch0_tx_end_int_clr."]
     #[inline(always)]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_ch1_tx_end_int_clr."]
     #[inline(always)]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<'_, INT_CLR_SPEC> {
         CH_TX_END_W::new(self, 1)
     }
     #[doc = "reg_ch(2-3)_rx_end_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_END_W::new(self, n + 2)
     }
     #[doc = "Bit 2 - reg_ch2_rx_end_int_clr."]
     #[inline(always)]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_ch3_rx_end_int_clr."]
     #[inline(always)]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<'_, INT_CLR_SPEC> {
         CH_RX_END_W::new(self, 3)
     }
     #[doc = "reg_ch(0-1)_err_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_err(&mut self, n: u8) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch_tx_err(&mut self, n: u8) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_ERR_W::new(self, n + 4)
     }
     #[doc = "Bit 4 - reg_ch0_err_int_clr."]
     #[inline(always)]
-    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_err(&mut self) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         CH_TX_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - reg_ch1_err_int_clr."]
     #[inline(always)]
-    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_err(&mut self) -> CH_TX_ERR_W<'_, INT_CLR_SPEC> {
         CH_TX_ERR_W::new(self, 5)
     }
     #[doc = "reg_ch(2-3)_err_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_err(&mut self, n: u8) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch_rx_err(&mut self, n: u8) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_ERR_W::new(self, n + 6)
     }
     #[doc = "Bit 6 - reg_ch2_err_int_clr."]
     #[inline(always)]
-    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_err(&mut self) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_ch3_err_int_clr."]
     #[inline(always)]
-    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_err(&mut self) -> CH_RX_ERR_W<'_, INT_CLR_SPEC> {
         CH_RX_ERR_W::new(self, 7)
     }
     #[doc = "reg_ch(0-1)_tx_thr_event_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_THR_EVENT_W::new(self, n + 8)
     }
     #[doc = "Bit 8 - reg_ch0_tx_thr_event_int_clr."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_ch1_tx_thr_event_int_clr."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 9)
     }
     #[doc = "reg_ch(2-3)_rx_thr_event_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH2_RX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_thr_event(&mut self, n: u8) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch_rx_thr_event(&mut self, n: u8) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_RX_THR_EVENT_W::new(self, n + 10)
     }
     #[doc = "Bit 10 - reg_ch2_rx_thr_event_int_clr."]
     #[inline(always)]
-    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch2_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_ch3_rx_thr_event_int_clr."]
     #[inline(always)]
-    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<INT_CLR_SPEC> {
+    pub fn ch3_rx_thr_event(&mut self) -> CH_RX_THR_EVENT_W<'_, INT_CLR_SPEC> {
         CH_RX_THR_EVENT_W::new(self, 11)
     }
     #[doc = "reg_ch(0-1)_tx_loop_int_clr."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_LOOP` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch_tx_loop(&mut self, n: u8) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CH_TX_LOOP_W::new(self, n + 12)
     }
     #[doc = "Bit 12 - reg_ch0_tx_loop_int_clr."]
     #[inline(always)]
-    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch0_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         CH_TX_LOOP_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_ch1_tx_loop_int_clr."]
     #[inline(always)]
-    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<INT_CLR_SPEC> {
+    pub fn ch1_tx_loop(&mut self) -> CH_TX_LOOP_W<'_, INT_CLR_SPEC> {
         CH_TX_LOOP_W::new(self, 13)
     }
 }

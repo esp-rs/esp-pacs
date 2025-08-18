@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - reg_xtal_tick_num"]
     #[inline(always)]
-    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<TICK_CONF_SPEC> {
+    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<'_, TICK_CONF_SPEC> {
         XTAL_TICK_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - reg_ck8m_tick_num"]
     #[inline(always)]
-    pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<TICK_CONF_SPEC> {
+    pub fn ck8m_tick_num(&mut self) -> CK8M_TICK_NUM_W<'_, TICK_CONF_SPEC> {
         CK8M_TICK_NUM_W::new(self, 8)
     }
     #[doc = "Bit 16 - reg_tick_enable"]
     #[inline(always)]
-    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<TICK_CONF_SPEC> {
+    pub fn tick_enable(&mut self) -> TICK_ENABLE_W<'_, TICK_CONF_SPEC> {
         TICK_ENABLE_W::new(self, 16)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures y coordinate of first window"]
     #[inline(always)]
-    pub fn hist_y_offs(&mut self) -> HIST_Y_OFFS_W<HIST_OFFS_SPEC> {
+    pub fn hist_y_offs(&mut self) -> HIST_Y_OFFS_W<'_, HIST_OFFS_SPEC> {
         HIST_Y_OFFS_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures x coordinate of first window"]
     #[inline(always)]
-    pub fn hist_x_offs(&mut self) -> HIST_X_OFFS_W<HIST_OFFS_SPEC> {
+    pub fn hist_x_offs(&mut self) -> HIST_X_OFFS_W<'_, HIST_OFFS_SPEC> {
         HIST_X_OFFS_W::new(self, 16)
     }
 }

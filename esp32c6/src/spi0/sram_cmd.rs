@@ -180,7 +180,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 22 - In the dummy phase of a MSPI read data transfer when accesses to external RAM, the signal level of SPI bus is output by the MSPI controller."]
     #[inline(always)]
-    pub fn sdummy_rin(&mut self) -> SDUMMY_RIN_W<SRAM_CMD_SPEC> {
+    pub fn sdummy_rin(&mut self) -> SDUMMY_RIN_W<'_, SRAM_CMD_SPEC> {
         SDUMMY_RIN_W::new(self, 22)
     }
 }

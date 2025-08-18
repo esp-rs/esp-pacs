@@ -272,87 +272,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn modemis(&mut self) -> MODEMIS_W<GINTSTS_SPEC> {
+    pub fn modemis(&mut self) -> MODEMIS_W<'_, GINTSTS_SPEC> {
         MODEMIS_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn sof(&mut self) -> SOF_W<GINTSTS_SPEC> {
+    pub fn sof(&mut self) -> SOF_W<'_, GINTSTS_SPEC> {
         SOF_W::new(self, 3)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn erlysusp(&mut self) -> ERLYSUSP_W<GINTSTS_SPEC> {
+    pub fn erlysusp(&mut self) -> ERLYSUSP_W<'_, GINTSTS_SPEC> {
         ERLYSUSP_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn usbsusp(&mut self) -> USBSUSP_W<GINTSTS_SPEC> {
+    pub fn usbsusp(&mut self) -> USBSUSP_W<'_, GINTSTS_SPEC> {
         USBSUSP_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn usbrst(&mut self) -> USBRST_W<GINTSTS_SPEC> {
+    pub fn usbrst(&mut self) -> USBRST_W<'_, GINTSTS_SPEC> {
         USBRST_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn enumdone(&mut self) -> ENUMDONE_W<GINTSTS_SPEC> {
+    pub fn enumdone(&mut self) -> ENUMDONE_W<'_, GINTSTS_SPEC> {
         ENUMDONE_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn isooutdrop(&mut self) -> ISOOUTDROP_W<GINTSTS_SPEC> {
+    pub fn isooutdrop(&mut self) -> ISOOUTDROP_W<'_, GINTSTS_SPEC> {
         ISOOUTDROP_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn eopf(&mut self) -> EOPF_W<GINTSTS_SPEC> {
+    pub fn eopf(&mut self) -> EOPF_W<'_, GINTSTS_SPEC> {
         EOPF_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn epmis(&mut self) -> EPMIS_W<GINTSTS_SPEC> {
+    pub fn epmis(&mut self) -> EPMIS_W<'_, GINTSTS_SPEC> {
         EPMIS_W::new(self, 17)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn incompisoin(&mut self) -> INCOMPISOIN_W<GINTSTS_SPEC> {
+    pub fn incompisoin(&mut self) -> INCOMPISOIN_W<'_, GINTSTS_SPEC> {
         INCOMPISOIN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn incompip(&mut self) -> INCOMPIP_W<GINTSTS_SPEC> {
+    pub fn incompip(&mut self) -> INCOMPIP_W<'_, GINTSTS_SPEC> {
         INCOMPIP_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn fetsusp(&mut self) -> FETSUSP_W<GINTSTS_SPEC> {
+    pub fn fetsusp(&mut self) -> FETSUSP_W<'_, GINTSTS_SPEC> {
         FETSUSP_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
-    pub fn resetdet(&mut self) -> RESETDET_W<GINTSTS_SPEC> {
+    pub fn resetdet(&mut self) -> RESETDET_W<'_, GINTSTS_SPEC> {
         RESETDET_W::new(self, 23)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn conidstschng(&mut self) -> CONIDSTSCHNG_W<GINTSTS_SPEC> {
+    pub fn conidstschng(&mut self) -> CONIDSTSCHNG_W<'_, GINTSTS_SPEC> {
         CONIDSTSCHNG_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn disconnint(&mut self) -> DISCONNINT_W<GINTSTS_SPEC> {
+    pub fn disconnint(&mut self) -> DISCONNINT_W<'_, GINTSTS_SPEC> {
         DISCONNINT_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn sessreqint(&mut self) -> SESSREQINT_W<GINTSTS_SPEC> {
+    pub fn sessreqint(&mut self) -> SESSREQINT_W<'_, GINTSTS_SPEC> {
         SESSREQINT_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn wkupint(&mut self) -> WKUPINT_W<GINTSTS_SPEC> {
+    pub fn wkupint(&mut self) -> WKUPINT_W<'_, GINTSTS_SPEC> {
         WKUPINT_W::new(self, 31)
     }
 }

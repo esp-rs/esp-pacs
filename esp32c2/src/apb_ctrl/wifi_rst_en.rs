@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
-    pub fn mac_rst(&mut self) -> MAC_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn mac_rst(&mut self) -> MAC_RST_W<'_, WIFI_RST_EN_SPEC> {
         MAC_RST_W::new(self, 2)
     }
     #[doc = "Bit 27 - Set this bit to reset BLE RPA module. Clear the bit to release BLE RPA module."]
     #[inline(always)]
-    pub fn ble_rpa_rst(&mut self) -> BLE_RPA_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn ble_rpa_rst(&mut self) -> BLE_RPA_RST_W<'_, WIFI_RST_EN_SPEC> {
         BLE_RPA_RST_W::new(self, 27)
     }
 }

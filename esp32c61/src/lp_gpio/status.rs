@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - The interrupt status of LP_GPIO0 ~ LP_GPIO6, can be configured by the software. - Bit0 ~ bit6 are corresponding to LP_GPIO0 ~ LP_GPIO6. Bit7 ~ bit31 are invalid. - Each bit represents the status of its corresponding LP_GPIO: - 0: Represents the LP_GPIO does not generate the interrupt configured by LP_GPIO_PIN0_INT_TYPE, or this bit is configured to 0 by the software. - 1: Represents the LP_GPIO generates the interrupt configured by LP_GPIO_PIN0_INT_TYPE, or this bit is configured to 1 by the software."]
     #[inline(always)]
-    pub fn interrupt(&mut self) -> INTERRUPT_W<STATUS_SPEC> {
+    pub fn interrupt(&mut self) -> INTERRUPT_W<'_, STATUS_SPEC> {
         INTERRUPT_W::new(self, 0)
     }
 }

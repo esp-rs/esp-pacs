@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register value in I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
-    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<SCL_FILTER_CFG_SPEC> {
+    pub fn scl_filter_thres(&mut self) -> SCL_FILTER_THRES_W<'_, SCL_FILTER_CFG_SPEC> {
         SCL_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bit 4 - This is the filter enable bit for SCL."]
     #[inline(always)]
-    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<SCL_FILTER_CFG_SPEC> {
+    pub fn scl_filter_en(&mut self) -> SCL_FILTER_EN_W<'_, SCL_FILTER_CFG_SPEC> {
         SCL_FILTER_EN_W::new(self, 4)
     }
 }

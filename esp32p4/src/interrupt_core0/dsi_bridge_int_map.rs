@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core0_dsi_bridge_int_map(
         &mut self,
-    ) -> CORE0_DSI_BRIDGE_INT_MAP_W<DSI_BRIDGE_INT_MAP_SPEC> {
+    ) -> CORE0_DSI_BRIDGE_INT_MAP_W<'_, DSI_BRIDGE_INT_MAP_SPEC> {
         CORE0_DSI_BRIDGE_INT_MAP_W::new(self, 0)
     }
 }

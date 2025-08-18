@@ -94,42 +94,44 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_reset(&mut self) -> FORCE_HP_CPU_RESET_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_reset(&mut self) -> FORCE_HP_CPU_RESET_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_iso(&mut self) -> FORCE_HP_CPU_ISO_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_iso(&mut self) -> FORCE_HP_CPU_ISO_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_pu(&mut self) -> FORCE_HP_CPU_PU_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_pu(&mut self) -> FORCE_HP_CPU_PU_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_no_reset(&mut self) -> FORCE_HP_CPU_NO_RESET_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_no_reset(
+        &mut self,
+    ) -> FORCE_HP_CPU_NO_RESET_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_no_iso(&mut self) -> FORCE_HP_CPU_NO_ISO_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_no_iso(&mut self) -> FORCE_HP_CPU_NO_ISO_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn force_hp_cpu_pd(&mut self) -> FORCE_HP_CPU_PD_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn force_hp_cpu_pd(&mut self) -> FORCE_HP_CPU_PD_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         FORCE_HP_CPU_PD_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_cpu_mask(&mut self) -> PD_HP_CPU_MASK_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn pd_hp_cpu_mask(&mut self) -> PD_HP_CPU_MASK_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         PD_HP_CPU_MASK_W::new(self, 6)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_cpu_pd_mask(&mut self) -> PD_HP_CPU_PD_MASK_W<POWER_PD_HPCPU_CNTL_SPEC> {
+    pub fn pd_hp_cpu_pd_mask(&mut self) -> PD_HP_CPU_PD_MASK_W<'_, POWER_PD_HPCPU_CNTL_SPEC> {
         PD_HP_CPU_PD_MASK_W::new(self, 27)
     }
 }

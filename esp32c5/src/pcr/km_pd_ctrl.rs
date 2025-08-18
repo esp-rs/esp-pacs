@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to force power up KM memory."]
     #[inline(always)]
-    pub fn km_mem_force_pu(&mut self) -> KM_MEM_FORCE_PU_W<KM_PD_CTRL_SPEC> {
+    pub fn km_mem_force_pu(&mut self) -> KM_MEM_FORCE_PU_W<'_, KM_PD_CTRL_SPEC> {
         KM_MEM_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force power down KM memory."]
     #[inline(always)]
-    pub fn km_mem_force_pd(&mut self) -> KM_MEM_FORCE_PD_W<KM_PD_CTRL_SPEC> {
+    pub fn km_mem_force_pd(&mut self) -> KM_MEM_FORCE_PD_W<'_, KM_PD_CTRL_SPEC> {
         KM_MEM_FORCE_PD_W::new(self, 2)
     }
 }

@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn slc0_token_no_replace(&mut self) -> SLC0_TOKEN_NO_REPLACE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_token_no_replace(&mut self) -> SLC0_TOKEN_NO_REPLACE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_TOKEN_NO_REPLACE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn slc0_infor_no_replace(&mut self) -> SLC0_INFOR_NO_REPLACE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_infor_no_replace(&mut self) -> SLC0_INFOR_NO_REPLACE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_INFOR_NO_REPLACE_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn slc0_rx_fill_mode(&mut self) -> SLC0_RX_FILL_MODE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_rx_fill_mode(&mut self) -> SLC0_RX_FILL_MODE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_RX_FILL_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn slc0_rx_eof_mode(&mut self) -> SLC0_RX_EOF_MODE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_rx_eof_mode(&mut self) -> SLC0_RX_EOF_MODE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_RX_EOF_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn slc0_rx_fill_en(&mut self) -> SLC0_RX_FILL_EN_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_rx_fill_en(&mut self) -> SLC0_RX_FILL_EN_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_RX_FILL_EN_W::new(self, 4)
     }
     #[doc = "Bits 5:15"]
     #[inline(always)]
-    pub fn slc0_rd_retry_threshold(&mut self) -> SLC0_RD_RETRY_THRESHOLD_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc0_rd_retry_threshold(&mut self) -> SLC0_RD_RETRY_THRESHOLD_W<'_, RX_DSCR_CONF_SPEC> {
         SLC0_RD_RETRY_THRESHOLD_W::new(self, 5)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn slc1_token_no_replace(&mut self) -> SLC1_TOKEN_NO_REPLACE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_token_no_replace(&mut self) -> SLC1_TOKEN_NO_REPLACE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_TOKEN_NO_REPLACE_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn slc1_infor_no_replace(&mut self) -> SLC1_INFOR_NO_REPLACE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_infor_no_replace(&mut self) -> SLC1_INFOR_NO_REPLACE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_INFOR_NO_REPLACE_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn slc1_rx_fill_mode(&mut self) -> SLC1_RX_FILL_MODE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_rx_fill_mode(&mut self) -> SLC1_RX_FILL_MODE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_RX_FILL_MODE_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn slc1_rx_eof_mode(&mut self) -> SLC1_RX_EOF_MODE_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_rx_eof_mode(&mut self) -> SLC1_RX_EOF_MODE_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_RX_EOF_MODE_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn slc1_rx_fill_en(&mut self) -> SLC1_RX_FILL_EN_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_rx_fill_en(&mut self) -> SLC1_RX_FILL_EN_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_RX_FILL_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:31"]
     #[inline(always)]
-    pub fn slc1_rd_retry_threshold(&mut self) -> SLC1_RD_RETRY_THRESHOLD_W<RX_DSCR_CONF_SPEC> {
+    pub fn slc1_rd_retry_threshold(&mut self) -> SLC1_RD_RETRY_THRESHOLD_W<'_, RX_DSCR_CONF_SPEC> {
         SLC1_RD_RETRY_THRESHOLD_W::new(self, 21)
     }
 }

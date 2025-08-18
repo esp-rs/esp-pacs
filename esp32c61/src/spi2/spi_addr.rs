@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the address to slave. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_addr_value(&mut self) -> SPI_USR_ADDR_VALUE_W<SPI_ADDR_SPEC> {
+    pub fn spi_usr_addr_value(&mut self) -> SPI_USR_ADDR_VALUE_W<'_, SPI_ADDR_SPEC> {
         SPI_USR_ADDR_VALUE_W::new(self, 0)
     }
 }

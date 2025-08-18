@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - Set this bit to reset DEDICATED GPIO module."]
     #[inline(always)]
-    pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<CPU_PERI_RST_EN_SPEC> {
+    pub fn rst_en_dedicated_gpio(&mut self) -> RST_EN_DEDICATED_GPIO_W<'_, CPU_PERI_RST_EN_SPEC> {
         RST_EN_DEDICATED_GPIO_W::new(self, 7)
     }
 }

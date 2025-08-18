@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - saradc tsens interrupt raw"]
     #[inline(always)]
-    pub fn tsens(&mut self) -> TSENS_W<INT_RAW_SPEC> {
+    pub fn tsens(&mut self) -> TSENS_W<'_, INT_RAW_SPEC> {
         TSENS_W::new(self, 25)
     }
     #[doc = "Bit 26 - saradc thres1 low interrupt raw"]
     #[inline(always)]
-    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_RAW_SPEC> {
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<'_, INT_RAW_SPEC> {
         THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - saradc thres0 low interrupt raw"]
     #[inline(always)]
-    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_RAW_SPEC> {
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<'_, INT_RAW_SPEC> {
         THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - saradc thres1 high interrupt raw"]
     #[inline(always)]
-    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_RAW_SPEC> {
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<'_, INT_RAW_SPEC> {
         THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - saradc thres0 high interrupt raw"]
     #[inline(always)]
-    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_RAW_SPEC> {
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<'_, INT_RAW_SPEC> {
         THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - saradc2 done interrupt raw"]
     #[inline(always)]
-    pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_RAW_SPEC> {
+    pub fn adc2_done(&mut self) -> ADC2_DONE_W<'_, INT_RAW_SPEC> {
         ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - saradc1 done interrupt raw"]
     #[inline(always)]
-    pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_RAW_SPEC> {
+    pub fn adc1_done(&mut self) -> ADC1_DONE_W<'_, INT_RAW_SPEC> {
         ADC1_DONE_W::new(self, 31)
     }
 }

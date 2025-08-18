@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable AES interrupt.\\\\ 0: Disable\\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn int_ena(&mut self) -> INT_ENA_W<INT_ENA_SPEC> {
+    pub fn int_ena(&mut self) -> INT_ENA_W<'_, INT_ENA_SPEC> {
         INT_ENA_W::new(self, 0)
     }
 }

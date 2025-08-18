@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable timing adjust clock for all reading operations."]
     #[inline(always)]
-    pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<TIMING_CALI_SPEC> {
+    pub fn timing_clk_ena(&mut self) -> TIMING_CLK_ENA_W<'_, TIMING_CALI_SPEC> {
         TIMING_CLK_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable timing auto-calibration for all reading operations."]
     #[inline(always)]
-    pub fn timing_cali(&mut self) -> TIMING_CALI_W<TIMING_CALI_SPEC> {
+    pub fn timing_cali(&mut self) -> TIMING_CALI_W<'_, TIMING_CALI_SPEC> {
         TIMING_CALI_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - add extra dummy spi clock cycle length for spi clock calibration."]
     #[inline(always)]
-    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<TIMING_CALI_SPEC> {
+    pub fn extra_dummy_cyclelen(&mut self) -> EXTRA_DUMMY_CYCLELEN_W<'_, TIMING_CALI_SPEC> {
         EXTRA_DUMMY_CYCLELEN_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set this bit to enable DLL for timing calibration in DDR mode when accessed to flash."]
     #[inline(always)]
-    pub fn dll_timing_cali(&mut self) -> DLL_TIMING_CALI_W<TIMING_CALI_SPEC> {
+    pub fn dll_timing_cali(&mut self) -> DLL_TIMING_CALI_W<'_, TIMING_CALI_SPEC> {
         DLL_TIMING_CALI_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to update delay mode, delay num and extra dummy in MSPI."]
     #[inline(always)]
-    pub fn update(&mut self) -> UPDATE_W<TIMING_CALI_SPEC> {
+    pub fn update(&mut self) -> UPDATE_W<'_, TIMING_CALI_SPEC> {
         UPDATE_W::new(self, 6)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_h264_dma2d_in_ch2_int_map(
         &mut self,
-    ) -> CORE0_H264_DMA2D_IN_CH2_INT_MAP_W<H264_DMA2D_IN_CH2_INT_MAP_SPEC> {
+    ) -> CORE0_H264_DMA2D_IN_CH2_INT_MAP_W<'_, H264_DMA2D_IN_CH2_INT_MAP_SPEC> {
         CORE0_H264_DMA2D_IN_CH2_INT_MAP_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - Command content"]
     #[inline(always)]
-    pub fn val(&mut self) -> VAL_W<CMD_SPEC> {
+    pub fn val(&mut self) -> VAL_W<'_, CMD_SPEC> {
         VAL_W::new(self, 0)
     }
     #[doc = "Bit 31 - Bit is set by HW when command is done"]
     #[inline(always)]
-    pub fn done(&mut self) -> DONE_W<CMD_SPEC> {
+    pub fn done(&mut self) -> DONE_W<'_, CMD_SPEC> {
         DONE_W::new(self, 31)
     }
 }

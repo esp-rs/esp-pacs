@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn a_upmethod(&mut self) -> A_UPMETHOD_W<GEN_STMP_CFG_SPEC> {
+    pub fn a_upmethod(&mut self) -> A_UPMETHOD_W<'_, GEN_STMP_CFG_SPEC> {
         A_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn b_upmethod(&mut self) -> B_UPMETHOD_W<GEN_STMP_CFG_SPEC> {
+    pub fn b_upmethod(&mut self) -> B_UPMETHOD_W<'_, GEN_STMP_CFG_SPEC> {
         B_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn a_shdw_full(&mut self) -> A_SHDW_FULL_W<GEN_STMP_CFG_SPEC> {
+    pub fn a_shdw_full(&mut self) -> A_SHDW_FULL_W<'_, GEN_STMP_CFG_SPEC> {
         A_SHDW_FULL_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn b_shdw_full(&mut self) -> B_SHDW_FULL_W<GEN_STMP_CFG_SPEC> {
+    pub fn b_shdw_full(&mut self) -> B_SHDW_FULL_W<'_, GEN_STMP_CFG_SPEC> {
         B_SHDW_FULL_W::new(self, 9)
     }
 }

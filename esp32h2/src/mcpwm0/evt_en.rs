@@ -314,152 +314,152 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set this bit high to enable timer0 stop event generate"]
     #[inline(always)]
-    pub fn evt_timer0_stop_en(&mut self) -> EVT_TIMER0_STOP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer0_stop_en(&mut self) -> EVT_TIMER0_STOP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER0_STOP_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - set this bit high to enable timer1 stop event generate"]
     #[inline(always)]
-    pub fn evt_timer1_stop_en(&mut self) -> EVT_TIMER1_STOP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer1_stop_en(&mut self) -> EVT_TIMER1_STOP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER1_STOP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - set this bit high to enable timer2 stop event generate"]
     #[inline(always)]
-    pub fn evt_timer2_stop_en(&mut self) -> EVT_TIMER2_STOP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer2_stop_en(&mut self) -> EVT_TIMER2_STOP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER2_STOP_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - set this bit high to enable timer0 equal zero event generate"]
     #[inline(always)]
-    pub fn evt_timer0_tez_en(&mut self) -> EVT_TIMER0_TEZ_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer0_tez_en(&mut self) -> EVT_TIMER0_TEZ_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER0_TEZ_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - set this bit high to enable timer1 equal zero event generate"]
     #[inline(always)]
-    pub fn evt_timer1_tez_en(&mut self) -> EVT_TIMER1_TEZ_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer1_tez_en(&mut self) -> EVT_TIMER1_TEZ_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER1_TEZ_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - set this bit high to enable timer2 equal zero event generate"]
     #[inline(always)]
-    pub fn evt_timer2_tez_en(&mut self) -> EVT_TIMER2_TEZ_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer2_tez_en(&mut self) -> EVT_TIMER2_TEZ_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER2_TEZ_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - set this bit high to enable timer0 equal period event generate"]
     #[inline(always)]
-    pub fn evt_timer0_tep_en(&mut self) -> EVT_TIMER0_TEP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer0_tep_en(&mut self) -> EVT_TIMER0_TEP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER0_TEP_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - set this bit high to enable timer1 equal period event generate"]
     #[inline(always)]
-    pub fn evt_timer1_tep_en(&mut self) -> EVT_TIMER1_TEP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer1_tep_en(&mut self) -> EVT_TIMER1_TEP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER1_TEP_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - set this bit high to enable timer2 equal period event generate"]
     #[inline(always)]
-    pub fn evt_timer2_tep_en(&mut self) -> EVT_TIMER2_TEP_EN_W<EVT_EN_SPEC> {
+    pub fn evt_timer2_tep_en(&mut self) -> EVT_TIMER2_TEP_EN_W<'_, EVT_EN_SPEC> {
         EVT_TIMER2_TEP_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - set this bit high to enable PWM generator0 timer equal a event generate"]
     #[inline(always)]
-    pub fn evt_op0_tea_en(&mut self) -> EVT_OP0_TEA_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op0_tea_en(&mut self) -> EVT_OP0_TEA_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP0_TEA_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - set this bit high to enable PWM generator1 timer equal a event generate"]
     #[inline(always)]
-    pub fn evt_op1_tea_en(&mut self) -> EVT_OP1_TEA_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op1_tea_en(&mut self) -> EVT_OP1_TEA_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP1_TEA_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - set this bit high to enable PWM generator2 timer equal a event generate"]
     #[inline(always)]
-    pub fn evt_op2_tea_en(&mut self) -> EVT_OP2_TEA_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op2_tea_en(&mut self) -> EVT_OP2_TEA_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP2_TEA_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - set this bit high to enable PWM generator0 timer equal b event generate"]
     #[inline(always)]
-    pub fn evt_op0_teb_en(&mut self) -> EVT_OP0_TEB_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op0_teb_en(&mut self) -> EVT_OP0_TEB_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP0_TEB_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - set this bit high to enable PWM generator1 timer equal b event generate"]
     #[inline(always)]
-    pub fn evt_op1_teb_en(&mut self) -> EVT_OP1_TEB_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op1_teb_en(&mut self) -> EVT_OP1_TEB_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP1_TEB_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - set this bit high to enable PWM generator2 timer equal b event generate"]
     #[inline(always)]
-    pub fn evt_op2_teb_en(&mut self) -> EVT_OP2_TEB_EN_W<EVT_EN_SPEC> {
+    pub fn evt_op2_teb_en(&mut self) -> EVT_OP2_TEB_EN_W<'_, EVT_EN_SPEC> {
         EVT_OP2_TEB_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - set this bit high to enable fault0 event generate"]
     #[inline(always)]
-    pub fn evt_f0_en(&mut self) -> EVT_F0_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f0_en(&mut self) -> EVT_F0_EN_W<'_, EVT_EN_SPEC> {
         EVT_F0_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - set this bit high to enable fault1 event generate"]
     #[inline(always)]
-    pub fn evt_f1_en(&mut self) -> EVT_F1_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f1_en(&mut self) -> EVT_F1_EN_W<'_, EVT_EN_SPEC> {
         EVT_F1_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - set this bit high to enable fault2 event generate"]
     #[inline(always)]
-    pub fn evt_f2_en(&mut self) -> EVT_F2_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f2_en(&mut self) -> EVT_F2_EN_W<'_, EVT_EN_SPEC> {
         EVT_F2_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - set this bit high to enable fault0 clear event generate"]
     #[inline(always)]
-    pub fn evt_f0_clr_en(&mut self) -> EVT_F0_CLR_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f0_clr_en(&mut self) -> EVT_F0_CLR_EN_W<'_, EVT_EN_SPEC> {
         EVT_F0_CLR_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - set this bit high to enable fault1 clear event generate"]
     #[inline(always)]
-    pub fn evt_f1_clr_en(&mut self) -> EVT_F1_CLR_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f1_clr_en(&mut self) -> EVT_F1_CLR_EN_W<'_, EVT_EN_SPEC> {
         EVT_F1_CLR_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - set this bit high to enable fault2 clear event generate"]
     #[inline(always)]
-    pub fn evt_f2_clr_en(&mut self) -> EVT_F2_CLR_EN_W<EVT_EN_SPEC> {
+    pub fn evt_f2_clr_en(&mut self) -> EVT_F2_CLR_EN_W<'_, EVT_EN_SPEC> {
         EVT_F2_CLR_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - set this bit high to enable cycle by cycle trip0 event generate"]
     #[inline(always)]
-    pub fn evt_tz0_cbc_en(&mut self) -> EVT_TZ0_CBC_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz0_cbc_en(&mut self) -> EVT_TZ0_CBC_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ0_CBC_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - set this bit high to enable cycle by cycle trip1 event generate"]
     #[inline(always)]
-    pub fn evt_tz1_cbc_en(&mut self) -> EVT_TZ1_CBC_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz1_cbc_en(&mut self) -> EVT_TZ1_CBC_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ1_CBC_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - set this bit high to enable cycle by cycle trip2 event generate"]
     #[inline(always)]
-    pub fn evt_tz2_cbc_en(&mut self) -> EVT_TZ2_CBC_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz2_cbc_en(&mut self) -> EVT_TZ2_CBC_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ2_CBC_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - set this bit high to enable one shot trip0 event generate"]
     #[inline(always)]
-    pub fn evt_tz0_ost_en(&mut self) -> EVT_TZ0_OST_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz0_ost_en(&mut self) -> EVT_TZ0_OST_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ0_OST_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - set this bit high to enable one shot trip1 event generate"]
     #[inline(always)]
-    pub fn evt_tz1_ost_en(&mut self) -> EVT_TZ1_OST_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz1_ost_en(&mut self) -> EVT_TZ1_OST_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ1_OST_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - set this bit high to enable one shot trip2 event generate"]
     #[inline(always)]
-    pub fn evt_tz2_ost_en(&mut self) -> EVT_TZ2_OST_EN_W<EVT_EN_SPEC> {
+    pub fn evt_tz2_ost_en(&mut self) -> EVT_TZ2_OST_EN_W<'_, EVT_EN_SPEC> {
         EVT_TZ2_OST_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - set this bit high to enable capture0 event generate"]
     #[inline(always)]
-    pub fn evt_cap0_en(&mut self) -> EVT_CAP0_EN_W<EVT_EN_SPEC> {
+    pub fn evt_cap0_en(&mut self) -> EVT_CAP0_EN_W<'_, EVT_EN_SPEC> {
         EVT_CAP0_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - set this bit high to enable capture1 event generate"]
     #[inline(always)]
-    pub fn evt_cap1_en(&mut self) -> EVT_CAP1_EN_W<EVT_EN_SPEC> {
+    pub fn evt_cap1_en(&mut self) -> EVT_CAP1_EN_W<'_, EVT_EN_SPEC> {
         EVT_CAP1_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - set this bit high to enable capture2 event generate"]
     #[inline(always)]
-    pub fn evt_cap2_en(&mut self) -> EVT_CAP2_EN_W<EVT_EN_SPEC> {
+    pub fn evt_cap2_en(&mut self) -> EVT_CAP2_EN_W<'_, EVT_EN_SPEC> {
         EVT_CAP2_EN_W::new(self, 29)
     }
 }

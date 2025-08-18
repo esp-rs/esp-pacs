@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Low 32 bits of the value that a reload will load onto timer %s time-base counter."]
     #[inline(always)]
-    pub fn load_lo(&mut self) -> LOAD_LO_W<LOADLO_SPEC> {
+    pub fn load_lo(&mut self) -> LOAD_LO_W<'_, LOADLO_SPEC> {
         LOAD_LO_W::new(self, 0)
     }
 }

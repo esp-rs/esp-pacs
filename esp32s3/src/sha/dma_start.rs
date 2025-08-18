@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_START_SPEC> {
 impl W {
     #[doc = "Bit 0 - start dma-sha"]
     #[inline(always)]
-    pub fn dma_start(&mut self) -> DMA_START_W<DMA_START_SPEC> {
+    pub fn dma_start(&mut self) -> DMA_START_W<'_, DMA_START_SPEC> {
         DMA_START_W::new(self, 0)
     }
 }

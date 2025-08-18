@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:8"]
     #[inline(always)]
-    pub fn timer_prescaler(&mut self) -> TIMER_PRESCALER_W<TIMER_CTRL_SPEC> {
+    pub fn timer_prescaler(&mut self) -> TIMER_PRESCALER_W<'_, TIMER_CTRL_SPEC> {
         TIMER_PRESCALER_W::new(self, 1)
     }
 }

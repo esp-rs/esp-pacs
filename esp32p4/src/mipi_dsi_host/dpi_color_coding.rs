@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - NA"]
     #[inline(always)]
-    pub fn dpi_color_coding(&mut self) -> DPI_COLOR_CODING_W<DPI_COLOR_CODING_SPEC> {
+    pub fn dpi_color_coding(&mut self) -> DPI_COLOR_CODING_W<'_, DPI_COLOR_CODING_SPEC> {
         DPI_COLOR_CODING_W::new(self, 0)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn loosely18_en(&mut self) -> LOOSELY18_EN_W<DPI_COLOR_CODING_SPEC> {
+    pub fn loosely18_en(&mut self) -> LOOSELY18_EN_W<'_, DPI_COLOR_CODING_SPEC> {
         LOOSELY18_EN_W::new(self, 8)
     }
 }

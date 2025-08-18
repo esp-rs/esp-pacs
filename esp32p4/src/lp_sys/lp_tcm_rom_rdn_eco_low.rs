@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn lp_tcm_rom_rdn_eco_low(
         &mut self,
-    ) -> LP_TCM_ROM_RDN_ECO_LOW_W<LP_TCM_ROM_RDN_ECO_LOW_SPEC> {
+    ) -> LP_TCM_ROM_RDN_ECO_LOW_W<'_, LP_TCM_ROM_RDN_ECO_LOW_SPEC> {
         LP_TCM_ROM_RDN_ECO_LOW_W::new(self, 0)
     }
 }

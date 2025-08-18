@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core0_timergrp1_t0_int_map(
         &mut self,
-    ) -> CORE0_TIMERGRP1_T0_INT_MAP_W<TIMERGRP1_T0_INT_MAP_SPEC> {
+    ) -> CORE0_TIMERGRP1_T0_INT_MAP_W<'_, TIMERGRP1_T0_INT_MAP_SPEC> {
         CORE0_TIMERGRP1_T0_INT_MAP_W::new(self, 0)
     }
 }

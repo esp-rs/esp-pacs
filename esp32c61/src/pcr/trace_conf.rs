@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable trace clock"]
     #[inline(always)]
-    pub fn trace_clk_en(&mut self) -> TRACE_CLK_EN_W<TRACE_CONF_SPEC> {
+    pub fn trace_clk_en(&mut self) -> TRACE_CLK_EN_W<'_, TRACE_CONF_SPEC> {
         TRACE_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset trace module"]
     #[inline(always)]
-    pub fn trace_rst_en(&mut self) -> TRACE_RST_EN_W<TRACE_CONF_SPEC> {
+    pub fn trace_rst_en(&mut self) -> TRACE_RST_EN_W<'_, TRACE_CONF_SPEC> {
         TRACE_RST_EN_W::new(self, 1)
     }
 }

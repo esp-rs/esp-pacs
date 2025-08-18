@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - An UART_RXFIFO_FULL_INT interrupt is generated when the receiver receives more data than this register’s value."]
     #[inline(always)]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<'_, CONF1_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - An UART_TXFIFO_EMPTY_INT interrupt is generated when the number of data bytes in TX FIFO is less than this register's value."]
     #[inline(always)]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<'_, CONF1_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 9)
     }
     #[doc = "Bit 29 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
-    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<CONF1_SPEC> {
+    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<'_, CONF1_SPEC> {
         RX_TOUT_FLOW_DIS_W::new(self, 29)
     }
     #[doc = "Bit 30 - This is the flow enable bit for UART receiver. 1: Choose software flow control with configuring sw_rts signal. 0: Disable software flow control."]
     #[inline(always)]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<CONF1_SPEC> {
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<'_, CONF1_SPEC> {
         RX_FLOW_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - This is the enable bit for UART receiver's timeout function."]
     #[inline(always)]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<CONF1_SPEC> {
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<'_, CONF1_SPEC> {
         RX_TOUT_EN_W::new(self, 31)
     }
 }

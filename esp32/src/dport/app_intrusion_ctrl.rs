@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn app_intrusion_record_reset_n(
         &mut self,
-    ) -> APP_INTRUSION_RECORD_RESET_N_W<APP_INTRUSION_CTRL_SPEC> {
+    ) -> APP_INTRUSION_RECORD_RESET_N_W<'_, APP_INTRUSION_CTRL_SPEC> {
         APP_INTRUSION_RECORD_RESET_N_W::new(self, 0)
     }
 }

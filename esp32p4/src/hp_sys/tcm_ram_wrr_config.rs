@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - weight value of ibus0"]
     #[inline(always)]
-    pub fn reg_tcm_ram_ibus0_wt(&mut self) -> REG_TCM_RAM_IBUS0_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_ibus0_wt(&mut self) -> REG_TCM_RAM_IBUS0_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_IBUS0_WT_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - weight value of ibus1"]
     #[inline(always)]
-    pub fn reg_tcm_ram_ibus1_wt(&mut self) -> REG_TCM_RAM_IBUS1_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_ibus1_wt(&mut self) -> REG_TCM_RAM_IBUS1_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_IBUS1_WT_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - weight value of ibus2"]
     #[inline(always)]
-    pub fn reg_tcm_ram_ibus2_wt(&mut self) -> REG_TCM_RAM_IBUS2_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_ibus2_wt(&mut self) -> REG_TCM_RAM_IBUS2_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_IBUS2_WT_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - weight value of ibus3"]
     #[inline(always)]
-    pub fn reg_tcm_ram_ibus3_wt(&mut self) -> REG_TCM_RAM_IBUS3_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_ibus3_wt(&mut self) -> REG_TCM_RAM_IBUS3_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_IBUS3_WT_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - weight value of dbus0"]
     #[inline(always)]
-    pub fn reg_tcm_ram_dbus0_wt(&mut self) -> REG_TCM_RAM_DBUS0_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_dbus0_wt(&mut self) -> REG_TCM_RAM_DBUS0_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_DBUS0_WT_W::new(self, 12)
     }
     #[doc = "Bits 15:17 - weight value of dbus1"]
     #[inline(always)]
-    pub fn reg_tcm_ram_dbus1_wt(&mut self) -> REG_TCM_RAM_DBUS1_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_dbus1_wt(&mut self) -> REG_TCM_RAM_DBUS1_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_DBUS1_WT_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - weight value of dbus2"]
     #[inline(always)]
-    pub fn reg_tcm_ram_dbus2_wt(&mut self) -> REG_TCM_RAM_DBUS2_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_dbus2_wt(&mut self) -> REG_TCM_RAM_DBUS2_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_DBUS2_WT_W::new(self, 18)
     }
     #[doc = "Bits 21:23 - weight value of dbus3"]
     #[inline(always)]
-    pub fn reg_tcm_ram_dbus3_wt(&mut self) -> REG_TCM_RAM_DBUS3_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_dbus3_wt(&mut self) -> REG_TCM_RAM_DBUS3_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_DBUS3_WT_W::new(self, 21)
     }
     #[doc = "Bits 24:26 - weight value of dma"]
     #[inline(always)]
-    pub fn reg_tcm_ram_dma_wt(&mut self) -> REG_TCM_RAM_DMA_WT_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_dma_wt(&mut self) -> REG_TCM_RAM_DMA_WT_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_DMA_WT_W::new(self, 24)
     }
     #[doc = "Bit 31 - enable weighted round robin arbitration"]
     #[inline(always)]
-    pub fn reg_tcm_ram_wrr_high(&mut self) -> REG_TCM_RAM_WRR_HIGH_W<TCM_RAM_WRR_CONFIG_SPEC> {
+    pub fn reg_tcm_ram_wrr_high(&mut self) -> REG_TCM_RAM_WRR_HIGH_W<'_, TCM_RAM_WRR_CONFIG_SPEC> {
         REG_TCM_RAM_WRR_HIGH_W::new(self, 31)
     }
 }

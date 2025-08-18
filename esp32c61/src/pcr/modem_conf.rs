@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This field indicates if modem_apb clock is enable. 0: disable, 1: enable(default)."]
     #[inline(always)]
-    pub fn modem_apb_clk_en(&mut self) -> MODEM_APB_CLK_EN_W<MODEM_CONF_SPEC> {
+    pub fn modem_apb_clk_en(&mut self) -> MODEM_APB_CLK_EN_W<'_, MODEM_CONF_SPEC> {
         MODEM_APB_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this file as 1 to reset modem-subsystem."]
     #[inline(always)]
-    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_CONF_SPEC> {
+    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<'_, MODEM_CONF_SPEC> {
         MODEM_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - This field indicates if modem source clock is enable. 0: disable, 1: enable(default)."]
     #[inline(always)]
-    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<MODEM_CONF_SPEC> {
+    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<'_, MODEM_CONF_SPEC> {
         MODEM_CLK_EN_W::new(self, 2)
     }
 }

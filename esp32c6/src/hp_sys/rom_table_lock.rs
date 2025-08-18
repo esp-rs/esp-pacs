@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - XXXX"]
     #[inline(always)]
-    pub fn rom_table_lock(&mut self) -> ROM_TABLE_LOCK_W<ROM_TABLE_LOCK_SPEC> {
+    pub fn rom_table_lock(&mut self) -> ROM_TABLE_LOCK_W<'_, ROM_TABLE_LOCK_SPEC> {
         ROM_TABLE_LOCK_W::new(self, 0)
     }
 }

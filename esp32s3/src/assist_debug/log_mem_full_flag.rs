@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - when it's 1,show that mem write loop morte than one time."]
     #[inline(always)]
-    pub fn log_mem_full_flag(&mut self) -> LOG_MEM_FULL_FLAG_W<LOG_MEM_FULL_FLAG_SPEC> {
+    pub fn log_mem_full_flag(&mut self) -> LOG_MEM_FULL_FLAG_W<'_, LOG_MEM_FULL_FLAG_SPEC> {
         LOG_MEM_FULL_FLAG_W::new(self, 0)
     }
 }

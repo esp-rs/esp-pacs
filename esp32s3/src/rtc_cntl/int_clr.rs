@@ -51,107 +51,107 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear sleep wakeup interrupt state"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_CLR_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, INT_CLR_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Clear sleep reject interrupt state"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_CLR_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, INT_CLR_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Clear SDIO idle interrupt state"]
     #[inline(always)]
-    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<INT_CLR_SPEC> {
+    pub fn sdio_idle(&mut self) -> SDIO_IDLE_W<'_, INT_CLR_SPEC> {
         SDIO_IDLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_CLR_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_CLR_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 4 - clear touch scan done interrupt raw"]
     #[inline(always)]
-    pub fn touch_scan_done(&mut self) -> TOUCH_SCAN_DONE_W<INT_CLR_SPEC> {
+    pub fn touch_scan_done(&mut self) -> TOUCH_SCAN_DONE_W<'_, INT_CLR_SPEC> {
         TOUCH_SCAN_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Clear ULP-coprocessor interrupt state"]
     #[inline(always)]
-    pub fn ulp_cp(&mut self) -> ULP_CP_W<INT_CLR_SPEC> {
+    pub fn ulp_cp(&mut self) -> ULP_CP_W<'_, INT_CLR_SPEC> {
         ULP_CP_W::new(self, 5)
     }
     #[doc = "Bit 6 - Clear touch done interrupt state"]
     #[inline(always)]
-    pub fn touch_done(&mut self) -> TOUCH_DONE_W<INT_CLR_SPEC> {
+    pub fn touch_done(&mut self) -> TOUCH_DONE_W<'_, INT_CLR_SPEC> {
         TOUCH_DONE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clear touch active interrupt state"]
     #[inline(always)]
-    pub fn touch_active(&mut self) -> TOUCH_ACTIVE_W<INT_CLR_SPEC> {
+    pub fn touch_active(&mut self) -> TOUCH_ACTIVE_W<'_, INT_CLR_SPEC> {
         TOUCH_ACTIVE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear touch inactive interrupt state"]
     #[inline(always)]
-    pub fn touch_inactive(&mut self) -> TOUCH_INACTIVE_W<INT_CLR_SPEC> {
+    pub fn touch_inactive(&mut self) -> TOUCH_INACTIVE_W<'_, INT_CLR_SPEC> {
         TOUCH_INACTIVE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear brown out interrupt state"]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_CLR_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_CLR_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear RTC main timer interrupt state"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_CLR_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, INT_CLR_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
     #[doc = "Bit 11 - Clear saradc1 interrupt state"]
     #[inline(always)]
-    pub fn saradc1(&mut self) -> SARADC1_W<INT_CLR_SPEC> {
+    pub fn saradc1(&mut self) -> SARADC1_W<'_, INT_CLR_SPEC> {
         SARADC1_W::new(self, 11)
     }
     #[doc = "Bit 12 - Clear tsens interrupt state"]
     #[inline(always)]
-    pub fn tsens(&mut self) -> TSENS_W<INT_CLR_SPEC> {
+    pub fn tsens(&mut self) -> TSENS_W<'_, INT_CLR_SPEC> {
         TSENS_W::new(self, 12)
     }
     #[doc = "Bit 13 - Clear riscV cocpu interrupt state"]
     #[inline(always)]
-    pub fn cocpu(&mut self) -> COCPU_W<INT_CLR_SPEC> {
+    pub fn cocpu(&mut self) -> COCPU_W<'_, INT_CLR_SPEC> {
         COCPU_W::new(self, 13)
     }
     #[doc = "Bit 14 - Clear saradc2 interrupt state"]
     #[inline(always)]
-    pub fn saradc2(&mut self) -> SARADC2_W<INT_CLR_SPEC> {
+    pub fn saradc2(&mut self) -> SARADC2_W<'_, INT_CLR_SPEC> {
         SARADC2_W::new(self, 14)
     }
     #[doc = "Bit 15 - Clear super watch dog interrupt state"]
     #[inline(always)]
-    pub fn swd(&mut self) -> SWD_W<INT_CLR_SPEC> {
+    pub fn swd(&mut self) -> SWD_W<'_, INT_CLR_SPEC> {
         SWD_W::new(self, 15)
     }
     #[doc = "Bit 16 - Clear RTC WDT interrupt state"]
     #[inline(always)]
-    pub fn xtal32k_dead(&mut self) -> XTAL32K_DEAD_W<INT_CLR_SPEC> {
+    pub fn xtal32k_dead(&mut self) -> XTAL32K_DEAD_W<'_, INT_CLR_SPEC> {
         XTAL32K_DEAD_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clear cocpu trap interrupt state"]
     #[inline(always)]
-    pub fn cocpu_trap(&mut self) -> COCPU_TRAP_W<INT_CLR_SPEC> {
+    pub fn cocpu_trap(&mut self) -> COCPU_TRAP_W<'_, INT_CLR_SPEC> {
         COCPU_TRAP_W::new(self, 17)
     }
     #[doc = "Bit 18 - Clear touch timeout interrupt state"]
     #[inline(always)]
-    pub fn touch_timeout(&mut self) -> TOUCH_TIMEOUT_W<INT_CLR_SPEC> {
+    pub fn touch_timeout(&mut self) -> TOUCH_TIMEOUT_W<'_, INT_CLR_SPEC> {
         TOUCH_TIMEOUT_W::new(self, 18)
     }
     #[doc = "Bit 19 - Clear glitch det interrupt state"]
     #[inline(always)]
-    pub fn glitch_det(&mut self) -> GLITCH_DET_W<INT_CLR_SPEC> {
+    pub fn glitch_det(&mut self) -> GLITCH_DET_W<'_, INT_CLR_SPEC> {
         GLITCH_DET_W::new(self, 19)
     }
     #[doc = "Bit 20 - cleartouch approach mode loop interrupt state"]
     #[inline(always)]
-    pub fn touch_approach_loop_done(&mut self) -> TOUCH_APPROACH_LOOP_DONE_W<INT_CLR_SPEC> {
+    pub fn touch_approach_loop_done(&mut self) -> TOUCH_APPROACH_LOOP_DONE_W<'_, INT_CLR_SPEC> {
         TOUCH_APPROACH_LOOP_DONE_W::new(self, 20)
     }
 }

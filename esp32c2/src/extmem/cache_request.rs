@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable request recording which could cause performance issue"]
     #[inline(always)]
-    pub fn bypass(&mut self) -> BYPASS_W<CACHE_REQUEST_SPEC> {
+    pub fn bypass(&mut self) -> BYPASS_W<'_, CACHE_REQUEST_SPEC> {
         BYPASS_W::new(self, 0)
     }
 }

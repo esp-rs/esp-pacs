@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable eco module."]
     #[inline(always)]
-    pub fn rdn_ena(&mut self) -> RDN_ENA_W<ECO_CFG_SPEC> {
+    pub fn rdn_ena(&mut self) -> RDN_ENA_W<'_, ECO_CFG_SPEC> {
         RDN_ENA_W::new(self, 0)
     }
 }
