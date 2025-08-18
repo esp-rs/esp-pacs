@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn dcache_prelock_sct1_size(
         &mut self,
-    ) -> DCACHE_PRELOCK_SCT1_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> DCACHE_PRELOCK_SCT1_SIZE_W<'_, DCACHE_PRELOCK_SCT_SIZE_SPEC> {
         DCACHE_PRELOCK_SCT1_SIZE_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - The bits are used to configure the first length of data locking, which is combined with DCACHE_PRELOCK_SCT0_ADDR_REG"]
     #[inline(always)]
     pub fn dcache_prelock_sct0_size(
         &mut self,
-    ) -> DCACHE_PRELOCK_SCT0_SIZE_W<DCACHE_PRELOCK_SCT_SIZE_SPEC> {
+    ) -> DCACHE_PRELOCK_SCT0_SIZE_W<'_, DCACHE_PRELOCK_SCT_SIZE_SPEC> {
         DCACHE_PRELOCK_SCT0_SIZE_W::new(self, 16)
     }
 }

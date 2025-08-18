@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Reset IO MUX by software"]
     #[inline(always)]
-    pub fn iomux_reset(&mut self) -> IOMUX_RESET_W<SAR_IO_MUX_CONF_SPEC> {
+    pub fn iomux_reset(&mut self) -> IOMUX_RESET_W<'_, SAR_IO_MUX_CONF_SPEC> {
         IOMUX_RESET_W::new(self, 30)
     }
     #[doc = "Bit 31 - IO MUX clock gate enable bit"]
     #[inline(always)]
-    pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W<SAR_IO_MUX_CONF_SPEC> {
+    pub fn iomux_clk_gate_en(&mut self) -> IOMUX_CLK_GATE_EN_W<'_, SAR_IO_MUX_CONF_SPEC> {
         IOMUX_CLK_GATE_EN_W::new(self, 31)
     }
 }

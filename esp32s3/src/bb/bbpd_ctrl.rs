@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W<BBPD_CTRL_SPEC> {
+    pub fn dc_est_force_pd(&mut self) -> DC_EST_FORCE_PD_W<'_, BBPD_CTRL_SPEC> {
         DC_EST_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W<BBPD_CTRL_SPEC> {
+    pub fn dc_est_force_pu(&mut self) -> DC_EST_FORCE_PU_W<'_, BBPD_CTRL_SPEC> {
         DC_EST_FORCE_PU_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W<BBPD_CTRL_SPEC> {
+    pub fn fft_force_pd(&mut self) -> FFT_FORCE_PD_W<'_, BBPD_CTRL_SPEC> {
         FFT_FORCE_PD_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W<BBPD_CTRL_SPEC> {
+    pub fn fft_force_pu(&mut self) -> FFT_FORCE_PU_W<'_, BBPD_CTRL_SPEC> {
         FFT_FORCE_PU_W::new(self, 3)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_INVALIDATE_DS_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clear result from hmac downstream DS."]
     #[inline(always)]
-    pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W<SET_INVALIDATE_DS_SPEC> {
+    pub fn set_invalidate_ds(&mut self) -> SET_INVALIDATE_DS_W<'_, SET_INVALIDATE_DS_SPEC> {
         SET_INVALIDATE_DS_W::new(self, 0)
     }
 }

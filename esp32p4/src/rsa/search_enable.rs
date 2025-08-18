@@ -2,12 +2,12 @@
 pub type R = crate::R<SEARCH_ENABLE_SPEC>;
 #[doc = "Register `SEARCH_ENABLE` writer"]
 pub type W = crate::W<SEARCH_ENABLE_SPEC>;
-#[doc = "Field `SEARCH_ENABLE` reader - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
+#[doc = "Field `SEARCH_ENABLE` reader - Configures the search option. \\\\ 0: No acceleration (default)\\\\ 1: Acceleration\\\\ This option should be used together with RSA_SEARCH_POS_REG."]
 pub type SEARCH_ENABLE_R = crate::BitReader;
-#[doc = "Field `SEARCH_ENABLE` writer - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
+#[doc = "Field `SEARCH_ENABLE` writer - Configures the search option. \\\\ 0: No acceleration (default)\\\\ 1: Acceleration\\\\ This option should be used together with RSA_SEARCH_POS_REG."]
 pub type SEARCH_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
+    #[doc = "Bit 0 - Configures the search option. \\\\ 0: No acceleration (default)\\\\ 1: Acceleration\\\\ This option should be used together with RSA_SEARCH_POS_REG."]
     #[inline(always)]
     pub fn search_enable(&self) -> SEARCH_ENABLE_R {
         SEARCH_ENABLE_R::new((self.bits & 1) != 0)
@@ -22,9 +22,9 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Configure the search option. 0: No acceleration (default) 1: Acceleration This option should be used together with RSA_SEARCH_POS."]
+    #[doc = "Bit 0 - Configures the search option. \\\\ 0: No acceleration (default)\\\\ 1: Acceleration\\\\ This option should be used together with RSA_SEARCH_POS_REG."]
     #[inline(always)]
-    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC> {
+    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<'_, SEARCH_ENABLE_SPEC> {
         SEARCH_ENABLE_W::new(self, 0)
     }
 }

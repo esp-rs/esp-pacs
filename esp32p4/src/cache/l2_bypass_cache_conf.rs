@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - The bit is used to enable bypass L2-Cache. 0: disable bypass, 1: enable bypass."]
     #[inline(always)]
-    pub fn bypass_l2_cache_en(&mut self) -> BYPASS_L2_CACHE_EN_W<L2_BYPASS_CACHE_CONF_SPEC> {
+    pub fn bypass_l2_cache_en(&mut self) -> BYPASS_L2_CACHE_EN_W<'_, L2_BYPASS_CACHE_CONF_SPEC> {
         BYPASS_L2_CACHE_EN_W::new(self, 5)
     }
 }

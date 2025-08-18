@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn clk_count_match_val(&mut self) -> CLK_COUNT_MATCH_VAL_W<CLK_COUNTER_MATCH_VAL_SPEC> {
+    pub fn clk_count_match_val(&mut self) -> CLK_COUNT_MATCH_VAL_W<'_, CLK_COUNTER_MATCH_VAL_SPEC> {
         CLK_COUNT_MATCH_VAL_W::new(self, 0)
     }
 }

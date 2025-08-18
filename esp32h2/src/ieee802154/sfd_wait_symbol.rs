@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn num(&mut self) -> NUM_W<SFD_WAIT_SYMBOL_SPEC> {
+    pub fn num(&mut self) -> NUM_W<'_, SFD_WAIT_SYMBOL_SPEC> {
         NUM_W::new(self, 0)
     }
 }

@@ -87,39 +87,39 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CS0_DIS` field.</div>"]
     #[inline(always)]
-    pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<MISC_SPEC> {
+    pub fn cs_dis(&mut self, n: u8) -> CS_DIS_W<'_, MISC_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         CS_DIS_W::new(self, n)
     }
     #[doc = "Bit 0 - Set this bit to raise high SPI_CS0 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS0 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs0_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+    pub fn cs0_dis(&mut self) -> CS_DIS_W<'_, MISC_SPEC> {
         CS_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to raise high SPI_CS1 pin, which means that the SPI device(Ext_RAM(0)/flash(1)) connected to SPI_CS1 is in low level when SPI1 transfer starts"]
     #[inline(always)]
-    pub fn cs1_dis(&mut self) -> CS_DIS_W<MISC_SPEC> {
+    pub fn cs1_dis(&mut self) -> CS_DIS_W<'_, MISC_SPEC> {
         CS_DIS_W::new(self, 1)
     }
     #[doc = "Bit 7 - Flash is connected to SPI SUBPIN bus."]
     #[inline(always)]
-    pub fn fsub_pin(&mut self) -> FSUB_PIN_W<MISC_SPEC> {
+    pub fn fsub_pin(&mut self) -> FSUB_PIN_W<'_, MISC_SPEC> {
         FSUB_PIN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Ext_RAM is connected to SPI SUBPIN bus."]
     #[inline(always)]
-    pub fn ssub_pin(&mut self) -> SSUB_PIN_W<MISC_SPEC> {
+    pub fn ssub_pin(&mut self) -> SSUB_PIN_W<'_, MISC_SPEC> {
         SSUB_PIN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: SPI_CLK line is high when idle. 0: SPI_CLK line is low when idle"]
     #[inline(always)]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<'_, MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 10 - SPI_CS line keep low when the bit is set."]
     #[inline(always)]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<'_, MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 10)
     }
 }

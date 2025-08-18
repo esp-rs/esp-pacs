@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - configure ulp diable"]
     #[inline(always)]
-    pub fn disable_rtc_cpu(&mut self) -> DISABLE_RTC_CPU_W<COCPU_DISABLE_SPEC> {
+    pub fn disable_rtc_cpu(&mut self) -> DISABLE_RTC_CPU_W<'_, COCPU_DISABLE_SPEC> {
         DISABLE_RTC_CPU_W::new(self, 31)
     }
 }

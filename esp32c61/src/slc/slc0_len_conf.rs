@@ -17,22 +17,22 @@ impl core::fmt::Debug for crate::generic::Reg<SLC0_LEN_CONF_SPEC> {
 impl W {
     #[doc = "Bits 0:19 - Configures the length of the data that the slave wants to send."]
     #[inline(always)]
-    pub fn sdio_slc0_len_wdata(&mut self) -> SDIO_SLC0_LEN_WDATA_W<SLC0_LEN_CONF_SPEC> {
+    pub fn sdio_slc0_len_wdata(&mut self) -> SDIO_SLC0_LEN_WDATA_W<'_, SLC0_LEN_CONF_SPEC> {
         SDIO_SLC0_LEN_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 20 - Configures this bit to 1 to write SDIO_SLC0_LEN_WDATA into SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."]
     #[inline(always)]
-    pub fn sdio_slc0_len_wr(&mut self) -> SDIO_SLC0_LEN_WR_W<SLC0_LEN_CONF_SPEC> {
+    pub fn sdio_slc0_len_wr(&mut self) -> SDIO_SLC0_LEN_WR_W<'_, SLC0_LEN_CONF_SPEC> {
         SDIO_SLC0_LEN_WR_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures this bit to 1 to add 1 to SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."]
     #[inline(always)]
-    pub fn sdio_slc0_len_inc(&mut self) -> SDIO_SLC0_LEN_INC_W<SLC0_LEN_CONF_SPEC> {
+    pub fn sdio_slc0_len_inc(&mut self) -> SDIO_SLC0_LEN_INC_W<'_, SLC0_LEN_CONF_SPEC> {
         SDIO_SLC0_LEN_INC_W::new(self, 21)
     }
     #[doc = "Bit 22 - Configures this bit to 1 to add the value of SDIO_SLC0_LEN_WDATA to SDIO_SLC0_LEN and SLCHOST_HOSTSLCHOST_SLC0_LEN."]
     #[inline(always)]
-    pub fn sdio_slc0_len_inc_more(&mut self) -> SDIO_SLC0_LEN_INC_MORE_W<SLC0_LEN_CONF_SPEC> {
+    pub fn sdio_slc0_len_inc_more(&mut self) -> SDIO_SLC0_LEN_INC_MORE_W<'_, SLC0_LEN_CONF_SPEC> {
         SDIO_SLC0_LEN_INC_MORE_W::new(self, 22)
     }
 }

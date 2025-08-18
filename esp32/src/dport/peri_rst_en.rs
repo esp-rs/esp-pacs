@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set the bit to reset AES module. Clear the bit to release AES module."]
     #[inline(always)]
-    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<PERI_RST_EN_SPEC> {
+    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<'_, PERI_RST_EN_SPEC> {
         CRYPTO_AES_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set the bit to reset SHA module. Clear the bit to release SHA module."]
     #[inline(always)]
-    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERI_RST_EN_SPEC> {
+    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<'_, PERI_RST_EN_SPEC> {
         CRYPTO_SHA_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set the bit to reset RSA module. Clear the bit to release RSA module."]
     #[inline(always)]
-    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<PERI_RST_EN_SPEC> {
+    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<'_, PERI_RST_EN_SPEC> {
         CRYPTO_RSA_RST_W::new(self, 2)
     }
 }

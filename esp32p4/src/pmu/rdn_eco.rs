@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn pmu_rdn_eco_en(&mut self) -> PMU_RDN_ECO_EN_W<RDN_ECO_SPEC> {
+    pub fn pmu_rdn_eco_en(&mut self) -> PMU_RDN_ECO_EN_W<'_, RDN_ECO_SPEC> {
         PMU_RDN_ECO_EN_W::new(self, 31)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c_device_en(
         &mut self,
-    ) -> LP_I2C_ANA_MAST_I2C_DEVICE_EN_W<DEVICE_EN_SPEC> {
+    ) -> LP_I2C_ANA_MAST_I2C_DEVICE_EN_W<'_, DEVICE_EN_SPEC> {
         LP_I2C_ANA_MAST_I2C_DEVICE_EN_W::new(self, 0)
     }
 }

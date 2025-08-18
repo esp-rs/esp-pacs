@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn timer_count(&mut self) -> TIMER_COUNT_W<TIMER_COUNT_SPEC> {
+    pub fn timer_count(&mut self) -> TIMER_COUNT_W<'_, TIMER_COUNT_SPEC> {
         TIMER_COUNT_W::new(self, 0)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn good_pack_max(&mut self) -> GOOD_PACK_MAX_W<PLC_CONF0_SPEC> {
+    pub fn good_pack_max(&mut self) -> GOOD_PACK_MAX_W<'_, PLC_CONF0_SPEC> {
         GOOD_PACK_MAX_W::new(self, 0)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
-    pub fn n_err_seg(&mut self) -> N_ERR_SEG_W<PLC_CONF0_SPEC> {
+    pub fn n_err_seg(&mut self) -> N_ERR_SEG_W<'_, PLC_CONF0_SPEC> {
         N_ERR_SEG_W::new(self, 6)
     }
     #[doc = "Bits 9:11"]
     #[inline(always)]
-    pub fn shift_rate(&mut self) -> SHIFT_RATE_W<PLC_CONF0_SPEC> {
+    pub fn shift_rate(&mut self) -> SHIFT_RATE_W<'_, PLC_CONF0_SPEC> {
         SHIFT_RATE_W::new(self, 9)
     }
     #[doc = "Bits 12:19"]
     #[inline(always)]
-    pub fn max_slide_sample(&mut self) -> MAX_SLIDE_SAMPLE_W<PLC_CONF0_SPEC> {
+    pub fn max_slide_sample(&mut self) -> MAX_SLIDE_SAMPLE_W<'_, PLC_CONF0_SPEC> {
         MAX_SLIDE_SAMPLE_W::new(self, 12)
     }
     #[doc = "Bits 20:24"]
     #[inline(always)]
-    pub fn pack_len_8k(&mut self) -> PACK_LEN_8K_W<PLC_CONF0_SPEC> {
+    pub fn pack_len_8k(&mut self) -> PACK_LEN_8K_W<'_, PLC_CONF0_SPEC> {
         PACK_LEN_8K_W::new(self, 20)
     }
     #[doc = "Bits 25:27"]
     #[inline(always)]
-    pub fn n_min_err(&mut self) -> N_MIN_ERR_W<PLC_CONF0_SPEC> {
+    pub fn n_min_err(&mut self) -> N_MIN_ERR_W<'_, PLC_CONF0_SPEC> {
         N_MIN_ERR_W::new(self, 25)
     }
 }

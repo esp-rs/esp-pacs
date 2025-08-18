@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - reserved"]
     #[inline(always)]
-    pub fn tx_crc_width(&mut self) -> TX_CRC_WIDTH_W<TX_CRC_WIDTH_SPEC> {
+    pub fn tx_crc_width(&mut self) -> TX_CRC_WIDTH_W<'_, TX_CRC_WIDTH_SPEC> {
         TX_CRC_WIDTH_W::new(self, 0)
     }
     #[doc = "Bit 2 - reserved"]
     #[inline(always)]
-    pub fn tx_crc_lautch_flga(&mut self) -> TX_CRC_LAUTCH_FLGA_W<TX_CRC_WIDTH_SPEC> {
+    pub fn tx_crc_lautch_flga(&mut self) -> TX_CRC_LAUTCH_FLGA_W<'_, TX_CRC_WIDTH_SPEC> {
         TX_CRC_LAUTCH_FLGA_W::new(self, 2)
     }
 }

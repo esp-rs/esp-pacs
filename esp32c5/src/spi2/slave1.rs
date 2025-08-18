@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:17 - Configures the transferred data bit length in SPI slave full-/half-duplex modes."]
     #[inline(always)]
-    pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<SLAVE1_SPEC> {
+    pub fn slv_data_bitlen(&mut self) -> SLV_DATA_BITLEN_W<'_, SLAVE1_SPEC> {
         SLV_DATA_BITLEN_W::new(self, 0)
     }
     #[doc = "Bits 18:25 - Configures the command value in slave mode."]
     #[inline(always)]
-    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<SLAVE1_SPEC> {
+    pub fn slv_last_command(&mut self) -> SLV_LAST_COMMAND_W<'_, SLAVE1_SPEC> {
         SLV_LAST_COMMAND_W::new(self, 18)
     }
     #[doc = "Bits 26:31 - Configures the address value in slave mode."]
     #[inline(always)]
-    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<SLAVE1_SPEC> {
+    pub fn slv_last_addr(&mut self) -> SLV_LAST_ADDR_W<'_, SLAVE1_SPEC> {
         SLV_LAST_ADDR_W::new(self, 26)
     }
 }

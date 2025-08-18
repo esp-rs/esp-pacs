@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - This register is used to configure the uart_id."]
     #[inline(always)]
-    pub fn id(&mut self) -> ID_W<ID_SPEC> {
+    pub fn id(&mut self) -> ID_W<'_, ID_SPEC> {
         ID_W::new(self, 0)
     }
     #[doc = "Bit 30 - This bit used to select synchronize mode. 1: Registers are auto synchronized into UART Core clock and UART core should be keep the same with APB clock. 0: After configure registers, software needs to write 1 to UART_REG_UPDATE to synchronize registers."]
     #[inline(always)]
-    pub fn high_speed(&mut self) -> HIGH_SPEED_W<ID_SPEC> {
+    pub fn high_speed(&mut self) -> HIGH_SPEED_W<'_, ID_SPEC> {
         HIGH_SPEED_W::new(self, 30)
     }
     #[doc = "Bit 31 - Software write 1 would synchronize registers into UART Core clock domain and would be cleared by hardware after synchronization is done."]
     #[inline(always)]
-    pub fn reg_update(&mut self) -> REG_UPDATE_W<ID_SPEC> {
+    pub fn reg_update(&mut self) -> REG_UPDATE_W<'_, ID_SPEC> {
         REG_UPDATE_W::new(self, 31)
     }
 }

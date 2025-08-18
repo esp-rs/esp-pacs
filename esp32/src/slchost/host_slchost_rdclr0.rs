@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn host_slchost_slc0_bit7_clraddr(
         &mut self,
-    ) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC> {
+    ) -> HOST_SLCHOST_SLC0_BIT7_CLRADDR_W<'_, HOST_SLCHOST_RDCLR0_SPEC> {
         HOST_SLCHOST_SLC0_BIT7_CLRADDR_W::new(self, 0)
     }
     #[doc = "Bits 9:17"]
     #[inline(always)]
     pub fn host_slchost_slc0_bit6_clraddr(
         &mut self,
-    ) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<HOST_SLCHOST_RDCLR0_SPEC> {
+    ) -> HOST_SLCHOST_SLC0_BIT6_CLRADDR_W<'_, HOST_SLCHOST_RDCLR0_SPEC> {
         HOST_SLCHOST_SLC0_BIT6_CLRADDR_W::new(self, 9)
     }
 }

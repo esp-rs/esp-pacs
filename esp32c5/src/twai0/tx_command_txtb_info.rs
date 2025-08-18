@@ -44,57 +44,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Issues \"set empty\" command."]
     #[inline(always)]
-    pub fn txce(&mut self) -> TXCE_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txce(&mut self) -> TXCE_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Issues \"set ready\" command."]
     #[inline(always)]
-    pub fn txcr(&mut self) -> TXCR_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txcr(&mut self) -> TXCR_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXCR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Issues \"set abort\" command."]
     #[inline(always)]
-    pub fn txca(&mut self) -> TXCA_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txca(&mut self) -> TXCA_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXCA_W::new(self, 2)
     }
     #[doc = "Bit 8 - Command is issued to TXT Buffer 1."]
     #[inline(always)]
-    pub fn txb1(&mut self) -> TXB1_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb1(&mut self) -> TXB1_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB1_W::new(self, 8)
     }
     #[doc = "Bit 9 - Command is issued to TXT Buffer 2."]
     #[inline(always)]
-    pub fn txb2(&mut self) -> TXB2_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb2(&mut self) -> TXB2_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB2_W::new(self, 9)
     }
     #[doc = "Bit 10 - Command is issued to TXT Buffer 3. If number of TXT Buffers is less than 3, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb3(&mut self) -> TXB3_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb3(&mut self) -> TXB3_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB3_W::new(self, 10)
     }
     #[doc = "Bit 11 - Command is issued to TXT Buffer 4. If number of TXT Buffers is less than 4, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb4(&mut self) -> TXB4_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb4(&mut self) -> TXB4_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB4_W::new(self, 11)
     }
     #[doc = "Bit 12 - Command is issued to TXT Buffer 5. If number of TXT Buffers is less than 5, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb5(&mut self) -> TXB5_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb5(&mut self) -> TXB5_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB5_W::new(self, 12)
     }
     #[doc = "Bit 13 - Command is issued to TXT Buffer 6. If number of TXT Buffers is less than 6, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb6(&mut self) -> TXB6_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb6(&mut self) -> TXB6_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB6_W::new(self, 13)
     }
     #[doc = "Bit 14 - Command is issued to TXT Buffer 7. If number of TXT Buffers is less than 7, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb7(&mut self) -> TXB7_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb7(&mut self) -> TXB7_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB7_W::new(self, 14)
     }
     #[doc = "Bit 15 - Command is issued to TXT Buffer 8. If number of TXT Buffers is less than 8, this field is reserved and has no Function."]
     #[inline(always)]
-    pub fn txb8(&mut self) -> TXB8_W<TX_COMMAND_TXTB_INFO_SPEC> {
+    pub fn txb8(&mut self) -> TXB8_W<'_, TX_COMMAND_TXTB_INFO_SPEC> {
         TXB8_W::new(self, 15)
     }
 }

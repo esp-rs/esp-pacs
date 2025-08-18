@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit then clear this bit to reset the internal ahb FSM."]
     #[inline(always)]
-    pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W<MISC_CONF_SPEC> {
+    pub fn ahbm_rst_inter(&mut self) -> AHBM_RST_INTER_W<'_, MISC_CONF_SPEC> {
         AHBM_RST_INTER_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set this bit to disable priority arbitration function."]
     #[inline(always)]
-    pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<MISC_CONF_SPEC> {
+    pub fn arb_pri_dis(&mut self) -> ARB_PRI_DIS_W<'_, MISC_CONF_SPEC> {
         ARB_PRI_DIS_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<MISC_CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, MISC_CONF_SPEC> {
         CLK_EN_W::new(self, 3)
     }
 }

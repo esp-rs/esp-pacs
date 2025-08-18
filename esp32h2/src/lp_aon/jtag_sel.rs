@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - If strapping_sel_jtag feature is disabled by efuse, and if neither pad_jtag or usb_jtag is disabled by efuse, this field determines which one jtag between usb_jtag and pad_jtag will be used. 1'b1(default): usb_jtag, 1'b0: pad_jtag."]
     #[inline(always)]
-    pub fn soft(&mut self) -> SOFT_W<JTAG_SEL_SPEC> {
+    pub fn soft(&mut self) -> SOFT_W<'_, JTAG_SEL_SPEC> {
         SOFT_W::new(self, 31)
     }
 }

@@ -62,22 +62,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - Configures the frequency calculation mode. \\\\ 0: one-shot frequency calculation \\\\ 1: periodic frequency calculation \\\\"]
     #[inline(always)]
-    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<RTCCALICFG_SPEC> {
+    pub fn rtc_cali_start_cycling(&mut self) -> RTC_CALI_START_CYCLING_W<'_, RTCCALICFG_SPEC> {
         RTC_CALI_START_CYCLING_W::new(self, 12)
     }
     #[doc = "Bits 13:14 - Configures to select the clock to be calibrated\\\\ 0: RTC_SLOW_CLK\\\\ 1: RC_FAST_DIV_CLK\\\\ 2: XTAL32K_CLK\\\\"]
     #[inline(always)]
-    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<RTCCALICFG_SPEC> {
+    pub fn rtc_cali_clk_sel(&mut self) -> RTC_CALI_CLK_SEL_W<'_, RTCCALICFG_SPEC> {
         RTC_CALI_CLK_SEL_W::new(self, 13)
     }
     #[doc = "Bits 16:30 - Configures the time to calculate RTC slow clock's frequency. \\\\ Measurement unit: XTAL_CLK \\\\"]
     #[inline(always)]
-    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<RTCCALICFG_SPEC> {
+    pub fn rtc_cali_max(&mut self) -> RTC_CALI_MAX_W<'_, RTCCALICFG_SPEC> {
         RTC_CALI_MAX_W::new(self, 16)
     }
     #[doc = "Bit 31 - Configures whether to enable one-shot frequency calculation. \\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<RTCCALICFG_SPEC> {
+    pub fn rtc_cali_start(&mut self) -> RTC_CALI_START_W<'_, RTCCALICFG_SPEC> {
         RTC_CALI_START_W::new(self, 31)
     }
 }

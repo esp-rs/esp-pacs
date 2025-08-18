@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_preload_size(
         &mut self,
-    ) -> L1_CACHE_PRELOAD_SIZE_W<L1_DCACHE_PRELOAD_SIZE_SPEC> {
+    ) -> L1_CACHE_PRELOAD_SIZE_W<'_, L1_DCACHE_PRELOAD_SIZE_SPEC> {
         L1_CACHE_PRELOAD_SIZE_W::new(self, 0)
     }
 }

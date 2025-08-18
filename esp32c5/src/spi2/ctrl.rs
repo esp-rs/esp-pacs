@@ -168,67 +168,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Configures whether or not to output the FSPI bus signals in DUMMY state. \\\\ 0: Not output \\\\ 1: Output \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn dummy_out(&mut self) -> DUMMY_OUT_W<CTRL_SPEC> {
+    pub fn dummy_out(&mut self) -> DUMMY_OUT_W<'_, CTRL_SPEC> {
         DUMMY_OUT_W::new(self, 3)
     }
     #[doc = "Bit 5 - Configures whether or not to enable 2-bit mode during address (ADDR) state.\\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<CTRL_SPEC> {
+    pub fn faddr_dual(&mut self) -> FADDR_DUAL_W<'_, CTRL_SPEC> {
         FADDR_DUAL_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable 4-bit mode during address (ADDR) state. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<CTRL_SPEC> {
+    pub fn faddr_quad(&mut self) -> FADDR_QUAD_W<'_, CTRL_SPEC> {
         FADDR_QUAD_W::new(self, 6)
     }
     #[doc = "Bit 8 - Configures whether or not to enable 2-bit mode during command (CMD) state. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<CTRL_SPEC> {
+    pub fn fcmd_dual(&mut self) -> FCMD_DUAL_W<'_, CTRL_SPEC> {
         FCMD_DUAL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether or not to enable 4-bit mode during command (CMD) state. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<CTRL_SPEC> {
+    pub fn fcmd_quad(&mut self) -> FCMD_QUAD_W<'_, CTRL_SPEC> {
         FCMD_QUAD_W::new(self, 9)
     }
     #[doc = "Bit 14 - Configures whether or not to enable the 2-bit mode of read-data (DIN) state in read operations. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<CTRL_SPEC> {
+    pub fn fread_dual(&mut self) -> FREAD_DUAL_W<'_, CTRL_SPEC> {
         FREAD_DUAL_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures whether or not to enable the 4-bit mode of read-data (DIN) state in read operations. \\\\ 0: Disable \\\\ 1: Enable \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<CTRL_SPEC> {
+    pub fn fread_quad(&mut self) -> FREAD_QUAD_W<'_, CTRL_SPEC> {
         FREAD_QUAD_W::new(self, 15)
     }
     #[doc = "Bit 18 - Configures MISO line polarity. \\\\ 0: Low \\\\ 1: High \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn q_pol(&mut self) -> Q_POL_W<CTRL_SPEC> {
+    pub fn q_pol(&mut self) -> Q_POL_W<'_, CTRL_SPEC> {
         Q_POL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures MOSI line polarity. \\\\ 0: Low \\\\ 1: High \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_pol(&mut self) -> D_POL_W<CTRL_SPEC> {
+    pub fn d_pol(&mut self) -> D_POL_W<'_, CTRL_SPEC> {
         D_POL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures SPI_HOLD output value when SPI is in idle. \\\\ 0: Output low \\\\ 1: Output high \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn hold_pol(&mut self) -> HOLD_POL_W<CTRL_SPEC> {
+    pub fn hold_pol(&mut self) -> HOLD_POL_W<'_, CTRL_SPEC> {
         HOLD_POL_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures the output value of write-protect signal when SPI is in idle. \\\\ 0: Output low \\\\ 1: Output high \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn wp_pol(&mut self) -> WP_POL_W<CTRL_SPEC> {
+    pub fn wp_pol(&mut self) -> WP_POL_W<'_, CTRL_SPEC> {
         WP_POL_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Configures the bit order in read-data (MISO) state. \\\\ 0: MSB first \\\\ 1: LSB first \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<CTRL_SPEC> {
+    pub fn rd_bit_order(&mut self) -> RD_BIT_ORDER_W<'_, CTRL_SPEC> {
         RD_BIT_ORDER_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - Configures the bit order in command (CMD), address (ADDR), and write-data (MOSI) states. \\\\ 0: MSB first \\\\ 1: LSB first \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<CTRL_SPEC> {
+    pub fn wr_bit_order(&mut self) -> WR_BIT_ORDER_W<'_, CTRL_SPEC> {
         WR_BIT_ORDER_W::new(self, 25)
     }
 }

@@ -21,32 +21,32 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn thres1_low(&mut self) -> THRES1_LOW_W<INT_CLR_SPEC> {
+    pub fn thres1_low(&mut self) -> THRES1_LOW_W<'_, INT_CLR_SPEC> {
         THRES1_LOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn thres0_low(&mut self) -> THRES0_LOW_W<INT_CLR_SPEC> {
+    pub fn thres0_low(&mut self) -> THRES0_LOW_W<'_, INT_CLR_SPEC> {
         THRES0_LOW_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<INT_CLR_SPEC> {
+    pub fn thres1_high(&mut self) -> THRES1_HIGH_W<'_, INT_CLR_SPEC> {
         THRES1_HIGH_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<INT_CLR_SPEC> {
+    pub fn thres0_high(&mut self) -> THRES0_HIGH_W<'_, INT_CLR_SPEC> {
         THRES0_HIGH_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn adc2_done(&mut self) -> ADC2_DONE_W<INT_CLR_SPEC> {
+    pub fn adc2_done(&mut self) -> ADC2_DONE_W<'_, INT_CLR_SPEC> {
         ADC2_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn adc1_done(&mut self) -> ADC1_DONE_W<INT_CLR_SPEC> {
+    pub fn adc1_done(&mut self) -> ADC1_DONE_W<'_, INT_CLR_SPEC> {
         ADC1_DONE_W::new(self, 31)
     }
 }

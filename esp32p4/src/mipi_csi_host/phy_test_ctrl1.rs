@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    pub fn phy_testdin(&mut self) -> PHY_TESTDIN_W<PHY_TEST_CTRL1_SPEC> {
+    pub fn phy_testdin(&mut self) -> PHY_TESTDIN_W<'_, PHY_TEST_CTRL1_SPEC> {
         PHY_TESTDIN_W::new(self, 0)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn phy_testen(&mut self) -> PHY_TESTEN_W<PHY_TEST_CTRL1_SPEC> {
+    pub fn phy_testen(&mut self) -> PHY_TESTEN_W<'_, PHY_TEST_CTRL1_SPEC> {
         PHY_TESTEN_W::new(self, 16)
     }
 }

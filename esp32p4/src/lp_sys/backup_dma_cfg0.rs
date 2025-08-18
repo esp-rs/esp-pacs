@@ -57,24 +57,24 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - need_des"]
     #[inline(always)]
-    pub fn burst_limit_aon(&mut self) -> BURST_LIMIT_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn burst_limit_aon(&mut self) -> BURST_LIMIT_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         BURST_LIMIT_AON_W::new(self, 0)
     }
     #[doc = "Bits 5:11 - need_des"]
     #[inline(always)]
-    pub fn read_interval_aon(&mut self) -> READ_INTERVAL_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn read_interval_aon(&mut self) -> READ_INTERVAL_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         READ_INTERVAL_AON_W::new(self, 5)
     }
     #[doc = "Bits 12:21 - need_des"]
     #[inline(always)]
     pub fn link_backup_tout_thres_aon(
         &mut self,
-    ) -> LINK_BACKUP_TOUT_THRES_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    ) -> LINK_BACKUP_TOUT_THRES_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         LINK_BACKUP_TOUT_THRES_AON_W::new(self, 12)
     }
     #[doc = "Bits 22:31 - need_des"]
     #[inline(always)]
-    pub fn link_tout_thres_aon(&mut self) -> LINK_TOUT_THRES_AON_W<BACKUP_DMA_CFG0_SPEC> {
+    pub fn link_tout_thres_aon(&mut self) -> LINK_TOUT_THRES_AON_W<'_, BACKUP_DMA_CFG0_SPEC> {
         LINK_TOUT_THRES_AON_W::new(self, 22)
     }
 }

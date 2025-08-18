@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - The value of the bits: 0<=s<=256. Set the value to select output signal. s=0-127: output of GPIO\\[n\\] equals input of peripheral\\[s\\]. s=128: output of GPIO\\[n\\] equals GPIO_OUT_REG\\[n\\]."]
     #[inline(always)]
-    pub fn func_out_sel(&mut self) -> FUNC_OUT_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_out_sel(&mut self) -> FUNC_OUT_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OUT_SEL_W::new(self, 0)
     }
     #[doc = "Bit 9 - set this bit to invert output signal.1:invert.0:not invert."]
     #[inline(always)]
-    pub fn func_out_inv_sel(&mut self) -> FUNC_OUT_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_out_inv_sel(&mut self) -> FUNC_OUT_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OUT_INV_SEL_W::new(self, 9)
     }
     #[doc = "Bit 10 - set this bit to select output enable signal.1:use GPIO_ENABLE_REG\\[n\\] as output enable signal.0:use peripheral output enable signal."]
     #[inline(always)]
-    pub fn func_oe_sel(&mut self) -> FUNC_OE_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_oe_sel(&mut self) -> FUNC_OE_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OE_SEL_W::new(self, 10)
     }
     #[doc = "Bit 11 - set this bit to invert output enable signal.1:invert.0:not invert."]
     #[inline(always)]
-    pub fn func_oe_inv_sel(&mut self) -> FUNC_OE_INV_SEL_W<FUNC_OUT_SEL_CFG_SPEC> {
+    pub fn func_oe_inv_sel(&mut self) -> FUNC_OE_INV_SEL_W<'_, FUNC_OUT_SEL_CFG_SPEC> {
         FUNC_OE_INV_SEL_W::new(self, 11)
     }
 }

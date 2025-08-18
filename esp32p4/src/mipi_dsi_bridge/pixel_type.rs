@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - this field configures the pixel type. 0: rgb888, 1:rgb666, 2:rgb565"]
     #[inline(always)]
-    pub fn raw_type(&mut self) -> RAW_TYPE_W<PIXEL_TYPE_SPEC> {
+    pub fn raw_type(&mut self) -> RAW_TYPE_W<'_, PIXEL_TYPE_SPEC> {
         RAW_TYPE_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - this field configures the pixel arrange type of dpi interface"]
     #[inline(always)]
-    pub fn dpi_config(&mut self) -> DPI_CONFIG_W<PIXEL_TYPE_SPEC> {
+    pub fn dpi_config(&mut self) -> DPI_CONFIG_W<'_, PIXEL_TYPE_SPEC> {
         DPI_CONFIG_W::new(self, 4)
     }
     #[doc = "Bit 6 - input data type, 0: rgb, 1: yuv"]
     #[inline(always)]
-    pub fn data_in_type(&mut self) -> DATA_IN_TYPE_W<PIXEL_TYPE_SPEC> {
+    pub fn data_in_type(&mut self) -> DATA_IN_TYPE_W<'_, PIXEL_TYPE_SPEC> {
         DATA_IN_TYPE_W::new(self, 6)
     }
 }

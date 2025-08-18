@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - this field configures lower threshold of b/g, 2bit integer and 8bit fraction"]
     #[inline(always)]
-    pub fn awb_min_bg(&mut self) -> AWB_MIN_BG_W<AWB_TH_BG_SPEC> {
+    pub fn awb_min_bg(&mut self) -> AWB_MIN_BG_W<'_, AWB_TH_BG_SPEC> {
         AWB_MIN_BG_W::new(self, 0)
     }
     #[doc = "Bits 16:25 - this field configures upper threshold of b/g, 2bit integer and 8bit fraction"]
     #[inline(always)]
-    pub fn awb_max_bg(&mut self) -> AWB_MAX_BG_W<AWB_TH_BG_SPEC> {
+    pub fn awb_max_bg(&mut self) -> AWB_MAX_BG_W<'_, AWB_TH_BG_SPEC> {
         AWB_MAX_BG_W::new(self, 16)
     }
 }

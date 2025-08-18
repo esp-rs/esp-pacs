@@ -52,21 +52,21 @@ impl W {
     #[inline(always)]
     pub fn l1_dcache_prelock_sct0_en(
         &mut self,
-    ) -> L1_DCACHE_PRELOCK_SCT0_EN_W<L1_DCACHE_PRELOCK_CONF_SPEC> {
+    ) -> L1_DCACHE_PRELOCK_SCT0_EN_W<'_, L1_DCACHE_PRELOCK_CONF_SPEC> {
         L1_DCACHE_PRELOCK_SCT0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to enable the second section of prelock function on L1-DCache."]
     #[inline(always)]
     pub fn l1_dcache_prelock_sct1_en(
         &mut self,
-    ) -> L1_DCACHE_PRELOCK_SCT1_EN_W<L1_DCACHE_PRELOCK_CONF_SPEC> {
+    ) -> L1_DCACHE_PRELOCK_SCT1_EN_W<'_, L1_DCACHE_PRELOCK_CONF_SPEC> {
         L1_DCACHE_PRELOCK_SCT1_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:5 - The bit is used to set the gid of l1 dcache prelock."]
     #[inline(always)]
     pub fn l1_dcache_prelock_rgid(
         &mut self,
-    ) -> L1_DCACHE_PRELOCK_RGID_W<L1_DCACHE_PRELOCK_CONF_SPEC> {
+    ) -> L1_DCACHE_PRELOCK_RGID_W<'_, L1_DCACHE_PRELOCK_CONF_SPEC> {
         L1_DCACHE_PRELOCK_RGID_W::new(self, 2)
     }
 }

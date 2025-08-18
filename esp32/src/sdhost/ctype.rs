@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - One bit per card indicates if card is 1-bit or 4-bit mode. 0: 1-bit mode; 1: 4-bit mode. Bit\\[1:0\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
-    pub fn card_width4(&mut self) -> CARD_WIDTH4_W<CTYPE_SPEC> {
+    pub fn card_width4(&mut self) -> CARD_WIDTH4_W<'_, CTYPE_SPEC> {
         CARD_WIDTH4_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - One bit per card indicates if card is in 8-bit mode. 0: Non 8-bit mode; 1: 8-bit mode. Bit\\[17:16\\] correspond to card\\[1:0\\] respectively."]
     #[inline(always)]
-    pub fn card_width8(&mut self) -> CARD_WIDTH8_W<CTYPE_SPEC> {
+    pub fn card_width8(&mut self) -> CARD_WIDTH8_W<'_, CTYPE_SPEC> {
         CARD_WIDTH8_W::new(self, 16)
     }
 }

@@ -102,42 +102,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - Clear to select"]
     #[inline(always)]
-    pub fn bias_rd(&mut self) -> BIAS_RD_W<ANA_CONF1_SPEC> {
+    pub fn bias_rd(&mut self) -> BIAS_RD_W<'_, ANA_CONF1_SPEC> {
         BIAS_RD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Clear to select"]
     #[inline(always)]
-    pub fn bbpll_rd(&mut self) -> BBPLL_RD_W<ANA_CONF1_SPEC> {
+    pub fn bbpll_rd(&mut self) -> BBPLL_RD_W<'_, ANA_CONF1_SPEC> {
         BBPLL_RD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Clear to select"]
     #[inline(always)]
-    pub fn ulp_cal_rd(&mut self) -> ULP_CAL_RD_W<ANA_CONF1_SPEC> {
+    pub fn ulp_cal_rd(&mut self) -> ULP_CAL_RD_W<'_, ANA_CONF1_SPEC> {
         ULP_CAL_RD_W::new(self, 8)
     }
     #[doc = "Bit 9 - Clear to select"]
     #[inline(always)]
-    pub fn sar_i2c_rd(&mut self) -> SAR_I2C_RD_W<ANA_CONF1_SPEC> {
+    pub fn sar_i2c_rd(&mut self) -> SAR_I2C_RD_W<'_, ANA_CONF1_SPEC> {
         SAR_I2C_RD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Clear to select"]
     #[inline(always)]
-    pub fn dig_reg_rd(&mut self) -> DIG_REG_RD_W<ANA_CONF1_SPEC> {
+    pub fn dig_reg_rd(&mut self) -> DIG_REG_RD_W<'_, ANA_CONF1_SPEC> {
         DIG_REG_RD_W::new(self, 10)
     }
     #[doc = "Bit 16 - ?"]
     #[inline(always)]
-    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<ANA_CONF1_SPEC> {
+    pub fn sar_force_pu(&mut self) -> SAR_FORCE_PU_W<'_, ANA_CONF1_SPEC> {
         SAR_FORCE_PU_W::new(self, 16)
     }
     #[doc = "Bit 17 - Clear to enable BBPLL"]
     #[inline(always)]
-    pub fn bbpll_pd(&mut self) -> BBPLL_PD_W<ANA_CONF1_SPEC> {
+    pub fn bbpll_pd(&mut self) -> BBPLL_PD_W<'_, ANA_CONF1_SPEC> {
         BBPLL_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - ?"]
     #[inline(always)]
-    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<ANA_CONF1_SPEC> {
+    pub fn sar_force_pd(&mut self) -> SAR_FORCE_PD_W<'_, ANA_CONF1_SPEC> {
         SAR_FORCE_PD_W::new(self, 18)
     }
 }

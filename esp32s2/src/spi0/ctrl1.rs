@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn clk_mode(&mut self) -> CLK_MODE_W<CTRL1_SPEC> {
+    pub fn clk_mode(&mut self) -> CLK_MODE_W<'_, CTRL1_SPEC> {
         CLK_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:13"]
     #[inline(always)]
-    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<CTRL1_SPEC> {
+    pub fn cs_hold_dly_res(&mut self) -> CS_HOLD_DLY_RES_W<'_, CTRL1_SPEC> {
         CS_HOLD_DLY_RES_W::new(self, 2)
     }
     #[doc = "Bits 14:25"]
     #[inline(always)]
-    pub fn cs_hold_dly(&mut self) -> CS_HOLD_DLY_W<CTRL1_SPEC> {
+    pub fn cs_hold_dly(&mut self) -> CS_HOLD_DLY_W<'_, CTRL1_SPEC> {
         CS_HOLD_DLY_W::new(self, 14)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
-    pub fn cs_dly_num(&mut self) -> CS_DLY_NUM_W<CTRL1_SPEC> {
+    pub fn cs_dly_num(&mut self) -> CS_DLY_NUM_W<'_, CTRL1_SPEC> {
         CS_DLY_NUM_W::new(self, 26)
     }
     #[doc = "Bits 28:30"]
     #[inline(always)]
-    pub fn cs_dly_mode(&mut self) -> CS_DLY_MODE_W<CTRL1_SPEC> {
+    pub fn cs_dly_mode(&mut self) -> CS_DLY_MODE_W<'_, CTRL1_SPEC> {
         CS_DLY_MODE_W::new(self, 28)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn cs_dly_edge(&mut self) -> CS_DLY_EDGE_W<CTRL1_SPEC> {
+    pub fn cs_dly_edge(&mut self) -> CS_DLY_EDGE_W<'_, CTRL1_SPEC> {
         CS_DLY_EDGE_W::new(self, 31)
     }
 }

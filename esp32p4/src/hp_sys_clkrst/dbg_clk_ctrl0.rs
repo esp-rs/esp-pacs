@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn dbg_ch0_sel(&mut self) -> DBG_CH0_SEL_W<DBG_CLK_CTRL0_SPEC> {
+    pub fn dbg_ch0_sel(&mut self) -> DBG_CH0_SEL_W<'_, DBG_CLK_CTRL0_SPEC> {
         DBG_CH0_SEL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn dbg_ch1_sel(&mut self) -> DBG_CH1_SEL_W<DBG_CLK_CTRL0_SPEC> {
+    pub fn dbg_ch1_sel(&mut self) -> DBG_CH1_SEL_W<'_, DBG_CLK_CTRL0_SPEC> {
         DBG_CH1_SEL_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn dbg_ch2_sel(&mut self) -> DBG_CH2_SEL_W<DBG_CLK_CTRL0_SPEC> {
+    pub fn dbg_ch2_sel(&mut self) -> DBG_CH2_SEL_W<'_, DBG_CLK_CTRL0_SPEC> {
         DBG_CH2_SEL_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
-    pub fn dbg_ch0_div_num(&mut self) -> DBG_CH0_DIV_NUM_W<DBG_CLK_CTRL0_SPEC> {
+    pub fn dbg_ch0_div_num(&mut self) -> DBG_CH0_DIV_NUM_W<'_, DBG_CLK_CTRL0_SPEC> {
         DBG_CH0_DIV_NUM_W::new(self, 24)
     }
 }

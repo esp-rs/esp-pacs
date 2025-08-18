@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:4 - configure touch pad dac9"]
     #[inline(always)]
-    pub fn touch_pad9_dac(&mut self) -> TOUCH_PAD9_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad9_dac(&mut self) -> TOUCH_PAD9_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD9_DAC_W::new(self, 2)
     }
     #[doc = "Bits 5:7 - configure touch pad dac8"]
     #[inline(always)]
-    pub fn touch_pad8_dac(&mut self) -> TOUCH_PAD8_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad8_dac(&mut self) -> TOUCH_PAD8_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD8_DAC_W::new(self, 5)
     }
     #[doc = "Bits 8:10 - configure touch pad dac7"]
     #[inline(always)]
-    pub fn touch_pad7_dac(&mut self) -> TOUCH_PAD7_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad7_dac(&mut self) -> TOUCH_PAD7_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD7_DAC_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - configure touch pad dac6"]
     #[inline(always)]
-    pub fn touch_pad6_dac(&mut self) -> TOUCH_PAD6_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad6_dac(&mut self) -> TOUCH_PAD6_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD6_DAC_W::new(self, 11)
     }
     #[doc = "Bits 14:16 - configure touch pad dac5"]
     #[inline(always)]
-    pub fn touch_pad5_dac(&mut self) -> TOUCH_PAD5_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad5_dac(&mut self) -> TOUCH_PAD5_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD5_DAC_W::new(self, 14)
     }
     #[doc = "Bits 17:19 - configure touch pad dac4"]
     #[inline(always)]
-    pub fn touch_pad4_dac(&mut self) -> TOUCH_PAD4_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad4_dac(&mut self) -> TOUCH_PAD4_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD4_DAC_W::new(self, 17)
     }
     #[doc = "Bits 20:22 - configure touch pad dac3"]
     #[inline(always)]
-    pub fn touch_pad3_dac(&mut self) -> TOUCH_PAD3_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad3_dac(&mut self) -> TOUCH_PAD3_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD3_DAC_W::new(self, 20)
     }
     #[doc = "Bits 23:25 - configure touch pad dac2"]
     #[inline(always)]
-    pub fn touch_pad2_dac(&mut self) -> TOUCH_PAD2_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad2_dac(&mut self) -> TOUCH_PAD2_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD2_DAC_W::new(self, 23)
     }
     #[doc = "Bits 26:28 - configure touch pad dac1"]
     #[inline(always)]
-    pub fn touch_pad1_dac(&mut self) -> TOUCH_PAD1_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad1_dac(&mut self) -> TOUCH_PAD1_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD1_DAC_W::new(self, 26)
     }
     #[doc = "Bits 29:31 - configure touch pad dac0"]
     #[inline(always)]
-    pub fn touch_pad0_dac(&mut self) -> TOUCH_PAD0_DAC_W<TOUCH_DAC_SPEC> {
+    pub fn touch_pad0_dac(&mut self) -> TOUCH_PAD0_DAC_W<'_, TOUCH_DAC_SPEC> {
         TOUCH_PAD0_DAC_W::new(self, 29)
     }
 }

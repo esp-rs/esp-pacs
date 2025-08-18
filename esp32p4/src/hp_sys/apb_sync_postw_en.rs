@@ -60,26 +60,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - N/A"]
     #[inline(always)]
-    pub fn gmac_apb_postw_en(&mut self) -> GMAC_APB_POSTW_EN_W<APB_SYNC_POSTW_EN_SPEC> {
+    pub fn gmac_apb_postw_en(&mut self) -> GMAC_APB_POSTW_EN_W<'_, APB_SYNC_POSTW_EN_SPEC> {
         GMAC_APB_POSTW_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - N/A"]
     #[inline(always)]
-    pub fn dsi_host_apb_postw_en(&mut self) -> DSI_HOST_APB_POSTW_EN_W<APB_SYNC_POSTW_EN_SPEC> {
+    pub fn dsi_host_apb_postw_en(&mut self) -> DSI_HOST_APB_POSTW_EN_W<'_, APB_SYNC_POSTW_EN_SPEC> {
         DSI_HOST_APB_POSTW_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - N/A"]
     #[inline(always)]
     pub fn csi_host_apb_sync_postw_en(
         &mut self,
-    ) -> CSI_HOST_APB_SYNC_POSTW_EN_W<APB_SYNC_POSTW_EN_SPEC> {
+    ) -> CSI_HOST_APB_SYNC_POSTW_EN_W<'_, APB_SYNC_POSTW_EN_SPEC> {
         CSI_HOST_APB_SYNC_POSTW_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - N/A"]
     #[inline(always)]
     pub fn csi_host_apb_async_postw_en(
         &mut self,
-    ) -> CSI_HOST_APB_ASYNC_POSTW_EN_W<APB_SYNC_POSTW_EN_SPEC> {
+    ) -> CSI_HOST_APB_ASYNC_POSTW_EN_W<'_, APB_SYNC_POSTW_EN_SPEC> {
         CSI_HOST_APB_ASYNC_POSTW_EN_W::new(self, 3)
     }
 }

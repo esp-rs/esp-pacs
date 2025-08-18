@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 5:13 - need_des"]
     #[inline(always)]
-    pub fn touch_wait_cycles(&mut self) -> TOUCH_WAIT_CYCLES_W<TOUCH_PWR_CNTL_SPEC> {
+    pub fn touch_wait_cycles(&mut self) -> TOUCH_WAIT_CYCLES_W<'_, TOUCH_PWR_CNTL_SPEC> {
         TOUCH_WAIT_CYCLES_W::new(self, 5)
     }
     #[doc = "Bits 14:29 - need_des"]
     #[inline(always)]
-    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<TOUCH_PWR_CNTL_SPEC> {
+    pub fn touch_sleep_cycles(&mut self) -> TOUCH_SLEEP_CYCLES_W<'_, TOUCH_PWR_CNTL_SPEC> {
         TOUCH_SLEEP_CYCLES_W::new(self, 14)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn touch_force_done(&mut self) -> TOUCH_FORCE_DONE_W<TOUCH_PWR_CNTL_SPEC> {
+    pub fn touch_force_done(&mut self) -> TOUCH_FORCE_DONE_W<'_, TOUCH_PWR_CNTL_SPEC> {
         TOUCH_FORCE_DONE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn touch_sleep_timer_en(&mut self) -> TOUCH_SLEEP_TIMER_EN_W<TOUCH_PWR_CNTL_SPEC> {
+    pub fn touch_sleep_timer_en(&mut self) -> TOUCH_SLEEP_TIMER_EN_W<'_, TOUCH_PWR_CNTL_SPEC> {
         TOUCH_SLEEP_TIMER_EN_W::new(self, 31)
     }
 }

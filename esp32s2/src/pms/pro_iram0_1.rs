@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 grants IBUS permission to fetch SRAM Block 0."]
     #[inline(always)]
-    pub fn pro_iram0_sram_0_f(&mut self) -> PRO_IRAM0_SRAM_0_F_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_0_f(&mut self) -> PRO_IRAM0_SRAM_0_F_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_0_F_W::new(self, 0)
     }
     #[doc = "Bit 1 - Setting to 1 grants IBUS permission to read SRAM Block 0."]
     #[inline(always)]
-    pub fn pro_iram0_sram_0_r(&mut self) -> PRO_IRAM0_SRAM_0_R_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_0_r(&mut self) -> PRO_IRAM0_SRAM_0_R_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_0_R_W::new(self, 1)
     }
     #[doc = "Bit 2 - Setting to 1 grants IBUS permission to write SRAM Block 0."]
     #[inline(always)]
-    pub fn pro_iram0_sram_0_w(&mut self) -> PRO_IRAM0_SRAM_0_W_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_0_w(&mut self) -> PRO_IRAM0_SRAM_0_W_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_0_W_W::new(self, 2)
     }
     #[doc = "Bit 3 - Setting to 1 grants IBUS permission to fetch SRAM Block 1."]
     #[inline(always)]
-    pub fn pro_iram0_sram_1_f(&mut self) -> PRO_IRAM0_SRAM_1_F_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_1_f(&mut self) -> PRO_IRAM0_SRAM_1_F_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_1_F_W::new(self, 3)
     }
     #[doc = "Bit 4 - Setting to 1 grants IBUS permission to read SRAM Block 1."]
     #[inline(always)]
-    pub fn pro_iram0_sram_1_r(&mut self) -> PRO_IRAM0_SRAM_1_R_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_1_r(&mut self) -> PRO_IRAM0_SRAM_1_R_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_1_R_W::new(self, 4)
     }
     #[doc = "Bit 5 - Setting to 1 grants IBUS permission to write SRAM Block 1."]
     #[inline(always)]
-    pub fn pro_iram0_sram_1_w(&mut self) -> PRO_IRAM0_SRAM_1_W_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_1_w(&mut self) -> PRO_IRAM0_SRAM_1_W_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_1_W_W::new(self, 5)
     }
     #[doc = "Bit 6 - Setting to 1 grants IBUS permission to fetch SRAM Block 2."]
     #[inline(always)]
-    pub fn pro_iram0_sram_2_f(&mut self) -> PRO_IRAM0_SRAM_2_F_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_2_f(&mut self) -> PRO_IRAM0_SRAM_2_F_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_2_F_W::new(self, 6)
     }
     #[doc = "Bit 7 - Setting to 1 grants IBUS permission to read SRAM Block 2."]
     #[inline(always)]
-    pub fn pro_iram0_sram_2_r(&mut self) -> PRO_IRAM0_SRAM_2_R_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_2_r(&mut self) -> PRO_IRAM0_SRAM_2_R_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_2_R_W::new(self, 7)
     }
     #[doc = "Bit 8 - Setting to 1 grants IBUS permission to write SRAM Block 2."]
     #[inline(always)]
-    pub fn pro_iram0_sram_2_w(&mut self) -> PRO_IRAM0_SRAM_2_W_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_2_w(&mut self) -> PRO_IRAM0_SRAM_2_W_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_2_W_W::new(self, 8)
     }
     #[doc = "Bit 9 - Setting to 1 grants IBUS permission to fetch SRAM Block 3."]
     #[inline(always)]
-    pub fn pro_iram0_sram_3_f(&mut self) -> PRO_IRAM0_SRAM_3_F_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_3_f(&mut self) -> PRO_IRAM0_SRAM_3_F_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_3_F_W::new(self, 9)
     }
     #[doc = "Bit 10 - Setting to 1 grants IBUS permission to read SRAM Block 3."]
     #[inline(always)]
-    pub fn pro_iram0_sram_3_r(&mut self) -> PRO_IRAM0_SRAM_3_R_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_3_r(&mut self) -> PRO_IRAM0_SRAM_3_R_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_3_R_W::new(self, 10)
     }
     #[doc = "Bit 11 - Setting to 1 grants IBUS permission to write SRAM Block 3."]
     #[inline(always)]
-    pub fn pro_iram0_sram_3_w(&mut self) -> PRO_IRAM0_SRAM_3_W_W<PRO_IRAM0_1_SPEC> {
+    pub fn pro_iram0_sram_3_w(&mut self) -> PRO_IRAM0_SRAM_3_W_W<'_, PRO_IRAM0_1_SPEC> {
         PRO_IRAM0_SRAM_3_W_W::new(self, 11)
     }
 }

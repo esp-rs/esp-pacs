@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - This register is used to change the output duty by controlling the Lpoint. The output value turns to low when the selected timers has reached the Lpoint."]
     #[inline(always)]
-    pub fn duty(&mut self) -> DUTY_W<DUTY_SPEC> {
+    pub fn duty(&mut self) -> DUTY_W<'_, DUTY_SPEC> {
         DUTY_W::new(self, 0)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn sesenddet(&mut self) -> SESENDDET_W<GOTGINT_SPEC> {
+    pub fn sesenddet(&mut self) -> SESENDDET_W<'_, GOTGINT_SPEC> {
         SESENDDET_W::new(self, 2)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<GOTGINT_SPEC> {
+    pub fn sesreqsucstschng(&mut self) -> SESREQSUCSTSCHNG_W<'_, GOTGINT_SPEC> {
         SESREQSUCSTSCHNG_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<GOTGINT_SPEC> {
+    pub fn hstnegsucstschng(&mut self) -> HSTNEGSUCSTSCHNG_W<'_, GOTGINT_SPEC> {
         HSTNEGSUCSTSCHNG_W::new(self, 9)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<GOTGINT_SPEC> {
+    pub fn hstnegdet(&mut self) -> HSTNEGDET_W<'_, GOTGINT_SPEC> {
         HSTNEGDET_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<GOTGINT_SPEC> {
+    pub fn adevtoutchg(&mut self) -> ADEVTOUTCHG_W<'_, GOTGINT_SPEC> {
         ADEVTOUTCHG_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
-    pub fn dbncedone(&mut self) -> DBNCEDONE_W<GOTGINT_SPEC> {
+    pub fn dbncedone(&mut self) -> DBNCEDONE_W<'_, GOTGINT_SPEC> {
         DBNCEDONE_W::new(self, 19)
     }
 }

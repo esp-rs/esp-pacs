@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set 1 to power up pad group"]
     #[inline(always)]
-    pub fn ana_reg_xpd_pad_group(&mut self) -> ANA_REG_XPD_PAD_GROUP_W<ANA_XPD_PAD_GROUP_SPEC> {
+    pub fn ana_reg_xpd_pad_group(&mut self) -> ANA_REG_XPD_PAD_GROUP_W<'_, ANA_XPD_PAD_GROUP_SPEC> {
         ANA_REG_XPD_PAD_GROUP_W::new(self, 0)
     }
 }

@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cache_usr_scmd_4byte(&mut self) -> CACHE_USR_SCMD_4BYTE_W<CACHE_SCTRL_SPEC> {
+    pub fn cache_usr_scmd_4byte(&mut self) -> CACHE_USR_SCMD_4BYTE_W<'_, CACHE_SCTRL_SPEC> {
         CACHE_USR_SCMD_4BYTE_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<CACHE_SCTRL_SPEC> {
+    pub fn usr_sram_dio(&mut self) -> USR_SRAM_DIO_W<'_, CACHE_SCTRL_SPEC> {
         USR_SRAM_DIO_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<CACHE_SCTRL_SPEC> {
+    pub fn usr_sram_qio(&mut self) -> USR_SRAM_QIO_W<'_, CACHE_SCTRL_SPEC> {
         USR_SRAM_QIO_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<CACHE_SCTRL_SPEC> {
+    pub fn usr_wr_sram_dummy(&mut self) -> USR_WR_SRAM_DUMMY_W<'_, CACHE_SCTRL_SPEC> {
         USR_WR_SRAM_DUMMY_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<CACHE_SCTRL_SPEC> {
+    pub fn usr_rd_sram_dummy(&mut self) -> USR_RD_SRAM_DUMMY_W<'_, CACHE_SCTRL_SPEC> {
         USR_RD_SRAM_DUMMY_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<CACHE_SCTRL_SPEC> {
+    pub fn cache_sram_usr_rcmd(&mut self) -> CACHE_SRAM_USR_RCMD_W<'_, CACHE_SCTRL_SPEC> {
         CACHE_SRAM_USR_RCMD_W::new(self, 5)
     }
     #[doc = "Bits 6:13"]
     #[inline(always)]
-    pub fn sram_rdummy_cyclelen(&mut self) -> SRAM_RDUMMY_CYCLELEN_W<CACHE_SCTRL_SPEC> {
+    pub fn sram_rdummy_cyclelen(&mut self) -> SRAM_RDUMMY_CYCLELEN_W<'_, CACHE_SCTRL_SPEC> {
         SRAM_RDUMMY_CYCLELEN_W::new(self, 6)
     }
     #[doc = "Bits 14:19"]
     #[inline(always)]
-    pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<CACHE_SCTRL_SPEC> {
+    pub fn sram_addr_bitlen(&mut self) -> SRAM_ADDR_BITLEN_W<'_, CACHE_SCTRL_SPEC> {
         SRAM_ADDR_BITLEN_W::new(self, 14)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
-    pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<CACHE_SCTRL_SPEC> {
+    pub fn cache_sram_usr_wcmd(&mut self) -> CACHE_SRAM_USR_WCMD_W<'_, CACHE_SCTRL_SPEC> {
         CACHE_SRAM_USR_WCMD_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
-    pub fn sram_oct(&mut self) -> SRAM_OCT_W<CACHE_SCTRL_SPEC> {
+    pub fn sram_oct(&mut self) -> SRAM_OCT_W<'_, CACHE_SCTRL_SPEC> {
         SRAM_OCT_W::new(self, 21)
     }
     #[doc = "Bits 22:29"]
     #[inline(always)]
-    pub fn sram_wdummy_cyclelen(&mut self) -> SRAM_WDUMMY_CYCLELEN_W<CACHE_SCTRL_SPEC> {
+    pub fn sram_wdummy_cyclelen(&mut self) -> SRAM_WDUMMY_CYCLELEN_W<'_, CACHE_SCTRL_SPEC> {
         SRAM_WDUMMY_CYCLELEN_W::new(self, 22)
     }
 }

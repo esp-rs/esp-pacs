@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<RELEASE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to release the manual encrypted result, after that the result will be visible to spi"]
     #[inline(always)]
-    pub fn release(&mut self) -> RELEASE_W<RELEASE_SPEC> {
+    pub fn release(&mut self) -> RELEASE_W<'_, RELEASE_SPEC> {
         RELEASE_W::new(self, 0)
     }
 }

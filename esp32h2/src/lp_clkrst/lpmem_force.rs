@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lpmem_clk_force_on(&mut self) -> LPMEM_CLK_FORCE_ON_W<LPMEM_FORCE_SPEC> {
+    pub fn lpmem_clk_force_on(&mut self) -> LPMEM_CLK_FORCE_ON_W<'_, LPMEM_FORCE_SPEC> {
         LPMEM_CLK_FORCE_ON_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_isp_int_map(&mut self) -> CORE1_ISP_INT_MAP_W<ISP_INT_MAP_SPEC> {
+    pub fn core1_isp_int_map(&mut self) -> CORE1_ISP_INT_MAP_W<'_, ISP_INT_MAP_SPEC> {
         CORE1_ISP_INT_MAP_W::new(self, 0)
     }
 }

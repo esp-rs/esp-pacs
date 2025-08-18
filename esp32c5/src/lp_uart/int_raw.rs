@@ -184,87 +184,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt status of LP_UART_RXFIFO_FULL_INT."]
     #[inline(always)]
-    pub fn rxfifo_full_int_raw(&mut self) -> RXFIFO_FULL_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn rxfifo_full_int_raw(&mut self) -> RXFIFO_FULL_INT_RAW_W<'_, INT_RAW_SPEC> {
         RXFIFO_FULL_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status of LP_UART_TXFIFO_EMPTY_INT."]
     #[inline(always)]
-    pub fn txfifo_empty_int_raw(&mut self) -> TXFIFO_EMPTY_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn txfifo_empty_int_raw(&mut self) -> TXFIFO_EMPTY_INT_RAW_W<'_, INT_RAW_SPEC> {
         TXFIFO_EMPTY_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status of LP_UART_PARITY_ERR_INT."]
     #[inline(always)]
-    pub fn parity_err_int_raw(&mut self) -> PARITY_ERR_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn parity_err_int_raw(&mut self) -> PARITY_ERR_INT_RAW_W<'_, INT_RAW_SPEC> {
         PARITY_ERR_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt status of LP_UART_FRM_ERR_INT."]
     #[inline(always)]
-    pub fn frm_err_int_raw(&mut self) -> FRM_ERR_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn frm_err_int_raw(&mut self) -> FRM_ERR_INT_RAW_W<'_, INT_RAW_SPEC> {
         FRM_ERR_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt status of LP_UART_RXFIFO_OVF_INT."]
     #[inline(always)]
-    pub fn rxfifo_ovf_int_raw(&mut self) -> RXFIFO_OVF_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn rxfifo_ovf_int_raw(&mut self) -> RXFIFO_OVF_INT_RAW_W<'_, INT_RAW_SPEC> {
         RXFIFO_OVF_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt status of LP_UART_DSR_CHG_INT."]
     #[inline(always)]
-    pub fn dsr_chg_int_raw(&mut self) -> DSR_CHG_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn dsr_chg_int_raw(&mut self) -> DSR_CHG_INT_RAW_W<'_, INT_RAW_SPEC> {
         DSR_CHG_INT_RAW_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw interrupt status of LP_UART_CTS_CHG_INT."]
     #[inline(always)]
-    pub fn cts_chg_int_raw(&mut self) -> CTS_CHG_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn cts_chg_int_raw(&mut self) -> CTS_CHG_INT_RAW_W<'_, INT_RAW_SPEC> {
         CTS_CHG_INT_RAW_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw interrupt status of LP_UART_BRK_DET_INT."]
     #[inline(always)]
-    pub fn brk_det_int_raw(&mut self) -> BRK_DET_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn brk_det_int_raw(&mut self) -> BRK_DET_INT_RAW_W<'_, INT_RAW_SPEC> {
         BRK_DET_INT_RAW_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw interrupt status of LP_UART_RXFIFO_TOUT_INT."]
     #[inline(always)]
-    pub fn rxfifo_tout_int_raw(&mut self) -> RXFIFO_TOUT_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn rxfifo_tout_int_raw(&mut self) -> RXFIFO_TOUT_INT_RAW_W<'_, INT_RAW_SPEC> {
         RXFIFO_TOUT_INT_RAW_W::new(self, 8)
     }
     #[doc = "Bit 9 - The raw interrupt status of LP_UART_SW_XON_INT."]
     #[inline(always)]
-    pub fn sw_xon_int_raw(&mut self) -> SW_XON_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn sw_xon_int_raw(&mut self) -> SW_XON_INT_RAW_W<'_, INT_RAW_SPEC> {
         SW_XON_INT_RAW_W::new(self, 9)
     }
     #[doc = "Bit 10 - LP_UART_SW_XOFF_INT."]
     #[inline(always)]
-    pub fn sw_xoff_int_raw(&mut self) -> SW_XOFF_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn sw_xoff_int_raw(&mut self) -> SW_XOFF_INT_RAW_W<'_, INT_RAW_SPEC> {
         SW_XOFF_INT_RAW_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw interrupt status of LP_UART_GLITCH_DET_INT."]
     #[inline(always)]
-    pub fn glitch_det_int_raw(&mut self) -> GLITCH_DET_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn glitch_det_int_raw(&mut self) -> GLITCH_DET_INT_RAW_W<'_, INT_RAW_SPEC> {
         GLITCH_DET_INT_RAW_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw interrupt status of LP_UART_TX_BRK_DONE_INT."]
     #[inline(always)]
-    pub fn tx_brk_done_int_raw(&mut self) -> TX_BRK_DONE_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn tx_brk_done_int_raw(&mut self) -> TX_BRK_DONE_INT_RAW_W<'_, INT_RAW_SPEC> {
         TX_BRK_DONE_INT_RAW_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw interrupt status of LP_UART_TX_BRK_IDLE_DONE_INT."]
     #[inline(always)]
-    pub fn tx_brk_idle_done_int_raw(&mut self) -> TX_BRK_IDLE_DONE_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn tx_brk_idle_done_int_raw(&mut self) -> TX_BRK_IDLE_DONE_INT_RAW_W<'_, INT_RAW_SPEC> {
         TX_BRK_IDLE_DONE_INT_RAW_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw interrupt status of LP_UART_TX_DONE_INT."]
     #[inline(always)]
-    pub fn tx_done_int_raw(&mut self) -> TX_DONE_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn tx_done_int_raw(&mut self) -> TX_DONE_INT_RAW_W<'_, INT_RAW_SPEC> {
         TX_DONE_INT_RAW_W::new(self, 14)
     }
     #[doc = "Bit 18 - The raw interrupt status of LP_UART_AT_CMD_CHAR_DET_INT."]
     #[inline(always)]
-    pub fn at_cmd_char_det_int_raw(&mut self) -> AT_CMD_CHAR_DET_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn at_cmd_char_det_int_raw(&mut self) -> AT_CMD_CHAR_DET_INT_RAW_W<'_, INT_RAW_SPEC> {
         AT_CMD_CHAR_DET_INT_RAW_W::new(self, 18)
     }
     #[doc = "Bit 19 - The raw interrupt status of LP_UART_WAKEUP_INT."]
     #[inline(always)]
-    pub fn wakeup_int_raw(&mut self) -> WAKEUP_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn wakeup_int_raw(&mut self) -> WAKEUP_INT_RAW_W<'_, INT_RAW_SPEC> {
         WAKEUP_INT_RAW_W::new(self, 19)
     }
 }

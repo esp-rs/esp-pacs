@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn reg_tcm_sw_parity_bwe_mask_ctrl(
         &mut self,
-    ) -> REG_TCM_SW_PARITY_BWE_MASK_CTRL_W<TCM_SW_PARITY_BWE_MASK_SPEC> {
+    ) -> REG_TCM_SW_PARITY_BWE_MASK_CTRL_W<'_, TCM_SW_PARITY_BWE_MASK_SPEC> {
         REG_TCM_SW_PARITY_BWE_MASK_CTRL_W::new(self, 0)
     }
 }

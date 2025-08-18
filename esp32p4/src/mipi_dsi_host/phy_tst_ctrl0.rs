@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn phy_testclr(&mut self) -> PHY_TESTCLR_W<PHY_TST_CTRL0_SPEC> {
+    pub fn phy_testclr(&mut self) -> PHY_TESTCLR_W<'_, PHY_TST_CTRL0_SPEC> {
         PHY_TESTCLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn phy_testclk(&mut self) -> PHY_TESTCLK_W<PHY_TST_CTRL0_SPEC> {
+    pub fn phy_testclk(&mut self) -> PHY_TESTCLK_W<'_, PHY_TST_CTRL0_SPEC> {
         PHY_TESTCLK_W::new(self, 1)
     }
 }

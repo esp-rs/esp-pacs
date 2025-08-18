@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_1_iram0_pms_monitor_lock(
         &mut self,
-    ) -> CORE_1_IRAM0_PMS_MONITOR_LOCK_W<CORE_1_IRAM0_PMS_MONITOR_0_SPEC> {
+    ) -> CORE_1_IRAM0_PMS_MONITOR_LOCK_W<'_, CORE_1_IRAM0_PMS_MONITOR_0_SPEC> {
         CORE_1_IRAM0_PMS_MONITOR_LOCK_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn flash_per(&mut self) -> FLASH_PER_W<FLASH_SUS_CMD_SPEC> {
+    pub fn flash_per(&mut self) -> FLASH_PER_W<'_, FLASH_SUS_CMD_SPEC> {
         FLASH_PER_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn flash_pes(&mut self) -> FLASH_PES_W<FLASH_SUS_CMD_SPEC> {
+    pub fn flash_pes(&mut self) -> FLASH_PES_W<'_, FLASH_SUS_CMD_SPEC> {
         FLASH_PES_W::new(self, 1)
     }
 }

@@ -26,12 +26,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    pub fn touch_baseline_sw(&mut self) -> TOUCH_BASELINE_SW_W<TOUCH_FILTER3_SPEC> {
+    pub fn touch_baseline_sw(&mut self) -> TOUCH_BASELINE_SW_W<'_, TOUCH_FILTER3_SPEC> {
         TOUCH_BASELINE_SW_W::new(self, 0)
     }
     #[doc = "Bit 16 - need_des"]
     #[inline(always)]
-    pub fn touch_update_baseline_sw(&mut self) -> TOUCH_UPDATE_BASELINE_SW_W<TOUCH_FILTER3_SPEC> {
+    pub fn touch_update_baseline_sw(
+        &mut self,
+    ) -> TOUCH_UPDATE_BASELINE_SW_W<'_, TOUCH_FILTER3_SPEC> {
         TOUCH_UPDATE_BASELINE_SW_W::new(self, 16)
     }
 }

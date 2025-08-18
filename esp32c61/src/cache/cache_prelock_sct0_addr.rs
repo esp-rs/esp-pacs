@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn cache_prelock_sct0_addr(
         &mut self,
-    ) -> CACHE_PRELOCK_SCT0_ADDR_W<CACHE_PRELOCK_SCT0_ADDR_SPEC> {
+    ) -> CACHE_PRELOCK_SCT0_ADDR_W<'_, CACHE_PRELOCK_SCT0_ADDR_SPEC> {
         CACHE_PRELOCK_SCT0_ADDR_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This is the data need to be pushed into out link descriptor's fifo."]
     #[inline(always)]
-    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<DMA_OUT_PUSH_SPEC> {
+    pub fn outfifo_wdata(&mut self) -> OUTFIFO_WDATA_W<'_, DMA_OUT_PUSH_SPEC> {
         OUTFIFO_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 16 - Set this bit to push data in out link descriptor's fifo."]
     #[inline(always)]
-    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<DMA_OUT_PUSH_SPEC> {
+    pub fn outfifo_push(&mut self) -> OUTFIFO_PUSH_W<'_, DMA_OUT_PUSH_SPEC> {
         OUTFIFO_PUSH_W::new(self, 16)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<XTAL_TICK_CONF_SPEC> {
+    pub fn xtal_tick_num(&mut self) -> XTAL_TICK_NUM_W<'_, XTAL_TICK_CONF_SPEC> {
         XTAL_TICK_NUM_W::new(self, 0)
     }
 }

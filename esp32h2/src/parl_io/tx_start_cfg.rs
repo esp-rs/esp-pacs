@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Set this bit to start tx data transmit."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<TX_START_CFG_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, TX_START_CFG_SPEC> {
         TX_START_W::new(self, 31)
     }
 }

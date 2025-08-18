@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_pld_done_int_ena(
         &mut self,
-    ) -> L2_CACHE_PLD_DONE_INT_ENA_W<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> L2_CACHE_PLD_DONE_INT_ENA_W<'_, L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         L2_CACHE_PLD_DONE_INT_ENA_W::new(self, 5)
     }
     #[doc = "Bit 12 - The bit is used to enable interrupt of L2-Cache preload-operation error."]
     #[inline(always)]
     pub fn l2_cache_pld_err_int_ena(
         &mut self,
-    ) -> L2_CACHE_PLD_ERR_INT_ENA_W<L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
+    ) -> L2_CACHE_PLD_ERR_INT_ENA_W<'_, L2_CACHE_SYNC_PRELOAD_INT_ENA_SPEC> {
         L2_CACHE_PLD_ERR_INT_ENA_W::new(self, 12)
     }
 }

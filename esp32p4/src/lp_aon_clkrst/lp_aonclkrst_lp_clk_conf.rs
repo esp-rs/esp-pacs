@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_slow_clk_sel(
         &mut self,
-    ) -> LP_AONCLKRST_SLOW_CLK_SEL_W<LP_AONCLKRST_LP_CLK_CONF_SPEC> {
+    ) -> LP_AONCLKRST_SLOW_CLK_SEL_W<'_, LP_AONCLKRST_LP_CLK_CONF_SPEC> {
         LP_AONCLKRST_SLOW_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_fast_clk_sel(
         &mut self,
-    ) -> LP_AONCLKRST_FAST_CLK_SEL_W<LP_AONCLKRST_LP_CLK_CONF_SPEC> {
+    ) -> LP_AONCLKRST_FAST_CLK_SEL_W<'_, LP_AONCLKRST_LP_CLK_CONF_SPEC> {
         LP_AONCLKRST_FAST_CLK_SEL_W::new(self, 2)
     }
     #[doc = "Bits 4:9 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_lp_peri_div_num(
         &mut self,
-    ) -> LP_AONCLKRST_LP_PERI_DIV_NUM_W<LP_AONCLKRST_LP_CLK_CONF_SPEC> {
+    ) -> LP_AONCLKRST_LP_PERI_DIV_NUM_W<'_, LP_AONCLKRST_LP_CLK_CONF_SPEC> {
         LP_AONCLKRST_LP_PERI_DIV_NUM_W::new(self, 4)
     }
     #[doc = "Bit 10 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_ana_sel_ref_pll8m(
         &mut self,
-    ) -> LP_AONCLKRST_ANA_SEL_REF_PLL8M_W<LP_AONCLKRST_LP_CLK_CONF_SPEC> {
+    ) -> LP_AONCLKRST_ANA_SEL_REF_PLL8M_W<'_, LP_AONCLKRST_LP_CLK_CONF_SPEC> {
         LP_AONCLKRST_ANA_SEL_REF_PLL8M_W::new(self, 10)
     }
 }

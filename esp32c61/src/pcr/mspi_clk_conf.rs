@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set as one within (0,1,2) to generate div1(default)/div2/div4 of low-speed clock-source to drive clk_mspi_fast. Only avaiable whe the clck-source is a low-speed clock-source such as XTAL/FOSC."]
     #[inline(always)]
-    pub fn mspi_fast_div_num(&mut self) -> MSPI_FAST_DIV_NUM_W<MSPI_CLK_CONF_SPEC> {
+    pub fn mspi_fast_div_num(&mut self) -> MSPI_FAST_DIV_NUM_W<'_, MSPI_CLK_CONF_SPEC> {
         MSPI_FAST_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - Configures the clock source for MSPI.\\\\ 0(default): XTAL_CLK\\\\ 1 RC_FAST_CLK\\\\ 2: PLL_F480M_CLK\\\\"]
     #[inline(always)]
-    pub fn mspi_func_clk_sel(&mut self) -> MSPI_FUNC_CLK_SEL_W<MSPI_CLK_CONF_SPEC> {
+    pub fn mspi_func_clk_sel(&mut self) -> MSPI_FUNC_CLK_SEL_W<'_, MSPI_CLK_CONF_SPEC> {
         MSPI_FUNC_CLK_SEL_W::new(self, 8)
     }
     #[doc = "Bit 10 - Set 1 to enable mspi func clock"]
     #[inline(always)]
-    pub fn mspi_func_clk_en(&mut self) -> MSPI_FUNC_CLK_EN_W<MSPI_CLK_CONF_SPEC> {
+    pub fn mspi_func_clk_en(&mut self) -> MSPI_FUNC_CLK_EN_W<'_, MSPI_CLK_CONF_SPEC> {
         MSPI_FUNC_CLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set 1 to reset axi_clock domain of mspi module"]
     #[inline(always)]
-    pub fn mspi_axi_rst_en(&mut self) -> MSPI_AXI_RST_EN_W<MSPI_CLK_CONF_SPEC> {
+    pub fn mspi_axi_rst_en(&mut self) -> MSPI_AXI_RST_EN_W<'_, MSPI_CLK_CONF_SPEC> {
         MSPI_AXI_RST_EN_W::new(self, 11)
     }
 }

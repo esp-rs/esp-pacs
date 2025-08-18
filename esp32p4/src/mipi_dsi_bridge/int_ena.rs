@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - write 1 to enables dpi_underrun_int_st field of MIPI_DSI_BRG_INT_ST_REG controlled by dpi_underrun interrupt signal"]
     #[inline(always)]
-    pub fn underrun(&mut self) -> UNDERRUN_W<INT_ENA_SPEC> {
+    pub fn underrun(&mut self) -> UNDERRUN_W<'_, INT_ENA_SPEC> {
         UNDERRUN_W::new(self, 0)
     }
 }

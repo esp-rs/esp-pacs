@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configure cis addr 39~36"]
     #[inline(always)]
-    pub fn cis_conf_w(&mut self) -> CIS_CONF_W_W<CIS_CONF_W_SPEC> {
+    pub fn cis_conf_w(&mut self) -> CIS_CONF_W_W<'_, CIS_CONF_W_SPEC> {
         CIS_CONF_W_W::new(self, 0)
     }
 }

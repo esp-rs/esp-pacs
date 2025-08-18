@@ -17,127 +17,127 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TIMER0_OVF` field.</div>"]
     #[inline(always)]
-    pub fn timer_ovf(&mut self, n: u8) -> TIMER_OVF_W<INT_CLR_SPEC> {
+    pub fn timer_ovf(&mut self, n: u8) -> TIMER_OVF_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         TIMER_OVF_W::new(self, n)
     }
     #[doc = "Bit 0 - Set this bit to clear the TIMER0_OVF interrupt."]
     #[inline(always)]
-    pub fn timer0_ovf(&mut self) -> TIMER_OVF_W<INT_CLR_SPEC> {
+    pub fn timer0_ovf(&mut self) -> TIMER_OVF_W<'_, INT_CLR_SPEC> {
         TIMER_OVF_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the TIMER1_OVF interrupt."]
     #[inline(always)]
-    pub fn timer1_ovf(&mut self) -> TIMER_OVF_W<INT_CLR_SPEC> {
+    pub fn timer1_ovf(&mut self) -> TIMER_OVF_W<'_, INT_CLR_SPEC> {
         TIMER_OVF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the TIMER2_OVF interrupt."]
     #[inline(always)]
-    pub fn timer2_ovf(&mut self) -> TIMER_OVF_W<INT_CLR_SPEC> {
+    pub fn timer2_ovf(&mut self) -> TIMER_OVF_W<'_, INT_CLR_SPEC> {
         TIMER_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the TIMER3_OVF interrupt."]
     #[inline(always)]
-    pub fn timer3_ovf(&mut self) -> TIMER_OVF_W<INT_CLR_SPEC> {
+    pub fn timer3_ovf(&mut self) -> TIMER_OVF_W<'_, INT_CLR_SPEC> {
         TIMER_OVF_W::new(self, 3)
     }
     #[doc = "Set this bit to clear the DUTY_CHNG_END_CH(0-7) interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DUTY_CHNG_END_CH0` field.</div>"]
     #[inline(always)]
-    pub fn duty_chng_end_ch(&mut self, n: u8) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch(&mut self, n: u8) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         DUTY_CHNG_END_CH_W::new(self, n + 4)
     }
     #[doc = "Bit 4 - Set this bit to clear the DUTY_CHNG_END_CH0 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch0(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch0(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the DUTY_CHNG_END_CH1 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch1(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch1(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear the DUTY_CHNG_END_CH2 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch2(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch2(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear the DUTY_CHNG_END_CH3 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch3(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch3(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to clear the DUTY_CHNG_END_CH4 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch4(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch4(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to clear the DUTY_CHNG_END_CH5 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch5(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch5(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to clear the DUTY_CHNG_END_CH6 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch6(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch6(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the DUTY_CHNG_END_CH7 interrupt."]
     #[inline(always)]
-    pub fn duty_chng_end_ch7(&mut self) -> DUTY_CHNG_END_CH_W<INT_CLR_SPEC> {
+    pub fn duty_chng_end_ch7(&mut self) -> DUTY_CHNG_END_CH_W<'_, INT_CLR_SPEC> {
         DUTY_CHNG_END_CH_W::new(self, 11)
     }
     #[doc = "Set this bit to clear the OVF_CNT_CH(0-7) interrupt."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `OVF_CNT_CH0` field.</div>"]
     #[inline(always)]
-    pub fn ovf_cnt_ch(&mut self, n: u8) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch(&mut self, n: u8) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         OVF_CNT_CH_W::new(self, n + 12)
     }
     #[doc = "Bit 12 - Set this bit to clear the OVF_CNT_CH0 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch0(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch0(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to clear the OVF_CNT_CH1 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch1(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch1(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to clear the OVF_CNT_CH2 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch2(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch2(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to clear the OVF_CNT_CH3 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch3(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch3(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to clear the OVF_CNT_CH4 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch4(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch4(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to clear the OVF_CNT_CH5 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch5(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch5(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to clear the OVF_CNT_CH6 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch6(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch6(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to clear the OVF_CNT_CH7 interrupt."]
     #[inline(always)]
-    pub fn ovf_cnt_ch7(&mut self) -> OVF_CNT_CH_W<INT_CLR_SPEC> {
+    pub fn ovf_cnt_ch7(&mut self) -> OVF_CNT_CH_W<'_, INT_CLR_SPEC> {
         OVF_CNT_CH_W::new(self, 19)
     }
 }

@@ -52,17 +52,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to enable the CLINT timer counter."]
     #[inline(always)]
-    pub fn mtce(&mut self) -> MTCE_W<MTIMECTL_SPEC> {
+    pub fn mtce(&mut self) -> MTCE_W<'_, MTIMECTL_SPEC> {
         MTCE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable the machine timer interrupt."]
     #[inline(always)]
-    pub fn mtie(&mut self) -> MTIE_W<MTIMECTL_SPEC> {
+    pub fn mtie(&mut self) -> MTIE_W<'_, MTIMECTL_SPEC> {
         MTIE_W::new(self, 1)
     }
     #[doc = "Bit 3 - Configures whether the machine timer overflows."]
     #[inline(always)]
-    pub fn mtof(&mut self) -> MTOF_W<MTIMECTL_SPEC> {
+    pub fn mtof(&mut self) -> MTOF_W<'_, MTIMECTL_SPEC> {
         MTOF_W::new(self, 3)
     }
 }

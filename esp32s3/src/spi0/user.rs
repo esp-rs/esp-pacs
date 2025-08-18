@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - Set this bit to keep SPI_CS low when MSPI is in DONE state."]
     #[inline(always)]
-    pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC> {
+    pub fn cs_hold(&mut self) -> CS_HOLD_W<'_, USER_SPEC> {
         CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to keep SPI_CS low when MSPI is in PREP state."]
     #[inline(always)]
-    pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC> {
+    pub fn cs_setup(&mut self) -> CS_SETUP_W<'_, USER_SPEC> {
         CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 9 - This bit, combined with SPI_MEM_CK_IDLE_EDGE bit, is used to change the clock mode 0~3 of SPI_CLK."]
     #[inline(always)]
-    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
+    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<'_, USER_SPEC> {
         CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 26 - SPI_CLK is disabled(No clock edges) in DUMMY phase when the bit is enable."]
     #[inline(always)]
-    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
+    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<'_, USER_SPEC> {
         USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 29 - This bit enable the DUMMY phase of an SPI transfer."]
     #[inline(always)]
-    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
+    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<'_, USER_SPEC> {
         USR_DUMMY_W::new(self, 29)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable iomux apb clock"]
     #[inline(always)]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<IOMUX_CONF_SPEC> {
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<'_, IOMUX_CONF_SPEC> {
         IOMUX_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset iomux module"]
     #[inline(always)]
-    pub fn iomux_rst_en(&mut self) -> IOMUX_RST_EN_W<IOMUX_CONF_SPEC> {
+    pub fn iomux_rst_en(&mut self) -> IOMUX_RST_EN_W<'_, IOMUX_CONF_SPEC> {
         IOMUX_RST_EN_W::new(self, 1)
     }
 }

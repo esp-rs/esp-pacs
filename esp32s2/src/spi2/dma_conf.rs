@@ -254,122 +254,122 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - The bit is used to reset in dma fsm and in data fifo pointer."]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<DMA_CONF_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, DMA_CONF_SPEC> {
         IN_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - The bit is used to reset out dma fsm and out data fifo pointer."]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<DMA_CONF_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, DMA_CONF_SPEC> {
         OUT_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reset spi dma ahb master fifo pointer."]
     #[inline(always)]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<DMA_CONF_SPEC> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<'_, DMA_CONF_SPEC> {
         AHBM_FIFO_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reset spi dma ahb master."]
     #[inline(always)]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<DMA_CONF_SPEC> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<'_, DMA_CONF_SPEC> {
         AHBM_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set bit to test in link."]
     #[inline(always)]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<DMA_CONF_SPEC> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<'_, DMA_CONF_SPEC> {
         IN_LOOP_TEST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set bit to test out link."]
     #[inline(always)]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<DMA_CONF_SPEC> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<'_, DMA_CONF_SPEC> {
         OUT_LOOP_TEST_W::new(self, 7)
     }
     #[doc = "Bit 8 - when the bit is set, DMA continue to use the next inlink node when the length of inlink is 0."]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<DMA_CONF_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, DMA_CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 8)
     }
     #[doc = "Bit 9 - out eof flag generation mode . 1: when dma pop all data from fifo 0:when ahb push all data to fifo."]
     #[inline(always)]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<DMA_CONF_SPEC> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<'_, DMA_CONF_SPEC> {
         OUT_EOF_MODE_W::new(self, 9)
     }
     #[doc = "Bit 10 - read descriptor use burst mode when read data for memory."]
     #[inline(always)]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<DMA_CONF_SPEC> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, DMA_CONF_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - read descriptor use burst mode when write data to memory."]
     #[inline(always)]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<DMA_CONF_SPEC> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, DMA_CONF_SPEC> {
         INDSCR_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - spi dma read data from memory in burst mode."]
     #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<DMA_CONF_SPEC> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, DMA_CONF_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - 1: Internal memory data transfer enable bit. Send SPI DMA RX buffer data to SPI DMA TX buffer. 0: Disable this function."]
     #[inline(always)]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<DMA_CONF_SPEC> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<'_, DMA_CONF_SPEC> {
         MEM_TRANS_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - spi dma read data stop when in continue tx/rx mode."]
     #[inline(always)]
-    pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<DMA_CONF_SPEC> {
+    pub fn dma_rx_stop(&mut self) -> DMA_RX_STOP_W<'_, DMA_CONF_SPEC> {
         DMA_RX_STOP_W::new(self, 14)
     }
     #[doc = "Bit 15 - spi dma write data stop when in continue tx/rx mode."]
     #[inline(always)]
-    pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<DMA_CONF_SPEC> {
+    pub fn dma_tx_stop(&mut self) -> DMA_TX_STOP_W<'_, DMA_CONF_SPEC> {
         DMA_TX_STOP_W::new(self, 15)
     }
     #[doc = "Bit 16 - spi dma continue tx/rx data."]
     #[inline(always)]
-    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONF_SPEC> {
+    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<'_, DMA_CONF_SPEC> {
         DMA_CONTINUE_W::new(self, 16)
     }
     #[doc = "Bit 17 - 1: Clear spi_slv_seg_frt_pop_mask. 0 : others"]
     #[inline(always)]
-    pub fn slv_last_seg_pop_clr(&mut self) -> SLV_LAST_SEG_POP_CLR_W<DMA_CONF_SPEC> {
+    pub fn slv_last_seg_pop_clr(&mut self) -> SLV_LAST_SEG_POP_CLR_W<'_, DMA_CONF_SPEC> {
         SLV_LAST_SEG_POP_CLR_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable dma segment transfer in spi dma half slave mode. 1: enable. 0: disable."]
     #[inline(always)]
-    pub fn dma_slv_seg_trans_en(&mut self) -> DMA_SLV_SEG_TRANS_EN_W<DMA_CONF_SPEC> {
+    pub fn dma_slv_seg_trans_en(&mut self) -> DMA_SLV_SEG_TRANS_EN_W<'_, DMA_CONF_SPEC> {
         DMA_SLV_SEG_TRANS_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - 1: spi_dma_infifo_full_vld is cleared by spi slave CMD5. 0: spi_dma_infifo_full_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
-    pub fn slv_rx_seg_trans_clr_en(&mut self) -> SLV_RX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC> {
+    pub fn slv_rx_seg_trans_clr_en(&mut self) -> SLV_RX_SEG_TRANS_CLR_EN_W<'_, DMA_CONF_SPEC> {
         SLV_RX_SEG_TRANS_CLR_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - 1: spi_dma_outfifo_empty_vld is cleared by spi slave CMD6. 0: spi_dma_outfifo_empty_vld is cleared by SPI_TRANS_DONE."]
     #[inline(always)]
-    pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W<DMA_CONF_SPEC> {
+    pub fn slv_tx_seg_trans_clr_en(&mut self) -> SLV_TX_SEG_TRANS_CLR_EN_W<'_, DMA_CONF_SPEC> {
         SLV_TX_SEG_TRANS_CLR_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - 1: SPI_IN_SUC_EOF_INT_RAW is set when the number of dma pushed data bytes is equal to the value of SPI_SLV_DMA_RD_BYTELEN\\[19:0\\]/ SPI_MST_DMA_RD_BYTELEN\\[19:0\\] in spi dma transition. 0: SPI_IN_SUC_EOF_INT_RAW is set by SPI_TRANS_DONE in non-seg-trans or SPI_DMA_SEG_TRANS_DONE in seg-trans."]
     #[inline(always)]
-    pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W<DMA_CONF_SPEC> {
+    pub fn rx_eof_en(&mut self) -> RX_EOF_EN_W<'_, DMA_CONF_SPEC> {
         RX_EOF_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1:Clear spi_dma_infifo_full_vld. 0: Do not control it."]
     #[inline(always)]
-    pub fn dma_infifo_full_clr(&mut self) -> DMA_INFIFO_FULL_CLR_W<DMA_CONF_SPEC> {
+    pub fn dma_infifo_full_clr(&mut self) -> DMA_INFIFO_FULL_CLR_W<'_, DMA_CONF_SPEC> {
         DMA_INFIFO_FULL_CLR_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1:Clear spi_dma_outfifo_empty_vld. 0: Do not control it."]
     #[inline(always)]
-    pub fn dma_outfifo_empty_clr(&mut self) -> DMA_OUTFIFO_EMPTY_CLR_W<DMA_CONF_SPEC> {
+    pub fn dma_outfifo_empty_clr(&mut self) -> DMA_OUTFIFO_EMPTY_CLR_W<'_, DMA_CONF_SPEC> {
         DMA_OUTFIFO_EMPTY_CLR_W::new(self, 23)
     }
     #[doc = "Bits 26:27 - Select the external memory block size."]
     #[inline(always)]
-    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<DMA_CONF_SPEC> {
+    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<'_, DMA_CONF_SPEC> {
         EXT_MEM_BK_SIZE_W::new(self, 26)
     }
     #[doc = "Bit 28 - 1: End slave seg-trans, which acts as 0x05 command. 2 or more end seg-trans signals will induce error in DMA RX. 0: others. Will be cleared in 1 APB CLK cycles by hardware.."]
     #[inline(always)]
-    pub fn dma_seg_trans_clr(&mut self) -> DMA_SEG_TRANS_CLR_W<DMA_CONF_SPEC> {
+    pub fn dma_seg_trans_clr(&mut self) -> DMA_SEG_TRANS_CLR_W<'_, DMA_CONF_SPEC> {
         DMA_SEG_TRANS_CLR_W::new(self, 28)
     }
 }

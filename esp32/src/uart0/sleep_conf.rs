@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - When the input rxd edge changes more than this register value. the uart is active from light sleeping mode."]
     #[inline(always)]
-    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<SLEEP_CONF_SPEC> {
+    pub fn active_threshold(&mut self) -> ACTIVE_THRESHOLD_W<'_, SLEEP_CONF_SPEC> {
         ACTIVE_THRESHOLD_W::new(self, 0)
     }
 }

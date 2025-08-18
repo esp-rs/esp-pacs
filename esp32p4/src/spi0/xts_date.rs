@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - This bits stores the last modified-time of manual encryption feature."]
     #[inline(always)]
-    pub fn spi_xts_date(&mut self) -> SPI_XTS_DATE_W<XTS_DATE_SPEC> {
+    pub fn spi_xts_date(&mut self) -> SPI_XTS_DATE_W<'_, XTS_DATE_SPEC> {
         SPI_XTS_DATE_W::new(self, 0)
     }
 }

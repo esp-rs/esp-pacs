@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power down hp uart internal memory."]
     #[inline(always)]
-    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<UART_PD_CTRL_SPEC> {
+    pub fn uart_mem_force_pd(&mut self) -> UART_MEM_FORCE_PD_W<'_, UART_PD_CTRL_SPEC> {
         UART_MEM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to force power up hp uart internal memory"]
     #[inline(always)]
-    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<UART_PD_CTRL_SPEC> {
+    pub fn uart_mem_force_pu(&mut self) -> UART_MEM_FORCE_PU_W<'_, UART_PD_CTRL_SPEC> {
         UART_MEM_FORCE_PU_W::new(self, 1)
     }
 }

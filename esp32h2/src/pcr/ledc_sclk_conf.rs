@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 20:21 - set this field to select clock-source. 0(default): do not select anyone clock, 1: 80MHz, 2: FOSC, 3: XTAL."]
     #[inline(always)]
-    pub fn ledc_sclk_sel(&mut self) -> LEDC_SCLK_SEL_W<LEDC_SCLK_CONF_SPEC> {
+    pub fn ledc_sclk_sel(&mut self) -> LEDC_SCLK_SEL_W<'_, LEDC_SCLK_CONF_SPEC> {
         LEDC_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable ledc function clock"]
     #[inline(always)]
-    pub fn ledc_sclk_en(&mut self) -> LEDC_SCLK_EN_W<LEDC_SCLK_CONF_SPEC> {
+    pub fn ledc_sclk_en(&mut self) -> LEDC_SCLK_EN_W<'_, LEDC_SCLK_CONF_SPEC> {
         LEDC_SCLK_EN_W::new(self, 22)
     }
 }

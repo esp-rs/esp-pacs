@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Check BSSID for filtering"]
     #[inline(always)]
-    pub fn bssid_check(&mut self) -> BSSID_CHECK_W<INTERFACE_RX_CONTROL_SPEC> {
+    pub fn bssid_check(&mut self) -> BSSID_CHECK_W<'_, INTERFACE_RX_CONTROL_SPEC> {
         BSSID_CHECK_W::new(self, 1)
     }
     #[doc = "Bit 4 - Receive beacon frames"]
     #[inline(always)]
-    pub fn scan_mode(&mut self) -> SCAN_MODE_W<INTERFACE_RX_CONTROL_SPEC> {
+    pub fn scan_mode(&mut self) -> SCAN_MODE_W<'_, INTERFACE_RX_CONTROL_SPEC> {
         SCAN_MODE_W::new(self, 4)
     }
     #[doc = "Bit 8 - Receive everything except control frames"]
     #[inline(always)]
-    pub fn data_and_mgmt_mode(&mut self) -> DATA_AND_MGMT_MODE_W<INTERFACE_RX_CONTROL_SPEC> {
+    pub fn data_and_mgmt_mode(&mut self) -> DATA_AND_MGMT_MODE_W<'_, INTERFACE_RX_CONTROL_SPEC> {
         DATA_AND_MGMT_MODE_W::new(self, 8)
     }
 }

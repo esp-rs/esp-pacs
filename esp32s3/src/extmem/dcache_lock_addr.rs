@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The bits are used to configure the start virtual address for lock operations. It should be combined with DCACHE_LOCK_SIZE_REG."]
     #[inline(always)]
-    pub fn dcache_lock_addr(&mut self) -> DCACHE_LOCK_ADDR_W<DCACHE_LOCK_ADDR_SPEC> {
+    pub fn dcache_lock_addr(&mut self) -> DCACHE_LOCK_ADDR_W<'_, DCACHE_LOCK_ADDR_SPEC> {
         DCACHE_LOCK_ADDR_W::new(self, 0)
     }
 }

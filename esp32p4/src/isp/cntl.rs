@@ -234,112 +234,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures mipi input data enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn mipi_data_en(&mut self) -> MIPI_DATA_EN_W<CNTL_SPEC> {
+    pub fn mipi_data_en(&mut self) -> MIPI_DATA_EN_W<'_, CNTL_SPEC> {
         MIPI_DATA_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures isp global enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn isp_en(&mut self) -> ISP_EN_W<CNTL_SPEC> {
+    pub fn isp_en(&mut self) -> ISP_EN_W<'_, CNTL_SPEC> {
         ISP_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures blc enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn blc_en(&mut self) -> BLC_EN_W<CNTL_SPEC> {
+    pub fn blc_en(&mut self) -> BLC_EN_W<'_, CNTL_SPEC> {
         BLC_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures dpc enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dpc_en(&mut self) -> DPC_EN_W<CNTL_SPEC> {
+    pub fn dpc_en(&mut self) -> DPC_EN_W<'_, CNTL_SPEC> {
         DPC_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - this bit configures bf enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn bf_en(&mut self) -> BF_EN_W<CNTL_SPEC> {
+    pub fn bf_en(&mut self) -> BF_EN_W<'_, CNTL_SPEC> {
         BF_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - this bit configures lsc enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn lsc_en(&mut self) -> LSC_EN_W<CNTL_SPEC> {
+    pub fn lsc_en(&mut self) -> LSC_EN_W<'_, CNTL_SPEC> {
         LSC_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - this bit configures demosaic enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn demosaic_en(&mut self) -> DEMOSAIC_EN_W<CNTL_SPEC> {
+    pub fn demosaic_en(&mut self) -> DEMOSAIC_EN_W<'_, CNTL_SPEC> {
         DEMOSAIC_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - this bit configures median enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn median_en(&mut self) -> MEDIAN_EN_W<CNTL_SPEC> {
+    pub fn median_en(&mut self) -> MEDIAN_EN_W<'_, CNTL_SPEC> {
         MEDIAN_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - this bit configures ccm enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn ccm_en(&mut self) -> CCM_EN_W<CNTL_SPEC> {
+    pub fn ccm_en(&mut self) -> CCM_EN_W<'_, CNTL_SPEC> {
         CCM_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - this bit configures gamma enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn gamma_en(&mut self) -> GAMMA_EN_W<CNTL_SPEC> {
+    pub fn gamma_en(&mut self) -> GAMMA_EN_W<'_, CNTL_SPEC> {
         GAMMA_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - this bit configures rgb2yuv enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn rgb2yuv_en(&mut self) -> RGB2YUV_EN_W<CNTL_SPEC> {
+    pub fn rgb2yuv_en(&mut self) -> RGB2YUV_EN_W<'_, CNTL_SPEC> {
         RGB2YUV_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - this bit configures sharp enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn sharp_en(&mut self) -> SHARP_EN_W<CNTL_SPEC> {
+    pub fn sharp_en(&mut self) -> SHARP_EN_W<'_, CNTL_SPEC> {
         SHARP_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - this bit configures color enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn color_en(&mut self) -> COLOR_EN_W<CNTL_SPEC> {
+    pub fn color_en(&mut self) -> COLOR_EN_W<'_, CNTL_SPEC> {
         COLOR_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - this bit configures yuv2rgb enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn yuv2rgb_en(&mut self) -> YUV2RGB_EN_W<CNTL_SPEC> {
+    pub fn yuv2rgb_en(&mut self) -> YUV2RGB_EN_W<'_, CNTL_SPEC> {
         YUV2RGB_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - this bit configures ae enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn ae_en(&mut self) -> AE_EN_W<CNTL_SPEC> {
+    pub fn ae_en(&mut self) -> AE_EN_W<'_, CNTL_SPEC> {
         AE_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - this bit configures af enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn af_en(&mut self) -> AF_EN_W<CNTL_SPEC> {
+    pub fn af_en(&mut self) -> AF_EN_W<'_, CNTL_SPEC> {
         AF_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - this bit configures awb enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn awb_en(&mut self) -> AWB_EN_W<CNTL_SPEC> {
+    pub fn awb_en(&mut self) -> AWB_EN_W<'_, CNTL_SPEC> {
         AWB_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - this bit configures hist enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn hist_en(&mut self) -> HIST_EN_W<CNTL_SPEC> {
+    pub fn hist_en(&mut self) -> HIST_EN_W<'_, CNTL_SPEC> {
         HIST_EN_W::new(self, 17)
     }
     #[doc = "Bit 24 - select input idi data byte_endian_order when isp is bypass, 0: csi_data\\[31:0\\], 1: {\\[7:0\\], \\[15:8\\], \\[23:16\\], \\[31:24\\]}"]
     #[inline(always)]
-    pub fn byte_endian_order(&mut self) -> BYTE_ENDIAN_ORDER_W<CNTL_SPEC> {
+    pub fn byte_endian_order(&mut self) -> BYTE_ENDIAN_ORDER_W<'_, CNTL_SPEC> {
         BYTE_ENDIAN_ORDER_W::new(self, 24)
     }
     #[doc = "Bits 25:26 - this field configures input data type, 0:RAW8 1:RAW10 2:RAW12"]
     #[inline(always)]
-    pub fn isp_data_type(&mut self) -> ISP_DATA_TYPE_W<CNTL_SPEC> {
+    pub fn isp_data_type(&mut self) -> ISP_DATA_TYPE_W<'_, CNTL_SPEC> {
         ISP_DATA_TYPE_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - this field configures input data source, 0:CSI HOST 1:CAM 2:DMA"]
     #[inline(always)]
-    pub fn isp_in_src(&mut self) -> ISP_IN_SRC_W<CNTL_SPEC> {
+    pub fn isp_in_src(&mut self) -> ISP_IN_SRC_W<'_, CNTL_SPEC> {
         ISP_IN_SRC_W::new(self, 27)
     }
     #[doc = "Bits 29:31 - this field configures pixel output type, 0: RAW8 1: YUV422 2: RGB888 3: YUV420 4: RGB565"]
     #[inline(always)]
-    pub fn isp_out_type(&mut self) -> ISP_OUT_TYPE_W<CNTL_SPEC> {
+    pub fn isp_out_type(&mut self) -> ISP_OUT_TYPE_W<'_, CNTL_SPEC> {
         ISP_OUT_TYPE_W::new(self, 29)
     }
 }

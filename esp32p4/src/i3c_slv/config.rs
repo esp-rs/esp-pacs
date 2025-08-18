@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: allow the slave to operate on i2c or i3c bus. 0: the slave will ignore the bus. This should be not set until registers such as PARTNO, IDEXT and the like are set 1st -if used- since they impact data to the master"]
     #[inline(always)]
-    pub fn slvena(&mut self) -> SLVENA_W<CONFIG_SPEC> {
+    pub fn slvena(&mut self) -> SLVENA_W<'_, CONFIG_SPEC> {
         SLVENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1:the slave will NACK all requests to it except CCC broadcast. This should be used with caution as the Master may determine the slave is missing if overused."]
     #[inline(always)]
-    pub fn nack(&mut self) -> NACK_W<CONFIG_SPEC> {
+    pub fn nack(&mut self) -> NACK_W<'_, CONFIG_SPEC> {
         NACK_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: the START and STOP sticky STATUS bits will only be set if MATCHED is set..This allows START and STOP to be used to detect end of a message to /from this slave."]
     #[inline(always)]
-    pub fn matchss(&mut self) -> MATCHSS_W<CONFIG_SPEC> {
+    pub fn matchss(&mut self) -> MATCHSS_W<'_, CONFIG_SPEC> {
         MATCHSS_W::new(self, 2)
     }
     #[doc = "Bit 3 - If 1, the Slave will not detect S0 or S1 errors and so not lock up waiting on an Exit Pattern. This should only be used when the bus will not use HDR."]
     #[inline(always)]
-    pub fn s0ignore(&mut self) -> S0IGNORE_W<CONFIG_SPEC> {
+    pub fn s0ignore(&mut self) -> S0IGNORE_W<'_, CONFIG_SPEC> {
         S0IGNORE_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn ddrok(&mut self) -> DDROK_W<CONFIG_SPEC> {
+    pub fn ddrok(&mut self) -> DDROK_W<'_, CONFIG_SPEC> {
         DDROK_W::new(self, 4)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn idrand(&mut self) -> IDRAND_W<CONFIG_SPEC> {
+    pub fn idrand(&mut self) -> IDRAND_W<'_, CONFIG_SPEC> {
         IDRAND_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    pub fn offline(&mut self) -> OFFLINE_W<CONFIG_SPEC> {
+    pub fn offline(&mut self) -> OFFLINE_W<'_, CONFIG_SPEC> {
         OFFLINE_W::new(self, 9)
     }
     #[doc = "Bits 16:23 - Bus Available condition match value for current ???Slow clock???. This provides the count of the slow clock to count out 1us (or more) to allow an IBI to drive SDA Low when the Master is not doing so. The max width , and so max value, is controlled by the block. Only if enabled for events such IBI or MR or HJ, and if enabled to provide this as a register. With is limited to CLK_SLOW_BITS"]
     #[inline(always)]
-    pub fn bamatch(&mut self) -> BAMATCH_W<CONFIG_SPEC> {
+    pub fn bamatch(&mut self) -> BAMATCH_W<'_, CONFIG_SPEC> {
         BAMATCH_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - If allowed by the block:sets i2c 7 bits static address,else should be 0. If enabled to use one and to be provided by SW. Block may provide in HW as well."]
     #[inline(always)]
-    pub fn saddr(&mut self) -> SADDR_W<CONFIG_SPEC> {
+    pub fn saddr(&mut self) -> SADDR_W<'_, CONFIG_SPEC> {
         SADDR_W::new(self, 25)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable clock gate function."]
     #[inline(always)]
-    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<CLOCK_GATE_SPEC> {
+    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<'_, CLOCK_GATE_SPEC> {
         REG_CLK_EN_W::new(self, 0)
     }
 }

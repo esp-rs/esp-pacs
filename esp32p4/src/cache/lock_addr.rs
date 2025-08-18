@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Those bits are used to configure the start virtual address of the lock/unlock operation, which should be used together with CACHE_LOCK_SIZE_REG"]
     #[inline(always)]
-    pub fn lock_addr(&mut self) -> LOCK_ADDR_W<LOCK_ADDR_SPEC> {
+    pub fn lock_addr(&mut self) -> LOCK_ADDR_W<'_, LOCK_ADDR_SPEC> {
         LOCK_ADDR_W::new(self, 0)
     }
 }

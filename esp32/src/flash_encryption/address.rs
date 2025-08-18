@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<ADDRESS_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - The physical address on the off-chip flash must be 8-word boundary aligned."]
     #[inline(always)]
-    pub fn address(&mut self) -> ADDRESS_W<ADDRESS_SPEC> {
+    pub fn address(&mut self) -> ADDRESS_W<'_, ADDRESS_SPEC> {
         ADDRESS_W::new(self, 0)
     }
 }

@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - When receiver receives more data than its threshold value.receiver will produce rxfifo_full_int_raw interrupt.the threshold value is (rx_flow_thrhd_h3 rxfifo_full_thrhd)."]
     #[inline(always)]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<'_, CONF1_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 8:14 - when the data amount in transmitter fifo is less than its threshold value. it will produce txfifo_empty_int_raw interrupt. the threshold value is (tx_mem_empty_thrhd txfifo_empty_thrhd)"]
     #[inline(always)]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<'_, CONF1_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 8)
     }
     #[doc = "Bits 16:22 - when receiver receives more data than its threshold value. receiver produce signal to tell the transmitter stop transferring data. the threshold value is (rx_flow_thrhd_h3 rx_flow_thrhd)."]
     #[inline(always)]
-    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<CONF1_SPEC> {
+    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<'_, CONF1_SPEC> {
         RX_FLOW_THRHD_W::new(self, 16)
     }
     #[doc = "Bit 23 - This is the flow enable bit for uart receiver. 1:choose software flow control with configuring sw_rts signal"]
     #[inline(always)]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<CONF1_SPEC> {
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<'_, CONF1_SPEC> {
         RX_FLOW_EN_W::new(self, 23)
     }
     #[doc = "Bits 24:30 - This register is used to configure the timeout value for uart receiver receiving a byte."]
     #[inline(always)]
-    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<CONF1_SPEC> {
+    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<'_, CONF1_SPEC> {
         RX_TOUT_THRHD_W::new(self, 24)
     }
     #[doc = "Bit 31 - This is the enble bit for uart receiver's timeout function."]
     #[inline(always)]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<CONF1_SPEC> {
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<'_, CONF1_SPEC> {
         RX_TOUT_EN_W::new(self, 31)
     }
 }

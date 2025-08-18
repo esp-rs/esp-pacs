@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Set the mode of pseudo. 2'b00: crypto without pseudo. 2'b01: state T with pseudo and state D without pseudo. 2'b10: state T with pseudo and state D with few pseudo. 2'b11: crypto with pseudo."]
     #[inline(always)]
-    pub fn mode_pseudo(&mut self) -> MODE_PSEUDO_W<XTS_PSEUDO_ROUND_CONF_SPEC> {
+    pub fn mode_pseudo(&mut self) -> MODE_PSEUDO_W<'_, XTS_PSEUDO_ROUND_CONF_SPEC> {
         MODE_PSEUDO_W::new(self, 0)
     }
     #[doc = "Bits 2:4 - xts aes peseudo function base round that must be peformed."]
     #[inline(always)]
-    pub fn pseudo_rng_cnt(&mut self) -> PSEUDO_RNG_CNT_W<XTS_PSEUDO_ROUND_CONF_SPEC> {
+    pub fn pseudo_rng_cnt(&mut self) -> PSEUDO_RNG_CNT_W<'_, XTS_PSEUDO_ROUND_CONF_SPEC> {
         PSEUDO_RNG_CNT_W::new(self, 2)
     }
     #[doc = "Bits 5:8 - xts aes peseudo function base round that must be peformed."]
     #[inline(always)]
-    pub fn pseudo_base(&mut self) -> PSEUDO_BASE_W<XTS_PSEUDO_ROUND_CONF_SPEC> {
+    pub fn pseudo_base(&mut self) -> PSEUDO_BASE_W<'_, XTS_PSEUDO_ROUND_CONF_SPEC> {
         PSEUDO_BASE_W::new(self, 5)
     }
     #[doc = "Bits 9:10 - xts aes peseudo function increment round that will be peformed randomly between 0 & 2**(inc+1)."]
     #[inline(always)]
-    pub fn pseudo_inc(&mut self) -> PSEUDO_INC_W<XTS_PSEUDO_ROUND_CONF_SPEC> {
+    pub fn pseudo_inc(&mut self) -> PSEUDO_INC_W<'_, XTS_PSEUDO_ROUND_CONF_SPEC> {
         PSEUDO_INC_W::new(self, 9)
     }
 }

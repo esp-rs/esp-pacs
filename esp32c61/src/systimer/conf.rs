@@ -146,62 +146,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - systimer clock force on"]
     #[inline(always)]
-    pub fn systimer_clk_fo(&mut self) -> SYSTIMER_CLK_FO_W<CONF_SPEC> {
+    pub fn systimer_clk_fo(&mut self) -> SYSTIMER_CLK_FO_W<'_, CONF_SPEC> {
         SYSTIMER_CLK_FO_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to enable generation of ETM events.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn etm_en(&mut self) -> ETM_EN_W<CONF_SPEC> {
+    pub fn etm_en(&mut self) -> ETM_EN_W<'_, CONF_SPEC> {
         ETM_EN_W::new(self, 1)
     }
     #[doc = "Bit 22 - Configures whether or not to enable COMP2.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<CONF_SPEC> {
+    pub fn target2_work_en(&mut self) -> TARGET2_WORK_EN_W<'_, CONF_SPEC> {
         TARGET2_WORK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Configures whether or not to enable COMP1. See details in SYSTIMER_TARGET2_WORK_EN."]
     #[inline(always)]
-    pub fn target1_work_en(&mut self) -> TARGET1_WORK_EN_W<CONF_SPEC> {
+    pub fn target1_work_en(&mut self) -> TARGET1_WORK_EN_W<'_, CONF_SPEC> {
         TARGET1_WORK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to enable COMP0. See details in SYSTIMER_TARGET2_WORK_EN."]
     #[inline(always)]
-    pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<CONF_SPEC> {
+    pub fn target0_work_en(&mut self) -> TARGET0_WORK_EN_W<'_, CONF_SPEC> {
         TARGET0_WORK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures whether or not UNIT1 is stalled when CORE1 is stalled. \\\\ 0: UNIT1 is not stalled. \\\\ 1: UNIT1 is stalled.\\\\"]
     #[inline(always)]
-    pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT1_CORE1_STALL_EN_W<CONF_SPEC> {
+    pub fn timer_unit1_core1_stall_en(&mut self) -> TIMER_UNIT1_CORE1_STALL_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT1_CORE1_STALL_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not UNIT1 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT1_CORE0_STALL_EN_W<CONF_SPEC> {
+    pub fn timer_unit1_core0_stall_en(&mut self) -> TIMER_UNIT1_CORE0_STALL_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT1_CORE0_STALL_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Configures whether or not UNIT0 is stalled when CORE1 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT0_CORE1_STALL_EN_W<CONF_SPEC> {
+    pub fn timer_unit0_core1_stall_en(&mut self) -> TIMER_UNIT0_CORE1_STALL_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT0_CORE1_STALL_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Configures whether or not UNIT0 is stalled when CORE0 is stalled. See details in SYSTIMER_TIMER_UNIT1_CORE1_STALL_EN."]
     #[inline(always)]
-    pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT0_CORE0_STALL_EN_W<CONF_SPEC> {
+    pub fn timer_unit0_core0_stall_en(&mut self) -> TIMER_UNIT0_CORE0_STALL_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT0_CORE0_STALL_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether or not to enable UNIT1. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT1_WORK_EN_W<CONF_SPEC> {
+    pub fn timer_unit1_work_en(&mut self) -> TIMER_UNIT1_WORK_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT1_WORK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether or not to enable UNIT0. \\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT0_WORK_EN_W<CONF_SPEC> {
+    pub fn timer_unit0_work_en(&mut self) -> TIMER_UNIT0_WORK_EN_W<'_, CONF_SPEC> {
         TIMER_UNIT0_WORK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures register clock gating. \\\\ 0: Only enable needed clock for register read or write operations. \\\\ 1: Register clock is always enabled for read and write operations. \\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16"]
     #[inline(always)]
-    pub fn clk_fe_fo(&mut self) -> CLK_FE_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_fe_fo(&mut self) -> CLK_FE_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_FE_FO_W::new(self, 16)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
-    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<CLK_CONF1_FORCE_ON_SPEC> {
+    pub fn clk_bt_fo(&mut self) -> CLK_BT_FO_W<'_, CLK_CONF1_FORCE_ON_SPEC> {
         CLK_BT_FO_W::new(self, 18)
     }
 }

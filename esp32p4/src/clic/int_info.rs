@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - Number of interrupts"]
     #[inline(always)]
-    pub fn int_info_num_int(&mut self) -> INT_INFO_NUM_INT_W<INT_INFO_SPEC> {
+    pub fn int_info_num_int(&mut self) -> INT_INFO_NUM_INT_W<'_, INT_INFO_SPEC> {
         INT_INFO_NUM_INT_W::new(self, 0)
     }
     #[doc = "Bits 13:20 - Version of interrupt module"]
     #[inline(always)]
-    pub fn int_info_version(&mut self) -> INT_INFO_VERSION_W<INT_INFO_SPEC> {
+    pub fn int_info_version(&mut self) -> INT_INFO_VERSION_W<'_, INT_INFO_SPEC> {
         INT_INFO_VERSION_W::new(self, 13)
     }
     #[doc = "Bits 21:24 - Control bits for interrupt"]
     #[inline(always)]
-    pub fn int_info_ctlbits(&mut self) -> INT_INFO_CTLBITS_W<INT_INFO_SPEC> {
+    pub fn int_info_ctlbits(&mut self) -> INT_INFO_CTLBITS_W<'_, INT_INFO_SPEC> {
         INT_INFO_CTLBITS_W::new(self, 21)
     }
 }

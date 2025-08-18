@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn reset_disable(&mut self) -> RESET_DISABLE_W<IO_MUX_SPEC> {
+    pub fn reset_disable(&mut self) -> RESET_DISABLE_W<'_, IO_MUX_SPEC> {
         RESET_DISABLE_W::new(self, 31)
     }
 }

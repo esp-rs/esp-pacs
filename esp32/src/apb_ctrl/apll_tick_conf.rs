@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn apll_tick_num(&mut self) -> APLL_TICK_NUM_W<APLL_TICK_CONF_SPEC> {
+    pub fn apll_tick_num(&mut self) -> APLL_TICK_NUM_W<'_, APLL_TICK_CONF_SPEC> {
         APLL_TICK_NUM_W::new(self, 0)
     }
 }

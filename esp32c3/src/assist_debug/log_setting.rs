@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - reg_log_ena"]
     #[inline(always)]
-    pub fn log_ena(&mut self) -> LOG_ENA_W<LOG_SETTING_SPEC> {
+    pub fn log_ena(&mut self) -> LOG_ENA_W<'_, LOG_SETTING_SPEC> {
         LOG_ENA_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - reg_log_mode"]
     #[inline(always)]
-    pub fn log_mode(&mut self) -> LOG_MODE_W<LOG_SETTING_SPEC> {
+    pub fn log_mode(&mut self) -> LOG_MODE_W<'_, LOG_SETTING_SPEC> {
         LOG_MODE_W::new(self, 3)
     }
     #[doc = "Bit 7 - reg_log_mem_loop_enable"]
     #[inline(always)]
-    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<LOG_SETTING_SPEC> {
+    pub fn log_mem_loop_enable(&mut self) -> LOG_MEM_LOOP_ENABLE_W<'_, LOG_SETTING_SPEC> {
         LOG_MEM_LOOP_ENABLE_W::new(self, 7)
     }
 }

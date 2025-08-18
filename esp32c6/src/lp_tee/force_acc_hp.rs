@@ -27,7 +27,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn lp_aon_force_acc_hpmem_en(&mut self) -> LP_AON_FORCE_ACC_HPMEM_EN_W<FORCE_ACC_HP_SPEC> {
+    pub fn lp_aon_force_acc_hpmem_en(
+        &mut self,
+    ) -> LP_AON_FORCE_ACC_HPMEM_EN_W<'_, FORCE_ACC_HP_SPEC> {
         LP_AON_FORCE_ACC_HPMEM_EN_W::new(self, 0)
     }
 }

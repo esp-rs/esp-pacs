@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn a_i16x16_deci_score_offset(
         &mut self,
-    ) -> A_I16X16_DECI_SCORE_OFFSET_W<A_DECI_SCORE_OFFSET_SPEC> {
+    ) -> A_I16X16_DECI_SCORE_OFFSET_W<'_, A_DECI_SCORE_OFFSET_SPEC> {
         A_I16X16_DECI_SCORE_OFFSET_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - Configures video A I chroma MB decimate score offset. This offset will be added to I chroma MB score."]
     #[inline(always)]
     pub fn a_i_chroma_deci_score_offset(
         &mut self,
-    ) -> A_I_CHROMA_DECI_SCORE_OFFSET_W<A_DECI_SCORE_OFFSET_SPEC> {
+    ) -> A_I_CHROMA_DECI_SCORE_OFFSET_W<'_, A_DECI_SCORE_OFFSET_SPEC> {
         A_I_CHROMA_DECI_SCORE_OFFSET_W::new(self, 6)
     }
     #[doc = "Bits 12:17 - Configures video A p16x16 MB decimate score offset. This offset will be added to p16x16 MB score."]
     #[inline(always)]
     pub fn a_p16x16_deci_score_offset(
         &mut self,
-    ) -> A_P16X16_DECI_SCORE_OFFSET_W<A_DECI_SCORE_OFFSET_SPEC> {
+    ) -> A_P16X16_DECI_SCORE_OFFSET_W<'_, A_DECI_SCORE_OFFSET_SPEC> {
         A_P16X16_DECI_SCORE_OFFSET_W::new(self, 12)
     }
     #[doc = "Bits 18:23 - Configures video A p chroma MB decimate score offset. This offset will be added to p chroma MB score."]
     #[inline(always)]
     pub fn a_p_chroma_deci_score_offset(
         &mut self,
-    ) -> A_P_CHROMA_DECI_SCORE_OFFSET_W<A_DECI_SCORE_OFFSET_SPEC> {
+    ) -> A_P_CHROMA_DECI_SCORE_OFFSET_W<'_, A_DECI_SCORE_OFFSET_SPEC> {
         A_P_CHROMA_DECI_SCORE_OFFSET_W::new(self, 18)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:22 - The length in bits of read-data. The register value shall be (bit_num-1). Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_miso_dbitlen(&mut self) -> USR_MISO_DBITLEN_W<MISO_DLEN_SPEC> {
+    pub fn usr_miso_dbitlen(&mut self) -> USR_MISO_DBITLEN_W<'_, MISO_DLEN_SPEC> {
         USR_MISO_DBITLEN_W::new(self, 0)
     }
 }

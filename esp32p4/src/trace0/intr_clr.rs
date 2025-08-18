@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INTR_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set 1 clear fifo overflow interrupt"]
     #[inline(always)]
-    pub fn fifo_overflow_intr_clr(&mut self) -> FIFO_OVERFLOW_INTR_CLR_W<INTR_CLR_SPEC> {
+    pub fn fifo_overflow_intr_clr(&mut self) -> FIFO_OVERFLOW_INTR_CLR_W<'_, INTR_CLR_SPEC> {
         FIFO_OVERFLOW_INTR_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 clear mem full interrupt"]
     #[inline(always)]
-    pub fn mem_full_intr_clr(&mut self) -> MEM_FULL_INTR_CLR_W<INTR_CLR_SPEC> {
+    pub fn mem_full_intr_clr(&mut self) -> MEM_FULL_INTR_CLR_W<'_, INTR_CLR_SPEC> {
         MEM_FULL_INTR_CLR_W::new(self, 1)
     }
 }

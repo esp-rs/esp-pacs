@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the stretch feature of bottom right channel. 0: stretch disable, 1: stretch enable"]
     #[inline(always)]
-    pub fn blc_r3_stretch(&mut self) -> BLC_R3_STRETCH_W<BLC_CTRL0_SPEC> {
+    pub fn blc_r3_stretch(&mut self) -> BLC_R3_STRETCH_W<'_, BLC_CTRL0_SPEC> {
         BLC_R3_STRETCH_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures the stretch feature of bottom left channel. 0: stretch disable, 1: stretch enable"]
     #[inline(always)]
-    pub fn blc_r2_stretch(&mut self) -> BLC_R2_STRETCH_W<BLC_CTRL0_SPEC> {
+    pub fn blc_r2_stretch(&mut self) -> BLC_R2_STRETCH_W<'_, BLC_CTRL0_SPEC> {
         BLC_R2_STRETCH_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures the stretch feature of top right channel. 0: stretch disable, 1: stretch enable"]
     #[inline(always)]
-    pub fn blc_r1_stretch(&mut self) -> BLC_R1_STRETCH_W<BLC_CTRL0_SPEC> {
+    pub fn blc_r1_stretch(&mut self) -> BLC_R1_STRETCH_W<'_, BLC_CTRL0_SPEC> {
         BLC_R1_STRETCH_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures the stretch feature of top left channel. 0: stretch disable, 1: stretch enable"]
     #[inline(always)]
-    pub fn blc_r0_stretch(&mut self) -> BLC_R0_STRETCH_W<BLC_CTRL0_SPEC> {
+    pub fn blc_r0_stretch(&mut self) -> BLC_R0_STRETCH_W<'_, BLC_CTRL0_SPEC> {
         BLC_R0_STRETCH_W::new(self, 3)
     }
 }

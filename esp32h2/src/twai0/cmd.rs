@@ -19,27 +19,27 @@ impl core::fmt::Debug for crate::generic::Reg<CMD_SPEC> {
 impl W {
     #[doc = "Bit 0 - 1: present, a message shall be transmitted. 0: absent"]
     #[inline(always)]
-    pub fn tx_req(&mut self) -> TX_REQ_W<CMD_SPEC> {
+    pub fn tx_req(&mut self) -> TX_REQ_W<'_, CMD_SPEC> {
         TX_REQ_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: present, if not already in progress, a pending transmission request is cancelled. 0: absent"]
     #[inline(always)]
-    pub fn abort_tx(&mut self) -> ABORT_TX_W<CMD_SPEC> {
+    pub fn abort_tx(&mut self) -> ABORT_TX_W<'_, CMD_SPEC> {
         ABORT_TX_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: released, the receive buffer, representing the message memory space in the RXFIFO is released. 0: no action"]
     #[inline(always)]
-    pub fn release_buf(&mut self) -> RELEASE_BUF_W<CMD_SPEC> {
+    pub fn release_buf(&mut self) -> RELEASE_BUF_W<'_, CMD_SPEC> {
         RELEASE_BUF_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: clear, the data overrun status bit is cleared. 0: no action."]
     #[inline(always)]
-    pub fn clear_data_overrun(&mut self) -> CLEAR_DATA_OVERRUN_W<CMD_SPEC> {
+    pub fn clear_data_overrun(&mut self) -> CLEAR_DATA_OVERRUN_W<'_, CMD_SPEC> {
         CLEAR_DATA_OVERRUN_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: present, a message shall be transmitted and received simultaneously. 0: absent."]
     #[inline(always)]
-    pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W<CMD_SPEC> {
+    pub fn self_rx_req(&mut self) -> SELF_RX_REQ_W<'_, CMD_SPEC> {
         SELF_RX_REQ_W::new(self, 4)
     }
 }

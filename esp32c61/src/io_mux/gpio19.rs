@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output enable of the pad in sleep mode. 1: output enabled. 0: output disabled."]
     #[inline(always)]
-    pub fn mcu_oe(&mut self) -> MCU_OE_W<GPIO19_SPEC> {
+    pub fn mcu_oe(&mut self) -> MCU_OE_W<'_, GPIO19_SPEC> {
         MCU_OE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Sleep mode selection of this pad. Set to 1 to put the pad in pad mode."]
     #[inline(always)]
-    pub fn slp_sel(&mut self) -> SLP_SEL_W<GPIO19_SPEC> {
+    pub fn slp_sel(&mut self) -> SLP_SEL_W<'_, GPIO19_SPEC> {
         SLP_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - Pull-down enable of the pad in sleep mode. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<GPIO19_SPEC> {
+    pub fn mcu_wpd(&mut self) -> MCU_WPD_W<'_, GPIO19_SPEC> {
         MCU_WPD_W::new(self, 2)
     }
     #[doc = "Bit 3 - Pull-up enable of the pad during sleep mode. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
-    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<GPIO19_SPEC> {
+    pub fn mcu_wpu(&mut self) -> MCU_WPU_W<'_, GPIO19_SPEC> {
         MCU_WPU_W::new(self, 3)
     }
     #[doc = "Bit 4 - Input enable of the pad during sleep mode. 1: input enabled. 0: input disabled."]
     #[inline(always)]
-    pub fn mcu_ie(&mut self) -> MCU_IE_W<GPIO19_SPEC> {
+    pub fn mcu_ie(&mut self) -> MCU_IE_W<'_, GPIO19_SPEC> {
         MCU_IE_W::new(self, 4)
     }
     #[doc = "Bits 5:6 - Select the drive strength of the pad during sleep mode."]
     #[inline(always)]
-    pub fn mcu_drv(&mut self) -> MCU_DRV_W<GPIO19_SPEC> {
+    pub fn mcu_drv(&mut self) -> MCU_DRV_W<'_, GPIO19_SPEC> {
         MCU_DRV_W::new(self, 5)
     }
     #[doc = "Bit 7 - Pull-down enable of the pad. 1: internal pull-down enabled. 0: internal pull-down disabled."]
     #[inline(always)]
-    pub fn fun_wpd(&mut self) -> FUN_WPD_W<GPIO19_SPEC> {
+    pub fn fun_wpd(&mut self) -> FUN_WPD_W<'_, GPIO19_SPEC> {
         FUN_WPD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Pull-up enable of the pad. 1: internal pull-up enabled. 0: internal pull-up disabled."]
     #[inline(always)]
-    pub fn fun_wpu(&mut self) -> FUN_WPU_W<GPIO19_SPEC> {
+    pub fn fun_wpu(&mut self) -> FUN_WPU_W<'_, GPIO19_SPEC> {
         FUN_WPU_W::new(self, 8)
     }
     #[doc = "Bit 9 - Input enable of the pad. 1: input enabled. 0: input disabled."]
     #[inline(always)]
-    pub fn fun_ie(&mut self) -> FUN_IE_W<GPIO19_SPEC> {
+    pub fn fun_ie(&mut self) -> FUN_IE_W<'_, GPIO19_SPEC> {
         FUN_IE_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - Select the drive strength of the pad."]
     #[inline(always)]
-    pub fn fun_drv(&mut self) -> FUN_DRV_W<GPIO19_SPEC> {
+    pub fn fun_drv(&mut self) -> FUN_DRV_W<'_, GPIO19_SPEC> {
         FUN_DRV_W::new(self, 10)
     }
     #[doc = "Bits 12:14 - Select IO MUX function for this signal. 0: Select Function 1. 1: Select Function 2. etc."]
     #[inline(always)]
-    pub fn mcu_sel(&mut self) -> MCU_SEL_W<GPIO19_SPEC> {
+    pub fn mcu_sel(&mut self) -> MCU_SEL_W<'_, GPIO19_SPEC> {
         MCU_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - Enable filter for pin input signals. 1: Filter enabled. 0: Filter disabled."]
     #[inline(always)]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<GPIO19_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<'_, GPIO19_SPEC> {
         FILTER_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - Software enables hysteresis function for the pad. 1: Hysteresis enabled. 0: Hysteresis disabled."]
     #[inline(always)]
-    pub fn hys_en(&mut self) -> HYS_EN_W<GPIO19_SPEC> {
+    pub fn hys_en(&mut self) -> HYS_EN_W<'_, GPIO19_SPEC> {
         HYS_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Select enabling signals of the pad from software and efuse hardware. 1: Select enabling siganl from slftware. 0: Select enabling signal from efuse hardware."]
     #[inline(always)]
-    pub fn hys_sel(&mut self) -> HYS_SEL_W<GPIO19_SPEC> {
+    pub fn hys_sel(&mut self) -> HYS_SEL_W<'_, GPIO19_SPEC> {
         HYS_SEL_W::new(self, 17)
     }
 }

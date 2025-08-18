@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 31 - brownout mode0 interrupt clear register"]
     #[inline(always)]
-    pub fn bod_mode0_int_clr(&mut self) -> BOD_MODE0_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn bod_mode0_int_clr(&mut self) -> BOD_MODE0_INT_CLR_W<'_, INT_CLR_SPEC> {
         BOD_MODE0_INT_CLR_W::new(self, 31)
     }
 }

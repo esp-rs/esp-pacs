@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:7 - Configures the threshold for RX FIFO being full.\\\\Measurement unit: byte."]
     #[inline(always)]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<'_, CONF1_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 3)
     }
     #[doc = "Bits 11:15 - Configures the threshold for TX FIFO being empty.\\\\Measurement unit: byte."]
     #[inline(always)]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<'_, CONF1_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 11)
     }
     #[doc = "Bit 16 - Configures whether or not to invert the level of LP UART CTS signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn cts_inv(&mut self) -> CTS_INV_W<CONF1_SPEC> {
+    pub fn cts_inv(&mut self) -> CTS_INV_W<'_, CONF1_SPEC> {
         CTS_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to invert the level of LP UART DSR signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn dsr_inv(&mut self) -> DSR_INV_W<CONF1_SPEC> {
+    pub fn dsr_inv(&mut self) -> DSR_INV_W<'_, CONF1_SPEC> {
         DSR_INV_W::new(self, 17)
     }
     #[doc = "Bit 18 - Configures whether or not to invert the level of LP UART RTS signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn rts_inv(&mut self) -> RTS_INV_W<CONF1_SPEC> {
+    pub fn rts_inv(&mut self) -> RTS_INV_W<'_, CONF1_SPEC> {
         RTS_INV_W::new(self, 18)
     }
     #[doc = "Bit 19 - Configures whether or not to invert the level of LP UART DTR signal.\\\\ 0: Not invert\\\\ 1: Invert\\\\"]
     #[inline(always)]
-    pub fn dtr_inv(&mut self) -> DTR_INV_W<CONF1_SPEC> {
+    pub fn dtr_inv(&mut self) -> DTR_INV_W<'_, CONF1_SPEC> {
         DTR_INV_W::new(self, 19)
     }
     #[doc = "Bit 20 - Configures the DTR signal used in software flow control.\\\\ 0: Data to be transmitted is not ready.\\\\ 1: Data to be transmitted is ready.\\\\"]
     #[inline(always)]
-    pub fn sw_dtr(&mut self) -> SW_DTR_W<CONF1_SPEC> {
+    pub fn sw_dtr(&mut self) -> SW_DTR_W<'_, CONF1_SPEC> {
         SW_DTR_W::new(self, 20)
     }
     #[doc = "Bit 21 - Configures clock gating.\\\\ 0: Support clock only when the application writes registers.\\\\ 1: Always force the clock on for registers.\\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF1_SPEC> {
         CLK_EN_W::new(self, 21)
     }
 }

@@ -56,27 +56,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Configures the time period to release the SCL line from stretching to avoid timing violation. Usually it should be larger than the SDA setup time.\\\\ Measurement unit: i2c_sclk \\\\"]
     #[inline(always)]
-    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn stretch_protect_num(&mut self) -> STRETCH_PROTECT_NUM_W<'_, SCL_STRETCH_CONF_SPEC> {
         STRETCH_PROTECT_NUM_W::new(self, 0)
     }
     #[doc = "Bit 10 - Configures to enable slave SCL stretch function. The SCL output line will be stretched low when I2C_SLAVE_SCL_STRETCH_EN is 1 and stretch event happens. The stretch cause can be seen in I2C_STRETCH_CAUSE.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_en(&mut self) -> SLAVE_SCL_STRETCH_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures to clear the I2C slave SCL stretch function.\\\\ 0: No effect \\\\ 1: Clear\\\\"]
     #[inline(always)]
-    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_scl_stretch_clr(&mut self) -> SLAVE_SCL_STRETCH_CLR_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_SCL_STRETCH_CLR_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures to enable the function for slave to control ACK level.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_ctl_en(&mut self) -> SLAVE_BYTE_ACK_CTL_EN_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_CTL_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set the ACK level when slave controlling ACK level function enables.\\\\ 0: Low level\\\\ 1: High level \\\\"]
     #[inline(always)]
-    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<SCL_STRETCH_CONF_SPEC> {
+    pub fn slave_byte_ack_lvl(&mut self) -> SLAVE_BYTE_ACK_LVL_W<'_, SCL_STRETCH_CONF_SPEC> {
         SLAVE_BYTE_ACK_LVL_W::new(self, 13)
     }
 }

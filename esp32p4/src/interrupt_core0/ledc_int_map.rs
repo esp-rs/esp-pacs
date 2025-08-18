@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_ledc_int_map(&mut self) -> CORE0_LEDC_INT_MAP_W<LEDC_INT_MAP_SPEC> {
+    pub fn core0_ledc_int_map(&mut self) -> CORE0_LEDC_INT_MAP_W<'_, LEDC_INT_MAP_SPEC> {
         CORE0_LEDC_INT_MAP_W::new(self, 0)
     }
 }

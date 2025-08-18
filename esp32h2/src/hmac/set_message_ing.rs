@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_MESSAGE_ING_SPEC> {
 impl W {
     #[doc = "Bit 0 - Continue typical hmac."]
     #[inline(always)]
-    pub fn set_text_ing(&mut self) -> SET_TEXT_ING_W<SET_MESSAGE_ING_SPEC> {
+    pub fn set_text_ing(&mut self) -> SET_TEXT_ING_W<'_, SET_MESSAGE_ING_SPEC> {
         SET_TEXT_ING_W::new(self, 0)
     }
 }

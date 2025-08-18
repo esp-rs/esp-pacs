@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - set this bit to reset sync-logic inside L1-Cache. Recommend that this should only be used to initialize sync-logic when some fatal error of sync-logic occurs."]
     #[inline(always)]
-    pub fn cache_sync_rst(&mut self) -> CACHE_SYNC_RST_W<CACHE_SYNC_RST_CTRL_SPEC> {
+    pub fn cache_sync_rst(&mut self) -> CACHE_SYNC_RST_W<'_, CACHE_SYNC_RST_CTRL_SPEC> {
         CACHE_SYNC_RST_W::new(self, 4)
     }
 }

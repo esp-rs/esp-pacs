@@ -59,29 +59,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CNT_THR_EVENT_U0` field.</div>"]
     #[inline(always)]
-    pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
+    pub fn cnt_thr_event_u(&mut self, n: u8) -> CNT_THR_EVENT_U_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 4][n as usize];
         CNT_THR_EVENT_U_W::new(self, n)
     }
     #[doc = "Bit 0 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U0_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
+    pub fn cnt_thr_event_u0(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U1_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
+    pub fn cnt_thr_event_u1(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U2_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
+    pub fn cnt_thr_event_u2(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the PCNT_CNT_THR_EVENT_U3_INT interrupt."]
     #[inline(always)]
-    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U_W<INT_ENA_SPEC> {
+    pub fn cnt_thr_event_u3(&mut self) -> CNT_THR_EVENT_U_W<'_, INT_ENA_SPEC> {
         CNT_THR_EVENT_U_W::new(self, 3)
     }
 }

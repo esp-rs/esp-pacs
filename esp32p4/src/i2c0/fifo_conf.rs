@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Configures the water mark threshold of RXFIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and rx FIFO counter is bigger than reg_rxfifo_wm_thrhd\\[4:0\\], reg_rxfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
-    pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
+    pub fn rxfifo_wm_thrhd(&mut self) -> RXFIFO_WM_THRHD_W<'_, FIFO_CONF_SPEC> {
         RXFIFO_WM_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Configures the water mark threshold of TXFIFO in nonfifo access mode. When reg_reg_fifo_prt_en is 1 and tx FIFO counter is smaller than reg_txfifo_wm_thrhd\\[4:0\\], reg_txfifo_wm_int_raw bit will be valid."]
     #[inline(always)]
-    pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<FIFO_CONF_SPEC> {
+    pub fn txfifo_wm_thrhd(&mut self) -> TXFIFO_WM_THRHD_W<'_, FIFO_CONF_SPEC> {
         TXFIFO_WM_THRHD_W::new(self, 5)
     }
     #[doc = "Bit 10 - Configures to enable APB nonfifo access."]
     #[inline(always)]
-    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC> {
+    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<'_, FIFO_CONF_SPEC> {
         NONFIFO_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures to enable double addressing mode. When this mode is enabled, the byte received after the I2C address byte represents the offset address in the I2C Slave RAM. 0: Disable 1: Enable"]
     #[inline(always)]
-    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<FIFO_CONF_SPEC> {
+    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<'_, FIFO_CONF_SPEC> {
         FIFO_ADDR_CFG_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures to reset RXFIFO. 0: No effect 1: Reset"]
     #[inline(always)]
-    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC> {
+    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<'_, FIFO_CONF_SPEC> {
         RX_FIFO_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures to reset TXFIFO. 0: No effect 1: Reset"]
     #[inline(always)]
-    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC> {
+    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<'_, FIFO_CONF_SPEC> {
         TX_FIFO_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures to enable FIFO pointer in non-fifo access mode. This bit controls the valid bits and the TX/RX FIFO overflow, underflow, full and empty interrupts. 0: No effect 1: Enable"]
     #[inline(always)]
-    pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<FIFO_CONF_SPEC> {
+    pub fn fifo_prt_en(&mut self) -> FIFO_PRT_EN_W<'_, FIFO_CONF_SPEC> {
         FIFO_PRT_EN_W::new(self, 14)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn dmmu_table0(&mut self) -> DMMU_TABLE0_W<DMMU_TABLE_SPEC> {
+    pub fn dmmu_table0(&mut self) -> DMMU_TABLE0_W<'_, DMMU_TABLE_SPEC> {
         DMMU_TABLE0_W::new(self, 0)
     }
 }

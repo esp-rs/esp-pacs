@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - Need add desc"]
     #[inline(always)]
-    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<USB_CONF_SPEC> {
+    pub fn io_mux_reset_disable(&mut self) -> IO_MUX_RESET_DISABLE_W<'_, USB_CONF_SPEC> {
         IO_MUX_RESET_DISABLE_W::new(self, 18)
     }
 }

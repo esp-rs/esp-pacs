@@ -52,17 +52,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 20 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<LINK_CONF_SPEC> {
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<'_, LINK_CONF_SPEC> {
         OUTLINK_STOP_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to start dealing with the outlink descriptors."]
     #[inline(always)]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<LINK_CONF_SPEC> {
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<'_, LINK_CONF_SPEC> {
         OUTLINK_START_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<LINK_CONF_SPEC> {
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<'_, LINK_CONF_SPEC> {
         OUTLINK_RESTART_W::new(self, 22)
     }
 }

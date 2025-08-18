@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn user_id_fn2(&mut self) -> USER_ID_FN2_W<CFG_DATA16_SPEC> {
+    pub fn user_id_fn2(&mut self) -> USER_ID_FN2_W<'_, CFG_DATA16_SPEC> {
         USER_ID_FN2_W::new(self, 0)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn device_id_fn2(&mut self) -> DEVICE_ID_FN2_W<CFG_DATA16_SPEC> {
+    pub fn device_id_fn2(&mut self) -> DEVICE_ID_FN2_W<'_, CFG_DATA16_SPEC> {
         DEVICE_ID_FN2_W::new(self, 16)
     }
 }

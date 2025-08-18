@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 10 - When set alarm is enabled"]
     #[inline(always)]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<CONFIG_SPEC> {
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<'_, CONFIG_SPEC> {
         ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - When set level type interrupt will be generated during alarm"]
     #[inline(always)]
-    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<CONFIG_SPEC> {
+    pub fn level_int_en(&mut self) -> LEVEL_INT_EN_W<'_, CONFIG_SPEC> {
         LEVEL_INT_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - When set edge type interrupt will be generated during alarm"]
     #[inline(always)]
-    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<CONFIG_SPEC> {
+    pub fn edge_int_en(&mut self) -> EDGE_INT_EN_W<'_, CONFIG_SPEC> {
         EDGE_INT_EN_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - Timer 0 clock (T0_clk) prescale value."]
     #[inline(always)]
-    pub fn divider(&mut self) -> DIVIDER_W<CONFIG_SPEC> {
+    pub fn divider(&mut self) -> DIVIDER_W<'_, CONFIG_SPEC> {
         DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - When set timer 0 auto-reload at alarming is enabled"]
     #[inline(always)]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<CONFIG_SPEC> {
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<'_, CONFIG_SPEC> {
         AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - When set timer 0 time-base counter increment. When cleared timer 0 time-base counter decrement."]
     #[inline(always)]
-    pub fn increase(&mut self) -> INCREASE_W<CONFIG_SPEC> {
+    pub fn increase(&mut self) -> INCREASE_W<'_, CONFIG_SPEC> {
         INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - When set timer 0 time-base counter is enabled"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CONFIG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CONFIG_SPEC> {
         EN_W::new(self, 31)
     }
 }

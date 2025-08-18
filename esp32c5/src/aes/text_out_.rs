@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This bits stores text_out_0 that is a part of result text material."]
     #[inline(always)]
-    pub fn text_out_0(&mut self) -> TEXT_OUT_0_W<TEXT_OUT__SPEC> {
+    pub fn text_out_0(&mut self) -> TEXT_OUT_0_W<'_, TEXT_OUT__SPEC> {
         TEXT_OUT_0_W::new(self, 0)
     }
 }

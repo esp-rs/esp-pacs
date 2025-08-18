@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The interrupt enable bit for the i2s_rx_done_int interrupt"]
     #[inline(always)]
-    pub fn rx_done_int_ena(&mut self) -> RX_DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn rx_done_int_ena(&mut self) -> RX_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         RX_DONE_INT_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - The interrupt enable bit for the i2s_tx_done_int interrupt"]
     #[inline(always)]
-    pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn tx_done_int_ena(&mut self) -> TX_DONE_INT_ENA_W<'_, INT_ENA_SPEC> {
         TX_DONE_INT_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - The interrupt enable bit for the i2s_rx_hung_int interrupt"]
     #[inline(always)]
-    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn rx_hung_int_ena(&mut self) -> RX_HUNG_INT_ENA_W<'_, INT_ENA_SPEC> {
         RX_HUNG_INT_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - The interrupt enable bit for the i2s_tx_hung_int interrupt"]
     #[inline(always)]
-    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<INT_ENA_SPEC> {
+    pub fn tx_hung_int_ena(&mut self) -> TX_HUNG_INT_ENA_W<'_, INT_ENA_SPEC> {
         TX_HUNG_INT_ENA_W::new(self, 3)
     }
 }

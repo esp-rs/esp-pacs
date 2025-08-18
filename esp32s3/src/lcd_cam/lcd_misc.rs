@@ -106,52 +106,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 1:5 - Set the threshold for Async Tx FIFO full event."]
     #[inline(always)]
-    pub fn lcd_afifo_threshold_num(&mut self) -> LCD_AFIFO_THRESHOLD_NUM_W<LCD_MISC_SPEC> {
+    pub fn lcd_afifo_threshold_num(&mut self) -> LCD_AFIFO_THRESHOLD_NUM_W<'_, LCD_MISC_SPEC> {
         LCD_AFIFO_THRESHOLD_NUM_W::new(self, 1)
     }
     #[doc = "Bits 6:11 - Configure the setup cycles in LCD non-RGB mode. Setup cycles expected = this value + 1."]
     #[inline(always)]
-    pub fn lcd_vfk_cyclelen(&mut self) -> LCD_VFK_CYCLELEN_W<LCD_MISC_SPEC> {
+    pub fn lcd_vfk_cyclelen(&mut self) -> LCD_VFK_CYCLELEN_W<'_, LCD_MISC_SPEC> {
         LCD_VFK_CYCLELEN_W::new(self, 6)
     }
     #[doc = "Bits 12:24 - Configure the hold time cycles in LCD non-RGB mode. Hold cycles expected = this value + 1. %Configure the cycles for vertical back blank region in LCD RGB mode, the cycles = this value + 1. Or configure the hold time cycles in LCD non-RGB mode, the cycles = this value + 1."]
     #[inline(always)]
-    pub fn lcd_vbk_cyclelen(&mut self) -> LCD_VBK_CYCLELEN_W<LCD_MISC_SPEC> {
+    pub fn lcd_vbk_cyclelen(&mut self) -> LCD_VBK_CYCLELEN_W<'_, LCD_MISC_SPEC> {
         LCD_VBK_CYCLELEN_W::new(self, 12)
     }
     #[doc = "Bit 25 - 1: Send the next frame data when the current frame is sent out. 0: LCD stops when the current frame is sent out."]
     #[inline(always)]
-    pub fn lcd_next_frame_en(&mut self) -> LCD_NEXT_FRAME_EN_W<LCD_MISC_SPEC> {
+    pub fn lcd_next_frame_en(&mut self) -> LCD_NEXT_FRAME_EN_W<'_, LCD_MISC_SPEC> {
         LCD_NEXT_FRAME_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - 1: Enable blank region when LCD sends data out. 0: No blank region."]
     #[inline(always)]
-    pub fn lcd_bk_en(&mut self) -> LCD_BK_EN_W<LCD_MISC_SPEC> {
+    pub fn lcd_bk_en(&mut self) -> LCD_BK_EN_W<'_, LCD_MISC_SPEC> {
         LCD_BK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Async Tx FIFO reset signal."]
     #[inline(always)]
-    pub fn lcd_afifo_reset(&mut self) -> LCD_AFIFO_RESET_W<LCD_MISC_SPEC> {
+    pub fn lcd_afifo_reset(&mut self) -> LCD_AFIFO_RESET_W<'_, LCD_MISC_SPEC> {
         LCD_AFIFO_RESET_W::new(self, 27)
     }
     #[doc = "Bit 28 - 1: LCD_CD = !LCD_CAM_LCD_CD_IDLE_EDGE when LCD is in DOUT phase. 0: LCD_CD = LCD_CAM_LCD_CD_IDLE_EDGE."]
     #[inline(always)]
-    pub fn lcd_cd_data_set(&mut self) -> LCD_CD_DATA_SET_W<LCD_MISC_SPEC> {
+    pub fn lcd_cd_data_set(&mut self) -> LCD_CD_DATA_SET_W<'_, LCD_MISC_SPEC> {
         LCD_CD_DATA_SET_W::new(self, 28)
     }
     #[doc = "Bit 29 - 1: LCD_CD = !LCD_CAM_LCD_CD_IDLE_EDGE when LCD is in DUMMY phase. 0: LCD_CD = LCD_CAM_LCD_CD_IDLE_EDGE."]
     #[inline(always)]
-    pub fn lcd_cd_dummy_set(&mut self) -> LCD_CD_DUMMY_SET_W<LCD_MISC_SPEC> {
+    pub fn lcd_cd_dummy_set(&mut self) -> LCD_CD_DUMMY_SET_W<'_, LCD_MISC_SPEC> {
         LCD_CD_DUMMY_SET_W::new(self, 29)
     }
     #[doc = "Bit 30 - 1: LCD_CD = !LCD_CAM_LCD_CD_IDLE_EDGE when LCD is in CMD phase. 0: LCD_CD = LCD_CAM_LCD_CD_IDLE_EDGE."]
     #[inline(always)]
-    pub fn lcd_cd_cmd_set(&mut self) -> LCD_CD_CMD_SET_W<LCD_MISC_SPEC> {
+    pub fn lcd_cd_cmd_set(&mut self) -> LCD_CD_CMD_SET_W<'_, LCD_MISC_SPEC> {
         LCD_CD_CMD_SET_W::new(self, 30)
     }
     #[doc = "Bit 31 - The default value of LCD_CD."]
     #[inline(always)]
-    pub fn lcd_cd_idle_edge(&mut self) -> LCD_CD_IDLE_EDGE_W<LCD_MISC_SPEC> {
+    pub fn lcd_cd_idle_edge(&mut self) -> LCD_CD_IDLE_EDGE_W<'_, LCD_MISC_SPEC> {
         LCD_CD_IDLE_EDGE_W::new(self, 31)
     }
 }

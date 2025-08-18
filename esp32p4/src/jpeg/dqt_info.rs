@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configure dqt table0's quantization coefficient precision in bit\\[7:4\\], configure dqt table0's table id in bit\\[3:0\\]"]
     #[inline(always)]
-    pub fn t0_dqt_info(&mut self) -> T0_DQT_INFO_W<DQT_INFO_SPEC> {
+    pub fn t0_dqt_info(&mut self) -> T0_DQT_INFO_W<'_, DQT_INFO_SPEC> {
         T0_DQT_INFO_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configure dqt table1's quantization coefficient precision in bit\\[7:4\\], configure dqt table1's table id in bit\\[3:0\\]"]
     #[inline(always)]
-    pub fn t1_dqt_info(&mut self) -> T1_DQT_INFO_W<DQT_INFO_SPEC> {
+    pub fn t1_dqt_info(&mut self) -> T1_DQT_INFO_W<'_, DQT_INFO_SPEC> {
         T1_DQT_INFO_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Configure dqt table2's quantization coefficient precision in bit\\[7:4\\], configure dqt table2's table id in bit\\[3:0\\]"]
     #[inline(always)]
-    pub fn t2_dqt_info(&mut self) -> T2_DQT_INFO_W<DQT_INFO_SPEC> {
+    pub fn t2_dqt_info(&mut self) -> T2_DQT_INFO_W<'_, DQT_INFO_SPEC> {
         T2_DQT_INFO_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Configure dqt table3's quantization coefficient precision in bit\\[7:4\\], configure dqt table3's table id in bit\\[3:0\\]"]
     #[inline(always)]
-    pub fn t3_dqt_info(&mut self) -> T3_DQT_INFO_W<DQT_INFO_SPEC> {
+    pub fn t3_dqt_info(&mut self) -> T3_DQT_INFO_W<'_, DQT_INFO_SPEC> {
         T3_DQT_INFO_W::new(self, 24)
     }
 }

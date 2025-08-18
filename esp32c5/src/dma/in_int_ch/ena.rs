@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable AHB_DMA_IN_DONE_CH%s_INT."]
     #[inline(always)]
-    pub fn in_done(&mut self) -> IN_DONE_W<ENA_SPEC> {
+    pub fn in_done(&mut self) -> IN_DONE_W<'_, ENA_SPEC> {
         IN_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable AHB_DMA_IN_SUC_EOF_CH%s_INT."]
     #[inline(always)]
-    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<ENA_SPEC> {
+    pub fn in_suc_eof(&mut self) -> IN_SUC_EOF_W<'_, ENA_SPEC> {
         IN_SUC_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable AHB_DMA_IN_ERR_EOF_CH%s_INT."]
     #[inline(always)]
-    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<ENA_SPEC> {
+    pub fn in_err_eof(&mut self) -> IN_ERR_EOF_W<'_, ENA_SPEC> {
         IN_ERR_EOF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable AHB_DMA_IN_DSCR_ERR_CH%s_INT."]
     #[inline(always)]
-    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<ENA_SPEC> {
+    pub fn in_dscr_err(&mut self) -> IN_DSCR_ERR_W<'_, ENA_SPEC> {
         IN_DSCR_ERR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to enable AHB_DMA_IN_DSCR_EMPTY_CH%s_INT."]
     #[inline(always)]
-    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<ENA_SPEC> {
+    pub fn in_dscr_empty(&mut self) -> IN_DSCR_EMPTY_W<'_, ENA_SPEC> {
         IN_DSCR_EMPTY_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to enable AHB_DMA_INFIFO_OVF_CH%s_INT."]
     #[inline(always)]
-    pub fn infifo_ovf(&mut self) -> INFIFO_OVF_W<ENA_SPEC> {
+    pub fn infifo_ovf(&mut self) -> INFIFO_OVF_W<'_, ENA_SPEC> {
         INFIFO_OVF_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to enable AHB_DMA_INFIFO_UDF_CH%s_INT."]
     #[inline(always)]
-    pub fn infifo_udf(&mut self) -> INFIFO_UDF_W<ENA_SPEC> {
+    pub fn infifo_udf(&mut self) -> INFIFO_UDF_W<'_, ENA_SPEC> {
         INFIFO_UDF_W::new(self, 6)
     }
 }

@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to enable ecdsa clock"]
     #[inline(always)]
-    pub fn ecdsa_clk_en(&mut self) -> ECDSA_CLK_EN_W<ECDSA_CONF_SPEC> {
+    pub fn ecdsa_clk_en(&mut self) -> ECDSA_CLK_EN_W<'_, ECDSA_CONF_SPEC> {
         ECDSA_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset ecdsa module"]
     #[inline(always)]
-    pub fn ecdsa_rst_en(&mut self) -> ECDSA_RST_EN_W<ECDSA_CONF_SPEC> {
+    pub fn ecdsa_rst_en(&mut self) -> ECDSA_RST_EN_W<'_, ECDSA_CONF_SPEC> {
         ECDSA_RST_EN_W::new(self, 1)
     }
 }

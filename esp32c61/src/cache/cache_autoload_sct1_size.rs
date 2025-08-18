@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn cache_autoload_sct1_size(
         &mut self,
-    ) -> CACHE_AUTOLOAD_SCT1_SIZE_W<CACHE_AUTOLOAD_SCT1_SIZE_SPEC> {
+    ) -> CACHE_AUTOLOAD_SCT1_SIZE_W<'_, CACHE_AUTOLOAD_SCT1_SIZE_SPEC> {
         CACHE_AUTOLOAD_SCT1_SIZE_W::new(self, 0)
     }
 }

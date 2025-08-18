@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable the interrupt of UHCI_RX_START_INT."]
     #[inline(always)]
-    pub fn rx_start(&mut self) -> RX_START_W<INT_ENA_SPEC> {
+    pub fn rx_start(&mut self) -> RX_START_W<'_, INT_ENA_SPEC> {
         RX_START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable the interrupt of UHCI_TX_START_INT."]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<INT_ENA_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, INT_ENA_SPEC> {
         TX_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable the interrupt of UHCI_RX_HUNG_INT."]
     #[inline(always)]
-    pub fn rx_hung(&mut self) -> RX_HUNG_W<INT_ENA_SPEC> {
+    pub fn rx_hung(&mut self) -> RX_HUNG_W<'_, INT_ENA_SPEC> {
         RX_HUNG_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable the interrupt of UHCI_TX_HUNG_INT."]
     #[inline(always)]
-    pub fn tx_hung(&mut self) -> TX_HUNG_W<INT_ENA_SPEC> {
+    pub fn tx_hung(&mut self) -> TX_HUNG_W<'_, INT_ENA_SPEC> {
         TX_HUNG_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable the interrupt of UHCI_SEND_S_REG_Q_INT."]
     #[inline(always)]
-    pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<INT_ENA_SPEC> {
+    pub fn send_s_reg_q(&mut self) -> SEND_S_REG_Q_W<'_, INT_ENA_SPEC> {
         SEND_S_REG_Q_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable the interrupt of UHCI_SEND_A_REG_Q_INT."]
     #[inline(always)]
-    pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<INT_ENA_SPEC> {
+    pub fn send_a_reg_q(&mut self) -> SEND_A_REG_Q_W<'_, INT_ENA_SPEC> {
         SEND_A_REG_Q_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable the interrupt of UHCI_OUT_EOF_INT."]
     #[inline(always)]
-    pub fn outlink_eof_err(&mut self) -> OUTLINK_EOF_ERR_W<INT_ENA_SPEC> {
+    pub fn outlink_eof_err(&mut self) -> OUTLINK_EOF_ERR_W<'_, INT_ENA_SPEC> {
         OUTLINK_EOF_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable the interrupt of UHCI_APP_CTRL0_INT."]
     #[inline(always)]
-    pub fn app_ctrl0(&mut self) -> APP_CTRL0_W<INT_ENA_SPEC> {
+    pub fn app_ctrl0(&mut self) -> APP_CTRL0_W<'_, INT_ENA_SPEC> {
         APP_CTRL0_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to enable the interrupt of UHCI_APP_CTRL1_INT."]
     #[inline(always)]
-    pub fn app_ctrl1(&mut self) -> APP_CTRL1_W<INT_ENA_SPEC> {
+    pub fn app_ctrl1(&mut self) -> APP_CTRL1_W<'_, INT_ENA_SPEC> {
         APP_CTRL1_W::new(self, 8)
     }
 }

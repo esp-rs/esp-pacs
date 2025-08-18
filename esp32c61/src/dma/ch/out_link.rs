@@ -28,17 +28,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to stop AHB_DMA's TX channel 0 from transmitting data.\\\\0: Invalid. No effect\\\\1: Stop\\\\"]
     #[inline(always)]
-    pub fn outlink_stop_ch0(&mut self) -> OUTLINK_STOP_CH0_W<OUT_LINK_SPEC> {
+    pub fn outlink_stop_ch0(&mut self) -> OUTLINK_STOP_CH0_W<'_, OUT_LINK_SPEC> {
         OUTLINK_STOP_CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether to enable AHB_DMA's TX channel 0 for data transfer.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn outlink_start_ch0(&mut self) -> OUTLINK_START_CH0_W<OUT_LINK_SPEC> {
+    pub fn outlink_start_ch0(&mut self) -> OUTLINK_START_CH0_W<'_, OUT_LINK_SPEC> {
         OUTLINK_START_CH0_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether to restart TX channel 0 for AHB_DMA transfer.\\\\0: Invalid. No effect\\\\1: Restart\\\\"]
     #[inline(always)]
-    pub fn outlink_restart_ch0(&mut self) -> OUTLINK_RESTART_CH0_W<OUT_LINK_SPEC> {
+    pub fn outlink_restart_ch0(&mut self) -> OUTLINK_RESTART_CH0_W<'_, OUT_LINK_SPEC> {
         OUTLINK_RESTART_CH0_W::new(self, 2)
     }
 }

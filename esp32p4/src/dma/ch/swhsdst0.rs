@@ -50,32 +50,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_req_dst(&mut self) -> CH1_SWHS_REQ_DST_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_req_dst(&mut self) -> CH1_SWHS_REQ_DST_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_REQ_DST_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_req_dst_we(&mut self) -> CH1_SWHS_REQ_DST_WE_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_req_dst_we(&mut self) -> CH1_SWHS_REQ_DST_WE_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_REQ_DST_WE_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_sglreq_dst(&mut self) -> CH1_SWHS_SGLREQ_DST_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_sglreq_dst(&mut self) -> CH1_SWHS_SGLREQ_DST_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_SGLREQ_DST_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_sglreq_dst_we(&mut self) -> CH1_SWHS_SGLREQ_DST_WE_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_sglreq_dst_we(&mut self) -> CH1_SWHS_SGLREQ_DST_WE_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_SGLREQ_DST_WE_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_lst_dst(&mut self) -> CH1_SWHS_LST_DST_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_lst_dst(&mut self) -> CH1_SWHS_LST_DST_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_LST_DST_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    pub fn ch1_swhs_lst_dst_we(&mut self) -> CH1_SWHS_LST_DST_WE_W<SWHSDST0_SPEC> {
+    pub fn ch1_swhs_lst_dst_we(&mut self) -> CH1_SWHS_LST_DST_WE_W<'_, SWHSDST0_SPEC> {
         CH1_SWHS_LST_DST_WE_W::new(self, 5)
     }
 }

@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to power down mem.when reg_mem_pd registers in the 3 uarts are all set to 1 mem will enter low power mode."]
     #[inline(always)]
-    pub fn mem_pd(&mut self) -> MEM_PD_W<MEM_CONF_SPEC> {
+    pub fn mem_pd(&mut self) -> MEM_PD_W<'_, MEM_CONF_SPEC> {
         MEM_PD_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - This register is used to configure the amount of mem allocated to receiver's fifo. the default byte num is 128."]
     #[inline(always)]
-    pub fn rx_size(&mut self) -> RX_SIZE_W<MEM_CONF_SPEC> {
+    pub fn rx_size(&mut self) -> RX_SIZE_W<'_, MEM_CONF_SPEC> {
         RX_SIZE_W::new(self, 3)
     }
     #[doc = "Bits 7:10 - This register is used to configure the amount of mem allocated to transmitter's fifo.the default byte num is 128."]
     #[inline(always)]
-    pub fn tx_size(&mut self) -> TX_SIZE_W<MEM_CONF_SPEC> {
+    pub fn tx_size(&mut self) -> TX_SIZE_W<'_, MEM_CONF_SPEC> {
         TX_SIZE_W::new(self, 7)
     }
     #[doc = "Bits 15:17 - Refer to the rx_flow_thrhd's description."]
     #[inline(always)]
-    pub fn rx_flow_thrhd_h3(&mut self) -> RX_FLOW_THRHD_H3_W<MEM_CONF_SPEC> {
+    pub fn rx_flow_thrhd_h3(&mut self) -> RX_FLOW_THRHD_H3_W<'_, MEM_CONF_SPEC> {
         RX_FLOW_THRHD_H3_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - Refer to the rx_tout_thrhd's description."]
     #[inline(always)]
-    pub fn rx_tout_thrhd_h3(&mut self) -> RX_TOUT_THRHD_H3_W<MEM_CONF_SPEC> {
+    pub fn rx_tout_thrhd_h3(&mut self) -> RX_TOUT_THRHD_H3_W<'_, MEM_CONF_SPEC> {
         RX_TOUT_THRHD_H3_W::new(self, 18)
     }
     #[doc = "Bits 21:22 - Refer to the uart_xon_threshold's description."]
     #[inline(always)]
-    pub fn xon_threshold_h2(&mut self) -> XON_THRESHOLD_H2_W<MEM_CONF_SPEC> {
+    pub fn xon_threshold_h2(&mut self) -> XON_THRESHOLD_H2_W<'_, MEM_CONF_SPEC> {
         XON_THRESHOLD_H2_W::new(self, 21)
     }
     #[doc = "Bits 23:24 - Refer to the uart_xoff_threshold's description."]
     #[inline(always)]
-    pub fn xoff_threshold_h2(&mut self) -> XOFF_THRESHOLD_H2_W<MEM_CONF_SPEC> {
+    pub fn xoff_threshold_h2(&mut self) -> XOFF_THRESHOLD_H2_W<'_, MEM_CONF_SPEC> {
         XOFF_THRESHOLD_H2_W::new(self, 23)
     }
     #[doc = "Bits 25:27 - Refer to the rxfifo_full_thrhd's description."]
     #[inline(always)]
-    pub fn rx_mem_full_thrhd(&mut self) -> RX_MEM_FULL_THRHD_W<MEM_CONF_SPEC> {
+    pub fn rx_mem_full_thrhd(&mut self) -> RX_MEM_FULL_THRHD_W<'_, MEM_CONF_SPEC> {
         RX_MEM_FULL_THRHD_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - Refer to txfifo_empty_thrhd's description."]
     #[inline(always)]
-    pub fn tx_mem_empty_thrhd(&mut self) -> TX_MEM_EMPTY_THRHD_W<MEM_CONF_SPEC> {
+    pub fn tx_mem_empty_thrhd(&mut self) -> TX_MEM_EMPTY_THRHD_W<'_, MEM_CONF_SPEC> {
         TX_MEM_EMPTY_THRHD_W::new(self, 28)
     }
 }

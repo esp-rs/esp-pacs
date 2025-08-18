@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6"]
     #[inline(always)]
-    pub fn in_sel(&mut self) -> IN_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn in_sel(&mut self) -> IN_SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         IN_SEL_W::new(self, 0)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn in_inv_sel(&mut self) -> IN_INV_SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         IN_INV_SEL_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<FUNC_IN_SEL_CFG_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, FUNC_IN_SEL_CFG_SPEC> {
         SEL_W::new(self, 8)
     }
 }

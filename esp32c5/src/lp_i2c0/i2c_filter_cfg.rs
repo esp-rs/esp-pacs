@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - When a pulse on the SCL input has smaller width than this register valuein I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
-    pub fn i2c_scl_filter_thres(&mut self) -> I2C_SCL_FILTER_THRES_W<I2C_FILTER_CFG_SPEC> {
+    pub fn i2c_scl_filter_thres(&mut self) -> I2C_SCL_FILTER_THRES_W<'_, I2C_FILTER_CFG_SPEC> {
         I2C_SCL_FILTER_THRES_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - When a pulse on the SDA input has smaller width than this register valuein I2C module clock cycles, the I2C controller will ignore that pulse."]
     #[inline(always)]
-    pub fn i2c_sda_filter_thres(&mut self) -> I2C_SDA_FILTER_THRES_W<I2C_FILTER_CFG_SPEC> {
+    pub fn i2c_sda_filter_thres(&mut self) -> I2C_SDA_FILTER_THRES_W<'_, I2C_FILTER_CFG_SPEC> {
         I2C_SDA_FILTER_THRES_W::new(self, 4)
     }
     #[doc = "Bit 8 - This is the filter enable bit for SCL."]
     #[inline(always)]
-    pub fn i2c_scl_filter_en(&mut self) -> I2C_SCL_FILTER_EN_W<I2C_FILTER_CFG_SPEC> {
+    pub fn i2c_scl_filter_en(&mut self) -> I2C_SCL_FILTER_EN_W<'_, I2C_FILTER_CFG_SPEC> {
         I2C_SCL_FILTER_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - This is the filter enable bit for SDA."]
     #[inline(always)]
-    pub fn i2c_sda_filter_en(&mut self) -> I2C_SDA_FILTER_EN_W<I2C_FILTER_CFG_SPEC> {
+    pub fn i2c_sda_filter_en(&mut self) -> I2C_SDA_FILTER_EN_W<'_, I2C_FILTER_CFG_SPEC> {
         I2C_SDA_FILTER_EN_W::new(self, 9)
     }
 }

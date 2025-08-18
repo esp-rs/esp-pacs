@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Configures update method for FED (Falling edge delay) active register.\\\\0: Immediate\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
     #[inline(always)]
-    pub fn db_fed_upmethod(&mut self) -> DB_FED_UPMETHOD_W<DT_CFG_SPEC> {
+    pub fn db_fed_upmethod(&mut self) -> DB_FED_UPMETHOD_W<'_, DT_CFG_SPEC> {
         DB_FED_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Configures update method for RED (rising edge delay) active register.\\\\0: Immediate\\\\Bit0 is set to 1: TEZ\\\\Bit1 is set to 1: TEP\\\\Bit2 is set to 1: Sync\\\\Bit3 is set to 1: Disable the update"]
     #[inline(always)]
-    pub fn db_red_upmethod(&mut self) -> DB_RED_UPMETHOD_W<DT_CFG_SPEC> {
+    pub fn db_red_upmethod(&mut self) -> DB_RED_UPMETHOD_W<'_, DT_CFG_SPEC> {
         DB_RED_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8 - Configures S8 in table, dual-edge B mode.\\\\0: fed/red take effect on different path separately\\\\1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
     #[inline(always)]
-    pub fn db_deb_mode(&mut self) -> DB_DEB_MODE_W<DT_CFG_SPEC> {
+    pub fn db_deb_mode(&mut self) -> DB_DEB_MODE_W<'_, DT_CFG_SPEC> {
         DB_DEB_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures S6 in table."]
     #[inline(always)]
-    pub fn db_a_outswap(&mut self) -> DB_A_OUTSWAP_W<DT_CFG_SPEC> {
+    pub fn db_a_outswap(&mut self) -> DB_A_OUTSWAP_W<'_, DT_CFG_SPEC> {
         DB_A_OUTSWAP_W::new(self, 9)
     }
     #[doc = "Bit 10 - Configures S7 in table."]
     #[inline(always)]
-    pub fn db_b_outswap(&mut self) -> DB_B_OUTSWAP_W<DT_CFG_SPEC> {
+    pub fn db_b_outswap(&mut self) -> DB_B_OUTSWAP_W<'_, DT_CFG_SPEC> {
         DB_B_OUTSWAP_W::new(self, 10)
     }
     #[doc = "Bit 11 - Configures S4 in table."]
     #[inline(always)]
-    pub fn db_red_insel(&mut self) -> DB_RED_INSEL_W<DT_CFG_SPEC> {
+    pub fn db_red_insel(&mut self) -> DB_RED_INSEL_W<'_, DT_CFG_SPEC> {
         DB_RED_INSEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - Configures S5 in table."]
     #[inline(always)]
-    pub fn db_fed_insel(&mut self) -> DB_FED_INSEL_W<DT_CFG_SPEC> {
+    pub fn db_fed_insel(&mut self) -> DB_FED_INSEL_W<'_, DT_CFG_SPEC> {
         DB_FED_INSEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - Configures S2 in table."]
     #[inline(always)]
-    pub fn db_red_outinvert(&mut self) -> DB_RED_OUTINVERT_W<DT_CFG_SPEC> {
+    pub fn db_red_outinvert(&mut self) -> DB_RED_OUTINVERT_W<'_, DT_CFG_SPEC> {
         DB_RED_OUTINVERT_W::new(self, 13)
     }
     #[doc = "Bit 14 - Configures S3 in table."]
     #[inline(always)]
-    pub fn db_fed_outinvert(&mut self) -> DB_FED_OUTINVERT_W<DT_CFG_SPEC> {
+    pub fn db_fed_outinvert(&mut self) -> DB_FED_OUTINVERT_W<'_, DT_CFG_SPEC> {
         DB_FED_OUTINVERT_W::new(self, 14)
     }
     #[doc = "Bit 15 - Configures S1 in table."]
     #[inline(always)]
-    pub fn db_a_outbypass(&mut self) -> DB_A_OUTBYPASS_W<DT_CFG_SPEC> {
+    pub fn db_a_outbypass(&mut self) -> DB_A_OUTBYPASS_W<'_, DT_CFG_SPEC> {
         DB_A_OUTBYPASS_W::new(self, 15)
     }
     #[doc = "Bit 16 - Configures S0 in table."]
     #[inline(always)]
-    pub fn db_b_outbypass(&mut self) -> DB_B_OUTBYPASS_W<DT_CFG_SPEC> {
+    pub fn db_b_outbypass(&mut self) -> DB_B_OUTBYPASS_W<'_, DT_CFG_SPEC> {
         DB_B_OUTBYPASS_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures dead time generator %s clock selection.\\\\0: PWM_clk\\\\1: PT_clk"]
     #[inline(always)]
-    pub fn db_clk_sel(&mut self) -> DB_CLK_SEL_W<DT_CFG_SPEC> {
+    pub fn db_clk_sel(&mut self) -> DB_CLK_SEL_W<'_, DT_CFG_SPEC> {
         DB_CLK_SEL_W::new(self, 17)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - the number of reg_dma_burst_len in a block"]
     #[inline(always)]
-    pub fn dmablk_size(&mut self) -> DMABLK_SIZE_W<DMABLK_SIZE_SPEC> {
+    pub fn dmablk_size(&mut self) -> DMABLK_SIZE_W<'_, DMABLK_SIZE_SPEC> {
         DMABLK_SIZE_W::new(self, 0)
     }
 }

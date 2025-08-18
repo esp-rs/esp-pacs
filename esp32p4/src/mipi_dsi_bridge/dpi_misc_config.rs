@@ -37,14 +37,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures enable of dpi output, 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dpi_en(&mut self) -> DPI_EN_W<DPI_MISC_CONFIG_SPEC> {
+    pub fn dpi_en(&mut self) -> DPI_EN_W<'_, DPI_MISC_CONFIG_SPEC> {
         DPI_EN_W::new(self, 0)
     }
     #[doc = "Bits 4:15 - this field configures the underrun interrupt musk, when underrun occurs and line cnt is less then this field"]
     #[inline(always)]
     pub fn fifo_underrun_discard_vcnt(
         &mut self,
-    ) -> FIFO_UNDERRUN_DISCARD_VCNT_W<DPI_MISC_CONFIG_SPEC> {
+    ) -> FIFO_UNDERRUN_DISCARD_VCNT_W<'_, DPI_MISC_CONFIG_SPEC> {
         FIFO_UNDERRUN_DISCARD_VCNT_W::new(self, 4)
     }
 }

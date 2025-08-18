@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set 1 will triger a interrupt"]
     #[inline(always)]
-    pub fn cpu_intr_from_cpu_0(&mut self) -> CPU_INTR_FROM_CPU_0_W<CPU_INTR_FROM_CPU_0_SPEC> {
+    pub fn cpu_intr_from_cpu_0(&mut self) -> CPU_INTR_FROM_CPU_0_W<'_, CPU_INTR_FROM_CPU_0_SPEC> {
         CPU_INTR_FROM_CPU_0_W::new(self, 0)
     }
 }

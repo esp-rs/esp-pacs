@@ -82,32 +82,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn zero_mode(&mut self) -> ZERO_MODE_W<U_STATUS_SPEC> {
+    pub fn zero_mode(&mut self) -> ZERO_MODE_W<'_, U_STATUS_SPEC> {
         ZERO_MODE_W::new(self, 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn thres1(&mut self) -> THRES1_W<U_STATUS_SPEC> {
+    pub fn thres1(&mut self) -> THRES1_W<'_, U_STATUS_SPEC> {
         THRES1_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn thres0(&mut self) -> THRES0_W<U_STATUS_SPEC> {
+    pub fn thres0(&mut self) -> THRES0_W<'_, U_STATUS_SPEC> {
         THRES0_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn l_lim(&mut self) -> L_LIM_W<U_STATUS_SPEC> {
+    pub fn l_lim(&mut self) -> L_LIM_W<'_, U_STATUS_SPEC> {
         L_LIM_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn h_lim(&mut self) -> H_LIM_W<U_STATUS_SPEC> {
+    pub fn h_lim(&mut self) -> H_LIM_W<'_, U_STATUS_SPEC> {
         H_LIM_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn zero(&mut self) -> ZERO_W<U_STATUS_SPEC> {
+    pub fn zero(&mut self) -> ZERO_W<'_, U_STATUS_SPEC> {
         ZERO_W::new(self, 6)
     }
 }

@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_lp_dcdc_reserve(
         &mut self,
-    ) -> HP_SLEEP_LP_DCDC_RESERVE_W<HP_SLEEP_LP_DCDC_RESERVE_SPEC> {
+    ) -> HP_SLEEP_LP_DCDC_RESERVE_W<'_, HP_SLEEP_LP_DCDC_RESERVE_SPEC> {
         HP_SLEEP_LP_DCDC_RESERVE_W::new(self, 0)
     }
 }

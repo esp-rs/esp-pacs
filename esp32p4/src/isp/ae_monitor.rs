@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures the lower lum threshold of ae monitor"]
     #[inline(always)]
-    pub fn tl(&mut self) -> TL_W<AE_MONITOR_SPEC> {
+    pub fn tl(&mut self) -> TL_W<'_, AE_MONITOR_SPEC> {
         TL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures the higher lum threshold of ae monitor"]
     #[inline(always)]
-    pub fn th(&mut self) -> TH_W<AE_MONITOR_SPEC> {
+    pub fn th(&mut self) -> TH_W<'_, AE_MONITOR_SPEC> {
         TH_W::new(self, 8)
     }
     #[doc = "Bits 16:21 - this field cnfigures ae monitor frame period"]
     #[inline(always)]
-    pub fn period(&mut self) -> PERIOD_W<AE_MONITOR_SPEC> {
+    pub fn period(&mut self) -> PERIOD_W<'_, AE_MONITOR_SPEC> {
         PERIOD_W::new(self, 16)
     }
 }

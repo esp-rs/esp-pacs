@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to open register clock gate.\\\\0: Open the clock gate only when application writes registers\\\\1: Force open the clock gate for register"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CLK_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CLK_SPEC> {
         EN_W::new(self, 0)
     }
 }

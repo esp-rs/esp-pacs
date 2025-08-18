@@ -144,67 +144,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - pause WDT in sleep"]
     #[inline(always)]
-    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_pause_in_slp(&mut self) -> WDT_PAUSE_IN_SLP_W<'_, WDTCONFIG0_SPEC> {
         WDT_PAUSE_IN_SLP_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable WDT reset APP CPU"]
     #[inline(always)]
-    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_APPCPU_RESET_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - enable WDT reset PRO CPU"]
     #[inline(always)]
-    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_PROCPU_RESET_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - enable WDT in flash boot"]
     #[inline(always)]
-    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_FLASHBOOT_MOD_EN_W::new(self, 10)
     }
     #[doc = "Bits 11:13 - system reset counter length"]
     #[inline(always)]
-    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_SYS_RESET_LENGTH_W::new(self, 11)
     }
     #[doc = "Bits 14:16 - CPU reset counter length"]
     #[inline(always)]
-    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_CPU_RESET_LENGTH_W::new(self, 14)
     }
     #[doc = "Bit 17 - N/A"]
     #[inline(always)]
-    pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_level_int_en(&mut self) -> WDT_LEVEL_INT_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_LEVEL_INT_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - N/A"]
     #[inline(always)]
-    pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_edge_int_en(&mut self) -> WDT_EDGE_INT_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_EDGE_INT_EN_W::new(self, 18)
     }
     #[doc = "Bits 19:21 - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
     #[inline(always)]
-    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG3_W::new(self, 19)
     }
     #[doc = "Bits 22:24 - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
     #[inline(always)]
-    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG2_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
     #[inline(always)]
-    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG1_W::new(self, 25)
     }
     #[doc = "Bits 28:30 - 1: interrupt stage en 2: CPU reset stage en 3: system reset stage en 4: RTC reset stage en"]
     #[inline(always)]
-    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG0_W::new(self, 28)
     }
     #[doc = "Bit 31 - enable RTC WDT"]
     #[inline(always)]
-    pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_en(&mut self) -> WDT_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }
 }

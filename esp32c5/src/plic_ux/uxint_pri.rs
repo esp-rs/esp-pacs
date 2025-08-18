@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn cpu_uxint_pri(&mut self) -> CPU_UXINT_PRI_W<UXINT_PRI_SPEC> {
+    pub fn cpu_uxint_pri(&mut self) -> CPU_UXINT_PRI_W<'_, UXINT_PRI_SPEC> {
         CPU_UXINT_PRI_W::new(self, 0)
     }
 }

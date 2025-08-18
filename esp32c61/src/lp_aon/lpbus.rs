@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:18 - This field controls fast memory WPULSE parameter."]
     #[inline(always)]
-    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<LPBUS_SPEC> {
+    pub fn fast_mem_wpulse(&mut self) -> FAST_MEM_WPULSE_W<'_, LPBUS_SPEC> {
         FAST_MEM_WPULSE_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - This field controls fast memory WA parameter."]
     #[inline(always)]
-    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<LPBUS_SPEC> {
+    pub fn fast_mem_wa(&mut self) -> FAST_MEM_WA_W<'_, LPBUS_SPEC> {
         FAST_MEM_WA_W::new(self, 19)
     }
     #[doc = "Bits 22:23 - This field controls fast memory RA parameter."]
     #[inline(always)]
-    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<LPBUS_SPEC> {
+    pub fn fast_mem_ra(&mut self) -> FAST_MEM_RA_W<'_, LPBUS_SPEC> {
         FAST_MEM_RA_W::new(self, 22)
     }
 }

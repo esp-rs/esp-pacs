@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_timer_en(&mut self) -> CAP_TIMER_EN_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_TIMER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_synci_en(&mut self) -> CAP_SYNCI_EN_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNCI_EN_W::new(self, 1)
     }
     #[doc = "Bits 2:4"]
     #[inline(always)]
-    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_synci_sel(&mut self) -> CAP_SYNCI_SEL_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNCI_SEL_W::new(self, 2)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<CAP_TIMER_CFG_SPEC> {
+    pub fn cap_sync_sw(&mut self) -> CAP_SYNC_SW_W<'_, CAP_TIMER_CFG_SPEC> {
         CAP_SYNC_SW_W::new(self, 5)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the programming setup time."]
     #[inline(always)]
-    pub fn tsup_a(&mut self) -> TSUP_A_W<WR_TIM_CONF1_SPEC> {
+    pub fn tsup_a(&mut self) -> TSUP_A_W<'_, WR_TIM_CONF1_SPEC> {
         TSUP_A_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - Configures the power up time for VDDQ."]
     #[inline(always)]
-    pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<WR_TIM_CONF1_SPEC> {
+    pub fn pwr_on_num(&mut self) -> PWR_ON_NUM_W<'_, WR_TIM_CONF1_SPEC> {
         PWR_ON_NUM_W::new(self, 8)
     }
     #[doc = "Bits 24:31 - Configures the programming hold time."]
     #[inline(always)]
-    pub fn thp_a(&mut self) -> THP_A_W<WR_TIM_CONF1_SPEC> {
+    pub fn thp_a(&mut self) -> THP_A_W<'_, WR_TIM_CONF1_SPEC> {
         THP_A_W::new(self, 24)
     }
 }

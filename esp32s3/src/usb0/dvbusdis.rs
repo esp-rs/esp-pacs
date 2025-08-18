@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn dvbusdis(&mut self) -> DVBUSDIS_W<DVBUSDIS_SPEC> {
+    pub fn dvbusdis(&mut self) -> DVBUSDIS_W<'_, DVBUSDIS_SPEC> {
         DVBUSDIS_W::new(self, 0)
     }
 }

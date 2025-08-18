@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Update method for FED (falling edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
     #[inline(always)]
-    pub fn fed_upmethod(&mut self) -> FED_UPMETHOD_W<DB_CFG_SPEC> {
+    pub fn fed_upmethod(&mut self) -> FED_UPMETHOD_W<'_, DB_CFG_SPEC> {
         FED_UPMETHOD_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Update method for RED (rising edge delay) active register. 0: immediate, bit0: tez, bit1: tep, bit2: sync, bit3: freeze"]
     #[inline(always)]
-    pub fn red_upmethod(&mut self) -> RED_UPMETHOD_W<DB_CFG_SPEC> {
+    pub fn red_upmethod(&mut self) -> RED_UPMETHOD_W<'_, DB_CFG_SPEC> {
         RED_UPMETHOD_W::new(self, 4)
     }
     #[doc = "Bit 8 - S8 in documentation, dual-edge B mode, 0: fed/red take effect on different path separately, 1: fed/red take effect on B path, A out is in bypass or dulpB mode"]
     #[inline(always)]
-    pub fn deb_mode(&mut self) -> DEB_MODE_W<DB_CFG_SPEC> {
+    pub fn deb_mode(&mut self) -> DEB_MODE_W<'_, DB_CFG_SPEC> {
         DEB_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9 - S6 in documentation"]
     #[inline(always)]
-    pub fn a_outswap(&mut self) -> A_OUTSWAP_W<DB_CFG_SPEC> {
+    pub fn a_outswap(&mut self) -> A_OUTSWAP_W<'_, DB_CFG_SPEC> {
         A_OUTSWAP_W::new(self, 9)
     }
     #[doc = "Bit 10 - S7 in documentation"]
     #[inline(always)]
-    pub fn b_outswap(&mut self) -> B_OUTSWAP_W<DB_CFG_SPEC> {
+    pub fn b_outswap(&mut self) -> B_OUTSWAP_W<'_, DB_CFG_SPEC> {
         B_OUTSWAP_W::new(self, 10)
     }
     #[doc = "Bit 11 - S4 in documentation"]
     #[inline(always)]
-    pub fn red_insel(&mut self) -> RED_INSEL_W<DB_CFG_SPEC> {
+    pub fn red_insel(&mut self) -> RED_INSEL_W<'_, DB_CFG_SPEC> {
         RED_INSEL_W::new(self, 11)
     }
     #[doc = "Bit 12 - S5 in documentation"]
     #[inline(always)]
-    pub fn fed_insel(&mut self) -> FED_INSEL_W<DB_CFG_SPEC> {
+    pub fn fed_insel(&mut self) -> FED_INSEL_W<'_, DB_CFG_SPEC> {
         FED_INSEL_W::new(self, 12)
     }
     #[doc = "Bit 13 - S2 in documentation"]
     #[inline(always)]
-    pub fn red_outinvert(&mut self) -> RED_OUTINVERT_W<DB_CFG_SPEC> {
+    pub fn red_outinvert(&mut self) -> RED_OUTINVERT_W<'_, DB_CFG_SPEC> {
         RED_OUTINVERT_W::new(self, 13)
     }
     #[doc = "Bit 14 - S3 in documentation"]
     #[inline(always)]
-    pub fn fed_outinvert(&mut self) -> FED_OUTINVERT_W<DB_CFG_SPEC> {
+    pub fn fed_outinvert(&mut self) -> FED_OUTINVERT_W<'_, DB_CFG_SPEC> {
         FED_OUTINVERT_W::new(self, 14)
     }
     #[doc = "Bit 15 - S1 in documentation"]
     #[inline(always)]
-    pub fn a_outbypass(&mut self) -> A_OUTBYPASS_W<DB_CFG_SPEC> {
+    pub fn a_outbypass(&mut self) -> A_OUTBYPASS_W<'_, DB_CFG_SPEC> {
         A_OUTBYPASS_W::new(self, 15)
     }
     #[doc = "Bit 16 - S0 in documentation"]
     #[inline(always)]
-    pub fn b_outbypass(&mut self) -> B_OUTBYPASS_W<DB_CFG_SPEC> {
+    pub fn b_outbypass(&mut self) -> B_OUTBYPASS_W<'_, DB_CFG_SPEC> {
         B_OUTBYPASS_W::new(self, 16)
     }
     #[doc = "Bit 17 - Dead time generator 0 clock selection. 0: PWM_clk, 1: PT_clk"]
     #[inline(always)]
-    pub fn clk_sel(&mut self) -> CLK_SEL_W<DB_CFG_SPEC> {
+    pub fn clk_sel(&mut self) -> CLK_SEL_W<'_, DB_CFG_SPEC> {
         CLK_SEL_W::new(self, 17)
     }
 }

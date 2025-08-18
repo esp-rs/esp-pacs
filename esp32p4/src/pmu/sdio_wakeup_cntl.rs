@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - need_des"]
     #[inline(always)]
-    pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<SDIO_WAKEUP_CNTL_SPEC> {
+    pub fn sdio_act_dnum(&mut self) -> SDIO_ACT_DNUM_W<'_, SDIO_WAKEUP_CNTL_SPEC> {
         SDIO_ACT_DNUM_W::new(self, 0)
     }
 }

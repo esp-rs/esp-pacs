@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Need add desc"]
     #[inline(always)]
-    pub fn vdd_spi_pwr_drv(&mut self) -> VDD_SPI_PWR_DRV_W<DIG_PWC_SPEC> {
+    pub fn vdd_spi_pwr_drv(&mut self) -> VDD_SPI_PWR_DRV_W<'_, DIG_PWC_SPEC> {
         VDD_SPI_PWR_DRV_W::new(self, 0)
     }
     #[doc = "Bit 2 - Need add desc"]
     #[inline(always)]
-    pub fn vdd_spi_pwr_force(&mut self) -> VDD_SPI_PWR_FORCE_W<DIG_PWC_SPEC> {
+    pub fn vdd_spi_pwr_force(&mut self) -> VDD_SPI_PWR_FORCE_W<'_, DIG_PWC_SPEC> {
         VDD_SPI_PWR_FORCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Need add desc"]
     #[inline(always)]
-    pub fn vdd_spi_pd_en(&mut self) -> VDD_SPI_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn vdd_spi_pd_en(&mut self) -> VDD_SPI_PD_EN_W<'_, DIG_PWC_SPEC> {
         VDD_SPI_PD_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - memories in digital core force PD in sleep"]
     #[inline(always)]
-    pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         LSLP_MEM_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - memories in digital core force no PD in sleep"]
     #[inline(always)]
-    pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         LSLP_MEM_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
-    pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_FORCE_PD_W::new(self, 19)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
-    pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_FORCE_PU_W::new(self, 20)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_PD_EN_W::new(self, 31)
     }
 }

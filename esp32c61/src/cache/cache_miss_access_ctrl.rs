@@ -73,7 +73,7 @@ impl W {
     #[inline(always)]
     pub fn cache_miss_disable_access(
         &mut self,
-    ) -> CACHE_MISS_DISABLE_ACCESS_W<CACHE_MISS_ACCESS_CTRL_SPEC> {
+    ) -> CACHE_MISS_DISABLE_ACCESS_W<'_, CACHE_MISS_ACCESS_CTRL_SPEC> {
         CACHE_MISS_DISABLE_ACCESS_W::new(self, 4)
     }
 }

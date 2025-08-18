@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn force_phy_errsotsynchs_0(
         &mut self,
-    ) -> FORCE_PHY_ERRSOTSYNCHS_0_W<INT_FORCE_PHY_FATAL_SPEC> {
+    ) -> FORCE_PHY_ERRSOTSYNCHS_0_W<'_, INT_FORCE_PHY_FATAL_SPEC> {
         FORCE_PHY_ERRSOTSYNCHS_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
     pub fn force_phy_errsotsynchs_1(
         &mut self,
-    ) -> FORCE_PHY_ERRSOTSYNCHS_1_W<INT_FORCE_PHY_FATAL_SPEC> {
+    ) -> FORCE_PHY_ERRSOTSYNCHS_1_W<'_, INT_FORCE_PHY_FATAL_SPEC> {
         FORCE_PHY_ERRSOTSYNCHS_1_W::new(self, 1)
     }
 }

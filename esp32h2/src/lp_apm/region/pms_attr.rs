@@ -127,72 +127,72 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_X` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_x(&mut self, n: u8) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_x(&mut self, n: u8) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_X_W::new(self, n * 4)
     }
     #[doc = "Bit 0 - Region execute authority in REE_MODE0"]
     #[inline(always)]
-    pub fn r0_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 0)
     }
     #[doc = "Bit 4 - Region execute authority in REE_MODE1"]
     #[inline(always)]
-    pub fn r1_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 4)
     }
     #[doc = "Bit 8 - Region execute authority in REE_MODE2"]
     #[inline(always)]
-    pub fn r2_pms_x(&mut self) -> R_PMS_X_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_x(&mut self) -> R_PMS_X_W<'_, PMS_ATTR_SPEC> {
         R_PMS_X_W::new(self, 8)
     }
     #[doc = "Region write authority in REE_MODE(0-2)"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_W` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_w(&mut self, n: u8) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_w(&mut self, n: u8) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_W_W::new(self, n * 4 + 1)
     }
     #[doc = "Bit 1 - Region write authority in REE_MODE0"]
     #[inline(always)]
-    pub fn r0_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 1)
     }
     #[doc = "Bit 5 - Region write authority in REE_MODE1"]
     #[inline(always)]
-    pub fn r1_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 5)
     }
     #[doc = "Bit 9 - Region write authority in REE_MODE2"]
     #[inline(always)]
-    pub fn r2_pms_w(&mut self) -> R_PMS_W_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_w(&mut self) -> R_PMS_W_W<'_, PMS_ATTR_SPEC> {
         R_PMS_W_W::new(self, 9)
     }
     #[doc = "Region read authority in REE_MODE(0-2)"]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `R0_PMS_R` field.</div>"]
     #[inline(always)]
-    pub fn r_pms_r(&mut self, n: u8) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r_pms_r(&mut self, n: u8) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         R_PMS_R_W::new(self, n * 4 + 2)
     }
     #[doc = "Bit 2 - Region read authority in REE_MODE0"]
     #[inline(always)]
-    pub fn r0_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r0_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 2)
     }
     #[doc = "Bit 6 - Region read authority in REE_MODE1"]
     #[inline(always)]
-    pub fn r1_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r1_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 6)
     }
     #[doc = "Bit 10 - Region read authority in REE_MODE2"]
     #[inline(always)]
-    pub fn r2_pms_r(&mut self) -> R_PMS_R_W<PMS_ATTR_SPEC> {
+    pub fn r2_pms_r(&mut self) -> R_PMS_R_W<'_, PMS_ATTR_SPEC> {
         R_PMS_R_W::new(self, 10)
     }
 }

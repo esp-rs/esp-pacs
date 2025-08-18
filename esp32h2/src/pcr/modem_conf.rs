@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
-    pub fn modem_clk_sel(&mut self) -> MODEM_CLK_SEL_W<MODEM_CONF_SPEC> {
+    pub fn modem_clk_sel(&mut self) -> MODEM_CLK_SEL_W<'_, MODEM_CONF_SPEC> {
         MODEM_CLK_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - xxxx"]
     #[inline(always)]
-    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<MODEM_CONF_SPEC> {
+    pub fn modem_clk_en(&mut self) -> MODEM_CLK_EN_W<'_, MODEM_CONF_SPEC> {
         MODEM_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this file as 1 to reset modem-subsystem."]
     #[inline(always)]
-    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<MODEM_CONF_SPEC> {
+    pub fn modem_rst_en(&mut self) -> MODEM_RST_EN_W<'_, MODEM_CONF_SPEC> {
         MODEM_RST_EN_W::new(self, 2)
     }
 }

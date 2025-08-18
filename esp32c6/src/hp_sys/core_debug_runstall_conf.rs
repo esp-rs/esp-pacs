@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_debug_runstall_enable(
         &mut self,
-    ) -> CORE_DEBUG_RUNSTALL_ENABLE_W<CORE_DEBUG_RUNSTALL_CONF_SPEC> {
+    ) -> CORE_DEBUG_RUNSTALL_ENABLE_W<'_, CORE_DEBUG_RUNSTALL_CONF_SPEC> {
         CORE_DEBUG_RUNSTALL_ENABLE_W::new(self, 0)
     }
 }

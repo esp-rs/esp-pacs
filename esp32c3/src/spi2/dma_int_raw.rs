@@ -224,107 +224,107 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: The current data rate of DMA Rx is smaller than that of SPI, which will lose the receive data. 0: Others."]
     #[inline(always)]
-    pub fn dma_infifo_full_err(&mut self) -> DMA_INFIFO_FULL_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn dma_infifo_full_err(&mut self) -> DMA_INFIFO_FULL_ERR_W<'_, DMA_INT_RAW_SPEC> {
         DMA_INFIFO_FULL_ERR_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: The current data rate of DMA TX is smaller than that of SPI. SPI will stop in master mode and send out all 0 in slave mode. 0: Others."]
     #[inline(always)]
-    pub fn dma_outfifo_empty_err(&mut self) -> DMA_OUTFIFO_EMPTY_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn dma_outfifo_empty_err(&mut self) -> DMA_OUTFIFO_EMPTY_ERR_W<'_, DMA_INT_RAW_SPEC> {
         DMA_OUTFIFO_EMPTY_ERR_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit for SPI slave Ex_QPI interrupt. 1: SPI slave mode Ex_QPI transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_ex_qpi(&mut self) -> SLV_EX_QPI_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_ex_qpi(&mut self) -> SLV_EX_QPI_W<'_, DMA_INT_RAW_SPEC> {
         SLV_EX_QPI_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit for SPI slave En_QPI interrupt. 1: SPI slave mode En_QPI transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_en_qpi(&mut self) -> SLV_EN_QPI_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_en_qpi(&mut self) -> SLV_EN_QPI_W<'_, DMA_INT_RAW_SPEC> {
         SLV_EN_QPI_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit for SPI slave CMD7 interrupt. 1: SPI slave mode CMD7 transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_cmd7(&mut self) -> SLV_CMD7_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd7(&mut self) -> SLV_CMD7_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD7_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw bit for SPI slave CMD8 interrupt. 1: SPI slave mode CMD8 transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_cmd8(&mut self) -> SLV_CMD8_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd8(&mut self) -> SLV_CMD8_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD8_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw bit for SPI slave CMD9 interrupt. 1: SPI slave mode CMD9 transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_cmd9(&mut self) -> SLV_CMD9_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd9(&mut self) -> SLV_CMD9_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD9_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw bit for SPI slave CMDA interrupt. 1: SPI slave mode CMDA transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_cmda(&mut self) -> SLV_CMDA_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmda(&mut self) -> SLV_CMDA_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMDA_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw bit for SPI_SLV_RD_DMA_DONE_INT interrupt. 1: SPI slave mode Rd_DMA transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_rd_dma_done(&mut self) -> SLV_RD_DMA_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_rd_dma_done(&mut self) -> SLV_RD_DMA_DONE_W<'_, DMA_INT_RAW_SPEC> {
         SLV_RD_DMA_DONE_W::new(self, 8)
     }
     #[doc = "Bit 9 - The raw bit for SPI_SLV_WR_DMA_DONE_INT interrupt. 1: SPI slave mode Wr_DMA transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_wr_dma_done(&mut self) -> SLV_WR_DMA_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_wr_dma_done(&mut self) -> SLV_WR_DMA_DONE_W<'_, DMA_INT_RAW_SPEC> {
         SLV_WR_DMA_DONE_W::new(self, 9)
     }
     #[doc = "Bit 10 - The raw bit for SPI_SLV_RD_BUF_DONE_INT interrupt. 1: SPI slave mode Rd_BUF transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_rd_buf_done(&mut self) -> SLV_RD_BUF_DONE_W<'_, DMA_INT_RAW_SPEC> {
         SLV_RD_BUF_DONE_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw bit for SPI_SLV_WR_BUF_DONE_INT interrupt. 1: SPI slave mode Wr_BUF transmission is ended. 0: Others."]
     #[inline(always)]
-    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_wr_buf_done(&mut self) -> SLV_WR_BUF_DONE_W<'_, DMA_INT_RAW_SPEC> {
         SLV_WR_BUF_DONE_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw bit for SPI_TRANS_DONE_INT interrupt. 1: SPI master mode transmission is ended. 0: others."]
     #[inline(always)]
-    pub fn trans_done(&mut self) -> TRANS_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn trans_done(&mut self) -> TRANS_DONE_W<'_, DMA_INT_RAW_SPEC> {
         TRANS_DONE_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw bit for SPI_DMA_SEG_TRANS_DONE_INT interrupt. 1: spi master DMA full-duplex/half-duplex seg-conf-trans ends or slave half-duplex seg-trans ends. And data has been pushed to corresponding memory. 0: seg-conf-trans or seg-trans is not ended or not occurred."]
     #[inline(always)]
-    pub fn dma_seg_trans_done(&mut self) -> DMA_SEG_TRANS_DONE_W<DMA_INT_RAW_SPEC> {
+    pub fn dma_seg_trans_done(&mut self) -> DMA_SEG_TRANS_DONE_W<'_, DMA_INT_RAW_SPEC> {
         DMA_SEG_TRANS_DONE_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw bit for SPI_SEG_MAGIC_ERR_INT interrupt. 1: The magic value in CONF buffer is error in the DMA seg-conf-trans. 0: others."]
     #[inline(always)]
-    pub fn seg_magic_err(&mut self) -> SEG_MAGIC_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn seg_magic_err(&mut self) -> SEG_MAGIC_ERR_W<'_, DMA_INT_RAW_SPEC> {
         SEG_MAGIC_ERR_W::new(self, 14)
     }
     #[doc = "Bit 15 - The raw bit for SPI_SLV_BUF_ADDR_ERR_INT interrupt. 1: The accessing data address of the current SPI slave mode CPU controlled FD, Wr_BUF or Rd_BUF transmission is bigger than 63. 0: Others."]
     #[inline(always)]
-    pub fn slv_buf_addr_err(&mut self) -> SLV_BUF_ADDR_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_buf_addr_err(&mut self) -> SLV_BUF_ADDR_ERR_W<'_, DMA_INT_RAW_SPEC> {
         SLV_BUF_ADDR_ERR_W::new(self, 15)
     }
     #[doc = "Bit 16 - The raw bit for SPI_SLV_CMD_ERR_INT interrupt. 1: The slave command value in the current SPI slave HD mode transmission is not supported. 0: Others."]
     #[inline(always)]
-    pub fn slv_cmd_err(&mut self) -> SLV_CMD_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn slv_cmd_err(&mut self) -> SLV_CMD_ERR_W<'_, DMA_INT_RAW_SPEC> {
         SLV_CMD_ERR_W::new(self, 16)
     }
     #[doc = "Bit 17 - The raw bit for SPI_MST_RX_AFIFO_WFULL_ERR_INT interrupt. 1: There is a RX AFIFO write-full error when SPI inputs data in master mode. 0: Others."]
     #[inline(always)]
-    pub fn mst_rx_afifo_wfull_err(&mut self) -> MST_RX_AFIFO_WFULL_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn mst_rx_afifo_wfull_err(&mut self) -> MST_RX_AFIFO_WFULL_ERR_W<'_, DMA_INT_RAW_SPEC> {
         MST_RX_AFIFO_WFULL_ERR_W::new(self, 17)
     }
     #[doc = "Bit 18 - The raw bit for SPI_MST_TX_AFIFO_REMPTY_ERR_INT interrupt. 1: There is a TX BUF AFIFO read-empty error when SPI outputs data in master mode. 0: Others."]
     #[inline(always)]
-    pub fn mst_tx_afifo_rempty_err(&mut self) -> MST_TX_AFIFO_REMPTY_ERR_W<DMA_INT_RAW_SPEC> {
+    pub fn mst_tx_afifo_rempty_err(&mut self) -> MST_TX_AFIFO_REMPTY_ERR_W<'_, DMA_INT_RAW_SPEC> {
         MST_TX_AFIFO_REMPTY_ERR_W::new(self, 18)
     }
     #[doc = "Bit 19 - The raw bit for SPI_APP2_INT interrupt. The value is only controlled by application."]
     #[inline(always)]
-    pub fn app2(&mut self) -> APP2_W<DMA_INT_RAW_SPEC> {
+    pub fn app2(&mut self) -> APP2_W<'_, DMA_INT_RAW_SPEC> {
         APP2_W::new(self, 19)
     }
     #[doc = "Bit 20 - The raw bit for SPI_APP1_INT interrupt. The value is only controlled by application."]
     #[inline(always)]
-    pub fn app1(&mut self) -> APP1_W<DMA_INT_RAW_SPEC> {
+    pub fn app1(&mut self) -> APP1_W<'_, DMA_INT_RAW_SPEC> {
         APP1_W::new(self, 20)
     }
 }

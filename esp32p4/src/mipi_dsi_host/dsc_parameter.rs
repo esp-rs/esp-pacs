@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn compression_mode(&mut self) -> COMPRESSION_MODE_W<DSC_PARAMETER_SPEC> {
+    pub fn compression_mode(&mut self) -> COMPRESSION_MODE_W<'_, DSC_PARAMETER_SPEC> {
         COMPRESSION_MODE_W::new(self, 0)
     }
     #[doc = "Bits 8:9 - NA"]
     #[inline(always)]
-    pub fn compress_algo(&mut self) -> COMPRESS_ALGO_W<DSC_PARAMETER_SPEC> {
+    pub fn compress_algo(&mut self) -> COMPRESS_ALGO_W<'_, DSC_PARAMETER_SPEC> {
         COMPRESS_ALGO_W::new(self, 8)
     }
     #[doc = "Bits 16:17 - NA"]
     #[inline(always)]
-    pub fn pps_sel(&mut self) -> PPS_SEL_W<DSC_PARAMETER_SPEC> {
+    pub fn pps_sel(&mut self) -> PPS_SEL_W<'_, DSC_PARAMETER_SPEC> {
         PPS_SEL_W::new(self, 16)
     }
 }

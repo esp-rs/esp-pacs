@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reserved"]
     #[inline(always)]
-    pub fn rdn_ena(&mut self) -> RDN_ENA_W<RDN_RESULT_SPEC> {
+    pub fn rdn_ena(&mut self) -> RDN_ENA_W<'_, RDN_RESULT_SPEC> {
         RDN_ENA_W::new(self, 0)
     }
 }

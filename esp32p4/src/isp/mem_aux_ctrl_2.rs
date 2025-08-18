@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures the mem_aux of bf line buffer memory"]
     #[inline(always)]
-    pub fn bf_matrix_mem_aux_ctrl(&mut self) -> BF_MATRIX_MEM_AUX_CTRL_W<MEM_AUX_CTRL_2_SPEC> {
+    pub fn bf_matrix_mem_aux_ctrl(&mut self) -> BF_MATRIX_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_2_SPEC> {
         BF_MATRIX_MEM_AUX_CTRL_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - this field configures the mem_aux of dpc line buffer memory"]
     #[inline(always)]
-    pub fn dpc_matrix_mem_aux_ctrl(&mut self) -> DPC_MATRIX_MEM_AUX_CTRL_W<MEM_AUX_CTRL_2_SPEC> {
+    pub fn dpc_matrix_mem_aux_ctrl(
+        &mut self,
+    ) -> DPC_MATRIX_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_2_SPEC> {
         DPC_MATRIX_MEM_AUX_CTRL_W::new(self, 16)
     }
 }

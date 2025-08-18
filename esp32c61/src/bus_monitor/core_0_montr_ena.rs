@@ -154,80 +154,84 @@ impl W {
     #[inline(always)]
     pub fn core_0_area_dram0_0_rd_ena(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_0_RD_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_0_RD_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_DRAM0_0_RD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether to monitor write operations in region 0 by the Data bus.\\\\ 0: Not monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_dram0_0_wr_ena(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_0_WR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_0_WR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_DRAM0_0_WR_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether to monitor read operations in region 1 by the Data bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_rd_ena(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_1_RD_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_1_RD_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_DRAM0_1_RD_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether to monitor write operations in region 1 by the Data bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_dram0_1_wr_ena(
         &mut self,
-    ) -> CORE_0_AREA_DRAM0_1_WR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_DRAM0_1_WR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_DRAM0_1_WR_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether to monitor read operations in region 0 by the Peripheral bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_pif_0_rd_ena(
         &mut self,
-    ) -> CORE_0_AREA_PIF_0_RD_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_PIF_0_RD_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_PIF_0_RD_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether to monitor write operations in region 0 by the Peripheral bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_pif_0_wr_ena(
         &mut self,
-    ) -> CORE_0_AREA_PIF_0_WR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_PIF_0_WR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_PIF_0_WR_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether to monitor read operations in region 1 by the Peripheral bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_pif_1_rd_ena(
         &mut self,
-    ) -> CORE_0_AREA_PIF_1_RD_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_PIF_1_RD_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_PIF_1_RD_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - Configures whether to monitor write operations in region 1 by the Peripheral bus.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
     pub fn core_0_area_pif_1_wr_ena(
         &mut self,
-    ) -> CORE_0_AREA_PIF_1_WR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_AREA_PIF_1_WR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_AREA_PIF_1_WR_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - Configures whether to monitor SP exceeding the lower bound address of SP monitored region.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
-    pub fn core_0_sp_spill_min_ena(&mut self) -> CORE_0_SP_SPILL_MIN_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    pub fn core_0_sp_spill_min_ena(
+        &mut self,
+    ) -> CORE_0_SP_SPILL_MIN_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_SP_SPILL_MIN_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - Configures whether to monitor SP exceeding the upper bound address of SP monitored region.\\\\ 0: Not Monitor\\\\ 1: Monitor\\\\"]
     #[inline(always)]
-    pub fn core_0_sp_spill_max_ena(&mut self) -> CORE_0_SP_SPILL_MAX_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    pub fn core_0_sp_spill_max_ena(
+        &mut self,
+    ) -> CORE_0_SP_SPILL_MAX_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_SP_SPILL_MAX_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - IBUS busy monitor enable"]
     #[inline(always)]
     pub fn core_0_iram0_exception_monitor_ena(
         &mut self,
-    ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_IRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - DBUS busy monitor enbale"]
     #[inline(always)]
     pub fn core_0_dram0_exception_monitor_ena(
         &mut self,
-    ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<CORE_0_MONTR_ENA_SPEC> {
+    ) -> CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W<'_, CORE_0_MONTR_ENA_SPEC> {
         CORE_0_DRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 11)
     }
 }

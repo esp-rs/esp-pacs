@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - the hold time of stage0"]
     #[inline(always)]
-    pub fn hold(&mut self) -> HOLD_W<WDTCONFIG_SPEC> {
+    pub fn hold(&mut self) -> HOLD_W<'_, WDTCONFIG_SPEC> {
         HOLD_W::new(self, 0)
     }
 }

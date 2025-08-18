@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn txskewcalhs(&mut self) -> TXSKEWCALHS_W<PHY_CAL_SPEC> {
+    pub fn txskewcalhs(&mut self) -> TXSKEWCALHS_W<'_, PHY_CAL_SPEC> {
         TXSKEWCALHS_W::new(self, 0)
     }
 }

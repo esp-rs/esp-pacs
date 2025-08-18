@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn bod_mode0(&mut self) -> BOD_MODE0_W<INT_RAW_SPEC> {
+    pub fn bod_mode0(&mut self) -> BOD_MODE0_W<'_, INT_RAW_SPEC> {
         BOD_MODE0_W::new(self, 31)
     }
 }

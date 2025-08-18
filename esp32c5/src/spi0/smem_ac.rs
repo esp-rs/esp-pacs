@@ -107,47 +107,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - For SPI0 and SPI1, spi cs is enable when spi is in prepare phase. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn smem_cs_setup(&mut self) -> SMEM_CS_SETUP_W<SMEM_AC_SPEC> {
+    pub fn smem_cs_setup(&mut self) -> SMEM_CS_SETUP_W<'_, SMEM_AC_SPEC> {
         SMEM_CS_SETUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - For SPI0 and SPI1, spi cs keep low when spi is in done phase. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn smem_cs_hold(&mut self) -> SMEM_CS_HOLD_W<SMEM_AC_SPEC> {
+    pub fn smem_cs_hold(&mut self) -> SMEM_CS_HOLD_W<'_, SMEM_AC_SPEC> {
         SMEM_CS_HOLD_W::new(self, 1)
     }
     #[doc = "Bits 2:6 - For spi0, (cycles-1) of prepare phase by spi clock this bits are combined with spi_mem_cs_setup bit."]
     #[inline(always)]
-    pub fn smem_cs_setup_time(&mut self) -> SMEM_CS_SETUP_TIME_W<SMEM_AC_SPEC> {
+    pub fn smem_cs_setup_time(&mut self) -> SMEM_CS_SETUP_TIME_W<'_, SMEM_AC_SPEC> {
         SMEM_CS_SETUP_TIME_W::new(self, 2)
     }
     #[doc = "Bits 7:11 - For SPI0 and SPI1, spi cs signal is delayed to inactive by spi clock this bits are combined with spi_mem_cs_hold bit."]
     #[inline(always)]
-    pub fn smem_cs_hold_time(&mut self) -> SMEM_CS_HOLD_TIME_W<SMEM_AC_SPEC> {
+    pub fn smem_cs_hold_time(&mut self) -> SMEM_CS_HOLD_TIME_W<'_, SMEM_AC_SPEC> {
         SMEM_CS_HOLD_TIME_W::new(self, 7)
     }
     #[doc = "Bits 12:14 - SPI_SMEM_CS_HOLD_TIME + SPI_SMEM_ECC_CS_HOLD_TIME is the SPI0 and SPI1 CS hold cycles in ECC mode when accessed external RAM."]
     #[inline(always)]
-    pub fn smem_ecc_cs_hold_time(&mut self) -> SMEM_ECC_CS_HOLD_TIME_W<SMEM_AC_SPEC> {
+    pub fn smem_ecc_cs_hold_time(&mut self) -> SMEM_ECC_CS_HOLD_TIME_W<'_, SMEM_AC_SPEC> {
         SMEM_ECC_CS_HOLD_TIME_W::new(self, 12)
     }
     #[doc = "Bit 15 - 1: SPI0 skips page corner when accesses external RAM. 0: Not skip page corner when accesses external RAM."]
     #[inline(always)]
-    pub fn smem_ecc_skip_page_corner(&mut self) -> SMEM_ECC_SKIP_PAGE_CORNER_W<SMEM_AC_SPEC> {
+    pub fn smem_ecc_skip_page_corner(&mut self) -> SMEM_ECC_SKIP_PAGE_CORNER_W<'_, SMEM_AC_SPEC> {
         SMEM_ECC_SKIP_PAGE_CORNER_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to enable SPI0 and SPI1 ECC 16 bytes data with 2 ECC bytes mode when accesses external RAM."]
     #[inline(always)]
-    pub fn smem_ecc_16to18_byte_en(&mut self) -> SMEM_ECC_16TO18_BYTE_EN_W<SMEM_AC_SPEC> {
+    pub fn smem_ecc_16to18_byte_en(&mut self) -> SMEM_ECC_16TO18_BYTE_EN_W<'_, SMEM_AC_SPEC> {
         SMEM_ECC_16TO18_BYTE_EN_W::new(self, 16)
     }
     #[doc = "Bits 25:30 - These bits are used to set the minimum CS high time tSHSL between SPI burst transfer when accesses to external RAM. tSHSL is (SPI_SMEM_CS_HOLD_DELAY\\[5:0\\] + 1) MSPI core clock cycles."]
     #[inline(always)]
-    pub fn smem_cs_hold_delay(&mut self) -> SMEM_CS_HOLD_DELAY_W<SMEM_AC_SPEC> {
+    pub fn smem_cs_hold_delay(&mut self) -> SMEM_CS_HOLD_DELAY_W<'_, SMEM_AC_SPEC> {
         SMEM_CS_HOLD_DELAY_W::new(self, 25)
     }
     #[doc = "Bit 31 - Set this bit to enable SPI0 split one AXI accesses EXT_RAM transfer into two SPI transfers when one transfer will cross flash/EXT_RAM page corner, valid no matter whether there is an ECC region or not."]
     #[inline(always)]
-    pub fn smem_split_trans_en(&mut self) -> SMEM_SPLIT_TRANS_EN_W<SMEM_AC_SPEC> {
+    pub fn smem_split_trans_en(&mut self) -> SMEM_SPLIT_TRANS_EN_W<'_, SMEM_AC_SPEC> {
         SMEM_SPLIT_TRANS_EN_W::new(self, 31)
     }
 }

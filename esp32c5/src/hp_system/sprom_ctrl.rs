@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reserved"]
     #[inline(always)]
-    pub fn sprom_mem_aux_ctrl(&mut self) -> SPROM_MEM_AUX_CTRL_W<SPROM_CTRL_SPEC> {
+    pub fn sprom_mem_aux_ctrl(&mut self) -> SPROM_MEM_AUX_CTRL_W<'_, SPROM_CTRL_SPEC> {
         SPROM_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

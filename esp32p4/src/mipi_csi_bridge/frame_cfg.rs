@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - vadr of frame data."]
     #[inline(always)]
-    pub fn vadr_num(&mut self) -> VADR_NUM_W<FRAME_CFG_SPEC> {
+    pub fn vadr_num(&mut self) -> VADR_NUM_W<'_, FRAME_CFG_SPEC> {
         VADR_NUM_W::new(self, 0)
     }
     #[doc = "Bits 12:23 - hadr of frame data."]
     #[inline(always)]
-    pub fn hadr_num(&mut self) -> HADR_NUM_W<FRAME_CFG_SPEC> {
+    pub fn hadr_num(&mut self) -> HADR_NUM_W<'_, FRAME_CFG_SPEC> {
         HADR_NUM_W::new(self, 12)
     }
     #[doc = "Bit 24 - 0: frame data doesn't contain hsync. 1: frame data contains hsync."]
     #[inline(always)]
-    pub fn has_hsync_e(&mut self) -> HAS_HSYNC_E_W<FRAME_CFG_SPEC> {
+    pub fn has_hsync_e(&mut self) -> HAS_HSYNC_E_W<'_, FRAME_CFG_SPEC> {
         HAS_HSYNC_E_W::new(self, 24)
     }
     #[doc = "Bit 25 - 0: disable vadr check. 1: enable vadr check."]
     #[inline(always)]
-    pub fn vadr_num_check(&mut self) -> VADR_NUM_CHECK_W<FRAME_CFG_SPEC> {
+    pub fn vadr_num_check(&mut self) -> VADR_NUM_CHECK_W<'_, FRAME_CFG_SPEC> {
         VADR_NUM_CHECK_W::new(self, 25)
     }
 }

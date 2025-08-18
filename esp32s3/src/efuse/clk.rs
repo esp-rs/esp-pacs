@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to force eFuse SRAM into power-saving mode."]
     #[inline(always)]
-    pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W<CLK_SPEC> {
+    pub fn efuse_mem_force_pd(&mut self) -> EFUSE_MEM_FORCE_PD_W<'_, CLK_SPEC> {
         EFUSE_MEM_FORCE_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit and force to activate clock signal of eFuse SRAM."]
     #[inline(always)]
-    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<CLK_SPEC> {
+    pub fn mem_clk_force_on(&mut self) -> MEM_CLK_FORCE_ON_W<'_, CLK_SPEC> {
         MEM_CLK_FORCE_ON_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to force eFuse SRAM into working mode."]
     #[inline(always)]
-    pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W<CLK_SPEC> {
+    pub fn efuse_mem_force_pu(&mut self) -> EFUSE_MEM_FORCE_PU_W<'_, CLK_SPEC> {
         EFUSE_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 16 - Set this bit and force to enable clock signal of eFuse memory."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CLK_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CLK_SPEC> {
         EN_W::new(self, 16)
     }
 }

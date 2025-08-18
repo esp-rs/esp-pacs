@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - This register contains the mode of modular multiplication and multiplication."]
     #[inline(always)]
-    pub fn mult_mode(&mut self) -> MULT_MODE_W<MULT_MODE_SPEC> {
+    pub fn mult_mode(&mut self) -> MULT_MODE_W<'_, MULT_MODE_SPEC> {
         MULT_MODE_W::new(self, 0)
     }
 }

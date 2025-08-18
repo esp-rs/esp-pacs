@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn core0_lp_anaperi_int_map(
         &mut self,
-    ) -> CORE0_LP_ANAPERI_INT_MAP_W<LP_ANAPERI_INT_MAP_SPEC> {
+    ) -> CORE0_LP_ANAPERI_INT_MAP_W<'_, LP_ANAPERI_INT_MAP_SPEC> {
         CORE0_LP_ANAPERI_INT_MAP_W::new(self, 0)
     }
 }

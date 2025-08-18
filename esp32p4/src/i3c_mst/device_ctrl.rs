@@ -193,91 +193,93 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - This bit is used to include I3C broadcast address(0x7E) for private transfer.(If I3C broadcast address is not include for the private transfer, In-Band Interrupts driven from Slaves may not win address arbitration. Hence IBIs will get delayed)"]
     #[inline(always)]
-    pub fn reg_ba_include(&mut self) -> REG_BA_INCLUDE_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_ba_include(&mut self) -> REG_BA_INCLUDE_W<'_, DEVICE_CTRL_SPEC> {
         REG_BA_INCLUDE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Transfer Start"]
     #[inline(always)]
-    pub fn reg_trans_start(&mut self) -> REG_TRANS_START_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_trans_start(&mut self) -> REG_TRANS_START_W<'_, DEVICE_CTRL_SPEC> {
         REG_TRANS_START_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_clk_en(&mut self) -> REG_CLK_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn reg_ibi_rstart_trans_en(&mut self) -> REG_IBI_RSTART_TRANS_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_ibi_rstart_trans_en(&mut self) -> REG_IBI_RSTART_TRANS_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_IBI_RSTART_TRANS_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    pub fn reg_auto_dis_ibi_en(&mut self) -> REG_AUTO_DIS_IBI_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_auto_dis_ibi_en(&mut self) -> REG_AUTO_DIS_IBI_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_AUTO_DIS_IBI_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - NA"]
     #[inline(always)]
-    pub fn reg_dma_rx_en(&mut self) -> REG_DMA_RX_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_dma_rx_en(&mut self) -> REG_DMA_RX_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_DMA_RX_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - NA"]
     #[inline(always)]
-    pub fn reg_dma_tx_en(&mut self) -> REG_DMA_TX_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_dma_tx_en(&mut self) -> REG_DMA_TX_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_DMA_TX_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - 0: rx high bit first, 1: rx low bit first"]
     #[inline(always)]
     pub fn reg_multi_slv_single_ccc_en(
         &mut self,
-    ) -> REG_MULTI_SLV_SINGLE_CCC_EN_W<DEVICE_CTRL_SPEC> {
+    ) -> REG_MULTI_SLV_SINGLE_CCC_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_MULTI_SLV_SINGLE_CCC_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - 0: rx low byte fist, 1: rx high byte first"]
     #[inline(always)]
-    pub fn reg_rx_bit_order(&mut self) -> REG_RX_BIT_ORDER_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_rx_bit_order(&mut self) -> REG_RX_BIT_ORDER_W<'_, DEVICE_CTRL_SPEC> {
         REG_RX_BIT_ORDER_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    pub fn reg_rx_byte_order(&mut self) -> REG_RX_BYTE_ORDER_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_rx_byte_order(&mut self) -> REG_RX_BYTE_ORDER_W<'_, DEVICE_CTRL_SPEC> {
         REG_RX_BYTE_ORDER_W::new(self, 10)
     }
     #[doc = "Bit 11 - This bit is used to force scl_pullup_en"]
     #[inline(always)]
-    pub fn reg_scl_pullup_force_en(&mut self) -> REG_SCL_PULLUP_FORCE_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_scl_pullup_force_en(&mut self) -> REG_SCL_PULLUP_FORCE_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_SCL_PULLUP_FORCE_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - This bit is used to force scl_oe"]
     #[inline(always)]
-    pub fn reg_scl_oe_force_en(&mut self) -> REG_SCL_OE_FORCE_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_scl_oe_force_en(&mut self) -> REG_SCL_OE_FORCE_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_SCL_OE_FORCE_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    pub fn reg_sda_pp_rd_pullup_en(&mut self) -> REG_SDA_PP_RD_PULLUP_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_sda_pp_rd_pullup_en(&mut self) -> REG_SDA_PP_RD_PULLUP_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_SDA_PP_RD_PULLUP_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
     pub fn reg_sda_rd_tbit_hlvl_pullup_en(
         &mut self,
-    ) -> REG_SDA_RD_TBIT_HLVL_PULLUP_EN_W<DEVICE_CTRL_SPEC> {
+    ) -> REG_SDA_RD_TBIT_HLVL_PULLUP_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_SDA_RD_TBIT_HLVL_PULLUP_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - NA"]
     #[inline(always)]
-    pub fn reg_sda_pp_wr_pullup_en(&mut self) -> REG_SDA_PP_WR_PULLUP_EN_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_sda_pp_wr_pullup_en(&mut self) -> REG_SDA_PP_WR_PULLUP_EN_W<'_, DEVICE_CTRL_SPEC> {
         REG_SDA_PP_WR_PULLUP_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: read current real-time updated value 0: read latch data byte cnt value"]
     #[inline(always)]
-    pub fn reg_data_byte_cnt_unlatch(&mut self) -> REG_DATA_BYTE_CNT_UNLATCH_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_data_byte_cnt_unlatch(
+        &mut self,
+    ) -> REG_DATA_BYTE_CNT_UNLATCH_W<'_, DEVICE_CTRL_SPEC> {
         REG_DATA_BYTE_CNT_UNLATCH_W::new(self, 16)
     }
     #[doc = "Bit 17 - 1: dev characteristic and address table memory clk date force on . 0 : clock gating by rd/wr."]
     #[inline(always)]
-    pub fn reg_mem_clk_force_on(&mut self) -> REG_MEM_CLK_FORCE_ON_W<DEVICE_CTRL_SPEC> {
+    pub fn reg_mem_clk_force_on(&mut self) -> REG_MEM_CLK_FORCE_ON_W<'_, DEVICE_CTRL_SPEC> {
         REG_MEM_CLK_FORCE_ON_W::new(self, 17)
     }
 }

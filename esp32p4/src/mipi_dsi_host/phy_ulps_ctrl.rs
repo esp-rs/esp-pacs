@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn phy_txrequlpsclk(&mut self) -> PHY_TXREQULPSCLK_W<PHY_ULPS_CTRL_SPEC> {
+    pub fn phy_txrequlpsclk(&mut self) -> PHY_TXREQULPSCLK_W<'_, PHY_ULPS_CTRL_SPEC> {
         PHY_TXREQULPSCLK_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn phy_txexitulpsclk(&mut self) -> PHY_TXEXITULPSCLK_W<PHY_ULPS_CTRL_SPEC> {
+    pub fn phy_txexitulpsclk(&mut self) -> PHY_TXEXITULPSCLK_W<'_, PHY_ULPS_CTRL_SPEC> {
         PHY_TXEXITULPSCLK_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn phy_txrequlpslan(&mut self) -> PHY_TXREQULPSLAN_W<PHY_ULPS_CTRL_SPEC> {
+    pub fn phy_txrequlpslan(&mut self) -> PHY_TXREQULPSLAN_W<'_, PHY_ULPS_CTRL_SPEC> {
         PHY_TXREQULPSLAN_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn phy_txexitulpslan(&mut self) -> PHY_TXEXITULPSLAN_W<PHY_ULPS_CTRL_SPEC> {
+    pub fn phy_txexitulpslan(&mut self) -> PHY_TXEXITULPSLAN_W<'_, PHY_ULPS_CTRL_SPEC> {
         PHY_TXEXITULPSLAN_W::new(self, 3)
     }
 }

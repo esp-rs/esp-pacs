@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Reserved."]
     #[inline(always)]
-    pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W<AHB_TEST_SPEC> {
+    pub fn ahb_testmode(&mut self) -> AHB_TESTMODE_W<'_, AHB_TEST_SPEC> {
         AHB_TESTMODE_W::new(self, 0)
     }
     #[doc = "Bits 4:5 - Reserved."]
     #[inline(always)]
-    pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W<AHB_TEST_SPEC> {
+    pub fn ahb_testaddr(&mut self) -> AHB_TESTADDR_W<'_, AHB_TEST_SPEC> {
         AHB_TESTADDR_W::new(self, 4)
     }
 }

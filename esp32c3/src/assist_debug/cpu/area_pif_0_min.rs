@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_core_0_area_pif_0_min"]
     #[inline(always)]
-    pub fn area_pif_0_min(&mut self) -> AREA_PIF_0_MIN_W<AREA_PIF_0_MIN_SPEC> {
+    pub fn area_pif_0_min(&mut self) -> AREA_PIF_0_MIN_W<'_, AREA_PIF_0_MIN_SPEC> {
         AREA_PIF_0_MIN_W::new(self, 0)
     }
 }

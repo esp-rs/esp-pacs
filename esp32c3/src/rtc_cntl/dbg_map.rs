@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin5_mux_sel(&mut self) -> GPIO_PIN5_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN5_MUX_SEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin4_mux_sel(&mut self) -> GPIO_PIN4_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN4_MUX_SEL_W::new(self, 3)
     }
     #[doc = "Bit 4 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin3_mux_sel(&mut self) -> GPIO_PIN3_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN3_MUX_SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin2_mux_sel(&mut self) -> GPIO_PIN2_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN2_MUX_SEL_W::new(self, 5)
     }
     #[doc = "Bit 6 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin1_mux_sel(&mut self) -> GPIO_PIN1_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN1_MUX_SEL_W::new(self, 6)
     }
     #[doc = "Bit 7 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin0_mux_sel(&mut self) -> GPIO_PIN0_MUX_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN0_MUX_SEL_W::new(self, 7)
     }
     #[doc = "Bits 8:11 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin5_fun_sel(&mut self) -> GPIO_PIN5_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN5_FUN_SEL_W::new(self, 8)
     }
     #[doc = "Bits 12:15 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin4_fun_sel(&mut self) -> GPIO_PIN4_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN4_FUN_SEL_W::new(self, 12)
     }
     #[doc = "Bits 16:19 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin3_fun_sel(&mut self) -> GPIO_PIN3_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN3_FUN_SEL_W::new(self, 16)
     }
     #[doc = "Bits 20:23 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin2_fun_sel(&mut self) -> GPIO_PIN2_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN2_FUN_SEL_W::new(self, 20)
     }
     #[doc = "Bits 24:27 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin1_fun_sel(&mut self) -> GPIO_PIN1_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN1_FUN_SEL_W::new(self, 24)
     }
     #[doc = "Bits 28:31 - use for debug"]
     #[inline(always)]
-    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<DBG_MAP_SPEC> {
+    pub fn gpio_pin0_fun_sel(&mut self) -> GPIO_PIN0_FUN_SEL_W<'_, DBG_MAP_SPEC> {
         GPIO_PIN0_FUN_SEL_W::new(self, 28)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enables CPU stalling."]
     #[inline(always)]
-    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<TIMER1_SPEC> {
+    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<'_, TIMER1_SPEC> {
         CPU_STALL_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:5 - Sets the CPU stall waiting cycle (using the RTC fast clock)."]
     #[inline(always)]
-    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<TIMER1_SPEC> {
+    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<'_, TIMER1_SPEC> {
         CPU_STALL_WAIT_W::new(self, 1)
     }
     #[doc = "Bits 6:13 - Sets the 8 MHz clock waiting (using the RTC slow clock)."]
     #[inline(always)]
-    pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W<TIMER1_SPEC> {
+    pub fn ck8m_wait(&mut self) -> CK8M_WAIT_W<'_, TIMER1_SPEC> {
         CK8M_WAIT_W::new(self, 6)
     }
     #[doc = "Bits 14:23 - Sets the XTAL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
-    pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W<TIMER1_SPEC> {
+    pub fn xtl_buf_wait(&mut self) -> XTL_BUF_WAIT_W<'_, TIMER1_SPEC> {
         XTL_BUF_WAIT_W::new(self, 14)
     }
     #[doc = "Bits 24:31 - Sets the PLL waiting cycle (using the RTC slow clock)."]
     #[inline(always)]
-    pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W<TIMER1_SPEC> {
+    pub fn pll_buf_wait(&mut self) -> PLL_BUF_WAIT_W<'_, TIMER1_SPEC> {
         PLL_BUF_WAIT_W::new(self, 24)
     }
 }

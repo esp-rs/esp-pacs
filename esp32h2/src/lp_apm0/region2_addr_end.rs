@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - End address of region2"]
     #[inline(always)]
-    pub fn region2_addr_end(&mut self) -> REGION2_ADDR_END_W<REGION2_ADDR_END_SPEC> {
+    pub fn region2_addr_end(&mut self) -> REGION2_ADDR_END_W<'_, REGION2_ADDR_END_SPEC> {
         REGION2_ADDR_END_W::new(self, 0)
     }
 }

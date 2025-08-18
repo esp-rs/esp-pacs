@@ -292,144 +292,156 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Ledc ch0 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch0_en(&mut self) -> EVT_DUTY_CHNG_END_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch0_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH0_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Ledc ch1 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch1_en(&mut self) -> EVT_DUTY_CHNG_END_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch1_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH1_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Ledc ch2 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch2_en(&mut self) -> EVT_DUTY_CHNG_END_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch2_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH2_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Ledc ch3 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch3_en(&mut self) -> EVT_DUTY_CHNG_END_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch3_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH3_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Ledc ch4 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch4_en(&mut self) -> EVT_DUTY_CHNG_END_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch4_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH4_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Ledc ch5 duty change end event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_duty_chng_end_ch5_en(&mut self) -> EVT_DUTY_CHNG_END_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_duty_chng_end_ch5_en(
+        &mut self,
+    ) -> EVT_DUTY_CHNG_END_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_DUTY_CHNG_END_CH5_EN_W::new(self, 5)
     }
     #[doc = "Bit 8 - Ledc ch0 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch0_en(&mut self) -> EVT_OVF_CNT_PLS_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch0_en(&mut self) -> EVT_OVF_CNT_PLS_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH0_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - Ledc ch1 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch1_en(&mut self) -> EVT_OVF_CNT_PLS_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch1_en(&mut self) -> EVT_OVF_CNT_PLS_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH1_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Ledc ch2 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch2_en(&mut self) -> EVT_OVF_CNT_PLS_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch2_en(&mut self) -> EVT_OVF_CNT_PLS_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH2_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Ledc ch3 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch3_en(&mut self) -> EVT_OVF_CNT_PLS_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch3_en(&mut self) -> EVT_OVF_CNT_PLS_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH3_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Ledc ch4 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch4_en(&mut self) -> EVT_OVF_CNT_PLS_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch4_en(&mut self) -> EVT_OVF_CNT_PLS_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH4_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - Ledc ch5 overflow count pulse event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_ovf_cnt_pls_ch5_en(&mut self) -> EVT_OVF_CNT_PLS_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_ovf_cnt_pls_ch5_en(&mut self) -> EVT_OVF_CNT_PLS_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_OVF_CNT_PLS_CH5_EN_W::new(self, 13)
     }
     #[doc = "Bit 16 - Ledc timer0 overflow event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time_ovf_timer0_en(&mut self) -> EVT_TIME_OVF_TIMER0_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer0_en(&mut self) -> EVT_TIME_OVF_TIMER0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER0_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - Ledc timer1 overflow event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time_ovf_timer1_en(&mut self) -> EVT_TIME_OVF_TIMER1_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer1_en(&mut self) -> EVT_TIME_OVF_TIMER1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER1_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - Ledc timer2 overflow event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time_ovf_timer2_en(&mut self) -> EVT_TIME_OVF_TIMER2_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer2_en(&mut self) -> EVT_TIME_OVF_TIMER2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER2_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Ledc timer3 overflow event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time_ovf_timer3_en(&mut self) -> EVT_TIME_OVF_TIMER3_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time_ovf_timer3_en(&mut self) -> EVT_TIME_OVF_TIMER3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME_OVF_TIMER3_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - Ledc timer0 compare event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time0_cmp_en(&mut self) -> EVT_TIME0_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time0_cmp_en(&mut self) -> EVT_TIME0_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME0_CMP_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Ledc timer1 compare event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time1_cmp_en(&mut self) -> EVT_TIME1_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time1_cmp_en(&mut self) -> EVT_TIME1_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME1_CMP_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - Ledc timer2 compare event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time2_cmp_en(&mut self) -> EVT_TIME2_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time2_cmp_en(&mut self) -> EVT_TIME2_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME2_CMP_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - Ledc timer3 compare event enable register, write 1 to enable this event."]
     #[inline(always)]
-    pub fn evt_time3_cmp_en(&mut self) -> EVT_TIME3_CMP_EN_W<EVT_TASK_EN0_SPEC> {
+    pub fn evt_time3_cmp_en(&mut self) -> EVT_TIME3_CMP_EN_W<'_, EVT_TASK_EN0_SPEC> {
         EVT_TIME3_CMP_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Ledc ch0 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch0_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH0_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH0_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH0_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Ledc ch1 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch1_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH1_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH1_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH1_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - Ledc ch2 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch2_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH2_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH2_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH2_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Ledc ch3 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch3_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH3_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH3_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH3_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - Ledc ch4 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch4_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH4_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH4_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH4_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Ledc ch5 duty scale update task enable register, write 1 to enable this task."]
     #[inline(always)]
     pub fn task_duty_scale_update_ch5_en(
         &mut self,
-    ) -> TASK_DUTY_SCALE_UPDATE_CH5_EN_W<EVT_TASK_EN0_SPEC> {
+    ) -> TASK_DUTY_SCALE_UPDATE_CH5_EN_W<'_, EVT_TASK_EN0_SPEC> {
         TASK_DUTY_SCALE_UPDATE_CH5_EN_W::new(self, 29)
     }
 }

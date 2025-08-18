@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_sdio_cmd_hold_en(&mut self) -> SDIO_SDIO_CMD_HOLD_EN_W<SLCCONF1_SPEC> {
+    pub fn sdio_sdio_cmd_hold_en(&mut self) -> SDIO_SDIO_CMD_HOLD_EN_W<'_, SLCCONF1_SPEC> {
         SDIO_SDIO_CMD_HOLD_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc0_len_auto_clr(&mut self) -> SDIO_SLC0_LEN_AUTO_CLR_W<SLCCONF1_SPEC> {
+    pub fn sdio_slc0_len_auto_clr(&mut self) -> SDIO_SLC0_LEN_AUTO_CLR_W<'_, SLCCONF1_SPEC> {
         SDIO_SLC0_LEN_AUTO_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc0_tx_stitch_en(&mut self) -> SDIO_SLC0_TX_STITCH_EN_W<SLCCONF1_SPEC> {
+    pub fn sdio_slc0_tx_stitch_en(&mut self) -> SDIO_SLC0_TX_STITCH_EN_W<'_, SLCCONF1_SPEC> {
         SDIO_SLC0_TX_STITCH_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc0_rx_stitch_en(&mut self) -> SDIO_SLC0_RX_STITCH_EN_W<SLCCONF1_SPEC> {
+    pub fn sdio_slc0_rx_stitch_en(&mut self) -> SDIO_SLC0_RX_STITCH_EN_W<'_, SLCCONF1_SPEC> {
         SDIO_SLC0_RX_STITCH_EN_W::new(self, 6)
     }
     #[doc = "Bit 19 - Configures the polarity of interrupt to host."]
     #[inline(always)]
-    pub fn sdio_host_int_level_sel(&mut self) -> SDIO_HOST_INT_LEVEL_SEL_W<SLCCONF1_SPEC> {
+    pub fn sdio_host_int_level_sel(&mut self) -> SDIO_HOST_INT_LEVEL_SEL_W<'_, SLCCONF1_SPEC> {
         SDIO_HOST_INT_LEVEL_SEL_W::new(self, 19)
     }
     #[doc = "Bit 20 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc1_tx_stitch_en(&mut self) -> SDIO_SLC1_TX_STITCH_EN_W<SLCCONF1_SPEC> {
+    pub fn sdio_slc1_tx_stitch_en(&mut self) -> SDIO_SLC1_TX_STITCH_EN_W<'_, SLCCONF1_SPEC> {
         SDIO_SLC1_TX_STITCH_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - Please initialize to 0, and do not modify it."]
     #[inline(always)]
-    pub fn sdio_slc1_rx_stitch_en(&mut self) -> SDIO_SLC1_RX_STITCH_EN_W<SLCCONF1_SPEC> {
+    pub fn sdio_slc1_rx_stitch_en(&mut self) -> SDIO_SLC1_RX_STITCH_EN_W<'_, SLCCONF1_SPEC> {
         SDIO_SLC1_RX_STITCH_EN_W::new(self, 21)
     }
 }

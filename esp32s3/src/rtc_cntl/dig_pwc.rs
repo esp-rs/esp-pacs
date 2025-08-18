@@ -184,87 +184,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - memories in digital core force PD in sleep"]
     #[inline(always)]
-    pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn lslp_mem_force_pd(&mut self) -> LSLP_MEM_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         LSLP_MEM_FORCE_PD_W::new(self, 3)
     }
     #[doc = "Bit 4 - memories in digital core force no PD in sleep"]
     #[inline(always)]
-    pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn lslp_mem_force_pu(&mut self) -> LSLP_MEM_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         LSLP_MEM_FORCE_PU_W::new(self, 4)
     }
     #[doc = "Bit 11 - internal SRAM 2 force power down"]
     #[inline(always)]
-    pub fn bt_force_pd(&mut self) -> BT_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn bt_force_pd(&mut self) -> BT_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         BT_FORCE_PD_W::new(self, 11)
     }
     #[doc = "Bit 12 - internal SRAM 2 force power up"]
     #[inline(always)]
-    pub fn bt_force_pu(&mut self) -> BT_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn bt_force_pu(&mut self) -> BT_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         BT_FORCE_PU_W::new(self, 12)
     }
     #[doc = "Bit 13 - internal SRAM 3 force power down"]
     #[inline(always)]
-    pub fn dg_peri_force_pd(&mut self) -> DG_PERI_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn dg_peri_force_pd(&mut self) -> DG_PERI_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         DG_PERI_FORCE_PD_W::new(self, 13)
     }
     #[doc = "Bit 14 - internal SRAM 3 force power up"]
     #[inline(always)]
-    pub fn dg_peri_force_pu(&mut self) -> DG_PERI_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn dg_peri_force_pu(&mut self) -> DG_PERI_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         DG_PERI_FORCE_PU_W::new(self, 14)
     }
     #[doc = "Bit 17 - wifi force power down"]
     #[inline(always)]
-    pub fn wifi_force_pd(&mut self) -> WIFI_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn wifi_force_pd(&mut self) -> WIFI_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         WIFI_FORCE_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - wifi force power up"]
     #[inline(always)]
-    pub fn wifi_force_pu(&mut self) -> WIFI_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn wifi_force_pu(&mut self) -> WIFI_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         WIFI_FORCE_PU_W::new(self, 18)
     }
     #[doc = "Bit 19 - digital core force power down"]
     #[inline(always)]
-    pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_force_pd(&mut self) -> DG_WRAP_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_FORCE_PD_W::new(self, 19)
     }
     #[doc = "Bit 20 - digital core force power up"]
     #[inline(always)]
-    pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_force_pu(&mut self) -> DG_WRAP_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_FORCE_PU_W::new(self, 20)
     }
     #[doc = "Bit 21 - digital dcdc force power down"]
     #[inline(always)]
-    pub fn cpu_top_force_pd(&mut self) -> CPU_TOP_FORCE_PD_W<DIG_PWC_SPEC> {
+    pub fn cpu_top_force_pd(&mut self) -> CPU_TOP_FORCE_PD_W<'_, DIG_PWC_SPEC> {
         CPU_TOP_FORCE_PD_W::new(self, 21)
     }
     #[doc = "Bit 22 - digital dcdc force power up"]
     #[inline(always)]
-    pub fn cpu_top_force_pu(&mut self) -> CPU_TOP_FORCE_PU_W<DIG_PWC_SPEC> {
+    pub fn cpu_top_force_pu(&mut self) -> CPU_TOP_FORCE_PU_W<'_, DIG_PWC_SPEC> {
         CPU_TOP_FORCE_PU_W::new(self, 22)
     }
     #[doc = "Bit 27 - enable power down internal SRAM 2 in sleep"]
     #[inline(always)]
-    pub fn bt_pd_en(&mut self) -> BT_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn bt_pd_en(&mut self) -> BT_PD_EN_W<'_, DIG_PWC_SPEC> {
         BT_PD_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - enable power down internal SRAM 3 in sleep"]
     #[inline(always)]
-    pub fn dg_peri_pd_en(&mut self) -> DG_PERI_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn dg_peri_pd_en(&mut self) -> DG_PERI_PD_EN_W<'_, DIG_PWC_SPEC> {
         DG_PERI_PD_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - enable power down internal SRAM 4 in sleep"]
     #[inline(always)]
-    pub fn cpu_top_pd_en(&mut self) -> CPU_TOP_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn cpu_top_pd_en(&mut self) -> CPU_TOP_PD_EN_W<'_, DIG_PWC_SPEC> {
         CPU_TOP_PD_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable power down wifi in sleep"]
     #[inline(always)]
-    pub fn wifi_pd_en(&mut self) -> WIFI_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn wifi_pd_en(&mut self) -> WIFI_PD_EN_W<'_, DIG_PWC_SPEC> {
         WIFI_PD_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable power down all digital logic"]
     #[inline(always)]
-    pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<DIG_PWC_SPEC> {
+    pub fn dg_wrap_pd_en(&mut self) -> DG_WRAP_PD_EN_W<'_, DIG_PWC_SPEC> {
         DG_WRAP_PD_EN_W::new(self, 31)
     }
 }

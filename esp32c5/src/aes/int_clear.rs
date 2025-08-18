@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLEAR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to clear AES interrupt. \\\\ 0: No effect \\\\ 1: Clear \\\\"]
     #[inline(always)]
-    pub fn int_clear(&mut self) -> INT_CLEAR_W<INT_CLEAR_SPEC> {
+    pub fn int_clear(&mut self) -> INT_CLEAR_W<'_, INT_CLEAR_SPEC> {
         INT_CLEAR_W::new(self, 0)
     }
 }

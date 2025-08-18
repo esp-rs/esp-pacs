@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - x"]
     #[inline(always)]
-    pub fn mem_start_addr(&mut self) -> MEM_START_ADDR_W<MEM_ADDR_SPEC> {
+    pub fn mem_start_addr(&mut self) -> MEM_START_ADDR_W<'_, MEM_ADDR_SPEC> {
         MEM_START_ADDR_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The integral part of the frequency divider factor of the parl rx clock."]
     #[inline(always)]
-    pub fn parl_clk_rx_div_num(&mut self) -> PARL_CLK_RX_DIV_NUM_W<PARL_CLK_RX_CONF_SPEC> {
+    pub fn parl_clk_rx_div_num(&mut self) -> PARL_CLK_RX_DIV_NUM_W<'_, PARL_CLK_RX_CONF_SPEC> {
         PARL_CLK_RX_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - Configures the clock source of Paraller IO RX\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F240M_CLK\\\\ 3: Use the clock from chip pin\\\\"]
     #[inline(always)]
-    pub fn parl_clk_rx_sel(&mut self) -> PARL_CLK_RX_SEL_W<PARL_CLK_RX_CONF_SPEC> {
+    pub fn parl_clk_rx_sel(&mut self) -> PARL_CLK_RX_SEL_W<'_, PARL_CLK_RX_CONF_SPEC> {
         PARL_CLK_RX_SEL_W::new(self, 16)
     }
     #[doc = "Bit 18 - Set 1 to enable parl rx clock"]
     #[inline(always)]
-    pub fn parl_clk_rx_en(&mut self) -> PARL_CLK_RX_EN_W<PARL_CLK_RX_CONF_SPEC> {
+    pub fn parl_clk_rx_en(&mut self) -> PARL_CLK_RX_EN_W<'_, PARL_CLK_RX_CONF_SPEC> {
         PARL_CLK_RX_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set 0 to reset parl rx module"]
     #[inline(always)]
-    pub fn parl_rx_rst_en(&mut self) -> PARL_RX_RST_EN_W<PARL_CLK_RX_CONF_SPEC> {
+    pub fn parl_rx_rst_en(&mut self) -> PARL_RX_RST_EN_W<'_, PARL_CLK_RX_CONF_SPEC> {
         PARL_RX_RST_EN_W::new(self, 19)
     }
 }

@@ -174,82 +174,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when flush cmd is received for IN endpoint 2 of JTAG."]
     #[inline(always)]
-    pub fn jtag_in_flush(&mut self) -> JTAG_IN_FLUSH_W<INT_RAW_SPEC> {
+    pub fn jtag_in_flush(&mut self) -> JTAG_IN_FLUSH_W<'_, INT_RAW_SPEC> {
         JTAG_IN_FLUSH_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when SOF frame is received."]
     #[inline(always)]
-    pub fn sof(&mut self) -> SOF_W<INT_RAW_SPEC> {
+    pub fn sof(&mut self) -> SOF_W<'_, INT_RAW_SPEC> {
         SOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when Serial Port OUT Endpoint received one packet."]
     #[inline(always)]
-    pub fn serial_out_recv_pkt(&mut self) -> SERIAL_OUT_RECV_PKT_W<INT_RAW_SPEC> {
+    pub fn serial_out_recv_pkt(&mut self) -> SERIAL_OUT_RECV_PKT_W<'_, INT_RAW_SPEC> {
         SERIAL_OUT_RECV_PKT_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt bit turns to high level when Serial Port IN Endpoint is empty."]
     #[inline(always)]
-    pub fn serial_in_empty(&mut self) -> SERIAL_IN_EMPTY_W<INT_RAW_SPEC> {
+    pub fn serial_in_empty(&mut self) -> SERIAL_IN_EMPTY_W<'_, INT_RAW_SPEC> {
         SERIAL_IN_EMPTY_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt bit turns to high level when pid error is detected."]
     #[inline(always)]
-    pub fn pid_err(&mut self) -> PID_ERR_W<INT_RAW_SPEC> {
+    pub fn pid_err(&mut self) -> PID_ERR_W<'_, INT_RAW_SPEC> {
         PID_ERR_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt bit turns to high level when CRC5 error is detected."]
     #[inline(always)]
-    pub fn crc5_err(&mut self) -> CRC5_ERR_W<INT_RAW_SPEC> {
+    pub fn crc5_err(&mut self) -> CRC5_ERR_W<'_, INT_RAW_SPEC> {
         CRC5_ERR_W::new(self, 5)
     }
     #[doc = "Bit 6 - The raw interrupt bit turns to high level when CRC16 error is detected."]
     #[inline(always)]
-    pub fn crc16_err(&mut self) -> CRC16_ERR_W<INT_RAW_SPEC> {
+    pub fn crc16_err(&mut self) -> CRC16_ERR_W<'_, INT_RAW_SPEC> {
         CRC16_ERR_W::new(self, 6)
     }
     #[doc = "Bit 7 - The raw interrupt bit turns to high level when stuff error is detected."]
     #[inline(always)]
-    pub fn stuff_err(&mut self) -> STUFF_ERR_W<INT_RAW_SPEC> {
+    pub fn stuff_err(&mut self) -> STUFF_ERR_W<'_, INT_RAW_SPEC> {
         STUFF_ERR_W::new(self, 7)
     }
     #[doc = "Bit 8 - The raw interrupt bit turns to high level when IN token for IN endpoint 1 is received."]
     #[inline(always)]
-    pub fn in_token_rec_in_ep1(&mut self) -> IN_TOKEN_REC_IN_EP1_W<INT_RAW_SPEC> {
+    pub fn in_token_rec_in_ep1(&mut self) -> IN_TOKEN_REC_IN_EP1_W<'_, INT_RAW_SPEC> {
         IN_TOKEN_REC_IN_EP1_W::new(self, 8)
     }
     #[doc = "Bit 9 - The raw interrupt bit turns to high level when usb bus reset is detected."]
     #[inline(always)]
-    pub fn usb_bus_reset(&mut self) -> USB_BUS_RESET_W<INT_RAW_SPEC> {
+    pub fn usb_bus_reset(&mut self) -> USB_BUS_RESET_W<'_, INT_RAW_SPEC> {
         USB_BUS_RESET_W::new(self, 9)
     }
     #[doc = "Bit 10 - The raw interrupt bit turns to high level when OUT endpoint 1 received packet with zero palyload."]
     #[inline(always)]
-    pub fn out_ep1_zero_payload(&mut self) -> OUT_EP1_ZERO_PAYLOAD_W<INT_RAW_SPEC> {
+    pub fn out_ep1_zero_payload(&mut self) -> OUT_EP1_ZERO_PAYLOAD_W<'_, INT_RAW_SPEC> {
         OUT_EP1_ZERO_PAYLOAD_W::new(self, 10)
     }
     #[doc = "Bit 11 - The raw interrupt bit turns to high level when OUT endpoint 2 received packet with zero palyload."]
     #[inline(always)]
-    pub fn out_ep2_zero_payload(&mut self) -> OUT_EP2_ZERO_PAYLOAD_W<INT_RAW_SPEC> {
+    pub fn out_ep2_zero_payload(&mut self) -> OUT_EP2_ZERO_PAYLOAD_W<'_, INT_RAW_SPEC> {
         OUT_EP2_ZERO_PAYLOAD_W::new(self, 11)
     }
     #[doc = "Bit 12 - The raw interrupt bit turns to high level when level of RTS from usb serial channel is changed."]
     #[inline(always)]
-    pub fn rts_chg(&mut self) -> RTS_CHG_W<INT_RAW_SPEC> {
+    pub fn rts_chg(&mut self) -> RTS_CHG_W<'_, INT_RAW_SPEC> {
         RTS_CHG_W::new(self, 12)
     }
     #[doc = "Bit 13 - The raw interrupt bit turns to high level when level of DTR from usb serial channel is changed."]
     #[inline(always)]
-    pub fn dtr_chg(&mut self) -> DTR_CHG_W<INT_RAW_SPEC> {
+    pub fn dtr_chg(&mut self) -> DTR_CHG_W<'_, INT_RAW_SPEC> {
         DTR_CHG_W::new(self, 13)
     }
     #[doc = "Bit 14 - The raw interrupt bit turns to high level when level of GET LINE CODING request is received."]
     #[inline(always)]
-    pub fn get_line_code(&mut self) -> GET_LINE_CODE_W<INT_RAW_SPEC> {
+    pub fn get_line_code(&mut self) -> GET_LINE_CODE_W<'_, INT_RAW_SPEC> {
         GET_LINE_CODE_W::new(self, 14)
     }
     #[doc = "Bit 15 - The raw interrupt bit turns to high level when level of SET LINE CODING request is received."]
     #[inline(always)]
-    pub fn set_line_code(&mut self) -> SET_LINE_CODE_W<INT_RAW_SPEC> {
+    pub fn set_line_code(&mut self) -> SET_LINE_CODE_W<'_, INT_RAW_SPEC> {
         SET_LINE_CODE_W::new(self, 15)
     }
 }

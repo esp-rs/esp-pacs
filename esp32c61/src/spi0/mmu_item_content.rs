@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - MSPI-MMU item content"]
     #[inline(always)]
-    pub fn mmu_item_content(&mut self) -> MMU_ITEM_CONTENT_W<MMU_ITEM_CONTENT_SPEC> {
+    pub fn mmu_item_content(&mut self) -> MMU_ITEM_CONTENT_W<'_, MMU_ITEM_CONTENT_SPEC> {
         MMU_ITEM_CONTENT_W::new(self, 0)
     }
 }

@@ -68,17 +68,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 bus0 access L1-Cache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn cache_shut_bus0(&mut self) -> CACHE_SHUT_BUS0_W<CACHE_CTRL_SPEC> {
+    pub fn cache_shut_bus0(&mut self) -> CACHE_SHUT_BUS0_W<'_, CACHE_CTRL_SPEC> {
         CACHE_SHUT_BUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core0 bus1 access L1-Cache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn cache_shut_bus1(&mut self) -> CACHE_SHUT_BUS1_W<CACHE_CTRL_SPEC> {
+    pub fn cache_shut_bus1(&mut self) -> CACHE_SHUT_BUS1_W<'_, CACHE_CTRL_SPEC> {
         CACHE_SHUT_BUS1_W::new(self, 1)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn cache_undef_op(&mut self) -> CACHE_UNDEF_OP_W<CACHE_CTRL_SPEC> {
+    pub fn cache_undef_op(&mut self) -> CACHE_UNDEF_OP_W<'_, CACHE_CTRL_SPEC> {
         CACHE_UNDEF_OP_W::new(self, 8)
     }
 }

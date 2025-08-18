@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to synchronize registers.\\\\ 0: Not synchronize\\\\ 1: Synchronize\\\\"]
     #[inline(always)]
-    pub fn reg_update(&mut self) -> REG_UPDATE_W<REG_UPDATE_SPEC> {
+    pub fn reg_update(&mut self) -> REG_UPDATE_W<'_, REG_UPDATE_SPEC> {
         REG_UPDATE_W::new(self, 0)
     }
 }

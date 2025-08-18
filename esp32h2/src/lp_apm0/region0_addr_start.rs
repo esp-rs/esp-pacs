@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Start address of region0"]
     #[inline(always)]
-    pub fn region0_addr_start(&mut self) -> REGION0_ADDR_START_W<REGION0_ADDR_START_SPEC> {
+    pub fn region0_addr_start(&mut self) -> REGION0_ADDR_START_W<'_, REGION0_ADDR_START_SPEC> {
         REGION0_ADDR_START_W::new(self, 0)
     }
 }

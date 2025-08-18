@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:28 - Filter A value. The identifier format is the same as in IDENTIFIER_W of TXT buffer or RX buffer. If filter A is not present, writes to this register have no effect and read will return all zeroes."]
     #[inline(always)]
-    pub fn bit_val_a_val(&mut self) -> BIT_VAL_A_VAL_W<FILTER_A_VAL_SPEC> {
+    pub fn bit_val_a_val(&mut self) -> BIT_VAL_A_VAL_W<'_, FILTER_A_VAL_SPEC> {
         BIT_VAL_A_VAL_W::new(self, 0)
     }
 }

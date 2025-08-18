@@ -68,28 +68,28 @@ impl W {
     #[inline(always)]
     pub fn reg_i3c_mst_ext_low_period1(
         &mut self,
-    ) -> REG_I3C_MST_EXT_LOW_PERIOD1_W<SCL_EXT_LOW_TIME_SPEC> {
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD1_W<'_, SCL_EXT_LOW_TIME_SPEC> {
         REG_I3C_MST_EXT_LOW_PERIOD1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
     pub fn reg_i3c_mst_ext_low_period2(
         &mut self,
-    ) -> REG_I3C_MST_EXT_LOW_PERIOD2_W<SCL_EXT_LOW_TIME_SPEC> {
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD2_W<'_, SCL_EXT_LOW_TIME_SPEC> {
         REG_I3C_MST_EXT_LOW_PERIOD2_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
     pub fn reg_i3c_mst_ext_low_period3(
         &mut self,
-    ) -> REG_I3C_MST_EXT_LOW_PERIOD3_W<SCL_EXT_LOW_TIME_SPEC> {
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD3_W<'_, SCL_EXT_LOW_TIME_SPEC> {
         REG_I3C_MST_EXT_LOW_PERIOD3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - NA"]
     #[inline(always)]
     pub fn reg_i3c_mst_ext_low_period4(
         &mut self,
-    ) -> REG_I3C_MST_EXT_LOW_PERIOD4_W<SCL_EXT_LOW_TIME_SPEC> {
+    ) -> REG_I3C_MST_EXT_LOW_PERIOD4_W<'_, SCL_EXT_LOW_TIME_SPEC> {
         REG_I3C_MST_EXT_LOW_PERIOD4_W::new(self, 24)
     }
 }

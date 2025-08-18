@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - xxxx"]
     #[inline(always)]
-    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<SEC_CONF_SPEC> {
+    pub fn sec_clk_sel(&mut self) -> SEC_CLK_SEL_W<'_, SEC_CONF_SPEC> {
         SEC_CLK_SEL_W::new(self, 0)
     }
 }

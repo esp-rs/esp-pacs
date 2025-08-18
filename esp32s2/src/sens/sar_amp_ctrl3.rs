@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Control of DAC. 4’b0010: disable DAC. 4’b0000: power up DAC by FSM. 4’b0011: power up DAC by software."]
     #[inline(always)]
-    pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn sar1_dac_xpd_fsm(&mut self) -> SAR1_DAC_XPD_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         SAR1_DAC_XPD_FSM_W::new(self, 0)
     }
     #[doc = "Bits 4:7"]
     #[inline(always)]
-    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn xpd_sar_amp_fsm(&mut self) -> XPD_SAR_AMP_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         XPD_SAR_AMP_FSM_W::new(self, 4)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn amp_rst_fb_fsm(&mut self) -> AMP_RST_FB_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         AMP_RST_FB_FSM_W::new(self, 8)
     }
     #[doc = "Bits 12:15"]
     #[inline(always)]
-    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn amp_short_ref_fsm(&mut self) -> AMP_SHORT_REF_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         AMP_SHORT_REF_FSM_W::new(self, 12)
     }
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn amp_short_ref_gnd_fsm(&mut self) -> AMP_SHORT_REF_GND_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         AMP_SHORT_REF_GND_FSM_W::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn xpd_sar_fsm(&mut self) -> XPD_SAR_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         XPD_SAR_FSM_W::new(self, 20)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<SAR_AMP_CTRL3_SPEC> {
+    pub fn sar_rstb_fsm(&mut self) -> SAR_RSTB_FSM_W<'_, SAR_AMP_CTRL3_SPEC> {
         SAR_RSTB_FSM_W::new(self, 24)
     }
 }

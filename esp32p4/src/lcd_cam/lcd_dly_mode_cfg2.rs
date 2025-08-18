@@ -133,89 +133,89 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `DOUT0_MODE` field.</div>"]
     #[inline(always)]
-    pub fn dout_mode(&mut self, n: u8) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout_mode(&mut self, n: u8) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 16][n as usize];
         DOUT_MODE_W::new(self, n * 2)
     }
     #[doc = "Bits 0:1 - The output data bit 0 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout0_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout0_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - The output data bit 1 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout1_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout1_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - The output data bit 2 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout2_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout2_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - The output data bit 3 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout3_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout3_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - The output data bit 4 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout4_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout4_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - The output data bit 5 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout5_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout5_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - The output data bit 6 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout6_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout6_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - The output data bit 7 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout7_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout7_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - The output data bit 8 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout8_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout8_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - The output data bit 9 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout9_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout9_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - The output data bit 10 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout10_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout10_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 20)
     }
     #[doc = "Bits 22:23 - The output data bit 11 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout11_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout11_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 22)
     }
     #[doc = "Bits 24:25 - The output data bit 12 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout12_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout12_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - The output data bit 13 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout13_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout13_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 26)
     }
     #[doc = "Bits 28:29 - The output data bit 14 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout14_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout14_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - The output data bit 15 is delayed by module clock LCD_CLK"]
     #[inline(always)]
-    pub fn dout15_mode(&mut self) -> DOUT_MODE_W<LCD_DLY_MODE_CFG2_SPEC> {
+    pub fn dout15_mode(&mut self) -> DOUT_MODE_W<'_, LCD_DLY_MODE_CFG2_SPEC> {
         DOUT_MODE_W::new(self, 30)
     }
 }

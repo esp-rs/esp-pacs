@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - This field to used to set world to enter, 2'b01 means WORLD0, 2'b10 means WORLD1"]
     #[inline(always)]
-    pub fn world_prepare(&mut self) -> WORLD_PREPARE_W<WORLD_PREPARE_SPEC> {
+    pub fn world_prepare(&mut self) -> WORLD_PREPARE_W<'_, WORLD_PREPARE_SPEC> {
         WORLD_PREPARE_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - Configures whether to stop SLC0 TX linked list operation."]
     #[inline(always)]
-    pub fn sdio_slc0_txlink_stop(&mut self) -> SDIO_SLC0_TXLINK_STOP_W<SLC0TX_LINK_SPEC> {
+    pub fn sdio_slc0_txlink_stop(&mut self) -> SDIO_SLC0_TXLINK_STOP_W<'_, SLC0TX_LINK_SPEC> {
         SDIO_SLC0_TXLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether to start SLC0 TX linked list operation from the address indicated by SDIO_SLC0_TXLINK_ADDR."]
     #[inline(always)]
-    pub fn sdio_slc0_txlink_start(&mut self) -> SDIO_SLC0_TXLINK_START_W<SLC0TX_LINK_SPEC> {
+    pub fn sdio_slc0_txlink_start(&mut self) -> SDIO_SLC0_TXLINK_START_W<'_, SLC0TX_LINK_SPEC> {
         SDIO_SLC0_TXLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether to restart and continue SLC0 TX linked list operation."]
     #[inline(always)]
-    pub fn sdio_slc0_txlink_restart(&mut self) -> SDIO_SLC0_TXLINK_RESTART_W<SLC0TX_LINK_SPEC> {
+    pub fn sdio_slc0_txlink_restart(&mut self) -> SDIO_SLC0_TXLINK_RESTART_W<'_, SLC0TX_LINK_SPEC> {
         SDIO_SLC0_TXLINK_RESTART_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents SLC0 TX linked list FSM state."]
     #[inline(always)]
-    pub fn sdio_slc0_txlink_park(&mut self) -> SDIO_SLC0_TXLINK_PARK_W<SLC0TX_LINK_SPEC> {
+    pub fn sdio_slc0_txlink_park(&mut self) -> SDIO_SLC0_TXLINK_PARK_W<'_, SLC0TX_LINK_SPEC> {
         SDIO_SLC0_TXLINK_PARK_W::new(self, 31)
     }
 }

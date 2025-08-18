@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:6 - Configures the cycles that reset frequency calculation timeout. \\\\ Measurement unit: XTAL_CLK \\\\"]
     #[inline(always)]
-    pub fn rtc_cali_timeout_rst_cnt(&mut self) -> RTC_CALI_TIMEOUT_RST_CNT_W<RTCCALICFG2_SPEC> {
+    pub fn rtc_cali_timeout_rst_cnt(&mut self) -> RTC_CALI_TIMEOUT_RST_CNT_W<'_, RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_RST_CNT_W::new(self, 3)
     }
     #[doc = "Bits 7:31 - Configures the threshold value for the RTC frequency calculation timer. If the timer's value exceeds this threshold, a timeout is triggered.\\\\ Measurement unit: XTAL_CLK \\\\"]
     #[inline(always)]
-    pub fn rtc_cali_timeout_thres(&mut self) -> RTC_CALI_TIMEOUT_THRES_W<RTCCALICFG2_SPEC> {
+    pub fn rtc_cali_timeout_thres(&mut self) -> RTC_CALI_TIMEOUT_THRES_W<'_, RTCCALICFG2_SPEC> {
         RTC_CALI_TIMEOUT_THRES_W::new(self, 7)
     }
 }

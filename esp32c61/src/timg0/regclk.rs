@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 28 - Configures whether to enable timer's ETM task and event. \\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn etm_en(&mut self) -> ETM_EN_W<REGCLK_SPEC> {
+    pub fn etm_en(&mut self) -> ETM_EN_W<'_, REGCLK_SPEC> {
         ETM_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - Configures whether to enable WDT's clock. \\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+    pub fn wdt_clk_is_active(&mut self) -> WDT_CLK_IS_ACTIVE_W<'_, REGCLK_SPEC> {
         WDT_CLK_IS_ACTIVE_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether to enable Timer 30's clock.\\\\ 0: Disable \\\\ 1: Enable \\\\"]
     #[inline(always)]
-    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<REGCLK_SPEC> {
+    pub fn timer_clk_is_active(&mut self) -> TIMER_CLK_IS_ACTIVE_W<'_, REGCLK_SPEC> {
         TIMER_CLK_IS_ACTIVE_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures whether to enable gate clock signal for registers. \\\\ 0: Force clock on for registers \\\\ 1: Support clock only when registers are read or written to by software. \\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, REGCLK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

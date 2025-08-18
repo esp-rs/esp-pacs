@@ -48,27 +48,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - TWAI FD timer enable register. 1b0: Not enable 1b1: Enable timer"]
     #[inline(always)]
-    pub fn timer_ce(&mut self) -> TIMER_CE_W<TIMER_CFG_SPEC> {
+    pub fn timer_ce(&mut self) -> TIMER_CE_W<'_, TIMER_CFG_SPEC> {
         TIMER_CE_W::new(self, 0)
     }
     #[doc = "Bit 1 - TWAI FD timer clear register. 1b0: Not enable 1b1: Enable to clear value"]
     #[inline(always)]
-    pub fn timer_clr(&mut self) -> TIMER_CLR_W<TIMER_CFG_SPEC> {
+    pub fn timer_clr(&mut self) -> TIMER_CLR_W<'_, TIMER_CFG_SPEC> {
         TIMER_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - TWAI FD timer set register. 1b0: Not enable 1b1: Enable to set value to ld_val."]
     #[inline(always)]
-    pub fn timer_set(&mut self) -> TIMER_SET_W<TIMER_CFG_SPEC> {
+    pub fn timer_set(&mut self) -> TIMER_SET_W<'_, TIMER_CFG_SPEC> {
         TIMER_SET_W::new(self, 2)
     }
     #[doc = "Bit 8 - TWAI FD timer up/down count register. 1b0: Count-down 1b1: Count-up"]
     #[inline(always)]
-    pub fn timer_up_dn(&mut self) -> TIMER_UP_DN_W<TIMER_CFG_SPEC> {
+    pub fn timer_up_dn(&mut self) -> TIMER_UP_DN_W<'_, TIMER_CFG_SPEC> {
         TIMER_UP_DN_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - TWAI FD timer count step register, step=reg_timer_step+1"]
     #[inline(always)]
-    pub fn timer_step(&mut self) -> TIMER_STEP_W<TIMER_CFG_SPEC> {
+    pub fn timer_step(&mut self) -> TIMER_STEP_W<'_, TIMER_CFG_SPEC> {
         TIMER_STEP_W::new(self, 16)
     }
 }

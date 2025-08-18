@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - APM M0 interrupt enable"]
     #[inline(always)]
-    pub fn m0_apm_int_en(&mut self) -> M0_APM_INT_EN_W<INT_EN_SPEC> {
+    pub fn m0_apm_int_en(&mut self) -> M0_APM_INT_EN_W<'_, INT_EN_SPEC> {
         M0_APM_INT_EN_W::new(self, 0)
     }
 }

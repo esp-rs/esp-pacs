@@ -176,87 +176,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - configure cis addr 318 and 574"]
     #[inline(always)]
-    pub fn pin_state(&mut self) -> PIN_STATE_W<CFG_DATA7_SPEC> {
+    pub fn pin_state(&mut self) -> PIN_STATE_W<'_, CFG_DATA7_SPEC> {
         PIN_STATE_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - configure cis addr 312, 315, 568 and 571"]
     #[inline(always)]
-    pub fn chip_state(&mut self) -> CHIP_STATE_W<CFG_DATA7_SPEC> {
+    pub fn chip_state(&mut self) -> CHIP_STATE_W<'_, CFG_DATA7_SPEC> {
         CHIP_STATE_W::new(self, 8)
     }
     #[doc = "Bit 16 - soft reset control for sdio module"]
     #[inline(always)]
-    pub fn sdio_rst(&mut self) -> SDIO_RST_W<CFG_DATA7_SPEC> {
+    pub fn sdio_rst(&mut self) -> SDIO_RST_W<'_, CFG_DATA7_SPEC> {
         SDIO_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - sdio io ready, high enable"]
     #[inline(always)]
-    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<CFG_DATA7_SPEC> {
+    pub fn sdio_ioready0(&mut self) -> SDIO_IOREADY0_W<'_, CFG_DATA7_SPEC> {
         SDIO_IOREADY0_W::new(self, 17)
     }
     #[doc = "Bit 18 - sdio memory power down, high active"]
     #[inline(always)]
-    pub fn sdio_mem_pd(&mut self) -> SDIO_MEM_PD_W<CFG_DATA7_SPEC> {
+    pub fn sdio_mem_pd(&mut self) -> SDIO_MEM_PD_W<'_, CFG_DATA7_SPEC> {
         SDIO_MEM_PD_W::new(self, 18)
     }
     #[doc = "Bit 19 - enable sdio interrupt on data1 line"]
     #[inline(always)]
-    pub fn esdio_data1_int_en(&mut self) -> ESDIO_DATA1_INT_EN_W<CFG_DATA7_SPEC> {
+    pub fn esdio_data1_int_en(&mut self) -> ESDIO_DATA1_INT_EN_W<'_, CFG_DATA7_SPEC> {
         ESDIO_DATA1_INT_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - control switch voltage change to 1.8V by software. 0:3.3V,1:1.8V"]
     #[inline(always)]
-    pub fn sdio_switch_volt_sw(&mut self) -> SDIO_SWITCH_VOLT_SW_W<CFG_DATA7_SPEC> {
+    pub fn sdio_switch_volt_sw(&mut self) -> SDIO_SWITCH_VOLT_SW_W<'_, CFG_DATA7_SPEC> {
         SDIO_SWITCH_VOLT_SW_W::new(self, 20)
     }
     #[doc = "Bit 21 - enable block length to be fixed to 512 bytes in ddr50 mode"]
     #[inline(always)]
-    pub fn ddr50_blk_len_fix_en(&mut self) -> DDR50_BLK_LEN_FIX_EN_W<CFG_DATA7_SPEC> {
+    pub fn ddr50_blk_len_fix_en(&mut self) -> DDR50_BLK_LEN_FIX_EN_W<'_, CFG_DATA7_SPEC> {
         DDR50_BLK_LEN_FIX_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - sdio apb clock for configuration force on control:0-gating,1-force on."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CFG_DATA7_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CFG_DATA7_SPEC> {
         CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - configure if support sdr50 mode in cccr"]
     #[inline(always)]
-    pub fn sddr50(&mut self) -> SDDR50_W<CFG_DATA7_SPEC> {
+    pub fn sddr50(&mut self) -> SDDR50_W<'_, CFG_DATA7_SPEC> {
         SDDR50_W::new(self, 23)
     }
     #[doc = "Bit 24 - configure if support sdr104 mode in cccr"]
     #[inline(always)]
-    pub fn ssdr104(&mut self) -> SSDR104_W<CFG_DATA7_SPEC> {
+    pub fn ssdr104(&mut self) -> SSDR104_W<'_, CFG_DATA7_SPEC> {
         SSDR104_W::new(self, 24)
     }
     #[doc = "Bit 25 - configure if support ddr50 mode in cccr"]
     #[inline(always)]
-    pub fn ssdr50(&mut self) -> SSDR50_W<CFG_DATA7_SPEC> {
+    pub fn ssdr50(&mut self) -> SSDR50_W<'_, CFG_DATA7_SPEC> {
         SSDR50_W::new(self, 25)
     }
     #[doc = "Bit 26 - configure if support driver type D in cccr"]
     #[inline(always)]
-    pub fn sdtd(&mut self) -> SDTD_W<CFG_DATA7_SPEC> {
+    pub fn sdtd(&mut self) -> SDTD_W<'_, CFG_DATA7_SPEC> {
         SDTD_W::new(self, 26)
     }
     #[doc = "Bit 27 - configure if support driver type A in cccr"]
     #[inline(always)]
-    pub fn sdta(&mut self) -> SDTA_W<CFG_DATA7_SPEC> {
+    pub fn sdta(&mut self) -> SDTA_W<'_, CFG_DATA7_SPEC> {
         SDTA_W::new(self, 27)
     }
     #[doc = "Bit 28 - configure if support driver type C in cccr"]
     #[inline(always)]
-    pub fn sdtc(&mut self) -> SDTC_W<CFG_DATA7_SPEC> {
+    pub fn sdtc(&mut self) -> SDTC_W<'_, CFG_DATA7_SPEC> {
         SDTC_W::new(self, 28)
     }
     #[doc = "Bit 29 - configure if support asynchronous interrupt in cccr"]
     #[inline(always)]
-    pub fn sai(&mut self) -> SAI_W<CFG_DATA7_SPEC> {
+    pub fn sai(&mut self) -> SAI_W<'_, CFG_DATA7_SPEC> {
         SAI_W::new(self, 29)
     }
     #[doc = "Bit 30 - clear sdio_wake_up signal after the chip wakes up"]
     #[inline(always)]
-    pub fn sdio_wakeup_clr(&mut self) -> SDIO_WAKEUP_CLR_W<CFG_DATA7_SPEC> {
+    pub fn sdio_wakeup_clr(&mut self) -> SDIO_WAKEUP_CLR_W<'_, CFG_DATA7_SPEC> {
         SDIO_WAKEUP_CLR_W::new(self, 30)
     }
 }

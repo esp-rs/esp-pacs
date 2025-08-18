@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Defines the operation type of the AES Accelerator operating under the Typical AES working mode. & 0x0(AES_EN_128): AES-EN-128 # 0x1(AES_EN_192): AES-EN-192 # 0x2(AES_EN_256): AES-EN-256 # 0x4(AES_DE_128): AES-DE-128 # 0x5(AES_DE_192): AES-DE-192 # 0x6(AES_DE_256): AES-DE-256 &"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<MODE_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, MODE_SPEC> {
         MODE_W::new(self, 0)
     }
 }

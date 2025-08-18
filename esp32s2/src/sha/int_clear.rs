@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLEAR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Clears DMA-SHA interrupt."]
     #[inline(always)]
-    pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<INT_CLEAR_SPEC> {
+    pub fn clear_interrupt(&mut self) -> CLEAR_INTERRUPT_W<'_, INT_CLEAR_SPEC> {
         CLEAR_INTERRUPT_W::new(self, 0)
     }
 }

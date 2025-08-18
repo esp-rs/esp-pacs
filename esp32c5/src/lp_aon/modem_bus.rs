@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - enable modem sync bridge or not 1: enable 0: disable"]
     #[inline(always)]
-    pub fn modem_sync_bridge_en(&mut self) -> MODEM_SYNC_BRIDGE_EN_W<MODEM_BUS_SPEC> {
+    pub fn modem_sync_bridge_en(&mut self) -> MODEM_SYNC_BRIDGE_EN_W<'_, MODEM_BUS_SPEC> {
         MODEM_SYNC_BRIDGE_EN_W::new(self, 31)
     }
 }

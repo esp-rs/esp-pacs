@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn hp_modem_backup_icg_func_en(
         &mut self,
-    ) -> HP_MODEM_BACKUP_ICG_FUNC_EN_W<HP_MODEM_BACKUP_CLK_SPEC> {
+    ) -> HP_MODEM_BACKUP_ICG_FUNC_EN_W<'_, HP_MODEM_BACKUP_CLK_SPEC> {
         HP_MODEM_BACKUP_ICG_FUNC_EN_W::new(self, 0)
     }
 }

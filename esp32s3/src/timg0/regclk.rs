@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - Register clock gate signal. 1: The clock for software to read and write registers is always on. 0: The clock for software to read and write registers only exits when the operation happens."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<REGCLK_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, REGCLK_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

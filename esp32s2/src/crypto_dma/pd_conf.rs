@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Force power down signal to RAM. 0: force RAM power up; 1: only when CRYPTO_DMA_RAM_FORCE_PU is 0, power down RAM."]
     #[inline(always)]
-    pub fn ram_force_pd(&mut self) -> RAM_FORCE_PD_W<PD_CONF_SPEC> {
+    pub fn ram_force_pd(&mut self) -> RAM_FORCE_PD_W<'_, PD_CONF_SPEC> {
         RAM_FORCE_PD_W::new(self, 4)
     }
     #[doc = "Bit 5 - Force power up signal to RAM. 0: only when CRYPTO_DMA_RAM_FORCE_PD is 1, power down RAM; 1: force RAM power up."]
     #[inline(always)]
-    pub fn ram_force_pu(&mut self) -> RAM_FORCE_PU_W<PD_CONF_SPEC> {
+    pub fn ram_force_pu(&mut self) -> RAM_FORCE_PU_W<'_, PD_CONF_SPEC> {
         RAM_FORCE_PU_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Force to open the clock and bypass the gate-clock when accessing the RAM in DMA. 0: A gate-clock will be used when accessing the RAM in DMA."]
     #[inline(always)]
-    pub fn ram_clk_fo(&mut self) -> RAM_CLK_FO_W<PD_CONF_SPEC> {
+    pub fn ram_clk_fo(&mut self) -> RAM_CLK_FO_W<'_, PD_CONF_SPEC> {
         RAM_CLK_FO_W::new(self, 6)
     }
 }

@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The status of flash suspend, only used in SPI1."]
     #[inline(always)]
-    pub fn flash_sus(&mut self) -> FLASH_SUS_W<SUS_STATUS_SPEC> {
+    pub fn flash_sus(&mut self) -> FLASH_SUS_W<'_, SUS_STATUS_SPEC> {
         FLASH_SUS_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[15:0\\] to check SUS/SUS1/SUS2 bit. 0: SPI1 sends out SPI_MEM_WAIT_PESR_COMMAND\\[7:0\\] to check SUS/SUS1/SUS2 bit."]
     #[inline(always)]
-    pub fn wait_pesr_cmd_2b(&mut self) -> WAIT_PESR_CMD_2B_W<SUS_STATUS_SPEC> {
+    pub fn wait_pesr_cmd_2b(&mut self) -> WAIT_PESR_CMD_2B_W<'_, SUS_STATUS_SPEC> {
         WAIT_PESR_CMD_2B_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after HPM command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after HPM command is sent."]
     #[inline(always)]
-    pub fn flash_hpm_dly_128(&mut self) -> FLASH_HPM_DLY_128_W<SUS_STATUS_SPEC> {
+    pub fn flash_hpm_dly_128(&mut self) -> FLASH_HPM_DLY_128_W<'_, SUS_STATUS_SPEC> {
         FLASH_HPM_DLY_128_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after RES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after RES command is sent."]
     #[inline(always)]
-    pub fn flash_res_dly_128(&mut self) -> FLASH_RES_DLY_128_W<SUS_STATUS_SPEC> {
+    pub fn flash_res_dly_128(&mut self) -> FLASH_RES_DLY_128_W<'_, SUS_STATUS_SPEC> {
         FLASH_RES_DLY_128_W::new(self, 3)
     }
     #[doc = "Bit 4 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after DP command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after DP command is sent."]
     #[inline(always)]
-    pub fn flash_dp_dly_128(&mut self) -> FLASH_DP_DLY_128_W<SUS_STATUS_SPEC> {
+    pub fn flash_dp_dly_128(&mut self) -> FLASH_DP_DLY_128_W<'_, SUS_STATUS_SPEC> {
         FLASH_DP_DLY_128_W::new(self, 4)
     }
     #[doc = "Bit 5 - Valid when SPI_MEM_FLASH_PER_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PER command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PER command is sent."]
     #[inline(always)]
-    pub fn flash_per_dly_128(&mut self) -> FLASH_PER_DLY_128_W<SUS_STATUS_SPEC> {
+    pub fn flash_per_dly_128(&mut self) -> FLASH_PER_DLY_128_W<'_, SUS_STATUS_SPEC> {
         FLASH_PER_DLY_128_W::new(self, 5)
     }
     #[doc = "Bit 6 - Valid when SPI_MEM_FLASH_PES_WAIT_EN is 1. 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 128) SPI_CLK cycles after PES command is sent. 0: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4) SPI_CLK cycles after PES command is sent."]
     #[inline(always)]
-    pub fn flash_pes_dly_128(&mut self) -> FLASH_PES_DLY_128_W<SUS_STATUS_SPEC> {
+    pub fn flash_pes_dly_128(&mut self) -> FLASH_PES_DLY_128_W<'_, SUS_STATUS_SPEC> {
         FLASH_PES_DLY_128_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: Enable SPI0 lock SPI0/1 arbiter option. 0: Disable it."]
     #[inline(always)]
-    pub fn spi0_lock_en(&mut self) -> SPI0_LOCK_EN_W<SUS_STATUS_SPEC> {
+    pub fn spi0_lock_en(&mut self) -> SPI0_LOCK_EN_W<'_, SUS_STATUS_SPEC> {
         SPI0_LOCK_EN_W::new(self, 7)
     }
     #[doc = "Bit 15 - 1: The bit length of Program/Erase Suspend/Resume command is 16. 0: The bit length of Program/Erase Suspend/Resume command is 8."]
     #[inline(always)]
-    pub fn flash_pesr_cmd_2b(&mut self) -> FLASH_PESR_CMD_2B_W<SUS_STATUS_SPEC> {
+    pub fn flash_pesr_cmd_2b(&mut self) -> FLASH_PESR_CMD_2B_W<'_, SUS_STATUS_SPEC> {
         FLASH_PESR_CMD_2B_W::new(self, 15)
     }
     #[doc = "Bits 16:31 - Program/Erase resume command."]
     #[inline(always)]
-    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<SUS_STATUS_SPEC> {
+    pub fn flash_per_command(&mut self) -> FLASH_PER_COMMAND_W<'_, SUS_STATUS_SPEC> {
         FLASH_PER_COMMAND_W::new(self, 16)
     }
 }

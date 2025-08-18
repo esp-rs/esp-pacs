@@ -194,67 +194,67 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to reset crypto DMA in FSM and RX FIFO pointer."]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<CONF_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, CONF_SPEC> {
         IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - This bit is used to reset crypto DMA out FSM and TX FIFO pointer."]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<CONF_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, CONF_SPEC> {
         OUT_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - This bit is used to reset crypto DMA AHB master FIFO pointer."]
     #[inline(always)]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<CONF_SPEC> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<'_, CONF_SPEC> {
         AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reset crypto DMA AHB master."]
     #[inline(always)]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<CONF_SPEC> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<'_, CONF_SPEC> {
         AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Reserved"]
     #[inline(always)]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<CONF_SPEC> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<'_, CONF_SPEC> {
         IN_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<CONF_SPEC> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<'_, CONF_SPEC> {
         OUT_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable automatic outlink-writeback when all the data in TX Buffer has been transmitted."]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<CONF_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved"]
     #[inline(always)]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<CONF_SPEC> {
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<'_, CONF_SPEC> {
         OUT_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - Out EOF flag generation mode of TX FIFO. 1: EOF flag of TX is generated when the last data with EOF would be transmitted has been popped from FIFO of Crypto DMA; 0: EOF flag is generated when the last data with EOF would be transmitted has been pushed into FIFO of Crypto DMA."]
     #[inline(always)]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<CONF_SPEC> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<'_, CONF_SPEC> {
         OUT_EOF_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to enable INCR burst transfer when TX FIFO reads descriptor from internal RAM."]
     #[inline(always)]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<CONF_SPEC> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, CONF_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable INCR burst transfer when RX FIFO reads descriptor from internal RAM."]
     #[inline(always)]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<CONF_SPEC> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, CONF_SPEC> {
         INDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to enable INCR burst transfer when TX FIFO reads data from internal RAM."]
     #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<CONF_SPEC> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, CONF_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to enable automatic transmitting data from memory to memory via DMA."]
     #[inline(always)]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<CONF_SPEC> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<'_, CONF_SPEC> {
         MEM_TRANS_EN_W::new(self, 12)
     }
 }

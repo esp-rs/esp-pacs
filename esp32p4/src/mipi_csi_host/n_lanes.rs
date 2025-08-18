@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - NA"]
     #[inline(always)]
-    pub fn n_lanes(&mut self) -> N_LANES_W<N_LANES_SPEC> {
+    pub fn n_lanes(&mut self) -> N_LANES_W<'_, N_LANES_SPEC> {
         N_LANES_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_lp_regulator_drv_b(
         &mut self,
-    ) -> HP_SLEEP_LP_REGULATOR_DRV_B_W<HP_SLEEP_LP_REGULATOR1_SPEC> {
+    ) -> HP_SLEEP_LP_REGULATOR_DRV_B_W<'_, HP_SLEEP_LP_REGULATOR1_SPEC> {
         HP_SLEEP_LP_REGULATOR_DRV_B_W::new(self, 26)
     }
 }

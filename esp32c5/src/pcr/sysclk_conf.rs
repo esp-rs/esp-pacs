@@ -58,12 +58,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:17 - Configures to select the clock source of HP_ROOT_CLK.\\\\ 0 (default): XTAL_CLK\\\\ 1: RC_FAST_CLK\\\\ 2: PLL_F160M_CLK\\\\ 2: PLL_F240M_CLK\\\\"]
     #[inline(always)]
-    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<SYSCLK_CONF_SPEC> {
+    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<'_, SYSCLK_CONF_SPEC> {
         SOC_CLK_SEL_W::new(self, 16)
     }
     #[doc = "Bit 31 - This field indicates if cpu debug mode clock is enable. 0: disable, 1: enable(default)."]
     #[inline(always)]
-    pub fn cpu_dbgmd_clk_en(&mut self) -> CPU_DBGMD_CLK_EN_W<SYSCLK_CONF_SPEC> {
+    pub fn cpu_dbgmd_clk_en(&mut self) -> CPU_DBGMD_CLK_EN_W<'_, SYSCLK_CONF_SPEC> {
         CPU_DBGMD_CLK_EN_W::new(self, 31)
     }
 }

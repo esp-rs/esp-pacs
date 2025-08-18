@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - Need add desc"]
     #[inline(always)]
-    pub fn dig_reg_cal_en(&mut self) -> DIG_REG_CAL_EN_W<RTC_CNTL_SPEC> {
+    pub fn dig_reg_cal_en(&mut self) -> DIG_REG_CAL_EN_W<'_, RTC_CNTL_SPEC> {
         DIG_REG_CAL_EN_W::new(self, 7)
     }
     #[doc = "Bits 14:21 - SCK_DCAP"]
     #[inline(always)]
-    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<RTC_CNTL_SPEC> {
+    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<'_, RTC_CNTL_SPEC> {
         SCK_DCAP_W::new(self, 14)
     }
     #[doc = "Bit 30 - RTC_REG force power down (for RTC_REG power down means decrease the voltage to 0.8v or lower )"]
     #[inline(always)]
-    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<RTC_CNTL_SPEC> {
+    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<'_, RTC_CNTL_SPEC> {
         REGULATOR_FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<RTC_CNTL_SPEC> {
+    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<'_, RTC_CNTL_SPEC> {
         REGULATOR_FORCE_PU_W::new(self, 31)
     }
 }

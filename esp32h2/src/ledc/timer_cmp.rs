@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register stores ledc timer%s compare value."]
     #[inline(always)]
-    pub fn timer_cmp(&mut self) -> TIMER_CMP_W<TIMER_CMP_SPEC> {
+    pub fn timer_cmp(&mut self) -> TIMER_CMP_W<'_, TIMER_CMP_SPEC> {
         TIMER_CMP_W::new(self, 0)
     }
 }

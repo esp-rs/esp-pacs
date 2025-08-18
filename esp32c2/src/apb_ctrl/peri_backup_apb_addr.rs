@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - reg_backup_apb_start_addr"]
     #[inline(always)]
-    pub fn backup_apb_start_addr(&mut self) -> BACKUP_APB_START_ADDR_W<PERI_BACKUP_APB_ADDR_SPEC> {
+    pub fn backup_apb_start_addr(
+        &mut self,
+    ) -> BACKUP_APB_START_ADDR_W<'_, PERI_BACKUP_APB_ADDR_SPEC> {
         BACKUP_APB_START_ADDR_W::new(self, 0)
     }
 }

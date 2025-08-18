@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Controls the division factor of the rising clock of the programming voltage."]
     #[inline(always)]
-    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<DAC_CONF_SPEC> {
+    pub fn dac_clk_div(&mut self) -> DAC_CLK_DIV_W<'_, DAC_CONF_SPEC> {
         DAC_CLK_DIV_W::new(self, 0)
     }
     #[doc = "Bit 8 - Don't care."]
     #[inline(always)]
-    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<DAC_CONF_SPEC> {
+    pub fn dac_clk_pad_sel(&mut self) -> DAC_CLK_PAD_SEL_W<'_, DAC_CONF_SPEC> {
         DAC_CLK_PAD_SEL_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - Controls the rising period of the programming voltage."]
     #[inline(always)]
-    pub fn dac_num(&mut self) -> DAC_NUM_W<DAC_CONF_SPEC> {
+    pub fn dac_num(&mut self) -> DAC_NUM_W<'_, DAC_CONF_SPEC> {
         DAC_NUM_W::new(self, 9)
     }
     #[doc = "Bit 17 - Reduces the power supply of the programming voltage."]
     #[inline(always)]
-    pub fn oe_clr(&mut self) -> OE_CLR_W<DAC_CONF_SPEC> {
+    pub fn oe_clr(&mut self) -> OE_CLR_W<'_, DAC_CONF_SPEC> {
         OE_CLR_W::new(self, 17)
     }
 }

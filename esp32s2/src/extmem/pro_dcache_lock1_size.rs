@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the second length of data locking, which is combined with PRO_DCACHE_LOCK1_ADDR_REG"]
     #[inline(always)]
-    pub fn pro_dcache_lock1_size(&mut self) -> PRO_DCACHE_LOCK1_SIZE_W<PRO_DCACHE_LOCK1_SIZE_SPEC> {
+    pub fn pro_dcache_lock1_size(
+        &mut self,
+    ) -> PRO_DCACHE_LOCK1_SIZE_W<'_, PRO_DCACHE_LOCK1_SIZE_SPEC> {
         PRO_DCACHE_LOCK1_SIZE_W::new(self, 0)
     }
 }

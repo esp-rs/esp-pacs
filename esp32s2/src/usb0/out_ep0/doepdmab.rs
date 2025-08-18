@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn dmabufferaddr(&mut self) -> DMABUFFERADDR_W<DOEPDMAB_SPEC> {
+    pub fn dmabufferaddr(&mut self) -> DMABUFFERADDR_W<'_, DOEPDMAB_SPEC> {
         DMABUFFERADDR_W::new(self, 0)
     }
 }

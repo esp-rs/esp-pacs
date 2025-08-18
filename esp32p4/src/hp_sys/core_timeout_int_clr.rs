@@ -23,42 +23,42 @@ impl W {
     #[inline(always)]
     pub fn core0_ahb_timeout_int_clr(
         &mut self,
-    ) -> CORE0_AHB_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE0_AHB_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE0_AHB_TIMEOUT_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to clear hp_core1_ahb_timeout int"]
     #[inline(always)]
     pub fn core1_ahb_timeout_int_clr(
         &mut self,
-    ) -> CORE1_AHB_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE1_AHB_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE1_AHB_TIMEOUT_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear hp_core0_ibus_timeout int"]
     #[inline(always)]
     pub fn core0_ibus_timeout_int_clr(
         &mut self,
-    ) -> CORE0_IBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE0_IBUS_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE0_IBUS_TIMEOUT_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to clear hp_core1_ibus_timeout int"]
     #[inline(always)]
     pub fn core1_ibus_timeout_int_clr(
         &mut self,
-    ) -> CORE1_IBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE1_IBUS_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE1_IBUS_TIMEOUT_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to clear hp_core0_dbus_timeout int"]
     #[inline(always)]
     pub fn core0_dbus_timeout_int_clr(
         &mut self,
-    ) -> CORE0_DBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE0_DBUS_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE0_DBUS_TIMEOUT_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to clear hp_core1_dbus_timeout int"]
     #[inline(always)]
     pub fn core1_dbus_timeout_int_clr(
         &mut self,
-    ) -> CORE1_DBUS_TIMEOUT_INT_CLR_W<CORE_TIMEOUT_INT_CLR_SPEC> {
+    ) -> CORE1_DBUS_TIMEOUT_INT_CLR_W<'_, CORE_TIMEOUT_INT_CLR_SPEC> {
         CORE1_DBUS_TIMEOUT_INT_CLR_W::new(self, 5)
     }
 }

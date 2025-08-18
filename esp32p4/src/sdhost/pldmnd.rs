@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<PLDMND_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Poll Demand. If the OWNER bit of a descriptor is not set, the FSM goes to the Suspend state. The host needs to write any value into this register for the IDMAC FSM to resume normal descriptor fetch operation. This is a write only ."]
     #[inline(always)]
-    pub fn pd(&mut self) -> PD_W<PLDMND_SPEC> {
+    pub fn pd(&mut self) -> PD_W<'_, PLDMND_SPEC> {
         PD_W::new(self, 0)
     }
 }

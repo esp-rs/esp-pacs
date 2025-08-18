@@ -52,19 +52,19 @@ impl W {
     #[inline(always)]
     pub fn gdma_ahb_task_out_start_ch1_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_OUT_START_CH1_ST_W<TASK_ST4_SPEC> {
+    ) -> GDMA_AHB_TASK_OUT_START_CH1_ST_W<'_, TASK_ST4_SPEC> {
         GDMA_AHB_TASK_OUT_START_CH1_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents GDMA_AHB_task_out_start_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_ahb_task_out_start_ch2_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_OUT_START_CH2_ST_W<TASK_ST4_SPEC> {
+    ) -> GDMA_AHB_TASK_OUT_START_CH2_ST_W<'_, TASK_ST4_SPEC> {
         GDMA_AHB_TASK_OUT_START_CH2_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents PMU_task_sleep_req trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn pmu_task_sleep_req_st(&mut self) -> PMU_TASK_SLEEP_REQ_ST_W<TASK_ST4_SPEC> {
+    pub fn pmu_task_sleep_req_st(&mut self) -> PMU_TASK_SLEEP_REQ_ST_W<'_, TASK_ST4_SPEC> {
         PMU_TASK_SLEEP_REQ_ST_W::new(self, 2)
     }
 }

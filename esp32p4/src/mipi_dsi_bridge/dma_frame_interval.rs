@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - this field configures the max frame_slot_cnt"]
     #[inline(always)]
-    pub fn dma_frame_slot(&mut self) -> DMA_FRAME_SLOT_W<DMA_FRAME_INTERVAL_SPEC> {
+    pub fn dma_frame_slot(&mut self) -> DMA_FRAME_SLOT_W<'_, DMA_FRAME_INTERVAL_SPEC> {
         DMA_FRAME_SLOT_W::new(self, 0)
     }
     #[doc = "Bits 10:27 - this field configures the max frame_interval_cnt, frame_interval_cnt increased by 1 when frame_slot_cnt if full"]
     #[inline(always)]
-    pub fn dma_frame_interval(&mut self) -> DMA_FRAME_INTERVAL_W<DMA_FRAME_INTERVAL_SPEC> {
+    pub fn dma_frame_interval(&mut self) -> DMA_FRAME_INTERVAL_W<'_, DMA_FRAME_INTERVAL_SPEC> {
         DMA_FRAME_INTERVAL_W::new(self, 10)
     }
     #[doc = "Bit 28 - this bit configures enable multi-blk transfer, 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dma_multiblk_en(&mut self) -> DMA_MULTIBLK_EN_W<DMA_FRAME_INTERVAL_SPEC> {
+    pub fn dma_multiblk_en(&mut self) -> DMA_MULTIBLK_EN_W<'_, DMA_FRAME_INTERVAL_SPEC> {
         DMA_MULTIBLK_EN_W::new(self, 28)
     }
     #[doc = "Bit 29 - this bit configures enable interval between frame transfer, 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<DMA_FRAME_INTERVAL_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, DMA_FRAME_INTERVAL_SPEC> {
         EN_W::new(self, 29)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - NA"]
     #[inline(always)]
-    pub fn max_rd_time(&mut self) -> MAX_RD_TIME_W<PHY_TMR_RD_CFG_SPEC> {
+    pub fn max_rd_time(&mut self) -> MAX_RD_TIME_W<'_, PHY_TMR_RD_CFG_SPEC> {
         MAX_RD_TIME_W::new(self, 0)
     }
 }

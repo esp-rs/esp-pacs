@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 14 - need_des"]
     #[inline(always)]
-    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_status_clr(&mut self) -> EXT_WAKEUP_STATUS_CLR_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_STATUS_CLR_W::new(self, 14)
     }
     #[doc = "Bits 15:22 - need_des"]
     #[inline(always)]
-    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_sel(&mut self) -> EXT_WAKEUP_SEL_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_SEL_W::new(self, 15)
     }
     #[doc = "Bits 23:30 - need_des"]
     #[inline(always)]
-    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_lv(&mut self) -> EXT_WAKEUP_LV_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_LV_W::new(self, 23)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<EXT_WAKEUP_CNTL_SPEC> {
+    pub fn ext_wakeup_filter(&mut self) -> EXT_WAKEUP_FILTER_W<'_, EXT_WAKEUP_CNTL_SPEC> {
         EXT_WAKEUP_FILTER_W::new(self, 31)
     }
 }

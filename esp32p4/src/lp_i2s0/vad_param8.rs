@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Noise_std boundary low when updating threshold."]
     #[inline(always)]
-    pub fn param_thres_upd_bdl(&mut self) -> PARAM_THRES_UPD_BDL_W<VAD_PARAM8_SPEC> {
+    pub fn param_thres_upd_bdl(&mut self) -> PARAM_THRES_UPD_BDL_W<'_, VAD_PARAM8_SPEC> {
         PARAM_THRES_UPD_BDL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Noise_std boundary high when updating threshold."]
     #[inline(always)]
-    pub fn param_thres_upd_bdh(&mut self) -> PARAM_THRES_UPD_BDH_W<VAD_PARAM8_SPEC> {
+    pub fn param_thres_upd_bdh(&mut self) -> PARAM_THRES_UPD_BDH_W<'_, VAD_PARAM8_SPEC> {
         PARAM_THRES_UPD_BDH_W::new(self, 8)
     }
     #[doc = "Bits 16:31 - VAD parameter"]
     #[inline(always)]
-    pub fn param_feature_burst(&mut self) -> PARAM_FEATURE_BURST_W<VAD_PARAM8_SPEC> {
+    pub fn param_feature_burst(&mut self) -> PARAM_FEATURE_BURST_W<'_, VAD_PARAM8_SPEC> {
         PARAM_FEATURE_BURST_W::new(self, 16)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - disable lp cpu dbg bus 1: disable 0: enable"]
     #[inline(always)]
-    pub fn lpcore_dbgm_unavaliable(&mut self) -> LPCORE_DBGM_UNAVALIABLE_W<CPU_SPEC> {
+    pub fn lpcore_dbgm_unavaliable(&mut self) -> LPCORE_DBGM_UNAVALIABLE_W<'_, CPU_SPEC> {
         LPCORE_DBGM_UNAVALIABLE_W::new(self, 31)
     }
 }

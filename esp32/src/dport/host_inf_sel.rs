@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W<HOST_INF_SEL_SPEC> {
+    pub fn peri_io_swap(&mut self) -> PERI_IO_SWAP_W<'_, HOST_INF_SEL_SPEC> {
         PERI_IO_SWAP_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn link_device_sel(&mut self) -> LINK_DEVICE_SEL_W<HOST_INF_SEL_SPEC> {
+    pub fn link_device_sel(&mut self) -> LINK_DEVICE_SEL_W<'_, HOST_INF_SEL_SPEC> {
         LINK_DEVICE_SEL_W::new(self, 8)
     }
 }

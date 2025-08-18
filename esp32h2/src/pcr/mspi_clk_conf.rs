@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Set as one within (0,1,2) to generate div1(default)/div2/div4 of low-speed clock-source to drive clk_mspi_fast. Only avaiable whe the clck-source is a low-speed clock-source such as XTAL/FOSC."]
     #[inline(always)]
-    pub fn mspi_fast_div_num(&mut self) -> MSPI_FAST_DIV_NUM_W<MSPI_CLK_CONF_SPEC> {
+    pub fn mspi_fast_div_num(&mut self) -> MSPI_FAST_DIV_NUM_W<'_, MSPI_CLK_CONF_SPEC> {
         MSPI_FAST_DIV_NUM_W::new(self, 0)
     }
 }

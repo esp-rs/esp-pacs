@@ -140,57 +140,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2"]
     #[inline(always)]
-    pub fn toutcal(&mut self) -> TOUTCAL_W<GUSBCFG_SPEC> {
+    pub fn toutcal(&mut self) -> TOUTCAL_W<'_, GUSBCFG_SPEC> {
         TOUTCAL_W::new(self, 0)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn phyif(&mut self) -> PHYIF_W<GUSBCFG_SPEC> {
+    pub fn phyif(&mut self) -> PHYIF_W<'_, GUSBCFG_SPEC> {
         PHYIF_W::new(self, 3)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn fsintf(&mut self) -> FSINTF_W<GUSBCFG_SPEC> {
+    pub fn fsintf(&mut self) -> FSINTF_W<'_, GUSBCFG_SPEC> {
         FSINTF_W::new(self, 5)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn srpcap(&mut self) -> SRPCAP_W<GUSBCFG_SPEC> {
+    pub fn srpcap(&mut self) -> SRPCAP_W<'_, GUSBCFG_SPEC> {
         SRPCAP_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn hnpcap(&mut self) -> HNPCAP_W<GUSBCFG_SPEC> {
+    pub fn hnpcap(&mut self) -> HNPCAP_W<'_, GUSBCFG_SPEC> {
         HNPCAP_W::new(self, 9)
     }
     #[doc = "Bits 10:13"]
     #[inline(always)]
-    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<GUSBCFG_SPEC> {
+    pub fn usbtrdtim(&mut self) -> USBTRDTIM_W<'_, GUSBCFG_SPEC> {
         USBTRDTIM_W::new(self, 10)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
-    pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<GUSBCFG_SPEC> {
+    pub fn termseldlpulse(&mut self) -> TERMSELDLPULSE_W<'_, GUSBCFG_SPEC> {
         TERMSELDLPULSE_W::new(self, 22)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
-    pub fn txenddelay(&mut self) -> TXENDDELAY_W<GUSBCFG_SPEC> {
+    pub fn txenddelay(&mut self) -> TXENDDELAY_W<'_, GUSBCFG_SPEC> {
         TXENDDELAY_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<GUSBCFG_SPEC> {
+    pub fn forcehstmode(&mut self) -> FORCEHSTMODE_W<'_, GUSBCFG_SPEC> {
         FORCEHSTMODE_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<GUSBCFG_SPEC> {
+    pub fn forcedevmode(&mut self) -> FORCEDEVMODE_W<'_, GUSBCFG_SPEC> {
         FORCEDEVMODE_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<GUSBCFG_SPEC> {
+    pub fn corrupttxpkt(&mut self) -> CORRUPTTXPKT_W<'_, GUSBCFG_SPEC> {
         CORRUPTTXPKT_W::new(self, 31)
     }
 }

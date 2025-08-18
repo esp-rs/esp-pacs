@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn tear_fx_en(&mut self) -> TEAR_FX_EN_W<CMD_MODE_CFG_SPEC> {
+    pub fn tear_fx_en(&mut self) -> TEAR_FX_EN_W<'_, CMD_MODE_CFG_SPEC> {
         TEAR_FX_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn ack_rqst_en(&mut self) -> ACK_RQST_EN_W<CMD_MODE_CFG_SPEC> {
+    pub fn ack_rqst_en(&mut self) -> ACK_RQST_EN_W<'_, CMD_MODE_CFG_SPEC> {
         ACK_RQST_EN_W::new(self, 1)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn gen_sw_0p_tx(&mut self) -> GEN_SW_0P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sw_0p_tx(&mut self) -> GEN_SW_0P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SW_0P_TX_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    pub fn gen_sw_1p_tx(&mut self) -> GEN_SW_1P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sw_1p_tx(&mut self) -> GEN_SW_1P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SW_1P_TX_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    pub fn gen_sw_2p_tx(&mut self) -> GEN_SW_2P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sw_2p_tx(&mut self) -> GEN_SW_2P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SW_2P_TX_W::new(self, 10)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    pub fn gen_sr_0p_tx(&mut self) -> GEN_SR_0P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sr_0p_tx(&mut self) -> GEN_SR_0P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SR_0P_TX_W::new(self, 11)
     }
     #[doc = "Bit 12 - NA"]
     #[inline(always)]
-    pub fn gen_sr_1p_tx(&mut self) -> GEN_SR_1P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sr_1p_tx(&mut self) -> GEN_SR_1P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SR_1P_TX_W::new(self, 12)
     }
     #[doc = "Bit 13 - NA"]
     #[inline(always)]
-    pub fn gen_sr_2p_tx(&mut self) -> GEN_SR_2P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_sr_2p_tx(&mut self) -> GEN_SR_2P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_SR_2P_TX_W::new(self, 13)
     }
     #[doc = "Bit 14 - NA"]
     #[inline(always)]
-    pub fn gen_lw_tx(&mut self) -> GEN_LW_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn gen_lw_tx(&mut self) -> GEN_LW_TX_W<'_, CMD_MODE_CFG_SPEC> {
         GEN_LW_TX_W::new(self, 14)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn dcs_sw_0p_tx(&mut self) -> DCS_SW_0P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn dcs_sw_0p_tx(&mut self) -> DCS_SW_0P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         DCS_SW_0P_TX_W::new(self, 16)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    pub fn dcs_sw_1p_tx(&mut self) -> DCS_SW_1P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn dcs_sw_1p_tx(&mut self) -> DCS_SW_1P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         DCS_SW_1P_TX_W::new(self, 17)
     }
     #[doc = "Bit 18 - NA"]
     #[inline(always)]
-    pub fn dcs_sr_0p_tx(&mut self) -> DCS_SR_0P_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn dcs_sr_0p_tx(&mut self) -> DCS_SR_0P_TX_W<'_, CMD_MODE_CFG_SPEC> {
         DCS_SR_0P_TX_W::new(self, 18)
     }
     #[doc = "Bit 19 - NA"]
     #[inline(always)]
-    pub fn dcs_lw_tx(&mut self) -> DCS_LW_TX_W<CMD_MODE_CFG_SPEC> {
+    pub fn dcs_lw_tx(&mut self) -> DCS_LW_TX_W<'_, CMD_MODE_CFG_SPEC> {
         DCS_LW_TX_W::new(self, 19)
     }
     #[doc = "Bit 24 - NA"]
     #[inline(always)]
-    pub fn max_rd_pkt_size(&mut self) -> MAX_RD_PKT_SIZE_W<CMD_MODE_CFG_SPEC> {
+    pub fn max_rd_pkt_size(&mut self) -> MAX_RD_PKT_SIZE_W<'_, CMD_MODE_CFG_SPEC> {
         MAX_RD_PKT_SIZE_W::new(self, 24)
     }
 }

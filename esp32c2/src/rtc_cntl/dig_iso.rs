@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - Need add desc"]
     #[inline(always)]
-    pub fn force_off(&mut self) -> FORCE_OFF_W<DIG_ISO_SPEC> {
+    pub fn force_off(&mut self) -> FORCE_OFF_W<'_, DIG_ISO_SPEC> {
         FORCE_OFF_W::new(self, 7)
     }
     #[doc = "Bit 8 - Need add desc"]
     #[inline(always)]
-    pub fn force_on(&mut self) -> FORCE_ON_W<DIG_ISO_SPEC> {
+    pub fn force_on(&mut self) -> FORCE_ON_W<'_, DIG_ISO_SPEC> {
         FORCE_ON_W::new(self, 8)
     }
     #[doc = "Bit 9 - read only register to indicate digital pad auto-hold status"]
     #[inline(always)]
-    pub fn dg_pad_autohold(&mut self) -> DG_PAD_AUTOHOLD_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_autohold(&mut self) -> DG_PAD_AUTOHOLD_W<'_, DIG_ISO_SPEC> {
         DG_PAD_AUTOHOLD_W::new(self, 9)
     }
     #[doc = "Bit 10 - wtite only register to clear digital pad auto-hold"]
     #[inline(always)]
-    pub fn clr_dg_pad_autohold(&mut self) -> CLR_DG_PAD_AUTOHOLD_W<DIG_ISO_SPEC> {
+    pub fn clr_dg_pad_autohold(&mut self) -> CLR_DG_PAD_AUTOHOLD_W<'_, DIG_ISO_SPEC> {
         CLR_DG_PAD_AUTOHOLD_W::new(self, 10)
     }
     #[doc = "Bit 11 - digital pad enable auto-hold"]
     #[inline(always)]
-    pub fn dg_pad_autohold_en(&mut self) -> DG_PAD_AUTOHOLD_EN_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_autohold_en(&mut self) -> DG_PAD_AUTOHOLD_EN_W<'_, DIG_ISO_SPEC> {
         DG_PAD_AUTOHOLD_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - digital pad force no ISO"]
     #[inline(always)]
-    pub fn dg_pad_force_noiso(&mut self) -> DG_PAD_FORCE_NOISO_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_force_noiso(&mut self) -> DG_PAD_FORCE_NOISO_W<'_, DIG_ISO_SPEC> {
         DG_PAD_FORCE_NOISO_W::new(self, 12)
     }
     #[doc = "Bit 13 - digital pad force ISO"]
     #[inline(always)]
-    pub fn dg_pad_force_iso(&mut self) -> DG_PAD_FORCE_ISO_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_force_iso(&mut self) -> DG_PAD_FORCE_ISO_W<'_, DIG_ISO_SPEC> {
         DG_PAD_FORCE_ISO_W::new(self, 13)
     }
     #[doc = "Bit 14 - digital pad force un-hold"]
     #[inline(always)]
-    pub fn dg_pad_force_unhold(&mut self) -> DG_PAD_FORCE_UNHOLD_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_force_unhold(&mut self) -> DG_PAD_FORCE_UNHOLD_W<'_, DIG_ISO_SPEC> {
         DG_PAD_FORCE_UNHOLD_W::new(self, 14)
     }
     #[doc = "Bit 15 - digital pad force hold"]
     #[inline(always)]
-    pub fn dg_pad_force_hold(&mut self) -> DG_PAD_FORCE_HOLD_W<DIG_ISO_SPEC> {
+    pub fn dg_pad_force_hold(&mut self) -> DG_PAD_FORCE_HOLD_W<'_, DIG_ISO_SPEC> {
         DG_PAD_FORCE_HOLD_W::new(self, 15)
     }
     #[doc = "Bit 30 - digital core force ISO"]
     #[inline(always)]
-    pub fn dg_wrap_force_iso(&mut self) -> DG_WRAP_FORCE_ISO_W<DIG_ISO_SPEC> {
+    pub fn dg_wrap_force_iso(&mut self) -> DG_WRAP_FORCE_ISO_W<'_, DIG_ISO_SPEC> {
         DG_WRAP_FORCE_ISO_W::new(self, 30)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn dg_wrap_force_noiso(&mut self) -> DG_WRAP_FORCE_NOISO_W<DIG_ISO_SPEC> {
+    pub fn dg_wrap_force_noiso(&mut self) -> DG_WRAP_FORCE_NOISO_W<'_, DIG_ISO_SPEC> {
         DG_WRAP_FORCE_NOISO_W::new(self, 31)
     }
 }

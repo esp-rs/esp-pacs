@@ -164,77 +164,77 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset in-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<LC_CONF_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, LC_CONF_SPEC> {
         IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset out-DMA FSM. Set this bit before the DMA configuration."]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<LC_CONF_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, LC_CONF_SPEC> {
         OUT_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset AHB interface cmdFIFO of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<LC_CONF_SPEC> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<'_, LC_CONF_SPEC> {
         AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset AHB interface of DMA. Set this bit before the DMA configuration."]
     #[inline(always)]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<LC_CONF_SPEC> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<'_, LC_CONF_SPEC> {
         AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to loop test inlink."]
     #[inline(always)]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<LC_CONF_SPEC> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<'_, LC_CONF_SPEC> {
         OUT_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to loop test outlink."]
     #[inline(always)]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<LC_CONF_SPEC> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<'_, LC_CONF_SPEC> {
         IN_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable outlink-written-back automatically when out buffer is transmitted done."]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<LC_CONF_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, LC_CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Reserved."]
     #[inline(always)]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<LC_CONF_SPEC> {
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<'_, LC_CONF_SPEC> {
         OUT_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8 - DMA out EOF flag generation mode. 1: When DMA has popped all data from the FIFO. 0: When AHB has pushed all data to the FIFO."]
     #[inline(always)]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<LC_CONF_SPEC> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<'_, LC_CONF_SPEC> {
         OUT_EOF_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9 - DMA outlink descriptor transfer mode configuration bit. 1: Prepare outlink descriptor with burst mode. 0: Prepare outlink descriptor with byte mode."]
     #[inline(always)]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, LC_CONF_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - DMA inlink descriptor transfer mode configuration bit. 1: Prepare inlink descriptor with burst mode. 0: Prepare inlink descriptor with byte mode."]
     #[inline(always)]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, LC_CONF_SPEC> {
         INDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - Transmitter data transfer mode configuration bit. 1: Prepare out data with burst mode. 0: Prepare out data with byte mode."]
     #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, LC_CONF_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to enable check owner bit by hardware."]
     #[inline(always)]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<LC_CONF_SPEC> {
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<'_, LC_CONF_SPEC> {
         CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bit 13 - Reserved."]
     #[inline(always)]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<LC_CONF_SPEC> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<'_, LC_CONF_SPEC> {
         MEM_TRANS_EN_W::new(self, 13)
     }
     #[doc = "Bits 14:15 - DMA access external memory block size. 0: 16 bytes. 1: 32 bytes. 2: 64 bytes. 3: reserved."]
     #[inline(always)]
-    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<LC_CONF_SPEC> {
+    pub fn ext_mem_bk_size(&mut self) -> EXT_MEM_BK_SIZE_W<'_, LC_CONF_SPEC> {
         EXT_MEM_BK_SIZE_W::new(self, 14)
     }
 }

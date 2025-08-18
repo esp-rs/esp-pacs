@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 9:16 - I2S rx mem will trigger an interrupt when the data in the mem is over(not including equal) reg_rx_mem_threshold"]
     #[inline(always)]
-    pub fn rx_mem_threshold(&mut self) -> RX_MEM_THRESHOLD_W<RX_MEM_CONF_SPEC> {
+    pub fn rx_mem_threshold(&mut self) -> RX_MEM_THRESHOLD_W<'_, RX_MEM_CONF_SPEC> {
         RX_MEM_THRESHOLD_W::new(self, 9)
     }
 }

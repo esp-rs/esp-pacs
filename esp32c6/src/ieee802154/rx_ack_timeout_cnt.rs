@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn rx_ack_timeout_cnt(&mut self) -> RX_ACK_TIMEOUT_CNT_W<RX_ACK_TIMEOUT_CNT_SPEC> {
+    pub fn rx_ack_timeout_cnt(&mut self) -> RX_ACK_TIMEOUT_CNT_W<'_, RX_ACK_TIMEOUT_CNT_SPEC> {
         RX_ACK_TIMEOUT_CNT_W::new(self, 0)
     }
 }

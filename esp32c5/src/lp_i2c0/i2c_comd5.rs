@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - This is the content of command 5. It consists of three parts:op_code is the command, 1: WRITE, 2: STOP, 3: READ, 4: END, 6: RSTART. Byte_num represents the number of bytes that need to be sent or received.ack_check_en, ack_exp and ack are used to control the ACK bit. See I2C cmd structure for moreInformation."]
     #[inline(always)]
-    pub fn i2c_command5(&mut self) -> I2C_COMMAND5_W<I2C_COMD5_SPEC> {
+    pub fn i2c_command5(&mut self) -> I2C_COMMAND5_W<'_, I2C_COMD5_SPEC> {
         I2C_COMMAND5_W::new(self, 0)
     }
     #[doc = "Bit 31 - When command 5 is done in I2C Master mode, this bit changes to high level."]
     #[inline(always)]
-    pub fn i2c_command5_done(&mut self) -> I2C_COMMAND5_DONE_W<I2C_COMD5_SPEC> {
+    pub fn i2c_command5_done(&mut self) -> I2C_COMMAND5_DONE_W<'_, I2C_COMD5_SPEC> {
         I2C_COMMAND5_DONE_W::new(self, 31)
     }
 }

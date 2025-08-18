@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - VAD parameter"]
     #[inline(always)]
-    pub fn param_min_energy(&mut self) -> PARAM_MIN_ENERGY_W<VAD_PARAM0_SPEC> {
+    pub fn param_min_energy(&mut self) -> PARAM_MIN_ENERGY_W<'_, VAD_PARAM0_SPEC> {
         PARAM_MIN_ENERGY_W::new(self, 0)
     }
     #[doc = "Bits 16:24 - VAD parameter"]
     #[inline(always)]
-    pub fn param_init_frame_num(&mut self) -> PARAM_INIT_FRAME_NUM_W<VAD_PARAM0_SPEC> {
+    pub fn param_init_frame_num(&mut self) -> PARAM_INIT_FRAME_NUM_W<'_, VAD_PARAM0_SPEC> {
         PARAM_INIT_FRAME_NUM_W::new(self, 16)
     }
 }

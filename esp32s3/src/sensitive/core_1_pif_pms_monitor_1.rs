@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_clr(
         &mut self,
-    ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_CLR_W<CORE_1_PIF_PMS_MONITOR_1_SPEC> {
+    ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_CLR_W<'_, CORE_1_PIF_PMS_MONITOR_1_SPEC> {
         CORE_1_PIF_PMS_MONITOR_VIOLATE_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to enable interrupt that core1 initiate illegal PIF bus access."]
     #[inline(always)]
     pub fn core_1_pif_pms_monitor_violate_en(
         &mut self,
-    ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_EN_W<CORE_1_PIF_PMS_MONITOR_1_SPEC> {
+    ) -> CORE_1_PIF_PMS_MONITOR_VIOLATE_EN_W<'_, CORE_1_PIF_PMS_MONITOR_1_SPEC> {
         CORE_1_PIF_PMS_MONITOR_VIOLATE_EN_W::new(self, 1)
     }
 }

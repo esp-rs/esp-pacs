@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to stop calibration."]
     #[inline(always)]
-    pub fn dll_cal_stop(&mut self) -> DLL_CAL_STOP_W<DLL_CONF_SPEC> {
+    pub fn dll_cal_stop(&mut self) -> DLL_CAL_STOP_W<'_, DLL_CONF_SPEC> {
         DLL_CAL_STOP_W::new(self, 0)
     }
 }

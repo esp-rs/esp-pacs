@@ -103,37 +103,39 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_force_stall(&mut self) -> LP_CPU_FORCE_STALL_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_force_stall(&mut self) -> LP_CPU_FORCE_STALL_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_FORCE_STALL_W::new(self, 18)
     }
     #[doc = "Bit 19 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_waiti_flag_en(&mut self) -> LP_CPU_SLP_WAITI_FLAG_EN_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_waiti_flag_en(&mut self) -> LP_CPU_SLP_WAITI_FLAG_EN_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_WAITI_FLAG_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_stall_flag_en(&mut self) -> LP_CPU_SLP_STALL_FLAG_EN_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_stall_flag_en(&mut self) -> LP_CPU_SLP_STALL_FLAG_EN_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_STALL_FLAG_EN_W::new(self, 20)
     }
     #[doc = "Bits 21:28 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_stall_wait(&mut self) -> LP_CPU_SLP_STALL_WAIT_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_stall_wait(&mut self) -> LP_CPU_SLP_STALL_WAIT_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_STALL_WAIT_W::new(self, 21)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_stall_en(&mut self) -> LP_CPU_SLP_STALL_EN_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_stall_en(&mut self) -> LP_CPU_SLP_STALL_EN_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_STALL_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_reset_en(&mut self) -> LP_CPU_SLP_RESET_EN_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_reset_en(&mut self) -> LP_CPU_SLP_RESET_EN_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_RESET_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_slp_bypass_intr_en(&mut self) -> LP_CPU_SLP_BYPASS_INTR_EN_W<LP_CPU_PWR0_SPEC> {
+    pub fn lp_cpu_slp_bypass_intr_en(
+        &mut self,
+    ) -> LP_CPU_SLP_BYPASS_INTR_EN_W<'_, LP_CPU_PWR0_SPEC> {
         LP_CPU_SLP_BYPASS_INTR_EN_W::new(self, 31)
     }
 }

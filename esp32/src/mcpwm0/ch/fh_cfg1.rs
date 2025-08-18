@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn clr_ost(&mut self) -> CLR_OST_W<FH_CFG1_SPEC> {
+    pub fn clr_ost(&mut self) -> CLR_OST_W<'_, FH_CFG1_SPEC> {
         CLR_OST_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    pub fn cbcpulse(&mut self) -> CBCPULSE_W<FH_CFG1_SPEC> {
+    pub fn cbcpulse(&mut self) -> CBCPULSE_W<'_, FH_CFG1_SPEC> {
         CBCPULSE_W::new(self, 1)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn force_cbc(&mut self) -> FORCE_CBC_W<FH_CFG1_SPEC> {
+    pub fn force_cbc(&mut self) -> FORCE_CBC_W<'_, FH_CFG1_SPEC> {
         FORCE_CBC_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn force_ost(&mut self) -> FORCE_OST_W<FH_CFG1_SPEC> {
+    pub fn force_ost(&mut self) -> FORCE_OST_W<'_, FH_CFG1_SPEC> {
         FORCE_OST_W::new(self, 4)
     }
 }

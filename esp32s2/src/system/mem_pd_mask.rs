@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to allow the memory to work as usual when the chip enters the light-sleep state."]
     #[inline(always)]
-    pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<MEM_PD_MASK_SPEC> {
+    pub fn lslp_mem_pd_mask(&mut self) -> LSLP_MEM_PD_MASK_W<'_, MEM_PD_MASK_SPEC> {
         LSLP_MEM_PD_MASK_W::new(self, 0)
     }
 }

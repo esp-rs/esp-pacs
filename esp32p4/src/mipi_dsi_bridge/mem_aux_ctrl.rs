@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures dsi_bridge fifo memory aux ctrl"]
     #[inline(always)]
-    pub fn dsi_mem_aux_ctrl(&mut self) -> DSI_MEM_AUX_CTRL_W<MEM_AUX_CTRL_SPEC> {
+    pub fn dsi_mem_aux_ctrl(&mut self) -> DSI_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_SPEC> {
         DSI_MEM_AUX_CTRL_W::new(self, 0)
     }
 }

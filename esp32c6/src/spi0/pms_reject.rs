@@ -64,7 +64,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 26 - Set this bit to enable SPI0/1 transfer permission control function."]
     #[inline(always)]
-    pub fn pm_en(&mut self) -> PM_EN_W<PMS_REJECT_SPEC> {
+    pub fn pm_en(&mut self) -> PM_EN_W<'_, PMS_REJECT_SPEC> {
         PM_EN_W::new(self, 26)
     }
 }

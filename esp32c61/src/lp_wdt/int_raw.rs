@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - Represents the SWD whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn super_wdt_int_raw(&mut self) -> SUPER_WDT_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn super_wdt_int_raw(&mut self) -> SUPER_WDT_INT_RAW_W<'_, INT_RAW_SPEC> {
         SUPER_WDT_INT_RAW_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents the RWDT whether or not generates timeout interrupt.\\\\ 0:No \\\\1: Yes"]
     #[inline(always)]
-    pub fn lp_wdt_int_raw(&mut self) -> LP_WDT_INT_RAW_W<INT_RAW_SPEC> {
+    pub fn lp_wdt_int_raw(&mut self) -> LP_WDT_INT_RAW_W<'_, INT_RAW_SPEC> {
         LP_WDT_INT_RAW_W::new(self, 31)
     }
 }

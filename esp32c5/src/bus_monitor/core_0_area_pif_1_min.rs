@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the lower bound address of Peripheral bus region 1."]
     #[inline(always)]
-    pub fn core_0_area_pif_1_min(&mut self) -> CORE_0_AREA_PIF_1_MIN_W<CORE_0_AREA_PIF_1_MIN_SPEC> {
+    pub fn core_0_area_pif_1_min(
+        &mut self,
+    ) -> CORE_0_AREA_PIF_1_MIN_W<'_, CORE_0_AREA_PIF_1_MIN_SPEC> {
         CORE_0_AREA_PIF_1_MIN_W::new(self, 0)
     }
 }

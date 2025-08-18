@@ -324,157 +324,157 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - reg_timers_rst"]
     #[inline(always)]
-    pub fn timers_rst(&mut self) -> TIMERS_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timers_rst(&mut self) -> TIMERS_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERS_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_spi01_rst"]
     #[inline(always)]
-    pub fn spi01_rst(&mut self) -> SPI01_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi01_rst(&mut self) -> SPI01_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI01_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - reg_uart_rst"]
     #[inline(always)]
-    pub fn uart_rst(&mut self) -> UART_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart_rst(&mut self) -> UART_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_wdg_rst"]
     #[inline(always)]
-    pub fn wdg_rst(&mut self) -> WDG_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn wdg_rst(&mut self) -> WDG_RST_W<'_, PERIP_RST_EN0_SPEC> {
         WDG_RST_W::new(self, 3)
     }
     #[doc = "Bit 5 - reg_uart1_rst"]
     #[inline(always)]
-    pub fn uart1_rst(&mut self) -> UART1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart1_rst(&mut self) -> UART1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART1_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - reg_spi2_rst"]
     #[inline(always)]
-    pub fn spi2_rst(&mut self) -> SPI2_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi2_rst(&mut self) -> SPI2_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI2_RST_W::new(self, 6)
     }
     #[doc = "Bit 7 - reg_ext0_rst"]
     #[inline(always)]
-    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2c_ext0_rst(&mut self) -> I2C_EXT0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2C_EXT0_RST_W::new(self, 7)
     }
     #[doc = "Bit 8 - reg_uhci0_rst"]
     #[inline(always)]
-    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uhci0_rst(&mut self) -> UHCI0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UHCI0_RST_W::new(self, 8)
     }
     #[doc = "Bit 9 - reg_rmt_rst"]
     #[inline(always)]
-    pub fn rmt_rst(&mut self) -> RMT_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn rmt_rst(&mut self) -> RMT_RST_W<'_, PERIP_RST_EN0_SPEC> {
         RMT_RST_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_pcnt_rst"]
     #[inline(always)]
-    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pcnt_rst(&mut self) -> PCNT_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PCNT_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - reg_ledc_rst"]
     #[inline(always)]
-    pub fn ledc_rst(&mut self) -> LEDC_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn ledc_rst(&mut self) -> LEDC_RST_W<'_, PERIP_RST_EN0_SPEC> {
         LEDC_RST_W::new(self, 11)
     }
     #[doc = "Bit 12 - reg_uhci1_rst"]
     #[inline(always)]
-    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uhci1_rst(&mut self) -> UHCI1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UHCI1_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_timergroup_rst"]
     #[inline(always)]
-    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timergroup_rst(&mut self) -> TIMERGROUP_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERGROUP_RST_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_efuse_rst"]
     #[inline(always)]
-    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn efuse_rst(&mut self) -> EFUSE_RST_W<'_, PERIP_RST_EN0_SPEC> {
         EFUSE_RST_W::new(self, 14)
     }
     #[doc = "Bit 15 - reg_timergroup1_rst"]
     #[inline(always)]
-    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn timergroup1_rst(&mut self) -> TIMERGROUP1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TIMERGROUP1_RST_W::new(self, 15)
     }
     #[doc = "Bit 16 - reg_spi3_rst"]
     #[inline(always)]
-    pub fn spi3_rst(&mut self) -> SPI3_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi3_rst(&mut self) -> SPI3_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI3_RST_W::new(self, 16)
     }
     #[doc = "Bit 17 - reg_pwm0_rst"]
     #[inline(always)]
-    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm0_rst(&mut self) -> PWM0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM0_RST_W::new(self, 17)
     }
     #[doc = "Bit 18 - reg_ext1_rst"]
     #[inline(always)]
-    pub fn ext1_rst(&mut self) -> EXT1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn ext1_rst(&mut self) -> EXT1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         EXT1_RST_W::new(self, 18)
     }
     #[doc = "Bit 19 - reg_can_rst"]
     #[inline(always)]
-    pub fn twai_rst(&mut self) -> TWAI_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn twai_rst(&mut self) -> TWAI_RST_W<'_, PERIP_RST_EN0_SPEC> {
         TWAI_RST_W::new(self, 19)
     }
     #[doc = "Bit 20 - reg_pwm1_rst"]
     #[inline(always)]
-    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm1_rst(&mut self) -> PWM1_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM1_RST_W::new(self, 20)
     }
     #[doc = "Bit 21 - reg_i2s1_rst"]
     #[inline(always)]
-    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn i2s0_rst(&mut self) -> I2S0_RST_W<'_, PERIP_RST_EN0_SPEC> {
         I2S0_RST_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_spi2_dma_rst"]
     #[inline(always)]
-    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi2_dma_rst(&mut self) -> SPI2_DMA_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI2_DMA_RST_W::new(self, 22)
     }
     #[doc = "Bit 23 - reg_usb_device_rst"]
     #[inline(always)]
-    pub fn usb_device_rst(&mut self) -> USB_DEVICE_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn usb_device_rst(&mut self) -> USB_DEVICE_RST_W<'_, PERIP_RST_EN0_SPEC> {
         USB_DEVICE_RST_W::new(self, 23)
     }
     #[doc = "Bit 24 - reg_uart_mem_rst"]
     #[inline(always)]
-    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn uart_mem_rst(&mut self) -> UART_MEM_RST_W<'_, PERIP_RST_EN0_SPEC> {
         UART_MEM_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_pwm2_rst"]
     #[inline(always)]
-    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm2_rst(&mut self) -> PWM2_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM2_RST_W::new(self, 25)
     }
     #[doc = "Bit 26 - reg_pwm3_rst"]
     #[inline(always)]
-    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn pwm3_rst(&mut self) -> PWM3_RST_W<'_, PERIP_RST_EN0_SPEC> {
         PWM3_RST_W::new(self, 26)
     }
     #[doc = "Bit 27 - reg_spi3_dma_rst"]
     #[inline(always)]
-    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi3_dma_rst(&mut self) -> SPI3_DMA_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI3_DMA_RST_W::new(self, 27)
     }
     #[doc = "Bit 28 - reg_apb_saradc_rst"]
     #[inline(always)]
-    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn apb_saradc_rst(&mut self) -> APB_SARADC_RST_W<'_, PERIP_RST_EN0_SPEC> {
         APB_SARADC_RST_W::new(self, 28)
     }
     #[doc = "Bit 29 - reg_systimer_rst"]
     #[inline(always)]
-    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn systimer_rst(&mut self) -> SYSTIMER_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SYSTIMER_RST_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_adc2_arb_rst"]
     #[inline(always)]
-    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn adc2_arb_rst(&mut self) -> ADC2_ARB_RST_W<'_, PERIP_RST_EN0_SPEC> {
         ADC2_ARB_RST_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_spi4_rst"]
     #[inline(always)]
-    pub fn spi4_rst(&mut self) -> SPI4_RST_W<PERIP_RST_EN0_SPEC> {
+    pub fn spi4_rst(&mut self) -> SPI4_RST_W<'_, PERIP_RST_EN0_SPEC> {
         SPI4_RST_W::new(self, 31)
     }
 }

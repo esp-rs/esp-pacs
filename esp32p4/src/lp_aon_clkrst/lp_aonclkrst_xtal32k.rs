@@ -62,28 +62,28 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_dres_xtal32k(
         &mut self,
-    ) -> LP_AONCLKRST_DRES_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
+    ) -> LP_AONCLKRST_DRES_XTAL32K_W<'_, LP_AONCLKRST_XTAL32K_SPEC> {
         LP_AONCLKRST_DRES_XTAL32K_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_dgm_xtal32k(
         &mut self,
-    ) -> LP_AONCLKRST_DGM_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
+    ) -> LP_AONCLKRST_DGM_XTAL32K_W<'_, LP_AONCLKRST_XTAL32K_SPEC> {
         LP_AONCLKRST_DGM_XTAL32K_W::new(self, 25)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_dbuf_xtal32k(
         &mut self,
-    ) -> LP_AONCLKRST_DBUF_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
+    ) -> LP_AONCLKRST_DBUF_XTAL32K_W<'_, LP_AONCLKRST_XTAL32K_SPEC> {
         LP_AONCLKRST_DBUF_XTAL32K_W::new(self, 28)
     }
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_dac_xtal32k(
         &mut self,
-    ) -> LP_AONCLKRST_DAC_XTAL32K_W<LP_AONCLKRST_XTAL32K_SPEC> {
+    ) -> LP_AONCLKRST_DAC_XTAL32K_W<'_, LP_AONCLKRST_XTAL32K_SPEC> {
         LP_AONCLKRST_DAC_XTAL32K_W::new(self, 29)
     }
 }

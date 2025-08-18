@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Set this bit to force power up SRAM"]
     #[inline(always)]
-    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<SRAM_POWER_CONF_1_SPEC> {
+    pub fn sram_force_pu(&mut self) -> SRAM_FORCE_PU_W<'_, SRAM_POWER_CONF_1_SPEC> {
         SRAM_FORCE_PU_W::new(self, 0)
     }
     #[doc = "Bits 10:13 - Set this bit to force power down SRAM."]
     #[inline(always)]
-    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<SRAM_POWER_CONF_1_SPEC> {
+    pub fn sram_force_pd(&mut self) -> SRAM_FORCE_PD_W<'_, SRAM_POWER_CONF_1_SPEC> {
         SRAM_FORCE_PD_W::new(self, 10)
     }
     #[doc = "Bits 20:23 - 1: Force to open the clock and bypass the gate-clock when accessing the SRAM. 0: A gate-clock will be used when accessing the SRAM."]
     #[inline(always)]
-    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<SRAM_POWER_CONF_1_SPEC> {
+    pub fn sram_clkgate_force_on(&mut self) -> SRAM_CLKGATE_FORCE_ON_W<'_, SRAM_POWER_CONF_1_SPEC> {
         SRAM_CLKGATE_FORCE_ON_W::new(self, 20)
     }
 }

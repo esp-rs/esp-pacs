@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable bit for SPI_MEM_PER_END_INT interrupt."]
     #[inline(always)]
-    pub fn per_end(&mut self) -> PER_END_W<INT_ENA_SPEC> {
+    pub fn per_end(&mut self) -> PER_END_W<'_, INT_ENA_SPEC> {
         PER_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable bit for SPI_MEM_PES_END_INT interrupt."]
     #[inline(always)]
-    pub fn pes_end(&mut self) -> PES_END_W<INT_ENA_SPEC> {
+    pub fn pes_end(&mut self) -> PES_END_W<'_, INT_ENA_SPEC> {
         PES_END_W::new(self, 1)
     }
     #[doc = "Bit 2 - The enable bit for SPI_MEM_WPE_END_INT interrupt."]
     #[inline(always)]
-    pub fn wpe_end(&mut self) -> WPE_END_W<INT_ENA_SPEC> {
+    pub fn wpe_end(&mut self) -> WPE_END_W<'_, INT_ENA_SPEC> {
         WPE_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - The enable bit for SPI_MEM_SLV_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn slv_st_end(&mut self) -> SLV_ST_END_W<INT_ENA_SPEC> {
+    pub fn slv_st_end(&mut self) -> SLV_ST_END_W<'_, INT_ENA_SPEC> {
         SLV_ST_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The enable bit for SPI_MEM_MST_ST_END_INT interrupt."]
     #[inline(always)]
-    pub fn mst_st_end(&mut self) -> MST_ST_END_W<INT_ENA_SPEC> {
+    pub fn mst_st_end(&mut self) -> MST_ST_END_W<'_, INT_ENA_SPEC> {
         MST_ST_END_W::new(self, 4)
     }
     #[doc = "Bit 10 - The enable bit for SPI_MEM_BROWN_OUT_INT interrupt."]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_ENA_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_ENA_SPEC> {
         BROWN_OUT_W::new(self, 10)
     }
 }

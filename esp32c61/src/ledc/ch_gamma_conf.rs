@@ -28,17 +28,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Configures the number of duty cycle fading rages for LEDC ch%s."]
     #[inline(always)]
-    pub fn ch_gamma_entry_num(&mut self) -> CH_GAMMA_ENTRY_NUM_W<CH_GAMMA_CONF_SPEC> {
+    pub fn ch_gamma_entry_num(&mut self) -> CH_GAMMA_ENTRY_NUM_W<'_, CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_ENTRY_NUM_W::new(self, 0)
     }
     #[doc = "Bit 5 - Configures whether or not to pause duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Pause"]
     #[inline(always)]
-    pub fn ch_gamma_pause(&mut self) -> CH_GAMMA_PAUSE_W<CH_GAMMA_CONF_SPEC> {
+    pub fn ch_gamma_pause(&mut self) -> CH_GAMMA_PAUSE_W<'_, CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_PAUSE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or nor to resume duty cycle fading of LEDC ch%s.\\\\0: Invalid. No effect\\\\1: Resume"]
     #[inline(always)]
-    pub fn ch_gamma_resume(&mut self) -> CH_GAMMA_RESUME_W<CH_GAMMA_CONF_SPEC> {
+    pub fn ch_gamma_resume(&mut self) -> CH_GAMMA_RESUME_W<'_, CH_GAMMA_CONF_SPEC> {
         CH_GAMMA_RESUME_W::new(self, 6)
     }
 }

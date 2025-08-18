@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - reg_scl_stop_hold_time"]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<SCL_STOP_HOLD_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, SCL_STOP_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }
 }

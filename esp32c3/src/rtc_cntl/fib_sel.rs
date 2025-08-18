@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - select use analog fib signal"]
     #[inline(always)]
-    pub fn fib_sel(&mut self) -> FIB_SEL_W<FIB_SEL_SPEC> {
+    pub fn fib_sel(&mut self) -> FIB_SEL_W<'_, FIB_SEL_SPEC> {
         FIB_SEL_W::new(self, 0)
     }
 }

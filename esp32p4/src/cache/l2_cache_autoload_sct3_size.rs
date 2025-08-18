@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_autoload_sct3_size(
         &mut self,
-    ) -> L2_CACHE_AUTOLOAD_SCT3_SIZE_W<L2_CACHE_AUTOLOAD_SCT3_SIZE_SPEC> {
+    ) -> L2_CACHE_AUTOLOAD_SCT3_SIZE_W<'_, L2_CACHE_AUTOLOAD_SCT3_SIZE_SPEC> {
         L2_CACHE_AUTOLOAD_SCT3_SIZE_W::new(self, 0)
     }
 }

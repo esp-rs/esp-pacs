@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures the propagation segment of data bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn prop_fd(&mut self) -> PROP_FD_W<BTR_FD_SPEC> {
+    pub fn prop_fd(&mut self) -> PROP_FD_W<'_, BTR_FD_SPEC> {
         PROP_FD_W::new(self, 0)
     }
     #[doc = "Bits 7:11 - Configures the phase 1 segment of data bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn ph1_fd(&mut self) -> PH1_FD_W<BTR_FD_SPEC> {
+    pub fn ph1_fd(&mut self) -> PH1_FD_W<'_, BTR_FD_SPEC> {
         PH1_FD_W::new(self, 7)
     }
     #[doc = "Bits 13:17 - Configures the phase 2 segment of data bit rate. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn ph2_fd(&mut self) -> PH2_FD_W<BTR_FD_SPEC> {
+    pub fn ph2_fd(&mut self) -> PH2_FD_W<'_, BTR_FD_SPEC> {
         PH2_FD_W::new(self, 13)
     }
     #[doc = "Bits 19:26 - Configures the baud-rate prescaler of data bit rate. Measurement unit: cycle of core clock."]
     #[inline(always)]
-    pub fn brp_fd(&mut self) -> BRP_FD_W<BTR_FD_SPEC> {
+    pub fn brp_fd(&mut self) -> BRP_FD_W<'_, BTR_FD_SPEC> {
         BRP_FD_W::new(self, 19)
     }
     #[doc = "Bits 27:31 - Represents the synchronization jump width in data bit time. Measurement unit: time quanta"]
     #[inline(always)]
-    pub fn sjw_fd(&mut self) -> SJW_FD_W<BTR_FD_SPEC> {
+    pub fn sjw_fd(&mut self) -> SJW_FD_W<'_, BTR_FD_SPEC> {
         SJW_FD_W::new(self, 27)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - In master transfer, this field must be equal to SPI_CLKCNT_N. In slave mode, it must be 0. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
+    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<'_, CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - Configures the duty cycle of SPI_CLK (high level) in master transfer. It's recommended to configure this value to floor((SPI_CLKCNT_N + 1)/2 - 1). floor() here is to round a number down, e.g., floor(2.2) = 2. In slave mode, it must be 0. \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
+    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<'_, CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 6)
     }
     #[doc = "Bits 12:17 - Configures the divider of SPI_CLK in master transfer. SPI_CLK frequency is 12_{\\textrm{apb_clk}}$/(SPI_CLKDIV_PRE + 1)/(SPI_CLKCNT_N + 1). \\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
+    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<'_, CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 12)
     }
     #[doc = "Bits 18:21 - Configures the pre-divider of SPI_CLK in master transfer. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clkdiv_pre(&mut self) -> CLKDIV_PRE_W<CLOCK_SPEC> {
+    pub fn clkdiv_pre(&mut self) -> CLKDIV_PRE_W<'_, CLOCK_SPEC> {
         CLKDIV_PRE_W::new(self, 18)
     }
     #[doc = "Bit 31 - Configures whether or not the SPI_CLK is equal to APB_CLK in master transfer.\\\\ 0: SPI_CLK is divided from APB_CLK.\\\\ 1: SPI_CLK is eqaul to APB_CLK.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
+    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<'_, CLOCK_SPEC> {
         CLK_EQU_SYSCLK_W::new(self, 31)
     }
 }

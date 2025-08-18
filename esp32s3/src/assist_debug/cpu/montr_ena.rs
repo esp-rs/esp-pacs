@@ -140,62 +140,66 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core0 dram0 area0 read monitor enable"]
     #[inline(always)]
-    pub fn area_dram0_0_rd_ena(&mut self) -> AREA_DRAM0_0_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_0_rd_ena(&mut self) -> AREA_DRAM0_0_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_0_RD_ENA_W::new(self, 0)
     }
     #[doc = "Bit 1 - Core0 dram0 area0 write monitor enable"]
     #[inline(always)]
-    pub fn area_dram0_0_wr_ena(&mut self) -> AREA_DRAM0_0_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_0_wr_ena(&mut self) -> AREA_DRAM0_0_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_0_WR_ENA_W::new(self, 1)
     }
     #[doc = "Bit 2 - Core0 dram0 area1 read monitor enable"]
     #[inline(always)]
-    pub fn area_dram0_1_rd_ena(&mut self) -> AREA_DRAM0_1_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_1_rd_ena(&mut self) -> AREA_DRAM0_1_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_1_RD_ENA_W::new(self, 2)
     }
     #[doc = "Bit 3 - Core0 dram0 area1 write monitor enable"]
     #[inline(always)]
-    pub fn area_dram0_1_wr_ena(&mut self) -> AREA_DRAM0_1_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_dram0_1_wr_ena(&mut self) -> AREA_DRAM0_1_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_DRAM0_1_WR_ENA_W::new(self, 3)
     }
     #[doc = "Bit 4 - Core0 PIF area0 read monitor enable"]
     #[inline(always)]
-    pub fn area_pif_0_rd_ena(&mut self) -> AREA_PIF_0_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_0_rd_ena(&mut self) -> AREA_PIF_0_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_0_RD_ENA_W::new(self, 4)
     }
     #[doc = "Bit 5 - Core0 PIF area0 write monitor enable"]
     #[inline(always)]
-    pub fn area_pif_0_wr_ena(&mut self) -> AREA_PIF_0_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_0_wr_ena(&mut self) -> AREA_PIF_0_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_0_WR_ENA_W::new(self, 5)
     }
     #[doc = "Bit 6 - Core0 PIF area1 read monitor enable"]
     #[inline(always)]
-    pub fn area_pif_1_rd_ena(&mut self) -> AREA_PIF_1_RD_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_1_rd_ena(&mut self) -> AREA_PIF_1_RD_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_1_RD_ENA_W::new(self, 6)
     }
     #[doc = "Bit 7 - Core0 PIF area1 write monitor enable"]
     #[inline(always)]
-    pub fn area_pif_1_wr_ena(&mut self) -> AREA_PIF_1_WR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn area_pif_1_wr_ena(&mut self) -> AREA_PIF_1_WR_ENA_W<'_, MONTR_ENA_SPEC> {
         AREA_PIF_1_WR_ENA_W::new(self, 7)
     }
     #[doc = "Bit 8 - Core0 stackpoint overflow monitor enable"]
     #[inline(always)]
-    pub fn sp_spill_min_ena(&mut self) -> SP_SPILL_MIN_ENA_W<MONTR_ENA_SPEC> {
+    pub fn sp_spill_min_ena(&mut self) -> SP_SPILL_MIN_ENA_W<'_, MONTR_ENA_SPEC> {
         SP_SPILL_MIN_ENA_W::new(self, 8)
     }
     #[doc = "Bit 9 - Core0 stackpoint underflow monitor enable"]
     #[inline(always)]
-    pub fn sp_spill_max_ena(&mut self) -> SP_SPILL_MAX_ENA_W<MONTR_ENA_SPEC> {
+    pub fn sp_spill_max_ena(&mut self) -> SP_SPILL_MAX_ENA_W<'_, MONTR_ENA_SPEC> {
         SP_SPILL_MAX_ENA_W::new(self, 9)
     }
     #[doc = "Bit 10 - IBUS busy monitor enable"]
     #[inline(always)]
-    pub fn iram0_exception_monitor_ena(&mut self) -> IRAM0_EXCEPTION_MONITOR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn iram0_exception_monitor_ena(
+        &mut self,
+    ) -> IRAM0_EXCEPTION_MONITOR_ENA_W<'_, MONTR_ENA_SPEC> {
         IRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 10)
     }
     #[doc = "Bit 11 - DBUS busy monitor enbale"]
     #[inline(always)]
-    pub fn dram0_exception_monitor_ena(&mut self) -> DRAM0_EXCEPTION_MONITOR_ENA_W<MONTR_ENA_SPEC> {
+    pub fn dram0_exception_monitor_ena(
+        &mut self,
+    ) -> DRAM0_EXCEPTION_MONITOR_ENA_W<'_, MONTR_ENA_SPEC> {
         DRAM0_EXCEPTION_MONITOR_ENA_W::new(self, 11)
     }
 }

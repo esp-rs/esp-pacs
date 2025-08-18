@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - Force Power Down field"]
     #[inline(always)]
-    pub fn tx_inf_force_pd(&mut self) -> TX_INF_FORCE_PD_W<TX_INTERP_CTRL_SPEC> {
+    pub fn tx_inf_force_pd(&mut self) -> TX_INF_FORCE_PD_W<'_, TX_INTERP_CTRL_SPEC> {
         TX_INF_FORCE_PD_W::new(self, 9)
     }
     #[doc = "Bit 10 - Force Power Up field"]
     #[inline(always)]
-    pub fn tx_inf_force_pu(&mut self) -> TX_INF_FORCE_PU_W<TX_INTERP_CTRL_SPEC> {
+    pub fn tx_inf_force_pu(&mut self) -> TX_INF_FORCE_PU_W<'_, TX_INTERP_CTRL_SPEC> {
         TX_INF_FORCE_PU_W::new(self, 10)
     }
 }

@@ -53,12 +53,14 @@ impl W {
     #[inline(always)]
     pub fn lp_i2c_ana_mast_i2c0_clk_sel(
         &mut self,
-    ) -> LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<I2C0_DATA_SPEC> {
+    ) -> LP_I2C_ANA_MAST_I2C0_CLK_SEL_W<'_, I2C0_DATA_SPEC> {
         LP_I2C_ANA_MAST_I2C0_CLK_SEL_W::new(self, 8)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn lp_i2c_ana_mast_i2c_mst_sel(&mut self) -> LP_I2C_ANA_MAST_I2C_MST_SEL_W<I2C0_DATA_SPEC> {
+    pub fn lp_i2c_ana_mast_i2c_mst_sel(
+        &mut self,
+    ) -> LP_I2C_ANA_MAST_I2C_MST_SEL_W<'_, I2C0_DATA_SPEC> {
         LP_I2C_ANA_MAST_I2C_MST_SEL_W::new(self, 11)
     }
 }

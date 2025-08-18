@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA-ADC/DAC permission control registers."]
     #[inline(always)]
-    pub fn edma_pms_adc_dac_lock(&mut self) -> EDMA_PMS_ADC_DAC_LOCK_W<EDMA_PMS_ADC_DAC_LOCK_SPEC> {
+    pub fn edma_pms_adc_dac_lock(
+        &mut self,
+    ) -> EDMA_PMS_ADC_DAC_LOCK_W<'_, EDMA_PMS_ADC_DAC_LOCK_SPEC> {
         EDMA_PMS_ADC_DAC_LOCK_W::new(self, 0)
     }
 }

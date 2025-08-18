@@ -234,112 +234,112 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - hold rtc pad0"]
     #[inline(always)]
-    pub fn touch_pad0(&mut self) -> TOUCH_PAD0_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad0(&mut self) -> TOUCH_PAD0_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD0_W::new(self, 0)
     }
     #[doc = "Bit 1 - hold rtc pad-1"]
     #[inline(always)]
-    pub fn touch_pad1(&mut self) -> TOUCH_PAD1_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad1(&mut self) -> TOUCH_PAD1_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD1_W::new(self, 1)
     }
     #[doc = "Bit 2 - hold rtc pad-2"]
     #[inline(always)]
-    pub fn touch_pad2(&mut self) -> TOUCH_PAD2_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad2(&mut self) -> TOUCH_PAD2_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD2_W::new(self, 2)
     }
     #[doc = "Bit 3 - hold rtc pad-3"]
     #[inline(always)]
-    pub fn touch_pad3(&mut self) -> TOUCH_PAD3_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad3(&mut self) -> TOUCH_PAD3_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD3_W::new(self, 3)
     }
     #[doc = "Bit 4 - hold rtc pad-4"]
     #[inline(always)]
-    pub fn touch_pad4(&mut self) -> TOUCH_PAD4_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad4(&mut self) -> TOUCH_PAD4_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD4_W::new(self, 4)
     }
     #[doc = "Bit 5 - hold rtc pad-5"]
     #[inline(always)]
-    pub fn touch_pad5(&mut self) -> TOUCH_PAD5_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad5(&mut self) -> TOUCH_PAD5_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD5_W::new(self, 5)
     }
     #[doc = "Bit 6 - hold rtc pad-6"]
     #[inline(always)]
-    pub fn touch_pad6(&mut self) -> TOUCH_PAD6_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad6(&mut self) -> TOUCH_PAD6_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD6_W::new(self, 6)
     }
     #[doc = "Bit 7 - hold rtc pad-7"]
     #[inline(always)]
-    pub fn touch_pad7(&mut self) -> TOUCH_PAD7_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad7(&mut self) -> TOUCH_PAD7_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD7_W::new(self, 7)
     }
     #[doc = "Bit 8 - hold rtc pad-8"]
     #[inline(always)]
-    pub fn touch_pad8(&mut self) -> TOUCH_PAD8_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad8(&mut self) -> TOUCH_PAD8_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD8_W::new(self, 8)
     }
     #[doc = "Bit 9 - hold rtc pad-9"]
     #[inline(always)]
-    pub fn touch_pad9(&mut self) -> TOUCH_PAD9_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad9(&mut self) -> TOUCH_PAD9_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD9_W::new(self, 9)
     }
     #[doc = "Bit 10 - hold rtc pad-10"]
     #[inline(always)]
-    pub fn touch_pad10(&mut self) -> TOUCH_PAD10_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad10(&mut self) -> TOUCH_PAD10_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD10_W::new(self, 10)
     }
     #[doc = "Bit 11 - hold rtc pad-11"]
     #[inline(always)]
-    pub fn touch_pad11(&mut self) -> TOUCH_PAD11_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad11(&mut self) -> TOUCH_PAD11_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD11_W::new(self, 11)
     }
     #[doc = "Bit 12 - hold rtc pad-12"]
     #[inline(always)]
-    pub fn touch_pad12(&mut self) -> TOUCH_PAD12_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad12(&mut self) -> TOUCH_PAD12_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD12_W::new(self, 12)
     }
     #[doc = "Bit 13 - hold rtc pad-13"]
     #[inline(always)]
-    pub fn touch_pad13(&mut self) -> TOUCH_PAD13_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad13(&mut self) -> TOUCH_PAD13_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD13_W::new(self, 13)
     }
     #[doc = "Bit 14 - hold rtc pad-14"]
     #[inline(always)]
-    pub fn touch_pad14(&mut self) -> TOUCH_PAD14_W<PAD_HOLD_SPEC> {
+    pub fn touch_pad14(&mut self) -> TOUCH_PAD14_W<'_, PAD_HOLD_SPEC> {
         TOUCH_PAD14_W::new(self, 14)
     }
     #[doc = "Bit 15 - hold rtc pad-15"]
     #[inline(always)]
-    pub fn x32p(&mut self) -> X32P_W<PAD_HOLD_SPEC> {
+    pub fn x32p(&mut self) -> X32P_W<'_, PAD_HOLD_SPEC> {
         X32P_W::new(self, 15)
     }
     #[doc = "Bit 16 - hold rtc pad-16"]
     #[inline(always)]
-    pub fn x32n(&mut self) -> X32N_W<PAD_HOLD_SPEC> {
+    pub fn x32n(&mut self) -> X32N_W<'_, PAD_HOLD_SPEC> {
         X32N_W::new(self, 16)
     }
     #[doc = "Bit 17 - hold rtc pad-17"]
     #[inline(always)]
-    pub fn pdac1(&mut self) -> PDAC1_W<PAD_HOLD_SPEC> {
+    pub fn pdac1(&mut self) -> PDAC1_W<'_, PAD_HOLD_SPEC> {
         PDAC1_W::new(self, 17)
     }
     #[doc = "Bit 18 - hold rtc pad-18"]
     #[inline(always)]
-    pub fn pdac2(&mut self) -> PDAC2_W<PAD_HOLD_SPEC> {
+    pub fn pdac2(&mut self) -> PDAC2_W<'_, PAD_HOLD_SPEC> {
         PDAC2_W::new(self, 18)
     }
     #[doc = "Bit 19 - hold rtc pad-19"]
     #[inline(always)]
-    pub fn pad19(&mut self) -> PAD19_W<PAD_HOLD_SPEC> {
+    pub fn pad19(&mut self) -> PAD19_W<'_, PAD_HOLD_SPEC> {
         PAD19_W::new(self, 19)
     }
     #[doc = "Bit 20 - hold rtc pad-20"]
     #[inline(always)]
-    pub fn pad20(&mut self) -> PAD20_W<PAD_HOLD_SPEC> {
+    pub fn pad20(&mut self) -> PAD20_W<'_, PAD_HOLD_SPEC> {
         PAD20_W::new(self, 20)
     }
     #[doc = "Bit 21 - hold rtc pad-21"]
     #[inline(always)]
-    pub fn pad21(&mut self) -> PAD21_W<PAD_HOLD_SPEC> {
+    pub fn pad21(&mut self) -> PAD21_W<'_, PAD_HOLD_SPEC> {
         PAD21_W::new(self, 21)
     }
 }

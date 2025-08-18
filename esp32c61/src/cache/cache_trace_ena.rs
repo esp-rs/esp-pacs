@@ -32,7 +32,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to enable L1-Cache trace for the performance counter and fail tracer"]
     #[inline(always)]
-    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<CACHE_TRACE_ENA_SPEC> {
+    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<'_, CACHE_TRACE_ENA_SPEC> {
         CACHE_TRACE_ENA_W::new(self, 0)
     }
 }

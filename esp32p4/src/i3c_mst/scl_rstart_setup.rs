@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn reg_scl_rstart_setup_time(
         &mut self,
-    ) -> REG_SCL_RSTART_SETUP_TIME_W<SCL_RSTART_SETUP_SPEC> {
+    ) -> REG_SCL_RSTART_SETUP_TIME_W<'_, SCL_RSTART_SETUP_SPEC> {
         REG_SCL_RSTART_SETUP_TIME_W::new(self, 0)
     }
 }

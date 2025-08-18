@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pro_rom_pd(&mut self) -> PRO_ROM_PD_W<ROM_PD_CTRL_SPEC> {
+    pub fn pro_rom_pd(&mut self) -> PRO_ROM_PD_W<'_, ROM_PD_CTRL_SPEC> {
         PRO_ROM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn app_rom_pd(&mut self) -> APP_ROM_PD_W<ROM_PD_CTRL_SPEC> {
+    pub fn app_rom_pd(&mut self) -> APP_ROM_PD_W<'_, ROM_PD_CTRL_SPEC> {
         APP_ROM_PD_W::new(self, 1)
     }
     #[doc = "Bits 2:7"]
     #[inline(always)]
-    pub fn share_rom_pd(&mut self) -> SHARE_ROM_PD_W<ROM_PD_CTRL_SPEC> {
+    pub fn share_rom_pd(&mut self) -> SHARE_ROM_PD_W<'_, ROM_PD_CTRL_SPEC> {
         SHARE_ROM_PD_W::new(self, 2)
     }
 }

@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<FIFO_CONF_SPEC> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<'_, FIFO_CONF_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 5:9 - Config txfifo empty threhd value when using apb fifo access"]
     #[inline(always)]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<FIFO_CONF_SPEC> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<'_, FIFO_CONF_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 5)
     }
     #[doc = "Bit 10 - Set this bit to enble apb nonfifo access."]
     #[inline(always)]
-    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<FIFO_CONF_SPEC> {
+    pub fn nonfifo_en(&mut self) -> NONFIFO_EN_W<'_, FIFO_CONF_SPEC> {
         NONFIFO_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - When this bit is set to 1 then the byte after address represent the offset address of I2C Slave's ram."]
     #[inline(always)]
-    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<FIFO_CONF_SPEC> {
+    pub fn fifo_addr_cfg_en(&mut self) -> FIFO_ADDR_CFG_EN_W<'_, FIFO_CONF_SPEC> {
         FIFO_ADDR_CFG_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to reset rx fifo when using apb fifo access."]
     #[inline(always)]
-    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<FIFO_CONF_SPEC> {
+    pub fn rx_fifo_rst(&mut self) -> RX_FIFO_RST_W<'_, FIFO_CONF_SPEC> {
         RX_FIFO_RST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to reset tx fifo when using apb fifo access."]
     #[inline(always)]
-    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<FIFO_CONF_SPEC> {
+    pub fn tx_fifo_rst(&mut self) -> TX_FIFO_RST_W<'_, FIFO_CONF_SPEC> {
         TX_FIFO_RST_W::new(self, 13)
     }
     #[doc = "Bits 14:19 - when I2C receives more than nonfifo_rx_thres data it will produce rx_send_full_int_raw interrupt and update the current offset address of the receiving data."]
     #[inline(always)]
-    pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<FIFO_CONF_SPEC> {
+    pub fn nonfifo_rx_thres(&mut self) -> NONFIFO_RX_THRES_W<'_, FIFO_CONF_SPEC> {
         NONFIFO_RX_THRES_W::new(self, 14)
     }
     #[doc = "Bits 20:25 - when I2C sends more than nonfifo_tx_thres data it will produce tx_send_empty_int_raw interrupt and update the current offset address of the sending data."]
     #[inline(always)]
-    pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<FIFO_CONF_SPEC> {
+    pub fn nonfifo_tx_thres(&mut self) -> NONFIFO_TX_THRES_W<'_, FIFO_CONF_SPEC> {
         NONFIFO_TX_THRES_W::new(self, 20)
     }
 }

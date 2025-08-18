@@ -94,22 +94,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the output mode for FSPID signal.\\\\ 0: Output without delay\\\\ 1: Output with a delay of a SPI module clock cycle at its falling edge\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout0_mode(&mut self) -> DOUT0_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT0_MODE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the output mode for FSPIQ signal.\\\\ 0: Output without delay\\\\ 1: Output with a delay of a SPI module clock cycle at its falling edge\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout1_mode(&mut self) -> DOUT1_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT1_MODE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the output mode for FSPIWP signal.\\\\ 0: Output without delay\\\\ 1: Output with a delay of a SPI module clock cycle at its falling edge\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout2_mode(&mut self) -> DOUT2_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT2_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the output mode for FSPIHD signal.\\\\ 0: Output without delay\\\\ 1: Output with a delay of a SPI module clock cycle at its falling edge\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<DOUT_MODE_SPEC> {
+    pub fn dout3_mode(&mut self) -> DOUT3_MODE_W<'_, DOUT_MODE_SPEC> {
         DOUT3_MODE_W::new(self, 3)
     }
 }

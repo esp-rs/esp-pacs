@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 0 to reset timer_group0 wdt module"]
     #[inline(always)]
-    pub fn tg0_wdt_rst_en(&mut self) -> TG0_WDT_RST_EN_W<TIMERGROUP_WDT_CONF_SPEC> {
+    pub fn tg0_wdt_rst_en(&mut self) -> TG0_WDT_RST_EN_W<'_, TIMERGROUP_WDT_CONF_SPEC> {
         TG0_WDT_RST_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset timer_group1 wdt module"]
     #[inline(always)]
-    pub fn tg1_wdt_rst_en(&mut self) -> TG1_WDT_RST_EN_W<TIMERGROUP_WDT_CONF_SPEC> {
+    pub fn tg1_wdt_rst_en(&mut self) -> TG1_WDT_RST_EN_W<'_, TIMERGROUP_WDT_CONF_SPEC> {
         TG1_WDT_RST_EN_W::new(self, 1)
     }
 }

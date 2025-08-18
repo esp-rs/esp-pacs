@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21 - configure the hpcore0 luckup reset enable 0: disable 1:enable"]
     #[inline(always)]
-    pub fn hpcore0_lockup_reset_en(&mut self) -> HPCORE0_LOCKUP_RESET_EN_W<CPU_RESET_SPEC> {
+    pub fn hpcore0_lockup_reset_en(&mut self) -> HPCORE0_LOCKUP_RESET_EN_W<'_, CPU_RESET_SPEC> {
         HPCORE0_LOCKUP_RESET_EN_W::new(self, 21)
     }
     #[doc = "Bits 22:24 - configures the reset length of LP_WDT reset CPU Measurement unit: LP_DYN_FAST_CLK"]
     #[inline(always)]
-    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<CPU_RESET_SPEC> {
+    pub fn rtc_wdt_cpu_reset_length(&mut self) -> RTC_WDT_CPU_RESET_LENGTH_W<'_, CPU_RESET_SPEC> {
         RTC_WDT_CPU_RESET_LENGTH_W::new(self, 22)
     }
     #[doc = "Bit 25 - Configures whether or not LP_WDT can reset CPU 0: LP_WDT could not reset CPU when LP_WDT timeout 1: LP_WDT could reset CPU when LP_WDT timeout"]
     #[inline(always)]
-    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<CPU_RESET_SPEC> {
+    pub fn rtc_wdt_cpu_reset_en(&mut self) -> RTC_WDT_CPU_RESET_EN_W<'_, CPU_RESET_SPEC> {
         RTC_WDT_CPU_RESET_EN_W::new(self, 25)
     }
     #[doc = "Bits 26:30 - configure the time between CPU stall and reset Measurement unit: LP_DYN_FAST_CLK"]
     #[inline(always)]
-    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<CPU_RESET_SPEC> {
+    pub fn cpu_stall_wait(&mut self) -> CPU_STALL_WAIT_W<'_, CPU_RESET_SPEC> {
         CPU_STALL_WAIT_W::new(self, 26)
     }
     #[doc = "Bit 31 - Configures whether or not CPU entry stall state before LP_WDT and software reset CPU 0: CPU will not entry stall state before LP_WDT and software reset CPU 1: CPU will entry stall state before LP_WDT and software reset CPU"]
     #[inline(always)]
-    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<CPU_RESET_SPEC> {
+    pub fn cpu_stall_en(&mut self) -> CPU_STALL_EN_W<'_, CPU_RESET_SPEC> {
         CPU_STALL_EN_W::new(self, 31)
     }
 }

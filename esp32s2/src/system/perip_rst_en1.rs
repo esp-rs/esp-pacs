@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to reset cryptography AES."]
     #[inline(always)]
-    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_aes_rst(&mut self) -> CRYPTO_AES_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_AES_RST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to reset cryptography SHA."]
     #[inline(always)]
-    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_sha_rst(&mut self) -> CRYPTO_SHA_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_SHA_RST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to reset cryptography RSA."]
     #[inline(always)]
-    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_rsa_rst(&mut self) -> CRYPTO_RSA_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_RSA_RST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to reset cryptography digital signature."]
     #[inline(always)]
-    pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_ds_rst(&mut self) -> CRYPTO_DS_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_DS_RST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to reset cryptography HMAC."]
     #[inline(always)]
-    pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_hmac_rst(&mut self) -> CRYPTO_HMAC_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_HMAC_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to reset cryptography DMA."]
     #[inline(always)]
-    pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<PERIP_RST_EN1_SPEC> {
+    pub fn crypto_dma_rst(&mut self) -> CRYPTO_DMA_RST_W<'_, PERIP_RST_EN1_SPEC> {
         CRYPTO_DMA_RST_W::new(self, 6)
     }
 }

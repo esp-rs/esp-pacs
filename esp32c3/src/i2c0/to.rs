@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - reg_time_out_value"]
     #[inline(always)]
-    pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<TO_SPEC> {
+    pub fn time_out_value(&mut self) -> TIME_OUT_VALUE_W<'_, TO_SPEC> {
         TIME_OUT_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 5 - reg_time_out_en"]
     #[inline(always)]
-    pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<TO_SPEC> {
+    pub fn time_out_en(&mut self) -> TIME_OUT_EN_W<'_, TO_SPEC> {
         TIME_OUT_EN_W::new(self, 5)
     }
 }

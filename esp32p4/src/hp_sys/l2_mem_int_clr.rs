@@ -17,21 +17,21 @@ impl W {
     #[inline(always)]
     pub fn reg_l2_mem_ecc_err_int_clr(
         &mut self,
-    ) -> REG_L2_MEM_ECC_ERR_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {
+    ) -> REG_L2_MEM_ECC_ERR_INT_CLR_W<'_, L2_MEM_INT_CLR_SPEC> {
         REG_L2_MEM_ECC_ERR_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
     pub fn reg_l2_mem_exceed_addr_int_clr(
         &mut self,
-    ) -> REG_L2_MEM_EXCEED_ADDR_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {
+    ) -> REG_L2_MEM_EXCEED_ADDR_INT_CLR_W<'_, L2_MEM_INT_CLR_SPEC> {
         REG_L2_MEM_EXCEED_ADDR_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
     pub fn reg_l2_mem_err_resp_int_clr(
         &mut self,
-    ) -> REG_L2_MEM_ERR_RESP_INT_CLR_W<L2_MEM_INT_CLR_SPEC> {
+    ) -> REG_L2_MEM_ERR_RESP_INT_CLR_W<'_, L2_MEM_INT_CLR_SPEC> {
         REG_L2_MEM_ERR_RESP_INT_CLR_W::new(self, 2)
     }
 }

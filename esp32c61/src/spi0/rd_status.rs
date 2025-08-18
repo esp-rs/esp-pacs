@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
-    pub fn wb_mode(&mut self) -> WB_MODE_W<RD_STATUS_SPEC> {
+    pub fn wb_mode(&mut self) -> WB_MODE_W<'_, RD_STATUS_SPEC> {
         WB_MODE_W::new(self, 16)
     }
     #[doc = "Bits 24:26 - Mode bits length for flash fast read mode."]
     #[inline(always)]
-    pub fn wb_mode_bitlen(&mut self) -> WB_MODE_BITLEN_W<RD_STATUS_SPEC> {
+    pub fn wb_mode_bitlen(&mut self) -> WB_MODE_BITLEN_W<'_, RD_STATUS_SPEC> {
         WB_MODE_BITLEN_W::new(self, 24)
     }
     #[doc = "Bit 27 - Mode bits is valid while this bit is enable. 1: enable 0: disable."]
     #[inline(always)]
-    pub fn wb_mode_en(&mut self) -> WB_MODE_EN_W<RD_STATUS_SPEC> {
+    pub fn wb_mode_en(&mut self) -> WB_MODE_EN_W<'_, RD_STATUS_SPEC> {
         WB_MODE_EN_W::new(self, 27)
     }
 }

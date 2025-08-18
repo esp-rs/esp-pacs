@@ -44,14 +44,14 @@ impl W {
     #[inline(always)]
     pub fn psram_mem_monitor_clk_en(
         &mut self,
-    ) -> PSRAM_MEM_MONITOR_CLK_EN_W<PSRAM_MEM_MONITOR_CONF_SPEC> {
+    ) -> PSRAM_MEM_MONITOR_CLK_EN_W<'_, PSRAM_MEM_MONITOR_CONF_SPEC> {
         PSRAM_MEM_MONITOR_CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 0 to reset psram_mem_monitor module"]
     #[inline(always)]
     pub fn psram_mem_monitor_rst_en(
         &mut self,
-    ) -> PSRAM_MEM_MONITOR_RST_EN_W<PSRAM_MEM_MONITOR_CONF_SPEC> {
+    ) -> PSRAM_MEM_MONITOR_RST_EN_W<'_, PSRAM_MEM_MONITOR_CONF_SPEC> {
         PSRAM_MEM_MONITOR_RST_EN_W::new(self, 1)
     }
 }

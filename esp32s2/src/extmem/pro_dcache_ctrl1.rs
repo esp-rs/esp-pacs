@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable dbus0, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn pro_dcache_mask_bus0(&mut self) -> PRO_DCACHE_MASK_BUS0_W<PRO_DCACHE_CTRL1_SPEC> {
+    pub fn pro_dcache_mask_bus0(&mut self) -> PRO_DCACHE_MASK_BUS0_W<'_, PRO_DCACHE_CTRL1_SPEC> {
         PRO_DCACHE_MASK_BUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable dbus1, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn pro_dcache_mask_bus1(&mut self) -> PRO_DCACHE_MASK_BUS1_W<PRO_DCACHE_CTRL1_SPEC> {
+    pub fn pro_dcache_mask_bus1(&mut self) -> PRO_DCACHE_MASK_BUS1_W<'_, PRO_DCACHE_CTRL1_SPEC> {
         PRO_DCACHE_MASK_BUS1_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to disable dbus2, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<PRO_DCACHE_CTRL1_SPEC> {
+    pub fn pro_dcache_mask_bus2(&mut self) -> PRO_DCACHE_MASK_BUS2_W<'_, PRO_DCACHE_CTRL1_SPEC> {
         PRO_DCACHE_MASK_BUS2_W::new(self, 2)
     }
 }

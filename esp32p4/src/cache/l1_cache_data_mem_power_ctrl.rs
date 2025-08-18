@@ -199,63 +199,63 @@ impl W {
     #[inline(always)]
     pub fn l1_icache0_data_mem_force_on(
         &mut self,
-    ) -> L1_ICACHE0_DATA_MEM_FORCE_ON_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE0_DATA_MEM_FORCE_ON_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE0_DATA_MEM_FORCE_ON_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to power L1-ICache0 data memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     pub fn l1_icache0_data_mem_force_pd(
         &mut self,
-    ) -> L1_ICACHE0_DATA_MEM_FORCE_PD_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE0_DATA_MEM_FORCE_PD_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE0_DATA_MEM_FORCE_PD_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to power L1-ICache0 data memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     pub fn l1_icache0_data_mem_force_pu(
         &mut self,
-    ) -> L1_ICACHE0_DATA_MEM_FORCE_PU_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE0_DATA_MEM_FORCE_PU_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE0_DATA_MEM_FORCE_PU_W::new(self, 2)
     }
     #[doc = "Bit 4 - The bit is used to close clock gating of L1-ICache1 data memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn l1_icache1_data_mem_force_on(
         &mut self,
-    ) -> L1_ICACHE1_DATA_MEM_FORCE_ON_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE1_DATA_MEM_FORCE_ON_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE1_DATA_MEM_FORCE_ON_W::new(self, 4)
     }
     #[doc = "Bit 5 - The bit is used to power L1-ICache1 data memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     pub fn l1_icache1_data_mem_force_pd(
         &mut self,
-    ) -> L1_ICACHE1_DATA_MEM_FORCE_PD_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE1_DATA_MEM_FORCE_PD_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE1_DATA_MEM_FORCE_PD_W::new(self, 5)
     }
     #[doc = "Bit 6 - The bit is used to power L1-ICache1 data memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     pub fn l1_icache1_data_mem_force_pu(
         &mut self,
-    ) -> L1_ICACHE1_DATA_MEM_FORCE_PU_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_ICACHE1_DATA_MEM_FORCE_PU_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_ICACHE1_DATA_MEM_FORCE_PU_W::new(self, 6)
     }
     #[doc = "Bit 16 - The bit is used to close clock gating of L1-DCache data memory. 1: close gating, 0: open clock gating."]
     #[inline(always)]
     pub fn l1_dcache_data_mem_force_on(
         &mut self,
-    ) -> L1_DCACHE_DATA_MEM_FORCE_ON_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_DCACHE_DATA_MEM_FORCE_ON_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_DCACHE_DATA_MEM_FORCE_ON_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to power L1-DCache data memory down. 0: follow rtc_lslp, 1: power down"]
     #[inline(always)]
     pub fn l1_dcache_data_mem_force_pd(
         &mut self,
-    ) -> L1_DCACHE_DATA_MEM_FORCE_PD_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_DCACHE_DATA_MEM_FORCE_PD_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_DCACHE_DATA_MEM_FORCE_PD_W::new(self, 17)
     }
     #[doc = "Bit 18 - The bit is used to power L1-DCache data memory up. 0: follow rtc_lslp, 1: power up"]
     #[inline(always)]
     pub fn l1_dcache_data_mem_force_pu(
         &mut self,
-    ) -> L1_DCACHE_DATA_MEM_FORCE_PU_W<L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
+    ) -> L1_DCACHE_DATA_MEM_FORCE_PU_W<'_, L1_CACHE_DATA_MEM_POWER_CTRL_SPEC> {
         L1_DCACHE_DATA_MEM_FORCE_PU_W::new(self, 18)
     }
 }

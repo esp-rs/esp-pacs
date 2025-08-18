@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Configures the interrupt source into one CPU interrupt."]
     #[inline(always)]
-    pub fn ecc_intr_map(&mut self) -> ECC_INTR_MAP_W<ECC_INTR_MAP_SPEC> {
+    pub fn ecc_intr_map(&mut self) -> ECC_INTR_MAP_W<'_, ECC_INTR_MAP_SPEC> {
         ECC_INTR_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
-    pub fn ecc_intr_pass_in_sec(&mut self) -> ECC_INTR_PASS_IN_SEC_W<ECC_INTR_MAP_SPEC> {
+    pub fn ecc_intr_pass_in_sec(&mut self) -> ECC_INTR_PASS_IN_SEC_W<'_, ECC_INTR_MAP_SPEC> {
         ECC_INTR_PASS_IN_SEC_W::new(self, 8)
     }
 }

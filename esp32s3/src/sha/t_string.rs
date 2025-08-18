@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - sha t_string(used if and only if mode == sha_256/t)"]
     #[inline(always)]
-    pub fn t_string(&mut self) -> T_STRING_W<T_STRING_SPEC> {
+    pub fn t_string(&mut self) -> T_STRING_W<'_, T_STRING_SPEC> {
         T_STRING_W::new(self, 0)
     }
 }

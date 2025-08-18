@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn padbist_rx_clk_div_num(&mut self) -> PADBIST_RX_CLK_DIV_NUM_W<PERI_CLK_CTRL27_SPEC> {
+    pub fn padbist_rx_clk_div_num(&mut self) -> PADBIST_RX_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL27_SPEC> {
         PADBIST_RX_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn padbist_tx_clk_src_sel(&mut self) -> PADBIST_TX_CLK_SRC_SEL_W<PERI_CLK_CTRL27_SPEC> {
+    pub fn padbist_tx_clk_src_sel(&mut self) -> PADBIST_TX_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL27_SPEC> {
         PADBIST_TX_CLK_SRC_SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn padbist_tx_clk_en(&mut self) -> PADBIST_TX_CLK_EN_W<PERI_CLK_CTRL27_SPEC> {
+    pub fn padbist_tx_clk_en(&mut self) -> PADBIST_TX_CLK_EN_W<'_, PERI_CLK_CTRL27_SPEC> {
         PADBIST_TX_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
-    pub fn padbist_tx_clk_div_num(&mut self) -> PADBIST_TX_CLK_DIV_NUM_W<PERI_CLK_CTRL27_SPEC> {
+    pub fn padbist_tx_clk_div_num(&mut self) -> PADBIST_TX_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL27_SPEC> {
         PADBIST_TX_CLK_DIV_NUM_W::new(self, 10)
     }
 }

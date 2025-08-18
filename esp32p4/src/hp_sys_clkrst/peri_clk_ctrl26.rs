@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn isp_clk_div_num(&mut self) -> ISP_CLK_DIV_NUM_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn isp_clk_div_num(&mut self) -> ISP_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL26_SPEC> {
         ISP_CLK_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn iomux_clk_src_sel(&mut self) -> IOMUX_CLK_SRC_SEL_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn iomux_clk_src_sel(&mut self) -> IOMUX_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL26_SPEC> {
         IOMUX_CLK_SRC_SEL_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<'_, PERI_CLK_CTRL26_SPEC> {
         IOMUX_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bits 10:17 - Reserved"]
     #[inline(always)]
-    pub fn iomux_clk_div_num(&mut self) -> IOMUX_CLK_DIV_NUM_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn iomux_clk_div_num(&mut self) -> IOMUX_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL26_SPEC> {
         IOMUX_CLK_DIV_NUM_W::new(self, 10)
     }
     #[doc = "Bit 18 - Reserved"]
     #[inline(always)]
-    pub fn h264_clk_src_sel(&mut self) -> H264_CLK_SRC_SEL_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn h264_clk_src_sel(&mut self) -> H264_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL26_SPEC> {
         H264_CLK_SRC_SEL_W::new(self, 18)
     }
     #[doc = "Bit 19 - Reserved"]
     #[inline(always)]
-    pub fn h264_clk_en(&mut self) -> H264_CLK_EN_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn h264_clk_en(&mut self) -> H264_CLK_EN_W<'_, PERI_CLK_CTRL26_SPEC> {
         H264_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bits 20:27 - Reserved"]
     #[inline(always)]
-    pub fn h264_clk_div_num(&mut self) -> H264_CLK_DIV_NUM_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn h264_clk_div_num(&mut self) -> H264_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL26_SPEC> {
         H264_CLK_DIV_NUM_W::new(self, 20)
     }
     #[doc = "Bit 28 - Reserved"]
     #[inline(always)]
-    pub fn padbist_rx_clk_src_sel(&mut self) -> PADBIST_RX_CLK_SRC_SEL_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn padbist_rx_clk_src_sel(&mut self) -> PADBIST_RX_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL26_SPEC> {
         PADBIST_RX_CLK_SRC_SEL_W::new(self, 28)
     }
     #[doc = "Bit 29 - Reserved"]
     #[inline(always)]
-    pub fn padbist_rx_clk_en(&mut self) -> PADBIST_RX_CLK_EN_W<PERI_CLK_CTRL26_SPEC> {
+    pub fn padbist_rx_clk_en(&mut self) -> PADBIST_RX_CLK_EN_W<'_, PERI_CLK_CTRL26_SPEC> {
         PADBIST_RX_CLK_EN_W::new(self, 29)
     }
 }

@@ -187,87 +187,87 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Command index."]
     #[inline(always)]
-    pub fn index(&mut self) -> INDEX_W<CMD_SPEC> {
+    pub fn index(&mut self) -> INDEX_W<'_, CMD_SPEC> {
         INDEX_W::new(self, 0)
     }
     #[doc = "Bit 6 - 0: No response expected from card; 1: Response expected from card."]
     #[inline(always)]
-    pub fn response_expect(&mut self) -> RESPONSE_EXPECT_W<CMD_SPEC> {
+    pub fn response_expect(&mut self) -> RESPONSE_EXPECT_W<'_, CMD_SPEC> {
         RESPONSE_EXPECT_W::new(self, 6)
     }
     #[doc = "Bit 7 - 0: Short response expected from card; 1: Long response expected from card."]
     #[inline(always)]
-    pub fn response_length(&mut self) -> RESPONSE_LENGTH_W<CMD_SPEC> {
+    pub fn response_length(&mut self) -> RESPONSE_LENGTH_W<'_, CMD_SPEC> {
         RESPONSE_LENGTH_W::new(self, 7)
     }
     #[doc = "Bit 8 - 0: Do not check; 1: Check response CRC. Some of command responses do not return valid CRC bits. Software should disable CRC checks for those commands in order to disable CRC checking by controller."]
     #[inline(always)]
-    pub fn check_response_crc(&mut self) -> CHECK_RESPONSE_CRC_W<CMD_SPEC> {
+    pub fn check_response_crc(&mut self) -> CHECK_RESPONSE_CRC_W<'_, CMD_SPEC> {
         CHECK_RESPONSE_CRC_W::new(self, 8)
     }
     #[doc = "Bit 9 - 0: No data transfer expected; 1: Data transfer expected."]
     #[inline(always)]
-    pub fn data_expected(&mut self) -> DATA_EXPECTED_W<CMD_SPEC> {
+    pub fn data_expected(&mut self) -> DATA_EXPECTED_W<'_, CMD_SPEC> {
         DATA_EXPECTED_W::new(self, 9)
     }
     #[doc = "Bit 10 - 0: Read from card; 1: Write to card. Don't care if no data is expected from card."]
     #[inline(always)]
-    pub fn read_write(&mut self) -> READ_WRITE_W<CMD_SPEC> {
+    pub fn read_write(&mut self) -> READ_WRITE_W<'_, CMD_SPEC> {
         READ_WRITE_W::new(self, 10)
     }
     #[doc = "Bit 11 - 0: Block data transfer command; 1: Stream data transfer command. Don't care if no data expected."]
     #[inline(always)]
-    pub fn transfer_mode(&mut self) -> TRANSFER_MODE_W<CMD_SPEC> {
+    pub fn transfer_mode(&mut self) -> TRANSFER_MODE_W<'_, CMD_SPEC> {
         TRANSFER_MODE_W::new(self, 11)
     }
     #[doc = "Bit 12 - 0: No stop command is sent at the end of data transfer; 1: Send stop command at the end of data transfer."]
     #[inline(always)]
-    pub fn send_auto_stop(&mut self) -> SEND_AUTO_STOP_W<CMD_SPEC> {
+    pub fn send_auto_stop(&mut self) -> SEND_AUTO_STOP_W<'_, CMD_SPEC> {
         SEND_AUTO_STOP_W::new(self, 12)
     }
     #[doc = "Bit 13 - 0: Send command at once, even if previous data transfer has not completed; 1: Wait for previous data transfer to complete before sending Command. The SDHOST_WAIT_PRVDATA_COMPLETE] = 0 option is typically used to query status of card during data transfer or to stop current data transfer. SDHOST_CARD_NUMBERr should be same as in previous command."]
     #[inline(always)]
-    pub fn wait_prvdata_complete(&mut self) -> WAIT_PRVDATA_COMPLETE_W<CMD_SPEC> {
+    pub fn wait_prvdata_complete(&mut self) -> WAIT_PRVDATA_COMPLETE_W<'_, CMD_SPEC> {
         WAIT_PRVDATA_COMPLETE_W::new(self, 13)
     }
     #[doc = "Bit 14 - 0: Neither stop nor abort command can stop current data transfer. If abort is sent to function-number currently selected or not in data-transfer mode, then bit should be set to 0; 1: Stop or abort command intended to stop current data transfer in progress. When open-ended or predefined data transfer is in progress, and host issues stop or abort command to stop data transfer, bit should be set so that command/data state-machines of CIU can return correctly to idle state."]
     #[inline(always)]
-    pub fn stop_abort_cmd(&mut self) -> STOP_ABORT_CMD_W<CMD_SPEC> {
+    pub fn stop_abort_cmd(&mut self) -> STOP_ABORT_CMD_W<'_, CMD_SPEC> {
         STOP_ABORT_CMD_W::new(self, 14)
     }
     #[doc = "Bit 15 - 0: Do not send initialization sequence (80 clocks of 1) before sending this command; 1: Send initialization sequence before sending this command. After powered on, 80 clocks must be sent to card for initialization before sending any commands to card. Bit should be set while sending first command to card so that controller will initialize clocks before sending command to card."]
     #[inline(always)]
-    pub fn send_initialization(&mut self) -> SEND_INITIALIZATION_W<CMD_SPEC> {
+    pub fn send_initialization(&mut self) -> SEND_INITIALIZATION_W<'_, CMD_SPEC> {
         SEND_INITIALIZATION_W::new(self, 15)
     }
     #[doc = "Bits 16:20 - Card number in use. Represents physical slot number of card being accessed. In SD-only mode, up to two cards are supported."]
     #[inline(always)]
-    pub fn card_number(&mut self) -> CARD_NUMBER_W<CMD_SPEC> {
+    pub fn card_number(&mut self) -> CARD_NUMBER_W<'_, CMD_SPEC> {
         CARD_NUMBER_W::new(self, 16)
     }
     #[doc = "Bit 21 - 0: Normal command sequence; 1: Do not send commands, just update clock register value into card clock domain. Following register values are transferred into card clock domain: CLKDIV, CLRSRC, and CLKENA. Changes card clocks (change frequency, truncate off or on, and set low-frequency mode). This is provided in order to change clock frequency or stop clock without having to send command to cards. During normal command sequence, when sdhost_update_clock_registers_only = 0, following control registers are transferred from BIU to CIU: CMD, CMDARG, TMOUT, CTYPE, BLKSIZ, and BYTCNT. CIU uses new register values for new command sequence to card(s). When bit is set, there are no Command Done interrupts because no command is sent to SD_MMC_CEATA cards."]
     #[inline(always)]
-    pub fn update_clock_registers_only(&mut self) -> UPDATE_CLOCK_REGISTERS_ONLY_W<CMD_SPEC> {
+    pub fn update_clock_registers_only(&mut self) -> UPDATE_CLOCK_REGISTERS_ONLY_W<'_, CMD_SPEC> {
         UPDATE_CLOCK_REGISTERS_ONLY_W::new(self, 21)
     }
     #[doc = "Bit 22 - Read access flag. 0: Host is not performing read access (RW_REG or RW_BLK)towards CE-ATA device; 1: Host is performing read access (RW_REG or RW_BLK) towards CE-ATA device. Software should set this bit to indicate that CE-ATA device is being accessed for read transfer. This bit is used to disable read data timeout indication while performing CE-ATA read transfers. Maximum value of I/O transmission delay can be no less than 10 seconds. SD/MMC should not indicate read data timeout while waiting for data from CE-ATA device."]
     #[inline(always)]
-    pub fn read_ceata_device(&mut self) -> READ_CEATA_DEVICE_W<CMD_SPEC> {
+    pub fn read_ceata_device(&mut self) -> READ_CEATA_DEVICE_W<'_, CMD_SPEC> {
         READ_CEATA_DEVICE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Expected Command Completion Signal (CCS) configuration. 0: Interrupts are not enabled in CE-ATA device (nIEN = 1 in ATA control register), or command does not expect CCS from device; 1: Interrupts are enabled in CE-ATA device (nIEN = 0), and RW_BLK command expects command completion signal from CE-ATA device. If the command expects Command Completion Signal (CCS) from the CE-ATA device, the software should set this control bit. SD/MMC sets Data Transfer Over (DTO) bit in RINTSTS register and generates interrupt to host if Data Transfer Over interrupt is not masked."]
     #[inline(always)]
-    pub fn ccs_expected(&mut self) -> CCS_EXPECTED_W<CMD_SPEC> {
+    pub fn ccs_expected(&mut self) -> CCS_EXPECTED_W<'_, CMD_SPEC> {
         CCS_EXPECTED_W::new(self, 23)
     }
     #[doc = "Bit 29 - Use Hold Register. 0: CMD and DATA sent to card bypassing HOLD Register; 1: CMD and DATA sent to card through the HOLD Register."]
     #[inline(always)]
-    pub fn use_hole(&mut self) -> USE_HOLE_W<CMD_SPEC> {
+    pub fn use_hole(&mut self) -> USE_HOLE_W<'_, CMD_SPEC> {
         USE_HOLE_W::new(self, 29)
     }
     #[doc = "Bit 31 - Start command. Once command is served by the CIU, this bit is automatically cleared. When this bit is set, host should not attempt to write to any command registers. If a write is attempted, hardware lock error is set in raw interrupt register. Once command is sent and a response is received from SD_MMC_CEATA cards, Command Done bit is set in the raw interrupt Register."]
     #[inline(always)]
-    pub fn start_cmd(&mut self) -> START_CMD_W<CMD_SPEC> {
+    pub fn start_cmd(&mut self) -> START_CMD_W<'_, CMD_SPEC> {
         START_CMD_W::new(self, 31)
     }
 }

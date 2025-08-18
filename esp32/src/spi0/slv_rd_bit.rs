@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - In the slave mode it is the bit length of read data. The value is the length - 1."]
     #[inline(always)]
-    pub fn slv_rdata_bit(&mut self) -> SLV_RDATA_BIT_W<SLV_RD_BIT_SPEC> {
+    pub fn slv_rdata_bit(&mut self) -> SLV_RDATA_BIT_W<'_, SLV_RD_BIT_SPEC> {
         SLV_RDATA_BIT_W::new(self, 0)
     }
 }

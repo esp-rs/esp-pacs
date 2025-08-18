@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to set L1-ICache0 tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn icache0_tag_object(&mut self) -> ICACHE0_TAG_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache0_tag_object(&mut self) -> ICACHE0_TAG_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE0_TAG_OBJECT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to set L1-ICache1 tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn icache1_tag_object(&mut self) -> ICACHE1_TAG_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache1_tag_object(&mut self) -> ICACHE1_TAG_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE1_TAG_OBJECT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn icache2_tag_object(&mut self) -> ICACHE2_TAG_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache2_tag_object(&mut self) -> ICACHE2_TAG_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE2_TAG_OBJECT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Reserved"]
     #[inline(always)]
-    pub fn icache3_tag_object(&mut self) -> ICACHE3_TAG_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache3_tag_object(&mut self) -> ICACHE3_TAG_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE3_TAG_OBJECT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to set L1-Cache tag memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn cache_tag_object(&mut self) -> CACHE_TAG_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn cache_tag_object(&mut self) -> CACHE_TAG_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         CACHE_TAG_OBJECT_W::new(self, 4)
     }
     #[doc = "Bit 6 - Set this bit to set L1-ICache0 data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn icache0_mem_object(&mut self) -> ICACHE0_MEM_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache0_mem_object(&mut self) -> ICACHE0_MEM_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE0_MEM_OBJECT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to set L1-ICache1 data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn icache1_mem_object(&mut self) -> ICACHE1_MEM_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache1_mem_object(&mut self) -> ICACHE1_MEM_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE1_MEM_OBJECT_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn icache2_mem_object(&mut self) -> ICACHE2_MEM_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache2_mem_object(&mut self) -> ICACHE2_MEM_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE2_MEM_OBJECT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Reserved"]
     #[inline(always)]
-    pub fn icache3_mem_object(&mut self) -> ICACHE3_MEM_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn icache3_mem_object(&mut self) -> ICACHE3_MEM_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         ICACHE3_MEM_OBJECT_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to set L1-Cache data memory as object. This bit should be onehot with the others fields inside this register."]
     #[inline(always)]
-    pub fn cache_mem_object(&mut self) -> CACHE_MEM_OBJECT_W<CACHE_OBJECT_CTRL_SPEC> {
+    pub fn cache_mem_object(&mut self) -> CACHE_MEM_OBJECT_W<'_, CACHE_OBJECT_CTRL_SPEC> {
         CACHE_MEM_OBJECT_W::new(self, 10)
     }
 }

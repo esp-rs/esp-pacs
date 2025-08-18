@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:14 - NA"]
     #[inline(always)]
-    pub fn vid_hline_time(&mut self) -> VID_HLINE_TIME_W<VID_HLINE_TIME_SPEC> {
+    pub fn vid_hline_time(&mut self) -> VID_HLINE_TIME_W<'_, VID_HLINE_TIME_SPEC> {
         VID_HLINE_TIME_W::new(self, 0)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to enable UART receiver's timeout function.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<TOUT_CONF_SPEC> {
+    pub fn rx_tout_en(&mut self) -> RX_TOUT_EN_W<'_, TOUT_CONF_SPEC> {
         RX_TOUT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to stop accumulating idle_cnt when hardware flow control works."]
     #[inline(always)]
-    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<TOUT_CONF_SPEC> {
+    pub fn rx_tout_flow_dis(&mut self) -> RX_TOUT_FLOW_DIS_W<'_, TOUT_CONF_SPEC> {
         RX_TOUT_FLOW_DIS_W::new(self, 1)
     }
     #[doc = "Bits 2:11 - Configures the amount of time that the bus can remain idle before timeout.\\\\ Measurement unit: bit time (the time to transmit 1 bit)."]
     #[inline(always)]
-    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<TOUT_CONF_SPEC> {
+    pub fn rx_tout_thrhd(&mut self) -> RX_TOUT_THRHD_W<'_, TOUT_CONF_SPEC> {
         RX_TOUT_THRHD_W::new(self, 2)
     }
 }

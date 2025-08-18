@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Shadow register for RED"]
     #[inline(always)]
-    pub fn red(&mut self) -> RED_W<DB_RED_CFG_SPEC> {
+    pub fn red(&mut self) -> RED_W<'_, DB_RED_CFG_SPEC> {
         RED_W::new(self, 0)
     }
 }

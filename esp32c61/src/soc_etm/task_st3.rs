@@ -366,174 +366,180 @@ impl W {
     #[inline(always)]
     pub fn tg1_task_alarm_start_timer1_st(
         &mut self,
-    ) -> TG1_TASK_ALARM_START_TIMER1_ST_W<TASK_ST3_SPEC> {
+    ) -> TG1_TASK_ALARM_START_TIMER1_ST_W<'_, TASK_ST3_SPEC> {
         TG1_TASK_ALARM_START_TIMER1_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents TG1_task_cnt_stop_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg1_task_cnt_stop_timer1_st(&mut self) -> TG1_TASK_CNT_STOP_TIMER1_ST_W<TASK_ST3_SPEC> {
+    pub fn tg1_task_cnt_stop_timer1_st(
+        &mut self,
+    ) -> TG1_TASK_CNT_STOP_TIMER1_ST_W<'_, TASK_ST3_SPEC> {
         TG1_TASK_CNT_STOP_TIMER1_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents TG1_task_cnt_reload_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg1_task_cnt_reload_timer1_st(
         &mut self,
-    ) -> TG1_TASK_CNT_RELOAD_TIMER1_ST_W<TASK_ST3_SPEC> {
+    ) -> TG1_TASK_CNT_RELOAD_TIMER1_ST_W<'_, TASK_ST3_SPEC> {
         TG1_TASK_CNT_RELOAD_TIMER1_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents TG1_task_cnt_cap_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg1_task_cnt_cap_timer1_st(&mut self) -> TG1_TASK_CNT_CAP_TIMER1_ST_W<TASK_ST3_SPEC> {
+    pub fn tg1_task_cnt_cap_timer1_st(
+        &mut self,
+    ) -> TG1_TASK_CNT_CAP_TIMER1_ST_W<'_, TASK_ST3_SPEC> {
         TG1_TASK_CNT_CAP_TIMER1_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents ADC_task_sample0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn adc_task_sample0_st(&mut self) -> ADC_TASK_SAMPLE0_ST_W<TASK_ST3_SPEC> {
+    pub fn adc_task_sample0_st(&mut self) -> ADC_TASK_SAMPLE0_ST_W<'_, TASK_ST3_SPEC> {
         ADC_TASK_SAMPLE0_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents ADC_task_sample1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn adc_task_sample1_st(&mut self) -> ADC_TASK_SAMPLE1_ST_W<TASK_ST3_SPEC> {
+    pub fn adc_task_sample1_st(&mut self) -> ADC_TASK_SAMPLE1_ST_W<'_, TASK_ST3_SPEC> {
         ADC_TASK_SAMPLE1_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents ADC_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn adc_task_start0_st(&mut self) -> ADC_TASK_START0_ST_W<TASK_ST3_SPEC> {
+    pub fn adc_task_start0_st(&mut self) -> ADC_TASK_START0_ST_W<'_, TASK_ST3_SPEC> {
         ADC_TASK_START0_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents ADC_task_stop0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn adc_task_stop0_st(&mut self) -> ADC_TASK_STOP0_ST_W<TASK_ST3_SPEC> {
+    pub fn adc_task_stop0_st(&mut self) -> ADC_TASK_STOP0_ST_W<'_, TASK_ST3_SPEC> {
         ADC_TASK_STOP0_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents REGDMA_task_start0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_task_start0_st(&mut self) -> REGDMA_TASK_START0_ST_W<TASK_ST3_SPEC> {
+    pub fn regdma_task_start0_st(&mut self) -> REGDMA_TASK_START0_ST_W<'_, TASK_ST3_SPEC> {
         REGDMA_TASK_START0_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents REGDMA_task_start1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_task_start1_st(&mut self) -> REGDMA_TASK_START1_ST_W<TASK_ST3_SPEC> {
+    pub fn regdma_task_start1_st(&mut self) -> REGDMA_TASK_START1_ST_W<'_, TASK_ST3_SPEC> {
         REGDMA_TASK_START1_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents REGDMA_task_start2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_task_start2_st(&mut self) -> REGDMA_TASK_START2_ST_W<TASK_ST3_SPEC> {
+    pub fn regdma_task_start2_st(&mut self) -> REGDMA_TASK_START2_ST_W<'_, TASK_ST3_SPEC> {
         REGDMA_TASK_START2_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents REGDMA_task_start3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn regdma_task_start3_st(&mut self) -> REGDMA_TASK_START3_ST_W<TASK_ST3_SPEC> {
+    pub fn regdma_task_start3_st(&mut self) -> REGDMA_TASK_START3_ST_W<'_, TASK_ST3_SPEC> {
         REGDMA_TASK_START3_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents TMPSNSR_task_start_sample trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tmpsnsr_task_start_sample_st(
         &mut self,
-    ) -> TMPSNSR_TASK_START_SAMPLE_ST_W<TASK_ST3_SPEC> {
+    ) -> TMPSNSR_TASK_START_SAMPLE_ST_W<'_, TASK_ST3_SPEC> {
         TMPSNSR_TASK_START_SAMPLE_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents TMPSNSR_task_stop_sample trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tmpsnsr_task_stop_sample_st(&mut self) -> TMPSNSR_TASK_STOP_SAMPLE_ST_W<TASK_ST3_SPEC> {
+    pub fn tmpsnsr_task_stop_sample_st(
+        &mut self,
+    ) -> TMPSNSR_TASK_STOP_SAMPLE_ST_W<'_, TASK_ST3_SPEC> {
         TMPSNSR_TASK_STOP_SAMPLE_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents I2S0_task_start_rx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_task_start_rx_st(&mut self) -> I2S0_TASK_START_RX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s0_task_start_rx_st(&mut self) -> I2S0_TASK_START_RX_ST_W<'_, TASK_ST3_SPEC> {
         I2S0_TASK_START_RX_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents I2S0_task_start_tx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_task_start_tx_st(&mut self) -> I2S0_TASK_START_TX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s0_task_start_tx_st(&mut self) -> I2S0_TASK_START_TX_ST_W<'_, TASK_ST3_SPEC> {
         I2S0_TASK_START_TX_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents I2S0_task_stop_rx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_task_stop_rx_st(&mut self) -> I2S0_TASK_STOP_RX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s0_task_stop_rx_st(&mut self) -> I2S0_TASK_STOP_RX_ST_W<'_, TASK_ST3_SPEC> {
         I2S0_TASK_STOP_RX_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents I2S0_task_stop_tx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s0_task_stop_tx_st(&mut self) -> I2S0_TASK_STOP_TX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s0_task_stop_tx_st(&mut self) -> I2S0_TASK_STOP_TX_ST_W<'_, TASK_ST3_SPEC> {
         I2S0_TASK_STOP_TX_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents I2S1_task_start_rx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s1_task_start_rx_st(&mut self) -> I2S1_TASK_START_RX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s1_task_start_rx_st(&mut self) -> I2S1_TASK_START_RX_ST_W<'_, TASK_ST3_SPEC> {
         I2S1_TASK_START_RX_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents I2S1_task_start_tx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s1_task_start_tx_st(&mut self) -> I2S1_TASK_START_TX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s1_task_start_tx_st(&mut self) -> I2S1_TASK_START_TX_ST_W<'_, TASK_ST3_SPEC> {
         I2S1_TASK_START_TX_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents I2S1_task_stop_rx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s1_task_stop_rx_st(&mut self) -> I2S1_TASK_STOP_RX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s1_task_stop_rx_st(&mut self) -> I2S1_TASK_STOP_RX_ST_W<'_, TASK_ST3_SPEC> {
         I2S1_TASK_STOP_RX_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents I2S1_task_stop_tx trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn i2s1_task_stop_tx_st(&mut self) -> I2S1_TASK_STOP_TX_ST_W<TASK_ST3_SPEC> {
+    pub fn i2s1_task_stop_tx_st(&mut self) -> I2S1_TASK_STOP_TX_ST_W<'_, TASK_ST3_SPEC> {
         I2S1_TASK_STOP_TX_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents ULP_task_wakeup_cpu trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_task_wakeup_cpu_st(&mut self) -> ULP_TASK_WAKEUP_CPU_ST_W<TASK_ST3_SPEC> {
+    pub fn ulp_task_wakeup_cpu_st(&mut self) -> ULP_TASK_WAKEUP_CPU_ST_W<'_, TASK_ST3_SPEC> {
         ULP_TASK_WAKEUP_CPU_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents ULP_task_int_cpu trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn ulp_task_int_cpu_st(&mut self) -> ULP_TASK_INT_CPU_ST_W<TASK_ST3_SPEC> {
+    pub fn ulp_task_int_cpu_st(&mut self) -> ULP_TASK_INT_CPU_ST_W<'_, TASK_ST3_SPEC> {
         ULP_TASK_INT_CPU_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents RTC_task_start trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_task_start_st(&mut self) -> RTC_TASK_START_ST_W<TASK_ST3_SPEC> {
+    pub fn rtc_task_start_st(&mut self) -> RTC_TASK_START_ST_W<'_, TASK_ST3_SPEC> {
         RTC_TASK_START_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents RTC_task_stop trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_task_stop_st(&mut self) -> RTC_TASK_STOP_ST_W<TASK_ST3_SPEC> {
+    pub fn rtc_task_stop_st(&mut self) -> RTC_TASK_STOP_ST_W<'_, TASK_ST3_SPEC> {
         RTC_TASK_STOP_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents RTC_task_clr trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_task_clr_st(&mut self) -> RTC_TASK_CLR_ST_W<TASK_ST3_SPEC> {
+    pub fn rtc_task_clr_st(&mut self) -> RTC_TASK_CLR_ST_W<'_, TASK_ST3_SPEC> {
         RTC_TASK_CLR_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents RTC_task_triggerflw trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn rtc_task_triggerflw_st(&mut self) -> RTC_TASK_TRIGGERFLW_ST_W<TASK_ST3_SPEC> {
+    pub fn rtc_task_triggerflw_st(&mut self) -> RTC_TASK_TRIGGERFLW_ST_W<'_, TASK_ST3_SPEC> {
         RTC_TASK_TRIGGERFLW_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents GDMA_AHB_task_in_start_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_ahb_task_in_start_ch0_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_IN_START_CH0_ST_W<TASK_ST3_SPEC> {
+    ) -> GDMA_AHB_TASK_IN_START_CH0_ST_W<'_, TASK_ST3_SPEC> {
         GDMA_AHB_TASK_IN_START_CH0_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents GDMA_AHB_task_in_start_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_ahb_task_in_start_ch1_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_IN_START_CH1_ST_W<TASK_ST3_SPEC> {
+    ) -> GDMA_AHB_TASK_IN_START_CH1_ST_W<'_, TASK_ST3_SPEC> {
         GDMA_AHB_TASK_IN_START_CH1_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents GDMA_AHB_task_in_start_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_ahb_task_in_start_ch2_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_IN_START_CH2_ST_W<TASK_ST3_SPEC> {
+    ) -> GDMA_AHB_TASK_IN_START_CH2_ST_W<'_, TASK_ST3_SPEC> {
         GDMA_AHB_TASK_IN_START_CH2_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents GDMA_AHB_task_out_start_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn gdma_ahb_task_out_start_ch0_st(
         &mut self,
-    ) -> GDMA_AHB_TASK_OUT_START_CH0_ST_W<TASK_ST3_SPEC> {
+    ) -> GDMA_AHB_TASK_OUT_START_CH0_ST_W<'_, TASK_ST3_SPEC> {
         GDMA_AHB_TASK_OUT_START_CH0_ST_W::new(self, 31)
     }
 }

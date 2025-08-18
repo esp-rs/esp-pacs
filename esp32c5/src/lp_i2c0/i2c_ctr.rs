@@ -100,57 +100,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: direct output, 0: open drain output."]
     #[inline(always)]
-    pub fn i2c_sda_force_out(&mut self) -> I2C_SDA_FORCE_OUT_W<I2C_CTR_SPEC> {
+    pub fn i2c_sda_force_out(&mut self) -> I2C_SDA_FORCE_OUT_W<'_, I2C_CTR_SPEC> {
         I2C_SDA_FORCE_OUT_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: direct output, 0: open drain output."]
     #[inline(always)]
-    pub fn i2c_scl_force_out(&mut self) -> I2C_SCL_FORCE_OUT_W<I2C_CTR_SPEC> {
+    pub fn i2c_scl_force_out(&mut self) -> I2C_SCL_FORCE_OUT_W<'_, I2C_CTR_SPEC> {
         I2C_SCL_FORCE_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to select the sample mode.1: sample SDA data on the SCL low level.0: sample SDA data on the SCL high level."]
     #[inline(always)]
-    pub fn i2c_sample_scl_level(&mut self) -> I2C_SAMPLE_SCL_LEVEL_W<I2C_CTR_SPEC> {
+    pub fn i2c_sample_scl_level(&mut self) -> I2C_SAMPLE_SCL_LEVEL_W<'_, I2C_CTR_SPEC> {
         I2C_SAMPLE_SCL_LEVEL_W::new(self, 2)
     }
     #[doc = "Bit 3 - This register is used to configure the ACK value that need to sent by master when the rx_fifo_cnt has reached the threshold."]
     #[inline(always)]
-    pub fn i2c_rx_full_ack_level(&mut self) -> I2C_RX_FULL_ACK_LEVEL_W<I2C_CTR_SPEC> {
+    pub fn i2c_rx_full_ack_level(&mut self) -> I2C_RX_FULL_ACK_LEVEL_W<'_, I2C_CTR_SPEC> {
         I2C_RX_FULL_ACK_LEVEL_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to start sending the data in txfifo."]
     #[inline(always)]
-    pub fn i2c_trans_start(&mut self) -> I2C_TRANS_START_W<I2C_CTR_SPEC> {
+    pub fn i2c_trans_start(&mut self) -> I2C_TRANS_START_W<'_, I2C_CTR_SPEC> {
         I2C_TRANS_START_W::new(self, 5)
     }
     #[doc = "Bit 6 - This bit is used to control the sending mode for data needing to be sent. 1: send data from the least significant bit,0: send data from the most significant bit."]
     #[inline(always)]
-    pub fn i2c_tx_lsb_first(&mut self) -> I2C_TX_LSB_FIRST_W<I2C_CTR_SPEC> {
+    pub fn i2c_tx_lsb_first(&mut self) -> I2C_TX_LSB_FIRST_W<'_, I2C_CTR_SPEC> {
         I2C_TX_LSB_FIRST_W::new(self, 6)
     }
     #[doc = "Bit 7 - This bit is used to control the storage mode for received data.1: receive data from the least significant bit,0: receive data from the most significant bit."]
     #[inline(always)]
-    pub fn i2c_rx_lsb_first(&mut self) -> I2C_RX_LSB_FIRST_W<I2C_CTR_SPEC> {
+    pub fn i2c_rx_lsb_first(&mut self) -> I2C_RX_LSB_FIRST_W<'_, I2C_CTR_SPEC> {
         I2C_RX_LSB_FIRST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Reserved"]
     #[inline(always)]
-    pub fn i2c_clk_en(&mut self) -> I2C_CLK_EN_W<I2C_CTR_SPEC> {
+    pub fn i2c_clk_en(&mut self) -> I2C_CLK_EN_W<'_, I2C_CTR_SPEC> {
         I2C_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - This is the enable bit for arbitration_lost."]
     #[inline(always)]
-    pub fn i2c_arbitration_en(&mut self) -> I2C_ARBITRATION_EN_W<I2C_CTR_SPEC> {
+    pub fn i2c_arbitration_en(&mut self) -> I2C_ARBITRATION_EN_W<'_, I2C_CTR_SPEC> {
         I2C_ARBITRATION_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - This register is used to reset the scl FMS."]
     #[inline(always)]
-    pub fn i2c_fsm_rst(&mut self) -> I2C_FSM_RST_W<I2C_CTR_SPEC> {
+    pub fn i2c_fsm_rst(&mut self) -> I2C_FSM_RST_W<'_, I2C_CTR_SPEC> {
         I2C_FSM_RST_W::new(self, 10)
     }
     #[doc = "Bit 11 - synchronization bit"]
     #[inline(always)]
-    pub fn i2c_conf_upgate(&mut self) -> I2C_CONF_UPGATE_W<I2C_CTR_SPEC> {
+    pub fn i2c_conf_upgate(&mut self) -> I2C_CONF_UPGATE_W<'_, I2C_CTR_SPEC> {
         I2C_CONF_UPGATE_W::new(self, 11)
     }
 }

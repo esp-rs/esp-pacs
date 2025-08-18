@@ -15,19 +15,19 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
-    pub fn t(&mut self, n: u8) -> T_W<INT_CLR_SPEC> {
+    pub fn t(&mut self, n: u8) -> T_W<'_, INT_CLR_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         T_W::new(self, n * 0)
     }
     #[doc = "Bit 0 - Set this bit to clear the TIMG_T0_INT interrupt."]
     #[inline(always)]
-    pub fn t0(&mut self) -> T_W<INT_CLR_SPEC> {
+    pub fn t0(&mut self) -> T_W<'_, INT_CLR_SPEC> {
         T_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the TIMG_WDT_INT interrupt."]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_CLR_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_CLR_SPEC> {
         WDT_W::new(self, 1)
     }
 }

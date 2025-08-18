@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - This register stores the seperator char seperator char is used to seperate the data frame."]
     #[inline(always)]
-    pub fn seper_char(&mut self) -> SEPER_CHAR_W<ESC_CONF_SPEC> {
+    pub fn seper_char(&mut self) -> SEPER_CHAR_W<'_, ESC_CONF_SPEC> {
         SEPER_CHAR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - This register stores thee first char used to replace seperator char in data."]
     #[inline(always)]
-    pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<ESC_CONF_SPEC> {
+    pub fn seper_esc_char0(&mut self) -> SEPER_ESC_CHAR0_W<'_, ESC_CONF_SPEC> {
         SEPER_ESC_CHAR0_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - This register stores the second char used to replace seperator char in data . 0xdc 0xdb replace 0xc0 by default."]
     #[inline(always)]
-    pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<ESC_CONF_SPEC> {
+    pub fn seper_esc_char1(&mut self) -> SEPER_ESC_CHAR1_W<'_, ESC_CONF_SPEC> {
         SEPER_ESC_CHAR1_W::new(self, 16)
     }
 }

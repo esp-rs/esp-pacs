@@ -174,62 +174,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to disable SPI_CS0 pin.\\\\ 0: SPI_CS0 signal is from/to SPI_CS0 pin.\\\\ 1: Disable SPI_CS0 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs0_dis(&mut self) -> CS0_DIS_W<MISC_SPEC> {
+    pub fn cs0_dis(&mut self) -> CS0_DIS_W<'_, MISC_SPEC> {
         CS0_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether or not to disable SPI_CS1 pin.\\\\ 0: SPI_CS1 signal is from/to SPI_CS1 pin.\\\\ 1: Disable SPI_CS1 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs1_dis(&mut self) -> CS1_DIS_W<MISC_SPEC> {
+    pub fn cs1_dis(&mut self) -> CS1_DIS_W<'_, MISC_SPEC> {
         CS1_DIS_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to disable SPI_CS2 pin.\\\\ 0: SPI_CS2 signal is from/to SPI_CS2 pin.\\\\ 1: Disable SPI_CS2 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs2_dis(&mut self) -> CS2_DIS_W<MISC_SPEC> {
+    pub fn cs2_dis(&mut self) -> CS2_DIS_W<'_, MISC_SPEC> {
         CS2_DIS_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures whether or not to disable SPI_CS3 pin.\\\\ 0: SPI_CS3 signal is from/to SPI_CS3 pin.\\\\ 1: Disable SPI_CS3 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs3_dis(&mut self) -> CS3_DIS_W<MISC_SPEC> {
+    pub fn cs3_dis(&mut self) -> CS3_DIS_W<'_, MISC_SPEC> {
         CS3_DIS_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to disable SPI_CS4 pin.\\\\ 0: SPI_CS4 signal is from/to SPI_CS4 pin.\\\\ 1: Disable SPI_CS4 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs4_dis(&mut self) -> CS4_DIS_W<MISC_SPEC> {
+    pub fn cs4_dis(&mut self) -> CS4_DIS_W<'_, MISC_SPEC> {
         CS4_DIS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to disable SPI_CS5 pin.\\\\ 0: SPI_CS5 signal is from/to SPI_CS5 pin.\\\\ 1: Disable SPI_CS5 pin.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs5_dis(&mut self) -> CS5_DIS_W<MISC_SPEC> {
+    pub fn cs5_dis(&mut self) -> CS5_DIS_W<'_, MISC_SPEC> {
         CS5_DIS_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to disable SPI_CLK output.\\\\ 0: Enable\\\\ 1: Disable\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn ck_dis(&mut self) -> CK_DIS_W<MISC_SPEC> {
+    pub fn ck_dis(&mut self) -> CK_DIS_W<'_, MISC_SPEC> {
         CK_DIS_W::new(self, 6)
     }
     #[doc = "Bits 7:12 - Configures the polarity of SPI_CS7 (7 = 0-5) line in master transfer.\\\\ 0: SPI_CS7 is low active.\\\\ 1: SPI_CS7 is high active.\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<MISC_SPEC> {
+    pub fn master_cs_pol(&mut self) -> MASTER_CS_POL_W<'_, MISC_SPEC> {
         MASTER_CS_POL_W::new(self, 7)
     }
     #[doc = "Bit 23 - Configures whether or not invert SPI slave input CS polarity.\\\\ 0: Not change\\\\ 1: Invert\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn slave_cs_pol(&mut self) -> SLAVE_CS_POL_W<MISC_SPEC> {
+    pub fn slave_cs_pol(&mut self) -> SLAVE_CS_POL_W<'_, MISC_SPEC> {
         SLAVE_CS_POL_W::new(self, 23)
     }
     #[doc = "Bit 29 - Configures the level of SPI_CLK line when GP-SPI2 is in idle.\\\\ 0: Low\\\\ 1: High\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<MISC_SPEC> {
+    pub fn ck_idle_edge(&mut self) -> CK_IDLE_EDGE_W<'_, MISC_SPEC> {
         CK_IDLE_EDGE_W::new(self, 29)
     }
     #[doc = "Bit 30 - Configures whether or not to keep the SPI_CS line low.\\\\ 0: Not keep low\\\\ 1: Keep low\\\\ Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<MISC_SPEC> {
+    pub fn cs_keep_active(&mut self) -> CS_KEEP_ACTIVE_W<'_, MISC_SPEC> {
         CS_KEEP_ACTIVE_W::new(self, 30)
     }
     #[doc = "Bit 31 - 1: SPI quad input swap enable, swap FSPID with FSPIQ, swap FSPIWP with FSPIHD. 0: spi quad input swap disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn quad_din_pin_swap(&mut self) -> QUAD_DIN_PIN_SWAP_W<MISC_SPEC> {
+    pub fn quad_din_pin_swap(&mut self) -> QUAD_DIN_PIN_SWAP_W<'_, MISC_SPEC> {
         QUAD_DIN_PIN_SWAP_W::new(self, 31)
     }
 }

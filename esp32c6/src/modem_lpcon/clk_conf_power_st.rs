@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:19"]
     #[inline(always)]
-    pub fn clk_wifipwr_st_map(&mut self) -> CLK_WIFIPWR_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
+    pub fn clk_wifipwr_st_map(&mut self) -> CLK_WIFIPWR_ST_MAP_W<'_, CLK_CONF_POWER_ST_SPEC> {
         CLK_WIFIPWR_ST_MAP_W::new(self, 16)
     }
     #[doc = "Bits 20:23"]
     #[inline(always)]
-    pub fn clk_coex_st_map(&mut self) -> CLK_COEX_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
+    pub fn clk_coex_st_map(&mut self) -> CLK_COEX_ST_MAP_W<'_, CLK_CONF_POWER_ST_SPEC> {
         CLK_COEX_ST_MAP_W::new(self, 20)
     }
     #[doc = "Bits 24:27"]
     #[inline(always)]
-    pub fn clk_i2c_mst_st_map(&mut self) -> CLK_I2C_MST_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
+    pub fn clk_i2c_mst_st_map(&mut self) -> CLK_I2C_MST_ST_MAP_W<'_, CLK_CONF_POWER_ST_SPEC> {
         CLK_I2C_MST_ST_MAP_W::new(self, 24)
     }
     #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn clk_lp_apb_st_map(&mut self) -> CLK_LP_APB_ST_MAP_W<CLK_CONF_POWER_ST_SPEC> {
+    pub fn clk_lp_apb_st_map(&mut self) -> CLK_LP_APB_ST_MAP_W<'_, CLK_CONF_POWER_ST_SPEC> {
         CLK_LP_APB_ST_MAP_W::new(self, 28)
     }
 }

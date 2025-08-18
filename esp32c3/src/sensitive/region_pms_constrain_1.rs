@@ -107,49 +107,49 @@ impl W {
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_0(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - region_pms_constrain_world_0_area_1"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_1(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - region_pms_constrain_world_0_area_2"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_2(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - region_pms_constrain_world_0_area_3"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_3(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - region_pms_constrain_world_0_area_4"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_4(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_4_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - region_pms_constrain_world_0_area_5"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_5(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_5_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - region_pms_constrain_world_0_area_6"]
     #[inline(always)]
     pub fn region_pms_constrain_world_0_area_6(
         &mut self,
-    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W<REGION_PMS_CONSTRAIN_1_SPEC> {
+    ) -> REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W<'_, REGION_PMS_CONSTRAIN_1_SPEC> {
         REGION_PMS_CONSTRAIN_WORLD_0_AREA_6_W::new(self, 12)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this field configures sharpen threshold for detail"]
     #[inline(always)]
-    pub fn sharp_threshold_low(&mut self) -> SHARP_THRESHOLD_LOW_W<SHARP_CTRL0_SPEC> {
+    pub fn sharp_threshold_low(&mut self) -> SHARP_THRESHOLD_LOW_W<'_, SHARP_CTRL0_SPEC> {
         SHARP_THRESHOLD_LOW_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this field configures sharpen threshold for edge"]
     #[inline(always)]
-    pub fn sharp_threshold_high(&mut self) -> SHARP_THRESHOLD_HIGH_W<SHARP_CTRL0_SPEC> {
+    pub fn sharp_threshold_high(&mut self) -> SHARP_THRESHOLD_HIGH_W<'_, SHARP_CTRL0_SPEC> {
         SHARP_THRESHOLD_HIGH_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures sharpen amount for detail"]
     #[inline(always)]
-    pub fn sharp_amount_low(&mut self) -> SHARP_AMOUNT_LOW_W<SHARP_CTRL0_SPEC> {
+    pub fn sharp_amount_low(&mut self) -> SHARP_AMOUNT_LOW_W<'_, SHARP_CTRL0_SPEC> {
         SHARP_AMOUNT_LOW_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - this field configures sharpen amount for edge"]
     #[inline(always)]
-    pub fn sharp_amount_high(&mut self) -> SHARP_AMOUNT_HIGH_W<SHARP_CTRL0_SPEC> {
+    pub fn sharp_amount_high(&mut self) -> SHARP_AMOUNT_HIGH_W<'_, SHARP_CTRL0_SPEC> {
         SHARP_AMOUNT_HIGH_W::new(self, 24)
     }
 }

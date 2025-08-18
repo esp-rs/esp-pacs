@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - this bit configures the threshold to detect black img in check mode, or the low threshold(use 8 bit 0~255) in dyn method 0, or the low threshold factor (use 5 bit 10000-> 16/16, 00001->1/16, 0/16~16/16) in dyn method 1"]
     #[inline(always)]
-    pub fn dpc_threshold_l(&mut self) -> DPC_THRESHOLD_L_W<DPC_CONF_SPEC> {
+    pub fn dpc_threshold_l(&mut self) -> DPC_THRESHOLD_L_W<'_, DPC_CONF_SPEC> {
         DPC_THRESHOLD_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - this bit configures the threshold to detect white img in check mode, or the high threshold(use 8 bit 0~255) in dyn method 0, or the high threshold factor (use 5 bit 10000-> 16/16, 00001->1/16, 0/16~16/16) in dyn method 1"]
     #[inline(always)]
-    pub fn dpc_threshold_h(&mut self) -> DPC_THRESHOLD_H_W<DPC_CONF_SPEC> {
+    pub fn dpc_threshold_h(&mut self) -> DPC_THRESHOLD_H_W<'_, DPC_CONF_SPEC> {
         DPC_THRESHOLD_H_W::new(self, 8)
     }
     #[doc = "Bits 16:21 - this field configures the dynamic correction method 1 dark factor"]
     #[inline(always)]
-    pub fn dpc_factor_dark(&mut self) -> DPC_FACTOR_DARK_W<DPC_CONF_SPEC> {
+    pub fn dpc_factor_dark(&mut self) -> DPC_FACTOR_DARK_W<'_, DPC_CONF_SPEC> {
         DPC_FACTOR_DARK_W::new(self, 16)
     }
     #[doc = "Bits 22:27 - this field configures the dynamic correction method 1 bright factor"]
     #[inline(always)]
-    pub fn dpc_factor_brig(&mut self) -> DPC_FACTOR_BRIG_W<DPC_CONF_SPEC> {
+    pub fn dpc_factor_brig(&mut self) -> DPC_FACTOR_BRIG_W<'_, DPC_CONF_SPEC> {
         DPC_FACTOR_BRIG_W::new(self, 22)
     }
 }

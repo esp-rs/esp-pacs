@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<STATUS_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:25 - GPIO interrupt status set register for GPIO0-25"]
     #[inline(always)]
-    pub fn status_w1ts(&mut self) -> STATUS_W1TS_W<STATUS_W1TS_SPEC> {
+    pub fn status_w1ts(&mut self) -> STATUS_W1TS_W<'_, STATUS_W1TS_SPEC> {
         STATUS_W1TS_W::new(self, 0)
     }
 }

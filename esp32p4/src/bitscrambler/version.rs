@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Reserved"]
     #[inline(always)]
-    pub fn bitscrambler_ver(&mut self) -> BITSCRAMBLER_VER_W<VERSION_SPEC> {
+    pub fn bitscrambler_ver(&mut self) -> BITSCRAMBLER_VER_W<'_, VERSION_SPEC> {
         BITSCRAMBLER_VER_W::new(self, 0)
     }
 }

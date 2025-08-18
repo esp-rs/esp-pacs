@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
-    pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W<SAR_START_FORCE_SPEC> {
+    pub fn sar1_bit_width(&mut self) -> SAR1_BIT_WIDTH_W<'_, SAR_START_FORCE_SPEC> {
         SAR1_BIT_WIDTH_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - 00: 9 bit 01: 10 bits 10: 11bits 11: 12bits"]
     #[inline(always)]
-    pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W<SAR_START_FORCE_SPEC> {
+    pub fn sar2_bit_width(&mut self) -> SAR2_BIT_WIDTH_W<'_, SAR_START_FORCE_SPEC> {
         SAR2_BIT_WIDTH_W::new(self, 2)
     }
     #[doc = "Bit 4 - SAR2_EN_TEST only active when reg_sar2_dig_force = 0"]
     #[inline(always)]
-    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<SAR_START_FORCE_SPEC> {
+    pub fn sar2_en_test(&mut self) -> SAR2_EN_TEST_W<'_, SAR_START_FORCE_SPEC> {
         SAR2_EN_TEST_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - SAR2_PWDET_CCT PA power detector capacitance tuning."]
     #[inline(always)]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_START_FORCE_SPEC> {
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<'_, SAR_START_FORCE_SPEC> {
         SAR2_PWDET_CCT_W::new(self, 5)
     }
     #[doc = "Bit 8 - 1: ULP-coprocessor is started by SW 0: ULP-coprocessor is started by timer"]
     #[inline(always)]
-    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<SAR_START_FORCE_SPEC> {
+    pub fn ulp_cp_force_start_top(&mut self) -> ULP_CP_FORCE_START_TOP_W<'_, SAR_START_FORCE_SPEC> {
         ULP_CP_FORCE_START_TOP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to start ULP-coprocessor only active when reg_ulp_cp_force_start_top = 1"]
     #[inline(always)]
-    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<SAR_START_FORCE_SPEC> {
+    pub fn ulp_cp_start_top(&mut self) -> ULP_CP_START_TOP_W<'_, SAR_START_FORCE_SPEC> {
         ULP_CP_START_TOP_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<SAR_START_FORCE_SPEC> {
+    pub fn sarclk_en(&mut self) -> SARCLK_EN_W<'_, SAR_START_FORCE_SPEC> {
         SARCLK_EN_W::new(self, 10)
     }
     #[doc = "Bits 11:21 - initialized PC for ULP-coprocessor"]
     #[inline(always)]
-    pub fn pc_init(&mut self) -> PC_INIT_W<SAR_START_FORCE_SPEC> {
+    pub fn pc_init(&mut self) -> PC_INIT_W<'_, SAR_START_FORCE_SPEC> {
         PC_INIT_W::new(self, 11)
     }
     #[doc = "Bit 22 - stop SAR ADC2 conversion"]
     #[inline(always)]
-    pub fn sar2_stop(&mut self) -> SAR2_STOP_W<SAR_START_FORCE_SPEC> {
+    pub fn sar2_stop(&mut self) -> SAR2_STOP_W<'_, SAR_START_FORCE_SPEC> {
         SAR2_STOP_W::new(self, 22)
     }
     #[doc = "Bit 23 - stop SAR ADC1 conversion"]
     #[inline(always)]
-    pub fn sar1_stop(&mut self) -> SAR1_STOP_W<SAR_START_FORCE_SPEC> {
+    pub fn sar1_stop(&mut self) -> SAR1_STOP_W<'_, SAR_START_FORCE_SPEC> {
         SAR1_STOP_W::new(self, 23)
     }
     #[doc = "Bit 24 - N/A"]
     #[inline(always)]
-    pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W<SAR_START_FORCE_SPEC> {
+    pub fn sar2_pwdet_en(&mut self) -> SAR2_PWDET_EN_W<'_, SAR_START_FORCE_SPEC> {
         SAR2_PWDET_EN_W::new(self, 24)
     }
 }

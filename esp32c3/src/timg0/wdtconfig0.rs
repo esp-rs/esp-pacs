@@ -126,62 +126,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 12 - reg_wdt_appcpu_reset_en."]
     #[inline(always)]
-    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_appcpu_reset_en(&mut self) -> WDT_APPCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_APPCPU_RESET_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - reg_wdt_procpu_reset_en."]
     #[inline(always)]
-    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_procpu_reset_en(&mut self) -> WDT_PROCPU_RESET_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_PROCPU_RESET_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - reg_wdt_flashboot_mod_en."]
     #[inline(always)]
-    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_flashboot_mod_en(&mut self) -> WDT_FLASHBOOT_MOD_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_FLASHBOOT_MOD_EN_W::new(self, 14)
     }
     #[doc = "Bits 15:17 - reg_wdt_sys_reset_length."]
     #[inline(always)]
-    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_sys_reset_length(&mut self) -> WDT_SYS_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_SYS_RESET_LENGTH_W::new(self, 15)
     }
     #[doc = "Bits 18:20 - reg_wdt_cpu_reset_length."]
     #[inline(always)]
-    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_cpu_reset_length(&mut self) -> WDT_CPU_RESET_LENGTH_W<'_, WDTCONFIG0_SPEC> {
         WDT_CPU_RESET_LENGTH_W::new(self, 18)
     }
     #[doc = "Bit 21 - reg_wdt_use_xtal."]
     #[inline(always)]
-    pub fn wdt_use_xtal(&mut self) -> WDT_USE_XTAL_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_use_xtal(&mut self) -> WDT_USE_XTAL_W<'_, WDTCONFIG0_SPEC> {
         WDT_USE_XTAL_W::new(self, 21)
     }
     #[doc = "Bit 22 - reg_wdt_conf_update_en."]
     #[inline(always)]
-    pub fn wdt_conf_update_en(&mut self) -> WDT_CONF_UPDATE_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_conf_update_en(&mut self) -> WDT_CONF_UPDATE_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_CONF_UPDATE_EN_W::new(self, 22)
     }
     #[doc = "Bits 23:24 - reg_wdt_stg3."]
     #[inline(always)]
-    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg3(&mut self) -> WDT_STG3_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG3_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - reg_wdt_stg2."]
     #[inline(always)]
-    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg2(&mut self) -> WDT_STG2_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG2_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - reg_wdt_stg1."]
     #[inline(always)]
-    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg1(&mut self) -> WDT_STG1_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG1_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - reg_wdt_stg0."]
     #[inline(always)]
-    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_stg0(&mut self) -> WDT_STG0_W<'_, WDTCONFIG0_SPEC> {
         WDT_STG0_W::new(self, 29)
     }
     #[doc = "Bit 31 - reg_wdt_en."]
     #[inline(always)]
-    pub fn wdt_en(&mut self) -> WDT_EN_W<WDTCONFIG0_SPEC> {
+    pub fn wdt_en(&mut self) -> WDT_EN_W<'_, WDTCONFIG0_SPEC> {
         WDT_EN_W::new(self, 31)
     }
 }

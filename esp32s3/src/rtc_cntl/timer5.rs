@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:15 - minimal sleep cycles in slow_clk_rtc"]
     #[inline(always)]
-    pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<TIMER5_SPEC> {
+    pub fn min_slp_val(&mut self) -> MIN_SLP_VAL_W<'_, TIMER5_SPEC> {
         MIN_SLP_VAL_W::new(self, 8)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - The number of bytes contained in a block 12line"]
     #[inline(always)]
-    pub fn block_length_12line(&mut self) -> BLOCK_LENGTH_12LINE_W<CONF3_SPEC> {
+    pub fn block_length_12line(&mut self) -> BLOCK_LENGTH_12LINE_W<'_, CONF3_SPEC> {
         BLOCK_LENGTH_12LINE_W::new(self, 0)
     }
     #[doc = "Bits 14:27 - The number of bytes contained in a block 4line"]
     #[inline(always)]
-    pub fn block_length_4line(&mut self) -> BLOCK_LENGTH_4LINE_W<CONF3_SPEC> {
+    pub fn block_length_4line(&mut self) -> BLOCK_LENGTH_4LINE_W<'_, CONF3_SPEC> {
         BLOCK_LENGTH_4LINE_W::new(self, 14)
     }
 }

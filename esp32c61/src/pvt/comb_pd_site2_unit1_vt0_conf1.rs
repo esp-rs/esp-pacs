@@ -66,21 +66,21 @@ impl W {
     #[inline(always)]
     pub fn monitor_en_vt0_pd_site2_unit1(
         &mut self,
-    ) -> MONITOR_EN_VT0_PD_SITE2_UNIT1_W<COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
+    ) -> MONITOR_EN_VT0_PD_SITE2_UNIT1_W<'_, COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
         MONITOR_EN_VT0_PD_SITE2_UNIT1_W::new(self, 0)
     }
     #[doc = "Bit 1 - needs field desc"]
     #[inline(always)]
     pub fn timing_err_cnt_clr_vt0_pd_site2_unit1(
         &mut self,
-    ) -> TIMING_ERR_CNT_CLR_VT0_PD_SITE2_UNIT1_W<COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
+    ) -> TIMING_ERR_CNT_CLR_VT0_PD_SITE2_UNIT1_W<'_, COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
         TIMING_ERR_CNT_CLR_VT0_PD_SITE2_UNIT1_W::new(self, 1)
     }
     #[doc = "Bits 2:9 - needs field desc"]
     #[inline(always)]
     pub fn delay_limit_vt0_pd_site2_unit1(
         &mut self,
-    ) -> DELAY_LIMIT_VT0_PD_SITE2_UNIT1_W<COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
+    ) -> DELAY_LIMIT_VT0_PD_SITE2_UNIT1_W<'_, COMB_PD_SITE2_UNIT1_VT0_CONF1_SPEC> {
         DELAY_LIMIT_VT0_PD_SITE2_UNIT1_W::new(self, 2)
     }
 }

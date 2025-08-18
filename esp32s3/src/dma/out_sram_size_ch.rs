@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - This register is used to configure the size of L2 Tx FIFO for Tx channel 0. 0:16 bytes. 1:24 bytes. 2:32 bytes. 3: 40 bytes. 4: 48 bytes. 5:56 bytes. 6: 64 bytes. 7: 72 bytes. 8: 80 bytes."]
     #[inline(always)]
-    pub fn out_size(&mut self) -> OUT_SIZE_W<OUT_SRAM_SIZE_CH_SPEC> {
+    pub fn out_size(&mut self) -> OUT_SIZE_W<'_, OUT_SRAM_SIZE_CH_SPEC> {
         OUT_SIZE_W::new(self, 0)
     }
 }

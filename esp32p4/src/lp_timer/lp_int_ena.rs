@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<LP_INT_ENA_SPEC> {
+    pub fn main_timer_overflow(&mut self) -> MAIN_TIMER_OVERFLOW_W<'_, LP_INT_ENA_SPEC> {
         MAIN_TIMER_OVERFLOW_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<LP_INT_ENA_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, LP_INT_ENA_SPEC> {
         MAIN_TIMER_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<STORE0_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, STORE0_SPEC> {
         DATA_W::new(self, 0)
     }
 }

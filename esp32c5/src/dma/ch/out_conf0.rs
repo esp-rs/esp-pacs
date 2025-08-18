@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures the reset state of AHB_DMA channel %s TX FSM and TX FIFO pointer.\\\\0: Release reset\\\\1: Reset\\\\"]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<OUT_CONF0_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, OUT_CONF0_SPEC> {
         OUT_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved."]
     #[inline(always)]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<OUT_CONF0_SPEC> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<'_, OUT_CONF0_SPEC> {
         OUT_LOOP_TEST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures whether or not to enable automatic outlink write-back when all the data in TX FIFO has been transmitted.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<OUT_CONF0_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, OUT_CONF0_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures when to generate EOF flag.\\\\0: EOF flag for TX channel %s is generated when data to be transmitted has been pushed into FIFO in AHB_DMA.\\\\ 1: EOF flag for TX channel %s is generated when data to be transmitted has been popped from FIFO in AHB_DMA.\\\\"]
     #[inline(always)]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<OUT_CONF0_SPEC> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<'_, OUT_CONF0_SPEC> {
         OUT_EOF_MODE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Configures whether or not to enable INCR burst transfer for TX channel %s reading descriptors.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<OUT_CONF0_SPEC> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, OUT_CONF0_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Configures whether or not to enable INCR burst transfer for TX channel %s"]
     #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<OUT_CONF0_SPEC> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, OUT_CONF0_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Configures whether or not to enable ETM control for TX channel %s.\\\\0: Disable\\\\1: Enable\\\\"]
     #[inline(always)]
-    pub fn out_etm_en(&mut self) -> OUT_ETM_EN_W<OUT_CONF0_SPEC> {
+    pub fn out_etm_en(&mut self) -> OUT_ETM_EN_W<'_, OUT_CONF0_SPEC> {
         OUT_ETM_EN_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Configures max burst size for TX channel%s.\\\\2'b00: single\\\\ 2'b01: incr4\\\\ 2'b10: incr8\\\\ 2'b11: incr16\\\\"]
     #[inline(always)]
-    pub fn out_data_burst_mode_sel(&mut self) -> OUT_DATA_BURST_MODE_SEL_W<OUT_CONF0_SPEC> {
+    pub fn out_data_burst_mode_sel(&mut self) -> OUT_DATA_BURST_MODE_SEL_W<'_, OUT_CONF0_SPEC> {
         OUT_DATA_BURST_MODE_SEL_W::new(self, 8)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures the horizontial start macroblocks of region 6 video B."]
     #[inline(always)]
-    pub fn x(&mut self) -> X_W<B_ROI_REGION6_SPEC> {
+    pub fn x(&mut self) -> X_W<'_, B_ROI_REGION6_SPEC> {
         X_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Configures the vertical start macroblocks of region 6 in video B."]
     #[inline(always)]
-    pub fn y(&mut self) -> Y_W<B_ROI_REGION6_SPEC> {
+    pub fn y(&mut self) -> Y_W<'_, B_ROI_REGION6_SPEC> {
         Y_W::new(self, 7)
     }
     #[doc = "Bits 14:20 - Configures the number of macroblocks in horizontal direction of the region 6 in video B."]
     #[inline(always)]
-    pub fn x_len(&mut self) -> X_LEN_W<B_ROI_REGION6_SPEC> {
+    pub fn x_len(&mut self) -> X_LEN_W<'_, B_ROI_REGION6_SPEC> {
         X_LEN_W::new(self, 14)
     }
     #[doc = "Bits 21:27 - Configures the number of macroblocks in vertical direction of the region 6 in video B."]
     #[inline(always)]
-    pub fn y_len(&mut self) -> Y_LEN_W<B_ROI_REGION6_SPEC> {
+    pub fn y_len(&mut self) -> Y_LEN_W<'_, B_ROI_REGION6_SPEC> {
         Y_LEN_W::new(self, 21)
     }
     #[doc = "Bit 28 - Configures whether or not to open Video B ROI of region 6 .\\\\0:Close ROI\\\\1:Open ROI."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<B_ROI_REGION6_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, B_ROI_REGION6_SPEC> {
         EN_W::new(self, 28)
     }
 }

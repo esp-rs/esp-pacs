@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - DCDC pre-on/post off delay"]
     #[inline(always)]
-    pub fn dcdc_pre_delay(&mut self) -> DCDC_PRE_DELAY_W<DCM_WAIT_DELAY_SPEC> {
+    pub fn dcdc_pre_delay(&mut self) -> DCDC_PRE_DELAY_W<'_, DCM_WAIT_DELAY_SPEC> {
         DCDC_PRE_DELAY_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - DCDC fb res off delay"]
     #[inline(always)]
-    pub fn dcdc_res_off_delay(&mut self) -> DCDC_RES_OFF_DELAY_W<DCM_WAIT_DELAY_SPEC> {
+    pub fn dcdc_res_off_delay(&mut self) -> DCDC_RES_OFF_DELAY_W<'_, DCM_WAIT_DELAY_SPEC> {
         DCDC_RES_OFF_DELAY_W::new(self, 8)
     }
     #[doc = "Bits 16:25 - DCDC stable delay"]
     #[inline(always)]
-    pub fn dcdc_stable_delay(&mut self) -> DCDC_STABLE_DELAY_W<DCM_WAIT_DELAY_SPEC> {
+    pub fn dcdc_stable_delay(&mut self) -> DCDC_STABLE_DELAY_W<'_, DCM_WAIT_DELAY_SPEC> {
         DCDC_STABLE_DELAY_W::new(self, 16)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Setting to 1 disables the SDIO function."]
     #[inline(always)]
-    pub fn sdio_disable(&mut self) -> SDIO_DISABLE_W<SDIO_1_SPEC> {
+    pub fn sdio_disable(&mut self) -> SDIO_DISABLE_W<'_, SDIO_1_SPEC> {
         SDIO_DISABLE_W::new(self, 0)
     }
 }

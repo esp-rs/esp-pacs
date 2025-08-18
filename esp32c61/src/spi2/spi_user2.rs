@@ -47,17 +47,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the command value. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_command_value(&mut self) -> SPI_USR_COMMAND_VALUE_W<SPI_USER2_SPEC> {
+    pub fn spi_usr_command_value(&mut self) -> SPI_USR_COMMAND_VALUE_W<'_, SPI_USER2_SPEC> {
         SPI_USR_COMMAND_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 27 - Configures whether or not to end the SPI transfer when SPI TX AFIFO read empty error occurs in master full-/half-duplex transfers. \\\\ 0: Not end \\\\ 1: End \\\\"]
     #[inline(always)]
-    pub fn spi_mst_rempty_err_end_en(&mut self) -> SPI_MST_REMPTY_ERR_END_EN_W<SPI_USER2_SPEC> {
+    pub fn spi_mst_rempty_err_end_en(&mut self) -> SPI_MST_REMPTY_ERR_END_EN_W<'_, SPI_USER2_SPEC> {
         SPI_MST_REMPTY_ERR_END_EN_W::new(self, 27)
     }
     #[doc = "Bits 28:31 - Configures the bit length of command state. This value is (expected bit number - 1). Can be configured in CONF state."]
     #[inline(always)]
-    pub fn spi_usr_command_bitlen(&mut self) -> SPI_USR_COMMAND_BITLEN_W<SPI_USER2_SPEC> {
+    pub fn spi_usr_command_bitlen(&mut self) -> SPI_USR_COMMAND_BITLEN_W<'_, SPI_USER2_SPEC> {
         SPI_USR_COMMAND_BITLEN_W::new(self, 28)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Configures the lower bound address of the monitored address space."]
     #[inline(always)]
-    pub fn log_min(&mut self) -> LOG_MIN_W<LOG_MIN_SPEC> {
+    pub fn log_min(&mut self) -> LOG_MIN_W<'_, LOG_MIN_SPEC> {
         LOG_MIN_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 29:31 - need_des"]
     #[inline(always)]
-    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<SAR_CCT_SPEC> {
+    pub fn sar2_pwdet_cct(&mut self) -> SAR2_PWDET_CCT_W<'_, SAR_CCT_SPEC> {
         SAR2_PWDET_CCT_W::new(self, 29)
     }
 }

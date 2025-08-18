@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn lp_i2s_tx_clkm_div_num(
         &mut self,
-    ) -> LP_I2S_TX_CLKM_DIV_NUM_W<LP_I2S_TXCLK_DIV_NUM_SPEC> {
+    ) -> LP_I2S_TX_CLKM_DIV_NUM_W<'_, LP_I2S_TXCLK_DIV_NUM_SPEC> {
         LP_I2S_TX_CLKM_DIV_NUM_W::new(self, 24)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - 0x5A5A: programming operation command 0x5AA5: read operation command."]
     #[inline(always)]
-    pub fn op_code(&mut self) -> OP_CODE_W<CONF_SPEC> {
+    pub fn op_code(&mut self) -> OP_CODE_W<'_, CONF_SPEC> {
         OP_CODE_W::new(self, 0)
     }
     #[doc = "Bits 16:19 - Configures which block to use for ECDSA key output."]
     #[inline(always)]
-    pub fn cfg_ecdsa_blk(&mut self) -> CFG_ECDSA_BLK_W<CONF_SPEC> {
+    pub fn cfg_ecdsa_blk(&mut self) -> CFG_ECDSA_BLK_W<'_, CONF_SPEC> {
         CFG_ECDSA_BLK_W::new(self, 16)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: power down usb memory."]
     #[inline(always)]
-    pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W<MEM_CONF_SPEC> {
+    pub fn usb_mem_pd(&mut self) -> USB_MEM_PD_W<'_, MEM_CONF_SPEC> {
         USB_MEM_PD_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: Force clock on for usb memory."]
     #[inline(always)]
-    pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W<MEM_CONF_SPEC> {
+    pub fn usb_mem_clk_en(&mut self) -> USB_MEM_CLK_EN_W<'_, MEM_CONF_SPEC> {
         USB_MEM_CLK_EN_W::new(self, 1)
     }
 }

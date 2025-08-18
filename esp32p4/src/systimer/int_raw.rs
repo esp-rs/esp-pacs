@@ -53,24 +53,24 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `TARGET0` field.</div>"]
     #[inline(always)]
-    pub fn target(&mut self, n: u8) -> TARGET_W<INT_RAW_SPEC> {
+    pub fn target(&mut self, n: u8) -> TARGET_W<'_, INT_RAW_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 3][n as usize];
         TARGET_W::new(self, n)
     }
     #[doc = "Bit 0 - interupt0 raw"]
     #[inline(always)]
-    pub fn target0(&mut self) -> TARGET_W<INT_RAW_SPEC> {
+    pub fn target0(&mut self) -> TARGET_W<'_, INT_RAW_SPEC> {
         TARGET_W::new(self, 0)
     }
     #[doc = "Bit 1 - interupt1 raw"]
     #[inline(always)]
-    pub fn target1(&mut self) -> TARGET_W<INT_RAW_SPEC> {
+    pub fn target1(&mut self) -> TARGET_W<'_, INT_RAW_SPEC> {
         TARGET_W::new(self, 1)
     }
     #[doc = "Bit 2 - interupt2 raw"]
     #[inline(always)]
-    pub fn target2(&mut self) -> TARGET_W<INT_RAW_SPEC> {
+    pub fn target2(&mut self) -> TARGET_W<'_, INT_RAW_SPEC> {
         TARGET_W::new(self, 2)
     }
 }

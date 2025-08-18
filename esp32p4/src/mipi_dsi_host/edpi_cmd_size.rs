@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - NA"]
     #[inline(always)]
-    pub fn edpi_allowed_cmd_size(&mut self) -> EDPI_ALLOWED_CMD_SIZE_W<EDPI_CMD_SIZE_SPEC> {
+    pub fn edpi_allowed_cmd_size(&mut self) -> EDPI_ALLOWED_CMD_SIZE_W<'_, EDPI_CMD_SIZE_SPEC> {
         EDPI_ALLOWED_CMD_SIZE_W::new(self, 0)
     }
 }

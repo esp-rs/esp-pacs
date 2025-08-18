@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - intoe on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
     #[inline(always)]
-    pub fn intoe_end_ahead_mode(&mut self) -> INTOE_END_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC> {
+    pub fn intoe_end_ahead_mode(&mut self) -> INTOE_END_AHEAD_MODE_W<'_, CFG_UHS1_INT_MODE_SPEC> {
         INTOE_END_AHEAD_MODE_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - int on dat1 end ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
     #[inline(always)]
-    pub fn int_end_ahead_mode(&mut self) -> INT_END_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC> {
+    pub fn int_end_ahead_mode(&mut self) -> INT_END_AHEAD_MODE_W<'_, CFG_UHS1_INT_MODE_SPEC> {
         INT_END_AHEAD_MODE_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - intoe on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
     #[inline(always)]
-    pub fn intoe_st_ahead_mode(&mut self) -> INTOE_ST_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC> {
+    pub fn intoe_st_ahead_mode(&mut self) -> INTOE_ST_AHEAD_MODE_W<'_, CFG_UHS1_INT_MODE_SPEC> {
         INTOE_ST_AHEAD_MODE_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - int on dat1 start ahead of time: 0/3-no, 1-ahead 1sdclk, 2-ahead 2sdclk"]
     #[inline(always)]
-    pub fn int_st_ahead_mode(&mut self) -> INT_ST_AHEAD_MODE_W<CFG_UHS1_INT_MODE_SPEC> {
+    pub fn int_st_ahead_mode(&mut self) -> INT_ST_AHEAD_MODE_W<'_, CFG_UHS1_INT_MODE_SPEC> {
         INT_ST_AHEAD_MODE_W::new(self, 6)
     }
 }

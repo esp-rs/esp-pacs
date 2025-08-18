@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set this bit to enable clock of cryptography AES."]
     #[inline(always)]
-    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_aes_clk_en(&mut self) -> CRYPTO_AES_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_AES_CLK_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable clock of cryptography SHA."]
     #[inline(always)]
-    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_sha_clk_en(&mut self) -> CRYPTO_SHA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_SHA_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable clock of cryptography RSA."]
     #[inline(always)]
-    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_rsa_clk_en(&mut self) -> CRYPTO_RSA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_RSA_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable clock of cryptography Digital Signature."]
     #[inline(always)]
-    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_ds_clk_en(&mut self) -> CRYPTO_DS_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_DS_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable clock of cryptography HMAC."]
     #[inline(always)]
-    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_hmac_clk_en(&mut self) -> CRYPTO_HMAC_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_HMAC_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable clock of cryptography DMA."]
     #[inline(always)]
-    pub fn crypto_dma_clk_en(&mut self) -> CRYPTO_DMA_CLK_EN_W<PERIP_CLK_EN1_SPEC> {
+    pub fn crypto_dma_clk_en(&mut self) -> CRYPTO_DMA_CLK_EN_W<'_, PERIP_CLK_EN1_SPEC> {
         CRYPTO_DMA_CLK_EN_W::new(self, 6)
     }
 }

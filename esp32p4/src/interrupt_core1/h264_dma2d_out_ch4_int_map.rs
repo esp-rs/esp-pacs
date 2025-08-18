@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core1_h264_dma2d_out_ch4_int_map(
         &mut self,
-    ) -> CORE1_H264_DMA2D_OUT_CH4_INT_MAP_W<H264_DMA2D_OUT_CH4_INT_MAP_SPEC> {
+    ) -> CORE1_H264_DMA2D_OUT_CH4_INT_MAP_W<'_, H264_DMA2D_OUT_CH4_INT_MAP_SPEC> {
         CORE1_H264_DMA2D_OUT_CH4_INT_MAP_W::new(self, 0)
     }
 }

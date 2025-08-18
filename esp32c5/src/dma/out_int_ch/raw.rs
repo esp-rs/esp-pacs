@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt status of AHB_DMA_OUT_DONE_CH%s_INT."]
     #[inline(always)]
-    pub fn out_done(&mut self) -> OUT_DONE_W<RAW_SPEC> {
+    pub fn out_done(&mut self) -> OUT_DONE_W<'_, RAW_SPEC> {
         OUT_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt status of AHB_DMA_OUT_EOF_CH%s_INT."]
     #[inline(always)]
-    pub fn out_eof(&mut self) -> OUT_EOF_W<RAW_SPEC> {
+    pub fn out_eof(&mut self) -> OUT_EOF_W<'_, RAW_SPEC> {
         OUT_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt status of AHB_DMA_OUT_DSCR_ERR_CH%s_INT."]
     #[inline(always)]
-    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<RAW_SPEC> {
+    pub fn out_dscr_err(&mut self) -> OUT_DSCR_ERR_W<'_, RAW_SPEC> {
         OUT_DSCR_ERR_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw interrupt status of AHB_DMA_OUT_TOTAL_EOF_CH%s_INT."]
     #[inline(always)]
-    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<RAW_SPEC> {
+    pub fn out_total_eof(&mut self) -> OUT_TOTAL_EOF_W<'_, RAW_SPEC> {
         OUT_TOTAL_EOF_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw interrupt status of AHB_DMA_OUTFIFO_OVF_CH%s_INT."]
     #[inline(always)]
-    pub fn outfifo_ovf(&mut self) -> OUTFIFO_OVF_W<RAW_SPEC> {
+    pub fn outfifo_ovf(&mut self) -> OUTFIFO_OVF_W<'_, RAW_SPEC> {
         OUTFIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - The raw interrupt status of AHB_DMA_OUTFIFO_UDF_CH%s_INT."]
     #[inline(always)]
-    pub fn outfifo_udf(&mut self) -> OUTFIFO_UDF_W<RAW_SPEC> {
+    pub fn outfifo_udf(&mut self) -> OUTFIFO_UDF_W<'_, RAW_SPEC> {
         OUTFIFO_UDF_W::new(self, 5)
     }
 }

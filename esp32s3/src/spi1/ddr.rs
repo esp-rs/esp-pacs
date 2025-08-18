@@ -180,82 +180,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: in DDR mode, 0: in SDR mode."]
     #[inline(always)]
-    pub fn spi_fmem_ddr_en(&mut self) -> SPI_FMEM_DDR_EN_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_en(&mut self) -> SPI_FMEM_DDR_EN_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set the bit to enable variable dummy cycle in DDRmode."]
     #[inline(always)]
-    pub fn spi_fmem_var_dummy(&mut self) -> SPI_FMEM_VAR_DUMMY_W<DDR_SPEC> {
+    pub fn spi_fmem_var_dummy(&mut self) -> SPI_FMEM_VAR_DUMMY_W<'_, DDR_SPEC> {
         SPI_FMEM_VAR_DUMMY_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set the bit to reorder RX data of the word in DDR mode."]
     #[inline(always)]
-    pub fn spi_fmem_ddr_rdat_swp(&mut self) -> SPI_FMEM_DDR_RDAT_SWP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_rdat_swp(&mut self) -> SPI_FMEM_DDR_RDAT_SWP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_RDAT_SWP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set the bit to reorder TX data of the word in DDR mode."]
     #[inline(always)]
-    pub fn spi_fmem_ddr_wdat_swp(&mut self) -> SPI_FMEM_DDR_WDAT_SWP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_wdat_swp(&mut self) -> SPI_FMEM_DDR_WDAT_SWP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_WDAT_SWP_W::new(self, 3)
     }
     #[doc = "Bit 4 - the bit is used to disable dual edge in command phase when DDR mode."]
     #[inline(always)]
-    pub fn spi_fmem_ddr_cmd_dis(&mut self) -> SPI_FMEM_DDR_CMD_DIS_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_cmd_dis(&mut self) -> SPI_FMEM_DDR_CMD_DIS_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_CMD_DIS_W::new(self, 4)
     }
     #[doc = "Bits 5:11 - It is the minimum output data length in the panda device."]
     #[inline(always)]
-    pub fn spi_fmem_outminbytelen(&mut self) -> SPI_FMEM_OUTMINBYTELEN_W<DDR_SPEC> {
+    pub fn spi_fmem_outminbytelen(&mut self) -> SPI_FMEM_OUTMINBYTELEN_W<'_, DDR_SPEC> {
         SPI_FMEM_OUTMINBYTELEN_W::new(self, 5)
     }
     #[doc = "Bits 14:20 - The delay number of data strobe which from memory based on SPI_CLK."]
     #[inline(always)]
-    pub fn spi_fmem_usr_ddr_dqs_thd(&mut self) -> SPI_FMEM_USR_DDR_DQS_THD_W<DDR_SPEC> {
+    pub fn spi_fmem_usr_ddr_dqs_thd(&mut self) -> SPI_FMEM_USR_DDR_DQS_THD_W<'_, DDR_SPEC> {
         SPI_FMEM_USR_DDR_DQS_THD_W::new(self, 14)
     }
     #[doc = "Bit 21 - 1: Use internal signal as data strobe, the strobe can not be delayed by input timing module. 0: Use input SPI_DQS signal from PAD as data strobe, the strobe can be delayed by input timing module"]
     #[inline(always)]
-    pub fn spi_fmem_ddr_dqs_loop(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_dqs_loop(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_DQS_LOOP_W::new(self, 21)
     }
     #[doc = "Bit 22 - When SPI_FMEM_DDR_DQS_LOOP and SPI_FMEM_DDR_EN are set, 1: Use internal SPI_CLK as data strobe. 0: Use internal ~SPI_CLK as data strobe. Otherwise this bit is not active."]
     #[inline(always)]
-    pub fn spi_fmem_ddr_dqs_loop_mode(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_MODE_W<DDR_SPEC> {
+    pub fn spi_fmem_ddr_dqs_loop_mode(&mut self) -> SPI_FMEM_DDR_DQS_LOOP_MODE_W<'_, DDR_SPEC> {
         SPI_FMEM_DDR_DQS_LOOP_MODE_W::new(self, 22)
     }
     #[doc = "Bit 24 - Set this bit to enable the differential SPI_CLK#."]
     #[inline(always)]
-    pub fn spi_fmem_clk_diff_en(&mut self) -> SPI_FMEM_CLK_DIFF_EN_W<DDR_SPEC> {
+    pub fn spi_fmem_clk_diff_en(&mut self) -> SPI_FMEM_CLK_DIFF_EN_W<'_, DDR_SPEC> {
         SPI_FMEM_CLK_DIFF_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable the SPI HyperBus mode."]
     #[inline(always)]
-    pub fn spi_fmem_hyperbus_mode(&mut self) -> SPI_FMEM_HYPERBUS_MODE_W<DDR_SPEC> {
+    pub fn spi_fmem_hyperbus_mode(&mut self) -> SPI_FMEM_HYPERBUS_MODE_W<'_, DDR_SPEC> {
         SPI_FMEM_HYPERBUS_MODE_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to enable the input of SPI_DQS signal in SPI phases of CMD and ADDR."]
     #[inline(always)]
-    pub fn spi_fmem_dqs_ca_in(&mut self) -> SPI_FMEM_DQS_CA_IN_W<DDR_SPEC> {
+    pub fn spi_fmem_dqs_ca_in(&mut self) -> SPI_FMEM_DQS_CA_IN_W<'_, DDR_SPEC> {
         SPI_FMEM_DQS_CA_IN_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to enable the vary dummy function in SPI HyperBus mode, when SPI0 accesses flash or SPI1 accesses flash or sram."]
     #[inline(always)]
-    pub fn spi_fmem_hyperbus_dummy_2x(&mut self) -> SPI_FMEM_HYPERBUS_DUMMY_2X_W<DDR_SPEC> {
+    pub fn spi_fmem_hyperbus_dummy_2x(&mut self) -> SPI_FMEM_HYPERBUS_DUMMY_2X_W<'_, DDR_SPEC> {
         SPI_FMEM_HYPERBUS_DUMMY_2X_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to invert SPI_DIFF when accesses to flash. ."]
     #[inline(always)]
-    pub fn spi_fmem_clk_diff_inv(&mut self) -> SPI_FMEM_CLK_DIFF_INV_W<DDR_SPEC> {
+    pub fn spi_fmem_clk_diff_inv(&mut self) -> SPI_FMEM_CLK_DIFF_INV_W<'_, DDR_SPEC> {
         SPI_FMEM_CLK_DIFF_INV_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to enable octa_ram address out when accesses to flash, which means ADDR_OUT\\[31:0\\] = {spi_usr_addr_value\\[25:4\\], 6'd0, spi_usr_addr_value\\[3:1\\], 1'b0}."]
     #[inline(always)]
-    pub fn spi_fmem_octa_ram_addr(&mut self) -> SPI_FMEM_OCTA_RAM_ADDR_W<DDR_SPEC> {
+    pub fn spi_fmem_octa_ram_addr(&mut self) -> SPI_FMEM_OCTA_RAM_ADDR_W<'_, DDR_SPEC> {
         SPI_FMEM_OCTA_RAM_ADDR_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to enable HyperRAM address out when accesses to flash, which means ADDR_OUT\\[31:0\\] = {spi_usr_addr_value\\[19:4\\], 13'd0, spi_usr_addr_value\\[3:1\\]}."]
     #[inline(always)]
-    pub fn spi_fmem_hyperbus_ca(&mut self) -> SPI_FMEM_HYPERBUS_CA_W<DDR_SPEC> {
+    pub fn spi_fmem_hyperbus_ca(&mut self) -> SPI_FMEM_HYPERBUS_CA_W<'_, DDR_SPEC> {
         SPI_FMEM_HYPERBUS_CA_W::new(self, 30)
     }
 }

@@ -66,32 +66,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Configures the bit width of the counter in timer %s. Valid values are 1 to 20."]
     #[inline(always)]
-    pub fn timer_duty_res(&mut self) -> TIMER_DUTY_RES_W<CONF_SPEC> {
+    pub fn timer_duty_res(&mut self) -> TIMER_DUTY_RES_W<'_, CONF_SPEC> {
         TIMER_DUTY_RES_W::new(self, 0)
     }
     #[doc = "Bits 5:22 - Configures the divisor for the divider in timer %s.The least significant eight bits represent the fractional part."]
     #[inline(always)]
-    pub fn clk_div_timer(&mut self) -> CLK_DIV_TIMER_W<CONF_SPEC> {
+    pub fn clk_div_timer(&mut self) -> CLK_DIV_TIMER_W<'_, CONF_SPEC> {
         CLK_DIV_TIMER_W::new(self, 5)
     }
     #[doc = "Bit 23 - Configures whether or not to pause the counter in timer %s.\\\\0: Normal\\\\1: Pause"]
     #[inline(always)]
-    pub fn timer_pause(&mut self) -> TIMER_PAUSE_W<CONF_SPEC> {
+    pub fn timer_pause(&mut self) -> TIMER_PAUSE_W<'_, CONF_SPEC> {
         TIMER_PAUSE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Configures whether or not to reset timer %s. The counter will show 0 after reset.\\\\0: Not reset\\\\1: Reset"]
     #[inline(always)]
-    pub fn timer_rst(&mut self) -> TIMER_RST_W<CONF_SPEC> {
+    pub fn timer_rst(&mut self) -> TIMER_RST_W<'_, CONF_SPEC> {
         TIMER_RST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Configures which clock is timer %s selected. Unused."]
     #[inline(always)]
-    pub fn tick_sel_timer(&mut self) -> TICK_SEL_TIMER_W<CONF_SPEC> {
+    pub fn tick_sel_timer(&mut self) -> TICK_SEL_TIMER_W<'_, CONF_SPEC> {
         TICK_SEL_TIMER_W::new(self, 25)
     }
     #[doc = "Bit 26 - Configures whether or not to update LEDC_CLK_DIV_TIMER%s and LEDC_TIMER%s_DUTY_RES.\\\\0: Invalid. No effect\\\\1: Update"]
     #[inline(always)]
-    pub fn timer_para_up(&mut self) -> TIMER_PARA_UP_W<CONF_SPEC> {
+    pub fn timer_para_up(&mut self) -> TIMER_PARA_UP_W<'_, CONF_SPEC> {
         TIMER_PARA_UP_W::new(self, 26)
     }
 }

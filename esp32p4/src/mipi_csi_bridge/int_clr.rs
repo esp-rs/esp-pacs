@@ -21,32 +21,32 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - reg_vadr_num is greater than real interrupt clr."]
     #[inline(always)]
-    pub fn vadr_num_gt_real(&mut self) -> VADR_NUM_GT_REAL_W<INT_CLR_SPEC> {
+    pub fn vadr_num_gt_real(&mut self) -> VADR_NUM_GT_REAL_W<'_, INT_CLR_SPEC> {
         VADR_NUM_GT_REAL_W::new(self, 0)
     }
     #[doc = "Bit 1 - reg_vadr_num is less than real interrupt clr."]
     #[inline(always)]
-    pub fn vadr_num_lt_real(&mut self) -> VADR_NUM_LT_REAL_W<INT_CLR_SPEC> {
+    pub fn vadr_num_lt_real(&mut self) -> VADR_NUM_LT_REAL_W<'_, INT_CLR_SPEC> {
         VADR_NUM_LT_REAL_W::new(self, 1)
     }
     #[doc = "Bit 2 - an incomplete frame of data was sent interrupt clr."]
     #[inline(always)]
-    pub fn discard(&mut self) -> DISCARD_W<INT_CLR_SPEC> {
+    pub fn discard(&mut self) -> DISCARD_W<'_, INT_CLR_SPEC> {
         DISCARD_W::new(self, 2)
     }
     #[doc = "Bit 3 - buffer overrun interrupt clr."]
     #[inline(always)]
-    pub fn csi_buf_overrun(&mut self) -> CSI_BUF_OVERRUN_W<INT_CLR_SPEC> {
+    pub fn csi_buf_overrun(&mut self) -> CSI_BUF_OVERRUN_W<'_, INT_CLR_SPEC> {
         CSI_BUF_OVERRUN_W::new(self, 3)
     }
     #[doc = "Bit 4 - buffer overflow interrupt clr."]
     #[inline(always)]
-    pub fn csi_async_fifo_ovf(&mut self) -> CSI_ASYNC_FIFO_OVF_W<INT_CLR_SPEC> {
+    pub fn csi_async_fifo_ovf(&mut self) -> CSI_ASYNC_FIFO_OVF_W<'_, INT_CLR_SPEC> {
         CSI_ASYNC_FIFO_OVF_W::new(self, 4)
     }
     #[doc = "Bit 5 - dma configuration update complete interrupt clr."]
     #[inline(always)]
-    pub fn dma_cfg_has_updated(&mut self) -> DMA_CFG_HAS_UPDATED_W<INT_CLR_SPEC> {
+    pub fn dma_cfg_has_updated(&mut self) -> DMA_CFG_HAS_UPDATED_W<'_, INT_CLR_SPEC> {
         DMA_CFG_HAS_UPDATED_W::new(self, 5)
     }
 }

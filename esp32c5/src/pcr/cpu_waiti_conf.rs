@@ -50,12 +50,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Set 1 to force cpu_waiti_clk enable."]
     #[inline(always)]
-    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<CPU_WAITI_CONF_SPEC> {
+    pub fn cpu_wait_mode_force_on(&mut self) -> CPU_WAIT_MODE_FORCE_ON_W<'_, CPU_WAITI_CONF_SPEC> {
         CPU_WAIT_MODE_FORCE_ON_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - This field used to set delay cycle when cpu enter waiti mode, after delay waiti_clk will close"]
     #[inline(always)]
-    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<CPU_WAITI_CONF_SPEC> {
+    pub fn cpu_waiti_delay_num(&mut self) -> CPU_WAITI_DELAY_NUM_W<'_, CPU_WAITI_CONF_SPEC> {
         CPU_WAITI_DELAY_NUM_W::new(self, 4)
     }
 }

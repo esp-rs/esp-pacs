@@ -94,42 +94,44 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_reset(&mut self) -> FORCE_HP_AON_RESET_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_reset(&mut self) -> FORCE_HP_AON_RESET_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_iso(&mut self) -> FORCE_HP_AON_ISO_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_iso(&mut self) -> FORCE_HP_AON_ISO_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_ISO_W::new(self, 1)
     }
     #[doc = "Bit 2 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_pu(&mut self) -> FORCE_HP_AON_PU_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_pu(&mut self) -> FORCE_HP_AON_PU_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_PU_W::new(self, 2)
     }
     #[doc = "Bit 3 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_no_reset(&mut self) -> FORCE_HP_AON_NO_RESET_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_no_reset(
+        &mut self,
+    ) -> FORCE_HP_AON_NO_RESET_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_NO_RESET_W::new(self, 3)
     }
     #[doc = "Bit 4 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_no_iso(&mut self) -> FORCE_HP_AON_NO_ISO_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_no_iso(&mut self) -> FORCE_HP_AON_NO_ISO_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_NO_ISO_W::new(self, 4)
     }
     #[doc = "Bit 5 - need_des"]
     #[inline(always)]
-    pub fn force_hp_aon_pd(&mut self) -> FORCE_HP_AON_PD_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn force_hp_aon_pd(&mut self) -> FORCE_HP_AON_PD_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         FORCE_HP_AON_PD_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_aon_mask(&mut self) -> PD_HP_AON_MASK_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn pd_hp_aon_mask(&mut self) -> PD_HP_AON_MASK_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         PD_HP_AON_MASK_W::new(self, 6)
     }
     #[doc = "Bits 27:31 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_aon_pd_mask(&mut self) -> PD_HP_AON_PD_MASK_W<POWER_PD_HPAON_CNTL_SPEC> {
+    pub fn pd_hp_aon_pd_mask(&mut self) -> PD_HP_AON_PD_MASK_W<'_, POWER_PD_HPAON_CNTL_SPEC> {
         PD_HP_AON_PD_MASK_W::new(self, 27)
     }
 }

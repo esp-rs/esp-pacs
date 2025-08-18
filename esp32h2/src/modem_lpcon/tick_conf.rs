@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn pwr_tick_target(&mut self) -> PWR_TICK_TARGET_W<TICK_CONF_SPEC> {
+    pub fn pwr_tick_target(&mut self) -> PWR_TICK_TARGET_W<'_, TICK_CONF_SPEC> {
         PWR_TICK_TARGET_W::new(self, 0)
     }
 }

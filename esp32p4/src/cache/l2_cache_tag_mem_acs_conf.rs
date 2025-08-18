@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_tag_mem_rd_en(
         &mut self,
-    ) -> L2_CACHE_TAG_MEM_RD_EN_W<L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {
+    ) -> L2_CACHE_TAG_MEM_RD_EN_W<'_, L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {
         L2_CACHE_TAG_MEM_RD_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - The bit is used to enable config-bus write L2-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
     pub fn l2_cache_tag_mem_wr_en(
         &mut self,
-    ) -> L2_CACHE_TAG_MEM_WR_EN_W<L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {
+    ) -> L2_CACHE_TAG_MEM_WR_EN_W<'_, L2_CACHE_TAG_MEM_ACS_CONF_SPEC> {
         L2_CACHE_TAG_MEM_WR_EN_W::new(self, 21)
     }
 }

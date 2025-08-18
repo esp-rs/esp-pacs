@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to enable the function of analog PAD voltage comparator.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn xpd_comp_0(&mut self) -> XPD_COMP_0_W<PAD_COMP_CONFIG_0_SPEC> {
+    pub fn xpd_comp_0(&mut self) -> XPD_COMP_0_W<'_, PAD_COMP_CONFIG_0_SPEC> {
         XPD_COMP_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures the reference voltage for analog PAD voltage comparater.. \\\\ 0: Reference voltage is the internal reference voltage, meanwhile GPIO8 PAD can be used as a regular GPIO\\\\ 1: Reference voltage is the voltage on the GPIO8 PAD\\\\"]
     #[inline(always)]
-    pub fn mode_comp_0(&mut self) -> MODE_COMP_0_W<PAD_COMP_CONFIG_0_SPEC> {
+    pub fn mode_comp_0(&mut self) -> MODE_COMP_0_W<'_, PAD_COMP_CONFIG_0_SPEC> {
         MODE_COMP_0_W::new(self, 1)
     }
     #[doc = "Bits 2:4 - Configures the internal reference voltage for analog PAD voltage coparator. \\\\ 0: Internal reference voltage is 0 * VDDPST1\\\\ 1: Internal reference voltage is 0.1 * VDDPST1\\\\ …...\\\\ 6: Internal reference voltage is 0.6 * VDDPST1\\\\ 7: Internal reference voltage is 0.7 * VDDPST1\\\\"]
     #[inline(always)]
-    pub fn dref_comp_0(&mut self) -> DREF_COMP_0_W<PAD_COMP_CONFIG_0_SPEC> {
+    pub fn dref_comp_0(&mut self) -> DREF_COMP_0_W<'_, PAD_COMP_CONFIG_0_SPEC> {
         DREF_COMP_0_W::new(self, 2)
     }
 }

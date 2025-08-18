@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn pro_dcache_autoload_sct1_addr(
         &mut self,
-    ) -> PRO_DCACHE_AUTOLOAD_SCT1_ADDR_W<PRO_DCACHE_AUTOLOAD_SECTION1_ADDR_SPEC> {
+    ) -> PRO_DCACHE_AUTOLOAD_SCT1_ADDR_W<'_, PRO_DCACHE_AUTOLOAD_SECTION1_ADDR_SPEC> {
         PRO_DCACHE_AUTOLOAD_SCT1_ADDR_W::new(self, 0)
     }
 }

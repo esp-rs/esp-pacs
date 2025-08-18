@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - When the number of data bytes in RX FIFO is less than this register's value with UART_SW_FLOW_CON_EN set to 1, the transmitter sends an XON character."]
     #[inline(always)]
-    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<SWFC_CONF1_SPEC> {
+    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<'_, SWFC_CONF1_SPEC> {
         XON_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 9:16 - This register stores the XON flow control character."]
     #[inline(always)]
-    pub fn xon_char(&mut self) -> XON_CHAR_W<SWFC_CONF1_SPEC> {
+    pub fn xon_char(&mut self) -> XON_CHAR_W<'_, SWFC_CONF1_SPEC> {
         XON_CHAR_W::new(self, 9)
     }
 }

@@ -100,46 +100,50 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - NA"]
     #[inline(always)]
-    pub fn reg_resp_buf_to_value(&mut self) -> REG_RESP_BUF_TO_VALUE_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_resp_buf_to_value(&mut self) -> REG_RESP_BUF_TO_VALUE_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_RESP_BUF_TO_VALUE_W::new(self, 0)
     }
     #[doc = "Bit 5 - NA"]
     #[inline(always)]
-    pub fn reg_resp_buf_to_en(&mut self) -> REG_RESP_BUF_TO_EN_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_resp_buf_to_en(&mut self) -> REG_RESP_BUF_TO_EN_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_RESP_BUF_TO_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:10 - NA"]
     #[inline(always)]
     pub fn reg_ibi_data_buf_to_value(
         &mut self,
-    ) -> REG_IBI_DATA_BUF_TO_VALUE_W<TIME_OUT_VALUE_SPEC> {
+    ) -> REG_IBI_DATA_BUF_TO_VALUE_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_IBI_DATA_BUF_TO_VALUE_W::new(self, 6)
     }
     #[doc = "Bit 11 - NA"]
     #[inline(always)]
-    pub fn reg_ibi_data_buf_to_en(&mut self) -> REG_IBI_DATA_BUF_TO_EN_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_ibi_data_buf_to_en(&mut self) -> REG_IBI_DATA_BUF_TO_EN_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_IBI_DATA_BUF_TO_EN_W::new(self, 11)
     }
     #[doc = "Bits 12:16 - NA"]
     #[inline(always)]
     pub fn reg_ibi_status_buf_to_value(
         &mut self,
-    ) -> REG_IBI_STATUS_BUF_TO_VALUE_W<TIME_OUT_VALUE_SPEC> {
+    ) -> REG_IBI_STATUS_BUF_TO_VALUE_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_IBI_STATUS_BUF_TO_VALUE_W::new(self, 12)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    pub fn reg_ibi_status_buf_to_en(&mut self) -> REG_IBI_STATUS_BUF_TO_EN_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_ibi_status_buf_to_en(
+        &mut self,
+    ) -> REG_IBI_STATUS_BUF_TO_EN_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_IBI_STATUS_BUF_TO_EN_W::new(self, 17)
     }
     #[doc = "Bits 18:22 - NA"]
     #[inline(always)]
-    pub fn reg_rx_data_buf_to_value(&mut self) -> REG_RX_DATA_BUF_TO_VALUE_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_rx_data_buf_to_value(
+        &mut self,
+    ) -> REG_RX_DATA_BUF_TO_VALUE_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_RX_DATA_BUF_TO_VALUE_W::new(self, 18)
     }
     #[doc = "Bit 23 - NA"]
     #[inline(always)]
-    pub fn reg_rx_data_buf_to_en(&mut self) -> REG_RX_DATA_BUF_TO_EN_W<TIME_OUT_VALUE_SPEC> {
+    pub fn reg_rx_data_buf_to_en(&mut self) -> REG_RX_DATA_BUF_TO_EN_W<'_, TIME_OUT_VALUE_SPEC> {
         REG_RX_DATA_BUF_TO_EN_W::new(self, 23)
     }
 }

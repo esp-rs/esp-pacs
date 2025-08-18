@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures the sample time after a positive SCL edge. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<SDA_SAMPLE_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, SDA_SAMPLE_SPEC> {
         TIME_W::new(self, 0)
     }
 }

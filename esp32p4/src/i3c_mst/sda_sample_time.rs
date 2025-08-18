@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - It is used to adjust sda sample point when scl high under open drain speed"]
     #[inline(always)]
-    pub fn reg_sda_od_sample_time(&mut self) -> REG_SDA_OD_SAMPLE_TIME_W<SDA_SAMPLE_TIME_SPEC> {
+    pub fn reg_sda_od_sample_time(&mut self) -> REG_SDA_OD_SAMPLE_TIME_W<'_, SDA_SAMPLE_TIME_SPEC> {
         REG_SDA_OD_SAMPLE_TIME_W::new(self, 0)
     }
     #[doc = "Bits 9:13 - It is used to adjust sda sample point when scl high under push pull speed"]
     #[inline(always)]
-    pub fn reg_sda_pp_sample_time(&mut self) -> REG_SDA_PP_SAMPLE_TIME_W<SDA_SAMPLE_TIME_SPEC> {
+    pub fn reg_sda_pp_sample_time(&mut self) -> REG_SDA_PP_SAMPLE_TIME_W<'_, SDA_SAMPLE_TIME_SPEC> {
         REG_SDA_PP_SAMPLE_TIME_W::new(self, 9)
     }
 }

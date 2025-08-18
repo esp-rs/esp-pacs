@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn dataen_active_low(&mut self) -> DATAEN_ACTIVE_LOW_W<DPI_CFG_POL_SPEC> {
+    pub fn dataen_active_low(&mut self) -> DATAEN_ACTIVE_LOW_W<'_, DPI_CFG_POL_SPEC> {
         DATAEN_ACTIVE_LOW_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn vsync_active_low(&mut self) -> VSYNC_ACTIVE_LOW_W<DPI_CFG_POL_SPEC> {
+    pub fn vsync_active_low(&mut self) -> VSYNC_ACTIVE_LOW_W<'_, DPI_CFG_POL_SPEC> {
         VSYNC_ACTIVE_LOW_W::new(self, 1)
     }
     #[doc = "Bit 2 - NA"]
     #[inline(always)]
-    pub fn hsync_active_low(&mut self) -> HSYNC_ACTIVE_LOW_W<DPI_CFG_POL_SPEC> {
+    pub fn hsync_active_low(&mut self) -> HSYNC_ACTIVE_LOW_W<'_, DPI_CFG_POL_SPEC> {
         HSYNC_ACTIVE_LOW_W::new(self, 2)
     }
     #[doc = "Bit 3 - NA"]
     #[inline(always)]
-    pub fn shutd_active_low(&mut self) -> SHUTD_ACTIVE_LOW_W<DPI_CFG_POL_SPEC> {
+    pub fn shutd_active_low(&mut self) -> SHUTD_ACTIVE_LOW_W<'_, DPI_CFG_POL_SPEC> {
         SHUTD_ACTIVE_LOW_W::new(self, 3)
     }
     #[doc = "Bit 4 - NA"]
     #[inline(always)]
-    pub fn colorm_active_low(&mut self) -> COLORM_ACTIVE_LOW_W<DPI_CFG_POL_SPEC> {
+    pub fn colorm_active_low(&mut self) -> COLORM_ACTIVE_LOW_W<'_, DPI_CFG_POL_SPEC> {
         COLORM_ACTIVE_LOW_W::new(self, 4)
     }
 }

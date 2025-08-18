@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - reg_bt_lpck_div_b"]
     #[inline(always)]
-    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn bt_lpck_div_b(&mut self) -> BT_LPCK_DIV_B_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         BT_LPCK_DIV_B_W::new(self, 0)
     }
     #[doc = "Bits 12:23 - reg_bt_lpck_div_a"]
     #[inline(always)]
-    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn bt_lpck_div_a(&mut self) -> BT_LPCK_DIV_A_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         BT_LPCK_DIV_A_W::new(self, 12)
     }
     #[doc = "Bit 24 - reg_lpclk_sel_rtc_slow"]
     #[inline(always)]
-    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_rtc_slow(&mut self) -> LPCLK_SEL_RTC_SLOW_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_RTC_SLOW_W::new(self, 24)
     }
     #[doc = "Bit 25 - reg_lpclk_sel_8m"]
     #[inline(always)]
-    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_8m(&mut self) -> LPCLK_SEL_8M_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_8M_W::new(self, 25)
     }
     #[doc = "Bit 26 - reg_lpclk_sel_xtal"]
     #[inline(always)]
-    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_xtal(&mut self) -> LPCLK_SEL_XTAL_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - reg_lpclk_sel_xtal32k"]
     #[inline(always)]
-    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_sel_xtal32k(&mut self) -> LPCLK_SEL_XTAL32K_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_SEL_XTAL32K_W::new(self, 27)
     }
     #[doc = "Bit 28 - reg_lpclk_rtc_en"]
     #[inline(always)]
-    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<BT_LPCK_DIV_FRAC_SPEC> {
+    pub fn lpclk_rtc_en(&mut self) -> LPCLK_RTC_EN_W<'_, BT_LPCK_DIV_FRAC_SPEC> {
         LPCLK_RTC_EN_W::new(self, 28)
     }
 }

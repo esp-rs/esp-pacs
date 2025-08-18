@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures bitstream buffer overflow threshold. This value should be bigger than the encode bytes of one 4x4 submb."]
     #[inline(always)]
-    pub fn bs_buffer_threshold(&mut self) -> BS_BUFFER_THRESHOLD_W<BS_THRESHOLD_SPEC> {
+    pub fn bs_buffer_threshold(&mut self) -> BS_BUFFER_THRESHOLD_W<'_, BS_THRESHOLD_SPEC> {
         BS_BUFFER_THRESHOLD_W::new(self, 0)
     }
 }

@@ -97,22 +97,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - This register stores the 20 least significant bits of the first transmit descriptor’s address."]
     #[inline(always)]
-    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<OUT_LINK_SPEC> {
+    pub fn outlink_addr(&mut self) -> OUTLINK_ADDR_W<'_, OUT_LINK_SPEC> {
         OUTLINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 28 - Set this bit to stop DMA from reading transmit descriptors after finishing the current data transaction."]
     #[inline(always)]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK_SPEC> {
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<'_, OUT_LINK_SPEC> {
         OUTLINK_STOP_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to enable DMA to read transmit descriptors."]
     #[inline(always)]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK_SPEC> {
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<'_, OUT_LINK_SPEC> {
         OUTLINK_START_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK_SPEC> {
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<'_, OUT_LINK_SPEC> {
         OUTLINK_RESTART_W::new(self, 30)
     }
 }

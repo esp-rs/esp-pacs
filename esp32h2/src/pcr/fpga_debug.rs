@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Only used in fpga debug."]
     #[inline(always)]
-    pub fn fpga_debug(&mut self) -> FPGA_DEBUG_W<FPGA_DEBUG_SPEC> {
+    pub fn fpga_debug(&mut self) -> FPGA_DEBUG_W<'_, FPGA_DEBUG_SPEC> {
         FPGA_DEBUG_W::new(self, 0)
     }
 }

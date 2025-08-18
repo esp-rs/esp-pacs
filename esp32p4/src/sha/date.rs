@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:29 - Sha date information/ sha version information."]
     #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<DATE_SPEC> {
+    pub fn date(&mut self) -> DATE_W<'_, DATE_SPEC> {
         DATE_W::new(self, 0)
     }
 }

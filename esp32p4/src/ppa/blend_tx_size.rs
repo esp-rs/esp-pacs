@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - The horizontal width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
     #[inline(always)]
-    pub fn blend_hb(&mut self) -> BLEND_HB_W<BLEND_TX_SIZE_SPEC> {
+    pub fn blend_hb(&mut self) -> BLEND_HB_W<'_, BLEND_TX_SIZE_SPEC> {
         BLEND_HB_W::new(self, 0)
     }
     #[doc = "Bits 14:27 - The vertical width of image block that would be filled in fix pixel filling mode. The unit is pixel"]
     #[inline(always)]
-    pub fn blend_vb(&mut self) -> BLEND_VB_W<BLEND_TX_SIZE_SPEC> {
+    pub fn blend_vb(&mut self) -> BLEND_VB_W<'_, BLEND_TX_SIZE_SPEC> {
         BLEND_VB_W::new(self, 14)
     }
 }

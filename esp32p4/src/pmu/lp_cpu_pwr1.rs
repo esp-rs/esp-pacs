@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<LP_CPU_PWR1_SPEC> {
 impl W {
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<LP_CPU_PWR1_SPEC> {
+    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<'_, LP_CPU_PWR1_SPEC> {
         LP_CPU_SLEEP_REQ_W::new(self, 31)
     }
 }

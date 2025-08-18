@@ -510,82 +510,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:5 - CK8M_D256_OUT divider. 00: div128 01: div256 10: div512 11: div1024."]
     #[inline(always)]
-    pub fn ck8m_div(&mut self) -> CK8M_DIV_W<CLK_CONF_SPEC> {
+    pub fn ck8m_div(&mut self) -> CK8M_DIV_W<'_, CLK_CONF_SPEC> {
         CK8M_DIV_W::new(self, 4)
     }
     #[doc = "Bit 6 - disable CK8M and CK8M_D256_OUT"]
     #[inline(always)]
-    pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<CLK_CONF_SPEC> {
+    pub fn enb_ck8m(&mut self) -> ENB_CK8M_W<'_, CLK_CONF_SPEC> {
         ENB_CK8M_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: CK8M_D256_OUT is actually CK8M 0: CK8M_D256_OUT is CK8M divided by 256"]
     #[inline(always)]
-    pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<CLK_CONF_SPEC> {
+    pub fn enb_ck8m_div(&mut self) -> ENB_CK8M_DIV_W<'_, CLK_CONF_SPEC> {
         ENB_CK8M_DIV_W::new(self, 7)
     }
     #[doc = "Bit 8 - enable CK_XTAL_32K for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_xtal32k_en(&mut self) -> DIG_XTAL32K_EN_W<'_, CLK_CONF_SPEC> {
         DIG_XTAL32K_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - enable CK8M_D256_OUT for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_clk8m_d256_en(&mut self) -> DIG_CLK8M_D256_EN_W<'_, CLK_CONF_SPEC> {
         DIG_CLK8M_D256_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - enable CK8M for digital core (no relationship with RTC core)"]
     #[inline(always)]
-    pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<CLK_CONF_SPEC> {
+    pub fn dig_clk8m_en(&mut self) -> DIG_CLK8M_EN_W<'_, CLK_CONF_SPEC> {
         DIG_CLK8M_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn ck8m_dfreq_force(&mut self) -> CK8M_DFREQ_FORCE_W<CLK_CONF_SPEC> {
+    pub fn ck8m_dfreq_force(&mut self) -> CK8M_DFREQ_FORCE_W<'_, CLK_CONF_SPEC> {
         CK8M_DFREQ_FORCE_W::new(self, 11)
     }
     #[doc = "Bits 12:14 - divider = reg_ck8m_div_sel + 1"]
     #[inline(always)]
-    pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<CLK_CONF_SPEC> {
+    pub fn ck8m_div_sel(&mut self) -> CK8M_DIV_SEL_W<'_, CLK_CONF_SPEC> {
         CK8M_DIV_SEL_W::new(self, 12)
     }
     #[doc = "Bit 15 - XTAL force no gating during sleep"]
     #[inline(always)]
-    pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn xtal_force_nogating(&mut self) -> XTAL_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         XTAL_FORCE_NOGATING_W::new(self, 15)
     }
     #[doc = "Bit 16 - CK8M force no gating during sleep"]
     #[inline(always)]
-    pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_nogating(&mut self) -> CK8M_FORCE_NOGATING_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_NOGATING_W::new(self, 16)
     }
     #[doc = "Bits 17:24 - CK8M_DFREQ"]
     #[inline(always)]
-    pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<CLK_CONF_SPEC> {
+    pub fn ck8m_dfreq(&mut self) -> CK8M_DFREQ_W<'_, CLK_CONF_SPEC> {
         CK8M_DFREQ_W::new(self, 17)
     }
     #[doc = "Bit 25 - CK8M force power down"]
     #[inline(always)]
-    pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_pd(&mut self) -> CK8M_FORCE_PD_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_PD_W::new(self, 25)
     }
     #[doc = "Bit 26 - CK8M force power up"]
     #[inline(always)]
-    pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<CLK_CONF_SPEC> {
+    pub fn ck8m_force_pu(&mut self) -> CK8M_FORCE_PU_W<'_, CLK_CONF_SPEC> {
         CK8M_FORCE_PU_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - SOC clock sel. 0: XTAL 1: PLL 2: CK8M 3: APLL"]
     #[inline(always)]
-    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<CLK_CONF_SPEC> {
+    pub fn soc_clk_sel(&mut self) -> SOC_CLK_SEL_W<'_, CLK_CONF_SPEC> {
         SOC_CLK_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - fast_clk_rtc sel. 0: XTAL div 4 1: CK8M"]
     #[inline(always)]
-    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
+    pub fn fast_clk_rtc_sel(&mut self) -> FAST_CLK_RTC_SEL_W<'_, CLK_CONF_SPEC> {
         FAST_CLK_RTC_SEL_W::new(self, 29)
     }
     #[doc = "Bits 30:31 - slow_clk_rtc sel. 0: SLOW_CK 1: CK_XTAL_32K 2: CK8M_D256_OUT"]
     #[inline(always)]
-    pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<CLK_CONF_SPEC> {
+    pub fn ana_clk_rtc_sel(&mut self) -> ANA_CLK_RTC_SEL_W<'_, CLK_CONF_SPEC> {
         ANA_CLK_RTC_SEL_W::new(self, 30)
     }
 }

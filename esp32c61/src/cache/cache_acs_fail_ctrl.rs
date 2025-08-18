@@ -73,7 +73,7 @@ impl W {
     #[inline(always)]
     pub fn cache_acs_fail_check_mode(
         &mut self,
-    ) -> CACHE_ACS_FAIL_CHECK_MODE_W<CACHE_ACS_FAIL_CTRL_SPEC> {
+    ) -> CACHE_ACS_FAIL_CHECK_MODE_W<'_, CACHE_ACS_FAIL_CTRL_SPEC> {
         CACHE_ACS_FAIL_CHECK_MODE_W::new(self, 4)
     }
 }

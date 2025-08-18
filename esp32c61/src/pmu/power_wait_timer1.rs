@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 9:15 - need_des"]
     #[inline(always)]
-    pub fn dg_lp_powerdown_timer(&mut self) -> DG_LP_POWERDOWN_TIMER_W<POWER_WAIT_TIMER1_SPEC> {
+    pub fn dg_lp_powerdown_timer(&mut self) -> DG_LP_POWERDOWN_TIMER_W<'_, POWER_WAIT_TIMER1_SPEC> {
         DG_LP_POWERDOWN_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:22 - need_des"]
     #[inline(always)]
-    pub fn dg_lp_powerup_timer(&mut self) -> DG_LP_POWERUP_TIMER_W<POWER_WAIT_TIMER1_SPEC> {
+    pub fn dg_lp_powerup_timer(&mut self) -> DG_LP_POWERUP_TIMER_W<'_, POWER_WAIT_TIMER1_SPEC> {
         DG_LP_POWERUP_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 23:31 - need_des"]
     #[inline(always)]
-    pub fn dg_lp_pd_wait_timer(&mut self) -> DG_LP_PD_WAIT_TIMER_W<POWER_WAIT_TIMER1_SPEC> {
+    pub fn dg_lp_pd_wait_timer(&mut self) -> DG_LP_PD_WAIT_TIMER_W<'_, POWER_WAIT_TIMER1_SPEC> {
         DG_LP_PD_WAIT_TIMER_W::new(self, 23)
     }
 }

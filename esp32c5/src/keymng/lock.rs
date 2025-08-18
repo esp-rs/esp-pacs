@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Write 1 to lock reg_use_efuse_key. Each bit locks the corresponding bit of reg_use_efuse_key."]
     #[inline(always)]
-    pub fn use_efuse_key_lock(&mut self) -> USE_EFUSE_KEY_LOCK_W<LOCK_SPEC> {
+    pub fn use_efuse_key_lock(&mut self) -> USE_EFUSE_KEY_LOCK_W<'_, LOCK_SPEC> {
         USE_EFUSE_KEY_LOCK_W::new(self, 0)
     }
     #[doc = "Bit 5 - Write 1 to lock reg_rnd_switch_cycle."]
     #[inline(always)]
-    pub fn rnd_switch_cycle_lock(&mut self) -> RND_SWITCH_CYCLE_LOCK_W<LOCK_SPEC> {
+    pub fn rnd_switch_cycle_lock(&mut self) -> RND_SWITCH_CYCLE_LOCK_W<'_, LOCK_SPEC> {
         RND_SWITCH_CYCLE_LOCK_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to lock reg_use_sw_init_key."]
     #[inline(always)]
-    pub fn use_sw_init_key_lock(&mut self) -> USE_SW_INIT_KEY_LOCK_W<LOCK_SPEC> {
+    pub fn use_sw_init_key_lock(&mut self) -> USE_SW_INIT_KEY_LOCK_W<'_, LOCK_SPEC> {
         USE_SW_INIT_KEY_LOCK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to lock reg_flash_key_len."]
     #[inline(always)]
-    pub fn flash_key_len_lock(&mut self) -> FLASH_KEY_LEN_LOCK_W<LOCK_SPEC> {
+    pub fn flash_key_len_lock(&mut self) -> FLASH_KEY_LEN_LOCK_W<'_, LOCK_SPEC> {
         FLASH_KEY_LEN_LOCK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to lock reg_psram_key_len."]
     #[inline(always)]
-    pub fn psram_key_len_lock(&mut self) -> PSRAM_KEY_LEN_LOCK_W<LOCK_SPEC> {
+    pub fn psram_key_len_lock(&mut self) -> PSRAM_KEY_LEN_LOCK_W<'_, LOCK_SPEC> {
         PSRAM_KEY_LEN_LOCK_W::new(self, 8)
     }
 }

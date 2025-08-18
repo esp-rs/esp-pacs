@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1"]
     #[inline(always)]
-    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<TRACEMEM_MUX_MODE_SPEC> {
+    pub fn tracemem_mux_mode(&mut self) -> TRACEMEM_MUX_MODE_W<'_, TRACEMEM_MUX_MODE_SPEC> {
         TRACEMEM_MUX_MODE_W::new(self, 0)
     }
 }

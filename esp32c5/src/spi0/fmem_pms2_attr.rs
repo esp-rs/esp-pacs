@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1: SPI1 flash PMS section 2 read accessible. 0: Not allowed."]
     #[inline(always)]
-    pub fn fmem_pms2_rd_attr(&mut self) -> FMEM_PMS2_RD_ATTR_W<FMEM_PMS2_ATTR_SPEC> {
+    pub fn fmem_pms2_rd_attr(&mut self) -> FMEM_PMS2_RD_ATTR_W<'_, FMEM_PMS2_ATTR_SPEC> {
         FMEM_PMS2_RD_ATTR_W::new(self, 0)
     }
     #[doc = "Bit 1 - 1: SPI1 flash PMS section 2 write accessible. 0: Not allowed."]
     #[inline(always)]
-    pub fn fmem_pms2_wr_attr(&mut self) -> FMEM_PMS2_WR_ATTR_W<FMEM_PMS2_ATTR_SPEC> {
+    pub fn fmem_pms2_wr_attr(&mut self) -> FMEM_PMS2_WR_ATTR_W<'_, FMEM_PMS2_ATTR_SPEC> {
         FMEM_PMS2_WR_ATTR_W::new(self, 1)
     }
     #[doc = "Bit 2 - SPI1 flash PMS section 2 ECC mode, 1: enable ECC mode. 0: Disable it. The flash PMS section 2 is configured by registers SPI_FMEM_PMS2_ADDR_REG and SPI_FMEM_PMS2_SIZE_REG."]
     #[inline(always)]
-    pub fn fmem_pms2_ecc(&mut self) -> FMEM_PMS2_ECC_W<FMEM_PMS2_ATTR_SPEC> {
+    pub fn fmem_pms2_ecc(&mut self) -> FMEM_PMS2_ECC_W<'_, FMEM_PMS2_ATTR_SPEC> {
         FMEM_PMS2_ECC_W::new(self, 2)
     }
 }

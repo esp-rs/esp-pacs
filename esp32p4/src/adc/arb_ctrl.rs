@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - adc2 arbiter force to enableapb controller"]
     #[inline(always)]
-    pub fn apb_force(&mut self) -> APB_FORCE_W<ARB_CTRL_SPEC> {
+    pub fn apb_force(&mut self) -> APB_FORCE_W<'_, ARB_CTRL_SPEC> {
         APB_FORCE_W::new(self, 2)
     }
     #[doc = "Bit 3 - adc2 arbiter force to enable rtc controller"]
     #[inline(always)]
-    pub fn rtc_force(&mut self) -> RTC_FORCE_W<ARB_CTRL_SPEC> {
+    pub fn rtc_force(&mut self) -> RTC_FORCE_W<'_, ARB_CTRL_SPEC> {
         RTC_FORCE_W::new(self, 3)
     }
     #[doc = "Bit 4 - adc2 arbiter force to enable wifi controller"]
     #[inline(always)]
-    pub fn wifi_force(&mut self) -> WIFI_FORCE_W<ARB_CTRL_SPEC> {
+    pub fn wifi_force(&mut self) -> WIFI_FORCE_W<'_, ARB_CTRL_SPEC> {
         WIFI_FORCE_W::new(self, 4)
     }
     #[doc = "Bit 5 - adc2 arbiter force grant"]
     #[inline(always)]
-    pub fn grant_force(&mut self) -> GRANT_FORCE_W<ARB_CTRL_SPEC> {
+    pub fn grant_force(&mut self) -> GRANT_FORCE_W<'_, ARB_CTRL_SPEC> {
         GRANT_FORCE_W::new(self, 5)
     }
     #[doc = "Bits 6:7 - Set adc2 arbiterapb priority"]
     #[inline(always)]
-    pub fn apb_priority(&mut self) -> APB_PRIORITY_W<ARB_CTRL_SPEC> {
+    pub fn apb_priority(&mut self) -> APB_PRIORITY_W<'_, ARB_CTRL_SPEC> {
         APB_PRIORITY_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Set adc2 arbiter rtc priority"]
     #[inline(always)]
-    pub fn rtc_priority(&mut self) -> RTC_PRIORITY_W<ARB_CTRL_SPEC> {
+    pub fn rtc_priority(&mut self) -> RTC_PRIORITY_W<'_, ARB_CTRL_SPEC> {
         RTC_PRIORITY_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Set adc2 arbiter wifi priority"]
     #[inline(always)]
-    pub fn wifi_priority(&mut self) -> WIFI_PRIORITY_W<ARB_CTRL_SPEC> {
+    pub fn wifi_priority(&mut self) -> WIFI_PRIORITY_W<'_, ARB_CTRL_SPEC> {
         WIFI_PRIORITY_W::new(self, 10)
     }
     #[doc = "Bit 12 - adc2 arbiter uses fixed priority"]
     #[inline(always)]
-    pub fn fix_priority(&mut self) -> FIX_PRIORITY_W<ARB_CTRL_SPEC> {
+    pub fn fix_priority(&mut self) -> FIX_PRIORITY_W<'_, ARB_CTRL_SPEC> {
         FIX_PRIORITY_W::new(self, 12)
     }
 }

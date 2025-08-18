@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Configures video A vertical MB resolution."]
     #[inline(always)]
-    pub fn a_sys_total_mb_y(&mut self) -> A_SYS_TOTAL_MB_Y_W<A_SYS_MB_RES_SPEC> {
+    pub fn a_sys_total_mb_y(&mut self) -> A_SYS_TOTAL_MB_Y_W<'_, A_SYS_MB_RES_SPEC> {
         A_SYS_TOTAL_MB_Y_W::new(self, 0)
     }
     #[doc = "Bits 7:13 - Configures video A horizontal MB resolution."]
     #[inline(always)]
-    pub fn a_sys_total_mb_x(&mut self) -> A_SYS_TOTAL_MB_X_W<A_SYS_MB_RES_SPEC> {
+    pub fn a_sys_total_mb_x(&mut self) -> A_SYS_TOTAL_MB_X_W<'_, A_SYS_MB_RES_SPEC> {
         A_SYS_TOTAL_MB_X_W::new(self, 7)
     }
 }

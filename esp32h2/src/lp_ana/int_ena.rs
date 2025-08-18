@@ -67,27 +67,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn vddbat_charge_upvoltage(&mut self) -> VDDBAT_CHARGE_UPVOLTAGE_W<INT_ENA_SPEC> {
+    pub fn vddbat_charge_upvoltage(&mut self) -> VDDBAT_CHARGE_UPVOLTAGE_W<'_, INT_ENA_SPEC> {
         VDDBAT_CHARGE_UPVOLTAGE_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn vddbat_charge_undervoltage(&mut self) -> VDDBAT_CHARGE_UNDERVOLTAGE_W<INT_ENA_SPEC> {
+    pub fn vddbat_charge_undervoltage(&mut self) -> VDDBAT_CHARGE_UNDERVOLTAGE_W<'_, INT_ENA_SPEC> {
         VDDBAT_CHARGE_UNDERVOLTAGE_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn vddbat_upvoltage(&mut self) -> VDDBAT_UPVOLTAGE_W<INT_ENA_SPEC> {
+    pub fn vddbat_upvoltage(&mut self) -> VDDBAT_UPVOLTAGE_W<'_, INT_ENA_SPEC> {
         VDDBAT_UPVOLTAGE_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn vddbat_undervoltage(&mut self) -> VDDBAT_UNDERVOLTAGE_W<INT_ENA_SPEC> {
+    pub fn vddbat_undervoltage(&mut self) -> VDDBAT_UNDERVOLTAGE_W<'_, INT_ENA_SPEC> {
         VDDBAT_UNDERVOLTAGE_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn bod_mode0(&mut self) -> BOD_MODE0_W<INT_ENA_SPEC> {
+    pub fn bod_mode0(&mut self) -> BOD_MODE0_W<'_, INT_ENA_SPEC> {
         BOD_MODE0_W::new(self, 31)
     }
 }

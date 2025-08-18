@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pro(&mut self) -> PRO_W<AHB_LITE_MASK_SPEC> {
+    pub fn pro(&mut self) -> PRO_W<'_, AHB_LITE_MASK_SPEC> {
         PRO_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn app(&mut self) -> APP_W<AHB_LITE_MASK_SPEC> {
+    pub fn app(&mut self) -> APP_W<'_, AHB_LITE_MASK_SPEC> {
         APP_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn sdio(&mut self) -> SDIO_W<AHB_LITE_MASK_SPEC> {
+    pub fn sdio(&mut self) -> SDIO_W<'_, AHB_LITE_MASK_SPEC> {
         SDIO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn prodport(&mut self) -> PRODPORT_W<AHB_LITE_MASK_SPEC> {
+    pub fn prodport(&mut self) -> PRODPORT_W<'_, AHB_LITE_MASK_SPEC> {
         PRODPORT_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn appdport(&mut self) -> APPDPORT_W<AHB_LITE_MASK_SPEC> {
+    pub fn appdport(&mut self) -> APPDPORT_W<'_, AHB_LITE_MASK_SPEC> {
         APPDPORT_W::new(self, 10)
     }
     #[doc = "Bits 11:13"]
     #[inline(always)]
-    pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W<AHB_LITE_MASK_SPEC> {
+    pub fn ahb_lite_sdhost_pid(&mut self) -> AHB_LITE_SDHOST_PID_W<'_, AHB_LITE_MASK_SPEC> {
         AHB_LITE_SDHOST_PID_W::new(self, 11)
     }
 }

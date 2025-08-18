@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The value of RX FIFO read data."]
     #[inline(always)]
-    pub fn fifo_rdata(&mut self) -> FIFO_RDATA_W<DATA_SPEC> {
+    pub fn fifo_rdata(&mut self) -> FIFO_RDATA_W<'_, DATA_SPEC> {
         FIFO_RDATA_W::new(self, 0)
     }
 }

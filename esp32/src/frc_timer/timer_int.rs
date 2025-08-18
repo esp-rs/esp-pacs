@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn clr(&mut self) -> CLR_W<TIMER_INT_SPEC> {
+    pub fn clr(&mut self) -> CLR_W<'_, TIMER_INT_SPEC> {
         CLR_W::new(self, 0)
     }
 }

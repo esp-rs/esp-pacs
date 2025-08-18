@@ -124,42 +124,42 @@ impl W {
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_opposite(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_OPPOSITE_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_dram1(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_DRAM1_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_DRAM1_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_DRAM1_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_irom0(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_IROM0_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_IROM0_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_IROM0_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_iram1(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM1_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM1_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_IRAM1_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_iram0(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM0_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_IRAM0_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_IRAM0_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     pub fn app_cpu_disabled_cache_ia_drom0(
         &mut self,
-    ) -> APP_CPU_DISABLED_CACHE_IA_DROM0_W<APP_DCACHE_DBUG3_SPEC> {
+    ) -> APP_CPU_DISABLED_CACHE_IA_DROM0_W<'_, APP_DCACHE_DBUG3_SPEC> {
         APP_CPU_DISABLED_CACHE_IA_DROM0_W::new(self, 14)
     }
 }

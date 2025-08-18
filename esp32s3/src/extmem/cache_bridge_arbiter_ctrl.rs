@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn alloc_wb_hold_arbiter(
         &mut self,
-    ) -> ALLOC_WB_HOLD_ARBITER_W<CACHE_BRIDGE_ARBITER_CTRL_SPEC> {
+    ) -> ALLOC_WB_HOLD_ARBITER_W<'_, CACHE_BRIDGE_ARBITER_CTRL_SPEC> {
         ALLOC_WB_HOLD_ARBITER_W::new(self, 0)
     }
 }

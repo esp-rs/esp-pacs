@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn hp_active_dig_icg_func_en(
         &mut self,
-    ) -> HP_ACTIVE_DIG_ICG_FUNC_EN_W<HP_ACTIVE_ICG_HP_FUNC_SPEC> {
+    ) -> HP_ACTIVE_DIG_ICG_FUNC_EN_W<'_, HP_ACTIVE_ICG_HP_FUNC_SPEC> {
         HP_ACTIVE_DIG_ICG_FUNC_EN_W::new(self, 0)
     }
 }

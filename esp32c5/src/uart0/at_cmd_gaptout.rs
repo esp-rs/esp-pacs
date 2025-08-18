@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Configures the interval between two AT_CMD characters.\\\\Measurement unit: bit time (the time to transmit 1 bit)."]
     #[inline(always)]
-    pub fn rx_gap_tout(&mut self) -> RX_GAP_TOUT_W<AT_CMD_GAPTOUT_SPEC> {
+    pub fn rx_gap_tout(&mut self) -> RX_GAP_TOUT_W<'_, AT_CMD_GAPTOUT_SPEC> {
         RX_GAP_TOUT_W::new(self, 0)
     }
 }

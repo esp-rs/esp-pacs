@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn core_0_pif_pms_constrain_lock(
         &mut self,
-    ) -> CORE_0_PIF_PMS_CONSTRAIN_LOCK_W<CORE_0_PIF_PMS_CONSTRAIN_0_SPEC> {
+    ) -> CORE_0_PIF_PMS_CONSTRAIN_LOCK_W<'_, CORE_0_PIF_PMS_CONSTRAIN_0_SPEC> {
         CORE_0_PIF_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
 }

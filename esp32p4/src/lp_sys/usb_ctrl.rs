@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - need_des"]
     #[inline(always)]
-    pub fn sw_hw_usb_phy_sel(&mut self) -> SW_HW_USB_PHY_SEL_W<USB_CTRL_SPEC> {
+    pub fn sw_hw_usb_phy_sel(&mut self) -> SW_HW_USB_PHY_SEL_W<'_, USB_CTRL_SPEC> {
         SW_HW_USB_PHY_SEL_W::new(self, 0)
     }
     #[doc = "Bit 1 - need_des"]
     #[inline(always)]
-    pub fn sw_usb_phy_sel(&mut self) -> SW_USB_PHY_SEL_W<USB_CTRL_SPEC> {
+    pub fn sw_usb_phy_sel(&mut self) -> SW_USB_PHY_SEL_W<'_, USB_CTRL_SPEC> {
         SW_USB_PHY_SEL_W::new(self, 1)
     }
     #[doc = "Bit 2 - clear usb wakeup to PMU."]
     #[inline(always)]
-    pub fn usbotg20_wakeup_clr(&mut self) -> USBOTG20_WAKEUP_CLR_W<USB_CTRL_SPEC> {
+    pub fn usbotg20_wakeup_clr(&mut self) -> USBOTG20_WAKEUP_CLR_W<'_, USB_CTRL_SPEC> {
         USBOTG20_WAKEUP_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - indicate usb otg2.0 is in suspend state."]
     #[inline(always)]
-    pub fn usbotg20_in_suspend(&mut self) -> USBOTG20_IN_SUSPEND_W<USB_CTRL_SPEC> {
+    pub fn usbotg20_in_suspend(&mut self) -> USBOTG20_IN_SUSPEND_W<'_, USB_CTRL_SPEC> {
         USBOTG20_IN_SUSPEND_W::new(self, 3)
     }
 }

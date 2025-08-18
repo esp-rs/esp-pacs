@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<WDTFEED_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - Write any value to feed the MWDT."]
     #[inline(always)]
-    pub fn wdt_feed(&mut self) -> WDT_FEED_W<WDTFEED_SPEC> {
+    pub fn wdt_feed(&mut self) -> WDT_FEED_W<'_, WDTFEED_SPEC> {
         WDT_FEED_W::new(self, 0)
     }
 }

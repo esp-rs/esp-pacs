@@ -181,77 +181,77 @@ impl W {
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_0(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - Region 1 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_1(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Region 2 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_2(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Region 3 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_3(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Region 4 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_4(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_4_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - Region 5 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_5(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_5_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - Region 6 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_6(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_6_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Region 7 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_7(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_7_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - Region 8 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_8(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_8_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - Region 9 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_9(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_9_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - Region 10 permission in world 1 for core1."]
     #[inline(always)]
     pub fn core_1_region_pms_constrain_world_1_area_10(
         &mut self,
-    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_W<CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
+    ) -> CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_W<'_, CORE_1_REGION_PMS_CONSTRAIN_2_SPEC> {
         CORE_1_REGION_PMS_CONSTRAIN_WORLD_1_AREA_10_W::new(self, 20)
     }
 }

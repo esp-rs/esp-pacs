@@ -36,14 +36,14 @@ impl W {
     #[inline(always)]
     pub fn l2_mem_ahb_wrbuffer_en(
         &mut self,
-    ) -> L2_MEM_AHB_WRBUFFER_EN_W<L2_MEM_AHB_BUFFER_CTRL_SPEC> {
+    ) -> L2_MEM_AHB_WRBUFFER_EN_W<'_, L2_MEM_AHB_BUFFER_CTRL_SPEC> {
         L2_MEM_AHB_WRBUFFER_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to turn on l2mem ahb rd buffer"]
     #[inline(always)]
     pub fn l2_mem_ahb_rdbuffer_en(
         &mut self,
-    ) -> L2_MEM_AHB_RDBUFFER_EN_W<L2_MEM_AHB_BUFFER_CTRL_SPEC> {
+    ) -> L2_MEM_AHB_RDBUFFER_EN_W<'_, L2_MEM_AHB_BUFFER_CTRL_SPEC> {
         L2_MEM_AHB_RDBUFFER_EN_W::new(self, 1)
     }
 }

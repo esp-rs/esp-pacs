@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - enable the timestamp collection function."]
     #[inline(always)]
-    pub fn ts_enable(&mut self) -> TS_ENABLE_W<TIMESTAMP_CFG_SPEC> {
+    pub fn ts_enable(&mut self) -> TS_ENABLE_W<'_, TIMESTAMP_CFG_SPEC> {
         TS_ENABLE_W::new(self, 0)
     }
 }

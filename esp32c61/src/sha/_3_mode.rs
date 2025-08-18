@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Sha3 mode"]
     #[inline(always)]
-    pub fn _3_mode(&mut self) -> _3_MODE_W<_3_MODE_SPEC> {
+    pub fn _3_mode(&mut self) -> _3_MODE_W<'_, _3_MODE_SPEC> {
         _3_MODE_W::new(self, 0)
     }
 }

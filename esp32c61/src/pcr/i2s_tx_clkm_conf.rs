@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:19 - Integral I2S TX clock divider value. f_I2S_CLK = f_I2S_CLK_S/(N+b/a). There will be (a-b) * n-div and b * (n+1)-div. So the average combination will be: for b <= a/2, z * \\[x * n-div + (n+1)-div\\] + y * n-div. For b > a/2, z * \\[n-div + x * (n+1)-div\\] + y * (n+1)-div."]
     #[inline(always)]
-    pub fn i2s_tx_clkm_div_num(&mut self) -> I2S_TX_CLKM_DIV_NUM_W<I2S_TX_CLKM_CONF_SPEC> {
+    pub fn i2s_tx_clkm_div_num(&mut self) -> I2S_TX_CLKM_DIV_NUM_W<'_, I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Configures the clock source of I2S TX.\\\\ 0 (default): XTAL_CLK\\\\ 1: PLL_F120M_CLK\\\\ 2: PLL_F160M_CLK\\\\ 3: I2S_MCLK_in\\\\"]
     #[inline(always)]
-    pub fn i2s_tx_clkm_sel(&mut self) -> I2S_TX_CLKM_SEL_W<I2S_TX_CLKM_CONF_SPEC> {
+    pub fn i2s_tx_clkm_sel(&mut self) -> I2S_TX_CLKM_SEL_W<'_, I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable i2s_tx function clock"]
     #[inline(always)]
-    pub fn i2s_tx_clkm_en(&mut self) -> I2S_TX_CLKM_EN_W<I2S_TX_CLKM_CONF_SPEC> {
+    pub fn i2s_tx_clkm_en(&mut self) -> I2S_TX_CLKM_EN_W<'_, I2S_TX_CLKM_CONF_SPEC> {
         I2S_TX_CLKM_EN_W::new(self, 22)
     }
 }

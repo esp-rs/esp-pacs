@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 27 - enable rtc i2c clock"]
     #[inline(always)]
-    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+    pub fn rtc_i2c_clk_en(&mut self) -> RTC_I2C_CLK_EN_W<'_, SAR_PERI_CLK_GATE_CONF_SPEC> {
         RTC_I2C_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 29 - enable tsens clock"]
     #[inline(always)]
-    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+    pub fn tsens_clk_en(&mut self) -> TSENS_CLK_EN_W<'_, SAR_PERI_CLK_GATE_CONF_SPEC> {
         TSENS_CLK_EN_W::new(self, 29)
     }
     #[doc = "Bit 30 - enbale saradc clock"]
     #[inline(always)]
-    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+    pub fn saradc_clk_en(&mut self) -> SARADC_CLK_EN_W<'_, SAR_PERI_CLK_GATE_CONF_SPEC> {
         SARADC_CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - enable io_mux clock"]
     #[inline(always)]
-    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<SAR_PERI_CLK_GATE_CONF_SPEC> {
+    pub fn iomux_clk_en(&mut self) -> IOMUX_CLK_EN_W<'_, SAR_PERI_CLK_GATE_CONF_SPEC> {
         IOMUX_CLK_EN_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn reg_l2_cache_ecc_en(&mut self) -> REG_L2_CACHE_ECC_EN_W<L2_MEM_L2_CACHE_ECC_SPEC> {
+    pub fn reg_l2_cache_ecc_en(&mut self) -> REG_L2_CACHE_ECC_EN_W<'_, L2_MEM_L2_CACHE_ECC_SPEC> {
         REG_L2_CACHE_ECC_EN_W::new(self, 0)
     }
 }

@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Stores the %sth 32-bit piece of the Hash value."]
     #[inline(always)]
-    pub fn h(&mut self) -> H_W<H_MEM_SPEC> {
+    pub fn h(&mut self) -> H_W<'_, H_MEM_SPEC> {
         H_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This register is used to configure the thr_h_lim value for unit %s. When pcnt reaches this value, the counter will be cleared to 0."]
     #[inline(always)]
-    pub fn cnt_h_lim(&mut self) -> CNT_H_LIM_W<CONF2_SPEC> {
+    pub fn cnt_h_lim(&mut self) -> CNT_H_LIM_W<'_, CONF2_SPEC> {
         CNT_H_LIM_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - This register is used to configure the thr_l_lim value for unit %s. When pcnt reaches this value, the counter will be cleared to 0."]
     #[inline(always)]
-    pub fn cnt_l_lim(&mut self) -> CNT_L_LIM_W<CONF2_SPEC> {
+    pub fn cnt_l_lim(&mut self) -> CNT_L_LIM_W<'_, CONF2_SPEC> {
         CNT_L_LIM_W::new(self, 16)
     }
 }

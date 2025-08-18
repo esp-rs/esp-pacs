@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<NMI_MASK_CANCEL_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - this field is used to cancel NMI mask disable function."]
     #[inline(always)]
-    pub fn nmi_mask_cancel(&mut self) -> NMI_MASK_CANCEL_W<NMI_MASK_CANCEL_SPEC> {
+    pub fn nmi_mask_cancel(&mut self) -> NMI_MASK_CANCEL_W<'_, NMI_MASK_CANCEL_SPEC> {
         NMI_MASK_CANCEL_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Reserved"]
     #[inline(always)]
-    pub fn bt_sel(&mut self) -> BT_SEL_W<BT_SELECT_SPEC> {
+    pub fn bt_sel(&mut self) -> BT_SEL_W<'_, BT_SELECT_SPEC> {
         BT_SEL_W::new(self, 0)
     }
 }

@@ -60,17 +60,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - set this bit to reset sync-logic inside L1-ICache0. Recommend that this should only be used to initialize sync-logic when some fatal error of sync-logic occurs."]
     #[inline(always)]
-    pub fn l1_icache0_sync_rst(&mut self) -> L1_ICACHE0_SYNC_RST_W<L1_CACHE_SYNC_RST_CTRL_SPEC> {
+    pub fn l1_icache0_sync_rst(
+        &mut self,
+    ) -> L1_ICACHE0_SYNC_RST_W<'_, L1_CACHE_SYNC_RST_CTRL_SPEC> {
         L1_ICACHE0_SYNC_RST_W::new(self, 0)
     }
     #[doc = "Bit 1 - set this bit to reset sync-logic inside L1-ICache1. Recommend that this should only be used to initialize sync-logic when some fatal error of sync-logic occurs."]
     #[inline(always)]
-    pub fn l1_icache1_sync_rst(&mut self) -> L1_ICACHE1_SYNC_RST_W<L1_CACHE_SYNC_RST_CTRL_SPEC> {
+    pub fn l1_icache1_sync_rst(
+        &mut self,
+    ) -> L1_ICACHE1_SYNC_RST_W<'_, L1_CACHE_SYNC_RST_CTRL_SPEC> {
         L1_ICACHE1_SYNC_RST_W::new(self, 1)
     }
     #[doc = "Bit 4 - set this bit to reset sync-logic inside L1-DCache. Recommend that this should only be used to initialize sync-logic when some fatal error of sync-logic occurs."]
     #[inline(always)]
-    pub fn l1_dcache_sync_rst(&mut self) -> L1_DCACHE_SYNC_RST_W<L1_CACHE_SYNC_RST_CTRL_SPEC> {
+    pub fn l1_dcache_sync_rst(&mut self) -> L1_DCACHE_SYNC_RST_W<'_, L1_CACHE_SYNC_RST_CTRL_SPEC> {
         L1_DCACHE_SYNC_RST_W::new(self, 4)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the flow controller, 0: dmac as flow controller, 1:dsi_bridge as flow controller"]
     #[inline(always)]
-    pub fn dsi_dma_flow_controller(&mut self) -> DSI_DMA_FLOW_CONTROLLER_W<DMA_FLOW_CTRL_SPEC> {
+    pub fn dsi_dma_flow_controller(&mut self) -> DSI_DMA_FLOW_CONTROLLER_W<'_, DMA_FLOW_CTRL_SPEC> {
         DSI_DMA_FLOW_CONTROLLER_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - this field configures the num of blocks when multi-blk is enable and dmac as flow controller"]
     #[inline(always)]
-    pub fn dma_flow_multiblk_num(&mut self) -> DMA_FLOW_MULTIBLK_NUM_W<DMA_FLOW_CTRL_SPEC> {
+    pub fn dma_flow_multiblk_num(&mut self) -> DMA_FLOW_MULTIBLK_NUM_W<'_, DMA_FLOW_CTRL_SPEC> {
         DMA_FLOW_MULTIBLK_NUM_W::new(self, 4)
     }
 }

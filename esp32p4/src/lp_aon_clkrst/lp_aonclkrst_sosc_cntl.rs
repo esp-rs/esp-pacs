@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_sosc_dfreq(
         &mut self,
-    ) -> LP_AONCLKRST_SOSC_DFREQ_W<LP_AONCLKRST_SOSC_CNTL_SPEC> {
+    ) -> LP_AONCLKRST_SOSC_DFREQ_W<'_, LP_AONCLKRST_SOSC_CNTL_SPEC> {
         LP_AONCLKRST_SOSC_DFREQ_W::new(self, 22)
     }
 }

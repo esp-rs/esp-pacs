@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - program erase resume bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_per(&mut self) -> FLASH_PER_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_per(&mut self) -> FLASH_PER_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PER_W::new(self, 0)
     }
     #[doc = "Bit 1 - program erase suspend bit, program erase suspend operation will be triggered when the bit is set. The bit will be cleared once the operation done.1: enable 0: disable."]
     #[inline(always)]
-    pub fn flash_pes(&mut self) -> FLASH_PES_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_pes(&mut self) -> FLASH_PES_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PES_W::new(self, 1)
     }
     #[doc = "Bit 2 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase resume command is sent. 0: SPI1 does not wait after program erase resume command is sent."]
     #[inline(always)]
-    pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_per_wait_en(&mut self) -> FLASH_PER_WAIT_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PER_WAIT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: SPI1 waits (SPI_MEM_CS_HOLD_DELAY_RES\\[9:0\\] * 4 or *128) SPI_CLK cycles after program erase suspend command is sent. 0: SPI1 does not wait after program erase suspend command is sent."]
     #[inline(always)]
-    pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_pes_wait_en(&mut self) -> FLASH_PES_WAIT_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PES_WAIT_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable PES end triggers PER transfer option. If this bit is 0, application should send PER after PES is done."]
     #[inline(always)]
-    pub fn pes_per_en(&mut self) -> PES_PER_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn pes_per_en(&mut self) -> PES_PER_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         PES_PER_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable Auto-suspending function."]
     #[inline(always)]
-    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn flash_pes_en(&mut self) -> FLASH_PES_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         FLASH_PES_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:21 - The mask value when check SUS/SUS1/SUS2 status bit. If the read status value is status_in\\[15:0\\](only status_in\\[7:0\\] is valid when only one byte of data is read out, status_in\\[15:0\\] is valid when two bytes of data are read out), SUS/SUS1/SUS2 = status_in\\[15:0\\]^ SPI_MEM_PESR_END_MSK\\[15:0\\]."]
     #[inline(always)]
-    pub fn pesr_end_msk(&mut self) -> PESR_END_MSK_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn pesr_end_msk(&mut self) -> PESR_END_MSK_W<'_, FLASH_SUS_CTRL_SPEC> {
         PESR_END_MSK_W::new(self, 6)
     }
     #[doc = "Bit 22 - 1: Read two bytes when check flash SUS/SUS1/SUS2 status bit. 0: Read one byte when check flash SUS/SUS1/SUS2 status bit"]
     #[inline(always)]
-    pub fn rd_sus_2b(&mut self) -> RD_SUS_2B_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn rd_sus_2b(&mut self) -> RD_SUS_2B_W<'_, FLASH_SUS_CTRL_SPEC> {
         RD_SUS_2B_W::new(self, 22)
     }
     #[doc = "Bit 23 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the resume status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]
-    pub fn per_end_en(&mut self) -> PER_END_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn per_end_en(&mut self) -> PER_END_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         PER_END_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - 1: Both WIP and SUS/SUS1/SUS2 bits should be checked to insure the suspend status of flash. 0: Only need to check WIP is 0."]
     #[inline(always)]
-    pub fn pes_end_en(&mut self) -> PES_END_EN_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn pes_end_en(&mut self) -> PES_END_EN_W<'_, FLASH_SUS_CTRL_SPEC> {
         PES_END_EN_W::new(self, 24)
     }
     #[doc = "Bits 25:31 - When SPI1 checks SUS/SUS1/SUS2 bits fail for SPI_MEM_SUS_TIMEOUT_CNT\\[6:0\\] times, it will be treated as check pass."]
     #[inline(always)]
-    pub fn sus_timeout_cnt(&mut self) -> SUS_TIMEOUT_CNT_W<FLASH_SUS_CTRL_SPEC> {
+    pub fn sus_timeout_cnt(&mut self) -> SUS_TIMEOUT_CNT_W<'_, FLASH_SUS_CTRL_SPEC> {
         SUS_TIMEOUT_CNT_W::new(self, 25)
     }
 }

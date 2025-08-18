@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 23:27"]
     #[inline(always)]
-    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<SAR_I2C_IO_SPEC> {
+    pub fn sar_debug_bit_sel(&mut self) -> SAR_DEBUG_BIT_SEL_W<'_, SAR_I2C_IO_SPEC> {
         SAR_DEBUG_BIT_SEL_W::new(self, 23)
     }
     #[doc = "Bits 28:29 - Ò0Ó using TOUCH_PAD\\[0\\] as i2c clk Ò1Ó using TOUCH_PAD\\[2\\] as i2c clk"]
     #[inline(always)]
-    pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<SAR_I2C_IO_SPEC> {
+    pub fn sar_i2c_scl_sel(&mut self) -> SAR_I2C_SCL_SEL_W<'_, SAR_I2C_IO_SPEC> {
         SAR_I2C_SCL_SEL_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - Ò0Ó using TOUCH_PAD\\[1\\] as i2c sda Ò1Ó using TOUCH_PAD\\[3\\] as i2c sda"]
     #[inline(always)]
-    pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<SAR_I2C_IO_SPEC> {
+    pub fn sar_i2c_sda_sel(&mut self) -> SAR_I2C_SDA_SEL_W<'_, SAR_I2C_IO_SPEC> {
         SAR_I2C_SDA_SEL_W::new(self, 30)
     }
 }

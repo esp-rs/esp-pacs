@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn dvbuspulse(&mut self) -> DVBUSPULSE_W<DVBUSPULSE_SPEC> {
+    pub fn dvbuspulse(&mut self) -> DVBUSPULSE_W<'_, DVBUSPULSE_SPEC> {
         DVBUSPULSE_W::new(self, 0)
     }
 }

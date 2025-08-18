@@ -54,22 +54,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - matrix tail pixen low level threshold, should not to large to prevent expanding to next frame, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    pub fn dpc_tail_pixen_pulse_tl(&mut self) -> DPC_TAIL_PIXEN_PULSE_TL_W<DPC_MATRIX_CTRL_SPEC> {
+    pub fn dpc_tail_pixen_pulse_tl(
+        &mut self,
+    ) -> DPC_TAIL_PIXEN_PULSE_TL_W<'_, DPC_MATRIX_CTRL_SPEC> {
         DPC_TAIL_PIXEN_PULSE_TL_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - matrix tail pixen high level threshold, must < hnum-1, only reg_dpc_tail_pixen_pulse_th!=0 and reg_dpc_tail_pixen_pulse_tl!=0 and reg_dpc_tail_pixen_pulse_th < reg_dpc_tail_pixen_pulse_tl will enable tail pulse function"]
     #[inline(always)]
-    pub fn dpc_tail_pixen_pulse_th(&mut self) -> DPC_TAIL_PIXEN_PULSE_TH_W<DPC_MATRIX_CTRL_SPEC> {
+    pub fn dpc_tail_pixen_pulse_th(
+        &mut self,
+    ) -> DPC_TAIL_PIXEN_PULSE_TH_W<'_, DPC_MATRIX_CTRL_SPEC> {
         DPC_TAIL_PIXEN_PULSE_TH_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - this field configures dpc matrix padding data"]
     #[inline(always)]
-    pub fn dpc_padding_data(&mut self) -> DPC_PADDING_DATA_W<DPC_MATRIX_CTRL_SPEC> {
+    pub fn dpc_padding_data(&mut self) -> DPC_PADDING_DATA_W<'_, DPC_MATRIX_CTRL_SPEC> {
         DPC_PADDING_DATA_W::new(self, 16)
     }
     #[doc = "Bit 24 - this bit configures the padding mode of dpc matrix. 0: use pixel in image to do padding 1: use reg_padding_data to do padding"]
     #[inline(always)]
-    pub fn dpc_padding_mode(&mut self) -> DPC_PADDING_MODE_W<DPC_MATRIX_CTRL_SPEC> {
+    pub fn dpc_padding_mode(&mut self) -> DPC_PADDING_MODE_W<'_, DPC_MATRIX_CTRL_SPEC> {
         DPC_PADDING_MODE_W::new(self, 24)
     }
 }

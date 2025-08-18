@@ -68,37 +68,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - reg_timer_sel_lsch0."]
     #[inline(always)]
-    pub fn timer_sel(&mut self) -> TIMER_SEL_W<CONF0_SPEC> {
+    pub fn timer_sel(&mut self) -> TIMER_SEL_W<'_, CONF0_SPEC> {
         TIMER_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - reg_sig_out_en_lsch0."]
     #[inline(always)]
-    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<CONF0_SPEC> {
+    pub fn sig_out_en(&mut self) -> SIG_OUT_EN_W<'_, CONF0_SPEC> {
         SIG_OUT_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - reg_idle_lv_lsch0."]
     #[inline(always)]
-    pub fn idle_lv(&mut self) -> IDLE_LV_W<CONF0_SPEC> {
+    pub fn idle_lv(&mut self) -> IDLE_LV_W<'_, CONF0_SPEC> {
         IDLE_LV_W::new(self, 3)
     }
     #[doc = "Bit 4 - reg_para_up_lsch0."]
     #[inline(always)]
-    pub fn para_up(&mut self) -> PARA_UP_W<CONF0_SPEC> {
+    pub fn para_up(&mut self) -> PARA_UP_W<'_, CONF0_SPEC> {
         PARA_UP_W::new(self, 4)
     }
     #[doc = "Bits 5:14 - reg_ovf_num_lsch0."]
     #[inline(always)]
-    pub fn ovf_num(&mut self) -> OVF_NUM_W<CONF0_SPEC> {
+    pub fn ovf_num(&mut self) -> OVF_NUM_W<'_, CONF0_SPEC> {
         OVF_NUM_W::new(self, 5)
     }
     #[doc = "Bit 15 - reg_ovf_cnt_en_lsch0."]
     #[inline(always)]
-    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<CONF0_SPEC> {
+    pub fn ovf_cnt_en(&mut self) -> OVF_CNT_EN_W<'_, CONF0_SPEC> {
         OVF_CNT_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - reg_ovf_cnt_reset_lsch0."]
     #[inline(always)]
-    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<CONF0_SPEC> {
+    pub fn ovf_cnt_reset(&mut self) -> OVF_CNT_RESET_W<'_, CONF0_SPEC> {
         OVF_CNT_RESET_W::new(self, 16)
     }
 }

@@ -66,32 +66,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - need des"]
     #[inline(always)]
-    pub fn sync_bypass(&mut self) -> SYNC_BYPASS_W<PIN_SPEC> {
+    pub fn sync_bypass(&mut self) -> SYNC_BYPASS_W<'_, PIN_SPEC> {
         SYNC_BYPASS_W::new(self, 0)
     }
     #[doc = "Bit 2 - need des"]
     #[inline(always)]
-    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<PIN_SPEC> {
+    pub fn pad_driver(&mut self) -> PAD_DRIVER_W<'_, PIN_SPEC> {
         PAD_DRIVER_W::new(self, 2)
     }
     #[doc = "Bit 3 - need des"]
     #[inline(always)]
-    pub fn edge_wakeup_clr(&mut self) -> EDGE_WAKEUP_CLR_W<PIN_SPEC> {
+    pub fn edge_wakeup_clr(&mut self) -> EDGE_WAKEUP_CLR_W<'_, PIN_SPEC> {
         EDGE_WAKEUP_CLR_W::new(self, 3)
     }
     #[doc = "Bits 7:9 - need des"]
     #[inline(always)]
-    pub fn int_type(&mut self) -> INT_TYPE_W<PIN_SPEC> {
+    pub fn int_type(&mut self) -> INT_TYPE_W<'_, PIN_SPEC> {
         INT_TYPE_W::new(self, 7)
     }
     #[doc = "Bit 10 - need des"]
     #[inline(always)]
-    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<PIN_SPEC> {
+    pub fn wakeup_enable(&mut self) -> WAKEUP_ENABLE_W<'_, PIN_SPEC> {
         WAKEUP_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - need des"]
     #[inline(always)]
-    pub fn filter_en(&mut self) -> FILTER_EN_W<PIN_SPEC> {
+    pub fn filter_en(&mut self) -> FILTER_EN_W<'_, PIN_SPEC> {
         FILTER_EN_W::new(self, 11)
     }
 }

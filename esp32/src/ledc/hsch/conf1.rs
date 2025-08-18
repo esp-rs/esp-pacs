@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register controls the increase or decrease step scale for high speed channel0."]
     #[inline(always)]
-    pub fn duty_scale(&mut self) -> DUTY_SCALE_W<CONF1_SPEC> {
+    pub fn duty_scale(&mut self) -> DUTY_SCALE_W<'_, CONF1_SPEC> {
         DUTY_SCALE_W::new(self, 0)
     }
     #[doc = "Bits 10:19 - This register is used to increase or decrease the duty every reg_duty_cycle_hsch0 cycles for high speed channel0."]
     #[inline(always)]
-    pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<CONF1_SPEC> {
+    pub fn duty_cycle(&mut self) -> DUTY_CYCLE_W<'_, CONF1_SPEC> {
         DUTY_CYCLE_W::new(self, 10)
     }
     #[doc = "Bits 20:29 - This register is used to control the num of increased or decreased times for high speed channel0."]
     #[inline(always)]
-    pub fn duty_num(&mut self) -> DUTY_NUM_W<CONF1_SPEC> {
+    pub fn duty_num(&mut self) -> DUTY_NUM_W<'_, CONF1_SPEC> {
         DUTY_NUM_W::new(self, 20)
     }
     #[doc = "Bit 30 - This register is used to increase the duty of output signal or decrease the duty of output signal for high speed channel0."]
     #[inline(always)]
-    pub fn duty_inc(&mut self) -> DUTY_INC_W<CONF1_SPEC> {
+    pub fn duty_inc(&mut self) -> DUTY_INC_W<'_, CONF1_SPEC> {
         DUTY_INC_W::new(self, 30)
     }
     #[doc = "Bit 31 - When reg_duty_num_hsch0 reg_duty_cycle_hsch0 and reg_duty_scale_hsch0 has been configured. these register won't take effect until set reg_duty_start_hsch0. this bit is automatically cleared by hardware."]
     #[inline(always)]
-    pub fn duty_start(&mut self) -> DUTY_START_W<CONF1_SPEC> {
+    pub fn duty_start(&mut self) -> DUTY_START_W<'_, CONF1_SPEC> {
         DUTY_START_W::new(self, 31)
     }
 }

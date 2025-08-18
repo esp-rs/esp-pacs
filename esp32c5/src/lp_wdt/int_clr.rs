@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 30 - Configure whether to clear the timeout interrupt signal sent by SWD to CPU.\\\\0: No\\\\1: Yes"]
     #[inline(always)]
-    pub fn super_wdt_int_clr(&mut self) -> SUPER_WDT_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn super_wdt_int_clr(&mut self) -> SUPER_WDT_INT_CLR_W<'_, INT_CLR_SPEC> {
         SUPER_WDT_INT_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configure whether to clear the timeout interrupt signal sent by RWDT to CPU.\\\\0: No\\\\1: Yes"]
     #[inline(always)]
-    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn wdt_int_clr(&mut self) -> WDT_INT_CLR_W<'_, INT_CLR_SPEC> {
         WDT_INT_CLR_W::new(self, 31)
     }
 }

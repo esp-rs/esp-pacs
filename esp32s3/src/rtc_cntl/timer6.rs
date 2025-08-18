@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - No public"]
     #[inline(always)]
-    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<TIMER6_SPEC> {
+    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<'_, TIMER6_SPEC> {
         CPU_TOP_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - No public"]
     #[inline(always)]
-    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<TIMER6_SPEC> {
+    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<'_, TIMER6_SPEC> {
         CPU_TOP_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24 - No public"]
     #[inline(always)]
-    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_peri_wait_timer(&mut self) -> DG_PERI_WAIT_TIMER_W<'_, TIMER6_SPEC> {
         DG_PERI_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - No public"]
     #[inline(always)]
-    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<TIMER6_SPEC> {
+    pub fn dg_peri_powerup_timer(&mut self) -> DG_PERI_POWERUP_TIMER_W<'_, TIMER6_SPEC> {
         DG_PERI_POWERUP_TIMER_W::new(self, 25)
     }
 }

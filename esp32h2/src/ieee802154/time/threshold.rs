@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn timer0_threshold(&mut self) -> TIMER0_THRESHOLD_W<THRESHOLD_SPEC> {
+    pub fn timer0_threshold(&mut self) -> TIMER0_THRESHOLD_W<'_, THRESHOLD_SPEC> {
         TIMER0_THRESHOLD_W::new(self, 0)
     }
 }

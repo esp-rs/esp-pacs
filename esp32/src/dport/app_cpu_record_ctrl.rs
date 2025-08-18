@@ -44,17 +44,23 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn app_cpu_record_enable(&mut self) -> APP_CPU_RECORD_ENABLE_W<APP_CPU_RECORD_CTRL_SPEC> {
+    pub fn app_cpu_record_enable(
+        &mut self,
+    ) -> APP_CPU_RECORD_ENABLE_W<'_, APP_CPU_RECORD_CTRL_SPEC> {
         APP_CPU_RECORD_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn app_cpu_record_disable(&mut self) -> APP_CPU_RECORD_DISABLE_W<APP_CPU_RECORD_CTRL_SPEC> {
+    pub fn app_cpu_record_disable(
+        &mut self,
+    ) -> APP_CPU_RECORD_DISABLE_W<'_, APP_CPU_RECORD_CTRL_SPEC> {
         APP_CPU_RECORD_DISABLE_W::new(self, 4)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn app_cpu_pdebug_enable(&mut self) -> APP_CPU_PDEBUG_ENABLE_W<APP_CPU_RECORD_CTRL_SPEC> {
+    pub fn app_cpu_pdebug_enable(
+        &mut self,
+    ) -> APP_CPU_PDEBUG_ENABLE_W<'_, APP_CPU_RECORD_CTRL_SPEC> {
         APP_CPU_PDEBUG_ENABLE_W::new(self, 8)
     }
 }

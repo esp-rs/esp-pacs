@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn cache_l2_cache_debug_bus(
         &mut self,
-    ) -> CACHE_L2_CACHE_DEBUG_BUS_W<CACHE_L2_CACHE_DEBUG_BUS_SPEC> {
+    ) -> CACHE_L2_CACHE_DEBUG_BUS_W<'_, CACHE_L2_CACHE_DEBUG_BUS_SPEC> {
         CACHE_L2_CACHE_DEBUG_BUS_W::new(self, 0)
     }
 }

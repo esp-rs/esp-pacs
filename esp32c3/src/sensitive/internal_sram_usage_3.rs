@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_usage_mac_dump_sram(
         &mut self,
-    ) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+    ) -> INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W<'_, INTERNAL_SRAM_USAGE_3_SPEC> {
         INTERNAL_SRAM_USAGE_MAC_DUMP_SRAM_W::new(self, 0)
     }
     #[doc = "Bit 3 - internal_sram_alloc_mac_dump"]
     #[inline(always)]
     pub fn internal_sram_alloc_mac_dump(
         &mut self,
-    ) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+    ) -> INTERNAL_SRAM_ALLOC_MAC_DUMP_W<'_, INTERNAL_SRAM_USAGE_3_SPEC> {
         INTERNAL_SRAM_ALLOC_MAC_DUMP_W::new(self, 3)
     }
 }

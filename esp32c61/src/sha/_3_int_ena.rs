@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Sha3 interrupt enable register. 1'b0: disable(default). 1'b1:enable"]
     #[inline(always)]
-    pub fn _3_int_ena(&mut self) -> _3_INT_ENA_W<_3_INT_ENA_SPEC> {
+    pub fn _3_int_ena(&mut self) -> _3_INT_ENA_W<'_, _3_INT_ENA_SPEC> {
         _3_INT_ENA_W::new(self, 0)
     }
 }

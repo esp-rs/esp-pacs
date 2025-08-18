@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn force_phy_errsoths_0(&mut self) -> FORCE_PHY_ERRSOTHS_0_W<INT_FORCE_PHY_SPEC> {
+    pub fn force_phy_errsoths_0(&mut self) -> FORCE_PHY_ERRSOTHS_0_W<'_, INT_FORCE_PHY_SPEC> {
         FORCE_PHY_ERRSOTHS_0_W::new(self, 0)
     }
     #[doc = "Bit 1 - NA"]
     #[inline(always)]
-    pub fn force_phy_errsoths_1(&mut self) -> FORCE_PHY_ERRSOTHS_1_W<INT_FORCE_PHY_SPEC> {
+    pub fn force_phy_errsoths_1(&mut self) -> FORCE_PHY_ERRSOTHS_1_W<'_, INT_FORCE_PHY_SPEC> {
         FORCE_PHY_ERRSOTHS_1_W::new(self, 1)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn force_phy_erresc_0(&mut self) -> FORCE_PHY_ERRESC_0_W<INT_FORCE_PHY_SPEC> {
+    pub fn force_phy_erresc_0(&mut self) -> FORCE_PHY_ERRESC_0_W<'_, INT_FORCE_PHY_SPEC> {
         FORCE_PHY_ERRESC_0_W::new(self, 16)
     }
     #[doc = "Bit 17 - NA"]
     #[inline(always)]
-    pub fn force_phy_erresc_1(&mut self) -> FORCE_PHY_ERRESC_1_W<INT_FORCE_PHY_SPEC> {
+    pub fn force_phy_erresc_1(&mut self) -> FORCE_PHY_ERRESC_1_W<'_, INT_FORCE_PHY_SPEC> {
         FORCE_PHY_ERRESC_1_W::new(self, 17)
     }
 }

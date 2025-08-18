@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit stores the destination parameter which will be used in manual encryption calculation. 0: flash(default), 1: psram(reserved). Only default value can be used."]
     #[inline(always)]
-    pub fn xts_destination(&mut self) -> XTS_DESTINATION_W<XTS_DESTINATION_SPEC> {
+    pub fn xts_destination(&mut self) -> XTS_DESTINATION_W<'_, XTS_DESTINATION_SPEC> {
         XTS_DESTINATION_W::new(self, 0)
     }
 }

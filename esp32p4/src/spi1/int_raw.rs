@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw bit for SPI_MEM_PER_END_INT interrupt. 1: Triggered when Auto Resume command (0x7A) is sent and flash is resumed successfully. 0: Others."]
     #[inline(always)]
-    pub fn per_end(&mut self) -> PER_END_W<INT_RAW_SPEC> {
+    pub fn per_end(&mut self) -> PER_END_W<'_, INT_RAW_SPEC> {
         PER_END_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw bit for SPI_MEM_PES_END_INT interrupt.1: Triggered when Auto Suspend command (0x75) is sent and flash is suspended successfully. 0: Others."]
     #[inline(always)]
-    pub fn pes_end(&mut self) -> PES_END_W<INT_RAW_SPEC> {
+    pub fn pes_end(&mut self) -> PES_END_W<'_, INT_RAW_SPEC> {
         PES_END_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw bit for SPI_MEM_WPE_END_INT interrupt. 1: Triggered when WRSR/PP/SE/BE/CE is sent and flash is already idle. 0: Others."]
     #[inline(always)]
-    pub fn wpe_end(&mut self) -> WPE_END_W<INT_RAW_SPEC> {
+    pub fn wpe_end(&mut self) -> WPE_END_W<'_, INT_RAW_SPEC> {
         WPE_END_W::new(self, 2)
     }
     #[doc = "Bit 3 - The raw bit for SPI_MEM_SLV_ST_END_INT interrupt. 1: Triggered when spi1_slv_st is changed from non idle state to idle state. It means that SPI_CS raises high. 0: Others"]
     #[inline(always)]
-    pub fn slv_st_end(&mut self) -> SLV_ST_END_W<INT_RAW_SPEC> {
+    pub fn slv_st_end(&mut self) -> SLV_ST_END_W<'_, INT_RAW_SPEC> {
         SLV_ST_END_W::new(self, 3)
     }
     #[doc = "Bit 4 - The raw bit for SPI_MEM_MST_ST_END_INT interrupt. 1: Triggered when spi1_mst_st is changed from non idle state to idle state. 0: Others."]
     #[inline(always)]
-    pub fn mst_st_end(&mut self) -> MST_ST_END_W<INT_RAW_SPEC> {
+    pub fn mst_st_end(&mut self) -> MST_ST_END_W<'_, INT_RAW_SPEC> {
         MST_ST_END_W::new(self, 4)
     }
     #[doc = "Bit 10 - The raw bit for SPI_MEM_BROWN_OUT_INT interrupt. 1: Triggered condition is that chip is loosing power and RTC module sends out brown out close flash request to SPI1. After SPI1 sends out suspend command to flash, this interrupt is triggered and MSPI returns to idle state. 0: Others."]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_RAW_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_RAW_SPEC> {
         BROWN_OUT_W::new(self, 10)
     }
 }

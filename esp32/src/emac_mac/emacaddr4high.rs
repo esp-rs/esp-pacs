@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits Bits\\[47:32\\] of the fifth 6-byte MAC address."]
     #[inline(always)]
-    pub fn mac_address4_hi(&mut self) -> MAC_ADDRESS4_HI_W<EMACADDR4HIGH_SPEC> {
+    pub fn mac_address4_hi(&mut self) -> MAC_ADDRESS4_HI_W<'_, EMACADDR4HIGH_SPEC> {
         MAC_ADDRESS4_HI_W::new(self, 0)
     }
     #[doc = "Bits 24:29 - These bits are mask control bits for comparison of each of the EMACADDR4 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR4 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR4 High \\[15:8\\]. Bit\\[28\\]: EMACADDR4 High \\[7:0\\]. Bit\\[27\\]: EMACADDR4 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR4 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
     #[inline(always)]
-    pub fn mask_byte_control4(&mut self) -> MASK_BYTE_CONTROL4_W<EMACADDR4HIGH_SPEC> {
+    pub fn mask_byte_control4(&mut self) -> MASK_BYTE_CONTROL4_W<'_, EMACADDR4HIGH_SPEC> {
         MASK_BYTE_CONTROL4_W::new(self, 24)
     }
     #[doc = "Bit 30 - When this bit is set the EMACADDR4\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR4\\[47:0\\] is used to compare with the DA fields of the received frame."]
     #[inline(always)]
-    pub fn source_address4(&mut self) -> SOURCE_ADDRESS4_W<EMACADDR4HIGH_SPEC> {
+    pub fn source_address4(&mut self) -> SOURCE_ADDRESS4_W<'_, EMACADDR4HIGH_SPEC> {
         SOURCE_ADDRESS4_W::new(self, 30)
     }
     #[doc = "Bit 31 - When this bit is set the address filter module uses the fifth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
     #[inline(always)]
-    pub fn address_enable4(&mut self) -> ADDRESS_ENABLE4_W<EMACADDR4HIGH_SPEC> {
+    pub fn address_enable4(&mut self) -> ADDRESS_ENABLE4_W<'_, EMACADDR4HIGH_SPEC> {
         ADDRESS_ENABLE4_W::new(self, 31)
     }
 }

@@ -117,12 +117,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Configures M%s security level mode.\\\\ 0: tee_mode \\\\ 1: ree_mode0 \\\\ 2: ree_mode1 \\\\ 3: ree_mode2 \\\\"]
     #[inline(always)]
-    pub fn mode(&mut self) -> MODE_W<M_MODE_CTRL_SPEC> {
+    pub fn mode(&mut self) -> MODE_W<'_, M_MODE_CTRL_SPEC> {
         MODE_W::new(self, 0)
     }
     #[doc = "Bit 2 - Set 1 to lock m0 tee configuration"]
     #[inline(always)]
-    pub fn lock(&mut self) -> LOCK_W<M_MODE_CTRL_SPEC> {
+    pub fn lock(&mut self) -> LOCK_W<'_, M_MODE_CTRL_SPEC> {
         LOCK_W::new(self, 2)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures wakeup character 0."]
     #[inline(always)]
-    pub fn wk_char0(&mut self) -> WK_CHAR0_W<SLEEP_CONF1_SPEC> {
+    pub fn wk_char0(&mut self) -> WK_CHAR0_W<'_, SLEEP_CONF1_SPEC> {
         WK_CHAR0_W::new(self, 0)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the duty cycle of sigma delta modulation output. \\\\"]
     #[inline(always)]
-    pub fn sd_in(&mut self) -> SD_IN_W<SIGMADELTA_SPEC> {
+    pub fn sd_in(&mut self) -> SD_IN_W<'_, SIGMADELTA_SPEC> {
         SD_IN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Configures the divider value to divide IO MUX operating clock. \\\\"]
     #[inline(always)]
-    pub fn sd_prescale(&mut self) -> SD_PRESCALE_W<SIGMADELTA_SPEC> {
+    pub fn sd_prescale(&mut self) -> SD_PRESCALE_W<'_, SIGMADELTA_SPEC> {
         SD_PRESCALE_W::new(self, 8)
     }
 }

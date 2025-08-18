@@ -21,32 +21,32 @@ impl core::fmt::Debug for crate::generic::Reg<HP_MODEM_BIAS_SPEC> {
 impl W {
     #[doc = "Bits 18:22 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_dcm_vset(&mut self) -> HP_MODEM_DCM_VSET_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_dcm_vset(&mut self) -> HP_MODEM_DCM_VSET_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_DCM_VSET_W::new(self, 18)
     }
     #[doc = "Bits 23:24 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_dcm_mode(&mut self) -> HP_MODEM_DCM_MODE_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_dcm_mode(&mut self) -> HP_MODEM_DCM_MODE_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_DCM_MODE_W::new(self, 23)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_xpd_bias(&mut self) -> HP_MODEM_XPD_BIAS_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_xpd_bias(&mut self) -> HP_MODEM_XPD_BIAS_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_XPD_BIAS_W::new(self, 25)
     }
     #[doc = "Bits 26:29 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_dbg_atten(&mut self) -> HP_MODEM_DBG_ATTEN_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_dbg_atten(&mut self) -> HP_MODEM_DBG_ATTEN_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_DBG_ATTEN_W::new(self, 26)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_pd_cur(&mut self) -> HP_MODEM_PD_CUR_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_pd_cur(&mut self) -> HP_MODEM_PD_CUR_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_PD_CUR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn sleep(&mut self) -> SLEEP_W<HP_MODEM_BIAS_SPEC> {
+    pub fn sleep(&mut self) -> SLEEP_W<'_, HP_MODEM_BIAS_SPEC> {
         SLEEP_W::new(self, 31)
     }
 }

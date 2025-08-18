@@ -76,37 +76,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 9 - reg_t0_use_xtal."]
     #[inline(always)]
-    pub fn use_xtal(&mut self) -> USE_XTAL_W<CONFIG_SPEC> {
+    pub fn use_xtal(&mut self) -> USE_XTAL_W<'_, CONFIG_SPEC> {
         USE_XTAL_W::new(self, 9)
     }
     #[doc = "Bit 10 - reg_t0_alarm_en."]
     #[inline(always)]
-    pub fn alarm_en(&mut self) -> ALARM_EN_W<CONFIG_SPEC> {
+    pub fn alarm_en(&mut self) -> ALARM_EN_W<'_, CONFIG_SPEC> {
         ALARM_EN_W::new(self, 10)
     }
     #[doc = "Bit 12 - reg_t0_divcnt_rst."]
     #[inline(always)]
-    pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<CONFIG_SPEC> {
+    pub fn divcnt_rst(&mut self) -> DIVCNT_RST_W<'_, CONFIG_SPEC> {
         DIVCNT_RST_W::new(self, 12)
     }
     #[doc = "Bits 13:28 - reg_t0_divider."]
     #[inline(always)]
-    pub fn divider(&mut self) -> DIVIDER_W<CONFIG_SPEC> {
+    pub fn divider(&mut self) -> DIVIDER_W<'_, CONFIG_SPEC> {
         DIVIDER_W::new(self, 13)
     }
     #[doc = "Bit 29 - reg_t0_autoreload."]
     #[inline(always)]
-    pub fn autoreload(&mut self) -> AUTORELOAD_W<CONFIG_SPEC> {
+    pub fn autoreload(&mut self) -> AUTORELOAD_W<'_, CONFIG_SPEC> {
         AUTORELOAD_W::new(self, 29)
     }
     #[doc = "Bit 30 - reg_t0_increase."]
     #[inline(always)]
-    pub fn increase(&mut self) -> INCREASE_W<CONFIG_SPEC> {
+    pub fn increase(&mut self) -> INCREASE_W<'_, CONFIG_SPEC> {
         INCREASE_W::new(self, 30)
     }
     #[doc = "Bit 31 - reg_t0_en."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CONFIG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CONFIG_SPEC> {
         EN_W::new(self, 31)
     }
 }

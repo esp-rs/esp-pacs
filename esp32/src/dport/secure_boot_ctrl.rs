@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn sw_bootloader_sel(&mut self) -> SW_BOOTLOADER_SEL_W<SECURE_BOOT_CTRL_SPEC> {
+    pub fn sw_bootloader_sel(&mut self) -> SW_BOOTLOADER_SEL_W<'_, SECURE_BOOT_CTRL_SPEC> {
         SW_BOOTLOADER_SEL_W::new(self, 0)
     }
 }

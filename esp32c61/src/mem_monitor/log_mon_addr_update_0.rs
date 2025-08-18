@@ -15,14 +15,14 @@ impl W {
     #[inline(always)]
     pub fn log_mon_addr_core_update(
         &mut self,
-    ) -> LOG_MON_ADDR_CORE_UPDATE_W<LOG_MON_ADDR_UPDATE_0_SPEC> {
+    ) -> LOG_MON_ADDR_CORE_UPDATE_W<'_, LOG_MON_ADDR_UPDATE_0_SPEC> {
         LOG_MON_ADDR_CORE_UPDATE_W::new(self, 0)
     }
     #[doc = "Bit 31 - Configures the address space of from MEM_MONITOR_LOG_MIN_REG to MEM_MONITOR_LOG_MAX_REG as the monitored address space of all masters.1: Update\\\\ 0: Not update\\\\"]
     #[inline(always)]
     pub fn log_mon_addr_all_update(
         &mut self,
-    ) -> LOG_MON_ADDR_ALL_UPDATE_W<LOG_MON_ADDR_UPDATE_0_SPEC> {
+    ) -> LOG_MON_ADDR_ALL_UPDATE_W<'_, LOG_MON_ADDR_UPDATE_0_SPEC> {
         LOG_MON_ADDR_ALL_UPDATE_W::new(self, 31)
     }
 }

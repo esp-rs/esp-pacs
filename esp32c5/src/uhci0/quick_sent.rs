@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Configures the source of data to be transmitted in single_send mode.\\\\ 0: Q0 register\\\\ 1: Q1 register\\\\ 2: Q2 register\\\\ 3: Q3 register\\\\ 4: Q4 register\\\\ 5: Q5 register\\\\ 6: Q6 register\\\\ 7: Invalid. No effect\\\\"]
     #[inline(always)]
-    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<QUICK_SENT_SPEC> {
+    pub fn single_send_num(&mut self) -> SINGLE_SEND_NUM_W<'_, QUICK_SENT_SPEC> {
         SINGLE_SEND_NUM_W::new(self, 0)
     }
     #[doc = "Bit 3 - Write 1 to enable single_send mode."]
     #[inline(always)]
-    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<QUICK_SENT_SPEC> {
+    pub fn single_send_en(&mut self) -> SINGLE_SEND_EN_W<'_, QUICK_SENT_SPEC> {
         SINGLE_SEND_EN_W::new(self, 3)
     }
     #[doc = "Bits 4:6 - Configures the source of data to be transmitted in always_send mode.\\\\ 0: Q0 register\\\\ 1: Q1 register\\\\ 2: Q2 register\\\\ 3: Q3 register\\\\ 4: Q4 register\\\\ 5: Q5 register\\\\ 6: Q6 register\\\\ 7: Invalid. No effect\\\\"]
     #[inline(always)]
-    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<QUICK_SENT_SPEC> {
+    pub fn always_send_num(&mut self) -> ALWAYS_SEND_NUM_W<'_, QUICK_SENT_SPEC> {
         ALWAYS_SEND_NUM_W::new(self, 4)
     }
     #[doc = "Bit 7 - Configures whether or not to enable always_send mode.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<QUICK_SENT_SPEC> {
+    pub fn always_send_en(&mut self) -> ALWAYS_SEND_EN_W<'_, QUICK_SENT_SPEC> {
         ALWAYS_SEND_EN_W::new(self, 7)
     }
 }

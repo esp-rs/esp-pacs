@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Zero Detect filter cycle length"]
     #[inline(always)]
-    pub fn zero_det_filter_cnt_0(&mut self) -> ZERO_DET_FILTER_CNT_0_W<PAD_COMP_FILTER_0_SPEC> {
+    pub fn zero_det_filter_cnt_0(&mut self) -> ZERO_DET_FILTER_CNT_0_W<'_, PAD_COMP_FILTER_0_SPEC> {
         ZERO_DET_FILTER_CNT_0_W::new(self, 0)
     }
 }

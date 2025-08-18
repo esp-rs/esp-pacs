@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Integral I2S clock divider value"]
     #[inline(always)]
-    pub fn rx_clkm_div_num(&mut self) -> RX_CLKM_DIV_NUM_W<RX_CLKM_CONF_SPEC> {
+    pub fn rx_clkm_div_num(&mut self) -> RX_CLKM_DIV_NUM_W<'_, RX_CLKM_CONF_SPEC> {
         RX_CLKM_DIV_NUM_W::new(self, 0)
     }
     #[doc = "Bit 26 - I2S Rx module clock enable signal."]
     #[inline(always)]
-    pub fn rx_clk_active(&mut self) -> RX_CLK_ACTIVE_W<RX_CLKM_CONF_SPEC> {
+    pub fn rx_clk_active(&mut self) -> RX_CLK_ACTIVE_W<'_, RX_CLKM_CONF_SPEC> {
         RX_CLK_ACTIVE_W::new(self, 26)
     }
     #[doc = "Bits 27:28 - Select I2S Rx module source clock. 0: no clock. 1: APLL. 2: CLK160. 3: I2S_MCLK_in."]
     #[inline(always)]
-    pub fn rx_clk_sel(&mut self) -> RX_CLK_SEL_W<RX_CLKM_CONF_SPEC> {
+    pub fn rx_clk_sel(&mut self) -> RX_CLK_SEL_W<'_, RX_CLKM_CONF_SPEC> {
         RX_CLK_SEL_W::new(self, 27)
     }
     #[doc = "Bit 29 - 0: UseI2S Tx module clock as I2S_MCLK_OUT. 1: UseI2S Rx module clock as I2S_MCLK_OUT."]
     #[inline(always)]
-    pub fn mclk_sel(&mut self) -> MCLK_SEL_W<RX_CLKM_CONF_SPEC> {
+    pub fn mclk_sel(&mut self) -> MCLK_SEL_W<'_, RX_CLKM_CONF_SPEC> {
         MCLK_SEL_W::new(self, 29)
     }
 }

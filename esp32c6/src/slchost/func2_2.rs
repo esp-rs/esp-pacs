@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - *******Description***********"]
     #[inline(always)]
-    pub fn slc_func1_mdstat(&mut self) -> SLC_FUNC1_MDSTAT_W<FUNC2_2_SPEC> {
+    pub fn slc_func1_mdstat(&mut self) -> SLC_FUNC1_MDSTAT_W<'_, FUNC2_2_SPEC> {
         SLC_FUNC1_MDSTAT_W::new(self, 0)
     }
 }

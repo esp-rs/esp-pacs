@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - the output spi_dqs is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_dqs_mode(&mut self) -> D_DQS_MODE_W<LCD_D_MODE_SPEC> {
+    pub fn d_dqs_mode(&mut self) -> D_DQS_MODE_W<'_, LCD_D_MODE_SPEC> {
         D_DQS_MODE_W::new(self, 0)
     }
     #[doc = "Bits 3:5 - the output spi_cd is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_cd_mode(&mut self) -> D_CD_MODE_W<LCD_D_MODE_SPEC> {
+    pub fn d_cd_mode(&mut self) -> D_CD_MODE_W<'_, LCD_D_MODE_SPEC> {
         D_CD_MODE_W::new(self, 3)
     }
     #[doc = "Bits 6:8 - the output spi_de is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_de_mode(&mut self) -> D_DE_MODE_W<LCD_D_MODE_SPEC> {
+    pub fn d_de_mode(&mut self) -> D_DE_MODE_W<'_, LCD_D_MODE_SPEC> {
         D_DE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 9:11 - the output spi_hsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_hsync_mode(&mut self) -> D_HSYNC_MODE_W<LCD_D_MODE_SPEC> {
+    pub fn d_hsync_mode(&mut self) -> D_HSYNC_MODE_W<'_, LCD_D_MODE_SPEC> {
         D_HSYNC_MODE_W::new(self, 9)
     }
     #[doc = "Bits 12:14 - the output spi_vsync is delayed by system clock cycles, 0: output without delayed, 1: output with the posedge of clk_apb,2 output with the negedge of clk_apb, 3: output with the spi_clk. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn d_vsync_mode(&mut self) -> D_VSYNC_MODE_W<LCD_D_MODE_SPEC> {
+    pub fn d_vsync_mode(&mut self) -> D_VSYNC_MODE_W<'_, LCD_D_MODE_SPEC> {
         D_VSYNC_MODE_W::new(self, 12)
     }
     #[doc = "Bit 15 - It is the idle value of spi_de."]
     #[inline(always)]
-    pub fn de_idle_pol(&mut self) -> DE_IDLE_POL_W<LCD_D_MODE_SPEC> {
+    pub fn de_idle_pol(&mut self) -> DE_IDLE_POL_W<'_, LCD_D_MODE_SPEC> {
         DE_IDLE_POL_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: The pulse of spi_hsync is out in vertical blanking lines in seg-trans or one trans. 0: spi_hsync pulse is valid only in active region lines in seg-trans."]
     #[inline(always)]
-    pub fn hs_blank_en(&mut self) -> HS_BLANK_EN_W<LCD_D_MODE_SPEC> {
+    pub fn hs_blank_en(&mut self) -> HS_BLANK_EN_W<'_, LCD_D_MODE_SPEC> {
         HS_BLANK_EN_W::new(self, 16)
     }
 }

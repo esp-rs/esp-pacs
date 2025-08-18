@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn reg_tcm_init_en(&mut self) -> REG_TCM_INIT_EN_W<TCM_INIT_SPEC> {
+    pub fn reg_tcm_init_en(&mut self) -> REG_TCM_INIT_EN_W<'_, TCM_INIT_SPEC> {
         REG_TCM_INIT_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set 1 to reset tcm init cnt"]
     #[inline(always)]
-    pub fn reg_tcm_init_cnt_reset(&mut self) -> REG_TCM_INIT_CNT_RESET_W<TCM_INIT_SPEC> {
+    pub fn reg_tcm_init_cnt_reset(&mut self) -> REG_TCM_INIT_CNT_RESET_W<'_, TCM_INIT_SPEC> {
         REG_TCM_INIT_CNT_RESET_W::new(self, 1)
     }
 }

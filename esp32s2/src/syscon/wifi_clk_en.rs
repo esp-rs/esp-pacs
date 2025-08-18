@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 18 - Set this bit to enable MAC module clock. Clear the bit to disable MAC module clock."]
     #[inline(always)]
-    pub fn mac_clk_en(&mut self) -> MAC_CLK_EN_W<WIFI_CLK_EN_SPEC> {
+    pub fn mac_clk_en(&mut self) -> MAC_CLK_EN_W<'_, WIFI_CLK_EN_SPEC> {
         MAC_CLK_EN_W::new(self, 18)
     }
 }

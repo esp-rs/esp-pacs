@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - When the data amount in Rx-FIFO is more than this register value with uart_sw_flow_con_en set to 1, it will send a Xoff char."]
     #[inline(always)]
-    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF0_SPEC> {
+    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<'_, SWFC_CONF0_SPEC> {
         XOFF_THRESHOLD_W::new(self, 0)
     }
     #[doc = "Bits 10:17 - This register stores the Xoff flow control char."]
     #[inline(always)]
-    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<SWFC_CONF0_SPEC> {
+    pub fn xoff_char(&mut self) -> XOFF_CHAR_W<'_, SWFC_CONF0_SPEC> {
         XOFF_CHAR_W::new(self, 10)
     }
 }

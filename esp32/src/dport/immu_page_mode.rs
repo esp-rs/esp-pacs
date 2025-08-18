@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn internal_sram_immu_ena(&mut self) -> INTERNAL_SRAM_IMMU_ENA_W<IMMU_PAGE_MODE_SPEC> {
+    pub fn internal_sram_immu_ena(&mut self) -> INTERNAL_SRAM_IMMU_ENA_W<'_, IMMU_PAGE_MODE_SPEC> {
         INTERNAL_SRAM_IMMU_ENA_W::new(self, 0)
     }
     #[doc = "Bits 1:2"]
     #[inline(always)]
-    pub fn immu_page_mode(&mut self) -> IMMU_PAGE_MODE_W<IMMU_PAGE_MODE_SPEC> {
+    pub fn immu_page_mode(&mut self) -> IMMU_PAGE_MODE_W<'_, IMMU_PAGE_MODE_SPEC> {
         IMMU_PAGE_MODE_W::new(self, 1)
     }
 }

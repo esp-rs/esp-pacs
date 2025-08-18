@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_lpmem_clk_force_on(
         &mut self,
-    ) -> LP_AONCLKRST_LPMEM_CLK_FORCE_ON_W<LP_AONCLKRST_LPMEM_FORCE_SPEC> {
+    ) -> LP_AONCLKRST_LPMEM_CLK_FORCE_ON_W<'_, LP_AONCLKRST_LPMEM_FORCE_SPEC> {
         LP_AONCLKRST_LPMEM_CLK_FORCE_ON_W::new(self, 31)
     }
 }

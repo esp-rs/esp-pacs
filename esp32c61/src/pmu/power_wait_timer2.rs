@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - need_des"]
     #[inline(always)]
-    pub fn dg_lp_iso_wait_timer(&mut self) -> DG_LP_ISO_WAIT_TIMER_W<POWER_WAIT_TIMER2_SPEC> {
+    pub fn dg_lp_iso_wait_timer(&mut self) -> DG_LP_ISO_WAIT_TIMER_W<'_, POWER_WAIT_TIMER2_SPEC> {
         DG_LP_ISO_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - need_des"]
     #[inline(always)]
-    pub fn dg_lp_rst_wait_timer(&mut self) -> DG_LP_RST_WAIT_TIMER_W<POWER_WAIT_TIMER2_SPEC> {
+    pub fn dg_lp_rst_wait_timer(&mut self) -> DG_LP_RST_WAIT_TIMER_W<'_, POWER_WAIT_TIMER2_SPEC> {
         DG_LP_RST_WAIT_TIMER_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - need_des"]
     #[inline(always)]
-    pub fn dg_hp_iso_wait_timer(&mut self) -> DG_HP_ISO_WAIT_TIMER_W<POWER_WAIT_TIMER2_SPEC> {
+    pub fn dg_hp_iso_wait_timer(&mut self) -> DG_HP_ISO_WAIT_TIMER_W<'_, POWER_WAIT_TIMER2_SPEC> {
         DG_HP_ISO_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    pub fn dg_hp_rst_wait_timer(&mut self) -> DG_HP_RST_WAIT_TIMER_W<POWER_WAIT_TIMER2_SPEC> {
+    pub fn dg_hp_rst_wait_timer(&mut self) -> DG_HP_RST_WAIT_TIMER_W<'_, POWER_WAIT_TIMER2_SPEC> {
         DG_HP_RST_WAIT_TIMER_W::new(self, 24)
     }
 }

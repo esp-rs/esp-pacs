@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock register. Setting to 1 locks TX Copy DMA permission control registers."]
     #[inline(always)]
-    pub fn apb_peripheral_lock(&mut self) -> APB_PERIPHERAL_LOCK_W<APB_PERIPHERAL_0_SPEC> {
+    pub fn apb_peripheral_lock(&mut self) -> APB_PERIPHERAL_LOCK_W<'_, APB_PERIPHERAL_0_SPEC> {
         APB_PERIPHERAL_LOCK_W::new(self, 0)
     }
 }

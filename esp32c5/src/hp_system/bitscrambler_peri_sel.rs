@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - select peri that will be connected to bitscrambler,dir : receive data from bs"]
     #[inline(always)]
-    pub fn bitscrambler_rx_sel(&mut self) -> BITSCRAMBLER_RX_SEL_W<BITSCRAMBLER_PERI_SEL_SPEC> {
+    pub fn bitscrambler_rx_sel(&mut self) -> BITSCRAMBLER_RX_SEL_W<'_, BITSCRAMBLER_PERI_SEL_SPEC> {
         BITSCRAMBLER_RX_SEL_W::new(self, 0)
     }
     #[doc = "Bits 4:7 - select peri that will be connected to bitscrambler,dir : transfer data to peri"]
     #[inline(always)]
-    pub fn bitscrambler_tx_sel(&mut self) -> BITSCRAMBLER_TX_SEL_W<BITSCRAMBLER_PERI_SEL_SPEC> {
+    pub fn bitscrambler_tx_sel(&mut self) -> BITSCRAMBLER_TX_SEL_W<'_, BITSCRAMBLER_PERI_SEL_SPEC> {
         BITSCRAMBLER_TX_SEL_W::new(self, 4)
     }
 }

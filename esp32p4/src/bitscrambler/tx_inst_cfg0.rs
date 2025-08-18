@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - write this bits to specify the one of 8 instruction"]
     #[inline(always)]
-    pub fn tx_inst_idx(&mut self) -> TX_INST_IDX_W<TX_INST_CFG0_SPEC> {
+    pub fn tx_inst_idx(&mut self) -> TX_INST_IDX_W<'_, TX_INST_CFG0_SPEC> {
         TX_INST_IDX_W::new(self, 0)
     }
     #[doc = "Bits 3:6 - write this bits to specify the bit position of 257 bit instruction which in units of 32 bits"]
     #[inline(always)]
-    pub fn tx_inst_pos(&mut self) -> TX_INST_POS_W<TX_INST_CFG0_SPEC> {
+    pub fn tx_inst_pos(&mut self) -> TX_INST_POS_W<'_, TX_INST_CFG0_SPEC> {
         TX_INST_POS_W::new(self, 3)
     }
 }

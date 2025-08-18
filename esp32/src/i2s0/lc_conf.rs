@@ -154,72 +154,72 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn in_rst(&mut self) -> IN_RST_W<LC_CONF_SPEC> {
+    pub fn in_rst(&mut self) -> IN_RST_W<'_, LC_CONF_SPEC> {
         IN_RST_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn out_rst(&mut self) -> OUT_RST_W<LC_CONF_SPEC> {
+    pub fn out_rst(&mut self) -> OUT_RST_W<'_, LC_CONF_SPEC> {
         OUT_RST_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<LC_CONF_SPEC> {
+    pub fn ahbm_fifo_rst(&mut self) -> AHBM_FIFO_RST_W<'_, LC_CONF_SPEC> {
         AHBM_FIFO_RST_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<LC_CONF_SPEC> {
+    pub fn ahbm_rst(&mut self) -> AHBM_RST_W<'_, LC_CONF_SPEC> {
         AHBM_RST_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<LC_CONF_SPEC> {
+    pub fn out_loop_test(&mut self) -> OUT_LOOP_TEST_W<'_, LC_CONF_SPEC> {
         OUT_LOOP_TEST_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<LC_CONF_SPEC> {
+    pub fn in_loop_test(&mut self) -> IN_LOOP_TEST_W<'_, LC_CONF_SPEC> {
         IN_LOOP_TEST_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<LC_CONF_SPEC> {
+    pub fn out_auto_wrback(&mut self) -> OUT_AUTO_WRBACK_W<'_, LC_CONF_SPEC> {
         OUT_AUTO_WRBACK_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
-    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<LC_CONF_SPEC> {
+    pub fn out_no_restart_clr(&mut self) -> OUT_NO_RESTART_CLR_W<'_, LC_CONF_SPEC> {
         OUT_NO_RESTART_CLR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<LC_CONF_SPEC> {
+    pub fn out_eof_mode(&mut self) -> OUT_EOF_MODE_W<'_, LC_CONF_SPEC> {
         OUT_EOF_MODE_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn outdscr_burst_en(&mut self) -> OUTDSCR_BURST_EN_W<'_, LC_CONF_SPEC> {
         OUTDSCR_BURST_EN_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
-    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn indscr_burst_en(&mut self) -> INDSCR_BURST_EN_W<'_, LC_CONF_SPEC> {
         INDSCR_BURST_EN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<LC_CONF_SPEC> {
+    pub fn out_data_burst_en(&mut self) -> OUT_DATA_BURST_EN_W<'_, LC_CONF_SPEC> {
         OUT_DATA_BURST_EN_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn check_owner(&mut self) -> CHECK_OWNER_W<LC_CONF_SPEC> {
+    pub fn check_owner(&mut self) -> CHECK_OWNER_W<'_, LC_CONF_SPEC> {
         CHECK_OWNER_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<LC_CONF_SPEC> {
+    pub fn mem_trans_en(&mut self) -> MEM_TRANS_EN_W<'_, LC_CONF_SPEC> {
         MEM_TRANS_EN_W::new(self, 13)
     }
 }

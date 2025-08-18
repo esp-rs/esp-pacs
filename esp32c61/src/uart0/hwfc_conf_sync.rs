@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Configures the maximum number of data bytes that can be received during hardware flow control.\\\\Measurement unit: byte."]
     #[inline(always)]
-    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<HWFC_CONF_SYNC_SPEC> {
+    pub fn rx_flow_thrhd(&mut self) -> RX_FLOW_THRHD_W<'_, HWFC_CONF_SYNC_SPEC> {
         RX_FLOW_THRHD_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures whether or not to enable the UART receiver.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
-    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<HWFC_CONF_SYNC_SPEC> {
+    pub fn rx_flow_en(&mut self) -> RX_FLOW_EN_W<'_, HWFC_CONF_SYNC_SPEC> {
         RX_FLOW_EN_W::new(self, 8)
     }
 }

@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<DMA_CONTINUE_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to continue DMA-SHA calculation."]
     #[inline(always)]
-    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<DMA_CONTINUE_SPEC> {
+    pub fn dma_continue(&mut self) -> DMA_CONTINUE_W<'_, DMA_CONTINUE_SPEC> {
         DMA_CONTINUE_W::new(self, 0)
     }
 }

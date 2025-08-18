@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn hp_sleep_dig_icg_modem_code(
         &mut self,
-    ) -> HP_SLEEP_DIG_ICG_MODEM_CODE_W<HP_SLEEP_ICG_MODEM_SPEC> {
+    ) -> HP_SLEEP_DIG_ICG_MODEM_CODE_W<'_, HP_SLEEP_ICG_MODEM_SPEC> {
         HP_SLEEP_DIG_ICG_MODEM_CODE_W::new(self, 30)
     }
 }

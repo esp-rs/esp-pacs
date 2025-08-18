@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:13 - this field configures the mem_aux of isp input buffer memory"]
     #[inline(always)]
-    pub fn header_mem_aux_ctrl(&mut self) -> HEADER_MEM_AUX_CTRL_W<MEM_AUX_CTRL_0_SPEC> {
+    pub fn header_mem_aux_ctrl(&mut self) -> HEADER_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_0_SPEC> {
         HEADER_MEM_AUX_CTRL_W::new(self, 0)
     }
     #[doc = "Bits 16:29 - this field represents this field configures the mem_aux of dpc lut memory"]
     #[inline(always)]
-    pub fn dpc_lut_mem_aux_ctrl(&mut self) -> DPC_LUT_MEM_AUX_CTRL_W<MEM_AUX_CTRL_0_SPEC> {
+    pub fn dpc_lut_mem_aux_ctrl(&mut self) -> DPC_LUT_MEM_AUX_CTRL_W<'_, MEM_AUX_CTRL_0_SPEC> {
         DPC_LUT_MEM_AUX_CTRL_W::new(self, 16)
     }
 }

@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 22 - used to sync div bus. clear vld before set reg_rtc_ana_clk_div"]
     #[inline(always)]
-    pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<SLOW_CLK_CONF_SPEC> {
+    pub fn ana_clk_div_vld(&mut self) -> ANA_CLK_DIV_VLD_W<'_, SLOW_CLK_CONF_SPEC> {
         ANA_CLK_DIV_VLD_W::new(self, 22)
     }
     #[doc = "Bits 23:30 - Need add desc"]
     #[inline(always)]
-    pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<SLOW_CLK_CONF_SPEC> {
+    pub fn ana_clk_div(&mut self) -> ANA_CLK_DIV_W<'_, SLOW_CLK_CONF_SPEC> {
         ANA_CLK_DIV_W::new(self, 23)
     }
     #[doc = "Bit 31 - Need add desc"]
     #[inline(always)]
-    pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<SLOW_CLK_CONF_SPEC> {
+    pub fn slow_clk_next_edge(&mut self) -> SLOW_CLK_NEXT_EDGE_W<'_, SLOW_CLK_CONF_SPEC> {
         SLOW_CLK_NEXT_EDGE_W::new(self, 31)
     }
 }

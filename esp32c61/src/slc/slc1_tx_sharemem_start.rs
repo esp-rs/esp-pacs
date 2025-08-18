@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn sdio_sdio_slc0_rx_sharemem_start_addr(
         &mut self,
-    ) -> SDIO_SDIO_SLC0_RX_SHAREMEM_START_ADDR_W<SLC1_TX_SHAREMEM_START_SPEC> {
+    ) -> SDIO_SDIO_SLC0_RX_SHAREMEM_START_ADDR_W<'_, SLC1_TX_SHAREMEM_START_SPEC> {
         SDIO_SDIO_SLC0_RX_SHAREMEM_START_ADDR_W::new(self, 0)
     }
 }

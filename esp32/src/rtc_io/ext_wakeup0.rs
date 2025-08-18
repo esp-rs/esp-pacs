@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 27:31 - select the wakeup source Ó0Ó select GPIO0 Ó1Ó select GPIO2 ...Ò17Ó select GPIO17"]
     #[inline(always)]
-    pub fn sel(&mut self) -> SEL_W<EXT_WAKEUP0_SPEC> {
+    pub fn sel(&mut self) -> SEL_W<'_, EXT_WAKEUP0_SPEC> {
         SEL_W::new(self, 27)
     }
 }

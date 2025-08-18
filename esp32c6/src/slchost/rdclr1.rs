@@ -40,12 +40,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - *******Description***********"]
     #[inline(always)]
-    pub fn slchost_slc1_bit7_clraddr(&mut self) -> SLCHOST_SLC1_BIT7_CLRADDR_W<RDCLR1_SPEC> {
+    pub fn slchost_slc1_bit7_clraddr(&mut self) -> SLCHOST_SLC1_BIT7_CLRADDR_W<'_, RDCLR1_SPEC> {
         SLCHOST_SLC1_BIT7_CLRADDR_W::new(self, 0)
     }
     #[doc = "Bits 9:17 - *******Description***********"]
     #[inline(always)]
-    pub fn slchost_slc1_bit6_clraddr(&mut self) -> SLCHOST_SLC1_BIT6_CLRADDR_W<RDCLR1_SPEC> {
+    pub fn slchost_slc1_bit6_clraddr(&mut self) -> SLCHOST_SLC1_BIT6_CLRADDR_W<'_, RDCLR1_SPEC> {
         SLCHOST_SLC1_BIT6_CLRADDR_W::new(self, 9)
     }
 }

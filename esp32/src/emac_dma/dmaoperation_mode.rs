@@ -147,69 +147,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - When this bit is set the Receive process is placed in the Running state. The DMA attempts to acquire the descriptor from the Receive list and processes the incoming frames.When this bit is cleared the Rx DMA operation is stopped after the transfer of the current frame."]
     #[inline(always)]
-    pub fn start_stop_rx(&mut self) -> START_STOP_RX_W<DMAOPERATION_MODE_SPEC> {
+    pub fn start_stop_rx(&mut self) -> START_STOP_RX_W<'_, DMAOPERATION_MODE_SPEC> {
         START_STOP_RX_W::new(self, 1)
     }
     #[doc = "Bit 2 - When this bit is set it instructs the DMA to process the second frame of the Transmit data even before the status for the first frame is obtained."]
     #[inline(always)]
-    pub fn opt_second_frame(&mut self) -> OPT_SECOND_FRAME_W<DMAOPERATION_MODE_SPEC> {
+    pub fn opt_second_frame(&mut self) -> OPT_SECOND_FRAME_W<'_, DMAOPERATION_MODE_SPEC> {
         OPT_SECOND_FRAME_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - These two bits control the threshold level of the MTL Receive FIFO. Transfer (request) to DMA starts when the frame size within the MTL Receive FIFO is larger than the threshold. 2'b00: 64， 2'b01: 32， 2'b10: 96， 2'b11: 128 ."]
     #[inline(always)]
-    pub fn rx_thresh_ctrl(&mut self) -> RX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC> {
+    pub fn rx_thresh_ctrl(&mut self) -> RX_THRESH_CTRL_W<'_, DMAOPERATION_MODE_SPEC> {
         RX_THRESH_CTRL_W::new(self, 3)
     }
     #[doc = "Bit 5 - When set the MAC drops the received giant frames in the Rx FIFO that is frames that are larger than the computed giant frame limit."]
     #[inline(always)]
-    pub fn drop_gfrm(&mut self) -> DROP_GFRM_W<DMAOPERATION_MODE_SPEC> {
+    pub fn drop_gfrm(&mut self) -> DROP_GFRM_W<'_, DMAOPERATION_MODE_SPEC> {
         DROP_GFRM_W::new(self, 5)
     }
     #[doc = "Bit 6 - When set the Rx FIFO forwards Undersized frames (that is frames with no Error and length less than 64 bytes) including pad-bytes and CRC."]
     #[inline(always)]
-    pub fn fwd_under_gf(&mut self) -> FWD_UNDER_GF_W<DMAOPERATION_MODE_SPEC> {
+    pub fn fwd_under_gf(&mut self) -> FWD_UNDER_GF_W<'_, DMAOPERATION_MODE_SPEC> {
         FWD_UNDER_GF_W::new(self, 6)
     }
     #[doc = "Bit 7 - When this bit is reset the Rx FIFO drops frames with error status (CRC error collision error giant frame watchdog timeout or overflow)."]
     #[inline(always)]
-    pub fn fwd_err_frame(&mut self) -> FWD_ERR_FRAME_W<DMAOPERATION_MODE_SPEC> {
+    pub fn fwd_err_frame(&mut self) -> FWD_ERR_FRAME_W<'_, DMAOPERATION_MODE_SPEC> {
         FWD_ERR_FRAME_W::new(self, 7)
     }
     #[doc = "Bit 13 - When this bit is set transmission is placed in the Running state and the DMA checks the Transmit List at the current position for a frame to be transmitted.When this bit is reset the transmission process is placed in the Stopped state after completing the transmission of the current frame."]
     #[inline(always)]
     pub fn start_stop_transmission_command(
         &mut self,
-    ) -> START_STOP_TRANSMISSION_COMMAND_W<DMAOPERATION_MODE_SPEC> {
+    ) -> START_STOP_TRANSMISSION_COMMAND_W<'_, DMAOPERATION_MODE_SPEC> {
         START_STOP_TRANSMISSION_COMMAND_W::new(self, 13)
     }
     #[doc = "Bits 14:16 - These bits control the threshold level of the MTL Transmit FIFO. Transmission starts when the frame size within the MTL Transmit FIFO is larger than the threshold. In addition full frames with a length less than the threshold are also transmitted. These bits are used only when Tx_Str_fwd is reset. 3'b000: 64 3'b001: 128 3'b010: 192 3'b011: 256 3'b100: 40 3'b101: 32 3'b110: 24 3'b111: 16 ."]
     #[inline(always)]
-    pub fn tx_thresh_ctrl(&mut self) -> TX_THRESH_CTRL_W<DMAOPERATION_MODE_SPEC> {
+    pub fn tx_thresh_ctrl(&mut self) -> TX_THRESH_CTRL_W<'_, DMAOPERATION_MODE_SPEC> {
         TX_THRESH_CTRL_W::new(self, 14)
     }
     #[doc = "Bit 20 - When this bit is set the transmit FIFO controller logic is reset to its default values and thus all data in the Tx FIFO is lost or flushed. This bit is cleared internally when the flushing operation is complete."]
     #[inline(always)]
-    pub fn flush_tx_fifo(&mut self) -> FLUSH_TX_FIFO_W<DMAOPERATION_MODE_SPEC> {
+    pub fn flush_tx_fifo(&mut self) -> FLUSH_TX_FIFO_W<'_, DMAOPERATION_MODE_SPEC> {
         FLUSH_TX_FIFO_W::new(self, 20)
     }
     #[doc = "Bit 21 - When this bit is set transmission starts when a full frame resides in the MTL Transmit FIFO. When this bit is set the Tx_Thresh_Ctrl values specified in Tx_Thresh_Ctrl are ignored."]
     #[inline(always)]
-    pub fn tx_str_fwd(&mut self) -> TX_STR_FWD_W<DMAOPERATION_MODE_SPEC> {
+    pub fn tx_str_fwd(&mut self) -> TX_STR_FWD_W<'_, DMAOPERATION_MODE_SPEC> {
         TX_STR_FWD_W::new(self, 21)
     }
     #[doc = "Bit 24 - When this bit is set the Rx DMA does not flush any frames because of the unavailability of receive descriptors or buffers."]
     #[inline(always)]
-    pub fn dis_flush_recv_frames(&mut self) -> DIS_FLUSH_RECV_FRAMES_W<DMAOPERATION_MODE_SPEC> {
+    pub fn dis_flush_recv_frames(&mut self) -> DIS_FLUSH_RECV_FRAMES_W<'_, DMAOPERATION_MODE_SPEC> {
         DIS_FLUSH_RECV_FRAMES_W::new(self, 24)
     }
     #[doc = "Bit 25 - When this bit is set the MTL reads a frame from the Rx FIFO only after the complete frame has been written to it."]
     #[inline(always)]
-    pub fn rx_store_forward(&mut self) -> RX_STORE_FORWARD_W<DMAOPERATION_MODE_SPEC> {
+    pub fn rx_store_forward(&mut self) -> RX_STORE_FORWARD_W<'_, DMAOPERATION_MODE_SPEC> {
         RX_STORE_FORWARD_W::new(self, 25)
     }
     #[doc = "Bit 26 - When this bit is set the MAC does not drop the frames which only have errors detected by the Receive Checksum engine.When this bit is reset all error frames are dropped if the Fwd_Err_Frame bit is reset."]
     #[inline(always)]
-    pub fn dis_drop_tcpip_err_fram(&mut self) -> DIS_DROP_TCPIP_ERR_FRAM_W<DMAOPERATION_MODE_SPEC> {
+    pub fn dis_drop_tcpip_err_fram(
+        &mut self,
+    ) -> DIS_DROP_TCPIP_ERR_FRAM_W<'_, DMAOPERATION_MODE_SPEC> {
         DIS_DROP_TCPIP_ERR_FRAM_W::new(self, 26)
     }
 }

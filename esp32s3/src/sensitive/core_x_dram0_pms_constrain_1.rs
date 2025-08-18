@@ -238,28 +238,32 @@ impl W {
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_0(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - core0/core1's permission of data region1 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_1(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - core0/core1's permission of data region2 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_2(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - core0/core1's permission of data region3 of SRAM in world0."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_0_pms_3(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_PMS_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - core0/core1's permission of dcache data sram block0 in world0."]
@@ -267,6 +271,7 @@ impl W {
     pub fn core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_0(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W<
+        '_,
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
     > {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_0_W::new(self, 8)
@@ -276,6 +281,7 @@ impl W {
     pub fn core_x_dram0_pms_constrain_sram_world_0_cachedataarray_pms_1(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W<
+        '_,
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
     > {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_0_CACHEDATAARRAY_PMS_1_W::new(self, 10)
@@ -284,28 +290,32 @@ impl W {
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_0(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_0_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - core0/core1's permission of data region1 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_1(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_1_W::new(self, 14)
     }
     #[doc = "Bits 16:17 - core0/core1's permission of data region2 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_2(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_2_W::new(self, 16)
     }
     #[doc = "Bits 18:19 - core0/core1's permission of data region3 of SRAM in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_sram_world_1_pms_3(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC>
+    {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_PMS_3_W::new(self, 18)
     }
     #[doc = "Bits 20:21 - core0/core1's permission of dcache data sram block0 in world1."]
@@ -313,6 +323,7 @@ impl W {
     pub fn core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_0(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W<
+        '_,
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
     > {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_0_W::new(self, 20)
@@ -322,6 +333,7 @@ impl W {
     pub fn core_x_dram0_pms_constrain_sram_world_1_cachedataarray_pms_1(
         &mut self,
     ) -> CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W<
+        '_,
         CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC,
     > {
         CORE_X_DRAM0_PMS_CONSTRAIN_SRAM_WORLD_1_CACHEDATAARRAY_PMS_1_W::new(self, 22)
@@ -330,14 +342,14 @@ impl W {
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_rom_world_0_pms(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
         CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_0_PMS_W::new(self, 24)
     }
     #[doc = "Bits 26:27 - core0/core1's permission(sotre,load) of rom in world1."]
     #[inline(always)]
     pub fn core_x_dram0_pms_constrain_rom_world_1_pms(
         &mut self,
-    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
+    ) -> CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W<'_, CORE_X_DRAM0_PMS_CONSTRAIN_1_SPEC> {
         CORE_X_DRAM0_PMS_CONSTRAIN_ROM_WORLD_1_PMS_W::new(self, 26)
     }
 }

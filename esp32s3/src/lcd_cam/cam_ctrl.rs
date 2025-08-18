@@ -124,57 +124,57 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Camera stop enable signal, 1: camera stops when GDMA Rx FIFO is full. 0: Do not stop."]
     #[inline(always)]
-    pub fn cam_stop_en(&mut self) -> CAM_STOP_EN_W<CAM_CTRL_SPEC> {
+    pub fn cam_stop_en(&mut self) -> CAM_STOP_EN_W<'_, CAM_CTRL_SPEC> {
         CAM_STOP_EN_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - Filter threshold value for CAM_VSYNC signal."]
     #[inline(always)]
-    pub fn cam_vsync_filter_thres(&mut self) -> CAM_VSYNC_FILTER_THRES_W<CAM_CTRL_SPEC> {
+    pub fn cam_vsync_filter_thres(&mut self) -> CAM_VSYNC_FILTER_THRES_W<'_, CAM_CTRL_SPEC> {
         CAM_VSYNC_FILTER_THRES_W::new(self, 1)
     }
     #[doc = "Bit 4 - 1: Update camera registers. This bit is cleared by hardware. 0: Do not care."]
     #[inline(always)]
-    pub fn cam_update(&mut self) -> CAM_UPDATE_W<CAM_CTRL_SPEC> {
+    pub fn cam_update(&mut self) -> CAM_UPDATE_W<'_, CAM_CTRL_SPEC> {
         CAM_UPDATE_W::new(self, 4)
     }
     #[doc = "Bit 5 - 1: Invert data byte order, only valid in 16-bit mode. 0: Do not change."]
     #[inline(always)]
-    pub fn cam_byte_order(&mut self) -> CAM_BYTE_ORDER_W<CAM_CTRL_SPEC> {
+    pub fn cam_byte_order(&mut self) -> CAM_BYTE_ORDER_W<'_, CAM_CTRL_SPEC> {
         CAM_BYTE_ORDER_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: Change data bit order, change CAM_DATA_in\\[7:0\\] to CAM_DATA_in\\[0:7\\] in 8-bit mode, and bits\\[15:0\\] to bits\\[0:15\\] in 16-bit mode. 0: Do not change."]
     #[inline(always)]
-    pub fn cam_bit_order(&mut self) -> CAM_BIT_ORDER_W<CAM_CTRL_SPEC> {
+    pub fn cam_bit_order(&mut self) -> CAM_BIT_ORDER_W<'_, CAM_CTRL_SPEC> {
         CAM_BIT_ORDER_W::new(self, 6)
     }
     #[doc = "Bit 7 - 1: Enable to generate LCD_CAM_CAM_HS_INT. 0: Disable."]
     #[inline(always)]
-    pub fn cam_line_int_en(&mut self) -> CAM_LINE_INT_EN_W<CAM_CTRL_SPEC> {
+    pub fn cam_line_int_en(&mut self) -> CAM_LINE_INT_EN_W<'_, CAM_CTRL_SPEC> {
         CAM_LINE_INT_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - 1: Enable CAM_VSYNC to generate in_suc_eof. 0: in_suc_eof is controlled by LCD_CAM_CAM_REC_DATA_BYTELEN."]
     #[inline(always)]
-    pub fn cam_vs_eof_en(&mut self) -> CAM_VS_EOF_EN_W<CAM_CTRL_SPEC> {
+    pub fn cam_vs_eof_en(&mut self) -> CAM_VS_EOF_EN_W<'_, CAM_CTRL_SPEC> {
         CAM_VS_EOF_EN_W::new(self, 8)
     }
     #[doc = "Bits 9:16 - Integral camera clock divider value."]
     #[inline(always)]
-    pub fn cam_clkm_div_num(&mut self) -> CAM_CLKM_DIV_NUM_W<CAM_CTRL_SPEC> {
+    pub fn cam_clkm_div_num(&mut self) -> CAM_CLKM_DIV_NUM_W<'_, CAM_CTRL_SPEC> {
         CAM_CLKM_DIV_NUM_W::new(self, 9)
     }
     #[doc = "Bits 17:22 - Fractional clock divider numerator value."]
     #[inline(always)]
-    pub fn cam_clkm_div_b(&mut self) -> CAM_CLKM_DIV_B_W<CAM_CTRL_SPEC> {
+    pub fn cam_clkm_div_b(&mut self) -> CAM_CLKM_DIV_B_W<'_, CAM_CTRL_SPEC> {
         CAM_CLKM_DIV_B_W::new(self, 17)
     }
     #[doc = "Bits 23:28 - Fractional clock divider denominator value."]
     #[inline(always)]
-    pub fn cam_clkm_div_a(&mut self) -> CAM_CLKM_DIV_A_W<CAM_CTRL_SPEC> {
+    pub fn cam_clkm_div_a(&mut self) -> CAM_CLKM_DIV_A_W<'_, CAM_CTRL_SPEC> {
         CAM_CLKM_DIV_A_W::new(self, 23)
     }
     #[doc = "Bits 29:30 - Select camera module source clock. 0: Clock source is disabled. 1: XTAL_CLK. 2: PLL_D2_CLK. 3: PLL_F160M_CLK."]
     #[inline(always)]
-    pub fn cam_clk_sel(&mut self) -> CAM_CLK_SEL_W<CAM_CTRL_SPEC> {
+    pub fn cam_clk_sel(&mut self) -> CAM_CLK_SEL_W<'_, CAM_CTRL_SPEC> {
         CAM_CLK_SEL_W::new(self, 29)
     }
 }

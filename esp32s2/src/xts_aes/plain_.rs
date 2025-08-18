@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - This register stores %sth 32-bit piece of plaintext."]
     #[inline(always)]
-    pub fn plain(&mut self) -> PLAIN_W<PLAIN__SPEC> {
+    pub fn plain(&mut self) -> PLAIN_W<'_, PLAIN__SPEC> {
         PLAIN_W::new(self, 0)
     }
 }

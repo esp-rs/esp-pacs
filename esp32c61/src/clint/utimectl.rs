@@ -42,12 +42,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Write 1 to enable the user timer interrupt."]
     #[inline(always)]
-    pub fn utie(&mut self) -> UTIE_W<UTIMECTL_SPEC> {
+    pub fn utie(&mut self) -> UTIE_W<'_, UTIMECTL_SPEC> {
         UTIE_W::new(self, 1)
     }
     #[doc = "Bit 3 - Configures whether the user timer overflows."]
     #[inline(always)]
-    pub fn utof(&mut self) -> UTOF_W<UTIMECTL_SPEC> {
+    pub fn utof(&mut self) -> UTOF_W<'_, UTIMECTL_SPEC> {
         UTOF_W::new(self, 3)
     }
 }

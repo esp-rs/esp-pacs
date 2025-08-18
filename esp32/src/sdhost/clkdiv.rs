@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Clock divider0 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
     #[inline(always)]
-    pub fn clk_divider0(&mut self) -> CLK_DIVIDER0_W<CLKDIV_SPEC> {
+    pub fn clk_divider0(&mut self) -> CLK_DIVIDER0_W<'_, CLKDIV_SPEC> {
         CLK_DIVIDER0_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Clock divider1 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
     #[inline(always)]
-    pub fn clk_divider1(&mut self) -> CLK_DIVIDER1_W<CLKDIV_SPEC> {
+    pub fn clk_divider1(&mut self) -> CLK_DIVIDER1_W<'_, CLKDIV_SPEC> {
         CLK_DIVIDER1_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Clock divider2 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
     #[inline(always)]
-    pub fn clk_divider2(&mut self) -> CLK_DIVIDER2_W<CLKDIV_SPEC> {
+    pub fn clk_divider2(&mut self) -> CLK_DIVIDER2_W<'_, CLKDIV_SPEC> {
         CLK_DIVIDER2_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Clock divider3 value. Clock divisor is 2*n, where n = 0 bypasses the divider (divisor of 1). For example, a value of 1 means divided by 2*1 = 2, a value of 0xFF means divided by 2*255 = 510, and so on."]
     #[inline(always)]
-    pub fn clk_divider3(&mut self) -> CLK_DIVIDER3_W<CLKDIV_SPEC> {
+    pub fn clk_divider3(&mut self) -> CLK_DIVIDER3_W<'_, CLKDIV_SPEC> {
         CLK_DIVIDER3_W::new(self, 24)
     }
 }

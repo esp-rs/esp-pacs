@@ -41,21 +41,21 @@ impl W {
     #[inline(always)]
     pub fn cpu_peri_timeout_thres(
         &mut self,
-    ) -> CPU_PERI_TIMEOUT_THRES_W<CPU_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> CPU_PERI_TIMEOUT_THRES_W<'_, CPU_PERI_TIMEOUT_CONF_SPEC> {
         CPU_PERI_TIMEOUT_THRES_W::new(self, 0)
     }
     #[doc = "Bit 16 - Write 1 to clear timeout interrupt."]
     #[inline(always)]
     pub fn cpu_peri_timeout_int_clear(
         &mut self,
-    ) -> CPU_PERI_TIMEOUT_INT_CLEAR_W<CPU_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> CPU_PERI_TIMEOUT_INT_CLEAR_W<'_, CPU_PERI_TIMEOUT_CONF_SPEC> {
         CPU_PERI_TIMEOUT_INT_CLEAR_W::new(self, 16)
     }
     #[doc = "Bit 17 - Configures whether or not to enable timeout protection for accessing CPU peripheral registers.\\\\ 0: Disable\\\\ 1: Enable\\\\"]
     #[inline(always)]
     pub fn cpu_peri_timeout_protect_en(
         &mut self,
-    ) -> CPU_PERI_TIMEOUT_PROTECT_EN_W<CPU_PERI_TIMEOUT_CONF_SPEC> {
+    ) -> CPU_PERI_TIMEOUT_PROTECT_EN_W<'_, CPU_PERI_TIMEOUT_CONF_SPEC> {
         CPU_PERI_TIMEOUT_PROTECT_EN_W::new(self, 17)
     }
 }

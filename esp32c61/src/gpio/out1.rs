@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - GPIO output register for GPIO32-33"]
     #[inline(always)]
-    pub fn data_orig(&mut self) -> DATA_ORIG_W<OUT1_SPEC> {
+    pub fn data_orig(&mut self) -> DATA_ORIG_W<'_, OUT1_SPEC> {
         DATA_ORIG_W::new(self, 0)
     }
 }

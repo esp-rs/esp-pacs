@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - The denominator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_a(&mut self) -> RMT_SCLK_DIV_A_W<RMT_SCLK_CONF_SPEC> {
+    pub fn rmt_sclk_div_a(&mut self) -> RMT_SCLK_DIV_A_W<'_, RMT_SCLK_CONF_SPEC> {
         RMT_SCLK_DIV_A_W::new(self, 0)
     }
     #[doc = "Bits 6:11 - The numerator of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_b(&mut self) -> RMT_SCLK_DIV_B_W<RMT_SCLK_CONF_SPEC> {
+    pub fn rmt_sclk_div_b(&mut self) -> RMT_SCLK_DIV_B_W<'_, RMT_SCLK_CONF_SPEC> {
         RMT_SCLK_DIV_B_W::new(self, 6)
     }
     #[doc = "Bits 12:19 - The integral part of the frequency divider factor of the rmt function clock."]
     #[inline(always)]
-    pub fn rmt_sclk_div_num(&mut self) -> RMT_SCLK_DIV_NUM_W<RMT_SCLK_CONF_SPEC> {
+    pub fn rmt_sclk_div_num(&mut self) -> RMT_SCLK_DIV_NUM_W<'_, RMT_SCLK_CONF_SPEC> {
         RMT_SCLK_DIV_NUM_W::new(self, 12)
     }
     #[doc = "Bits 20:21 - Configures the clock source of RMT.\\\\ 0: XTAL_CLK\\\\ 1 (default): RC_FAST_CLK\\\\ 2: PLL_F80M_CLK\\\\"]
     #[inline(always)]
-    pub fn rmt_sclk_sel(&mut self) -> RMT_SCLK_SEL_W<RMT_SCLK_CONF_SPEC> {
+    pub fn rmt_sclk_sel(&mut self) -> RMT_SCLK_SEL_W<'_, RMT_SCLK_CONF_SPEC> {
         RMT_SCLK_SEL_W::new(self, 20)
     }
     #[doc = "Bit 22 - Set 1 to enable rmt function clock"]
     #[inline(always)]
-    pub fn rmt_sclk_en(&mut self) -> RMT_SCLK_EN_W<RMT_SCLK_CONF_SPEC> {
+    pub fn rmt_sclk_en(&mut self) -> RMT_SCLK_EN_W<'_, RMT_SCLK_CONF_SPEC> {
         RMT_SCLK_EN_W::new(self, 22)
     }
 }

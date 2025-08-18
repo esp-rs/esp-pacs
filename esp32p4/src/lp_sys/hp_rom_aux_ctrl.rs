@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn hp_rom_aux_ctrl(&mut self) -> HP_ROM_AUX_CTRL_W<HP_ROM_AUX_CTRL_SPEC> {
+    pub fn hp_rom_aux_ctrl(&mut self) -> HP_ROM_AUX_CTRL_W<'_, HP_ROM_AUX_CTRL_SPEC> {
         HP_ROM_AUX_CTRL_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn tx_abort_interrupt_control(
         &mut self,
-    ) -> TX_ABORT_INTERRUPT_CONTROL_W<TX_ABORT_INTERRUPT_CONTROL_SPEC> {
+    ) -> TX_ABORT_INTERRUPT_CONTROL_W<'_, TX_ABORT_INTERRUPT_CONTROL_SPEC> {
         TX_ABORT_INTERRUPT_CONTROL_W::new(self, 0)
     }
 }

@@ -23,39 +23,39 @@ impl core::fmt::Debug for crate::generic::Reg<CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to clear AHB_DMA_OUT_DONE_CH0_INT"]
     #[inline(always)]
-    pub fn out_done_ch0_int_clr(&mut self) -> OUT_DONE_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn out_done_ch0_int_clr(&mut self) -> OUT_DONE_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUT_DONE_CH0_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to clear AHB_DMA_OUT_EOF_CH0_INT"]
     #[inline(always)]
-    pub fn out_eof_ch0_int_clr(&mut self) -> OUT_EOF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn out_eof_ch0_int_clr(&mut self) -> OUT_EOF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUT_EOF_CH0_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to clear AHB_DMA_OUT_DSCR_ERR_CH0_INT"]
     #[inline(always)]
-    pub fn out_dscr_err_ch0_int_clr(&mut self) -> OUT_DSCR_ERR_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn out_dscr_err_ch0_int_clr(&mut self) -> OUT_DSCR_ERR_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUT_DSCR_ERR_CH0_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to clear AHB_DMA_OUT_TOTAL_EOF_CH0_INT"]
     #[inline(always)]
-    pub fn out_total_eof_ch0_int_clr(&mut self) -> OUT_TOTAL_EOF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn out_total_eof_ch0_int_clr(&mut self) -> OUT_TOTAL_EOF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUT_TOTAL_EOF_CH0_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to clear AHB_DMA_OUTFIFO_OVF_CH0_INT"]
     #[inline(always)]
-    pub fn outfifo_ovf_ch0_int_clr(&mut self) -> OUTFIFO_OVF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn outfifo_ovf_ch0_int_clr(&mut self) -> OUTFIFO_OVF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUTFIFO_OVF_CH0_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to clear AHB_DMA_OUTFIFO_UDF_CH0_INT"]
     #[inline(always)]
-    pub fn outfifo_udf_ch0_int_clr(&mut self) -> OUTFIFO_UDF_CH0_INT_CLR_W<CLR_SPEC> {
+    pub fn outfifo_udf_ch0_int_clr(&mut self) -> OUTFIFO_UDF_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUTFIFO_UDF_CH0_INT_CLR_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to clear AHB_DMA_OUT_RESP_ERR_CH0_INT"]
     #[inline(always)]
     pub fn out_ahbinf_resp_err_ch0_int_clr(
         &mut self,
-    ) -> OUT_AHBINF_RESP_ERR_CH0_INT_CLR_W<CLR_SPEC> {
+    ) -> OUT_AHBINF_RESP_ERR_CH0_INT_CLR_W<'_, CLR_SPEC> {
         OUT_AHBINF_RESP_ERR_CH0_INT_CLR_W::new(self, 6)
     }
 }

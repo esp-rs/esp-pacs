@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn cache_flash_wrap_around(
         &mut self,
-    ) -> CACHE_FLASH_WRAP_AROUND_W<CACHE_WRAP_AROUND_CTRL_SPEC> {
+    ) -> CACHE_FLASH_WRAP_AROUND_W<'_, CACHE_WRAP_AROUND_CTRL_SPEC> {
         CACHE_FLASH_WRAP_AROUND_W::new(self, 0)
     }
 }

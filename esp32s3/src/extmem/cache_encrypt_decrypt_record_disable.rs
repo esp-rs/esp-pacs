@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn record_disable_db_encrypt(
         &mut self,
-    ) -> RECORD_DISABLE_DB_ENCRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
+    ) -> RECORD_DISABLE_DB_ENCRYPT_W<'_, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
         RECORD_DISABLE_DB_ENCRYPT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Reserved"]
     #[inline(always)]
     pub fn record_disable_g0cb_decrypt(
         &mut self,
-    ) -> RECORD_DISABLE_G0CB_DECRYPT_W<CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
+    ) -> RECORD_DISABLE_G0CB_DECRYPT_W<'_, CACHE_ENCRYPT_DECRYPT_RECORD_DISABLE_SPEC> {
         RECORD_DISABLE_G0CB_DECRYPT_W::new(self, 1)
     }
 }

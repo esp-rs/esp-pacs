@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn clk_i2c_mst_sel_160m(&mut self) -> CLK_I2C_MST_SEL_160M_W<I2C_MST_CLK_CONF_SPEC> {
+    pub fn clk_i2c_mst_sel_160m(&mut self) -> CLK_I2C_MST_SEL_160M_W<'_, I2C_MST_CLK_CONF_SPEC> {
         CLK_I2C_MST_SEL_160M_W::new(self, 0)
     }
 }

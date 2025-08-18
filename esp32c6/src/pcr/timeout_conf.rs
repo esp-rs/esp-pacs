@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Set 0 to reset cpu_peri timeout module"]
     #[inline(always)]
-    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC> {
+    pub fn cpu_timeout_rst_en(&mut self) -> CPU_TIMEOUT_RST_EN_W<'_, TIMEOUT_CONF_SPEC> {
         CPU_TIMEOUT_RST_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set 0 to reset hp_peri timeout module and hp_modem timeout module"]
     #[inline(always)]
-    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<TIMEOUT_CONF_SPEC> {
+    pub fn hp_timeout_rst_en(&mut self) -> HP_TIMEOUT_RST_EN_W<'_, TIMEOUT_CONF_SPEC> {
         HP_TIMEOUT_RST_EN_W::new(self, 2)
     }
 }

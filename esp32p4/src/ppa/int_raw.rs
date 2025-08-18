@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The raw interrupt bit turns to high level when scaling and rotating engine calculate one frame image."]
     #[inline(always)]
-    pub fn sr_eof(&mut self) -> SR_EOF_W<INT_RAW_SPEC> {
+    pub fn sr_eof(&mut self) -> SR_EOF_W<'_, INT_RAW_SPEC> {
         SR_EOF_W::new(self, 0)
     }
     #[doc = "Bit 1 - The raw interrupt bit turns to high level when blending engine calculate one frame image."]
     #[inline(always)]
-    pub fn blend_eof(&mut self) -> BLEND_EOF_W<INT_RAW_SPEC> {
+    pub fn blend_eof(&mut self) -> BLEND_EOF_W<'_, INT_RAW_SPEC> {
         BLEND_EOF_W::new(self, 1)
     }
     #[doc = "Bit 2 - The raw interrupt bit turns to high level when the configured scaling and rotating coefficient is wrong. User can check the reasons through register PPA_SR_PARAM_ERR_ST_REG."]
     #[inline(always)]
-    pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<INT_RAW_SPEC> {
+    pub fn sr_param_cfg_err(&mut self) -> SR_PARAM_CFG_ERR_W<'_, INT_RAW_SPEC> {
         SR_PARAM_CFG_ERR_W::new(self, 2)
     }
 }

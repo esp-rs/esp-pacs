@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure the time between the negative edgeof SDA and the negative edge of SCL for a START condition, in I2C module clock cycles."]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<I2C_SCL_START_HOLD_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, I2C_SCL_START_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }
 }

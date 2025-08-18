@@ -74,32 +74,40 @@ impl W {
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_0(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - core_x_iram0_dram0_dma_sram_category_1"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_1(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - core_x_iram0_dram0_dma_sram_category_2"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_2(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W::new(self, 4)
     }
     #[doc = "Bits 14:21 - core_x_iram0_dram0_dma_sram_splitaddr"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_splitaddr(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W::new(self, 14)
     }
 }

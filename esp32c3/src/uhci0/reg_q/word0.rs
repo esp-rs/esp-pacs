@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - a"]
     #[inline(always)]
-    pub fn send_word(&mut self) -> SEND_WORD_W<WORD0_SPEC> {
+    pub fn send_word(&mut self) -> SEND_WORD_W<'_, WORD0_SPEC> {
         SEND_WORD_W::new(self, 0)
     }
 }

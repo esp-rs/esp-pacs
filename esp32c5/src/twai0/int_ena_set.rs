@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to enable TWAIFD_RXI_INT."]
     #[inline(always)]
-    pub fn rxi_int_ena_mask(&mut self) -> RXI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn rxi_int_ena_mask(&mut self) -> RXI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         RXI_INT_ENA_MASK_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to enable TWAIFD_TXI_INT."]
     #[inline(always)]
-    pub fn txi_int_ena_mask(&mut self) -> TXI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn txi_int_ena_mask(&mut self) -> TXI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         TXI_INT_ENA_MASK_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to enable TWAIFD_EWLI_INT."]
     #[inline(always)]
-    pub fn ewli_int_ena_mask(&mut self) -> EWLI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn ewli_int_ena_mask(&mut self) -> EWLI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         EWLI_INT_ENA_MASK_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable TWAIFD_DOI_INT."]
     #[inline(always)]
-    pub fn doi_int_ena_mask(&mut self) -> DOI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn doi_int_ena_mask(&mut self) -> DOI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         DOI_INT_ENA_MASK_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to enable TWAIFD_FCSI_INT."]
     #[inline(always)]
-    pub fn fcsi_int_ena_mask(&mut self) -> FCSI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn fcsi_int_ena_mask(&mut self) -> FCSI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         FCSI_INT_ENA_MASK_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to enable TWAIFD_ALI_INT."]
     #[inline(always)]
-    pub fn ali_int_ena_mask(&mut self) -> ALI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn ali_int_ena_mask(&mut self) -> ALI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         ALI_INT_ENA_MASK_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to enable TWAIFD_BEI_INT."]
     #[inline(always)]
-    pub fn bei_int_ena_mask(&mut self) -> BEI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn bei_int_ena_mask(&mut self) -> BEI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         BEI_INT_ENA_MASK_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to enable TWAIFD_OFI_INT."]
     #[inline(always)]
-    pub fn ofi_int_ena_mask(&mut self) -> OFI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn ofi_int_ena_mask(&mut self) -> OFI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         OFI_INT_ENA_MASK_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to enable TWAIFD_RXFI_INT."]
     #[inline(always)]
-    pub fn rxfi_int_ena_mask(&mut self) -> RXFI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn rxfi_int_ena_mask(&mut self) -> RXFI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         RXFI_INT_ENA_MASK_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to enable TWAIFD_BSI_INT."]
     #[inline(always)]
-    pub fn bsi_int_ena_mask(&mut self) -> BSI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn bsi_int_ena_mask(&mut self) -> BSI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         BSI_INT_ENA_MASK_W::new(self, 9)
     }
     #[doc = "Bit 10 - Write 1 to enable TWAIFD_RBNEI_INT."]
     #[inline(always)]
-    pub fn rbnei_int_ena_mask(&mut self) -> RBNEI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn rbnei_int_ena_mask(&mut self) -> RBNEI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         RBNEI_INT_ENA_MASK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Write 1 to enable TWAIFD_TXBHCI_INT."]
     #[inline(always)]
-    pub fn txbhci_int_ena_mask(&mut self) -> TXBHCI_INT_ENA_MASK_W<INT_ENA_SET_SPEC> {
+    pub fn txbhci_int_ena_mask(&mut self) -> TXBHCI_INT_ENA_MASK_W<'_, INT_ENA_SET_SPEC> {
         TXBHCI_INT_ENA_MASK_W::new(self, 11)
     }
 }

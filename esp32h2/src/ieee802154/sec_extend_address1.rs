@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn sec_extend_address1(&mut self) -> SEC_EXTEND_ADDRESS1_W<SEC_EXTEND_ADDRESS1_SPEC> {
+    pub fn sec_extend_address1(&mut self) -> SEC_EXTEND_ADDRESS1_W<'_, SEC_EXTEND_ADDRESS1_SPEC> {
         SEC_EXTEND_ADDRESS1_W::new(self, 0)
     }
 }

@@ -64,27 +64,27 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn dtmch_tx_length(&mut self) -> DTMCH_TX_LENGTH_W<DTM_CONFIG_SPEC> {
+    pub fn dtmch_tx_length(&mut self) -> DTMCH_TX_LENGTH_W<'_, DTM_CONFIG_SPEC> {
         DTMCH_TX_LENGTH_W::new(self, 0)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn dtm_tx_pld_type(&mut self) -> DTM_TX_PLD_TYPE_W<DTM_CONFIG_SPEC> {
+    pub fn dtm_tx_pld_type(&mut self) -> DTM_TX_PLD_TYPE_W<'_, DTM_CONFIG_SPEC> {
         DTM_TX_PLD_TYPE_W::new(self, 8)
     }
     #[doc = "Bits 16:21"]
     #[inline(always)]
-    pub fn dtm_hop_freq(&mut self) -> DTM_HOP_FREQ_W<DTM_CONFIG_SPEC> {
+    pub fn dtm_hop_freq(&mut self) -> DTM_HOP_FREQ_W<'_, DTM_CONFIG_SPEC> {
         DTM_HOP_FREQ_W::new(self, 16)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
-    pub fn dtm_contrx_en(&mut self) -> DTM_CONTRX_EN_W<DTM_CONFIG_SPEC> {
+    pub fn dtm_contrx_en(&mut self) -> DTM_CONTRX_EN_W<'_, DTM_CONFIG_SPEC> {
         DTM_CONTRX_EN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
-    pub fn dtm_on(&mut self) -> DTM_ON_W<DTM_CONFIG_SPEC> {
+    pub fn dtm_on(&mut self) -> DTM_ON_W<'_, DTM_CONFIG_SPEC> {
         DTM_ON_W::new(self, 25)
     }
 }

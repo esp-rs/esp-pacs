@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Tihs field is used to selec probe_group from probe_group0 to probe_group15 for module's probe_out\\[31:0\\] in b mode."]
     #[inline(always)]
-    pub fn reg_probe_b_mod_sel(&mut self) -> REG_PROBE_B_MOD_SEL_W<PROBEB_CTRL_SPEC> {
+    pub fn reg_probe_b_mod_sel(&mut self) -> REG_PROBE_B_MOD_SEL_W<'_, PROBEB_CTRL_SPEC> {
         REG_PROBE_B_MOD_SEL_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Tihs field is used to select module's probe_out\\[31:0\\] as probe_out in b mode"]
     #[inline(always)]
-    pub fn reg_probe_b_top_sel(&mut self) -> REG_PROBE_B_TOP_SEL_W<PROBEB_CTRL_SPEC> {
+    pub fn reg_probe_b_top_sel(&mut self) -> REG_PROBE_B_TOP_SEL_W<'_, PROBEB_CTRL_SPEC> {
         REG_PROBE_B_TOP_SEL_W::new(self, 16)
     }
     #[doc = "Bit 24 - Set this bit to enable b mode for debug probe. 1: b mode, 0: a mode."]
     #[inline(always)]
-    pub fn reg_probe_b_en(&mut self) -> REG_PROBE_B_EN_W<PROBEB_CTRL_SPEC> {
+    pub fn reg_probe_b_en(&mut self) -> REG_PROBE_B_EN_W<'_, PROBEB_CTRL_SPEC> {
         REG_PROBE_B_EN_W::new(self, 24)
     }
 }

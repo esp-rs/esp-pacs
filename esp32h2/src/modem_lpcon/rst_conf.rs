@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<RST_CONF_SPEC> {
 impl W {
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn rst_coex(&mut self) -> RST_COEX_W<RST_CONF_SPEC> {
+    pub fn rst_coex(&mut self) -> RST_COEX_W<'_, RST_CONF_SPEC> {
         RST_COEX_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<RST_CONF_SPEC> {
+    pub fn rst_i2c_mst(&mut self) -> RST_I2C_MST_W<'_, RST_CONF_SPEC> {
         RST_I2C_MST_W::new(self, 2)
     }
 }

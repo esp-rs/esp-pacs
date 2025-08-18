@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - this field configures lsc table size in x-direction"]
     #[inline(always)]
-    pub fn lsc_xtablesize(&mut self) -> LSC_XTABLESIZE_W<LSC_TABLESIZE_SPEC> {
+    pub fn lsc_xtablesize(&mut self) -> LSC_XTABLESIZE_W<'_, LSC_TABLESIZE_SPEC> {
         LSC_XTABLESIZE_W::new(self, 0)
     }
 }

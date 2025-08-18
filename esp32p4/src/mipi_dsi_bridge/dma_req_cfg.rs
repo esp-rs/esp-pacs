@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures the num of 64-bit in one dma burst transfer, valid only when dsi_bridge as flow controller"]
     #[inline(always)]
-    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<DMA_REQ_CFG_SPEC> {
+    pub fn dma_burst_len(&mut self) -> DMA_BURST_LEN_W<'_, DMA_REQ_CFG_SPEC> {
         DMA_BURST_LEN_W::new(self, 0)
     }
 }

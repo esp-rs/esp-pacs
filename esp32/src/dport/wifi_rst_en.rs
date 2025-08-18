@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Set this bit to reset MAC module. Clear the bit to release MAC module."]
     #[inline(always)]
-    pub fn mac_rst(&mut self) -> MAC_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn mac_rst(&mut self) -> MAC_RST_W<'_, WIFI_RST_EN_SPEC> {
         MAC_RST_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set this bit to reset SDIO module. Clear the bit to release SDIO module."]
     #[inline(always)]
-    pub fn sdio_rst(&mut self) -> SDIO_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn sdio_rst(&mut self) -> SDIO_RST_W<'_, WIFI_RST_EN_SPEC> {
         SDIO_RST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to reset SD/MMC module. Clear the bit to release SD/MMC module."]
     #[inline(always)]
-    pub fn sdio_host_rst(&mut self) -> SDIO_HOST_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn sdio_host_rst(&mut self) -> SDIO_HOST_RST_W<'_, WIFI_RST_EN_SPEC> {
         SDIO_HOST_RST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to reset Ethernet MAC module. Clear the bit to release Ethernet MAC module."]
     #[inline(always)]
-    pub fn emac_rst(&mut self) -> EMAC_RST_W<WIFI_RST_EN_SPEC> {
+    pub fn emac_rst(&mut self) -> EMAC_RST_W<'_, WIFI_RST_EN_SPEC> {
         EMAC_RST_W::new(self, 7)
     }
 }

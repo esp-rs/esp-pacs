@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn cpu_mxint_enable(&mut self) -> CPU_MXINT_ENABLE_W<MXINT_ENABLE_SPEC> {
+    pub fn cpu_mxint_enable(&mut self) -> CPU_MXINT_ENABLE_W<'_, MXINT_ENABLE_SPEC> {
         CPU_MXINT_ENABLE_W::new(self, 0)
     }
 }

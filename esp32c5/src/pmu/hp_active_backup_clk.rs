@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn hp_active_backup_icg_func_en(
         &mut self,
-    ) -> HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<HP_ACTIVE_BACKUP_CLK_SPEC> {
+    ) -> HP_ACTIVE_BACKUP_ICG_FUNC_EN_W<'_, HP_ACTIVE_BACKUP_CLK_SPEC> {
         HP_ACTIVE_BACKUP_ICG_FUNC_EN_W::new(self, 0)
     }
 }

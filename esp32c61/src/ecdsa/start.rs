@@ -15,17 +15,17 @@ impl core::fmt::Debug for crate::generic::Reg<START_SPEC> {
 impl W {
     #[doc = "Bit 0 - Write 1 to start caculation of ECDSA Accelerator. This bit will be self-cleared after configuration."]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<START_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, START_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to input load done signal of ECDSA Accelerator. This bit will be self-cleared after configuration."]
     #[inline(always)]
-    pub fn load_done(&mut self) -> LOAD_DONE_W<START_SPEC> {
+    pub fn load_done(&mut self) -> LOAD_DONE_W<'_, START_SPEC> {
         LOAD_DONE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to input get done signal of ECDSA Accelerator. This bit will be self-cleared after configuration."]
     #[inline(always)]
-    pub fn get_done(&mut self) -> GET_DONE_W<START_SPEC> {
+    pub fn get_done(&mut self) -> GET_DONE_W<'_, START_SPEC> {
         GET_DONE_W::new(self, 2)
     }
 }

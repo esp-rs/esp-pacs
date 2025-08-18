@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable AXI response function for mmu valid err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_mmu_vld(&mut self) -> AW_RESP_EN_MMU_VLD_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_mmu_vld(&mut self) -> AW_RESP_EN_MMU_VLD_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_MMU_VLD_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable AXI response function for mmu gid err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_mmu_gid(&mut self) -> AW_RESP_EN_MMU_GID_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_mmu_gid(&mut self) -> AW_RESP_EN_MMU_GID_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_MMU_GID_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to enable AXI response function for axi size err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_axi_size(&mut self) -> AW_RESP_EN_AXI_SIZE_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_axi_size(&mut self) -> AW_RESP_EN_AXI_SIZE_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_AXI_SIZE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable AXI response function for axi flash err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_axi_flash(&mut self) -> AW_RESP_EN_AXI_FLASH_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_axi_flash(&mut self) -> AW_RESP_EN_AXI_FLASH_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_AXI_FLASH_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to enable AXI response function for mmu ecc err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_mmu_ecc(&mut self) -> AW_RESP_EN_MMU_ECC_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_mmu_ecc(&mut self) -> AW_RESP_EN_MMU_ECC_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_MMU_ECC_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to enable AXI response function for mmu sens in err axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_mmu_sens(&mut self) -> AW_RESP_EN_MMU_SENS_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_mmu_sens(&mut self) -> AW_RESP_EN_MMU_SENS_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_MMU_SENS_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to enable AXI response function for axi wstrb err in axi write trans."]
     #[inline(always)]
-    pub fn aw_resp_en_axi_wstrb(&mut self) -> AW_RESP_EN_AXI_WSTRB_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn aw_resp_en_axi_wstrb(&mut self) -> AW_RESP_EN_AXI_WSTRB_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AW_RESP_EN_AXI_WSTRB_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to enable AXI response function for mmu valid err in axi read trans."]
     #[inline(always)]
-    pub fn ar_resp_en_mmu_vld(&mut self) -> AR_RESP_EN_MMU_VLD_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn ar_resp_en_mmu_vld(&mut self) -> AR_RESP_EN_MMU_VLD_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AR_RESP_EN_MMU_VLD_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to enable AXI response function for mmu gid err in axi read trans."]
     #[inline(always)]
-    pub fn ar_resp_en_mmu_gid(&mut self) -> AR_RESP_EN_MMU_GID_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn ar_resp_en_mmu_gid(&mut self) -> AR_RESP_EN_MMU_GID_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AR_RESP_EN_MMU_GID_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to enable AXI response function for mmu ecc err in axi read trans."]
     #[inline(always)]
-    pub fn ar_resp_en_mmu_ecc(&mut self) -> AR_RESP_EN_MMU_ECC_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn ar_resp_en_mmu_ecc(&mut self) -> AR_RESP_EN_MMU_ECC_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AR_RESP_EN_MMU_ECC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to enable AXI response function for mmu sensitive err in axi read trans."]
     #[inline(always)]
-    pub fn ar_resp_en_mmu_sens(&mut self) -> AR_RESP_EN_MMU_SENS_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn ar_resp_en_mmu_sens(&mut self) -> AR_RESP_EN_MMU_SENS_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AR_RESP_EN_MMU_SENS_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to enable AXI response function for axi size err in axi read trans."]
     #[inline(always)]
-    pub fn ar_resp_en_axi_size(&mut self) -> AR_RESP_EN_AXI_SIZE_W<AXI_ERR_RESP_EN_SPEC> {
+    pub fn ar_resp_en_axi_size(&mut self) -> AR_RESP_EN_AXI_SIZE_W<'_, AXI_ERR_RESP_EN_SPEC> {
         AR_RESP_EN_AXI_SIZE_W::new(self, 11)
     }
 }

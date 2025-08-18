@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - The TX error counter register, reflects value changes under transmission status."]
     #[inline(always)]
-    pub fn tx_err_cnt(&mut self) -> TX_ERR_CNT_W<TX_ERR_CNT_SPEC> {
+    pub fn tx_err_cnt(&mut self) -> TX_ERR_CNT_W<'_, TX_ERR_CNT_SPEC> {
         TX_ERR_CNT_W::new(self, 0)
     }
 }

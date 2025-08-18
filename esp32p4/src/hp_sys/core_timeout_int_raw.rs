@@ -94,42 +94,42 @@ impl W {
     #[inline(always)]
     pub fn core0_ahb_timeout_int_raw(
         &mut self,
-    ) -> CORE0_AHB_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE0_AHB_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE0_AHB_TIMEOUT_INT_RAW_W::new(self, 0)
     }
     #[doc = "Bit 1 - the raw interrupt status of hp core1 ahb timeout"]
     #[inline(always)]
     pub fn core1_ahb_timeout_int_raw(
         &mut self,
-    ) -> CORE1_AHB_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE1_AHB_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE1_AHB_TIMEOUT_INT_RAW_W::new(self, 1)
     }
     #[doc = "Bit 2 - the raw interrupt status of hp core0 ibus timeout"]
     #[inline(always)]
     pub fn core0_ibus_timeout_int_raw(
         &mut self,
-    ) -> CORE0_IBUS_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE0_IBUS_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE0_IBUS_TIMEOUT_INT_RAW_W::new(self, 2)
     }
     #[doc = "Bit 3 - the raw interrupt status of hp core1 ibus timeout"]
     #[inline(always)]
     pub fn core1_ibus_timeout_int_raw(
         &mut self,
-    ) -> CORE1_IBUS_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE1_IBUS_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE1_IBUS_TIMEOUT_INT_RAW_W::new(self, 3)
     }
     #[doc = "Bit 4 - the raw interrupt status of hp core0 dbus timeout"]
     #[inline(always)]
     pub fn core0_dbus_timeout_int_raw(
         &mut self,
-    ) -> CORE0_DBUS_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE0_DBUS_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE0_DBUS_TIMEOUT_INT_RAW_W::new(self, 4)
     }
     #[doc = "Bit 5 - the raw interrupt status of hp core1 dbus timeout"]
     #[inline(always)]
     pub fn core1_dbus_timeout_int_raw(
         &mut self,
-    ) -> CORE1_DBUS_TIMEOUT_INT_RAW_W<CORE_TIMEOUT_INT_RAW_SPEC> {
+    ) -> CORE1_DBUS_TIMEOUT_INT_RAW_W<'_, CORE_TIMEOUT_INT_RAW_SPEC> {
         CORE1_DBUS_TIMEOUT_INT_RAW_W::new(self, 5)
     }
 }

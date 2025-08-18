@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The enable signal for read_done interrupt."]
     #[inline(always)]
-    pub fn read_done(&mut self) -> READ_DONE_W<INT_ENA_SPEC> {
+    pub fn read_done(&mut self) -> READ_DONE_W<'_, INT_ENA_SPEC> {
         READ_DONE_W::new(self, 0)
     }
     #[doc = "Bit 1 - The enable signal for pgm_done interrupt."]
     #[inline(always)]
-    pub fn pgm_done(&mut self) -> PGM_DONE_W<INT_ENA_SPEC> {
+    pub fn pgm_done(&mut self) -> PGM_DONE_W<'_, INT_ENA_SPEC> {
         PGM_DONE_W::new(self, 1)
     }
 }

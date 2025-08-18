@@ -28,17 +28,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to stop dealing with the outlink descriptors."]
     #[inline(always)]
-    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<OUT_LINK1_SPEC> {
+    pub fn outlink_stop(&mut self) -> OUTLINK_STOP_W<'_, OUT_LINK1_SPEC> {
         OUTLINK_STOP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to start dealing with the outlink descriptors."]
     #[inline(always)]
-    pub fn outlink_start(&mut self) -> OUTLINK_START_W<OUT_LINK1_SPEC> {
+    pub fn outlink_start(&mut self) -> OUTLINK_START_W<'_, OUT_LINK1_SPEC> {
         OUTLINK_START_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to restart a new outlink from the last address."]
     #[inline(always)]
-    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<OUT_LINK1_SPEC> {
+    pub fn outlink_restart(&mut self) -> OUTLINK_RESTART_W<'_, OUT_LINK1_SPEC> {
         OUTLINK_RESTART_W::new(self, 2)
     }
 }

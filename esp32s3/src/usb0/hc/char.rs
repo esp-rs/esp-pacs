@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]
-    pub fn mps(&mut self) -> MPS_W<CHAR_SPEC> {
+    pub fn mps(&mut self) -> MPS_W<'_, CHAR_SPEC> {
         MPS_W::new(self, 0)
     }
     #[doc = "Bits 11:14"]
     #[inline(always)]
-    pub fn epnum(&mut self) -> EPNUM_W<CHAR_SPEC> {
+    pub fn epnum(&mut self) -> EPNUM_W<'_, CHAR_SPEC> {
         EPNUM_W::new(self, 11)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn epdir(&mut self) -> EPDIR_W<CHAR_SPEC> {
+    pub fn epdir(&mut self) -> EPDIR_W<'_, CHAR_SPEC> {
         EPDIR_W::new(self, 15)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
-    pub fn lspddev(&mut self) -> LSPDDEV_W<CHAR_SPEC> {
+    pub fn lspddev(&mut self) -> LSPDDEV_W<'_, CHAR_SPEC> {
         LSPDDEV_W::new(self, 17)
     }
     #[doc = "Bits 18:19"]
     #[inline(always)]
-    pub fn eptype(&mut self) -> EPTYPE_W<CHAR_SPEC> {
+    pub fn eptype(&mut self) -> EPTYPE_W<'_, CHAR_SPEC> {
         EPTYPE_W::new(self, 18)
     }
     #[doc = "Bits 20:21"]
     #[inline(always)]
-    pub fn ec(&mut self) -> EC_W<CHAR_SPEC> {
+    pub fn ec(&mut self) -> EC_W<'_, CHAR_SPEC> {
         EC_W::new(self, 20)
     }
     #[doc = "Bits 22:28"]
     #[inline(always)]
-    pub fn devaddr(&mut self) -> DEVADDR_W<CHAR_SPEC> {
+    pub fn devaddr(&mut self) -> DEVADDR_W<'_, CHAR_SPEC> {
         DEVADDR_W::new(self, 22)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
-    pub fn oddfrm(&mut self) -> ODDFRM_W<CHAR_SPEC> {
+    pub fn oddfrm(&mut self) -> ODDFRM_W<'_, CHAR_SPEC> {
         ODDFRM_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
-    pub fn chdis(&mut self) -> CHDIS_W<CHAR_SPEC> {
+    pub fn chdis(&mut self) -> CHDIS_W<'_, CHAR_SPEC> {
         CHDIS_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn chena(&mut self) -> CHENA_W<CHAR_SPEC> {
+    pub fn chena(&mut self) -> CHENA_W<'_, CHAR_SPEC> {
         CHENA_W::new(self, 31)
     }
 }

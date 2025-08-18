@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - Receive buffer timestamp option. This register should be modified only when SETTINGS\\[ENA\\]=0. 0b0 - RTS_END - Timestamp of received frame in RX FIFO is captured in last bit of EOF field. 0b1 - RTS_BEG - Timestamp of received frame in RX FIFO is captured in SOF field."]
     #[inline(always)]
-    pub fn rtsop(&mut self) -> RTSOP_W<RX_STATUS_RX_SETTINGS_SPEC> {
+    pub fn rtsop(&mut self) -> RTSOP_W<'_, RX_STATUS_RX_SETTINGS_SPEC> {
         RTSOP_W::new(self, 16)
     }
 }

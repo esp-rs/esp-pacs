@@ -104,47 +104,47 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 8:10 - Configures the regulation factor for the digital system voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
-    pub fn dig_reg_dbias_slp(&mut self) -> DIG_REG_DBIAS_SLP_W<REG_SPEC> {
+    pub fn dig_reg_dbias_slp(&mut self) -> DIG_REG_DBIAS_SLP_W<'_, REG_SPEC> {
         DIG_REG_DBIAS_SLP_W::new(self, 8)
     }
     #[doc = "Bits 11:13 - Configures the regulation factor for the digital system voltage regulator when the CPU is in active status."]
     #[inline(always)]
-    pub fn dig_reg_dbias_wak(&mut self) -> DIG_REG_DBIAS_WAK_W<REG_SPEC> {
+    pub fn dig_reg_dbias_wak(&mut self) -> DIG_REG_DBIAS_WAK_W<'_, REG_SPEC> {
         DIG_REG_DBIAS_WAK_W::new(self, 11)
     }
     #[doc = "Bits 14:21 - Configures the frequency of the RTC clocks."]
     #[inline(always)]
-    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<REG_SPEC> {
+    pub fn sck_dcap(&mut self) -> SCK_DCAP_W<'_, REG_SPEC> {
         SCK_DCAP_W::new(self, 14)
     }
     #[doc = "Bits 22:24 - Configures the regulation factor for the low-power voltage regulator when the CPU is in sleep status."]
     #[inline(always)]
-    pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<REG_SPEC> {
+    pub fn dbias_slp(&mut self) -> DBIAS_SLP_W<'_, REG_SPEC> {
         DBIAS_SLP_W::new(self, 22)
     }
     #[doc = "Bits 25:27 - Configures the regulation factor for the low-power voltage regulator when the CPU is in active status."]
     #[inline(always)]
-    pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<REG_SPEC> {
+    pub fn dbias_wak(&mut self) -> DBIAS_WAK_W<'_, REG_SPEC> {
         DBIAS_WAK_W::new(self, 25)
     }
     #[doc = "Bit 28 - RTC_DBOOST force power down"]
     #[inline(always)]
-    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<REG_SPEC> {
+    pub fn dboost_force_pd(&mut self) -> DBOOST_FORCE_PD_W<'_, REG_SPEC> {
         DBOOST_FORCE_PD_W::new(self, 28)
     }
     #[doc = "Bit 29 - RTC_DBOOST force power up"]
     #[inline(always)]
-    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<REG_SPEC> {
+    pub fn dboost_force_pu(&mut self) -> DBOOST_FORCE_PU_W<'_, REG_SPEC> {
         DBOOST_FORCE_PU_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to FPD the RTC_REG, which means decreasing its voltage to 0.8 V or lower."]
     #[inline(always)]
-    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<REG_SPEC> {
+    pub fn regulator_force_pd(&mut self) -> REGULATOR_FORCE_PD_W<'_, REG_SPEC> {
         REGULATOR_FORCE_PD_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to FPU the RTC_REG."]
     #[inline(always)]
-    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<REG_SPEC> {
+    pub fn regulator_force_pu(&mut self) -> REGULATOR_FORCE_PU_W<'_, REG_SPEC> {
         REGULATOR_FORCE_PU_W::new(self, 31)
     }
 }

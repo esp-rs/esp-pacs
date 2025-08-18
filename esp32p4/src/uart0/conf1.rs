@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - It will produce rxfifo_full_int interrupt when receiver receives more data than this register value."]
     #[inline(always)]
-    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<CONF1_SPEC> {
+    pub fn rxfifo_full_thrhd(&mut self) -> RXFIFO_FULL_THRHD_W<'_, CONF1_SPEC> {
         RXFIFO_FULL_THRHD_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - It will produce txfifo_empty_int interrupt when the data amount in Tx-FIFO is less than this register value."]
     #[inline(always)]
-    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<CONF1_SPEC> {
+    pub fn txfifo_empty_thrhd(&mut self) -> TXFIFO_EMPTY_THRHD_W<'_, CONF1_SPEC> {
         TXFIFO_EMPTY_THRHD_W::new(self, 8)
     }
     #[doc = "Bit 16 - Set this bit to inverse the level value of uart cts signal."]
     #[inline(always)]
-    pub fn cts_inv(&mut self) -> CTS_INV_W<CONF1_SPEC> {
+    pub fn cts_inv(&mut self) -> CTS_INV_W<'_, CONF1_SPEC> {
         CTS_INV_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to inverse the level value of uart dsr signal."]
     #[inline(always)]
-    pub fn dsr_inv(&mut self) -> DSR_INV_W<CONF1_SPEC> {
+    pub fn dsr_inv(&mut self) -> DSR_INV_W<'_, CONF1_SPEC> {
         DSR_INV_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to inverse the level value of uart rts signal."]
     #[inline(always)]
-    pub fn rts_inv(&mut self) -> RTS_INV_W<CONF1_SPEC> {
+    pub fn rts_inv(&mut self) -> RTS_INV_W<'_, CONF1_SPEC> {
         RTS_INV_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to inverse the level value of uart dtr signal."]
     #[inline(always)]
-    pub fn dtr_inv(&mut self) -> DTR_INV_W<CONF1_SPEC> {
+    pub fn dtr_inv(&mut self) -> DTR_INV_W<'_, CONF1_SPEC> {
         DTR_INV_W::new(self, 19)
     }
     #[doc = "Bit 20 - This register is used to configure the software dtr signal which is used in software flow control."]
     #[inline(always)]
-    pub fn sw_dtr(&mut self) -> SW_DTR_W<CONF1_SPEC> {
+    pub fn sw_dtr(&mut self) -> SW_DTR_W<'_, CONF1_SPEC> {
         SW_DTR_W::new(self, 20)
     }
     #[doc = "Bit 21 - 1'h1: Force clock on for register. 1'h0: Support clock only when application writes registers."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF1_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF1_SPEC> {
         CLK_EN_W::new(self, 21)
     }
 }

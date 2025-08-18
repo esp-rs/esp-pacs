@@ -69,152 +69,152 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - Set this bit to clear the interrupt triggered when the timer 0 stops."]
     #[inline(always)]
-    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<INT_CLR_SPEC> {
+    pub fn timer0_stop(&mut self) -> TIMER0_STOP_W<'_, INT_CLR_SPEC> {
         TIMER0_STOP_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to clear the interrupt triggered when the timer 1 stops."]
     #[inline(always)]
-    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<INT_CLR_SPEC> {
+    pub fn timer1_stop(&mut self) -> TIMER1_STOP_W<'_, INT_CLR_SPEC> {
         TIMER1_STOP_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to clear the interrupt triggered when the timer 2 stops."]
     #[inline(always)]
-    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<INT_CLR_SPEC> {
+    pub fn timer2_stop(&mut self) -> TIMER2_STOP_W<'_, INT_CLR_SPEC> {
         TIMER2_STOP_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to clear the interrupt triggered by a PWM timer 0 TEZ event."]
     #[inline(always)]
-    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<INT_CLR_SPEC> {
+    pub fn timer0_tez(&mut self) -> TIMER0_TEZ_W<'_, INT_CLR_SPEC> {
         TIMER0_TEZ_W::new(self, 3)
     }
     #[doc = "Bit 4 - Set this bit to clear the interrupt triggered by a PWM timer 1 TEZ event."]
     #[inline(always)]
-    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<INT_CLR_SPEC> {
+    pub fn timer1_tez(&mut self) -> TIMER1_TEZ_W<'_, INT_CLR_SPEC> {
         TIMER1_TEZ_W::new(self, 4)
     }
     #[doc = "Bit 5 - Set this bit to clear the interrupt triggered by a PWM timer 2 TEZ event."]
     #[inline(always)]
-    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<INT_CLR_SPEC> {
+    pub fn timer2_tez(&mut self) -> TIMER2_TEZ_W<'_, INT_CLR_SPEC> {
         TIMER2_TEZ_W::new(self, 5)
     }
     #[doc = "Bit 6 - Set this bit to clear the interrupt triggered by a PWM timer 0 TEP event."]
     #[inline(always)]
-    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<INT_CLR_SPEC> {
+    pub fn timer0_tep(&mut self) -> TIMER0_TEP_W<'_, INT_CLR_SPEC> {
         TIMER0_TEP_W::new(self, 6)
     }
     #[doc = "Bit 7 - Set this bit to clear the interrupt triggered by a PWM timer 1 TEP event."]
     #[inline(always)]
-    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<INT_CLR_SPEC> {
+    pub fn timer1_tep(&mut self) -> TIMER1_TEP_W<'_, INT_CLR_SPEC> {
         TIMER1_TEP_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set this bit to clear the interrupt triggered by a PWM timer 2 TEP event."]
     #[inline(always)]
-    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<INT_CLR_SPEC> {
+    pub fn timer2_tep(&mut self) -> TIMER2_TEP_W<'_, INT_CLR_SPEC> {
         TIMER2_TEP_W::new(self, 8)
     }
     #[doc = "Bit 9 - Set this bit to clear the interrupt triggered when event_f0 starts."]
     #[inline(always)]
-    pub fn fault0(&mut self) -> FAULT0_W<INT_CLR_SPEC> {
+    pub fn fault0(&mut self) -> FAULT0_W<'_, INT_CLR_SPEC> {
         FAULT0_W::new(self, 9)
     }
     #[doc = "Bit 10 - Set this bit to clear the interrupt triggered when event_f1 starts."]
     #[inline(always)]
-    pub fn fault1(&mut self) -> FAULT1_W<INT_CLR_SPEC> {
+    pub fn fault1(&mut self) -> FAULT1_W<'_, INT_CLR_SPEC> {
         FAULT1_W::new(self, 10)
     }
     #[doc = "Bit 11 - Set this bit to clear the interrupt triggered when event_f2 starts."]
     #[inline(always)]
-    pub fn fault2(&mut self) -> FAULT2_W<INT_CLR_SPEC> {
+    pub fn fault2(&mut self) -> FAULT2_W<'_, INT_CLR_SPEC> {
         FAULT2_W::new(self, 11)
     }
     #[doc = "Bit 12 - Set this bit to clear the interrupt triggered when event_f0 ends."]
     #[inline(always)]
-    pub fn fault0_clr(&mut self) -> FAULT0_CLR_W<INT_CLR_SPEC> {
+    pub fn fault0_clr(&mut self) -> FAULT0_CLR_W<'_, INT_CLR_SPEC> {
         FAULT0_CLR_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to clear the interrupt triggered when event_f1 ends."]
     #[inline(always)]
-    pub fn fault1_clr(&mut self) -> FAULT1_CLR_W<INT_CLR_SPEC> {
+    pub fn fault1_clr(&mut self) -> FAULT1_CLR_W<'_, INT_CLR_SPEC> {
         FAULT1_CLR_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set this bit to clear the interrupt triggered when event_f2 ends."]
     #[inline(always)]
-    pub fn fault2_clr(&mut self) -> FAULT2_CLR_W<INT_CLR_SPEC> {
+    pub fn fault2_clr(&mut self) -> FAULT2_CLR_W<'_, INT_CLR_SPEC> {
         FAULT2_CLR_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set this bit to clear the interrupt triggered by a PWM operator 0 TEA event"]
     #[inline(always)]
-    pub fn cmpr0_tea(&mut self) -> CMPR0_TEA_W<INT_CLR_SPEC> {
+    pub fn cmpr0_tea(&mut self) -> CMPR0_TEA_W<'_, INT_CLR_SPEC> {
         CMPR0_TEA_W::new(self, 15)
     }
     #[doc = "Bit 16 - Set this bit to clear the interrupt triggered by a PWM operator 1 TEA event"]
     #[inline(always)]
-    pub fn cmpr1_tea(&mut self) -> CMPR1_TEA_W<INT_CLR_SPEC> {
+    pub fn cmpr1_tea(&mut self) -> CMPR1_TEA_W<'_, INT_CLR_SPEC> {
         CMPR1_TEA_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set this bit to clear the interrupt triggered by a PWM operator 2 TEA event"]
     #[inline(always)]
-    pub fn cmpr2_tea(&mut self) -> CMPR2_TEA_W<INT_CLR_SPEC> {
+    pub fn cmpr2_tea(&mut self) -> CMPR2_TEA_W<'_, INT_CLR_SPEC> {
         CMPR2_TEA_W::new(self, 17)
     }
     #[doc = "Bit 18 - Set this bit to clear the interrupt triggered by a PWM operator 0 TEB event"]
     #[inline(always)]
-    pub fn cmpr0_teb(&mut self) -> CMPR0_TEB_W<INT_CLR_SPEC> {
+    pub fn cmpr0_teb(&mut self) -> CMPR0_TEB_W<'_, INT_CLR_SPEC> {
         CMPR0_TEB_W::new(self, 18)
     }
     #[doc = "Bit 19 - Set this bit to clear the interrupt triggered by a PWM operator 1 TEB event"]
     #[inline(always)]
-    pub fn cmpr1_teb(&mut self) -> CMPR1_TEB_W<INT_CLR_SPEC> {
+    pub fn cmpr1_teb(&mut self) -> CMPR1_TEB_W<'_, INT_CLR_SPEC> {
         CMPR1_TEB_W::new(self, 19)
     }
     #[doc = "Bit 20 - Set this bit to clear the interrupt triggered by a PWM operator 2 TEB event"]
     #[inline(always)]
-    pub fn cmpr2_teb(&mut self) -> CMPR2_TEB_W<INT_CLR_SPEC> {
+    pub fn cmpr2_teb(&mut self) -> CMPR2_TEB_W<'_, INT_CLR_SPEC> {
         CMPR2_TEB_W::new(self, 20)
     }
     #[doc = "Bit 21 - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM0."]
     #[inline(always)]
-    pub fn tz0_cbc(&mut self) -> TZ0_CBC_W<INT_CLR_SPEC> {
+    pub fn tz0_cbc(&mut self) -> TZ0_CBC_W<'_, INT_CLR_SPEC> {
         TZ0_CBC_W::new(self, 21)
     }
     #[doc = "Bit 22 - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM1."]
     #[inline(always)]
-    pub fn tz1_cbc(&mut self) -> TZ1_CBC_W<INT_CLR_SPEC> {
+    pub fn tz1_cbc(&mut self) -> TZ1_CBC_W<'_, INT_CLR_SPEC> {
         TZ1_CBC_W::new(self, 22)
     }
     #[doc = "Bit 23 - Set this bit to clear the interrupt triggered by a cycle-by-cycle mode action on PWM2."]
     #[inline(always)]
-    pub fn tz2_cbc(&mut self) -> TZ2_CBC_W<INT_CLR_SPEC> {
+    pub fn tz2_cbc(&mut self) -> TZ2_CBC_W<'_, INT_CLR_SPEC> {
         TZ2_CBC_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM0."]
     #[inline(always)]
-    pub fn tz0_ost(&mut self) -> TZ0_OST_W<INT_CLR_SPEC> {
+    pub fn tz0_ost(&mut self) -> TZ0_OST_W<'_, INT_CLR_SPEC> {
         TZ0_OST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM1."]
     #[inline(always)]
-    pub fn tz1_ost(&mut self) -> TZ1_OST_W<INT_CLR_SPEC> {
+    pub fn tz1_ost(&mut self) -> TZ1_OST_W<'_, INT_CLR_SPEC> {
         TZ1_OST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to clear the interrupt triggered by a one-shot mode action on PWM2."]
     #[inline(always)]
-    pub fn tz2_ost(&mut self) -> TZ2_OST_W<INT_CLR_SPEC> {
+    pub fn tz2_ost(&mut self) -> TZ2_OST_W<'_, INT_CLR_SPEC> {
         TZ2_OST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to clear the interrupt triggered by capture on channel 0."]
     #[inline(always)]
-    pub fn cap0(&mut self) -> CAP0_W<INT_CLR_SPEC> {
+    pub fn cap0(&mut self) -> CAP0_W<'_, INT_CLR_SPEC> {
         CAP0_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to clear the interrupt triggered by capture on channel 1."]
     #[inline(always)]
-    pub fn cap1(&mut self) -> CAP1_W<INT_CLR_SPEC> {
+    pub fn cap1(&mut self) -> CAP1_W<'_, INT_CLR_SPEC> {
         CAP1_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to clear the interrupt triggered by capture on channel 2."]
     #[inline(always)]
-    pub fn cap2(&mut self) -> CAP2_W<INT_CLR_SPEC> {
+    pub fn cap2(&mut self) -> CAP2_W<'_, INT_CLR_SPEC> {
         CAP2_W::new(self, 29)
     }
 }

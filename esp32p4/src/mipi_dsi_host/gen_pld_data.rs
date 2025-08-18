@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - NA"]
     #[inline(always)]
-    pub fn gen_pld_b1(&mut self) -> GEN_PLD_B1_W<GEN_PLD_DATA_SPEC> {
+    pub fn gen_pld_b1(&mut self) -> GEN_PLD_B1_W<'_, GEN_PLD_DATA_SPEC> {
         GEN_PLD_B1_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - NA"]
     #[inline(always)]
-    pub fn gen_pld_b2(&mut self) -> GEN_PLD_B2_W<GEN_PLD_DATA_SPEC> {
+    pub fn gen_pld_b2(&mut self) -> GEN_PLD_B2_W<'_, GEN_PLD_DATA_SPEC> {
         GEN_PLD_B2_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - NA"]
     #[inline(always)]
-    pub fn gen_pld_b3(&mut self) -> GEN_PLD_B3_W<GEN_PLD_DATA_SPEC> {
+    pub fn gen_pld_b3(&mut self) -> GEN_PLD_B3_W<'_, GEN_PLD_DATA_SPEC> {
         GEN_PLD_B3_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - NA"]
     #[inline(always)]
-    pub fn gen_pld_b4(&mut self) -> GEN_PLD_B4_W<GEN_PLD_DATA_SPEC> {
+    pub fn gen_pld_b4(&mut self) -> GEN_PLD_B4_W<'_, GEN_PLD_DATA_SPEC> {
         GEN_PLD_B4_W::new(self, 24)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - GPIO0~31 output enable register."]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<ENABLE_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, ENABLE_SPEC> {
         DATA_W::new(self, 0)
     }
 }

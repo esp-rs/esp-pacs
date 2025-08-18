@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - 2'b11:software control, force on. 2'b10:software control, force off. 2'b0x:hardware control."]
     #[inline(always)]
-    pub fn force_xpd_sar1(&mut self) -> FORCE_XPD_SAR1_W<FORCE_WPD_SAR_SPEC> {
+    pub fn force_xpd_sar1(&mut self) -> FORCE_XPD_SAR1_W<'_, FORCE_WPD_SAR_SPEC> {
         FORCE_XPD_SAR1_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - 2'b11:software control, force on. 2'b10:software control, force off. 2'b0x:hardware control."]
     #[inline(always)]
-    pub fn force_xpd_sar2(&mut self) -> FORCE_XPD_SAR2_W<FORCE_WPD_SAR_SPEC> {
+    pub fn force_xpd_sar2(&mut self) -> FORCE_XPD_SAR2_W<'_, FORCE_WPD_SAR_SPEC> {
         FORCE_XPD_SAR2_W::new(self, 2)
     }
 }

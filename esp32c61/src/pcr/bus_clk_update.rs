@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether or not to update configurations for CPU_CLK division, AHB_CLK division and HP_ROOT_CLK clock source selection.\\\\ 0: Not update configurations\\\\ 1: Update configurations\\\\ This bit is automatically cleared when configurations have been updated.\\\\"]
     #[inline(always)]
-    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<BUS_CLK_UPDATE_SPEC> {
+    pub fn bus_clock_update(&mut self) -> BUS_CLOCK_UPDATE_W<'_, BUS_CLK_UPDATE_SPEC> {
         BUS_CLOCK_UPDATE_W::new(self, 0)
     }
 }

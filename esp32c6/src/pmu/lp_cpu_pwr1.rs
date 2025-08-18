@@ -26,12 +26,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_wakeup_en(&mut self) -> LP_CPU_WAKEUP_EN_W<LP_CPU_PWR1_SPEC> {
+    pub fn lp_cpu_wakeup_en(&mut self) -> LP_CPU_WAKEUP_EN_W<'_, LP_CPU_PWR1_SPEC> {
         LP_CPU_WAKEUP_EN_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<LP_CPU_PWR1_SPEC> {
+    pub fn lp_cpu_sleep_req(&mut self) -> LP_CPU_SLEEP_REQ_W<'_, LP_CPU_PWR1_SPEC> {
         LP_CPU_SLEEP_REQ_W::new(self, 31)
     }
 }

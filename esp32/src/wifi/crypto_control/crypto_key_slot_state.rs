@@ -185,134 +185,134 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `KEY_SLOT_ENABLE0` field.</div>"]
     #[inline(always)]
-    pub fn key_slot_enable(&mut self, n: u8) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable(&mut self, n: u8) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 25][n as usize];
         KEY_SLOT_ENABLE_W::new(self, n)
     }
     #[doc = "Bit 0 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable0(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable0(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable1(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable1(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable2(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable2(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable3(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable3(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable4(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable4(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable5(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable5(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 5)
     }
     #[doc = "Bit 6 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable6(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable6(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable7(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable7(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable8(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable8(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 8)
     }
     #[doc = "Bit 9 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable9(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable9(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 9)
     }
     #[doc = "Bit 10 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable10(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable10(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 10)
     }
     #[doc = "Bit 11 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable11(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable11(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 11)
     }
     #[doc = "Bit 12 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable12(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable12(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 12)
     }
     #[doc = "Bit 13 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable13(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable13(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 13)
     }
     #[doc = "Bit 14 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable14(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable14(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 14)
     }
     #[doc = "Bit 15 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable15(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable15(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 15)
     }
     #[doc = "Bit 16 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable16(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable16(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 16)
     }
     #[doc = "Bit 17 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable17(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable17(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 17)
     }
     #[doc = "Bit 18 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable18(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable18(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 18)
     }
     #[doc = "Bit 19 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable19(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable19(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 19)
     }
     #[doc = "Bit 20 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable20(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable20(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 20)
     }
     #[doc = "Bit 21 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable21(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable21(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 21)
     }
     #[doc = "Bit 22 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable22(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable22(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 22)
     }
     #[doc = "Bit 23 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable23(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable23(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 23)
     }
     #[doc = "Bit 24 - Enable the key slot corresponding to this bit"]
     #[inline(always)]
-    pub fn key_slot_enable24(&mut self) -> KEY_SLOT_ENABLE_W<CRYPTO_KEY_SLOT_STATE_SPEC> {
+    pub fn key_slot_enable24(&mut self) -> KEY_SLOT_ENABLE_W<'_, CRYPTO_KEY_SLOT_STATE_SPEC> {
         KEY_SLOT_ENABLE_W::new(self, 24)
     }
 }

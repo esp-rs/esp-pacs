@@ -15,17 +15,17 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - analog comparator pos edge interrupt clear"]
     #[inline(always)]
-    pub fn comp_neg_0_int_clr(&mut self) -> COMP_NEG_0_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn comp_neg_0_int_clr(&mut self) -> COMP_NEG_0_INT_CLR_W<'_, INT_CLR_SPEC> {
         COMP_NEG_0_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - analog comparator neg edge interrupt clear"]
     #[inline(always)]
-    pub fn comp_pos_0_int_clr(&mut self) -> COMP_POS_0_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn comp_pos_0_int_clr(&mut self) -> COMP_POS_0_INT_CLR_W<'_, INT_CLR_SPEC> {
         COMP_POS_0_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - analog comparator neg or pos edge interrupt clear"]
     #[inline(always)]
-    pub fn comp_all_0_int_clr(&mut self) -> COMP_ALL_0_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn comp_all_0_int_clr(&mut self) -> COMP_ALL_0_INT_CLR_W<'_, INT_CLR_SPEC> {
         COMP_ALL_0_INT_CLR_W::new(self, 2)
     }
 }

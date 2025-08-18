@@ -134,62 +134,62 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to mask TWAIFD_RXI_INT."]
     #[inline(always)]
-    pub fn rxi_int_mask_set(&mut self) -> RXI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn rxi_int_mask_set(&mut self) -> RXI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         RXI_INT_MASK_SET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to mask TWAIFD_TXI_INT."]
     #[inline(always)]
-    pub fn txi_int_mask_set(&mut self) -> TXI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn txi_int_mask_set(&mut self) -> TXI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         TXI_INT_MASK_SET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to mask TWAIFD_EWLI_INT."]
     #[inline(always)]
-    pub fn ewli_int_mask_set(&mut self) -> EWLI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn ewli_int_mask_set(&mut self) -> EWLI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         EWLI_INT_MASK_SET_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to mask TWAIFD_DOI_INT."]
     #[inline(always)]
-    pub fn doi_int_mask_set(&mut self) -> DOI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn doi_int_mask_set(&mut self) -> DOI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         DOI_INT_MASK_SET_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to mask TWAIFD_FCSI_INT."]
     #[inline(always)]
-    pub fn fcsi_int_mask_set(&mut self) -> FCSI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn fcsi_int_mask_set(&mut self) -> FCSI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         FCSI_INT_MASK_SET_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to mask TWAIFD_ALI_INT."]
     #[inline(always)]
-    pub fn ali_int_mask_set(&mut self) -> ALI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn ali_int_mask_set(&mut self) -> ALI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         ALI_INT_MASK_SET_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to mask TWAIFD_BEI_INT."]
     #[inline(always)]
-    pub fn bei_int_mask_set(&mut self) -> BEI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn bei_int_mask_set(&mut self) -> BEI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         BEI_INT_MASK_SET_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to mask TWAIFD_OFI_INT."]
     #[inline(always)]
-    pub fn ofi_int_mask_set(&mut self) -> OFI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn ofi_int_mask_set(&mut self) -> OFI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         OFI_INT_MASK_SET_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to mask TWAIFD_RXFI_INT."]
     #[inline(always)]
-    pub fn rxfi_int_mask_set(&mut self) -> RXFI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn rxfi_int_mask_set(&mut self) -> RXFI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         RXFI_INT_MASK_SET_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to mask TWAIFD_BSI_INT."]
     #[inline(always)]
-    pub fn bsi_int_mask_set(&mut self) -> BSI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn bsi_int_mask_set(&mut self) -> BSI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         BSI_INT_MASK_SET_W::new(self, 9)
     }
     #[doc = "Bit 10 - Write 1 to mask TWAIFD_RBNEI_INT."]
     #[inline(always)]
-    pub fn rbnei_int_mask_set(&mut self) -> RBNEI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn rbnei_int_mask_set(&mut self) -> RBNEI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         RBNEI_INT_MASK_SET_W::new(self, 10)
     }
     #[doc = "Bit 11 - Write 1 to mask TWAIFD_TXBHCI_INT."]
     #[inline(always)]
-    pub fn txbhci_int_mask_set(&mut self) -> TXBHCI_INT_MASK_SET_W<INT_MASK_SET_SPEC> {
+    pub fn txbhci_int_mask_set(&mut self) -> TXBHCI_INT_MASK_SET_W<'_, INT_MASK_SET_SPEC> {
         TXBHCI_INT_MASK_SET_W::new(self, 11)
     }
 }

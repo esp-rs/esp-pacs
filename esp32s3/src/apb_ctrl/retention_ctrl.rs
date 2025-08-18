@@ -34,12 +34,14 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:26 - ******* Description ***********"]
     #[inline(always)]
-    pub fn retention_cpu_link_addr(&mut self) -> RETENTION_CPU_LINK_ADDR_W<RETENTION_CTRL_SPEC> {
+    pub fn retention_cpu_link_addr(
+        &mut self,
+    ) -> RETENTION_CPU_LINK_ADDR_W<'_, RETENTION_CTRL_SPEC> {
         RETENTION_CPU_LINK_ADDR_W::new(self, 0)
     }
     #[doc = "Bit 27 - ******* Description ***********"]
     #[inline(always)]
-    pub fn nobypass_cpu_iso_rst(&mut self) -> NOBYPASS_CPU_ISO_RST_W<RETENTION_CTRL_SPEC> {
+    pub fn nobypass_cpu_iso_rst(&mut self) -> NOBYPASS_CPU_ISO_RST_W<'_, RETENTION_CTRL_SPEC> {
         NOBYPASS_CPU_ISO_RST_W::new(self, 27)
     }
 }

@@ -114,52 +114,52 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<DIEPMSK_SPEC> {
+    pub fn di_xfercomplmsk(&mut self) -> DI_XFERCOMPLMSK_W<'_, DIEPMSK_SPEC> {
         DI_XFERCOMPLMSK_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<DIEPMSK_SPEC> {
+    pub fn di_epdisbldmsk(&mut self) -> DI_EPDISBLDMSK_W<'_, DIEPMSK_SPEC> {
         DI_EPDISBLDMSK_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<DIEPMSK_SPEC> {
+    pub fn di_ahbermsk(&mut self) -> DI_AHBERMSK_W<'_, DIEPMSK_SPEC> {
         DI_AHBERMSK_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<DIEPMSK_SPEC> {
+    pub fn timeoutmsk(&mut self) -> TIMEOUTMSK_W<'_, DIEPMSK_SPEC> {
         TIMEOUTMSK_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<DIEPMSK_SPEC> {
+    pub fn intkntxfempmsk(&mut self) -> INTKNTXFEMPMSK_W<'_, DIEPMSK_SPEC> {
         INTKNTXFEMPMSK_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<DIEPMSK_SPEC> {
+    pub fn intknepmismsk(&mut self) -> INTKNEPMISMSK_W<'_, DIEPMSK_SPEC> {
         INTKNEPMISMSK_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
-    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<DIEPMSK_SPEC> {
+    pub fn inepnakeffmsk(&mut self) -> INEPNAKEFFMSK_W<'_, DIEPMSK_SPEC> {
         INEPNAKEFFMSK_W::new(self, 6)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<DIEPMSK_SPEC> {
+    pub fn txfifoundrnmsk(&mut self) -> TXFIFOUNDRNMSK_W<'_, DIEPMSK_SPEC> {
         TXFIFOUNDRNMSK_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
-    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<DIEPMSK_SPEC> {
+    pub fn bnainintrmsk(&mut self) -> BNAININTRMSK_W<'_, DIEPMSK_SPEC> {
         BNAININTRMSK_W::new(self, 9)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<DIEPMSK_SPEC> {
+    pub fn di_nakmsk(&mut self) -> DI_NAKMSK_W<'_, DIEPMSK_SPEC> {
         DI_NAKMSK_W::new(self, 13)
     }
 }

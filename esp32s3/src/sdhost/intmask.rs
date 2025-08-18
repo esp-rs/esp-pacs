@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - These bits used to mask unwanted interrupts. A value of 0 masks interrupt, and a value of 1 enables the interrupt. Bit 15 (EBE): End-bit error/no CRC error; Bit 14 (ACD): Auto command done; Bit 13 (SBE/BCI): Rx Start Bit Error; Bit 12 (HLE): Hardware locked write error; Bit 11 (FRUN): FIFO underrun/overrun error; Bit 10 (HTO): Data starvation-by-host timeout; Bit 9 (DRTO): Data read timeout; Bit 8 (RTO): Response timeout; Bit 7 (DCRC): Data CRC error; Bit 6 (RCRC): Response CRC error; Bit 5 (RXDR): Receive FIFO data request; Bit 4 (TXDR): Transmit FIFO data request; Bit 3 (DTO): Data transfer over; Bit 2 (CD): Command done; Bit 1 (RE): Response error; Bit 0 (CD): Card detect."]
     #[inline(always)]
-    pub fn int_mask(&mut self) -> INT_MASK_W<INTMASK_SPEC> {
+    pub fn int_mask(&mut self) -> INT_MASK_W<'_, INTMASK_SPEC> {
         INT_MASK_W::new(self, 0)
     }
     #[doc = "Bits 16:17 - SDIO interrupt mask, one bit for each card. Bit\\[17:16\\] correspond to card\\[15:0\\] respectively. When masked, SDIO interrupt detection for that card is disabled. 0 masks an interrupt, and 1 enables an interrupt."]
     #[inline(always)]
-    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<INTMASK_SPEC> {
+    pub fn sdio_int_mask(&mut self) -> SDIO_INT_MASK_W<'_, INTMASK_SPEC> {
         SDIO_INT_MASK_W::new(self, 16)
     }
 }

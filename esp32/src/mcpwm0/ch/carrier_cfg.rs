@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<CARRIER_CFG_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, CARRIER_CFG_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 1:4"]
     #[inline(always)]
-    pub fn prescale(&mut self) -> PRESCALE_W<CARRIER_CFG_SPEC> {
+    pub fn prescale(&mut self) -> PRESCALE_W<'_, CARRIER_CFG_SPEC> {
         PRESCALE_W::new(self, 1)
     }
     #[doc = "Bits 5:7"]
     #[inline(always)]
-    pub fn duty(&mut self) -> DUTY_W<CARRIER_CFG_SPEC> {
+    pub fn duty(&mut self) -> DUTY_W<'_, CARRIER_CFG_SPEC> {
         DUTY_W::new(self, 5)
     }
     #[doc = "Bits 8:11"]
     #[inline(always)]
-    pub fn oshtwth(&mut self) -> OSHTWTH_W<CARRIER_CFG_SPEC> {
+    pub fn oshtwth(&mut self) -> OSHTWTH_W<'_, CARRIER_CFG_SPEC> {
         OSHTWTH_W::new(self, 8)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn out_invert(&mut self) -> OUT_INVERT_W<CARRIER_CFG_SPEC> {
+    pub fn out_invert(&mut self) -> OUT_INVERT_W<'_, CARRIER_CFG_SPEC> {
         OUT_INVERT_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn in_invert(&mut self) -> IN_INVERT_W<CARRIER_CFG_SPEC> {
+    pub fn in_invert(&mut self) -> IN_INVERT_W<'_, CARRIER_CFG_SPEC> {
         IN_INVERT_W::new(self, 13)
     }
 }

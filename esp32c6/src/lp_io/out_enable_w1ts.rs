@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<OUT_ENABLE_W1TS_SPEC> {
 impl W {
     #[doc = "Bits 0:7 - set one time output data"]
     #[inline(always)]
-    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<OUT_ENABLE_W1TS_SPEC> {
+    pub fn enable_w1ts(&mut self) -> ENABLE_W1TS_W<'_, OUT_ENABLE_W1TS_SPEC> {
         ENABLE_W1TS_W::new(self, 0)
     }
 }

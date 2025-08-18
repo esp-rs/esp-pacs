@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<WR_JTAG_SPEC> {
 impl W {
     #[doc = "Bits 0:31 - 32-bit of key to be compared."]
     #[inline(always)]
-    pub fn wr_jtag(&mut self) -> WR_JTAG_W<WR_JTAG_SPEC> {
+    pub fn wr_jtag(&mut self) -> WR_JTAG_W<'_, WR_JTAG_SPEC> {
         WR_JTAG_W::new(self, 0)
     }
 }

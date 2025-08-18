@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - This register is used to configure the clock num between the negedge of SDA and negedge of SCL for start mark."]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<SCL_START_HOLD_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, SCL_START_HOLD_SPEC> {
         TIME_W::new(self, 0)
     }
 }

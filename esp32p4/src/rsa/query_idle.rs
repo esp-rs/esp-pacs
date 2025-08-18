@@ -1,9 +1,9 @@
 #[doc = "Register `QUERY_IDLE` reader"]
 pub type R = crate::R<QUERY_IDLE_SPEC>;
-#[doc = "Field `QUERY_IDLE` reader - Represents the RSA status. 0: Busy 1: Idle"]
+#[doc = "Field `QUERY_IDLE` reader - Represents the RSA status.\\\\ 0: Busy\\\\ 1: Idle\\\\"]
 pub type QUERY_IDLE_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Represents the RSA status. 0: Busy 1: Idle"]
+    #[doc = "Bit 0 - Represents the RSA status.\\\\ 0: Busy\\\\ 1: Idle\\\\"]
     #[inline(always)]
     pub fn query_idle(&self) -> QUERY_IDLE_R {
         QUERY_IDLE_R::new((self.bits & 1) != 0)

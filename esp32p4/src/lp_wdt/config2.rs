@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - need_des"]
     #[inline(always)]
-    pub fn wdt_stg1_hold(&mut self) -> WDT_STG1_HOLD_W<CONFIG2_SPEC> {
+    pub fn wdt_stg1_hold(&mut self) -> WDT_STG1_HOLD_W<'_, CONFIG2_SPEC> {
         WDT_STG1_HOLD_W::new(self, 0)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - cpu top power domain wakeup time"]
     #[inline(always)]
-    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<TIMER4_SPEC> {
+    pub fn cpu_top_wait_timer(&mut self) -> CPU_TOP_WAIT_TIMER_W<'_, TIMER4_SPEC> {
         CPU_TOP_WAIT_TIMER_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - cpu top power domain power on time"]
     #[inline(always)]
-    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<TIMER4_SPEC> {
+    pub fn cpu_top_powerup_timer(&mut self) -> CPU_TOP_POWERUP_TIMER_W<'_, TIMER4_SPEC> {
         CPU_TOP_POWERUP_TIMER_W::new(self, 9)
     }
     #[doc = "Bits 16:24 - digital wrap power domain wakeup time"]
     #[inline(always)]
-    pub fn dg_wrap_wait_timer(&mut self) -> DG_WRAP_WAIT_TIMER_W<TIMER4_SPEC> {
+    pub fn dg_wrap_wait_timer(&mut self) -> DG_WRAP_WAIT_TIMER_W<'_, TIMER4_SPEC> {
         DG_WRAP_WAIT_TIMER_W::new(self, 16)
     }
     #[doc = "Bits 25:31 - digital wrap power domain power on time"]
     #[inline(always)]
-    pub fn dg_wrap_powerup_timer(&mut self) -> DG_WRAP_POWERUP_TIMER_W<TIMER4_SPEC> {
+    pub fn dg_wrap_powerup_timer(&mut self) -> DG_WRAP_POWERUP_TIMER_W<'_, TIMER4_SPEC> {
         DG_WRAP_POWERUP_TIMER_W::new(self, 25)
     }
 }

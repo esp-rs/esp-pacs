@@ -94,42 +94,44 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Reserved"]
     #[inline(always)]
-    pub fn ledc_clk_src_sel(&mut self) -> LEDC_CLK_SRC_SEL_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn ledc_clk_src_sel(&mut self) -> LEDC_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL22_SPEC> {
         LEDC_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - Reserved"]
     #[inline(always)]
-    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn ledc_clk_en(&mut self) -> LEDC_CLK_EN_W<'_, PERI_CLK_CTRL22_SPEC> {
         LEDC_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - Reserved"]
     #[inline(always)]
-    pub fn rmt_clk_src_sel(&mut self) -> RMT_CLK_SRC_SEL_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn rmt_clk_src_sel(&mut self) -> RMT_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL22_SPEC> {
         RMT_CLK_SRC_SEL_W::new(self, 3)
     }
     #[doc = "Bit 5 - Reserved"]
     #[inline(always)]
-    pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn rmt_clk_en(&mut self) -> RMT_CLK_EN_W<'_, PERI_CLK_CTRL22_SPEC> {
         RMT_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bits 6:13 - Reserved"]
     #[inline(always)]
-    pub fn rmt_clk_div_num(&mut self) -> RMT_CLK_DIV_NUM_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn rmt_clk_div_num(&mut self) -> RMT_CLK_DIV_NUM_W<'_, PERI_CLK_CTRL22_SPEC> {
         RMT_CLK_DIV_NUM_W::new(self, 6)
     }
     #[doc = "Bits 14:21 - Reserved"]
     #[inline(always)]
-    pub fn rmt_clk_div_numerator(&mut self) -> RMT_CLK_DIV_NUMERATOR_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn rmt_clk_div_numerator(&mut self) -> RMT_CLK_DIV_NUMERATOR_W<'_, PERI_CLK_CTRL22_SPEC> {
         RMT_CLK_DIV_NUMERATOR_W::new(self, 14)
     }
     #[doc = "Bits 22:29 - Reserved"]
     #[inline(always)]
-    pub fn rmt_clk_div_denominator(&mut self) -> RMT_CLK_DIV_DENOMINATOR_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn rmt_clk_div_denominator(
+        &mut self,
+    ) -> RMT_CLK_DIV_DENOMINATOR_W<'_, PERI_CLK_CTRL22_SPEC> {
         RMT_CLK_DIV_DENOMINATOR_W::new(self, 22)
     }
     #[doc = "Bits 30:31 - Reserved"]
     #[inline(always)]
-    pub fn adc_clk_src_sel(&mut self) -> ADC_CLK_SRC_SEL_W<PERI_CLK_CTRL22_SPEC> {
+    pub fn adc_clk_src_sel(&mut self) -> ADC_CLK_SRC_SEL_W<'_, PERI_CLK_CTRL22_SPEC> {
         ADC_CLK_SRC_SEL_W::new(self, 30)
     }
 }

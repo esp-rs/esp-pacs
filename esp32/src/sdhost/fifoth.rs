@@ -47,19 +47,19 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - FIFO threshold watermark level when transmitting data to card. When FIFO data count is less than or equal to this number, DMA/FIFO request is raised. If Interrupt is enabled, then interrupt occurs. During end of packet, request or interrupt is generated, regardless of threshold programming.In non-DMA mode, when transmit FIFO threshold (TXDR) interrupt is enabled, then interrupt is generated instead of DMA request. During end of packet, on last interrupt, host is responsible for filling FIFO with only required remaining bytes (not before FIFO is full or after CIU completes data transfers, because FIFO may not be empty). In DMA mode, at end of packet, if last transfer is less than burst size, DMA controller does single cycles until required bytes are transferred."]
     #[inline(always)]
-    pub fn tx_wmark(&mut self) -> TX_WMARK_W<FIFOTH_SPEC> {
+    pub fn tx_wmark(&mut self) -> TX_WMARK_W<'_, FIFOTH_SPEC> {
         TX_WMARK_W::new(self, 0)
     }
     #[doc = "Bits 16:26 - FIFO threshold watermark level when receiving data to card.When FIFO data count reaches greater than this number , DMA/FIFO request is raised. During end of packet, request is generated regardless of threshold programming in order to complete any remaining data.In non-DMA mode, when receiver FIFO threshold (RXDR) interrupt is enabled, then interrupt is generated instead of DMA request.During end of packet, interrupt is not generated if threshold programming is larger than any remaining data. It is responsibility of host to read remaining bytes on seeing Data Transfer Done interrupt.In DMA mode, at end of packet, even if remaining bytes are less than threshold, DMA request does single transfers to flush out any remaining bytes before Data Transfer Done interrupt is set."]
     #[inline(always)]
-    pub fn rx_wmark(&mut self) -> RX_WMARK_W<FIFOTH_SPEC> {
+    pub fn rx_wmark(&mut self) -> RX_WMARK_W<'_, FIFOTH_SPEC> {
         RX_WMARK_W::new(self, 16)
     }
     #[doc = "Bits 28:30 - Burst size of multiple transaction, should be programmed same as DMA controller multiple-transaction-size SDHOST_SRC/DEST_MSIZE. 000: 1-byte transfer; 001: 4-byte transfer; 010: 8-byte transfer; 011: 16-byte transfer; 100: 32-byte transfer; 101: 64-byte transfer; 110: 128-byte transfer; 111: 256-byte transfer."]
     #[inline(always)]
     pub fn dma_multiple_transaction_size(
         &mut self,
-    ) -> DMA_MULTIPLE_TRANSACTION_SIZE_W<FIFOTH_SPEC> {
+    ) -> DMA_MULTIPLE_TRANSACTION_SIZE_W<'_, FIFOTH_SPEC> {
         DMA_MULTIPLE_TRANSACTION_SIZE_W::new(self, 28)
     }
 }

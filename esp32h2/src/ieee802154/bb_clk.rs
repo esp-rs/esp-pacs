@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4"]
     #[inline(always)]
-    pub fn freq_minus_1(&mut self) -> FREQ_MINUS_1_W<BB_CLK_SPEC> {
+    pub fn freq_minus_1(&mut self) -> FREQ_MINUS_1_W<'_, BB_CLK_SPEC> {
         FREQ_MINUS_1_W::new(self, 0)
     }
 }

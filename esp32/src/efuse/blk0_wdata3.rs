@@ -114,32 +114,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 9:11"]
     #[inline(always)]
-    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<BLK0_WDATA3_SPEC> {
+    pub fn chip_package(&mut self) -> CHIP_PACKAGE_W<'_, BLK0_WDATA3_SPEC> {
         CHIP_PACKAGE_W::new(self, 9)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<BLK0_WDATA3_SPEC> {
+    pub fn chip_cpu_freq_low(&mut self) -> CHIP_CPU_FREQ_LOW_W<'_, BLK0_WDATA3_SPEC> {
         CHIP_CPU_FREQ_LOW_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<BLK0_WDATA3_SPEC> {
+    pub fn chip_cpu_freq_rated(&mut self) -> CHIP_CPU_FREQ_RATED_W<'_, BLK0_WDATA3_SPEC> {
         CHIP_CPU_FREQ_RATED_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<BLK0_WDATA3_SPEC> {
+    pub fn blk3_part_reserve(&mut self) -> BLK3_PART_RESERVE_W<'_, BLK0_WDATA3_SPEC> {
         BLK3_PART_RESERVE_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
-    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<BLK0_WDATA3_SPEC> {
+    pub fn chip_ver_rev1(&mut self) -> CHIP_VER_REV1_W<'_, BLK0_WDATA3_SPEC> {
         CHIP_VER_REV1_W::new(self, 15)
     }
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<BLK0_WDATA3_SPEC> {
+    pub fn reserve_0_112(&mut self) -> RESERVE_0_112_W<'_, BLK0_WDATA3_SPEC> {
         RESERVE_0_112_W::new(self, 16)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - redundant registers for jpeg"]
     #[inline(always)]
-    pub fn rdn_eco_low(&mut self) -> RDN_ECO_LOW_W<ECO_LOW_SPEC> {
+    pub fn rdn_eco_low(&mut self) -> RDN_ECO_LOW_W<'_, ECO_LOW_SPEC> {
         RDN_ECO_LOW_W::new(self, 0)
     }
 }

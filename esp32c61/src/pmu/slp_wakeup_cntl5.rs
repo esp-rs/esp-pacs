@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - need_des"]
     #[inline(always)]
-    pub fn modem_wait_target(&mut self) -> MODEM_WAIT_TARGET_W<SLP_WAKEUP_CNTL5_SPEC> {
+    pub fn modem_wait_target(&mut self) -> MODEM_WAIT_TARGET_W<'_, SLP_WAKEUP_CNTL5_SPEC> {
         MODEM_WAIT_TARGET_W::new(self, 0)
     }
     #[doc = "Bits 24:31 - need_des"]
     #[inline(always)]
-    pub fn lp_ana_wait_target(&mut self) -> LP_ANA_WAIT_TARGET_W<SLP_WAKEUP_CNTL5_SPEC> {
+    pub fn lp_ana_wait_target(&mut self) -> LP_ANA_WAIT_TARGET_W<'_, SLP_WAKEUP_CNTL5_SPEC> {
         LP_ANA_WAIT_TARGET_W::new(self, 24)
     }
 }

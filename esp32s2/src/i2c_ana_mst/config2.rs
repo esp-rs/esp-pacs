@@ -82,32 +82,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - I2C RTC Slave ID"]
     #[inline(always)]
-    pub fn slave_id(&mut self) -> SLAVE_ID_W<CONFIG2_SPEC> {
+    pub fn slave_id(&mut self) -> SLAVE_ID_W<'_, CONFIG2_SPEC> {
         SLAVE_ID_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - I2C RTC Address"]
     #[inline(always)]
-    pub fn addr(&mut self) -> ADDR_W<CONFIG2_SPEC> {
+    pub fn addr(&mut self) -> ADDR_W<'_, CONFIG2_SPEC> {
         ADDR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - I2C RTC Data"]
     #[inline(always)]
-    pub fn data(&mut self) -> DATA_W<CONFIG2_SPEC> {
+    pub fn data(&mut self) -> DATA_W<'_, CONFIG2_SPEC> {
         DATA_W::new(self, 16)
     }
     #[doc = "Bit 18 - I2C RTC SAR Mask"]
     #[inline(always)]
-    pub fn sar_mask(&mut self) -> SAR_MASK_W<CONFIG2_SPEC> {
+    pub fn sar_mask(&mut self) -> SAR_MASK_W<'_, CONFIG2_SPEC> {
         SAR_MASK_W::new(self, 18)
     }
     #[doc = "Bit 22 - I2C RTC BOD Mask"]
     #[inline(always)]
-    pub fn bod_mask(&mut self) -> BOD_MASK_W<CONFIG2_SPEC> {
+    pub fn bod_mask(&mut self) -> BOD_MASK_W<'_, CONFIG2_SPEC> {
         BOD_MASK_W::new(self, 22)
     }
     #[doc = "Bit 24 - I2C RTC Write Control"]
     #[inline(always)]
-    pub fn wr_cntl(&mut self) -> WR_CNTL_W<CONFIG2_SPEC> {
+    pub fn wr_cntl(&mut self) -> WR_CNTL_W<'_, CONFIG2_SPEC> {
         WR_CNTL_W::new(self, 24)
     }
 }

@@ -66,32 +66,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - rtc software interrupt to main cpu"]
     #[inline(always)]
-    pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<STATE0_SPEC> {
+    pub fn sw_cpu_int(&mut self) -> SW_CPU_INT_W<'_, STATE0_SPEC> {
         SW_CPU_INT_W::new(self, 0)
     }
     #[doc = "Bit 1 - clear rtc sleep reject cause"]
     #[inline(always)]
-    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<STATE0_SPEC> {
+    pub fn slp_reject_cause_clr(&mut self) -> SLP_REJECT_CAUSE_CLR_W<'_, STATE0_SPEC> {
         SLP_REJECT_CAUSE_CLR_W::new(self, 1)
     }
     #[doc = "Bit 22 - 1: APB to RTC using bridge, 0: APB to RTC using sync"]
     #[inline(always)]
-    pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<STATE0_SPEC> {
+    pub fn apb2rtc_bridge_sel(&mut self) -> APB2RTC_BRIDGE_SEL_W<'_, STATE0_SPEC> {
         APB2RTC_BRIDGE_SEL_W::new(self, 22)
     }
     #[doc = "Bit 29 - leep wakeup bit"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<STATE0_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, STATE0_SPEC> {
         SLP_WAKEUP_W::new(self, 29)
     }
     #[doc = "Bit 30 - leep reject bit"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<STATE0_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, STATE0_SPEC> {
         SLP_REJECT_W::new(self, 30)
     }
     #[doc = "Bit 31 - sleep enable bit"]
     #[inline(always)]
-    pub fn sleep_en(&mut self) -> SLEEP_EN_W<STATE0_SPEC> {
+    pub fn sleep_en(&mut self) -> SLEEP_EN_W<'_, STATE0_SPEC> {
         SLEEP_EN_W::new(self, 31)
     }
 }

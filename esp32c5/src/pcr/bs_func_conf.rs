@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 23 - Set 0 to reset bs tx module"]
     #[inline(always)]
-    pub fn bs_tx_rst_en(&mut self) -> BS_TX_RST_EN_W<BS_FUNC_CONF_SPEC> {
+    pub fn bs_tx_rst_en(&mut self) -> BS_TX_RST_EN_W<'_, BS_FUNC_CONF_SPEC> {
         BS_TX_RST_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - Set 0 to reset bs rx module"]
     #[inline(always)]
-    pub fn bs_rx_rst_en(&mut self) -> BS_RX_RST_EN_W<BS_FUNC_CONF_SPEC> {
+    pub fn bs_rx_rst_en(&mut self) -> BS_RX_RST_EN_W<'_, BS_FUNC_CONF_SPEC> {
         BS_RX_RST_EN_W::new(self, 24)
     }
 }

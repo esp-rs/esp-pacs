@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - the raw interrupt status of dpi_underrun"]
     #[inline(always)]
-    pub fn underrun(&mut self) -> UNDERRUN_W<INT_RAW_SPEC> {
+    pub fn underrun(&mut self) -> UNDERRUN_W<'_, INT_RAW_SPEC> {
         UNDERRUN_W::new(self, 0)
     }
 }

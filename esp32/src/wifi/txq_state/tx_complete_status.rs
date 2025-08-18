@@ -65,34 +65,34 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `SLOT0` field.</div>"]
     #[inline(always)]
-    pub fn slot(&mut self, n: u8) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot(&mut self, n: u8) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 5][n as usize];
         SLOT_W::new(self, n)
     }
     #[doc = "Bit 0 - Status bit for a slot"]
     #[inline(always)]
-    pub fn slot0(&mut self) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot0(&mut self) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         SLOT_W::new(self, 0)
     }
     #[doc = "Bit 1 - Status bit for a slot"]
     #[inline(always)]
-    pub fn slot1(&mut self) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot1(&mut self) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         SLOT_W::new(self, 1)
     }
     #[doc = "Bit 2 - Status bit for a slot"]
     #[inline(always)]
-    pub fn slot2(&mut self) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot2(&mut self) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         SLOT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Status bit for a slot"]
     #[inline(always)]
-    pub fn slot3(&mut self) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot3(&mut self) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         SLOT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Status bit for a slot"]
     #[inline(always)]
-    pub fn slot4(&mut self) -> SLOT_W<TX_COMPLETE_STATUS_SPEC> {
+    pub fn slot4(&mut self) -> SLOT_W<'_, TX_COMPLETE_STATUS_SPEC> {
         SLOT_W::new(self, 4)
     }
 }

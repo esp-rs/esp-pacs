@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:7 - Configures the threshold for data in RX FIFO to send XON characters in software flow control.\\\\Measurement unit: byte."]
     #[inline(always)]
-    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<SWFC_CONF1_SPEC> {
+    pub fn xon_threshold(&mut self) -> XON_THRESHOLD_W<'_, SWFC_CONF1_SPEC> {
         XON_THRESHOLD_W::new(self, 3)
     }
     #[doc = "Bits 11:15 - Configures the threshold for data in RX FIFO to send XOFF characters in software flow control.\\\\Measurement unit: byte."]
     #[inline(always)]
-    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<SWFC_CONF1_SPEC> {
+    pub fn xoff_threshold(&mut self) -> XOFF_THRESHOLD_W<'_, SWFC_CONF1_SPEC> {
         XOFF_THRESHOLD_W::new(self, 11)
     }
 }

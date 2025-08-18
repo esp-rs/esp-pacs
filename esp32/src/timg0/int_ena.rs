@@ -67,29 +67,29 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `T0` field.</div>"]
     #[inline(always)]
-    pub fn t(&mut self, n: u8) -> T_W<INT_ENA_SPEC> {
+    pub fn t(&mut self, n: u8) -> T_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 2][n as usize];
         T_W::new(self, n)
     }
     #[doc = "Bit 0 - interrupt when timer0 alarm"]
     #[inline(always)]
-    pub fn t0(&mut self) -> T_W<INT_ENA_SPEC> {
+    pub fn t0(&mut self) -> T_W<'_, INT_ENA_SPEC> {
         T_W::new(self, 0)
     }
     #[doc = "Bit 1 - interrupt when timer1 alarm"]
     #[inline(always)]
-    pub fn t1(&mut self) -> T_W<INT_ENA_SPEC> {
+    pub fn t1(&mut self) -> T_W<'_, INT_ENA_SPEC> {
         T_W::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt when an interrupt stage timeout"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_ENA_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_ENA_SPEC> {
         WDT_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn lact(&mut self) -> LACT_W<INT_ENA_SPEC> {
+    pub fn lact(&mut self) -> LACT_W<'_, INT_ENA_SPEC> {
         LACT_W::new(self, 3)
     }
 }

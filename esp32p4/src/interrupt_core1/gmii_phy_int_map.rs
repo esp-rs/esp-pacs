@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core1_gmii_phy_int_map(&mut self) -> CORE1_GMII_PHY_INT_MAP_W<GMII_PHY_INT_MAP_SPEC> {
+    pub fn core1_gmii_phy_int_map(
+        &mut self,
+    ) -> CORE1_GMII_PHY_INT_MAP_W<'_, GMII_PHY_INT_MAP_SPEC> {
         CORE1_GMII_PHY_INT_MAP_W::new(self, 0)
     }
 }

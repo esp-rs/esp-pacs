@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - register for DV"]
     #[inline(always)]
-    pub fn dfv0(&mut self) -> DFV0_W<DESIGN_FOR_VERIFICATION0_SPEC> {
+    pub fn dfv0(&mut self) -> DFV0_W<'_, DESIGN_FOR_VERIFICATION0_SPEC> {
         DFV0_W::new(self, 0)
     }
 }

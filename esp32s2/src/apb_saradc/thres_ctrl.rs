@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Clock gate enable."]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<THRES_CTRL_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, THRES_CTRL_SPEC> {
         CLK_EN_W::new(self, 0)
     }
     #[doc = "Bit 2 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
-    pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<THRES_CTRL_SPEC> {
+    pub fn adc2_thres_mode(&mut self) -> ADC2_THRES_MODE_W<'_, THRES_CTRL_SPEC> {
         ADC2_THRES_MODE_W::new(self, 2)
     }
     #[doc = "Bit 3 - 1: ADC_DATA > = threshold, generate interrupt. 0: ADC_DATA < threshold, generate interrupt."]
     #[inline(always)]
-    pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<THRES_CTRL_SPEC> {
+    pub fn adc1_thres_mode(&mut self) -> ADC1_THRES_MODE_W<'_, THRES_CTRL_SPEC> {
         ADC1_THRES_MODE_W::new(self, 3)
     }
     #[doc = "Bits 4:16 - ADC2 threshold."]
     #[inline(always)]
-    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<THRES_CTRL_SPEC> {
+    pub fn adc2_thres(&mut self) -> ADC2_THRES_W<'_, THRES_CTRL_SPEC> {
         ADC2_THRES_W::new(self, 4)
     }
     #[doc = "Bits 17:29 - ADC1 threshold."]
     #[inline(always)]
-    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<THRES_CTRL_SPEC> {
+    pub fn adc1_thres(&mut self) -> ADC1_THRES_W<'_, THRES_CTRL_SPEC> {
         ADC1_THRES_W::new(self, 17)
     }
     #[doc = "Bit 30 - Enable ADC2 threshold monitor."]
     #[inline(always)]
-    pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<THRES_CTRL_SPEC> {
+    pub fn adc2_thres_en(&mut self) -> ADC2_THRES_EN_W<'_, THRES_CTRL_SPEC> {
         ADC2_THRES_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable ADC1 threshold monitor."]
     #[inline(always)]
-    pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<THRES_CTRL_SPEC> {
+    pub fn adc1_thres_en(&mut self) -> ADC1_THRES_EN_W<'_, THRES_CTRL_SPEC> {
         ADC1_THRES_EN_W::new(self, 31)
     }
 }

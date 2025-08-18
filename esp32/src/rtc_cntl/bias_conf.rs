@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:25 - DBG_ATTEN"]
     #[inline(always)]
-    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<BIAS_CONF_SPEC> {
+    pub fn dbg_atten(&mut self) -> DBG_ATTEN_W<'_, BIAS_CONF_SPEC> {
         DBG_ATTEN_W::new(self, 24)
     }
     #[doc = "Bit 26 - ENB_SCK_XTAL"]
     #[inline(always)]
-    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<BIAS_CONF_SPEC> {
+    pub fn enb_sck_xtal(&mut self) -> ENB_SCK_XTAL_W<'_, BIAS_CONF_SPEC> {
         ENB_SCK_XTAL_W::new(self, 26)
     }
     #[doc = "Bit 27 - INC_HEARTBEAT_REFRESH"]
     #[inline(always)]
-    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<BIAS_CONF_SPEC> {
+    pub fn inc_heartbeat_refresh(&mut self) -> INC_HEARTBEAT_REFRESH_W<'_, BIAS_CONF_SPEC> {
         INC_HEARTBEAT_REFRESH_W::new(self, 27)
     }
     #[doc = "Bit 28 - DEC_HEARTBEAT_PERIOD"]
     #[inline(always)]
-    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
+    pub fn dec_heartbeat_period(&mut self) -> DEC_HEARTBEAT_PERIOD_W<'_, BIAS_CONF_SPEC> {
         DEC_HEARTBEAT_PERIOD_W::new(self, 28)
     }
     #[doc = "Bit 29 - INC_HEARTBEAT_PERIOD"]
     #[inline(always)]
-    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<BIAS_CONF_SPEC> {
+    pub fn inc_heartbeat_period(&mut self) -> INC_HEARTBEAT_PERIOD_W<'_, BIAS_CONF_SPEC> {
         INC_HEARTBEAT_PERIOD_W::new(self, 29)
     }
     #[doc = "Bit 30 - DEC_HEARTBEAT_WIDTH"]
     #[inline(always)]
-    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<BIAS_CONF_SPEC> {
+    pub fn dec_heartbeat_width(&mut self) -> DEC_HEARTBEAT_WIDTH_W<'_, BIAS_CONF_SPEC> {
         DEC_HEARTBEAT_WIDTH_W::new(self, 30)
     }
     #[doc = "Bit 31 - RST_BIAS_I2C"]
     #[inline(always)]
-    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<BIAS_CONF_SPEC> {
+    pub fn rst_bias_i2c(&mut self) -> RST_BIAS_I2C_W<'_, BIAS_CONF_SPEC> {
         RST_BIAS_I2C_W::new(self, 31)
     }
 }

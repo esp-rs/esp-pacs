@@ -39,14 +39,14 @@ impl W {
     #[inline(always)]
     pub fn hp_peri_timeout_intr_map(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_INTR_MAP_W<HP_PERI_TIMEOUT_INTR_MAP_SPEC> {
+    ) -> HP_PERI_TIMEOUT_INTR_MAP_W<'_, HP_PERI_TIMEOUT_INTR_MAP_SPEC> {
         HP_PERI_TIMEOUT_INTR_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn hp_peri_timeout_intr_pass_in_sec(
         &mut self,
-    ) -> HP_PERI_TIMEOUT_INTR_PASS_IN_SEC_W<HP_PERI_TIMEOUT_INTR_MAP_SPEC> {
+    ) -> HP_PERI_TIMEOUT_INTR_PASS_IN_SEC_W<'_, HP_PERI_TIMEOUT_INTR_MAP_SPEC> {
         HP_PERI_TIMEOUT_INTR_PASS_IN_SEC_W::new(self, 8)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - need_des"]
     #[inline(always)]
-    pub fn xpd_hp_mem_mask(&mut self) -> XPD_HP_MEM_MASK_W<POWER_PD_HPMEM_MASK_SPEC> {
+    pub fn xpd_hp_mem_mask(&mut self) -> XPD_HP_MEM_MASK_W<'_, POWER_PD_HPMEM_MASK_SPEC> {
         XPD_HP_MEM_MASK_W::new(self, 0)
     }
     #[doc = "Bits 26:31 - need_des"]
     #[inline(always)]
-    pub fn pd_hp_mem_mask(&mut self) -> PD_HP_MEM_MASK_W<POWER_PD_HPMEM_MASK_SPEC> {
+    pub fn pd_hp_mem_mask(&mut self) -> PD_HP_MEM_MASK_W<'_, POWER_PD_HPMEM_MASK_SPEC> {
         PD_HP_MEM_MASK_W::new(self, 26)
     }
 }

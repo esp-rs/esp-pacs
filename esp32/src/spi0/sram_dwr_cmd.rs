@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn cache_sram_usr_wr_cmd_value(
         &mut self,
-    ) -> CACHE_SRAM_USR_WR_CMD_VALUE_W<SRAM_DWR_CMD_SPEC> {
+    ) -> CACHE_SRAM_USR_WR_CMD_VALUE_W<'_, SRAM_DWR_CMD_SPEC> {
         CACHE_SRAM_USR_WR_CMD_VALUE_W::new(self, 0)
     }
     #[doc = "Bits 28:31 - For SPI0 When cache mode is enable it is the in bits of command phase for SRAM. The register value shall be (bit_num-1)."]
     #[inline(always)]
     pub fn cache_sram_usr_wr_cmd_bitlen(
         &mut self,
-    ) -> CACHE_SRAM_USR_WR_CMD_BITLEN_W<SRAM_DWR_CMD_SPEC> {
+    ) -> CACHE_SRAM_USR_WR_CMD_BITLEN_W<'_, SRAM_DWR_CMD_SPEC> {
         CACHE_SRAM_USR_WR_CMD_BITLEN_W::new(self, 28)
     }
 }

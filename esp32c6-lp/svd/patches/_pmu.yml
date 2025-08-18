@@ -1,0 +1,11 @@
+PMU:
+  _delete:
+    - DATE
+
+  _add:
+    DATE:
+      description: PMU version control register
+      addressOffset: 0x3FC
+      size: 0x20
+      access: read-write
+      resetValue: 0x0

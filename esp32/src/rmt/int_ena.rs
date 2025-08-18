@@ -284,196 +284,196 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch_tx_end(&mut self, n: u8) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CH_TX_END_W::new(self, n * 3)
     }
     #[doc = "Bit 0 - Set this bit to enable rmt_ch0_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch0_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 0)
     }
     #[doc = "Bit 3 - Set this bit to enable rmt_ch1_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch1_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 3)
     }
     #[doc = "Bit 6 - Set this bit to enable rmt_ch2_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch2_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 6)
     }
     #[doc = "Bit 9 - Set this bit to enable rmt_ch3_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch3_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 9)
     }
     #[doc = "Bit 12 - Set this bit to enable rmt_ch4_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch4_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch4_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 12)
     }
     #[doc = "Bit 15 - Set this bit to enable rmt_ch5_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch5_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch5_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 15)
     }
     #[doc = "Bit 18 - Set this bit to enable rmt_ch6_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch6_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch6_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 18)
     }
     #[doc = "Bit 21 - Set this bit to enable rmt_ch7_tx_end_int_st."]
     #[inline(always)]
-    pub fn ch7_tx_end(&mut self) -> CH_TX_END_W<INT_ENA_SPEC> {
+    pub fn ch7_tx_end(&mut self) -> CH_TX_END_W<'_, INT_ENA_SPEC> {
         CH_TX_END_W::new(self, 21)
     }
     #[doc = "Set this bit to enable rmt_ch(0-7)_rx_end_int_st."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_RX_END` field.</div>"]
     #[inline(always)]
-    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch_rx_end(&mut self, n: u8) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CH_RX_END_W::new(self, n * 3 + 1)
     }
     #[doc = "Bit 1 - Set this bit to enable rmt_ch0_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch0_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 1)
     }
     #[doc = "Bit 4 - Set this bit to enable rmt_ch1_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch1_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 4)
     }
     #[doc = "Bit 7 - Set this bit to enable rmt_ch2_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch2_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 7)
     }
     #[doc = "Bit 10 - Set this bit to enable rmt_ch3_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch3_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 10)
     }
     #[doc = "Bit 13 - Set this bit to enable rmt_ch4_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch4_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch4_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 13)
     }
     #[doc = "Bit 16 - Set this bit to enable rmt_ch5_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch5_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch5_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 16)
     }
     #[doc = "Bit 19 - Set this bit to enable rmt_ch6_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch6_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch6_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 19)
     }
     #[doc = "Bit 22 - Set this bit to enable rmt_ch7_rx_end_int_st."]
     #[inline(always)]
-    pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<INT_ENA_SPEC> {
+    pub fn ch7_rx_end(&mut self) -> CH_RX_END_W<'_, INT_ENA_SPEC> {
         CH_RX_END_W::new(self, 22)
     }
     #[doc = "Set this bit to enable rmt_ch(0-7)_err_int_st."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_ERR` field.</div>"]
     #[inline(always)]
-    pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch_err(&mut self, n: u8) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CH_ERR_W::new(self, n * 3 + 2)
     }
     #[doc = "Bit 2 - Set this bit to enable rmt_ch0_err_int_st."]
     #[inline(always)]
-    pub fn ch0_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch0_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 2)
     }
     #[doc = "Bit 5 - Set this bit to enable rmt_ch1_err_int_st."]
     #[inline(always)]
-    pub fn ch1_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch1_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 5)
     }
     #[doc = "Bit 8 - Set this bit to enable rmt_ch2_err_int_st."]
     #[inline(always)]
-    pub fn ch2_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch2_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 8)
     }
     #[doc = "Bit 11 - Set this bit to enable rmt_ch3_err_int_st."]
     #[inline(always)]
-    pub fn ch3_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch3_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 11)
     }
     #[doc = "Bit 14 - Set this bit to enable rmt_ch4_err_int_st."]
     #[inline(always)]
-    pub fn ch4_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch4_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 14)
     }
     #[doc = "Bit 17 - Set this bit to enable rmt_ch5_err_int_st."]
     #[inline(always)]
-    pub fn ch5_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch5_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 17)
     }
     #[doc = "Bit 20 - Set this bit to enable rmt_ch6_err_int_st."]
     #[inline(always)]
-    pub fn ch6_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch6_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 20)
     }
     #[doc = "Bit 23 - Set this bit to enable rmt_ch7_err_int_st."]
     #[inline(always)]
-    pub fn ch7_err(&mut self) -> CH_ERR_W<INT_ENA_SPEC> {
+    pub fn ch7_err(&mut self) -> CH_ERR_W<'_, INT_ENA_SPEC> {
         CH_ERR_W::new(self, 23)
     }
     #[doc = "Set this bit to enable rmt_ch(0-7)_tx_thr_event_int_st."]
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `CH0_TX_THR_EVENT` field.</div>"]
     #[inline(always)]
-    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch_tx_thr_event(&mut self, n: u8) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
         CH_TX_THR_EVENT_W::new(self, n + 24)
     }
     #[doc = "Bit 24 - Set this bit to enable rmt_ch0_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch0_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 24)
     }
     #[doc = "Bit 25 - Set this bit to enable rmt_ch1_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch1_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 25)
     }
     #[doc = "Bit 26 - Set this bit to enable rmt_ch2_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch2_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 26)
     }
     #[doc = "Bit 27 - Set this bit to enable rmt_ch3_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch3_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 27)
     }
     #[doc = "Bit 28 - Set this bit to enable rmt_ch4_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch4_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch4_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 28)
     }
     #[doc = "Bit 29 - Set this bit to enable rmt_ch5_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch5_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch5_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 29)
     }
     #[doc = "Bit 30 - Set this bit to enable rmt_ch6_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch6_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch6_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 30)
     }
     #[doc = "Bit 31 - Set this bit to enable rmt_ch7_tx_thr_event_int_st."]
     #[inline(always)]
-    pub fn ch7_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<INT_ENA_SPEC> {
+    pub fn ch7_tx_thr_event(&mut self) -> CH_TX_THR_EVENT_W<'_, INT_ENA_SPEC> {
         CH_TX_THR_EVENT_W::new(self, 31)
     }
 }

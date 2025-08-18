@@ -50,7 +50,7 @@ impl W {
     #[inline(always)]
     pub fn l1_cache_fail_int_clr(
         &mut self,
-    ) -> L1_CACHE_FAIL_INT_CLR_W<L1_CACHE_ACS_FAIL_INT_CLR_SPEC> {
+    ) -> L1_CACHE_FAIL_INT_CLR_W<'_, L1_CACHE_ACS_FAIL_INT_CLR_SPEC> {
         L1_CACHE_FAIL_INT_CLR_W::new(self, 4)
     }
 }

@@ -36,17 +36,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 29 - 0: no operation"]
     #[inline(always)]
-    pub fn core0_reset_cause_clr(&mut self) -> CORE0_RESET_CAUSE_CLR_W<RESET_CAUSE_SPEC> {
+    pub fn core0_reset_cause_clr(&mut self) -> CORE0_RESET_CAUSE_CLR_W<'_, RESET_CAUSE_SPEC> {
         CORE0_RESET_CAUSE_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - configure set reset flag"]
     #[inline(always)]
-    pub fn core0_reset_flag_set(&mut self) -> CORE0_RESET_FLAG_SET_W<RESET_CAUSE_SPEC> {
+    pub fn core0_reset_flag_set(&mut self) -> CORE0_RESET_FLAG_SET_W<'_, RESET_CAUSE_SPEC> {
         CORE0_RESET_FLAG_SET_W::new(self, 30)
     }
     #[doc = "Bit 31 - configure clear reset flag 0: no operation 1: clear flag to 0"]
     #[inline(always)]
-    pub fn core0_reset_flag_clr(&mut self) -> CORE0_RESET_FLAG_CLR_W<RESET_CAUSE_SPEC> {
+    pub fn core0_reset_flag_clr(&mut self) -> CORE0_RESET_FLAG_CLR_W<'_, RESET_CAUSE_SPEC> {
         CORE0_RESET_FLAG_CLR_W::new(self, 31)
     }
 }

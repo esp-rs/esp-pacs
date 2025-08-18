@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configures whether to start calculation of ECC Accelerator. This bit will be self-cleared after the calculation is done. \\\\ 0: No effect\\\\ 1: Start calculation of ECC Accelerator\\\\"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<CONF_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, CONF_SPEC> {
         START_W::new(self, 0)
     }
     #[doc = "Bit 1 - Configures whether to reset ECC Accelerator. \\\\ 0: No effect\\\\ 1: Reset\\\\"]
     #[inline(always)]
-    pub fn reset(&mut self) -> RESET_W<CONF_SPEC> {
+    pub fn reset(&mut self) -> RESET_W<'_, CONF_SPEC> {
         RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Configures the key length mode bit of ECC Accelerator. \\\\ 0: P-192\\\\ 1: P-256\\\\"]
     #[inline(always)]
-    pub fn key_length(&mut self) -> KEY_LENGTH_W<CONF_SPEC> {
+    pub fn key_length(&mut self) -> KEY_LENGTH_W<'_, CONF_SPEC> {
         KEY_LENGTH_W::new(self, 2)
     }
     #[doc = "Bit 3 - Configures the mod base of mod operation, only valid in work_mode 8-11. \\\\ 0: n(order of curve)\\\\ 1: p(mod base of curve)\\\\"]
     #[inline(always)]
-    pub fn mod_base(&mut self) -> MOD_BASE_W<CONF_SPEC> {
+    pub fn mod_base(&mut self) -> MOD_BASE_W<'_, CONF_SPEC> {
         MOD_BASE_W::new(self, 3)
     }
     #[doc = "Bits 4:7 - Configures the work mode of ECC Accelerator.\\\\ 0: Point Multi mode\\\\ 1: Reserved\\\\ 2: Point Verif mode\\\\ 3: Point Verif + Multi mode\\\\ 4: Jacobian Point Multi mode\\\\ 5: Reserved\\\\ 6: Jacobian Point Verif mode\\\\ 7: Point Verif + Jacobian Point Multi mode\\\\ 8: Mod Add mode\\\\ 9. Mod Sub mode\\\\ 10: Mod Multi mode\\\\ 11: Mod Div mode\\\\"]
     #[inline(always)]
-    pub fn work_mode(&mut self) -> WORK_MODE_W<CONF_SPEC> {
+    pub fn work_mode(&mut self) -> WORK_MODE_W<'_, CONF_SPEC> {
         WORK_MODE_W::new(self, 4)
     }
     #[doc = "Bit 8 - Configures the security mode of ECC Accelerator.\\\\ 0: no secure function enabled.\\\\ 1: enable constant-time calculation in all point multiplication modes.\\\\"]
     #[inline(always)]
-    pub fn security_mode(&mut self) -> SECURITY_MODE_W<CONF_SPEC> {
+    pub fn security_mode(&mut self) -> SECURITY_MODE_W<'_, CONF_SPEC> {
         SECURITY_MODE_W::new(self, 8)
     }
     #[doc = "Bit 30 - Configures whether to force on register clock gate. \\\\ 0: No effect\\\\ 1: Force on\\\\"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CONF_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CONF_SPEC> {
         CLK_EN_W::new(self, 30)
     }
     #[doc = "Bit 31 - Configures whether to force on ECC memory clock gate. \\\\ 0: No effect\\\\ 1: Force on\\\\"]
     #[inline(always)]
-    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<CONF_SPEC> {
+    pub fn mem_clock_gate_force_on(&mut self) -> MEM_CLOCK_GATE_FORCE_ON_W<'_, CONF_SPEC> {
         MEM_CLOCK_GATE_FORCE_ON_W::new(self, 31)
     }
 }

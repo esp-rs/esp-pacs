@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - NA"]
     #[inline(always)]
-    pub fn reg_sir_req_payload(&mut self) -> REG_SIR_REQ_PAYLOAD_W<IBI_SIR_REQ_PAYLOAD_SPEC> {
+    pub fn reg_sir_req_payload(&mut self) -> REG_SIR_REQ_PAYLOAD_W<'_, IBI_SIR_REQ_PAYLOAD_SPEC> {
         REG_SIR_REQ_PAYLOAD_W::new(self, 0)
     }
 }

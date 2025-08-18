@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Reserved."]
     #[inline(always)]
-    pub fn rnd_eco_low_48(&mut self) -> RND_ECO_LOW_48_W<ECO_LOW_48_SPEC> {
+    pub fn rnd_eco_low_48(&mut self) -> RND_ECO_LOW_48_W<'_, ECO_LOW_48_SPEC> {
         RND_ECO_LOW_48_W::new(self, 0)
     }
 }

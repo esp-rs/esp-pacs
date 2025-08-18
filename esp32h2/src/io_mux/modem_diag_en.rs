@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - bit i to enable modem_diag\\[i\\] into gpio matrix. 1:enable modem_diag\\[i\\] into gpio matrix. 0:enable other signals into gpio matrix"]
     #[inline(always)]
-    pub fn modem_diag_en(&mut self) -> MODEM_DIAG_EN_W<MODEM_DIAG_EN_SPEC> {
+    pub fn modem_diag_en(&mut self) -> MODEM_DIAG_EN_W<'_, MODEM_DIAG_EN_SPEC> {
         MODEM_DIAG_EN_W::new(self, 0)
     }
 }

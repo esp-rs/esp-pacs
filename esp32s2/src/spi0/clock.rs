@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<CLOCK_SPEC> {
+    pub fn clkcnt_l(&mut self) -> CLKCNT_L_W<'_, CLOCK_SPEC> {
         CLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<CLOCK_SPEC> {
+    pub fn clkcnt_h(&mut self) -> CLKCNT_H_W<'_, CLOCK_SPEC> {
         CLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23"]
     #[inline(always)]
-    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<CLOCK_SPEC> {
+    pub fn clkcnt_n(&mut self) -> CLKCNT_N_W<'_, CLOCK_SPEC> {
         CLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
-    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<CLOCK_SPEC> {
+    pub fn clk_equ_sysclk(&mut self) -> CLK_EQU_SYSCLK_W<'_, CLOCK_SPEC> {
         CLK_EQU_SYSCLK_W::new(self, 31)
     }
 }

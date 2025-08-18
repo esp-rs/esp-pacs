@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - time period for SDA to toggle after SCL goes low"]
     #[inline(always)]
-    pub fn num(&mut self) -> NUM_W<SDA_DUTY_SPEC> {
+    pub fn num(&mut self) -> NUM_W<'_, SDA_DUTY_SPEC> {
         NUM_W::new(self, 0)
     }
 }

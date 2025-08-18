@@ -66,32 +66,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 16:18 - need_des"]
     #[inline(always)]
-    pub fn div_num2(&mut self) -> DIV_NUM2_W<TOUCH_WORK_SPEC> {
+    pub fn div_num2(&mut self) -> DIV_NUM2_W<'_, TOUCH_WORK_SPEC> {
         DIV_NUM2_W::new(self, 16)
     }
     #[doc = "Bits 19:21 - need_des"]
     #[inline(always)]
-    pub fn div_num1(&mut self) -> DIV_NUM1_W<TOUCH_WORK_SPEC> {
+    pub fn div_num1(&mut self) -> DIV_NUM1_W<'_, TOUCH_WORK_SPEC> {
         DIV_NUM1_W::new(self, 19)
     }
     #[doc = "Bits 22:24 - need_des"]
     #[inline(always)]
-    pub fn div_num0(&mut self) -> DIV_NUM0_W<TOUCH_WORK_SPEC> {
+    pub fn div_num0(&mut self) -> DIV_NUM0_W<'_, TOUCH_WORK_SPEC> {
         DIV_NUM0_W::new(self, 22)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<TOUCH_WORK_SPEC> {
+    pub fn touch_out_sel(&mut self) -> TOUCH_OUT_SEL_W<'_, TOUCH_WORK_SPEC> {
         TOUCH_OUT_SEL_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn touch_out_reset(&mut self) -> TOUCH_OUT_RESET_W<TOUCH_WORK_SPEC> {
+    pub fn touch_out_reset(&mut self) -> TOUCH_OUT_RESET_W<'_, TOUCH_WORK_SPEC> {
         TOUCH_OUT_RESET_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn touch_out_gate(&mut self) -> TOUCH_OUT_GATE_W<TOUCH_WORK_SPEC> {
+    pub fn touch_out_gate(&mut self) -> TOUCH_OUT_GATE_W<'_, TOUCH_WORK_SPEC> {
         TOUCH_OUT_GATE_W::new(self, 27)
     }
 }

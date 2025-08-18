@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - This field contains the upper 16 bits Bits\\[47:32\\] of the eighth 6-byte MAC Address."]
     #[inline(always)]
-    pub fn mac_address7_hi(&mut self) -> MAC_ADDRESS7_HI_W<EMACADDR7HIGH_SPEC> {
+    pub fn mac_address7_hi(&mut self) -> MAC_ADDRESS7_HI_W<'_, EMACADDR7HIGH_SPEC> {
         MAC_ADDRESS7_HI_W::new(self, 0)
     }
     #[doc = "Bits 24:29 - These bits are mask control bits for comparison of each of the EMACADDR7 bytes. When set high the MAC does not compare the corresponding byte of received DA or SA with the contents of EMACADDR7 registers. Each bit controls the masking of the bytes as follows: Bit\\[29\\]: EMACADDR7 High \\[15:8\\]. Bit\\[28\\]: EMACADDR7 High \\[7:0\\]. Bit\\[27\\]: EMACADDR7 Low \\[31:24\\]. Bit\\[24\\]: EMACADDR7 Low \\[7:0\\].You can filter a group of addresses (known as group address filtering) by masking one or more bytes of the address."]
     #[inline(always)]
-    pub fn mask_byte_control7(&mut self) -> MASK_BYTE_CONTROL7_W<EMACADDR7HIGH_SPEC> {
+    pub fn mask_byte_control7(&mut self) -> MASK_BYTE_CONTROL7_W<'_, EMACADDR7HIGH_SPEC> {
         MASK_BYTE_CONTROL7_W::new(self, 24)
     }
     #[doc = "Bit 30 - When this bit is set the EMACADDR7\\[47:0\\] is used to compare with the SA fields of the received frame. When this bit is reset the EMACADDR7\\[47:0\\] is used to compare with the DA fields of the received frame."]
     #[inline(always)]
-    pub fn source_address7(&mut self) -> SOURCE_ADDRESS7_W<EMACADDR7HIGH_SPEC> {
+    pub fn source_address7(&mut self) -> SOURCE_ADDRESS7_W<'_, EMACADDR7HIGH_SPEC> {
         SOURCE_ADDRESS7_W::new(self, 30)
     }
     #[doc = "Bit 31 - When this bit is set the address filter module uses the eighth MAC address for perfect filtering. When this bit is reset the address filter module ignores the address for filtering."]
     #[inline(always)]
-    pub fn address_enable7(&mut self) -> ADDRESS_ENABLE7_W<EMACADDR7HIGH_SPEC> {
+    pub fn address_enable7(&mut self) -> ADDRESS_ENABLE7_W<'_, EMACADDR7HIGH_SPEC> {
         ADDRESS_ENABLE7_W::new(self, 31)
     }
 }

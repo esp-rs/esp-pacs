@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The value of dwDTERate set by software which is requested by GET_LINE_CODING command."]
     #[inline(always)]
-    pub fn get_dw_dte_rate(&mut self) -> GET_DW_DTE_RATE_W<GET_LINE_CODE_W0_SPEC> {
+    pub fn get_dw_dte_rate(&mut self) -> GET_DW_DTE_RATE_W<'_, GET_LINE_CODE_W0_SPEC> {
         GET_DW_DTE_RATE_W::new(self, 0)
     }
 }

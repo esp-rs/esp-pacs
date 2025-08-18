@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Set this bit as 1 to enable L1-DCache wrap around mode."]
     #[inline(always)]
-    pub fn cache_wrap(&mut self) -> CACHE_WRAP_W<CACHE_WRAP_AROUND_CTRL_SPEC> {
+    pub fn cache_wrap(&mut self) -> CACHE_WRAP_W<'_, CACHE_WRAP_AROUND_CTRL_SPEC> {
         CACHE_WRAP_W::new(self, 4)
     }
 }

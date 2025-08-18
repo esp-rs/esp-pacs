@@ -30,22 +30,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn slc0_token1_wdata(&mut self) -> SLC0_TOKEN1_WDATA_W<_0TOKEN1_SPEC> {
+    pub fn slc0_token1_wdata(&mut self) -> SLC0_TOKEN1_WDATA_W<'_, _0TOKEN1_SPEC> {
         SLC0_TOKEN1_WDATA_W::new(self, 0)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn slc0_token1_wr(&mut self) -> SLC0_TOKEN1_WR_W<_0TOKEN1_SPEC> {
+    pub fn slc0_token1_wr(&mut self) -> SLC0_TOKEN1_WR_W<'_, _0TOKEN1_SPEC> {
         SLC0_TOKEN1_WR_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn slc0_token1_inc(&mut self) -> SLC0_TOKEN1_INC_W<_0TOKEN1_SPEC> {
+    pub fn slc0_token1_inc(&mut self) -> SLC0_TOKEN1_INC_W<'_, _0TOKEN1_SPEC> {
         SLC0_TOKEN1_INC_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
-    pub fn slc0_token1_inc_more(&mut self) -> SLC0_TOKEN1_INC_MORE_W<_0TOKEN1_SPEC> {
+    pub fn slc0_token1_inc_more(&mut self) -> SLC0_TOKEN1_INC_MORE_W<'_, _0TOKEN1_SPEC> {
         SLC0_TOKEN1_INC_MORE_W::new(self, 14)
     }
 }

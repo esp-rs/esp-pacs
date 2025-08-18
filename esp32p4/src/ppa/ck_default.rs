@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - default B channle value of color key"]
     #[inline(always)]
-    pub fn colorkey_default_b(&mut self) -> COLORKEY_DEFAULT_B_W<CK_DEFAULT_SPEC> {
+    pub fn colorkey_default_b(&mut self) -> COLORKEY_DEFAULT_B_W<'_, CK_DEFAULT_SPEC> {
         COLORKEY_DEFAULT_B_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - default G channle value of color key"]
     #[inline(always)]
-    pub fn colorkey_default_g(&mut self) -> COLORKEY_DEFAULT_G_W<CK_DEFAULT_SPEC> {
+    pub fn colorkey_default_g(&mut self) -> COLORKEY_DEFAULT_G_W<'_, CK_DEFAULT_SPEC> {
         COLORKEY_DEFAULT_G_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - default R channle value of color key"]
     #[inline(always)]
-    pub fn colorkey_default_r(&mut self) -> COLORKEY_DEFAULT_R_W<CK_DEFAULT_SPEC> {
+    pub fn colorkey_default_r(&mut self) -> COLORKEY_DEFAULT_R_W<'_, CK_DEFAULT_SPEC> {
         COLORKEY_DEFAULT_R_W::new(self, 16)
     }
     #[doc = "Bit 24 - when pixel in bg ck range but not in fg ck range, 0: the result is bg, 1: the result is fg"]
     #[inline(always)]
-    pub fn colorkey_fg_bg_reverse(&mut self) -> COLORKEY_FG_BG_REVERSE_W<CK_DEFAULT_SPEC> {
+    pub fn colorkey_fg_bg_reverse(&mut self) -> COLORKEY_FG_BG_REVERSE_W<'_, CK_DEFAULT_SPEC> {
         COLORKEY_FG_BG_REVERSE_W::new(self, 24)
     }
 }

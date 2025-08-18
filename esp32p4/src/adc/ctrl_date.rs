@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:30 - need_des"]
     #[inline(always)]
-    pub fn ctrl_date(&mut self) -> CTRL_DATE_W<CTRL_DATE_SPEC> {
+    pub fn ctrl_date(&mut self) -> CTRL_DATE_W<'_, CTRL_DATE_SPEC> {
         CTRL_DATE_W::new(self, 0)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn clk_en(&mut self) -> CLK_EN_W<CTRL_DATE_SPEC> {
+    pub fn clk_en(&mut self) -> CLK_EN_W<'_, CTRL_DATE_SPEC> {
         CLK_EN_W::new(self, 31)
     }
 }

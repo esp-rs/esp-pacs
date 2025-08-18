@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<SET_RESULT_FINISH_SPEC> {
 impl W {
     #[doc = "Bit 0 - After read result from upstream, then let hmac back to idle."]
     #[inline(always)]
-    pub fn set_result_end(&mut self) -> SET_RESULT_END_W<SET_RESULT_FINISH_SPEC> {
+    pub fn set_result_end(&mut self) -> SET_RESULT_END_W<'_, SET_RESULT_FINISH_SPEC> {
         SET_RESULT_END_W::new(self, 0)
     }
 }

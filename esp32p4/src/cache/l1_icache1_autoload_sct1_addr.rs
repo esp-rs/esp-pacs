@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn l1_icache1_autoload_sct1_addr(
         &mut self,
-    ) -> L1_ICACHE1_AUTOLOAD_SCT1_ADDR_W<L1_ICACHE1_AUTOLOAD_SCT1_ADDR_SPEC> {
+    ) -> L1_ICACHE1_AUTOLOAD_SCT1_ADDR_W<'_, L1_ICACHE1_AUTOLOAD_SCT1_ADDR_SPEC> {
         L1_ICACHE1_AUTOLOAD_SCT1_ADDR_W::new(self, 0)
     }
 }

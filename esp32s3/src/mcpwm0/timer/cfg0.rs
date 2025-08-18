@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - period of PT0_clk = Period of PWM_clk * (PWM_TIMER0_PRESCALE + 1)"]
     #[inline(always)]
-    pub fn prescale(&mut self) -> PRESCALE_W<CFG0_SPEC> {
+    pub fn prescale(&mut self) -> PRESCALE_W<'_, CFG0_SPEC> {
         PRESCALE_W::new(self, 0)
     }
     #[doc = "Bits 8:23 - period shadow register of PWM timer0"]
     #[inline(always)]
-    pub fn period(&mut self) -> PERIOD_W<CFG0_SPEC> {
+    pub fn period(&mut self) -> PERIOD_W<'_, CFG0_SPEC> {
         PERIOD_W::new(self, 8)
     }
     #[doc = "Bits 24:25 - Update method for active register of PWM timer0 period, 0: immediate, 1: TEZ, 2: sync, 3: TEZ | sync. TEZ here and below means timer equal zero event"]
     #[inline(always)]
-    pub fn period_upmethod(&mut self) -> PERIOD_UPMETHOD_W<CFG0_SPEC> {
+    pub fn period_upmethod(&mut self) -> PERIOD_UPMETHOD_W<'_, CFG0_SPEC> {
         PERIOD_UPMETHOD_W::new(self, 24)
     }
 }

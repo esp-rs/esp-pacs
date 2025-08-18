@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Need add desc"]
     #[inline(always)]
-    pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<OPTION1_SPEC> {
+    pub fn force_download_boot(&mut self) -> FORCE_DOWNLOAD_BOOT_W<'_, OPTION1_SPEC> {
         FORCE_DOWNLOAD_BOOT_W::new(self, 0)
     }
 }

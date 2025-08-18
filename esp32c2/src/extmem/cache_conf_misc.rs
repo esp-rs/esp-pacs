@@ -62,24 +62,24 @@ impl W {
     #[inline(always)]
     pub fn cache_ignore_preload_mmu_entry_fault(
         &mut self,
-    ) -> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+    ) -> CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'_, CACHE_CONF_MISC_SPEC> {
         CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
     pub fn cache_ignore_sync_mmu_entry_fault(
         &mut self,
-    ) -> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+    ) -> CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'_, CACHE_CONF_MISC_SPEC> {
         CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self, 1)
     }
     #[doc = "Bit 2 - The bit is used to enable cache trace function."]
     #[inline(always)]
-    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<CACHE_CONF_MISC_SPEC> {
+    pub fn cache_trace_ena(&mut self) -> CACHE_TRACE_ENA_W<'_, CACHE_CONF_MISC_SPEC> {
         CACHE_TRACE_ENA_W::new(self, 2)
     }
     #[doc = "Bits 3:4 - This bit is used to choose mmu page size. 2:64KB. 1. 32KB. 0: 16KB"]
     #[inline(always)]
-    pub fn cache_mmu_page_size(&mut self) -> CACHE_MMU_PAGE_SIZE_W<CACHE_CONF_MISC_SPEC> {
+    pub fn cache_mmu_page_size(&mut self) -> CACHE_MMU_PAGE_SIZE_W<'_, CACHE_CONF_MISC_SPEC> {
         CACHE_MMU_PAGE_SIZE_W::new(self, 3)
     }
 }

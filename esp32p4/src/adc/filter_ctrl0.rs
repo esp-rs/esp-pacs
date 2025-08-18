@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 14:18 - need_des"]
     #[inline(always)]
-    pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<FILTER_CTRL0_SPEC> {
+    pub fn filter_channel1(&mut self) -> FILTER_CHANNEL1_W<'_, FILTER_CTRL0_SPEC> {
         FILTER_CHANNEL1_W::new(self, 14)
     }
     #[doc = "Bits 19:23 - apb_adc1_filter_factor"]
     #[inline(always)]
-    pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<FILTER_CTRL0_SPEC> {
+    pub fn filter_channel0(&mut self) -> FILTER_CHANNEL0_W<'_, FILTER_CTRL0_SPEC> {
         FILTER_CHANNEL0_W::new(self, 19)
     }
     #[doc = "Bit 31 - enable apb_adc1_filter"]
     #[inline(always)]
-    pub fn filter_reset(&mut self) -> FILTER_RESET_W<FILTER_CTRL0_SPEC> {
+    pub fn filter_reset(&mut self) -> FILTER_RESET_W<'_, FILTER_CTRL0_SPEC> {
         FILTER_RESET_W::new(self, 31)
     }
 }

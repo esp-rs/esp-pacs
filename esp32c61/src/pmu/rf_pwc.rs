@@ -94,42 +94,42 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn xpd_tc5g_i2c(&mut self) -> XPD_TC5G_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_tc5g_i2c(&mut self) -> XPD_TC5G_I2C_W<'_, RF_PWC_SPEC> {
         XPD_TC5G_I2C_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn xpd_rx5g_i2c(&mut self) -> XPD_RX5G_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_rx5g_i2c(&mut self) -> XPD_RX5G_I2C_W<'_, RF_PWC_SPEC> {
         XPD_RX5G_I2C_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
-    pub fn perif_i2c_rstb(&mut self) -> PERIF_I2C_RSTB_W<RF_PWC_SPEC> {
+    pub fn perif_i2c_rstb(&mut self) -> PERIF_I2C_RSTB_W<'_, RF_PWC_SPEC> {
         PERIF_I2C_RSTB_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
-    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_perif_i2c(&mut self) -> XPD_PERIF_I2C_W<'_, RF_PWC_SPEC> {
         XPD_PERIF_I2C_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
-    pub fn xpd_txrf_i2c(&mut self) -> XPD_TXRF_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_txrf_i2c(&mut self) -> XPD_TXRF_I2C_W<'_, RF_PWC_SPEC> {
         XPD_TXRF_I2C_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
-    pub fn xpd_rfrx_pbus(&mut self) -> XPD_RFRX_PBUS_W<RF_PWC_SPEC> {
+    pub fn xpd_rfrx_pbus(&mut self) -> XPD_RFRX_PBUS_W<'_, RF_PWC_SPEC> {
         XPD_RFRX_PBUS_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn xpd_ckgen_i2c(&mut self) -> XPD_CKGEN_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_ckgen_i2c(&mut self) -> XPD_CKGEN_I2C_W<'_, RF_PWC_SPEC> {
         XPD_CKGEN_I2C_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn xpd_pll_i2c(&mut self) -> XPD_PLL_I2C_W<RF_PWC_SPEC> {
+    pub fn xpd_pll_i2c(&mut self) -> XPD_PLL_I2C_W<'_, RF_PWC_SPEC> {
         XPD_PLL_I2C_W::new(self, 31)
     }
 }

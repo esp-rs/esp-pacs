@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn pro_dcache_memsync_size(
         &mut self,
-    ) -> PRO_DCACHE_MEMSYNC_SIZE_W<PRO_DCACHE_MEM_SYNC1_SPEC> {
+    ) -> PRO_DCACHE_MEMSYNC_SIZE_W<'_, PRO_DCACHE_MEM_SYNC1_SPEC> {
         PRO_DCACHE_MEMSYNC_SIZE_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn appcpu_runstall(&mut self) -> APPCPU_RUNSTALL_W<APPCPU_CTRL_C_SPEC> {
+    pub fn appcpu_runstall(&mut self) -> APPCPU_RUNSTALL_W<'_, APPCPU_CTRL_C_SPEC> {
         APPCPU_RUNSTALL_W::new(self, 0)
     }
 }

@@ -109,49 +109,49 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_lpcore_reset_cause_pmu_lp_cpu_mask(
         &mut self,
-    ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_LPCORE_RESET_CAUSE_PMU_LP_CPU_MASK_W::new(self, 25)
     }
     #[doc = "Bit 26 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_lpcore_reset_cause_clr(
         &mut self,
-    ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_LPCORE_RESET_CAUSE_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_LPCORE_RESET_CAUSE_CLR_W::new(self, 26)
     }
     #[doc = "Bit 27 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_lpcore_reset_flag_clr(
         &mut self,
-    ) -> LP_AONCLKRST_LPCORE_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_LPCORE_RESET_FLAG_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_LPCORE_RESET_FLAG_CLR_W::new(self, 27)
     }
     #[doc = "Bit 28 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore0_reset_cause_clr(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE0_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE0_RESET_CAUSE_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_HPCORE0_RESET_CAUSE_CLR_W::new(self, 28)
     }
     #[doc = "Bit 29 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore0_reset_flag_clr(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE0_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE0_RESET_FLAG_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_HPCORE0_RESET_FLAG_CLR_W::new(self, 29)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore1_reset_cause_clr(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE1_RESET_CAUSE_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE1_RESET_CAUSE_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_HPCORE1_RESET_CAUSE_CLR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
     pub fn lp_aonclkrst_hpcore1_reset_flag_clr(
         &mut self,
-    ) -> LP_AONCLKRST_HPCORE1_RESET_FLAG_CLR_W<LP_AONCLKRST_RESET_CAUSE_SPEC> {
+    ) -> LP_AONCLKRST_HPCORE1_RESET_FLAG_CLR_W<'_, LP_AONCLKRST_RESET_CAUSE_SPEC> {
         LP_AONCLKRST_HPCORE1_RESET_FLAG_CLR_W::new(self, 31)
     }
 }

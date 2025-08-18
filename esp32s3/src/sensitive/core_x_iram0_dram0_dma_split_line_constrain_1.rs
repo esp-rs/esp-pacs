@@ -134,64 +134,80 @@ impl W {
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_0(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_0_W::new(self, 0)
     }
     #[doc = "Bits 2:3 - category1 of core_x_iram0_dram_dma_line, if the splitaddress in block1 of SRAM, configured as 0x10, else if the splitaddress below block1 of SRAM, configured as 0x11, else if splitaddress higher than block1 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_1(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_1_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - category2 of core_x_iram0_dram_dma_line, if the splitaddress in block2 of SRAM, configured as 0x10, else if the splitaddress below block2 of SRAM, configured as 0x11, else if splitaddress higher than block2 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_2(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_2_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - category3 of core_x_iram0_dram_dma_line, if the splitaddress in block3 of SRAM, configured as 0x10, else if the splitaddress below block3 of SRAM, configured as 0x11, else if splitaddress higher than block3 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_3(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_3_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - category4 of core_x_iram0_dram_dma_line, if the splitaddress in block4 of SRAM, configured as 0x10, else if the splitaddress below block4 of SRAM, configured as 0x11, else if splitaddress higher than block4 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_4(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_4_W::new(self, 8)
     }
     #[doc = "Bits 10:11 - category5 of core_x_iram0_dram_dma_line, if the splitaddress in block5 of SRAM, configured as 0x10, else if the splitaddress below block5 of SRAM, configured as 0x11, else if splitaddress higher than block5 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_5(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_5_W::new(self, 10)
     }
     #[doc = "Bits 12:13 - category6 of core_x_iram0_dram_dma_line, if the splitaddress in block6 of SRAM, configured as 0x10, else if the splitaddress below block6 of SRAM, configured as 0x11, else if splitaddress higher than block6 of SRAM, configured as 0x00"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_category_6(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_CATEGORY_6_W::new(self, 12)
     }
     #[doc = "Bits 14:21 - splitaddr of core_x_iram0_dram_dma_line, configured as \\[15:8\\]bit of actual address"]
     #[inline(always)]
     pub fn core_x_iram0_dram0_dma_sram_splitaddr(
         &mut self,
-    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W<CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC>
-    {
+    ) -> CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W<
+        '_,
+        CORE_X_IRAM0_DRAM0_DMA_SPLIT_LINE_CONSTRAIN_1_SPEC,
+    > {
         CORE_X_IRAM0_DRAM0_DMA_SRAM_SPLITADDR_W::new(self, 14)
     }
 }

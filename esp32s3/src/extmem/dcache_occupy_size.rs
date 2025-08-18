@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The bits are used to configure the length for occupy operation. The bits are the counts of cache block. It should be combined with DCACHE_OCCUPY_ADDR_REG."]
     #[inline(always)]
-    pub fn dcache_occupy_size(&mut self) -> DCACHE_OCCUPY_SIZE_W<DCACHE_OCCUPY_SIZE_SPEC> {
+    pub fn dcache_occupy_size(&mut self) -> DCACHE_OCCUPY_SIZE_W<'_, DCACHE_OCCUPY_SIZE_SPEC> {
         DCACHE_OCCUPY_SIZE_W::new(self, 0)
     }
 }

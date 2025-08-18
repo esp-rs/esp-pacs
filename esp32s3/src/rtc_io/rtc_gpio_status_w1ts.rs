@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn rtc_gpio_status_int_w1ts(
         &mut self,
-    ) -> RTC_GPIO_STATUS_INT_W1TS_W<RTC_GPIO_STATUS_W1TS_SPEC> {
+    ) -> RTC_GPIO_STATUS_INT_W1TS_W<'_, RTC_GPIO_STATUS_W1TS_SPEC> {
         RTC_GPIO_STATUS_INT_W1TS_W::new(self, 10)
     }
 }

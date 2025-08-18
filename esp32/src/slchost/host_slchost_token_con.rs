@@ -29,61 +29,63 @@ impl W {
     #[inline(always)]
     pub fn host_slc0host_token0_dec(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN0_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN0_DEC_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_TOKEN0_DEC_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn host_slc0host_token1_dec(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN1_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN1_DEC_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_TOKEN1_DEC_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     pub fn host_slc0host_token0_wr(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN0_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN0_WR_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_TOKEN0_WR_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     pub fn host_slc0host_token1_wr(
         &mut self,
-    ) -> HOST_SLC0HOST_TOKEN1_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC0HOST_TOKEN1_WR_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_TOKEN1_WR_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     pub fn host_slc1host_token0_dec(
         &mut self,
-    ) -> HOST_SLC1HOST_TOKEN0_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC1HOST_TOKEN0_DEC_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC1HOST_TOKEN0_DEC_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     pub fn host_slc1host_token1_dec(
         &mut self,
-    ) -> HOST_SLC1HOST_TOKEN1_DEC_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC1HOST_TOKEN1_DEC_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC1HOST_TOKEN1_DEC_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     pub fn host_slc1host_token0_wr(
         &mut self,
-    ) -> HOST_SLC1HOST_TOKEN0_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC1HOST_TOKEN0_WR_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC1HOST_TOKEN0_WR_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     pub fn host_slc1host_token1_wr(
         &mut self,
-    ) -> HOST_SLC1HOST_TOKEN1_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    ) -> HOST_SLC1HOST_TOKEN1_WR_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC1HOST_TOKEN1_WR_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
-    pub fn host_slc0host_len_wr(&mut self) -> HOST_SLC0HOST_LEN_WR_W<HOST_SLCHOST_TOKEN_CON_SPEC> {
+    pub fn host_slc0host_len_wr(
+        &mut self,
+    ) -> HOST_SLC0HOST_LEN_WR_W<'_, HOST_SLCHOST_TOKEN_CON_SPEC> {
         HOST_SLC0HOST_LEN_WR_W::new(self, 8)
     }
 }

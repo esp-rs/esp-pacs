@@ -42,14 +42,14 @@ impl W {
     #[inline(always)]
     pub fn modem_peri_timeout_intr_map(
         &mut self,
-    ) -> MODEM_PERI_TIMEOUT_INTR_MAP_W<MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {
+    ) -> MODEM_PERI_TIMEOUT_INTR_MAP_W<'_, MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {
         MODEM_PERI_TIMEOUT_INTR_MAP_W::new(self, 0)
     }
     #[doc = "Bit 8 - Configures the PASS_IN_SEC flag of the interrupt source."]
     #[inline(always)]
     pub fn modem_peri_timeout_intr_pass_in_sec(
         &mut self,
-    ) -> MODEM_PERI_TIMEOUT_INTR_PASS_IN_SEC_W<MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {
+    ) -> MODEM_PERI_TIMEOUT_INTR_PASS_IN_SEC_W<'_, MODEM_PERI_TIMEOUT_INTR_MAP_SPEC> {
         MODEM_PERI_TIMEOUT_INTR_PASS_IN_SEC_W::new(self, 8)
     }
 }

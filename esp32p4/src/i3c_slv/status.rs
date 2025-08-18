@@ -154,32 +154,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn start(&mut self) -> START_W<STATUS_SPEC> {
+    pub fn start(&mut self) -> START_W<'_, STATUS_SPEC> {
         START_W::new(self, 8)
     }
     #[doc = "Bit 9 - NA"]
     #[inline(always)]
-    pub fn matched(&mut self) -> MATCHED_W<STATUS_SPEC> {
+    pub fn matched(&mut self) -> MATCHED_W<'_, STATUS_SPEC> {
         MATCHED_W::new(self, 9)
     }
     #[doc = "Bit 10 - NA"]
     #[inline(always)]
-    pub fn stop(&mut self) -> STOP_W<STATUS_SPEC> {
+    pub fn stop(&mut self) -> STOP_W<'_, STATUS_SPEC> {
         STOP_W::new(self, 10)
     }
     #[doc = "Bit 13 - The Slv Dynamic Address has been assigned, reassigned, or reset(lost) and is now in that state of being valid or none. Actual DA can be seen in the DYNADDR register. Note that this will also be used when MAP Auto feature is configured. This will be changing one or more MAP items. See DYNADDR and/or MAPCTRLn. DYNAADDR for the main DA(0) will indicate if last change was due to Auto MAP."]
     #[inline(always)]
-    pub fn dachg(&mut self) -> DACHG_W<STATUS_SPEC> {
+    pub fn dachg(&mut self) -> DACHG_W<'_, STATUS_SPEC> {
         DACHG_W::new(self, 13)
     }
     #[doc = "Bit 14 - A common -command-code(CCC), not handled by block, has been received. This acts differently between: *Broadcasted ones, which will then also correspond with RXPEND and the 1st byte will be the CCC(command) . *Direct ones, which may never be directed to this device. If it is, then the TXSEND or RXPEND will be triggered with this end the RXPEND will contain the command."]
     #[inline(always)]
-    pub fn ccc(&mut self) -> CCC_W<STATUS_SPEC> {
+    pub fn ccc(&mut self) -> CCC_W<'_, STATUS_SPEC> {
         CCC_W::new(self, 14)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn hdrmatch(&mut self) -> HDRMATCH_W<STATUS_SPEC> {
+    pub fn hdrmatch(&mut self) -> HDRMATCH_W<'_, STATUS_SPEC> {
         HDRMATCH_W::new(self, 16)
     }
 }

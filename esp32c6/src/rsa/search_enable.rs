@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configure this bit to 1 for acceleration. 1: with acceleration, 0: without acceleration(default). This option should be used together with RSA_SEARCH_POS."]
     #[inline(always)]
-    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC> {
+    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<'_, SEARCH_ENABLE_SPEC> {
         SEARCH_ENABLE_W::new(self, 0)
     }
 }

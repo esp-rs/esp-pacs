@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn rx_eof_num(&mut self) -> RX_EOF_NUM_W<RXEOF_NUM_SPEC> {
+    pub fn rx_eof_num(&mut self) -> RX_EOF_NUM_W<'_, RXEOF_NUM_SPEC> {
         RX_EOF_NUM_W::new(self, 0)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit is used to mask NMI interrupt,it can directly mask NMI interrupt"]
     #[inline(always)]
-    pub fn nmi_mask(&mut self) -> NMI_MASK_W<NMI_MASK_SPEC> {
+    pub fn nmi_mask(&mut self) -> NMI_MASK_W<'_, NMI_MASK_SPEC> {
         NMI_MASK_W::new(self, 0)
     }
 }

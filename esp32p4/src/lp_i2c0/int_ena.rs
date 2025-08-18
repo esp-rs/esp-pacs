@@ -174,82 +174,82 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write 1 to anable I2C_RXFIFO_WM_INT interrupt."]
     #[inline(always)]
-    pub fn rxfifo_wm(&mut self) -> RXFIFO_WM_W<INT_ENA_SPEC> {
+    pub fn rxfifo_wm(&mut self) -> RXFIFO_WM_W<'_, INT_ENA_SPEC> {
         RXFIFO_WM_W::new(self, 0)
     }
     #[doc = "Bit 1 - Write 1 to anable I2C_TXFIFO_WM_INT interrupt."]
     #[inline(always)]
-    pub fn txfifo_wm(&mut self) -> TXFIFO_WM_W<INT_ENA_SPEC> {
+    pub fn txfifo_wm(&mut self) -> TXFIFO_WM_W<'_, INT_ENA_SPEC> {
         TXFIFO_WM_W::new(self, 1)
     }
     #[doc = "Bit 2 - Write 1 to anable I2C_RXFIFO_OVF_INT interrupt."]
     #[inline(always)]
-    pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<INT_ENA_SPEC> {
+    pub fn rxfifo_ovf(&mut self) -> RXFIFO_OVF_W<'_, INT_ENA_SPEC> {
         RXFIFO_OVF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to anable the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
-    pub fn end_detect(&mut self) -> END_DETECT_W<INT_ENA_SPEC> {
+    pub fn end_detect(&mut self) -> END_DETECT_W<'_, INT_ENA_SPEC> {
         END_DETECT_W::new(self, 3)
     }
     #[doc = "Bit 4 - Write 1 to anable the I2C_END_DETECT_INT interrupt."]
     #[inline(always)]
-    pub fn byte_trans_done(&mut self) -> BYTE_TRANS_DONE_W<INT_ENA_SPEC> {
+    pub fn byte_trans_done(&mut self) -> BYTE_TRANS_DONE_W<'_, INT_ENA_SPEC> {
         BYTE_TRANS_DONE_W::new(self, 4)
     }
     #[doc = "Bit 5 - Write 1 to anable the I2C_ARBITRATION_LOST_INT interrupt."]
     #[inline(always)]
-    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<INT_ENA_SPEC> {
+    pub fn arbitration_lost(&mut self) -> ARBITRATION_LOST_W<'_, INT_ENA_SPEC> {
         ARBITRATION_LOST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Write 1 to anable I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
-    pub fn mst_txfifo_udf(&mut self) -> MST_TXFIFO_UDF_W<INT_ENA_SPEC> {
+    pub fn mst_txfifo_udf(&mut self) -> MST_TXFIFO_UDF_W<'_, INT_ENA_SPEC> {
         MST_TXFIFO_UDF_W::new(self, 6)
     }
     #[doc = "Bit 7 - Write 1 to anable the I2C_TRANS_COMPLETE_INT interrupt."]
     #[inline(always)]
-    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INT_ENA_SPEC> {
+    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<'_, INT_ENA_SPEC> {
         TRANS_COMPLETE_W::new(self, 7)
     }
     #[doc = "Bit 8 - Write 1 to anable the I2C_TIME_OUT_INT interrupt."]
     #[inline(always)]
-    pub fn time_out(&mut self) -> TIME_OUT_W<INT_ENA_SPEC> {
+    pub fn time_out(&mut self) -> TIME_OUT_W<'_, INT_ENA_SPEC> {
         TIME_OUT_W::new(self, 8)
     }
     #[doc = "Bit 9 - Write 1 to anable the I2C_TRANS_START_INT interrupt."]
     #[inline(always)]
-    pub fn trans_start(&mut self) -> TRANS_START_W<INT_ENA_SPEC> {
+    pub fn trans_start(&mut self) -> TRANS_START_W<'_, INT_ENA_SPEC> {
         TRANS_START_W::new(self, 9)
     }
     #[doc = "Bit 10 - Write 1 to anable I2C_SLAVE_STRETCH_INT interrupt."]
     #[inline(always)]
-    pub fn nack(&mut self) -> NACK_W<INT_ENA_SPEC> {
+    pub fn nack(&mut self) -> NACK_W<'_, INT_ENA_SPEC> {
         NACK_W::new(self, 10)
     }
     #[doc = "Bit 11 - Write 1 to anable I2C_TXFIFO_OVF_INT interrupt."]
     #[inline(always)]
-    pub fn txfifo_ovf(&mut self) -> TXFIFO_OVF_W<INT_ENA_SPEC> {
+    pub fn txfifo_ovf(&mut self) -> TXFIFO_OVF_W<'_, INT_ENA_SPEC> {
         TXFIFO_OVF_W::new(self, 11)
     }
     #[doc = "Bit 12 - Write 1 to anable I2C_RXFIFO_UDF_INT interrupt."]
     #[inline(always)]
-    pub fn rxfifo_udf(&mut self) -> RXFIFO_UDF_W<INT_ENA_SPEC> {
+    pub fn rxfifo_udf(&mut self) -> RXFIFO_UDF_W<'_, INT_ENA_SPEC> {
         RXFIFO_UDF_W::new(self, 12)
     }
     #[doc = "Bit 13 - Write 1 to anable I2C_SCL_ST_TO_INT interrupt."]
     #[inline(always)]
-    pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<INT_ENA_SPEC> {
+    pub fn scl_st_to(&mut self) -> SCL_ST_TO_W<'_, INT_ENA_SPEC> {
         SCL_ST_TO_W::new(self, 13)
     }
     #[doc = "Bit 14 - Write 1 to anable I2C_SCL_MAIN_ST_TO_INT interrupt."]
     #[inline(always)]
-    pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<INT_ENA_SPEC> {
+    pub fn scl_main_st_to(&mut self) -> SCL_MAIN_ST_TO_W<'_, INT_ENA_SPEC> {
         SCL_MAIN_ST_TO_W::new(self, 14)
     }
     #[doc = "Bit 15 - Write 1 to anable I2C_DET_START_INT interrupt."]
     #[inline(always)]
-    pub fn det_start(&mut self) -> DET_START_W<INT_ENA_SPEC> {
+    pub fn det_start(&mut self) -> DET_START_W<'_, INT_ENA_SPEC> {
         DET_START_W::new(self, 15)
     }
 }

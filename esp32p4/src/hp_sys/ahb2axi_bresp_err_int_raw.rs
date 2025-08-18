@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn cpu_icm_h2x_bresp_err_int_raw(
         &mut self,
-    ) -> CPU_ICM_H2X_BRESP_ERR_INT_RAW_W<AHB2AXI_BRESP_ERR_INT_RAW_SPEC> {
+    ) -> CPU_ICM_H2X_BRESP_ERR_INT_RAW_W<'_, AHB2AXI_BRESP_ERR_INT_RAW_SPEC> {
         CPU_ICM_H2X_BRESP_ERR_INT_RAW_W::new(self, 0)
     }
 }

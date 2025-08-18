@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit is used to confirm world before enter entry 1"]
     #[inline(always)]
-    pub fn from_world(&mut self) -> FROM_WORLD_W<STATUSTABLE_SPEC> {
+    pub fn from_world(&mut self) -> FROM_WORLD_W<'_, STATUSTABLE_SPEC> {
         FROM_WORLD_W::new(self, 0)
     }
     #[doc = "Bits 1:4 - This filed is used to confirm in which entry before enter entry 1"]
     #[inline(always)]
-    pub fn from_entry(&mut self) -> FROM_ENTRY_W<STATUSTABLE_SPEC> {
+    pub fn from_entry(&mut self) -> FROM_ENTRY_W<'_, STATUSTABLE_SPEC> {
         FROM_ENTRY_W::new(self, 1)
     }
     #[doc = "Bit 5 - This bit is used to confirm whether the current state is in entry 1"]
     #[inline(always)]
-    pub fn current(&mut self) -> CURRENT_W<STATUSTABLE_SPEC> {
+    pub fn current(&mut self) -> CURRENT_W<'_, STATUSTABLE_SPEC> {
         CURRENT_W::new(self, 5)
     }
 }

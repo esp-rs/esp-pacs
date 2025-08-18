@@ -98,12 +98,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 16 - The bit is used to enable config-bus read L1-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    pub fn cache_tag_mem_rd_en(&mut self) -> CACHE_TAG_MEM_RD_EN_W<CACHE_TAG_MEM_ACS_CONF_SPEC> {
+    pub fn cache_tag_mem_rd_en(
+        &mut self,
+    ) -> CACHE_TAG_MEM_RD_EN_W<'_, CACHE_TAG_MEM_ACS_CONF_SPEC> {
         CACHE_TAG_MEM_RD_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - The bit is used to enable config-bus write L1-Cache tag memoryory. 0: disable, 1: enable."]
     #[inline(always)]
-    pub fn cache_tag_mem_wr_en(&mut self) -> CACHE_TAG_MEM_WR_EN_W<CACHE_TAG_MEM_ACS_CONF_SPEC> {
+    pub fn cache_tag_mem_wr_en(
+        &mut self,
+    ) -> CACHE_TAG_MEM_WR_EN_W<'_, CACHE_TAG_MEM_ACS_CONF_SPEC> {
         CACHE_TAG_MEM_WR_EN_W::new(self, 17)
     }
 }

@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 24 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_xpd_trx(&mut self) -> HP_MODEM_XPD_TRX_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_xpd_trx(&mut self) -> HP_MODEM_XPD_TRX_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_XPD_TRX_W::new(self, 24)
     }
     #[doc = "Bit 25 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_xpd_bias(&mut self) -> HP_MODEM_XPD_BIAS_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_xpd_bias(&mut self) -> HP_MODEM_XPD_BIAS_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_XPD_BIAS_W::new(self, 25)
     }
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn hp_modem_pd_cur(&mut self) -> HP_MODEM_PD_CUR_W<HP_MODEM_BIAS_SPEC> {
+    pub fn hp_modem_pd_cur(&mut self) -> HP_MODEM_PD_CUR_W<'_, HP_MODEM_BIAS_SPEC> {
         HP_MODEM_PD_CUR_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn sleep(&mut self) -> SLEEP_W<HP_MODEM_BIAS_SPEC> {
+    pub fn sleep(&mut self) -> SLEEP_W<'_, HP_MODEM_BIAS_SPEC> {
         SLEEP_W::new(self, 31)
     }
 }

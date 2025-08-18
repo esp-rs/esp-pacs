@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - configure picture's height. when encode, the max configurable bits is 14, when decode, the max configurable bits is 16"]
     #[inline(always)]
-    pub fn va(&mut self) -> VA_W<PIC_SIZE_SPEC> {
+    pub fn va(&mut self) -> VA_W<'_, PIC_SIZE_SPEC> {
         VA_W::new(self, 0)
     }
     #[doc = "Bits 16:31 - configure picture's width. when encode, the max configurable bits is 14, when decode, the max configurable bits is 16"]
     #[inline(always)]
-    pub fn ha(&mut self) -> HA_W<PIC_SIZE_SPEC> {
+    pub fn ha(&mut self) -> HA_W<'_, PIC_SIZE_SPEC> {
         HA_W::new(self, 16)
     }
 }

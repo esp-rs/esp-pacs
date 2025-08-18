@@ -41,14 +41,14 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `M0_APM` field.</div>"]
     #[inline(always)]
-    pub fn m_apm(&mut self, n: u8) -> M_APM_W<INT_EN_SPEC> {
+    pub fn m_apm(&mut self, n: u8) -> M_APM_W<'_, INT_EN_SPEC> {
         #[allow(clippy::no_effect)]
         [(); 1][n as usize];
         M_APM_W::new(self, n * 0)
     }
     #[doc = "Bit 0 - APM M0 interrupt enable"]
     #[inline(always)]
-    pub fn m0_apm(&mut self) -> M_APM_W<INT_EN_SPEC> {
+    pub fn m0_apm(&mut self) -> M_APM_W<'_, INT_EN_SPEC> {
         M_APM_W::new(self, 0)
     }
 }

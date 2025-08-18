@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn cca_fail_cnt(&mut self) -> CCA_FAIL_CNT_W<CCA_FAIL_CNT_SPEC> {
+    pub fn cca_fail_cnt(&mut self) -> CCA_FAIL_CNT_W<'_, CCA_FAIL_CNT_SPEC> {
         CCA_FAIL_CNT_W::new(self, 0)
     }
 }

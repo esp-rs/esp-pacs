@@ -13,12 +13,12 @@ impl core::fmt::Debug for crate::generic::Reg<HP_LP_CPU_COMM_SPEC> {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn lp_trigger_hp(&mut self) -> LP_TRIGGER_HP_W<HP_LP_CPU_COMM_SPEC> {
+    pub fn lp_trigger_hp(&mut self) -> LP_TRIGGER_HP_W<'_, HP_LP_CPU_COMM_SPEC> {
         LP_TRIGGER_HP_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn hp_trigger_lp(&mut self) -> HP_TRIGGER_LP_W<HP_LP_CPU_COMM_SPEC> {
+    pub fn hp_trigger_lp(&mut self) -> HP_TRIGGER_LP_W<'_, HP_LP_CPU_COMM_SPEC> {
         HP_TRIGGER_LP_W::new(self, 31)
     }
 }

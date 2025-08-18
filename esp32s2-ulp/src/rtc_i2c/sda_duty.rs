@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - The number of clock cycles between the SDA switch and the falling edge of SCL."]
     #[inline(always)]
-    pub fn num(&mut self) -> NUM_W<SDA_DUTY_SPEC> {
+    pub fn num(&mut self) -> NUM_W<'_, SDA_DUTY_SPEC> {
         NUM_W::new(self, 0)
     }
 }

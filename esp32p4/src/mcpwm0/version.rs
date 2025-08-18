@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:27 - Configures the version."]
     #[inline(always)]
-    pub fn date(&mut self) -> DATE_W<VERSION_SPEC> {
+    pub fn date(&mut self) -> DATE_W<'_, VERSION_SPEC> {
         DATE_W::new(self, 0)
     }
 }

@@ -40,7 +40,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 24:31"]
     #[inline(always)]
-    pub fn rd_reserve_0_88(&mut self) -> RD_RESERVE_0_88_W<BLK0_RDATA2_SPEC> {
+    pub fn rd_reserve_0_88(&mut self) -> RD_RESERVE_0_88_W<'_, BLK0_RDATA2_SPEC> {
         RD_RESERVE_0_88_W::new(self, 24)
     }
 }

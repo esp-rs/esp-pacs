@@ -21,32 +21,36 @@ impl core::fmt::Debug for crate::generic::Reg<INT_CLR_SPEC> {
 impl W {
     #[doc = "Bit 0 - ADC1 Conversion is done, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc1_int_clr(&mut self) -> COCPU_SARADC1_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc1_int_clr(&mut self) -> COCPU_SARADC1_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC1_INT_CLR_W::new(self, 0)
     }
     #[doc = "Bit 1 - ADC2 Conversion is done, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc2_int_clr(&mut self) -> COCPU_SARADC2_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc2_int_clr(&mut self) -> COCPU_SARADC2_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC2_INT_CLR_W::new(self, 1)
     }
     #[doc = "Bit 2 - An errro occurs from ADC1, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc1_error_int_clr(&mut self) -> COCPU_SARADC1_ERROR_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc1_error_int_clr(
+        &mut self,
+    ) -> COCPU_SARADC1_ERROR_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC1_ERROR_INT_CLR_W::new(self, 2)
     }
     #[doc = "Bit 3 - An errro occurs from ADC2, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc2_error_int_clr(&mut self) -> COCPU_SARADC2_ERROR_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc2_error_int_clr(
+        &mut self,
+    ) -> COCPU_SARADC2_ERROR_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC2_ERROR_INT_CLR_W::new(self, 3)
     }
     #[doc = "Bit 4 - A wakeup event is triggered from ADC1, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc1_wake_int_clr(&mut self) -> COCPU_SARADC1_WAKE_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc1_wake_int_clr(&mut self) -> COCPU_SARADC1_WAKE_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC1_WAKE_INT_CLR_W::new(self, 4)
     }
     #[doc = "Bit 5 - A wakeup event is triggered from ADC2, int clear."]
     #[inline(always)]
-    pub fn cocpu_saradc2_wake_int_clr(&mut self) -> COCPU_SARADC2_WAKE_INT_CLR_W<INT_CLR_SPEC> {
+    pub fn cocpu_saradc2_wake_int_clr(&mut self) -> COCPU_SARADC2_WAKE_INT_CLR_W<'_, INT_CLR_SPEC> {
         COCPU_SARADC2_WAKE_INT_CLR_W::new(self, 5)
     }
 }

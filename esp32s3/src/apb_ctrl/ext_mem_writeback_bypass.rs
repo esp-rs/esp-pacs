@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to bypass cache writeback request to external memory so that spi will not check its attribute."]
     #[inline(always)]
-    pub fn writeback_bypass(&mut self) -> WRITEBACK_BYPASS_W<EXT_MEM_WRITEBACK_BYPASS_SPEC> {
+    pub fn writeback_bypass(&mut self) -> WRITEBACK_BYPASS_W<'_, EXT_MEM_WRITEBACK_BYPASS_SPEC> {
         WRITEBACK_BYPASS_W::new(self, 0)
     }
 }

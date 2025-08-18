@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - this field configures the total length of one line (by pixel num) for dpi output, must meet: reg_htotal > reg_hdisp+reg_hsync+reg_hbank"]
     #[inline(always)]
-    pub fn htotal(&mut self) -> HTOTAL_W<DPI_H_CFG0_SPEC> {
+    pub fn htotal(&mut self) -> HTOTAL_W<'_, DPI_H_CFG0_SPEC> {
         HTOTAL_W::new(self, 0)
     }
     #[doc = "Bits 16:27 - this field configures the length of valid pixel data (by pixel num) for dpi output"]
     #[inline(always)]
-    pub fn hdisp(&mut self) -> HDISP_W<DPI_H_CFG0_SPEC> {
+    pub fn hdisp(&mut self) -> HDISP_W<'_, DPI_H_CFG0_SPEC> {
         HDISP_W::new(self, 16)
     }
 }

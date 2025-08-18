@@ -46,22 +46,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Write 1 to update rx register configuration signals."]
     #[inline(always)]
-    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<RX_CFG1_SPEC> {
+    pub fn rx_reg_update(&mut self) -> RX_REG_UPDATE_W<'_, RX_CFG1_SPEC> {
         RX_REG_UPDATE_W::new(self, 2)
     }
     #[doc = "Bit 3 - Write 1 to enable timeout count to generate error eof."]
     #[inline(always)]
-    pub fn rx_timeout_en(&mut self) -> RX_TIMEOUT_EN_W<RX_CFG1_SPEC> {
+    pub fn rx_timeout_en(&mut self) -> RX_TIMEOUT_EN_W<'_, RX_CFG1_SPEC> {
         RX_TIMEOUT_EN_W::new(self, 3)
     }
     #[doc = "Bits 12:15 - Configures rx external enable signal selection from 16 data lines."]
     #[inline(always)]
-    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<RX_CFG1_SPEC> {
+    pub fn rx_ext_en_sel(&mut self) -> RX_EXT_EN_SEL_W<'_, RX_CFG1_SPEC> {
         RX_EXT_EN_SEL_W::new(self, 12)
     }
     #[doc = "Bits 16:31 - Configures rx threshold of timeout counter."]
     #[inline(always)]
-    pub fn rx_timeout_threshold(&mut self) -> RX_TIMEOUT_THRESHOLD_W<RX_CFG1_SPEC> {
+    pub fn rx_timeout_threshold(&mut self) -> RX_TIMEOUT_THRESHOLD_W<'_, RX_CFG1_SPEC> {
         RX_TIMEOUT_THRESHOLD_W::new(self, 16)
     }
 }

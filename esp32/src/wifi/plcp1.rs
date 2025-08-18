@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Length of packet (in bytes)"]
     #[inline(always)]
-    pub fn len(&mut self) -> LEN_W<PLCP1_SPEC> {
+    pub fn len(&mut self) -> LEN_W<'_, PLCP1_SPEC> {
         LEN_W::new(self, 0)
     }
     #[doc = "Bits 12:16 - Packet rate (see wifi_phy_rate_t)"]
     #[inline(always)]
-    pub fn rate(&mut self) -> RATE_W<PLCP1_SPEC> {
+    pub fn rate(&mut self) -> RATE_W<'_, PLCP1_SPEC> {
         RATE_W::new(self, 12)
     }
     #[doc = "Bits 17:21 - Key slot to use for encryption"]
     #[inline(always)]
-    pub fn key_slot_id(&mut self) -> KEY_SLOT_ID_W<PLCP1_SPEC> {
+    pub fn key_slot_id(&mut self) -> KEY_SLOT_ID_W<'_, PLCP1_SPEC> {
         KEY_SLOT_ID_W::new(self, 17)
     }
     #[doc = "Bit 25 - Bit indicating if this is 802.11n"]
     #[inline(always)]
-    pub fn is_80211_n(&mut self) -> IS_80211_N_W<PLCP1_SPEC> {
+    pub fn is_80211_n(&mut self) -> IS_80211_N_W<'_, PLCP1_SPEC> {
         IS_80211_N_W::new(self, 25)
     }
     #[doc = "Bit 28 - Zero indicates 20MHz and one indicates 40MHz"]
     #[inline(always)]
-    pub fn bandwidth(&mut self) -> BANDWIDTH_W<PLCP1_SPEC> {
+    pub fn bandwidth(&mut self) -> BANDWIDTH_W<'_, PLCP1_SPEC> {
         BANDWIDTH_W::new(self, 28)
     }
     #[doc = "Bits 30:31 - ID of the interface this transmission is from"]
     #[inline(always)]
-    pub fn interface_id(&mut self) -> INTERFACE_ID_W<PLCP1_SPEC> {
+    pub fn interface_id(&mut self) -> INTERFACE_ID_W<'_, PLCP1_SPEC> {
         INTERFACE_ID_W::new(self, 30)
     }
 }

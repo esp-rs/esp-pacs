@@ -11,7 +11,7 @@ impl core::fmt::Debug for crate::generic::Reg<UNIT_LOAD_SPEC> {
 impl W {
     #[doc = "Bit 0 - timer unit0 sync enable signal"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W<UNIT_LOAD_SPEC> {
+    pub fn load(&mut self) -> LOAD_W<'_, UNIT_LOAD_SPEC> {
         LOAD_W::new(self, 0)
     }
 }

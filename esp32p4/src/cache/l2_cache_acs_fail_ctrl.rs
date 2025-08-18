@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn l2_cache_acs_fail_check_mode(
         &mut self,
-    ) -> L2_CACHE_ACS_FAIL_CHECK_MODE_W<L2_CACHE_ACS_FAIL_CTRL_SPEC> {
+    ) -> L2_CACHE_ACS_FAIL_CHECK_MODE_W<'_, L2_CACHE_ACS_FAIL_CTRL_SPEC> {
         L2_CACHE_ACS_FAIL_CHECK_MODE_W::new(self, 0)
     }
 }

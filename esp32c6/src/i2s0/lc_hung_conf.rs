@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - the i2s_tx_hung_int interrupt or the i2s_rx_hung_int interrupt will be triggered when fifo hung counter is equal to this value"]
     #[inline(always)]
-    pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<LC_HUNG_CONF_SPEC> {
+    pub fn lc_fifo_timeout(&mut self) -> LC_FIFO_TIMEOUT_W<'_, LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_W::new(self, 0)
     }
     #[doc = "Bits 8:10 - The bits are used to scale tick counter threshold. The tick counter is reset when counter value >= 88000/2^i2s_lc_fifo_timeout_shift"]
     #[inline(always)]
-    pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<LC_HUNG_CONF_SPEC> {
+    pub fn lc_fifo_timeout_shift(&mut self) -> LC_FIFO_TIMEOUT_SHIFT_W<'_, LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_SHIFT_W::new(self, 8)
     }
     #[doc = "Bit 11 - The enable bit for FIFO timeout"]
     #[inline(always)]
-    pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<LC_HUNG_CONF_SPEC> {
+    pub fn lc_fifo_timeout_ena(&mut self) -> LC_FIFO_TIMEOUT_ENA_W<'_, LC_HUNG_CONF_SPEC> {
         LC_FIFO_TIMEOUT_ENA_W::new(self, 11)
     }
 }

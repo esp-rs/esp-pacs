@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - This register is used to configure for how long SDA is sampled, in I2C module clock cycles."]
     #[inline(always)]
-    pub fn time(&mut self) -> TIME_W<I2C_SDA_SAMPLE_SPEC> {
+    pub fn time(&mut self) -> TIME_W<'_, I2C_SDA_SAMPLE_SPEC> {
         TIME_W::new(self, 0)
     }
 }

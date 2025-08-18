@@ -88,7 +88,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn pro_slave_wdata(&mut self) -> PRO_SLAVE_WDATA_W<PRO_DCACHE_DBUG0_SPEC> {
+    pub fn pro_slave_wdata(&mut self) -> PRO_SLAVE_WDATA_W<'_, PRO_DCACHE_DBUG0_SPEC> {
         PRO_SLAVE_WDATA_W::new(self, 0)
     }
 }

@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - NA"]
     #[inline(always)]
-    pub fn core0_sdio_host_int_map(&mut self) -> CORE0_SDIO_HOST_INT_MAP_W<SDIO_HOST_INT_MAP_SPEC> {
+    pub fn core0_sdio_host_int_map(
+        &mut self,
+    ) -> CORE0_SDIO_HOST_INT_MAP_W<'_, SDIO_HOST_INT_MAP_SPEC> {
         CORE0_SDIO_HOST_INT_MAP_W::new(self, 0)
     }
 }

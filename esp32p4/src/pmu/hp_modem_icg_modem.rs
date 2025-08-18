@@ -13,7 +13,7 @@ impl W {
     #[inline(always)]
     pub fn hp_modem_dig_icg_modem_code(
         &mut self,
-    ) -> HP_MODEM_DIG_ICG_MODEM_CODE_W<HP_MODEM_ICG_MODEM_SPEC> {
+    ) -> HP_MODEM_DIG_ICG_MODEM_CODE_W<'_, HP_MODEM_ICG_MODEM_SPEC> {
         HP_MODEM_DIG_ICG_MODEM_CODE_W::new(self, 30)
     }
 }

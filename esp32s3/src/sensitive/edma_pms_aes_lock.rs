@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set 1 to lock EDMA-AES permission control registers."]
     #[inline(always)]
-    pub fn edma_pms_aes_lock(&mut self) -> EDMA_PMS_AES_LOCK_W<EDMA_PMS_AES_LOCK_SPEC> {
+    pub fn edma_pms_aes_lock(&mut self) -> EDMA_PMS_AES_LOCK_W<'_, EDMA_PMS_AES_LOCK_SPEC> {
         EDMA_PMS_AES_LOCK_W::new(self, 0)
     }
 }

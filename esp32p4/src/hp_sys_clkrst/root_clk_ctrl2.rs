@@ -54,22 +54,24 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Reserved"]
     #[inline(always)]
-    pub fn sys_clk_div_numerator(&mut self) -> SYS_CLK_DIV_NUMERATOR_W<ROOT_CLK_CTRL2_SPEC> {
+    pub fn sys_clk_div_numerator(&mut self) -> SYS_CLK_DIV_NUMERATOR_W<'_, ROOT_CLK_CTRL2_SPEC> {
         SYS_CLK_DIV_NUMERATOR_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn sys_clk_div_denominator(&mut self) -> SYS_CLK_DIV_DENOMINATOR_W<ROOT_CLK_CTRL2_SPEC> {
+    pub fn sys_clk_div_denominator(
+        &mut self,
+    ) -> SYS_CLK_DIV_DENOMINATOR_W<'_, ROOT_CLK_CTRL2_SPEC> {
         SYS_CLK_DIV_DENOMINATOR_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Reserved"]
     #[inline(always)]
-    pub fn apb_clk_div_num(&mut self) -> APB_CLK_DIV_NUM_W<ROOT_CLK_CTRL2_SPEC> {
+    pub fn apb_clk_div_num(&mut self) -> APB_CLK_DIV_NUM_W<'_, ROOT_CLK_CTRL2_SPEC> {
         APB_CLK_DIV_NUM_W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Reserved"]
     #[inline(always)]
-    pub fn apb_clk_div_numerator(&mut self) -> APB_CLK_DIV_NUMERATOR_W<ROOT_CLK_CTRL2_SPEC> {
+    pub fn apb_clk_div_numerator(&mut self) -> APB_CLK_DIV_NUMERATOR_W<'_, ROOT_CLK_CTRL2_SPEC> {
         APB_CLK_DIV_NUMERATOR_W::new(self, 24)
     }
 }

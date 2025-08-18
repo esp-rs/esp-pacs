@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn saradc_meas_num_limit(&mut self) -> SARADC_MEAS_NUM_LIMIT_W<APB_SARADC_CTRL2_SPEC> {
+    pub fn saradc_meas_num_limit(&mut self) -> SARADC_MEAS_NUM_LIMIT_W<'_, APB_SARADC_CTRL2_SPEC> {
         SARADC_MEAS_NUM_LIMIT_W::new(self, 0)
     }
     #[doc = "Bits 1:8 - max conversion number"]
     #[inline(always)]
-    pub fn saradc_max_meas_num(&mut self) -> SARADC_MAX_MEAS_NUM_W<APB_SARADC_CTRL2_SPEC> {
+    pub fn saradc_max_meas_num(&mut self) -> SARADC_MAX_MEAS_NUM_W<'_, APB_SARADC_CTRL2_SPEC> {
         SARADC_MAX_MEAS_NUM_W::new(self, 1)
     }
     #[doc = "Bit 9 - 1: data to DIG ADC1 CTRL is inverted otherwise not"]
     #[inline(always)]
-    pub fn saradc_sar1_inv(&mut self) -> SARADC_SAR1_INV_W<APB_SARADC_CTRL2_SPEC> {
+    pub fn saradc_sar1_inv(&mut self) -> SARADC_SAR1_INV_W<'_, APB_SARADC_CTRL2_SPEC> {
         SARADC_SAR1_INV_W::new(self, 9)
     }
     #[doc = "Bit 10 - 1: data to DIG ADC2 CTRL is inverted otherwise not"]
     #[inline(always)]
-    pub fn saradc_sar2_inv(&mut self) -> SARADC_SAR2_INV_W<APB_SARADC_CTRL2_SPEC> {
+    pub fn saradc_sar2_inv(&mut self) -> SARADC_SAR2_INV_W<'_, APB_SARADC_CTRL2_SPEC> {
         SARADC_SAR2_INV_W::new(self, 10)
     }
 }

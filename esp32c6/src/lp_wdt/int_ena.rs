@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 30 - need_des"]
     #[inline(always)]
-    pub fn super_wdt(&mut self) -> SUPER_WDT_W<INT_ENA_SPEC> {
+    pub fn super_wdt(&mut self) -> SUPER_WDT_W<'_, INT_ENA_SPEC> {
         SUPER_WDT_W::new(self, 30)
     }
     #[doc = "Bit 31 - need_des"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_ENA_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_ENA_SPEC> {
         WDT_W::new(self, 31)
     }
 }

@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to 1 to enable the acceleration option of search for modular exponentiation. Set to 0 to disable the acceleration (by default)."]
     #[inline(always)]
-    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<SEARCH_ENABLE_SPEC> {
+    pub fn search_enable(&mut self) -> SEARCH_ENABLE_W<'_, SEARCH_ENABLE_SPEC> {
         SEARCH_ENABLE_W::new(self, 0)
     }
 }

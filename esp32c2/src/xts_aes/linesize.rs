@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This bit stores the line size parameter. 0: 16Byte, 1: 32Byte."]
     #[inline(always)]
-    pub fn linesize(&mut self) -> LINESIZE_W<LINESIZE_SPEC> {
+    pub fn linesize(&mut self) -> LINESIZE_W<'_, LINESIZE_SPEC> {
         LINESIZE_W::new(self, 0)
     }
 }

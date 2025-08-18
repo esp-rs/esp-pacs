@@ -124,57 +124,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn app_cache_mask_iram0(&mut self) -> APP_CACHE_MASK_IRAM0_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_iram0(&mut self) -> APP_CACHE_MASK_IRAM0_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_IRAM0_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn app_cache_mask_iram1(&mut self) -> APP_CACHE_MASK_IRAM1_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_iram1(&mut self) -> APP_CACHE_MASK_IRAM1_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_IRAM1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn app_cache_mask_irom0(&mut self) -> APP_CACHE_MASK_IROM0_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_irom0(&mut self) -> APP_CACHE_MASK_IROM0_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_IROM0_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
-    pub fn app_cache_mask_dram1(&mut self) -> APP_CACHE_MASK_DRAM1_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_dram1(&mut self) -> APP_CACHE_MASK_DRAM1_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_DRAM1_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
-    pub fn app_cache_mask_drom0(&mut self) -> APP_CACHE_MASK_DROM0_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_drom0(&mut self) -> APP_CACHE_MASK_DROM0_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_DROM0_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
-    pub fn app_cache_mask_opsdram(&mut self) -> APP_CACHE_MASK_OPSDRAM_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mask_opsdram(&mut self) -> APP_CACHE_MASK_OPSDRAM_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MASK_OPSDRAM_W::new(self, 5)
     }
     #[doc = "Bits 6:8"]
     #[inline(always)]
-    pub fn app_cmmu_sram_page_mode(&mut self) -> APP_CMMU_SRAM_PAGE_MODE_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cmmu_sram_page_mode(
+        &mut self,
+    ) -> APP_CMMU_SRAM_PAGE_MODE_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CMMU_SRAM_PAGE_MODE_W::new(self, 6)
     }
     #[doc = "Bits 9:10"]
     #[inline(always)]
-    pub fn app_cmmu_flash_page_mode(&mut self) -> APP_CMMU_FLASH_PAGE_MODE_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cmmu_flash_page_mode(
+        &mut self,
+    ) -> APP_CMMU_FLASH_PAGE_MODE_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CMMU_FLASH_PAGE_MODE_W::new(self, 9)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
-    pub fn app_cmmu_force_on(&mut self) -> APP_CMMU_FORCE_ON_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cmmu_force_on(&mut self) -> APP_CMMU_FORCE_ON_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CMMU_FORCE_ON_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
-    pub fn app_cmmu_pd(&mut self) -> APP_CMMU_PD_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cmmu_pd(&mut self) -> APP_CMMU_PD_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CMMU_PD_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
-    pub fn app_cache_mmu_ia_clr(&mut self) -> APP_CACHE_MMU_IA_CLR_W<APP_CACHE_CTRL1_SPEC> {
+    pub fn app_cache_mmu_ia_clr(&mut self) -> APP_CACHE_MMU_IA_CLR_W<'_, APP_CACHE_CTRL1_SPEC> {
         APP_CACHE_MMU_IA_CLR_W::new(self, 13)
     }
 }

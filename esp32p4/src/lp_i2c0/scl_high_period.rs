@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Configures for how long SCL remains high in master mode. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<SCL_HIGH_PERIOD_SPEC> {
+    pub fn scl_high_period(&mut self) -> SCL_HIGH_PERIOD_W<'_, SCL_HIGH_PERIOD_SPEC> {
         SCL_HIGH_PERIOD_W::new(self, 0)
     }
     #[doc = "Bits 9:15 - Configures the SCL_FSM's waiting period for SCL high level in master mode. Measurement unit: i2c_sclk"]
     #[inline(always)]
-    pub fn scl_wait_high_period(&mut self) -> SCL_WAIT_HIGH_PERIOD_W<SCL_HIGH_PERIOD_SPEC> {
+    pub fn scl_wait_high_period(&mut self) -> SCL_WAIT_HIGH_PERIOD_W<'_, SCL_HIGH_PERIOD_SPEC> {
         SCL_WAIT_HIGH_PERIOD_W::new(self, 9)
     }
 }

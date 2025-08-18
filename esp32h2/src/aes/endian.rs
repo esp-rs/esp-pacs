@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - endian. \\[1:0\\] key endian, \\[3:2\\] text_in endian or in_stream endian, \\[5:4\\] text_out endian or out_stream endian"]
     #[inline(always)]
-    pub fn endian(&mut self) -> ENDIAN_W<ENDIAN_SPEC> {
+    pub fn endian(&mut self) -> ENDIAN_W<'_, ENDIAN_SPEC> {
         ENDIAN_W::new(self, 0)
     }
 }

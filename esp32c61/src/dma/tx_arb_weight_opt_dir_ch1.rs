@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn tx_arb_weight_opt_dis_ch1(
         &mut self,
-    ) -> TX_ARB_WEIGHT_OPT_DIS_CH1_W<TX_ARB_WEIGHT_OPT_DIR_CH1_SPEC> {
+    ) -> TX_ARB_WEIGHT_OPT_DIS_CH1_W<'_, TX_ARB_WEIGHT_OPT_DIR_CH1_SPEC> {
         TX_ARB_WEIGHT_OPT_DIS_CH1_W::new(self, 0)
     }
 }

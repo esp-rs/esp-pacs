@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:10 - It is the horizontal blank front porch of a frame."]
     #[inline(always)]
-    pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<LCD_CTRL_SPEC> {
+    pub fn lcd_hb_front(&mut self) -> LCD_HB_FRONT_W<'_, LCD_CTRL_SPEC> {
         LCD_HB_FRONT_W::new(self, 0)
     }
     #[doc = "Bits 11:20 - It is the vertical active height of a frame."]
     #[inline(always)]
-    pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<LCD_CTRL_SPEC> {
+    pub fn lcd_va_height(&mut self) -> LCD_VA_HEIGHT_W<'_, LCD_CTRL_SPEC> {
         LCD_VA_HEIGHT_W::new(self, 11)
     }
     #[doc = "Bits 21:30 - It is the vertical total height of a frame."]
     #[inline(always)]
-    pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<LCD_CTRL_SPEC> {
+    pub fn lcd_vt_height(&mut self) -> LCD_VT_HEIGHT_W<'_, LCD_CTRL_SPEC> {
         LCD_VT_HEIGHT_W::new(self, 21)
     }
     #[doc = "Bit 31 - 1: Enable LCD RGB mode. 0: Disable LCD RGB mode."]
     #[inline(always)]
-    pub fn lcd_rgb_mode_en(&mut self) -> LCD_RGB_MODE_EN_W<LCD_CTRL_SPEC> {
+    pub fn lcd_rgb_mode_en(&mut self) -> LCD_RGB_MODE_EN_W<'_, LCD_CTRL_SPEC> {
         LCD_RGB_MODE_EN_W::new(self, 31)
     }
 }

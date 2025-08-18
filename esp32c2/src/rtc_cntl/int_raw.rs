@@ -84,37 +84,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - sleep wakeup interrupt raw"]
     #[inline(always)]
-    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<INT_RAW_SPEC> {
+    pub fn slp_wakeup(&mut self) -> SLP_WAKEUP_W<'_, INT_RAW_SPEC> {
         SLP_WAKEUP_W::new(self, 0)
     }
     #[doc = "Bit 1 - sleep reject interrupt raw"]
     #[inline(always)]
-    pub fn slp_reject(&mut self) -> SLP_REJECT_W<INT_RAW_SPEC> {
+    pub fn slp_reject(&mut self) -> SLP_REJECT_W<'_, INT_RAW_SPEC> {
         SLP_REJECT_W::new(self, 1)
     }
     #[doc = "Bit 3 - RTC WDT interrupt raw"]
     #[inline(always)]
-    pub fn wdt(&mut self) -> WDT_W<INT_RAW_SPEC> {
+    pub fn wdt(&mut self) -> WDT_W<'_, INT_RAW_SPEC> {
         WDT_W::new(self, 3)
     }
     #[doc = "Bit 9 - brown out interrupt raw"]
     #[inline(always)]
-    pub fn brown_out(&mut self) -> BROWN_OUT_W<INT_RAW_SPEC> {
+    pub fn brown_out(&mut self) -> BROWN_OUT_W<'_, INT_RAW_SPEC> {
         BROWN_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10 - RTC main timer interrupt raw"]
     #[inline(always)]
-    pub fn main_timer(&mut self) -> MAIN_TIMER_W<INT_RAW_SPEC> {
+    pub fn main_timer(&mut self) -> MAIN_TIMER_W<'_, INT_RAW_SPEC> {
         MAIN_TIMER_W::new(self, 10)
     }
     #[doc = "Bit 15 - super watch dog interrupt raw"]
     #[inline(always)]
-    pub fn swd(&mut self) -> SWD_W<INT_RAW_SPEC> {
+    pub fn swd(&mut self) -> SWD_W<'_, INT_RAW_SPEC> {
         SWD_W::new(self, 15)
     }
     #[doc = "Bit 20 - Need add desc"]
     #[inline(always)]
-    pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<INT_RAW_SPEC> {
+    pub fn bbpll_cal(&mut self) -> BBPLL_CAL_W<'_, INT_RAW_SPEC> {
         BBPLL_CAL_W::new(self, 20)
     }
 }

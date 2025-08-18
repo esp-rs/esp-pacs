@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - Software ROM-Table register, whose content can be modified only when HP_SYSTEM_ROM_TABLE_LOCK is 0."]
     #[inline(always)]
-    pub fn rom_table(&mut self) -> ROM_TABLE_W<ROM_TABLE_SPEC> {
+    pub fn rom_table(&mut self) -> ROM_TABLE_W<'_, ROM_TABLE_SPEC> {
         ROM_TABLE_W::new(self, 0)
     }
 }

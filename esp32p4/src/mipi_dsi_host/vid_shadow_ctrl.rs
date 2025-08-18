@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - NA"]
     #[inline(always)]
-    pub fn vid_shadow_en(&mut self) -> VID_SHADOW_EN_W<VID_SHADOW_CTRL_SPEC> {
+    pub fn vid_shadow_en(&mut self) -> VID_SHADOW_EN_W<'_, VID_SHADOW_CTRL_SPEC> {
         VID_SHADOW_EN_W::new(self, 0)
     }
     #[doc = "Bit 8 - NA"]
     #[inline(always)]
-    pub fn vid_shadow_req(&mut self) -> VID_SHADOW_REQ_W<VID_SHADOW_CTRL_SPEC> {
+    pub fn vid_shadow_req(&mut self) -> VID_SHADOW_REQ_W<'_, VID_SHADOW_CTRL_SPEC> {
         VID_SHADOW_REQ_W::new(self, 8)
     }
     #[doc = "Bit 16 - NA"]
     #[inline(always)]
-    pub fn vid_shadow_pin_req(&mut self) -> VID_SHADOW_PIN_REQ_W<VID_SHADOW_CTRL_SPEC> {
+    pub fn vid_shadow_pin_req(&mut self) -> VID_SHADOW_PIN_REQ_W<'_, VID_SHADOW_CTRL_SPEC> {
         VID_SHADOW_PIN_REQ_W::new(self, 16)
     }
 }

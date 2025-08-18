@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:23 - count number, when count to this value, send a sync package"]
     #[inline(always)]
-    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<RESYNC_PROLONGED_SPEC> {
+    pub fn resync_prolonged(&mut self) -> RESYNC_PROLONGED_W<'_, RESYNC_PROLONGED_SPEC> {
         RESYNC_PROLONGED_W::new(self, 0)
     }
     #[doc = "Bits 24:25 - resyc mode sel: \\\\0: off, \\\\2: cycle count \\\\3: package num count"]
     #[inline(always)]
-    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<RESYNC_PROLONGED_SPEC> {
+    pub fn resync_mode(&mut self) -> RESYNC_MODE_W<'_, RESYNC_PROLONGED_SPEC> {
         RESYNC_MODE_W::new(self, 24)
     }
 }

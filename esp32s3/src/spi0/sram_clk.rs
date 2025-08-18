@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - It must equal to the value of SPI_MEM_SCLKCNT_N."]
     #[inline(always)]
-    pub fn sclkcnt_l(&mut self) -> SCLKCNT_L_W<SRAM_CLK_SPEC> {
+    pub fn sclkcnt_l(&mut self) -> SCLKCNT_L_W<'_, SRAM_CLK_SPEC> {
         SCLKCNT_L_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - It must be a floor value of ((SPI_MEM_SCLKCNT_N+1)/2-1)."]
     #[inline(always)]
-    pub fn sclkcnt_h(&mut self) -> SCLKCNT_H_W<SRAM_CLK_SPEC> {
+    pub fn sclkcnt_h(&mut self) -> SCLKCNT_H_W<'_, SRAM_CLK_SPEC> {
         SCLKCNT_H_W::new(self, 8)
     }
     #[doc = "Bits 16:23 - When SPI0 accesses to Ext_RAM, f_SPI_CLK = f_MSPI_CORE_CLK/(SPI_MEM_SCLKCNT_N+1)"]
     #[inline(always)]
-    pub fn sclkcnt_n(&mut self) -> SCLKCNT_N_W<SRAM_CLK_SPEC> {
+    pub fn sclkcnt_n(&mut self) -> SCLKCNT_N_W<'_, SRAM_CLK_SPEC> {
         SCLKCNT_N_W::new(self, 16)
     }
     #[doc = "Bit 31 - When SPI0 accesses to Ext_RAM, set this bit in 1-division mode, f_SPI_CLK = f_MSPI_CORE_CLK."]
     #[inline(always)]
-    pub fn sclk_equ_sysclk(&mut self) -> SCLK_EQU_SYSCLK_W<SRAM_CLK_SPEC> {
+    pub fn sclk_equ_sysclk(&mut self) -> SCLK_EQU_SYSCLK_W<'_, SRAM_CLK_SPEC> {
         SCLK_EQU_SYSCLK_W::new(self, 31)
     }
 }

@@ -204,97 +204,97 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set the bit to enable full duplex communication. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn doutdin(&mut self) -> DOUTDIN_W<USER_SPEC> {
+    pub fn doutdin(&mut self) -> DOUTDIN_W<'_, USER_SPEC> {
         DOUTDIN_W::new(self, 0)
     }
     #[doc = "Bit 3 - Both for master mode and slave mode. 1: spi controller is in QPI mode. 0: others. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn qpi_mode(&mut self) -> QPI_MODE_W<USER_SPEC> {
+    pub fn qpi_mode(&mut self) -> QPI_MODE_W<'_, USER_SPEC> {
         QPI_MODE_W::new(self, 3)
     }
     #[doc = "Bit 5 - In the slave mode, this bit can be used to change the polarity of tsck. 0: tsck = spi_ck_i. 1:tsck = !spi_ck_i."]
     #[inline(always)]
-    pub fn tsck_i_edge(&mut self) -> TSCK_I_EDGE_W<USER_SPEC> {
+    pub fn tsck_i_edge(&mut self) -> TSCK_I_EDGE_W<'_, USER_SPEC> {
         TSCK_I_EDGE_W::new(self, 5)
     }
     #[doc = "Bit 6 - spi cs keep low when spi is in done phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs_hold(&mut self) -> CS_HOLD_W<USER_SPEC> {
+    pub fn cs_hold(&mut self) -> CS_HOLD_W<'_, USER_SPEC> {
         CS_HOLD_W::new(self, 6)
     }
     #[doc = "Bit 7 - spi cs is enable when spi is in prepare phase. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn cs_setup(&mut self) -> CS_SETUP_W<USER_SPEC> {
+    pub fn cs_setup(&mut self) -> CS_SETUP_W<'_, USER_SPEC> {
         CS_SETUP_W::new(self, 7)
     }
     #[doc = "Bit 8 - In the slave mode, this bit can be used to change the polarity of rsck. 0: rsck = !spi_ck_i. 1:rsck = spi_ck_i."]
     #[inline(always)]
-    pub fn rsck_i_edge(&mut self) -> RSCK_I_EDGE_W<USER_SPEC> {
+    pub fn rsck_i_edge(&mut self) -> RSCK_I_EDGE_W<'_, USER_SPEC> {
         RSCK_I_EDGE_W::new(self, 8)
     }
     #[doc = "Bit 9 - the bit combined with spi_mosi_delay_mode bits to set mosi signal delay mode. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<USER_SPEC> {
+    pub fn ck_out_edge(&mut self) -> CK_OUT_EDGE_W<'_, USER_SPEC> {
         CK_OUT_EDGE_W::new(self, 9)
     }
     #[doc = "Bit 12 - In the write operations read-data phase apply 2 signals. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<USER_SPEC> {
+    pub fn fwrite_dual(&mut self) -> FWRITE_DUAL_W<'_, USER_SPEC> {
         FWRITE_DUAL_W::new(self, 12)
     }
     #[doc = "Bit 13 - In the write operations read-data phase apply 4 signals. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<USER_SPEC> {
+    pub fn fwrite_quad(&mut self) -> FWRITE_QUAD_W<'_, USER_SPEC> {
         FWRITE_QUAD_W::new(self, 13)
     }
     #[doc = "Bit 15 - 1: Enable the DMA CONF phase of next seg-trans operation, which means seg-trans will continue. 0: The seg-trans will end after the current SPI seg-trans or this is not seg-trans mode. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_conf_nxt(&mut self) -> USR_CONF_NXT_W<USER_SPEC> {
+    pub fn usr_conf_nxt(&mut self) -> USR_CONF_NXT_W<'_, USER_SPEC> {
         USR_CONF_NXT_W::new(self, 15)
     }
     #[doc = "Bit 17 - Set the bit to enable 3-line half duplex communication mosi and miso signals share the same pin. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn sio(&mut self) -> SIO_W<USER_SPEC> {
+    pub fn sio(&mut self) -> SIO_W<'_, USER_SPEC> {
         SIO_W::new(self, 17)
     }
     #[doc = "Bit 24 - read-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<USER_SPEC> {
+    pub fn usr_miso_highpart(&mut self) -> USR_MISO_HIGHPART_W<'_, USER_SPEC> {
         USR_MISO_HIGHPART_W::new(self, 24)
     }
     #[doc = "Bit 25 - write-data phase only access to high-part of the buffer spi_w8~spi_w15. 1: enable 0: disable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<USER_SPEC> {
+    pub fn usr_mosi_highpart(&mut self) -> USR_MOSI_HIGHPART_W<'_, USER_SPEC> {
         USR_MOSI_HIGHPART_W::new(self, 25)
     }
     #[doc = "Bit 26 - spi clock is disable in dummy phase when the bit is enable. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<USER_SPEC> {
+    pub fn usr_dummy_idle(&mut self) -> USR_DUMMY_IDLE_W<'_, USER_SPEC> {
         USR_DUMMY_IDLE_W::new(self, 26)
     }
     #[doc = "Bit 27 - This bit enable the write-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_mosi(&mut self) -> USR_MOSI_W<USER_SPEC> {
+    pub fn usr_mosi(&mut self) -> USR_MOSI_W<'_, USER_SPEC> {
         USR_MOSI_W::new(self, 27)
     }
     #[doc = "Bit 28 - This bit enable the read-data phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_miso(&mut self) -> USR_MISO_W<USER_SPEC> {
+    pub fn usr_miso(&mut self) -> USR_MISO_W<'_, USER_SPEC> {
         USR_MISO_W::new(self, 28)
     }
     #[doc = "Bit 29 - This bit enable the dummy phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<USER_SPEC> {
+    pub fn usr_dummy(&mut self) -> USR_DUMMY_W<'_, USER_SPEC> {
         USR_DUMMY_W::new(self, 29)
     }
     #[doc = "Bit 30 - This bit enable the address phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_addr(&mut self) -> USR_ADDR_W<USER_SPEC> {
+    pub fn usr_addr(&mut self) -> USR_ADDR_W<'_, USER_SPEC> {
         USR_ADDR_W::new(self, 30)
     }
     #[doc = "Bit 31 - This bit enable the command phase of an operation. Can be configured in CONF state."]
     #[inline(always)]
-    pub fn usr_command(&mut self) -> USR_COMMAND_W<USER_SPEC> {
+    pub fn usr_command(&mut self) -> USR_COMMAND_W<'_, USER_SPEC> {
         USR_COMMAND_W::new(self, 31)
     }
 }

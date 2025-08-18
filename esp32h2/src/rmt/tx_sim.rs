@@ -44,17 +44,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to enable CHANNEL0 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    pub fn ch0(&mut self) -> CH0_W<TX_SIM_SPEC> {
+    pub fn ch0(&mut self) -> CH0_W<'_, TX_SIM_SPEC> {
         CH0_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to enable CHANNEL1 to start sending data synchronously with other enabled channels."]
     #[inline(always)]
-    pub fn ch1(&mut self) -> CH1_W<TX_SIM_SPEC> {
+    pub fn ch1(&mut self) -> CH1_W<'_, TX_SIM_SPEC> {
         CH1_W::new(self, 1)
     }
     #[doc = "Bit 2 - This register is used to enable multiple of channels to start sending data synchronously."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<TX_SIM_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, TX_SIM_SPEC> {
         EN_W::new(self, 2)
     }
 }

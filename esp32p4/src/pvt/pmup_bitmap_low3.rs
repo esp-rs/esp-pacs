@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - select valid low channel3"]
     #[inline(always)]
-    pub fn pump_bitmap_low3(&mut self) -> PUMP_BITMAP_LOW3_W<PMUP_BITMAP_LOW3_SPEC> {
+    pub fn pump_bitmap_low3(&mut self) -> PUMP_BITMAP_LOW3_W<'_, PMUP_BITMAP_LOW3_SPEC> {
         PUMP_BITMAP_LOW3_W::new(self, 0)
     }
 }

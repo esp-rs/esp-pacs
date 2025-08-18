@@ -54,22 +54,22 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 25 - enable ulp-riscv reset"]
     #[inline(always)]
-    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+    pub fn sar_cocpu_reset(&mut self) -> SAR_COCPU_RESET_W<'_, SAR_PERI_RESET_CONF_SPEC> {
         SAR_COCPU_RESET_W::new(self, 25)
     }
     #[doc = "Bit 27 - Reserved."]
     #[inline(always)]
-    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+    pub fn sar_rtc_i2c_reset(&mut self) -> SAR_RTC_I2C_RESET_W<'_, SAR_PERI_RESET_CONF_SPEC> {
         SAR_RTC_I2C_RESET_W::new(self, 27)
     }
     #[doc = "Bit 29 - enbale saradc reset"]
     #[inline(always)]
-    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+    pub fn sar_tsens_reset(&mut self) -> SAR_TSENS_RESET_W<'_, SAR_PERI_RESET_CONF_SPEC> {
         SAR_TSENS_RESET_W::new(self, 29)
     }
     #[doc = "Bit 30 - enable io_mux reset"]
     #[inline(always)]
-    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<SAR_PERI_RESET_CONF_SPEC> {
+    pub fn sar_saradc_reset(&mut self) -> SAR_SARADC_RESET_W<'_, SAR_PERI_RESET_CONF_SPEC> {
         SAR_SARADC_RESET_W::new(self, 30)
     }
 }

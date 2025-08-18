@@ -44,14 +44,14 @@ impl W {
     #[inline(always)]
     pub fn pro_cache_ignore_preload_mmu_entry_fault(
         &mut self,
-    ) -> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+    ) -> PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W<'_, CACHE_CONF_MISC_SPEC> {
         PRO_CACHE_IGNORE_PRELOAD_MMU_ENTRY_FAULT_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable checking mmu entry fault by sync operation."]
     #[inline(always)]
     pub fn pro_cache_ignore_sync_mmu_entry_fault(
         &mut self,
-    ) -> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<CACHE_CONF_MISC_SPEC> {
+    ) -> PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W<'_, CACHE_CONF_MISC_SPEC> {
         PRO_CACHE_IGNORE_SYNC_MMU_ENTRY_FAULT_W::new(self, 1)
     }
 }

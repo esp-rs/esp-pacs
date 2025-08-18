@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Register clock gate enable signal. 1: Enable. 0: Disable."]
     #[inline(always)]
-    pub fn spi_clk_en(&mut self) -> SPI_CLK_EN_W<CLOCK_GATE_SPEC> {
+    pub fn spi_clk_en(&mut self) -> SPI_CLK_EN_W<'_, CLOCK_GATE_SPEC> {
         SPI_CLK_EN_W::new(self, 0)
     }
 }

@@ -56,7 +56,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - set this bit to reset preload-logic inside L1-Cache. Recommend that this should only be used to initialize preload-logic when some fatal error of preload-logic occurs."]
     #[inline(always)]
-    pub fn cache_pld_rst(&mut self) -> CACHE_PLD_RST_W<CACHE_PRELOAD_RST_CTRL_SPEC> {
+    pub fn cache_pld_rst(&mut self) -> CACHE_PLD_RST_W<'_, CACHE_PRELOAD_RST_CTRL_SPEC> {
         CACHE_PLD_RST_W::new(self, 4)
     }
 }

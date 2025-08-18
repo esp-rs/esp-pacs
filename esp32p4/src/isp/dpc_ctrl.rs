@@ -74,32 +74,32 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - this bit configures the check mode enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dpc_check_en(&mut self) -> DPC_CHECK_EN_W<DPC_CTRL_SPEC> {
+    pub fn dpc_check_en(&mut self) -> DPC_CHECK_EN_W<'_, DPC_CTRL_SPEC> {
         DPC_CHECK_EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - this bit configures the sta dpc enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn sta_en(&mut self) -> STA_EN_W<DPC_CTRL_SPEC> {
+    pub fn sta_en(&mut self) -> STA_EN_W<'_, DPC_CTRL_SPEC> {
         STA_EN_W::new(self, 1)
     }
     #[doc = "Bit 2 - this bit configures the dyn dpc enable. 0: disable, 1: enable"]
     #[inline(always)]
-    pub fn dyn_en(&mut self) -> DYN_EN_W<DPC_CTRL_SPEC> {
+    pub fn dyn_en(&mut self) -> DYN_EN_W<'_, DPC_CTRL_SPEC> {
         DYN_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - this bit configures input image type select when in check mode, 0: white img, 1: black img"]
     #[inline(always)]
-    pub fn dpc_black_en(&mut self) -> DPC_BLACK_EN_W<DPC_CTRL_SPEC> {
+    pub fn dpc_black_en(&mut self) -> DPC_BLACK_EN_W<'_, DPC_CTRL_SPEC> {
         DPC_BLACK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - this bit configures dyn dpc method select. 0: simple method, 1: hard method"]
     #[inline(always)]
-    pub fn dpc_method_sel(&mut self) -> DPC_METHOD_SEL_W<DPC_CTRL_SPEC> {
+    pub fn dpc_method_sel(&mut self) -> DPC_METHOD_SEL_W<'_, DPC_CTRL_SPEC> {
         DPC_METHOD_SEL_W::new(self, 4)
     }
     #[doc = "Bit 5 - this bit configures output pixel data when in check mode or not. 0: no data output, 1: data output"]
     #[inline(always)]
-    pub fn dpc_check_od_en(&mut self) -> DPC_CHECK_OD_EN_W<DPC_CTRL_SPEC> {
+    pub fn dpc_check_od_en(&mut self) -> DPC_CHECK_OD_EN_W<'_, DPC_CTRL_SPEC> {
         DPC_CHECK_OD_EN_W::new(self, 5)
     }
 }

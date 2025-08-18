@@ -34,12 +34,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - xxxx"]
     #[inline(always)]
-    pub fn clk_sdm_inv_phase_ena(&mut self) -> CLK_SDM_INV_PHASE_ENA_W<SDM_INV_PHASE_CONF_SPEC> {
+    pub fn clk_sdm_inv_phase_ena(
+        &mut self,
+    ) -> CLK_SDM_INV_PHASE_ENA_W<'_, SDM_INV_PHASE_CONF_SPEC> {
         CLK_SDM_INV_PHASE_ENA_W::new(self, 0)
     }
     #[doc = "Bits 1:3 - xxxx"]
     #[inline(always)]
-    pub fn clk_sdm_inv_phase_sel(&mut self) -> CLK_SDM_INV_PHASE_SEL_W<SDM_INV_PHASE_CONF_SPEC> {
+    pub fn clk_sdm_inv_phase_sel(
+        &mut self,
+    ) -> CLK_SDM_INV_PHASE_SEL_W<'_, SDM_INV_PHASE_CONF_SPEC> {
         CLK_SDM_INV_PHASE_SEL_W::new(self, 1)
     }
 }

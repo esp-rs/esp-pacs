@@ -432,212 +432,224 @@ impl W {
     #[inline(always)]
     pub fn ledc_task_gamma_restart_ch2_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESTART_CH2_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESTART_CH2_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESTART_CH2_ST_W::new(self, 0)
     }
     #[doc = "Bit 1 - Represents LEDC_task_gamma_restart_ch3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_restart_ch3_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESTART_CH3_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESTART_CH3_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESTART_CH3_ST_W::new(self, 1)
     }
     #[doc = "Bit 2 - Represents LEDC_task_gamma_restart_ch4 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_restart_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESTART_CH4_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESTART_CH4_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESTART_CH4_ST_W::new(self, 2)
     }
     #[doc = "Bit 3 - Represents LEDC_task_gamma_restart_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_restart_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESTART_CH5_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESTART_CH5_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESTART_CH5_ST_W::new(self, 3)
     }
     #[doc = "Bit 4 - Represents LEDC_task_gamma_pause_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch0_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH0_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH0_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH0_ST_W::new(self, 4)
     }
     #[doc = "Bit 5 - Represents LEDC_task_gamma_pause_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch1_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH1_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH1_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH1_ST_W::new(self, 5)
     }
     #[doc = "Bit 6 - Represents LEDC_task_gamma_pause_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch2_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH2_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH2_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH2_ST_W::new(self, 6)
     }
     #[doc = "Bit 7 - Represents LEDC_task_gamma_pause_ch3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch3_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH3_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH3_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH3_ST_W::new(self, 7)
     }
     #[doc = "Bit 8 - Represents LEDC_task_gamma_pause_ch4 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH4_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH4_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH4_ST_W::new(self, 8)
     }
     #[doc = "Bit 9 - Represents LEDC_task_gamma_pause_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_pause_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_PAUSE_CH5_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_PAUSE_CH5_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_PAUSE_CH5_ST_W::new(self, 9)
     }
     #[doc = "Bit 10 - Represents LEDC_task_gamma_resume_ch0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch0_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH0_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH0_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH0_ST_W::new(self, 10)
     }
     #[doc = "Bit 11 - Represents LEDC_task_gamma_resume_ch1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch1_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH1_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH1_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH1_ST_W::new(self, 11)
     }
     #[doc = "Bit 12 - Represents LEDC_task_gamma_resume_ch2 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch2_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH2_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH2_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH2_ST_W::new(self, 12)
     }
     #[doc = "Bit 13 - Represents LEDC_task_gamma_resume_ch3 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch3_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH3_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH3_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH3_ST_W::new(self, 13)
     }
     #[doc = "Bit 14 - Represents LEDC_task_gamma_resume_ch4 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch4_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH4_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH4_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH4_ST_W::new(self, 14)
     }
     #[doc = "Bit 15 - Represents LEDC_task_gamma_resume_ch5 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn ledc_task_gamma_resume_ch5_st(
         &mut self,
-    ) -> LEDC_TASK_GAMMA_RESUME_CH5_ST_W<TASK_ST2_SPEC> {
+    ) -> LEDC_TASK_GAMMA_RESUME_CH5_ST_W<'_, TASK_ST2_SPEC> {
         LEDC_TASK_GAMMA_RESUME_CH5_ST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Represents TG0_task_cnt_start_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_cnt_start_timer0_st(
         &mut self,
-    ) -> TG0_TASK_CNT_START_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_CNT_START_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_START_TIMER0_ST_W::new(self, 16)
     }
     #[doc = "Bit 17 - Represents TG0_task_alarm_start_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_alarm_start_timer0_st(
         &mut self,
-    ) -> TG0_TASK_ALARM_START_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_ALARM_START_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_ALARM_START_TIMER0_ST_W::new(self, 17)
     }
     #[doc = "Bit 18 - Represents TG0_task_cnt_stop_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg0_task_cnt_stop_timer0_st(&mut self) -> TG0_TASK_CNT_STOP_TIMER0_ST_W<TASK_ST2_SPEC> {
+    pub fn tg0_task_cnt_stop_timer0_st(
+        &mut self,
+    ) -> TG0_TASK_CNT_STOP_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_STOP_TIMER0_ST_W::new(self, 18)
     }
     #[doc = "Bit 19 - Represents TG0_task_cnt_reload_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_cnt_reload_timer0_st(
         &mut self,
-    ) -> TG0_TASK_CNT_RELOAD_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_CNT_RELOAD_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_RELOAD_TIMER0_ST_W::new(self, 19)
     }
     #[doc = "Bit 20 - Represents TG0_task_cnt_cap_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg0_task_cnt_cap_timer0_st(&mut self) -> TG0_TASK_CNT_CAP_TIMER0_ST_W<TASK_ST2_SPEC> {
+    pub fn tg0_task_cnt_cap_timer0_st(
+        &mut self,
+    ) -> TG0_TASK_CNT_CAP_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_CAP_TIMER0_ST_W::new(self, 20)
     }
     #[doc = "Bit 21 - Represents TG0_task_cnt_start_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_cnt_start_timer1_st(
         &mut self,
-    ) -> TG0_TASK_CNT_START_TIMER1_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_CNT_START_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_START_TIMER1_ST_W::new(self, 21)
     }
     #[doc = "Bit 22 - Represents TG0_task_alarm_start_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_alarm_start_timer1_st(
         &mut self,
-    ) -> TG0_TASK_ALARM_START_TIMER1_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_ALARM_START_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_ALARM_START_TIMER1_ST_W::new(self, 22)
     }
     #[doc = "Bit 23 - Represents TG0_task_cnt_stop_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg0_task_cnt_stop_timer1_st(&mut self) -> TG0_TASK_CNT_STOP_TIMER1_ST_W<TASK_ST2_SPEC> {
+    pub fn tg0_task_cnt_stop_timer1_st(
+        &mut self,
+    ) -> TG0_TASK_CNT_STOP_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_STOP_TIMER1_ST_W::new(self, 23)
     }
     #[doc = "Bit 24 - Represents TG0_task_cnt_reload_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg0_task_cnt_reload_timer1_st(
         &mut self,
-    ) -> TG0_TASK_CNT_RELOAD_TIMER1_ST_W<TASK_ST2_SPEC> {
+    ) -> TG0_TASK_CNT_RELOAD_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_RELOAD_TIMER1_ST_W::new(self, 24)
     }
     #[doc = "Bit 25 - Represents TG0_task_cnt_cap_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg0_task_cnt_cap_timer1_st(&mut self) -> TG0_TASK_CNT_CAP_TIMER1_ST_W<TASK_ST2_SPEC> {
+    pub fn tg0_task_cnt_cap_timer1_st(
+        &mut self,
+    ) -> TG0_TASK_CNT_CAP_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG0_TASK_CNT_CAP_TIMER1_ST_W::new(self, 25)
     }
     #[doc = "Bit 26 - Represents TG1_task_cnt_start_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg1_task_cnt_start_timer0_st(
         &mut self,
-    ) -> TG1_TASK_CNT_START_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG1_TASK_CNT_START_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_CNT_START_TIMER0_ST_W::new(self, 26)
     }
     #[doc = "Bit 27 - Represents TG1_task_alarm_start_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg1_task_alarm_start_timer0_st(
         &mut self,
-    ) -> TG1_TASK_ALARM_START_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG1_TASK_ALARM_START_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_ALARM_START_TIMER0_ST_W::new(self, 27)
     }
     #[doc = "Bit 28 - Represents TG1_task_cnt_stop_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg1_task_cnt_stop_timer0_st(&mut self) -> TG1_TASK_CNT_STOP_TIMER0_ST_W<TASK_ST2_SPEC> {
+    pub fn tg1_task_cnt_stop_timer0_st(
+        &mut self,
+    ) -> TG1_TASK_CNT_STOP_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_CNT_STOP_TIMER0_ST_W::new(self, 28)
     }
     #[doc = "Bit 29 - Represents TG1_task_cnt_reload_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg1_task_cnt_reload_timer0_st(
         &mut self,
-    ) -> TG1_TASK_CNT_RELOAD_TIMER0_ST_W<TASK_ST2_SPEC> {
+    ) -> TG1_TASK_CNT_RELOAD_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_CNT_RELOAD_TIMER0_ST_W::new(self, 29)
     }
     #[doc = "Bit 30 - Represents TG1_task_cnt_cap_timer0 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
-    pub fn tg1_task_cnt_cap_timer0_st(&mut self) -> TG1_TASK_CNT_CAP_TIMER0_ST_W<TASK_ST2_SPEC> {
+    pub fn tg1_task_cnt_cap_timer0_st(
+        &mut self,
+    ) -> TG1_TASK_CNT_CAP_TIMER0_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_CNT_CAP_TIMER0_ST_W::new(self, 30)
     }
     #[doc = "Bit 31 - Represents TG1_task_cnt_start_timer1 trigger status.\\\\0: Not triggered\\\\1: Triggered"]
     #[inline(always)]
     pub fn tg1_task_cnt_start_timer1_st(
         &mut self,
-    ) -> TG1_TASK_CNT_START_TIMER1_ST_W<TASK_ST2_SPEC> {
+    ) -> TG1_TASK_CNT_START_TIMER1_ST_W<'_, TASK_ST2_SPEC> {
         TG1_TASK_CNT_START_TIMER1_ST_W::new(self, 31)
     }
 }

@@ -60,17 +60,17 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - The bit is used to disable core0 ibus access L1-ICache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn icache_shut_ibus0(&mut self) -> ICACHE_SHUT_IBUS0_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_shut_ibus0(&mut self) -> ICACHE_SHUT_IBUS0_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_SHUT_IBUS0_W::new(self, 0)
     }
     #[doc = "Bit 1 - The bit is used to disable core1 ibus access L1-ICache, 0: enable, 1: disable"]
     #[inline(always)]
-    pub fn icache_shut_ibus1(&mut self) -> ICACHE_SHUT_IBUS1_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_shut_ibus1(&mut self) -> ICACHE_SHUT_IBUS1_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_SHUT_IBUS1_W::new(self, 1)
     }
     #[doc = "Bits 8:15 - Reserved"]
     #[inline(always)]
-    pub fn icache_undef_op(&mut self) -> ICACHE_UNDEF_OP_W<ICACHE_CTRL_SPEC> {
+    pub fn icache_undef_op(&mut self) -> ICACHE_UNDEF_OP_W<'_, ICACHE_CTRL_SPEC> {
         ICACHE_UNDEF_OP_W::new(self, 8)
     }
 }

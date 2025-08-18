@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit as 1 to disable SDIO_PROB function. disable by default."]
     #[inline(always)]
-    pub fn dis_sdio_prob(&mut self) -> DIS_SDIO_PROB_W<SDIO_CTRL_SPEC> {
+    pub fn dis_sdio_prob(&mut self) -> DIS_SDIO_PROB_W<'_, SDIO_CTRL_SPEC> {
         DIS_SDIO_PROB_W::new(self, 0)
     }
     #[doc = "Bit 1 - Enable sdio slave to access other peripherals on the chip"]
     #[inline(always)]
-    pub fn sdio_win_access_en(&mut self) -> SDIO_WIN_ACCESS_EN_W<SDIO_CTRL_SPEC> {
+    pub fn sdio_win_access_en(&mut self) -> SDIO_WIN_ACCESS_EN_W<'_, SDIO_CTRL_SPEC> {
         SDIO_WIN_ACCESS_EN_W::new(self, 1)
     }
 }

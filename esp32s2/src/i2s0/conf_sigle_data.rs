@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31 - The right channel or left channel transmits constant value stored in this register according to I2S_TX_CHAN_MOD and I2S_TX_MSB_RIGHT."]
     #[inline(always)]
-    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<CONF_SIGLE_DATA_SPEC> {
+    pub fn sigle_data(&mut self) -> SIGLE_DATA_W<'_, CONF_SIGLE_DATA_SPEC> {
         SIGLE_DATA_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn internal_sram_mac_dump_usage(
         &mut self,
-    ) -> INTERNAL_SRAM_MAC_DUMP_USAGE_W<INTERNAL_SRAM_USAGE_3_SPEC> {
+    ) -> INTERNAL_SRAM_MAC_DUMP_USAGE_W<'_, INTERNAL_SRAM_USAGE_3_SPEC> {
         INTERNAL_SRAM_MAC_DUMP_USAGE_W::new(self, 0)
     }
 }

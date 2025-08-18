@@ -24,7 +24,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 31 - The FSM will be reset."]
     #[inline(always)]
-    pub fn sync_reset(&mut self) -> SYNC_RESET_W<CTRL2_SPEC> {
+    pub fn sync_reset(&mut self) -> SYNC_RESET_W<'_, CTRL2_SPEC> {
         SYNC_RESET_W::new(self, 31)
     }
 }

@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - The value is stored when set spi_mem_flash_rdsr bit and spi_mem_flash_res bit."]
     #[inline(always)]
-    pub fn status(&mut self) -> STATUS_W<RD_STATUS_SPEC> {
+    pub fn status(&mut self) -> STATUS_W<'_, RD_STATUS_SPEC> {
         STATUS_W::new(self, 0)
     }
     #[doc = "Bits 16:23 - Mode bits in the flash fast read mode it is combined with spi_mem_fastrd_mode bit."]
     #[inline(always)]
-    pub fn wb_mode(&mut self) -> WB_MODE_W<RD_STATUS_SPEC> {
+    pub fn wb_mode(&mut self) -> WB_MODE_W<'_, RD_STATUS_SPEC> {
         WB_MODE_W::new(self, 16)
     }
 }

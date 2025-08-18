@@ -92,37 +92,37 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 21 - power down SDIO_REG in sleep. Only active when reg_sdio_force = 0"]
     #[inline(always)]
-    pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W<SDIO_CONF_SPEC> {
+    pub fn sdio_pd_en(&mut self) -> SDIO_PD_EN_W<'_, SDIO_CONF_SPEC> {
         SDIO_PD_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - 1: use SW option to control SDIO_REG 0: use state machine"]
     #[inline(always)]
-    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<SDIO_CONF_SPEC> {
+    pub fn sdio_force(&mut self) -> SDIO_FORCE_W<'_, SDIO_CONF_SPEC> {
         SDIO_FORCE_W::new(self, 22)
     }
     #[doc = "Bit 23 - SW option for SDIO_TIEH. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<SDIO_CONF_SPEC> {
+    pub fn sdio_tieh(&mut self) -> SDIO_TIEH_W<'_, SDIO_CONF_SPEC> {
         SDIO_TIEH_W::new(self, 23)
     }
     #[doc = "Bits 25:26 - SW option for DREFL_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefl_sdio(&mut self) -> DREFL_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFL_SDIO_W::new(self, 25)
     }
     #[doc = "Bits 27:28 - SW option for DREFM_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefm_sdio(&mut self) -> DREFM_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFM_SDIO_W::new(self, 27)
     }
     #[doc = "Bits 29:30 - SW option for DREFH_SDIO. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn drefh_sdio(&mut self) -> DREFH_SDIO_W<'_, SDIO_CONF_SPEC> {
         DREFH_SDIO_W::new(self, 29)
     }
     #[doc = "Bit 31 - SW option for XPD_SDIO_REG. Only active when reg_sdio_force = 1"]
     #[inline(always)]
-    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<SDIO_CONF_SPEC> {
+    pub fn xpd_sdio(&mut self) -> XPD_SDIO_W<'_, SDIO_CONF_SPEC> {
         XPD_SDIO_W::new(self, 31)
     }
 }

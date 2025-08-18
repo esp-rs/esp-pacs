@@ -34,12 +34,12 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - This is the enable bit for detecting baudrate."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W<AUTOBAUD_SPEC> {
+    pub fn en(&mut self) -> EN_W<'_, AUTOBAUD_SPEC> {
         EN_W::new(self, 0)
     }
     #[doc = "Bits 8:15 - when input pulse width is lower then this value igore this pulse.this register is used in autobaud detect process."]
     #[inline(always)]
-    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<AUTOBAUD_SPEC> {
+    pub fn glitch_filt(&mut self) -> GLITCH_FILT_W<'_, AUTOBAUD_SPEC> {
         GLITCH_FILT_W::new(self, 8)
     }
 }

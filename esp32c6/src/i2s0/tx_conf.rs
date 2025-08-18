@@ -198,102 +198,102 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Set this bit to reset transmitter"]
     #[inline(always)]
-    pub fn tx_reset(&mut self) -> TX_RESET_W<TX_CONF_SPEC> {
+    pub fn tx_reset(&mut self) -> TX_RESET_W<'_, TX_CONF_SPEC> {
         TX_RESET_W::new(self, 0)
     }
     #[doc = "Bit 1 - Set this bit to reset Tx AFIFO"]
     #[inline(always)]
-    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<TX_CONF_SPEC> {
+    pub fn tx_fifo_reset(&mut self) -> TX_FIFO_RESET_W<'_, TX_CONF_SPEC> {
         TX_FIFO_RESET_W::new(self, 1)
     }
     #[doc = "Bit 2 - Set this bit to start transmitting data"]
     #[inline(always)]
-    pub fn tx_start(&mut self) -> TX_START_W<TX_CONF_SPEC> {
+    pub fn tx_start(&mut self) -> TX_START_W<'_, TX_CONF_SPEC> {
         TX_START_W::new(self, 2)
     }
     #[doc = "Bit 3 - Set this bit to enable slave transmitter mode"]
     #[inline(always)]
-    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<TX_CONF_SPEC> {
+    pub fn tx_slave_mod(&mut self) -> TX_SLAVE_MOD_W<'_, TX_CONF_SPEC> {
         TX_SLAVE_MOD_W::new(self, 3)
     }
     #[doc = "Bit 5 - Set this bit to enable transmitter in mono mode"]
     #[inline(always)]
-    pub fn tx_mono(&mut self) -> TX_MONO_W<TX_CONF_SPEC> {
+    pub fn tx_mono(&mut self) -> TX_MONO_W<'_, TX_CONF_SPEC> {
         TX_MONO_W::new(self, 5)
     }
     #[doc = "Bit 6 - 1: The value of Left channel data is equal to the value of right channel data in I2S TX mono mode or TDM channel select mode. 0: The invalid channel data is reg_i2s_single_data in I2S TX mono mode or TDM channel select mode."]
     #[inline(always)]
-    pub fn tx_chan_equal(&mut self) -> TX_CHAN_EQUAL_W<TX_CONF_SPEC> {
+    pub fn tx_chan_equal(&mut self) -> TX_CHAN_EQUAL_W<'_, TX_CONF_SPEC> {
         TX_CHAN_EQUAL_W::new(self, 6)
     }
     #[doc = "Bit 7 - I2S Tx byte endian, 1: low addr value to high addr. 0: low addr with low addr value."]
     #[inline(always)]
-    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<TX_CONF_SPEC> {
+    pub fn tx_big_endian(&mut self) -> TX_BIG_ENDIAN_W<'_, TX_CONF_SPEC> {
         TX_BIG_ENDIAN_W::new(self, 7)
     }
     #[doc = "Bit 8 - Set 1 to update I2S TX registers from APB clock domain to I2S TX clock domain. This bit will be cleared by hardware after update register done."]
     #[inline(always)]
-    pub fn tx_update(&mut self) -> TX_UPDATE_W<TX_CONF_SPEC> {
+    pub fn tx_update(&mut self) -> TX_UPDATE_W<'_, TX_CONF_SPEC> {
         TX_UPDATE_W::new(self, 8)
     }
     #[doc = "Bit 9 - 1: The first channel data value is valid in I2S TX mono mode. 0: The second channel data value is valid in I2S TX mono mode."]
     #[inline(always)]
-    pub fn tx_mono_fst_vld(&mut self) -> TX_MONO_FST_VLD_W<TX_CONF_SPEC> {
+    pub fn tx_mono_fst_vld(&mut self) -> TX_MONO_FST_VLD_W<'_, TX_CONF_SPEC> {
         TX_MONO_FST_VLD_W::new(self, 9)
     }
     #[doc = "Bits 10:11 - I2S TX compress/decompress configuration bit. & 0 (atol): A-Law decompress, 1 (ltoa) : A-Law compress, 2 (utol) : u-Law decompress, 3 (ltou) : u-Law compress. &"]
     #[inline(always)]
-    pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<TX_CONF_SPEC> {
+    pub fn tx_pcm_conf(&mut self) -> TX_PCM_CONF_W<'_, TX_CONF_SPEC> {
         TX_PCM_CONF_W::new(self, 10)
     }
     #[doc = "Bit 12 - Set this bit to bypass Compress/Decompress module for transmitted data."]
     #[inline(always)]
-    pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<TX_CONF_SPEC> {
+    pub fn tx_pcm_bypass(&mut self) -> TX_PCM_BYPASS_W<'_, TX_CONF_SPEC> {
         TX_PCM_BYPASS_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set this bit to stop disable output BCK signal and WS signal when tx FIFO is emtpy"]
     #[inline(always)]
-    pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<TX_CONF_SPEC> {
+    pub fn tx_stop_en(&mut self) -> TX_STOP_EN_W<'_, TX_CONF_SPEC> {
         TX_STOP_EN_W::new(self, 13)
     }
     #[doc = "Bit 15 - 1: I2S TX left alignment mode. 0: I2S TX right alignment mode."]
     #[inline(always)]
-    pub fn tx_left_align(&mut self) -> TX_LEFT_ALIGN_W<TX_CONF_SPEC> {
+    pub fn tx_left_align(&mut self) -> TX_LEFT_ALIGN_W<'_, TX_CONF_SPEC> {
         TX_LEFT_ALIGN_W::new(self, 15)
     }
     #[doc = "Bit 16 - 1: Sent 32 bits in 24 channel bits mode. 0: Sent 24 bits in 24 channel bits mode"]
     #[inline(always)]
-    pub fn tx_24_fill_en(&mut self) -> TX_24_FILL_EN_W<TX_CONF_SPEC> {
+    pub fn tx_24_fill_en(&mut self) -> TX_24_FILL_EN_W<'_, TX_CONF_SPEC> {
         TX_24_FILL_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - 0: WS should be 0 when sending left channel data, and WS is 1in right channel. 1: WS should be 1 when sending left channel data, and WS is 0in right channel."]
     #[inline(always)]
-    pub fn tx_ws_idle_pol(&mut self) -> TX_WS_IDLE_POL_W<TX_CONF_SPEC> {
+    pub fn tx_ws_idle_pol(&mut self) -> TX_WS_IDLE_POL_W<'_, TX_CONF_SPEC> {
         TX_WS_IDLE_POL_W::new(self, 17)
     }
     #[doc = "Bit 18 - I2S Tx bit endian. 1:small endian, the LSB is sent first. 0:big endian, the MSB is sent first."]
     #[inline(always)]
-    pub fn tx_bit_order(&mut self) -> TX_BIT_ORDER_W<TX_CONF_SPEC> {
+    pub fn tx_bit_order(&mut self) -> TX_BIT_ORDER_W<'_, TX_CONF_SPEC> {
         TX_BIT_ORDER_W::new(self, 18)
     }
     #[doc = "Bit 19 - 1: Enable I2S TDM Tx mode . 0: Disable."]
     #[inline(always)]
-    pub fn tx_tdm_en(&mut self) -> TX_TDM_EN_W<TX_CONF_SPEC> {
+    pub fn tx_tdm_en(&mut self) -> TX_TDM_EN_W<'_, TX_CONF_SPEC> {
         TX_TDM_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - 1: Enable I2S PDM Tx mode . 0: Disable."]
     #[inline(always)]
-    pub fn tx_pdm_en(&mut self) -> TX_PDM_EN_W<TX_CONF_SPEC> {
+    pub fn tx_pdm_en(&mut self) -> TX_PDM_EN_W<'_, TX_CONF_SPEC> {
         TX_PDM_EN_W::new(self, 20)
     }
     #[doc = "Bits 24:26 - I2S transmitter channel mode configuration bits."]
     #[inline(always)]
-    pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W<TX_CONF_SPEC> {
+    pub fn tx_chan_mod(&mut self) -> TX_CHAN_MOD_W<'_, TX_CONF_SPEC> {
         TX_CHAN_MOD_W::new(self, 24)
     }
     #[doc = "Bit 27 - Enable signal loop back mode with transmitter module and receiver module sharing the same WS and BCK signals."]
     #[inline(always)]
-    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<TX_CONF_SPEC> {
+    pub fn sig_loopback(&mut self) -> SIG_LOOPBACK_W<'_, TX_CONF_SPEC> {
         SIG_LOOPBACK_W::new(self, 27)
     }
 }

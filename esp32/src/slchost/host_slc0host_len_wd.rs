@@ -24,7 +24,9 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:31"]
     #[inline(always)]
-    pub fn host_slc0host_len_wd(&mut self) -> HOST_SLC0HOST_LEN_WD_W<HOST_SLC0HOST_LEN_WD_SPEC> {
+    pub fn host_slc0host_len_wd(
+        &mut self,
+    ) -> HOST_SLC0HOST_LEN_WD_W<'_, HOST_SLC0HOST_LEN_WD_SPEC> {
         HOST_SLC0HOST_LEN_WD_W::new(self, 0)
     }
 }

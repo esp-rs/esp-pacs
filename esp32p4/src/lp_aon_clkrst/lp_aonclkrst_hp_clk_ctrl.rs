@@ -380,196 +380,196 @@ impl W {
     #[inline(always)]
     pub fn lp_aonclkrst_hp_root_clk_src_sel(
         &mut self,
-    ) -> LP_AONCLKRST_HP_ROOT_CLK_SRC_SEL_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_ROOT_CLK_SRC_SEL_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_ROOT_CLK_SRC_SEL_W::new(self, 0)
     }
     #[doc = "Bit 2 - HP SoC Root Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_root_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_ROOT_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_ROOT_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_ROOT_CLK_EN_W::new(self, 2)
     }
     #[doc = "Bit 3 - PARLIO TX Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_parlio_tx_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_PARLIO_TX_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_PARLIO_TX_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_PARLIO_TX_CLK_EN_W::new(self, 3)
     }
     #[doc = "Bit 4 - PARLIO RX Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_parlio_rx_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_PARLIO_RX_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_PARLIO_RX_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_PARLIO_RX_CLK_EN_W::new(self, 4)
     }
     #[doc = "Bit 5 - UART4 SLP Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_uart4_slp_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_UART4_SLP_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_UART4_SLP_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_UART4_SLP_CLK_EN_W::new(self, 5)
     }
     #[doc = "Bit 6 - UART3 SLP Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_uart3_slp_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_UART3_SLP_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_UART3_SLP_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_UART3_SLP_CLK_EN_W::new(self, 6)
     }
     #[doc = "Bit 7 - UART2 SLP Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_uart2_slp_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_UART2_SLP_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_UART2_SLP_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_UART2_SLP_CLK_EN_W::new(self, 7)
     }
     #[doc = "Bit 8 - UART1 SLP Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_uart1_slp_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_UART1_SLP_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_UART1_SLP_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_UART1_SLP_CLK_EN_W::new(self, 8)
     }
     #[doc = "Bit 9 - UART0 SLP Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_uart0_slp_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_UART0_SLP_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_UART0_SLP_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_UART0_SLP_CLK_EN_W::new(self, 9)
     }
     #[doc = "Bit 10 - I2S2 MCLK Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_i2s2_mclk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_I2S2_MCLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_I2S2_MCLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_I2S2_MCLK_EN_W::new(self, 10)
     }
     #[doc = "Bit 11 - I2S1 MCLK Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_i2s1_mclk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_I2S1_MCLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_I2S1_MCLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_I2S1_MCLK_EN_W::new(self, 11)
     }
     #[doc = "Bit 12 - I2S0 MCLK Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_i2s0_mclk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_I2S0_MCLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_I2S0_MCLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_I2S0_MCLK_EN_W::new(self, 12)
     }
     #[doc = "Bit 13 - EMAC RX Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_emac_tx_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_EMAC_TX_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_EMAC_TX_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_EMAC_TX_CLK_EN_W::new(self, 13)
     }
     #[doc = "Bit 14 - EMAC TX Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_emac_rx_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_EMAC_RX_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_EMAC_RX_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_EMAC_RX_CLK_EN_W::new(self, 14)
     }
     #[doc = "Bit 15 - EMAC TXRX Clock From Pad Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pad_emac_txrx_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PAD_EMAC_TXRX_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PAD_EMAC_TXRX_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PAD_EMAC_TXRX_CLK_EN_W::new(self, 15)
     }
     #[doc = "Bit 16 - XTAL 32K Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_xtal_32k_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_XTAL_32K_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_XTAL_32K_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_XTAL_32K_CLK_EN_W::new(self, 16)
     }
     #[doc = "Bit 17 - RC 32K Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_rc_32k_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_RC_32K_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_RC_32K_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_RC_32K_CLK_EN_W::new(self, 17)
     }
     #[doc = "Bit 18 - SOSC 150K Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_sosc_150k_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_SOSC_150K_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_SOSC_150K_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_SOSC_150K_CLK_EN_W::new(self, 18)
     }
     #[doc = "Bit 19 - PLL 8M Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_pll_8m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_PLL_8M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_PLL_8M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_PLL_8M_CLK_EN_W::new(self, 19)
     }
     #[doc = "Bit 20 - AUDIO PLL Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_audio_pll_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_AUDIO_PLL_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_AUDIO_PLL_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_AUDIO_PLL_CLK_EN_W::new(self, 20)
     }
     #[doc = "Bit 21 - SDIO PLL2 Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_sdio_pll2_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_SDIO_PLL2_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_SDIO_PLL2_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_SDIO_PLL2_CLK_EN_W::new(self, 21)
     }
     #[doc = "Bit 22 - SDIO PLL1 Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_sdio_pll1_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_SDIO_PLL1_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_SDIO_PLL1_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_SDIO_PLL1_CLK_EN_W::new(self, 22)
     }
     #[doc = "Bit 23 - SDIO PLL0 Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_sdio_pll0_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_SDIO_PLL0_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_SDIO_PLL0_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_SDIO_PLL0_CLK_EN_W::new(self, 23)
     }
     #[doc = "Bit 24 - FOSC 20M Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_fosc_20m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_FOSC_20M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_FOSC_20M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_FOSC_20M_CLK_EN_W::new(self, 24)
     }
     #[doc = "Bit 25 - XTAL 40M Clock Enalbe."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_xtal_40m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_XTAL_40M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_XTAL_40M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_XTAL_40M_CLK_EN_W::new(self, 25)
     }
     #[doc = "Bit 26 - CPLL 400M Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_cpll_400m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_CPLL_400M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_CPLL_400M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_CPLL_400M_CLK_EN_W::new(self, 26)
     }
     #[doc = "Bit 27 - SPLL 480M Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_spll_480m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_SPLL_480M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_SPLL_480M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_SPLL_480M_CLK_EN_W::new(self, 27)
     }
     #[doc = "Bit 28 - MPLL 500M Clock Enable."]
     #[inline(always)]
     pub fn lp_aonclkrst_hp_mpll_500m_clk_en(
         &mut self,
-    ) -> LP_AONCLKRST_HP_MPLL_500M_CLK_EN_W<LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
+    ) -> LP_AONCLKRST_HP_MPLL_500M_CLK_EN_W<'_, LP_AONCLKRST_HP_CLK_CTRL_SPEC> {
         LP_AONCLKRST_HP_MPLL_500M_CLK_EN_W::new(self, 28)
     }
 }

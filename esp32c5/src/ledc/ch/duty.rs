@@ -22,7 +22,7 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - Configures the duty of signal output on channel %s."]
     #[inline(always)]
-    pub fn duty(&mut self) -> DUTY_W<DUTY_SPEC> {
+    pub fn duty(&mut self) -> DUTY_W<'_, DUTY_SPEC> {
         DUTY_W::new(self, 0)
     }
 }

@@ -29,7 +29,7 @@ impl W {
     #[inline(always)]
     pub fn dma_apbperi_spi2_pms_constrain_lock(
         &mut self,
-    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_LOCK_W<PMS_CONSTRAIN_0_SPEC> {
+    ) -> DMA_APBPERI_SPI2_PMS_CONSTRAIN_LOCK_W<'_, PMS_CONSTRAIN_0_SPEC> {
         DMA_APBPERI_SPI2_PMS_CONSTRAIN_LOCK_W::new(self, 0)
     }
 }

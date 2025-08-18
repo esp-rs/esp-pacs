@@ -26,7 +26,7 @@ impl W {
     #[inline(always)]
     pub fn pro_icache_preload_addr(
         &mut self,
-    ) -> PRO_ICACHE_PRELOAD_ADDR_W<PRO_ICACHE_PRELOAD_ADDR_SPEC> {
+    ) -> PRO_ICACHE_PRELOAD_ADDR_W<'_, PRO_ICACHE_PRELOAD_ADDR_SPEC> {
         PRO_ICACHE_PRELOAD_ADDR_W::new(self, 0)
     }
 }
