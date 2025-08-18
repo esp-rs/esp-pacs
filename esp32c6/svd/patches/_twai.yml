@@ -44,8 +44,6 @@ TWAI[01]:
         name: RX_INT_ENA
       EXT_TRANSMIT_INT_ENA:
         name: TX_INT_ENA
-      BUS_ERR_INT_ENA:
-        name: BUS_ERR_INT_ENA
       ARBITRATION_LOST_INT_ENA:
         name: ARB_LOST_INT_ENA
 

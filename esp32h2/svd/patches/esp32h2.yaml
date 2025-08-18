@@ -1094,6 +1094,8 @@ TWAI0:
         name: TX_REQ
       RELEASE_BUFFER:
         name: RELEASE_BUF
+      SELF_RX_REQUEST:
+        name: SELF_RX_REQ
 
   STATUS:
     _modify:
@@ -1119,6 +1121,27 @@ TWAI0:
     _strip: DATA
     _prefix: TX_BYTE
 
+  ERR_CODE_CAP:
+    _modify:
+      ERR_CAPTURE_CODE_DIRECTION:
+        name: ECC_DIRECTION
+  
+  INT_ENA:
+    _modify:
+      EXT_RECEIVE_INT_ENA:
+        name: RX_INT_ENA
+      EXT_TRANSMIT_INT_ENA:
+        name: TX_INT_ENA
+      ARBITRATION_LOST_INT_ENA:
+        name: ARB_LOST_INT_ENA
+
+  INT_RAW:
+    _modify:
+      TRANSMIT_INT_ST:
+        name: TX_INT_ST
+      RECEIVE_INT_ST:
+        name: RX_INT_ST
+
 RMT:
   SYS_CONF:
     _delete:
@@ -1134,35 +1157,6 @@ RSA:
       CLEAR_INTERRUPT:
         name: INT_CLR
         access: read-write
-
-TWAI*:
-  CMD:
-    _modify:
-      SELF_RX_REQUEST:
-        name: SELF_RX_REQ
-
-  ERR_CODE_CAP:
-    _modify:
-      ERR_CAPTURE_CODE_DIRECTION:
-        name: ECC_DIRECTION
-  
-  INT_ENA:
-    _modify:
-      EXT_RECEIVE_INT_ENA:
-        name: RX_INT_ENA
-      EXT_TRANSMIT_INT_ENA:
-        name: TX_INT_ENA
-      BUS_ERR_INT_ENA:
-        name: BUS_ERR_INT_ENA
-      ARBITRATION_LOST_INT_ENA:
-        name: ARB_LOST_INT_ENA
-
-  INT_RAW:
-    _modify:
-      TRANSMIT_INT_ST:
-        name: TX_INT_ST
-      RECEIVE_INT_ST:
-        name: RX_INT_ST
 
 I2C_ANA_MST:
   _array:
