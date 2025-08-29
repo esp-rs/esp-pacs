@@ -13,7 +13,6 @@ PROVIDE(I2C_MASTER = DefaultHandler);
 PROVIDE(SLC0 = DefaultHandler);
 PROVIDE(SLC1 = DefaultHandler);
 PROVIDE(UHCI0 = DefaultHandler);
-PROVIDE(UHCI1 = DefaultHandler);
 PROVIDE(GPIO = DefaultHandler);
 PROVIDE(GPIO_NMI = DefaultHandler);
 PROVIDE(GPIO_INTR_2 = DefaultHandler);
