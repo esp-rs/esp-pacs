@@ -310,3 +310,6 @@ SENSITIVE:
         name: PMS_CONSTRAIN_0
       DMA_APBPERI*_PMS_CONSTRAIN_1:
         name: PMS_CONSTRAIN_1
+
+_delete:
+  UHCI1
