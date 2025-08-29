@@ -521,3 +521,6 @@ PERI_BACKUP:
     REG_MAP?:
       name: REG_MAP%s
       _strip_end: "0"
+
+_delete:
+  UHCI1
