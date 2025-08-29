@@ -27,7 +27,6 @@ extern "C" {
     fn SLC0();
     fn SLC1();
     fn UHCI0();
-    fn UHCI1();
     fn GPIO();
     fn GPIO_NMI();
     fn GPIO_INTR_2();
@@ -140,7 +139,7 @@ pub static __INTERRUPTS: [Vector; 99] = [
     Vector { _handler: SLC0 },
     Vector { _handler: SLC1 },
     Vector { _handler: UHCI0 },
-    Vector { _handler: UHCI1 },
+    Vector { _reserved: 0 },
     Vector { _handler: GPIO },
     Vector { _handler: GPIO_NMI },
     Vector {
@@ -354,8 +353,6 @@ pub enum Interrupt {
     SLC1 = 13,
     #[doc = "14 - UHCI0"]
     UHCI0 = 14,
-    #[doc = "15 - UHCI1"]
-    UHCI1 = 15,
     #[doc = "16 - GPIO"]
     GPIO = 16,
     #[doc = "17 - GPIO_NMI"]
@@ -539,7 +536,6 @@ impl Interrupt {
             12 => Ok(Interrupt::SLC0),
             13 => Ok(Interrupt::SLC1),
             14 => Ok(Interrupt::UHCI0),
-            15 => Ok(Interrupt::UHCI1),
             16 => Ok(Interrupt::GPIO),
             17 => Ok(Interrupt::GPIO_NMI),
             18 => Ok(Interrupt::GPIO_INTR_2),
@@ -1082,15 +1078,6 @@ impl core::fmt::Debug for UHCI0 {
 }
 #[doc = "Universal Host Controller Interface 0"]
 pub mod uhci0;
-#[doc = "Universal Host Controller Interface 1"]
-pub type UHCI1 = crate::Periph<uhci0::RegisterBlock, 0x6000_c000>;
-impl core::fmt::Debug for UHCI1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UHCI1").finish()
-    }
-}
-#[doc = "Universal Host Controller Interface 1"]
-pub use self::uhci0 as uhci1;
 #[doc = "USB OTG (On-The-Go)"]
 pub type USB0 = crate::Periph<usb0::RegisterBlock, 0x6008_0000>;
 impl core::fmt::Debug for USB0 {
@@ -1243,8 +1230,6 @@ pub struct Peripherals {
     pub UART2: UART2,
     #[doc = "UHCI0"]
     pub UHCI0: UHCI0,
-    #[doc = "UHCI1"]
-    pub UHCI1: UHCI1,
     #[doc = "USB0"]
     pub USB0: USB0,
     #[doc = "USB_DEVICE"]
@@ -1328,7 +1313,6 @@ impl Peripherals {
             UART1: UART1::steal(),
             UART2: UART2::steal(),
             UHCI0: UHCI0::steal(),
-            UHCI1: UHCI1::steal(),
             USB0: USB0::steal(),
             USB_DEVICE: USB_DEVICE::steal(),
             USB_WRAP: USB_WRAP::steal(),
