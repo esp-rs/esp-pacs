@@ -368,6 +368,15 @@ impl core::fmt::Debug for IO_MUX {
 }
 #[doc = "Input/Output Multiplexer"]
 pub mod io_mux;
+#[doc = "I2C_MST_ANA Peripheral"]
+pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x6000_e040>;
+impl core::fmt::Debug for I2C_ANA_MST {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("I2C_ANA_MST").finish()
+    }
+}
+#[doc = "I2C_MST_ANA Peripheral"]
+pub mod i2c_ana_mst;
 #[doc = "LED Control PWM (Pulse Width Modulation)"]
 pub type LEDC = crate::Periph<ledc::RegisterBlock, 0x6001_9000>;
 impl core::fmt::Debug for LEDC {
@@ -539,24 +548,6 @@ impl core::fmt::Debug for UHCI0 {
 }
 #[doc = "Universal Host Controller Interface 0"]
 pub mod uhci0;
-#[doc = "Universal Host Controller Interface 1"]
-pub type UHCI1 = crate::Periph<uhci0::RegisterBlock, 0x6000_c000>;
-impl core::fmt::Debug for UHCI1 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("UHCI1").finish()
-    }
-}
-#[doc = "Universal Host Controller Interface 1"]
-pub use self::uhci0 as uhci1;
-#[doc = "I2C_MST_ANA Peripheral"]
-pub type I2C_ANA_MST = crate::Periph<i2c_ana_mst::RegisterBlock, 0x6000_e040>;
-impl core::fmt::Debug for I2C_ANA_MST {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("I2C_ANA_MST").finish()
-    }
-}
-#[doc = "I2C_MST_ANA Peripheral"]
-pub mod i2c_ana_mst;
 #[doc = "Full-speed USB Serial/JTAG Controller"]
 pub type USB_DEVICE = crate::Periph<usb_device::RegisterBlock, 0x6004_3000>;
 impl core::fmt::Debug for USB_DEVICE {
@@ -616,6 +607,8 @@ pub struct Peripherals {
     pub INTERRUPT_CORE0: INTERRUPT_CORE0,
     #[doc = "IO_MUX"]
     pub IO_MUX: IO_MUX,
+    #[doc = "I2C_ANA_MST"]
+    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "LEDC"]
     pub LEDC: LEDC,
     #[doc = "NRX"]
@@ -654,10 +647,6 @@ pub struct Peripherals {
     pub UART1: UART1,
     #[doc = "UHCI0"]
     pub UHCI0: UHCI0,
-    #[doc = "UHCI1"]
-    pub UHCI1: UHCI1,
-    #[doc = "I2C_ANA_MST"]
-    pub I2C_ANA_MST: I2C_ANA_MST,
     #[doc = "USB_DEVICE"]
     pub USB_DEVICE: USB_DEVICE,
     #[doc = "XTS_AES"]
@@ -702,6 +691,7 @@ impl Peripherals {
             I2S0: I2S0::steal(),
             INTERRUPT_CORE0: INTERRUPT_CORE0::steal(),
             IO_MUX: IO_MUX::steal(),
+            I2C_ANA_MST: I2C_ANA_MST::steal(),
             LEDC: LEDC::steal(),
             NRX: NRX::steal(),
             RMT: RMT::steal(),
@@ -721,8 +711,6 @@ impl Peripherals {
             UART0: UART0::steal(),
             UART1: UART1::steal(),
             UHCI0: UHCI0::steal(),
-            UHCI1: UHCI1::steal(),
-            I2C_ANA_MST: I2C_ANA_MST::steal(),
             USB_DEVICE: USB_DEVICE::steal(),
             XTS_AES: XTS_AES::steal(),
         }
