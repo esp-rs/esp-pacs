@@ -23,7 +23,7 @@ _include:
   - "_systimer.yml"
   - "_timg.yml"
   - "_uart.yml"
-  - "esp32s2-wifi.yaml"
+  - "wifi.yaml"
 
 RNG:
   _modify:

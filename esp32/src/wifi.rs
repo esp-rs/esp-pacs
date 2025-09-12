@@ -7,30 +7,32 @@ pub struct RegisterBlock {
     rx_ctrl: RX_CTRL,
     rx_dma_list: RX_DMA_LIST,
     _reserved3: [u8; 0x44],
-    interface_rx_control: [INTERFACE_RX_CONTROL; 4],
-    _reserved4: [u8; 0x01d4],
+    filter_control: [FILTER_CONTROL; 4],
+    _reserved4: [u8; 0x10],
+    rx_ctrl_filter: [RX_CTRL_FILTER; 4],
+    _reserved5: [u8; 0x01b4],
     hw_stat_ack_int: HW_STAT_ACK_INT,
     hw_stat_rts_int: HW_STAT_RTS_INT,
     hw_stat_cts_int: HW_STAT_CTS_INT,
     hw_stat_rifs_int: HW_STAT_RIFS_INT,
     hw_stat_rx_success: HW_STAT_RX_SUCCESS,
     hw_stat_rx_end: HW_STAT_RX_END,
-    _reserved10: [u8; 0x04],
+    _reserved11: [u8; 0x04],
     hw_stat_hop_err: HW_STAT_HOP_ERR,
     hw_stat_full2: HW_STAT_FULL2,
     hw_stat_block_err: HW_STAT_BLOCK_ERR,
-    _reserved13: [u8; 0x051c],
+    _reserved14: [u8; 0x051c],
     crypto_control: CRYPTO_CONTROL,
-    _reserved14: [u8; 0x03e8],
+    _reserved15: [u8; 0x03e8],
     mac_time: MAC_TIME,
-    _reserved15: [u8; 0x44],
+    _reserved16: [u8; 0x44],
     mac_interrupt: MAC_INTERRUPT,
-    _reserved16: [u8; 0x68],
+    _reserved17: [u8; 0x68],
     ctrl: CTRL,
     txq_state: TXQ_STATE,
-    _reserved18: [u8; 0x30],
+    _reserved19: [u8; 0x30],
     tx_slot_config: [TX_SLOT_CONFIG; 5],
-    _reserved19: [u8; 0x34],
+    _reserved20: [u8; 0x34],
     hw_stat_tx_rts: HW_STAT_TX_RTS,
     hw_stat_tx_cts: HW_STAT_TX_CTS,
     hw_stat_tx_ack: HW_STAT_TX_ACK,
@@ -38,19 +40,19 @@ pub struct RegisterBlock {
     hw_stat_trigger: HW_STAT_TRIGGER,
     hw_stat_tx_hung: HW_STAT_TX_HUNG,
     hw_stat_panic: HW_STAT_PANIC,
-    _reserved26: [u8; 0x03f4],
+    _reserved27: [u8; 0x03f4],
     plcp1: (),
-    _reserved27: [u8; 0x04],
-    plcp2: (),
     _reserved28: [u8; 0x04],
-    ht_sig: (),
+    plcp2: (),
     _reserved29: [u8; 0x04],
-    ht_unknown: (),
+    ht_sig: (),
     _reserved30: [u8; 0x04],
+    ht_unknown: (),
+    _reserved31: [u8; 0x04],
     duration: (),
-    _reserved31: [u8; 0x08],
+    _reserved32: [u8; 0x08],
     pmd: (),
-    _reserved32: [u8; 0x0280],
+    _reserved33: [u8; 0x0280],
     crypto_key_slot: [CRYPTO_KEY_SLOT; 25],
 }
 impl RegisterBlock {
@@ -75,16 +77,27 @@ impl RegisterBlock {
     pub const fn rx_dma_list(&self) -> &RX_DMA_LIST {
         &self.rx_dma_list
     }
-    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
+    #[doc = "0xd8..0xe8 - Controls the RX filter for an interface"]
     #[inline(always)]
-    pub const fn interface_rx_control(&self, n: usize) -> &INTERFACE_RX_CONTROL {
-        &self.interface_rx_control[n]
+    pub const fn filter_control(&self, n: usize) -> &FILTER_CONTROL {
+        &self.filter_control[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0xd8..0xe8 - Controls RX for an interface"]
+    #[doc = "0xd8..0xe8 - Controls the RX filter for an interface"]
     #[inline(always)]
-    pub fn interface_rx_control_iter(&self) -> impl Iterator<Item = &INTERFACE_RX_CONTROL> {
-        self.interface_rx_control.iter()
+    pub fn filter_control_iter(&self) -> impl Iterator<Item = &FILTER_CONTROL> {
+        self.filter_control.iter()
+    }
+    #[doc = "0xf8..0x108 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[inline(always)]
+    pub const fn rx_ctrl_filter(&self, n: usize) -> &RX_CTRL_FILTER {
+        &self.rx_ctrl_filter[n]
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0xf8..0x108 - Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+    #[inline(always)]
+    pub fn rx_ctrl_filter_iter(&self) -> impl Iterator<Item = &RX_CTRL_FILTER> {
+        self.rx_ctrl_filter.iter()
     }
     #[doc = "0x2bc - "]
     #[inline(always)]
@@ -378,10 +391,14 @@ pub use self::rx_dma_list::RX_DMA_LIST;
 #[doc = r"Cluster"]
 #[doc = "RX_DMA_LIST"]
 pub mod rx_dma_list;
-#[doc = "INTERFACE_RX_CONTROL (rw) register accessor: Controls RX for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`interface_rx_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interface_rx_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@interface_rx_control`] module"]
-pub type INTERFACE_RX_CONTROL = crate::Reg<interface_rx_control::INTERFACE_RX_CONTROL_SPEC>;
-#[doc = "Controls RX for an interface"]
-pub mod interface_rx_control;
+#[doc = "FILTER_CONTROL (rw) register accessor: Controls the RX filter for an interface\n\nYou can [`read`](crate::Reg::read) this register and get [`filter_control::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`filter_control::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@filter_control`] module"]
+pub type FILTER_CONTROL = crate::Reg<filter_control::FILTER_CONTROL_SPEC>;
+#[doc = "Controls the RX filter for an interface"]
+pub mod filter_control;
+#[doc = "RX_CTRL_FILTER (rw) register accessor: Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter.\n\nYou can [`read`](crate::Reg::read) this register and get [`rx_ctrl_filter::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`rx_ctrl_filter::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@rx_ctrl_filter`] module"]
+pub type RX_CTRL_FILTER = crate::Reg<rx_ctrl_filter::RX_CTRL_FILTER_SPEC>;
+#[doc = "Configures which control frames pass the RX filter. Setting a bit lets that frame type pass the filter."]
+pub mod rx_ctrl_filter;
 #[doc = "HW_STAT_ACK_INT (rw) register accessor: \n\nYou can [`read`](crate::Reg::read) this register and get [`hw_stat_ack_int::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`hw_stat_ack_int::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@hw_stat_ack_int`] module"]
 pub type HW_STAT_ACK_INT = crate::Reg<hw_stat_ack_int::HW_STAT_ACK_INT_SPEC>;
 #[doc = ""]

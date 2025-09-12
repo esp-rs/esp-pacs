@@ -2,19 +2,66 @@ _add:
     WIFI:
         description: MAC controller for Wi-Fi peripheral
         groupName: WIFI
-        baseAddress: 0x60033000
+        baseAddress: 0x3ff73000
         size: 32
         addressBlock:
             offset: 0x0
-            size: 0x2200
+            size: 0x2100
             usage: registers
         registers:
             RX_CTRL:
-                addressOffset: 0x88
-            INTERFACE_RX_CONTROL%s:
+                addressOffset: 0x84
+            FILTER_CONTROL%s:
                 dim: 4
                 dimIncrement: 4
-                addressOffset: 0xe0
+                addressOffset: 0xd8
+                access: read-write
+            RX_CTRL_FILTER%s:
+                dim: 4
+                dimIncrement: 4
+                addressOffset: 0xf8
+                access: read-write
+
+            HW_STAT_ACK_INT:
+                addressOffset: 0x2bc
+                access: read
+
+            HW_STAT_RTS_INT:
+                addressOffset: 0x2c0
+                access: read
+
+            HW_STAT_CTS_INT:
+                addressOffset: 0x2c4
+                access: read
+
+            HW_STAT_RIFS_INT:
+                addressOffset: 0x2c8
+                access: read
+
+            HW_STAT_RX_SUCCESS:
+                addressOffset: 0x2cc
+                access: read
+
+            HW_STAT_RX_END:
+                addressOffset: 0x2d0
+                access: read
+
+            HW_STAT_HOP_ERR:
+                addressOffset: 0x2d8
+                access: read
+
+            HW_STAT_FULL2:
+                addressOffset: 0x2dc
+                access: read
+
+            HW_STAT_BLOCK_ERR:
+                addressOffset: 0x2e0
+                access: read
+
+            MAC_TIME:
+                addressOffset: 0xc00
+                access: read
+                description: Current value of the MAC timer
             CTRL:
                 description: Exact name and meaning unknown, used for initializing the MAC
                 addressOffset: 0xcb8
@@ -43,10 +90,34 @@ _add:
                 dim: 5
                 dimIncrement: 0x3c
                 addressOffset: 0x1180
-            MAC_TIME:
-                addressOffset: 0x2000
+
+            HW_STAT_TX_RTS:
+                addressOffset: 0xd58
                 access: read
-                description: Current value of the MAC timer
+
+            HW_STAT_TX_CTS:
+                addressOffset: 0xd5c
+                access: read
+
+            HW_STAT_TX_ACK:
+                addressOffset: 0xd60
+                access: read
+
+            HW_STAT_TRCTS:
+                addressOffset: 0xd64
+                access: read
+
+            HW_STAT_TRIGGER:
+                addressOffset: 0xd68
+                access: read
+
+            HW_STAT_TX_HUNG:
+                addressOffset: 0xd6c
+                access: read
+
+            HW_STAT_PANIC:
+                addressOffset: 0xd70
+                access: read
 
 WIFI:
     _add:
@@ -57,30 +128,24 @@ WIFI:
                 addressOffset: 0x0
                 description: "
                     Filter banks for frame reception. Bank zero is for the BSSID and bank one for the RA.
-                    Each filter bank has registers for four interfaces.
+                    Each filter bank has registers for two interfaces.
                     "
                 registers:
                     DUMMY:
                         addressOffset: 0x0
             RX_DMA_LIST:
-                addressOffset: 0x90
+                addressOffset: 0x88
                 registers:
                     DUMMY:
                         addressOffset: 0x0
             MAC_INTERRUPT:
-                addressOffset: 0xc3c
-                description: Status and clear for the WIFI_MAC interrupt
-                registers:
-                    DUMMY:
-                        addressOffset: 0x0
-            PWR_INTERRUPT:
-                addressOffset: 0x21a0
-                description: Status and clear for the WIFI_PWR interrupt
+                addressOffset: 0xc48
+                description: Status and clear for the Wi-Fi MAC interrupt
                 registers:
                     DUMMY:
                         addressOffset: 0x0
             TXQ_STATE:
-                addressOffset: 0xc9c
+                addressOffset: 0xcbc
                 description: State of transmission queues
                 registers:
                     DUMMY:
@@ -89,7 +154,7 @@ WIFI:
                 dim: 5
                 dimIncrement: 0x8
                 description: Used to configure the TX slot.
-                addressOffset: 0xcdc
+                addressOffset: 0xcfc
                 registers:
                     DUMMY:
                         addressOffset: 0x0
@@ -113,5 +178,4 @@ _include:
     - "../../../common_patches/wifi/mac/rx_filter_masked.yaml"
     - "../../../common_patches/wifi/mac/tx.yaml"
     - "../../../common_patches/wifi/mac/mac_interrupt.yaml"
-    - "../../../common_patches/wifi/mac/pwr_interrupt.yaml"
     - "../../../common_patches/wifi/mac/crypto.yaml"
